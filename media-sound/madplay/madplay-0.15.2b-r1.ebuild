@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.11 2008/01/16 18:31:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b-r1.ebuild,v 1.12 2010/08/24 14:51:05 darkside Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="The MAD audio player"
 HOMEPAGE="http://www.underbit.com/products/mad/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug nls esd alsa"
 
 #	~media-libs/libmad-${PV}
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	eautoreconf # need new libtool for interix
 	epunt_cxx #74499
 	epatch "${FILESDIR}/${PN}-macos.patch"
 }
