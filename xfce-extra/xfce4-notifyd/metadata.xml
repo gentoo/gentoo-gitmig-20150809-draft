@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name="libsexy">Enable support for <pkg>x11-libs/libsexy</pkg></flag>
+    <flag name="libsexy">Enable support for clickable URLs by using <pkg>x11-libs/libsexy</pkg></flag>
   </use>
 </pkgmetadata>
