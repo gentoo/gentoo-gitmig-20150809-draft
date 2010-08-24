@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.9 2010/08/24 19:47:20 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.10 2010/08/24 19:55:00 ayoy Exp $
+
+  24 Aug 2010; Dominik Kapusta <ayoy@gentoo.org> -pyside-0.2.2.ebuild,
+  -pyside-0.2.3-r1.ebuild:
+  Removing old versions
 
 *pyside-0.4.0 (24 Aug 2010)
 
