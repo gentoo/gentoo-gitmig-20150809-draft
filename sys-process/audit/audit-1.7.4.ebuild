@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.4.ebuild,v 1.2 2010/05/29 17:40:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.4.ebuild,v 1.3 2010/08/24 13:56:22 ssuominen Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -54,6 +54,8 @@ src_unpack() {
 			-e '/^SUBDIRS/s,zos-remote,,g' \
 			"${S}"/audisp/plugins/Makefile.am
 	fi
+
+	epatch "${FILESDIR}"/${P}-glibc212.patch
 
 	# Regenerate autotooling
 	eautoreconf

@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.57 2010/05/29 17:40:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.58 2010/08/24 13:56:22 ssuominen Exp $
+
+  24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> audit-1.7.4.ebuild,
+  +files/audit-1.7.4-glibc212.patch:
+  Fix building with recent glibc wrt #334147 by William Keaney.
 
   29 May 2010; Raúl Porcel <armin76@gentoo.org> audit-1.7.4.ebuild,
   audit-1.7.9.ebuild, audit-1.7.17.ebuild:
