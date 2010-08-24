@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.6 2010/04/14 16:13:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.7 2010/08/24 03:49:06 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,6 +28,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-configure.patch \
 		"${FILESDIR}"/${P}-prototypes.patch \
 		"${FILESDIR}"/${P}-debian.patch
+	sed -i \
+		-e '/^gltron_LINK/s/$/ $(LDFLAGS)/' \
+		Makefile.in \
+		|| die 'sed failed'
 }
 
 src_configure() {

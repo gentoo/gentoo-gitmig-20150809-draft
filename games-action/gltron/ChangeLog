@@ -1,6 +1,10 @@
 # ChangeLog for games-action/gltron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.14 2010/04/14 16:13:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.15 2010/08/24 03:49:06 mr_bones_ Exp $
+
+  24 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  gltron-0.70-r1.ebuild:
+  respect LDFLAGS (bug #332473)
 
   14 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
   gltron-0.70-r1.ebuild:
