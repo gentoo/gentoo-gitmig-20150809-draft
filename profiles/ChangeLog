@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4498 2010/08/24 09:36:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4499 2010/08/24 21:37:57 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Aug 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Masking >=dev-libs/gobject-introspection-0.9.3 until everything else is
+  ported to work with it.
 
   24 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking net-fs/samba-libs for QA removal.
