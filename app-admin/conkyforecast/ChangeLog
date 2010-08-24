@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/conkyforecast
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/ChangeLog,v 1.1 2010/08/24 23:27:59 xmw Exp $
+
+*conkyforecast-2.12 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org>
+  +conkyforecast-2.12.ebuild, +metadata.xml:
+  Initial commit for conkyforecast. Fixes bug #255948, thanks to Hans Meier
+  for the report and Christopher Robin Elmersson for the initial ebuilds
+
