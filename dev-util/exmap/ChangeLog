@@ -1,0 +1,14 @@
+# ChangeLog for dev-util/exmap
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/ChangeLog,v 1.1 2010/08/24 14:29:29 xmw Exp $
+
+*exmap-0.10 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +exmap-0.10.ebuild,
+  +files/exmap-0.10-as-needed.patch, +files/exmap-0.10-fix64bit.patch,
+  +files/exmap-0.10-gcc.patch, +files/exmap-0.10-gcc45.patch,
+  +files/exmap-0.10-kernel.patch, +files/exmap-0.10-makefiles.patch,
+  +metadata.xml:
+  Initial commit for exmap. Fixes bug #158382, thanks to Paul Pacheco and
+  all the other contributors there.
+
