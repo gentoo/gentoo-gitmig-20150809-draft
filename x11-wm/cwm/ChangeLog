@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/cwm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.1 2010/08/24 16:40:59 xmw Exp $
+
+*cwm-20100809 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +cwm-20100809.ebuild,
+  +metadata.xml:
+  Initial commit for cwm. Fixes bug #227771, thanks to Ihar Hrachyshka for
+  the report and initial ebuild
+
