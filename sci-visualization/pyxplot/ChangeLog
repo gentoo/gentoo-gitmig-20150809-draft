@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.19 2010/06/18 16:57:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.20 2010/08/24 20:45:49 bicatali Exp $
+
+*pyxplot-0.8.2 (24 Aug 2010)
+
+  24 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +pyxplot-0.8.2.ebuild, +files/pyxplot-0.8.2-flags.patch:
+  Version bump
 
   18 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> pyxplot-0.8.1.ebuild:
   Filtering -O0 and above from upstream recommendation
