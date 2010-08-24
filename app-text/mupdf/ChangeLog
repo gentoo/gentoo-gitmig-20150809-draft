@@ -1,0 +1,11 @@
+# ChangeLog for app-text/mupdf
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.1 2010/08/24 23:08:44 xmw Exp $
+
+*mupdf-0.6 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +mupdf-0.6.ebuild,
+  +files/mupdf-0.6-buildsystem.patch, +metadata.xml:
+  New ebuild for app-text/mupdf from sunrise. Fixes bug #280469. Thanks to
+  Manu Wächter for the initial ebuilds.
+
