@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.24 2010/08/22 19:58:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.25 2010/08/24 22:52:09 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -27,7 +27,8 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 	dev-libs/lzo
 	truetype? ( media-libs/freetype >=media-fonts/unifont-5 )"
 DEPEND="${RDEPEND}
-	dev-lang/ruby"
+	>=sys-devel/autogen-5.10
+	>=dev-lang/python-2.5.2"
 PROVIDE="virtual/bootloader"
 
 export STRIP_MASK="*/grub/*/*.mod"
@@ -46,10 +47,7 @@ src_unpack() {
 	# autogen.sh does more than just run autotools
 	# need to eautomake due to weirdness #296013
 	if [[ ${PV} == "9999" ]] ; then
-		sed -i \
-			-e '/^\(auto\|ac\)/s:^:e:' \
-			-e "s:^eautomake:`which automake`:" \
-			autogen.sh
+		sed -i -e '/^autoreconf/s:^:e:' autogen.sh || die
 		(. ./autogen.sh) || die
 	fi
 }
