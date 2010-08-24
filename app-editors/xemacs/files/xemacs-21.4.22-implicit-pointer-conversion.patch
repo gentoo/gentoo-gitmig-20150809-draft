@@ -1,0 +1,17 @@
+Index: xemacs-21.4.22/src/eldap.c
+===================================================================
+--- xemacs-21.4.22.orig/src/eldap.c
++++ xemacs-21.4.22/src/eldap.c
+@@ -57,7 +57,11 @@ static Lisp_Object Qnever, Qalways, Qfin
+ /* Modification types (Qdelete is defined in general.c) */
+ static Lisp_Object Qadd, Qreplace;
+ 
+-
++/* copied from /usr/include/ldap.h header */
++ldap_open LDAP_P((	/* deprecated, use ldap_create or ldap_initialize */
++	LDAP_CONST char *host,
++	int port ));
++
+ /************************************************************************/
+ /*                         Utility Functions                            */
+ /************************************************************************/

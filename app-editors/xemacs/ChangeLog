@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.137 2010/06/17 22:40:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.138 2010/08/24 18:02:12 hwoarang Exp $
+
+  24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  xemacs-21.4.22-r1.ebuild,
+  +files/xemacs-21.4.22-implicit-pointer-conversion.patch:
+  Use patch to fix implicit pointer conversion which lead to compilation
+  failures in 64bit arches
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> xemacs-21.4.22-r1.ebuild,
   xemacs-21.5.29-r2.ebuild:
