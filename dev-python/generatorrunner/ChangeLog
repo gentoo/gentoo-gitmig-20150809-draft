@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/generatorrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/ChangeLog,v 1.3 2010/06/16 18:53:54 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/ChangeLog,v 1.4 2010/08/24 19:45:51 ayoy Exp $
+
+*generatorrunner-0.6.0 (24 Aug 2010)
+
+  24 Aug 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +generatorrunner-0.6.0.ebuild:
+  Version bump
 
 *generatorrunner-0.5.0 (16 Jun 2010)
 
