@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dot-forward
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.28 2010/08/23 00:57:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.29 2010/08/24 13:03:14 hwoarang Exp $
+
+  24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  dot-forward-0.71-r3.ebuild:
+  Stable on amd64 wrt bug #333915
 
   23 Aug 2010; Jeroen Roovers <jer@gentoo.org> dot-forward-0.71-r3.ebuild:
   Stable for HPPA (bug #333915).
