@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.710 2010/08/19 23:44:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.711 2010/08/24 02:26:56 vapier Exp $
+
+  24 Aug 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.12.1-r1.ebuild:
+  Fix gnu indirect checks with older binutils #333541 by biohazrd.
 
 *glibc-2.12.1-r1 (19 Aug 2010)
 
