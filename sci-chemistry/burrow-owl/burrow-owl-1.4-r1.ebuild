@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.4.ebuild,v 1.2 2010/07/17 14:42:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.4-r1.ebuild,v 1.1 2010/08/24 17:54:56 xarthisius Exp $
 
 EAPI="2"
 
-inherit base virtualx
+inherit autotools base virtualx
 
 DESCRIPTION="Visualize multidimensional nuclear magnetic resonance (NMR) spectra"
 HOMEPAGE="http://burrow-owl.sourceforge.net/"
@@ -27,7 +27,16 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-include.patch
+	"${FILESDIR}"/${PV}-glibc-2.12.patch #333843
 	)
+
+src_prepare() {
+	base_src_prepare
+	# bug 333843
+	mv src/endian.h src/bo_endian.h || die
+	mv src/endian.c src/bo_endian.c || die
+	eautoreconf
+}
 
 src_test () {
 	Xemake check || die

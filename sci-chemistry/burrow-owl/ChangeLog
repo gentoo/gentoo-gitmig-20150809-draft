@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/burrow-owl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/ChangeLog,v 1.3 2010/07/17 14:42:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/ChangeLog,v 1.4 2010/08/24 17:54:56 xarthisius Exp $
+
+*burrow-owl-1.4-r1 (24 Aug 2010)
+
+  24 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -burrow-owl-1.4.ebuild, +burrow-owl-1.4-r1.ebuild,
+  +files/1.4-glibc-2.12.patch:
+  Fix building with recent glibc wrt bug 333843. Thanks to Diego for report
+  and Samuli for the fix.
 
   17 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> burrow-owl-1.4.ebuild:
   Add missing dependencies. Fix tests wrt bug 328561. Thanks to Diego for
