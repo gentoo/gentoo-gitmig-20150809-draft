@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.153 2010/08/18 10:29:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.154 2010/08/24 18:10:01 a3li Exp $
+
+*rubygems-1.3.7-r4 (24 Aug 2010)
+
+  24 Aug 2010; Alex Legler <a3li@gentoo.org> +rubygems-1.3.7-r4.ebuild,
+  +files/rubygems-1.3.7-ruby19.patch:
+  Revbump to include ruby-1.9.2 fixes.
 
   18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   rubygems-1.3.7-r3.ebuild:
