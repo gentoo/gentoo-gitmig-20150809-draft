@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/files/watchdog-init.d,v 1.2 2009/05/16 16:59:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/files/watchdog-init.d,v 1.3 2010/08/24 21:01:50 vapier Exp $
 
 depend() {
 	need localmount
@@ -15,6 +15,7 @@ get_config() {
 			echo $2
 			return
 		fi
+		shift
 	done
 	echo /etc/watchdog.conf
 }

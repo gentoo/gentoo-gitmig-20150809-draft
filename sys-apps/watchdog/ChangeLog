@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/watchdog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.27 2009/05/16 16:59:26 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.28 2010/08/24 21:01:50 vapier Exp $
+
+  24 Aug 2010; Mike Frysinger <vapier@gentoo.org> files/watchdog-init.d:
+  Fix infinite loop bug in get_config #333441 by mario.
 
   16 May 2009; Mike Frysinger <vapier@gentoo.org> files/watchdog-init.d:
   Use --pidfile with ssd, as well as a better --retry value #269697 by
