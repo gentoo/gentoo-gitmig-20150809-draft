@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.28 2010/07/14 13:39:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.29 2010/08/24 06:53:50 wired Exp $
+
+*wally-2.4 (24 Aug 2010)
+
+  24 Aug 2010; Alex Alexander <wired@gentoo.org> +wally-2.4.ebuild:
+  version bump, bug #334159
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> -wally-2.3.0.ebuild,
   -wally-2.3.1.ebuild:
