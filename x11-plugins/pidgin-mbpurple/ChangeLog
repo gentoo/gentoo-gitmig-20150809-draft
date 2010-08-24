@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-mbpurple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.4 2010/07/18 13:55:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.5 2010/08/24 17:38:33 fauli Exp $
+
+  24 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  pidgin-mbpurple-0.3.0.ebuild:
+  stable x86, bug 334315
 
   18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   pidgin-mbpurple-0.3.0.ebuild:
