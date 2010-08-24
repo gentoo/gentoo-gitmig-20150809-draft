@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.53 2010/06/26 16:47:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.54 2010/08/24 14:12:48 ssuominen Exp $
+
+  24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +files/1.8.0-glibc212.patch, commoncpp2-1.8.0.ebuild:
+  Fix building with recent glibc wrt #334135 by "kde at hilefoks.org" and
+  Arttu Valo.
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org> commoncpp2-1.8.0.ebuild:
   Stable on amd64 wrt bug #321931

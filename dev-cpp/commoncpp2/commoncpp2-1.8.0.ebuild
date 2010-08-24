@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.0.ebuild,v 1.4 2010/06/26 16:47:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.0.ebuild,v 1.5 2010/08/24 14:12:48 ssuominen Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -23,6 +23,7 @@ DEPEND="doc? ( >=app-doc/doxygen-1.3.6 )
 src_prepare() {
 	epatch "${FILESDIR}/1.6.1-gcc42_atomicity.patch"
 	epatch "${FILESDIR}/1.6.2-configure_detect_netfilter.patch" # bug 236177
+	epatch "${FILESDIR}/1.8.0-glibc212.patch"
 	eautoreconf
 }
 
