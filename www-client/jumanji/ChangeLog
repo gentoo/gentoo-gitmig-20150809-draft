@@ -1,0 +1,10 @@
+# ChangeLog for www-client/jumanji
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/ChangeLog,v 1.1 2010/08/24 16:08:55 xmw Exp $
+
+*jumanji-9999 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +jumanji-9999.ebuild,
+  +metadata.xml:
+  Initial commit for jumanji. Fixes bug #328107.
+
