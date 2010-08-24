@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.16 2010/08/24 19:26:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.17 2010/08/24 19:29:21 darkside Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="doc gnome +html idn libnotify nls +unique vala"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
