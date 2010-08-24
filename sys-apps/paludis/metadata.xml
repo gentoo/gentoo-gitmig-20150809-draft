@@ -15,6 +15,7 @@
           to build (~700Mbytes per job) and adds a dependency upon
           <pkg>dev-libs/boost</pkg></flag>
     <flag name="ruby-bindings">Enable Ruby bindings.</flag>
+    <flag name='search-index'>Enable cave search --index. Requires sqlite.</flag>
     <flag name="visibility">Enable visibility support (g++ &gt;=4.1)</flag>
   </use>
 </pkgmetadata>
