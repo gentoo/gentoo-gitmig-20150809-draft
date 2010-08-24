@@ -1,10 +1,10 @@
 # ChangeLog for x11-plugins/thinkhdaps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/thinkhdaps/ChangeLog,v 1.1 2010/08/24 14:48:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/thinkhdaps/ChangeLog,v 1.2 2010/08/24 18:32:44 xmw Exp $
 
 *thinkhdaps-0.2.1 (24 Aug 2010)
 
-  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org>
+  24 Aug 2010; Michael Weber <xmw@gentoo.org>
   +thinkhdaps-0.2.1.ebuild, +metadata.xml:
   Initial commit for thinkhdaps. Fixes bug #324111.
 
