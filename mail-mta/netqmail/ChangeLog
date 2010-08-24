@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.50 2010/08/23 00:59:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.51 2010/08/24 13:04:18 hwoarang Exp $
+
+  24 Aug 2010; Markos Chandras <hwoarang@gentoo.org> netqmail-1.06.ebuild:
+  Stable on amd64 wrt bug #333915
 
   23 Aug 2010; Jeroen Roovers <jer@gentoo.org> netqmail-1.06.ebuild:
   Stable for HPPA (bug #333915).
