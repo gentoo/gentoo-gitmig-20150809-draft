@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/Djblets
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.1 2010/08/24 11:35:33 xmw Exp $
+
+*Djblets-0.6.3 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +Djblets-0.6.3.ebuild,
+  +metadata.xml:
+  Initial commit for Djblets by me. Fixes bug #318993
+
