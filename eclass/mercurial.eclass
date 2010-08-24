@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.12 2010/04/02 18:29:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.13 2010/08/24 16:49:18 robbat2 Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -116,12 +116,19 @@ function mercurial_fetch {
 	fi
 
 	# Checkout working copy:
-	einfo "Creating working directory in ${WORKDIR}/${module} (revision: ${EHG_REVISION})"
+	einfo "Creating working directory in ${WORKDIR}/${module} (target revision: ${EHG_REVISION})"
 	hg clone \
 		${EHG_QUIET_CMD_OPT} \
 		--rev="${EHG_REVISION}" \
 		"${EHG_STORE_DIR}/${EHG_PROJECT}/${module}" \
 		"${WORKDIR}/${module}" || die "hg clone failed"
+	# An exact revision helps a lot for testing purposes, so have some output...
+	# id           num  branch
+	# fd6e32d61721 6276 default
+	local HG_REVDATA=($(hg identify -b -i "${WORKDIR}/${module}"))
+	local HG_REV_ID=${HG_REVDATA[0]}
+	local HG_REV_BRANCH=${HG_REVDATA[1]}
+	einfo "Work directory: ${WORKDIR}/${module} global id: ${HG_REV_ID} branch: ${HG_REV_BRANCH}"
 }
 
 # @FUNCTION: mercurial_src_unpack
