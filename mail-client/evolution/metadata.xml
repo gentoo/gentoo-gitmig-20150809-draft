@@ -24,7 +24,5 @@
 			<pkg>app-pda/gnome-pilot-conduit</pkg></flag>
 		<flag name="profile">Build support for profiling Evolution for
 			development purposes</flag>
-		<flag name="sound">Use Canberra and Canberra-GTK for
-			sound</flag>
 	</use>
 </pkgmetadata>
