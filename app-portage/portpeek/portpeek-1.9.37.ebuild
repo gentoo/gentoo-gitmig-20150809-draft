@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.36.ebuild,v 1.7 2010/08/24 22:02:14 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.37.ebuild,v 1.1 2010/08/24 22:02:14 mpagano Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 EGIT_REPO_URI="git://mpagano.com/var/git/portpeek.git"
 EGIT_BRANCH="1.9.36"
-EGIT_COMMIT="1.9.36"
+EGIT_COMMIT="v1.9.37"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,7 +22,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="=app-portage/gentoolkit-0.3.0_rc9
-	=sys-apps/portage-2.2_rc67
+	>=sys-apps/portage-2.2_rc68
 	dev-lang/python:2.6"
 
 pkg_setup() {

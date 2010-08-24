@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.78 2010/06/06 14:35:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.79 2010/08/24 22:02:14 mpagano Exp $
+
+*portpeek-1.9.37 (24 Aug 2010)
+
+  24 Aug 2010; Mike Pagano <mpagano@gentoo.org> portpeek-1.9.36.ebuild,
+  portpeek-1.9.36.1.ebuild, +portpeek-1.9.37.ebuild:
+  Restrict 1.9.36 and 1.9.36.1 to portage 2.2_rc67. Bump 1.9.37 to be
+  compatible with portage 2.2_rc68
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
   arm stable wrt #300825
