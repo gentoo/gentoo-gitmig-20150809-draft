@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.2 2010/03/31 23:19:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.3 2010/08/24 13:48:01 ssuominen Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -40,6 +40,7 @@ src_prepare() {
 	export EPATCH_OPTS="-d${S}"
 	epatch "${FILESDIR}"/CVE-2009-1297.patch
 	epatch "${FILESDIR}"/${PN}-2.0.871-makefile-cleanup.patch
+	epatch "${FILESDIR}"/${P}-glibc212.patch
 }
 
 src_compile() {
