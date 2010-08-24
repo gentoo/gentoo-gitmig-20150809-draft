@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.554 2010/08/24 18:28:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.555 2010/08/24 18:41:29 zzam Exp $
+
+*udev-161 (24 Aug 2010)
+
+  24 Aug 2010; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-161-cdrom_id_Drop_MEDIA_SESSION_NEXT_for_DVD-RW-RO.patch,
+  +files/161/40-gentoo.rules, +files/161/90-network.rules,
+  +files/161/shell-compat-KV.sh, +files/161/shell-compat-addon.sh,
+  +files/161/udev.confd, +files/161/udev-dev-tarball.initd,
+  +udev-161.ebuild, +files/161/udev.initd, +files/161/udev-mount.initd,
+  +files/161/udev-postmount.initd, +files/161/udev-start.sh,
+  +files/161/udev-stop.sh:
+  Version bumped. Fixed dir_writable check printing an error to console when
+  test fails, bug #326825.
 
   24 Aug 2010; Matthias Schwarzott <zzam@gentoo.org> udev-149.ebuild,
   udev-150-r1.ebuild, udev-151-r1.ebuild, udev-151-r2.ebuild,
