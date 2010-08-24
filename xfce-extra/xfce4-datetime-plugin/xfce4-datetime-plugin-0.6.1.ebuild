@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.4 2010/08/24 03:05:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.5 2010/08/24 03:06:21 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -35,6 +35,6 @@ src_prepare() {
 	sed -i \
 		-e '/Encoding/d' \
 		panel-plugin/datetime.desktop.in.in || die
-	
+
 	xfconf_src_prepare
 }
