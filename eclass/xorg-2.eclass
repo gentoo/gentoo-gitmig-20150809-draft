@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.11 2010/08/22 08:25:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.12 2010/08/24 08:59:56 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -310,7 +310,7 @@ xorg-2_src_install() {
 
 	if [[ -n ${GIT_ECLASS} ]]; then
 		pushd "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}" > /dev/null
-		git log ${GIT_TREE} > "${S}"/ChangeLog
+		git log ${EGIT_COMMIT} > "${S}"/ChangeLog
 		popd > /dev/null
 	fi
 
