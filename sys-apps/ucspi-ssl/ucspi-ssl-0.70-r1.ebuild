@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70-r1.ebuild,v 1.9 2010/08/23 00:56:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.70-r1.ebuild,v 1.10 2010/08/24 13:02:42 hwoarang Exp $
 
 inherit eutils fixheadtails qmail
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.superscript.com/ucspi-ssl/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="perl tls"
 
 DEPEND=">=dev-libs/openssl-0.9.6g
