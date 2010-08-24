@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.3.ebuild,v 1.1 2010/08/24 11:35:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.3.ebuild,v 1.2 2010/08/24 13:13:17 xmw Exp $
 
 EAPI=2
 
@@ -24,8 +24,3 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 }
-
-#src_prepare() {
-#	rm -r tests || die
-#	distutils_src_prepare
-#}
