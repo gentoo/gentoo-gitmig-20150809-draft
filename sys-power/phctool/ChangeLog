@@ -1,0 +1,18 @@
+# ChangeLog for sys-power/phctool
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phctool/ChangeLog,v 1.1 2010/08/24 14:03:15 xmw Exp $
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +phctool-0.5.2.2.ebuild,
+  +files/phctool-0.5.2.2_all_paths_tool_no_sudo.patch,
+  +files/phctool-0.5.2.2_all_paths_tool_sudo.patch,
+  +files/phctool-0.5.2.2_all_paths_tray.patch, +metadata.xml:
+  Initial commit for phctool. Fixes bug 283472.
+
+*phctool-0.5.2.2 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +phctool-0.5.2.2.ebuild,
+  +files/phctool-0.5.2.2_all_paths_tool_no_sudo.patch,
+  +files/phctool-0.5.2.2_all_paths_tool_sudo.patch,
+  +files/phctool-0.5.2.2_all_paths_tray.patch, +metadata.xml:
+  Initial commit for phctool. Fixes bug 283472.
+
