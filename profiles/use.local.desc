@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5896 2010/08/24 19:33:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5897 2010/08/24 22:14:11 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3752,6 +3752,7 @@ x11-libs/libqxt:berkdb - Build the QxtBerkeley module
 x11-libs/libqxt:sql - Build the QxtSql module
 x11-libs/libqxt:web - Enable fast cgi bindings
 x11-libs/libqxt:zeroconf - Build the QxtZeroconf module
+x11-libs/libwnck:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/pango:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/qt:kde - Select media-sound/phonon as phonon variant needed for kde
 x11-libs/qt:qt3support - Enable the Qt3Support libraries for Qt4
