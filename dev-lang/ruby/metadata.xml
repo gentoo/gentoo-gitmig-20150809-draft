@@ -32,5 +32,9 @@
       extension, available since Ruby 1.9.2_rc2, in alternative to the
       bundled syck-based parser.
     </flag>
+
+    <flag name='rdoc'>
+      Install <pkg>dev-ruby/rdoc</pkg> after installing Ruby.
+    </flag>
   </use>
 </pkgmetadata>

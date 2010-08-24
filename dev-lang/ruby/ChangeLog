@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.472 2010/08/23 20:34:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.473 2010/08/24 18:08:09 a3li Exp $
+
+*ruby-1.9.2 (24 Aug 2010)
+
+  24 Aug 2010; Alex Legler <a3li@gentoo.org> +ruby-1.9.2.ebuild,
+  metadata.xml:
+  Version bump. Fixes rdoc handling wrt bug 333897 by Park Ji-in. Drop hppa
+  and x86-fbsd due to a new dependency on rdoc.
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> ruby-1.8.7_p302.ebuild:
   arm stable, bug #332957
