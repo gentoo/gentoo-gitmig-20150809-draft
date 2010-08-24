@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.161 2010/08/10 16:23:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.162 2010/08/24 07:57:23 fauli Exp $
+
+  24 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-oss-0.10.23.ebuild:
+  add ~x86-freebsd
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-oss-0.10.22.ebuild:
