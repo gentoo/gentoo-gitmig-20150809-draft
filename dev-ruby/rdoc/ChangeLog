@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.33 2010/08/18 11:12:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.34 2010/08/24 18:12:07 a3li Exp $
+
+*rdoc-2.5.11 (24 Aug 2010)
+
+  24 Aug 2010; Alex Legler <a3li@gentoo.org> +rdoc-2.5.11.ebuild:
+  Version bump. Fixes tests wrt bug 330279. ruby19 patch is no longer
+  needed.
 
   18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> rdoc-2.5.6.ebuild,
   rdoc-2.5.9.ebuild:
