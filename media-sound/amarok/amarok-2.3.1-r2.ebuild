@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r2.ebuild,v 1.4 2010/07/30 12:03:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r2.ebuild,v 1.5 2010/08/24 01:44:26 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ EAPI="2"
 if [[ ${PV} != *9999* ]]; then
 	KDE_LINGUAS="af bg ca ca@valencia cs da de el en_GB es et fr it ja lt lv nb nds pa pl
 	pt pt_BR ru sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr uk zh_CN zh_TW"
-	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
+	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 else
 	EGIT_REPO_URI="git://git.kde.org/${PN}/${PN}.git"
 	GIT_ECLASS="git"
