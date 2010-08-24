@@ -1,0 +1,8 @@
+# ChangeLog for sys-power/phc-intel
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.1 2010/08/24 00:51:14 xmw Exp $
+
+  24 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> ChangeLog:
+  New ebuild for sys-power/phc-intel. Ebuild written by me, taken from
+  sunrise. Fixes bug #283472.
+
