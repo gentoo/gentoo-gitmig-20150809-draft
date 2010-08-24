@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.51 2010/07/31 02:58:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.52 2010/08/24 15:30:18 darkside Exp $
+
+*slim-1.3.2-r1 (24 Aug 2010)
+
+  24 Aug 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/261359-fix-SIGTERM-freeze.patch, +slim-1.3.2-r1.ebuild,
+  +files/slim-1.3.2-r1-config.diff:
+  Revision bump which should improve shutdown behavior by patching a SIGTERM
+  issue and changing the pid file to slim.pid instead of slim.lock. Thanks
+  to Grygoriy I. Fuchedzhy and others in bug 261359
 
 *slim-1.3.2 (31 Jul 2010)
 
