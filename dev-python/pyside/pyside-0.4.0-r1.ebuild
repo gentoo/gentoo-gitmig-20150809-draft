@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.0.ebuild,v 1.1 2010/08/24 19:47:20 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.0-r1.ebuild,v 1.1 2010/08/25 17:19:42 ayoy Exp $
 
 EAPI="2"
 
@@ -37,6 +37,10 @@ DEPEND=">=dev-libs/boost-1.41.0[python]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-find-kde-phonon.patch"
+}
 
 src_install() {
 	cmake-utils_src_install

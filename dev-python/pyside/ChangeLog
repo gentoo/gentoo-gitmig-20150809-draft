@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.10 2010/08/24 19:55:00 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.11 2010/08/25 17:19:42 ayoy Exp $
+
+*pyside-0.4.0-r1 (25 Aug 2010)
+
+  25 Aug 2010; Dominik Kapusta <ayoy@gentoo.org> -pyside-0.4.0.ebuild,
+  +pyside-0.4.0-r1.ebuild, +files/pyside-find-kde-phonon.patch,
+  -files/pyside-qtscripttools.patch:
+  Adding patch to find KDE phonon, removing obsolete qtscripttools patch.
 
   24 Aug 2010; Dominik Kapusta <ayoy@gentoo.org> -pyside-0.2.2.ebuild,
   -pyside-0.2.3-r1.ebuild:
