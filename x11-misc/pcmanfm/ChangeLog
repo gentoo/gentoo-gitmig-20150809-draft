@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.32 2010/07/31 10:46:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.33 2010/08/25 10:46:50 hwoarang Exp $
+
+*pcmanfm-0.9.7-r2 (25 Aug 2010)
+
+  25 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -pcmanfm-0.9.7.ebuild,
+  +pcmanfm-0.9.7-r2.ebuild, pcmanfm-9999.ebuild:
+  Introduce gnome use flag to get rid of gvfs and gnome-mount dependency for
+  non-gnome users. Gvfs enables automounting support for gnome users.
+  Without that, the entries on fstab will be used instead. Thanks to Lisa
+  Milne <lisa@ltmnet.com> for pointing out. Bug #334391. 
+  Introduced virtual/eject  dependency per bug #333351
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org> pcmanfm-0.9.7-r1.ebuild:
   amd64 stable, bug 327907
