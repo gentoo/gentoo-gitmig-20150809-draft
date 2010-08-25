@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.36 2010/05/20 10:38:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.37 2010/08/25 09:13:21 pva Exp $
+
+*ipset-4.3 (25 Aug 2010)
+
+  25 Aug 2010; Peter Volkov <pva@gentoo.org> +ipset-4.3.ebuild:
+  Version bump, fixes 2.6.35 kernel compatibility issue, bug 332687, thank
+  fkhp and Oleksandr Kovalenko for report.
 
   20 May 2010; Peter Volkov <pva@gentoo.org> ipset-4.1.ebuild:
   amd64 stable, bug 304037.
