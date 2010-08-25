@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.13.ebuild,v 1.5 2010/07/10 19:03:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.13.ebuild,v 1.6 2010/08/25 16:01:06 darkside Exp $
+
+EAPI=3
 
 IUSE="snmp"
 DESCRIPTION="WindowMaker Network Devices (dockapp)"
@@ -9,7 +11,7 @@ SRC_URI="http://www.thregr.org/~wavexx/software/wmnd/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -19,14 +21,13 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	snmp? ( >=net-analyzer/net-snmp-5.2.1 )"
 
-src_compile()
+src_configure()
 {
 	if use snmp; then
 		LDFLAGS="$LDFLAGS -lcrypto"
 	fi
 
-	LDFLAGS="$LDFLAGS" econf || die "configure failed"
-	emake || die "parallel make failed"
+	LDFLAGS="$LDFLAGS" econf
 }
 
 src_install()
@@ -36,5 +37,5 @@ src_install()
 	dodoc README AUTHORS ChangeLog NEWS TODO
 
 	# gpl.info is no valid .info file. Causes errors with install-info.
-	rm -r "${D}"/usr/share/info
+	rm -r "${ED}"/usr/share/info
 }
