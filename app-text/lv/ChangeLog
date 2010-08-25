@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.33 2010/01/23 11:29:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.34 2010/08/25 18:16:10 maekke Exp $
+
+  25 Aug 2010; Markus Meier <maekke@gentoo.org> lv-4.51-r1.ebuild:
+  add ~arm, bug #333853
 
   23 Jan 2010; Alexis Ballier <aballier@gentoo.org> lv-4.51-r1.ebuild:
   keyword ~x86-fbsd thanks to Naohiro Aota <naota@elisp.net>, bug #301885
