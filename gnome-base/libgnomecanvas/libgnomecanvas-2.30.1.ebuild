@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.1.ebuild,v 1.6 2010/08/23 20:55:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.1.ebuild,v 1.7 2010/08/25 17:28:48 mr_bones_ Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -54,4 +54,3 @@ src_install() {
 src_test() {
 	Xmake check || die "Test phase failed"
 }
-
