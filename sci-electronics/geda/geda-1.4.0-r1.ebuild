@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0-r1.ebuild,v 1.2 2010/06/22 18:43:03 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0-r1.ebuild,v 1.3 2010/08/25 11:32:21 flameeyes Exp $
 
 inherit eutils versionator
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.geda.seul.org/release/${SUBDIR}/${PV}/geda-gattrib-${PV}.tar
 
 IUSE="doc examples gd threads"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="ppc"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2.18.6

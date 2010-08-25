@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.63 2010/08/21 21:12:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.64 2010/08/25 11:32:21 flameeyes Exp $
+
+  25 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  geda-1.4.0-r1.ebuild:
+  De-keyword 1.4.0-r1 so that libgeda won't be brought in by chance.
 
   21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -geda-1.4.1.ebuild,
   -geda-1.4.3.ebuild, -geda-1.4.3-r1.ebuild, -geda-1.6.0-r1.ebuild:
