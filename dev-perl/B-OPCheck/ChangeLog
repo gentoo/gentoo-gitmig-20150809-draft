@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/B-OPCheck
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-OPCheck/ChangeLog,v 1.1 2009/06/23 07:34:08 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-OPCheck/ChangeLog,v 1.2 2010/08/25 07:20:20 tove Exp $
+
+*B-OPCheck-0.29 (25 Aug 2010)
+
+  25 Aug 2010; Torsten Veller <tove@gentoo.org>
+  +files/0.29-Perl_check_t.patch, +B-OPCheck-0.29.ebuild:
+  Version bump
 
 *B-OPCheck-0.27 (23 Jun 2009)
 
