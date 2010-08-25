@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1-r1.ebuild,v 1.1 2010/07/12 22:34:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1-r2.ebuild,v 1.1 2010/08/25 17:19:43 jer Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -17,8 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="compat15 debug ftconv nfprofile sflow"
 
 CDEPEND="
-	ftconv? ( sys-libs/zlib
-		net-analyzer/flow-tools )
+	ftconv? ( sys-libs/zlib net-analyzer/flow-tools )
 	nfprofile? ( net-analyzer/rrdtool )"
 #	readpcap? ( net-libs/libpcap )"
 DEPEND="${CDEPEND}
@@ -38,7 +37,7 @@ src_prepare() {
 src_configure() {
 	# --without-ftconf is not handled well #322201
 	econf \
-		$(use ftconv && echo "--with-ftconf --with-ftpath=/usr") \
+		$(use ftconv && echo "--enable-ftconv --with-ftpath=/usr") \
 		$(use nfprofile && echo "--enable-nfprofile") \
 		$(use_enable sflow) \
 		$(use_enable debug devel) \
