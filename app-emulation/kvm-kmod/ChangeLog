@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.13 2010/08/20 21:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.14 2010/08/25 19:03:01 cardoe Exp $
+
+  25 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  -kvm-kmod-2.6.32.12.ebuild, kvm-kmod-2.6.32.16.ebuild,
+  -kvm-kmod-2.6.33.3.ebuild, -kvm-kmod-2.6.34.ebuild,
+  kvm-kmod-2.6.34.1.ebuild, kvm-kmod-2.6.35.ebuild:
+  Fix QA warning about linux_chkconfig_exists and remove older versions.
 
 *kvm-kmod-2.6.35 (20 Aug 2010)
 
