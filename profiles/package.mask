@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11881 2010/08/25 11:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11882 2010/08/25 18:17:39 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -611,10 +611,6 @@ x11-plugins/gkacpi
 # Old, useless, no maintainer
 # Removed in 60 days by treecleaners, bug 185292
 net-wireless/ieee80211
-
-# Markus Meier <maekke@gentoo.org> (10 Jun 2010)
-# mask inkscape prereleases for testing
->=media-gfx/inkscape-0.48_pre0
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Jun 2010)
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
