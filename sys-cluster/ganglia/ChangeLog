@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.38 2010/07/03 15:34:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.39 2010/08/25 01:53:52 jsbronder Exp $
+
+*ganglia-3.1.7-r2 (25 Aug 2010)
+
+  25 Aug 2010; Justin Bronder <jsbronder@gentoo.org> +files/gmetad.rc-2,
+  +files/gmond.rc-2, -ganglia-3.1.7-r1.ebuild, +ganglia-3.1.7-r2.ebuild:
+  Use pidfile for starting and stopping the ganglia daemons. Thanks to
+  Joshua Rich, #333275
 
   03 Jul 2010; Matti Bickel <mabi@gentoo.org> ganglia-3.1.7-r1.ebuild:
   update RDEPEND for php-5.3 (bug #298205)

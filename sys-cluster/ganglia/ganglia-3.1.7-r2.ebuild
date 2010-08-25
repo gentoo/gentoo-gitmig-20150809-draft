@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r1.ebuild,v 1.2 2010/07/03 15:34:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r2.ebuild,v 1.1 2010/08/25 01:53:52 jsbronder Exp $
 
 EAPI="3"
 WEBAPP_OPTIONAL="yes"
@@ -61,7 +61,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	newinitd "${FILESDIR}"/gmond.rc gmond
+	newinitd "${FILESDIR}"/gmond.rc-2 gmond
 	doman {mans/*.1,gmond/*.5} || die "Failed to install manpages"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README || die
 
@@ -93,7 +93,7 @@ src_install() {
 		doins gmetad/gmetad.conf
 		doman mans/gmetad.1
 
-		newinitd "${FILESDIR}"/gmetad.rc gmetad
+		newinitd "${FILESDIR}"/gmetad.rc-2 gmetad
 		keepdir /var/lib/ganglia/rrds
 		fowners nobody:nobody /var/lib/ganglia/rrds
 	fi
