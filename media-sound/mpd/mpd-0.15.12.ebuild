@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.12.ebuild,v 1.1 2010/08/22 12:09:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.12.ebuild,v 1.2 2010/08/25 18:19:00 maekke Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug +fifo +ffmpeg flac
 fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
 mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
