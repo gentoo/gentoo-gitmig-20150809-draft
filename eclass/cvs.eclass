@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.75 2010/08/24 21:00:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.76 2010/08/25 19:57:53 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -27,6 +27,18 @@ inherit eutils
 # this eclass will take care of that.  If you want to set the global
 # KDE cvs ebuilds' settings, see the comments in kde-source.eclass.
 
+# @ECLASS-VARIABLE: ECVS_CVS_COMPRESS
+# @DESCRIPTION:
+# Set the default compression level.  Has no effect when ECVS_CVS_COMMAND
+# is defined by ebuild/user.
+: ${ECVS_CVS_COMPRESS:=-z1}
+
+# @ECLASS-VARIABLE: ECVS_CVS_OPTIONS
+# @DESCRIPTION:
+# Additional options to the cvs commands.  Has no effect when ECVS_CVS_COMMAND
+# is defined by ebuild/user.
+: ${ECVS_CVS_OPTIONS:=-q -f}
+
 # @ECLASS-VARIABLE: ECVS_CVS_COMMAND
 # @DESCRIPTION:
 # CVS command to run
@@ -35,28 +47,18 @@ inherit eutils
 # on the cvs connection.  The default of "cvs -q -f -z4" means to be
 # quiet, to disregard the ~/.cvsrc config file and to use maximum
 # compression.
-[[ -z ${ECVS_CVS_COMMAND} ]] && ECVS_CVS_COMMAND="cvs ${ECVS_CVS_OPTIONS} ${ECVS_CVS_COMPRESS}"
-
-# @ECLASS-VARIABLE: ECVS_CVS_COMPRESS
-# @DESCRIPTION:
-# Set the compression level.
-[[ -z ${ECVS_CVS_COMPRESS} ]] && ECVS_CVS_COMPRESS="-z1"
-
-# @ECLASS-VARIABLE: ECVS_CVS_OPTIONS
-# @DESCRIPTION:
-# Additional options to the cvs commands.
-[[ -z ${ECVS_CVS_OPTIONS} ]] && ECVS_CVS_OPTIONS="-q -f"
+: ${ECVS_CVS_COMMAND:=cvs ${ECVS_CVS_OPTIONS} ${ECVS_CVS_COMPRESS}}
 
 # @ECLASS-VARIABLE: ECVS_UP_OPTS
 # @DESCRIPTION:
 # CVS options given after the cvs update command. Don't remove "-dP" or things
 # won't work.
-[ -z "$ECVS_UP_OPTS" ] && ECVS_UP_OPTS="-dP"
+: ${ECVS_UP_OPTS:=-dP}
 
 # @ECLASS-VARIABLE: ECVS_CO_OPTS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # CVS options given after the cvs checkout command.
-[ -z "$ECVS_CO_OPTS" ] && ECVS_CO_OPTS=""
 
 # @ECLASS-VARIABLE: ECVS_OFFLINE
 # @DESCRIPTION:
