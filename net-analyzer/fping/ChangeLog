@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.29 2010/07/12 18:39:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.30 2010/08/25 16:22:07 jer Exp $
+
+*fping-2.4_beta2_p161-r1 (25 Aug 2010)
+
+  25 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  +fping-2.4_beta2_p161-r1.ebuild,
+  +files/fping-2.4_beta2_p161-min-time.patch:
+  Fix -Q60 minimum ping response time bug by Alex Ghoth.
 
 *fping-2.4_beta2_p161 (12 Jul 2010)
 
