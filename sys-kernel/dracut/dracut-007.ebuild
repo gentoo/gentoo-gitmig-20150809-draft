@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.1 2010/08/17 18:23:40 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.2 2010/08/25 17:46:08 ramereth Exp $
 
 EAPI=2
 
@@ -14,10 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-COMMON_IUSE="bootchart btrfs debug gensplash lvm mdraid multipath selinux
-syslog uswsusp xen"
+COMMON_IUSE="bootchart btrfs debug gensplash mdraid multipath selinux syslog
+uswsusp xen"
 NETWORK_IUSE="iscsi nbd nfs"
-DM_IUSE="crypt dmraid dmsquash-live"
+DM_IUSE="crypt dmraid dmsquash-live lvm"
 IUSE="${COMMON_IUSE} ${DM_IUSE} ${NETWORK_IUSE}"
 
 NETWORK_DEPS="net-misc/bridge-utils >=net-misc/dhcp-3.1.2_p1 sys-apps/iproute2"

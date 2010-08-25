@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.6 2010/08/17 18:23:40 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.7 2010/08/25 17:46:08 ramereth Exp $
+
+  25 Aug 2010; Lance Albertson <ramereth@gentoo.org> dracut-006-r1.ebuild,
+  dracut-007.ebuild:
+  Fixes bug #334347 (dm related dependencies). Thanks to Akos Szalkai
+  <szalkai@szalkai.net> for report and patch.
 
 *dracut-007 (17 Aug 2010)
 *dracut-006-r1 (17 Aug 2010)
