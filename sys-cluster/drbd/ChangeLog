@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.103 2010/08/13 07:18:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.104 2010/08/25 17:00:58 xarthisius Exp $
+
+  25 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -drbd-0.7.24-r1.ebuild, -drbd-0.7.25.ebuild, -files/drbd-0.7.rc,
+  -drbd-8.0.6-r1.ebuild, -drbd-8.0.7.ebuild, -drbd-8.0.8.ebuild,
+  -files/drbd-8.0.8-missing-include.patch, -drbd-8.0.11.ebuild,
+  -drbd-8.0.12.ebuild, -drbd-8.0.13.ebuild, -drbd-8.0.14.ebuild,
+  -drbd-8.3.2.ebuild, -files/drbd-8.3.2-bitsperlong.h.patch:
+  Drop old.
 
   13 Aug 2010; Christian Faulhammer <fauli@gentoo.org> drbd-8.3.8.1.ebuild:
   stable x86, bug 294880
