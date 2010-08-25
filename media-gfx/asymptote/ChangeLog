@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.77 2010/08/04 07:25:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.78 2010/08/25 04:50:24 grozin Exp $
+
+*asymptote-2.04 (25 Aug 2010)
+
+  25 Aug 2010; Andrey Grozin <grozin@gentoo.org> -asymptote-2.02.ebuild,
+  -files/asymptote-2.02-configure-ac.patch,
+  -files/asymptote-2.02-info.patch, -files/asymptote-2.02-xdg-utils.patch,
+  +asymptote-2.04.ebuild, +files/asymptote-2.04-configure-ac.patch,
+  +files/asymptote-2.04-info.patch, +files/asymptote-2.04-xdg-utils.patch:
+  Version bump
 
 *asymptote-2.03 (04 Aug 2010)
 
