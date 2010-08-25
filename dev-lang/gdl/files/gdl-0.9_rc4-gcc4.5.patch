@@ -1,0 +1,24 @@
+Fix build with GCC-4.5
+
+http://gnudatalanguage.cvs.sourceforge.net/viewvc/gnudatalanguage/gdl/src/math_utl.hpp?r1=1.4&r2=1.5&view=patch
+http://bugs.gentoo.org/show_bug.cgi?id=334415
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564994
+
+--- src/math_utl.hpp
++++ src/math_utl.hpp
+@@ -22,11 +22,12 @@
+ 
+ //#define ABS(xxx) (( xxx > -xxx)?(xxx):(-xxx))
+ 
+-template< typename T>
+-inline T abs( T a) { return (a>=T(0))?a:-a;}
+-
+ namespace lib {
+ 
++  // SA: needs to be inside a namespace for GCC 4.5
++  template< typename T>
++  inline T abs( T a) { return (a>=T(0))?a:-a;}
++
+ //   int trans513(char *, int, int, int, DType);
+ //   int transpose(char *, SizeT, SizeT [], SizeT, DType);
+ //   int transpose_perm(char *, SizeT, SizeT [], SizeT, DType, long []);

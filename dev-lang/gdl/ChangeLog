@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.20 2010/07/04 19:57:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.21 2010/08/25 16:21:38 xarthisius Exp $
+
+  25 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> gdl-0.9_rc4.ebuild,
+  +files/gdl-0.9_rc4-gcc4.5.patch:
+  Fix build with GCC-4.5 wrt bug 334415. Thanks to Diego for report.
 
   04 Jul 2010; Justin Lecher <jlec@gentoo.org> -gdl-0.9_rc2.ebuild,
   -gdl-0.9_rc3.ebuild, gdl-0.9_rc4.ebuild, -files/gdl-0.9_rc1-gcc4.3.patch,
