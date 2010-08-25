@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/wmload-0.9.2.ebuild,v 1.10 2008/11/26 00:01:43 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/wmload-0.9.2.ebuild,v 1.11 2010/08/25 15:54:04 darkside Exp $
 
+EAPI=3
 inherit eutils
 
 IUSE=""
@@ -20,21 +21,28 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-ComplexProgramTargetNoMan.patch
+	epatch "${FILESDIR}"/${PN}.solaris.patch
+	epatch "${FILESDIR}"/${P}-prefix.patch
+	[[ ${CHOST} == *-solaris* ]] && \
+		sed -i -e 's/\(^XPMLIB = \)\(.*$\)/\1-lkstat \2/' Imakefile
+}
+
+src_configure() {
+	xmkmf || die "xmkmf failed."
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed."
-	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed."
+	emake CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
+		|| die "emake failed."
 }
 
 src_install() {
-	einstall DESTDIR="${D}" BINDIR=/usr/bin || die "einstall failed."
+	einstall DESTDIR="${D}" BINDIR="${EPREFIX}"/usr/bin \
+		|| die "einstall failed."
 
 	dodoc README
 
