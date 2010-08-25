@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.31 2010/08/11 13:16:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.32 2010/08/25 00:44:14 lack Exp $
+
+*gkrellweather-2.0.7-r2 (25 Aug 2010)
+
+  25 Aug 2010; Jim Ramsay <lack@gentoo.org> gkrellweather-2.0.7.ebuild,
+  gkrellweather-2.0.7-r1.ebuild, +gkrellweather-2.0.7-r2.ebuild,
+  +files/gkrellweather-2.0.7-Move-GrabWeather.patch:
+  Move the GrabWeather script due to collision with x11-misc/bbweather (Bug
+  #333289)
 
 *gkrellweather-2.0.7-r1 (11 Aug 2010)
 
