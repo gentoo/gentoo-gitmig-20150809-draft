@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flagedit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.22 2009/02/22 15:27:31 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.23 2010/08/25 17:27:32 idl0r Exp $
+
+  25 Aug 2010; Christian Ruppert <idl0r@gentoo.org> flagedit-0.0.5.ebuild,
+  flagedit-0.0.7.ebuild, flagedit-0.0.8.ebuild:
+  Some QA fixes, bug 325657.
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> flagedit-0.0.8.ebuild:
   x86 stable wrt #258247
