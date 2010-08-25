@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.53 2010/08/21 21:12:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.54 2010/08/25 11:33:08 flameeyes Exp $
+
+  25 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libgeda-1.4.0.ebuild:
+  De-keyword 1.4.0-r1 so that libgeda won't be brought in by chance.
 
   21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -libgeda-1.4.1.ebuild, -libgeda-1.4.3.ebuild, -libgeda-1.4.3-r1.ebuild:
