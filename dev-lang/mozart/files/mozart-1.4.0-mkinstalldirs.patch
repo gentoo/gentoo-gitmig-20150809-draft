@@ -1,0 +1,11 @@
+--- mozart-1.4.0.20080704.orig/mkinstalldirs	1998-11-17 12:25:23.000000000 +1300
++++ mozart-1.4.0.20080704/mkinstalldirs	2008-12-07 12:01:14.000000000 +1300
+@@ -40,7 +40,7 @@
+ 
+      if test ! -d "${pathcomp}"; then
+ 	echo "mkdir $pathcomp" 1>&2
+-	mkdir "${pathcomp}" || errstatus=$?
++	mkdir "${pathcomp}" || test -d "${pathcomp}" || errstatus=$?
+ 	dochmod "${pathcomp}"
+      fi
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mozart
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.25 2009/08/11 07:04:33 keri Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.26 2010/08/25 07:56:38 keri Exp $
+
+  25 Aug 2010; <keri@gentoo.org> mozart-1.4.0.ebuild,
+  +files/mozart-1.4.0-mkinstalldirs.patch:
+  Add threadsafe mkinstalldirs patch
 
   11 Aug 2009; <keri@gentoo.org> mozart-1.3.2.ebuild,
   mozart-1.3.2-r1.ebuild, +files/mozart-1.3.2-const-cast.patch,

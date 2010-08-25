@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.6 2009/08/10 06:33:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.7 2010/08/25 07:56:38 keri Exp $
 
 inherit elisp-common eutils
 
@@ -42,6 +42,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-ozplatform-amd64.patch
 	epatch "${FILESDIR}"/${P}-ozplatform-sparc.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-mkinstalldirs.patch
 	epatch "${FILESDIR}"/${P}-contrib.patch
 	epatch "${FILESDIR}"/${P}-dss-prefix.patch
 	epatch "${FILESDIR}"/${P}-dss-pic.patch
