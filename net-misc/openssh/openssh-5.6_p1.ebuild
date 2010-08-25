@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1.ebuild,v 1.1 2010/08/23 21:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1.ebuild,v 1.2 2010/08/25 21:50:42 robbat2 Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -8,11 +8,11 @@ inherit eutils flag-o-matic multilib autotools pam
 # Make it more portable between straight releases
 # and _p? releases.
 PARCH=${P/_/}
-#PARCH_54=${PARCH/5.?/5.4}
+PARCH_54=${PARCH/5.?/5.4}
 
-#HPN_PATCH="${PARCH/5.6/5.5}-hpn13v9.diff.gz"
+HPN_PATCH="${PARCH}-hpn13v9-gentoo.diff.gz"
 #HPN_X509_PATCH="${PARCH_54}-hpn13v7-x509variant.diff.gz"
-#LDAP_PATCH="${PARCH_54/openssh/openssh-lpk}-0.3.13.patch.gz"
+LDAP_PATCH="${PARCH/openssh/openssh-lpk}-0.3.13.patch.gz"
 #X509_VER="6.2.3" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
