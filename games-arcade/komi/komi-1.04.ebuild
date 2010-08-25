@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.5 2007/03/15 23:14:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.6 2010/08/25 16:24:44 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Komi the Space Frog - simple SDL game of collection"
@@ -13,16 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-DESTDIR.patch
 	sed -i \
 		-e "/^BINPATH/s:=.*:=${GAMES_BINDIR}/:" \
-		-e "/^DATAPATH/s:=.*:=${GAMES_DATADIR}/${PN}/:" Makefile \
+		-e "/^DATAPATH/s:=.*:=${GAMES_DATADIR}/${PN}/:" \
+		-e '/^SDL_LIB/s:$: $(LDFLAGS):' \
+		-e '/^SDL_LIB/s:--static-:--:' \
+		Makefile \
 		|| die "sed failed"
 }
 

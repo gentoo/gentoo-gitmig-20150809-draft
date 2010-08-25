@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/komi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.5 2007/03/15 23:14:50 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.6 2010/08/25 16:24:44 mr_bones_ Exp $
+
+  25 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> komi-1.04.ebuild:
+  EAPI=2; respect LDFLAGS (bug #334457)
 
   15 Mar 2007; Tristan Heaven <nyhm@gentoo.org> komi-1.04.ebuild:
   Install menu entry, bug #160229
