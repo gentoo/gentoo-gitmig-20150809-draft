@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/xcowsay
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcowsay/ChangeLog,v 1.1 2010/08/25 10:27:06 hwoarang Exp $
+
+*xcowsay-1.2 (25 Aug 2010)
+
+  25 Aug 2010; Markos Chandras <hwoarang@gentoo.org> +xcowsay-1.2.ebuild,
+  +metadata.xml:
+  Initial commit of xcowsay
+
