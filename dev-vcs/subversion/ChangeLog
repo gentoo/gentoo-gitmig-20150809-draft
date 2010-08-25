@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.14 2010/08/19 16:55:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.15 2010/08/25 09:46:16 hwoarang Exp $
+
+  24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  subversion-1.6.12.ebuild:
+  Stable on amd64 wrt bug #329795
 
   19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove arfrever.
