@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqldeveloper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.8 2010/07/19 06:00:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.9 2010/08/25 12:11:42 hwoarang Exp $
+
+*sqldeveloper-2.1.1.64.45 (25 Aug 2010)
+
+  25 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +sqldeveloper-2.1.1.64.45.ebuild, metadata.xml:
+  Version bump. Ján Bednár will be the maintainer and I will proxy him.
+  Fixes bug #297775. Thanks to everybody for the ebuilds
 
   19 Jul 2010; Petteri Räty <betelgeuse@gentoo.org>
   sqldeveloper-1.5.4.59.40.ebuild:
