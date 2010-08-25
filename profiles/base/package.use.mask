@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.161 2010/08/23 21:54:42 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.162 2010/08/25 11:08:23 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (25 Aug 2010)
+# Require 4suite dependency tree that is masked
+dev-python/scimath test
+dev-python/codetools test
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (12 Jul 2010)
 # lirc support is broken in the snapshot
