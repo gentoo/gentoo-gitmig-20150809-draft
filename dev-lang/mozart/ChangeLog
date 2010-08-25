@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.26 2010/08/25 07:56:38 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.27 2010/08/25 19:06:53 keri Exp $
+
+  25 Aug 2010; <keri@gentoo.org> mozart-1.4.0.ebuild,
+  +files/mozart-1.4.0-dss-ldflags.patch:
+  Respect LDFLAGS
 
   25 Aug 2010; <keri@gentoo.org> mozart-1.4.0.ebuild,
   +files/mozart-1.4.0-mkinstalldirs.patch:
