@@ -1,0 +1,43 @@
+diff -ru ../libaio-0.3.109/Makefile ./Makefile
+--- ../libaio-0.3.109/Makefile	2009-10-09 20:17:02.000000000 +0200
++++ ./Makefile	2010-08-25 23:04:18.963033260 +0200
+@@ -5,9 +5,9 @@
+ CVSTAG = $(NAME)_$(subst .,-,$(VERSION))_$(subst .,-,$(RELEASE))
+ RPMBUILD=$(shell `which rpmbuild >&/dev/null` && echo "rpmbuild" || echo "rpm")
+ 
+-prefix=/usr
++prefix=$(EPREFIX)/usr
+ includedir=$(prefix)/include
+-libdir=$(prefix)/lib
++libdir=$(EPREFIX)/$(LIBDIR)
+ 
+ pkgname := libaio
+ ver := $(shell cat .version)
+diff -ru ../libaio-0.3.109/src/Makefile ./src/Makefile
+--- ../libaio-0.3.109/src/Makefile	2009-10-09 20:17:02.000000000 +0200
++++ ./src/Makefile	2010-08-25 23:05:01.047919131 +0200
+@@ -1,6 +1,4 @@
+-prefix=/usr
+-includedir=$(prefix)/include
+-libdir=$(prefix)/lib
++usrlibdir=$(prefix)/$(LIBDIR)
+ 
+ ARCH := $(shell uname -m | sed -e s/i.86/i386/)
+ CFLAGS := -nostdlib -nostartfiles -Wall -I. -g -fomit-frame-pointer -O2 -fPIC
+@@ -51,11 +49,11 @@
+ 	$(CC) $(SO_CFLAGS) -Wl,--version-script=libaio.map -Wl,-soname=$(soname) -o $@ $(libaio_sobjs) $(LINK_FLAGS)
+ 
+ install: $(all_targets)
+-	install -D -m 644 libaio.h $(includedir)/libaio.h
+-	install -D -m 644 libaio.a $(libdir)/libaio.a
+-	install -D -m 755 $(libname) $(libdir)/$(libname)
+-	ln -sf $(libname) $(libdir)/$(soname)
+-	ln -sf $(libname) $(libdir)/libaio.so
++	install -D -m 644 libaio.h $(DESTDIR)$(includedir)/libaio.h
++	install -D -m 644 libaio.a $(DESTDIR)$(usrlibdir)/libaio.a
++	install -D -m 755 $(libname) $(DESTDIR)$(libdir)/$(libname)
++	ln -sf $(libname) $(DESTDIR)$(libdir)/$(soname)
++	ln -sf $(libname) $(DESTDIR)$(libdir)/libaio.so
+ 
+ $(libaio_objs): libaio.h
+ 
