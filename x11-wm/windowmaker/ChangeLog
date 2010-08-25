@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.114 2010/08/24 11:50:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.115 2010/08/25 12:42:48 grobian Exp $
+
+*windowmaker-0.92.0-r10 (25 Aug 2010)
+
+  25 Aug 2010; Fabian Groffen <grobian@gentoo.org>
+  +windowmaker-0.92.0-r10.ebuild:
+  Revbump to bump EAPI to 3, and to drop configure problem with gnustepdir
 
   24 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   windowmaker-0.92.0-r9.ebuild:
