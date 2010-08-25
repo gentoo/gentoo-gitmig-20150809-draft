@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openais
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.10 2010/08/25 07:42:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.11 2010/08/25 07:59:02 xarthisius Exp $
+
+  25 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> openais-1.1.4.ebuild:
+  Fix typo in ebuild
 
 *openais-1.1.4 (25 Aug 2010)
 

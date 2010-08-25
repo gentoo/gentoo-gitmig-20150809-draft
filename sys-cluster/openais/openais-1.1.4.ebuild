@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.1 2010/08/25 07:42:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.2 2010/08/25 07:59:02 xarthisius Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
 		--localstatedir=/var
 }
 
