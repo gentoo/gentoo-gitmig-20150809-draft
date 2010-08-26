@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.5 2010/08/19 19:32:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.6 2010/08/26 07:07:43 grobian Exp $
 
-EAPI=2
+EAPI=3
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
@@ -53,7 +53,7 @@ src_prepare() {
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
 	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(PROJ_prefix)/share/doc/'${PF}, \
-		-e 's,^PROJ_etcdir.*,PROJ_etcdir := /etc/llvm,' \
+		-e 's,^PROJ_etcdir.*,PROJ_etcdir := '"${EPREFIX}"'/etc/llvm,' \
 		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir), \
 		-i Makefile.config.in || die "Makefile.config sed failed"
 
@@ -74,6 +74,12 @@ src_configure() {
 			--enable-optimized \
 			--disable-assertions \
 			--disable-expensive-checks"
+	fi
+
+	# Setup the search path to include the Prefix includes
+	if use prefix ; then
+		CONF_FLAGS="${CONF_FLAGS} \
+			--with-c-include-dirs=${EPREFIX}/usr/include:/usr/include"
 	fi
 
 	if use amd64; then
@@ -130,9 +136,18 @@ src_install() {
 		install-scan-view() {
 			insinto "$(python_get_sitedir)"/clang
 			doins Reporter.py Resources ScanView.py startfile.py
-			touch "${D}"/"$(python_get_sitedir)"/clang/__init__.py
+			touch "${ED}"/"$(python_get_sitedir)"/clang/__init__.py
 		}
 		python_execute_function install-scan-view
+	fi
+	
+	# Fix install_names on Darwin.  The build system is too complicated
+	# to just fix this, so we correct it post-install
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		for lib in libCIndex.dylib ; do
+			install_name_tool -id "${EPREFIX}"/usr/lib/${lib} \
+				"${ED}"/usr/lib/${lib}
+		done
 	fi
 }
 
