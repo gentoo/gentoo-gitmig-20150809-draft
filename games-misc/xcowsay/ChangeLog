@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/xcowsay
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xcowsay/ChangeLog,v 1.1 2010/08/25 10:27:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcowsay/ChangeLog,v 1.2 2010/08/26 21:30:02 hwoarang Exp $
+
+  26 Aug 2010; Markos Chandras <hwoarang@gentoo.org> xcowsay-1.2.ebuild,
+  +files/xcowsay-1.2-no-dbus.patch:
+  Apply patch from upstream which fixes compilation with -dbus. Bug #334533
 
 *xcowsay-1.2 (25 Aug 2010)
 
