@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/netkit-talk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.32 2009/08/20 02:38:08 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.33 2010/08/26 21:26:49 jer Exp $
+
+*netkit-talk-0.17-r5 (26 Aug 2010)
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> netkit-talk-0.17-r4.ebuild,
+  +netkit-talk-0.17-r5.ebuild, -files/netkit-talk-0.17-r4-gentoo.diff,
+  +files/netkit-talk-0.17-time.patch:
+  Follow Gentoo convention in patch name (and add another missing include).
+  Respect CC. Respect LDFLAGS (bug #334617).
 
   20 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/netkit-talk-0.17-r3-gentoo.diff:

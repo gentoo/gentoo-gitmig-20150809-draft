@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r4.ebuild,v 1.23 2010/08/26 21:26:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r5.ebuild,v 1.1 2010/08/26 21:26:49 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 MY_P=netkit-ntalk-${PV}
 S=${WORKDIR}/netkit-ntalk-${PV}
@@ -13,23 +15,20 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 RDEPEND="virtual/inetd"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-time.patch
 	use ipv6 && epatch "${FILESDIR}"/${P}-ipv6.diff
+	sed -i configure -e '/^LDFLAGS=/d' || die "sed configure"
 }
 
-src_compile() {
-	./configure || die
-	sed -i -e "s:-O2 -Wall:-Wall:" -e "s:-Wpointer-arith::" MCONFIG
-	make || die
+src_configure() {
+	./configure --with-c-compiler=$(tc-getCC) || die
 }
 
 src_install() {
