@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ttcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.19 2010/08/26 16:02:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.20 2010/08/26 16:03:17 jer Exp $
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> ttcp-1.12-r1.ebuild:
+  Marked ~hppa too.
 
 *ttcp-1.12-r1 (26 Aug 2010)
 
