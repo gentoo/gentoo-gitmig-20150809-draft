@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/wm2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.10 2007/06/30 13:14:15 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.11 2010/08/26 20:25:37 xarthisius Exp $
+
+*wm2-4-r1 (26 Aug 2010)
+
+  26 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> +wm2-4-r1.ebuild:
+  Respect user flags wrt bug 334681. Thanks to Diego for the report.
 
   30 Jun 2007; Santiago M. Mola <coldwind@gentoo.org>
   files/wm2-4-gentoo.patch, wm2-4.ebuild:
