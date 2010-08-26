@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.4.0.ebuild,v 1.2 2010/08/26 14:03:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.4.0.ebuild,v 1.3 2010/08/26 14:05:24 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -20,8 +20,9 @@ IUSE="+X geoip libnotify"
 # boost version so that we always have thread support
 CDEPEND="net-libs/rb_libtorrent
 	x11-libs/qt-core:4
-	X? ( x11-libs/qt-gui:4[dbus]
-		libnotify? ( x11-libs/qt-gui:4[dbus,glib] ) )
+	x11-libs/qt-dbus:4
+	X? ( x11-libs/qt-gui:4
+		libnotify? ( x11-libs/qt-gui:4[glib] ) )
 	dev-libs/boost"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
