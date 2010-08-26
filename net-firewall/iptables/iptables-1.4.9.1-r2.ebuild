@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r2.ebuild,v 1.2 2010/08/19 21:36:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r2.ebuild,v 1.3 2010/08/26 01:40:19 vapier Exp $
 
 EAPI="2"
 
@@ -24,6 +24,11 @@ RDEPEND=""
 src_prepare() {
 	# Only run autotools if user patched something
 	epatch_user && eautoreconf || elibtoolize
+
+	# Keep libiptc linked against sub-libs #334503
+	# We patch Makefile.in as we need libtool-2.2.10
+	# for proper LDFLAGS ordering wrt LIBS
+	sed -i '/$(libiptc_libiptc_la_LDFLAGS)/s:$: -Wl,--no-as-needed:' Makefile.in
 }
 
 src_configure() {
