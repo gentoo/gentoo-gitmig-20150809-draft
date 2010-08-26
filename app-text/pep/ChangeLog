@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.16 2010/08/26 22:05:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.17 2010/08/26 22:06:55 jer Exp $
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> files/pep-2.8-gentoo.patch,
+  files/pep-2.8-include.patch:
+  Clean up patches.
 
 *pep-2.8-r1 (26 Aug 2010)
 
