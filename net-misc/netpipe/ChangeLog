@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netpipe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.9 2007/09/29 12:56:05 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.10 2010/08/26 20:02:10 hwoarang Exp $
+
+*netpipe-1.0.0_beta2-r1 (26 Aug 2010)
+
+  26 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +netpipe-1.0.0_beta2-r1.ebuild:
+  Patch from Dane Smith <smithdanea@gmail.com> which fixes LDFLAGS (bug
+  #334461), adding missing || dies and other QA fixes
 
   29 Sep 2007; Santiago M. Mola <coldwind@gentoo.org>
   netpipe-1.0.0_beta2.ebuild:
