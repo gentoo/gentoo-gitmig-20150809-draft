@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.19 2010/08/26 16:34:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.20 2010/08/26 16:38:33 tove Exp $
+
+  26 Aug 2010; Torsten Veller <tove@gentoo.org>
+  -perl-Module-CoreList-2.18.ebuild, -perl-Module-CoreList-2.24.ebuild,
+  -perl-Module-CoreList-2.25.ebuild, -perl-Module-CoreList-2.26.ebuild,
+  -perl-Module-CoreList-2.29.ebuild, -perl-Module-CoreList-2.31.ebuild,
+  -perl-Module-CoreList-2.34.ebuild, -perl-Module-CoreList-2.36.ebuild:
+  Cleanup
 
 *perl-Module-CoreList-2.37 (26 Aug 2010)
 
