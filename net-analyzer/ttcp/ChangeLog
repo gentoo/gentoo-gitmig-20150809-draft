@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ttcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.18 2010/04/18 16:55:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.19 2010/08/26 16:02:15 jer Exp $
+
+*ttcp-1.12-r1 (26 Aug 2010)
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> +ttcp-1.12-r1.ebuild:
+  Respect LDFLAGS (bug #334651). Fix quoting. Always apply "amd64" patch
+  (fix a couple of implicit declaration warnings for everyone).
 
   18 Apr 2010; <nixnut@gentoo.org> ttcp-1.12.ebuild:
   ppc stable #310553
