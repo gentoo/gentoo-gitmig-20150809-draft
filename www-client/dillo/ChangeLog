@@ -1,6 +1,11 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.91 2010/07/08 18:15:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.92 2010/08/26 10:14:31 xarthisius Exp $
+
+  26 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> dillo-2.2.ebuild,
+  dillo-9999.ebuild:
+  Fix postinstall message wrt bug 334507. Thanks to Christopher Head
+  <chris2k01@hotmail.com> for report.
 
   08 Jul 2010; Raúl Porcel <armin76@gentoo.org> dillo-2.2.ebuild:
   alpha/arm/sparc stable wrt #320665

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.8 2010/07/08 18:15:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.9 2010/08/26 10:14:31 xarthisius Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib
@@ -57,7 +57,9 @@ src_install() {
 
 	doicon "${FILESDIR}"/dillo.png
 	make_desktop_entry dillo Dillo dillo
+}
 
-	elog "Dillo has installed a default configuration into /etc/dillorc"
+pkg_postinst() {
+	elog "Dillo has installed a default configuration into /etc/dillo/dillorc"
 	elog "You can copy this to ~/.dillo/ and customize it"
 }
