@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm-gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/ChangeLog,v 1.7 2010/06/02 15:54:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/ChangeLog,v 1.8 2010/08/26 07:04:40 grobian Exp $
+
+  26 Aug 2010; Fabian Groffen <grobian@gentoo.org> llvm-gcc-2.7-r1.ebuild,
+  llvm-gcc-9999.ebuild:
+  Bump to EAPI=3, make Prefix aware, add support for Darwin platforms, bug
+  #333617
 
 *llvm-gcc-9999 (02 Jun 2010)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.7-r1.ebuild,v 1.1 2010/05/20 12:57:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.7-r1.ebuild,v 1.2 2010/08/26 07:04:40 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit libtool flag-o-matic gnuconfig multilib
 
 LLVM_GCC_VERSION=4.2
@@ -14,13 +14,13 @@ SRC_URI="http://llvm.org/releases/${PV}/${PN}-${MY_PV}.source.tgz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos"
 IUSE="bootstrap fortran multilib nls objc objc++ test"
 
 RDEPEND=">=sys-devel/llvm-$PV"
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
-	>=sys-devel/binutils-2.18
+	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	>=sys-devel/bison-1.875
 	test? ( dev-util/dejagnu
 		sys-devel/autogen )"
@@ -65,10 +65,11 @@ src_configure() {
 	use objc && EXTRALANGS="${EXTRALANGS},objc"
 	use objc++ && EXTRALANGS="${EXTRALANGS},obj-c++"
 
-	ECONF_SOURCE="${S}" econf --prefix=/usr/$(get_libdir)/${PN}-${MY_PV} \
+	ECONF_SOURCE="${S}" econf --prefix="${EPREFIX}"/usr/$(get_libdir)/${PN}-${MY_PV} \
 		$(use_enable multilib) \
 		--program-prefix=${PN}-${MY_PV}- \
-		--enable-llvm=/usr --enable-languages=c,c++${EXTRALANGS} \
+		--enable-llvm="${EPREFIX}"/usr --enable-languages=c,c++${EXTRALANGS} \
+		$(use prefix && echo "--with-local-prefix=${EPREFIX}/usr") \
 		|| die "configure failed"
 }
 
@@ -98,20 +99,27 @@ src_install() {
 	done
 
 	emake DESTDIR="${D}" install || die "installation failed"
-	rm -rf "${D}"/usr/share/man/man7
+	rm -rf "${ED}"/usr/share/man/man7
 	if ! use nls; then
 		einfo "nls USE flag disabled, not installing locale files"
-		rm -rf "${D}"/usr/share/locale
+		rm -rf "${ED}"/usr/share/locale
 	fi
 
 	# Add some symlinks
 	dodir /usr/bin
-	cd "${D}/usr/bin"
+	cd "${ED}/usr/bin"
 	for X in c++ g++ cpp gcc gcov gccbug ; do
-		ln -s /usr/$(get_libdir)/${PN}-${MY_PV}/bin/${PN}-${MY_PV}-${X}  llvm-${X}
+		ln -s "${EPREFIX}"/usr/$(get_libdir)/${PN}-${MY_PV}/bin/${PN}-${MY_PV}-${X}  llvm-${X}
 	done
 	use fortran && \
-		ln -s /usr/$(get_libdir)/${PN}-${MY_PV}/bin/${PN}-${MY_PV}-gfortran llvm-gfortran
+		ln -s "${EPREFIX}"/usr/$(get_libdir)/${PN}-${MY_PV}/bin/${PN}-${MY_PV}-gfortran llvm-gfortran
+
+	# Fix install_names on Darwin.  The build system is too complicated
+	# to just fix this, so we correct it post-install
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		local f=$(echo "${ED}"usr/$(get_libdir)/${PN}-${MY_PV}/lib/gcc/${CHOST}/${LLVM_GCC_VERSION}*/libstdc++.dylib)
+		install_name_tool -id "/${f#${D}}" "${f}"
+	fi
 }
 
 gcc_do_filter_flags() {
