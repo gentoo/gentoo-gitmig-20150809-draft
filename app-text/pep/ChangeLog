@@ -1,6 +1,6 @@
 # ChangeLog for app-text/pep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.17 2010/08/26 22:06:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.18 2010/08/26 22:08:39 jer Exp $
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> files/pep-2.8-gentoo.patch,
   files/pep-2.8-include.patch:
@@ -10,7 +10,8 @@
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> +pep-2.8-r1.ebuild,
   files/pep-2.8-gentoo.patch, +files/pep-2.8-include.patch:
-  Fix missing include. Respect LDFLAGS (bug #334607).
+  Fix missing include. Respect LDFLAGS (bug #334607). Update HOMEPAGE and
+  SRC_URI.
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> pep-2.8.ebuild:
   Add prefix keywords
