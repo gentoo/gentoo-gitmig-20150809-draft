@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.24 2010/08/23 13:49:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.25 2010/08/26 06:45:16 graaff Exp $
+
+  26 Aug 2010; Hans de Graaff <graaff@gentoo.org> ruby2ruby-1.2.4-r1.ebuild,
+  ruby2ruby-1.2.4-r2.ebuild:
+  Actually move ree18 support to -r2 only, not the other way around.
 
 *ruby2ruby-1.2.4-r2 (23 Aug 2010)
 

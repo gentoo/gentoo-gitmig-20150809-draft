@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r2.ebuild,v 1.1 2010/08/23 13:49:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r2.ebuild,v 1.2 2010/08/26 06:45:16 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 
 # Don't run tests, since they require the testcase from ParseTree;
 # ParseTree _is_ the testcase for ruby2ruby
