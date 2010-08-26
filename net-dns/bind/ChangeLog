@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.287 2010/07/31 21:23:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.288 2010/08/26 16:03:41 idl0r Exp $
+
+  26 Aug 2010; Christian Ruppert <idl0r@gentoo.org> files/named.init-r5,
+  files/named.init-r7:
+  Create piddir in the init script if necessary, bug 334535 and bug 332633,
+  thanks to Eray Aslan <eray.aslan@caf.com.tr>
 
   31 Jul 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.2_p2.ebuild,
   bind-9.7.0_p2-r1.ebuild, bind-9.7.1_p2.ebuild:

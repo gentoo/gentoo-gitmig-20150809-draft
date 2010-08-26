@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.4 2010/06/09 16:25:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.5 2010/08/26 16:03:41 idl0r Exp $
 
 opts="start stop reload restart"
 
@@ -53,11 +53,18 @@ check_chroot() {
 		[[ ! -d ${CHROOT}/dev || ! -d ${CHROOT}/etc || ! -d ${CHROOT}/var ]] && return 1
 		[[ ! -d ${CHROOT}/var/run || ! -d ${CHROOT}/var/log ]] && return 1
 		[[ ! -d ${CHROOT}/etc/bind || ! -d ${CHROOT}/var/bind ]] && return 1
-		[[ ! -d ${CHROOT}/var/run/named || ! -d ${CHROOT}/var/log/named ]] && return 1
+		[[ ! -d ${CHROOT}/var/log/named ]] && return 1
 		[[ ! -e ${CHROOT}/etc/localtime ]] && return 1
 		[[ ! -c ${CHROOT}/dev/null || ! -c ${CHROOT}/dev/zero ]] && return 1
 		[[ ! -c ${CHROOT}/dev/random && ! -c ${CHROOT}/dev/urandom ]] && return 1
 	fi
+
+	# create piddir (usually /var/run/named) if necessary
+	local piddir="${PIDFILE%/*}"
+	if [ ! -d "${piddir}" ] ; then
+		checkpath -q -d -o root:named -m 0770 "${piddir}" || return 1
+	fi
+
 	return 0
 }
 
