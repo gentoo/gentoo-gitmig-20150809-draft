@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.7 2010/08/26 18:27:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.8 2010/08/26 18:30:26 hwoarang Exp $
+
+  26 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  wildmidi-0.2.3.4-r1.ebuild:
+  Refactor deps since timidity-freepats it is only a runtime dependency
 
 *wildmidi-0.2.3.4-r1 (26 Aug 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4-r1.ebuild,v 1.1 2010/08/26 18:27:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4-r1.ebuild,v 1.2 2010/08/26 18:30:26 hwoarang Exp $
 
 EAPI=3
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+DEPEND="alsa? ( media-libs/alsa-lib )"
+RDEPEND="${DEPEND}
 	media-sound/timidity-freepats"
-DEPEND="${RDEPEND}"
 
 src_prepare() {
 	#Respect LDFLAGS. Reported upstream. Bug id: 3045017
