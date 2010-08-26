@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libdbx
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/ChangeLog,v 1.3 2006/09/20 07:04:01 phosphan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/ChangeLog,v 1.4 2010/08/26 19:07:17 phosphan Exp $
+
+  26 Aug 2010; Patrick Kursawe <phosphan@gentoo.org> libdbx-1.0.3.ebuild:
+  Respects LDFLAGS now, see bug #331887.
 
   20 Sep 2006; Patrick Kursawe <phosphan@gentoo.org> +files/bad_c.patch,
   libdbx-1.0.3.ebuild:
