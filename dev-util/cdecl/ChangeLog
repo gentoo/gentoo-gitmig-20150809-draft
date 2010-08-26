@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cdecl
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.15 2009/07/07 18:40:43 phosphan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.16 2010/08/26 20:17:47 phosphan Exp $
+
+  26 Aug 2010; Patrick Kursawe <phosphan@gentoo.org> cdecl-2.5-r1.ebuild,
+  files/cdecl-2.5.patch:
+  Respects LDFLAGS now.
 
   07 Jul 2009; Patrick Kursawe <phosphan@gentoo.org> files/cdecl-2.5.patch:
   Fixing build with glibc-2.10, see bug #276068.
