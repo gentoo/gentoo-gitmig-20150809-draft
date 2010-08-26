@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.2.ebuild,v 1.1 2009/04/10 13:21:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.7.ebuild,v 1.1 2010/08/26 09:17:29 xarthisius Exp $
 
 EAPI=2
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="View Your Mind, a mindmap tool"
 HOMEPAGE="http://www.insilmaril.de/vym/"
@@ -21,24 +21,22 @@ RDEPEND="${DEPEND}
 	x11-libs/libXext"
 
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 
 	# Change installation directory and demo path
 	sed -i \
 		-e "s@/usr/local@/usr@g" \
-		-e "s@doc/packages/vym@doc/vym@g" \
+		-e "s@doc/packages/vym@doc/${PF}@g" \
 		vym.pro || die "sed failed"
 }
 
-src_configure() {
-	eqmake4
-
+src_install() {
 	# Remove stripping stuff
 	sed -i "/-strip/d" Makefile || die "sed failed"
-}
 
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	make_desktop_entry vym vym /usr/share/vym/icons/vym.png Education
+	DOCS="README.txt"
+	qt4-r2_src_install
+
 	dobin scripts/exportvym || die "dobin failed"
+	make_desktop_entry vym vym /usr/share/vym/icons/vym.png Education
 }
