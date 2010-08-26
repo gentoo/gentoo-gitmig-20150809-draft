@@ -1,0 +1,33 @@
+diff -ur mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/conflicts.c mozart-1.4.0.20080704/platform/tools/gump/ozbison/conflicts.c
+--- mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/conflicts.c	1998-12-17 02:55:09.000000000 +1300
++++ mozart-1.4.0.20080704/platform/tools/gump/ozbison/conflicts.c	2010-08-25 20:00:30.000000000 +1200
+@@ -18,6 +18,7 @@
+ the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "system.h"
+ #include "machine.h"
+ #include "new.h"
+diff -ur mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/print.c mozart-1.4.0.20080704/platform/tools/gump/ozbison/print.c
+--- mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/print.c	1998-02-07 00:31:08.000000000 +1300
++++ mozart-1.4.0.20080704/platform/tools/gump/ozbison/print.c	2010-08-25 20:00:14.000000000 +1200
+@@ -19,6 +19,7 @@
+ 
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "system.h"
+ #include "machine.h"
+ #include "new.h"
+diff -ur mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/symtab.c mozart-1.4.0.20080704/platform/tools/gump/ozbison/symtab.c
+--- mozart-1.4.0.20080704.orig/platform/tools/gump/ozbison/symtab.c	1998-02-07 00:31:08.000000000 +1300
++++ mozart-1.4.0.20080704/platform/tools/gump/ozbison/symtab.c	2010-08-25 19:59:28.000000000 +1200
+@@ -19,6 +19,7 @@
+ 
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "system.h"
+ #include "new.h"
+ #include "symtab.h"

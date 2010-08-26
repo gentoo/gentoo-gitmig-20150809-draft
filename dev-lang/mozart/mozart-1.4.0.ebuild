@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.8 2010/08/25 19:06:53 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.9 2010/08/26 07:29:03 keri Exp $
 
 inherit elisp-common eutils
 
@@ -48,6 +48,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-dss-pic.patch
 	epatch "${FILESDIR}"/${P}-dss-ldflags.patch
 	epatch "${FILESDIR}"/${P}-dss-libpath.patch
+	epatch "${FILESDIR}"/${P}-ozbison-string.patch
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
@@ -79,6 +80,7 @@ src_compile() {
 }
 
 src_test() {
+	# Mozart tests must be run single-threaded
 	cd "${S}"/share/test
 	emake -j1 boot-oztest || die "emake boot-oztest failed"
 	emake -j1 boot-check || die "emake boot-check failed"
