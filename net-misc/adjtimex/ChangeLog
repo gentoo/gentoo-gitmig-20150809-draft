@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/adjtimex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.25 2010/08/26 20:41:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.26 2010/08/26 20:43:55 jer Exp $
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> adjtimex-1.29.ebuild:
+  Remove commented patch calls.
 
 *adjtimex-1.29 (26 Aug 2010)
 
