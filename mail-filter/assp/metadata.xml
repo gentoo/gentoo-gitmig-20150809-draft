@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+                <email>patrick@gentoo.org</email>
+                <name>Patrick Lauer</name>
 	</maintainer>
 	<longdescription>
 	The Anti-Spam SMTP Proxy (ASSP) Server project is an open source
