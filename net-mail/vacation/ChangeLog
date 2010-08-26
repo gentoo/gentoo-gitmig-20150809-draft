@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vacation
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.18 2008/08/14 12:11:14 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/ChangeLog,v 1.19 2010/08/26 21:06:23 phosphan Exp $
+
+  26 Aug 2010; Patrick Kursawe <phosphan@gentoo.org>
+  vacation-1.2.7.0.ebuild:
+  Respects LDFLAGS now, see bug #334645.
 
   10 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
   vacation-1.2.6.3.ebuild:

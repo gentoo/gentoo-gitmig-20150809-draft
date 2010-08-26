@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.7.0.ebuild,v 1.2 2008/08/10 19:50:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vacation/vacation-1.2.7.0.ebuild,v 1.3 2010/08/26 21:06:23 phosphan Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,6 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "s:install -s -m:install -m:" Makefile
+	sed -i -e "s:-Xlinker:${LDFLAGS} -Xlinker:" Makefile
 }
 
 src_compile () {
