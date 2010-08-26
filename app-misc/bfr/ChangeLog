@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.18 2009/04/13 02:29:32 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.19 2010/08/26 16:10:31 jer Exp $
+
+  26 Aug 2010; Jeroen Roovers <jer@gentoo.org> bfr-1.6-r1.ebuild:
+  Change HOMEPAGE thanks to MAL (bug #334545).
 
   13 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> bfr-1.6-r1.ebuild:
   respect CC (bug #243610)
