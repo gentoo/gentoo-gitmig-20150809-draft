@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r2.ebuild,v 1.3 2010/08/10 23:54:16 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r2.ebuild,v 1.4 2010/08/26 12:50:39 darkside Exp $
 
 WANT_AUTOCONF="2.1"
-EAPI="2"
+EAPI="3"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
 MY_P="${P/_beta/b}"
@@ -18,7 +18,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVE
 	http://www.mozilla-enigmail.org/download/source/${PN}-${EMVER}.tar.gz
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
-KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE="system-sqlite"
@@ -95,7 +95,7 @@ src_configure() {
 		--with-system-nss \
 		--disable-wave \
 		--disable-ogg \
-		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
+		--with-default-mozilla-five-home="${EPREFIX}"${MOZILLA_FIVE_HOME} \
 		--with-user-appdir=.thunderbird \
 		--enable-application=mail \
 		--disable-necko-wifi \
@@ -152,6 +152,6 @@ src_install() {
 	emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
 
 	dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
-	cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid}
+	cd "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid}
 	unzip "${S}"/mozilla/dist/bin/*.xpi
 }
