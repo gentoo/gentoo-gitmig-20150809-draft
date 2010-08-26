@@ -1,5 +1,14 @@
---- Makefile	2003-05-05 11:11:27.000000000 +0000
-+++ Makefile.new	2003-05-05 11:10:31.000000000 +0000
+--- Makefile.orig	1995-08-11 02:00:00.000000000 +0200
++++ Makefile	2010-08-26 23:54:34.000000000 +0200
+@@ -66,7 +66,7 @@
+ 
+ # Unix
+ CC	= gcc
+-LFLAGS	= -o pep
++LFLAGS	= -o pep $(LDFLAGS)
+ SRC	= src
+ XXX	= c
+ OBJ	= o
 @@ -78,10 +78,10 @@
  UNZIP	= unzip
  
