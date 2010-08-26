@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.6 2010/08/25 18:17:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.7 2010/08/26 18:27:50 hwoarang Exp $
+
+*wildmidi-0.2.3.4-r1 (26 Aug 2010)
+
+  26 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +wildmidi-0.2.3.4-r1.ebuild, +files/wildmidi.cfg:
+  Depend on timidity-freepats. Add default configuration file. Bug #334311.
+  Drop ~arm keyword since they need to stabilize timidity-freepats first
 
   25 Aug 2010; Markus Meier <maekke@gentoo.org> wildmidi-0.2.3.4.ebuild:
   add ~arm, bug #333941
