@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.490.1.ebuild,v 1.1 2010/08/13 16:43:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.503.1.ebuild,v 1.1 2010/08/26 03:54:09 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="cups gnome sse2"
 
 RDEPEND="app-arch/bzip2
+	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
@@ -59,19 +60,13 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
-	# Fix compilation, bug #332131.
-	epatch "${FILESDIR}"/${PN}-make-3.82-compatibility-r0.patch
-
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
-
-	# Fix a renderer crash, bug #331661. This is a backport
-	# of the upstream patch.
-	epatch "${FILESDIR}"/${PN}-yuv-crash-r1.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/cros"
+	remove_bundled_lib "third_party/icu"
 	remove_bundled_lib "third_party/jemalloc"
 	remove_bundled_lib "third_party/lcov"
 	remove_bundled_lib "third_party/libevent"
@@ -80,7 +75,6 @@ src_prepare() {
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
 	remove_bundled_lib "third_party/ocmock"
-	remove_bundled_lib "third_party/py"
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
@@ -104,10 +98,11 @@ src_configure() {
 	# TODO: use_system_ffmpeg (http://crbug.com/50678).
 	# TODO: use_system_libxml (http://crbug.com/29333).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_icu, use_system_hunspell (upstream changes needed).
+	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
 	myconf="${myconf}
 		-Duse_system_bzip2=1
+		-Duse_system_icu=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
