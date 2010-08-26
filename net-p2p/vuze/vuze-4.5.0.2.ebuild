@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.4.0.4.ebuild,v 1.1 2010/05/11 07:30:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.5.0.2.ebuild,v 1.1 2010/08/26 10:19:46 caster Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit eutils fdo-mime java-pkg-2 java-ant-2 versionator
 
 MY_PV=$(replace_all_version_separators "")
 
-PATCHSET_VER="4.4.0.0"
+PATCHSET_VER="4.5.0.2"
 PATCHSET_DIR="${PN}-${PATCHSET_VER}-gentoo-patches"
 PATCHSET="${PATCHSET_DIR}.tar.bz2"
 SRC_TARBALL="Vuze_${MY_PV}_source.zip"
@@ -32,7 +32,7 @@ RDEPEND="
 	dev-java/bcprov:1.3
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
-	dev-java/swt:3.5[cairo,xulrunner]
+	dev-java/swt:3.6[cairo,xulrunner]
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.5"
 
@@ -73,11 +73,15 @@ java_prepare() {
 	### Removes bundled json
 	rm -rv "org/json" || die
 
+	### The Tree2 file does not compile against Linux SWT and is used only on Windows.
+	### It's runtime-conditional use is thus patched out in the patchset.
+	rm -rf "org/eclipse" || die
+
 	mkdir -p build/libs || die
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="swt-3.5,bcprov-1.3,json-simple,log4j,commons-cli-1"
+EANT_GENTOO_CLASSPATH="swt-3.6,bcprov-1.3,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem

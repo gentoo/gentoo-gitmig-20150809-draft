@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.39 2010/06/26 10:39:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.40 2010/08/26 10:19:46 caster Exp $
+
+*vuze-4.5.0.2 (26 Aug 2010)
+
+  26 Aug 2010; Vlastimil Babka <caster@gentoo.org> -vuze-4.4.0.4.ebuild,
+  +vuze-4.5.0.2.ebuild:
+  Version bump, bug #331601. Remove the xfs_io patch as xfsprogs-3.1.2 uses
+  /usr/sbin - bug #188875.
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   -vuze-3.0.4.2-r2.ebuild:
