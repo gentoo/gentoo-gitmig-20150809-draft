@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.2 2010/08/26 07:00:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.3 2010/08/26 07:10:05 grobian Exp $
 
 EAPI="3"
 inherit subversion eutils multilib toolchain-funcs
@@ -21,7 +21,7 @@ DEPEND="dev-lang/perl
 	>=sys-devel/bison-1.28
 	!~sys-devel/bison-1.85
 	!~sys-devel/bison-1.875
-	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.1.2 )
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	libffi? ( virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
