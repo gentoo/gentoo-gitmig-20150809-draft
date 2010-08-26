@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.1 2010/06/01 21:25:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.2 2010/08/26 07:00:53 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 inherit subversion eutils multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
@@ -21,8 +21,8 @@ DEPEND="dev-lang/perl
 	>=sys-devel/bison-1.28
 	!~sys-devel/bison-1.85
 	!~sys-devel/bison-1.875
-	>=sys-devel/gcc-3.0
-	>=sys-devel/binutils-2.18
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.1.2 )
+	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	libffi? ( virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
 	test? ( dev-util/dejagnu )
@@ -70,7 +70,7 @@ src_prepare() {
 	# care of this.
 	einfo "Fixing install dirs"
 	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(PROJ_prefix)/share/doc/'${PF}, \
-		-e 's,^PROJ_etcdir.*,PROJ_etcdir := /etc/llvm,' \
+		-e 's,^PROJ_etcdir.*,PROJ_etcdir := '"${EPREFIX}"'/etc/llvm,' \
 		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir), \
 		-i Makefile.config.in || die "Makefile.config sed failed"
 
@@ -111,7 +111,7 @@ src_configure() {
 	local LLVM_GCC_DRIVER=nope ; local LLVM_GPP_DRIVER=nope
 	if use llvm-gcc ; then
 		if has_version sys-devel/llvm-gcc; then
-			LLVM_GCC_DIR=$(ls -d ${ROOT}/usr/$(get_libdir)/llvm-gcc* 2> /dev/null)
+			LLVM_GCC_DIR=$(ls -d ${EROOT}/usr/$(get_libdir)/llvm-gcc* 2> /dev/null)
 			LLVM_GCC_DRIVER=$(find ${LLVM_GCC_DIR} -name 'llvm*-gcc' 2> /dev/null)
 			if [[ -z ${LLVM_GCC_DRIVER} ]] ; then
 				die "failed to find installed llvm-gcc, LLVM_GCC_DIR=${LLVM_GCC_DIR}"
@@ -150,4 +150,13 @@ src_compile() {
 
 src_install() {
 	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install || die "install failed"
+	
+	# Fix install_names on Darwin.  The build system is too complicated
+	# to just fix this, so we correct it post-install
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		for lib in lib{LLVMHello,LTO,profile_rt}.dylib ; do
+			install_name_tool -id "${EPREFIX}"/usr/lib/${lib} \
+				"${ED}"/usr/lib/${lib}
+		done
+	fi
 }

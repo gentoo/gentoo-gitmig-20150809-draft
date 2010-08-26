@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.15 2010/07/20 09:25:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.16 2010/08/26 07:00:53 grobian Exp $
+
+  26 Aug 2010; Fabian Groffen <grobian@gentoo.org> llvm-2.7.ebuild,
+  llvm-9999.ebuild:
+  Bump to EAPI=3, make Prefix aware, add support for Darwin platforms,
+  bug #333387
 
   20 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org> -llvm-2.6-r2.ebuild,
   -files/llvm-2.6-cflags.patch:
