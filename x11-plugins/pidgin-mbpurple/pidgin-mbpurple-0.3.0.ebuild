@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0.ebuild,v 1.3 2010/08/24 17:38:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0.ebuild,v 1.4 2010/08/26 11:22:24 hwoarang Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://microblog-purple.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="net-im/pidgin[gtk]"
