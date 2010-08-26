@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTimeX-Easy/DateTimeX-Easy-0.089.ebuild,v 1.1 2010/08/24 16:33:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTimeX-Easy/DateTimeX-Easy-0.089.ebuild,v 1.2 2010/08/26 13:05:26 tove Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ RDEPEND="dev-perl/DateTime
 	dev-perl/DateTime-Format-Natural
 	virtual/perl-Scalar-List-Utils"
 DEPEND="${RDEPEND}
+	>=virtual/perl-ExtUtils-MakeMaker-6.31
 	test? ( dev-perl/Test-Most )"
 
 SRC_TEST=do
