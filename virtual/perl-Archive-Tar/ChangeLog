@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Archive-Tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.31 2010/08/20 21:13:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.32 2010/08/26 16:45:19 tove Exp $
+
+  26 Aug 2010; Torsten Veller <tove@gentoo.org>
+  -perl-Archive-Tar-1.56.ebuild, -perl-Archive-Tar-1.58.ebuild,
+  -perl-Archive-Tar-1.60.ebuild, -perl-Archive-Tar-1.64.ebuild:
+  Cleanup
 
 *perl-Archive-Tar-1.68 (20 Aug 2010)
 
