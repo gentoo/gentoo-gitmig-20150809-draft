@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r1.ebuild,v 1.1 2010/04/08 20:17:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r1.ebuild,v 1.2 2010/08/26 19:24:36 phosphan Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 	use svg && myconf="-DWITH_SVG_SUPPORT"
 	xmkmf ${myconf} || die "xmkmf failed."
 	emake CDEBUGFLAGS="${CFLAGS}" EXTRA_LIBRARIES="-lXext" PROJECTROOT=/usr \
-			PIXMAPDIR=/usr/share/xxkb || die "emake failed."
+			PIXMAPDIR=/usr/share/xxkb LOCAL_LDFLAGS="${LDFLAGS}" || die "emake failed."
 }
 
 src_install() {
