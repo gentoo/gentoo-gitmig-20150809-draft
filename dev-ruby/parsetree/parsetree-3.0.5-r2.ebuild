@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.5-r2.ebuild,v 1.1 2010/08/23 13:48:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.5-r2.ebuild,v 1.2 2010/08/26 06:39:55 graaff Exp $
 
 EAPI=2
 
@@ -36,6 +36,12 @@ ruby_add_bdepend "
 		dev-ruby/hoe
 		dev-ruby/hoe-seattlerb
 	)"
+
+all_ruby_prepare() {
+	# Fix USE=doc by removing the path that triggers running the tests
+	# and thus building the extensions in the wrong way.
+	sed -i -e '/require_paths/d' Rakefile || die
+}
 
 src_compile() {
 	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
