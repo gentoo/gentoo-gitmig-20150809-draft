@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.6.2.ebuild,v 1.1 2010/04/12 10:10:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.6.5.ebuild,v 1.1 2010/08/26 20:35:17 scarabeus Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="test offensive"
 
-RDEPEND=">=media-libs/quvi-0.1.4"
+RDEPEND=">=media-libs/quvi-0.2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -29,10 +29,5 @@ src_install() {
 }
 
 src_test() {
-	local value
-
-	ewarn "Tests require internet connection in order to work."
-
-	use offensive && value="true" || value="false"
-	ADULT_OK="${value}" emake check || die "emake test failed"
+	emake check || die "emake test failed"
 }
