@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1-r2.ebuild,v 1.1 2010/08/25 17:19:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1-r2.ebuild,v 1.2 2010/08/27 06:28:31 fauli Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/nfdump/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 # Fails to build readpcap:
 # https://sourceforge.net/tracker/?func=detail&aid=2996582&group_id=119350&atid=683752
 IUSE="compat15 debug ftconv nfprofile sflow"
