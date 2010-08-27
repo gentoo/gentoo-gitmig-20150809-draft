@@ -1,6 +1,10 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.4 2010/08/20 22:27:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.5 2010/08/27 18:02:47 hwoarang Exp $
+
+  27 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  get_flash_videos-1.23-r1.ebuild:
+  Put the tarball on gentoo mirrors. Fix S variable to match the latest code
 
 *get_flash_videos-1.23-r1 (20 Aug 2010)
 

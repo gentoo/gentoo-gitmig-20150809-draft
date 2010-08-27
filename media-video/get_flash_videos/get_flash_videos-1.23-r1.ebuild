@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.23-r1.ebuild,v 1.1 2010/08/20 22:27:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.23-r1.ebuild,v 1.2 2010/08/27 18:02:47 hwoarang Exp $
 
 EAPI=2
 inherit perl-module
 
 DESCRIPTION="Downloads videos from various Flash-based video hosting sites"
 HOMEPAGE="http://code.google.com/p/get-flash-videos/"
-SRC_URI="http://github.com/monsieurvideo/get-flash-videos/tarball/v1.23 -> ${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 
 SRC_TEST="do"
 
-S="${WORKDIR}/monsieurvideo-get-flash-videos-1690b88"
+S="${WORKDIR}/monsieurvideo-get-flash-videos-9897240"
 SRC_TEST="do"
 mymake="default ${PN}.1"
 myinst="DESTDIR=${D}"
