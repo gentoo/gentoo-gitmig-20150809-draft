@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.44 2010/08/13 09:35:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.45 2010/08/27 09:44:57 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,6 +30,10 @@ SERVER_RDEPEND="
 GUI_RDEPEND="
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	ayatana? ( dev-libs/libindicate-qt )
+	dbus? (
+		>=x11-libs/qt-dbus-${QT_MINIMAL}:4
+		dev-libs/libdbusmenu-qt
+	)
 	kde? (
 		>=kde-base/kdelibs-${KDE_MINIMAL}
 		>=kde-base/oxygen-icons-${KDE_MINIMAL}
@@ -40,7 +44,6 @@ GUI_RDEPEND="
 "
 
 RDEPEND="
-	dbus? ( >=x11-libs/qt-dbus-${QT_MINIMAL}:4 )
 	monolithic? (
 		${SERVER_RDEPEND}
 		${GUI_RDEPEND}
