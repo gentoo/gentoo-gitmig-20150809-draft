@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/mothur
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.5 2010/02/06 13:06:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.6 2010/08/27 09:28:47 xarthisius Exp $
+
+*mothur-1.7.2-r1 (27 Aug 2010)
+
+  27 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> -mothur-1.4.1.ebuild,
+  -mothur-1.7.2.ebuild, +mothur-1.7.2-r1.ebuild:
+  Respect LDFLAGS wrt bug 334781. Thanks to Diego for the report.
+  Remove old.
 
   06 Feb 2010; Markos Chandras <hwoarang@gentoo.org> mothur-1.6.0.ebuild:
   Stable on amd64 wrt bug #298777

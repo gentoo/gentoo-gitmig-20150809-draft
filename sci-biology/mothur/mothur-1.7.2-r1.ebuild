@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.7.2.ebuild,v 1.1 2009/12/30 03:20:16 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.7.2-r1.ebuild,v 1.1 2010/08/27 09:28:47 xarthisius Exp $
 
 EAPI="2"
 
@@ -18,11 +18,11 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
-S="${WORKDIR}/Mothur.source"
+S=${WORKDIR}/Mothur.source
 
-src_prepare() {
-	sed -i -e 's/CC_OPTIONS =/CC_OPTIONS = ${CXXFLAGS} /' \
-		-e 's|CC = g++|CC = '$(tc-getCXX)'|' "${S}/makefile" || die
+src_compile() {
+	emake CC_OPTIONS="${CXXFLAGS}" CC="$(tc-getCXX)" \
+		LNK_OPTIONS="${LDFLAGS}" ||	die
 }
 
 src_install() {
