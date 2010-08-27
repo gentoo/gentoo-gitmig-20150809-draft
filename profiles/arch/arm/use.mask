@@ -80,7 +80,6 @@ hardened
 cupsddk
 gphoto2
 mythtv
-dvb
 afs
 mono
 pike
