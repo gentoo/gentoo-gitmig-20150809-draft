@@ -1,6 +1,10 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.9 2010/07/11 15:14:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.10 2010/08/27 17:24:06 hwoarang Exp $
+
+  27 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -rtmpdump-2.2d.ebuild,
+  -rtmpdump-2.2e-r3.ebuild, rtmpdump-2.3.ebuild:
+  Fix polarssl dependency to match >=0.14.0. Bug #331587
 
   11 Jul 2010; Jeroen Roovers <jer@gentoo.org> rtmpdump-2.3.ebuild:
   Marked ~hppa (bug #324941).
