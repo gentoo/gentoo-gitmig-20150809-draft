@@ -1,0 +1,38 @@
+Index: liboauth-0.8.8/configure.ac
+===================================================================
+--- liboauth-0.8.8.orig/configure.ac
++++ liboauth-0.8.8/configure.ac
+@@ -113,8 +113,8 @@ AS_IF([test "${enable_nss}" == "yes"], [
+   HASH_CFLAGS=""
+   fi
+   report_hash="OpenSSL"
+-  PC_LIB="$PC_LIB -lssl"
+-  PC_REQ="$PC_REQ libssl"
++  PC_LIB="$PC_LIB -lcrypto"
++  PC_REQ="$PC_REQ libcrypto"
+   AC_MSG_NOTICE([
+ 
+   NOTE: OpenSSL is not compatible with GPL applications.
+Index: liboauth-0.8.8/src/Makefile.am
+===================================================================
+--- liboauth-0.8.8.orig/src/Makefile.am
++++ liboauth-0.8.8/src/Makefile.am
+@@ -4,4 +4,5 @@ include_HEADERS = oauth.h
+ 
+ liboauth_la_SOURCES=oauth.c config.h hash.c xmalloc.c xmalloc.h oauth_http.c
+ liboauth_la_LDFLAGS=@LIBOAUTH_LDFLAGS@ -version-info @VERSION_INFO@
++liboauth_la_LIBADD=@HASH_LIBS@ @CURL_LIBS@
+ liboauth_la_CFLAGS=@LIBOAUTH_CFLAGS@ @HASH_CFLAGS@ @CURL_CFLAGS@
+Index: liboauth-0.8.8/tests/Makefile.am
+===================================================================
+--- liboauth-0.8.8.orig/tests/Makefile.am
++++ liboauth-0.8.8/tests/Makefile.am
+@@ -4,7 +4,7 @@ ACLOCAL_AMFLAGS= -I m4
+ OAUTHDIR =../src
+ INCLUDES = -I$(srcdir)/$(OAUTHDIR)
+ MYCFLAGS = @LIBOAUTH_CFLAGS@ @HASH_CFLAGS@ @CURL_CFLAGS@ 
+-MYLDADD  = $(OAUTHDIR)/liboauth.la @HASH_LIBS@ @CURL_LIBS@
++MYLDADD  = $(OAUTHDIR)/liboauth.la
+ 
+ tcwiki_SOURCES = selftest_wiki.c commontest.c commontest.h
+ tcwiki_LDADD = $(MYLDADD)
