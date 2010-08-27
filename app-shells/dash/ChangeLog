@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  27 Aug 2010; Mike Frysinger <vapier@gentoo.org> dash-0.5.6.1-r1.ebuild:
+  Require static-libs isn't built with USE=static-libs #334693 by Rebecca
+  Menessec.
+
 *dash-0.5.6.1-r1 (22 Aug 2010)
 
   22 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> -dash-0.5.6.1.ebuild,
