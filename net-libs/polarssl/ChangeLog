@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.5 2010/07/11 15:13:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.6 2010/08/27 14:25:23 tommy Exp $
+
+*polarssl-0.14.0 (27 Aug 2010)
+
+  27 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-0.14.0.ebuild, +files/polarssl-0.14.0-ldflags.patch,
+  +files/polarssl-0.14.0-makefile.patch:
+  Version bump, fixes bug 334803
 
   11 Jul 2010; Jeroen Roovers <jer@gentoo.org> polarssl-0.12.0.ebuild:
   Marked ~hppa (bug #324941).
