@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-2.6.0.ebuild,v 1.2 2010/08/27 06:29:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-2.6.0.ebuild,v 1.3 2010/08/27 23:32:42 hwoarang Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.alasir.com/software/${PN}/${P}.tar.gz"
 
 LICENSE="Alasir"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="sse"
 
 src_prepare(){
