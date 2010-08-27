@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.17 2010/05/29 17:46:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.18 2010/08/27 19:00:16 armin76 Exp $
+
+  27 Aug 2010; Raúl Porcel <armin76@gentoo.org> goocanvas-0.14.ebuild:
+  alpha/ia64/sparc stable wrt #327899
 
   29 May 2010; Raúl Porcel <armin76@gentoo.org> goocanvas-0.14.ebuild:
   Add ~alpha/~ia64/~sparc
