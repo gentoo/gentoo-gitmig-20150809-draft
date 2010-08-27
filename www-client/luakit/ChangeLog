@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.3 2010/08/14 18:29:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.4 2010/08/27 10:09:16 wired Exp $
+
+  27 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  new help2man dependency
 
   14 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   removed now-obsolete dependency, bug #332679
