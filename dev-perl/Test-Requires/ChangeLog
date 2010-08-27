@@ -1,0 +1,19 @@
+# ChangeLog for dev-perl/Test-Requires
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.1 2010/08/27 12:16:41 tove Exp $
+
+  27 Aug 2010; Torsten Veller <tove@gentoo.org> +Test-Requires-0.05.ebuild,
+  +metadata.xml:
+  Import from perl-experimental for MooseX-Getopt
+
+*Test-Requires-0.05 (29 Apr 2010)
+
+  29 Apr 2010; Torsten Veller <tove@gentoo.org> -Test-Requires-0.03.ebuild,
+  +Test-Requires-0.05.ebuild:
+  Version bump. Cleanup
+
+*Test-Requires-0.03 (24 Jan 2010)
+
+  24 Jan 2010; Torsten Veller <tove@gentoo.org> +Test-Requires-0.03.ebuild,
+  +metadata.xml:
+  Initial commit
