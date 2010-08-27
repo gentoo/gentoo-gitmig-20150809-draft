@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.8 2010/08/09 17:35:56 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.9 2010/08/27 20:21:21 vadimk Exp $
+
+*open-vm-tools-kmod-0.0.20100824.292196 (27 Aug 2010)
+
+  27 Aug 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  +open-vm-tools-kmod-0.0.20100824.292196.ebuild:
+  Version bump. Bug 334687
 
   09 Aug 2010; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-kmod-0.0.20091216.217847.ebuild:
