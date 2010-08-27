@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xxkb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.16 2010/08/26 19:24:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.17 2010/08/27 23:46:02 hwoarang Exp $
+
+  27 Aug 2010; Markos Chandras <hwoarang@gentoo.org> xxkb-1.11-r1.ebuild:
+  Stable on amd64 wrt bug #334691
 
   26 Aug 2010; Patrick Kursawe <phosphan@gentoo.org> -xxkb-1.11.ebuild,
   xxkb-1.11-r1.ebuild:
