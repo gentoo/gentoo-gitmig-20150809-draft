@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.32 2010/02/25 09:53:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.33 2010/08/27 18:02:47 zmedico Exp $
+
+  27 Aug 2010; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Use valid atoms in flag restrict attributes.
 
   25 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   -log4cxx-0.9.7-r4.ebuild, -files/log4cxx-0.9.7-gcc41.patch,
