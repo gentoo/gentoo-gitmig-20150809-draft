@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-4.0.ebuild,v 1.1 2010/06/24 17:26:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-4.0.ebuild,v 1.2 2010/08/27 09:39:28 tomjbe Exp $
 
 EAPI="1"
 
@@ -45,6 +45,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-libdir.patch
 	epatch "${FILESDIR}"/${PV}-datadir.patch
+	epatch "${FILESDIR}"/${PV}-ldflags.patch
 	eautoreconf
 	sed -i -e "s:\(DEFAULT_INCLUDES = \)\(.*\):\1-I"${S}"/src/libs/ \2/:" "${WORKDIR}"/balsa-sim-verilog-${PV}/libs/Makefile.in
 	sed -i -e 's/ $(bindir)/ $(DESTDIR)$(bindir)/' "${S}"/bin/Makefile.in
