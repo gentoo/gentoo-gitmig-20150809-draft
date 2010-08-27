@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.36 2010/04/23 09:42:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.37 2010/08/27 07:06:22 radhermit Exp $
+
+*solfege-3.16.4 (27 Aug 2010)
+
+  27 Aug 2010; Tim Harder <radhermit@gentoo.org> +solfege-3.16.4.ebuild:
+  Version bump for bug #328335.
 
   23 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> solfege-3.16.1.ebuild:
   Don't include headers from /usr/src/linux wrt #316759.
