@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.13 2010/08/10 14:51:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.14 2010/08/27 20:00:48 flameeyes Exp $
+
+*bti-027 (27 Aug 2010)
+
+  27 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -bti-013.ebuild,
+  -bti-014.ebuild, -bti-015.ebuild, -bti-020.ebuild, -bti-024.ebuild,
+  -bti-025.ebuild, +bti-027.ebuild, +files/bti-027-build.patch,
+  metadata.xml:
+  I'll co-maintain bti with Greg from now on, so cleanup older versions,
+  leave the last one without liboauth, and add the new one that needs
+  liboauth.
 
 *bti-026 (10 Aug 2010)
 
