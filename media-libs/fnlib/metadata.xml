@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<longdescription>
-Font Library for enlightenment
-</longdescription>
+<maintainer>
+<email>maintainer-needed@gentoo.org</email>
+</maintainer>
 </pkgmetadata>

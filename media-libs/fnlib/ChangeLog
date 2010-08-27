@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fnlib
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/ChangeLog,v 1.10 2007/01/05 08:04:48 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/ChangeLog,v 1.11 2010/08/27 08:50:01 flameeyes Exp $
+
+  27 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> fnlib-0.5-r1.ebuild,
+  metadata.xml:
+  Make metadata list m-n as maintainer; remove longdescription, it's short
+  enough to use as description.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> fnlib-0.5-r1.ebuild:
   Remove gnuconfig_update usage, leave it to econf.
