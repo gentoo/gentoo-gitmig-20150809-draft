@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5899 2010/08/27 20:14:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5900 2010/08/27 21:34:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1030,6 +1030,7 @@ dev-python/pyyaml:libyaml - enable libyaml support
 dev-python/pyzor:pyzord - enable support for pyzord
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/rdflib:zodb - enable support for Zope Object Database triplestore
+dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/spyder:matplotlib - Add support for dev-python/matplotlib
 dev-python/spyder:mayavi - Add support for sci-visualization/mayavi
