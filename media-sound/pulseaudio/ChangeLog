@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.194 2010/08/11 17:56:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.195 2010/08/27 17:57:33 zmedico Exp $
+
+  27 Aug 2010; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Use valid atoms in flag restrict attributes.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   pulseaudio-0.9.21.2-r1.ebuild:

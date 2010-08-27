@@ -14,11 +14,11 @@
       enable this flag if you want to use a system wide instance. If
       unsure, enable this flag.
     </flag>
-    <flag name="oss" restrict="&lt;media-sound/pulseaudio-0.9.16-test5">
+    <flag name="oss" restrict="&lt;media-sound/pulseaudio-0.9.16_pre5">
       Enable OSS sink/source (output/input). Also build the padsp
       script to make OSS software use PulseAudio.
     </flag>
-    <flag name="oss" restrict="&gt;=media-sound/pulseaudio-0.9.16-test5">
+    <flag name="oss" restrict="&gt;=media-sound/pulseaudio-0.9.16_pre5">
       Enable OSS sink/source (output/input). Deprecated, upstream does
       not support this on systems where other sink/source systems are
       available (i.e.: Linux). The padsp wrapper is now always build
