@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.45 2010/08/27 09:44:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.46 2010/08/27 10:00:43 scarabeus Exp $
 
 EAPI="2"
 
@@ -124,26 +124,43 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use server && use ssl; then
-		# inform about genreating ssl certificate
-		elog "If you want to use ssl connection to your core, please generate ssl key, with following command:"
-		elog "# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${QUASSEL_DIR}/quasselCert.pem -out ${QUASSEL_DIR}/quasselCert.pem"
-		echo
-		elog "Also remember that with the above command the key is valid only for 1 year."
-	fi
-
 	if ( use monolithic || [[ "${FORCED_MONO}" == "yes" ]] ) && use ssl ; then
-		echo
 		elog "Information on how to enable SSL support for client/core connections"
 		elog "is available at http://bugs.quassel-irc.org/wiki/quassel-irc."
 	fi
 
+	if use server; then
+		einfo "If you want to generate SSL certificate remember to run:"
+		einfo "	emerge --config =${CATEGORY}/${PF}"
+	fi
+
 	# temporary info mesage
 	if use server; then
+		echo
 		ewarn "Please note that all configuration moved from"
 		ewarn "/home/\${QUASSEL_USER}/.config/quassel-irc.org/"
 		ewarn "to: ${QUASSEL_DIR}."
 		echo
-		ewarn "For migration, stop the core, move quasselcore files (pretty much everything apart from quasselclient.conf and settings.qss) into new location and then start server again."
+		ewarn "For migration, stop the core, move quasselcore files (pretty	much"
+		ewarn "everything apart from quasselclient.conf and settings.qss) into"
+		ewarn "new location and then start server again."
+	fi
+}
+
+pkg_config() {
+	if use server && use ssl; then
+		# generate the pem file only when it does not already exist
+		if [ ! -f "${QUASSEL_DIR}/quasselCert.pem" ]; then
+			einfo "Generating QUASSEL SSL certificate to: \"${QUASSEL_DIR}/quasselCert.pem\""
+			openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+				-keyout "${QUASSEL_DIR}/quasselCert.pem" \
+				-out "${QUASSEL_DIR}/quasselCert.pem"
+			# permissions for the key
+			chown ${QUASSEL_USER}:${QUASSEL_USER} "${QUASSEL_DIR}/quasselCert.pem"
+			chmod 400 "${QUASSEL_DIR}/quasselCert.pem"
+		else
+			einfo "Certificate \"${QUASSEL_DIR}/quasselCert.pem\" already exists."
+			einfo "Remove it if you want to create new one."
+		fi
 	fi
 }
