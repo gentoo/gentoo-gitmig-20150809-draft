@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gozer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.14 2009/11/25 22:19:57 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.15 2010/08/27 04:45:05 jer Exp $
+
+*gozer-0.7-r2 (27 Aug 2010)
+
+  27 Aug 2010; Jeroen Roovers <jer@gentoo.org> +gozer-0.7-r2.ebuild:
+  Respect LDFLAGS (bug #334609). Respect CFLAGS better.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> gozer-0.7-r1.ebuild:
   amd64 stable, bug #286411
