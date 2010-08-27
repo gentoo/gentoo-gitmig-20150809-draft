@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.07-r1.ebuild,v 1.6 2010/06/19 16:29:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.07-r1.ebuild,v 1.7 2010/08/27 04:11:35 jer Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="truetype perl iso14755 afterimage xterm-color wcwidth +vanilla"
 # see bug #115992 for modular x deps
 RDEPEND="x11-libs/libX11
 	x11-libs/libXft
-	afterimage? ( media-libs/libafterimage )
+	afterimage? ( || ( media-libs/afterimage x11-wm/afterstep ) )
 	x11-libs/libXrender
 	perl? ( dev-lang/perl )
 	>=sys-libs/ncurses-5.7-r3"
