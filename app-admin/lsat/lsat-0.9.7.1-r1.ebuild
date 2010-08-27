@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/lsat-0.9.7.1.ebuild,v 1.2 2008/12/31 03:16:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/lsat-0.9.7.1-r1.ebuild,v 1.1 2010/08/27 05:35:30 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,6 +29,10 @@ src_unpack() {
 
 	# patch for segmentation fault see bug #184488
 	epatch "${FILESDIR}"/${P}-segfault-fix.patch
+	sed -i Makefile.in \
+		-e '/^LDFLAGS=/d' \
+		-e '/^CFLAGS=/d' \
+		|| die "sed Makefile.in"
 }
 
 src_compile() {
