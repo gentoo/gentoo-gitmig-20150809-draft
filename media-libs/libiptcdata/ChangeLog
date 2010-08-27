@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiptcdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.21 2010/07/23 12:32:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.22 2010/08/27 18:58:29 armin76 Exp $
+
+  27 Aug 2010; Raúl Porcel <armin76@gentoo.org> libiptcdata-1.0.4.ebuild:
+  ia64/sparc stable wrt #320275
 
   23 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
   libiptcdata-1.0.4.ebuild:
