@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/keepalived
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.63 2009/10/18 05:52:43 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.64 2010/08/27 15:27:38 scarabeus Exp $
+
+*keepalived-1.1.20 (27 Aug 2010)
+
+  27 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +keepalived-1.1.20.ebuild,
+  +files/keepalived-1.1.20-do-not-need-kernel-sources.patch:
+  Version bump. Per bug #322185. Thx to Hans Rakers for the patch. Remove
+  profiler useflag since it alters just cflags.
 
 *keepalived-1.1.19 (18 Oct 2009)
 
