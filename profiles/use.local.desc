@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5897 2010/08/24 22:14:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5898 2010/08/27 13:54:20 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1009,6 +1009,9 @@ dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/bpython:urwid - Backend based on dev-python/urwid
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
+dev-python/django-extensions:graphviz - Create a diagram of your database entity relationships using dev-python/pygraphviz.
+dev-python/django-extensions:s3 - Upload your media files to S3.
+dev-python/django-extensions:vcard - Export your users email addresses to the vcard format.
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/jinja:i18n - Enables support for i18n with dev-python/Babel
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
