@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11884 2010/08/26 13:35:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11885 2010/08/27 15:42:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Aug 2010)
+#  on behalf of QA team
+#
+# Bumped this year after seven years, but no users in the
+# tree, and the license status seems to be uncertain.
+#
+# Removal on 2010-10-26
+dev-libs/pcl
 
 # Markos Chandras <hwoarang@gentoo.org> (26 Aug 2010)
 # Masked for further testing
