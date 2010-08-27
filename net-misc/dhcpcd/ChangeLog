@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.285 2010/08/26 18:06:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.286 2010/08/27 17:41:22 williamh Exp $
+
+  27 Aug 2010; William Hubbs <williamh@gentoo.org> dhcpcd-5.2.7.ebuild:
+  I reverted this stabilization wrt bug #262097. In its current state,
+  dhcpcd-5.2.7 will not work with baselayout-1.
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> dhcpcd-5.2.7.ebuild:
   Stable for HPPA (bug #334341).
