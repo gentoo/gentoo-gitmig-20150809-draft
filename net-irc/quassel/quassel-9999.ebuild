@@ -1,13 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.47 2010/08/27 10:05:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.48 2010/08/27 10:14:46 scarabeus Exp $
 
 EAPI=3
 
-inherit cmake-utils eutils git
-
 EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
 EGIT_BRANCH="master"
+[[ "${PV}" == "9999" ]] && GIT_ECLASS="git"
+
+QT_MINIMAL="4.6.0"
+KDE_MINIMAL="4.4"
+
+inherit cmake-utils eutils ${GIT_ECLASS}
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
@@ -16,9 +20,6 @@ LICENSE="GPL-3"
 KEYWORDS=""
 SLOT="0"
 IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl webkit X"
-
-QT_MINIMAL="4.6.0"
-KDE_MINIMAL="4.4"
 
 SERVER_RDEPEND="
 	crypt? ( app-crypt/qca:2 )
