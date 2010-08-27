@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.212 2010/07/23 12:27:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.213 2010/08/27 18:56:43 armin76 Exp $
+
+  27 Aug 2010; Raúl Porcel <armin76@gentoo.org> postfix-2.6.6.ebuild:
+  ia64/s390/sh/sparc stable wrt #320179
 
   23 Jul 2010; Tobias Klausmann <klausman@gentoo.org> postfix-2.6.6.ebuild:
   Stable on alpha, bug #320179
