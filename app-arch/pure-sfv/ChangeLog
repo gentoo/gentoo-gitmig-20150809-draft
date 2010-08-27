@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.13 2009/01/03 17:39:34 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.14 2010/08/27 05:43:29 jer Exp $
+
+*pure-sfv-0.3-r1 (27 Aug 2010)
+
+  27 Aug 2010; Jeroen Roovers <jer@gentoo.org> +pure-sfv-0.3-r1.ebuild,
+  files/pure-sfv-0.3-asneeded.patch:
+  Respect LDFLAGS by Ross Smith (bug #334599).
 
   03 Jan 2009; Christoph Mende <angelos@gentoo.org>
   +files/pure-sfv-0.3-asneeded.patch, pure-sfv-0.3.ebuild:

@@ -5,7 +5,7 @@
  
  pure-sfv: $(OBJ)
 -	$(CC) -lm -DVERSION=\"$(VERSION)\" $(CFLAGS) -o $(PROG) $(OBJ)
-+	$(CC) -DVERSION=\"$(VERSION)\" $(CFLAGS) -o $(PROG) $(OBJ) -lm
++	$(CC) -DVERSION=\"$(VERSION)\" $(CFLAGS) $(LDFLAGS) -o $(PROG) $(OBJ) -lm
  
  PURIFY_OPTIONS=-follow-child-processes=yes -always-use-cache-dir=yes
  PURIFY=purify
