@@ -1,6 +1,10 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.4 2010/08/27 10:09:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.5 2010/08/27 12:00:23 wired Exp $
+
+  27 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  respect user-defined branch and/or commit. keep the develop branch as
+  default since master tracks releases.
 
   27 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   new help2man dependency
