@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.47.ebuild,v 1.1 2008/12/07 21:09:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.47-r1.ebuild,v 1.1 2010/08/27 17:04:29 xarthisius Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="GUI frontend to xmodmap"
 HOMEPAGE="http://packages.qa.debian.org/x/xkeycaps.html"
@@ -32,14 +32,15 @@ src_unpack() {
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed."
+	xmkmf || die
 	sed -i -e "s,all:: xkeycaps.\$(MANSUFFIX).html,all:: ,g" \
-		Makefile || die "sed failed."
-	emake || die "emake failed."
+		Makefile || die
+	emake EXTRA_LDOPTIONS="${LDFLAGS}" CC="$(tc-getCC)" \
+		CDEBUGFLAGS="${CFLAGS}" || die
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	newman ${PN}.man ${PN}.1
-	dodoc README *.txt
+	emake DESTDIR="${D}" install || die
+	newman ${PN}.man ${PN}.1 || die
+	dodoc README *.txt || die
 }
