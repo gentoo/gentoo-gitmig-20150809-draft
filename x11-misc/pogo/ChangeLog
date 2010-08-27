@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/pogo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.13 2007/07/22 03:56:37 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.14 2010/08/27 16:24:10 xarthisius Exp $
+
+*pogo-2.2-r1 (27 Aug 2010)
+
+  27 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> +pogo-2.2-r1.ebuild,
+  +files/Makefile-r1:
+  Respect CC and LDFLAGS wrt bug 334565. Thanks to Diego for the report.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; pogo-2.2.ebuild:
   Drop virtual/x11 references.
