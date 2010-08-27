@@ -11,13 +11,13 @@
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="debug" restrict="&lt;fcron-3.0.5">
+    <flag name="debug" restrict="&lt;sys-process/fcron-3.0.5">
       Enable debug code, output and allocation checks. Warning: in
       ebuilds before 3.0.5, enabling this flag will prevent fcron from
       running as a proper service.
     </flag>
 
-    <flag name="debug" restrict="&gt;=fcron-3.0.5">
+    <flag name="debug" restrict="&gt;=sys-process/fcron-3.0.5">
       Enable debug code and output. Since version 3.0.5 this will no
       longer force foreground execution, and fcron will be able to run
       as a service properly.
