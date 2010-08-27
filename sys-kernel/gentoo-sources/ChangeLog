@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.737 2010/08/26 18:20:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.738 2010/08/27 18:28:23 jer Exp $
+
+  27 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  gentoo-sources-2.6.34-r6.ebuild, gentoo-sources-2.6.35-r4.ebuild:
+  Revert 2.6.35 stabilisation for HPPA (bug #334341). 2.6.34-r6 stable for
+  HPPA (bug #334343).
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   gentoo-sources-2.6.35-r4.ebuild:
