@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/spectromatic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.6 2010/06/23 20:13:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.7 2010/08/27 07:21:50 xarthisius Exp $
+
+*spectromatic-1.0-r2 (27 Aug 2010)
+
+  27 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -spectromatic-1.0-r1.ebuild, +spectromatic-1.0-r2.ebuild,
+  files/spectromatic-1.0-makefile.patch:
+  Respect CC and LDFLAGS wrt bug 334715. Thanks to Diego for the report.
+  Clean ebuild.
 
   23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
   spectromatic-1.0.ebuild, spectromatic-1.0-r1.ebuild:
