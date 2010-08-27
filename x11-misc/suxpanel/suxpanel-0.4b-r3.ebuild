@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r2.ebuild,v 1.2 2010/06/06 17:18:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r3.ebuild,v 1.1 2010/08/27 15:48:45 xarthisius Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -20,8 +20,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.in.patch \
-		"${FILESDIR}"/${P}-stdlib.patch
+	epatch "${FILESDIR}"/${P}-stdlib.patch \
+		"${FILESDIR}"/${P}-makefile.patch
 
 	sed -i \
 		-e "s:share/${PN}/plugins:$(get_libdir)/${PN}/plugins:" \
@@ -37,5 +37,5 @@ src_configure() {
 src_install () {
 	emake DESTDIR="${D}" install || die
 	dobin suxpanel-install.sh || die
-	dodoc README
+	dodoc README || die
 }
