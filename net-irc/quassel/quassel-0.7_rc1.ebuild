@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7_rc1.ebuild,v 1.1 2010/08/27 10:26:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7_rc1.ebuild,v 1.2 2010/08/27 10:41:18 scarabeus Exp $
 
 EAPI=3
 
@@ -143,7 +143,7 @@ pkg_postinst() {
 		ewarn "/home/\${QUASSEL_USER}/.config/quassel-irc.org/"
 		ewarn "to: ${QUASSEL_DIR}."
 		echo
-		ewarn "For migration, stop the core, move quasselcore files (pretty	much"
+		ewarn "For migration, stop the core, move quasselcore files (pretty much"
 		ewarn "everything apart from quasselclient.conf and settings.qss) into"
 		ewarn "new location and then start server again."
 	fi
