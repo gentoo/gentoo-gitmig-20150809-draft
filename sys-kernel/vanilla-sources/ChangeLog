@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.796 2010/08/27 08:47:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.797 2010/08/27 18:25:57 jer Exp $
+
+  27 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  vanilla-sources-2.6.34.5.ebuild, vanilla-sources-2.6.35.3.ebuild:
+  Revert 2.6.35 stabilisation for HPPA (bug #334341). 2.6.34.5 stable for
+  HPPA (bug #334343).
 
 *vanilla-sources-2.6.35.4 (27 Aug 2010)
 *vanilla-sources-2.6.34.6 (27 Aug 2010)
