@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.10.2-r1.ebuild,v 1.7 2010/05/11 16:35:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.10.2-r1.ebuild,v 1.8 2010/08/28 13:43:24 wired Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -34,6 +34,10 @@ for L in $ARORA_NOLONGLANGS; do
 done
 
 src_prepare() {
+	# fix compilation with qt 4.7, bug #335011
+	# patch: http://github.com/Arora/arora/commit/5ca8d4b93a284d2e96ba9c2413c4060814258a95
+	epatch "${FILESDIR}"/"${P}"_qt_4.7_build_fix.patch
+
 	# use Gentoo lingua designations
 	mv src/locale/sr_RS@latin.ts src/locale/sr@latin.ts
 	mv src/locale/sr_RS.ts src/locale/sr_CS.ts

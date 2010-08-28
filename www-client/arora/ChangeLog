@@ -1,6 +1,10 @@
 # ChangeLog for www-client/arora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.38 2010/05/11 16:35:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.39 2010/08/28 13:43:24 wired Exp $
+
+  28 Aug 2010; Alex Alexander <wired@gentoo.org> arora-0.10.2-r1.ebuild,
+  +files/arora-0.10.2_qt_4.7_build_fix.patch:
+  fixed compilation with qt 4.7, bug #335011
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> arora-0.10.2-r1.ebuild:
   Marked ~ppc for bug #285889.

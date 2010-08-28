@@ -1,0 +1,29 @@
+From 5ca8d4b93a284d2e96ba9c2413c4060814258a95 Mon Sep 17 00:00:00 2001
+From: Benjamin Poulain <benjamin.poulain@nokia.com>
+Date: Fri, 7 May 2010 12:28:32 +0200
+Subject: [PATCH 02/16] QtWebKit 2.0 declare a meta type for QWebElement
+
+Fix the compilation of Arora with QtWebKit 2.0. QtWebKit 2 already
+declare the meta type, declaring it in Arora results in a clash of
+symbols.
+---
+ src/webview.cpp |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/webview.cpp b/src/webview.cpp
+index 30df9a6..43eeeb9 100644
+--- a/src/webview.cpp
++++ b/src/webview.cpp
+@@ -87,7 +87,9 @@
+ #include <qwebframe.h>
+ 
+ #if QT_VERSION >= 0x040600 || defined(WEBKIT_TRUNK)
++#if !defined(QTWEBKIT_VERSION) || QTWEBKIT_VERSION < 0x020000
+ Q_DECLARE_METATYPE(QWebElement)
++#endif
+ #include <qinputdialog.h>
+ #include <qlabel.h>
+ #include <qmessagebox.h>
+-- 
+1.7.2.2
+
