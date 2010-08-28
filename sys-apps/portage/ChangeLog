@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.712 2010/08/28 03:52:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.713 2010/08/28 07:06:17 zmedico Exp $
+
+*portage-2.2_rc71 (28 Aug 2010)
+
+  28 Aug 2010; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc70.ebuild,
+  +portage-2.2_rc71.ebuild:
+  2.2_rc71 version bump. This fixes bug #334935 (AttributeError triggered by
+  files in package.mask).
 
 *portage-2.2_rc70 (28 Aug 2010)
 
