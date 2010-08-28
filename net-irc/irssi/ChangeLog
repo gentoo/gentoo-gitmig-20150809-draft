@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.163 2010/04/30 14:23:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.164 2010/08/28 11:03:11 swegener Exp $
+
+  28 Aug 2010; Sven Wegener <swegener@gentoo.org> -irssi-0.8.14.ebuild,
+  -irssi-0.8.15_rc1.ebuild:
+  Cleanup.
 
   30 Apr 2010; Brent Baude <ranger@gentoo.org> irssi-0.8.15.ebuild:
   Marking irssi-0.8.15 ppc64 for bug 314639
