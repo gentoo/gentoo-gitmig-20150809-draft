@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.6.5-r1.ebuild,v 1.3 2010/08/01 13:42:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.6.5-r1.ebuild,v 1.4 2010/08/28 17:09:06 armin76 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://moulon.inra.fr/pub/ruby/${MY_P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 S=${WORKDIR}/${MY_P}
