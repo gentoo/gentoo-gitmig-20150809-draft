@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.88 2010/08/22 16:40:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.89 2010/08/28 07:42:22 graaff Exp $
+
+  28 Aug 2010; Hans de Graaff <graaff@gentoo.org> hoe-2.6.1.ebuild,
+  +files/hoe-2.6.1-test-file-ordering.patch:
+  Fix file ordering issues with tests, fixing bug 323059.
 
   22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> hoe-2.6.0-r1.ebuild:
   Remove ruby19/ree18 support from 2.6.0-r1 so that it can be marked stable.
