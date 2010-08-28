@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chef
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.2 2010/07/04 07:36:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.3 2010/08/28 14:33:52 graaff Exp $
+
+  28 Aug 2010; Hans de Graaff <graaff@gentoo.org> chef-0.9.6.ebuild:
+  Depend on >=dev-ruby/json-1.4.4 because json-1.4.3 has bugs that affect
+  dev-ruby/ohai and chef.
 
   04 Jul 2010; Benedikt Böhm <hollow@gentoo.org> chef-0.9.6.ebuild:
   Add dependency on ruby-shadow for password support in the user resource
