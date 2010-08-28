@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/fuse-zip-0.2.12.ebuild,v 1.1 2010/06/05 11:20:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/fuse-zip-0.2.12.ebuild,v 1.2 2010/08/28 19:24:42 hwoarang Exp $
 
 EAPI=2
 
@@ -16,6 +16,8 @@ IUSE=""
 DEPEND="dev-libs/libzip
 	sys-fs/fuse"
 RDEPEND="${DEPEND}"
+
+RESTRICT="test"
 
 src_prepare() {
 	# Fix strip than installing fuse-zip

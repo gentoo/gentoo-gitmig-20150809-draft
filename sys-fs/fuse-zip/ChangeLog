@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse-zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.1 2010/06/05 11:20:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.2 2010/08/28 19:24:42 hwoarang Exp $
+
+  28 Aug 2010; Markos Chandras <hwoarang@gentoo.org> fuse-zip-0.2.12.ebuild:
+  Restrict tests per bug #335027
 
 *fuse-zip-0.2.12 (05 Jun 2010)
 
