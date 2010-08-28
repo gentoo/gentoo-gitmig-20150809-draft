@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.11.ebuild,v 1.1 2010/08/28 10:31:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.11.ebuild,v 1.2 2010/08/28 11:40:05 swegener Exp $
 
 EAPI="2"
 
@@ -69,4 +69,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc x11vnc/{ChangeLog,README}
+	# Remove include files, which conflict with net-libs/libvncserver
+	rm -rf "${D}"/usr/include
 }
