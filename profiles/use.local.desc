@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5900 2010/08/27 21:34:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5901 2010/08/28 15:14:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3025,13 +3025,14 @@ net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
 net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application 
 net-p2p/transmission:sound - Enable sound event support with media-libs/libcanberra
-net-print/hplip:X - Enables scanner GUI dependencies with USE=scanner where media-gfx/xsane is preferred over media-gfx/sane-frontends
+net-print/hplip:X - Enables scanner GUI dependencies with USE="scanner" where media-gfx/xsane is preferred over media-gfx/sane-frontends
 net-print/hplip:doc - Build documentation
 net-print/hplip:fax - Enable fax on multifunction devices which support it
 net-print/hplip:hpcups - Build the hpcups driver for cups (by HP)
 net-print/hplip:hpijs - Build the IJS driver for cups (Foomatic)
+net-print/hplip:kde - Enables kde-misc/skanlite as scanner GUI with USE="scanner X"
 net-print/hplip:libnotify - Enables desktop notifications
-net-print/hplip:minimal - Only build internal hpijs driver (not recommended at all, make sure you know what you are doing)
+net-print/hplip:minimal - Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
 net-print/hplip:policykit - Enable sys-auth/policykit authentication support
 net-print/hplip:qt4 - Enable graphical interface using Qt 4
