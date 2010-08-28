@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.49 2010/06/01 08:20:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.50 2010/08/28 02:35:52 mr_bones_ Exp $
+
+*stella-3.2.1 (28 Aug 2010)
+
+  28 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> +stella-3.2.1.ebuild:
+  version bump
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> stella-3.1.ebuild:
   x86 stable wrt bug #321345
