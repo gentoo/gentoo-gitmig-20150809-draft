@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/ndisc6
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.1 2010/08/28 14:53:59 xmw Exp $
+
+*ndisc6-0.9.9 (28 Aug 2010)
+
+  28 Aug 2010; Michael Weber <xmw@gentoo.org> +ndisc6-0.9.9.ebuild,
+  +files/rdnssd.conf, +files/rdnssd.rc, +files/resolvconf, +metadata.xml:
+  Initial commit for ndisc6. Fixes bug #232249, thanks to Jens Weibler and
+  Benjamin Gaillard for the initial ebuild and /etc files.
+
