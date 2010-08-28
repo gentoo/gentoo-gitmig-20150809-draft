@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.229 2010/08/28 08:08:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.230 2010/08/28 19:10:48 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> lvm2-2.02.67-r2.ebuild,
+  lvm2-2.02.73.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #334087
 
   28 Aug 2010; Markus Meier <maekke@gentoo.org> lvm2-2.02.73.ebuild:
   arm stable, bug #334087
