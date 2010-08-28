@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.6 2010/08/26 07:07:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.7 2010/08/28 14:06:47 mr_bones_ Exp $
 
 EAPI=3
 
@@ -140,7 +140,7 @@ src_install() {
 		}
 		python_execute_function install-scan-view
 	fi
-	
+
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
