@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/angst
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.9 2007/02/19 12:38:00 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.10 2010/08/28 15:52:56 jer Exp $
+
+*angst-0.4b-r2 (28 Aug 2010)
+
+  28 Aug 2010; Jeroen Roovers <jer@gentoo.org> +angst-0.4b-r2.ebuild:
+  Respect LDFLAGS (bug #334975). Respect CC.
 
   19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
