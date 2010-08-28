@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.25 2010/05/23 20:49:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.26 2010/08/28 13:15:41 graaff Exp $
+
+*ruby-inline-3.8.4-r2 (28 Aug 2010)
+
+  28 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-inline-3.8.4-r2.ebuild, +files/ruby-inline-3.8.4-ldflags.patch:
+  Respect ruby's LDFLAGS and explicitly link against the right shared
+  library. Fixes bug 334373.
 
 *ruby-inline-3.8.4-r1 (23 May 2010)
 
