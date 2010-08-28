@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/resource-agents
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.3 2010/06/29 08:31:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.4 2010/08/28 09:16:01 xarthisius Exp $
+
+  28 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  resource-agents-1.0.3.ebuild:
+  Add block against <sys-cluster/heartbeat-3.x
 
   29 Jun 2010; Guy Martin <gmsoft@gentoo.org> resource-agents-1.0.3.ebuild:
   Added ~hppa to KEYWORDS.

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3.ebuild,v 1.3 2010/06/29 08:31:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3.ebuild,v 1.4 2010/08/28 09:16:01 xarthisius Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc"
 
 DEPEND="sys-apps/iproute2
-	sys-cluster/cluster-glue"
+	sys-cluster/cluster-glue
+	!<sys-cluster/heartbeat-3.0"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Cluster-Resource-Agents-${MY_P}"
