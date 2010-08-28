@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.35 2010/08/01 17:22:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.36 2010/08/28 17:09:32 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  GnuPG-Interface-0.42.ebuild:
+  alpha/ia64/sparc stable wrt #321235
 
   01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   GnuPG-Interface-0.42.ebuild:

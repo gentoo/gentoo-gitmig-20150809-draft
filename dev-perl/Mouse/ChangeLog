@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.10 2010/07/29 20:21:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.11 2010/08/28 17:03:56 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> Mouse-0.40.ebuild:
+  alpha/ia64/sparc stable wrt #321235
 
 *Mouse-0.64 (29 Jul 2010)
 
