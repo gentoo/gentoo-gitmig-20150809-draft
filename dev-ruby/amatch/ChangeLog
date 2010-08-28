@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.17 2010/08/07 14:31:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.18 2010/08/28 17:19:26 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> amatch-0.2.5.ebuild:
+  ia64 stable wrt #330787
 
   07 Aug 2010; Hans de Graaff <graaff@gentoo.org> amatch-0.2.3.ebuild:
   Change virtual/ruby to dev-lang/ruby, bug 265054.
