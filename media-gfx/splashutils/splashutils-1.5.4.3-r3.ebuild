@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.5 2010/08/28 20:37:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.6 2010/08/28 20:52:22 spock Exp $
 
 EAPI="2"
 
@@ -102,6 +102,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-umount-fix.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-nondefault-runlevel.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-effects.patch
+	epatch "${FILESDIR}"/initrd.splash-cmp-str-instead-of-int.patch
 	cd "${S}"
 
 	rm -f m4/*
