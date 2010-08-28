@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.43 2010/08/28 22:41:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.44 2010/08/28 23:31:54 phajdan.jr Exp $
+
+  28 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> znc-0.094.ebuild:
+  x86 stable wrt security bug #332535
 
   28 Aug 2010; Markos Chandras <hwoarang@gentoo.org> znc-0.094.ebuild:
   Stable on amd64 wrt bug #332535
