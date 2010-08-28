@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.66 2010/07/05 10:38:08 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.67 2010/08/28 21:24:37 spock Exp $
+
+*linux-logo-5.10-r1 (28 Aug 2010)
+
+  28 Aug 2010; Michał Januszewski <spock@gentoo.org>
+  +linux-logo-5.10-r1.ebuild, +files/linux_logo-5.10-makefile-tabs.patch:
+  Fix compilation problems with make 3.82 (bug #334713), switch to EAPI 2,
+  respect LDFLAGS.
 
 *linux-logo-5.10 (05 Jul 2010)
 
