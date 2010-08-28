@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.165 2010/07/24 21:06:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.166 2010/08/28 15:02:44 billie Exp $
+
+  28 Aug 2010; Daniel Pielmeier <billie@gentoo.org>
+  -files/hplip-3.10.2-plugin.patch, -hplip-3.10.5.ebuild,
+  hplip-3.10.6.ebuild, metadata.xml:
+  Make kde-misc/skanlite available as additional sane frontend via
+  USE="kde". Thanks to Enrico Tagliavini on IRC. Remove old version.
 
 *hplip-3.10.6 (24 Jul 2010)
 

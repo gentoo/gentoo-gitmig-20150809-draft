@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.6.ebuild,v 1.1 2010/07/24 21:06:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.6.ebuild,v 1.2 2010/08/28 15:02:44 billie Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
-IUSE="doc fax +hpcups hpijs libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl X"
+IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl X"
 
 COMMON_DEPEND="
 	media-libs/jpeg
@@ -47,7 +47,11 @@ RDEPEND="${COMMON_DEPEND}
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
 			dev-python/imaging
-			X? ( || ( media-gfx/xsane media-gfx/sane-frontends ) )
+			X? ( || (
+				kde? ( kde-misc/skanlite )
+				media-gfx/xsane
+				media-gfx/sane-frontends
+			) )
 		)
 		fax? (
 			dev-python/reportlab
