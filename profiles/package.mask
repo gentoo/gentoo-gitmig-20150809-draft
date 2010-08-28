@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11885 2010/08/27 15:42:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11886 2010/08/28 10:21:41 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (28 Aug 2010)
+#  on behalf of QA team
+#
+# Broken ebuild (dosed rather than sed during unpack); bug
+# #175327; maintainer needed; last revision bump in 2005,
+# last version bump in 2003; no user in tree.
+#
+# Removal on 2010-10-27
+sys-devel/omni
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Aug 2010)
 #  on behalf of QA team
