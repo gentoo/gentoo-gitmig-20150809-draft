@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.10 2010/08/02 19:03:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.11 2010/08/28 10:38:02 swegener Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -43,6 +45,10 @@ pkg_setup() {
 		ewarn "Non-native avahi support has been enabled."
 		ewarn "Native avahi support can be enabled by also enabling the threads USE flag."
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.9.11-rename-pointer.patch
 }
 
 src_configure() {

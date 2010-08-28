@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.88 2010/08/28 10:33:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.89 2010/08/28 10:38:02 swegener Exp $
+
+  28 Aug 2010; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.9.ebuild,
+  x11vnc-0.9.10.ebuild:
+  Port the pointer() rename fix to older versions, bug #332425.
 
   28 Aug 2010; Sven Wegener <swegener@gentoo.org> -x11vnc-0.9.6.ebuild,
   -x11vnc-0.9.7.ebuild, -x11vnc-0.9.8.ebuild, -x11vnc-0.9.8-r1.ebuild,
