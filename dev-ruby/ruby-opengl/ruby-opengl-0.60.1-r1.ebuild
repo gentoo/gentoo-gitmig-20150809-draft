@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.60.1-r1.ebuild,v 1.4 2010/08/21 21:52:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ruby-opengl-0.60.1-r1.ebuild,v 1.5 2010/08/28 18:58:27 armin76 Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -17,7 +17,7 @@ HOMEPAGE="http://ruby-opengl.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 
 IUSE=""
 
