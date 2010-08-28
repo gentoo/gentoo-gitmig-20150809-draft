@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/files/rabbitmq-server.init-r1,v 1.1 2010/08/28 14:33:02 hollow Exp $
+
+depend() {
+	# uncomment this as soon as bug 334979 is fixed
+	#need epmd
+	need net
+	use dns
+}
+
+start() {
+	ebegin "Starting RabbitMQ..."
+	/usr/sbin/rabbitmq-multi start_all ${NODE_COUNT:-1} >> /var/log/rabbitmq/startup.log 2>> /var/log/rabbitmq/startup.err
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping RabbitMQ..."
+	/usr/sbin/rabbitmq-multi stop_all >> /var/log/rabbitmq/shutdown.log 2>> /var/log/rabbitmq/shutdown.err
+	eend $?
+}

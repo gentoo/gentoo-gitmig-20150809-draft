@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.6 2010/08/02 23:56:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.7 2010/08/28 14:33:03 hollow Exp $
+
+*rabbitmq-server-2.0.0 (28 Aug 2010)
+
+  28 Aug 2010; Benedikt Böhm <hollow@gentoo.org>
+  -rabbitmq-server-1.5.4-r2.ebuild, +rabbitmq-server-2.0.0.ebuild,
+  +files/rabbitmq-script-wrapper, +files/rabbitmq-server.init-r1:
+  version bump wrt #334543. also fixes #332391.
 
   02 Aug 2010; Benedikt Böhm <hollow@gentoo.org>
   files/rabbitmq-server.init:
