@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/yp-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.44 2009/12/15 19:08:59 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.45 2010/08/28 00:40:57 jer Exp $
+
+*yp-tools-2.12 (28 Aug 2010)
+
+  28 Aug 2010; Jeroen Roovers <jer@gentoo.org> +yp-tools-2.12.ebuild:
+  Version bump.
 
   15 Dec 2009; Raúl Porcel <armin76@gentoo.org> yp-tools-2.9-r1.ebuild:
   alpha/ia64/sparc stable wrt #293565
