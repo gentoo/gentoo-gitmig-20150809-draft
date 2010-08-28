@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bigeye
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.14 2009/09/23 18:17:45 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.15 2010/08/28 04:26:56 jer Exp $
+
+*bigeye-0.3-r2 (28 Aug 2010)
+
+  28 Aug 2010; Jeroen Roovers <jer@gentoo.org> +bigeye-0.3-r2.ebuild:
+  Respect LDFLAGS (bug #334917). Remove useless einfo from src_compile().
+  Remove elog messages and just patch README instead.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bigeye-0.3-r1.ebuild:
   Remove virtual/libc
