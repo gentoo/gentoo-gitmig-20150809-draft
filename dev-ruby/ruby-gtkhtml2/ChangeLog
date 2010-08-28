@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.30 2010/08/01 09:54:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.31 2010/08/28 17:36:13 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  ruby-gtkhtml2-0.19.4.ebuild:
+  ia64/sparc stable wrt #329807
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-gtkhtml2-0.19.4.ebuild:
