@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.556 2010/08/28 08:04:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.557 2010/08/28 19:06:20 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> udev-151-r4.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #334087
 
   28 Aug 2010; Markus Meier <maekke@gentoo.org> udev-151-r4.ebuild:
   arm stable, bug #324507
