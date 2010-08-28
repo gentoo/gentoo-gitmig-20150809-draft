@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.503.1.ebuild,v 1.1 2010/08/26 03:54:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.503.1.ebuild,v 1.2 2010/08/28 18:10:20 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,14 +13,14 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome sse2"
+IUSE="cups gnome gnome-keyring sse2"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
-	gnome? ( >=gnome-base/gnome-keyring-2.28.2 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
@@ -115,7 +115,7 @@ src_configure() {
 		myconf="${myconf} -Duse_cups=0"
 	fi
 
-	if use gnome; then
+	if use "gnome-keyring"; then
 		myconf="${myconf} -Dlinux_link_gnome_keyring=1"
 	else
 		# TODO: we should also disable code trying to dlopen

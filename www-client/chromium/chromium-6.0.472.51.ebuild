@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.495.0.ebuild,v 1.2 2010/08/19 20:03:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.51.ebuild,v 1.1 2010/08/28 18:10:20 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,13 +13,13 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome sse2"
+IUSE="cups gnome-keyring sse2"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
-	gnome? ( >=gnome-base/gnome-keyring-2.28.2 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
@@ -59,11 +59,11 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
+	# Fix compilation, bug #332131.
+	epatch "${FILESDIR}"/${PN}-make-3.82-compatibility-r0.patch
+
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
-
-	# gcc 4.5 patch - bug #333345
-	epatch "${FILESDIR}"/"${P}"-gcc-4.5.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
@@ -76,6 +76,7 @@ src_prepare() {
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
 	remove_bundled_lib "third_party/ocmock"
+	remove_bundled_lib "third_party/py"
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
@@ -115,7 +116,7 @@ src_configure() {
 		myconf="${myconf} -Duse_cups=0"
 	fi
 
-	if use gnome; then
+	if use "gnome-keyring"; then
 		myconf="${myconf} -Dlinux_link_gnome_keyring=1"
 	else
 		# TODO: we should also disable code trying to dlopen
@@ -135,6 +136,10 @@ src_configure() {
 	# Disable tcmalloc memory allocator. It causes problems,
 	# for example bug #320419.
 	myconf="${myconf} -Dlinux_use_tcmalloc=0"
+
+	# Disable gpu rendering, it is incompatible with nvidia-drivers,
+	# bug #319331.
+	myconf="${myconf} -Denable_gpu=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
@@ -173,6 +178,7 @@ src_configure() {
 
 src_compile() {
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
+		rootdir="${S}" \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		AR="$(tc-getAR)" \
@@ -214,9 +220,7 @@ src_install() {
 		|| die "desktop file sed failed"
 
 	# Install GNOME default application entry (bug #303100).
-	if use gnome; then
-		dodir /usr/share/gnome-control-center/default-apps
-		insinto /usr/share/gnome-control-center/default-apps
-		doins "${FILESDIR}"/chromium.xml
-	fi
+	dodir /usr/share/gnome-control-center/default-apps
+	insinto /usr/share/gnome-control-center/default-apps
+	doins "${FILESDIR}"/chromium.xml
 }
