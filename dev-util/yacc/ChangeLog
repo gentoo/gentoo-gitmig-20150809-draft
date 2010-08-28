@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/yacc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.25 2008/10/27 20:04:57 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.26 2010/08/28 12:32:36 truedfx Exp $
+
+*yacc-1.9.1-r5 (28 Aug 2010)
+
+  28 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> +yacc-1.9.1-r5.ebuild:
+  Use LDFLAGS (#334983 by flameeyes), plus emake/RDEPEND cleanup
 
   27 Oct 2008; Brent Baude <ranger@gentoo.org> yacc-1.9.1-r4.ebuild:
   Marking yacc-1.9.1-r4 ppc64 for bug 232005
