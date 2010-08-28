@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.0.9.ebuild,v 1.1 2010/08/10 20:06:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.1.1.ebuild,v 1.1 2010/08/28 21:22:08 caster Exp $
 
 EAPI=3
 
@@ -50,10 +50,4 @@ src_install() {
 
 	doicon "icons.in/${PN}.png" || die
 	make_desktop_entry ${PN} "Task Coach" ${PN} Office || die
-}
-
-pkg_postinst() {
-	elog "With version 1.0, taskcoach could be stabilized if there is enough user interest."
-	elog "If you run a stable stable system and had to keyword taskcoach, please comment/vote"
-	elog "on http://bugs.gentoo.org/show_bug.cgi?id=311841"
 }
