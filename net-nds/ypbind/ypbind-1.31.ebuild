@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.31.ebuild,v 1.5 2010/05/24 13:13:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.31.ebuild,v 1.6 2010/08/28 00:24:08 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="nls slp"
 
 RDEPEND="slp? ( net-libs/openslp )
