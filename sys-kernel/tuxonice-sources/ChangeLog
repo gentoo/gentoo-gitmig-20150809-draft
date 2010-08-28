@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.92 2010/08/20 09:22:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.93 2010/08/28 09:13:54 scarabeus Exp $
+
+*tuxonice-sources-2.6.35-r1 (28 Aug 2010)
+
+  28 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +tuxonice-sources-2.6.35-r1.ebuild:
+  Version bump to latest genpatches (sec-issues) and latest tuxonice
+  (suspends again on my laptop).
 
 *tuxonice-sources-2.6.35 (20 Aug 2010)
 
