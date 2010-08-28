@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.46 2010/08/01 09:47:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.47 2010/08/28 17:27:18 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> ruby-atk-0.19.4.ebuild:
+  alpha/ia64/sparc stable wrt #329807
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> ruby-atk-0.19.4.ebuild:
   Stable on amd64 wrt bug #329807
