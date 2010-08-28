@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.85 2010/08/23 21:38:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.86 2010/08/28 21:15:24 tommy Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -141,6 +141,7 @@ enlightenment_src_prepare() {
 		# autotools require README, when README.in is around, but README
 		# is created later in configure step
 		[[ -f README.in ]] && touch README
+		export SVN_REPO_PATH=${ESVN_WC_PATH}
 		eautoreconf
 	fi
 	epunt_cxx
@@ -150,6 +151,7 @@ enlightenment_src_prepare() {
 enlightenment_src_configure() {
 	# gstreamer sucks, work around it doing stupid stuff
 	export GST_REGISTRY="${S}/registry.xml"
+	has static-libs ${IUSE} && MY_ECONF+=" $(use_enable static-libs static)"
 
 	econf ${MY_ECONF}
 }
@@ -179,4 +181,7 @@ enlightenment_src_install() {
 		[[ -f ${d} ]] && dodoc ${d}
 	done
 	use doc && [[ -d doc ]] && dohtml -r doc/*
+	if has static-libs ${IUSE} ; then
+		use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
+	fi
 }
