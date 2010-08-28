@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.130 2010/07/31 22:56:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.131 2010/08/28 17:00:53 armin76 Exp $
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  gdesklets-core-0.36.2-r3.ebuild:
+  alpha/ia64/sparc stable wrt #329603
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   gdesklets-core-0.36.2-r3.ebuild:
