@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.139 2010/07/11 08:20:51 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.140 2010/08/28 15:03:47 hollow Exp $
+
+*apache-2.2.16 (28 Aug 2010)
+
+  28 Aug 2010; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.16.ebuild:
+  version bump wrt security #330195
 
   11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> apache-2.2.14-r1.ebuild,
   apache-2.2.15.ebuild:
