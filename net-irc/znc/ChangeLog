@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.42 2010/08/20 14:42:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.43 2010/08/28 22:41:50 hwoarang Exp $
+
+  28 Aug 2010; Markos Chandras <hwoarang@gentoo.org> znc-0.094.ebuild:
+  Stable on amd64 wrt bug #332535
 
   20 Aug 2010; Alex Alexander <wired@gentoo.org> znc-0.094.ebuild:
   fix typo in deps
