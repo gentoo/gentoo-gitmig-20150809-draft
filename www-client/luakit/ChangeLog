@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.5 2010/08/27 12:00:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.6 2010/08/28 10:24:37 wired Exp $
+
+  28 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  added vim-syntax USE flag
 
   27 Aug 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   respect user-defined branch and/or commit. keep the develop branch as

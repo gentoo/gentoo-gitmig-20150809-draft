@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.5 2010/08/27 12:00:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.6 2010/08/28 10:24:37 wired Exp $
 
 EAPI=3
 
-IUSE=""
+IUSE="vim-syntax"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.luakit.org"
 LICENSE="GPL-3"
 SLOT="0"
 
-RDEPEND="
+COMMON_DEPEND="
 	>=dev-lang/lua-5.1
 	dev-libs/glib:2
 	net-libs/libsoup
@@ -36,7 +36,12 @@ RDEPEND="
 DEPEND="
 	dev-util/gperf
 	sys-apps/help2man
-	${RDEPEND}
+	${COMMON_DEPEND}
+"
+
+RDEPEND="
+	${COMMON_DEPEND}
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
 src_prepare() {
@@ -55,4 +60,13 @@ src_compile() {
 src_install() {
 	emake PREFIX="/usr" DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" install ||
 		die "Installation failed"
+
+	if use vim-syntax; then
+		local t
+		for t in $(ls "${S}"/extras/vim/); do
+			insinto /usr/share/vim/vimfiles/"${t}"
+			doins "${S}"/extras/vim/"${t}"/luakit.vim ||
+				die "vim-${t} doins failed"
+		done
+	fi
 }
