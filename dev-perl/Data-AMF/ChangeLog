@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-AMF
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/ChangeLog,v 1.4 2010/08/04 09:19:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/ChangeLog,v 1.5 2010/08/28 12:37:06 hwoarang Exp $
+
+  28 Aug 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
 *Data-AMF-0.08 (04 Aug 2010)
 
