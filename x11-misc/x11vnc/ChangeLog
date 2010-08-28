@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.87 2010/08/28 10:31:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.88 2010/08/28 10:33:35 swegener Exp $
+
+  28 Aug 2010; Sven Wegener <swegener@gentoo.org> -x11vnc-0.9.6.ebuild,
+  -x11vnc-0.9.7.ebuild, -x11vnc-0.9.8.ebuild, -x11vnc-0.9.8-r1.ebuild,
+  -files/x11vnc-0.9.8-xshm-header-fix.patch:
+  Cleanup.
 
 *x11vnc-0.9.11 (28 Aug 2010)
 
