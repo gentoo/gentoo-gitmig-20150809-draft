@@ -1,6 +1,7 @@
-# There was some DFSG license debate about MESA in the past, on Debian bug 131997.
-# This was primarily as the original license body did not provide the right to modify.
-# Marc Kilgard, the upstream author, ultimately clarified this on the Debian bug:
+# There was some DFSG license debate about MESA in the past, on
+# Debian bug 131997. This was primarily as the original license body
+# did not provide the right to modify. Marc Kilgard, the upstream
+# author, ultimately clarified this on the Debian bug:
 # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=131997#71
 # Reproduced here below for reference.
 
