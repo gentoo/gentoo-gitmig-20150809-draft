@@ -1,18 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.11.ebuild,v 1.1 2009/05/22 20:18:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13.ebuild,v 1.1 2010/08/29 21:33:46 radhermit Exp $
 
-inherit base eutils
+EAPI=3
 
 DESCRIPTION="A mail notification program"
 HOMEPAGE="http://gnubiff.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-LICENSE="GPL-2"
+
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
 IUSE="debug fam gnome nls password"
 
-RDEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3
 	dev-libs/popt
 	gnome? (
@@ -24,18 +25,17 @@ RDEPEND=">=x11-libs/gtk+-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	econf $(use_enable debug) \
+src_configure() {
+	econf \
+		$(use_enable debug) \
 		$(use_enable gnome) \
 		$(use_enable nls) \
 		$(use_enable fam) \
 		$(use_with password) \
-		$(use_with password password-string ${RANDOM}${RANDOM}${RANDOM}${RANDOM}) \
-		${myconf} || die "econf failed"
-	emake || die "emake failed"
+		$(use_with password password-string ${RANDOM}${RANDOM}${RANDOM}${RANDOM})
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
