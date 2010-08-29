@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r2.ebuild,v 1.2 2010/08/16 05:47:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r2.ebuild,v 1.3 2010/08/29 11:19:53 swegener Exp $
 
 EAPI=3
 
@@ -333,17 +333,14 @@ src_install() {
 	done
 
 	if use perl && use cgi ; then
-		dodir /usr/share/${PN}/gitweb
-		insinto /usr/share/${PN}/gitweb
-		doins "${S}"/gitweb/gitweb.cgi
-		doins "${S}"/gitweb/gitweb.css
+		exeinto /usr/share/${PN}/gitweb
+		doexe "${S}"/gitweb/gitweb.cgi
+		insinto /usr/share/${PN}/gitweb/static
+		doins "${S}"/gitweb/static/gitweb.css
 		js=gitweb.js
-		[ -f "${S}"/gitweb/gitweb.min.js ] && js=gitweb.min.js
-		doins "${S}"/gitweb/${js}
-		doins "${S}"/gitweb/git-{favicon,logo}.png
-
-		# Make sure it can run
-		fperms 0755 /usr/share/${PN}/gitweb/gitweb.cgi
+		[ -f "${S}"/gitweb/static/gitweb.min.js ] && js=gitweb.min.js
+		doins "${S}"/gitweb/static/${js}
+		doins "${S}"/gitweb/static/git-{favicon,logo}.png
 
 		# INSTALL discusses configuration issues, not just installation
 		docinto /
