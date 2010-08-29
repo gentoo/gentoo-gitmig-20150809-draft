@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.15 2010/08/20 09:26:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.16 2010/08/29 08:04:21 hwoarang Exp $
+
+  29 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  -libqxt-0.6.0-r1.ebuild:
+  Remove old bogus ebuild
 
 *libqxt-0.6.0-r2 (20 Aug 2010)
 
