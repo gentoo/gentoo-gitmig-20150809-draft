@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.5 2010/04/25 11:32:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.6 2010/08/29 17:22:24 bicatali Exp $
+
+*clapack-3.2.1-r3 (29 Aug 2010)
+
+  29 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +clapack-3.2.1-r3.ebuild, +files/clapack-3.2.1-noblasf2c.patch,
+  metadata.xml:
+  Now uses cmake tar ball. Added a patch from dilfridge that adds a shared
+  library, an install target, builds test on request, and provides a
+  clapack-config.cmake. So far, no more static libraries is being built.
 
 *clapack-3.2.1-r2 (25 Apr 2010)
 
