@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82.ebuild,v 1.3 2010/08/14 04:52:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82.ebuild,v 1.4 2010/08/29 00:02:30 vapier Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( virtual/libintl )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-archives-many-objs.patch #334889
 	epatch "${FILESDIR}"/${P}-MAKEFLAGS-reexec.patch #31975
 }
 
