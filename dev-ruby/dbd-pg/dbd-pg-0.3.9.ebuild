@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.9.ebuild,v 1.1 2010/06/20 18:04:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.9.ebuild,v 1.2 2010/08/29 18:54:39 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ IUSE="test"
 
 ruby_add_rdepend "
 	>=dev-ruby/ruby-dbi-0.4.2
-	>=dev-ruby/ruby-postgres-0.7.9.20080128"
+	dev-ruby/pg"
 
 src_test() {
 	elog "The tests require additional configuration."
