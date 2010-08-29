@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/hcs-utils
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.1 2010/08/29 18:52:39 hwoarang Exp $
+
+*hcs-utils-1.1.1 (29 Aug 2010)
+
+  29 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +hcs-utils-1.1.1.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Bug #334267. Thanks to Fabiano Francesconi
+  (elbryan) <fabiano.francesconi@gmail.com> for the initial ebuild
+
