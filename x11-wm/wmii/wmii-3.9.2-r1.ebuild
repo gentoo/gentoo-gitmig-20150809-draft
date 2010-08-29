@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.2 2010/06/26 18:04:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.3 2010/08/29 10:58:46 xarthisius Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs
@@ -45,6 +45,10 @@ pkg_setup() {
 		"AR=$(tc-getAR) crs"
 		"DESTDIR=${D}"
 		)
+}
+
+src_prepare() {
+	sed -i -e "/BINSH \!=/d" mk/hdr.mk || die #335083
 }
 
 src_compile() {
