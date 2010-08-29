@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.10 2009/04/17 20:07:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2-r1.ebuild,v 1.11 2010/08/29 19:45:58 slyfox Exp $
 
 inherit eutils java-pkg-2
 
@@ -25,10 +25,10 @@ src_unpack() {
 	unpack ${P}-src.tar.gz
 
 	# patch to use simple libraries by default
-	epatch ${FILESDIR}/${P}-libraries.patch
+	epatch "${FILESDIR}/${P}-libraries.patch"
 	# patch for readline support if requested
 	if use readline; then
-		epatch ${FILESDIR}/${P}-readline.patch
+		epatch "${FILESDIR}/${P}-readline.patch"
 	fi
 
 	cp "${DISTDIR}/Hint.jar" "${WORKDIR}"
@@ -52,16 +52,16 @@ src_compile() {
 
 src_install() {
 	cd heliumNT/src || die "cannot cd to heliumNT/src"
-	make prefix=${D}/usr \
-		bindir=${D}/usr/lib/helium/bin \
-		libdir=${D}/usr/lib/helium/lib \
-		tclibdir=${D}/usr/lib/helium/tclib \
-		demodir=${D}/usr/lib/helium/demo \
+	make prefix="${D}/usr" \
+		bindir="${D}/usr/lib/helium/bin" \
+		libdir="${D}/usr/lib/helium/lib" \
+		tclibdir="${D}/usr/lib/helium/tclib" \
+		demodir="${D}/usr/lib/helium/demo" \
 		install || die "make failed"
 	# install hint
 	java-pkg_dojar "${WORKDIR}/Hint.jar"
 	# create wrappers
-	dobin ${FILESDIR}/helium-wrapper
+	dobin "${FILESDIR}/helium-wrapper"
 	dosym /usr/bin/helium-wrapper /usr/bin/helium
 	dosym /usr/bin/helium-wrapper /usr/bin/lvmrun
 	dosym /usr/bin/helium-wrapper /usr/bin/texthint
