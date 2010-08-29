@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.2 2010/08/07 16:32:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.3 2010/08/29 00:42:07 phajdan.jr Exp $
+
+  29 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  radiotray-0.6-r1.ebuild:
+  x86 stable wrt bug #334877
 
   07 Aug 2010; Markos Chandras <hwoarang@gentoo.org> radiotray-9999.ebuild:
   Update Mercurial repository URL
