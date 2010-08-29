@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.103 2010/08/25 18:26:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.104 2010/08/29 10:57:19 idl0r Exp $
+
+  29 Aug 2010; Christian Ruppert <idl0r@gentoo.org> cfengine-3.0.4.ebuild,
+  cfengine-3.0.5.ebuild:
+  Use a different slot for cfengine-3, bug 322237.
 
   25 Aug 2010; Christian Ruppert <idl0r@gentoo.org>
   -cfengine-2.1.22-r2.ebuild,
