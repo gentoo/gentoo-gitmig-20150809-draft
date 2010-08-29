@@ -1,5 +1,5 @@
 http://bugs.gentoo.org/331975
-http://bugs.gentoo.org/show_bug.cgi?id=331975
+https://savannah.gnu.org/bugs/?30723
 
 --- main.c	2010/07/19 07:10:53	1.243
 +++ main.c	2010/08/10 07:35:34	1.244
