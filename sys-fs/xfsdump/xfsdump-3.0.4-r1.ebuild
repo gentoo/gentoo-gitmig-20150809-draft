@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.4-r1.ebuild,v 1.1 2010/07/11 21:22:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.4-r1.ebuild,v 1.2 2010/08/29 22:21:49 vapier Exp $
 
 inherit multilib eutils
 
@@ -28,7 +28,8 @@ src_unpack() {
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \
 		|| die
-	epatch "${FILESDIR}/${P}-no-symlink.patch"
+	epatch "${FILESDIR}"/${PN}-3.0.4-headers.patch
+	epatch "${FILESDIR}"/${P}-no-symlink.patch
 }
 
 src_compile() {

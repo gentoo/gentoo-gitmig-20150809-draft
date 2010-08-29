@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.77 2010/07/11 21:22:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.78 2010/08/29 22:21:49 vapier Exp $
+
+  29 Aug 2010; Mike Frysinger <vapier@gentoo.org> xfsdump-3.0.4-r1.ebuild,
+  +files/xfsdump-3.0.4-headers.patch:
+  Fix building with glibc-2.12.
 
 *xfsdump-3.0.4-r1 (11 Jul 2010)
 
