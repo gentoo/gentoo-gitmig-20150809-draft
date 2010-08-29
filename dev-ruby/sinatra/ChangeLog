@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sinatra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.10 2010/08/11 05:36:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.11 2010/08/29 10:28:27 graaff Exp $
+
+  29 Aug 2010; Hans de Graaff <graaff@gentoo.org> sinatra-1.0.ebuild,
+  +files/sinatra-1.0-haml3-tests.patch:
+  Fix broken tests due to new haml 3 with upstream patch.
 
   11 Aug 2010; Hans de Graaff <graaff@gentoo.org> -sinatra-0.9.4.ebuild,
   -sinatra-0.9.4-r1.ebuild:

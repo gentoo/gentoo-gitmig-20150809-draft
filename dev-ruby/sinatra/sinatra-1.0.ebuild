@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.0.ebuild,v 1.5 2010/06/30 06:47:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.0.ebuild,v 1.6 2010/08/29 10:28:27 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -21,10 +21,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/rack-1.0'
-ruby_add_bdepend "test? ( dev-ruby/rack-test dev-ruby/haml dev-ruby/erubis dev-ruby/builder )"
+ruby_add_bdepend "test? ( dev-ruby/rack-test >=dev-ruby/haml-3.0 dev-ruby/erubis dev-ruby/builder )"
 
 each_ruby_prepare() {
 	# Remove tests for optional templating system which is not
 	# available in Gentoo.
 	rm test/less_test.rb || die
+
+	# Fix tests with haml3.
+	epatch "${FILESDIR}/${P}-haml3-tests.patch"
 }
