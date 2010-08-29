@@ -1,8 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.98 2010/08/29 17:50:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.99 2010/08/29 17:52:04 armin76 Exp $
 
-  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.5.3-r3.ebuild:
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.5.3-r3.ebuild,
+  qt-webkit-4.6.2-r1.ebuild:
   alpha/arm/ia64/sparc stable wrt #315523
 
   18 Aug 2010; Jeroen Roovers <jer@gentoo.org> qt-webkit-4.6.2-r1.ebuild:
