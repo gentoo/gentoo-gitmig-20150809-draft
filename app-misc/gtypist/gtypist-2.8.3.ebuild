@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.3.ebuild,v 1.2 2010/08/22 17:05:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.3.ebuild,v 1.3 2010/08/29 08:01:01 hwoarang Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gtypist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="nls emacs xemacs"
 
 DEPEND=">=sys-libs/ncurses-5.2
