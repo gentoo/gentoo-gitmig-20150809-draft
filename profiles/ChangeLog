@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4507 2010/08/28 10:21:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4508 2010/08/29 14:05:53 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  dev-libs/gnome-build removed from tree, see #327593.
 
   28 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking sys-devel/omni for QA removal.
