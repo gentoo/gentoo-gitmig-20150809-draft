@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.8 2009/05/09 11:30:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.9 2010/08/29 14:41:05 armin76 Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/libvisual/${P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0.4"
-KEYWORDS="amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~mips ppc ppc64 x86 ~x86-fbsd"
 IUSE="alsa debug esd gtk jack mplayer opengl"
 
 RDEPEND="~media-libs/libvisual-${PV}

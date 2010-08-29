@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.47 2008/06/29 11:53:21 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.48 2010/08/29 14:41:05 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Drop sparc keyword
 
   29 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   -files/libvisual-plugins-0.4.0-qa.patch,
