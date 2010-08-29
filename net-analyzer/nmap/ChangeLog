@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.236 2010/08/28 20:01:18 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.237 2010/08/29 18:11:12 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> nmap-5.21-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #330439
 
 *nmap-5.35 (28 Aug 2010)
 
