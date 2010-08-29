@@ -1,0 +1,71 @@
+From f798321d4d7e3059bc51730124f9da9d5c2aff9f Mon Sep 17 00:00:00 2001
+From: Gilles Dartiguelongue <eva@gentoo.org>
+Date: Sun, 29 Aug 2010 15:21:17 +0200
+Subject: [PATCH] [gentoo] Do not add CFLAGS to CPPFLAGS
+
+---
+ configure.in                   |    1 +
+ gnome-cups-add/Makefile.am     |    6 ++++--
+ gnome-cups-manager/Makefile.am |    6 ++++--
+ libgnomecups/Makefile.am       |    6 ++++--
+ 4 files changed, 13 insertions(+), 6 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 88902da..bb15f54 100644
+--- a/configure.in
++++ b/configure.in
+@@ -16,6 +16,7 @@ AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
+ 
+ GNOME_COMPILE_WARNINGS(maximum)
+ 
++AC_PROG_CC
+ AC_PROG_CXX
+ 
+ GTK_REQUIRED=2.3.1
+diff --git a/gnome-cups-add/Makefile.am b/gnome-cups-add/Makefile.am
+index 2d5ceee..9c16248 100644
+--- a/gnome-cups-add/Makefile.am
++++ b/gnome-cups-add/Makefile.am
+@@ -1,5 +1,7 @@
+-INCLUDES =						\
+-	$(WARN_CFLAGS) \
++AM_CFLAGS = $(WARN_CFLAGS)
++AM_CXXFLAGS = $(WARN_CXXFLAGS)
++
++AM_CPPFLAGS =						\
+ 	$(GNOME_CFLAGS) \
+ 	-I$(top_srcdir) \
+ 	-DPREFIX=\""$(prefix)"\" \
+diff --git a/gnome-cups-manager/Makefile.am b/gnome-cups-manager/Makefile.am
+index b8fe59a..86721ad 100644
+--- a/gnome-cups-manager/Makefile.am
++++ b/gnome-cups-manager/Makefile.am
+@@ -1,5 +1,7 @@
+-INCLUDES =						\
+-	$(WARN_CFLAGS) \
++AM_CFLAGS = $(WARN_CFLAGS)
++AM_CXXFLAGS = $(WARN_CXXFLAGS)
++
++AM_CPPFLAGS =						\
+ 	$(GNOME_CFLAGS) \
+ 	-I$(top_srcdir) \
+ 	-DPREFIX=\""$(prefix)"\" \
+diff --git a/libgnomecups/Makefile.am b/libgnomecups/Makefile.am
+index 75a2fc7..6b8cea0 100644
+--- a/libgnomecups/Makefile.am
++++ b/libgnomecups/Makefile.am
+@@ -1,7 +1,9 @@
+ SUBDIRS=snmpkit
+ 
+-INCLUDES = 					\
+-	$(WARN_CFLAGS)				\
++AM_CFLAGS = $(WARN_CFLAGS)
++AM_CXXFLAGS = $(WARN_CXXFLAGS)
++
++AM_CPPFLAGS = 					\
+ 	$(GNOME_CFLAGS)				\
+ 	-I$(top_srcdir) 			\
+ 	-I$(top_builddir) 			\
+-- 
+1.7.2.2
+

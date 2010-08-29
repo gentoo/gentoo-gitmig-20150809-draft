@@ -1,0 +1,32 @@
+From d3750520a2b23d0757504941ba2066cb63b320d0 Mon Sep 17 00:00:00 2001
+From: Gilles Dartiguelongue <eva@gentoo.org>
+Date: Sun, 29 Aug 2010 16:30:23 +0200
+Subject: [PATCH] [gentoo] Fix automagic samba support
+
+---
+ configure.in |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index bb15f54..c96fcba 100644
+--- a/configure.in
++++ b/configure.in
+@@ -28,10 +28,14 @@ LIBBONOBO_REQUIRED=2.0.0
+ LIBGNOMECUPS_REQUIRED=0.2.0
+ 
+ SMBLIBS=
++AC_ARG_ENABLE([samba],
++	AS_HELP_STRING([--enable-samba], [enable samba support]))
++if test "$enable_samba" = "yes"; then
+ AC_CHECK_LIB(smbclient, smbc_opendir, [
+     AC_DEFINE(HAVE_LIBSMBCLIENT, [], ["Do we have libsmbclient"])
+     SMBLIBS=-lsmbclient
+-])
++], [AC_MSG_ERROR([libsmclient not found])])
++fi
+ AC_SUBST(SMBLIBS)
+ AC_SUBST(LIBGNOME_REQUIRED)
+ AC_SUBST(LIBGNOMEUI_REQUIRED)
+-- 
+1.7.2.2
+
