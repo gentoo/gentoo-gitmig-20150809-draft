@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.26 2010/08/08 15:07:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.27 2010/08/29 10:06:42 wired Exp $
+
+*dhcpv6-1.2.0-r1 (29 Aug 2010)
+
+  29 Aug 2010; Alex Alexander <wired@gentoo.org> +dhcpv6-1.2.0-r1.ebuild:
+  fixed bugs #278458, #297281 and #303525
 
   08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
