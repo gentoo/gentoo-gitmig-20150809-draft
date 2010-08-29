@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.343 2010/08/19 16:58:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.344 2010/08/29 18:20:20 betelgeuse Exp $
+
+*sqlite-3.7.2 (29 Aug 2010)
+
+  29 Aug 2010; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.7.2.ebuild:
+  Version bump. Fixes bug #332747.
 
   19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove arfrever.
