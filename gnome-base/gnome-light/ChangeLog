@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.124 2010/08/18 21:49:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.125 2010/08/29 17:34:28 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> gnome-light-2.28.2.ebuild:
+  arm stable
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-light-2.30.2.ebuild:
   add ~arm
