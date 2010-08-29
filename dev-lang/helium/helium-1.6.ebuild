@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.4 2010/07/24 22:11:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.5 2010/08/29 18:30:50 slyfox Exp $
 
 inherit autotools eutils
 
@@ -25,6 +25,7 @@ RDEPEND="dev-libs/gmp
 src_unpack() {
 	unpack ${A}
 	epatch "${P}-ghc.patch"
+	epatch "${FILESDIR}/helium-1.6-respect-cflags-ldflags-nostrip.patch"
 
 	# split base only
 	sed -e 's/^GHCFLAGS =.*$/& -package containers/' \
@@ -67,7 +68,7 @@ src_unpack() {
 	    -i "${S}/$bad_file"
 	done
 
-	# cabal is their friend (oneOf bwcame polymorphic and breaks the test)
+	# cabal is their friend (oneOf became polymorphic and breaks the test)
 	sed -e 's/Text.ParserCombinators.Parsec/&.Pos/g' \
 	    -e 's/oneOf/newPos/g' \
 	    -i "${S}/helium/configure.in"
