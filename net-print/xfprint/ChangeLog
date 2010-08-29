@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.31 2010/08/11 20:52:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.32 2010/08/29 18:13:27 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> xfprint-4.6.1-r1.ebuild:
+  alpha/ia64/sparc stable wrt #323729
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> xfprint-4.6.1-r1.ebuild:
   Marked ppc stable for bug #323729.
