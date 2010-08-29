@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.9.ebuild,v 1.8 2010/04/05 14:54:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.18.ebuild,v 1.1 2010/08/29 21:03:35 eva Exp $
 
 inherit gnome2 eutils mono libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2.12
@@ -20,18 +20,18 @@ RDEPEND=">=dev-libs/glib-2.12
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
-		>=dev-util/gtk-doc-1.0
+		>=dev-util/gtk-doc-1.8
 		app-text/docbook-sgml-utils )
 	mono? ( dev-dotnet/gtk-sharp-gapi )"
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"
+DOCS="AUTHORS ChangeLog NEWS PORTING README TODO doc/html/"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	if use doc ; then
-		#db2html should be docbook2html
+		# db2html should be docbook2html
 		sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 			docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 			|| die "sed failed (1)"
@@ -50,7 +50,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable mono) $(use_enable doc gtk-doc)
+	econf $(use_enable mono) $(use_enable doc gtk-doc) --enable-cryptography
 	MONO_PATH="${S}" emake || die "emake failed"
 }
 
