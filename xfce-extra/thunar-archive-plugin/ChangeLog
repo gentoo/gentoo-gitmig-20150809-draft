@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/ChangeLog,v 1.10 2010/08/11 20:48:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/ChangeLog,v 1.11 2010/08/29 17:58:21 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  alpha/ia64/sparc stable wrt #323729
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   thunar-archive-plugin-0.2.4-r2.ebuild:
