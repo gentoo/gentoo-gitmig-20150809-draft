@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.10.ebuild,v 1.5 2009/07/15 18:44:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.10.ebuild,v 1.6 2010/08/29 00:08:40 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -22,18 +22,19 @@ src_unpack() {
 	sed -i \
 		-e '/^prefix/s:/usr/local:/usr:' \
 		-e "/^docdir/s:dmidecode:${PF}:" \
-		Makefile || die "manpage sed failed"
+		-e '/^PROGRAMS !=/d' \
+		Makefile || die
 }
 
 src_compile() {
 	emake \
-		CFLAGS="${CFLAGS}" \
+		CFLAGS="${CFLAGS} ${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		CC=$(tc-getCC) \
-		|| die "emake failed"
+		CC="$(tc-getCC)" \
+		|| die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die
 	prepalldocs
 }
