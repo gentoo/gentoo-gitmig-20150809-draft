@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.100 2010/08/23 22:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.101 2010/08/29 17:50:38 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> thunar-1.0.2.ebuild:
+  alpha/ia64/sparc stable wrt #323729
 
   23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> thunar-1.0.1.ebuild,
   thunar-1.0.2.ebuild, thunar-1.1.1.ebuild:

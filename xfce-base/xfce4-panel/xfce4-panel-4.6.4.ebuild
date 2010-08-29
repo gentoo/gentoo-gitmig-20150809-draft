@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.4.ebuild,v 1.9 2010/08/11 20:46:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.4.ebuild,v 1.10 2010/08/29 17:48:17 armin76 Exp $
 
 EAPI=2
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug startup-notification"
 
 RDEPEND=">=dev-libs/glib-2.20:2
