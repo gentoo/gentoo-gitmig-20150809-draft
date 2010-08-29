@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-notes-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.25 2010/08/11 20:49:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.26 2010/08/29 18:05:05 armin76 Exp $
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  xfce4-notes-plugin-1.7.6.ebuild:
+  alpha/ia64/sparc stable wrt #323729
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   xfce4-notes-plugin-1.7.6.ebuild:
