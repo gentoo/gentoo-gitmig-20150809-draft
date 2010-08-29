@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gnuplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.7 2010/08/07 12:46:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.8 2010/08/29 11:37:02 graaff Exp $
+
+  29 Aug 2010; Hans de Graaff <graaff@gentoo.org> gnuplot-2.3.4.ebuild:
+  Add ~alpha and ~ppc keywords per the report in bug 330913 by Kazuyoshi
+  Furutaka.
 
 *gnuplot-2.3.4 (07 Aug 2010)
 
