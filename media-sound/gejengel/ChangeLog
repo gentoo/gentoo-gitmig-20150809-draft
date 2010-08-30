@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.13 2010/06/16 16:34:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.14 2010/08/30 01:58:26 phajdan.jr Exp $
+
+  30 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gejengel-0.1.4.ebuild:
+  x86 stable wrt bug #334879
 
 *gejengel-0.1.4 (16 Jun 2010)
 
