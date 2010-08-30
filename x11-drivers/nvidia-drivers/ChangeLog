@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.245 2010/08/30 01:50:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.246 2010/08/30 01:57:45 cardoe Exp $
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  -nvidia-drivers-71.86.11.ebuild:
+  Removee versions that rely on xorg-server-1.4 or older (which is no longer
+  in the tree).
 
 *nvidia-drivers-256.52 (30 Aug 2010)
 *nvidia-drivers-256.44-r1 (30 Aug 2010)
