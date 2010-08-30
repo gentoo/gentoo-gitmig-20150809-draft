@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.2-r1.ebuild,v 1.2 2010/07/20 01:51:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.2-r1.ebuild,v 1.3 2010/08/30 20:26:48 eva Exp $
 
 EAPI="2"
 
@@ -25,7 +25,6 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 
 	x11-libs/libX11
 	x11-libs/libXi
-	x11-libs/libXrandr
 	x11-libs/libXext
 	x11-libs/libXxf86misc
 	>=x11-libs/libxklavier-5.0
