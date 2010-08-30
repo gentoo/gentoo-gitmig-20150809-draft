@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.167 2010/07/18 09:35:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.168 2010/08/30 18:10:29 spatz Exp $
+
+*curl-7.21.1 (30 Aug 2010)
+
+  30 Aug 2010; Dror Levin <spatz@gentoo.org> +curl-7.21.1.ebuild:
+  Version bump.
 
   18 Jul 2010; Daniel Black <dragonheart@gentoo.org> curl-7.21.0.ebuild:
   prevent autodependency as per bug #326549. Thanks to Zeev for the bug
