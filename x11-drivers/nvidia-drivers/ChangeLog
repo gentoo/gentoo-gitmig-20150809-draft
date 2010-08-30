@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.248 2010/08/30 20:36:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.249 2010/08/30 21:38:01 cardoe Exp $
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-256.44-r1.ebuild, nvidia-drivers-256.52.ebuild:
+  Implement installing nvidia-settings when USE=gtk is enabled as discussed
+  in bug #304255
 
   30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-256.52.ebuild:

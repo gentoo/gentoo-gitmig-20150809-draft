@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.44-r1.ebuild,v 1.2 2010/08/30 01:53:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.44-r1.ebuild,v 1.3 2010/08/30 21:38:01 cardoe Exp $
 
 EAPI="2"
 
@@ -23,10 +23,11 @@ IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.8.99
+COMMON="<x11-base/xorg-server-1.9.99
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
-	>=app-admin/eselect-opengl-1.0.9"
+	>=app-admin/eselect-opengl-1.0.9
+	!media-video/nvidia-settings"
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
@@ -92,7 +93,8 @@ QA_EXECSTACK_amd64="usr/lib32/libnvidia-glcore.so.${PV}
 	usr/lib64/libOpenCL.so.1.0.0
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+	usr/bin/nvidia-settings"
 
 QA_WX_LOAD_x86="usr/lib/libnvidia-glcore.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
@@ -131,7 +133,8 @@ QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
 	usr/lib64/libOpenCL.so.1.0.0
 	usr/lib64/libnvidia-compiler.so.${PV}
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+	usr/bin/nvidia-settings"
 
 QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/libnvidia-cfg.so.${PV}
@@ -145,7 +148,8 @@ QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/libOpenCL.so.1.0.0
 	usr/lib/libnvidia-compiler.so.${PV}
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+	usr/bin/nvidia-settings"
 
 S="${WORKDIR}/"
 
@@ -360,19 +364,36 @@ src_install() {
 	if use x86-fbsd; then
 		dodoc "${NV_DOC}/README"
 		doman "${NV_MAN}/nvidia-xconfig.1"
+		use gtk && doman "${NV_MAN}/nvidia-settings.1"
 	else
 		# Docs
 		newdoc "${NV_DOC}/README.txt" README
 		dodoc "${NV_DOC}/NVIDIA_Changelog"
 		doman "${NV_MAN}/nvidia-smi.1.gz"
 		doman "${NV_MAN}/nvidia-xconfig.1.gz"
+		use gtk && doman "${NV_MAN}/nvidia-settings.1.gz"
 	fi
 
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
+	use gtk && ( dobin ${NV_EXEC}/nvidia-settings || die )
 	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
 	if use kernel_linux; then
 		dobin ${NV_EXEC}/nvidia-smi || die
+	fi
+
+	# Desktop entries for nvidia-settings
+	if use gtk; then
+		dodir /usr/share/applications/
+		insinto /usr/share/applications/
+		doins ${NV_EXEC}/nvidia-settings.desktop
+		sed -e 's:__UTILS_PATH__:/usr/bin:' \
+			-e 's:__PIXMAP_PATH__:/usr/share/pixmaps:' \
+			-i "${D}"/usr/share/applications/nvidia-settings.desktop
+
+		dodir /usr/share/pixmaps/
+		insinto /usr/share/pixmaps/
+		doins ${NV_EXEC}/nvidia-settings.png
 	fi
 
 	if has_multilib_profile ; then
