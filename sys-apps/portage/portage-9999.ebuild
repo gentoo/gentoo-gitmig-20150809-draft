@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.7 2010/08/14 18:55:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.8 2010/08/30 21:55:25 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -89,10 +89,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local _version="'$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')'[1:]"
+	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
+	_version=${_version:1}
 	einfo "Setting portage.VERSION to ${_version} ..."
-	sed -i "s/^VERSION=.*/VERSION=${_version}/" pym/portage/__init__.py || \
+	sed -e "s/^VERSION=.*/VERSION='${_version}'/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
+	sed -e "1s/VERSION/${_version}/" -i man/* || \
+		die "Failed to patch VERSION in man page headers"
 
 	if use python3; then
 		python_convert_shebangs -r 3 .

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.714 2010/08/29 16:53:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.715 2010/08/30 21:55:25 zmedico Exp $
+
+  30 Aug 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Fix src_prepare to use the new VERSION sed template in order to substitute
+  man page headers.
 
 *portage-2.2_rc72 (29 Aug 2010)
 
