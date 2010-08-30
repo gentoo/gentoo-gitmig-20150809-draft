@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.48 2010/07/11 18:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.49 2010/08/30 20:18:21 patrick Exp $
+
+*pgadmin3-1.10.5 (30 Aug 2010)
+
+  30 Aug 2010; Patrick Lauer <patrick@gentoo.org> +pgadmin3-1.10.5.ebuild:
+  Bump
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> pgadmin3-1.10.2.ebuild:
   alpha/sparc/x86 stable wrt #327045
