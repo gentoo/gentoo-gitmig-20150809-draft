@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/dvda-author
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.6 2009/08/17 12:00:22 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.7 2010/08/30 23:27:06 radhermit Exp $
+
+*dvda-author-10.06 (30 Aug 2010)
+
+  30 Aug 2010; Tim Harder <radhermit@gentoo.org> -dvda-author-09.05.ebuild,
+  -files/dvda-author-09.05-sandbox.patch, +dvda-author-10.06.ebuild:
+  Version bump for bug #333121. Remove old, broken version; closes bugs
+  #321203 and #321829.
 
   17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   dvda-author-09.05.ebuild:
