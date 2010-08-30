@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.74 2010/08/21 02:34:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.75 2010/08/30 01:05:52 phajdan.jr Exp $
+
+*chromium-bin-6.0.472.51 (30 Aug 2010)
+
+  30 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-bin-5.0.375.125.ebuild, -chromium-bin-5.0.375.127.ebuild,
+  -chromium-bin-6.0.451.0_p51005.ebuild, +chromium-bin-6.0.472.51.ebuild,
+  -chromium-bin-9999.ebuild:
+  Version bump for experimental bin package build (beta channel). Remove
+  obsolete ebuilds.
 
 *chromium-bin-5.0.375.127 (21 Aug 2010)
 
