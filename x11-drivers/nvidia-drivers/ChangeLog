@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.244 2010/08/04 11:37:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.245 2010/08/30 01:50:32 cardoe Exp $
+
+*nvidia-drivers-256.52 (30 Aug 2010)
+*nvidia-drivers-256.44-r1 (30 Aug 2010)
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-256.44-r1.ebuild, +nvidia-drivers-256.52.ebuild:
+  version bump and several clean ups to bring the ebuild up to the state of
+  the current unmasked ebuilds
 
 *nvidia-drivers-256.44 (04 Aug 2010)
 
