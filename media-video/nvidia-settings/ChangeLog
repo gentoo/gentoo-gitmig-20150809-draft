@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.90 2010/08/30 21:20:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.91 2010/08/30 22:23:24 cardoe Exp $
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-settings-256.52.ebuild:
+  Version bump that works with newer x11-drivers/nvidia-drivers that
+  provides its own nvidia-settings app. bug #304255
 
   30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-settings-256.52.ebuild:
