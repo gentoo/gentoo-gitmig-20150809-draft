@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre9015.ebuild,v 1.1 2010/08/19 16:22:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre9036.ebuild,v 1.1 2010/08/30 22:43:04 jer Exp $
 
 EAPI="2"
 
@@ -11,18 +11,17 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="mirror test"
 
 O_V="${PV/_pre/-}"
 O_P="${PN}-${O_V}"
-O_U="http://snapshot.opera.com/unix/justastart_${O_V}/"
+O_U="http://snapshot.opera.com/unix/architect_${O_V}/"
 
 SRC_URI="
 	amd64? ( ${O_U}${O_P}.x86_64.linux.tar.bz2 )
-	ppc? ( ${O_U}${O_P}.ppc.linux.tar.bz2 )
 	x86? ( ${O_U}${O_P}.i386.linux.tar.bz2 )
 	x86-fbsd? ( ${O_U}${O_P}.i386.freebsd.tar.bz2 )
 "
