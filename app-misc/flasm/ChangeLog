@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/flasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.9 2010/02/23 10:17:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.10 2010/08/30 23:37:30 xmw Exp $
+
+*flasm-1.63 (30 Aug 2010)
+
+  30 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> +flasm-1.63.ebuild,
+  +files/flasm-1.63-makefile.patch:
+  Version bump, fixes bug #332041. -bison-2.patch included by upstream.
 
   23 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   files/flasm-1.62-makefile.patch:
