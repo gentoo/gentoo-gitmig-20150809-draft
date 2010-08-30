@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.1.ebuild,v 1.1 2010/07/30 10:29:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.1-r1.ebuild,v 1.1 2010/08/30 11:55:45 pva Exp $
 
 EAPI="2"
 
