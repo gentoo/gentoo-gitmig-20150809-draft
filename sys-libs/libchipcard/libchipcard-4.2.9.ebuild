@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.9.ebuild,v 1.1 2010/01/07 10:33:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.9.ebuild,v 1.2 2010/08/30 17:58:01 flameeyes Exp $
 
 EAPI=2
 
@@ -36,6 +36,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO \
 		doc/{CERTIFICATES,CONFIG,IPCCOMMANDS}
+
+	rm "${D}"/etc/init.d/chipcardd
 
 	if use doc; then
 		docinto tutorials

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.88 2010/01/07 10:40:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.89 2010/08/30 17:58:01 flameeyes Exp $
+
+  30 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libchipcard-4.2.9.ebuild:
+  Remove Debian init script (the Gentoo init script is chipcardd4).
 
   07 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> files/chipcardd4:
   Fix init script to "need hald" wrt #281723, thanks to Thimo Langbehn for
