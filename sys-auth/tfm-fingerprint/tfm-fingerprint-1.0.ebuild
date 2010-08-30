@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.6 2008/12/22 03:44:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.7 2010/08/30 22:12:43 flameeyes Exp $
 
 inherit multilib
 
@@ -11,9 +11,8 @@ SRC_URI="http://www.upek.com/support/download/TFMESS_BSP_LIN_${PV}.zip"
 # This is the best license I could find.
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 IUSE=""
-RESTRICT="strip"
 
 RDEPEND="sys-auth/bioapi"
 DEPEND="${RDEPEND}
@@ -21,7 +20,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
-QA_TEXTRELS="usr/lib64/libtfmessbsp.so"
+QA_TEXTRELS="usr/lib/libtfmessbsp.so"
+QA_PRESTRIPPED="usr/lib/libtfmessbsp.so"
 
 src_install() {
 	# this is a binary blob, so it probably shouldnt live in /usr/lib

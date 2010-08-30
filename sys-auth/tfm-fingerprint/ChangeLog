@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/tfm-fingerprint
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/ChangeLog,v 1.7 2008/12/22 03:44:49 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/ChangeLog,v 1.8 2010/08/30 22:12:43 flameeyes Exp $
+
+  30 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  tfm-fingerprint-1.0.ebuild:
+  Use QA_PRESTRIPPED rather than RESTRICT=strip to silence warnings; add -*
+  to keywords as it's x86-only.
 
   22 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   tfm-fingerprint-1.0.ebuild:
