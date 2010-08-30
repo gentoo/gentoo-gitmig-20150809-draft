@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.1.ebuild,v 1.3 2010/08/01 10:58:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.1.ebuild,v 1.4 2010/08/30 12:13:50 eva Exp $
 
 EAPI="2"
 
@@ -24,7 +24,9 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* NEWS README"
 
-G2CONF="${G2CONF} $(use_enable doc documentation)"
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable doc documentation)"
+}
 
 src_prepare() {
 	gnome2_src_prepare

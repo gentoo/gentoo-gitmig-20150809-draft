@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.2.0.ebuild,v 1.7 2010/07/20 16:35:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.2.0.ebuild,v 1.8 2010/08/30 12:13:50 eva Exp $
 
 inherit gnome2
 
@@ -22,7 +22,9 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* NEWS README"
 
-G2CONF="${G2CONF} $(use_enable doc docs)"
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable doc docs)"
+}
 
 src_unpack() {
 	gnome2_src_unpack
