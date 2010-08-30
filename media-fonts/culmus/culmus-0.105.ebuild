@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.105.ebuild,v 1.1 2010/08/30 11:23:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.105.ebuild,v 1.2 2010/08/30 16:49:21 spatz Exp $
 
 EAPI="2"
 
@@ -10,6 +10,7 @@ DESCRIPTION="Hebrew Type1 fonts"
 HOMEPAGE="http://culmus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
 	mirror://sourceforge/culmus/${PN}-type1-${PV}.tar.gz
+	http://culmus.sourceforge.net/fancy-yg/MakabiYG.zip
 	http://culmus.sourceforge.net/fancy/hillel.tar.gz
 	http://culmus.sourceforge.net/fancy/anka.tar.gz
 	http://culmus.sourceforge.net/fancy/comix.tar.gz
@@ -32,7 +33,7 @@ FONT_CONF=( "65-culmus.conf" )
 DOCS="CHANGES"
 
 src_prepare() {
-	mv "${WORKDIR}"/*.{afm,pfa} "${S}"
+	mv "${WORKDIR}"/*.{afm,pfa,ttf} "${S}"
 	mv "${WORKDIR}"/${PN}-type1-${PV}/*.{afm,pfa} "${S}"
 	mv culmus.conf 65-culmus.conf
 }

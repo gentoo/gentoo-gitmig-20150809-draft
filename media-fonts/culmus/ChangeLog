@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.49 2010/08/30 11:23:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.50 2010/08/30 16:49:21 spatz Exp $
+
+  30 Aug 2010; Dror Levin <spatz@gentoo.org> culmus-0.105.ebuild:
+  Add new Makabi font released with this version.
 
 *culmus-0.105 (30 Aug 2010)
 
