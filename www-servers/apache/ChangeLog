@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.140 2010/08/28 15:03:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.141 2010/08/30 11:37:40 hwoarang Exp $
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> apache-2.2.16.ebuild:
+  Stable on amd64 wrt bug #330195
 
 *apache-2.2.16 (28 Aug 2010)
 
