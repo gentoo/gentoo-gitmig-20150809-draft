@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.61 2010/08/02 14:16:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.62 2010/08/30 16:48:10 tove Exp $
+
+*perl-cleaner-2.4 (30 Aug 2010)
+
+  30 Aug 2010; Torsten Veller <tove@gentoo.org> +perl-cleaner-2.4.ebuild:
+  Always reinstall the virtuals, cause it fails if a perl-core is updated
+  while cleaning
 
 *perl-cleaner-2.3 (02 Aug 2010)
 
