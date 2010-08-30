@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4513 2010/08/30 19:59:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4514 2010/08/30 21:19:07 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,9 @@
 
   30 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> desc/cameras.desc:
   Clean up and update cameras.desc.
+
+  30 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking net-misc/omnievents for QA removal.
 
   30 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking net-mail/ixbiff for QA removal.
