@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.4.1.ebuild,v 1.1 2010/07/29 15:08:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.4.1.ebuild,v 1.2 2010/08/30 03:06:52 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.${PN}.com/${PN}/${P/.1/}-src.tar.bz2 -> ${P}.tar.bz2"
 LICENSE="Clarified-Artistic"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x86-solaris"
-IUSE=""
+IUSE="pch"
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
@@ -32,7 +32,7 @@ src_prepare() {
 		-i Makefile.in */Makefile.in || die
 }
 src_configure() {
-	LC_ALL="C" econf --disable-universal
+	LC_ALL="C" econf --disable-universal $(use_enable pch precomp ) || die
 }
 
 src_install() {
