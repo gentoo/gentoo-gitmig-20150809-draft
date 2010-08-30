@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/adhearsion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.13 2010/06/28 05:56:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.14 2010/08/30 22:42:44 halcy0n Exp $
+
+  30 Aug 2010; Mark Loeser <halcy0n@gentoo.org> adhearsion-0.8.3.ebuild:
+  Drop ppc64 due to dependency dev-ruby/rubigen not being keyworded
 
 *adhearsion-0.8.4 (28 Jun 2010)
 
