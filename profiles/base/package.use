@@ -1,8 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.26 2009/12/04 19:54:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.27 2010/08/30 22:48:55 cardoe Exp $
 
 # Zac Medico <zmedico@gentoo.org> (04 Dec 2009)
 # Bug #295615 - Disable cxx by default, in order to avoid a die
 # in pkg_setup with default USE settings (cxx requires sasl).
 net-nds/openldap -cxx
+
+# Doug Goldstein <cardoe@gentoo.org> (30 Aug 2010)
+# bug #332077 - Disable xcb backend by default for cairo-1.10. Its not
+# really prime time ready prior to cairo-1.10
+<x11-libs/cairo-1.10 -xcb
