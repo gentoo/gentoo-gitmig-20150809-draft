@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.9.6.ebuild,v 1.1 2010/07/03 12:47:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.9.6.ebuild,v 1.2 2010/08/30 17:43:17 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-db/couchdb-0.10.0
 
 ruby_add_rdepend "dev-ruby/coderay
 	dev-ruby/haml
-	<=dev-ruby/json-1.4.2
+	>=dev-ruby/json-1.4.4
 	>=dev-ruby/merb-assets-1.1.0
 	>=dev-ruby/merb-core-1.1.0
 	>=dev-ruby/merb-haml-1.1.0
