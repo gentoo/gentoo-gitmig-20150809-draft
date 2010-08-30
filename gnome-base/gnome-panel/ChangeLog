@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.310 2010/08/18 22:01:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.311 2010/08/30 20:18:27 eva Exp $
+
+  30 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.30.2.ebuild:
+  Remove unneeded RDEPEND, per configure and clean up unneeded src_prepare
+  changes.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-panel-2.28.0.ebuild:
   arm stable, bug #314899
