@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.8.8.ebuild,v 1.1 2010/08/27 19:57:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.8.9.ebuild,v 1.1 2010/08/30 21:06:54 flameeyes Exp $
 
 EAPI=2
 
@@ -36,17 +36,12 @@ CDEPEND="
 RDEPEND="${CDEPEND}"
 
 DEPEND="${CDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? (
+		app-doc/doxygen
+		media-gfx/graphviz
+		media-fonts/freefont-ttf
+	)
 	dev-util/pkgconfig"
-
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-pkgconfig.patch \
-		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-tests.patch
-
-	eautoreconf
-}
 
 src_configure() {
 	local myconf=
@@ -70,6 +65,8 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use doc ; then
+		# make sure fonts are found
+		export DOTFONTPATH=/usr/share/fonts/freefont-ttf
 		emake dox || die "emake dox failed"
 	fi
 }
