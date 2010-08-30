@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.93.ebuild,v 1.3 2010/05/28 10:11:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.93.ebuild,v 1.4 2010/08/30 15:11:41 lxnay Exp $
 
 EAPI=2
 inherit eutils
@@ -19,13 +19,13 @@ RDEPEND=">=dev-libs/glib-2.16
 	dev-libs/libxml2
 	>=app-pda/libplist-1.0
 	gtk? ( >=x11-libs/gtk+-2.6 )
+	iphone? ( app-pda/libimobiledevice )
 	python? ( >=dev-lang/python-2.3
 		>=media-libs/mutagen-1.8
 		>=dev-python/pygobject-2.8 )
 	udev? ( sys-fs/udev )"
 DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-1.3.24 )
-	iphone? ( app-pda/libimobiledevice )
 	dev-util/pkgconfig
 	dev-libs/libxslt"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.73 2010/05/28 10:11:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.74 2010/08/30 15:11:40 lxnay Exp $
+
+  30 Aug 2010; Fabio Erculiani <lxnay@gentoo.org> libgpod-0.7.93.ebuild:
+  fix libimobiledevice dependency, it's also a RDEPEND
 
   28 May 2010; Markus Meier <maekke@gentoo.org> libgpod-0.7.93.ebuild:
   add ~x86, bug #313691
