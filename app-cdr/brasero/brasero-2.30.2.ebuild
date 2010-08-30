@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.2.ebuild,v 1.4 2010/08/01 11:41:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.2.ebuild,v 1.5 2010/08/30 21:44:42 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="beagle +cdr +css doc +libburn nautilus playlist test"
 
+# FIXME: introspection/tracker support
 COMMON_DEPEND=">=dev-libs/glib-2.22
 	>=x11-libs/gtk+-2.19.7
 	>=gnome-base/gconf-2
@@ -42,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
-	doc? ( >=dev-util/gtk-doc-1.3 )
+	doc? ( >=dev-util/gtk-doc-1.12 )
 	test? ( app-text/docbook-xml-dtd:4.3 )"
 # eautoreconf deps
 #	gnome-base/gnome-common
