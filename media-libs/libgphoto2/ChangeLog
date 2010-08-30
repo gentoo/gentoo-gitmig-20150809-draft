@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.170 2010/05/08 11:23:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.171 2010/08/30 20:06:47 eva Exp $
+
+  30 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  libgphoto2-2.4.9.ebuild:
+  Actually enable new drivers for compilation.
 
 *libgphoto2-2.4.9 (08 May 2010)
 
