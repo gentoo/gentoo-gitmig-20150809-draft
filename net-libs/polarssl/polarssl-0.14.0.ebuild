@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.14.0.ebuild,v 1.1 2010/08/27 14:25:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.14.0.ebuild,v 1.2 2010/08/30 16:53:46 tommy Exp $
 
 EAPI=2
 
@@ -16,14 +16,13 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="examples sse2"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-{makefile,ldflags}.patch
 	cd library
 	if use sse2 ; then
 		sed -i '15iCFLAGS += -DHAVE_SSE2 -fPIC' Makefile
 	else
 		sed -i '15iCFLAGS += -fPIC' Makefile
 	fi
-	sed -i "s:-shared:-shared ${LDFLAGS}:g" library/Makefile
-	epatch "${FILESDIR}"/${P}-{makefile,ldflags}.patch
 }
 
 src_compile() {
@@ -37,7 +36,7 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"/programs
+	cd programs
 	emake test/selftest || die "emake selftest failed"
 	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" ./test/selftest || die "selftest failed"
 	cd "${S}"
