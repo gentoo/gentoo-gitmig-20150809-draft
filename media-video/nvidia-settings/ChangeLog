@@ -1,6 +1,27 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.88 2010/08/30 20:58:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.89 2010/08/30 21:08:18 cardoe Exp $
+
+*nvidia-settings-195.36.31 (30 Aug 2010)
+*nvidia-settings-173.14.27 (30 Aug 2010)
+*nvidia-settings-173.14.25 (30 Aug 2010)
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  -nvidia-settings-1.0.20070621.ebuild, -nvidia-settings-173.14.09.ebuild,
+  -nvidia-settings-173.14.12.ebuild, -nvidia-settings-173.14.17.ebuild,
+  +nvidia-settings-173.14.25.ebuild, +nvidia-settings-173.14.27.ebuild,
+  -nvidia-settings-177.80.ebuild, -nvidia-settings-180.22.ebuild,
+  -nvidia-settings-180.27.ebuild, -nvidia-settings-180.29.ebuild,
+  -nvidia-settings-180.37.ebuild, -nvidia-settings-180.44.ebuild,
+  -nvidia-settings-180.51.ebuild, -nvidia-settings-180.60.ebuild,
+  -nvidia-settings-185.18.14.ebuild, -nvidia-settings-185.18.29.ebuild,
+  -nvidia-settings-185.18.31.ebuild, -nvidia-settings-190.18.ebuild,
+  -nvidia-settings-190.25.ebuild, -nvidia-settings-190.32.ebuild,
+  -nvidia-settings-190.36.ebuild, -nvidia-settings-190.40.ebuild,
+  -nvidia-settings-190.42.ebuild, -nvidia-settings-195.30.ebuild,
+  -nvidia-settings-195.36.15.ebuild, +nvidia-settings-195.36.31.ebuild,
+  -nvidia-settings-256.35.ebuild:
+  sync to the versions of x11-drivers/nvidia-drivers we have in the tree.
 
 *nvidia-settings-256.52 (30 Aug 2010)
 
