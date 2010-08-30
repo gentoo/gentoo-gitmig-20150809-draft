@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r1.ebuild,v 1.11 2010/08/24 18:02:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r1.ebuild,v 1.12 2010/08/30 18:50:47 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -69,9 +69,6 @@ src_unpack() {
 	# Security bug #275397
 	epatch "${FILESDIR}"/${P}-large-images.patch
 
-	# implicit pointer conversion patch to fix compilation problems
-	# on amd64 when using strict feature
-	epatch "${FILESDIR}"/${P}-implicit-pointer-conversion.patch
 	# Run autoconf. XEmacs tries to be smart by providing a stub
 	# configure.ac file for autoconf 2.59 but this throws our
 	# autotools eclass so it must be removed first.

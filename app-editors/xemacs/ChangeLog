@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.138 2010/08/24 18:02:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.139 2010/08/30 18:50:47 graaff Exp $
+
+  30 Aug 2010; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.22-r1.ebuild:
+  Revert hwoarang's patch. It is not clear what it being fixed, and the fix
+  itself looks suspicious.
 
   24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   xemacs-21.4.22-r1.ebuild,
