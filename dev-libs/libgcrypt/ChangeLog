@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.134 2010/07/15 22:26:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.135 2010/08/30 18:31:39 patrick Exp $
+
+  30 Aug 2010; Patrick Lauer <patrick@gentoo.org> libgcrypt-1.4.6.ebuild:
+  Fixing for non-bash shells #331907
 
 *libgcrypt-1.4.6 (15 Jul 2010)
 
