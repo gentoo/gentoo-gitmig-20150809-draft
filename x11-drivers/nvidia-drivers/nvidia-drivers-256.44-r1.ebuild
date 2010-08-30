@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.44-r1.ebuild,v 1.3 2010/08/30 21:38:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.44-r1.ebuild,v 1.4 2010/08/30 21:39:57 cardoe Exp $
 
 EAPI="2"
 
@@ -376,7 +376,7 @@ src_install() {
 
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
-	use gtk && ( dobin ${NV_EXEC}/nvidia-settings || die )
+	use gtk && dobin ${NV_EXEC}/nvidia-settings
 	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
 	if use kernel_linux; then
 		dobin ${NV_EXEC}/nvidia-smi || die
