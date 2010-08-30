@@ -6,7 +6,7 @@ diff -Nur libmatthew-java-0.7.2/Makefile libmatthew-java-0.7.2_patched/Makefile
  LD?=gcc
  JPPFLAGS+=-C -P
 -CFLAGS+=-Wall -Os -pedantic -Werror
-+CFLAGS+=-Wall -pedantic -Werror
++CFLAGS+=-Wall -pedantic
  CSTD?=-std=c99
  CSHAREFLAG+=-fpic -fno-stack-protector
  GCJJNIFLAG=-fjni
