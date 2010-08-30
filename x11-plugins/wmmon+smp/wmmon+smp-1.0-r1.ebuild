@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.12 2010/07/22 14:33:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.13 2010/08/30 15:52:58 s4t4n Exp $
 
 IUSE=""
 
@@ -19,6 +19,15 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
+
+src_unpack()
+{
+	unpack ${A}
+	cd "${S}"
+
+	# Respect LDFLAGS, see bug #335047
+	sed -i 's/cc -o/${CC} ${LDFLAGS} -o/' "${S2}/Makefile"
+}
 
 src_compile() {
 	cd "${S2}"
