@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.138 2010/08/14 18:49:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.139 2010/08/30 22:03:48 eva Exp $
+
+  30 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  deskbar-applet-2.30.1.ebuild:
+  Drop unused binding from RDEPEND. Sync test/docbook-xml-dtd with previous
+  revision.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   deskbar-applet-2.28.0.ebuild:

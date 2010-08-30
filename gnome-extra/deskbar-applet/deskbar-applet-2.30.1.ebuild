@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.30.1.ebuild,v 1.4 2010/08/01 12:00:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.30.1.ebuild,v 1.5 2010/08/30 22:03:48 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://raphael.slinckx.net/deskbar/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="eds spell test"
+IUSE="eds spell"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.20
@@ -24,7 +24,6 @@ RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/dbus-python-0.80.2
 
 	>=dev-python/gconf-python-2.22.1
-	>=dev-python/libgnome-python-2.22.1
 	>=dev-python/gnome-applets-python-2.22.0
 	>=dev-python/gnome-desktop-python-2.22.0
 	>=dev-python/gnome-keyring-python-2.22.0
@@ -38,7 +37,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
-	test? ( ~app-text/docbook-xml-dtd-4.2 )"
+	~app-text/docbook-xml-dtd-4.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
