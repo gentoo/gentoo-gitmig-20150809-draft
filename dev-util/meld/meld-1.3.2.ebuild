@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.3.2.ebuild,v 1.1 2010/08/29 15:48:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.3.2.ebuild,v 1.2 2010/08/30 06:56:36 mr_bones_ Exp $
 
 GCONF_DEBUG="no"
 
@@ -49,7 +49,7 @@ src_unpack() {
 	# don't run scrollkeeper (with the wrong path), leave that to gnome2.eclass #145833
 	sed -e '/scrollkeeper-update/s/\t/&#/' \
 		-i help/*/Makefile || die "sed 4 failed"
-	
+
 	# fix test suite
 	sed -e 's,\(for file in \["\)\(meld"\]\),\1bin/\2,' \
 		-e 's,\(open("\)\(meldapp.py")\),\1meld/\2,' \
