@@ -1,0 +1,29 @@
+diff -ur xfce4-cpugraph-plugin-0.4.0.orig/configure.ac xfce4-cpugraph-plugin-0.4.0/configure.ac
+--- xfce4-cpugraph-plugin-0.4.0.orig/configure.ac	2007-11-22 07:42:28.000000000 +0200
++++ xfce4-cpugraph-plugin-0.4.0/configure.ac	2010-08-30 17:40:40.000000000 +0300
+@@ -31,6 +31,7 @@
+ 
+ dnl configure the panel plugin
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
++XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.20])
+ 
+ dnl translations
+ XDT_I18N([be ca cs en_GB eu fr hu nb_NO pl pt_PT sq uk])
+diff -ur xfce4-cpugraph-plugin-0.4.0.orig/panel-plugin/Makefile.am xfce4-cpugraph-plugin-0.4.0/panel-plugin/Makefile.am
+--- xfce4-cpugraph-plugin-0.4.0.orig/panel-plugin/Makefile.am	2007-11-22 09:13:34.000000000 +0200
++++ xfce4-cpugraph-plugin-0.4.0/panel-plugin/Makefile.am	2010-08-30 17:41:07.000000000 +0300
+@@ -3,10 +3,12 @@
+ 
+ xfce4_cpugraph_plugin_CFLAGS =					\
+ 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"			\
+-	@LIBXFCE4PANEL_CFLAGS@
++	@LIBXFCE4PANEL_CFLAGS@					\
++	@LIBXFCEGUI4_CFLAGS@
+ 
+ xfce4_cpugraph_plugin_LDADD =					\
+-	@LIBXFCE4PANEL_LIBS@
++	@LIBXFCE4PANEL_LIBS@					\
++	@LIBXFCEGUI4_LIBS@
+ 
+ xfce4_cpugraph_plugin_SOURCES =					\
+ 	mode.c		\
