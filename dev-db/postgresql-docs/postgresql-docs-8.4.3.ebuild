@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.4.3.ebuild,v 1.1 2010/03/16 22:50:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-8.4.3.ebuild,v 1.2 2010/08/30 13:02:07 patrick Exp $
 
 inherit versionator
 
@@ -17,6 +17,7 @@ SLOT="$(get_version_component_range 1-2)"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/postgresql-${PV}"
 
