@@ -1,0 +1,34 @@
+diff -ur mairix-0.22.orig/dfasyn/Makefile mairix-0.22/dfasyn/Makefile
+--- mairix-0.22.orig/dfasyn/Makefile	2010-06-05 14:41:10.000000000 -0700
++++ mairix-0.22/dfasyn/Makefile	2010-08-30 00:07:13.538849849 -0700
+@@ -46,9 +46,7 @@
+ 	$(CC) $(CFLAGS) -o dfasyn $(OBJ)
+ 
+ parse.c parse.h : parse.y
+-	bison -v -d parse.y
+-	mv parse.tab.c parse.c
+-	mv parse.tab.h parse.h
++	bison -v -d -o parse.c parse.y
+ 
+ parse.o : parse.c dfasyn.h
+ 
+diff -ur mairix-0.22.orig/Makefile.in mairix-0.22/Makefile.in
+--- mairix-0.22.orig/Makefile.in	2010-06-05 14:41:10.000000000 -0700
++++ mairix-0.22/Makefile.in	2010-08-30 00:06:52.276674632 -0700
+@@ -77,14 +77,14 @@
+ 	./mkversion
+ 
+ ./dfasyn/dfasyn:
+-	if [ -d dfasyn ]; then cd dfasyn ; make CC="$(CC)" CFLAGS="$(CFLAGS)" ; else echo "No dfasyn subdirectory?" ; exit 1 ; fi
++	if [ -d dfasyn ]; then cd dfasyn ; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" ; else echo "No dfasyn subdirectory?" ; exit 1 ; fi
+ 
+ clean:
+ 	-rm -f *~ *.o mairix *.s core
+ 	-rm -f mairix.cp mairix.fn mairix.aux mairix.log mairix.ky mairix.pg mairix.toc mairix.tp mairix.vr
+ 	-rm -f fromcheck.[ch] datescan.[ch]
+ 	-rm -f nvpscan.[ch]
+-	if [ -d dfasyn ]; then cd dfasyn ; make clean ; fi
++	if [ -d dfasyn ]; then cd dfasyn ; $(MAKE) clean ; fi
+ 
+ distclean: clean
+ 	-rm -f Makefile config.log
