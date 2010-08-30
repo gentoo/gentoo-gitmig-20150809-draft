@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.80 2010/08/30 13:57:40 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.81 2010/08/30 14:19:10 mpagano Exp $
+
+*portpeek-2.0.2 (30 Aug 2010)
+
+  30 Aug 2010; Mike Pagano <mpagano@gentoo.org> portpeek-2.0.1.ebuild,
+  +portpeek-2.0.2.ebuild:
+  Make portage version stricter for 2.0.1 and remove deprecated function
+  call in 2.0.2 for portage >= 2.2_rc72
 
 *portpeek-1.9.38.1 (30 Aug 2010)
 
