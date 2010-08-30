@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.8.3.ebuild,v 1.2 2010/08/29 22:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.8.3.ebuild,v 1.3 2010/08/30 03:26:55 vapier Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="http://download.boulder.ibm.com/ibmdl/pub/software/dw/linux390/ht_src/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~s390"
+KEYWORDS="-* s390"
 IUSE="snmp zfcpdump"
 
 RDEPEND="sys-fs/sysfsutils
@@ -44,6 +44,8 @@ src_unpack() {
 		sed -i -e '/^ZFCPDUMP_DIR/s:local/::' common.mak
 		sed -i -e '/^SUB_DIRS/s:=:=zfcpdump_v2 :' Makefile
 	fi
+
+	export MAKEOPTS+=" V=1"
 }
 
 src_install() {
