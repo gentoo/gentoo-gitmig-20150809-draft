@@ -1,6 +1,11 @@
-diff -ur xfce4-cpugraph-plugin-0.4.0.orig/configure.ac xfce4-cpugraph-plugin-0.4.0/configure.ac
---- xfce4-cpugraph-plugin-0.4.0.orig/configure.ac	2007-11-22 07:42:28.000000000 +0200
-+++ xfce4-cpugraph-plugin-0.4.0/configure.ac	2010-08-30 17:40:40.000000000 +0300
+Fix building/linking problem as reported in: http://bugs.gentoo.org/334891
+
+Not reported to upstream because the patch in upstream bug[1] should be applied instead.
+
+[1] http://bugzilla.xfce.org/show_bug.cgi?id=6575
+
+--- configure.ac
++++ configure.ac
 @@ -31,6 +31,7 @@
  
  dnl configure the panel plugin
@@ -9,9 +14,8 @@ diff -ur xfce4-cpugraph-plugin-0.4.0.orig/configure.ac xfce4-cpugraph-plugin-0.4
  
  dnl translations
  XDT_I18N([be ca cs en_GB eu fr hu nb_NO pl pt_PT sq uk])
-diff -ur xfce4-cpugraph-plugin-0.4.0.orig/panel-plugin/Makefile.am xfce4-cpugraph-plugin-0.4.0/panel-plugin/Makefile.am
---- xfce4-cpugraph-plugin-0.4.0.orig/panel-plugin/Makefile.am	2007-11-22 09:13:34.000000000 +0200
-+++ xfce4-cpugraph-plugin-0.4.0/panel-plugin/Makefile.am	2010-08-30 17:41:07.000000000 +0300
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
 @@ -3,10 +3,12 @@
  
  xfce4_cpugraph_plugin_CFLAGS =					\
