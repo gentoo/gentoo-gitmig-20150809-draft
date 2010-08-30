@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.66 2010/03/07 14:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.67 2010/08/30 04:39:35 jer Exp $
+
+*sharutils-4.10 (30 Aug 2010)
+
+  30 Aug 2010; Jeroen Roovers <jer@gentoo.org> +sharutils-4.10.ebuild:
+  Version bump.
 
   07 Mar 2010; Mike Frysinger <vapier@gentoo.org> sharutils-4.9.ebuild:
   Fix up SRC_URI #308183 by Locke Shinseiko.
