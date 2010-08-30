@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.4 2009/07/23 13:22:56 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.13.5-r1.ebuild,v 1.5 2010/08/30 20:53:35 sochotnicky Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 DESCRIPTION="Frostwire Java Gnutella client"
 HOMEPAGE="http://www.frostwire.com"
 SRC_URI="http://www.frostwire.com/frostwire/${PV}/${P}.src.tar.gz"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 #IUSE="gtk"

@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/frostwire
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.8 2009/07/23 13:22:56 ali_bush Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.9 2010/08/30 20:53:35 sochotnicky Exp $
+
+*frostwire-4.20.9 (30 Aug 2010)
+
+  30 Aug 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +frostwire-4.20.9.ebuild:
+  Rebase to 4.20.9 version. Upstream not providing source tarballs anymore,
+  so we use just binary package.
 
   23 Jul 2009; Alistair Bush <ali_bush@gentoo.org>
   frostwire-4.13.5-r1.ebuild:
