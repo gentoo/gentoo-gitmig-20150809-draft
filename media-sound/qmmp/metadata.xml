@@ -18,5 +18,6 @@
     <flag name="kde">Use kde4 notifier system</flag>
 	<flag name="projectm">Enable projectm music visualization plugin</flag>
     <flag name="scrobbler">Enable audioscrobbler/last.fm support</flag>
+	<flag name="udisks">Use udisks plugins to detect removal devices</flag>
   </use>
 </pkgmetadata>

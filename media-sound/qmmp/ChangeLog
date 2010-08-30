@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.45 2010/08/28 00:13:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.46 2010/08/30 08:49:23 hwoarang Exp $
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> qmmp-9999.ebuild,
+  metadata.xml:
+  Add udisks use flag for removal devices
 
   28 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   -files/qmmp-0.3.2-kio-file-path-fix.patch:
