@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.52.ebuild,v 1.1 2010/08/30 01:50:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.52.ebuild,v 1.2 2010/08/30 01:53:21 cardoe Exp $
 
 EAPI="2"
 
@@ -37,115 +37,115 @@ PDEPEND=">=x11-libs/libvdpau-0.3-r1
 	gtk? ( media-video/nvidia-settings )"
 
 QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib/libnvidia-glcore.so.${PV}
-    usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib/xorg/modules/drivers/nvidia_drv.so
-    usr/lib/libcuda.so.${PV}
-    usr/lib/libnvidia-cfg.so.${PV}
-    usr/lib/libvdpau_nvidia.so.${PV}
-    usr/lib/libOpenCL.so.1.0.0
-    usr/lib/libnvidia-compiler.so.${PV}"
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/libnvidia-glcore.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib/xorg/modules/drivers/nvidia_drv.so
+	usr/lib/libcuda.so.${PV}
+	usr/lib/libnvidia-cfg.so.${PV}
+	usr/lib/libvdpau_nvidia.so.${PV}
+	usr/lib/libOpenCL.so.1.0.0
+	usr/lib/libnvidia-compiler.so.${PV}"
 
 QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
-    usr/lib/opengl/nvidia/lib/libGL.so.1
-    usr/lib/libnvidia-glcore.so.1
-    usr/lib/libnvidia-cfg.so.1
-    usr/lib/opengl/nvidia/extensions/libglx.so.1
-    usr/lib/xorg/modules/drivers/nvidia_drv.so"
+	usr/lib/opengl/nvidia/lib/libGL.so.1
+	usr/lib/libnvidia-glcore.so.1
+	usr/lib/libnvidia-cfg.so.1
+	usr/lib/opengl/nvidia/extensions/libglx.so.1
+	usr/lib/xorg/modules/drivers/nvidia_drv.so"
 
 QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib32/libnvidia-glcore.so.${PV}
-    usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib32/libcuda.so.${PV}
-    usr/lib32/libvdpau_nvidia.so.${PV}
-    usr/lib32/libOpenCL.so.1.0.0
-    usr/lib32/libnvidia-compiler.so.${PV}"
+	usr/lib32/libnvidia-glcore.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib32/libcuda.so.${PV}
+	usr/lib32/libvdpau_nvidia.so.${PV}
+	usr/lib32/libOpenCL.so.1.0.0
+	usr/lib32/libnvidia-compiler.so.${PV}"
 
 QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib/libnvidia-glcore.so.${PV}
-    usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib64/libXvMCNVIDIA.so.${PV}
-    usr/lib/libXvMCNVIDIA.a:NVXVMC.o
-    usr/lib/libnvidia-compiler.so.${PV}
-    usr/lib/libvdpau_nvidia.so.${PV}
-    usr/lib/libcuda.so.${PV}
-    usr/lib/libOpenCL.so.1.0.0"
+	usr/lib/libnvidia-glcore.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib64/libXvMCNVIDIA.so.${PV}
+	usr/lib/libXvMCNVIDIA.a:NVXVMC.o
+	usr/lib/libnvidia-compiler.so.${PV}
+	usr/lib/libvdpau_nvidia.so.${PV}
+	usr/lib/libcuda.so.${PV}
+	usr/lib/libOpenCL.so.1.0.0"
 
 QA_EXECSTACK_amd64="usr/lib32/libnvidia-glcore.so.${PV}
-    usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib32/libnvidia-compiler.so.${PV}
-    usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib32/libvdpau_nvidia.so.${PV}
-    usr/lib32/libcuda.so.${PV}
-    usr/lib32/libOpenCL.so.1.0.0
-    usr/lib64/libnvidia-compiler.so.${PV}
-    usr/lib64/libXvMCNVIDIA.a:NVXVMC.o
-    usr/lib64/libnvidia-cfg.so.${PV}
-    usr/lib64/libvdpau_nvidia.so.${PV}
-    usr/lib64/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib64/libnvidia-glcore.so.${PV}
-    usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib64/libXvMCNVIDIA.so.${PV}
-    usr/lib64/libcuda.so.${PV}
-    usr/lib64/libOpenCL.so.1.0.0
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib32/libnvidia-compiler.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+	usr/lib32/libvdpau_nvidia.so.${PV}
+	usr/lib32/libcuda.so.${PV}
+	usr/lib32/libOpenCL.so.1.0.0
+	usr/lib64/libnvidia-compiler.so.${PV}
+	usr/lib64/libXvMCNVIDIA.a:NVXVMC.o
+	usr/lib64/libnvidia-cfg.so.${PV}
+	usr/lib64/libvdpau_nvidia.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/libnvidia-glcore.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib64/libXvMCNVIDIA.so.${PV}
+	usr/lib64/libcuda.so.${PV}
+	usr/lib64/libOpenCL.so.1.0.0
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
-    usr/bin/nvidia-smi
-    usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-smi
+	usr/bin/nvidia-xconfig"
 
 QA_WX_LOAD_x86="usr/lib/libnvidia-glcore.so.${PV}
-    usr/lib/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib/libXvMCNVIDIA.a
-    usr/lib64/libXvMCNVIDIA.so.${PV}"
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib/libXvMCNVIDIA.a
+	usr/lib64/libXvMCNVIDIA.so.${PV}"
 
 QA_WX_LOAD_amd64="usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib32/libnvidia-glcore.so.${PV}
-    usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib64/libnvidia-glcore.so.${PV}
-    usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib64/libXvMCNVIDIA.so.${PV}"
+	usr/lib32/libnvidia-glcore.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/libnvidia-glcore.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib64/libXvMCNVIDIA.so.${PV}"
 
 QA_SONAME_x86="usr/lib/libnvidia-compiler.so.${PV}"
 
 QA_SONAME_amd64="usr/lib64/libnvidia-compiler.so.${PV}
-    usr/lib32/libnvidia-compiler.so.${PV}"
+	usr/lib32/libnvidia-compiler.so.${PV}"
 
 QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
-    usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib32/libnvidia-glcore.so.${PV}
-    usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib32/libvdpau_nvidia.so.${PV}
-    usr/lib32/libOpenCL.so.1.0.0
-    usr/lib32/libnvidia-compiler.so.${PV}
-    usr/lib64/libXvMCNVIDIA.so.${PV}
-    usr/lib64/libcuda.so.${PV}
-    usr/lib64/libnvidia-cfg.so.${PV}
-    usr/lib64/libnvidia-glcore.so.${PV}
-    usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib64/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib64/xorg/modules/drivers/nvidia_drv.so
-    usr/lib64/libvdpau_nvidia.so.${PV}
-    usr/lib64/libOpenCL.so.1.0.0
-    usr/lib64/libnvidia-compiler.so.${PV}
-    usr/bin/nvidia-smi
-    usr/bin/nvidia-xconfig"
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib32/libnvidia-glcore.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+	usr/lib32/libvdpau_nvidia.so.${PV}
+	usr/lib32/libOpenCL.so.1.0.0
+	usr/lib32/libnvidia-compiler.so.${PV}
+	usr/lib64/libXvMCNVIDIA.so.${PV}
+	usr/lib64/libcuda.so.${PV}
+	usr/lib64/libnvidia-cfg.so.${PV}
+	usr/lib64/libnvidia-glcore.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib64/xorg/modules/drivers/nvidia_drv.so
+	usr/lib64/libvdpau_nvidia.so.${PV}
+	usr/lib64/libOpenCL.so.1.0.0
+	usr/lib64/libnvidia-compiler.so.${PV}
+	usr/bin/nvidia-smi
+	usr/bin/nvidia-xconfig"
 
 QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
-    usr/lib/libnvidia-cfg.so.${PV}
-    usr/lib/libnvidia-glcore.so.${PV}
-    usr/lib/opengl/nvidia/lib/libGL.so.${PV}
-    usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
-    usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
-    usr/lib/xorg/modules/drivers/nvidia_drv.so
-    usr/lib/libXvMCNVIDIA.so.${PV}
-    usr/lib/libvdpau_nvidia.so.${PV}
-    usr/lib/libOpenCL.so.1.0.0
-    usr/lib/libnvidia-compiler.so.${PV}
-    usr/bin/nvidia-smi
-    usr/bin/nvidia-xconfig"
+	usr/lib/libnvidia-cfg.so.${PV}
+	usr/lib/libnvidia-glcore.so.${PV}
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
+	usr/lib/xorg/modules/drivers/nvidia_drv.so
+	usr/lib/libXvMCNVIDIA.so.${PV}
+	usr/lib/libvdpau_nvidia.so.${PV}
+	usr/lib/libOpenCL.so.1.0.0
+	usr/lib/libnvidia-compiler.so.${PV}
+	usr/bin/nvidia-smi
+	usr/bin/nvidia-xconfig"
 
 S="${WORKDIR}/"
 
