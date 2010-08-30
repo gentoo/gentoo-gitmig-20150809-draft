@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.5.1.ebuild,v 1.2 2010/06/12 09:55:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.7.1.ebuild,v 1.1 2010/08/30 10:37:20 pva Exp $
 
 inherit versionator
 
@@ -8,7 +8,7 @@ inherit versionator
 # comparisment working we have to use numbers instead of strings, that is 4th
 # component of our version. So we have aivazovsky - 1, briullov - 2 and so on.
 # Keep this string on top since we have to modify it each new release.
-OVZ_CODENAME="belyayev"
+OVZ_CODENAME="bykovsky"
 OVZ_CODENAME_SUBRELEASE=$(get_version_component_range 5)
 
 OVZ_KV="${OVZ_CODENAME}.${OVZ_CODENAME_SUBRELEASE}"
