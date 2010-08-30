@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.247 2010/08/30 02:00:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.248 2010/08/30 20:36:12 cardoe Exp $
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-256.52.ebuild:
+  Fix xorg-server depend to properly include the 1.9 series
 
   30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-96.43.14.ebuild, -nvidia-drivers-173.14.22.ebuild,
