@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.52.ebuild,v 1.5 2010/08/30 21:39:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-256.52.ebuild,v 1.6 2010/08/30 22:41:34 cardoe Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ COMMON="<x11-base/xorg-server-1.9.99
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	>=app-admin/eselect-opengl-1.0.9
-	!media-video/nvidia-settings"
+	!<media-video/nvidia-settings-256.52"
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}

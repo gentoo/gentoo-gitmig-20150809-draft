@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.249 2010/08/30 21:38:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.250 2010/08/30 22:41:34 cardoe Exp $
+
+  30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-256.44-r1.ebuild, nvidia-drivers-256.52.ebuild:
+  fix up blocker with media-video/nvidia-settings
 
   30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-256.44-r1.ebuild, nvidia-drivers-256.52.ebuild:
