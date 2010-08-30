@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.9 2010/08/30 08:49:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.10 2010/08/30 11:28:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -89,6 +89,7 @@ src_configure() {
 		$(cmake-utils_use_use sndfile)
 		$(cmake-utils_use_use tray STATICON)
 		$(cmake-utils_use_use libsamplerate SRC)
+		$(cmake-utils_use_use udisks)
 		$(cmake-utils_use_use vorbis)
 		$(cmake-utils_use_use wavpack)"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.46 2010/08/30 08:49:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.47 2010/08/30 11:28:01 hwoarang Exp $
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> qmmp-9999.ebuild:
+  Add udisks configure option which completes my last commit
 
   30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> qmmp-9999.ebuild,
   metadata.xml:
