@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.7 2010/06/29 16:04:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.8 2010/08/30 20:40:11 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -67,10 +67,12 @@ pkg_setup() {
 		G2CONF="${G2CONF} --without-gpgme"
 	fi
 
-	if use webkit || use gtkhtml ; then
+	if use webkit && use gtkhtml ; then
 		ewarn "Only one html widget can be enabled at the same time."
 		ewarn "Selecting gtkhtml by default."
+	fi
 
+	if use webkit || use gtkhtml; then
 		if use gtkhtml ; then
 			G2CONF="${G2CONF} --with-html-widget=gtkhtml3"
 		else
