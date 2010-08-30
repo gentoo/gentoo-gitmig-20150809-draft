@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.30.2-r1.ebuild,v 1.4 2010/08/11 16:49:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.30.2-r1.ebuild,v 1.5 2010/08/30 22:05:54 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,7 +20,9 @@ IUSE="eds libnotify"
 RDEPEND=">=dev-lang/python-2.5[sqlite]
 	dev-python/gconf-python
 	dev-python/libgnome-python
+	dev-python/libwnck-python
 	dev-python/gnome-applets-python
+	dev-python/gnome-desktop-python
 	dev-python/dbus-python
 	dev-python/pyxdg
 	eds? ( dev-python/evolution-python )
@@ -34,7 +36,8 @@ DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	>=app-text/gnome-doc-utils-0.17.3"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
