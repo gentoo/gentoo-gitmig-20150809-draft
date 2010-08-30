@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.33 2010/08/17 06:30:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.34 2010/08/30 01:56:41 phajdan.jr Exp $
+
+  30 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> couchdb-1.0.1.ebuild:
+  x86 stable wrt security bug #333175
 
 *couchdb-1.0.1 (17 Aug 2010)
 
