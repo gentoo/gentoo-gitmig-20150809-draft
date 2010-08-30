@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/shc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.15 2009/09/23 17:48:34 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.16 2010/08/30 22:22:02 xmw Exp $
+
+  30 Aug 2010; Michael Weber (xmw) <xmw@gentoo.org> shc-3.8.3.ebuild:
+  Respect LDFLAGS, do not strip by intall -s, fixes bug 335333
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> shc-3.6.ebuild,
   shc-3.7.ebuild:
