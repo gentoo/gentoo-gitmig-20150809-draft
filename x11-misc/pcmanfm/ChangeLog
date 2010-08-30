@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.33 2010/08/25 10:46:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.34 2010/08/30 10:44:12 hwoarang Exp $
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> pcmanfm-9999.ebuild:
+  Bring gnome-mount dependency back
 
 *pcmanfm-0.9.7-r2 (25 Aug 2010)
 

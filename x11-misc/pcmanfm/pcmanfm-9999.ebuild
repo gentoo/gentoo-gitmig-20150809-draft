@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.3 2010/08/25 10:46:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.4 2010/08/30 10:44:12 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="debug gnome hal udev"
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	sys-fs/udisks
+	gnome? ( hal? ( gnome-base/gnome-mount ) )
 	gnome? ( gnome-base/gvfs[hal?,udev?] )
 	lxde-base/menu-cache
 	x11-misc/shared-mime-info
