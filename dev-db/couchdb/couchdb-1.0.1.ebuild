@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1.ebuild,v 1.2 2010/08/30 01:56:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1.ebuild,v 1.3 2010/08/30 11:50:50 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/couchdb/${PV}/apache-${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 RDEPEND=">=dev-libs/icu-4.3.1
