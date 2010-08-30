@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.715 2010/08/30 21:55:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.716 2010/08/30 22:16:27 zmedico Exp $
+
+  30 Aug 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Bug #267103 - Add /etc/portage to CONFIG_PROTECT_MASK.
 
   30 Aug 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Fix src_prepare to use the new VERSION sed template in order to substitute

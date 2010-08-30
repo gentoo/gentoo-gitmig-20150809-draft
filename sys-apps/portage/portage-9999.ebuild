@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.8 2010/08/30 21:55:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.9 2010/08/30 22:16:27 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -139,6 +139,13 @@ src_install() {
 	cd "${S}"/cnf
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf || die
+
+	# This allows config file updates that are applied for package
+	# moves to take effect immediately.
+	echo 'CONFIG_PROTECT_MASK="/etc/portage"' > "$T"/50portage \
+		|| die "failed to create 50portage"
+	doenvd "$T"/50portage || die "doenvd 50portage failed"
+	rm "$T"/50portage
 
 	insinto "$portage_share_config/sets"
 	doins "$S"/cnf/sets/*.conf || die
