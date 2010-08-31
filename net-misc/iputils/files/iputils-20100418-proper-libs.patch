@@ -1,5 +1,7 @@
---- Makefile.orig	2010-08-22 02:51:52.000000000 +0200
-+++ Makefile	2010-08-22 02:47:48.000000000 +0200
+http://bugs.gentoo.org/332703
+
+--- Makefile
++++ Makefile
 @@ -28,10 +28,13 @@
  ping6: LDLIBS += -lidn
  endif
