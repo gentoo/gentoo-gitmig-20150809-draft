@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/codegroup
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/codegroup/ChangeLog,v 1.1 2010/08/31 17:33:08 xmw Exp $
+
+*codegroup-20080907 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> +codegroup-20080907.ebuild,
+  +metadata.xml:
+  Initial commit, fixed bug #285381
+
