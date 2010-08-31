@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.7 2010/08/15 22:30:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.2.8.ebuild,v 1.8 2010/08/31 19:55:53 a3li Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_DOCDIR="html"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
