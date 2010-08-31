@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.2.ebuild,v 1.1 2010/07/09 11:39:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.3.ebuild,v 1.1 2010/08/31 21:55:36 scarabeus Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ if [[ ${PV} == *9999* ]] ; then
 	KMNAME="extragear/network"
 else
 	# upstream likes to skip that _ in beta releases
-	KTORRENT_VERSION="4.0.2"
+	KTORRENT_VERSION="4.0.3"
 	MY_PV="${PV/_/}"
 	MY_P="${PN}-${MY_PV}"
 
@@ -30,16 +30,15 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug doc"
 
-COMMONDEPEND="
+RDEPEND="
 	app-crypt/qca:2
 	dev-libs/gmp
 "
-DEPEND="${COMMONDEPEND}
+DEPEND="${RDEPEND}
 	dev-libs/boost
 	sys-devel/gettext
 	doc? ( app-doc/doxygen[-nodot] )
 "
-RDEPEND="${COMMONDEPEND}"
 
 src_compile() {
 	cmake-utils_src_compile
@@ -48,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	use doc && HTML_DOCS=("${CMAKE_BUILD_DIR}/apidocs/html/")
+	use doc && HTML_DOCS=( "${CMAKE_BUILD_DIR}/apidocs/html/" )
 
 	cmake-utils_src_install
 }
