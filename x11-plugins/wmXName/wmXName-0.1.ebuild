@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmXName/wmXName-0.1.ebuild,v 1.1 2009/04/17 12:28:19 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmXName/wmXName-0.1.ebuild,v 1.2 2010/08/31 13:10:02 s4t4n Exp $
 
 MY_PV="0.01"
 MY_P="${PN}-${MY_PV}"
@@ -12,7 +12,7 @@ HOMEPAGE="http://source.xname.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 COMMON_DEPEND=">=x11-libs/libXpm-3.5.7
 	>=x11-libs/libX11-1.1.4
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake SYSTEM="${LDFLAGS}" || die
 }
 
 src_install () {
