@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.83 2010/08/30 11:57:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.84 2010/08/31 17:10:30 vapier Exp $
+
+  31 Aug 2010; Mike Frysinger <vapier@gentoo.org> iputils-20100418.ebuild,
+  +files/iputils-20100418-openssl.patch, +files/iputils-20100418-so_mark.patch:
+  Make openssl support optional #335436 by Jorge Manuel B. S. Vicetto. Fix
+  building with older linux headers #335347 by Mark Wagner.
 
   30 Aug 2010; Jeroen Roovers <jer@gentoo.org> iputils-20100418.ebuild:
   Stable for HPPA PPC (bug #332527).

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.6 2010/08/30 11:57:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.7 2010/08/31 17:10:30 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -12,10 +12,11 @@ SRC_URI="http://www.skbuff.net/iputils/iputils-s${PV}.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-linux ~x86-linux"
-IUSE="doc idn ipv6 SECURITY_HAZARD static"
+IUSE="doc idn ipv6 SECURITY_HAZARD ssl static"
 
 # sysfsutils is needed for libsysfs which is used by arping only
 RDEPEND="!net-misc/rarpd
+	ssl? ( dev-libs/openssl )
 	idn? ( net-dns/libidn )
 	sys-fs/sysfsutils"
 DEPEND="${RDEPEND}
@@ -27,8 +28,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/021109-uclibc-no-ether_ntohost.patch
+	epatch "${FILESDIR}"/${PN}-20100418-openssl.patch #335436
+	epatch "${FILESDIR}"/${PN}-20100418-so_mark.patch #335347
 	epatch "${FILESDIR}"/${PN}-20100418-makefile.patch
-	epatch "${FILESDIR}"/${PN}-20100418-proper-libs.patch
+	epatch "${FILESDIR}"/${PN}-20100418-proper-libs.patch #332703
 	epatch "${FILESDIR}"/${PN}-20100418-printf-size.patch
 	epatch "${FILESDIR}"/${PN}-20100418-aliasing.patch
 	epatch "${FILESDIR}"/${PN}-20071127-kernel-ifaddr.patch
@@ -36,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-20100418-ping-CVE-2010-2529.patch #332527
 	use SECURITY_HAZARD && epatch "${FILESDIR}"/${PN}-20071127-nonroot-floodping.patch
 	use static && append-ldflags -static
+	use ssl && append-cppflags -DHAVE_OPENSSL
 	use ipv6 || sed -i -e 's:IPV6_TARGETS=:#IPV6_TARGETS=:' Makefile
 	export IDN=$(use idn && echo yes)
 }
