@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.6 2010/07/17 09:34:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.7 2010/08/31 19:05:41 ssuominen Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://encfs.googlecode.com/files/${P}-1.tgz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~sparc x86"
-IUSE=""
+IUSE="xattr"
 
 RDEPEND=">=dev-libs/boost-1.34
 	>=dev-libs/openssl-0.9.7
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/boost-1.34
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig
-	sys-apps/attr
+	xattr? ( sys-apps/attr )
 	sys-devel/gettext"
 
 src_configure() {
@@ -32,6 +32,8 @@ src_configure() {
 	BOOST_INC="/usr/include/boost-${BOOST_VER}"
 	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
 	einfo "Building against ${BOOST_PKG}."
+
+	use xattr || export ac_cv_header_attr_xattr_h=no
 
 	econf \
 		--with-boost=${BOOST_INC} \
