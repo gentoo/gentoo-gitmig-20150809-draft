@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/knock
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.37 2009/08/23 01:43:17 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.38 2010/08/31 09:33:43 xmw Exp $
+
+*knock-0.5-r1 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> +knock-0.5-r1.ebuild,
+  metadata.xml:
+  Revision bump to fix bug #332897, thanks to Sebastian
+  <indigo176@blinkenshell.org>. Die more, EAPI-2.
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -files/knockd.conf.patch,
   -files/nonblock.patch:
