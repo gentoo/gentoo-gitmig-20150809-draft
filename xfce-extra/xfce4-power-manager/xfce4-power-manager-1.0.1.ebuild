@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.0.ebuild,v 1.2 2010/08/23 22:19:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.1.ebuild,v 1.1 2010/08/31 11:33:39 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
