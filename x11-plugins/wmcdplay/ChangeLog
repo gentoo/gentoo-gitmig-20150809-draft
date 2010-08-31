@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcdplay
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.7 2009/12/15 17:50:15 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.8 2010/08/31 10:07:38 s4t4n Exp $
+
+  31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmcdplay-1.0_beta1.ebuild:
+  Honour LDFLAGS. Closes bug #335376.
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   wmcdplay-1.0_beta1.ebuild:
