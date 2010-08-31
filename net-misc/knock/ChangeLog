@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.38 2010/08/31 09:33:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.39 2010/08/31 11:02:24 xmw Exp $
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> knock-0.5-r1.ebuild,
+  metadata.xml:
+  Made knockd daemon optional with IUSE server, fixes bug 311257.
 
 *knock-0.5-r1 (31 Aug 2010)
 
