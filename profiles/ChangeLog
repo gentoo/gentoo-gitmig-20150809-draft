@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4517 2010/08/31 12:10:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4518 2010/08/31 19:51:00 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking w3af for QA cleanup
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   pygoogle has been removed from tree
