@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.6 2009/08/05 22:01:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.7 2010/08/31 15:38:31 s4t4n Exp $
 
 EAPI=2
 inherit eutils
@@ -50,10 +50,17 @@ src_prepare() {
 		-e "s/getline/${PN}_getline/" \
 		terps/alan3/parse.c terps/alan2/parse.c \
 		|| die "sed failed"
+
+	#Fix LDFLAGS for shared libraries
+	sed -i \
+		-e 's/$(SHRLINKFLAGS) /$(SHRLINKFLAGS) $(LDFLAGS) /' \
+		Jamshared \
+		|| die "sed failed"
 }
 
 src_compile() {
-	jam || die "jam failed"
+	#Compile honouring LDFLAGS for binaries
+	jam LINKFLAGS="${LDFLAGS}" || die "jam failed"
 }
 
 src_install() {
