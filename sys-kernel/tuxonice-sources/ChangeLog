@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.95 2010/08/31 10:11:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.96 2010/08/31 10:26:08 nelchael Exp $
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  tuxonice-sources-2.6.30-r6.ebuild, tuxonice-sources-2.6.30-r11.ebuild,
+  tuxonice-sources-2.6.30-r12.ebuild, tuxonice-sources-2.6.30-r13.ebuild,
+  tuxonice-sources-2.6.31-r11.ebuild, tuxonice-sources-2.6.31-r12.ebuild,
+  tuxonice-sources-2.6.31-r13.ebuild, tuxonice-sources-2.6.32-r7.ebuild,
+  tuxonice-sources-2.6.32-r8.ebuild, tuxonice-sources-2.6.32-r9.ebuild,
+  tuxonice-sources-2.6.32-r10.ebuild, tuxonice-sources-2.6.32-r11.ebuild,
+  tuxonice-sources-2.6.32-r12.ebuild, tuxonice-sources-2.6.32-r13.ebuild,
+  tuxonice-sources-2.6.32-r14.ebuild, tuxonice-sources-2.6.33-r1.ebuild,
+  tuxonice-sources-2.6.33-r2.ebuild, tuxonice-sources-2.6.33-r3.ebuild,
+  tuxonice-sources-2.6.33-r4.ebuild, tuxonice-sources-2.6.33-r5.ebuild,
+  tuxonice-sources-2.6.34.ebuild, tuxonice-sources-2.6.34-r1.ebuild,
+  tuxonice-sources-2.6.34-r2.ebuild, tuxonice-sources-2.6.34-r3.ebuild,
+  tuxonice-sources-2.6.35.ebuild, tuxonice-sources-2.6.35-r1.ebuild:
+  Update genpatches home page (bug #334291).
 
 *tuxonice-sources-2.6.34-r3 (31 Aug 2010)
 *tuxonice-sources-2.6.33-r5 (31 Aug 2010)

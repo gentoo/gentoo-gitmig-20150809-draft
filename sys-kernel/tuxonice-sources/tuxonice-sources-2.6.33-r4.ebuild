@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.33-r4.ebuild,v 1.1 2010/08/19 13:56:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.33-r4.ebuild,v 1.2 2010/08/31 10:26:08 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -11,7 +11,7 @@ detect_version
 detect_arch
 
 DESCRIPTION="TuxOnIce + Gentoo patchset sources"
-HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net"
+HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 IUSE=""
 
 TUXONICE_SNAPSHOT=""
