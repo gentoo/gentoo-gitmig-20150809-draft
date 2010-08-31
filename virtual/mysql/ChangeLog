@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.16 2010/05/15 13:47:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.17 2010/08/31 12:31:10 hwoarang Exp $
+
+  31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> mysql-5.1.ebuild:
+  Stable on amd64 wrt bug #321791
 
   15 May 2010; Fabian Groffen <grobian@gentoo.org> mysql-5.1.ebuild:
   Marked ~x64-macos, bug #319835
