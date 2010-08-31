@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.115 2010/08/19 17:58:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.116 2010/08/31 14:23:21 dberkholz Exp $
+
+  31 Aug 2010; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  griffon26 is retiring, reassign to maintainer-needed.
 
   19 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> valgrind-3.5.0.ebuild,
   +files/valgrind-3.5.0-glibc-2.12.patch,
