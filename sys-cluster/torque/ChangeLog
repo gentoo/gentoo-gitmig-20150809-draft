@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.94 2010/08/05 03:18:42 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.95 2010/08/31 20:07:35 jsbronder Exp $
+
+*torque-2.4.10 (31 Aug 2010)
+*torque-2.3.12 (31 Aug 2010)
+
+  31 Aug 2010; Justin Bronder <jsbronder@gentoo.org> +torque-2.3.12.ebuild,
+  +torque-2.4.10.ebuild:
+  Bump 2.3.12 and 2.4.10. Bug #335203.
 
   05 Aug 2010; Justin Bronder <jsbronder@gentoo.org>
   -files/pbs_mom-init.d-2.2.1-r1, -files/pbs_sched-init.d-2.2.1-r1,
