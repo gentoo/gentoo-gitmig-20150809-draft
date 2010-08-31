@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.7 2010/08/16 11:36:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.8 2010/08/31 19:52:11 a3li Exp $
+
+  31 Aug 2010; Alex Legler <a3li@gentoo.org> samuel-0.3.2.ebuild:
+  Add REE 1.8 support.
 
   16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> samuel-0.3.2.ebuild:
   Block test-unit:2 for testing.
