@@ -10,8 +10,8 @@ depend() {
 
 start() {
 	ebegin "Starting Miredo"
-	[ "${MIREDO_MODPROBE_IPV6}" == "yes" ] && modprobe ipv6
-	[ "${MIREDO_MODPROBE_TUN}" == "yes" ] && modprobe tun
+	test "${MIREDO_MODPROBE_IPV6}" = "yes" && modprobe ipv6
+	test "${MIREDO_MODPROBE_TUN}" = "yes" && modprobe tun
 	start-stop-daemon --start --quiet --exec /usr/sbin/miredo -- \
 		${MIREDO_OPTS}
 	eend $?

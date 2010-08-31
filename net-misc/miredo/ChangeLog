@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/miredo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.3 2010/05/04 07:14:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.4 2010/08/31 11:21:22 xmw Exp $
+
+*miredo-1.2.3-r1 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> -miredo-1.2.3.ebuild,
+  +miredo-1.2.3-r1.ebuild, files/miredo.rc:
+  Revision bump to fix bug #335297, thanks to Kai Krakow
+  <hurikhan77+bgo@gmail.com>
 
   04 May 2010; Thilo Bangert <bangert@gentoo.org> files/miredo.conf:
   dont load modules by default
