@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.138 2010/08/27 17:05:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.139 2010/08/31 17:50:17 vapier Exp $
+
+*m4-1.4.15 (31 Aug 2010)
+
+  31 Aug 2010; Mike Frysinger <vapier@gentoo.org> +m4-1.4.15.ebuild:
+  Version bump.
 
   27 Aug 2010; Raúl Porcel <armin76@gentoo.org> m4-1.4.14-r1.ebuild:
   sparc stable wrt #307633
