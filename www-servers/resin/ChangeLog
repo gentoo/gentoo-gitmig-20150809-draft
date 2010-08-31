@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.97 2010/08/19 19:31:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.98 2010/08/31 14:40:55 nelchael Exp $
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org> resin-4.0.9.ebuild:
+  Respect LDFLAGS when linking, see bug #334417.
 
 *resin-4.0.9 (19 Aug 2010)
 

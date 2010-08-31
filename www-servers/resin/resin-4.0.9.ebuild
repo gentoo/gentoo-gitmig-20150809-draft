@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.9.ebuild,v 1.1 2010/08/19 19:31:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.9.ebuild,v 1.2 2010/08/31 14:40:55 nelchael Exp $
 
 EAPI="2"
 
@@ -48,6 +48,9 @@ src_prepare() {
 	for i in "${WORKDIR}"/${PV}/resin-${PV}-*; do
 		epatch "${i}"
 	done;
+
+	# Respect LDFLAGS:
+	sed -i -e 's/-o/$(LDFLAGS) -o/' modules/c/src/resin_os/Makefile.in
 
 	# No bundled JARs!
 	rm -f "${S}/modules/ext/"*.jar
