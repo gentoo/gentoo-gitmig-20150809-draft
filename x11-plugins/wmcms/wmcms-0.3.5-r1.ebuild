@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5-r1.ebuild,v 1.8 2008/06/29 14:05:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5-r1.ebuild,v 1.9 2010/08/31 08:31:35 s4t4n Exp $
 
 inherit eutils
 
@@ -19,6 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/wmcms-0.3.5-s4t4n.patch
+
+	# Respect LDFLAGS, see bug #335031
+	sed -i 's/ -o wmcms/ ${LDFLAGS} -o wmcms/' "Makefile"
 }
 
 src_compile() {
