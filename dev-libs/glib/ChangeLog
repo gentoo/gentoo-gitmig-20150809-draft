@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.418 2010/08/18 20:49:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.419 2010/08/31 12:58:59 pacho Exp $
+
+  31 Aug 2010; Pacho Ramos <pacho@gentoo.org> -glib-2.22.2.ebuild,
+  -glib-2.24.1.ebuild, glib-2.24.1-r1.ebuild:
+  Raise gtk-doc requeriment as reported in bug #331407 by Siim Ainsaar,
+  marlon and others. Drop old testing versions.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> glib-2.22.5.ebuild:
   arm stable, bug #314899
