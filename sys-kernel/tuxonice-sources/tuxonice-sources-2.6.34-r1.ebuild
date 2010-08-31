@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.34-r1.ebuild,v 1.1 2010/07/13 08:11:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.34-r1.ebuild,v 1.2 2010/08/31 09:51:06 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -33,8 +33,8 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI}"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="${RDEPEND}
-		>=sys-apps/tuxonice-userui-1.0
-		>=sys-power/hibernate-script-2.0"
+	>=sys-apps/tuxonice-userui-1.0
+	|| ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils )"
 
 K_EXTRAELOG="If there are issues with this kernel, please direct any
 queries to the tuxonice-users mailing list:
