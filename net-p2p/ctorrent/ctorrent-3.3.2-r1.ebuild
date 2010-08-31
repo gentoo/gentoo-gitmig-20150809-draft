@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-3.3.2-r1.ebuild,v 1.2 2010/08/31 03:58:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ctorrent-3.3.2-r1.ebuild,v 1.3 2010/08/31 12:35:17 hwoarang Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dtorrent/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
