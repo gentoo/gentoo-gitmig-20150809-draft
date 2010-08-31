@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/primer3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.22 2010/03/07 20:53:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.23 2010/08/31 12:16:41 xarthisius Exp $
+
+*primer3-1.1.4-r2 (31 Aug 2010)
+
+  31 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -primer3-1.1.4-r1.ebuild, +primer3-1.1.4-r2.ebuild,
+  +files/primer3-1.1.4-ldflags.patch:
+  Respect CC and LDFLAGS wrt bug 335225. Thanks to Diego for the report.
 
 *primer3-1.1.4-r1 (07 Mar 2010)
 
