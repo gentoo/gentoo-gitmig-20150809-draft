@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.7 2010/07/22 14:35:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.8 2010/08/31 14:54:34 s4t4n Exp $
 
 inherit eutils
 
@@ -20,7 +20,17 @@ src_unpack() {
 	cd "${S}"/src/dockapp
 
 	#Fix bug #95959
-	epatch "${FILESDIR}"/${P}-Makefile.in.patch
+	epatch "${FILESDIR}"/"${P}-Makefile.in.patch"
+
+	#Fix bug #333997
+	sed -i 's/-o yawmppp/$(LDFLAGS) -o yawmppp/' Makefile.in
+	sed -i 's/-o yagetmodemspeed/$(LDFLAGS) -o yagetmodemspeed/' Makefile.in
+	cd ../thinppp
+	sed -i 's/-o yawmppp.thin/$(LDFLAGS) -o yawmppp.thin/' Makefile.in
+	cd ../gtklog
+	sed -i 's/-o yawmppp.log/$(LDFLAGS) -o yawmppp.log/' Makefile.in
+	cd ../gtksetup
+	sed -i 's/-o yawmppp.pref/$(LDFLAGS) -o yawmppp.pref/' Makefile.in
 }
 
 src_compile() {
