@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmfrog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.10 2010/05/18 12:56:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.11 2010/08/31 13:00:34 s4t4n Exp $
+
+  31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmfrog-0.2.0-r1.ebuild:
+  Honour LDFLAGS. Closes bug #335388.
+  wmfrog-0.2.0.ebuild:
+  Wiped out older revision.
 
   18 May 2010; Markos Chandras <hwoarang@gentoo.org> wmfrog-0.2.0-r1.ebuild:
   Stable on amd64 wrt bug #280361
