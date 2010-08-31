@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.7 2009/01/19 15:21:36 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.8 2010/08/31 08:51:59 s4t4n Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile()
 
 	cd "${S}"
 	xmkmf -a
-	emake CDEBUGFLAGS="${CFLAGS}" || die "make failed"
+	emake CDEBUGFLAGS="${CFLAGS}" LDOPTIONS="${LDFLAGS}" || die "make failed"
 }
 
 src_install()
