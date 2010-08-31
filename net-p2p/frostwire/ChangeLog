@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/frostwire
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.9 2010/08/30 20:53:35 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.10 2010/08/31 20:10:19 sochotnicky Exp $
+
+  31 Aug 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  frostwire-4.20.9.ebuild:
+  Added forgotten dependency on dev-java/commons-codec
 
 *frostwire-4.20.9 (30 Aug 2010)
 

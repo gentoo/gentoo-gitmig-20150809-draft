@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.20.9.ebuild,v 1.1 2010/08/30 20:53:35 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.20.9.ebuild,v 1.2 2010/08/31 20:10:19 sochotnicky Exp $
 
 EAPI=2
 
@@ -17,6 +17,7 @@ IUSE=""
 RDEPEND="dev-java/aopalliance
 	dev-java/commons-logging
 	dev-java/commons-net
+	dev-java/commons-codec
 	dev-java/icu4j:0
 	dev-java/jgoodies-looks:1.2
 	dev-java/jmdns
