@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.7 2010/05/28 15:25:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.8 2010/08/31 19:41:52 a3li Exp $
+
+  31 Aug 2010; Alex Legler <a3li@gentoo.org> shoulda-2.10.3.ebuild:
+  Add REE 1.8 support.
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> shoulda-2.10.3.ebuild:
   Marked ~ppc for bug #302560.
