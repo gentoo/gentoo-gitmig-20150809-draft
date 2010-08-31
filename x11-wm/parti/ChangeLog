@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/parti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.1 2010/08/31 09:04:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.2 2010/08/31 12:29:29 xmw Exp $
+
+*parti-9999 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> +parti-9999.ebuild,
+  +files/parti-9999-constants.pxi:
+  Added LiveVCS ebuild, needs wimpiggy/lowlevel/constants.pxi.
 
 *parti-0.0.6 (31 Aug 2010)
 
