@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.6 2010/08/28 10:24:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.7 2010/08/31 06:31:01 wired Exp $
 
 EAPI=3
 
@@ -41,6 +41,7 @@ DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
+	x11-misc/dmenu
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
@@ -54,7 +55,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake PREFIX="/usr"
+	if [[ ${PV} == *9999* ]]; then
+		emake PREFIX="/usr"
+	else
+		emake PREFIX="/usr" VERSION="${PV}"
+	fi
 }
 
 src_install() {
