@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/mercator
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.10 2009/10/25 15:22:00 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.11 2010/08/31 02:26:08 mr_bones_ Exp $
+
+*mercator-0.2.8 (31 Aug 2010)
+
+  31 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +mercator-0.2.8.ebuild:
+  version bump
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> mercator-0.2.7.ebuild:
   amd64/x86 stable, bug #288829
