@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/KochMorse
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/KochMorse/ChangeLog,v 1.1 2010/08/31 13:09:02 xmw Exp $
+
+*KochMorse-0.99.6 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> +KochMorse-0.99.6.ebuild,
+  +metadata.xml:
+  Initial import, fixes bug #311871.
+
