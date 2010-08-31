@@ -1,0 +1,30 @@
+diff -urNp banshee-1-1.7.4.orig/data/desktop-files/Makefile.am banshee-1-1.7.4/data/desktop-files/Makefile.am
+--- banshee-1-1.7.4.orig/data/desktop-files/Makefile.am	2010-08-29 12:47:14.119617115 +0530
++++ banshee-1-1.7.4/data/desktop-files/Makefile.am	2010-08-29 12:56:42.166617090 +0530
+@@ -16,8 +16,8 @@ endif
+ 
+ @INTLTOOL_DESKTOP_RULE@
+ 
+-install-data-hook:
+-	test "$(top_srcdir)" = "$(top_builddir)" && update-desktop-database $(DESTDIR)$(datadir)/applications || :
++#install-data-hook:
++#	test "$(top_srcdir)" = "$(top_builddir)" && update-desktop-database $(DESTDIR)$(datadir)/applications || :
+ 
+ EXTRA_DIST = \
+ 	$(desktop_in_files) \
+diff -urNp banshee-1-1.7.4.orig/src/Extensions/Banshee.AmazonMp3/Makefile.am banshee-1-1.7.4/src/Extensions/Banshee.AmazonMp3/Makefile.am
+--- banshee-1-1.7.4.orig/src/Extensions/Banshee.AmazonMp3/Makefile.am	2010-08-29 12:47:14.366617116 +0530
++++ banshee-1-1.7.4/src/Extensions/Banshee.AmazonMp3/Makefile.am	2010-08-29 12:51:08.230617164 +0530
+@@ -22,9 +22,9 @@ mime_DATA = banshee-amz.xml
+ bamz: bamz.in
+ 	@echo '  GEN   $@'; sed 's,@bansheedir@,$(pkglibdir),g' < $< > $@
+ 
+-define EXTRA_INSTALL_DATA_HOOK
+-	test "$(top_srcdir)" = "$(top_builddir)" && update-mime-database -V $(DESTDIR)$(datadir)/mime || :
+-endef
++#define EXTRA_INSTALL_DATA_HOOK
++#	test "$(top_srcdir)" = "$(top_builddir)" && update-mime-database -V $(DESTDIR)$(datadir)/mime || :
++#endef
+ 
+ include $(top_srcdir)/build/build.mk
+ 

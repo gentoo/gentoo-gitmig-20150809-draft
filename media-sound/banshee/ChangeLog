@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.117 2010/07/12 18:03:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.118 2010/08/31 11:44:15 ford_prefect Exp $
+
+*banshee-1.7.4 (31 Aug 2010)
+
+  31 Aug 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.7.4.ebuild, +files/banshee-1.7.4-fix-collisions.patch,
+  +files/banshee-1.7.4-fix-gdu-build.patch,
+  +files/banshee-1.7.4-make-webkit-optional.patch, metadata.xml:
+  Add 1.7.4 (masked). This is a development release, with a bunch of new
+  features (Amazon support, etc.), deps (gtk-sharp-beans, gio-sharp,
+  gstreamer-sharp, none of which are in-tree), and bugs.
 
   12 Jul 2010; Christian Faulhammer <fauli@gentoo.org> banshee-1.6.1.ebuild:
   stable x86, bug 324241
