@@ -1,17 +1,28 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.1.ebuild,v 1.4 2010/08/09 15:48:01 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.3.ebuild,v 1.1 2010/08/31 22:01:36 scarabeus Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="ar ast be bg ca cs da de el en_GB eo es et eu fi fr ga gl hi hne hr
-hu is it ja km lt lv mai ms nb nds nl nn oc pl pt pt_BR ro ru se si sk sl sr sv
-tr uk zh_CN zh_TW"
+if [[ ${PV} == *9999* ]] ; then
+	KMNAME="extragear/network"
+else
+	# upstream likes to skip that _ in beta releases
+	MY_PV="${PV/_/}"
+	MY_P="${PN}-${MY_PV}"
+
+	KDE_LINGUAS="ar ast be bg ca ca@valencia cs da de el en_GB eo es et eu
+		fi fr ga gl hi hne hr hu is it ja km lt lv mai ms nb nds nl nn oc
+		pl pt pt_BR ro ru se si sk sl sr sr@ijekavian sr@ijekavianlatin
+		sr@latin sv tr uk zh_CN zh_TW"
+	SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
+	S="${WORKDIR}"/"${MY_P}"
+fi
+
 inherit kde4-base
 
 DESCRIPTION="A BitTorrent program for KDE."
 HOMEPAGE="http://ktorrent.org/"
-SRC_URI="http://ktorrent.org/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
@@ -21,7 +32,7 @@ IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer
 +upnp webinterface +zeroconf"
 
 COMMONDEPEND="
-	>=net-libs/libktorrent-1.0.1
+	>=net-libs/libktorrent-1.0.3
 	mediaplayer? ( >=media-libs/taglib-1.5 )
 	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL} )
 	rss? (
