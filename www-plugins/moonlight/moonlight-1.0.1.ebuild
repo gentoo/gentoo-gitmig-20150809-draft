@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.3 2009/10/25 10:22:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.4 2010/08/31 15:38:33 ssuominen Exp $
 
 EAPI=2
 
-inherit mono multilib nsplugins
+inherit eutils mono multilib nsplugins
 
 MY_P=moon-${PV}
 DESCRIPTION="Moonlight is an open source implementation of Silverlight"
@@ -47,6 +47,8 @@ src_prepare() {
 		-e "s:TEST_SUBDIR = test::"	\
 		-e "s:TOOLS_SUBDIR = tools::"	\
 		 Makefile.in
+
+	epatch "${FILESDIR}"/${P}-glibc-212.patch
 }
 
 src_configure() {
