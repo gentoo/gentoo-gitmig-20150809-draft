@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.35-r1.ebuild,v 1.1 2010/08/19 13:28:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.35-r1.ebuild,v 1.2 2010/08/31 11:37:26 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -15,11 +15,19 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://www.kernel.org/pub/linux/kernel/people/ck/patches/2.6/"
 
 CK_VERSION="1"
+CK_REVISION=""
 K_SECURITY_UNSUPPORTED="1"
 
-CK_URI="mirror://kernel/linux/kernel/people/ck/patches/2.6/${PV}/${PV}-ck${CK_VERSION}/patch-${PV}-ck${CK_VERSION}.bz2"
+if [[ -z "${CK_REVISION}" ]]; then
+	CK_URI="mirror://kernel/linux/kernel/people/ck/patches/2.6/${PV}/${PV}-ck${CK_VERSION}/patch-${PV}-ck${CK_VERSION}.bz2"
+	UNIPATCH_LIST="${DISTDIR}/patch-${PV}-ck${CK_VERSION}.bz2"
+else
+	# This is ck${CK_VERSION} but resynced to apply cleanly to stable kernel
+	# release:
+	CK_URI="mirror://gentoo/patch-${PV}-ck${CK_VERSION}-r${CK_REVISION}.bz2"
+	UNIPATCH_LIST="${DISTDIR}/patch-${PV}-ck${CK_VERSION}-r${CK_REVISION}.bz2"
+fi
 
-UNIPATCH_LIST="${DISTDIR}/patch-${PV}-ck${CK_VERSION}.bz2"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_URI}"
 IUSE=""

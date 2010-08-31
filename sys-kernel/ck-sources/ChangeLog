@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.178 2010/08/19 13:28:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.179 2010/08/31 11:37:26 nelchael Exp $
+
+*ck-sources-2.6.35-r2 (31 Aug 2010)
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.33.ebuild, -ck-sources-2.6.33-r1.ebuild,
+  -ck-sources-2.6.34.ebuild, ck-sources-2.6.34-r1.ebuild,
+  +ck-sources-2.6.34-r2.ebuild, -ck-sources-2.6.35.ebuild,
+  ck-sources-2.6.35-r1.ebuild, +ck-sources-2.6.35-r2.ebuild:
+  Revision bump for new genpatches, add easy way to use resynced version of
+  ck patch for given kernel. ck1-r1 for 2.6.34-r2 and 2.6.35-r2 is the same
+  version as for base kernel with a small update so it applies cleanly on
+  stable kernels (2.6.34.6 and 2.6.35.4).
 
 *ck-sources-2.6.35-r1 (19 Aug 2010)
 *ck-sources-2.6.35 (19 Aug 2010)
