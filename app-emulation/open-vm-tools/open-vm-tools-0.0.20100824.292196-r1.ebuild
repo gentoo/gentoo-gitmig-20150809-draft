@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100824.292196.ebuild,v 1.1 2010/08/27 20:23:28 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100824.292196-r1.ebuild,v 1.1 2010/08/31 16:56:24 vadimk Exp $
 
 EAPI="2"
 
