@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.009.ebuild,v 1.1 2010/08/22 14:07:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.011.ebuild,v 1.1 2010/08/31 12:38:24 flameeyes Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ else
 	MY_PV="${PV}"
 fi
 
-SRC_URI="http://github.com/solutious/${PN}/tarball/v${MY_PV} -> ${PN}-git-${PV}.tgz"
+SRC_URI="http://github.com/solutious/${PN}/tarball/${MY_PV} -> ${PN}-git-${PV}.tgz"
 S="${WORKDIR}/solutious-${PN}-*"
 
 ruby_add_rdepend '
