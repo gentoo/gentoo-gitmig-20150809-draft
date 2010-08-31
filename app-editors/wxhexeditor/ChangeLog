@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/wxhexeditor
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.1 2010/08/31 04:16:58 dirtyepic Exp $
+
+*wxhexeditor-0.09 (31 Aug 2010)
+
+  31 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> +wxhexeditor-0.09.ebuild,
+  +files/wxhexeditor-0.09-gcc45.patch, +metadata.xml:
+  Initial import. Based on ebuilds by Yoshi Watanabe and Philipp Richter in
+  bug #283994.
+
