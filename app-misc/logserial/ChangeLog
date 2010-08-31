@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/logserial
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.7 2009/07/21 16:41:09 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.8 2010/08/31 13:04:55 hwoarang Exp $
+
+  31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> logserial-0.4.2.ebuild:
+  Stable on amd64 wrt bug #335344
 
   21 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   logserial-0.4.2.ebuild, +files/logserial-0.4.2-gentoo.patch:
