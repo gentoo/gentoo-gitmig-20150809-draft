@@ -1,6 +1,12 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.28 2010/04/24 16:32:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.29 2010/08/31 14:54:35 nelchael Exp $
+
+*servlet-api-3.0 (31 Aug 2010)
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +servlet-api-3.0.ebuild:
+  Add servletapi virtual for Servlet API 3.0.
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> servlet-api-2.2.ebuild,
   servlet-api-2.3.ebuild:
