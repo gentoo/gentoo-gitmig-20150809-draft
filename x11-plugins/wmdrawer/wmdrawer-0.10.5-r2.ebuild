@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r2.ebuild,v 1.7 2008/12/02 10:51:54 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r2.ebuild,v 1.8 2010/08/31 13:31:32 s4t4n Exp $
 
 inherit eutils
 
@@ -30,10 +30,17 @@ src_unpack () {
 
 	# Do not auto-strip binaries
 	sed -i 's/	strip $@//' Makefile || die
+
+	# Honour Gentoo LDFLAGS
+	sed -i 's/$(CC) -o/$(CC) $(REAL_LDFLAGS) -o/' Makefile || die
+}
+
+src_compile() {
+	emake REAL_LDFLAGS="${LDFLAGS}" || die "make failed"
 }
 
 src_install() {
 	dobin wmdrawer
 	dodoc README TODO AUTHORS ChangeLog wmdrawerrc.example
-	doman wmdrawer.1
+	doman doc/wmdrawer.1x.gz
 }
