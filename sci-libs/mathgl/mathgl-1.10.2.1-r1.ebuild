@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.2 2010/07/01 10:09:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.3 2010/08/31 14:45:04 grozin Exp $
 
 EAPI=3
 
@@ -138,5 +138,8 @@ pkg_prerm() {
 		pkg uninstall ${PN}
 		EOF
 	fi
+}
+
+pkg_postrm() {
 	use python && python_mod_cleanup ${PN}.py
 }
