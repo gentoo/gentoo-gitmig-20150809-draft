@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11896 2010/08/31 09:47:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11897 2010/08/31 11:36:00 ford_prefect Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1158,9 +1158,9 @@ dev-lisp/gcl
 # Mask unstable releases. Read the warning!
 =app-office/gnucash-2.3*
 
-# Peter Alfredsen <loki_val@gentoo.org> (01 June 2009)
+# Arun Raghavan <ford_prefect@gentoo.org> (31 Aug 2009)
 # Development version, Work-In-Progress
-=media-sound/banshee-1.5*
+=media-sound/banshee-1.7*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Apr 2009)
 # Mask libopensync 0.38 since no plugin was fixed for this
