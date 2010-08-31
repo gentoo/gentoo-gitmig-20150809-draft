@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.75 2010/08/23 20:53:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.76 2010/08/31 11:49:45 pacho Exp $
+
+  31 Aug 2010; Pacho Ramos <pacho@gentoo.org> sabayon-2.30.0.ebuild:
+  app-admin/pessulus is required as reported in bug #330843 by Piotr Dlubisz
 
   23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> sabayon-2.30.0.ebuild:
   Add missing gnome-doc-utils dependency.

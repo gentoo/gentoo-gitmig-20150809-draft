@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.5 2010/08/23 20:53:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.6 2010/08/31 11:49:45 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -27,6 +27,7 @@ COMMON_DEPEND=">=dev-lang/python-2.4
 	x11-base/xorg-server[kdrive]"
 
 RDEPEND="${COMMON_DEPEND}
+	app-admin/pessulus
 	dev-python/pyxdg
 	dev-libs/libxml2[python]
 	>=gnome-base/gconf-2.8.1
