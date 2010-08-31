@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.89 2010/07/01 13:58:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.90 2010/08/31 00:57:31 jer Exp $
+
+*nessus-libraries-2.3.1-r2 (31 Aug 2010)
+
+  31 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  -nessus-libraries-2.3.1-r1.ebuild, +nessus-libraries-2.3.1-r2.ebuild,
+  files/nessus-libraries-2.3.1-ldflags.patch:
+  Respect LDFLAGS (bug #334405).
 
   01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   nessus-libraries-2.2.9.ebuild,

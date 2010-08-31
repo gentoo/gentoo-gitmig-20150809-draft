@@ -1,19 +1,30 @@
-diff -ru nessus-libraries~/libnessus/Makefile nessus-libraries/libnessus/Makefile
---- nessus-libraries~/libnessus/Makefile	2007-01-21 19:49:30.000000000 +0100
-+++ nessus-libraries/libnessus/Makefile	2007-01-21 20:17:59.000000000 +0100
-@@ -101,7 +101,7 @@
+--- a/libnessus/Makefile	2004-08-31 19:15:07.000000000 +0200
++++ b/libnessus/Makefile	2010-08-31 02:47:45.000000000 +0200
+@@ -100,8 +100,8 @@
+ snprintf.o : snprintf.c
  	$(LIBTOOL) $(CC) $(CIPHER) $(DEFS) $(INCLUDE) $(CFLAGS) -c snprintf.c	
  libnessus.la: $(OBJS)
- 	$(LIBTOOL) $(CC) -o libnessus.la $(LO_OBJS) -rpath ${libdir} \
+-	$(LIBTOOL) $(CC) -o libnessus.la $(LO_OBJS) -rpath ${libdir} \
 -	-version-info ${PACKAGE_VERSION}
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o libnessus.la $(LO_OBJS) -rpath ${libdir} \
 +	-version-info ${PACKAGE_VERSION} ${PCAP_FLAG} ${SSL_FLAG}
  
  install : libnessus.la
  	test -d $(DESTDIR)${libdir} || $(INSTALL_DIR) -m 755 $(DESTDIR)${libdir}
-diff -ru nessus-libraries~/nessus.tmpl.in nessus-libraries/nessus.tmpl.in
---- nessus-libraries~/nessus.tmpl.in	2007-01-21 19:49:30.000000000 +0100
-+++ nessus-libraries/nessus.tmpl.in	2007-01-21 20:17:45.000000000 +0100
-@@ -61,6 +61,9 @@
+--- a/libhosts_gatherer/Makefile	2003-04-07 04:06:49.000000000 +0200
++++ b/libhosts_gatherer/Makefile	2010-08-31 02:47:45.000000000 +0200
+@@ -22,7 +22,7 @@
+ 	$(LIBTOOL) --finish $(DESTDIR)${libdir}
+ 	
+ libhosts_gatherer.la : $(OBJS)
+-	$(LIBTOOL) $(CC) -o libhosts_gatherer.la $(LO_OBJS) -rpath ${libdir} \
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o libhosts_gatherer.la $(LO_OBJS) -rpath ${libdir} \
+ 	-version-info ${PACKAGE_VERSION}
+ 	        
+ hg_utils.o : hg_utils.h hosts_gatherer.h hg_utils.c
+--- a/nessus.tmpl.in	2003-02-17 15:52:01.000000000 +0100
++++ b/nessus.tmpl.in	2010-08-31 02:47:45.000000000 +0200
+@@ -61,10 +61,12 @@
  #
  BUILD_PCAP=@BUILD_PCAP@
  
@@ -23,3 +34,7 @@ diff -ru nessus-libraries~/nessus.tmpl.in nessus-libraries/nessus.tmpl.in
  
  # Some defines you may want to modify
  DEFS=@DEFS@ $(DEBUG_SSL) $(USE_CIPHER) $(DEBUG)
+-LDFLAGS=
+ 
+ # Your C compiler
+ CC=@CC@
