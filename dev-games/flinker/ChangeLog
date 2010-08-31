@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/flinker
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/ChangeLog,v 1.6 2008/04/08 06:08:03 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/ChangeLog,v 1.7 2010/08/31 10:37:36 tupone Exp $
+
+  31 Aug 2010; Alfredo Tupone <tupone@gentoo.org> flinker-1.72.ebuild:
+  Respect LDFLAGS. Bug #335276 by flameeyes@gentoo.org
 
   08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> flinker-1.72.ebuild:
   fix compile with newer linux-headers (bug #215918)

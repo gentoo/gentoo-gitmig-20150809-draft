@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/flinker-1.72.ebuild,v 1.6 2008/04/08 06:08:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/flinker-1.72.ebuild,v 1.7 2010/08/31 10:37:36 tupone Exp $
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -18,9 +19,7 @@ DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/unistd/s:^//::' \
 		-e 's:asm/io.h:sys/io.h:' \
@@ -30,7 +29,7 @@ src_unpack() {
 	echo >> cartlib.c
 }
 src_compile() {
-	$(tc-getCC) -o FLinker ${CFLAGS} fl.c || die
+	$(tc-getCC) ${LDFLAGS} -o FLinker ${CFLAGS} fl.c || die
 }
 
 src_install() {
