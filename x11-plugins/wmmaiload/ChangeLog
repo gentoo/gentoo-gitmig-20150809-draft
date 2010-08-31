@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.32 2009/06/04 00:21:21 tcunha Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.33 2010/08/31 13:52:38 s4t4n Exp $
+
+  31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmmaiload-2.2.1-r1.ebuild,
+  files/wmmaiload-2.2.1-checkthread.patch:
+  Fixed nasty bug the wmmaiload compilation fails and a *binary version present in the tarball* is installed.
+  Fixes bug #334001.
 
   04 Jun 2009; Tiago Cunha <tcunha@gentoo.org> wmmaiload-2.2.1-r1.ebuild:
   stable sparc, bug 215651
