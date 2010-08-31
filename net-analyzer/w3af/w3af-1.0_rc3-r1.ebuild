@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc3.ebuild,v 1.1 2010/08/31 09:37:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc3-r1.ebuild,v 1.1 2010/08/31 12:29:41 hwoarang Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ RDEPEND="dev-python/beautifulsoup
 S=${WORKDIR}/${PN}
 
 src_prepare(){
-	rm -r extlib/{BeautifulSoup.py,fpconst-0.7.2,jsonpy,nltk,nltk_contrib,pygoogle,pyPdf,scapy,SOAPpy,yaml} || die
+	rm -r extlib/{BeautifulSoup.py,fpconst-0.7.2,nltk,nltk_contrib,pyPdf,scapy,SOAPpy,yaml} || die
 	rm readme/{GPL,INSTALL} || die
 }
 
