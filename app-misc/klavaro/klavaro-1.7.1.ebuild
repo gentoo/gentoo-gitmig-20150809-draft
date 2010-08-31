@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.5.0.ebuild,v 1.1 2010/05/26 10:16:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.7.1.ebuild,v 1.1 2010/08/31 22:04:34 scarabeus Exp $
 
 EAPI=3
 
