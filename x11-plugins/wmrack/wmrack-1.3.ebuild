@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/wmrack-1.3.ebuild,v 1.2 2008/06/28 07:13:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrack/wmrack-1.3.ebuild,v 1.3 2010/08/31 10:43:52 s4t4n Exp $
 
 inherit multilib toolchain-funcs
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	sed -i -e 's:gcc:$(CC):' "${S}"/Makefile.in
+	sed -i -e 's:$(OBJECTS) -o:$(OBJECTS) $(LDFLAGS) -o:' "${S}"/Makefile.in
 }
 
 src_compile() {
