@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.23 2007/07/22 04:50:07 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.24 2010/08/31 09:48:41 s4t4n Exp $
+
+  31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmmon-1.0_beta2-r3.ebuild:
+  Honour LDFLAGS. Closes bug #334919.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmmon-1.0_beta2-r2.ebuild, wmmon-1.0_beta2-r3.ebuild:

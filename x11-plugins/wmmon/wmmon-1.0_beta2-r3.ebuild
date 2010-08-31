@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.9 2010/07/22 14:39:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.10 2010/08/31 09:48:41 s4t4n Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"/${PN}
 	epatch "${FILESDIR}"/${P}-kernel26-v2.patch
 	sed -i -e "s|-O2|${CFLAGS}|" Makefile
+	sed -i -e "s|cc -o wmmon|cc ${LDFLAGS} -o wmmon|" Makefile
 }
 
 src_compile() {
