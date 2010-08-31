@@ -1,0 +1,13 @@
+# ChangeLog for x11-wm/parti
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.1 2010/08/31 09:04:56 xmw Exp $
+
+*parti-0.0.6 (31 Aug 2010)
+
+  31 Aug 2010; Michael Weber <xmw@gentoo.org> +parti-0.0.6.ebuild,
+  +files/parti-0.0.6-python-2.6-sets-deprecation.patch,
+  +files/parti-0.0.6-python-import.patch, +metadata.xml:
+  Initial commit, fixed bug #271527, thanks to Pinkbyte <pinkbyte@mail.ru>,
+  Dan <dtyler@csh.rit.edu> and Eric Johnson <tokenmathematician@gmail.com>
+  for their great work on bug #271527.
+

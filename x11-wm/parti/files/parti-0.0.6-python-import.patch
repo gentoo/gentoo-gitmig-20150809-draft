@@ -1,0 +1,15 @@
+upsream changeset fedd8b2841
+hg clone https://partiwm.googlecode.com/hg/ partiwm
+hg diff -c fedd8b2841
+
+diff -r d35431b2028f -r fedd8b284197 xpra/server.py
+--- a/xpra/server.py	Tue May 05 21:49:16 2009 +0000
++++ b/xpra/server.py	Sun May 10 22:15:46 2009 +0000
+@@ -14,6 +14,7 @@
+ import cairo
+ import os
+ import os.path
++import sys
+ import subprocess
+ 
+ from wimpiggy.wm import Wm
