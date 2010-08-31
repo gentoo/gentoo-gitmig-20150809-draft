@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.142 2010/08/30 19:30:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.143 2010/08/31 04:13:23 phajdan.jr Exp $
+
+  31 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> apache-2.2.16.ebuild:
+  x86 stable wrt security bug #330195
 
   30 Aug 2010; Jeroen Roovers <jer@gentoo.org> apache-2.2.16.ebuild:
   Stable for PPC (bug #330195).
