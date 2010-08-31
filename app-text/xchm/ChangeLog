@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xchm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.11 2009/09/27 20:00:09 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.12 2010/08/31 00:17:44 dirtyepic Exp $
+
+  31 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> -xchm-1.14.ebuild,
+  -xchm-1.15.ebuild:
+  Remove old.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> xchm-1.16.ebuild:
   ppc stable #286591
