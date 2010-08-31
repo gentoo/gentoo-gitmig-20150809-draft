@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsvencd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.7 2006/10/25 10:54:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.8 2010/08/31 10:51:13 s4t4n Exp $
+
+  31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmsvencd-0.5.0.ebuild:
+  Honour LDFLAGS. Closes bug #334613.
 
   25 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmsvencd-0.5.0.ebuild:
   Added missing libxpm dependancy. Closes bug #150657.
