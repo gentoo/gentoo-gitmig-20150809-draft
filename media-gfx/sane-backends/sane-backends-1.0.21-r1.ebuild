@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.1 2010/09/01 20:56:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.2 2010/09/01 21:21:56 phosphan Exp $
 
 EAPI="1"
 
@@ -160,6 +160,7 @@ src_unpack() {
 	hpaio
 	EOF
 	epatch "${DISTDIR}/${P}-i18n.patch"
+	epatch "${FILESDIR}/xerox-grey.patch"
 }
 
 src_compile() {
