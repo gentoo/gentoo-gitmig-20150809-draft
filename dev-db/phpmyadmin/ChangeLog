@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.394 2010/08/27 16:55:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.395 2010/09/01 08:06:23 a3li Exp $
+
+*phpmyadmin-3.3.6 (01 Sep 2010)
+
+  01 Sep 2010; Alex Legler <a3li@gentoo.org> +phpmyadmin-3.3.6.ebuild:
+  Version bump, fixes CVE-2010-3056
 
   27 Aug 2010; Raúl Porcel <armin76@gentoo.org> phpmyadmin-3.3.5.1.ebuild:
   alpha/sparc stable wrt #302745
