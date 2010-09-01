@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.3.ebuild,v 1.4 2010/07/09 17:09:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.3.ebuild,v 1.5 2010/09/01 18:36:55 nyhm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -8,8 +8,7 @@ inherit autotools eutils games
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.gnu.org/software/xboard/"
 SRC_URI="mirror://gnu/xboard/${P}.tar.gz
-	mirror://gentoo/${PN}.png
-	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
