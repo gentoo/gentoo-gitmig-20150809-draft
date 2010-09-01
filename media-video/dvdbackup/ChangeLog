@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdbackup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.25 2010/09/01 18:58:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.26 2010/09/01 19:41:40 billie Exp $
+
+  01 Sep 2010; Daniel Pielmeier <billie@gentoo.org> dvdbackup-0.4.1.ebuild:
+  Fix dependencies and configuration.
 
   01 Sep 2010; Sebastian Pipping <sping@gentoo.org> dvdbackup-0.4.1.ebuild:
   Add virtual/libintl to deps of 0.4.1. Caught by billie.
