@@ -1,6 +1,9 @@
 # ChangeLog for games-action/rune
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.18 2008/09/26 18:24:57 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.19 2010/09/01 21:30:37 mr_bones_ Exp $
+
+  01 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org> rune-1.07-r2.ebuild:
+  EAPI=2; clean up SRC_URI
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> rune-1.07-r2.ebuild:
   Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds() and
