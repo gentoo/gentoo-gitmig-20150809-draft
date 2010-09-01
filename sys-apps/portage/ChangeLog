@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.716 2010/08/30 22:16:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.717 2010/09/01 23:03:55 zmedico Exp $
+
+*portage-2.2_rc73 (01 Sep 2010)
+
+  01 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc73.ebuild:
+  2.2_rc73 version bump. This fixes bug #335242 (grammer fix in emerge man
+  page), bug #335340 (customizable PORTAGE_BZIP2_COMMAND), and bug #335439
+  (AttributeError involving _eroot). Bug #210077 tracks all bugs fixed since
+  2.1.8.3 and 2.2_rc67.
 
   30 Aug 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Bug #267103 - Add /etc/portage to CONFIG_PROTECT_MASK.
