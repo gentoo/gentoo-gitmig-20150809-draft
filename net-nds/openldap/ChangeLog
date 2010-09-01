@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.371 2010/08/31 04:26:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.372 2010/09/01 03:13:06 phajdan.jr Exp $
+
+  01 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  openldap-2.4.23.ebuild:
+  x86 stable wrt security bug #323777
 
 *openldap-2.4.23 (30 Aug 2010)
 
