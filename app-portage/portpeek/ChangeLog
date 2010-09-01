@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.83 2010/08/31 14:48:28 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.84 2010/09/01 14:27:53 mpagano Exp $
+
+*portpeek-1.5.9.0-r1 (01 Sep 2010)
+
+  01 Sep 2010; Mike Pagano <mpagano@gentoo.org> +portpeek-1.5.9.0-r1.ebuild:
+  Add block for gentoolkit > 2.4.6.1-r1. Bug #335493
 
 *portpeek-1.5.9.0 (31 Aug 2010)
 
