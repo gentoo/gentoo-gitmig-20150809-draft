@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.36 2010/09/01 09:07:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.37 2010/09/01 09:22:13 djc Exp $
+
+*couchdb-1.0.1-r1 (01 Sep 2010)
+
+  01 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.1-r1.ebuild:
+  Set shell to nologin for couchdb user (bug 334857).
 
   01 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.10.2.ebuild,
   -couchdb-1.0.0.ebuild:
