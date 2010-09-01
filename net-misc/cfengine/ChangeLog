@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.104 2010/08/29 10:57:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.105 2010/09/01 20:23:20 idl0r Exp $
+
+*cfengine-3.0.5_p1 (01 Sep 2010)
+
+  01 Sep 2010; Christian Ruppert <idl0r@gentoo.org> +cfengine-3.0.5_p1.ebuild,
+  +files/cfengine-3.0.5_p1-configure.ac.patch, metadata.xml:
+  Add cfengine-3.0.5_p1. Add several new useflags. Fix configure.ac to allow
+  the use of configure switches properly. Some QA fixes.
 
   29 Aug 2010; Christian Ruppert <idl0r@gentoo.org> cfengine-3.0.4.ebuild,
   cfengine-3.0.5.ebuild:
