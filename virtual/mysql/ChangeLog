@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.17 2010/08/31 12:31:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.18 2010/09/01 03:45:35 phajdan.jr Exp $
+
+  01 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mysql-5.1.ebuild:
+  x86 stable wrt security bug #321791
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> mysql-5.1.ebuild:
   Stable on amd64 wrt bug #321791
