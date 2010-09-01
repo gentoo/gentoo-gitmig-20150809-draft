@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3-r2.ebuild,v 1.3 2010/08/11 13:56:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3-r2.ebuild,v 1.4 2010/09/01 23:51:12 hwoarang Exp $
 
 EAPI="2"
 
@@ -139,6 +139,7 @@ src_configure() {
 }
 
 src_compile() {
+	append-flags -D__STDC_FORMAT_MACROS
 	# first build the application
 	cmake-utils_src_compile
 	# and then go on with plugins
