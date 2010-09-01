@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.8 2009/11/12 21:28:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.9 2010/09/01 20:48:12 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -8,8 +8,7 @@ inherit eutils games
 DESCRIPTION="A puzzle game inspired by Albert Einstein"
 HOMEPAGE="http://games.flowix.com/en/"
 SRC_URI="http://games.flowix.com/files/einstein/${P}-src.tar.gz
-	mirror://gentoo/${PN}.png
-	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
