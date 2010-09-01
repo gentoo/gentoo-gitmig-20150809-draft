@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.172 2010/05/11 20:31:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.173 2010/09/01 20:56:24 phosphan Exp $
+
+*sane-backends-1.0.21-r1 (01 Sep 2010)
+
+  01 Sep 2010; Patrick Kursawe <phosphan@gentoo.org>
+  +sane-backends-1.0.21-r1.ebuild:
+  Bug #322291: udev rules were overwritten by defaults.
 
   11 May 2010; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.21.ebuild:
