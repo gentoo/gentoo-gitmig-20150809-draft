@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.231 2010/08/28 22:38:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.232 2010/09/01 15:32:50 flameeyes Exp $
+
+*lvm2-2.02.73-r1 (01 Sep 2010)
+
+  01 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +lvm2-2.02.73-r1.ebuild, +files/lvm2-2.02.73-asneeded.patch:
+  Add patch to fix linking when using --as-needed, to fix bug #335205.
 
   28 Aug 2010; Markos Chandras <hwoarang@gentoo.org> lvm2-2.02.73.ebuild:
   Stable on amd64 wrt bug #334087
