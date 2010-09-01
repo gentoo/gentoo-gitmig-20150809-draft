@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/wumpus
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.12 2008/02/05 21:01:22 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.13 2010/09/01 07:11:19 tupone Exp $
+
+  01 Sep 2010; Alfredo Tupone <tupone@gentoo.org> wumpus-1.4.ebuild:
+  Respect LDFLAGS. Bug #335469 by flameeyes@gentoo.org
 
   05 Feb 2008; Fabian Groffen <grobian@gentoo.org> wumpus-1.4.ebuild:
   Dropped ppc-macos keyword, see you in prefix

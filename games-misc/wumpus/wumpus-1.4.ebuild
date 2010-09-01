@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.13 2008/02/05 21:01:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.14 2010/09/01 07:11:19 tupone Exp $
 
 inherit toolchain-funcs games
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	touch pathnames.h
 	[ -z "${PAGER}" ] && PAGER=/usr/bin/less
-	$(tc-getCC) -Dlint -D_PATH_PAGER=\"${PAGER}\" \
+	$(tc-getCC) ${LDFLAGS} -Dlint -D_PATH_PAGER=\"${PAGER}\" \
 		-D_PATH_WUMPINFO=\""${GAMES_DATADIR}"/${PN}/wump.info\" ${CFLAGS} \
 		-o wump wump.c || die "compile failed"
 }
