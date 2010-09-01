@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30b.ebuild,v 1.1 2010/07/29 22:50:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30b.ebuild,v 1.2 2010/09/01 02:20:31 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+music"
 
-RDEPEND="dev-python/pygame"
+RDEPEND="dev-python/pygame
+	media-libs/sdl-mixer[vorbis]"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
