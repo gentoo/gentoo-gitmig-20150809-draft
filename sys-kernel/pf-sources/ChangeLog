@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.1 2010/09/01 16:27:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.2 2010/09/01 16:36:03 wired Exp $
+
+  01 Sep 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added hwoarang in maintainer list
 
 *pf-sources-2.6.35_p7 (01 Sep 2010)
 *pf-sources-2.6.34_p7 (01 Sep 2010)
