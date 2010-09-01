@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.4 2009/02/22 15:55:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.5 2010/09/01 21:01:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,8 +10,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 DESCRIPTION="Fast-paced first-person-shooter online multiplayer game, similar to Tribes"
 HOMEPAGE="http://legendsthegame.net/"
 SRC_URI="http://legendsthegame.net/files/${MY_P}.run
-	mirror://gentoo/${PN}.png
-	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
+	mirror://gentoo/${PN}.png"
 
 LICENSE="as-is"
 SLOT="0"
