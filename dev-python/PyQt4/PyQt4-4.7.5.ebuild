@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.4.ebuild,v 1.3 2010/09/01 09:04:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.5.ebuild,v 1.1 2010/09/01 09:04:59 hwoarang Exp $
 
 EAPI="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
@@ -20,7 +20,7 @@ LICENSE="|| ( GPL-2 GPL-3 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="X assistant +dbus debug doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.10.3
+DEPEND=">=dev-python/sip-4.11
 	>=x11-libs/qt-core-${QTVER}:4
 	>=x11-libs/qt-script-${QTVER}:4
 	>=x11-libs/qt-test-${QTVER}:4
@@ -88,11 +88,11 @@ src_configure() {
 	use prefix || EPREFIX=
 
 	configuration() {
-		set -- $(PYTHON) configure.py
+		local myconf="$(PYTHON) configure.py
 				--confirm-license
-				--bindir=${EPREFIX}/usr/bin
-				--destdir=${EPREFIX}$(python_get_sitedir)
-				--sipdir=${EPREFIX}/usr/share/sip
+				--bindir="${EPREFIX}"/usr/bin
+				--destdir="${EPREFIX}"$(python_get_sitedir)
+				--sipdir="${EPREFIX}"/usr/share/sip
 				--qsci-api
 				$(use debug && echo '--debug')
 				--enable=QtCore
@@ -114,9 +114,9 @@ src_configure() {
 				$(pyqt4_use_enable xmlpatterns QtXmlPatterns)
 				CC=$(tc-getCC) CXX=$(tc-getCXX)
 				LINK=$(tc-getCXX) LINK_SHLIB=$(tc-getCXX)
-				CFLAGS='${CFLAGS}' CXXFLAGS='${CXXFLAGS}' LFLAGS='${LDFLAGS}'
-		echo "$@"
-		"$@" || die "configure.py failed"
+				CFLAGS='${CFLAGS}' CXXFLAGS='${CXXFLAGS}' LFLAGS='${LDFLAGS}'"
+		echo ${myconf}
+		eval ${myconf} || return 1
 
 		for mod in QtCore $(use X && echo 'QtDesigner QtGui'); do
 			# Run eqmake4 inside the qpy subdirs to prevent
