@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.70 2010/08/10 16:27:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.71 2010/09/01 12:57:27 sping Exp $
+
+*libdvdread-4.1.3_p1217 (01 Sep 2010)
+
+  01 Sep 2010; Sebastian Pipping <sping@gentoo.org>
+  +libdvdread-4.1.3_p1217.ebuild:
+  Add (masked) snapshot from revision 1217 for bug #235712
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   libdvdread-4.1.3_p1168.ebuild:
