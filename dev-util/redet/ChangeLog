@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/redet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.8 2008/06/03 01:21:03 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.9 2010/09/01 23:39:00 xmw Exp $
+
+*redet-8.26 (01 Sep 2010)
+
+  01 Sep 2010; Michael Weber <xmw@gentoo.org> +redet-8.26.ebuild:
+  Version bump to fix bug #335587, added ~amd64.
 
   03 Jun 2008; Jeremy Olexa <darkside@gentoo.org> redet-8.4.ebuild,
   redet-8.9.ebuild:
