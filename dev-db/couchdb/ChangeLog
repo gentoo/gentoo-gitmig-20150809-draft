@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.35 2010/08/30 11:50:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.36 2010/09/01 09:07:41 djc Exp $
+
+  01 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.10.2.ebuild,
+  -couchdb-1.0.0.ebuild:
+  Removed old and crappy versions.
 
   30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.1.ebuild:
   Stable on amd64 wrt bug #333175
