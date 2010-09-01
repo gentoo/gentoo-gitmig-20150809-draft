@@ -1,6 +1,12 @@
 # ChangeLog for net-im/choqok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.8 2010/08/21 14:38:23 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.9 2010/09/01 18:34:35 tampakrap Exp $
+
+*choqok-0.9.90 (01 Sep 2010)
+
+  01 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +choqok-0.9.90.ebuild:
+  Version bump
 
 *choqok-0.9.85 (21 Aug 2010)
 
