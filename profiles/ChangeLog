@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4518 2010/08/31 19:51:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4519 2010/09/01 12:53:13 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2010; Sebastian Pipping <sping@gentoo.org> package.mask:
+  Mask upcoming libdvdread/dvdbackup bumps
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking w3af for QA cleanup
