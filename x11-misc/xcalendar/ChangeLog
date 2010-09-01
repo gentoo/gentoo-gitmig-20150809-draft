@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.21 2008/03/23 15:17:34 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.22 2010/09/01 15:06:23 xarthisius Exp $
+
+*xcalendar-4.0-r1 (01 Sep 2010)
+
+  01 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +xcalendar-4.0-r1.ebuild, +files/xcalendar-4.0-implicits.patch:
+  Respect CC,CFLAGS,LDFLAGS. Fixes bug 335520. Thanks to Diego for the
+  report. Fix multilib paths and implicit functions declarations. Add
+  missing dependency on x11-misc/gccmakedep
 
   23 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> xcalendar-4.0.ebuild:
   amd64 stable
