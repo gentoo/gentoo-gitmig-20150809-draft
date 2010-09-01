@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.15 2010/02/09 15:00:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.16 2010/09/01 07:16:26 s4t4n Exp $
+
+  01 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmbio-1.02.ebuild,
+  -files/wmbio-Makefile.patch:
+  Honour Gentoo LDFLAGS. Closes bug #335425.
+  Removed old Makedile patch relying on sed instead.
 
   09 Feb 2010; Ben de Groot <yngwin@gentoo.org> wmbio-1.02.ebuild:
   Fix typo (bug 299547). Migrate to eapi-2.

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.11 2010/02/09 15:00:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.02.ebuild,v 1.12 2010/09/01 07:16:26 s4t4n Exp $
 
 EAPI=2
 inherit eutils
@@ -24,7 +24,10 @@ S=${WORKDIR}/${P}/src
 
 src_prepare() {
 	# Honour Gentoo CFLAGS
-	epatch "${FILESDIR}"/${PN}-Makefile.patch
+	sed -i "s/-g -O2/\$(CFLAGS)/" Makefile
+
+	# Honour Gentoo LDFLAGS
+	sed -i "s/-o wmbio/\$(LDFLAGS) -o wmbio/" Makefile
 }
 
 src_compile() {
