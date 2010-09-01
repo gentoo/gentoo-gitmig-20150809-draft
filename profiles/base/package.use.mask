@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.162 2010/08/25 11:08:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.163 2010/09/01 17:31:40 a3li Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alex Legler <a3li@gentoo.org> (1 Sep 2010)
+# This feature is marked as experimental by upstream.
+dev-lang/ruby-enterprise fastthreading
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (25 Aug 2010)
 # Require 4suite dependency tree that is masked
