@@ -1,6 +1,15 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.27 2009/06/13 19:31:06 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.28 2010/09/01 10:00:39 xmw Exp $
+
+*oftpd-0.3.7-r5 (01 Sep 2010)
+
+  01 Sep 2010; Michael Weber <xmw@gentoo.org> +oftpd-0.3.7-r5.ebuild,
+  +files/oftpd-0.3.7-family-1.patch,
+  +files/oftpd-0.3.7-ipv6rel2-0.3.6-to-0.3.7.patch, metadata.xml:
+  Revbump to re-add ipv6 support, fixes bug 157005, thanks to Bruno
+  <bonbons67@internet.lu> and Mario Fetka (geos_one) <mario.fetka@gmail.com>
+  for their work on this bug.
 
   13 Jun 2009; Fabian Groffen <grobian@gentoo.org> files/init.d.oftpd-r1:
   (Non-maintainer commit) Fix bug #273440, patch by Lars Wendler (Polynomial-C)
