@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/aranym
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.16 2010/01/08 21:43:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.17 2010/09/01 15:00:03 xmw Exp $
+
+*aranym-0.9.10 (01 Sep 2010)
+
+  01 Sep 2010; Michael Weber <xmw@gentoo.org> +aranym-0.9.10.ebuild:
+  Version bump to fix bug #332437, EAPI-2, cleaned up ebuild.
+  Fix /usr/share/doc/${PF}, fixes bug #294859.
 
 *aranym-0.9.9 (08 Jan 2010)
 
