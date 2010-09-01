@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.64 2010/07/27 15:01:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.65 2010/09/01 07:04:40 tove Exp $
+
+*Perl-Critic-1.109 (01 Sep 2010)
+
+  01 Sep 2010; Torsten Veller <tove@gentoo.org> +Perl-Critic-1.109.ebuild:
+  Version bump
 
   27 Jul 2010; Fabian Groffen <grobian@gentoo.org> Perl-Critic-1.108.ebuild:
   Marked ~ppc-macos and ~amd64-linux, bug #328393
