@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.12 2010/07/22 14:32:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.13 2010/09/01 07:40:36 s4t4n Exp $
+
+EAPI=2
 
 IUSE=""
 
@@ -23,10 +25,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc sparc x86"
 
+src_prepare() {
+	sed -i "s/make/\$(MAKE)/g" src/Makefile
+}
+
 src_compile() {
 	cd "${S}"/src
 	make clean
-	emake CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" SYSTEM="${LDFLAGS}" || die
 }
 
 src_install() {
