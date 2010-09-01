@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.5.ebuild,v 1.1 2010/09/01 09:04:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.5.ebuild,v 1.2 2010/09/01 20:20:00 hwoarang Exp $
 
 EAPI="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
@@ -41,7 +41,6 @@ DEPEND=">=dev-python/sip-4.11
 	webkit? ( >=x11-libs/qt-webkit-${QTVER}:4 )
 	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QTVER}:4 )"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.2" # doesn't build with python:3.2 (yet), bug 292419
 
 S=${WORKDIR}/${MY_P}
 

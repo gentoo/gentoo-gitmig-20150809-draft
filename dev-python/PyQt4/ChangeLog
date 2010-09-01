@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.123 2010/09/01 09:04:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.124 2010/09/01 20:20:00 hwoarang Exp $
+
+  01 Sep 2010; Markos Chandras <hwoarang@gentoo.org> -PyQt4-4.7.4.ebuild,
+  PyQt4-4.7.5.ebuild:
+  Drop old bogus ebuild. Drop RESTRICT_PYTHON_ABIS from latest ebuild
 
 *PyQt4-4.7.5 (01 Sep 2010)
 
