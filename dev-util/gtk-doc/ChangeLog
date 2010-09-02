@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.131 2010/08/18 21:06:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.132 2010/09/02 12:36:59 pacho Exp $
+
+*gtk-doc-1.15-r1 (02 Sep 2010)
+
+  02 Sep 2010; Pacho Ramos <pacho@gentoo.org> gtk-doc-1.13-r2.ebuild,
+  gtk-doc-1.15.ebuild, +gtk-doc-1.15-r1.ebuild,
+  +files/gtk-doc-1.15-fixxref-vim-fixes.patch:
+  Revision bump to fix incompatibility with vim-7.3 reported in bug #333313
+  by Ian Abbott, Ed Catmur and others. Applied upstream patch for fixing
+  this and also replacing gtk-doc-1.13-fixxref-vim-u-NONE.patch. Added a
+  blocker to affected versions to prevent future breakage when vim-7.3
+  reaches stable.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gtk-doc-1.13-r2.ebuild:
   arm stable, bug #314899
