@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.0-r1.ebuild,v 1.7 2010/07/15 10:44:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.0-r1.ebuild,v 1.8 2010/09/02 15:40:34 reavertm Exp $
 
 EAPI="2"
 
@@ -30,11 +30,12 @@ IUSE="cvs debug subversion"
 # block - some plugins moved to kdevplatform from kdevelop
 DEPEND="
 	dev-libs/boost
-	cvs? ( dev-vcs/cvs )
 	subversion? ( >=dev-vcs/subversion-1.3 )
 "
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_VERSION}
+	>=kde-base/konsole-${KDE_MINIMAL}
+	cvs? ( dev-vcs/cvs )
 "
 
 PATCHES=(
