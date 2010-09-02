@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4523 2010/09/02 12:59:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4524 2010/09/02 16:58:15 lack Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Sep 2010; Jim Ramsay <lack@gentoo.org> package.mask:
+  Removed x11-plugins/gkrellm-hddtemp
+
+  Also noticed an old unneeded entry for net-misc/amazonmp3-libcompat
+
 
   02 Sep 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   dev-vcs/bzr-gtk has been bumped, so dev-vcs/bzr 2.2.0 can be unmasked

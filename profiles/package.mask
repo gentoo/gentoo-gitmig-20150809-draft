@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11904 2010/09/02 12:59:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11905 2010/09/02 16:58:15 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -333,13 +333,6 @@ mail-client/claws-mail-bsfilter
 # bugs (bug #303665), and minor ones (bug #240036).
 # Dead upstream.
 dev-lang/hugs98
-
-# Jim Ramsay <lack@gentoo.org> (26 Jul 2010)
-# No longer works (Bug #284182), and no longer needed since app-admin/gkrellm
-# with USE="hddtemp" supports reading drive temperatures natively.
-#
-# Removal in 30 days.
-x11-plugins/gkrellm-hddtemp
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Jul 2010)
 #  on behalf of QA team
@@ -1189,12 +1182,6 @@ app-portage/udept
 # Matti Bickel <mabi@gentoo.org> (1 Mar 2009)
 # Mask testing branch
 =x11-libs/fox-1.7*
-
-# Jim Ramsay <lack@gentoo.org> (1 Feb 2008)
-# This isn't actually used by anyone, but hopefully will be soon to allow
-# net-misc/amazonmp3 to be used by amd64 users.  Once I get around to it.
-# Until then, mask it.
-net-misc/amazonmp3-libcompat
 
 # mask pending removal
 # Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
