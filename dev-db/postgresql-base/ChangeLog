@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.69 2010/09/02 10:36:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.70 2010/09/02 11:06:40 patrick Exp $
+
+  02 Sep 2010; Patrick Lauer <patrick@gentoo.org>
+  -postgresql-base-8.1.11.ebuild, -postgresql-base-8.1.18.ebuild,
+  -postgresql-base-8.1.19.ebuild, -postgresql-base-8.1.20.ebuild,
+  -postgresql-base-8.1.21.ebuild, -postgresql-base-8.2.14.ebuild,
+  -postgresql-base-8.2.15.ebuild, -postgresql-base-8.2.16.ebuild,
+  -postgresql-base-8.2.17.ebuild, -postgresql-base-8.3.8.ebuild,
+  -postgresql-base-8.3.9.ebuild, -postgresql-base-8.3.10.ebuild,
+  -postgresql-base-8.3.11.ebuild, -postgresql-base-8.4.1.ebuild,
+  -postgresql-base-8.4.2.ebuild, -postgresql-base-8.4.2-r1.ebuild,
+  -postgresql-base-8.4.3.ebuild, -postgresql-base-8.4.4.ebuild,
+  -postgresql-base-8.4.4-r1.ebuild, -postgresql-base-9.0_beta3.ebuild:
+  Remove old
 
   02 Sep 2010; Patrick Lauer <patrick@gentoo.org>
   -files/postgresql-7.4.19-autoconf.patch,
