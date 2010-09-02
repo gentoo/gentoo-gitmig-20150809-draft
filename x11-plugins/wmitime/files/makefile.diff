@@ -20,7 +20,7 @@ diff -urN wmitime/wmitime/Makefile wmitime-modified/wmitime/Makefile
  wmtime: $(OBJS)
 -	cc $(FLAGS) -D$(LANG) -o wmitime $^ -lXext $(LIBDIR) $(LIBS)
 -
-+	gcc $(FLAGS) -o wmitime $^ -lXext $(LIBDIR) $(LIBS) 
++	gcc $(FLAGS) $(LDFLAGS) -o wmitime $^ -lXext $(LIBDIR) $(LIBS) 
  all:: wmtime
  
  clean::
