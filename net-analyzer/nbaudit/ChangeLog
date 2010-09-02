@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nbaudit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.16 2010/09/02 17:59:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.17 2010/09/02 18:00:02 jer Exp $
+
+  02 Sep 2010; Jeroen Roovers <jer@gentoo.org> nbaudit-1.0-r2.ebuild:
+  Do not install COPYING. Set RDEPEND explicitly.
 
 *nbaudit-1.0-r2 (02 Sep 2010)
 
