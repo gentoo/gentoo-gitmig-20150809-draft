@@ -1,6 +1,27 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.77 2010/08/11 19:27:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.78 2010/09/02 10:37:43 patrick Exp $
+
+  02 Sep 2010; Patrick Lauer <patrick@gentoo.org>
+  -files/postgresql.conf-7.4, -files/postgresql.init-7.4,
+  -files/postgresql.conf-7.4-r1, -files/postgresql.init-7.4-r1,
+  -files/postgresql-7.4.19-autoconf.patch,
+  -files/postgresql-7.4.21-autoconf.patch, -postgresql-server-7.4.26.ebuild,
+  -files/postgresql-7.4.26-autoconf.patch, -postgresql-server-7.4.27.ebuild,
+  -files/postgresql-7.4.27-autoconf.patch, -postgresql-server-7.4.28.ebuild,
+  -files/postgresql-7.4.28-autoconf.patch, -postgresql-server-7.4.29.ebuild,
+  -postgresql-server-7.4.29-r1.ebuild,
+  -files/postgresql-7.4.29-autoconf.patch,
+  -files/postgresql-7.4-com_err.patch, -files/postgresql-7.4-hppa.patch,
+  -files/postgresql-7.4-regress.patch, -files/postgresql-7.4-server.patch,
+  -files/postgresql-7.4-vacuum-delay.patch, -files/postgresql.conf-8.0,
+  -files/postgresql.init-8.0, -files/postgresql.conf-8.0-r1,
+  -files/postgresql.init-8.0-r1, -files/postgresql-8.0.15-common.patch,
+  -postgresql-server-8.0.22.ebuild, -postgresql-server-8.0.23.ebuild,
+  -postgresql-server-8.0.24.ebuild, -postgresql-server-8.0.25.ebuild,
+  -postgresql-server-8.0.25-r1.ebuild, -files/postgresql-8.0-common.patch,
+  -files/postgresql-8.0-server.patch:
+  Remove 7.4 and 8.0
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   postgresql-server-8.2.17-r1.ebuild, postgresql-server-8.3.11-r1.ebuild,
