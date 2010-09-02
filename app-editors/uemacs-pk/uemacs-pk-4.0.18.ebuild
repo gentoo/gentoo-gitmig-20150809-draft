@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.18.ebuild,v 1.5 2008/01/27 10:29:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.18.ebuild,v 1.6 2010/09/02 14:44:07 fauli Exp $
+
+EAPI=3
 
 inherit eutils toolchain-funcs
 
@@ -18,14 +20,14 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/em-${PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	# Respect LDFLAGS when linking, bug 335516
+	sed -e 's:${CC} ${DEFINES} -o emacs ${OBJ} ${LIBS}:${CC} ${DEFINES} ${LDFLAGS} -o emacs ${OBJ} ${LIBS}:' -i "${S}"/makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
@@ -33,5 +35,5 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins emacs.hlp
 	newins emacs.rc .emacsrc
-	dodoc readme readme.39e emacs.ps || die "dodoc failed"
+	dodoc readme readme.39e emacs.ps || die
 }
