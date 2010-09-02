@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201006192157.ebuild,v 1.1 2010/06/30 16:22:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201008292125.ebuild,v 1.1 2010/09/02 22:14:11 blueness Exp $
 
 EAPI=2
 
@@ -26,11 +26,7 @@ DEPEND="sys-devel/bison
 S="${WORKDIR}/${PN}2"
 
 src_prepare() {
-	sed -i  -e s:^LDFLAGS=:LDFLAGS+=: \
-		-e s:^MKNOD=.*:MKNOD=true: \
-		-e s:^STRIP=.*:STRIP=true: Makefile
-
-	append-ldflags -Wl,-z,now
+	epatch "${FILESDIR}/${P}.patch"
 }
 
 src_compile() {
@@ -46,14 +42,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	[ -e "${ROOT}"/dev/grsec ] && rm -f "${ROOT}"/dev/grsec
-	einfo "Making character device for grsec2 learning mode"
-	mkdir -p -m 755 "${ROOT}"/dev/
-	mknod -m 0622 "${ROOT}"/dev/grsec c 1 13 || die "mknod on grsec learning device failed"
-
+	local UDEVADM="/sbin/udevadm"
+	if [[ -x ${UDEVADM} ]] ; then
+		$UDEVADM trigger --action=add --sysname-match=grsec
+	fi
 	einfo
-	ewarn "Be sure to set a password with 'gradm -P' before enabling learning mode"
 	ewarn
-	ewarn "This version of gradm is only supported with a kernel >=2.6.29!"
+	ewarn "Be sure to set a password with 'gradm -P' before enabling learning mode"
+	ewarn "This version of gradm is only supported with hardened-sources >= 2.6.32-r10"
+	ewarn
 	einfo
 }
