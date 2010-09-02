@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.18 2010/04/28 21:33:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.19 2010/09/02 19:12:36 cardoe Exp $
+
+*virtinst-0.500.4 (02 Sep 2010)
+
+  02 Sep 2010; Doug Goldstein <cardoe@gentoo.org> +virtinst-0.500.4.ebuild:
+  upstream version bump plus backporting translation updates from upstream
 
 *virtinst-0.500.3 (28 Apr 2010)
 
