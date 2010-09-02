@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.13 2007/07/22 04:42:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.14 2010/09/02 10:32:10 s4t4n Exp $
 
 IUSE=""
 DESCRIPTION="WindowMaker browser launcher docklet"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	xmkmf || die
-	emake CDEBUGFLAGS="${CFLAGS}" wmnetselect || die
+	emake CDEBUGFLAGS="${CFLAGS}" LDOPTIONS="${LDFLAGS}" wmnetselect || die
 }
 
 src_install () {

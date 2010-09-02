@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetselect
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/ChangeLog,v 1.13 2007/07/22 04:42:55 dberkholz Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/ChangeLog,v 1.14 2010/09/02 10:32:10 s4t4n Exp $
+
+  02 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmnetselect-0.8-r1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335625.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmnetselect-0.8-r1.ebuild:
