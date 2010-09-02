@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5913 2010/09/02 16:53:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5914 2010/09/02 18:54:00 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2482,6 +2482,7 @@ net-fs/samba-server:quota - Enables support for user quotas
 net-fs/samba-server:samba4 - Enable experimental samba4 features"
 net-fs/samba-server:swat - Enables support for swat configuration gui
 net-fs/samba-server:winbind - Enables support for the winbind auth daemon
+net-fs/smbnetfs:gnome - Use the gnome-base/gnome-keyring for password management.
 net-ftp/ftpcube:sftp - Enable sftp connection support
 net-ftp/proftpd:authfile - Enable support for the auth-file module
 net-ftp/proftpd:ban - Enable support for the mod_ban module
