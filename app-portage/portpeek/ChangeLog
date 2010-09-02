@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.85 2010/09/01 20:28:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.86 2010/09/02 00:20:19 mpagano Exp $
+
+*portpeek-2.0.5 (02 Sep 2010)
+
+  02 Sep 2010; Mike Pagano <mpagano@gentoo.org> -portpeek-2.0.1.ebuild,
+  -portpeek-2.0.2.ebuild, +portpeek-2.0.5.ebuild:
+  Version bump for duplicate row handling. Remove old versions.
 
 *portpeek-1.9.45 (01 Sep 2010)
 
