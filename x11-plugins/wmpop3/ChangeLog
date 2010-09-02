@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop3
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.8 2006/10/27 08:42:56 s4t4n Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3/ChangeLog,v 1.9 2010/09/02 10:44:28 s4t4n Exp $
+
+  02 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmpop3-0.5.6a.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335522.
 
   27 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmpop3-0.5.6a.ebuild:
   Added missing libxpm dependancy. Closes bug #150661.
