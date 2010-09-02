@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-1.2.0-r1.ebuild,v 1.1 2010/08/29 10:06:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-1.2.0-r1.ebuild,v 1.2 2010/09/02 16:28:40 wired Exp $
 
 EAPI=3
 
@@ -17,6 +17,11 @@ IUSE="static"
 
 DEPEND=">=dev-libs/libnl-1.1"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	has_version "<sys-kernel/linux-headers-2.6.35" &&
+		epatch "${FILESDIR}/fix-gnusource-collisions-${PV}.patch"
+}
 
 src_configure() {
 	use static && append-ldflags -static
