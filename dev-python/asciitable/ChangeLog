@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/asciitable
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.1 2010/09/02 16:13:51 bicatali Exp $
+
+*asciitable-0.2.6 (02 Sep 2010)
+
+  02 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +asciitable-0.2.6.ebuild, +metadata.xml:
+  Version bump. Moved to the main Gentoo tree
+
+*asciitable-0.2.5 (15 Jul 2010)
+
+  15 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +asciitable-0.2.5.ebuild, +metadata.xml:
+  Initial import
+
