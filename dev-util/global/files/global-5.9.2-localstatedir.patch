@@ -1,18 +1,11 @@
---- a/htags/Makefile.am	2010-08-30 14:19:04.000000000 +0200
-+++ b/htags/Makefile.am	2010-09-01 15:19:14.000000000 +0200
-@@ -27,14 +27,8 @@
- 
- man_MANS = htags.1
- 
--gtagsdir = ${datadir}/gtags
-+gtagsdir = ${localstatedir}/gtags
- gtags_DATA = global.cgi.tmpl ghtml.cgi.tmpl completion.cgi.tmpl bless.sh.tmpl \
- 	jscode_suggest.tmpl jscode_treeview.tmpl style.css.tmpl
+--- htags/Makefile.am.orig	2010-08-30 14:19:04.000000000 +0200
++++ htags/Makefile.am	2010-09-02 19:00:48.000000000 +0200
+@@ -33,7 +33,7 @@
  EXTRA_DIST = $(man_MANS) $(gtags_DATA) manual.in global.cgi.tmpl.in completion.cgi.tmpl.in \
  		const.h c.l cpp.l java.l php.l asm.l
--install-data-hook:
+ install-data-hook:
 -	dir="$(localstatedir)/gtags/sitekeys"; \
--	if [ ! -d $$dir ]; then \
--		$(MKDIR_P) $$dir; \
--		chmod 755 $$dir; \
--	fi
++	dir="$(DESTDIR)$(localstatedir)/gtags/sitekeys"; \
+ 	if [ ! -d $$dir ]; then \
+ 		$(MKDIR_P) $$dir; \
+ 		chmod 755 $$dir; \
