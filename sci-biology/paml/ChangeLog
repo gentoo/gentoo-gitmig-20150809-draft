@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/paml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.11 2010/02/09 11:17:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.12 2010/09/02 06:56:14 xarthisius Exp $
+
+*paml-4.4c (02 Sep 2010)
+
+  02 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -paml-4.1.ebuild,
+  -paml-4.2b-r1.ebuild, +paml-4.4c.ebuild:
+  Version bump. Fixes bug 335608. Thanks to Diego for report.
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> paml-4.3a.ebuild:
   amd64 stable, bug 298772

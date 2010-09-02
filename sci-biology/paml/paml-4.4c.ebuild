@@ -1,44 +1,39 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.2b-r1.ebuild,v 1.1 2009/07/21 08:44:44 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.4c.ebuild,v 1.1 2010/09/02 06:56:14 xarthisius Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit toolchain-funcs versionator
 
-MY_P="${PN}42"
+MY_P=$(version_format_string '${PN}$1$2')
+
 DESCRIPTION="Phylogenetic Analysis by Maximum Likelihood"
 HOMEPAGE="http://abacus.gene.ucl.ac.uk/software/paml.html"
 SRC_URI="http://abacus.gene.ucl.ac.uk/software/${PN}${PV}.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -i 's/-static//' "${S}/src/Makefile.UNIX" || die
+	# Notice send by mail to prof. Ziheng Yang
+	sed -i "s/\$(CC)/& \$(LDFLAGS)/" src/Makefile || die #335608
 }
 
 src_compile() {
-	cd src
-	emake \
-		-f Makefile.UNIX \
-		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" \
-		|| die "make failed"
+	emake -C src CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
 	pushd "${S}"/src
 	dobin baseml codeml basemlg mcmctree pamp evolver yn00 chi2 || die
 	popd
-	dodoc README.txt doc/*
+	dodoc README.txt doc/* || die
 	insinto /usr/share/${PN}/control
 	doins *.ctl || die "Failed to install control files"
 	insinto /usr/share/${PN}/dat
