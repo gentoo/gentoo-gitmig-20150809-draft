@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.4.ebuild,v 1.1 2010/09/02 19:12:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.4.ebuild,v 1.2 2010/09/02 19:51:51 mr_bones_ Exp $
 
 BACKPORTS=1
 
@@ -33,4 +33,3 @@ src_prepare() {
 
 	distutils_src_prepare
 }
-
