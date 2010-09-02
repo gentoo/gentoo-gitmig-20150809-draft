@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.1 2010/06/29 12:00:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.2 2010/09/02 09:20:05 hwoarang Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ src_install() {
 	use kde && gsudo="kdesu"
 	use gnome && gsudo="gksu"
 	if [[ -n ${gsudo} ]]; then
-		sed -i "/^Exec/s:${PN}:${gsudo} -c ${PN}:" \
+		sed -i "/^Exec/s:${PN}:${gsudo} ${PN}:" \
 			${D}/usr/share/applications/"${PN}"-"${PN}".desktop \
 			|| die "failed to fix desktop file"
 	fi
