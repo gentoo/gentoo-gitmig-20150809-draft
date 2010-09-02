@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1-r2.ebuild,v 1.1 2010/07/27 14:03:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1-r2.ebuild,v 1.2 2010/09/02 07:52:12 wired Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bfq"
 
 DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )"
+RDEPEND=""
 
 KV_FULL="${PVR/_p/-zen}"
 S="${WORKDIR}"/linux-"${KV_FULL}"

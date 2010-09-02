@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.31_p12.ebuild,v 1.3 2010/05/18 15:32:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.31_p12.ebuild,v 1.4 2010/09/02 07:52:12 wired Exp $
 
 COMPRESSTYPE=".lzma"
 K_USEPV="yes"
@@ -30,6 +30,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )"
+RDEPEND=""
 
 KV_FULL="${PVR/_p/-zen}"
 S="${WORKDIR}"/linux-"${KV_FULL}"
