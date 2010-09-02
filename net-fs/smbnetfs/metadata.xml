@@ -25,4 +25,7 @@
 		 - the program is multithreaded, so simultaneous access to a file/share
 		   is possible
 	</longdescription>
+	<use>
+		<flag name="gnome">Use the <pkg>gnome-base/gnome-keyring</pkg> for password management.</flag>
+	</use>
 </pkgmetadata>

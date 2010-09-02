@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/smbnetfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.1 2010/06/26 09:44:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.2 2010/09/02 18:37:38 slyfox Exp $
+
+*smbnetfs-0.5.3 (02 Sep 2010)
+
+  02 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  +smbnetfs-0.5.3.ebuild,
+  +files/smbnetfs-0.5.3-0001-configure.in-allow-user-to-explicitly-enable-di
+  sable.patch, metadata.xml:
+  Version bump. Added USE=gnome flag for integration with gnome-keyring.
 
 *smbnetfs-0.5.2 (26 Jun 2010)
 
