@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11902 2010/09/02 11:23:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11903 2010/09/02 11:40:13 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -452,15 +452,6 @@ dev-ruby/testunit-mock
 # it, then please unmask (bug #317325)
 =net-analyzer/net-snmp-5.5*
 
-# Pacho Ramos <pacho@gentoo.org> (12 Jul 2010)
-# Masked for removal in 30 days.
-# No longer developed by upstream, fails with forced as-needed (bug #277169),
-# does not compile against gnome-desktop-2.30 (bug #311563).
-gnome-base/eel
-gnome-extra/nautilus-cd-burner
-dev-python/nautilus-cd-burner-python
-dev-dotnet/nautilusburn-sharp
- 
 # Patrick Lauer <patrick@gentoo.org> (11 Jul 2010)
 # Upstream has EOL'ed 7.4 and 8.0. EOL for 8.1 is November.
 # Migration to supported / new versions recommended.
@@ -474,11 +465,6 @@ dev-dotnet/nautilusburn-sharp
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2010)
 # No actual Gentoo support yet. If you're interested, please see bug #295993
 net-misc/netcf
-
-# Pacho Ramos <pacho@gentoo.org> (07 Jul 2010)
-# Dead upstream, no new release since 2006, no longer builds (bug #316623).
-# Masked for removal in 30 days
-dev-dotnet/heap-buddy
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (06 Jul 2010)
 # Replaced by dev-python/numpy. Masked for deletion in 30 days (bug #198154).
@@ -856,7 +842,6 @@ games-strategy/xscorch
 # Please don't ask for including testing packages in other emul
 # packages, this is an exception to current policy because some people
 # from X11 team needed 3D support even with bleeding edge Xorg.
-=app-emulation/emul-linux-x86-opengl-20100410_pre
 =app-emulation/emul-linux-x86-opengl-20100611-r99
 
 # Robert Piasek <dagger@gentoo.org> (09 Apr 2010)
