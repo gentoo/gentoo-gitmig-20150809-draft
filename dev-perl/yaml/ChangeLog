@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.84 2010/06/27 19:26:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.85 2010/09/02 06:35:50 tove Exp $
+
+*yaml-0.72 (02 Sep 2010)
+
+  02 Sep 2010; Torsten Veller <tove@gentoo.org> +yaml-0.72.ebuild:
+  Version bump
 
   27 Jun 2010; <nixnut@gentoo.org> yaml-0.71.ebuild:
   ppc stable #323529
