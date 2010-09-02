@@ -1,6 +1,10 @@
 # ChangeLog for games-server/tetrix
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.8 2009/06/15 04:24:28 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.9 2010/09/02 14:33:52 tupone Exp $
+
+  02 Sep 2010; Alfredo Tupone <tupone@gentoo.org>
+  tetrix-1.13.16.1.40c-r2.ebuild:
+  Respecting LDFLAGS. Bug #335627 by flameeyes@gentoo.org
 
   15 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +files/tetrix-1.13.16.1.40c-build.patch, tetrix-1.13.16.1.40c-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.12 2009/06/15 04:24:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.13 2010/09/02 14:33:52 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -34,7 +34,7 @@ src_prepare() {
 
 src_compile() {
 	cd src
-	$(tc-getCC) ${CFLAGS} main.c -o tetrix -ladns || die "compile failed"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} main.c -o tetrix -ladns || die "compile failed"
 }
 
 src_install() {
