@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.3-r3.ebuild,v 1.1 2010/08/25 22:04:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.3-r3.ebuild,v 1.2 2010/09/02 18:08:28 grobian Exp $
 
 EAPI=3
 
@@ -65,10 +65,12 @@ src_install() {
 	dodoc AUTHORS README
 
 	# fix bug #334383
-	fowners root:tty /usr/libexec/mc/cons.saver ||
-		die "setting cons.saver's owner failed"
-	fperms g+s /usr/libexec/mc/cons.saver ||
-		die "setting cons.saver's permissions failed"
+	if [[ ${EUID} == 0 ]] ; then
+		fowners root:tty /usr/libexec/mc/cons.saver ||
+			die "setting cons.saver's owner failed"
+		fperms g+s /usr/libexec/mc/cons.saver ||
+			die "setting cons.saver's permissions failed"
+	fi
 }
 
 pkg_postinst() {

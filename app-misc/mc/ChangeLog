@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.206 2010/08/25 22:04:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.207 2010/09/02 18:08:28 grobian Exp $
+
+  02 Sep 2010; Fabian Groffen <grobian@gentoo.org> mc-4.7.3-r3.ebuild:
+  Only try changing permissions when using a privileged user, bug #335250
 
 *mc-4.7.3-r3 (25 Aug 2010)
 *mc-4.7.0.8-r1 (25 Aug 2010)
