@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeverb3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.14 2010/08/05 21:07:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.15 2010/09/02 00:04:32 sping Exp $
+
+  02 Sep 2010; Sebastian Pipping <sping@gentoo.org>
+  -freeverb3-2.5.5-r1.ebuild,
+  -files/freeverb3-2.5.5-audacious-2.4_beta1.patch:
+  Remove 2.5.5-r1
 
 *freeverb3-2.5.6 (05 Aug 2010)
 
