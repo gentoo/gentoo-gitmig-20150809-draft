@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.5 2009/12/26 19:29:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.6 2010/09/02 12:53:37 pacho Exp $
 
 EAPI="2"
 
-inherit autotools gnome2
+inherit autotools gnome2 eutils
 
 DESCRIPTION="Application launcher applet for GNOME"
 HOMEPAGE="http://quick-lounge.sourceforge.net/"
@@ -30,6 +30,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 src_prepare() {
+	# Make this gmake-3.82 compliant, bug #333643
+	epatch "${FILESDIR}/${P}-fix-make-3.82.patch"
+
 	# Fix broken intltool used in tarball
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
