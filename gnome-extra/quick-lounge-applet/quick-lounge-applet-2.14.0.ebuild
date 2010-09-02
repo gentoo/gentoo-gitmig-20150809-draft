@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.6 2010/09/02 12:53:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.7 2010/09/02 20:42:44 pacho Exp $
 
 EAPI="2"
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 src_prepare() {
+	gnome2_src_prepare
+
 	# Make this gmake-3.82 compliant, bug #333643
 	epatch "${FILESDIR}/${P}-fix-make-3.82.patch"
 
