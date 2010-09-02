@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nbaudit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.15 2009/10/28 04:19:14 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.16 2010/09/02 17:59:12 jer Exp $
+
+*nbaudit-1.0-r2 (02 Sep 2010)
+
+  02 Sep 2010; Jeroen Roovers <jer@gentoo.org> +nbaudit-1.0-r2.ebuild:
+  Respect CFLAGS (bug #240860). Respect LDFLAGS (bug #335528). Respect CC.
 
   28 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> nbaudit-1.0-r1.ebuild:
   Keyword for ~amd64.
