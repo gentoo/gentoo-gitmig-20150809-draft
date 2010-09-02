@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.11.ebuild,v 1.1 2009/11/12 22:34:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.11.ebuild,v 1.2 2010/09/02 13:13:46 pacho Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A small, lightweight addressbook for GNOME"
 HOMEPAGE="http://pimlico-project.org/contacts.html"
@@ -28,9 +29,15 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable dbus)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
-	# Fix compilation with USE="-dbus", bug #247519
+	# Fix compilation with USE="-dbus", bug #247519, upstream bug #628614
 	epatch "${FILESDIR}/${PN}-0.9-dbus.patch"
+
+	# Fix compilation with gmake-3.82, bug #333647, upstream bug #628615
+	epatch "${FILESDIR}/${PN}-0.11-fix-make-3.82.patch"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
