@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/bti-027.ebuild,v 1.1 2010/08/27 20:00:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/bti-028.ebuild,v 1.1 2010/09/02 01:46:08 flameeyes Exp $
 
 EAPI=2
 
-inherit bash-completion eutils autotools
+inherit bash-completion eutils
 
 DESCRIPTION="A command line twitter/identi.ca client"
 HOMEPAGE="http://gregkh.github.com/bti/"
@@ -27,12 +27,6 @@ DEPEND="${RDEPEND}
 # libedit as an alternative...
 RDEPEND="${RDEPEND}
 	|| ( sys-libs/readline dev-libs/libedit )"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
-
-	eautoreconf
-}
 
 src_configure() {
 	econf \
