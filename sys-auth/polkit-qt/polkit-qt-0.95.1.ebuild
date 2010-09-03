@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.95.1.ebuild,v 1.9 2010/08/09 02:38:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.95.1.ebuild,v 1.10 2010/09/03 19:31:49 josejx Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://kde.org/"
 SRC_URI="mirror://kde/stable/apps/KDE4.x/admin/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug examples"
 
