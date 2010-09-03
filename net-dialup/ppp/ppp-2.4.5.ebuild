@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5.ebuild,v 1.1 2010/08/08 10:24:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5.ebuild,v 1.2 2010/09/03 10:25:12 hwoarang Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs linux-info pam
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20100808.tar.gz
+	mirror://gentoo/${P}-gentoo-20100903.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -39,6 +39,8 @@ src_prepare() {
 	epatch "${WORKDIR}/patch/passwordfd-read-early.patch"
 	epatch "${WORKDIR}/patch/pppd-usepeerwins.patch"
 	epatch "${WORKDIR}/patch/connect-errors.patch"
+	epatch "${WORKDIR}/patch/Makefile.patch"
+	epatch "${WORKDIR}/patch/pppol2tpv3-2.6.35.patch"
 
 	use eap-tls && {
 		# see http://www.nikhef.nl/~janjust/ppp for more info
