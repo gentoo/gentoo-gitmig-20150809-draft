@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.50 2010/08/30 16:49:21 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.51 2010/09/03 06:26:58 pva Exp $
+
+*culmus-0.105-r1 (03 Sep 2010)
+
+  03 Sep 2010; Peter Volkov <pva@gentoo.org> +culmus-0.105-r1.ebuild:
+  Added new Journal CLM fancy font.
 
   30 Aug 2010; Dror Levin <spatz@gentoo.org> culmus-0.105.ebuild:
   Add new Makabi font released with this version.
