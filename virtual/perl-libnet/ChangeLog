@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.30 2010/07/15 15:26:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.31 2010/09/03 12:25:23 fauli Exp $
+
+  03 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  perl-libnet-1.22.ebuild:
+  add ~x86-freebsd
 
   15 Jul 2010; Torsten Veller <tove@gentoo.org> perl-libnet-1.22.ebuild:
   Add perl-5.12 as provider (#328397)
