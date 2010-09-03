@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11907 2010/09/03 13:55:13 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11908 2010/09/03 14:09:47 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -498,22 +498,6 @@ dev-php5/znf
 # Use dev-java/tijmp for the 1.6 java replacement.
 dev-java/jmp
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Jun 2010)
-#  on behalf of QA team
-#
-# Modules fail to build with relatively-recent kernels (at
-# least since .30); librraies fial to build since at least
-# July 2009 in ~arch for built_with_use (and now in stable
-# as well). The other two are reverse dependencies.
-#
-# These packages need a maintainer _with hardware_.
-#
-# Removal on 2010-08-29
-media-video/em84xx-modules
-media-video/em84xx-libraries
-media-plugins/vdr-em84xx
-media-video/packetcommand
-
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
 # Also needs USE=introspection to be unmasked
@@ -528,44 +512,6 @@ dev-haskell/filepath
 # Christian Faulhammer <fauli@gentoo.org> (28 Jun 2010)
 # Beta version
 ~dev-lang/erlang-14.1
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (26 Jun 2010)
-#  on behalf of QA team
-#
-# Fails to build since at least June 2009 (bug #274332). No
-# activity since initial import in November 2008.
-#
-# Removal on 2010-08-25
-app-i18n/adaptit
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (26 Jun 2010)
-#  on behalf of QA team
-#
-# Debian-related package; no maintainer; no ebuild activity
-# since 2005. Broken install phase as per bug #294975.
-#
-# Removal on 2010-08-25
-dev-util/pbuilder
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2010)
-#  on behalf of QA team
-#
-# Fails to build with Berkeley DB 5.0 (#319937); current
-# stable fails to build with current stable glibc (bug
-# #320645), last activity in both ebuild and upstream in 2008
-# (and even then it wasn't from maintainers); uses $EDITOR
-# and $PAGER at build-time (bug #294762, and slightly related
-# bug #262150. One configure test becomes interactive if
-# app-editors/elvis is installed (bug #323541). Multiple
-# collisions.
-#
-# Feel free to pick this up and maintain it properly, but
-# unless a new maintainer can be found, this package is
-# slated for removal.
-#
-# Removal on 2010-08-23
-mail-client/exmh
-mail-client/nmh
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (22 Jun 2010)
 # Masked for testing. It's quite "challenging" to package.
