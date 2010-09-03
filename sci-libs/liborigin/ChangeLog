@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.21 2010/07/12 20:11:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.22 2010/09/03 05:50:47 jlec Exp $
+
+*liborigin-20100903 (03 Sep 2010)
+
+  03 Sep 2010; Justin Lecher <jlec@gentoo.org> +liborigin-20100903.ebuild:
+  Version Bump
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   liborigin-20100420.ebuild:
