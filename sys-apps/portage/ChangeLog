@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.717 2010/09/01 23:03:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.718 2010/09/03 00:03:14 zmedico Exp $
+
+*portage-2.2_rc74 (02 Sep 2010)
+
+  02 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc74.ebuild:
+  2.2_rc74 version bump. This fixes bug #335620 ('virtuals' AttributeError
+  in porthole) and bug #335642 (app-portage/autounmask breakage).
+  Bug #210077 tracks all bugs fixed since 2.1.8.3 and 2.2_rc67.
 
 *portage-2.2_rc73 (01 Sep 2010)
 
