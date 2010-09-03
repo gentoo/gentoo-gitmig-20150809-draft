@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpiki
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/ChangeLog,v 1.10 2009/04/28 14:50:20 s4t4n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/ChangeLog,v 1.11 2010/09/03 09:24:12 s4t4n Exp $
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmpiki-0.2.1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335690.
 
   28 Apr 2009; Michele Noberasco <s4t4n@gentoo.org> wmpiki-0.2.1.ebuild:
   Added some magic sed so that CC is no longer hardcoded, bug #215651.

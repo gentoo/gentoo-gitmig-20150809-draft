@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.9 2009/04/28 14:50:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.10 2010/09/03 09:24:12 s4t4n Exp $
 
+EAPI=2
 inherit eutils
 
 IUSE=""
@@ -21,16 +22,15 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	>=sys-apps/sed-4.1.4-r1"
 
-src_unpack()
+src_prepare()
 {
-	unpack ${A}
-
-	sed -i 's/gcc/${CC}/' "${S}/Makefile"
+	sed -i 's/gcc/${CC}/' Makefile
+	sed -i 's/-o wmpiki/${LDFLAGS} -o wmpiki/' Makefile
 }
 
 src_compile()
 {
-	make CFLAGS="${CFLAGS}"|| die "Compilation failed"
+	make CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "Compilation failed"
 }
 
 src_install()
