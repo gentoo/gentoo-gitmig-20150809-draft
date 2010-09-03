@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100310.ebuild,v 1.7 2010/04/15 15:02:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100310.ebuild,v 1.8 2010/09/03 14:12:26 flameeyes Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="PAM base configuration files"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/pam/"
-SRC_URI="http://www.flameeyes.eu/gentoo-distfiles/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~flameeyes/pambase/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
