@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.1 2010/09/03 20:02:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.2 2010/09/03 20:05:42 dev-zero Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -47,9 +47,9 @@ get_patches() {
 	done
 	echo ${patches}
 }
-PATCHES="$(get_patches)"
+MYPATCHES="$(get_patches)"
 
-for patch in ${PATCHES} ; do
+for patch in ${MYPATCHES} ; do
 	SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/xml/update/${MY_PV}/${patch}"
 done
 
@@ -57,13 +57,13 @@ S="${WORKDIR}/${MY_P}/dbxml"
 
 src_unpack() {
 	tar xzpf "${DISTDIR}/${MY_P}.tar.gz" ${MY_P}/dbxml || die "unpacking package failed"
-	for patch in ${PATCHES} ; do
-		cp "${DISTDIR}/${patch}" ${WORKDIR} || die "copying patch ${patch} failed"
+	for patch in ${MYPATCHES} ; do
+		cp "${DISTDIR}/${patch}" "${WORKDIR}" || die "copying patch ${patch} failed"
 	done
 }
 
 src_prepare() {
-	for patch in ${PATCHES} ; do
+	for patch in ${MYPATCHES} ; do
 		edos2unix "${WORKDIR}/${patch}"
 		epatch "${WORKDIR}/${patch}"
 	done
