@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.233 2010/09/01 16:10:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.234 2010/09/03 04:28:55 phajdan.jr Exp $
+
+  03 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  lvm2-2.02.73-r1.ebuild:
+  x86 stable wrt security bug #334087
 
   01 Sep 2010; <chainsaw@gentoo.org> lvm2-2.02.73-r1.ebuild:
   Fast tracking to AMD64 stable, --as-needed breakage fixed by Diego E.
