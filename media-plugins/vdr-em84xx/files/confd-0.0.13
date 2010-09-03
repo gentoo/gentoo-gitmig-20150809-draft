@@ -1,7 +1,0 @@
-# configuration for vdr plugin vdr-em84xx
-#
-# Enable that setting, and put the name of your dvd-drive here
-# to get vdr-em84xx support legally playing even encrypted DVDs.
-# You need to emerge media-video/packetcommand before you can use this.
-#EM84XX_DVD_DRIVE="/dev/hdd"
-
