@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmswallow
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.7 2007/07/22 04:27:36 dberkholz Exp $
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.8 2010/09/03 08:24:28 s4t4n Exp $
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmswallow-0.6.1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335692.
+  Honour Gentoo CFLAGS.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmswallow-0.6.1.ebuild:

@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1.ebuild,v 1.9 2007/07/22 04:27:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1.ebuild,v 1.10 2010/09/03 08:24:28 s4t4n Exp $
 
+EAPI=2
 IUSE=""
 
 DESCRIPTION="A dock applet to make any application dockable."
@@ -20,8 +21,12 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/wmswallow
 
+src_prepare() {
+	sed -i "s:\${OBJS} -o:\${OBJS} \${LDFLAGS} -o:" Makefile
+}
+
 src_compile() {
-	make xfree || die
+	make CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" xfree || die
 }
 
 src_install() {
