@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.46 2010/06/27 18:28:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.47 2010/09/03 18:03:12 grobian Exp $
+
+  03 Sep 2010; Fabian Groffen <grobian@gentoo.org>
+  +files/3.2.0-darwin.patch, geos-3.2.0-r1.ebuild:
+  Fix for Prefix and Darwin, bug #335811 and bug #335814
 
   27 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/3.2.0-python.patch,
   geos-3.2.0-r1.ebuild:

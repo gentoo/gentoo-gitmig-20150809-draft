@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.4 2010/06/27 18:28:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.5 2010/09/03 18:03:12 grobian Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,9 +34,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-multipy.patch \
 		"${FILESDIR}"/${PV}-swig2.0.patch \
-		"${FILESDIR}"/${PV}-python.patch
+		"${FILESDIR}"/${PV}-python.patch \
+		"${FILESDIR}"/${PV}-darwin.patch
 	eautoreconf
-	echo "#!/bin/bash" > py-compile
+	echo "#!${EPREFIX}/bin/bash" > py-compile
 }
 
 src_configure() {
@@ -49,11 +50,11 @@ src_compile() {
 		python_copy_sources swig/python
 		building() {
 			emake \
-				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
+				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
 				PYTHON_LDFLAGS="$(python_get_library -l)" \
-				SWIG_PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
-				pyexecdir="$(python_get_sitedir)" \
-				pythondir="$(python_get_sitedir)"
+				SWIG_PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
+				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
+				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir swig/python building
 	fi
@@ -70,8 +71,8 @@ src_install() {
 		installation() {
 			emake \
 			DESTDIR="${D}" \
-			pythondir="$(python_get_sitedir)" \
-			pyexecdir="$(python_get_sitedir)" \
+			pythondir="${EPREFIX}$(python_get_sitedir)" \
+			pyexecdir="${EPREFIX}$(python_get_sitedir)" \
 			install
 		}
 		python_execute_function -s --source-dir swig/python installation
