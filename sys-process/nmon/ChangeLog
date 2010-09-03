@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/nmon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.1 2010/08/04 03:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.2 2010/09/03 01:34:23 jer Exp $
+
+*nmon-14a (03 Sep 2010)
+
+  03 Sep 2010; Jeroen Roovers <jer@gentoo.org> +nmon-14a.ebuild:
+  Version bump.
 
 *nmon-13g (04 Aug 2010)
 
