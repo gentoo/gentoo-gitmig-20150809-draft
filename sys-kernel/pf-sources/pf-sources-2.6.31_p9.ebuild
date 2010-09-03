@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.31_p9.ebuild,v 1.1 2010/09/01 16:27:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.31_p9.ebuild,v 1.2 2010/09/03 18:44:22 wired Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 
-DESCRIPTION="Linux kernel fork with new useful features not merged into mainline"
+DESCRIPTION="Linux kernel fork with new features, including the -ck patchset (BFS), BFQ, TuxOnIce and LinuxIMQ"
 HOMEPAGE="http://pf-kernel.org.ua/"
 
 PF_PATCHSET="${PV/*_p}"
