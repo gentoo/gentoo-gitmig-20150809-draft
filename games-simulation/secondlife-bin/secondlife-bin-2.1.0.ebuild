@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-2.1.0.ebuild,v 1.1 2010/07/25 21:04:23 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-2.1.0.ebuild,v 1.2 2010/09/03 17:12:21 nyhm Exp $
 
-inherit eutils multilib games versionator
+inherit eutils multilib versionator games
 
 SECONDLIFE_REVISION=207030
 MY_P="SecondLife-i686-${PV}.${SECONDLIFE_REVISION}"
