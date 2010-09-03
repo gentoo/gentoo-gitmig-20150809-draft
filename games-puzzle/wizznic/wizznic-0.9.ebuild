@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/wizznic-0.9.ebuild,v 1.1 2010/07/29 05:00:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/wizznic-0.9.ebuild,v 1.2 2010/09/03 17:15:52 nyhm Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 EXTRA_PV="_feedback_version-src"
 DESCRIPTION="Block-clearing puzzle game"
