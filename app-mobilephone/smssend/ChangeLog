@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/smssend
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.9 2010/03/10 11:06:03 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.10 2010/09/03 20:25:53 josejx Exp $
+
+  03 Sep 2010; Joseph Jezak <josejx@gentoo.org> smssend-3.4.ebuild:
+  Marked ppc/ppc64 stable.
 
   10 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> smssend-3.4.ebuild:
   Fixed INSTALLing midding documentation. Fixes bug #296836.
