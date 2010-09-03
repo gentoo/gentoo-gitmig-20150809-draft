@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.17 2010/08/19 16:49:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.18 2010/09/03 08:45:07 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -30,8 +30,8 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}
 
-dir="${GAMES_PREFIX_OPT}/${PN}"
-Ddir="${D}/${dir}"
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 QA_TEXTRELS="${dir:1}/pb/pbags.so
 	${dir:1}/pb/pbcls.so
@@ -42,8 +42,11 @@ QA_EXECSTACK="${dir:1}/et.x86
 	${dir:1}/etmain/cgame.mp.i386.so
 	${dir:1}/etmain/qagame.mp.i386.so
 	${dir:1}/etmain/ui.mp.i386.so"
-QA_EXECSTACK_x86="${QA_EXECSTACK}"
-QA_EXECSTACK_amd64="${QA_EXECSTACK}"
+QA_DT_HASH="${QA_TEXTRELS}
+	${QA_EXECSTACK}
+	${dir:1}/pb/pbweb.x86"
+QA_EXECSTACK_x86=${QA_EXECSTACK}
+QA_EXECSTACK_amd64=${QA_EXECSTACK}
 
 src_unpack() {
 	unpack_makeself et-linux-2.60.x86.run
