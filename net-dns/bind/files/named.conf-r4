@@ -31,7 +31,7 @@ options {
 	pid-file "/var/run/named/named.pid";
 
 	/* https://www.isc.org/solutions/dlv >=bind-9.7.x only */
-	//bindkeys-file "/etc/bind/bind.keys";
+	// bindkeys-file "/etc/bind/bind.keys";
 
 	listen-on-v6 { ::1; };
 	listen-on { 127.0.0.1; };
@@ -80,7 +80,8 @@ options {
 
 */
 
-	//dnssec-enable yes;
+	// dnssec-enable yes;
+	// dnssec-validation yes;
 
 	/* if you have problems and are behind a firewall: */
 	//query-source address * port 53;

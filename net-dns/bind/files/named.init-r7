@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.5 2010/08/26 16:03:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r7,v 1.6 2010/09/03 17:52:01 idl0r Exp $
 
 opts="start stop reload restart"
 
@@ -117,11 +117,11 @@ stop() {
 
 	ebegin "Stopping ${CHROOT:+chrooted }named"
 	checkconfig || return 2
-	if [ -f $RNDC_KEY ] ; then
+	if [[ -n "${RNDC_KEY}" && -f "${RNDC_KEY}" ]] ; then
 		rndc $SERVER -k $RNDC_KEY stop &>/dev/null
 	else
 		start-stop-daemon --stop --quiet --pidfile $PIDFILE \
-			--exec /usr/sbin/named -- stop
+			--exec /usr/sbin/named
 	fi
 
 	if [[ -n ${CHROOT} ]];

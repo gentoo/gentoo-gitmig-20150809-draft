@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.288 2010/08/26 16:03:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.289 2010/09/03 17:52:01 idl0r Exp $
+
+  03 Sep 2010; Christian Ruppert <idl0r@gentoo.org> files/named.conf-r4,
+  files/named.init-r5, files/named.init-r7:
+  Minor files/named.conf-r4 fixes. Remove "stop" argument from the stop()
+  function of the init script, bug 335398.
 
   26 Aug 2010; Christian Ruppert <idl0r@gentoo.org> files/named.init-r5,
   files/named.init-r7:
