@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.0_beta0.ebuild,v 1.1 2010/06/20 20:47:55 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.0_rc1.ebuild,v 1.1 2010/09/03 22:02:34 ramereth Exp $
 
 EAPI=2
 
 inherit eutils confutils bash-completion
 
 MY_PV="${PV/_rc/~rc}"
-MY_PV="${PV/_beta/~beta}"
+#MY_PV="${PV/_beta/~beta}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="Ganeti is a virtual server management software tool"
 HOMEPAGE="http://code.google.com/p/ganeti/"
@@ -24,12 +24,15 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu-kvm )
 	drbd? ( >=sys-cluster/drbd-8.0 )
 	dev-libs/openssl
+	dev-python/paramiko
 	dev-python/pyopenssl
 	dev-python/pyparsing
+	dev-python/pycurl
 	dev-python/pyinotify
 	dev-python/simplejson
 	net-analyzer/arping
 	net-misc/bridge-utils
+	net-misc/curl[ssl]
 	net-misc/openssh
 	net-misc/socat
 	sys-apps/iproute2
