@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.ebuild,v 1.3 2010/09/03 06:12:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.1 2010/09/03 06:12:37 jlec Exp $
 
 EAPI=3
 
@@ -34,7 +34,7 @@ CDEPEND="
 	>=x11-libs/gl2ps-1.3.5
 	>=dev-cpp/muParser-1.32
 	>=dev-libs/boost-1.35.0
-	>=sci-libs/liborigin-20100630:2
+	>=sci-libs/liborigin-20100903:2
 	sci-libs/gsl
 	dev-libs/boost
 	dev-tex/qtexengine
@@ -61,6 +61,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.14-system-liborigin.patch"
 	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
+	"${FILESDIR}/${PN}-0.9.8.2-syslibs.patch"
 	)
 
 pkg_setup() {
