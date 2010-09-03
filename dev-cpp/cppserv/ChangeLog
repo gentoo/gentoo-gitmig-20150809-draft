@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.51 2010/03/07 13:36:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.52 2010/09/03 13:39:28 ssuominen Exp $
+
+  03 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> cppserv-0.2.13.ebuild,
+  +files/cppserv-0.2.13-glibc-212.patch:
+  Fix building with recent glibc wrt #335687 by Diego E. Pettenò.
 
   07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> cppserv-0.1.119.ebuild,
   cppserv-0.2.13.ebuild:
