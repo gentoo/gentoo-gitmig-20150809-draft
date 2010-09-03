@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPIx-Utilities
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.2 2010/07/27 14:57:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.3 2010/09/03 22:15:01 grobian Exp $
+
+  03 Sep 2010; Fabian Groffen <grobian@gentoo.org>
+  PPIx-Utilities-1.000001.ebuild:
+  Marked ~x86-macos, ~x86-linux, ~sparc-solaris, bug #328393
 
   27 Jul 2010; Fabian Groffen <grobian@gentoo.org>
   PPIx-Utilities-1.000001.ebuild:
