@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.6 2009/01/19 16:21:08 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/wsoundserver-0.4.1.ebuild,v 1.7 2010/09/03 10:25:47 s4t4n Exp $
 
 inherit autotools eutils
 
@@ -17,8 +17,12 @@ DEPEND=">=x11-wm/windowmaker-0.91.0-r1
 	>=x11-libs/libdockapp-0.6.0
 	>=x11-libs/libPropList-0.10.1-r3
 	>=media-libs/audiofile-0.2.6-r1
-	esd? ( >=media-sound/esound-0.2.34 )"
-RDEPEND="${DEPEND}
+	>=media-sound/esound-0.2.34"
+RDEPEND=">=x11-wm/windowmaker-0.91.0-r1
+	>=x11-libs/libdockapp-0.6.0
+	>=x11-libs/libPropList-0.10.1-r3
+	>=media-libs/audiofile-0.2.6-r1
+	esd? ( >=media-sound/esound-0.2.34 )
 	>=media-sound/wmsound-data-1.0.0"
 
 SLOT="0"
