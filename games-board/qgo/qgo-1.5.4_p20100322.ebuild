@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.5 2010/06/01 08:13:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.6 2010/09/03 17:22:09 nyhm Exp $
 
 EAPI=2
-inherit qt4-r2 games
+inherit eutils qt4-r2 games
 
 DESCRIPTION="An ancient boardgame, very common in Japan, China and Korea"
 HOMEPAGE="http://qgo.sourceforge.net/"
