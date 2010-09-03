@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.9 2010/06/16 15:38:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.10 2010/09/03 17:10:19 nyhm Exp $
 
 EAPI=2
 WX_GTK_VER="2.6"
-inherit eutils wxwidgets games flag-o-matic
+inherit eutils wxwidgets flag-o-matic games
 
 DESCRIPTION="A siteswap animator"
 HOMEPAGE="http://icculus.org/jugglemaster/"
