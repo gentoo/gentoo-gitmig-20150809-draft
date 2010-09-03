@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.0.3.ebuild,v 1.2 2010/07/20 07:10:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.0.3.ebuild,v 1.3 2010/09/03 07:41:04 pva Exp $
 
 EAPI="3"
 
@@ -18,9 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="javascript kde spell"
 
 RDEPEND="
-	>=net-libs/libupnp-1.6.0
-	!>net-libs/libupnp-1.6.9999
-	>=dev-libs/boost-1.34.1
+	=net-libs/libupnp-1.6*
 	app-arch/bzip2
 	sys-libs/zlib
 	>=dev-libs/openssl-0.9.8
@@ -35,6 +33,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
+	>=dev-libs/boost-1.34.1
 	dev-util/pkgconfig
 "
 DOCS="AUTHORS ChangeLog.txt"
