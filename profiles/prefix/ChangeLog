@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.199 2010/09/03 07:53:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.200 2010/09/03 08:13:16 fauli Exp $
+
+  03 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  bsd/freebsd/8.0/package.mask:
+  Unmask sys-libs/readline-6 and above for FreeBSD
 
   03 Sep 2010; Christian Faulhammer <fauli@gentoo.org> bsd/use.mask:
   Unmask oss USE flag for BSDs, bug 334117
