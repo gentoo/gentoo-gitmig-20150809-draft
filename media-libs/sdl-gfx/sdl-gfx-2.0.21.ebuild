@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.21.ebuild,v 1.5 2010/07/24 16:52:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.21.ebuild,v 1.6 2010/09/03 17:14:39 nyhm Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools multilib
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="Graphics drawing primitives library for SDL"
