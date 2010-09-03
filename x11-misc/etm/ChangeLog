@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/etm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.1 2010/08/10 19:31:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/etm/ChangeLog,v 1.2 2010/09/03 17:52:04 lack Exp $
+
+*etm-655 (03 Sep 2010)
+
+  03 Sep 2010; Jim Ramsay <lack@gentoo.org> etm-648.ebuild, +etm-655.ebuild:
+  Version bump: 655 is released
 
 *etm-648 (10 Aug 2010)
 
