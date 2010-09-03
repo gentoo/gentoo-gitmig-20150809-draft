@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5-r1.ebuild,v 1.2 2007/11/16 17:07:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.5-r1.ebuild,v 1.3 2010/09/03 14:07:46 s4t4n Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Make mouse support optional
 	cd "${S}/src"
@@ -37,11 +37,11 @@ src_compile() {
 	local comment_out="DFBCardCapabilities caps;"
 	sed -i -e "s:${comment_out}://${comment_out}:" src/dfb.c
 
-	emake DEBUGFLAGS="${CFLAGS}" || die
+	emake DEBUGFLAGS="${CFLAGS}" AM_LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
-	rm -rf ${D}/usr/doc
+	make install DESTDIR="${D}" || die
+	rm -rf "${D}/usr/doc"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }

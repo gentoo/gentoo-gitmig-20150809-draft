@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/directvnc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.21 2007/11/16 17:07:20 s4t4n Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.22 2010/09/03 14:07:46 s4t4n Exp $
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5.ebuild,
+  directvnc-0.7.5-r1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #334867.
+  Some basic QA on ebuilds.
 
   16 Nov 2007; Michele Noberasco <s4t4n@gentoo.org> directvnc-0.7.5-r1.ebuild:
   Stable for x86.
