@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/wmtime-1.0_beta2_p9.ebuild,v 1.3 2010/09/03 13:34:09 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/wmtime-1.0_beta2_p9.ebuild,v 1.4 2010/09/03 18:49:52 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# apply debian patch
 	epatch "${PN}_${MY_PV}-${MY_PL}.diff"
 
-	# honour Gentoo LDFLAGS, bug #335799 
+	# honour Gentoo LDFLAGS, bug #335799
 	sed -i "s/-o wmtime/\$(LDFLAGS) -o wmtime/" "${S}/Makefile"
 }
 
