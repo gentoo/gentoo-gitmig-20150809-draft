@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.84 2010/07/25 12:35:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.85 2010/09/03 19:00:35 grobian Exp $
+
+  03 Sep 2010; Fabian Groffen <grobian@gentoo.org> htop-0.8.3-r1.ebuild:
+  Fix shebang of a buildscript, for Prefix. Bug #335195
 
   25 Jul 2010; Christian Ruppert <idl0r@gentoo.org> htop-0.8.3-r1.ebuild:
   Add back the unicode useflag.

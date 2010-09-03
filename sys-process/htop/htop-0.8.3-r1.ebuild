@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3-r1.ebuild,v 1.2 2010/07/25 12:35:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3-r1.ebuild,v 1.3 2010/09/03 19:00:35 grobian Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib
@@ -34,6 +34,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.1-non-printable-char-filter.patch
+	sed -i -e '1c\#!'"${EPREFIX}"'/usr/bin/python' \
+		scripts/MakeHeader.py || die
 }
 
 src_configure() {
