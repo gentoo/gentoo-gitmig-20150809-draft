@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.9-r1.ebuild,v 1.1 2010/06/29 09:53:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.9-r2.ebuild,v 1.1 2010/09/03 13:47:55 s4t4n Exp $
 
 EAPI="2"
 
@@ -12,8 +12,8 @@ SRC_URI="http://hules.free.fr/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gkrellm"
+KEYWORDS="~amd64 ~ppc x86"
+IUSE=""
 
 RDEPEND="media-libs/imlib2[X]
 	x11-libs/libX11
@@ -21,9 +21,7 @@ RDEPEND="media-libs/imlib2[X]
 	media-fonts/corefonts
 	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
-	x11-proto/xextproto
-	gkrellm? ( dev-util/pkgconfig
-		>=app-admin/gkrellm-2 )"
+	x11-proto/xextproto"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-64bit.patch
@@ -31,13 +29,10 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable gkrellm)
+	econf --disable-gkrellm
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README || die
-
-	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	use gkrellm && doins gkhdplop.so
 }

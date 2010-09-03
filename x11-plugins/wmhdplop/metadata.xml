@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-dock</herd>
-<use>
-	<flag name='gkrellm'>Enable building of <pkg>app-admin/gkrellm</pkg>
-		module</flag>
-</use>
 </pkgmetadata>

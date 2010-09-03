@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmhdplop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.17 2010/06/29 09:53:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.18 2010/09/03 13:47:55 s4t4n Exp $
+
+*wmhdplop-0.9.9-r2 (03 Sep 2010)
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> +wmhdplop-0.9.9-r2.ebuild:
+  Revision bump, directly x86 stable, fixing bug with gkrellm
+  by forcefully disabling optional gkrellm support.
+  Closes bug #275262.
+  -wmhdplop-0.9.9.ebuild, --wmhdplop-0.9.9-r1.ebuild:
+  Wiped out older revisions.
 
 *wmhdplop-0.9.9-r1 (29 Jun 2010)
 
