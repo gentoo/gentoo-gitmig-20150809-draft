@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.35 2010/09/02 19:22:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.36 2010/09/03 22:03:40 cardoe Exp $
+
+  03 Sep 2010; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.5.ebuild:
+  Fix app-emulation/virtinst depend
 
 *virt-manager-0.8.5 (02 Sep 2010)
 

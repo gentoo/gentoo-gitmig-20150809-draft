@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.5.ebuild,v 1.1 2010/09/02 19:22:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.5.ebuild,v 1.2 2010/09/03 22:03:40 cardoe Exp $
 
 BACKPORTS=1
 
@@ -24,7 +24,7 @@ IUSE="gnome-keyring policykit sasl"
 RDEPEND=">=dev-python/pygtk-1.99.12
 	>=app-emulation/libvirt-0.7.0[python,sasl?]
 	>=dev-libs/libxml2-2.6.23[python]
-	>=app-emulation/virtinst-0.500.3
+	>=app-emulation/virtinst-0.500.4
 	>=gnome-base/librsvg-2
 	>=x11-libs/vte-0.12.2[python]
 	>=net-libs/gtk-vnc-0.3.8[python,sasl?]
