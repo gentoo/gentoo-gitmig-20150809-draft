@@ -1,31 +1,26 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/Tk-JPEG-Lite-2.01403.ebuild,v 1.11 2006/10/24 22:05:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/Tk-JPEG-Lite-2.01403.ebuild,v 1.12 2010/09/03 07:20:49 tove Exp $
 
+EAPI=3
+
+MODULE_AUTHOR=SREZIC
 inherit perl-module
 
-IUSE=""
-
 DESCRIPTION="lite JPEG loader for Tk::Photo"
-SRC_URI="mirror://cpan/authors/id/S/SR/SREZIC/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/S/SR/SREZIC/"
 
 SLOT="0"
-LICENSE="Artistic GPL-2"
 KEYWORDS="amd64 ia64 ~ppc sparc x86"
+IUSE=""
 
-DEPEND="media-libs/jpeg
-	dev-perl/perl-tk
-	dev-lang/perl"
+RDEPEND="media-libs/jpeg
+	dev-perl/perl-tk"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	for i in Makefile.PL tkjpeg MANIFEST; do
-	 	sed -e 's:tkjpeg:tkjpeg-lite:' ${i} > ${i}.new \
-		   	&& mv ${i}.new ${i} || die "sed on ${i} failed!"
-	done
-	mv tkjpeg tkjpeg-lite
+src_prepare() {
+	perl-module_src_prepare
+	sed -i -e 's:tkjpeg:tkjpeg-lite:' Makefile.PL tkjpeg MANIFEST || die
+	mv tkjpeg tkjpeg-lite || die
 }
 
 pkg_postinst() {
