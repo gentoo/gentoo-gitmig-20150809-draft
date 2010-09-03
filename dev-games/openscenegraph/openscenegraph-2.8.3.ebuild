@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.5 2010/08/17 03:56:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.6 2010/09/03 17:18:18 nyhm Exp $
 
 EAPI=2
 
-inherit eutils versionator cmake-utils
+inherit eutils flag-o-matic versionator cmake-utils
 
 MY_PN="OpenSceneGraph"
 MY_P=${MY_PN}-${PV}
