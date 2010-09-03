@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/bozohttpd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.11 2007/11/12 14:15:48 armin76 Exp $
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.12 2010/09/03 10:01:50 s4t4n Exp $
+
+*bozohttpd-20100621 (19 Apr 2007)
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20100621.ebuild:
+  Version bump, see bug #302012.
+  -bozohttpd-20060517.ebuild, -bozohttpd-20100621.ebuild:
+  Autumn cleaning.
 
   12 Nov 2007; Raúl Porcel <armin76@gentoo.org> bozohttpd-20060517.ebuild:
   x86 stable
