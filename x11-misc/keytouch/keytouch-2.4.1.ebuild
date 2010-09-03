@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.3 2010/01/10 08:17:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.4 2010/09/03 08:43:30 nyhm Exp $
 
+EAPI=2
 inherit eutils linux-info
 
 DESCRIPTION="Easily configure extra keyboard function keys"
@@ -30,24 +31,33 @@ RDEPEND="${RDEPEND}
 	) )
 	!kde? ( x11-libs/gksu )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc28.patch
 	sed -i \
 		's/install-data-local//1' \
 		keytouch{-acpid,d,-init}/Makefile.in \
 		|| die "sed failed"
+	sed -i \
+		-e '/^CFLAGS/s:\(.*\)=\(.*\)-O2:\1+=\2$(LDFLAGS):' \
+		{mxml,plugins}/Makefile.in \
+		|| die "sed failed"
 }
 
-src_compile() {
+d_iter() {
 	local d
 	for d in . keytouch-config keytouch-keyboard ; do
 		pushd ${d} > /dev/null
-		econf || die
-		emake || die "emake ${d} failed"
+		eval "${1}"
 		popd > /dev/null
 	done
+}
+
+src_configure() {
+	d_iter 'econf'
+}
+
+src_compile() {
+	d_iter 'emake || die "emake ${d} failed"'
 }
 
 src_install() {
@@ -62,11 +72,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog
 
-	local d
-	for d in . keytouch-config keytouch-keyboard ; do
-		emake -C ${d} DESTDIR="${D}" install \
-			|| die "emake install ${d} failed"
-	done
+	d_iter 'emake DESTDIR="${D}" install || die "emake install ${d} failed"'
 }
 
 pkg_postinst() {

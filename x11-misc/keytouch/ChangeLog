@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/keytouch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.18 2010/01/10 08:17:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.19 2010/09/03 08:43:30 nyhm Exp $
+
+  03 Sep 2010; Tristan Heaven <nyhm@gentoo.org> keytouch-2.4.1.ebuild:
+  Respect CFLAGS/LDFLAGS when building plugins, bug #333975
 
   10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> keytouch-2.4.1.ebuild:
   Bug #283320 cleanup: linux_config_exists before linux_chkconfig*.
