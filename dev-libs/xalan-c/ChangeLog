@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xalan-c
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.22 2009/07/27 00:07:33 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.23 2010/09/03 01:17:42 weaver Exp $
+
+  02 Sep 2010; Andrey Kislyuk <weaver@gentoo.org>
+  xalan-c-1.11.0_pre797991.ebuild:
+  The latest version is not parallel make safe despite the patch. Adding
+  workaround. Feel free to fix properly.
 
 *xalan-c-1.11.0_pre797991 (26 Jul 2009)
 
