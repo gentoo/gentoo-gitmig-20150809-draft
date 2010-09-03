@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.129 2010/08/20 21:11:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.130 2010/09/03 12:12:11 fauli Exp $
+
+  03 Sep 2010; Christian Faulhammer <fauli@gentoo.org> DBI-1.613.ebuild:
+  add ~x86-freebsd
 
 *DBI-1.613 (20 Aug 2010)
 

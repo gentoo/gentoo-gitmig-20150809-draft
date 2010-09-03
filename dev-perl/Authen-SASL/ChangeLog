@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.71 2010/06/07 12:06:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.72 2010/09/03 12:15:39 fauli Exp $
+
+  03 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  Authen-SASL-2.15.ebuild:
+  add ~x86-freebsd
 
 *Authen-SASL-2.15 (07 Jun 2010)
 
