@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.1 2010/09/03 06:20:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.2 2010/09/03 06:29:57 xarthisius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,6 +31,8 @@ src_unpack() {
 
 	# Patch from Debian to add -north and -south, among other fixes
 	epatch "${DISTDIR}"/x2x_1.27-8.diff.gz
+	# Revert part of debian patch messing with CFLAGS
+	sed -i '/CFLAGS = -Wall/d' Imakefile || die
 
 	# Fix variable initialization in Debian patch
 	epatch "${DISTDIR}"/x2x_1.27-8-initvars.patch.gz

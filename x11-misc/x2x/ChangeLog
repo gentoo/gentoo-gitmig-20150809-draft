@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.23 2010/09/03 06:20:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.24 2010/09/03 06:29:57 xarthisius Exp $
+
+  03 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> x2x-1.27-r3.ebuild:
+  Revert changes to CFLAGS introduced by debian patch
 
 *x2x-1.27-r3 (03 Sep 2010)
 
