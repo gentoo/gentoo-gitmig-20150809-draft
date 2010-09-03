@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/wmtime-1.0_beta2_p9.ebuild,v 1.2 2008/04/13 19:33:11 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtime/wmtime-1.0_beta2_p9.ebuild,v 1.3 2010/09/03 13:34:09 s4t4n Exp $
 
 inherit eutils versionator
 
@@ -19,7 +19,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/w/wmtime/wmtime_${MY_PV}.orig.ta
 HOMEPAGE="http://packages.qa.debian.org/w/wmtime.html"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 LICENSE="GPL-2"
 
 RDEPEND="x11-libs/libX11
@@ -40,10 +40,13 @@ src_unpack() {
 
 	# apply debian patch
 	epatch "${PN}_${MY_PV}-${MY_PL}.diff"
+
+	# honour Gentoo LDFLAGS, bug #335799 
+	sed -i "s/-o wmtime/\$(LDFLAGS) -o wmtime/" "${S}/Makefile"
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install () {
