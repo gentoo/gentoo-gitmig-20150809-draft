@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.4.1.ebuild,v 1.5 2010/09/04 09:22:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.4.5.ebuild,v 1.1 2010/09/04 09:22:32 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -72,24 +72,15 @@ src_compile() {
 		myconf="${myconf} --enable-all-optimizations"
 
 	econf \
-		--enable-pae \
-		--enable-large-pages \
-		--enable-global-pages \
-		--enable-mtrr \
 		--enable-repeat-speedups \
 		--enable-trace-cache \
 		--enable-fast-function-calls \
-		--enable-ignore-bad-msr \
 		--enable-disasm \
 		--enable-logging \
 		--enable-raw-serial \
 		--enable-vbe \
 		--enable-clgd54xx \
-		--enable-fpu \
-		--enable-vme \
 		--enable-alignment-check \
-		--enable-sep \
-		--enable-popcnt \
 		--enable-monitor-mwait \
 		--enable-gameport \
 		--enable-iodebug \
@@ -101,14 +92,9 @@ src_compile() {
 		--enable-pci \
 		--enable-pcidev \
 		--enable-pnic \
-		--enable-mmx \
-		--enable-sse=2 \
-		--enable-3dnow \
 		--enable-cpu-level=6 \
 		--enable-smp \
 		--with-nogui \
-		--enable-xsave \
-		--enable-aes \
 		$(use_enable usb) \
 		$(use_enable readline) \
 		$(use_enable debugger) \
