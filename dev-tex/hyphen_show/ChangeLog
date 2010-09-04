@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hyphen_show
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.8 2008/09/19 01:12:16 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/ChangeLog,v 1.9 2010/09/04 17:41:54 ulm Exp $
+
+  04 Sep 2010; Ulrich Mueller <ulm@gentoo.org> hyphen_show-20000425.ebuild:
+  Respect LDFLAGS, bug 335988.
 
   19 Sep 2008; Brent Baude <ranger@gentoo.org> hyphen_show-20000425.ebuild:
   Marking hyphen_show-20000425 ~ppc64 for bug 237447
@@ -30,4 +33,4 @@
   +hyphen_show-20000425.ebuild, +files/hyphen_show-gcc34.patch:
   New package. Reported on bug #107419; ebuild and patch submitted by Ulrich
   Mueller.
- 
+

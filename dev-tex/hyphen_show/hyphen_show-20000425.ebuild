@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.5 2008/09/19 01:12:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hyphen_show/hyphen_show-20000425.ebuild,v 1.6 2010/09/04 17:41:54 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc64 x86"
 IUSE=""
-DEPEND=""
+
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_unpack() {
@@ -22,12 +22,11 @@ src_unpack() {
 }
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} hyphen_show.c \
-		-o hyphen_show || die "Compilation failed"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} hyphen_show.c -o hyphen_show || die
 }
 
 src_install() {
-	dobin hyphen_show
-	doman hyphen_show.1
-	dodoc README.hyphen_show
+	dobin hyphen_show || die
+	doman hyphen_show.1 || die
+	dodoc README.hyphen_show || die
 }
