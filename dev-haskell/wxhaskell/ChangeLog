@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.29 2010/09/04 14:03:39 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.30 2010/09/04 14:47:11 kolmodin Exp $
+
+*wxhaskell-0.12.1.6 (04 Sep 2010)
+
+  04 Sep 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  -wxhaskell-0.11.1.2.ebuild, +wxhaskell-0.12.1.6.ebuild:
+  Version bump to latest upstream version.
 
 *wxhaskell-0.11.1.2 (04 Sep 2010)
 
