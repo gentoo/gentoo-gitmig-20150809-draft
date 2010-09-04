@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.25 2010/05/14 19:55:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.26 2010/09/04 22:16:56 flameeyes Exp $
+
+*libcompizconfig-0.8.4-r2 (04 Sep 2010)
+
+  04 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libcompizconfig-0.8.4-r2.ebuild:
+  Disable static libraries (they are linked against modules anyway), remove
+  .la files.
 
   14 May 2010; Joseph Jezak <josejx@gentoo.org>
   libcompizconfig-0.8.4-r1.ebuild:
