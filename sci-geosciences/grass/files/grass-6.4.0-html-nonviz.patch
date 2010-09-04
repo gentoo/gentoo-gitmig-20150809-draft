@@ -1,14 +1,14 @@
---- tools/build_html_index.sh	2009-05-05 21:04:00.000000000 +0200
-+++ tools/build_html_index.sh.new	2010-01-27 10:33:02.000000000 +0100
-@@ -139,7 +139,6 @@
-        <li><a href=\"displaydrivers.html\">Display drivers</a></li>
-         <li><a href=\"gis.m.html\">gis.m</a> and <a href=d.m.html>d.m</a> GIS managers</li>
-         <li><a href=\"wxGUI.html\">wxGUI</a> wxPython-based GUI frontend</li>
--        <li><a href=\"nviz.html\">nviz</a> visualization and animation tool</li>
+--- tools/build_html_index.sh.old	2010-06-16 23:07:37.000000000 +0200
++++ tools/build_html_index.sh	2010-06-16 23:10:00.000000000 +0200
+@@ -135,7 +135,6 @@
+        </ul>
+ 
+        <ul>
+-        <li><a href=\"nviz.html\">nviz</a> 3D visualization and animation tool</li>
          <li><a href=\"xganim.html\">xganim</a> tool  for animating a raster map series</li>
-         <li><a href=\"display.html\">Display commands manual</a></li>
         </ul></td>
-@@ -235,11 +234,11 @@
+     </tr>
+@@ -245,11 +244,11 @@
  #copy over CSS:
  cp -f grassdocs.css $HTMLDIR/
  mkdir -p $HTMLDIR/nviz/
@@ -22,7 +22,7 @@
  chmod a+r $HTMLDIR/grass_logo.png $HTMLDIR/nviz/grass_logo.png
  if [ "$MACOSX" ] ; then
    cp -f grass_icon.png $HTMLDIR/
-@@ -292,7 +291,7 @@
+@@ -302,7 +301,7 @@
  echo "<tr><td>&nbsp;&nbsp;<a href=\"full_index.html#r3\">r3.*</a> </td><td>raster3D commands</td></tr>" >> "$FULLINDEX"
  echo "<tr><td>&nbsp;&nbsp;<a href=\"full_index.html#v\">v.*</a> </td><td>vector commands</td></tr>" >> "$FULLINDEX"
  echo "<tr><td>&nbsp;&nbsp;<a href=\"gis.m.html\">gis.m</a> </td><td>GUI frontend to GIS menus and display</td></tr>" >> "$FULLINDEX"

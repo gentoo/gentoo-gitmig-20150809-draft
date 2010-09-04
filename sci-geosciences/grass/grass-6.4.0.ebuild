@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.10 2010/06/17 21:03:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.1 2010/09/04 02:29:11 nerdboy Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
-inherit eutils python gnome2 multilib versionator wxwidgets base
+inherit eutils gnome2 multilib python versionator wxwidgets base
 
 MY_PM=${PN}$(get_version_component_range 1-2 ${PV})
 MY_PM=${MY_PM/.}
@@ -23,10 +23,10 @@ IUSE="X cairo cxx ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl p
 
 TCL_DEPS="
 	>=dev-lang/tcl-8.5
-	>=dev-lang/tk-8.5
-"
+	>=dev-lang/tk-8.5"
 
 RDEPEND="
+	>=app-admin/eselect-1.2
 	sci-libs/gdal
 	sci-libs/proj
 	sys-libs/gdbm
@@ -51,7 +51,9 @@ RDEPEND="
 	)
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite:3 )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff
+		largefile? ( >=media-libs/tiff-4 )
+	)
 	truetype? ( media-libs/freetype:2 )
 	X? (
 		x11-libs/libICE
@@ -71,11 +73,10 @@ RDEPEND="
 			virtual/opengl
 			${TCL_DEPS}
 		)
-		python? ( wxwidgets? ( >=dev-python/wxpython-2.8.10.1 ) )
+		python? ( wxwidgets? ( >=dev-python/wxpython-2.8.10.1[cairo,opengl?] ) )
 		!python? ( ${TCL_DEPS} )
 		!wxwidgets? ( ${TCL_DEPS} )
-	)
-"
+	)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -125,6 +126,18 @@ pkg_setup() {
 		# only py2 is supported
 		python_set_active_version 2
 	fi
+
+	if use wxwidgets; then
+		# only 2.8 is supported or the wx-gui barfs at runtime...
+		local success=0
+		ewarn "Attempting to select a compatible wxwidgets"
+		eselect wxwidgets set gtk2-unicode-release-2.8
+		success=1
+	fi
+	if [ $success != 1 ]; then
+		 eerror "Unable to select a compatible wxwidgets!"
+		 die "Please set wxwidgets to at least 2.8 (see \`eselect wxwidgets --help\`)."
+	fi
 }
 
 src_prepare() {
@@ -145,7 +158,7 @@ src_configure() {
 			$(use_with motif)
 			$(use_with opengl)
 			--with-x
-		"
+			"
 
 		if use python && use wxwidgets; then
 			WX_BUILD=yes
@@ -158,7 +171,6 @@ src_configure() {
 		else
 			WX_BUILD=no
 			# use tcl gui if wxwidgets are disabled
-
 			myconf+="
 				--with-tcltk
 				--without-wxwidgets
