@@ -1,0 +1,45 @@
+diff --git a/pigz.c b/pigz.c
+index 97e6faa..29d88c3 100644
+--- a/pigz.c
++++ b/pigz.c
+@@ -2940,6 +2940,9 @@ local int option(char *arg)
+                     arg = longopts[j][1];
+                     break;
+                 }
++            /* double dash to terminate option processing */
++            if (*(arg-1) == '-')
++                return 2;
+             if (j < 0)
+                 bail("invalid option: ", arg - 2);
+         }
+@@ -3061,6 +3064,7 @@ int main(int argc, char **argv)
+     int n;                          /* general index */
+     unsigned long done;             /* number of named files processed */
+     char *opts, *p;                 /* environment default options, marker */
++    int doubledash;	            /* -- to terminate option checking */
+ 
+     /* prepare for interrupts and logging */
+     signal(SIGINT, cut_short);
+@@ -3106,15 +3110,20 @@ int main(int argc, char **argv)
+ 
+     /* process command-line arguments */
+     done = 0;
+-    for (n = 1; n < argc; n++)
+-        if (option(argv[n])) {          /* true if file name, process it */
++    doubledash = 0;
++    for (n = 1; n < argc; n++) {
++        int optionreturn = doubledash ? 1 : option(argv[n]);
++        if (optionreturn == 1) { /* true if file name, process it */
+             if (done == 1 && pipeout && !decode && !list && form > 1) {
+                 fprintf(stderr, "warning: output is concatenated zip files ");
+                 fprintf(stderr, "-- pigz will not be able to extract\n");
+             }
+             process(strcmp(argv[n], "-") ? argv[n] : NULL);
+             done++;
++        } else if (optionreturn == 2) {
++            doubledash++;
+         }
++    }
+     option(NULL);
+ 
+     /* list stdin or compress stdin to stdout if no file names provided */
