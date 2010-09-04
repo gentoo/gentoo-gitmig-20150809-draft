@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.53 2010/04/03 06:03:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.54 2010/09/04 21:53:43 flameeyes Exp $
+
+*compiz-0.8.6-r1 (04 Sep 2010)
+
+  04 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +compiz-0.8.6-r1.ebuild, metadata.xml:
+  Helping out a bit: disable static libraries (they are not linked against,
+  are most plugins) and .la files (same reasoning); add a gconf USE flag
+  because even if you want GNOME integration you might not want to pay the
+  GConf toll (lots of schemas) and rather prefer flat files. Wire the svg
+  USE flag to librsvg.
 
 *compiz-0.8.6 (03 Apr 2010)
 *compiz-0.8.4-r3 (03 Apr 2010)
