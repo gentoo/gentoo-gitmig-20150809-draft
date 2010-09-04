@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.91 2010/09/03 14:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.92 2010/09/04 15:31:53 armin76 Exp $
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org> pambase-20100819.ebuild:
+  Add ~alpha/~ia64 wrt #329585
 
   03 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   pambase-20090620.1-r1.ebuild, pambase-20100310.ebuild:
