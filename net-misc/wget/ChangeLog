@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.125 2010/09/04 01:42:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.126 2010/09/04 16:49:32 armin76 Exp $
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org> wget-1.12-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #329941
 
   04 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> wget-1.12-r2.ebuild:
   x86 stable wrt security bug #329941
