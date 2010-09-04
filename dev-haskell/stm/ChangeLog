@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/stm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.7 2010/07/01 19:59:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.8 2010/09/04 13:43:36 kolmodin Exp $
+
+*stm-2.1.2.2 (04 Sep 2010)
+
+  04 Sep 2010; Lennart Kolmodin <kolmodin@gentoo.org> +stm-2.1.2.2.ebuild:
+  Bump version.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> stm-2.1.1.0.ebuild,
   stm-2.1.1.2.ebuild:
