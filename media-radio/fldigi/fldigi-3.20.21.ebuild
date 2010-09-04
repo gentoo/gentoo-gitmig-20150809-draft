@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.20.21.ebuild,v 1.1 2010/07/27 10:45:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.20.21.ebuild,v 1.2 2010/09/04 16:42:56 phajdan.jr Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.w1hkj.com/downloads/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="hamlib nls portaudio pulseaudio sndfile xmlrpc"
 
 RDEPEND=">=x11-libs/fltk-1.1.9:1.1[threads,xft]
