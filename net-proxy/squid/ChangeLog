@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.304 2010/08/12 06:29:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.305 2010/09/04 14:45:59 armin76 Exp $
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org> squid-2.7.9.ebuild,
+  squid-3.0.20-r1.ebuild, squid-3.1.6-r1.ebuild:
+  alpha/arm/ia64/sparc stable wrt #301828
 
 *squid-3.1.6-r1 (12 Aug 2010)
 
