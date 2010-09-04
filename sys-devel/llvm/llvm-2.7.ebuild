@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7.ebuild,v 1.6 2010/09/03 17:49:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7.ebuild,v 1.7 2010/09/04 18:36:29 grobian Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -153,7 +153,9 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in lib{LLVMHello,LTO,profile_rt}.dylib ; do
+		for lib in lib{EnhancedDisassembly,LLVMHello,LTO,profile_rt}.dylib ; do
+			# libEnhancedDisassembly is Darwin10 only
+			[[ -f ${ED}/usr/lib/${lib} ]] || continue
 			install_name_tool -id "${EPREFIX}"/usr/lib/${lib} \
 				"${ED}"/usr/lib/${lib}
 		done
