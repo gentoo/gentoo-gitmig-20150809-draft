@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.2.ebuild,v 1.1 2010/06/03 02:05:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.4.ebuild,v 1.1 2010/09/04 18:43:36 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.6-syslog-updates.patch
 	epatch "${FILESDIR}"/${PN}-2.6.4-mdassemble.patch #211426
 	use static && append-ldflags -static
+
+	sed -i -e 's:-z now::' Makefile || die #331653
 }
 
 src_compile() {
