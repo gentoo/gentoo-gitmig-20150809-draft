@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.260 2010/05/20 03:01:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.261 2010/09/04 23:12:16 vapier Exp $
+
+  04 Sep 2010; Mike Frysinger <vapier@gentoo.org> bash-4.1_p7.ebuild:
+  Disable emacs checking #335896 by Fernando V.
 
 *bash-4.1_p7 (20 May 2010)
 
