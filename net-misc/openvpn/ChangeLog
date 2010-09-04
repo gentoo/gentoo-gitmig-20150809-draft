@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.181 2010/08/28 08:01:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.182 2010/09/04 15:29:23 armin76 Exp $
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org> openvpn-2.1.0-r1.ebuild:
+  alpha/s390/sh/sparc stable wrt #293894
 
   28 Aug 2010; Markus Meier <maekke@gentoo.org> openvpn-2.1.0-r1.ebuild:
   arm stable, bug #293894
