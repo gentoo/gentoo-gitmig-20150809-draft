@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.11 2010/04/03 04:52:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.12 2010/09/04 22:01:05 flameeyes Exp $
+
+*compiz-plugins-main-0.8.6-r1 (04 Sep 2010)
+
+  04 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +compiz-plugins-main-0.8.6-r1.ebuild, metadata.xml:
+  Rename gnome USE flag to gconf (like x11-wm/compiz); disable static libs
+  and remove .la files (ibid.).
 
 *compiz-plugins-main-0.8.6 (03 Apr 2010)
 
