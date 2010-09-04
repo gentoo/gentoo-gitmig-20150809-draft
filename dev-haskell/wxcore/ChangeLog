@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/wxcore
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxcore/ChangeLog,v 1.1 2010/09/04 13:59:36 kolmodin Exp $
+
+*wxcore-0.12.1.6 (04 Sep 2010)
+
+  04 Sep 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +wxcore-0.12.1.6.ebuild, +metadata.xml:
+  Initial import of wxcore, the wrappers to the native wxGTK library.
+
