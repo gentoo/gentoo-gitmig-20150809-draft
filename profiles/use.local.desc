@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5916 2010/09/03 14:33:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5917 2010/09/04 10:33:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1120,7 +1120,6 @@ dev-util/google-perftools:minimal -  Only build the tcmalloc_minimal library, ig
 dev-util/kdevelop:cmake - Enable support for CMAKE build system
 dev-util/kdevelop:qmake - Enable support for Qmake build system
 dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
-dev-util/kdevplatform:mercurial - Add suport for mercurial VCS
 dev-util/metro:ccache - Enable support for ccache
 dev-util/metro:git - Enable support for git snapshots
 dev-util/metro:threads - Enable support for pbzip2 tarball packing/unpacking
