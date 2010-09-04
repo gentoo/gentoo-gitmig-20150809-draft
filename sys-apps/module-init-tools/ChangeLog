@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.159 2010/08/06 05:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.160 2010/09/04 10:43:02 ssuominen Exp $
+
+*module-init-tools-3.12-r1 (04 Sep 2010)
+
+  04 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +module-init-tools-3.12-r1.ebuild:
+  Install /etc/modprobe.d/usb-load-ehci-first.conf that will ensure ehci is
+  loaded before uhci or ohci wrt #260139. Thanks to Szymon Zygmunt, Martin
+  Mokrejš, Pacho Ramos and Mike Frysinger.
 
   06 Aug 2010; Mike Frysinger <vapier@gentoo.org> module-init-tools-3.5.ebuild,
   module-init-tools-3.6-r1.ebuild, module-init-tools-3.8.ebuild,
