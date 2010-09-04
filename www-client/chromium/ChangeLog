@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.169 2010/09/02 14:12:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.170 2010/09/04 01:52:33 phajdan.jr Exp $
+
+*chromium-6.0.472.53-r1 (04 Sep 2010)
+
+  04 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-6.0.472.51.ebuild, chromium-6.0.472.53.ebuild,
+  +chromium-6.0.472.53-r1.ebuild:
+  Version bump for ~arch, and lower cups dependency for 6.0.472.53 which
+  should go stable (bug #335750).
 
 *chromium-6.0.472.53 (02 Sep 2010)
 
