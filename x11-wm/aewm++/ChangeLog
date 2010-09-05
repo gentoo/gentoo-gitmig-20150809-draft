@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/aewm++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.18 2010/06/06 20:12:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.19 2010/09/05 15:09:56 xarthisius Exp $
+
+*aewm++-1.1.5-r1 (05 Sep 2010)
+
+  05 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +aewm++-1.1.5-r1.ebuild, +files/aewm++-1.1.5-makefile.patch,
+  -files/gcc-3.4.patch:
+  Respect LDFLAGS wrt bug 336099. Thanks to Diego for the report.
 
   06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> aewm++-1.1.5.ebuild:
   Fix HOMEPAGE wrt #239223 by Paweł Szubert.
