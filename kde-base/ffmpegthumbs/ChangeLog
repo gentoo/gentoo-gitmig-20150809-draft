@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/ffmpegthumbs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.1 2010/09/05 22:52:23 tampakrap Exp $
+
+*ffmpegthumbs-4.5.1 (05 Sep 2010)
+
+  05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +ffmpegthumbs-4.5.1.ebuild:
+  Version bump
+
