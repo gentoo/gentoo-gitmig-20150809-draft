@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.119 2010/09/05 09:49:14 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.120 2010/09/05 11:49:39 ford_prefect Exp $
+
+*banshee-1.7.5 (05 Sep 2010)
+
+  05 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.7.5.ebuild, +files/banshee-1.7.5-fix-collisions.patch:
+  Bump to 1.7.5. Bunch of fixes and feature additions. Not dropping HAL
+  support till gio/udev-backend deps are more mature. Switched to
+  libgpod-sharp based iPod backend.
 
   05 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org> banshee-1.7.4.ebuild:
   Fix SRC_URI for unstable versions
