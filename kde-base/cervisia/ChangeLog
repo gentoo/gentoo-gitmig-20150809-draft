@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.157 2010/09/05 22:48:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.158 2010/09/05 23:12:45 tampakrap Exp $
+
+  05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  cervisia-4.5.1.ebuild:
+  Version bump
 
 *cervisia-4.5.1 (05 Sep 2010)
 

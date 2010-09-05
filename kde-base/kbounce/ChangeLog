@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.157 2010/08/09 17:34:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.158 2010/09/05 23:27:43 tampakrap Exp $
+
+*kbounce-4.5.1 (05 Sep 2010)
+
+  05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kbounce-4.5.1.ebuild:
+  Version bump
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kbounce-4.4.5.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.
