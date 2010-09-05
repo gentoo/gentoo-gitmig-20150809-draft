@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/wizznic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/ChangeLog,v 1.1 2010/07/29 05:00:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/ChangeLog,v 1.2 2010/09/05 17:37:05 phajdan.jr Exp $
+
+  05 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> wizznic-0.9.ebuild:
+  x86 stable wrt bug #335479
 
 *wizznic-0.9 (29 Jul 2010)
 
