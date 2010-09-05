@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.72 2010/08/23 15:37:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.73 2010/09/05 16:49:57 armin76 Exp $
+
+  05 Sep 2010; Raúl Porcel <armin76@gentoo.org> perl-tk-804.029.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #333573
 
   23 Aug 2010; Markos Chandras <hwoarang@gentoo.org> perl-tk-804.029.ebuild:
   Stable on amd64 wrt bug #333573
