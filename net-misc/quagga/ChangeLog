@@ -1,8 +1,29 @@
 # ChangeLog for net-misc/quagga
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.85 2009/08/30 08:13:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.86 2010/09/05 17:09:36 flameeyes Exp $
+
+*quagga-0.99.17 (05 Sep 2010)
+
+  05 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -quagga-0.99.13.ebuild, -quagga-0.99.14.ebuild,
+  +files/quagga-0.99.14-fix-ipremove.patch, -quagga-0.99.15.ebuild,
+  +quagga-0.99.17.ebuild, +files/quagga-0.99.17-libcap.patch,
+  +files/quagga-services.init, +files/zebra.init.2, metadata.xml:
+  Version bump (bug #311865), remove old non-stable ebuilds as they are
+  vulnerable (bug #334303). Take co-maintainership of the package; change
+  the libcap patch (sent upstream) and avoid using a tarball for the patches
+  for now; the other two feature, optional patches are fetched from their
+  respective websites if the flags are enabled; rewrite init scripts almost
+  from scratch so that they recreate their state directory if missing, and
+  make all the services, beside zebra, share the same init script file, drop
+  --quiet, make sure that s-s-d knows about the pidfile as well; install
+  sample files in the documentation directory and not /etc; only use libpcre
+  if not using glibc (could actually be unneeded on other systems as well);
+  don't add /usr/lib/quagga to the library path (the build system will take
+  care of using rpath; if the libraries have to be linked against from third
+  parties, open a bug as they should be in /usr/lib directly).
 
 *quagga-0.99.15 (30 Aug 2009)
 

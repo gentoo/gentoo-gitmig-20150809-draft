@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/files/quagga-services.init,v 1.1 2010/09/05 17:09:37 flameeyes Exp $
+
+depend() {
+    need zebra
+}
+
+start() {
+    if [ ! -e /etc/quagga/${SVCNAME}.conf ] ; then
+        eerror "Before starting ${SVCNAME} you have to configure it, by creating"
+        eerror "a /etc/quagga/${SVCNAME}.conf file."
+        eerror ""
+        eerror "A sample file has been installed in `ls /usr/share/doc/quagga-*/samples/${SVCNAME}.conf.sample`"
+        return 1
+    fi
+
+    if [ ! -d /var/run/quagga ] ; then
+        mkdir -p /var/run/quagga
+        chown quagga:quagga /var/run/quagga
+        chmod 0750 /var/run/quagga
+    fi
+
+    ebegin "Starting ${SVCNAME}"
+    start-stop-daemon \
+        --start --exec /usr/sbin/${SVCNAME} \
+        --pidfile /var/run/quagga/${SVCNAME}.pid \
+	-- -d -f /etc/quagga/${SVCNAME}.conf ${EXTRA_OPTS} \
+	--pid_file /var/run/quagga/${SVCNAME}.pid
+
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${SVCNAME}"
+    start-stop-daemon --stop \
+        --pidfile /var/run/quagga/${SVCNAME}.pid
+    eend $?
+}
