@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.441 2010/08/05 17:20:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.442 2010/09/05 04:49:00 dirtyepic Exp $
 
 # Keep them sorted
 
@@ -377,7 +377,6 @@ wifi - Enable wireless network functions
 win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wmf - Adds support for the Windows Metafile vector image format
 wxwidgets - Adds support for wxWidgets/wxGTK GUI toolkit
-wxwindows - Adds support for wxWidgets/wxGTK GUI toolkit (deprecated, use wxwidgets)
 x264 - Enable h264 encoding using x264
 xattr - Adds support for extended attributes (filesystem-stored metadata)
 xcb - Support the X C-language Binding, a replacement for Xlib
