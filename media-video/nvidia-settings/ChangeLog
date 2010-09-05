@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.91 2010/08/30 22:23:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.92 2010/09/05 13:28:32 lxnay Exp $
+
+*nvidia-settings-256.52-r1 (05 Sep 2010)
+
+  05 Sep 2010; Fabio Erculiani <lxnay@gentoo.org>
+  -nvidia-settings-256.52.ebuild, +nvidia-settings-256.52-r1.ebuild:
+  fix broken ebuild, it didn't install nvidia-settings executable and icons,
+  used make instead of the wrapper function emake and didn't fix the
+  pre-stripping problem of /usr/bin/nvidia-settings. Bumping revision
 
   30 Aug 2010; Doug Goldstein <cardoe@gentoo.org>
   +nvidia-settings-256.52.ebuild:
