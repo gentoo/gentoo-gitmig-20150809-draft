@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/secpanel
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.16 2008/03/25 18:06:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.17 2010/09/05 23:03:28 xmw Exp $
+
+*secpanel-0.6.1 (05 Sep 2010)
+
+  05 Sep 2010; Michael Weber <xmw@gentoo.org> +secpanel-0.6.1.ebuild:
+  Version bump to fix bug #326487, thanks to Mirosław Lach
+  <milek-subs@czuwaj.net>. Naming scheme changed to upstreams.
+  Some Ebuild cleanups, like EAPI-2, variable odering etc.
 
   25 Mar 2008; Raúl Porcel <armin76@gentoo.org> -secpanel-0.51.ebuild,
   secpanel-0.53.ebuild:
