@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/renattach
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.5 2010/09/05 23:38:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.6 2010/09/05 23:47:57 xmw Exp $
+
+*renattach-1.2.4 (05 Sep 2010)
+
+  05 Sep 2010; Michael Weber <xmw@gentoo.org> +renattach-1.2.4.ebuild:
+  Version bump to fix bug #336051, thanks to Andreis_Vinogradovs ( slepnoga
+  ) <spamslepnoga@inbox.ru> for the report.
 
   05 Sep 2010; Michael Weber <xmw@gentoo.org> renattach-1.2.2.ebuild:
   Added ~amd64 Keyword, minor ebuild cleanup.
