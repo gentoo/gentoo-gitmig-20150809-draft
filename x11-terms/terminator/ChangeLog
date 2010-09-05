@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.9 2010/07/13 12:46:36 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.10 2010/09/05 13:09:06 jlec Exp $
+
+*terminator-0.95 (05 Sep 2010)
+
+  05 Sep 2010; Justin Lecher <jlec@gentoo.org> +terminator-0.95.ebuild:
+  Version Bump, USE dbus added for dbus support
 
   13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
