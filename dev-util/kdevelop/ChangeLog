@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.202 2010/09/04 10:06:56 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.203 2010/09/05 11:31:55 hwoarang Exp $
+
+  05 Sep 2010; Markos Chandras <hwoarang@gentoo.org> kdevelop-4.0.1.ebuild:
+  Stable on amd64 wrt bug #334739
 
 *kdevelop-4.0.2 (04 Sep 2010)
 
