@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuegen/cuegen-1.2.0.ebuild,v 1.2 2006/03/01 06:06:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuegen/cuegen-1.2.0.ebuild,v 1.3 2010/09/05 11:08:15 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -14,6 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
+
+src_prepare() {
+	sed -i -e 's:\(\${CFLAGS}\):\1 \${LDFLAGS}:g' Makefile
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
