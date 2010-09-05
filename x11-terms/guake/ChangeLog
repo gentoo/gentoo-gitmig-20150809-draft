@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.4 2010/08/08 02:05:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.5 2010/09/05 16:05:08 ssuominen Exp $
+
+*guake-0.4.2 (05 Sep 2010)
+
+  05 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +guake-0.4.2.ebuild,
+  +files/guake-0.4.2-int-ssl-port.patch,
+  +files/guake-0.4.2-prefs-spinbox.patch:
+  Version bump wrt #336068 by "Florian".
 
   08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   guake-0.4.1-r1.ebuild:
