@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.10 2010/08/02 18:37:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.11 2010/09/05 11:59:11 remi Exp $
 
 EAPI="2"
 
@@ -57,7 +57,9 @@ RDEPEND="hal? ( sys-apps/hal )
 	>=x11-libs/libxkbui-1.0.2
 	kdrive? (
 		>=x11-libs/libXext-1.0.5
-		sdl? ( media-libs/libsdl ) )"
+		x11-libs/libXv
+		sdl? ( media-libs/libsdl )
+	)"
 	# Xres is dmx-dependent
 	# Xaw is dmx-dependent
 	# Xpm is dmx-dependent, pulls in Xt

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.526 2010/08/11 22:01:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.527 2010/09/05 11:59:11 remi Exp $
+
+  05 Sep 2010; Rémi Cardona <remi@gentoo.org> xorg-server-1.7.6.ebuild,
+  xorg-server-1.7.7-r1.ebuild, xorg-server-1.8.2.ebuild:
+  add missing libXv dep, fixes bug #335025
 
   11 Aug 2010; Markus Meier <maekke@gentoo.org> xorg-server-1.7.7-r1.ebuild:
   arm stable, bug #330593

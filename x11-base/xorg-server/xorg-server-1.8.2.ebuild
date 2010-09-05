@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.2.ebuild,v 1.1 2010/07/21 22:35:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.2.ebuild,v 1.2 2010/09/05 11:59:11 remi Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -45,6 +45,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	!udev? ( hal? ( sys-apps/hal ) )
 	kdrive? (
 		>=x11-libs/libXext-1.0.5
+		x11-libs/libXv
 	)
 	!minimal? (
 		>=x11-libs/libX11-1.1.5
