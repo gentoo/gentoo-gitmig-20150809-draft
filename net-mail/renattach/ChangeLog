@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/renattach
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.4 2010/06/02 06:21:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/renattach/ChangeLog,v 1.5 2010/09/05 23:38:38 xmw Exp $
+
+  05 Sep 2010; Michael Weber <xmw@gentoo.org> renattach-1.2.2.ebuild:
+  Added ~amd64 Keyword, minor ebuild cleanup.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove xmerlin from metadata.xml (#69210)
