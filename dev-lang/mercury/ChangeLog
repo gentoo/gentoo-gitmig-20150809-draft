@@ -1,6 +1,21 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.114 2010/09/05 01:56:03 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.115 2010/09/05 05:48:09 keri Exp $
+
+*mercury-10.04.1 (05 Sep 2010)
+
+  05 Sep 2010; <keri@gentoo.org> +mercury-10.04.1.ebuild,
+  +files/mercury-10.04.1-boehm_gc.patch,
+  +files/mercury-10.04.1-default-grade.patch,
+  +files/mercury-10.04.1-docs.patch,
+  +files/mercury-10.04.1-linker-flags.patch,
+  +files/mercury-10.04.1-multilib.patch,
+  +files/mercury-10.04.1-no-reconf.patch,
+  +files/mercury-10.04.1-sparc-llds-base-grade.patch,
+  +files/mercury-10.04.1-tests-sandbox.patch,
+  +files/mercury-10.04.1-tests-static-link.patch,
+  +files/mercury-10.04.1-tests-workspace.patch:
+  Version bump
 
   05 Sep 2010; <keri@gentoo.org> files/mercury-10.04-multilib.patch:
   Install runtime jars into mercury libdir

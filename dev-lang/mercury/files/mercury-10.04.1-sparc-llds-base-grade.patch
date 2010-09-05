@@ -1,0 +1,12 @@
+diff -ur mercury-compiler-10.04.1.orig/configure mercury-compiler-10.04.1/configure
+--- mercury-compiler-10.04.1.orig/configure	2010-08-29 19:27:34.000000000 +1200
++++ mercury-compiler-10.04.1/configure	2010-09-05 09:11:36.000000000 +1200
+@@ -10805,7 +10805,7 @@
+ # The asm_fast and reg grades also do not currently work on Linux/PPC.
+ #
+ case "$host" in
+-    i*86*apple*darwin*|x86_64*apple*darwin*|powerpc*-linux-gnu)
++    i*86*apple*darwin*|x86_64*apple*darwin*|powerpc*-linux-gnu|sparc*-linux-gnu)
+         BEST_LLDS_BASE_GRADE=none
+         ;;
+ esac
