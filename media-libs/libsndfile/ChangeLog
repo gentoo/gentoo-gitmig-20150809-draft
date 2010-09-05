@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.113 2010/06/25 12:07:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.114 2010/09/05 09:26:49 ssuominen Exp $
+
+*libsndfile-1.0.21-r1 (05 Sep 2010)
+
+  05 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libsndfile-1.0.21-r1.ebuild:
+  Remove append-lfs-flags (#313259) again wrt #335728.
 
   25 Jun 2010; Alexis Ballier <aballier@gentoo.org>
   -libsndfile-1.0.17-r1.ebuild, -files/libsndfile-1.0.17-autotools.patch,
