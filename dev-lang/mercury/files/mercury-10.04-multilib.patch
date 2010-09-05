@@ -82,6 +82,20 @@ diff -ur mercury-compiler-10.04.orig/compiler/make.program_target.c mercury-comp
  	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
  		make__program_target__install_grade_ints_and_headers_9_0_i6);
  MR_def_label(make__program_target__install_grade_ints_and_headers_9_0,6)
+diff -ur mercury-compiler-10.04.orig/library/Mmakefile mercury-compiler-10.04/library/Mmakefile
+--- mercury-compiler-10.04.orig/library/Mmakefile	2010-05-20 21:29:30.000000000 +1200
++++ mercury-compiler-10.04/library/Mmakefile	2010-09-05 11:49:30.000000000 +1200
+@@ -268,8 +268,8 @@
+ 	[ -d jmercury/runtime ] || cp -r ../java/runtime jmercury
+ 
+ install_mer_rt: $(RT_LIB_NAME).jar
+-	mkdir -p $(INSTALL_PREFIX)/lib/mercury/lib/$(GRADE)
+-	cp $(RT_LIB_NAME).jar $(INSTALL_PREFIX)/lib/mercury/lib/$(GRADE)
++	mkdir -p $(INSTALL_LIBDIR)/lib/$(GRADE)
++	cp $(RT_LIB_NAME).jar $(INSTALL_LIBDIR)/lib/$(GRADE)
+ 
+ else
+ 
 diff -ur mercury-compiler-10.04.orig/scripts/Mmake.vars.in mercury-compiler-10.04/scripts/Mmake.vars.in
 --- mercury-compiler-10.04.orig/scripts/Mmake.vars.in	2010-05-20 21:29:31.000000000 +1200
 +++ mercury-compiler-10.04/scripts/Mmake.vars.in	2010-07-19 21:00:29.000000000 +1200
