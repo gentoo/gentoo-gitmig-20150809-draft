@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.109 2010/08/30 03:06:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.110 2010/09/05 15:47:21 armin76 Exp $
+
+  05 Sep 2010; Raúl Porcel <armin76@gentoo.org> ncftp-3.2.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #330009
 
   30 Aug 2010; Jeroen Roovers <jer@gentoo.org> ncftp-3.2.4.1.ebuild:
   Add IUSE=pch by zorry (bug #301299).
