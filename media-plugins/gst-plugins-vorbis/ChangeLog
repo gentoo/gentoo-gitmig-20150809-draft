@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.181 2010/09/05 14:23:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.182 2010/09/05 17:54:19 klausman Exp $
+
+  05 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-vorbis-0.10.29.ebuild:
+  Stable on alpha, bug #329703
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-vorbis-0.10.29.ebuild:
