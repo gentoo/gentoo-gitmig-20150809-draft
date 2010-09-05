@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/mp3fs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.7 2009/01/03 06:53:51 dragonheart Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.8 2010/09/05 14:51:27 dragonheart Exp $
+
+*mp3fs-0.21 (05 Sep 2010)
+
+  05 Sep 2010; Daniel Black <dragonheart@gentoo.org> -mp3fs-0.11.ebuild,
+  -mp3fs-0.12.ebuild, +mp3fs-0.21.ebuild:
+  version bump
 
 *mp3fs-0.13 (03 Jan 2009)
 
