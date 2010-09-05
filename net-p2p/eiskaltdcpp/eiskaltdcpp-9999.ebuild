@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.11 2010/09/03 07:41:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.12 2010/09/05 05:03:13 pva Exp $
 
 EAPI="2"
 
@@ -43,7 +43,6 @@ RDEPEND="
 			>=x11-libs/qt-gui-4.6.0:4
 		)
 		spell? ( app-text/aspell )
-		upnp? (	=net-libs/libupnp-1.6* )
 	)
 "
 DEPEND="${RDEPEND}
@@ -71,7 +70,8 @@ src_configure() {
 		"$(cmake-utils_use kde USE_ICON_THEME)"
 		"$(cmake-utils_use spell USE_ASPELL)"
 		"$(cmake-utils_use qt4 USE_QT)"
-		"$(cmake-utils_use upnp USE_LIBUPNP)"
+		"$(cmake-utils_use upnp USE_MINIUPNP)"
+		"$(cmake-utils_use upnp LOCAL_MINIUPNP)"
 		"$(cmake-utils_use gtk USE_GTK)"
 		"$(cmake-utils_use gnome USE_LIBGNOME2)"
 		"-DUSE_WT=OFF"

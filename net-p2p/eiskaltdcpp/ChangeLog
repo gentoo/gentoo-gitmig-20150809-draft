@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.11 2010/09/03 07:41:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.12 2010/09/05 05:03:13 pva Exp $
+
+  05 Sep 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
+  Upstream switched to miniupnp, use bundeled version for now in 9999
+  ebuild. Thank Nikoli for this job.
 
   03 Sep 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-2.0.3.ebuild,
   eiskaltdcpp-9999.ebuild, metadata.xml:
