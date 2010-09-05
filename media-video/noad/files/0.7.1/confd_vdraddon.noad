@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.7.1/confd_vdraddon.noad,v 1.1 2010/03/21 16:42:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.7.1/confd_vdraddon.noad,v 1.2 2010/09/05 17:43:18 hd_brummy Exp $
 
 #########
 ##
@@ -44,7 +44,8 @@ NOAD_JUMP="yes"
 #
 NOAD_OVERLAP="yes"
 
-##	send an OSD-Message to localhost:2001 for start and end 
+##	send an OSD-Message to localhost:2001 ( >=vdr-1.7.15 localhost:6419 )
+#	for start and end 
 # 	available Parameter
 # 	yes | no
 #
