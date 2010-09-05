@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4526 2010/09/05 04:49:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4527 2010/09/05 22:01:02 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Mask KDE 4.5.1 until it is fully committed
 
   05 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> use.desc:
   Drop unused wxwindows flag.
