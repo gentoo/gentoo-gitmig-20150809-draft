@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Email-MIME
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.40 2010/03/18 19:34:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.41 2010/09/05 08:51:00 tove Exp $
+
+*Email-MIME-1.904 (05 Sep 2010)
+
+  05 Sep 2010; Torsten Veller <tove@gentoo.org> +Email-MIME-1.904.ebuild:
+  Version bump
 
   18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> Email-MIME-1.903.ebuild:
   add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683
