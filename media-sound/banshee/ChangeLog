@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.118 2010/08/31 11:44:15 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.119 2010/09/05 09:49:14 ford_prefect Exp $
+
+  05 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org> banshee-1.7.4.ebuild:
+  Fix SRC_URI for unstable versions
 
 *banshee-1.7.4 (31 Aug 2010)
 

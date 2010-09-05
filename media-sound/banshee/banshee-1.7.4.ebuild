@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.7.4.ebuild,v 1.1 2010/08/31 11:44:15 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.7.4.ebuild,v 1.2 2010/09/05 09:49:14 ford_prefect Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://banshee-project.org"
 #BANSHEE_V2=$(get_version_component_range 2)
 #[[ $((${BANSHEE_V2} % 2)) -eq 0 ]] && RELTYPE=stable || RELTYPE=unstable
 #SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV}.tar.bz2"
-SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${PN}-1-${PV}.tar.bz2"
+SRC_URI="http://download.banshee-project.org/${PN}/unstable/${PV}/${PN}-1-${PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
