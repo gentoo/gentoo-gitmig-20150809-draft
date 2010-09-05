@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libjit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.14 2010/08/30 20:26:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.15 2010/09/05 10:54:12 hwoarang Exp $
+
+  05 Sep 2010; Markos Chandras <hwoarang@gentoo.org> libjit-0.1.2.ebuild:
+  Stable on amd64 wrt bug #327295
 
   30 Aug 2010; Pacho Ramos <pacho@gentoo.org> libjit-0.1.2.ebuild:
   Execute tests with emake instead of plain make and use ewarn instead of
