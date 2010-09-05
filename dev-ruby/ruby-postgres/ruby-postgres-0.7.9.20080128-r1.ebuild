@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128-r1.ebuild,v 1.4 2010/08/22 19:09:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128-r1.ebuild,v 1.5 2010/09/05 16:03:47 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -24,7 +24,7 @@ HOMEPAGE="http://ruby.scripting.ca/postgres"
 SRC_URI="mirror://rubygems/${MY_P}.gem"
 LICENSE="GPL-2 Ruby"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="${RDEPEND} dev-db/postgresql-base"
