@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.86 2010/09/05 22:19:55 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.87 2010/09/05 22:23:38 tampakrap Exp $
+
+  05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  -pykde4-4.4.9999.ebuild:
+  revert last commit
 
 *pykde4-4.4.9999 (05 Sep 2010)
 
