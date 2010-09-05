@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.74 2010/08/30 15:11:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.75 2010/09/05 12:06:06 ford_prefect Exp $
+
+*libgpod-0.7.94 (05 Sep 2010)
+
+  05 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +libgpod-0.7.94.ebuild:
+  Bump to 0.7.94. Lots of fixes, and adds C# bindings (enabled with
+  USE=mono).
 
   30 Aug 2010; Fabio Erculiani <lxnay@gentoo.org> libgpod-0.7.93.ebuild:
   fix libimobiledevice dependency, it's also a RDEPEND
