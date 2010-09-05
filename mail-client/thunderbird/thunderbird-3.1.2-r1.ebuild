@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.2-r1.ebuild,v 1.1 2010/08/29 20:12:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.2-r1.ebuild,v 1.2 2010/09/05 16:49:45 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -23,7 +23,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linu
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa ldap +cups +crypt bindist libnotify +lightning mozdom system-sqlite wifi"
-PATCH="${PN}-3.1-patches-0.9"
+PATCH="${PN}-3.1-patches-1.0"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
