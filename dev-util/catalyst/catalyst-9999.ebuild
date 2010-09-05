@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.9 2009/09/19 22:35:07 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.10 2010/09/05 20:10:27 armin76 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -9,7 +9,7 @@
 if [[ ${PV} == 9999* ]]
 then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	EGIT_REPO_URI="git://git.wolf31o2.org/projs/catalyst.git"
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
 	inherit git eutils multilib
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
