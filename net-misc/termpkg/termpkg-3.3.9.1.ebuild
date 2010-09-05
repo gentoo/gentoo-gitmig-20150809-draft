@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/termpkg-3.3.9.1.ebuild,v 1.2 2010/07/21 00:17:26 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/termpkg-3.3.9.1.ebuild,v 1.3 2010/09/05 11:10:36 sbriesen Exp $
 
 EAPI="2"
 
@@ -35,9 +35,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-${MY_PV}-ttydforfax.diff"
 }
 
-src_compile() {
+src_configure() {
 	./configure LINUX $(use uucp && echo UUCP_LOCKING)
-	emake -C linux CC=$(tc-getCC) || die "emake failed"
+}
+
+src_compile() {
+	emake -C linux CC=$(tc-getCC) LIBS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
