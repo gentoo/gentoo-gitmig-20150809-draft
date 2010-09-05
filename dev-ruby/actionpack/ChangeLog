@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.156 2010/08/18 10:47:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.157 2010/09/05 09:20:31 graaff Exp $
+
+*actionpack-2.3.9 (05 Sep 2010)
+
+  05 Sep 2010; Hans de Graaff <graaff@gentoo.org> +actionpack-2.3.9.ebuild:
+  Version bump for Rails 2.3.9
 
   18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   actionpack-2.3.8-r1.ebuild:
