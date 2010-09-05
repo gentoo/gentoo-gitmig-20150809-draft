@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.8.ebuild,v 1.6 2010/08/23 15:26:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.8.ebuild,v 1.7 2010/09/05 16:15:51 armin76 Exp $
 
 inherit "ruby"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://rubyforge/ruby-dbi/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ia64 ~ppc ~sparc x86"
 IUSE="test"
 
 RDEPEND="

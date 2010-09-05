@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1-r1.ebuild,v 1.4 2010/08/23 15:25:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1-r1.ebuild,v 1.5 2010/09/05 16:13:56 armin76 Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://rubyforge/deprecated/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ia64 ~ppc ~sparc x86"
 IUSE="test"
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
