@@ -1,0 +1,14 @@
+# ChangeLog for net-mail/fdm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/ChangeLog,v 1.1 2010/09/05 22:50:26 xmw Exp $
+
+*fdm-1.6 (05 Sep 2010)
+*fdm-1.5 (05 Sep 2010)
+
+  05 Sep 2010; Michael Weber <xmw@gentoo.org> +fdm-1.5.ebuild,
+  +files/fdm-1.5-GNUmakefile.patch, +fdm-1.6.ebuild,
+  +files/fdm-1.6-GNUmakefile.patch, +metadata.xml:
+  Initial import, fixes bug #163496, thanks to Manuel Wächter, Paul
+  Bredbury, Maximilian Gaß, Henri Kemppainen and Dennis Schridde for the
+  original ebuilds.
+
