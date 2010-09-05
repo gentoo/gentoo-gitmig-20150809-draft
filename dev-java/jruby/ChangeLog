@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.70 2010/08/23 17:19:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.71 2010/09/05 01:49:27 ali_bush Exp $
+
+*jruby-1.5.2-r1 (05 Sep 2010)
+
+  05 Sep 2010; Alistair Bush <ali_bush@gentoo.org>
+  files/jruby-1.5.0-system-jars.patch, +jruby-1.5.2-r1.ebuild:
+  Rev bump to force rebuild after fixing an existing patch.
 
   23 Aug 2010; Markos Chandras <hwoarang@gentoo.org> jruby-1.5.2.ebuild:
   Stable on amd64 wrt bug #332957
