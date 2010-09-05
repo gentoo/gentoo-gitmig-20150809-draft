@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5.ebuild,v 1.2 2010/04/07 21:14:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5.ebuild,v 1.3 2010/09/05 10:24:48 lxnay Exp $
 
 EAPI="2"
 
@@ -19,7 +19,8 @@ IUSE="bittorrent bzip2 debug finger ftp gopher gpm guile idn ipv6 \
 	  javascript lua nls nntp perl ruby samba ssl unicode X zlib"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/expat-1.95.4
+DEPEND="dev-libs/boehm-gc
+	>=dev-libs/expat-1.95.4
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	X? ( x11-libs/libX11 x11-libs/libXt )
