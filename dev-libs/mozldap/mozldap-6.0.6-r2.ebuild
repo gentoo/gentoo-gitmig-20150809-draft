@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r1.ebuild,v 1.3 2010/07/08 15:28:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.1 2010/09/05 14:53:25 xarthisius Exp $
 
 EAPI="2"
 
@@ -28,10 +28,11 @@ RDEPEND="${COMMON_DEPEND}"
 S="${WORKDIR}"/"${P}"/"mozilla/directory/c-sdk"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.0.4-pkgconfig.patch
-	epatch "${FILESDIR}"/configure.in.patch
-	epatch "${FILESDIR}"/nss-m4.patch
-	epatch "${FILESDIR}"/nspr-m4.patch
+	epatch "${FILESDIR}"/${PN}-6.0.4-pkgconfig.patch \
+		"${FILESDIR}"/configure.in.patch \
+		"${FILESDIR}"/nss-m4.patch \
+		"${FILESDIR}"/nspr-m4.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	eautoreconf
 }
 
