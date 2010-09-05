@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.83 2010/08/02 18:23:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.84 2010/09/05 07:49:48 grobian Exp $
+
+*libXext-1.1.2-r1 (05 Sep 2010)
+
+  05 Sep 2010; Fabian Groffen <grobian@gentoo.org> +libXext-1.1.2-r1.ebuild,
+  +files/libXext-1.1.2-xhidden.patch:
+  Add patch for bug #335619, fixes compilation/linking problem due to
+  visibility of xgeExtRegister
 
   02 Aug 2010; Raúl Porcel <armin76@gentoo.org> libXext-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #308521
