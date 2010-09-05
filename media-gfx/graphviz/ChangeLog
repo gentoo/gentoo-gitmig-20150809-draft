@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.222 2010/07/06 14:20:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.223 2010/09/05 13:38:58 maekke Exp $
+
+*graphviz-2.26.3-r2 (05 Sep 2010)
+
+  05 Sep 2010; Markus Meier <maekke@gentoo.org> +graphviz-2.26.3-r2.ebuild:
+  bug #267373 media-libs/gd needs fontconfig and truetype support enabled,
+  bug #317543 enable sfdp, bug #328945 disable automagic gnome-base/librsvg
+  dep
 
   06 Jul 2010; Justin Lecher <jlec@gentoo.org> graphviz-2.26.3-r1.ebuild:
   Fix python_mod_* for EAPI=3
