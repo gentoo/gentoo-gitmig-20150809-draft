@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.542 2010/09/03 20:03:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.543 2010/09/05 08:52:20 robbat2 Exp $
+
+  05 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.50-r1.ebuild:
+  Refix bug #332565.
 
   03 Sep 2010; Markos Chandras <hwoarang@gentoo.org> mysql-5.1.50-r1.ebuild:
   Stable on amd64 wrt bug #321791
