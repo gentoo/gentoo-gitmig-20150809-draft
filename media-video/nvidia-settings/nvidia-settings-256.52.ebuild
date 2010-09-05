@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-256.52-r1.ebuild,v 1.1 2010/09/05 13:28:32 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-256.52.ebuild,v 1.5 2010/09/05 13:44:40 lxnay Exp $
 
 EAPI=2
 
@@ -45,13 +45,13 @@ src_compile() {
 	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" libXNVCtrl.a || die "Building libXNVCtrl failed!"
 	filter-flags -fPIC
 
-	cd "${S}"
-	einfo "Building nVidia-Settings..."
-	emake  CC="$(tc-getCC)" STRIP_CMD=/bin/true || die "Failed to build nvidia-settings"
+	#cd "${S}"
+	#einfo "Building nVidia-Settings..."
+	#emake  CC="$(tc-getCC)" STRIP_CMD=/bin/true || die "Failed to build nvidia-settings"
 }
 
 src_install() {
-	emake STRIP_CMD=/bin/true install || die
+	#emake STRIP_CMD=/bin/true install || die
 
 	# Install libXNVCtrl and headers
 	insinto "/usr/$(get_libdir)"
@@ -60,8 +60,8 @@ src_install() {
 	doins src/libXNVCtrl/{NVCtrl,NVCtrlLib}.h
 
 	# Install icon and .desktop entry
-	doicon "${FILESDIR}/icon/${PN}.png"
-	domenu "${FILESDIR}/icon/${PN}.desktop"
+	#doicon "${FILESDIR}/icon/${PN}.png"
+	#domenu "${FILESDIR}/icon/${PN}.desktop"
 
 	# Now install documentation
 	dodoc doc/*.txt
