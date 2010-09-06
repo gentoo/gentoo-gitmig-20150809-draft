@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.27 2010/07/26 19:18:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.28 2010/09/06 13:46:44 anarchy Exp $
+
+  06 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> files/firefox-bin.desktop:
+  update firefox-bin.desktop to be fully compliant
 
   26 Jul 2010; Markus Meier <maekke@gentoo.org> firefox-bin-3.6.8.ebuild:
   amd64 stable, bug #329279
