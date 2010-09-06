@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beancounter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.12 2010/02/13 21:46:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.13 2010/09/06 00:19:50 xmw Exp $
+
+*beancounter-0.8.10 (06 Sep 2010)
+
+  06 Sep 2010; Michael Weber <xmw@gentoo.org> +beancounter-0.8.10.ebuild:
+  Version bump to fix bug #326941, thanks to Jerome Asselin and Dane Smith.
 
 *beancounter-0.8.9 (13 Feb 2010)
 
