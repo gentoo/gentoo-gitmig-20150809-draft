@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.144 2010/09/04 16:17:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.145 2010/09/06 20:33:42 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> apache-2.2.16.ebuild:
+  Marking apache-2.2.16 ppc64 for bug 330195
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> apache-2.2.16.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #330195
