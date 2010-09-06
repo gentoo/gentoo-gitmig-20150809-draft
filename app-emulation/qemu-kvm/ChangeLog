@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.38 2010/09/06 01:16:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.39 2010/09/06 03:06:27 jmbsvicetto Exp $
+
+  06 Sep 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-9999.ebuild:
+  [app-emulation/qemu-kvm-9999] Updated ebuild to reflect changes in
+  upstream's build system.
+  Added use flags to enable jpeg and png compression on vnc.
+  Replaced gnu-tls with ssl use flag - bug 311627.
+  Added use flag to make accessbility support optional - bug 326491.
+  Currently it seems qemu-kvm won't build with -sasl - will check and
+  updated ebuild soon.
 
   06 Sep 2010; Luca Barbato <lu_zero@gentoo.org> qemu-kvm-0.12.5-r1.ebuild,
   qemu-kvm-9999.ebuild:
