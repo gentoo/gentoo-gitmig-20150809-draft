@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pound
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.45 2010/08/08 02:14:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.46 2010/09/06 18:44:52 armin76 Exp $
+
+  06 Sep 2010; Raúl Porcel <armin76@gentoo.org> pound-2.5.ebuild:
+  alpha stable wrt #331449
 
   08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pound-2.5.ebuild:
   x86 stable wrt bug #331449
