@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.345 2010/08/30 09:22:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.346 2010/09/06 21:01:39 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> sqlite-3.6.23.1.ebuild:
+  Marking sqlite-3.6.23.1 ppc64 for bug 320467
 
   30 Aug 2010; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.7.2.ebuild:
   Fix running tests with USE=-tcl. Fixes bug #335179.
