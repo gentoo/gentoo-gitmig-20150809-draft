@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.14 2010/09/06 20:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.15 2010/09/06 20:21:39 flameeyes Exp $
+
+  06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  drizzle-2010.08.1742.ebuild:
+  Fix intltool dependency.
 
 *drizzle-2010.08.1742 (06 Sep 2010)
 
