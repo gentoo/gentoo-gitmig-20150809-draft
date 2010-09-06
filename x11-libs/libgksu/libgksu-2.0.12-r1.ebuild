@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.2 2010/07/20 15:48:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.3 2010/09/06 11:42:11 pacho Exp $
 
 GCONF_DEBUG="no"
 
@@ -51,6 +51,9 @@ src_unpack() {
 
 	# Don't forkpty; bug #298289
 	epatch "${FILESDIR}/${P}-revert-forkpty.patch"
+
+	# Make this gmake-3.82 compliant, bug #333961
+	epatch "${FILESDIR}/${P}-fix-make-3.82.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf

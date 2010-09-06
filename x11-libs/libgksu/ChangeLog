@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.70 2010/07/20 15:48:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.71 2010/09/06 11:42:11 pacho Exp $
+
+  06 Sep 2010; Pacho Ramos <pacho@gentoo.org> libgksu-2.0.12-r1.ebuild,
+  +files/libgksu-2.0.12-fix-make-3.82.patch:
+  Make this gmake-3.82 compliant, bug #333961 by Diego E. 'Flameeyes'
+  Petteno and patch by Jory A. Pratt.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgksu-2.0.9.ebuild,
   libgksu-2.0.12.ebuild, libgksu-2.0.12-r1.ebuild:
