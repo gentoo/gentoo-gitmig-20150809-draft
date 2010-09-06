@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24.ebuild,v 1.7 2010/06/28 04:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24.ebuild,v 1.8 2010/09/06 17:42:40 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="emulates the IP stack of Linux 2.0.x and offers IP defragmentation,
 HOMEPAGE="http://libnids.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2"
 SLOT="1.2"
 KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
