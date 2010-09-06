@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dnetstats
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.4 2010/09/02 09:20:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.5 2010/09/06 13:57:54 fauli Exp $
+
+  06 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  dnetstats-1.2.6.ebuild:
+  stable x86, bug 335007
 
   02 Sep 2010; Markos Chandras <hwoarang@gentoo.org> dnetstats-1.2.6.ebuild:
   Drop -c argument for sudo frontends. Bug #335007
