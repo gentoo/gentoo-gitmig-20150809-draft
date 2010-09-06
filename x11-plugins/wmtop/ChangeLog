@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtop
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.13 2008/11/26 00:05:59 tcunha Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.14 2010/09/06 07:59:28 s4t4n Exp $
+
+  06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmtop-0.9.0.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335953.
 
   26 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmtop-0.9.0.ebuild:
   stable sparc, bug 215651

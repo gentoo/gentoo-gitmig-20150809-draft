@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0.ebuild,v 1.4 2008/11/26 00:05:59 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.9.0.ebuild,v 1.5 2010/09/06 07:59:28 s4t4n Exp $
 
+EAPI=2
 inherit multilib toolchain-funcs
 
 DESCRIPTION="dockapp for monitoring the top three processes using cpu or memory."
@@ -19,6 +20,10 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
+
+src_prepare() {
+	sed -ie "s/\$(FLAGS) -o wmtop/\$(DEBUG) \$(LDFLAGS) -D\$(OS) -o wmtop/" Makefile
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" OPTS="${CFLAGS}" \
