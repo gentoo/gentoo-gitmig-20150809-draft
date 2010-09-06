@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<use>
-	<flag name='policykit'>Use <pkg>sys-auth/policykit</pkg> to gain privileges to change
-	configuration files</flag>
-</use>
 <longdescription lang="en">
 The System Tools Backends are a set of cross-platform modules for Linux,
 FreeBSD, Solaris and other Unix systems. The backends provide an common DBus

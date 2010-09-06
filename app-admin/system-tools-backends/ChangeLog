@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.60 2010/08/11 16:04:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.61 2010/09/06 12:31:14 pacho Exp $
+
+  06 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/system-tools-backends-2.8.2-1ubuntu1.1.patch,
+  -files/system-tools-backends-2.8.2-automagic-polkit.patch,
+  -system-tools-backends-2.8.3.ebuild, metadata.xml:
+  Remove old.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   system-tools-backends-2.8.3.ebuild, system-tools-backends-2.10.0.ebuild:
