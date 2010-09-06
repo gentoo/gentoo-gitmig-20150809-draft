@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.95 2010/08/30 02:04:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.96 2010/09/06 21:10:07 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> gentoolkit-dev-0.2.7.ebuild:
+  Marking gentoolkit-dev-0.2.7 ppc64 for bug 326651
 
   30 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gentoolkit-dev-0.2.7.ebuild:
