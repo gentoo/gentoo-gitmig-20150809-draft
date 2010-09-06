@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.7 2010/01/07 15:57:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.8 2010/09/06 12:50:01 s4t4n Exp $
 
 inherit multilib toolchain-funcs
 
@@ -25,11 +25,12 @@ src_unpack() {
 	sed -e 's:CFLAGS =:CFLAGS +=:' -e 's:LDFLAGS =:LDFLAGS +=:' -e 's:strip:true:' \
 		-e 's:$(CFLAGS) -o $(BUBBLEFISHYMON):$(CFLAGS) $(SRCS) -o $(BUBBLEFISHYMON):' \
 		-e 's:$(LIBS) $(GTK2_LIBS) $(SRCS):$(LIBS) $(GTK2_LIBS):' \
+		-e 's:-o $(BUBBLEFISHYMON):$(GENTOO_LDFLAGS) -o $(BUBBLEFISHYMON):' \
 		-i "${S}"/Makefile
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed."
+	emake CC="$(tc-getCC)" GENTOO_LDFLAGS="${LDFLAGS}" || die "emake failed."
 
 	if use gkrellm; then
 		emake gkrellm CC="$(tc-getCC)" || die "emake failed."

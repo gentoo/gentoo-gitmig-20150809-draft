@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.13 2010/01/07 15:57:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.14 2010/09/06 12:50:01 s4t4n Exp $
+
+  06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> bfm-0.6.4-r1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #333987.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> bfm-0.6.4-r1.ebuild:
   Transfer Prefix keywords
