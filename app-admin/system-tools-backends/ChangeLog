@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.61 2010/09/06 12:31:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.62 2010/09/06 12:44:53 pacho Exp $
+
+*system-tools-backends-2.10.1 (06 Sep 2010)
+
+  06 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  +system-tools-backends-2.10.1.ebuild:
+  Version bump: Rework handling of home directory changes, allowing several
+  files migration schemes depending on user's choices; allow erasing already
+  existing files in home when creating a user; set D-Bus timeout to maximum
+  for replies from modules, to allow long operations to complete without
+  error; fix chown syntax which was not supported on all platforms; update
+  MAINTAINERS file.
 
   06 Sep 2010; Pacho Ramos <pacho@gentoo.org>
   -files/system-tools-backends-2.8.2-1ubuntu1.1.patch,
