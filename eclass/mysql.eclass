@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.150 2010/08/21 19:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.151 2010/09/06 08:02:08 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -1176,6 +1176,11 @@ mysql_pkg_postinst() {
 		elog "You might want to run:"
 		elog "\"emerge --config =${CATEGORY}/${PF}\""
 		elog "if this is a new install."
+		einfo
+
+		einfo
+		elog "If you are upgrading major versions, you should run the"
+		elog "mysql_upgrade tool."
 		einfo
 	fi
 
