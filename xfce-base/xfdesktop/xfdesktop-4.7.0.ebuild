@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.7.0.ebuild,v 1.1 2010/09/06 13:17:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.7.0.ebuild,v 1.2 2010/09/06 13:40:27 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -11,7 +11,9 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+# This is because xfdesktop doesn't ship menu files anymore. Unreleased garcon is required, which has them.
+KEYWORDS=""
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug thunar"
 
 RDEPEND="x11-libs/libX11
