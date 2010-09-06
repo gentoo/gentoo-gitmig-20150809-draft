@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.23 2010/09/03 01:17:42 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.24 2010/09/06 18:08:06 phajdan.jr Exp $
+
+  06 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xalan-c-1.11.0_pre797991.ebuild:
+  x86 stable wrt bug #335745
 
   02 Sep 2010; Andrey Kislyuk <weaver@gentoo.org>
   xalan-c-1.11.0_pre797991.ebuild:
