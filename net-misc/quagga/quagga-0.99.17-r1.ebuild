@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17.ebuild,v 1.1 2010/09/05 17:09:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.1 2010/09/06 03:31:07 flameeyes Exp $
 
 EAPI="2"
 
@@ -75,13 +75,13 @@ src_configure() {
 		--sysconfdir=/etc/quagga \
 		--enable-exampledir=/usr/share/doc/${PF}/samples \
 		--localstatedir=/var/run/quagga \
-		--libdir=/usr/$(get_libdir)/quagga \
 		${myconf} \
 		|| die "configure failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${D}" -name '*.la' -delete || die
 
 	keepdir /etc/quagga || die
 	fowners root:quagga /etc/quagga || die
