@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/treeviewx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.21 2010/02/18 02:55:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.22 2010/09/06 06:42:18 dirtyepic Exp $
+
+*treeviewx-0.5.1-r2 (06 Sep 2010)
+
+  06 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> +treeviewx-0.5.1-r2.ebuild,
+  +files/treeviewx-0.5.1-wx28.patch:
+  Migrate to wxGTK-2.8 with patch from Debian. Use EAPI 2. Simplify
+  wxwidgets handling.
 
   18 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> treeviewx-0.5.1.ebuild,
   treeviewx-0.5.1-r1.ebuild:
