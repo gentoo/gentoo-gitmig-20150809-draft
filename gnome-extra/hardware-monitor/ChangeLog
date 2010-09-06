@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.32 2010/09/06 07:30:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.33 2010/09/06 19:17:43 xmw Exp $
+
+  06 Sep 2010; Michael Weber <xmw@gentoo.org> hardware-monitor-1.4.3.ebuild:
+  Remove unneeded src_unpack.
 
 *hardware-monitor-1.4.3 (06 Sep 2010)
 

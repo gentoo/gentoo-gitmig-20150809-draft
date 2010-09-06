@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.3.ebuild,v 1.1 2010/09/06 07:30:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.3.ebuild,v 1.2 2010/09/06 19:17:43 xmw Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -34,10 +34,6 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_with lm_sensors libsensors)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
-}
-
 src_prepare() {
 	gnome2_src_prepare
 
@@ -50,5 +46,4 @@ src_prepare() {
 	echo "HardwareMonitor.server.in" >> po/POTFILES.in
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-
 }
