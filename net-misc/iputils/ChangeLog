@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.85 2010/09/04 18:16:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.86 2010/09/06 20:11:05 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> iputils-20100418.ebuild:
+  Marking iputils-20100418 ppc64 for bug 332527
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> iputils-20100418.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #332527
