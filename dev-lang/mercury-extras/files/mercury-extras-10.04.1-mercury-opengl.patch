@@ -1,0 +1,22 @@
+diff -urN mercury-extras-10.04.1.orig/graphics/mercury_opengl/Mmakefile mercury-extras-10.04.1/graphics/mercury_opengl/Mmakefile
+--- mercury-extras-10.04.1.orig/graphics/mercury_opengl/Mmakefile	2007-10-11 19:21:31.000000000 +1300
++++ mercury-extras-10.04.1/graphics/mercury_opengl/Mmakefile	2010-09-06 19:40:05.000000000 +1200
+@@ -17,7 +17,8 @@
+ 
+ # Specify what libraries we need to link against for OpenGL on this system.
+ # (The following works on Debian with mesa as the OpenGL implementation).
+-GL_LIBS = -lGL -lGLU -L/usr/X11R6/lib -lX11 -lXt -lICE -lXext -lSM
++GL_LIBS = `pkg-config --libs gl` `pkg-config --libs glu`
++GL_CFLAGS = `pkg-config --cflags gl` `pkg-config --cflags glu`
+ 
+ # Don't issue a warning because mercury_opengl doesn't export anything.
+ MCFLAGS-mercury_opengl = --no-warn-nothing-exported
+@@ -26,7 +27,7 @@
+ # implemented completely.
+ MCFLAGS-mogl = --no-warn-inferred-erroneous
+ 
+-MCFLAGS = --halt-at-warn --intermodule-optimization
++MCFLAGS = --halt-at-warn --intermodule-optimization $(GL_CFLAGS)
+ 
+ MLLIBS 	= $(GL_LIBS) $(EXTRA_MLLIBS)
+ 

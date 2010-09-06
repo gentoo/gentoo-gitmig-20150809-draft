@@ -1,6 +1,21 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.74 2010/08/22 06:25:20 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.75 2010/09/06 08:07:07 keri Exp $
+
+*mercury-extras-10.04.1 (06 Sep 2010)
+
+  06 Sep 2010; <keri@gentoo.org> +mercury-extras-10.04.1.ebuild,
+  +files/mercury-extras-10.04.1-curs.patch,
+  +files/mercury-extras-10.04.1-dynamic-linking.patch,
+  +files/mercury-extras-10.04.1-iodbc.patch,
+  +files/mercury-extras-10.04.1-lex.patch,
+  +files/mercury-extras-10.04.1-mercury-glut.patch,
+  +files/mercury-extras-10.04.1-mercury-opengl.patch,
+  +files/mercury-extras-10.04.1-mercury-tcltk.patch,
+  +files/mercury-extras-10.04.1-no-java-grade-no-erlang-grade.patch,
+  +files/mercury-extras-10.04.1-odbc.patch,
+  +files/mercury-extras-10.04.1-posix.patch:
+  Version bump
 
 *mercury-extras-10.04-r1 (22 Aug 2010)
 
