@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.8 2008/12/02 11:29:52 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.9 2010/09/06 07:48:33 s4t4n Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="WMaker DockApp that monitors the temperature and Speedstep features in new ACPI-based systems."
@@ -20,22 +21,14 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# patch wmacpimon.c file to set default path for
 	# wmacpimon.prc to /var/tmp/
-	cd "${S}"
 	epatch "${FILESDIR}"/wmacpimon.c.patch
 
 	# fix LDFLAGS ordering. See bug #248618.
+	# fix LDFLAGS ordering again and other stuff. See bug #336091.
 	epatch "${FILESDIR}"/Makefile.patch
-}
-
-src_compile() {
-	emake CFLAGS="${CFLAGS} -DACPI -Wall" \
-		LDFLAGS="${CFLAGS} -DACPI -lX11 -lXpm -lXext" \
-		|| die "emake failed."
 }
 
 src_install() {
