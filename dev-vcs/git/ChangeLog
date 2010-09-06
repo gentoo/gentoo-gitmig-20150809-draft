@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.28 2010/09/06 13:51:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.29 2010/09/06 20:16:09 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> git-1.7.2.2.ebuild:
+  Marking git-1.7.2.2 ppc64 for bug 335891
 
   06 Sep 2010; Markos Chandras <hwoarang@gentoo.org> git-1.7.2.2.ebuild:
   Stable on amd64 wrt bug #335891
