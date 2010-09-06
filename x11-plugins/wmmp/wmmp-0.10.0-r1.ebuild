@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/wmmp-0.10.0-r1.ebuild,v 1.5 2009/05/08 15:53:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/wmmp-0.10.0-r1.ebuild,v 1.6 2010/09/06 09:48:58 s4t4n Exp $
 
 EAPI=2
 MY_P=${P/wm/WM}
@@ -22,6 +22,10 @@ S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	econf --with-default-port=6600
+}
+
+src_compile() {
+	emake LDFLAGS="${LDFLAGS}" || die "make failed"
 }
 
 src_install () {

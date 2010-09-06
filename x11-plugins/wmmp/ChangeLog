@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.21 2007/11/11 16:22:37 armin76 Exp $
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.22 2010/09/06 09:48:58 s4t4n Exp $
+
+  06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmmp-0.10.0-r1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335216.
 
   11 Nov 2007; Raúl Porcel <armin76@gentoo.org> -wmmp-0.10.0.ebuild,
   wmmp-0.10.0-r1.ebuild:
