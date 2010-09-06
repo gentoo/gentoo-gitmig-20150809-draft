@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.397 2010/09/03 15:23:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.398 2010/09/06 20:58:07 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> phpmyadmin-3.3.6.ebuild:
+  Marking phpmyadmin-3.3.6 ppc64 for bug 335490
 
   03 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   phpmyadmin-3.3.6.ebuild:
