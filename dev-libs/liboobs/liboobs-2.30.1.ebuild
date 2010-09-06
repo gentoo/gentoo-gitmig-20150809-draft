@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.30.1.ebuild,v 1.4 2010/08/11 16:03:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.30.1.ebuild,v 1.5 2010/09/06 12:27:27 pacho Exp $
 
 GCONF_DEBUG="no"
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="doc"
 
-# FIXME: according to the ChangLog hal is optional but it doesn't
-# have a configure switch
 # FIXME: check if policykit should be checked in configure ?
 
 RDEPEND=">=dev-libs/glib-2.14
