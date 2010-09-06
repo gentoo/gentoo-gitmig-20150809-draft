@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.116 2010/08/13 17:25:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.117 2010/09/06 20:18:45 phajdan.jr Exp $
+
+  06 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeciv-2.2.2.ebuild:
+  x86 stable wrt bug #335827
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> freeciv-2.2.1.ebuild:
   Marked ppc/ppc64 stable for bug #329957.
