@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.3.5.ebuild,v 1.1 2010/06/14 00:02:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.3.5.ebuild,v 1.2 2010/09/06 13:56:02 fauli Exp $
 
 EAPI="2"
 LANGS="de en he it pl pt ru"
@@ -15,7 +15,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug"
 
 DEPEND="dev-lang/perl
