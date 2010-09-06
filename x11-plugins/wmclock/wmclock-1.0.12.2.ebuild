@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.12 2008/06/29 13:54:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.13 2010/09/06 07:24:38 s4t4n Exp $
 
 DESCRIPTION="a dockapp that displays time and date (same style as NEXTSTEP(tm) operating systems)"
 SRC_URI="http://www.jmknoble.net/WindowMaker/wmclock/${P}.tar.gz"
@@ -19,6 +19,13 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-misc/gccmakedep
 	x11-misc/imake"
+
+src_compile()
+{
+	cd "${S}"
+	econf || die "config failed"
+	emake CDEBUGFLAGS="${CFLAGS}" LDOPTIONS="${LDFLAGS}" || die "make failed"
+}
 
 src_install() {
 	dobin wmclock || die "dobin failed."
