@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.171 2010/09/06 13:17:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.172 2010/09/06 16:41:41 ssuominen Exp $
+
+  06 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfdesktop-4.6.2.ebuild:
+  Enable XFCE_PLUGINS="menu" by default.
 
 *xfdesktop-4.7.0 (06 Sep 2010)
 
