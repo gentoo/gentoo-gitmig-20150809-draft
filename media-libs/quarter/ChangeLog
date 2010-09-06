@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/quarter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.3 2010/05/18 14:34:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.4 2010/09/06 01:11:38 reavertm Exp $
+
+  06 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  quarter-1.0.0-r1.ebuild:
+  Parallel compilation workaround, bug 336008
 
 *quarter-1.0.0-r1 (18 May 2010)
 
