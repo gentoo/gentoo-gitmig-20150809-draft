@@ -8,7 +8,7 @@
 -LDFLAGS = -s
 -LIBS    = -lpng
 +CFLAGS  += -fomit-frame-pointer `libpng-config --cflags`
-+LDFLAGS = `libpng-config --ldflags` 
++LDFLAGS += `libpng-config --ldflags` 
 +LIBS    = `libpng-config --libs`
  INSTALL = install
  INSTALL_EXEC = $(INSTALL) -c -m 755
