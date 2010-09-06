@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.13 2010/08/23 11:29:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.14 2010/09/06 14:45:53 chainsaw Exp $
+
+*bird-1.2.4 (06 Sep 2010)
+
+  06 Sep 2010; <chainsaw@gentoo.org> +files/1.2.4-v4-v6-build.patch,
+  +files/initd-v4-bird-1.2.4, +files/initd-v6-bird-1.2.4,
+  +bird-1.2.4.ebuild:
+  Version bump. Now compiles again in full debug mode; closes bug #335790 by
+  Luca Postregna.
 
 *bird-1.2.3-r1 (23 Aug 2010)
 
