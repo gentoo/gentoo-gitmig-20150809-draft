@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.9.ebuild,v 1.3 2010/03/11 16:06:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.9.ebuild,v 1.4 2010/09/06 08:46:11 s4t4n Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ SITEFILE=50${PN}-gentoo.el
 src_configure()
 {
 	local crypto_support="--disable-crypto"
-	local emacs_support="--disable-emacs"
+	local emacs_support="--disable-emacs --without-lispdir"
 
 	if use crypt && use opensslcrypt; then
 		echo

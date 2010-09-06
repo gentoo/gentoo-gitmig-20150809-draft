@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.7.ebuild,v 1.6 2009/10/19 10:43:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.7.ebuild,v 1.7 2010/09/06 08:46:11 s4t4n Exp $
 
 inherit elisp-common eutils pam
 
@@ -76,7 +76,7 @@ src_unpack()
 src_compile()
 {
 	local crypto_support="--disable-crypto"
-	local emacs_support="--disable-emacs"
+	local emacs_support="--disable-emacs --without-lispdir"
 
 	use emacs 		 && emacs_support="--enable-emacs --with-lispdir=${SITELISP}/${PN}"
 	use opensslcrypt && crypto_support="--enable-crypto=openssl"
