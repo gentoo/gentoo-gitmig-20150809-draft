@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1.ebuild,v 1.8 2009/06/28 22:52:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1.ebuild,v 1.9 2010/09/06 23:22:02 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 
 WANT_AUTOMAKE=1.9
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Analysis of Compiler Options via Evolutionary Algorithm"
 HOMEPAGE="http://www.coyotegulch.com/products/acovea/"
@@ -25,16 +25,17 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/lib${P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	epatch "${FILESDIR}"/${P}-free-fix.patch
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-	if has_version ">=dev-libs/libevocosm-3.3.0" ; then
+	epatch "${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-free-fix.patch \
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-glibc-212.patch
+	if has_version ">=dev-libs/libevocosm-3.3.0"; then
 		epatch ${FILESDIR}"/${P}-libevocosm.patch"
 	fi
 	eautomake
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog NEWS README
 }
