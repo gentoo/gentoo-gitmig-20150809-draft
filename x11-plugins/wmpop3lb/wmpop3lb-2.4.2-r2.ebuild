@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r2.ebuild,v 1.4 2008/01/21 14:32:45 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2-r2.ebuild,v 1.5 2010/09/06 08:36:07 s4t4n Exp $
 
+EAPI=2
 inherit eutils
 
 IUSE=""
@@ -23,16 +24,18 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	>=sys-apps/sed-4"
 
-src_unpack() {
-	unpack ${A} ; cd "${S}"/wmpop3
-
-	sed -i -e "s:-g2 -D_DEBUG:${CFLAGS}:" Makefile
-
-	#Fix bug #110683 - it is already included in the following patch
-	#epatch ${FILESDIR}/${P}-socket-close.patch
+src_prepare() {
+	#Honour Gentoo CFLAGS
+	sed -i -e "s:-g2 -D_DEBUG:${CFLAGS}:" "wmpop3/Makefile"
 
 	#Fix bug #161530
 	epatch "${FILESDIR}"/${P}-fix-RECV-and-try-STAT-if-LAST-wont-work.patch
+
+	#De-hardcode compiler
+	sed -i -e "s:cc:\$(CC):g" "wmpop3/Makefile"
+
+	#Honour Gentoo LDFLAGS - bug #335986
+	sed -i -e "s:\$(FLAGS) -o wmpop3lb:\$(LDFLAGS) -o wmpop3lb:" "wmpop3/Makefile"
 }
 
 src_compile() {
