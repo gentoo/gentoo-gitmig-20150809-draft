@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r1.ebuild,v 1.3 2010/08/28 23:33:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r1.ebuild,v 1.4 2010/09/06 20:13:33 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE="branding screenshot pam"
 
 RDEPEND="x11-libs/libXmu
