@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdontchangethehostname
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.1 2010/09/06 00:23:53 tampakrap Exp $
+
+*kdontchangethehostname-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kdontchangethehostname-4.5.1.ebuild:
+  Version bump
+

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/solid-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.21 2010/08/15 11:21:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.22 2010/09/06 02:04:19 tampakrap Exp $
+
+*solid-runtime-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +solid-runtime-4.5.1.ebuild:
+  Version bump
 
   15 Aug 2010; Raúl Porcel <armin76@gentoo.org> solid-runtime-4.4.5.ebuild:
   Add ~arm

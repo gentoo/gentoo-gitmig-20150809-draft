@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.166 2010/08/10 13:14:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.167 2010/09/06 00:49:41 tampakrap Exp $
+
+*kmix-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org> +kmix-4.5.1.ebuild:
+  Version bump
 
   10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/kmix-4.3.2-solaris.patch:

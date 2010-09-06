@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/liboxygenstyle
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.1 2010/09/06 01:45:30 tampakrap Exp $
+
+*liboxygenstyle-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +liboxygenstyle-4.5.1.ebuild:
+  Version bump
+

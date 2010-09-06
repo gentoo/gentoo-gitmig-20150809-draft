@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.155 2010/08/09 17:34:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.156 2010/09/06 00:20:07 tampakrap Exp $
+
+*kdf-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org> +kdf-4.5.1.ebuild:
+  Version bump
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kdf-4.4.5.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.

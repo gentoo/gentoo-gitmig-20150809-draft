@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.86 2010/08/10 13:36:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.87 2010/09/06 02:03:40 tampakrap Exp $
+
+*solid-4.5.1 (06 Sep 2010)
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/solid-4.4.69-darwin-compile-powermanager.patch,
+  +solid-4.5.1.ebuild:
+  Version bump
 
   10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/solid-4.3.4-hal.patch, -files/solid-4.3.4-hal-2.patch:
