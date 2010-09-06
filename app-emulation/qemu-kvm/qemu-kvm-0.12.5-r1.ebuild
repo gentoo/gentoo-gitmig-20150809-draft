@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.4 2010/09/06 10:49:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.5 2010/09/06 10:56:40 jmbsvicetto Exp $
 
 BACKPORTS=1
 
@@ -19,7 +19,6 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
-	#KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
@@ -29,8 +28,8 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl esd gnutls fdt hardened kvm-trace \
-ncurses pulseaudio qemu-ifup sasl sdl static vde"
+IUSE="+aio alsa bluetooth brltty curl esd fdt hardened kvm-trace \
+ncurses pulseaudio qemu-ifup sasl sdl ssl static vde"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -58,23 +57,24 @@ RDEPEND="
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
+	brltty? ( app-accessibility/brltty )
 	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
 	fdt? ( sys-apps/dtc )
-	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
-	brltty? ( app-accessibility/brltty )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
+	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 "
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	>=sys-kernel/linux-headers-2.6.29
-	gnutls? ( dev-util/pkgconfig )"
+	ssl? ( dev-util/pkgconfig )
+"
 
 kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"
@@ -161,17 +161,17 @@ src_configure() {
 
 	#config options
 	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
-	use bluetooth || conf_opts="${conf_opts} --disable-bluez"
-	conf_opts="${conf_opts} $(use_enable curl)"
-	use gnutls || conf_opts="${conf_opts} --disable-vnc-tls"
-	conf_opts="${conf_opts} $(use_enable fdt)"
-	use hardened && conf_opts="${conf_opts} --enable-user-pie"
-	use kvm-trace && conf_opts="${conf_opts} --with-kvm-trace"
-	use ncurses || conf_opts="${conf_opts} --disable-curses"
-	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
-	use sdl || conf_opts="${conf_opts} --disable-sdl"
-	use vde || conf_opts="${conf_opts} --disable-vde"
+	conf_opts="${conf_opts} $(use_enable bluetooth bluez)"
 	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
+	conf_opts="${conf_opts} $(use_enable curl)"
+	conf_opts="${conf_opts} $(use_enable fdt)"
+	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
+	use kvm-trace && conf_opts="${conf_opts} --with-kvm-trace"
+	conf_opts="${conf_opts} $(use_enable ncurses curses)"
+	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
+	conf_opts="${conf_opts} $(use_enable sdl)"
+	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
+	conf_opts="${conf_opts} $(use_enable vde)"
 #	conf_opts="${conf_opts} $(use_enable xen)"
 	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
@@ -242,5 +242,7 @@ pkg_postinst() {
 	elog "if using -net tap.  You will also need support for 802.1d"
 	elog "Ethernet Bridging and a configured bridge if using the provided"
 	elog "kvm-ifup script from /etc/kvm."
+	elog
+	elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
 	echo
 }
