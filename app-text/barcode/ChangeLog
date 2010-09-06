@@ -1,6 +1,11 @@
 # ChangeLog for app-text/barcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.18 2010/04/05 22:20:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.19 2010/09/06 00:57:37 xmw Exp $
+
+*barcode-0.98-r1 (06 Sep 2010)
+
+  06 Sep 2010; Michael Weber <xmw@gentoo.org> +barcode-0.98-r1.ebuild:
+  Revbump to fix LDFLAGS from bug #335631.
 
   05 Apr 2010; Jonathan Callen <abcd@gentoo.org> barcode-0.98.ebuild:
   Bump to EAPI=3, add prefix keywords
