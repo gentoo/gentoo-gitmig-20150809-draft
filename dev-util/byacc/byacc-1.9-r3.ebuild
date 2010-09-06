@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r3.ebuild,v 1.1 2010/09/06 17:43:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r3.ebuild,v 1.2 2010/09/06 17:53:13 xmw Exp $
 
 EAPI=2
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="the best variant of the Yacc parser generator"
 HOMEPAGE="http://dickey.his.com/byacc/byacc.html"
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake PROGRAM=byacc CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake PROGRAM=byacc CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" LINKER="$(tc-getCC)" || die
 }
 
 src_install() {

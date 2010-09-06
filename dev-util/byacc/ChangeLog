@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.24 2010/09/06 17:43:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.25 2010/09/06 17:53:13 xmw Exp $
+
+  06 Sep 2010; Michael Weber <xmw@gentoo.org> byacc-1.9-r3.ebuild:
+  Fix CC/LINKER to toolchain-funcs.
 
 *byacc-1.9-r3 (06 Sep 2010)
 
