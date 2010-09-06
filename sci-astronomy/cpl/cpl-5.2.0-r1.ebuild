@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0.ebuild,v 1.1 2010/05/26 19:02:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0-r1.ebuild,v 1.1 2010/09/06 10:56:26 xarthisius Exp $
 
 EAPI=2
 JAVA_PKG_OPT_USE=gasgano
@@ -38,14 +38,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake LDFLAGS="${LDFLAGS}" || die #336189
 	if use doc; then
 		doxygen Doxyfile || die
 	fi
 }
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS NEWS TODO BUGS ChangeLog
+	emake DESTDIR="${D}" install || die
+	dodoc README AUTHORS NEWS TODO BUGS ChangeLog || die
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r html || die

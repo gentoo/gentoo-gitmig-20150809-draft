@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/cpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.1 2010/05/26 19:02:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.2 2010/09/06 10:56:26 xarthisius Exp $
+
+*cpl-5.2.0-r1 (06 Sep 2010)
+
+  06 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -cpl-5.2.0.ebuild,
+  +cpl-5.2.0-r1.ebuild:
+  Respect LDFLAGS wrt bug 336189. Thanks to Diego for the report.
 
 *cpl-5.2.0 (26 May 2010)
 
