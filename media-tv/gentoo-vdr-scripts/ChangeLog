@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.104 2010/09/05 18:36:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.105 2010/09/06 15:44:18 hd_brummy Exp $
+
+  06 Sep 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  gentoo-vdr-scripts-0.4.7.ebuild:
+  syntax error fixed
 
 *gentoo-vdr-scripts-0.4.7 (05 Sep 2010)
 

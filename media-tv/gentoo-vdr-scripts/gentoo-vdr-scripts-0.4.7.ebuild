@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.7.ebuild,v 1.1 2010/09/05 18:36:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.4.7.ebuild,v 1.2 2010/09/06 15:44:18 hd_brummy Exp $
 
 EAPI="2"
 
@@ -38,6 +38,10 @@ src_prepare() {
 	# moved into own package
 	sed -e '/SUBDIRS =/s# bin # #' -i usr/Makefile
 	sed -e '/all:/s#compile##' -i Makefile
+
+	# syntax error fix
+	sed -e 's:add_param "--lirc=/var/run/lirc/lircd" \;\;:add_param "--lirc=/var/run/lirc/lircd":' \
+		-i "${S}"/usr/share/vdr/rcscript/pre-start-30-parameter.sh
 }
 
 src_install() {
