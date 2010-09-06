@@ -1,23 +1,3 @@
-From 63e97633d01908da6d3776ac61e4033e6fa91e5c Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@gmail.com>
-Date: Sun, 5 Sep 2010 18:19:09 +0200
-Subject: [PATCH] build: fix linking position for libcap
-MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
- * lib/Makefile.am: link libzebra to libcap, since it uses symbols
-   from there.
- * zebra/Makefile.am: no need to link libcap here now, since it's not
-   used directly (libtool with apply transitive dependencies for
-   static linking).
-
-Signed-off-by: Diego Elio Pettenò <flameeyes@gmail.com>
----
- lib/Makefile.am   |    2 +-
- zebra/Makefile.am |    5 ++---
- 2 files changed, 3 insertions(+), 4 deletions(-)
-
 diff --git a/lib/Makefile.am b/lib/Makefile.am
 index 315e919..6e69993 100644
 --- a/lib/Makefile.am
@@ -55,6 +35,27 @@ index 542f36f..d09a209 100644
  
  zebra_DEPENDENCIES = $(otherobj)
  
--- 
-1.7.2.2
-
+diff --git a/zebra/interface.c b/zebra/interface.c
+index 03e7ff7..182caa5 100644
+--- a/zebra/interface.c
++++ b/zebra/interface.c
+@@ -1284,17 +1284,17 @@ ip_address_uninstall (struct vty *vty, struct interface *ifp,
+       return CMD_WARNING;
+     }
+ 
+-#if 0
+   /* Redistribute this information. */
+   zebra_interface_address_delete_update (ifp, ifc);
+ 
+   /* Remove connected route. */
+   connected_down_ipv4 (ifp, ifc);
+ 
++  if_subnet_delete(ifp, ifc);
++
+   /* Free address information. */
+   listnode_delete (ifp->connected, ifc);
+   connected_free (ifc);
+-#endif
+ 
+   return CMD_SUCCESS;
+ }

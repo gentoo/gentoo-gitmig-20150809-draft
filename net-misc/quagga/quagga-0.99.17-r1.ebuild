@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.2 2010/09/06 03:59:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.3 2010/09/06 11:58:53 flameeyes Exp $
 
 EAPI="2"
 
@@ -39,10 +39,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# https://bugzilla.quagga.net/show_bug.cgi?id=486
-	epatch "${FILESDIR}/${PN}-0.99.14-fix-ipremove.patch"
-
-	epatch "${FILESDIR}/${P}-libcap.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${DISTDIR}/${CLASSLESS_BGP_PATCH}"
