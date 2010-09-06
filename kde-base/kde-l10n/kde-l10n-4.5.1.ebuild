@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.5.1.ebuild,v 1.1 2010/09/06 00:05:22 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.5.1.ebuild,v 1.2 2010/09/06 04:50:46 reavertm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ DEPEND="
 "
 RDEPEND=""
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+handbook"
 
 # /usr/portage/distfiles $ ls -1 kde-l10n-*-${PV}.* |sed -e 's:-4.5.1.tar.bz2::' -e 's:kde-l10n-::' |tr '\n' ' '

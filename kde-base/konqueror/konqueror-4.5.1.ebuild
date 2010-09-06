@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.5.1.ebuild,v 1.1 2010/09/06 00:58:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.5.1.ebuild,v 1.2 2010/09/06 04:50:57 reavertm Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ KMNAME="kdebase-apps"
 inherit flag-o-matic kde4-meta
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+bookmarks debug svg thumbnail"
 # 4 of 4 tests fail. Last checked for 4.0.3
 RESTRICT="test"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/kdeartwork-iconthemes-4.5.1.ebuild,v 1.1 2010/09/05 23:48:11 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/kdeartwork-iconthemes-4.5.1.ebuild,v 1.2 2010/09/06 04:51:05 reavertm Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ KMMODULE="IconThemes"
 inherit kde4-meta
 
 DESCRIPTION="Icon themes for kde"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 # Provides nuvola icon theme

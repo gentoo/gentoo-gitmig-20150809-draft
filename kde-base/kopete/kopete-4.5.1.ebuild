@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.5.1.ebuild,v 1.1 2010/09/06 01:00:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.5.1.ebuild,v 1.2 2010/09/06 04:50:49 reavertm Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ KMNAME="kdenetwork"
 inherit kde4-meta
 
 DESCRIPTION="KDE multi-protocol IM client"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug ssl v4l2"
 
 # tests hang, last checked for 4.2.96

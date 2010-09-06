@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.5.1.ebuild,v 1.1 2010/09/05 23:57:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.5.1.ebuild,v 1.2 2010/09/06 04:51:23 reavertm Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ KMNOMODULE="true"
 inherit kde4-meta multilib prefix
 
 DESCRIPTION="Startkde script, which starts a complete KDE session, and associated scripts"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 # The KDE apps called from the startkde script.

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.5.1.ebuild,v 1.1 2010/09/06 02:02:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.5.1.ebuild,v 1.2 2010/09/06 04:50:45 reavertm Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ WEBKIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="akonadi attica debug okular +phonon qimageblitz qscintilla qwt semantic-desktop"
 
 COMMON_DEPEND="

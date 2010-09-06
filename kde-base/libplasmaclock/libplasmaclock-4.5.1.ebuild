@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/libplasmaclock-4.5.1.ebuild,v 1.1 2010/09/06 01:46:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/libplasmaclock-4.5.1.ebuild,v 1.2 2010/09/06 04:50:48 reavertm Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ OPENGL_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Libraries for KDE Plasma's clocks"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
