@@ -1,5 +1,5 @@
---- -	2008-05-30 21:03:16.545065718 -0600
-+++ libacovea-5.1.1/libacovea/acovea.cpp	2008-05-30 20:55:48.000000000 -0600
+--- libacovea/acovea.cpp
++++ libacovea/acovea.cpp
 @@ -86,7 +86,7 @@
  // randomize settings of this option
  void option::randomize()

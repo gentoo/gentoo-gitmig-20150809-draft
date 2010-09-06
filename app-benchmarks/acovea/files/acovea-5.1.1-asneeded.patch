@@ -1,13 +1,13 @@
---- cmdline/Makefile.am.old	2006-06-28 00:48:31.069459287 +0200
-+++ cmdline/Makefile.am	2006-06-28 00:48:40.917331263 +0200
+--- cmdline/Makefile.am
++++ cmdline/Makefile.am
 @@ -7,4 +7,4 @@
  
  runacovea_SOURCES = runacovea.cpp
  
 -LIBS = -L../libacovea -lacovea -lcoyotl -levocosm -lexpat
 +LIBS = -L../libacovea -lacovea -lcoyotl -levocosm
---- libacovea/Makefile.am.old	2006-06-28 00:48:10.959720717 +0200
-+++ libacovea/Makefile.am	2006-06-28 00:48:53.436168516 +0200
+--- libacovea/Makefile.am
++++ libacovea/Makefile.am
 @@ -16,3 +16,5 @@
  library_include_HEADERS = $(h_sources)
  

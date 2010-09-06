@@ -1,6 +1,5 @@
-diff -NrU5 libacovea-5.1.1.original/libacovea/acovea.cpp libacovea-5.1.1/libacovea/acovea.cpp
---- libacovea-5.1.1.original/libacovea/acovea.cpp	2009-06-07 23:53:01.000000000 -0600
-+++ libacovea-5.1.1/libacovea/acovea.cpp	2009-06-07 23:53:51.000000000 -0600
+--- libacovea/acovea.cpp
++++ libacovea/acovea.cpp
 @@ -44,10 +44,11 @@
  #include <unistd.h>
  #include <sys/types.h>
