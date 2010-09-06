@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/tumbler-0.1.2.ebuild,v 1.6 2010/08/28 08:11:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/tumbler-0.1.2.ebuild,v 1.7 2010/09/06 17:51:25 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="A D-Bus service for applications to request thumbnails"

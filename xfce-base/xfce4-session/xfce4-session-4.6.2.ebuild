@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.2.ebuild,v 1.8 2010/08/29 17:56:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.2.ebuild,v 1.9 2010/09/06 17:55:51 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Session manager for Xfce4"
@@ -48,10 +48,10 @@ src_install() {
 
 	if ! use fortune; then
 		# Wipe away unusable xfce4-tips
-		rm -Rf "${D}"/usr/share/xfce4/tips
-		rm -f "${D}"/usr/bin/xfce4-tips \
-			"${D}"/usr/lib/debug/usr/bin/xfce4-tips.debug \
-			"${D}"/etc/xdg/autostart/xfce4-tips-autostart.desktop
-		rmdir -p "${D}"/etc/xdg/autostart
+		rm -Rf "${ED}"/usr/share/xfce4/tips
+		rm -f "${ED}"/usr/bin/xfce4-tips \
+			"${ED}"/usr/lib/debug/usr/bin/xfce4-tips.debug \
+			"${ED}"/etc/xdg/autostart/xfce4-tips-autostart.desktop
+		rmdir -p "${ED}"/etc/xdg/autostart
 	fi
 }
