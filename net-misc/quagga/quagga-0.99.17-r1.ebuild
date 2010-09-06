@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.1 2010/09/06 03:31:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.2 2010/09/06 03:59:09 flameeyes Exp $
 
 EAPI="2"
 
@@ -18,12 +18,15 @@ SRC_URI="http://www.quagga.net/download/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="caps doc ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra elibc_glibc"
+IUSE="caps doc ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra elibc_glibc +readline"
 
-COMMON_DEPEND="sys-libs/readline
+COMMON_DEPEND="
 	caps? ( sys-libs/libcap )
 	snmp? ( net-analyzer/net-snmp )
-	pam? ( sys-libs/pam )
+	readline? (
+		sys-libs/readline
+		pam? ( sys-libs/pam )
+	)
 	!elibc_glibc? ( dev-libs/libpcre )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/libtool-2.2.4"
@@ -51,18 +54,11 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--disable-static \
-		$(use_enable caps capabilities) \
-		$(use_enable snmp) \
-		$(use_with pam libpam) \
-		$(use_enable !elibc_glibc pcreposix) \
-		$(use_enable tcp-zebra)
-		$(use_enable doc)"
-	use ipv6 \
-			&& myconf="${myconf} --enable-ipv6 --enable-ripngd --enable-ospf6d --enable-rtadv" \
-			|| myconf="${myconf} --disable-ipv6 --disable-ripngd --disable-ospf6d"
+	local myconf=
+
 	use ospfapi \
 			&& myconf="${myconf} --enable-opaque-lsa --enable-ospf-te --enable-ospfclient"
+
 	use realms && myconf="${myconf} --enable-realms"
 	use multipath && myconf="${myconf} --enable-multipath=0"
 
@@ -71,10 +67,26 @@ src_configure() {
 		--enable-group=quagga \
 		--enable-vty-group=quagga \
 		--with-cflags="${CFLAGS}" \
-		--enable-vtysh \
 		--sysconfdir=/etc/quagga \
 		--enable-exampledir=/usr/share/doc/${PF}/samples \
 		--localstatedir=/var/run/quagga \
+		--disable-static \
+		--disable-pie \
+		\
+		$(use_enable caps capabilities) \
+		$(use_enable snmp) \
+		$(use_enable !elibc_glibc pcreposix) \
+		$(use_enable tcp-zebra) \
+		$(use_enable doc) \
+		\
+		$(use_enable readline vtysh) \
+		$(use_with pam libpam) \
+		\
+		$(use_enable ipv6) \
+		$(use_enable ipv6 ripngd) \
+		$(use_enable ipv6 ospf6d) \
+		$(use_enable ipv6 rtadv) \
+		\
 		${myconf} \
 		|| die "configure failed"
 }
@@ -96,7 +108,7 @@ src_install() {
 		ln -s ripd "${D}"/etc/init.d/${service} || die
 	done
 
-	newpamd "${FILESDIR}/quagga.pam" quagga
+	use readline && newpamd "${FILESDIR}/quagga.pam" Quagga
 }
 
 pkg_postinst() {
