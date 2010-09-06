@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-plugins
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.77 2007/04/11 13:45:06 welp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.78 2010/09/06 18:32:16 ssuominen Exp $
+
+  06 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -nessus-plugins-2.2.6.ebuild:
+  Revert back to ~arch wrt #330455.
 
   11 Apr 2007; Peter Weller <welp@gentoo.org> nessus-plugins-2.2.9.ebuild:
   Keyworded ~x86-fbsd wrt bug 172890
