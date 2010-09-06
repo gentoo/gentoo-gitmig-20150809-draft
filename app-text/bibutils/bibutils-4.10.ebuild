@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-4.7.ebuild,v 1.1 2010/01/07 02:21:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-4.10.ebuild,v 1.1 2010/09/06 16:53:59 xarthisius Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# The custom configure script sucks, so we'll just do its
@@ -28,11 +28,12 @@ src_prepare() {
 		-e 's:REPLACE_POSTFIX::g' \
 		-e 's:make:$(MAKE):g' \
 		Makefile_start > Makefile \
-		|| die "Failed to set upt Makefile"
+		|| die "Failed to set up Makefile"
+	sed -e '/$(CC) $^ -o $@/d' -i bin/Makefile || die #336237
 }
 
 src_install() {
 	dodir /usr/bin
-	emake install || die "emake install failed"
-	dodoc ChangeLog
+	emake install || die
+	dodoc ChangeLog || die
 }
