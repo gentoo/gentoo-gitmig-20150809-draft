@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.1 2010/09/04 06:20:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.2 2010/09/06 17:08:58 jlec Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
-inherit autotools eutils python versionator
+
+inherit eutils python versionator
 
 DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
@@ -15,7 +16,7 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gnome idle libnotify nls spell srv trayicon X xhtml"
+IUSE="avahi crypt dbus gnome idle libnotify nls spell srv X xhtml"
 
 COMMON_DEPEND="
 	x11-libs/gtk+:2
@@ -42,7 +43,7 @@ RDEPEND="${COMMON_DEPEND}
 	gnome? (
 		dev-python/libgnome-python
 		dev-python/gnome-keyring-python
-		trayicon? ( dev-python/egg-python )
+		dev-python/egg-python
 		)
 	idle? ( x11-libs/libXScrnSaver )
 	srv? (
@@ -68,29 +69,17 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# install pyfiles in /usr/lib/python2.x/site-packages/gajim
-	# upstream: http://trac.gajim.org/ticket/5460
-	# Should be in 0.14
-#	epatch "${FILESDIR}/${PN}-0.13-autotools-enable-site-packages_option.patch"
 	epatch "${FILESDIR}"/${PV}-python-version.patch
-	eautoreconf
 	echo '#!/bin/sh' > config/py-compile
 }
 
 src_configure() {
-	local myconf
-
-	if ! use gnome; then
-		myconf+=" $(use_enable trayicon)"
-	fi
-
 	econf \
 		$(use_enable nls) \
 		$(use_with X x) \
 		--docdir="/usr/share/doc/${PF}" \
 		--libdir="$(python_get_sitedir)" \
-		--enable-site-packages \
-		${myconf}
+		--enable-site-packages
 }
 
 src_install() {
