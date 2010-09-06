@@ -1,0 +1,67 @@
+Fix install paths, respect LDFLAGS, CFLAGS
+
+http://bugs.gentoo.org/show_bug.cgi?id=336196
+
+--- rnaml2ps/Makefile
++++ rnaml2ps/Makefile
+@@ -5,16 +5,21 @@
+ RNADRAW = rnaml2ps
+ OBJS_RNADRAW = rnaml2ps.o nrutil.o 
+ 
++all: $(RNADRAW)
++
+ $(RNADRAW):   $(OBJS_RNADRAW)
+-	$(CC) -o $(RNADRAW) $(OBJS_RNADRAW) -lm
++	$(CC) $(LDFLAGS) -o $(RNADRAW) $(OBJS_RNADRAW) -lm
+ 
+ nrutil.o : nrutil.c 
+-	cc -c  nrutil.c
++	$(CC) $(CFLAGS) -c  nrutil.c
+ 
+ rnaml2ps.o :  rnaml2ps.c
+-	cc -c  rnaml2ps.c
++	$(CC) $(CFLAGS) -c  rnaml2ps.c
+ 
+ 
+-.PHONY : clean
++.PHONY : clean all install
+ clean:
+-	rm *.o
++	rm -f *.o
++
++install:
++	install -D -m 0755 $(RNADRAW) $(DESTDIR)/usr/bin/$(RNADRAW)
+--- Makefile
++++ Makefile
+@@ -56,9 +56,14 @@
+            $(OBJ)/multiple.o \
+            $(OBJ)/statistics.o
+ 
++.PHONY: clean all install
++
++SUBDIRS = rnaml2ps
++
+ all: $(RNAVIEW)
++	for dir in ${SUBDIRS} ; do ( cd $$dir ; ${MAKE} all ) ; done
+ 
+-CFLAGS  =  $(LINCLUDES) 
++CFLAGS  +=  $(LINCLUDES)
+ 
+ $(RNAVIEW) : $(HFILES) $(OBJ_FILE) 
+ 	$(CC) $(CFLAGS) -o $@ $(OBJ_FILE) $(LDFLAGS) -lm $(MALLOCLIB)
+@@ -111,6 +116,15 @@
+ clean:
+ 	@rm -f $(OBJ)/*.o
+ 	@rm -f $(ALLTARGETS)
++	for dir in ${SUBDIRS} ; do ( cd $$dir ; ${MAKE} clean ) ; done
++
++install:
++	install -D -m 0755 bin/rnaview $(DESTDIR)/usr/bin/rnaview
++	mkdir -p $(DESTDIR)/usr/share/rnaview/BASEPARS
++	install -m 0644 BASEPARS/* $(DESTDIR)/usr/share/rnaview/BASEPARS
++	mkdir -p $(DESTDIR)/usr/share/rnaview/test
++	install -m 0644 test/* $(DESTDIR)/usr/share/rnaview/test
++	for dir in ${SUBDIRS} ; do ( cd $$dir ; ${MAKE} install ) ; done
+ 
+ export:
+ 	mkdir -p $(EXPORT_DIR)
