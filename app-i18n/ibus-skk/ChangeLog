@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-skk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.10 2010/07/02 16:32:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.11 2010/09/06 23:03:59 matsuu Exp $
+
+*ibus-skk-1.0.0 (06 Sep 2010)
+
+  06 Sep 2010; MATSUU Takuto <matsuu@gentoo.org> +ibus-skk-1.0.0.ebuild:
+  Version bumped.
 
 *ibus-skk-0.0.9 (02 Jul 2010)
 
