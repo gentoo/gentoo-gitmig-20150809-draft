@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.139 2010/08/31 17:50:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.140 2010/09/06 20:26:45 ranger Exp $
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> m4-1.4.14-r1.ebuild:
+  Marking m4-1.4.14-r1 ppc64 for bug 307633
 
 *m4-1.4.15 (31 Aug 2010)
 
