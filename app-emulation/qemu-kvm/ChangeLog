@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.37 2010/08/26 21:02:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.38 2010/09/06 01:16:15 lu_zero Exp $
+
+  06 Sep 2010; Luca Barbato <lu_zero@gentoo.org> qemu-kvm-0.12.5-r1.ebuild,
+  qemu-kvm-9999.ebuild:
+  Add dep for brltty, see #326491
 
 *qemu-kvm-0.12.5-r1 (26 Aug 2010)
 

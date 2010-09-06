@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.1 2010/08/26 21:02:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.2 2010/09/06 01:16:15 lu_zero Exp $
 
 BACKPORTS=1
 
@@ -28,8 +28,8 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
-pulseaudio qemu-ifup sasl sdl static vde"
+IUSE="+aio alsa bluetooth brltty curl esd gnutls fdt hardened kvm-trace \
+ncurses pulseaudio qemu-ifup sasl sdl static vde"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -64,6 +64,7 @@ RDEPEND="
 	ncurses? ( sys-libs/ncurses )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
+	brltty? ( app-accessibility/brltty )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
 	vde? ( net-misc/vde )
@@ -169,6 +170,7 @@ src_configure() {
 	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
 	use sdl || conf_opts="${conf_opts} --disable-sdl"
 	use vde || conf_opts="${conf_opts} --disable-vde"
+	conf_opts="${conf_opts} $(use_enable brltty)"
 #	conf_opts="${conf_opts} $(use_enable xen)"
 	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
