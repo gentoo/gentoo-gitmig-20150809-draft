@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4527 2010/09/05 22:01:02 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4528 2010/09/06 20:21:07 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask libdrizzle as it's merged in main drizzle now.
 
   05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Mask KDE 4.5.1 until it is fully committed
