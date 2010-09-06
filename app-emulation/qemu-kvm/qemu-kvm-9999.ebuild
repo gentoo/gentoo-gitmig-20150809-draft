@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.11 2010/09/06 03:06:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.12 2010/09/06 11:07:09 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz"
+	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
+		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
@@ -26,7 +27,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
-png pulseaudio qemu-ifup ssl sasl sdl static vde xen"
+png pulseaudio qemu-ifup sasl sdl ssl static vde xen"
 
 # Updated targets to use the only supported upstream target - x86_64-softmmu
 COMMON_TARGETS=""
