@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/liboglappth-0.98.ebuild,v 1.4 2010/08/14 12:25:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/liboglappth-0.98.ebuild,v 1.5 2010/09/06 13:43:10 fauli Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.bioinformatics.org/ghemical/"
 SRC_URI="http://www.bioinformatics.org/ghemical/download/current/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RDEPEND="virtual/opengl
 	virtual/glu
