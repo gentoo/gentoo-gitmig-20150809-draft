@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.7.ebuild,v 1.1 2010/08/17 16:22:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.7.ebuild,v 1.2 2010/09/06 21:07:20 ssuominen Exp $
 
 EAPI=2
 
@@ -62,7 +62,15 @@ src_configure() {
 }
 
 src_compile() {
-	NUMJOBS=$(sed -e 's/.*\(\-j[ 0-9]\+\) .*/\1/; s/--jobs=\?/-j/' <<< ${MAKEOPTS})
+	# This is from dev-libs/boost, keep it synced
+	jobs=$( echo " ${MAKEOPTS} " | \
+		sed -e 's/ --jobs[= ]/ -j /g' \
+		-e 's/ -j \([1-9][0-9]*\)/ -j\1/g' \
+		-e 's/ -j\>/ -j1/g' | \
+		( while read -d ' ' j ; do if [[ "${j#-j}" = "$j" ]]; then continue; fi;
+		jobs="${j#-j}"; done; echo ${jobs} ) )
+	if [[ "${jobs}" != "" ]]; then NUMJOBS="-j"${jobs}; fi;
+
 	./waf build ${NUMJOBS} || die "build failed"
 }
 
