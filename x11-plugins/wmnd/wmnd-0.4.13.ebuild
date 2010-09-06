@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.13.ebuild,v 1.6 2010/08/25 16:01:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.13.ebuild,v 1.7 2010/09/06 12:56:10 s4t4n Exp $
 
 EAPI=3
 
@@ -16,10 +16,10 @@ KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXt
-	x11-libs/libXpm"
-DEPEND="${RDEPEND}
-	x11-proto/xextproto
+	x11-libs/libXpm
 	snmp? ( >=net-analyzer/net-snmp-5.2.1 )"
+DEPEND="${RDEPEND}
+	x11-proto/xextproto"
 
 src_configure()
 {

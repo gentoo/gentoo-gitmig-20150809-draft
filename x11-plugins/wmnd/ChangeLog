@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.47 2010/08/25 16:01:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.48 2010/09/06 12:56:10 s4t4n Exp $
+
+  06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.13.ebuild:
+  Fix DEPEND and RDEPEND. Closes bug #276405.
+  -wmnd-0.4.11-r1.ebuild:
+  Wiped out oldest version.
 
   25 Aug 2010; Jeremy Olexa <darkside@gentoo.org> wmnd-0.4.13.ebuild:
   Migrate changes from Gentoo Prefix overlay. KEYWORDS, EAPI3. Approved by
