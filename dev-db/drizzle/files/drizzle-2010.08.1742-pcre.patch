@@ -1,0 +1,13 @@
+Index: drizzle-2010.08.1742/drizzled/include.am
+===================================================================
+--- drizzle-2010.08.1742.orig/drizzled/include.am
++++ drizzle-2010.08.1742/drizzled/include.am
+@@ -458,7 +458,7 @@ drizzled_drizzled_LDADD= \
+ 				$(LDADD) \
+ 				$(LIBUUID) \
+ 				$(LIBDL_LIBS) \
+-				$(LIBPCRE) \
++				$(LTLIBPCRE) \
+ 				$(LTLIBPROTOBUF) \
+ 				$(LIBTBB) \
+ 				$(BOOST_LIBS) \

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.13 2010/06/14 23:45:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.14 2010/09/06 20:19:24 flameeyes Exp $
+
+*drizzle-2010.08.1742 (06 Sep 2010)
+
+  06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -drizzle-2010.05.1525-r1.ebuild, +drizzle-2010.08.1742.ebuild,
+  +files/drizzle-2010.08.1742-pcre.patch, files/drizzle.init.d:
+  Version bump; the new version requires a patch, and merges libdrizzle back
+  into a single package.
 
 *drizzle-2010.05.1525-r1 (14 Jun 2010)
 

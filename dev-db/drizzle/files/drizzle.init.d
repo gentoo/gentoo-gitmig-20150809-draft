@@ -1,8 +1,8 @@
 #!/sbin/runscript
-# Copyright 2010 Pavel Stratil, senbonzakura.eu
+# Copyright 2010-2010 Pavel Stratil, senbonzakura.eu
 # Some functions were taken from debian init script. Licensed under GPL-2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/files/drizzle.init.d,v 1.2 2010/06/14 23:45:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/files/drizzle.init.d,v 1.3 2010/09/06 20:19:25 flameeyes Exp $
 
 #########################
 ### Construct vars ######
@@ -125,6 +125,10 @@ stop() {
 start() {
 	checkconfig
 	ebegin "Starting ${SVCNAME}"
+	# Test if ${BASE_PID}, ${BASE_LOG} and ${LOG_FILE} exist, create if not.
+	[ ! -e ${BASE_PID} ] && mkdir -p ${BASE_PID} && chown ${DRIZZLE_USER}:nogroup ${BASE_PID}
+	[ ! -e ${BASE_LOG} ] && mkdir -p ${BASE_LOG} && chown ${DRIZZLE_USER}:nogroup ${BASE_LOG}
+	[ ! -e ${LOGFILE} ]  && touch ${LOGFILE} && chown ${DRIZZLE_USER}:nogroup ${LOGFILE}
         start-stop-daemon --background --pidfile ${PIDFILE} --stderr ${LOGFILE} \
         --user ${DRIZZLE_USER} --start --exec ${DRIZZLE_DAEMON} -- \
         --datadir=${DATADIR} --pid-file=${PIDFILE} --user=${DRIZZLE_USER} \
