@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.3 2010/09/06 10:37:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.4 2010/09/06 10:49:53 lu_zero Exp $
 
 BACKPORTS=1
 
@@ -20,7 +20,7 @@ else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
 	#KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -171,7 +171,7 @@ src_configure() {
 	use sasl || conf_opts="${conf_opts} --disable-vnc-sasl"
 	use sdl || conf_opts="${conf_opts} --disable-sdl"
 	use vde || conf_opts="${conf_opts} --disable-vde"
-	conf_opts="${conf_opts} $(use_enable brltty)"
+	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
 #	conf_opts="${conf_opts} $(use_enable xen)"
 	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
