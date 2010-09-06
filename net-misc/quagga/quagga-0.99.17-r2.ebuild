@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r1.ebuild,v 1.3 2010/09/06 11:58:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r2.ebuild,v 1.1 2010/09/06 14:19:00 flameeyes Exp $
 
 EAPI="2"
 
@@ -105,7 +105,7 @@ src_install() {
 		ln -s ripd "${D}"/etc/init.d/${service} || die
 	done
 
-	use readline && newpamd "${FILESDIR}/quagga.pam" Quagga
+	use readline && newpamd "${FILESDIR}/quagga.pam" quagga
 }
 
 pkg_postinst() {
