@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.2 2010/09/06 17:48:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.3 2010/09/06 23:54:26 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
+	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
+		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(xfconf_use_debug)
 		--with-vendor-info=Gentoo
