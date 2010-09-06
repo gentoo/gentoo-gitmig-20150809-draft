@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libghemical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.21 2010/06/21 13:43:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.22 2010/09/06 13:50:11 fauli Exp $
+
+  06 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  libghemical-2.99.1.ebuild:
+  stable x86, bug 325561
 
 *libghemical-2.99.1 (21 Jun 2010)
 
