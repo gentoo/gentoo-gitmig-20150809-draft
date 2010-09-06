@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.13 2010/09/03 19:30:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.14 2010/09/06 02:27:11 tampakrap Exp $
+
+  06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libattica-0.1.4.ebuild:
+  Version bump
 
   03 Sep 2010; Joseph Jezak <josejx@gentoo.org> libattica-0.1.2.ebuild:
   Marked ppc64 stable for bug #322791.
