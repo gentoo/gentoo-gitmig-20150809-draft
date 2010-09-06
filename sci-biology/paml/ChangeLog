@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/paml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.12 2010/09/02 06:56:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.13 2010/09/06 14:10:43 fauli Exp $
+
+  06 Sep 2010; Christian Faulhammer <fauli@gentoo.org> paml-4.4c.ebuild:
+  stable x86, bug 335649
 
 *paml-4.4c (02 Sep 2010)
 
