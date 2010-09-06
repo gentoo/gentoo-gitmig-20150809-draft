@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r1.ebuild,v 1.2 2010/03/29 15:40:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r1.ebuild,v 1.3 2010/09/06 15:36:10 pacho Exp $
+
+EAPI="2"
 
 inherit eutils autotools
 
@@ -18,22 +20,20 @@ WANT_AUTOCONF="2.56"
 RDEPEND=">=dev-libs/glib-2.6"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/00-patch-configure.diff
 	epatch "${FILESDIR}"/02-patch-preload_conf.diff
 	epatch "${FILESDIR}"/02-patch-preload_sysconfig.diff
+	epatch "${FILESDIR}"/${PN}-0.6.4-use-help2man-as-usual.patch
+	epatch "${FILESDIR}"/${PN}-0.6.4-use-make-dependencies.patch
 	use vanilla || epatch "${FILESDIR}"/000{1,2,3}-*.patch
 	cat "${FILESDIR}"/preload-0.6.4.init.in > preload.init.in || die
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf --localstatedir=/var
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
@@ -47,11 +47,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You probably want to add preload to the boot runlevel like so:"
-	einfo "# rc-update add preload boot"
-	echo
-	eerror "IMPORTANT: If you are upgrading from preload < 0.6 ensure to"
-	eerror "merge your config files (etc-update) or system performance"
-	eerror "may suffer."
-	echo
+	elog "You probably want to add preload to the default runlevel like so:"
+	elog "# rc-update add preload default"
 }
