@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5925 2010/09/06 04:14:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5926 2010/09/06 05:14:18 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1382,6 +1382,7 @@ kde-base/kdebindings-csharp:qimageblitz - Compile bindings for media-libs/qimage
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
+kde-base/kdebindings-perl:plasma - Compile bindings for KDE's Plasma.
 kde-base/kdebindings-ruby:akonadi - Compile bindings for Akonadi.
 kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
 kde-base/kdebindings-ruby:phonon - Compile bindings for Phonon.
@@ -1442,6 +1443,7 @@ kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:ebook - Add E-Book support
 kde-base/okular:ps - Add PostScript support
 kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
+kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-base/kdepimlibs)
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
