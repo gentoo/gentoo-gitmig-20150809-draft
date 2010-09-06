@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.6 2008/06/29 13:41:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.7 2010/09/06 10:00:45 s4t4n Exp $
+
+EAPI=2
 
 DESCRIPTION="a dockapp and gkrellm2 plugin that fetches the DSL usage information for Australian ISP Internode"
 HOMEPAGE="http://www.earthmagic.org/?software"
@@ -23,6 +25,12 @@ RDEPEND="dev-libs/openssl
 DEPEND="${RDEPEND}
 	gtk? ( dev-util/pkgconfig )
 	>=x11-proto/xextproto-7.0.2"
+
+src_prepare() {
+	#Honour Gentoo LDFLAGS, bug #334003
+	sed -ie "s/\$(CXXFLAGS) -o/\$(CXXFLAGS) \$(LDFLAGS) -o/" src/Makefile
+	sed -ie "s/-shared -o/-shared \$(LDFLAGS) -o/" src-gk2/Makefile
+}
 
 src_compile() {
 	emake build || die
