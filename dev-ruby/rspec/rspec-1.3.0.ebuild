@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.11 2010/08/23 13:54:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.12 2010/09/07 13:25:44 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -35,11 +35,11 @@ RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 # We should add nokogiri here to make sure that we test as much as
 # possible, but since it's yet unported to 1.9 and the nokogiri-due
 # tests fail for sure, we'll be waiting on it.
-USE_RUBY="ruby18 ree18 ruby19" \
+USE_RUBY="ruby18 ruby19" \
 	ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/zentest dev-ruby/fakefs )"
 
 # the testsuite skips over heckle for Ruby 1.9 so we only request it for 1.8
-USE_RUBY="ruby18 ree18" \
+USE_RUBY="ruby18" \
 	ruby_add_bdepend "test? ( dev-ruby/heckle )"
 
 all_ruby_prepare() {
