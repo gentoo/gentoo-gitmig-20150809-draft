@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-prolinux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/ChangeLog,v 1.3 2009/10/20 13:03:11 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/ChangeLog,v 1.4 2010/09/07 15:16:42 nyhm Exp $
+
+  07 Sep 2010; Tristan Heaven <nyhm@gentoo.org>
+  fortune-mod-prolinux-0.25.ebuild:
+  Add ~amd64 keyword; dodoc; EAPI=2
 
   20 Oct 2009; Markus Meier <maekke@gentoo.org>
   fortune-mod-prolinux-0.25.ebuild:
