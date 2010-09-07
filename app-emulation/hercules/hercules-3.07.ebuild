@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.07.ebuild,v 1.1 2010/08/30 04:25:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.07.ebuild,v 1.2 2010/09/07 21:18:58 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,8 +19,6 @@ src_unpack() {
 	sed -i \
 		-e 's:@modexecdir@:$(libdir)/$(PACKAGE):' \
 		-e '/^AM_CPPFLAGS/s:=:= -DMODULESDIR=\\"$(modexecdir)\\" :' \
-		-e 's:ltdl.lo::' \
-		-e '/^libherc_la_LIBADD/s:=:= -lltdl :' \
 		$(find -name Makefile.in)
 	sed -i '/MODULESDIR/d' config.h.in
 }
