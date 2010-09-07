@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.48 2010/09/06 14:04:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.49 2010/09/07 11:00:27 pacho Exp $
+
+*bluez-4.70 (07 Sep 2010)
+
+  07 Sep 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.63.ebuild,
+  -bluez-4.64.ebuild, -bluez-4.67.ebuild, +bluez-4.70.ebuild,
+  +files/bluetooth-init.d, +files/init.d-hidd, metadata.xml:
+  Version bump with updated init.d scripts to make them POSIX compliant
+  (following Michał Górny suggestions in bug #283057), two new USE flags
+  for compiling plugins and some upstream bugfixes that allow us to drop old
+  alsa location patch. Remove old.
 
   06 Sep 2010; Christian Faulhammer <fauli@gentoo.org> bluez-4.69.ebuild:
   stable x86, bug 335317

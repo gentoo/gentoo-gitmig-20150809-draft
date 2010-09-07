@@ -14,12 +14,14 @@
 		</description>
 	</maintainer>
 	<use>
+		<flag name='attrib'>Enable attrib plugin</flag>
 		<flag name='consolekit'>Use <pkg>sys-auth/pambase[consolekit]</pkg> to
 			determine access to bluetooth devices based on whether a user is
 			logged in locally or remotely</flag>
 		<flag name='maemo6'>Compile with maemo6 plugin</flag>
 		<flag name='old-daemons'>Install old daemons like hidd and sdpd that are
 			deprecated by the new Service framework</flag>
+		<flag name='pnat'>Enable pnat plugin</flag>
 		<flag name='test-programs'>Install tools for testing of
 			various Bluetooth functions</flag>
 	</use>
