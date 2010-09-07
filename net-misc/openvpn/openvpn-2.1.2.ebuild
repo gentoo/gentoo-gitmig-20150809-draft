@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.2.ebuild,v 1.2 2010/08/23 15:02:10 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.2.ebuild,v 1.3 2010/09/07 02:17:15 josejx Exp $
 
 EAPI=2
 
@@ -50,7 +50,7 @@ src_configure() {
 	# and #297854.
 	# For now, filter out -maltivec on ppc and append -mno-altivec, as
 	# -maltivec is enabled implicitly by -mcpu and similar flags.
-	use ppc && filter-flags -maltivec && append-flags -mno-altivec
+	(use ppc || use ppc64) && filter-flags -maltivec && append-flags -mno-altivec
 
 	local myconf=""
 
