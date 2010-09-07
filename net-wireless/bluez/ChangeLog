@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.49 2010/09/07 11:00:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.50 2010/09/07 15:06:33 jer Exp $
+
+  07 Sep 2010; Jeroen Roovers <jer@gentoo.org> bluez-4.66-r1.ebuild,
+  bluez-4.69.ebuild, bluez-4.70.ebuild:
+  Marked ~hppa (bug #303527).
 
 *bluez-4.70 (07 Sep 2010)
 
