@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.94.ebuild,v 1.1 2010/09/05 12:06:06 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.94.ebuild,v 1.2 2010/09/07 06:42:48 ford_prefect Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils mono
 
 DESCRIPTION="Shared library to access the contents of an iPod"
 HOMEPAGE="http://www.gtkpod.org/libgpod/"
