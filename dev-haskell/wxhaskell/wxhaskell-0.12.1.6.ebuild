@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.12.1.6.ebuild,v 1.1 2010/09/04 14:47:11 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.12.1.6.ebuild,v 1.2 2010/09/07 17:35:04 kolmodin Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -8,7 +8,7 @@ inherit haskell-cabal
 MY_PN=wx
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="wxHaskell"
+DESCRIPTION="wxHaskell is a portable and native GUI library for Haskell"
 HOMEPAGE="http://haskell.org/haskellwiki/WxHaskell"
 SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
