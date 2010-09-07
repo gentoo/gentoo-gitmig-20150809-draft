@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.87 2010/08/14 18:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.88 2010/09/07 22:03:33 pacho Exp $
+
+  07 Sep 2010; Pacho Ramos <pacho@gentoo.org> orca-2.30.2.ebuild:
+  Add needed addpredicts to prevent sandbox violations reported in bug
+  #325611 until root cause is found.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> orca-2.28.3.ebuild:
   alpha/ia64/sparc stable wrt #314899

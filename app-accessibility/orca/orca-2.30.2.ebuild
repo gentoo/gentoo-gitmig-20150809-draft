@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.30.2.ebuild,v 1.4 2010/08/01 11:26:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.30.2.ebuild,v 1.5 2010/09/07 22:03:33 pacho Exp $
 
 PYTHON_DEPEND="2" # Support for Python 3 not verified
 GCONF_DEBUG="no"
@@ -52,6 +52,13 @@ src_unpack() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed 2 failed"
+}
+
+src_compile() {
+	# FIXME: Workaround for bug #325611 until root cause is found
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	gnome2_src_compile
 }
 
 pkg_postinst() {
