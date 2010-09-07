@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.442 2010/09/05 04:49:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.443 2010/09/07 21:43:47 mabi Exp $
 
 # Keep them sorted
 
@@ -327,7 +327,6 @@ source - Zip the sources and install them
 sox - Adds support for Sound eXchange (SoX)
 speex - Adds support for the speex audio codec (used for speech)
 spell - Adds dictionary support
-spl - Adds support for the Standard PHP Library
 sqlite - Adds support for sqlite - embedded sql database
 sqlite3 - Adds support for sqlite3 - embedded sql database
 sse - fast floating point optimization for PentiumIII+ class chips
