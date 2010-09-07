@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.20 2010/07/27 22:59:38 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.21 2010/09/07 17:04:24 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -125,3 +125,6 @@ video_cards_newport
 
 # RealMagic Hollywood+/Creative DXR3 support
 -dxr3
+
+# 64bit Windows doesn't work on 32bit systems
+win64

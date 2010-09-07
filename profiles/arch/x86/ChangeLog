@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.48 2010/08/23 21:16:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.49 2010/09/07 17:04:24 vapier Exp $
+
+  07 Sep 2010; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Mask USE=win64 on 32bit profiles.
 
   23 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   make.defaults:
