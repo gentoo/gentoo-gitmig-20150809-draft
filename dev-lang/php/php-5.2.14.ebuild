@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.10 2010/08/16 22:25:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.11 2010/09/07 21:22:40 mabi Exp $
 
 EAPI=2
 
@@ -89,8 +89,8 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	interbase iodbc ipv6 +json kerberos ldap ldap-sasl libedit
 	mcve mhash msql mssql mysql mysqli ncurses nls oci8
 	oci8-instant-client odbc pcntl +pcre pdo pic +posix postgres qdbm
-	readline recode reflection sapdb +session sharedext sharedmem
-	+simplexml snmp soap sockets solid spell spl sqlite ssl suhosin
+	readline recode +reflection sapdb +session sharedext sharedmem
+	+simplexml snmp soap sockets solid spell +spl sqlite ssl suhosin
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	+xml +xmlreader +xmlwriter xmlrpc xpm xsl yaz zip zlib"
 

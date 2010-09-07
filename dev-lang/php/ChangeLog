@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.416 2010/08/22 17:55:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.417 2010/09/07 21:22:40 mabi Exp $
+
+  07 Sep 2010; Matti Bickel <mabi@gentoo.org> php-5.2.14.ebuild:
+  enable spl and reflection by default, following upstream (bug #310383)
 
   22 Aug 2010; Mark Loeser <halcy0n@gentoo.org> php-5.3.3-r1.ebuild:
   Add back ~arm. It was dropped during the bump
