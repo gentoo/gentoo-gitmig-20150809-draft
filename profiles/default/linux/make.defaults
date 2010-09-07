@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.7 2010/07/26 19:15:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.8 2010/09/07 22:04:18 mabi Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -26,7 +26,7 @@ USE="${USE} pppd"
 
 # 2006/04/19 - Chris Gianelloni <wolf31o2@gentoo.org>
 # Make sure dev-lang/php works right.  See bug #120088 for more info.
-USE="${USE} cli pcre reflection session spl"
+USE="${USE} cli pcre reflection session"
 
 # 2006/04/21 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Build the Xorg X server by default
