@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.40 2010/06/24 05:53:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.41 2010/09/07 21:01:59 mr_bones_ Exp $
+
+  07 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  chromium-0.9.14.1.ebuild:
+  remove unneeded --with-font-path (bug #327259); prefer openal to sdl-mixer
 
 *chromium-0.9.14.1 (24 Jun 2010)
 
