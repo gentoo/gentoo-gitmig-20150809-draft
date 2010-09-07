@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5933 2010/09/07 18:54:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5934 2010/09/07 21:14:29 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -815,6 +815,7 @@ dev-lang/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages ins
 dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
 dev-lang/mono:moonlight - Generate Moonlight 2.1 assemblies
+dev-lang/mono:profile4 - Include partial support for C# 4.0 and some of the upcoming .NET 4.0 APIs.
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
