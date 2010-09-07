@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2.ebuild,v 1.1 2010/09/07 14:22:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2.ebuild,v 1.2 2010/09/07 14:37:30 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils multilib pam
@@ -54,7 +54,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake \
+		DESTDIR="${D}" \
+		htmldocdir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		install || die
+
 	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
 
 	newinitd "${FILESDIR}"/${PN}-0.1.rc consolekit
