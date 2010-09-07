@@ -1,6 +1,12 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.99 2010/08/30 01:37:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.100 2010/09/07 01:26:54 zmedico Exp $
+
+*calibre-0.7.17 (07 Sep 2010)
+
+  07 Sep 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.7.17.ebuild:
+  0.7.17 version bump. This should also fix bug #336287 (sandbox violation
+  from xdg-icon-resource in XDG_DATA_HOME).
 
   30 Aug 2010; Zac Medico <zmedico@gentoo.org> -calibre-0.7.2.ebuild,
   -calibre-0.7.3.ebuild, -calibre-0.7.4.ebuild, -calibre-0.7.5.ebuild,
