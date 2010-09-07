@@ -1,0 +1,68 @@
+diff -Naur original/help/fr/fr.po fixed/help/fr/fr.po
+--- original/help/fr/fr.po	2010-08-13 14:39:44.000000000 -0400
++++ fixed/help/fr/fr.po	2010-08-13 14:42:18.000000000 -0400
+@@ -1451,7 +1451,7 @@
+ "associées à aucun bloc-notes et pourront être visualisées en choisissant "
+ "<menuchoice><guimenuitem>Notes non classées</guimenuitem></menuchoice> dans "
+ "la fenêtre <menuchoice><guimenuitem>Rechercher dans toutes les notes</"
+-"guimenuitem></menuchoice."
++"guimenuitem></menuchoice>."
+ 
+ #: C/tomboy.xml:1072(para)
+ msgid "You can delete a notebook you have created by one of two methods:"
+@@ -1774,7 +1774,7 @@
+ "keycap></keycombo>."
+ msgstr ""
+ "Cochez cette case pour créer des liens pour les expressions "
+-"<b>CommeCellesCi</b>. Un clic sur ce lien crée une nouvelle note dont le "
++"<literal>CommeCellesCi</literal>. Un clic sur ce lien crée une nouvelle note dont le "
+ "titre correspond au texte du lien. Cochez ou décochez la case à l'aide de la "
+ "souris ou au moyen du raccourci clavier <keycombo><keycap>Alt</"
+ "keycap><keycap>W</keycap></keycombo>."
+diff -Naur original/help/lt/lt.po fixed/help/lt/lt.po
+--- original/help/lt/lt.po	2010-08-13 14:43:51.000000000 -0400
++++ fixed/help/lt/lt.po	2010-08-13 14:45:22.000000000 -0400
+@@ -690,11 +690,11 @@
+ msgstr ""
+ "Mygtukas <guibutton>Susieti</guibutton> leidžia esamame raštelyje sukurti "
+ "saitą į naują raštelį. Pavyzdžiui, jei jūsų raštelyje yra frazė "
+-"<qoute>Egzaminas</qoute>, galite pažymėti šį tekstą pele ir spustelėti "
++"<quote>Egzaminas</quote>, galite pažymėti šį tekstą pele ir spustelėti "
+ "mygtuką <guibutton>Susieti</guibutton>, taip sukurdami naują raštelį "
+-"pavadinimu <qoute>Egzaminas</qoute>. Esamame raštelyje taip pat bus sukurtas "
++"pavadinimu <quote>Egzaminas</quote>. Esamame raštelyje taip pat bus sukurtas "
+ "saitas, kurį spustelėjus bus atverstas naujasis raštelis "
+-"<qoute>Egzaminas</qoute>."
++"<quote>Egzaminas</quote>."
+ 
+ #: C/tomboy.xml:472(para)
+ msgid ""
+@@ -733,7 +733,7 @@
+ "keyboard, use the standard keybinding, "
+ "<keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>."
+ msgstr ""
+-"Veiksmas <qoute>Atšaukti</qoute> Tomboy programoje galimas dėl šio meniu "
++"Veiksmas <quote>Atšaukti</quote> Tomboy programoje galimas dėl šio meniu "
+ "punkto. Atšaukimo funkcija leidžia panaikinti dabartinio seanso metu "
+ "atliktus raštelio pakeitimus. Norėdami atšaukti paskutinį pakeitimą "
+ "klaviatūra, naudokite standartinę klavišų kombinaciją "
+@@ -750,8 +750,8 @@
+ "using the keyboard, use the standard keybinding, <keycombo><keycap>Shift</ke"
+ "ycap><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>."
+ msgstr ""
+-"Funkcija <qoute>Pakartoti</qoute> yra naudojama norint grąžinti pakeitimus, "
+-"atšauktus naudojant funkciją <qoute>Atšaukti</qoute>. Norėdami pakartoti "
++"Funkcija <quote>Pakartoti</quote> yra naudojama norint grąžinti pakeitimus, "
++"atšauktus naudojant funkciją <quote>Atšaukti</quote>. Norėdami pakartoti "
+ "paskutinį pakeitimą klaviatūra, naudokite standartinę klavišų kombinaciją <k"
+ "eycombo><keycap>Lyg2</keycap><keycap>Vald</keycap><keycap>Z</keycap></keycom"
+ "bo>."
+@@ -1800,7 +1800,7 @@
+ "is preinstalled with Tomboy."
+ msgstr ""
+ "Įveskite klavišų kombinaciją, atveriančią raštelį <quote>Pradėti "
+-"čia</qoute>, kuris yra iš anksto įdiegtas Tomboy programoje."
++"čia</quote>, kuris yra iš anksto įdiegtas Tomboy programoje."
+ 
+ #: C/tomboy.xml:1339(term)
+ msgid "Create new note"

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.102 2010/08/01 12:00:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.103 2010/09/07 21:17:59 pacho Exp $
+
+  07 Sep 2010; Pacho Ramos <pacho@gentoo.org> tomboy-1.2.1.ebuild,
+  +files/tomboy-1.2.1-xmllint-validation.patch:
+  Fix xmllint validation (bug #330693 by Neil Leathers) and add missing
+  gnome2_src_prepare.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> tomboy-1.2.1.ebuild:
   x86 stable, bug 324077

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.2.1.ebuild,v 1.4 2010/08/01 12:00:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.2.1.ebuild,v 1.5 2010/09/07 21:17:59 pacho Exp $
 
 EAPI=2
 
@@ -46,11 +46,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	sed -i -e '/DISABLE_DEPRECATED/d' $(find . -name 'Makefile.in') || die
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
+
+	# Fix xmllint validation, bug #330693
+	epatch "${FILESDIR}/${P}-xmllint-validation.patch"
 }
 
 src_configure() {
