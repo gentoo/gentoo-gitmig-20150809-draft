@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201008112235.ebuild,v 1.1 2010/08/14 18:41:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201009022049.ebuild,v 1.1 2010/09/07 10:03:27 blueness Exp $
 
 EAPI=2
 
@@ -27,8 +27,6 @@ S="${WORKDIR}/${PN}2"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}.patch"
-
-	append-ldflags -Wl,-z,now
 }
 
 src_compile() {
