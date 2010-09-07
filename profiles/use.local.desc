@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5931 2010/09/07 11:14:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5932 2010/09/07 15:53:14 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3090,6 +3090,7 @@ net-voip/ekiga:shm - Enable the Shared Memory Extension from libXext
 net-voip/ekiga:static - Statically link to opal and ptlib
 net-voip/ekiga:xcap - Enable XML Configuration Access Protocal
 net-voip/linphone:video - Enable video support (display/capture)
+net-voip/sflphone:iax - Support for IAX (Inter Asterisk eXchange)
 net-voip/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
 net-voip/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
 net-voip/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
