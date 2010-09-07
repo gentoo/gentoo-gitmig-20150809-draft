@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.6.7.ebuild,v 1.1 2010/07/21 17:13:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.6.7.ebuild,v 1.2 2010/09/07 21:07:34 pacho Exp $
 
 EAPI=2
 
-inherit linux-info mono eutils flag-o-matic multilib go-mono
+inherit linux-info mono eutils flag-o-matic multilib go-mono pax-utils
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com"
@@ -12,23 +12,22 @@ HOMEPAGE="http://www.go-mono.com"
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="xen moonlight minimal"
+
+IUSE="hardened minimal moonlight profile4 xen"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
-	dev-libs/glib:2
+	>=dev-libs/glib-2.4:2
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
-	ia64? (
-		sys-libs/libunwind
-	)"
+	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
 	|| ( www-client/links www-client/lynx )"
 
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
-	>=app-shells/bash-3.2"
-PDEPEND="dev-dotnet/pe-format"
+	>=app-shells/bash-3.2
+	hardened? ( sys-apps/paxctl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -69,6 +68,13 @@ src_prepare() {
 		> "${WORKDIR}"/mono-2.2-libdir126.patch ||
 		die "Sedding patch file failed"
 	go-mono_src_prepare
+
+	# we need to sed in the paxctl -m in the runtime/mono-wrapper.in so it don't
+	# get killed in the build proces when MPROTEC is enable. #286280
+	if use hardened ; then
+		ewarn "We are disabling MPROTECT on the mono binary."
+		sed '/exec/ i\paxctl -m "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
+	fi
 }
 
 src_configure() {
@@ -90,8 +96,8 @@ src_configure() {
 		$(use_with xen xen_opt) \
 		--without-ikvm-native \
 		--with-jit \
-		--disable-dtrace
-
+		--disable-dtrace \
+		$(use_with profile4)
 }
 
 src_test() {

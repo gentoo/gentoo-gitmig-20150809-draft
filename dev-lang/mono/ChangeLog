@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.194 2010/07/21 17:13:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.195 2010/09/07 21:07:33 pacho Exp $
+
+  07 Sep 2010; Pacho Ramos <pacho@gentoo.org> mono-2.6.7.ebuild,
+  metadata.xml:
+  Drop PDEPEND on pe-format (bug #333907 by Michał Górny), fix build on
+  hardened (bug #286280 by Jason Mattax and fix by Magnus Granberg) and
+  allow people to enable .NET 4.0 profile if they want (bug #326497 by Ron
+  MacNeil).
 
 *mono-2.6.7 (21 Jul 2010)
 
