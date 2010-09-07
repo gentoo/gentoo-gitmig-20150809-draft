@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.3 2010/09/06 23:54:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.4 2010/09/07 02:18:58 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -44,6 +44,9 @@ pkg_setup() {
 
 src_install() {
 	xfconf_src_install
+
+	# Help is outdated and we install HTML files to $PF
+	rm -f "${ED}"/usr/share/applications/xfhelp4.desktop
 
 	insinto /usr/share/xfce4
 	doins "${FILESDIR}"/Gentoo || die
