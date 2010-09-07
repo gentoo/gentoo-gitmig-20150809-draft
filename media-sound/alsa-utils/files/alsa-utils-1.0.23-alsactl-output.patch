@@ -1,0 +1,15 @@
+X-Git-Url: http://git.alsa-project.org/?p=alsa-utils.git;a=blobdiff_plain;f=alsactl%2Finit%2F00main;fp=alsactl%2Finit%2F00main;h=fb7f02cecabdc363bfb47ccdd6141415aa904f65;hp=2d26bbf1b8ff8f29a311e2fc4df25592e48fd3a0;hb=dcb90a779e74315596a4cdb4741983b21cba69c9;hpb=bb865dc10b6dcee9d428d3c5a17ee312e0aaf7e0
+
+diff --git a/alsactl/init/00main b/alsactl/init/00main
+index 2d26bbf..fb7f02c 100644
+--- a/alsactl/init/00main
++++ b/alsactl/init/00main
+@@ -37,7 +37,7 @@ CARDINFO{driver}=="Test", INCLUDE="test", GOTO="init_end"
+ LABEL="init_end"
+ ACCESS=="postinit", INCLUDE="postinit"
+ RESULT=="true", GOTO="00_mainend"
+-ERROR="Unknown hardware: \"$cardinfo{driver}\" \"$cardinfo{mixername}\" \"$cardinfo{components}\" \"$attr{subsystem_vendor}\" \"$attr{subsystem_device}\"\n"
++ERROR="Found hardware: \"$cardinfo{driver}\" \"$cardinfo{mixername}\" \"$cardinfo{components}\" \"$attr{subsystem_vendor}\" \"$attr{subsystem_device}\"\n"
+ ERROR="Hardware is initialized using a guess method\n"
+ INCLUDE="default"
+ EXIT="99"

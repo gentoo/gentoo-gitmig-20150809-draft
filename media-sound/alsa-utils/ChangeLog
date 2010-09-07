@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.295 2010/04/16 22:21:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.296 2010/09/07 11:57:12 pacho Exp $
+
+*alsa-utils-1.0.23-r1 (07 Sep 2010)
+
+  07 Sep 2010; Pacho Ramos <pacho@gentoo.org> +alsa-utils-1.0.23-r1.ebuild,
+  +files/alsa-utils-1.0.23-alsactl-output.patch,
+  +files/alsa-utils-1.0.23-alsactl-output2.patch:
+  Revision bump to fix bug #299362 following upstream indications and
+  applying upstream patches that will be included in 1.0.24.
 
 *alsa-utils-1.0.23 (16 Apr 2010)
 
