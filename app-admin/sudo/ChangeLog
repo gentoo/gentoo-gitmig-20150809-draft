@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.242 2010/09/06 20:46:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.243 2010/09/07 12:00:58 a3li Exp $
+
+*sudo-1.7.4_p3-r1 (07 Sep 2010)
+
+  07 Sep 2010; Alex Legler <a3li@gentoo.org> -sudo-1.7.2_p7.ebuild,
+  -sudo-1.7.3.ebuild, -sudo-1.7.4_p3.ebuild, +sudo-1.7.4_p3-r1.ebuild,
+  +files/sudo-CVE-2010-2956.patch:
+  Non-maintainer commit: Revision bump to fix CVE-2010-2956 (bug 335381).
+  Removing vulnerable versions.
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> sudo-1.7.3.ebuild:
   Marking sudo-1.7.3 ppc64 for bug 330827

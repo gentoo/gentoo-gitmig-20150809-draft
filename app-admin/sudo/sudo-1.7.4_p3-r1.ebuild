@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.3.ebuild,v 1.8 2010/09/06 20:46:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.4_p3-r1.ebuild,v 1.1 2010/09/07 12:00:58 a3li Exp $
 
-inherit eutils pam confutils
+inherit eutils pam
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -18,12 +18,15 @@ esac
 
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
-SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
+SRC_URI="http://www.sudo.ws/sudo/dist/${uri_prefix}${MY_P}.tar.gz
+	ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
+
 # Basic license is ISC-style as-is, some files are released under
 # 3-clause BSD license
 LICENSE="as-is BSD"
+
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
@@ -31,7 +34,7 @@ DEPEND="pam? ( virtual/pam )
 		>=net-nds/openldap-2.1.30-r1
 		dev-libs/cyrus-sasl
 	)
-	skey? ( >=sys-auth/skey-1.1.5-r1 )
+	!pam? ( skey? ( >=sys-auth/skey-1.1.5-r1 ) )
 	app-editors/gentoo-editor
 	virtual/editor
 	virtual/mta"
@@ -39,12 +42,16 @@ RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
 	pam? ( sys-auth/pambase )
 	${DEPEND}"
-DEPEND="${DEPEND} sys-devel/bison"
+DEPEND="${DEPEND}
+	sys-devel/bison"
 
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	confutils_use_conflict skey pam
+	if use pam && use skey; then
+		ewarn "You cannot enable both S/KEY and PAM at the same time, PAM will"
+		ewarn "be used then."
+	fi
 }
 
 src_unpack() {
@@ -52,6 +59,8 @@ src_unpack() {
 
 	# compatability fix.
 	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
+
+	epatch "${FILESDIR}"/${PN}-CVE-2010-2956.patch
 
 	# additional variables to disallow, should user disable env_reset.
 
@@ -150,7 +159,14 @@ src_compile() {
 
 	einfo "...done."
 
-	# XXX: --disable-path-info closes an info leak, but may be confusing.
+	if use pam; then
+		myconf="--with-pam --without-skey"
+	elif use skey; then
+		myconf="--without-pam --with-skey"
+	else
+		myconf="--without-pam --without-skey"
+	fi
+
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. — Diego
 	econf --with-secure-path="${ROOTPATH}" \
@@ -158,19 +174,18 @@ src_compile() {
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
-		$(use_with pam) \
-		$(use_with skey) \
 		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
 		$(use_with ldap) \
-		--without-linux-audit
+		--without-linux-audit \
+		--with-timedir=/var/db/sudo \
+		--docdir=/usr/share/doc/${PF} \
+		${myconf}
 
 	emake || die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog HISTORY PORTING README TROUBLESHOOTING \
-		UPGRADE WHATSNEW sample.sudoers sample.syslog.conf
 
 	if use ldap; then
 		dodoc README.LDAP schema.OpenLDAP
@@ -189,11 +204,14 @@ EOF
 		fperms 0440 /etc/ldap.conf.sudo
 	fi
 
-	pamd_mimic system-auth sudo auth account password session
+	pamd_mimic system-auth sudo auth account session
 
 	insinto /etc
 	doins "${S}"/sudoers
 	fperms 0440 /etc/sudoers
+
+	keepdir /var/db/sudo
+	fperms 0700 /var/db/sudo
 }
 
 pkg_postinst() {
