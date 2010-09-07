@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.105 2010/08/22 20:20:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.106 2010/09/07 10:48:04 ssuominen Exp $
+
+*psmisc-22.13 (07 Sep 2010)
+
+  07 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +psmisc-22.13.ebuild,
+  +files/psmisc-22.13-no-nls.patch:
+  Version bump.
 
   22 Aug 2010; Mike Frysinger <vapier@gentoo.org> psmisc-22.12.ebuild:
   Ignore all peekfd build failures #330631 by Raúl Porcel.
