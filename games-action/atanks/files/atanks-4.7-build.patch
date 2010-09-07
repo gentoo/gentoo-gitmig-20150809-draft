@@ -19,7 +19,7 @@ diff -ru atanks-4.6.orig/src/Makefile atanks-4.6/src/Makefile
 +LDFLAGS +=  `allegro-config --libs`
  
 -CFLAGS += -g -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
-+CXXFLAGS += -g -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
++CXXFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
  
  SRCS  = $(MODULES:.o=.cpp)
  GLOBALS	= main.h imagedefs.h externs.h
