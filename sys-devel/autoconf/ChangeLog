@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.147 2010/08/06 23:07:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.148 2010/09/07 19:30:31 vapier Exp $
+
+  07 Sep 2010; Mike Frysinger <vapier@gentoo.org> autoconf-2.67.ebuild:
+  Move into unstable.
 
   06 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   autoconf-2.67.ebuild:
