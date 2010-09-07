@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.5.ebuild,v 1.7 2010/08/29 14:37:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.5.ebuild,v 1.8 2010/09/07 11:50:00 ssuominen Exp $
 
 EAPI=2
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE="doc examples ssl test"
 
-DEPEND="ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	>=dev-libs/boost-1.35.0"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	if ! use test; then
