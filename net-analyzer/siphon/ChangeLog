@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.14 2009/09/23 18:24:00 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.15 2010/09/07 16:33:59 jer Exp $
+
+*siphon-666-r1 (07 Sep 2010)
+
+  07 Sep 2010; Jeroen Roovers <jer@gentoo.org> +siphon-666-r1.ebuild:
+  Respect LDFLAGS (bug #336231). Do not hardwire CFLAGS. Do not install
+  LICENSE. Remove unneeded cd. Respect CC. 
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> siphon-666.ebuild:
   Remove virtual/libc
