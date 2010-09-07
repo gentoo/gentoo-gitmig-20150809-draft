@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.65 2010/09/03 19:29:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.66 2010/09/07 18:05:26 reavertm Exp $
+
+  07 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> -strigi-0.7.0.ebuild:
+  Remove old, hppa looses stable keywords (but no stable hppa reverse
+  rdeps and no such are planned)
 
   03 Sep 2010; Joseph Jezak <josejx@gentoo.org> strigi-0.7.1.ebuild:
   Marked ppc64 stable for bug #322791.
