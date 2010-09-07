@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/bwa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.7 2010/05/23 21:15:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.8 2010/09/07 11:51:10 xarthisius Exp $
+
+*bwa-0.5.0-r1 (07 Sep 2010)
+
+  07 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -bwa-0.4.6.ebuild,
+  +bwa-0.5.0-r1.ebuild:
+  Respect LDFLAGS wrt bug 336348. Thanks to Diego for the report. Add proper
+  pthread support, drop empty DEPENDs. Drop old.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> bwa-0.5.0.ebuild:
   stable amd64, bug 314907
