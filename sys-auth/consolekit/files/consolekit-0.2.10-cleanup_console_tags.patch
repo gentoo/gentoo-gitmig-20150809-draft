@@ -1,3 +1,4 @@
+# Clean up at_console compat files, bug #257761
 # http://patches.ubuntu.com/by-release/extracted/ubuntu/c/consolekit/0.2.10-1ubuntu9/
 --- a/src/main.c	2008-07-25 03:19:34.000000000 +0200
 +++ b/src/main.c	2008-07-26 00:25:13.000000000 +0200
