@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.74 2010/08/21 09:35:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.75 2010/09/07 14:22:36 ssuominen Exp $
+
+*consolekit-0.4.2 (07 Sep 2010)
+
+  07 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +consolekit-0.4.2.ebuild:
+  Version bump.
 
 *consolekit-0.4.1-r1 (21 Aug 2010)
 
