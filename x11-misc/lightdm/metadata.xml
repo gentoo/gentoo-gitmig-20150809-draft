@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>desktop-misc</herd>
+	<longdescription>An X display manager that:
+	 * Has a lightweight codebase
+	 * Is standards compliant (PAM, ConsoleKit, etc)
+	 * Has a well defined interface between the server and user interface
+	 * Fully themeable (easiest with the webkit interface)
+	 * Cross-desktop (greeters can be written in any toolkit)
+	</longdescription>
+	<use>
+	  <flag name="consolekit">Enables support for authorization using consolekit</flag>
+    </use>
+</pkgmetadata>
