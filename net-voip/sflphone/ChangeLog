@@ -1,0 +1,9 @@
+# ChangeLog for net-voip/sflphone
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.1 2010/09/07 15:45:38 elvanor Exp $
+
+*sflphone-0.9.8.4 (06 Sep 2010)
+
+  06 Sep 2010; <elvanor@gentoo.org> +sflphone-0.9.8.4.ebuild, +metadata.xml:
+  Initial import from bug #293399. Credits goes to Atman Sense.
+
