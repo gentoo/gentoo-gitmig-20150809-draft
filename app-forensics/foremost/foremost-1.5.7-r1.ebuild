@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.1 2010/04/12 20:20:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.2 2010/09/07 12:59:01 ikelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake RAW_FLAGS="${CFLAGS} -Wall" RAW_CC="$(tc-getCC) -DVERSION=\\\"${PV}\\\"" \
+	emake RAW_FLAGS="${CFLAGS} -Wall ${LDFLAGS}" RAW_CC="$(tc-getCC) -DVERSION=\\\"${PV}\\\"" \
 		CONF=/etc || die "emake failed"
 }
 
