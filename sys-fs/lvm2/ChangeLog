@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.236 2010/09/06 20:41:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.237 2010/09/07 18:31:36 robbat2 Exp $
+
+  07 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.73-r1.ebuild:
+  Bug #336373: Require binutils 2.20.1 for no-export-dynamic.
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> lvm2-2.02.72.ebuild:
   Marking lvm2-2.02.72 ppc64 for bug 334087
