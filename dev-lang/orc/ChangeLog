@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.6 2010/08/21 14:47:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.7 2010/09/08 17:51:03 ford_prefect Exp $
+
+*orc-0.4.9 (08 Sep 2010)
+
+  08 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org> +orc-0.4.9.ebuild,
+  +files/orc-0.4.9-make-valgrind-optional.patch:
+  Bump to 0.4.9
 
 *orc-0.4.7 (21 Aug 2010)
 
