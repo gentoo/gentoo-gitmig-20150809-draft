@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5936 2010/09/08 07:14:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5937 2010/09/08 16:13:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3774,9 +3774,13 @@ x11-drivers/ati-drivers:qt4 -  Install qt4 dependent optional tools (e.g Catalys
 x11-drivers/linuxwacom:modules - Build kernel module
 x11-libs/agg:gpc - Enable gpc polygon clipper library
 x11-libs/cairo:cleartype - Add ClearType-style behavior for sub-pixel hinting. Patch taken from Arch Linux
+x11-libs/cairo:drm - Use Linux DRM for backend acceleration
+x11-libs/cairo:gallium - Use Mesa's Gallium backend for acceleration
 x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
 x11-libs/cairo:lcdfilter - Add FreeType LCD filtering, ClearType-style behavior for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from Ubuntu
 x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support
+x11-libs/cairo:openvg - Use OpenVG for backend acceleration
+x11-libs/cairo:qt - Use Qt for rendering
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/gtk+:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
