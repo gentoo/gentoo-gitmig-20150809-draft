@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/betna
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/ChangeLog,v 1.8 2007/04/09 21:48:40 welp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/ChangeLog,v 1.9 2010/09/08 15:38:25 mr_bones_ Exp $
+
+  08 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org> betna-0.9.7.ebuild:
+  honor LDFLAGS (bug #336452); honor CXX; EAPI=2; tidy
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> betna-0.9.7.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
