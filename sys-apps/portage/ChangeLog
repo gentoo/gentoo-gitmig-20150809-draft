@@ -1,6 +1,26 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.722 2010/09/07 02:12:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.723 2010/09/08 22:20:32 zmedico Exp $
+
+*portage-2.2_rc78 (08 Sep 2010)
+
+  08 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc78.ebuild:
+  2.2_rc78 version bump. This includes all of the fixes in portage-2.1.9.2.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.2 (08 Sep 2010)
+
+  08 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.2.ebuild:
+  2.1.9.2 version bump. This fixes bug #332719 (depclean removes newly
+  installed packages), bug #336338 (document FEATURES=candy), bug #336349
+  (warn about dos-style line endings in make.conf), bug #336350
+  (AttributeError for selinux), and bug #336356 (AttributeError when
+  running test phase with ebuild command). Bug #335925 tracks all bugs
+  fixed since 2.1.8.x.
+
+  08 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc74.ebuild,
+  -portage-2.2_rc75.ebuild:
+  Remove old versions.
 
 *portage-2.2_rc77 (07 Sep 2010)
 

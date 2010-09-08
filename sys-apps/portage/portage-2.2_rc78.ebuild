@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc74.ebuild,v 1.1 2010/09/03 00:03:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc78.ebuild,v 1.1 2010/09/08 22:20:32 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -113,6 +113,8 @@ src_prepare() {
 	einfo "Setting portage.VERSION to ${PVR} ..."
 	sed -e "s/^VERSION=.*/VERSION=\"${PVR}\"/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
+	sed -e "1s/VERSION/${PVR}/" -i doc/fragment/version || \
+		die "Failed to patch VERSION in doc/fragment/version"
 	sed -e "1s/VERSION/${PVR}/" -i man/* || \
 		die "Failed to patch VERSION in man page headers"
 
@@ -208,6 +210,9 @@ src_install() {
 			cp -P $symlinks "$D$portage_base/$x" || die "cp failed"
 		fi
 	done
+
+	# create this manually until it's in a release tarball
+	dosym ../../banned-helper $portage_base/bin/ebuild-helpers/4/prepalldocs
 
 	cd "$S" || die "cd failed"
 	for x in $(find pym/* -type d) ; do
