@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.25 2010/09/05 05:44:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.26 2010/09/08 14:13:57 pacho Exp $
+
+*obexd-0.32 (08 Sep 2010)
+
+  08 Sep 2010; Pacho Ramos <pacho@gentoo.org> +obexd-0.32.ebuild:
+  Version bump with multiple upstream bugfixes.
 
   05 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> obexd-0.29.ebuild:
   x86 stable wrt bug #335319
