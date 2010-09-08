@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnome-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/ChangeLog,v 1.29 2010/08/07 19:03:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnome-python/ChangeLog,v 1.30 2010/09/08 09:39:29 ranger Exp $
+
+  08 Sep 2010; Brent Baude <ranger@gentoo.org>
+  libgnome-python-2.28.0.ebuild:
+  Marking libgnome-python-2.28.0 ppc64 stable for bug 320247
 
   07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   libgnome-python-2.28.0.ebuild:
