@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.49 2010/09/06 19:38:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.50 2010/09/08 11:49:06 hwoarang Exp $
+
+  08 Sep 2010; Markos Chandras <hwoarang@gentoo.org> glabels-2.2.8.ebuild:
+  Stable on amd64 wrt bug #335817
 
   06 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> glabels-2.2.8.ebuild:
   x86 stable wrt bug #335817
