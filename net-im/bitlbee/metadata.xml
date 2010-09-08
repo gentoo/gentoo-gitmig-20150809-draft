@@ -5,6 +5,10 @@
 	<maintainer>
 		<email>cedk@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>wired@gentoo.org</email>
+		<name>Alex Alexander</name>
+	</maintainer>
 	<use>
 		<flag name='nss'>Use NSS for SSL support in MSN and Jabber</flag>
 		<flag name='twitter'>Enabel Twitter protocol support</flag>
