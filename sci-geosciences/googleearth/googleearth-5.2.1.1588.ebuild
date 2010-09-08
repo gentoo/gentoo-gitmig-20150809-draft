@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1329_beta.ebuild,v 1.2 2010/08/03 11:26:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1588.ebuild,v 1.1 2010/09/08 22:40:04 caster Exp $
 
 EAPI=2
 
