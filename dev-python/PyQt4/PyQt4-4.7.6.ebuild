@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.2.ebuild,v 1.2 2010/04/23 01:59:06 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.6.ebuild,v 1.1 2010/09/08 23:30:31 hwoarang Exp $
 
 EAPI="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
@@ -20,7 +20,7 @@ LICENSE="|| ( GPL-2 GPL-3 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="X assistant +dbus debug doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.10
+DEPEND=">=dev-python/sip-4.11
 	>=x11-libs/qt-core-${QTVER}:4
 	>=x11-libs/qt-script-${QTVER}:4
 	>=x11-libs/qt-test-${QTVER}:4
@@ -41,7 +41,6 @@ DEPEND=">=dev-python/sip-4.10
 	webkit? ( >=x11-libs/qt-webkit-${QTVER}:4 )
 	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QTVER}:4 )"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.2" # doesn't build with python:3.2 (yet), bug 292419
 
 S=${WORKDIR}/${MY_P}
 
@@ -57,6 +56,10 @@ src_prepare() {
 		sed -i -e 's,^\([[:blank:]]\+\)check_dbus(),\1pass,' \
 			"${S}"/configure.py || die
 	fi
+
+	# Patch to support qreal for arm architecture
+	# wrt bug #322349
+	use arm && epatch "${FILESDIR}/${PN}-4.7.3-qreal_float_support.patch"
 
 	qt4-r2_src_prepare
 
@@ -86,9 +89,9 @@ src_configure() {
 	configuration() {
 		local myconf="$(PYTHON) configure.py
 				--confirm-license
-				--bindir=${EPREFIX}/usr/bin
-				--destdir=${EPREFIX}$(python_get_sitedir)
-				--sipdir=${EPREFIX}/usr/share/sip
+				--bindir="${EPREFIX}"/usr/bin
+				--destdir="${EPREFIX}"$(python_get_sitedir)
+				--sipdir="${EPREFIX}"/usr/share/sip
 				--qsci-api
 				$(use debug && echo '--debug')
 				--enable=QtCore
