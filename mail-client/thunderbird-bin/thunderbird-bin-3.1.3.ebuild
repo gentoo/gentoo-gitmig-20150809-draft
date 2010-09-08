@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.ebuild,v 1.2 2010/07/09 20:07:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.3.ebuild,v 1.1 2010/09/08 00:14:31 anarchy Exp $
 
 EAPI="2"
 
