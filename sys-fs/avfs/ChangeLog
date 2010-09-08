@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.19 2010/05/22 11:35:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.20 2010/09/08 13:12:55 fauli Exp $
+
+  08 Sep 2010; Christian Faulhammer <fauli@gentoo.org> avfs-0.9.8-r1.ebuild:
+  stable x86, bug 294831
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)
