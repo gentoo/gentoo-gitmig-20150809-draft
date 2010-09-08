@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>x11</herd>
 <maintainer>
   <email>cardoe@gentoo.org</email>
   <name>Doug Goldstein</name>
@@ -18,8 +18,13 @@
 	<flag name='lcdfilter'>Add FreeType LCD filtering, ClearType-style behavior
 		for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from
 		Ubuntu</flag>
-	<flag name='opengl'>When used along with USE=glitz, enables glitz-glx usage.
-		Requires hardware OpenGL support</flag>
+	<flag name='opengl' restrict="&gt;=x11-libs/cairo-1.10.0">
+		Use Mesa backend for acceleration
+	</flag>
+	<flag name='opengl' restrict="&lt;=x11-libs/cairo-1.10.0">
+		When used along with USE=glitz, enables glitz-glx usage.
+		Requires hardware OpenGL support
+	</flag>
 	<flag name='drm'>Use Linux DRM for backend acceleration</flag>
 	<flag name='gallium'>Use Mesa's Gallium backend for acceleration</flag>
 	<flag name='openvg'>Use OpenVG for backend acceleration</flag>
