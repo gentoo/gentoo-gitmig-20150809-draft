@@ -1,7 +1,7 @@
 diff -urN awstats-6.3.orig/tools/awstats_configure.pl awstats-6.3/tools/awstats_configure.pl
 --- awstats-6.3.orig/tools/awstats_configure.pl	2005-01-24 09:28:43.980923725 -0500
 +++ awstats-6.3/tools/awstats_configure.pl	2005-01-24 09:28:52.034571769 -0500
-@@ -658,13 +658,27 @@
+@@ -658,6 +658,20 @@
      		print "\n-----> Restart Web server with '$command'\n";
  	 	    my $ret=`$command`;
  	 	    print "$ret";
@@ -22,11 +22,3 @@ diff -urN awstats-6.3.orig/tools/awstats_configure.pl awstats-6.3/tools/awstats_
          } elsif (-x "/sbin/service") {
              # We are not on debian
         	 	my $command="/sbin/service httpd restart";
-     		print "\n-----> Restart Web server with '$command'\n";
- 	 	    my $ret=`$command`;
- 	 	    print "$ret";
--   	 	} else {
-+		} else {
-        		print "\n-----> Don't forget to restart manually your web server\n";
-         }
- 	}

@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.8 2010/03/12 16:45:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.9 2010/09/08 11:55:18 flameeyes Exp $
+
+*awstats-7.0 (08 Sep 2010)
+
+  08 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/awstats-6.3-gentoo.diff, +awstats-7.0.ebuild, metadata.xml:
+  Version bump to latest beta that seem to fix some security concerns. Take
+  co-maintainership of package.
 
   12 Mar 2010; Jeroen Roovers <jer@gentoo.org> awstats-6.95.ebuild:
   Stable for HPPA (bug #293981).
