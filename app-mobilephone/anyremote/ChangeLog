@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/anyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.6 2010/07/14 03:18:32 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.7 2010/09/08 13:52:59 serkan Exp $
+
+*anyremote-5.2 (08 Sep 2010)
+
+  08 Sep 2010; Serkan Kaba <serkan@gentoo.org> +anyremote-5.2.ebuild:
+  Version bump. Fixes bug #336305.
 
 *anyremote-5.1.3 (14 Jul 2010)
 
