@@ -8,9 +8,10 @@
  	"LIBS = -lSDL_net"
  	+ $(MAKE) -j2 -C src plugins \
 -	"EXTRACFLAGS = -ansi -pedantic -fPIC -Werror" \
- 	"LDFLAGS = -shared"
+-	"LDFLAGS = -shared"
 -	+ $(MAKE) -j2 -C tools \
 -	"EXTRACFLAGS = -ansi -pedantic"
++	"LDFLAGS = ${LDFLAGS} -shared"
 +	+ $(MAKE) -j2 -C tools
  
  linux-nonet:

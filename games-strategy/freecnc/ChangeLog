@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freecnc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.14 2009/12/07 18:57:00 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.15 2010/09/08 12:20:36 tupone Exp $
+
+  08 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
+  files/0.2.1.31072003-makefile-cflags.patch,
+  files/freecnc-0.2.1.31072003-as-needed.patch:
+  Respect LDFLAGS. Bug #336299 by flameeyes@gentoo.org
 
   07 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   freecnc-0.2.1.31072003.ebuild,
