@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.1.1.ebuild,v 1.1 2010/09/07 18:35:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.1.1.ebuild,v 1.2 2010/09/08 07:09:21 xarthisius Exp $
 
 EAPI=2
 
-inherit eutils pam
+inherit autotools eutils pam
 
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://launchpad.net/lightdm"
@@ -13,19 +13,20 @@ SRC_URI="http://people.ubuntu.com/~robert-ancell/${PN}/releases/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="consolekit nls"
+IUSE="consolekit doc nls webkit"
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/dbus-glib
-	net-libs/webkit-gtk
+	webkit? ( net-libs/webkit-gtk )
+	consolekit? ( sys-auth/consolekit )
 	x11-libs/gtk+:2
 	x11-libs/libxcb
 	x11-libs/libXdmcp
 	x11-libs/libxklavier
-	consolekit? ( sys-auth/consolekit )
 	virtual/pam"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	doc? ( dev-util/gtk-doc )
 	nls? ( dev-util/intltool )"
 
 src_prepare() {
@@ -33,15 +34,19 @@ src_prepare() {
 	sed -e "s/check_pass/${PN}/" -i src/pam-session.c || die #report me upstream
 	# Fix ubuntu way of launching WM
 	sed -e "s:/etc/X11/Xsession::" -i src/display.c || die #report me upstream
+
+	epatch "${FILESDIR}"/${P}-webkit.patch
+	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--disable-static \
+		$(use_enable doc gtk-doc) \
+		$(use_enable webkit) \
 		--disable-dependency-tracking \
 		--disable-introspection \
 		$(use_enable consolekit console-kit) \
-		--disable-scrollkeeper \
 		$(use_enable nls) \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--localstatedir=/var  #overcoming econf default (fix me?)
