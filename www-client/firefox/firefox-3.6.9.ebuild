@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.9.ebuild,v 1.1 2010/09/08 01:12:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.9.ebuild,v 1.2 2010/09/08 04:26:57 anarchy Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -17,7 +17,7 @@ MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
 XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-PATCH="${PN}-3.6-patches-0.1"
+PATCH="${PN}-3.6-patches-0.2"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -124,7 +124,7 @@ src_unpack() {
 	linguas
 	for X in ${linguas}; do
 		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "mozilla-${P}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
 }
 
@@ -233,7 +233,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"mozilla-${P}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
 
 	# Install icon and .desktop for menu entry
