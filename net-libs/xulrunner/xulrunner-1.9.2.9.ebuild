@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.9.ebuild,v 1.2 2010/09/08 12:31:13 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.9.ebuild,v 1.3 2010/09/08 12:51:47 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -24,7 +24,7 @@ IUSE="+alsa +cups debug +ipc libnotify system-sqlite wifi"
 
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.6
+	>=dev-libs/nss-3.12.7
 	>=dev-libs/nspr-4.8.6
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
