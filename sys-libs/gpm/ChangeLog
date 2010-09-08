@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.80 2010/09/06 20:47:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.81 2010/09/08 11:15:47 hwoarang Exp $
+
+  08 Sep 2010; Markos Chandras <hwoarang@gentoo.org> gpm-1.20.6.ebuild:
+  Stable on amd64 wrt bug #334967
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> gpm-1.20.6.ebuild:
   Marking gpm-1.20.6 ppc64 for bug 334967
