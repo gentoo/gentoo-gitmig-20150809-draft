@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.252 2010/08/29 18:23:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.253 2010/09/08 16:03:11 cardoe Exp $
+
+*cairo-1.10.0 (08 Sep 2010)
+
+  08 Sep 2010; Doug Goldstein <cardoe@gentoo.org> +cairo-1.10.0.ebuild:
+  Version bump. Currently masked why we develop all the necessary build
+  requirements and steps for all the various backends.
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> cairo-1.8.10.ebuild:
   ia64/s390/sh/sparc stable wrt #329175

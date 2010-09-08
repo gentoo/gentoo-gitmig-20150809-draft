@@ -20,5 +20,9 @@
 		Ubuntu</flag>
 	<flag name='opengl'>When used along with USE=glitz, enables glitz-glx usage.
 		Requires hardware OpenGL support</flag>
+	<flag name='drm'>Use Linux DRM for backend acceleration</flag>
+	<flag name='gallium'>Use Mesa's Gallium backend for acceleration</flag>
+	<flag name='openvg'>Use OpenVG for backend acceleration</flag>
+	<flag name='qt'>Use Qt for rendering</flag>
 </use>
 </pkgmetadata>
