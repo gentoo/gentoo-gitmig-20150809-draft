@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.254 2010/09/08 19:58:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.255 2010/09/08 20:01:52 scarabeus Exp $
+
+  08 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cairo-1.10.0.ebuild,
+  cairo-9999.ebuild:
+  Fix useflag copy-pasto i missed.
 
 *cairo-9999 (08 Sep 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.0.ebuild,v 1.2 2010/09/08 19:58:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.0.ebuild,v 1.3 2010/09/08 20:01:52 scarabeus Exp $
 
 EAPI=3
 
@@ -93,7 +93,7 @@ src_configure() {
 	if use X; then
 		myopts+="
 			$(use_enable drm)
-			$(use_enable xcb xcb-shm)
+			$(use_enable xcb xlib-xcb)
 		"
 
 		if use drm; then
