@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.11.ebuild,v 1.1 2010/08/21 13:21:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.12.ebuild,v 1.1 2010/09/08 23:03:43 hwoarang Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic versionator
