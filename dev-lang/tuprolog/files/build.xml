@@ -21,7 +21,13 @@
 
 	<!-- compile everything -->
 	<target depends="init" name="compile">
-		<javac classpath="${classpath}" deprecation="on" destdir="${build.dir}" encoding="ISO-8859-1" source="1.4" srcdir="${src.dir}" target="1.4"/>
+		<javac classpath="${gentoo.classpath}"
+			deprecation="off"
+			destdir="${build.dir}"
+			encoding="ISO-8859-1"
+			source="1.5"
+			srcdir="${src.dir}"
+			target="1.5"/>
 		<copy todir="${build.dir}">
 			<fileset dir="${src.dir}">
 				<exclude name="**/*.java"/>
@@ -36,7 +42,17 @@
 
 	<!-- generate javadocs -->
 	<target depends="init" name="javadoc">
-		<javadoc author="true" destdir="${docs.dir}" encoding="ISO-8859-1" packagenames="alice.*" source="1.4" sourcepath="${src.dir}" use="true" version="true" windowtitle="${ant.project.name} API"/>
+		<javadoc classpath="${gentoo.classpath}"
+			author="true"
+			destdir="${docs.dir}"
+			encoding="ISO-8859-1"
+			packagenames="alice.*"
+			source="1.5"
+			sourcepath="${src.dir}"
+			use="true"
+			version="true"
+			windowtitle="${ant.project.name}
+		API"/>
 	</target>
 
 	<!-- clean up -->
@@ -54,7 +70,13 @@
 				<include name="*.jar"/>
 			</fileset>
 		</path>
-		<javac classpathref="dist.classpath" deprecation="on" destdir="${test.build.dir}" encoding="ISO-8859-1" source="1.4" srcdir="${test.dir}" target="1.4"/>
+		<javac classpathref="dist.classpath"
+			deprecation="off"
+			destdir="${test.build.dir}"
+			encoding="ISO-8859-1"
+			source="1.5"
+			srcdir="${test.dir}"
+			target="1.5"/>
 		<junit haltonfailure="on" showoutput="no" printsummary="yes">
 			<classpath>
 				<path refid="dist.classpath"/>
