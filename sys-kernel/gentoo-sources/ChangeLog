@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.742 2010/09/05 12:15:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.743 2010/09/08 11:05:41 fauli Exp $
+
+  08 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  gentoo-sources-2.6.35-r4.ebuild:
+  revert to ~x86 because of several issues
 
   03 Sep 2010; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-2.6.25-r9.ebuild, -gentoo-sources-2.6.26-r4.ebuild,
