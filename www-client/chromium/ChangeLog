@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.171 2010/09/07 17:19:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.172 2010/09/08 00:36:18 phajdan.jr Exp $
+
+*chromium-6.0.472.55 (08 Sep 2010)
+
+  08 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-6.0.472.53.ebuild, -chromium-6.0.472.53-r1.ebuild,
+  +chromium-6.0.472.55.ebuild:
+  Version bump for stable channel release. Remove old.
 
 *chromium-7.0.503.1-r1 (07 Sep 2010)
 
