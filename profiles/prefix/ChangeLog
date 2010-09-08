@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.200 2010/09/03 08:13:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.201 2010/09/08 08:53:26 grobian Exp $
+
+  08 Sep 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop mask for >=icu-4.2, bug #336403
 
   03 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   bsd/freebsd/8.0/package.mask:

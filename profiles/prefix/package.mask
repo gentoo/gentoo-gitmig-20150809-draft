@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.67 2010/07/31 15:18:12 grobian Exp $
+# $Id: package.mask,v 1.68 2010/09/08 08:53:26 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -87,10 +87,6 @@ dev-lang/python:3.1
 # system should be used.
 sys-libs/pam
 sys-auth/pambase
-
-# Michael Haubenwallner <haubi@gentoo.org> (24 Jun 2009)
-# pkgdata does not work yet, let fix in ~main first (#269659)
->=dev-libs/icu-4.2
 
 # Fabian Groffen <grobian@gentoo.org> (21 Jun 2009)
 # fails to compile the widec version, ebuild changes somehow broke it,
