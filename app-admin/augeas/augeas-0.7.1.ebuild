@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.7.1.ebuild,v 1.2 2010/06/21 20:40:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.7.1.ebuild,v 1.3 2010/09/08 10:22:42 hwoarang Exp $
 
 DESCRIPTION="A library for changing configuration files"
 HOMEPAGE="http://augeas.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://augeas.net/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="test"
 
 RDEPEND="sys-libs/readline"

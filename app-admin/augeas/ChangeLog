@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.17 2010/09/06 17:39:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.18 2010/09/08 10:22:42 hwoarang Exp $
+
+  08 Sep 2010; Markos Chandras <hwoarang@gentoo.org> augeas-0.7.1.ebuild:
+  Stable on amd64 wrt bug #325111
 
 *augeas-0.7.3 (06 Sep 2010)
 
