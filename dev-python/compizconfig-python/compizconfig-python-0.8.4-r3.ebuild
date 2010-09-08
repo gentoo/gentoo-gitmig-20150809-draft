@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r2.ebuild,v 1.2 2010/09/06 00:01:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r3.ebuild,v 1.1 2010/09/08 22:18:08 flameeyes Exp $
 
 EAPI="3"
 
@@ -30,17 +30,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	econf \
+	python_src_configure \
 		--disable-dependency-tracking \
 		--enable-fast-install \
 		--disable-static
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	find "${D}" -name '*.la' -delete || die
+	python_src_install
+	python_clean_installation_image
 }
