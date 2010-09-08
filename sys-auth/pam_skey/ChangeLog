@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_skey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.12 2010/05/23 19:58:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.13 2010/09/08 19:38:59 ulm Exp $
+
+*pam_skey-1.1.5-r2 (08 Sep 2010)
+
+  08 Sep 2010; Ulrich Mueller <ulm@gentoo.org> +pam_skey-1.1.5-r2.ebuild:
+  New module option "require_skey" that makes S/Key authentication mandatory.
+  Patch contributed by Jan Sembera <fis@bofh.cz> in bug 336449.
 
   23 May 2010; Ulrich Mueller <ulm@gentoo.org> -pam_skey-1.1.5.ebuild:
   Remove old.
