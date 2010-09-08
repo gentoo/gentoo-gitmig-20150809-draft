@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.2-r3.ebuild,v 1.1 2010/08/14 10:16:52 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.2-r3.ebuild,v 1.2 2010/09/08 17:34:33 gurligebis Exp $
 
 EAPI="2"
 
@@ -206,12 +206,12 @@ src_install() {
 	fi
 
 	if has_version ">=sys-apps/openrc-0.5.0"; then
-		newinitd "$FILESDIR"/${PN}-init.d wpa_supplicant
-		newconfd "$FILESDIR"/${PN}-conf.d wpa_supplicant
+		newinitd "${FILESDIR}/${PN}-init.d" wpa_supplicant
+		newconfd "${FILESDIR}/${PN}-conf.d" wpa_supplicant
 	fi
 
 	exeinto /etc/wpa_supplicant/
-	newexe "${FILESDIR}"/wpa_cli.sh wpa_cli.sh
+	newexe "${FILESDIR}/wpa_cli.sh" wpa_cli.sh
 
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \
 		wpa_supplicant.conf || die "dodoc failed"
