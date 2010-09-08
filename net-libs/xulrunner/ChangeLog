@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.352 2010/08/23 14:53:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.353 2010/09/08 01:12:19 anarchy Exp $
+
+*xulrunner-1.9.2.9 (08 Sep 2010)
+
+  08 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> -xulrunner-1.9.2.4.ebuild,
+  -xulrunner-1.9.2.8-r1.ebuild, +xulrunner-1.9.2.9.ebuild:
+  Security bump bug 336396
 
   23 Aug 2010; Jeremy Olexa <darkside@gentoo.org>
   xulrunner-1.9.2.8-r1.ebuild:
