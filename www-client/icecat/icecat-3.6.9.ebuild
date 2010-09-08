@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.1 2010/09/08 19:08:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.2 2010/09/08 20:55:26 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +ipc java libnotify system-sqlite wifi"
+IUSE="+alsa +cups +ipc java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
@@ -62,6 +62,7 @@ RDEPEND="
 	x11-libs/pango[X]
 	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
+	cups? ( net-print/cups[gnutls] )
 	~net-libs/xulrunner-${XUL_PV}[ipc=,java=,wifi=,libnotify=,system-sqlite=]"
 
 DEPEND="${RDEPEND}
@@ -210,6 +211,7 @@ src_configure() {
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
 	mozconfig_use_enable system-sqlite
+	mozconfig_use_enable cups printing
 
 	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
