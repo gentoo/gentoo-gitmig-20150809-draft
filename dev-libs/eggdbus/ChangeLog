@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eggdbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.22 2010/08/18 21:46:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.23 2010/09/08 17:25:18 grobian Exp $
+
+  08 Sep 2010; Fabian Groffen <grobian@gentoo.org> eggdbus-0.6.ebuild:
+  Marked ~amd64-linux, bug #336273
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> eggdbus-0.6.ebuild:
   arm stable, bug #314899
