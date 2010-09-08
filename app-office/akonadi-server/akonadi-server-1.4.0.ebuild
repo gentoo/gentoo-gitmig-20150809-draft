@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.4.0.ebuild,v 1.1 2010/09/06 02:58:06 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.4.0.ebuild,v 1.2 2010/09/08 13:43:40 reavertm Exp $
 
 EAPI="2"
 
@@ -34,6 +34,10 @@ RDEPEND="${CDEPEND}
 "
 
 S="${WORKDIR}/${P/-server/}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-remove-sqlite-version-assert.patch"
+)
 
 src_install() {
 	# Set default storage backend in order: MySQL, PostgreSQL, SQLite

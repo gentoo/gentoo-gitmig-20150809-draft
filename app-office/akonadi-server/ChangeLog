@@ -1,6 +1,14 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.46 2010/09/07 17:59:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.47 2010/09/08 13:43:40 reavertm Exp $
+
+*akonadi-server-1.4.0-r2 (08 Sep 2010)
+
+  08 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  akonadi-server-1.4.0.ebuild, -akonadi-server-1.4.0-r1.ebuild,
+  +akonadi-server-1.4.0-r2.ebuild,
+  +files/akonadi-server-1.4.0-remove-sqlite-version-assert.patch:
+  Remove assert that requires exact sqlite version 3.6.23
 
   07 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -akonadi-server-1.2.1.ebuild:
