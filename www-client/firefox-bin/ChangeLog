@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.29 2010/09/08 01:26:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.30 2010/09/08 08:28:43 polynomial-c Exp $
+
+  08 Sep 2010; Lars Wendler <polynomial-c@gentoo.org>
+  firefox-bin-3.6.9.ebuild:
+  Fixed installing the language files. Thanks to Alexandre Rostovtsev for
+  reporting this in bug #336412
 
 *firefox-bin-3.6.9 (08 Sep 2010)
 
