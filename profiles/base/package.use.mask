@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.164 2010/09/08 19:57:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.165 2010/09/08 20:11:01 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (8 Sep 2010)
+# Drm don't even build here so mask everywhere expect live.
+<x11-libs/cairo-9999 drm
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.
