@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.27 2010/05/13 12:47:45 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.28 2010/09/08 16:52:11 idl0r Exp $
+
+*portato-0.14.1 (08 Sep 2010)
+
+  08 Sep 2010; Christian Ruppert <idl0r@gentoo.org> +portato-0.14.1.ebuild:
+  Version bump. Bug 336425.
 
   13 May 2010; Christian Ruppert <idl0r@gentoo.org> portato-0.14.ebuild:
   Remove eix as default useflag, bug 319321.
