@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.8.ebuild,v 1.2 2010/08/10 22:52:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.8.ebuild,v 1.3 2010/09/08 02:14:46 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -26,7 +26,7 @@ PATCH="${FIREFOX_PN}-3.6-patches-0.6"
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +ipc java libnotify system-sqlite wifi"
