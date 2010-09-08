@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r2.ebuild,v 1.4 2010/09/03 17:52:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r2.ebuild,v 1.5 2010/09/08 17:34:54 grobian Exp $
 
 EAPI=3
 
@@ -32,6 +32,13 @@ src_prepare() {
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+
+	# Fix toolchain lookup for Darwin/Prefix.
+	epatch "${FILESDIR}"/${PN}-2.7-darwin-prefix.patch
+	sed -e "s|@GENTOO_PORTAGE_CHOST@|${CHOST%%-darwin*}-darwin|g" \
+		-e "s|@GENTOO_PORTAGE_EPREFIX@|${EPREFIX}|g" \
+		-i tools/clang/lib/Driver/ToolChains.cpp \
+		|| die "fixing toolchain lookup"
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
