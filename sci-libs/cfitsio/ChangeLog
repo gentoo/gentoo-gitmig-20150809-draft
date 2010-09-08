@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.44 2010/06/14 18:08:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.45 2010/09/08 22:59:01 bicatali Exp $
+
+*cfitsio-3.250-r1 (08 Sep 2010)
+
+  08 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +cfitsio-3.250-r1.ebuild:
+  Drastically improved autotools patch, now include more tests, less
+  automagic. Also switched to autotools-utils eclass
 
 *cfitsio-3.250 (14 Jun 2010)
 
