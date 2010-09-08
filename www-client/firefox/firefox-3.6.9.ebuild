@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.9.ebuild,v 1.2 2010/09/08 04:26:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.9.ebuild,v 1.3 2010/09/08 12:56:03 anarchy Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -49,8 +49,8 @@ done
 
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.4
-	>=dev-libs/nspr-4.8
+	>=dev-libs/nss-3.12.7
+	>=dev-libs/nspr-4.8.6
 	>=app-text/hunspell-1.2
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
