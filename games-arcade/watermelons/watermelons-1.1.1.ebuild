@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.5 2010/05/04 04:47:24 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.6 2010/09/09 17:37:56 mr_bones_ Exp $
+
+EAPI=2
 PYTHON_DEPEND="2"
 inherit eutils python games
 
