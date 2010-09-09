@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.24.2.ebuild,v 1.4 2010/08/05 16:34:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.24.2.ebuild,v 1.5 2010/09/09 17:02:36 pacho Exp $
 
 EAPI="3"
 inherit gnome2
@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable doc documentation)"
+}
 
 src_prepare() {
 	gnome2_src_prepare

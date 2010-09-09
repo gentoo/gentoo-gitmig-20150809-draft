@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.151 2010/08/05 16:34:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.152 2010/09/09 17:02:36 pacho Exp $
+
+  09 Sep 2010; Pacho Ramos <pacho@gentoo.org> glibmm-2.24.2.ebuild:
+  Pass --disable-documentation when needed (bug #332491) by Martin
+  Mokrejš).
 
   05 Aug 2010; Jeroen Roovers <jer@gentoo.org> glibmm-2.24.2.ebuild:
   Stable for HPPA (bug #324077).
