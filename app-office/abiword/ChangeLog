@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.226 2010/09/04 16:15:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.227 2010/09/09 14:11:01 ranger Exp $
+
+  09 Sep 2010; Brent Baude <ranger@gentoo.org> abiword-2.8.6.ebuild:
+  Marking abiword-2.8.6 ppc64 for bug 326503
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> abiword-2.8.6.ebuild:
   alpha/ia64/sparc stable wrt #326503
