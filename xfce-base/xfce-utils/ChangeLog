@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.160 2010/09/07 02:18:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.161 2010/09/09 12:31:20 ssuominen Exp $
+
+  09 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce-utils-4.7.0.ebuild, +files/xfce-utils-4.7.0-ck-launch-session.patch:
+  Don't run ck-launch-session from xinitrc because latest xfce4-session will
+  start consolekit session on it's own.
 
   07 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce-utils-4.7.0.ebuild:
