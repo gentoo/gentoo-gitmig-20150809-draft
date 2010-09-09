@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.18.ebuild,v 1.1 2010/06/29 23:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.18.ebuild,v 1.2 2010/09/09 18:04:18 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git autotools
 else
 	SRC_URI="http://www.intra2net.com/en/developer/libftdi/download/${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="amd64 ppc ppc64 sparc x86"
 fi
 
 DESCRIPTION="Userspace access to FTDI USB interface chips"
