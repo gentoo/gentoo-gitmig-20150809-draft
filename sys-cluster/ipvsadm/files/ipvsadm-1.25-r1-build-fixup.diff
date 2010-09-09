@@ -1,0 +1,80 @@
+--- ipvsadm-1.25/Makefile
++++ ipvsadm-1.25/Makefile
+@@ -45,11 +45,11 @@
+ STATIC_LIBS	= libipvs/libipvs.a
+ 
+ ifeq "${ARCH}" "sparc64"
+-    CFLAGS = -Wall -Wunused -Wstrict-prototypes -g -m64 -pipe -mcpu=ultrasparc -mcmodel=medlow
++    CFLAGS := -g -m64 -pipe -mcpu=ultrasparc -mcmodel=medlow
+ else
+-    CFLAGS = -Wall -Wunused -Wstrict-prototypes -g
++    CFLAGS := -g
+ endif
+-
++OPTFLAGS += -Wall -Wunused -Wstrict-prototypes
+ 
+ #####################################
+ # No servicable parts below this line
+@@ -92,10 +92,12 @@
+ all:            libs ipvsadm
+ 
+ libs:
+-		make -C libipvs
++		$(MAKE) -C libipvs
++
++$(STATIC_LIBS): libs
+ 
+ ipvsadm:	$(OBJS) $(STATIC_LIBS)
+-		$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
++		$(CC) $(LDFLAGS) $(OPTFLAGS) $(CFLAGS) -o $@ $^ $(LIBS)
+ 
+ install:        all
+ 		if [ ! -d $(SBIN) ]; then $(MKDIR) -p $(SBIN); fi
+@@ -115,7 +117,7 @@
+ 		rm -rf debian/tmp
+ 		find . -name '*.[ao]' -o -name "*~" -o -name "*.orig" \
+ 		  -o -name "*.rej" -o -name core | xargs rm -f
+-		make -C libipvs clean
++		$(MAKE) -C libipvs clean
+ 
+ distclean:	clean
+ 
+@@ -148,4 +150,4 @@
+ 		dpkg-buildpackage
+ 
+ %.o:	%.c
+-		$(CC) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
++		$(CC) $(OPTFLAGS) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
+--- ipvsadm-1.25/libipvs/Makefile
++++ ipvsadm-1.25/libipvs/Makefile
+@@ -1,14 +1,14 @@
+ # Makefile for libipvs
+ 
+ CC		= gcc
+-CFLAGS		= -Wall -Wunused -Wstrict-prototypes -g -fPIC
++OPTFLAGS = -Wall -Wunused -Wstrict-prototypes -fPIC
+ ifneq (0,$(HAVE_NL))
+-CFLAGS		+= -DLIBIPVS_USE_NL
++DEFINES += -DLIBIPVS_USE_NL
+ endif
+ 
+ INCLUDE		+= $(shell if [ -f ../../ip_vs.h ]; then	\
+ 		     echo "-I../../."; fi;)
+-DEFINES		= $(shell if [ ! -f ../../ip_vs.h ]; then	\
++DEFINES		+= $(shell if [ ! -f ../../ip_vs.h ]; then	\
+ 		    echo "-DHAVE_NET_IP_VS_H"; fi;)
+ 
+ .PHONY		= all clean install dist distclean rpm rpms
+@@ -21,10 +21,10 @@
+ 		ar rv $@ $^
+ 
+ $(SHARED_LIB):	libipvs.o ip_vs_nl_policy.o
+-		$(CC) -shared -Wl,-soname,$@ -o $@ $^
++		$(CC) $(LDFLAGS) -shared -Wl,-soname,$@ -o $@ $^
+ 
+ %.o:		%.c
+-		$(CC) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
++		$(CC) $(OPTFLAGS) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
+ 
+ clean:
+ 		rm -f *.[ao] *~ *.orig *.rej core *.so

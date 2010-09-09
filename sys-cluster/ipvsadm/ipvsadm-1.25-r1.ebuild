@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25.ebuild,v 1.4 2010/08/17 21:36:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25-r1.ebuild,v 1.1 2010/09/09 09:40:54 xarthisius Exp $
 
 EAPI=2
 inherit linux-info toolchain-funcs eutils
@@ -26,14 +26,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/ipvsadm-1.25-build-fixup.diff
-	epatch "${FILESDIR}"/ipvsadm-1.25-netlink-conns.diff
+	epatch "${FILESDIR}"/${PF}-build-fixup.diff \
+		"${FILESDIR}"/${P}-netlink-conns.diff
 }
 
 src_compile() {
-	emake \
+	emake -e \
 		INCLUDE="-I.. -I." \
-		CFLAGS="${CFLAGS}" \
 		CC="$(tc-getCC)" \
 		HAVE_NL=1 \
 		 || die "error compiling source"
