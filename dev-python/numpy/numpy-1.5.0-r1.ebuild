@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0.ebuild,v 1.1 2010/09/02 13:25:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0-r1.ebuild,v 1.1 2010/09/09 07:25:31 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -47,7 +47,10 @@ pkg_setup() {
 	[[ -z ${FC} ]] && FC=$(tc-getFC)
 	# when fortran flags are set, pic is removed.
 	FFLAGS="${FFLAGS} -fPIC"
-	export NUMPY_FCONFIG="config_fc --noopt --noarch"
+	NUMPY_FCONFIG="config_fc --noopt --noarch"
+	# workaround bug 335908
+	[[ ${FC} == *gfortran* ]] && NUMPY_FCONFIG="${NUMPY_FCONFIG} --fcompiler=gnu95"
+	export NUMPY_FCONFIG
 }
 
 src_unpack() {
