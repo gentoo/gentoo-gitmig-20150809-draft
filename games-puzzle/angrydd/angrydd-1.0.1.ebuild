@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.6 2010/04/21 10:26:37 tupone Exp $
-EAPI="2"
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.7 2010/09/09 16:43:17 mr_bones_ Exp $
 
+EAPI=2
+PYTHON_DEPEND="2"
 inherit eutils python games
 
 DESCRIPTION="Angry, Drunken Dwarves, a falling blocks game similar to Puzzle Fighter"
@@ -28,16 +28,19 @@ src_prepare() {
 }
 
 src_install() {
-	make DESTDIR="${D}" PREFIX="${GAMES_DATADIR}" TO="${PN}" install \
-		|| die "make install failed"
+	emake \
+		DESTDIR="${D}" \
+		PREFIX="${GAMES_DATADIR}" \
+		TO="${PN}" \
+		install || die
 	rm -rf "${D}${GAMES_DATADIR}/games" "${D}${GAMES_DATADIR}/share"
 	dodir "${GAMES_BINDIR}"
 	dosym "${GAMES_DATADIR}/${PN}/angrydd.py" "${GAMES_BINDIR}/${PN}"
 	doman angrydd.6
 	dodoc README TODO HACKING
 
-	doicon "${S}/angrydd.png" # for openbox
-	make_desktop_entry angrydd "Angry, Drunken Dwarves" angrydd
+	doicon angrydd.png
+	make_desktop_entry angrydd "Angry, Drunken Dwarves"
 
 	prepgamesdirs
 }
