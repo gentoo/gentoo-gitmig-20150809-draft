@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.97 2010/07/12 16:59:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.98 2010/09/09 19:49:33 eva Exp $
+
+  09 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -pygobject-2.18.0.ebuild, -pygobject-2.18.0-r2.ebuild,
+  pygobject-2.20.0.ebuild:
+  Depend on python >=2.5, bug #325895. Clean up old revisions.
 
   12 Jul 2010; Jeroen Roovers <jer@gentoo.org> pygobject-2.20.0.ebuild:
   Stable for HPPA (bug #312877).
