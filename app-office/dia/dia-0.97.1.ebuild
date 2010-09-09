@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.9 2010/05/16 09:40:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.10 2010/09/09 16:50:19 pacho Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 # FIXME: configure mixes debug and devel meaning (see -DGTK_DISABLE...)
 IUSE="cairo doc gnome png python zlib"
 
-RDEPEND=">=x11-libs/gtk+-2.6.0
+RDEPEND=">=x11-libs/gtk+-2.6.0:2
 	>=dev-libs/glib-2.6.0
 	>=x11-libs/pango-1.8
 	>=dev-libs/libxml2-2.3.9
@@ -79,6 +79,9 @@ src_prepare() {
 		sed -i -e '/if HAVE_DB2MAN/,/endif/d' doc/*/Makefile.am \
 			|| die "sed 2 failed"
 	fi
+
+	# Don't use -DGTK_DISABLE_DEPRECATED, bug #333439
+	sed -i -e 's:-DGTK_DISABLE_DEPRECATED::g' configure.in || die "sed 3 failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.128 2010/05/16 09:40:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.129 2010/09/09 16:50:19 pacho Exp $
+
+  09 Sep 2010; Pacho Ramos <pacho@gentoo.org> dia-0.97.1.ebuild:
+  Don't use -DGTK_DISABLE_DEPRECATED (bug #333439) and RDEPEND on gtk+:2.
 
   16 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -dia-0.97-r1.ebuild,
   dia-0.97.1.ebuild, -files/dia-0.97-automagic-libemf.patch,
