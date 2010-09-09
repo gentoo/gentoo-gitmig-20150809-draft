@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.14 2009/03/16 16:24:36 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.15 2010/09/09 10:20:58 s4t4n Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -25,6 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-stringh.patch
+
+	# Honour Gentoo LDFLAGS. Closes bug #336446.
+	sed -i 's/-o $(DEST)/$(LDFLAGS) -o $(DEST)/' Makefile
 }
 
 src_compile() {

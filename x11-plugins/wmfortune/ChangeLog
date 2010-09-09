@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfortune
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.12 2009/03/16 16:24:36 s4t4n Exp $
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.13 2010/09/09 10:20:58 s4t4n Exp $
+
+  09 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmfortune-0.241.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #336446.
 
   16 Mar 2009; Michele Noberasco <s4t4n@gentoo.org> wmfortune-0.241.ebuild:
   Updated HOMEPAGE and SRC_URI. Closes bug #259606.
