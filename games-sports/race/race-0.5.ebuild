@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.13 2010/09/09 14:28:29 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.14 2010/09/09 16:37:31 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="OpenGL Racing Game"
@@ -16,12 +16,13 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer"
+	media-libs/libsdl[audio,opengl,video]
+	media-libs/sdl-image[jpeg,png]
+	media-libs/sdl-mixer[mikmod]"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gentoo.patch \
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:g" \
