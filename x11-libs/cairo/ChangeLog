@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.258 2010/09/09 19:37:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.259 2010/09/09 20:24:27 scarabeus Exp $
+
+  09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused local use desc.
 
   09 Sep 2010; Doug Goldstein <cardoe@gentoo.org> cairo-1.10.0-r1.ebuild,
   cairo-9999.ebuild:
