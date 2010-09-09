@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.7 2009/06/06 15:44:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.8 2010/09/09 08:46:05 fauli Exp $
+
+EAPI=3
 
 inherit elisp
 
@@ -13,10 +15,14 @@ SLOT="0"
 KEYWORDS="alpha ppc x86"
 IUSE=""
 
-DEPEND=">=app-i18n/canna-3.6"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=">=app-i18n/canna-3.6"
 
 SITEFILE="50${PN}-gentoo.el"
+
+src_prepare() {
+	sed -e 's:$(CC) -o $(PROGRAM) $(OBJS):$(CC) ${CFLAGS} ${LDFLAGS} -o $(PROGRAM) $(OBJS):' -i Makefile || die
+}
 
 src_compile() {
 	emake || die

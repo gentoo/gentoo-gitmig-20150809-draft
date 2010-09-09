@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/yc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.31 2009/06/06 15:44:02 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.32 2010/09/09 08:46:05 fauli Exp $
+
+  09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> yc-4.0.13.ebuild:
+  Port to EAPI 3, correct runtime and build-time dependencies, make it
+  respect system's LDFLAGS and CFLAGS as reported in bug 336540
 
   06 Jun 2009; Ulrich Mueller <ulm@gentoo.org> yc-4.0.13.ebuild:
   Fix elog message, bug 272899.
