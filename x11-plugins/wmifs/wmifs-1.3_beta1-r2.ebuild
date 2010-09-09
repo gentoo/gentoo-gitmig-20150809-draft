@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.9 2010/07/22 14:35:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.10 2010/09/09 10:01:48 s4t4n Exp $
 
 inherit eutils
 
@@ -30,6 +30,9 @@ src_unpack()
 	# patch to allow for longer interface names
 	# and prettify program output for long names
 	epatch "${WORKDIR}"/${PN}_${MY_PV}-11.diff
+
+	# Honour Gentoo LDFLAGS, see bug #336537
+	sed -i "s/-o wmifs/\$(LDFLAGS) -o wmifs/" Makefile
 }
 
 src_compile()
