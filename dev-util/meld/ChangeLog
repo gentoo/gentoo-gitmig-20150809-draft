@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.108 2010/08/29 15:48:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.109 2010/09/09 13:34:00 ranger Exp $
+
+  09 Sep 2010; Brent Baude <ranger@gentoo.org> meld-1.3.1.ebuild:
+  Marking meld-1.3.1 ppc64 for bug 320271
 
 *meld-1.3.2 (29 Aug 2010)
 
