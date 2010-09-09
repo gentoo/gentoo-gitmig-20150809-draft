@@ -54,7 +54,7 @@ diff -uraN topal-72-orig/Makefile topal-72/Makefile
  topal:	$(TOPALDEPS)
 -	gnatmake -gnatwa -gnato -O2 $(TOPALDEBUG) topal
 -	-strip topal
-+	gnatmake -gnatwa -gnato -O2 $(TOPALDEBUG) topal -largs "$(LDFLAGS)"
++	gnatmake -gnatwa -gnato -O2 $(TOPALDEBUG) topal -largs $(LDFLAGS)
  
  topal.gz:	topal
  	gzip -c9 topal > topal.gz
