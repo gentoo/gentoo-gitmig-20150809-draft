@@ -1,11 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.3.ebuild,v 1.7 2009/01/14 15:54:35 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.3.ebuild,v 1.8 2010/09/09 09:54:32 s4t4n Exp $
+
+inherit eutils
 
 IUSE=""
 
-MY_P=${P}
-S=${WORKDIR}/${MY_P}
+MY_P="${P}"
+S="${WORKDIR}/${MY_P}/src"
 
 DESCRIPTION="Dockapp for laptop users"
 SRC_URI="http://www.dockapps.org/download.php/id/474/${P}.tar.bz2"
@@ -24,20 +26,20 @@ KEYWORDS="~amd64 ~ppc x86"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	#Prevent automatic stripping of binaries. Closes bug #252109
-	sed -i 's/install -c -o 0 -g 0 -s -m/install -c -o 0 -g 0 -m/' "${S}/src/Makefile"
+	epatch "${FILESDIR}"/${P}-Makefile.patch
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} -Wall" || die "Compilation failed"
+	emake || die "Compilation failed"
 }
 
 src_install() {
 	dodir /usr/bin
 	einstall INSTALLDIR="${D}/usr/bin" || die "Installation failed"
 
-	dodoc AUTHORS README README.IT THANKS
+	dodoc ../AUTHORS ../README ../README.IT ../THANKS
 
 	insinto /usr/share/applications
 	doins "${FILESDIR}/${PN}.desktop"
