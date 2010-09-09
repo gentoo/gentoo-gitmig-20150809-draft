@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/unclutter
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.24 2007/07/22 03:41:55 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.25 2010/09/09 09:33:43 xarthisius Exp $
+
+*unclutter-8-r2 (09 Sep 2010)
+
+  09 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +unclutter-8-r2.ebuild:
+  Respect LDFLAGS wrt bug 336546. Thanks to Diego for the report. Fix
+  implicit function declarations.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   unclutter-8-r1.ebuild:
