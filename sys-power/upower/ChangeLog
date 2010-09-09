@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.17 2010/08/11 15:50:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.18 2010/09/09 03:19:33 josejx Exp $
+
+  09 Sep 2010; Joseph Jezak <josejx@gentoo.org> upower-0.9.4.ebuild:
+  Marked ppc/ppc64 stable for bug #329623.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> upower-0.9.4.ebuild,
   upower-0.9.5.ebuild:
