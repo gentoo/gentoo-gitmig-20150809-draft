@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.10 2007/06/30 14:20:37 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.11 2010/09/09 13:43:12 s4t4n Exp $
 
 inherit eutils
 
@@ -27,6 +27,12 @@ src_unpack() {
 	# Fix for #61704, cannot compile with gcc 3.4.1:
 	# it's a trivial change and does not affect other compilers...
 	epatch "${FILESDIR}/${P}-gcc-3.4.patch"
+
+	# Fix parallel compilation
+	sed -ie "s/make EXTRACFLAGS/make \${MAKEOPTS} EXTRACFLAGS/" Makefile
+
+	# Honour Gentoo LDFLAGS, see bug #336296
+	sed -ie "s/-o wmsystray/${LDFLAGS} -o wmsystray/" wmsystray/Makefile
 }
 
 src_compile() {
