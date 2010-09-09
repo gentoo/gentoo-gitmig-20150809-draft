@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.3 2010/05/23 20:08:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.4 2010/09/09 09:44:15 tupone Exp $
 
 EAPI=2
 
@@ -47,7 +47,8 @@ src_prepare() {
 	epatch "${WORKDIR}"/${PN}-svn755-upto-971.patch
 	epatch "${WORKDIR}"/${PN}-t971-client.patch
 	epatch "${FILESDIR}"/${P}-system_jpeg.patch \
-		"${FILESDIR}"/${P}-system_jpeg-2.patch
+		"${FILESDIR}"/${P}-system_jpeg-2.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	# fix the gcc-4.3.3 Werror issue
 	# This is probably issue for all icculus q3 based games
 	sed -i -e '16s/-Werror //' src/tools/asm/Makefile || die
