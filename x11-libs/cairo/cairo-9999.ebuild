@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.2 2010/09/08 20:01:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.3 2010/09/09 08:03:08 scarabeus Exp $
 
 EAPI=3
 
@@ -38,12 +38,6 @@ RDEPEND="media-libs/fontconfig
 		drm? (
 			>=sys-fs/udev-136
 			gallium? ( media-libs/mesa[gallium] )
-		)
-		xcb? (
-			|| (
-				<=x11-libs/libX11-1.3.5[xcb]
-				>x11-libs/libX11-1.3.5
-			)
 		)
 	)
 	xcb? (
@@ -93,7 +87,6 @@ src_configure() {
 	if use X; then
 		myopts+="
 			$(use_enable drm)
-			$(use_enable xcb xlib-xcb)
 		"
 
 		if use drm; then
@@ -112,10 +105,14 @@ src_configure() {
 		use drm && ewarn "drm use requires X use enabled. So disabling for now."
 		myopts+="
 			--disable-drm
-			--disable-xcb-lib
+			--disable-gallium
+			--disable-xcb-drm
 		"
 	fi
 
+
+	# --disable-xcb-lib:
+	#	do not override good xlib backed by hardforcing rendering over xcb
 	econf \
 		--disable-dependency-tracking \
 		$(use_with X x) \
@@ -137,6 +134,7 @@ src_configure() {
 		--enable-pdf \
 		--enable-png \
 		--enable-ps \
+		--disable-xcb-lib \
 		${myopts}
 }
 
