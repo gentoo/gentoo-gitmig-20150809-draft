@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.0.ebuild,v 1.2 2010/09/06 17:25:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.0.ebuild,v 1.3 2010/09/09 12:35:56 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-ck-launch-session.patch )
 	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
 		--disable-dependency-tracking
 		--disable-static
