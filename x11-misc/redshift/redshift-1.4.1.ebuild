@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.4.1.ebuild,v 1.4 2010/07/31 17:32:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.4.1.ebuild,v 1.5 2010/09/09 10:55:02 scarabeus Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="gnome gtk nls"
 
-COMMON_DEPEND="x11-libs/libX11[xcb]
+COMMON_DEPEND="|| ( <=x11-libs/libX11-1.3.5[xcb] >x11-libs/libX11-1.3.5  )
 	x11-libs/libXxf86vm
 	x11-libs/libxcb
 	gnome? ( dev-libs/glib:2
