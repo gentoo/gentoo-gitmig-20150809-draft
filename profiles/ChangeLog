@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4536 2010/09/08 20:11:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4537 2010/09/09 10:46:41 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +arch/amd64/package.mask, arch/x86/package.mask:
+  Unmask KDE 4.5.1 on amd64/x86
+  Permission to touch package.mask files granted by cla on IRC
 
   08 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   base/package.use.mask, package.mask:
