@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.10 2010/07/24 17:32:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.11 2010/09/09 13:36:28 ranger Exp $
 
 inherit autotools gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~ppc-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~ppc-macos"
 
 IUSE="asyncns doc ssl debug test"
 
