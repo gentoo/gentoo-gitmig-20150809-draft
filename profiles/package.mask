@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11921 2010/09/09 12:12:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11922 2010/09/09 13:00:33 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -438,17 +438,6 @@ dev-python/ets
 # Removal on 2010-09-23
 dev-python/boostpythongenerator
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (24 Aug 2010)
-#  on behalf of QA team
-#
-# Split samba ebuilds that are no longer relevant as the
-# un-split 3.5 is stable already. Quick removal.
-#
-# Removal on 2010-09-08
-net-fs/samba-libs
-net-fs/samba-client
-net-fs/samba-server
-
 # Dirkjan Ochtman <djc@gentoo.org> (23 Aug 2010)
 # Unmaintained, uninstallable on version of Python we ship.
 # Bugs 267346, 267347, 267348, 267356.
@@ -582,11 +571,6 @@ app-admin/webmin
 #
 # Removal on 2010-10-09
 sys-apps/gluelog
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2010)
-# Merged back into sys-libs/pam (without static build of sys-libs/db).
-# Removal on 2010-09-09
-sys-auth/pam_userdb
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 Aug 2010)
 #  on behalf of QA team
