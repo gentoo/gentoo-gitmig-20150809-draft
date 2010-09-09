@@ -1,12 +1,13 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.3 2010/09/09 00:36:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.4 2010/09/09 01:00:38 xmw Exp $
 
 *mupdf-0.7-r1 (09 Sep 2010)
 
   09 Sep 2010; Michael Weber <xmw@gentoo.org> +mupdf-0.7-r1.ebuild,
   +files/mupdf-0.7-zoom.patch:
-  Revision bump to add zoom keys and fix documentation issues.
+  Revision bump to add zoom keys and fix documentation issues,
+  upstream bugreport http://bugs.ghostscript.com/show_bug.cgi?id=691601
 
 *mupdf-0.7 (30 Aug 2010)
 
