@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.146 2010/08/29 18:28:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.147 2010/09/09 18:02:23 ranger Exp $
+
+  09 Sep 2010; Brent Baude <ranger@gentoo.org> libgda-4.1.4-r1.ebuild:
+  Marking libgda-4.1.4-r1 ppc64 for bug 327803
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> libgda-4.1.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #327803
