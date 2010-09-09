@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.68 2010/08/13 05:05:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.69 2010/09/09 17:02:30 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -113,21 +113,6 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare ${export_fns} pkg_postinst pkg
 unset buildsystem_eclass
 unset export_fns
 
-case ${KDEBASE} in
-	kde-base)
-		HOMEPAGE="http://www.kde.org/"
-		LICENSE="GPL-2"
-		;;
-	koffice)
-		HOMEPAGE="http://www.koffice.org/"
-		LICENSE="GPL-2"
-		;;
-	kdevelop)
-		HOMEPAGE="http://www.kdevelop.org/"
-		LICENSE="GPL-2"
-		;;
-esac
-
 # @ECLASS-VARIABLE: OPENGL_REQUIRED
 # @DESCRIPTION:
 # Is qt-opengl required? Possible values are 'always', 'optional' and 'never'.
@@ -160,9 +145,17 @@ CPPUNIT_REQUIRED="${CPPUNIT_REQUIRED:-never}"
 # Note that for kde-base packages this variable is fixed to 'always'.
 KDE_REQUIRED="${KDE_REQUIRED:-always}"
 
+# @ECLASS-VARIABLE: KDE_HANDBOOK
+# @DESCRIPTION:
+# Set to enable handbook in application. It adds +handbook to IUSE, handbook dirs
+# to KMEXTRA and ensures buildtime and runtime dependencies.
+[[ -n ${KDE_HANDBOOK} ]] && IUSE+=" +handbook"
+
 # Setup packages inheriting this eclass
 case ${KDEBASE} in
 	kde-base)
+		HOMEPAGE="http://www.kde.org/"
+		LICENSE="GPL-2"
 		if [[ $BUILD_TYPE = live ]]; then
 			# Disable tests for live ebuilds
 			RESTRICT+=" test"
@@ -182,6 +175,14 @@ case ${KDEBASE} in
 		esac
 		# Block installation of other SLOTS unless kdeprefix
 		RDEPEND+=" $(block_other_slots)"
+		;;
+	koffice)
+		HOMEPAGE="http://www.koffice.org/"
+		LICENSE="GPL-2"
+		;;
+	kdevelop)
+		HOMEPAGE="http://www.kdevelop.org/"
+		LICENSE="GPL-2"
 		;;
 esac
 
@@ -322,6 +323,30 @@ kdedepend="
 		x11-proto/xf86vidmodeproto
 	)
 "
+
+# Handbook handling - dependencies
+if [[ -n ${KDE_HANDBOOK} ]]; then
+	kdedepend+="
+		handbook? (
+			app-text/docbook-xml-dtd:4.2
+			app-text/docbook-xsl-stylesheets
+		)
+	"
+	if [[ ${PN} != kdelibs ]]; then
+		if [[ ${KDEBASE} = kde-base ]]; then
+			PDEPEND+=" handbook? ( $(add_kdebase_dep kdelibs 'handbook') )"
+		else
+			PDEPEND+=" handbook? ( >=kde-base/kdelibs-${KDE_MINIMAL}[handbook] )"
+		fi
+	elif [[ ${PN} != khelpcenter ]]; then
+		if [[ ${KDEBASE} = kde-base ]]; then
+			PDEPEND+=" handbook? ( $(add_kdebase_dep khelpcenter 'handbook') )"
+		else
+			PDEPEND+=" handbook? ( >=kde-base/khelpcenter-${KDE_MINIMAL}[handbook] )"
+		fi
+	fi
+fi
+
 case ${KDE_REQUIRED} in
 	always)
 		IUSE+=" aqua"
@@ -341,6 +366,7 @@ unset kdecommondepend kdedepend
 debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: COMMONDEPEND is ${COMMONDEPEND}"
 debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: DEPEND (only) is ${DEPEND}"
 debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: RDEPEND (only) is ${RDEPEND}"
+debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: PDEPEND is ${PDEPEND}"
 
 # Accumulate dependencies set by this eclass
 DEPEND+=" ${COMMONDEPEND}"
