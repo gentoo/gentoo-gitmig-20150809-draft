@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.31 2010/09/03 08:29:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.32 2010/09/09 15:55:36 sping Exp $
+
+  09 Sep 2010; Sebastian Pipping <sping@gentoo.org> sdlmame-0.139_p2.ebuild:
+  Append --binary to ${EPATCH_OPTS} for bug #336004
 
 *sdlmame-0.139_p2 (03 Sep 2010)
 
