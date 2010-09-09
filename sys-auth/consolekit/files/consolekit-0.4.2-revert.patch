@@ -1,3 +1,5 @@
+http://bugs.gentoo.org/336634
+
 Revert upstream http://cgit.freedesktop.org/ConsoleKit/commit/?id=4f88228f31a63c026c424a92827f26ad7535275c
 which renders ConsoleKit unusable.
 
