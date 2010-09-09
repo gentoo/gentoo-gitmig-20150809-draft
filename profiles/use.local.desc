@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5937 2010/09/08 16:13:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5938 2010/09/09 13:13:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2462,29 +2462,6 @@ net-fs/samba:smbsharemodes - Enable special smb share modes (?)
 net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:tools - Enable extra tools
 net-fs/samba:winbind - Enables support for the winbind auth daemon
-net-fs/samba-client:ads - Enable Active Directory support
-net-fs/samba-client:aio - Enable asynchronous IO support
-net-fs/samba-client:cluster - Enable support for clustering
-net-fs/samba-client:samba4 - Enable experimental samba4 bits
-net-fs/samba-client:winbind - Enables support for the winbind auth daemon
-net-fs/samba-libs:addns - Enable AD DNS integration
-net-fs/samba-libs:ads - Enable Active Directory support
-net-fs/samba-libs:aio - Enable asynchronous IO support
-net-fs/samba-libs:cluster - Enable support for clustering
-net-fs/samba-libs:ldb - Enable the ldb tools
-net-fs/samba-libs:netapi - Enable building of netapi bits
-net-fs/samba-libs:samba4 - Enable experimental samba4 bits
-net-fs/samba-libs:smbclient - Enable smbclient tool
-net-fs/samba-libs:smbsharemodes - Enable special smb share modes (?) 
-net-fs/samba-libs:tools - Enable extra tools
-net-fs/samba-libs:winbind - Enables support for the winbind auth daemon
-net-fs/samba-server:ads - Enable Active Directory support
-net-fs/samba-server:aio - Enable asynchronous IO support
-net-fs/samba-server:cluster - Enable support for clustering
-net-fs/samba-server:quota - Enables support for user quotas
-net-fs/samba-server:samba4 - Enable experimental samba4 features"
-net-fs/samba-server:swat - Enables support for swat configuration gui
-net-fs/samba-server:winbind - Enables support for the winbind auth daemon
 net-fs/smbnetfs:gnome - Use the gnome-base/gnome-keyring for password management.
 net-ftp/ftpcube:sftp - Enable sftp connection support
 net-ftp/proftpd:authfile - Enable support for the auth-file module
@@ -3778,7 +3755,7 @@ x11-libs/cairo:drm - Use Linux DRM for backend acceleration
 x11-libs/cairo:gallium - Use Mesa's Gallium backend for acceleration
 x11-libs/cairo:glitz - Build with glitz support, which replaces some software render operations with Mesa OpenGL operations
 x11-libs/cairo:lcdfilter - Add FreeType LCD filtering, ClearType-style behavior for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from Ubuntu
-x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support
+x11-libs/cairo:opengl -  When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support 
 x11-libs/cairo:openvg - Use OpenVG for backend acceleration
 x11-libs/cairo:qt - Use Qt for rendering
 x11-libs/fltk:games - Builds and installs some extra games
