@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11923 2010/09/09 19:45:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11924 2010/09/09 21:04:40 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -408,10 +408,6 @@ sys-devel/omni
 #
 # Removal on 2010-10-26
 dev-libs/pcl
-
-# Markos Chandras <hwoarang@gentoo.org> (26 Aug 2010)
-# Masked for further testing
-=net-p2p/qbittorrent-2.4.0
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (25 Aug 2010)
 #  on behalf of QA team
