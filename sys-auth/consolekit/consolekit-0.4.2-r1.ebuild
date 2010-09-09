@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2.ebuild,v 1.2 2010/09/07 14:37:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r1.ebuild,v 1.1 2010/09/09 21:13:16 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils multilib pam
@@ -36,7 +36,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.2.10-cleanup_console_tags.patch \
 		"${FILESDIR}"/${PN}-0.4.0-polkit-automagic.patch \
 		"${FILESDIR}"/${PN}-0.4.0-multilib.patch \
-		"${FILESDIR}"/${PN}-0.4.1-shutdown-reboot-without-policies.patch
+		"${FILESDIR}"/${PN}-0.4.1-shutdown-reboot-without-policies.patch \
+		"${FILESDIR}"/${PN}-0.4.2-revert.patch
 
 	eautoreconf
 }
