@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.39 2010/09/08 20:55:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.40 2010/09/09 11:42:44 polynomial-c Exp $
+
+  09 Sep 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/402-oggzfbsd.patch, icecat-3.6.9.ebuild:
+  Fixed 402-oggzfbsd.patch. Thanks to William Throwe who reported this issue
+  in bug #336504.
 
   08 Sep 2010; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.9.ebuild:
   Readded cups USE flag.

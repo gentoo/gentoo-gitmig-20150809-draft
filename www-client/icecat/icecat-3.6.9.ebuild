@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.2 2010/09/08 20:55:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.3 2010/09/09 11:42:44 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -129,8 +129,11 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch" \
+	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch
+			402-oggzfbsd.patch" \
 	epatch "${WORKDIR}"
+
+	epatch "${FILESDIR}"/402-oggzfbsd.patch
 
 	# The patch excluded above failed, ported patch is applied below
 	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"

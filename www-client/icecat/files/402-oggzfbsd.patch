@@ -1,0 +1,11 @@
+--- a/media/liboggz/include/oggz/oggz_off_t_generated.h
++++ b/media/liboggz/include/oggz/oggz_off_t_generated.h
+@@ -59,7 +59,7 @@
+ 
+ #include <sys/types.h>
+ 
+-#if defined(__APPLE__) || defined(SOLARIS) || defined(OS2) || defined (_AIX)
++#if defined(__APPLE__) || defined(SOLARIS) || defined(OS2) || defined (_AIX) || defined(__FreeBSD__)
+ typedef off_t oggz_off_t;
+ #else
+ typedef loff_t oggz_off_t;
