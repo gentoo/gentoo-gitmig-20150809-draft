@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.17 2010/05/23 21:25:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.18 2010/09/09 07:14:12 mr_bones_ Exp $
+
+*openarena-0.8.5 (09 Sep 2010)
+
+  09 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +openarena-0.8.5.ebuild, +files/openarena-0.8.5-bots-strcpy-fix.patch,
+  +files/openarena-0.8.5-makefile.patch,
+  +files/openarena-0.8.5-unbundling.patch:
+  version bump with work from Cesar Garcia in bug #306617
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> openarena-0.8.1-r1.ebuild:
   stable amd64, bug 315299
