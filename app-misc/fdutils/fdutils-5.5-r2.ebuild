@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5.ebuild,v 1.6 2008/09/03 08:50:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5-r2.ebuild,v 1.1 2010/09/09 18:24:17 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,9 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="doc"
 
-DEPEND=">=sys-fs/mtools-3
+RDEPEND=">=sys-fs/mtools-3"
+
+DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )"
 
 src_unpack() {
@@ -22,21 +24,19 @@ src_unpack() {
 	# from installing
 	epatch "${FILESDIR}/${PN}-no-fd.4-manpage.diff"
 	epatch "${FILESDIR}/${P}-destdirfix.patch"
+	sed -i -e '/\$(INSTALL) -c/s/ -s / /' src/Makefile.in || die "Failed to sed upstream src/Makefile.in to prevent premature strip"
 }
 
 src_compile() {
 	econf --enable-fdmount-floppy-only || die
 
-	if use doc;
-	then
-		make || die
-	else
-		make compile || die
-	fi
+	# parallel make unsafe (bug#315577)
+	emake -j1 $(use doc || echo compile) || die "emake failed"
 }
 
 src_install() {
 	dodoc Changelog
 	use doc && dodir /usr/share/info/
+	dodir /etc
 	emake -j1 DESTDIR="${D}" install || die
 }
