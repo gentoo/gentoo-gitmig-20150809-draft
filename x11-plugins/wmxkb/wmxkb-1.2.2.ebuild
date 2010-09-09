@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.8 2009/12/15 17:46:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.9 2010/09/09 10:33:35 s4t4n Exp $
 
+EAPI=2
 IUSE=""
 
 DESCRIPTION="Dockable keyboard layout switcher for Window Maker"
@@ -20,6 +21,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto
 	x11-proto/inputproto"
+
+src_prepare() {
+	#Honour Gentoo LDFLAGS, see bug #336528.
+	sed -ie "s/\$(LD) -o/\$(LD) \$(LDFLAGS) -o/" Makefile.in
+}
 
 src_install () {
 	make DESTDIR="${D}" BINDIR="${D}/usr/bin" DOCDIR="${D}/usr/share/doc" DATADIR="${D}/usr/share" install
