@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.1 2008/05/29 16:24:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.2 2010/09/09 11:44:30 ulm Exp $
 
 inherit elisp eutils
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE=""
 
+ELISP_PATCHES="${P}-skram-path.patch"
 SITEFILE="52${PN}-gentoo.el"
 
 src_compile() {
-	econf || die "econf failed"
-	emake -j1 || die "emake failed"
+	econf
+	emake -j1 || die
 }
 
 src_install() {
