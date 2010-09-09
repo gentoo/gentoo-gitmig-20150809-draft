@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/cagibi
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/cagibi/ChangeLog,v 1.1 2010/09/09 22:29:27 reavertm Exp $
+
+*cagibi-0.1.1 (09 Sep 2010)
+
+  09 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> +cagibi-0.1.1.ebuild,
+  +metadata.xml:
+  Add new package. Ebuild by Dennis Schridde
+
