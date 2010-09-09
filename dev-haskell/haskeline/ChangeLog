@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.5 2010/07/20 13:34:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.6 2010/09/09 19:38:01 slyfox Exp $
+
+  09 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  haskeline-0.6.2.2.ebuild:
+  Marked ~sparc
 
   20 Jul 2010; Joseph Jezak <josejx@gentoo.org> haskeline-0.6.2.2.ebuild:
   Marked ~ppc.
