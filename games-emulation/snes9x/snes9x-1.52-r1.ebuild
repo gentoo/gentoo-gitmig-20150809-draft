@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.5 2010/07/19 19:14:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.6 2010/09/09 16:46:36 mr_bones_ Exp $
 
-EAPI=3
+EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
