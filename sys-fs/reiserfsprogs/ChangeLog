@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.50 2010/01/09 17:57:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.51 2010/09/09 20:32:05 ranger Exp $
+
+  09 Sep 2010; Brent Baude <ranger@gentoo.org> reiserfsprogs-3.6.21.ebuild:
+  Marking reiserfsprogs-3.6.21 ppc64 for bug 336083
 
   09 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   reiserfsprogs-3.6.21.ebuild:
