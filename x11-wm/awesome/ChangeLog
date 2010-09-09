@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.104 2010/09/06 17:47:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.105 2010/09/09 10:52:38 scarabeus Exp $
+
+  09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> awesome-3.4.4.ebuild,
+  awesome-3.4.5.ebuild, awesome-3.4.6.ebuild, awesome-3.4.7.ebuild:
+  Update deps on libX11[xcb].
 
 *awesome-3.4.7 (06 Sep 2010)
 
