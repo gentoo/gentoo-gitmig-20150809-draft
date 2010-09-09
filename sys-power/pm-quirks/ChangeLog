@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-quirks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.10 2010/08/21 18:49:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.11 2010/09/09 03:17:10 josejx Exp $
+
+  09 Sep 2010; Joseph Jezak <josejx@gentoo.org> pm-quirks-20100619.ebuild:
+  Marked ppc/ppc64 stable for bug #329625.
 
   21 Aug 2010; Markus Meier <maekke@gentoo.org> pm-quirks-20100619.ebuild:
   arm stable, bug #329625
