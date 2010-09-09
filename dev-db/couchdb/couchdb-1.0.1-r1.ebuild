@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1-r1.ebuild,v 1.1 2010/09/01 09:22:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1-r1.ebuild,v 1.2 2010/09/09 14:50:58 djc Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/apache-${P}"
 
 pkg_setup() {
 	enewgroup couchdb
-	enewuser couchdb -1 /sbin/nologin /var/lib/couchdb couchdb
+	enewuser couchdb -1 -1 /var/lib/couchdb couchdb
 }
 
 src_configure() {
