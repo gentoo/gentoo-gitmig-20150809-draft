@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tryouts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.6 2010/07/28 23:20:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.7 2010/09/09 13:06:33 flameeyes Exp $
+
+  09 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  tryouts-0.8.8.ebuild:
+  Remove jruby support from 0.8.8, as that's “dead”.
 
 *tryouts-2.0.1.002 (28 Jul 2010)
 

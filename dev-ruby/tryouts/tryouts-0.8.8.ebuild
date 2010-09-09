@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.8.ebuild,v 1.4 2010/07/28 23:20:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.8.ebuild,v 1.5 2010/09/09 13:06:33 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
