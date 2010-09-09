@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.619 2010/08/28 14:54:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.620 2010/09/09 11:03:42 scarabeus Exp $
+
+  09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> vlc-1.1.4.ebuild,
+  vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  Update deps on libX11[xcb].
 
   28 Aug 2010; Alexis Ballier <aballier@gentoo.org> -vlc-1.1.2.ebuild,
   -vlc-1.1.3.ebuild:
