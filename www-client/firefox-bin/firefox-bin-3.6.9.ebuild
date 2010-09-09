@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.9.ebuild,v 1.2 2010/09/08 08:28:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.9.ebuild,v 1.3 2010/09/09 17:10:49 fauli Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -23,7 +23,7 @@ SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"

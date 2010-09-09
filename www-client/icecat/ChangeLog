@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.40 2010/09/09 11:42:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.41 2010/09/09 17:19:34 fauli Exp $
+
+  09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> icecat-3.6.9.ebuild:
+  stable x86, security bug 336396
 
   09 Sep 2010; Lars Wendler <polynomial-c@gentoo.org>
   +files/402-oggzfbsd.patch, icecat-3.6.9.ebuild:
