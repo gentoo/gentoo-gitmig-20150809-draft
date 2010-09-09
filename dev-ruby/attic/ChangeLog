@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/attic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.8 2010/07/28 23:13:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.9 2010/09/09 18:02:09 flameeyes Exp $
+
+  09 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org> attic-0.5.2.ebuild:
+  Remove JRuby support.
 
   28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> attic-0.5.2.ebuild:
   Depend on slotted tryouts.

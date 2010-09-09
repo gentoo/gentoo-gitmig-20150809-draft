@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/caesars
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/ChangeLog,v 1.2 2010/03/16 12:35:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/ChangeLog,v 1.3 2010/09/09 18:04:44 flameeyes Exp $
+
+  09 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  caesars-0.7.4.ebuild:
+  Remove JRuby support.
 
 *caesars-0.7.4 (16 Mar 2010)
 
