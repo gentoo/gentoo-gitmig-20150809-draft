@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.62_pre6438.ebuild,v 1.1 2010/09/07 23:03:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.62.ebuild,v 1.1 2010/09/09 15:30:34 jer Exp $
 
 EAPI="2"
 
@@ -16,15 +16,15 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="mirror test"
 
-O_V="${PV/_pre/-}"
+O_V="${PV/_pre/-}-6438"
 O_P="${PN}-${O_V}"
-O_U="http://snapshot.opera.com/unix/uptime_${O_V}/"
+O_U="mirror://opera/"
 
 SRC_URI="
-	amd64? ( ${O_U}${O_P}.x86_64.linux.tar.bz2 )
-	ppc? ( ${O_U}${O_P}.ppc.linux.tar.bz2 )
-	x86? ( ${O_U}${O_P}.i386.linux.tar.bz2 )
-	x86-fbsd? ( ${O_U}${O_P}.i386.freebsd.tar.bz2 )
+	amd64? ( ${O_U}linux/${PV/./}/${O_P}.x86_64.linux.tar.bz2 )
+	ppc? ( ${O_U}linux/${PV/./}/${O_P}.ppc.linux.tar.bz2 )
+	x86? ( ${O_U}linux/${PV/./}/${O_P}.i386.linux.tar.bz2 )
+	x86-fbsd? ( ${O_U}unix/${PV/./}/${O_P}.i386.freebsd.tar.bz2 )
 "
 
 OPREFIX="/usr/$(get_libdir)"
