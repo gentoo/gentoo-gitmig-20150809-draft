@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69-r1.ebuild,v 1.3 2010/06/28 22:40:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69-r1.ebuild,v 1.4 2010/09/09 16:55:55 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils games
 
 MY_PV=${PV//.}
@@ -47,7 +46,6 @@ DEPEND=""
 
 S=${WORKDIR}/nwn
 
-GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
