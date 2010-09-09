@@ -1,0 +1,11 @@
+--- Makefile.old	2010-09-09 16:24:38.000000000 +0200
++++ Makefile	2010-09-09 16:24:58.000000000 +0200
+@@ -24,7 +24,7 @@
+ 	$(CC) src/messages.c -c `sdl-config --cflags`
+ 	$(CC) src/camera.c   -c `sdl-config --cflags`
+ 
+-	$(CC) main.o timing.o vector.o fifo.o ortho.o audio.o font.o \
++	$(CC) ${LDFLAGS} main.o timing.o vector.o fifo.o ortho.o audio.o font.o \
+ 	init.o textures.o terrain.o menu.o game.o hud.o messages.o \
+ 	camera.o \
+ 	-o $(BIN) -lGL -lGLU -lSDL_image -lSDL_mixer -lm `sdl-config --libs`

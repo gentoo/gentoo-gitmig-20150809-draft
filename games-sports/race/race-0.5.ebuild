@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.12 2007/03/13 23:25:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.13 2010/09/09 14:28:29 tupone Exp $
+EAPI="2"
 
 inherit eutils toolchain-funcs games
 
@@ -19,15 +20,14 @@ DEPEND="virtual/opengl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/src
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:g" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}:g" \
-		*.c || die "sed failed"
-	find "${S}"/data/ -type d -name .xvpics -print0 | xargs -0 rm -rf
+		src/*.c || die "sed failed"
+	find data/ -type d -name .xvpics -print0 | xargs -0 rm -rf
 }
 
 src_compile() {

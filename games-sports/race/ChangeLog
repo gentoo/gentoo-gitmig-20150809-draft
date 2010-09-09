@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/race
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/ChangeLog,v 1.8 2007/03/12 17:36:28 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/ChangeLog,v 1.9 2010/09/09 14:28:29 tupone Exp $
+
+  09 Sep 2010; Tupone Alfredo <tupone@gentoo.org> race-0.5.ebuild,
+  +files/race-0.5-ldflags.patch:
+  Respect LDFLAGS. Bug #336541 by flameeyes@gentoo.org
 
   12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> race-0.5.ebuild:
   Install menu entry, bug #160244
