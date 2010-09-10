@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.84 2010/09/05 07:49:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.85 2010/09/10 23:04:36 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libXext-1.0.5.ebuild:
+  remove old
 
 *libXext-1.1.2-r1 (05 Sep 2010)
 
