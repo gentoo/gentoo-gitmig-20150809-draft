@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86miscproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.36 2010/01/19 20:34:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.37 2010/09/10 18:31:33 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86miscproto-0.9.2.ebuild, xf86miscproto-0.9.3.ebuild:
+  rm
 
   19 Jan 2010; Raúl Porcel <armin76@gentoo.org> xf86miscproto-0.9.3.ebuild:
   s390 stable wrt #294958
