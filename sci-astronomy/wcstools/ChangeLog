@@ -1,6 +1,19 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.17 2010/01/29 06:51:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.18 2010/09/10 10:25:59 xarthisius Exp $
+
+*wcstools-3.8.1-r1 (10 Sep 2010)
+
+  10 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/wcstools-3.7.0-fix-leaks.patch, -wcstools-3.7.7.ebuild,
+  -files/wcstools-3.7-autotools.patch, -wcstools-3.8.1.ebuild,
+  +wcstools-3.8.1-r1.ebuild, +files/wcstools-3.8.1-autotools.patch,
+  +files/wcstools-3.8.1-format.patch, +files/wcstools-3.8.1-implicits.patch,
+  +files/wcstools-3.8.1-invalid_free.patch,
+  +files/wcstools-3.8.1-overflows.patch:
+  Fix multiple QA issues: implicit function declarations, invalid free,
+  overflows, wrong printf format. Fixes bug 336601. Thanks to Diego for the
+  report. Drop old.
 
 *wcstools-3.8.1 (29 Jan 2010)
 

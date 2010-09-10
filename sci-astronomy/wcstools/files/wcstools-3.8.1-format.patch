@@ -1,0 +1,24 @@
+warning: too few arguments for format
+
+--- libwcs/ucacread.c
++++ libwcs/ucacread.c
+@@ -734,7 +734,7 @@
+ 		else if (ucat == UCAC2) {
+ 		    fprintf (stderr,"UCACRNUM: %11.6f: %9.5f %9.5f %5.2f",
+ 			     num, ra, dec, star->xmag[0]);
+-		    fprintf (stderr," %5.2f %5.2f %5.2f %d %d",
++		    fprintf (stderr," %5.2f %5.2f %5.2f",
+ 			     star->xmag[1],star->xmag[2],star->xmag[3]);
+ 		    fprintf (stderr," %d %d\n",star->nimage,star->ncat);
+ 		    }
+--- imcat.c
++++ imcat.c
+@@ -1923,7 +1923,7 @@
+ 		    if (tabout && (refcat == UCAC2 || refcat == UCAC3)) {
+ 			era = gm[nmag][i] * cosdeg (gdec[i]) * 3600.0;
+ 			edec = gm[nmag+1][i] * 3600.0;
+-			sprintf (temp, "	%5.3f	%5.3f");
++			sprintf (temp, "	%5.3f	%5.3f", era, edec);
+ 			strcat (headline, temp);
+ 			}
+ 		    for (imag = 0; imag < nmag; imag++) {

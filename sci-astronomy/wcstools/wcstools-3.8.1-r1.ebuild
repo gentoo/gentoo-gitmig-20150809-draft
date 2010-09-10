@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.7.ebuild,v 1.3 2009/09/09 16:06:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.8.1-r1.ebuild,v 1.1 2010/09/10 10:25:59 xarthisius Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -15,15 +15,19 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.7.0-fix-leaks.patch
-	epatch "${FILESDIR}"/${PN}-3.7-autotools.patch
+	epatch "${FILESDIR}"/${P}-autotools.patch \
+		"${FILESDIR}"/${P}-format.patch \
+		"${FILESDIR}"/${P}-implicits.patch \
+		"${FILESDIR}"/${P}-invalid_free.patch \
+		"${FILESDIR}"/${P}-overflows.patch
+
 	# avoid colliding with fixdos, getdate and remap from other packages
 	sed -i \
 		-e 's/getdate/wcsgetdate/' \
 		-e 's/crlf/wcscrlf/' \
 		-e 's/remap/wcsremap/' \
-		wcstools Makefile.am || die
-	sed -i -e "s/3.7.x/${PV}/" "${S}"/configure.ac || die "sed failed"
+		-e "s/3.7.x/${PV}/" \
+		wcstools || die
 	eautoreconf
 }
 
@@ -37,11 +41,11 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	doman Man/man1/* || die "doman failed"
-	dodoc Readme Programs NEWS libned/NED_client || die "dodoc failed"
-	newdoc libwcs/Readme Readme.libwcs || die "newdoc failed"
-	newdoc libwcs/NEWS NEWS.libwcs || die "newdoc failed"
+	emake DESTDIR="${D}" install || die
+	doman Man/man1/* || die
+	dodoc Readme Programs NEWS libned/NED_client || die
+	newdoc libwcs/Readme Readme.libwcs || die
+	newdoc libwcs/NEWS NEWS.libwcs || die
 }
 
 pkg_postinst() {

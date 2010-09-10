@@ -1,0 +1,12 @@
+* imhfile.c:1022:10: warning: attempt to free a non-heap object ‘pixname’
+
+--- wcstools-3.8.1/libwcs/imhfile.c
++++ wcstools-3.8.1/libwcs/imhfile.c
+@@ -1019,7 +1019,6 @@
+     nbw = write (fd, image, nbimage);
+     close (fd);
+ 
+-    free (pixname);
+     return (nbw);
+ }
+ 

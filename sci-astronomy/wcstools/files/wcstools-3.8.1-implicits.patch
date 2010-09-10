@@ -1,0 +1,35 @@
+* ned_sk.c:152:4: warning: implicit declaration of function ‘inet_addr’
+* isfits.c:54:2: warning: implicit declaration of function ‘isfits’
+* nedpos.c:130:6: warning: implicit declaration of function ‘isfile’
+* nedpos.c:131:3: warning: implicit declaration of function ‘getfilelines’
+
+--- wcstools-3.8.1/libned/ned_sk.c
++++ wcstools-3.8.1/libned/ned_sk.c
+@@ -57,6 +57,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <arpa/inet.h>
+ #include <netdb.h>
+ 
+ #include <sys/resource.h>
+--- wcstools-3.8.1/nedpos.c
++++ wcstools-3.8.1/nedpos.c
+@@ -8,6 +8,7 @@
+ #include <string.h>
+ #include "libned/ned_client.h"
+ #include "libwcs/wcs.h"
++#include "libwcs/fitsfile.h"
+ 
+ static char *RevMsg = "NEDPOS 3.8.1, 14 December 2009, Doug Mink SAO";
+ 
+--- wcstools-3.8.1/isfits.c
++++ wcstools-3.8.1/isfits.c
+@@ -27,6 +27,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include "libwcs/fitshead.h"
++#include "libwcs/fitsfile.h"
+ 
+ static char *RevMsg = "ISFITS WCSTools 3.8.1, 14 December 2009, Doug Mink (dmink@cfa.harvard.edu)";
+ 

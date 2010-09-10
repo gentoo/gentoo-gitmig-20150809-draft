@@ -1,0 +1,116 @@
+ call to {} will always overflow destination buffer
+* In function ‘strcpy’, inlined from ‘CopyValues’ at cphead.c:579:9
+* In function ‘strcpy’, inlined from ‘CopyValues’ at cphead.c:602:14
+* In function ‘strcpy’, inlined from ‘SetValues’ at sethead.c:1134:9
+* In function ‘strcpy’, inlined from ‘SetValues’ at sethead.c:1177:14
+* In function ‘strcpy’, inlined from ‘ChangeKeyNames’ at keyhead.c:469:9
+* In function ‘strcpy’, inlined from ‘ChangeKeyNames’ at keyhead.c:487:14
+* In function ‘strcpy’, inlined from ‘ConvertDate’ at getdate.c:452:12
+
+--- wcstools-3.8.1/cphead.c
++++ wcstools-3.8.1/cphead.c
+@@ -372,7 +372,7 @@
+     char *ltime;
+     int naxis, ipos, nbhead, nbr, nbw;
+     int fdr, fdw;
+-    char history[72];
++    char history[75];
+     char echar;
+     char *endchar;
+     int imageread = 0;
+@@ -574,7 +574,7 @@
+ 
+     /* Add history to header */
+     if (keyset || histset) {
+-	if (hgets (headout, "CPHEAD", 72, history))
++	if (hgets (headout, "CPHEAD", 75, history))
+ 	    hputc (headout, "HISTORY", history);
+ 	strcpy (history, RevMsg);
+ 	endchar = strchr (history, ',');
+@@ -593,7 +593,7 @@
+ 	    lkwd = strlen (kwd[ikwd]);
+ 
+ 	    /* If too may keywords, start a second history line */
+-	    if (lhist + lkwd + 10 > 71) {
++	    if (lhist + lkwd + 10 > 74) {
+ 		if (histset) {
+ 		    if (history[lhist-2] == ',')
+ 			history[lhist-2] = (char) 0;
+--- wcstools-3.8.1/sethead.c
++++ wcstools-3.8.1/sethead.c
+@@ -616,7 +616,7 @@
+     int nbold, nbnew;
+     int imageread = 0;
+     char cval[24];
+-    char history[72];
++    char history[76];
+     char *endchar;
+     char *ltime;
+     char newkey[10];
+@@ -891,7 +891,7 @@
+ 
+ 	    /* Add, subtract, multiply, or divide keyword value by constant */
+ 	    if (keyop) {
+-		if (!hgets (header, opkey, 72,string)) {
++		if (!hgets (header, opkey, 76,string)) {
+ 		    if (verbose)
+ 			printf ("* %s %c %s keyword not in header.\n",
+ 			    opkey, ops[keyop], kwv);
+@@ -1129,7 +1129,7 @@
+ 
+     /* Add history to header */
+     if (keyset || histset) {
+-	if (hgets (header, "SETHEAD", 72, history))
++	if (hgets (header, "SETHEAD", 76, history))
+ 	    hputc (header, "HISTORY", history);
+ 	strcpy (history, RevMsg);
+ 	endchar = strchr (history, ',');
+@@ -1170,7 +1170,7 @@
+ 	    lkwd = strlen (kwd[ikwd]);
+ 
+ 	    /* If too may keywords, start a second history line */
+-	    if (lhist + lkwd + 10 > 71) {
++	    if (lhist + lkwd + 10 > 75) {
+ 		if (histset) {
+ 		    strcat (history, " updated");
+ 		    hputc (header, "HISTORY", history);
+--- wcstools-3.8.1/keyhead.c
++++ wcstools-3.8.1/keyhead.c
+@@ -283,7 +283,7 @@
+     int imageread = 0;
+     char cval[24];
+     int fdr, fdw, ipos, nbr, nbw, nchange;
+-    char history[72];
++    char history[76];
+     char comment[72];
+     char *endchar;
+     char *ltime;
+@@ -464,7 +464,7 @@
+ 
+     /* Add history to header */
+     if (keyset || histset) {
+-	if (hgets (header, "KEYHEAD", 72, history))
++	if (hgets (header, "KEYHEAD", 76, history))
+ 	    hputc (header, "HISTORY", history);
+ 	strcpy (history, RevMsg);
+ 	endchar = strchr (history, ',');
+@@ -480,7 +480,7 @@
+ 	    lkwd = strlen (kwd[ikwd]);
+ 
+ 	    /* If too may keywords, start a second history line */
+-	    if (lhist + lkwd > 71) {
++	    if (lhist + lkwd > 75) {
+ 		if (histset) {
+ 		    strcat (history, " updated");
+ 		    hputc (header, "HISTORY", history);
+--- wcstools-3.8.1/getdate.c
++++ wcstools-3.8.1/getdate.c
+@@ -444,7 +444,7 @@
+     char *fitsdate, *newfdate, *stdate;
+     char temp[64];
+     char fyear[16];
+-    char ts0[8];
++    char ts0[9];
+     char *tchar;
+     int its, its1;
+     time_t lts;
