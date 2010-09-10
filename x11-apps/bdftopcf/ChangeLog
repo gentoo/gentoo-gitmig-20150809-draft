@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/bdftopcf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.40 2010/02/25 07:08:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.41 2010/09/10 22:30:31 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -bdftopcf-1.0.0.ebuild, bdftopcf-1.0.2.ebuild:
+  rm
 
   25 Feb 2010; Jonathan Callen <abcd@gentoo.org> bdftopcf-1.0.2.ebuild:
   Transfer prefix keywords (no other changes)

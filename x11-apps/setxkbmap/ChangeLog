@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/setxkbmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/setxkbmap/ChangeLog,v 1.48 2010/01/19 17:34:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/setxkbmap/ChangeLog,v 1.49 2010/09/10 22:35:31 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -setxkbmap-1.0.4.ebuild:
+  rm
 
   19 Jan 2010; Jonathan Callen <abcd@gentoo.org> setxkbmap-1.1.0.ebuild:
   Keyword ~amd64-linux/~x86-linux
