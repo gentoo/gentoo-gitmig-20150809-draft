@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.31 2010/07/20 03:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.32 2010/09/10 10:53:15 fauli Exp $
+
+  10 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  mtd-utils-20100718.ebuild:
+  stable x86, bug 335949
 
   20 Jul 2010; Mike Frysinger <vapier@gentoo.org> mtd-utils-20100718.ebuild,
   +files/mtd-utils-20100718-ubi-parallel.patch:

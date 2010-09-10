@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.2 2010/07/20 03:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.3 2010/09/10 10:53:15 fauli Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ if [[ ${PV} == "99999999" ]] ; then
 else
 	MY_PV="${PV}-02ae0aac87576d07202a62d11294ea55b56f450b"
 	SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~mips ~ppc x86"
 fi
 
 DESCRIPTION="MTD userspace tools"
