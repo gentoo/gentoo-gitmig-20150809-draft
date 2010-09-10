@@ -1,39 +1,44 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.9.ebuild,v 1.6 2009/09/23 15:15:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.12.ebuild,v 1.1 2010/09/10 18:47:21 tomjbe Exp $
 
-inherit autotools eutils multilib
+PYTHON_DEPEND="2"
+inherit autotools eutils multilib python
 
 DESCRIPTION="Ham radio backend rig control libraries"
-HOMEPAGE="http://hamlib.sourceforge.net/"
+HOMEPAGE="http://sourceforge.net/apps/mediawiki/hamlib"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc python tcl"
 
 RESTRICT="test"
 
-RDEPEND="=virtual/libusb-0*
-	python? ( dev-lang/python
-		dev-lang/tcl )
+RDEPEND="
+	=virtual/libusb-0*
+	dev-libs/libxml2
+	python? ( dev-lang/python )
 	tcl? ( dev-lang/tcl )"
+
 DEPEND=" ${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/swig
-	dev-libs/libxml2
+	>=sys-devel/libtool-2.2
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-pkgconfig-fix.diff \
-		"${FILESDIR}"/${PN}-ltdl.diff
+	# fix hardcoded libdir paths
+	sed -i -e "s#fix}/lib#fix}/$(get_libdir)/hamlib#" \
+		-e "s#fix}/include#fix}/include/hamlib#" \
+		hamlib.pc.in || die "sed failed"
 
-	# remove bundled libltdl copy
-	rm -rf libltdl
+	# fix tcl lib path
+	epatch "${FILESDIR}"/${PN}-1.2.11-bindings.diff
 
 	eautoreconf
 }
@@ -45,7 +50,7 @@ src_compile() {
 		--with-rpc-backends \
 		--without-perl-binding \
 		$(use_with python python-binding) \
-		$(use_with tcl    tcl-binding)
+		$(use_enable tcl tcl-binding)
 
 	emake || die "emake failed"
 
@@ -58,15 +63,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS PLAN README README.betatester \
-		README.developer LICENSE NEWS TODO
+		README.developer NEWS TODO || die "dodoc failed"
 
 	if use doc; then
-		dohtml doc/html/*
+		dohtml doc/html/* || die "dohtml failed"
 	fi
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins hamlib.pc
+	doins hamlib.pc || die "doins failed"
 
 	echo "LDPATH=/usr/$(get_libdir)/hamlib" > "${T}"/73hamlib
-	doenvd "${T}"/73hamlib
+	doenvd "${T}"/73hamlib || die "doenvd failed"
 }
