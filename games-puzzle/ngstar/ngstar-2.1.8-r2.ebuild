@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.5 2008/05/02 19:44:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.6 2010/09/10 07:36:08 tupone Exp $
+EAPI="2"
 
 inherit eutils games
 
@@ -16,25 +17,24 @@ IUSE=""
 DEPEND="sys-libs/ncurses
 	sys-libs/gpm"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo-path.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:@GENTOO_DATA@:${GAMES_DATADIR}:" \
 		-e "s:@GENTOO_BIN@:${GAMES_BINDIR}:" \
 		-e "/^CPPFLAGS/s:+=:+= ${CXXFLAGS}:" \
+		-e "/SILENT/d" \
 		configure || die "sed configure failed"
 	sed -i '/strip/d' src/Makefile || die "sed makefile failed"
 }
 
-src_compile() {
+src_configure() {
 	./configure \
 		--prefix "" \
 		--without-fltk2 || die "configure failed"
-	emake || die "emake failed"
 }
 
 src_install() {
