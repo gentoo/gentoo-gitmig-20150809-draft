@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.66 2010/07/24 14:52:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.67 2010/09/10 14:06:05 klausman Exp $
+
+  10 Sep 2010; Tobias Klausmann <klausman@gentoo.org> buildbot-0.8.0.ebuild:
+  Stable on alpha, bug #325899
 
   24 Jul 2010; Markus Meier <maekke@gentoo.org> buildbot-0.8.0.ebuild:
   arm stable, bug #325899
