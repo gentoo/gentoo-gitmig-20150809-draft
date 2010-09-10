@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainter-needed@gentoo.org</email>
+		<email>arfrever@gentoo.org</email>
+		<name>Arfrever Frehtes Taifersar Arahesis</name>
 	</maintainer>
 	<use>
 		<flag name="vim">Integrate the GNU GLOBAL source code tag system with Vim</flag>
