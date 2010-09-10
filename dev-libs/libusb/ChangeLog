@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.106 2010/08/21 18:45:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.107 2010/09/10 12:56:58 klausman Exp $
+
+  10 Sep 2010; Tobias Klausmann <klausman@gentoo.org> libusb-1.0.8.ebuild:
+  Stable on alpha, bug #304149
 
   21 Aug 2010; Markus Meier <maekke@gentoo.org> libusb-1.0.8.ebuild:
   arm stable, bug #304149
