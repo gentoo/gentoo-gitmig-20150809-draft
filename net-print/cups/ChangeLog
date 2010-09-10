@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.396 2010/08/13 11:25:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.397 2010/09/10 23:39:15 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.4-r1.ebuild:
+  Revision bump again. This time with mimimalistic patches only altering
+  build. Feel free to rework them.
 
   13 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -cups-1.4.4-r1.ebuild:
