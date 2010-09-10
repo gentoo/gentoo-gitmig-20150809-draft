@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.5 2010/09/10 06:48:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.6 2010/09/10 14:27:45 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -120,7 +120,7 @@ src_unpack() {
 
 src_prepare() {
 	# Integrate rebranding
-	sed -i "s|/mozilla-firefox|/icecat|" \
+	sed -i "s|/firefox|/icecat|" \
 		"${WORKDIR}"/001-firefox_gentoo_install_dirs.patch
 
 	# Fix preferences location
