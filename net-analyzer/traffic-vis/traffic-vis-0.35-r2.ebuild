@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r2.ebuild,v 1.1 2010/09/10 05:14:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/traffic-vis-0.35-r2.ebuild,v 1.2 2010/09/10 07:46:04 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 	sed -i frontends/traffic-togif \
 		-e "s:/usr/sbin/traffic-tops:/usr/bin/traffic-tops:g" \
 		|| die "sed frontends/traffic-togif"
-	
+
 	tc-export CC
 }
 
