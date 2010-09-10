@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.293 2010/04/14 14:40:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.294 2010/09/10 17:44:07 ssuominen Exp $
+
+*xterm-262 (10 Sep 2010)
+
+  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +xterm-262.ebuild:
+  Version bump wrt #336745 by Jeroen Roovers. Pass --enable-exec-xterm wrt
+  #315353 by Dimitrios Christidis.
 
 *xterm-256 (14 Apr 2010)
 
