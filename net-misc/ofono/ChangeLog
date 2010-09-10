@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.20 2010/09/08 14:49:13 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.21 2010/09/10 12:40:37 dagger Exp $
+
+*ofono-0.28 (10 Sep 2010)
+
+  10 Sep 2010; Robert Piasek <dagger@gentoo.org> -ofono-0.25.ebuild,
+  +ofono-0.28.ebuild:
+  Version bump
 
 *ofono-0.27 (08 Sep 2010)
 
