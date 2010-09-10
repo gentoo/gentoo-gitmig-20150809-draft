@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/dmxproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.42 2010/08/02 18:05:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.43 2010/09/10 17:39:44 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -dmxproto-2.2.2.ebuild:
+  rm
 
   02 Aug 2010; Raúl Porcel <armin76@gentoo.org> dmxproto-2.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #308521

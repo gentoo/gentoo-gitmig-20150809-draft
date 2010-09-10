@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/compositeproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.44 2010/01/19 20:29:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.45 2010/09/10 17:35:31 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -compositeproto-0.4.ebuild:
+  rm
 
   19 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   compositeproto-0.4.1.ebuild:
