@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.161 2010/09/09 12:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.162 2010/09/10 07:27:51 ssuominen Exp $
+
+  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce-utils-4.7.0.ebuild,
+  +files/xfce-utils-4.7.0-ck-launch-session-2.patch:
+  Run ck-launch-session again to restore functionality with Thunar disk
+  handling wrt upstream #6690.
 
   09 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce-utils-4.7.0.ebuild, +files/xfce-utils-4.7.0-ck-launch-session.patch:
