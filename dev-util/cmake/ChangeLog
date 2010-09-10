@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.142 2010/08/11 21:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.143 2010/09/10 13:55:44 klausman Exp $
+
+  10 Sep 2010; Tobias Klausmann <klausman@gentoo.org> cmake-2.8.1-r2.ebuild:
+  Stable on alpha, bug #325845
 
   11 Aug 2010; Markus Meier <maekke@gentoo.org> cmake-2.8.1-r2.ebuild:
   arm stable, bug #325845
