@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.8.9.ebuild,v 1.2 2010/08/31 00:04:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.0.ebuild,v 1.1 2010/09/10 12:31:22 flameeyes Exp $
 
 EAPI=2
 
