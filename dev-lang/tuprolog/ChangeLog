@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.30 2010/09/08 08:35:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.31 2010/09/10 23:44:19 keri Exp $
+
+  10 Sep 2010; <keri@gentoo.org> +files/tuprolog-2.3.0_alpha-javadocs.patch:
+  Re-add tuprolog-2.3.0_alpha-javadocs.patch as a binary file; it contains
+  CVS Id tags
 
 *tuprolog-2.3.0_alpha (08 Sep 2010)
 
