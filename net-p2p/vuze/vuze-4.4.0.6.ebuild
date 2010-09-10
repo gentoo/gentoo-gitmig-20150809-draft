@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.4.0.6.ebuild,v 1.1 2010/06/17 21:26:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.4.0.6.ebuild,v 1.2 2010/09/10 15:28:54 caster Exp $
 
 EAPI=2
 
@@ -81,7 +81,7 @@ EANT_GENTOO_CLASSPATH="swt-3.5,bcprov-1.3,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem
-	use amd64 && mem="256"
+	use amd64 && mem="320"
 	use x86   && mem="192"
 	use ppc   && mem="192"
 	use ppc64 && mem="256"
