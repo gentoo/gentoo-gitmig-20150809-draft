@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/usbprog
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/usbprog/ChangeLog,v 1.1 2010/09/10 23:33:42 robbat2 Exp $
+
+*usbprog-0.2.0 (10 Sep 2010)
+
+  10 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> +usbprog-0.2.0.ebuild,
+  +metadata.xml:
+  Initial commit, based on ebuild submitted by Günther Hutzl
+  <ghutzl@web.de>.
+
