@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.16.ebuild,v 1.8 2010/09/10 15:03:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.16.ebuild,v 1.9 2010/09/10 15:15:40 ssuominen Exp $
 
 EAPI=2
 inherit elisp-common
@@ -27,7 +27,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with emacs lispdir "${SITELISP}"/${PN})
+		"$(use_with emacs lispdir "${SITELISP}"/${PN})"
 }
 
 src_compile() {
