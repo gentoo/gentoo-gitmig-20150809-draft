@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>arfrever@gentoo.org</email>
+		<name>Arfrever Frehtes Taifersar Arahesis</name>
 	</maintainer>
 	<longdescription>
 	Neon is an HTTP and WebDAV client library for Unix systems, with a C

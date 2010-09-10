@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.30 2010/08/19 16:53:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.31 2010/09/10 21:30:05 arfrever Exp $
+
+  10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  metadata.xml:
+  Restore previous maintainer.
 
   19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove arfrever.
