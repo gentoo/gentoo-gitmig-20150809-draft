@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.1 2009/12/08 22:10:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.2 2010/09/10 05:14:56 ssuominen Exp $
 
 inherit toolchain-funcs multilib cmake-utils flag-o-matic
 
@@ -22,6 +22,8 @@ if [[ ${PV//_p} == ${PV} ]]; then
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 fi
+
+PATCHES=( "${FILESDIR}"/${P}-glibc-212.patch )
 
 src_compile() {
 	tc-export CC CXX LD

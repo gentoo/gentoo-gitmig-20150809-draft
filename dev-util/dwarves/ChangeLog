@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dwarves
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.9 2009/12/08 22:10:36 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.10 2010/09/10 05:14:56 ssuominen Exp $
+
+  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> dwarves-1.8.ebuild,
+  +files/dwarves-1.8-glibc-212.patch:
+  Fix building with recent glibc wrt #336478 by Benjamin Bannier.
 
 *dwarves-1.8 (08 Dec 2009)
 
