@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.16.ebuild,v 1.7 2010/05/19 20:11:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.16.ebuild,v 1.8 2010/09/10 15:03:34 ssuominen Exp $
 
 EAPI=2
 inherit elisp-common
@@ -23,6 +23,11 @@ SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
 	sed -i -e '/SUBDIRS/s:misc::' Makefile.in || die
+}
+
+src_configure() {
+	econf \
+		$(use_with emacs lispdir "${SITELISP}"/${PN})
 }
 
 src_compile() {
