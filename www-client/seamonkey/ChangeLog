@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.253 2010/09/09 17:16:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.254 2010/09/10 10:43:57 polynomial-c Exp $
+
+  10 Sep 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.7.ebuild:
+  New patchset with disable-printing patch. Hopefully fixes bug #336648
 
   09 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   seamonkey-2.0.7.ebuild:
