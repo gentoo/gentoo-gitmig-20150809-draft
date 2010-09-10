@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.98 2010/09/09 19:49:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.99 2010/09/10 21:43:20 arfrever Exp $
+
+  10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygobject-2.20.0.ebuild:
+  Restrict 2.4 Python ABI (bug #325895).
 
   09 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -pygobject-2.18.0.ebuild, -pygobject-2.18.0-r2.ebuild,
