@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.11.ebuild,v 1.1 2010/08/24 18:12:07 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.11.ebuild,v 1.2 2010/09/10 17:57:48 grobian Exp $
 
-EAPI=2
+EAPI=3
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
@@ -20,7 +20,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "
@@ -50,7 +50,7 @@ all_ruby_install() {
 		if use ruby_targets_ruby19; then
 			ruby_fakegem_binwrapper $bin /usr/bin/${bin}19
 			sed -i -e "1s/env ruby/ruby19/" \
-				"${D}/usr/bin/${bin}19" || die
+				"${ED}/usr/bin/${bin}19" || die
 		fi
 	done
 }
