@@ -12,7 +12,6 @@
 		<flag name="ethernet">Enable ethernet support.</flag>
 		<flag name="google">Enable Google Public DNS support.</flag>
 		<flag name="ofono">Use <pkg>net-misc/ofono</pkg> for telephony support.</flag>
-		<flag name="resolvconf">Use <pkg>rnet-dns/openresolv</pkg> for resolvconf support.</flag>
 		<flag name="tools">Enable testing tools.</flag>
 		<flag name="udev">Enable udev support.</flag>
 		<flag name="wimax">Use <pkg>net-wireless/wimax</pkg> for WiMAX support.</flag>

@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.60.ebuild,v 1.1 2010/09/10 13:50:25 dagger Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -12,8 +12,8 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofono policykit resolvconf threads tools +udev +wifi wimax"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofono policykit threads tools +udev +wifi wimax"
 # gps meego ospm openconnect
 
 RDEPEND=">=dev-libs/glib-2.16
@@ -23,13 +23,16 @@ RDEPEND=">=dev-libs/glib-2.16
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
 	policykit? ( >=sys-auth/policykit-0.7 )
-	resolvconf? ( net-dns/openresolv )
 	udev? ( >=sys-fs/udev-141 )
 	wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )
 	wimax? ( net-wireless/wimax )"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix-iptables-test.patch"
+}
 
 src_configure() {
 	econf \
@@ -39,13 +42,12 @@ src_configure() {
 		--enable-datafiles \
 		--enable-loopback=builtin \
 		$(use_enable caps capng) \
-		$(use_enable example test) \
+		$(use_enable examples test) \
 		$(use_enable ethernet ethernet builtin) \
 		$(use_enable wifi wifi builtin) \
 		$(use_enable bluetooth bluetooth builtin) \
 		$(use_enable ofono ofono builtin) \
 		$(use_enable dhclient dhclient builtin) \
-		$(use_enable resolvconf resolvconf builtin) \
 		$(use_enable dnsproxy dnsproxy builtin) \
 		$(use_enable google google builtin) \
 		$(use_enable policykit polkit builtin) \
@@ -55,7 +57,6 @@ src_configure() {
 		$(use_enable threads) \
 		$(use_enable tools) \
 		$(use_enable udev) \
-		--disable-udhcp \
 		--disable-iospm \
 		--disable-hh2serial-gps \
 		--disable-portal \
