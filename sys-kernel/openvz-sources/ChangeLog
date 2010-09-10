@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.145 2010/09/10 07:23:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.146 2010/09/10 07:40:31 pva Exp $
 
 *openvz-sources-2.6.32.8.1 (10 Sep 2010)
 
@@ -20,7 +20,8 @@
   -files/openvz-sources-2.6.27.4.1-splice.patch,
   -files/openvz-sources-2.6.27.4.1-task-state-percpu-counters.patch,
   +openvz-sources-2.6.27.6.1-r1.ebuild, -openvz-sources-2.6.32.6.1.ebuild:
-  Merged in 2.6.27.53 to fix security problems. Dropped old.
+  Merged in 2.6.27.53 to fix security problem, bug #334239, thank Dennis
+  Schridde for report. Dropped old.
 
 *openvz-sources-2.6.18.028.070.4 (30 Aug 2010)
 
