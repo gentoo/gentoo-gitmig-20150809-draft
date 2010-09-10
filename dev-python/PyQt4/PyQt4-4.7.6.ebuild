@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.6.ebuild,v 1.1 2010/09/08 23:30:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.6.ebuild,v 1.2 2010/09/10 22:02:27 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
@@ -50,8 +51,6 @@ PATCHES=(
 )
 
 src_prepare() {
-	use prefix || EPREFIX=
-
 	if ! use dbus; then
 		sed -i -e 's,^\([[:blank:]]\+\)check_dbus(),\1pass,' \
 			"${S}"/configure.py || die
@@ -70,7 +69,7 @@ src_prepare() {
 	python_copy_sources
 
 	preparation() {
-		if [[ "${PYTHON_ABI:0:1}" == "3" ]]; then
+		if [[ "$(python_get_version --major)" == "3" ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
@@ -84,8 +83,6 @@ pyqt4_use_enable() {
 }
 
 src_configure() {
-	use prefix || EPREFIX=
-
 	configuration() {
 		local myconf="$(PYTHON) configure.py
 				--confirm-license
