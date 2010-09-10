@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.207 2010/08/26 19:30:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.208 2010/09/10 07:55:07 angelos Exp $
+
+*mpd-0.15.12-r1 (06 Sep 2010)
+
+  06 Sep 2010; <angelos@gentoo.org> +mpd-0.15.12-r1.ebuild,
+  +files/mpd.conf.patch, +files/mpd.init:
+  Tweak default pid/log paths (bug #331723), fix init script dependencies
+  (bug #331725), reduce init script noise (bug #331727) and convert init
+  script to s-s-d (bug #331729)
 
   26 Aug 2010; Jeroen Roovers <jer@gentoo.org> mpd-0.15.12.ebuild:
   Marked ~hppa (bug #333941).
