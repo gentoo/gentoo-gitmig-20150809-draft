@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.5-r1.ebuild,v 1.2 2010/09/10 04:13:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.5-r1.ebuild,v 1.3 2010/09/10 10:49:48 hwoarang Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://bip.t1r.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug freenode noctcp ssl vim-syntax oidentd"
 
 DEPEND="ssl? ( dev-libs/openssl )"
