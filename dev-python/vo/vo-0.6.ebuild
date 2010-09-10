@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.6.ebuild,v 1.1 2010/09/02 16:23:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.6.ebuild,v 1.2 2010/09/10 21:50:56 arfrever Exp $
 
 EAPI=3
 
-#PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils eutils
@@ -21,6 +22,8 @@ LICENSE="BSD"
 
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-expat.patch

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.1 2010/09/02 16:23:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.2 2010/09/10 21:50:56 arfrever Exp $
+
+  10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  vo-0.6.ebuild:
+  Fix dependencies. Avoid breaking strict-aliasing rules.
 
   02 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> +vo-0.6.ebuild,
   +files/vo-0.6-expat.patch, +metadata.xml:
