@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.17.ebuild,v 1.1 2010/09/07 01:26:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.17.ebuild,v 1.2 2010/09/10 06:39:45 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.6
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE=""
 
 SHARED_DEPEND="
-	>=app-text/podofo-0.7
+	>=app-text/podofo-0.8.2
 	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=dev-libs/chmlib-0.40
 	>=dev-python/beautifulsoup-3.0.5
