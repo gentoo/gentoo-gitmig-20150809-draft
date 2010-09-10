@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.52 2010/08/02 18:28:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.53 2010/09/10 17:17:02 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libXxf86dga-1.0.1.ebuild, -libXxf86dga-1.0.2.ebuild:
+  rm
 
   02 Aug 2010; Raúl Porcel <armin76@gentoo.org> libXxf86dga-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #308521
