@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/printproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.40 2010/02/25 07:40:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.41 2010/09/10 18:15:36 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -printproto-1.0.3.ebuild:
+  rm
 
   25 Feb 2010; Jonathan Callen <abcd@gentoo.org> printproto-1.0.4.ebuild:
   Transfer prefix keywords (no other changes)
