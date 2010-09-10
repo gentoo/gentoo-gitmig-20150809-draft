@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.8 2009/01/28 23:40:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/xskat-4.0.ebuild,v 1.9 2010/09/10 10:32:30 tupone Exp $
 
-inherit eutils games
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="Famous german card game"
 HOMEPAGE="http://www.xskat.de/xskat.html"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	xmkmf -a || die "xmkmf failed"
-	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed"
+	emake CDEBUGFLAGS="${CFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {

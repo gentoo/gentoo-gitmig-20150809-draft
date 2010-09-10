@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xskat
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/ChangeLog,v 1.12 2009/01/28 23:40:55 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/ChangeLog,v 1.13 2010/09/10 10:32:30 tupone Exp $
+
+  10 Sep 2010; Tupone Alfredo <tupone@gentoo.org> xskat-4.0.ebuild:
+  Respect LDFLAGS. Bug #336002 by flameeyes@gentoo.org
 
   28 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xskat-4.0.ebuild:
   add media-fonts/font-misc-misc dep for bug #256689
