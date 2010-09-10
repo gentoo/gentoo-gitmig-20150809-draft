@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.2.ebuild,v 1.1 2010/08/18 09:49:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.2.ebuild,v 1.2 2010/09/10 21:41:24 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,15 +28,21 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+DISTUTILS_GLOBAL_OPTIONS=("--with-debugsupport")
 DOCS="CHANGES"
 PYTHON_MODNAME="jinja2"
+
+src_prepare() {
+	distutils_src_prepare
+	find examples -name "*.py[co]" -print0 | xargs -0 rm -f
+}
 
 src_compile(){
 	distutils_src_compile
 
 	if use doc; then
-		cd docs
 		einfo "Generation of documentation"
+		cd docs
 		PYTHONPATH=".." emake html || die "Building of documentation failed"
 	fi
 }
