@@ -1,13 +1,13 @@
 # ChangeLog for sci-biology/eugene
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.6 2010/09/10 16:37:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.7 2010/09/10 16:41:31 xarthisius Exp $
 
 *eugene-3.6-r1 (10 Sep 2010)
 
   10 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -eugene-3.6.ebuild,
   +eugene-3.6-r1.ebuild, +files/eugene-3.6-overflow.patch,
   +files/eugene-3.6-plugins.patch:
-  Fix overflows wrt bug 336604 and install path wrt bug 297536. Thanks to
+  Fix overflows wrt bug 336607 and install path wrt bug 297536. Thanks to
   Diego for the reports.
 
 *eugene-3.6 (07 May 2010)
