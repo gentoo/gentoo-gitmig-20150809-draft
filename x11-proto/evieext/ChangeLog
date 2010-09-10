@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.38 2010/02/11 18:26:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.39 2010/09/10 17:53:07 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -evieext-1.0.2.ebuild, evieext-1.1.0.ebuild:
+  rm. Actualy cleanup current ebuild.
 
   11 Feb 2010; Jeroen Roovers <jer@gentoo.org> evieext-1.1.0.ebuild:
   Stable for HPPA (bug #302046).
