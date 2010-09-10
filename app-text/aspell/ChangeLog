@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.124 2010/07/22 21:08:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.125 2010/09/10 18:47:57 halcy0n Exp $
+
+  10 Sep 2010; Mark Loeser <halcy0n@gentoo.org> aspell-0.60.5.ebuild:
+  Add linguas to IUSE
 
 *aspell-0.60.6-r2 (22 Jul 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.18 2008/01/26 18:49:16 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.5.ebuild,v 1.19 2010/09/10 18:47:57 halcy0n Exp $
 
 # N.B. This is before inherit of autotools, as autotools.eclass adds the
 # relevant dependencies to DEPEND.
@@ -32,6 +32,7 @@ for l in \
 		PDEPEND="${PDEPEND}
 ${dep}"
 	def="!linguas_${l}? ( ${def} )"
+	IUSE="${IUSE} linguas_${l}"
 done
 PDEPEND="${PDEPEND}
 ${def}"
