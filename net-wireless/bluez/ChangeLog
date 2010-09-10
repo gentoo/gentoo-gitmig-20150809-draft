@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.51 2010/09/09 16:23:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.52 2010/09/10 10:07:56 pacho Exp $
+
+*bluez-4.71 (10 Sep 2010)
+
+  10 Sep 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.71.ebuild,
+  metadata.xml:
+  Version bump with bugfixes and some new features like initial MCAP
+  support, add support for compile time option of oui.txt path (installed
+  now in default location, bug #283791 by Łukasz Stelmach) and others.
 
   09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> bluez-4.69.ebuild:
   Stable amd64. Per bug #335317.
