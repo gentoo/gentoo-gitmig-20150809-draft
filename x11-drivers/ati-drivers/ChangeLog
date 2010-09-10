@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.224 2010/08/30 20:32:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.225 2010/09/10 16:42:38 scarabeus Exp $
+
+  10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ati-drivers-10.4.ebuild, -ati-drivers-10.5.ebuild,
+  ati-drivers-10.8.ebuild:
+  Stable latest. Remove older versions.
 
 *ati-drivers-10.8 (30 Aug 2010)
 
