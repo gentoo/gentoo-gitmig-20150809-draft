@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.22 2010/05/22 15:18:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.23 2010/09/10 12:19:37 graaff Exp $
+
+*hpricot-0.8.2-r2 (10 Sep 2010)
+
+  10 Sep 2010; Hans de Graaff <graaff@gentoo.org> +hpricot-0.8.2-r2.ebuild:
+  Add ree18.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> hpricot-0.6.ebuild:
   Various cleanups.
