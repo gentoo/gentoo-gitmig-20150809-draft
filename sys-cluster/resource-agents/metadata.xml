@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>ha-cluster</herd>
+	<herd>cluster</herd>
 	<longdescription>
 		Resource agents are a standardized interfaces for a cluster resource. 
 		They translate a standard set of operations into steps specific to 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-   <herd>ha-cluster</herd>
+   <herd>cluster</herd>
    <longdescription>Pacemaker is a cluster resource manager.
 	  It achieves maximum availability for your cluster services (aka. resources) by detecting and 
 	  recovering from node and resource-level failures by making use of the messaging and membership 
