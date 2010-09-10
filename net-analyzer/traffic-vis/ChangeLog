@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/traffic-vis
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.18 2009/12/26 17:40:55 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.19 2010/09/10 05:14:31 jer Exp $
+
+*traffic-vis-0.35-r2 (10 Sep 2010)
+
+  10 Sep 2010; Jeroen Roovers <jer@gentoo.org> +traffic-vis-0.35-r2.ebuild,
+  files/traffic-vis-0.35-gentoo.patch:
+  Use pkg-config instead of glib-config. Fix parallel make. Respect LDFLAGS
+  (bug #336570) and CC.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> traffic-vis-0.35-r1.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
