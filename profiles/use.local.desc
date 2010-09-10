@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5940 2010/09/10 10:14:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5941 2010/09/10 13:53:34 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2816,7 +2816,6 @@ net-misc/connman:dnsproxy - Enable dnsproxy support.
 net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:google - Enable Google Public DNS support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
-net-misc/connman:resolvconf - Use rnet-dns/openresolv for resolvconf support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:udev - Enable udev support.
 net-misc/connman:wimax - Use net-wireless/wimax for WiMAX support.
