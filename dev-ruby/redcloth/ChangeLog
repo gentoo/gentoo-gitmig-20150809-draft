@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.49 2010/08/29 18:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.50 2010/09/10 12:39:24 graaff Exp $
+
+  10 Sep 2010; Hans de Graaff <graaff@gentoo.org> redcloth-4.2.3-r1.ebuild:
+  Document upstream bug for jruby support.
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> redcloth-4.2.3.ebuild:
   ia64 stable wrt #330327
