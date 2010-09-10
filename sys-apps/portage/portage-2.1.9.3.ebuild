@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.ebuild,v 1.1 2010/09/04 07:32:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.3.ebuild,v 1.1 2010/09/10 20:21:07 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -63,7 +63,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
 
-PATCHVER=
+PATCHVER=$PV
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	$(prefix_src_archives ${PN}-${PATCHVER}.patch.bz2)"
@@ -164,13 +164,6 @@ src_install() {
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf || die
 
-	# This allows config file updates that are applied for package
-	# moves to take effect immediately.
-	echo 'CONFIG_PROTECT_MASK="/etc/portage"' > "$T"/50portage \
-		|| die "failed to create 50portage"
-	doenvd "$T"/50portage || die "doenvd 50portage failed"
-	rm "$T"/50portage
-
 	insinto "$portage_share_config"
 	doins "$S/cnf/make.globals" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
@@ -208,6 +201,9 @@ src_install() {
 			cp -P $symlinks "$D$portage_base/$x" || die "cp failed"
 		fi
 	done
+
+	# create this manually until it's in a release tarball
+	dosym ../../banned-helper $portage_base/bin/ebuild-helpers/4/prepalldocs
 
 	cd "$S" || die "cd failed"
 	for x in $(find pym/* -type d) ; do

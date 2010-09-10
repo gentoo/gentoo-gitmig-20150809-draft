@@ -1,6 +1,33 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.723 2010/09/08 22:20:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.724 2010/09/10 20:21:07 zmedico Exp $
+
+*portage-2.2_rc79 (10 Sep 2010)
+
+  10 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc79.ebuild:
+  2.2_rc79 version bump. This includes all of the fixes in portage-2.1.9.3.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.3 (10 Sep 2010)
+
+  10 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.3.ebuild:
+  2.1.9.3 version bump. This fixes bug #267103 (warn about unapplied config
+  updates in /etc/portage), bug #273282 (QA warning about install in
+  deprecated directories), bug #336499 (call pkg_nofetch for misc fetch
+  failures), bug #336503 (FEATURES=usersync tempdir permission issues),
+  bug #336595 (--quiet support for "global updates"), bug #336644 (IOError
+  [Errno 11] issues with tmpfs), and bug #336651 (fix resume after portage
+  update to work with --exclude). Bug #335925 tracks all bugs fixed since
+  2.1.8.x.
+
+  10 Sep 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Bug #267103 - Don't add /etc/portage to CONFIG_PROTECT_MASK since we now
+  have a specialized warning message for unapplied config updates in
+  /etc/portage.
+
+  10 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.ebuild,
+  -portage-2.1.9.1.ebuild, -portage-2.2_rc77.ebuild:
+  Remove old versions.
 
 *portage-2.2_rc78 (08 Sep 2010)
 
