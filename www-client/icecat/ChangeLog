@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.41 2010/09/09 17:19:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.42 2010/09/10 06:48:36 polynomial-c Exp $
+
+  10 Sep 2010; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.9.ebuild:
+  Use new firefox patchset tarball.
 
   09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> icecat-3.6.9.ebuild:
   stable x86, security bug 336396

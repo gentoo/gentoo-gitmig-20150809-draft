@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.4 2010/09/09 17:19:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.9.ebuild,v 1.5 2010/09/10 06:48:36 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -19,9 +19,9 @@ MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
 XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-FIREFOX_PN="mozilla-firefox"
+FIREFOX_PN="firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
-PATCH="${FIREFOX_PN}-3.6-patches-0.6"
+PATCH="${FIREFOX_PN}-3.6-patches-0.2"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -32,7 +32,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +cups +ipc java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
 
 for X in ${LANGS} ; do
@@ -129,17 +129,7 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch
-			402-oggzfbsd.patch" \
 	epatch "${WORKDIR}"
-
-	epatch "${FILESDIR}"/402-oggzfbsd.patch
-
-	# The patch excluded above failed, ported patch is applied below
-	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
-
-	# Enable tracemonkey for amd64 (bug #315997)
-	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
