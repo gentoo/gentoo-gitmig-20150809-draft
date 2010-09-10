@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.6-r1.ebuild,v 1.1 2010/09/10 16:37:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.6-r1.ebuild,v 1.2 2010/09/10 21:37:40 mr_bones_ Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="media-libs/gd[png]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# https://mulcyber.toulouse.inra.fr/tracker/index.php?func=detail&aid=1170 
+	# https://mulcyber.toulouse.inra.fr/tracker/index.php?func=detail&aid=1170
 	epatch "${FILESDIR}"/${P}-overflow.patch \
 		"${FILESDIR}"/${P}-plugins.patch
 	if ( ! use doc ); then
