@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.6 2010/09/10 07:36:08 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.7 2010/09/10 07:43:03 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="NGStar is a clone of a HP48 game called dstar"
@@ -28,7 +28,6 @@ src_prepare() {
 		-e "/^CPPFLAGS/s:+=:+= ${CXXFLAGS}:" \
 		-e "/SILENT/d" \
 		configure || die "sed configure failed"
-	sed -i '/strip/d' src/Makefile || die "sed makefile failed"
 }
 
 src_configure() {
