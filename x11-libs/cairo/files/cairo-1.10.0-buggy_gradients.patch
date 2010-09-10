@@ -14,3 +14,4 @@ http://bugs.gentoo.org/336696
 -#endif
      display->buggy_pad_reflect = FALSE;
      display->buggy_repeat = FALSE;
+ 
