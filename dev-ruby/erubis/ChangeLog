@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.4 2010/07/19 07:10:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.5 2010/09/10 10:14:40 graaff Exp $
+
+*erubis-2.6.6-r1 (10 Sep 2010)
+
+  10 Sep 2010; Hans de Graaff <graaff@gentoo.org> +erubis-2.6.6-r1.ebuild:
+  Add ree18 and jruby support.
 
 *erubis-2.6.6 (19 Jul 2010)
 
