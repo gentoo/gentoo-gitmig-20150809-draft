@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hexoid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hexoid/ChangeLog,v 1.2 2010/09/09 18:03:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hexoid/ChangeLog,v 1.3 2010/09/10 12:29:18 flameeyes Exp $
+
+  10 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org> hexoid-0.2.2.ebuild:
+  Re-add jruby, here it was called for.
 
   09 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org> hexoid-0.2.2.ebuild:
   Remove JRuby support.
