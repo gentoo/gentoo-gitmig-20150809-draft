@@ -3,7 +3,9 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>arfrever@gentoo.org</email>
+		<name>Arfrever Frehtes Taifersar Arahesis</name>
+		<description>Gentoo Subversion maintainer and Subversion upstream representative</description>
 	</maintainer>
 	<use>
 		<flag name="ctypes-python">Build and install Ctypes Python bindings</flag>
