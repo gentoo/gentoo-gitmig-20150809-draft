@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dnotify
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.23 2008/01/10 10:40:22 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.24 2010/09/10 05:06:06 ssuominen Exp $
+
+  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> dnotify-0.18.0.ebuild,
+  +files/dnotify-0.18.0-glibc-212.patch:
+  Fix building with recent glibc wrt #336649 by Jochen Schlick.
 
   10 Jan 2008; Mike Frysinger <vapier@gentoo.org> dnotify-0.18.0.ebuild:
   Update HOMEPAGE #205167 and touchup ebuild.
