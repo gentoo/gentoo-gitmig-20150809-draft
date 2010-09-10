@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>hp-cluster</herd>
+<herd>cluster</herd>
 <longdescription>
 Pdsh is a high-performance, parallel remote shell utility. It has built-in,
 thread-safe clients for Berkeley and Kerberos V4 rsh, and can call SSH
