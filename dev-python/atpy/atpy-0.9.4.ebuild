@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.4.ebuild,v 1.1 2010/09/02 16:35:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.4.ebuild,v 1.2 2010/09/10 21:37:58 arfrever Exp $
 
 EAPI="2"
 
@@ -9,11 +9,10 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-#DISTUTILS_SRC_TEST="test/test.py"
 MYPN=ATpy
 MYP="${MYPN}-${PV}"
 
-DESCRIPTION="Astronomical tables support Python"
+DESCRIPTION="Astronomical tables support for Python"
 HOMEPAGE="http://atpy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 
@@ -36,3 +35,17 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 
 S="${WORKDIR}/${MYP}"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# Disable failing MySQL tests.
+	sed -e "s/import MySQLdb/raise ImportError/" -i test/unittests.py || die "sed failed"
+}
+
+src_test() {
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/unittests.py
+	}
+	python_execute_function testing
+}
