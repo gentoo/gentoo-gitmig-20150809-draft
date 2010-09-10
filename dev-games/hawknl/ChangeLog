@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/hawknl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.10 2007/02/08 20:46:07 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.11 2010/09/10 10:01:59 tupone Exp $
+
+  10 Sep 2010; Tupone Alfredo <tupone@gentoo.org> hawknl-1.68-r1.ebuild,
+  files/hawknl-1.68-build.patch:
+  Respect LDFLAGS. Bug #336041 by flameeyes@gentoo.org
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
