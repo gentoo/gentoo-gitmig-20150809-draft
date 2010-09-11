@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.26 2009/09/23 20:48:03 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.27 2010/09/11 19:54:52 robbat2 Exp $
+
+*ksymoops-2.4.11-r1 (11 Sep 2010)
+
+  11 Sep 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +ksymoops-2.4.11-r1.ebuild, +files/ksymoops-2.4.11-fortify-fix.patch:
+  Bug #336609: Fix _FORTIFY_SOURCE.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ksymoops-2.4.9.ebuild:
   Remove virtual/libc
