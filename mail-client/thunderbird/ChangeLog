@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.34 2010/09/09 17:13:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.35 2010/09/11 10:26:50 hwoarang Exp $
+
+  11 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  thunderbird-3.1.3.ebuild:
+  Stable on amd64 wrt bug #336396
 
   09 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   thunderbird-3.1.3.ebuild:
