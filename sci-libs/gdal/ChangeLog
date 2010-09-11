@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.96 2010/08/11 06:23:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.97 2010/09/11 14:55:17 scarabeus Exp $
+
+*gdal-1.7.2-r1 (11 Sep 2010)
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> -gdal-1.7.2.ebuild,
+  +gdal-1.7.2-r1.ebuild:
+  Fix threads useflag switch. Per bug #335706.
 
   08 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.7.2.ebuild:
   Disable paralel emake everywhere.

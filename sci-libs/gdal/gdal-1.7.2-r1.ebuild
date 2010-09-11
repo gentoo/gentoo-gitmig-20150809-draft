@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.5 2010/08/11 06:23:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r1.ebuild,v 1.1 2010/09/11 14:55:17 scarabeus Exp $
 
 EAPI="3"
 
@@ -151,6 +151,7 @@ src_configure() {
 		$(use_with perl) \
 		$(use_with ruby) \
 		$(use_with python) \
+		$(use_with threads) \
 		--with-pymoddir=${EPREFIX}/$(python_get_sitedir)
 
 	# mysql-config puts this in (and boy is it a PITA to get it out)
