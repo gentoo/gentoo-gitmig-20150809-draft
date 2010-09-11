@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.188 2010/08/18 21:52:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.189 2010/09/11 18:42:47 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> zenity-2.30.0.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> zenity-2.28.0-r1.ebuild:
   arm stable, bug #314899
