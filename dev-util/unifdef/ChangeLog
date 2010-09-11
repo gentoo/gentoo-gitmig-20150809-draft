@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.8 2010/01/15 03:15:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.9 2010/09/11 15:49:19 vapier Exp $
+
+*unifdef-2.3 (11 Sep 2010)
+
+  11 Sep 2010; Mike Frysinger <vapier@gentoo.org> +unifdef-2.3.ebuild:
+  Version bump to fix building with make 3.82 #336824 by Diego E. Pettenò.
 
   15 Jan 2010; Mike Frysinger <vapier@gentoo.org> unifdef-1.23.ebuild:
   Pull in xz-utils for $A #299988 by Matt Turner.
