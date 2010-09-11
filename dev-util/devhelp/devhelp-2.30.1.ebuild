@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.30.1.ebuild,v 1.3 2010/08/01 12:15:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.30.1.ebuild,v 1.4 2010/09/11 19:01:10 josejx Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/devhelp"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2.6
