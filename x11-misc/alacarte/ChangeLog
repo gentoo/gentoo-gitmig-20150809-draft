@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.98 2010/08/14 18:45:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.99 2010/09/11 18:54:45 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> alacarte-0.12.4.ebuild:
+  Marked ppc for bug #324077.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> alacarte-0.12.4.ebuild:
   alpha/ia64/sparc stable wrt #314899
