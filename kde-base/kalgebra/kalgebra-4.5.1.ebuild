@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.5.1.ebuild,v 1.2 2010/09/06 04:51:25 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.5.1.ebuild,v 1.3 2010/09/11 09:56:33 reavertm Exp $
 
 EAPI="3"
 
@@ -22,6 +22,7 @@ KMEXTRACTONLY="libkdeedu/kdeeduui"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.3.2-solaris-graph2d.patch
+	"${FILESDIR}"/${P}-opengl.patch
 )
 
 src_configure() {

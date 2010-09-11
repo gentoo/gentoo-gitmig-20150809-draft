@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.72 2010/09/05 23:20:47 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.73 2010/09/11 09:56:33 reavertm Exp $
+
+  11 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> kalgebra-4.5.1.ebuild,
+  +files/kalgebra-4.5.1-opengl.patch:
+  Add fix for opengl-less compilation, bug 336777
 
 *kalgebra-4.5.1 (05 Sep 2010)
 
