@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre6.ebuild,v 1.12 2010/09/11 10:20:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0.ebuild,v 1.1 2010/09/11 10:20:20 ulm Exp $
 
 NEED_EMACS=22
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cedet/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
 IUSE=""
 
 DEPEND=""
@@ -22,8 +22,7 @@ RDEPEND="!app-emacs/semantic
 	!app-emacs/speedbar"
 
 S="${WORKDIR}/${MY_P}"
-ELISP_PATCHES="${P}-fix-eieio-comp.patch"
-SITEFILE="50${PN}-gentoo-${PV}.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	emake -j1 \
@@ -35,7 +34,7 @@ src_compile() {
 src_test() {
 	emake -j1 \
 		EMACS="${EMACS}" \
-		EMACSFLAGS="${EMACSFLAGS} -L srecode" \
+		EMACSFLAGS="${EMACSFLAGS}" \
 		utest || die "make utest failed"
 }
 
