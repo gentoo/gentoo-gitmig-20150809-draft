@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.3 2010/08/01 11:52:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.4 2010/09/11 18:53:43 josejx Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 # FIXME: Enable for now python USE flag per bug #316409
 # this change should only be noticed by people not following current
