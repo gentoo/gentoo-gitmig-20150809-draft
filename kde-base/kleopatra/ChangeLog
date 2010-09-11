@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.60 2010/08/09 17:35:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.61 2010/09/11 05:50:51 reavertm Exp $
+
+*kleopatra-4.4.6 (11 Sep 2010)
+
+  11 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +kleopatra-4.4.6.ebuild:
+  Version bump kdepim-4.4.6
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   kleopatra-4.4.5.ebuild:
