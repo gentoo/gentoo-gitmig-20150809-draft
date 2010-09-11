@@ -1,30 +1,30 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc5.ebuild,v 1.1 2010/08/16 19:57:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.2.ebuild,v 1.1 2010/09/11 08:18:16 patrick Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_snapshot="0592366457df"
-SRC_URI="http://dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
+sieve_version="0.2.0"
+SRC_URI="http://dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
 	sieve? (
-	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
+	http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	)
 	managesieve? (
-	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
+	http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	) "
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
-LICENSE="LGPL-2.1" # MIT too?
+LICENSE="LGPL-2.1 MIT"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 
 IUSE="berkdb bzip2 caps cydir sdbox doc ipv6 kerberos ldap +maildir managesieve
-mbox mdbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
+mbox mdbox mysql pam postgres sieve sqlite +ssl suid zlib"
 
 DEPEND="berkdb? ( sys-libs/db )
 	caps? ( sys-libs/libcap )
@@ -34,8 +34,7 @@ DEPEND="berkdb? ( sys-libs/db )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( dev-db/sqlite )
-	ssl? ( dev-libs/openssl )
-	vpopmail? ( net-mail/vpopmail )"
+	ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00-r8"
@@ -74,8 +73,8 @@ src_configure() {
 	[ "${storages}" ] || storages="maildir"
 
 	econf \
-		--localstatedir=/var \
-		--with-moduledir="/usr/$( get_libdir )/dovecot" \
+		--localstatedir="${EPREFIX}/var" \
+		--with-moduledir="${EPREFIX}/usr/$(get_libdir)/dovecot" \
 		$( use_with bzip2 bzlib ) \
 		$( use_with caps libcap ) \
 		$( use_with kerberos gssapi ) \
@@ -85,7 +84,7 @@ src_configure() {
 		$( use_with postgres pgsql ) \
 		$( use_with sqlite ) \
 		$( use_with ssl ) \
-		$( use_with vpopmail ) \
+		--without-vpopmail \
 		$( use_with zlib ) \
 		--with-storages="${storages}" \
 		--disable-rpath \
@@ -95,13 +94,9 @@ src_configure() {
 		# The sieve plugin needs this file to be build to determine the plugin
 		# directory and the list of libraries to link to.
 		emake dovecot-config || die "emake dovecot-config failed"
-
-		# snapshot. should not be necessary for 2.0 release
-		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
-		./autogen.sh || die "autogen failed"
-
+		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
 		econf \
-			--localstatedir=/var \
+			--localstatedir="${EPREFIX}/var" \
 			--enable-shared \
 			--with-dovecot="../${MY_P}" \
 			$( use_with managesieve )
@@ -112,7 +107,7 @@ src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 
 	if use sieve || use managesieve ; then
-		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
+		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
 		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make sieve failed"
 	fi
 }
@@ -120,28 +115,27 @@ src_compile() {
 src_test() {
 	emake check
 	if use sieve || use managesieve ; then
-		# snapshot. should not be necessary for 2.0 release
-		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
+		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
 		emake check
 	fi
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${ED}" install || die "make install failed"
 
 	# insecure:
 	# use suid && fperms u+s /usr/libexec/dovecot/deliver
 	# better:
 	if use suid;then
 		einfo "Changing perms to allow deliver to be suided"
-		fowners root:mail "${D}"/usr/libexec/dovecot/deliver
-		fperms 4750 "${D}"/usr/libexec/dovecot/deliver
+		fowners root:mail "${ED}"/usr/libexec/dovecot/deliver
+		fperms 4750 "${ED}"/usr/libexec/dovecot/deliver
 	fi
 
 	newinitd "${FILESDIR}"/dovecot.init-r2 dovecot
 
-	rm -rf "${D}"/usr/share/doc/dovecot
-	rm -rf "${D}"/usr/share/aclocal
+	rm -rf "${ED}"/usr/share/doc/dovecot
+	rm -rf "${ED}"/usr/share/aclocal
 
 	dodoc AUTHORS NEWS README TODO || die "basic dodoc failed"
 	dodoc doc/*.{txt,cnf,xml,sh} || die "dodoc doc failed"
@@ -155,14 +149,14 @@ src_install () {
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
-	local conf="${D}/etc/dovecot/dovecot.conf"
-	local confd="${D}/etc/dovecot/conf.d"
+	local conf="${ED}/etc/dovecot/dovecot.conf"
+	local confd="${ED}/etc/dovecot/conf.d"
 
 	insinto /etc/dovecot
 	doins doc/example-config/*.{conf,ext}
 	insinto /etc/dovecot/conf.d
 	doins doc/example-config/conf.d/*.{conf,ext}
-	fperms 0600 /etc/dovecot/dovecot-{ldap,sql}.conf.ext
+	fperms 0600 "${EPREFIX}"/etc/dovecot/dovecot-{ldap,sql}.conf.ext
 	sed -i -e "s:/usr/share/doc/dovecot/:/usr/share/doc/${PF}/:" \
 	"${confd}/../README" || die "sed failed"
 
@@ -229,20 +223,20 @@ src_install () {
 			|| die "failed to update ldap settings in 10-auth.conf"
 	fi
 
-	if use vpopmail; then
-		sed -i -e \
-			's/#!include auth-vpopmail.conf.ext/!include auth-vpopmail.conf.ext/' \
-			"${confd}/10-auth.conf" \
-			|| die "failed to update vpopmail settings in 10-auth.conf"
-	fi
+	#if use vpopmail; then
+	#	sed -i -e \
+	#		's/#!include auth-vpopmail.conf.ext/!include auth-vpopmail.conf.ext/' \
+	#		"${confd}/10-auth.conf" \
+	#		|| die "failed to update vpopmail settings in 10-auth.conf"
+	#fi
 
 	if use sieve || use managesieve ; then
-		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
-		emake DESTDIR="${D}" install || die "make install failed (sieve)"
+		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
+		emake DESTDIR="${ED}" install || die "make install failed (sieve)"
 		sed -i -e \
-			's/^[[:space:]]*#mail_plugins =/mail_plugins = sieve/' "${confd}/15-lda.conf" \
+			's/^[[:space:]]*#mail_plugins = $mail_plugins/mail_plugins = sieve/' "${confd}/15-lda.conf" \
 			|| die "failed to update sieve settings in 15-lda.conf"
-		rm -rf "${D}"/usr/share/doc/dovecot
+		rm -rf "${ED}"/usr/share/doc/dovecot
 		dodoc doc/*.txt
 		docinto example-config/conf.d
 		dodoc doc/example-config/conf.d/*.conf
@@ -253,33 +247,26 @@ src_install () {
 		dodoc doc/rfc/*.txt
 		docinto sieve/devel
 		dodoc doc/devel/DESIGN
-		doman doc/man/*.1
+		doman doc/man/*.{1,7}
 	fi
 
 }
 
 pkg_preinst() {
 
-	has_version =${CATEGORY}/${PN}-0*
-	dovecot_upgrade_from_0_x=$?
+	local dovecot_upgrade
+	has_version "<${CATEGORY}/${PN}-2"
+	dovecot_upgrade=$?
 
-	has_version =${CATEGORY}/${PN}-1*
-	dovecot_upgrade_from_1_x=$?
-
-	if [[ $dovecot_upgrade_from_0_x = 0 ]] ; then
-		elog "There are a lot of changes in configuration files.  Please read"
-		elog "http://wiki.dovecot.org/Upgrading and edit the conf files"
-		elog "in ${ROOT}etc/dovecot"
-	elif [[ $dovecot_upgrade_from_1_x = 0 ]] ; then
+	if [ "$dovecot_upgrade" = 0 ] ; then
 		elog "There are a lot of changes in configuration files in dovecot-2.0."
-		elog "Please read http://wiki2.dovecot.org/Upgrading/2.0 and"
+		elog "Please read http://wiki.dovecot.org/Upgrading and"
 		elog "check the conf files in ${ROOT}etc/dovecot."
 		elog "You can also run doveconf -n before running etc-update or"
 		elog "dispatch-conf to get an idea about what needs to be changed."
-		ewarn "Do not {re}start dovecot without checking your conf files"
+		ewarn "Do NOT {re}start dovecot without checking your conf files"
 		ewarn "and making the necessary changes."
 	fi
-
 }
 
 pkg_postinst() {
