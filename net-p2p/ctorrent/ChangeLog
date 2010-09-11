@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.48 2010/08/31 12:35:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.49 2010/09/11 22:03:43 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> ctorrent-3.3.2-r1.ebuild:
+  Marked ppc stable for bug #266953.
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ctorrent-3.3.2-r1.ebuild:
