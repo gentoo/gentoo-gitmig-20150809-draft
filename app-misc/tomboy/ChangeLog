@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.103 2010/09/07 21:17:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.104 2010/09/11 18:56:27 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> tomboy-1.2.1.ebuild:
+  Marked ppc for bug #324077.
 
   07 Sep 2010; Pacho Ramos <pacho@gentoo.org> tomboy-1.2.1.ebuild,
   +files/tomboy-1.2.1-xmllint-validation.patch:
