@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-mach64
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.18 2010/01/23 20:13:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.19 2010/09/11 22:24:19 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> -files/mach64.xinf:
+  drop useless file
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-video-mach64-6.8.0.ebuild:

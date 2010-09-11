@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-s3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.45 2010/01/23 20:22:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.46 2010/09/11 22:24:19 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> -files/s3.xinf:
+  drop useless file
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-video-s3-0.6.0.ebuild, -xf86-video-s3-0.6.1.ebuild:

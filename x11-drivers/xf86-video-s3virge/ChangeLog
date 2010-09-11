@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-s3virge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3virge/ChangeLog,v 1.38 2010/01/23 20:23:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3virge/ChangeLog,v 1.39 2010/09/11 22:24:19 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> -files/s3virge.xinf:
+  drop useless file
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-video-s3virge-1.9.1.ebuild, -xf86-video-s3virge-1.10.1.ebuild,
