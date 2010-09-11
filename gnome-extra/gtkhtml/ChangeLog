@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.218 2010/08/18 21:15:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.219 2010/09/11 18:28:38 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gtkhtml-3.30.2.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gtkhtml-3.28.3.ebuild:
   arm stable, bug #314899
