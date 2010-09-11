@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 #
 # icecream-config - helper script for icecream and its ebuild
 #
-# Copyright 2003 Superlucidity Services, LLC 
+# Copyright 2003-2010 Superlucidity Services, LLC 
 # This program licensed under the GNU GPL version 2.
 #
 # This script developed by Zachary T Welch at Superlucidity Services, LLC

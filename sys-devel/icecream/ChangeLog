@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.37 2010/06/02 06:47:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.38 2010/09/11 12:30:59 scarabeus Exp $
+
+*icecream-0.9.6 (11 Sep 2010)
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.9.6-symlinks.patch, -icecream-0.9.2.ebuild,
+  -icecream-0.9.3.ebuild, -icecream-0.9.4.ebuild, +icecream-0.9.6.ebuild,
+  files/icecream, files/icecream-config, files/icecream-create-env,
+  -files/icecream-dont-create-symlinks.patch:
+  Drop all old releases. Cleanup ebuild. Remove only stable version. Open
+  stablereq if you use it in stable environment and trust it is working
+  reliably.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove bluebird from metadata.xml (#223101)

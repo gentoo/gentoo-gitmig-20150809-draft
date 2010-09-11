@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 #
 # icecream-create-env - helper script to create icecc environments(mostly for cross-compiling)
 #
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 #
 # Please note, this script has been designed to work with Gentoo's crossdev, it may or may

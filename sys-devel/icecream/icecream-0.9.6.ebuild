@@ -1,47 +1,45 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.2.ebuild,v 1.7 2010/02/12 19:38:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.6.ebuild,v 1.1 2010/09/11 12:30:59 scarabeus Exp $
 
-inherit autotools eutils flag-o-matic
+EAPI=3
+
+inherit base autotools
 
 MY_P="icecc-${PV}"
 
 DESCRIPTION="icecc is a program for distributed compiling of C(++) code across several machines; based on distcc"
-HOMEPAGE="http://en.opensuse.org/Icecream"
+HOMEPAGE="http://old-en.opensuse.org/Icecream"
 SRC_URI="ftp://ftp.suse.com/pub/projects/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc sparc x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+PATCHES=(
+	"${FILESDIR}/${PV}-symlinks.patch"
+	"${FILESDIR}/${PN}-conf.d-verbosity.patch"
+	"${FILESDIR}/${PN}-gentoo-multilib.patch"
+)
 
-	epatch "${FILESDIR}/${PN}-dont-create-symlinks.patch"
-	epatch "${FILESDIR}/${PN}-conf.d-verbosity.patch"
+pkg_setup() {
+	enewgroup icecream
+	enewuser icecream -1 -1 /var/cache/icecream icecream
+}
 
-	# honour ${CFLAGS_${ABI}} environment variable, bug #232931
-	epatch "${FILESDIR}/${PN}-gentoo-multilib.patch"
-
-	use amd64 && append-flags -fPIC -DPIC
+src_prepare() {
+	base_src_prepare
 
 	eautoreconf
 }
 
-src_compile() {
-	econf
-	emake || die "compiling icecc failed"
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	base_src_install
 
 	dosbin "${FILESDIR}"/icecream-config || die "install failed"
-
 	dosbin "${FILESDIR}"/icecream-create-env || die "install failed"
 
 	newconfd suse/sysconfig.icecream icecream || die "install failed"
@@ -52,27 +50,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	enewgroup icecream
-
-	#are we doing bootstrap with has no useradd?
-	if [ -x /usr/sbin/useradd ]; then
-		enewuser icecream -1 -1 /var/cache/icecream icecream
-	else
-		ewarn "You do not have useradd (bootstrap) from shadow so I didn't"
-		ewarn "install the icecream user.  Note that attempting to start the daemon"
-		ewarn "will fail. Please install shadow and re-emerge icecream."
-		ebeep 2
-	fi
-
-	if [[ "${ROOT}" = "/" ]] ; then
-		einfo "Scanning for compiler front-ends..."
-		/usr/sbin/icecream-config --install-links
-		/usr/sbin/icecream-config --install-links "${CHOST}"
-	else
-		ewarn "Install is incomplete; you must run the following command:"
-		ewarn " # icecream-config --install-links \"${CHOST}\""
-		ewarn "after booting or chrooting to \"${ROOT}\" to complete installation."
-	fi
+	ebegin "Scanning for compiler front-ends..."
+	/usr/sbin/icecream-config --install-links
+	/usr/sbin/icecream-config --install-links "${CHOST}"
+	eend ${?}
 
 	elog
 	elog "If you have compiled binutils/gcc/glibc with processor-specific flags"
@@ -99,8 +80,5 @@ pkg_postinst() {
 	elog " TCP/8766 for the telnet interface to the scheduler (optional)"
 	elog " UDP/8765 for broadcast to find the scheduler (optional)"
 	elog
-	elog "Further usage instructions: http://www.opensuse.org/icecream"
-	elog
-	elog "The icecream monitor is no longer included in this package."
-	elog "See http://bugs.gentoo.org/show_bug.cgi?id=139432 for more info."
+	elog "Further usage instructions: ${HOMEPAGE}"
 }
