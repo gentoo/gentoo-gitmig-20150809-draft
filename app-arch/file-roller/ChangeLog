@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.278 2010/08/22 17:45:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.279 2010/09/11 18:49:09 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> file-roller-2.30.2.ebuild:
+  Marked ppc for bug #324077.
 
   22 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   file-roller-2.30.2.ebuild:
