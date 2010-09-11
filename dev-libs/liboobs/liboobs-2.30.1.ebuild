@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.30.1.ebuild,v 1.5 2010/09/06 12:27:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.30.1.ebuild,v 1.6 2010/09/11 18:55:26 josejx Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
 IUSE="doc"
 
 # FIXME: check if policykit should be checked in configure ?
