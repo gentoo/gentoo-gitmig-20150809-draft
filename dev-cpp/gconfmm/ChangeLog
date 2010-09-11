@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.75 2010/08/01 11:00:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.76 2010/09/11 18:21:49 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gconfmm-2.28.2.ebuild:
+  Marked ppc for bug #324077.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gconfmm-2.28.2.ebuild:

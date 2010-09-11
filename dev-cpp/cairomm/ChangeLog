@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.40 2010/08/05 16:35:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.41 2010/09/11 18:16:58 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> cairomm-1.8.2.ebuild:
+  Marked ppc for bug #324077.
 
   05 Aug 2010; Jeroen Roovers <jer@gentoo.org> cairomm-1.8.2.ebuild:
   Stable for HPPA (bug #324077).

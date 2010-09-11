@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.74 2010/08/03 01:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.75 2010/09/11 18:22:17 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  libgnomecanvasmm-2.26.0.ebuild:
+  Marked ppc for bug #324077.
 
   03 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   libgnomecanvasmm-2.22.0.ebuild, libgnomecanvasmm-2.26.0.ebuild:
