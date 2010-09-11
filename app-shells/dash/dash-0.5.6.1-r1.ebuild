@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.6.1-r1.ebuild,v 1.3 2010/09/11 15:39:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.6.1-r1.ebuild,v 1.4 2010/09/11 16:06:45 vapier Exp $
 
 EAPI="2"
 
-inherit autotools eutils flag-o-matic
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DEB_PV=${PV%.*}
 DEB_PATCH=${PV##*.}
@@ -21,7 +21,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="libedit static"
 
-DEPEND="libedit? ( dev-libs/libedit static? ( dev-libs/libedit[static-libs] ) )"
+RDEPEND="!static? ( libedit? ( dev-libs/libedit ) )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	libedit? ( static? ( dev-libs/libedit[static-libs] ) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -35,11 +38,8 @@ src_prepare() {
 	# Fix the invalid sort
 	sed -i -e 's/LC_COLLATE=C/LC_ALL=C/g' src/mkbuiltins
 
-	# Always statically link libedit in to ensure we always boot if it changes
-	# which it has done in the past.
-	local s="s/-ledit/-Wl,-Bstatic -ledit -Wl,-Bdynamic -lcurses/g"
-	use static && s="s/-ledit/-ledit -lcurses/g"
-	sed -i -e "${s}" configure.ac || die "Failed to sed configure.ac"
+	# Use pkg-config for libedit linkage
+	sed -i "/LIBS/s:-ledit:\`$(tc-getPKG_CONFIG) --libs libedit $(use static && echo --static)\`:" configure.ac
 
 	# May as well, as the debian patches force this anyway
 	eautoreconf
