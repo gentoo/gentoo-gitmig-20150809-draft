@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zsqlmethods
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zsqlmethods/ChangeLog,v 1.1 2010/09/11 21:47:18 arfrever Exp $
+
+*zsqlmethods-2.13.3 (11 Sep 2010)
+
+  11 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zsqlmethods-2.13.3.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
