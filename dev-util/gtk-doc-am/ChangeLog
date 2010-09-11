@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.46 2010/08/18 20:56:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.47 2010/09/11 18:26:43 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gtk-doc-am-1.15.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gtk-doc-am-1.13.ebuild:
   arm stable, bug #314899
