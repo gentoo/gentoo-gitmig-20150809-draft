@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.4 2009/11/25 14:30:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.5 2010/09/11 21:01:08 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -30,7 +30,12 @@ src_prepare() {
 	sed -i \
 		-e "s:gamediameter:diameter:" \
 		configure.in \
-		|| die "sed failed"
+		|| die
+	# bug #336812
+	sed -i \
+		-e '/gui nebular3.gif/s/gui//' \
+		data/texture/Makefile.am \
+		|| die
 	eautoreconf
 }
 
