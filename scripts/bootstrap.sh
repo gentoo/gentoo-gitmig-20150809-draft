@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.89 2009/09/25 05:17:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.90 2010/09/11 17:06:47 zmedico Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.89 2009/09/25 05:17:39 zmedico Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.90 2010/09/11 17:06:47 zmedico Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -64,6 +64,7 @@ usage() {
 	echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
 	echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
 	echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
+	echo -e "  ${GOOD}--quiet (-q)${NORMAL}     Reduced or condensed output from portage's displays."
 	echo -e "  ${GOOD}--tree (-t)${NORMAL}      Display the dependency tree, forces -p"
 	echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
 }
@@ -85,6 +86,7 @@ for opt in "$@" ; do
 		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
 		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info" ; unset STRAP_RUN ;;
 		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p"     ; unset STRAP_RUN ;;
+		--quiet|-q)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -q"     ; unset STRAP_RUN ;;
 		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"  ; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
