@@ -1,0 +1,26 @@
+diff --git a/adodb.c b/adodb.c
+index 3afc443..6e3bf95 100644
+--- a/adodb.c
++++ b/adodb.c
+@@ -159,11 +159,7 @@ static zval adodb_zvals[5];
+ 
+ static void adodb_init_zval(zval *v, char *s)
+ {
+-	v->type = IS_STRING;
+-	v->value.str.val = s;
+-	v->value.str.len = strlen(s);
+-	v->is_ref = 0;
+-	v->refcount = 1;
++	ZVAL_STRING(v, s, 0);
+ }
+ 
+ /* {{{ PHP_MINIT_FUNCTION
+@@ -277,7 +273,7 @@ zval		**fields;
+ 	fci.function_table = EG(function_table);
+ 	fci.function_name = &adodb_zvals[zval_ocifetch];
+ 	fci.symbol_table = NULL;
+-	fci.object_pp = NULL;
++	/* fci.object_pp = NULL; */
+ 	fci.retval_ptr_ptr = &retval;
+ 	fci.param_count = 2;
+ 	fci.params = &params[1];

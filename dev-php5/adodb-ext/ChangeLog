@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/adodb-ext
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/ChangeLog,v 1.4 2007/03/08 18:51:15 chtekk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/ChangeLog,v 1.5 2010/09/11 12:45:53 mabi Exp $
+
+*adodb-ext-504-r1 (11 Sep 2010)
+
+  11 Sep 2010; Matti Bickel <mabi@gentoo.org> +files/php53.patch,
+  +adodb-ext-504-r1.ebuild:
+  add patch to make adodb-ext compatible with php-5.3 (patch taken from
+  http://github.com/wojo/adodb-ext)
 
 *adodb-ext-504 (08 Mar 2007)
 
