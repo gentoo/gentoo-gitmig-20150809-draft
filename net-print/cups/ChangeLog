@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.397 2010/09/10 23:39:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.398 2010/09/11 12:10:19 tgurr Exp $
+
+*cups-1.4.4-r2 (11 Sep 2010)
+
+  11 Sep 2010; Timo Gurr <tgurr@gentoo.org> -cups-1.4.4.ebuild,
+  -cups-1.4.4-r1.ebuild, +cups-1.4.4-r2.ebuild,
+  +files/cups-1.4.4-dont-compress-manpages.patch,
+  +files/cups-1.4.4-fix-install-perms.patch,
+  +files/cups-1.4.4-nostrip.patch, +files/cups-1.4.4-php-destdir.patch:
+  Revbump, fixing bug #296221.
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.4-r1.ebuild:
   Revision bump again. This time with mimimalistic patches only altering
