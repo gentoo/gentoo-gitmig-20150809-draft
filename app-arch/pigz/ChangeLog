@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.13 2010/09/04 13:23:51 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.14 2010/09/11 10:39:54 ulm Exp $
+
+  11 Sep 2010; Ulrich Mueller <ulm@gentoo.org> pigz-2.1.6.ebuild,
+  pigz-2.1.6-r1.ebuild:
+  Update LICENSE; PIGZ is identical with ZLIB. Bug 336249.
 
 *pigz-2.1.6-r1 (04 Sep 2010)
 
