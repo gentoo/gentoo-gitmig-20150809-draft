@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.6.1.ebuild,v 1.1 2009/08/22 22:30:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/PEAR-Auth-1.6.2-r1.ebuild,v 1.1 2010/09/11 14:19:39 mabi Exp $
 
-inherit php-pear-r1 depend.php eutils
+inherit php-pear-r1 eutils
 
 DESCRIPTION="Provides methods for creating an authentication system using PHP."
 LICENSE="PHP-3.01"
@@ -22,9 +22,8 @@ RDEPEND="!minimal? ( >=dev-php/PEAR-Log-1.9.10
 	# >=dev-php/PEAR-HTTP_Client-1.1.0
 
 pkg_postinst() {
-	has_php
-	if ! use minimal && ! built_with_use --missing true =${PHP_PKG} imap soap ; then
-		elog "${PN} can optionally use ${PHP_PKG} imap and soap features."
+	if ! use minimal && ! has_version "${PHP_PKG}[imap,soap]" ; then
+		elog "${PN} can optionally use php's imap and soap features."
 		elog "If you want those, recompile ${PHP_PKG} with these flags in USE."
 	fi
 }
