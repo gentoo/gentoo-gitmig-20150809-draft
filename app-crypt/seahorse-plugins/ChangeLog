@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.27 2010/08/22 18:15:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.28 2010/09/11 18:49:56 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  seahorse-plugins-2.30.1-r1.ebuild:
+  Marked ppc for bug #324077.
 
   22 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -seahorse-plugins-2.26.2.ebuild, seahorse-plugins-2.30.1-r1.ebuild:
