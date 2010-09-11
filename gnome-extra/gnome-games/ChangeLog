@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.296 2010/08/18 22:22:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.297 2010/09/11 18:57:45 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  gnome-games-2.30.2-r1.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-games-2.28.2.ebuild:
   arm stable, bug #314899

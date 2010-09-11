@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.201 2010/08/18 22:14:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.202 2010/09/11 18:50:59 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gcalctool-5.30.2.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gcalctool-5.28.2.ebuild:
   arm stable, bug #314899
