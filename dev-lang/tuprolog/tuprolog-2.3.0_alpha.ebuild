@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.1 2010/09/08 08:35:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.2 2010/09/11 03:53:26 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,13 +14,12 @@ SRC_URI="mirror://sourceforge/tuprolog/${MY_P}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc test"
+IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.5
 	>=dev-java/javassist-3
 	app-arch/unzip
-	dev-java/ant-core
-	test? ( dev-java/ant-junit )"
+	dev-java/ant-core"
 RDEPEND=">=virtual/jdk-1.5"
 
 S="${WORKDIR}"
@@ -36,13 +35,6 @@ src_unpack() {
 
 src_compile() {
 	eant jar $(use_doc)
-}
-
-src_test() {
-	cd "${S}"/dist
-	java-pkg_jar-from junit
-	cd "${S}"
-	ANT_TASKS="ant-junit" eant test || die "eant test failed"
 }
 
 src_install() {
