@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.71 2010/09/11 04:37:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.72 2010/09/11 05:18:35 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -62,9 +62,9 @@ case ${KDEBASE} in
 		# Determine SLOT from PVs
 		case ${PV} in
 			*.9999*) SLOT="${PV/.9999*/}" ;; # stable live
-			4.6* | 4.5.[6-9]*) SLOT="4.6" ;;
-			4.5* | 4.4.[6-9]*) SLOT="4.5" ;;
-			4.4* | 4.3.[6-9]*) SLOT="4.4" ;;
+			4.6* | 4.5.[6-9][0-9]*) SLOT="4.6" ;;
+			4.5* | 4.4.[6-9][0-9]*) SLOT="4.5" ;;
+			4.4* | 4.3.[6-9][0-9]*) SLOT="4.4" ;;
 			9999*) SLOT="live" ;; # regular live
 			*) die "Unsupported ${PV}" ;;
 		esac
