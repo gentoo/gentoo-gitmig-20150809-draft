@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11928 2010/09/11 10:25:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11929 2010/09/11 22:50:33 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1165,20 +1165,6 @@ net-libs/libjingle
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
 media-sound/teamspeak-server-bin
-
-# Doug Goldstein <cardoe@gentoo.org> (17 Dec 2009)
-# Mask nvidia-drivers-71.x.y since it will not work
-# with xorg-server-1.5 and later which are the only
-# available versions in the tree
-<x11-drivers/nvidia-drivers-72.0.0
-
-# Rémi Cardona <remi@gentoo.org> (13 Dec 2009)
-# ttmkfdir had multiple QA issues and bugs (bugs #209616, #235354 and #262945)
-# xfs is completely useless, even on thin clients
-# and xfsinfo is useless if xfs goes
-x11-apps/ttmkfdir
-x11-apps/xfs
-x11-apps/xfsinfo
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02 Dec 2009)
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime

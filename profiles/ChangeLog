@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4546 2010/09/11 10:25:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4547 2010/09/11 22:50:32 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  remove obsolete masks.
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Mask x11-drivers/linuxwacom for removal.
