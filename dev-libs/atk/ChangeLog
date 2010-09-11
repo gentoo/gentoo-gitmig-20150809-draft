@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.203 2010/08/22 17:53:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.204 2010/09/11 18:26:00 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> atk-1.30.0.ebuild:
+  Marked ppc for bug #324077.
 
   22 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> -atk-1.26.0.ebuild:
   Clean up old revision.

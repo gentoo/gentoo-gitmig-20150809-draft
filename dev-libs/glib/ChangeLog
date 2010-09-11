@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.421 2010/09/08 20:41:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.422 2010/09/11 18:23:02 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> glib-2.24.1-r1.ebuild:
+  Marked ppc for bug #324077.
 
   08 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> glib-2.20.5-r1.ebuild,
   glib-2.22.4.ebuild, glib-2.22.5.ebuild, glib-2.24.1-r1.ebuild,
