@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.7.0.ebuild,v 1.7 2010/01/02 18:37:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.7.0.ebuild,v 1.8 2010/09/11 12:24:17 ulm Exp $
 
 inherit elisp-common eutils toolchain-funcs flag-o-matic
 
@@ -22,6 +22,8 @@ SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-make-elc.patch"
 }
 
 src_compile() {
