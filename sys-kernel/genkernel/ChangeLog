@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.222 2009/12/17 04:37:13 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.223 2010/09/11 16:48:03 armin76 Exp $
+
+  11 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  -genkernel-3.4.10.904.ebuild, -genkernel-3.4.10.905.ebuild,
+  genkernel-3.4.10.907.ebuild, genkernel-9999.ebuild:
+  Mark 907 stable, fix repository of 9999
 
 *genkernel-3.4.10.907 (17 Dec 2009)
 
