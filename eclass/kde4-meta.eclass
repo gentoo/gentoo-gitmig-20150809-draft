@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.39 2010/08/09 15:59:04 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.40 2010/09/11 04:25:23 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -203,15 +203,10 @@ kde4-meta_src_extract() {
 	else
 		local abort tarball tarfile f extractlist moduleprefix postfix
 		case ${PV} in
-			4.[45].8[05] | 4.[45].9[02568])
-				# block for normally packed upstream unstable snapshots
+			4.[45].8[05] | 4.[45].9[023568])
+				# Block for normally packed upstream unstable snapshots
 				KMTARPARAMS+=" --bzip2" # bz2
 				postfix="bz2"
-				;;
-			4.[45].[6-9]*)
-				# Not passing --xz, as it doesn't work with stable tar
-				KMTARPARAMS+=" --use-compress-program=xz" # xz
-				postfix="xz"
 				;;
 			*)
 				KMTARPARAMS+=" --bzip2" # bz2

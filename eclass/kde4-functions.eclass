@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.34 2010/09/09 17:02:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.35 2010/09/11 04:25:23 reavertm Exp $
 
 inherit versionator
 
@@ -518,8 +518,15 @@ add_kdebase_dep() {
 	local use=${2:+,${2}}
 
 	if [[ ${KDEBASE} = kde-base ]]; then
-		echo " !kdeprefix? ( >=kde-base/${1}-${PV}[aqua=,-kdeprefix${use}] )"
-		echo " kdeprefix? ( >=kde-base/${1}-${PV}:${SLOT}[aqua=,kdeprefix${use}] )"
+		# FIXME remove hack when kdepim-4.4.6 is gone
+		local FIXME_PV
+		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.4.6* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs ]]; then
+			FIXME_PV=4.4.5
+		else
+			FIXME_PV=${PV}
+		fi
+		echo " !kdeprefix? ( >=kde-base/${1}-${FIXME_PV}[aqua=,-kdeprefix${use}] )"
+		echo " kdeprefix? ( >=kde-base/${1}-${FIXME_PV}:${SLOT}[aqua=,kdeprefix${use}] )"
 	else
 		if [[ ${KDE_MINIMAL} = live ]]; then
 			echo " kde-base/${1}:${KDE_MINIMAL}[aqua=${use}]"
