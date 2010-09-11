@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.70 2010/09/11 04:25:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.71 2010/09/11 04:37:07 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -482,6 +482,10 @@ case ${BUILD_TYPE} in
 						4.[456].8[05] | 4.[456].9[023568])
 							# Unstable KDE SC releases
 							SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
+							;;
+						4.4.6)
+							# Only kdepim here
+							SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
 							;;
 						*)
 							# Stable KDE SC releases
