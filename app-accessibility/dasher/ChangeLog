@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.156 2010/08/15 11:10:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.157 2010/09/11 18:38:06 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> dasher-4.11.ebuild:
+  Marked ppc for bug #324077.
 
   15 Aug 2010; Raúl Porcel <armin76@gentoo.org> dasher-4.11.ebuild:
   Drop sh

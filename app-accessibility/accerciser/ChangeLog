@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.12 2010/08/01 11:23:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.13 2010/09/11 18:37:22 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> accerciser-1.10.1.ebuild:
+  Marked ppc for bug #324077.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   accerciser-1.10.1.ebuild:

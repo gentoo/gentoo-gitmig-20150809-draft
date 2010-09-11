@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.10.1.ebuild,v 1.4 2010/08/01 11:23:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.10.1.ebuild,v 1.5 2010/09/11 18:37:22 josejx Exp $
 
 PYTHON_DEPEND="2" # Support for Python 3 not verified
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/Accerciser"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
