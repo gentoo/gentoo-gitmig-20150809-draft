@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.10 2010/09/09 17:18:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.11 2010/09/11 10:27:44 hwoarang Exp $
+
+  11 Sep 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.9.ebuild:
+  Stable on amd64 wrt bug #336396
 
   09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> firefox-3.6.9.ebuild:
   stable x86, security bug 336396
