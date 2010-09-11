@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.470 2010/08/18 21:01:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.471 2010/09/11 18:24:30 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gtk+-2.20.1-r1.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gtk+-2.18.9.ebuild:
   arm stable, bug #314899
