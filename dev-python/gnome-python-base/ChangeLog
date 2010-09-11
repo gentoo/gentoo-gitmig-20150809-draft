@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.32 2010/09/08 09:36:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/ChangeLog,v 1.33 2010/09/11 19:07:54 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  gnome-python-base-2.28.1.ebuild:
+  Marked ppc for bug #324077.
 
   08 Sep 2010; Brent Baude <ranger@gentoo.org>
   gnome-python-base-2.28.0.ebuild:

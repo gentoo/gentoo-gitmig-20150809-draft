@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/brasero-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/brasero-python/ChangeLog,v 1.12 2010/09/08 09:35:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/brasero-python/ChangeLog,v 1.13 2010/09/11 19:07:10 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  brasero-python-2.30.2.ebuild:
+  Marked ppc for bug #324077.
 
   08 Sep 2010; Brent Baude <ranger@gentoo.org> brasero-python-2.28.0.ebuild:
   Marking brasero-python-2.28.0 ppc64 stable for bug 320247

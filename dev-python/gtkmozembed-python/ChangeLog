@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.28 2010/08/01 10:35:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.29 2010/09/11 19:02:42 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  gtkmozembed-python-2.25.3.ebuild:
+  Marked ppc for bug #324077.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gtkmozembed-python-2.25.3.ebuild:
