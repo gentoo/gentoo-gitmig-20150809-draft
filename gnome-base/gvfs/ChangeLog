@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.111 2010/08/29 17:25:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.112 2010/09/11 18:42:33 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gvfs-1.6.3.ebuild:
+  Marked ppc for bug #324077.
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> gvfs-1.4.3-r1.ebuild:
   arm stable
