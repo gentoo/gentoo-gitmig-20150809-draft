@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.107 2010/08/18 21:10:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.108 2010/09/11 18:27:26 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gnome-spell-1.0.8-r3.ebuild:
+  Marked ppc for bug #324077.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-spell-1.0.8-r3.ebuild:
   arm stable, bug #314899
