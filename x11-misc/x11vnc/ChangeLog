@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.90 2010/08/28 11:40:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.91 2010/09/11 16:13:17 swegener Exp $
+
+*x11vnc-0.9.12 (11 Sep 2010)
+
+  11 Sep 2010; Sven Wegener <swegener@gentoo.org> +x11vnc-0.9.12.ebuild:
+  Version bump.
 
   28 Aug 2010; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.11.ebuild:
   Remove libvncserver include files which conflict with
