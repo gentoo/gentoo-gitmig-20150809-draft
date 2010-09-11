@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.172 2010/09/08 00:36:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.173 2010/09/11 16:10:20 phajdan.jr Exp $
+
+  11 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-7.0.503.1-r1.ebuild, chromium-9999.ebuild:
+  Apply most cleanup changes from bug #333513 by scarabeus.
 
 *chromium-6.0.472.55 (08 Sep 2010)
 

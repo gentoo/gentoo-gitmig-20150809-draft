@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.81 2010/09/07 17:19:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.82 2010/09/11 16:10:20 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -34,8 +34,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
-	sys-devel/flex
-	virtual/perl-version"
+	sys-devel/flex"
 RDEPEND+="
 	|| (
 		x11-themes/gnome-icon-theme
@@ -90,10 +89,6 @@ src_unpack() {
 	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH}_p${CREV} "
 }
 
-get_chromium_home() {
-	echo "/usr/$(get_libdir)/chromium-browser"
-}
-
 remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
 	local out
@@ -102,6 +97,10 @@ remove_bundled_lib() {
 	if [[ -z $out ]]; then
 		ewarn "no files matched when removing bundled library $1"
 	fi
+}
+
+pkg_setup() {
+	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
 }
 
 src_prepare() {
@@ -137,9 +136,9 @@ src_configure() {
 
 	# Make it possible to build chromium on non-sse2 systems.
 	if use sse2; then
-		myconf="${myconf} -Ddisable_sse2=0"
+		myconf+=" -Ddisable_sse2=0"
 	else
-		myconf="${myconf} -Ddisable_sse2=1"
+		myconf+=" -Ddisable_sse2=1"
 	fi
 
 	# Use system-provided libraries.
@@ -148,7 +147,7 @@ src_configure() {
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
-	myconf="${myconf}
+	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
@@ -158,52 +157,52 @@ src_configure() {
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
-		myconf="${myconf} -Duse_cups=1"
+		myconf+=" -Duse_cups=1"
 	else
-		myconf="${myconf} -Duse_cups=0"
+		myconf+=" -Duse_cups=0"
 	fi
 
 	if use "gnome-keyring"; then
-		myconf="${myconf} -Duse_gnome_keyring=1 -Dlinux_link_gnome_keyring=1"
+		myconf+=" -Duse_gnome_keyring=1 -Dlinux_link_gnome_keyring=1"
 	else
 		# TODO: we should also disable code trying to dlopen
 		# gnome-keyring in that case.
-		myconf="${myconf} -Duse_gnome_keyring=0 -Dlinux_link_gnome_keyring=0"
+		myconf+=" -Duse_gnome_keyring=0 -Dlinux_link_gnome_keyring=0"
 	fi
 
 	# Enable sandbox.
-	myconf="${myconf}
-		-Dlinux_sandbox_path=$(get_chromium_home)/chrome_sandbox
-		-Dlinux_sandbox_chrome_path=$(get_chromium_home)/chrome"
+	myconf+="
+		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
+		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
 	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
 	# and the performance gain isn't worth it.
-	myconf="${myconf} -Dv8_use_snapshot=0"
+	myconf+=" -Dv8_use_snapshot=0"
 
 	# Disable tcmalloc memory allocator. It causes problems,
 	# for example bug #320419.
-	myconf="${myconf} -Dlinux_use_tcmalloc=0"
+	myconf+=" -Dlinux_use_tcmalloc=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
 	[[ $myarch = "" ]] && myarch="$ARCH"
 
 	if [[ $myarch = amd64 ]] ; then
-		myconf="${myconf} -Dtarget_arch=x64"
+		myconf+=" -Dtarget_arch=x64"
 	elif [[ $myarch = x86 ]] ; then
-		myconf="${myconf} -Dtarget_arch=ia32"
+		myconf+=" -Dtarget_arch=ia32"
 	elif [[ $myarch = arm ]] ; then
 		# TODO: check this again after
 		# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=39509 is fixed.
 		append-flags -fno-tree-sink
 
-		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
+		myconf+=" -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
 	else
 		die "Failed to determine target arch, got '$myarch'."
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
-		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
+		myconf+=" -Dno_strict_aliasing=1 -Dgcc_version=44"
 	fi
 
 	# Work around a likely GCC bug, see bug #331945.
@@ -214,9 +213,9 @@ src_configure() {
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
-	myconf="${myconf} -Dwerror="
+	myconf+=" -Dwerror="
 
-	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
+	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die
 }
 
 src_compile() {
@@ -225,46 +224,43 @@ src_compile() {
 		CXX="$(tc-getCXX)" \
 		AR="$(tc-getAR)" \
 		RANLIB="$(tc-getRANLIB)" \
-		|| die "compilation failed"
+		|| die
 }
 
 src_install() {
-	dodir "$(get_chromium_home)"
-
-	exeinto "$(get_chromium_home)"
+	exeinto "${CHROMIUM_HOME}"
 	pax-mark m out/Release/chrome
 	doexe out/Release/chrome
-	doexe out/Release/chrome_sandbox
-	fperms 4755 "$(get_chromium_home)/chrome_sandbox"
-	doexe out/Release/xdg-settings
-	doexe "${FILESDIR}"/chromium-launcher.sh
+	doexe out/Release/chrome_sandbox || die
+	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
+	doexe out/Release/xdg-settings || die
+	doexe "${FILESDIR}"/chromium-launcher.sh || die
 
-	insinto "$(get_chromium_home)"
-	doins out/Release/chrome.pak || die "installing chrome.pak failed"
-	doins out/Release/resources.pak || die "installing resources.pak failed"
+	insinto "${CHROMIUM_HOME}"
+	doins out/Release/chrome.pak || die
+	doins out/Release/resources.pak || die
 
-	doins -r out/Release/locales
-	doins -r out/Release/resources
+	doins -r out/Release/locales || die
+	doins -r out/Release/resources || die
 
 	# chrome.1 is for chromium --help
-	newman out/Release/chrome.1 chrome.1
-	newman out/Release/chrome.1 chromium.1
+	newman out/Release/chrome.1 chrome.1 || die
+	newman out/Release/chrome.1 chromium.1 || die
 
 	doexe out/Release/ffmpegsumo_nolink || die
 	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icon and desktop entry.
-	newicon out/Release/product_logo_48.png ${PN}-browser.png
-	dosym "$(get_chromium_home)/chromium-launcher.sh" /usr/bin/chromium
+	newicon out/Release/product_logo_48.png ${PN}-browser.png || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
 	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser" \
 		"MimeType=text/html;text/xml;application/xhtml+xml;"
-	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
-		|| die "desktop file sed failed"
+	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
 
 	# Install GNOME default application entry (bug #303100).
 	if use gnome; then
-		dodir /usr/share/gnome-control-center/default-apps
+		dodir /usr/share/gnome-control-center/default-apps || die
 		insinto /usr/share/gnome-control-center/default-apps
-		doins "${FILESDIR}"/chromium.xml
+		doins "${FILESDIR}"/chromium.xml || die
 	fi
 }
