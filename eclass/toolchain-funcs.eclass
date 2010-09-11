@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.101 2010/08/20 15:04:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.102 2010/09/11 17:12:20 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -360,30 +360,39 @@ tc-endian() {
 	esac
 }
 
+# Internal func.  The first argument is the version info to expand.
+# Query the preprocessor to improve compatibility across different
+# compilers rather than maintaining a --version flag matrix. #335943
+_gcc_fullversion() {
+	local ver="$1"; shift
+	set -- `$(tc-getCPP "$@") -E -P - <<<"__GNUC__ __GNUC_MINOR__ __GNUC_PATCHLEVEL__"`
+	eval echo "$ver"
+}
+
 # @FUNCTION: gcc-fullversion
 # @RETURN: compiler version (major.minor.micro: [3.4.6])
 gcc-fullversion() {
-	$(tc-getCC "$@") -dumpversion
+	_gcc_fullversion '$1.$2.$3' "$@"
 }
 # @FUNCTION: gcc-version
 # @RETURN: compiler version (major.minor: [3.4].6)
 gcc-version() {
-	gcc-fullversion "$@" | cut -f1,2 -d.
+	_gcc_fullversion '$1.$2' "$@"
 }
 # @FUNCTION: gcc-major-version
 # @RETURN: major compiler version (major: [3].4.6)
 gcc-major-version() {
-	gcc-version "$@" | cut -f1 -d.
+	_gcc_fullversion '$1' "$@"
 }
 # @FUNCTION: gcc-minor-version
 # @RETURN: minor compiler version (minor: 3.[4].6)
 gcc-minor-version() {
-	gcc-version "$@" | cut -f2 -d.
+	_gcc_fullversion '$2' "$@"
 }
 # @FUNCTION: gcc-micro-version
 # @RETURN: micro compiler version (micro: 3.4.[6])
 gcc-micro-version() {
-	gcc-fullversion "$@" | cut -f3 -d. | cut -f1 -d-
+	_gcc_fullversion '$3' "$@"
 }
 
 # Returns the installation directory - internal toolchain
