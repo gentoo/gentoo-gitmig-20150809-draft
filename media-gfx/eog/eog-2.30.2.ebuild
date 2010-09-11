@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.2.ebuild,v 1.4 2010/08/01 11:51:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.2.ebuild,v 1.5 2010/09/11 18:53:02 josejx Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="dbus doc exif jpeg lcms python tiff xmp"
 
 RDEPEND=">=x11-libs/gtk+-2.17.5
