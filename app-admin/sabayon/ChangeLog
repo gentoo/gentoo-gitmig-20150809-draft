@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.76 2010/08/31 11:49:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.77 2010/09/11 18:56:08 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> sabayon-2.30.0.ebuild:
+  Marked ppc for bug #324077.
 
   31 Aug 2010; Pacho Ramos <pacho@gentoo.org> sabayon-2.30.0.ebuild:
   app-admin/pessulus is required as reported in bug #330843 by Piotr Dlubisz

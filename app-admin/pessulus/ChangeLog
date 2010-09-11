@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.82 2010/08/23 20:46:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.83 2010/09/11 18:55:54 josejx Exp $
+
+  11 Sep 2010; Joseph Jezak <josejx@gentoo.org> pessulus-2.30.2.ebuild:
+  Marked ppc for bug #324077.
 
   23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   pessulus-2.30.2.ebuild:
