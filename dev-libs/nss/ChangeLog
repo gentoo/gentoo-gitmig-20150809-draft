@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.187 2010/09/09 17:08:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.188 2010/09/11 10:30:16 hwoarang Exp $
+
+  11 Sep 2010; Markos Chandras <hwoarang@gentoo.org> nss-3.12.7.ebuild:
+  Stable on amd64 wrt bug #336396
 
   09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> nss-3.12.7.ebuild:
   stable x86, security bug 336396
