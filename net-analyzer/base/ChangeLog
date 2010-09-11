@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/base
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.20 2009/05/26 17:03:47 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.21 2010/09/11 14:49:57 mabi Exp $
+
+*base-1.4.1-r1 (11 Sep 2010)
+
+  11 Sep 2010; Matti Bickel <mabi@gentoo.org> +base-1.4.1-r1.ebuild:
+  eapi bump, use EAPI2 features instead of built_with_use checks
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   base-1.4.0.ebuild, base-1.4.1.ebuild:
