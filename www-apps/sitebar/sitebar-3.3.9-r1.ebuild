@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r1.ebuild,v 1.5 2010/03/07 13:17:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r1.ebuild,v 1.6 2010/09/11 15:18:00 mabi Exp $
 
 inherit webapp eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/httpd-cgi
-	virtual/php"
+DEPEND="virtual/httpd-php"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
