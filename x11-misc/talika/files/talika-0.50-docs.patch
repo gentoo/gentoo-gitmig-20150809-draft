@@ -1,0 +1,30 @@
+Index: talika-0.50/Makefile.am
+===================================================================
+--- talika-0.50.orig/Makefile.am
++++ talika-0.50/Makefile.am
+@@ -5,24 +5,11 @@ SUBDIRS = src po \
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-talikadocdir = ${prefix}/doc/talika
+-talikadoc_DATA = \
+-	README\
+-	COPYING\
+-	AUTHORS\
+-	ChangeLog\
+-	INSTALL\
+-	NEWS\
+-	TODO\
+-	HACKING
+-
+-
+ INTLTOOL_FILES = intltool-extract.in \
+ 	intltool-merge.in \
+ 	intltool-update.in
+ 
+-EXTRA_DIST = $(talikadoc_DATA) \
+-	$(INTLTOOL_FILES)
++EXTRA_DIST = $(INTLTOOL_FILES)
+ 
+ DISTCLEANFILES = intltool-extract \
+ 	intltool-merge \
