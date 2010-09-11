@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.83 2010/06/30 10:58:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.84 2010/09/11 14:21:31 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop useles maintainer line
 
   30 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   heartbeat-2.0.8.ebuild, +files/heartbeat-2.0.8-install_fix.patch:

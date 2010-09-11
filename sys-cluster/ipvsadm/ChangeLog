@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.43 2010/09/09 09:43:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.44 2010/09/11 14:21:31 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop useles maintainer line
 
 *ipvsadm-1.25-r1 (09 Sep 2010)
 

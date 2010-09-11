@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ocfs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ChangeLog,v 1.5 2008/07/28 20:30:57 pchrist Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ChangeLog,v 1.6 2010/09/11 14:21:31 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop useles maintainer line
 
   28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Update metadata.xml to include USE flag descriptions. Entries taken from

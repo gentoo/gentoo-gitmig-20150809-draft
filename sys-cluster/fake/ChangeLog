@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/fake
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/ChangeLog,v 1.10 2008/12/06 17:57:47 xmerlin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/ChangeLog,v 1.11 2010/09/11 14:21:32 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop useles maintainer line
 
   06 Dec 2008; Christian Zoffoli <xmerlin@gentoo.org> fake-1.1.10.ebuild:
   Fixed man path, bug #246713 thanks to Diego E. 'Flameeyes' Pettenò

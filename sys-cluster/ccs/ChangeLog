@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ccs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.41 2009/02/10 22:32:27 xmerlin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.42 2010/09/11 14:21:31 scarabeus Exp $
+
+  11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop useles maintainer line
 
   10 Feb 2009; Christian Zoffoli <xmerlin@gentoo.org> ccs-2.03.09.ebuild:
   Stable on x86 and amd64.
