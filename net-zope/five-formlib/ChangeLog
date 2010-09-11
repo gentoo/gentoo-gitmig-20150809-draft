@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/five-formlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.3 2010/07/04 06:23:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.4 2010/09/11 21:15:51 arfrever Exp $
+
+  11 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  five-formlib-1.0.3.ebuild:
+  Use PyPI mirrors. Update dependencies.
 
 *five-formlib-1.0.3 (04 Jul 2010)
 
