@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.32 2010/09/10 15:58:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.33 2010/09/11 15:09:20 armin76 Exp $
+
+  11 Sep 2010; Raúl Porcel <armin76@gentoo.org> git-1.7.2.2.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #335891
 
   10 Sep 2010; Jeroen Roovers <jer@gentoo.org> git-1.7.2.2.ebuild:
   Stable for HPPA (bug #335891).
