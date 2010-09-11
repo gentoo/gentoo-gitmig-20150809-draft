@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/emutos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.14 2010/07/29 17:11:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.15 2010/09/11 19:00:41 phajdan.jr Exp $
+
+  11 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> emutos-0.8.5.ebuild:
+  x86 stable wrt bug #335833
 
 *emutos-0.8.5 (29 Jul 2010)
 
