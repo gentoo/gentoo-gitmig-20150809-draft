@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/scourge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.35 2010/01/22 20:10:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.36 2010/09/11 06:51:59 mr_bones_ Exp $
+
+  11 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  scourge-0.21.1.ebuild:
+  sed patch from Kevin Pyle to fix buffer overflow (bug #336603)
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> scourge-0.21.1.ebuild:
   stable ppc, bug 289117
