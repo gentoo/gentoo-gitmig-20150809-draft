@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-i18nmessageid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.6 2010/05/18 13:21:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.7 2010/09/11 21:32:39 arfrever Exp $
+
+*zope-i18nmessageid-3.5.3 (11 Sep 2010)
+
+  11 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-i18nmessageid-3.5.2.ebuild, +zope-i18nmessageid-3.5.3.ebuild:
+  Version bump.
 
 *zope-i18nmessageid-3.5.2 (18 May 2010)
 
