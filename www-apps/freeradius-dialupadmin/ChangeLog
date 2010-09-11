@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/freeradius-dialupadmin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.9 2008/10/12 10:33:19 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.10 2010/09/11 15:05:30 mabi Exp $
+
+  11 Sep 2010; Matti Bickel <mabi@gentoo.org>
+  freeradius-dialupadmin-1.70.3.ebuild, freeradius-dialupadmin-1.80.ebuild:
+  change virtual/php to dev-lang/php (bug #319623)
 
 *freeradius-dialupadmin-1.80 (12 Oct 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.4 2007/01/02 22:43:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/openwebstats-1.1.ebuild,v 1.5 2010/09/11 15:15:28 mabi Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/php"
+DEPEND="dev-lang/php"
 
 S=${WORKDIR}/${PN}
 

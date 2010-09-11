@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.2.4.ebuild,v 1.1 2009/09/16 14:38:43 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.2.4.ebuild,v 1.2 2010/09/11 15:08:43 mabi Exp $
 
 HORDE_PN="${PN}"
 
@@ -16,7 +16,7 @@ IUSE="mysql postgres ldap oracle"
 
 DEPEND=""
 RDEPEND="!www-apps/horde
-	virtual/php
+	dev-lang/php
 	>=www-apps/horde-pear-1.3
 	dev-php/PEAR-Log
 	dev-php/PEAR-Mail_Mime

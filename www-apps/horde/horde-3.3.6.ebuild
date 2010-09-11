@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.3.6.ebuild,v 1.6 2009/12/28 18:54:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.3.6.ebuild,v 1.7 2010/09/11 15:10:09 mabi Exp $
 
 HORDE_PHP_FEATURES="session xml"
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 hppa ~ia64 ppc sparc x86"
 IUSE="mysql"
 
 DEPEND=""
-RDEPEND="virtual/php
+RDEPEND="dev-lang/php
 	>=sys-devel/gettext-0.10.40
 	>=dev-libs/libxml2-2.4.21
 	>=www-apps/horde-pear-1.3
