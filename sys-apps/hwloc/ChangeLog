@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/hwloc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.1 2010/09/11 13:36:53 xarthisius Exp $
+
+*hwloc-1.0.2 (11 Sep 2010)
+
+  11 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.0.2.ebuild,
+  +metadata.xml:
+  Initial import wrt bug 299818. Ebuild written by Ruggero Morsucci
+  <mors_1tflops@yahoo.it>
+
