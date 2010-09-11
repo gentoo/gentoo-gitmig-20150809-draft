@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.19.ebuild,v 1.6 2010/07/08 19:13:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.19.ebuild,v 1.7 2010/09/11 06:23:50 angelos Exp $
 
 EAPI=2
+WANT_AUTOMAKE="1.11"
 inherit autotools eutils
 
 DESCRIPTION="An MPD client that submits information to Audioscrobbler"
@@ -22,7 +23,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.18-ldadd_gthread.patch
+	epatch "${FILESDIR}"/${PN}-0.18-ldadd_gthread.patch \
+		"${FILESDIR}"/${P}-config_path.patch
 	eautoreconf
 }
 
