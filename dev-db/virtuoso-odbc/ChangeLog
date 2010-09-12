@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.13 2010/09/03 19:29:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.14 2010/09/12 21:36:11 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  virtuoso-odbc-6.1.2.ebuild:
+  x86 stable wrt bug #333115
 
   03 Sep 2010; Joseph Jezak <josejx@gentoo.org> virtuoso-odbc-6.1.1.ebuild:
   Marked ppc64 stable for bug #322791.
