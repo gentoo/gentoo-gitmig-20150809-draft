@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.1 2010/07/01 23:04:44 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.2 2010/09/12 07:07:18 tove Exp $
 
 EAPI="3"
 
@@ -42,5 +42,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 }
