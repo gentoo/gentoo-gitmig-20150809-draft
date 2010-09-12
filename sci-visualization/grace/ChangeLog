@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.42 2010/07/22 19:21:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.43 2010/09/12 19:50:53 xarthisius Exp $
+
+*grace-5.1.22-r2 (12 Sep 2010)
+
+  12 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  grace-5.1.22-r1.ebuild, +grace-5.1.22-r2.ebuild,
+  +files/grace-5.1.22-ldflags.patch:
+  Respect CC,LDFLAGS wrt bug 336984. Thanks to Diego for the report. Call
+  econf in src_configure.
 
   22 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org>
   grace-5.1.22-r1.ebuild:

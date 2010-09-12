@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.8 2010/09/12 19:50:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.1 2010/09/12 19:50:53 xarthisius Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="fortran fftw jpeg netcdf pdf png"
 
 DEPEND="x11-libs/openmotif
@@ -28,6 +28,10 @@ DEPEND="x11-libs/openmotif
 RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
+pkg_setup() {
+	tc-export CC
+}
+
 src_prepare() {
 	# move tmpnam to mkstemp (adapted from debian)
 	epatch "${FILESDIR}"/${P}-mkstemp.patch
@@ -37,7 +41,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.1.21-fortran.patch
 	# fix a leak and pdf driver (from freebsd)
 	epatch "${FILESDIR}"/${P}-dlmodule.patch
-	epatch "${FILESDIR}"/${P}-pdfdrv.patch
+	epatch "${FILESDIR}"/${P}-pdfdrv.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	# don't strip if not asked for
 	sed -i \
@@ -85,14 +90,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGES ChangeLog DEVELOPERS README COPYRIGHT
+	emake DESTDIR="${D}" install || die
+	dodoc CHANGES ChangeLog DEVELOPERS README || die
 
 	dosym ../../${PN}/examples /usr/share/doc/${PF}/examples
 	dosym ../../${PN}/doc /usr/share/doc/${PF}/html
 
 	doman "${ED}"/usr/share/doc/${PF}/html/*.1
 	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1
-	doicon "${FILESDIR}"/${PN}.png || die "failed installing icon"
+	doicon "${FILESDIR}"/${PN}.png || die
 	make_desktop_entry xmgrace Grace grace
 }
