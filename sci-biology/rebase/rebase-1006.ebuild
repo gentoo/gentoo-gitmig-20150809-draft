@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1006.ebuild,v 1.6 2010/07/18 14:18:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1006.ebuild,v 1.7 2010/09/12 20:00:32 jlec Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-s
 
 RDEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
 DEPEND="${RDEPEND}
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+	app-arch/xz-utils"
 
 RESTRICT="binchecks strip"
 
