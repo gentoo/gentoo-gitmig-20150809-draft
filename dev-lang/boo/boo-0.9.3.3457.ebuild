@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.3.3457.ebuild,v 1.2 2010/09/12 03:28:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.3.3457.ebuild,v 1.3 2010/09/12 12:59:11 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.codehaus.org/boo/distributions/${P}-src.zip"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0

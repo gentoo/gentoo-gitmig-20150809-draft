@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.196 2010/09/12 03:30:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.197 2010/09/12 12:59:49 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> mono-2.6.7.ebuild:
+  Marked ppc for bug #336851.
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mono-2.6.7.ebuild:
   x86 stable wrt bug #336851
