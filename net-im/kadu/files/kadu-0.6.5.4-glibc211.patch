@@ -1,0 +1,12 @@
+diff -ru ../kadu/kadu-core/main.cpp ./kadu-core/main.cpp
+--- ../kadu/kadu-core/main.cpp	2010-01-17 22:37:09.000000000 +0100
++++ ./kadu-core/main.cpp	2010-09-12 20:45:41.600774558 +0200
+@@ -20,7 +20,7 @@
+ #include <winsock2.h>
+ #include <windows.h>
+ #endif
+-#ifdef Q_OS_BSD4
++#if defined(Q_OS_BSD4) || defined(Q_OS_LINUX)
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #endif

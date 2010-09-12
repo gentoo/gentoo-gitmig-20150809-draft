@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.4 2010/07/18 13:10:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.5 2010/09/12 19:05:42 reavertm Exp $
 
 EAPI="2"
 
@@ -51,6 +51,7 @@ S="${WORKDIR}/${PN}"
 
 PATCHES=(
 	"${FILESDIR}/libgsm-ugly-code.patch"
+	"${FILESDIR}/${P}-glibc211.patch"
 )
 
 # set given .config variable to =m or =y
