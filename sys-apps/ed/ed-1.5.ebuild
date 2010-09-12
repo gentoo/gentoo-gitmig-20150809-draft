@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.5.ebuild,v 1.1 2010/09/06 20:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.5.ebuild,v 1.2 2010/09/12 20:29:52 abcd Exp $
+
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -10,27 +12,24 @@ SRC_URI="mirror://gnu/ed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="sys-apps/texinfo"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5-build.patch
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
 	# custom configure script ... econf wont work
 	./configure \
-		--prefix=/ \
-		--datadir=/usr/share \
+		--prefix="${EPREFIX}"/ \
+		--datadir="${EPREFIX}"/usr/share \
 		${EXTRA_ECONF} \
 		|| die
-	emake || die
 }
 
 src_install() {
