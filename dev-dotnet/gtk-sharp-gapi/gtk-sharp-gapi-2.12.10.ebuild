@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/gtk-sharp-gapi-2.12.10.ebuild,v 1.3 2010/07/12 17:39:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/gtk-sharp-gapi-2.12.10.ebuild,v 1.4 2010/09/12 04:29:15 josejx Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ GTK_SHARP_MODULE_DIR=parser
 inherit gtk-sharp-module
 
 SLOT="2"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 RESTRICT="test"
