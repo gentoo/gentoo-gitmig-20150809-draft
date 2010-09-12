@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.19 2010/08/13 10:23:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.20 2010/09/12 07:51:44 jlec Exp $
+
+  12 Sep 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  net-im/gajim jingle masked, because net-libs/farsight2 is not keyworded
+  336899
 
   13 Aug 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   MKL not available on this arch
