@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pmk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.13 2010/02/21 01:38:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.14 2010/09/12 14:37:45 pacho Exp $
+
+  12 Sep 2010; Pacho Ramos <pacho@gentoo.org> pmk-0.10.4.ebuild:
+  Make this respect LDFLAGS, bug #334987 (by Flameeyes).
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> pmk-0.10.4.ebuild:
   Transfer prefix keywords, bump EAPI

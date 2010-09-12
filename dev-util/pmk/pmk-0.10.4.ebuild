@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.4.ebuild,v 1.2 2010/02/21 01:38:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.4.ebuild,v 1.3 2010/09/12 14:37:45 pacho Exp $
 
 EAPI=3
 
@@ -19,8 +19,9 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	unpack ${A}
-	cd "${S}"
+	# Make this respect LDFLAGS, bug #334987	
+	sed -i -e "s:CLDFLAGS:LDFLAGS:" Makefile.pmk || die
+	sed -i -e "/@CLDFLAGS@/d" Makefile.pmk || die
 
 	# Remove executable stack
 	cp detect_cpu_asm.s detect_cpu_asm.S
