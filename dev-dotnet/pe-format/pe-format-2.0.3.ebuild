@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.0.3.ebuild,v 1.1 2010/09/12 17:44:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.0.3.ebuild,v 1.2 2010/09/12 17:50:33 pacho Exp $
 
 inherit toolchain-funcs
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+DEPEND=""
 RDEPEND="!sys-apps/pe-format2"
 
 src_compile() {
