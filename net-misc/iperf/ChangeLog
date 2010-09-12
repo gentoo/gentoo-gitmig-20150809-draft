@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.35 2010/07/26 22:02:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.36 2010/09/12 03:45:37 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> iperf-2.0.5.ebuild:
+  x86 stable wrt bug #336656
 
 *iperf-2.0.5 (26 Jul 2010)
 
