@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/iripdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/ChangeLog,v 1.14 2009/08/13 21:13:07 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/iripdb/ChangeLog,v 1.15 2010/09/12 13:18:45 pacho Exp $
+
+  12 Sep 2010; Pacho Ramos <pacho@gentoo.org> iripdb-0.1.3b.ebuild:
+  Make this respect LDFLAGS, bug #334463 by Diego E. 'Flameeyes' Pettenò.
+  Thanks a lot to Dane Smith for the fix. Make DESCRIPTION shorter to make
+  repoman happier.
 
   13 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> iripdb-0.1.3b.ebuild:
   Remove filter-flags for GCC 3.3+.
