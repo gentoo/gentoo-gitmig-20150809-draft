@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/venus/venus-20100911.ebuild,v 1.1 2010/09/12 19:44:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/venus/venus-20100911.ebuild,v 1.2 2010/09/12 22:07:28 tampakrap Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -12,7 +12,7 @@ WEBAPP_MANUAL_SLOT="yes"
 
 DESCRIPTION="A feed aggregator application"
 HOMEPAGE="http://intertwingly.net/code/venus/"
-SRC_URI="http://dev.gentoo.org/~tampakrap/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="PSF-2.2"
 KEYWORDS="~amd64 ~x86"
