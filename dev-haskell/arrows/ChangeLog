@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/arrows
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.15 2010/08/07 11:48:24 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.16 2010/09/12 10:31:13 slyfox Exp $
+
+  12 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> arrows-0.4.2.0.ebuild:
+  Marked ~sparc (bug #328121)
 
   07 Aug 2010; Lennart Kolmodin <kolmodin@gentoo.org> arrows-0.4.2.0.ebuild:
   Remove the CABAL_FEATURES flag hscolour as it's not yet supported in

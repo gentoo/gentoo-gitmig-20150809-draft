@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/stream
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.3 2010/07/12 18:05:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.4 2010/09/12 10:30:02 slyfox Exp $
+
+  12 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  stream-0.2.6-r1.ebuild:
+  Marked ~sparc (bug #328121)
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   stream-0.2.6-r1.ebuild:
