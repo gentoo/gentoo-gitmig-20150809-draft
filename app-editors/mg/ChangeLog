@@ -1,9 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.21 2010/09/12 19:22:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.22 2010/09/12 19:27:20 ulm Exp $
 
   12 Sep 2010; Ulrich Mueller <ulm@gentoo.org> mg-20090107.ebuild:
-  Honour LDFLAGS, bug 336975.
+  Honour LDFLAGS, bug 336975. Update HOMEPAGE and SRC_URI.
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> mg-20090107.ebuild:
   Marked ~ppc for bug #305487.
