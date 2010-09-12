@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.255 2010/09/11 10:29:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.256 2010/09/12 13:11:36 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> seamonkey-2.0.7.ebuild:
+  Marked ppc ppc64 for bug #336396.
 
   11 Sep 2010; Markos Chandras <hwoarang@gentoo.org> seamonkey-2.0.7.ebuild:
   Stable on amd64 wrt bug #336396
