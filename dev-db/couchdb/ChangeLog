@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.38 2010/09/09 14:50:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.39 2010/09/12 13:51:22 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> couchdb-1.0.1.ebuild:
+  Marked ppc stable for bug #333175.
 
   09 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-1.0.1-r1.ebuild:
   enewuser wants -1 instead of explicit /sbin/nologin (bug 336293).
