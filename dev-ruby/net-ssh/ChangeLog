@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.74 2010/08/25 10:02:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.75 2010/09/12 17:15:17 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org> net-ssh-2.0.23.ebuild:
+  ia64 stable wrt #333951
 
   25 Aug 2010; Markos Chandras <hwoarang@gentoo.org> net-ssh-2.0.23.ebuild:
   Stable on amd64 wrt bug #333951
