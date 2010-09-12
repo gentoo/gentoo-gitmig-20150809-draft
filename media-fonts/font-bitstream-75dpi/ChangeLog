@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-75dpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-75dpi/ChangeLog,v 1.27 2010/07/22 15:07:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-75dpi/ChangeLog,v 1.28 2010/09/12 18:47:02 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  font-bitstream-75dpi-1.0.1.ebuild:
+  Stable on alpha, bug #327777
 
   22 Jul 2010; Markus Meier <maekke@gentoo.org>
   font-bitstream-75dpi-1.0.1.ebuild:

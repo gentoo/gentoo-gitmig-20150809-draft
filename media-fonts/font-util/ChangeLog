@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.50 2010/09/12 10:12:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.51 2010/09/12 18:57:52 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  font-util-1.1.1-r1.ebuild:
+  Stable on alpha, bug #327777
 
   12 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -font-util-1.0.1.ebuild, -font-util-1.0.2.ebuild:
