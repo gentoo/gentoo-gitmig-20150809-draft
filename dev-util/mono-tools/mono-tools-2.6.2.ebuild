@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.6.2.ebuild,v 1.3 2010/07/12 18:05:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.6.2.ebuild,v 1.4 2010/09/12 04:26:39 josejx Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mono-project.com/"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="webkit gtkhtml +xulrunner"
 
 RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
