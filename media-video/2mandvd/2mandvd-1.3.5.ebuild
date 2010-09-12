@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.3.5.ebuild,v 1.3 2010/09/08 11:04:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.3.5.ebuild,v 1.4 2010/09/12 07:10:20 tove Exp $
 
 EAPI="2"
 LANGS="de en he it pl pt ru"
@@ -62,7 +62,7 @@ src_install() {
 	doins -r Bibliotheque || die "failed to install Bibliotheque"
 	doins -r Interface || die "failed to install Interface"
 	#bug 305625
-	doins fake.pl || "failed to install fake.pl"
+	doins fake.pl || die "failed to install fake.pl"
 	doicon Interface/mandvdico.png || die "doicon failed"
 	# Desktop icon
 	make_desktop_entry ${PN} 2ManDVD mandvdico "Qt;AudioVideo;Video" \
