@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.78 2010/04/03 11:26:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.79 2010/09/12 07:09:05 tove Exp $
+
+  12 Sep 2010; Torsten Veller <tove@gentoo.org> libglademm-2.6.7.ebuild:
+  Add missing die: || "..." -> || die "..."
 
   03 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org> -files/gcc34.patch,
   -libglademm-2.0.1.ebuild, -libglademm-2.2.0.ebuild,
