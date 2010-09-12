@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.8 2010/09/12 06:55:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.9 2010/09/12 06:56:50 vapier Exp $
 
-# emacs support disabled due to Bug 99533
+# emacs support disabled due to #99533 #335900
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,6 +30,7 @@ src_compile() {
 	econf \
 		--libdir=/$(get_libdir) \
 		--sysconfdir=/etc/gpm \
+		emacs=/bin/false \
 		|| die "econf failed"
 
 	# workaround broken release
