@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.1.ebuild,v 1.2 2010/07/23 03:21:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.1-r1.ebuild,v 1.1 2010/09/12 21:41:47 flameeyes Exp $
 
 EAPI="2"
 
@@ -18,6 +18,10 @@ IUSE="kerberos"
 RDEPEND="kerberos? ( net-libs/libgssglue )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fortify.patch
+}
 
 src_configure() {
 	econf $(use_enable kerberos gss) --disable-static

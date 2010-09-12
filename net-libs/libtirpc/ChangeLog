@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.9 2010/07/23 01:53:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.10 2010/09/12 21:41:47 flameeyes Exp $
+
+*libtirpc-0.2.1-r1 (12 Sep 2010)
+
+  12 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libtirpc-0.2.0.ebuild, -files/libtirpc-0.2.0-hppa-float.patch,
+  -files/libtirpc-0.2.0-no-gss.patch, -libtirpc-0.2.1.ebuild,
+  +libtirpc-0.2.1-r1.ebuild, +files/libtirpc-0.2.1-fortify.patch:
+  Add patch to fix a possible overflow (reported by _FORTIFY_SOURCE=2);
+  thanks to Joshua Kinard (Kumba) for reporting. Cleanup old versions and
+  patches.
 
 *libtirpc-0.2.1 (23 Jul 2010)
 
