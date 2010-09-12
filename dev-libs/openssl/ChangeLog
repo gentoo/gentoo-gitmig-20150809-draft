@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.349 2010/09/12 04:17:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.350 2010/09/12 05:18:25 vapier Exp $
+
+  12 Sep 2010; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0a-r3.ebuild,
+  +files/openssl-1.0.0a-alpha-mont.patch:
+  Fix alpha build issues in new alpha-mont.pl file #330915.
 
   12 Sep 2010; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0a-r3.ebuild,
   +files/openssl-1.0.0a-alphacpuid.patch:
