@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.61 2010/09/10 23:05:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.62 2010/09/12 19:08:10 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  libXfixes-4.0.5.ebuild:
+  Stable on alpha, bug #327777
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -libXfixes-4.0.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.127 2010/09/10 17:26:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.128 2010/09/12 19:09:23 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  libdrm-2.4.20-r1.ebuild:
+  Stable on alpha, bug #327777
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/2.4.15-0001-configure-Conditionally-build-libdrm_intel.patch,

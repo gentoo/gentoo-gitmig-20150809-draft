@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.66 2010/08/14 22:26:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.67 2010/09/12 19:10:09 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> libxcb-1.6.ebuild:
+  Stable on alpha, bug #327777
 
 *libxcb-1.7 (14 Aug 2010)
 
