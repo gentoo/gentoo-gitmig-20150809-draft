@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.310 2010/08/01 21:47:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.311 2010/09/12 08:48:18 robbat2 Exp $
+
+  12 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> -db-3.2.9-r11.ebuild,
+  -db-4.2.52_p4-r2.ebuild, -db-4.3.29-r2.ebuild, -files/patch.3.2.9.1,
+  -files/patch.3.2.9.2:
+  Bug #160192: Trim old gnuconfig_update versions.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> db-4.8.30.ebuild:
   Stable on amd64 wrt bug #328609
