@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.5 2010/07/14 18:28:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.6 2010/09/12 09:09:30 graaff Exp $
+
+*trollop-1.16.2-r1 (12 Sep 2010)
+
+  12 Sep 2010; Hans de Graaff <graaff@gentoo.org> +trollop-1.16.2-r1.ebuild:
+  Add ree18.
 
   14 Jul 2010; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   This package should be part of the ruby herd.
