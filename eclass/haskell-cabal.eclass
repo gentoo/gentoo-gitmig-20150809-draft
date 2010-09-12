@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.21 2010/08/07 12:06:27 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.22 2010/09/12 07:37:09 slyfox Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -348,7 +348,13 @@ haskell-cabal_src_configure() {
 	pushd "${S}" > /dev/null
 
 	cabal-bootstrap
-	cabal-configure "$@"
+
+	ghc_flags=""
+	# currently cabal does not respect CFLAGS and LDFLAGS on it's own (bug #333217)
+	# so translate LDFLAGS to ghc parameters (without filtering)
+	for flag in $LDFLAGS; do ghc_flags="${ghc_flags} --ghc-option=-optl$flag"; done
+
+	cabal-configure $ghc_flags "$@"
 
 	popd > /dev/null
 }
