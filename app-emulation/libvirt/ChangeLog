@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.73 2010/08/20 17:10:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.74 2010/09/12 15:35:41 jmbsvicetto Exp $
+
+  12 Sep 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libvirt-0.8.3-r1.ebuild:
+  [app-emulation/libvirt-0.8.3-r1] Added missing dev-libs/libnl dep.
+  The dep seems to come from
+  http://www.redhat.com/archives/libvir-list/2010-May/msg00830.html
 
   20 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Move from sys-apps/parted to sys-block/parted.
