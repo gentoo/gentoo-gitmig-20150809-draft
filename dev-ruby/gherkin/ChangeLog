@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.10 2010/08/21 21:56:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.11 2010/09/12 12:23:15 graaff Exp $
+
+*gherkin-1.0.30-r1 (12 Sep 2010)
+
+  12 Sep 2010; Hans de Graaff <graaff@gentoo.org> +gherkin-1.0.30-r1.ebuild:
+  Add ree18. Remove check_dependencies task to fix bug #332931.
 
   21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/gherkin-1.0.24-fix-specs.patch, gherkin-1.0.30.ebuild:
