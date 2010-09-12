@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.398 2010/09/11 12:10:19 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.399 2010/09/12 17:19:23 scarabeus Exp $
+
+  12 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.4-r2.ebuild,
+  +files/cups-1.4.4-perl-includes.patch:
+  Fix building with perl useflag enabled. Per bug #336839.
 
 *cups-1.4.4-r2 (11 Sep 2010)
 
