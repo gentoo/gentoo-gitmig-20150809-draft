@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/ompload
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.9 2010/06/02 06:35:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.10 2010/09/12 11:38:55 xmw Exp $
+
+*ompload-226-r1 (12 Sep 2010)
+
+  12 Sep 2010; Michael Weber <xmw@gentoo.org> +ompload-226-r1.ebuild,
+  +files/ompload-226-url.patch, metadata.xml:
+  Taking maintainer-ship. Revbump to fix upload url (bug 336859 thanks to
+  John Tsolox <tsolox@gmail.com> for the hint).
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
