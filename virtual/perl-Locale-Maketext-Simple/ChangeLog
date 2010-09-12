@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Locale-Maketext-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext-Simple/ChangeLog,v 1.10 2010/09/07 20:26:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext-Simple/ChangeLog,v 1.11 2010/09/12 16:43:09 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  perl-Locale-Maketext-Simple-0.21.ebuild:
+  ia64/sparc stable wrt #333421
 
   07 Sep 2010; Torsten Veller <tove@gentoo.org>
   perl-Locale-Maketext-Simple-0.21.ebuild:
