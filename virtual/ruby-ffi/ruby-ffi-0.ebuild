@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ruby-ffi-0.ebuild,v 1.2 2010/07/29 07:32:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ruby-ffi-0.ebuild,v 1.3 2010/09/12 08:42:54 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 inherit ruby-ng
 
@@ -18,6 +18,7 @@ IUSE=""
 
 RDEPEND="ruby_targets_ruby18? ( dev-ruby/ffi[ruby_targets_ruby18] )
 	ruby_targets_ruby19? ( dev-ruby/ffi[ruby_targets_ruby19] )
+	ruby_targets_ree18? ( dev-ruby/ffi[ruby_targets_ree18] )
 	ruby_targets_jruby? ( dev-java/jruby )"
 DEPEND=""
 
