@@ -1,6 +1,21 @@
 # ChangeLog for dev-dotnet/ikvm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.23 2008/12/28 20:05:52 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.24 2010/09/12 17:16:05 pacho Exp $
+
+*ikvm-0.44.0.5 (12 Sep 2010)
+
+  12 Sep 2010; Pacho Ramos <pacho@gentoo.org> -ikvm-0.8.0.0.ebuild,
+  -ikvm-0.14.0.1.ebuild, -ikvm-0.14.0.1-r1.ebuild, -ikvm-0.14.0.1-r2.ebuild,
+  -ikvm-0.20.0.0.ebuild, -ikvm-0.34.0.2.ebuild, -ikvm-0.36.0.5.ebuild,
+  -files/ikvm-0.36.0.5.pc.in, -ikvm-0.36.0.11.ebuild,
+  -ikvm-0.36.0.11-r1.ebuild, +ikvm-0.44.0.5.ebuild,
+  +files/ikvm-0.44.0.5-key.patch, -files/ikvm.pc.in, +files/mono.snk.uu,
+  -files/script-template:
+  Version bump with bugfixes (bug #331649 by Dennis Schridde), add some
+  missing die statements. Remove old versions, even the oldest and stable
+  x86 one since this just bumped version is the only one compiling and
+  working ok (fixing bug #254522 and #306819 by Juergen Rose and Patrick
+  Lauer) and no other ebuild in the tree relies on it.
 
 *ikvm-0.36.0.11-r1 (28 Dec 2008)
 

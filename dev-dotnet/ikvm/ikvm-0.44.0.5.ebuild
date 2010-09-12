@@ -1,18 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.11-r1.ebuild,v 1.2 2009/01/06 05:56:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.44.0.5.ebuild,v 1.1 2010/09/12 17:16:05 pacho Exp $
 
 EAPI=2
 
-inherit eutils mono multilib
-
-CLASSPATH_P="classpath-0.95"
+inherit eutils mono multilib java-pkg-2
 
 DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.zip
-		 mirror://sourceforge/${PN}/classpath-0.95-stripped.zip
-		 mirror://sourceforge/${PN}/openjdk-b13-stripped.zip"
+SRC_URI="mirror://sourceforge/${PN}/openjdk6-b18-stripped.zip
+	mirror://sourceforge/${PN}/${PN}src-${PV}.zip"
 LICENSE="as-is"
 
 SLOT="0"
@@ -26,23 +23,22 @@ DEPEND="${RDEPEND}
 	>=dev-dotnet/nant-0.85
 	>=virtual/jdk-1.6
 	app-arch/unzip
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-arch/sharutils"
 
 src_prepare() {
-	# Remove unneccesary executables and
-	# Windows-only libraries (bug #186837)
-	rm bin/{IKVM*dll,*.exe,JVM.DLL,ikvm-native.dll}
+	# We cannot rely on Mono Crypto Service Provider as it doesn't work inside
+	# sandbox, we simply hard-code the path to a bundled key like Debian does.
+	epatch "${FILESDIR}"/${PN}-0.44.0.5-key.patch
+	uudecode < "${FILESDIR}"/mono.snk.uu || die
 
-	# We use javac instead of ecj because of
-	# memory related problems (see bug #183526)
-	sed -i \
-		-e 's#ecj#javac#' \
-		-e 's#-1.5#-J-mx384M -source 1.5#' \
-		classpath/classpath.build \
-		|| die "sed failed"
+	# Ensures that we use Mono's bundled copy of SharpZipLib instead of relying
+	# on ikvm-bin one
+	sed -i -e 's:../bin/ICSharpCode.SharpZipLib.dll:ICSharpCode.SharpZipLib.dll:' \
+		ikvmc/ikvmc.build ikvmstub/ikvmstub.build || die
 
 	sed -i -e 's:pkg-config --cflags:pkg-config --cflags --libs:' \
-		native/native.build || die "sed failed"
+		native/native.build || die
 
 	mkdir -p "${T}"/home/test
 }
@@ -79,7 +75,7 @@ generate_pkgconfig() {
 src_install() {
 	local dll dllbase exe
 	insinto /usr/$(get_libdir)/${PN}
-	doins bin/*.exe bin/*.so
+	doins bin/*.exe bin/*.so || die
 
 	dodir /bin
 	for exe in bin/*.exe
