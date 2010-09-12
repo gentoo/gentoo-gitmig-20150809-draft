@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.7 2010/09/12 08:44:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.8 2010/09/12 12:26:04 jlec Exp $
+
+  12 Sep 2010; Justin Lecher <jlec@gentoo.org>
+  cctbx-2009.11.01.0123-r1.ebuild, cctbx-2010.03.29.2334-r1.ebuild,
+  cctbx-2010.03.29.2334-r2.ebuild:
+  Switched to tc-has-openmp and remove built_with_use
 
 *cctbx-2010.03.29.2334-r2 (12 Sep 2010)
 
