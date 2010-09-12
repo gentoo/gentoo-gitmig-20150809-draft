@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.6.ebuild,v 1.2 2010/08/05 15:21:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.6.ebuild,v 1.3 2010/09/12 07:14:43 tove Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="app-arch/dpkg
 	dev-libs/libdebian-installer"
-RDPEND="app-crypt/gnupg
+RDEPEND="app-crypt/gnupg
 	net-misc/wget"
 
 src_install() {
