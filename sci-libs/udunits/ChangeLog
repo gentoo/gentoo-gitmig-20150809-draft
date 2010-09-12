@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.11 2010/08/10 12:41:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.12 2010/09/12 19:24:00 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> udunits-2.1.15.ebuild:
+  Stable on alpha, bug #326431
 
   10 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   udunits-2.1.15.ebuild:
