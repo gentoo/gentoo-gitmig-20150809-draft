@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.33 2010/05/22 13:50:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.34 2010/09/12 18:45:44 xmw Exp $
+
+  12 Sep 2010; Michael Weber <xmw@gentoo.org> bonnie++-1.96.ebuild:
+  Added ~arm keyword
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> bonnie++-1.96.ebuild:
   stable amd64, bug 299765
