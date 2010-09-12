@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.149 2010/09/12 17:57:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.150 2010/09/12 23:02:19 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  autoconf-2.65-r1.ebuild:
+  x86 stable wrt bug #336381
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> autoconf-2.65-r1.ebuild:
   Marked ppc/ppc64 stable for bug #336381.
