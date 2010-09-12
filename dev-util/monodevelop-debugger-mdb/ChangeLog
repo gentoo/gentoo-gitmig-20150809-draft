@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-debugger-mdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/ChangeLog,v 1.7 2010/07/04 21:19:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/ChangeLog,v 1.8 2010/09/12 03:36:37 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  monodevelop-debugger-mdb-2.4.ebuild:
+  x86 stable wrt bug #336851
 
 *monodevelop-debugger-mdb-2.4 (04 Jul 2010)
 
