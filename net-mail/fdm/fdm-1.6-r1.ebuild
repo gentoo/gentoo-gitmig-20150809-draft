@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.5.ebuild,v 1.1 2010/09/05 22:50:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.6-r1.ebuild,v 1.1 2010/09/12 19:12:24 xmw Exp $
 
 EAPI=2
 
@@ -13,10 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples pcre"
+IUSE="courierauth examples pcre"
 
 DEPEND="dev-libs/openssl
 	sys-libs/tdb
+	courierauth? ( net-libs/courier-authlib )
 	pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}"
 
@@ -26,11 +27,12 @@ pkg_setup() {
 
 src_prepare() {
 	rm Makefile || die
-	epatch "${FILESDIR}"/${P}-GNUmakefile.patch
+	epatch "${FILESDIR}"/${PF}-GNUmakefile.patch
 }
 
 src_compile() {
 	emake CC="$(tc-getCC)" \
+		COURIER=$(use courierauth && echo 1) \
 		PCRE=$(use pcre && echo 1) || die
 }
 
