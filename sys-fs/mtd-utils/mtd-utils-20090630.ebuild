@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.7 2010/02/15 22:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20090630.ebuild,v 1.8 2010/09/12 08:39:50 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
 # Git ID for the snapshot
 MY_PV="${PV}-22494a8d105936785af53235b088fa38112128fc"
-DESCRIPTION="MTD userspace tools, based on GIT snapshot from upstream"
+DESCRIPTION="MTD userspace tools, based on GIT snapshot from upstream (NFTL, JFFS2, NAND, FTL, UBI)"
 HOMEPAGE="http://git.infradead.org/?p=mtd-utils.git;a=summary"
 SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.bz2"
 

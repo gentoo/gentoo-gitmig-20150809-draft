@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.32 2010/09/10 10:53:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.33 2010/09/12 08:39:50 robbat2 Exp $
+
+  12 Sep 2010; Robin H. Johnson <robbat2@gentoo.org>
+  mtd-utils-20080907.ebuild, mtd-utils-20090630.ebuild,
+  mtd-utils-20100718.ebuild, mtd-utils-99999999.ebuild:
+  Bug #299138: improve the description to say what filesystems are
+  supported.
 
   10 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   mtd-utils-20100718.ebuild:

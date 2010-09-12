@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.3 2010/09/10 10:53:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.4 2010/09/12 08:39:50 robbat2 Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ else
 	KEYWORDS="~amd64 ~arm ~mips ~ppc x86"
 fi
 
-DESCRIPTION="MTD userspace tools"
+DESCRIPTION="MTD userspace tools (NFTL, JFFS2, NAND, FTL, UBI)"
 HOMEPAGE="http://git.infradead.org/?p=mtd-utils.git;a=summary"
 
 LICENSE="GPL-2"
