@@ -1,0 +1,22 @@
+--- yap-6.orig/packages/http/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/http/Makefile.in	2010-08-08 10:00:13.000000000 +1200
+@@ -110,7 +110,7 @@
+ 		$(INSTALL_PROGRAM) $(SOLIBS) $(BINTARGET)
+ 		mkdir -p $(PLTARGET)
+ 		mkdir -p $(PLTARGET)/web/icons
+-		mkdir -p $(LIBDIR)/web/css
++		mkdir -p $(DESTDIR)$(LIBDIR)/web/css
+ 		$(INSTALL_DATA) $(LIBPL) $(PLTARGET)
+ 		$(INSTALL_DATA) $(srcdir)/README $(PLTARGET)
+ 		$(INSTALL_DATA) $(srcdir)/web/icons/*.png $(PLTARGET)/web/icons
+--- yap-6.orig/packages/zlib/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/zlib/Makefile.in	2010-08-08 10:06:17.000000000 +1200
+@@ -107,7 +107,7 @@
+ 		$(LD) $(LDFLAGS) -o $@ $(ZOBJ) $(LIBS)
+ 
+ install:	$(TARGETS) $(LIBPL)
+-		mkdir -p $(DESTDIR)$(BINTARGET)
++		mkdir -p $(BINTARGET)
+ 		for f in $(TARGETS); do \
+ 		  $(INSTALL_PROGRAM) $$f $(BINTARGET); \
+ 		done

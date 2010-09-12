@@ -1,0 +1,316 @@
+diff -ur yap-6.orig/library/matrix/Makefile.in yap-6/library/matrix/Makefile.in
+--- yap-6.orig/library/matrix/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/matrix/Makefile.in	2010-09-12 17:50:42.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -47,10 +48,10 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/matrix.c -o matrix.o
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@matrix.@SO@: matrix.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o matrix.@SO@ matrix.o  @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o matrix.@SO@ matrix.o  @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/library/random/Makefile.in yap-6/library/random/Makefile.in
+--- yap-6.orig/library/random/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/random/Makefile.in	2010-09-12 18:02:50.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -47,10 +48,10 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/yap_random.c -o yap_random.o
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $< @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $< @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@yap_random.@SO@: yap_random.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o yap_random.@SO@ yap_random.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o yap_random.@SO@ yap_random.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/library/regex/Makefile.in yap-6/library/regex/Makefile.in
+--- yap-6.orig/library/regex/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/regex/Makefile.in	2010-09-12 18:02:16.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -59,22 +60,22 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/regexec.c -o regexec.o
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@regexp.@SO@: regexp.o @MERGE_DLL_OBJS@ regcomp.o regerror.o regfree.o regexec.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o regexp.@SO@ regexp.o  @EXTRA_LIBS_FOR_DLLS@ @MERGE_DLL_OBJS@ regcomp.o regerror.o regfree.o regexec.o 
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o regexp.@SO@ regexp.o  @EXTRA_LIBS_FOR_DLLS@ @MERGE_DLL_OBJS@ regcomp.o regerror.o regfree.o regexec.o 
+ 
+ @DO_SECOND_LD@regcomp.@SO@: regcomp.o @MERGE_DLL_OBJS@ regfree.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o regcomp.@SO@ regcomp.o @MERGE_DLL_OBJS@ regfree.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o regcomp.@SO@ regcomp.o @MERGE_DLL_OBJS@ regfree.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@regerror.@SO@: regerror.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o regerror.@SO@ regerror.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o regerror.@SO@ regerror.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@regfree.@SO@: regfree.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o regfree.@SO@ regfree.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o regfree.@SO@ regfree.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@regexec.@SO@: regexec.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o regexec.@SO@ regexec.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o regexec.@SO@ regexec.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/library/rltree/Makefile.in yap-6/library/rltree/Makefile.in
+--- yap-6.orig/library/rltree/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/rltree/Makefile.in	2010-09-12 18:01:14.000000000 +1200
+@@ -25,6 +25,7 @@
+ CC=@CC@
+ MPI_CC=mpicc
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -52,10 +53,10 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/yap_rl.c -o yaprl.o
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $< @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $< @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@yap_rl.@SO@: $(OBJS)
+-@DO_SECOND_LD@	@SHLIB_LD@  -o yap_rl.@SO@ $(OBJS) @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o yap_rl.@SO@ $(OBJS) @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	@if test "$(SOBJS)" = "no"; then echo ""; else $(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR); fi
+diff -ur yap-6.orig/library/system/Makefile.in yap-6/library/system/Makefile.in
+--- yap-6.orig/library/system/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/system/Makefile.in	2010-09-12 17:51:44.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -47,10 +48,10 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/sys.c -o sys.o
+ 
+ @DO_SECOND_LD@@DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@sys.@SO@: sys.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o sys.@SO@ sys.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o sys.@SO@ sys.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/library/tries/Makefile.in yap-6/library/tries/Makefile.in
+--- yap-6.orig/library/tries/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/library/tries/Makefile.in	2010-09-12 17:50:07.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -60,13 +61,13 @@
+ 	$(CC) -c $(CFLAGS) $(SHLIB_CFLAGS) $(srcdir)/itries.c -o itries.o
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $< @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $< @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@tries.@SO@: core_tries.o base_tries.o tries.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o tries.@SO@ core_tries.o base_tries.o tries.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o tries.@SO@ core_tries.o base_tries.o tries.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@itries.@SO@: core_tries.o base_itries.o itries.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o itries.@SO@ core_tries.o base_itries.o itries.o @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o itries.@SO@ core_tries.o base_itries.o itries.o @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/packages/PLStream/Makefile.in yap-6/packages/PLStream/Makefile.in
+--- yap-6.orig/packages/PLStream/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/PLStream/Makefile.in	2010-09-12 18:07:41.000000000 +1200
+@@ -21,6 +21,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS)  -D_YAP_NOT_INSTALLED_=1 -I$(srcdir) -I../.. -I$(srcdir)/../../include  @CPPFLAGS@
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -77,10 +78,10 @@
+ 	$(CC) -c $(CFLAGS) $< -o $@
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $<  @EXTRA_LIBS_FOR_DLLS@
+ 
+ @DO_SECOND_LD@libplstream.@SO@: $(OBJS)
+-@DO_SECOND_LD@	@SHLIB_LD@ -o libplstream.@SO@ $(OBJS) @EXTRA_LIBS_FOR_DLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o libplstream.@SO@ $(OBJS) @EXTRA_LIBS_FOR_DLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/packages/clib/Makefile.in yap-6/packages/clib/Makefile.in
+--- yap-6.orig/packages/clib/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/clib/Makefile.in	2010-09-12 17:57:39.000000000 +1200
+@@ -37,7 +37,7 @@
+ CRYPTLIBS=@CLIB_CRYPTLIBS@
+ 
+ LD=@DO_SECOND_LD@	@SHLIB_LD@
+-LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@
++LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@ @LDFLAGS@
+ 
+ BINTARGET=$(DESTDIR)$(YAPLIBDIR)
+ PLTARGET=$(DESTDIR)$(SHAREDIR)
+diff -ur yap-6.orig/packages/http/Makefile.in yap-6/packages/http/Makefile.in
+--- yap-6.orig/packages/http/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/http/Makefile.in	2010-09-12 18:04:08.000000000 +1200
+@@ -38,7 +38,7 @@
+ #
+ 
+ LD=@DO_SECOND_LD@	@SHLIB_LD@
+-LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@
++LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@ @LDFLAGS@
+ 
+ BINTARGET=$(DESTDIR)$(YAPLIBDIR)
+ PLTARGET=$(DESTDIR)$(SHAREDIR)/http
+diff -ur yap-6.orig/packages/jpl/Makefile.in yap-6/packages/jpl/Makefile.in
+--- yap-6.orig/packages/jpl/Makefile.in	2010-08-05 05:36:46.000000000 +1200
++++ yap-6/packages/jpl/Makefile.in	2010-09-12 17:54:10.000000000 +1200
+@@ -34,6 +34,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -D_YAP_NOT_INSTALLED_=1 -I$(srcdir) -I../.. -I$(srcdir)/../../include @CPPFLAGS@  @JAVAINCPATH@
++LDFLAGS=@LDFLAGS@
+ MKINDEX=true
+ BINTARGET=$(DESTDIR)$(YAPLIBDIR)
+ PLTARGET=$(DESTDIR)$(SHAREDIR)
+@@ -96,7 +97,7 @@
+ 
+ 
+ @DO_SECOND_LD@%.@SO@: %.o
+-		@DO_SECOND_LD@	@SHLIB_LD@ -o $@ $< @JAVALIBPATH@ @EXTRA_LIBS_FOR_SWIDLLS@
++		@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o $@ $< @JAVALIBPATH@ @EXTRA_LIBS_FOR_SWIDLLS@
+ 		if [ -r libjpl.dylib ]; then \
+ 		  rm -f libjpl.jnilib && ln -s libjpl.dylib libjpl.jnilib ; \
+ 		fi
+diff -ur yap-6.orig/packages/semweb/Makefile.in yap-6/packages/semweb/Makefile.in
+--- yap-6.orig/packages/semweb/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/semweb/Makefile.in	2010-09-12 18:07:04.000000000 +1200
+@@ -47,7 +47,7 @@
+ #
+ 
+ LD=@DO_SECOND_LD@	@SHLIB_LD@
+-LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@
++LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@ @LDFLAGS@
+ 
+ BINTARGET=$(DESTDIR)$(YAPLIBDIR)
+ PLTARGET=$(DESTDIR)$(SHAREDIR)/semweb
+diff -ur yap-6.orig/packages/sgml/Makefile.in yap-6/packages/sgml/Makefile.in
+--- yap-6.orig/packages/sgml/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/sgml/Makefile.in	2010-09-12 17:53:23.000000000 +1200
+@@ -30,6 +30,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ $(YAP_EXTRAS) $(DEFS) -D_YAP_NOT_INSTALLED_=1 -I$(srcdir) -I../.. -I$(srcdir)/../../include @CPPFLAGS@
++LDFLAGS=@LDFLAGS@
+ MKINDEX=true
+ 
+ LD=$(CC)
+@@ -116,7 +117,7 @@
+ 	$(CC) $(CFLAGS)  -o $@ -c $<
+ 
+ @DO_SECOND_LD@sgml2pl.@SO@: $(PLOBJ)
+-@DO_SECOND_LD@	@SHLIB_LD@ -o sgml2pl.@SO@ $(PLOBJ) @EXTRA_LIBS_FOR_SWIDLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o sgml2pl.@SO@ $(PLOBJ) @EXTRA_LIBS_FOR_SWIDLLS@
+ 
+ all:		$(TARGETS) $(PROGRAMS)
+ 
+diff -ur yap-6.orig/packages/swi-minisat2/C/Makefile.in yap-6/packages/swi-minisat2/C/Makefile.in
+--- yap-6.orig/packages/swi-minisat2/C/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/swi-minisat2/C/Makefile.in	2010-09-12 18:10:07.000000000 +1200
+@@ -22,6 +22,7 @@
+ CC=@CC@
+ CXX=@CXX@
+ CXXFLAGS= @SHLIB_CXXFLAGS@ $(YAP_EXTRAS) $(DEFS)  -D_YAP_NOT_INSTALLED_=1 -I$(srcdir) -I../../.. -I$(srcdir)/../../../include  @CPPFLAGS@
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -69,7 +70,7 @@
+ 	$(CXX) -c $(CXXFLAGS) $(srcdir)/pl-minisat.C -o pl-minisat.o
+ 
+ @DO_SECOND_LD@pl-minisat.@SO@: $(OBJS)
+-@DO_SECOND_LD@	@SHLIB_CXX_LD@ -o pl-minisat.@SO@ $(OBJS) @EXTRA_LIBS_FOR_SWIDLLS@
++@DO_SECOND_LD@	@SHLIB_CXX_LD@ $(LDFLAGS) -o pl-minisat.@SO@ $(OBJS) @EXTRA_LIBS_FOR_SWIDLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/packages/tai/Makefile.in yap-6/packages/tai/Makefile.in
+--- yap-6.orig/packages/tai/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/tai/Makefile.in	2010-09-12 17:52:34.000000000 +1200
+@@ -20,6 +20,7 @@
+ #
+ CC=@CC@
+ CFLAGS= @SHLIB_CFLAGS@ -D_YAP_NOT_INSTALLED_=1 $(YAP_EXTRAS) $(DEFS) -I$(srcdir) -I../.. -I$(srcdir)/../../include -I$(srcdir)/../PLStream
++LDFLAGS=@LDFLAGS@
+ #
+ #
+ # You shouldn't need to change what follows.
+@@ -48,7 +49,7 @@
+ 	$(CC) -c $(CFLAGS) $(srcdir)/pl-tai.c -o pl-tai.o
+ 
+ @DO_SECOND_LD@pl-tai.@SO@: pl-tai.o
+-@DO_SECOND_LD@	@SHLIB_LD@ -o pl-tai.@SO@ pl-tai.o libtai/libtai.a @EXTRA_LIBS_FOR_SWIDLLS@
++@DO_SECOND_LD@	@SHLIB_LD@ $(LDFLAGS) -o pl-tai.@SO@ pl-tai.o libtai/libtai.a @EXTRA_LIBS_FOR_SWIDLLS@
+ 
+ install: all
+ 	$(INSTALL_PROGRAM) $(SOBJS) $(DESTDIR)$(YAPLIBDIR)
+diff -ur yap-6.orig/packages/zlib/Makefile.in yap-6/packages/zlib/Makefile.in
+--- yap-6.orig/packages/zlib/Makefile.in	2010-08-05 05:36:28.000000000 +1200
++++ yap-6/packages/zlib/Makefile.in	2010-09-12 18:06:07.000000000 +1200
+@@ -45,7 +45,7 @@
+ #
+ 
+ LD=@DO_SECOND_LD@	@SHLIB_LD@
+-LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@
++LDFLAGS=@EXTRA_LIBS_FOR_SWIDLLS@ @LDFLAGS@
+ 
+ BINTARGET=$(DESTDIR)$(YAPLIBDIR)
+ PLTARGET=$(DESTDIR)$(SHAREDIR)
