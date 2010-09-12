@@ -1,6 +1,15 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.16 2010/09/12 04:27:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.17 2010/09/12 17:44:27 pacho Exp $
+
+*pe-format-2.0.3 (12 Sep 2010)
+
+  12 Sep 2010; Pacho Ramos <pacho@gentoo.org> +pe-format-2.0.3.ebuild,
+  metadata.xml:
+  Version bump with a new upstream, new proxy maintainer and fixing old bugs
+  #246456, #29795 (for support more exe files), #294749 (stop using bashisms
+  and adapt script to openrc), #321233 (pe-format2 is now pe-format). Really
+  thanks a lot to Michał Górny for taking care of this package.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> pe-format-1.ebuild:
   Marked ppc for bug #327279.

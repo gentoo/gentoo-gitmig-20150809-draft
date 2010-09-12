@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>dotnet</herd>
-	<longdescription lang="en">
-	</longdescription>
+<herd>dotnet</herd>
+<maintainer>
+	<email>gentoo@mgorny.alt.pl</email>
+	<name>Michał Górny</name>
+	<description>Proxy maintainer, please CC him in bug reports and
+	assign to dotnet.</description>
+</maintainer>
 </pkgmetadata>
