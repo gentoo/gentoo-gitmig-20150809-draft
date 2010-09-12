@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.7.2.1.ebuild,v 1.1 2010/07/24 19:08:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.7.2.1.ebuild,v 1.2 2010/09/12 03:39:20 phajdan.jr Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.smuxi.org/page/Download"
 SRC_URI="http://smuxi.meebey.net/jaws/data/files/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="gnome"
 LICENSE="|| ( GPL-2 GPL-3 )"
 
