@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.34.0.2.ebuild,v 1.2 2007/06/28 03:46:37 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.44.0.5.ebuild,v 1.1 2010/09/12 15:24:58 pacho Exp $
 
 inherit eutils mono multilib
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1
@@ -25,15 +25,22 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	insinto /usr/$(get_libdir)/${MY_PN}
-	doins bin/*
+	doins bin/* || die "doins failed"
 
 	for exe in ikvm ikvmc ikvmstub;
 	do
-		make_wrapper ${exe} "mono /usr/$(get_libdir)/${MY_PN}/${exe}.exe"
+		make_wrapper ${exe} "mono /usr/$(get_libdir)/${MY_PN}/${exe}.exe" || die
 	done
 
 	dodir /usr/$(get_libdir)/pkgconfig
 	sed -e "s:@VERSION@:${PV}:" \
 		-e "s:@LIBDIR@:$(get_libdir):" \
-		${FILESDIR}/${MY_PN}.pc.in > ${D}/usr/$(get_libdir)/pkgconfig/${MY_PN}.pc
+		"${FILESDIR}"/ikvm-0.36.0.5.pc.in > "${D}"/usr/$(get_libdir)/pkgconfig/${MY_PN}.pc \
+		|| die "sed failed"
+
+	for dll in bin/IKVM*.dll
+	do
+		gacutil -i ${dll} -root "${D}"/usr/$(get_libdir) \
+			-gacdir /usr/$(get_libdir) -package ${dll} || die
+	done
 }

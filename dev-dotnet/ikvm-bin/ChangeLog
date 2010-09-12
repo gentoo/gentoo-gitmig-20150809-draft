@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.11 2010/09/12 03:38:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.12 2010/09/12 15:24:58 pacho Exp $
+
+*ikvm-bin-0.44.0.5 (12 Sep 2010)
+
+  12 Sep 2010; Pacho Ramos <pacho@gentoo.org> -ikvm-bin-0.14.ebuild,
+  -ikvm-bin-0.34.0.2.ebuild, -ikvm-bin-0.36.0.5.ebuild,
+  -ikvm-bin-0.42.0.3.ebuild, +ikvm-bin-0.44.0.5.ebuild, -files/ikvm.pc.in:
+  Version bump, add some missing die statements and install dlls in a better
+  way. Remove old.
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ikvm-bin-0.42.0.6.ebuild:
