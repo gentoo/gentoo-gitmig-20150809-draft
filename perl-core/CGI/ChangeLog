@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.77 2010/08/23 20:51:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.78 2010/09/12 16:47:46 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org> CGI-3.49.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #333421
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> CGI-3.49.ebuild:
   arm stable, bug #333421
