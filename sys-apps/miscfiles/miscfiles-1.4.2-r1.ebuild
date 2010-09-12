@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.4.2-r1.ebuild,v 1.11 2010/03/11 23:09:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.4.2-r1.ebuild,v 1.12 2010/09/12 21:25:11 abcd Exp $
+
+EAPI="3"
 
 inherit eutils
 
@@ -14,25 +16,23 @@ SRC_URI="mirror://gnu/miscfiles/${P}.tar.gz
 
 LICENSE="GPL-2 unicode"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="minimal"
 # Collides with older versions/revisions
 RDEPEND="!<sys-freebsd/freebsd-share-7.2-r1"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv "${WORKDIR}"/UnicodeData-${UNI_PV}.txt unicode || die
 	epatch "${FILESDIR}"/miscfiles-1.3-Makefile.diff
 }
 
 src_install() {
-	emake install prefix="${D}/usr" || die
+	emake install prefix="${ED}/usr" || die
 	dodoc NEWS ORIGIN README dict-README
-	rm -f "${D}"/usr/share/dict/README
+	rm -f "${ED}"/usr/share/dict/README
 
 	if use minimal ; then
-		cd "${D}"/usr/share/dict
+		cd "${ED}"/usr/share/dict
 		rm -f words extra.words
 		gzip -9 *
 		ln -s web2.gz words
@@ -47,7 +47,7 @@ src_install() {
 pkg_postinst() {
 	if [[ ${ROOT} == "/" ]] && type -P create-cracklib-dict >/dev/null ; then
 		ebegin "Regenerating cracklib dictionary"
-		create-cracklib-dict /usr/share/dict/* > /dev/null
+		create-cracklib-dict "${EPREFIX}"/usr/share/dict/* > /dev/null
 		eend $?
 	fi
 }
