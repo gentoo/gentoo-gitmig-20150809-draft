@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.7.ebuild,v 1.1 2010/07/28 08:41:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.7.ebuild,v 1.2 2010/09/12 03:25:24 phajdan.jr Exp $
 
 EAPI=2
 inherit mono
@@ -11,7 +11,7 @@ SRC_URI="http://download.banshee.fm/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-dotnet/dbus-glib-sharp

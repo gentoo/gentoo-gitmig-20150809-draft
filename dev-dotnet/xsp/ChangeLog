@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.82 2010/07/21 17:40:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.83 2010/09/12 03:27:56 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> xsp-2.6.5.ebuild:
+  x86 stable wrt bug #336851
 
 *xsp-2.6.5 (21 Jul 2010)
 
