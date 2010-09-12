@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.201 2010/09/08 08:53:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.202 2010/09/12 22:43:55 abcd Exp $
+
+  12 Sep 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Copy KDE 4.5.1 mask from base/package.mask to override unmasking in arch/*
 
   08 Sep 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for >=icu-4.2, bug #336403
