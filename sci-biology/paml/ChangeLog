@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/paml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.14 2010/09/12 16:16:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.15 2010/09/12 17:19:45 xarthisius Exp $
+
+  12 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -paml-4.3a.ebuild,
+  -paml-4.3b.ebuild:
+  Drop old buggy versions.
 
   12 Sep 2010; Markos Chandras <hwoarang@gentoo.org> paml-4.4c.ebuild:
   Stable on amd64 wrt bug #335649
