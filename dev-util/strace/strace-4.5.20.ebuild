@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.20.ebuild,v 1.1 2010/04/16 21:27:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.20.ebuild,v 1.2 2010/09/12 19:41:07 vapier Exp $
+
+EAPI="2"
 
 inherit flag-o-matic
 
@@ -17,13 +19,13 @@ IUSE="static aio"
 DEPEND="aio? ( >=dev-libs/libaio-0.3.106 )"
 RDEPEND=""
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-sparc.patch #336939
+
 	filter-lfs-flags # configure handles this sanely
 	use static && append-ldflags -static
 
 	use aio || export ac_cv_header_libaio_h=no #
-	econf || die
-	emake || die
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.147 2010/08/30 18:11:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.148 2010/09/12 19:41:07 vapier Exp $
+
+  12 Sep 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.20.ebuild,
+  +files/strace-4.5.20-sparc.patch:
+  Add fix from upstream for building on sparc #336939 by Raúl Porcel.
 
   30 Aug 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.19.ebuild:
   Mark sh stable #297079.
