@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.49 2010/02/08 15:31:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.50 2010/09/12 19:05:36 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  xf86-video-vesa-2.3.0.ebuild:
+  Stable on alpha, bug #327777
 
   08 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   xf86-video-vesa-2.3.0.ebuild:
