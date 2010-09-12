@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5943 2010/09/12 10:34:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5944 2010/09/12 13:20:16 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3715,6 +3715,7 @@ www-plugins/gnash:openssl - Enable directly using OpenSSL
 www-plugins/gnash:sdl-sound - Enable SDL audio output for the standalone player
 www-plugins/gnash:ssh - Enable using SSH for network authentication in libnet
 www-plugins/gnash:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
+www-plugins/moonlight:sdk - Enable building of monodevelop SDK
 www-servers/apache:suexec - Install suexec with apache
 www-servers/cherokee:admin - Install web based cherokee conf tool
 www-servers/cherokee:coverpage - Installs the default cherokee coverpage
