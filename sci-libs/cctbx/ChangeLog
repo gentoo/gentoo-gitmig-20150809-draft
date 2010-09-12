@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.6 2010/07/03 07:16:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.7 2010/09/12 08:44:48 jlec Exp $
+
+*cctbx-2010.03.29.2334-r2 (12 Sep 2010)
+
+  12 Sep 2010; Justin Lecher <jlec@gentoo.org>
+  +files/2010.03.29.2334-boost.patch, +cctbx-2010.03.29.2334-r2.ebuild,
+  +files/2010.03.29.2334-clipper.patch, +files/2010.03.29.2334-flags.patch,
+  +files/2010.03.29.2334-soname.patch:
+  Big rewrite
 
 *cctbx-2010.03.29.2334-r1 (03 Jul 2010)
 
