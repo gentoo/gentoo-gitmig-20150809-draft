@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.7 2010/08/31 06:31:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.8 2010/09/12 21:54:43 wired Exp $
 
 EAPI=3
 
-IUSE="vim-syntax"
+IUSE="helpers vim-syntax"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git
@@ -41,7 +41,9 @@ DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
-	x11-misc/dmenu
+	helpers? (
+		x11-misc/dmenu
+	)
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 

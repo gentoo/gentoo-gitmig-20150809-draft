@@ -6,4 +6,7 @@
 		<email>wired@gentoo.org</email>
 		<name>Alex Alexander</name>
 	</maintainer>
+	<use>
+		<flag name="helpers">Optional tools used by luakit</flag>
+	</use>
 </pkgmetadata>
