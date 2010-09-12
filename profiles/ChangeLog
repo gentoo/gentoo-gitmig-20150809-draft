@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4547 2010/09/11 22:50:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4548 2010/09/12 10:38:21 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Remove KDE 4.5.1 mask from profiles/package.mask, it is now in
+  base/package.mask, bug 336692
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   remove obsolete masks.
