@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.2 2010/08/23 06:02:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.3 2010/09/12 04:17:32 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 	epatch "${FILESDIR}"/${P}-fix-double-free.patch #332027
 	cp "${FILESDIR}"/alphacpuid.s "${S}"/crypto/ || die #330915
+	epatch "${FILESDIR}"/${PN}-1.0.0a-alphacpuid.patch #330915
 	epatch_user #332661
 
 	# disable fips in the build
