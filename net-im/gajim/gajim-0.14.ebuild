@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.2 2010/09/06 17:08:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.3 2010/09/12 07:54:37 jlec Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gnome idle libnotify nls spell srv X xhtml"
+IUSE="avahi crypt dbus gnome idle jingle libnotify networkmanager nls spell srv X xhtml"
 
 COMMON_DEPEND="
 	x11-libs/gtk+:2
@@ -46,6 +46,11 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/egg-python
 		)
 	idle? ( x11-libs/libXScrnSaver )
+	jingle? ( net-libs/farsight2[python] )
+	networkmanager? (
+			dev-python/dbus-python
+			net-misc/networkmanager[gnome]
+		)
 	srv? (
 		|| (
 			dev-python/libasyncns-python
