@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gemdropx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.8 2009/07/20 22:05:05 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.9 2010/09/12 20:43:43 mr_bones_ Exp $
+
+  12 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  gemdropx-0.9-r1.ebuild:
+  honor LDFLAGS (bug #336948); honor CC; tidy install image
 
   20 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gemdropx-0.9-r1.ebuild:
