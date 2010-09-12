@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.78 2010/09/03 12:13:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.79 2010/09/12 04:02:37 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  DBD-SQLite-1.29-r2.ebuild:
+  x86 stable wrt bug #336806
 
   03 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   DBD-SQLite-1.29-r2.ebuild:
