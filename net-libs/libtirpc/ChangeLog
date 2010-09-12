@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.10 2010/09/12 21:41:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.11 2010/09/12 22:48:46 flameeyes Exp $
+
+  12 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/libtirpc-0.2.1-fortify.patch:
+  Use an even better patch to avoid overflow on the other senses if
+  hp_length is less than four.
 
 *libtirpc-0.2.1-r1 (12 Sep 2010)
 
