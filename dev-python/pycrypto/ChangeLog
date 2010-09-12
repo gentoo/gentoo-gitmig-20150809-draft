@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.93 2010/07/06 19:28:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.94 2010/09/12 18:43:08 arfrever Exp $
+
+*pycrypto-2.2 (12 Sep 2010)
+
+  12 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pycrypto-2.2.ebuild:
+  Version bump.
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pycrypto-2.1.0.ebuild:
   ppc64 stable wrt #319589
