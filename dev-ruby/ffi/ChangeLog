@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.8 2010/07/11 16:55:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.9 2010/09/12 08:42:26 graaff Exp $
+
+*ffi-0.6.3-r1 (12 Sep 2010)
+
+  12 Sep 2010; Hans de Graaff <graaff@gentoo.org> +ffi-0.6.3-r1.ebuild:
+  Fix build when dev-ruby/bones is installed. Add ree18.
 
   11 Jul 2010; Hans de Graaff <graaff@gentoo.org> ffi-0.6.3.ebuild:
   Add x86 keyword. Thanks to Jochen Schalanda for his report in bug 325473.
