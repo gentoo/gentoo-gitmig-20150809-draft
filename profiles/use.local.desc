@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5944 2010/09/12 13:20:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5945 2010/09/12 19:53:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3668,6 +3668,9 @@ www-apps/redmine:openid - Enable support for OpenID
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/trac:i18n - Enable support for i18n with dev-python/Babel
+www-apps/venus:django - Support for django template style to config files
+www-apps/venus:genshi - Support for genshi style to config files
+www-apps/venus:redland - Enable support for Redland RDF
 www-apps/viewvc:cvsgraph - Add dev-vcs/cvsgraph support to show graphical views of revisions and branches
 www-apps/viewvc:mod_python - Add www-apache/mod_python support
 www-apps/viewvc:mod_wsgi - Add www-apache/mod_wsgi support
