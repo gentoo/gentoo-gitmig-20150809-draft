@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/podsleuth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.15 2010/09/12 03:25:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.16 2010/09/12 12:57:50 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> podsleuth-0.6.7.ebuild:
+  Marked ppc for bug #336851.
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   podsleuth-0.6.7.ebuild:
