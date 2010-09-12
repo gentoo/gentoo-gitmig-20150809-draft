@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.73 2010/07/22 15:51:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.74 2010/09/12 18:59:32 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> sessreg-1.0.6.ebuild:
+  Stable on alpha, bug #327777
 
   22 Jul 2010; Markus Meier <maekke@gentoo.org> sessreg-1.0.6.ebuild:
   arm stable, bug #327777
