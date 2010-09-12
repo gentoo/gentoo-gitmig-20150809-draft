@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gsh/ChangeLog,v 1.1 2010/08/05 09:41:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gsh/ChangeLog,v 1.2 2010/09/12 03:48:50 phajdan.jr Exp $
+
+  12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gsh-0.3.ebuild:
+  x86 stable wrt bug #336750
 
 *gsh-0.3 (05 Aug 2010)
 
