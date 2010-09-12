@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/venus
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/venus/ChangeLog,v 1.1 2010/09/12 19:44:30 tampakrap Exp $
+
+*venus-20100911 (12 Sep 2010)
+
+  12 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +venus-20100911.ebuild, +files/postinstall-en.txt, +metadata.xml:
+  Initial commit, special thanks to Arfrever, djc and darkside for their
+  help
+
