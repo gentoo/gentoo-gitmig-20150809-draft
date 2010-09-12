@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.24 2010/09/07 20:39:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.25 2010/09/12 16:46:59 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org> perl-version-0.82.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #333421
 
   07 Sep 2010; Torsten Veller <tove@gentoo.org> perl-version-0.82.ebuild:
   Add perl-5.12.2 as provider
