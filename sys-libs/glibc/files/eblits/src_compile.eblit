@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.11 2010/08/10 08:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.12 2010/09/12 06:22:40 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -89,7 +89,8 @@ glibc_do_configure() {
 	# since the glibc build will re-run configure on itself
 	export libc_cv_slibdir=/$(get_libdir)
 
-	has_version app-admin/eselect-compiler || export CC=$(tc-getCC ${CTARGET})
+	export CC=$(tc-getCC ${CTARGET})
+	einfo "Set CC to ${CC}"
 
 	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
 	mkdir -p "${GBUILDDIR}"
