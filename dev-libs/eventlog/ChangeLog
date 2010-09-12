@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.47 2010/08/23 20:17:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.48 2010/09/12 16:15:55 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org> eventlog-0.2.12.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #332327
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> eventlog-0.2.12.ebuild:
   arm stable, bug #332327
