@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.95 2010/08/10 14:34:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.96 2010/09/12 19:12:34 klausman Exp $
+
+  12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> xproto-7.0.17.ebuild:
+  Stable on alpha, bug #327777
 
 *xproto-7.0.18 (10 Aug 2010)
 
