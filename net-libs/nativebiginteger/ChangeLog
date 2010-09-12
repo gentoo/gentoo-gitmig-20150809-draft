@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/nativebiginteger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.4 2010/09/04 19:55:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.5 2010/09/12 14:31:10 tommy Exp $
+
+*nativebiginteger-0.6.4-r2 (12 Sep 2010)
+
+  12 Sep 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -nativebiginteger-0.6.4-r1.ebuild, +nativebiginteger-0.6.4-r2.ebuild:
+  Filter --as-needed for now, since net-p2p/freenet wont load the lib
+  compiled with it
 
 *nativebiginteger-0.6.4-r1 (04 Sep 2010)
 
