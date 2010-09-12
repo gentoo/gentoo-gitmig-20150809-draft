@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.94 2010/08/23 20:10:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.95 2010/09/12 17:40:52 armin76 Exp $
+
+  12 Sep 2010; Raúl Porcel <armin76@gentoo.org> bison-2.4.2.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #331577
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> bison-2.4.2.ebuild:
   arm stable, bug #331577
