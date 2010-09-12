@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.357 2010/09/11 10:28:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.358 2010/09/12 13:10:34 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> xulrunner-1.9.2.9.ebuild:
+  Marked ppc ppc64 for bug #336396.
 
   11 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   xulrunner-1.9.2.9.ebuild:
