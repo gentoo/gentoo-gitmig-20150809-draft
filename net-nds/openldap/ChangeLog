@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.376 2010/09/06 20:22:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.377 2010/09/12 04:34:43 josejx Exp $
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> openldap-2.4.23.ebuild:
+  Marked ppc stable for bug #323777.
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> openldap-2.4.23.ebuild:
   Marking openldap-2.4.23 ppc64 for bug 323777
