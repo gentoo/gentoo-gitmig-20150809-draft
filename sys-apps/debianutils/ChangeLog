@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.143 2010/09/12 03:42:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.144 2010/09/12 14:52:21 hwoarang Exp $
+
+  12 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  debianutils-3.2.3.ebuild:
+  Stable on amd64 wrt bug #336693
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   debianutils-3.2.3.ebuild:
