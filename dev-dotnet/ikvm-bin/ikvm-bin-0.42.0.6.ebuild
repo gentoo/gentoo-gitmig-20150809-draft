@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.42.0.6.ebuild,v 1.1 2010/07/04 21:27:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.42.0.6.ebuild,v 1.2 2010/09/12 03:38:09 phajdan.jr Exp $
 
 inherit eutils mono multilib
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1
