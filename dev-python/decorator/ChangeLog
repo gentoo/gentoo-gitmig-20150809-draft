@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.21 2010/08/12 01:03:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.22 2010/09/13 15:07:17 arfrever Exp $
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -decorator-3.1.2.ebuild:
+  Delete.
 
   12 Aug 2010; Joseph Jezak <josejx@gentoo.org> decorator-3.2.0.ebuild:
   Marked ppc stable for bug #325901.
