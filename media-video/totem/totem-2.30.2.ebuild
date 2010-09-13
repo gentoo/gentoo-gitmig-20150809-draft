@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.4 2010/09/11 18:53:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.5 2010/09/13 20:46:51 eva Exp $
 
 EAPI="2"
 
@@ -25,11 +25,10 @@ IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin +python tracker 
 # vala ( dev-lang/vala ) requires 0.7.5
 RDEPEND=">=dev-libs/glib-2.24
 	>=x11-libs/gtk+-2.19.5
-	>=gnome-base/gconf-2.0
+	>=gnome-base/gconf-2
 	>=dev-libs/totem-pl-parser-2.29.1
 	>=x11-themes/gnome-icon-theme-2.16
 	x11-libs/cairo
-	app-text/iso-codes
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/dbus-glib-0.71
 	>=media-libs/gstreamer-0.10.28.1
@@ -60,6 +59,7 @@ RDEPEND=">=dev-libs/glib-2.24
 		dev-python/beautifulsoup )
 	lirc? ( app-misc/lirc )
 	nautilus? ( >=gnome-base/nautilus-2.10 )
+	nsplugin? ( media-plugins/gst-plugins-soup )
 	python? (
 		dev-lang/python[threads]
 		>=dev-python/pygtk-2.12
@@ -67,9 +67,9 @@ RDEPEND=">=dev-libs/glib-2.24
 		dev-python/gst-python
 		dev-python/dbus-python
 		dev-python/gconf-python )
-	tracker? ( >=app-misc/tracker-0.7.1 )
+	tracker? ( >=app-misc/tracker-0.8.1 )
 	youtube? (
-		>=dev-libs/libgdata-0.4.0
+		>=dev-libs/libgdata-0.4
 		media-plugins/gst-plugins-soup )"
 # FIXME: freezes totem
 #	zeroconf? ( >=net-libs/libepc-0.3 )
