@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.85 2010/08/29 03:03:17 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.86 2010/09/13 15:15:37 arfrever Exp $
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -scons-1.2.0-r1.ebuild, -scons-1.2.0_p20091224.ebuild,
+  -files/scons-1.2.0-links.patch:
+  Delete.
 
 *scons-2.0.1 (29 Aug 2010)
 
