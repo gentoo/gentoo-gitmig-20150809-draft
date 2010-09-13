@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.8 2010/08/28 16:54:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.9 2010/09/13 14:27:48 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  perl-ExtUtils-Manifest-1.58.ebuild:
+  Marked ppc stable for bug #330398.
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   perl-ExtUtils-Manifest-1.58.ebuild:
