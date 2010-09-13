@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.5 2010/01/05 13:35:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.6 2010/09/13 12:09:46 tupone Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -24,12 +24,16 @@ src_prepare() {
 		-e "s:\"docs/:\"/usr/share/doc/${PF}/pdf/:" \
 		readme.html \
 		|| die "sed failed"
-	epatch "${FILESDIR}/${P}"-dyn.patch
+	epatch "${FILESDIR}/${P}"-dyn.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
+}
+
+src_configure() {
+	sh ./compile.sh
 }
 
 src_compile() {
-	emake x11 || die "emake failed"
-	emake -C lib/x11 PREFIX=/usr -f Makefile.x11 libglfw.pc || die "emake libglfw.pc failed"
+	emake -C lib/x11 PREFIX=/usr -f Makefile.x11 default libglfw.pc || die "emake failed"
 }
 
 src_install() {
