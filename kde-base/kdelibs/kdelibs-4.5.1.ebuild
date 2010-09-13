@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.5.1.ebuild,v 1.2 2010/09/06 04:50:53 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.5.1.ebuild,v 1.3 2010/09/13 21:39:31 reavertm Exp $
 
 EAPI="3"
 
-KDE_HANDBOOK=1
 CPPUNIT_REQUIRED="optional"
 OPENGL_REQUIRED="optional"
 WEBKIT_REQUIRED="always"
@@ -15,7 +14,7 @@ HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam jpeg2k kerberos
+IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam +handbook jpeg2k kerberos
 lzma mmx nls openexr policykit semantic-desktop spell sse sse2 ssl zeroconf"
 
 # needs the kate regression testsuite from svn
@@ -32,19 +31,15 @@ COMMONDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/giflib
-	virtual/jpeg:0
 	>=media-libs/libpng-1.4
 	sys-libs/zlib
+	virtual/jpeg
 	>=x11-misc/shared-mime-info-0.60
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
-	aqua? (
-		>=media-sound/phonon-4.3.80
-		sys-apps/dbus
-	)
+	aqua? ( >=media-sound/phonon-4.3.80 )
 	!aqua? (
 		>=media-sound/phonon-4.3.80[xcb]
-		sys-apps/dbus[X]
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libX11
@@ -103,6 +98,7 @@ RDEPEND="${COMMONDEPEND}
 	)
 "
 PDEPEND="
+	handbook? ( $(add_kdebase_dep khelpcenter) )
 	policykit? ( >=sys-auth/polkit-kde-0.95.1 )
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 "

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.703 2010/09/06 00:07:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.704 2010/09/13 21:39:31 reavertm Exp $
+
+  13 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> kdelibs-4.4.5.ebuild,
+  kdelibs-4.5.1.ebuild:
+  Pull khelpcenter directly (USE=handbook), do not depend on dbus directly,
+  sync jpeg deps
 
 *kdelibs-4.5.1 (06 Sep 2010)
 

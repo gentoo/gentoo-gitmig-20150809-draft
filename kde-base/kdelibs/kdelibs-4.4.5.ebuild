@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5.ebuild,v 1.9 2010/08/09 17:34:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5.ebuild,v 1.10 2010/09/13 21:39:31 reavertm Exp $
 
 EAPI="3"
 
@@ -36,13 +36,9 @@ COMMONDEPEND="
 	>=x11-misc/shared-mime-info-0.60
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
-	aqua? (
-		>=media-sound/phonon-4.3.80
-		sys-apps/dbus
-	)
+	aqua? ( >=media-sound/phonon-4.3.80 )
 	!aqua? (
 		>=media-sound/phonon-4.3.80[xcb]
-		sys-apps/dbus[X]
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libX11
@@ -99,6 +95,7 @@ RDEPEND="${COMMONDEPEND}
 	)
 "
 PDEPEND="
+	handbook? ( $(add_kdebase_dep khelpcenter) )
 	policykit? ( >=sys-auth/polkit-kde-0.95.1 )
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 "
