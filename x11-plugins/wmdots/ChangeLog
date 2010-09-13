@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdots
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdots/ChangeLog,v 1.10 2008/01/12 15:45:00 nixnut Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdots/ChangeLog,v 1.11 2010/09/13 07:54:18 s4t4n Exp $
+
+  13 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmdots-0.2_beta.ebuild:
+  Honour Gentoo LDFLAGS, see bug #336982.
 
   12 Jan 2008; nixnut <nixnut@gentoo.org> wmdots-0.2_beta.ebuild:
   Added ~ppc wrt bug 205471

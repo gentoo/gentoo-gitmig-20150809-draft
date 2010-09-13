@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdots/wmdots-0.2_beta.ebuild,v 1.13 2008/01/12 15:45:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdots/wmdots-0.2_beta.ebuild,v 1.14 2010/09/13 07:54:18 s4t4n Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -26,6 +26,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-stringh.patch
 	sed -e "s:cc:$(tc-getCC):g" \
 		-e "s:-g -O2:${CFLAGS}:g" -i Makefile
+
+	#Fix compilation target
+	sed -e "s:wmifs:wmdots:" -i Makefile
+
+	#Honour Gentoo LDFLAGS, see bug #336982
+	sed -e "s:-o wmdots:\$(LDFLAGS) -o wmdots:" -i Makefile
 }
 
 src_compile() {
