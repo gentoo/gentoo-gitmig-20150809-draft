@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.123 2010/09/05 15:48:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.124 2010/09/13 16:33:47 pacho Exp $
+
+*gmime-2.4.19 (13 Sep 2010)
+
+  13 Sep 2010; Pacho Ramos <pacho@gentoo.org> +gmime-2.4.19.ebuild:
+  Version bump: improve support for old glib versions (<2.18), don't crash
+  if the group name is unset and minor fixes.
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> gmime-2.4.17.ebuild:
   alpha/ia64/sparc stable wrt #329961
