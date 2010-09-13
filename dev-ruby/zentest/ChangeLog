@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.73 2010/09/08 13:05:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.74 2010/09/13 09:32:32 fauli Exp $
+
+  13 Sep 2010; Christian Faulhammer <fauli@gentoo.org> zentest-4.3.3.ebuild:
+  revert stable x86, some dependencies will pull in Ruby Enterprise
 
   08 Sep 2010; Christian Faulhammer <fauli@gentoo.org> zentest-4.3.3.ebuild:
   stable x86, bug 333947
