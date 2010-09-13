@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4555 2010/09/13 15:08:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4556 2010/09/13 15:32:52 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.mask:
+  Mask Zope 2.13 and 3.
 
   13 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Add gprof2dot to the list of masked ebuilds for fetching live data.
