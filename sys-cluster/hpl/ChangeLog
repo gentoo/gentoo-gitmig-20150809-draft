@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/hpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.15 2010/06/17 02:28:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.16 2010/09/13 15:21:23 jsbronder Exp $
+
+  13 Sep 2010; Justin Bronder <jsbronder@gentoo.org> hpl-2.0.ebuild:
+  Respect LDFLAGS #336969.
 
   17 Jun 2010; Justin Bronder <jsbronder@gentoo.org> -hpl-1.0-r2.ebuild,
   hpl-2.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.3 2010/06/17 02:28:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.4 2010/09/13 15:21:23 jsbronder Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 		-e "/^LAlib\>/s,= .*,= /usr/$(get_libdir)/libblas.so /usr/$(get_libdir)/liblapack.so," \
 		-e '/^LINKER\>/s,= .*,= mpicc,' \
 		-e '/^CC\>/s,= .*,= mpicc,' \
+		-e "/^LINKFLAGS\>/s|= .*|= ${LDFLAGS}|" \
 		Make.gentoo_hpl_fblas_x86
 }
 
