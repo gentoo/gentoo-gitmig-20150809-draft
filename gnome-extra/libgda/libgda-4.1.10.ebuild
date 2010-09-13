@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.10.ebuild,v 1.1 2010/09/13 18:11:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.10.ebuild,v 1.2 2010/09/13 20:59:26 eva Exp $
 
 EAPI="2"
 
@@ -66,7 +66,6 @@ pkg_setup() {
 		else
 			G2CONF="${G2CONF}
 				$(use_with canvas goocanvas)
-				$(use_with gnome-keyring)
 				$(use_with graphviz)
 				$(use_with sourceview gtksourceview)"
 		fi
@@ -79,6 +78,7 @@ pkg_setup() {
 		--disable-introspection
 		--disable-static
 		--enable-system-sqlite
+		$(use_with gnome-keyring)
 		$(use_with gtk ui)
 		$(use_with berkdb bdb /usr)
 		$(use_with odbc odbc /usr)
