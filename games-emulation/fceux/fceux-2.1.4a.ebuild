@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.1 2010/07/26 21:28:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.2 2010/09/13 05:35:35 mr_bones_ Exp $
 
 EAPI=2
 inherit games
@@ -27,6 +27,13 @@ RDEPEND="${RDEPEND}
 # without zenity, but file dialogs will not work.
 
 S=${WORKDIR}/fceu${PV}
+
+src_prepare() {
+	# mentioned in bug #335836
+	if ! use lua ; then
+		sed -i -e '/_S9XLUA_H/d' SConstruct || die
+	fi
+}
 
 src_compile() {
 	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
