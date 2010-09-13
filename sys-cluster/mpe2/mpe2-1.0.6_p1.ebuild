@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.3 2009/12/28 23:48:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.4 2010/09/13 22:20:52 jsbronder Exp $
 
 EAPI=2
 inherit fortran eutils java-utils-2
@@ -120,7 +120,10 @@ src_test() {
 		return 0
 	fi
 
-	emake \
+
+	# No parallel make:
+	# http://trac.mcs.anl.gov/projects/mpich2/ticket/1095#comment:1
+	emake -j1 \
 		CC="${S}"/bin/mpecc \
 		FC="${S}"/bin/mpefc \
 		MPERUN="${ROOT}/usr/bin/mpiexec -n 4" \
@@ -135,6 +138,8 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# No parallel make:
+	# http://trac.mcs.anl.gov/projects/mpich2/ticket/1095#comment:1
+	emake -j1 DESTDIR="${D}" install || die
 	rm -f "${D}"/usr/sbin/mpeuninstall || die
 }
