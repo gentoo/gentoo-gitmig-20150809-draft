@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.124 2010/09/11 18:56:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.125 2010/09/13 17:46:35 pacho Exp $
+
+*evolution-exchange-2.30.3 (13 Sep 2010)
+
+  13 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  +evolution-exchange-2.30.3.ebuild:
+  Version bump: Memory leaks with Evolution and crash in
+  camel-exchange-utils.c line 3005 (probably cause of bugs #332637 and
+  #335504). Also use correct debug configure options.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   evolution-exchange-2.30.2.ebuild:
