@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.10 2010/09/03 19:31:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.11 2010/09/13 14:03:50 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> polkit-kde-0.95.1-r1.ebuild:
+  Reverted to ~ppc64 since the KDE team does not want ppc64 to have a stable
+  KDE at this time.
 
   03 Sep 2010; Joseph Jezak <josejx@gentoo.org> polkit-kde-0.95.1-r1.ebuild:
   Marked ppc64 stable for bug #322791.
