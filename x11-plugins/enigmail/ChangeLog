@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.201 2010/09/12 15:58:23 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.202 2010/09/13 16:07:12 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> enigmail-1.1.2-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #336720.
 
   12 Sep 2010; Richard Freeman <rich0@gentoo.org> enigmail-1.1.2-r2.ebuild:
   amd64 stable - 336720
