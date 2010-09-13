@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0.ebuild,v 1.1 2010/09/12 21:45:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0.ebuild,v 1.2 2010/09/13 21:23:52 reavertm Exp $
 
 EAPI="2"
 
@@ -161,7 +161,9 @@ src_install() {
 	# FIXME: split dtd's in dbus-dtd ebuild
 	emake DESTDIR="${D}" install || die "make install failed"
 	if use doc; then
-		dohtml doc/api/html/* || die "dohtml failed"
+		dohtml -p api/ doc/api/html/* || die "dohtml api failed"
+		cd "${S}"
+		dohtml doc/*.html || die "dohtml failed"
 	fi
 
 	# Remove .la files

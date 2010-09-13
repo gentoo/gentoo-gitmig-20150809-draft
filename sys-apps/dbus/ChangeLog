@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.259 2010/09/12 21:45:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.260 2010/09/13 21:23:52 reavertm Exp $
+
+  13 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> dbus-1.2.24-r2.ebuild,
+  dbus-1.4.0.ebuild:
+  Fix html docs installation, bug 336762. Fix by 'zimous'.
 
 *dbus-1.4.0 (12 Sep 2010)
 
