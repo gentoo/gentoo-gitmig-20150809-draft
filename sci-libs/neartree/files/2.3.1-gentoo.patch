@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 38b63c5..ad91c99 100644
+index 38b63c5..4e6bc40 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -42,17 +42,17 @@
@@ -44,14 +44,12 @@ index 38b63c5..ad91c99 100644
  #INSTALL_PREFIX  = $(HOME)
  endif
  
-@@ -110,11 +110,11 @@ CPPLIBRARIES = -lm
- #
+@@ -111,10 +111,10 @@ CPPLIBRARIES = -lm
  CLIBRARIES = $(CVECTOR_LIBLOC) -lCVector -lm
  
--COMPILE_COMMAND        =  $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
+ COMPILE_COMMAND        =  $(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
 -CPPCOMPILE_COMMAND     =  $(LIBTOOL) --mode=compile $(CXX) $(CFLAGS) $(INCLUDES) $(WARNINGS) -c
 -LIBRARY_LINK_COMMAND   =  $(LIBTOOL) --mode=link  $(CC) -version-info $(VERSION) -release $(RELEASE) -no-undefined -rpath $(INSTALL_PREFIX)/lib
-+COMPILE_COMMAND        =  $(LIBTOOL) --mode=compile $(CC) $(CXXFLAGS) $(INCLUDES) $(WARNINGS) -c
 +CPPCOMPILE_COMMAND     =  $(LIBTOOL) --mode=compile $(CXX) $(CXXFLAGS) $(INCLUDES) $(WARNINGS) -c
 +LIBRARY_LINK_COMMAND   =  $(LIBTOOL) --mode=link  $(CC) -version-info $(VERSION) -release $(RELEASE) -no-undefined -rpath $(INSTALL_PREFIX)/GENTOOLIBDIR $(LDFLAGS)
  BUILD_COMMAND_LOCAL    =  $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(INCLUDES)
