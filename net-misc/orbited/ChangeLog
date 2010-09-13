@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/orbited
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.6 2010/06/02 07:04:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.7 2010/09/13 19:06:57 xmw Exp $
+
+*orbited-0.7.10-r1 (13 Sep 2010)
+
+  13 Sep 2010; Michael Weber <xmw@gentoo.org> +orbited-0.7.10-r1.ebuild:
+  Revbump to revert dev-python/demjson dependency (wrt #337098 by Neil
+  Skrypuch <ns03ja@brocku.ca>).
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)
