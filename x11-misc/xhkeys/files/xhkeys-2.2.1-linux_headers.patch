@@ -1,4 +1,4 @@
-Fix compilation for >=linux-headers-2.6.23
+Fix compilation for >=linux-headers-2.6.35
 
 --- xhkeys-2.2.1/xhkeys_cdaudio.c
 +++ xhkeys-2.2.1/xhkeys_cdaudio.c
