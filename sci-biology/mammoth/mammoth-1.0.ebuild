@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/mammoth-1.0.ebuild,v 1.1 2007/12/10 09:11:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/mammoth-1.0.ebuild,v 1.2 2010/09/13 12:43:53 hwoarang Exp $
 
 inherit autotools eutils fortran
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ub.cbm.uam.es/software.php"
 SRC_URI="${MY_P}.tgz"
 LICENSE="mammoth"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="fetch"
 RDEPEND=""

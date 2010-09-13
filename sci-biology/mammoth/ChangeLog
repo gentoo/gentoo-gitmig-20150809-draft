@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mammoth
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/ChangeLog,v 1.1 2007/12/10 09:11:28 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/ChangeLog,v 1.2 2010/09/13 12:43:53 hwoarang Exp $
+
+  13 Sep 2010; Markos Chandras <hwoarang@gentoo.org> mammoth-1.0.ebuild:
+  Keyworded for amd64. Bug #335605
 
 *mammoth-1.0 (10 Dec 2007)
 
