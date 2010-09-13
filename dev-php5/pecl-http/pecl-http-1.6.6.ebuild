@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.6.ebuild,v 1.2 2010/04/05 19:10:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.6.ebuild,v 1.3 2010/09/13 14:02:54 mabi Exp $
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -22,7 +22,8 @@ IUSE=""
 DEPEND=">=net-misc/curl-7.19.4
 	sys-libs/zlib
 	dev-libs/libevent
-	>=dev-lang/php-5[hash,spl,session,iconv]
+	|| ( <dev-lang/php-5.3[spl] >=dev-lang/php-5.3 )
+	>=dev-lang/php-5[hash,session,iconv]
 	"
 RDEPEND="${DEPEND}"
 
