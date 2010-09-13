@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4552 2010/09/12 22:22:17 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4553 2010/09/13 11:45:13 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask x11-libs/diacanvas for removal, bug #276918
 
   12 Sep 2010; Tobias Heinlein <keytoaster@gentoo.org> package.mask:
   Masked pidgin-knotify, bug #336916
