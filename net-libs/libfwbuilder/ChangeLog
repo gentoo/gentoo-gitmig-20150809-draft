@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.93 2010/06/05 22:37:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.94 2010/09/13 01:02:23 kumba Exp $
+
+*libfwbuilder-4.1.1 (12 Sep 2010)
+*libfwbuilder-4.0.1-r1 (12 Sep 2010)
+
+  12 Sep 2010; Joshua Kinard <kumba@gentoo.org>
+  +files/4.x-qmake-use-LDFLAGS.patch, libfwbuilder-3.0.3.ebuild,
+  libfwbuilder-3.0.6.ebuild, libfwbuilder-3.0.7.ebuild,
+  libfwbuilder-4.0.1.ebuild, +libfwbuilder-4.0.1-r1.ebuild,
+  +libfwbuilder-4.1.1.ebuild:
+  Removed the mktemp patch from 4.0.1-r1 (solves #329177) and introduced a
+  new upstream release, 4.1.1. Both also include a fix to include the system
+  LDFLAGS value into the build (solves #335686). Per repoman, changed all
+  the ebuilds to use the qt4-r2 eclass over the deprecated qt4 eclass.
 
 *libfwbuilder-4.0.1 (05 Jun 2010)
 
