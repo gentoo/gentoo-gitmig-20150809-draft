@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.4 2010/06/27 20:08:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.5 2010/09/13 19:14:50 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> libdbusmenu-qt-0.3.5.ebuild:
+  Marked ~ppc/~ppc64.
 
   27 Jun 2010; Dror Levin <spatz@gentoo.org> libdbusmenu-qt-0.3.5.ebuild,
   +files/libdbusmenu-qt-0.3.5-qt-4.7.patch:
