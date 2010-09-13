@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.30 2010/08/29 18:21:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.31 2010/09/13 15:18:10 arfrever Exp $
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -Babel-0.9.3.ebuild, -Babel-0.9.4.ebuild:
+  Delete.
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> Babel-0.9.5.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #328881
