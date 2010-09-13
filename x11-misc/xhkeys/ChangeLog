@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xhkeys
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.14 2009/12/15 17:47:29 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.15 2010/09/13 11:20:46 xarthisius Exp $
+
+  13 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> xhkeys-2.2.1.ebuild,
+  +files/xhkeys-2.2.1-linux_headers.patch:
+  Fix build with linux-headers >= 2.6.23 wrt bug 337056. Thanks to Diego for
+  the report.
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> xhkeys-2.2.1.ebuild:
   Fix HOMEPAGE and SRC_URI wrt #297028.
