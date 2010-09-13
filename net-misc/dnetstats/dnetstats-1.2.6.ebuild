@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.3 2010/09/06 13:57:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.4 2010/09/13 10:32:08 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://qt-apps.org/CONTENT/content-files/107467-${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="kde gnome"
 
 DEPEND="x11-libs/qt-gui:4"
