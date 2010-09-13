@@ -12,7 +12,6 @@ underlying hardware. DirectFB adds graphical power to embedded systems and
 sets a new standard for graphics under Linux
 </longdescription>
 <use>
-  <flag name='fusion'>Add Multi Application support (fusion kernel device)</flag>
   <flag name='sysfs'>Add support for the sysfs filesystem (requires Linux-2.6+)</flag>
 </use>
 </pkgmetadata>

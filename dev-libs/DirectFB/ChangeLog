@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.105 2010/07/31 20:31:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.106 2010/09/13 19:05:14 mr_bones_ Exp $
+
+  13 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  DirectFB-1.4.2.ebuild, DirectFB-1.4.3.ebuild, metadata.xml:
+  remove fusion support since dev-libs/linux-fusion is gone.
 
   31 Jul 2010; Raúl Porcel <armin76@gentoo.org> DirectFB-1.4.3.ebuild:
   ia64 stable wrt #315195
