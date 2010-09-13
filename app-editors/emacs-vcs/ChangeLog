@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.23 2010/09/02 14:53:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.24 2010/09/13 08:44:13 fauli Exp $
+
+  13 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  emacs-vcs-24.0.9999.ebuild, metadata.xml:
+  add support for XML parsing with dev-libs/libxml2, which is more efficient
+  than the built-in Elisp parsers, configurable with USE=libxml2
 
   02 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   emacs-vcs-24.0.9999.ebuild, metadata.xml:
