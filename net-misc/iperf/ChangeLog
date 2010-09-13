@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.37 2010/09/12 14:24:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.38 2010/09/13 05:38:00 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> iperf-2.0.5.ebuild:
+  Marked ppc/ppc64 stable for bug #336656.
 
   12 Sep 2010; Markos Chandras <hwoarang@gentoo.org> iperf-2.0.5.ebuild:
   Stable on amd64 wrt bug #336656
