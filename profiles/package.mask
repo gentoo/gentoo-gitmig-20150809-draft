@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11939 2010/09/13 19:07:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11940 2010/09/13 20:19:02 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (13 Sep 2010)
+# Last release in 2008. Newer versions are included
+# with app-editors/emacs or app-editors/emacs-vcs.
+# Masked for removal in 30 days, bug 337133.
+app-emacs/gnus 
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2010)
 # Masked before final release.
@@ -943,11 +949,6 @@ media-sound/teamspeak-server-bin
 # Krzysztof Pawlik <nelchael@gentoo.org> (23 Nov 2009)
 # Borken TPM patch, see bug #294119
 =sys-apps/rng-tools-2-r2
-
-# Ulrich Mueller <ulm@gentoo.org> (15 Nov 2009)
-# Keep pre-alpha development snapshot and live ebuild masked.
-=app-emacs/gnus-5.13_p*
-~app-emacs/gnus-9999
 
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
 # beta release
