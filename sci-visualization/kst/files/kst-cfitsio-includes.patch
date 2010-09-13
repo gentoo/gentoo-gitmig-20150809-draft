@@ -1,0 +1,52 @@
+diff --git a/src/datasources/fitsimage/fitsimage.h b/src/datasources/fitsimage/fitsimage.h
+index 6b6713a..f51fc47 100644
+--- a/src/datasources/fitsimage/fitsimage.h
++++ b/src/datasources/fitsimage/fitsimage.h
+@@ -15,7 +15,7 @@
+ 
+ #include <datasource.h>
+ #include <dataplugin.h>
+-#include <libcfitsio0/fitsio.h>
++#include <fitsio.h>
+ 
+ class FitsImageSource : public Kst::DataSource {
+   Q_OBJECT
+diff --git a/src/datasources/healpix/healpix_tools.h b/src/datasources/healpix/healpix_tools.h
+index 28ad906..420fc7f 100644
+--- a/src/datasources/healpix/healpix_tools.h
++++ b/src/datasources/healpix/healpix_tools.h
+@@ -19,7 +19,7 @@
+ #define HEALPIX_TOOLS_H
+ 
+ #include <math.h>
+-#include <libcfitsio0/fitsio.h>
++#include <fitsio.h>
+ #include <datasource.h>
+ 
+ #  ifdef HEALPIX_PI
+diff --git a/src/datasources/lfiio/lfiio.h b/src/datasources/lfiio/lfiio.h
+index 809be40..207d083 100644
+--- a/src/datasources/lfiio/lfiio.h
++++ b/src/datasources/lfiio/lfiio.h
+@@ -15,7 +15,7 @@
+ 
+ #include <datasource.h>
+ #include <dataplugin.h>
+-#include <libcfitsio0/fitsio.h>
++#include <fitsio.h>
+ 
+ class LFIIOSource : public Kst::DataSource {
+   Q_OBJECT
+diff --git a/src/datasources/planckIDEF/planckIDEF.h b/src/datasources/planckIDEF/planckIDEF.h
+index cce6a0d..d3087d0 100644
+--- a/src/datasources/planckIDEF/planckIDEF.h
++++ b/src/datasources/planckIDEF/planckIDEF.h
+@@ -15,7 +15,7 @@
+ 
+ #include <datasource.h>
+ #include <dataplugin.h>
+-#include <libcfitsio0/fitsio.h>
++#include <fitsio.h>
+ 
+ typedef struct {
+   QString file;

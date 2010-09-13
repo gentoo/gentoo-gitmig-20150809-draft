@@ -1,0 +1,44 @@
+# ChangeLog for media-gfx/kst
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.1 2010/09/13 16:33:57 ayoy Exp $
+
+*kst-2.0.0 (13 Sep 2010)
+
+  13 Sep 2010; Dominik Kapusta <ayoy@gentoo.org> -kst-2.0.0_beta2-r1.ebuild,
+  -kst-2.0.0_beta5-r1.ebuild, +kst-2.0.0.ebuild:
+  Version bump, removing betas. Support for dirfile plugin through
+  sci-libs/getdata. Thanks to Matěj Laitl <strohel@gmail.com> for updating
+  the ebuild (bug #335019).
+
+*kst-2.0.0_beta5-r1 (05 Jun 2010)
+
+  05 Jun 2010; Dominik Kapusta <ayoy@gentoo.org> -kst-2.0.0_beta5.ebuild,
+  +kst-2.0.0_beta5-r1.ebuild:
+  Fixed desktop file and removed mistakenly added RESTRICT=mirror (kudos to
+  Samuli again).
+
+*kst-2.0.0_beta5 (05 Jun 2010)
+
+  05 Jun 2010; Dominik Kapusta <ayoy@gentoo.org> +kst-2.0.0_beta5.ebuild:
+  Version bump, thanks to Samuli for reporting (bug #321835).
+
+  10 Feb 2010; Torsten Veller <tove@gentoo.org> kst-2.0.0_beta2-r1.ebuild:
+  Add missing die: || "..." -> || die "..."
+
+  07 Jan 2010; <hwoarang@gentoo.org> kst-2.0.0_beta2-r1.ebuild:
+  replace qt4 eclass with qt4-r2
+
+*kst-2.0.0_beta2-r1 (24 Dec 2009)
+
+  24 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> -kst-2.0.0_beta2.ebuild,
+  +kst-2.0.0_beta2-r1.ebuild, +files/kst-cfitsio-includes.patch:
+  Updating [R]DEPEND with sci-libs/cfitsio and fixing a compilation error
+  (bug #298212)
+
+*kst-2.0.0_beta2 (08 Dec 2009)
+
+  08 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> +kst-2.0.0_beta2.ebuild,
+  +metadata.xml:
+  Initial commit of kst (bug #292902). Ebuild by Samuli Suominen
+  (ssuominen@g.o), Markos Chandras (hwoarang@g.o) and me.
+
