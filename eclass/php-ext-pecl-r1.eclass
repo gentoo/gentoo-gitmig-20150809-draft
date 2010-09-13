@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.11 2008/01/06 19:30:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.12 2010/09/13 13:44:14 mabi Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -45,7 +45,7 @@ PECL_PKG_V="${PECL_PKG}-${MY_PV}"
 
 inherit php-ext-source-r1 depend.php
 
-EXPORT_FUNCTIONS src_compile src_install
+EXPORT_FUNCTIONS src_compile src_install src_test
 
 if [[ -n "${PHP_EXT_PECL_FILENAME}" ]] ; then
 	FILENAME="${PHP_EXT_PECL_FILENAME}-${MY_PV}.tgz"
@@ -87,4 +87,17 @@ php-ext-pecl-r1_src_install() {
 		insinto /usr/share/doc/${CATEGORY}/${PF}/examples
 		doins -r examples/*
 	fi
+}
+
+# @FUNCTION: php-ext-pecl-r1_src_test
+# @DESCRIPTION:
+# Takes care of running any tests delivered with the PECL package.
+# Testing is somewhat standardized across pecl extensions through phpize's
+# run-tests.php - unfortunatly there are some quirks we need to work around
+php-ext-pecl-r1_src_test() {
+	# Makefile passes a hard-coded -d extension_dir=./modules, we move the lib
+	# away from there in src_compile
+	ln -s "${WORKDIR}/${PHP_EXT_NAME}-default.so" "${S}/modules/${PHP_EXT_NAME}.so"
+
+	NO_INTERACTION="yes" emake test
 }
