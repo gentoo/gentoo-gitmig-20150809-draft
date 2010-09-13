@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.50 2010/09/01 09:10:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.51 2010/09/13 19:28:54 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> qscintilla-2.4.3.ebuild:
+  Marked ppc stable for bug #315775.
 
 *qscintilla-2.4.5 (01 Sep 2010)
 
