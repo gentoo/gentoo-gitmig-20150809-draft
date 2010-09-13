@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.41 2010/08/16 16:52:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.42 2010/09/13 15:10:48 arfrever Exp $
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -virtualenv-1.4.5.ebuild, -virtualenv-1.4.8.ebuild:
+  Delete.
 
   16 Aug 2010; Fabian Groffen <grobian@gentoo.org> virtualenv-1.4.9.ebuild:
   Marked ~x64-macos, bug #306705
