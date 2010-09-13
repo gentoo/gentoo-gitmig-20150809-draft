@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.6 2010/09/11 18:58:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.7 2010/09/13 20:18:53 eva Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
-EAPI=2
 
 inherit gnome2 eutils
 
@@ -13,14 +13,14 @@ HOMEPAGE="http://www.gnome.org/projects/cheese/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
-IUSE="v4l"
+IUSE="doc v4l"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
 	>=dev-libs/glib-2.16.0
 	>=x11-libs/gtk+-2.19.1
 	>=x11-libs/cairo-1.4.0
 	>=x11-libs/pango-1.18.0
-	>=sys-apps/dbus-1
+	>=sys-apps/dbus-1[X]
 	>=sys-fs/udev-145-r1[extras]
 	>=gnome-base/gconf-2.16.0
 	>=gnome-base/gnome-desktop-2.26
@@ -44,7 +44,12 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
-	x11-proto/xf86vidmodeproto"
+	x11-proto/xf86vidmodeproto
+	app-text/docbook-xml-dtd:4.3
+	doc? ( >=dev-util/gtk-doc-1.11 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-G2CONF="${G2CONF} --disable-scrollkeeper"
+
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-scrollkeeper"
+}

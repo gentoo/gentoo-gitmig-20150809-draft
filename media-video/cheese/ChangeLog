@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.32 2010/09/11 18:58:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.33 2010/09/13 20:18:53 eva Exp $
+
+  13 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> -cheese-2.24.3.ebuild,
+  -cheese-2.26.3.ebuild, cheese-2.30.1.ebuild:
+  Add missing gtk-doc, docbook-xml-dtd DEPEND. Keep dbus[X] from previous
+  revisions that was forgotten in overlay.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> cheese-2.30.1.ebuild:
   Marked ppc for bug #324077.
