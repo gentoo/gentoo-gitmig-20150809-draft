@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.64 2010/09/11 18:27:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.65 2010/09/13 21:08:12 eva Exp $
+
+*totem-pl-parser-2.30.3 (13 Sep 2010)
+
+  13 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +totem-pl-parser-2.30.3.ebuild:
+  Version bump. Fix parsing of m3u and mp4.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   totem-pl-parser-2.30.1.ebuild:
