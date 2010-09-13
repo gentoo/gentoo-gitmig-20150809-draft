@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.181 2010/08/30 14:02:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.182 2010/09/13 15:22:37 arfrever Exp $
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gpgme-1.1.8-r1.ebuild, -gpgme-1.2.0.ebuild,
+  -files/gpgme-1.2.0-fix_implicit_declaration.patch:
+  Delete.
 
   30 Aug 2010; Raúl Porcel <armin76@gentoo.org> gpgme-1.3.0.ebuild:
   alpha/ia64/sparc stable wrt #320037
