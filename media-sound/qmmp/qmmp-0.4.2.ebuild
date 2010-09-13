@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.2.ebuild,v 1.1 2010/09/03 20:02:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.2.ebuild,v 1.2 2010/09/13 10:22:40 hwoarang Exp $
 
 EAPI="2"
 
@@ -46,7 +46,8 @@ RDEPEND="x11-libs/qt-gui:4[qt3support]
 	jack? ( media-sound/jack-audio-connection-kit
 		media-libs/libsamplerate )
 	ffmpeg? ( media-video/ffmpeg )
-	projectm? ( media-libs/libprojectm )
+	projectm? ( media-libs/libprojectm
+		x11-libs/qt-opengl:4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.9 )
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
