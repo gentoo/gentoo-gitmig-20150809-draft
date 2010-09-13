@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.33 2010/09/11 15:09:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.34 2010/09/13 18:34:05 robbat2 Exp $
+
+*git-1.7.2.3 (13 Sep 2010)
+
+  13 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.2.3.ebuild:
+  Bug #337104: verbump.
 
   11 Sep 2010; Raúl Porcel <armin76@gentoo.org> git-1.7.2.2.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #335891
