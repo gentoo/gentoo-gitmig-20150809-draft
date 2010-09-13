@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Install
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.8 2010/08/28 16:49:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.9 2010/09/13 14:41:03 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org>
+  perl-ExtUtils-Install-1.54.ebuild:
+  Marked ppc stable for bug #330387.
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   perl-ExtUtils-Install-1.54.ebuild:
