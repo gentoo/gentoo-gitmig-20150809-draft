@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.11 2010/09/09 18:53:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.12 2010/09/13 18:20:56 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -218,6 +218,9 @@ src_unpack() {
 
 		# same with NA on ppc
 		epatch "${FILESDIR}/ghc-6.12.3-ppc-use-libffi-for-foreign-import-wrapper.patch"
+
+		# substitute outdated macros
+		epatch "${FILESDIR}/ghc-6.12.3-autoconf-2.66-4252.patch"
 
 		# as we have changed the build system
 		eautoreconf

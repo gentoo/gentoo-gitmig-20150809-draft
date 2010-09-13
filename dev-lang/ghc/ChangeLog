@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.189 2010/09/09 18:53:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.190 2010/09/13 18:20:56 slyfox Exp $
+
+  13 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-autoconf-2.66-4252.patch:
+  Fixed configure regeneration failure (bug #337025). Thanks to Andrew
+  Savchenko for the report and found solution.
 
   09 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild:
   Added sparc build for 6.12.3. Marked ~sparc (bug #283531)
