@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.7 2010/09/13 09:20:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.8 2010/09/13 16:28:54 mr_bones_ Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_unpack() {
 	#Honour Gentoo LDFLAGS. Closes bug #336753.
 	sed -i 's/-o $@ wmrecord.o/$(LDFLAGS) -o $@ wmrecord.o/' "${S}/Makefile"
 
-	#Fix buffer overflow. Closes bug #336754. 
+	#Fix buffer overflow. Closes bug #336754.
 	sed -i 's/sprintf(cse, "000");/snprintf(cse, "000", 3);/' "${S}/wmrecord.c"
 }
 
