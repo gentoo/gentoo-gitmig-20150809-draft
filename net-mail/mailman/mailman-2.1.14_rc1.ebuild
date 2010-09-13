@@ -1,16 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.12.ebuild,v 1.5 2010/09/13 23:12:08 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.14_rc1.ebuild,v 1.1 2010/09/13 23:12:08 hanno Exp $
 
 inherit eutils python multilib
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tgz"
 HOMEPAGE="http://www.list.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
@@ -18,6 +18,7 @@ DEPEND=">=dev-lang/python-2.3
 	virtual/cron
 	virtual/httpd-cgi"
 RDEPEND="${DEPEND}"
+S="${WORKDIR}/${P/_/}"
 
 pkg_setup() {
 	INSTALLDIR=${MAILMAN_PREFIX:-"/usr/$(get_libdir)/mailman"}
@@ -39,9 +40,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-2.1.12-directory-check.patch" || die "patch failed."
-	epatch "${FILESDIR}/${PN}-2.1.12-add-destdir.patch" || die "patch failed."
+	epatch "${FILESDIR}/${PN}-2.1.14_rc1-directory-check.patch" || die "patch failed."
 	epatch "${FILESDIR}/${PN}-2.1.9-icons.patch" || die "patch failed."
+	epatch "${FILESDIR}/${PN}-2.1.13-ldflags.patch"
 }
 
 src_compile() {
