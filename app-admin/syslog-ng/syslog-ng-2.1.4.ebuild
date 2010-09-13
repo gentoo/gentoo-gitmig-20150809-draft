@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.4.ebuild,v 1.8 2009/05/31 22:19:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.4.ebuild,v 1.9 2010/09/13 03:39:05 mr_bones_ Exp $
 
 EAPI=2
 inherit fixheadtails eutils
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="hardened ipv6 selinux spoof-source sql static tcpd"
 
-RDEPEND=">=dev-libs/eventlog-0.2
+RDEPEND="!static? ( >=dev-libs/eventlog-0.2 )
 	spoof-source? ( net-libs/libnet )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	sql? ( >=dev-db/libdbi-0.8.3 )
 	>=dev-libs/glib-2.4"
 DEPEND="${RDEPEND}
+	static? ( >=dev-libs/eventlog-0.2[static-libs] )
 	dev-util/pkgconfig
 	sys-devel/flex"
 PROVIDE="virtual/logger"

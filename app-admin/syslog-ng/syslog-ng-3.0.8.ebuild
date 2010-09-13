@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.0.8.ebuild,v 1.7 2010/09/12 15:20:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.0.8.ebuild,v 1.8 2010/09/13 03:39:05 mr_bones_ Exp $
 
 EAPI=2
 inherit fixheadtails eutils
@@ -20,7 +20,7 @@ LIBS_DEPEND="
 	spoof-source? ( net-libs/libnet )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	>=dev-libs/eventlog-0.2
+	!static? ( >=dev-libs/eventlog-0.2 )
 	>=dev-libs/glib-2.10.1:2
 	caps? ( sys-libs/libcap )
 	sql? ( >=dev-db/libdbi-0.8.3 )"
@@ -31,6 +31,7 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	${LIBS_DEPEND}
+	static? ( >=dev-libs/eventlog-0.2[static-libs] )
 	dev-util/pkgconfig
 	sys-devel/flex"
 PROVIDE="virtual/logger"
