@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.619 2010/08/03 19:30:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.620 2010/09/13 01:03:56 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> xorg-x11-7.4-r1.ebuild:
+  Marked ppc64 stable.
 
   03 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> -xorg-x11-7.4.ebuild:
   rm
