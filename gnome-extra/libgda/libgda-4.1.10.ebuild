@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4.ebuild,v 1.4 2010/06/17 20:21:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.10.ebuild,v 1.1 2010/09/13 18:11:33 pacho Exp $
 
 EAPI="2"
 
-inherit db-use flag-o-matic gnome2 java-pkg-opt-2
+inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2"
 
 # MDB support currently works with CVS only, so disable it in the meantime
 # experimental IUSE: introspection
-IUSE="berkdb bindist canvas doc firebird freetds gtk graphviz ldap mysql oci8 odbc postgres sourceview xbase"
+IUSE="berkdb bindist canvas doc firebird freetds gnome-keyring gtk graphviz ldap mysql oci8 odbc postgres sourceview xbase"
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -36,6 +36,7 @@ RDEPEND="
 		sourceview? ( x11-libs/gtksourceview:2.0 )
 		graphviz? ( media-gfx/graphviz )
 	)
+	gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) )
 	ldap?     ( >=net-nds/openldap-2.0.25 )
 	mysql?    ( virtual/mysql )
 	odbc?     ( >=dev-db/unixODBC-2.0.6 )
@@ -48,6 +49,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35.5
+	>=app-text/gnome-doc-utils-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
@@ -64,6 +66,7 @@ pkg_setup() {
 		else
 			G2CONF="${G2CONF}
 				$(use_with canvas goocanvas)
+				$(use_with gnome-keyring)
 				$(use_with graphviz)
 				$(use_with sourceview gtksourceview)"
 		fi
@@ -72,6 +75,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-unique
 		--with-libsoup
+		--disable-scrollkeeper
 		--disable-introspection
 		--disable-static
 		--enable-system-sqlite
