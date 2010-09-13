@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.11 2008/11/25 23:52:14 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.12 2010/09/13 08:01:26 s4t4n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	xmkmf || die "xmkmf failed."
 	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
-		|| die "emake failed."
+		LDOPTIONS="${LDFLAGS}" || die "emake failed."
 }
 
 src_install() {
