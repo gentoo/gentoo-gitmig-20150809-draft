@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.73 2010/08/04 15:06:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.74 2010/09/13 21:21:34 klausman Exp $
+
+  13 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  qt-phonon-4.6.2.ebuild:
+  Stable on alpha, bug #297299
 
   04 Aug 2010; Markus Meier <maekke@gentoo.org> qt-phonon-4.6.2.ebuild:
   arm stable, bug #297299

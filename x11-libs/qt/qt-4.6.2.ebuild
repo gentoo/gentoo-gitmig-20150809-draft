@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.6.2.ebuild,v 1.8 2010/09/03 19:28:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.6.2.ebuild,v 1.9 2010/09/13 21:18:29 klausman Exp $
 
 EAPI=2
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
@@ -8,7 +8,7 @@ HOMEPAGE="http://qt.nokia.com/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="4"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="dbus kde opengl qt3support"
 
 DEPEND=""

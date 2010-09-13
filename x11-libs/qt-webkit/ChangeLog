@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.99 2010/08/29 17:52:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.100 2010/09/13 21:23:54 klausman Exp $
+
+  13 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  qt-webkit-4.6.2.ebuild:
+  Stable on alpha, bug #297299
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.5.3-r3.ebuild,
   qt-webkit-4.6.2-r1.ebuild:
