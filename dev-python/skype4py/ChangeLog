@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/skype4py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.4 2010/03/28 04:00:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.5 2010/09/13 13:24:00 xmw Exp $
+
+*skype4py-1.0.32.0 (13 Sep 2010)
+
+  13 Sep 2010; Michael Weber <xmw@gentoo.org> +skype4py-1.0.32.0.ebuild:
+  Version bump wrt bug #303239.
 
   28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed
