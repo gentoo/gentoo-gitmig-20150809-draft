@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1588.ebuild,v 1.1 2010/09/08 22:40:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1588.ebuild,v 1.2 2010/09/13 14:38:55 caster Exp $
 
 EAPI=2
 
@@ -56,6 +56,13 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 	virtual/ttf-fonts"
 
 S="${WORKDIR}"
+
+pkg_nofetch() {
+	einfo "Wrong checksum or file size means that Google silently replaced the distfile with a newer version."
+	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
+	einfo "Please file a version bump bug on http://bugs.gentoo.org (search existing bugs for googleearth first!)."
+	einfo "By redigesting the file yourself, you will install a different version than the ebuild says, untested!"
+}
 
 QA_TEXTRELS="opt/googleearth/libflightsim.so
 opt/googleearth/libwebbrowser.so
