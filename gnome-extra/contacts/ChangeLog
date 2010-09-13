@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/contacts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/ChangeLog,v 1.9 2010/09/02 13:13:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/ChangeLog,v 1.10 2010/09/13 21:10:53 eva Exp $
+
+*contacts-0.12 (13 Sep 2010)
+
+  13 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> +contacts-0.12.ebuild:
+  Version bump. Translation updates.
 
   02 Sep 2010; Pacho Ramos <pacho@gentoo.org> -contacts-0.10.ebuild,
   contacts-0.11.ebuild, +files/contacts-0.11-fix-make-3.82.patch:
