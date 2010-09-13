@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.1 2010/08/26 22:05:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.2 2010/09/13 15:45:10 grobian Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="General purpose filter and file cleaning program"
 HOMEPAGE="http://hannemyr.com/enjoy/pep.html"
@@ -26,14 +26,14 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-include.patch
-	# Darwin lacks stricmp
-	[[ ${CHOST} == *-darwin* ]] && \
+	# Darwin lacks stricmp and DIRCHAR
+	if [[ ${CHOST} == *-darwin* ]] ; then
 		sed -i -e '/^OBJS/s/^\(.*\)$/\1 bdmg.o/' Makefile
+		append-flags "-Dunix" -DSTRICMP
+	fi
 }
 
 src_compile() {
-	[[ ${CHOST} == *-darwin* ]] && \
-		append-flags "-DDIRCHAR=\\'/\\'" -DSTRICMP
 	# make man page too
 	make Doc/pep.1 || die "make man page failed"
 	emake CC="$(tc-getCC)" || die "emake failed"
