@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.32 2010/09/11 03:53:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.33 2010/09/13 07:29:00 keri Exp $
+
+  13 Sep 2010; <keri@gentoo.org> tuprolog-2.3.0_alpha.ebuild:
+  Add dev-lang/javassist to RDEPEND. Closes #336952
 
   11 Sep 2010; <keri@gentoo.org> tuprolog-2.3.0_alpha.ebuild:
   Do not include src_test(); test files are not included in the alpha

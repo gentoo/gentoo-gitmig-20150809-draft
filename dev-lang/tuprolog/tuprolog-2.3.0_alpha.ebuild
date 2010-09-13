@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.2 2010/09/11 03:53:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.3 2010/09/13 07:29:00 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -16,11 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-DEPEND=">=virtual/jdk-1.5
-	>=dev-java/javassist-3
+RDEPEND=">=virtual/jdk-1.5
+	>=dev-java/javassist-3"
+
+DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-java/ant-core"
-RDEPEND=">=virtual/jdk-1.5"
 
 S="${WORKDIR}"
 
