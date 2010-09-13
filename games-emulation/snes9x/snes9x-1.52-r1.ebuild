@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.7 2010/09/09 16:51:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.8 2010/09/13 19:18:44 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -85,7 +85,7 @@ src_configure() {
 			$(use_with oss) \
 			$(use_with pulseaudio) \
 			$(use_with portaudio) \
-			$(use_with png)
+			$(use_with png screenshot)
 	fi
 }
 
