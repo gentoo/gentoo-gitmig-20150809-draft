@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/getdata
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.1 2010/09/13 16:25:29 ayoy Exp $
+
+*getdata-0.6.3 (13 Sep 2010)
+
+  13 Sep 2010; Dominik Kapusta <ayoy@gentoo.org> +getdata-0.6.3.ebuild,
+  +metadata.xml:
+  Initial commit for getdata. Ebuild by Matěj Laitl <strohel@gmail.com>
+  (bug #335017).
+
