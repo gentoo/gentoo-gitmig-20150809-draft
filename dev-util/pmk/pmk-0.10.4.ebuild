@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.4.ebuild,v 1.3 2010/09/12 14:37:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/pmk-0.10.4.ebuild,v 1.4 2010/09/13 01:57:45 mr_bones_ Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	# Make this respect LDFLAGS, bug #334987	
+	# Make this respect LDFLAGS, bug #334987
 	sed -i -e "s:CLDFLAGS:LDFLAGS:" Makefile.pmk || die
 	sed -i -e "/@CLDFLAGS@/d" Makefile.pmk || die
 
