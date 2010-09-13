@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.16 2010/02/23 10:41:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.17 2010/09/13 18:08:23 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -12,7 +12,7 @@ PROVIDE="virtual/portage"
 SLOT="0"
 IUSE="build doc epydoc selinux linguas_pl"
 
-python_dep=">=dev-lang/python-2.4 <dev-lang/python-3.0"
+python_dep=">=dev-lang/python-2.4 <dev-lang/python-2.6.6"
 
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )

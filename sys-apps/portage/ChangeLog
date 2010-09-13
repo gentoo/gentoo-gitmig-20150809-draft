@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.726 2010/09/13 05:22:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.727 2010/09/13 18:08:23 zmedico Exp $
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
+  portage-2.1.6.13.ebuild, portage-2.1.7.17.ebuild, portage-2.1.8.3.ebuild,
+  portage-2.2_rc67.ebuild:
+  Bug #330937 - Adjust python dependencies to reflect incompatibility with
+  >=python-2.6.6 and >=python-3.2.
 
 *portage-2.2_rc81 (13 Sep 2010)
 
