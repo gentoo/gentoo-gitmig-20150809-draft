@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11938 2010/09/13 15:32:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11939 2010/09/13 19:07:44 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -293,11 +293,6 @@ games-emulation/xmame
 ~www-client/chromium-bin-5.0.375.125
 ~www-client/chromium-bin-5.0.375.127
 ~www-client/chromium-bin-6.0.472.51
-
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Aug 2010)
-# Mask for removal 20100913
-# Doesn't work with newer kernels (Bug 316869)
-dev-libs/linux-fusion
 
 # Hans de Graaff <graaff@gentoo.org> (13 Aug 2010)
 # Mask for removal 20100913
