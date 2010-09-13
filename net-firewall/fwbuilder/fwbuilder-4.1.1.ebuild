@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.0.1.ebuild,v 1.2 2010/09/13 06:28:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.1.1.ebuild,v 1.1 2010/09/13 06:28:01 kumba Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	qt4-r2_src_prepare
-	epatch "${FILESDIR}/${PV}-secure-mktemp.patch"
+	epatch "${FILESDIR}/4.x-qmake-use-LDFLAGS.patch"
 	eautoreconf || die "eautoreconf failed"
 
 	# This package fundamentally changed its build system.  We have to

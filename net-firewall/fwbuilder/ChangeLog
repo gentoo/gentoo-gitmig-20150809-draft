@@ -1,6 +1,18 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.95 2010/06/05 22:42:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.96 2010/09/13 06:28:01 kumba Exp $
+
+*fwbuilder-4.1.1 (12 Sep 2010)
+*fwbuilder-4.0.1-r1 (12 Sep 2010)
+
+  12 Sep 2010; Joshua Kinard <kumba@gentoo.org>
+  +files/4.x-qmake-use-LDFLAGS.patch, fwbuilder-3.0.3.ebuild,
+  fwbuilder-3.0.6.ebuild, fwbuilder-3.0.7.ebuild, fwbuilder-4.0.1.ebuild,
+  +fwbuilder-4.0.1-r1.ebuild, +fwbuilder-4.1.1.ebuild:
+  Removed the mktemp patch from 4.0.1-r1 (solves #329177) and introduced a
+  new upstream release, 4.1.1. Both also include a fix to include the system
+  LDFLAGS value into the build (solves #335221). Per repoman, changed all
+  the ebuilds to use the qt4-r2 eclass over the deprecated qt4 eclass.
 
 *fwbuilder-4.0.1 (05 Jun 2010)
 

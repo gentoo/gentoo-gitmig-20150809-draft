@@ -1,0 +1,11 @@
+diff -Naurp fwbuilder-4.1.1.orig//qmake.inc.in fwbuilder-4.1.1//qmake.inc.in
+--- fwbuilder-4.1.1.orig//qmake.inc.in	2010-07-21 00:42:00.000000000 -0400
++++ fwbuilder-4.1.1//qmake.inc.in	2010-09-12 15:47:10.189648845 -0400
+@@ -67,6 +67,7 @@ unix {
+         QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
+         QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter
+         QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
++        QMAKE_LFLAGS = @LDFLAGS@
+ 
+     }
+ }

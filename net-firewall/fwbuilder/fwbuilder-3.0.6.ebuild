@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.6.ebuild,v 1.1 2009/09/01 10:40:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.6.ebuild,v 1.2 2010/09/13 06:28:01 kumba Exp $
 
 EAPI="2"
 
-inherit qt4 multilib
+inherit qt4-r2 multilib
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -20,7 +20,7 @@ DEPEND="~net-libs/libfwbuilder-${PV}
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	qt4_src_prepare
+	qt4-r2_src_prepare
 
 	# Remove bundled antlr
 	rm -rf src/antlr
