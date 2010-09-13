@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.3.ebuild,v 1.6 2010/09/13 19:28:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.4.3.ebuild,v 1.7 2010/09/13 22:04:10 klausman Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.riverbankcomputing.co.uk/static/Downloads/QScintilla2/${MY_P
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc python"
 
 DEPEND="x11-libs/qt-gui:4"
