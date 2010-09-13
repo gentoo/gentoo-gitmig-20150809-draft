@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.727 2010/09/13 18:08:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.728 2010/09/13 22:42:49 zmedico Exp $
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.3.ebuild,
+  -portage-2.1.9.4.ebuild, -portage-2.2_rc79.ebuild,
+  -portage-2.2_rc80.ebuild:
+  Remove old versions.
 
   13 Sep 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
   portage-2.1.6.13.ebuild, portage-2.1.7.17.ebuild, portage-2.1.8.3.ebuild,
