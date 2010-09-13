@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.26 2010/08/28 07:20:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.27 2010/09/13 19:55:02 darkside Exp $
+
+  13 Sep 2010; Jeremy Olexa <darkside@gentoo.org> YAML-Syck-1.14.ebuild:
+  Align prefix keywords with dev-perl/DateManip, bug 336867
 
 *YAML-Syck-1.14 (28 Aug 2010)
 
