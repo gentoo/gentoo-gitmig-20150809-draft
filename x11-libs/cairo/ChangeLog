@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.262 2010/09/10 12:21:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.263 2010/09/13 13:19:51 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> cairo-1.8.10.ebuild:
+  Marked ppc stable for bug #329175.
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cairo-9999.ebuild:
   Drop lafiles removal from live too.
