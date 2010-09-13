@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.66.ebuild,v 1.1 2010/09/13 06:11:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.66.ebuild,v 1.2 2010/09/13 06:20:24 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=PETDANCE
 inherit perl-module
