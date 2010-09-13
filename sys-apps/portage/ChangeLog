@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.725 2010/09/11 21:03:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.726 2010/09/13 05:22:19 zmedico Exp $
+
+*portage-2.2_rc81 (13 Sep 2010)
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc81.ebuild:
+  2.2_rc81 version bump. This includes all of the fixes in portage-2.1.9.5.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.5 (13 Sep 2010)
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.5.ebuild:
+  2.1.9.5 version bump. This fixes bug #336142 (ebuild-ipc timeout is
+  too short), bug #336875 (ETIME ImportError on FreeBSD), and bug #337031
+  (make "always overflow destination buffers" gcc warnings non-fatal).
+  Bug #335925 tracks all bugs fixed since 2.1.8.x.
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.2.ebuild,
+  -portage-2.2_rc78.ebuild:
+  Remove old versions.
 
 *portage-2.2_rc80 (11 Sep 2010)
 
