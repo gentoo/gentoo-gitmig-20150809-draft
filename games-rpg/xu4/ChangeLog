@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/xu4
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/ChangeLog,v 1.6 2009/01/08 21:56:40 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/ChangeLog,v 1.7 2010/09/13 05:14:29 josejx Exp $
+
+  13 Sep 2010; Joseph Jezak <josejx@gentoo.org> xu4-0.9.ebuild:
+  Marked ppc stable for bug #334201.
 
   08 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xu4-0.9.ebuild:
   EAPI=2; add use-based dep for media-libs/sdl-mixer
