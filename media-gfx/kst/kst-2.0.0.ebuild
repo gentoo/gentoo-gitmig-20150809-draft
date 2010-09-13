@@ -1,17 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta2-r1.ebuild,v 1.3 2010/02/10 08:13:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0.ebuild,v 1.1 2010/09/13 16:27:48 ayoy Exp $
 
 EAPI=2
 
 inherit qt4-r2 multilib
 
-MY_PV="${PV/_/-}"
-MY_P="${PN}-${MY_PV}"
+MY_PN="${PN/k/K}"
 
 DESCRIPTION="Fast real-time large-dataset viewing and plotting tool for KDE4"
 HOMEPAGE="http://kst.kde.org/"
-SRC_URI="mirror://kde/unstable/apps/KDE4.x/scientific/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/${PN}/${MY_PN}%20${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.2"
 SLOT="0"
@@ -24,12 +23,11 @@ DEPEND="x11-libs/qt-gui:4[debug?]
 	x11-libs/qt-svg:4[debug?]
 	x11-libs/qt-xmlpatterns:4[debug?]
 	sci-libs/gsl
-	sci-libs/cfitsio"
+	sci-libs/cfitsio
+	sci-libs/getdata"
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${PN}-cfitsio-includes.patch" )
-
-S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	qt4-r2_src_prepare
@@ -54,14 +52,14 @@ src_prepare() {
 }
 
 src_configure() {
-	export INSTDIR="${D}/usr"
+	export INSTALL_LIBDIR="$(get_libdir)"
 	eqmake4
 }
 
 src_install() {
-	emake install || die "emake install failed"
+	qt4-r2_src_install
 	doicon src/images/${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN} \
+	make_desktop_entry "${PN}2" ${PN} ${PN} \
 		"Qt;Graphics;DataVisualization" || die "make_desktop_entry failed"
-	dodoc AUTHORS ChangeLog NEWS PORTINGTODO README RELEASE.NOTES || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README RELEASE.NOTES || die "dodoc failed"
 }
