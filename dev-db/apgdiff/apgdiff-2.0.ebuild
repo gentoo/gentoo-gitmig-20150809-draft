@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/apgdiff-2.0_beta2.ebuild,v 1.1 2010/07/23 16:35:39 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/apgdiff-2.0.ebuild,v 1.1 2010/09/13 17:46:37 fordfrog Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source"
@@ -8,13 +8,11 @@ inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Another PostgreSQL Diff Tool is a simple PostgreSQL diff tool that is useful for schema upgrades."
 HOMEPAGE="http://apgdiff.sourceforge.net/"
-MY_PV=${PV/_beta2/-beta-2}
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-src.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-S="${WORKDIR}"/${PN}-${MY_PV}
 
 DEPEND=">=virtual/jdk-1.5
 	>=dev-java/ant-core-1.7.0:0
@@ -43,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_newjar dist/${PN}-${MY_PV}.jar ${PN}.jar
+	java-pkg_newjar dist/${P}.jar ${PN}.jar
 	java-pkg_dolauncher apgdiff --jar ${PN}.jar
 
 	use doc && java-pkg_dojavadoc dist/javadoc
