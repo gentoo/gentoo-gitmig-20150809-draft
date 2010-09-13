@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.728 2010/09/13 22:42:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.729 2010/09/13 22:48:26 zmedico Exp $
+
+  13 Sep 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.9.5.ebuild,
+  portage-2.2_rc67.ebuild, portage-2.2_rc81.ebuild, portage-9999.ebuild:
+  Bug #337050 - Use blockers to emphasize incompatibility with older
+  versions of bash.
 
   13 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.3.ebuild,
   -portage-2.1.9.4.ebuild, -portage-2.2_rc79.ebuild,
