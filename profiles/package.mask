@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11940 2010/09/13 20:19:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11941 2010/09/13 20:23:55 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Sep 2010)
-# Last release in 2008. Newer versions are included
+# Last stand-alone release in 2008. Newer versions are included
 # with app-editors/emacs or app-editors/emacs-vcs.
 # Masked for removal in 30 days, bug 337133.
 app-emacs/gnus 
