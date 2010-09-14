@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11943 2010/09/14 14:04:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11944 2010/09/14 17:59:08 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2010)
+# Mask for removal 20101014
+# Looks dead upstream.
+games-server/greenhouse
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Sep 2010)
 # Last stand-alone release in 2008. Newer versions are included
