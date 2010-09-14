@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.150 2010/09/12 23:02:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.151 2010/09/14 16:27:31 hwoarang Exp $
+
+  14 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  autoconf-2.65-r1.ebuild:
+  Stable on amd64 wrt bug #336381
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   autoconf-2.65-r1.ebuild:
