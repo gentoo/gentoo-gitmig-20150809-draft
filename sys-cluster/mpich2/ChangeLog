@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.57 2010/08/05 04:03:09 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.58 2010/09/14 18:42:20 jsbronder Exp $
+
+  14 Sep 2010; Justin Bronder <jsbronder@gentoo.org>
+  mpich2-1.2.1_p1-r1.ebuild:
+  Due to pvfs2 upstream continuously lagging behind the kernel the useflag
+  is being dropped. If necessary, this functionality can be added back by
+  adding "--with-file-system=pvfs2+nfs+ufs --with-pvfs2=/usr" to the mpich2
+  configure arguments.
 
 *mpich2-1.2.1_p1-r1 (05 Aug 2010)
 
