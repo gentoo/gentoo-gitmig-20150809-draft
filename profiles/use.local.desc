@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5949 2010/09/13 19:14:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5950 2010/09/14 15:34:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2826,6 +2826,7 @@ net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
 net-misc/curl:libssh2 - Enabled SSH urls in curl using libssh2
 net-misc/curl:nss - Prefer NSS over openssl as the crypto engine
 net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
+net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support
 net-misc/dhcpcd:compat - Enable commandline compatibility with dhcpcd-3.x
 net-misc/directvnc:mouse - Adds mouse support
 net-misc/dnetstats:gnome - Use gksu to gain root access
