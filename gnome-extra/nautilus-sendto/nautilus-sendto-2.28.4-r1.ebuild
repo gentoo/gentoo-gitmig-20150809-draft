@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.4-r1.ebuild,v 1.5 2010/08/07 17:30:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.4-r1.ebuild,v 1.6 2010/09/14 17:41:56 josejx Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
 IUSE="bluetooth doc gajim cdr pidgin upnp +mail"
 
 RDEPEND=">=x11-libs/gtk+-2.18
