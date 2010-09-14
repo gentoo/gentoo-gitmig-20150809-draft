@@ -20,9 +20,6 @@ tables (errors fixed, 1/10th the size, easier to use).
 
 </longdescription>
 <use>
-  <flag name='elliptic'>Add additional elliptic curve data</flag>
-  <flag name='galois'>Add additional data to compute Galois groups of degree
-    8 to 11</flag>
   <flag name='data'>Add additional data (elldata, galdata, seadata, nftables)</flag>  
 </use>
 </pkgmetadata>
