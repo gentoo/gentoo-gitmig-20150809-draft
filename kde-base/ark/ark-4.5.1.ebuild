@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.5.1.ebuild,v 1.3 2010/09/06 04:50:58 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.5.1.ebuild,v 1.4 2010/09/14 12:53:52 reavertm Exp $
 
 EAPI="3"
 
-KDE_HANDBOOK=1
+KDE_HANDBOOK="optional"
 KMNAME="kdeutils"
 inherit kde4-meta
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.5.1.ebuild,v 1.2 2010/09/06 04:50:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.5.1.ebuild,v 1.3 2010/09/14 12:54:02 reavertm Exp $
 
 EAPI="3"
 
-KDE_HANDBOOK=1
+KDE_HANDBOOK="optional"
 KMNAME="kdeutils"
 CPPUNIT_REQUIRED="optional"
 inherit kde4-meta
