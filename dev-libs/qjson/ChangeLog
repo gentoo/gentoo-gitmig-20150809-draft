@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qjson
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.12 2010/06/16 15:44:01 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.13 2010/09/14 16:54:16 josejx Exp $
+
+  14 Sep 2010; Joseph Jezak <josejx@gentoo.org> qjson-0.7.1-r1.ebuild:
+  Marked ~ppc for bug #337216.
 
 *qjson-0.7.1-r1 (16 Jun 2010)
 *qjson-0.6.3-r1 (16 Jun 2010)
