@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.440 2010/09/14 18:08:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.441 2010/09/14 18:16:08 patrick Exp $
+
+  14 Sep 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Cleanup of metadata.xml for unused useflags
 
   14 Sep 2010; Patrick Lauer <patrick@gentoo.org>
   -files/3.0.26a-invalid-free-fix.patch, -samba-3.0.37.ebuild,

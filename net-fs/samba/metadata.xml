@@ -11,15 +11,10 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 </longdescription>
 <use>
 	<flag name="ads">Enable Active Directory support</flag>
-	<flag name="async">Enables asynchronous input/output</flag>
-	<flag name="automount">Enables automount support</flag>
-	<flag name="oav">Enables support for the OpenAntiVirus plugins</flag>
-	<flag name="quotas">Enables support for user quotas</flag>
 	<flag name="swat">Enables support for swat configuration gui</flag>
 	<flag name="winbind">Enables support for the winbind auth daemon</flag>
         <flag name="client">Enables the client part</flag>
         <flag name="server">Enables the server part</flag>
-	<flag name="cifsupcall">Enables userspace upcall helper</flag>
 	<flag name="netapi">Enable building of netapi bits</flag>
 	<flag name="tools">Enable extra tools</flag>
 	<flag name="dso">Enable dso support</flag>
