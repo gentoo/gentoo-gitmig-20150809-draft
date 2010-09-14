@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.86 2010/09/06 20:11:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.87 2010/09/14 01:58:24 vapier Exp $
+
+*iputils-20100418-r1 (14 Sep 2010)
+
+  14 Sep 2010; Mike Frysinger <vapier@gentoo.org> +iputils-20100418-r1.ebuild,
+  +files/iputils-20100418-arping-broadcast.patch:
+  Add fix for arping broadcast handling #337049 by Aleksander Machniak.
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> iputils-20100418.ebuild:
   Marking iputils-20100418 ppc64 for bug 332527
