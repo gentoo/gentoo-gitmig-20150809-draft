@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.8 2010/06/08 16:49:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.9 2010/09/14 12:32:09 chainsaw Exp $
+
+*dahdi-2.4.0 (14 Sep 2010)
+
+  14 Sep 2010; <chainsaw@gentoo.org> +dahdi-2.4.0.ebuild:
+  Version bump, two patches now upstream. With thanks to Jaco Kroon for a
+  new non-Digium hardware support patch. Closes bug #336525.
 
 *dahdi-2.3.0.1 (08 Jun 2010)
 
