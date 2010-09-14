@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.19 2010/08/13 13:37:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.20 2010/09/14 12:35:42 nixphoeni Exp $
+
+  14 Sep 2010; Joe Sapp <nixphoeni@gentoo.org> -xwax-0.5.ebuild,
+  -xwax-0.6-r1.ebuild:
+  Removing old versions of xwax to address bug #335787. I don't see why they
+  need to stick around.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> xwax-0.7.ebuild:
   Marked ppc stable for bug #323501.
