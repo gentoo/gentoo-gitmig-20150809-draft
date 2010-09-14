@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
-	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<use>
-		<flag name='badval'>Enable badval support</flag>
-	</use>
+  <herd>perl</herd>
+  <use>
+    <flag name="badval">Enable badval support</flag>
+  </use>
+  <upstream>
+    <remote-id type="cpan">PDL</remote-id>
+  </upstream>
 </pkgmetadata>

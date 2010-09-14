@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>perl</herd>
-<use>
-	<flag name='animgif'>Enable animated gif support</flag>
-</use>
+  <herd>perl</herd>
+  <use>
+    <flag name="animgif">Enable animated gif support</flag>
+  </use>
+  <upstream>
+    <remote-id type="cpan">GD</remote-id>
+  </upstream>
 </pkgmetadata>

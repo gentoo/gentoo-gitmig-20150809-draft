@@ -7,8 +7,7 @@
     <name>Tiziano Müller</name>
   </maintainer>
   <upstream>
-	  <remote-id type="sourceforge">net-ldapapi</remote-id>
-	  <remote-id type="cpan">Net::LDAPapi</remote-id>
+    <remote-id type="sourceforge">net-ldapapi</remote-id>
+    <remote-id type="cpan">Net-LDAPapi</remote-id>
   </upstream>
 </pkgmetadata>
-

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
-	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<longdescription>Net::XMPP is a collection of Perl modules that provide a Perl Developer access to the XMPP protocol.</longdescription>
+  <herd>perl</herd>
+  <longdescription>Net::XMPP is a collection of Perl modules that provide a Perl Developer access to the XMPP protocol.</longdescription>
+  <upstream>
+    <remote-id type="cpan">Net-XMPP</remote-id>
+  </upstream>
 </pkgmetadata>

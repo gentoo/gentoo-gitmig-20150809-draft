@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
-	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<longdescription>The Apache::Test framework was designed for creating test
+  <herd>perl</herd>
+  <longdescription>The Apache::Test framework was designed for creating test
 		suites for products running on the Apache httpd webserver (not
 		necessarily mod_perl). Originally designed for the mod_perl Apache
 		module, it was extended to be used for any Apache
 		module.</longdescription>
+  <upstream>
+    <remote-id type="cpan">Apache-Test</remote-id>
+  </upstream>
 </pkgmetadata>

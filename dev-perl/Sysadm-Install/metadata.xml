@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
-	<use>
-		<flag name="hammer">Enable hammer() funtion to run a command in the shell and simulate a user
+  <herd>perl</herd>
+  <use>
+    <flag name="hammer">Enable hammer() funtion to run a command in the shell and simulate a user
 			hammering the ENTER key to accept defaults on prompts</flag>
-	</use>
+  </use>
+  <upstream>
+    <remote-id type="cpan">Sysadm-Install</remote-id>
+  </upstream>
 </pkgmetadata>
-

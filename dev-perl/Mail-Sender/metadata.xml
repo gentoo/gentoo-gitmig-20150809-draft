@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>perl</herd>
-	<longdescription lang="en">
+  <herd>perl</herd>
+  <longdescription lang="en">
 	    Module for sending mails with attachments through an SMTP server
 	</longdescription>
-	<longdescription lang="ja">
+  <longdescription lang="ja">
 	    SMTPでアタッチメントでメールを送るperlモジュール
 	</longdescription>
+  <upstream>
+    <remote-id type="cpan">Mail-Sender</remote-id>
+  </upstream>
 </pkgmetadata>

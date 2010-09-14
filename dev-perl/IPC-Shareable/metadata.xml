@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>jokey@gentoo.org</email>
-  <name>Markus Ullmann</name>
-</maintainer>
-<herd>perl</herd>
+  <maintainer>
+    <email>jokey@gentoo.org</email>
+    <name>Markus Ullmann</name>
+  </maintainer>
+  <herd>perl</herd>
+  <upstream>
+    <remote-id type="cpan">IPC-Shareable</remote-id>
+  </upstream>
 </pkgmetadata>
