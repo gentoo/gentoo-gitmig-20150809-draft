@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.42 2010/04/12 12:52:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.43 2010/09/14 05:37:56 jer Exp $
+
+*arping-2.09 (14 Sep 2010)
+
+  14 Sep 2010; Jeroen Roovers <jer@gentoo.org> +arping-2.09.ebuild:
+  Version bump.
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> arping-2.08-r1.ebuild:
   keyword ~x86-fbsd thanks to Johan Hattne
