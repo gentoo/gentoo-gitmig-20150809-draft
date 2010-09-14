@@ -1,6 +1,13 @@
 # ChangeLog for media-video/motioneye
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motioneye/ChangeLog,v 1.12 2007/11/27 12:04:16 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motioneye/ChangeLog,v 1.13 2010/09/14 21:24:02 phosphan Exp $
+
+*motioneye-1.3-r2 (14 Sep 2010)
+
+  14 Sep 2010; Patrick Kursawe <phosphan@gentoo.org>
+  +motioneye-1.3-r2.ebuild, +files/buflen+ldflags.patch:
+  Respecting LDFLAGS now, eliminated a few (not security relevant)
+  intentional buffer overflows. See bug #337314.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   motioneye-1.3-r1.ebuild:
