@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.2.ebuild,v 1.1 2010/09/14 08:19:47 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.2.ebuild,v 1.2 2010/09/14 08:28:58 reavertm Exp $
 
 EAPI="3"
 
-QT_DEPEND="4.6.0"
+QT_DEPEND="4.6.3"
 inherit cmake-utils
 
 DESCRIPTION="A library providing Qt implementation of DBusMenu specification"
-HOMEPAGE="http://people.canonical.com/~agateau/dbusmenu/"
+HOMEPAGE="https://launchpad.net/libdbusmenu-qt/"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
