@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.3.1.ebuild,v 1.10 2010/08/28 16:32:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.3.1.ebuild,v 1.11 2010/09/14 21:15:36 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,8 +8,8 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils
 
 DESCRIPTION="A library aiming to support agile and test-driven python development on various levels."
-SRC_URI="http://pypi.python.org/packages/source/p/${PN}/${P}.tar.gz"
 HOMEPAGE="http://codespeak.net/py/ http://pypi.python.org/pypi/py"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
