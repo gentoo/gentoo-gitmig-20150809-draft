@@ -1,6 +1,22 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.439 2010/09/14 16:46:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.440 2010/09/14 18:08:20 patrick Exp $
+
+  14 Sep 2010; Patrick Lauer <patrick@gentoo.org>
+  -files/3.0.26a-invalid-free-fix.patch, -samba-3.0.37.ebuild,
+  -samba-3.2.15.ebuild, -samba-3.2.15-r1.ebuild, -samba-3.5.3.ebuild,
+  -samba-3.5.4.ebuild, -files/3.0.28a-CVE-2008-1105.patch,
+  -files/3.0.28-inotify_include.patch,
+  -files/3.0.28-autoconf-2.62-fix.patch, -files/3.0.37-CVE-2010-2063.patch,
+  -files/3.2.15-CVE-2010-2063.patch, -files/3.0.26a-lazyldflags.patch,
+  -files/3.0.28-fix_broken_readdir_detection.patch,
+  -files/3.0.28-libcap_detection.patch,
+  -files/3.0.28a-wrong_python_ldflags.patch,
+  -files/3.0.37-allow-non-ASCII-netbios-names.patch,
+  -files/3.2.15-core-dump-overlapping-byte-lock-test.patch,
+  -files/3.2.15-smbclient-file-corruption-NT4.patch,
+  -samba-3.0.37-r1.ebuild:
+  Remove old
 
 *samba-3.5.5 (14 Sep 2010)
 
