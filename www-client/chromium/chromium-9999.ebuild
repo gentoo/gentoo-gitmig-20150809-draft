@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.82 2010/09/11 16:10:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.83 2010/09/14 14:08:22 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -20,6 +20,8 @@ IUSE="cups gnome gnome-keyring sse2"
 RDEPEND="app-arch/bzip2
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
+	dev-libs/libxml2
+	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
@@ -119,14 +121,14 @@ src_prepare() {
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
 	remove_bundled_lib "third_party/libpng"
+	remove_bundled_lib "third_party/libxml"
+	remove_bundled_lib "third_party/libxslt"
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
 	remove_bundled_lib "third_party/ocmock"
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
-	# TODO: also remove third_party/libxml and third_party/libxslt when
-	# http://crbug.com/29333 is fixed.
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 }
@@ -143,7 +145,6 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg (http://crbug.com/50678).
-	# TODO: use_system_libxml (http://crbug.com/29333).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
@@ -153,6 +154,7 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
+		-Duse_system_libxml=1
 		-Duse_system_zlib=1"
 
 	# The dependency on cups is optional, see bug #324105.
