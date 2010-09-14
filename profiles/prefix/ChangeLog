@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.202 2010/09/12 22:43:55 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.203 2010/09/14 06:20:57 grobian Exp $
+
+  14 Sep 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Extend gcc mask to 4.4.4
 
   12 Sep 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
   Copy KDE 4.5.1 mask from base/package.mask to override unmasking in arch/*
