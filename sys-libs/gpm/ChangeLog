@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.84 2010/09/12 16:43:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.85 2010/09/14 21:34:39 jer Exp $
+
+  14 Sep 2010; Jeroen Roovers <jer@gentoo.org> gpm-1.20.6.ebuild:
+  Stable for HPPA (bug #334967).
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> gpm-1.20.6.ebuild:
   Marked ppc stable for bug #334967.
