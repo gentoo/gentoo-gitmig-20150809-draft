@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.1 2010/09/05 23:20:04 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.2 2010/09/14 17:57:15 josejx Exp $
+
+  14 Sep 2010; Joseph Jezak <josejx@gentoo.org> kajongg-4.5.1.ebuild:
+  Marked ~ppc/~ppc64 for bug #336158.
 
 *kajongg-4.5.1 (05 Sep 2010)
 
