@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.1 2010/03/31 16:40:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.2 2010/09/14 07:41:41 reavertm Exp $
 
 EAPI=2
 
 inherit autotools eutils versionator
 
 DESCRIPTION="Library to pass menu structure across DBus"
-HOMEPAGE="https://launchpad.net/libdbusmenu/"
+HOMEPAGE="https://launchpad.net/dbusmenu"
 SRC_URI="http://launchpad.net/dbusmenu/$(get_version_component_range 1-2)/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
