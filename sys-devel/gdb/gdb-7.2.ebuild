@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.2 2010/09/11 16:51:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.3 2010/09/14 00:35:34 vapier Exp $
 
 EAPI="3"
 
@@ -31,15 +31,13 @@ IUSE="expat multitarget nls python test vanilla"
 RDEPEND=">=sys-libs/ncurses-5.2-r2
 	sys-libs/readline
 	expat? ( dev-libs/expat )
-	python? ( dev-lang/python )"
+	python? ( =dev-lang/python-2* )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
 }
@@ -53,7 +51,7 @@ gdb_branding() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	strip-unsupported-flags
 	econf \
 		--with-pkgversion="$(gdb_branding)" \
@@ -65,9 +63,7 @@ src_compile() {
 		$(use_with expat) \
 		$(use_enable nls) \
 		$(use multitarget && echo --enable-targets=all) \
-		$(use_with python) \
-		|| die
-	emake || die
+		$(use_with python python "${EPREFIX}/usr/bin/python2")
 }
 
 src_test() {
