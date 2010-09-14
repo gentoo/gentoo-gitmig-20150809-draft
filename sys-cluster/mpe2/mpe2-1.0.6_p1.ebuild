@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.4 2010/09/13 22:20:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.5 2010/09/14 22:21:58 mr_bones_ Exp $
 
 EAPI=2
 inherit fortran eutils java-utils-2
@@ -119,7 +119,6 @@ src_test() {
 		elog
 		return 0
 	fi
-
 
 	# No parallel make:
 	# http://trac.mcs.anl.gov/projects/mpich2/ticket/1095#comment:1
