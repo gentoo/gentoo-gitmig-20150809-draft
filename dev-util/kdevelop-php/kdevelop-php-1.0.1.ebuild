@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.0.1.ebuild,v 1.4 2010/09/05 11:32:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.0.1.ebuild,v 1.5 2010/09/14 17:14:47 fauli Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ inherit kde4-base
 DESCRIPTION="PHP plugin for KDevelop 4"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc"
 
 RDEPEND="
