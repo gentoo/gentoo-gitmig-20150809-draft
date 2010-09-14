@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/agda
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.8 2008/12/05 16:58:17 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.9 2010/09/14 19:53:51 bicatali Exp $
+
+*agda-2.2.6 (14 Sep 2010)
+
+  14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/50agda2-gentoo.el, agda-1.0.2-r2.ebuild, +agda-2.2.6.ebuild,
+  +files/agda-2.2.6-emacs.patch:
+  Version bump, ebuild originally from markusle (bug #303973). Also forced
+  emacs on dependencies (thanks to ulm, bug #336741)
 
 *agda-1.0.2-r2 (05 Dec 2008)
 
