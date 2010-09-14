@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.95 2010/07/09 15:44:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.96 2010/09/14 16:45:35 bicatali Exp $
+
+*octave-3.2.4-r2 (14 Sep 2010)
+
+  14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +octave-3.2.4-r2.ebuild, +files/octave-3.2.4-dlmread-speedup.patch:
+  Speed-up of dlmread function from upstream trunk. Thanks Fabio Rossi for
+  his input, bug #337126
 
   09 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -octave-2.1.73-r1.ebuild, -files/octave-2.1.73-f2c-fix.patch,
