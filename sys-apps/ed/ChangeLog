@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.83 2010/09/12 20:29:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.84 2010/09/14 22:15:50 jer Exp $
+
+  14 Sep 2010; Jeroen Roovers <jer@gentoo.org> ed-1.4.ebuild:
+  Stable for HPPA (bug #336277).
 
   12 Sep 2010; Jonathan Callen <abcd@gentoo.org> ed-1.5.ebuild:
   Add prefix support and keywords, switch to EAPI=3 (approved by chainsaw)
