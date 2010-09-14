@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.19 2010/09/14 17:38:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.20 2010/09/14 19:42:51 klausman Exp $
+
+  14 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  gupnp-igd-0.1.6.ebuild:
+  Stable on alpha, bug #327379
 
   14 Sep 2010; Joseph Jezak <josejx@gentoo.org> gupnp-igd-0.1.7.ebuild:
   Marked ppc/ppc64 stable for bug #330657.
