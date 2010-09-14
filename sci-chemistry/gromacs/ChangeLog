@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.58 2010/09/11 19:29:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.59 2010/09/14 12:59:31 alexxy Exp $
+
+*gromacs-4.5.1 (14 Sep 2010)
+
+  14 Sep 2010; Alexey Shvetsov <alexxy@gentoo.org> -gromacs-4.0.7-r3.ebuild,
+  +gromacs-4.5.1.ebuild:
+  Version bump. Now it can use ffambber. And threads. Many thanks to
+  Christoph Junghans
 
   11 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   gromacs-4.0.7-r4.ebuild:
