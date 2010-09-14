@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.33 2010/07/27 00:18:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.34 2010/09/14 12:32:22 vapier Exp $
+
+*libnfsidmap-0.23-r1 (14 Sep 2010)
+
+  14 Sep 2010; Mike Frysinger <vapier@gentoo.org>
+  files/libnfsidmap-0.21-headers.patch, +libnfsidmap-0.23-r1.ebuild:
+  Fix static lib handling and block newer nfs-utils due to man page collision
+  #337213 by Robin Johnson.
 
 *libnfsidmap-0.23 (27 Jul 2010)
 
