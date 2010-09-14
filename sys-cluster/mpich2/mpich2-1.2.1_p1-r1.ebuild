@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.2 2010/09/14 18:42:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.3 2010/09/14 21:52:35 jsbronder Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -111,7 +111,7 @@ src_configure() {
 	c="${c} --sysconfdir=/etc/${PN}"
 	econf ${c} ${romio_conf} \
 		--docdir=/usr/share/doc/${PF} \
-		--with-pm=mpd:hydra:gforker \
+		--with-pm=mpd:hydra \
 		--disable-mpe \
 		$(use_enable romio) \
 		$(use_enable cxx) \
