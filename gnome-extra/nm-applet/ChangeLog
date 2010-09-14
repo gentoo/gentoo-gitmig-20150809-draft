@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.48 2010/08/20 10:18:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.49 2010/09/14 22:37:56 dagger Exp $
+
+*nm-applet-0.8.1-r2 (14 Sep 2010)
+
+  14 Sep 2010; Robert Piasek <dagger@gentoo.org> -nm-applet-0.8.1-r1.ebuild,
+  +nm-applet-0.8.1-r2.ebuild,
+  +files/nm-applet-0.8.1-fix-bluetooth-dep.patch:
+  Backported patch which fixes bluetooth dependency automagic
 
   20 Aug 2010; Markos Chandras <hwoarang@gentoo.org> nm-applet-0.8.ebuild:
   Stable on amd64 wrt bug #321593

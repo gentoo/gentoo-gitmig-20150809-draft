@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.1-r1.ebuild,v 1.1 2010/08/18 09:18:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.1-r2.ebuild,v 1.1 2010/09/14 22:37:56 dagger Exp $
 
 EAPI="2"
 
@@ -47,6 +47,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 src_prepare() {
 	# Fix compilation with DGSEAL_ENABLE gentoo bug #330363
 	epatch "${FILESDIR}/${P}-fix-compilation-with-DGSEAL_ENABLE.patch"
+	epatch "${FILESDIR}/${P}-fix-bluetooth-dep.patch"
 }
 
 S="${WORKDIR}/${MY_PN}-${PV}"
