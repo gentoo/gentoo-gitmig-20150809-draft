@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.3.ebuild,v 1.1 2010/05/07 10:21:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.3.ebuild,v 1.2 2010/09/14 06:48:26 abcd Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://pyyaml.org/download/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples test"
 
 S="${WORKDIR}/${MY_P}"
