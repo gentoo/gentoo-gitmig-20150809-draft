@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.1.ebuild,v 1.1 2010/09/03 10:42:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.2.ebuild,v 1.1 2010/09/14 13:11:32 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -42,13 +42,17 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.4-cmakelists.patch
+	"${FILESDIR}"/${PN}-0.4.4.2-cmakelists.patch
+	"${FILESDIR}"/${PN}-0.4.4.2-openal.patch
 )
 
 src_configure() {
+	local audiobackends
+	use pulseaudio && audiobackends=pulse
+
 	local mycmakeargs=(
 		$(cmake-utils_use nsplugin COMPILE_PLUGIN)
-		$(cmake-utils_use pulseaudio ENABLE_SOUND)
+		-DAUDIO_BACKEND="${audiobackends}"
 		-DPLUGIN_DIRECTORY=/usr/$(get_libdir)/${PN}/plugins
 	)
 
