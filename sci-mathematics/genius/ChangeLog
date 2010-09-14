@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/genius
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.2 2010/09/14 09:26:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.3 2010/09/14 15:17:54 grozin Exp $
+
+*genius-1.0.11 (14 Sep 2010)
+
+  14 Sep 2010; Andrey Grozin <grozin@gentoo.org> +genius-1.0.11.ebuild,
+  +files/genius-make.patch:
+  Version bump, closing bug #337066, thanks to Joe Sapp
+  <nixphoeni@gentoo.org>. Fix spacing in the Makefile, closing bug # 333871,
+  thanks to Jory A. Pratt <anarchy@gentoo.org>.
 
   14 Sep 2010; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   Keyworded for amd64. Bug #337063. Thanks to Joe Sapp
