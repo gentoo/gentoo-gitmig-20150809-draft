@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.1 2010/05/04 21:56:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.2 2010/09/14 17:21:51 bicatali Exp $
 
 EAPI=2
 inherit elisp-common eutils flag-o-matic toolchain-funcs
@@ -61,6 +61,12 @@ src_prepare() {
 		-e 's:"xdvi":"xdg-open":' \
 		-e 's:xdvi -paper 29.7x21cm:xdg-open:' \
 		doc/gphelp.in || die "Failed to fix doc dir"
+
+	if ! use emacs; then
+		# disable emacs support
+		sed -i -e '/^list=/s/emacs//' Configure \
+			|| die "Failed to edit Configure"
+	fi
 }
 
 src_configure() {

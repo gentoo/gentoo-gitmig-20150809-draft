@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.77 2010/05/09 17:26:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.78 2010/09/14 17:21:51 bicatali Exp $
+
+  14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -pari-2.1.7-r1.ebuild, -pari-2.3.2.ebuild, -pari-2.3.2-r1.ebuild,
+  -files/pari-2.3.3-alglin.patch, -pari-2.3.4.ebuild, pari-2.3.5.ebuild:
+  USE=-emacs was hanging in src_install. Patch by ulm, fixing bug #335898
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> pari-2.3.4-r1.ebuild:
   sparc stable
