@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.80 2010/06/15 15:45:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.81 2010/09/14 17:26:32 bicatali Exp $
+
+  14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  maxima-5.21.1-r1.ebuild:
+  Avoid hanging during configure with USE=-emacs, bug #336739, thanks ulm
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> maxima-5.21.1-r1.ebuild:
   Imported prefix changes
