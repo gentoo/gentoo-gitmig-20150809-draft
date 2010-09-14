@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.9 2010/09/14 12:32:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.10 2010/09/14 14:01:28 chainsaw Exp $
+
+  14 Sep 2010; <chainsaw@gentoo.org> dahdi-2.4.0.ebuild:
+  Clear up inadvertent duplication of the vpmadt032 firmware download, as
+  reported by Stefan Knoblich on #gentoo-voip.
 
 *dahdi-2.4.0 (14 Sep 2010)
 
