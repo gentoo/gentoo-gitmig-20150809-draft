@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.2.ebuild,v 1.1 2010/09/14 13:11:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.2.ebuild,v 1.2 2010/09/14 19:25:06 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -43,7 +43,6 @@ S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.4.4.2-cmakelists.patch
-	"${FILESDIR}"/${PN}-0.4.4.2-openal.patch
 )
 
 src_configure() {

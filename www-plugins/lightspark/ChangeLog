@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.17 2010/09/14 13:11:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.18 2010/09/14 19:25:06 chithanh Exp $
+
+  14 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.4.2.ebuild:
+  Remove reference to non-existing patch, bug #337339.
 
 *lightspark-0.4.4.2 (14 Sep 2010)
 
