@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.184 2010/08/02 16:17:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.185 2010/09/14 05:24:17 jer Exp $
+
+*sysstat-9.1.5 (14 Sep 2010)
+
+  14 Sep 2010; Jeroen Roovers <jer@gentoo.org> sysstat-9.1.3.ebuild,
+  sysstat-9.1.4.ebuild, +sysstat-9.1.5.ebuild,
+  +files/sysstat-9.1.5-nls.patch:
+  Version bump. Remove testing cruft.
 
   02 Aug 2010; Jeroen Roovers <jer@gentoo.org> files/sysstat.init.d:
   Describe more accurately what the init.d script is doing and not doing.
