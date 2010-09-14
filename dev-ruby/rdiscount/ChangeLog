@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rdiscount
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.1 2010/09/14 18:58:10 graaff Exp $
+
+*rdiscount-1.6.5 (14 Sep 2010)
+
+  14 Sep 2010; Hans de Graaff <graaff@gentoo.org> +rdiscount-1.6.5.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of app-text/ronn.
+
