@@ -1,6 +1,10 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.19 2010/06/17 21:34:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.20 2010/09/14 09:24:19 hwoarang Exp $
+
+  14 Sep 2010; Markos Chandras <hwoarang@gentoo.org> pvpgn-1.8.5.ebuild:
+  Keyworded for amd64. Bug #336410. Thanks to Anton Podavalov
+  <a.podavalov@gmail.com for reporting
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> pvpgn-1.8.5.ebuild:
   Migrating away from deprecated postgres virtuals
