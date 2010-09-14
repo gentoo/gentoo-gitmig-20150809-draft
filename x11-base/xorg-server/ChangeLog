@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.530 2010/09/12 20:45:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.531 2010/09/14 18:16:46 scarabeus Exp $
+
+  14 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.9.0.ebuild:
+  Whitespace.
 
   12 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/xdm.initd-2, +files/xorg-sets.conf:

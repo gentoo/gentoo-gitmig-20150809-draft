@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.ebuild,v 1.1 2010/09/12 18:41:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.ebuild,v 1.2 2010/09/14 18:16:46 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -114,11 +114,11 @@ pkg_setup() {
 	use minimal || ensure_a_server_is_building
 
 	# localstatedir is used for the log location; we need to override the default
-	# 	from ebuild.sh
+	#	from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
-	# 	--enable-install-setuid needed because sparcs default off
+	#	--enable-install-setuid needed because sparcs default off
 	# NOTE: fop is used for doc generating ; and i have no idea if gentoo
-	#	 package it somewhere
+	#	package it somewhere
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable dmx)
