@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbpager
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.27 2008/12/20 23:23:51 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.28 2010/09/14 17:23:26 fauli Exp $
+
+  14 Sep 2010; Christian Faulhammer <fauli@gentoo.org> bbpager-0.4.7.ebuild:
+  stable x86, bug 335994
 
 *bbpager-0.4.7 (20 Dec 2008)
 
