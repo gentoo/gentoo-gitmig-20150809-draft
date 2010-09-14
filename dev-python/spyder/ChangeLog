@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.7 2010/07/22 17:05:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.8 2010/09/14 16:14:29 grozin Exp $
+
+  15 Sep 2010; Andrey Grozin <grozin@gentoo.org> -spyder-1.0.3.ebuild,
+  spyder-1.1.3.ebuild:
+  Now rdepends on PyQt4[webkit], bug #336850, thanks to Aaron Mavrinac
+  <mavrinac@gmail.com>
 
 *spyder-1.1.3 (22 Jul 2010)
 
