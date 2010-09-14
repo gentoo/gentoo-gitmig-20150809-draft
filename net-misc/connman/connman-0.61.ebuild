@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.57-r2.ebuild,v 1.3 2010/09/10 13:50:25 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.61.ebuild,v 1.1 2010/09/14 09:55:29 dagger Exp $
 
 EAPI="2"
 
@@ -30,9 +30,9 @@ RDEPEND=">=dev-libs/glib-2.16
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-iptables-test.patch"
-}
+#src_prepare() {
+#	epatch "${FILESDIR}/${P}-fix-iptables-test.patch"
+#}
 
 src_configure() {
 	econf \

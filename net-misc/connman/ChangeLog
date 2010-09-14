@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.21 2010/09/10 13:50:25 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.22 2010/09/14 09:55:29 dagger Exp $
+
+*connman-0.61 (14 Sep 2010)
+
+  14 Sep 2010; Robert Piasek <dagger@gentoo.org> -connman-0.57-r2.ebuild,
+  -files/connman-0.57-fix-iptables-test.patch, +connman-0.61.ebuild:
+  Version bump.
 
 *connman-0.60 (10 Sep 2010)
 
