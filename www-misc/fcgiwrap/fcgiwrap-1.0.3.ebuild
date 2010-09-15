@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.0.3.ebuild,v 1.2 2010/09/15 09:07:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-1.0.3.ebuild,v 1.3 2010/09/15 16:04:24 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -e '/man8dir = $(DESTDIR)/s/@prefix@//' \
 		-i Makefile.in || die "sed failed"
-	
+
 	eautoreconf
 }
 
