@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.13 2010/05/26 16:22:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.14 2010/09/15 01:24:39 jer Exp $
 
 inherit eutils
 
@@ -13,8 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
-
-DEPEND=""
 
 S=${WORKDIR}/${P}a
 
