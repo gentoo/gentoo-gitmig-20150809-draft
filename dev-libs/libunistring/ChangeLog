@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libunistring
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.1 2010/04/10 17:34:52 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.2 2010/09/15 21:30:25 chiiph Exp $
+
+*libunistring-0.9.3 (15 Sep 2010)
+
+  15 Sep 2010; Tomas Touceda <chiiph@gentoo.org> +libunistring-0.9.3.ebuild:
+  Version bump, port to EAPI 3, and minor changes
 
 *libunistring-0.9.1.1 (10 Apr 2010)
 
