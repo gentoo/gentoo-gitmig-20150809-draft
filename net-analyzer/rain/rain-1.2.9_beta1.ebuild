@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/rain-1.2.9_beta1.ebuild,v 1.1 2010/09/15 16:11:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/rain-1.2.9_beta1.ebuild,v 1.2 2010/09/15 16:29:47 jer Exp $
 
 EAPI="2"
 
@@ -20,8 +20,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=""
-
 S="${WORKDIR}/${MY_P/_/-}"
 
 src_prepare() {
@@ -32,6 +30,7 @@ src_prepare() {
 	sed -i Makefile.in \
 		-e 's|-g|@CFLAGS@|' \
 		-e 's|/usr/local/man|/usr/share/man|g' \
+		-e 's|^SBINDIR=|&/usr|g' \
 		-e 's|$(CC) -o|$(CC) $(CFLAGS) $(LDFLAGS) -o|g' \
 		|| die "sed Makefile.in"
 
