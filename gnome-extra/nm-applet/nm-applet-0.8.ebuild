@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.4 2010/08/20 10:18:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.5 2010/09/15 19:44:40 ssuominen Exp $
 
 EAPI="2"
 
@@ -33,7 +33,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=net-misc/networkmanager-${PV}
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.5.7
-	|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel x11-misc/trayer )
 	net-misc/mobile-broadband-provider-info
 	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )"
 
