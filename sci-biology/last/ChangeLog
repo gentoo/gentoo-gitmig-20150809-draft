@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/last
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.6 2010/07/15 15:49:58 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.7 2010/09/15 20:51:44 xarthisius Exp $
+
+*last-128-r1 (15 Sep 2010)
+
+  15 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -last-103.ebuild,
+  -last-128.ebuild, +last-128-r1.ebuild:
+  Respect CXX,CXXFLAGS,LDFLAGS wrt bug 337525. Thanks to Diego for the
+  report. Drop old.
 
 *last-128 (15 Jul 2010)
 
