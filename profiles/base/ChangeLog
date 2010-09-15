@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.173 2010/09/01 17:31:40 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.174 2010/09/15 20:37:57 patrick Exp $
+
+  15 Sep 2010; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Masking bzip2 useflag for dovecot-1
 
   01 Sep 2010; Alex Legler <a3li@gentoo.org> package.use.mask:
   Mask the fastthreading USE flag of dev-lang/ruby-enterprise. That feature
