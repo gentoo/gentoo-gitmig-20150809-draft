@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.22 2009/09/23 19:40:31 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.23 2010/09/15 15:28:03 jer Exp $
+
+*netkit-rwho-0.17-r4 (15 Sep 2010)
+
+  15 Sep 2010; Jeroen Roovers <jer@gentoo.org> +netkit-rwho-0.17-r4.ebuild:
+  Respect LDFLAGS (bug #337404), CC. Die when appropriate. Remove useless
+  (R)DEPEND.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   netkit-rwho-0.17-r3.ebuild:
