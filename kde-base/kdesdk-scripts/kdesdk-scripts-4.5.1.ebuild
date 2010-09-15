@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.5.1.ebuild,v 1.3 2010/09/14 12:54:00 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/kdesdk-scripts-4.5.1.ebuild,v 1.4 2010/09/15 08:12:07 reavertm Exp $
 
 EAPI="3"
 
 KDE_HANDBOOK="optional"
-KMNAME="${PN/-*/}"
-KMMODULE="${PN/*-/}"
-
+KMNAME="kdesdk"
+KMMODULE="scripts"
 inherit kde4-meta
 
 DESCRIPTION="KDE SDK Scripts"
