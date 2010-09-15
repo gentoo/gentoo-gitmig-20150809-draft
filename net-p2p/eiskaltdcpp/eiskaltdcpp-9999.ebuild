@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.12 2010/09/05 05:03:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.13 2010/09/15 08:47:18 pva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ ESVN_REPO_URI="http://${PN%pp}.googlecode.com/svn/branches/trunk/"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus examples -gnome -gtk -javascript kde lua +qt4 spell upnp"
+IUSE="dbus +emoticons examples -gnome -gtk -javascript kde lua +qt4 sounds spell upnp"
 
 RDEPEND="
 	app-arch/bzip2
@@ -24,6 +24,7 @@ RDEPEND="
 	virtual/libiconv
 	sys-devel/gettext
 	lua? ( >=dev-lang/lua-5.1 )
+	upnp? ( net-libs/miniupnpc )
 	gtk? (
 		x11-libs/pango
 		>=x11-libs/gtk+-2.10:2
@@ -71,11 +72,14 @@ src_configure() {
 		"$(cmake-utils_use spell USE_ASPELL)"
 		"$(cmake-utils_use qt4 USE_QT)"
 		"$(cmake-utils_use upnp USE_MINIUPNP)"
-		"$(cmake-utils_use upnp LOCAL_MINIUPNP)"
+		-DLOCAL_MINIUPNP="0"
 		"$(cmake-utils_use gtk USE_GTK)"
 		"$(cmake-utils_use gnome USE_LIBGNOME2)"
-		"-DUSE_WT=OFF"
+		-DUSE_WT="0"
+		"$(cmake-utils_use emoticons WITH_EMOTICONS)"
 		"$(cmake-utils_use examples WITH_EXAMPLES)"
+		"$(cmake-utils_use lua WITH_LUASCRIPTS)"
+		"$(cmake-utils_use sounds WITH_SOUNDS)"
 		-Dlinguas="${langs}"
 	)
 	cmake-utils_src_configure
