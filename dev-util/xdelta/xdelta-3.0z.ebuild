@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0z.ebuild,v 1.1 2010/09/15 01:17:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0z.ebuild,v 1.2 2010/09/15 14:54:39 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit distutils toolchain-funcs
@@ -17,15 +16,16 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
+DEPEND=""
 RDEPEND=""
-DEPEND="${RDEPEND}
-	sys-apps/sed"
 
-S=${WORKDIR}/${P/-}
+S="${WORKDIR}/${P/-}"
+
 DOCS="draft-korn-vcdiff.txt"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

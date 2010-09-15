@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.51 2010/09/15 01:17:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.52 2010/09/15 14:54:39 arfrever Exp $
+
+  15 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xdelta-3.0z.ebuild:
+  Update EAPI. Delete dependency already present in @system set. Call
+  python_pkg_setup().
 
 *xdelta-3.0z (15 Sep 2010)
 
