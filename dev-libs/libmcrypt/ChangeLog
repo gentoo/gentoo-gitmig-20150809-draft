@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.53 2010/08/10 17:52:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.54 2010/09/15 14:45:50 fauli Exp $
+
+  15 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  libmcrypt-2.5.8-r2.ebuild:
+  stable x86, bug 337154
 
 *libmcrypt-2.5.8-r2 (10 Aug 2010)
 
