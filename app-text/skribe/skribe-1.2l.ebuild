@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.2 2010/09/12 07:07:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/skribe-1.2l.ebuild,v 1.3 2010/09/15 21:47:28 chiiph Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ src_configure() {
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--libdir=/usr/$(get_libdir) \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} || die "configure failed"
 }
 
 src_compile() {
