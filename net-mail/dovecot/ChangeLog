@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.255 2010/09/11 08:18:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.256 2010/09/15 15:21:03 patrick Exp $
+
+*dovecot-1.2.14 (15 Sep 2010)
+
+  15 Sep 2010; Patrick Lauer <patrick@gentoo.org> +dovecot-1.2.14.ebuild:
+  Bump #336352, disable bzip2 support #337014
 
 *dovecot-2.0.2 (11 Sep 2010)
 
