@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.1.ebuild,v 1.4 2010/09/15 08:19:09 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.1.ebuild,v 1.5 2010/09/15 10:58:12 reavertm Exp $
 
 EAPI="3"
 
-KDE_HANDBOOK="optional"
 KMNAME="kdesdk"
 KMNOMODULE="true"
 inherit kde4-meta
@@ -19,6 +18,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 KMEXTRA="
+	doc/kmtrace/
+	doc/poxml/
 	kmtrace/
 	kpartloader/
 	kprofilemethod/
