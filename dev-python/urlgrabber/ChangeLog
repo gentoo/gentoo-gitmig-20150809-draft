@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.24 2010/08/08 16:06:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.25 2010/09/15 14:48:39 arfrever Exp $
+
+  15 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  urlgrabber-3.9.1.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
