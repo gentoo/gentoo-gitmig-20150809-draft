@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.5.ebuild,v 1.4 2010/08/09 07:08:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.5.ebuild,v 1.5 2010/09/15 09:04:04 reavertm Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="akonadi debug okular phonon plasma qscintilla qwt semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep smoke 'akonadi?,okular?,phonon?,qscintilla?,qwt?,semantic-desktop?')
+	$(add_kdebase_dep smoke 'akonadi?,okular?,phonon?,qscintilla?,qwt?,semantic-desktop?,webkit?')
 "
 
 RDEPEND="${DEPEND}
