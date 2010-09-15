@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0-r1.ebuild,v 1.3 2010/01/01 17:44:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0-r1.ebuild,v 1.4 2010/09/15 02:01:55 jer Exp $
 
 inherit eutils
 
 DESCRIPTION="network auditing tool that allows you to monitor, manipulate, and inject customized IPv4 traffic"
-HOMEPAGE="http://www.packetfactory.net/projects/packit/"
-SRC_URI="http://www.packetfactory.net/projects/packit/downloads/${P}.tgz"
+HOMEPAGE="http://packetfactory.openwall.net/projects/packit/"
+SRC_URI="${HOMEPAGE}downloads/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

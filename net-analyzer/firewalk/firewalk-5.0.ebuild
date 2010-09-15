@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.11 2008/06/29 10:11:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/firewalk-5.0.ebuild,v 1.12 2010/09/15 01:58:45 jer Exp $
 
 inherit eutils
 
 DESCRIPTION="A tool for determining a firewall's rule set"
-HOMEPAGE="http://www.packetfactory.net/firewalk/"
-SRC_URI="http://www.packetfactory.net/firewalk/dist/${P}.tgz"
+HOMEPAGE="http://packetfactory.openwall.net/projects/firewalk/"
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
