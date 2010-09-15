@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.13.ebuild,v 1.1 2010/08/08 03:07:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.18.ebuild,v 1.1 2010/09/15 01:24:47 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.6
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE=""
 
 SHARED_DEPEND="
-	>=app-text/podofo-0.7
+	>=app-text/podofo-0.8.2
 	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=dev-libs/chmlib-0.40
 	>=dev-python/beautifulsoup-3.0.5
@@ -29,11 +29,11 @@ SHARED_DEPEND="
 	>=dev-python/cssutils-0.9.7_alpha3
 	>=dev-python/dbus-python-0.82.2
 	>=dev-python/imaging-1.1.6
-	>=dev-python/lxml-2.1.5
+	>=dev-python/lxml-2.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/PyQt4-4.7[X,svg,webkit]
-	|| ( >=media-gfx/imagemagick-6.3.8 media-gfx/graphicsmagick[imagemagick] )
+	|| ( >=media-gfx/imagemagick-6.5.9 media-gfx/graphicsmagick[imagemagick] )
 	>=media-libs/libwmf-0.2.8
 	>=sys-apps/help2man-1.36.4
 	virtual/libusb:0
@@ -65,12 +65,6 @@ src_prepare() {
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
 		-i setup/install.py || die "sed'ing in the IMAGE path failed"
 
-	# Avoid segfault in uuid.uuid4() for bug #315345.
-	local installation_uuid=$(python -c 'import sys, uuid; sys.stdout.write(str(uuid.uuid4()))')
-	[[ -n $installation_uuid ]] || die "failed to generate installation_uuid"
-	sed -e "s:str(uuid.uuid4()):'$installation_uuid':" \
-		-i src/calibre/utils/config.py || die "sed'ing in the IMAGE path failed"
-
 	distutils_src_prepare
 }
 
@@ -92,11 +86,16 @@ src_install() {
 	# violation with kbuildsycoca as in bug #287067, comment #13.
 	export -n DISPLAY
 
-	# Bug #295672 - Aavoid sandbox violation in ~/.config by forcing
+	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
+	export HOME="$T/fake_homedir"
 	export XDG_CONFIG_HOME="$HOME/.config"
+	export XDG_DATA_HOME="$HOME/.local/share"
 	export CALIBRE_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/calibre"
 	mkdir -p "$XDG_CONFIG_HOME" "$CALIBRE_CONFIG_DIRECTORY"
+
+	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
+	export OVERRIDE_CFLAGS="$CFLAGS $LDFLAGS"
 
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install --bindir="${D}usr/bin" --sharedir="${D}usr/share"

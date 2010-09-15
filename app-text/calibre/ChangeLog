@@ -1,6 +1,15 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.101 2010/09/10 06:39:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.102 2010/09/15 01:24:47 zmedico Exp $
+
+*calibre-0.7.18 (15 Sep 2010)
+
+  15 Sep 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.7.18.ebuild:
+  0.7.18 version bump.
+
+  15 Sep 2010; Zac Medico <zmedico@gentoo.org> -calibre-0.7.12.ebuild,
+  -calibre-0.7.13.ebuild:
+  Remove old versions.
 
   10 Sep 2010; Zac Medico <zmedico@gentoo.org> calibre-0.7.17.ebuild:
   Bug #336469 - Bump podofo dependency to 0.8.2.
