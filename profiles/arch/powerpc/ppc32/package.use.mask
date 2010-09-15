@@ -1,12 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.15 2010/09/14 08:15:38 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.16 2010/09/15 00:36:35 reavertm Exp $
 
 # This file requires >=portage-2.1.1
-
-# Maciej Mrozowski <reavertm@gentoo.org> (14 Sep 2010)
-# Needs dev-libs/qjson keyworded, bug 337216
-dev-libs/libdbusmenu-qt test
 
 # Joseph Jezak <josejx@gentoo.org> (11 Aug 2010)
 # Needs libimobiledevice keyworded, bug 325839
