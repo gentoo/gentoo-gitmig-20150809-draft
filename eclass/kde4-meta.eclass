@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.41 2010/09/14 12:39:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.42 2010/09/15 08:22:13 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -292,7 +292,7 @@ kde4-meta_create_extractlists() {
 
 	# Add default handbook locations
 	if [[ -n ${KMMODULE} ]] && [[ ${KDE_HANDBOOK} = always ]] || { [[ ${KDE_HANDBOOK} = optional ]] && use handbook; }; then
-		KMEXTRA+=" doc/${KMMODULE##*/}"
+		KMEXTRA_NONFATAL+=" doc/${KMMODULE##*/}"
 	fi
 
 	# Add some CMake-files to KMEXTRACTONLY.
