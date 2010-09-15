@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.13 2010/08/06 12:01:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.14 2010/09/15 00:38:15 nixphoeni Exp $
+
+  15 Sep 2010; Joe Sapp <nixphoeni@gentoo.org> gourmet-0.15.6.ebuild:
+  Changed dev-python/sqlalchemy dep to be more general than 0.5.8. Thanks to
+  Arfrever Arahesis (arfrever@gentoo.org) for reporting it in bug #337102.
 
 *gourmet-0.15.6 (06 Aug 2010)
 
