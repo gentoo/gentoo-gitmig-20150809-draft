@@ -1,20 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.9 2010/01/25 20:46:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.10 2010/09/15 18:48:44 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="Abstract Shooting Game"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.asahi-net.or.jp/~cs8k-cyu/windows/noiz2sa_e.html http://sourceforge.net/projects/noiz2sa/"
+SRC_URI="mirror://sourceforge/noiz2sa/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/sdl-mixer
+DEPEND="media-libs/sdl-mixer[vorbis]
 	>=dev-libs/libbulletml-0.0.3
 	virtual/opengl"
 
@@ -24,6 +24,9 @@ src_prepare(){
 	cd "${S}/src"
 	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed \
+		-e '/^CC/d' \
+		-e '/^CXX/d' \
+		-e '/^LDFLAGS/s/=/+=/' \
 		-e "s/-lglut/-lGL/" \
 		makefile.lin > Makefile \
 		|| die "sed failed"
