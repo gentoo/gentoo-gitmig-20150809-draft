@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.13 2008/11/25 23:45:54 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.14 2010/09/15 10:11:04 s4t4n Exp $
 
 inherit multilib toolchain-funcs
 
@@ -25,6 +25,9 @@ src_unpack() {
 	cd "${S}"
 	sed -e "s:gcc:$(tc-getCC):g" \
 		-e "s:-O2:${CFLAGS}:g" -i Makefile
+
+	#Honour Gentoo LDFLAGS, see bug #337434
+	sed -e "s:-o \${TARGET}:\$(LDFLAGS) -o \${TARGET}:" -i Makefile
 }
 
 src_compile() {

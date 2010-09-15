@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.19 2008/11/25 23:45:54 tcunha Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.20 2010/09/15 10:11:04 s4t4n Exp $
+
+  15 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmcalc-0.4.ebuild:
+  Honour Gentoo LDFLAGS, see bug #337434.
 
   25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmcalc-0.4.ebuild:
   stable sparc, bug 215651
