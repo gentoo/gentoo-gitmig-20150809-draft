@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/SpeedyCGI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.9 2010/03/29 14:59:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.10 2010/09/15 14:21:11 pva Exp $
+
+*SpeedyCGI-2.22-r2 (15 Sep 2010)
+
+  15 Sep 2010; Peter Volkov <pva@gentoo.org> -SpeedyCGI-2.22.ebuild,
+  +SpeedyCGI-2.22-r2.ebuild, +files/SpeedyCGI-2.22-big-socket-buffers.patch,
+  +files/SpeedyCGI-2.22-ldflags.patch:
+  Another patch from debian. Respect LDFLAGS, bug #335153, thank Diego E.
+  'Flameeyes' Pettenò for report. Drop old.
 
 *SpeedyCGI-2.22-r1 (29 Mar 2010)
 
