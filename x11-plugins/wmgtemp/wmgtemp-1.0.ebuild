@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/wmgtemp-1.0.ebuild,v 1.2 2010/03/29 20:01:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/wmgtemp-1.0.ebuild,v 1.3 2010/09/15 10:22:18 s4t4n Exp $
 
 inherit eutils
 
@@ -24,8 +24,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:-Wall -g:\$(CFLAGS):" src/Makefile \
-		|| die "sed failed."
+	sed -i -e "s:-Wall -g:\$(CFLAGS):" src/Makefile || die "sed failed."
+
+	#Honour Gentoo LDFLAGS, rationalizing Makefile - see bug #337411.
+	sed -i -e "s:LDFLAGS =:LIBS =:" src/Makefile || die "sed failed."
+	sed -i -e "s:\$(LDFLAGS) -o \$(BINARY):\$(LDFLAGS) -o \$(BINARY) \$(LIBS):" src/Makefile || die "sed failed."
 }
 
 src_compile() {

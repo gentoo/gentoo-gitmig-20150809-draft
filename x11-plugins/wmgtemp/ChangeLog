@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmgtemp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.16 2010/06/07 10:23:27 s4t4n Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.17 2010/09/15 10:22:18 s4t4n Exp $
+
+  15 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmgtemp-1.0.ebuild:
+  Honour Gentoo LDFLAGS, rationalizing Makefile - see bug #337411.
 
   07 Jun 2010; Michele Noberasco <s4t4n@gentoo.org> wmgtemp-0.7.ebuild:
   Removed lm_sensors-2 dependant version, *leaving no stable version*.
