@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.154 2010/09/15 12:48:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.155 2010/09/15 12:51:53 pacho Exp $
+
+*glibmm-2.24.2-r1 (15 Sep 2010)
+
+  15 Sep 2010; Pacho Ramos <pacho@gentoo.org> +glibmm-2.24.2-r1.ebuild:
+  Revision bump directly to stable to apply previous changes as talked with
+  leio on IRC.
 
   15 Sep 2010; Pacho Ramos <pacho@gentoo.org> glibmm-2.24.2.ebuild:
   Revert documentation change as it causes breakage, bug #336928. Sorry a
