@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.6 2010/06/27 13:16:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.7 2010/09/15 11:47:19 pacho Exp $
+
+*emul-linux-x86-opengl-20100915-r99 (15 Sep 2010)
+*emul-linux-x86-opengl-20100915 (15 Sep 2010)
+
+  15 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-opengl-20100409.ebuild,
+  -emul-linux-x86-opengl-20100611-r99.ebuild,
+  +emul-linux-x86-opengl-20100915.ebuild,
+  +emul-linux-x86-opengl-20100915-r99.ebuild:
+  Version bump, remove old.
 
   27 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   emul-linux-x86-opengl-20100611.ebuild:
