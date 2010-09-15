@@ -1,6 +1,17 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.174 2010/09/14 14:08:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.175 2010/09/15 01:34:46 phajdan.jr Exp $
+
+*chromium-6.0.472.59-r1 (15 Sep 2010)
+*chromium-6.0.472.59 (15 Sep 2010)
+
+  15 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-6.0.472.55.ebuild, +chromium-6.0.472.59.ebuild,
+  +chromium-6.0.472.59-r1.ebuild:
+  Version bump for stable channel release. Provide a target for
+  stabilization (-r0) with lower cups dependency. There are some problems
+  both with older and newer cups, but we need to stabilize this version of
+  chromium quickly due to security bug #335750.
 
 *chromium-7.0.517.5 (14 Sep 2010)
 
