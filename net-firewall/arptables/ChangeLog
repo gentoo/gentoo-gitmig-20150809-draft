@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.15 2010/03/16 07:57:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.16 2010/09/15 13:51:39 pva Exp $
+
+*arptables-0.0.3.4-r1 (15 Sep 2010)
+
+  15 Sep 2010; Peter Volkov <pva@gentoo.org> +arptables-0.0.3.4-r1.ebuild,
+  +files/arptables-0.0.3.4-ldflags.patch:
+  Respect LDFLAGS, bug #335375, thank Diego E. 'Flameeyes' Pettenò for
+  report.
 
 *arptables-0.0.3.4 (16 Mar 2010)
 
