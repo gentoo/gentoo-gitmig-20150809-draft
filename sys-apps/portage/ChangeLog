@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.730 2010/09/15 00:36:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.731 2010/09/15 16:20:51 zmedico Exp $
+
+*portage-2.2_rc83 (15 Sep 2010)
+
+  15 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc83.ebuild:
+  2.2_rc83 version bump. This includes all of the fixes in portage-2.1.9.7.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.7 (15 Sep 2010)
+
+  15 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.7.ebuild:
+  2.1.9.7 version bump. This fixes bug #337180 (noisy "unmatch removal
+  atom" warnings) and bug #337465 (ebuild-ipc does not work on FreeBSD
+  yet). Bug #335925 tracks all bugs fixed since 2.1.8.x.
 
 *portage-2.2_rc82 (15 Sep 2010)
 
