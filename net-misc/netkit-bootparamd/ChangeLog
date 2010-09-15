@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netkit-bootparamd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.5 2007/12/14 17:25:09 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.6 2010/09/15 03:24:15 xmw Exp $
+
+*netkit-bootparamd-0.17-r3 (15 Sep 2010)
+
+  15 Sep 2010; Michael Weber <xmw@gentoo.org>
+  +netkit-bootparamd-0.17-r3.ebuild, +files/bootparamd.confd,
+  +files/bootparamd.initd, metadata.xml:
+  Revision bump to respect CC/LDFLAGS (bug #335457) and add init.d/conf.d
+  scripts by Alex Buell <alex.buell@munted.org.uk> on bug #323487. Added
+  ~amd64 keyword.
 
   14 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   netkit-bootparamd-0.17-r2.ebuild:
