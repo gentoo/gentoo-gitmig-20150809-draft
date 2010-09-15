@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.198 2010/09/11 18:50:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.199 2010/09/15 18:45:30 eva Exp $
+
+  15 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> evince-2.30.3.ebuild:
+  Make hicolor-icon-theme an alternative to gnome-icon-theme, bug #326855.
+  Drop libtool-1 compat.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> evince-2.30.3.ebuild:
   Marked ppc for bug #324077.
