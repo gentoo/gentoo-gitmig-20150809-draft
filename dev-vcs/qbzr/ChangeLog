@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.11 2010/08/10 12:33:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.12 2010/09/15 09:44:57 pva Exp $
+
+*qbzr-0.19.1 (15 Sep 2010)
+
+  15 Sep 2010; Peter Volkov <pva@gentoo.org> +qbzr-0.19.1.ebuild:
+  Version bump.
 
 *qbzr-0.19 (10 Aug 2010)
 
