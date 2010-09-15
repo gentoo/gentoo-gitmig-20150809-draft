@@ -1,10 +1,11 @@
 # ChangeLog for app-text/catdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.27 2010/09/15 10:26:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.28 2010/09/15 11:22:35 grobian Exp $
 
   15 Sep 2010; Fabian Groffen <grobian@gentoo.org> catdoc-0.94.2-r2.ebuild:
   Make ebuild completely Prefix aware (instead of half), fix wordview logic
-  (inverted) and configure argument, marked ~x86-solaris
+  (inverted) and configure argument, fix description, marked
+  ~x86-solaris, ~x64-solaris, ~ppc-macos, ~x86-macos, ~amd64-linux.
 
 *catdoc-0.94.2-r2 (03 May 2010)
 

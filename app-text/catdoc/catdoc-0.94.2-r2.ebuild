@@ -1,20 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.2-r2.ebuild,v 1.2 2010/09/15 10:26:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/catdoc-0.94.2-r2.ebuild,v 1.3 2010/09/15 11:22:35 grobian Exp $
 
 EAPI=3
 WANT_AUTOMAKE=none
 
 inherit autotools eutils
 
-DESCRIPTION="A convertor for Microsoft Word, Excel and RTF Files to text"
+DESCRIPTION="Converter for Microsoft Word, Excel, PowerPoint and RTF files to text"
 HOMEPAGE="http://www.wagner.pp.ru/~vitus/software/catdoc/"
 SRC_URI="http://ftp.wagner.pp.ru/pub/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 IUSE="tk"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 DEPEND="tk? ( >=dev-lang/tk-8.1 )"
 
