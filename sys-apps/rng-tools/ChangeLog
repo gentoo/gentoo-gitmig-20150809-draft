@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.28 2010/09/15 08:30:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.29 2010/09/15 08:36:14 robbat2 Exp $
+
+  15 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> files/2-r2/rngd,
+  files/2-r2/rngd-conf:
+  Bug #292239: Make remix of /dev/urandom optional.
 
 *rng-tools-2-r3 (15 Sep 2010)
 
