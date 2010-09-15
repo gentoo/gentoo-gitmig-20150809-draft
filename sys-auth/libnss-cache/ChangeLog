@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/libnss-cache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.4 2010/07/17 11:06:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.5 2010/09/15 00:53:42 xmw Exp $
+
+*libnss-cache-0.1-r1 (15 Sep 2010)
+
+  15 Sep 2010; Michael Weber <xmw@gentoo.org> +libnss-cache-0.1-r1.ebuild,
+  +files/libnss-cache-0.1-r1-make-install.patch, metadata.xml:
+  Revbump to fix install locations (bug #277995, thanks Nathan March) and
+  LDFLAGS (bug #336554).
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Fix metadata.xml. maintainer-needed is not a herd
