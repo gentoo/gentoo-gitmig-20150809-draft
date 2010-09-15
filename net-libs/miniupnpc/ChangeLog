@@ -1,0 +1,13 @@
+# ChangeLog for net-libs/miniupnpc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.1 2010/09/15 08:40:36 pva Exp $
+
+*miniupnpc-1.4.20100609 (15 Sep 2010)
+
+  15 Sep 2010; Peter Volkov <pva@gentoo.org>
+  +files/0003-Move-non-used-and-non-installed-test-executables-to-.patch,
+  +miniupnpc-1.4.20100609.ebuild,
+  +files/0004-Move-minixml-validation-test-to-check-target.patch,
+  +files/miniupnpc-Respect-LDFLAGS.patch, +metadata.xml:
+  Initial import, bug #241120, thank Michał Górny and Nikoli for this job.
+
