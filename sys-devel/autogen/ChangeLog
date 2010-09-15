@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.63 2010/08/06 18:33:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.64 2010/09/15 09:30:49 pva Exp $
+
+*autogen-5.11.1 (15 Sep 2010)
+
+  15 Sep 2010; Peter Volkov <pva@gentoo.org> +autogen-5.11.1.ebuild:
+  Versin bump, bug #335703. Fixes inability to generate documentation (bug
+  #316583) and inability to build without bash (bug #316903). Thank Bruce
+  Korb, Rebecca Menessec and all people in mentioned bugs.
 
   06 Aug 2010; Jeremy Olexa <darkside@gentoo.org> autogen-5.10.2.ebuild:
   Migrate changes from Gentoo Prefix overlay. Keywords, EAPI3, use ED.
