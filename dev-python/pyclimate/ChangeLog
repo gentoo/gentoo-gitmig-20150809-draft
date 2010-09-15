@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyclimate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.18 2010/09/13 21:01:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.19 2010/09/15 14:44:14 fauli Exp $
+
+  15 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  pyclimate-1.2.2-r1.ebuild:
+  stable x86, bug 337153
 
   13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyclimate-1.2.2-r1.ebuild:
