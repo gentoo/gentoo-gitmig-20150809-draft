@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.13 2009/03/18 00:59:32 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.14 2010/09/15 18:10:27 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,9 +18,7 @@ DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/${PN}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-}
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_install() {
 	dogamesbin alienwave || die "dogamesbin failed"

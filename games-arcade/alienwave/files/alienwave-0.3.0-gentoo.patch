@@ -16,7 +16,7 @@
  alienwave: $(OBJS)
 -	$(CC) $(LIB) $(OBJS) -o alienwave
 -	strip alienwave
-+	$(CC) $(OBJS) $(LIB) -o alienwave
++	$(CC) $(OBJS) $(LDFLAGS) $(LIB) -o alienwave
  
  main.o: main.c
  
