@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.153 2010/09/11 18:43:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.154 2010/09/15 22:28:37 eva Exp $
+
+*gnome-menus-2.30.3 (15 Sep 2010)
+
+  15 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-menus-2.30.3.ebuild:
+  Version bump. XDG patch and translation updates. Call gnome2_src_compile
+  to respect user settings.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   gnome-menus-2.30.2-r1.ebuild:
