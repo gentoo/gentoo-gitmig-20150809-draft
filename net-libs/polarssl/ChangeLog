@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.7 2010/08/30 16:53:46 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.8 2010/09/15 23:12:17 josejx Exp $
+
+  15 Sep 2010; Joseph Jezak <josejx@gentoo.org> polarssl-0.14.0.ebuild:
+  Marked ~ppc64.
 
   30 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   polarssl-0.14.0.ebuild:
