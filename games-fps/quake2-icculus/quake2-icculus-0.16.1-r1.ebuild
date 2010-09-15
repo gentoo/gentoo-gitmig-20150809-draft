@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.21 2010/02/22 12:57:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.22 2010/09/15 10:56:43 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -53,10 +53,21 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd "${S}"
-
+src_prepare() {
+	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
+	ln -s $(type -P echo) "${T}"/more
+	for g in rogue xatrix ; do
+		use ${g} || continue
+		mkdir -p src/${g}
+		pushd src/${g}
+		local shar=../../../${g}src320.shar
+		sed -i \
+			-e 's:^read ans:ans=yes :' ${shar} \
+			|| die "sed ${shar} failed"
+		echo ">>> Unpacking ${shar} to ${PWD}"
+		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
+		popd
+	done
 	sed -i \
 		-e 's:jpeg_mem_src:_&:' \
 		src/ref_candygl/gl_image.c || die
@@ -66,28 +77,14 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-amd64.patch \
 		"${FILESDIR}"/${P}-gentoo-paths.patch \
+		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-no-asm-io.patch #193107
 
-	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
-	ln -s $(type -P echo) "${T}"/more
-	for g in rogue xatrix ; do
-		use ${g} || continue
-		mkdir -p "${S}"/src/${g}
-		cd "${S}"/src/${g}
-		local shar=${g}src320.shar
-		unpack ${shar}.Z
-		sed -i \
-			-e 's:^read ans:ans=yes :' ${shar} \
-			|| die "sed ${shar} failed"
-		echo ">>> Unpacking ${shar} to ${PWD}"
-		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
-		rm ${shar}
-	done
 	if use xatrix ; then
 		epatch "${FILESDIR}/${P}"-gcc41.patch
 	fi
 	if use rogue ; then
-		cd "${S}"/src
+		cd src
 		epatch \
 			"${FILESDIR}"/0.16-rogue-nan.patch \
 			"${FILESDIR}"/0.16-rogue-armor.patch
