@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.22 2010/08/04 07:53:20 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.23 2010/09/15 14:40:58 fauli Exp $
+
+  15 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  bpython-0.9.7.1.ebuild:
+  stable x86, bug 337149
 
 *bpython-0.9.7.1 (04 Aug 2010)
 
