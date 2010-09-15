@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.174 2010/09/06 00:31:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.175 2010/09/15 00:40:46 reavertm Exp $
+
+  15 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> kget-4.5.1.ebuild,
+  metadata.xml:
+  Deps cleanup. add missing splid dep - bug 337033 among others.
 
 *kget-4.5.1 (06 Sep 2010)
 
