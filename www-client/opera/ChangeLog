@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.544 2010/09/13 23:00:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.545 2010/09/15 16:54:42 jer Exp $
+
+*opera-10.70_pre9047 (15 Sep 2010)
+
+  15 Sep 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.70_pre9047.ebuild:
+  http://my.opera.com/desktopteam/blog/2010/09/15/hello-bookmarks-bar
 
 *opera-10.70_pre9046 (13 Sep 2010)
 
