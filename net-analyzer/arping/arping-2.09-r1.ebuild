@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.09.ebuild,v 1.1 2010/09/14 05:37:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.09-r1.ebuild,v 1.1 2010/09/15 01:33:35 jer Exp $
 
 EAPI="2"
 
@@ -38,8 +38,8 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	#newsbin ${PN}-2/${PN} ${PN}2 || die
-	#newman ${PN}.8 ${PN}2.8
+	# since we install as arping2, we cannot use emake install
+	newsbin src/${PN} ${PN}2 || die
+	newman doc/${PN}.8 ${PN}2.8
 	dodoc README extra/arping-scan-net.sh
 }

@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.44 2010/09/14 05:39:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.45 2010/09/15 01:33:35 jer Exp $
+
+*arping-2.09-r1 (15 Sep 2010)
+
+  15 Sep 2010; Jeroen Roovers <jer@gentoo.org> -arping-2.09.ebuild,
+  +arping-2.09-r1.ebuild:
+  Install as arping2{,.8} thanks to Marcin Mirosław (bug #337258) and
+  comment clearly why.
 
 *arping-2.09 (14 Sep 2010)
 
