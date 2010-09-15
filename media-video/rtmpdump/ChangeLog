@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.10 2010/08/27 17:24:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.11 2010/09/15 23:13:04 josejx Exp $
+
+  15 Sep 2010; Joseph Jezak <josejx@gentoo.org> rtmpdump-2.3.ebuild:
+  Marked ~ppc/~ppc64.
 
   27 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -rtmpdump-2.2d.ebuild,
   -rtmpdump-2.2e-r3.ebuild, rtmpdump-2.3.ebuild:
