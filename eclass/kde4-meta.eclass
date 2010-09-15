@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.42 2010/09/15 08:22:13 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.43 2010/09/15 11:06:33 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -100,7 +100,7 @@ esac
 # Example usage: If you're installing subdirectories of a package, like plugins,
 # you mark the top subdirectory (containing the package) as $KMEXTRACTONLY, and
 # set KMNOMODULE="true".
-if [[ -z ${KMMODULE} && ${KMNOMODULE} != true  ]]; then
+if [[ -z ${KMMODULE} ]] && [[ ${KMNOMODULE} != true ]]; then
 	KMMODULE=${PN}
 fi
 
@@ -283,7 +283,7 @@ kde4-meta_create_extractlists() {
 
 	# Add default handbook locations
 	# FIXME - legacy code - remove when 4.4.5 is gone or preferrably port 4.4.5.
-	if ! slot_is_at_least 4.5 ${SLOT} && has handbook ${IUSE//+} && use handbook && [[ -n ${KMMODULE} ]]; then
+	if ! slot_is_at_least 4.5 ${SLOT} && has handbook ${IUSE//+} && use handbook && [[ -z ${KMNOMODULE} ]]; then
 		# We use the basename of $KMMODULE because $KMMODULE can contain
 		# the path to the module subdirectory.
 		KMEXTRA_NONFATAL+="
@@ -291,7 +291,7 @@ kde4-meta_create_extractlists() {
 	fi
 
 	# Add default handbook locations
-	if [[ -n ${KMMODULE} ]] && [[ ${KDE_HANDBOOK} = always ]] || { [[ ${KDE_HANDBOOK} = optional ]] && use handbook; }; then
+	if [[ -z ${KMNOMODULE} ]] && { [[ ${KDE_HANDBOOK} = always ]] || { [[ ${KDE_HANDBOOK} = optional ]] && use handbook; }; }; then
 		KMEXTRA_NONFATAL+=" doc/${KMMODULE##*/}"
 	fi
 
