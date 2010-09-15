@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jaxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.9 2010/04/10 13:04:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.10 2010/09/15 21:46:34 arfrever Exp $
+
+*jaxml-3.02 (15 Sep 2010)
+
+  15 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +jaxml-3.02.ebuild:
+  Version bump. Fixed building with Python 2.7 (bug #314513).
 
   10 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   jaxml-3.01.ebuild:
