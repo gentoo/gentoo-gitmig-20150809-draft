@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.4.5.ebuild,v 1.5 2010/08/09 17:35:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.4.5.ebuild,v 1.6 2010/09/15 08:19:09 reavertm Exp $
 
 EAPI="3"
 
-KMNAME="${PN/-*/}"
+KMNAME="kdesdk"
 KMNOMODULE="true"
-
 inherit kde4-meta
 
 DESCRIPTION="KDE miscellaneous SDK tools"
