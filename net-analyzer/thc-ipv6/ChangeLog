@@ -1,0 +1,12 @@
+# ChangeLog for net-analyzer/thc-ipv6
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/ChangeLog,v 1.1 2010/09/15 01:49:58 xmw Exp $
+
+*thc-ipv6-1.2 (15 Sep 2010)
+
+  15 Sep 2010; Michael Weber <xmw@gentoo.org> +thc-ipv6-1.2.ebuild,
+  +files/thc-ipv6-1.2-Makefile, +files/thc-ipv6-1.2-header.patch,
+  +metadata.xml:
+  Initial import, thanks to Christian Neukirchen <chneukirchen@gmail.com>
+  for the Makefile.
+

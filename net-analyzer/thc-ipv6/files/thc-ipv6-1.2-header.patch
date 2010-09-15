@@ -1,0 +1,21 @@
+--- thc-ipv6.h  2010-06-24 13:44:48.000000000 +0200
++++ thc-ipv6.h     2010-09-15 03:33:04.366387803 +0200
+@@ -284,6 +284,7 @@
+ 
+ extern thc_key_t *thc_generate_key(int key_len);
+ extern thc_cga_hdr *thc_generate_cga(unsigned char *prefix, thc_key_t *key, unsigned char **cga);
++int thc_add_send(unsigned char *pkt, int *pkt_len, int type, int code, unsigned int flags, unsigned char *data, int data_len, thc_cga_hdr *cga_hdr, thc_key_t *key, unsigned char *tag, int checksum);
+ 
+ #endif
+
+--- thc-ipv6-lib.c      2010-06-24 13:44:48.000000000 +0200
++++ thc-ipv6-lib.c 2010-09-15 03:35:35.064387802 +0200
+@@ -41,6 +41,8 @@
+ /* libssl */
+ #include <openssl/evp.h>
+ #include <openssl/sha.h>
++#include <openssl/rsa.h>
++#include <openssl/x509.h>
+ 
+ 
+ 
