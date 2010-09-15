@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.6 2008/11/24 16:06:18 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.7 2010/09/15 10:29:15 s4t4n Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 
 	# fix LDFLAGS ordering, see bug #248620
 	sed -i 's/$(LIBS) -o $@ $^/-o $@ $^ $(LIBS)/' "${S}/src/Makefile.in"
+
+	# Honour Gentoo LDFLAGS, see bug #337407
+	sed -i 's/-o $@ $^ $(LIBS)/$(LDFLAGS) -o $@ $^ $(LIBS)/' "${S}/src/Makefile.in"
 }
 
 src_compile() {
