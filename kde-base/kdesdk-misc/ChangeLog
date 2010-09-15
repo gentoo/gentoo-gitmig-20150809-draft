@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.135 2010/09/15 10:58:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.136 2010/09/15 11:11:14 reavertm Exp $
+
+*kdesdk-misc-4.5.1-r1 (15 Sep 2010)
+
+  15 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kdesdk-misc-4.5.1.ebuild, +kdesdk-misc-4.5.1-r1.ebuild:
+  Bump - see previous log
 
   15 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kdesdk-misc-4.4.5.ebuild, kdesdk-misc-4.4.5-r1.ebuild,

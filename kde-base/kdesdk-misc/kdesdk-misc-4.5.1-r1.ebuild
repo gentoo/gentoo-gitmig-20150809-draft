@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.1.ebuild,v 1.5 2010/09/15 10:58:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.1-r1.ebuild,v 1.1 2010/09/15 11:11:14 reavertm Exp $
 
 EAPI="3"
 
