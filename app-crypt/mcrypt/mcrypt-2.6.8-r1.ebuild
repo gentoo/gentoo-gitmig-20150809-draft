@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.8-r1.ebuild,v 1.1 2010/08/10 17:58:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.8-r1.ebuild,v 1.2 2010/09/15 15:08:51 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mcrypt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-macos"
 IUSE="nls"
 
 DEPEND=">=dev-libs/libmcrypt-2.5.8

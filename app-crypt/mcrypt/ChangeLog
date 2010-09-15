@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.28 2010/08/10 17:58:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.29 2010/09/15 15:08:51 fauli Exp $
+
+  15 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  mcrypt-2.6.8-r1.ebuild:
+  stable x86, bug 337158
 
 *mcrypt-2.6.8-r1 (10 Aug 2010)
 
