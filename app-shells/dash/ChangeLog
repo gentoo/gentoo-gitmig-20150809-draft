@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*dash-0.5.5.1.7 (15 Sep 2010)
+
+  15 Sep 2010; Mike Frysinger <vapier@gentoo.org> +dash-0.5.5.1.7.ebuild,
+  +files/dash-0.5.5.1-octal.patch, -dash-0.5.6.1-r1.ebuild,
+  -files/dash-0.5.6.1-read-ifs.patch:
+  Update to latest 0.5.5.x Debian version. Drop 0.5.6.x for now since Debian no
+  longer has it either. Fix octal parsing #337329 by Michał Górny.
+
   11 Sep 2010; Mike Frysinger <vapier@gentoo.org> dash-0.5.6.1-r1.ebuild:
   Drop forced libedit static linking #334693.
 

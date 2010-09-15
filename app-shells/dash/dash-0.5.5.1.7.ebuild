@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.6.1-r1.ebuild,v 1.4 2010/09/11 16:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.5.1.7.ebuild,v 1.1 2010/09/15 21:56:19 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit autotools eutils flag-o-matic toolchain-funcs
 
 DEB_PV=${PV%.*}
 DEB_PATCH=${PV##*.}
-DEB_PF="${PN}_${DEB_PV}.${DEB_PATCH}-1~exp0"
+DEB_PF="${PN}_${DEB_PV}-${DEB_PATCH}"
 MY_P="${PN}-${DEB_PV}"
 
 DESCRIPTION="DASH is a direct descendant of the NetBSD version of ash (the Almquist SHell) and is POSIX compliant"
@@ -30,10 +30,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${WORKDIR}"/${DEB_PF}.diff
-	rm  */debian/diff/0006--INPUT-exit-127-if-command_file-is-given-but-doesn-t.diff \
-		|| die #328929
 	epatch */debian/diff/*
-	epatch "${FILESDIR}"/${P}-read-ifs.patch #331535
+	epatch "${FILESDIR}"/${PN}-0.5.5.1-octal.patch #337329
 
 	# Fix the invalid sort
 	sed -i -e 's/LC_COLLATE=C/LC_ALL=C/g' src/mkbuiltins
