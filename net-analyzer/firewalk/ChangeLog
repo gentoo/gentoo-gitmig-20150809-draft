@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/firewalk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.13 2010/09/15 01:58:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.14 2010/09/15 02:23:40 jer Exp $
+
+*firewalk-5.0-r1 (15 Sep 2010)
+
+  15 Sep 2010; Jeroen Roovers <jer@gentoo.org> +firewalk-5.0-r1.ebuild,
+  files/firewalk-5.0-gcc3.4.diff:
+  Fix quoting issues (through EAPI=2 bump). Use emake instead of make. Clean
+  up patch paths.
 
   15 Sep 2010; Jeroen Roovers <jer@gentoo.org> firewalk-5.0.ebuild:
   Fix HOMEPAGE and SRC_URI.
