@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.19 2010/03/10 20:43:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.20 2010/09/16 17:51:58 scarabeus Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ IUSE="joystick"
 DEPEND="x11-libs/libXi
 	x11-libs/libXmu
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	virtual/opengl
 	dev-lang/tcl
 	media-libs/giflib

@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/speed-dreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.5 2010/07/08 15:28:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.6 2010/09/16 17:52:12 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  speed-dreams-1.4.0.ebuild:
+  virtual/glut -> media-libs/glut
 
 *speed-dreams-1.4.0 (08 Jul 2010)
 

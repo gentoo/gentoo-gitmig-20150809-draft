@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.1 2010/07/08 15:28:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.2 2010/09/16 17:52:12 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	>=media-libs/plib-1.8.3
 	media-libs/openal
 	media-libs/freealut

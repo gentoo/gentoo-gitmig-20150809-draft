@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.2 2010/01/20 19:42:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.3 2010/09/16 17:52:37 scarabeus Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	>=dev-games/ode-0.8
 	>=media-libs/plib-1.8.4
 	media-libs/alsa-lib"

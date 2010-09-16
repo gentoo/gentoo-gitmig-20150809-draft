@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/torcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.32 2010/05/02 16:39:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.33 2010/09/16 17:52:51 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> torcs-1.3.1.ebuild:
+  virtual/glut -> media-libs/glut
 
   02 May 2010; Michael Sterrett <mr_bones_@gentoo.org> torcs-1.3.1.ebuild:
   work around addpredict's odd path thing
