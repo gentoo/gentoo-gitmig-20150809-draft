@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11945 2010/09/15 10:55:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11946 2010/09/16 11:21:46 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -530,17 +530,6 @@ dev-php5/znf
 # Temporary mask until the 256 series nvidia-drivers are unmasked.
 >=dev-util/nvidia-cuda-sdk-3.1
 >=dev-util/nvidia-cuda-toolkit-3.1
-
-# Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
-# Masked for removal due to EOL and security, bug #292001.
-# Do this to avoid pulling other 1.5 JDK:
-#   emerge -av --depclean sun-jdk:1.5 jdk:1.5 jre:1.5
-=dev-java/sun-jdk-1.5*
-
-# Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
-# Masked for removal due to 1.5 JDK removal, bug #292001.
-# Use dev-java/tijmp for the 1.6 java replacement.
-dev-java/jmp
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
