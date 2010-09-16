@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soya
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.23 2009/03/31 21:15:55 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.24 2010/09/16 16:44:21 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> soya-0.10.2.ebuild,
+  soya-0.13_rc1.ebuild, soya-0.14.ebuild:
+  virtual/glut -> media-libs/glut
 
   31 Mar 2009; Patrick Lauer <patrick@gentoo.org> soya-0.14.ebuild:
   Small cleanup, fixes #184510 again. Finally. For the last time.

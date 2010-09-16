@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.5 2008/08/06 19:19:28 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.10.2.ebuild,v 1.6 2010/09/16 16:44:21 scarabeus Exp $
 
 inherit distutils
 
@@ -20,7 +20,7 @@ IUSE="doc examples ode openal"
 # Documented to need PIL (imaging) and pyrex
 # pyrex isn't actually needed for normal building of non-cvs.
 DEPEND="virtual/opengl
-	virtual/glut
+	media-libs/freeglut
 	>=dev-lang/python-2.4.2
 	>=dev-python/imaging-1.1.5
 	>=media-fonts/freefonts-0.10

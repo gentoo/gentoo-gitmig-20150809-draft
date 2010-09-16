@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1.ebuild,v 1.6 2010/07/05 19:00:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1.ebuild,v 1.7 2010/09/16 16:43:24 scarabeus Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="tk"
 
-RDEPEND="virtual/glut
+RDEPEND="media-libs/freeglut
 	virtual/opengl
 	x11-libs/libXi
 	x11-libs/libXmu

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.13_rc1.ebuild,v 1.1 2007/01/28 19:12:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.13_rc1.ebuild,v 1.2 2010/09/16 16:44:21 scarabeus Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~ppc ~x86"
 IUSE="doc examples openal"
 
 DEPEND="virtual/opengl
-	virtual/glut
+	media-libs/freeglut
 	>=dev-lang/python-2.4.2
 	>=dev-python/imaging-1.1.5
 	>=media-libs/cal3d-0.10
