@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.37 2010/07/19 23:49:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.38 2010/09/16 01:22:44 ssuominen Exp $
+
+*gecko-mediaplayer-0.9.9.2_p1762 (16 Sep 2010)
+
+  16 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gecko-mediaplayer-0.9.9.2_p1762.ebuild:
+  New snapshot for xulrunner 2.0 testing.
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   gecko-mediaplayer-0.9.9.2.ebuild:
