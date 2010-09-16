@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dclock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.13 2010/09/16 22:53:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.14 2010/09/16 23:18:51 jer Exp $
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> dclock-2.2.2_p4.ebuild:
+  Remove emake depend.
 
 *dclock-2.2.2_p4 (16 Sep 2010)
 

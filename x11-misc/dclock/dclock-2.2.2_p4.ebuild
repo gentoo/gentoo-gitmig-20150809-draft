@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.1 2010/09/16 22:53:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.2 2010/09/16 23:18:51 jer Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ src_prepare() {
 
 src_configure() {
 	xmkmf || die "xmkmf"
-	emake depend || die "emake depend"
 }
 
 src_compile() {
