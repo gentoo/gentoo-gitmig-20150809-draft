@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/colorsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/ChangeLog,v 1.4 2010/09/08 11:17:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/ChangeLog,v 1.5 2010/09/16 11:29:12 idl0r Exp $
+
+*colorsvn-0.3.2-r2 (16 Sep 2010)
+
+  16 Sep 2010; Christian Ruppert <idl0r@gentoo.org> +colorsvn-0.3.2-r2.ebuild,
+  +files/0001-Don-t-colorize-svn-mkdir-bug-321451.-Use-IPC-open2-i.patch:
+  Don't use stderr anymore, bug 326279. Move sed to add 'svn mkdir' to the
+  preventcolor array into the patch as well. Use make -j1 for now, bug 335134.
 
   08 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   colorsvn-0.3.2-r1.ebuild:
