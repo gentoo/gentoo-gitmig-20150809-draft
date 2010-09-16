@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76-r1.ebuild,v 1.3 2010/05/25 21:12:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76-r1.ebuild,v 1.4 2010/09/16 17:31:03 scarabeus Exp $
 
 EAPI=2
 inherit eutils cmake-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
-RDEPEND="virtual/glut"
+RDEPEND="media-libs/freeglut"
 DEPEND="${RDEPEND}"
 
 src_configure() {
