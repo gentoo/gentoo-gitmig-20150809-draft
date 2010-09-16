@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.6 2010/08/31 15:47:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.7 2010/09/16 17:04:46 scarabeus Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.6-r3
 	>=media-libs/sdl-mixer-1.2.5-r1
-	virtual/glut"
+	media-libs/freeglut"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip"
