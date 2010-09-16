@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/apgdiff-2.0.ebuild,v 1.1 2010/09/13 17:46:37 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/apgdiff-2.0.1.ebuild,v 1.1 2010/09/16 13:28:02 fordfrog Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	>=dev-java/ant-core-1.7.0:0
 	>=dev-java/ant-junit-1.7.0:0
 	app-arch/zip:0
