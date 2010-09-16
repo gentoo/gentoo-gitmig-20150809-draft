@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nttcp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.12 2009/09/23 18:22:48 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.13 2010/09/16 02:42:53 jer Exp $
+
+*nttcp-1.47-r1 (16 Sep 2010)
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> +nttcp-1.47-r1.ebuild:
+  Respect LDFLAGS (bug #337552).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> nttcp-1.47.ebuild:
   Remove virtual/libc
