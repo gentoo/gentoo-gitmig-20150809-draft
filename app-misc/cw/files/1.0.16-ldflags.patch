@@ -7,7 +7,7 @@ index 9a6e4ec..e510493 100644
  cw:
  	@$(ECHO) "* Compiling cw(color wrapper)..."
 -	@$(CC) src/cw.c -o bin/cw @CFLAGS@ @LIBS@ @DEFS@
-+	$(CC) $(CFLAGS) -c src/cw.c -o bin/cw @CFLAGS@ @LIBS@ @DEFS@
++	$(CC) $(CFLAGS) $(LDFLAGS) src/cw.c -o bin/cw @CFLAGS@ @LIBS@ @DEFS@
  
  cwu:
  	@$(ECHO) "* Compiling cwu(color wrapper directive updater)..."
