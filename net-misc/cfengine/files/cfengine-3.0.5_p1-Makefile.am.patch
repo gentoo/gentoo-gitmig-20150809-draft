@@ -1,0 +1,29 @@
+diff --git a/pub/Makefile.am b/pub/Makefile.am
+index 14ad1a2..6ef675a 100644
+--- a/pub/Makefile.am
++++ b/pub/Makefile.am
+@@ -2,9 +2,9 @@
+ AM_CFLAGS = @CFLAGS@ @GCC_CFLAG@
+ INCLUDES = @BERKELEY_DB_CFLAGS@ @OPENSSL_LIB_CPPFLAGS@
+ 
+-noinst_LIBRARIES = libcfpub.a
++noinst_LTLIBRARIES = libcfpub.la
+ 
+-libcfpub_a_SOURCES =							\
++libcfpub_la_SOURCES =							\
+ 	getopt.c							\
+ 	getopt1.c							\
+ 	full-write.c							\
+diff --git a/src/Makefile.am b/src/Makefile.am
+index e48bb5b..c69ce0e 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -5,7 +5,7 @@ LDADD = libpromises.la # $(BERKELEY_DB_LDFLAGSD) $(BERKELEY_DB_LIB) $(OPENSSL_LI
+ INCLUDES = $(BERKELEY_DB_CFLAGS) $(OPENSSL_LIB_CPPFLAGS)
+ AM_LDFLAGS = $(BERKELEY_DB_LDFLAGS) $(OPENSSL_LIB_LDFLAGS) @LDFLAGS@
+ 
+-lib_LTLIBRARIES = libpromises.la
++pkglib_LTLIBRARIES = libpromises.la
+ 
+ libpromises_la_LDFLAGS = -version-info 1:0:0 -no-undefined
+ libpromises_la_LIBADD = $(BERKELEY_DB_LDFLAGSD) $(BERKELEY_DB_LIB) $(OPENSSL_LIB_LDFLAGS) $(OPENSSL_LIB_LIB)

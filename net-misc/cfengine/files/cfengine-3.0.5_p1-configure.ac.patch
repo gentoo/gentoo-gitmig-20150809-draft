@@ -1,8 +1,18 @@
 diff --git a/configure.ac b/configure.ac
-index 64b2a13..09821a5 100644
+index 64b2a13..8202c6c 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -84,13 +84,9 @@ AC_CHECK_LIB(m,main)
+@@ -68,8 +68,7 @@ AC_PROG_CC
+ AM_PROG_LEX
+ AC_PROG_YACC
+ AC_PROG_RANLIB
+-AC_DISABLE_SHARED
+-dnl AC_DISABLE_STATIC - maybe use shared libs later
++AC_DISABLE_STATIC
+ AC_PROG_LIBTOOL
+ AC_PROG_INSTALL
+ AC_CONFIG_LIBOBJ_DIR(pub)
+@@ -84,13 +83,9 @@ AC_CHECK_LIB(m,main)
  
  dnl Look for ldap
  
@@ -19,7 +29,7 @@ index 64b2a13..09821a5 100644
  
  dnl Now check for database connectors
  
-@@ -99,15 +95,9 @@ dnl ######################################################################
+@@ -99,15 +94,9 @@ dnl ######################################################################
  dnl  Look for SQL connectors.
  dnl ######################################################################
  
@@ -38,7 +48,7 @@ index 64b2a13..09821a5 100644
  
  if test $WITH_SQL = 1; then
    case "$target_os" in
-@@ -124,31 +114,17 @@ if test $WITH_SQL = 1; then
+@@ -124,31 +113,17 @@ if test $WITH_SQL = 1; then
  fi
  
  
@@ -79,7 +89,7 @@ index 64b2a13..09821a5 100644
  
  AC_CHECK_FUNC(door_create,door)
  AC_CHECK_FUNC(setsockopt, , AC_CHECK_LIB(socket, setsockopt))
-@@ -162,18 +138,12 @@ dnl
+@@ -162,18 +137,12 @@ dnl
  dnl Choose a database
  dnl
  
@@ -102,7 +112,7 @@ index 64b2a13..09821a5 100644
    AC_CHECK_LIB(tokyocabinet,main, [], [AC_MSG_ERROR(Cannot find Tokyo Cabinet)])
    AC_CHECK_HEADERS(tcutil.h)
    AC_CHECK_HEADERS(tchdb.h)
-@@ -182,18 +152,12 @@ fi
+@@ -182,18 +151,12 @@ fi
  
  dnl else qdbm?
  
@@ -125,7 +135,7 @@ index 64b2a13..09821a5 100644
    AC_CHECK_LIB(qdbm,main, [], [AC_MSG_ERROR(Cannot find Quick Database Manager)])
    AC_CHECK_HEADERS(depot.h)
    AC_DEFINE(QDB, 1, [Define if QDBM is available.])
-@@ -471,18 +435,12 @@ AC_SUBST(OPENSSL_LIB_LIB)
+@@ -471,18 +434,12 @@ AC_SUBST(OPENSSL_LIB_LIB)
  # Others
  #
  
@@ -148,7 +158,7 @@ index 64b2a13..09821a5 100644
    AC_CHECK_LIB(virt,main, [], [AC_MSG_ERROR(Cannot find libvirt)])
  fi
  
-@@ -491,60 +449,52 @@ dnl ######################################################################
+@@ -491,60 +448,52 @@ dnl ######################################################################
  dnl Checks for perl compatible regular expressions
  dnl ######################################################################
  
@@ -247,7 +257,7 @@ index 64b2a13..09821a5 100644
  dnl ######################################################################
  dnl Checks for header files.
  dnl ######################################################################
-@@ -564,7 +514,6 @@ AC_CHECK_HEADERS(sys/param.h)
+@@ -564,7 +513,6 @@ AC_CHECK_HEADERS(sys/param.h)
  AC_CHECK_HEADERS(fcntl.h)
  AC_CHECK_HEADERS(sys/filesys.h)
  AC_CHECK_HEADERS(dustat.h)
@@ -255,7 +265,7 @@ index 64b2a13..09821a5 100644
  AC_CHECK_HEADERS(sys/systeminfo.h)
  AC_CHECK_HEADERS(sys/acl.h winsock2.h)
  
-@@ -579,32 +528,23 @@ dnl ######################################################################
+@@ -579,32 +527,23 @@ dnl ######################################################################
  dnl Checks for graph support
  dnl ######################################################################
  
@@ -298,7 +308,7 @@ index 64b2a13..09821a5 100644
  
  dnl ######################################################################
  dnl Checks for data types
-@@ -627,7 +567,7 @@ dnl Check for special functions
+@@ -627,7 +566,7 @@ dnl Check for special functions
  dnl ######################################################################
  
  AC_CHECK_FUNCS(getcwd getnetgrent waitpid seteuid setegid setreuid setregid)
@@ -307,7 +317,7 @@ index 64b2a13..09821a5 100644
  AC_CHECK_FUNCS(strstr strsep putenv drand48 srand48 getaddrinfo)
  AC_CHECK_FUNCS(bcopy mkfifo statfs statvfs door)
  AC_CHECK_FUNCS(sysinfo setsid strdup strrchr strerror snprintf sysconf)
-@@ -691,30 +631,27 @@ AC_CHECK_FUNC(lchown, AC_DEFINE(HAVE_LCHOWN))
+@@ -691,30 +630,27 @@ AC_CHECK_FUNC(lchown, AC_DEFINE(HAVE_LCHOWN))
  AC_CHECK_FUNC(pthread_attr_setstacksize, AC_DEFINE(HAVE_PTHREAD_ATTR_SETSTACKSIZE), AC_CHECK_LIB(pthread, pthread_create))
  AC_CHECK_FUNC(pthread_sigmask, AC_DEFINE(HAVE_PTHREAD_SIGMASK), AC_CHECK_LIB(pthread, pthread_create))
  
@@ -354,7 +364,7 @@ index 64b2a13..09821a5 100644
  
  
  dnl ######################################################################
-@@ -995,7 +932,7 @@ AC_MSG_RESULT( )
+@@ -995,7 +931,7 @@ AC_MSG_RESULT( )
  AC_MSG_RESULT(    Summary of options...)
  
  
@@ -363,7 +373,7 @@ index 64b2a13..09821a5 100644
    AC_MSG_RESULT( -> Configured with PCRE libraries)
  else
    AC_MSG_RESULT( -> No PCRE library support - reverting to POSIX builtins)
-@@ -1003,11 +940,11 @@ fi
+@@ -1003,11 +939,11 @@ fi
  
  if test $WITH_SQL = 1; then
  
@@ -377,7 +387,7 @@ index 64b2a13..09821a5 100644
      AC_MSG_RESULT( -> Configured with Postgres libraries)
    fi
  
-@@ -1016,14 +953,14 @@ else
+@@ -1016,14 +952,14 @@ else
  fi
  
  if test $WITH_GVC = 1; then
