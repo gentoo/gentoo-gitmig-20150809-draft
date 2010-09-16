@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.17 2010/07/26 18:57:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.18 2010/09/16 17:09:51 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -29,7 +29,7 @@
 # @DESCRIPTION:
 # Define options for econf
 
-inherit autotools base fdo-mime gnome2-utils libtool
+inherit autotools base eutils fdo-mime gnome2-utils libtool
 
 if ! [[ ${MY_P} ]]; then
 	MY_P=${P}
@@ -141,6 +141,8 @@ xfconf_src_install() {
 
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED="${D}"
 	find "${ED}" -name '*.la' -exec rm -f {} +
+
+	validate_desktop_entries
 }
 
 # @FUNCTION: xfconf_pkg_preinst
