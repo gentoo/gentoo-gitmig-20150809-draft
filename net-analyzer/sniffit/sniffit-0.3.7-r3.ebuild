@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r2.ebuild,v 1.2 2010/09/16 16:35:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r3.ebuild,v 1.1 2010/09/16 23:13:07 jer Exp $
 
 EAPI="2"
 
@@ -22,10 +22,10 @@ LICENSE="as-is"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
+#S="${WORKDIR}"/${P/-/.}.beta
+
 src_prepare() {
 	epatch \
-		"${WORKDIR}"/${PN}_0.3.7.beta-15.diff \
-		${PN}-0.3.7.beta/debian/patches/ \
 		"${FILESDIR}"/${P}-flags.patch \
 		"${FILESDIR}"/${P}-misc.patch
 }

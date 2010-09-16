@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.17 2010/09/16 16:35:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.18 2010/09/16 23:13:07 jer Exp $
+
+*sniffit-0.3.7-r3 (16 Sep 2010)
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> -sniffit-0.3.7-r2.ebuild,
+  +sniffit-0.3.7-r3.ebuild:
+  Remove Debian patching as it is mostly replicated and the epatch call was
+  not working anyway.
 
   16 Sep 2010; Jeroen Roovers <jer@gentoo.org> sniffit-0.3.7-r2.ebuild:
   Merge epatch calls. Do not install LICENSE. Fix quoting issues. Remove
