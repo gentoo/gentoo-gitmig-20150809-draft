@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.166 2010/09/15 20:37:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.167 2010/09/16 12:58:58 tampakrap Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
+# Theo Chatzimichos <tampakrap@gentoo.org> (16 Sep 2010)
+# Mask ayatana USE flag, as its deps aren't in good shape
+net-irc/quassel ayatana
 
 # Patrick Lauer <patrick@gentoo.org> (15 Sep 2010)
 # Feature broken in dovecot-1, see #337014
