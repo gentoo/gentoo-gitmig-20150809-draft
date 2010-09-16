@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.04.ebuild,v 1.6 2009/10/12 23:14:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.04.ebuild,v 1.7 2010/09/16 16:42:24 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/ocaml-3.10.2[tk?,ocamlopt?]
 	x11-libs/libXext
 	x11-libs/libXmu
 	x11-libs/libX11
-	glut? ( virtual/glut )
+	glut? ( media-libs/freeglut )
 	tk? ( >=dev-lang/tcl-8.3
 	>=dev-lang/tk-8.3 )"
 DEPEND="${RDEPEND}"
