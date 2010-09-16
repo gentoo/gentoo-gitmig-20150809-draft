@@ -1,6 +1,19 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.268 2010/09/15 19:33:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.269 2010/09/16 17:31:54 chainsaw Exp $
+
+*asterisk-1.6.2.13-r1 (16 Sep 2010)
+
+  16 Sep 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.13-r1.ebuild,
+  +files/1.6.2/asterisk-1.6.2.13-backport-bri-net-ptmp.patch,
+  +files/1.6.2/asterisk-1.6.2.13-dahdiras-without-root.patch,
+  +files/1.6.2/asterisk-1.6.2.13-iax2-peerstate.patch,
+  +files/1.6.2/asterisk.logrotate2:
+  Add peerstatus to IAX2, closes bug #330135. Correct rotate keyword in
+  logrotate file, closes bug #336066. Add USE="doc", closes bug #331613.
+  Invoke DAHDIRAS differently so non-root works, closes bug #337297.
+  Backported bri_net_ptmp from 1.8 branch, closes bug #337591. Many thanks
+  to Jaco Kroon for all these bugfixes & improvements.
 
 *asterisk-1.6.2.13 (15 Sep 2010)
 

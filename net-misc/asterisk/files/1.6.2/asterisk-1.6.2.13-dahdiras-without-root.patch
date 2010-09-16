@@ -1,0 +1,12 @@
+diff -uNr asterisk-1.6.2.13.ORIG/apps/app_dahdiras.c asterisk-1.6.2.13/apps/app_dahdiras.c
+--- asterisk-1.6.2.13.ORIG/apps/app_dahdiras.c	2010-09-16 17:40:39.000000000 +0100
++++ asterisk-1.6.2.13/apps/app_dahdiras.c	2010-09-16 17:41:05.000000000 +0100
+@@ -119,8 +119,6 @@
+ 		c = strsep(&stringp, ",");
+ 	}
+ 
+-	argv[argc++] = "plugin";
+-	argv[argc++] = "dahdi.so";
+ 	argv[argc++] = "stdin";
+ 
+ 	/* Finally launch PPP */
