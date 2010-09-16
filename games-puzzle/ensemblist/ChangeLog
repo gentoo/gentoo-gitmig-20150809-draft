@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ensemblist
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.8 2009/01/23 08:32:19 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.9 2010/09/16 16:55:26 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  ensemblist-040126.ebuild:
+  virtual/glut -> media-libs/glut
 
   23 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +files/ensemblist-040126-build.patch, ensemblist-040126.ebuild:

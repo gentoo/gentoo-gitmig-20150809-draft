@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.5 2010/04/20 08:36:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.6 2010/09/16 16:56:17 scarabeus Exp $
 PYTHON_DEPEND="2"
 EAPI=2
 inherit eutils python toolchain-funcs games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-mixer
 	virtual/opengl
 	virtual/glu
-	virtual/glut"
+	media-libs/freeglut"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 

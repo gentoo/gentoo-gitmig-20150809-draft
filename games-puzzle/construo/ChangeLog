@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/construo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.15 2009/11/25 09:12:21 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.16 2010/09/16 16:54:32 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  construo-0.2.2.ebuild:
+  virtual/glut -> media-libs/glut
 
   24 Nov 2009; Tupone Alfredo <tupone@gentoo.org> construo-0.2.2.ebuild,
   +files/construo-0.2.2-lGLU.patch:

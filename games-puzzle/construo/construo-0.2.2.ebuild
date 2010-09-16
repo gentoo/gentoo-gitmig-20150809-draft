@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.15 2009/11/24 17:37:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/construo-0.2.2.ebuild,v 1.16 2010/09/16 16:54:32 scarabeus Exp $
 EAPI=2
 
 inherit eutils autotools games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto"
