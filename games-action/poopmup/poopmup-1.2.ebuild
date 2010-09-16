@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.16 2008/04/30 21:29:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.17 2010/09/16 16:48:42 scarabeus Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="test"
 
-DEPEND="virtual/glut
+DEPEND="media-libs/freeglut
 	x11-libs/libXi
 	x11-libs/libXmu
 	virtual/opengl"

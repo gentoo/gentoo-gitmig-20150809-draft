@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.41 2010/09/07 21:01:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.42 2010/09/16 16:47:46 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  chromium-0.9.14.ebuild, chromium-0.9.14.1.ebuild:
+  virtual/glut -> media-libs/glut
 
   07 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
   chromium-0.9.14.1.ebuild:
