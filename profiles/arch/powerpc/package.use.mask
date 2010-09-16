@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.48 2010/09/15 00:36:35 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.49 2010/09/16 15:52:50 josejx Exp $
 
-# Maciek Mrozowski <reavertm@gentoo.org> (15 Sep 2010)
-# masking for bug 337385
-kde-base/kget webkit
+# Joseph Jezak <josejx@gentoo.org> (13 Sep 2010)
+# Masked libvpx, we'll wait for native vp8 support
+media-video/ffmpeg vpx
 
 # Alexey Shvetsov <alexxy@gentoo.org> (22 Aug 2010)
 # sci-chemistry/msms not available for this arch
@@ -18,10 +18,6 @@ media-gfx/povray mkl
 # masking for gdal (see bug 315659)
 sci-libs/gdal ecwj2k
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
-# requires more keywording per bug #323003
-kde-base/kde-meta sdk
-
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Apr 2010)
 # This is for x86/amd64 only
 sys-devel/llvm udis86
@@ -29,15 +25,6 @@ sys-devel/llvm udis86
 # Alexey Shvetsov <alexxy@gentoo.org> (23 Feb 2010)
 # media-gfx/tachyon needed to be keyworded per bug #306549
 sci-chemistry/vmd tachyon
-
-# Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
-# need sys-auth/polkit keyworded
-app-admin/system-config-printer-common  policykit
-
-# Dominik Kapusta <ayoy@gentoo.org> (01 Dec 2009)
-# QA: This entry is moved from INVALID location from default/linux/powerpc.
-# qt-demo-4.6.0, required by examples is  not keyworded on ppc and ppc64 yet
-dev-util/qt-creator examples
 
 # QA: This entry is moved from INVALID location from default/linux/powerpc.
 # Not keyworded
@@ -64,10 +51,6 @@ dev-ruby/ruby-dbi oracle
 # Brent Baude <ranger@gentoo.org>
 # masking zephyr USE on pidgin
 net-im/pidgin zephyr
-
-# Brent Baude <ranger@gentoo.org>
-# media-libs/libcanberra-0.11 masking pulseaudio
-=media-libs/libcanberra-0.11 pulseaudio
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
@@ -100,14 +83,6 @@ sys-fs/evms hb hb2
 # Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
 # Mask mono flag for gnome as tomboy is segfaulting.
 gnome-base/gnome mono
-
-# Daniel Gryniewicz <dang@gentoo.org> (25 Jul 2008)
-# Mask webkit from liferea: not keyworded
-net-news/liferea webkit
-
-# Markus Rothe <corsair@gentoo.org> (22 July 2008)
-# bug #232411
-app-text/enchant -zemberek
 
 # Joseph Jezak <josejx@gentoo.org> (12 November 2008)
 # Mask the JIT for pearpc, it's x86 only

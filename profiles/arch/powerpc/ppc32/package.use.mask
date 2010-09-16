@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.16 2010/09/15 00:36:35 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.17 2010/09/16 15:52:50 josejx Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -19,10 +19,6 @@ gnome-base/gvfs iphone
 # Maciej Mrozowski <reavertm@gentoo.org> (26 Jun 2010)
 # Needs media-libs/simage keyworded, bug 325623
 media-libs/coin simage
-
-# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
-# Needs >=dev-libs/libgdata-0.4.0 keyworded, bug 323845
-media-video/totem youtube
 
 #nixnut <nixnut@gentoo.org> (24 jan 2009)
 #don't want zemberek for enchant for ppc32

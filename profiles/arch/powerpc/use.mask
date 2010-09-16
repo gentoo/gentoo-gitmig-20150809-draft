@@ -1,54 +1,54 @@
-# Joseph Jezak <josejx@gentoo.org> (12 Aug 2010)
-# Masked vaapi for PowerPC until it works on hardware available to PowerPC users (cell, etc.)
-vaapi
+# PPC Specific use flags
+# 
+# These flags should only be used for ppc
+-ppcsha1
+-pbbuttonsd
+# Unmask the Altivec instruction set
+-altivec
 
-# No keyworded versions of openafs
-afs
-
-# These use-flags won't work neither on ppc32 nor on ppc64
-
+# Incompatible Use Flags
+#
+# These use-flags are x86/amd64 only, please feel free to make a bug report if
+# this is in error!
+#
 3dfx
 acpi
 avi
 lm_sensors
 rar
-
-# Keep and eye on firebird and interbase as pair
-interbase
-
-# Unmask our instruction sets
--altivec
--pbbuttonsd
--ppcsha1
-
-# codec support
--x264
-
+cmucl
+hdf
+fmod
+i8x0
+xvmc
 # cg is only provided by nvidia's binary only cg toolkit
 cg
-
 # dmi depends on PC BIOSes, we don't have those
 dmi
+# Appears to be x86 only, feel free to remove if you disagree
+nvtv
+#2006/10/11 - corsair - bug #150925
+graphlcd
+lcd_devices_graphlcd
+# Masked vaapi for PowerPC until it works on hardware available to PowerPC users (cell, etc.)
+vaapi
+# Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
+# Dell does not ship or sell PPC systems
+dell
+# User Mode Linux isn't supported on ppc yet
+uml
+
+
+### Other flags -- Please put additional maskings below here
+
+# No keyworded versions of openafs
+afs
 
 # Masking mbrola for bug #84322, if a new version is released, remove this
 mbrola
 
-# Appears to be x86 only, feel free to remove if you disagree
-nvtv
-
-# new keyword zrtp related to
-# net-libs/libzrtpcpp package
-# masked pending testing - bug #149793
-zrtp
-
-#2006/10/11 - corsair - bug #150925
-graphlcd
-lcd_devices_graphlcd
-
-# 13/10/2006 chutzpah@gentoo.org
-# masking p2p USE flag until media-libs/moodriver can get
-# keyworded
-p2p
+# Keep and eye on firebird and interbase as pair
+interbase
 
 # cardoe@gentoo.org
 # masking ivtv since I got the original support for it
@@ -109,10 +109,6 @@ alsa_cards_wavefront
 # supported on ppc
 -ada
 
-# Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
-# Dell does not ship or sell PPC systems
-dell
-
 # Joseph Jezak <josejx@gentoo.org> (28 Jun 2007)
 # Masked Parallel LCD devices for bug #180683
 # app-misc/lcd4linux
@@ -120,28 +116,15 @@ lcd_devices_lph7508
 lcd_devices_m50530
 lcd_devices_noritake
 lcd_devices_routerboard
-
 # app-misc/lcdproc
 lcd_devices_sed1330
 lcd_devices_sed1520
 lcd_devices_stv5730
-
 # Both
 lcd_devices_t6963
 
-# This is a list of USE flags that should not be used on PPC
-
-cmucl
-hdf
-fmod
-i8x0
-xvmc
-
 # Fixes bug #86787
 fusion
-
-# User Mode Linux isn't supported on ppc yet
-uml
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
@@ -160,9 +143,6 @@ video_cards_sis
 video_cards_tga
 video_cards_tseng
 video_cards_vesa
-
-# net-libs/aqbanking and dev-libs/libofx don't have ppc64 KEYWORDS
-hbci
 
 # Doug Goldstein <cardoe@gentoo.org> (3 Apr 2008)
 # nvidia-drivers specific feature which don't exist for ppc
