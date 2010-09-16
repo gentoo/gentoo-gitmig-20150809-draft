@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/upslug2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/ChangeLog,v 1.3 2008/06/25 08:45:55 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/upslug2/ChangeLog,v 1.4 2010/09/16 06:23:45 vapier Exp $
+
+  16 Sep 2010; Mike Frysinger <vapier@gentoo.org> upslug2-11.ebuild:
+  Clean up and mark amd64 stable.
 
   25 Jun 2008; Christian Faulhammer <opfer@gentoo.org> upslug2-11.ebuild:
   stable x86
