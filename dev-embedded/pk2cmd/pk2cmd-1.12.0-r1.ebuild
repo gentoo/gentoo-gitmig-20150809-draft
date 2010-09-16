@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/pk2cmd-1.12.0-r1.ebuild,v 1.2 2009/02/02 20:45:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/pk2cmd-1.12.0-r1.ebuild,v 1.3 2010/09/16 02:42:52 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,6 +29,7 @@ src_unpack() {
 	sed -i 's:#TARGET=linux:TARGET=linux:' Makefile
 	sed -i 's:DBG=-O2:DBG=:' Makefile
 	sed -i 's:^CFLAGS=:CFLAGS+=:' Makefile
+	sed -i 's:^LDFLAGS=:LDFLAGS+=:' Makefile
 	sed -i 's:^LIBUSB=/usr/local:LIBUSB=/usr:' Makefile
 	sed -i "s:^CC=g++::" Makefile
 }
