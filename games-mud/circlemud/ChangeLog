@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/circlemud
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/ChangeLog,v 1.8 2008/03/07 01:24:58 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/ChangeLog,v 1.9 2010/09/16 10:34:53 tupone Exp $
+
+  16 Sep 2010; Alfredo Tupone <tupone@gentoo.org> circlemud-3.1.ebuild,
+  +files/circlemud-3.1-ldflags.patch:
+  Respect LDFLAGS. Bug #337460 by flameeyes@gentoo.org
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> circlemud-3.1.ebuild:
   QA cleanup: Fix quoting.
