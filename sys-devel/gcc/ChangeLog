@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.776 2010/09/16 04:18:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.777 2010/09/16 04:53:07 dirtyepic Exp $
+
+  16 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.1.ebuild:
+  Bump 4.5.1 patchset to 1.1. Fixes bug #334269 and #331641.
+  Add ewarn about LTO to pkg_setup.
 
 *gcc-4.4.4-r2 (16 Sep 2010)
 
