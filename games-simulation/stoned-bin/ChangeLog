@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/stoned-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/ChangeLog,v 1.10 2007/10/17 17:51:51 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/ChangeLog,v 1.11 2010/09/16 17:00:23 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  stoned-bin-1.1.6.ebuild:
+  virtual/glut -> media-libs/glut
 
   17 Oct 2007; Samuli Suominen <drac@gentoo.org> stoned-bin-1.1.6.ebuild:
   Change media-libs/fmod dep to work with slots.
