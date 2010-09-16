@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8.ebuild,v 1.2 2009/07/23 23:08:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8.ebuild,v 1.3 2010/09/16 12:21:43 ssuominen Exp $
 
-GCONF_DEBUG="no"
-
-inherit gnome2
+EAPI=2
+inherit gnome.org
 
 DESCRIPTION="xdg-user-dirs-gtk integrates xdg-user-dirs into the Gnome desktop and Gtk+ applications"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/xdg-user-dirs"
@@ -14,13 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-misc/xdg-user-dirs-0.8
-	>=x11-libs/gtk+-2"
+RDEPEND=">=x11-misc/xdg-user-dirs-0.13
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.35.5
-	  dev-util/pkgconfig"
+	>=dev-util/intltool-0.35
+	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README
+}
 
 pkg_postinst() {
 	elog
