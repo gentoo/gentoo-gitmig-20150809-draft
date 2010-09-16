@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.3.ebuild,v 1.1 2009/04/07 18:41:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.3.ebuild,v 1.2 2010/09/16 17:33:01 scarabeus Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND="virtual/glut"
+RDEPEND="media-libs/freeglut"
 DEPEND="${RDEPEND}"
 
 src_compile() {
