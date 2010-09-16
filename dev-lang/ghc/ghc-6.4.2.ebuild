@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.30 2010/07/21 21:49:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.31 2010/09/16 16:37:17 scarabeus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -68,7 +68,7 @@ RDEPEND="
 	=sys-libs/readline-5*
 	X? ( x11-libs/libX11 )
 	opengl? ( virtual/opengl
-			  virtual/glu virtual/glut
+			  virtual/glu media-libs/freeglut
 			  openal? ( media-libs/openal media-libs/freealut ) )"
 
 DEPEND="${RDEPEND}"

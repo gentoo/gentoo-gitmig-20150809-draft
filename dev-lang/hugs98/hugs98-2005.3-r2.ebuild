@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3-r2.ebuild,v 1.19 2007/07/22 08:56:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2005.3-r2.ebuild,v 1.20 2010/09/16 16:38:18 scarabeus Exp $
 
 inherit base flag-o-matic eutils versionator multilib
 
@@ -43,7 +43,7 @@ LICENSE="as-is"
 
 RDEPEND="
 	X? ( x11-libs/libX11 )
-	opengl? ( virtual/opengl virtual/glu virtual/glut )
+	opengl? ( virtual/opengl virtual/glu media-libs/freeglut )
 	openal? ( media-libs/openal )"
 DEPEND="${RDEPEND}
 	opengl? ( app-admin/eselect-opengl )

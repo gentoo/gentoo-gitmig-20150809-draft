@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.ebuild,v 1.2 2010/07/23 21:48:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.ebuild,v 1.3 2010/09/16 16:39:20 scarabeus Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X examples glut iodbc ncurses odbc opengl tcl tk xml"
 
 DEPEND="~dev-lang/mercury-${PV}
-	glut? ( virtual/glut )
+	glut? ( media-libs/freeglut )
 	odbc? ( dev-db/unixODBC )
 	iodbc? ( !odbc? ( dev-db/libiodbc ) )
 	ncurses? ( sys-libs/ncurses )

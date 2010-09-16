@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.190 2010/09/13 18:20:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.191 2010/09/16 16:37:17 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ghc-6.2.2.ebuild,
+  ghc-6.4.2.ebuild:
+  virtual/glut -> media-libs/glut
 
   13 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
   +files/ghc-6.12.3-autoconf-2.66-4252.patch:
