@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-at-linux
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.11 2006/07/19 19:41:24 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.12 2010/09/16 17:10:37 mr_bones_ Exp $
+
+  16 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-at-linux-20030120.ebuild:
+  convert file to utf8 if desired (bug #322111)
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-at-linux-20030120.ebuild:
