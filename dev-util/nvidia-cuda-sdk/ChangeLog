@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.20 2010/07/03 22:56:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.21 2010/09/16 16:46:48 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  nvidia-cuda-sdk-2.1.1215.2015.ebuild, nvidia-cuda-sdk-2.2.ebuild,
+  nvidia-cuda-sdk-2.2-r1.ebuild, nvidia-cuda-sdk-2.02.0807.1535.ebuild,
+  nvidia-cuda-sdk-2.3.ebuild, nvidia-cuda-sdk-3.0_beta1.ebuild,
+  nvidia-cuda-sdk-3.0.ebuild, nvidia-cuda-sdk-3.1.ebuild:
+  virtual/glut -> media-libs/glut
 
 *nvidia-cuda-sdk-3.1 (03 Jul 2010)
 

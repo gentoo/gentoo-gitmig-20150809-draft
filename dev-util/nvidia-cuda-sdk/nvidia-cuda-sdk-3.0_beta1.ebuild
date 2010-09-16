@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.0_beta1.ebuild,v 1.1 2010/02/08 12:10:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.0_beta1.ebuild,v 1.2 2010/09/16 16:46:48 scarabeus Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE="debug +doc emulation +examples opencl +cuda"
 
 RDEPEND=">=dev-util/nvidia-cuda-toolkit-3.0_beta1
 	examples? ( !emulation? ( >=x11-drivers/nvidia-drivers-195.30 ) )
-	virtual/glut"
+	media-libs/freeglut"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
