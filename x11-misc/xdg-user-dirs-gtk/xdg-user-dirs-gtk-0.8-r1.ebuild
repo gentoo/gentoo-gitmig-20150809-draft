@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8-r1.ebuild,v 1.1 2010/09/16 12:33:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8-r1.ebuild,v 1.2 2010/09/16 12:35:29 ssuominen Exp $
 
 EAPI=2
 inherit gnome.org
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i \
+		-e '/Encoding/d' \
 		-e 's:OnlyShowIn=GNOME:NotShowIn=KDE:' \
 		user-dirs-update-gtk.desktop.in || die
 }
