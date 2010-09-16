@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.3 2009/07/17 08:05:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.4 2010/09/16 12:20:32 tupone Exp $
 
 EAPI=2
 inherit games
@@ -27,6 +27,7 @@ S=${WORKDIR}/${MY_P}
 PATCHES=(
 	"${FILESDIR}/${P}"-gcc41.patch
 	"${FILESDIR}/${P}"-gentoo.patch
+	"${FILESDIR}"/${P}-ldflags.patch
 )
 
 src_compile() {
