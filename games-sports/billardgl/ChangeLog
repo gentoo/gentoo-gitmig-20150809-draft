@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/billardgl
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/ChangeLog,v 1.11 2009/04/06 05:20:44 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/ChangeLog,v 1.12 2010/09/16 17:01:13 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  billardgl-1.75-r1.ebuild:
+  virtual/glut -> media-libs/glut
 
   06 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   billardgl-1.75-r1.ebuild:

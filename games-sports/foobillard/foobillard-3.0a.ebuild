@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.13 2010/03/08 22:17:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.14 2010/09/16 17:02:08 scarabeus Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libXaw
 	>=media-libs/freetype-2.0.9
 	media-libs/libpng
 	sdl? ( media-libs/libsdl )
-	!sdl? ( virtual/glut )"
+	!sdl? ( media-libs/freeglut )"
 DEPEND="${RDEPEND}
 	app-admin/eselect-opengl"
 

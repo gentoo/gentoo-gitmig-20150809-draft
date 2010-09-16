@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.11 2009/04/06 05:20:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.12 2010/09/16 17:01:13 scarabeus Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,7 +19,7 @@ DEPEND="x11-libs/libXi
 	x11-libs/libXmu
 	virtual/opengl
 	virtual/glu
-	virtual/glut"
+	media-libs/freeglut"
 
 S=${WORKDIR}/BillardGL-${PV}/src
 
