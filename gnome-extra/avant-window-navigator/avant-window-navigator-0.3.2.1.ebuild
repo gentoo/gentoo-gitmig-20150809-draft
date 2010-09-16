@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.3 2010/06/23 14:31:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.4 2010/09/16 01:51:47 ssuominen Exp $
 
 inherit gnome2 python
 
@@ -34,7 +34,7 @@ RDEPEND="
 		>=gnome-base/libgnome-2
 	)
 	vala? ( dev-lang/vala )
-	xfce? ( xfce-base/thunar )
+	xfce? ( || ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 ) )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5
