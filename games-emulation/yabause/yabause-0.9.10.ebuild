@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.10.ebuild,v 1.3 2010/06/01 03:50:25 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.10.ebuild,v 1.4 2010/09/16 16:53:36 scarabeus Exp $
 
 EAPI=2
 inherit games
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/gtkglext
 	virtual/opengl
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	openal? ( media-libs/openal )
 	sdl? ( media-libs/libsdl[opengl?,video] )"
 DEPEND="${RDEPEND}
