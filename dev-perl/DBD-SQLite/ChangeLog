@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.79 2010/09/12 04:02:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.80 2010/09/16 15:59:19 tove Exp $
+
+*DBD-SQLite-1.31 (16 Sep 2010)
+
+  16 Sep 2010; Torsten Veller <tove@gentoo.org> +DBD-SQLite-1.31.ebuild:
+  Version bump
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   DBD-SQLite-1.29-r2.ebuild:
