@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.131 2010/04/29 15:13:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.132 2010/09/16 00:42:35 ssuominen Exp $
+
+  16 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> faad2-2.7-r2.ebuild:
+  USE="static-libs" and punt .la files.
 
 *faad2-2.7-r2 (29 Apr 2010)
 
