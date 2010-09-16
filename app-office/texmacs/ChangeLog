@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.82 2010/07/28 06:50:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.83 2010/09/16 10:20:24 grozin Exp $
+
+*texmacs-1.0.7.6 (16 Sep 2010)
+
+  16 Sep 2010; Andrey Grozin <grozin@gentoo.org> -texmacs-1.0.7.3.ebuild,
+  -texmacs-1.0.7.4.ebuild, -files/texmacs-1.0.7.4-strip.patch,
+  +texmacs-1.0.7.6.ebuild, +files/texmacs-1.0.7.6-strip.patch:
+  Version bump, cleaning old versions
 
 *texmacs-1.0.7.5 (28 Jul 2010)
 
