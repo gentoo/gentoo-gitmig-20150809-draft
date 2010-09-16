@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16.ebuild,v 1.1 2010/09/12 13:18:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16.ebuild,v 1.2 2010/09/16 16:59:14 jer Exp $
 
 EAPI="3"
 
@@ -22,15 +22,8 @@ src_prepare() {
 	tc-export CC
 }
 
-#src_configure() {
-#	econf \
-#		CFLAGS="${CFLAGS}" \
-#		LDFLAGS="${LDFLAGS}"
-#}
-
 src_compile() {
-	emake \
-		local || die "emake failed"
+	emake local || die "emake failed"
 }
 
 src_install() {

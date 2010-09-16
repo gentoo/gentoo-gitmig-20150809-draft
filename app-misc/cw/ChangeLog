@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.21 2010/09/12 13:18:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.22 2010/09/16 16:59:14 jer Exp $
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> cw-1.0.16.ebuild:
+  Remove src_configure() since it is commented but not a comment. Merge
+  emake local lines.
 
 *cw-1.0.16 (12 Sep 2010)
 
