@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/outerspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.12 2010/04/06 09:05:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.13 2010/09/16 20:21:50 mr_bones_ Exp $
+
+*outerspace-0.5.67 (16 Sep 2010)
+
+  16 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +outerspace-0.5.67.ebuild:
+  version bump
 
   06 Apr 2010; Tupone Alfredo <tupone@gentoo.org> outerspace-0.5.66.ebuild:
   Force python 2 version. Bug #312287 by arfrever@gentoo.org
