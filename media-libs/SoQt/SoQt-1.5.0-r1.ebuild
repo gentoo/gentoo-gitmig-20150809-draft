@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.2 2010/06/29 06:50:56 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.3 2010/09/16 18:13:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="debug doc static-libs"
 
 RDEPEND="
 	>=media-libs/coin-3.1.3
-	virtual/glu
+	virtual/opengl
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
