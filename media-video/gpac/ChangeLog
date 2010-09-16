@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.80 2010/04/29 18:16:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.81 2010/09/16 17:19:47 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> gpac-0.4.5-r1.ebuild,
+  gpac-0.4.5-r2.ebuild:
+  virtual/glut -> media-libs/glut
 
 *gpac-0.4.5-r2 (29 Apr 2010)
 
