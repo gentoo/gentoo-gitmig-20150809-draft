@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/zhu3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.17 2010/05/28 06:41:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/ChangeLog,v 1.18 2010/09/16 18:18:35 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> zhu3d-4.2.2.ebuild:
+  virtual/glu -> virtual/opengl
 
   28 May 2010; Peter Volkov <pva@gentoo.org> zhu3d-4.2.2.ebuild:
   amd64 stable, bug #299844
