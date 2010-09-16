@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SpeedyCGI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.10 2010/09/15 14:21:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.11 2010/09/16 20:34:16 pva Exp $
+
+  16 Sep 2010; Peter Volkov <pva@gentoo.org> SpeedyCGI-2.22-r2.ebuild,
+  +files/SpeedyCGI-2.22-parallel-build.patch:
+  Fix parallel build issue, bug #277177, thank Diego E. 'Flameeyes' Pettenò
+  for report.
 
 *SpeedyCGI-2.22-r2 (15 Sep 2010)
 
