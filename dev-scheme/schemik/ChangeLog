@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/schemik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/ChangeLog,v 1.1 2010/07/05 00:45:38 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/ChangeLog,v 1.2 2010/09/16 14:10:03 chiiph Exp $
+
+  16 Sep 2010; Tomas Touceda <chiiph@gentoo.org> schemik-1.2.40.0.ebuild,
+  +files/schemik-1.2.40.0-asneeded.patch:
+  Add as-needed patch, wrt bug 330623
 
 *schemik-1.2.40.0 (05 Jul 2010)
 

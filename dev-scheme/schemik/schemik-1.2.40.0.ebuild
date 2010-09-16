@@ -1,17 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/schemik-1.2.40.0.ebuild,v 1.1 2010/07/05 00:45:38 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/schemik-1.2.40.0.ebuild,v 1.2 2010/09/16 14:10:03 chiiph Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs versionator
+inherit toolchain-funcs versionator eutils
 
 DESCRIPTION="High-level lexically-scoped implicitly-parallel dialect of Scheme and Common LISP"
 HOMEPAGE="http://schemik.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-3"
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -22,6 +22,7 @@ RDEPEND="dev-libs/boehm-gc
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	sed -i -e 's/\(COMP_ARGS=\)-g \(-Wall -Winline\) -O2/\1$(CFLAGS) \2/' \
 	Makefile || die "patching Makefile failed"
 }
