@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.16 2010/09/16 16:31:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.17 2010/09/16 16:35:41 jer Exp $
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> sniffit-0.3.7-r2.ebuild:
+  Merge epatch calls. Do not install LICENSE. Fix quoting issues. Remove
+  testing cruft.
 
 *sniffit-0.3.7-r2 (16 Sep 2010)
 
