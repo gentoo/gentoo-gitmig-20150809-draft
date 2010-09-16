@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0.ebuild,v 1.2 2008/05/29 17:54:58 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0.ebuild,v 1.3 2010/09/16 17:30:08 scarabeus Exp $
 
 inherit multilib distutils
 
@@ -11,7 +11,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-RDEPEND="virtual/glut
+RDEPEND="media-libs/freeglut
 	dev-python/pygtkglext
 	>=dev-python/numpy-0.9.8
 	virtual/opengl

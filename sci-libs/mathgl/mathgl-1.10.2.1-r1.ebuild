@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.3 2010/08/31 14:45:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.4 2010/09/16 17:29:16 scarabeus Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ IUSE="doc fltk gif glut gsl hdf5 jpeg octave python qt4 wxwidgets"
 RDEPEND="media-libs/libpng
 	virtual/glu
 	python? ( dev-python/numpy )
-	glut? ( virtual/glut )
+	glut? ( media-libs/freeglut )
 	fltk? ( x11-libs/fltk:1.1 )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
