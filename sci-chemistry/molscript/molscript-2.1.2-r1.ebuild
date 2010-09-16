@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.3 2010/06/24 20:55:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.4 2010/09/16 17:27:21 scarabeus Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ DEPEND="
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/gd
-	virtual/glut
+	media-libs/freeglut
 	|| (	x11-libs/libXmu
 			x11-libs/libXext
 			x11-libs/libX11	)"

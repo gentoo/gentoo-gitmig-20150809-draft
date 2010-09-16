@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.3-r1.ebuild,v 1.6 2010/06/24 18:03:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.3-r1.ebuild,v 1.7 2010/09/16 17:28:20 scarabeus Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ DEPEND="
 		media-libs/libpng
 		media-video/mpeg-tools
 		sys-libs/zlib
-		virtual/glut
+		media-libs/freeglut
 		apbs? (
 			dev-libs/maloc
 			sci-chemistry/apbs

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gopenmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/ChangeLog,v 1.9 2010/05/20 11:40:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/ChangeLog,v 1.10 2010/09/16 17:25:29 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  gopenmol-3.00-r1.ebuild, gopenmol-3.00-r2.ebuild:
+  virtual/glut -> media-libs/glut
 
 *gopenmol-3.00-r2 (20 May 2010)
 
