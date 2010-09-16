@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpu/wmcpu-1.4.ebuild,v 1.3 2007/07/22 05:04:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpu/wmcpu-1.4.ebuild,v 1.4 2010/09/16 08:58:47 s4t4n Exp $
+
+EAPI="3"
 
 inherit flag-o-matic
 
@@ -20,6 +22,12 @@ DEPEND="x11-libs/libX11
 	x11-libs/libXpm"
 RDEPEND="${RDEPEND}
 	x11-proto/xextproto"
+
+src_prepare() {
+	#Honour Gentoo LDFLAGS, see bug #337523
+	sed -e 's/LDFLAGS/LIBS/g' -i Makefile
+	sed -e 's/\$(CFLAGS)/\$(LDFLAGS)/' -i Makefile
+}
 
 src_compile() {
 	# We then add the default -Wall from Makefile to CFLAGS
