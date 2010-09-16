@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.21 2010/09/11 14:49:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.22 2010/09/16 11:21:06 mabi Exp $
+
+  16 Sep 2010; Matti Bickel <mabi@gentoo.org> base-1.4.1-r1.ebuild:
+  fix php/gd dependency (bug #337034)
 
 *base-1.4.1-r1 (11 Sep 2010)
 

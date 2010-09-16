@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.1-r1.ebuild,v 1.1 2010/09/11 14:49:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.1-r1.ebuild,v 1.2 2010/09/16 11:21:06 mabi Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ want_apache
 DEPEND=">=sys-libs/zlib-1.2.1-r3"
 RDEPEND="${DEPEND}
 	dev-lang/php:5[session,mssql?,mysql?,postgres?]
-	gd? ( dev-lang/php[gd] dev-lang/php[gd-external] )
+	gd? ( || ( dev-lang/php[gd] dev-lang/php[gd-external] ) )
 	dev-lang/php
 	dev-php/adodb
 	dev-php/PEAR-Mail
