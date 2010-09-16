@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.7 2010/07/14 17:51:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.8 2010/09/16 16:32:12 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -29,7 +29,7 @@ RDEPEND="dev-libs/libpcre
 	opengl? (
 		virtual/opengl
 		virtual/glu
-		virtual/glut
+		media-libs/freeglut
 		media-libs/glew
 	)
 	xerces-c? ( dev-libs/xerces-c )

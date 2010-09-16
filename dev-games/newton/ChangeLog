@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/newton
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/ChangeLog,v 1.5 2010/04/08 18:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/ChangeLog,v 1.6 2010/09/16 16:33:05 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> newton-1.53.ebuild,
+  newton-2.00.ebuild:
+  virtual/glut -> media-libs/glut
 
 *newton-2.00 (08 Apr 2010)
 

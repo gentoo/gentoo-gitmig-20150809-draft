@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.6 2010/09/03 17:18:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.7 2010/09/16 16:35:35 scarabeus Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ RDEPEND="
 	examples? (
 		fltk? ( x11-libs/fltk:1.1[opengl] )
 		fox? ( x11-libs/fox:1.6[opengl] )
-		glut? ( virtual/glut )
+		glut? ( media-libs/freeglut )
 		gtk? ( x11-libs/gtkglext )
 		qt4? (
 			x11-libs/qt-core:4

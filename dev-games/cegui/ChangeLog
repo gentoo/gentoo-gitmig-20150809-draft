@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.28 2010/07/14 17:51:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.29 2010/09/16 16:32:12 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> cegui-0.6.2b.ebuild:
+  virtual/glut -> media-libs/glut
 
   14 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.6.2b.ebuild,
   +files/cegui-0.6.2b-dups.patch:
