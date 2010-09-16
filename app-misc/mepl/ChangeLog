@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mepl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.11 2009/09/23 16:05:32 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.12 2010/09/16 19:31:11 phosphan Exp $
+
+  16 Sep 2010; Patrick Kursawe <phosphan@gentoo.org> mepl-0.45.ebuild:
+  Respects LDFLAGS now, see bug #337653.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mepl-0.45.ebuild:
   Remove virtual/libc
