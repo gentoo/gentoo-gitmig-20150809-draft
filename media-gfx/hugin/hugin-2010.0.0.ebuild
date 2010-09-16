@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.5 2010/05/25 21:15:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.6 2010/09/16 17:08:19 scarabeus Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -29,7 +29,7 @@ CDEPEND="
 	media-libs/openexr
 	media-libs/tiff
 	sys-libs/zlib
-	virtual/glut
+	media-libs/freeglut
 	x11-libs/wxGTK:2.8[opengl,-odbc]
 	lapack? ( virtual/lapack )
 	sift? ( media-gfx/autopano-sift-C )"

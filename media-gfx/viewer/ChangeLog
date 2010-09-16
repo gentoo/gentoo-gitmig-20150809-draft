@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.9 2010/01/08 21:48:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/ChangeLog,v 1.10 2010/09/16 17:11:04 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> viewer-0.8.0.ebuild:
+  virtual/glut -> media-libs/glut
 
   08 Jan 2010; Patrick Lauer <patrick@gentoo.org> viewer-0.8.0.ebuild:
   Add ~amd64 keyword for #299773, fix deps

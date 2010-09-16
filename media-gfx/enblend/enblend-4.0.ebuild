@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.6 2010/06/21 15:57:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.7 2010/09/16 17:06:27 scarabeus Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="
 	>=media-libs/libpng-1.2.43
 	media-libs/plotutils[X]
 	media-libs/tiff
-	gpu? ( virtual/glut )
+	gpu? ( media-libs/freeglut )
 	openexr? ( >=media-libs/openexr-1.0 )"
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.31.0

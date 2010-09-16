@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.3 2008/12/22 20:45:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.4 2010/09/16 17:09:13 scarabeus Exp $
 
 inherit versionator
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/glut"
+DEPEND="media-libs/freeglut"
 
 S="${WORKDIR}"
 

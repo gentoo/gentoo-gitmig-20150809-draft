@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/viewer-0.8.0.ebuild,v 1.3 2010/01/08 21:48:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewer/viewer-0.8.0.ebuild,v 1.4 2010/09/16 17:11:04 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/opengl
-	virtual/glut"
+	media-libs/freeglut"
 
 src_prepare() {
 	sed -i configure.in \

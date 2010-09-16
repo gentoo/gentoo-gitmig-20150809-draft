@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.95 2010/09/05 13:33:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.96 2010/09/16 17:08:19 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  hugin-2010.0.0.ebuild, hugin-2010.2.0_beta1.ebuild,
+  hugin-2010.2.0_beta2.ebuild:
+  virtual/glut -> media-libs/glut
 
 *hugin-2010.2.0_beta2 (05 Sep 2010)
 

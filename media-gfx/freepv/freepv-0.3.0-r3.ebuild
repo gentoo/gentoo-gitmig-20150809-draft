@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r3.ebuild,v 1.2 2010/04/26 19:00:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r3.ebuild,v 1.3 2010/09/16 17:07:21 scarabeus Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="dev-libs/libxml2
 	media-libs/jpeg
 	media-libs/libpng
-	virtual/glut
+	media-libs/freeglut
 	sys-libs/zlib
 	x11-libs/libXmu
 	x11-libs/libXt
