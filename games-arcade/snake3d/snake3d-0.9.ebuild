@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.4 2008/07/24 18:21:04 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.5 2010/09/16 16:52:45 scarabeus Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="media-libs/sdl-net
 	virtual/opengl
-	virtual/glut
+	media-libs/freeglut
 	virtual/glu
 	media-libs/libsdl"
 
