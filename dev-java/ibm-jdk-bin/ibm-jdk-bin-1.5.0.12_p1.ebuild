@@ -1,13 +1,25 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.11.ebuild,v 1.4 2009/12/31 18:16:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.12_p1.ebuild,v 1.1 2010/09/16 21:39:16 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
 JDK_RELEASE=$(get_version_component_range 2-3)
 SERVICE_RELEASE=$(get_version_component_range 4)
 SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
-TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
+
+# versions ending with _pX translate to .X in distfile and fpX in SRC_URI
+if [[ $(get_version_component_count) == 5 ]]; then
+	FP_VERSION="$(get_version_component_range 5)"
+	FP_VERSION="${FP_VERSION#p}"
+	FP_WEB="-FP${FP_VERSION}"
+	FP_LINK="fp${FP_VERSION}"
+	TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.${FP_VERSION}"
+else
+	FP_WEB=""
+	FP_LINK=""
+	TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
+fi
 
 JDK_DIST_PREFIX="ibm-java2-sdk-${TGZ_PV}-linux"
 JAVACOMM_DIST_PREFIX="ibm-java2-javacomm-${TGZ_PV}-linux"
@@ -46,7 +58,7 @@ elif use ppc64; then
 	LINK_ARCH="ipseries64"
 fi
 
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}${FP_LINK}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.5"
 DESCRIPTION="IBM Java SE Development Kit"
@@ -66,7 +78,7 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 		)"
 LICENSE="IBM-J1.5"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
@@ -189,7 +201,7 @@ pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE} for your arch:"
+	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE}${FP_WEB} for your arch:"
 	einfo "(note that we switched to tgz format because it's now versioned)"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
@@ -201,7 +213,7 @@ pkg_nofetch() {
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE}${FP_WEB} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."
