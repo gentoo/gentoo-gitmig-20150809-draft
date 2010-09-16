@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/golly
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.1 2010/09/16 15:53:09 xmw Exp $
+
+*golly-2.1 (16 Sep 2010)
+
+  16 Sep 2010; Michael Weber <xmw@gentoo.org> +golly-2.1.ebuild,
+  +files/golly-2.1-as-needed.patch, +files/golly-2.1-perl-ldopts.patch,
+  +files/golly-2.1-python-amd64.patch,
+  +files/golly-separate-data-directory.patch, +metadata.xml:
+  Initial import from sunrise overlay. Thanks to Maks Verver
+  <maksverver@geocities.com> on bug #323219 for the ebuild and patches,
+  great work.
+
