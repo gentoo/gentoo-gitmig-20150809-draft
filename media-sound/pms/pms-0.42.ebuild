@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-0.42.ebuild,v 1.1 2010/05/14 16:41:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-0.42.ebuild,v 1.2 2010/09/16 07:10:28 wired Exp $
 
 EAPI=2
 
-inherit base
+inherit autotools
 
 DESCRIPTION="Practical Music Search: an open source ncurses client for mpd, written in C++"
 HOMEPAGE="http://pms.sourceforge.net/"
@@ -15,12 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="regex"
 
-DEPEND="
+RDEPEND="
 	sys-libs/ncurses
 	dev-libs/glib:2
 	regex? ( >=dev-libs/boost-1.36 )
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	dev-util/pkgconfig
+	${RDEPEND}
+"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
 	econf \

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.4 2010/05/14 16:41:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.5 2010/09/16 07:10:28 wired Exp $
+
+  16 Sep 2010; Alex Alexander <wired@gentoo.org> pms-0.42.ebuild,
+  pms-9999.ebuild:
+  fixed econf double-run and autotools mainainter-mode, added pkgconfig to
+  deps. bug #337563
 
 *pms-0.42 (14 May 2010)
 
