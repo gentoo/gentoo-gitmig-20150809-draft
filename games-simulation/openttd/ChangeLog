@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.98 2010/08/14 21:38:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.99 2010/09/16 19:52:58 mr_bones_ Exp $
+
+*openttd-1.0.4 (16 Sep 2010)
+
+  16 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +openttd-1.0.4.ebuild:
+  version bump
 
   14 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> openttd-1.0.3.ebuild:
   dedicated server needs some media as well (bug #332675)
