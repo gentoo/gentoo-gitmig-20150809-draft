@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5956 2010/09/15 08:53:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5957 2010/09/16 20:54:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1618,6 +1618,7 @@ media-gfx/digikam:addressbook - Add support for kdepim
 media-gfx/digikam:geolocation - Add support for marble
 media-gfx/digikam:glib - Enable support for liquid rescale tool
 media-gfx/digikam:lensfun - Enable support for lens-correnction library
+media-gfx/digikam:themedesigner - Build the digikam theme designer
 media-gfx/digikam:thumbnails - Enable thumbnails database support
 media-gfx/digikam:video - Pull in mplayerthumbs to enable video thumbnails
 media-gfx/enblend:gpu - GPU support for Enblend
