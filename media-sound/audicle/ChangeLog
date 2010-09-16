@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audicle
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.5 2009/08/13 21:58:37 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.6 2010/09/16 17:17:00 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  audicle-1.0.0.6-r1.ebuild:
+  virtual/glut -> media-libs/glut
 
   13 Aug 2009; Cédric Krier <cedk@gentoo.org> -audicle-1.0.0.6.ebuild:
   Remove old

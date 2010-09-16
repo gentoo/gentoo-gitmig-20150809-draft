@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tapestrea
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.3 2009/06/28 23:16:25 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.4 2010/09/16 17:18:45 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  tapestrea-0.1.0.5.ebuild:
+  virtual/glut -> media-libs/glut
 
 *tapestrea-0.1.0.5 (27 Jun 2009)
 

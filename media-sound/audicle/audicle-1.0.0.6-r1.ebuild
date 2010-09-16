@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6-r1.ebuild,v 1.1 2009/08/13 21:57:52 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6-r1.ebuild,v 1.2 2010/09/16 17:17:00 scarabeus Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic
@@ -17,7 +17,7 @@ IUSE="+alsa jack oss truetype"
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	media-libs/libsndfile
-	virtual/glut
+	media-libs/freeglut
 	virtual/opengl
 	virtual/glu
 	>=x11-libs/gtk+-2
