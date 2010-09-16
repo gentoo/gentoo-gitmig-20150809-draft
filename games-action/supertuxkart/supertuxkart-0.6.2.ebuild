@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.7 2010/07/14 21:30:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.8 2010/09/16 17:51:16 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -17,7 +17,7 @@ IUSE="nls"
 
 RDEPEND=">=media-libs/plib-1.8.4
 	virtual/opengl
-	virtual/glut
+	media-libs/freeglut
 	virtual/glu
 	net-libs/enet:0
 	media-libs/libmikmod
