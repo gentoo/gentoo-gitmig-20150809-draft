@@ -1,6 +1,10 @@
 # ChangeLog for games-util/atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.20 2010/04/13 14:22:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.21 2010/09/16 17:05:37 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  atlas-0.3.1_p20100302.ebuild:
+  virtual/glut -> media-libs/glut
 
   13 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   atlas-0.3.1_p20100302.ebuild:

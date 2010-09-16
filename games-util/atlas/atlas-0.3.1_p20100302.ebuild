@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20100302.ebuild,v 1.4 2010/05/10 19:10:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20100302.ebuild,v 1.5 2010/09/16 17:05:37 scarabeus Exp $
 
 EAPI=2
 inherit autotools flag-o-matic games
@@ -26,7 +26,7 @@ DEPEND="=games-simulation/flightgear-1.9*
 	x11-libs/libXt
 	x11-libs/libXmu
 	virtual/opengl
-	virtual/glut
+	media-libs/freeglut
 	net-misc/curl"
 
 src_prepare() {
