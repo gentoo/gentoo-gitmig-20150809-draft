@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tdfsb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.24 2009/02/09 17:16:58 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.25 2010/09/16 16:31:14 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> tdfsb-0.0.10.ebuild:
+  virtual/glut -> media-libs/glut
 
   09 Feb 2009; Christoph Mende <angelos@gentoo.org>
   +files/tdfsb-0.0.10-asneeded.patch, tdfsb-0.0.10.ebuild:

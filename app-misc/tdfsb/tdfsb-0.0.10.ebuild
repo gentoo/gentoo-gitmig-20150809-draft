@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.7 2009/02/09 17:18:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.8 2010/09/16 16:31:14 scarabeus Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="media-libs/smpeg
 	media-libs/sdl-image
-	virtual/glut"
+	media-libs/freeglut"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
