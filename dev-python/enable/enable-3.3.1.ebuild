@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.1.ebuild,v 1.2 2010/07/07 16:15:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.1.ebuild,v 1.3 2010/09/16 18:10:11 scarabeus Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-python/enthoughtbase-3.0.5
 	dev-python/reportlab
 	>=dev-python/traitsgui-3.4.0[wxwidgets]
 	>=media-libs/freetype-2
-	virtual/glu
+	virtual/opengl
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
