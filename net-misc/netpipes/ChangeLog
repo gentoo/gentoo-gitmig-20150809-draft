@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.6 2008/11/08 13:14:40 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.7 2010/09/16 15:19:53 jer Exp $
+
+*netpipes-4.2-r1 (16 Sep 2010)
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> +netpipes-4.2-r1.ebuild:
+  Respect LDFLAGS (bug #337648). Clean up.
 
   08 Nov 2008; Cédric Krier <cedk@gentoo.org>
   +files/netpipes-4.2-string.patch, netpipes-4.2.ebuild:
