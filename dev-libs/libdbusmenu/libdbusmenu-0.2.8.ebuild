@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.2 2010/09/14 07:41:41 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.3 2010/09/16 12:04:31 tampakrap Exp $
 
 EAPI=2
 
@@ -14,8 +14,6 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk test"
-
-RESTRICT="test"
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/dbus-glib
@@ -40,7 +38,9 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable gtk) \
-		$(use_enable test tests)
+		--disable-tests
+		# tests disabled, bug 315217
+		# $(use_enable test tests)
 }
 
 src_test() {
