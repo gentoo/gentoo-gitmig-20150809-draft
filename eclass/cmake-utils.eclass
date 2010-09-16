@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.58 2010/08/13 05:02:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.59 2010/09/16 16:04:11 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ WANT_CMAKE="${WANT_CMAKE:-always}"
 
 # @ECLASS-VARIABLE: CMAKE_MIN_VERSION
 # @DESCRIPTION:
-# Specify the minimum allowable version of cmake.  Defaults to 2.6.2-r1
+# Specify the minimum required CMake version.  Default is 2.6.2-r1
 CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.6.2-r1}"
 
 CMAKEDEPEND=""
@@ -144,13 +144,8 @@ _check_build_dir() {
 	if [[ -n ${CMAKE_IN_SOURCE_BUILD} ]]; then
 		# we build in source dir
 		CMAKE_BUILD_DIR="${CMAKE_USE_DIR}"
-	elif [[ ${CMAKE_USE_DIR} = ${WORKDIR} ]]; then
-		# out of tree build, but with $S=$WORKDIR, see bug #273949 for reason.
-		CMAKE_BUILD_DIR="${CMAKE_USE_DIR}/build"
 	else
-		# regular out of tree build
-		[[ ${1} = init || -d ${CMAKE_USE_DIR}_build ]] && SUF="_build" || SUF=""
-		CMAKE_BUILD_DIR="${CMAKE_USE_DIR}${SUF}"
+		: ${CMAKE_BUILD_DIR:=${WORKDIR}/${P}_build}
 	fi
 	echo ">>> Working in BUILD_DIR: \"$CMAKE_BUILD_DIR\""
 }
