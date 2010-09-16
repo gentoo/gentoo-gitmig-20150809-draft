@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-bootpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.21 2010/07/07 12:01:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.22 2010/09/16 22:09:13 xmw Exp $
+
+  16 Sep 2010; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Taking maintainership
 
 *netkit-bootpd-2.4-r1 (07 Jul 2010)
 
