@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ctwm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.20 2008/07/19 10:00:12 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.21 2010/09/16 14:46:03 jer Exp $
+
+*ctwm-3.8a (16 Sep 2010)
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> +ctwm-3.8a.ebuild:
+  Bump. Respect CC, CFLAGS, LDFLAGS. Disable GNOME support for now.
 
   19 Jul 2008; Alexis Ballier <aballier@gentoo.org> ctwm-3.7.ebuild:
   keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
