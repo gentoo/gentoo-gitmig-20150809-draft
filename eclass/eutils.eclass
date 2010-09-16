@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.349 2010/08/19 21:32:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.350 2010/09/16 22:38:25 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -202,7 +202,7 @@ EPATCH_FORCE="no"
 #
 # When processing directories, epatch will apply all patches that match:
 # @CODE
-#	${EPATCH_FORCE} == "yes"
+#	if ${EPATCH_FORCE} != "yes"
 #		??_${ARCH}_foo.${EPATCH_SUFFIX}
 #	else
 #		*.${EPATCH_SUFFIX}
