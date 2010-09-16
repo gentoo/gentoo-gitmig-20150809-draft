@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.2 2009/11/26 20:03:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.3 2010/09/16 17:51:34 scarabeus Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/fltk:1.1[opengl]
 	media-libs/alsa-lib
 	virtual/opengl
 	virtual/glu
-	virtual/glut"
+	media-libs/freeglut"
 DEPEND="${RDEPEND}
 	>=media-libs/plib-1.8.4"
 
