@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.93 2010/09/12 21:29:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.94 2010/09/16 10:05:09 wired Exp $
+
+*gtk-engines-qtcurve-1.6.1 (16 Sep 2010)
+
+  16 Sep 2010; Alex Alexander <wired@gentoo.org>
+  +gtk-engines-qtcurve-1.6.1.ebuild:
+  version bump
 
 *gtk-engines-qtcurve-1.6.0 (12 Sep 2010)
 
