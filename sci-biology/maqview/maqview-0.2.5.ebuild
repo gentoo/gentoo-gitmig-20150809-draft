@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/maqview-0.2.5.ebuild,v 1.2 2009/04/04 19:20:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/maqview-0.2.5.ebuild,v 1.3 2010/09/16 17:22:19 scarabeus Exp $
 
 inherit autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-DEPEND="virtual/glut"
+DEPEND="media-libs/freeglut"
 RDEPEND="${DEPEND}
 	sci-biology/maq"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.1 2010/03/13 12:44:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.2 2010/09/16 17:21:30 scarabeus Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="
 	media-libs/tiff
 	media-libs/libpng
 	opengl? ( media-libs/glew
-		virtual/glut
+		media-libs/freeglut
 		media-libs/mesa[motif] )"
 RDEPEND="${DEPEND}
 	sci-visualization/gnuplot"
