@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 2009 Pavel Stratil, senbonzakura.eu
+# Copyright 2009-2010 Pavel Stratil, senbonzakura.eu
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
@@ -62,6 +62,19 @@ start() {
 	    return 1
 	    ;;
 	esac
+
+
+	if [ ! -d /var/run/gearmand ] ; then
+		mkdir -p /var/run/gearmand
+		chown gearmand:nogroup /var/run/gearmand
+		chmod 0755 /var/run/gearmand
+	fi
+
+	if [ ! -d /var/log/gearmand ] ; then
+		mkdir -p /var/log/gearmand
+		chown gearmand:nogroup /var/log/gearmand
+		chmod 0755 /var/log/gearmand
+	fi
 
 	ebegin "Starting ${SVCNAME}"
         start-stop-daemon --pidfile /var/run/gearmand/gearmand.pid --start \

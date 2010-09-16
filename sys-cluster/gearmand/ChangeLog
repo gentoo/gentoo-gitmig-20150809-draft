@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/gearmand
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.8 2010/09/06 20:23:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.9 2010/09/16 19:43:07 flameeyes Exp $
+
+*gearmand-0.14 (16 Sep 2010)
+
+  16 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gearmand-0.14.ebuild, files/gearmand.init.d:
+  Version bump; also update init script to (re-)create run and log
+  directories if missing, with the proper permissions.
 
   06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -gearmand-0.11-r2.ebuild, gearmand-0.12.ebuild:
