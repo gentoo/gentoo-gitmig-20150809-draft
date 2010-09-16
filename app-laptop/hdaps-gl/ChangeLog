@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/hdaps-gl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.1 2008/09/22 21:08:18 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.2 2010/09/16 18:06:17 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  hdaps-gl-0.0.5.ebuild:
+  virtual/glu -> virtual/opengl
 
 *hdaps-gl-0.0.5 (22 Sep 2008)
 
