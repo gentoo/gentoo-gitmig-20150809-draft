@@ -1,5 +1,5 @@
---- sniffit.0.3.7.beta/Makefile.in.orig	2009-01-15 07:28:39.000000000 +0100
-+++ sniffit.0.3.7.beta/Makefile.in	2009-01-15 07:28:26.000000000 +0100
+--- a/sniffit.0.3.7.beta/Makefile.in	2009-01-15 07:28:39.000000000 +0100
++++ b/sniffit.0.3.7.beta/Makefile.in	2009-01-15 07:28:26.000000000 +0100
 @@ -10,9 +10,9 @@
  LIBS       = @LIBS@
  DEFS	   = @DEFS@
@@ -8,7 +8,7 @@
 +OBJ_FLAG   = $(CFLAGS) -c
  OBJ_OPT    = -I./libpcap -L./libpcap
 -EXE_FLAG   = -w -O2 -o sniffit
-+EXE_FLAG   = $(CFLAGS) -o sniffit
++EXE_FLAG   = $(CFLAGS) $(LDFLAGS) -o sniffit
  EXE_OPT    = -I./libpcap -L./libpcap -lpcap
  EXE_OBJ    = sn_packets.o sn_generation.o sn_interface.o sn_cfgfile.o \
               sn_logfile.o sn_resolv.o

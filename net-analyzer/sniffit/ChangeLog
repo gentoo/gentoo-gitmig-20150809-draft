@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.15 2009/01/15 06:37:32 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.16 2010/09/16 16:31:59 jer Exp $
+
+*sniffit-0.3.7-r2 (16 Sep 2010)
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> +sniffit-0.3.7-r2.ebuild,
+  +files/sniffit-0.3.7-flags.patch, files/sniffit-0.3.7-gentoo.patch,
+  +files/sniffit-0.3.7-misc.patch:
+  Respect LDFLAGS (bug #336981). Apply more recent Debian patch. Clean up
+  code. Clean up ebuild.
 
   15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
   +files/sniffit-0.3.7-gentoo.patch, sniffit-0.3.7-r1.ebuild:
