@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>freedesktop</herd>
-<longdescription lang="en">
-xdg-user-dirs is a tool to help manage 'well known' user directories like the
-desktop folder and the music folder
-</longdescription>
+  <herd>freedesktop</herd>
+  <maintainer>
+    <email>freedesktop-bugs@gentoo.org</email>
+  </maintainer>
 </pkgmetadata>
-
