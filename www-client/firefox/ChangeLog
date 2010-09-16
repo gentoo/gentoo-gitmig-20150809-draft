@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.14 2010/09/14 21:21:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.15 2010/09/16 12:03:09 anarchy Exp $
+
+*firefox-3.6.9-r1 (16 Sep 2010)
+
+  16 Sep 2010; Jory A. Pratt <bambam@gentoo.org> +firefox-3.6.9-r1.ebuild,
+  +files/fix_blocklist_support.patch:
+  Fix blocklist for proper version
 
   14 Sep 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.9.ebuild:
   Stable for HPPA (bug #336396).
