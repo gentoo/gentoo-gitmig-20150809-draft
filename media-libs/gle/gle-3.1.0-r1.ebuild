@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.7 2007/02/04 15:28:23 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.1.0-r1.ebuild,v 1.8 2010/09/16 17:13:03 scarabeus Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -18,7 +18,7 @@ IUSE="doc"
 
 DEPEND="virtual/opengl
 	virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	app-admin/eselect-opengl"
 
 src_unpack() {

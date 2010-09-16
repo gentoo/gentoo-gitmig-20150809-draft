@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/shivavg/shivavg-0.2.1.ebuild,v 1.2 2010/08/03 19:18:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/shivavg/shivavg-0.2.1.ebuild,v 1.3 2010/09/16 17:16:05 scarabeus Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ KEYWORDS="~arm ~amd64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/glu
-	virtual/glut
+	media-libs/freeglut
 	virtual/opengl"
 DEPEND="${RDEPEND}"
 

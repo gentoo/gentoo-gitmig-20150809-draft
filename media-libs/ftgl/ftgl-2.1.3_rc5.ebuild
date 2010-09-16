@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.11 2010/08/08 16:02:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.12 2010/09/16 17:12:05 scarabeus Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND=">=media-libs/freetype-2.0.9
 	virtual/opengl
 	virtual/glu
-	virtual/glut"
+	media-libs/freeglut"
 
 S=${WORKDIR}/${MY_P2}
 

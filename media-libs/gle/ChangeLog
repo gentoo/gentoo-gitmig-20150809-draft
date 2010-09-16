@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gle
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.29 2008/11/24 16:36:52 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.30 2010/09/16 17:13:04 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> gle-3.0.1-r2.ebuild,
+  gle-3.1.0-r1.ebuild:
+  virtual/glut -> media-libs/glut
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Re-assign to desktop-misc herd.
