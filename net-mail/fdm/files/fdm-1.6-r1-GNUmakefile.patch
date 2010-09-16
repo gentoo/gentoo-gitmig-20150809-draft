@@ -1,5 +1,5 @@
---- /tmp/GNUmakefile	2010-09-12 20:52:36.904000246 +0200
-+++ GNUmakefile	2010-09-12 21:00:52.209000216 +0200
+--- GNUmakefile	2010-09-16 16:39:16.656504861 +0200
++++ GNUmakefile	2010-09-16 16:47:13.451721307 +0200
 @@ -16,7 +16,7 @@
  CC= gcc
  
@@ -23,7 +23,7 @@
  ifdef COURIER
  CFLAGS+= -DLOOKUP_COURIER
 -LIBS+= -lcourierauth
-+LIBS+= -L/usr/lib64/courier-authlib -lcourierauth
++LIBS+= -L/usr/lib/courier-authlib -lcourierauth
  endif
  
  ifdef PCRE
@@ -36,7 +36,12 @@
  
  depend: $(SRCS)
  	$(CC) $(CPPFLAGS) -MM $(SRCS) > .depend
-@@ -115,10 +115,10 @@
+@@ -112,13 +112,15 @@
+ y.tab.c y.tab.h: parse.y
+ 	$(YACC) $(YFLAGS) $<
+ 
++lex.o: y.tab.h
++
  install:
  	$(INSTALLDIR) $(DESTDIR)$(PREFIX)/bin
  	$(INSTALLBIN) $(PROG) $(DESTDIR)$(PREFIX)/bin/$(PROG)
