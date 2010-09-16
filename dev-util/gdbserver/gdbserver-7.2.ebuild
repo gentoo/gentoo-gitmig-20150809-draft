@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.0.ebuild,v 1.2 2010/09/16 10:27:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.2.ebuild,v 1.1 2010/09/16 10:27:34 flameeyes Exp $
+
+EAPI=3
 
 inherit eutils flag-o-matic
 
@@ -13,7 +15,7 @@ DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://ftp.gnu.org/gnu/gdb/${MY_P}.tar.bz2
 	ftp://sources.redhat.com/pub/gdb/releases/${MY_P}.tar.bz2
-	${PATCH_VER:+!vanilla? ( mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.lzma )}"
+	${PATCH_VER:+!vanilla? ( mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.xz )}"
 
 LICENSE="GPL-2"
 
@@ -23,14 +25,13 @@ SLOT="0"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	${PATCH_VER:+!vanilla? ( || ( app-arch/xz-utils app-arch/lzma-utils ) )}"
+	${PATCH_VER:+!vanilla? ( app-arch/xz-utils )}"
 RDEPEND="${RDEPEND}
 	!>=sys-devel/gdb-7.2"
 
 S="${WORKDIR}/${MY_P}/gdb/gdbserver"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${WORKDIR}"/${MY_P}
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 }
@@ -44,12 +45,11 @@ gdb_branding() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	strip-unsupported-flags
 	econf \
 		--with-pkgversion="$(gdb_branding)" \
 		--with-bugurl='http://bugs.gentoo.org/'
-	emake || die
 }
 
 src_install() {
