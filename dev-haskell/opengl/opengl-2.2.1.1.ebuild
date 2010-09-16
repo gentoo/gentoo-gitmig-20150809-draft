@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/opengl-2.2.1.1.ebuild,v 1.4 2008/10/03 23:08:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/opengl-2.2.1.1.ebuild,v 1.5 2010/09/16 16:36:07 scarabeus Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -20,6 +20,6 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.4
 	virtual/opengl
 	virtual/glu
-	virtual/glut"
+	media-libs/freeglut"
 
 S="${WORKDIR}/${MY_P}"
