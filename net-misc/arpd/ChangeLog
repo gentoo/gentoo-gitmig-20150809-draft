@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.14 2010/02/16 21:08:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.15 2010/09/16 22:47:15 xmw Exp $
+
+  16 Sep 2010; Michael Weber <xmw@gentoo.org> arpd-0.2-r1.ebuild,
+  +files/arpd-0.2-buildsystem-libevent-test.patch, metadata.xml:
+  Taking maintainership. Fix libevent test in configure.in (bug #337481).
 
 *arpd-0.2-r1 (16 Feb 2010)
 
