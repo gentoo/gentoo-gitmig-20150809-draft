@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.10 2008/12/17 18:48:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.11 2010/09/16 17:34:48 scarabeus Exp $
 
 inherit autotools eutils
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXi
 	x11-libs/libXxf86vm
 	media-libs/imlib2
-	virtual/glut
+	media-libs/freeglut
 	media-libs/freetype"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3dfm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.7 2007/02/09 06:15:56 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.8 2010/09/16 17:36:37 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> 3dfm-1.0.ebuild:
+  virtual/glut -> media-libs/glut
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

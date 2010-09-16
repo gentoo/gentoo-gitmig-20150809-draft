@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/3dfm-1.0.ebuild,v 1.7 2010/07/21 14:29:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/3dfm-1.0.ebuild,v 1.8 2010/09/16 17:36:37 scarabeus Exp $
 
 DESCRIPTION="OpenGL-based 3D File Manager"
 HOMEPAGE="http://sourceforge.net/projects/innolab/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
-	virtual/glut"
+	media-libs/freeglut"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

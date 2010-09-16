@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/3dfb-0.6.1.ebuild,v 1.7 2007/07/02 14:56:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/3dfb-0.6.1.ebuild,v 1.8 2010/09/16 17:35:43 scarabeus Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
-	virtual/glut
+	media-libs/freeglut
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
