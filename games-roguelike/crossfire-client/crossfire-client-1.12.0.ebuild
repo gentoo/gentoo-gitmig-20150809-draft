@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.4 2010/02/11 14:17:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.5 2010/09/16 16:57:08 scarabeus Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	gtk? ( x11-libs/gtk+:2
 		sdl? ( media-libs/libsdl[video]
 			media-libs/sdl-image ) )
-	virtual/glut
+	media-libs/freeglut
 	media-libs/libpng
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
