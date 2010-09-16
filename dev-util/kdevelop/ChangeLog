@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.204 2010/09/14 17:12:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.205 2010/09/16 15:28:25 josejx Exp $
+
+  16 Sep 2010; Joseph Jezak <josejx@gentoo.org> kdevelop-4.0.2.ebuild:
+  Marked ~ppc/~ppc64 for bug #274175.
 
   14 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   kdevelop-4.0.1.ebuild:
