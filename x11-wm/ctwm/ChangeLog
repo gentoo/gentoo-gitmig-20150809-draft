@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ctwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.21 2010/09/16 14:46:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.22 2010/09/16 15:06:17 jer Exp $
+
+  16 Sep 2010; Jeroen Roovers <jer@gentoo.org> ctwm-3.8a.ebuild:
+  Remove unused USE flag.
 
 *ctwm-3.8a (16 Sep 2010)
 
