@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.174 2010/09/15 20:37:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.175 2010/09/17 11:14:58 grozin Exp $
+
+  17 Sep 2010; Andrey Grozin <grozin@gentoo.org> package.use.mask:
+  Masking clozurecl USE flag for maxima (formerly it was openmcl)
 
   15 Sep 2010; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Masking bzip2 useflag for dovecot-1
