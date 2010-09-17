@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/transaction
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/transaction/ChangeLog,v 1.6 2010/05/30 19:42:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/transaction/ChangeLog,v 1.7 2010/09/17 14:46:32 arfrever Exp $
+
+  17 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -transaction-1.1.0.ebuild:
+  Delete.
 
 *transaction-1.1.0 (30 May 2010)
 
