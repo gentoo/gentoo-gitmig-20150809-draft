@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/cmfphotoalbum-0.5.0.ebuild,v 1.4 2006/01/27 06:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/cmfphotoalbum-0.5.0.ebuild,v 1.5 2010/09/17 16:46:00 arfrever Exp $
 
 inherit zproduct
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc x86"
 
 RDEPEND="=net-zope/cmfphoto-${PV}*
-	>=net-zope/btreefolder2-0.5.0"
+	|| ( =net-zope/zope-2.10* =net-zope/zope-2.9* =net-zope/zope-2.8* )"
 
 ZPROD_LIST="CMFPhotoAlbum"
 
