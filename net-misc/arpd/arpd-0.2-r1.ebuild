@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2-r1.ebuild,v 1.2 2010/09/16 22:47:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2-r1.ebuild,v 1.3 2010/09/17 05:01:33 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}
 src_prepare() {
 	epatch "${FILESDIR}"/arpd.c.patch
 	epatch "${FILESDIR}"/${P}-libevent.patch
-	
+
 	#fix bug 337481, replace test on libevent.a with libevent.so
 	epatch "${FILESDIR}"/${P}-buildsystem-libevent-test.patch
 
