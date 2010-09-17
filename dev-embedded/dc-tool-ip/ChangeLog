@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/dc-tool-ip
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.6 2007/02/09 01:10:51 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.7 2010/09/17 07:02:34 vapier Exp $
+
+  17 Sep 2010; Mike Frysinger <vapier@gentoo.org> dc-tool-ip-1.0.4.ebuild,
+  +files/dc-tool-ip-1.0.4-headers.patch:
+  Respect more build env settings #240172 & #335742 by Diego E. Pettenò. Fix
+  some missing header warnings.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
