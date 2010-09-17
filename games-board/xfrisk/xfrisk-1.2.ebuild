@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.8 2006/12/01 21:05:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.9 2010/09/17 06:28:13 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="The RISK board game"
@@ -20,17 +21,18 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/XFrisk
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
+		-e '/^CC=/d' \
+		-e '/^LDFLAGS=/d' \
+		-e "/^CFLAGS=/s|=.*|=${CFLAGS}|" \
 		-e "s:/usr/local:${GAMES_PREFIX}:" \
 		Makefile \
-		|| die "sed failed"
+		|| die
 }
 
 src_install() {
-	emake PREFIX="${D}/${GAMES_PREFIX}" install || die "emake install failed"
+	emake PREFIX="${D}/${GAMES_PREFIX}" install || die
 	dodoc BUGS ChangeLog FAQ TODO
 	prepgamesdirs
 }
