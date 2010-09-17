@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkglextmm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.19 2009/09/16 21:05:02 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.20 2010/09/17 10:51:38 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  gtkglextmm-1.2.0-r1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -gtkglextmm-1.0.1.ebuild, -gtkglextmm-1.2.0.ebuild:

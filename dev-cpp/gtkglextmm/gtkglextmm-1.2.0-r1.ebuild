@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.2.0-r1.ebuild,v 1.4 2008/08/10 11:18:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.2.0-r1.ebuild,v 1.5 2010/09/17 10:51:38 scarabeus Exp $
 
 inherit gnome2
 
@@ -17,8 +17,7 @@ RDEPEND=">=x11-libs/gtkglext-1
 	>=dev-libs/libsigc++-2.0
 	>=dev-cpp/glibmm-2.4
 	>=dev-cpp/gtkmm-2.4
-	virtual/opengl
-	virtual/glu"
+	virtual/opengl"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
