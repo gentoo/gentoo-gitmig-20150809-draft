@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0017.0705.2010.ebuild,v 1.2 2010/09/15 15:48:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0017.0705.2010.ebuild,v 1.3 2010/09/17 13:40:13 chithanh Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND="virtual/linux-sources"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
