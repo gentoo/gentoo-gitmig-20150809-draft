@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/airtraf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.15 2009/12/17 21:22:54 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.16 2010/09/17 03:23:44 jer Exp $
+
+*airtraf-1.1-r1 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> -airtraf-1.0.ebuild,
+  airtraf-1.1.ebuild, +airtraf-1.1-r1.ebuild, +files/airtraf-1.1.patch,
+  -files/airtraf.patch:
+  Clean up patch. Clean up old. Replace sed scripts with make variables,
+  respect LDFLAGS (bug #337678), CXX, too.
 
   17 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> airtraf-1.1.ebuild,
   metadata.xml:
