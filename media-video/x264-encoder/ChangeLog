@@ -1,6 +1,10 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.37 2010/09/13 15:44:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.38 2010/09/17 09:47:24 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  x264-encoder-0.0.20100605.ebuild:
+  stable x86, security bug 332361
 
   13 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   x264-encoder-0.0.20100605.ebuild:
