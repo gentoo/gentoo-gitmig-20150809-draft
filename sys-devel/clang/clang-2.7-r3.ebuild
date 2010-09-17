@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7.ebuild,v 1.1 2010/04/27 12:08:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r3.ebuild,v 1.1 2010/09/17 14:35:59 voyageur Exp $
 
-EAPI=2
+EAPI=3
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python
+inherit eutils multilib python
 
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
@@ -17,8 +17,8 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tgz
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug +static-analyzer test"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos"
+IUSE="debug +static-analyzer system-cxx-headers test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )
@@ -32,6 +32,13 @@ src_prepare() {
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+
+	# Fix toolchain lookup for Darwin/Prefix.
+	epatch "${FILESDIR}"/${PN}-2.7-darwin-prefix.patch
+	sed -e "s|@GENTOO_PORTAGE_CHOST@|${CHOST%%-darwin*}-darwin|g" \
+		-e "s|@GENTOO_PORTAGE_EPREFIX@|${EPREFIX}|g" \
+		-i tools/clang/lib/Driver/ToolChains.cpp \
+		|| die "fixing toolchain lookup"
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
@@ -50,8 +57,8 @@ src_prepare() {
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
 	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(PROJ_prefix)/share/doc/'${PF}, \
-		-e 's,^PROJ_etcdir.*,PROJ_etcdir := /etc/llvm,' \
-		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir), \
+		-e 's,^PROJ_etcdir.*,PROJ_etcdir := '"${EPREFIX}"'/etc/llvm,' \
+		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir)/llvm, \
 		-i Makefile.config.in || die "Makefile.config sed failed"
 
 	einfo "Fixing rpath"
@@ -60,7 +67,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local CONF_FLAGS=""
+	local CONF_FLAGS="--enable-shared"
 
 	if use debug; then
 		CONF_FLAGS="${CONF_FLAGS} --disable-optimized"
@@ -73,12 +80,27 @@ src_configure() {
 			--disable-expensive-checks"
 	fi
 
+	# Setup the search path to include the Prefix includes
+	if use prefix ; then
+		CONF_FLAGS="${CONF_FLAGS} \
+			--with-c-include-dirs=${EPREFIX}/usr/include:/usr/include"
+	fi
+
 	if use amd64; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
 	# Skip llvm-gcc parts even if installed
 	CONF_FLAGS="${CONF_FLAGS} --with-llvmgccdir=/dev/null"
+
+	if use system-cxx-headers; then
+		# Try to get current C++ headers path
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=$(gcc-config -X| cut -d: -f1 | sed '/-v4$/! s,$,/include/g++-v4,')"
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
+		if has_multilib_profile; then
+			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
+		fi
+	fi
 
 	econf ${CONF_FLAGS} || die "econf failed"
 }
@@ -118,14 +140,32 @@ src_install() {
 		install-scan-view() {
 			insinto "$(python_get_sitedir)"/clang
 			doins Reporter.py Resources ScanView.py startfile.py
-			touch "${D}"/"$(python_get_sitedir)"/clang/__init__.py
+			touch "${ED}"/"$(python_get_sitedir)"/clang/__init__.py
 		}
 		python_execute_function install-scan-view
+	fi
+
+	# Fix install_names on Darwin.  The build system is too complicated
+	# to just fix this, so we correct it post-install
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		for lib in libCIndex.dylib ; do
+			install_name_tool -id "${EPREFIX}"/usr/lib/llvm/${lib} \
+				"${ED}"/usr/lib/llvm/${lib}
+		done
 	fi
 }
 
 pkg_postinst() {
 	python_mod_optimize clang
+	if use system-cxx-headers; then
+		elog "C++ headers search path is hardcoded to the active gcc profile one"
+		elog "If you change the active gcc profile, or update gcc to a new version,"
+		elog "you will have to remerge this package to update the search path"
+	else
+		elog "If clang++ fails to find C++ headers on your system,"
+		elog "you can remerge clang with USE=system-cxx-headers to use C++ headers"
+		elog "from the active gcc profile"
+	fi
 }
 
 pkg_postrm() {

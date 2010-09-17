@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.22 2010/09/08 17:34:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.23 2010/09/17 14:35:59 voyageur Exp $
+
+*clang-2.7-r3 (17 Sep 2010)
+
+  17 Sep 2010; Bernard Cafarelli <voyageur@gentoo.org> -clang-2.7.ebuild,
+  +clang-2.7-r3.ebuild:
+  Enable shared library, move libs and plugins to fix bug #337467
 
   08 Sep 2010; Fabian Groffen <grobian@gentoo.org> clang-2.7-r2.ebuild,
   +files/clang-2.7-darwin-prefix.patch:
