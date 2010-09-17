@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.1 2010/09/03 06:12:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.2 2010/09/17 07:50:37 pva Exp $
 
 EAPI=3
 
@@ -62,6 +62,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
 	"${FILESDIR}/${PN}-0.9.8.2-syslibs.patch"
+	"${FILESDIR}/${PN}-0.9.8.2-origin-build-failure.patch"
 	)
 
 pkg_setup() {

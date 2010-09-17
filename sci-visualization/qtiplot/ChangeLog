@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.66 2010/09/03 06:12:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.67 2010/09/17 07:50:37 pva Exp $
+
+  17 Sep 2010; Peter Volkov <pva@gentoo.org> qtiplot-0.9.8.2.ebuild,
+  +files/qtiplot-0.9.8.2-origin-build-failure.patch:
+  Fix build failure: src/origin/importOPJ.cpp:2162: error: unknown escape
+  sequence '\p'
 
 *qtiplot-0.9.8.2 (03 Sep 2010)
 
