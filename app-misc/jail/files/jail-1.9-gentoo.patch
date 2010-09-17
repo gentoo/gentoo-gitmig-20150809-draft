@@ -1,6 +1,5 @@
-diff -urN install.sh install.sh
---- install.sh	Fri Oct 26 11:37:07 2001
-+++ install.sh	Sat Jul 20 04:43:09 2002
+--- a/install.sh	Fri Oct 26 11:37:07 2001
++++ b/install.sh	Sat Jul 20 04:43:09 2002
 @@ -23,7 +23,7 @@
  #
  ##############################################################################
@@ -118,9 +117,8 @@ diff -urN install.sh install.sh
  
  }
  
-diff -urN src/preinstall.sh src/preinstall.sh
---- src/preinstall.sh	Fri Oct 26 11:36:09 2001
-+++ src/preinstall.sh	Sat Jul 20 04:44:11 2002
+--- a/src/preinstall.sh	Fri Oct 26 11:36:09 2001
++++ b/src/preinstall.sh	Sat Jul 20 04:44:11 2002
 @@ -23,7 +23,7 @@
  #
  ##############################################################################

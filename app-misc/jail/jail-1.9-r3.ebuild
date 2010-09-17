@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.14 2010/09/17 05:36:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r3.ebuild,v 1.1 2010/09/17 05:36:42 jer Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic
 
@@ -11,19 +13,19 @@ SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/perl
 	dev-util/strace"
 
-src_unpack() {
-	unpack ${PN}_${PV}.tar.gz
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch || die "failed to apply patch"
-	epatch "${FILESDIR}"/${P}-wrongshell.patch || die "failed to apply patch"
-	epatch "${FILESDIR}"/${P}-multiuser-rsa.patch || die "failed to apply patch"
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-wrongshell.patch \
+		"${FILESDIR}"/${P}-multiuser-rsa.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {

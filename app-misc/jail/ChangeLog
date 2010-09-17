@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/jail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.25 2009/09/23 16:03:58 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.26 2010/09/17 05:36:42 jer Exp $
+
+*jail-1.9-r3 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> jail-1.9-r2.ebuild,
+  +jail-1.9-r3.ebuild, +files/jail-1.9-gentoo.patch,
+  +files/jail-1.9-ldflags.patch, +files/jail-1.9-multiuser-rsa.patch,
+  +files/jail-1.9-wrongshell.patch, -files/jail-gentoo.diff,
+  -files/multiuser-rsa.patch, -files/wrongshell.patch:
+  Clean up patches (including their names). Respect LDFLAGS (bug #335679).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> jail-1.9-r2.ebuild:
   Remove virtual/libc
