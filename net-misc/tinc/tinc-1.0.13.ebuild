@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.13.ebuild,v 1.1 2010/07/18 10:04:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.13.ebuild,v 1.2 2010/09/17 09:48:50 robbat2 Exp $
 
 EAPI=2
 
@@ -15,8 +15,7 @@ IUSE="+lzo +zlib"
 
 DEPEND=">=dev-libs/openssl-0.9.7c
 	lzo? ( dev-libs/lzo:2 )
-	zlib? ( >=sys-libs/zlib-1.1.4-r2 )
-	kernel_linux? ( virtual/linux-sources )"
+	zlib? ( >=sys-libs/zlib-1.1.4-r2 )"
 
 src_configure() {
 	econf  --enable-jumbograms $(use_enable lzo) $(use_enable zlib)  || die
