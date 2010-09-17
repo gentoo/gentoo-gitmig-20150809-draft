@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.4-r1.ebuild,v 1.1 2010/09/17 09:00:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.4-r1.ebuild,v 1.2 2010/09/17 09:13:01 haubi Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
-DEPEND=">=sys-kernel/linux-headers-2.6.11"
+DEPEND="!prefix? ( >=sys-kernel/linux-headers-2.6.11 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2-makefile-fixup.patch
