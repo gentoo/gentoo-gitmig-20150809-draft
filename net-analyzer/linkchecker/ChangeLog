@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.43 2010/04/30 15:23:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.44 2010/09/17 09:55:39 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  linkchecker-5.2.ebuild:
+  stable x86, bug 334735
 
 *linkchecker-5.2 (30 Apr 2010)
 
