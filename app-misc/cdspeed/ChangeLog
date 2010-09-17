@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdspeed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.24 2010/09/17 05:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/ChangeLog,v 1.25 2010/09/17 05:21:18 jer Exp $
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> cdspeed-0.4-r1.ebuild:
+  Respect upstream CFLAGS too.
 
 *cdspeed-0.4-r1 (17 Sep 2010)
 

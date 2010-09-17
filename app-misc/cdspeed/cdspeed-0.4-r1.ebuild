@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4-r1.ebuild,v 1.1 2010/09/17 05:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4-r1.ebuild,v 1.2 2010/09/17 05:21:18 jer Exp $
 
 EAPI="2"
 
@@ -25,7 +25,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CC=$(tc-getCC) || die "emake failed"
+	emake CFLAGS="${CFLAGS} -Wall -Wno-unused" CC=$(tc-getCC) \
+		|| die "emake failed"
 }
 
 src_install() {
