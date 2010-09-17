@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/sqliteman-1.2.2.ebuild,v 1.1 2010/06/27 20:42:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/sqliteman-1.2.2.ebuild,v 1.2 2010/09/17 11:46:26 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils cmake-utils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4

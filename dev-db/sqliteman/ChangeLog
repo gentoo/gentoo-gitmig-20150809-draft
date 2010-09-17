@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqliteman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/ChangeLog,v 1.5 2010/06/27 20:42:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/ChangeLog,v 1.6 2010/09/17 11:46:26 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -sqliteman-1.2.1.ebuild, sqliteman-1.2.2.ebuild:
+  Stable 1.2.2 on amd64 and x86. Drop older.
 
 *sqliteman-1.2.2 (27 Jun 2010)
 
