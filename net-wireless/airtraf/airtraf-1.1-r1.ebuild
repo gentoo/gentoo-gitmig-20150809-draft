@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r1.ebuild,v 1.1 2010/09/17 03:23:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r1.ebuild,v 1.2 2010/09/17 03:28:08 jer Exp $
 
 EAPI="2"
 
@@ -17,9 +17,10 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="net-libs/libpcap"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}.patch
+	epatch "${FILESDIR}"/${P}.patch
 }
 
 src_compile() {
@@ -34,7 +35,6 @@ src_compile() {
 }
 
 src_install () {
-	newdoc ${S}/docs/airtraf_doc.html airtraf_documentation.html
-
-	dobin ${S}/src/airtraf || die
+	dobin src/airtraf || die
+	newdoc docs/airtraf_doc.html airtraf_documentation.html
 }
