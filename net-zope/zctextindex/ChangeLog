@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zctextindex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zctextindex/ChangeLog,v 1.1 2010/09/17 22:10:38 arfrever Exp $
+
+*zctextindex-2.13.0 (17 Sep 2010)
+
+  17 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zctextindex-2.13.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
