@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/nouveau-drm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.13 2010/09/02 14:40:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.14 2010/09/17 13:39:01 chithanh Exp $
+
+  17 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  nouveau-drm-20100316.ebuild, nouveau-drm-20100520.ebuild,
+  nouveau-drm-20100811.ebuild:
+  Drop dependency on virtual/linux-sources as pointed out by robbat2
 
   02 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   nouveau-drm-20100316.ebuild, nouveau-drm-20100520.ebuild,

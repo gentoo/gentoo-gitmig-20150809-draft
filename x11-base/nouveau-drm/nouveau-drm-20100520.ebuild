@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100520.ebuild,v 1.2 2010/09/02 14:40:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100520.ebuild,v 1.3 2010/09/17 13:39:01 chithanh Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND="virtual/linux-sources"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/master
