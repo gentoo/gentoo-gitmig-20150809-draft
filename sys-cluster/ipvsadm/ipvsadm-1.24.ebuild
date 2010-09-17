@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.26 2009/11/21 21:59:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.27 2010/09/17 09:39:16 robbat2 Exp $
 
 inherit linux-info toolchain-funcs
 
@@ -14,8 +14,7 @@ KEYWORDS="amd64 ia64 ~ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
-DEPEND="${RDEPEND}
-	virtual/linux-sources"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if kernel_is 2 4; then
