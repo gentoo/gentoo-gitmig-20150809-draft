@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.15 2010/07/23 19:05:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.16 2010/09/17 10:10:51 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org> dulwich-0.6.1.ebuild:
+  stable x86, bug 337134
 
 *dulwich-0.6.1 (23 Jul 2010)
 
