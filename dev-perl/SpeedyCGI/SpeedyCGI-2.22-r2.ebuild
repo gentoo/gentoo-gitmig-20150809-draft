@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22-r2.ebuild,v 1.2 2010/09/16 20:34:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22-r2.ebuild,v 1.3 2010/09/17 05:01:06 mr_bones_ Exp $
 
 EAPI="2"
 inherit perl-module
@@ -36,4 +36,3 @@ PATCHES=( "${DISTDIR}/speedy-error.patch"
 "${FILESDIR}/${P}-ldflags.patch"
 "${FILESDIR}/${P}-parallel-build.patch"
 )
-
