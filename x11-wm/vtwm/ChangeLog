@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/vtwm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.10 2007/07/02 10:54:16 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/ChangeLog,v 1.11 2010/09/17 00:27:45 jer Exp $
+
+*vtwm-5.4.7-r1 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> -vtwm-5.4.7.ebuild,
+  +vtwm-5.4.7-r1.ebuild, +files/vtwm-5.4.7-NO_SOUND_SUPPORT.patch,
+  +files/vtwm-5.4.7-do-not-rm.patch,
+  -files/vtwm-5.4.7-dont-use-local-path.patch:
+  Respect LDFLAGS (bug #335807), CC, CFLAGS. Fix USE=-rplay. Do not rebuild
+  in src_install(). Have flex and bison in DEPEND. Replace local path patch
+  with simple sed scripts. Run make depend in src_configure() too so we can
+  have parallel make in src_compile().
 
 *vtwm-5.4.7 (02 Jul 2007)
 

@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.7.ebuild,v 1.1 2007/07/02 10:54:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.7-r1.ebuild,v 1.1 2010/09/17 00:27:45 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="one of many TWM descendants and implements a Virtual Desktop"
 HOMEPAGE="http://www.vtwm.org/"
@@ -20,24 +22,40 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	rplay? ( media-sound/rplay )"
 DEPEND="${RDEPEND}
+	sys-devel/bison
+	sys-devel/flex
 	x11-misc/imake
 	app-text/rman
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-dont-use-local-path.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-do-not-rm.patch
+	sed -i Imakefile \
+		-e 's:-L/usr/local/lib::g' \
+		-e 's:-I/usr/local/include::g' \
+		|| die "sed Imakefile"
 	if ! use rplay ; then
-		sed -e "s:^XCOMM\ \(.*NO_SOUND\):\1:" \
-			-e "s:^\(SOUNDLIB.*\):XCOMM\ \1:" -i Imakefile || die "sed failed"
+		sed -i Imakefile \
+			-e 's:^XCOMM\ \(.*NO_SOUND\):\1:' \
+			-e 's:^\(SOUNDLIB.*\):XCOMM\ \1:' \
+			-e 's:sound\..::g' \
+			|| die "sed Imakefile"
+		epatch "${FILESDIR}"/${P}-NO_SOUND_SUPPORT.patch
 	fi
 }
 
-src_compile() {
+src_configure() {
 	xmkmf || die "xmkmf failed"
-	emake -j1 || die "emake failed"
+	emake depend || die "emake depend"
+}
+
+src_compile() {
+	emake \
+		CC=$(tc-getCC) \
+		CCOPTIONS="${CFLAGS}" \
+		EXTRA_LDOPTIONS="${LDFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
