@@ -1,6 +1,32 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.97 2010/08/31 16:15:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.98 2010/09/17 14:53:52 scarabeus Exp $
+
+*tuxonice-sources-2.6.35-r2 (17 Sep 2010)
+*tuxonice-sources-2.6.34-r5 (17 Sep 2010)
+*tuxonice-sources-2.6.32-r16 (17 Sep 2010)
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -tuxonice-sources-2.6.30-r6.ebuild, -tuxonice-sources-2.6.30-r11.ebuild,
+  -tuxonice-sources-2.6.30-r12.ebuild, -tuxonice-sources-2.6.30-r13.ebuild,
+  -tuxonice-sources-2.6.31-r11.ebuild, -tuxonice-sources-2.6.31-r12.ebuild,
+  -tuxonice-sources-2.6.31-r13.ebuild, -tuxonice-sources-2.6.32-r7.ebuild,
+  -tuxonice-sources-2.6.32-r8.ebuild, -tuxonice-sources-2.6.32-r9.ebuild,
+  -tuxonice-sources-2.6.32-r10.ebuild, -tuxonice-sources-2.6.32-r11.ebuild,
+  -tuxonice-sources-2.6.32-r12.ebuild, -tuxonice-sources-2.6.32-r13.ebuild,
+  -tuxonice-sources-2.6.32-r14.ebuild, -tuxonice-sources-2.6.32-r15.ebuild,
+  +tuxonice-sources-2.6.32-r16.ebuild, -tuxonice-sources-2.6.33-r1.ebuild,
+  -tuxonice-sources-2.6.33-r2.ebuild, -tuxonice-sources-2.6.33-r3.ebuild,
+  -tuxonice-sources-2.6.33-r4.ebuild, -tuxonice-sources-2.6.33-r5.ebuild,
+  -tuxonice-sources-2.6.34.ebuild, -tuxonice-sources-2.6.34-r1.ebuild,
+  -tuxonice-sources-2.6.34-r2.ebuild, -tuxonice-sources-2.6.34-r3.ebuild,
+  -tuxonice-sources-2.6.34-r4.ebuild, +tuxonice-sources-2.6.34-r5.ebuild,
+  -tuxonice-sources-2.6.35.ebuild, -tuxonice-sources-2.6.35-r1.ebuild,
+  +tuxonice-sources-2.6.35-r2.ebuild, metadata.xml:
+  Fix for exploit: IA32 Syscall Entry Point Privilege Escalation
+  (CVE-2010-3301). Cleanup old acected versions. Stable the kernels i was
+  able to boot on and match the stable series we have on gentoo-sources.
+  Bump the tuxonice version to 3.2_rc2. Add myself as maintainer.
 
 *tuxonice-sources-2.6.34-r4 (31 Aug 2010)
 *tuxonice-sources-2.6.32-r15 (31 Aug 2010)
