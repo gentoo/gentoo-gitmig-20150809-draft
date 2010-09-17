@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-hppa64
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.18 2010/08/02 23:24:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.19 2010/09/17 17:41:51 jer Exp $
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org>
+  binutils-hppa64-2.20.1.ebuild:
+  Stable for HPPA too.
 
   02 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   binutils-hppa64-2.20.1.ebuild:
