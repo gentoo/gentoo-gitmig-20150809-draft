@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.98 2010/09/17 14:53:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.99 2010/09/17 19:28:21 scarabeus Exp $
+
+*tuxonice-sources-2.6.35-r3 (17 Sep 2010)
+*tuxonice-sources-2.6.34-r6 (17 Sep 2010)
+*tuxonice-sources-2.6.32-r17 (17 Sep 2010)
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -tuxonice-sources-2.6.32-r16.ebuild, +tuxonice-sources-2.6.32-r17.ebuild,
+  -tuxonice-sources-2.6.34-r5.ebuild, +tuxonice-sources-2.6.34-r6.ebuild,
+  -tuxonice-sources-2.6.35-r2.ebuild, +tuxonice-sources-2.6.35-r3.ebuild:
+  Revbump kernels one more time since upstream suck alot and dont return 404
+  but some http code so on mirrors there are broken patch files, and ebuild
+  does not die. (i tested with already fetched source, but for commit i use
+  different machine :/)
 
 *tuxonice-sources-2.6.35-r2 (17 Sep 2010)
 *tuxonice-sources-2.6.34-r5 (17 Sep 2010)

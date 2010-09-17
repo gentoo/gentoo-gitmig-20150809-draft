@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.34-r5.ebuild,v 1.1 2010/09/17 14:53:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.34-r6.ebuild,v 1.1 2010/09/17 19:28:21 scarabeus Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -24,7 +24,7 @@ else
 	TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
 fi
 
-TUXONICE_URI="http://www.tuxonice.net/downloads/all/${TUXONICE_SRC}.bz2"
+TUXONICE_URI="http://www.tuxonice.net/files/${TUXONICE_SRC}.bz2"
 
 UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2"
 UNIPATCH_STRICTORDER="yes"
