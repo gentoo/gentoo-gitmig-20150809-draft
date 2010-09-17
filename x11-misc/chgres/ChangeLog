@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/chgres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.14 2010/09/17 01:25:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.15 2010/09/17 01:28:06 jer Exp $
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> files/chgres-0.1-flags.patch,
+  files/chgres-0.1-includes.patch:
+  Clean up patches.
 
 *chgres-0.1-r1 (17 Sep 2010)
 
