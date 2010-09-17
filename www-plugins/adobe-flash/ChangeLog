@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.46 2010/08/15 00:43:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.47 2010/09/17 16:41:24 lack Exp $
+
+*adobe-flash-10.2.161.22_pre20100915 (17 Sep 2010)
+
+  17 Sep 2010; Jim Ramsay <lack@gentoo.org>
+  +adobe-flash-10.2.161.22_pre20100915.ebuild:
+  Adobe Square (10.2 now with 64-bit support!) pre-release (Bug #337542)
 
 *adobe-flash-9.0.280.0 (15 Aug 2010)
 
