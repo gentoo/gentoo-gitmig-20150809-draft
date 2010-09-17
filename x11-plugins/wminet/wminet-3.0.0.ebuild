@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-3.0.0.ebuild,v 1.5 2008/11/28 18:52:33 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-3.0.0.ebuild,v 1.6 2010/09/17 10:11:31 s4t4n Exp $
 
 inherit toolchain-funcs
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	tc-export CC
 	econf
-	emake || die "emake failed."
+	emake LDFLAGS="${LDFLAGS}" || die "emake failed."
 }
 
 src_install() {
