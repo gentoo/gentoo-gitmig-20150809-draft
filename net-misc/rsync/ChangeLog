@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.197 2010/01/16 22:25:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.198 2010/09/17 09:50:53 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org> rsync-3.0.7.ebuild:
+  stable x86, bug 337537
 
 *rsync-3.0.7 (16 Jan 2010)
 
