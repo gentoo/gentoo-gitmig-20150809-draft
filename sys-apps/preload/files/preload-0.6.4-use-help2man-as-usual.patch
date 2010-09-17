@@ -22,10 +22,10 @@
 -uninstall-hook:
 -	$(RM) "$(DESTDIR)$(man8dir)/preload.8.gz"
 +preload.8: preload preload.8.i
-+	-$(HELP2MAN) \
++	help2man \
 +		--no-info --section=8 --include=preload.8.i \
 +		--help-option="-H" --output="$@" \
-+		--name 'Adaptive readahead daemon' ./$^
++		--name 'Adaptive readahead daemon' ./preload
  
  ######################################################################
  
