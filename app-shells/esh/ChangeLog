@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/esh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.19 2010/06/15 16:31:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.20 2010/09/17 04:58:31 jer Exp $
+
+*esh-0.8.5-r1 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> +esh-0.8.5-r1.ebuild:
+  Set RDEPEND. Introduce USE=debug. Respect LDFLAGS (bug #335379).
 
   15 Jun 2010; Markos Chandras <hwoarang@gentoo.org> esh-0.8.5.ebuild:
   Fix documentation typo wrt bug #314107.Keyworded for amd64
