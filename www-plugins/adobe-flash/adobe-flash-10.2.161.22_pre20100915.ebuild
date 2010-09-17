@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.22_pre20100915.ebuild,v 1.1 2010/09/17 16:41:24 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.22_pre20100915.ebuild,v 1.2 2010/09/17 18:25:17 lack Exp $
 
 EAPI=3
 inherit nsplugins multilib toolchain-funcs versionator
@@ -149,7 +149,6 @@ src_install() {
 			exeinto /${INSTALL_BASE}32
 			doexe libflashplayer.so
 			inst_plugin /${INSTALL_BASE}32/libflashplayer.so
-			dodoc "${S}/usr/share/doc/flash-plugin-${PV}/readme.txt"
 		popd
 
 		ABI="${oldabi}"
