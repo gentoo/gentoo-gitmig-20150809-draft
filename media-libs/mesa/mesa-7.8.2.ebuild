@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.8.2.ebuild,v 1.11 2010/09/12 18:59:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.8.2.ebuild,v 1.12 2010/09/17 21:43:19 dberkholz Exp $
 
 EAPI=3
 
@@ -33,7 +33,7 @@ LICENSE="LGPL-2 kilgard"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
-VIDEO_CARDS="intel mach64 mga none nouveau r128 radeon radeonhd savage sis svga tdfx via"
+VIDEO_CARDS="intel mach64 mga nouveau r128 radeon radeonhd savage sis svga tdfx via"
 for card in ${VIDEO_CARDS}; do
 	IUSE_VIDEO_CARDS+=" video_cards_${card}"
 done

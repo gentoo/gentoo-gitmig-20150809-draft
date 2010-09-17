@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.284 2010/09/12 18:59:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.285 2010/09/17 21:43:19 dberkholz Exp $
+
+  17 Sep 2010; Donnie Berkholz <dberkholz@gentoo.org>; mesa-7.7.1.ebuild,
+  mesa-7.8.2.ebuild:
+  Remove VIDEO_CARDS=none setting. It just causes needless confusion
+  nowadays. If you don't want to build any Mesa hardware 3D drivers, set
+  VIDEO_CARDS="" in make.conf. If your 3D driver is proprietary/binary, set
+  VIDEO_CARDS to it (e.g., nvidia, fglrx) to avoid building Mesa hardware 3D
+  drivers.
 
   12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> mesa-7.8.2.ebuild:
   Stable on alpha, bug #327777
