@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.9 2010/01/15 02:12:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.10 2010/09/17 06:23:41 fauli Exp $
+
+EAPI=3
 
 inherit toolchain-funcs flag-o-matic
 
@@ -22,9 +24,8 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:-ltermcap:-lncurses:' Makefile
+src_prepare() {
+	sed -e 's:$(CC) -o te $(OBJS):$(CC) ${LDFLAGS} -o te $(OBJS):' -e 's:-ltermcap:-lncurses:' -i Makefile || die
 	# bug 103257
 	epatch "${FILESDIR}"/${PN}-double-free.diff
 	epatch "${FILESDIR}"/${PN}-gcc4.patch
@@ -32,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	append-flags -ansi -D_POSIX_SOURCE
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "compilation failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
