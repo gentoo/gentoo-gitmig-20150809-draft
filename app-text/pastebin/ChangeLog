@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pastebin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.6 2010/08/13 13:59:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.7 2010/09/17 08:19:38 jlec Exp $
+
+*pastebin-0.6.2 (17 Sep 2010)
+
+  17 Sep 2010; Justin Lecher <jlec@gentoo.org> +pastebin-0.6.2.ebuild:
+  Version Bump, 337371
 
   13 Aug 2010; Jeremy Olexa <darkside@gentoo.org> -pastebin-0.5.ebuild:
   remove old version
