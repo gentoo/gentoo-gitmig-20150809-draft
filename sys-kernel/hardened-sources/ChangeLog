@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.337 2010/09/15 10:06:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.338 2010/09/17 20:21:28 blueness Exp $
+
+*hardened-sources-2.6.34-r6 (17 Sep 2010)
+*hardened-sources-2.6.32-r18 (17 Sep 2010)
+
+  17 Sep 2010; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r18.ebuild, +hardened-sources-2.6.34-r6.ebuild:
+  hardened-sources-2.6.32-r18 based on 2.6.32.21 + genpatches +
+  grsec-2.2.0-2.6.32.21-201009162222
+  hardened-sources-2.6.34-r6 based on 2.6.34.7 + genpatches +
+  grsec-2.2.0-2.6.34.7-201009162222
+  Addresses IA32 syscall exploit.
 
 *hardened-sources-2.6.34-r5 (15 Sep 2010)
 *hardened-sources-2.6.32-r17 (15 Sep 2010)
