@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.7 2010/09/15 21:54:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.8 2010/09/17 23:17:16 dilfridge Exp $
+
+  17 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  clapack-3.2.1-r3.ebuild:
+  Bump libf2c version dependency so we dont get the missing MAIN__ link
+  problems. Should fix bug 337759.
 
   15 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   clapack-3.2.1-r3.ebuild:
