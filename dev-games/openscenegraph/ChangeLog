@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.31 2010/09/16 16:35:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.32 2010/09/17 11:07:44 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  openscenegraph-2.8.2.ebuild, openscenegraph-2.8.3.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   openscenegraph-2.8.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.45 2009/08/04 21:24:39 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.46 2010/09/17 10:55:17 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> clanlib-0.8.1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   04 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> clanlib-0.8.1.ebuild,
   +files/clanlib-0.8.1-gcc44.patch:

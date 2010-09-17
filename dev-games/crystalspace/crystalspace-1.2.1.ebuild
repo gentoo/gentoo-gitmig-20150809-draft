@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.4 2010/03/31 09:18:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.5 2010/09/17 10:56:51 scarabeus Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib wxwidgets
@@ -17,7 +17,6 @@ IUSE="3ds alsa cal3d cegui cg doc javascript jpeg mng ode png python
 sdl truetype vorbis wxwidgets"
 
 RDEPEND="virtual/opengl
-	virtual/glu
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ode? ( dev-games/ode )
 	cal3d? ( >=media-libs/cal3d-0.11 )

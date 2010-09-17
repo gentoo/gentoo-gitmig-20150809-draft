@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.65 2010/07/01 12:24:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.66 2010/09/17 11:06:05 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ogre-1.4.9.ebuild,
+  ogre-1.6.5.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ogre-1.6.5.ebuild:
   Apply ogre-1.4.9-as-needed.patch also to 1.6.5 wrt #308387 by Mik B.

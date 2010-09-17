@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.5 2010/09/16 16:34:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.6 2010/09/17 11:09:08 scarabeus Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 x86"
 IUSE="static-libs"
 
 RDEPEND="virtual/opengl
-	virtual/glu
 	media-libs/freeglut
 	media-libs/libpng
 	media-libs/libsdl[joystick,video]

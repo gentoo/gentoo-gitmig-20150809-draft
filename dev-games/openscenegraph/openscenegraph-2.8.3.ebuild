@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.7 2010/09/16 16:35:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.8 2010/09/17 11:07:44 scarabeus Exp $
 
 EAPI=2
 
@@ -29,7 +29,6 @@ wxwidgets xine xrandr zlib"
 RDEPEND="
 	x11-libs/libSM
 	x11-libs/libXext
-	virtual/glu
 	virtual/opengl
 	curl? ( net-misc/curl )
 	examples? (

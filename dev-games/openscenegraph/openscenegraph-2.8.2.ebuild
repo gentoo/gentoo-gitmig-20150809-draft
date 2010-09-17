@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.11 2010/08/17 03:56:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.12 2010/09/17 11:07:44 scarabeus Exp $
 
 EAPI=2
 inherit eutils versionator base cmake-utils
@@ -18,7 +18,6 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE="curl gif jpeg jpeg2k osgapps pdf png svg tiff truetype xine xrandr"
 
 RDEPEND="virtual/opengl
-	virtual/glu
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib )

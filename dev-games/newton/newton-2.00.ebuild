@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-2.00.ebuild,v 1.2 2010/09/16 16:33:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-2.00.ebuild,v 1.3 2010/09/17 11:01:42 scarabeus Exp $
 
 inherit eutils multilib
 
@@ -21,7 +21,6 @@ QA_TEXTRELS="usr/$(get_libdir)/libNewton.so.2.0.0"
 
 DEPEND="doc? (
 		virtual/opengl
-		virtual/glu
 		media-libs/freeglut
 	)"
 

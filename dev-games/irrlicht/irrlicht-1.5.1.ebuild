@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.5.1.ebuild,v 1.3 2010/01/22 20:12:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.5.1.ebuild,v 1.4 2010/09/17 11:00:00 scarabeus Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,7 +17,6 @@ IUSE="doc"
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	virtual/opengl
-	virtual/glu
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	app-arch/unzip

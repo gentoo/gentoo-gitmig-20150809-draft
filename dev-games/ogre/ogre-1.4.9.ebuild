@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.6 2009/12/16 21:17:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.4.9.ebuild,v 1.7 2010/09/17 11:06:05 scarabeus Exp $
 
 inherit multilib eutils autotools flag-o-matic
 
@@ -17,7 +17,6 @@ RESTRICT="test" #139905
 RDEPEND="dev-libs/zziplib
 	>=media-libs/freetype-2
 	virtual/opengl
-	virtual/glu
 	x11-libs/libXt
 	x11-libs/libXaw
 	x11-libs/libXrandr

@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.47 2010/06/24 11:33:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.48 2010/09/17 10:56:51 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  crystalspace-1.2.1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   24 Jun 2010; Tupone Alfredo <tupone@gentoo.org> crystalspace-1.4.0.ebuild:
   Disabling python, as some dependencies are not found.

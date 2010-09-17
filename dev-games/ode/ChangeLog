@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.56 2010/01/07 00:04:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.57 2010/09/17 11:03:20 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ode-0.11.1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> ode-0.11.1.ebuild:
   Marked ppc stable for bug #289012.
