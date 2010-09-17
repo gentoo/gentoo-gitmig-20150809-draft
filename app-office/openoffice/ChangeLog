@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.537 2010/07/17 10:20:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.538 2010/09/17 10:49:58 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  openoffice-3.2.0.ebuild, openoffice-3.2.1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   17 Jul 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.1.ebuild:
