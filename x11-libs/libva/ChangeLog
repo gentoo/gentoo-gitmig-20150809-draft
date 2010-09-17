@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.6 2010/09/17 09:42:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.7 2010/09/17 09:44:54 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  libva-0.31.0_p13.ebuild:
+  remove video_cards_intel to keep the stabilisation tree sane
 
   17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   libva-0.31.0_p13.ebuild:
