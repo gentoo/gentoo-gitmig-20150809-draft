@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.75 2010/08/30 01:05:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.76 2010/09/17 01:13:44 phajdan.jr Exp $
+
+  17 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-bin-6.0.472.51.ebuild:
+  Update glibc dependency, see bug #335101 by Victor Orozco
+  <tuxtor@shekalug.org>
 
 *chromium-bin-6.0.472.51 (30 Aug 2010)
 
