@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/paklib/paklib-0.3.ebuild,v 1.2 2005/05/04 00:43:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/paklib/paklib-0.3.ebuild,v 1.3 2010/09/17 09:04:34 tupone Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND=""
 S=${WORKDIR}/pak
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} -fPIC -shared pak.c -o libpak.so || die "pak.so failed"
+	$(tc-getCC) ${LDFLAGS} ${CFLAGS} -fPIC -shared pak.c -o libpak.so || die "pak.so failed"
 	$(tc-getCC) ${CFLAGS} -c pak.c -o libpak.a || die "pak.a failed"
 }
 
