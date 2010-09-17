@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/cdircmp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.13 2008/12/30 19:35:53 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.14 2010/09/17 05:05:40 jer Exp $
+
+*cdircmp-0.3-r1 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> +cdircmp-0.3-r1.ebuild:
+  Respect LDFLAGS (bug #335584).
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> cdircmp-0.3.ebuild:
   QA: Respect CC (bug 243622) and CFLAGS (bug 240064)
