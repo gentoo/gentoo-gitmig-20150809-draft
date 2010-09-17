@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.6.0.ebuild,v 1.1 2010/09/16 22:04:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.6.0.ebuild,v 1.2 2010/09/17 23:32:52 dilfridge Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	media-video/dvdauthor
 	app-cdr/dvd+rw-tools
 	media-sound/twolame
-	dev-cpp/libxmlpp"
+	dev-cpp/libxmlpp:2.6"
 
 DEPEND=">=dev-util/scons-0.96.1
 	${RDEPEND}"
