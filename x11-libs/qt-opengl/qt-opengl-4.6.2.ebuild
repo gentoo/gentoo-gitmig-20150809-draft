@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.6.2.ebuild,v 1.8 2010/09/13 21:21:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.6.2.ebuild,v 1.9 2010/09/17 11:10:53 scarabeus Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -12,8 +12,7 @@ IUSE="qt3support"
 
 DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
 	~x11-libs/qt-gui-${PV}[aqua=,debug=,qt3support=]
-	virtual/opengl
-	virtual/glu"
+	virtual/opengl"
 RDEPEND="${DEPEND}"
 
 QT4_TARGET_DIRECTORIES="

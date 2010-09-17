@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9-r1.ebuild,v 1.13 2010/07/24 16:08:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9-r1.ebuild,v 1.14 2010/09/17 11:22:01 scarabeus Exp $
 
 EAPI=2
 inherit eutils autotools versionator fdo-mime
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/libXext
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
-	opengl? ( virtual/opengl virtual/glu )
+	opengl? ( virtual/opengl )
 	xinerama? ( x11-libs/libXinerama )
 	xft? ( x11-libs/libXft )
 	>=sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.37.ebuild,v 1.1 2010/03/12 23:40:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.37.ebuild,v 1.2 2010/09/17 11:19:38 scarabeus Exp $
 
 inherit fox
 
@@ -15,7 +15,7 @@ RDEPEND="x11-libs/libXrandr
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	cups? ( net-print/cups )
 	jpeg? ( >=media-libs/jpeg-6b )
-	opengl? ( virtual/opengl virtual/glu )
+	opengl? ( virtual/opengl )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( =media-libs/freetype-2*

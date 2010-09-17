@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.140 2010/06/25 17:08:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.141 2010/09/17 11:19:38 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> fox-1.6.34.ebuild,
+  fox-1.6.35.ebuild, fox-1.6.36.ebuild, fox-1.6.37.ebuild,
+  fox-1.7.19.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   25 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   -files/1.4.34-gcc4-fix-includes.patch, -fox-1.4.34-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.163 2010/07/24 16:08:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.164 2010/09/17 11:22:01 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> fltk-1.1.9.ebuild,
+  fltk-1.1.9-r1.ebuild, fltk-1.1.9-r2.ebuild, fltk-1.1.10.ebuild,
+  fltk-1.1.10-r1.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   24 Jul 2010; Justin Lecher <jlec@gentoo.org> fltk-1.1.9.ebuild,
   fltk-1.1.9-r1.ebuild, fltk-1.1.9-r2.ebuild, fltk-1.1.10.ebuild,

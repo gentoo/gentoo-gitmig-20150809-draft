@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.67 2010/03/14 22:31:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.68 2010/09/17 11:14:14 scarabeus Exp $
+
+  17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  gtkglext-1.2.0.ebuild:
+  Remove virtual/glu where already virtual/opengl is stated.
 
   14 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> gtkglext-1.2.0.ebuild:
   Remove active deprecation definitions, bug #308973.

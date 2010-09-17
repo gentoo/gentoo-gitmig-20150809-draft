@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.0.1.ebuild,v 1.1 2009/08/02 09:19:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.0.1.ebuild,v 1.2 2010/09/17 11:16:19 scarabeus Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="examples"
 
 RDEPEND=">=x11-libs/gtk+-2.0.3
-	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
