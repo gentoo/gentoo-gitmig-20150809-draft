@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-publication
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publication/ChangeLog,v 1.8 2010/04/28 20:37:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publication/ChangeLog,v 1.9 2010/09/17 14:58:28 arfrever Exp $
+
+  17 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-app-publication-3.11.1.ebuild:
+  Delete.
 
 *zope-app-publication-3.11.1 (28 Apr 2010)
 
