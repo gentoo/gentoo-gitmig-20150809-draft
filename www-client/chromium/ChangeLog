@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.176 2010/09/17 09:26:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.177 2010/09/17 10:07:43 fauli Exp $
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  chromium-6.0.472.59.ebuild:
+  stable x86, security bug 335750
 
 *chromium-7.0.517.8 (17 Sep 2010)
 
