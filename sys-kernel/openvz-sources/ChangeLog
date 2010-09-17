@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.147 2010/09/15 11:48:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.148 2010/09/17 05:59:22 pva Exp $
+
+  17 Sep 2010; Peter Volkov <pva@gentoo.org>
+  openvz-sources-2.6.18.028.070.4.ebuild:
+  Fixed typo in elog message: point to correct location at upstream's wiki
 
   15 Sep 2010; Peter Volkov <pva@gentoo.org>
   openvz-sources-2.6.27.6.1-r1.ebuild, -openvz-sources-2.6.32.7.1.ebuild:

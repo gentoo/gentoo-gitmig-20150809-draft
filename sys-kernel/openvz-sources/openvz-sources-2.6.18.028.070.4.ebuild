@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.070.4.ebuild,v 1.1 2010/08/30 11:01:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.070.4.ebuild,v 1.2 2010/09/17 05:59:22 pva Exp $
 
 inherit versionator
 
@@ -37,7 +37,7 @@ K_EXTRAEINFO="This openvz kernel uses RHEL5 patchset instead of vanilla kernel.
 This patchset considered to be more stable and security supported by upstream,
 that why they suggested us to use it. But note: RHEL5 patchset is very fragile
 and fails to build in many configurations so if you have problems use config
-files from openvz team http://wiki.openvz.org/Download/kernel/rhel5/${OVZ_KERNEL}"
+files from openvz team http://wiki.openvz.org/Download/kernel/rhel5/${OVZ_KERNEL}.${OVZ_REV}"
 
 K_EXTRAEWARN="This kernel is stable only when built with gcc-4.1.x and is known
 to oops in random places if built with newer compilers."
