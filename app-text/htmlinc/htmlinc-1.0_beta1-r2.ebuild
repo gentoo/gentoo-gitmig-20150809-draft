@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/htmlinc-1.0_beta1-r1.ebuild,v 1.5 2010/01/02 11:24:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/htmlinc-1.0_beta1-r2.ebuild,v 1.1 2010/09/17 04:08:48 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="HTML Include System by Ulli Meybohm"
 HOMEPAGE="http://www.meybohm.de/"
@@ -13,16 +15,21 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND=""
 S=${WORKDIR}/htmlinc
 
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/htmlinc-gcc3-gentoo.patch
+src_prepare() {
+	epatch "${FILESDIR}"/htmlinc-gcc3-gentoo.patch
+	sed -i Makefile \
+		-e 's| -o | $(LDFLAGS)&|g' \
+		|| die "sed Makefile"
 }
 
 src_compile() {
-	emake CFLAGS="${CXXFLAGS} -Wall" || die
+	# This is C++ not C source
+	emake CC=$(tc-getCXX) \
+		CFLAGS="${CXXFLAGS} -Wall" \
+		LDFLAGS="${LDFLAGS}" \
+		|| die
 }
 
 src_install() {
