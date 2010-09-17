@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-testing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.6 2010/04/18 00:26:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-testing/ChangeLog,v 1.7 2010/09/17 15:13:20 arfrever Exp $
+
+  17 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-app-testing-3.7.5.ebuild:
+  Delete.
 
 *zope-app-testing-3.7.5 (18 Apr 2010)
 
