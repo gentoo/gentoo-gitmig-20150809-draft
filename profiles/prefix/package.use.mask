@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.10 2010/03/14 21:23:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.11 2010/09/17 09:09:22 haubi Exp $
+
+# Michael Haubenwallner <haubi@gentoo.org> (17 Sep 2010)
+# sys-apps/keyutils is a linux only package
+app-crypt/mit-krb5 keyutils
 
 # Jonathan Callen <abcd@gentoo.org> (22 Feb 2010)
 # ppp is not available in Prefix
