@@ -1,6 +1,16 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.81 2010/09/14 17:26:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.82 2010/09/17 11:23:55 grozin Exp $
+
+*maxima-5.22.1 (17 Sep 2010)
+
+  17 Sep 2010; Andrey Grozin <grozin@gentoo.org> +maxima-5.22.1.ebuild,
+  +files/maxima-5.22.1-emacs-version.patch, +files/maxima-5.22.1.patch,
+  +files/maxima-imaxima.patch, +files/maxima-rmaxima.patch,
+  +files/maxima-wish.patch, metadata.xml:
+  Version bump. Ebuild re-written in a more table-driven fashion, for easier
+  maintainance. Improvements by François Bissey <f.r.bissey@massey.ac.nz>
+  imported from the science overlay, thus fixing #255673, many thanks.
 
   14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
   maxima-5.21.1-r1.ebuild:
