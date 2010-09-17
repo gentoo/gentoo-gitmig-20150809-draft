@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11946 2010/09/16 11:21:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11947 2010/09/17 04:59:30 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,18 +310,6 @@ games-emulation/xmame
 # Dead upstream. No longer compatible with recent capistrano versions
 # in our tree.
 dev-ruby/palmtree
-
-# Ryan Hill <dirtyepic@gentoo.org> (12 Aug 2010)
-# Mask for removal 20100912
-# Dead upstream (last release 2006), broken, needs wxGTK-2.6.
-# Bug #330585
-app-crypt/wxchecksums
-
-# Ryan Hill <dirtyepic@gentoo.org> (12 Aug 2010)
-# Mask for removal 20100912
-# No maintainer, dead upstream (last release 2004), needs wxGTK-2.6.
-# Bug #332559
-media-gfx/zphoto
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # Mask until prime time
