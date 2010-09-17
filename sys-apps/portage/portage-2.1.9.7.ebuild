@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.7.ebuild,v 1.1 2010/09/15 16:20:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.7.ebuild,v 1.2 2010/09/17 07:24:33 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -210,6 +210,8 @@ src_install() {
 	for x in $(find pym/* -type d) ; do
 		insinto $portage_base/$x || die "insinto failed"
 		cd "$S"/$x || die "cd failed"
+		# __pycache__ directories contain no py files
+		[[ "*.py" != $(echo *.py) ]] || continue
 		doins *.py || die "doins failed"
 		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
 		if [ -n "$symlinks" ] ; then
