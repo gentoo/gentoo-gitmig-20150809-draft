@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.36 2010/08/12 12:37:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.37 2010/09/17 11:18:54 grozin Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -35,8 +35,8 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 =www-plugins/adobe-flash-10.1* nspluginwrapper
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
-# openmcl (aka closurecl) is only available on x86 and amd64
-sci-mathematics/maxima -openmcl
+# openmcl (aka clozurecl) is only available on x86 and amd64
+sci-mathematics/maxima -openmcl -clozurecl
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
 # Masked in base, unmak for amd64/x86. Bug 267264
