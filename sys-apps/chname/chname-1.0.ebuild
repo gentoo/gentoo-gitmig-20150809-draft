@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0.ebuild,v 1.2 2007/02/06 00:48:45 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0.ebuild,v 1.3 2010/09/17 09:22:01 robbat2 Exp $
 
 DESCRIPTION="Run a command with a new system hostname."
 HOMEPAGE="http://code.google.com/p/chname"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=sys-kernel/linux-headers-2.6.16"
-RDEPEND=">=virtual/linux-sources-2.6.19"
+RDEPEND=""
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" chname
