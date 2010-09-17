@@ -5,8 +5,8 @@
  
  mscompress:	mscompress.o version.o
 -	$(CC) -o mscompress mscompress.o version.o
-+	$(CC) $(CFLAGS) -o mscompress mscompress.o version.o
++	$(CC) $(CFLAGS) $(LDFLAGS) -o mscompress mscompress.o version.o
  
  msexpand:	msexpand.o version.o
 -	$(CC) -o msexpand msexpand.o version.o
-+	$(CC) $(CFLAGS) -o msexpand msexpand.o version.o
++	$(CC) $(CFLAGS) $(LDFLAGS) -o msexpand msexpand.o version.o
