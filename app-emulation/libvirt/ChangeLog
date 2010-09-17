@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.74 2010/09/12 15:35:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.75 2010/09/17 17:58:34 cardoe Exp $
+
+*libvirt-0.8.4 (17 Sep 2010)
+
+  17 Sep 2010; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.8.4.ebuild:
+  version bump
 
   12 Sep 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   libvirt-0.8.3-r1.ebuild:
