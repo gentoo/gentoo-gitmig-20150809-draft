@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r2.ebuild,v 1.1 2010/09/17 02:08:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r2.ebuild,v 1.2 2010/09/17 02:23:20 jer Exp $
 
 EAPI="2"
 
@@ -29,7 +29,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/oneko-${PV}.sakura.5"
 
 src_prepare() {
-	epatch "${WORKDIR}/${P}-sakura-nobsd.patch"
+	epatch \
+		"${WORKDIR}/${P}-sakura-nobsd.patch" \
+		"${FILESDIR}/${P}-include.patch"
 }
 
 src_configure() {
