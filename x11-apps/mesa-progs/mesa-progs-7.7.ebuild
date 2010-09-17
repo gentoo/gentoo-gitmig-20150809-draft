@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.7.ebuild,v 1.10 2010/09/16 17:32:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.7.ebuild,v 1.11 2010/09/17 11:25:15 scarabeus Exp $
 
 inherit toolchain-funcs
 
@@ -26,8 +26,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-
 IUSE=""
 
 RDEPEND="media-libs/freeglut
-	virtual/opengl
-	virtual/glu"
+	virtual/opengl"
 
 DEPEND="${RDEPEND}"
 
