@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/webfuzzer-0.2.0-r1.ebuild,v 1.1 2010/09/17 03:39:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/webfuzzer-0.2.0-r1.ebuild,v 1.2 2010/09/17 03:45:28 jer Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/devel
 src_prepare() {
 	sed -i Makefile \
 		-e 's|CFLAGS=-g -O3|CFLAGS+=|' \
-		-e 's| -o |$(LDFLAGS) -o|g' \
+		-e 's| -o | $(LDFLAGS)&|g' \
 		|| die "sed Makefile"
 }
 
