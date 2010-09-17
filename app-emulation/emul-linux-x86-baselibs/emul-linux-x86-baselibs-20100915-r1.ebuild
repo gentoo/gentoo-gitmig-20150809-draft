@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20100915.ebuild,v 1.1 2010/09/15 11:28:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20100915-r1.ebuild,v 1.1 2010/09/17 09:39:59 pacho Exp $
 
 inherit emul-linux-x86
 
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/emul-linux-x86-${PV}/lcms-1.19.tbz2"
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/emul-linux-x86-${PV}/lcms-1.19.tbz2
+		http://dev.gentoo.org/~pacho/emul-linux-x86-${PV}/talloc-2.0.1-r1.tbz2"
 
 LICENSE="|| ( Artistic GPL-2 ) || ( BSD GPL-2 ) BZIP2 CRACKLIB DB
 		GPL-2 || ( GPL-2 AFL-2.1 ) LGPL-2 LGPL-2.1 GPL-3 LGPL-3
