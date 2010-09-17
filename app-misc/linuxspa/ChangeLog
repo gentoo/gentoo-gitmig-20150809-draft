@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/linuxspa
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linuxspa/ChangeLog,v 1.5 2008/12/30 20:12:04 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linuxspa/ChangeLog,v 1.6 2010/09/17 04:32:13 jer Exp $
+
+*linuxspa-0.7.1-r1 (17 Sep 2010)
+
+  17 Sep 2010; Jeroen Roovers <jer@gentoo.org> +linuxspa-0.7.1-r1.ebuild:
+  Respect LDFLAGS (bug #335334). Use dodoc instead of doins.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> linuxspa-0.7.1.ebuild:
   QA: Respect CC (bug 243656)
