@@ -4,7 +4,7 @@
  # $FreeBSD: /repoman/r/ncvs/src/usr.bin/leave/Makefile,v 1.5 2002/02/08 22:31:41 markm Exp $
  
  PROG=	leave
-+CC=gcc
++CC ?= gcc
 +CFLAGS=
 +LDFLAGS=
  
@@ -13,7 +13,7 @@
 +
 +all: $(PROG)
 +$(PROG): leave.o
-+	$(CC) leave.o -o $(PROG) $(LDFLAGS)
++	$(CC) $(LDFLAGS) leave.o -o $(PROG)
 +leave.o:
 +	$(CC) $(CFLAGS) -c leave.c
 +clean:
