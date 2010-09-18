@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/eden
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.12 2010/06/23 20:22:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.13 2010/09/18 15:53:18 jlec Exp $
+
+*eden-5.3-r1 (18 Sep 2010)
+
+  18 Sep 2010; Justin Lecher <jlec@gentoo.org>
+  +files/5.3-makefile-fixes.patch, +eden-5.3-r1.ebuild:
+  Respecting LDFLAGS, 337557; using python.eclass, QA fixes, prefix fixes,
+  keyworded for ~amd64
 
   23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> eden-5.3.ebuild:
   Removed bindist flag, should be compatible GPL-3 anyway
