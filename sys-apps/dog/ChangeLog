@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.33 2010/05/21 15:00:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.34 2010/09/18 16:55:29 jlec Exp $
+
+*dog-1.7-r4 (18 Sep 2010)
+
+  18 Sep 2010; Justin Lecher <jlec@gentoo.org> +dog-1.7-r4.ebuild:
+  Respecting LDFLAGS, 335390
 
   21 May 2010; Jeremy Olexa <darkside@gentoo.org> dog-1.7-r3.ebuild:
   Import Gentoo Prefix changes, add keywords. No EAPI bump needed.
