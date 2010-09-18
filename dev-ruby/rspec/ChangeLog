@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.78 2010/09/13 18:04:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.79 2010/09/18 16:21:44 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> rspec-2.0.0_beta22.ebuild:
+  Add ~ia64 wrt #337113
 
 *rspec-2.0.0_beta22 (13 Sep 2010)
 
