@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/liveice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.8 2007/05/14 19:45:44 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.9 2010/09/18 05:03:11 jer Exp $
+
+*liveice-2000530-r1 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> +liveice-2000530-r1.ebuild:
+  Respect LDFLAGS (bug #335985), CC.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
