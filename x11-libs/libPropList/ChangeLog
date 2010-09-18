@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libPropList
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.13 2008/04/21 18:27:02 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.14 2010/09/18 04:01:27 jer Exp $
+
+*libPropList-0.10.1-r4 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org>
+  -libPropList-0.10.1-r2.ebuild, +libPropList-0.10.1-r4.ebuild,
+  +files/libPropList-0.10.1-include.patch:
+  Respect LDFLAGS (bug #335968), CC by deploying autotools. Fix some
+  compiler warnings. Use emake instead of make. Use econf instead of
+  ./configure.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

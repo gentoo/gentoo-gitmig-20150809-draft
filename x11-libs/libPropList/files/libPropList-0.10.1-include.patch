@@ -1,0 +1,10 @@
+--- comparing.c.orig	1999-01-28 08:11:03.000000000 +0100
++++ comparing.c	2010-09-18 05:52:24.000000000 +0200
+@@ -4,6 +4,7 @@
+ 
+    */
+ 
++#include <string.h> /* strcmp(), memcmp() */
+ #include "proplistP.h"
+ 
+ /* forward prototype */
