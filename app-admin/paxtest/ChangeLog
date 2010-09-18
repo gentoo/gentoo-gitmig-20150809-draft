@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.38 2010/08/10 15:14:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.39 2010/09/18 17:11:25 blueness Exp $
+
+*paxtest-0.9.9-r1 (18 Sep 2010)
+
+  18 Sep 2010; Anthony G. Basile <blueness@gentoo.org>
+  -paxtest-0.9.9.ebuild, +paxtest-0.9.9-r1.ebuild:
+  Bump for new tarball upstream - bug #337120
 
   10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   files/paxtest-0.9.9-Makefile.patch:

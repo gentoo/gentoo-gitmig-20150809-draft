@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.9.ebuild,v 1.1 2010/08/09 12:31:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.9-r1.ebuild,v 1.1 2010/09/18 17:11:25 blueness Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="PaX regression test suite"
 HOMEPAGE="http://pax.grsecurity.net"
-SRC_URI="http://grsecurity.net/~spender/${P}.tgz"
+SRC_URI="http://grsecurity.net/~spender/${P}.tgz -> ${PF}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
