@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.25_beta12.ebuild,v 1.1 2009/03/25 11:11:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.25_beta17.ebuild,v 1.1 2010/09/18 21:47:20 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -28,8 +30,8 @@ DEPEND=">=media-video/vdr-1.3.45
 	tre? ( dev-libs/tre )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	vdr-plugin_src_unpack
+src_prepare() {
+	vdr-plugin_src_prepare
 
 	cd "${S}"
 	fix_vdr_libsi_include conflictcheck.c
