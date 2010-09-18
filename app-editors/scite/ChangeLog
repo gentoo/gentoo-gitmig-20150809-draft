@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.100 2010/08/21 14:26:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.101 2010/09/18 18:23:19 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> scite-2.12.ebuild:
+  sparc stable wrt #333447
 
   21 Aug 2010; Markos Chandras <hwoarang@gentoo.org> scite-2.12.ebuild:
   Stable on amd64 wrt bug #333447
