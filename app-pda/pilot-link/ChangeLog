@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.66 2010/08/23 19:23:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.67 2010/09/18 15:16:05 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> pilot-link-0.12.5.ebuild:
+  alpha/ia64/sparc stable wrt #333717
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> pilot-link-0.12.5.ebuild:
   x86 stable, bug #333717
