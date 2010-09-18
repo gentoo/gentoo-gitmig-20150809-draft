@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.260 2010/09/13 21:23:52 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.261 2010/09/18 10:11:00 ssuominen Exp $
+
+  18 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> dbus-1.4.0.ebuild:
+  Remove USE conditional for removing .la files as dbus ships functional
+  pkg-config file. Remove annoying ebeep.
 
   13 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> dbus-1.2.24-r2.ebuild,
   dbus-1.4.0.ebuild:
