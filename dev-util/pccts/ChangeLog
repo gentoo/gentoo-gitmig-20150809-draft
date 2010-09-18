@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pccts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.29 2010/01/15 21:48:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.30 2010/09/18 20:55:59 jer Exp $
+
+*pccts-1.33.33-r1 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> +pccts-1.33.33-r1.ebuild,
+  files/pccts-1.33.33-gentoo.diff:
+  Respect LDFLAGS (bug #335990), CFLAGS. Clean up patch.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pccts-1.33.33.ebuild:
   Transfer Prefix keywords
