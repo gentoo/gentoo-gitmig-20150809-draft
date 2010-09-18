@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.15 2009/10/11 23:39:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.16 2010/09/18 17:33:48 blueness Exp $
 
 inherit eutils
 
@@ -9,7 +9,8 @@ RESTRICT="strip"
 
 DESCRIPTION="PaX regression test suite"
 HOMEPAGE="http://pageexec.virtualave.net/"
-SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
+#SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
+SRC_URI="mirror://gentoo/paxtest-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
