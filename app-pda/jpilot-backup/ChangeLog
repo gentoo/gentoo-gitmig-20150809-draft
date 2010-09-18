@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.18 2010/08/23 19:28:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.19 2010/09/18 14:38:33 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> jpilot-backup-0.53.ebuild,
+  jpilot-backup-0.60.ebuild:
+  Drop alpha keywords
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> jpilot-backup-0.60.ebuild:
   x86 stable, bug #333717
