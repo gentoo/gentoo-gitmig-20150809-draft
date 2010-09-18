@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.87 2010/09/18 08:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.88 2010/09/18 08:39:07 vapier Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -108,10 +108,10 @@ case ${EKEY_STATE:-${E_STATE}} in
 esac
 IUSE="nls doc"
 
-DEPEND="doc? ( app-doc/doxygen )"
+DEPEND="doc? ( app-doc/doxygen )
+	${E_PYTHON:+>=dev-python/setuptools-0.6_rc9}
+	${E_CYTHON:+>=dev-python/cython-0.12.1}"
 RDEPEND="nls? ( sys-devel/gettext )"
-[[ -n ${E_PYTHON} ]] && DEPEND+=" >=dev-python/setuptools-0.6_rc9"
-[[ -n ${E_CYTHON} ]] && DEPEND+=" >=dev-python/cython-0.12.1"
 
 case ${EURI_STATE:-${E_STATE}} in
 	release) S=${WORKDIR}/${P};;
