@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.1 2010/08/14 14:22:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.2 2010/09/18 22:13:05 chithanh Exp $
+
+  18 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libmicrohttpd-0.9.0.ebuild, metadata.xml:
+  Add USE flag for messages, bug #224165
 
 *libmicrohttpd-0.9.0 (14 Aug 2010)
 
