@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/panflute
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/ChangeLog,v 1.1 2010/09/18 21:17:32 eva Exp $
+
+*panflute-0.6.2 (18 Sep 2010)
+
+  18 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +panflute-0.6.2.ebuild, +metadata.xml:
+  Initial commit, replacement of music-applet, bug #299151.
+
