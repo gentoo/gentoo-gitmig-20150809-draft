@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.69 2010/07/18 14:05:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.70 2010/09/18 22:03:10 arfrever Exp $
+
+*logilab-common-0.51.1 (18 Sep 2010)
+
+  18 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +logilab-common-0.51.1.ebuild,
+  +files/logilab-common-0.51.1-python-2.7.patch:
+  Version bump. Fixed majority of test failures with Python 2.7 (bug #293913).
 
   18 Jul 2010; <nixnut@gentoo.org> logilab-common-0.50.3.ebuild:
   ppc stable #325377
