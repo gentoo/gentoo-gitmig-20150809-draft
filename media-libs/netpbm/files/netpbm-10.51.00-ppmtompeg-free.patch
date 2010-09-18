@@ -1,0 +1,15 @@
+addedSourceP is a pointer to a struct declared on the stack, so we cant
+call free() on it
+
+e-mailed to upstream maintainer already
+
+--- converter/ppm/ppmtompeg/param.c
++++ converter/ppm/ppmtompeg/param.c
+@@ -295,7 +295,6 @@ mergeInputSource(struct inputSource * co
+         baseSourceP->inputFileEntries[baseSourceP->numInputFileEntries++] =
+             addedSourceP->inputFileEntries[i];
+ 
+-    free(addedSourceP);
+     /* Note the space allocated for the *addedSourceP input file
+        entries themselves is still allocated, and used by 
+        *baseSourceP.
