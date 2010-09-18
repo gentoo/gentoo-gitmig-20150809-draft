@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/camping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.18 2010/06/13 07:11:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.19 2010/09/18 14:42:17 graaff Exp $
+
+*camping-2.1 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +camping-2.1.ebuild:
+  Version bump with bug fixes.
 
   13 Jun 2010; Hans de Graaff <graaff@gentoo.org> -camping-1.5-r1.ebuild:
   Remove old version.
