@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.33 2010/09/12 12:25:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.34 2010/09/18 16:26:33 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> cucumber-0.7.3-r1.ebuild:
+  Add ~ia64 wrt #337113
 
 *cucumber-0.7.3-r1 (12 Sep 2010)
 
