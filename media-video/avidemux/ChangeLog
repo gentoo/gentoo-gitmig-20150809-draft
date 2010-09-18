@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.172 2010/09/01 23:51:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.173 2010/09/18 11:06:52 lxnay Exp $
+
+  18 Sep 2010; Fabio Erculiani <lxnay@gentoo.org>
+  avidemux-2.5.1_p5428.ebuild, avidemux-2.5.2.ebuild,
+  avidemux-2.5.3-r1.ebuild, avidemux-2.5.3-r2.ebuild:
+  fix AVIDEMUX_INSTALL_PREFIX and AVIDEMUX_CORECONFIG_DIR cmake variables,
+  they were poiting to non-existent directories, causing build failures on
+  plugins
 
   01 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   avidemux-2.5.3-r2.ebuild:
