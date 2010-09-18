@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.6 2009/06/25 20:31:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.7 2010/09/18 16:29:36 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils qt4 games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
-	|| ( >=games-emulation/dosbox-0.65 games-emulation/dosbox-cvs )"
+	>=games-emulation/dosbox-0.65"
 
 src_install() {
 	dogamesbin bin/dboxfe || die "dogamesbin failed"
