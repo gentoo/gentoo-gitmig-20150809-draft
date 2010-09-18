@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4567 2010/09/17 15:38:50 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4568 2010/09/18 10:13:22 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask sys-apps/dbus-1.4.0, tested functional with several consumers,
+  including Xfce4, KDE, X.org, polkit, consolekit, gvfs, upower and udisks.
 
   17 Sep 2010; Panagiotis Christopoulos <pchrist@gentoo.org> package.mask:
   Mask various old common-lisp packages in order to cleanup the herd a bit.
