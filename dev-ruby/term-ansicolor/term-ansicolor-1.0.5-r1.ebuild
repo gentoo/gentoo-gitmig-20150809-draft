@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.0.5-r1.ebuild,v 1.1 2010/09/12 08:54:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.0.5-r1.ebuild,v 1.2 2010/09/18 16:33:21 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -19,7 +19,7 @@ DESCRIPTION="Small Ruby library that colors strings using ANSI escape sequences.
 HOMEPAGE="http://term-ansicolor.rubyforge.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="examples"
 
