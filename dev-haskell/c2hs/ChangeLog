@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.34 2010/07/12 19:38:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.35 2010/09/18 19:23:17 slyfox Exp $
+
+  18 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> c2hs-0.16.2.ebuild:
+  Marked ~sparc wrt bug #306311
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> c2hs-0.16.2.ebuild:
   Marked ~alpha and ~ia64
