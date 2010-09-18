@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7-r3.ebuild,v 1.9 2010/05/21 15:00:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7-r3.ebuild,v 1.10 2010/09/18 16:56:23 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,10 +17,10 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-check-ctime.diff
-	epatch ${FILESDIR}/${PV}-manpage-touchup.patch
-	epatch ${FILESDIR}/${P}-64bit-goodness.patch
-	epatch ${FILESDIR}/${P}-strfry.patch
+	epatch "${FILESDIR}"/${P}-check-ctime.diff
+	epatch "${FILESDIR}"/${PV}-manpage-touchup.patch
+	epatch "${FILESDIR}"/${P}-64bit-goodness.patch
+	epatch "${FILESDIR}"/${P}-strfry.patch
 
 	if [[ "${CHOST}" == *-solaris* ]]
 	then
