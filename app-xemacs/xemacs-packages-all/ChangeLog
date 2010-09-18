@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.13 2010/08/18 08:57:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.14 2010/09/18 18:04:53 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  xemacs-packages-all-2010.07.29.ebuild:
+  Add ~alpha/~sparc wrt #332607
 
   18 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   xemacs-packages-all-2010.07.29.ebuild:
