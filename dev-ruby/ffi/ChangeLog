@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.9 2010/09/12 08:42:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.10 2010/09/18 17:20:40 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> ffi-0.6.3.ebuild,
+  ffi-0.6.3-r1.ebuild:
+  Add ~sparc wrt #330283
 
 *ffi-0.6.3-r1 (12 Sep 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.3.ebuild,v 1.3 2010/07/11 16:55:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.3.ebuild,v 1.4 2010/09/18 17:20:40 armin76 Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${PN}-${PN}-*"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 RDEPEND="dev-libs/libffi"
 DEPEND="${RDEPEND}"
