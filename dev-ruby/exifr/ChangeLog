@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/exifr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.16 2010/08/06 05:59:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.17 2010/09/18 15:07:59 graaff Exp $
+
+*exifr-1.0.3 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +exifr-1.0.3.ebuild:
+  Version bump: more specific exceptions to aid error handling.
 
 *exifr-1.0.2 (06 Aug 2010)
 
