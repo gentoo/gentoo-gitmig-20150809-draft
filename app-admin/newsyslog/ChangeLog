@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/newsyslog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.21 2009/10/11 23:37:08 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.22 2010/09/18 08:59:14 hwoarang Exp $
+
+  18 Sep 2010; Markos Chandras <hwoarang@gentoo.org> newsyslog-1.1.ebuild:
+  Keyworded for amd64. Bug #337286
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> newsyslog-1.1.ebuild:
   QA fixes; unquoted variables
