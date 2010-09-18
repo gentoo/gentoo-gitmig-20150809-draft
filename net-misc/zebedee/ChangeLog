@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.22 2010/01/21 22:58:03 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.23 2010/09/18 04:49:43 jer Exp $
+
+*zebedee-2.5.3-r1 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> +zebedee-2.5.3-r1.ebuild:
+  Respect LDFLAGS (bug #335970), CC.
 
   21 Jan 2010; Dawid Węgliński <cla@gentoo.org> zebedee-2.5.3.ebuild:
   Fix Makefile to respect user CFLAGS
