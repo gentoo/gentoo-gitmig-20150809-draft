@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.132 2010/07/14 12:06:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.133 2010/09/18 16:53:24 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> gramps-3.2.3-r2.ebuild:
+  sparc stable wrt #328105
 
 *gramps-3.2.3-r2 (14 Jul 2010)
 
