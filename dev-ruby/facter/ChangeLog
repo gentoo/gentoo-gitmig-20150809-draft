@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.29 2010/07/29 08:43:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.30 2010/09/18 15:50:07 graaff Exp $
+
+*facter-1.5.8 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +facter-1.5.8.ebuild,
+  +files/facter-1.5.8-freebsd-spec.patch:
+  Version bump with various bug fixes. Drop all 1.5.7 patches because all
+  changes appear to be incorporated in 1.5.8. Run specs and drop hppa
+  because of the new dependency this introduces: bug 337956.
 
   29 Jul 2010; Guy Martin <gmsoft@gentoo.org> facter-1.5.7-r1.ebuild:
   Added ~hppa to KEYWORDS.
