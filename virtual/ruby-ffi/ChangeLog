@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.3 2010/09/12 08:42:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.4 2010/09/18 17:21:42 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild:
+  Add ~sparc wrt #330283
 
   12 Sep 2010; Hans de Graaff <graaff@gentoo.org> ruby-ffi-0.ebuild:
   Add ree18.
