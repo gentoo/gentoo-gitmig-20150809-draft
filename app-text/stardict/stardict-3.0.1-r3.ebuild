@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.1 2010/05/03 23:45:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.2 2010/09/18 16:10:49 armin76 Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2
 RESTRICT="test"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
 
 DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnome-2.2.0
