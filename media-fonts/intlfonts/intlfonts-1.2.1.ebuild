@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.18 2010/02/02 14:22:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/intlfonts-1.2.1.ebuild,v 1.19 2010/09/18 06:07:33 dirtyepic Exp $
 
 inherit font
 
-IUSE="X bdf"
+IUSE="bdf"
 
 DESCRIPTION="International X11 fixed fonts"
 HOMEPAGE="http://www.gnu.org/directory/intlfonts.html"
@@ -15,7 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
-DEPEND="x11-apps/bdftopcf"
+DEPEND="x11-apps/bdftopcf
+		x11-apps/mkfontdir"
+RDEPEND=""
 
 src_compile() {
 	econf --with-fontdir=/usr/share/fonts/${PN}
