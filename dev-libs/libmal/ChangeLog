@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.30 2010/08/23 19:21:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.31 2010/09/18 15:14:42 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> libmal-0.44.1.ebuild:
+  alpha/ia64/sparc stable wrt #333717
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> libmal-0.44.1.ebuild:
   x86 stable, bug #333717
