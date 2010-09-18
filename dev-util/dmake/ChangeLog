@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.19 2010/01/15 21:33:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.20 2010/09/18 03:38:38 jer Exp $
+
+*dmake-4.11 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> +dmake-4.11.ebuild:
+  Version bump. Respect LDFLAGS (bug #335961), more CFLAGS.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> dmake-4.1-r1.ebuild:
   Transfer Prefix keywords
