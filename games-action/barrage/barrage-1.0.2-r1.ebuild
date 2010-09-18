@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2-r1.ebuild,v 1.7 2008/06/29 12:34:22 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.2-r1.ebuild,v 1.8 2010/09/18 04:08:39 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A violent point-and-click shooting game"
@@ -14,23 +15,29 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
+DEPEND=">=media-libs/libsdl-1.2[audio,video]
 	>=media-libs/sdl-mixer-1.2.4"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 }
 
-src_compile() {
-	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
-	emake || die "emake failed"
+src_prepare() {
+	# bug #337745
+	sed -i \
+		-e 's/name\[20\]/name[24]/' \
+		src/menu.h || die
+}
+
+src_configure() {
+	egamesconf --datadir="${GAMES_DATADIR_BASE}"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog README
 	doicon "${DISTDIR}"/${PN}.png
-	make_desktop_entry ${PN} Barrage ${PN}
+	make_desktop_entry ${PN} Barrage
 	rm "${D}"/usr/share/applications/${PN}.desktop
 	prepgamesdirs
 }
