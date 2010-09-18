@@ -2,8 +2,8 @@ Use system bzip2 library. Get CC and CFLAGS from environment.
  -jer (bug #249140)
 
 
---- analog-6.0/src/Makefile.orig	2004-12-19 14:51:30.000000000 +0100
-+++ analog-6.0/src/Makefile	2008-12-15 22:50:04.000000000 +0100
+--- a/src/Makefile	2004-12-19 14:51:30.000000000 +0100
++++ b/src/Makefile	2008-12-15 22:50:04.000000000 +0100
 @@ -2,16 +2,16 @@
  # Please read docs/Readme.html, or http://www.analog.cx/
  # This is a general Unix-like Makefile: Makefiles for other OS's can be found

@@ -1,6 +1,5 @@
-diff -ur analog-5.1.orig/src/anlghead.h analog-5.1/src/anlghead.h
---- analog-5.1.orig/src/anlghead.h	Wed Nov  7 06:06:46 2001
-+++ analog-5.1/src/anlghead.h	Mon Dec 31 16:47:43 2001
+--- a/src/anlghead.h	Wed Nov  7 06:06:46 2001
++++ b/src/anlghead.h	Mon Dec 31 16:47:43 2001
 @@ -81,15 +81,11 @@
     and use that directory; or the current directory if it couldn't deduce a
     directory. This may or may not work, so it's better to specify a location
