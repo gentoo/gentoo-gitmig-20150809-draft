@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.87 2010/08/12 21:49:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.88 2010/09/18 12:14:08 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org>
 # Mask wimax stack since it doesnt works correctly on 64bit systems (mainly net-wireless/wimax,
@@ -194,7 +194,7 @@ sys-libs/lib-compat-loki
 www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
->=www-plugins/adobe-flash-10.1
+=www-plugins/adobe-flash-10.1*
 www-plugins/nspluginwrapper
 
 # AMD64 Team; <amd64@gentoo.org>
