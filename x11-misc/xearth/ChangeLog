@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.17 2010/09/18 00:48:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.18 2010/09/18 00:51:57 jer Exp $
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> xearth-1.1-r1.ebuild:
+  Remove unneeded x11-libs/libXext dependency thanks to Michael Weber (bug
+  #337773 comment #2).
 
 *xearth-1.1-r1 (18 Sep 2010)
 
