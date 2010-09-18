@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-mnemo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.28 2010/08/23 21:44:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.29 2010/09/18 18:32:29 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> horde-mnemo-2.2.3.ebuild:
+  alpha/sparc stable wrt #333207
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> horde-mnemo-2.2.3.ebuild:
   x86 stable, bug #333207

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-chora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.23 2010/08/23 21:35:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.24 2010/09/18 18:27:21 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> horde-chora-2.0.2.ebuild:
+  alpha/sparc stable wrt #333207
 
   23 Aug 2010; Markus Meier <maekke@gentoo.org> horde-chora-2.0.2.ebuild:
   x86 stable, bug #333207

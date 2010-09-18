@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.3.8.ebuild,v 1.4 2010/09/11 15:10:09 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.3.8.ebuild,v 1.5 2010/09/18 18:26:17 armin76 Exp $
 
 HORDE_PHP_FEATURES="session xml"
 
@@ -9,7 +9,7 @@ inherit horde
 DESCRIPTION="Horde Application Framework"
 HOMEPAGE="http://www.horde.org/"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc sparc x86"
 IUSE="mysql"
 
 DEPEND=""
