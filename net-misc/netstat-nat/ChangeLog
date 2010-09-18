@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.37 2010/06/26 16:13:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.38 2010/09/18 16:12:22 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> netstat-nat-1.4.10.ebuild:
+  sparc stable wrt #318533
 
   26 Jun 2010; <nixnut@gentoo.org> netstat-nat-1.4.10.ebuild:
   ppc stable #318533
