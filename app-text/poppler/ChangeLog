@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.256 2010/09/11 06:03:29 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.257 2010/09/18 14:26:08 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> poppler-0.14.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #331969
 
 *poppler-0.14.3 (11 Sep 2010)
 
