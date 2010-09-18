@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3-r1.ebuild,v 1.8 2010/09/16 18:16:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3-r1.ebuild,v 1.9 2010/09/18 17:08:57 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.tux.org/~mayer/linux/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ~ppc64 sh sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
