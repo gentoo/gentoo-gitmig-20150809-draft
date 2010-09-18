@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.155 2010/09/16 20:50:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.156 2010/09/18 14:40:36 dilfridge Exp $
+
+  18 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-1.4.0.ebuild:
+  Added dependency on virtual/mysql. Fixes bug 337932.
 
 *digikam-1.4.0 (16 Sep 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.4.0.ebuild,v 1.1 2010/09/16 20:50:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.4.0.ebuild,v 1.2 2010/09/18 14:40:36 dilfridge Exp $
 
 EAPI="2"
 
@@ -40,6 +40,7 @@ CDEPEND="
 	media-libs/libpgf
 	>=media-plugins/kipi-plugins-1.2.0-r1
 	>=sci-libs/clapack-3.2.1-r3
+	virtual/mysql
 	x11-libs/qt-gui[qt3support]
 	x11-libs/qt-sql[sqlite]
 	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
