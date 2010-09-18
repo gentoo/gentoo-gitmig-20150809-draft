@@ -10,7 +10,7 @@
 #
 #
 # Usage: "./icecream-create-env" creates a native environment(similar to icecc --build-native)
-#		 "./icecream-create-env CHOST" creates a cross-compile environment using the cross-toolchain created by crossdev
+#		 "./icecream-create-env prefix" creates a cross-compile environment using the cross-toolchain created by crossdev
 # Example:
 #        "emerge crossdev && crossdev -t sparc-unknown-linux-gnu && icecream-create-env sparc-unknown-linux"
 
@@ -47,11 +47,18 @@ version="`${prefix}-gcc -dumpversion`"
 tmpdir=`mktemp -d`
 tmpfile=`mktemp`
 
-if [ "`gcc -dumpmachine`" = "${prefix}" ]
+target=`gcc -dumpmachine`
+if [ "x${target}" = "x${prefix}" ]
 then
-	/usr/lib/icecc/icecc-create-env /usr/${prefix}/gcc-bin/${version}/gcc /usr/${prefix}/gcc-bin/${version}/g++ | tee ${tmpfile}
+	/usr/lib/icecc/icecc-create-env \
+		/usr/${prefix}/gcc-bin/${version}/gcc \
+		/usr/${prefix}/gcc-bin/${version}/g++ \
+		| tee ${tmpfile}
 else
-	/usr/lib/icecc/icecc-create-env /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-gcc /usr/${CHOST}/${prefix}/gcc-bin/${version}/${prefix}-g++ | tee ${tmpfile}
+	/usr/lib/icecc/icecc-create-env \
+		/usr/${target}/${prefix}/gcc-bin/${version}/${prefix}-gcc \
+		/usr/${target}/${prefix}/gcc-bin/${version}/${prefix}-g++ \
+		| tee ${tmpfile}
 fi
 
 # figure out the name of the archive

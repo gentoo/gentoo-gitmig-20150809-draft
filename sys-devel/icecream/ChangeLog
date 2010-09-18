@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.38 2010/09/11 12:30:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.39 2010/09/18 10:24:22 scarabeus Exp $
+
+*icecream-0.9.6-r1 (18 Sep 2010)
+
+  18 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.9.6-crosscompile.patch, -icecream-0.9.6.ebuild,
+  +icecream-0.9.6-r1.ebuild, files/icecream-create-env:
+  Revision bump to fix CHOST/crosscompile problems per bug #275756 and bug
+  #303545.
 
 *icecream-0.9.6 (11 Sep 2010)
 
