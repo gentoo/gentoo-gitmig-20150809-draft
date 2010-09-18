@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.63 2010/08/28 16:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.64 2010/09/18 09:13:44 vapier Exp $
 
 EAPI="2"
 
@@ -199,5 +199,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Visit http://xbmc.org/wiki/?title=XBMC_Online_Manual"
+	elog "Visit http://wiki.xbmc.org/?title=XBMC_Online_Manual"
 }

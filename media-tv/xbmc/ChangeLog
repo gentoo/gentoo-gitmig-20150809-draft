@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.66 2010/08/28 16:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.67 2010/09/18 09:13:45 vapier Exp $
+
+  18 Sep 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r4.ebuild,
+  xbmc-9999.ebuild:
+  Update postinst URL #337762 by Ewoud Kohl van Wijngaarden.
 
   28 Aug 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Add gperf to DEPEND #334845 by Cyril.
