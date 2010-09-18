@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.2.0-r2.ebuild,v 1.2 2010/09/18 00:35:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.2.0-r2.ebuild,v 1.3 2010/09/18 14:20:09 dilfridge Exp $
 
 EAPI="2"
 
@@ -12,8 +12,7 @@ inherit flag-o-matic kde4-base
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
 HOMEPAGE="http://www.kipi-plugins.org"
-[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2"
-SRC_URI+=" kipi-plugins-1.2.0-jpeg.patch.bz2"
+[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2 kipi-plugins-1.2.0-jpeg.patch.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -49,7 +48,8 @@ RDEPEND="${DEPEND}
 	mjpeg? ( media-video/mjpegtools )
 "
 
-PATCHES=( "${DISTDIR}/${P}-jpeg.patch.bz2" "${FILESDIR}/${P}-expoblending.patch" )
+PATCHES=( "${DISTDIR}/${P}-jpeg.patch.bz2"
+	"${FILESDIR}/${P}-expoblending.patch" )
 
 src_configure() {
 	# Remove flags -floop-block -floop-interchange
