@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.5 2010/01/13 01:01:12 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.6 2010/09/18 15:01:37 ulm Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	use ppc && append-flags -Dbig_endian
-	emake CC="$(tc-getCC)" DEBUG="${CFLAGS}" \
+	emake CC="$(tc-getCC)" DEBUG="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		DISKDIR="-DDISKDIR='\"/usr/share/xtrs\"'" \
 		DEFAULT_ROM="-DDEFAULT_ROM='\"/usr/share/xtrs/romimage\"' \
 			-DDEFAULT_ROM3='\"/usr/share/xtrs/romimage.m3\"' \
