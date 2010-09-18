@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r2.ebuild,v 1.1 2010/09/18 23:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r2.ebuild,v 1.2 2010/09/18 23:43:05 jer Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ DEPEND="net-libs/libpcap
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-libnet-1.0.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
