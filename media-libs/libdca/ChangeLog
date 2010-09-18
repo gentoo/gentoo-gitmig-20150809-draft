@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.29 2010/07/24 11:13:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.30 2010/09/18 16:30:40 ssuominen Exp $
+
+  18 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libdca-0.0.5-r2.ebuild:
+  Stop providing libdts.a with or without USE static-libs. Only provide
+  libdts.pc which will reference to -ldca and dts.h which will define dts_
+  functions to matching dca_ ones. These will go away soon too, but for now,
+  media-libs/xine-lib is still unported.
 
   24 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   libdca-0.0.5-r2.ebuild:
