@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.6 2010/08/22 14:18:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.7 2010/09/18 14:14:15 graaff Exp $
+
+*addressable-2.2.1 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +addressable-2.2.1.ebuild:
+  Version bump: added support for application/x-www-form-urlencoded. Run
+  tests for other ruby implementations.
 
   22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   addressable-2.1.2.ebuild, addressable-2.2.0.ebuild:
