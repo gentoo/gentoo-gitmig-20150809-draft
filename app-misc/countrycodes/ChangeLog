@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/countrycodes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.20 2009/09/23 16:00:20 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.21 2010/09/18 15:20:19 jlec Exp $
+
+*countrycodes-1.0.5-r1 (18 Sep 2010)
+
+  18 Sep 2010; Justin Lecher <jlec@gentoo.org> +files/1.0.5-Makefile.patch,
+  +countrycodes-1.0.5-r1.ebuild:
+  Respecting LDFLAGS, 337878
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> countrycodes-1.0.5.ebuild:
   Remove virtual/libc
