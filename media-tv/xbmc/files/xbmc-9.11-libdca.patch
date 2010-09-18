@@ -1,0 +1,746 @@
+http://bugs.gentoo.org/330201
+
+link against libdca and not libdts
+
+--- a/configure.in
++++ b/configure.in
+@@ -51,8 +51,8 @@
+ external_ffmpeg_disabled="== Use of external ffmpeg disabled. =="
+ external_liba52_enabled="== Use of external liba52 enabled. =="
+ external_liba52_disabled="== Use of external liba52 disabled. =="
+-external_libdts_enabled="== Use of external libdts enabled. =="
+-external_libdts_disabled="== Use of external libdts disabled. =="
++external_libdca_enabled="== Use of external libdca enabled. =="
++external_libdca_disabled="== Use of external libdca disabled. =="
+ external_libmpeg2_enabled="== Use of external libmpeg2 enabled. =="
+ external_libmpeg2_disabled="== Use of external libmpeg2 disabled. =="
+ external_libass_enabled="== Use of external libass enabled. =="
+@@ -201,11 +201,11 @@
+             [use_external_liba52=$enableval],
+             [use_external_liba52=no])
+ 
+-AC_ARG_ENABLE([external-libdts],
+-            [AS_HELP_STRING([--enable-external-libdts],
+-            [enable use of external libdts library (default is no) 'Linux only'])],
+-            [use_external_libdts=$enableval],
+-            [use_external_libdts=no])
++AC_ARG_ENABLE([external-libdca],
++            [AS_HELP_STRING([--enable-external-libdca],
++            [enable use of external libdca library (default is no) 'Linux only'])],
++            [use_external_libdca=$enableval],
++            [use_external_libdca=no])
+ 
+ AC_ARG_ENABLE([external-libmpeg2],
+             [AS_HELP_STRING([--enable-external-libmpeg2],
+@@ -557,16 +557,16 @@
+   USE_EXTERNAL_LIBA52=0
+ fi
+ 
+-# External libdts
+-if test "$use_external_libraries" = "yes" || test "$use_external_libdts" = "yes"; then
+-  AC_CHECK_LIB([dts],          [main],, AC_MSG_ERROR($missing_library))
++# External libdca
++if test "$use_external_libraries" = "yes" || test "$use_external_libdca" = "yes"; then
++  AC_CHECK_LIB([dca],          [main],, AC_MSG_ERROR($missing_library))
+ 
+-  AC_MSG_NOTICE($external_libdts_enabled)
+-  USE_EXTERNAL_LIBDTS=1
+-  AC_DEFINE([USE_EXTERNAL_LIBDTS], [1], [Whether to use external libdts library.])
++  AC_MSG_NOTICE($external_libdca_enabled)
++  USE_EXTERNAL_LIBDCA=1
++  AC_DEFINE([USE_EXTERNAL_LIBDCA], [1], [Whether to use external libdca library.])
+ else
+-  AC_MSG_NOTICE($external_libdts_disabled)
+-  USE_EXTERNAL_LIBDTS=0
++  AC_MSG_NOTICE($external_libdca_disabled)
++  USE_EXTERNAL_LIBDCA=0
+ fi
+ 
+ # External libmpeg2
+@@ -933,10 +933,10 @@
+   else
+     final_message="$final_message\n  External liba52:\tNo"
+   fi
+-  if test "$use_external_libdts" = "yes"; then
+-    final_message="$final_message\n  External libdts:\tYes"
++  if test "$use_external_libdca" = "yes"; then
++    final_message="$final_message\n  External libdca:\tYes"
+   else
+-    final_message="$final_message\n  External libdts:\tNo"
++    final_message="$final_message\n  External libdca:\tNo"
+   fi
+   if test "$use_external_libmpeg2" = "yes"; then
+     final_message="$final_message\n  External libmpeg2:\tYes"
+@@ -1027,7 +1027,7 @@
+ AC_SUBST(USE_EXTERNAL_LIBRARIES)
+ AC_SUBST(USE_EXTERNAL_FFMPEG)
+ AC_SUBST(USE_EXTERNAL_LIBA52)
+-AC_SUBST(USE_EXTERNAL_LIBDTS)
++AC_SUBST(USE_EXTERNAL_LIBDCA)
+ AC_SUBST(USE_EXTERNAL_LIBMPEG2)
+ AC_SUBST(USE_EXTERNAL_LIBASS)
+ AC_SUBST(USE_EXTERNAL_LIBVORBIS)
+@@ -1188,7 +1188,7 @@
+   fi
+ ], [$USE_EXTERNAL_FFMPEG])
+ 
+-XB_CONFIG_MODULE([xbmc/cores/dvdplayer/Codecs/libdts], [
++XB_CONFIG_MODULE([xbmc/cores/dvdplayer/Codecs/libdca], [
+   if test "$host_vendor" = "apple" ; then
+     CFLAGS="-fPIC -fno-common -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4" \
+     LDFLAGS="-isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4" \
+@@ -1205,7 +1205,7 @@
+       --disable-win \
+       CFLAGS="-fPIC"
+   fi
+-], [$USE_EXTERNAL_LIBDTS])
++], [$USE_EXTERNAL_LIBDCA])
+ 
+ XB_CONFIG_MODULE([xbmc/cores/dvdplayer/Codecs/libdvd/libdvdcss], [
+   if test "$host_vendor" = "apple" ; then
+--- a/xbmc/cores/dvdplayer/Codecs/Makefile.in
++++ b/xbmc/cores/dvdplayer/Codecs/Makefile.in
+@@ -13,5 +13,5 @@
+   DIRS+=liba52
+ endif
+-ifneq (@USE_EXTERNAL_LIBDTS@,1)
++ifneq (@USE_EXTERNAL_LIBDCA@,1)
+   DIRS+=libdts
+ endif
+@@ -32,5 +32,5 @@
+ 	libao-$(ARCH).so
+ endif
+-ifneq (@USE_EXTERNAL_LIBDTS@,1)
++ifneq (@USE_EXTERNAL_LIBDCA@,1)
+   LIBS+=libdts-$(ARCH).so
+ endif
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Audio/DllLibDts.h
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Audio/DllLibDts.h
+@@ -25,6 +25,6 @@
+ #endif
+ extern "C" {
+-#if (defined USE_EXTERNAL_LIBDTS)
+-  #include <dts.h>
++#if (defined USE_EXTERNAL_LIBDCA)
++  #include <dca.h>
+ #else
+   #include "libdts/dts.h"
+@@ -40,5 +40,5 @@
+ typedef __int16          int16_t;
+ #endif
+-#ifdef LIBDTS_DOUBLE
++#ifdef LIBDCA_DOUBLE
+ typedef float convert_t;
+ #else
+@@ -51,36 +51,36 @@
+ public:
+   virtual ~DllLibDtsInterface() {}
+-  virtual dts_state_t * dts_init (uint32_t mm_accel)=0;
+-  virtual int dts_syncinfo (dts_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)=0;
+-  virtual int dts_frame (dts_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)=0;
+-  virtual void dts_dynrng (dts_state_t * state, level_t (* call) (level_t, void *), void * data)=0;
+-  virtual int dts_blocks_num (dts_state_t * state)=0;
+-  virtual int dts_block (dts_state_t * state)=0;
+-  virtual sample_t * dts_samples (dts_state_t * state)=0;
+-  virtual void dts_free (dts_state_t * state)=0;
++  virtual dca_state_t * dca_init (uint32_t mm_accel)=0;
++  virtual int dca_syncinfo (dca_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)=0;
++  virtual int dca_frame (dca_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)=0;
++  virtual void dca_dynrng (dca_state_t * state, level_t (* call) (level_t, void *), void * data)=0;
++  virtual int dca_blocks_num (dca_state_t * state)=0;
++  virtual int dca_block (dca_state_t * state)=0;
++  virtual sample_t * dca_samples (dca_state_t * state)=0;
++  virtual void dca_free (dca_state_t * state)=0;
+ };
+ 
+-#if (defined USE_EXTERNAL_LIBDTS)
++#if (defined USE_EXTERNAL_LIBDCA)
+ 
+ class DllLibDts : public DllDynamic, DllLibDtsInterface
+ {
+ public:
+     virtual ~DllLibDts() {}
+-    virtual dts_state_t * dts_init (uint32_t mm_accel)
+-        { return ::dts_init (mm_accel); }
+-    virtual int dts_syncinfo (dts_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)
+-        { return ::dts_syncinfo (state, buf, flags, sample_rate, bit_rate, frame_length); }
+-    virtual int dts_frame (dts_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)
+-        { return ::dts_frame (state, buf, flags, level, bias); }
+-    virtual void dts_dynrng (dts_state_t * state, level_t (* call) (level_t, void *), void * data)
+-        { return ::dts_dynrng (state, call, data); }
+-    virtual int dts_blocks_num (dts_state_t * state)
+-        { return ::dts_blocks_num (state); }
+-    virtual int dts_block (dts_state_t * state)
+-        { return ::dts_block (state); }
+-    virtual sample_t * dts_samples (dts_state_t * state)
+-        { return ::dts_samples (state); }
+-    virtual void dts_free (dts_state_t * state)
+-        { return ::dts_free (state); }
++    virtual dca_state_t * dca_init (uint32_t mm_accel)
++        { return ::dca_init (mm_accel); }
++    virtual int dca_syncinfo (dca_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)
++        { return ::dca_syncinfo (state, buf, flags, sample_rate, bit_rate, frame_length); }
++    virtual int dca_frame (dca_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)
++        { return ::dca_frame (state, buf, flags, level, bias); }
++    virtual void dca_dynrng (dca_state_t * state, level_t (* call) (level_t, void *), void * data)
++        { return ::dca_dynrng (state, call, data); }
++    virtual int dca_blocks_num (dca_state_t * state)
++        { return ::dca_blocks_num (state); }
++    virtual int dca_block (dca_state_t * state)
++        { return ::dca_block (state); }
++    virtual sample_t * dca_samples (dca_state_t * state)
++        { return ::dca_samples (state); }
++    virtual void dca_free (dca_state_t * state)
++        { return ::dca_free (state); }
+ 
+     // DLL faking.
+--- a/xbmc/cores/paplayer/DllDCACodec.h
++++ b/xbmc/cores/paplayer/DllDCACodec.h
+@@ -25,6 +25,6 @@
+ #endif
+ extern "C" {
+-#if (defined USE_EXTERNAL_LIBDTS)
+-  #include <dts.h>
++#if (defined USE_EXTERNAL_LIBDCA)
++  #include <dca.h>
+ #else
+   #include "../dvdplayer/DVDCodecs/Audio/libdts/dts.h"
+@@ -43,52 +43,52 @@
+ #endif
+ 
+-#ifdef LIBDTS_DOUBLE
++#ifdef LIBDCA_DOUBLE
+ typedef float convert_t;
+ #else
+ typedef sample_t convert_t;
+ #endif
+ 
+ 
+ class DllDCACodecInterface
+ {
+ public:
+   virtual ~DllDCACodecInterface() {}
+-  virtual dts_state_t * dts_init (uint32_t mm_accel)=0;
+-  virtual int dts_syncinfo (dts_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)=0;
+-  virtual int dts_frame (dts_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)=0;
+-  virtual void dts_dynrng (dts_state_t * state, level_t (* call) (level_t, void *), void * data)=0;
+-  virtual int dts_blocks_num (dts_state_t * state)=0;
+-  virtual int dts_block (dts_state_t * state)=0;
+-  virtual sample_t * dts_samples (dts_state_t * state)=0;
+-  virtual void dts_free (dts_state_t * state)=0;
++  virtual dca_state_t * dca_init (uint32_t mm_accel)=0;
++  virtual int dca_syncinfo (dca_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)=0;
++  virtual int dca_frame (dca_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)=0;
++  virtual void dca_dynrng (dca_state_t * state, level_t (* call) (level_t, void *), void * data)=0;
++  virtual int dca_blocks_num (dca_state_t * state)=0;
++  virtual int dca_block (dca_state_t * state)=0;
++  virtual sample_t * dca_samples (dca_state_t * state)=0;
++  virtual void dca_free (dca_state_t * state)=0;
+ };
+ 
+-#if (defined USE_EXTERNAL_LIBDTS)
++#if (defined USE_EXTERNAL_LIBDCA)
+ 
+ class DllDCACodec : public DllDynamic, DllDCACodecInterface
+ {
+ public:
+     virtual ~DllDCACodec() {}
+-    virtual dts_state_t * dts_init (uint32_t mm_accel)
+-        { return ::dts_init (mm_accel); }
+-    virtual int dts_syncinfo (dts_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)
+-        { return ::dts_syncinfo (state, buf, flags, sample_rate, bit_rate, frame_length); }
+-    virtual int dts_frame (dts_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)
+-        { return ::dts_frame (state, buf, flags, level, bias); }
+-    virtual void dts_dynrng (dts_state_t * state, level_t (* call) (level_t, void *), void * data)
+-        { return ::dts_dynrng (state, call, data); }
+-    virtual int dts_blocks_num (dts_state_t * state)
+-        { return ::dts_blocks_num (state); }
+-    virtual int dts_block (dts_state_t * state)
+-        { return ::dts_block (state); }
+-    virtual sample_t * dts_samples (dts_state_t * state)
+-        { return ::dts_samples (state); }
+-    virtual void dts_free (dts_state_t * state)
+-        { return ::dts_free (state); }
++    virtual dca_state_t * dca_init (uint32_t mm_accel)
++        { return ::dca_init (mm_accel); }
++    virtual int dca_syncinfo (dca_state_t *state, uint8_t * buf, int * flags, int * sample_rate, int * bit_rate, int *frame_length)
++        { return ::dca_syncinfo (state, buf, flags, sample_rate, bit_rate, frame_length); }
++    virtual int dca_frame (dca_state_t * state, uint8_t * buf, int * flags, level_t * level, sample_t bias)
++        { return ::dca_frame (state, buf, flags, level, bias); }
++    virtual void dca_dynrng (dca_state_t * state, level_t (* call) (level_t, void *), void * data)
++        { return ::dca_dynrng (state, call, data); }
++    virtual int dca_blocks_num (dca_state_t * state)
++        { return ::dca_blocks_num (state); }
++    virtual int dca_block (dca_state_t * state)
++        { return ::dca_block (state); }
++    virtual sample_t * dca_samples (dca_state_t * state)
++        { return ::dca_samples (state); }
++    virtual void dca_free (dca_state_t * state)
++        { return ::dca_free (state); }
+ 
+     // DLL faking.
+     virtual bool ResolveExports() { return true; }
+     virtual bool Load() {
+-        CLog::Log(LOGDEBUG, "DllDCACodec: Using libdts system library");
++        CLog::Log(LOGDEBUG, "DllDCACodec: Using libdca system library");
+         return true;
+     }
+--- a/xbmc/cores/paplayer/DTSCodec.h
++++ a/xbmc/cores/paplayer/DTSCodec.h
+@@ -57,5 +57,5 @@
+   static void convert2s16_multi(convert_t * _f, int16_t * s16, int flags);
+ 
+-  dts_state_t* m_pState;
++  dca_state_t* m_pState;
+ 
+   BYTE m_inputBuffer[12288];
+--- a/xbmc/cores/paplayer/DTSCodec.cpp
++++ a/xbmc/cores/paplayer/DTSCodec.cpp
+@@ -82,23 +82,23 @@
+   switch (flags)
+     {
+-    case DTS_MONO:   //MON 2
++    case DCA_MONO:   //MON 2
+       for (i = 0; i < 256; i++)
+         {
+           s16[2*i] = s16[2*i+1] = convert (f[i]);
+         }
+       break;
+-    case DTS_CHANNEL:   //L R 2
+-    case DTS_STEREO:
+-    case DTS_STEREO_TOTAL:
++    case DCA_CHANNEL:   //L R 2
++    case DCA_STEREO:
++    case DCA_STEREO_TOTAL:
+       convert2s16_2 (_f, s16);
+       break;
+-    case DTS_STEREO_SUMDIFF:  //L+R L-R 2
++    case DCA_STEREO_SUMDIFF:  //L+R L-R 2
+       for (i = 0; i < 256; i++)
+         {
+           s16[2*i] = convert (f[i])/2 + convert (f[i+256])/2;
+           s16[2*i+1] = convert (f[i])/2 - convert (f[i+256])/2;
+         }
+       break;
+-    case DTS_3F:   //C L R 5
++    case DCA_3F:   //C L R 5
+       for (i = 0; i < 256; i++)
+         {
+@@ -109,5 +109,5 @@
+         }
+       break;
+-    case DTS_2F1R:   //L R S 4
++    case DCA_2F1R:   //L R S 4
+       for (i = 0; i < 256; i++)
+         {
+@@ -117,5 +117,5 @@
+         }
+       break;
+-    case DTS_3F1R:   //C L R S 5
++    case DCA_3F1R:   //C L R S 5
+       for (i = 0; i < 256; i++)
+         {
+@@ -126,11 +126,11 @@
+         }
+       break;
+-    case DTS_2F2R:   //L R SL SR 4
++    case DCA_2F2R:   //L R SL SR 4
+       convert2s16_4 (_f, s16);
+       break;
+-    case DTS_3F2R:   //C L R SL SR 5
++    case DCA_3F2R:   //C L R SL SR 5
+       convert2s16_5 (_f, s16);
+       break;
+-    case DTS_MONO | DTS_LFE:  //MON LFE 6
++    case DCA_MONO | DCA_LFE:  //MON LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -140,7 +140,7 @@
+         }
+       break;
+-    case DTS_CHANNEL | DTS_LFE:
+-    case DTS_STEREO | DTS_LFE:
+-    case DTS_STEREO_TOTAL | DTS_LFE: //L R LFE 6
++    case DCA_CHANNEL | DCA_LFE:
++    case DCA_STEREO | DCA_LFE:
++    case DCA_STEREO_TOTAL | DCA_LFE: //L R LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -151,5 +151,5 @@
+         }
+       break;
+-    case DTS_STEREO_SUMDIFF | DTS_LFE: //L+R L-R LFE 6
++    case DCA_STEREO_SUMDIFF | DCA_LFE: //L+R L-R LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -160,5 +160,5 @@
+         }
+       break;
+-    case DTS_3F | DTS_LFE: //C L R LFE 6
++    case DCA_3F | DCA_LFE: //C L R LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -170,5 +170,5 @@
+         }
+       break;
+-    case DTS_2F1R | DTS_LFE: //L R S LFE 6
++    case DCA_2F1R | DCA_LFE: //L R S LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -180,5 +180,5 @@
+         }
+       break;
+-    case DTS_3F1R | DTS_LFE: //C L R S LFE 6
++    case DCA_3F1R | DCA_LFE: //C L R S LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -190,5 +190,5 @@
+         }
+       break;
+-    case DTS_2F2R | DTS_LFE: //L R SL SR LFE 6
++    case DCA_2F2R | DCA_LFE: //L R SL SR LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -201,5 +201,5 @@
+         }
+       break;
+-    case DTS_3F2R | DTS_LFE: //C L R SL SR LFE 6
++    case DCA_3F2R | DCA_LFE: //C L R SL SR LFE 6
+       for (i = 0; i < 256; i++)
+         {
+@@ -241,5 +241,5 @@
+ {
+   m_IsInitialized = false;
+-  if (m_pState) m_dll.dts_free(m_pState);
++  if (m_pState) m_dll.dca_free(m_pState);
+   m_pState = NULL;
+ 
+@@ -306,5 +306,5 @@
+   SetDefault();
+ 
+-  m_pState = m_dll.dts_init(0);
++  m_pState = m_dll.dca_init(0);
+   if (!m_pState)
+     return false;
+@@ -351,20 +351,20 @@
+   int iChannels = 0;
+   
+-  switch (iFlags & DTS_CHANNEL_MASK)
++  switch (iFlags & DCA_CHANNEL_MASK)
+   {
+-    case DTS_MONO:           iChannels =  1; break;
+-    case DTS_CHANNEL:        iChannels =  1; break; // ???
+-    case DTS_STEREO:         iChannels =  2; break;
+-    case DTS_STEREO_SUMDIFF: iChannels =  2; break;
+-    case DTS_STEREO_TOTAL:   iChannels =  2; break;
+-    case DTS_3F:             iChannels =  3; break;
+-    case DTS_2F1R:           iChannels =  3; break;
+-    case DTS_3F1R:           iChannels =  4; break;
+-    case DTS_2F2R:           iChannels =  4; break;
+-    case DTS_3F2R:           iChannels =  5; break;
+-    case DTS_4F2R:           iChannels =  6; break;
++    case DCA_MONO:           iChannels =  1; break;
++    case DCA_CHANNEL:        iChannels =  1; break; // ???
++    case DCA_STEREO:         iChannels =  2; break;
++    case DCA_STEREO_SUMDIFF: iChannels =  2; break;
++    case DCA_STEREO_TOTAL:   iChannels =  2; break;
++    case DCA_3F:             iChannels =  3; break;
++    case DCA_2F1R:           iChannels =  3; break;
++    case DCA_3F1R:           iChannels =  4; break;
++    case DCA_2F2R:           iChannels =  4; break;
++    case DCA_3F2R:           iChannels =  5; break;
++    case DCA_4F2R:           iChannels =  6; break;
+     default: iChannels = 0; break;
+   }
+-  if (iFlags & DTS_LFE) iChannels++;
++  if (iFlags & DCA_LFE) iChannels++;
+   
+   return iChannels;
+@@ -447,8 +447,8 @@
+       {
+         // it's possible that m_inputBuffer already contains 6 bits from our previous run
+-        // so use m_pInputBuffer to copy the rest of the data. We must rest it after dts_syncinfo though!!
++        // so use m_pInputBuffer to copy the rest of the data. We must rest it after dca_syncinfo though!!
+         for (int u = 0; u < HEADER_SIZE; u++) m_pInputBuffer[u] = pData[u];
+ 
+-        iLen = m_dll.dts_syncinfo(m_pState, m_inputBuffer, &m_iFlags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iFrameSize);
++        iLen = m_dll.dca_syncinfo(m_pState, m_inputBuffer, &m_iFlags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iFrameSize);
+         if (iLen > 0)
+         {
+@@ -505,19 +505,19 @@
+       //m_iOutputChannels = 2;
+       int iFlags = m_iFlags;
+-      if (m_iOutputChannels == 1)      iFlags = DTS_MONO;
+-      else if (m_iOutputChannels == 2) iFlags = DTS_STEREO;
++      if (m_iOutputChannels == 1)      iFlags = DCA_MONO;
++      else if (m_iOutputChannels == 2) iFlags = DCA_STEREO;
+       else
+       {
+         m_iOutputChannels = m_iSourceChannels;
+-        iFlags |= DTS_ADJUST_LEVEL;
++        iFlags |= DCA_ADJUST_LEVEL;
+       }
+ 
+-      m_dll.dts_frame(m_pState, m_inputBuffer, &iFlags, &level, bias);
++      m_dll.dca_frame(m_pState, m_inputBuffer, &iFlags, &level, bias);
+ 
+-      // [dts_dynrng (state, ...); this is only optional]
+-      int iNrOfBlocks = m_dll.dts_blocks_num(m_pState);
++      // [dca_dynrng (state, ...); this is only optional]
++      int iNrOfBlocks = m_dll.dca_blocks_num(m_pState);
+       for (int i = 0; i < iNrOfBlocks; i++)
+       {
+-        if (m_dll.dts_block(m_pState) != 0)
++        if (m_dll.dca_block(m_pState) != 0)
+         {
+           CLog::Log(LOGDEBUG, "Not a valid DTS frame");
+@@ -527,6 +527,6 @@
+           return (pData - pOldDataPointer);
+         }
+-        m_fSamples = m_dll.dts_samples(m_pState);
+-        convert2s16_multi(m_fSamples, (short*)(m_decodedData + m_decodedDataSize), iFlags & (DTS_CHANNEL_MASK | DTS_LFE));
++        m_fSamples = m_dll.dca_samples(m_pState);
++        convert2s16_multi(m_fSamples, (short*)(m_decodedData + m_decodedDataSize), iFlags & (DCA_CHANNEL_MASK | DCA_LFE));
+         m_decodedDataSize += 256 * sizeof(short) * m_iOutputChannels;
+       }
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecLibDts.h
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecLibDts.h
+@@ -49,5 +49,5 @@
+   static void convert2s16_multi(convert_t * _f, int16_t * s16, int flags);
+ 
+-  dts_state_t* m_pState;
++  dca_state_t* m_pState;
+ 
+   int m_iFrameSize;
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecPassthrough.h
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecPassthrough.h
+@@ -69,5 +69,5 @@
+   DllLiba52 m_dllA52;
+ 
+-  dts_state_t* m_pStateDTS;
++  dca_state_t* m_pStateDTS;
+   a52_state_t* m_pStateA52;
+ };
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecLibDts.cpp
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecLibDts.cpp
+@@ -29,5 +29,5 @@
+ static inline int16_t convert(int32_t i)
+ {
+-#ifdef LIBDTS_FIXED
++#ifdef LIBDCA_FIXED
+     i >>= 15;
+ #else
+@@ -44,21 +44,21 @@
+   switch (flags)
+   {
+-    case DTS_MONO:
++    case DCA_MONO:
+       for (i = 0; i < 256; i++)
+       {
+         s16[2*i  ] = convert (f[i]);
+         s16[2*i+1] = convert (f[i]);
+       }
+       break;
+-    case DTS_CHANNEL:
+-    case DTS_STEREO:
+-    case DTS_DOLBY:
++    case DCA_CHANNEL:
++    case DCA_STEREO:
++    case DCA_DOLBY:
+       for (i = 0; i < 256; i++)
+       {
+         s16[2*i  ] = convert (f[i]);
+         s16[2*i+1] = convert (f[i+256]);
+       }
+       break;
+-    case DTS_3F:
++    case DCA_3F:
+       for (i = 0; i < 256; i++)
+       {
+@@ -71,5 +71,5 @@
+       }
+       break;
+-    case DTS_2F2R:
++    case DCA_2F2R:
+       for (i = 0; i < 256; i++)
+       {
+@@ -80,5 +80,5 @@
+       }
+       break;
+-    case DTS_3F2R:
++    case DCA_3F2R:
+       for (i = 0; i < 256; i++)
+       {
+@@ -91,5 +91,5 @@
+       }
+       break;
+-    case DTS_MONO | DTS_LFE:
++    case DCA_MONO | DCA_LFE:
+       for (i = 0; i < 256; i++)
+       {
+@@ -99,7 +99,7 @@
+       }
+       break;
+-    case DTS_CHANNEL | DTS_LFE:
+-    case DTS_STEREO | DTS_LFE:
+-    case DTS_DOLBY | DTS_LFE:
++    case DCA_CHANNEL | DCA_LFE:
++    case DCA_STEREO | DCA_LFE:
++    case DCA_DOLBY | DCA_LFE:
+       for (i = 0; i < 256; i++)
+       {
+@@ -110,5 +110,5 @@
+       }
+       break;
+-    case DTS_3F | DTS_LFE:
++    case DCA_3F | DCA_LFE:
+       for (i = 0; i < 256; i++)
+       {
+@@ -120,5 +120,5 @@
+       }
+       break;
+-    case DTS_2F2R | DTS_LFE:
++    case DCA_2F2R | DCA_LFE:
+       for (i = 0; i < 256; i++)
+       {
+@@ -131,5 +131,5 @@
+       }
+       break;
+-    case DTS_3F2R | DTS_LFE:
++    case DCA_3F2R | DCA_LFE:
+       for (i = 0; i < 256; i++)
+       {
+@@ -163,12 +163,12 @@
+   SetDefault();
+ 
+-  m_pState = m_dll.dts_init(0);
++  m_pState = m_dll.dca_init(0);
+   if (!m_pState)
+   {
+     Dispose();
+     return false;
+   }
+ 
+-  m_fSamples = m_dll.dts_samples(m_pState);
++  m_fSamples = m_dll.dca_samples(m_pState);
+ 
+   // Output will be decided once we query the stream.
+@@ -180,15 +180,15 @@
+ void CDVDAudioCodecLibDts::Dispose()
+ {
+-  if (m_pState) m_dll.dts_free(m_pState);
++  if (m_pState) m_dll.dca_free(m_pState);
+   m_pState = NULL;
+ }
+ 
+ int CDVDAudioCodecLibDts::GetNrOfChannels(int iFlags)
+ {
+-  if(iFlags & DTS_LFE)
++  if(iFlags & DCA_LFE)
+     return 6;
+-  if(iFlags & DTS_CHANNEL)
++  if(iFlags & DCA_CHANNEL)
+     return 6;
+-  else if ((iFlags & DTS_CHANNEL_MASK) == DTS_2F2R)
++  else if ((iFlags & DCA_CHANNEL_MASK) == DCA_2F2R)
+     return 4;
+   else
+@@ -206,11 +206,11 @@
+ 
+   if (m_iOutputChannels == 1)
+-    m_iOutputFlags = DTS_MONO;
++    m_iOutputFlags = DCA_MONO;
+   else if (m_iOutputChannels == 2)
+-    m_iOutputFlags = DTS_STEREO;
++    m_iOutputFlags = DCA_STEREO;
+   else
+     m_iOutputFlags = m_iSourceFlags;
+ 
+-  m_iOutputFlags |= DTS_ADJUST_LEVEL;
++  m_iOutputFlags |= DCA_ADJUST_LEVEL;
+ }
+ 
+@@ -226,5 +226,5 @@
+   {
+     // try to sync directly in packet
+-    m_iFrameSize = m_dll.dts_syncinfo(m_pState, data, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &framelen);
++    m_iFrameSize = m_dll.dca_syncinfo(m_pState, data, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &framelen);
+ 
+     if(m_iFrameSize > 0)
+@@ -267,5 +267,5 @@
+   while(true)
+   {
+-    m_iFrameSize = m_dll.dts_syncinfo(m_pState, m_inputBuffer, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &framelen);
++    m_iFrameSize = m_dll.dca_syncinfo(m_pState, m_inputBuffer, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &framelen);
+     if(m_iFrameSize > 0)
+       break;
+@@ -317,18 +317,18 @@
+   int      flags = m_iOutputFlags;
+ 
+-  m_dll.dts_frame(m_pState, frame, &flags, &level, bias);
++  m_dll.dca_frame(m_pState, frame, &flags, &level, bias);
+ 
+   if (!g_advancedSettings.m_audioApplyDrc)
+-    m_dll.dts_dynrng(m_pState, NULL, NULL);
++    m_dll.dca_dynrng(m_pState, NULL, NULL);
+ 
+-  int blocks = m_dll.dts_blocks_num(m_pState);
++  int blocks = m_dll.dca_blocks_num(m_pState);
+   for (int i = 0; i < blocks; i++)
+   {
+-    if (m_dll.dts_block(m_pState) != 0)
++    if (m_dll.dca_block(m_pState) != 0)
+     {
+-      CLog::Log(LOGERROR, "CDVDAudioCodecLibDts::Decode : dts_block != 0");
++      CLog::Log(LOGERROR, "CDVDAudioCodecLibDts::Decode : dca_block != 0");
+       break;
+     }
+-    convert2s16_multi(m_fSamples, (int16_t*)(m_decodedData + m_decodedSize), flags & (DTS_CHANNEL_MASK | DTS_LFE));
++    convert2s16_multi(m_fSamples, (int16_t*)(m_decodedData + m_decodedSize), flags & (DCA_CHANNEL_MASK | DCA_LFE));
+     m_decodedSize += 2 * 256 * m_iOutputChannels;
+   }
+@@ -358,10 +358,10 @@
+ void CDVDAudioCodecLibDts::Reset()
+ {
+-  if (m_pState) m_dll.dts_free(m_pState);
++  if (m_pState) m_dll.dca_free(m_pState);
+ 
+   SetDefault();
+ 
+-  m_pState = m_dll.dts_init(0);
+-  m_fSamples = m_dll.dts_samples(m_pState);
++  m_pState = m_dll.dca_init(0);
++  m_fSamples = m_dll.dca_samples(m_pState);
+ }
+ 
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecPassthrough.cpp
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Audio/DVDAudioCodecPassthrough.cpp
+@@ -204,5 +204,5 @@
+       if (!m_dllDTS.Load())
+         return false;
+-      m_pStateDTS = m_dllDTS.dts_init(0);
++      m_pStateDTS = m_dllDTS.dca_init(0);
+       if(m_pStateDTS == NULL)
+         return false;
+@@ -224,5 +224,5 @@
+   if( m_pStateDTS )
+   {
+-    m_dllDTS.dts_free(m_pStateDTS);
++    m_dllDTS.dca_free(m_pStateDTS);
+     m_pStateDTS = NULL;
+   }
+@@ -243,5 +243,5 @@
+       m_iFrameSize = m_dllA52.a52_syncinfo(data, &flags, &m_iSourceSampleRate, &m_iSourceBitrate);
+     else if(m_Codec == CODEC_ID_DTS)
+-      m_iFrameSize = m_dllDTS.dts_syncinfo(m_pStateDTS, data, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iSamplesPerFrame);
++      m_iFrameSize = m_dllDTS.dca_syncinfo(m_pStateDTS, data, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iSamplesPerFrame);
+ 
+     if(m_iFrameSize > 0)
+@@ -290,6 +290,6 @@
+       m_iFrameSize = m_dllA52.a52_syncinfo(m_InputBuffer, &flags, &m_iSourceSampleRate, &m_iSourceBitrate);
+     else if(m_Codec == CODEC_ID_DTS)
+-      m_iFrameSize = m_dllDTS.dts_syncinfo(m_pStateDTS, m_InputBuffer, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iSamplesPerFrame);
++      m_iFrameSize = m_dllDTS.dca_syncinfo(m_pStateDTS, m_InputBuffer, &flags, &m_iSourceSampleRate, &m_iSourceBitrate, &m_iSamplesPerFrame);
+     if(m_iFrameSize > 0)
+       break;
+ 

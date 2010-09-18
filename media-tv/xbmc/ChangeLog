@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.67 2010/09/18 09:13:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.68 2010/09/18 16:06:07 vapier Exp $
+
+*xbmc-9.11-r5 (18 Sep 2010)
+
+  18 Sep 2010; Mike Frysinger <vapier@gentoo.org> +xbmc-9.11-r5.ebuild,
+  +files/xbmc-9.11-external-python.patch, +files/xbmc-9.11-libdca.patch:
+  Force internal python usage #304521 by Domen Kožar. Build against libdca
+  rather than libdts #330201 by Füves Zoltán.
 
   18 Sep 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r4.ebuild,
   xbmc-9999.ebuild:
