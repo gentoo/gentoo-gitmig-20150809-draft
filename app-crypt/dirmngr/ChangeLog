@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/dirmngr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.55 2010/09/14 03:41:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.56 2010/09/18 08:51:02 hwoarang Exp $
+
+  18 Sep 2010; Markos Chandras <hwoarang@gentoo.org> dirmngr-1.1.0.ebuild:
+  Stable on amd64 wrt bug #337122. Thanks to Chad A. Simmons
+  <chad.simmons@member.fsf.org> for testing
 
   14 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dirmngr-1.1.0.ebuild:
   x86 stable wrt bug #337122
