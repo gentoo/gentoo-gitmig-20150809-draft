@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16keyedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.16 2010/08/01 13:35:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.17 2010/09/18 17:01:17 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> e16keyedit-0.6.ebuild:
+  sparc stable wrt #330575
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> e16keyedit-0.6.ebuild:
   Stable on amd64 wrt bug #330575
