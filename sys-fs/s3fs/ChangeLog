@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.5 2010/06/02 07:06:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.6 2010/09/18 01:47:45 jer Exp $
+
+*s3fs-191 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org>
+  files/s3fs-177-asneeded.patch, +s3fs-191.ebuild:
+  Version bump. Fix patch to respect LDFLAGS (bug #335416).
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)

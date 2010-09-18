@@ -1,9 +1,9 @@
---- s3fs.orig/Makefile	2008-05-19 19:34:38.000000000 +0200
-+++ s3fs/Makefile	2009-10-19 22:10:55.810129401 +0200
+--- a/Makefile	2008-05-19 19:34:38.000000000 +0200
++++ b/Makefile	2009-10-19 22:10:55.810129401 +0200
 @@ -1,5 +1,5 @@
  all:
 -	g++ -ggdb -Wall $(shell pkg-config fuse --cflags --libs) $(shell pkg-config libcurl --cflags --libs) $(shell xml2-config --cflags --libs) -lcrypto s3fs.cpp -o s3fs
-+	$(CXX) $(CXXFLAGS) s3fs.cpp -o s3fs  $(shell pkg-config fuse --cflags --libs) $(shell pkg-config libcurl --cflags --libs) $(shell xml2-config --cflags --libs) -lcrypto
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) s3fs.cpp -o s3fs  $(shell pkg-config fuse --cflags --libs) $(shell pkg-config libcurl --cflags --libs) $(shell xml2-config --cflags --libs) -lcrypto
  	@echo ok!
  
  install: all
