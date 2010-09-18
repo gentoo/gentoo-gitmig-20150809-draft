@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.84 2010/07/25 22:02:45 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.85 2010/09/18 17:07:11 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> libmtp-0.3.7.ebuild,
+  libmtp-1.0.3.ebuild, libmtp-1.0.3-r1.ebuild:
+  Drop sparc keywords
 
 *libmtp-1.0.3-r1 (25 Jul 2010)
 
