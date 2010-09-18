@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mmix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.16 2008/09/03 09:41:10 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.17 2010/09/18 01:38:42 jer Exp $
+
+*mmix-20100311 (18 Sep 2010)
+*mmix-20060324-r1 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> +mmix-20060324-r1.ebuild,
+  +files/mmix-20060324-includes.patch, +files/mmix-20060324-makefile.patch,
+  +mmix-20100311.ebuild:
+  Version bump. Respect LDFLAGS (bug #335415), CC. Fix some compiler
+  warnings. Fix parallel make.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> mmix-20060324.ebuild:
   fix dependency to virtual/tex-base, this fixes bug 185637 and bug 222501
