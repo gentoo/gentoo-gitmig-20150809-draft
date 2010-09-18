@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.2-r1.ebuild,v 1.4 2010/02/14 21:31:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.2-r1.ebuild,v 1.5 2010/09/18 09:09:29 graaff Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 jruby"
 
-RUBY_FAKEGEM_TASK_DOC="doc:redoc"
+RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README"
 
@@ -32,4 +32,7 @@ all_ruby_prepare() {
 	# with Ruby 1.9; we disable it since we don't need it at all.
 	sed -i -e '/^namespace :site/,/^end/ d' "${S}"/Rakefile \
 		|| die "sed out of rake's :site namespace failed"
+
+	# The .erb file is not shipped, so avoid rebuilding it.
+	sed -i -e "/:rdoc => 'doc:readme'/d" Rakefile || die
 }
