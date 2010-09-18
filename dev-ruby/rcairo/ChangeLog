@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.41 2010/08/28 18:56:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.42 2010/09/18 13:57:56 graaff Exp $
+
+*rcairo-1.8.5 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +rcairo-1.8.5.ebuild:
+  Version bump with support for cairo 1.8.10.
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org> rcairo-1.8.1.ebuild:
   alpha/ia64/sparc stable wrt #329807
