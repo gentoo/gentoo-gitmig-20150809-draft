@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5.ebuild,v 1.10 2010/01/02 11:17:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/expander-2.0.5-r1.ebuild,v 1.1 2010/09/18 21:14:47 jer Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -13,20 +15,15 @@ SLOT="0"
 KEYWORDS="~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=""
-
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 }
 
 src_compile() {
-	cd src
-	emake compiler="$(tc-getCC) ${CFLAGS}" || die "make failed"
+	emake -C src CC=$(tc-getCC) || die "make failed"
 }
 
 src_install() {

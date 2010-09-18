@@ -1,13 +1,12 @@
-diff -ur expander/src/Makefile expander-gentoo/src/Makefile
---- expander/src/Makefile	2003-10-30 14:52:00.000000000 +1300
-+++ expander-gentoo/src/Makefile	2003-10-30 15:50:02.000000000 +1300
+--- a/src/Makefile
++++ b/src/Makefile
 @@ -3,15 +3,14 @@
  bindir = $(BINDIR)/
  
  copy     = ln -fs
 -CFLAGS  += -v -g # -DNEED_GETOPT_PROTO_TYPE
 -compiler = cc $(CFLAGS)
-+compiler = gcc $(CFLAGS)
++compiler = $(CC) $(CFLAGS)
  
  executables = expander boxcomment align_columns align_comments where_is
  
@@ -24,7 +23,7 @@ diff -ur expander/src/Makefile expander-gentoo/src/Makefile
  #-----------------------------------------------------------------------
  expander: expander.c             
 -	$(compiler) -o $(bindir)$@ $?  
-+	$(compiler) -o $@ $?
++	$(compiler) $(LDFLAGS) -o $@ $?
  
  #--------------------------------------------------------------------------
  # Surround given text with open ended box. (with NEdit, language sensitive)
@@ -32,28 +31,28 @@ diff -ur expander/src/Makefile expander-gentoo/src/Makefile
  boxcomment: boxcomment.c
 -	$(compiler) -o $(bindir)$@ $?
 -	@if [ ! -f $(bindir)un$@ ]; then $(copy) $(bindir)$@ $(bindir)un$@; fi
-+	$(compiler) -o $@ $?
++	$(compiler) $(LDFLAGS) -o $@ $?
  
  #-------------------------------------------------------------------------------
  # Align ragged looking 'C' style comments (good substitute for align_equals too)
  #-------------------------------------------------------------------------------
  align_comments: align_comments.c
 -	$(compiler) -o $(bindir)$@ $?
-+	$(compiler) -o $@ $?
++	$(compiler) $(LDFLAGS) -o $@ $?
  
  #----------------------------
  # Align given text in columns
  #----------------------------
  align_columns: align_columns.c
 -	$(compiler) -o $(bindir)$@ $?
-+	$(compiler) -o $@ $?
++	$(compiler) $(LDFLAGS) -o $@ $?
  
  #----------------------------------------------
  # File locator (substitute for which, where...)
  #----------------------------------------------
  where_is: where_is.c
 -	$(compiler) -o $(bindir)$@ $?
-+	$(compiler) -o $@ $?
++	$(compiler) $(LDFLAGS) -o $@ $?
  
  #------------------------------------------------
  # Here is how to uninstall the executables built.

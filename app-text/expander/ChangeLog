@@ -1,6 +1,14 @@
 # ChangeLog for app-text/expander
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.10 2010/01/02 11:17:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.11 2010/09/18 21:14:47 jer Exp $
+
+*expander-2.0.5-r1 (18 Sep 2010)
+
+  18 Sep 2010; Jeroen Roovers <jer@gentoo.org> -expander-2.0.5.ebuild,
+  +expander-2.0.5-r1.ebuild, files/expander-2.0.5-gentoo.patch:
+  Respect LDFLAGS (bug #336155, and do not duplicate in the emake call what
+  the patch was already trying to do). Do not set empty DEPEND. Merge cd
+  into emake call.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   expander-2.0.5.ebuild:
