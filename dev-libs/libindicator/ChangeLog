@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libindicator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.4 2010/03/31 21:22:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.5 2010/09/18 18:53:14 eva Exp $
+
+*libindicator-0.3.13 (18 Sep 2010)
+
+  18 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +libindicator-0.3.13.ebuild:
+  Version bump.
 
   31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   libindicator-0.3.6.ebuild:
