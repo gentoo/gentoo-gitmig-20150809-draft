@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/cfe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.5 2009/06/09 02:17:13 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.6 2010/09/18 05:49:29 dirtyepic Exp $
+
+  18 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> cfe-0.12.ebuild,
+  +files/cfe-0.12-LDFLAGS.patch:
+  Respect LDFLAGS (bug #337614 by Diego).
 
   09 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> cfe-0.12.ebuild:
   Remove autoconf 2.1 requirement, package builds fine with 2.63.
