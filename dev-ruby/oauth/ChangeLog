@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.10 2010/08/13 06:38:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.11 2010/09/18 09:58:03 graaff Exp $
+
+*oauth-0.4.3 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +oauth-0.4.3.ebuild,
+  +files/oauth-0.4.3-optional-tests.patch:
+  Version bump. Update optional tests patch. Weaken rails requirement to fix
+  bug 332913.
 
   13 Aug 2010; Hans de Graaff <graaff@gentoo.org> -oauth-0.3.6.ebuild,
   -oauth-0.3.6-r1.ebuild, -files/oauth-0.3.6-newgem.patch:
