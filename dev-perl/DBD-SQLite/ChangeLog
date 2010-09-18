@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.80 2010/09/16 15:59:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.81 2010/09/18 15:51:01 armin76 Exp $
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> DBD-SQLite-1.29-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #336806
 
 *DBD-SQLite-1.31 (16 Sep 2010)
 
