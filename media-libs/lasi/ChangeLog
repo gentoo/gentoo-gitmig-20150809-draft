@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.14 2010/01/14 06:54:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.15 2010/09/18 13:20:45 dilfridge Exp $
+
+*lasi-1.1.0-r2 (18 Sep 2010)
+
+  18 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +lasi-1.1.0-r2.ebuild, +files/lasi-1.1.0-pkgconfig.patch:
+  Added workaround patch to create a sane pkgconfig file. Fixes bug
+  312799.
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> lasi-1.1.0-r1.ebuild:
   Stable for HPPA (bug #284689).
