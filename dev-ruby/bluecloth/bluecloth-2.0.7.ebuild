@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.7.ebuild,v 1.5 2010/07/14 20:30:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.7.ebuild,v 1.6 2010/09/18 08:52:58 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -24,7 +24,7 @@ ruby_add_bdepend "
 	>=dev-ruby/rdoc-2.4.1
 	dev-ruby/rake-compiler
 	test? (
-		dev-ruby/rspec
+		dev-ruby/rspec:0
 		dev-ruby/diff-lcs
 	)"
 
@@ -42,6 +42,11 @@ all_ruby_prepare() {
 		-e '/package_task/s:^:#:' \
 		-e '/task :package/s:^:#:' \
 		rake/packaging.rb || die
+
+	# Remove gem requirement. The require below it will pick up the
+	# correct rspec implementation and we'll handle the proper version
+	# here.
+	sed -i -e "/gem 'rspec'/d" rake/testing.rb || die
 }
 
 each_ruby_compile() {
