@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.5 2010/08/19 18:21:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.6 2010/09/18 18:33:05 eva Exp $
 
 EAPI="2"
 
@@ -8,15 +8,14 @@ inherit eutils gnome2 python multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="amd64 ~ppc64 x86"
 IUSE="cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
-
-SLOT="0"
-
 COMMON_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/libxml2
 	>=x11-libs/gtk+-2.18
@@ -91,12 +90,16 @@ pkg_setup() {
 		if use ipod; then
 			ewarn "ipod support requires hal or udev support.  Please"
 			ewarn "re-emerge with USE=udev to enable ipod support"
+			G2CONF="${G2CONF} --without-ipod"
 		fi
 
 		if use mtp; then
 			ewarn "MTP support requires hal or udev support.  Please"
 			ewarn "re-emerge with USE=udev to enable MTP support"
+			G2CONF="${G2CONF} --without-mtp"
 		fi
+	else
+		G2CONF="${G2CONF} $(use_with ipod) $(use_with mtp)"
 	fi
 
 	if use hal && use udev; then
@@ -127,11 +130,9 @@ pkg_setup() {
 		$(use_with gnome-keyring)
 		$(use_with udev gudev)
 		$(use_with hal)
-		$(use_with ipod)
 		$(use_enable libnotify)
 		$(use_enable lirc)
 		$(use_enable musicbrainz)
-		$(use_with mtp)
 		$(use_enable nsplugin browser-plugin)
 		$(use_enable python)
 		$(use_enable daap)
@@ -155,7 +156,8 @@ src_prepare() {
 	# Fix python initialization problems, bug #318333
 	epatch "${FILESDIR}/${PN}-0.12-python-initialization.patch"
 
-	epatch "${FILESDIR}"/${P}-namespace-conflict.patch
+	# Fix building with recent glibc, bug #333373
+	epatch "${FILESDIR}/${P}-namespace-conflict.patch"
 }
 
 src_compile() {
