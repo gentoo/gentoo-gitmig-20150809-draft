@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fakeweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.9 2010/08/31 19:55:53 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.10 2010/09/18 16:14:46 graaff Exp $
+
+*fakeweb-1.3.0 (18 Sep 2010)
+
+  18 Sep 2010; Hans de Graaff <graaff@gentoo.org> +fakeweb-1.3.0.ebuild:
+  Version bump.
 
   31 Aug 2010; Alex Legler <a3li@gentoo.org> fakeweb-1.2.8.ebuild:
   Add REE 1.8 support.
