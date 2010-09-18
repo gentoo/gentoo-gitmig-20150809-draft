@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.51.1.ebuild,v 1.1 2010/09/18 22:03:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.51.1.ebuild,v 1.2 2010/09/18 23:10:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -58,12 +58,12 @@ src_test() {
 		local tpath="${T}/test-${PYTHON_ABI}"
 		local spath="${tpath}$(python_get_sitedir)"
 
-		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${tpath}" || die "Installation for tests failed with Python ${PYTHON_ABI}"
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${tpath}" || die "Installation for tests failed with $(python_get_implementation) $(python_get_version)"
 
 		# pytest uses tests placed relatively to the current directory.
-		pushd "${spath}" >/dev/null || die
+		pushd "${spath}" > /dev/null || return 1
 		PYTHONPATH="${spath}" "$(PYTHON)" "${tpath}/usr/bin/pytest" -v || return 1
-		popd >/dev/null || die
+		popd > /dev/null || return 1
 	}
 	python_execute_function testing
 }
