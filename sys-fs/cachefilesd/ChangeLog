@@ -1,0 +1,12 @@
+# ChangeLog for sys-fs/cachefilesd
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.1 2010/09/19 08:08:16 jlec Exp $
+
+*cachefilesd-0.10.1 (19 Sep 2010)
+
+  19 Sep 2010; Justin Lecher <jlec@gentoo.org> +files/0.10.1-makefile.patch,
+  +cachefilesd-0.10.1.ebuild, +files/cachefilesd.conf,
+  +files/cachefilesd.init, +metadata.xml:
+  New addition, 275014; thanks Bruno Redondi and everyone else for the
+  contribution
+
