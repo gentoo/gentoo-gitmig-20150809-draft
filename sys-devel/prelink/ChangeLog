@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.77 2010/08/13 13:39:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.78 2010/09/19 09:16:52 dirtyepic Exp $
+
+  19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org>
+  -files/prelink-20040707-init.patch,
+  -files/prelink-20050314-amd64-gcc4.patch,
+  -files/prelink-20060213-symloop.patch,
+  -files/prelink-20060712-cache-segfault.patch, -prelink-20071009.ebuild,
+  -prelink-20100413.ebuild:
+  Remove old.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> prelink-20100106.ebuild:
   Marked ppc/ppc64 stable for bug #321951.
