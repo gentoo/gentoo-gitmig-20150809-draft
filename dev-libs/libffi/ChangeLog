@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.105 2010/04/16 17:56:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.106 2010/09/19 17:33:36 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> libffi-3.0.9.ebuild:
+  s390 stable
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> libffi-3.0.9.ebuild:
   Marking libffi-3.0.9 ppc for bug 306281
