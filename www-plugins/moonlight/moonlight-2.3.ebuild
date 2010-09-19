@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.2 2010/09/16 10:51:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.3 2010/09/19 12:40:03 pacho Exp $
 
 EAPI=2
 
@@ -109,7 +109,8 @@ src_compile() {
 
 	einfo "Running make in "${S}""
 	cd "${S}"
-	emake || die "emake moonlight failed"
+	# and moonlight neither, bug #337960, upstream bug #640395
+	emake -j1 || die "emake moonlight failed"
 }
 
 src_install() {
