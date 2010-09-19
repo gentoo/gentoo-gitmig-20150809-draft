@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.2-r2.ebuild,v 1.1 2010/07/23 01:33:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.2-r2.ebuild,v 1.2 2010/09/19 22:39:27 vapier Exp $
 
 EAPI="2"
 
@@ -66,10 +66,9 @@ src_install() {
 
 	# Don't overwrite existing xtab/etab, install the original
 	# versions somewhere safe...  more info in pkg_postinst
-	dodir /usr/lib/nfs
-	keepdir /var/lib/nfs/{sm,sm.bak}
-	mv "${D}"/var/lib/nfs/* "${D}"/usr/lib/nfs
-	keepdir /var/lib/nfs
+	dodir /usr/$(get_libdir)/nfs
+	mv "${D}"/var/lib/nfs "${D}"/usr/$(get_libdir)/ || die
+	keepdir /var/lib/nfs/{,sm,sm.bak}
 
 	# Install some client-side binaries in /sbin
 	dodir /sbin
@@ -101,10 +100,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	# Install default xtab and friends if there's none existing.
-	# In src_install we put them in /usr/lib/nfs for safe-keeping, but
-	# the daemons actually use the files in /var/lib/nfs.  This fixes
-	# bug 30486
+	# Install default xtab and friends if there's none existing.  In
+	# src_install we put them in /usr/lib/nfs for safe-keeping, but
+	# the daemons actually use the files in /var/lib/nfs.  #30486
 	local f
 	for f in "${ROOT}"/usr/$(get_libdir)/nfs/*; do
 		[[ -e ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
