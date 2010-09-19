@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.6 2010/02/13 10:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.7 2010/09/19 19:19:05 vapier Exp $
+
+  19 Sep 2010; Mike Frysinger <vapier@gentoo.org>
+  microcode-data-20100209.ebuild:
+  Stabilize for amd64/x86.
 
 *microcode-data-20100209 (13 Feb 2010)
 
