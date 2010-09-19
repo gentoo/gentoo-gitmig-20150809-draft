@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.48 2010/06/09 15:36:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.49 2010/09/19 04:25:29 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org> urw-fonts-2.4.9.ebuild:
+  Add ~x86-linux keyword
 
   18 Apr 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.9.ebuild:
   Marked ~x86-macos
