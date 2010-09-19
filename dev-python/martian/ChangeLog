@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/martian
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/martian/ChangeLog,v 1.1 2010/09/19 23:37:53 arfrever Exp $
+
+*martian-0.12 (19 Sep 2010)
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +martian-0.12.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
