@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.2.6.ebuild,v 1.1 2010/08/15 20:33:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.2.6-r1.ebuild,v 1.1 2010/09/19 11:31:22 mrness Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic
+inherit eutils
 
 DESCRIPTION="A modern version of the Layer 2 Tunneling Protocol (L2TP) daemon"
 HOMEPAGE="http://www.xelerance.com/software/xl2tpd/"
@@ -23,11 +23,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-qa-fixes.patch
 	use dnsretry && epatch "${FILESDIR}"/${PN}-dnsretry.patch
-}
-
-src_compile() {
-	append-flags -DTRUST_PPPD_TO_DIE
-	emake || die "emake failed"
 }
 
 src_install() {
