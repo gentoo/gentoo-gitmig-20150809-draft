@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.9 2009/09/17 15:00:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.10 2010/09/19 17:49:42 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/emacs/${MY_P}.tar.gz
 
 LICENSE="FDL-1.1"
 SLOT="21"
-KEYWORDS="amd64 ppc s390 sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
