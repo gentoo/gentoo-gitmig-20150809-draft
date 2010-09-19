@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.39 2010/08/09 10:08:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.40 2010/09/19 04:35:35 jer Exp $
+
+*libtomcrypt-1.17-r4 (19 Sep 2010)
+
+  19 Sep 2010; Jeroen Roovers <jer@gentoo.org> +libtomcrypt-1.17-r4.ebuild:
+  Move patching to proper phase. Do not hard-wire CC. Respect LDFLAGS (bug
+  #334999).
 
   09 Aug 2010; Thilo Bangert <bangert@gentoo.org>
   files/libtomcrypt-1.06-makefile.diff,
