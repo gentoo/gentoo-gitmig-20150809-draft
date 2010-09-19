@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1.90.ebuild,v 1.2 2010/09/19 05:10:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1.90.ebuild,v 1.3 2010/09/19 13:03:20 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -46,6 +46,7 @@ COMMONDEPEND="
 			>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 			>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
 		)
+		embedded? ( <dev-db/mysql-5.1[embedded,-minimal] )
 		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 		lastfm? ( >=media-libs/liblastfm-0.3.0 )
 		mp3tunes? (
