@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.14 2010/08/14 14:22:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.15 2010/09/19 10:02:58 hwoarang Exp $
+
+*kanyremote-5.11.9 (19 Sep 2010)
+
+  19 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  -kanyremote-5.11.7.ebuild, -kanyremote-5.11.8.ebuild,
+  +kanyremote-5.11.9.ebuild:
+  Version bump. Remove old ebuilds
 
 *kanyremote-5.11.8 (14 Aug 2010)
 
