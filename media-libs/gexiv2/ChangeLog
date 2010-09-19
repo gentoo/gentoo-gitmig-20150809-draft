@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gexiv2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.1 2010/08/22 07:16:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.2 2010/09/19 08:19:57 hollow Exp $
+
+*gexiv2-0.2.1 (19 Sep 2010)
+
+  19 Sep 2010; Benedikt Böhm <hollow@gentoo.org> +gexiv2-0.2.1.ebuild:
+  version bump wrt #334827
 
 *gexiv2-0.1.0 (22 Aug 2010)
 
