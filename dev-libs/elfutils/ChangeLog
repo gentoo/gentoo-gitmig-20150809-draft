@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.141 2010/08/10 02:39:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.142 2010/09/19 09:02:53 dirtyepic Exp $
+
+*elfutils-0.149 (19 Sep 2010)
+
+  19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> -elfutils-0.131-r2.ebuild,
+  -files/elfutils-0.131-gnu-inline.patch,
+  -files/elfutils-0.143-fix-fill_mmap-for-sections-past-the-section-headers.
+  patch, -files/elfutils-0.144-sloppy-include.patch, -elfutils-0.145.ebuild,
+  -elfutils-0.147.ebuild, +elfutils-0.149.ebuild:
+  Version bump, remove old.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> elfutils-0.146.ebuild:
   Stable for HPPA (bug #321943).
