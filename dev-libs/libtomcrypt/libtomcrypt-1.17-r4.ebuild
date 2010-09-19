@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r4.ebuild,v 1.1 2010/09/19 04:35:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r4.ebuild,v 1.2 2010/09/19 04:37:17 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base app-text/ghostscript-gpl )"
 
 src_prepare() {
-cp -av makefile.shared{,.orig}
 	use doc || sed -i '/^install:/s:docs::' makefile
 	epatch "${FILESDIR}"/libtomcrypt-1.17-r2-libtool-tag-and-make-fix.patch
 	sed -i \
