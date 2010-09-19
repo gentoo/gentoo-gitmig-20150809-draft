@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.17 2010/09/19 21:36:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.18 2010/09/19 23:31:07 arfrever Exp $
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -dulwich-0.6.0.ebuild:
+  Delete.
 
   19 Sep 2010; Markos Chandras <hwoarang@gentoo.org> dulwich-0.6.1.ebuild:
   Stable on amd64 wrt bug #337134
