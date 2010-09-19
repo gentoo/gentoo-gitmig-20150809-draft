@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/grokcore-viewlet
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-viewlet/ChangeLog,v 1.1 2010/09/19 23:54:37 arfrever Exp $
+
+*grokcore-viewlet-1.4.1 (19 Sep 2010)
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +grokcore-viewlet-1.4.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

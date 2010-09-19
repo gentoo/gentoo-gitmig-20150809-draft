@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/grokcore-formlib
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-formlib/ChangeLog,v 1.1 2010/09/19 23:56:56 arfrever Exp $
+
+*grokcore-formlib-1.5 (19 Sep 2010)
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +grokcore-formlib-1.5.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

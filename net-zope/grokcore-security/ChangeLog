@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/grokcore-security
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-security/ChangeLog,v 1.1 2010/09/19 23:45:58 arfrever Exp $
+
+*grokcore-security-1.4 (19 Sep 2010)
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +grokcore-security-1.4.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
