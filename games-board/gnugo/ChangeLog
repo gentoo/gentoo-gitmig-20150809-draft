@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnugo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.23 2010/06/06 20:03:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.24 2010/09/19 02:17:50 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org> gnugo-3.8.ebuild:
+  Add ~amd64-linux, ~x86-linux keywords
 
   06 Jun 2010; Joseph Jezak <josejx@gentoo.org> gnugo-3.8.ebuild:
   Marked ~ppc64 for bug #317973.
