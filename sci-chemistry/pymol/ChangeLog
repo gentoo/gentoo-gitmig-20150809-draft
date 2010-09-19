@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.68 2010/09/16 17:28:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.69 2010/09/19 09:39:54 jlec Exp $
+
+  19 Sep 2010; Justin Lecher <jlec@gentoo.org> -pymol-0.99_rc10.ebuild,
+  pymol-1.2.3-r1.ebuild, pymol-1.3.0.ebuild:
+  Dropped ppc, #309007; dropped old version which doesn't work with recent
+  python
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   pymol-0.99_rc10.ebuild, pymol-1.2.3-r1.ebuild, pymol-1.3.0.ebuild:
