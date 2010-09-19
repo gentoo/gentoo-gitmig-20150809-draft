@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.205 2010/09/17 09:09:22 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.206 2010/09/19 06:24:35 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Drop mask for KDE 4.5
 
   17 Sep 2010; Michael Haubenwallner <haubi@gentoo.org> package.use.mask:
   p.use.mask keyutils for app-crypt/mit-krb5, is a linux only package.
