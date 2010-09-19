@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.129 2010/09/06 22:35:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.130 2010/09/19 17:50:58 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> wget-1.12-r2.ebuild:
+  s390 stable wrt #329941
 
   06 Sep 2010; Jeroen Roovers <jer@gentoo.org> wget-1.12-r2.ebuild:
   Stable for HPPA PPC (bug #329941).
