@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33-r1.ebuild,v 1.1 2010/09/18 20:55:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33-r1.ebuild,v 1.2 2010/09/19 23:43:33 jer Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=""
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PF}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 	sed -i support/genmk/makefile \
 		-e 's| -o genmk| $(COPT) &|g' \
 		|| die "sed support/genmk/makefile"

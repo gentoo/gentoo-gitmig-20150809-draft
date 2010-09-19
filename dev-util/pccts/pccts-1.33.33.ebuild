@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.23 2010/01/15 21:48:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.24 2010/09/19 23:43:33 jer Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PF}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
