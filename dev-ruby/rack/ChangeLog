@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.30 2010/05/23 10:47:14 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.31 2010/09/19 09:08:36 graaff Exp $
+
+*rack-1.2.1 (19 Sep 2010)
+
+  19 Sep 2010; Hans de Graaff <graaff@gentoo.org> +rack-1.2.1.ebuild,
+  +files/rack-1.2.1-gentoo.patch:
+  Version bump.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> rack-1.0.1-r1.ebuild,
   rack-1.1.0.ebuild:
