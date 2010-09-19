@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/will_paginate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.8 2010/08/16 10:54:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.9 2010/09/19 13:53:54 graaff Exp $
+
+*will_paginate-2.3.15 (19 Sep 2010)
+
+  19 Sep 2010; Hans de Graaff <graaff@gentoo.org>
+  +will_paginate-2.3.15.ebuild:
+  Version bump: make view helper html safe.
 
   16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   will_paginate-2.3.14.ebuild:
