@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1.ebuild,v 1.2 2010/09/19 17:36:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1.ebuild,v 1.3 2010/09/19 22:35:25 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -41,5 +41,5 @@ src_test() {
 	ln -s "${WORKDIR}/${PHP_EXT_NAME}-default.so" "${S}/modules/${PHP_EXT_NAME}.so"
 
 	NO_INTERACTION="yes" emake test
-	
+
 }
