@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.86 2010/09/12 19:07:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.87 2010/09/19 20:38:56 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> libXext-1.1.2.ebuild:
+  ia64/s390/sh/sparc stable wrt #327777
 
   12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> libXext-1.1.2.ebuild:
   Stable on alpha, bug #327777
