@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.38 2010/09/13 15:05:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.39 2010/09/19 23:59:26 xmw Exp $
+
+  19 Sep 2010; Michael Weber <xmw@gentoo.org> iotop-0.4.1.ebuild:
+  Added ~arm keyword
 
   13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -iotop-0.4.ebuild:
