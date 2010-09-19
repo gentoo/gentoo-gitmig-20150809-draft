@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.72 2010/09/18 14:20:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.73 2010/09/19 08:29:59 dilfridge Exp $
+
+  19 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kipi-plugins-1.2.0-r2.ebuild:
+  Added mirror://gentoo/ to patchfile URI
 
   18 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   kipi-plugins-1.2.0-r2.ebuild:
