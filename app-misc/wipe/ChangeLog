@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/wipe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.23 2009/12/06 03:52:44 jsbronder Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.24 2010/09/19 03:56:16 jer Exp $
+
+*wipe-2.2.20050509-r1 (19 Sep 2010)
+
+  19 Sep 2010; Jeroen Roovers <jer@gentoo.org> +wipe-2.2.20050509-r1.ebuild,
+  +files/wipe-2.2.20050509-gentoo.patch:
+  Respect LDFLAGS (bug #337251), CFLAGS.
 
   06 Dec 2009; Justin Bronder <jsbronder@gentoo.org>
   wipe-2.2.20050509.ebuild:
