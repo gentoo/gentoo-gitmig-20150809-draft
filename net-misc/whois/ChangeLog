@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.144 2010/09/19 13:25:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.145 2010/09/19 19:21:09 vapier Exp $
+
+  19 Sep 2010; Mike Frysinger <vapier@gentoo.org> whois-5.0.5.ebuild:
+  Stabilize for ia64/s390/sh #329663.
 
   19 Sep 2010; Tobias Klausmann <klausman@gentoo.org> whois-5.0.5.ebuild:
   Stable on alpha, bug #329663, thanks to mattst88 for testing
