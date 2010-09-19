@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tleds
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.19 2007/07/22 08:04:24 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.20 2010/09/19 00:12:14 jer Exp $
+
+*tleds-1.05_beta11-r2 (19 Sep 2010)
+
+  19 Sep 2010; Jeroen Roovers <jer@gentoo.org> +tleds-1.05_beta11-r2.ebuild:
+  Respect LDFLAGS (bug #337907). Do not hard-wire CC and CFLAGS (or do any
+  of that other funky stuff). Set RDEPEND. Annotate ebuild.
 
   22 Jul 2007; <pva@gentoo.org> metadata.xml, tleds-1.05_beta11-r1.ebuild:
   Removed virtual/x11 dependency.
