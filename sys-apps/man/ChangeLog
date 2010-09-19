@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.157 2010/01/28 06:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.158 2010/09/19 23:52:08 vapier Exp $
+
+*man-1.6f-r5 (19 Sep 2010)
+
+  19 Sep 2010; Mike Frysinger <vapier@gentoo.org> +man-1.6f-r5.ebuild,
+  +files/man-1.6f-makewhatis-compression-cleanup.patch:
+  Add fix by William Throwe with misdetecting package names of compressed man
+  pages #331979.
 
   28 Jan 2010; Mike Frysinger <vapier@gentoo.org>
   files/man-1.6f-parallel-build.patch:
