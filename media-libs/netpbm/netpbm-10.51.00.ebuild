@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00.ebuild,v 1.1 2010/09/18 14:03:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00.ebuild,v 1.2 2010/09/19 22:04:41 vapier Exp $
 
 EAPI="3"
 
@@ -82,7 +82,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-ppmtompeg-free.patch
 
 	# make sure we use system urt
-	echo all: > urt/Makefile || die
+	sed -i '/SUPPORT_SUBDIRS/s:urt::' GNUmakefile || die
+	rm -rf urt
 
 	# take care of the importinc stuff ourselves by only doing it once
 	# at the top level and having all subdirs use that one set #149843
@@ -90,6 +91,9 @@ src_prepare() {
 		-e '/^importinc:/s|^|importinc:\nmanual_|' \
 		-e '/-Iimportinc/s|-Iimp|-I"$(BUILDDIR)"/imp|g'\
 		common.mk || die
+	sed -i \
+		-e '/%.c/s: importinc$::' \
+		common.mk lib/Makefile lib/util/Makefile || die
 
 	# avoid ugly depend.mk warnings
 	touch $(find . -name Makefile | sed s:Makefile:depend.mk:g)
