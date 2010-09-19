@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.3 2010/09/12 07:54:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.ebuild,v 1.4 2010/09/19 19:35:14 jlec Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ RDEPEND="${COMMON_DEPEND}
 	jingle? ( net-libs/farsight2[python] )
 	networkmanager? (
 			dev-python/dbus-python
-			net-misc/networkmanager[gnome]
+			|| ( >=net-misc/networkmanager-0.7.1 net-misc/networkmanager[gnome] )
 		)
 	srv? (
 		|| (

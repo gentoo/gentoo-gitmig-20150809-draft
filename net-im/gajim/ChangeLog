@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.102 2010/09/12 07:54:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.103 2010/09/19 19:35:14 jlec Exp $
+
+  19 Sep 2010; Justin Lecher <jlec@gentoo.org> gajim-0.14.ebuild:
+  Fixes DEPEND on networkmanager, 337496
 
   12 Sep 2010; Justin Lecher <jlec@gentoo.org> gajim-0.14.ebuild:
   USE jingle and networkmanager added, 336272
