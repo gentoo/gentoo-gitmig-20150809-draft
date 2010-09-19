@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.2.ebuild,v 1.2 2010/09/14 08:28:58 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.2.ebuild,v 1.3 2010/09/19 02:16:11 abcd Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://launchpad.net/libdbusmenu-qt/"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="debug test"
 
