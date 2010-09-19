@@ -1,17 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.67.ebuild,v 1.3 2010/09/07 19:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.67.ebuild,v 1.4 2010/09/19 22:28:55 vapier Exp $
 
 EAPI="2"
 
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://git.savannah.gnu.org/autoconf.git"
+	inherit git
+	SRC_URI=""
+	#KEYWORDS=""
+else
+	SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
+		ftp://alpha.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+fi
+
 DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
-	ftp://alpha.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="2.5"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="emacs"
 
 DEPEND=">=sys-apps/texinfo-4.3
@@ -20,6 +28,12 @@ DEPEND=">=sys-apps/texinfo-4.3
 RDEPEND="${DEPEND}
 	>=sys-devel/autoconf-wrapper-9-r1"
 PDEPEND="emacs? ( app-emacs/autoconf-mode )"
+
+src_prepare() {
+	if [[ ${PV} == "9999" ]] ; then
+		autoreconf -f -i || die
+	fi
+}
 
 src_configure() {
 	# Disable Emacs in the build system since it is in a separate package.

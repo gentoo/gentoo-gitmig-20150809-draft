@@ -1,45 +1,47 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.1 2007/11/02 06:30:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.2 2010/09/19 22:28:55 vapier Exp $
 
-EGIT_REPO_URI="git://git.savannah.gnu.org/autoconf.git"
+EAPI="2"
 
-inherit git
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://git.savannah.gnu.org/autoconf.git"
+	inherit git
+	SRC_URI=""
+	#KEYWORDS=""
+else
+	SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
+		ftp://alpha.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+fi
 
 DESCRIPTION="Used to create autoconfiguration files"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
-SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="2.5"
-KEYWORDS=""
 IUSE="emacs"
 
 DEPEND=">=sys-apps/texinfo-4.3
 	>=sys-devel/m4-1.4.6
 	dev-lang/perl"
 RDEPEND="${DEPEND}
-	>=sys-devel/autoconf-wrapper-4-r2"
+	>=sys-devel/autoconf-wrapper-9-r1"
 PDEPEND="emacs? ( app-emacs/autoconf-mode )"
 
-src_unpack() {
-	git_src_unpack
-	cd "${S}"
-	if [[ ! -e configure ]] ; then
-		autoreconf || die
+src_prepare() {
+	if [[ ${PV} == "9999" ]] ; then
+		autoreconf -f -i || die
 	fi
 }
 
-src_compile() {
+src_configure() {
 	# Disable Emacs in the build system since it is in a separate package.
 	export EMACS=no
 	econf --program-suffix="-${PV}" || die
 	# econf updates config.{sub,guess} which forces the manpages
 	# to be regenerated which we dont want to do #146621
 	touch man/*.1
-	# From configure output:
-	# Parallel builds via `make -jN' do not work.
-	emake -j1 || die
 }
 
 src_install() {
