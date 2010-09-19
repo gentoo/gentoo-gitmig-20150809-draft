@@ -1,15 +1,35 @@
-addedSourceP is a pointer to a struct declared on the stack, so we cant
-call free() on it
+fix from upstream
 
-e-mailed to upstream maintainer already
+------------------------------------------------------------------------
+r1285 | giraffedata | 2010-09-18 16:13:39 -0400 (Sat, 18 Sep 2010) | 1 line
 
---- converter/ppm/ppmtompeg/param.c
-+++ converter/ppm/ppmtompeg/param.c
-@@ -295,7 +295,6 @@ mergeInputSource(struct inputSource * co
+Fix free of non-allocated memory
+
+Index: converter/ppm/ppmtompeg/param.c
+===================================================================
+--- converter/ppm/ppmtompeg/param.c	(revision 1284)
++++ converter/ppm/ppmtompeg/param.c	(revision 1285)
+@@ -283,8 +283,8 @@ GetFrameRate(const char * const p)
+ 
+ 
+ static void
+-mergeInputSource(struct inputSource * const baseSourceP,
+-                 struct inputSource * const addedSourceP) {
++mergeInputSource(struct inputSource *       const baseSourceP,
++                 const struct inputSource * const addedSourceP) {
+ 
+     unsigned int i;
+ 
+@@ -294,12 +294,6 @@ mergeInputSource(struct inputSource * co
+     for (i = 0; i < addedSourceP->numInputFileEntries; ++i)
          baseSourceP->inputFileEntries[baseSourceP->numInputFileEntries++] =
              addedSourceP->inputFileEntries[i];
- 
+-
 -    free(addedSourceP);
-     /* Note the space allocated for the *addedSourceP input file
-        entries themselves is still allocated, and used by 
-        *baseSourceP.
+-    /* Note the space allocated for the *addedSourceP input file
+-       entries themselves is still allocated, and used by 
+-       *baseSourceP.
+-    */
+ }
+ 
+ 
