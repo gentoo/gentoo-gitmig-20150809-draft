@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.99 2010/09/14 19:25:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.100 2010/09/19 17:11:33 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  gentoolkit-dev-0.2.7.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #326651
 
   14 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   gentoolkit-dev-0.2.7.ebuild:
