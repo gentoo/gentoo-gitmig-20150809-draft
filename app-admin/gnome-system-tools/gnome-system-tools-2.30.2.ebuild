@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.30.2.ebuild,v 1.5 2010/09/11 18:55:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.30.2.ebuild,v 1.6 2010/09/19 16:42:51 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ IUSE="nfs policykit samba"
 RDEPEND="
 	>=app-admin/system-tools-backends-2.9.4
 	>=dev-libs/liboobs-2.29.91
-	>=x11-libs/gtk+-2.16
-	>=dev-libs/glib-2.15.2
+	>=x11-libs/gtk+-2.18:2
+	>=dev-libs/glib-2.15.2:2
 	>=gnome-base/gconf-2.2
 	dev-libs/dbus-glib
 	>=gnome-base/nautilus-2.9.90
