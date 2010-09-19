@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.145 2010/09/06 20:33:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.146 2010/09/19 17:41:21 gmsoft Exp $
+
+  19 Sep 2010; Guy Martin <gmsoft@gentoo.org> apache-2.2.16.ebuild:
+  hppa stable wrt #330195
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> apache-2.2.16.ebuild:
   Marking apache-2.2.16 ppc64 for bug 330195
