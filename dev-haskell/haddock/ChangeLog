@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.76 2010/09/19 17:01:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.77 2010/09/19 17:11:11 slyfox Exp $
+
+  19 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> haddock-2.6.1.ebuild:
+  Restored ~sparc keyword.
 
   19 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> haddock-2.4.1.ebuild,
   haddock-2.4.2.ebuild, haddock-2.6.1.ebuild:
