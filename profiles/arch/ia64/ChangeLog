@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.85 2010/08/15 14:33:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.86 2010/09/19 19:44:30 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask dev-ruby/nokogiri ffi
 
   15 Aug 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
   Cleanup
