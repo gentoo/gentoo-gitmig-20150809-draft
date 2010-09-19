@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-4.5.1.ebuild,v 1.2 2010/09/06 04:50:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-4.5.1.ebuild,v 1.3 2010/09/19 04:20:56 abcd Exp $
 
 EAPI="3"
 inherit kde4-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="4.5"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="aqua csharp java kdeprefix perl python ruby"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.114 2010/09/06 02:02:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.115 2010/09/19 04:19:43 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org> smoke-4.5.1.ebuild:
+  Add ~amd64-linux, ~x86-linux keywords
 
 *smoke-4.5.1 (06 Sep 2010)
 

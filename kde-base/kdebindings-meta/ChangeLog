@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.83 2010/09/05 23:59:29 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.84 2010/09/19 04:20:56 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org>
+  kdebindings-meta-4.5.1.ebuild:
+  Add ~amd64-linux, ~x86-linux keywords
 
 *kdebindings-meta-4.5.1 (05 Sep 2010)
 

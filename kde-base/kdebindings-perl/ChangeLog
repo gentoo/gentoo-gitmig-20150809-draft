@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.2 2010/09/14 17:57:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.3 2010/09/19 04:20:17 abcd Exp $
+
+  19 Sep 2010; Jonathan Callen <abcd@gentoo.org>
+  kdebindings-perl-4.5.1.ebuild:
+  Add ~amd64-linux, ~x86-linux keywords
 
   14 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   kdebindings-perl-4.5.1.ebuild:
