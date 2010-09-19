@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/pecl-sca_sdo-1.2.4-r1.ebuild,v 1.1 2010/05/29 18:48:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/pecl-sca_sdo-1.2.4-r1.ebuild,v 1.2 2010/09/19 16:40:53 mabi Exp $
 
 EAPI="2"
 
@@ -24,11 +24,9 @@ RDEPEND="${DEPEND}"
 
 need_php_by_category
 
-src_unpack() {
-	php-ext-source-r1_src_unpack
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}/${P}-php53.patch"
 }
 
 src_install() {
