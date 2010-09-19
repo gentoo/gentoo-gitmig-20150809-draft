@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.26 2010/09/08 22:10:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.27 2010/09/19 17:28:34 eva Exp $
+
+*vala-0.10.0 (19 Sep 2010)
+
+  19 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> -vala-0.7.10.ebuild,
+  -vala-0.8.0.ebuild, -vala-0.9.5.ebuild, vala-0.9.8.ebuild,
+  +vala-0.10.0.ebuild:
+  Version bump. Slot slottable revisions, bug #335296. Clean up old
+  revisions.
 
 *vala-0.9.8 (08 Sep 2010)
 
