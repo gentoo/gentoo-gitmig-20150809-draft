@@ -1,11 +1,13 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.23 2010/09/19 04:54:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.24 2010/09/19 05:26:58 dirtyepic Exp $
 
-  19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> -ttf2pt1-3.4.0.ebuild,
-  -files/ttf2pt1-3.4.0-Makefile-gentoo.diff,
-  -files/ttf2pt1-3.4.0-Makefile-multiline-sed.diff:
-  Remove old.
+*ttf2pt1-3.4.4-r1 (19 Sep 2010)
+
+  19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> +ttf2pt1-3.4.4-r1.ebuild,
+  +files/ttf2pt1-3.4.4-LDFLAGS.patch:
+  Respect LDFLAGS (bug #337857 by Diego). Migrate to EAPI 3. Don't install
+  redundant html docs. Quote variables.
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> ttf2pt1-3.4.4.ebuild:
   sparc stable wrt #286600
