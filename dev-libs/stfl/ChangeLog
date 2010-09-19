@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.29 2010/06/24 18:37:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.30 2010/09/19 19:27:30 arfrever Exp $
+
+  19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  stfl-0.21.ebuild:
+  Fix dependencies (bug #336589).
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> stfl-0.21.ebuild:
   Stable on amd64 wrt bug #318317
