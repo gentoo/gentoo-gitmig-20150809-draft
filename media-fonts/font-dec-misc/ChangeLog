@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-dec-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.31 2010/09/12 18:51:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.32 2010/09/19 18:09:13 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> font-dec-misc-1.0.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #327777
 
   12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   font-dec-misc-1.0.1.ebuild:
