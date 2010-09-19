@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.12 2010/09/13 18:20:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.13 2010/09/19 16:45:24 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base autotools bash-completion eutils flag-o-matic multilib toolchain-funcs ghc-package versionator
+inherit base autotools bash-completion eutils flag-o-matic multilib toolchain-funcs ghc-package versionator pax-utils
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -154,6 +154,11 @@ src_unpack() {
 		# See bug #313635.
 		sed -i -e "s|\"\$topdir\"|\"\$topdir\" ${GHC_CFLAGS}|" \
 			"${WORKDIR}/usr/bin/ghc-${PV}"
+
+		# allow hardened users use vanilla biary to bootstrap ghc
+		# ghci uses mmap with rwx protection at it implements dynamic
+		# linking on it's own (bug #299709)
+		pax-mark -m "${WORKDIR}/usr/$(get_libdir)/${P}/ghc"
 	fi
 
 	if use binary; then
@@ -323,6 +328,11 @@ src_install() {
 		emake -j1 ${insttarget} \
 			DESTDIR="${D}" \
 			|| die "make ${insttarget} failed"
+
+		# ghci uses mmap with rwx protection at it implements dynamic
+		# linking on it's own (bug #299709)
+		# so mark resulting binary
+		pax-mark -m "${D}/usr/$(get_libdir)/${P}/ghc"
 
 		dodoc "${S}/README" "${S}/ANNOUNCE" "${S}/LICENSE" "${S}/VERSION"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.191 2010/09/16 16:37:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.192 2010/09/19 16:45:24 slyfox Exp $
+
+  19 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.10.4-r1.ebuild,
+  ghc-6.12.3.ebuild:
+  Make ghc usable on hardened. Disabled enforced memory protection (bug
+  #299709). Thanks to Hongjiu Zhang for the report and proposed solution.
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ghc-6.2.2.ebuild,
   ghc-6.4.2.ebuild:
