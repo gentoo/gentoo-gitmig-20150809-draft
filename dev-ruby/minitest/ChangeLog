@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.21 2010/08/17 00:25:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.22 2010/09/19 07:22:57 graaff Exp $
+
+*minitest-1.7.1 (19 Sep 2010)
+
+  19 Sep 2010; Hans de Graaff <graaff@gentoo.org> +minitest-1.7.1.ebuild:
+  Version bump with test fixes for ruby 1.9.2.
 
   17 Aug 2010; Jeroen Roovers <jer@gentoo.org> minitest-1.5.0.ebuild:
   Stable for HPPA (bug #321043).
