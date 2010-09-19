@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.89 2010/09/03 12:35:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.90 2010/09/19 13:25:58 klausman Exp $
+
+  19 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  pkgconfig-0.25-r2.ebuild:
+  Stable on alpha, bug #331345, thanks to mattst88 for testing
 
   03 Sep 2010; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Move maintainership to freedesktop as talked with them.
