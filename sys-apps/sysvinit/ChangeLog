@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.82 2010/07/18 23:46:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.83 2010/09/19 13:27:53 klausman Exp $
+
+  19 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  sysvinit-2.88-r1.ebuild:
+  Stable on alpha, bug #337828, thanks to mattst88 for testing
 
 *sysvinit-2.88-r1 (18 Jul 2010)
 
