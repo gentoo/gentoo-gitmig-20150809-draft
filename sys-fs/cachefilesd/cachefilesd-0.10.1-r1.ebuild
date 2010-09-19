@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/cachefilesd-0.10.1.ebuild,v 1.1 2010/09/19 08:08:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/cachefilesd-0.10.1-r1.ebuild,v 1.1 2010/09/19 19:55:43 jlec Exp $
 
 EAPI="2"
 
@@ -35,14 +35,14 @@ src_install() {
 	newconfd "${FILESDIR}"/cachefilesd.conf cachefilesd || die
 	newinitd "${FILESDIR}"/cachefilesd.init cachefilesd || die
 
-	keepdir /var/cache/cachefilesd
+	keepdir /var/cache/fscache
 }
 
 pkg_postinst() {
-	[[ -d /var/fscache ]] && return
+	[[ -d /var/cache/fscache ]] && return
 	elog "Before CacheFiles can be used, a directory for local storage"
 	elog "must be created.  The default configuration of /etc/cachefilesd.conf"
-	elog "uses /var/fscache.  The filesystem mounted there must support"
+	elog "uses /var/cache/fscache.  The filesystem mounted there must support"
 	elog "extended attributes (mount -o user_xattr)."
 	elog ""
 	elog "Once that is taken care of, start the daemon, add -o ...,fsc"
