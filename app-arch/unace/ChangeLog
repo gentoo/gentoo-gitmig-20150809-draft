@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.36 2010/08/23 09:55:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.37 2010/09/19 18:01:31 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> unace-2.5-r2.ebuild:
+  Add ~s390 wrt #215366
 
 *unace-2.5-r2 (23 Aug 2010)
 
