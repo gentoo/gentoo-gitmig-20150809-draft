@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.128 2010/08/13 13:41:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.129 2010/09/19 09:26:59 jlec Exp $
+
+*p7zip-9.13-r1 (19 Sep 2010)
+
+  19 Sep 2010; Justin Lecher <jlec@gentoo.org> -p7zip-4.57.ebuild,
+  -p7zip-4.58-r1.ebuild, -p7zip-4.65.ebuild, -p7zip-9.04.ebuild,
+  +p7zip-9.13-r1.ebuild:
+  Added pch USE and do not mix CFLAGS/CXXFLAGS
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> p7zip-9.13.ebuild:
   Marked ppc stable for bug #326831.

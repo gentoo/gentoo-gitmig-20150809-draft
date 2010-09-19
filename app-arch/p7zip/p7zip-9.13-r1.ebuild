@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.5 2010/06/07 06:43:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r1.ebuild,v 1.1 2010/09/19 09:26:59 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 LICENSE="LGPL-2.1 rar? ( unRAR )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc kde rar static wxwidgets"
+IUSE="doc kde rar +pch static wxwidgets"
 
 RDEPEND="kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/konqueror )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] )"
@@ -27,6 +27,14 @@ pkg_setup() {
 }
 
 src_prepare() {
+	if ! use pch; then
+		sed "s:PRE_COMPILED_HEADER=StdAfx.h.gch:PRE_COMPILED_HEADER=:g" -i makefile.* || die
+	fi
+
+	sed \
+		-e "/^CC/s:\$(ALLFLAGS):${CFLAGS} \$(ALLFLAGS):g" \
+		-e "/^CXX/s:\$(ALLFLAGS):${CXXFLAGS} \$(ALLFLAGS):g" \
+		-i makefile* || die
 	if use kde && ! use wxwidgets ; then
 		einfo "USE-flag kde needs wxwidgets flag"
 		einfo "silently enabling wxwidgets flag"
@@ -38,13 +46,12 @@ src_prepare() {
 	else
 		sed -e '/Rar/d' -i makefile*
 		rm -rf CPP/7zip/Compress/Rar
-		epatch "${FILESDIR}"/${PV}-makefile.patch
+		epatch "${FILESDIR}"/9.04-makefile.patch
 	fi
 
 	sed -i \
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
-		-e "s:OPTFLAGS=-O:OPTFLAGS=${CXXFLAGS}:" \
 		-e '/ALLFLAGS/s:-s ::' \
 		makefile* || die "changing makefiles"
 
@@ -69,7 +76,7 @@ src_prepare() {
 	# We can be more parallel
 	cp -f makefile.parallel_jobs makefile
 
-	epatch "${FILESDIR}"/${PV}-kde4.patch
+	epatch "${FILESDIR}"/9.04-kde4.patch
 
 	if use kde || use wxwidgets; then
 		einfo "Preparing dependency list"
