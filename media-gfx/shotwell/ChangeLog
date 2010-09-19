@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.5 2010/08/22 14:06:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.6 2010/09/19 08:24:01 hollow Exp $
+
+*shotwell-0.7.2 (19 Sep 2010)
+
+  19 Sep 2010; Benedikt Böhm <hollow@gentoo.org> -shotwell-0.5.2.ebuild,
+  -shotwell-0.6.1.ebuild, -files/shotwell-0.6.1-libraw.patch,
+  +shotwell-0.7.2.ebuild:
+  version bump wrt #334821; remove old version since they don't build with
+  current vala versions
 
   22 Aug 2010; Benedikt Böhm <hollow@gentoo.org>
   +files/shotwell-0.6.1-libraw.patch:
