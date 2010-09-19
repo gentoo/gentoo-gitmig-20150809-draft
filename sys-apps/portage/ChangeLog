@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.732 2010/09/17 07:24:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.733 2010/09/19 07:12:44 zmedico Exp $
+
+*portage-2.2_rc84 (19 Sep 2010)
+
+  19 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc84.ebuild:
+  2.2_rc84 version bump. This includes all of the fixes in portage-2.1.9.8.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.8 (19 Sep 2010)
+
+  19 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.8.ebuild:
+  2.1.9.8 version bump. This fixes bug #337540 (blocker message shows
+  world as parent instead of system), bug #337603 (erroneous warning
+  about missing /etc/make.profile when /etc/portage/make.profile is
+  valid), bug #337702 (fix /etc/portage/modules ImportError handling
+  for python3), bug #337782 (--autounmask support for license masks),
+  and bug #337826 (pkg_nofetch triggers deadlock). Bug #335925 tracks
+  all bugs fixed since 2.1.8.x.
 
   17 Sep 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.9.7.ebuild,
   portage-2.2_rc83.ebuild, portage-9999.ebuild:
