@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.221 2010/09/06 21:14:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.222 2010/09/19 13:26:44 klausman Exp $
+
+  19 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  bash-completion-1.2.ebuild:
+  Stable on alpha, bug #333511, thanks to mattst88 for testing
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> bash-completion-1.2.ebuild:
   Marking bash-completion-1.2 ppc64 for bug 333511
