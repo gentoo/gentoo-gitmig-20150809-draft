@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.143 2010/08/13 17:14:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.144 2010/09/19 13:25:35 klausman Exp $
+
+  19 Sep 2010; Tobias Klausmann <klausman@gentoo.org> whois-5.0.5.ebuild:
+  Stable on alpha, bug #329663, thanks to mattst88 for testing
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> whois-5.0.5.ebuild:
   Marked ppc/ppc64 stable for bug #329663.
