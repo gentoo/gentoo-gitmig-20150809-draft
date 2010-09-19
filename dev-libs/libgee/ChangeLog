@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.13 2010/09/16 20:34:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.14 2010/09/19 16:33:28 eva Exp $
+
+  19 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> libgee-0.5.3.ebuild:
+  Respect USE flag settings, bug #337841.
 
 *libgee-0.5.3 (16 Sep 2010)
 

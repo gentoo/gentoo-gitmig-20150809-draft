@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.3.ebuild,v 1.1 2010/09/16 20:34:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.3.ebuild,v 1.2 2010/09/19 16:33:28 eva Exp $
 
 inherit gnome2 multilib
 
@@ -13,12 +13,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="introspection"
 
 RDEPEND=">=dev-libs/glib-2.12
-	introspection? ( >=dev-libs/gobject-introspection-0.9 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
 	dev-lang/vala
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"
+
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable introspection)"
+}
 
 src_install() {
 	gnome2_src_install
