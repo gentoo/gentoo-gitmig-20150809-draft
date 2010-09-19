@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.11 2010/08/25 00:33:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.12 2010/09/19 17:05:56 armin76 Exp $
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  system-config-printer-gnome-1.2.2.ebuild,
+  system-config-printer-gnome-1.2.4.ebuild:
+  Add ~alpha/~arm/~ia64/~sh/~sparc wrt #336920
 
 *system-config-printer-gnome-1.2.4 (24 Aug 2010)
 
