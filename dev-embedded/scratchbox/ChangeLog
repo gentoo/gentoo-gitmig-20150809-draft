@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/scratchbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.16 2010/06/29 17:35:55 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.17 2010/09/19 10:16:33 ayoy Exp $
+
+*scratchbox-1.0.20 (19 Sep 2010)
+
+  19 Sep 2010; Dominik Kapusta <ayoy@gentoo.org> -scratchbox-1.0.11.ebuild,
+  -scratchbox-1.0.16.ebuild, -scratchbox-1.0.17.ebuild,
+  +scratchbox-1.0.20.ebuild:
+  Version bump, remove old versions. Thanks to David King
+  <amigadave@amigadave.com> for reporting (bug #338019).
 
 *scratchbox-1.0.19 (29 Jun 2010)
 

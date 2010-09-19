@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.11.ebuild,v 1.4 2010/01/18 08:56:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.20.ebuild,v 1.1 2010/09/19 10:16:33 ayoy Exp $
 
 inherit eutils
 
@@ -8,12 +8,12 @@ SBOX_GROUP="sbox"
 
 DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
 HOMEPAGE="http://www.scratchbox.org/"
-SRC_URI="http://scratchbox.org/download/files/sbox-releases/stable/tarball/scratchbox-core-${PV}-i386.tar.gz
-	http://scratchbox.org/download/files/sbox-releases/stable/tarball/scratchbox-libs-${PV}-i386.tar.gz"
+SRC_URI="http://scratchbox.org/download/files/sbox-releases/hathor/tarball/scratchbox-core-${PV}-i386.tar.gz
+	http://scratchbox.org/download/files/sbox-releases/hathor/tarball/scratchbox-libs-${PV}-i386.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # Stripping BREAKS scratchbox, it runs in a chroot and is pre-stripped when needed (bug #296294)
@@ -45,10 +45,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	"${TARGET_DIR}/sbin/sbox_configure" "no" ${SBOX_GROUP}
+
 	elog
-	elog "You need to run:"
+	elog "You can run:"
 	elog "\"emerge --config =${CATEGORY}/${PF}\""
-	elog "to set permissions right and setup scratchbox and users"
+	elog "to setup scratchbox users"
 	elog
 	elog "For further documentation about how to setup"
 	elog "scratchbox for your development needs have a look at"
@@ -77,19 +79,7 @@ pkg_config() {
 		die "not root"
 	fi
 
-	einfo "Do you want to configure scratchbox? [Yes/No]"
-	einfo "Note: This will set permissions and copy files from the system into the scratchbox"
-	read choice
-	echo
-	case "$choice" in
-		y*|Y*|"")
-			"${TARGET_DIR}/sbin/sbox_configure" "no" ${SBOX_GROUP} || die "sbox_configure failed"
-			;;
-		*)
-			;;
-	esac
-
-	mkdir -p "${TARGET_DIR}/scratchbox/users"
+	mkdir -p "${TARGET_DIR}/users"
 
 	while true; do
 		einfo "Existing users:"

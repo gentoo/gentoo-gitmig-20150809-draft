@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.14.ebuild,v 1.5 2010/04/04 09:08:52 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q3-eglibc2_10/scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.18.ebuild,v 1.1 2010/09/19 10:17:27 ayoy Exp $
 
-ARMV=${PV}-7
-I486V=${PV}-4
+ARMHARDV="hard-${PV}-4"
+ARMSOFTV="soft-${PV}-5"
+I486V="1.0.17-3"
 
 DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
 HOMEPAGE="http://www.scratchbox.org/"
-SRC_URI="http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/_/.}-armv7-${ARMV}-i386.tar.gz
-	http://scratchbox.org/download/files/sbox-releases/stable/tarball/${PN/_/.}-i486-${I486V}-i386.tar.gz"
+SRC_URI="http://scratchbox.org/download/files/sbox-releases/hathor/tarball/${PN/_/.}-armv7-${ARMHARDV}-i386.tar.gz
+	http://scratchbox.org/download/files/sbox-releases/hathor/tarball/${PN/_/.}-armv7-${ARMSOFTV}-i386.tar.gz
+	http://scratchbox.org/download/files/sbox-releases/hathor/tarball/${PN/_/.}-i486-${I486V}-i386.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
