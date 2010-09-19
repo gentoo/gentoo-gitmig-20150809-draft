@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/markaby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.17 2010/08/05 05:55:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.18 2010/09/19 06:52:31 graaff Exp $
+
+*markaby-0.6.9-r1 (19 Sep 2010)
+
+  19 Sep 2010; Hans de Graaff <graaff@gentoo.org> +markaby-0.6.9-r1.ebuild:
+  Also install the VERSION file because markaby depends on it to know its
+  own version.
 
 *markaby-0.6.9 (05 Aug 2010)
 
