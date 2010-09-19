@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4570 2010/09/18 17:35:18 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4571 2010/09/19 05:44:13 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask media-fonts/cronyx-fonts for removal.
 
   18 Sep 2010; Panagiotis Christopoulos <pchrist@gentoo.org> package.mask:
   Remove the tinyurl link from my yesterday's commit and place instead bug
