@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.67 2010/09/08 11:39:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.68 2010/09/19 15:05:22 xmw Exp $
+
+  19 Sep 2010; Michael Weber <xmw@gentoo.org> mpg321-0.2.12.ebuild:
+  Added ~arm keyword
 
   08 Sep 2010; Markos Chandras <hwoarang@gentoo.org> mpg321-0.2.12.ebuild:
   Stable on amd64 wrt bug #335565

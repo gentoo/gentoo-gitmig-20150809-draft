@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.19.ebuild,v 1.9 2010/04/14 07:34:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.19.ebuild,v 1.10 2010/09/19 15:03:26 xmw Exp $
 
 EAPI=2
 inherit bash-completion
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86"
 IUSE="iconv"
 
 RDEPEND="media-libs/libmpdclient
