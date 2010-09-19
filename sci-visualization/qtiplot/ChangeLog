@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.67 2010/09/17 07:50:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.68 2010/09/19 19:41:02 jlec Exp $
+
+  19 Sep 2010; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.2.ebuild:
+  Removed not really needed dependencies for python support, 337471
 
   17 Sep 2010; Peter Volkov <pva@gentoo.org> qtiplot-0.9.8.2.ebuild,
   +files/qtiplot-0.9.8.2-origin-build-failure.patch:

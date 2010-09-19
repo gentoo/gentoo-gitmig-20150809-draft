@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.2 2010/09/17 07:50:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.3 2010/09/19 19:41:02 jlec Exp $
 
 EAPI=3
 
@@ -50,11 +50,7 @@ DEPEND="${CDEPEND}
 		   >=app-text/docbook-xml-dtd-4.4-r2:4.4 )"
 
 RDEPEND="${CDEPEND}
-	python? (
-		dev-python/PyQt4[X]
-		dev-python/pygsl
-		dev-python/rpy
-		sci-libs/scipy )"
+	python? ( dev-python/PyQt4[X] )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.12-system-QTeXEngine.patch"
@@ -183,6 +179,15 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use python; then
+		elog "You might want to emerge"
+		elog "\t dev-python/pygsl"
+		elog "\t dev-python/rpy"
+		elog "\t sci-libs/scipy and"
+		elog "\t dev-python/sympy"
+		elog "to gain full python support."
+	fi
+
 	fdo-mime_desktop_database_update
 	python_mod_optimize ${PN}
 }
