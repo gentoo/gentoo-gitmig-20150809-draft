@@ -1,4 +1,3 @@
-Only in copyfs-1.0: Makefile
 diff -u --recursive copyfs-1.0-orig/cache.c copyfs-1.0/cache.c
 --- copyfs-1.0-orig/cache.c	2004-12-10 13:34:08.000000000 +0000
 +++ copyfs-1.0/cache.c	2004-12-18 20:30:17.945445677 +0000

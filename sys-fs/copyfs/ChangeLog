@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/copyfs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.5 2007/07/02 15:32:49 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.6 2010/09/20 20:16:26 jer Exp $
+
+*copyfs-1.0.1 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +copyfs-1.0.1.ebuild,
+  +files/copyfs-1.0.1-gentoo.patch, files/copyfs-1.0-unlink.patch:
+  Version bump. Respect LDFLAGS (bug #336538), CC, CFLAGS. Set RDEPEND.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> copyfs-1.0.ebuild:
   (QA) RESTRICT clean up.
