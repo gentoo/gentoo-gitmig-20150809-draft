@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.20 2009/12/15 17:48:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.21 2010/09/20 09:24:07 s4t4n Exp $
+
+EAPI=3
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,10 +23,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}.patch
+
+	#Honour Gentoo LDFLAGS, see bug #337890.
+	sed -e "s/\$(FLAGS) -o wmtz/\$(LDFLAGS) -o wmtz/" -i Makefile
 }
 
 src_compile() {
