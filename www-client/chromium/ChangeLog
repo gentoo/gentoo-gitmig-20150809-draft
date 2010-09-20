@@ -1,6 +1,6 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.180 2010/09/20 12:19:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.181 2010/09/20 12:51:55 tove Exp $
 
   20 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
   Use gclient sync --nohooks to avoid a problem with gyp running to early.
@@ -204,7 +204,7 @@
   http://crbug.com/50678, reported to me by Julien Sanchez
   <julien.sanchez@gmail.com>. Removed old ebuilds.
 
-  31 Jul 2010; Harald van DÄ³k <truedfx@gentoo.org>
+  31 Jul 2010; Harald van Dĳk <truedfx@gentoo.org>
   chromium-5.0.375.99.ebuild, chromium-5.0.375.125.ebuild,
   chromium-6.0.472.11.ebuild, chromium-6.0.472.14.ebuild,
   chromium-9999.ebuild:
@@ -683,7 +683,7 @@
   -chromium-5.0.307.5.ebuild, +chromium-5.0.335.0.ebuild:
   Version bump for dev channel release. Remove old.
 
-  23 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> chromium-5.0.322.2.ebuild,
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> chromium-5.0.322.2.ebuild,
   chromium-9999.ebuild:
   Add fix for arm build
 
@@ -754,7 +754,7 @@
   Dev channel release bump, also include gnome default-apps file from pacho
   in bug #303100
 
-  01 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> chromium-4.0.302.2.ebuild,
+  01 Feb 2010; Raúl Porcel <armin76@gentoo.org> chromium-4.0.302.2.ebuild,
   chromium-9999.ebuild:
   Fix build on arm
 
@@ -803,11 +803,11 @@
   +chromium-4.0.302.2.ebuild:
   Version bump for dev channel release. Remove old.
 
-  22 Jan 2010; RaÃºl Porcel <armin76@gentoo.org>
+  22 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   -files/chromium-drop_armel_m32.patch, chromium-9999.ebuild:
   Drop unneded arm patch
 
-  18 Jan 2010; RaÃºl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
+  18 Jan 2010; Raúl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
   chromium-4.0.288.1.ebuild, chromium-4.0.295.0.ebuild:
   Add ~arm
 
@@ -836,11 +836,11 @@
   +chromium-4.0.288.1.ebuild:
   Version bump for dev channel release.
 
-  07 Jan 2010; RaÃºl Porcel <armin76@gentoo.org>
+  07 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   +files/chromium-drop_armel_m32.patch, chromium-9999.ebuild:
   Add patch to fix build on ARM, enable v8 build on ARM
 
-  25 Dec 2009; RaÃºl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> chromium-4.0.266.0.ebuild,
   chromium-9999.ebuild:
   Add arm support, but don't keyword it as its still a big buggy
 
@@ -905,7 +905,7 @@
   Version bump, enables bookmarks sync (with --enable-sync), and fix menu
   location for adblock+ extension
 
-  15 Nov 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> chromium-9999.ebuild:
+  15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> chromium-9999.ebuild:
   QA: Drop keywords on live ebuilds.
 
   09 Nov 2009; Bernard Cafarelli <voyageur@gentoo.org>
