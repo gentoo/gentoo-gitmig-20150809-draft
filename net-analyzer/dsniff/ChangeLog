@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.53 2010/05/07 18:10:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.54 2010/09/20 11:07:17 jer Exp $
+
+*dsniff-2.4_beta1-r5 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> files/2.3-makefile.patch,
+  dsniff-2.4_beta1-r4.ebuild, -files/2.3-openssl.patch,
+  +dsniff-2.4_beta1-r5.ebuild, +files/2.4_beta1-httppostfix.patch,
+  +files/2.4_beta1-make.patch, -files/dsniff-httppostfix.patch:
+  Fix parallel make issue by Nathan Phillip Brink (ohnobinki, bug #338086).
+  Name patches consistently. Merge Makefile.ini patches.
 
   07 May 2010; Raúl Porcel <armin76@gentoo.org> dsniff-2.4_beta1-r4.ebuild:
   alpha stable wrt #312835

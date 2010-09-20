@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r4.ebuild,v 1.7 2010/09/20 11:07:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r5.ebuild,v 1.1 2010/09/20 11:07:17 jer Exp $
+
+EAPI="2"
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -8,10 +10,10 @@ DESCRIPTION="A collection of tools for network auditing and penetration testing"
 HOMEPAGE="http://monkey.org/~dugsong/dsniff/"
 SRC_URI="http://monkey.org/~dugsong/${PN}/beta/${P/_beta/b}.tar.gz
 	mirror://debian/pool/main/d/${PN}/${PN}_2.4b1+debian-18.diff.gz"
-
 LICENSE="BSD"
+
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
 
 DEPEND="net-libs/libpcap
@@ -19,33 +21,32 @@ DEPEND="net-libs/libpcap
 	>=net-libs/libnids-1.21
 	>=dev-libs/openssl-0.9.6e
 	>=sys-libs/db-4.2.52_p4
-	sys-apps/sed
 	X? ( x11-libs/libXmu )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/_beta1/}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Debian's patchset
 	epatch "${DISTDIR}"/${PN}_2.4b1+debian-18.diff.gz
-	epatch "${S}"/dsniff-2.4b1+debian/debian/patches/*.dpatch
-
-	sed -i 's:-DDSNIFF_LIBDIR=\\\"$(libdir)/\\\"::' Makefile.in || die "sed makefile"
-	epatch "${FILESDIR}"/2.3-makefile.patch
+	epatch dsniff-2.4b1+debian/debian/patches/*.dpatch
 
 	# Bug 125084
 	epatch "${FILESDIR}"/${PV}-httppostfix.patch
 
+	# various Makefile.in patches
+	epatch "${FILESDIR}"/${PV}-make.patch
+
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with X x) \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
