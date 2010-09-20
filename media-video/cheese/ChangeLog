@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.33 2010/09/13 20:18:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.34 2010/09/20 09:20:48 pacho Exp $
+
+  20 Sep 2010; Pacho Ramos <pacho@gentoo.org> cheese-2.30.1.ebuild:
+  Add media-libs/gst-plugins-good RDEPEND back as reported by klondike in
+  bug #338127.
 
   13 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> -cheese-2.24.3.ebuild,
   -cheese-2.26.3.ebuild, cheese-2.30.1.ebuild:
