@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ftnchek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ChangeLog,v 1.9 2010/01/22 12:08:22 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ChangeLog,v 1.10 2010/09/20 19:32:56 jer Exp $
+
+*ftnchek-3.3.1-r1 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +ftnchek-3.3.1-r1.ebuild:
+  Respect LDFLAGS (bug #336530). Correct CFLAGS sed script. Simplify STRIP
+  sed script. Respect all CFLAGS. Do not set empty DEPEND.
 
   22 Jan 2010; Dawid Węgliński <cla@gentoo.org> ftnchek-3.2.2.ebuild,
   ftnchek-3.3.1.ebuild:
