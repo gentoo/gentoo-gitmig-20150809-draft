@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.1 2010/09/17 22:06:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.2 2010/09/20 17:53:09 dilfridge Exp $
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -31,11 +31,15 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	echo "LINKFLAGS += ${LDFLAGS} ;" >> Jamtop
-	emake || die "emake failed"
+
+	local jobnumber=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
+	[ ${jobnumber} ] || jobnumber=-j1
+
+	jam -q -fJambase ${jobnumber} || die
 }
 
 src_install() {
-	emake install || die
+	jam -q -fJambase install || die
 
 	rm bin/License.txt || die
 	dobin bin/* || die
