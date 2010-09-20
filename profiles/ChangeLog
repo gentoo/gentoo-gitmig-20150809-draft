@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4575 2010/09/20 16:09:58 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4576 2010/09/20 19:36:15 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  base/package.use.mask, package.mask:
+  Unmask 4Suite and reverse dependencies.
 
   20 Sep 2010; Panagiotis Christopoulos <pchrist@gentoo.org> package.mask:
   Minor fixes in my previous commit, let's hope the last
