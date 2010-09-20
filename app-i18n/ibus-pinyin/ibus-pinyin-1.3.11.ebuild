@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.9.ebuild,v 1.1 2010/08/01 16:58:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.11.ebuild,v 1.1 2010/09/20 02:44:03 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
