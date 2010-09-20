@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/guilt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.2 2010/03/17 16:31:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.3 2010/09/20 04:57:50 xmw Exp $
+
+*guilt-0.34 (20 Sep 2010)
+
+  20 Sep 2010; Michael Weber <xmw@gentoo.org> +guilt-0.34.ebuild:
+  Version bump (bug #337985)
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> guilt-0.32.ebuild,
   guilt-0.32.1.ebuild, guilt-0.32.2.ebuild:
