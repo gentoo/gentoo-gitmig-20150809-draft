@@ -3,7 +3,4 @@
 <pkgmetadata>
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
-	<use>
-		<flag name='plugins-symlink'>Add support for system web browser plugins out of the box</flag>
-	</use>
 </pkgmetadata>
