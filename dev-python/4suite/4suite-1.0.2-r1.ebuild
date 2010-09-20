@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.10 2010/07/21 21:46:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.11 2010/09/20 19:32:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,9 +33,7 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}/${P}-amd64_python2.5.patch"
 	epatch "${FILESDIR}/${P}-config.patch"
-
-	# Improve handling of package versions with '+' character.
-	sed -e $'/self._original = vstring/a\\\n        vstring = vstring.rstrip(\'+\')' -i Ft/Lib/DistExt/Version.py || die "sed failed"
+	epatch "${FILESDIR}/${P}-version_parsing.patch"
 
 	if ! use doc; then
 		sed -e "/'build_docs'/d" -i Ft/Lib/DistExt/Build.py || die "sed failed"
