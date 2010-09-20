@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.8.ebuild,v 1.1 2010/09/16 05:53:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.8-r1.ebuild,v 1.1 2010/09/20 17:57:26 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -73,7 +73,6 @@ RDEPEND="java? ( virtual/jre )
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	>=app-text/hunspell-1.2
 	>=x11-libs/gtk+-2.10.0
-	>=x11-libs/cairo-1.8.8[X]
 	>=x11-libs/pango-1.14.0[X]
 	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )
 	cups? ( net-print/cups[gnutls] )"
@@ -171,6 +170,12 @@ src_configure() {
 
 	mozconfig_init
 	mozconfig_config
+
+	# seamonkey has issues with >=x11-libs/cairo-1.10.0 (bug #337813).
+	# If you don't like this blame upstream as they don't care about
+	# anything than their damned bundled shit!!!
+	sed '/--enable-system-cairo/s:enable:disable:' -i "${S}"/.mozconfig \
+		|| die
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"

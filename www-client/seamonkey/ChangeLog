@@ -1,6 +1,14 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.259 2010/09/16 05:53:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.260 2010/09/20 17:57:26 polynomial-c Exp $
+
+*seamonkey-2.0.8-r1 (20 Sep 2010)
+
+  20 Sep 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.0.8.ebuild, +seamonkey-2.0.8-r1.ebuild:
+  Switching over to bundled cairo lib as seamonkey-2.0.x has issues with
+  cairo-1.10.0. If you don't like this blame upstream as they don't care
+  about anything than their damned bundled shit!!!
 
 *seamonkey-2.0.8 (16 Sep 2010)
 
