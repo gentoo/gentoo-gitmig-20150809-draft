@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0.ebuild,v 1.4 2010/09/18 10:33:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0.ebuild,v 1.5 2010/09/20 17:07:46 ssuominen Exp $
 
 EAPI="2"
 
@@ -49,12 +49,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Delete pregenerated files from tarball wrt #337989 (testsuite fails)
+	find test/data -type f -name '*.service' -exec rm -f '{}' +
+	find test/data -type f -name 'debug-*.conf' -exec rm -f '{}' +
+
 	# Remove CFLAGS that is not supported by all gcc, bug #274456
-	sed 's/-Wno-pointer-sign//g' -i configure.in configure || die "sed failed"
+	sed 's/-Wno-pointer-sign//g' -i configure.in configure || die
 
 	# Tests were restricted because of this
 	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
-		-e '/"dispatch"/d' -i "${S}/bus/test-main.c" || die "sed failed"
+		-e '/"dispatch"/d' -i "${S}/bus/test-main.c" || die
 
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 
