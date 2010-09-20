@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tptest
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.11 2008/11/08 15:29:23 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.12 2010/09/20 18:32:35 jer Exp $
+
+*tptest-3.1.7-r1 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +tptest-3.1.7-r1.ebuild:
+  Respect LDFLAGS (bug #338172). Simply a lot of the ebuild.
 
   08 Nov 2008; Cédric Krier <cedk@gentoo.org> tptest-3.1.7.ebuild:
   Fix C(XX)FLAGS and CC for bug #240866
