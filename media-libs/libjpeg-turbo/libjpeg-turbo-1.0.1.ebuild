@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.0.ebuild,v 1.3 2010/07/23 23:17:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.1.ebuild,v 1.1 2010/09/20 17:57:09 ssuominen Exp $
 
 EAPI=2
 inherit libtool
