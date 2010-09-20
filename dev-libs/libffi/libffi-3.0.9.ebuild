@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9.ebuild,v 1.17 2010/09/20 18:12:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9.ebuild,v 1.18 2010/09/20 18:26:12 ssuominen Exp $
 
 inherit eutils libtool
 
@@ -38,4 +38,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog* README
+	find "${D}" -type f -name '*.la' -exec rm -f '{}' +
 }
