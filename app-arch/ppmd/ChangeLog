@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.37 2010/04/06 06:06:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.38 2010/09/20 09:49:11 jer Exp $
+
+*ppmd-9.1_p16 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +ppmd-9.1_p16.ebuild:
+  Patch bump. Respect LDFLAGS (bug #337861), CC, CFLAGS.
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> ppmd-9.1_p14.ebuild:
   Bump to EAPI=3, add prefix keywords, QA fixes
