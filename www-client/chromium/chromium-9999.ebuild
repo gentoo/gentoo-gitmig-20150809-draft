@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.83 2010/09/14 14:08:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.84 2010/09/20 12:14:04 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -69,7 +69,7 @@ src_unpack() {
 
 	einfo "gclient sync start -->"
 	einfo "     repository: ${EGCLIENT_REPO_URI}"
-	${EGCLIENT} sync || die "gclient: can't fetch to ${PN} from ${EGCLIENT_REPO_URI}."
+	${EGCLIENT} sync --nohooks || die
 	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
 
 	mkdir -p "${S}"

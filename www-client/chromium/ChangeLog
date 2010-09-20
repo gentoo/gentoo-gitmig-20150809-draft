@@ -1,10 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.178 2010/09/18 09:56:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.179 2010/09/20 12:14:04 phajdan.jr Exp $
 
   18 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   chromium-6.0.472.59.ebuild:
   Stable on amd64 wrt bug #335750
+
+  20 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
+  Use gclient sync --nohooks to avoid a problem with gyp running to early.
+  Thanks to Mike Gilbert <floppymaster@gmail.com> in bug #337543.
 
   17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
   chromium-6.0.472.59.ebuild:
