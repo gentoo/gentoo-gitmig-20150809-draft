@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.6.0.ebuild,v 1.1 2009/09/11 18:05:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.6.0.ebuild,v 1.2 2010/09/20 10:28:54 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -18,8 +18,9 @@ RDEPEND=">=xfce-base/libxfce4util-4.6
 	>=xfce-base/libxfce4menu-4.6
 	>=xfce-base/xfconf-4.6
 	>=xfce-base/exo-0.3.100
+	<xfce-base/exo-0.5
 	>=xfce-base/xfce4-panel-4.6
-	>=dev-lang/vala-0.7.1"
+	>=dev-lang/vala-0.7.1:0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
