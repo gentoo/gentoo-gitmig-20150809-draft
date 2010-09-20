@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.1-r1.ebuild,v 1.3 2010/08/11 17:05:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.5.1-r1.ebuild,v 1.4 2010/09/20 10:24:54 eva Exp $
 
 inherit gnome2
 
@@ -14,7 +14,6 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12"
 DEPEND="${RDEPEND}
-	dev-lang/vala
 	dev-util/pkgconfig"
 
 src_install() {
