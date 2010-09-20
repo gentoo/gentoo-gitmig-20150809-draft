@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xrick
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.12 2007/04/24 15:25:06 drizzt Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.13 2010/09/20 15:50:01 mr_bones_ Exp $
+
+  20 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  xrick-021212-r1.ebuild:
+  EAPI=2; respect LDFLAGS (bug #338153)
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> xrick-021212-r1.ebuild:
   Add ~x86-fbsd keyword.
