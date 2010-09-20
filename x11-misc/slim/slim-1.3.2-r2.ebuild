@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1_p20091114.ebuild,v 1.11 2010/05/21 22:24:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r2.ebuild,v 1.1 2010/09/20 15:22:38 darkside Exp $
 
 EAPI=2
 
@@ -8,11 +8,11 @@ inherit toolchain-funcs pam eutils
 
 DESCRIPTION="Simple Login Manager"
 HOMEPAGE="http://slim.berlios.de"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="branding screenshot pam"
 
 RDEPEND="x11-libs/libXmu
@@ -22,8 +22,7 @@ RDEPEND="x11-libs/libXmu
 	media-libs/libpng
 	media-libs/jpeg
 	x11-apps/sessreg
-	pam? ( virtual/pam )
-	screenshot? ( media-gfx/imagemagick )"
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
@@ -40,7 +39,8 @@ src_prepare() {
 		-e "s:-lpng12:$(pkg-config --libs-only-l libpng):" \
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
-	epatch "${FILESDIR}/${PN}-1.3.1-config.diff"
+	# Our Gentoo-specific config changes
+	epatch "${FILESDIR}/${PN}-1.3.2-r2-config.diff"
 
 	if use branding; then
 		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
@@ -52,6 +52,8 @@ src_prepare() {
 	epatch "${FILESDIR}/15287-fix-pam-authentication-with-pam_unix2.patch"
 	# Gentoo Bug 261713
 	epatch "${FILESDIR}/261713-restart-xserver-if-killed.patch"
+	# Gentoo bug 261359, upstream 15326
+	epatch "${FILESDIR}/261359-fix-SIGTERM-freeze.patch"
 }
 
 src_compile() {
@@ -70,6 +72,9 @@ src_install() {
 		emake DESTDIR="${D}" install || die "emake install failed."
 	fi
 
+	insinto /usr/share/slim
+	newins "${FILESDIR}/Xsession" Xsession || die "newins failed"
+
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/slim.logrotate" slim || die "newins failed"
 
@@ -82,7 +87,13 @@ pkg_postinst() {
 	elog
 	elog "If you wish ${PN} to start automatically, set DISPLAYMANAGER=\"${PN}\" "
 	elog "in /etc/conf.d/xdm and run \"rc-update add xdm default\"."
-	elog "By default, ${PN} will use default XSESSION value set in /etc/rc.conf."
+	elog
+	elog "By default, ${PN} now does proper X session selection, including ~/.xsession"
+	elog "support, as well as selection between sessions available in"
+	elog "/etc/X11/Sessions/ at login by pressing [F1]."
+	elog
+	elog "The XSESSION environment variable is still supported as a default"
+	elog "if no session has been specified by the user."
 	elog
 	elog "If you want to use .xinitrc in the user's home directory for session"
 	elog "management instead, see README and xinitrc.sample in"
