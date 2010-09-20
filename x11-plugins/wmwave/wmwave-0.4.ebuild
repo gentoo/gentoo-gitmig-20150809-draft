@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.10 2008/06/29 13:49:02 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.11 2010/09/20 09:29:49 s4t4n Exp $
+
+EAPI=3
 
 IUSE=""
 S=${WORKDIR}/wmwave
@@ -16,6 +18,11 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
+
+src_prepare() {
+	#Honour Gentoo LDFLAGS. Closes bug #337845.
+	sed -e "s/\$(FLAGS) -o wmwave/\$(LDFLAGS) -o wmwave/" -i Makefile
+}
 
 src_compile() {
 	emake FLAGS="${CFLAGS}" || die "Compilation failed"
