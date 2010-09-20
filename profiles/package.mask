@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11958 2010/09/20 15:35:19 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11959 2010/09/20 16:09:58 pchrist Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,7 +116,7 @@ dev-lisp/cl-hyperobject
 dev-lisp/cl-inflate
 =dev-lisp/cl-interpol-0.1.2
 =dev-lisp/cl-irc-0.7
-=dev-lisp/cl-irc-logger-0.9.2
+dev-lisp/cl-irc-logger
 dev-lisp/cl-ironclad
 dev-lisp/cl-isbn
 dev-lisp/cl-iterate
@@ -162,7 +162,6 @@ dev-lisp/cl-periodic-table
 dev-lisp/cl-pg
 dev-lisp/cl-pipes
 =dev-lisp/cl-plus-1.0
-=dev-lisp/cl-plus-ssl-20051204
 =dev-lisp/cl-plus-ssl-20051204
 dev-lisp/cl-png
 dev-lisp/cl-poly-pen
@@ -211,7 +210,6 @@ dev-lisp/cl-scribble
 dev-lisp/cl-sdl
 dev-lisp/cl-series
 dev-lisp/cl-sha1
-dev-lisp/cl-smtp
 dev-lisp/cl-spatial-trees
 dev-lisp/cl-split-sequence
 dev-lisp/cl-sql
