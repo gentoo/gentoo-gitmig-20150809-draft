@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.17 2009/04/28 14:41:17 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.18 2010/09/20 09:08:04 s4t4n Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "parallel make failed"
+	emake FLAGS="${CFLAGS} ${LDFLAGS}" || die "parallel make failed"
 }
 
 src_install() {
