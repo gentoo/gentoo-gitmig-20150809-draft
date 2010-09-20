@@ -8,3 +8,5 @@ move sys-apps/parted sys-block/parted
 slotmove =dev-lang/clojure-1.2.0 1.1 1.2
 move media-video/nvclock sys-power/nvclock
 move media-gfx/kst sci-visualization/kst
+slotmove =dev-lang/vala-0.9.5 0 0.10
+slotmove =dev-lang/vala-0.9.8 0 0.10
