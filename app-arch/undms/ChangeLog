@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/undms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/undms/ChangeLog,v 1.8 2010/01/01 19:42:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/undms/ChangeLog,v 1.9 2010/09/20 02:55:31 jer Exp $
+
+*undms-1.3-r1 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> -undms-1.3.ebuild,
+  +undms-1.3-r1.ebuild:
+  Let unpack default to gunzip to unpack, do not DEPEND on ncompress. Do not
+  cp or mkdir. Respect LDFLAGS (bug #337858), CC.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> undms-1.3.ebuild:
   Transfer Prefix keywords
