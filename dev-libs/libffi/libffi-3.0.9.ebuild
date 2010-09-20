@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9.ebuild,v 1.15 2010/09/19 17:33:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.9.ebuild,v 1.16 2010/09/20 17:55:49 armin76 Exp $
 
 inherit eutils libtool
 
@@ -22,6 +22,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-interix.patch \
 		"${FILESDIR}"/${P}-irix.patch
+
+	epatch "${FILESDIR}"/${P}-arm-oabi.patch
 
 	elibtoolize
 }
