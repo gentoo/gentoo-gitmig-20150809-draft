@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nettop
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.18 2008/02/09 12:05:15 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.19 2010/09/20 00:31:45 xmw Exp $
+
+  20 Sep 2010; Michael Weber <xmw@gentoo.org> nettop-0.2.3-r1.ebuild:
+  Added ~arm keyword
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org> nettop-0.2.3-r1.ebuild:
   Fix nettop to work with slang 2.1.3.
