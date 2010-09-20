@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/files/cachefilesd.init,v 1.1 2010/09/19 08:08:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/files/cachefilesd.init,v 1.2 2010/09/20 08:45:22 jlec Exp $
 
 depend() {
 	need localmount
@@ -34,8 +34,8 @@ start() {
 		ret=$?
 		if [ $ret -ne 0 ] ; then
 			eerror "cachefiles modules cannot be loaded so cachefilesd "
-			error 	"cannot be started, aborting. Did you build fscache in your "
-			error	"kernel? Note that you need a 2.6.30 or better kernel"
+			eerror 	"cannot be started, aborting. Did you build fscache in your "
+			eerror	"kernel? Note that you need a 2.6.30 or better kernel"
 			return $ret
 		fi
 	fi
