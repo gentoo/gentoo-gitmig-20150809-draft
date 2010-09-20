@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.80 2010/08/07 16:57:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.81 2010/09/20 07:27:45 vapier Exp $
+
+  20 Sep 2010; Mike Frysinger <vapier@gentoo.org> expect-5.44.1.15.ebuild,
+  +files/expect-5.44.1.15-headers.patch:
+  Clean up ebuild and fix missing prototype warnings #337943 by David J Cozatt.
 
   07 Aug 2010; Raúl Porcel <armin76@gentoo.org> expect-5.44.1.15.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #324951

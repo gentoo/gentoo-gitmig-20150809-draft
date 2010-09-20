@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.13 2010/08/07 16:57:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.14 2010/09/20 07:27:45 vapier Exp $
 
 EAPI="3"
 
-WANT_AUTOCONF="2.5"
 inherit autotools eutils
 
 DESCRIPTION="tool for automating interactive applications"
@@ -23,21 +22,18 @@ DEPEND=">=dev-lang/tcl-8.2[threads?]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# fix install_name on darwin
-	[[ ${CHOST} == *-darwin* ]] && \
-		epatch "${FILESDIR}"/${P}-darwin.patch
-
-	sed -i "s#/usr/local/bin#${EPREFIX}/usr/bin#" expect.man
-	sed -i "s#/usr/local/bin#${EPREFIX}/usr/bin#" expectk.man
-	#stops any example scripts being installed by default
+	sed -i "s#/usr/local/bin#${EPREFIX}/usr/bin#" expect{,k}.man || die
+	# stops any example scripts being installed by default
 	sed -i \
 		-e '/^install:/s/install-libraries //' \
 		-e 's/^SCRIPTS_MANPAGES = /_&/' \
 		Makefile.in
 
-	epatch "${FILESDIR}/${P}-gfbsd.patch"
-	epatch "${FILESDIR}/${P}-ldflags.patch"
-	epatch "${FILESDIR}/${P}_with-tk-no.patch"
+	epatch "${FILESDIR}"/${P}-gfbsd.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}_with-tk-no.patch
+	epatch "${FILESDIR}"/${P}-headers.patch #337943
+	sed -i 's:ifdef HAVE_SYS_WAIT_H:ifndef NO_SYS_WAIT_H:' *.c
 
 	eautoconf
 }
@@ -79,26 +75,21 @@ src_test() {
 	emake test || die "emake test failed"
 }
 
-src_install() {
-	dodir /usr/$(get_libdir)
-	emake install DESTDIR="${D}" || die "make install failed"
+expect_make_var() {
+	touch pkgIndex.tcl-hand
+	printf 'all:;echo $('$1')\ninclude Makefile' | emake -s -f -
+	rm -f pkgIndex.tcl-hand
+}
 
+src_install() {
+	emake install DESTDIR="${D}" || die
 	dodoc ChangeLog FAQ HISTORY NEWS README
 
-	#install examples if 'doc' is set
+	# install examples if 'doc' is set
 	if use doc ; then
-		docinto examples
-		local scripts=$(make -qp | \
-			sed -e 's/^SCRIPTS = //' -et -ed | head -n1)
 		insinto /usr/share/doc/${PF}/examples
-		for s in ${scripts}; do
-			doins example/${s} || die
-		done
-		local scripts_manpages=$(make -qp | \
-		       sed -e 's/^_SCRIPTS_MANPAGES = //' -et -ed | head -n1)
-		for m in ${scripts_manpages}; do
-			dodoc example/${m}.man
-		done
-		dodoc example/README
+		doins $(printf 'example/%s ' $(expect_make_var SCRIPTS)) || die
+		docinto examples
+		dodoc example/README $(printf 'example/%s.man ' $(expect_make_var _SCRIPTS_MANPAGES)) || die
 	fi
 }
