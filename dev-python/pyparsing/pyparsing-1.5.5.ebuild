@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.5.ebuild,v 1.1 2010/09/01 08:39:07 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.5.ebuild,v 1.2 2010/09/20 19:44:13 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,14 +21,6 @@ RDEPEND=""
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 PYTHON_MODNAME="pyparsing.py"
-
-src_prepare() {
-	sed \
-		-e "s/pyparsing_py3 as pyparsing/pyparsing/" \
-		-e "s/pyparsing_py3/pyparsing/" \
-		-i pyparsing_py3.py || die "sed failed"
-	distutils_src_prepare
-}
 
 src_install() {
 	distutils_src_install
