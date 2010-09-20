@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/keynote
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.11 2009/12/28 11:59:51 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.12 2010/09/20 22:36:24 jer Exp $
+
+*keynote-2.3-r1 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +keynote-2.3-r1.ebuild,
+  +files/keynote-2.3-make.patch:
+  Respect LDFLAGS (bug #336820). Do not hard-wire AR. Set RDEPEND.
 
   28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> keynote-2.3.ebuild:
   Use -j1 for build (bug #298669).

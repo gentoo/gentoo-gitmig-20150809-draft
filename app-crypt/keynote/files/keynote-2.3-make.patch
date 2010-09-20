@@ -1,0 +1,36 @@
+--- a/Makefile.in	2000-09-27 01:16:27.000000000 +0200
++++ b/Makefile.in	2010-09-21 00:30:37.000000000 +0200
+@@ -35,6 +35,7 @@
+ SED = @SED@
+ ECHO = @ECHO@
+ TR = @TR@
++AR = @AR@
+ 
+ TARFLAGS = -cvzf ${DISTFILE}
+ YACCFLAGS2 = -d -p kv -b z
+@@ -45,6 +46,7 @@
+ RMFLAGS2 = -rf
+ RMFLAGS = -f
+ NROFFFLAGS = -mandoc
++LDFLAGS = @LDFLAGS@
+ 
+ SSLCONF = testsuite/openssl.cnf
+ SSLCERT = testsuite/test.cert.pem
+@@ -83,7 +85,7 @@
+ 	$(RANLIB) $(TARGET)
+ 
+ $(TARGET2): $(TARGET) $(OBJS2)
+-	$(CC) $(CFLAGS) -o $(TARGET2) $(OBJS2) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET2) $(OBJS2) $(LIBS)
+ 
+ k.tab.c: keynote.y header.h keynote.h assertion.h config.h
+ 	$(YACC) $(YACCFLAGS) keynote.y
+@@ -131,7 +133,7 @@
+ 	-keyout $(SSLKEY)
+ 
+ test-sample: all $(OBJS3)
+-	$(CC) $(CFLAGS) -o $(TARGET3) $(OBJS3) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET3) $(OBJS3) $(LIBS)
+ 
+ test-sig: all $(SSLCERT) $(SSLKEY)
+ 	$(SED) -e 's/--.*//' < $(SSLCERT) > $(SSLCERT).1
