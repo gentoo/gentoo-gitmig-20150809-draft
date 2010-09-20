@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/martian/martian-0.12.ebuild,v 1.1 2010/09/19 23:37:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/martian/martian-0.12.ebuild,v 1.2 2010/09/20 16:04:24 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,8 @@ IUSE=""
 
 RDEPEND="net-zope/zope-interface"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools
+	test? ( net-zope/zope-testing )"
 
 DOCS="CHANGES.txt CREDITS.txt src/martian/README.txt"
 
