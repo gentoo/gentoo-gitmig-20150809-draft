@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.10 2010/07/31 16:31:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.11 2010/09/20 19:14:21 graaff Exp $
+
+  20 Sep 2010; Hans de Graaff <graaff@gentoo.org> lib_users-0.2.ebuild:
+  Add ~amd64 keyword. Tested on several machines and seems to work as
+  intended.
 
   31 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild,
   lib_users-0.2.ebuild:
