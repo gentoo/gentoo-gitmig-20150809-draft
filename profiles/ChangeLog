@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4571 2010/09/19 05:44:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4572 2010/09/20 04:06:53 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Revert media-fonts/cronyx-fonts mask.
 
   19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask media-fonts/cronyx-fonts for removal.
