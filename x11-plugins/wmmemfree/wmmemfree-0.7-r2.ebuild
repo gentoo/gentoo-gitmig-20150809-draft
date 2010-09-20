@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/wmmemfree-0.7-r2.ebuild,v 1.5 2008/11/26 00:04:00 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/wmmemfree-0.7-r2.ebuild,v 1.6 2010/09/20 09:01:56 s4t4n Exp $
+
+EAPI=3
 
 inherit eutils toolchain-funcs
 
@@ -19,11 +21,12 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-add-kernel-26-support.patch
 	epatch "${FILESDIR}"/${P}-fix-crash-when-there-is-no-swap.patch
+
+	#Honour Gentoo LDFLAGS, see bug #337927.
+	sed -e "s/-o \$(PROG)/\$(LDFLAGS) -o \$(PROG)/" -i Makefile
 }
 
 src_compile() {
