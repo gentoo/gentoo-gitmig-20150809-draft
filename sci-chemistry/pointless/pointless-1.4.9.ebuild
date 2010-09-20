@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.4.9.ebuild,v 1.2 2010/06/16 06:56:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.4.9.ebuild,v 1.3 2010/09/20 07:07:31 jlec Exp $
 
 inherit toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ IUSE="test"
 RDEPEND="
 	sci-chemistry/ccp4-apps
 	>=sci-libs/ccp4-libs-6.1.3
-	sci-libs/cctbx"
+	<sci-libs/cctbx-2010.03.29.2334-r2"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
