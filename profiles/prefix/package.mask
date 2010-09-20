@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.70 2010/09/19 06:24:35 abcd Exp $
+# $Id: package.mask,v 1.71 2010/09/20 14:25:31 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Jeremy Olexa <darkside@gentoo.org> (20 Sept 2010)
+# Maybe an issue with CONFIG_PROTECT but definately and issue that impedes
+# bootstrapping, mask until the next version comes out. bug 337945
+=sys-apps/portage-2.2.01.16365
+
 # Fabian Groffen <grobian@gentoo.org> (31 Jul 2010)
 # We have perl-5.10 (5.12 even) so we can't afford this being masked
 ->=dev-perl/DateManip-6.0
@@ -43,10 +48,6 @@
 # Fabian Groffen <grobian@gentoo.org> (14 May 2010)
 # Experimental version to support service scripts, bug #196294
 >=sys-apps/baselayout-prefix-1.12.5-r7
-
-# Fabian Groffen <grobian@gentoo.org> (16 Apr 2010)
-# installs a broken zlib.h on 64-bits systems, bug #310209
-=sys-libs/zlib-1.2.4
 
 # Fabian Groffen <grobian@gentoo.org> (26 Mar 2010)
 # Scheduled for removal.  This version isn't worth the hassle of merging
