@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/sslwrap
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.20 2009/03/22 13:27:00 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.21 2010/09/20 19:05:15 jer Exp $
+
+*sslwrap-2.0.6-r2 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> -sslwrap-2.0.6.ebuild,
+  +sslwrap-2.0.6-r2.ebuild:
+  Fix quoting in cp command and have it die for good measure. Respect
+  LDFLAGS (bug #335001), CC. Do not hard-wire CFLAGS. Make sed die. Update
+  HOMEPAGE, SRC_URI.
 
   22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, sslwrap-2.0.6.ebuild, sslwrap-2.0.6-r1.ebuild:
