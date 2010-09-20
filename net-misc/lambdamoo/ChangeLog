@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/lambdamoo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.8 2007/05/14 19:45:44 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.9 2010/09/20 02:17:54 jer Exp $
+
+*lambdamoo-1.8.1-r2 (20 Sep 2010)
+
+  20 Sep 2010; Jeroen Roovers <jer@gentoo.org> +lambdamoo-1.8.1-r2.ebuild:
+  Respect LDFLAGS (bug #337940), CC.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
