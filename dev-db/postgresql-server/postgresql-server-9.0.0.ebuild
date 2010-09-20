@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.0.ebuild,v 1.1 2010/09/19 14:30:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.0.ebuild,v 1.2 2010/09/20 08:49:11 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -142,14 +142,6 @@ pkg_postinst() {
 	ewarn "You can set PGOPTS='-k /tmp' in /etc/conf.d/postgresql-${SLOT} to restore the"
 	ewarn "original location."
 	ewarn
-
-	elog "The PostgreSQL community has called for more testers of the upcoming 9.0"
-	elog "release. This beta version of the PostgreSQL server, while moved to ~arch, will"
-	elog "never be marked stable. As such, you may not want to use this package in an"
-	elog "environment where incompatible changes are unacceptable. Bear in mind, though,"
-	elog "that these packages are slotted and that you may run multiple server instances"
-	elog "simultaneously without conflict."
-	elog
 
 	elog "Before initializing the database, you may want to edit PG_INITDB_OPTS so that it"
 	elog "contains your preferred locale and character encoding in:"

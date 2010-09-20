@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.0.ebuild,v 1.1 2010/09/19 14:29:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.0.ebuild,v 1.2 2010/09/20 08:48:38 patrick Exp $
 
 EAPI="2"
 
@@ -147,13 +147,6 @@ pkg_postinst() {
 	elog "If you need a global psqlrc-file, you can place it in:"
 	elog "    '${ROOT}/etc/postgresql-${SLOT}/'"
 	elog
-	elog "The PostgreSQL community has called for more testers of the upcoming 9.0"
-	elog "release. This beta version of the PostgreSQL client applications and libraries,"
-	elog "while moved to ~arch, will never be marked stable. As such, you may not want to"
-	elog "use this package in an environment where incompatible changes are"
-	elog "unacceptable. Bear in mind, though, that these packages are slotted and that you"
-	elog "may have multiple installations simultaneously without conflict. However, you"
-	elog "may only use one set of client applications and libraries via 'eselect'."
 }
 
 pkg_postrm() {

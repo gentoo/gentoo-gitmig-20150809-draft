@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.72 2010/09/19 14:29:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.73 2010/09/20 08:48:38 patrick Exp $
+
+  20 Sep 2010; Patrick Lauer <patrick@gentoo.org>
+  postgresql-base-9.0.0.ebuild:
+  Fixing elog messages
 
 *postgresql-base-9.0.0 (19 Sep 2010)
 
