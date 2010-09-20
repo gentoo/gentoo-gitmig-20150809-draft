@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.2 2010/09/20 17:53:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.3 2010/09/20 20:01:35 dilfridge Exp $
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -30,7 +30,12 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
+	# Make it respect LDFLAGS
 	echo "LINKFLAGS += ${LDFLAGS} ;" >> Jamtop
+
+	# Evil hack to get --as-needed working. The build system unfortunately lists all
+	# the shared libraries by default on the command line _before_ the object to be built...
+	echo "STDLIBS += -ldl -lrt -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -ltiff ;" >> Jamtop
 
 	local jobnumber=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
 	[ ${jobnumber} ] || jobnumber=-j1
