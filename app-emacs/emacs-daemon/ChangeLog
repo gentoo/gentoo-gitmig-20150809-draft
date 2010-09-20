@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.39 2010/08/13 07:27:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.40 2010/09/20 18:24:21 ulm Exp $
+
+*emacs-daemon-0.18 (20 Sep 2010)
+
+  20 Sep 2010; Ulrich Mueller <ulm@gentoo.org> +emacs-daemon-0.18.ebuild:
+  Version bump. Install example stop script, bug 337829.
 
   12 Aug 2010; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.17.ebuild:
   Don't create subdir of /var/run.
