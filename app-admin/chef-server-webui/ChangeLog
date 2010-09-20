@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chef-server-webui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.4 2010/09/19 14:26:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.5 2010/09/20 09:26:49 hollow Exp $
+
+  20 Sep 2010; Benedikt Böhm <hollow@gentoo.org>
+  chef-server-webui-0.9.8.ebuild:
+  create unversioned path for passenger/rack integration
 
 *chef-server-webui-0.9.8 (19 Sep 2010)
 

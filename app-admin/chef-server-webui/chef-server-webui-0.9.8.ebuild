@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.9.8.ebuild,v 1.1 2010/09/19 14:26:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.9.8.ebuild,v 1.2 2010/09/20 09:26:49 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -43,6 +43,10 @@ each_ruby_install() {
 	ruby_fakegem_doins -r config
 	ruby_fakegem_doins config.ru
 	ruby_fakegem_doins -r public
+
+	# create unversioned path for passenger/rack integration
+	dodir /var/lib/chef/rack
+	dosym $(ruby_fakegem_gemsdir)/gems/${P} /var/lib/chef/rack/webui
 }
 
 all_ruby_install() {
