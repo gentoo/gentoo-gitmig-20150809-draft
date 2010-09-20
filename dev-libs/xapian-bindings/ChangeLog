@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.16 2010/07/10 18:26:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.17 2010/09/20 16:43:40 arfrever Exp $
+
+*xapian-bindings-1.2.3 (20 Sep 2010)
+
+  20 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +xapian-bindings-1.2.3.ebuild:
+  Version bump (bug #338197).
 
 *xapian-bindings-1.2.2 (10 Jul 2010)
 
