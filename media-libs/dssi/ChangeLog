@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.26 2010/01/06 20:42:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.27 2010/09/21 08:27:03 ssuominen Exp $
+
+*dssi-1.1.0 (21 Sep 2010)
+
+  21 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +dssi-1.1.0.ebuild:
+  Version bump.
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> dssi-1.0.0.ebuild:
   Marking dssi-1.0.0 ppc64 for bug 297652
