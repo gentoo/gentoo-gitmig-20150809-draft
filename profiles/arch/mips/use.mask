@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.25 2010/08/09 09:18:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.26 2010/09/21 13:34:05 leio Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -50,10 +50,6 @@ laptop
 # Alexander Færøy <eroyf@gentoo.org>
 # Masking for now.
 libnotify
-
-# Alexander Færøy <eroyf@gentoo.org>
-# Err, not enough time atm... Mask for now.
-xcb
 
 # Alexander Færøy <eroyf@gentoo.org>
 # ldap -- untested, masking for now.
