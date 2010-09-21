@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.55 2010/09/09 10:49:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.56 2010/09/21 07:42:49 scarabeus Exp $
+
+  21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> compiz-0.8.4.ebuild,
+  compiz-0.8.4-r1.ebuild, compiz-0.8.4-r2.ebuild, compiz-0.8.4-r3.ebuild,
+  compiz-0.8.6.ebuild, compiz-0.8.6-r1.ebuild:
+  Update the dep on libX11 this time using proper version.
 
   09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> compiz-0.8.4.ebuild,
   compiz-0.8.4-r1.ebuild, compiz-0.8.4-r2.ebuild, compiz-0.8.4-r3.ebuild,

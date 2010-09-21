@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.7.ebuild,v 1.2 2010/09/09 10:52:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.7.ebuild,v 1.3 2010/09/21 07:44:35 scarabeus Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	>=dev-libs/libxdg-basedir-1
 	media-libs/imlib2[png]
 	x11-libs/cairo[xcb]
-	|| ( <=x11-libs/libX11-1.3.5[xcb] >x11-libs/libX11-1.3.5  )
+	|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
 	>=x11-libs/libxcb-1.4
 	>=x11-libs/pango-1.19.3
 	>=x11-libs/startup-notification-0.10
