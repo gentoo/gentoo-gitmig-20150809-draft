@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/aaquake2
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.8 2008/03/18 22:41:41 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.9 2010/09/21 09:11:01 tupone Exp $
+
+  21 Sep 2010; Tupone Alfredo <tupone@gentoo.org> files/0.1-gentoo.patch,
+  aaquake2-0.1.ebuild, files/aaquake2-0.1-gcc41.patch,
+  files/aaquake2-0.1-glibc.patch, +files/aaquake2-0.1-ldflags.patch:
+  Respect LDFLAGS. Bug #338145 by flameeyes@gentoo.org
+  EAPI=2
 
   18 Mar 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/aaquake2-0.1-glibc.patch, aaquake2-0.1.ebuild:
