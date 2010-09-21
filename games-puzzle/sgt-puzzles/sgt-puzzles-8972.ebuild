@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-8972.ebuild,v 1.2 2010/09/05 17:48:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-8972.ebuild,v 1.3 2010/09/21 20:31:58 hwoarang Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -12,7 +12,7 @@ if [[ ${PV} == "99999999" ]] ; then
 else
 	SRC_URI="http://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-r${PV}.tar.gz"
 	S=${WORKDIR}/puzzles-r${PV}
-	KEYWORDS="~amd64 x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Simon Tatham's Portable Puzzle Collection"
