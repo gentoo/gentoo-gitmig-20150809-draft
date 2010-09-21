@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rtl8192se
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/ChangeLog,v 1.3 2010/09/17 13:40:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/ChangeLog,v 1.4 2010/09/21 20:29:10 chithanh Exp $
+
+*rtl8192se-2.6.0017.0705.2010-r1 (21 Sep 2010)
+
+  21 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -rtl8192se-2.6.0017.0705.2010.ebuild,
+  +rtl8192se-2.6.0017.0705.2010-r1.ebuild:
+  Installation and build system fixes, bug #338054
 
   17 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   rtl8192se-2.6.0017.0705.2010.ebuild:
