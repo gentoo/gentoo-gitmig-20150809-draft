@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.149 2010/09/21 20:12:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.150 2010/09/21 20:17:01 pva Exp $
+
+*openvz-sources-2.6.27.6.1-r2 (21 Sep 2010)
+
+  21 Sep 2010; Peter Volkov <pva@gentoo.org>
+  +openvz-sources-2.6.27.6.1-r2.ebuild:
+  Merge in 2.6.27.54 into 2.6.27 based kernels.
 
 *openvz-sources-2.6.18.028.070.5 (21 Sep 2010)
 
