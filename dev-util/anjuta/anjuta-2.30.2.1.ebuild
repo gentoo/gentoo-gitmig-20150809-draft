@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.5 2010/08/01 12:19:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.6 2010/09/21 20:49:36 eva Exp $
 
 EAPI="2"
 
-inherit autotools eutils gnome2 flag-o-matic
+inherit autotools eutils gnome2 flag-o-matic multilib
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://www.anjuta.org"
@@ -15,8 +15,10 @@ KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug devhelp doc glade +sourceview subversion +symbol-db test"
 
 # FIXME: Anjuta has some CRITICAL and WARNINGS messages, that would be nice to fix them and/or report on upstream
+# FIXME: vala support is automagic
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2.17.10
+	>=dev-libs/dbus-glib-0.70
 	>=gnome-base/orbit-2.6
 	>=gnome-base/gconf-2.12
 	>=x11-libs/vte-0.13.1
@@ -38,14 +40,14 @@ RDEPEND=">=dev-libs/glib-2.18
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	sourceview? ( >=x11-libs/gtksourceview-2.4 )
+	sourceview? ( >=x11-libs/gtksourceview-2.9.7 )
 	symbol-db? (
 		gnome-extra/libgda:4
 		dev-util/ctags )"
 DEPEND="${RDEPEND}
 	!!dev-libs/gnome-build
 	>=sys-devel/gettext-0.14
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40.1
 	>=dev-util/pkgconfig-0.20
 	>=app-text/scrollkeeper-0.3.14-r2
 	>=app-text/gnome-doc-utils-0.3.2
@@ -97,6 +99,8 @@ src_install() {
 	# Anjuta uses a custom rule to install DOCS, get rid of it
 	gnome2_src_install
 	rm -rf "${D}"/usr/share/doc/${PN} || die "rm failed"
+	find "${D}/usr/$(get_libdir)/${PN}/" -name "*.la" -delete \
+		|| die "Could not remove *.la files"
 }
 
 pkg_postinst() {

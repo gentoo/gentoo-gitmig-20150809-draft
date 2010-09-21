@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.118 2010/08/01 12:19:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.119 2010/09/21 20:49:36 eva Exp $
+
+  21 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  anjuta-2.30.2.1.ebuild:
+  Fix dependencies according to configure. Do not install .la files as they
+  are not needed.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   anjuta-2.30.2.1.ebuild:
