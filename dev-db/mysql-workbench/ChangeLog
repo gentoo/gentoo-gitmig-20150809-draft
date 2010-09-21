@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.22 2010/09/20 18:29:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.23 2010/09/21 06:13:36 graaff Exp $
+
+  21 Sep 2010; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.28.ebuild:
+  ctemplate is also a runtime dependency, fixes #338139.
 
   20 Sep 2010; Hans de Graaff <graaff@gentoo.org>
   -files/mysql-workbench-5.2.15-configure.in.pythonlib.patch,
