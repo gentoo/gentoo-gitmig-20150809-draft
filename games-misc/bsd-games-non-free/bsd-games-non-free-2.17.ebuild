@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.6 2010/01/08 20:28:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.7 2010/09/21 10:56:43 tupone Exp $
 
 EAPI=2
 inherit games
@@ -39,7 +39,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake OPTIMIZE="${CFLAGS}" || die "emake failed"
+	emake OPTIMIZE="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 build_game() {
