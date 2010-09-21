@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.5 2010/09/09 10:55:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.6 2010/09/21 07:46:06 scarabeus Exp $
+
+  21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  redshift-1.4.1.ebuild, redshift-1.5.ebuild:
+  Update the dep on libX11 this time using proper version.
 
   09 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   redshift-1.4.1.ebuild, redshift-1.5.ebuild:
