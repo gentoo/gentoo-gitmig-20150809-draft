@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.9 2010/08/22 17:59:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.10 2010/09/21 07:36:33 ford_prefect Exp $
+
+*gobject-introspection-0.9.6 (21 Sep 2010)
+
+  21 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gobject-introspection-0.9.6.ebuild:
+  Bump to 0.9.6. Lots of fixes and additions. Breaks ABI (gir version bumped
+  from 1.1 to 1.2, so all introspection packages will need updating. Watch
+  out for a revbump later with a tool to update when ABI breaks.
 
 *gobject-introspection-0.9.3 (22 Aug 2010)
 
