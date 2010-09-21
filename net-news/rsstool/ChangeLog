@@ -1,6 +1,10 @@
 # ChangeLog for net-news/rsstool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.10 2010/09/18 11:25:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.11 2010/09/21 18:57:59 hwoarang Exp $
+
+  21 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  rsstool-1.0.0_rc4.ebuild:
+  Stable on amd64 wrt bug #337839
 
 *rsstool-1.0.1_rc2 (18 Sep 2010)
 
