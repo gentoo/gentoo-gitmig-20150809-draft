@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r3.ebuild,v 1.1 2010/09/17 14:35:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r4.ebuild,v 1.1 2010/09/21 16:14:35 voyageur Exp $
 
 EAPI=3
 
@@ -62,12 +62,13 @@ src_prepare() {
 		-i Makefile.config.in || die "Makefile.config sed failed"
 
 	einfo "Fixing rpath"
-	sed -e 's/\$(RPATH) -Wl,\$(\(ToolDir\|LibDir\))//g' -i Makefile.rules \
-		|| die "rpath sed failed"
+	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/llvm, \
+		-i Makefile.rules || die "rpath sed failed"
 }
 
 src_configure() {
-	local CONF_FLAGS="--enable-shared"
+	# --enable-shared: undefined symbol, bug #338231
+	local CONF_FLAGS=""
 
 	if use debug; then
 		CONF_FLAGS="${CONF_FLAGS} --disable-optimized"

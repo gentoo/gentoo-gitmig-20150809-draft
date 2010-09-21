@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.23 2010/09/17 14:35:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.24 2010/09/21 16:14:35 voyageur Exp $
+
+*clang-2.7-r4 (21 Sep 2010)
+
+  21 Sep 2010; Bernard Cafarelli <voyageur@gentoo.org> -clang-2.7-r3.ebuild,
+  +clang-2.7-r4.ebuild, clang-9999.ebuild:
+  Fix rpath sed and disable shared library use, thanks Nick Bowler
+  <nbowler@draconx.ca> in bug #338231
 
 *clang-2.7-r3 (17 Sep 2010)
 
