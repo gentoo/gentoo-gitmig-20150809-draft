@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x86/package.use.mask,v 1.3 2010/07/29 16:48:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x86/package.use.mask,v 1.4 2010/09/21 18:05:21 grobian Exp $
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jul 2010)
 # Issues on 32bit osx, bug 329859
@@ -9,10 +9,6 @@ media-sound/mpg123 mmx sse
 # Elias Pipping <pipping@gentoo.org> (21 Nov 2007)
 # generating documentation fails for hugs98 because of too many errors
 dev-lang/hugs98 doc
-
-# Elias Pipping <pipping@gentoo.org> (10 Nov 2007)
-# ruby fails to compile with USE=threads
-dev-lang/ruby threads
 
 # Elias Pipping <pipping@gentoo.org> (13 Sep 2007)
 # mc fails to compile with USE=slang (unicode implies slang)
