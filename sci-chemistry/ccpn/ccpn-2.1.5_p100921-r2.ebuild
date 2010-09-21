@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921-r1.ebuild,v 1.1 2010/09/21 13:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921-r2.ebuild,v 1.1 2010/09/21 13:52:20 jlec Exp $
 
 EAPI="3"
 
@@ -109,11 +109,12 @@ src_install() {
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
 	for wrapper in analysis dangle dataShifter depositionFileImporter extendNmr eci formatConverter pipe2azara; do
-		sed -e "s:gentoo_sitedir:${EROOT}$(python_get_sitedir -f):g" \
-		    -e "s:gentoolibdir:${EROOT}usr/${libdir}:g" \
-			-e "s:gentootk:${EROOT}usr/${libdir}/tk${tkver}:g" \
-			-e "s:gentootcl:${EROOT}usr/${libdir}/tclk${tkver}:g" \
-			-e "s:gentoopython:${EROOT}usr/bin/python:g" \
+		sed -e "s:gentoo_sitedir:${EPREFIX}$(python_get_sitedir -f):g" \
+		    -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
+			-e "s:gentootk:${EPREFIX}/usr/${libdir}/tk${tkver}:g" \
+			-e "s:gentootcl:${EPREFIX}/usr/${libdir}/tclk${tkver}:g" \
+			-e "s:gentoopython:${EPREFIX}/usr/bin/python:g" \
+			-e "s://:/:g" \
 		    "${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
 		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
 	done
