@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2.ebuild,v 1.3 2009/11/06 16:34:05 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2-r1.ebuild,v 1.1 2010/09/21 12:22:48 pacho Exp $
 
 EAPI=2
 
 MY_PN="FlickrNet"
 
-inherit mono
+inherit mono multilib
 
 DESCRIPTION="A .Net Library for accessing the Flickr API - Binary version"
 HOMEPAGE="http://www.codeplex.com/FlickrNet"
@@ -32,4 +32,11 @@ src_compile() {
 
 src_install() {
 	egacinstall Release/${MY_PN}.dll ${MY_PN} || die
+
+	# Install .pc file as required by f-spot
+	dodir /usr/$(get_libdir)/pkgconfig
+	sed -e "s:@VERSION@:${PV}:" \
+		-e "s:@LIBDIR@:/usr/$(get_libdir):" \
+		"${FILESDIR}"/flickrnet.pc.in > "${D}"/usr/$(get_libdir)/pkgconfig/flickrnet.pc \
+		|| die "sed failed"
 }
