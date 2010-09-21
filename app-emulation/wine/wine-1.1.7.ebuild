@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.7.ebuild,v 1.9 2010/07/24 04:42:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.7.ebuild,v 1.10 2010/09/21 21:54:18 vapier Exp $
 
 EAPI="1"
 
@@ -88,6 +88,7 @@ src_unpack() {
 	fi
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PN}-1.3-shell32-fortify.patch #336887
 	epatch "${FILESDIR}"/wine-gentoo-no-ssp.patch #66002
 	epatch_user #282735
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die

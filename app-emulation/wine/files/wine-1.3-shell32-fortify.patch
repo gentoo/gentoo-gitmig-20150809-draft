@@ -1,0 +1,83 @@
+http://bugs.gentoo.org/336887
+
+From fa3feddb19c9333e677ec6ab89e697d1005428a4 Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Tue, 14 Sep 2010 09:32:46 -0400
+Subject: [PATCH] shell32: use flexible arrays to avoid fortify failures
+
+Newer versions of gcc/glibc with fortify checks enabled will complain
+about the handling of the network's szNames field.  Currently it is
+always defined with a length of one which means writing more then a
+single byte will trigger:
+	In function 'strcpy', inlined from '_ILCreateEntireNetwork' at
+	dlls/shell32/pidl.c:1762:15:
+	warning: call to __builtin___strcpy_chk will always overflow destination buffer
+and then at runtime, we hit an abort().
+
+Since this field is really serving as the header to an arbitrary buffer,
+using a flexible array instead should solve the issue.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ dlls/shell32/pidl.h |    8 ++++----
+ include/windef.h    |    7 +++++++
+ 2 files changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/dlls/shell32/pidl.h b/dlls/shell32/pidl.h
+index 3dbfaa6..4d5a191 100644
+--- a/dlls/shell32/pidl.h
++++ b/dlls/shell32/pidl.h
+@@ -117,7 +117,7 @@ typedef struct tagPIDLCPanelStruct
+     DWORD iconIdx;		/*02 negative icon ID */
+     WORD offsDispName;		/*06*/
+     WORD offsComment;		/*08*/
+-    CHAR szName[1];		/*10*/ /* terminated by 0x00, followed by display name and comment string */
++    CHAR FLEXIBLE_ARRAY(szName);		/*10*/ /* terminated by 0x00, followed by display name and comment string */
+ } PIDLCPanelStruct;
+ 
+ typedef struct tagGUIDStruct
+@@ -139,7 +139,7 @@ typedef struct tagFileStruct
+     WORD uFileDate;		/*06*/
+     WORD uFileTime;		/*08*/
+     WORD uFileAttribs;		/*10*/
+-    CHAR szNames[1];		/*12*/
++    CHAR FLEXIBLE_ARRAY(szNames);		/*12*/
+     /* Here are coming two strings. The first is the long name.
+     The second the dos name when needed or just 0x00 */
+ } FileStruct;
+@@ -172,12 +172,12 @@ typedef struct tagPIDLDATA
+ 	  struct tagFileStruct file;
+ 	  struct
+ 	  { WORD dummy;		/*01*/
+-	    CHAR szNames[1];	/*03*/
++	    CHAR FLEXIBLE_ARRAY(szNames);	/*03*/
+ 	  } network;
+ 	  struct
+ 	  { WORD dummy;		/*01*/
+ 	    DWORD dummy1;	/*02*/
+-	    CHAR szName[1];	/*06*/ /* terminated by 0x00 0x00 */
++	    CHAR FLEXIBLE_ARRAY(szName);	/*06*/ /* terminated by 0x00 0x00 */
+ 	  } htmlhelp;
+ 	  struct tagPIDLCPanelStruct cpanel;
+           struct tagValueW valueW;
+diff --git a/include/windef.h b/include/windef.h
+index 8f5ea30..b16919f 100644
+--- a/include/windef.h
++++ b/include/windef.h
+@@ -251,6 +251,13 @@ typedef unsigned int    ULONG,      *PULONG;
+ 
+ #include <winnt.h>
+ 
++#if (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || \
++    (defined(__GNUC__) && __GNUC__ >= 3)
++# define FLEXIBLE_ARRAY(arr) arr[]
++#else
++# define FLEXIBLE_ARRAY(arr) arr[1]
++#endif
++
+ /* Polymorphic types */
+ 
+ typedef UINT_PTR        WPARAM;
+-- 
+1.7.2
+
