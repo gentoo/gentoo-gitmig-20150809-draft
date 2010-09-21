@@ -20,10 +20,6 @@
 			client/server model. The server and X flags are not needed in this
 			case but it is possible to enable them too.
 		</flag>
-		<flag name="oxygen">
-			Install oxygen icons. Highly recommended for KDE-4.1 and KDE-4.2 (or
-			usage without kde). KDE-4.3 will ship the icons by default.
-		</flag>
 		<flag name="phonon">
 			Build client with phonon backend support. This enables sound
 			playback in client.

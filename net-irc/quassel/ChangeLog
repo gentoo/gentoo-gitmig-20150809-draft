@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.110 2010/09/21 10:20:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.111 2010/09/21 10:30:32 scarabeus Exp $
+
+*quassel-0.6.3 (21 Sep 2010)
+
+  21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0.5.2-fix_x11_detection.patch, -quassel-0.5.1.ebuild,
+  -quassel-0.6.2.ebuild, +quassel-0.6.3.ebuild, metadata.xml:
+  Version bump 0.6 series to fix DoS over CTCP. 0.6.3 to stable, tested on
+  amd64 and x86. Drop old & affected.
 
 *quassel-0.7.1 (21 Sep 2010)
 
