@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921-r2.ebuild,v 1.1 2010/09/21 13:52:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921-r2.ebuild,v 1.2 2010/09/21 20:16:56 jlec Exp $
 
 EAPI="3"
 
@@ -104,6 +104,8 @@ src_compile() {
 src_install() {
 	local libdir
 	local tkver
+
+	find . -name "*.pyc" -type d -delete
 
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
