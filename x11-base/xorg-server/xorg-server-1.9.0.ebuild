@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.ebuild,v 1.2 2010/09/14 18:16:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.ebuild,v 1.3 2010/09/21 17:18:42 chithanh Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -80,7 +80,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xproto-7.0.17
 	dmx? ( >=x11-proto/dmxproto-2.2.99.1 )
 	doc? (
-		app-doc/doxygen
+		>=app-doc/doxygen-1.6.1
 		app-text/xmlto
 	)
 	!minimal? (
