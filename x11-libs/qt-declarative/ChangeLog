@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt-declarative
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.4 2010/09/21 14:44:04 tampakrap Exp $
+
+*qt-declarative-4.7.0 (21 Sep 2010)
+
+  21 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +qt-declarative-4.7.0.ebuild, +metadata.xml:
+  Version bump
+

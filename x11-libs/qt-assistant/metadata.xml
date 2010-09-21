@@ -5,9 +5,8 @@
 	<use>
 		<flag name='exceptions'>Add support for exceptions - like catching them
 		inside the event loop (recommended by Nokia)</flag>
-	<flag name='trace'>
-		Build the qttracereplay utility which is required to play drawings
-		recorded with the trace graphicssystem engine
-	</flag>
+		<flag name='trace'>Build the qttracereplay utility which is required to 
+		play drawings recorded with the trace graphicssystem engine</flag>
+		<flag name='glib'>Enable <pkg>dev-libs/glib</pkg> eventloop support</flag>
 	</use>
 </pkgmetadata>

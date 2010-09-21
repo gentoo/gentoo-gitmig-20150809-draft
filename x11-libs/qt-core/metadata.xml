@@ -9,5 +9,7 @@
 		<flag name='optimized-qmake'>Enable qmake optimization</flag>
 		<flag name='qt3support'>Enable the Qt3Support libraries for Qt4. Note that
 			this does not mean you can compile pure Qt3 programs with Qt4.</flag>
+		<flag name="private-headers">Install Qt declarative private headers
+			required by Qt-creator QmlDesigner and QmlInspector plugins"</flag>
 	</use>
 </pkgmetadata>
