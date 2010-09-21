@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/spyview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.8 2010/09/15 19:44:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.9 2010/09/21 19:26:13 hwoarang Exp $
+
+  21 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  spyview-20100810.ebuild:
+  Stable on amd64 wrt bug #338250
 
   15 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/spyview-includes.patch, metadata.xml:
