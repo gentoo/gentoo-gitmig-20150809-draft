@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5968 2010/09/21 15:14:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5969 2010/09/21 15:54:07 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1873,7 +1873,9 @@ media-sound/banshee:podcast - Build with podcasting support
 media-sound/banshee:web - Enable support for plugins that access web-based services such as Amazon and wikipedia (requires net-libs/webkit-gtk)
 media-sound/banshee:wikipedia - Enable the Wikipedia context pane (require net-libs/webkit-gtk)
 media-sound/banshee:youtube - Enable the Youtube plugin
+media-sound/clementine:iphone - Enable support for iPod Touch, iPhone, iPad
 media-sound/clementine:projectm - Build with ProjectM visualization
+media-sound/clementine:wiimote - Enable support for Wii remote
 media-sound/cmus:pidgin - install support script for net-im/pidgin
 media-sound/cmus:wma - add support for Windows Media Audio
 media-sound/cmus:zsh-completion - enable zsh completion support
