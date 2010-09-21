@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.3 2010/09/09 10:58:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.4 2010/09/21 07:47:26 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+gpc +truetype +X"
 # preffer X with enabled xcb, really
 RDEPEND="
 	media-libs/libsdl[X?]
-	X? ( || ( <=x11-libs/libX11-1.3.5[xcb] >x11-libs/libX11-1.3.5 ) )
+	X? ( || ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 ) )
 	truetype? ( media-libs/freetype:2 )
 "
 DEPEND="${RDEPEND}
