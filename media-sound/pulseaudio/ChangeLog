@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.195 2010/08/27 17:57:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.196 2010/09/21 22:36:43 abcd Exp $
+
+*pulseaudio-0.9.21.2-r2 (21 Sep 2010)
+
+  21 Sep 2010; Jonathan Callen <abcd@gentoo.org>
+  pulseaudio-0.9.15-r2.ebuild, pulseaudio-0.9.19.ebuild,
+  pulseaudio-0.9.21.ebuild, pulseaudio-0.9.21.1.ebuild,
+  pulseaudio-0.9.21.2.ebuild, pulseaudio-0.9.21.2-r1.ebuild,
+  +pulseaudio-0.9.21.2-r2.ebuild:
+  Replace all instances of built_with_use with has_version; revbump with
+  prefix fixes, ~x86-linux/~amd64-linux keywords, install udev rules in
+  $EPREFIX/$(get_libdir)/udev/rules.d instead of /lib/udev/rules.d; changes
+  approved by chainsaw on IRC and on bug 321029
 
   27 Aug 2010; Zac Medico <zmedico@gentoo.org> metadata.xml:
   Use valid atoms in flag restrict attributes.
