@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4576 2010/09/20 19:36:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4577 2010/09/21 02:57:22 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Sep 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Remove entries for removed packages (treecleaners)
 
   20 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   base/package.use.mask, package.mask:
