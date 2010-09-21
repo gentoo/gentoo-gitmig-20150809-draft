@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921.ebuild,v 1.1 2010/09/21 13:11:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921-r1.ebuild,v 1.1 2010/09/21 13:37:00 jlec Exp $
 
 EAPI="3"
 
@@ -14,6 +14,7 @@ inherit eutils portability python toolchain-funcs versionator
 PATCHSET="${PV##*_p}"
 MY_PN="${PN}mr"
 MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
+MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
 SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
@@ -29,7 +30,7 @@ RDEPEND="
 	dev-lang/tk[threads]
 	>=dev-python/numpy-1.4
 	>=dev-tcltk/tix-8.4.3
-	=sci-libs/ccpn-data-2.1.5*
+	=sci-libs/ccpn-data-"${MY_MAJOR}"*
 	x11-libs/libXext
 	x11-libs/libX11
 	opengl? ( media-libs/freeglut )"
@@ -108,11 +109,11 @@ src_install() {
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
 	for wrapper in analysis dangle dataShifter depositionFileImporter extendNmr eci formatConverter pipe2azara; do
-		sed -e "s:gentoo_sitedir:${EPREFIX}/$(python_get_sitedir -f):g" \
-		    -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
-			-e "s:gentootk:${EPREFIX}/usr/${libdir}/tk${tkver}:g" \
-			-e "s:gentootcl:${EPREFIX}/usr/${libdir}/tclk${tkver}:g" \
-			-e "s:gentoopython:${EPREFIX}/usr/bin/python:g" \
+		sed -e "s:gentoo_sitedir:${EROOT}$(python_get_sitedir -f):g" \
+		    -e "s:gentoolibdir:${EROOT}usr/${libdir}:g" \
+			-e "s:gentootk:${EROOT}usr/${libdir}/tk${tkver}:g" \
+			-e "s:gentootcl:${EROOT}usr/${libdir}/tclk${tkver}:g" \
+			-e "s:gentoopython:${EROOT}usr/bin/python:g" \
 		    "${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
 		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
 	done
@@ -141,10 +142,13 @@ src_install() {
 			doins -r python || die "main files installation failed"
 		eend
 
-		dosym ../../../..//share/doc/ccpn-data-${PV}/html ${in_path}/doc || die
+		dosym ../../../..//share/doc/ccpn-data-${MY_MAJOR}/html ${in_path}/doc || die
 		for i in ${pydocs}; do
-			dosym /usr/share/doc/ccpn-data-${PV}/html/${i} ${in_path}/${i}
+			dosym /usr/share/doc/ccpn-data-${MY_MAJOR}/html/${i} ${in_path}/${i}
 		done
+
+		dosym /usr/share/ccpn/data ${in_path}/data
+		dosym /usr/share/ccpn/model ${in_path}/model
 
 		einfo "Adjusting permissions"
 
