@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ristretto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.27 2010/09/18 16:25:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.28 2010/09/21 17:04:11 ssuominen Exp $
+
+  21 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ristretto-0.0.91.ebuild:
+  ppc64 stable wrt #334061
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> ristretto-0.0.91.ebuild:
   alpha/ia64/sparc stable wrt #334061
