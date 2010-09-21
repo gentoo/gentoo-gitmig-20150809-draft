@@ -2,7 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
+  <maintainer>
+    <email>nikoli@lavabit.com</email>
+    <name>Nikoli</name>
+  </maintainer>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer> 
   <use>
+    <flag name="iphone">Enable support for iPod Touch, iPhone, iPad</flag>
     <flag name='projectm'>Build with ProjectM visualization</flag>
+    <flag name="wiimote">Enable support for Wii remote</flag>
   </use>
 </pkgmetadata>
