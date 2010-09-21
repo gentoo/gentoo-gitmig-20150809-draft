@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/emutos-0.8.5.ebuild,v 1.2 2010/09/11 19:00:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/emutos-0.8.5.ebuild,v 1.3 2010/09/21 20:38:46 hwoarang Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/emutos/emutos-512k-${PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=""
