@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.17_rc1.ebuild,v 1.1 2010/09/04 13:27:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.17.ebuild,v 1.1 2010/09/21 05:55:20 maekke Exp $
 
 EAPI=2
 
