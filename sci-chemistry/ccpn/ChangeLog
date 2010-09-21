@@ -1,6 +1,17 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.32 2010/09/16 17:23:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.33 2010/09/21 13:11:31 jlec Exp $
+
+*ccpn-2.1.5_p100921 (21 Sep 2010)
+*ccpn-2.1.3.1_p100806 (21 Sep 2010)
+
+  21 Sep 2010; Justin Lecher <jlec@gentoo.org> +files/2.1.5-parallel.patch,
+  -ccpn-2.1.2.1_p100216.ebuild, -ccpn-2.1.3.1_p100519.ebuild,
+  -ccpn-2.1.3.1_p100607.ebuild, -ccpn-2.1.3.1_p100628.ebuild,
+  -ccpn-2.1.3.1_p100713.ebuild, +ccpn-2.1.3.1_p100806.ebuild,
+  +ccpn-2.1.5_p100921.ebuild, +files/depositionFileImporter,
+  +files/extendNmr:
+  Version Bump, splitted sci-libs/ccpn-data out, removed old
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   ccpn-2.1.2.1_p100216.ebuild, ccpn-2.1.3.1_p100519.ebuild,

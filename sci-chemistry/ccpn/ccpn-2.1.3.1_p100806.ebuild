@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.2.1_p100216.ebuild,v 1.3 2010/09/16 17:23:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100806.ebuild,v 1.1 2010/09/21 13:11:31 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,18 +15,20 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
 SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
-	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentooexperimental.org/~jlec/distfiles/ccpn-update-${PATCHSET}.patch.bz2"
+	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${PATCHSET}.patch.bz2"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+opengl"
 
 RDEPEND="
 	dev-lang/tk
 	dev-python/numpy
 	dev-tcltk/tix
+	x11-libs/libXext
+	x11-libs/libX11
 	opengl? ( media-libs/freeglut )"
 DEPEND="${RDEPEND}"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
@@ -39,6 +41,8 @@ src_prepare() {
 		epatch "${WORKDIR}"/ccpn-update-${PATCHSET}.patch
 
 	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
+	epatch "${FILESDIR}"/${MY_PV}-dynamics.patch
+	epatch "${FILESDIR}"/${MY_PV}-impl-dec.patch
 
 	local tk_ver
 	local myconf
@@ -66,11 +70,16 @@ src_prepare() {
 
 	preparation() {
 		sed \
+			-e "s:/usr:${EPREFIX}/usr:g" \
 			-e "s:^\(CC =\).*:\1 $(tc-getCC):g" \
 			-e "s:^\(OPT_FLAG =\).*:\1 ${CFLAGS}:g" \
 			-e "s:^\(LINK_FLAGS =.*\):\1 ${LDFLAGS}:g" \
 			-e "s:^\(IGNORE_GL_FLAG =\).*:\1 ${IGNORE_GL_FLAG}:g" \
 			-e "s:^\(GL_FLAG =\).*:\1 ${GL_FLAG}:g" \
+			-e "s:^\(GL_DIR =\).*:\1 ${GL_DIR}:g" \
+			-e "s:^\(GL_LIB =\).*:\1 ${GL_LIB}:g" \
+			-e "s:^\(GL_LIB_FLAGS =\).*:\1 ${GL_LIB_FLAGS}:g" \
+			-e "s:^\(GL_INCLUDE_FLAGS =\).*:\1 ${GL_INCLUDE_FLAGS}:g" \
 			-e "s:^\(GLUT_NEED_INIT =\).*:\1 ${GLUT_NEED_INIT}:g" \
 			-e "s:^\(GLUT_NOT_IN_GL =\).*:\1:g" \
 			-e "s:^\(X11_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
@@ -78,7 +87,6 @@ src_prepare() {
 			-e "s:^\(TK_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 			-e "s:^\(PYTHON_INCLUDE_FLAGS =\).*:\1 -I\$(PYTHON_DIR)/include/python$(python_get_version):g" \
 			-e "s:^\(PYTHON_LIB =\).*:\1 -lpython$(python_get_version):g" \
-			-e "s:^\(GL_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 			c/environment_default.txt > c/environment.txt
 	}
 	python_execute_function -s preparation

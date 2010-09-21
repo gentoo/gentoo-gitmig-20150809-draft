@@ -1,11 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100713.ebuild,v 1.2 2010/09/16 17:23:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100921.ebuild,v 1.1 2010/09/21 13:11:31 jlec Exp $
 
 EAPI="3"
+
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_USE_WITH="ssl tk"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit eutils portability python toolchain-funcs versionator
 
@@ -24,14 +26,14 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+opengl"
 
 RDEPEND="
-	dev-lang/tk
-	dev-python/numpy
-	dev-tcltk/tix
+	dev-lang/tk[threads]
+	>=dev-python/numpy-1.4
+	>=dev-tcltk/tix-8.4.3
+	=sci-libs/ccpn-data-2.1.5*
 	x11-libs/libXext
 	x11-libs/libX11
 	opengl? ( media-libs/freeglut )"
 DEPEND="${RDEPEND}"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 RESTRICT="mirror"
 S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2 ${PV})
@@ -41,8 +43,6 @@ src_prepare() {
 		epatch "${WORKDIR}"/ccpn-update-${PATCHSET}.patch
 
 	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
-	epatch "${FILESDIR}"/${MY_PV}-dynamics.patch
-	epatch "${FILESDIR}"/${MY_PV}-impl-dec.patch
 
 	local tk_ver
 	local myconf
@@ -66,6 +66,7 @@ src_prepare() {
 	GLUT_NOT_IN_GL=""
 	GLUT_FLAG="\$(GLUT_NEED_INIT) \$(GLUT_NOT_IN_GL)"
 
+	rm -rf data model doc license || die
 	python_copy_sources
 
 	preparation() {
@@ -106,7 +107,7 @@ src_install() {
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	for wrapper in analysis dangle dataShifter eci formatConverter pipe2azara; do
+	for wrapper in analysis dangle dataShifter depositionFileImporter extendNmr eci formatConverter pipe2azara; do
 		sed -e "s:gentoo_sitedir:${EPREFIX}/$(python_get_sitedir -f):g" \
 		    -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
 			-e "s:gentootk:${EPREFIX}/usr/${libdir}/tk${tkver}:g" \
@@ -119,13 +120,17 @@ src_install() {
 	installation() {
 		local in_path
 		local files
+		local pydocs
+
+		pydocs="$(find python -name doc -type d)"
+		rm -rf ${pydocs} || die
 
 		in_path=$(python_get_sitedir)/${PN}
 
 		for i in python/memops/format/compatibility/{Converters,part2/Converters2}.py; do
 			sed \
 				-e 's:#from __future__:from __future__:g' \
-				-i ${i}
+				-i ${i} || die
 		done
 
 		insinto ${in_path}
@@ -133,40 +138,50 @@ src_install() {
 		dodir ${in_path}/c
 
 		ebegin "Installing main files"
-		doins -r data model python || die "main files installation failed"
+			doins -r python || die "main files installation failed"
 		eend
 
-		dohtml -r doc/* || die
-		dosym ../../../../share/doc/${PF}/html ${in_path}/doc || die
+		dosym ../../../..//share/doc/ccpn-data-${PV}/html ${in_path}/doc || die
+		for i in ${pydocs}; do
+			dosym /usr/share/doc/ccpn-data-${PV}/html/${i} ${in_path}/${i}
+		done
 
 		einfo "Adjusting permissions"
 
-		files="ccpnmr/c/ContourFile.so
-			ccpnmr/c/ContourLevels.so
-			ccpnmr/c/ContourStyle.so
-			ccpnmr/c/PeakList.so
-			ccpnmr/c/SliceFile.so
-			ccpnmr/c/WinPeakList.so
-			ccpnmr/c/AtomCoordList.so
-			ccpnmr/c/AtomCoord.so
-			ccpnmr/c/Bacus.so
-			ccpnmr/c/CloudUtil.so
-			ccpnmr/c/DistConstraintList.so
-			ccpnmr/c/DistConstraint.so
-			ccpnmr/c/DistForce.so
-			ccpnmr/c/Dynamics.so
-			ccpnmr/c/Midge.so
-			ccp/c/StructAtom.so
-			ccp/c/StructBond.so
-			ccp/c/StructStructure.so
+		files="
 			ccp/c/StructUtil.so
-			memops/c/BlockFile.so
-			memops/c/FitMethod.so
-			memops/c/GlHandler.so
-			memops/c/MemCache.so
-			memops/c/PdfHandler.so
-			memops/c/PsHandler.so
+			ccp/c/StructStructure.so
+			ccp/c/StructBond.so
+			ccp/c/StructAtom.so
+			ccpnmr/c/DyAtomCoord.so
+			ccpnmr/c/DyDistConstraint.so
+			ccpnmr/c/DyDistForce.so
+			ccpnmr/c/AtomCoordList.so
+			ccpnmr/c/DyAtomCoordList.so
+			ccpnmr/c/ContourStyle.so
+			ccpnmr/c/ContourLevels.so
+			ccpnmr/c/SliceFile.so
+			ccpnmr/c/PeakCluster.so
+			ccpnmr/c/Dynamics.so
+			ccpnmr/c/Bacus.so
+			ccpnmr/c/Midge.so
+			ccpnmr/c/DyDistConstraintList.so
+			ccpnmr/c/WinPeakList.so
+			ccpnmr/c/PeakList.so
+			ccpnmr/c/DistConstraint.so
+			ccpnmr/c/CloudUtil.so
+			ccpnmr/c/DistForce.so
+			ccpnmr/c/DistConstraintList.so
+			ccpnmr/c/AtomCoord.so
+			ccpnmr/c/DyDynamics.so
+			ccpnmr/c/ContourFile.so
 			memops/c/ShapeFile.so
+			memops/c/BlockFile.so
+			memops/c/PdfHandler.so
+			memops/c/MemCache.so
+			memops/c/FitMethod.so
+			memops/c/PsHandler.so
+			memops/c/GlHandler.so
 			memops/c/StoreFile.so
 			memops/c/StoreHandler.so
 			memops/c/TkHandler.so"
