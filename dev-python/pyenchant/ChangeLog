@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.27 2010/07/18 13:22:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.28 2010/09/21 21:53:00 arfrever Exp $
+
+*pyenchant-1.6.3 (21 Sep 2010)
+
+  21 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyenchant-1.6.3.ebuild:
+  Version bump.
 
   18 Jul 2010; <nixnut@gentoo.org> pyenchant-1.6.2.ebuild:
   ppc stable #323093
