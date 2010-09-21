@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/pan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.76 2009/05/15 22:11:59 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.77 2010/09/21 20:29:22 eva Exp $
+
+  21 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> pan-9999.ebuild:
+  Update live ebuild to gnome git repository, bug #290914. Make it use base
+  eclass and update dependencies.
 
   15 May 2009; Ryan Hill <dirtyepic@gentoo.org> pan-0.133.ebuild,
   +files/pan-0.133-gcc44.patch:
