@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.54 2010/09/19 09:20:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.55 2010/09/21 13:22:58 pva Exp $
+
+*sarg-2.3.1-r1 (21 Sep 2010)
+
+  21 Sep 2010; Peter Volkov <pva@gentoo.org> +sarg-2.3.1-r1.ebuild:
+  Fix sarg.conf to point on correct location of exclude_codes, bug 318097,
+  thank ungift-ed for report.
 
 *sarg-2.3.1 (19 Sep 2010)
 
