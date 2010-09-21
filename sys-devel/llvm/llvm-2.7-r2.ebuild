@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7-r1.ebuild,v 1.2 2010/09/20 09:07:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7-r2.ebuild,v 1.1 2010/09/21 15:57:12 voyageur Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -77,7 +77,8 @@ src_prepare() {
 		-i tools/llvm-config/llvm-config.in.in || die "llvm-config sed failed"
 
 	einfo "Fixing rpath"
-	sed -e 's/\$(RPATH) -Wl,\$(\(ToolDir\|LibDir\))//g' -i Makefile.rules || die "sed failed"
+	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
+		-i Makefile.rules || die "rpath sed failed"
 
 	epatch "${FILESDIR}"/${PN}-2.7-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
