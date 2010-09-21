@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/files/389-ds.initd,v 1.1 2010/07/07 14:31:36 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/files/389-ds.initd,v 1.2 2010/09/21 17:59:53 lxnay Exp $
 
 DIRSRV_EXEC="/usr/sbin/ns-slapd"
 PID_DIRECTORY="/var/run/dirsrv"
@@ -28,6 +28,10 @@ start() {
 
 	for instance in ${DS_INSTANCES}; do
 		instance=$(basename ${instance})
+		# skip .removed instances, bug #338133
+		if [ "${instance%%.removed}" != "${instance}" ]; then
+			continue
+		fi
 		ebegin "Starting 389 Directory Server: instance ${instance}"
 		start-stop-daemon --start --quiet -m \
 			--pidfile ${PID_DIRECTORY}/${instance}.startpid \
