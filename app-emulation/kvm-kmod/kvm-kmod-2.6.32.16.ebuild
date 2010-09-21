@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.16.ebuild,v 1.2 2010/08/25 19:03:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.16.ebuild,v 1.3 2010/09/21 14:49:05 cardoe Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	linux-chkconfig_exists || die "Your kernel sources are unconfigured"
+	linux_config_exists || die "Your kernel sources are unconfigured"
 
 	linux-info_pkg_setup
 	if ! linux_chkconfig_present KVM; then

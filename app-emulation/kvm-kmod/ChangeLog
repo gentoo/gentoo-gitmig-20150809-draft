@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.15 2010/08/25 19:04:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.16 2010/09/21 14:49:05 cardoe Exp $
+
+  21 Sep 2010; Doug Goldstein <cardoe@gentoo.org> kvm-kmod-2.6.32.16.ebuild,
+  kvm-kmod-2.6.32.17.ebuild, kvm-kmod-2.6.34.1.ebuild,
+  kvm-kmod-2.6.35.ebuild:
+  Yet another eclass change... s/linux-chkconfig_exists/linux_config_exists/
 
 *kvm-kmod-2.6.32.17 (25 Aug 2010)
 
