@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.20 2010/09/06 21:31:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.21 2010/09/22 15:30:36 ranger Exp $
+
+  22 Sep 2010; Brent Baude <ranger@gentoo.org> mysql-5.1.ebuild:
+  Marking mysql-5.1 ppc for bug 321791
 
   06 Sep 2010; Tobias Klausmann <klausman@gentoo.org> mysql-5.1.ebuild:
   Stable on alpha, bug #321791
