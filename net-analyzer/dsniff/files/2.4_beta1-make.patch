@@ -9,7 +9,7 @@
  LDFLAGS	= @LDFLAGS@
  
  PCAPINC = @PCAPINC@
-@@ -75,7 +75,11 @@
+@@ -75,12 +75,20 @@
  .c.o:
  	$(CC) $(CFLAGS) $(INCS) -c $(srcdir)/$*.c
  
@@ -20,8 +20,19 @@
 +
 +$(OBJS): $(GEN)
  
++mount.h: mount.x
++	rpcgen -h mount.x -o mount.h
++
  mount.c: mount.x
- 	rpcgen -h mount.x -o mount.h
+-	rpcgen -h mount.x -o mount.h
+ 	rpcgen -c mount.x -o mount.c
+ 
++nfs_prot.h: nfs_prot.x	
++	rpcgen -h nfs_prot.x -o nfs_prot.h
++
+ nfs_prot.c: nfs_prot.x
+-	rpcgen -h nfs_prot.x -o nfs_prot.h
+ 	rpcgen -c nfs_prot.x -o nfs_prot.c
 @@ -93,7 +97,7 @@
  	$(RANLIB) $@
  
