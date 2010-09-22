@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.15.7.ebuild,v 1.2 2010/02/28 00:53:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.15.7.ebuild,v 1.3 2010/09/22 18:36:43 ssuominen Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -14,10 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4[qt3support]
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-qt3support:4
 	virtual/libusb:0
 	sys-libs/ncurses
 	sys-libs/readline"
+DEPEND="${RDEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
