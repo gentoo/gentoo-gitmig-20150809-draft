@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.546 2010/09/07 18:17:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.547 2010/09/22 15:28:55 ranger Exp $
+
+  22 Sep 2010; Brent Baude <ranger@gentoo.org> mysql-5.1.50-r1.ebuild:
+  Marking mysql-5.1.50-r1 ppc for bug 321791
 
   07 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.50-r1.ebuild:
   Hello again bug #332565.
