@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.67 2010/06/30 20:18:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.68 2010/09/22 12:52:55 lack Exp $
+
+  22 Sep 2010; Jim Ramsay <lack@gentoo.org> gmpc-0.20.0.ebuild:
+  Now that vala is slotted, we need :0 since gmpc assumes "valac" is present
+  and does not look for "valac-10"
 
   30 Jun 2010; Christoph Mende <angelos@gentoo.org> gmpc-0.20.0.ebuild:
   Bumped vala dep to 0.7.10
