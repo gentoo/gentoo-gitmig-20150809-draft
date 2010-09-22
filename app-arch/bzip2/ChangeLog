@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.79 2010/09/21 13:30:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.80 2010/09/22 13:06:48 scarabeus Exp $
+
+  22 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> bzip2-1.0.6.ebuild:
+  Stable on x86 per bug #338215. Thanks to Thomas Kahle for testing.
 
   21 Sep 2010; Jeroen Roovers <jer@gentoo.org> bzip2-1.0.6.ebuild:
   Stable for HPPA (bug #338215).
