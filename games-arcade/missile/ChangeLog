@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/missile
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.11 2006/12/06 17:04:44 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/ChangeLog,v 1.12 2010/09/22 07:19:15 tupone Exp $
+
+  22 Sep 2010; Tupone Alfredo <tupone@gentoo.org> missile-1.0.1.ebuild,
+  +files/missile-1.0.1-ldflags.patch:
+  Respect LDFLAGS. Bug #337913 by flameeyes@gentoo.org
 
   06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> missile-1.0.1.ebuild:
   Removed sed-4 from *DEPEND.
