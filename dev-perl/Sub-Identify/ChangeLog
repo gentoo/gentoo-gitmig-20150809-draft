@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Identify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Identify/ChangeLog,v 1.4 2010/06/27 16:42:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Identify/ChangeLog,v 1.5 2010/09/22 18:11:16 grobian Exp $
+
+  22 Sep 2010; Fabian Groffen <grobian@gentoo.org> Sub-Identify-0.04.ebuild:
+  Marked ~ppc-macos ~x86-solaris, bug #337974
 
   27 Jun 2010; <nixnut@gentoo.org> Sub-Identify-0.04.ebuild:
   ppc stable #323529

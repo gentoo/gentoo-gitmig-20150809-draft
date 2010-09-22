@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Accessor-Grouped
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/ChangeLog,v 1.11 2010/09/11 17:37:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/ChangeLog,v 1.12 2010/09/22 18:15:48 grobian Exp $
+
+  22 Sep 2010; Fabian Groffen <grobian@gentoo.org>
+  Class-Accessor-Grouped-0.09006.ebuild:
+  Marked ~ppc-macos ~x86-solaris, bug #337974
 
 *Class-Accessor-Grouped-0.09006 (11 Sep 2010)
 
