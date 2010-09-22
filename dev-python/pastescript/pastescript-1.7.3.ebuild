@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.3.ebuild,v 1.7 2010/06/28 18:35:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.3.ebuild,v 1.8 2010/09/22 20:49:36 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A pluggable command-line frontend, including commands to setup package file layouts"
 HOMEPAGE="http://pythonpaste.org/script/ http://pypi.python.org/pypi/PasteScript"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -51,7 +51,7 @@ src_install() {
 	if use doc; then
 		pushd build/sphinx/html > /dev/null
 		docinto html
-		cp -R [a-z]*  _static "${ED}usr/share/doc/${PF}/html" || die "Installation of documentation failed"
+		cp -R [a-z]* _static "${ED}usr/share/doc/${PF}/html" || die "Installation of documentation failed"
 		popd > /dev/null
 	fi
 }
