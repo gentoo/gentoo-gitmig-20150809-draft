@@ -1,0 +1,279 @@
+http://bugs.ganymede.ch/index.php?do=details&task_id=155
+
+--- configure.in
++++ configure.in
+@@ -22,7 +22,8 @@
+ dnl Check for required packages
+ XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.4.0])
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.4.0])
+-XDT_CHECK_PACKAGE([LIBTHUNAR_VFS], [thunar-vfs-1], [0.9.0])
++XDT_CHECK_PACKAGE([LIBGIO], [gio-2.0], [2.18.0])
++XDT_CHECK_PACKAGE([LIBGIOUNIX], [gio-unix-2.0], [2.16.0])
+ XDT_CHECK_PACKAGE([LIBGTK], [gtk+-2.0], [2.12.0])
+ XDT_CHECK_PACKAGE([LIBGTHREADS], [gthread-2.0], [2.16.0])
+ 
+--- panel-plugin/main.c
++++ panel-plugin/main.c
+@@ -28,7 +28,8 @@
+ #include <gdk/gdkkeysyms.h>
+ #include <gdk/gdk.h>
+ 
+-#include <thunar-vfs/thunar-vfs.h>
++#include <gio/gio.h>
++#include <gio/gdesktopappinfo.h>
+ 
+ #include <libxfcegui4/libxfcegui4.h>
+ 
+@@ -252,22 +253,33 @@
+ 
+ static void executeFile(char* path)
+ {
+-    ThunarVfsPath *thunarPath;
+-    ThunarVfsInfo *info;
++    GFile           *file;
++    GFileInfo       *info;
++    GAppInfo        *app;
++    GDesktopAppInfo *desktop_app;
++    GList           *fileList = NULL;
+ 
+-    thunarPath = thunar_vfs_path_new (path,NULL);
+-    if (thunarPath == NULL)
++    file = g_file_new_for_path (path);
++    if (file == NULL)
+         return;
+ 
+-    info = thunar_vfs_info_new_for_path(thunarPath,NULL);
++    info = g_file_query_info (file, G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE, G_FILE_QUERY_INFO_NONE, NULL, NULL);
+     if (info == NULL)
++    {
++        g_object_unref (file);
+         return;
++    }
+ 
+     if (strstr(path,".desktop") != 0)
+     {
+-        thunar_vfs_info_execute(info, NULL, NULL,NULL,NULL);
++        desktop_app = g_desktop_app_info_new_from_filename (path);
++        if (desktop_app != NULL)
++        {
++            g_app_info_launch (G_APP_INFO (desktop_app), NULL, NULL, NULL);
++            g_object_unref (desktop_app);
++        }
+     }
+-    else if (info->type == THUNAR_VFS_FILE_TYPE_DIRECTORY)
++    else if (g_file_query_file_type (file, G_FILE_QUERY_INFO_NONE, NULL) == G_FILE_TYPE_DIRECTORY)
+     {
+         char command[strlen(path) + 10];
+         strcpy(command, "thunar \"");
+@@ -277,23 +289,17 @@
+     }
+     else
+     {
+-        GList *pathList=NULL;
+-        pathList = g_list_append(pathList,thunarPath);
++        fileList = g_list_append (fileList, file);
+ 
+-        ThunarVfsMimeDatabase *db = thunar_vfs_mime_database_get_default();
+-        ThunarVfsMimeInfo *info = thunar_vfs_mime_database_get_info_for_file(db, path,NULL);
+-        ThunarVfsMimeApplication *app = thunar_vfs_mime_database_get_default_application(db,info);
++        app = g_app_info_get_default_for_type (g_file_info_get_content_type (info), FALSE);
+ 
+-        thunar_vfs_mime_handler_exec (THUNAR_VFS_MIME_HANDLER(app),NULL, pathList, NULL);
++        g_app_info_launch (app, fileList, NULL, NULL);
+ 
+-        g_object_unref(db);
+-        thunar_vfs_mime_info_unref(info);
+         g_object_unref(app);
+-        g_list_free(pathList);
++        g_list_free(fileList);
+     }
+-    thunar_vfs_info_unref(info);
+-    thunar_vfs_path_unref(thunarPath);
+-
++    g_object_unref (info);
++    g_object_unref (file);
+ }
+ 
+ void* show_all_search_results(void* arg)
+@@ -559,7 +565,6 @@
+ static void clean_up_cb(XfcePanelPlugin *plugin, gpointer userdata)
+ {
+     save_data_cb(plugin, userdata);
+-    thunar_vfs_shutdown();
+     linelight_free(linelight);
+     system("rm -r /tmp/xfce4-linelight/");
+     gdk_threads_leave ();
+@@ -746,8 +751,7 @@
+ int main (int argc, char *argv[])
+ {
+     g_type_init ();
+-    thunar_vfs_init ();
+-    //g_thread_init (NULL);
++    g_thread_init (NULL);
+     gdk_threads_init();
+     gdk_threads_enter();
+ 
+@@ -772,7 +776,6 @@
+ 
+ 
+     gtk_main ();
+-    thunar_vfs_shutdown();
+     gdk_threads_leave ();
+     return 0;
+ }
+@@ -781,8 +784,7 @@
+ static void plugin_create(XfcePanelPlugin *plugin)
+ {
+     g_type_init ();
+-    thunar_vfs_init ();
+-    //g_thread_init (NULL);
++    g_thread_init (NULL);
+     gdk_threads_init();
+     gdk_threads_enter();
+ 
+--- panel-plugin/linelight.c
++++ panel-plugin/linelight.c
+@@ -24,7 +24,7 @@
+ #include <libxfce4panel/xfce-panel-plugin.h>
+ #include <libxfce4panel/xfce-panel-convenience.h>
+ 
+-#include <thunar-vfs/thunar-vfs.h>
++#include <gio/gio.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>
+@@ -215,10 +215,10 @@
+     gtk_list_store_insert(data->list, &iter, data->listPointer[sec]);
+ 
+     GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
+-    ThunarVfsPath *thunarPath = thunar_vfs_path_new (entry,NULL);
++    GFile *file = g_file_new_for_path (entry);
+ 
+     //icon
+-    if (thunarPath != NULL && sec == BIN_SECTION )
++    if (g_file_query_exists (file, NULL) && sec == BIN_SECTION )
+     {
+         XfceDesktopEntry* app = xfce_desktop_entry_new(entry,categories,3);
+ 
+@@ -228,25 +228,28 @@
+             g_object_unref(app);
+             free(icon);
+         }
+-        thunar_vfs_path_unref(thunarPath);
+     }
+-    else if (thunarPath != NULL)
++    else if (file != NULL)
+     {
+-        ThunarVfsMimeDatabase* db = thunar_vfs_mime_database_get_default();
+-        ThunarVfsMimeInfo* info = thunar_vfs_mime_database_get_info_for_file(db, entry,NULL);
++        GFileInfo *info = g_file_query_info (file, G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE, G_FILE_QUERY_INFO_NONE, NULL, NULL);
+         if (info != NULL)
+         {
+-            const char *mime_icon = thunar_vfs_mime_info_lookup_icon_name(info, icon_theme);
++            GIcon *mime_icon = g_content_type_get_icon (g_file_info_get_content_type (info));
+             if (mime_icon != NULL)
+             {
+-                pixbuf = gtk_icon_theme_load_icon(icon_theme, mime_icon, ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN,NULL);
+-                gtk_list_store_set(data->list, &iter, ICON_COL, pixbuf, -1);
++                GtkIconInfo *icon_info = gtk_icon_theme_lookup_by_gicon (icon_theme, mime_icon, ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN);
++                if (icon_info != NULL)
++                {
++                    pixbuf = gtk_icon_info_load_icon (icon_info, NULL);
++                    gtk_icon_info_free (icon_info);
++                    gtk_list_store_set(data->list, &iter, ICON_COL, pixbuf, -1);
++                }
++                g_object_unref (mime_icon);
+             }
+-            thunar_vfs_mime_info_unref(info);
++            g_object_unref (info);
+         }
+-        g_object_unref(db);
+-        thunar_vfs_path_unref(thunarPath);
+     }
++    g_object_unref (file);
+ 
+     //text
+     gtk_list_store_set(data->list, &iter, TEXT_COL, entry, -1);
+@@ -275,24 +278,26 @@
+ 
+     remove_newline(result);
+ 
+-    ThunarVfsPath *thunarPath = thunar_vfs_path_new (result,NULL);
+-    ThunarVfsInfo *info = thunar_vfs_info_new_for_path(thunarPath,NULL);
+-    thunar_vfs_path_unref(thunarPath);
++    GFile *file = g_file_new_for_path (result);
++    GFileInfo *info = g_file_query_info (file, "standard::*", G_FILE_QUERY_INFO_NONE, NULL, NULL);
++    g_object_unref(file);
+ 
+     if (info == NULL)
+     {
+         return -1;
+     }
+ 
+-    if ((info->type != THUNAR_VFS_FILE_TYPE_REGULAR && info->type != THUNAR_VFS_FILE_TYPE_DIRECTORY) || info->flags & THUNAR_VFS_FILE_FLAGS_HIDDEN)
++    GFileType type = g_file_info_get_file_type (info);
++
++    if ((type != G_FILE_TYPE_REGULAR && type != G_FILE_TYPE_DIRECTORY) || g_file_info_get_is_hidden (info))
+     {
+-        thunar_vfs_info_unref(info);
++        g_object_unref (info);
+         return -1;
+     }
+ 
+-    if (info->type == THUNAR_VFS_FILE_TYPE_DIRECTORY)
++    if (type == G_FILE_TYPE_DIRECTORY)
+     {
+-        thunar_vfs_info_unref(info);
++        g_object_unref (info);
+         return FOLDER_SECTION;
+     }
+ 
+@@ -302,7 +307,7 @@
+     path_lower = g_utf8_strdown(result,-1);
+     for (j = 0; j< SECTION_COUNT; j++)
+     {
+-        for (i = 0; i < data->listSectionPaths[j]->len  && info->type != THUNAR_VFS_FILE_TYPE_DIRECTORY; i++)
++        for (i = 0; i < data->listSectionPaths[j]->len  && type != G_FILE_TYPE_DIRECTORY; i++)
+         {
+             ending = g_ptr_array_index(data->listSectionPaths[j], i);
+             path_ending = strrchr(path_lower,'.');
+@@ -310,7 +315,7 @@
+             if ( (path_ending != NULL && strcmp(path_ending, ending) == 0) ||
+                  (path_begining != NULL && j == FILES_SECTION && strcmp(path_begining, path_lower) == 0))
+             {
+-                thunar_vfs_info_unref(info);
++                g_object_unref (info);
+                 free(path_lower);
+                 return j;
+             }
+@@ -318,7 +323,7 @@
+     }
+ 
+     free(path_lower);
+-    thunar_vfs_info_unref(info);
++    g_object_unref (info);
+ 
+     return -1;
+ }
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -13,7 +13,8 @@
+ 		-DPACKAGE_LOCALE_DIR=\"$(localedir)\"			\
+ 		$(LIBXFCEGUI4_CFLAGS)					\
+ 		$(LIBXFCE4PANEL_CFLAGS)					\
+-		$(LIBTHUNAR_VFS_CFLAGS)					\
++		$(LIBGIO_CFLAGS)					\
++		$(LIBGIOUNIX_CFLAGS)				\
+ 		$(LIBGTK_CFLAGS)					\
+ 		$(LIBGTHREADS_CFLAGS)
+ 
+@@ -21,7 +22,8 @@
+ xfce4_linelight_plugin_LDFLAGS =					\
+ 		$(LIBXFCEGUI4_LIBS)					\
+ 		$(LIBXFCE4PANEL_LIBS)					\
+-		$(LIBTHUNAR_VFS_LIBS)					\
++		$(LIBGIO_LIBS)					\
++		$(LIBGIOUNIX_LIBS)				\
+ 		$(LIBGTK_LIBS)						\
+ 		$(LIBGTHREADS_LIBS)
+ 
