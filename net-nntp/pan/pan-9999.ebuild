@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-9999.ebuild,v 1.3 2010/09/21 20:29:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-9999.ebuild,v 1.4 2010/09/22 15:25:31 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -42,4 +42,3 @@ src_prepare() {
 src_configure() {
 	econf $(use_with spell gtkspell)
 }
-
