@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.184 2010/09/20 16:39:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.185 2010/09/22 08:33:24 phajdan.jr Exp $
+
+  22 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.472.62.ebuild, chromium-6.0.472.62-r1.ebuild,
+  chromium-7.0.517.5.ebuild, chromium-7.0.517.8.ebuild,
+  chromium-9999.ebuild:
+  Remove the option to enable SSE2, it's not really suitable for
+  distributions. See bug #336871 by Alex Barker <alex@1stleg.com>.
 
 *chromium-6.0.472.62-r1 (20 Sep 2010)
 *chromium-6.0.472.62 (20 Sep 2010)

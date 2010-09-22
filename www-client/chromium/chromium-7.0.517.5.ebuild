@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.517.5.ebuild,v 1.1 2010/09/14 14:08:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.517.5.ebuild,v 1.2 2010/09/22 08:33:24 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome gnome-keyring sse2"
+IUSE="cups gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/icu-4.4.1
@@ -91,12 +91,9 @@ src_prepare() {
 src_configure() {
 	local myconf=""
 
-	# Make it possible to build chromium on non-sse2 systems.
-	if use sse2; then
-		myconf+=" -Ddisable_sse2=0"
-	else
-		myconf+=" -Ddisable_sse2=1"
-	fi
+	# Never tell the build system to "enable" SSE2, it has a few unexpected
+	# additions, bug #336871.
+	myconf+=" -Ddisable_sse2=1"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg (http://crbug.com/50678).
