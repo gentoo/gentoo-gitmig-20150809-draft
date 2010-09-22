@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xbomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.21 2010/01/23 15:40:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/ChangeLog,v 1.22 2010/09/22 12:21:49 tupone Exp $
+
+  22 Sep 2010; Alfredo Tupone <tupone@gentoo.org> xbomb-2.2a.ebuild,
+  +files/xbomb-2.2a-ldflags.patch:
+  Respect LDFLAGS. Bug #337872 by flameeyes@gentoo.org
 
   23 Jan 2010; Brent Baude <ranger@gentoo.org> xbomb-2.2a.ebuild:
   stable ppc, bug 299037

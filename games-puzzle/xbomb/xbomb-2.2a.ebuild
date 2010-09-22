@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.2a.ebuild,v 1.5 2010/01/23 15:40:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.2a.ebuild,v 1.6 2010/09/22 12:21:49 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,8 @@ IUSE=""
 DEPEND="x11-libs/libXaw"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-DESTDIR.patch
+	epatch "${FILESDIR}"/${P}-DESTDIR.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e '/strip/d' \
 		-e "/^CFLAGS/ { s:=.*:=${CFLAGS}: }" \
