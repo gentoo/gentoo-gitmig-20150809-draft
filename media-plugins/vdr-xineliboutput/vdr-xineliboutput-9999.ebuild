@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.3 2009/12/08 20:05:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.4 2010/09/22 13:12:24 hd_brummy Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -53,6 +53,8 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
