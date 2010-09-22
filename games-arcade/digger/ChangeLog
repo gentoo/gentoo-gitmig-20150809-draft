@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/digger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/ChangeLog,v 1.10 2009/11/29 21:35:32 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/ChangeLog,v 1.11 2010/09/22 07:10:10 tupone Exp $
+
+  22 Sep 2010; Tupone Alfredo <tupone@gentoo.org> digger-20020314.ebuild,
+  +files/digger-20020314-ldflags.patch:
+  Respect LDFLAGS. Bug #337914 by flameeyes@gentoo.org
 
   29 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   digger-20020314.ebuild:

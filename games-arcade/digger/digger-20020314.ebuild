@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.12 2009/11/29 21:35:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20020314.ebuild,v 1.13 2010/09/22 07:10:10 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]"
+
+PATCHES=( "${FILESDIR}"/${P}-ldflags.patch )
 
 src_compile() {
 	emake -f Makefile.sdl || die
