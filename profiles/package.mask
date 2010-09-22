@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11969 2010/09/22 15:42:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11970 2010/09/22 17:59:34 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (22 Sep 2010)
+# Package is masked because of missing exo-0.5 and garcon support.
+# exo-0.3 and libxfce4menu is deprecated, no reason to provide vala bindings to them anymore
+# Also missing vala-0.10.0 support, pulls in old slot of vala
+# Unless 4.7.0 is out in 60 days, the package will be removed
+xfce-extra/xfce4-vala
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (22 Sep 2010)
 # Dead upstream, doesn't work anymore
