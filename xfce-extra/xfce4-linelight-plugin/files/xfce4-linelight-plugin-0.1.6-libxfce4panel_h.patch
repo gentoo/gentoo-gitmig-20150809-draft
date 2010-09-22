@@ -1,3 +1,5 @@
+http://bugs.ganymede.ch/index.php?do=details&task_id=170&project=4
+
 --- panel-plugin/linelight.c
 +++ panel-plugin/linelight.c
 @@ -21,8 +21,7 @@
