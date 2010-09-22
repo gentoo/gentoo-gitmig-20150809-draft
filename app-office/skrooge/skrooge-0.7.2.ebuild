@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.7.2.ebuild,v 1.1 2010/07/30 15:28:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.7.2.ebuild,v 1.2 2010/09/22 10:07:51 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca ca@valencia cs da de en_GB eo es et fr ga gl hu it ko lt ms nb
@@ -14,7 +14,7 @@ SRC_URI="http://skrooge.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +handbook test"
 
 DEPEND=">=dev-libs/libofx-0.9.1
