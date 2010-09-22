@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.86 2010/09/22 14:40:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.87 2010/09/22 16:31:48 jer Exp $
+
+  22 Sep 2010; Jeroen Roovers <jer@gentoo.org> libXi-1.3.1.ebuild:
+  Stable for HPPA (bug #331277).
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> libXi-1.3.1.ebuild:
   Stable on amd64 wrt bug #331277
