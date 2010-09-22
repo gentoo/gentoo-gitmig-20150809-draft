@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1.ebuild,v 1.1 2010/09/22 20:32:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1.ebuild,v 1.2 2010/09/22 20:44:58 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -62,7 +62,7 @@ src_install() {
 	if use doc; then
 		pushd build/sphinx/html > /dev/null
 		docinto html
-		cp -R [a-z]*  _static "${ED}usr/share/doc/${PF}/html" || die "Installation of documentation failed"
+		cp -R [a-z]* _static "${ED}usr/share/doc/${PF}/html" || die "Installation of documentation failed"
 		popd > /dev/null
 	fi
 }
