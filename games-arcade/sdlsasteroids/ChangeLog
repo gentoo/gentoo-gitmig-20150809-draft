@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdlsasteroids
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.8 2008/04/30 22:14:04 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.9 2010/09/22 06:49:33 tupone Exp $
+
+  22 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
+  sdlsasteroids-3.0.1.ebuild, +files/sdlsasteroids-3.0.1-ldflags.patch:
+  Respect LDFLAGS. Bug #337920 by flameeyes@gentoo.org
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/sdlsasteroids-3.0.1-gcc43.patch, sdlsasteroids-3.0.1.ebuild:

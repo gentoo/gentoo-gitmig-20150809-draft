@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.4 2008/04/30 22:14:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.5 2010/09/22 06:49:33 tupone Exp $
+EAPI="2"
 
 inherit eutils games
 
@@ -21,10 +22,9 @@ DEPEND="virtual/opengl
 
 S=${WORKDIR}/SDLSasteroids-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 		#-e '34 d' \
 	sed -i \
 		-e 's/make /$(MAKE) /' \
