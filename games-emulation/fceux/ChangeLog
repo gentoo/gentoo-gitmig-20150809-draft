@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fceux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.7 2010/09/14 17:19:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.8 2010/09/22 18:19:26 hwoarang Exp $
+
+  22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> fceux-2.1.4a.ebuild:
+  Stable on amd64 wrt bug #335836
 
   14 Sep 2010; Christian Faulhammer <fauli@gentoo.org> fceux-2.1.4a.ebuild:
   stable x86, bug 335836
