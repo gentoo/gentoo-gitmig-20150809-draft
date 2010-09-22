@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xdotool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.15 2010/09/22 17:54:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.16 2010/09/22 18:00:54 joker Exp $
+
+  22 Sep 2010; Christian Birchinger <joker@gentoo.org>
+  -xdotool-20090609.ebuild, -xdotool-20091231.02.ebuild,
+  -files/xdotool-20091231.02_as-needed.patch,
+  -files/xdotool-20091231.02_install-D.patch:
+  Remove old version. This also solves the version madness.
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   xdotool-1.20100318.2737.ebuild:
