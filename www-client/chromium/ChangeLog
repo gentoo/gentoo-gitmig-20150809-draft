@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.185 2010/09/22 08:33:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.186 2010/09/22 12:27:04 rich0 Exp $
+
+  22 Sep 2010; Richard Freeman <rich0@gentoo.org>
+  chromium-6.0.472.62.ebuild:
+  amd64 stable - 338204
 
   22 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.472.62.ebuild, chromium-6.0.472.62-r1.ebuild,
