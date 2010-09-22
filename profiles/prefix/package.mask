@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.71 2010/09/20 14:25:31 darkside Exp $
+# $Id: package.mask,v 1.72 2010/09/22 17:40:01 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,10 +32,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Jeremy Olexa <darkside@gentoo.org> (20 Sept 2010)
-# Maybe an issue with CONFIG_PROTECT but definately and issue that impedes
-# bootstrapping, mask until the next version comes out. bug 337945
-=sys-apps/portage-2.2.01.16365
 
 # Fabian Groffen <grobian@gentoo.org> (31 Jul 2010)
 # We have perl-5.10 (5.12 even) so we can't afford this being masked

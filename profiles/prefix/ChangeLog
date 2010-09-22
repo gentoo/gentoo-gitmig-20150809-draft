@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.208 2010/09/21 18:05:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.209 2010/09/22 17:40:01 grobian Exp $
+
+  22 Sep 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop mask for portage no longer in the tree
 
   21 Sep 2010; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.5/ppc/package.use.mask,
