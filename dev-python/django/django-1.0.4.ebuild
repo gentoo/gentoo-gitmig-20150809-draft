@@ -1,16 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.4.ebuild,v 1.2 2010/05/26 17:58:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.4.ebuild,v 1.3 2010/09/22 19:48:23 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit bash-completion distutils webapp
 
 MY_P="Django-${PV}"
 
-DESCRIPTION="High-level python web framework"
+DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
 SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 
@@ -20,19 +21,12 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
 IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
-	sqlite? ( || (
-		>=dev-lang/python-2.5[sqlite]
-		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-	) )
+	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )
 	postgres? ( dev-python/psycopg )
 	mysql? ( >=dev-python/mysql-python-1.2.1_p2 )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.3 )
-	test? ( || (
-		>=dev-lang/python-2.5[sqlite]
-		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-	) )"
-RESTRICT_PYTHON_ABIS="3.*"
+	test? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -48,8 +42,8 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		pushd docs > /dev/null
 		einfo "Generation of documentation"
+		pushd docs > /dev/null
 		emake html || die "Generation of documentation failed"
 		popd > /dev/null
 	fi
