@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.6.1-r2.ebuild,v 1.1 2010/09/21 20:17:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.7.1.ebuild,v 1.1 2010/09/22 14:21:07 pva Exp $
 
 inherit versionator
 
@@ -8,7 +8,7 @@ inherit versionator
 # comparisment working we have to use numbers instead of strings, that is 4th
 # component of our version. So we have aivazovsky - 1, briullov - 2 and so on.
 # Keep this string on top since we have to modify it each new release.
-OVZ_CODENAME="kuindzhi"
+OVZ_CODENAME="levitan"
 OVZ_CODENAME_SUBRELEASE=$(get_version_component_range 5)
 
 #http://download.openvz.org/kernel/branches/2.6.27/2.6.27-chistyakov.1/patches/patch-chistyakov.1-combined.gz
@@ -47,12 +47,10 @@ IUSE=""
 DESCRIPTION="Kernel sources with OpenVZ patchset"
 HOMEPAGE="http://www.openvz.org"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}
-	http://download.openvz.org/kernel/branches/${CKV}/${CKV}-${OVZ_KV}/patches/patch-${OVZ_KV}-combined.gz
-	mirror://gentoo/openvz-2.6.27-2.6.27.54.patch.bz2"
+	http://download.openvz.org/kernel/branches/${CKV}/${CKV}-${OVZ_KV}/patches/patch-${OVZ_KV}-combined.gz"
 
 UNIPATCH_STRICTORDER=1
-UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KV}-combined.gz
-${DISTDIR}/openvz-2.6.27-2.6.27.54.patch.bz2"
+UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KV}-combined.gz"
 
 K_EXTRAEINFO="For more information about this kernel take a look at:
 http://wiki.openvz.org/Download/kernel/${CKV}/${CKV}-${OVZ_KV}"
