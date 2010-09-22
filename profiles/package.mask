@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11970 2010/09/22 17:59:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11971 2010/09/22 21:47:25 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -684,10 +684,6 @@ media-gfx/surf
 # Development versions.
 =net-libs/gnutls-2.11*
 
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Jul 2010)
-# Merged into >=dev-python/mechanize-0.2.0. Masked for deletion in 30 days.
-dev-python/clientform
-
 # Luca Barbato <lu_zero@gentoo.org> (21 Jul 2010)
 # Not ready for public consumption, clashes with current mesa-git
 media-libs/shivavg
@@ -761,10 +757,6 @@ dev-ruby/testunit-mock
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2010)
 # No actual Gentoo support yet. If you're interested, please see bug #295993
 net-misc/netcf
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (06 Jul 2010)
-# Replaced by dev-python/numpy. Masked for deletion in 30 days (bug #198154).
-dev-python/numarray
 
 # Markos Chandras <hwoarang@gentoo.org> (06 Jul 2010)
 # Masking development releases
