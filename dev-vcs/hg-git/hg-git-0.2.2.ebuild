@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.2.2.ebuild,v 1.4 2010/07/10 15:27:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.2.2.ebuild,v 1.5 2010/09/23 20:41:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils
 
 DESCRIPTION="push and pull from a Git server using Mercurial"
 HOMEPAGE="http://hg-git.github.com/ http://pypi.python.org/pypi/hg-git"
-SRC_URI="http://pypi.python.org/packages/source/h/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
