@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/lpe-1.2.6.13.ebuild,v 1.10 2010/04/05 04:10:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/lpe-1.2.6.13.ebuild,v 1.11 2010/09/23 15:53:11 ssuominen Exp $
 
-EAPI="3"
-
-inherit multilib
+EAPI=3
+inherit eutils multilib
 
 DESCRIPTION="a lightweight programmers editor"
 HOMEPAGE="http://packages.qa.debian.org/l/lpe.html"
@@ -18,6 +17,10 @@ IUSE="nls"
 RDEPEND=">=sys-libs/slang-2.1.3"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-make-382.patch
+}
 
 src_configure() {
 	econf $(use_enable nls)
