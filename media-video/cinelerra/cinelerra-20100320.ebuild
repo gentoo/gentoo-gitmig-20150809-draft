@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.7 2010/08/16 17:10:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.8 2010/09/23 17:38:34 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic
@@ -47,6 +47,7 @@ DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )"
 
 src_prepare() {
+	sed -i -e '/Debian/d' admin/nasm || die #318155
 	epatch \
 		"${FILESDIR}"/${PN}-libavutil50.patch \
 		"${FILESDIR}"/${P}-pkgconfig-x264.patch \
