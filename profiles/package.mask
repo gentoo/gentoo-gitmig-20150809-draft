@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11971 2010/09/22 21:47:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11972 2010/09/23 08:12:18 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -514,38 +514,6 @@ sys-fs/flickrfs
 # Michael Sterrett <mr_bones_@gentoo.org> (22 Aug 2010)
 # Testing mask for 0.8 betas
 >games-board/pokerth-0.7.1
-
-# Samuli Suominen <ssuominen@gentoo.org> (21 Aug 2010)
-# These have been uninstallable since 2008.
-#
-# libferrisstreams, bug 220507
-#
-# Masked for removal in 30 days.
-dev-db/stldb4
-dev-libs/libferrisstreams
-
-# Samuli Suominen <ssuominen@gentoo.org> (21 Aug 2010)
-# Masked for treecleaners, QA
-#
-# etheme, bug 332685
-# btg, bugs 277655, 295006, 295009, 326639 and 326643
-# modplugplay is replaced by modplugtools
-# realbasic, bug 324891
-# playspc, bug 328843
-# qt-faststart, bug 276268
-# media-plugins/audacious-g15-spectrum, bug 298134
-#
-# Removal in 30 days
-media-plugins/audacious-g15-spectrum
-media-video/qt-faststart
-media-sound/modplugplay
-media-sound/playspc
-dev-lang/realbasic
-net-p2p/btg
-x11-themes/etheme-BlueSteel
-x11-themes/etheme-BrushedMetal-Tigert
-x11-themes/etheme-Ganymede
-x11-themes/etheme-ShinyMetal
 
 # Christian Faulhammer <fauli@gentoo.org> (19 Aug 2010)
 # Mask for removal in 30 days
