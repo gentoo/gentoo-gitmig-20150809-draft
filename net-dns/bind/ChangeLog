@@ -1,6 +1,16 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.292 2010/09/23 12:11:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.293 2010/09/23 17:49:44 idl0r Exp $
+
+  23 Sep 2010; Christian Ruppert <idl0r@gentoo.org> +files/named.confd-r4,
+  +files/named.init-r8:
+  named.confd-r4: New CHROOT_NOMOUNT option to allow one to use the old chroot
+  start behaviour. Add rc_named_use and rc_named_after options to ensure MySQL,
+  PostgreSQL or LDAP will be started first, see bug 295260 and bug 295619.
+  named.init-r8: Some cleanup. Make the init script POSIX compliant, bug
+  338353. Add a named-checkconf call to ensure named.conf is valid. Use the new
+  CHROOT_NOMOUNT option to avoid using mount for a chroot named. Some
+  improvements, esp. reload(), bug 335398.
 
   23 Sep 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.2_p2.ebuild,
   bind-9.7.1_p2.ebuild:
