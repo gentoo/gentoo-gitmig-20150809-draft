@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.3.ebuild,v 1.1 2010/09/12 18:50:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.3.ebuild,v 1.2 2010/09/23 16:49:25 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ IUSE="doc +gmp"
 
 RDEPEND="gmp? ( dev-libs/gmp )"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/docutils dev-python/epydoc )"
+	doc? ( dev-python/docutils >=dev-python/epydoc-3 )"
 
 # Some tests fail with some limit of inlining of functions.
 # Avoid warnings about breaking strict-aliasing rules.
