@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.78 2010/09/14 17:21:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.79 2010/09/23 04:11:04 bicatali Exp $
+
+  23 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> pari-2.3.5.ebuild,
+  +files/pari-2.3.5-doc-make.patch:
+  Fixed parallel building for docs, thanks Francois Bissey, bug #338270
 
   14 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
   -pari-2.1.7-r1.ebuild, -pari-2.3.2.ebuild, -pari-2.3.2-r1.ebuild,

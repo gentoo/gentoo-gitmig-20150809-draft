@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.2 2010/09/14 17:21:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.3 2010/09/23 04:11:04 bicatali Exp $
 
 EAPI=2
 inherit elisp-common eutils flag-o-matic toolchain-funcs
@@ -46,6 +46,7 @@ src_prepare() {
 	fi
 	epatch "${FILESDIR}/"${PN}-2.3.2-strip.patch
 	epatch "${FILESDIR}/"${PN}-2.3.2-ppc-powerpc-arch-fix.patch
+	epatch "${FILESDIR}/"${PN}-2.3.5-doc-make.patch
 
 	# disable default building of docs during install
 	sed -i \
