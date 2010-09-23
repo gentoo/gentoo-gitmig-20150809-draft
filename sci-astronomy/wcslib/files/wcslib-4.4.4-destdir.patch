@@ -106,7 +106,7 @@ diff -Nur wcslib-4.4.4.orig/pgsbox/GNUmakefile wcslib-4.4.4/pgsbox/GNUmakefile
 +	   $(INSTALL) -m 644 $(PGSBOXLIB) $(DESTDIR)$(LIBDIR)
 +	   $(RANLIB) $(DESTDIR)$(LIBDIR)/$(PGSBOXLIB)
 +	   $(RM) $(DESTDIR)$(LIBDIR)/libpgsbox.a
-+	   $(LN_S) $(DESTDIR)$(LIBDIR)/$(PGSBOXLIB) $(DESTDIR)$(LIBDIR)/libpgsbox.a
++	   $(LN_S) $(PGSBOXLIB) $(DESTDIR)$(LIBDIR)/libpgsbox.a
 +	   $(INSTALL) -m 444 *.h $(DESTDIR)$(INCDIR)
  
  pgtest : pgtest.o lngvel.o fscan.o $(PGSBOXLIB) $(LIBWCS)

@@ -9,4 +9,12 @@
   PGSBOX, for drawing general curvilinear coordinate graticules and a number of
   utility programs.
 </longdescription>
+<use>
+  <flag name='fits'>
+    Enable support for the FITS format through <pkg>sci-libs/cfitsio</pkg>
+  </flag>
+  <flag name='pgplot'>
+    Builds routines for the  <pkg>sci-libs/pgplot</pkg> library
+  </flag>
+</use>
 </pkgmetadata>
