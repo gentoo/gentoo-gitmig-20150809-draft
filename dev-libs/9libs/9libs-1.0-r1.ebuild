@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.6 2009/07/23 23:38:30 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.7 2010/09/23 19:07:29 ulm Exp $
 
 inherit toolchain-funcs
 
@@ -13,22 +13,26 @@ SLOT="0"
 KEYWORDS="sparc x86"
 IUSE=""
 
-DEPEND=" >=x11-proto/xproto-7.0.4
+DEPEND=">=x11-proto/xproto-7.0.4
 	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0"
 
-RDEPEND="$DEPEND
-	!dev-libs/libevent"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
 		--includedir=/usr/include/9libs \
-		--enable-shared \
-		|| die "econf failed"
-	emake CC=$(tc-getCC) || die
+		--enable-shared
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die
 	dodoc README
+
+	# rename some man pages to avoid collisions with dev-libs/libevent
+	local f
+	for f in add balloc bitblt cachechars event frame graphics rgbpix; do
+		mv "${D}"/usr/share/man/man3/${f}.{3,3g} || die
+	done
 }
