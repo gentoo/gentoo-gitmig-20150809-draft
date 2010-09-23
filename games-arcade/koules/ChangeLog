@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/koules
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.17 2010/05/11 10:06:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.18 2010/09/23 15:13:52 tupone Exp $
+
+  23 Sep 2010; Tupone Alfredo <tupone@gentoo.org> koules-1.4-r2.ebuild:
+  Respect LDFLAGS. Bug #337863 by flameeyes@gentoo.org
 
   11 May 2010; Tupone Alfredo <tupone@gentoo.org> koules-1.4-r2.ebuild:
   Fix parallel make. Bug #316845 by flameeyes@gentoo.org
