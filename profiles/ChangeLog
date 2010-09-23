@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4581 2010/09/22 21:47:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4582 2010/09/23 20:00:01 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Sep 2010; Jeroen Roovers <jer@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Move from sys-apps/parted to sys-block/parted thanks to DEMAINE
+  Benoît-Pierre, aka DoubleHP (bug #338358).
 
   22 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.mask:
