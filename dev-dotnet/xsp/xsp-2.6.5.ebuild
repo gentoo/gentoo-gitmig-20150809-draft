@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.6.5.ebuild,v 1.3 2010/09/12 12:59:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.6.5.ebuild,v 1.4 2010/09/23 22:14:31 hwoarang Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.go-mono.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 
