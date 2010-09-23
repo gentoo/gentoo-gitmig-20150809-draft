@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.52 2010/09/22 16:15:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.53 2010/09/23 09:13:40 pacho Exp $
+
+  23 Sep 2010; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.11.ebuild,
+  -files/libcanberra-0.14-am-gconf-source-2-m4.patch,
+  -files/libcanberra-0.14-backward-compatibility-libtool.patch,
+  -libcanberra-0.22.ebuild, libcanberra-0.25.ebuild, metadata.xml:
+  Allow people to not RDEPEND on x11-themes/sound-theme-freedesktop
+  unsetting 'sound' USE flag, but turn it on by default for better 'user
+  experience' with Gnome and Xfce desktops (thanks to Samuli Suominen for
+  his patch on bug #323379). Also remove old versions.
 
   22 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   libcanberra-0.25.ebuild:
