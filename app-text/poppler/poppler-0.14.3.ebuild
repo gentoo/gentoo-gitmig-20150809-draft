@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.3.ebuild,v 1.1 2010/09/11 06:03:29 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.3.ebuild,v 1.2 2010/09/23 11:20:25 ssuominen Exp $
 
 EAPI="2"
 
@@ -44,7 +44,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!dev-libs/poppler
 	!dev-libs/poppler-glib
-	!dev-libs/poppler-qt3
 	!dev-libs/poppler-qt4
 	!app-text/poppler-utils
 	cjk? ( >=app-text/poppler-data-0.2.1 )
