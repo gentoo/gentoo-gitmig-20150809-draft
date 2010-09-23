@@ -5,6 +5,12 @@
 <maintainer>
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
+<description>Proxy maintainer. CC him on bugs</description>
+</maintainer>
+<maintainer>
+<email>alexvandermey@gmail.com</email>
+<name>Alexander van der Mey</name>
+<description>Upstream developer. Assign bugs to him</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
