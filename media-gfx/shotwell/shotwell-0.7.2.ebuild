@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.7.2.ebuild,v 1.1 2010/09/19 08:24:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.7.2.ebuild,v 1.2 2010/09/23 21:52:44 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -33,14 +33,21 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=media-libs/gexiv2-0.2.0
 	media-libs/lcms:2"
 DEPEND="${RDEPEND}
-	>=dev-lang/vala-0.9.5"
+	>=dev-lang/vala-0.9.5:0.10"
 
 DOCS="AUTHORS MAINTAINERS NEWS README THANKS"
 
 pkg_setup() {
-	G2CONF="--disable-schemas-install
+	G2CONF="${G2CONF}
+		--disable-schemas-install
 		--disable-desktop-update
 		--disable-icon-update"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	sed -e 's/valac/valac-0.10/' -i Makefile || die
 }
 
 src_install() {
