@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.7.ebuild,v 1.1 2010/09/10 01:09:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.7.ebuild,v 1.2 2010/09/23 19:12:21 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="static-libs test"
 
 DEPEND=""
-RDEPEND="!dev-libs/9libs"
+RDEPEND="!<=dev-libs/9libs-1.0"
 
 S=${WORKDIR}/${MY_P}
 

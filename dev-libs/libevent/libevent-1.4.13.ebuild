@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.13.ebuild,v 1.10 2010/02/25 21:11:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.13.ebuild,v 1.11 2010/09/23 19:12:21 ulm Exp $
 
 inherit autotools
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbs
 IUSE=""
 
 DEPEND=""
-RDEPEND="!dev-libs/9libs"
+RDEPEND="!<=dev-libs/9libs-1.0"
 
 S=${WORKDIR}/${MY_P}
 
