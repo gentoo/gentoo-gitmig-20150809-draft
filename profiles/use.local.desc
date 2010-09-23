@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5971 2010/09/23 09:33:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5972 2010/09/23 21:14:11 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3178,6 +3178,8 @@ sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/wxmacmolplt:flash - Add support for flash movie generation using media-libs/ming
 sci-electronics/geda:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
+sci-electronics/gspiceui:schematics - Use sci-electronics/geda for schematics editing
+sci-electronics/gspiceui:waveform - Use sci-electronics/gwave for waveform display
 sci-electronics/kicad:dev-doc - Install developer documentation (requires app-doc/doxygen)
 sci-electronics/pcb:gif - GIF graphics export
 sci-electronics/pcb:jpeg - JPEG graphics export
