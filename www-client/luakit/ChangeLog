@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.9 2010/09/12 21:54:43 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.10 2010/09/23 13:52:33 wired Exp $
+
+  23 Sep 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  gperf is no longer a dependency
 
   12 Sep 2010; Alex Alexander <wired@gentoo.org>
   luakit-2010.08.30-r1.ebuild, luakit-9999.ebuild, metadata.xml:
