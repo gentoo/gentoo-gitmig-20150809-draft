@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.0.ebuild,v 1.3 2010/04/27 08:48:06 tupone Exp $
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.0.ebuild,v 1.4 2010/09/23 16:52:06 mr_bones_ Exp $
 
+PYTHON_DEPEND="2"
 EAPI=2
 inherit autotools eutils python games
 
