@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.35 2010/09/12 12:59:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.36 2010/09/23 22:14:43 hwoarang Exp $
+
+  23 Sep 2010; Markos Chandras <hwoarang@gentoo.org> boo-0.9.3.3457.ebuild:
+  Stable on amd64 wrt bug #336851
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> boo-0.9.3.3457.ebuild:
   Marked ppc for bug #336851.
