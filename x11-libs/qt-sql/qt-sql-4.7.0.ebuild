@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.7.0.ebuild,v 1.1 2010/09/21 15:02:47 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.7.0.ebuild,v 1.2 2010/09/23 21:35:36 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The SQL module for the Qt toolkit"
@@ -10,7 +10,7 @@ SLOT="4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="firebird freetds iconv mysql odbc postgres qt3support +sqlite"
 
-DEPEND="~x11-libs/qt-core-${PV}[debug=,qt3support=]
+DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
 	firebird? ( dev-db/firebird )
 	freetds? ( dev-db/freetds )
 	mysql? ( virtual/mysql )
@@ -52,8 +52,8 @@ src_prepare() {
 src_configure() {
 	# Don't support sqlite2 anymore
 	myconf="${myconf} -no-sql-sqlite2
-		$(qt_use mysql sql-mysql plugin) $(use mysql && echo "-I/usr/include/mysql -L/usr/$(get_libdir)/mysql ")
-		$(qt_use postgres sql-psql plugin) $(use postgres && echo "-I/usr/include/postgresql/pgsql ")
+		$(qt_use mysql sql-mysql plugin) $(use mysql && echo "-I${EPREFIX}/usr/include/mysql -L${EPREFIX}/usr/$(get_libdir)/mysql ")
+		$(qt_use postgres sql-psql plugin) $(use postgres && echo "-I${EPREFIX}/usr/include/postgresql/pgsql ")
 		$(qt_use sqlite sql-sqlite plugin) $(use sqlite && echo '-system-sqlite')
 		$(qt_use odbc sql-odbc plugin)
 		$(qt_use freetds sql-tds plugin)

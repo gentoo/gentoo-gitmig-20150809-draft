@@ -1,42 +1,45 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.1 2010/09/21 14:55:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.2 2010/09/23 21:30:15 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit confutils qt4-build
 
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="+accessibility cups dbus egl +glib gtk mng nas nis +raster tiff trace
-private-headers qt3support xinerama"
+IUSE="+accessibility cups dbus egl +glib gtk mng nas nis private-headers qt3support +raster tiff trace xinerama"
 
 RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/jpeg:0
 	media-libs/libpng
 	sys-libs/zlib
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXrandr
-	x11-libs/libXcursor
-	x11-libs/libXfont
-	x11-libs/libSM
-	x11-libs/libXi
-	~x11-libs/qt-core-${PV}[debug=,glib=,qt3support=]
-	~x11-libs/qt-script-${PV}[debug=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=,glib=,qt3support=]
+	~x11-libs/qt-script-${PV}[aqua=,debug=]
+	!aqua? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXrandr
+		x11-libs/libXcursor
+		x11-libs/libXfont
+		x11-libs/libSM
+		x11-libs/libXi
+	)
 	cups? ( net-print/cups )
-	dbus? ( ~x11-libs/qt-dbus-${PV}[debug=] )
-	gtk? ( x11-libs/gtk+:2 )
+	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
+	gtk? ( x11-libs/gtk+:2[aqua=] )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	xinerama? ( x11-proto/xineramaproto )
-	x11-proto/xextproto
-	x11-proto/inputproto"
-PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[debug=] )"
+	!aqua? (
+		x11-proto/xextproto
+		x11-proto/inputproto
+	)
+	xinerama? ( x11-proto/xineramaproto )"
+PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,debug=] )"
 
 pkg_setup() {
 	if ! use qt3support; then
@@ -148,12 +151,15 @@ src_install() {
 
 	# install correct designer and linguist icons, bug 241208
 	doicon tools/linguist/linguist/images/icons/linguist-128-32.png \
-		tools/designer/src/designer/images/designer.png || die
+		tools/designer/src/designer/images/designer.png \
+		|| die "doicon failed"
 	# Note: absolute image path required here!
-	make_desktop_entry /usr/bin/linguist Linguist \
-			/usr/share/pixmaps/linguist-128-32.png \
-			'Qt;Development;GUIDesigner' || die
-	make_desktop_entry /usr/bin/designer Designer \
-			/usr/share/pixmaps/designer.png \
-			'Qt;Development;GUIDesigner' || die
+	make_desktop_entry "${EPREFIX}"/usr/bin/linguist Linguist \
+			"${EPREFIX}"/usr/share/pixmaps/linguist-128-32.png \
+			'Qt;Development;GUIDesigner' \
+			|| die "linguist make_desktop_entry failed"
+	make_desktop_entry "${EPREFIX}"/usr/bin/designer Designer \
+			"${EPREFIX}"/usr/share/pixmaps/designer.png \
+			'Qt;Development;GUIDesigner' \
+			|| die "designer make_desktop_entry failed"
 }

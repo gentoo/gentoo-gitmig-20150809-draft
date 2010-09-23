@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.0.ebuild,v 1.1 2010/09/21 14:37:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.0.ebuild,v 1.2 2010/09/23 21:36:03 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The assistant help module for the Qt toolkit"
@@ -10,27 +10,27 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +glib trace"
 
-DEPEND="~x11-libs/qt-gui-${PV}[glib=,trace?]
-	~x11-libs/qt-sql-${PV}[sqlite]
-	~x11-libs/qt-webkit-${PV}
+DEPEND="~x11-libs/qt-gui-${PV}[aqua=,glib=,trace?]
+	~x11-libs/qt-sql-${PV}[aqua=,sqlite]
+	~x11-libs/qt-webkit-${PV}[aqua=]
 	~x11-libs/qt-declarative-${PV}"
 RDEPEND="${DEPEND}"
 
-# Pixeltool isn't really assistant related, but it relies on
-# the assistant libraries. doc/qch/
-QT4_TARGET_DIRECTORIES="
-	tools/assistant
-	tools/pixeltool
-	tools/qdoc3"
-QT4_EXTRACT_DIRECTORIES="
-	tools/
-	demos/
-	examples/
-	src/
-	include/
-	doc/"
-
 pkg_setup() {
+	# Pixeltool isn't really assistant related, but it relies on
+	# the assistant libraries. doc/qch/
+	QT4_TARGET_DIRECTORIES="
+		tools/assistant
+		tools/pixeltool
+		tools/qdoc3"
+	QT4_EXTRACT_DIRECTORIES="
+		tools/
+		demos/
+		examples/
+		src/
+		include/
+		doc/"
+
 	use trace && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 		tools/qttracereplay"
 	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
@@ -77,10 +77,12 @@ src_install() {
 	fi
 	dobin "${S}"/bin/qdoc3 || die "Failed to install qdoc3"
 	# install correct assistant icon, bug 241208
-	dodir /usr/share/pixmaps/ || die
+	dodir /usr/share/pixmaps/ || die "dodir failed"
 	insinto /usr/share/pixmaps/
-	doins tools/assistant/tools/assistant/images/assistant.png || die
+	doins tools/assistant/tools/assistant/images/assistant.png ||
+		die "doins failed"
 	# Note: absolute image path required here!
-	make_desktop_entry /usr/bin/assistant Assistant \
-		/usr/share/pixmaps/assistant.png 'Qt;Development;GUIDesigner' || die
+	make_desktop_entry "${EPREFIX}"/usr/bin/assistant Assistant \
+		"${EPREFIX}"/usr/share/pixmaps/assistant.png 'Qt;Development;GUIDesigner' ||
+			die "make_desktop_entry failed"
 }

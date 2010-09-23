@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.0.ebuild,v 1.1 2010/09/21 14:44:04 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.0.ebuild,v 1.2 2010/09/23 21:36:25 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The Declarative module for the Qt toolkit"
@@ -10,26 +10,30 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="private-headers"
 
-DEPEND="~x11-libs/qt-core-${PV}
-	~x11-libs/qt-gui-${PV}
-	~x11-libs/qt-multimedia-${PV}
-	~x11-libs/qt-opengl-${PV}
-	~x11-libs/qt-script-${PV}
-	~x11-libs/qt-sql-${PV}
-	~x11-libs/qt-svg-${PV}
-	~x11-libs/qt-webkit-${PV}
-	~x11-libs/qt-xmlpatterns-${PV}"
+DEPEND="~x11-libs/qt-core-${PV}[aqua=]
+	~x11-libs/qt-gui-${PV}[aqua=]
+	~x11-libs/qt-multimedia-${PV}[aqua=]
+	~x11-libs/qt-opengl-${PV}[aqua=]
+	~x11-libs/qt-script-${PV}[aqua=]
+	~x11-libs/qt-sql-${PV}[aqua=]
+	~x11-libs/qt-svg-${PV}[aqua=]
+	~x11-libs/qt-webkit-${PV}[aqua=]
+	~x11-libs/qt-xmlpatterns-${PV}[aqua=]"
 RDEPEND="${DEPEND}"
 
-QCONFIG_ADD="declarative"
+pkg_setup() {
+	QCONFIG_ADD="declarative"
 
-QT4_TARGET_DIRECTORIES="
-	src/declarative
-	tools/qml"
-QT4_EXTRACT_DIRECTORIES="
-	include/
-	src/
-	tools/"
+	QT4_TARGET_DIRECTORIES="
+		src/declarative
+		tools/qml"
+	QT4_EXTRACT_DIRECTORIES="
+		include/
+		src/
+		tools/"
+
+	qt4-build_pkg_setup
+}
 
 src_configure() {
 	myconf="${myconf} -declarative"

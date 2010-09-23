@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.71 2010/09/21 14:42:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.72 2010/09/23 21:30:41 wired Exp $
+
+  23 Sep 2010; Alex Alexander <wired@gentoo.org> qt-dbus-4.7.0.ebuild:
+  EAPI 3, prefix, other improvements
 
 *qt-dbus-4.7.0 (21 Sep 2010)
 

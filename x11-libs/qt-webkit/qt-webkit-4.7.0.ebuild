@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.7.0.ebuild,v 1.1 2010/09/21 15:07:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.7.0.ebuild,v 1.2 2010/09/23 21:35:09 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The Webkit module for the Qt toolkit"
@@ -10,14 +10,13 @@ SLOT="4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="dbus kde"
 
-DEPEND="~x11-libs/qt-core-${PV}[debug=,ssl]
-	~x11-libs/qt-gui-${PV}[dbus?,debug=]
-	~x11-libs/qt-multimedia-${PV}[debug=]
-	~x11-libs/qt-xmlpatterns-${PV}[debug=]
-	dbus? ( ~x11-libs/qt-dbus-${PV}[debug=] )
-	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[dbus=,debug=]
-		media-sound/phonon ) )
-	kde? ( media-sound/phonon )"
+DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=,ssl]
+	~x11-libs/qt-gui-${PV}[aqua=,dbus?,debug=]
+	~x11-libs/qt-xmlpatterns-${PV}[aqua=,debug=]
+	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
+	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=,dbus=,debug=]
+		media-sound/phonon[aqua=] ) )
+	kde? ( || ( media-sound/phonon[aqua=] ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=,dbus=,debug] ) )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

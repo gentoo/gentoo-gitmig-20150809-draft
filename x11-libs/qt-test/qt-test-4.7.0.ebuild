@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/qt-test-4.7.0.ebuild,v 1.1 2010/09/21 15:05:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/qt-test-4.7.0.ebuild,v 1.2 2010/09/23 21:29:46 wired Exp $
 
-EAPI="2"
+EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The testing framework module for the Qt toolkit"
@@ -10,7 +10,7 @@ SLOT="4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="iconv"
 
-DEPEND="~x11-libs/qt-core-${PV}[debug=]"
+DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
