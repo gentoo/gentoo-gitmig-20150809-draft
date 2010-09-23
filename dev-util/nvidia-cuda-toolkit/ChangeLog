@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.29 2010/07/05 12:55:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.30 2010/09/23 20:29:55 flameeyes Exp $
+
+  23 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  nvidia-cuda-toolkit-2.2-r3.ebuild, nvidia-cuda-toolkit-2.3.ebuild,
+  nvidia-cuda-toolkit-3.0_beta1.ebuild, nvidia-cuda-toolkit-3.0.ebuild,
+  nvidia-cuda-toolkit-3.1.ebuild:
+  Remove wrong restrictions. Use the proper QA_* variables, not blanket
+  restrictions.
 
   05 Jul 2010; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild:
