@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1_p2.ebuild,v 1.4 2010/09/22 07:29:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1_p2.ebuild,v 1.5 2010/09/23 12:11:05 idl0r Exp $
 
 EAPI="3"
 
@@ -274,14 +274,14 @@ pkg_postinst() {
 
 	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})
 	if [[ -n ${CHROOT} && -d ${CHROOT} ]]; then
-		ewarn "NOTE: as of 'bind-9.6.1' the chroot part of the init-script got some major changes."
+		ewarn "NOTE: As of net-dns/bind-9.4.3_p5-r1 the chroot part of the init-script got some major changes!"
 	fi
 
 	ewarn
 	ewarn "NOTE: /var/bind/named.ca has been renamed to /var/bind/named.cache"
 	ewarn "you may need to fix your named.conf!"
 	ewarn
-	ewarn "NOTE: If you upgrade from net-dns/bind-9.4.x, you may encounter permission problems"
+	ewarn "NOTE: If you upgrade from <net-dns/bind-9.4.3_p5-r1, you may encounter permission problems"
 	ewarn "To fix the permissions do:"
 	ewarn "chown root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri}"
 	ewarn "chown root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}"
@@ -301,7 +301,7 @@ pkg_config() {
 		die "Unset CHROOT"
 	fi
 	if [[ -d "${CHROOT}" ]]; then
-		ewarn "NOTE: As of 'bind-9.6.1' the chroot part of the init-script got some major changes."
+		ewarn "NOTE: As of net-dns/bind-9.4.3_p5-r1 the chroot part of the init-script got some major changes!"
 		ewarn
 		ewarn "${CHROOT} already exists... some things might become overridden"
 		ewarn "press CTRL+C if you don't want to continue"
