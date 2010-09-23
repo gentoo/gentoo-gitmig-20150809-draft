@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.25.ebuild,v 1.9 2010/09/23 09:13:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.25.ebuild,v 1.10 2010/09/23 09:16:51 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils libtool
@@ -23,7 +23,7 @@ COMMON_DEPEND="media-libs/libvorbis
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
 	tdb? ( sys-libs/tdb )"
 RDEPEND="${COMMON_DEPEND}
-	sound? ( x11-themes/sound-theme-freedesktop )" # Required for index.theme wrt #323379"
+	sound? ( x11-themes/sound-theme-freedesktop )" # Required for index.theme wrt #323379
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.17"
 
