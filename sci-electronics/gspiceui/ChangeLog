@@ -1,0 +1,11 @@
+# ChangeLog for sci-electronics/gspiceui
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.1 2010/09/23 20:53:13 dilfridge Exp $
+
+*gspiceui-0.9.99 (23 Sep 2010)
+
+  23 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +gspiceui-0.9.99.ebuild, +metadata.xml:
+  New application, fixes bug 74201 (!). Thanks to jokey, jakub, tomjbe, and
+  Rafael G. Martins.
+
