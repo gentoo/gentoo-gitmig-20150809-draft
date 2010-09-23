@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.141 2010/09/17 11:19:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.142 2010/09/23 23:08:15 mabi Exp $
+
+*fox-1.7.21 (23 Sep 2010)
+*fox-1.6.40 (23 Sep 2010)
+
+  23 Sep 2010; Matti Bickel <mabi@gentoo.org> -fox-1.6.34.ebuild,
+  -fox-1.6.35.ebuild, -fox-1.6.37.ebuild, +fox-1.6.40.ebuild,
+  -fox-1.7.19.ebuild, +fox-1.7.21.ebuild:
+  cleanup, version bump (bug #336216)
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> fox-1.6.34.ebuild,
   fox-1.6.35.ebuild, fox-1.6.36.ebuild, fox-1.6.37.ebuild,
