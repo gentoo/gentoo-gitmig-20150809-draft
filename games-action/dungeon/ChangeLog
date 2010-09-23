@@ -1,6 +1,10 @@
 # ChangeLog for games-action/dungeon
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/dungeon/ChangeLog,v 1.8 2006/06/22 23:56:50 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/dungeon/ChangeLog,v 1.9 2010/09/23 15:41:12 tupone Exp $
+
+  23 Sep 2010; Tupone Alfredo <tupone@gentoo.org> dungeon-3.2.3.ebuild,
+  files/dungeon-3.2.3-makefile.patch:
+  Respect LDFLAGS. Bug #337854 by flameeyes@gentoo.org
 
   22 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
   files/dungeon-3.2.3-makefile.patch:
