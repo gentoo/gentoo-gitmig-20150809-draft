@@ -1,49 +1,48 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.19.ebuild,v 1.7 2010/03/21 15:04:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.8.ebuild,v 1.1 2010/09/23 22:29:28 mrness Exp $
 
 EAPI="2"
 
-inherit eutils pam toolchain-funcs autotools
-
-# lame archive versioning scheme..
-S_PMV="${PV%%.*}"
-S_PV="${PV%.*}"
-S_PL="${PV##*.}"
-S_PP="${PN}-${S_PV}.STABLE${S_PL}"
-
-RESTRICT="test" # check if test works in next bump
+inherit eutils pam toolchain-funcs
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
+SRC_URI="http://www.squid-cache.org/Versions/v3/3.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="caps pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test \
+	ecap icap-client \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux +epoll"
+	elibc_uclibc kernel_linux +epoll tproxy"
+RESTRICT=test
 
-DEPEND="caps? ( >=sys-libs/libcap-2.16 )
+COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
-	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
+	kerberos? ( virtual/krb5 )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
+	ecap? ( net-libs/libecap )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
 	dev-lang/perl"
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	sys-devel/automake
+	sys-devel/autoconf
+	sys-devel/libtool
+	sys-apps/ed
+	test? ( dev-util/cppunit )"
+RDEPEND="${COMMON_DEPEND}
 	samba? ( net-fs/samba )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
-
-S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
 	if grep -qs '^[[:space:]]*cache_dir[[:space:]]\+coss' "${ROOT}"etc/squid/squid.conf; then
@@ -54,20 +53,29 @@ pkg_setup() {
 		die "/etc/squid/squid.conf: cache_dir use a disabled store type"
 	fi
 
+	if use tproxy && ! use caps; then
+		eerror "libcap is required by Transparent Proxy support for Netfilter TPROXY!"
+		eerror "Please enable caps USE flag and try again."
+
+		die "invalid combination of USE flags"
+	fi
+
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3-capability.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-cross-compile.patch
-	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-adapted-zph.patch
+	epatch "${FILESDIR}"/${P}-qafixes.patch
+	epatch "${FILESDIR}"/${P}-libmd5.patch
 
-	eautoreconf
+	# eautoreconf breaks lib/libLtdl/libtool script
+	./bootstrap.sh || die "autoreconf failed"
 }
 
 src_configure() {
+	local myconf=""
+
 	local basic_modules="getpwnam,NCSA,MSNT"
 	use samba && basic_modules="SMB,multi-domain-NTLM,${basic_modules}"
 	use ldap && basic_modules="LDAP,${basic_modules}"
@@ -79,24 +87,31 @@ src_configure() {
 		basic_modules="DB,${basic_modules}"
 	fi
 
+	local digest_modules="password"
+	use ldap && digest_modules="ldap,${digest_modules}"
+
 	local ext_helpers="ip_user,session,unix_group"
 	use samba && ext_helpers="wbinfo_group,${ext_helpers}"
 	use ldap && ext_helpers="ldap_group,${ext_helpers}"
 
 	local ntlm_helpers="fakeauth"
-	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
+	use samba && ntlm_helpers="smb_lm,${ntlm_helpers}"
 
 	local negotiate_helpers=
-	use kerberos && local negotiate_helpers="squid_kerb_auth"
-
-	local myconf=""
+	if use kerberos; then
+		negotiate_helpers="squid_kerb_auth"
+		has_version app-crypt/mit-krb5 \
+			&& myconf="--enable-mit --disable-heimdal" \
+			|| myconf="--disable-mit --enable-heimdal"
+	fi
 
 	# coss support has been disabled
 	# If it is re-enabled again, make sure you don't enable it for elibc_uclibc (#61175)
-	myconf="${myconf} --enable-storeio=ufs,diskd,aufs,null"
+	myconf="${myconf} --enable-storeio=ufs,diskd,aufs"
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter
+			$(use_enable tproxy linux-tproxy)
 			$(use_enable epoll)"
 	elif use kernel_FreeBSD || use kernel_OpenBSD || use kernel_NetBSD ; then
 		myconf="${myconf} $(use_enable kqueue)"
@@ -113,11 +128,13 @@ src_configure() {
 		--sysconfdir=/etc/squid \
 		--libexecdir=/usr/libexec/squid \
 		--localstatedir=/var \
+		--with-pidfile=/var/run/squid.pid \
 		--datadir=/usr/share/squid \
+		--with-logdir=/var/log/squid \
 		--with-default-user=squid \
 		--enable-auth="basic,digest,negotiate,ntlm" \
 		--enable-removal-policies="lru,heap" \
-		--enable-digest-auth-helpers="password" \
+		--enable-digest-auth-helpers="${digest_modules}" \
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
@@ -129,10 +146,14 @@ src_configure() {
 		--enable-arp-acl \
 		--with-large-files \
 		--with-filedescriptors=8192 \
+		--disable-strict-error-checking \
 		$(use_enable caps) \
+		$(use_enable ipv6) \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
 		$(use_enable icap-client) \
+		$(use_enable ecap) \
+		$(use_enable zero-penalty-hit zph-qos) \
 		${myconf} || die "econf failed"
 }
 
