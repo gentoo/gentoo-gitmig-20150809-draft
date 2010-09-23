@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/KXL
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.13 2009/06/09 20:13:47 fmccor Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.14 2010/09/23 12:27:02 tupone Exp $
+
+*KXL-1.1.7-r2 (23 Sep 2010)
+
+  23 Sep 2010; Tupone Alfredo <tupone@gentoo.org> +KXL-1.1.7-r2.ebuild,
+  +files/KXL-1.1.7-ldflags.patch:
+  Respect LDFLAGS (for all the ebuild that use it). Bug #337869 by
+  flameeyes@gentoo.org
 
   09 Jun 2009; Ferris McCormick <fmccor@gentoo.org> KXL-1.1.7-r1.ebuild:
   Sparc stable, Bug #272429.
