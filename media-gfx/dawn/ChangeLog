@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dawn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.9 2010/08/09 16:58:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.10 2010/09/23 05:42:01 bicatali Exp $
+
+*dawn-3.90b (23 Sep 2010)
+
+  23 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> +dawn-3.90b.ebuild,
+  +files/dawn-3.90b-no-interactive.patch:
+  Version bump (also fixing overflow bug #338147)
 
   09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> dawn-3.88a.ebuild:
   Respect CXX and LDFLAGS. Fixes bug 331857. Thanks to Diego for report.
