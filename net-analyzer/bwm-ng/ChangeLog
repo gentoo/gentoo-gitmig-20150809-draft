@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.15 2008/08/04 19:19:46 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.16 2010/09/23 21:47:18 maekke Exp $
+
+  23 Sep 2010; Markus Meier <maekke@gentoo.org> bwm-ng-0.6.ebuild:
+  add ~arm, bug #334841
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
