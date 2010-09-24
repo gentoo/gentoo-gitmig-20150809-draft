@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/fakechroot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.9 2010/05/03 08:59:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.10 2010/09/24 09:32:31 ssuominen Exp $
+
+*fakechroot-2.11 (24 Sep 2010)
+
+  24 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +fakechroot-2.11.ebuild:
+  Version bump.
 
   03 May 2010; Samuli Suominen <ssuominen@gentoo.org> fakechroot-2.9.ebuild:
   amd64 stable wrt #309033
