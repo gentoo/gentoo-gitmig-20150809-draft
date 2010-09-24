@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ascii85
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.2 2010/05/22 15:01:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.3 2010/09/24 14:20:13 graaff Exp $
+
+*ascii85-1.0.0-r1 (24 Sep 2010)
+
+  24 Sep 2010; Hans de Graaff <graaff@gentoo.org> +ascii85-1.0.0-r1.ebuild:
+  Add ree18 target.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ascii85-1.0.0.ebuild:
