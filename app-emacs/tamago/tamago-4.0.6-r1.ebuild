@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.14 2008/05/01 15:23:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.15 2010/09/24 18:51:51 ulm Exp $
 
 inherit elisp eutils
 
@@ -42,15 +42,12 @@ src_install() {
 		elispdir="${D}"/${SITELISP}/${PN} \
 		etcdir="${D}"/usr/share/${PN}  install || die
 
-	cp "${FILESDIR}/${SITEFILE}" ${SITEFILE}
-	if use canna ; then
-		cat >>${SITEFILE}<<-EOF
+	if use canna; then
+		cat >${SITEFILE} <<-EOF
 		(set-language-info "Japanese" 'input-method "japanese-egg-canna")
-
 		EOF
+		elisp-site-file-install ${SITEFILE} || die
 	fi
-
-	elisp-site-file-install ${SITEFILE} || die
 
 	dodoc README.ja.txt AUTHORS PROBLEMS TODO ChangeLog
 }
