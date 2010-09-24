@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>apache</herd>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+    <name>Diego E. Pettenò</name>
+  </maintainer>
+  <use>
+    <flag name="vanilla">
+      Provide the original ModSecurity Core Rule Set without
+      Gentoo-specific relaxation. When this flag is enabled, we
+      install the unadulterated Core Rule Set. Warning! The original
+      Core Rule Set is draconic and most likely will break your web
+      applications, including Rails-based web applications and
+      Bugzilla.
+    </flag>
+  </use>
+</pkgmetadata>
