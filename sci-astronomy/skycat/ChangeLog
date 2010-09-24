@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/skycat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.6 2009/09/25 03:19:55 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.7 2010/09/24 18:13:38 bicatali Exp $
+
+*skycat-3.1.1 (24 Sep 2010)
+
+  24 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> -skycat-3.0.2.ebuild,
+  -skycat-3.0.2-r1.ebuild, +skycat-3.1.1.ebuild,
+  +files/skycat-3.1.1-gcc45.patch:
+  Bump. Added a patch to avoid overflows
 
 *skycat-3.0.2-r2 (25 Sep 2009)
 
