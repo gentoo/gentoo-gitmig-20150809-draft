@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.22 2010/09/23 23:51:17 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.23 2010/09/24 12:03:43 jlec Exp $
+
+  24 Sep 2010; Justin Lecher <jlec@gentoo.org> guile-lib-0.1.9.ebuild:
+  Keyworded for ~-linux
 
 *guile-lib-0.1.9 (23 Sep 2010)
 
