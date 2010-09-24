@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.2 2010/09/23 21:30:15 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.3 2010/09/24 07:00:33 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -145,7 +145,7 @@ src_install() {
 	doins "${S}"/tools/designer/src/lib/sdk/* || die
 	#install private headers
 	if use private-headers; then
-		insinto ${QTHEADERDIR}/QtGui/private
+		insinto "${QTHEADERDIR#${EPREFIX}}"/QtGui/private
 		find "${S}"/src/gui -type f -name "*_p.h" -exec doins {} \;
 	fi
 

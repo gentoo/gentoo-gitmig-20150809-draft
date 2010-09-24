@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.0.ebuild,v 1.2 2010/09/23 21:33:48 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.0.ebuild,v 1.3 2010/09/24 06:59:51 wired Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -111,7 +111,7 @@ src_install() {
 
 	#install private headers
 	if use private-headers; then
-		insinto ${QTHEADERDIR}/QtCore/private
+		insinto "${QTHEADERDIR#${EPREFIX}}"/QtCore/private
 		find "${S}"/src/corelib -type f -name "*_p.h" -exec doins {} \;
 	fi
 	# use freshly built libraries
