@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.5.ebuild,v 1.2 2010/09/05 10:34:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.5.ebuild,v 1.3 2010/09/24 21:38:12 pacho Exp $
 
 EAPI="2"
 
@@ -19,8 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.18
 	>=gnome-base/nautilus-2.14
 	>=gnome-base/gconf-2.13.0
 	bluetooth? (
-		|| ( >=net-wireless/gnome-bluetooth-2.27
-			 >=net-wireless/bluez-gnome-1.8 )
+		>=net-wireless/gnome-bluetooth-2.27
 		>=dev-libs/dbus-glib-0.60 )
 	cdr? ( >=app-cdr/brasero-2.26.0[nautilus] )
 	gajim? (
