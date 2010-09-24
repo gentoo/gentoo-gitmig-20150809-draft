@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.21 2010/08/26 17:24:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.22 2010/09/24 14:36:29 arfrever Exp $
+
+  24 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mercurial-1.6.3.ebuild, mercurial-9999.ebuild:
+  Support installation for multiple Python ABIs (bug #329489).
 
 *mercurial-1.6.3 (26 Aug 2010)
 

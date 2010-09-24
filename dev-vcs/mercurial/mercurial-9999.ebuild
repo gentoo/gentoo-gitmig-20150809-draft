@@ -1,10 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.6 2010/06/22 18:49:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.7 2010/09/24 14:36:29 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="threads"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit bash-completion elisp-common flag-o-matic eutils distutils mercurial
+inherit bash-completion elisp-common eutils distutils mercurial
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="http://mercurial.selenic.com/"
@@ -15,26 +19,26 @@ SLOT="0"
 KEYWORDS=""
 IUSE="bugzilla emacs gpg test tk zsh-completion"
 
-CDEPEND=">=dev-lang/python-2.4[threads]"
-RDEPEND="${CDEPEND}
-	bugzilla? ( dev-python/mysql-python )
+RDEPEND="bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
 	tk? ( dev-lang/tk )
 	zsh-completion? ( app-shells/zsh )"
-DEPEND="${CDEPEND}
-	emacs? ( virtual/emacs )
+DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
 		dev-python/pygments )
 	app-text/asciidoc"
 
 S="${WORKDIR}/hg"
 
+PYTHON_CFLAGS=(
+	"2.* + -fno-strict-aliasing"
+	"* - -ftracer -ftree-vectorize"
+)
+
 PYTHON_MODNAME="${PN} hgext"
 SITEFILE="70${PN}-gentoo.el"
 
 src_compile() {
-	filter-flags -ftracer -ftree-vectorize
-
 	distutils_src_compile
 
 	if use emacs; then
@@ -103,10 +107,13 @@ src_test() {
 		rm -f test-journal-exists
 		rm -f test-repair-strip
 	fi
-	local testdir="${T}/tests"
-	rm -rf "${testdir}"
-	einfo "Running Mercurial tests ..."
-	python run-tests.py --tmpdir="${testdir}" || die "test failed"
+
+	testing() {
+		local testdir="${T}/tests-${PYTHON_ABI}"
+		rm -rf "${testdir}"
+		"$(PYTHON)" run-tests.py -j4 --tmpdir="${testdir}"
+	}
+	python_execute_function testing
 }
 
 pkg_postinst() {
