@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.471 2010/09/11 18:24:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.472 2010/09/24 22:50:05 nirbheek Exp $
+
+*gtk+-2.22.0 (24 Sep 2010)
+
+  24 Sep 2010; <nirbheek@gentoo.org> +files/gtk+-2.21.3-multilib.patch,
+  +gtk+-2.22.0.ebuild:
+  Bump to 2.22.0, gdk-pixbuf has been split off and the pixbuf directories
+  changed
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gtk+-2.20.1-r1.ebuild:
   Marked ppc for bug #324077.
