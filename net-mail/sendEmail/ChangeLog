@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sendEmail
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.15 2009/09/12 04:43:24 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.16 2010/09/24 22:29:54 mrness Exp $
+
+*sendEmail-1.56 (24 Sep 2010)
+
+  24 Sep 2010; Alin Năstac <mrness@gentoo.org> +sendEmail-1.56.ebuild:
+  Version bump (#316521).
 
   12 Sep 2009; Alin Năstac <mrness@gentoo.org> sendEmail-1.55.ebuild:
   Set LICENSE=GPL-2 (#283976).
