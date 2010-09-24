@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.3 2010/05/06 22:45:44 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.1 2010/09/24 19:35:27 sochotnicky Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ RDEPEND="=sys-libs/db-4.5*
 	dev-libs/elfutils
 	virtual/libintl
 	>=dev-lang/perl-5.8.8
+	dev-libs/nss
 	python? ( >=dev-lang/python-2.3 )
 	nls? ( virtual/libintl )
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
