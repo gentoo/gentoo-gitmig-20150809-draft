@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/net-http-0.3.1-r1.ebuild,v 1.1 2010/09/24 13:17:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/net-http-0.3.1-r1.ebuild,v 1.2 2010/09/24 13:19:05 jlec Exp $
 
 EAPI="3"
 
@@ -18,13 +18,18 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}"
 
+src_configure() {
+	# Scheme doesn't compile
+	true
+}
+
 src_compile() {
 	# Scheme doesn't compile
 	true
 }
 
 src_install() {
-	local GUILE_DIR="${EPREFIX}/usr/share/guile/site"
+	local GUILE_DIR="/usr/share/guile/site"
 	insinto ${GUILE_DIR}
 	doins -r "${S}"/net || die
 	dodoc "${S}"/README || die
