@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Hook-LexWrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.22 2010/08/05 06:54:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.23 2010/09/24 17:55:50 tove Exp $
+
+*Hook-LexWrap-0.24 (24 Sep 2010)
+
+  24 Sep 2010; Torsten Veller <tove@gentoo.org> +Hook-LexWrap-0.24.ebuild:
+  Version bump. Only test changes
 
 *Hook-LexWrap-0.23 (05 Aug 2010)
 
