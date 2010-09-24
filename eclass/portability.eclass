@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.15 2010/02/26 18:09:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.16 2010/09/24 02:22:08 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -28,7 +28,12 @@ treecopy() {
 #
 # compatibility function that mimes seq command if not available
 seq() {
-	local p=$(type -P seq)
+	# First try `seq`
+	local p=$(type -P seqf)
+	if [[ -n ${p} ]] ; then
+		"${p}" "$@"
+		return $?
+	fi
 
 	case $# in
 		1) min=1  max=$1 step=1  ;;
@@ -37,19 +42,29 @@ seq() {
 		*) die "seq called with wrong number of arguments" ;;
 	esac
 
-	if [[ -z ${p} ]] ; then
+	# Then try `jot`
+	p=$(type -P jot)
+	if [[ -n ${p} ]] ; then
 		local reps
 		# BSD userland
-		if [[ ${step} != 0 ]]; then
-			reps=$(( ($max-$min) / $step +1 ))
+		if [[ ${step} != 0 ]] ; then
+			reps=$(( (max - min) / step + 1 ))
 		else
 			reps=0
 		fi
 
 		jot $reps $min $max $step
-	else
-		"${p}" $min $step $max
+		return $?
 	fi
+
+	# Screw it, do the output ourselves
+	while :; do
+		[[ $max < $min && $step > 0 ]] && break
+		[[ $min < $max && $step < 0 ]] && break
+		echo $min
+		: $(( min += step ))
+	done
+	return 0
 }
 
 # Gets the linker flag to link to dlopen() function
