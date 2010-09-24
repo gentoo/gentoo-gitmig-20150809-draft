@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1_p2-r1.ebuild,v 1.1 2010/09/23 21:05:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1_p2-r1.ebuild,v 1.2 2010/09/24 15:32:15 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -40,7 +40,6 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )"
 #	sdb-ldap? ( net-nds/openldap )
-
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )

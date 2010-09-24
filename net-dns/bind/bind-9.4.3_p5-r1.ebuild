@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p5-r1.ebuild,v 1.1 2010/09/23 21:05:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p5-r1.ebuild,v 1.2 2010/09/24 15:32:15 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -16,7 +16,6 @@ HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 #	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
-
 
 LICENSE="as-is"
 SLOT="0"
