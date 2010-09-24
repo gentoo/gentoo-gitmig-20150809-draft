@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.713 2010/09/18 09:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.714 2010/09/24 11:17:12 armin76 Exp $
+
+  24 Sep 2010; Raúl Porcel <armin76@gentoo.org> glibc-2.12.1-r1.ebuild:
+  Mark -sparc since it fails to build, bug #336792
 
   18 Sep 2010; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
