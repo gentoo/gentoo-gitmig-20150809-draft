@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.4.3-r3.ebuild,v 1.5 2010/09/23 22:47:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.4.3-r3.ebuild,v 1.6 2010/09/24 09:42:33 lu_zero Exp $
 
 PATCH_VER="1.4"
 UCLIBC_VER="1.0"
@@ -8,25 +8,22 @@ UCLIBC_VER="1.0"
 ETYPE="gcc-compiler"
 
 # Hardened gcc 4 stuff
-#PIE_VER="10.1.5"
-#SPECS_VER="0.9.4"
-
-# arch/libc configurations known to be stable or untested with {PIE,SSP,FORTIFY}-by-default
-#PIE_GLIBC_STABLE="x86 amd64 ~ppc ~ppc64 ~arm ~sparc"
-#PIE_UCLIBC_STABLE="x86 arm"
-#SSP_STABLE="amd64 x86 ppc ppc64 ~arm ~sparc"
-#SSP_UCLIBC_STABLE=""
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
+PIE_VER="0.4.5"
+SPECS_VER="0.2.0"
+# arch/libc configurations known to be stable with {PIE,SSP}-by-default
+PIE_GLIBC_STABLE="x86 amd64 ppc ppc64 arm ia64"
+PIE_UCLIBC_STABLE="x86 amd64 arm ppc ppc64"
+SSP_STABLE="amd64 x86 amd64 ppc ppc64 arm"
+# uclibc need tls and nptl support for SSP support
+SSP_UCLIBC_STABLE=""
+#end Hardened stuff
 
 inherit toolchain
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
 LICENSE="GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.2"
-KEYWORDS="alpha amd64 arm -hppa ia64 ~mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-devel/gcc-config-1.4
