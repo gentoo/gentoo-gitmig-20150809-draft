@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/columnize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.13 2010/07/17 17:20:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.14 2010/09/24 15:26:19 graaff Exp $
+
+*columnize-0.3.1-r2 (24 Sep 2010)
+
+  24 Sep 2010; Hans de Graaff <graaff@gentoo.org>
+  +columnize-0.3.1-r2.ebuild:
+  Add ree18 target.
 
   17 Jul 2010; Raúl Porcel <armin76@gentoo.org> columnize-0.3.1-r1.ebuild:
   Add ~sparc wrt #322053
