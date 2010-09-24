@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.52 2010/09/10 10:07:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.53 2010/09/24 21:32:51 pacho Exp $
+
+*bluez-4.72 (24 Sep 2010)
+
+  24 Sep 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.70.ebuild,
+  +bluez-4.72.ebuild, +files/conf.d-dund, +files/init.d-dund, metadata.xml:
+  Version bump with multiple fixes and initial support for HDP plugin, mcap
+  plugin configure option was dropped as it is enabled when needed at
+  runtime. Provide a dund init script as demanded by DMoL in bug #328847.
+  Remove old.
 
 *bluez-4.71 (10 Sep 2010)
 

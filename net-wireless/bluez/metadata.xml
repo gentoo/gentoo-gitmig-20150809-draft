@@ -19,6 +19,7 @@
 			determine access to bluetooth devices based on whether a user is
 			logged in locally or remotely</flag>
 		<flag name='mcap'>Compile with initial support for MCAP</flag>
+		<flag name='health'>Compile with initial support for HDP</flag>
 		<flag name='maemo6'>Compile with maemo6 plugin</flag>
 		<flag name='old-daemons'>Install old daemons like hidd and sdpd that are
 			deprecated by the new Service framework</flag>
