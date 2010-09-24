@@ -1,6 +1,11 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.154 2010/09/24 03:13:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.155 2010/09/24 08:03:16 zmedico Exp $
+
+  24 Sep 2010; Zac Medico <zmedico@gentoo.org> acroread-9.3.3.ebuild,
+  acroread-9.3.4.ebuild:
+  Bug #331753 - Only pull in openssl-0.9.8* on x86 since it's provided by
+  app-emulation/emul-linux-x86-baselibs on amd64.
 
   24 Sep 2010; Zac Medico <zmedico@gentoo.org> acroread-9.3.3.ebuild,
   acroread-9.3.4.ebuild:

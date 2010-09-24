@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.3.4.ebuild,v 1.4 2010/09/24 03:13:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.3.4.ebuild,v 1.5 2010/09/24 08:03:16 zmedico Exp $
 
 inherit eutils gnome2-utils nsplugins
 
@@ -32,7 +32,7 @@ RESTRICT="strip mirror"
 
 # mozilla-firefox-bin won't work because it doesn't have gtkembedmoz.so
 RDEPEND="media-libs/fontconfig
-	=dev-libs/openssl-0.9.8*
+	x86? ( =dev-libs/openssl-0.9.8* )
 	cups? ( net-print/cups )
 	x86? ( >=x11-libs/gtk+-2.0
 			ldap? ( net-nds/openldap )
