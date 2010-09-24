@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.37 2010/09/17 11:16:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.38 2010/09/24 13:25:48 jlec Exp $
+
+  24 Sep 2010; Justin Lecher <jlec@gentoo.org> gtkglarea-2.0.1.ebuild:
+  Keyworded for ~-linux
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   gtkglarea-1.2.3-r1.ebuild, gtkglarea-1.99.0.ebuild,
