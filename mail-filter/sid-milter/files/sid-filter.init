@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/files/sid-filter.init,v 1.3 2009/12/12 10:53:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/files/sid-filter.init,v 1.4 2010/09/24 19:59:23 mrness Exp $
 
 depend() {
 	# need net
@@ -31,9 +31,23 @@ parse_opts() {
 	fi
 }
 
+clean_socket() {
+	local socket_file= svc_pid=
+
+	socket_file="$(echo ${SID_FILTER_OPTS} | sed -e 's/.*local:\(.*\) .*/\1/' | awk '{print $1}')"
+	svc_pid="$(ps -C sid-filter -o pid=)"
+	if [[ -z "${svc_pid}" ]]  && [[ ! -z "${socket_file}" ]] && [[ -S "${socket_file}" ]]; then
+		ewarn "Strange, the socket file already exist in \"${socket_file}\""
+		ewarn "it will be removed now and re-created by the sid-filter server"
+		ewarn "BUT please make your checks."
+		rm -f "${socket_file}"
+	fi
+}
+
 start() {
 	local filter_user= filter_pid=
 
+	clean_socket
 	parse_opts
 	if ! (touch ${filter_pid} && chown ${filter_user} ${filter_pid}) ; then
 		eerror "Failed to create pidfile"
