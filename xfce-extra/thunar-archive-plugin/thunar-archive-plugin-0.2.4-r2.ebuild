@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.2.4-r2.ebuild,v 1.10 2010/09/10 17:25:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.2.4-r2.ebuild,v 1.11 2010/09/24 14:09:44 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -9,7 +9,7 @@ inherit xfconf
 DESCRIPTION="Thunar archive plugin"
 HOMEPAGE="http://www.foo-projects.org/~benny/projects/thunar-archive-plugin"
 SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/0.2/${P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-thunarx-2.patch.bz2"
+	mirror://gentoo/${PN}-0.2.4-thunarx-2.patch.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -30,7 +30,7 @@ pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-7zlzmaxz.patch )
 
 	if has_version ">=xfce-base/thunar-1.1.0"; then
-		PATCHES+=( "${WORKDIR}"/${P}-thunarx-2.patch )
+		PATCHES+=( "${WORKDIR}"/${PN}-0.2.4-thunarx-2.patch )
 	fi
 
 	XFCONF="--disable-dependency-tracking
