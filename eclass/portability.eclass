@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.16 2010/09/24 02:22:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.17 2010/09/24 14:29:49 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -29,7 +29,7 @@ treecopy() {
 # compatibility function that mimes seq command if not available
 seq() {
 	# First try `seq`
-	local p=$(type -P seqf)
+	local p=$(type -P seq)
 	if [[ -n ${p} ]] ; then
 		"${p}" "$@"
 		return $?
