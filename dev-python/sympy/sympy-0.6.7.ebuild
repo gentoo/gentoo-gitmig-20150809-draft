@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.1 2010/04/16 01:47:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.2 2010/09/24 20:09:13 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -39,6 +39,8 @@ src_prepare() {
 
 	# Use system sphinx.
 	epatch "${FILESDIR}/${PN}-0.6.6-sphinx.patch"
+
+	epatch "${FILESDIR}/${P}-python-2.7.patch"
 }
 
 src_compile() {
