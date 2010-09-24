@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.10 2010/09/12 17:08:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.11 2010/09/24 13:37:53 leio Exp $
+
+  24 Sep 2010; Mart Raudsepp <leio@gentoo.org> argparse-1.1.ebuild:
+  Add ~mips wrt #330569
 
   12 Sep 2010; Raúl Porcel <armin76@gentoo.org> argparse-1.1.ebuild:
   Add ~alpha/~arm/~ia64/~sparc wrt #330569
