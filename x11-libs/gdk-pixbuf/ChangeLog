@@ -1,0 +1,12 @@
+# ChangeLog for x11-libs/gdk-pixbuf
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.1 2010/09/24 22:51:13 nirbheek Exp $
+
+*gdk-pixbuf-2.22.0 (24 Sep 2010)
+
+  24 Sep 2010; <nirbheek@gentoo.org>
+  +files/gdk-pixbuf-2.21.4-fix-automagic-x11.patch,
+  +gdk-pixbuf-2.22.0.ebuild, +metadata.xml:
+  Add gdk-pixbuf, split off gtk+ so it can be shared b/w gtk+:2 and gtk+:3.
+  Inherits gtk's keywords.
+
