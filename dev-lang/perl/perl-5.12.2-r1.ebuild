@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.2-r1.ebuild,v 1.1 2010/09/21 14:26:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.2-r1.ebuild,v 1.2 2010/09/24 11:15:12 tove Exp $
 
 EAPI=3
 
@@ -271,9 +271,10 @@ src_compile() {
 }
 
 src_test() {
-#	if [[ ${EUID} == 0 ]] ; then
-#		mv t/op/filetest{.t,.disable} || die
-#	fi
+	if [[ ${EUID} == 0 ]] ; then
+		ewarn "Test fails with a sandbox error (#328793) if run as root. Skipping tests..."
+		return 0
+	fi
 	use elibc_uclibc && export MAKEOPTS+=" -j1"
 	TEST_JOBS=$(echo -j1 ${MAKEOPTS} | sed -r 's/.*(-j[[:space:]]*|--jobs=)([[:digit:]]+).*/\2/' ) \
 		make test_harness || die "test failed"
@@ -423,7 +424,9 @@ src_remove_dual_scripts() {
 			ff=`echo ${ROOT}/usr/share/man/man1/${i}-${ver}-${P}.1*`
 			ff=${ff##*.1}
 			alternatives_auto_makesym "/usr/bin/${i}" "/usr/bin/${i}-[0-9]*"
-			alternatives_auto_makesym "/usr/share/man/man1/${i}.1${ff}" "/usr/share/man/man1/${i}-[0-9]*"
+			if [[ ${i} != cpanp-run-perl ]] ; then
+				alternatives_auto_makesym "/usr/share/man/man1/${i}.1${ff}" "/usr/share/man/man1/${i}-[0-9]*"
+			fi
 		done
 	elif has "${EBUILD_PHASE:-none}" "setup" ; then
 		for i in "$@" ; do

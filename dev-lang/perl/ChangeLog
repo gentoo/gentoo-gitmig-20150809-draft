@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.324 2010/09/21 14:26:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.325 2010/09/24 11:15:12 tove Exp $
+
+  24 Sep 2010; Torsten Veller <tove@gentoo.org> perl-5.12.2-r1.ebuild:
+  Disable tests if run as root until there is a solution (#328793). Don't
+  try to create a link for missing cpan-run-perl manpage (#307179)
 
 *perl-5.12.2-r1 (21 Sep 2010)
 
