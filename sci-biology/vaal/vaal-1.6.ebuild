@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/vaal-1.6.ebuild,v 1.1 2010/09/20 04:50:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/vaal-1.6.ebuild,v 1.2 2010/09/24 15:54:59 weaver Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.broad.mit.edu/pub/crd/VAAL/VAAL.${PV}.tgz
 LICENSE="Whitehead-MIT"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 DEPEND=">=dev-libs/boost-1.41.0-r3"
 RDEPEND="${DEPEND}"

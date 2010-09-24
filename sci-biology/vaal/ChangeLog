@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.5 2010/09/20 04:50:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.6 2010/09/24 15:54:59 weaver Exp $
+
+  24 Sep 2010; Andrey Kislyuk <weaver@gentoo.org> vaal-1.6.ebuild:
+  Drop x86 from keywords
 
 *vaal-1.6 (20 Sep 2010)
 
