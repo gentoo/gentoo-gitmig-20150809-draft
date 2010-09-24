@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-10.sh,v 1.1 2010/09/22 23:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-10.sh,v 1.2 2010/09/24 02:20:33 vapier Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -27,6 +27,24 @@ if [ "${WANT_AUTOCONF}" = "2.1" ] && [ "${0##*/}" = "autom4te" ] ; then
 	err "Autoconf 2.13 doesn't contain autom4te.\n" \
 	    "   Either unset WANT_AUTOCONF or don't execute anything\n" \
 	    "   that would use autom4te."
+fi
+
+if ! seq 0 0 2>/dev/null 1>&2 ; then #338518
+	seq() {
+		local f l i
+		case $# in
+			1) f=1 i=1 l=$1;;
+			2) f=$1 i=1 l=$2;;
+			3) f=$1 i=$2 l=$3;;
+		esac
+		while :; do
+			[ $l -lt $f -a $i -gt 0 ] && break
+			[ $f -lt $l -a $i -lt 0 ] && break
+			echo $f
+			: $(( f += i ))
+		done
+		return 0
+	}
 fi
 
 #
