@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.0.ebuild,v 1.1 2010/09/24 22:51:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.0.ebuild,v 1.2 2010/09/24 23:35:55 nirbheek Exp $
 
 EAPI="3"
 
-inherit gnome.org flag-o-matic multilib libtool autotools virtualx
+inherit gnome.org multilib libtool autotools
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
@@ -60,15 +60,13 @@ src_configure() {
 	econf ${myconf}
 }
 
-src_test() {
-	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check || die "tests failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc AUTHORS NEWS* README* || die "dodoc failed"
+
+	# New library, remove .la files
+	rm -vf "${D}"/usr/lib*/gdk-pixbuf-2.0/*/loaders/*.la
 }
 
 pkg_postinst() {
