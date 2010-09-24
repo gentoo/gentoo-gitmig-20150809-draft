@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11974 2010/09/24 16:45:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11975 2010/09/24 21:43:35 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (24 Sep 2010)
+# Broken since more than a year when using nvidia-drivers (bug #260433), 
+# upstream no longer develops neither maintains it, most common 
+# distributions have already dropped it. 
+# Please use net-wireless/gnome-bluetooth:2 instead. Will be removed at 24 Nov 2010.
+net-wireless/bluez-gnome
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Sep 2010)
 # Mask new versions of glib, gtk+, etc
@@ -918,7 +925,6 @@ games-strategy/xscorch
 # Please don't ask for including testing packages in other emul
 # packages, this is an exception to current policy because some people
 # from X11 team needed 3D support even with bleeding edge Xorg.
-=app-emulation/emul-linux-x86-opengl-20100611-r99
 =app-emulation/emul-linux-x86-opengl-20100915-r99
 
 # Robert Piasek <dagger@gentoo.org> (09 Apr 2010)
