@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.14 2010/08/25 12:55:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.15 2010/09/24 11:43:26 flameeyes Exp $
+
+*ekeyd-1.1.3 (24 Sep 2010)
+
+  24 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ekeyd-1.1.1-r1.ebuild, -ekeyd-1.1.2.ebuild, +ekeyd-1.1.3.ebuild:
+  Version bump, add ChangeLog to the list of installed doc files. Cleanup
+  old versions.
 
 *ekeyd-1.1.2 (25 Aug 2010)
 
