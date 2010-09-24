@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.7 2010/09/16 17:24:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.8 2010/09/24 13:32:17 jlec Exp $
 
 EAPI="3"
 
@@ -48,7 +48,7 @@ SCHEMEDEPS="
 	dev-scheme/guile-gui
 	>=dev-scheme/guile-lib-0.1.6
 	dev-scheme/guile-www
-	=x11-libs/guile-gtk-2.1"
+	~x11-libs/guile-gtk-2.1"
 
 RDEPEND="
 	${SCIDEPS}
