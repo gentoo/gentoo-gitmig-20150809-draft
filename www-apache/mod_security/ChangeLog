@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.43 2010/09/24 13:02:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.44 2010/09/24 13:06:56 flameeyes Exp $
+
+  24 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/mod_security-2.5.9-as-needed.patch,
+  -files/2.1.2/99_mod_security.conf, -mod_security-2.5.9-r1.ebuild,
+  -files/mod_security-2.5.9-broken-autotools.patch,
+  -files/mod_security-2.5.10-broken-autotools.patch,
+  -mod_security-2.5.11-r2.ebuild,
+  -files/mod_security-2.5.11-disable-http-pollution.patch:
+  Cleanup old versions and unused files.
 
 *mod_security-2.5.12-r1 (24 Sep 2010)
 
