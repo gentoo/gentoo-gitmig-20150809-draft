@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.1 2010/09/16 15:53:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.2 2010/09/24 14:37:49 xmw Exp $
+
+*golly-2.1-r1 (24 Sep 2010)
+
+  24 Sep 2010; Michael Weber <xmw@gentoo.org> +golly-2.1-r1.ebuild:
+  Added dev-lang/perl[ithreads], fixes bug 338192, thanks Maks Verver.
 
 *golly-2.1 (16 Sep 2010)
 
