@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-0.31.0_p13.ebuild,v 1.6 2010/09/17 09:44:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-0.31.0_p13.ebuild,v 1.7 2010/09/24 20:44:37 hwoarang Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -15,7 +15,7 @@ SRC_URI="http://www.splitted-desktop.com/~gbeauchesne/${PN}/${PN}_${MY_PV}-1+sds
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="opengl"
 
 VIDEO_CARDS="dummy nvidia" # fglrx
