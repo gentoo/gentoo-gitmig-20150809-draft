@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.9.2_p1762.ebuild,v 1.1 2010/09/16 01:14:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.9.2_p1762.ebuild,v 1.2 2010/09/24 14:06:12 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -8,7 +8,7 @@ inherit gnome2
 
 DESCRIPTION="A GTK+ interface to MPlayer"
 HOMEPAGE="http://code.google.com/p/gnome-mplayer/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 #SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
