@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5982 2010/09/25 23:14:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5983 2010/09/25 23:53:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2734,6 +2734,7 @@ net-libs/webkit-gtk:websockets - enable full duplex single socket communication
 net-libs/xulrunner:custom-optimization - Fine-tune custom compiler optimizations
 net-libs/xulrunner:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 net-libs/xulrunner:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+net-libs/zeromq:pgm -  0MQ is build with 'Pragmatic General Multicast' (RFC 3208) support using the excellent OpenPGM implementation. 
 net-mail/courier-imap:trashquota - include deleted messages, and the Trash folder, in the estimated quota usage for maildirs
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/cyrus-imapd:replication - Enable replication support in the cyrus imap server
