@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.104 2010/02/25 18:38:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.105 2010/09/25 14:52:08 ssuominen Exp $
+
+  25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libtheora-1.1.1.ebuild:
+  USE="static-libs" and punt .la files.
 
   25 Feb 2010; Raúl Porcel <armin76@gentoo.org> libtheora-1.1.1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #298039
