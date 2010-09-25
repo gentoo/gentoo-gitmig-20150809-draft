@@ -1,6 +1,13 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.110 2010/06/21 13:50:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.111 2010/09/25 20:20:08 dilfridge Exp $
+
+*koffice-libs-2.2.2 (25 Sep 2010)
+
+  25 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +koffice-libs-2.2.2.ebuild, +files/koffice-libs-2.2.2-kspreadcommon.patch:
+  Version bump, including kchart (temporarily) and kformula (likely
+  permanent) in koffice-libs
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   koffice-libs-2.1.2.ebuild:
