@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.18 2010/09/21 20:40:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.19 2010/09/25 14:25:50 maekke Exp $
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> mpc-0.8.2.ebuild:
+  x86 stable, bug #338064
 
   21 Sep 2010; Markos Chandras <hwoarang@gentoo.org> mpc-0.8.2.ebuild:
   Stable on amd64 wrt bug #338064

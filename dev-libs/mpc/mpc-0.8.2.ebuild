@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.8.2.ebuild,v 1.5 2010/09/21 20:40:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.8.2.ebuild,v 1.6 2010/09/25 14:25:50 maekke Exp $
 
 # Unconditional dependency of gcc.  Keep this set to 0.
 EAPI=0
@@ -11,7 +11,7 @@ SRC_URI="http://www.multiprecision.org/mpc/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd"
 IUSE=""
 
 DEPEND=">=dev-libs/gmp-4.2.3
