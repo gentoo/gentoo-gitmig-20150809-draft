@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0-r1.ebuild,v 1.1 2010/09/06 10:56:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0-r1.ebuild,v 1.2 2010/09/25 20:22:54 bicatali Exp $
 
 EAPI=2
 JAVA_PKG_OPT_USE=gasgano
-inherit java-pkg-opt-2
+inherit eutils java-pkg-opt-2
 
 DESCRIPTION="ESO common pipeline library for astronomical data reduction"
 HOMEPAGE="http://www.eso.org/sci/data-processing/software/cpl/"
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	gasgano? ( >=virtual/jdk-1.5 )"
 
 src_configure() {
+	has_version sci-libs/cfitsio[static-libs] || \
+		sed -i -e 's/libcfitsio.a/libcfitsio.so/' configure
 	local myconf="--without-gasgano"
 	use gasgano && \
 		myconf="--with-gasgano=/usr

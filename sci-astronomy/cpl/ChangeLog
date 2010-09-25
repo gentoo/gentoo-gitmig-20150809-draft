@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/cpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.2 2010/09/06 10:56:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.3 2010/09/25 20:22:54 bicatali Exp $
+
+  25 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> cpl-5.2.0-r1.ebuild:
+  Fixed configure script when cfitsio is not built with static-libs
 
 *cpl-5.2.0-r1 (06 Sep 2010)
 
