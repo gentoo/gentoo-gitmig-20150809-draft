@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/coolkey
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.7 2008/08/30 20:23:32 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.8 2010/09/25 03:55:50 nerdboy Exp $
+
+*coolkey-1.1.0-r2 (25 Sep 2010)
+
+  25 Sep 2010; Steve Arnold <nerdboy@gentoo.org> -coolkey-1.1.0-r1.ebuild,
+  +coolkey-1.1.0-r2.ebuild, -files/coolkey-1.1.0-cache-move.patch,
+  -files/coolkey-1.1.0-gcc-4.3.patch:
+  Updated with upstream patches to support new CAC format and other fixes.
+  Closes bug #302769 (tested with new CAC on ppc and amd64).
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> coolkey-1.1.0-r1.ebuild:
   add ~amd64, bug #235627
