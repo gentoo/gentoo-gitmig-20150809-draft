@@ -1,6 +1,12 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.116 2010/05/15 16:50:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.117 2010/09/25 20:41:13 dilfridge Exp $
+
+*krita-2.2.2 (25 Sep 2010)
+
+  25 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +krita-2.2.2.ebuild:
+  Version bump
 
   15 May 2010; Maciej Mrozowski <reavertm@gentoo.org> krita-2.1.0.ebuild,
   krita-2.1.1.ebuild, krita-2.1.2.ebuild:
