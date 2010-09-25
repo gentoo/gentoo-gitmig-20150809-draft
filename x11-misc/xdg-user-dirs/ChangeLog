@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.6 2010/09/16 14:49:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.7 2010/09/25 14:01:24 maekke Exp $
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> xdg-user-dirs-0.13.ebuild:
+  add ~arm, bug #337632
 
   16 Sep 2010; Jeremy Olexa <darkside@gentoo.org> xdg-user-dirs-0.13.ebuild:
   Add prefix keywords, bug 337632
