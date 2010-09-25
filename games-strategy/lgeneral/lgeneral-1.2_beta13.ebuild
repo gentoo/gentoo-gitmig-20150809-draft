@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta13.ebuild,v 1.3 2009/10/30 11:23:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta13.ebuild,v 1.4 2010/09/25 13:27:11 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -30,7 +30,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gentoo-path.patch \
 		"${FILESDIR}"/${P}-64bit.patch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-make-382.patch
 
 	cp /usr/share/gettext/config.rpath .
 	rm -f missing

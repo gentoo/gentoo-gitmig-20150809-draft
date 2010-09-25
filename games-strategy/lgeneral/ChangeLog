@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lgeneral
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.29 2009/10/30 11:23:04 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.30 2010/09/25 13:27:11 ssuominen Exp $
+
+  25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  lgeneral-1.2_beta13.ebuild, +files/lgeneral-1.2_beta13-make-382.patch:
+  Fix building with make >= 3.82 wrt #337610 by Diego E. Pettenò.
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> lgeneral-1.2_beta13.ebuild:
   amd64/x86 stable, bug #290055
