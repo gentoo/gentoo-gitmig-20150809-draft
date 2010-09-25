@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5981 2010/09/25 21:13:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5982 2010/09/25 23:14:28 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1692,7 +1692,6 @@ media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering backend
 media-libs/clutter:introspection - Use dev-libs/gobject-introspection for introspection
-media-libs/clutter:opengl - Use virtual/opengl as the backend for rendering (default). If disabled, media-libs/libsdl is used.
 media-libs/clutter-gst:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/clutter-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/coin:simage - Texture loading via media-libs/simage library
