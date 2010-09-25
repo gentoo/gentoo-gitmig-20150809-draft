@@ -23,7 +23,7 @@
 		<!-- remote-id type="github">zeromq/zeromq2</remote-id-->
 	</upstream>
 	<longdescription lang="en">
-		The ØMQ lightweight messaging kernel is a library which
+		The 0MQ lightweight messaging kernel is a library which
 		extends the standard socket interfaces with features
 		traditionally provided by specialised messaging middleware
 		products. 0MQ sockets provide an abstraction of asynchronous
@@ -33,7 +33,7 @@
 	</longdescription>
 	<use>
 		<flag name="pgm">
-			ØMQ is build with 'Pragmatic General Multicast' (RFC 3208) support
+			0MQ is build with 'Pragmatic General Multicast' (RFC 3208) support
 			using the excellent OpenPGM implementation.
 		</flag>
 	</use>
