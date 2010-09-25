@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.191 2010/09/11 18:39:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.192 2010/09/25 14:32:42 pacho Exp $
+
+  25 Sep 2010; Pacho Ramos <pacho@gentoo.org> -libbonobo-2.24.2.ebuild,
+  libbonobo-2.24.3.ebuild:
+  Don't build tests and examples when not needed (bug #226223), also fix
+  intltoolize broken file as my local check says it's broken; finally
+  RESTRICT tests since they tend to fail on several ways even manually
+  compiling, upstream is aware but they don't seem to care, probably because
+  libbonobo is deprecated (bug #288689). Remove old testing.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> libbonobo-2.24.3.ebuild:
   Marked ppc for bug #324077.

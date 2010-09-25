@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.3.ebuild,v 1.8 2010/09/11 18:39:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.3.ebuild,v 1.9 2010/09/25 14:32:42 pacho Exp $
 
+EAPI="2"
 inherit gnome2
 
 DESCRIPTION="GNOME CORBA framework"
@@ -10,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ~ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="debug doc"
+IUSE="debug doc examples test"
 
 RDEPEND=">=dev-libs/glib-2.14
 	>=gnome-base/orbit-2.14.0
@@ -28,8 +29,28 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
+# Tests are broken in several ways as reported in bug #288689 and upstream
+# doesn't take care since libbonobo is deprecated.
+RESTRICT="test"
+
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable debug bonobo-activation-debug)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die
+
+	if ! use test; then
+		# don't waste time building tests, bug #226223
+		sed 's/tests//' -i Makefile.am Makefile.in || die
+	fi
+
+	if ! use examples; then
+		sed 's/samples//' -i Makefile.am Makefile.in || die
+	fi
 }
 
 src_test() {
