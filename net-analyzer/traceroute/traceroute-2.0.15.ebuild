@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.15.ebuild,v 1.1 2010/07/15 17:19:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.15.ebuild,v 1.2 2010/09/25 11:50:32 ssuominen Exp $
 
-inherit flag-o-matic toolchain-funcs
+EAPI=2
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Utility to trace the route of IP packets"
 HOMEPAGE="http://traceroute.sourceforge.net/"
@@ -12,6 +13,10 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-make-382.patch
+}
 
 src_compile() {
 	use static && append-ldflags -static
