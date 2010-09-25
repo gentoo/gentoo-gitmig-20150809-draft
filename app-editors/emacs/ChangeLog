@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.384 2010/09/22 07:35:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.385 2010/09/25 13:55:47 ulm Exp $
+
+*emacs-23.2-r1 (25 Sep 2010)
+*emacs-22.3-r5 (25 Sep 2010)
+*emacs-21.4-r21 (25 Sep 2010)
+
+  25 Sep 2010; Ulrich Mueller <ulm@gentoo.org> +emacs-21.4-r21.ebuild,
+  +emacs-22.3-r5.ebuild, +emacs-23.2-r1.ebuild:
+  Move regeneration of Info dir to pkg_preinst.
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> emacs-23.2.ebuild:
   Stable on amd64 wrt bug #337417
