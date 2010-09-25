@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.28 2010/09/25 14:20:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.29 2010/09/25 19:46:56 arfrever Exp $
+
+  25 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  urlgrabber-3.9.1.ebuild:
+  Require Python >=2.5 (bug #338333).
 
   25 Sep 2010; Markus Meier <maekke@gentoo.org> urlgrabber-3.9.1.ebuild:
   x86 stable, bug #337381
