@@ -1,6 +1,16 @@
 # ChangeLog for media-radio/cwdaemon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.13 2009/10/01 12:51:11 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.14 2010/09/25 11:52:32 tomjbe Exp $
+
+*cwdaemon-0.9.4 (25 Sep 2010)
+
+  25 Sep 2010; Thomas Beierlein <tomjbe@gentoo.org> +cwdaemon-0.9.4.ebuild,
+  metadata.xml:
+  Version bump.
+  - Fix broken HOMEPAGE
+  - Minor improvements
+  - Drop bundled cwlib and rely on media-radio/unixcw which provides it
+  - Drop alpha and ppc from KEYWORDS because dep misses that arches
 
   01 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> cwdaemon-0.9.2.ebuild:
   amd64 stable wrt #287063
