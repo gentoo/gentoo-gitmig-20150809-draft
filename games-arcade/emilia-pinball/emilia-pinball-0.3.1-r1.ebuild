@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.5 2010/04/13 18:03:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.6 2010/09/25 12:03:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	sed -i -e '/dnl/d' {src,test}/Makefile.am || die #334899
 	epatch "${FILESDIR}"/${P}-glibc210.patch \
 		"${FILESDIR}"/${P}-libtool.patch
 	rm -rf libltdl
