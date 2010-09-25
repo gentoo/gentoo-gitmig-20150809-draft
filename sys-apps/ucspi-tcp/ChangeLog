@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.68 2010/08/24 13:02:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.69 2010/09/25 13:43:22 maekke Exp $
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> ucspi-tcp-0.88-r17.ebuild:
+  arm stable, bug #333915
 
   24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ucspi-tcp-0.88-r17.ebuild:
