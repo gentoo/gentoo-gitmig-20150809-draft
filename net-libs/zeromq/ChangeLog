@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/zeromq
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.1 2010/09/25 19:59:21 flameeyes Exp $
+
+*zeromq-2.0.9 (25 Sep 2010)
+
+  25 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +zeromq-2.0.9.ebuild, +metadata.xml:
+  New ebuild, proxy-maintained by Mauro Toffanin.
+
