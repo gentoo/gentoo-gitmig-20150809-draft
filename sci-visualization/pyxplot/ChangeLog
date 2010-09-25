@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.20 2010/08/24 20:45:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.21 2010/09/25 19:38:40 bicatali Exp $
+
+*pyxplot-0.8.3 (25 Sep 2010)
+
+  25 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -pyxplot-0.8.1.ebuild, +pyxplot-0.8.3.ebuild,
+  +files/pyxplot-0.8.3-as-needed.patch:
+  Bump
 
 *pyxplot-0.8.2 (24 Aug 2010)
 
