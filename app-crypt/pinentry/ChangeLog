@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.111 2010/09/05 16:07:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.112 2010/09/25 09:20:32 ssuominen Exp $
+
+*pinentry-0.8.0-r1 (25 Sep 2010)
+
+  25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +pinentry-0.8.0-r1.ebuild:
+  Revision bump wrt #328189 by Federico Zenith. Fix USE static deps wrt
+  #331739 by "wd".
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> pinentry-0.8.0.ebuild:
   ia64/s390/sh/sparc stable wrt #299388
