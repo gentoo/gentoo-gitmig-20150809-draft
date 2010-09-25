@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xmodmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmodmap/ChangeLog,v 1.57 2010/02/25 07:13:55 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmodmap/ChangeLog,v 1.58 2010/09/25 16:59:27 scarabeus Exp $
+
+*xmodmap-1.0.5 (25 Sep 2010)
+
+  25 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xmodmap-1.0.5.ebuild:
+  Version bump.
 
   25 Feb 2010; Jonathan Callen <abcd@gentoo.org> xmodmap-1.0.4.ebuild:
   Transfer prefix keywords (no other changes)
