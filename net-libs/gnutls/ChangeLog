@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.258 2010/09/20 08:22:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.259 2010/09/25 14:19:14 maekke Exp $
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> gnutls-2.10.1.ebuild:
+  x86 stable, bug #337139
 
   20 Sep 2010; Markos Chandras <hwoarang@gentoo.org> gnutls-2.10.1.ebuild:
   Stable on amd64 wrt bug #337139
