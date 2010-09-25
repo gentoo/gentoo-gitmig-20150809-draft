@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.157 2010/09/18 20:17:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.158 2010/09/25 14:52:35 dilfridge Exp $
+
+*digikam-1.4.0-r1 (25 Sep 2010)
+
+  25 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +digikam-1.4.0-r1.ebuild, +files/digikam-1.4.0-docs.patch:
+  Added installation of the handbook (use-flag handbook, from a svn
+  snapshot) and the api documentation (use-flag doc)
 
   18 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   digikam-1.4.0.ebuild:
