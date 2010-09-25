@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.25.17.ebuild,v 1.1 2010/09/25 00:02:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.25.17.ebuild,v 1.2 2010/09/25 14:07:40 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -123,7 +123,7 @@ src_test() {
 }
 
 pkg_preinst() {
-	# Only give the introspection message if: 
+	# Only give the introspection message if:
 	# * The user has it enabled
 	# * Has glib already installed
 	# * Previous version was different from new version
