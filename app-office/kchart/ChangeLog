@@ -1,6 +1,14 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.106 2010/03/31 21:51:21 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.107 2010/09/25 20:27:27 dilfridge Exp $
+
+*kchart-2.2.2 (25 Sep 2010)
+
+  25 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kchart-2.2.2.ebuild:
+  Version bump. Dummy ebuild since in koffice-2.2.x the kchart component has
+  to be built together with koffice-libs. Will be (hopefully) fixed upstream
+  in 2.3.
 
 *kchart-2.1.2 (31 Mar 2010)
 
