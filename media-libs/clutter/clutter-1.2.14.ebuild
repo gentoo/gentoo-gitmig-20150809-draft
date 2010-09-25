@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.1 2010/09/25 22:41:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.2 2010/09/25 22:51:29 nirbheek Exp $
 
 EAPI="2"
 
@@ -26,7 +26,9 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/libXfixes-3
 	>=x11-libs/libXcomposite-0.4
 
-	gtk? ( >=x11-libs/gtk+-2.0 )
+	gtk? ( || ( 
+		x11-libs/gdk-pixbuf
+		>=x11-libs/gtk+-2.0 ) )
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

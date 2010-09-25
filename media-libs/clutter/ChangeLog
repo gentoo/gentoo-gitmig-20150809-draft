@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.6 2010/09/25 22:41:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.7 2010/09/25 22:51:29 nirbheek Exp $
+
+  25 Sep 2010; <nirbheek@gentoo.org>
+  -files/clutter-1.0.0-disable-tests.patch, clutter-1.2.14.ebuild,
+  metadata.xml:
+  Try to directly use gdk-pixbuf instead of gtk+. Remove unused patch and
+  unused local-use-flag description.
 
 *clutter-1.2.14 (25 Sep 2010)
 
