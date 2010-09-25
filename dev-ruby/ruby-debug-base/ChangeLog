@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-debug-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.13 2010/08/13 06:17:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.14 2010/09/25 05:52:30 graaff Exp $
+
+*ruby-debug-base-0.10.3-r2 (25 Sep 2010)
+
+  25 Sep 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-debug-base-0.10.3-r2.ebuild:
+  Add ree18 target.
 
   13 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-debug-base-0.10.3.ebuild:
