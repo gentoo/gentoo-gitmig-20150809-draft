@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.06.ebuild,v 1.2 2010/07/10 19:27:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.06.ebuild,v 1.3 2010/09/25 13:31:54 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	sed -i -e '/dnl/d' libxnee/src/Makefile.am || die #333983
 	epatch "${FILESDIR}"/${PN}-3.05-asneeded.patch
 	eautoreconf
 }
