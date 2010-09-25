@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.13 2008/12/21 04:31:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.14 2010/09/25 12:12:28 ssuominen Exp $
 
 inherit eutils games
 
@@ -24,7 +24,8 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${PN}-gcc-3.4.patch \
-		"${FILESDIR}"/${PN}-tkconq.patch
+		"${FILESDIR}"/${PN}-tkconq.patch \
+		"${FILESDIR}"/${PN}-make-382.patch
 }
 
 src_compile() {

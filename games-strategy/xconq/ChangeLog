@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/xconq
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.14 2008/12/21 04:31:45 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.15 2010/09/25 12:12:28 ssuominen Exp $
+
+  25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> xconq-7.4.1.ebuild,
+  +files/xconq-make-382.patch:
+  Fix building with make >= 3.82 wrt #336200 by Diego E. Pettenò.
 
   21 Dec 2008; Jeremy Olexa <darkside@gentoo.org> xconq-7.4.1.ebuild:
   amd64 stable, bug 234953
