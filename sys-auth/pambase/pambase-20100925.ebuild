@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100819.ebuild,v 1.2 2010/09/04 15:31:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100925.ebuild,v 1.1 2010/09/25 20:32:06 flameeyes Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~flameeyes/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp ssh +sha512 kerberos"
+IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp ssh +sha512 kerberos minimal"
 RESTRICT="binchecks"
 
 RDEPEND="
@@ -71,6 +71,7 @@ src_compile() {
 		$(use_var PAM_SSH ssh) \
 		$(use_var sha512) \
 		$(use_var KRB5 kerberos) \
+		$(use_var minimal) \
 		IMPLEMENTATION=${implementation} \
 		LINUX_PAM_VERSION=${linux_pam_version} \
 		|| die "emake failed"
