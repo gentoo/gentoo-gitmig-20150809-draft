@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.26 2010/08/18 21:49:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.27 2010/09/25 02:08:47 nirbheek Exp $
+
+*polkit-0.99 (25 Sep 2010)
+
+  25 Sep 2010; <nirbheek@gentoo.org> +polkit-0.99.ebuild:
+  Bump to 0.99, masked due to >=glib-2.25 requirement
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> polkit-0.96-r1.ebuild:
   arm stable, bug #314899
