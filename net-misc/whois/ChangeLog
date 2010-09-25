@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.146 2010/09/25 06:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.147 2010/09/25 15:13:27 jer Exp $
+
+  25 Sep 2010; Jeroen Roovers <jer@gentoo.org> whois-5.0.5.ebuild:
+  Stable for SPARC (bug #329663).
 
 *whois-5.0.7 (25 Sep 2010)
 
