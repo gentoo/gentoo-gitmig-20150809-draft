@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/imapfilter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.30 2009/10/23 10:35:24 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.31 2010/09/25 07:03:24 radhermit Exp $
+
+*imapfilter-2.2.2 (25 Sep 2010)
+
+  25 Sep 2010; Tim Harder <radhermit@gentoo.org> +imapfilter-2.2.2.ebuild:
+  Version bump (fixes bug #326851, thanks to Jean-Baptiste Rouault for
+  reporting).
 
 *imapfilter-2.0.11 (23 Oct 2009)
 
