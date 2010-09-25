@@ -6,5 +6,9 @@
 		<name>Nirbheek Chauhan</name>
 	</maintainer>
 	<herd>gnome</herd>
+	<use>
+		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
+			introspection</flag>
+	</use>
 </pkgmetadata>
 
