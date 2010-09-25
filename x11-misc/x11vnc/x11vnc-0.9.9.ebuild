@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.11 2010/08/28 10:38:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.12 2010/09/25 20:18:14 swegener Exp $
 
 EAPI="2"
 
@@ -48,7 +48,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.9.11-rename-pointer.patch
+	epatch \
+		"${FILESDIR}"/${PN}-0.9.11-rename-pointer.patch \
+		"${FILESDIR}"/${PN}-0.9.12-warnings.patch
 }
 
 src_configure() {
