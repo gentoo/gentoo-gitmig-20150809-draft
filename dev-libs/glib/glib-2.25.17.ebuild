@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.25.17.ebuild,v 1.2 2010/09/25 14:07:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.25.17.ebuild,v 1.3 2010/09/25 14:59:47 nirbheek Exp $
 
 EAPI="2"
 
@@ -30,11 +30,6 @@ PDEPEND="introspection? ( dev-libs/gobject-introspection )"
 # XXX: Consider adding test? ( sys-devel/gdb ); assert-msg-test tries to use it
 
 src_prepare() {
-	if use ppc64 && use hardened ; then
-		replace-flags -O[2-3] -O1
-		epatch "${FILESDIR}/glib-2.6.3-testglib-ssp.patch"
-	fi
-
 	if use ia64 ; then
 		# Only apply for < 4.1
 		local major=$(gcc-major-version)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.423 2010/09/25 00:02:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.424 2010/09/25 14:59:47 nirbheek Exp $
+
+  25 Sep 2010; <nirbheek@gentoo.org> glib-2.25.17.ebuild:
+  Drop patch that is no longer used for in-tree 2.24 ebuilds. Syncing error
+  pointed out by eva
 
 *glib-2.25.17 (25 Sep 2010)
 
