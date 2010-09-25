@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.30.1.ebuild,v 1.5 2010/09/11 18:37:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.30.1.ebuild,v 1.6 2010/09/25 17:16:55 ssuominen Exp $
 
 inherit autotools eutils gnome2 python virtualx
 
@@ -59,6 +59,8 @@ src_unpack() {
 
 	# should fix tests
 	epatch "${FILESDIR}"/${PN}-1.22.0-tests.patch
+
+	epatch "${FILESDIR}"/${PN}-1.30.1-make-382.patch
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
