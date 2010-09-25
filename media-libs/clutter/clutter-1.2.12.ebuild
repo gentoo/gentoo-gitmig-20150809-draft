@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.12.ebuild,v 1.1 2010/09/07 20:05:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.12.ebuild,v 1.2 2010/09/25 13:44:10 eva Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.11
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )
-	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
 
 src_configure() {
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
