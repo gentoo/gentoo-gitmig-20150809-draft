@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.30 2010/08/10 22:17:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.31 2010/09/25 13:53:02 maekke Exp $
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> nettle-2.1.ebuild:
+  add ~arm, bug #337367
 
 *nettle-2.1 (10 Aug 2010)
 
