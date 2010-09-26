@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.14 2010/09/11 10:27:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.15 2010/09/26 17:22:07 anarchy Exp $
+
+*thunderbird-bin-3.1.4 (26 Sep 2010)
+
+  26 Sep 2010; Jory A. Pratt <anarchy@gentoo.org>
+  -thunderbird-bin-3.1.1.ebuild, +thunderbird-bin-3.1.4.ebuild:
+  Update for misc fixes, remove stale ebuild
 
   11 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   thunderbird-bin-3.1.3.ebuild:
