@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5_pre20091222.ebuild,v 1.2 2010/03/02 22:11:19 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5_pre20100921.ebuild,v 1.1 2010/09/26 14:00:20 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs
 
-MY_PV=1.4.20091222
+MY_PV=1.4.20100921
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="MiniUPnP IGD Daemon"
@@ -20,15 +20,24 @@ IUSE=""
 RDEPEND=">=net-firewall/iptables-1.4.6
 	sys-apps/lsb-release
 	>=sys-kernel/linux-headers-2.6.31"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-apps/util-linux
+	"
 
 src_prepare() {
 	mv Makefile.linux Makefile
 	epatch "${FILESDIR}/${PN}-1.3-iptables_path.diff"
 	epatch "${FILESDIR}/${PN}-1.3-Makefile_fix.diff"
 	epatch "${FILESDIR}/${PN}-1.5-iptcrdr.diff"
-	sed -i -e "s#^CFLAGS = #CFLAGS = -I${KV_OUT_DIR}/include #" Makefile
-	sed -i "s/LIBS = -liptc/LIBS = -lip4tc/g" Makefile
+	sed -i \
+		-e "s#^CFLAGS = .*-D#CPPFLAGS += -I${KERNEL_DIR}/include -D#" \
+		-e '/^CFLAGS :=/s/CFLAGS/CPPFLAGS/g' \
+		-e "s/LIBS = -liptc/LIBS = -lip4tc/g" \
+		-e 's/genuuid||//' \
+		Makefile || die
+	sed -i \
+		-e 's/\(strncpy(\([->a-z.]\+\), "[a-zA-Z]\+", \)IPT_FUNCTION_MAXNAMELEN);/\1sizeof(\2));/' \
+		netfilter/iptcrdr.c || die
 	emake config.h
 }
 
