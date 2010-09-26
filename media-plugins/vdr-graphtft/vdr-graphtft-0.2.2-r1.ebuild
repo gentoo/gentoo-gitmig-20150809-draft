@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.5 2009/10/22 15:05:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.6 2010/09/26 16:36:36 hd_brummy Exp $
 
 EAPI="2"
 
@@ -10,7 +10,6 @@ DESCRIPTION="VDR plugin: GraphTFT"
 HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin"
 SRC_URI="http://www.jwendel.de/vdr/${P}.tar.bz2
 		http://www.jwendel.de/vdr/DeepBlue-horchi-0.0.11.tar.bz2"
-#		http://www.jwendel.de/vdr/alien-vs-predator-0.0.11.tar.bz2"
 
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
@@ -18,7 +17,6 @@ LICENSE="GPL-2 LGPL-2.1"
 IUSE="directfb graphtft-fe imagemagick"
 
 DEPEND=">=media-video/vdr-1.6.0_p2-r1[graphtft]
-		media-fonts/ttf-bitstream-vera
 		media-libs/imlib2[png,jpeg]
 		imagemagick? ( media-gfx/imagemagick[png] )
 		gnome-base/libgtop
@@ -95,11 +93,6 @@ src_install() {
 	insinto /usr/share/vdr/graphTFT/themes/DeepBlue/
 	doins -r "${WORKDIR}"/DeepBlue/*
 
-#	insinto /usr/share/vdr/graphTFT/themes/avp/
-#	doins -r "${WORKDIR}"/avp/*
-
-	dosym /usr/share/fonts/ttf-bitstream-vera /usr/share/vdr/graphTFT/fonts
-
 	dodoc "${S}"/documents/*
 
 	if use graphtft-fe; then
@@ -111,9 +104,11 @@ src_install() {
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
-	echo
-	elog "Graphtft-fe user:"
-	elog "Edit /etc/conf.d/vdr.graphtft"
-	elog "/etc/init.d/graphtft-fe start"
-	echo
+	if use graphtft-fe; then
+		echo
+		elog "Graphtft-fe user:"
+		elog "Edit /etc/conf.d/vdr.graphtft"
+		elog "/etc/init.d/graphtft-fe start"
+		echo
+	fi
 }

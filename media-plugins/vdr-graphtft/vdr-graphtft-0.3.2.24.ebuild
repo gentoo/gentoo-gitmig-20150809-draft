@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.5 2010/06/16 12:21:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.6 2010/09/26 16:36:36 hd_brummy Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ IUSE_THEMES="+theme_deepblue theme_avp theme_deeppurple theme_poetter"
 IUSE="${IUSE_THEMES} directfb graphtft-fe imagemagick touchscreen"
 
 DEPEND=">=media-video/vdr-1.6.0_p2-r1[graphtft]
-		media-fonts/ttf-bitstream-vera
 		media-libs/imlib2[png,jpeg]
 		gnome-base/libgtop
 		>=media-video/ffmpeg-0.4.8_p20090201
@@ -96,10 +95,6 @@ src_compile() {
 
 src_install() {
 	vdr-plugin_src_install
-
-	keepdir /usr/share/vdr/graphTFT/themes
-
-	dosym /usr/share/fonts/ttf-bitstream-vera /usr/share/vdr/graphTFT/fonts
 
 	dodoc "${S}"/documents/{README,HISTORY,HOWTO.Themes,INSTALL}
 
