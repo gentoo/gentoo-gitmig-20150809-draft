@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.0a.ebuild,v 1.10 2010/09/04 14:51:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.0a.ebuild,v 1.11 2010/09/26 23:10:02 ssuominen Exp $
 
 EAPI=2
 inherit libtool
@@ -18,7 +18,7 @@ DEPEND="jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )
 	zlib? ( sys-libs/zlib )"
 
-RESTRICT="test" # Segment maxima GBD test fails with gcc-4.4, but not with gcc-4.5
+RESTRICT="test" # Segment maxima GBD test fails randomly
 
 S=${WORKDIR}/${P/a}
 
