@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/latexsuite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.35 2009/12/17 10:38:27 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.36 2010/09/26 05:42:00 radhermit Exp $
+
+*latexsuite-1.8.23.20100129 (26 Sep 2010)
+
+  26 Sep 2010; Tim Harder <radhermit@gentoo.org>
+  +latexsuite-1.8.23.20100129.ebuild:
+  Version bump (fixes bug #289870, thanks to Cornelius Weig for reporting
+  and ferret for the ebuild updates) and update to EAPI=3.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   latexsuite-1.5.20060325.ebuild:
