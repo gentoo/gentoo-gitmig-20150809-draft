@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/conspire
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.14 2010/09/26 21:39:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.15 2010/09/26 21:50:45 chainsaw Exp $
+
+  26 Sep 2010; <chainsaw@gentoo.org> -conspire-0.12.0.ebuild,
+  -conspire-0.13.1.ebuild, -conspire-1.0_beta1.ebuild:
+  Clean up old ebuilds.
 
 *conspire-1.0.1 (26 Sep 2010)
 
