@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/bkodama
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/bkodama/ChangeLog,v 1.1 2010/09/26 12:00:29 dilfridge Exp $
+
+*bkodama-0.2.1 (26 Sep 2010)
+
+  26 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +bkodama-0.2.1.ebuild, +metadata.xml:
+  New application, fixes bug 302921
+
