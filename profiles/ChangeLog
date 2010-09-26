@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4591 2010/09/26 13:04:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4592 2010/09/26 16:43:13 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Sep 2010; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-graphtft-0.1.21_alpha-r1 masked for removel
 
   26 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> base/make.defaults:
   Add new GPSD_PROTOCOLS to make.defaults.
