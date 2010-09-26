@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.202 2010/09/11 18:58:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.203 2010/09/26 19:39:24 nirbheek Exp $
+
+  26 Sep 2010; <nirbheek@gentoo.org> gnome-utils-2.30.0.ebuild:
+  Fix build issues with gtk+-2.22 by removing -D*DISABLE_DEPRECATED cflags.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gnome-utils-2.30.0.ebuild:
   Marked ppc for bug #324077.
