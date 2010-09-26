@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.49 2010/05/30 20:48:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.50 2010/09/26 13:36:50 scarabeus Exp $
+
+*gpsd-2.95 (26 Sep 2010)
+
+  26 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> +files/gpsd.conf-2,
+  +files/gpsd.init-2, +gpsd-2.95.ebuild:
+  Version bump to latest. This is only basic ebuild and generic tested.
+  Might need enhancement/touchups.
 
   30 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gpsd-2.32.ebuild, gpsd-2.38.ebuild, gpsd-2.39-r1.ebuild:
