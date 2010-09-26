@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.226 2010/09/21 11:40:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.227 2010/09/26 00:01:56 lu_zero Exp $
+
+*ati-drivers-10.9-r1 (26 Sep 2010)
+
+  26 Sep 2010; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-2.6.36.patch,
+  +files/ati-drivers-CVE-2010-3081-fix.patch, +ati-drivers-10.9-r1.ebuild:
+  Address CVE-2010-3081 related changes, thanks Enrico Tagliavini
+  <enrico.tagliavini@gmail.com> for the update and the testing
 
 *ati-drivers-10.9 (21 Sep 2010)
 
