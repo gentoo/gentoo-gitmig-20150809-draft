@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-1.1.1.ebuild,v 1.1 2010/07/23 12:56:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-1.1.1.ebuild,v 1.2 2010/09/26 21:42:48 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="doc static-libs test"
 
 RDEPEND=">=media-libs/libogg-1.2.0"
