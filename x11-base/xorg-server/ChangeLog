@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.534 2010/09/22 16:33:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.535 2010/09/26 19:03:05 klausman Exp $
+
+  26 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  xorg-server-1.7.7-r1.ebuild:
+  Stable on alpha, bug #330593
 
   22 Sep 2010; Jeroen Roovers <jer@gentoo.org> xorg-server-1.7.7-r1.ebuild:
   Stable for HPPA (bug #330593).
