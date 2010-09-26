@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.30.2.ebuild,v 1.6 2010/09/11 18:28:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.30.2.ebuild,v 1.7 2010/09/26 15:14:01 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -40,9 +40,7 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# FIXME: Fix compilation flags crazyness
-	sed 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
-		-i configure.ac configure || die "sed 1 failed"
-	sed -i -e 's:-DGTK_DISABLE_DEPRECATED=1 -DGDK_DISABLE_DEPRECATED=1 -DG_DISABLE_DEPRECATED=1 -DGNOME_DISABLE_DEPRECATED=1::g' \
-		a11y/Makefile.am a11y/Makefile.in || die "sed 2 failed"
+	# XXX: This is fixed with --disable-deprecations in >=3.31.90
+	sed -e 's/CFLAGS="$CFLAGS $WARNING_FLAGS/CFLAGS="$CFLAGS/' \
+		-i configure.ac configure || die "Warning flags sed failed"
 }
