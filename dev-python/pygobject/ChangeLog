@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.99 2010/09/10 21:43:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.100 2010/09/26 11:41:01 nirbheek Exp $
+
+*pygobject-2.20.0-r1 (26 Sep 2010)
+
+  26 Sep 2010; <nirbheek@gentoo.org> +pygobject-2.20.0-r1.ebuild,
+  +files/pygobject-2.20.0-automagic-introspection.patch:
+  Fix automagic introspection, remove libtool-1 hack since libtool-2 has
+  been stable for a long time
 
   10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pygobject-2.20.0.ebuild:
