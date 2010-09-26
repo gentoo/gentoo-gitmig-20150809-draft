@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.736 2010/09/22 03:35:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.737 2010/09/26 07:24:17 zmedico Exp $
+
+*portage-2.2_rc87 (26 Sep 2010)
+
+  26 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc87.ebuild:
+  2.2_rc87 version bump. This includes all of the fixes in
+  portage-2.1.9.11. Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.11 (26 Sep 2010)
+
+  26 Sep 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.11.ebuild:
+  2.1.9.11 version bump. This fixes bug #337465 (enable ebuild-ipc on
+  FreeBSD) and bug #338588 (enable quickpkg for any user). Bug #335925
+  tracks all bugs fixed since 2.1.8.x.
 
 *portage-2.2_rc86 (22 Sep 2010)
 
