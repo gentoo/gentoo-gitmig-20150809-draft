@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ebook-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.10 2010/01/19 02:16:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.11 2010/09/26 11:37:25 dilfridge Exp $
+
+*ebook-tools-0.1.1-r1 (26 Sep 2010)
+
+  26 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ebook-tools-0.1.1-r1.ebuild:
+  Added missing RDEPEND on app-text/convertlit (bug 313375)
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> ebook-tools-0.1.1.ebuild:
   Stable for HPPA too.
