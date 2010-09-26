@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-HTTP_Request2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request2/ChangeLog,v 1.1 2010/09/26 17:49:09 olemarkus Exp $
+
+*PEAR-HTTP_Request2-0.5.2 (26 Sep 2010)
+
+  26 Sep 2010; <olemarkus@gentoo.org> +PEAR-HTTP_Request2-0.5.2.ebuild,
+  +metadata.xml:
+  Added PEAR-HTTP_Request2 requested by bug 249860
+
