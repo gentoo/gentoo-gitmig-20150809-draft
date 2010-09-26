@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.18 2010/04/11 08:24:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.19 2010/09/26 16:58:44 leio Exp $
+
+  26 Sep 2010; Mart Raudsepp <leio@gentoo.org> iniparser-3.0b-r2.ebuild:
+  Add ~mips
 
   11 Apr 2010; Tiziano Müller <dev-zero@gentoo.org>
   iniparser-3.0b-r2.ebuild:
