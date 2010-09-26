@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4595 2010/09/26 21:08:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4596 2010/09/26 21:26:34 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Sep 2010; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Remove bad mirrors.
 
   26 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Masked dev-tex/achemso for removal (obsolete)
