@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/monodevelop-vala-2.0.ebuild,v 1.1 2009/03/30 18:58:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/monodevelop-vala-2.0.ebuild,v 1.2 2010/09/26 16:58:55 eva Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="=dev-util/monodevelop-${PV}*
 	>=dev-dotnet/gnome-sharp-2.24.0
 	>=dev-dotnet/gnomevfs-sharp-2.24.0
 	>=dev-dotnet/gconf-sharp-2.24.0
-	dev-lang/vala"
+	dev-lang/vala:0"
 
 DEPEND="${RDEPEND}
 	x11-misc/shared-mime-info

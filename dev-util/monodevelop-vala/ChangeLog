@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop-vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.6 2010/07/04 21:34:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.7 2010/09/26 16:58:55 eva Exp $
+
+  26 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  monodevelop-vala-2.0.ebuild, monodevelop-vala-2.1.1.ebuild,
+  monodevelop-vala-2.2.ebuild, monodevelop-vala-2.4.ebuild:
+  Adjust vala dependency to slot 0, bug #338067.
 
 *monodevelop-vala-2.4 (04 Jul 2010)
 
