@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/compface
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.46 2010/01/15 09:23:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.47 2010/09/26 22:51:55 xmw Exp $
+
+  26 Sep 2010; Michael Weber <xmw@gentoo.org> compface-1.5.2.ebuild:
+  Added ~arm keyword
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   compface-1.5.2.ebuild:
