@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.14 2010/01/23 03:45:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.15 2010/09/26 16:16:48 bicatali Exp $
+
+*gmm-4.1 (26 Sep 2010)
+
+  26 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> +gmm-4.1.ebuild:
+  Version bump
 
   23 Jan 2010; Jonathan Callen <abcd@gentoo.org> gmm-4.0.0.ebuild:
   Keyword ~amd64-linux/~x86-linux
