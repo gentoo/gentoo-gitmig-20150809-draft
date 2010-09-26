@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.32 2010/04/03 06:41:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.33 2010/09/26 19:23:46 flameeyes Exp $
+
+*emerald-0.8.4-r2 (26 Sep 2010)
+
+  26 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +emerald-0.8.4-r2.ebuild:
+  Revision bump to disable static library builds (it's mostly engines, which
+  are dynamically-loaded plugins).
 
   03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   emerald-0.8.4-r1.ebuild:
