@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.114 2010/09/24 07:00:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.115 2010/09/26 13:32:36 wired Exp $
+
+  26 Sep 2010; Alex Alexander <wired@gentoo.org> qt-gui-4.5.3-r2.ebuild,
+  qt-gui-4.6.2.ebuild, qt-gui-4.6.2-r1.ebuild, qt-gui-4.6.3.ebuild,
+  qt-gui-4.7.0.ebuild:
+  temporarily fix bug 336801 by depending on cairo[-qt4]
 
   24 Sep 2010; Alex Alexander <wired@gentoo.org> qt-gui-4.7.0.ebuild:
   prefix fix, thanks to heiko_
