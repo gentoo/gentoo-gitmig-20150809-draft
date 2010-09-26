@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.3.6.ebuild,v 1.1 2010/02/25 06:12:47 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.3.6.ebuild,v 1.2 2010/09/26 17:06:56 zmedico Exp $
 
 EAPI=2
 
 inherit mono
 
 DESCRIPTION="Taglib# 2.0 - Managed tag reader/writer"
-HOMEPAGE="http://www.taglib-sharp.com"
+HOMEPAGE="http://developer.novell.com/wiki/index.php/TagLib_Sharp"
 SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.28 2010/06/27 12:15:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.29 2010/09/26 17:06:56 zmedico Exp $
+
+  26 Sep 2010; Zac Medico <zmedico@gentoo.org> taglib-sharp-2.0.3.2.ebuild,
+  taglib-sharp-2.0.3.6.ebuild, taglib-sharp-2.0.3.7.ebuild:
+  Bug #338807 - Update homepage. Thanks to Manuel Ullmann
+  <ullman.bugs@gmx.de> for reporting.
 
   27 Jun 2010; <nixnut@gentoo.org> taglib-sharp-2.0.3.7.ebuild:
   ppc stable #319657
