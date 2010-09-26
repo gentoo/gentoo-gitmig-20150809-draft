@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.14 2010/09/20 04:32:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.15 2010/09/26 08:56:20 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -215,7 +215,7 @@ src_install() {
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
-	for x in ebuild egencache emerge portageq repoman ; do
+	for x in ebuild egencache emerge portageq quickpkg repoman ; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 
@@ -227,7 +227,6 @@ src_install() {
 		env-update
 		etc-update
 		fixpackages
-		quickpkg
 		regenworld"
 	local x
 	for x in ${my_syms}; do
