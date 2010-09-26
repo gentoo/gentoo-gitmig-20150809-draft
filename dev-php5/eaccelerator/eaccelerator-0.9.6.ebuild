@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.ebuild,v 1.2 2010/06/01 03:52:00 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.ebuild,v 1.3 2010/09/26 13:49:26 olemarkus Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
-PHP_EXT_ZENDEXT="yes"
+PHP_EXT_ZENDEXT="no"
 
 EAPI="2"
 
