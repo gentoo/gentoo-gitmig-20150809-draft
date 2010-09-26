@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.143 2010/09/24 19:20:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.144 2010/09/26 11:57:30 maekke Exp $
+
+  26 Sep 2010; Markus Meier <maekke@gentoo.org> fox-1.6.40.ebuild:
+  x86 stable, bug #338510
 
   24 Sep 2010; Markos Chandras <hwoarang@gentoo.org> fox-1.6.40.ebuild:
   Stable on amd64 wrt bug #338510
