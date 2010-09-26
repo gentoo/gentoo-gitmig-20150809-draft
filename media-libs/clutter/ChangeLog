@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.7 2010/09/25 22:51:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.8 2010/09/26 21:54:29 eva Exp $
+
+  26 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> clutter-1.2.14.ebuild:
+  Refix dependency on gobject-introspection.
 
   25 Sep 2010; <nirbheek@gentoo.org>
   -files/clutter-1.0.0-disable-tests.patch, clutter-1.2.14.ebuild,
