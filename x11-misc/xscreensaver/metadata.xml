@@ -8,6 +8,6 @@
     <description>Upstream, add to bugzilla as CC for bugs.</description>
   </maintainer>
   <use>
-    <flag name="new-login">Enables New Login button using gdmflexiserver (gnome-base/gdm)</flag>
+    <flag name="new-login">Enable New Login button using gdmflexiserver (<pkg>gnome-base/gdm</pkg>) or kdmctl (<pkg>kde-base/kdm</pkg>)</flag>
   </use>
 </pkgmetadata>
