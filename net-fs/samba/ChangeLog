@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.447 2010/09/19 16:13:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.448 2010/09/26 17:24:10 vostorga Exp $
+
+  26 Sep 2010; Víctor Ostorga <vostorga@gentoo.org>
+  -files/3.5.2-backport-fix-ipv6-cifs-mount.patch,
+  -files/3.5.2-backport-fix-smbclient-segfault.patch, -files/README.gentoo,
+  -files/samba-conf, -files/samba-init, -files/samba-xinetd:
+  Cleaning up unused files and patches, bug #335465 , thanks to Ewoud Kohl
+  van Wijngaarden <gentoo@kohlvanwijngaarden.nl> for the heads up
 
   19 Sep 2010; Jeroen Roovers <jer@gentoo.org> samba-3.4.9.ebuild:
   Stable for PPC (bug #337295).
