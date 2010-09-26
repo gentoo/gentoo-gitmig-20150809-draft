@@ -1,20 +1,24 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.9 2009/10/12 08:10:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.10 2010/09/26 14:00:21 ssuominen Exp $
 
-IUSE="nls debug"
+inherit eutils
 
 MY_P=${PN}2-${PV}
-S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="The Visual Development Kit used for VDK Builder."
 HOMEPAGE="http://vdkbuilder.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="ppc sparc x86"
+IUSE="nls debug"
 
-DEPEND=">=dev-libs/vdk-2.4.0"
+RDEPEND=">=dev-libs/vdk-2.4.0"
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${MY_P}
 
 custom_cflags() {
 	for files in *
@@ -25,6 +29,12 @@ custom_cflags() {
 			sed -e "s/CXXFLAGS = .*/CFLAGS = ${CXXFLAGS} -I../include/" -i ${files}/Makefile
 		fi
 	done
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-make-382.patch
 }
 
 src_compile() {
