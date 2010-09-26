@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.23 2010/08/01 22:04:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.24 2010/09/26 04:47:07 radhermit Exp $
+
+*cone-0.84 (26 Sep 2010)
+
+  26 Sep 2010; Tim Harder <radhermit@gentoo.org> +cone-0.84.ebuild:
+  Version bump (fixes bug #321845, thanks to Azamat H. Hackimov for
+  reporting) and update LICENSE to GPL-3. Also, add USE flags, dependencies,
+  and configure flags for gnutls, idn, ipv6, and ldap (bug #202466).
 
   01 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> cone-0.79.ebuild,
   +files/cone-0.79-gcc45.patch:
