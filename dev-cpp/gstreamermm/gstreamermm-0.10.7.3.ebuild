@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.7.3.ebuild,v 1.6 2010/09/11 18:20:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.7.3.ebuild,v 1.7 2010/09/26 14:33:54 eva Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gstreamer.freedesktop.org/bindings/cplusplus.html"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE=""
+IUSE="test"
 
 # gstreamer 0.10.25 is needed for per-stream volume
 # see bug #308935
@@ -21,10 +21,15 @@ RDEPEND="
 	>=media-libs/gst-plugins-base-0.10.28
 	>=dev-cpp/glibmm-2.21.1
 	>=dev-cpp/libxmlpp-2.14
-	>=dev-libs/libsigc++-2:2"
-
+	>=dev-libs/libsigc++-2:2
+"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	test? (
+		media-libs/gst-plugins-good:0.10
+		media-plugins/gst-plugins-vorbis:0.10
+		media-plugins/gst-plugins-x:0.10 )
+"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}+gcc-4.5.patch"
