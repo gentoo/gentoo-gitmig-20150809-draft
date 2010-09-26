@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.1-r2.ebuild,v 1.5 2010/08/03 13:20:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.4.ebuild,v 1.1 2010/09/26 17:18:52 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -19,11 +19,11 @@ MY_P="${P/_rc/rc}"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa ldap +cups +crypt bindist libnotify +lightning mozdom system-sqlite wifi"
-PATCH="${PN}-3.1-patches-0.7"
+IUSE="+alsa ldap +crypt +cups bindist libnotify +lightning mozdom system-sqlite wifi"
+PATCH="${PN}-3.1-patches-1.1"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
@@ -46,16 +46,16 @@ for X in ${LANGS} ; do
 done
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.3
-	>=dev-libs/nspr-4.8
+	>=dev-libs/nss-3.12.7
+	>=dev-libs/nspr-4.8.6
 	>=app-text/hunspell-1.2
 	x11-libs/cairo[X]
 	x11-libs/pango[X]
 	alsa? ( media-libs/alsa-lib )
+	cups? ( net-print/cups )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	wifi? ( net-wireless/wireless-tools )
-	cups? ( net-print/cups[gnutls] )
 	!x11-plugins/lightning"
 
 PDEPEND="crypt? ( >=x11-plugins/enigmail-1.1 )"
@@ -115,6 +115,9 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
+	# Allow user to apply any additional patches without modifing ebuild
+	epatch_user
+
 	eautoreconf
 
 	cd mozilla
@@ -149,7 +152,7 @@ src_configure() {
 	mozconfig_annotate '' --with-sqlite-prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --x-includes="${EPREFIX}"/usr/include --x-libraries="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate 'broken' --disable-crashreporter
-	mozconfig_annotate '' --with-system-hunspell
+	mozconfig_annotate '' --enable-system-hunspell
 
 	# Use enable features
 	mozconfig_use_enable ldap
@@ -231,6 +234,10 @@ src_install() {
 		newicon "${S}"/mail/branding/unofficial/content/icon48.png thunderbird-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/${PN}-unbranded.desktop \
 			${PN}.desktop
+
+		sed -i -e "s:Mozilla\ Thunderbird:Lanikai:g" \
+			"${D}"/usr/share/applications/${PN}.desktop
+
 	fi
 
 	# Warn user that remerging enigmail is neccessary on USE=crypt
