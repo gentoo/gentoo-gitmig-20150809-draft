@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.192 2010/09/19 16:45:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.193 2010/09/26 19:41:09 hwoarang Exp $
+
+  26 Sep 2010; Markos Chandras <hwoarang@gentoo.org> ghc-6.12.3.ebuild:
+  Stable on amd64 wrt bug #338652
 
   19 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.10.4-r1.ebuild,
   ghc-6.12.3.ebuild:
