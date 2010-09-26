@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.17.ebuild,v 1.4 2010/07/20 04:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.1 2010/09/26 22:14:11 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -66,6 +66,9 @@ src_prepare() {
 
 	# Fix useless variable in toplevel Makefile.am, bug #298813
 	epatch "${FILESDIR}/${PN}-1.14.16-automake-fixes.patch"
+
+	# Fix build with FEATURES="stricter"
+	epatch "${FILESDIR}/${PN}-1.14.19-missing-declaration.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
