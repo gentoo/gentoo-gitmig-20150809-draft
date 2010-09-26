@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mmap/ChangeLog,v 1.4 2010/08/01 13:49:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mmap/ChangeLog,v 1.5 2010/09/26 17:23:07 klausman Exp $
+
+  26 Sep 2010; Tobias Klausmann <klausman@gentoo.org> mmap-0.2.6-r1.ebuild:
+  Stable on alpha, bug #330339
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> mmap-0.2.6-r1.ebuild:
   stable x86, bug 330339
