@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.1.ebuild,v 1.3 2009/12/27 16:35:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.3.ebuild,v 1.1 2010/09/27 10:00:15 grozin Exp $
+
 EAPI=2
-inherit eutils elisp-common qt4
+inherit eutils elisp-common qt4 flag-o-matic autotools
+
 DESCRIPTION="Graphics Layout Engine"
 HOMEPAGE="http://glx.sourceforge.net/"
 MY_P=${PN}-graphics-${PV}
-MAN_V="4.2.0"
+MAN_V=4.2.2
 SRC_URI="mirror://sourceforge/glx/${MY_P}f-src.tar.gz
 	doc? ( mirror://sourceforge/glx/${PN}-manual-${MAN_V}.pdf
 		   mirror://sourceforge/glx/GLEusersguide.pdf )"
@@ -30,8 +32,19 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-parallel.patch
+	eaclocal
+	eautoconf
+}
+
 src_configure() {
-	econf $(use_with qt4 qt /usr) \
+	# CPPFLAGS are understood as C++ flags
+	append-cppflags ${CXXFLAGS}
+	econf \
+		--without-rpath \
+		--with-manip \
+		$(use_with qt4 qt /usr) \
 		$(use_with X x) \
 		$(use_with jpeg) \
 		$(use_with png) \
@@ -39,9 +52,7 @@ src_configure() {
 }
 
 src_compile() {
-	# emake failed in src/gui (probably qmake stuff)
-	emake -j1 || die "emake failed"
-
+	emake || die "emake failed"
 	if use emacs; then
 		cd contrib/editors/highlighting
 		mv ${PN}-emacs.el ${PN}-mode.el
@@ -52,6 +63,7 @@ src_compile() {
 src_install() {
 	# -jN failed to install some data files
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	#emake DESTDIR="${D}" install || die "emake install failed"
 	rmdir "${D}"/usr/share/doc/gle-graphics || die "rmdir gle-graphics failed"
 	dodoc README.txt
 
