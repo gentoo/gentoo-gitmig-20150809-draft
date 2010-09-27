@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-romkan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.23 2010/08/01 14:20:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.24 2010/09/27 09:22:37 xmw Exp $
+
+  27 Sep 2010; Michael Weber <xmw@gentoo.org> ruby-romkan-0.4-r2.ebuild:
+  Added ~arm keyword
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-romkan-0.4-r2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bsearch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.22 2010/07/31 20:00:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.23 2010/09/27 09:24:29 xmw Exp $
+
+  27 Sep 2010; Michael Weber <xmw@gentoo.org> ruby-bsearch-1.5-r2.ebuild:
+  Added ~arm keyword
 
   31 Jul 2010; Raúl Porcel <armin76@gentoo.org> ruby-bsearch-1.5-r2.ebuild:
   alpha/ia64/sparc stable wrt #327525
