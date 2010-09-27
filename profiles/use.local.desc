@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5988 2010/09/27 13:13:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5989 2010/09/27 15:33:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3860,7 +3860,6 @@ x11-misc/rednotebook:webkit - enable previews using webkit engine
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/shutter:drawing - Enables drawing tool
 x11-misc/shutter:webphoto - Enables screenshots of websites
-x11-misc/slim:screenshot - Enable screenshot support (using media-gfx/imagemagick)
 x11-misc/tint2:battery - Enable battery status plugin
 x11-misc/tint2:examples - Install tint2rc examples
 x11-misc/tint2:tint2conf - Build/Install tint2conf as well
