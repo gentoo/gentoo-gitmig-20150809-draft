@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.12 2010/08/24 08:59:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.13 2010/09/27 09:40:25 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ inherit eutils base libtool multilib toolchain-funcs flag-o-matic autotools \
 EXPORTED_FUNCTIONS="src_unpack src_compile src_install pkg_postinst pkg_postrm"
 case "${EAPI:-0}" in
 	3) EXPORTED_FUNCTIONS="${EXPORTED_FUNCTIONS} src_prepare src_configure" ;;
-	*) DEPEND="EAPI-UNSUPPORTED" ;;
+	*) die "EAPI-UNSUPPORTED" ;;
 esac
 
 # exports must be ALWAYS after inherit
