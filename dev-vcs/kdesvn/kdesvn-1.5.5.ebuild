@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.5.ebuild,v 1.1 2010/09/27 07:38:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.5.ebuild,v 1.2 2010/09/27 08:00:08 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KDE_LINGUAS="de es fr ja lt nl pt_BR ro ru"
 inherit kde4-base
