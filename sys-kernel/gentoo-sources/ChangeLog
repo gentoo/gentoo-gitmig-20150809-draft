@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.750 2010/09/21 15:27:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.751 2010/09/27 16:19:33 mpagano Exp $
+
+*gentoo-sources-2.6.35-r9 (27 Sep 2010)
+*gentoo-sources-2.6.32-r19 (27 Sep 2010)
+
+  27 Sep 2010; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.32-r19.ebuild, +gentoo-sources-2.6.35-r9.ebuild:
+  2.6.32-r19: Linux patch 2.6.32.23. 2.6.35-r9: Linux patch 2.6.35.6 and
+  removal of redundant patch.
 
 *gentoo-sources-2.6.32-r18 (21 Sep 2010)
 
