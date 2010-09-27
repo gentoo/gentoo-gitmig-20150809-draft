@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.52 2010/09/10 13:27:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.53 2010/09/27 21:01:41 chainsaw Exp $
+
+  27 Sep 2010; <chainsaw@gentoo.org> +xf86-input-synaptics-1.2.2-r2.ebuild,
+  metadata.xml:
+  QA: Restore downgrade path from 1.3.0; this package is now privately
+  maintained. Check with maintainers on e-mail / IRC.
 
   10 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-input-synaptics-1.3.0.ebuild:

@@ -14,5 +14,5 @@
 		<name>Christoph Brill</name>
 		<description>upstream co-maintainer</description>
 	</maintainer>
-	<herd>x11</herd>
+	<herd>no-herd</herd>
 </pkgmetadata>
