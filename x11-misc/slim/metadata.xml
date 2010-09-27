@@ -5,8 +5,10 @@
 	<maintainer>
 		<email>darkside@gentoo.org</email>
 	</maintainer>
-	<use>
-		<flag name="screenshot">Enable screenshot support (using <pkg>media-gfx/imagemagick</pkg>)</flag>
-	</use>
+	<maintainer>
+		<email>ian@aerobiology.ca</email>
+		<name>Ian Stakenvicius</name>
+		<description>Please CC on bugs</description>
+	</maintainer>
 </pkgmetadata>
 
