@@ -1,6 +1,22 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.558 2010/09/12 12:05:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.559 2010/09/27 19:25:35 zzam Exp $
+
+  27 Sep 2010; Matthias Schwarzott <zzam@gentoo.org> -udev-146.ebuild,
+  -udev-146-r2.ebuild, -udev-146-r3.ebuild,
+  -files/udev-146-printer-usb_device-permission.diff,
+  -files/151/shell-compat-addon.sh, -udev-147-r1.ebuild,
+  -files/151/udev.confd, -udev-145.ebuild, -udev-150-r1.ebuild,
+  -udev-151-r1.ebuild, -udev-151-r2.ebuild, -udev-151-r3.ebuild,
+  -udev-154.ebuild, -udev-156.ebuild, -udev-157.ebuild, -udev-158.ebuild,
+  -udev-159.ebuild, -files/udev-159-path_id.patch, -files/151/udev.initd,
+  -udev-160.ebuild, -files/151/udev-dev-tarball.initd, -udev-145-r1.ebuild,
+  -udev-161.ebuild,
+  -files/udev-161-cdrom_id_Drop_MEDIA_SESSION_NEXT_for_DVD-RW-RO.patch,
+  -files/151/shell-compat-KV.sh, -files/151/udev-mount.initd,
+  -files/151/udev-postmount.initd, -files/151/udev-start.sh,
+  -udev-145-r2.ebuild, -files/151/udev-stop.sh, -udev-145-r3.ebuild:
+  Removed a lot of old versions.
 
 *udev-162 (12 Sep 2010)
 
