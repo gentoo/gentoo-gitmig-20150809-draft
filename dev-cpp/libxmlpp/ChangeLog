@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.94 2010/06/17 16:54:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.95 2010/09/27 19:06:37 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org> -libxmlpp-2.12.0.ebuild:
+  Remove old, bug #270893
 
 *libxmlpp-2.30.1 (17 Jun 2010)
 
