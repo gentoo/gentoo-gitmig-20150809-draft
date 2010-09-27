@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r1.ebuild,v 1.1 2010/06/09 08:18:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r2.ebuild,v 1.1 2010/09/27 06:26:22 bicatali Exp $
 
 EAPI="2"
 
@@ -39,18 +39,17 @@ src_configure() {
 
 src_test() {
 	cd TESTING/MATGEN
-	emake -j1 \
+	emake \
 		FORTRAN="$(tc-getFC)" \
 		LOADER="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		FFLAGS="${FFLAGS}" \
 		LOADOPTS="${LDFLAGS}" \
-		SUPERLULIB="../SRC/.libs/libsuperlu.a" \
 		BLASLIB="$(pkg-config --libs blas)" \
 		CC="$(tc-getCC)" \
 		|| die "emake matrix generation failed"
 	cd ..
-	emake -j1 \
+	emake \
 		CC="$(tc-getCC)" \
 		FORTRAN="$(tc-getFC)" \
 		LOADER="$(tc-getCC)" \
@@ -59,6 +58,7 @@ src_test() {
 		LOADOPTS="${LDFLAGS}" \
 		SUPERLULIB="../SRC/.libs/libsuperlu.so" \
 		BLASLIB="$(pkg-config --libs blas)" \
+		LD_LIBRARY_PATH="../SRC/.libs" \
 		|| die "emake test failed"
 }
 
