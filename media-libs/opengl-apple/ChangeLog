@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opengl-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.3 2010/09/21 20:21:28 grobian Exp $
+# $Id: ChangeLog,v 1.4 2010/09/27 15:53:09 scarabeus Exp $
+
+  27 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  opengl-apple-3.ebuild, opengl-apple-4.ebuild:
+  Add --use-old option to eselect call.
 
 *opengl-apple-4 (21 Sep 2010)
 

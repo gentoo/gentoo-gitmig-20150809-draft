@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-3.ebuild,v 1.3 2010/01/29 21:18:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-3.ebuild,v 1.4 2010/09/27 15:53:09 scarabeus Exp $
 
 EAPI="3"
 
@@ -49,7 +49,7 @@ src_install() {
 
 pkg_postinst() {
 	# Set as default VM if none exists
-	eselect opengl set ${PN}
+	eselect opengl set --use-old ${PN}
 
 	elog "Note: you're using your OSX (pre-)installed OpenGL X11 implementation from ${X11_OPENGL_DIR}"
 }
