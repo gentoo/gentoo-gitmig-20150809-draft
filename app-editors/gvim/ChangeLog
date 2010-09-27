@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.321 2010/08/19 12:54:57 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.322 2010/09/27 10:49:42 redhatter Exp $
+
+  27 Sep 2010; Stuart Longland <redhatter@gentoo.org> gvim-7.0.235.ebuild,
+  gvim-7.0.243.ebuild:
+  Punt mips keywords from gvim-7.0
+
+  As vim-7.0 has lost its keywords (it no longer runs reliably) I will also
+  remove the keywords from this package too. gvim-7.3 will probably be
+  keyworded shortly, users are encouraged to keyword it themselves and
+  report
+  any bugs in the meantime.
 
   19 Aug 2010; Jim Ramsay <lack@gentoo.org> gvim-7.1.123.ebuild,
   gvim-7.1.330.ebuild, gvim-7.2.303.ebuild, gvim-7.2.442.ebuild,
