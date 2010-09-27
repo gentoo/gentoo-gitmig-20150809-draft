@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.356 2010/08/16 20:11:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.357 2010/09/27 10:39:45 redhatter Exp $
+
+  27 Sep 2010; Stuart Longland <redhatter@gentoo.org> vim-7.0.235.ebuild,
+  vim-7.0.243.ebuild:
+  Punt mips keywords on vim-7.0
+
+  vim-7.0 fails to run on modern glibc due to a buffer overrun issue causing a
+  SIGABRT. At least on mipsel anyway. vim-7.3 will get keyworded as soon as I
+  check it on big-endian MIPS (O2 is `emerge --sync`-ing as I type) and can
+  replace this legacy package. Users are encouraged to keyword vim-7.3
+  themselves in the meantime and report any bugs.
 
 *vim-7.3 (16 Aug 2010)
 
