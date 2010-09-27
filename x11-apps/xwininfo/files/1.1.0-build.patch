@@ -1,0 +1,16 @@
+diff --git a/xwininfo.c b/xwininfo.c
+index 265f6c6..5660baa 100644
+--- a/xwininfo.c
++++ b/xwininfo.c
+@@ -630,8 +630,9 @@ main (int argc, char **argv)
+ 	    w->wm_pid_cookie = xcb_get_property
+ 		(dpy, False, window, atom_net_wm_pid,
+ 		 XCB_ATOM_CARDINAL, 0, BUFSIZ);
+-	    w->wm_client_machine_cookie =
+-		GET_TEXT_PROPERTY(dpy, window, XCB_ATOM_WM_CLIENT_MACHINE);
++	    w->wm_client_machine_cookie = xcb_get_property
++		(dpy, False, window, XCB_ATOM_WM_CLIENT_MACHINE ,
++		 XCB_GET_PROPERTY_TYPE_ANY, 0, BUFSIZ);
+ 	}
+ 
+ 	atom_net_frame_extents = Get_Atom (dpy, "_NET_FRAME_EXTENTS");
