@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.112 2010/09/11 18:42:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.113 2010/09/27 21:54:20 eva Exp $
+
+*gvfs-1.6.4 (27 Sep 2010)
+
+  27 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> +gvfs-1.6.4.ebuild:
+  Version bump. sftp: fix for openssh 5.6, bug #335316. iphone: support for
+  iOS4. smb: move around gconf code. Lots of translation updates.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> gvfs-1.6.3.ebuild:
   Marked ppc for bug #324077.
