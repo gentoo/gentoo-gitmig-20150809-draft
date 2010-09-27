@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsi-initiator-core-tools/iscsi-initiator-core-tools-2.3.ebuild,v 1.4 2009/09/23 20:30:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsi-initiator-core-tools/iscsi-initiator-core-tools-2.3.ebuild,v 1.5 2010/09/27 11:46:12 cla Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="iscsi-initiator-core is a full featured iSCSI Initiator stack."
 #HOMEPAGE="http://iscsi-initiator-core.org/"
@@ -14,6 +14,12 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/fix-ldflags.patch"
+}
 
 src_compile() {
 	cd "${S}"/ipyxd/
