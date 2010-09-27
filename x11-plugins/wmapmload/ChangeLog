@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmapmload
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.12 2007/07/22 05:27:17 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.13 2010/09/27 13:00:59 voyageur Exp $
+
+*wmapmload-0.3.4 (27 Sep 2010)
+
+  27 Sep 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmapmload-0.3.4.ebuild:
+  Version bump, reported by Agostino Sarubbo <ago@autistici.org> in bug
+  #338914
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmapmload-0.3.3.ebuild:
