@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.59 2010/07/09 00:02:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.60 2010/09/27 11:05:23 xmw Exp $
+
+  26 Sep 2010; Michael Weber <xmw@gentoo.org> w3m-0.5.2-r4.ebuild:
+  Added ~arm keyword
 
   09 Jul 2010; Jeroen Roovers <jer@gentoo.org> w3m-0.5.2-r4.ebuild:
   Stable for PPC (bug #325431).
