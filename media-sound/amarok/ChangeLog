@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.390 2010/09/19 13:03:20 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.391 2010/09/27 11:01:33 jmbsvicetto Exp $
+
+*amarok-2.3.2-r1 (27 Sep 2010)
+
+  27 Sep 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.3.2-r1.ebuild, +files/amarok-2.3.2-fix-qt-regression.patch:
+  [media-sound/amarok-2.3.2-r1] Now that we finally have working patches for
+  mariadb and mysql 5.1.50,
+  fixed the embedded deps and added embedded to IUSE defaults.
+  Added an upstream patch to fix issues with the collection scanning caused
+  by a QT bug/regression -
+  https://bugs.kde.org/show_bug.cgi?id=251762#c10
 
   19 Sep 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   amarok-2.3.1.90.ebuild:
