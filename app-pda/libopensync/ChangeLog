@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.36 2010/05/23 20:38:01 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.37 2010/09/27 13:07:35 flameeyes Exp $
+
+  27 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libopensync-0.38.ebuild:
+  Remove ebuild version that was always masked; 0.39 is fine.
 
   23 May 2010; Thilo Bangert <bangert@gentoo.org> libopensync-0.39.ebuild:
   add note about the msynctool -> osynctool switch
