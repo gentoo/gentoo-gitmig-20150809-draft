@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.125 2010/08/18 08:08:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.126 2010/09/27 16:38:49 hwoarang Exp $
+
+  27 Sep 2010; Markos Chandras <hwoarang@gentoo.org> zile-2.3.19.ebuild:
+  Stable on amd64 wrt bug #338725
 
   18 Aug 2010; Christian Faulhammer <fauli@gentoo.org> -zile-2.3.17.ebuild:
   clean up
