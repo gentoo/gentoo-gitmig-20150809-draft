@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.94 2010/08/23 07:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.95 2010/09/27 20:24:48 jer Exp $
+
+  27 Sep 2010; Jeroen Roovers <jer@gentoo.org> a2ps-4.14-r1.ebuild:
+  Stable for HPPA (bug #322867).
 
   23 Aug 2010; Mike Frysinger <vapier@gentoo.org> a2ps-4.14-r1.ebuild,
   +files/a2ps-4.14-cleanup.patch:
