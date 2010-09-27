@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.154 2010/09/15 22:28:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.155 2010/09/27 21:37:00 eva Exp $
+
+*gnome-menus-2.30.4 (27 Sep 2010)
+
+  27 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-menus-2.30.4.ebuild, metadata.xml:
+  Version bump. Add introspection support. Remove unnecessary intltool fix.
 
 *gnome-menus-2.30.3 (15 Sep 2010)
 
