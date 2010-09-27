@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-bg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.19 2010/05/22 11:19:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.20 2010/09/27 22:25:29 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org>
+  myspell-bg-20071211-r1.ebuild:
+  Add ~mips
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> myspell-bg-20060316.ebuild,
   myspell-bg-20071211.ebuild, myspell-bg-20071211-r1.ebuild:
