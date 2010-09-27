@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11985 2010/09/27 10:30:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11986 2010/09/27 12:57:21 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Sep 2010)
+#  on behalf of QA team
+#
+# Unmaintained; creates subdirectory in /usr/bin rather than
+# /usr/(lib|libexec) (bug #248160 open since November 2008),
+# contains binary x86 applications (but KEYWORDS are not
+# set -* — and for a while it was keyworded ~ppc without
+# good reason to be so); last ebuild bump (and release) in
+# 2004; last fix (without revbump) in 2007. Binaries make
+# the reported LICENSE (GPL-2) sound fishy.
+#
+# Removal on 2010-11-26
+app-benchmarks/xfbsuite
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (27 Sep 2010)
 # Updated mask - now pending on adding to the tree the versions of
