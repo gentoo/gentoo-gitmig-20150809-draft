@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.4 2010/09/27 10:33:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.5 2010/09/27 10:36:55 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -36,5 +36,5 @@ src_prepare() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die
-	dodoc ChangeLog README
+	dodoc AUTHORS ChangeLog README
 }
