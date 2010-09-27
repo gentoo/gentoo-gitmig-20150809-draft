@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r3.ebuild,v 1.1 2010/08/15 15:18:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r3.ebuild,v 1.2 2010/09/27 17:43:35 tove Exp $
 
 EAPI="2"
 
-inherit perl-module eutils
+inherit perl-module toolchain-funcs eutils
 
 MY_P=Mail-SpamAssassin-${PV//_/-}
 S=${WORKDIR}/${MY_P}
@@ -96,11 +96,12 @@ src_configure() {
 
 	# Setting the following env var ensures that no questions are asked.
 	perl-module_src_configure
+	# Configure spamc
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" spamc/Makefile || die "emake failed"
 }
 
 src_compile() {
 	export PERL_MM_USE_DEFAULT=1
-	emake spamc/Makefile  || die "emake failed"
 
 	# Now compile all the stuff selected.
 	perl-module_src_compile
