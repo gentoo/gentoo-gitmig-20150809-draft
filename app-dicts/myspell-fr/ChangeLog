@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-fr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.18 2010/07/02 10:23:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.19 2010/09/27 23:31:51 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-fr-20060316.ebuild:
+  Add ~mips
 
   02 Jul 2010; Fabian Groffen <grobian@gentoo.org>
   myspell-fr-20060316.ebuild:

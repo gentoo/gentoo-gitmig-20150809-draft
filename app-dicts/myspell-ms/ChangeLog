@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ms/ChangeLog,v 1.16 2010/05/22 11:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ms/ChangeLog,v 1.17 2010/09/27 23:38:17 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-ms-20060316.ebuild:
+  Add ~mips
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> myspell-ms-20060316.ebuild:
   alpha/arm/ia64/sh/sparc stable
