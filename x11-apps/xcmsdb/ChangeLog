@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xcmsdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcmsdb/ChangeLog,v 1.35 2010/01/23 18:47:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcmsdb/ChangeLog,v 1.36 2010/09/27 12:29:51 scarabeus Exp $
+
+*xcmsdb-1.0.3 (27 Sep 2010)
+
+  27 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xcmsdb-1.0.3.ebuild:
+  Version bump.
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -xcmsdb-1.0.1.ebuild:
   rm
