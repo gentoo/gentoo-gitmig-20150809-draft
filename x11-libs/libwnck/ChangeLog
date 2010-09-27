@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.248 2010/09/15 21:54:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.249 2010/09/27 21:59:49 eva Exp $
+
+*libwnck-2.30.5 (27 Sep 2010)
+
+  27 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +libwnck-2.30.5.ebuild:
+  Version bump. introspection adjustements. Fix a regression in pager from
+  2.30.4. Translation updates.
 
 *libwnck-2.30.4 (15 Sep 2010)
 
