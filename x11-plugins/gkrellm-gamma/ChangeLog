@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrellm-gamma
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.18 2009/02/22 23:45:23 lack Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/ChangeLog,v 1.19 2010/09/27 21:43:19 hwoarang Exp $
+
+*gkrellm-gamma-2.03-r2 (27 Sep 2010)
+
+  27 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  +gkrellm-gamma-2.03-r2.ebuild:
+  Keyworded for amd64. Bug #338642. Respect LDFLAGS
 
   22 Feb 2009; Jim Ramsay <lack@gentoo.org> gkrellm-gamma-2.03-r1.ebuild:
   Updated SRC_URI and HOMEPAGE (Bug 259535)
