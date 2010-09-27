@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/migemo-dict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.22 2010/06/07 08:48:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.23 2010/09/27 09:20:53 xmw Exp $
+
+  27 Sep 2010; Michael Weber <xmw@gentoo.org> migemo-dict-200812.ebuild:
+  Added ~arm keyword
 
   07 Jun 2010; Christoph Mende <angelos@gentoo.org>
   migemo-dict-200812.ebuild:
