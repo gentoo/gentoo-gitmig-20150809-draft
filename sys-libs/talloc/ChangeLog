@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.18 2010/08/12 01:24:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.19 2010/09/27 16:30:24 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org> talloc-2.0.1-r1.ebuild:
+  Marked ~mips for bug #285952
 
   12 Aug 2010; Joseph Jezak <josejx@gentoo.org> talloc-2.0.1-r1.ebuild:
   Marked ppc/ppc64 stable for bug #300158.
