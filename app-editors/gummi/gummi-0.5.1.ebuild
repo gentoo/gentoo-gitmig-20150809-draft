@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.0.ebuild,v 1.1 2010/09/23 21:27:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.1.ebuild,v 1.1 2010/09/27 16:17:56 hwoarang Exp $
 
 EAPI=2
 inherit base eutils
 
 DESCRIPTION="Simple LaTeX editor for GTK+ users"
 HOMEPAGE="http://gummi.midnightcoding.org"
-SRC_URI="http://dev.midnightcoding.org/redmine/attachments/download/62/${P}.tar.gz"
+SRC_URI="http://dev.midnightcoding.org/redmine/attachments/download/75/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -33,12 +33,6 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog README )
 
 src_prepare() {
-	# fix linguas
-	cd "${S}"/po
-	mv ca_ES.po ca.po || die
-	mv gr_EL.po el.po || die
-	mv it_IT.po it.po || die
-	mv nl_NL.po nl.po || die
 	strip-linguas ${LANGS}
 }
 
