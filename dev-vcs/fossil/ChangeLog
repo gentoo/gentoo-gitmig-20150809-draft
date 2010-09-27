@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.2 2010/05/19 07:52:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.3 2010/09/27 00:25:06 rafaelmartins Exp $
+
+*fossil-20100918155143 (27 Sep 2010)
+
+  27 Sep 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -fossil-20100124175507.ebuild, +fossil-20100918155143.ebuild,
+  metadata.xml:
+  Version bump. Removed old version.
 
 *fossil-20100318142033 (19 May 2010)
 
