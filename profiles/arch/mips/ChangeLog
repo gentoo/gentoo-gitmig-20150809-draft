@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.25 2010/09/21 13:34:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.26 2010/09/27 16:37:59 leio Exp $
+
+  27 Sep 2010; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  package.use.mask some untested samba functionality that also lacks
+  keywording
 
   21 Sep 2010; Mart Raudsepp <leio@gentoo.org> use.mask:
   Unmask xcb USE flag
