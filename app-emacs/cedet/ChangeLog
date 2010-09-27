@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.56 2010/09/11 10:20:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.57 2010/09/27 16:26:01 hwoarang Exp $
+
+  27 Sep 2010; Markos Chandras <hwoarang@gentoo.org> cedet-1.0.ebuild:
+  Stable on amd64 wrt bug #338525
 
 *cedet-1.0 (11 Sep 2010)
 
