@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.201 2010/09/20 20:07:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.202 2010/09/27 23:55:19 ranger Exp $
+
+  27 Sep 2010; Brent Baude <ranger@gentoo.org> rsync-3.0.7.ebuild:
+  Marking rsync-3.0.7 ppc for bug 337537
 
   20 Sep 2010; Markos Chandras <hwoarang@gentoo.org> rsync-3.0.7.ebuild:
   Stable on amd64 wrt bug #337537
