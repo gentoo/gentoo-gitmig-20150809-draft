@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/files/xdm.initd-2,v 1.1 2010/09/12 20:45:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/files/xdm.initd-3,v 1.1 2010/09/28 12:43:19 scarabeus Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -37,7 +37,7 @@
 # 04 March 2002
 
 depend() {
-	need localmount xdm
+	need localmount xdm-setup
 
 	# this should start as early as possible
 	# we can't do 'before *' as that breaks it
@@ -55,12 +55,15 @@ depend() {
 }
 
 setup_dm() {
-	local MY_XDM="$(echo "${DISPLAYMANAGER}" | tr '[:upper:]' '[:lower:]')"
+	local MY_XDM
+	
+	MY_XDM=$(echo "${DISPLAYMANAGER}" | tr '[:upper:]' '[:lower:]')
 
 	# Load our root path from profile.env
 	# Needed for kdm
-	PATH="${PATH}:$(. /etc/profile.env; echo "${ROOTPATH}")"
+	PATH=${PATH}:$(. /etc/profile.env; echo "${ROOTPATH}")
 
+	NAME=
 	case "${MY_XDM}" in
 		kdm|kde)
 			EXE="$(which kdm)"
@@ -93,7 +96,7 @@ setup_dm() {
 			PIDFILE="/var/run/${MY_XDM}.pid"
 
 			# warn user that he is doing sick things if the exe was not found
-			if [ "${EXE}" = "" ]; then
+			if [ -z "${EXE}" ]; then
 				echo "ERROR: Your XDM value is invalid."
 				echo "  No ${MY_XDM} executable could be found on your system."
 			fi
@@ -123,10 +126,10 @@ vtstatic() {
 }
 
 start() {
-	local EXE= NAME= PIDFILE=
+	local EXE NAME PIDFILE
 	setup_dm
 
-	if [ -f /etc/.noxdm ] || get_bootparam "nox" ; then
+	if [ -f /etc/.noxdm ]; then
 		einfo "Skipping ${EXE##*/}, /etc/.noxdm found or \"nox\" bootparam passed."
 		rm /etc/.noxdm
 		return 0
@@ -141,9 +144,9 @@ start() {
 
 	if [ -n "${CHECKVT-y}" ] ; then
 		if vtstatic "${CHECKVT:-7}" ; then
-			if [ -x /sbin/telinit ] && [ "${SOFTLEVEL}" != "BOOT" ] && [ "${RC_SOFTLEVEL}" != "BOOT" ] ; then
+			if [ -x /sbin/telinit ] && [ "${SOFTLEVEL}" != "BOOT" ] && [ "${RC_SOFTLEVEL}" != "BOOT" ]; then
 				ewarn "Something is already defined on VT ${CHECKVT:-7}, will start X later"
-				telinit a >/dev/null 2>/dev/null
+				telinit a >/dev/null 2>&1
 				return 0
 			else
 				eerror "Something is already defined on VT ${CHECKVT:-7}, not starting"
@@ -157,41 +160,43 @@ start() {
 }
 
 stop() {
-	local retval=0
-	local curvt=
-	if [ -t 0 ] ; then
-		if type fgconsole >/dev/null 2>/dev/null ; then
-			curvt="$(fgconsole 2>/dev/null)"
+	local curvt retval
+
+	retval=0
+	if [ -t 0 ]; then
+		if type fgconsole >/dev/null 2>&1; then
+			curvt=$(fgconsole 2>/dev/null)
 		else
-			curvt="$(tty)"
+			curvt=$(tty)
 			case "${curvt}" in
-				/dev/ttyv[0-9]*) curvt="${curvt#/dev/ttyv*}" ;;
+				/dev/ttyv[0-9]*) curvt=${curvt#/dev/ttyv} ;;
 				*) curvt= ;;
 			esac
 		fi
 	fi
-	local myexe="$(get_options "service")"
-	local myname="$(get_options "name")"
-	local mypidfile="$(get_options "pidfile")"
-	local myservice=${myexe##*/}
+	local myexe myname mypidfile myservice
+	myexe=$(get_options "service")
+	myname=$(get_options "name")
+	mypidfile=$(get_options "pidfile")
+	myservice=${myexe##*/}
 
 	[ -z "${myexe}" ] && return 0
 
 	ebegin "Stopping ${myservice}"
 
-	if start-stop-daemon --quiet --test --stop --exec "${myexe}" ; then
+	if start-stop-daemon --quiet --test --stop --exec "${myexe}"; then
 		start-stop-daemon --stop --exec "${myexe}" --retry TERM/5/TERM/5 \
 			${mypidfile:+--pidfile} ${mypidfile} \
 			${myname:+--name} ${myname}
-		retval=$?
+		retval=${?}
 	fi
 
 	# switch back to original vt
-	if [ -n "${curvt}" ] ; then
-		if type chvt >/dev/null 2>/dev/null ; then
+	if [ -n "${curvt}" ]; then
+		if type chvt >/dev/null 2>&1; then
 			chvt "${curvt}"
 		else
-			vidcontrol -s "$((${curvt} + 1))"
+			vidcontrol -s "$((curvt + 1))"
 		fi
 	fi
 

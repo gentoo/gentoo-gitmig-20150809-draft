@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.535 2010/09/26 19:03:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.536 2010/09/28 12:43:19 scarabeus Exp $
+
+*xorg-server-1.9.0-r1 (28 Sep 2010)
+
+  28 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.9.0-fix-VbeModeInfoBlock-memcpy.patch, -xorg-server-1.9.0.ebuild,
+  +xorg-server-1.9.0-r1.ebuild, -files/xdm.initd-2, +files/xdm.initd-3:
+  Revision bump to fix initscript, thx to Michal Gorny (bug #338837). Apply
+  patch to fix compilation issues, thx to Alexandre Rostovtsev (bug
+  #337020). Update deps per bug #338519.
 
   26 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   xorg-server-1.7.7-r1.ebuild:
