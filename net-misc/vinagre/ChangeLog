@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.61 2010/09/11 18:59:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.62 2010/09/28 21:46:52 eva Exp $
+
+*vinagre-2.30.3 (28 Sep 2010)
+
+  28 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +vinagre-2.30.3.ebuild:
+  Version bump. Translation updates.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> vinagre-2.30.2.ebuild:
   Marked ppc for bug #324077.
