@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cerberus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.11 2010/06/22 18:38:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.12 2010/09/28 20:12:52 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> cerberus-0.7.8.ebuild:
+  Marking cerberus-0.7.8 ~ppc for bug 319241
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cerberus-0.7.8.ebuild:
