@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.212 2010/09/27 16:55:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.213 2010/09/28 17:46:32 grobian Exp $
+
+  28 Sep 2010; Fabian Groffen <grobian@gentoo.org> mint/use.mask:
+  Mask USE=git on MiNT profiles, bug #339031
 
   27 Sep 2010; Jeremy Olexa <darkside@gentoo.org> linux/package.mask:
   drop non-existant masks
