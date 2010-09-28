@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/tumbler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/ChangeLog,v 1.8 2010/09/18 15:41:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/ChangeLog,v 1.9 2010/09/28 07:16:02 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> tumbler-0.1.2.ebuild:
+  Keyword ~ppc64 wrt #334273
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> tumbler-0.1.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #334273
