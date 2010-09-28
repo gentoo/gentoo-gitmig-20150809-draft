@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.194 2010/09/17 15:28:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.195 2010/09/28 16:35:08 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mutt-1.5.20-r18.ebuild:
+  ppc64 stable wrt #339040
 
 *mutt-1.5.21 (17 Sep 2010)
 
