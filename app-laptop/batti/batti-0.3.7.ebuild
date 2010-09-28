@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.7.ebuild,v 1.3 2010/06/29 09:31:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.7.ebuild,v 1.4 2010/09/28 04:53:40 ssuominen Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE="libnotify"
 
 RDEPEND="dev-python/pygtk
 	dev-python/dbus-python
-	|| ( sys-power/upower sys-apps/devicekit-power )
+	sys-power/upower
 	libnotify? ( x11-libs/libnotify )"
 DEPEND=""
 
