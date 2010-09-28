@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.6 2010/09/28 14:14:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.7 2010/09/28 17:37:58 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -142,6 +142,9 @@ src_prepare() {
 	# Make gnash find moc and uic properly, upstream bug #25758,
 	# gentoo bug #283905
 	epatch "${FILESDIR}"/${PN}-0.8.7-moc-qt4.patch
+
+	# Install documentation into the proper directories, bug #321017
+	epatch "${FILESDIR}"/${PN}-0.8.8-documentation-paths.patch
 
 	eautoreconf
 }
