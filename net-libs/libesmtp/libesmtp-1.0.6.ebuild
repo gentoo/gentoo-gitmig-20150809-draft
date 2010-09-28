@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.6.ebuild,v 1.1 2010/09/25 02:37:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.6.ebuild,v 1.2 2010/09/28 10:22:41 ssuominen Exp $
 
 EAPI=3
-
-inherit toolchain-funcs libtool
+inherit libtool
 
 DESCRIPTION="lib that implements the client side of the SMTP protocol"
 HOMEPAGE="http://www.stafford.uklinux.net/libesmtp/"
@@ -13,36 +12,28 @@ SRC_URI="http://www.stafford.uklinux.net/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="debug ssl threads"
+IUSE="debug ssl static-libs threads"
 
-DEPEND="ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+RDEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	elibtoolize
 }
 
 src_configure() {
-	local myconf
-
-	if [[ $(gcc-major-version) == 2 ]]; then
-		myconf="${myconf} --disable-isoc"
-	fi
-
 	econf \
+		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		--enable-all \
-		$(use_with ssl openssl) \
 		$(use_enable threads pthreads) \
 		$(use_enable debug) \
-		${myconf}
-
-	if [[ $(gcc-major-version) == 3 ]] && [[ $(gcc-minor-version) == 3 ]]; then
-		sed -i "s:-Wsign-promo::g" Makefile
-	fi
+		$(use_with ssl openssl)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS INSTALL ChangeLog NEWS Notes README TODO
-	dohtml doc/api.xml
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS Notes README TODO
+	insinto /usr/share/doc/${PF}/xml
+	doins doc/api.xml
 }

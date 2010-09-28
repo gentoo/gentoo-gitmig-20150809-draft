@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.45 2010/09/25 02:37:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.46 2010/09/28 10:22:41 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> libesmtp-1.0.6.ebuild:
+  USE="static-libs" and keep .la files (they are used for loading plugins).
+  Fix documentation installation.
 
 *libesmtp-1.0.6 (25 Sep 2010)
 
