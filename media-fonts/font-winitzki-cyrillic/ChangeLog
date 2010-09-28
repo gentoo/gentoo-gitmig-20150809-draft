@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-winitzki-cyrillic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-winitzki-cyrillic/ChangeLog,v 1.32 2010/09/19 18:26:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-winitzki-cyrillic/ChangeLog,v 1.33 2010/09/28 11:39:15 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  font-winitzki-cyrillic-1.0.1.ebuild:
+  ppc64 stable wrt #327777
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   font-winitzki-cyrillic-1.0.1.ebuild:
