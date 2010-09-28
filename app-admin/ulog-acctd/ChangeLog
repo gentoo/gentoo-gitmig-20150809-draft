@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/ulog-acctd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.13 2009/10/12 00:01:00 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ChangeLog,v 1.14 2010/09/28 19:09:54 jer Exp $
+
+*ulog-acctd-0.4.3-r1 (28 Sep 2010)
+
+  28 Sep 2010; Jeroen Roovers <jer@gentoo.org> -ulog-acctd-0.4.2.ebuild,
+  files/ulog-acctd-0.4.2-gcc2.patch, +ulog-acctd-0.4.3-r1.ebuild:
+  Clean up patch and do not cd before patching as the path is already set in
+  the patch. Replace cd;make with emake -C. Set RDEPEND. Respect LDFLAGS
+  (bug #336959), CC, more CFLAGS.
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ulog-acctd-0.4.2.ebuild,
   ulog-acctd-0.4.3.ebuild:

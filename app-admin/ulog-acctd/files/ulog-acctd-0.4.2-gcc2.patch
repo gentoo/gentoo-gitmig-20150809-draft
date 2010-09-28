@@ -1,6 +1,5 @@
-diff -ru ulog-acctd-0.4.1.orig/src/process.c ulog-acctd-0.4.1.new/src/process.c
---- ulog-acctd-0.4.1.orig/src/process.c	2003-08-26 15:30:07.000000000 +0200
-+++ ulog-acctd-0.4.1.new/src/process.c	2003-11-08 16:12:40.000000000 +0100
+--- a/src/process.c
++++ b/src/process.c
 @@ -627,6 +627,7 @@
  
  void wait_children(void)

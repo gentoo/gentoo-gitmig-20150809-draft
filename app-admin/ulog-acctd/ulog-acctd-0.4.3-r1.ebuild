@@ -1,33 +1,36 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.9 2009/10/12 00:01:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.3-r1.ebuild,v 1.1 2010/09/28 19:09:54 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="ULOG-based accounting daemon with flexible log-format"
-SRC_URI="http://alioth.debian.org/download.php/604/${PN}_${PV}.orig.tar.gz"
+SRC_URI="http://alioth.debian.org/download.php/949/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://savannah.nongnu.org/projects/ulog-acctd/ http://alioth.debian.org/projects/pkg-ulog-acctd"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="net-firewall/iptables"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${P}.orig
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/src
-	epatch "${FILESDIR}"/${P}-gcc2.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.4.2-gcc2.patch
+	sed -i src/Makefile \
+		-e 's| -o | $(LDFLAGS)&|g' \
+		-e '/^DEBUG/d' \
+		|| die "sed src/Makefile"
 }
 
 src_compile() {
-	cd "${S}"/src || die "cannot change to src-directory"
-	make || die "compile of pgm failed"
-	cd "${S}"/doc || die "cannot change to doc-directory"
-	make || die "compile of docu failed"
+	emake CC=$(tc-getCC) -C src || die "emake src"
+	emake -C doc || die "emake doc"
 }
 
 src_install() {
