@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.50 2010/06/17 21:28:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.51 2010/09/28 17:22:52 robbat2 Exp $
+
+*libdbi-drivers-0.8.3-r2 (28 Sep 2010)
+
+  28 Sep 2010; Robin H. Johnson <robbat2@gentoo.org>
+  libdbi-drivers-0.8.1-r1.ebuild, libdbi-drivers-0.8.1-r2.ebuild,
+  libdbi-drivers-0.8.3.ebuild, libdbi-drivers-0.8.3-r1.ebuild,
+  +libdbi-drivers-0.8.3-r2.ebuild:
+  Bug #329033: postgres virtual migration converted this to depending on
+  -server instead of -base. Fix up, with a revbump also redoing RDEPEND vs
+  DEPEND.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   libdbi-drivers-0.8.1-r1.ebuild, libdbi-drivers-0.8.1-r2.ebuild,
