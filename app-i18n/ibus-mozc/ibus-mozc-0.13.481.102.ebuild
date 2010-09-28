@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-0.12.402.102.ebuild,v 1.1 2010/07/01 22:59:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-0.13.481.102.ebuild,v 1.1 2010/09/28 23:45:53 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -69,6 +69,16 @@ src_install() {
 		newexe "out_linux/${BUILDTYPE}/ibus_mozc" ibus-engine-mozc || die
 		insinto /usr/share/ibus/component || die
 		doins "out_linux/${BUILDTYPE}/obj/gen/unix/ibus/mozc.xml" || die
+		insinto /usr/share/ibus-mozc || die
+		(
+			cd data/images/unix
+			newins ime_product_icon_opensource-32.png product_icon.png || die
+			for f in ui-*
+			do
+				newins ${f} ${f/ui-} || die
+			done
+		)
+
 	fi
 
 	if use scim ; then
@@ -76,6 +86,15 @@ src_install() {
 		newexe "out_linux/${BUILDTYPE}/lib.target/libscim_mozc.so" mozc.so || die
 		exeinto "$(pkg-config --variable=moduledir scim)/SetupUI/" || die
 		newexe "out_linux/${BUILDTYPE}/lib.target/libscim_mozc_setup.so" mozc-setup.so || die
+		insinto "$(pkg-config --variable=icondir scim)" || die
+		(
+			cd data/images/unix
+			newins ime_product_icon_opensource-32.png scim-mozc.png || die
+			for f in ui-*
+			do
+				newins ${f} ${f/ui-/scim-mozc-} || die
+			done
+		)
 	fi
 
 	exeinto "/usr/$(get_libdir)/mozc" || die
