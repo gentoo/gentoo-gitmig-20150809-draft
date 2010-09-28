@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.23 2010/08/12 08:09:16 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.24 2010/09/28 05:30:26 radhermit Exp $
+
+*roundcube-0.3.1-r1 (28 Sep 2010)
+
+  28 Sep 2010; Tim Harder <radhermit@gentoo.org> +roundcube-0.3.1-r1.ebuild,
+  +files/roundcube-0.3.1-disable-dns-prefetching.patch:
+  Revision bump to install .htaccess file (fixes bug #292692, thanks to
+  Richard Scott for reporting), apply patch to fix security bug #308065
+  (CVE-2010-0464), fix USE flag dependencies with dev-lang/php-5.3* (fixes
+  bug #328231, thanks to Charlie Gehlin for reporting), and install config
+  files so the web-based installer works (fixes bug #329565, thanks to
+  Andrey Yurchuk for reporting).
 
   12 Aug 2010; Alex Legler <a3li@gentoo.org> -roundcube-0.3.ebuild,
   +roundcube-0.3.1.ebuild:

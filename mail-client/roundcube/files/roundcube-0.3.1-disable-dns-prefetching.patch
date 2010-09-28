@@ -1,0 +1,40 @@
+--- roundcubemail-0.3.1.orig/CHANGELOG	2009-10-31 08:20:02.000000000 -0500
++++ roundcubemail-0.3.1/CHANGELOG	2010-09-27 23:58:39.540056153 -0500
+@@ -1,6 +1,7 @@
+ CHANGELOG RoundCube Webmail
+ ===========================
+ 
++- Fix CVE-2010-0464: Disable DNS prefetching (#1486449)
+ - Specify toolbar container in compose template (#1486247)
+ - Fix $_SERVER['HTTPS'] check for SSL forcing on IIS (#1486243)
+ - Avoid unnecessary page loads for selected tab (#1486032)
+--- roundcubemail-0.3.1.orig/program/include/rcube_shared.inc	2009-10-27 04:43:39.000000000 -0500
++++ roundcubemail-0.3.1/program/include/rcube_shared.inc	2010-09-27 23:58:39.541053001 -0500
+@@ -39,6 +39,8 @@
+   header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
+   header("Cache-Control: private, must-revalidate, post-check=0, pre-check=0");
+   header("Pragma: no-cache");
++  // Request browser to disable DNS prefetching (CVE-2010-0464)
++  header("X-DNS-Prefetch-Control: off");
+   
+   // We need to set the following headers to make downloads work using IE in HTTPS mode.
+   if (rcube_https_check()) {
+--- roundcubemail-0.3.1.orig/program/steps/mail/get.inc	2009-09-22 02:50:32.000000000 -0500
++++ roundcubemail-0.3.1/program/steps/mail/get.inc	2010-09-28 00:00:16.001053823 -0500
+@@ -41,6 +41,7 @@
+   $MESSAGE = new rcube_message(get_input_value('_uid', RCUBE_INPUT_GET));
+ }
+ 
++send_nocacheing_headers();
+ 
+ // show part page
+ if (!empty($_GET['_frame'])) {
+@@ -66,8 +67,6 @@
+     
+     $browser = new rcube_browser;
+ 
+-    send_nocacheing_headers();
+-    
+     // send download headers
+     if ($_GET['_download']) {
+       header("Content-Type: application/octet-stream");
