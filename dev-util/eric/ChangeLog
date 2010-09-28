@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.133 2010/09/17 19:58:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.134 2010/09/28 16:40:07 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> eric-4.4.7.ebuild:
+  stable ppc, bug 337148
 
 *eric-5.0.2 (17 Sep 2010)
 
