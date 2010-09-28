@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-romkan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.24 2010/09/27 09:22:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.25 2010/09/28 23:53:26 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-romkan-0.4-r2.ebuild:
+  Marking ruby-romkan-0.4-r2 ppc for bug 329265
 
   27 Sep 2010; Michael Weber <xmw@gentoo.org> ruby-romkan-0.4-r2.ebuild:
   Added ~arm keyword
