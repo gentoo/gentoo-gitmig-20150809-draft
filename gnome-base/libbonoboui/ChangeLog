@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.194 2010/09/11 18:39:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.195 2010/09/28 20:57:17 eva Exp $
+
+*libbonoboui-2.24.4 (28 Sep 2010)
+
+  28 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +libbonoboui-2.24.4.ebuild:
+  Version bump. Translation updates.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> libbonoboui-2.24.3.ebuild:
   Marked ppc for bug #324077.
