@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0.ebuild,v 1.5 2010/09/20 17:07:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.0-r1.ebuild,v 1.1 2010/09/28 19:58:36 nirbheek Exp $
 
 EAPI="2"
 
@@ -170,8 +170,9 @@ src_install() {
 		dohtml doc/*.html || die "dohtml failed"
 	fi
 
-	# Remove .la files
-	find "${D}" -type f -name '*.la' -exec rm -f '{}' +
+	# We're not ready for this yet.
+	## Remove .la files
+	#find "${D}" -type f -name '*.la' -exec rm -f '{}' +
 }
 
 pkg_postinst() {
