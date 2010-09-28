@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.94 2010/09/10 15:03:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.95 2010/09/28 09:58:52 ssuominen Exp $
+
+*desktop-file-utils-0.17 (28 Sep 2010)
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +desktop-file-utils-0.17.ebuild:
+  Version bump.
 
   10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   desktop-file-utils-0.16.ebuild:
