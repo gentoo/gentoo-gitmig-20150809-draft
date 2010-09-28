@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.10 2010/09/28 08:57:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.11 2010/09/28 22:16:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,8 +26,6 @@ RDEPEND=">=dev-libs/openssl-0.9.6g"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-tex/latex2html-2002.2 )"
 
-RESTRICT="test" # Syntax changed in OpenSSL 1.x, see #326637
-
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
@@ -37,6 +35,18 @@ PYTHON_MODNAME="OpenSSL"
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-openssl-1.patch"
+
+	# Disable tests failing with OpenSSL >=1.0.0.
+	sed \
+		-e "s/test_dump_privatekey/_&/" \
+		-e "s/test_export_without_args/_&/" \
+		-e "s/test_export_without_mac/_&/" \
+		-e "s/test_friendly_name/_&/" \
+		-e "s/test_load_pkcs12/_&/" \
+		-e "s/test_various_empty_passphrases/_&/" \
+		-e "s/test_zero_len_list_for_ca/_&/" \
+		-i test/test_crypto.py
+	sed -e "s/test_load_verify_directory/_&/" -i test/test_ssl.py
 }
 
 src_compile() {
@@ -57,18 +67,30 @@ src_compile() {
 src_test() {
 	test_package() {
 		pushd test > /dev/null
-		local test
+
+		local return_status="0" test
 		for test in test_*.py; do
-			echo -e "\e[1;31mRunning ${test}...\e[0m"
-			PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" "${test}" || die "${test} failed with Python ${PYTHON_ABI}"
+			einfo "Running ${test}..."
+			if ! PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" "${test}"; then
+				eerror "${test} failed with $(python_get_implementation) $(python_get_version)"
+				return_status="1"
+			fi
 		done
+
 		popd > /dev/null
+
+		return "${return_status}"
 	}
 	python_execute_function test_package
 }
 
 src_install() {
 	distutils_src_install
+
+	delete_tests() {
+		rm -fr "${ED}$(python_get_sitedir)/OpenSSL/test"
+	}
+	python_execute_function -q delete_tests
 
 	if use doc; then
 		dohtml doc/html/*
