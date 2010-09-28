@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.176 2010/09/27 20:04:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.177 2010/09/28 14:58:32 dilfridge Exp $
+
+  28 Sep 2010; Andreas K. Huettel (dilfridge) <mail@akhuettel.de>
+  make.defaults:
+  Added COLLECTD_PLUGINS to USE_EXPAND, defined a default list of plugins
 
   27 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

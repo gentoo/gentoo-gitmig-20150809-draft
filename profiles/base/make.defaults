@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.55 2010/09/26 13:04:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.56 2010/09/28 14:58:32 dilfridge Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
 
 # Env vars to expand into USE vars.  Modifying this requires prior
 # discussion on gentoo-dev@gentoo.org.
-USE_EXPAND="APACHE2_MODULES APACHE2_MPMS FOO2ZJS_DEVICES MISDN_CARDS FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS DVB_CARDS LIRC_DEVICES INPUT_DEVICES LINGUAS USERLAND KERNEL ELIBC CROSSCOMPILE_OPTS ALSA_CARDS ALSA_PCM_PLUGINS LCD_DEVICES CAMERAS NETBEANS_MODULES QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS SANE_BACKENDS RUBY_TARGETS NGINX_MODULES_HTTP NGINX_MODULES_MAIL XFCE_PLUGINS XTABLES_ADDONS GPSD_PROTOCOLS"
+USE_EXPAND="APACHE2_MODULES APACHE2_MPMS FOO2ZJS_DEVICES MISDN_CARDS FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS DVB_CARDS LIRC_DEVICES INPUT_DEVICES LINGUAS USERLAND KERNEL ELIBC CROSSCOMPILE_OPTS ALSA_CARDS ALSA_PCM_PLUGINS LCD_DEVICES CAMERAS NETBEANS_MODULES QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS SANE_BACKENDS RUBY_TARGETS NGINX_MODULES_HTTP NGINX_MODULES_MAIL XFCE_PLUGINS XTABLES_ADDONS GPSD_PROTOCOLS COLLECTD_PLUGINS"
 
 # USE_EXPAND variables whose contents are not shown in package manager
 # output. Changes need discussion on gentoo-dev.
@@ -25,6 +25,10 @@ ELIBC="glibc"
 KERNEL="linux"
 USERLAND="GNU"
 INPUT_DEVICES="keyboard mouse"
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (28 Sep 2010)
+# Small default list of enabled plugins for collectd
+COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog"
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (26 Oct 2010)
 # By default enable all protocols for average GPS user
