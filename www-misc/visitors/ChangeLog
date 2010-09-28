@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/visitors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.11 2010/04/13 18:48:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.12 2010/09/28 19:30:26 jer Exp $
+
+*visitors-0.7-r1 (28 Sep 2010)
+
+  28 Sep 2010; Jeroen Roovers <jer@gentoo.org> +visitors-0.7-r1.ebuild:
+  Respect LDFLAGS (bug #337115), CC, more CFLAGS. Make sed die. Remove empty
+  DEPEND. Remove useless USE=debug and related logic.
 
   13 Apr 2010; Markos Chandras <hwoarang@gentoo.org> visitors-0.7.ebuild:
   Keyworded for amd64 wrt bug #314543
