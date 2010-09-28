@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.139 2010/08/30 18:50:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.140 2010/09/28 18:10:47 graaff Exp $
+
+*xemacs-21.4.22-r2 (28 Sep 2010)
+
+  28 Sep 2010; Hans de Graaff <graaff@gentoo.org> +xemacs-21.4.22-r2.ebuild,
+  +files/xemacs-21.4.22-deprecated-ldap.patch,
+  -files/xemacs-21.4.22-implicit-pointer-conversion.patch:
+  Properly fix the implicit pointer conversion problem in a similar way as
+  it is fixed in xemacs 21.5. Bump revision to make sure everyone will have
+  a properly compiled version.
 
   30 Aug 2010; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.22-r1.ebuild:
   Revert hwoarang's patch. It is not clear what it being fixed, and the fix
