@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.1-r1.ebuild,v 1.1 2010/08/16 21:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.1-r1.ebuild,v 1.2 2010/09/28 16:53:47 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -81,6 +81,7 @@ busybox_config_option() {
 
 src_prepare() {
 	unset KBUILD_OUTPUT #88088
+	append-flags -fno-strict-aliasing #310413
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.17.0-bb.patch
@@ -98,7 +99,9 @@ src_prepare() {
 		-e "/^CC/s:=.*:= $(tc-getCC):" \
 		-e "/^HOSTCC/s:=.*:= $(tc-getBUILD_CC):" \
 		Makefile || die
+}
 
+src_configure() {
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
 

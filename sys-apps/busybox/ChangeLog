@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.255 2010/08/22 17:34:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.256 2010/09/28 16:53:47 vapier Exp $
+
+  28 Sep 2010; Mike Frysinger <vapier@gentoo.org> busybox-1.17.1-r1.ebuild,
+  +files/busybox-1.17.1-date.patch, +files/busybox-1.17.1-grep.patch:
+  Move .config setup to src_prepare, fix from upstream for nano timestamps
+  #335947 by Sergio Costas, and propagate strict aliasing workaround for
+  stable preparation.
 
   22 Aug 2010; Mike Frysinger <vapier@gentoo.org>
   +files/busybox-1.17.1-make.patch:
