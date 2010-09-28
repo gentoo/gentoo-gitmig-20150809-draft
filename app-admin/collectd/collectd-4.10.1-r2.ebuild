@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.1 2010/09/28 15:17:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.2 2010/09/28 15:55:08 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -226,7 +226,7 @@ pkg_setup() {
 src_prepare() {
 	base_src_prepare
 
-	# There's some strange prefix handling in the default config file, resulting in 
+	# There's some strange prefix handling in the default config file, resulting in
 	# paths like "/usr/var/..."
 	sed -i -e "s:@prefix@/var:/var:g" src/collectd.conf.in || die
 
