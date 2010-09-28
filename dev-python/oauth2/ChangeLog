@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/oauth2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/ChangeLog,v 1.1 2010/09/28 17:53:03 djc Exp $
+
+*oauth2-1.2.1 (28 Sep 2010)
+
+  28 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> +oauth2-1.2.1.ebuild,
+  +metadata.xml:
+  Initial version.
+
