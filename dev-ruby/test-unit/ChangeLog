@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.24 2010/08/06 13:56:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.25 2010/09/28 23:40:09 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> test-unit-2.1.1.ebuild:
+  Marking test-unit-2.1.1 ~ppc for bug 324867
 
 *test-unit-2.1.1 (06 Aug 2010)
 
