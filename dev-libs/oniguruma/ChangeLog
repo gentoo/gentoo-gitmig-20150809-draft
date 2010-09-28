@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.48 2010/05/24 19:12:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.49 2010/09/28 18:52:53 grobian Exp $
+
+  28 Sep 2010; Fabian Groffen <grobian@gentoo.org> oniguruma-5.9.2.ebuild:
+  Marked ~x64-macos, bug #337713
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> oniguruma-5.9.2.ebuild:
   stable amd64, bug 318349
