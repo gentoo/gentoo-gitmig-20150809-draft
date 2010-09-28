@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.86 2010/09/05 15:54:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.87 2010/09/28 23:37:15 flameeyes Exp $
+
+*pcsc-lite-1.6.4 (28 Sep 2010)
+
+  28 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pcsc-lite-1.6.4.ebuild, +files/pcscd-init.2:
+  Version bump; the new version has an improved init script that takes less
+  time to start (no process creation for depend calculation), and properly
+  uses s-s-d to respect system limits; also upstream moved to libusb-1
+  rather than the previous libusb-0.
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> pcsc-lite-1.6.1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #330601
