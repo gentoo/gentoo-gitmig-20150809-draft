@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5991 2010/09/28 05:14:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5992 2010/09/28 15:33:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -36,6 +36,90 @@ app-accessibility/gnopernicus:brltty - Adds support for braille displays using b
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
+app-admin/collectd:collectd_plugins_apache - Build the apache input plugin (transferred bytes, handled requests, detailed scoreboard statistics)
+app-admin/collectd:collectd_plugins_apcups - Build the apcups input plugin (UPS charge, load, input/output/battery voltage, etc.)
+app-admin/collectd:collectd_plugins_ascent - Build the ascent input plugin (statistics about a free server for World of Warcraft)
+app-admin/collectd:collectd_plugins_battery - Build the battery input plugin (charge, current and voltage of ACPI and PMU based laptop batteries)
+app-admin/collectd:collectd_plugins_bind - Build the bind input plugin (name server and resolver statistics)
+app-admin/collectd:collectd_plugins_conntrack - Build the conntrack input plugin (number of nf_conntrack entries)
+app-admin/collectd:collectd_plugins_contextswitch - Build the contextswitch input plugin (number of context switches done by the operating system)
+app-admin/collectd:collectd_plugins_cpu - Build the cpu input plugin (time spent in the system, user, nice, idle, and related states)
+app-admin/collectd:collectd_plugins_cpufreq - Build the cpufreq input plugin (CPU frequency, for laptops with speedstep or similar)
+app-admin/collectd:collectd_plugins_csv - Build the csv output plugin (write to comma separated values (CSV) files)
+app-admin/collectd:collectd_plugins_curl - Build the curl input plugin (parse statistics from websites using regular expressions)
+app-admin/collectd:collectd_plugins_curl_xml - Build the curl_xml input plugin (get xml data via curl and parse it)
+app-admin/collectd:collectd_plugins_dbi - Build the dbi input plugin (execute SQL statements on databases and interpret the reply)
+app-admin/collectd:collectd_plugins_df - Build the df input plugin (mountpoint usage)
+app-admin/collectd:collectd_plugins_disk - Build the disk input plugin (sectors read/written, number of read/write actions, average completion time of IO-operations)
+app-admin/collectd:collectd_plugins_dns - Build the dns input plugin (collects statistics of your DNS traffic on port udp/53)
+app-admin/collectd:collectd_plugins_email - Build the email input plugin (opens a UNIX domain socket and starts accepting connections on that socket)
+app-admin/collectd:collectd_plugins_entropy - Build the entropy input plugin (available entropy on a system)
+app-admin/collectd:collectd_plugins_exec - Build the exec input/output plugin (executes scripts / applications and reads values back)
+app-admin/collectd:collectd_plugins_filecount - Build the filecount input plugin (countd the number of files in a directory and all its subdirectories)
+app-admin/collectd:collectd_plugins_fscache - Build the fscache input plugin (information about the caching infrastructure for network file-systems etc)
+app-admin/collectd:collectd_plugins_gmond - Build the gmond input plugin (receive data from gmond, the client daemon of the Ganglia project)
+app-admin/collectd:collectd_plugins_hddtemp - Build the hddtemp input plugin (temperature of hard disks)
+app-admin/collectd:collectd_plugins_interface - Build the interface input plugin (information about traffic, packets and errors of interfaces)
+app-admin/collectd:collectd_plugins_iptables - Build the iptables input plugin (statistics from a ip_tables based packet filter)
+app-admin/collectd:collectd_plugins_irq - Build the irq input plugin (number of times each interrupt has been handled by the os)
+app-admin/collectd:collectd_plugins_java - Build the java input plugin (embeds a JVM into collectd for writing plugins)
+app-admin/collectd:collectd_plugins_libvirt - Build the libvirt input plugin (statistics about virtualized guests on a system)
+app-admin/collectd:collectd_plugins_load - Build the load input plugin (system load)
+app-admin/collectd:collectd_plugins_logfile - Build the logfile output plugin (writes log messages to a text file)
+app-admin/collectd:collectd_plugins_madwifi - Build the madwifi input plugin (information about Atheros wireless LAN chipsets)
+app-admin/collectd:collectd_plugins_match_empty_counter - Build the match_empty_counter filter plugin
+app-admin/collectd:collectd_plugins_match_hashed - Build the match_hashed filter plugin
+app-admin/collectd:collectd_plugins_match_regex - Build the match_regex filter plugin
+app-admin/collectd:collectd_plugins_match_timediff - Build the match_timediff filter plugin
+app-admin/collectd:collectd_plugins_match_value - Build the match_value filter plugin
+app-admin/collectd:collectd_plugins_mbmon - Build the mbmon input plugin (information from mainboard sensors)
+app-admin/collectd:collectd_plugins_memcachec - Build the memcachec input plugin (connects to a memcached server)
+app-admin/collectd:collectd_plugins_memcached - Build the memcached input plugin (connects to a memcached daemon)
+app-admin/collectd:collectd_plugins_memory - Build the memory input plugin (physical memory utilization)
+app-admin/collectd:collectd_plugins_multimeter - Build the multimeter input plugin (reads a voltage or current from a multimeter connected to a serial bus)
+app-admin/collectd:collectd_plugins_mysql - Build the mysql input plugin (connects to an MySQL-database and issues a SHOW STATUS command)
+app-admin/collectd:collectd_plugins_network - Build the network input/output plugin (communicates with other instances of collectd)
+app-admin/collectd:collectd_plugins_nfs - Build the nfs input plugin (usage of the Network File System)
+app-admin/collectd:collectd_plugins_nginx - Build the nginx input plugin (number of requests handled by the nginx daemon)
+app-admin/collectd:collectd_plugins_notify_desktop - Build the notify_desktop output plugin (uses libnotify to display notifications to the user)
+app-admin/collectd:collectd_plugins_notify_email - Build the notify_email output plugin (uses libESMTP to send notifications to a configured email address)
+app-admin/collectd:collectd_plugins_ntpd - Build the ntpd input plugin (queries an NTP server)
+app-admin/collectd:collectd_plugins_olsrd - Build the olsrd input plugin (reads information about the Optimized Link State Routing daemon)
+app-admin/collectd:collectd_plugins_onewire - Build the onewire input plugin (collects temperature information from sensors)
+app-admin/collectd:collectd_plugins_openvpn - Build the openvpn input plugin (reads the status file printed by OpenVPN)
+app-admin/collectd:collectd_plugins_perl - Build the perl language binding plugin (embeds a Perl interpreter into collectd for writing plugins)
+app-admin/collectd:collectd_plugins_postgresql - Build the postgresql input plugin (connects to and executes SQL statements on a PostgreSQL database)
+app-admin/collectd:collectd_plugins_powerdns - Build the powerdns input plugin (connects to a local PowerDNS instance)
+app-admin/collectd:collectd_plugins_processes - Build the processes input plugin (statistics about processes)
+app-admin/collectd:collectd_plugins_protocols - Build the protocols input plugin (network protocols)
+app-admin/collectd:collectd_plugins_python - Build the python language binding plugin (embeds a Python interpreter into collectd for writing plugins)
+app-admin/collectd:collectd_plugins_rrdcached - Build the rrdcached input/output plugin (connects to rrdcached and submits updates for RRD files)
+app-admin/collectd:collectd_plugins_rrdtool - Build the rrdtool output plugin (writes values to RRD-files)
+app-admin/collectd:collectd_plugins_sensors - Build the sensors input plugin (uses lm-sensors to read hardware sensors)
+app-admin/collectd:collectd_plugins_serial - Build the serial input plugin (collects the traffic on serial interfaces)
+app-admin/collectd:collectd_plugins_snmp - Build the snmp input plugin (read values from network devices using SNMP)
+app-admin/collectd:collectd_plugins_swap - Build the swap input plugin (amount of memory currently written to swap)
+app-admin/collectd:collectd_plugins_syslog - Build the syslog output plugin (receives messages from collectd and dispatches them to syslog)
+app-admin/collectd:collectd_plugins_table - Build the table input plugin (parses table-like structured plain text)
+app-admin/collectd:collectd_plugins_tail - Build the tail input plugin (follows logfiles as e.g. tail -f)
+app-admin/collectd:collectd_plugins_target_notification - Build the target_notification filter plugin
+app-admin/collectd:collectd_plugins_target_replace - Build the target_replace filter plugin
+app-admin/collectd:collectd_plugins_target_scale - Build the target_scale filter plugin
+app-admin/collectd:collectd_plugins_target_set - Build the target_set filter plugin
+app-admin/collectd:collectd_plugins_tcpconns - Build the tcpconns input plugin (number of TCP connections to or from a specified port)
+app-admin/collectd:collectd_plugins_teamspeak2 - Build the teamspeak2 input plugin (collects traffic statistics from a teamspeak2 instance)
+app-admin/collectd:collectd_plugins_ted - Build the ted input plugin (connects to The Energy Detective and reads the current power over connected power lines)
+app-admin/collectd:collectd_plugins_thermal - Build the thermal input plugin (ACPI thermal zone information)
+app-admin/collectd:collectd_plugins_tokyotyrant - Build the tokyotyrant input plugin (number of records and file size from a running Tokyo Tyrant server)
+app-admin/collectd:collectd_plugins_unixsock - Build the unixsock output plugin (opens a UNIX domain socket and accepts connections)
+app-admin/collectd:collectd_plugins_uptime - Build the uptime input plugin (system uptime)
+app-admin/collectd:collectd_plugins_users - Build the users input plugin (number of users currently logged in)
+app-admin/collectd:collectd_plugins_uuid - Build the uuid plugin (tries hard to determine the UUID of the system it is running on)
+app-admin/collectd:collectd_plugins_vmem - Build the vmem input plugin (information about the virtual memory subsystem)
+app-admin/collectd:collectd_plugins_vserver - Build the vserver input plugin (virtual servers running on a system)
+app-admin/collectd:collectd_plugins_wireless - Build the wireless input plugin (signal quality, signal power and signal-to-noise ratio for wireless LAN cards)
+app-admin/collectd:collectd_plugins_write_http - Build the write_http output plugin (sends the values collected by collectd to a web-server)
+app-admin/collectd:contrib - Install user-contributed files in the doc directory
 app-admin/conky:apcupsd - enable support for sys-power/apcupsd
 app-admin/conky:audacious - enable monitoring of music played by media-sound/audacious
 app-admin/conky:eve - enable support for the eve-online skill monitor
