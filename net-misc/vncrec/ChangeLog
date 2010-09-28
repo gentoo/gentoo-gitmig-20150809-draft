@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vncrec
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/ChangeLog,v 1.7 2007/07/22 08:06:24 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/ChangeLog,v 1.8 2010/09/28 18:28:34 jer Exp $
+
+*vncrec-0.2-r1 (28 Sep 2010)
+
+  28 Sep 2010; Jeroen Roovers <jer@gentoo.org> +vncrec-0.2-r1.ebuild,
+  +files/vncrec-0.2-includes.patch:
+  Fix some missing includes. Make sure Makefile does not run make Makefiles
+  as xmkmf -a already does that. Move xmkmf to src_configure(). Respect
+  LDFLAGS (bug #336116), CC, CFLAGS. Add missing deps. Fix quoting issue.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; vncrec-0.2.ebuild:
   Drop virtual/x11 references.
