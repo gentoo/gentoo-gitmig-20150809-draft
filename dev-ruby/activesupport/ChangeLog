@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.122 2010/09/05 09:17:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.123 2010/09/28 20:06:17 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org>
+  activesupport-2.3.5-r4.ebuild:
+  Marking activesupport-2.3.5-r4 ~ppc for bug 319241
 
 *activesupport-2.3.9 (05 Sep 2010)
 
