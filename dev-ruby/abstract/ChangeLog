@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/abstract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.3 2010/09/10 10:03:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.4 2010/09/28 23:42:56 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> abstract-1.0.0.ebuild:
+  Marking abstract-1.0.0 ~ppc for bug 326353
 
 *abstract-1.0.0-r1 (10 Sep 2010)
 
