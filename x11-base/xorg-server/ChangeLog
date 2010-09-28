@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.536 2010/09/28 12:43:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.537 2010/09/28 15:05:56 scarabeus Exp $
+
+  28 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.9.0-r1.ebuild:
+  Fix typo
 
 *xorg-server-1.9.0-r1 (28 Sep 2010)
 
