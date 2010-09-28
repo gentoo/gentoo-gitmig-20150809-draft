@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.11 2010/09/28 22:16:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.12 2010/09/28 22:21:18 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python interface to the OpenSSL library"
 HOMEPAGE="http://pyopenssl.sourceforge.net/ http://pypi.python.org/pypi/pyOpenSSL"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz
 	mirror://sourceforge/pyopenssl/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"

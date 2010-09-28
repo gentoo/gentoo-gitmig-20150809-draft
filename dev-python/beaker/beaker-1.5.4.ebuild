@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.5.4.ebuild,v 1.4 2010/09/28 15:56:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.5.4.ebuild,v 1.5 2010/09/28 22:22:28 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A Session and Caching library with WSGI Middleware"
 HOMEPAGE="http://beaker.groovie.org/ http://pypi.python.org/pypi/Beaker"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
