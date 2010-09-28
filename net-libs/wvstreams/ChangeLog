@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.140 2010/09/06 18:45:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.141 2010/09/28 14:47:31 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> wvstreams-4.6.1-r1.ebuild:
+  Marking wvstreams-4.6.1-r1 ppc for bug 333613
 
   06 Sep 2010; Raúl Porcel <armin76@gentoo.org> wvstreams-4.6.1-r1.ebuild:
   alpha/sparc stable wrt #333613
