@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.17 2010/07/31 18:31:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.18 2010/09/28 23:33:00 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> rubygems-0-r2.ebuild:
+  Marking rubygems-0-r2 ~ppc for bug 303003
 
 *rubygems-0-r4 (31 Jul 2010)
 
