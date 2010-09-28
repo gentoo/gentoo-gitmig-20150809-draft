@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.77 2010/09/11 18:56:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.78 2010/09/28 21:37:16 eva Exp $
+
+*sabayon-2.30.1 (28 Sep 2010)
+
+  28 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +sabayon-2.30.1.ebuild:
+  Version bump. Translation updates. Drop *.la file installation, bug
+  #299638.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> sabayon-2.30.0.ebuild:
   Marked ppc for bug #324077.
