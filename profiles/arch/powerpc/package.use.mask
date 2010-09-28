@@ -1,6 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.49 2010/09/16 15:52:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.50 2010/09/28 05:15:32 ssuominen Exp $
+
+# Joseph Jezak <josejx@gentoo.org> (11 Aug 2010)
+# ppc32: Needs libimobiledevice keyworded, bug 325839
+# and
+# Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2010)
+# ppc64: Keyworded but not properly runtime tested, so unmask
+# at the same time with ppc32
+sys-power/upower ipod
 
 # Joseph Jezak <josejx@gentoo.org> (13 Sep 2010)
 # Masked libvpx, we'll wait for native vp8 support

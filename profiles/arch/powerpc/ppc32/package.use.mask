@@ -1,12 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.17 2010/09/16 15:52:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.18 2010/09/28 05:15:32 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
-
-# Joseph Jezak <josejx@gentoo.org> (11 Aug 2010)
-# Needs libimobiledevice keyworded, bug 325839
-sys-power/upower ipod
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jul 2010)
 # Needs clutter, bug 318691
