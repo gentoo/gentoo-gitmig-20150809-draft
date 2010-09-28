@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.188 2010/09/27 07:29:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.189 2010/09/28 01:27:03 mr_bones_ Exp $
+
+*wesnoth-1.8.5 (28 Sep 2010)
+
+  28 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +wesnoth-1.8.5.ebuild:
+  version bump
 
   26 Sep 2010; Markos Chandras <hwoarang@gentoo.org> wesnoth-1.8.4.ebuild:
   Stable on amd64 wrt bug #336408
