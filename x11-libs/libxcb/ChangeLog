@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.68 2010/09/19 20:51:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.69 2010/09/28 13:49:39 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> libxcb-1.6.ebuild:
+  ppc64 stable wrt #327777
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> libxcb-1.6.ebuild:
   ia64/s390/sh/sparc stable wrt #327777
