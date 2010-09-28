@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-1.2.ebuild,v 1.3 2010/03/11 21:16:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-1.2.ebuild,v 1.4 2010/09/28 09:53:28 patrick Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +dspam crm114 mailtrain signature-log spool2dir syslog"
 
-DEPEND="net-mail/dovecot
+DEPEND="<net-mail/dovecot-2
 	dspam? ( mail-filter/dspam )
 	crm114? ( app-text/crm114 )"
 RDEPEND="${DEPEND}"
