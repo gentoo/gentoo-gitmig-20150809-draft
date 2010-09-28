@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0-r1.ebuild,v 1.2 2010/09/28 15:05:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0-r1.ebuild,v 1.3 2010/09/28 19:24:49 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -202,6 +202,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm.initd-3 xdm || die "initd file install failed"
+	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup || die
 	newconfd "${FILESDIR}"/xdm.confd-3 xdm || die
 
 	# install the @x11-module-rebuild set for Portage
