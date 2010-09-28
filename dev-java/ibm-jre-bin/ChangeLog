@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.153 2010/09/26 12:07:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.154 2010/09/28 22:26:59 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org>
+  ibm-jre-bin-1.5.0.12_p1.ebuild, ibm-jre-bin-1.6.0.8_p1.ebuild:
+  Marking -1.6.0.8_p1 and -1.5.0.12_p1 ppc64/ppc for bug 330663
 
   26 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   ibm-jre-bin-1.5.0.12_p1.ebuild, ibm-jre-bin-1.6.0.8_p1.ebuild:
