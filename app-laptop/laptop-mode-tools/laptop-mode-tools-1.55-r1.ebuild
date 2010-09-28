@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.55-r1.ebuild,v 1.4 2010/09/09 03:15:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.55-r1.ebuild,v 1.5 2010/09/28 05:23:31 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -27,6 +27,7 @@ DEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	# Patching to avoid !sys-power/pm-utils depend wrt #327443
 	epatch "${FILESDIR}"/${P}-pm-utils-1.4.0.patch
 }
 
@@ -43,6 +44,10 @@ src_install() {
 
 	dodoc Documentation/*.txt README || die
 	newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
+
+	# Commented out to avoid !sys-power/pm-utils depend wrt #327443
+	# exeinto /etc/pm/power.d
+	# newexe "${FILESDIR}"/laptop_mode_tools.pmutils laptop_mode_tools
 
 	keepdir /var/run/laptop-mode-tools
 }
