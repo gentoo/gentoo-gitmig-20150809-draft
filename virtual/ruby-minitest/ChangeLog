@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.15 2010/08/17 00:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.16 2010/09/28 18:52:14 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-minitest-0.ebuild:
+  Marking ruby-minitest-0 ppc for bug 321043
 
   17 Aug 2010; Jeroen Roovers <jer@gentoo.org> ruby-minitest-0.ebuild:
   Stable for HPPA (bug #321043).
