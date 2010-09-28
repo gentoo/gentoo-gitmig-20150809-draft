@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.48 2010/09/18 16:22:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.49 2010/09/28 23:48:12 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> haml-3.0.17.ebuild:
+  Marking haml-3.0.17 ~ppc for bug 326353
 
   18 Sep 2010; Hans de Graaff <graaff@gentoo.org> -haml-3.0.13-r1.ebuild,
   -haml-3.0.16.ebuild:
