@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.143 2010/09/05 09:21:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.144 2010/09/28 21:48:15 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> actionmailer-2.3.8.ebuild:
+  Marking actionmailer-2.3.8 ~ppc for bug 322175
 
 *actionmailer-2.3.9 (05 Sep 2010)
 
