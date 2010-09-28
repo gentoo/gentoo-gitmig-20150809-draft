@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.5 2010/09/28 12:55:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.6 2010/09/28 14:14:24 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
 KDE_REQUIRED="optional"
 AT_M4DIR="cygnal"
 
-inherit autotools eutils kde4-base multilib nsplugins flag-o-matic
+inherit autotools eutils kde4-base multilib nsplugins python flag-o-matic
 
 DESCRIPTION="GNU Flash movie player that supports many SWF v7,8,9 features"
 HOMEPAGE="http://www.gnu.org/software/gnash/"
@@ -248,6 +248,11 @@ src_install() {
 	fi
 	# Create a symlink in /usr/$(get_libdir)/nsbrowser/plugins to the nsplugin install directory.
 	use nsplugin && inst_plugin /usr/$(get_libdir)/gnash/npapi/libgnashplugin.so \
+
+	# Remove pointless .la file, bug 338831
+	if use python; then
+		rm "${D}/$(python_get_sitedir)"/gtk-2.0/${PN}.la || die
+	fi
 
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
