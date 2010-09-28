@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.66 2010/09/25 14:52:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.67 2010/09/28 16:41:42 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> sphinx-1.0.3.ebuild:
+  stable ppc, bug 335491
 
   25 Sep 2010; Markus Meier <maekke@gentoo.org> sphinx-1.0.3.ebuild:
   amd64/arm/x86 stable, bug #335491
