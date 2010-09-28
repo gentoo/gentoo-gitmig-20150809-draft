@@ -1,6 +1,12 @@
 # ChangeLog for app-text/rhyme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.13 2009/09/19 18:31:07 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.14 2010/09/28 17:28:44 jer Exp $
+
+*rhyme-0.9-r1 (28 Sep 2010)
+
+  28 Sep 2010; Jeroen Roovers <jer@gentoo.org> +rhyme-0.9-r1.ebuild:
+  Respect LDFLAGS (bug #336977). Drop unused dependency and change sed
+  script to not link against termcap or ncurses at all.
 
   19 Sep 2009; Patrick Lauer <patrick@gentoo.org> rhyme-0.9.ebuild:
   Restricting tests #277940 and adding ~amd64 keyword
