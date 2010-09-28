@@ -16,7 +16,7 @@ file ownership, access right.
 	<use>
 		<flag name='external-fuse'>Use external FUSE library instead of internal
 		one. Must be disabled for unprivileged mounting to work.</flag>
-		<flag name='udev'>Install udev rule to make devicekit-disks use
-		ntfs-3g instead of the kernel NTFS driver.</flag>
+		<flag name='udev'>Install udev rule to make udisks use ntfs-3g instead
+		of the kernel NTFS driver.</flag>
 	</use>
 </pkgmetadata>
