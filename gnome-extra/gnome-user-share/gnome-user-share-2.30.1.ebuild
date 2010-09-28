@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.28.2.ebuild,v 1.1 2009/12/23 23:18:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.1.ebuild,v 1.1 2010/09/28 19:05:16 eva Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit eutils gnome2 multilib
 
 DESCRIPTION="Personal file sharing for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -44,13 +44,5 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-httpd=apache2
-		--with-modules-path=/usr/lib/apache2/modules/"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed failed"
+		--with-modules-path=/usr/$(get_libdir)/apache2/modules/"
 }
