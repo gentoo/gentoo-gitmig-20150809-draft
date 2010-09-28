@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kcollectd
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.1 2010/09/28 19:06:43 dilfridge Exp $
+
+*kcollectd-0.9 (28 Sep 2010)
+
+  28 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kcollectd-0.9.ebuild, +metadata.xml:
+  New application (imported from sunrise overlay), fixes bug 300771.
+
