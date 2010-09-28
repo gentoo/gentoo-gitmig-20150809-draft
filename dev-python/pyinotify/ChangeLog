@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.29 2010/07/11 18:46:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.30 2010/09/28 16:01:08 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> pyinotify-0.9.0.ebuild:
+  stable ppc, bug 327153
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> pyinotify-0.9.0.ebuild:
   sparc/x86 stable wrt #327153
