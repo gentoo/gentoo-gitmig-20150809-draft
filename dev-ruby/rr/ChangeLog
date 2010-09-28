@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.9 2010/09/19 10:02:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.10 2010/09/28 23:37:01 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> rr-0.10.11.ebuild:
+  Marking rr-0.10.11 ~ppc for bug 322053
 
 *rr-1.0.0 (19 Sep 2010)
 
