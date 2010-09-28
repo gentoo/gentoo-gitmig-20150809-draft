@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.4 2010/09/28 12:30:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.5 2010/09/28 12:55:12 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -146,7 +146,7 @@ src_prepare() {
 	eautoreconf
 }
 src_configure() {
-	local gui hwaccel input myconf myext renderers
+	local gui hwaccel input media myconf myext renderers
 
 	# Set nsplugin install directory.
 	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/usr/$(get_libdir)/gnash/npapi/"
@@ -174,13 +174,10 @@ src_configure() {
 	fi
 
 	# Set media handler.
-	if use ffmpeg; then
-		myconf="${myconf} --enable-media=ffmpeg"
-	elif use gstreamer; then
-		myconf="${myconf} --enable-media=gst"
-	else
-		myconf="${myconf} --enable-media=none"
-	fi
+	use ffmpeg || use gstreamer || media+=",none"
+	use ffmpeg && media+=",ffmpeg"
+	use gstreamer && media+=",gst"
+
 	# Set gui.
 	use gtk && gui=",gtk"
 	use fbcon && gui="${gui},fb"
@@ -202,6 +199,7 @@ src_configure() {
 	hwaccel=$( echo $hwaccel | sed -e 's/,//' )
 	myext=$( echo $myext | sed -e 's/,//' )
 	renderers=$( echo $renderers | sed -e 's/,//' )
+	media=$( echo $media | sed -e 's/,//' )
 
 	econf \
 		--docdir=/usr/share/doc/${PF} \
@@ -224,6 +222,7 @@ src_configure() {
 		--enable-extensions=${myext} \
 		--enable-renderer=${renderers} \
 		--enable-hwaccel=${hwaccel} \
+		--enable-media=${media} \
 		${myconf}
 }
 src_test() {
