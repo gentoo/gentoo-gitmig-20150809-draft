@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/geoip-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.20 2010/09/28 15:54:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.21 2010/09/28 21:48:48 arfrever Exp $
+
+  28 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -geoip-python-0.2.0.ebuild, -geoip-python-1.2.0.ebuild,
+  -geoip-python-1.2.1.ebuild:
+  Delete.
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> geoip-python-1.2.4.ebuild:
   stable ppc, bug 329431
