@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4.ebuild,v 1.7 2010/08/17 00:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4.ebuild,v 1.8 2010/09/28 18:55:45 ranger Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://codeforpeople.rubyforge.org/rubyforge/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/json-1.1.7'

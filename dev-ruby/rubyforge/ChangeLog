@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.67 2010/08/17 00:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.68 2010/09/28 18:55:45 ranger Exp $
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> rubyforge-2.0.4.ebuild:
+  Marking rubyforge-2.0.4 ppc for bug 321043
 
   17 Aug 2010; Jeroen Roovers <jer@gentoo.org> rubyforge-2.0.4.ebuild:
   Stable for HPPA (bug #321043).
