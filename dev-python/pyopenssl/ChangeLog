@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.60 2010/09/05 15:51:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.61 2010/09/28 08:57:45 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  pyopenssl-0.10-r1.ebuild:
+  Disable testsuite because of syntax change in OpenSSL 1.x wrt #326637.
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> pyopenssl-0.10-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #330441

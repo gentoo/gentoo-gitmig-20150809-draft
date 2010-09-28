@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.9 2010/09/05 15:51:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.10-r1.ebuild,v 1.10 2010/09/28 08:57:45 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,6 +25,8 @@ IUSE="doc"
 RDEPEND=">=dev-libs/openssl-0.9.6g"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-tex/latex2html-2002.2 )"
+
+RESTRICT="test" # Syntax changed in OpenSSL 1.x, see #326637
 
 S="${WORKDIR}/${MY_P}"
 
