@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.121 2010/09/04 14:51:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.122 2010/09/28 16:19:42 ssuominen Exp $
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> lcms-1.19.ebuild:
+  USE="static-libs" and punt .la files.
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> lcms-2.0a.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #328795
