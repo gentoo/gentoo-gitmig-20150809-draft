@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/lib765
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.9 2010/09/28 20:48:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.10 2010/09/28 21:00:32 jer Exp $
+
+  28 Sep 2010; Jeroen Roovers <jer@gentoo.org> lib765-0.4.2.ebuild,
+  metadata.xml:
+  Add USE=static-libs. Add USE=libdsk. Set RDEPEND. Fix quoting issue. Use
+  emake not make.
 
 *lib765-0.4.2 (28 Sep 2010)
 
