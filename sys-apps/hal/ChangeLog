@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.326 2010/09/28 04:47:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.327 2010/09/28 06:20:47 ssuominen Exp $
+
+*hal-0.5.14-r3 (28 Sep 2010)
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +files/0.5.14-hald.rc.1, +hal-0.5.14-r3.ebuild:
+  Remove now unnecessary workaround for PATH and 512 bytes limit in init
+  script wrt #267928.
 
   28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.14-r2.ebuild:
   Remove old sys-auth/consolekit from dependencies.
