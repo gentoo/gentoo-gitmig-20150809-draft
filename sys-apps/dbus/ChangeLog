@@ -1,20 +1,6 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.264 2010/09/28 21:00:55 ssuominen Exp $
-
-  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +dbus-1.4.0.ebuild,
-  -dbus-1.4.0-r1.ebuild:
-  Revert technically false revision bump, which restored unused libtool
-  archive files. They would cause overlinking of libraries, and in the end
-  breaking users system for no gain.
-
-*dbus-1.4.0-r1 (28 Sep 2010)
-
-  28 Sep 2010; <nirbheek@gentoo.org> -dbus-1.4.0.ebuild,
-  +dbus-1.4.0-r1.ebuild:
-  Revert: 'remove .la files' and 'Remove USE conditional for removing .la
-  files' on behalf of steev and revbump so users get the change. Contact
-  steev if you have issues with or questions about this commit.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.265 2010/09/28 21:05:37 ssuominen Exp $
 
   20 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> dbus-1.4.0.ebuild:
   Remove pregenerated files from tarball wrt #337989 by Xake.
