@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.8 2010/07/29 00:12:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.9 2010/09/28 20:03:56 ranger Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/svenfuchs-${PN}-38d85ea"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86 ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend test "dev-ruby/mocha dev-ruby/activesupport"
