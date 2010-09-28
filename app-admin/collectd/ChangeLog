@@ -1,0 +1,15 @@
+# ChangeLog for app-admin/collectd
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.1 2010/09/28 15:17:05 dilfridge Exp $
+
+*collectd-4.10.1-r2 (28 Sep 2010)
+
+  28 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +collectd-4.10.1-r2.ebuild, +files/collectd-4.10.1-libiptc.patch,
+  +files/collectd-4.10.1-libperl.patch, +files/collectd.confd,
+  +files/collectd.initd, +metadata.xml:
+  New application, fixes bug 107076. Thanks to all the previous authors of
+  the ebuild since 2005 (see Bugzilla for details), to the reviewers on
+  #gentoo-sunrise and #gentoo-dev, and in particular to Boian Berberov, on
+  whose work this is mainly based.
+
