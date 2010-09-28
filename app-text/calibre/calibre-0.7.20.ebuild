@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.16.ebuild,v 1.1 2010/08/30 01:35:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.20.ebuild,v 1.1 2010/09/28 20:15:00 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.6
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE=""
 
 SHARED_DEPEND="
-	>=app-text/podofo-0.7
+	>=app-text/podofo-0.8.2
 	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=dev-libs/chmlib-0.40
 	>=dev-python/beautifulsoup-3.0.5
@@ -88,7 +88,9 @@ src_install() {
 
 	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
+	export HOME="$T/fake_homedir"
 	export XDG_CONFIG_HOME="$HOME/.config"
+	export XDG_DATA_HOME="$HOME/.local/share"
 	export CALIBRE_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/calibre"
 	mkdir -p "$XDG_CONFIG_HOME" "$CALIBRE_CONFIG_DIRECTORY"
 
