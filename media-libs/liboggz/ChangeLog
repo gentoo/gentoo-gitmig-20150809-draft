@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.32 2010/09/26 21:42:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.33 2010/09/28 11:28:23 hwoarang Exp $
+
+  28 Sep 2010; Markos Chandras <hwoarang@gentoo.org> liboggz-1.1.1.ebuild:
+  Stable on amd64 wrt bug #338836
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> liboggz-1.1.1.ebuild:
   ppc64 stable wrt #338836
