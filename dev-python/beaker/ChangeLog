@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.29 2010/09/28 15:56:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.30 2010/09/28 21:43:43 arfrever Exp $
+
+  28 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -beaker-1.5.3.ebuild:
+  Delete.
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> beaker-1.5.4.ebuild:
   stable ppc, bug 328883
