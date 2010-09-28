@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.7 2010/09/28 11:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.8 2010/09/28 14:04:54 darkside Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="full-strength general purpose cryptography library (including SSL v2/v3 and TLS v1)"
 HOMEPAGE="http://www.openssl.org/"
-SRC_URI="mirror://openssl/source/${P}.tar.gz
-	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/packages/${PN}/${PN}-c_rehash.sh?rev=1.7"
+SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
@@ -24,8 +23,7 @@ DEPEND="${RDEPEND}
 PDEPEND="app-misc/ca-certificates"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	cp "${DISTDIR}"/openssl-c_rehash.sh* "${WORKDIR}"/c_rehash || die
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
@@ -131,7 +129,7 @@ src_test() {
 
 src_install() {
 	emake -j1 INSTALL_PREFIX="${D}" install || die
-	dobin "${WORKDIR}"/c_rehash || die #333117
+	newbin "${FILESDIR}"/openssl-c_rehash.sh-rev-1.7 c_rehash || die #333117
 	dodoc CHANGES* FAQ NEWS README doc/*.txt doc/c-indentation.el
 	dohtml -r doc/*
 
