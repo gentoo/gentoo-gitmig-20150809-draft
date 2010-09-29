@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9-r1.ebuild,v 1.4 2009/03/18 18:03:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.9-r1.ebuild,v 1.5 2010/09/29 06:29:06 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="general-purpose console screen reader"
@@ -13,22 +14,25 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""
+DEPEND="nls? ( sys-devel/gettext )"
 
-	src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/${P}-gcc43.patch"
-	epatch "${FILESDIR}/${P}-remove-m4.patch"
-	rm -r "${S}/m4"
-	cd "${S}"
+src_prepare() {
+	local x=/usr/share/gettext/po/Makefile.in.in
+	[[ -e $x ]] && cp -f $x po/ #330879
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-remove-m4.patch
+
+	rm -r "${S}"/m4
 	eautoreconf
 }
 
-src_compile() {
-	econf --datadir=/etc \
-	$(use_enable nls) || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf \
+		--datadir=/etc \
+		--disable-dependency-tracking \
+		$(use_enable nls)
 }
 
 src_install() {
