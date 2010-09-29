@@ -1,22 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.19 2010/09/29 02:40:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.8.ebuild,v 1.1 2010/09/29 02:40:29 ssuominen Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="2:2.6"
 
-inherit pax-utils eutils multilib python xfconf git
+inherit pax-utils eutils multilib python xfconf
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-EGIT_REPO_URI="git://git.xfce.org/apps/midori"
-EGIT_PROJECT="midori"
-SRC_URI=""
+SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="doc gnome +html idn libnotify nls +unique vala"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
