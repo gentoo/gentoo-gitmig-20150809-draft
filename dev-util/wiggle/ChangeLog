@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.20 2010/03/24 18:15:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.21 2010/09/29 02:59:50 abcd Exp $
+
+*wiggle-0.8-r1 (29 Sep 2010)
+
+  29 Sep 2010; Jonathan Callen <abcd@gentoo.org> +wiggle-0.8-r1.ebuild,
+  +files/wiggle-0.8-buffer-overflow.patch:
+  Revbump; patch to fix buffer overflows (bug 339073)
 
 *wiggle-0.8 (24 Mar 2010)
 
