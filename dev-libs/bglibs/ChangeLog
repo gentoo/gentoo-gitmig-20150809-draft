@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.51 2010/03/25 20:29:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.52 2010/09/29 09:59:30 xmw Exp $
+
+  29 Sep 2010; Michael Weber <xmw@gentoo.org> bglibs-1.041.ebuild,
+  bglibs-1.106-r1.ebuild:
+  Added ~arm keyword
 
 *bglibs-1.106-r1 (25 Mar 2010)
 
