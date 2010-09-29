@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.24.4.ebuild,v 1.9 2010/07/20 02:18:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.28.2.ebuild,v 1.1 2010/09/29 21:08:34 eva Exp $
 
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -11,14 +12,14 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.20
 	>=gnome-base/gconf-2
 	>=x11-libs/libwnck-2.5
 	>=gnome-base/libgtop-2.23.1
-	>=x11-libs/gtk+-2.12
+	>=x11-libs/gtk+-2.16
 	>=x11-themes/gnome-icon-theme-2.15.3
 	>=dev-cpp/gtkmm-2.8
 	>=dev-cpp/glibmm-2.16
