@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.107 2010/09/21 19:15:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.108 2010/09/29 15:08:22 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> psycopg-2.2.2.ebuild:
+  Marking psycopg-2.2.2 ppc for bug 337136
 
   21 Sep 2010; Markos Chandras <hwoarang@gentoo.org> psycopg-2.2.2.ebuild:
   Stable on amd64 wrt bug #337136
