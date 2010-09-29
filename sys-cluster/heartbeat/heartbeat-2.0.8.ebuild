@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.18 2010/06/30 10:58:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.19 2010/09/29 11:54:36 cla Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -52,7 +52,8 @@ src_unpack() {
 		"${FILESDIR}"/${P}-delay.patch \
 		"${FILESDIR}"/${P}-glibc.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-install_fix.patch
+		"${FILESDIR}"/${P}-install_fix.patch \
+		"${FILESDIR}"/${P}-crm-assert.patch
 
 	sed -i \
 		-e 's:libgnutls-config:pkg-config gnutls:g' \

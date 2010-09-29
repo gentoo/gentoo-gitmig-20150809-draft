@@ -1,0 +1,11 @@
+diff -Naur heartbeat-2.0.8.old/lib/crm/common/utils.c heartbeat-2.0.8/lib/crm/common/utils.c
+--- heartbeat-2.0.8.old/lib/crm/common/utils.c	2010-09-29 13:40:09.000000000 +0200
++++ heartbeat-2.0.8/lib/crm/common/utils.c	2010-09-29 13:41:45.000000000 +0200
+@@ -698,7 +698,6 @@
+ crm_str_eq(const char *a, const char *b, gboolean use_case) 
+ {
+ 	if(a == NULL || b == NULL) {
+-		CRM_ASSERT(a != b);
+ 		return FALSE;
+ 
+ 	} else if(use_case && a[0] != b[0]) {

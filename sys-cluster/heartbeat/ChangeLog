@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.84 2010/09/11 14:21:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.85 2010/09/29 11:54:36 cla Exp $
+
+  29 Sep 2010; Dawid Węgliński <cla@gentoo.org> heartbeat-2.0.8.ebuild,
+  +files/heartbeat-2.0.8-crm-assert.patch:
+  Fix assert bug (bug #290579)
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop useles maintainer line
