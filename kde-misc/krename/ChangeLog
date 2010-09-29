@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.60 2010/09/29 11:14:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.61 2010/09/29 11:16:08 scarabeus Exp $
+
+  29 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> krename-4.0.5.ebuild:
+  Oops forgot to move latest version from overlay before commiting.
 
 *krename-4.0.5 (29 Sep 2010)
 
