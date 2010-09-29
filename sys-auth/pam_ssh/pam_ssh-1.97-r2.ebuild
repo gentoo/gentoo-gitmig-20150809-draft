@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.97-r2.ebuild,v 1.2 2010/08/07 12:45:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.97-r2.ebuild,v 1.3 2010/09/29 21:20:13 flameeyes Exp $
 
 EAPI=2
 
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
-# Doesn't work on OpenPAM.
-DEPEND="sys-libs/pam
-	sys-devel/libtool"
-
+# Doesn't work on OpenPAM; looks for OpenSSH at build time (bug
+# #282993) and won't work with other implementations either
 RDEPEND="sys-libs/pam
-	virtual/ssh"
+	net-misc/openssh"
+
+DEPEND="${RDEPEND}
+	sys-devel/libtool"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-doublefree.patch"
