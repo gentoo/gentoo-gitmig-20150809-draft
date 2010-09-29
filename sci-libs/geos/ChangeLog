@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.47 2010/09/03 18:03:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.48 2010/09/29 20:58:23 patrick Exp $
+
+*geos-3.2.2 (29 Sep 2010)
+
+  29 Sep 2010; Patrick Lauer <patrick@gentoo.org> +geos-3.2.2.ebuild:
+  Bump
 
   03 Sep 2010; Fabian Groffen <grobian@gentoo.org>
   +files/3.2.0-darwin.patch, geos-3.2.0-r1.ebuild:
