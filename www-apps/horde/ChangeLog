@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.104 2010/09/18 18:26:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.105 2010/09/29 18:39:51 a3li Exp $
+
+*horde-3.3.9 (29 Sep 2010)
+
+  29 Sep 2010; Alex Legler <a3li@gentoo.org> +horde-3.3.9.ebuild:
+  Version bump. Fixes CVE-2010-3077, bug 336319.
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> horde-3.3.8.ebuild:
   alpha/sparc stable wrt #333207
