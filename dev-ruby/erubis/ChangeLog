@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.6 2010/09/28 23:43:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.7 2010/09/29 22:36:14 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> erubis-2.6.5.ebuild:
+  Marking erubis-2.6.5 ~ppc64 for bug 326353
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> erubis-2.6.5.ebuild:
   Marking erubis-2.6.5 ~ppc for bug 326353
