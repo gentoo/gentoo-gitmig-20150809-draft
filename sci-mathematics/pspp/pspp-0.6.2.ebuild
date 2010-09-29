@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.3 2010/06/17 21:58:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.4 2010/09/29 05:41:18 bicatali Exp $
 
 EAPI=2
 inherit eutils elisp-common autotools
@@ -34,6 +34,7 @@ SITEFILE=50${PN}-gentoo.el
 src_prepare() {
 	# this patch is hacky, but should not be needed for 0.7
 	epatch "${FILESDIR}"/${PN}-0.6.0-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-0.6.2-no-test-pgsql.patch
 	eautoreconf
 }
 
