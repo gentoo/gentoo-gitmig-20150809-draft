@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.1 2010/09/28 15:17:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.2 2010/09/29 18:26:44 flameeyes Exp $
+
+  29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  collectd-4.10.1-r2.ebuild:
+  Fix DEPEND variables.
 
 *collectd-4.10.1-r2 (28 Sep 2010)
 
