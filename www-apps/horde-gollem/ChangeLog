@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde-gollem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.21 2010/09/18 18:30:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.22 2010/09/29 19:23:17 a3li Exp $
+
+*horde-gollem-1.1.2 (29 Sep 2010)
+
+  29 Sep 2010; Alex Legler <a3li@gentoo.org> -horde-gollem-1.1.ebuild,
+  +horde-gollem-1.1.2.ebuild:
+  Version bump, fixes XSS vulnerability, bug 339168. Also contains minor
+  bugfixes and updated i18n. Removing old version.
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> horde-gollem-1.1.1.ebuild:
   alpha/sparc stable wrt #333207
