@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.47 2010/08/06 12:12:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.48 2010/09/29 17:16:26 jer Exp $
+
+*unetbootin-490 (29 Sep 2010)
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> +unetbootin-490.ebuild:
+  Version bump. Migrate to qt4-r2.eclass. Move configure-like commands to
+  src_configure().
 
   06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   unetbootin-485.ebuild:
