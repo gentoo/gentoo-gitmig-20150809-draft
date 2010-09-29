@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bsearch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.24 2010/09/28 23:51:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.25 2010/09/29 16:05:11 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> ruby-bsearch-1.5-r2.ebuild:
+  Stable for HPPA (bug #327525).
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-bsearch-1.5-r2.ebuild:
   Marking ruby-bsearch-1.5-r2 ppc for bug 327525
