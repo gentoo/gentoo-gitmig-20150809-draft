@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.1 2010/09/04 07:50:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.2 2010/09/29 06:06:08 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	local x=/usr/share/gettext/po/Makefile.in.in
+	[[ -e $x ]] && cp -f $x po/ #336119
+
 	epatch "${FILESDIR}"/${P}-build.patch
 	eautoreconf
 }
