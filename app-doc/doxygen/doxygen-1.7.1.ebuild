@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.1.ebuild,v 1.1 2010/07/26 07:49:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.1.ebuild,v 1.2 2010/09/29 02:34:43 nerdboy Exp $
 
 EAPI=3
 
@@ -54,6 +54,10 @@ src_prepare() {
 	# fix final DESTDIR issue
 	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
 		addon/doxywizard/Makefile.in || die "sed 2 failed"
+
+	# fix pdf doc
+	sed -i.orig -e "s:g_kowal:g kowal:" \
+		doc/maintainers.txt || die "sed 3 failed"
 
 	if is-flagq "-O3" ; then
 		echo
