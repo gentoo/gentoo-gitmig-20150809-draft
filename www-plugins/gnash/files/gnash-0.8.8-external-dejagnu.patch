@@ -1,0 +1,24 @@
+diff -ur a/plugin/npapi/test.cpp b/plugin/npapi/test.cpp
+--- a/plugin/npapi/test.cpp	2010-08-07 17:50:01.000000000 +0200
++++ b/plugin/npapi/test.cpp	2010-09-29 00:08:15.735999998 +0200
+@@ -27,7 +27,7 @@
+ #include "npruntime.h"
+ #include "pluginbase.h"
+ #include "npfunctions.h"
+-#include "dejagnu.h"
++#include <dejagnu.h>
+ #include <regex.h>
+ 
+ #include "external.h"
+diff -ur a/testsuite/check.h b/testsuite/check.h
+--- a/testsuite/check.h	2010-08-07 17:50:01.000000000 +0200
++++ b/testsuite/check.h	2010-09-29 00:08:33.032999999 +0200
+@@ -11,7 +11,7 @@
+ 
+ #define HAVE_DEJAGNU_H 1 // we ship our own now...
+ #ifdef HAVE_DEJAGNU_H
+-#include "dejagnu.h"
++#include <dejagnu.h>
+ 
+ #define info(x) note x
+ 

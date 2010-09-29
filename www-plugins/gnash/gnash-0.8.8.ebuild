@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.7 2010/09/28 17:37:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.8 2010/09/29 00:29:45 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -80,7 +80,10 @@ RDEPEND=">=dev-libs/boost-1.41.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
-	gnome? ( app-text/rarian )"
+	gnome? ( app-text/rarian )
+	test? ( dev-util/dejagnu )"
+# Tests hang with sandbox, bug #321017
+RESTRICT="test"
 
 pkg_setup() {
 	if use !ffmpeg && use !gstreamer; then
@@ -143,8 +146,11 @@ src_prepare() {
 	# gentoo bug #283905
 	epatch "${FILESDIR}"/${PN}-0.8.7-moc-qt4.patch
 
-	# Install documentation into the proper directories, bug #321017
+	# Install documentation into the proper directories, bug #296110
 	epatch "${FILESDIR}"/${PN}-0.8.8-documentation-paths.patch
+
+	# Use external dejagnu for tests, bug #321017
+	epatch "${FILESDIR}"/${PN}-0.8.8-external-dejagnu.patch
 
 	eautoreconf
 }
