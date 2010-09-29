@@ -1,6 +1,14 @@
 # ChangeLog for app-text/xindy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.10 2010/04/24 11:12:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.11 2010/09/29 17:47:22 radhermit Exp $
+
+*xindy-2.4 (29 Sep 2010)
+
+  29 Sep 2010; Tim Harder <radhermit@gentoo.org> +xindy-2.4.ebuild,
+  +files/xindy-2.4-configure.patch:
+  Version bump (bug #281677). Update to EAPI=3, fix configure script issue,
+  and remove extra external clisp setup as the build system defaults to
+  using it properly.
 
   24 Apr 2010; Alexis Ballier <aballier@gentoo.org> xindy-2.3.ebuild,
   +files/xindy-2.3-clisp-2.48.patch:
