@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.70 2010/09/26 21:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.71 2010/09/29 16:01:49 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> mpg321-0.2.12.ebuild:
+  Stable for HPPA (bug #335565).
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> mpg321-0.2.12.ebuild:
   ppc64 stable wrt #335565
