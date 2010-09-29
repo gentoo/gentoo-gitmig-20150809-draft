@@ -4,8 +4,4 @@
   <herd>voip</herd>
   <longdescription lang="en">Telepathy connection manager for MSN network.
 </longdescription>
-<use>
-	<flag name='libproxy'>Automatically retrieve proxy settings via
-	<pkg>net-libs/libproxy</pkg></flag>
-</use>
 </pkgmetadata>

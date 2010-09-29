@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.27 2010/09/29 10:32:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.28 2010/09/29 18:56:34 pacho Exp $
+
+  29 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  telepathy-butterfly-0.5.14.ebuild, metadata.xml:
+  libproxy RDEPEND is not really optional as reported in bug #339127 by
+  Priit Laes.
 
 *telepathy-butterfly-0.5.14 (29 Sep 2010)
 
