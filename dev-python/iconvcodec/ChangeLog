@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/iconvcodec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.9 2010/09/29 21:42:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.10 2010/09/29 22:21:34 arfrever Exp $
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  iconvcodec-1.1.2.ebuild:
+  Update EAPI. Fix dependencies. Support installation for multiple Python ABIs.
 
   29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -iconvcodec-1.1.1.ebuild:
