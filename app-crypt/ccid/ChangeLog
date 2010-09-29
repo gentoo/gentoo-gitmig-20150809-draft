@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.51 2010/09/28 23:37:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.52 2010/09/29 15:47:52 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> ccid-1.3.13-r1.ebuild:
+  Stable for HPPA (bug #331517).
 
 *ccid-1.4.0 (28 Sep 2010)
 
