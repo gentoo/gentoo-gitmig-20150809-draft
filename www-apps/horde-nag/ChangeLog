@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-nag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.39 2010/09/29 19:07:10 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.40 2010/09/29 19:08:08 a3li Exp $
+
+  29 Sep 2010; Alex Legler <a3li@gentoo.org> horde-nag-2.3.6.ebuild:
+  whitespace fix
 
 *horde-nag-2.3.6 (29 Sep 2010)
 
