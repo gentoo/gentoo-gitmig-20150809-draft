@@ -1,0 +1,254 @@
+diff -Nru openswan-2.6.29.orig/lib/libcrypto/libmd5/Makefile openswan-2.6.29/lib/libcrypto/libmd5/Makefile
+--- openswan-2.6.29.orig/lib/libcrypto/libmd5/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libcrypto/libmd5/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ include ${srcdir}../../Makefile.library
+diff -Nru openswan-2.6.29.orig/lib/libcrypto/libsha1/Makefile openswan-2.6.29/lib/libcrypto/libsha1/Makefile
+--- openswan-2.6.29.orig/lib/libcrypto/libsha1/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libcrypto/libsha1/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS  
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ 
+diff -Nru openswan-2.6.29.orig/lib/libcrypto/libsha2/Makefile openswan-2.6.29/lib/libcrypto/libsha2/Makefile
+--- openswan-2.6.29.orig/lib/libcrypto/libsha2/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libcrypto/libsha2/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -15,5 +15,5 @@
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+diff -Nru openswan-2.6.29.orig/lib/libdns/Makefile openswan-2.6.29/lib/libdns/Makefile
+--- openswan-2.6.29.orig/lib/libdns/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libdns/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -30,8 +30,8 @@
+ 		-I${srcdir}../libisc/nothreads/include \
+ 		-I. -I./include -I${srcdir}include \
+ 		-I${srcdir}../libisc/include
+-CDEFINES = -g ${USERCOMPILE} ${PORTINCLUDE}
+-CWARNINGS = -Werror
++CDEFINES = ${USERCOMPILE} ${PORTINCLUDE}
++CWARNINGS = 
+ 
+ CFLAGS+=${CINCLUDES} ${CDEFINES} ${CWARNINGS}
+ 
+diff -Nru openswan-2.6.29.orig/lib/libipsecconf/Makefile openswan-2.6.29/lib/libipsecconf/Makefile
+--- openswan-2.6.29.orig/lib/libipsecconf/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libipsecconf/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -33,7 +33,7 @@
+ #CFLAGS+=-DFIPS_CHECK
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ ifeq ($(USE_NM),true)
+diff -Nru openswan-2.6.29.orig/lib/libisc/Makefile openswan-2.6.29/lib/libisc/Makefile
+--- openswan-2.6.29.orig/lib/libisc/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libisc/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -22,8 +22,8 @@
+ 		-I${srcdir}nothreads/include \
+ 		-I. -I./include -I${srcdir}include \
+ 		$(PORTINCLUDE) -I${OPENSWANSRCDIR}/include
+-CDEFINES = -g -DHAVE_STRERROR ${USERCOMPILE} ${PORTINCLUDE}
+-# CWARNINGS = -Werror
++CDEFINES = -DHAVE_STRERROR ${USERCOMPILE} ${PORTINCLUDE}
++# CWARNINGS = 
+ 
+ CFLAGS+=${CINCLUDES} ${CDEFINES} ${CWARNINGS}
+ 
+diff -Nru openswan-2.6.29.orig/lib/liblwres/Makefile openswan-2.6.29/lib/liblwres/Makefile
+--- openswan-2.6.29.orig/lib/liblwres/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/liblwres/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -22,8 +22,8 @@
+ 		-I${srcdir}../libisc/${ISCARCH}/include \
+ 		-I${srcdir}../libisc/include \
+ 		-I. -I./include -I${srcdir}include 
+-CDEFINES = -g
+-CWARNINGS = -Werror
++CDEFINES = 
++CWARNINGS = 
+ 
+ CFLAGS+=${USERCOMPILE} ${PORTINCLUDE} ${CINCLUDES} ${CDEFINES} ${CWARNINGS} 
+ 
+diff -Nru openswan-2.6.29.orig/lib/libopenswan/Makefile openswan-2.6.29/lib/libopenswan/Makefile
+--- openswan-2.6.29.orig/lib/libopenswan/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/lib/libopenswan/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -100,7 +100,7 @@
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ ifeq ($(USE_MODP_RFC5114),true)
+diff -Nru openswan-2.6.29.orig/Makefile.inc openswan-2.6.29/Makefile.inc
+--- openswan-2.6.29.orig/Makefile.inc	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/Makefile.inc	2010-09-30 00:31:01.000000000 +0200
+@@ -49,7 +49,7 @@
+ DESTDIR?=
+ 
+ # "local" part of tree, used in building other pathnames
+-INC_USRLOCAL=/usr/local
++INC_USRLOCAL?=/usr
+ 
+ # PUBDIR is where the "ipsec" command goes; beware, many things define PATH
+ # settings which are assumed to include it (or at least, to include *some*
+@@ -94,7 +94,7 @@
+ 
+ # sample configuration files go into
+ INC_DOCDIR?=share/doc
+-FINALEXAMPLECONFDIR=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
++FINALEXAMPLECONFDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
+ EXAMPLECONFDIR=${DESTDIR}${FINALEXAMPLECONFDIR}
+ 
+ FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
+diff -Nru openswan-2.6.29.orig/programs/Makefile.program openswan-2.6.29/programs/Makefile.program
+--- openswan-2.6.29.orig/programs/Makefile.program	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/programs/Makefile.program	2010-09-30 00:31:01.000000000 +0200
+@@ -53,7 +53,6 @@
+ WERROR:= -Werror
+ endif
+ 
+-CFLAGS+= ${WERROR}
+ 
+ ifneq ($(LD_LIBRARY_PATH),)
+ LDFLAGS=-L$(LD_LIBRARY_PATH)
+@@ -104,8 +103,6 @@
+ ifneq ($(NOINSTALL),true)
+ 
+ doinstall:: $(PROGRAM) $(CONFFILES) $(EXTRA8MAN) $(EXTRA5MAN) $(EXTRA5PROC) $(LIBFILES) $(CONFDFILES)
+-	# remove any old vendor file installed previously
+-	@rm -f $(FINALLIBEXECDIR)/vendor
+ 	@mkdir -p $(PROGRAMDIR) $(MANDIR8) $(MANDIR5) $(LIBDIR) $(CONFDIR) $(CONFDDIR) $(CONFDDIR)/$(CONFDSUBDIR) $(EXAMPLECONFDIR)
+ 	@if [ -n "$(PROGRAM)" ]; then $(INSTALL) $(INSTBINFLAGS) $(PROGRAM) $(PROGRAMDIR); fi
+ 	@$(foreach f, $(addsuffix .8, $(PROGRAM)), \
+@@ -180,6 +177,7 @@
+ LDLIBS=${LIBS} ${USERLINK} ${LIBS} ${EXTRALIBS} -lgmp
+ else
+ LDLIBS=${LIBS} ${USERLINK} ${LIBS} ${EXTRALIBS} -lgmp -lnspr4 -lnss3
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ endif
+ 
+ 
+diff -Nru openswan-2.6.29.orig/programs/pluto/Makefile.options openswan-2.6.29/programs/pluto/Makefile.options
+--- openswan-2.6.29.orig/programs/pluto/Makefile.options	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/programs/pluto/Makefile.options	2010-09-30 00:31:01.000000000 +0200
+@@ -54,7 +54,7 @@
+ 
+ # Use LIBNSS
+ ifeq ($(USE_LIBNSS),true)
+-HDRDIRS+= -I/usr/include/nspr4 -I/usr/include/nss3	
++HDRDIRS+= -I/usr/include/nspr -I/usr/include/nss	
+ endif
+ 
+ # BYTE_ORDER = -DBIG_ENDIAN=4321 -DLITTLE_ENDIAN=1234 -DBYTE_ORDER=BIG_ENDIAN
+@@ -309,6 +309,7 @@
+ DEFINES+=-DHAVE_LIBNSS
+ LIBSPLUTO+= -lnspr4
+ LIBSPLUTO+= -lnss3
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ # For avoiding implicit DSO linking
+ LIBSPLUTO+= -lpthread
+ ifeq ($(USE_FIPSCHECK),true)
+diff -Nru openswan-2.6.29.orig/programs/rsasigkey/Makefile openswan-2.6.29/programs/rsasigkey/Makefile
+--- openswan-2.6.29.orig/programs/rsasigkey/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/programs/rsasigkey/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -21,13 +21,14 @@
+ FIPS_CHECK=1
+ CFLAGS+=-DFIPS_CHECK
+ endif
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ PROGRAM=rsasigkey
+ LIBS=${OPENSWANLIB} -lgmp
+ ifeq ($(USE_LIBNSS),true)
+ LIBS+= -lnspr4 -lnss3 -lplc4
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ ifeq ($(USE_FIPSCHECK),true)
+ LIBS+=  -lfipscheck
+ endif
+diff -Nru openswan-2.6.29.orig/programs/setup/Makefile openswan-2.6.29/programs/setup/Makefile
+--- openswan-2.6.29.orig/programs/setup/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/programs/setup/Makefile	2010-09-30 00:31:49.000000000 +0200
+@@ -18,7 +18,6 @@
+ 
+ # this dance is because setup has to get installed as /etc/rc.d/init.d/ipsec
+ # not as /etc/rc.d/init.d/setup.
+-PROGRAMDIR=$(RCDIR)
+ PROGRAM=setup
+ EXTRA8MAN=setup.8
+ 
+@@ -29,30 +28,4 @@
+ # into the $BINDIR.
+ #
+ # the priorities match those in setup's chkconfig line
+-doinstall:: setup
+-	@rm -f $(BINDIR)/setup
+-	@$(INSTALL) $(INSTBINFLAGS) setup $(RCDIR)/ipsec
+-	@ln -s $(FINALRCDIR)/ipsec $(BINDIR)/setup
+-	-@for i in 0 1 2 3 4 5 6; do mkdir -p $(RCDIR)/../rc$$i.d; done
+-	-@cd $(RCDIR)/../rc0.d && ln -f -s ../init.d/ipsec K76ipsec
+-	-@cd $(RCDIR)/../rc1.d && ln -f -s ../init.d/ipsec K76ipsec
+-	-@cd $(RCDIR)/../rc2.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc3.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc4.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc5.d && ln -f -s ../init.d/ipsec S47ipsec
+-	-@cd $(RCDIR)/../rc6.d && ln -f -s ../init.d/ipsec K76ipsec
+-
+-install_file_list::
+-	@echo $(RCDIR)/ipsec
+-	@echo $(BINDIR)/setup
+-	@echo $(RCDIR)/../rc0.d/K76ipsec
+-	@echo $(RCDIR)/../rc1.d/K76ipsec
+-	@echo $(RCDIR)/../rc2.d/S47ipsec
+-	@echo $(RCDIR)/../rc3.d/S47ipsec
+-	@echo $(RCDIR)/../rc4.d/S47ipsec
+-	@echo $(RCDIR)/../rc5.d/S47ipsec
+-	@echo $(RCDIR)/../rc6.d/K76ipsec
+-
+-cleanall::
+-	@rm -f setup
+ 
+diff -Nru openswan-2.6.29.orig/programs/showhostkey/Makefile openswan-2.6.29/programs/showhostkey/Makefile
+--- openswan-2.6.29.orig/programs/showhostkey/Makefile	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/programs/showhostkey/Makefile	2010-09-30 00:31:01.000000000 +0200
+@@ -16,7 +16,7 @@
+ include ${OPENSWANSRCDIR}/Makefile.inc
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ PROGRAM=showhostkey
+diff -Nru openswan-2.6.29.orig/testing/utils/make-uml.sh openswan-2.6.29/testing/utils/make-uml.sh
+--- openswan-2.6.29.orig/testing/utils/make-uml.sh	2010-09-27 18:40:32.000000000 +0200
++++ openswan-2.6.29/testing/utils/make-uml.sh	2010-09-30 00:31:01.000000000 +0200
+@@ -262,7 +262,7 @@
+ 
+ cd $OPENSWANSRCDIR || exit 1
+ 
+-make WERROR=-Werror USE_OBJDIR=true programs
++make USE_OBJDIR=true programs
+ 
+ # now, execute the Makefile that we have created!
+ cd $POOLSPACE && make $OPENSWANHOSTS 
