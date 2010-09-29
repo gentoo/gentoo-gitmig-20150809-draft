@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.24 2010/09/29 15:05:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.25 2010/09/29 17:04:12 arfrever Exp $
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mako-0.3.2.ebuild, -mako-0.3.3.ebuild:
+  Delete.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> mako-0.3.4.ebuild:
   Marking mako-0.3.4 ppc for bug 329787
