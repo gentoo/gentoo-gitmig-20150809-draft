@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.213 2010/09/28 17:46:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.214 2010/09/29 18:18:15 grobian Exp $
+
+  29 Sep 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask all portage versions after 2.2.01.15553 (when master EROOT changes
+  were merged in Prefix), since they all broke in multiple ways
 
   28 Sep 2010; Fabian Groffen <grobian@gentoo.org> mint/use.mask:
   Mask USE=git on MiNT profiles, bug #339031

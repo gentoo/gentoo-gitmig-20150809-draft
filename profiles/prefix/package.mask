@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.74 2010/09/23 17:27:17 grobian Exp $
+# $Id: package.mask,v 1.75 2010/09/29 18:18:15 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -33,6 +33,11 @@
 #--- END OF EXAMPLES ---
 
 
+# Fabian Groffen <grobian@gentoo.org> (29 Sep 2010)
+# Unfortunately after master got EROOT support, it's only been horror
+# stories of Portage being broken.  Provided snapshots are for the
+# brave, testing is more than appreciated!
+>sys-apps/portage-2.2.01.15553
 
 # Fabian Groffen <grobian@gentoo.org> (31 Jul 2010)
 # We have perl-5.10 (5.12 even) so we can't afford this being masked
