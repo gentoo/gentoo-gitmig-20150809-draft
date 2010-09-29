@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.26 2010/08/07 16:52:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.27 2010/09/29 10:32:33 pacho Exp $
+
+*telepathy-butterfly-0.5.14 (29 Sep 2010)
+
+  29 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  -telepathy-butterfly-0.5.1.ebuild, +telepathy-butterfly-0.5.14.ebuild:
+  Version bump with bugfixes, handle libproxy optional RDEPEND now that 0.4
+  is in the tree, disable pyc/pyo compiling (bug #233948 by Flameeyes), use
+  'emake' instead of plain 'make'. Remove old.
 
   07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   telepathy-butterfly-0.5.9.ebuild:
