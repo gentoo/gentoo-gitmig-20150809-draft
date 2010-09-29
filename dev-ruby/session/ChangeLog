@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.9 2010/09/28 23:35:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.10 2010/09/29 21:59:29 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> session-2.4.0.ebuild:
+  Marking session-2.4.0 ~ppc64 for bug 321283
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> session-2.4.0.ebuild:
   Marking session-2.4.0 ~ppc for bug 322053
