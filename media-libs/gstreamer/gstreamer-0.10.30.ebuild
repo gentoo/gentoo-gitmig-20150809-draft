@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.30.ebuild,v 1.2 2010/09/28 07:57:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.30.ebuild,v 1.3 2010/09/29 01:10:06 flameeyes Exp $
 
 EAPI=2
 
@@ -43,7 +43,7 @@ src_configure() {
 		--disable-valgrind \
 		--disable-examples \
 		--enable-check \
-		$(use_enable introspection)
+		$(use_enable introspection) \
 		$(use_enable test tests) \
 		--with-package-name="GStreamer ebuild for Gentoo" \
 		--with-package-origin="http://packages.gentoo.org/package/media-libs/gstreamer"
