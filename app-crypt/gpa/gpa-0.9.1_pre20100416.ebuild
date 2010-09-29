@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416.ebuild,v 1.6 2010/08/30 14:03:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416.ebuild,v 1.7 2010/09/29 06:20:47 ssuominen Exp $
 
 EAPI="3"
 
@@ -27,7 +27,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	sed -e "s|gnupg/:|:|g" -i configure.ac || die "sed failed"
+	epatch "${FILESDIR}"/${PN}-desktop-file-validate.patch
+
+	local x=/usr/share/gettext/po/Makefile.in.in
+	[[ -e $x ]] && cp -f $x po/ #323743
+
+	sed -e "s|gnupg/:|:|g" -i configure.ac || die
 
 	eautoreconf
 }

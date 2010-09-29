@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.75 2010/09/13 15:19:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.76 2010/09/29 06:20:47 ssuominen Exp $
+
+  29 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gpa-0.9.1_pre20100416.ebuild, +files/gpa-desktop-file-validate.patch:
+  Replace po/Makefile.in.in with a system copy wrt #323743 by Lars Wendler.
+  Validate .desktop entry with desktop-file-utils 0.17.
 
   13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gpa-0.9.0.ebuild:
