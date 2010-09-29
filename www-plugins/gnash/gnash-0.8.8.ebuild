@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.8 2010/09/29 00:29:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.9 2010/09/29 09:22:19 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -23,7 +23,7 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="+agg cairo cygnal dbus doc fbcon +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openssl python +sdl sdl-sound ssh test vaapi video_cards_intel xv"
+IUSE="+agg cairo cygnal dbus doc fbcon +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl python +sdl sdl-sound ssh ssl test vaapi video_cards_intel xv"
 
 RDEPEND=">=dev-libs/boost-1.41.0
 	!!dev-libs/boost:0
@@ -73,7 +73,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	lirc? ( app-misc/lirc )
 	dbus? ( sys-apps/dbus )
 	ssh?  ( >=net-libs/libssh-0.4[server] )
-	openssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl )
 	vaapi? ( x11-libs/libva[opengl?] )
 	xv? ( x11-libs/libXv )
 	"
@@ -224,7 +224,7 @@ src_configure() {
 		$(use_enable nsplugin npapi) \
 		$(use_enable python) \
 		$(use_enable ssh) \
-		$(use_enable openssl ssl) \
+		$(use_enable ssl) \
 		$(use_enable test testsuite) \
 		$(use_enable video_cards_intel i810-lod-bias) \
 		--enable-gui=${gui} \
