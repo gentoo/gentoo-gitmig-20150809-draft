@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.83 2010/09/26 16:14:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.84 2010/09/29 04:48:06 ssuominen Exp $
+
+  29 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> bzip2-1.0.6.ebuild:
+  ppc64 stable wrt #338215
 
   26 Sep 2010; Tobias Klausmann <klausman@gentoo.org> bzip2-1.0.6.ebuild:
   Stable on alpha, bug #338215
