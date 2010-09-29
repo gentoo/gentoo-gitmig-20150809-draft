@@ -9,7 +9,4 @@
 </maintainer>
 <longdescription>TIFF image library and tools, mostly for scanner and fax
  support, but also used by GIS and other imaging tools.</longdescription>
-<use>
-  <flag name="12-bit">Add support for 12/8-bit jpeg compression.</flag>
-</use>
 </pkgmetadata>

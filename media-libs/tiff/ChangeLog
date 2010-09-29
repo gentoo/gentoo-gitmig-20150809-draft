@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.164 2010/09/18 23:32:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.165 2010/09/29 01:47:20 nerdboy Exp $
+
+  29 Sep 2010; Steve Arnold <nerdboy@gentoo.org> metadata.xml:
+  Update to remove stale local use flag until appropriate course of action 
+  is determined.
 
   18 Sep 2010; Steve Arnold <nerdboy@gentoo.org> tiff-4.0.0_beta6.ebuild:
   Backing off 12-bit compression support for now, since only the internal 
@@ -9,7 +13,7 @@
 
   18 Sep 2010; Steve Arnold <nerdboy@gentoo.org> tiff-4.0.0_beta6.ebuild,
   +files/tiff-4.0.0_beta6-cr2-bitspersample.patch:
-  Added upstream patch for CR2 files and enabled 12/8-bit jpeg compression
+  Added upstream patch for CR2 files and enabled 12/8-bit jpeg compression 
   (thanks to Reimundo Heluani for submitting the patch).
 
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> tiff-3.9.4.ebuild,
