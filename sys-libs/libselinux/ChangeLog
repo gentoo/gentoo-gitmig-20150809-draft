@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.65 2010/04/16 19:33:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.66 2010/09/29 22:58:55 vapier Exp $
+
+  29 Sep 2010; Mike Frysinger <vapier@gentoo.org> libselinux-2.0.85.ebuild,
+  +files/libselinux-2.0.85-headers.patch:
+  Fix by Chris Richards for building with glibc-2.12 #338302.
 
   16 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libselinux-2.0.71.ebuild, libselinux-2.0.85.ebuild:

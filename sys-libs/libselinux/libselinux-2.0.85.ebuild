@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.85.ebuild,v 1.3 2010/04/16 19:33:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.85.ebuild,v 1.4 2010/09/29 22:58:55 vapier Exp $
 
 IUSE="ruby"
 RUBY_OPTIONAL="yes"
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"
+	epatch "${FILESDIR}"/${P}-headers.patch #338302
 
 	# fix up paths for multilib
 	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
