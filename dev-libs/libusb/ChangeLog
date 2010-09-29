@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.107 2010/09/10 12:56:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.108 2010/09/29 15:38:23 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> libusb-1.0.8.ebuild:
+  Stable for HPPA (bug #304149).
 
   10 Sep 2010; Tobias Klausmann <klausman@gentoo.org> libusb-1.0.8.ebuild:
   Stable on alpha, bug #304149
