@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gemcutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.7 2010/08/15 22:28:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.8 2010/09/29 22:09:56 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> gemcutter-0.6.1.ebuild:
+  Marking gemcutter-0.6.1 ~ppc64 for bug 321283
 
   15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gemcutter-0.6.1.ebuild:
