@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.5 2008/06/05 11:57:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.6 2010/09/29 09:38:59 pacho Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
 
 pkg_postinst() {
