@@ -2,7 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.90 2010/09/06 14:19:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.91 2010/09/29 20:24:03 flameeyes Exp $
+
+  29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  quagga-0.99.17-r2.ebuild:
+  Replace the realms patch with a version-independent copy; thanks to
+  Laurent Defert for reporting the breakage (bug #338877).
 
 *quagga-0.99.17-r2 (06 Sep 2010)
 
