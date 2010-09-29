@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.23 2010/09/28 18:53:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.24 2010/09/29 21:39:47 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> minitest-1.5.0.ebuild:
+  Marking minitest-1.5.0 ppc64 for bug 321043
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> minitest-1.6.0.ebuild:
   Marking minitest-1.6.0 ppc for bug 321043
