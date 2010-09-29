@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gtkwave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.51 2009/11/24 20:27:33 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.52 2010/09/29 01:30:38 rafaelmartins Exp $
+
+*gtkwave-3.3.13 (29 Sep 2010)
+
+  29 Sep 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +gtkwave-3.3.13.ebuild, metadata.xml:
+  Version bump.
 
   24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> gtkwave-3.2.3.ebuild:
   Add prefix keywords, as tested in prefix overlay

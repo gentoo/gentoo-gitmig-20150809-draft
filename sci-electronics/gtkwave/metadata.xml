@@ -7,4 +7,10 @@
   reads LXT, LXT2, VZT, and GHW files as well as standard Verilog VCD/EVCD
   files and allows their viewing.
   </longdescription>
+  <use>
+    <flag name="fasttree">Enables experimental Fast SST Tree widget code.</flag>
+    <flag name="fatlines">Renders lines as double width in gtkwave.</flag>
+    <flag name="judy">Enables Judy array support.</flag>
+    <flag name="xz">Enables LZMA support for VZT</flag>
+  </use>
 </pkgmetadata>
