@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.68 2010/09/26 16:56:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.69 2010/09/29 16:19:44 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> freeglut-2.6.0.ebuild:
+  Stable for HPPA (bug #325215).
 
   26 Sep 2010; Tobias Klausmann <klausman@gentoo.org> freeglut-2.6.0.ebuild:
   Stable on alpha, bug #325215
