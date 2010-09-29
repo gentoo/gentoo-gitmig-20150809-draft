@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.30.0.ebuild,v 1.8 2010/09/29 09:51:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.30.0.ebuild,v 1.9 2010/09/29 16:01:42 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ src_prepare() {
 	# bug 339074
 	find . -iname 'Makefile.am' -exec \
 		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 1 failed"
-	# Do Makefile.in after Makefile.am to avoid automake maintainer-mode 
+	# Do Makefile.in after Makefile.am to avoid automake maintainer-mode
 	find . -iname 'Makefile.in' -exec \
 		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 1 failed"
 
