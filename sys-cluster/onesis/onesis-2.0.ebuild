@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/onesis/onesis-2.0.ebuild,v 1.1 2008/08/30 04:46:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/onesis/onesis-2.0.ebuild,v 1.2 2010/09/29 11:31:47 cla Exp $
 
 MY_P="oneSIS-${PV/_}"
 
@@ -14,9 +14,10 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
 src_install() {
-	make prefix="${D}" install || die "make install failed"
+	make prefix="${D}" INSTALLDIRS=vendor install || die "make install failed"
 }
