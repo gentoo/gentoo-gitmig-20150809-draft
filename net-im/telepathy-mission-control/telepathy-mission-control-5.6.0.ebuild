@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.0.ebuild,v 1.1 2010/09/29 18:30:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.0.ebuild,v 1.2 2010/09/29 19:30:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/telepathy-mission-control/${P
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gnome-keyring"
+IUSE="gnome-keyring test"
 
 RDEPEND=">=net-libs/telepathy-glib-0.11.9
 	>=dev-libs/dbus-glib-0.82
