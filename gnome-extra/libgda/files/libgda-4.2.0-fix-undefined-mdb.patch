@@ -1,0 +1,35 @@
+From f52ea81599e21a63b29933f7b7b5cc15754125dd Mon Sep 17 00:00:00 2001
+From: Gilles Dartiguelongue <eva@gentoo.org>
+Date: Wed, 29 Sep 2010 23:28:58 +0200
+Subject: [PATCH] Fix error: conditional "MDB" was never defined
+
+---
+ m4/mdbtools.m4 |    4 +---
+ 1 files changed, 1 insertions(+), 3 deletions(-)
+
+diff --git a/m4/mdbtools.m4 b/m4/mdbtools.m4
+index 2421ef4..544634b 100644
+--- a/m4/mdbtools.m4
++++ b/m4/mdbtools.m4
+@@ -152,10 +152,7 @@ int main() {
+ 	if test "x$MDB_LIBS" = x
+ 	then
+ 	    AC_MSG_NOTICE([MDB backend not used])
+-	    AM_CONDITIONAL(MDB,[false])
+ 	else
+-	    AC_DEFINE(HAVE_MDB,[1],[Have MDB])
+-	    AM_CONDITIONAL(MDB,[true])
+     	    mdbtools_found=yes
+ 
+   	    save_CFLAGS="$CFLAGS"
+@@ -199,6 +196,7 @@ int main() {
+ 	fi
+     fi
+ 
++    AM_CONDITIONAL(MDB,[test "$mdbtools_found" = "yes"])
+     AC_SUBST(MDB_LIBS)
+     AC_SUBST(MDB_CFLAGS)
+ ])
+-- 
+1.7.3
+
