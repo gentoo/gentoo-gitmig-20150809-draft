@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde-ingo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.28 2009/12/17 20:07:16 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.29 2010/09/29 18:49:39 a3li Exp $
+
+*horde-ingo-1.2.5 (29 Sep 2010)
+
+  29 Sep 2010; Alex Legler <a3li@gentoo.org> -horde-ingo-1.2.2.ebuild,
+  +horde-ingo-1.2.5.ebuild:
+  Version bump, contains minor bugfixes and updated i18n. Removing old
+  version.
 
 *horde-ingo-1.2.3 (17 Dec 2009)
 
