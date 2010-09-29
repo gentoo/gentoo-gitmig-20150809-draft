@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.20 2010/07/14 16:40:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.21 2010/09/29 17:23:51 radhermit Exp $
+
+  29 Sep 2010; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> ledger-2.6.3.ebuild:
   Stable on amd64 wrt bug #323265
