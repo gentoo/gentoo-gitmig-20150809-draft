@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.109 2010/09/05 15:53:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.110 2010/09/29 15:46:34 jer Exp $
+
+  29 Sep 2010; Jeroen Roovers <jer@gentoo.org> gnokii-0.6.29.ebuild:
+  Stable for HPPA (bug #332043).
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> gnokii-0.6.29.ebuild:
   sparc stable wrt #332043
