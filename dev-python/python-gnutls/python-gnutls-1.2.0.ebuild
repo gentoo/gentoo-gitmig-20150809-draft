@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/python-gnutls-1.2.0.ebuild,v 1.2 2010/04/03 14:47:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/python-gnutls-1.2.0.ebuild,v 1.3 2010/09/29 16:02:05 ranger Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/p/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="examples"
 
 DEPEND="net-libs/gnutls"
