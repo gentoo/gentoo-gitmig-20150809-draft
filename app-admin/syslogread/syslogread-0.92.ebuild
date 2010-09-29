@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.7 2010/01/14 13:05:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.8 2010/09/29 10:02:44 xmw Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://untroubled.org/syslogread/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~arm ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/bglibs-1.106"

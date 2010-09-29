@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslogread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.6 2010/01/14 13:05:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.7 2010/09/29 10:02:44 xmw Exp $
+
+  29 Sep 2010; Michael Weber <xmw@gentoo.org> syslogread-0.92.ebuild:
+  Added ~arm keyword
 
   14 Jan 2010; Thilo Bangert <bangert@gentoo.org> syslogread-0.92.ebuild,
   +files/syslogread-0.92-fix-parallel-build.patch:
