@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97-r1.ebuild,v 1.1 2009/09/11 19:12:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/primegen-0.97-r1.ebuild,v 1.2 2010/09/29 05:19:32 bicatali Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -30,7 +30,7 @@ src_configure() {
 	append-flags -fsigned-char
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "${S}/usr" > conf-home
-	echo "$(tc-getCC)" > conf-ld
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 }
 
 src_test() {
