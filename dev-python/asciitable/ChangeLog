@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/asciitable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.3 2010/09/29 05:56:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.4 2010/09/29 21:17:21 arfrever Exp $
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  asciitable-0.3.1.ebuild:
+  Disable tests with Python 3.
 
 *asciitable-0.3.1 (29 Sep 2010)
 
