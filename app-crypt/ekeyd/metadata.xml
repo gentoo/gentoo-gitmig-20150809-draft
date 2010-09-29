@@ -8,7 +8,10 @@
   <use>
     <flag name='usb'>
       Build the libusb-based userland daemon for accessing the
-      entropykey (alternative to the CDC USB driver).
+      EntropyKey (alternative to the CDC USB driver). It is suggested
+      to use this option by default, as the CDC driver in the kernel
+      often seems to be fragile (or the gadget implementation on the
+      EntropyKey is too buggy), and can cause various problems.
     </flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.15 2010/09/24 11:43:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.16 2010/09/29 23:54:46 flameeyes Exp $
+
+*ekeyd-1.1.3-r1 (29 Sep 2010)
+
+  29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ekeyd-1.1.3-r1.ebuild, +files/ekeyd-1.1.3-libusb_compat.patch,
+  metadata.xml:
+  Add patch to that worksaround a libusb-compat bug and allows using the
+  virtual with ekeyd-ulusbd.
 
 *ekeyd-1.1.3 (24 Sep 2010)
 
