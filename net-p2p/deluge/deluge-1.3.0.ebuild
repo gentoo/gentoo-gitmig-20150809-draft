@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.0_rc2.ebuild,v 1.1 2010/08/31 18:01:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.0.ebuild,v 1.1 2010/09/29 13:02:00 armin76 Exp $
 
 EAPI="2"
 
