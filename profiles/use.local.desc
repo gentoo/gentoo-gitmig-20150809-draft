@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5999 2010/09/29 19:14:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6000 2010/09/29 22:34:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1433,6 +1433,9 @@ gnome-extra/gnome-media:sound - Adds support for sound notification themes using
 gnome-extra/gnome-power-manager:policykit - Enable sys-auth/policykit authentication support
 gnome-extra/gtkhtml:glade - Provide integration with dev-util/glade.
 gnome-extra/libgda:canvas - Enables support for x11-libs/goocanvas
+gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
+gnome-extra/libgda:introspection - Use dev-libs/gobject-introspection for introspection
+gnome-extra/libgda:json - Enable support for JSON format
 gnome-extra/libgda:mdb - Enables Microsoft Access DB support
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
 gnome-extra/libgda:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
