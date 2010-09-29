@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.19 2010/09/28 20:21:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.20 2010/09/29 22:17:38 ranger Exp $
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> i18n-0.3.7.ebuild:
+  Marking i18n-0.3.7 ~ppc64 for bug 321283
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> i18n-0.3.7.ebuild:
   Marking i18n-0.3.7 ~ppc for bug 321283
