@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r6.ebuild,v 1.1 2010/07/20 20:31:31 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r6.ebuild,v 1.2 2010/09/29 23:12:34 flameeyes Exp $
 
 EAPI="2"
 
@@ -37,8 +37,11 @@ src_prepare() {
 	chmod +x missing
 }
 
-src_compile() {
+src_configure() {
 	econf --bindir=/usr/sbin || die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 

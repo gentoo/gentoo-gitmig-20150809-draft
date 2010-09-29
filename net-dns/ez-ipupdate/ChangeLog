@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.30 2010/07/20 20:31:31 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.31 2010/09/29 23:12:34 flameeyes Exp $
+
+  29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ez-ipupdate-3.0.11_beta8-r6.ebuild:
+  QA: avoid double-execution of econf.
 
 *ez-ipupdate-3.0.11_beta8-r6 (20 Jul 2010)
 
