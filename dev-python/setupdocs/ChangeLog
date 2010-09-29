@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.14 2010/09/29 14:40:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.15 2010/09/29 17:01:53 arfrever Exp $
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -setupdocs-1.0.3.ebuild:
+  Delete.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> setupdocs-1.0.4.ebuild:
   Marking setupdocs-1.0.4 ppc for bug 328485
