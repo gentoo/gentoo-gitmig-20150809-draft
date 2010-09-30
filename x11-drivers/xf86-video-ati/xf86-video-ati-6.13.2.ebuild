@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.13.2.ebuild,v 1.1 2010/09/28 09:49:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.13.2.ebuild,v 1.2 2010/09/30 03:47:23 chithanh Exp $
 
 EAPI=3
 inherit xorg-2
@@ -12,7 +12,7 @@ IUSE=""
 
 RDEPEND=">=x11-base/xorg-server-1.6.3[-minimal]"
 DEPEND="${RDEPEND}
-	>=x11-libs/libdrm-2.4.17
+	|| ( <x11-libs/libdrm-2.4.22 x11-libs/libdrm[video_cards_radeon] )
 	x11-proto/fontsproto
 	x11-proto/glproto
 	x11-proto/randrproto

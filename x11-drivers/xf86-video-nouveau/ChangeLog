@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.14 2010/08/23 15:23:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.15 2010/09/30 03:48:03 chithanh Exp $
+
+  30 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-nouveau-0.0.16_pre20100807.ebuild,
+  xf86-video-nouveau-0.0.16_pre20100819.ebuild:
+  Update for libdrm changes.
 
 *xf86-video-nouveau-0.0.16_pre20100819 (23 Aug 2010)
 

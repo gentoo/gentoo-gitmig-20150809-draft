@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.12.0.ebuild,v 1.1 2010/06/26 10:53:07 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.12.0.ebuild,v 1.2 2010/09/30 03:47:43 chithanh Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ia64 ~x86 -x86-fbsd"
 IUSE="dri"
 
 RDEPEND=">=x11-base/xorg-server-1.6
-	>=x11-libs/libdrm-2.4.21
+	|| ( =x11-libs/libdrm-2.4.21 >=x11-libs/libdrm-2.4.21[video_cards_intel] )
 	x11-libs/libpciaccess
 	x11-libs/libXext
 	x11-libs/libXfixes

@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.55 2010/09/11 22:24:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.56 2010/09/30 03:47:43 chithanh Exp $
+
+  30 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-intel-2.10.0-r1.ebuild, xf86-video-intel-2.11.0.ebuild,
+  xf86-video-intel-2.12.0.ebuild:
+  Update for libdrm changes.
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> -files/i810.xinf:
   drop useless file
