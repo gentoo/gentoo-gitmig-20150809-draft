@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.5 2007/09/16 02:56:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font-ebdftopcf.eclass,v 1.6 2010/09/30 11:12:03 grobian Exp $
 
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
@@ -27,7 +27,7 @@ ebdftopcf() {
 	local bdffiles
 	bdffiles="$@"
 	[ -z "$bdffiles" ] && die "No BDF files specified."
-	emake -f /usr/share/ebdftopcf/Makefile.ebdftopcf \
+	emake -f "${EPREFIX}"/usr/share/ebdftopcf/Makefile.ebdftopcf \
 		BDFFILES="${bdffiles}" \
 		BDFTOPCF_PARAMS="${BDFTOPCF_PARAMS}" \
 		|| die "Failed to build PCF files"
