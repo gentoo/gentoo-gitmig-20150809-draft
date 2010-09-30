@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/trigger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.21 2009/01/20 17:08:33 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.22 2010/09/30 15:41:38 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> trigger-0.5.2.1.ebuild,
+  +files/trigger-0.5.2.1-ldflags.patch:
+  Respect LDFLAGS. Bug #339200 by flameeyes@gentoo.org
 
   20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   trigger-0.5.2.1.ebuild:
