@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11996 2010/09/30 08:13:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11997 2010/09/30 09:03:12 spock Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -798,11 +798,6 @@ dev-php5/znf
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (04 Jul 2010)
 # Python 2.7 masked until sufficient number of reverse dependencies is fixed.
 =dev-lang/python-2.7*
-
-# Michał Januszewski <spock@gentoo.org> (03 Jul 2010)
-# Temporary mask until the 256 series nvidia-drivers are unmasked.
->=dev-util/nvidia-cuda-sdk-3.1
->=dev-util/nvidia-cuda-toolkit-3.1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
