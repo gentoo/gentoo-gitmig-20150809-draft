@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.13 2009/12/09 18:46:56 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.14 2010/09/30 07:42:52 grobian Exp $
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pycxx-6.1.1.ebuild:
+  Marked ~x86-solaris
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> pycxx-6.1.1.ebuild:
   ppc stable #290609
