@@ -1,10 +1,13 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.38 2010/09/27 16:34:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.39 2010/09/30 14:59:20 jlec Exp $
 
   27 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   ccpn-2.1.3.1_p100806.ebuild:
   Stable on amd64 wrt bug #338528
+
+  30 Sep 2010; Justin Lecher <jlec@gentoo.org> ccpn-2.1.5_p100927.ebuild:
+  Added dev-python/pyglet as opengl dep
 
 *ccpn-2.1.5_p100927 (27 Sep 2010)
 
