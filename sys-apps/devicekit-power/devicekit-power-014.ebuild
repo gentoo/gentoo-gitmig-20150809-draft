@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.10 2010/08/29 16:56:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.11 2010/09/30 14:27:30 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -41,6 +41,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS HACKING NEWS"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+RESTRICT="test" # See 318479. This package is also replaced by upower.
 
 function check_battery() {
 	# check sysfs power interface, bug #263959
