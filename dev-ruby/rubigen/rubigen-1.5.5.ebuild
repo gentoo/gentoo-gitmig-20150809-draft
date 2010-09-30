@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.5.ebuild,v 1.2 2010/08/16 11:44:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.5.ebuild,v 1.3 2010/09/30 15:17:23 ranger Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ HOMEPAGE="http://drnic.github.com/rubigen"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 # The presence of a self-dependency is needed as per bug #320781;

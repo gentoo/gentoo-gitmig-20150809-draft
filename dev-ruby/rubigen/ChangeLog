@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubigen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.8 2010/08/16 11:44:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.9 2010/09/30 15:17:23 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> rubigen-1.5.5.ebuild:
+  Marking rubigen-1.5.5 ~ppc64 for bug 306909
 
   16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   rubigen-1.5.5.ebuild:
