@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.1 2010/09/30 10:19:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.2 2010/09/30 12:04:18 ssuominen Exp $
 
 EAPI=2
 
@@ -22,6 +22,7 @@ COMMON_DEPEND="
 	x11-libs/qt-gui:4[dbus]
 	x11-libs/qt-opengl:4
 	x11-libs/qt-sql:4[sqlite]
+	dev-db/sqlite[fts3]
 	>=media-libs/taglib-1.6
 	media-libs/liblastfm
 	>=dev-libs/glib-2.10:2
