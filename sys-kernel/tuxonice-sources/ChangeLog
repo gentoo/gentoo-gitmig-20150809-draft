@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.99 2010/09/17 19:28:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.100 2010/09/30 18:40:47 nelchael Exp $
+
+*tuxonice-sources-2.6.35-r4 (30 Sep 2010)
+*tuxonice-sources-2.6.34-r7 (30 Sep 2010)
+*tuxonice-sources-2.6.32-r18 (30 Sep 2010)
+
+  30 Sep 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +tuxonice-sources-2.6.32-r18.ebuild, +tuxonice-sources-2.6.34-r7.ebuild,
+  +tuxonice-sources-2.6.35-r4.ebuild:
+  Revision bumps for new genpatches.
 
 *tuxonice-sources-2.6.35-r3 (17 Sep 2010)
 *tuxonice-sources-2.6.34-r6 (17 Sep 2010)
