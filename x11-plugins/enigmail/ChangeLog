@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.204 2010/09/26 17:27:47 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.205 2010/09/30 14:53:58 ssuominen Exp $
+
+  30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  enigmail-1.1.2-r2.ebuild, enigmail-1.1.2-r3.ebuild:
+  Accept app-crypt/pinentry-qt as alternative.
 
 *enigmail-1.1.2-r3 (26 Sep 2010)
 
