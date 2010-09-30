@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.58 2010/08/28 00:27:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.59 2010/09/30 21:36:56 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> ypbind-1.31.ebuild:
+  stable ppc64, bug 320327
 
 *ypbind-1.32 (28 Aug 2010)
 
