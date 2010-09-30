@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bmpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.1 2010/08/29 08:20:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.2 2010/09/30 11:07:56 hwoarang Exp $
+
+  30 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  bmpanel-0.9.27-r1.ebuild:
+  Stable on amd64 wrt bug #338941
 
 *bmpanel-0.9.27-r1 (29 Aug 2010)
 
