@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.14 2010/03/10 13:32:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.15 2010/09/30 10:32:18 spock Exp $
+
+  30 Sep 2010; Michał Januszewski <spock@gentoo.org> fblogo-0.5.2.ebuild:
+  Make the ebuild respect LDFLAGS (bug #337408).
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> fblogo-0.5.2.ebuild:
   Keyword ~amd64.
