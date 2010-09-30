@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/trailblazer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/ChangeLog,v 1.3 2007/04/24 15:16:11 drizzt Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/ChangeLog,v 1.4 2010/09/30 22:00:13 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> trailblazer-0.9.ebuild,
+  +files/trailblazer-0.9-ldflags.patch:
+  Respect LDFLAGS. Bug #337432 by flameeyes@gentoo.org
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> trailblazer-0.9.ebuild:
   Add ~x86-fbsd keyword.

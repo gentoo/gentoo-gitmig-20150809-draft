@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.2 2007/04/24 15:16:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.3 2010/09/30 22:00:13 tupone Exp $
+EAPI="2"
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Guide a ball through a succession of levels while avoiding holes"
 HOMEPAGE="http://www.autismuk.freeserve.co.uk/"
@@ -15,10 +16,7 @@ IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.7"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
 		Makefile || die "sed Makefile failed"
@@ -27,6 +25,7 @@ src_unpack() {
 		-e "s:/usr/share/trailblazer/trail\.dat:${GAMES_DATADIR}/${PN}/trail.dat:" \
 		-e "s:/usr/share/trailblazer/trail\.time:${GAMES_STATEDIR}/trail.time:" \
 		map.c || die "sed map.c failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_install() {
