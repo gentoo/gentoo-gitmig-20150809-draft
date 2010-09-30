@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.4 2010/06/22 18:38:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.5 2010/09/30 07:46:01 grobian Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pysvn.barrys-emacs.org/source_kits/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~ppc-macos ~x86-solaris"
 IUSE="doc examples"
 
 DEPEND="dev-lang/python
@@ -42,7 +42,11 @@ src_prepare() {
 src_configure() {
 	configuration() {
 		cd Source
-		"$(PYTHON)" setup.py configure --apr-inc-dir="${EPREFIX}/usr/include/apr-1" --svn-root-dir="${EPREFIX}/usr" || die "Configuration failed with Python {PYTHON_ABI}"
+		"$(PYTHON)" setup.py configure \
+			--pycxx-src-dir="${EPREFIX}/usr/share/python${PYTHON_ABI}/CXX" \
+			--apr-inc-dir="${EPREFIX}/usr/include/apr-1" \
+			--svn-root-dir="${EPREFIX}/usr" \
+			|| die "Configuration failed with Python {PYTHON_ABI}"
 
 		sed -e 's:^\(CCFLAGS=\)\(.*\):\1$(CFLAGS) \2:g' \
 			-e 's:^\(CCCFLAGS=\)\(.*\):\1$(CXXFLAGS) \2:g' \

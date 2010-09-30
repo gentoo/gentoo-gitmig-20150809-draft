@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.9 2010/06/22 18:38:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.10 2010/09/30 07:46:01 grobian Exp $
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pysvn-1.7.2.ebuild:
+  Fixed pycxx detection in Prefix, marked ~x86-solaris
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pysvn-1.7.2.ebuild:
