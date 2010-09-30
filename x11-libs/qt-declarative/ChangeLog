@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.6 2010/09/24 07:00:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.7 2010/09/30 19:13:51 maekke Exp $
+
+  30 Sep 2010; Markus Meier <maekke@gentoo.org> qt-declarative-4.7.0.ebuild:
+  add ~arm, bug #338289
 
   24 Sep 2010; Alex Alexander <wired@gentoo.org>
   qt-declarative-4.7.0.ebuild:
