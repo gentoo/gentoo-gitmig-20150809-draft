@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/toggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/toggle/ChangeLog,v 1.13 2010/09/30 05:18:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/toggle/ChangeLog,v 1.14 2010/09/30 05:21:19 radhermit Exp $
+
+*toggle-0.5 (30 Sep 2010)
+
+  30 Sep 2010; Tim Harder <radhermit@gentoo.org> +toggle-0.5.ebuild:
+  Version bump.
 
 *toggle-0.3 (30 Sep 2010)
 
