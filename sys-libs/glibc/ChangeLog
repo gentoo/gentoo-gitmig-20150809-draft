@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.714 2010/09/24 11:17:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.715 2010/09/30 06:29:21 vapier Exp $
+
+  30 Sep 2010; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
+  files/eblits/src_compile.eblit:
+  Take care of checking binutils gnu indirect support ourselves for now
+  #336792 by Sergei Trofimovich.
 
   24 Sep 2010; Raúl Porcel <armin76@gentoo.org> glibc-2.12.1-r1.ebuild:
   Mark -sparc since it fails to build, bug #336792
