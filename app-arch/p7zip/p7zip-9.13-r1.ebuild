@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r1.ebuild,v 1.2 2010/09/30 08:19:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r1.ebuild,v 1.3 2010/09/30 20:25:41 grobian Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -68,7 +68,7 @@ src_prepare() {
 			CPP/Windows/DLL.cpp || die
 		sed -i -e '/^PROG=/s/\.so/.bundle/' \
 			CPP/7zip/Bundles/Format7zFree/makefile \
-			CPP/7zip/Compress/Rar/makefile || die
+			$(use rar && echo CPP/7zip/Compress/Rar/makefile) || die
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
