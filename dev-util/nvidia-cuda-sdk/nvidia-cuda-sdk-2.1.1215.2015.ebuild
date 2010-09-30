@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.1.1215.2015.ebuild,v 1.6 2010/09/16 16:46:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.1.1215.2015.ebuild,v 1.7 2010/09/30 08:59:17 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,8 @@ IUSE="debug emulation"
 RDEPEND=">=dev-util/nvidia-cuda-toolkit-2.1
 	>=x11-drivers/nvidia-drivers-180.22
 	media-libs/freeglut"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	<sys-devel/gcc-4.4"
 
 S="${WORKDIR}"
 RESTRICT="binchecks"
