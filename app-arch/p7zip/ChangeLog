@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.129 2010/09/19 09:26:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.130 2010/09/30 08:19:56 grobian Exp $
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> p7zip-9.13-r1.ebuild:
+  Fix loading of 7z.bundle on Darwin, bug #338375
 
 *p7zip-9.13-r1 (19 Sep 2010)
 
