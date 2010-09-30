@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.1 2010/09/29 20:43:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.2 2010/09/30 18:08:02 ssuominen Exp $
 
 EAPI="2"
-CMAKE_MIN_VERSION="2.6"
 PYTHON_DEPEND="python? 2:2.5"
 
 inherit cmake-utils eutils multilib python portability
@@ -32,15 +31,12 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS NEWS README ChangeLog"
 
+PATCHES=( "${FILESDIR}"/${P}-mozjs-link_directory.patch )
+
 pkg_setup() {
 	if use python; then
 		python_set_active_version 2
 	fi
-}
-
-src_prepare() {
-	base_src_prepare
-	epatch	"${FILESDIR}"/${PN}-0.4.2-glibc212.patch
 }
 
 src_configure() {
