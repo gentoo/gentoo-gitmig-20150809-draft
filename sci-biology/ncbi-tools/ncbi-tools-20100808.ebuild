@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090809-r1.ebuild,v 1.1 2010/02/13 10:49:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20100808.ebuild,v 1.1 2010/09/30 17:41:44 weaver Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
 SRC_URI="ftp://ftp.ncbi.nlm.nih.gov/toolbox/ncbi_tools/old/${PV}/ncbi.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 # IUSE=mpi deprecated, use sci-biology/mpiblast separately
 IUSE="doc X"
@@ -128,13 +128,14 @@ src_compile() {
 }
 
 src_install() {
+	mv "${S}"/bin/cdscan "${S}"/bin/cdscan-ncbi #sci-geosciences/cdat-lite
 	dobin "${S}"/bin/* || die "Failed to install binaries."
 	for i in ${EXTRA_VIB}; do
 		dobin "${S}"/build/${i} || die "Failed to install binaries."
 	done
 	dolib "${S}"/lib/* || die "Failed to install libraries."
-	mkdir -p "${D}"/usr/include/ncbi
-	cp -RL "${S}"/include/* "${D}"/usr/include/ncbi || \
+	mkdir -p "${ED}"/usr/include/ncbi
+	cp -RL "${S}"/include/* "${ED}"/usr/include/ncbi || \
 		die "Failed to install headers."
 
 	# TODO: wwwblast with webapps
@@ -144,7 +145,7 @@ src_install() {
 	#doins ${S}/real/*
 
 	# Basic documentation
-	dodoc "${S}"/{README,VERSION,doc/{*.txt,README.asn2xml}} || \
+	dodoc "${S}"/{README,VERSION,doc/{*.txt,README.*}} || \
 		die "Failed to install basic documentation."
 	newdoc "${S}"/doc/fa2htgs/README README.fa2htgs || \
 		die "Failed renaming fa2htgs documentation."
@@ -160,16 +161,20 @@ src_install() {
 		die "Failed to install man pages."
 
 	# Hypertext user documentation
-	dohtml "${S}"/{README.htm,doc/{*.html,*.gif}} || \
+	dohtml "${S}"/{README.htm,doc/{*.html,*.htm,*.gif}} || \
 		die "Failed to install HTML documentation."
 	insinto /usr/share/doc/${PF}/html/blast
 	doins "${S}"/doc/blast/* || die "Failed to install blast HTML documentation."
+	insinto /usr/share/doc/${PF}/html/images
+	doins "${S}"/doc/images/* || die "Failed to install documentation images."
+	insinto /usr/share/doc/${PF}/html/seq_install
+	doins "${S}"/doc/seq_install/* || die "Failed to install seq_install documentation."
 
 	# Developer documentation
 	if use doc; then
 		# Demo programs
-		mkdir "${D}"/usr/share/ncbi
-		mv "${S}"/demo "${D}"/usr/share/ncbi/demo || die
+		mkdir "${ED}"/usr/share/ncbi
+		mv "${S}"/demo "${ED}"/usr/share/ncbi/demo || die
 	fi
 
 	# Shared data (similarity matrices and such) and database directory.
