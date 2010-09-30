@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.16 2010/07/05 18:59:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.17 2010/09/30 17:20:25 jlec Exp $
+
+  30 Sep 2010; Justin Lecher <jlec@gentoo.org> togl-2.0-r1.ebuild:
+  keyworded for ~-linux prefix
 
   05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> togl-2.0-r1.ebuild:
   ppc64 stable wrt #319171
