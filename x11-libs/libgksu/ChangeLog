@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.74 2010/09/18 15:47:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.75 2010/09/30 20:19:59 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> libgksu-2.0.12-r1.ebuild:
+  stable ppc64, bug 334959
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> libgksu-2.0.12-r1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #334959
