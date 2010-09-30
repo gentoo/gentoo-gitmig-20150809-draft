@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/xymtex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.1 2010/09/30 22:10:05 dilfridge Exp $
+
+*xymtex-5.00 (30 Sep 2010)
+
+  30 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +xymtex-5.00.ebuild, +metadata.xml:
+  New package, fixes bug 310559. Thanks to ZyX <kp-pav@yandex.ru> for the
+  original ebuild.
+
