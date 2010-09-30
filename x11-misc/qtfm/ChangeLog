@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/qtfm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.1 2010/09/30 23:47:13 ssuominen Exp $
+
+*qtfm-3.1 (30 Sep 2010)
+
+  30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +qtfm-3.1.ebuild:
+  Initial commit.
+
