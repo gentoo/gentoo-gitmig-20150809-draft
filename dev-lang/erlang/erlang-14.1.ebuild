@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.1.ebuild,v 1.3 2010/07/03 07:02:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.1.ebuild,v 1.4 2010/09/30 10:55:17 grobian Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -68,6 +68,9 @@ src_prepare() {
 
 	# fixes as-needed issues and has been incorporated for 14A by upstream
 	epatch "${FILESDIR}"/${P}-lm.patch
+
+	# prevent configure from injecting -m32 by default on Darwin, bug #334155
+	sed -i -e 's/Darwin-i386/Darwin-NO/' configure.in || die
 
 	eautoreconf
 }

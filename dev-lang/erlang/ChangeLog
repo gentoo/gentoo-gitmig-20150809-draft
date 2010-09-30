@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.195 2010/07/03 07:02:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.196 2010/09/30 10:55:17 grobian Exp $
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> erlang-13.2.4.ebuild,
+  erlang-14.1.ebuild:
+  Prevent configure from injecting -m32 by default on Darwin, bug #334155
 
   03 Jul 2010; Christian Faulhammer <fauli@gentoo.org> erlang-14.1.ebuild:
   add comment about upstreamed patch
