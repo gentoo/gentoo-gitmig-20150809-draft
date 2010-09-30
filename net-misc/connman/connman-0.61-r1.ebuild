@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.60.ebuild,v 1.2 2010/09/13 11:58:47 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.61-r1.ebuild,v 1.1 2010/09/30 10:10:33 dagger Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofo
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.2.24
+	>=dev-libs/libnl-1.1
 	bluetooth? ( net-wireless/bluez )
 	caps? ( sys-libs/libcap-ng )
 	dhclient? ( net-misc/dhcp )
