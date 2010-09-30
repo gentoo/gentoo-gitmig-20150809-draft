@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.19 2010/02/20 18:26:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.20 2010/09/30 16:15:09 tampakrap Exp $
+
+  30 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  xhtml1-20020801-r4.ebuild:
+  Minor improvements
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> xhtml1-20020801-r4.ebuild:
   Transfer prefix keywords, bump EAPI
