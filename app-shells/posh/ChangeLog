@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/posh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.13 2009/08/03 16:31:28 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.14 2010/09/30 13:11:42 xmw Exp $
+
+*posh-0.8.6 (30 Sep 2010)
+
+  30 Sep 2010; Michael Weber <xmw@gentoo.org> +posh-0.8.6.ebuild:
+  Version bump, thanks to Michał Górny (bug #338733).
 
   03 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> -posh-0.6.ebuild:
   Cleaning out buggy posh version
