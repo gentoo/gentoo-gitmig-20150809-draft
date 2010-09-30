@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.18 2010/08/28 17:19:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.19 2010/09/30 01:40:55 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> amatch-0.2.5.ebuild:
+  Marking amatch-0.2.5 ppc64 for bug 330787
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org> amatch-0.2.5.ebuild:
   ia64 stable wrt #330787
