@@ -1,6 +1,11 @@
 # ChangeLog for app-text/html401
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.19 2010/01/02 11:23:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.20 2010/09/30 16:04:33 tampakrap Exp $
+
+  30 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  html401-19991224-r2.ebuild:
+  Cleanup, improve directory structure, bug 139537, thanks to Roberto
+  Castagnola for patch
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   html401-19991224-r2.ebuild:
