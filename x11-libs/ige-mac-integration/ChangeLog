@@ -1,0 +1,13 @@
+# ChangeLog for x11-libs/ige-mac-integration
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ige-mac-integration/ChangeLog,v 1.1 2010/09/30 10:32:22 grobian Exp $
+
+*ige-mac-integration-9999 (30 Sep 2010)
+*ige-mac-integration-0.8.2 (30 Sep 2010)
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org>
+  +ige-mac-integration-0.8.2.ebuild, +ige-mac-integration-9999.ebuild,
+  +metadata.xml:
+  Import x11-libs/ige-mac-integration, a package to do Mac OS X specific
+  stuff with GTK+. Live ebuild, thanks to Heiko Przybyl.
+
