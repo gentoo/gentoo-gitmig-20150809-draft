@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.31 2010/09/10 21:30:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.32 2010/09/30 20:33:31 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> serf-0.3.1.ebuild:
+  stable ppc64, bug 325423
 
   10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   metadata.xml:
