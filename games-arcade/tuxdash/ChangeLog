@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxdash
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/ChangeLog,v 1.7 2008/03/25 13:23:26 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/ChangeLog,v 1.8 2010/09/30 04:29:54 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> tuxdash-0.8.ebuild,
+  +files/tuxdash-0.8-ldflags.patch:
+  Respect LDFLAGS. Bug #337772 by flameeyes@gentoo.org
 
   25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> tuxdash-0.8.ebuild:
   amd64 stable

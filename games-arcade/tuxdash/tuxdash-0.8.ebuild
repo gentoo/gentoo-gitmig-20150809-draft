@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.6 2008/03/25 13:23:26 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.7 2010/09/30 04:29:54 tupone Exp $
+EAPI="2"
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A simple BoulderDash clone"
 HOMEPAGE="http://www.tuxdash.de/index.php?language=EN"
@@ -16,9 +17,7 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-ttf"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f GPL TuxDash
 	sed -i \
 		-e '/^Fullscreen/ s/0/1/' \
@@ -33,6 +32,7 @@ src_unpack() {
 		-e 's/-Wall/$(E_CXXFLAGS)/' \
 		-e 's/TuxDash/tuxdash/g' \
 		src/Makefile || die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 	find . -type f -print0 | xargs -0 chmod a-x
 }
 
