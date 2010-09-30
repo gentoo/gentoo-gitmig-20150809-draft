@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.306 2010/09/11 18:52:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.307 2010/09/30 18:52:28 ssuominen Exp $
+
+  30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  evolution-2.28.3.1-r1.ebuild, evolution-2.30.3.ebuild:
+  Fix pinentry dependencies on latest 2.28 and 2.30 series wrt #339265.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> evolution-2.30.2-r1.ebuild:
   Marked ppc for bug #324077.
