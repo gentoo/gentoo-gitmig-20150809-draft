@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.51 2010/07/09 03:44:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.52 2010/09/30 03:46:11 dirtyepic Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -12,19 +12,23 @@ inherit eutils
 EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst pkg_postrm
 
 # @ECLASS-VARIABLE: FONT_SUFFIX
+# @DEFAULT_UNSET
+# @REQUIRED
 # @DESCRIPTION:
 # Space delimited list of font suffixes to install.
-FONT_SUFFIX=${FONT_SUFFIX:=}
+FONT_SUFFIX=${FONT_SUFFIX:-}
 
 # @ECLASS-VARIABLE: FONT_S
+# @DEFAULT_UNSET
+# @REQUIRED
 # @DESCRIPTION:
 # Working directory containing the fonts.
-FONT_S=${FONT_S:=${S}}
+FONT_S=${FONT_S:-${S}}
 
 # @ECLASS-VARIABLE: FONT_PN
 # @DESCRIPTION:
 # Font name (ie. last part of FONTDIR).
-FONT_PN=${FONT_PN:=${PN}}
+FONT_PN=${FONT_PN:-${PN}}
 
 # @ECLASS-VARIABLE: FONTDIR
 # @DESCRIPTION:
@@ -32,13 +36,17 @@ FONT_PN=${FONT_PN:=${PN}}
 FONTDIR=${FONTDIR:-/usr/share/fonts/${FONT_PN}}
 
 # @ECLASS-VARIABLE: FONT_CONF
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Array containing fontconfig conf files to install.
 FONT_CONF=( "" )
 
 # @ECLASS-VARIABLE: DOCS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Space delimited list of docs to install.
+# We always install these: 
+# COPYRIGHT README{,.txt} NEWS AUTHORS BUGS ChangeLog FONTLOG.txt
 DOCS=${DOCS:-}
 
 IUSE="X"
@@ -105,14 +113,14 @@ font_cleanup_dirs() {
 				fi
 			done
 			# if the file is a generated file then we know this is a font dir (as
-			# opposed to something like encodings or util) and  a candidate for
+			# opposed to something like encodings or util) and a candidate for
 			# removal.  if it's not generated then it's an "otherfile".
 			${generated} && candidate=true || otherfile=true
 			# if the directory is both a candidate for removal and contains at
 			# least one "otherfile" then don't remove it.
 			[[ ${candidate} == ${otherfile} ]] && break
 		done
-		# if we only have generated files, purge the directory.
+		# if in the end we only have generated files, purge the directory.
 		if [[ ${candidate} == true && ${otherfile} == false ]]; then
 			# we don't want to remove fonts.alias files that were installed by
 			# media-fonts/font-alias. any other fonts.alias files will have
@@ -126,6 +134,28 @@ font_cleanup_dirs() {
 		fi
 	done
 	eend 0
+}
+
+# @FUNCTION: font_pkg_setup
+# @DESCRIPTION:
+# The font pkg_setup function.
+# Collision protection and Prefix compat for eapi < 3.
+font_pkg_setup() {
+	# Prefix compat
+	case ${EAPI:-0} in
+		0|1|2)
+			if ! use prefix; then
+				EPREFIX=
+				ED=${D}
+				EROOT=${ROOT}
+				[[ ${EROOT} = */ ]] || EROOT+="/"
+			fi
+			;;
+	esac
+
+	# make sure we get no collisions
+	# setup is not the nicest place, but preinst doesn't cut it
+	[[ -e "${EROOT}/${FONTDIR}/fonts.cache-1" ]] && rm -f "${EROOT}/${FONTDIR}/fonts.cache-1"
 }
 
 # @FUNCTION: font_src_install
@@ -155,28 +185,6 @@ font_src_install() {
 	for commondoc in COPYRIGHT README{,.txt} NEWS AUTHORS BUGS ChangeLog FONTLOG.txt; do
 		[[ -s ${commondoc} ]] && dodoc ${commondoc}
 	done
-}
-
-# @FUNCTION: font_pkg_setup
-# @DESCRIPTION:
-# The font pkg_setup function.
-# Collision protection and Prefix compat for eapi < 3.
-font_pkg_setup() {
-	# Prefix compat
-	case ${EAPI:-0} in
-		0|1|2)
-			if ! use prefix; then
-				EPREFIX=
-				ED=${D}
-				EROOT=${ROOT}
-				[[ ${EROOT} = */ ]] || EROOT+="/"
-			fi
-			;;
-	esac
-
-	# make sure we get no collisions
-	# setup is not the nicest place, but preinst doesn't cut it
-	[[ -e "${EROOT}/${FONTDIR}/fonts.cache-1" ]] && rm -f "${EROOT}/${FONTDIR}/fonts.cache-1"
 }
 
 # @FUNCTION: font_pkg_postinst
