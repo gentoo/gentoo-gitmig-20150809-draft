@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.92 2010/07/06 19:32:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.93 2010/09/30 08:58:31 grobian Exp $
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pyrex-0.9.9.ebuild:
+  Marked ~ppc-macos
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pyrex-0.9.9.ebuild:
   ppc64 stable wrt #319725
