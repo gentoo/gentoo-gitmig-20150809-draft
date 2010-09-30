@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.5 2010/09/28 23:59:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.6 2010/09/30 01:39:39 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-ffi-0.ebuild:
+  Marking ruby-ffi-0 ~ppc64 for bug 330283
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-ffi-0.ebuild:
   Marking ruby-ffi-0 ~ppc for bug 330283
