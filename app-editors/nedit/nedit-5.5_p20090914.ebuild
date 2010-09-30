@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.3 2009/10/30 19:07:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.4 2010/09/30 09:55:08 jlec Exp $
 
 EAPI=2
 
@@ -28,6 +28,9 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	#respecting LDFLAGS, bug #208189
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	sed \
+		-e "s:/bin:${EPREFIX}/bin:g" \
+		-i Makefile source/preferences.c source/help_data.h source/nedit.c Xlt/Makefile || die
 }
 
 src_configure() {
