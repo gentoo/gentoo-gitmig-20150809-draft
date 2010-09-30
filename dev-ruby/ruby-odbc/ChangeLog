@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-odbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.24 2010/09/29 13:59:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.25 2010/09/30 10:25:14 hwoarang Exp $
+
+  30 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  ruby-odbc-0.99991-r1.ebuild:
+  Stable on amd64 wrt bug #337038
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-odbc-0.99991-r1.ebuild:
   Marking ruby-odbc-0.99991-r1 ppc for bug 337038
