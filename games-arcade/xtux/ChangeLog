@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xtux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.13 2010/03/09 12:57:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.14 2010/09/30 16:13:45 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> xtux-20030306.ebuild,
+  +files/xtux-20030306-ldflags.patch:
+  Respect LDFLAGS. Bug #337435 by flameeyes@gentoo.org
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> xtux-20030306.ebuild:
   QA: Do not use absolute path to icon when in standard dirs (in
