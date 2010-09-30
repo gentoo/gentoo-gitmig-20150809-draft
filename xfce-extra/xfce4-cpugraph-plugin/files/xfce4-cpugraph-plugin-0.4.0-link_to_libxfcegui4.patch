@@ -1,8 +1,6 @@
-Fix building/linking problem as reported in: http://bugs.gentoo.org/334891
+Fixed in upstream:
 
-Not reported to upstream because the patch in upstream bug[1] should be applied instead.
-
-[1] http://bugzilla.xfce.org/show_bug.cgi?id=6575
+http://git.xfce.org/panel-plugins/xfce4-cpugraph-plugin/patch/?id=505a9fa19a7b9c3ff48a161cd1c392e07a2db94b
 
 --- configure.ac
 +++ configure.ac
