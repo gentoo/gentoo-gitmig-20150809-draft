@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.59 2010/09/06 02:54:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.60 2010/09/30 21:18:10 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> soprano-2.4.4.ebuild:
+  stable ppc64, bug 331761
 
   06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   +soprano-2.5.0.ebuild:
