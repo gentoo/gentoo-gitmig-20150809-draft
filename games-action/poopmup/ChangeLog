@@ -1,6 +1,10 @@
 # ChangeLog for games-action/poopmup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.14 2010/09/16 16:48:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.15 2010/09/30 22:09:19 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> poopmup-1.2.ebuild,
+  +files/poopmup-1.2-ldflags.patch:
+  Respect LDFLAGS. Bug #337424 by flameeyes@gentoo.org
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> poopmup-1.2.ebuild:
   virtual/glut -> media-libs/glut
