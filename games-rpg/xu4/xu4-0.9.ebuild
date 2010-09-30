@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.10 2010/09/13 05:14:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.11 2010/09/30 04:20:39 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -38,7 +38,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-savegame.patch"
+	epatch "${FILESDIR}/${PV}-savegame.patch" \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:/usr/local/lib/u4:$(games_get_libdir)/u4:" src/u4file.c \
 		|| die "sed u4file failed"
