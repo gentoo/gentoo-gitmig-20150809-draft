@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.74 2010/09/30 01:53:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.75 2010/09/30 01:56:17 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> perl-tk-804.029.ebuild:
+  Marking perl-tk-804.029 ppc for bug 333573
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> perl-tk-804.029.ebuild:
   Marking perl-tk-804.029 ppc64 for bug 333573
