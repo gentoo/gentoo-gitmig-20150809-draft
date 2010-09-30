@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.1.ebuild,v 1.2 2010/09/30 22:58:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.1.ebuild,v 1.3 2010/09/30 23:10:21 ssuominen Exp $
 
 EAPI=2
 inherit multilib rpm toolchain-funcs
@@ -21,6 +21,11 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
+	# Respect AR variable.
+	sed -i \
+		-e 's:ar r:$(AR) r:' \
+		src/{,isdn,ids,smp,hd}/Makefile || die
+
 	# Avoid -I directories for dbus because HAL is obsolete.
 	sed -i -e '/CFLAGS/d' src/hd/Makefile || die
 	# Respect LDFLAGS.
@@ -36,6 +41,7 @@ src_prepare() {
 }
 
 src_compile() {
+	tc-export AR
 	emake CC="$(tc-getCC)" RPM_OPT_FLAGS="${CFLAGS}" || die
 }
 
