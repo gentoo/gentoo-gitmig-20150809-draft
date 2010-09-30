@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.23 2010/09/30 04:18:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.24 2010/09/30 04:18:56 chithanh Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -64,4 +64,3 @@ vmware - VIDEO_CARDS setting to build driver for vmware video cards
 voodoo - VIDEO_CARDS setting to build driver for voodoo video cards
 xgi - VIDEO_CARDS setting to build driver for xgi video cards
 svga - VIDEO_CARDS setting to build driver for svga (VMware Virtual GPU) via Gallium
-vmware - VIDEO_CARDS setting to build driver for svga (VMware Virtual GPU) via Gallium
