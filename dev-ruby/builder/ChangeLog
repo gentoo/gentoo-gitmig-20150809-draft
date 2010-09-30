@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.49 2010/09/28 18:49:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.50 2010/09/30 01:30:45 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> builder-2.1.2-r1.ebuild:
+  Marking builder-2.1.2-r1 ppc64 for bug 321413
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> builder-2.1.2-r1.ebuild:
   Marking builder-2.1.2-r1 ppc for bug 321413
