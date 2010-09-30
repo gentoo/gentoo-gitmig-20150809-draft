@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/virtualjaguar
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.12 2009/01/20 14:24:47 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.13 2010/09/30 15:54:06 tupone Exp $
+
+  30 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
+  virtualjaguar-1.0.7.ebuild:
+  Respect LDFLAGS. Bug #337679 by flameeyes@gentoo.org
 
   20 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/virtualjaguar-1.0.7-gcc43.patch, virtualjaguar-1.0.7.ebuild:

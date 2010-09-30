@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.5 2009/01/20 14:24:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.6 2010/09/30 15:54:06 tupone Exp $
+EAPI="2"
 
 inherit eutils toolchain-funcs games
 
@@ -18,9 +19,7 @@ DEPEND="virtual/opengl
 
 S=${WORKDIR}/${P}-src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^CC/d' \
 		-e "/^LD\b/s:=.*:=$(tc-getCXX):" \
@@ -46,7 +45,7 @@ src_compile() {
 		GLLIB=-lGL \
 		SDLLIBTYPE=--libs
 	emake obj/m68kops.h || die # silly makefile
-	emake || die "emake failed"
+	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
