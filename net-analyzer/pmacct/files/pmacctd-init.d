@@ -1,29 +1,37 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/files/pmacctd-init.d,v 1.4 2009/06/01 09:48:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/files/pmacctd-init.d,v 1.5 2010/09/30 16:43:05 jer Exp $
+
+PMACCTDDIR=${PMACCTDDIR:-/etc/pmacct}
+if [ ${SVCNAME} != "pmacctd" ]; then
+	PMACCTDPID="/var/run/${SVCNAME}.pid"
+else
+	PMACCTDPID="/var/run/pmacctd.pid"
+fi
+PMACCTDCONF="${PMACCTDDIR}/${SVCNAME}.conf"
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /etc/pmacctd.conf ] ; then
-		eerror "You need an /etc/pmacctd.conf file to run pmacctd"
+	if [ ! -e ${PMACCTDCONF} ] ; then
+		eerror "You need an ${PMACCTDCONF} file to run pmacctd"
 		return 1
 	fi
 }
 
 start() {
 	checkconfig || return 1
-	ebegin "Starting pmacctd"
-	start-stop-daemon --start --pidfile /var/run/pmacctd.pid --exec /usr/sbin/pmacctd \
-		-- -D -f /etc/pmacctd.conf -F /var/run/pmacctd.pid ${OPTS}
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon --start --pidfile "${PMACCTDPID}" --exec /usr/sbin/pmacctd \
+		-- -D -f "${PMACCTDCONF}" -F "${PMACCTDPID}" ${OPTS}
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping pmacctd"
-	start-stop-daemon --stop --pidfile /var/run/pmacctd.pid --exec /usr/sbin/pmacctd
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon --stop --pidfile "${PMACCTDPID}" --exec /usr/sbin/pmacctd
 	eend $?
 }
