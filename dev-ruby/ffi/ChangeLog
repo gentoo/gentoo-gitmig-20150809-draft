@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.11 2010/09/28 23:58:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.12 2010/09/30 01:38:06 ranger Exp $
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> ffi-0.6.3-r1.ebuild:
+  Marking ffi-0.6.3-r1 ~ppc64 for bug 330283
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> ffi-0.6.3-r1.ebuild:
   Marking ffi-0.6.3-r1 ~ppc for bug 330283
