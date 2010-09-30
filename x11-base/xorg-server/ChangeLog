@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.539 2010/09/28 20:43:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.540 2010/09/30 02:48:32 chithanh Exp $
+
+  30 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.9.0-r2.ebuild:
+  Ease libdrm dependency.
 
 *xorg-server-1.9.0-r2 (28 Sep 2010)
 
