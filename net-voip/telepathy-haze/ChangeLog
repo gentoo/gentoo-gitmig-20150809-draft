@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.16 2010/09/29 17:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.17 2010/09/30 08:23:17 pacho Exp $
+
+*telepathy-haze-0.4.0-r1 (30 Sep 2010)
+
+  30 Sep 2010; Pacho Ramos <pacho@gentoo.org> -telepathy-haze-0.4.0.ebuild,
+  +telepathy-haze-0.4.0-r1.ebuild:
+  Remove haze.manager (as Fedora and Debian are doing) to prevent connection
+  problems reported in bug #331713 by Salah Coronya. Remove previous
+  version.
 
 *telepathy-haze-0.4.0 (29 Sep 2010)
 

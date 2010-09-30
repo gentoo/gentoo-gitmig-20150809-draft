@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.4.0.ebuild,v 1.1 2010/09/29 17:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.4.0-r1.ebuild,v 1.1 2010/09/30 08:23:17 pacho Exp $
 
 DESCRIPTION="Telepathy connection manager providing libpurple supported
 protocols."
@@ -24,5 +24,9 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS NEWS README
+	dodoc AUTHORS NEWS README || die
+
+	# Remove haze.manager (as Fedora and Debian are doing) to prevent
+	# connection problems reported in bug #331713
+	rm -f "${D}"/usr/share/telepathy/managers/haze.manager || die
 }
