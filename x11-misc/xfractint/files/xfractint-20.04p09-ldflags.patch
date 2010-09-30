@@ -1,0 +1,12 @@
+diff -Naurp xfractint-20.04p09-orig//Makefile xfractint-20.04p09/Makefile
+--- xfractint-20.04p09-orig//Makefile	2010-09-30 12:40:42.713823642 +0200
++++ xfractint-20.04p09/Makefile	2010-09-30 12:42:36.539819331 +0200
+@@ -301,7 +301,7 @@ xfractint: fractint.hlp $(SRCFILES)
+ 	          "HFD=.${HFD}"
+ 	cd unix ; ${MAKE} all "CFLAGS= -I.${HFD} ${CFLAGS} ${OPT}" "SRCDIR=${SHRDIR}" \
+ 	          "AS=${AS}" "AFLAGS=${AFLAGS}" "HFD=.${HFD}"
+-	$(CC) -o xfractint $(CFLAGS) $(OPT) $(OBJS) $(U_OBJS) $(LIBS)
++	$(CC) -o xfractint $(CFLAGS) $(LDFLAGS) $(OPT) $(OBJS) $(U_OBJS) $(LIBS)
+ #	strip xfractint
+ 
+ fractint:
