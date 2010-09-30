@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/zoomwin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.28 2008/09/20 16:03:29 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.29 2010/09/30 04:15:40 radhermit Exp $
+
+*zoomwin-23 (30 Sep 2010)
+
+  30 Sep 2010; Tim Harder <radhermit@gentoo.org> +zoomwin-23.ebuild:
+  Version bump. Now requires vim 7.2.
 
 *zoomwin-22 (20 Sep 2008)
 
