@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.6.ebuild,v 1.6 2010/08/02 17:55:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.6.ebuild,v 1.7 2010/09/30 15:12:37 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -20,7 +20,7 @@ SRC_URI="${SRC_URI}
 
 RDEPEND=">=x11-base/xorg-server-1.2[-minimal]"
 DEPEND="${RDEPEND}
-	>=x11-libs/libdrm-2
+	|| ( <x11-libs/libdrm-2.4.22 x11-libs/libdrm[video_cards_radeon] )
 	x11-proto/fontsproto
 	x11-proto/glproto
 	x11-proto/randrproto
