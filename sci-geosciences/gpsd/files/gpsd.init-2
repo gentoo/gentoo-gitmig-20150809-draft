@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init-2,v 1.1 2010/09/26 13:36:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/files/gpsd.init-2,v 1.2 2010/09/30 23:07:55 swegener Exp $
 
 depend() {
 	after dbus
 	before ntpd
 }
 
-PIDFILE=/var/run/$NAME.pid
+PIDFILE=/var/run/${SVCNAME}.pid
 DAEMON=/usr/sbin/gpsd
 
 checkconfig() {
