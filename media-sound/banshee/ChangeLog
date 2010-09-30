@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.120 2010/09/05 11:49:39 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.121 2010/09/30 09:19:33 ford_prefect Exp $
+
+*banshee-1.8.0 (30 Sep 2010)
+
+  30 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.8.0.ebuild:
+  Bump to 1.8.0. New stable release, lots of new features (Amazon MP3 store
+  support, Miro podcast directory, better Apple device support, and a lot
+  more). Reiterating that we are not dropping HAL till gtk-sharp-beans and
+  gio-sharp get a little more mature (and are packaged).
 
 *banshee-1.7.5 (05 Sep 2010)
 
