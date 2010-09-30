@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100806.ebuild,v 1.2 2010/09/27 16:34:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100806.ebuild,v 1.3 2010/09/30 20:04:11 maekke Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="+opengl"
 
 RDEPEND="
