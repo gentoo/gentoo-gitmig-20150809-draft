@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0-r1.ebuild,v 1.1 2010/09/25 09:20:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0-r1.ebuild,v 1.2 2010/09/30 13:56:37 ssuominen Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="gtk ncurses qt4 caps static"
 
-DEPEND="static? ( >=sys-libs/ncurses-5.7-r5[static-libs] )
+RDEPEND="app-admin/eselect-pinentry
+	static? ( >=sys-libs/ncurses-5.7-r5[static-libs] )
 	!static? (
 		gtk? ( x11-libs/gtk+:2 )
 		ncurses? ( sys-libs/ncurses )
@@ -22,7 +23,7 @@ DEPEND="static? ( >=sys-libs/ncurses-5.7-r5[static-libs] )
 		!gtk? ( !qt4? ( !ncurses? ( sys-libs/ncurses ) ) )
 	)
 	caps? ( sys-libs/libcap )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	use static && append-ldflags -static
@@ -78,6 +79,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	rm -f "${D}"/usr/bin/pinentry || die
 }
 
 pkg_postinst() {
@@ -88,4 +90,9 @@ pkg_postinst() {
 	elog "capabilities to allow pinentry to lock memory. To do so activate the caps"
 	elog "USE flag and add the CAP_IPC_LOCK capability to the permitted set of"
 	elog "your users."
+	eselect pinentry update ifunset
+}
+
+pkg_postrm() {
+	eselect pinentry update ifunset
 }
