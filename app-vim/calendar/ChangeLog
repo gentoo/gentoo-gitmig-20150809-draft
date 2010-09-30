@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/calendar
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.27 2008/09/20 12:25:46 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.28 2010/09/30 04:30:45 radhermit Exp $
+
+*calendar-2.2 (30 Sep 2010)
+
+  30 Sep 2010; Tim Harder <radhermit@gentoo.org> +calendar-2.2.ebuild:
+  Version bump. Drop the blocker on app-vim/cvscommand.
 
 *calendar-1.7 (20 Sep 2008)
 
