@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.ebuild,v 1.4 2010/08/21 07:18:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.ebuild,v 1.5 2010/09/30 23:34:40 ssuominen Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/traydevice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/ChangeLog,v 1.1 2010/08/21 07:11:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/ChangeLog,v 1.2 2010/09/30 23:34:40 ssuominen Exp $
+
+  30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> traydevice-1.5.ebuild:
+  amd64/x86 stable
 
 *traydevice-1.5 (21 Aug 2010)
 
