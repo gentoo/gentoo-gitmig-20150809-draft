@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11994 2010/09/30 03:43:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11995 2010/09/30 08:03:41 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,10 +31,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (30 Sep 2010)
+# Unmaintained since a lot of time by upstream, it's
+# replaced by net-libs/telepathy-glib (bug #338681) and 
+# Masked with Tester's approval.
+#
+# Removal on 2010-10-30
+net-libs/libtelepathy
+
 # Pacho Ramos <pacho@gentoo.org> (29 Sep 2010)
 # Unmaintained since a lot of time by upstream also suffers
 # some bugs like bug #339096 and upstream discourages its
-# usage. Masked with Peper's approval.
+# usage. Masked with Tester's approval.
 #
 # Removal on 2010-10-29
 net-voip/cohoba
