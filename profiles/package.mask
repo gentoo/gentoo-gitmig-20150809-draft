@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12002 2010/10/01 08:01:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12003 2010/10/01 09:32:09 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (01 Oct 2010)
+#  on behalf of QA team
+#
+# Overflows during build (bug #301795); need a new maintainer
+# at least, but there are a number of alternative IMEs that
+# shouldn't have these problems.
+#
+# Removal on 2010-11-30
+app-i18n/fcitx
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (30 Sep 2010)
 # Masking for removal in 30 days
