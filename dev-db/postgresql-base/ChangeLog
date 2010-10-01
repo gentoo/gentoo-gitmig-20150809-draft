@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.74 2010/09/21 16:17:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.75 2010/10/01 10:35:47 scarabeus Exp $
+
+  01 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  postgresql-base-9.0.0.ebuild:
+  QA: Cleanup, remove useless patch. Actualy install manpages.
 
   21 Sep 2010; Patrick Lauer <patrick@gentoo.org>
   -postgresql-base-9.0_beta4.ebuild, -postgresql-base-9.0_rc1.ebuild:
