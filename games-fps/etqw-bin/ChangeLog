@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/etqw-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.2 2009/09/30 20:07:37 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.3 2010/10/01 17:04:02 mr_bones_ Exp $
+
+  01 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> etqw-bin-1.5.ebuild:
+  update download location (bug #338639)
 
   30 Sep 2009; Tristan Heaven <nyhm@gentoo.org> etqw-bin-1.5.ebuild:
   Don't specify icon filename extension in desktop entry

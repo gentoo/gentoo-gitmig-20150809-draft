@@ -1,19 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.3 2009/09/30 20:07:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.4 2010/10/01 17:04:02 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="Enemy Territory: Quake Wars"
 HOMEPAGE="http://zerowing.idsoftware.com/linux/etqw/"
-SRC_URI="ETQW-client-${PV}-full.x86.run"
+SRC_URI="ftp://ftp.i3d.net/Games/Enemy%20Territory%20Quake%20Wars/Patches/ETQW-client-${PV}-full.x86.run"
 
 LICENSE="ETQW"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="cdinstall"
-RESTRICT="fetch strip"
-PROPERTIES="interactive"
+RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/glibc
@@ -31,14 +30,6 @@ dir=${GAMES_PREFIX_OPT}/etqw
 QA_TEXTRELS="${dir:1}/pb/*.so"
 QA_EXECSTACK="${dir:1}/*.x86
 	${dir:1}/*.so*"
-
-GAMES_CHECK_LICENSE="yes"
-
-pkg_nofetch() {
-	einfo "Please download ${A} from"
-	einfo "${HOMEPAGE} (requires a BitTorrent client)"
-	einfo "and copy it to ${DISTDIR}"
-}
 
 src_unpack() {
 	tail -c +194885 "${DISTDIR}"/${A} > ${A}.zip
