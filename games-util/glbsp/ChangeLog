@@ -1,6 +1,10 @@
 # ChangeLog for games-util/glbsp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.9 2009/11/26 20:55:44 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.10 2010/10/01 08:04:07 tupone Exp $
+
+  01 Oct 2010; Tupone Alfredo <tupone@gentoo.org> glbsp-2.20.ebuild,
+  +files/glbsp-2.20-ldflags.patch:
+  Respect LDFLAGS. Bug #337273 by flameeyes@gentoo.org
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> glbsp-2.20.ebuild:
   x86 stable, bug #294541

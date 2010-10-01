@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.4 2009/11/26 20:55:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.5 2010/10/01 08:04:07 tupone Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit eutils toolchain-funcs versionator
 
@@ -18,9 +18,7 @@ IUSE="fltk"
 
 DEPEND="fltk? ( x11-libs/fltk:1.1 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^CC=/s:=.*:=$(tc-getCC):" \
 		-e "/^CXX=/s:=.*:=$(tc-getCXX):" \
@@ -29,6 +27,7 @@ src_unpack() {
 		-e "s:-O2:${CFLAGS}:" \
 		GUI_unx.mak Plugin_unx.mak Makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
