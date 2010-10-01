@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.30 2010/06/17 20:53:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.31 2010/10/01 02:57:34 robbat2 Exp $
+
+*ezmlm-idx-7.0.0-r2 (01 Oct 2010)
+
+  01 Oct 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +ezmlm-idx-7.0.0-r2.ebuild:
+  Two binaries are not installed by the buildsystem installer, add them
+  manually.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> ezmlm-idx-0.40-r2.ebuild,
   ezmlm-idx-6.0.0.ebuild, ezmlm-idx-7.0.0.ebuild, ezmlm-idx-7.0.0-r1.ebuild:
