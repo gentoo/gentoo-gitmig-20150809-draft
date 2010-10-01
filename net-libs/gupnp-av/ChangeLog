@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gupnp-av
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.8 2010/07/21 10:52:55 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.9 2010/10/01 16:13:30 ford_prefect Exp $
+
+*gupnp-av-0.6.1 (01 Oct 2010)
+
+  01 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gupnp-av-0.6.1.ebuild:
+  Bump to 0.6.1. Stable release - adds some fixes and documentation updates
+  over 0.5.7. DLNA media support moved to media-libs/gupnp-dlna.
 
   21 Jul 2010; Arun Raghavan <ford_prefect@gentoo.org>
   -gupnp-av-0.5.1.ebuild:
