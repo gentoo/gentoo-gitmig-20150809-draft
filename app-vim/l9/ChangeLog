@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/l9
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/l9/ChangeLog,v 1.1 2010/10/01 06:18:04 radhermit Exp $
+
+*l9-1.1 (01 Oct 2010)
+
+  01 Oct 2010; Tim Harder <radhermit@gentoo.org> +l9-1.1.ebuild,
+  +metadata.xml:
+  Initial ebuild. Added for app-vim/fuzzyfinder.
+
