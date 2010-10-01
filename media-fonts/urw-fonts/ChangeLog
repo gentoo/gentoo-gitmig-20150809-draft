@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.50 2010/09/24 14:44:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.51 2010/10/01 01:17:16 dirtyepic Exp $
+
+  01 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> urw-fonts-2.4.6.ebuild,
+  urw-fonts-2.4.9.ebuild:
+  Grammar fix.
 
   24 Sep 2010; Mart Raudsepp <leio@gentoo.org> urw-fonts-2.4.9.ebuild:
   Add ~mips keyword, needed by ghostscript-gpl for cups
