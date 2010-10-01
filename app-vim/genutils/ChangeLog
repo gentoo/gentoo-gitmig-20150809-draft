@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/genutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.22 2008/09/21 13:06:07 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.23 2010/10/01 07:19:46 radhermit Exp $
+
+*genutils-2.5 (01 Oct 2010)
+
+  01 Oct 2010; Tim Harder <radhermit@gentoo.org> +genutils-2.5.ebuild:
+  Version bump. Update to EAPI=3 and update LICENSE to GPL-3.
 
 *genutils-2.4 (21 Sep 2008)
 
