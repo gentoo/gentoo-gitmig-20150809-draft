@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.94 2010/09/18 16:42:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.95 2010/10/01 00:46:39 ranger Exp $
+
+  01 Oct 2010; Brent Baude <ranger@gentoo.org> nagios-3.2.1.ebuild:
+  Marking nagios-3.2.1 ppc64 for bug 312843
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> nagios-3.2.1.ebuild:
   sparc stable wrt #312843
