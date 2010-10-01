@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.740 2010/09/30 18:49:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.741 2010/10/01 17:14:12 zmedico Exp $
+
+*portage-2.1.9.13 (01 Oct 2010)
+
+  01 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.13.ebuild:
+  2.1.9.13 version bump. This fixes bug #339015 (--exclude support for
+  --depclean and --prune). This also fixes a regression that makes
+  ebuild(1) fail when calling the 'package' phase. Bug #335925 tracks
+  all bugs fixed since 2.1.8.x.
 
   30 Sep 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.9.ebuild,
   -portage-2.1.9.10.ebuild, -portage-2.1.9.11.ebuild,
