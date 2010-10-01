@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.4.ebuild,v 1.1 2009/11/03 23:54:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.6.ebuild,v 1.1 2010/10/01 18:47:20 bicatali Exp $
 
 EAPI=2
 inherit eutils
