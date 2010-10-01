@@ -1,6 +1,30 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.46 2010/06/21 14:40:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.47 2010/10/01 19:40:19 pacho Exp $
+
+*f-spot-0.8.0 (01 Oct 2010)
+
+  01 Oct 2010; Pacho Ramos <pacho@gentoo.org> +f-spot-0.8.0.ebuild,
+  +files/f-spot-0.8.0-empty-crash.patch:
+  Version bump with a ton of upstream fixes (bug #320627, thanks a lot to
+  Samuli Suominen for showing me how to properly run eautoreconf). Fixed
+  some opened bug reports:
+  - RDEPEND on media-gfx/dcraw when wanted (bug #227411 by uzytkownik).
+  - 'low image quality' issues reported in bug #285064 by Daniel Drake
+  should be solved by upstream.
+  - Looks to solve location issues reported in bug #299487 by Marcello
+  Magaldi.
+  - Seems to not show any DB problem as reported in bug #302926 by Oo.et.oO.
+  - It should fix problems with facebook extension (bug #306745 by Jacob
+  Godserv fixed by upstream).
+  - Build system looks parallel build safe (bug #321377 by Michael Weber).
+  - Doesn't segfault as reported in bug #322885 by Dustin Polke (tested by
+  me on icewm).
+  Related with ebuild changes: documentation configure option is now being
+  passed behind 'doc' USE flag, configure options are now passed in
+  pkg_setup as done in most ebuilds inheriting gnome2.eclass, added
+  previously missing gnome2_src_prepare call, drop unneeded
+  SCROLLKEEPER_UPDATE=0.
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   f-spot-0.6.1.1-r3.ebuild:

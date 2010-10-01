@@ -1,0 +1,21 @@
+From 9054153b3b40f76f7e094ca8db98de0eaca62808 Mon Sep 17 00:00:00 2001
+From: Ruben Vermeersch <ruben@savanne.be>
+Date: Wed, 15 Sep 2010 17:56:40 +0000
+Subject: Don't crash with empty databases.
+
+---
+diff --git a/src/Clients/MainApp/FSpot/App.cs b/src/Clients/MainApp/FSpot/App.cs
+index cdcfeea..53bdcb4 100644
+--- a/src/Clients/MainApp/FSpot/App.cs
++++ b/src/Clients/MainApp/FSpot/App.cs
+@@ -223,7 +223,7 @@ namespace FSpot
+         {
+             // Some users get wonky URIs here, trying to work around below.
+             // https://bugzilla.gnome.org/show_bug.cgi?id=629248
+-            if (path.StartsWith ("gphoto2:usb:")) {
++            if (path != null && path.StartsWith ("gphoto2:usb:")) {
+                 path = String.Format ("gphoto2://[{0}]", path.Substring (8));
+             }
+ 
+--
+cgit v0.8.3.1
