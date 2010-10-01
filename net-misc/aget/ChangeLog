@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.17 2010/09/20 04:08:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.18 2010/10/01 10:28:59 xmw Exp $
+
+  01 Oct 2010; Michael Weber <xmw@gentoo.org> -aget-0.4.1.ebuild,
+  aget-0.4.1-r1.ebuild:
+  Added ~arm keyword to 0.4.1-r1, cleaned 0.4.1 version.
 
 *aget-0.4.1-r1 (20 Sep 2010)
 

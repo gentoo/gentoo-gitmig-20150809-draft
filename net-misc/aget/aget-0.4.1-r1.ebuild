@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.1-r1.ebuild,v 1.1 2010/09/20 04:08:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.1-r1.ebuild,v 1.2 2010/10/01 10:28:59 xmw Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.enderunix.org/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 src_prepare() {
