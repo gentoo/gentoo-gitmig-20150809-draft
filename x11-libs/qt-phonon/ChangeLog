@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.76 2010/09/23 21:34:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.77 2010/10/01 18:25:36 grobian Exp $
+
+  01 Oct 2010; Fabian Groffen <grobian@gentoo.org> qt-phonon-4.6.3.ebuild:
+  Marked ~x64-macos
 
   23 Sep 2010; Alex Alexander <wired@gentoo.org> qt-phonon-4.7.0.ebuild:
   EAPI 3, prefix, other improvements

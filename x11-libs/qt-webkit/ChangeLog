@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.102 2010/09/23 21:35:09 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.103 2010/10/01 18:29:05 grobian Exp $
+
+  01 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  qt-webkit-4.6.3-r1.ebuild:
+  Marked ~x64-macos
 
   23 Sep 2010; Alex Alexander <wired@gentoo.org> qt-webkit-4.7.0.ebuild:
   EAPI 3, prefix, other improvements
