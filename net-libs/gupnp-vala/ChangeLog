@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gupnp-vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.2 2010/01/01 11:59:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.3 2010/10/01 10:42:29 ford_prefect Exp $
+
+*gupnp-vala-0.6.12 (01 Oct 2010)
+
+  01 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gupnp-vala-0.6.12.ebuild:
+  Bump to 0.6.12. Lots of updates to the vapi since 0.6.2, and introduces
+  vapi for gupnp-dlna.
 
   01 Jan 2010; <hwoarang@gentoo.org> gupnp-vala-0.6.2.ebuild:
   add ~amd64 keyword wrt bug #298918
