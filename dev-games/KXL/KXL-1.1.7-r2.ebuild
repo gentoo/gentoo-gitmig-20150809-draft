@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r2.ebuild,v 1.1 2010/09/23 12:27:02 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r2.ebuild,v 1.2 2010/10/01 03:12:55 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="Development Library for making games for X"
