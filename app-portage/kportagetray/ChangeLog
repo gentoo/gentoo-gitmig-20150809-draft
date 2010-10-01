@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/kportagetray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.6 2010/03/31 21:59:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.7 2010/10/01 22:04:42 dilfridge Exp $
+
+*kportagetray-0.2.4 (01 Oct 2010)
+
+  01 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kportagetray-0.2.3.ebuild, +kportagetray-0.2.4.ebuild:
+  Version bump
 
 *kportagetray-0.2.3 (31 Mar 2010)
 

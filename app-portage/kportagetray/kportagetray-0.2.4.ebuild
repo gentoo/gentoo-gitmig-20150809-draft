@@ -1,17 +1,28 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.3.ebuild,v 1.1 2010/03/31 21:59:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4.ebuild,v 1.1 2010/10/01 22:04:42 dilfridge Exp $
 
-EAPI="2"
+EAPI="3"
+
+SCM=""
+if [ "${PV%9999}" != "${PV}" ] ; then
+	SCM=git
+	EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
+fi
 
 KDE_LINGUAS="pt_BR"
 PYTHON_DEPEND="2:2.6"
 
-inherit kde4-base python
+inherit ${SCM} kde4-base python
 
 DESCRIPTION="Graphical application for Portage's daily tasks"
-HOMEPAGE="https://sourceforge.net/projects/kportagetray/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://gitorious.org/kportagetray"
+
+if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
+	SRC_URI=""
+else
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+fi
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
@@ -35,7 +46,19 @@ pkg_setup() {
 	kde4-base_pkg_setup
 }
 
+src_unpack() {
+	if [ "${PV%9999}" != "${PV}" ] ; then
+		git_src_unpack
+	else
+		base_src_unpack
+	fi
+}
+
 src_prepare() {
 	python_convert_shebangs -r 2 .
 	kde4-base_src_prepare
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
 }
