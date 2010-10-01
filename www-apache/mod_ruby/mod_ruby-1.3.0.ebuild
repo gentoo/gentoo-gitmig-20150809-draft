@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.3.0.ebuild,v 1.6 2010/05/23 19:17:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/mod_ruby-1.3.0.ebuild,v 1.7 2010/10/01 00:37:10 ranger Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://modruby.net/archive/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND="dev-lang/ruby"

@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.17 2010/05/23 19:17:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.18 2010/10/01 00:37:10 ranger Exp $
+
+  01 Oct 2010; Brent Baude <ranger@gentoo.org> mod_ruby-1.3.0.ebuild:
+  Marking mod_ruby-1.3.0 ppc64 for bug 310245
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> mod_ruby-1.3.0.ebuild:
   stable amd64, bug 310245
