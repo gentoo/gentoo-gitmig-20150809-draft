@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.18 2010/07/21 13:16:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.19 2010/10/01 19:04:55 grobian Exp $
+
+  01 Oct 2010; Fabian Groffen <grobian@gentoo.org> libcuefile-465.ebuild:
+  Marked ~x86-solaris
 
 *libcuefile-465 (21 Jul 2010)
 
