@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cmdalias
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cmdalias/ChangeLog,v 1.11 2008/10/10 13:40:29 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cmdalias/ChangeLog,v 1.12 2010/10/01 07:14:13 radhermit Exp $
+
+*cmdalias-3.0 (01 Oct 2010)
+
+  01 Oct 2010; Tim Harder <radhermit@gentoo.org> +cmdalias-3.0.ebuild:
+  Version bump.
 
   10 Oct 2008; Ali Polatel <hawking@gentoo.org> cmdalias-2.0.ebuild:
   Remove curcmdmode from RDEPEND.
