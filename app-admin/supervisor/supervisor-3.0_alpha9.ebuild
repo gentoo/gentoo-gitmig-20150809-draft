@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha9.ebuild,v 1.1 2010/09/23 20:18:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha9.ebuild,v 1.2 2010/10/01 17:09:23 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -39,6 +39,6 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-	newinitd "${FILESDIR}/init.d" supervisord
-	newconfd "${FILESDIR}/conf.d" supervisord
+	newinitd "${FILESDIR}/init.d" supervisord || die "newinitd failed"
+	newconfd "${FILESDIR}/conf.d" supervisord || die "newconfd failed"
 }
