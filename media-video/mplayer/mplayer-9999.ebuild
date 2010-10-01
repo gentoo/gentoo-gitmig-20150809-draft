@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.75 2010/07/18 09:47:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.76 2010/10/01 02:44:10 aballier Exp $
 
 EAPI="2"
 
@@ -616,7 +616,7 @@ src_configure() {
 		###################
 		# External FFmpeg #
 		###################
-		use external-ffmpeg && myconf+=" --disable-libavutil_a --disable-libavcodec_a --disable-libavformat_a --disable-libpostproc_a --disable-libswscale_a"
+		use external-ffmpeg && myconf+=" --disable-ffmpeg_a"
 	fi
 
 	myconf="--cc=$(tc-getCC) \
