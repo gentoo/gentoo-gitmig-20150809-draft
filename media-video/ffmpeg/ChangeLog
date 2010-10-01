@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.371 2010/09/24 20:44:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.372 2010/10/01 00:56:44 aballier Exp $
+
+  01 Oct 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  Add frei0r useflag
 
   24 Sep 2010; Markos Chandras <hwoarang@gentoo.org> ffmpeg-0.6.ebuild:
   Stable on amd64 wrt bug #332361
