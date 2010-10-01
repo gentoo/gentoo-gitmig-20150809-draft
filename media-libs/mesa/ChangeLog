@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.290 2010/09/30 15:15:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.291 2010/10/01 09:06:47 scarabeus Exp $
+
+  01 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.8.2.ebuild:
+  Drop weird depend atom. Per bug #339314.
 
   30 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.8.2.ebuild:
   Update libdrm dependency.
