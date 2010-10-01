@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.13 2010/10/01 10:06:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.14 2010/10/01 10:59:27 hwoarang Exp $
+
+  01 Oct 2010; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild,
+  metadata.xml:
+  Move gnome,hal,udev dependencies from pcmanfm to libfm to actually reflect
+  the underlying code. Bug #330891. Add gtk-doc dependency. Bug #338908
 
   01 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add myself as maintainer
