@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.1.2.ebuild,v 1.1 2010/09/03 07:16:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.1.4.ebuild,v 1.1 2010/10/01 07:09:06 caster Exp $
 
 EAPI=3
 
