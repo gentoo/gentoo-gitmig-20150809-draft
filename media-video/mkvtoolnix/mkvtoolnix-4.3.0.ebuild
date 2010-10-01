@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.3.0.ebuild,v 1.2 2010/10/01 23:12:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.3.0.ebuild,v 1.3 2010/10/01 23:29:03 beandog Exp $
 
 EAPI="1"
 inherit wxwidgets autotools
@@ -19,6 +19,7 @@ RDEPEND="
 	>=media-libs/libmatroska-1.0.0
 	dev-libs/boost
 	dev-libs/expat
+	media-libs/flac
 	media-libs/libogg
 	media-libs/libvorbis
 	sys-apps/file
