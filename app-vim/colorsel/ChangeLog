@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/colorsel
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/ChangeLog,v 1.14 2008/09/20 13:59:45 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/ChangeLog,v 1.15 2010/10/01 07:02:59 radhermit Exp $
+
+*colorsel-20100406 (01 Oct 2010)
+
+  01 Oct 2010; Tim Harder <radhermit@gentoo.org> +colorsel-20100406.ebuild:
+  Version bump. Update to EAPI=3 and drop the non-GUI sed hack since the
+  issue was fixed upstream.
 
 *colorsel-20051121 (20 Sep 2008)
 
