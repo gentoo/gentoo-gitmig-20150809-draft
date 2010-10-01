@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.23 2010/06/29 16:47:03 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.24 2010/10/01 15:47:27 scarabeus Exp $
+
+  01 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> -wklej-0.1.1.ebuild,
+  -wklej-0.1.2.ebuild, -wklej-0.1.3.ebuild, -wklej-0.1.4.ebuild,
+  -wklej-0.1.5.ebuild, -wklej-0.1.5-r1.ebuild, -wklej-0.1.6.ebuild,
+  -wklej-0.1.7.ebuild, wklej-0.2.0.ebuild:
+  Cleanup latest to use python eclass for depend. Stabilize latest on amd64
+  and x86. Remove old that didn't work.
 
 *wklej-0.2.0 (29 Jun 2010)
 
