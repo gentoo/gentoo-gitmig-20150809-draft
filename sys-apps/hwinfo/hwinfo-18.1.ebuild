@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.1.ebuild,v 1.3 2010/09/30 23:10:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.1.ebuild,v 1.4 2010/10/01 10:15:01 ssuominen Exp $
 
 EAPI=2
 inherit multilib rpm toolchain-funcs
@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libx86emu"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	>=sys-kernel/linux-headers-2.6.17"
 
 MAKEOPTS="${MAKEOPTS} -j1"
