@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.221 2010/10/01 01:03:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.222 2010/10/01 10:17:24 xmw Exp $
+
+  01 Oct 2010; Michael Weber <xmw@gentoo.org> e2fsprogs-1.41.12.ebuild:
+  Stable on arm, bug 337270
 
   01 Oct 2010; Brent Baude <ranger@gentoo.org> e2fsprogs-1.41.12.ebuild:
   Marking e2fsprogs-1.41.12 ppc64 for bug 337270
