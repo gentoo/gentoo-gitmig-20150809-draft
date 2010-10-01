@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Archive_Tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.34 2010/07/18 12:18:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.35 2010/10/01 01:01:23 ranger Exp $
+
+  01 Oct 2010; Brent Baude <ranger@gentoo.org>
+  PEAR-Archive_Tar-1.3.5.ebuild:
+  Marking PEAR-Archive_Tar-1.3.5 ppc64 for bug 311633
 
   18 Jul 2010; <nixnut@gentoo.org> PEAR-Archive_Tar-1.3.5.ebuild:
   ppc stable #311633
