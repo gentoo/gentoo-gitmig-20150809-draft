@@ -3,4 +3,8 @@
 <pkgmetadata>
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
+	<use>
+		<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
+			installation with secure-delete enabled</flag>
+	</use>
 </pkgmetadata>

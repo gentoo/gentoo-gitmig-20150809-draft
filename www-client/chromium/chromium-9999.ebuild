@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.86 2010/09/23 12:31:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.87 2010/10/01 08:34:59 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,9 +15,10 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="cups gnome gnome-keyring"
+IUSE="cups gnome gnome-keyring system-sqlite"
 
 RDEPEND="app-arch/bzip2
+	system-sqlite? ( >=dev-db/sqlite-3.6.23.1[fts3,secure-delete] )
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
@@ -109,6 +110,10 @@ src_prepare() {
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
 
+	# Small fixes to the system-provided sqlite support,
+	# to be upstreamed.
+	epatch "${FILESDIR}"/${PN}-system-sqlite-r0.patch
+
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/cros"
@@ -128,6 +133,11 @@ src_prepare() {
 	remove_bundled_lib "third_party/tlslite"
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
+
+	if use system-sqlite; then
+		remove_bundled_lib "third_party/sqlite/src"
+		remove_bundled_lib "third_party/sqlite/preprocessed"
+	fi
 }
 
 src_configure() {
@@ -139,7 +149,6 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg (http://crbug.com/50678).
-	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
 	myconf+="
@@ -150,6 +159,10 @@ src_configure() {
 		-Duse_system_libpng=1
 		-Duse_system_libxml=1
 		-Duse_system_zlib=1"
+
+	if use system-sqlite; then
+		myconf+=" -Duse_system_sqlite=1"
+	fi
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
@@ -174,10 +187,6 @@ src_configure() {
 	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
 	# and the performance gain isn't worth it.
 	myconf+=" -Dv8_use_snapshot=0"
-
-	# Disable tcmalloc memory allocator. It causes problems,
-	# for example bug #320419.
-	myconf+=" -Dlinux_use_tcmalloc=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
@@ -211,16 +220,11 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die
+	build/gyp_chromium --depth=. ${myconf} || die
 }
 
 src_compile() {
-	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
-		CC="$(tc-getCC)" \
-		CXX="$(tc-getCXX)" \
-		AR="$(tc-getAR)" \
-		RANLIB="$(tc-getRANLIB)" \
-		|| die
+	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 }
 
 src_install() {
