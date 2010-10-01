@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.87 2010/09/30 19:17:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.88 2010/10/01 18:38:25 grobian Exp $
+
+  01 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  qt-assistant-4.6.3.ebuild:
+  Marked ~x64-macos
 
   30 Sep 2010; Markus Meier <maekke@gentoo.org> qt-assistant-4.7.0.ebuild:
   add ~arm, bug #338289
