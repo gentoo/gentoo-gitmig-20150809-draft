@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xjump
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/ChangeLog,v 1.9 2007/04/24 15:22:49 drizzt Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/ChangeLog,v 1.10 2010/10/01 05:11:31 tupone Exp $
+
+  01 Oct 2010; Tupone Alfredo <tupone@gentoo.org> xjump-2.7.5.ebuild,
+  +files/xjump-2.7.5-ldflags.patch:
+  Respect LDFLAGS. Bug #337332 by flameeyes@gentoo.org
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> xjump-2.7.5.ebuild:
   Add ~x86-fbsd keyword.

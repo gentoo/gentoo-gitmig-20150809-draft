@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.10 2007/04/24 15:22:49 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.11 2010/10/01 05:11:31 tupone Exp $
+EAPI="2"
 
 inherit eutils games
 
@@ -15,31 +16,24 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="x11-libs/libX11
-	x11-libs/libXaw
-	x11-libs/libXpm
-	x11-libs/libXt
-	x11-proto/xproto"
-
 RDEPEND="x11-libs/libX11
 	x11-libs/libXaw
-	x11-libs/libXext
-	x11-libs/libXmu
 	x11-libs/libXpm
 	x11-libs/libXt"
 
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
+
 S=${WORKDIR}/${P}.orig
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Where we will keep the highscore file:
 	HISCORE_FILENAME=xjump.hiscores
 	HISCORE_FILE="${GAMES_STATEDIR}/${HISCORE_FILENAME}"
 
 	epatch "${WORKDIR}/${PN}_${PV}-${DEBIAN_PATCH}.diff"
-	epatch "${S}/debian/patches/"*.dpatch
+	epatch "${S}/debian/patches/"*.dpatch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	# set up where we will keep the highscores file:
 	sed -i \
