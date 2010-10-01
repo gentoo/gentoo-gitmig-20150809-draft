@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gcube
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.7 2008/08/01 18:08:01 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.8 2010/10/01 05:24:08 tupone Exp $
+
+  01 Oct 2010; Tupone Alfredo <tupone@gentoo.org> gcube-0.4-r1.ebuild,
+  +files/gcube-0.4-ldflags.patch:
+  Respect LDFLAGS. Bug #337330 by flameeyes@gentoo.org
 
   01 Aug 2008; Raúl Porcel <armin76@gentoo.org> gcube-0.4-r1.ebuild:
   x86 stable wrt #232405
