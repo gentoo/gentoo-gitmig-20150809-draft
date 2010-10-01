@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/fuzzyfinder
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fuzzyfinder/ChangeLog,v 1.1 2010/10/01 06:20:38 radhermit Exp $
+
+*fuzzyfinder-4.2.2 (01 Oct 2010)
+
+  01 Oct 2010; Tim Harder <radhermit@gentoo.org> +fuzzyfinder-4.2.2.ebuild,
+  +metadata.xml:
+  Initial ebuild (fixes bug #338287, thanks to Michal Kurgan for reporting).
+
