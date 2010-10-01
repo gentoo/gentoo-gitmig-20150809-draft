@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.6 2009/01/25 22:52:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.7 2010/10/01 05:00:17 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -30,6 +30,7 @@ src_prepare() {
 		-e "s:/var/games:${GAMES_STATEDIR}:" \
 		source/linux/doc.cpp history \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
