@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.7.ebuild,v 1.6 2010/05/05 05:27:23 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.7.ebuild,v 1.7 2010/10/01 02:53:58 mr_bones_ Exp $
+
+EAPI=2
 PYTHON_DEPEND="2"
 inherit eutils python distutils
 
