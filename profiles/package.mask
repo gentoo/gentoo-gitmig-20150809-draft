@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12004 2010/10/01 10:56:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12005 2010/10/01 14:54:19 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (01 Oct 2010)
+#  on behalf of QA team
+#
+# Upstream seems to be dead, and keeping importing it from
+# OpenSolaris unlikely; too many man pages installed by our
+# packages are not compatible with it.
+#
+# Removal on 2010-11-30
+app-doc/heirloom-doctools
 
 # Luca Barbato <lu_zero@gentoo.org> (01 Oct 2010)
 # beta version, has known issues
