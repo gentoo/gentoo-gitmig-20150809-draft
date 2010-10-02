@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.8.4.ebuild,v 1.1 2010/08/19 03:31:11 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.10.ebuild,v 1.1 2010/10/02 07:58:20 grozin Exp $
 EAPI=3
 inherit eutils toolchain-funcs
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-makefile.patch
+	epatch "${FILESDIR}"/${PF}-makefile.patch
 }
 
 src_compile() {
