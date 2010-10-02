@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.131 2010/09/30 20:25:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.132 2010/10/02 12:37:57 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> p7zip-9.13-r1.ebuild:
+  Marked ~x64-macos, bug #333981
 
   30 Sep 2010; Fabian Groffen <grobian@gentoo.org> p7zip-9.13-r1.ebuild:
   Make fix for bug #338375 partially conditional for USE=rar
