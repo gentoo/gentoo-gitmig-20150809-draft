@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Mozilla Sunbird (bin)
-Comment=Mozilla Sunbird Calendar
-Exec=/usr/bin/sunbird-bin
-Icon=mozilla-sunbird-bin-icon
-Terminal=false
-Type=Application
-Categories=Office;Calendar;
