@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/snpfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.5 2010/06/20 16:58:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.6 2010/10/02 07:52:04 xarthisius Exp $
+
+  02 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  files/snpfile-2.0.1-gentoo.diff:
+  Fix patch to compile with make-3.82 wrt bug 336542. Thanks to Diego for
+  the report.
 
 *snpfile-2.0.1-r1 (20 Jun 2010)
 

@@ -4,14 +4,15 @@ https://bugs.gentoo.org/show_bug.cgi?id=294971
 
 --- Makefile.am
 +++ Makefile.am
-@@ -1,440 +1,91 @@
+@@ -1,440 +1,92 @@
  ACLOCAL_AMFLAGS = -I m4
  
 -AM_CXXFLAGS =
 -AM_CXXFLAGS += -Wall
 -AM_CXXFLAGS += $(BOOST_CPPFLAGS)
 +AM_CXXFLAGS = -Wall $(BOOST_CPPFLAGS)
- 
++SUFFIXES = .cc 
+
 -
 -# for testing
 -AM_CXXFLAGS += -g -O2 #-lefence
