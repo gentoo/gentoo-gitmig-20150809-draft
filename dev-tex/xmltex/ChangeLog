@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.34 2010/02/21 00:48:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.35 2010/10/02 19:43:00 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> xmltex-1.9-r2.ebuild:
+  Marked ~x64-macos, bug #333981
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> xmltex-1.9-r2.ebuild:
   Transfer prefix keywords (no other changes)
