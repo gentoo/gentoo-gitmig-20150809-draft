@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-mailparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.18 2010/09/30 10:22:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.19 2010/10/02 08:56:26 olemarkus Exp $
+
+  02 Oct 2010; <olemarkus@gentoo.org> pecl-mailparse-2.1.5.ebuild:
+  Ebuilds inheriting pecl-ext-source-r1 cannot use EAPI2 (bug #339408)
 
   30 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   pecl-mailparse-2.1.5.ebuild:
