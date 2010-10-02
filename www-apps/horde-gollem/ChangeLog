@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-gollem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.22 2010/09/29 19:23:17 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.23 2010/10/02 14:59:59 klausman Exp $
+
+  02 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  horde-gollem-1.1.2.ebuild:
+  Stable on alpha, bug #339168
 
 *horde-gollem-1.1.2 (29 Sep 2010)
 
