@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.9.ebuild,v 1.3 2010/09/10 18:25:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.9.ebuild,v 1.4 2010/10/02 14:16:28 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bonjour doc examples exif hal nls kernel_linux"
+IUSE="doc examples exif hal nls kernel_linux zeroconf"
 
 # ???
 #RESTRICT="test"
@@ -44,7 +44,7 @@ done
 
 # libgphoto2 actually links to libtool
 RDEPEND="virtual/libusb:0
-	bonjour? ( || (
+	zeroconf? ( || (
 		net-dns/avahi[mdnsresponder-compat]
 		net-misc/mDNSResponder ) )
 	exif? ( >=media-libs/libexif-0.5.9 )
@@ -87,7 +87,7 @@ src_prepare() {
 		sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
 	fi
 
-	# Fix USE=bonjour, bug #283332
+	# Fix USE=zeroconf, bug #283332
 	epatch "${FILESDIR}/${PN}-2.4.7-respect-bonjour.patch"
 
 	# Do not build test if not running make check, bug #226241
@@ -122,7 +122,7 @@ src_configure() {
 	econf \
 		--disable-docs \
 		--disable-gp2ddb \
-		$(use_with bonjour) \
+		$(use_with zeroconf bonjour) \
 		$(use_with hal) \
 		$(use_enable nls) \
 		$(use_with exif libexif auto) \
