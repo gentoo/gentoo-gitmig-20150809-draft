@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.13 2010/09/29 02:24:15 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.14 2010/10/02 12:40:08 grobian Exp $
 
 # Rafael Goncalves Martins <rafaelmartins@gentoo.org> (29 Sep 2010)
-# dev-libs/judy and app-arch/xz-utils without prefix keywords
+# dev-libs/judy without prefix keywords
 # (amd64-linux and x86-linux)
-sci-electronics/gtkwave judy xz
+sci-electronics/gtkwave judy
 
 # Michael Haubenwallner <haubi@gentoo.org> (17 Sep 2010)
 # sys-apps/keyutils is a linux only package

@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.216 2010/10/02 12:26:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.217 2010/10/02 12:40:08 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.use.mask:
+  unmask xz, we do have xz-utils in our overlay
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/5.10/x86/eapi:
