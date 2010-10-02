@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12010 2010/10/02 17:04:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12011 2010/10/02 23:52:30 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (02 Oct 2010)
+# Included in >=dev-libs/Ice-3.3. Masked for deletion in 30 days.
+dev-python/IcePy
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (02 Oct 2010)
 # Masking for removal in 30 days
