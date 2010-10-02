@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.295 2010/09/11 18:23:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.296 2010/10/02 15:30:42 klausman Exp $
+
+  02 Oct 2010; Tobias Klausmann <klausman@gentoo.org> pango-1.28.1.ebuild:
+  Stable on alpha, bug #313331
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> pango-1.28.1.ebuild:
   Marked ppc for bug #324077.
