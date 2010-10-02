@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.16 2010/09/30 03:39:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.17 2010/10/02 20:24:29 mr_bones_ Exp $
+
+  02 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> pokerth-0.8.ebuild:
+  update the gsasl dep for bug #339482 - tracked down by Anthony Boynes
 
 *pokerth-0.8 (30 Sep 2010)
 
