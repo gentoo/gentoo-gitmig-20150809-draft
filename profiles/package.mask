@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12007 2010/10/02 15:46:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12008 2010/10/02 16:40:35 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -744,13 +744,6 @@ mail-client/claws-mail-bsfilter
 # bugs (bug #303665), and minor ones (bug #240036).
 # Dead upstream.
 dev-lang/hugs98
-
-# Lars Wendler <polynomial-c@gentoo.org> (26 Jul 2010)
-# Masked for removal in 30 days.
-# Discontinued by upstream and superseded by Thunderbird with Lightning
-app-office/mozilla-sunbird
-app-office/mozilla-sunbird-bin
-www-client/mozilla-launcher
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (25 Jul 2010)
 # The v8 package is still very experimental and not ready for general use.
