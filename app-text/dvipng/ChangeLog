@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.73 2010/05/26 22:27:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.74 2010/10/02 12:41:08 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> dvipng-1.13.ebuild:
+  Marked ~x64-macos, bug #333981
 
   26 May 2010; Ulrich Mueller <ulm@gentoo.org> -dvipng-1.12-r1.ebuild:
   Remove vulnerable version wrt security bug 320961.

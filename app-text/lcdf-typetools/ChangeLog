@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.53 2010/07/18 12:36:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.54 2010/10/02 12:44:30 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  lcdf-typetools-2.83.ebuild:
+  Marked ~x64-macos, bug #333981
 
   18 Jul 2010; Alexis Ballier <aballier@gentoo.org>
   -lcdf-typetools-2.81.ebuild, -lcdf-typetools-2.82.ebuild:

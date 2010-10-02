@@ -1,6 +1,9 @@
 # ChangeLog for app-text/par
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.13 2010/01/02 11:32:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.14 2010/10/02 12:45:34 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> par-1.52.ebuild:
+  Marked ~x64-macos, bug #333981
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> par-1.52.ebuild:
   Transfer Prefix keywords

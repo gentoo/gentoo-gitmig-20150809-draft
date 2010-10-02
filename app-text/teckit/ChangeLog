@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.13 2010/04/26 18:39:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.14 2010/10/02 12:53:12 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> teckit-2.5.1.ebuild:
+  Marked ~x64-macos, bug #333981
 
   26 Apr 2010; Fabian Groffen <grobian@gentoo.org> teckit-2.5.1.ebuild:
   Marked ~sparc-solaris, ~sparc64-solaris
