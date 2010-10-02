@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/wise
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.15 2010/06/23 13:10:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.16 2010/10/02 15:08:42 dilfridge Exp $
+
+  02 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> wise-2.2.0.ebuild,
+  wise-2.4.0_alpha.ebuild:
+  Less strict RDEPEND: ~sci-biology/hmmer-2.3.2 instead of
+  =sci-biology/hmmer-2.3.2-r1. Fixes bug 265534.
 
 *wise-2.4.0_alpha (23 Jun 2010)
 
