@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xymtex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.1 2010/09/30 22:10:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.2 2010/10/02 14:12:45 dilfridge Exp $
+
+  02 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
+  Upstream did some last-minute fixes in the tarball...
 
 *xymtex-5.00 (30 Sep 2010)
 
