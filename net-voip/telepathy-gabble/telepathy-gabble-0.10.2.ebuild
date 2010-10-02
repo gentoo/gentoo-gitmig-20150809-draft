@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.8.5.ebuild,v 1.2 2009/12/27 08:10:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.2.ebuild,v 1.1 2010/10/02 16:53:07 pacho Exp $
 
 EAPI="2"
 
@@ -15,22 +15,22 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug test"
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.24
 	>=sys-apps/dbus-1.1.0
-	>=dev-libs/dbus-glib-0.78
-	>=net-libs/telepathy-glib-0.7.34
-	>=net-libs/loudmouth-1.3.2[ssl]
-	net-libs/libsoup:2.4[ssl]"
-
+	>=dev-libs/dbus-glib-0.82
+	>=net-libs/telepathy-glib-0.11.16
+	net-libs/libsoup:2.4[ssl]
+	>=net-libs/libnice-0.0.11
+	>=net-libs/gnutls-2.10.2
+	dev-db/sqlite:3
+	dev-libs/libxml2
+	!<net-im/telepathy-mission-control-5.5.0"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-lang/python-2.5
 	test? ( >=dev-python/twisted-0.8.2
 		>=dev-python/twisted-words-0.8.2
 		>=dev-python/dbus-python-0.83 )"
-
-# 2 tests still fail :-(
-RESTRICT="test"
 
 src_configure() {
 	econf \
@@ -40,7 +40,8 @@ src_configure() {
 }
 
 src_test() {
-	emake -j1 check || die "Make check failed. See above for details."
+	# Twisted tests fail, upstream bug #30565
+	emake -C tests check-TESTS || die "tests failed"
 }
 
 src_install() {
