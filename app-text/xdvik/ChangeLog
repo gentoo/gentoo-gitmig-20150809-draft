@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.72 2010/07/10 13:29:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.73 2010/10/02 13:13:03 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> xdvik-22.84.16.ebuild:
+  Marked ~x64-macos, bug #333981
 
   10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> xdvik-22.84.16.ebuild,
   -files/xdvik.png, +files/xdvik.xpm:
