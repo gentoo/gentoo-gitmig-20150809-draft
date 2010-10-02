@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/natbib
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/natbib/ChangeLog,v 1.1 2010/10/02 17:31:15 dilfridge Exp $
+
+*natbib-8.31a-r1 (02 Oct 2010)
+
+  02 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +natbib-8.31a-r1.ebuild, +metadata.xml:
+  Added a version newer than in texlive as temporary workaround.
+
