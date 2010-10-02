@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.121 2010/09/30 20:35:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.122 2010/10/02 22:31:41 arfrever Exp $
+
+*icu-4.4.2 (02 Oct 2010)
+
+  02 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -icu-4.0.1.ebuild, -files/icu-4.0.1-TestDisplayNamesMeta.patch,
+  -files/icu-4.0.1-fix_parallel_building.patch, -icu-4.2.1.ebuild,
+  -files/icu-4.2.1-fix_misoptimizations.patch,
+  -files/icu-4.2.1-pkgdata.patch,
+  -files/icu-4.2.1-pkgdata-build_data_without_assembly.patch,
+  +icu-4.4.2.ebuild:
+  Version bump.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> icu-4.4.1.ebuild:
   stable ppc64, bug 322297
