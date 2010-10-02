@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.4 2010/06/27 16:03:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.5 2010/10/02 10:28:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.zip"
 LICENSE="GPL-2 gSOAP"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug examples +ssl static-libs"
+IUSE="doc debug examples +ssl"
 
 DEPEND="app-arch/unzip
 	sys-devel/flex
@@ -40,10 +40,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable static-libs static) \
 		$(use_enable ssl openssl) \
-		$(use_enable examples samples) \
-		$(use_enable debug)
+		$(use_enable examples samples)
 }
 
 src_compile() {
@@ -59,7 +57,7 @@ src_install() {
 
 	dohtml changelog.html
 
-	use static-libs || rm -rf "${D}"/usr/lib*/*.la
+	rm -rf "${D}"/usr/lib*/*.la
 
 	if use examples; then
 		rm -rf gsoap/samples/Makefile* gsoap/samples/*/Makefile* gsoap/samples/*/*.o
