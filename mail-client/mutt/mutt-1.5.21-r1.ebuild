@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21.ebuild,v 1.1 2010/09/17 15:28:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r1.ebuild,v 1.1 2010/10/02 16:40:16 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r0"
+PATCHSET_REV="-r1"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
@@ -87,7 +87,9 @@ src_prepare() {
 		epatch "${p}"
 	done
 
-	use sidebar && epatch "${PATCHDIR}"/sidebar.20090619.patch
+	# we conditionalise this one, simply because it has considerable
+	# impact on the code
+	use sidebar && epatch "${PATCHDIR}"/sidebar.patch
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
@@ -218,6 +220,6 @@ pkg_postinst() {
 	echo
 	elog "If you are new to mutt you may want to take a look at"
 	elog "the Gentoo QuickStart Guide to Mutt E-Mail:"
-	elog "   http://www.gentoo.org/doc/en/guide-to-mutt.xml"
+	elog "   http://dev.gentoo.org/~grobian/guide-to-mutt.xml"
 	echo
 }
