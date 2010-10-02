@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.51 2010/09/29 22:36:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.52 2010/10/02 07:24:29 graaff Exp $
+
+*haml-3.0.21 (02 Oct 2010)
+
+  02 Oct 2010; Hans de Graaff <graaff@gentoo.org> +haml-3.0.21.ebuild:
+  Version bump.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> haml-3.0.19.ebuild:
   Marking haml-3.0.19 ~ppc64 for bug 326353
