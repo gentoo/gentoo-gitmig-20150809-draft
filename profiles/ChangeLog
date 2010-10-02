@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4616 2010/10/02 15:46:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4617 2010/10/02 16:44:40 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  drop mask for mutt-1.5.21, it's no longer in the tree, and a fixed -r1
+  exists
 
   02 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking net-nntp/nntpswitch for QA removal.
