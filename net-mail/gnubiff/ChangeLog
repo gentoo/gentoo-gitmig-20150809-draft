@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.25 2010/08/29 21:33:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.26 2010/10/02 00:32:15 radhermit Exp $
+
+*gnubiff-2.2.13-r1 (02 Oct 2010)
+
+  02 Oct 2010; Tim Harder <radhermit@gentoo.org> -gnubiff-2.2.13.ebuild,
+  +gnubiff-2.2.13-r1.ebuild, +files/gnubiff-2.2.13-fix-nls.patch:
+  Revision bump and remove old. Fix compile errors when the nls USE flag is
+  not enabled (fixes bug #339398) and add gnome-base/gnome-panel dependency
+  for GNOME support.
 
 *gnubiff-2.2.13 (29 Aug 2010)
 

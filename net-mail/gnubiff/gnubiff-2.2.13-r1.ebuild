@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13.ebuild,v 1.1 2010/08/29 21:33:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r1.ebuild,v 1.1 2010/10/02 00:32:15 radhermit Exp $
 
 EAPI=3
+
+inherit eutils
 
 DESCRIPTION="A mail notification program"
 HOMEPAGE="http://gnubiff.sourceforge.net/"
@@ -17,6 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3
 	dev-libs/popt
 	gnome? (
+		gnome-base/gnome-panel
 		>=gnome-base/libgnome-2.2
 		>=gnome-base/libgnomeui-2.2 )
 	password? ( dev-libs/openssl )
@@ -24,6 +27,10 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-nls.patch
+}
 
 src_configure() {
 	econf \
