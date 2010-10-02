@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/as11
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/ChangeLog,v 1.8 2009/09/23 17:40:06 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/ChangeLog,v 1.9 2010/10/02 14:52:28 tomjbe Exp $
+
+  02 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> as11-1.0.ebuild:
+  Make package respecting LDFLAGS (bug #338143). Tested on amd64 and
+  keyworded.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> as11-1.0.ebuild:
   Remove virtual/libc
