@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.13 2010/05/22 23:11:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.14 2010/10/02 10:47:35 graaff Exp $
+
+*ruby_parser-2.0.5 (02 Oct 2010)
+
+  02 Oct 2010; Hans de Graaff <graaff@gentoo.org> +ruby_parser-2.0.5.ebuild:
+  Version bump with optimization enhancement.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> ruby_parser-2.0.4-r1.ebuild:
   Add REE18 support
