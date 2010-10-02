@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/7plus-2.25.ebuild,v 1.7 2009/01/03 21:08:10 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/7plus-2.25.ebuild,v 1.8 2010/10/02 13:12:23 tomjbe Exp $
 
 inherit toolchain-funcs
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${S}"
 	sed -e "s:CC = gcc:CC = $(tc-getCC):" \
 		-e "s:= -O2:+=:" \
-		-e "s:LDFLAGS = -s:LDFLAGS =:" linux.mak > Makefile \
+		-e "s:LDFLAGS = -s:LDFLAGS +=:" linux.mak > Makefile \
 		|| die "sed Makefile failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/7plus
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/ChangeLog,v 1.7 2009/01/03 21:08:10 mpagano Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/7plus/ChangeLog,v 1.8 2010/10/02 13:12:23 tomjbe Exp $
+
+  02 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> 7plus-2.25.ebuild:
+  Make package respect LDFLAGS (Bug #337677). Thanks Diego for reporting
 
   03 Jan 2009; Mike Pagano <mpagano@gentoo.org> 7plus-2.25.ebuild:
   Fix for respecting CFLAGS bug #240125 and prestriping binaries bug #240108.
