@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.6 2010/07/26 20:43:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.7 2010/10/02 14:47:30 eva Exp $
+
+  02 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -pino-0.2.9.ebuild,
+  -pino-0.2.10.ebuild, pino-0.2.11.ebuild:
+  Clean up old revisions. Fix vala dependency to slot 0, bug #339084. Fix
+  some nitpicks wrt eclass usage.
 
   26 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> pino-0.2.11.ebuild:
   Fix compile failure due to vala-0.8, bug 328703

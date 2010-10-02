@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.3 2010/07/26 20:43:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.4 2010/10/02 14:47:30 eva Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	indicate? ( dev-libs/libindicate )"
 # vala-0.9 required due to bug 328703
 DEPEND="${RDEPEND}
-	>=dev-lang/vala-0.9
+	>=dev-lang/vala-0.9:0
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
@@ -41,9 +41,6 @@ DOCS="AUTHORS README"
 S="${WORKDIR}/${PN}-0.2.10"
 
 src_configure() {
-	local myconf=""
-	use debug && myconf="--debug"
-
 	if ! use indicate ; then
 		# sabotage the detection since no configure option
 		sed -i \
@@ -60,6 +57,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	rm -rf "${D}/usr/share/doc"
-	dodoc ${DOCS}
+	rm -rf "${D}/usr/share/doc" || die
+	dodoc ${DOCS} || die
 }
