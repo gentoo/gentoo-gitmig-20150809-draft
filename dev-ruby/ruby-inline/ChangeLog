@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.26 2010/08/28 13:15:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.27 2010/10/02 09:30:44 graaff Exp $
+
+*ruby-inline-3.8.6 (02 Oct 2010)
+
+  02 Oct 2010; Hans de Graaff <graaff@gentoo.org> +ruby-inline-3.8.6.ebuild:
+  Version bump.
 
 *ruby-inline-3.8.4-r2 (28 Aug 2010)
 
