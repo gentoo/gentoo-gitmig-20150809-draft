@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.234 2010/08/13 20:52:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.235 2010/10/02 18:11:31 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> pygtk-2.17.0.ebuild:
+  Marked ~x64-macos, bug #333981
 
 *pygtk-2.17.0 (13 Aug 2010)
 

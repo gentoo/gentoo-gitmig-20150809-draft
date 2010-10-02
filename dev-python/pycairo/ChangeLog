@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.93 2010/09/26 21:26:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.94 2010/10/02 18:07:16 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org> pycairo-1.8.10.ebuild:
+  Marked ~x64-macos, bug #333981
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> pycairo-1.8.10.ebuild:
   ppc64 stable wrt #337146
