@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gpxviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.1 2010/06/18 10:14:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.2 2010/10/02 21:36:52 jlec Exp $
+
+*gpxviewer-0.2.0 (02 Oct 2010)
+
+  02 Oct 2010; Justin Lecher <jlec@gentoo.org>
+  -files/0.1.3_pre1-configure.ac.patch, -gpxviewer-0.1.3_pre1.ebuild,
+  +files/0.2.0-configure.ac.patch, +gpxviewer-0.2.0.ebuild:
+  Version Bump
 
 *gpxviewer-0.1.3_pre1 (18 Jun 2010)
 
