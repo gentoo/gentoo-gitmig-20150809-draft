@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/texlive-basic-2009.ebuild,v 1.3 2010/02/01 10:46:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/texlive-basic-2009.ebuild,v 1.4 2010/10/02 19:47:27 grobian Exp $
 
 TEXLIVE_MODULE_CONTENTS="amsfonts apalike bibtex cm dvipdfmx-def enctex etex etex-pkg glyphlist hyph-utf8 ifluatex ifxetex luatex makeindex metafont mflogo mfware misc pdftex plain tcdialog tex texlive-msg-translations texlive-scripts collection-basic
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Essential programs and files"
 
 LICENSE="GPL-2 as-is GPL-1 LPPL-1.3 OFL public-domain TeX "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-documentation-base-2009
 >=dev-tex/luatex-0.45

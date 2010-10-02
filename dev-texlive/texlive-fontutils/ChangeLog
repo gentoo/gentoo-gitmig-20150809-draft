@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.13 2010/06/01 14:34:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.14 2010/10/02 19:52:38 grobian Exp $
+
+  02 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  texlive-fontutils-2009.ebuild:
+  Marked ~x64-macos, bug #333981
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org>
   texlive-fontutils-2009.ebuild:
