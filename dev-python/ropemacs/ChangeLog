@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/ropemacs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ropemacs/ChangeLog,v 1.1 2010/10/03 20:53:09 ulm Exp $
+
+*ropemacs-0.6 (03 Oct 2010)
+
+  03 Oct 2010; Ulrich Mueller <ulm@gentoo.org> +ropemacs-0.6.ebuild,
+  +files/ropemacs-0.6-ropemode-dir.patch, +metadata.xml:
+  Initial import. Ebuild contributed by Yang Zhang <zyangmath@gmail.com> in
+  bug 338553.
+
