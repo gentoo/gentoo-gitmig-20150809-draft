@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rfkill
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfkill/ChangeLog,v 1.4 2010/02/06 16:53:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfkill/ChangeLog,v 1.5 2010/10/03 17:18:02 hwoarang Exp $
+
+  03 Oct 2010; Markos Chandras <hwoarang@gentoo.org> rfkill-0.4.ebuild:
+  Stable on amd64 wrt bug #339396
 
 *rfkill-0.4 (06 Feb 2010)
 
