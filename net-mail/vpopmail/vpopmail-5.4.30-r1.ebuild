@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r1.ebuild,v 1.6 2010/08/23 01:02:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r1.ebuild,v 1.7 2010/10/03 17:41:03 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc s390 sh sparc x86"
+KEYWORDS="amd64 arm hppa ~ia64 ppc s390 sh sparc x86"
 IUSE="clearpasswd ipalias maildrop mysql"
 
 DEPEND="virtual/qmail
