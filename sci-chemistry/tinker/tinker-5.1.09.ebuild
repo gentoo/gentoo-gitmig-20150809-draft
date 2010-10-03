@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.08.ebuild,v 1.3 2010/10/03 08:31:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.09.ebuild,v 1.1 2010/10/03 10:49:16 jlec Exp $
 
 EAPI="2"
 FORTRAN="gfortran ifc"
 
-inherit fortran java-pkg-opt-2 toolchain-funcs
+inherit eutils fortran java-pkg-opt-2 toolchain-funcs
 
 DESCRIPTION="Molecular modeling package that includes force fields, such as AMBER and CHARMM"
 HOMEPAGE="http://dasher.wustl.edu/tinker/"
@@ -30,12 +30,18 @@ pkg_setup() {
 	fortran_pkg_setup
 	java-pkg-opt-2_pkg_setup
 }
+
+src_prepare() {
+	cd ..
+	epatch "${FILESDIR}"/${PV}-Makefile.patch
+}
+
 src_compile() {
 	local javalib=
 	for i in $(java-config -g LDPATH | sed 's|:| |g'); do
 		[[ -f ${i}/libjvm.so ]] && javalib=${i}
 	done
-	emake \
+	emake -e \
 		-f ../make/Makefile \
 		F77="${FORTRANC}" \
 		CC="$(tc-getCC) -c" \
@@ -44,13 +50,15 @@ src_compile() {
 		LINKFLAGS="${LDFLAGS} -Wl,-rpath ${javalib}" \
 		INCLUDEDIR="$(java-pkg_get-jni-cflags) -I${EPREFIX}/usr/include" \
 		LIBS="$(pkg-config --libs apbs) -lmaloc -L${javalib} -ljvm" \
-		|| die
+		all || die
 	mkdir "${S}"/../bin || die
+
 	emake \
 		-f ../make/Makefile \
 		BINDIR="${S}"/../bin \
 		rename || die
 }
+
 src_test() {
 	cd "${WORKDIR}"/tinker/test/
 	for test in *.run; do
@@ -67,6 +75,7 @@ src_install() {
 
 	dodoc \
 		"${WORKDIR}"/${PN}/doc/{*.txt,announce/release-*,*.pdf,0README} || die
+
 	if use examples; then
 		insinto /usr/share/${P}
 		doins -r "${WORKDIR}"/${PN}/example || die
