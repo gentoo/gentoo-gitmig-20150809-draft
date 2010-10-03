@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pstotext
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.33 2009/12/26 19:47:13 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.34 2010/10/03 14:15:17 jlec Exp $
+
+*pstotext-1.9-r3 (03 Oct 2010)
+
+  03 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/1.9-flags.patch,
+  -pstotext-1.8g-r1.ebuild, -files/pstotext-1.8g-dsafer.patch,
+  pstotext-1.9-r2.ebuild, +pstotext-1.9-r3.ebuild:
+  QA, removed old, respecting LDFLAGS/CFLAGS/CC, 335595
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> pstotext-1.8g-r1.ebuild,
   pstotext-1.9-r2.ebuild:
