@@ -1,13 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.11 2010/10/03 14:43:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.12 2010/10/03 17:51:17 vapier Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
+REV="1.7"
 DESCRIPTION="full-strength general purpose cryptography library (including SSL v2/v3 and TLS v1)"
 HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${P}.tar.gz
-	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/packages/${PN}/${PN}-c_rehash.sh?rev=1.7"
+	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/~checkout~/packages/${PN}/${PN}-c_rehash.sh?rev=${REV} -> ${PN}-c_rehash.sh.${REV}"
 
 LICENSE="openssl"
 SLOT="0"
@@ -25,9 +28,10 @@ PDEPEND="app-misc/ca-certificates"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cp "${DISTDIR}"/openssl-c_rehash.sh* "${WORKDIR}"/c_rehash || die
-	cd "${S}"
+	cp "${DISTDIR}"/${PN}-c_rehash.sh.${REV} "${WORKDIR}"/c_rehash || die
+}
 
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
 	epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
@@ -63,7 +67,7 @@ src_unpack() {
 	./config --test-sanity || die "I AM NOT SANE"
 }
 
-src_compile() {
+src_configure() {
 	unset APPS #197996
 	unset SCRIPTS #312551
 
@@ -118,7 +122,9 @@ src_compile() {
 		-e "/^CFLAG/s:=.*:=${CFLAG} ${CFLAGS}:" \
 		-e "/^SHARED_LDFLAGS=/s:$: ${LDFLAGS}:" \
 		Makefile || die
+}
 
+src_compile() {
 	# depend is needed to use $confopts
 	# rehash is needed to prep the certs/ dir
 	emake -j1 depend || die "depend failed"
