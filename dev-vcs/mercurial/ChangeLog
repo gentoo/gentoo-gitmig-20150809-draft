@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.22 2010/09/24 14:36:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.23 2010/10/03 20:34:45 djc Exp $
+
+*mercurial-1.6.4 (03 Oct 2010)
+
+  03 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> +mercurial-1.6.4.ebuild:
+  Version bump to 1.6.4.
 
   24 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mercurial-1.6.3.ebuild, mercurial-9999.ebuild:
