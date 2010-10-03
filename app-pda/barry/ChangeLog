@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.14 2010/05/26 08:53:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.15 2010/10/03 05:19:55 dirtyepic Exp $
+
+  03 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> barry-0.16.ebuild,
+  -files/barry-0.16-asneeded.patch:
+  Fix building w/ USE=opensync by dropping eautoreconf and using sed instead
+  of the --as-needed patch (bug #319795). Migrate to EAPI 3.
 
   26 May 2010; Thilo Bangert <bangert@gentoo.org> barry-0.16.ebuild:
   fix build (#319795)
