@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95.ebuild,v 1.2 2010/10/03 16:17:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95.ebuild,v 1.3 2010/10/03 16:31:22 arfrever Exp $
 
 EAPI=3
 
@@ -83,7 +83,7 @@ src_configure() {
 }
 
 src_install() {
-	# no it cant be done using emake cause it is non-compilant
+	# no it can't be done using emake cause it is non-compliant
 	make DESTDIR="${D}" install || die
 
 	# no need for .la files here
