@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.102 2010/07/18 20:45:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.103 2010/10/03 00:38:13 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -925,7 +925,7 @@ python_execute_function() {
 
 		if [[ "${quiet}" == "0" ]]; then
 			if [[ -n "${action_message_template}" ]]; then
-				action_message="$(eval echo -n "${action_message_template}")"
+				eval "action_message=\"${action_message_template}\""
 			else
 				action_message="${action} of ${CATEGORY}/${PF} with $(python_get_implementation) $(python_get_version)..."
 			fi
@@ -959,7 +959,7 @@ python_execute_function() {
 
 		if [[ "${return_code}" -ne 0 ]]; then
 			if [[ -n "${failure_message_template}" ]]; then
-				failure_message="$(eval echo -n "${failure_message_template}")"
+				eval "failure_message=\"${failure_message_template}\""
 			else
 				failure_message="${action} failed with $(python_get_implementation) $(python_get_version) in ${function}() function"
 			fi
@@ -1925,7 +1925,7 @@ python_execute_nosetests() {
 	python_test_function() {
 		local evaluated_PYTHONPATH
 
-		evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
 		_python_test_hook pre
 
@@ -1989,7 +1989,7 @@ python_execute_py.test() {
 	python_test_function() {
 		local evaluated_PYTHONPATH
 
-		evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
 		_python_test_hook pre
 
@@ -2053,7 +2053,7 @@ python_execute_trial() {
 	python_test_function() {
 		local evaluated_PYTHONPATH
 
-		evaluated_PYTHONPATH="$(eval echo -n "${PYTHONPATH_template}")"
+		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
 		_python_test_hook pre
 
@@ -2223,7 +2223,7 @@ python_mod_optimize() {
 
 	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
 		# PYTHON_ABI variable cannot be local in packages not supporting installation for multiple Python ABIs.
-		local dir file iterated_PYTHON_ABIS options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_absolute_dirs=() site_packages_dirs=() site_packages_absolute_files=() site_packages_files=()
+		local allow_evaluated_non_sitedir_paths="0" dir dirs=() evaluated_dirs=() evaluated_files=() file files=() iterated_PYTHON_ABIS options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_dirs=() site_packages_files=()
 
 		if _python_package_supporting_installation_for_multiple_python_abis; then
 			if has "${EAPI:-0}" 0 1 2 3 && [[ -z "${PYTHON_ABIS}" ]]; then
@@ -2243,6 +2243,9 @@ python_mod_optimize() {
 
 		while (($#)); do
 			case "$1" in
+				--allow-evaluated-non-sitedir-paths)
+					allow_evaluated_non_sitedir_paths="1"
+					;;
 				-l|-f|-q)
 					options+=("$1")
 					;;
@@ -2264,6 +2267,10 @@ python_mod_optimize() {
 			shift
 		done
 
+		if [[ "${allow_evaluated_non_sitedir_paths}" == "1" ]] && ! _python_package_supporting_installation_for_multiple_python_abis; then
+			die "${FUNCNAME}(): '--allow-evaluated-non-sitedir-paths' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+		fi
+
 		if [[ "$#" -eq 0 ]]; then
 			ewarn
 			ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
@@ -2279,16 +2286,27 @@ python_mod_optimize() {
 				die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
 			elif [[ "$1" =~ ^/ ]]; then
 				if _python_package_supporting_installation_for_multiple_python_abis; then
-					die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
-				fi
-				if [[ -d "${root}$1" ]]; then
-					other_dirs+=("${root}$1")
-				elif [[ -f "${root}$1" ]]; then
-					other_files+=("${root}$1")
-				elif [[ -e "${root}$1" ]]; then
-					eerror "${FUNCNAME}(): '${root}$1' is not a regular file or a directory"
+					if [[ "${allow_evaluated_non_sitedir_paths}" != "1" ]]; then
+						die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
+					fi
+					if [[ "$1" != *\$* ]]; then
+						die "${FUNCNAME}(): '$1' has invalid syntax"
+					fi
+					if [[ "$1" == *.py ]]; then
+						evaluated_files+=("$1")
+					else
+						evaluated_dirs+=("$1")
+					fi
 				else
-					eerror "${FUNCNAME}(): '${root}$1' does not exist"
+					if [[ -d "${root}$1" ]]; then
+						other_dirs+=("${root}$1")
+					elif [[ -f "${root}$1" ]]; then
+						other_files+=("${root}$1")
+					elif [[ -e "${root}$1" ]]; then
+						eerror "${FUNCNAME}(): '${root}$1' is not a regular file or a directory"
+					else
+						eerror "${FUNCNAME}(): '${root}$1' does not exist"
+					fi
 				fi
 			else
 				for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
@@ -2312,32 +2330,38 @@ python_mod_optimize() {
 		options+=("-q")
 
 		for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
-			if ((${#site_packages_dirs[@]})) || ((${#site_packages_files[@]})); then
+			if ((${#site_packages_dirs[@]})) || ((${#site_packages_files[@]})) || ((${#evaluated_dirs[@]})) || ((${#evaluated_files[@]})); then
 				return_code="0"
 				ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
-				if ((${#site_packages_dirs[@]})); then
+				if ((${#site_packages_dirs[@]})) || ((${#evaluated_dirs[@]})); then
 					for dir in "${site_packages_dirs[@]}"; do
-						site_packages_absolute_dirs+=("${root}$(python_get_sitedir)/${dir}")
+						dirs+=("${root}$(python_get_sitedir)/${dir}")
 					done
-					"$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
+					for dir in "${evaluated_dirs[@]}"; do
+						eval "dirs+=(\"\${root}${dir}\")"
+					done
+					"$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-						"$(PYTHON)" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" &> /dev/null || return_code="1"
+						"$(PYTHON)" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" &> /dev/null || return_code="1"
 					fi
-					_python_clean_compiled_modules "${site_packages_absolute_dirs[@]}"
+					_python_clean_compiled_modules "${dirs[@]}"
 				fi
-				if ((${#site_packages_files[@]})); then
+				if ((${#site_packages_files[@]})) || ((${#evaluated_files[@]})); then
 					for file in "${site_packages_files[@]}"; do
-						site_packages_absolute_files+=("${root}$(python_get_sitedir)/${file}")
+						files+=("${root}$(python_get_sitedir)/${file}")
 					done
-					"$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
+					for file in "${evaluated_files[@]}"; do
+						eval "files+=(\"\${root}${file}\")"
+					done
+					"$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-						"$(PYTHON)" -O "${root}$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" &> /dev/null || return_code="1"
+						"$(PYTHON)" -O "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" &> /dev/null || return_code="1"
 					fi
-					_python_clean_compiled_modules "${site_packages_absolute_files[@]}"
+					_python_clean_compiled_modules "${files[@]}"
 				fi
 				eend "${return_code}"
 			fi
-			unset site_packages_absolute_dirs site_packages_absolute_files
+			unset dirs files
 		done
 
 		if _python_package_supporting_installation_for_multiple_python_abis; then
@@ -2459,7 +2483,7 @@ python_mod_cleanup() {
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
-	local dir iterated_PYTHON_ABIS PYTHON_ABI="${PYTHON_ABI}" root search_paths=() sitedir
+	local allow_evaluated_non_sitedir_paths="0" dir iterated_PYTHON_ABIS PYTHON_ABI="${PYTHON_ABI}" root search_paths=() sitedir
 
 	# Check if phase is pkg_postrm().
 	[[ "${EBUILD_PHASE}" != "postrm" ]] && die "${FUNCNAME}() can be used only in pkg_postrm() phase"
@@ -2480,6 +2504,29 @@ python_mod_cleanup() {
 	# Strip trailing slash from EROOT.
 	root="${EROOT%/}"
 
+	while (($#)); do
+		case "$1" in
+			--allow-evaluated-non-sitedir-paths)
+				allow_evaluated_non_sitedir_paths="1"
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${allow_evaluated_non_sitedir_paths}" == "1" ]] && ! _python_package_supporting_installation_for_multiple_python_abis; then
+		die "${FUNCNAME}(): '--allow-evaluated-non-sitedir-paths' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+	fi
+
 	if [[ "$#" -gt 0 ]]; then
 		if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
 			while (($#)); do
@@ -2489,9 +2536,18 @@ python_mod_cleanup() {
 					die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
 				elif [[ "$1" =~ ^/ ]]; then
 					if _python_package_supporting_installation_for_multiple_python_abis; then
-						die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
+						if [[ "${allow_evaluated_non_sitedir_paths}" != "1" ]]; then
+							die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
+						fi
+						if [[ "$1" != *\$* ]]; then
+							die "${FUNCNAME}(): '$1' has invalid syntax"
+						fi
+						for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
+							eval "search_paths+=(\"\${root}$1\")"
+						done
+					else
+						search_paths+=("${root}$1")
 					fi
-					search_paths+=("${root}$1")
 				else
 					for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
 						search_paths+=("${root}$(python_get_sitedir)/$1")
