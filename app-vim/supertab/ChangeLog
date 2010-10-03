@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/supertab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.25 2010/05/14 17:05:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.26 2010/10/03 05:11:39 radhermit Exp $
+
+*supertab-1.1 (03 Oct 2010)
+
+  03 Oct 2010; Tim Harder <radhermit@gentoo.org> +supertab-1.1.ebuild:
+  Version bump.
 
   14 May 2010; Markos Chandras <hwoarang@gentoo.org> supertab-0.45.ebuild:
   Stable on amd64 wrt bug #246798
