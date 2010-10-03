@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.65.ebuild,v 1.4 2008/07/14 17:01:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-5.65.ebuild,v 1.5 2010/10/03 11:22:54 jlec Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -15,7 +15,8 @@ KEYWORDS="amd64 ppc x86"
 
 RESTRICT="mirror"
 
-DEPEND="sci-biology/clustalw"
+DEPEND=""
+RDEPEND="sci-biology/clustalw"
 
 TCDIR="${WORKDIR}/T-COFFEE_distribution_Version_${PV}"
 S="${TCDIR}/t_coffee_source"
