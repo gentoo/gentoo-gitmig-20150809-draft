@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.31 2010/03/09 09:08:08 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.32 2010/10/03 17:26:29 radhermit Exp $
+
+*gtk-syntax-20091024 (03 Oct 2010)
+
+  03 Oct 2010; Tim Harder <radhermit@gentoo.org>
+  +gtk-syntax-20091024.ebuild:
+  Version bump (fixes bug #301103, thanks to tadeboro@gmail.com for
+  reporting).
 
   09 Mar 2010; Markus Duft <mduft@gentoo.org> gtk-syntax-20090402.ebuild:
   keyworded ~x86-interix
