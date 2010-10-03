@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.3 2010/09/29 18:26:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.4 2010/10/03 16:28:00 dilfridge Exp $
 
 EAPI="2"
 
@@ -135,62 +135,22 @@ collectd_linux_kernel_checks() {
 
 	# battery.c:/proc/pmu/battery_%i
 	# battery.c:/proc/acpi/battery
-	collectd_plugin_kernel_linux battery PROC_FS warn
 	collectd_plugin_kernel_linux battery ACPI_BATTERY warn
-
-	# cpu.c:/proc/stat
-	collectd_plugin_kernel_linux cpu PROC_FS warn
 
 	# cpufreq.c:/sys/devices/system/cpu/cpu%d/cpufreq/
 	collectd_plugin_kernel_linux cpufreq SYSFS warn
 	collectd_plugin_kernel_linux cpufreq CPU_FREQ_STAT warn
 
-	# utils_mount.c:/proc/partitions
-	collectd_plugin_kernel_linux df PROC_FS warn
-
-	# disk.c:/proc/diskstats
-	# disk.c:/proc/partitions
-	collectd_plugin_kernel_linux disk PROC_FS warn
-
-	# entropy.c:/proc/sys/kernel/random/entropy_avail
-	collectd_plugin_kernel_linux entropy PROC_FS warn
-
-	# hddtemp.c:/proc/partitions
-	collectd_plugin_kernel_linux hddtemp PROC_FS info
-
-	# interface.c:/proc/net/dev
-	collectd_plugin_kernel_linux interface PROC_FS warn
-
-	# irq.c:/proc/interrupts
-	collectd_plugin_kernel_linux irq PROC_FS warn
-
-	# load.c:/proc/loadavg
-	collectd_plugin_kernel_linux load PROC_FS warn
-
-	# memory.c:/proc/meminfo
-	collectd_plugin_kernel_linux memory PROC_FS warn
-
 	# nfs.c:/proc/net/rpc/nfs
 	# nfs.c:/proc/net/rpc/nfsd
-	collectd_plugin_kernel_linux nfs PROC_FS warn
 	collectd_plugin_kernel_linux nfs NFS_COMMON warn
-
-	# processes.c:/proc/%i/task
-	# processes.c:/proc/%i/stat
-	collectd_plugin_kernel_linux processes PROC_FS warn
 
 	# serial.c:/proc/tty/driver/serial
 	# serial.c:/proc/tty/driver/ttyS
-	collectd_plugin_kernel_linux serial PROC_FS warn
 	collectd_plugin_kernel_linux serial SERIAL_CORE warn
 
 	# swap.c:/proc/meminfo
-	collectd_plugin_kernel_linux swap PROC_FS warn
 	collectd_plugin_kernel_linux swap SWAP warn
-
-	# tcpconns.c:/proc/net/tcp
-	# tcpconns.c:/proc/net/tcp6
-	collectd_plugin_kernel_linux tcpconns PROC_FS warn
 
 	# thermal.c:/proc/acpi/thermal_zone
 	# thermal.c:/sys/class/thermal
@@ -198,17 +158,12 @@ collectd_linux_kernel_checks() {
 	collectd_plugin_kernel_linux thermal ACPI_THERMAL warn
 
 	# vmem.c:/proc/vmstat
-	collectd_plugin_kernel_linux vmem PROC_FS warn
 	collectd_plugin_kernel_linux vmem VM_EVENT_COUNTERS warn
-
-	# vserver.c:/proc/virtual
-	collectd_plugin_kernel_linux vserver PROC_FS warn
 
 	# uuid.c:/sys/hypervisor/uuid
 	collectd_plugin_kernel_linux uuid SYSFS info
 
 	# wireless.c:/proc/net/wireless
-	collectd_plugin_kernel_linux wireless PROC_FS warn
 	collectd_plugin_kernel_linux wireless "MAC80211 IEEE80211" warn
 }
 

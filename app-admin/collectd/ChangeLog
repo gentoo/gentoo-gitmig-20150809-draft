@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.2 2010/09/29 18:26:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.3 2010/10/03 16:28:00 dilfridge Exp $
+
+  03 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-4.10.1-r2.ebuild:
+  Removed the PROCFS checks for speedup (on request from flameeyes)
 
   29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   collectd-4.10.1-r2.ebuild:
