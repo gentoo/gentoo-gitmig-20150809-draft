@@ -1,6 +1,6 @@
 # Copyrieht 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.1 2010/10/02 21:36:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.2 2010/10/03 16:50:23 jlec Exp $
 
 EAPI="2"
 
@@ -9,11 +9,11 @@ inherit autotools eutils
 MY_PN="gpx-viewer"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="GPX Viewer is a simple program to visualize a gpx file"
+DESCRIPTION="Simple program to visualize a gpx file"
 HOMEPAGE="http://blog.sarine.nl/${PN}/"
-SRC_URI="http://edge.launchpad.net/gpx-viewer/trunk/0.2.0/+download/gpx-viewer-0.2.0.tar.gz"
+SRC_URI="http://edge.launchpad.net/${MY_PN}/trunk/${PV}/+download/${MY_P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
@@ -22,6 +22,7 @@ RDEPEND="
 	>=dev-lang/vala-0.7
 	dev-libs/gdl
 	dev-libs/glib:2
+	dev-libs/libunique
 	dev-libs/libxml2
 	media-libs/libchamplain:0.6[gtk]
 	x11-libs/gtk+:2"
