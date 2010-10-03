@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.356 2010/10/02 03:09:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.357 2010/10/03 14:43:21 klausman Exp $
+
+  03 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  openssl-1.0.0a-r3.ebuild:
+  Stable on alpha, bug #330437
 
   02 Oct 2010; Jeremy Olexa <darkside@gentoo.org> openssl-1.0.0a-r3.ebuild:
   Silly issue, revert to original SRC_URI so users can fetch the file. bug
