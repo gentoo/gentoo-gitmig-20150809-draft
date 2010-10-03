@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10.ebuild,v 1.1 2010/10/03 14:32:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10.ebuild,v 1.2 2010/10/03 19:27:23 dilfridge Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ inherit versionator
 MY_PV="$(get_version_component_range 1)-$(get_version_component_range 2)"
 DESCRIPTION="LaTeX class for creating presentations using a video projector."
 HOMEPAGE="http://bitbucket.org/rivanvx/beamer/wiki/Home"
-SRC_URI="http://bitbucket.org/rivanvx/beamer/get/version-${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://bitbucket.org/rivanvx/beamer/downloads/beamer-${MY_PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LPPL-1.3c"
 SLOT="0"
