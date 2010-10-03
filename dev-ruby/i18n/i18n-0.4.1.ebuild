@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.4.1.ebuild,v 1.1 2010/08/31 17:50:17 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.4.1.ebuild,v 1.2 2010/10/03 10:31:55 graaff Exp $
 
 EAPI=2
 
@@ -28,9 +28,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-# Optionally, the testsuite uses the activerecord gem to run some
-# tests; whent hey run, they require sqlite3-ruby, and that is not
-# available on JRuby.
+# The testsuite uses the activerecord gem to run some tests; they
+# require sqlite3-ruby, and that is not available on JRuby.
 USE_RUBY="${USE_RUBY/jruby/}" \
 	ruby_add_bdepend "
 			test? (
@@ -62,4 +61,15 @@ src_test() {
 	# permissions need to be stricter for Ruby-Inline to work properly.
 	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 	ruby-ng_src_test
+}
+
+each_ruby_test() {
+	# Make sure the optional activerecord tests are not run for jruby
+	# because we don't ship a compatible sqlite3
+	case ${RUBY} in
+		*jruby)
+			;;
+		*)
+			each_fakegem_test
+	esac
 }
