@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.20 2010/10/03 14:23:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.21 2010/10/03 18:36:24 ssuominen Exp $
+
+  03 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> mpc-0.8.2.ebuild:
+  ppc64 stable wrt #338064
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org> mpc-0.8.2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #338064
