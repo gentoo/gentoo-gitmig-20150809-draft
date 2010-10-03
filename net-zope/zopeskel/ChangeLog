@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zopeskel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeskel/ChangeLog,v 1.7 2010/06/21 18:41:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeskel/ChangeLog,v 1.8 2010/10/03 00:03:49 arfrever Exp $
+
+*zopeskel-2.18 (03 Oct 2010)
+
+  03 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zopeskel-2.16.ebuild, +zopeskel-2.18.ebuild:
+  Version bump.
 
 *zopeskel-2.17 (21 Jun 2010)
 
