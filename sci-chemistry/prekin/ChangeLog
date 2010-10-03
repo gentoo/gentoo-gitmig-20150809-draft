@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/prekin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/ChangeLog,v 1.1 2010/07/18 08:57:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/ChangeLog,v 1.2 2010/10/03 08:28:36 jlec Exp $
+
+*prekin-6.51.081122-r1 (03 Oct 2010)
+
+  03 Oct 2010; Justin Lecher <jlec@gentoo.org>
+  +files/6.51.081122-overflow.patch, prekin-6.51.081122.ebuild,
+  +prekin-6.51.081122-r1.ebuild:
+  Fixes for overflows, 337779
 
 *prekin-6.51.081122 (18 Jul 2010)
 
