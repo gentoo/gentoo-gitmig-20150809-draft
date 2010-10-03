@@ -1,0 +1,37 @@
+Use pkg-config for cfitsio
+
+http://bugs.gentoo.org/show_bug.cgi?id=339460
+
+--- configure.ac
++++ configure.ac
+@@ -69,7 +69,7 @@
+ ESOREX_FUNC_GETOPT
+ 
+ # Check for CPL/CFITSIO presence and usability
+-CPL_CHECK_CFITSIO
++PKG_CHECK_MODULES([CFITSIO], [cfitsio >= 3.09])
+ #CPL_CHECK_CEXT
+ CPL_CHECK_LIBS
+ ESO_CHECK_EXTRA_LIBS
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -33,7 +33,7 @@
+ 
+ CPPFLAGS = -DCX_LOG_DOMAIN=\"EsoRex\"
+ 
+-INCLUDES = $(CFITSIO_INCLUDES) $(CPL_INCLUDES) $(CX_INCLUDES) $(INCLTDL)
++INCLUDES = $(CFITSIO_CFLAGS) $(CPL_INCLUDES) $(CX_INCLUDES) $(INCLTDL)
+ 
+ noinst_HEADERS = er_fileutils.h er_help.h er_main.h er_params.h \
+ 		er_paramutils.h er_plugin.h er_pluginlist.h \
+@@ -51,8 +51,8 @@
+ 
+ config_DATA =
+ 
+-esorex_LDFLAGS = $(CPL_LDFLAGS) $(CFITSIO_LDFLAGS) $(LIBLTDL)
+-esorex_LDADD = @GETOPT@ $(LIBCPLUI) $(LIBCPLDFS) $(LIBLTDL)
++esorex_LDFLAGS = $(CPL_LDFLAGS) $(LIBLTDL)
++esorex_LDADD = @GETOPT@ $(CFITSIO_LIBS) $(LIBCPLUI) $(LIBCPLDFS) $(LIBLTDL)
+ esorex_DEPENDENCIES = @GETOPT@ $(LIBLTDL)
+ 
+ if PURIFY
