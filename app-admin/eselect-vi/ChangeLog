@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-vi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.37 2010/04/29 10:26:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.38 2010/10/03 14:23:29 klausman Exp $
+
+  03 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  eselect-vi-1.1.7-r1.ebuild:
+  Stable on alpha, bug #251659
 
   29 Apr 2010; Fabian Groffen <grobian@gentoo.org>
   eselect-vi-1.1.7-r1.ebuild:
