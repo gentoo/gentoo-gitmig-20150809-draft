@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.6-r2.ebuild,v 1.1 2010/04/02 09:13:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.6-r2.ebuild,v 1.2 2010/10/03 16:15:19 klausman Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tls/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="tk"
 
 RESTRICT="test"
