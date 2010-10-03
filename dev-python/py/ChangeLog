@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.58 2010/09/29 15:22:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.59 2010/10/03 14:34:03 armin76 Exp $
+
+  03 Oct 2010; Raúl Porcel <armin76@gentoo.org> py-1.3.1.ebuild:
+  alpha stable
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> py-1.3.3.ebuild:
   Marking py-1.3.3 ppc for bug 337144
