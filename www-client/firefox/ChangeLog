@@ -1,10 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.15 2010/09/16 12:03:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.16 2010/10/03 15:09:24 anarchy Exp $
+
+  03 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9-r1.ebuild:
+  Fix bug #339513, thanks William Throwe
 
 *firefox-3.6.9-r1 (16 Sep 2010)
 
-  16 Sep 2010; Jory A. Pratt <bambam@gentoo.org> +firefox-3.6.9-r1.ebuild,
+  16 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.9-r1.ebuild,
   +files/fix_blocklist_support.patch:
   Fix blocklist for proper version
 
