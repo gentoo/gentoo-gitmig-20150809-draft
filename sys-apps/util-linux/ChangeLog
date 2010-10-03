@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.320 2010/09/18 16:29:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.321 2010/10/03 20:09:58 vapier Exp $
+
+  03 Oct 2010; Mike Frysinger <vapier@gentoo.org> util-linux-2.18-r1.ebuild,
+  +files/util-linux-2.18-falloc.patch:
+  Fix building with older linux/falloc.h #339432 by Andrew Randrianasulu.
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> util-linux-2.17.2.ebuild:
   ia64/s390/sh/sparc stable wrt #326339
