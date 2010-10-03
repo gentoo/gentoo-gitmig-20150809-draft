@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.106 2010/10/02 14:57:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.107 2010/10/03 16:40:36 hwoarang Exp $
+
+  03 Oct 2010; Markos Chandras <hwoarang@gentoo.org> horde-3.3.9.ebuild:
+  Stable on amd64 wrt bug #336319
 
   02 Oct 2010; Tobias Klausmann <klausman@gentoo.org> horde-3.3.9.ebuild:
   Stable on alpha, bug #336319
