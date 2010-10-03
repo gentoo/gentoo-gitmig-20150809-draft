@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.52 2010/10/02 07:24:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.53 2010/10/03 09:25:59 graaff Exp $
+
+  03 Oct 2010; Hans de Graaff <graaff@gentoo.org> haml-3.0.21.ebuild:
+  Add ree18 support.
 
 *haml-3.0.21 (02 Oct 2010)
 
