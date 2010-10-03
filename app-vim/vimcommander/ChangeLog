@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/vimcommander
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.25 2009/12/17 11:03:00 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.26 2010/10/03 17:23:04 radhermit Exp $
+
+*vimcommander-80 (03 Oct 2010)
+
+  03 Oct 2010; Tim Harder <radhermit@gentoo.org> +vimcommander-80.ebuild:
+  Version bump. Remove the src_unpack phase that generated documentation
+  since the plugin now includes a doc file.
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   vimcommander-1.54.2.9.ebuild, vimcommander-75.ebuild:
