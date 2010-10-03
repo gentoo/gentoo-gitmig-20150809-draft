@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.121 2010/08/19 05:25:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.122 2010/10/03 16:14:33 klausman Exp $
+
+  03 Oct 2010; Tobias Klausmann <klausman@gentoo.org> tcl-8.5.8-r1.ebuild:
+  Stable on alpha, bug #332415
 
 *tcl-8.5.8-r2 (19 Aug 2010)
 
