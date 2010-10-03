@@ -1,15 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.4 2010/08/12 09:07:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.6.0.ebuild,v 1.5 2010/10/03 19:07:02 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="trial"
+DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
 # build-${PYTHON_ABI} directories as packages.
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
-inherit eutils distutils twisted
+inherit eutils twisted
 
 MY_PN="Epsilon"
 MY_P="${MY_PN}-${PV}"
@@ -25,7 +29,6 @@ IUSE=""
 
 DEPEND=">=dev-python/twisted-2.4"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -53,16 +56,5 @@ src_test() {
 	# Release tests need DivmodCombinator.
 	rm -f epsilon/test/test_release.py*
 
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" trial epsilon
-	}
-	python_execute_function testing
-}
-
-pkg_postrm() {
-	twisted_pkg_postrm
-}
-
-pkg_postinst() {
-	twisted_pkg_postinst
+	distutils_src_test
 }
