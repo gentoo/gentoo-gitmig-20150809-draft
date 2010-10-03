@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/em-http-request
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.1 2010/10/03 08:05:55 graaff Exp $
+
+*em-http-request-0.2.13 (03 Oct 2010)
+
+  03 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  +em-http-request-0.2.13.ebuild, +metadata.xml:
+  Initial import. New dependency for dev-ruby/webmock.
+
