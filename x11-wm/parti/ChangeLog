@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/parti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.2 2010/08/31 12:29:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.3 2010/10/03 17:07:22 hwoarang Exp $
+
+  03 Oct 2010; Markos Chandras <hwoarang@gentoo.org> parti-0.0.6.ebuild:
+  Stable on amd64 wrt bug #339332
 
 *parti-9999 (31 Aug 2010)
 
