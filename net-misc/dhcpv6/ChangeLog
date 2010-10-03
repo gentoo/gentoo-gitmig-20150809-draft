@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.29 2010/09/02 16:28:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.30 2010/10/03 20:15:38 hwoarang Exp $
+
+  03 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -files/dhcp6x.confd.in,
+  -files/dhcp6x.initd.in:
+  Remove obsolete files
 
   02 Sep 2010; Alex Alexander <wired@gentoo.org> dhcpv6-1.2.0-r1.ebuild:
   fixed bug #303525 by applying collision patch when
