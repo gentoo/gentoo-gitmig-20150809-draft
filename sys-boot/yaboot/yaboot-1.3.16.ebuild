@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r1.ebuild,v 1.1 2010/05/31 23:47:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.16.ebuild,v 1.1 2010/10/03 17:09:38 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,6 +19,12 @@ RDEPEND="!ibm? ( sys-fs/hfsutils
 
 PROVIDE="virtual/bootloader"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	cp "${FILESDIR}/new-ofpath" "${S}/ybin/ofpath"
+}
+
 src_compile() {
 	export -n CFLAGS
 	export -n CXXFLAGS
@@ -26,7 +32,12 @@ src_compile() {
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
-	epatch "${FILESDIR}/yaboot-nopiessp.patch"
+	if [[ "$(gcc-major-version)" -eq "3" ]]; then
+		epatch "${FILESDIR}/yaboot-nopiessp.patch"
+	fi
+	if [[ "$(gcc-major-version)" -eq "4" ]]; then
+		epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
+	fi
 	epatch "${FILESDIR}/sysfs-ofpath.patch"
 	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" || die
 }
