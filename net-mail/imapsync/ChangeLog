@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.33 2010/09/25 08:06:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.34 2010/10/03 18:17:55 radhermit Exp $
+
+*imapsync-1.350-r1 (03 Oct 2010)
+
+  03 Oct 2010; Tim Harder <radhermit@gentoo.org> -imapsync-1.350.ebuild,
+  +imapsync-1.350-r1.ebuild:
+  Revision bump and remove old. Remove dev-perl/DateManip dependency as it
+  is not used anymore.
 
 *imapsync-1.350 (25 Sep 2010)
 
