@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.78 2010/09/13 07:08:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.79 2010/10/03 22:36:22 eva Exp $
+
+*goffice-0.8.11 (03 Oct 2010)
+
+  03 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -goffice-0.8.7.ebuild,
+  -goffice-0.8.9.ebuild, +goffice-0.8.11.ebuild:
+  Version bump. Clean up old revisions.
 
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> goffice-0.8.6.ebuild:
   Marked ppc stable for bug #326503.
