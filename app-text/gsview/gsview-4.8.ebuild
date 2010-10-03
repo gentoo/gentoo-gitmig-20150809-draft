@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.14 2009/12/26 19:38:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.15 2010/10/03 12:46:18 jlec Exp $
 
 inherit eutils
 
@@ -23,8 +23,8 @@ DEPEND="app-arch/unzip
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gsesp.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gsesp.patch
 }
 
 src_compile() {
@@ -49,7 +49,7 @@ src_install() {
 
 	if use doc
 	then
-		dobin ${FILESDIR}/gsview-help
+		dobin "${FILESDIR}"/gsview-help
 		dohtml *.htm bin/*.htm
 	fi
 
