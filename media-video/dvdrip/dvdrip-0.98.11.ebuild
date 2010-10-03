@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11.ebuild,v 1.4 2010/09/28 16:41:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11.ebuild,v 1.5 2010/10/03 17:13:39 hwoarang Exp $
 
 EAPI=2
 inherit eutils flag-o-matic perl-module
@@ -11,7 +11,7 @@ SRC_URI="http://www.exit1.org/dvdrip/dist/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="ffmpeg fping mplayer ogg subtitles vcd vorbis xine xvid"
 
 DEPEND=">=dev-perl/Event-ExecFlow-0.64
@@ -48,7 +48,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e 's:$(CC):$(CC) $(LDFLAGS):' src/Makefile || die
+	sed -i -e 's:$(CC):$(CC) $(OTHERLDFLAGS):' src/Makefile || die
 }
 
 src_install() {
