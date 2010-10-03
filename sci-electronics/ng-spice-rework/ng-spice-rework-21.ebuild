@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-21.ebuild,v 1.1 2010/06/24 10:41:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-21.ebuild,v 1.2 2010/10/03 14:51:04 tomjbe Exp $
 
 EAPI="3"
 
@@ -33,6 +33,11 @@ src_prepare() {
 	rm -rf xgraph
 	epatch "${FILESDIR}"/${P}-src_makefile.patch
 	sed -i -e 's/\-O2//' configure.in || die "sed failed"
+
+	# fix potential buffer overflow (bug 339541)
+	sed -i -e "s/fgets(buf, BSIZE_SP/fgets(buf, sizeof(buf)/g" \
+		src/frontend/misccoms.c || die
+
 	if use doc ; then
 		cp "${DISTDIR}"/Xspice_Users_Manual.pdf "${S}"
 		cp "${DISTDIR}"/XSpice_SoftwareDesignDoc_Sep92.pdf "${S}"
