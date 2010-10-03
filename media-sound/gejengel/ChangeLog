@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.15 2010/08/31 12:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.16 2010/10/03 20:11:48 hwoarang Exp $
+
+  03 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  -files/gejengel-0.1.2-plugin.patch, -files/gejengel-0.1.2_64bit_fix.patch,
+  -files/gejengel-0.1.3-gcc45.patch:
+  Remove obsolete files
 
   31 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -gejengel-0.1.2.ebuild,
   -gejengel-0.1.3.ebuild, gejengel-0.1.4.ebuild:
