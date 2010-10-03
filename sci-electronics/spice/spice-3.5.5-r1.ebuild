@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5-r1.ebuild,v 1.2 2010/07/04 06:32:18 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5-r1.ebuild,v 1.3 2010/10/03 14:39:52 tomjbe Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -40,9 +40,13 @@ src_unpack() {
 		-e "s:SPICE_DIR)/lib:SPICE_DIR)/$(get_libdir)/spice:g" \
 		-e "s:/usr/local/spice:/usr:g" \
 		-e "s:/X11R6::" \
-		conf/linux
-	sed -i -e "s:head -1:head -n 1:" util/build
+		conf/linux || die
+	sed -i -e "s:head -1:head -n 1:" util/build || die
 	epatch "${FILESDIR}"/${P}-gcc-4.1.patch
+
+	# fix possible buffer overflow (bug #339539)
+	sed -i -e "s:fgets(buf, BSIZE_SP:fgets(buf, sizeof(buf):g" \
+		src/lib/fte/misccoms.c || die
 }
 
 src_compile() {

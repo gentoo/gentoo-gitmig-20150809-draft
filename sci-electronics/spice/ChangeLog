@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/spice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.12 2010/07/04 06:32:18 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.13 2010/10/03 14:39:52 tomjbe Exp $
+
+  03 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> spice-3.5.5-r1.ebuild:
+  Fix potential buffer overflow (bug #339539).
 
   04 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> spice-3.5.5-r1.ebuild:
   fix for default editor (see bug #294766)
