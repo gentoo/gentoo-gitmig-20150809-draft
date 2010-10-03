@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.4 2010/09/12 21:29:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.5 2010/10/03 19:30:22 reavertm Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -206,7 +206,7 @@ autotools-utils_src_configure() {
 	fi
 
 	# Append user args
-	econfargs+=(${myeconfargs[@]})
+	econfargs+=("${myeconfargs[@]}")
 
 	_check_build_dir
 	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
