@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.9 2010/07/11 20:32:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.10 2010/10/03 07:21:22 graaff Exp $
+
+*yard-0.6.1 (03 Oct 2010)
+
+  03 Oct 2010; Hans de Graaff <graaff@gentoo.org> +yard-0.6.1.ebuild:
+  Version bump. Add ree18 support.
 
   11 Jul 2010; Hans de Graaff <graaff@gentoo.org> -yard-0.5.2.ebuild,
   -yard-0.5.3.ebuild, -yard-0.5.5.ebuild:
