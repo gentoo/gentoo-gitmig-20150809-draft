@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.85 2010/09/18 17:07:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.86 2010/10/03 17:48:02 ssuominen Exp $
+
+  03 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libmtp-1.0.3-r1.ebuild:
+  Make sure plugdev group is there wrt #329331, Comment #2 by Lars Wendler.
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> libmtp-0.3.7.ebuild,
   libmtp-1.0.3.ebuild, libmtp-1.0.3-r1.ebuild:
