@@ -1,6 +1,15 @@
 # ChangeLog for app-text/docbook-sgml-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.55 2009/08/23 16:03:57 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.56 2010/10/03 17:54:57 xmw Exp $
+
+*docbook-sgml-utils-0.6.14-r1 (03 Oct 2010)
+
+  03 Oct 2010; Michael Weber <xmw@gentoo.org>
+  +docbook-sgml-utils-0.6.14-r1.ebuild,
+  +files/docbook-sgml-utils-0.6.14-grep-2.7.patch:
+  Revision bump to respect new sys-apps/grep-2.7 syntax check ([:space:] and
+  [:digits:] no longer accepted as classes, bug #338853).
+  Thanks tampakrap and ABCD for the review.
 
   23 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   docbook-sgml-utils-0.6.14.ebuild:
