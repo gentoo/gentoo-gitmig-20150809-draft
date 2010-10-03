@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gsview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.31 2009/12/26 19:38:59 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.32 2010/10/03 12:43:15 jlec Exp $
+
+*gsview-4.9 (03 Oct 2010)
+
+  03 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/4.9-gentoo.patch,
+  +gsview-4.9.ebuild:
+  Version Bump, 284197; LDFLAGS respect, 333537
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> gsview-4.8.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
