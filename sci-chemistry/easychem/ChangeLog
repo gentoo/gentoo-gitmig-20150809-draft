@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.16 2010/06/17 10:30:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.17 2010/10/03 08:04:15 jlec Exp $
+
+*easychem-0.6-r1 (03 Oct 2010)
+
+  03 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/0.6-gentoo.patch,
+  +easychem-0.6-r1.ebuild:
+  Respecting LDFLAGS now, 333847; Prefix ready and keyworded for ~-linux
 
   17 Jun 2010; Justin Lecher <jlec@gentoo.org> easychem-0.6.ebuild:
   Some QA
