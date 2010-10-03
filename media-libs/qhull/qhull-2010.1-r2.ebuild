@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2010.1-r1.ebuild,v 1.1 2010/10/03 21:55:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2010.1-r2.ebuild,v 1.1 2010/10/03 23:42:49 bicatali Exp $
 
 EAPI=3
 

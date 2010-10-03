@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/qhull
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.37 2010/10/03 21:55:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.38 2010/10/03 23:42:49 bicatali Exp $
+
+*qhull-2010.1-r2 (03 Oct 2010)
+
+  03 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -qhull-2010.1-r1.ebuild, +qhull-2010.1-r2.ebuild,
+  files/qhull-2010.1-cmake-install.patch:
+  Error in previous patch, now installs all qhull headers to allow reverse
+  dependencies to be compatible
 
 *qhull-2010.1-r1 (03 Oct 2010)
 

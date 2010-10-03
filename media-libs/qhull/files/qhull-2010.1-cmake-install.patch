@@ -1,6 +1,6 @@
 diff -Nur qhull-2010.1.orig/CMakeLists.txt qhull-2010.1/CMakeLists.txt
---- qhull-2010.1.orig/CMakeLists.txt	2010-01-10 00:07:32.000000000 +0000
-+++ qhull-2010.1/CMakeLists.txt	2010-10-03 22:16:50.000000000 +0100
+--- qhull-2010.1.orig/CMakeLists.txt	2010-10-03 23:04:04.000000000 +0100
++++ qhull-2010.1/CMakeLists.txt	2010-10-03 23:26:54.000000000 +0100
 @@ -1,8 +1,44 @@
  project(qhull)
 -cmake_minimum_required(VERSION 2.4)
@@ -51,8 +51,8 @@ diff -Nur qhull-2010.1.orig/CMakeLists.txt qhull-2010.1/CMakeLists.txt
 +install(DIRECTORY html/ DESTINATION ${DOC_INSTALL_DIR})
 +endif (WITH_DOCS)
 diff -Nur qhull-2010.1.orig/src/CMakeLists.txt qhull-2010.1/src/CMakeLists.txt
---- qhull-2010.1.orig/src/CMakeLists.txt	2010-01-10 00:07:32.000000000 +0000
-+++ qhull-2010.1/src/CMakeLists.txt	2010-10-03 22:21:34.000000000 +0100
+--- qhull-2010.1.orig/src/CMakeLists.txt	2010-10-03 23:04:04.000000000 +0100
++++ qhull-2010.1/src/CMakeLists.txt	2010-10-04 00:23:47.000000000 +0100
 @@ -23,8 +23,25 @@
  
  file(GLOB qhull_hdr *.h)
@@ -95,4 +95,4 @@ diff -Nur qhull-2010.1.orig/src/CMakeLists.txt qhull-2010.1/src/CMakeLists.txt
 +install(TARGETS qhull qhullcmd rbox qconvex qdelaunay qvoronoi qhalf
 +	RUNTIME DESTINATION ${BIN_INSTALL_DIR} 
 +	LIBRARY DESTINATION ${LIB_INSTALL_DIR})
-+install(FILES libqhull.h DESTINATION ${INCLUDE_INSTALL_DIR})
++install(FILES ${qhull_hdr} DESTINATION ${INCLUDE_INSTALL_DIR}/qhull)
