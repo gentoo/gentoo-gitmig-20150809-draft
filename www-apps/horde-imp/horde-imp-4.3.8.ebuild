@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/horde-imp-4.3.8.ebuild,v 1.2 2010/10/02 14:49:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/horde-imp-4.3.8.ebuild,v 1.3 2010/10/03 16:30:14 hwoarang Exp $
 
 HORDE_PHP_FEATURES="imap"
 HORDE_MAJ="-h3"
@@ -8,7 +8,7 @@ inherit horde
 
 DESCRIPTION="Horde IMP provides webmail access to IMAP/POP3 mailboxes"
 
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="crypt"
 
 DEPEND=""
