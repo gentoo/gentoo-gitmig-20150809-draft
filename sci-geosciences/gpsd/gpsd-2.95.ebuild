@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95.ebuild,v 1.1 2010/09/26 13:36:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95.ebuild,v 1.2 2010/10/03 16:17:01 scarabeus Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 
-inherit python base
+inherit python base autotools
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
@@ -39,11 +39,21 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PV}-disable-strip.patch"
+	"${FILESDIR}/${PV}-fix-ldflags.patch"
+)
+
 pkg_setup() {
 	python_set_active_version 2
 
 	# Run the gpsd daemon as gpsd and group uucp
 	enewuser gpsd -1 -1 -1 "uucp"
+}
+
+src_prepare() {
+	base_src_prepare
+	eautoreconf
 }
 
 src_configure() {
@@ -73,7 +83,11 @@ src_configure() {
 }
 
 src_install() {
-	base_src_install
+	# no it cant be done using emake cause it is non-compilant
+	make DESTDIR="${D}" install || die
+
+	# no need for .la files here
+	find "${D}" -type f -name '*.la' -exec rm -f '{}' +
 
 	newconfd "${FILESDIR}"/gpsd.conf-2 gpsd || die
 	newinitd "${FILESDIR}"/gpsd.init-2 gpsd || die
