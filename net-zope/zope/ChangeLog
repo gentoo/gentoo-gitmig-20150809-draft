@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/zope
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.181 2010/09/19 23:34:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.182 2010/10/03 01:00:37 arfrever Exp $
+
+*zope-2.12.12 (03 Oct 2010)
+
+  03 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-2.12.5.ebuild, -zope-2.12.6.ebuild, -zope-2.12.7.ebuild,
+  -zope-2.12.8.ebuild, -zope-2.12.9.ebuild, -zope-2.12.10.ebuild,
+  +zope-2.12.12.ebuild:
+  Version bump.
 
 *zope-2.13.0_alpha4 (19 Sep 2010)
 
