@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/PEAR-File_Iterator
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-File_Iterator/ChangeLog,v 1.1 2010/10/04 22:45:24 jokey Exp $
+
+*PEAR-File_Iterator-1.2.3 (04 Oct 2010)
+
+  04 Oct 2010; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-File_Iterator-1.2.3.ebuild, +metadata.xml:
+  Initial import for phpunit-3.5
+

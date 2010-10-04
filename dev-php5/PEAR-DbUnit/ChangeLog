@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/PEAR-DbUnit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-DbUnit/ChangeLog,v 1.1 2010/10/04 22:47:54 jokey Exp $
+
+*PEAR-DbUnit-1.0.0 (04 Oct 2010)
+
+  04 Oct 2010; Markus Ullmann <jokey@gentoo.org> +PEAR-DbUnit-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import for phpunit-3.5
+
