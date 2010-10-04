@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.9_pre0.ebuild,v 1.1 2010/10/03 20:29:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-0.9_pre0.ebuild,v 1.2 2010/10/04 22:53:59 xmw Exp $
 
 EAPI=2
 
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PF}-errno.patch
 	sed -i -e "/AC_INIT/s/0\.8/0.9-${MY_GIT_SHORT_COMMIT}/" configure.ac || die
 	eautoreconf
 }
