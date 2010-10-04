@@ -8,8 +8,8 @@ index 46cf4a7..bc9558b 100644
          gtk+-2.0  >= 2.16
 -        champlain-gtk-0.4 >= 0.4.3
 -        champlain-0.4 >= 0.4.3
-+        champlain-gtk-0.8 >= 0.4.3
-+        champlain-0.8 >= 0.4.3
++        champlain-gtk-0.6 >= 0.4.3
++        champlain-0.6 >= 0.4.3
          gmodule-2.0 
          libxml-2.0
          gdl-1.0
