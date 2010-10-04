@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.540 2010/09/30 02:48:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.541 2010/10/04 20:33:59 mgorny Exp $
+
+  04 Oct 2010; Michał Górny <mgorny@gentoo.org> xorg-server-1.7.6.ebuild,
+  xorg-server-1.7.7-r1.ebuild, xorg-server-1.8.2.ebuild,
+  xorg-server-1.9.0-r2.ebuild, -files/1.7.5.902-fix-tslib-1.0-check.patch,
+  +files/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch,
+  +files/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch,
+  +files/xorg-server-1.7.6-tslib-as-needed.patch:
+  Replace the tslib build patch with a set of new patches in order to fix
+  bug #318609. The first patch fixes linking with tslib whenever pkg-config
+  fails to find it but fallback check does. The second one fixes overall
+  linking with tslib whenever -Wl,--as-needed is used.
 
   30 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.9.0-r2.ebuild:

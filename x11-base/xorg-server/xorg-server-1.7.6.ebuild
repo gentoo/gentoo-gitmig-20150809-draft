@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.11 2010/09/05 11:59:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.12 2010/10/04 20:33:59 mgorny Exp $
 
 EAPI="2"
 
@@ -126,12 +126,14 @@ UPSTREAMED_PATCHES=(
 
 	# Fix from bug http://bugs.freedesktop.org/show_bug.cgi?id=25400
 	"${FILESDIR}/1.7.3.901-0001-dix-if-owner-events-is-true-for-passive-grabs-add-th.patch"
-	# Fix for bug #304067
-	"${FILESDIR}/1.7.5.902-fix-tslib-1.0-check.patch"
 	)
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
+
+	# Fixes for bug #318609
+	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
+	"${FILESDIR}"/${P}-tslib-as-needed.patch
 	)
 
 pkg_setup() {

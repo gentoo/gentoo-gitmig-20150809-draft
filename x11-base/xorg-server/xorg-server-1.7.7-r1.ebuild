@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.9 2010/09/26 19:03:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.10 2010/10/04 20:33:59 mgorny Exp $
 
 EAPI="2"
 
@@ -126,13 +126,15 @@ EPATCH_SUFFIX="patch"
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 	"${WORKDIR}/patches/"
-	# Fix for bug #304067
-	"${FILESDIR}/1.7.5.902-fix-tslib-1.0-check.patch"
 	"${FILESDIR}"/${PN}-1.8-nouveau-default.patch
 	)
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
+
+	# Fixes for bug #318609
+	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
+	"${FILESDIR}"/${PN}-1.7.6-tslib-as-needed.patch
 	)
 
 pkg_setup() {

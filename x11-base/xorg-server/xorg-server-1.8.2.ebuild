@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.2.ebuild,v 1.2 2010/09/05 11:59:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.2.ebuild,v 1.3 2010/10/04 20:33:59 mgorny Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -104,6 +104,10 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.8-nouveau-default.patch
+
+	# Fixes for bug #318609
+	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
+	"${FILESDIR}"/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch
 	)
 
 pkg_setup() {

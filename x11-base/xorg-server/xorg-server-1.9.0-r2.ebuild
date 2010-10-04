@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0-r2.ebuild,v 1.2 2010/09/30 02:48:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0-r2.ebuild,v 1.3 2010/10/04 20:33:59 mgorny Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -105,8 +105,11 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
-	"${FILESDIR}"/1.7.5.902-fix-tslib-1.0-check.patch
 	"${FILESDIR}"/1.9.0-fix-VbeModeInfoBlock-memcpy.patch
+
+	# Fixes for bug #318609
+	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
+	"${FILESDIR}"/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch
 	)
 
 pkg_setup() {
@@ -152,6 +155,10 @@ pkg_setup() {
 		--without-fop
 		--with-os-vendor=Gentoo
 		${conf_opts}"
+
+	if use kdrive && use tslib; then
+		XORG_EAUTORECONF=yes
+	fi
 
 	# Xorg-server requires includes from OS mesa which are not visible for
 	# users of binary drivers.
