@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.62.ebuild,v 1.1 2010/10/04 14:23:07 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.62.ebuild,v 1.2 2010/10/04 14:41:09 dagger Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	caps? ( sys-libs/libcap-ng )
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
-	policykit? ( >=sys-auth/policykit-0.7 )
+	policykit? ( sys-auth/polkit )
 	udev? ( >=sys-fs/udev-141 )
 	wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )
 	wimax? ( net-wireless/wimax )"
