@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.7 2010/10/03 05:19:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.8 2010/10/04 04:28:53 dirtyepic Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="boost doc gui opensync"
 
-DEPEND="dev-libs/libusb
+DEPEND="dev-libs/libusb:0
 	dev-libs/openssl
 	dev-util/pkgconfig
 	sys-libs/zlib
