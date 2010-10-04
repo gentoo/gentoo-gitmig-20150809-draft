@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.60-r1.ebuild,v 1.1 2010/09/30 10:10:33 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.62.ebuild,v 1.1 2010/10/04 14:23:07 dagger Exp $
 
 EAPI="2"
 
