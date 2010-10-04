@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.122 2010/09/13 23:12:08 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.123 2010/10/04 19:16:40 hanno Exp $
+
+*mailman-2.1.14 (04 Oct 2010)
+
+  04 Oct 2010; Hanno Boeck <hanno@gentoo.org> +mailman-2.1.14.ebuild:
+  Version bump.
 
 *mailman-2.1.14_rc1 (13 Sep 2010)
 
