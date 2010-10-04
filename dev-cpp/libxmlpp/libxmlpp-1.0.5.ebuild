@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.5.ebuild,v 1.12 2010/01/19 14:34:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.5.ebuild,v 1.13 2010/10/04 20:15:38 sping Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 MY_PN="${PN/pp/++}"
 MY_P="${MY_PN}-${PV}"
@@ -29,6 +29,10 @@ src_unpack() {
 
 	# gcc 4.3 build fix, see bug #218779
 	epatch "${FILESDIR}/${PN}-1.0.5-gcc43.patch"
+
+	# Rebuild ./configure as the shipped one contains "[:space:]"
+	# which grep 2.7 and later do not like (bug #339404)
+	eautoreconf
 }
 
 src_install() {

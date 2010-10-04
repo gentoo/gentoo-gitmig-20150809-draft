@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.95 2010/09/27 19:06:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.96 2010/10/04 20:15:38 sping Exp $
+
+  04 Oct 2010; Sebastian Pipping <sping@gentoo.org> libxmlpp-1.0.5.ebuild:
+  Rebuild configure for grep 2.7 or later (bug #339404)
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> -libxmlpp-2.12.0.ebuild:
   Remove old, bug #270893
