@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/frotz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.15 2009/06/14 00:04:28 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.16 2010/10/04 12:38:22 tupone Exp $
+
+  04 Oct 2010; Tupone Alfredo <tupone@gentoo.org> frotz-2.43.ebuild,
+  +files/frotz-2.43-ldflags.patch:
+  Respect LDFLAGS. Bug #337241 by flameeyes@gentoo.org
 
   14 Jun 2009; Tristan Heaven <nyhm@gentoo.org> frotz-2.43.ebuild,
   +files/frotz-2.43-glibc2.10.patch:
