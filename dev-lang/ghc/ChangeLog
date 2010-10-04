@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.193 2010/09/26 19:41:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.194 2010/10/04 20:57:12 slyfox Exp $
+
+  04 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-ghciless-haddock-3558.patch:
+  Export typechecker internals for haddock (alpha, ia64, ppc64). Allow
+  ghc-ia64 to link very large applications (haddock).
 
   26 Sep 2010; Markos Chandras <hwoarang@gentoo.org> ghc-6.12.3.ebuild:
   Stable on amd64 wrt bug #338652

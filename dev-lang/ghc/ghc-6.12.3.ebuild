@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.14 2010/09/26 19:41:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.15 2010/10/04 20:57:12 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -126,6 +126,10 @@ ghc_setup_cflags() {
 	# prevent from failind building unregisterised ghc:
 	# http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg171602.html
 	use ppc64 && append-ghc-cflags compile -mminimal-toc
+	# fix the similar issue as ppc64 TOC on ia64. ia64 has limited size of small data
+	# currently ghc fails to build haddock
+	# http://osdir.com/ml/gnu.binutils.bugs/2004-10/msg00050.html
+	use ia64 && append-ghc-cflags compile -G0
 }
 
 pkg_setup() {
@@ -226,6 +230,10 @@ src_unpack() {
 
 		# substitute outdated macros
 		epatch "${FILESDIR}/ghc-6.12.3-autoconf-2.66-4252.patch"
+
+		# export typechecker internals even if ghci is disabled
+		# http://hackage.haskell.org/trac/ghc/ticket/3558
+		epatch "${FILESDIR}/ghc-6.12.3-ghciless-haddock-3558.patch"
 
 		# as we have changed the build system
 		eautoreconf
