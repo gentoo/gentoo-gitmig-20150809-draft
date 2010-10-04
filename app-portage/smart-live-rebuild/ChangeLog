@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/smart-live-rebuild
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.1 2010/10/04 17:50:15 mgorny Exp $
+
+*smart-live-rebuild-0.6.1.1 (04 Oct 2010)
+
+  04 Oct 2010; Michał Górny <mgorny@gentoo.org>
+  +smart-live-rebuild-0.6.1.1.ebuild, +metadata.xml:
+  Import from the Sunrise overlay, per bug #310975.
+
