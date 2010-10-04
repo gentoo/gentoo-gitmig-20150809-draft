@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.37 2010/07/23 02:45:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.38 2010/10/04 06:54:09 jlec Exp $
+
+*when-1.1.21 (04 Oct 2010)
+
+  04 Oct 2010; Justin Lecher <jlec@gentoo.org> +when-1.1.21.ebuild:
+  Version Bump, 339636
 
 *when-1.1.20 (23 Jul 2010)
 
