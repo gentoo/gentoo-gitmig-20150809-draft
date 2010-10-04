@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.28 2010/05/29 18:30:40 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.29 2010/10/04 22:51:07 jokey Exp $
+
+*phpunit-3.5.0 (04 Oct 2010)
+
+  04 Oct 2010; Markus Ullmann <jokey@gentoo.org> +phpunit-3.5.0.ebuild:
+  Version bump, now is splitted into pieces which have been added to cvs
+  also
 
 *phpunit-3.4.13 (29 May 2010)
 
