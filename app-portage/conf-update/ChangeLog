@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/conf-update
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.21 2009/01/04 14:57:16 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.22 2010/10/04 19:22:54 sping Exp $
+
+*conf-update-1.0-r1 (04 Oct 2010)
+
+  04 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  +conf-update-1.0-r1.ebuild, +files/conf-update-1.0-regex-classes.patch:
+  Integrate Jan Psota's regex patch ("[:space:]" to "[[:space:]]") from bug
+  #338414
 
   04 Jan 2009; Christoph Mende <angelos@gentoo.org>
   +files/conf-update-1.0-asneeded.patch, conf-update-1.0.ebuild:
