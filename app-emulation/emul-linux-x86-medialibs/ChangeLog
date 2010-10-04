@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.42 2010/09/15 11:40:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.43 2010/10/04 12:51:35 hwoarang Exp $
+
+  04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-medialibs-20100915.ebuild:
+  Stable on amd64 wrt bug #339053
 
 *emul-linux-x86-medialibs-20100915 (15 Sep 2010)
 
