@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.2 2010/10/04 17:48:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.3 2010/10/04 17:50:26 robbat2 Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -55,7 +55,7 @@ RDEPEND="${RDEPEND}
 # listed here for completeness.  'display' however is only usable with
 # x11-apps/xwininfo also present.
 RDEPEND="${RDEPEND}
-	|| ( 
+	|| (
 	( x11-apps/xwininfo
 	  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	)
