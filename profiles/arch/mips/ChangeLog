@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.26 2010/09/27 16:37:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.27 2010/10/04 16:29:04 leio Exp $
+
+  04 Oct 2010; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  Mask glade USE flag for gtksourceview, as no dev-util/glade yet
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   package.use.mask some untested samba functionality that also lacks

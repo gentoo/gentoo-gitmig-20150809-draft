@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.22 2010/09/27 16:37:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.23 2010/10/04 16:29:04 leio Exp $
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
@@ -79,3 +79,7 @@ games-strategy/freeciv auth ggz
 # Extra functionality that has external unkeyworded dependencies
 # and is not tested yet
 net-fs/samba ads cluster debug
+
+# Mart Raudsepp <leio@gentoo.org> (03 Oct 2010)
+# dev-util/glade not tested and keyworded yet
+x11-libs/gtksourceview glade
