@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.1 2010/09/30 22:42:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.2 2010/10/04 10:27:44 ssuominen Exp $
 
 EAPI=2
 inherit multilib rpm toolchain-funcs
@@ -13,6 +13,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
+
+RESTRICT="test" #339656
 
 src_prepare() {
 	sed -i \
