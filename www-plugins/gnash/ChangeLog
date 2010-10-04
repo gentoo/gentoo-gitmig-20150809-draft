@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.48 2010/09/29 09:22:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.49 2010/10/04 23:55:08 rich0 Exp $
+
+  04 Oct 2010; Richard Freeman <rich0@gentoo.org> gnash-0.8.8.ebuild:
+  amd64 stable - 339102
 
   29 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.8.ebuild, metadata.xml:
