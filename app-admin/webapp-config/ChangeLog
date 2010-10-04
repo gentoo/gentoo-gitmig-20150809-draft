@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.66 2010/10/03 23:49:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.67 2010/10/04 00:01:32 reavertm Exp $
+
+  03 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  webapp-config-1.50.16-r1.ebuild:
+  Remove webapp eclass manpage also in this version, bug 322759
 
   03 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org>
   webapp-config-1.50.16-r3.ebuild:
