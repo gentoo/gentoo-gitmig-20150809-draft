@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.209 2010/09/13 07:14:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.210 2010/10/04 21:03:13 eva Exp $
+
+*gnumeric-1.10.11 (04 Oct 2010)
+
+  04 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnumeric-1.8.4-r2.ebuild, +gnumeric-1.10.11.ebuild:
+  Version bump. Improved interoperability with OOo. Allow user-defined
+  templates and various other fixes.
 
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> gnumeric-1.10.6.ebuild:
   Marked ppc stable for bug #326503.
