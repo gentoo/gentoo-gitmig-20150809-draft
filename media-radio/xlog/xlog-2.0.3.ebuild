@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.3.ebuild,v 1.3 2010/07/17 12:43:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.3.ebuild,v 1.4 2010/10/04 15:19:36 tomjbe Exp $
 
 EAPI=2
 
@@ -28,6 +28,8 @@ src_prepare() {
 	# and patch wrong ADIF export
 	epatch "${FILESDIR}/${PN}-2.0.1-adif.patch" \
 	    "${FILESDIR}/${PN}-2.0.2-qsl.patch"
+	# fix buffer overflow (bug 339652)
+	epatch "${FILESDIR}/${P}-memmove.patch"
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.13 2010/07/17 12:43:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.14 2010/10/04 15:19:36 tomjbe Exp $
+
+  04 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> xlog-2.0.3.ebuild,
+  +files/xlog-2.0.3-memmove.patch:
+  Fix buffer overflow (bug #339652)
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> xlog-2.0.3.ebuild:
   stable x86, bug 328071
