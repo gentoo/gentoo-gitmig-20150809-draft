@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.266 2010/09/30 20:00:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.267 2010/10/04 00:28:28 dirtyepic Exp $
+
+*freetype-2.4.3 (04 Oct 2010)
+
+  04 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> +freetype-2.4.3.ebuild:
+  Version bump. This release fixes a regression in cubic spline flattening
+  affecting S-shaped glyphs introduced in 2.4.0 (bug #339572).
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> freetype-2.3.12.ebuild:
   stable ppc64, bug 320715
