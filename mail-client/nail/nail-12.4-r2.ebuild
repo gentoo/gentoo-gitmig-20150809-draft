@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4-r2.ebuild,v 1.1 2010/10/03 14:51:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4-r2.ebuild,v 1.2 2010/10/04 19:55:54 flameeyes Exp $
 
 EAPI="3"
 
@@ -46,7 +46,8 @@ src_prepare() {
 
 src_configure() {
 	# Build config.h and LIBS, neccesary to tweak the config
-	make config.h LIBS
+	# use -j1 because it will produce bogus output otherwise
+	emake -j1 config.h LIBS || die
 
 	# Logic to 'configure' the package
 
