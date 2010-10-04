@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.4 2010/10/02 21:15:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.5 2010/10/04 19:10:30 jlec Exp $
+
+  04 Oct 2010; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild,
+  libchamplain-0.8.0.ebuild:
+  Moving slots: =media-libs/libchamplain-0.8.0 from 0.6 to 0.8
 
 *libchamplain-0.8.0 (02 Oct 2010)
 

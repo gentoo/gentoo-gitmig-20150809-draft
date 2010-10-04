@@ -6,5 +6,6 @@
 </maintainer>
 <use>
   <flag name='introspection'>Use dev-libs/gobject-introspection for introspection</flag>
+  <flag name='html'>Install gtk-doc html version for this package</flag>
 </use>
 </pkgmetadata>
