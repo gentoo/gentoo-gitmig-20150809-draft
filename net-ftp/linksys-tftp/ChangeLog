@@ -1,6 +1,18 @@
 # ChangeLog for net-ftp/linksys-tftp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.5 2009/09/23 18:37:13 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.6 2010/10/04 15:57:22 xmw Exp $
+
+*linksys-tftp-1.2.1-r1 (03 Oct 2010)
+
+  03 Oct 2010; Michael Weber <xmw@gentoo.org> linksys-tftp-1.2.1.ebuild,
+  +linksys-tftp-1.2.1-r1.ebuild,
+  +files/linksys-tftp-1.2.1-r1-Makefile.patch,
+  +files/linksys-tftp-1.2.1-r1-header.patch:
+  Revbump to fix CFLAGS (bug 240894) and LDFLAGS (bug 336956)
+
+  03 Oct 2010; Michael Weber <xmw@gentoo.org> linksys-tftp-1.2.1.ebuild:
+  Updating HOMEPAGE, pointing SRC_URI to mirrors (thanks to Roland Ramthun
+  <bts@roland-ramthun.de> for his report on bug #339495)
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> linksys-tftp-1.2.1.ebuild:
   Remove virtual/libc
