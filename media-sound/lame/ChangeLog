@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.122 2010/08/23 20:10:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.123 2010/10/04 15:21:56 mr_bones_ Exp $
+
+  04 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  lame-3.98.2-r1.ebuild, lame-3.98.4.ebuild:
+  make the mmx asm work with newer versions of nasm (bug #339150)
 
   23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> lame-3.98.4.ebuild:
   USE="static-libs", punt .la files, convert to EAPI=\"3\" and add prefix keywords in.
