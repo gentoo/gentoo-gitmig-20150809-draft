@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.106 2010/09/21 07:44:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.107 2010/10/04 17:31:44 robbat2 Exp $
+
+*awesome-3.4.8 (04 Oct 2010)
+
+  04 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> +awesome-3.4.8.ebuild:
+  Version bump, fixes bug #336493 of window placement.
 
   21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> awesome-3.4.4.ebuild,
   awesome-3.4.5.ebuild, awesome-3.4.6.ebuild, awesome-3.4.7.ebuild:
