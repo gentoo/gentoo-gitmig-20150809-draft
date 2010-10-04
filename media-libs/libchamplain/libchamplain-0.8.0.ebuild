@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.0.ebuild,v 1.4 2010/10/04 19:10:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.0.ebuild,v 1.5 2010/10/04 19:11:13 jlec Exp $
 
 EAPI="3"
 
@@ -44,7 +44,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 G2CONF="${G2CONF}
 	--disable-static
 	--enable-memphis
-	--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html
+	--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 	$(use_enable debug)
 	$(use_enable gtk)
 	$(use_enable html gtk-doc-html)
