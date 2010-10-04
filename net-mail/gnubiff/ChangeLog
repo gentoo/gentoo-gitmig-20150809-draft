@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.26 2010/10/02 00:32:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.27 2010/10/04 12:18:35 hwoarang Exp $
+
+  04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  gnubiff-2.2.13-r1.ebuild:
+  Stable on amd64 wrt bug #339284
 
 *gnubiff-2.2.13-r1 (02 Oct 2010)
 
