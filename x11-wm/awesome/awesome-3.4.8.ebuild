@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.1 2010/10/04 17:31:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.2 2010/10/04 17:48:57 robbat2 Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6
 	dev-util/gperf
 	dev-util/pkgconfig
-	media-gfx/imagemagick[png]
+	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
 	>=x11-proto/xcb-proto-1.5
 	>=x11-proto/xproto-7.0.15
 	doc? (
@@ -48,6 +48,25 @@ RDEPEND="${RDEPEND}
 	|| (
 		x11-misc/gxmessage
 		x11-apps/xmessage
+	)"
+
+# bug #321433: Need one of these to for awsetbg. 
+# imagemagick provides 'display' and is further down the default list, but
+# listed here for completeness.  'display' however is only usable with
+# x11-apps/xwininfo also present.
+RDEPEND="${RDEPEND}
+	|| ( 
+	( x11-apps/xwininfo
+	  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	)
+	x11-misc/habak
+	media-gfx/feh
+	x11-misc/hsetroot
+	media-gfx/qiv
+	media-gfx/xv
+	x11-misc/xsri
+	media-gfx/xli
+	x11-apps/xsetroot
 	)"
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
