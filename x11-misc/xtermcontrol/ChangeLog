@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.30 2010/09/12 19:11:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.31 2010/10/04 00:52:23 jer Exp $
+
+  04 Oct 2010; Jeroen Roovers <jer@gentoo.org> xtermcontrol-2.10.ebuild:
+  Stable for PPC (bug #339640).
 
   12 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
   xtermcontrol-2.10.ebuild:
