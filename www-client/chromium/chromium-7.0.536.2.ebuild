@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.536.2.ebuild,v 1.1 2010/10/01 08:34:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.536.2.ebuild,v 1.2 2010/10/04 10:55:37 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -16,7 +16,9 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="cups gnome gnome-keyring system-sqlite"
 
 RDEPEND="app-arch/bzip2
-	system-sqlite? ( >=dev-db/sqlite-3.6.23.1[fts3,secure-delete] )
+	system-sqlite? (
+		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
+	)
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
@@ -139,9 +141,11 @@ src_configure() {
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
-	# and the performance gain isn't worth it.
-	myconf+=" -Dv8_use_snapshot=0"
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
+	fi
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
