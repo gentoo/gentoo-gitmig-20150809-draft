@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdaliclock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.26 2010/08/14 10:50:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.27 2010/10/04 19:04:06 xmw Exp $
+
+*xdaliclock-2.35 (04 Oct 2010)
+
+  04 Oct 2010; Michael Weber <xmw@gentoo.org> +xdaliclock-2.35.ebuild:
+  Version bump
 
 *xdaliclock-2.34 (14 Aug 2010)
 
