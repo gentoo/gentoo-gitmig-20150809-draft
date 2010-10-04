@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8-r1.ebuild,v 1.8 2010/10/02 18:21:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8-r1.ebuild,v 1.9 2010/10/04 06:10:38 nerdboy Exp $
 
 EAPI=2
 
@@ -35,12 +35,14 @@ DEPEND=">=sys-apps/sed-4
 EPATCH_SUFFIX="patch"
 
 src_prepare() {
+	qt4-r2_src_prepare
+
 	# use CFLAGS, CXXFLAGS, LDFLAGS
 	sed -i.orig -e 's:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= $(ECFLAGS):' \
 		-e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
 		-e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
 		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf \
-		|| die "sed failed"
+		|| die "sed 1 failed"
 
 	# Ensure we link to -liconv
 	if use elibc_FreeBSD; then
@@ -60,7 +62,7 @@ src_prepare() {
 
 	# fix final DESTDIR issue
 	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
-		addon/doxywizard/Makefile.in || die "sed failed"
+		addon/doxywizard/Makefile.in || die "sed 2 failed"
 
 	if is-flagq "-O3" ; then
 		echo
@@ -76,8 +78,8 @@ src_prepare() {
 
 src_configure() {
 	export ECFLAGS="${CFLAGS}" ECXXFLAGS="${CXXFLAGS}" ELDFLAGS="${LDFLAGS}"
-	# set ./configure options (prefix, Qt based wizard, docdir)
 
+	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf=""
 	if use debug; then
 		my_conf="--prefix /usr --debug"
@@ -92,21 +94,23 @@ src_configure() {
 
 	if use qt4; then
 		export QTDIR="/usr"
-		einfo "using QTDIR: '$QTDIR'."
 		export LIBRARY_PATH="${QTDIR}/$(get_libdir):${LIBRARY_PATH}"
 		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}"
-		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
-		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
 		./configure ${my_conf} $(use_with qt4 doxywizard) \
 		|| die 'configure with qt4 failed'
 	else
 		./configure ${my_conf} || die 'configure failed'
 	fi
+
+	# this appears to work as a fix for the final ignoring LDFLAGS issue...
+	pushd "${S}"/addon/doxywizard
+		eqmake4 "CONFIG+=nostrip" doxywizard.pro -o Makefile.doxywizard
+	popd
 }
 
 src_compile() {
 	# and compile
-	emake LDFLAGS="${LDFLAGS}" all || die 'emake failed'
+	emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
@@ -144,7 +148,7 @@ src_install() {
 	if use qt4; then
 		doicon "${FILESDIR}/doxywizard.png"
 		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
-			"doxywizard.png" "Application;Development"
+			"doxywizard" "Application;Development"
 	fi
 
 	dodoc INSTALL LANGUAGE.HOWTO README
