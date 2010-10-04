@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6007 2010/10/03 21:14:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6008 2010/10/04 19:14:23 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1809,6 +1809,7 @@ media-libs/libcanberra:gtk - Enables building of gtk+ helper library, gtk+ runti
 media-libs/libcanberra:pulseaudio - Enables PulseAudio sound driver that should be able to support positional event sounds. This is the preferred choice for best sound events experience and picked by default if compiled in and possible to use at runtime.
 media-libs/libcanberra:sound - Install x11-themes/sound-theme-freedesktop to get sounds on Gnome and Xfce.
 media-libs/libcanberra:tdb - Enables Trivial Database support
+media-libs/libchamplain:html - Install gtk-doc html version for this package
 media-libs/libchamplain:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgpod:gtk - Enables ArtWorkDB support (including Photos and album covers)
