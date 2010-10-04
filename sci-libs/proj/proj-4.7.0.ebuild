@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0.ebuild,v 1.10 2010/07/18 12:36:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0.ebuild,v 1.11 2010/10/04 15:09:13 ssuominen Exp $
 
 EAPI="3"
 inherit base
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="static-libs"
 
 RDEPEND=""
@@ -32,7 +32,7 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	dodoc README NEWS AUTHORS INSTALL ChangeLog nad/README.{NAD,NADUS} || die
+	dodoc README NEWS AUTHORS ChangeLog nad/README.{NAD,NADUS} || die
 	cd nad
 	insinto /usr/share/proj
 	insopts -m 755
