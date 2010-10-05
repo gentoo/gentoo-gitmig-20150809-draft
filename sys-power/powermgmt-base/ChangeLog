@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.20 2010/10/04 12:17:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.21 2010/10/05 19:21:31 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> powermgmt-base-1.31.ebuild:
+  x86 stable, bug #338990
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   powermgmt-base-1.31.ebuild:
