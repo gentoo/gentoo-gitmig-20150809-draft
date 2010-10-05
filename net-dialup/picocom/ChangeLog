@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/picocom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/picocom/ChangeLog,v 1.6 2010/09/20 19:50:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/picocom/ChangeLog,v 1.7 2010/10/05 21:14:42 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> picocom-1.6.ebuild:
+  x86 stable, bug #337569
 
   20 Sep 2010; Markos Chandras <hwoarang@gentoo.org> picocom-1.6.ebuild:
   Stable on amd64 wrt bug #337569
