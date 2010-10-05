@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.1 2010/07/16 22:36:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.2 2010/10/05 17:19:34 ssuominen Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -31,6 +31,12 @@ DEPEND="java? ( >=virtual/jdk-1.4 )
 	${COMMON_DEP}"
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	${COMMON_DEP}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc-212.patch
+
+	java-pkg-opt-2_src_prepare
+}
 
 src_configure() {
 	# override prefix in order to install into /

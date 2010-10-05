@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.106 2010/07/16 22:36:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.107 2010/10/05 17:19:34 ssuominen Exp $
+
+  05 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> brltty-4.2.ebuild,
+  +files/brltty-4.2-glibc-212.patch:
+  Fix building with recent glibc wrt #339846 by Diego E. Pettenò.
 
 *brltty-4.2 (16 Jul 2010)
 
