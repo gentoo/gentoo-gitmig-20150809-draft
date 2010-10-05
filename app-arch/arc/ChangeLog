@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/arc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.35 2010/02/17 06:50:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.36 2010/10/05 04:52:53 jer Exp $
+
+*arc-5.21p (05 Oct 2010)
+
+  05 Oct 2010; Jeroen Roovers <jer@gentoo.org> +arc-5.21p.ebuild:
+  Version bump thanks to Mario Fetka (geos_one, bug #339721). Remove empty
+  DEPEND. Merge epatch calls. Make sed die.
 
   17 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   +files/arc-5.21m-darwin.patch, arc-5.21o.ebuild,
