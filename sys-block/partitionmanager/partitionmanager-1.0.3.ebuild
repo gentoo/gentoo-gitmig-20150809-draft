@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.0.ebuild,v 1.3 2010/08/20 17:07:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.3.ebuild,v 1.1 2010/10/05 19:40:52 reavertm Exp $
 
 EAPI="2"
 
@@ -10,11 +10,9 @@ pt_BR ro ru sv tr uk zh_CN zh_TW"
 KMNAME="extragear/sysadmin"
 inherit kde4-base
 
-MY_P="${PN}-${PV/_/-}"
-
 DESCRIPTION="KDE utility for management of partitions and file systems."
 HOMEPAGE="http://partitionman.sourceforge.net/"
-SRC_URI="mirror://sourceforge/partitionman/${MY_P/beta/BETA}.tar.bz2"
+SRC_URI="mirror://sourceforge/partitionman/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -28,8 +26,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
-
-S="${WORKDIR}/${MY_P/beta/BETA}"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
