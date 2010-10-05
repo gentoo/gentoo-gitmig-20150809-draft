@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.56 2010/09/29 16:07:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.57 2010/10/05 19:13:29 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> g-cpan-0.16.2.ebuild:
+  x86 stable, bug #337981
 
   29 Sep 2010; Jeroen Roovers <jer@gentoo.org> g-cpan-0.16.2.ebuild:
   Stable for HPPA (bug #337981).
