@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/daphne
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.15 2009/11/21 19:18:09 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.16 2010/10/05 07:42:25 tupone Exp $
+
+  05 Oct 2010; Tupone Alfredo <tupone@gentoo.org> daphne-1.0.ebuild,
+  +files/daphne-1.0-ldflags.patch:
+  Respect LDFLAGS. Bug #337184 by flameeyes@gentoo.org
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> daphne-1.0.ebuild:
   x86 stable, bug #288963
