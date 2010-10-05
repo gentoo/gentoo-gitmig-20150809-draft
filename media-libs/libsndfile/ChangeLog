@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.114 2010/09/05 09:26:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.115 2010/10/05 18:28:51 radhermit Exp $
+
+*libsndfile-1.0.22 (05 Oct 2010)
+
+  05 Oct 2010; Tim Harder <radhermit@gentoo.org> +libsndfile-1.0.22.ebuild:
+  Version bump, minor bug fixes. Bump libvorbis dependency, remove unused
+  libtool eclass, update to EAPI=3, use src_prepare instead of src_unpack,
+  and use src_configure instead of src_compile.
 
 *libsndfile-1.0.21-r1 (05 Sep 2010)
 
