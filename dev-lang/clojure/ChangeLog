@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/clojure
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.4 2010/09/27 07:39:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.5 2010/10/05 19:14:59 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> clojure-1.2.0.ebuild:
+  x86 stable, bug #338386
 
   27 Sep 2010; Markos Chandras <hwoarang@gentoo.org> clojure-1.2.0.ebuild:
   Stable on amd64 wrt bug #338386
