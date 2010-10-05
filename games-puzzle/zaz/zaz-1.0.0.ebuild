@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.3 2010/09/30 08:45:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.4 2010/10/05 19:39:28 maekke Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/zaz/${P}.tar.bz2"
 
 LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND="virtual/opengl
