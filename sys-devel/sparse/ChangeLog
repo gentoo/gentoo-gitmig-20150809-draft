@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.30 2010/03/02 17:45:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.31 2010/10/05 08:41:29 vapier Exp $
+
+  05 Oct 2010; Mike Frysinger <vapier@gentoo.org> sparse-0.4.2.ebuild,
+  sparse-9999.ebuild:
+  Clean up ebuilds a bit and make sure compilation happens in src_compile.
 
   02 Mar 2010; Doug Goldstein <cardoe@gentoo.org> sparse-0.4.2.ebuild,
   sparse-9999.ebuild:
