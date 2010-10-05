@@ -4,8 +4,11 @@
   <herd>qt</herd>
   <use>
     <flag name='kde'>Enable KDE4 support. This adds a QtCurve configuration
-      module to KDE's SystemSettings.
+		module to KDE's SystemSettings.
     </flag>
+	<flag name='parentless-dialog-fix'>Enable support for the "parent-less dialog
+		fix" option. WARNING: Upstream allows this, but does NOT support it.
+	</flag>
 	<flag name='windeco'>Enable window decoration for KWin.</flag>
   </use>
 </pkgmetadata>

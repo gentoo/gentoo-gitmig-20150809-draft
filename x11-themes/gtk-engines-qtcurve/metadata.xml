@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>qt</herd>
-  <longdescription>
-    The gtk-engines-qtcurve package offers a cross-toolkit uniform look and
-    feel, together with the qtcurve and qtcurve-qt4 packages, for GTK+, Qt
-    and KDE based applications.
-  </longdescription>
-  <use>
-    <flag name="firefox3">Install GUI theme tweaks for version 3 of
-      <pkg>www-client/firefox</pkg>
-    </flag>
-    <flag name="mozilla">Install GUI theme tweaks for mozilla based
-      browsers, including version 2 of
-      <pkg>www-client/firefox</pkg>
-    </flag>
-  </use>
+	<herd>qt</herd>
+	<longdescription>
+		The gtk-engines-qtcurve package offers a cross-toolkit uniform look and
+		feel, together with the qtcurve and qtcurve-qt4 packages, for GTK+, Qt
+		and KDE based applications.
+	</longdescription>
+	<use>
+		<flag name="firefox3">Install GUI theme tweaks for version 3 of
+			<pkg>www-client/firefox</pkg>
+		</flag>
+		<flag name="mozilla">Install GUI theme tweaks for mozilla based
+			browsers, including version 2 of
+			<pkg>www-client/firefox</pkg>
+		</flag>
+		<flag name='parentless-dialog-fix'>Enable support for the "parent-less dialog
+			fix" option. WARNING: Upstream allows this, but does NOT support it.
+		</flag>
+	</use>
 </pkgmetadata>
