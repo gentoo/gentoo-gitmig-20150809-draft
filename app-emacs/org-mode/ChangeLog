@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.110 2010/09/27 21:30:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.111 2010/10/05 19:18:49 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> org-mode-6.36c.ebuild:
+  x86 stable, bug #338726
 
   27 Sep 2010; Markos Chandras <hwoarang@gentoo.org> org-mode-6.36c.ebuild:
   Stable on amd64 wrt bug #338726
