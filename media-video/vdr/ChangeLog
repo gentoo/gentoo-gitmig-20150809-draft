@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.137 2010/09/08 16:16:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.138 2010/10/05 13:12:43 zzam Exp $
+
+  05 Oct 2010; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-add-svdrp-down-0.1.diff, -vdr-1.4.6.ebuild,
+  -vdr-1.4.7-r10.ebuild, -vdr-1.4.7-r11.ebuild, -vdr-1.4.7-r12.ebuild,
+  -files/vdr-1.4.7-gcc-4.3.diff, -files/vdr-1.4.7-makefile-destdir.diff,
+  -files/vdr-1.4.7-makefile-install-header.diff,
+  -files/vdr-set-dumpable.diff, metadata.xml:
+  Removed the old vdr-1.4 ebuilds.
 
 *vdr-1.6.0_p2-r4 (08 Sep 2010)
 

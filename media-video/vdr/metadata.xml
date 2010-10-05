@@ -7,12 +7,8 @@
 		<name>Gentoo VDR Project</name>
 	</maintainer>
 	<use>
-		<flag name="aio">Use &quot;all in one&quot; patch (or its successor &quot;liemikuutio&quot;) with much additional features</flag>
 		<flag name="analogtv">Add support for the analogtv plugin</flag>
 		<flag name="atsc">Support for NorthAmerican Broadcast ( rudimentary )</flag>
-		<flag name="bigpatch">Enables almost all additional features flying around on the net (including aio)</flag>
-		<flag name="child-protection">Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)</flag>
-		<flag name="cmdctrl">allows switching remote control on/off</flag>
 		<flag name="cmdreccmdi18n">loads translated commands and reccommands files if existing</flag>
 		<flag name="cmdsubmenu">Allows the creation of submenus in the commands menu</flag>
 		<flag name="cutterlimit">Limit IO bandwith used for cutting</flag>
@@ -21,7 +17,6 @@
 		<flag name="ddepgentry">remove duplicate EPG entries</flag>
 		<flag name="deltimeshiftrec">Auto delete timeshift recordings</flag>
 		<flag name="dolbyinrec">add a dedicated switch to control recording of dolby digital</flag>
-		<flag name="dolby-record-switch">Allows to control separately to record / to replay dolby digital</flag>
 		<flag name="dvbplayer">Use some special mpeg-repacker features. Most usable for old recordings or software output devices.</flag>
 		<flag name="dvbsetup">Setup for AC3 transfer, disable primary tuner</flag>
 		<flag name="dvdarchive">DMH DVD - Archiv ( used by vdr-burn-0.1.0_* )</flag>
@@ -29,7 +24,6 @@
 		<flag name="dvlfriendlyfnames">filter file names on recording</flag>
 		<flag name="dvlrecscriptaddon">enhancement for record-script</flag>
 		<flag name="dvlvidprefer">controls video-dir choice on recording</flag>
-		<flag name="dxr3-audio-denoise">Mutes audio noise occurring with dxr3-cards using analog audio-out when e.g. cutting</flag>
 		<flag name="dxr3">Enable tweaks to improve vdr behaviour on dxr3-cards</flag>
 		<flag name="em84xx">Add support for em84xx plugin</flag>
 		<flag name="graphtft">support for grapftft plugin up from vdr-graphtft-0.1.7</flag>
@@ -40,7 +34,6 @@
 		<flag name="lircsettings">Allows to change lirc settings delay, freq and timeout values in OSD</flag>
 		<flag name="livebuffer">does timeshifting/background recording all the time, allows to rewind live TV</flag>
 		<flag name="lnbshare">Enables support for two or more dvb cards sharing the same cable to the lnb</flag>
-		<flag name="lnbsharing">Enables support for two or more dvb cards sharing the cable to the lnb</flag>
 		<flag name="mainmenuhooks">Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)</flag>
 		<flag name="menuorg">Enables support for the menuorg-plugin</flag>
 		<flag name="noepg">Adds code to selectively disable epg-reception for specific channels</flag>
@@ -50,14 +43,9 @@
 		<flag name="rotor">Enable support for plugin vdr-rotor for dish-positioner.</flag>
 		<flag name="settime">set system time per script instead of via syscal</flag>
 		<flag name="setup">Enable support for the plugin vdr-setup</flag>
-		<flag name="setup-plugin">Enable support for the plugin vdr-setup</flag>
-		<flag name="shutdown_rewrite">use rewritten shutdown code from vdr-1.5</flag>
 		<flag name="softosd">Soft OSD fading with FF-Cards</flag>
 		<flag name="sortrecords">allows to change sort order of recordings</flag>
 		<flag name="sourcecaps">Adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)</flag>
-		<flag name="submenu">Enable support for the plugin vdr-submenu.</flag>
-		<flag name="subtitles">Enable support for the subtitles-plugin</flag>
-		<flag name="switchtimer">support for timer that do not record but only switch to a channel</flag>
 		<flag name="syncearly">start live display as soon as possible, not waiting for sync of audio and video</flag>
 		<flag name="timercmd">Adds submenu for user defined commands in timer menu</flag>
 		<flag name="timerinfo">Show with chars +/- if space on HD will suffice for a timer</flag>
