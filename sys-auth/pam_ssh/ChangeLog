@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.39 2010/09/29 21:20:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.40 2010/10/05 19:58:10 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> pam_ssh-1.97-r2.ebuild:
+  amd64/x86 stable, bug #339176
 
   29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/pam_ssh-1.91-debian.patch, -files/pam_ssh-1.91-openssl-0.9.8.patch,
