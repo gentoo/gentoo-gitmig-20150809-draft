@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.22.ebuild,v 1.7 2010/01/10 18:29:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.22.ebuild,v 1.8 2010/10/05 10:18:45 ssuominen Exp $
+
+EAPI=2
+inherit autotools
 
 DESCRIPTION="A Window Matching utility similar to Sawfish's Matched Windows feature"
 HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"
@@ -17,15 +20,17 @@ RDEPEND=">=dev-libs/glib-2.10
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
-	sys-devel/gettext"
+	sys-devel/gettext
+	gnome-base/gnome-common" # Required by eautoreconf
 
-src_unpack() {
-	unpack ${A}
-	sed -i -e "s:\(/usr/share/doc/devilspie\):\1-${PVR}:" "${S}"/devilspie.1
+src_prepare() {
+	sed -i -e "s:\(/usr/share/doc/devilspie\):\1-${PVR}:" devilspie.1 || die
+	sed -i -e '/-DG.*_DISABLE_DEPRECATED/d' src/Makefile.am || die
+	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	keepdir /etc/devilspie
 }
