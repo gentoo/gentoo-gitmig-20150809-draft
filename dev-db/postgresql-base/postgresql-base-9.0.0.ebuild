@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.0.ebuild,v 1.3 2010/10/01 10:35:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.0.ebuild,v 1.4 2010/10/05 13:49:35 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/postgresql-${MY_PV}
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
 LINGUAS="af cs de es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
-IUSE="doc kerberos nls pam pg_legacytimestamp readline ssl threads zlib ldap"
+IUSE="doc kerberos ldap nls pam pg_legacytimestamp readline ssl threads zlib"
 
 for lingua in ${LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
