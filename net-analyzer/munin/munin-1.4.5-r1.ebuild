@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.4.ebuild,v 1.5 2010/06/17 20:30:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.5-r1.ebuild,v 1.1 2010/10/05 13:58:06 darkside Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/munin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc irc java minimal mysql postgres ssl"
 
 # Upstream's listing of required modules is NOT correct!
@@ -26,7 +26,6 @@ DEPEND_COM="dev-lang/perl
 			ssl? ( dev-perl/Net-SSLeay )
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			dev-perl/DateManip
-			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
@@ -40,7 +39,8 @@ DEPEND_COM="dev-lang/perl
 			virtual/perl-Text-Balanced
 			virtual/perl-Time-HiRes
 			!minimal? ( dev-perl/HTML-Template
-						net-analyzer/rrdtool[perl] )"
+						net-analyzer/rrdtool[perl]
+						dev-perl/Log-Log4perl )"
 			# Sybase isn't supported in Gentoo
 			#munin-sybase? (	 dev-perl/DBD-Sybase )
 
@@ -58,7 +58,7 @@ pkg_setup() {
 src_prepare() {
 	# upstream needs a lot of DESTDIR loving
 	# and Gentoo location support
-	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.4.4-Makefile.patch
 
 	# Don't build java plugins if not requested via USE.
 	if ! use java; then
@@ -95,7 +95,12 @@ src_install() {
 	dirs="${dirs} /etc/munin/plugins/"
 	keepdir ${dirs}
 
-	emake -j 1 DESTDIR="${D}" install || die "install failed"
+	if use minimal; then
+		emake -j 1 DESTDIR="${D}" install-common-prime install-node-prime \
+			install-plugins-prime || die "install failed"
+	else
+		emake -j 1 DESTDIR="${D}" install || die "install failed"
+	fi
 	fowners munin:munin ${dirs} || die
 
 	insinto /etc/munin/plugin-conf.d/
