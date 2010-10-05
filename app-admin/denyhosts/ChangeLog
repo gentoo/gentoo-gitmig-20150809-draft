@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.39 2010/06/01 18:06:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.40 2010/10/05 17:12:38 darkside Exp $
+
+  05 Oct 2010; Jeremy Olexa <darkside@gentoo.org> files/denyhosts.init:
+  Add CVS Header for easier troubleshooting
 
 *denyhosts-2.6-r3 (01 Jun 2010)
 
