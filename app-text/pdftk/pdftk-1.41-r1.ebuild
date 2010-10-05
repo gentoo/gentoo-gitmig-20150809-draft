@@ -1,21 +1,23 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.41-r1.ebuild,v 1.7 2010/07/09 09:25:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.41-r1.ebuild,v 1.8 2010/10/05 22:48:26 ssuominen Exp $
 
 EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="A tool for manipulating PDF documents"
-HOMEPAGE="http://www.pdfhacks.com/pdftk"
+HOMEPAGE="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/"
 SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nodrm"
+
 DEPEND=">=sys-devel/gcc-4.3.1[gcj]"
 
-S="${WORKDIR}/${P}/${PN}"
+S=${WORKDIR}/${P}/${PN}
 
 src_unpack() {
 	unpack ${A}
