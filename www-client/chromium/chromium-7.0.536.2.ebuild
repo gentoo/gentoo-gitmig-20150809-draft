@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.536.2.ebuild,v 1.2 2010/10/04 10:55:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.536.2.ebuild,v 1.3 2010/10/05 09:47:22 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -64,9 +64,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Add Gentoo plugin paths.
-	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
-
 	# Small fixes to the system-provided sqlite support,
 	# to be upstreamed.
 	epatch "${FILESDIR}"/${PN}-system-sqlite-r0.patch

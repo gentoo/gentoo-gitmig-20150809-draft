@@ -41,4 +41,4 @@ esac
 # Set the .desktop file name
 export CHROME_DESKTOP="chromium-chromium.desktop"
 
-exec "$PROGDIR/chrome" "$@"
+exec "$PROGDIR/chrome" --extra-plugin-dir=/usr/lib/nsbrowser/plugins "$@"
