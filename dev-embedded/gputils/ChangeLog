@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/gputils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.37 2009/09/23 16:39:33 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.38 2010/10/05 00:40:58 vapier Exp $
+
+*gputils-0.13.7 (05 Oct 2010)
+
+  05 Oct 2010; Mike Frysinger <vapier@gentoo.org> +gputils-0.13.7.ebuild,
+  +files/gputils-0.13.7-strncat.patch:
+  Version bump #275510 by Urriellu.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> gputils-0.12.4.ebuild,
   gputils-0.13.3.ebuild:
