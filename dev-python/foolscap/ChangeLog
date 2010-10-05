@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.22 2010/09/29 15:13:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.23 2010/10/05 19:11:04 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> foolscap-0.5.1.ebuild:
+  x86 stable, bug #337142
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> foolscap-0.5.1.ebuild:
   Marking foolscap-0.5.1 ppc for bug 337142
