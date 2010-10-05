@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.332 2010/10/05 02:08:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.333 2010/10/05 20:05:01 vapier Exp $
+
+  05 Oct 2010; Mike Frysinger <vapier@gentoo.org> wine-1.3.4.ebuild,
+  wine-9999.ebuild:
+  Update pulseaudio patches #339794.
 
 *wine-1.3.4 (05 Oct 2010)
 
