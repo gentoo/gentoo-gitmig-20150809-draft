@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-9999.ebuild,v 1.3 2010/01/31 19:54:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-9999.ebuild,v 1.4 2010/10/05 21:22:03 pacho Exp $
 
 EAPI=2
 
-inherit linux-info mono eutils flag-o-matic multilib go-mono
+inherit linux-info mono eutils flag-o-matic multilib go-mono pax-utils
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com"
@@ -12,30 +12,28 @@ HOMEPAGE="http://www.go-mono.com"
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
 KEYWORDS=""
-IUSE="xen moonlight minimal"
+IUSE="hardened xen moonlight minimal"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
-	dev-libs/glib:2
+	>=dev-libs/glib-2.4:2
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
-	ia64? (
-		sys-libs/libunwind
-	)"
+	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
 	|| ( www-client/links www-client/lynx )"
 
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
-	>=app-shells/bash-3.2"
-PDEPEND="dev-dotnet/pe-format"
+	>=app-shells/bash-3.2
+	hardened? ( sys-apps/paxctl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
 RESTRICT="test"
 
 PATCHES=(
-	"${WORKDIR}/mono-2.2-libdir126.patch"
+	"${WORKDIR}/${P}-libdir.patch"
 	"${FILESDIR}/mono-2.2-ppc-threading.patch"
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
 )
@@ -43,10 +41,10 @@ PATCHES=(
 pkg_setup() {
 	if ! has_version dev-lang/mono
 	then
-		eerror "To compile the SVN version of mono, you must first have a working install of"
+		eerror "To compile the GIT version of mono, you must first have a working install of"
 		eerror "dev-lang/mono. Preferably one that is not too old relative to the branch you're"
 		eerror "trying to build."
-		die "A working install of dev-lang/mono is required for building the SVN version."
+		die "A working install of dev-lang/mono is required for building the GIT version."
 	fi
 	if use kernel_linux
 	then
@@ -69,18 +67,19 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	subversion_fetch "${ESVN_REPO_URI}" mono || die "subversion_fetch mono failed"
-	subversion_fetch "${ESVN_REPO_URI%/mono}/mcs" mono/mcs || die "subversion_fetch mcs failed"
-	S="${WORKDIR}/${P}/mono"
-}
-
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
-		< "${FILESDIR}"/mono-2.2-libdir126.patch \
-		> "${WORKDIR}"/mono-2.2-libdir126.patch ||
+		< "${FILESDIR}"/${P}-libdir.patch \
+		> "${WORKDIR}"/${P}-libdir.patch ||
 		die "Sedding patch file failed"
 	go-mono_src_prepare
+
+	# we need to sed in the paxctl -m in the runtime/mono-wrapper.in so it don't
+	# get killed in the build proces when MPROTEC is enable. #286280
+	if use hardened ; then
+		ewarn "We are disabling MPROTECT on the mono binary."
+		sed '/exec/ i\paxctl -m "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
+	fi
 }
 
 src_configure() {
@@ -92,18 +91,18 @@ src_configure() {
 
 	#NOTE: We need the static libs for now so mono-debugger works.
 	#See http://bugs.gentoo.org/show_bug.cgi?id=256264 for details
+
+	#--with-glib=system configure: error: --with-glib=system is no longer supported as of Mono 2.8
+	#--static_mono=yes (default anyway)
+
 	go-mono_src_configure \
-		--enable-static \
 		--disable-quiet-build \
-		--with-preview \
-		--with-glib=system \
 		$(use_with moonlight) \
 		--with-libgdiplus=$(use minimal && printf "no" || printf "installed" ) \
 		$(use_with xen xen_opt) \
 		--without-ikvm-native \
 		--with-jit \
 		--disable-dtrace
-
 }
 
 src_test() {
@@ -126,6 +125,10 @@ src_install() {
 		"${D}"/usr/bin/mod || die "Failed to fix mod."
 
 	find "${D}"/usr/ -name '*nunit-docs*' -exec rm -rf '{}' '+' || die "Removing nunit .docs failed"
+
+	# Remove Jay to avoid colliding with dev-util/jay, the internal
+	# version is only used to build mcs.
+	rm -r "${D}"/usr/share/jay "${D}"/usr/bin/jay "${D}"/usr/share/man/man1/jay.1*
 }
 
 #THINK!!!! Before touching postrm and postinst
@@ -149,10 +152,10 @@ pkg_preinst() {
 				einfo "be advised that this is a known problem, which will now be fixed:"
 				ebegin "Found broken symlinks created by $(best_version dev-lang/mono), fixing"
 				for symlink in						\
-				    "${ROOT}/${NUNIT_DIR}"				\
-				    "${ROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
-				    "${ROOT}/usr/bin/nunit-console"			\
-				    "${ROOT}/usr/bin/nunit-console2"
+					"${ROOT}/${NUNIT_DIR}"				\
+					"${ROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
+					"${ROOT}/usr/bin/nunit-console"			\
+					"${ROOT}/usr/bin/nunit-console2"
 				do
 					if [[ -L "${symlink}" ]]
 					then
