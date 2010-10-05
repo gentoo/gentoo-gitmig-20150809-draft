@@ -1,18 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.7.1-r1.ebuild,v 1.3 2010/07/11 12:52:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.ebuild,v 1.1 2010/10/05 20:36:34 pacho Exp $
 
 EAPI=2
 
-inherit base mono eutils autotools
+inherit base mono eutils
 
 DESCRIPTION="A flexible, irssi-like and user-friendly IRC client for the Gnome Desktop."
-HOMEPAGE="http://www.smuxi.org/page/Download"
-SRC_URI="http://smuxi.meebey.net/jaws/data/files/${P}.tar.gz"
+HOMEPAGE="http://www.smuxi.org/main/"
+SRC_URI="http://www.smuxi.org/jaws/data/files/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="gnome"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug gnome libnotify"
 LICENSE="|| ( GPL-2 GPL-3 )"
 
 RDEPEND=">=dev-lang/mono-2.0
@@ -22,21 +22,25 @@ RDEPEND=">=dev-lang/mono-2.0
 	gnome? ( >=dev-dotnet/gtk-sharp-2.12
 		 >=dev-dotnet/gconf-sharp-2.12
 		 >=dev-dotnet/glade-sharp-2.12
-		 >=dev-dotnet/glib-sharp-2.12 )"
+		 >=dev-dotnet/glib-sharp-2.12 )
+	libnotify? ( dev-dotnet/notify-sharp )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.25
 	>=sys-devel/gettext-0.17
 	>=dev-util/pkgconfig-0.23"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-mono26.patch"
-	eautoreconf
-}
-
 src_configure() {
 	econf	--disable-dependency-tracking	\
 		--enable-engine-irc		\
-		$(use_enable gnome frontend-gnome)
+		--without-indicate		\
+		$(use_enable debug)		\
+		$(use_enable gnome frontend-gnome) \
+		$(use_with libnotify notify)
+}
+
+src_compile() {
+	# This is not parallel build safe, see upstream bug #515
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

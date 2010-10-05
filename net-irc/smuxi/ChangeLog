@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.11 2010/09/23 22:16:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.12 2010/10/05 20:36:34 pacho Exp $
+
+*smuxi-0.8 (05 Oct 2010)
+
+  05 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/smuxi-0.6.3-infinite-loop.patch, -files/smuxi-0.6.3-mono-2.2.patch,
+  -smuxi-0.7.1-r1.ebuild, -files/smuxi-0.7.1-mono26.patch,
+  +smuxi-0.8.ebuild:
+  Version bump with some UI improvements (bug #339830 by Thomas Kahle),
+  remove old.
 
   23 Sep 2010; Markos Chandras <hwoarang@gentoo.org> smuxi-0.7.2.1.ebuild:
   Stable on amd64 wrt bug #336851
