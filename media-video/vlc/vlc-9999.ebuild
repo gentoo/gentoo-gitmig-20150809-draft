@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.92 2010/09/21 07:58:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.93 2010/10/05 15:23:33 aballier Exp $
 
 EAPI="3"
 
@@ -94,7 +94,7 @@ RDEPEND="
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2008.07.06 )
 		lua? ( >=dev-lang/lua-5.1 )
-		matroska? (	>=dev-libs/libebml-0.7.6 >=media-libs/libmatroska-0.8.0 )
+		matroska? (	>=dev-libs/libebml-1.0.0 >=media-libs/libmatroska-1.0.0 )
 		modplug? ( >=media-libs/libmodplug-0.8.8.1 )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.626 2010/09/29 01:20:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.627 2010/10/05 15:23:33 aballier Exp $
+
+  05 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump ebml and matroska requirements
 
 *vlc-1.1.4.1 (29 Sep 2010)
 
