@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/mox-0.5.3.ebuild,v 1.3 2010/09/29 15:49:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/mox-0.5.3.ebuild,v 1.4 2010/10/05 19:49:02 maekke Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://pymox.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 PYTHON_MODNAME="mox.py stubout.py"
