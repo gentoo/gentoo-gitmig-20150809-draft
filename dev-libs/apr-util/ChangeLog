@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.150 2010/10/04 12:15:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.151 2010/10/05 20:25:49 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> apr-util-1.3.10.ebuild:
+  x86 stable, bug #339527
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org> apr-util-1.3.10.ebuild:
   Stable on amd64 wrt bug #339527
