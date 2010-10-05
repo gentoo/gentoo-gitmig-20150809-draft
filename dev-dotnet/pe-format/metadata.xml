@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>dotnet</herd>
 <maintainer>
-	<email>gentoo@mgorny.alt.pl</email>
+	<email>mgorny@gentoo.org</email>
 	<name>Michał Górny</name>
-	<description>Proxy maintainer, please CC him in bug reports and
-	assign to dotnet.</description>
 </maintainer>
 </pkgmetadata>
