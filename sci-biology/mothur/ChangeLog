@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/mothur
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.7 2010/09/26 02:30:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.8 2010/10/05 08:27:06 xarthisius Exp $
+
+*mothur-1.13.0-r1 (05 Oct 2010)
+
+  05 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -mothur-1.7.2-r1.ebuild, -mothur-1.13.0.ebuild, +mothur-1.13.0-r1.ebuild,
+  +files/mothur-1.13.0-makefile.patch, +files/mothur-1.13.0-overflows.patch:
+  Fix buffer overflows and building with --as-needed wrt bug 339753. Thanks
+  to Diego for the report. Correct dependencies. Drop old.
 
 *mothur-1.13.0 (26 Sep 2010)
 
