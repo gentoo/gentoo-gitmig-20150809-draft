@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.259 2010/09/30 19:47:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.260 2010/10/05 03:42:56 darkside Exp $
+
+*dovecot-2.0.5 (05 Oct 2010)
+
+  05 Oct 2010; Jeremy Olexa <darkside@gentoo.org> +dovecot-2.0.5.ebuild:
+  Version bump bug #337928 by Eray Aslan. Sieve bump to 0.2.1. Add vpopmail
+  USE flag back.
 
   30 Sep 2010; Markus Meier <maekke@gentoo.org> dovecot-1.2.13-r1.ebuild:
   amd64/x86 stable, bug #335383
