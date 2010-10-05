@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.741 2010/10/01 17:14:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.742 2010/10/05 17:15:04 zmedico Exp $
+
+*portage-2.2_rc89 (05 Oct 2010)
+
+  05 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc89.ebuild:
+  2.2_rc89 version bump. This fixes bug #339606 (regression in 'updates
+  have been skipped' message). Aside from changes intended only for the
+  stable branch, 2.2_rc89 is identical to 2.1.9.13.
 
 *portage-2.1.9.13 (01 Oct 2010)
 
