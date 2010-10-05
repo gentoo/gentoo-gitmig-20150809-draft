@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5.ebuild,v 1.1 2010/09/28 21:29:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.1 2010/10/05 00:26:56 leio Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,9 +12,12 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc glade"
 
+# FIXME: We could avoid the glade conditional and dep completely if upstream
+# would have a --with-glade-catalogdir that would allow to pass the system
+# glade catalog dir, instead of needing gladeui-1.0.pc installed from dev-util/glade
 RDEPEND=">=x11-libs/gtk+-2.12
 	>=dev-libs/libxml2-2.5
 	>=dev-libs/glib-2.14
@@ -27,10 +30,10 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 
-pkg_config() {
+pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
-		$(use-enable glade glade-catalog)"
+		$(use_enable glade glade-catalog)"
 }
 
 src_prepare() {
