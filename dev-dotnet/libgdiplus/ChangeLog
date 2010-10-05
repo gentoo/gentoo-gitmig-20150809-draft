@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.120 2010/09/12 14:08:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.121 2010/10/05 20:53:39 pacho Exp $
+
+  05 Oct 2010; Pacho Ramos <pacho@gentoo.org> libgdiplus-9999.ebuild:
+  Update 9999 ebuild for using git (bug #339230), thanks a lot to Alistair
+  Bush for his help.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> libgdiplus-2.6.7-r1.ebuild:
   Marked ppc stable for bug #334101.
