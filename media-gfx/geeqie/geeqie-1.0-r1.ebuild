@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.5 2010/07/11 12:47:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.6 2010/10/05 20:43:47 voyageur Exp $
 
 EAPI=2
 
@@ -27,13 +27,18 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		--with-readmedir=/usr/share/doc/${PF} \
-		$(use_enable exif exiv2) \
-		$(use_enable lcms) \
-		$(use_enable lirc) \
-		|| die "econf faild"
+	local myconf="--disable-dependency-tracking
+		--with-readmedir=/usr/share/doc/${PF}
+		$(use_enable lcms)
+		$(use_enable lirc)"
+
+	if use exif || use xmp; then
+		myconf="${myconf} --enable-exiv2"
+	else
+		myconf="${myconf} --disable-exiv2"
+	fi
+
+	econf ${myconf} || die "econf failed"
 }
 
 src_install() {
