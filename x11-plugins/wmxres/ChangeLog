@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmxres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.8 2010/08/23 17:52:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.9 2010/10/05 20:29:16 voyageur Exp $
+
+  05 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> wmxres-1.2.ebuild:
+  Newer dga headers require libXxf86dga, thanks Agostino Sarubbo
+  <ago@autistici.org> in bug #338805
 
   23 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org> wmxres-1.2.ebuild:
   Respect LDFLAGS, bug #331821 by flameeyes

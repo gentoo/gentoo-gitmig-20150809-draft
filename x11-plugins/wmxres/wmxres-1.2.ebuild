@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.8 2010/08/23 17:52:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.9 2010/10/05 20:29:16 voyageur Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -18,9 +18,9 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
+	x11-libs/libXxf86dga
 	x11-proto/xextproto
-	x11-proto/xf86vidmodeproto
-	x11-proto/xf86dgaproto"
+	x11-proto/xf86vidmodeproto"
 
 S=${WORKDIR}/${PN}.app
 
