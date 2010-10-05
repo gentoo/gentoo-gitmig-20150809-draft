@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.4.ebuild,v 1.1 2010/09/27 21:54:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.4-r1.ebuild,v 1.1 2010/10/05 08:49:12 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -79,6 +79,9 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# sftp: fix poll() timeout, bug #339695
+	epatch "${FILESDIR}/${P}-sftp-timeout.patch"
 
 	# Conditional patching purely to avoid eautoreconf
 	use gphoto2 && epatch "${FILESDIR}/${PN}-1.2.2-gphoto2-stricter-checks.patch"
