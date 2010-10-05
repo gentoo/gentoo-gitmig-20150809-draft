@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.4.ebuild,v 1.2 2010/08/09 13:00:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.4.ebuild,v 1.3 2010/10/05 13:55:53 hwoarang Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ COMMONDEPEND="
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 DEPEND="${COMMONDEPEND}
+	app-text/docbook-xml-dtd:4.2
 	xscreensaver? ( x11-proto/scrnsaverproto )
 "
 RDEPEND="${COMMONDEPEND}
