@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.27 2010/09/12 13:52:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.28 2010/10/05 11:22:39 hanno Exp $
+
+*libhx-3.6 (05 Oct 2010)
+
+  05 Oct 2010; Hanno Boeck <hanno@gentoo.org> +libhx-3.6.ebuild:
+  Version bump.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> libhx-3.5.ebuild:
   Marked ppc stable for bug #333635.
