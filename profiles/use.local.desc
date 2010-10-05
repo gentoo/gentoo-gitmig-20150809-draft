@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6010 2010/10/05 00:33:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6011 2010/10/05 13:33:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2287,12 +2287,8 @@ media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/tsmuxer:qt4 - Installs tsMuxerGUI (needs Qt4)
 media-video/undvd:ogm - Support for OGM container format
 media-video/ushare:dlna - Add DLNA (media-libs/libdlna) support
-media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
 media-video/vdr:analogtv - Add support for the analogtv plugin
 media-video/vdr:atsc - Support for NorthAmerican Broadcast ( rudimentary )
-media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
-media-video/vdr:child-protection - Enable support for the plugin vdr-pin (Protecting some recordings / channels with a PIN)
-media-video/vdr:cmdctrl - allows switching remote control on/off
 media-video/vdr:cmdreccmdi18n - loads translated commands and reccommands files if existing
 media-video/vdr:cmdsubmenu - Allows the creation of submenus in the commands menu
 media-video/vdr:cutterlimit - Limit IO bandwith used for cutting
@@ -2300,7 +2296,6 @@ media-video/vdr:cutterqueue - Adds a queue of recordings to be cutted
 media-video/vdr:cuttime - Adjust starttime of cutted recording by length of cut out parts
 media-video/vdr:ddepgentry - remove duplicate EPG entries
 media-video/vdr:deltimeshiftrec - Auto delete timeshift recordings
-media-video/vdr:dolby-record-switch - Allows to control separately to record / to replay dolby digital
 media-video/vdr:dolbyinrec - add a dedicated switch to control recording of dolby digital
 media-video/vdr:dvbplayer - Use some special mpeg-repacker features. Most usable for old recordings or software output devices.
 media-video/vdr:dvbsetup - Setup for AC3 transfer, disable primary tuner
@@ -2310,7 +2305,6 @@ media-video/vdr:dvlfriendlyfnames - filter file names on recording
 media-video/vdr:dvlrecscriptaddon - enhancement for record-script
 media-video/vdr:dvlvidprefer - controls video-dir choice on recording
 media-video/vdr:dxr3 - Enable tweaks to improve vdr behaviour on dxr3-cards
-media-video/vdr:dxr3-audio-denoise - Mutes audio noise occurring with dxr3-cards using analog audio-out when e.g. cutting
 media-video/vdr:em84xx - Add support for em84xx plugin
 media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.7
 media-video/vdr:hardlinkcutter - Speed up cutting by hardlinking unchanged files
@@ -2320,7 +2314,6 @@ media-video/vdr:liemikuutio - Formerly known as AIO (all-in-one) patch, adds som
 media-video/vdr:lircsettings - Allows to change lirc settings delay, freq and timeout values in OSD
 media-video/vdr:livebuffer - does timeshifting/background recording all the time, allows to rewind live TV
 media-video/vdr:lnbshare - Enables support for two or more dvb cards sharing the same cable to the lnb
-media-video/vdr:lnbsharing - Enables support for two or more dvb cards sharing the cable to the lnb
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the menuorg-plugin
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
@@ -2330,14 +2323,9 @@ media-video/vdr:pinplugin - Support for pin plugin
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
 media-video/vdr:setup - Enable support for the plugin vdr-setup
-media-video/vdr:setup-plugin - Enable support for the plugin vdr-setup
-media-video/vdr:shutdown_rewrite - use rewritten shutdown code from vdr-1.5
 media-video/vdr:softosd - Soft OSD fading with FF-Cards
 media-video/vdr:sortrecords - allows to change sort order of recordings
 media-video/vdr:sourcecaps - Adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
-media-video/vdr:submenu - Enable support for the plugin vdr-submenu.
-media-video/vdr:subtitles - Enable support for the subtitles-plugin
-media-video/vdr:switchtimer - support for timer that do not record but only switch to a channel
 media-video/vdr:syncearly - start live display as soon as possible, not waiting for sync of audio and video
 media-video/vdr:timercmd - Adds submenu for user defined commands in timer menu
 media-video/vdr:timerinfo - Show with chars +/- if space on HD will suffice for a timer
