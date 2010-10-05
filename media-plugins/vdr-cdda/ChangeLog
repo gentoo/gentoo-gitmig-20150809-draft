@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cdda
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.10 2009/12/27 16:40:24 hd_brummy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.11 2010/10/05 17:28:52 ssuominen Exp $
+
+  05 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  vdr-cdda-0.1.0-r1.ebuild, +files/vdr-cdda-0.1.0-glibc-212.patch:
+  Fix building with recent glibc wrt #339194 by Diego E. Pettenò.
 
   27 Dec 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/vdr-cdda-0.1.0_gcc-4.4.patch:
