@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/vdr-cdda-0.1.0-r1.ebuild,v 1.6 2010/10/05 17:28:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/vdr-cdda-0.1.0-r1.ebuild,v 1.7 2010/10/05 18:03:00 ssuominen Exp $
 
 inherit vdr-plugin
 
 DESCRIPTION="Video Disk Recorder - CD Digital Audio"
-HOMEPAGE="http://www.wahnadium.org/vdr-cdda"
+HOMEPAGE="http://www.wahnadium.org/vdr-cdda.html"
 SRC_URI="ftp://ftp.wahnadium.org/pub/vdr-cdda/${P}.tar.gz"
 
 SLOT="0"
