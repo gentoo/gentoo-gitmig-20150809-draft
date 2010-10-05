@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sam2p
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.44 2010/09/26 21:51:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.45 2010/10/05 20:43:00 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> sam2p-0.47.ebuild:
+  x86 stable, bug #334153
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> sam2p-0.47.ebuild:
   ppc64 stable wrt #334153
