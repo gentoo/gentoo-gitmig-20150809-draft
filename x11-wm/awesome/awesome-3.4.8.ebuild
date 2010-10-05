@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.3 2010/10/04 17:50:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.4 2010/10/05 04:24:56 mr_bones_ Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -50,7 +50,7 @@ RDEPEND="${RDEPEND}
 		x11-apps/xmessage
 	)"
 
-# bug #321433: Need one of these to for awsetbg. 
+# bug #321433: Need one of these to for awsetbg.
 # imagemagick provides 'display' and is further down the default list, but
 # listed here for completeness.  'display' however is only usable with
 # x11-apps/xwininfo also present.
