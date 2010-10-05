@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3-r1.ebuild,v 1.2 2010/09/18 11:06:52 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3-r3.ebuild,v 1.1 2010/10/05 17:40:25 hwoarang Exp $
 
 EAPI="2"
 
@@ -56,6 +56,10 @@ done
 PATCHES=(
 	"${FILESDIR}/${PV}_field_asm_fix.diff"
 	"${FILESDIR}/${P}-build-plugins-fix.patch"
+	#bug 327555. Pulseaudio automagic dependency
+	"${FILESDIR}/${PN}-pulseaudiosimple.patch"
+	#bug #338619. The patch was merged upstream
+	"${FILESDIR}/${P}-fix-fgets-fortify.patch"
 )
 
 src_prepare() {
@@ -138,6 +142,7 @@ src_configure() {
 }
 
 src_compile() {
+	append-flags -D__STDC_FORMAT_MACROS
 	# first build the application
 	cmake-utils_src_compile
 	# and then go on with plugins

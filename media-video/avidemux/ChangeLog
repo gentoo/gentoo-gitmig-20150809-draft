@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.173 2010/09/18 11:06:52 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.174 2010/10/05 17:40:25 hwoarang Exp $
+
+*avidemux-2.5.3-r3 (05 Oct 2010)
+
+  05 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  -avidemux-2.5.3-r1.ebuild, -avidemux-2.5.3-r2.ebuild,
+  +avidemux-2.5.3-r3.ebuild, +files/avidemux-2.5.3-fix-fgets-fortify.patch:
+  Apply patch to fix possible buffer overflows. Thanks to Kevin Pyle for the
+  patch. Bug #338619
 
   18 Sep 2010; Fabio Erculiani <lxnay@gentoo.org>
   avidemux-2.5.1_p5428.ebuild, avidemux-2.5.2.ebuild,
