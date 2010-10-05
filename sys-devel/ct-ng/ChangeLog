@@ -1,5 +1,12 @@
 
 
+*ct-ng-1.8.2 (05 Oct 2010)
+*ct-ng-1.8.1 (05 Oct 2010)
+
+  05 Oct 2010; Anthony G. Basile <blueness@gentoo.org> -ct-ng-1.7.1.ebuild,
+  +ct-ng-1.8.1.ebuild, +ct-ng-1.8.2.ebuild, -files/fix-man-path.patch:
+  Version bumps and remove obsolete
+
 *ct-ng-1.8.0 (09 Aug 2010)
 
   09 Aug 2010; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.8.0.ebuild:
