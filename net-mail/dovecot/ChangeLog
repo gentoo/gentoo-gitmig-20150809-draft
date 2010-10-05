@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.260 2010/10/05 03:42:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.261 2010/10/05 12:46:14 darkside Exp $
+
+*dovecot-1.2.15 (05 Oct 2010)
+
+  05 Oct 2010; Jeremy Olexa <darkside@gentoo.org> +dovecot-1.2.15.ebuild:
+  Version bump - security bug #339776
 
 *dovecot-2.0.5 (05 Oct 2010)
 
