@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.0.ebuild,v 1.2 2010/09/20 08:49:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.0.ebuild,v 1.3 2010/10/05 13:56:41 scarabeus Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -22,20 +22,24 @@ S=${WORKDIR}/postgresql-${MY_PV}
 
 LICENSE="POSTGRESQL"
 SLOT="$(get_version_component_range 1-2)"
-IUSE_LINGUAS="
-	linguas_af linguas_cs linguas_de linguas_es linguas_fa linguas_fr
-	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
-	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
-	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="pg_legacytimestamp doc perl python selinux tcl uuid xml nls kernel_linux ${IUSE_LINGUAS}"
+LINGUAS="af cs de es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
+IUSE="doc kernel_linux nls perl pg_legacytimestamp python selinux tcl uuid xml"
+
+for lingua in ${LINGUAS}; do
+	IUSE+=" linguas_${lingua}"
+done
 
 wanted_languages() {
-	for u in ${IUSE_LINGUAS} ; do
-		use $u && echo -n "${u#linguas_} "
+	local enable_langs
+
+	for lingua in ${LINGUAS} ; do
+		use linguas_${lingua} && enable_langs+="${lingua} "
 	done
+
+	echo -n ${enable_langs}
 }
 
-RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=]
+RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pg_legacytimestamp=,nls=]
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( dev-python/egenix-mx-base )
 	selinux? ( sec-policy/selinux-postgresql )
@@ -70,9 +74,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# TODO: test if PPC really cannot work with other CFLAGS settings
-	# use ppc && CFLAGS="-pipe -fsigned-char"
-
 	# eval is needed to get along with pg_config quotation of space-rich entities.
 	eval econf "$(/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --configure)" \
 		--disable-thread-safety \
@@ -85,12 +86,12 @@ src_configure() {
 		--with-system-tzdata="/usr/share/zoneinfo" \
 		--with-includes="/usr/include/postgresql-${SLOT}/" \
 		--with-libraries="/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)" \
-		"$(has_version ~dev-db/postgresql-base-${PV}[nls] && use_enable nls nls "$(wanted_languages)")"
+		"$(use_enable nls nls "$(wanted_languages)")"
 }
 
 src_compile() {
 	local bd
-	for bd in .  contrib $(use xml && echo contrib/xml2); do
+	for bd in . contrib $(use xml && echo contrib/xml2); do
 		PATH="/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake -C $bd -j1 || die "emake in $bd failed"
 	done
@@ -114,7 +115,7 @@ src_install() {
 	dodoc README HISTORY doc/{README.*,TODO,bug.template}
 
 	dodir /etc/eselect/postgresql/slots/${SLOT}
-	cat >"${D}/etc/eselect/postgresql/slots/${SLOT}/service" <<-__EOF__
+	cat > "${D}/etc/eselect/postgresql/slots/${SLOT}/service" <<-__EOF__
 		postgres_ebuilds="\${postgres_ebuilds} ${PF}"
 		postgres_service="postgresql-${SLOT}"
 	__EOF__
