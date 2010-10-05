@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/trimines-1.3.0.ebuild,v 1.3 2009/11/16 14:48:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/trimines-1.3.0.ebuild,v 1.4 2010/10/05 12:39:32 tupone Exp $
+EAPI="2"
 
 inherit eutils toolchain-funcs games
 
@@ -13,15 +14,14 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:data/:${GAMES_DATADIR}/${PN}/:" src/gfx.c \
 		|| die "sed failed"
-	echo "${PN}: ; $(tc-getCC) ${CFLAGS} src/main.c -o ./${PN} \`sdl-config --cflags\` \`sdl-config --libs\`" > Makefile
+	echo "${PN}: ; $(tc-getCC) ${LDFLAGS} ${CFLAGS} src/main.c -o ./${PN} \`sdl-config --cflags\` \`sdl-config --libs\`" > Makefile
 }
 
 src_install() {
