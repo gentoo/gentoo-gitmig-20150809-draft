@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.13 2010/10/02 10:28:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.14 2010/10/05 19:33:57 maekke Exp $
+
+  05 Oct 2010; Markus Meier <maekke@gentoo.org> gsoap-2.7.17.ebuild:
+  amd64/x86 stable, bug #338796
 
   02 Oct 2010; Lars Wendler <polynomial-c@gentoo.org> gsoap-2.7.17.ebuild,
   gsoap-2.8.0.ebuild:
