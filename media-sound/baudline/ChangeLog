@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/baudline
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.1 2010/10/05 02:56:55 xmw Exp $
+
+*baudline-1.08 (05 Oct 2010)
+
+  05 Oct 2010; Michael Weber <xmw@gentoo.org> +baudline-1.08.ebuild,
+  +metadata.xml:
+  Initial import, fixing bug 202845. Thanks to Ilya Kashirin
+  <seclorum@seclorum.ru>, Pham Ngoc Hai <pngochai@yahoo.com> and Denis
+  Pesotsky <obey@obey.su> for their ebuilds and testing on this bug.
+
