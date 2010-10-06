@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.84 2010/10/05 13:56:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.85 2010/10/06 14:58:10 patrick Exp $
+
+*postgresql-server-9.0.1 (06 Oct 2010)
+*postgresql-server-8.4.5 (06 Oct 2010)
+*postgresql-server-8.3.12 (06 Oct 2010)
+*postgresql-server-8.2.18 (06 Oct 2010)
+*postgresql-server-8.1.22 (06 Oct 2010)
+
+  06 Oct 2010; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-server-8.1.22.ebuild, +postgresql-server-8.2.18.ebuild,
+  +postgresql-server-8.3.12.ebuild, +postgresql-server-8.4.5.ebuild,
+  +postgresql-server-9.0.1.ebuild:
+  Bump
 
   05 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   postgresql-server-9.0.0.ebuild:
