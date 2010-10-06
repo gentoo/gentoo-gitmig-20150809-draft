@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.16.ebuild,v 1.9 2009/09/30 20:13:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.16.ebuild,v 1.10 2010/10/06 07:45:27 grobian Exp $
 
 inherit eutils flag-o-matic autotools prefix
 
@@ -19,7 +19,9 @@ IUSE="perl catalogs"
 RESTRICT="test"
 
 # we need gettext because we run autoconf
-DEPEND=">=sys-libs/ncurses-5.1
+RDEPEND=">=sys-libs/ncurses-5.1
+	virtual/libiconv"
+DEPEND="${RDEPEND}
 	sys-devel/gettext
 	perl? ( dev-lang/perl )"
 RDEPEND="${DEPEND}"

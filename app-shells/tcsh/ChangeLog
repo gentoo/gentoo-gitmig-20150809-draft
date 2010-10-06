@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.97 2010/01/24 10:18:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.98 2010/10/06 07:45:27 grobian Exp $
+
+  06 Oct 2010; Fabian Groffen <grobian@gentoo.org> tcsh-6.14-r5.ebuild,
+  tcsh-6.15-r2.ebuild, tcsh-6.16.ebuild, tcsh-6.17-r1.ebuild:
+  Straighten out RDEPEND as suggested by Kevin Pyle in bug #339638
 
 *tcsh-6.17-r1 (24 Jan 2010)
 

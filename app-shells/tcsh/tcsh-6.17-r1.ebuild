@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17-r1.ebuild,v 1.1 2010/01/24 10:18:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17-r1.ebuild,v 1.2 2010/10/06 07:45:27 grobian Exp $
 
 inherit eutils flag-o-matic autotools prefix
 
@@ -18,11 +18,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="catalogs doc"
 RESTRICT="test"
 
-# we need gettext because we run autoconf
-DEPEND=">=sys-libs/ncurses-5.1
+# we need gettext because we run autoconf (AM_ICONV)
+RDEPEND=">=sys-libs/ncurses-5.1
+	virtual/libiconv"
+DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( dev-lang/perl )"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 CONFDIR=${WORKDIR}/tcsh-gentoo-patches-r${CONFVER}
