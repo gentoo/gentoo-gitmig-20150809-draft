@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.425 2010/09/28 10:52:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.426 2010/10/06 21:53:13 eva Exp $
+
+  06 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> glib-2.24.2.ebuild,
+  glib-2.26.0.ebuild,
+  +files/glib-2.26.0-disable-locale-sensitive-test.patch,
+  +files/glib-2.26.0-disable-volumemonitor-broken-test.patch:
+  Fix testsuite failure on hardened, bug #338891. Disable visibility with
+  USE=debug, bug #274647. Disable 3 tests in the 2.26 testsuite to allow a
+  successful run and sync the ebuild back with latest changes in 2.24.
 
 *glib-2.26.0 (28 Sep 2010)
 
