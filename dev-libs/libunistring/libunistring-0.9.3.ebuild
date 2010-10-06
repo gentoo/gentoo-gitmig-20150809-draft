@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/libunistring-0.9.3.ebuild,v 1.1 2010/09/15 21:30:25 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/libunistring-0.9.3.ebuild,v 1.2 2010/10/06 01:46:39 chiiph Exp $
 
 EAPI="3"
+
+inherit eutils
 
 DESCRIPTION="Library for manipulating Unicode strings and C strings according to the Unicode standard"
 HOMEPAGE="http://www.gnu.org/software/libunistring/"
@@ -13,19 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-src_compile() {
-	if use doc; then
-		emake -C doc info html || die "Build doc failed"
-	fi
-
-	emake || die "Build failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-nodocs.patch
 }
 
 src_install() {
-	dodoc AUTHORS README ChangeLog || die
+	dodoc AUTHORS README ChangeLog || die "dodoc failed"
 	if use doc; then
-		dohtml doc/libunistring.html || die
-		doinfo doc/libunistring.info || die
+		dohtml doc/*.html || die "dohtml failed"
+		doinfo doc/*.info || die "doinfo failed"
 	fi
 
 	emake DESTDIR="${D}" install || die "Install failed"
