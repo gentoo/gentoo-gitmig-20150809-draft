@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libunistring
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.3 2010/10/06 01:46:39 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.4 2010/10/06 04:22:11 chiiph Exp $
+
+*libunistring-0.9.3-r1 (06 Oct 2010)
+*libunistring-0.9.1.1-r1 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org>
+  -libunistring-0.9.1.1.ebuild, +libunistring-0.9.1.1-r1.ebuild,
+  -libunistring-0.9.3.ebuild, +libunistring-0.9.3-r1.ebuild:
+  Fix missing revbump for the latest patch added
 
   06 Oct 2010; Tomas Touceda <chiiph@gentoo.org>
   libunistring-0.9.1.1.ebuild, libunistring-0.9.3.ebuild,
