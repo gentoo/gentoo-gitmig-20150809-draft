@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.39 2010/05/11 08:19:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.40 2010/10/06 00:13:11 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -151,11 +151,15 @@ db_src_test() {
 	if useq tcl; then
 		einfo "Running sys-libs/db testsuite"
 		ewarn "This can take 6+ hours on modern machines"
-		# Fix stuff that fails with relative paths
+		# Fix stuff that fails with relative paths, and upstream moving files
+		# around...
 		local test_parallel=''
 		for t in \
 			"${S}"/test/parallel.tcl \
-			"${S}"/../test/parallel.tcl ; do
+			"${S}"/../test/parallel.tcl \
+			"${S}"/test/tcl/parallel.tcl \
+			"${S}"/../test/tcl/parallel.tcl \
+			; do
 			[[ -f "${t}" ]] && test_parallel="${t}" && break
 		done
 
@@ -164,7 +168,13 @@ db_src_test() {
 			-e '/regsub .src_root ./s,(regsub),#\1,g' \
 			"${test_parallel}"
 		cd "${S}"
-		echo 'source ../test/test.tcl' > testrunner.tcl
+		for t in \
+			../test/test.tcl \
+			../test/tcl/test.tcl \
+			; do 
+			[[ -f "${t}" ]] && testbase="${t}" && break
+		done
+		echo "source ${t}" > testrunner.tcl
 		testJobs=`echo "${MAKEOPTS}" | \
 				sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 		if [[ ${testJobs} =~ [[:digit:]]+ ]]; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.151 2010/09/06 08:02:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.152 2010/10/06 00:13:11 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -166,9 +166,12 @@ if [ -z "${SERVER_URI}" ]; then
 		MARIA_FULL_PV="$(replace_version_separator 3 '-' ${PV})"
 		MARIA_FULL_P="${PN}-${MARIA_FULL_PV}"
 		SERVER_URI="
+		http://ftp.osuosl.org/pub/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://ftp.rediris.es/mirror/MariaDB/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://maria.llarian.net/download/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://launchpad.net/maria/${MYSQL_PV_MAJOR}/ongoing/+download/${MARIA_FULL_P}.tar.gz
+		http://mirrors.fe.up.pt/pub/${PN}/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
+		http://ftp-stud.hs-esslingen.de/pub/Mirrors/${PN}/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		"
 	# The community and cluster builds are on the mirrors
 	elif [[ "${MYSQL_COMMUNITY_FEATURES}" == "1" || ${PN} == "mysql-cluster" ]] ; then
@@ -300,7 +303,7 @@ mysql_disable_test() {
 	rawtestname="${1}" ; shift
 	reason="${@}"
 	ewarn "test '${rawtestname}' disabled: '${reason}'"
-	
+
 	testsuite="${rawtestname/.*}"
 	testname="${rawtestname/*.}"
 	mysql_disable_file="${S}/mysql-test/t/disabled.def"
@@ -653,13 +656,21 @@ configure_51() {
 	if [[ "${PN}" == "mariadb" ]] ; then
 		# In MariaDB, InnoDB is packaged in the xtradb directory, so it's not
 		# caught above.
-		plugins_sta="${plugins_sta} maria innobase"
+		plugins_sta="${plugins_sta} maria"
+
+		[ -e "${S}"/storage/innobase ] || [ -e "${S}"/storage/xtradb ] ||
+			die "The ${P} package doesn't provide innobase nor xtradb"
+
+		for i in innobase xtradb ; do
+			[ -e "${S}"/storage/${i} ] && plugins_sta="${plugins_sta} ${i}"
+		done
+
 		myconf="${myconf} $(use_with libevent)"
 		# This is not optional, without it several upstream testcases fail.
 		# Also strongly recommended by upstream.
 		myconf="${myconf} --with-maria-tmp-tables"
 	fi
-	
+
 	if pbxt_available && [[ "${PBXT_NEWSTYLE}" == "1" ]]; then
 		use pbxt \
 		&& plugins_dyn="${plugins_dyn} pbxt" \
@@ -669,7 +680,7 @@ configure_51() {
 	use static && \
 	plugins_sta="${plugins_sta} ${plugins_dyn}" && \
 	plugins_dyn=""
-	
+
 	einfo "Available plugins: ${plugins_avail}"
 	einfo "Dynamic plugins: ${plugins_dyn}"
 	einfo "Static plugins: ${plugins_sta}"
@@ -757,7 +768,7 @@ mysql_pkg_setup() {
 		eerror "${M}"
 		die "${M}"
 	fi
-	
+
 	if mysql_version_is_at_least "5.1" \
 	&& xtradb_patch_available \
 	&& use xtradb \
@@ -837,7 +848,7 @@ mysql_src_prepare() {
 	epatch
 
 	# last -fPIC fixup, per bug #305873
-	i="${S}"/storage/innodb_plugin/plug.in	
+	i="${S}"/storage/innodb_plugin/plug.in
 	[ -f "${i}" ] && sed -i -e '/CFLAGS/s,-prefer-non-pic,,g' "${i}"
 
 	# Additional checks, remove bundled zlib (Cluster needs this, for static
@@ -877,7 +888,7 @@ mysql_src_prepare() {
 		cp -ral "${WORKDIR}/${XTRADB_P}" "${i}"
 		popd >/dev/null
 	fi
-	
+
 	if pbxt_available && [[ "${PBXT_NEWSTYLE}" == "1" ]] && use pbxt ; then
 		einfo "Adding storage engine: PBXT"
 		pushd "${S}"/storage >/dev/null
@@ -1059,20 +1070,19 @@ mysql_src_install() {
 	fi
 
 	# Configuration stuff
-	if mysql_version_is_at_least "5.1" ; then
-		mysql_mycnf_version="5.1"
-	elif mysql_version_is_at_least "4.1" ; then
-		mysql_mycnf_version="4.1"
-	else
-		mysql_mycnf_version="4.0"
-	fi
-	einfo "Building default my.cnf"
+	case ${MYSQL_PV_MAJOR} in
+		3*|4.0) mysql_mycnf_version="4.0" ;;
+		4.[1-9]|5.0) mysql_mycnf_version="4.1" ;;
+		5.[1-9]|6*|7*) mysql_mycnf_version="5.1" ;;
+	esac
+	einfo "Building default my.cnf (${mysql_mycnf_version})"
 	insinto "${MY_SYSCONFDIR}"
 	doins scripts/mysqlaccess.conf
+	mycnf_src="my.cnf-${mysql_mycnf_version}"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
-		"${FILESDIR}/my.cnf-${mysql_mycnf_version}" \
+		"${FILESDIR}/${mycnf_src}" \
 		> "${TMPDIR}/my.cnf.ok"
-	if mysql_version_is_at_least "4.1" && use latin1 ; then
+	if use latin1 ; then
 		sed -i \
 			-e "/character-set/s|utf8|latin1|g" \
 			"${TMPDIR}/my.cnf.ok"
@@ -1324,7 +1334,7 @@ mysql_pkg_config() {
 			cat "${help_tables}" >> "${sqltmp}"
 		fi
 	fi
-	
+
 	einfo "Creating the mysql database and setting proper"
 	einfo "permissions on it ..."
 
