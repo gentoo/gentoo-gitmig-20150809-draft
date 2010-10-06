@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vmpk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.9 2010/06/19 19:25:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.10 2010/10/06 20:12:33 aballier Exp $
+
+*vmpk-0.3.3 (06 Oct 2010)
+
+  06 Oct 2010; Alexis Ballier <aballier@gentoo.org> +vmpk-0.3.3.ebuild:
+  version bump, thanks Pedro for the notification
 
 *vmpk-0.3.2 (19 Jun 2010)
 
