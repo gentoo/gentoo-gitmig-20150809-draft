@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/vdrift
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.13 2009/11/20 14:16:12 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.14 2010/10/06 15:05:12 tupone Exp $
+
+  06 Oct 2010; Tupone Alfredo <tupone@gentoo.org> vdrift-20090615.ebuild,
+  +files/vdrift-20090615-ldflags.patch:
+  Respect LDFLAGS. Bug #339805 by flameeyes@gentoo.org
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> vdrift-20090615.ebuild:
   amd64/x86 stable, bug #290955
