@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/thinkhdaps/thinkhdaps-0.2.1.ebuild,v 1.1 2010/08/24 14:48:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/thinkhdaps/thinkhdaps-0.2.1.ebuild,v 1.2 2010/10/06 11:57:02 hwoarang Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://thpani.at/media/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/libgnome-python:2
