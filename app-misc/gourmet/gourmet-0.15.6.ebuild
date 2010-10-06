@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.6.ebuild,v 1.3 2010/10/06 11:45:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.6.ebuild,v 1.4 2010/10/06 17:09:48 phajdan.jr Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.4"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/grecipe-manager/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gnome-print pdf rtf"
 
 # I wish there were a better way to check if the current Python version
