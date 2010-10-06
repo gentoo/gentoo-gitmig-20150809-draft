@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6014 2010/10/06 18:54:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6015 2010/10/06 19:34:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1152,6 +1152,25 @@ dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
 dev-ruby/ruby-sdl:sge - Enable sdl-sge support
 dev-ruby/rubygems:server - Install support for the rubygems server
 dev-ruby/sqlite3-ruby:swig - Use dev-lang/swig to generate bindings
+dev-scheme/bigloo:bglpkg - Build bglpkg binary, which can be use to access scmpkg servers
+dev-scheme/bigloo:calendar - Build the embedded library for calendar programming
+dev-scheme/bigloo:crypto - Build the embedded cryptographic library
+dev-scheme/bigloo:debug - Enable extra debug codepaths
+dev-scheme/bigloo:doc - Install Bigloo Manual (HTML docs of Bigloo and r5rs)
+dev-scheme/bigloo:emacs - Build and install the Bigloo Developement Environment for Emacs (aka bee-mode)
+dev-scheme/bigloo:gmp - Adds support for dev-libs/gmp (GNU MP library)
+dev-scheme/bigloo:gstreamer - Adds support for media-libs/gstreamer
+dev-scheme/bigloo:java - Enable the JVM backend for the Bigloo compiler
+dev-scheme/bigloo:mail - Mail library for email management (e.g. maildir and imap support)
+dev-scheme/bigloo:multimedia - Build multimedia library (e.g. for managing images). Needed for dev-scheme/hop
+dev-scheme/bigloo:packrat - Bigloo port of Tony Garnock-Jones' packrat parser
+dev-scheme/bigloo:sqlite - Use the system-wide dev-db/sqlite
+dev-scheme/bigloo:srfi1 - Build the srfi1 library: List library
+dev-scheme/bigloo:srfi27 - Build the srfi27 library: Source of Random Bits (32bit-arch only)
+dev-scheme/bigloo:ssl - Adds support for SSL connections through dev-libs/openssl
+dev-scheme/bigloo:text - Library for dealing with text (e.g. BibTeX parser)
+dev-scheme/bigloo:threads - Enable thread support, it depends on dev-libs/boehm-gc built with threads use flag
+dev-scheme/bigloo:web - Library for web programming (e.g. XML, CGI parsers). Needed for dev-scheme/hop
 dev-scheme/gauche-gl:cg - Enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - Enable GL graph draw
 dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
