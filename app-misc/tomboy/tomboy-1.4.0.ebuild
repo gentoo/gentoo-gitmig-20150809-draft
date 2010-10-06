@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.0.1.ebuild,v 1.4 2010/07/03 17:20:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.0.ebuild,v 1.1 2010/10/06 18:27:53 pacho Exp $
 
 EAPI=2
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.beatniksoftware.com/tomboy/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
-IUSE="eds galago"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+applet eds galago"
 
 RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/gtk-sharp-2.12.6-r1
@@ -31,19 +31,24 @@ RDEPEND=">=dev-lang/mono-2
 	eds? ( dev-libs/gmime:2.4[mono] )
 	galago? ( =dev-dotnet/galago-sharp-0.5* )"
 DEPEND="${RDEPEND}
-	app-text/gnome-doc-utils
+	>=app-text/gnome-doc-utils-0.17.3
 	app-text/rarian
 	dev-libs/libxml2[python]
 	sys-devel/gettext
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
-DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
-src_prepare() {
-	sed -i -e '/DISABLE_DEPRECATED/d' $(find . -name 'Makefile.in') || die
+pkg_setup() {
+	G2CONF="${G2CONF}
+		$(use_enable applet panel-applet)
+		$(use_enable eds evolution)
+		$(use_enable galago)
+		--disable-update-mimedb"
 }
 
-src_configure() {
-	gnome2_src_configure $(use_enable galago) $(use_enable eds evolution)
+src_compile() {
+	# Not parallel build safe due upstream bug #631546
+	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_compile
 }

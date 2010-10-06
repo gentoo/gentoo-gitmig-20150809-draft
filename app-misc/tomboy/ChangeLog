@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.104 2010/09/11 18:56:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.105 2010/10/06 18:27:53 pacho Exp $
+
+*tomboy-1.4.0 (06 Oct 2010)
+
+  06 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/tomboy-0.8.1-insecure-ldpath.patch, -tomboy-0.12.2.ebuild,
+  -tomboy-1.0.1.ebuild, +tomboy-1.4.0.ebuild, metadata.xml:
+  Version bump for Gnome 2.32 (but also works with 2.30). Applet is now
+  optional but enabled by default until gnome-shell becomes the preferred on
+  Gnome. Remove old.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> tomboy-1.2.1.ebuild:
   Marked ppc for bug #324077.
