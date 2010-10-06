@@ -1,6 +1,20 @@
 # ChangeLog for dev-scheme/stklos
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.8 2008/05/18 19:53:36 hkbst Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.9 2010/10/06 03:15:06 chiiph Exp $
+
+*stklos-1.00 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> -stklos-0.82.ebuild,
+  -stklos-0.95.ebuild, -stklos-0.96.ebuild, -stklos-0.97.ebuild,
+  stklos-0.98.ebuild, +stklos-1.00.ebuild, +files/stklos-ldflags.patch,
+  metadata.xml:
+  Version bump, add patch to respect LDFLAGS wrt bug 333665, and old
+  version clean up
+
+  29 Jun 2010; Tomas Touceda <chiiph@gentoo.org> -stklos-0.82.ebuild,
+  -stklos-0.95.ebuild, -stklos-0.96.ebuild, stklos-0.97.ebuild,
+  stklos-0.98.ebuild:
+  Old version cleanup, updated homepage.
 
 *stklos-0.98 (18 May 2008)
 
