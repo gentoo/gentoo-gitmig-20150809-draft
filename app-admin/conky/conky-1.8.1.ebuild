@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r2.ebuild,v 1.3 2010/08/13 19:30:33 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1.ebuild,v 1.1 2010/10/06 16:35:57 billie Exp $
 
-EAPI="2"
-
-inherit autotools eutils
+EAPI=2
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -52,14 +50,6 @@ DEPEND="
 	dev-util/pkgconfig
 	"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-ncurses.patch" \
-		"${FILESDIR}/${P}-audacious-2.3.patch" \
-		"${FILESDIR}/${P}-if-existing.patch" \
-		"${FILESDIR}/${P}-ibm-x.patch"
-	eautoreconf
-}
-
 src_configure() {
 	local myconf
 
@@ -98,22 +88,21 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc ChangeLog AUTHORS TODO || die "dodoc failed"
-	dohtml doc/docs.html doc/config_settings.html doc/variables.html \
-		|| die "dohtml failed"
+	emake DESTDIR="${D}" install || die
+	dodoc ChangeLog AUTHORS TODO || die
+	dohtml doc/docs.html doc/config_settings.html doc/variables.html || die
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/ftdetect
-		doins "${S}"/extras/vim/ftdetect/conkyrc.vim || die "doins failed"
+		doins "${S}"/extras/vim/ftdetect/conkyrc.vim || die
 
 		insinto /usr/share/vim/vimfiles/syntax
-		doins "${S}"/extras/vim/syntax/conkyrc.vim|| die "doins failed"
+		doins "${S}"/extras/vim/syntax/conkyrc.vim || die
 	fi
 
 	if use nano-syntax; then
 		insinto /usr/share/nano/
-		doins "${S}"/extras/nano/conky.nanorc|| die "doins failed"
+		doins "${S}"/extras/nano/conky.nanorc || die
 	fi
 }
 
