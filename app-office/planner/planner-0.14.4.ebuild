@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.4.ebuild,v 1.6 2009/07/19 12:59:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.4.ebuild,v 1.7 2010/10/06 20:35:22 eva Exp $
 
 EAPI="1"
 
@@ -64,4 +64,6 @@ src_install() {
 	if ! use examples; then
 		rm -rf "${D}/usr/share/doc/${PF}/examples"
 	fi
+
+	find "${D}" -name "*.la" -delete || die "removal of *.la files failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.56 2010/03/07 19:57:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.57 2010/10/06 20:35:22 eva Exp $
+
+  06 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.4.ebuild:
+  Do not install *.la files, they are not needed by planner itself and
+  planner has no reverse dependencies.
 
   07 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -planner-0.14.3-r1.ebuild, -planner-0.14.3-r2.ebuild,
