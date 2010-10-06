@@ -1,24 +1,41 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.1.ebuild,v 1.1 2010/08/18 13:41:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.1.ebuild,v 1.2 2010/10/06 16:14:54 tampakrap Exp $
 
-EAPI=2
+EAPI=3
+
+CMAKE_MIN_VERSION=2.8.0
+MULTIMEDIA_REQUIRED=always
 WEBKIT_REQUIRED=always
-KDE_LINGUAS="ast be bg ca ca@valencia cs csb da de el en_GB eo es et eu fi fr ga
-gl he hi hne hr hu is it ja km ko ku lt mai nb nds nl nn oc pa pl pt pt_BR ro ru
-se sk sl sv th tr uk zh_CN zh_TW"
+KMNAME="extragear/multimedia"
+
+# Translations are only in the tarballs, not in the svn repo
+if [[ ${PV} != *9999* ]]; then
+	KDE_LINGUAS="ast be bg ca ca@valencia cs csb da de el en_GB eo es et eu fi fr ga
+	gl he hi hne hr hu is it ja km ko ku lt mai nb nds nl nn oc pa pl pt pt_BR ro ru
+	se sk sl sv th tr uk zh_CN zh_TW"
+
+	SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
+
+	DOCS=( FAQ PERMISSIONS README RELEASE_HOWTO )
+
+	S=${WORKDIR}/${P/_*}
+else
+	DOCS=( FAQ.txt PERMISSIONS.txt README.txt )
+fi
+
 inherit kde4-base
 
 DESCRIPTION="The CD/DVD Kreator for KDE"
 HOMEPAGE="http://www.k3b.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="4"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug dvd emovix encode ffmpeg flac mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
 
-DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
+DEPEND="
+	$(add_kdebase_dep libkcddb)
 	media-libs/libsamplerate
 	dvd? ( media-libs/libdvdread )
 	ffmpeg? ( >=media-video/ffmpeg-0.5 )
@@ -29,21 +46,23 @@ DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	musicbrainz? ( media-libs/musicbrainz:1 )
 	sndfile? ( media-libs/libsndfile )
 	taglib? ( >=media-libs/taglib-1.5 )
-	vorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )
+"
 RDEPEND="${DEPEND}
-	sys-apps/hal
 	app-cdr/cdrdao
 	media-sound/cdparanoia
+	sys-apps/hal
 	virtual/cdrtools
-	dvd? ( >=app-cdr/dvd+rw-tools-7
-		encode? ( media-video/transcode[dvd] ) )
+	dvd? (
+			>=app-cdr/dvd+rw-tools-7
+			encode? ( media-video/transcode[dvd] )
+	)
 	emovix? ( media-video/emovix )
 	encode? ( sox? ( media-sound/sox ) )
-	vcd? ( media-video/vcdimager )"
+	vcd? ( media-video/vcdimager )
+"
 
-DOCS="ChangeLog FAQ PERMISSIONS README RELEASE_HOWTO"
-
-S=${WORKDIR}/${P/_*}
+DOCS+=( ChangeLog )
 
 src_configure() {
 	mycmakeargs+=( "-DK3B_BUILD_K3BSETUP=OFF"
@@ -62,9 +81,11 @@ src_configure() {
 		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN) )
 
 	if use encode; then
-		mycmakeargs+=( $(cmake-utils_use vorbis K3B_BUILD_OGGVORBIS_ENCODER_PLUGIN)
+		mycmakeargs+=(
+			$(cmake-utils_use vorbis K3B_BUILD_OGGVORBIS_ENCODER_PLUGIN)
 			$(cmake-utils_use lame K3B_BUILD_LAME_ENCODER_PLUGIN)
-			$(cmake-utils_use sox K3B_BUILD_SOX_ENCODER_PLUGIN) )
+			$(cmake-utils_use sox K3B_BUILD_SOX_ENCODER_PLUGIN)
+		)
 	fi
 
 	kde4-base_src_configure
