@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.67 2010/07/09 09:13:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.68 2010/10/06 17:58:26 pacho Exp $
+
+*workrave-1.9.2 (06 Oct 2010)
+
+  06 Oct 2010; Pacho Ramos <pacho@gentoo.org> +workrave-1.9.2.ebuild:
+  Version bump (bug #339088 by Johannes Rauh): Workrave can now mute all
+  audio during breaks (requires pulseaudio), now properly remembers the
+  Window hide/show notification icon settings, the activity insensitive
+  breaks have been replaced by a 'reading mode', many bug fixes and updated
+  tranlations.
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   -files/workrave-1.8.4-nls_macros.patch, -workrave-1.8.5.ebuild,
