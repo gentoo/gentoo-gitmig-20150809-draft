@@ -274,6 +274,11 @@ if [[ -f /etc/conf.d/${SVCNAME} ]] && [[ -x /sbin/cryptsetup ]] ; then
 				fi
 				;;
 
+			dmcrypt_max_timeout=*)
+				# ignore global options
+				continue
+				;;
+
 			*)
 				ewarn "Skipping invalid line in /etc/conf.d/${SVCNAME}: ${targetline}"
 				;;
