@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.1 2010/10/06 08:25:51 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.2 2010/10/06 19:58:45 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -96,7 +96,7 @@ php-ext-pecl-r2_src_install() {
 php-ext-pecl-r2_src_test() {
 		
 	for slot in `php_get_slots`; do
-		NO_INTERACTION="yes" emake test
+		NO_INTERACTION="yes" emake test || die "emake test failed for slot ${slot}"
 	done
 
 }

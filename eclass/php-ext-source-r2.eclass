@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.1 2010/10/06 08:25:51 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.2 2010/10/06 19:58:45 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -62,17 +62,15 @@ esac
 # Lists the PHP slots compatibile the extension is compatibile with
 [[ -z "$USE_PHP" ]] && USE_PHP="php5-2 php5-3"
 
-for target in $USE_PHP; do
-	IUSE="${IUSE} php_targets_$target"
-done
-
 #Make sure at least one target is installed. Abuses USE dependencies.
 for target in $USE_PHP; do
+	IUSE="${IUSE} php_targets_$target"
 	target=${target/+}
 	SELFDEPEND="$SELFDEPEND =$CATEGORY/$PF[php_targets_$target]"
 	slot=${target/php}
 	slot=${slot/-/.}
-	PHPDEPEND="$PHPDEPEND php_target_$target? ( dev-lang/php:${slot} )"
+	PHPDEPEND="$PHPDEPEND 
+	php_targets_$target? ( dev-lang/php:${slot} )"
 done
 	
 RDEPEND="${RDEPEND} 

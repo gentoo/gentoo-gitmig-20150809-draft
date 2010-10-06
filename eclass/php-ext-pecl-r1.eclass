@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.12 2010/09/13 13:44:14 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.13 2010/10/06 19:58:45 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -99,5 +99,5 @@ php-ext-pecl-r1_src_test() {
 	# away from there in src_compile
 	ln -s "${WORKDIR}/${PHP_EXT_NAME}-default.so" "${S}/modules/${PHP_EXT_NAME}.so"
 
-	NO_INTERACTION="yes" emake test
+	NO_INTERACTION="yes" emake test || die "emake test failed"
 }
