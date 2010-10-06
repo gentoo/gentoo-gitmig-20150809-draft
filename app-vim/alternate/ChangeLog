@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.43 2009/12/17 10:18:06 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.44 2010/10/06 11:41:21 hwoarang Exp $
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> alternate-2.18.ebuild:
+  Stable on amd64 wrt bug #339560
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   alternate-2.12-r1.ebuild, alternate-2.15.ebuild, alternate-2.18.ebuild:
