@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.4 2010/07/08 19:19:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.5 2010/10/06 16:08:20 jer Exp $
 
 EAPI="2"
 inherit linux-info eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.netfilter.org/projects/conntrack-tools/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 IUSE=""
 
 RDEPEND="
