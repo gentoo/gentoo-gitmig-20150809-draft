@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>net-p2p</herd>
 <use>
-	<flag name='openssl'>Use OpenSSL for md5 and sha1 support</flag>
 	<flag name='largefile'>Enable largefile support on 32 bit systems</flag>
 </use>
 </pkgmetadata>
