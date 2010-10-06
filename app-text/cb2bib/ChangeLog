@@ -1,6 +1,11 @@
 # ChangeLog for app-text/cb2bib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.5 2010/04/29 06:21:51 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.6 2010/10/06 20:22:26 chiiph Exp $
+
+*cb2bib-1.4.2 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> +cb2bib-1.4.2.ebuild:
+  Version bump
 
 *cb2bib-1.4.0 (29 Apr 2010)
 
