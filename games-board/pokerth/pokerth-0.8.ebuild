@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.ebuild,v 1.3 2010/10/06 21:57:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.ebuild,v 1.4 2010/10/06 21:59:52 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib flag-o-matic eutils qt4 games
@@ -19,13 +19,13 @@ DEPEND=">=dev-libs/boost-1.41
 	>=net-libs/gnutls-2.2.2
 	>=net-misc/curl-7.16
 	x11-libs/qt-core:4
-	x11-libs/qt-sql:4
 	>=virtual/gsasl-1.1
 	!dedicated? (
 		media-libs/libsdl
 		media-libs/sdl-mixer[mikmod,vorbis]
 		>=sys-libs/zlib-1.2.3
 		x11-libs/qt-gui:4
+		x11-libs/qt-sql:4
 	)"
 
 S=${WORKDIR}/${MY_P}
