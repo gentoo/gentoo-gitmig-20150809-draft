@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mairix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.28 2010/08/30 07:34:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.29 2010/10/06 11:50:35 hwoarang Exp $
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> mairix-0.22.ebuild:
+  Stable on amd64 wrt bug #338661
 
 *mairix-0.22 (30 Aug 2010)
 
