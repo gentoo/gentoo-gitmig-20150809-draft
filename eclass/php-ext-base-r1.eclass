@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.11 2010/07/26 16:19:00 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.12 2010/10/06 08:25:51 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -17,6 +17,8 @@
 #
 # Combined with php-ext-source-r1, we have a standardised solution for supporting
 # PHP extensions.
+
+DEPEND="dev-lang/php:5"
 
 inherit depend.php
 
