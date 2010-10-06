@@ -1,5 +1,5 @@
---- src/filehandling_functions.c
-+++ src/filehandling_functions.c
+--- a/src/filehandling_functions.c
++++ b/src/filehandling_functions.c
 @@ -41,14 +41,16 @@
   * you dump the file through `gunzip -d -c', etc.                              *
   ******************************************************************************/

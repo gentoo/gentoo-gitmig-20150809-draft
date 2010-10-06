@@ -1,5 +1,5 @@
---- doc/pinfo.info.orig	2006-03-16 17:28:00.000000000 +0100
-+++ doc/pinfo.info	2010-06-18 16:20:24.000000000 +0200
+--- a/doc/pinfo.info	2006-03-16 17:28:00.000000000 +0100
++++ b/doc/pinfo.info	2010-06-18 16:20:24.000000000 +0200
 @@ -1,6 +1,6 @@
  This is pinfo.info, produced by makeinfo version 4.8 from pinfo.texi.
  
@@ -17,8 +17,8 @@
  
     Original manpage written on 21 Mar 1999 by Przemek Borys,
  <pborys@dione.ids.pl>, `http://zeus.polsl.gliwice.pl/~pborys/'.
---- doc/pinfo.texi.orig	2006-03-16 16:40:41.000000000 +0100
-+++ doc/pinfo.texi	2010-06-18 16:20:24.000000000 +0200
+--- a/doc/pinfo.texi	2006-03-16 16:40:41.000000000 +0100
++++ b/doc/pinfo.texi	2010-06-18 16:20:24.000000000 +0200
 @@ -5,7 +5,7 @@
  @c %**end of header
  

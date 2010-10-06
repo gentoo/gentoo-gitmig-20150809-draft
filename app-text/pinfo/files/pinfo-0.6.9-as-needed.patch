@@ -1,5 +1,5 @@
---- ./macros/curses.m4.orig	2006-06-26 22:29:10.000000000 +0200
-+++ ./macros/curses.m4	2006-06-26 22:31:16.000000000 +0200
+--- a/macros/curses.m4
++++ b/macros/curses.m4
 @@ -257,8 +257,8 @@
  	dnl save CFLAGS and LDFLAGS and set new ones
  	CFLAGS_OLD=$CFLAGS
