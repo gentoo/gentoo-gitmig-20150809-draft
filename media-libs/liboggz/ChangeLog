@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.34 2010/09/30 20:27:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.35 2010/10/06 15:43:46 jer Exp $
+
+  06 Oct 2010; Jeroen Roovers <jer@gentoo.org> liboggz-1.1.1.ebuild:
+  Stable for HPPA (bug #338836).
 
   30 Sep 2010; Markus Meier <maekke@gentoo.org> liboggz-1.1.1.ebuild:
   x86 stable, bug #338836
