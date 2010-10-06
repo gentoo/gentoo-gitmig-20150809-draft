@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.1 2010/10/03 21:31:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.2 2010/10/06 22:19:07 radhermit Exp $
+
+*task-1.9.2-r1 (06 Oct 2010)
+
+  06 Oct 2010; Tim Harder <radhermit@gentoo.org> -task-1.9.2.ebuild,
+  +task-1.9.2-r1.ebuild, +files/task-1.9.2-configure.patch:
+  Revision bump and remove old. Apply patch to fix bug #339773, thanks to
+  James Rowe for reporting.
 
 *task-1.9.2 (03 Oct 2010)
 

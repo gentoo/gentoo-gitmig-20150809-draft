@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.2.ebuild,v 1.1 2010/10/03 21:31:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.2-r1.ebuild,v 1.1 2010/10/06 22:19:07 radhermit Exp $
 
 EAPI=3
+
+inherit eutils autotools
 
 DESCRIPTION="A task management tool with a command-line interface"
 HOMEPAGE="http://taskwarrior.org/projects/show/taskwarrior/"
@@ -16,6 +18,11 @@ IUSE="bash-completion debug lua +ncurses vim-syntax zsh-completion"
 DEPEND="lua? ( dev-lang/lua )
 	ncurses? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \

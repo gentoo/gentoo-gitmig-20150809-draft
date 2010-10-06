@@ -1,0 +1,68 @@
+--- task-1.9.2/configure.ac.orig	2010-10-06 10:12:58.910069290 -0700
++++ task-1.9.2/configure.ac	2010-10-06 10:31:02.943655695 -0700
+@@ -66,31 +66,10 @@
+ 
+ # ncurses enabled by default.
+ AC_ARG_WITH([ncurses],
+-            [AS_HELP_STRING([--without-ncurses], [disable support for ncurses])],
+-            [with_ncurses=no],
+-            [with_ncurses=yes])
+-
+-AC_ARG_WITH([ncurses-inc],
+-            [AS_HELP_STRING ([--with-ncurses-inc=DIR], [ncurses include files are in DIR])],
+-            [ncurses_inc=$withval],
+-            [ncurses_inc=''])
+-
+-AC_ARG_WITH([ncurses-lib],
+-            [AS_HELP_STRING ([--with-ncurses-lib=DIR], [ncurses lib files are in DIR])],
+-            [ncurses_lib=$withval],
+-            [ncurses_lib=''])
++            AS_HELP_STRING([--without-ncurses], [disable support for ncurses]))
+ 
+ if test "x$with_ncurses" = "xyes" ; then
+   AC_DEFINE([HAVE_LIBNCURSES], [1], [Defined if you have libncurses])
+-  if test -n "$ncurses_inc"; then
+-    CFLAGS="$CFLAGS -I$ncurses_inc"
+-    CXXFLAGS="$CXXFLAGS -I$ncurses_inc"
+-  fi
+-
+-  if test -n "$ncurses_lib"; then
+-    LDFLAGS="$LDFLAGS -L$ncurses_lib"
+-  fi
+-
+   AC_CHECK_LIB([ncurses],[main])
+ fi
+ 
+@@ -128,31 +107,10 @@
+ 
+ # Lua disabled by default.
+ AC_ARG_WITH([lua],
+-            [AS_HELP_STRING([--with-lua], [enable support for lua])],
+-            [with_lua=yes],
+-            [with_lua=no])
+-
+-AC_ARG_WITH([lua-inc],
+-            [AS_HELP_STRING ([--with-lua-inc=DIR], [lua include files are in DIR])],
+-            [lua_inc=$withval],
+-            [lua_inc=''])
+-
+-AC_ARG_WITH([lua-lib],
+-            [AS_HELP_STRING ([--with-lua-lib=DIR], [lua lib files are in DIR])],
+-            [lua_lib=$withval],
+-            [lua_lib=''])
++            AS_HELP_STRING([--with-lua], [enable support for lua]))
+ 
+ if test "x$with_lua" = "xyes" ; then
+   AC_DEFINE([HAVE_LIBLUA], [1], [Defined if you have liblua])
+-  if test -n "$lua_inc"; then
+-    CFLAGS="$CFLAGS -I$lua_inc"
+-    CXXFLAGS="$CXXFLAGS -I$lua_inc"
+-  fi
+-
+-  if test -n "$lua_lib"; then
+-    LDFLAGS="$LDFLAGS -L$lua_lib"
+-  fi
+-
+   AC_CHECK_LIB([lua],[main])
+ fi
+ 
