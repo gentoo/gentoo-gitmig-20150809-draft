@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.3.ebuild,v 1.1 2010/06/21 14:35:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.3-r1.ebuild,v 1.1 2010/10/06 07:13:42 xarthisius Exp $
 
 EAPI="2"
 
@@ -59,8 +59,7 @@ src_configure() {
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/${PF} \
-		$(use_enable snmp) \
-		--with-group-id=65 --with-ccmuser-id=65
+		$(use_enable snmp)
 }
 
 src_install() {
