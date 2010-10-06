@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.1.ebuild,v 1.3 2010/09/23 20:29:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.1.ebuild,v 1.4 2010/10/06 09:09:28 ssuominen Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}
 		x11-libs/qt-core
 		x11-libs/qt-assistant
 		x11-libs/qt-sql[sqlite] )
-		>=media-libs/libpng-1.2.43-r2
+		media-libs/libpng:1.2
 	)
 	debugger? ( >=sys-libs/libtermcap-compat-2.0.8-r2 )"
 
