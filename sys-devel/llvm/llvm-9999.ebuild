@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.6 2010/09/21 16:17:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.7 2010/10/06 09:21:26 voyageur Exp $
 
 EAPI="3"
 inherit subversion eutils multilib toolchain-funcs
@@ -25,7 +25,6 @@ DEPEND="dev-lang/perl
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	libffi? ( virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
-	test? ( dev-util/dejagnu )
 	udis86? ( dev-libs/udis86 )"
 RDEPEND="dev-lang/perl"
 
