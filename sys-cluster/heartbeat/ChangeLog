@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.86 2010/10/06 07:13:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.87 2010/10/06 09:25:37 xarthisius Exp $
+
+*heartbeat-3.0.3-r2 (06 Oct 2010)
+
+  06 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -heartbeat-3.0.3-r1.ebuild, +heartbeat-3.0.3-r2.ebuild, metadata.xml:
+  Fix init script wrt 330035. Thanks to Denis Kaganovich
+  <mahatma@bspu.unibel.by>. Correct dependencies, add use flag for ipmi.
+  Thanks to Francisco Javier <ffelix@inode64.com>. Drop old.
 
 *heartbeat-3.0.3-r1 (06 Oct 2010)
 

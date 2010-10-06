@@ -9,6 +9,7 @@
   <use>
   	<flag name='ldirectord'>Adds support for ldiretord, use enabled because it
 	has a lot of deps</flag>
-  	<flag name='management'>Adds support for management GUI.</flag>
+  	<flag name='management'>Adds support for management GUI</flag>
+	<flag name='ipmi'>Enable IPMILan Stonith Plugin</flag>
   </use>
 </pkgmetadata>
