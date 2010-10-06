@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.27 2010/09/29 15:47:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.28 2010/10/06 20:14:15 maekke Exp $
+
+  06 Oct 2010; Markus Meier <maekke@gentoo.org> jinja-2.5.2.ebuild:
+  x86 stable, bug #338913
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> jinja-2.5.2.ebuild:
   Marking jinja-2.5.2 ppc for bug 338913
