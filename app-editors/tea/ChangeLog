@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.49 2010/03/09 11:56:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.50 2010/10/06 20:02:57 chiiph Exp $
+
+*tea-28.1.2 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> -tea-17.6.3.ebuild,
+  -tea-26.0.1.ebuild, +tea-28.1.2.ebuild:
+  Version bump, and old version cleanup
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> tea-26.0.1.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension

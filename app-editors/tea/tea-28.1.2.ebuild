@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-26.0.1.ebuild,v 1.3 2010/03/09 11:56:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-28.1.2.ebuild,v 1.1 2010/10/06 20:02:57 chiiph Exp $
 
 EAPI="2"
-
 inherit eutils qt4-r2
 
 DESCRIPTION="Small, lightweight Qt text editor"
-HOMEPAGE="http://tea-editor.sourceforge.net"
+HOMEPAGE="http://tea-editor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tea-editor/${P}.tar.bz2"
 
 LICENSE="GPL-3"
@@ -41,16 +40,9 @@ src_configure() {
 }
 
 src_install() {
-	dobin bin/tea || die "Couldn't install tea"
-	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO
-	doicon icons/tea_icon_v2.png
+	dobin bin/tea || die
+	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO || die
+	doicon icons/tea_icon_v2.png || die
 
 	make_desktop_entry tea Tea tea_icon_v2 Utility
-}
-
-pkg_postinst() {
-	if use aspell || use hunspell ; then
-		elog "To get full spellchecking functuality, ensure that you install"
-		elog "the relevant language pack(s)"
-	fi
 }
