@@ -1,6 +1,14 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.258 2010/09/23 11:20:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.259 2010/10/06 21:39:32 reavertm Exp $
+
+*poppler-0.14.4 (06 Oct 2010)
+
+  06 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -poppler-0.12.4-r3.ebuild, poppler-0.14.1.ebuild, -poppler-0.14.3.ebuild,
+  +poppler-0.14.4.ebuild:
+  Version bump 0.14.4, remove old. Remove obsolete blocks on poppler-qt3
+  everywhere.
 
   23 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> poppler-0.14.3.ebuild:
   Remove dev-libs/poppler-qt3 from blockers wrt #338346 by Michał Górny.
