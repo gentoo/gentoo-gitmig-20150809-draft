@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.151 2010/10/02 15:36:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.152 2010/10/06 11:47:52 hwoarang Exp $
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> deluge-1.2.3.ebuild:
+  Stable on amd64 wrt bug #334501
 
   02 Oct 2010; Raúl Porcel <armin76@gentoo.org> files/deluged.init:
   Update init script, bug #339352, bug #288599, thanks to Juanlu Pérez
