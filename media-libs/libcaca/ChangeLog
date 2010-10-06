@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.88 2010/08/08 16:03:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.89 2010/10/06 20:00:29 ssuominen Exp $
+
+  06 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libcaca-0.99_beta17.ebuild:
+  Don't run doxygen testsuite wrt #339962 by Myckel Habets.
 
   08 Aug 2010; Raúl Porcel <armin76@gentoo.org> libcaca-0.99_beta17.ebuild:
   Add ~ia64 wrt #329389

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.13 2010/08/08 16:03:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.14 2010/10/06 20:00:29 ssuominen Exp $
 
 EAPI=2
 inherit autotools flag-o-matic mono multilib java-pkg-opt-2
@@ -37,6 +37,8 @@ DEPEND="${COMMON_DEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	sed -i -e '/doxygen_tests = check-doxygen/d' test/Makefile.am || die #339962
+
 	sed -i \
 		-e 's:-g -O2 -fno-strength-reduce -fomit-frame-pointer::' \
 		configure.ac || die
