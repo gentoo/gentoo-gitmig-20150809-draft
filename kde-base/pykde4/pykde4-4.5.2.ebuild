@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.5.2.ebuild,v 1.1 2010/10/06 09:17:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.5.2.ebuild,v 1.2 2010/10/06 17:49:00 dilfridge Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ IUSE="debug doc examples semantic-desktop"
 # Added specific PyQt4 and sip deps to fix bug 332503.
 DEPEND="
 	!dev-python/pykde
-	>dev-python/PyQt4-4.7.3
+	>=dev-python/PyQt4-4.7.7-r1
 	>dev-python/sip-4.10
 	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop?')
 	semantic-desktop? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )

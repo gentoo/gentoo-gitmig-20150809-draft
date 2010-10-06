@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.91 2010/10/06 09:17:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.92 2010/10/06 17:49:00 dilfridge Exp $
+
+  06 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  pykde4-4.5.2.ebuild:
+  Fixed the PyQt4 dependency so we really get the patched version
 
 *pykde4-4.5.2 (05 Oct 2010)
 
