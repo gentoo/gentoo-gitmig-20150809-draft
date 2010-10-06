@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.41 2010/06/07 19:21:59 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.42 2010/10/06 04:25:04 chiiph Exp $
+
+*chicken-4.6.0 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> +chicken-4.6.0.ebuild:
+  Version bump
 
   07 Jun 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   chicken-4.5.0.ebuild, +files/chicken-4.5.0-r0-ARCH-to-zARCH-hack.patch:
