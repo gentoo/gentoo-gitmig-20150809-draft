@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.1 2010/09/18 19:27:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.2 2010/10/06 12:15:55 pacho Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
@@ -22,6 +22,8 @@ RDEPEND=">=dev-python/pygtk-2
 	>=dev-python/pygobject-2
 	>=gnome-base/gconf-2.2
 	>=gnome-base/libgnome-2
+	dev-python/gdata
+	dev-python/feedparser
 	dev-python/libgnome-python
 	dev-python/gtkspell-python
 	dev-python/pywebkitgtk
@@ -40,7 +42,9 @@ src_prepare() {
 	sed -i "s:lib/blogtk:$(get_libdir)/blogtk:g" Makefile || die "sed 1 failed"
 	sed -i "s:blogtk2', 'lib')):blogtk2', '$(get_libdir)')):g" bin/blogtk2 \
 		|| die "sed 2 failed"
-	mv share/blogtk2/lib share/blogtk2/$(get_libdir) || die
+	if [ "$(get_libdir)" != "lib" ]; then
+		mv share/blogtk2/lib share/blogtk2/$(get_libdir) || die
+	fi
 
 	# Remove unwanted files
 	find -name "*~" -delete || die
