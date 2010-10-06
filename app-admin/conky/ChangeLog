@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.143 2010/10/06 16:35:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.144 2010/10/06 19:22:14 billie Exp $
+
+  06 Oct 2010; Daniel Pielmeier <billie@gentoo.org> conky-1.8.1.ebuild,
+  +files/conky-1.8.1-nvidia-x.patch:
+  Fix bug #339971. Thanks to Lars Wendler for the report and Brenden
+  Matthews for the fix.
 
 *conky-1.8.1 (06 Oct 2010)
 

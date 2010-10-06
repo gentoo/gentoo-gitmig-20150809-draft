@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1.ebuild,v 1.1 2010/10/06 16:35:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1.ebuild,v 1.2 2010/10/06 19:22:14 billie Exp $
 
 EAPI=2
+
+inherit eutils
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -49,6 +51,10 @@ DEPEND="
 	${DEPEND_COMMON}
 	dev-util/pkgconfig
 	"
+
+src_prepare() {
+	epatch "${FILESDIR}/conky-1.8.1-nvidia-x.patch"
+}
 
 src_configure() {
 	local myconf
