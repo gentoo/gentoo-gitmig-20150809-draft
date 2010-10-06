@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dikt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dikt/ChangeLog,v 1.2 2010/06/01 15:55:43 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dikt/ChangeLog,v 1.3 2010/10/06 21:26:59 tampakrap Exp $
+
+  06 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org> -dikt-1l.ebuild,
+  dikt-2d.ebuild:
+  EAPI3, cleanup, remove block (added entry in profiles/updates), remove old
 
 *dikt-2d (01 Jun 2010)
 
