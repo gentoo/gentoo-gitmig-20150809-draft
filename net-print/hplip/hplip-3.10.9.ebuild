@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.9.ebuild,v 1.1 2010/10/04 18:08:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.9.ebuild,v 1.2 2010/10/06 18:47:21 ssuominen Exp $
 
 EAPI=2
 
@@ -63,7 +63,7 @@ RDEPEND="${COMMON_DEPEND}
 				dev-python/notify-python
 			)
 			policykit? (
-				sys-auth/policykit
+				sys-auth/polkit
 			)
 		)
 	)"
