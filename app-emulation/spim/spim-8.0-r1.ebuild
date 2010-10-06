@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0-r1.ebuild,v 1.1 2010/08/14 01:46:25 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0-r1.ebuild,v 1.2 2010/10/06 15:35:32 phajdan.jr Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc X"
 
 RDEPEND="X? ( media-fonts/font-adobe-100dpi
