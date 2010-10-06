@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/kcdemu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/ChangeLog,v 1.1 2009/12/04 11:07:12 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/ChangeLog,v 1.2 2010/10/06 20:02:40 tampakrap Exp $
+
+*kcdemu-0.3.1 (06 Oct 2010)
+
+  06 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org> kcdemu-0.3.ebuild,
+  +kcdemu-0.3.1.ebuild:
+  Version bump, small cleanup
 
 *kcdemu-0.3 (04 Dec 2009)
 
