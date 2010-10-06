@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.138 2010/09/05 23:10:22 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.139 2010/10/06 09:17:36 alexxy Exp $
+
+*blinken-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +blinken-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
   05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   blinken-4.5.1.ebuild:

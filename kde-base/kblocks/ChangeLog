@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kblocks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.56 2010/09/05 23:27:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.57 2010/10/06 09:17:17 alexxy Exp $
+
+*kblocks-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kblocks-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kblocks-4.5.1 (05 Sep 2010)
 

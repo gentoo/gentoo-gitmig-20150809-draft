@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.167 2010/09/06 00:49:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.168 2010/10/06 09:17:10 alexxy Exp $
+
+*kmix-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kmix-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kmix-4.5.1 (06 Sep 2010)
 

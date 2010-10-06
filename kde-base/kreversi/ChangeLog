@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.162 2010/09/06 01:06:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.163 2010/10/06 09:17:25 alexxy Exp $
+
+*kreversi-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kreversi-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kreversi-4.5.1 (06 Sep 2010)
 

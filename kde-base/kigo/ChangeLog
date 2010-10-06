@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.20 2010/09/06 00:37:11 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.21 2010/10/06 09:17:16 alexxy Exp $
+
+*kigo-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kigo-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kigo-4.5.1 (06 Sep 2010)
 

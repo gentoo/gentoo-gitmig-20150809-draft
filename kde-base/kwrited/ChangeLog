@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.54 2010/09/06 01:37:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.55 2010/10/06 09:17:10 alexxy Exp $
+
+*kwrited-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kwrited-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kwrited-4.5.1 (06 Sep 2010)
 

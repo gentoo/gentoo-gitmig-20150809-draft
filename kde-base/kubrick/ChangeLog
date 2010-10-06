@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.56 2010/09/06 01:29:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.57 2010/10/06 09:17:21 alexxy Exp $
+
+*kubrick-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +kubrick-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *kubrick-4.5.1 (06 Sep 2010)
 

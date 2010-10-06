@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knewstuff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.71 2010/09/06 00:54:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewstuff/ChangeLog,v 1.72 2010/10/06 09:17:27 alexxy Exp $
+
+*knewstuff-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +knewstuff-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *knewstuff-4.5.1 (06 Sep 2010)
 

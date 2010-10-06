@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/jovie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.3 2010/09/19 19:22:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.4 2010/10/06 09:17:13 alexxy Exp $
+
+*jovie-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +jovie-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
   19 Sep 2010; Jonathan Callen <abcd@gentoo.org> jovie-4.5.1.ebuild:
   Add ~amd64-linux, ~x86-linux keywords

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.158 2010/09/06 01:27:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.159 2010/10/06 09:17:27 alexxy Exp $
+
+*ktuberling-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +ktuberling-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *ktuberling-4.5.1 (06 Sep 2010)
 

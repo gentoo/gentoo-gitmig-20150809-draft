@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libksane
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.59 2010/09/06 01:43:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.60 2010/10/06 09:17:25 alexxy Exp $
+
+*libksane-4.5.2 (05 Oct 2010)
+
+  05 Oct 2010; Alexey Shvetsov <alexxy@gentoo.org> +libksane-4.5.2.ebuild:
+  Version bump KDE SC 4.5.2
 
 *libksane-4.5.1 (06 Sep 2010)
 
