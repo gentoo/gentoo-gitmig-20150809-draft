@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.28 2010/10/03 16:15:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.29 2010/10/06 16:27:58 jer Exp $
+
+  06 Oct 2010; Jeroen Roovers <jer@gentoo.org> tls-1.6-r2.ebuild:
+  Stable for HPPA (bug #332415).
 
   03 Oct 2010; Tobias Klausmann <klausman@gentoo.org> tls-1.6-r2.ebuild:
   Stable on alpha, bug #332415
