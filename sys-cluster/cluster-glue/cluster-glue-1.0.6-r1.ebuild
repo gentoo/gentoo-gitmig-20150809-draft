@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.6.ebuild,v 1.1 2010/08/02 05:46:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.6-r1.ebuild,v 1.1 2010/10/06 07:17:12 xarthisius Exp $
 
 EAPI="2"
 
@@ -37,6 +37,11 @@ PATCHES=(
 	"${FILESDIR}/1.0.5-respect_cflags.patch"
 )
 
+pkg_setup() {
+	enewgroup haclient
+	enewuser  hacluster -1 /dev/null /var/lib/heartbeat haclient
+}
+
 src_prepare() {
 	base_src_prepare
 	eautoreconf
@@ -56,7 +61,8 @@ src_configure() {
 		--with-ocf-root=/usr/$(get_libdir)/ocf \
 		--sysconfdir=/var \
 		${myopts} \
-		--with-group-id=65 --with-ccmuser-id=65 \
+		--with-group-id=$(id -g hacluster) \
+		--with-ccmuser-id=$(id -u hacluster) \
 		--with-daemon-user=hacluster --with-daemon-group=haclient
 }
 
@@ -76,13 +82,6 @@ src_install() {
 		"${T}/heartbeat-logd.init" || die
 	newinitd "${T}/heartbeat-logd.init" heartbeat-logd || die
 	rm "${D}"/etc/init.d/logd
-}
-
-pkg_preinst() {
-	# check for cluster group, if it doesn't exist make it
-	groupadd -g 65 haclient
-	# check for cluster user, if it doesn't exist make it
-	useradd -u 65 -g haclient -s /dev/null -d /var/lib/heartbeat hacluster
 }
 
 pkg_postinst() {

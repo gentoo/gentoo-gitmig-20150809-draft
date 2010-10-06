@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.8 2010/08/02 05:46:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.9 2010/10/06 07:17:12 xarthisius Exp $
+
+*cluster-glue-1.0.6-r1 (06 Oct 2010)
+
+  06 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -cluster-glue-1.0.6.ebuild, +cluster-glue-1.0.6-r1.ebuild:
+  Don't hardcode uid/gid wrt bug 339857. Thanks to Joe Flasch
+  <jflasch@eb.com> for the report. Drop old.
 
 *cluster-glue-1.0.6 (02 Aug 2010)
 
