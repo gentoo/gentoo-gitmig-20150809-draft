@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.1.ebuild,v 1.2 2010/10/06 16:14:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.1.ebuild,v 1.3 2010/10/06 16:27:07 tampakrap Exp $
 
 EAPI=3
 
@@ -54,8 +54,8 @@ RDEPEND="${DEPEND}
 	sys-apps/hal
 	virtual/cdrtools
 	dvd? (
-			>=app-cdr/dvd+rw-tools-7
-			encode? ( media-video/transcode[dvd] )
+		>=app-cdr/dvd+rw-tools-7
+		encode? ( media-video/transcode[dvd] )
 	)
 	emovix? ( media-video/emovix )
 	encode? ( sox? ( media-sound/sox ) )
@@ -65,12 +65,13 @@ RDEPEND="${DEPEND}
 DOCS+=( ChangeLog )
 
 src_configure() {
-	mycmakeargs+=( "-DK3B_BUILD_K3BSETUP=OFF"
+	mycmakeargs=(
+		-DK3B_BUILD_K3BSETUP=OFF
 		$(cmake-utils_use debug K3B_DEBUG)
 		$(cmake-utils_use musicbrainz K3B_ENABLE_MUSICBRAINZ)
 		$(cmake-utils_use dvd K3B_ENABLE_DVD_RIPPING)
 		$(cmake-utils_use taglib K3B_ENABLE_TAGLIB)
-		"-DK3B_BUILD_API_DOCS=OFF"
+		-DK3B_BUILD_API_DOCS=OFF
 		$(cmake-utils_use ffmpeg K3B_BUILD_FFMPEG_DECODER_PLUGIN)
 		$(cmake-utils_use vorbis K3B_BUILD_OGGVORBIS_DECODER_PLUGIN)
 		$(cmake-utils_use mad K3B_BUILD_MAD_DECODER_PLUGIN)
@@ -78,7 +79,8 @@ src_configure() {
 		$(cmake-utils_use flac K3B_BUILD_FLAC_DECODER_PLUGIN)
 		$(cmake-utils_use sndfile K3B_BUILD_SNDFILE_DECODER_PLUGIN)
 		$(cmake-utils_use wav K3B_BUILD_WAVE_DECODER_PLUGIN)
-		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN) )
+		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN)
+	)
 
 	if use encode; then
 		mycmakeargs+=(
