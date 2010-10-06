@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.188 2010/09/30 20:06:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.189 2010/10/06 20:12:23 maekke Exp $
+
+  06 Oct 2010; Markus Meier <maekke@gentoo.org> openvpn-2.1.2.ebuild:
+  x86 stable, bug #338919
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> openvpn-2.1.2.ebuild:
   stable ppc64, bug 338919
