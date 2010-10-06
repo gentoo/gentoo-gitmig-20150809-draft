@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.6.ebuild,v 1.2 2010/10/06 02:34:58 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.6.ebuild,v 1.3 2010/10/06 13:52:30 chiiph Exp $
 
 EAPI="2"
 
@@ -33,8 +33,4 @@ pkg_postinst() {
 		ewarn "You have disabled tor USE flag, which means you need to "
 		ewarn "configure tor on a different host."
 	fi
-	elog ""
-	elog "You are installing a development release version, to install"
-	elog "upstream stable release use 0.1.x"
-	elog "Refer to ${HOMEPAGE} for more info"
 }

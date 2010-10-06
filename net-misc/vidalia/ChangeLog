@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.17 2010/10/06 02:34:58 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.18 2010/10/06 13:52:30 chiiph Exp $
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> vidalia-0.2.6.ebuild,
+  vidalia-0.2.10.ebuild:
+  Remove unneeded elog message wrt bug 339915
 
 *vidalia-0.2.10 (06 Oct 2010)
 
