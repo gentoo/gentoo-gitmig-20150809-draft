@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.5 2010/09/22 19:17:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.6 2010/10/06 19:54:56 maekke Exp $
+
+  06 Oct 2010; Markus Meier <maekke@gentoo.org> monotone-0.48.ebuild:
+  x86 stable, bug #338345
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> monotone-0.48.ebuild:
   Stable on amd64 wrt bug #338345
