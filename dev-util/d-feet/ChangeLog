@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.8 2010/02/08 08:55:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.9 2010/10/06 19:54:31 eva Exp $
+
+*d-feet-0.1.12 (06 Oct 2010)
+
+  06 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -d-feet-0.1.4.ebuild,
+  -files/d-feet-0.1.4-show-properties.patch, -d-feet-0.1.6.ebuild,
+  -d-feet-0.1.8.ebuild, +d-feet-0.1.12.ebuild:
+  Version bump. Project moved to gnome.org. Fix some UI bugs.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> d-feet-0.1.4.ebuild:
   Add inherit eutils for epatch.

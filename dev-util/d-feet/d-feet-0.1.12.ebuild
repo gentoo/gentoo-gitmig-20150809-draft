@@ -1,32 +1,27 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.4.ebuild,v 1.3 2010/02/08 08:55:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.12.ebuild,v 1.1 2010/10/06 19:54:31 eva Exp $
 
-inherit eutils gnome2 distutils
+GCONF_DEBUG="no"
+
+inherit gnome2 distutils
 
 DESCRIPTION="D-Feet is a powerful D-Bus debugger"
-HOMEPAGE="http://hosted.fedoraproject.org/projects/d-feet/"
-SRC_URI="http://johnp.fedorapeople.org/${P}.tar.gz"
+HOMEPAGE="http://live.gnome.org/d-feet/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="gnome"
 
 RDEPEND=">=sys-apps/dbus-1.0
 	>=dev-python/dbus-python-0.82.3
 	dev-python/pygtk
-	>=dev-lang/python-2.5"
+	>=dev-lang/python-2.5
+	gnome? ( dev-python/libwnck-python )"
 
 pkg_setup() {
 	PYTHON_MODNAME="dfeet"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-show-properties.patch
 }
 
 pkg_postinst()
