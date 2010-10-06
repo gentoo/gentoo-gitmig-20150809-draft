@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<use>
-	<flag name='tor'>Allow to use a local tor setup</flag>
-</use>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>chiiph@gentoo.org</email>
+		<name>Tomas Touceda</name>
+	</maintainer>
+	<use>
+		<flag name='tor'>Allow to use a local tor setup</flag>
+	</use>
 </pkgmetadata>
 

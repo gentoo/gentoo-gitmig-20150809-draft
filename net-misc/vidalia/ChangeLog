@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.16 2010/05/22 11:00:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.17 2010/10/06 02:34:58 chiiph Exp $
+
+*vidalia-0.2.10 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> -vidalia-0.1.15.ebuild,
+  -vidalia-0.2.5.ebuild, vidalia-0.2.6.ebuild, +vidalia-0.2.10.ebuild,
+  metadata.xml:
+  Add myself as maintainer, old version cleanup, and version bump
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)
