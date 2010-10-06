@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.4 2010/09/27 16:17:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.5 2010/10/06 16:03:12 hwoarang Exp $
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gummi-0.5.1.ebuild:
+  Make cairo use flag mandatory to poppler dependency
 
 *gummi-0.5.1 (27 Sep 2010)
 
