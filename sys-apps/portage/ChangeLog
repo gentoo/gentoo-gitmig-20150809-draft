@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.743 2010/10/05 22:37:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.744 2010/10/06 21:09:37 zmedico Exp $
+
+*portage-2.2_rc90 (06 Oct 2010)
+
+  06 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc90.ebuild:
+  2.2_rc90 version bump. This fixes bug #185377 (::repo dependencies for
+  emerge arguments, config files, and package sets), bug #262038 (separate
+  package mask handling for each repo/overlay), bug #339231 (@security
+  TypeError with python3), and bug #339642 (mixed IPv4/IPv6 support for
+  emerge --sync). Bug #210077 tracks all bugs fixed since 2.1.x.
 
   05 Oct 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.12.ebuild,
   -portage-2.2_rc88.ebuild:
