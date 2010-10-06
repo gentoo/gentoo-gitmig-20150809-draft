@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.72 2010/10/06 09:17:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.73 2010/10/06 16:00:41 jmbsvicetto Exp $
+
+  06 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdeplasma-addons-4.5.2.ebuild:
+  [kde-base/kdeplasma-addons-4.5.2] Dropped the lancelot patch as the fix
+  was applied on this release.
 
 *kdeplasma-addons-4.5.2 (06 Oct 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.5.2.ebuild,v 1.1 2010/10/06 09:17:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.5.2.ebuild,v 1.2 2010/10/06 16:00:41 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -47,7 +47,6 @@ add_blocker kdebase-data '<4.2.88'
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.4.74-cmake.patch"
-	"${FILESDIR}/4.5.0-fix_lancelot.patch"
 )
 
 src_prepare() {
