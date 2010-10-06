@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/gx-mail-notify-0.4.2.ebuild,v 1.2 2010/10/06 20:45:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/gx-mail-notify-0.4.4.ebuild,v 1.1 2010/10/06 20:45:44 tampakrap Exp $
 
-EAPI=2
+EAPI=3
+
+OPENGL_REQUIRED=always
 inherit kde4-base
 
 MY_P=gx_mail_notify-${PV}
@@ -16,10 +18,11 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND=">=kde-base/kdelibs-${KDE_MINIMAL}[opengl]
-	>=kde-base/plasma-workspace-${KDE_MINIMAL}"
+DEPEND="$(add_kdebase_dep plasma-workspace)"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-qt-4.7.patch" )
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="README"
+DOCS=( README )

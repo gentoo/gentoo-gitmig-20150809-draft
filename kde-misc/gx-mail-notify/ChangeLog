@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/gx-mail-notify
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/ChangeLog,v 1.1 2009/11/03 13:03:41 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/ChangeLog,v 1.2 2010/10/06 20:45:44 tampakrap Exp $
+
+*gx-mail-notify-0.4.4 (06 Oct 2010)
+
+  06 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +gx-mail-notify-0.4.4.ebuild, +files/gx-mail-notify-qt-4.7.patch:
+  Version bump, fixes bug 326397, bug 323053 (gcc 4.5 compilation) and bug
+  338565 (qt 4.7 compilation)
 
 *gx-mail-notify-0.4.2 (03 Nov 2009)
 
