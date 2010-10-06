@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.3 2010/08/24 19:46:29 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.4 2010/10/06 22:04:39 chiiph Exp $
+
+*shiboken-0.5.0 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> +shiboken-0.5.0.ebuild:
+  Version bump
 
 *shiboken-0.4.0 (24 Aug 2010)
 
