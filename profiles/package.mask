@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12021 2010/10/06 12:50:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12022 2010/10/06 13:24:14 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1386,7 +1386,7 @@ dev-util/w32api
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
->=app-portage/portpeek-2
+>=app-portage/portpeek-1.9
 
 # Robin H. Johnson <robbat2@gentoo.org> (06 Dec 2008)
 # The init.d scripts and default rules need updating and serious testing.
