@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.57 2010/08/15 13:37:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.58 2010/10/06 17:44:45 tampakrap Exp $
+
+  06 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org> k9copy-2.3.6.ebuild:
+  Cleanup: EAPI3, merge with live ebuild
 
 *k9copy-2.3.6 (15 Aug 2010)
 
