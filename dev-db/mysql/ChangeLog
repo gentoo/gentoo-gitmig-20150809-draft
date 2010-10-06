@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.548 2010/09/28 18:41:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.549 2010/10/06 00:16:27 robbat2 Exp $
+
+*mysql-5.1.51 (06 Oct 2010)
+
+  06 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.51.ebuild:
+  Version bump. Amarok use of embedded libmysqld.so is supported again.
 
   28 Sep 2010; Fabian Groffen <grobian@gentoo.org> mysql-5.1.50-r1.ebuild:
   Marked ~x86-macos, bug #337498
