@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/hevea
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.23 2009/12/27 11:55:03 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.24 2010/10/06 18:28:32 aballier Exp $
+
+*hevea-1.10-r1 (06 Oct 2010)
+
+  06 Oct 2010; Alexis Ballier <aballier@gentoo.org> +hevea-1.10-r1.ebuild:
+  Install hevea.sty in texmf-site and get rid of the TEXINPUTS "hack", bug
+  #339591 by Andreas K. Hüttel <dilfridge@gentoo.org>
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> hevea-1.10.ebuild:
   sparc stable wrt #291786
