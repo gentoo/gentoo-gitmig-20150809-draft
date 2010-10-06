@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.2 2010/09/30 11:07:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.3 2010/10/06 20:17:16 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://nsf.110mb.com/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug libev libevent"
 
 RDEPEND=">=media-libs/imlib2-1.4.0
