@@ -1,50 +1,37 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.3 2009/03/28 18:25:11 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.4 2010/10/06 02:28:00 chiiph Exp $
 
-EAPI="1"
+EAPI="3"
 
 inherit eutils
 
-RESTRICT="installsources"
-
 DESCRIPTION="Schoca is a Scheme implementation in OCaml."
-
-HOMEPAGE="http://home.arcor.de/chr_bauer/schoca.html
-		  http://chesslib.sourceforge.net/"
-
+HOMEPAGE="http://sourceforge.net/projects/chesslib/"
 SRC_URI="mirror://sourceforge/chesslib/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+ocamlopt"
 
-DEPEND="dev-ml/findlib"
+DEPEND="dev-ml/findlib
+	dev-lang/ocaml[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
+RESTRICT="installsources"
 
-src_unpack() {
-	unpack ${A}; cd "${S}"
-	cp OCaml.mk OCaml.mk.old
-	sed "s:\$(CFLAGS):\$(CCFLAGS):g" -i OCaml.mk
-	sed "s:CCFLAGS= -ccopt -O2:CCFLAGS= -ccopt \"${CFLAGS}\":" -i OCaml.mk
-	sed -i -e "s:\$(LDFLAGS):-cclib \"${LDFLAGS}\":" OCaml.mk
-	sed -i -e "s:DESTDURFLAG:DESTDIRFLAG:" OCaml.mk
+src_configure() {
+	sed "s:\$(CFLAGS):\$(CCFLAGS):g" -i OCaml.mk || die "sed failed"
+	sed "s:CCFLAGS= -ccopt -O2:CCFLAGS= -ccopt \"${CFLAGS}\":" -i OCaml.mk || die "sed failed"
+	sed -i -e "s:\$(LDFLAGS):-cclib \"${LDFLAGS}\":" OCaml.mk || die "sed failed"
+	sed -i -e "s:DESTDURFLAG:DESTDIRFLAG:" OCaml.mk || die "sed failed"
 	if ! use ocamlopt; then
 		sed -i -e 's/ \$(PROGRAM)\.opt/ \$(PROGRAM)/' OCaml.mk || die "sed failed"
 		sed -i -e 's/ \$(LIBRARY)\.cmxa//' OCaml.mk || die "sed failed"
 		sed -i -e 's/ \$(LIBRARY)\.a//' OCaml.mk || die "sed failed"
 		sed -i -e 's/) \$(NCOBJECTS)/)/' OCaml.mk || die "sed failed"
 	fi
-	diff -u OCaml.mk.old OCaml.mk
 }
 
 src_compile() {
@@ -54,6 +41,6 @@ src_compile() {
 
 src_install() {
 	use ocamlopt || export STRIP_MASK="*bin/schoca"
-	dodir "$(ocamlfind printconf destdir)"
+	dodir "$(ocamlfind printconf destdir)" || die "dodir failed"
 	emake PREFIX="/usr" DESTDIR="${D}" DESTDIRFLAG="-destdir ${D}$(ocamlfind printconf destdir)" install || die "emake install failed"
 }
