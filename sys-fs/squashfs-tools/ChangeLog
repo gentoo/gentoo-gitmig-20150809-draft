@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.70 2010/09/20 02:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.71 2010/10/07 02:15:09 vapier Exp $
+
+  07 Oct 2010; Mike Frysinger <vapier@gentoo.org> squashfs-tools-4.1.ebuild:
+  Fix by Martin Väth for IUSE=xattr handling #338671, and clean up general
+  handling of the USE flags.
 
 *squashfs-tools-4.1 (20 Sep 2010)
 
