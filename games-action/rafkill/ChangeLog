@@ -1,6 +1,10 @@
 # ChangeLog for games-action/rafkill
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/ChangeLog,v 1.5 2008/04/30 16:46:31 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/ChangeLog,v 1.6 2010/10/07 08:43:21 tupone Exp $
+
+  07 Oct 2010; Alfredo Tupone <tupone@gentoo.org> rafkill-1.2.3.ebuild,
+  +files/rafkill-1.2.3-ldflags.patch:
+  Respect LDFLAGS. Bug #339896 by flameeyes@gentoo.org
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/rafkill-1.2.3-gcc43.patch, rafkill-1.2.3.ebuild:
