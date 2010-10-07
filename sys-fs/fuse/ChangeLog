@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.132 2010/05/22 11:33:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.133 2010/10/07 22:11:09 radhermit Exp $
+
+*fuse-2.8.5 (07 Oct 2010)
+
+  07 Oct 2010; Tim Harder <radhermit@gentoo.org> +fuse-2.8.5.ebuild:
+  Version bump for bug #330793. Drop unnecessary src_compile and remove die
+  from econf.
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)
