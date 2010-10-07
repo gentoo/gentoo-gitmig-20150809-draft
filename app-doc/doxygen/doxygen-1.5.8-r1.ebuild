@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8-r1.ebuild,v 1.9 2010/10/04 06:10:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8-r1.ebuild,v 1.10 2010/10/07 23:08:03 wired Exp $
 
 EAPI=2
 
@@ -98,14 +98,13 @@ src_configure() {
 		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}"
 		./configure ${my_conf} $(use_with qt4 doxywizard) \
 		|| die 'configure with qt4 failed'
+		# this appears to work as a fix for the final ignoring LDFLAGS issue...
+		pushd "${S}"/addon/doxywizard
+			eqmake4 "CONFIG+=nostrip" doxywizard.pro -o Makefile.doxywizard
+		popd
 	else
 		./configure ${my_conf} || die 'configure failed'
 	fi
-
-	# this appears to work as a fix for the final ignoring LDFLAGS issue...
-	pushd "${S}"/addon/doxywizard
-		eqmake4 "CONFIG+=nostrip" doxywizard.pro -o Makefile.doxywizard
-	popd
 }
 
 src_compile() {
