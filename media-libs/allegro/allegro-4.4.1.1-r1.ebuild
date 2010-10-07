@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.7 2010/06/26 13:47:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.8 2010/10/07 08:55:35 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -73,6 +73,7 @@ src_configure() {
 		$(cmake-utils_use_want vorbis LOGG)
 		$(cmake-utils_use_want oss)
 		$(cmake-utils_use_want test TESTS)
+		$(cmake-utils_use_want X TOOLS)
 		$(cmake-utils_use_want X X11)
 		)
 
