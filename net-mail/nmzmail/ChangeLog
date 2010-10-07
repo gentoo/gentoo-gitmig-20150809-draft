@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/nmzmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.10 2010/08/12 09:19:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.11 2010/10/07 07:47:03 radhermit Exp $
+
+  07 Oct 2010; Tim Harder <radhermit@gentoo.org> -nmzmail-0.1.3.ebuild,
+  nmzmail-1.1.ebuild:
+  Spelling fix for DESCRIPTION and drop old version.
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org> nmzmail-1.1.ebuild:
   amd64 stable, bug #306051
