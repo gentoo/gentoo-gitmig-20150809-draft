@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12027 2010/10/07 08:51:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12028 2010/10/07 18:17:50 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,17 @@
 
 #--- END OF EXAMPLES ---
 
-# Pacho Ramos <pacho@gentoo.org> (7 Oct 2010)
+# Samuli Suominen <ssuominen@gentoo.org> (07 Oct 2010)
+# Packages using obsolete policykit:
+#
+# kde-base/policykit-kde replaced by sys-auth/polkit-kde
+# sys-auth/policykit-qt replaced by sys-auth/polkit-qt
+#
+# Masked for removal in 30 days or sooner
+kde-base/policykit-kde
+sys-auth/policykit-qt
+
+# Pacho Ramos <pacho@gentoo.org> (07 Oct 2010)
 # Unmaintained since 2006 by upstream, no required by
 # any package in the tree (bug #340039) and most
 # distributions have already dropped it.
@@ -39,7 +49,7 @@
 # Removal on 2010-11-07
 dev-dotnet/ant-dotnet
 
-# Ole Markus With <olemarkus@gentoo.org> (5 Oct 2010)
+# Ole Markus With <olemarkus@gentoo.org> (05 Oct 2010)
 # PHP and PHP-related ebuilds supporting minor version 
 # slotting are masked for testing
 =dev-lang/php-5.2.14-r1
