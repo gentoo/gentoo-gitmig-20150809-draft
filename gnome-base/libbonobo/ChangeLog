@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.192 2010/09/25 14:32:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.193 2010/10/07 22:19:32 ssuominen Exp $
+
+  07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libbonobo-2.24.3.ebuild:
+  ppc64 stable wrt #324077
 
   25 Sep 2010; Pacho Ramos <pacho@gentoo.org> -libbonobo-2.24.2.ebuild,
   libbonobo-2.24.3.ebuild:
