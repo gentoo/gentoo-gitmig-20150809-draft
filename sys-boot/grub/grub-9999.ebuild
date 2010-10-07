@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.25 2010/08/24 22:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.26 2010/10/07 04:22:11 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -29,6 +29,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 DEPEND="${RDEPEND}
 	>=sys-devel/autogen-5.10
 	>=dev-lang/python-2.5.2"
+[[ ${PV} == "9999" ]] && DEPEND+=" sys-apps/help2man"
 PROVIDE="virtual/bootloader"
 
 export STRIP_MASK="*/grub/*/*.mod"

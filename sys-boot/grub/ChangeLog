@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.145 2010/09/02 21:19:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.146 2010/10/07 04:22:11 vapier Exp $
+
+  07 Oct 2010; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
+  Add help2man to DEPEND for a pages #339839 by Eric Thibodeau.
 
   02 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r10.ebuild:
   Fix RDEPEND.
