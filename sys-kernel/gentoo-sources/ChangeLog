@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.754 2010/10/07 00:18:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.755 2010/10/07 22:51:43 rich0 Exp $
+
+  07 Oct 2010; Richard Freeman <rich0@gentoo.org>
+  gentoo-sources-2.6.34-r11.ebuild:
+  amd64 stable - security bug 339819
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.32-r18.ebuild:
