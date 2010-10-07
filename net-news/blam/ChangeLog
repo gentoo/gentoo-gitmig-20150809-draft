@@ -1,6 +1,11 @@
 # ChangeLog for net-news/blam
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.55 2009/12/27 08:52:24 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.56 2010/10/07 20:37:31 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -blam-1.8.4.ebuild,
+  -files/blam-1.8.4_pre2-gtk-sharp-2.10-compat.diff,
+  -files/blam-1.8.4_pre2-remove-funky-non-printable.diff:
+  Remove old.
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> blam-1.8.6.ebuild:
   Marked ppc stable for bug #273251.
