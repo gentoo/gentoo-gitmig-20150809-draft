@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/piklab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.1 2010/02/28 00:52:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.2 2010/10/07 21:34:04 vapier Exp $
+
+*piklab-0.15.10 (07 Oct 2010)
+
+  07 Oct 2010; Mike Frysinger <vapier@gentoo.org> +piklab-0.15.10.ebuild:
+  Version bump.
 
 *piklab-0.15.7 (28 Feb 2010)
 
