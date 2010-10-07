@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.20.0.ebuild,v 1.3 2009/09/02 20:57:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.21.1-r1.ebuild,v 1.1 2010/10/07 08:43:32 pacho Exp $
 
 EAPI=2
 
@@ -16,12 +16,7 @@ IUSE=""
 
 # Does not build with <eds-2.24.0
 # http://bugzilla.gnome.org/show_bug.cgi?id=563301
-RDEPEND="
-	|| (
-		=gnome-extra/evolution-data-server-2.26*
-		=gnome-extra/evolution-data-server-2.25*
-		=gnome-extra/evolution-data-server-2.24*
-	)
+RDEPEND=">=gnome-extra/evolution-data-server-2.24
 	>=dev-dotnet/glib-sharp-2.12
 	>=dev-lang/mono-2"
 DEPEND="${RDEPEND}
@@ -30,11 +25,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	#Workaround for upstream Nazi version requirements.
-	sed -i \
-		-e 's:2.27.4:2.29.0:' \
-		configure.in || die "Sed failed"
+	epatch "${FILESDIR}/${PN}-0.21.1-version-check.patch"
 	epatch "${FILESDIR}/${PN}-0.21.1-gtk-sharp-dropped.patch"
+	# Drop .so versions since it's a headache to maintain otherwise
+	epatch "${FILESDIR}/${PN}-0.21.1-drop-soversion.patch"
 	eautoreconf
 }
 

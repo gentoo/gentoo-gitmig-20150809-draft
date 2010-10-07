@@ -1,0 +1,15 @@
+--- evolution/evolution-sharp.dll.config.in~	2009-05-26 09:25:06.000000000 +0200
++++ evolution/evolution-sharp.dll.config.in	2010-10-07 10:33:59.000000000 +0200
+@@ -1,7 +1,7 @@
+ <configuration>
+-  <dllmap dll="ebook" target="libebook@EDS_VERSION@@LIB_PREFIX@.@EBOOK_SOVERSION@@LIB_SUFFIX@"/>
+-  <dllmap dll="ecal" target="libecal@EDS_VERSION@@LIB_PREFIX@.@ECAL_SOVERSION@@LIB_SUFFIX@"/>
+-  <dllmap dll="edataserver" target="libedataserver@EDS_VERSION@@LIB_PREFIX@.@EDS_SOVERSION@@LIB_SUFFIX@"/>
+-  <dllmap dll="ebackend" target="libebackend@EDS_VERSION@@LIB_PREFIX@.@EBACKEND_SOVERSION@@LIB_SUFFIX@"/>
+-  <dllmap dll="edatacal" target="libedata-cal@EDS_VERSION@@LIB_PREFIX@.@EDATACAL_SOVERSION@@LIB_SUFFIX@"/>
++  <dllmap dll="ebook" target="libebook@EDS_VERSION@@LIB_PREFIX@"/>
++  <dllmap dll="ecal" target="libecal@EDS_VERSION@@LIB_PREFIX@"/>
++  <dllmap dll="edataserver" target="libedataserver@EDS_VERSION@@LIB_PREFIX@"/>
++  <dllmap dll="ebackend" target="libebackend@EDS_VERSION@@LIB_PREFIX@"/>
++  <dllmap dll="edatacal" target="libedata-cal@EDS_VERSION@@LIB_PREFIX@"/>
+ </configuration>

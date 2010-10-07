@@ -1,6 +1,15 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.50 2010/06/19 18:03:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.51 2010/10/07 08:43:32 pacho Exp $
+
+*evolution-sharp-0.21.1-r1 (07 Oct 2010)
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -evolution-sharp-0.20.0.ebuild, +evolution-sharp-0.21.1-r1.ebuild,
+  +files/evolution-sharp-0.21.1-drop-soversion.patch:
+  Revision bump dropping soversion checks since it's a pain to maintain
+  around e-d-s bumps and causes breakage on, for example, tasque when
+  running on 2.30. Remove old.
 
   19 Jun 2010; Pacho Ramos <pacho@gentoo.org> evolution-sharp-0.21.1.ebuild,
   +files/evolution-sharp-0.21.1-version-check.patch:
