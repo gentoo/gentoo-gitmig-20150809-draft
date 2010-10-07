@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/db4o-6.1.ebuild,v 1.1 2007/06/24 17:58:59 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/db4o-6.1.ebuild,v 1.2 2010/10/07 18:49:53 pacho Exp $
 
 inherit mono multilib eutils
 
@@ -18,9 +18,9 @@ DEPEND="dev-lang/mono"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_compile() {
@@ -31,9 +31,9 @@ src_compile() {
 src_install() {
 
 	if use doc; then
-		emake DESTDIR=${D} install || die "emake install failed"
+		emake DESTDIR="${D}" install || die "emake install failed"
 	else
 		# Prevents from installing documentation
-		emake RPM_DOC_DIR="." DESTDIR=${D} install || die "emake install failed"
+		emake RPM_DOC_DIR="." DESTDIR="${D}" install || die "emake install failed"
 	fi
 }
