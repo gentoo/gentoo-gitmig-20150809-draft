@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/log4net
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/ChangeLog,v 1.7 2009/10/21 15:56:38 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/ChangeLog,v 1.8 2010/10/07 19:45:14 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -files/log4net.pc.in,
+  -log4net-1.2.10-r1.ebuild, -log4net-1.2.10-r2.ebuild:
+  Remove old.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> log4net-1.2.10-r3.ebuild:
   amd64/x86 stable, bug #286874

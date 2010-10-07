@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gnome-keyring-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.5 2010/07/03 18:11:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.6 2010/10/07 19:32:26 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-keyring-sharp-1.0.0-r1.ebuild,
+  -files/gnome-keyring-sharp-1.0.0-monodoc.patch:
+  Remove old.
 
 *gnome-keyring-sharp-1.0.0-r2 (03 Jul 2010)
 

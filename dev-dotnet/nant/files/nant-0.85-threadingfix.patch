@@ -1,22 +1,0 @@
---- src/NAnt.Core/Tasks/ExternalProgramBase.cs	2005-04-04 14:08:28.000000000 +0200
-+++ src/NAnt.Core/Tasks/ExternalProgramBase.cs.new	2007-12-31 17:28:09.000000000 +0100
-@@ -452,7 +452,8 @@
-                     }
-                 }
-             }
--            OutputWriter.Flush();
-+	    lock (_lockObject)
-+	        OutputWriter.Flush();
-         }
-         /// <summary>        /// Reads from the stream until the external program is ended.        /// </summary>
-         private void StreamReaderThread_Error() {
-@@ -476,7 +477,8 @@
-                     }
-                 }
-             }
--            ErrorWriter.Flush();
-+	    lock (_lockObject)
-+                ErrorWriter.Flush();
-         }
- 
-         /// <summary>

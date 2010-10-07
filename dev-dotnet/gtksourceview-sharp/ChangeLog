@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtksourceview-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.44 2010/02/25 12:12:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.45 2010/10/07 19:40:52 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/gtksourceview-sharp-0.10-monodoc-update.diff,
+  -gtksourceview-sharp-0.12.ebuild:
+  Remove old.
 
   25 Feb 2010; Patrick Lauer <patrick@gentoo.org>
   gtksourceview-sharp-0.12.ebuild:

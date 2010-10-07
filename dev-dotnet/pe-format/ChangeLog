@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.18 2010/10/05 16:24:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.19 2010/10/07 19:57:13 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -pe-format-0.ebuild,
+  -files/pe-format.init:
+  Remove old.
 
   05 Oct 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Update the maintainer information.

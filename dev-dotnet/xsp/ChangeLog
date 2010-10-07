@@ -1,6 +1,20 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.85 2010/09/23 22:14:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.86 2010/10/07 20:05:15 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/1.2.1/mod-mono-server.confd, -xsp-2.0.ebuild, -xsp-2.4.2.ebuild,
+  -files/1.2.1/mod-mono-server.initd, -xsp-2.0.9999.ebuild,
+  -xsp-2.4.9999.ebuild, -files/1.2.1/xsp.confd, -xsp-2.6.4.ebuild,
+  -files/1.2.1/xsp.initd, -files/1.2.4/mod-mono-server.confd,
+  -files/1.2.4/mod-mono-server.initd, -files/1.2.4/xsp.confd,
+  -files/1.2.4/xsp.initd, -files/1.2.6/mod-mono-server.confd,
+  -files/1.2.6/mod-mono-server.initd, -files/1.2.6/xsp.confd,
+  -files/1.2.6/xsp.initd, -files/2.0/mod-mono-server.confd,
+  -files/2.0/mod-mono-server.initd, -files/2.0/xsp.confd,
+  -files/2.0/xsp.initd, -files/2.2/configure-fix.patch, -xsp-1.2.1.ebuild,
+  -xsp-1.2.4.ebuild, -xsp-1.2.6.ebuild:
+  Remove old.
 
   23 Sep 2010; Markos Chandras <hwoarang@gentoo.org> xsp-2.6.5.ebuild:
   Stable on amd64 wrt bug #336851

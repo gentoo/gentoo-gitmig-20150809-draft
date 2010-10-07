@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.21 2010/09/12 04:26:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.22 2010/10/07 19:47:02 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/mono-addins-0.2-disable-gui.patch, -mono-addins-0.3.ebuild,
+  -mono-addins-0.3.1.ebuild, -mono-addins-0.4.ebuild,
+  -mono-addins-0.4-r1.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> mono-addins-0.5.ebuild:
   Marked ppc for bug #327279.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtk-sharp-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/ChangeLog,v 1.9 2010/09/12 04:29:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/ChangeLog,v 1.10 2010/10/07 19:34:43 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -gtk-sharp-docs-2.12.9.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   gtk-sharp-docs-2.12.10.ebuild:
