@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.325 2010/09/24 11:15:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.326 2010/10/07 07:43:28 tove Exp $
+
+  07 Oct 2010; Torsten Veller <tove@gentoo.org> perl-5.12.2-r1.ebuild:
+  Create VENDOR_ARCH to shut up a enc2xs file not found warning (#338802).
+  Raise perl-cleaner version
 
   24 Sep 2010; Torsten Veller <tove@gentoo.org> perl-5.12.2-r1.ebuild:
   Disable tests if run as root until there is a solution (#328793). Don't

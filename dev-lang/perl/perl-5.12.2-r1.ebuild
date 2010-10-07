@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.2-r1.ebuild,v 1.2 2010/09/24 11:15:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.2-r1.ebuild,v 1.3 2010/10/07 07:43:28 tove Exp $
 
 EAPI=3
 
@@ -39,7 +39,7 @@ COMMON_DEPEND="berkdb? ( sys-libs/db )
 DEPEND="${COMMON_DEPEND}
 	elibc_FreeBSD? ( sys-freebsd/freebsd-mk-defs )"
 RDEPEND="${COMMON_DEPEND}"
-PDEPEND=">=app-admin/perl-cleaner-2.2"
+PDEPEND=">=app-admin/perl-cleaner-2.5"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -286,6 +286,7 @@ src_install() {
 
 #	# Fix for "stupid" modules and programs
 #	dodir ${SITE_ARCH} ${SITE_LIB}
+	keepdir "${VENDOR_ARCH}" #338802 for enc2xs
 
 	local installtarget=install
 	if use build ; then
