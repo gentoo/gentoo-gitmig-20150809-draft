@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6.ebuild,v 1.2 2010/10/03 17:07:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6.ebuild,v 1.3 2010/10/07 09:46:17 phajdan.jr Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}wm.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND="dev-python/pygtk
