@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/gsasl-1.4.1.ebuild,v 1.1 2010/02/17 20:47:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/gsasl-1.4.1.ebuild,v 1.2 2010/10/07 15:41:47 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="|| ( =net-libs/libgsasl-${PV} =net-misc/${P} )"
