@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.2 2010/10/01 22:13:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.3 2010/10/07 20:58:12 mgorny Exp $
+
+*uam-0.0.7 (07 Oct 2010)
+
+  07 Oct 2010; Michał Górny <mgorny@gentoo.org> -uam-0.0.6.ebuild,
+  +uam-0.0.7.ebuild:
+  Trivial version bump. The new version fixes mountpoint removal (cleanup)
+  when pumount is used.
 
   01 Oct 2010; Michał Górny <mgorny@gentoo.org> uam-0.0.6.ebuild:
   Reload udev rules only if ${ROOT}/dev/.udev exists. Thanks to ABCD for the
