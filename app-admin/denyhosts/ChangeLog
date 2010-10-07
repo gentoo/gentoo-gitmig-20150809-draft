@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.41 2010/10/07 12:45:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.42 2010/10/07 17:49:01 darkside Exp $
+
+  07 Oct 2010; Jeremy Olexa <darkside@gentoo.org> -denyhosts-2.6-r1.ebuild,
+  denyhosts-2.6-r4.ebuild:
+  Stabilize for all. Tested on stable x86 host, only text files changed.
+  Remove old version
 
 *denyhosts-2.6-r4 (07 Oct 2010)
 
