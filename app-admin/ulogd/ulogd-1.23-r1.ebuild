@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.7 2010/10/07 05:31:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.8 2010/10/07 15:45:42 mr_bones_ Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -19,7 +19,7 @@ DEPEND="net-firewall/iptables
 	postgres? ( dev-db/postgresql-server )"
 
 pkg_setup() {
-	# can't depend on supported kernel versions because dependencies 
+	# can't depend on supported kernel versions because dependencies
 	# on virtuals are not versioned
 	linux-info_pkg_setup
 	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"

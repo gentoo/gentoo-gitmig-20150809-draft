@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r2.ebuild,v 1.3 2010/10/07 05:31:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r2.ebuild,v 1.4 2010/10/07 15:45:42 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 	net-libs/libpcap"
 
 pkg_setup() {
-	# can't depend on supported kernel versions because dependencies 
+	# can't depend on supported kernel versions because dependencies
 	# on virtuals are not versioned
 	linux-info_pkg_setup
 	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
