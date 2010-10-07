@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-be
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.9 2009/10/17 22:36:17 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-be/ChangeLog,v 1.10 2010/10/07 23:15:49 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-be-0.01.ebuild,
+  aspell-be-0.01-r1.ebuild:
+  Drop to ~mips
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-be-0.01.ebuild,
   aspell-be-0.01-r1.ebuild:
