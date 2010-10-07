@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.23 2010/05/14 18:37:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.24 2010/10/07 18:18:59 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Feb 2010)
 # Mask kde 4.4.0 =)
@@ -267,7 +267,6 @@
 =kde-base/plasma-apps-4.4*
 =kde-base/plasma-runtime-4.4*
 =kde-base/plasma-workspace-4.4*
-=kde-base/policykit-kde-4.4*
 =kde-base/powerdevil-4.4*
 =kde-base/printer-applet-4.4*
 =kde-base/pykde4-4.4*
