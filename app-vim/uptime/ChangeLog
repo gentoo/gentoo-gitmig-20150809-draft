@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/uptime
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/uptime/ChangeLog,v 1.17 2007/02/22 00:11:41 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/uptime/ChangeLog,v 1.18 2010/10/07 04:07:41 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> uptime-1.3.ebuild:
+  Drop to ~mips
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
