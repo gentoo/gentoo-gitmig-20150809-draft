@@ -1,6 +1,23 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.199 2010/10/05 21:22:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.200 2010/10/07 20:12:09 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -files/mono-1.2-glibc28.patch,
+  -files/mono-1.2.4-pic.patch, -mono-1.2.5.1-r1.ebuild,
+  -mono-1.2.6-r3.ebuild, -files/mono-1.2.6-bug-347359.patch,
+  -files/mono-1.2.6-threads-types-private-prototypes.patch,
+  -mono-2.0.1-r1.ebuild,
+  -files/mono-2.0.1-fix-wsdl-troubles-with-muine.patch,
+  -files/mono-2.0.1-fix_implicit_pointer_conversions.patch,
+  -mono-2.0.9999.ebuild, -files/mono-2.0-fix-headless.patch,
+  -files/mono-2.0-mimeicon.patch, -files/mono-2.0-ppc-threading.patch,
+  -files/mono-2.2-freebsd-elf_common.patch,
+  -files/mono-2.2-r121596-work-around-runtime-crash.patch,
+  -files/mono-2.2-r123987-bless-crash.patch, -mono-2.4.2.3.ebuild,
+  -mono-2.4.3.1.ebuild, -mono-2.4.9999.ebuild,
+  -files/mono-2.4-openoffice.patch, -files/mono-2.4-ppcbuild-fix.patch,
+  -mono-2.6.4-r1.ebuild, -files/mono-biginteger_overflow.diff:
+  Remove old.
 
   05 Oct 2010; Pacho Ramos <pacho@gentoo.org> mono-9999.ebuild,
   +files/mono-9999-libdir.patch:
