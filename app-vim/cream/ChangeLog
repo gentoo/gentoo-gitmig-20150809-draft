@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.42 2008/09/25 13:46:29 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.43 2010/10/07 03:05:31 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> cream-0.32.ebuild:
+  Drop to ~mips
 
 *cream-0.41-r2 (25 Sep 2008)
 

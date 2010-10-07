@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.13 2008/09/20 14:12:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.32.ebuild,v 1.14 2010/10/07 03:05:31 leio Exp $
 
 inherit vim-plugin eutils
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE="linguas_en linguas_fr linguas_es linguas_de"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc mips amd64 alpha ia64"
+KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=app-editors/gvim-6.2
