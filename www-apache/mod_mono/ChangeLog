@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.68 2010/09/12 04:25:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.69 2010/10/07 20:45:28 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -files/1.2.4/70_mod_mono.conf,
+  -mod_mono-1.2.4.ebuild, -mod_mono-2.0.ebuild,
+  -files/1.2.6/70_mod_mono.conf, -mod_mono-1.2.6-r1.ebuild,
+  -mod_mono-2.0.9999.ebuild, -files/1.9/70_mod_mono.conf,
+  -mod_mono-2.4.2.ebuild, -files/mono_auto_application_aspnet2.patch,
+  -mod_mono-2.4.9999.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> mod_mono-2.6.3.ebuild:
   Marked ppc for bug #327279.
