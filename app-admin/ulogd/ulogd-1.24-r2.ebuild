@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r2.ebuild,v 1.2 2010/06/17 20:00:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r2.ebuild,v 1.3 2010/10/07 05:31:53 wormo Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools linux-info
 
 DESCRIPTION="A userspace logging daemon for netfilter/iptables related logging"
 HOMEPAGE="http://netfilter.org/projects/ulogd/index.html"
@@ -24,6 +24,12 @@ RDEPEND="${DEPEND}
 	net-libs/libpcap"
 
 pkg_setup() {
+	# can't depend on supported kernel versions because dependencies 
+	# on virtuals are not versioned
+	linux-info_pkg_setup
+	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
+	kernel_is ge 2 6 31 && die "kernel version is too new -- try a newer ulogd"
+
 	enewgroup ulogd
 	enewuser ulogd -1 -1 /var/log/ulogd ulogd
 }
