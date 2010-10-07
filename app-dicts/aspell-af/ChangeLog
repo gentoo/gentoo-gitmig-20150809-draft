@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-af
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-af/ChangeLog,v 1.4 2009/10/18 20:04:47 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-af/ChangeLog,v 1.5 2010/10/07 23:10:35 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-af-0.50.0.ebuild:
+  Drop to ~mips
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-af-0.50.0.ebuild:
   QA fixes; IUSE is not defined
