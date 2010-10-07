@@ -3,6 +3,11 @@
 # $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.118
 # 2010/09/13 04:26:28 josejx Exp $
 
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -beagle-0.3.9-r2.ebuild,
+  -files/beagle-0.3.9-firefox-3.5.patch, -files/beagle-0.3.9-sqlite.patch,
+  -files/beagle-log-level-warn.patch, metadata.xml:
+  Remove old.
+
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> beagle-0.3.9-r3.ebuild:
   Marked ppc stable for bug #324723.
 

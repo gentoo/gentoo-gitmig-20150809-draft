@@ -15,9 +15,6 @@
 			<pkg>mail-client/evolution</pkg> stored in
 			<pkg>gnome-extra/evolution-data-server</pkg>. The information is
 			accessed using <pkg>dev-dotnet/evolution-sharp</pkg>.</flag>
-		<flag name='epiphany'>Compiles and installs the extension for either
-			<pkg>www-client/epiphany</pkg>. This extension helps Beagle index the
-			websites you visit.</flag>
 		<flag name='firefox'>Compiles and installs the extension for either
 			<pkg>www-client/firefox</pkg> or
 			<pkg>www-client/firefox-bin</pkg>. This extension helps
