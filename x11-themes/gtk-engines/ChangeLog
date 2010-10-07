@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.173 2010/10/03 22:16:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.174 2010/10/07 21:08:45 ssuominen Exp $
+
+  07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gtk-engines-2.20.1-r1.ebuild:
+  ppc64 stable wrt #324077
 
   03 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   gtk-engines-2.20.2.ebuild:
