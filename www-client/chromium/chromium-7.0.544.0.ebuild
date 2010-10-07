@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.536.2.ebuild,v 1.3 2010/10/05 09:47:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.544.0.ebuild,v 1.1 2010/10/07 06:39:19 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -68,6 +68,10 @@ src_prepare() {
 	# to be upstreamed.
 	epatch "${FILESDIR}"/${PN}-system-sqlite-r0.patch
 
+	# Small fix to the system-provided icu support,
+	# to be upstreamed.
+	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
+
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/cros"
@@ -104,7 +108,7 @@ src_configure() {
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg (http://crbug.com/50678).
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_ssl when we have a recent enough system NSS.
+	# TODO: use_system_ssl (need to consult upstream).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_icu=1
