@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.166 2010/10/01 22:20:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.167 2010/10/07 22:38:57 ssuominen Exp $
+
+  07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> orbit-2.14.18.ebuild:
+  ppc64 stable wrt #324077
 
 *orbit-2.14.19 (01 Oct 2010)
 
