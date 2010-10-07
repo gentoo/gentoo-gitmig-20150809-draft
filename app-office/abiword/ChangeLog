@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.228 2010/09/13 12:59:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.229 2010/10/07 07:42:34 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6.ebuild:
+  Fix icon installation (thanks to Faustus for reminding the problem in bug
+  #220097) and asio dependency (bug #326729 by Samuli Suominen).
 
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> abiword-2.8.6.ebuild:
   Marked ppc stable for bug #326503.

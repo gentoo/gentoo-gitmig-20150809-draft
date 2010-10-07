@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.10 2010/09/13 12:59:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.11 2010/10/07 07:42:34 pacho Exp $
 
 EAPI="3"
 
@@ -35,7 +35,6 @@ RDEPEND="
 		>=x11-libs/goffice-0.8:0.8 )
 	plugins? (
 		collab? (
-			dev-cpp/asio
 			>=dev-libs/boost-1.33.1
 			>=dev-libs/libxml2-2.4
 			>=net-libs/loudmouth-1
@@ -61,7 +60,9 @@ RDEPEND="
 #		svg? ( >=gnome-base/librsvg-2 )
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	>=dev-util/pkgconfig-0.9
+	plugins? (
+		collab? ( dev-cpp/asio ) )"
 
 pkg_setup() {
 	# do not enable gnome-vfs
@@ -124,7 +125,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# install icon to pixmaps (bug #220097)
-	sed 's:icondir= $(datadir)/icons:icondir = $(datadir)/pixmaps:' \
+	sed 's:$(datadir)/icons:$(datadir)/pixmaps:' \
 		-i Makefile.am Makefile.in || die "sed 1 failed"
 	# readme.txt will be installed using dodoc
 	sed '/readme\.txt\|abw/d' \
