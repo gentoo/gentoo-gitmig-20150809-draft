@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.18 2010/09/12 04:25:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.19 2010/10/07 19:23:41 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -gluezilla-2.0.9999.ebuild,
+  -gluezilla-2.4.2.ebuild, -gluezilla-2.4.9999.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> gluezilla-2.6.ebuild:
   Marked ppc for bug #327279.
