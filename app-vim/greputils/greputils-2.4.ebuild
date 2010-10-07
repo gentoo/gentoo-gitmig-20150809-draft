@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/greputils-2.4.ebuild,v 1.4 2005/05/17 17:13:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/greputils-2.4.ebuild,v 1.5 2010/10/07 03:18:28 leio Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: interface with grep, find and id-utils"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=1062"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc mips ~ppc alpha ia64"
+KEYWORDS="alpha ia64 ~mips ~ppc sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPURI="${HOMEPAGE}"

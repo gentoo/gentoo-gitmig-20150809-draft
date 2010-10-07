@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.17 2010/09/30 02:55:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.18 2010/10/07 03:07:53 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> dbext-2.20.ebuild:
+  Drop to ~mips
 
 *dbext-12.00 (30 Sep 2010)
 

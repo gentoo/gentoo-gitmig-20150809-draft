@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ntp-syntax
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.13 2009/06/30 14:33:56 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.14 2010/10/07 03:27:19 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> ntp-syntax-20031001.ebuild:
+  Drop to ~mips
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org> ntp-syntax-20031001.ebuild:
   arm/s390/sh stable

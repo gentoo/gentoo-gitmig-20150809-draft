@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/eruby-syntax
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/ChangeLog,v 1.14 2007/10/14 04:18:47 tgall Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/ChangeLog,v 1.15 2010/10/07 03:12:44 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> eruby-syntax-2.0-r1.ebuild:
+  Drop to ~mips
 
   13 Oct 2007; Tom Gall <tgall@gentoo.org> eruby-syntax-2.0-r1.ebuild:
   stable on ppc64

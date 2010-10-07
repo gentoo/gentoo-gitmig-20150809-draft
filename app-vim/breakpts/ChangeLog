@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/breakpts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.9 2008/09/20 12:19:38 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.10 2010/10/07 02:57:25 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> breakpts-3.1.ebuild:
+  Drop to ~mips
 
 *breakpts-4.0 (20 Sep 2008)
 

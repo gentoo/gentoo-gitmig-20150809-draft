@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/detectindent
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/detectindent/ChangeLog,v 1.7 2006/11/22 05:55:44 wormo Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/detectindent/ChangeLog,v 1.8 2010/10/07 03:08:33 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> detectindent-1.0.ebuild:
+  Drop to ~mips
 
   22 Nov 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   detectindent-1.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/nagios-syntax
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/ChangeLog,v 1.9 2006/11/27 07:32:26 wormo Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/ChangeLog,v 1.10 2010/10/07 03:26:29 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  nagios-syntax-20050105.ebuild:
+  Drop to ~mips
 
   27 Nov 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   nagios-syntax-20050105.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pushpop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.10 2008/09/20 14:59:13 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.11 2010/10/07 03:29:22 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> pushpop-2.4.ebuild:
+  Drop to ~mips
 
 *pushpop-4.0 (20 Sep 2008)
 

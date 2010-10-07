@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cfengine-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.12 2010/05/22 13:20:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.13 2010/10/07 03:00:13 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  cfengine-syntax-20050105.ebuild:
+  Drop to ~mips
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org>
   cfengine-syntax-20050105.ebuild:
