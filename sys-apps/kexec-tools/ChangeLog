@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.34 2010/07/30 20:21:13 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.35 2010/10/07 23:21:37 radhermit Exp $
+
+  07 Oct 2010; Tim Harder <radhermit@gentoo.org>
+  kexec-tools-2.0.0-r1.ebuild, kexec-tools-2.0.0-r2.ebuild,
+  kexec-tools-2.0.1.ebuild, kexec-tools-2.0.1-r1.ebuild,
+  kexec-tools-9999.ebuild:
+  Fix HOMEPAGE for bug #336481, thanks to Christian Asseburg for reporting.
+  Update copyright header.
 
 *kexec-tools-2.0.1-r1 (30 Jul 2010)
 

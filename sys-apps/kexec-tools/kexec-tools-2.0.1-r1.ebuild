@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.1-r1.ebuild,v 1.1 2010/07/30 20:21:13 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.1-r1.ebuild,v 1.2 2010/10/07 23:21:37 radhermit Exp $
 
 EAPI=2
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/horms/kexec-tools"
+HOMEPAGE="http://kernel.org/pub/linux/utils/kernel/kexec/"
 SRC_URI="mirror://kernel/linux/kernel/people/horms/kexec-tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
