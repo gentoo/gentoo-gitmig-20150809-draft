@@ -1,6 +1,11 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.24 2010/04/03 13:54:15 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.25 2010/10/07 06:34:05 radhermit Exp $
+
+*newsbeuter-2.3 (07 Oct 2010)
+
+  07 Oct 2010; Tim Harder <radhermit@gentoo.org> +newsbeuter-2.3.ebuild:
+  Non-maintainer commit: Version bump for bug #327119.
 
 *newsbeuter-2.2 (03 Apr 2010)
 
