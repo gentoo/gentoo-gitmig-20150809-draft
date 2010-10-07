@@ -5,6 +5,5 @@
 <use>
   <flag name='interpreter'>Enable the libjit interpreter</flag>
   <flag name='long-double'>Enable the use of long double for jit_nfloat</flag>
-  <flag name='new-reg-alloc'>Enable new register allocator</flag>
 </use>
 </pkgmetadata>

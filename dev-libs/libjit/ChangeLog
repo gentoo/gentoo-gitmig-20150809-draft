@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libjit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.17 2010/09/23 20:58:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.18 2010/10/07 20:15:47 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -libjit-0.0.6.ebuild,
+  -libjit-0.1.0.ebuild, -files/libjit-0.1.0-jit-rules-interp.h,
+  metadata.xml:
+  Remove old.
 
   23 Sep 2010; Markus Meier <maekke@gentoo.org> libjit-0.1.2.ebuild:
   arm stable, bug #327295
