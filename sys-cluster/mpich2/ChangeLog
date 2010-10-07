@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.61 2010/09/30 20:15:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.62 2010/10/07 14:21:23 hwoarang Exp $
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  mpich2-1.2.1_p1-r1.ebuild:
+  Stable on amd64 wrt bug #337125
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> mpich2-1.2.1_p1-r1.ebuild:
   stable ppc64, bug 337125
