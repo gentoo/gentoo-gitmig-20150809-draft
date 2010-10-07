@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.40 2010/10/05 17:12:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.41 2010/10/07 12:45:33 darkside Exp $
+
+*denyhosts-2.6-r4 (07 Oct 2010)
+
+  07 Oct 2010; Jeremy Olexa <darkside@gentoo.org> -denyhosts-2.6-r3.ebuild,
+  +denyhosts-2.6-r4.ebuild, files/denyhosts.init:
+  Modify init script (in place) to fix bug 244700 affecting baselayout-2
+  users. Revision bump to force the new file install. Work by Lex Brugman
 
   05 Oct 2010; Jeremy Olexa <darkside@gentoo.org> files/denyhosts.init:
   Add CVS Header for easier troubleshooting

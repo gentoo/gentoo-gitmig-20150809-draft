@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/files/denyhosts.init,v 1.5 2010/10/05 17:12:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/files/denyhosts.init,v 1.6 2010/10/07 12:45:33 darkside Exp $
 
 opts="depend start stop"
 
@@ -11,7 +11,7 @@ depend() {
 
 start() {
 	ebegin "Starting DenyHosts daemon"
-	start-stop-daemon --name denyhosts.py --start --exec /usr/bin/denyhosts.py -- --daemon -c /etc/denyhosts.conf
+	start-stop-daemon --start --exec /usr/bin/denyhosts.py --pidfile /var/run/denyhosts.pid -- --daemon -c /etc/denyhosts.conf
 	eend $?
 }
 

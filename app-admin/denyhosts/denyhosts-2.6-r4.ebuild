@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r3.ebuild,v 1.1 2010/06/01 18:06:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r4.ebuild,v 1.1 2010/10/07 12:45:33 darkside Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
