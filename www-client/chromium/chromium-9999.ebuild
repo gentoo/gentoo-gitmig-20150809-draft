@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.91 2010/10/07 06:39:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.92 2010/10/07 15:20:09 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -109,10 +109,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Small fixes to the system-provided sqlite support,
-	# to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-system-sqlite-r0.patch
-
 	# Small fix to the system-provided icu support,
 	# to be upstreamed.
 	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
