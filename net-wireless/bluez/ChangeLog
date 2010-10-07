@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.54 2010/09/25 13:51:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.55 2010/10/07 20:52:25 pacho Exp $
+
+*bluez-4.75 (07 Oct 2010)
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.75.ebuild:
+  Version bump with upstream bugfixes.
 
   25 Sep 2010; Markus Meier <maekke@gentoo.org> bluez-4.69.ebuild:
   arm stable, bug #335317
