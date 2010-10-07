@@ -1,17 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1_beta4.ebuild,v 1.6 2010/10/06 23:48:08 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1_beta4.ebuild,v 1.7 2010/10/07 21:22:43 reavertm Exp $
 
 EAPI=3
 
 KMNAME="extragear/office"
 
 if [[ ${PV} != *9999* ]]; then
-	MY_P=${P/_beta/b}
-
-	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-
 	KDE_DOC_DIRS="doc"
+	KDE_HANDBOOK="optional"
+	MY_P=${P/_beta/b}
+	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 fi
 
 inherit kde4-base
@@ -22,7 +21,7 @@ HOMEPAGE="http://kile.sourceforge.net/"
 LICENSE="FDL-1.2 GPL-2"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="4"
-IUSE="debug handbook +pdf +png"
+IUSE="debug +pdf +png"
 
 DEPEND="
 	x11-misc/shared-mime-info
