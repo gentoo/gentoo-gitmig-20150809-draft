@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5-r2.ebuild,v 1.1 2010/09/08 19:38:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/pam_skey-1.1.5-r2.ebuild,v 1.2 2010/10/07 16:45:35 ulm Exp $
 
 inherit eutils pam autotools multilib
 
@@ -41,10 +41,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To use this, you need to add something like"
+	elog "To use this, you need to add a line like:"
 	elog
 	elog "auth       [success=done ignore=ignore auth_err=die default=bad] pam_skey.so"
-	elog "auth       sufficient   pam_unix.so likeauth nullok try_first_pass"
 	elog
 	elog "to an appropriate place in /etc/pam.d/system-auth"
 	elog "Consult the documentation for instructions."
