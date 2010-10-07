@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.73 2010/09/12 04:26:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.74 2010/10/07 20:21:42 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/mono-tools-1.1.17-html-renderer-fixes.diff,
+  -mono-tools-1.2.1.ebuild, -mono-tools-1.2.4.ebuild,
+  -files/mono-tools-1.2.4-install.patch, -mono-tools-1.2.6.ebuild,
+  -files/mono-tools-1.2.6-html-renderer-fixes.patch,
+  -files/mono-tools-1.9-html-renderer-fixes.patch, -mono-tools-2.0.ebuild,
+  -mono-tools-2.0.9999.ebuild,
+  -files/mono-tools-2.0-html-renderer-fixes.patch,
+  -mono-tools-2.4.2-r1.ebuild, -mono-tools-2.4.9999.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> mono-tools-2.6.2.ebuild:
   Marked ppc for bug #327279.

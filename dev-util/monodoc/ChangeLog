@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodoc
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.77 2009/04/04 14:13:46 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.78 2010/10/07 20:30:30 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -monodoc-1.2.4.ebuild:
+  Remove old.
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> monodoc-2.0.ebuild:
   amd64/x86 stable, bug #234305

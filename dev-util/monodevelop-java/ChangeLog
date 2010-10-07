@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-java
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.14 2010/09/23 22:16:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.15 2010/10/07 20:27:20 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -monodevelop-java-2.0.ebuild,
+  -monodevelop-java-2.1.1.ebuild, -monodevelop-java-2.2.ebuild:
+  Remove old.
 
   23 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   monodevelop-java-2.4.ebuild:

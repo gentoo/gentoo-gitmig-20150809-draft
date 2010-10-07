@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/monodevelop-debugger-mdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/ChangeLog,v 1.9 2010/09/23 22:15:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/ChangeLog,v 1.10 2010/10/07 20:26:20 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -monodevelop-debugger-mdb-2.0.ebuild,
+  -monodevelop-debugger-mdb-2.0-r1.ebuild,
+  -files/monodevelop-debugger-mdb-2.0-mono-2.4.2.patch,
+  -monodevelop-debugger-mdb-2.1.1.ebuild,
+  -monodevelop-debugger-mdb-2.2.1.ebuild:
+  Remove old.
 
   23 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   monodevelop-debugger-mdb-2.4.ebuild:

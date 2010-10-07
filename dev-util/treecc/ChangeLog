@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/treecc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.37 2010/09/30 20:32:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.38 2010/10/07 20:31:59 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -treecc-0.3.4.ebuild,
+  -treecc-0.3.6.ebuild, -treecc-0.3.8.ebuild:
+  Remove old.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> treecc-0.3.10.ebuild:
   stable ppc64, bug 327293
