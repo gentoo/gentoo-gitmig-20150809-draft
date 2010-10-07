@@ -1,0 +1,20 @@
+https://bugs.launchpad.net/ubuntu/+source/libtranslate/+bug/483423/+attachment/1033334/+files/babel-service-fix.patch
+
+
+--- a/libtranslate-0.99/data/services.xml.in
++++ b/libtranslate-0.99/data/services.xml.in
+@@ -48,12 +48,11 @@
+       <language tag="pt" to="en,fr"/>
+       <language tag="ru" to="en"/>
+       <language tag="es" to="en,fr"/>
+-      <text-translation url="http://babelfish.altavista.com/babelfish/tr?urltext=${text:escape}&amp;lp=${from}_${to}&amp;enc=utf8">
+-	<pre-marker text="&lt;form action=&quot;http://www.altavista.com/web/results"/>
+-	<pre-marker text="px;&gt;"/>
++      <text-translation url="http://babelfish.yahoo.com/translate_txt?ei=UTF-8&amp;doit=done&amp;fr=bf-home&amp;intl=1&amp;tt=urltext&amp;trtext=${text:escape}&amp;lp=${from}_${to}&amp;btnTrTxt=Translate">
++	<pre-marker text="&lt;div id=&quot;result&quot;&gt;&lt;div style=&quot;padding:0.6em;&quot;&gt;"/>
+ 	<post-marker text="&lt;/div&gt;"/>
+       </text-translation>
+-      <web-page-translation url="http://babelfish.altavista.com/babelfish/trurl_load?url=${url:escape}&amp;lp=${from}_${to}&amp;enc=utf8"/>
++      <web-page-translation url="http://babelfish.yahoo.com/translate_url?doit=done&amp;tt=url&amp;intl=1&amp;fr=bf-home&amp;trurl=${url:escape}&amp;lp=${from}_${to}&amp;btnTrUrl=Translate"/>
+     </group>
+   </service>
