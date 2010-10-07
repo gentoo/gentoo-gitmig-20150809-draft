@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/atk-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/atk-sharp/ChangeLog,v 1.12 2010/09/12 04:27:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/atk-sharp/ChangeLog,v 1.13 2010/10/07 18:46:32 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -atk-sharp-2.12.9.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> atk-sharp-2.12.10.ebuild:
   Marked ppc for bug #327279.

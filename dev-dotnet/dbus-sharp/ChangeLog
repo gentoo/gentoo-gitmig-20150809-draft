@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/dbus-sharp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.9 2009/03/23 12:51:18 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.10 2010/10/07 18:51:05 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -dbus-sharp-0.6.0.ebuild:
+  Remove old.
 
   23 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Dotnet herd taking this
