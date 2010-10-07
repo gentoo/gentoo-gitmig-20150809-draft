@@ -1,6 +1,11 @@
 # ChangeLog for virtual/monodoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.32 2010/09/12 04:25:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.33 2010/10/07 20:38:56 pacho Exp $
+
+  07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -monodoc-1.2.4.ebuild,
+  -monodoc-2.0.ebuild, -monodoc-2.0.9999.ebuild, -monodoc-2.4.2.3.ebuild,
+  -monodoc-2.4.9999.ebuild:
+  Remove old.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> monodoc-2.6.4.ebuild:
   Marked ppc for bug #327279.
