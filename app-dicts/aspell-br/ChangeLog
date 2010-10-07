@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-br
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-br/ChangeLog,v 1.9 2009/10/18 20:06:47 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-br/ChangeLog,v 1.10 2010/10/07 23:21:57 leio Exp $
+
+  07 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-br-0.50.2.ebuild:
+  Drop to ~mips
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-br-0.50.2.ebuild:
   QA fixes; IUSE is not defined
