@@ -1,10 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.753 2010/10/03 13:07:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.754 2010/10/07 00:18:25 mpagano Exp $
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.32-r18.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #338317
+
+*gentoo-sources-2.6.35-r10 (07 Oct 2010)
+
+  07 Oct 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.35-r10.ebuild:
+  Linux patch 2.6.35.7. Fix race cond. between unbinding a fb on a hotplug
+  event and user space flip 
 
 *gentoo-sources-2.6.34-r11 (28 Sep 2010)
 
