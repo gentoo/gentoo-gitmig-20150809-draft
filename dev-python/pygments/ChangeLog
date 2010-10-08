@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.64 2010/05/30 20:08:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.65 2010/10/08 06:33:15 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> pygments-1.3.1.ebuild:
+  Marked ~mips for bug #198989
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> pygments-1.3.1.ebuild:
   Marked ~*-solaris
