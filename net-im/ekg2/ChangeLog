@@ -1,0 +1,11 @@
+# ChangeLog for net-im/ekg2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.31 2010/10/08 13:53:08 mgorny Exp $
+
+*ekg2-9999 (08 Oct 2010)
+
+  08 Oct 2010; Michał Górny <mgorny@gentoo.org> +ekg2-9999.ebuild,
+  +metadata.xml:
+  Re-introduce EKG2 in gx86, as per bug #187330. The live ebuild goes first,
+  I'll drop in a snapshot too soon.
+
