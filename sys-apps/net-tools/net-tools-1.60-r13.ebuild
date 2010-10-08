@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r13.ebuild,v 1.12 2008/04/10 21:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r13.ebuild,v 1.13 2010/10/08 02:15:28 leio Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls static"
 
 RDEPEND="!sys-apps/mii-diag

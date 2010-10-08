@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/lcdsplash-0.3.ebuild,v 1.2 2007/03/28 06:12:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/lcdsplash-0.3.ebuild,v 1.3 2010/10/08 02:04:46 leio Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa mips x86"
+KEYWORDS="hppa ~mips x86"
 IUSE=""
 
 DEPEND="mips? ( sys-apps/lcdutils )"

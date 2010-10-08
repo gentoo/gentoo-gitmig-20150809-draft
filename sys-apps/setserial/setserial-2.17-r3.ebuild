@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r3.ebuild,v 1.2 2007/04/03 05:15:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r3.ebuild,v 1.3 2010/10/08 02:16:31 leio Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://tsx-11.mit.edu/pub/linux/sources/sbin/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 src_unpack() {
