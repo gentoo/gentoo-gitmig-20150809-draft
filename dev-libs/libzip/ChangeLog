@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.14 2010/04/13 19:57:19 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.15 2010/10/08 19:29:15 darkside Exp $
+
+  08 Oct 2010; Jeremy Olexa <darkside@gentoo.org> libzip-0.9.3.ebuild:
+  Add ~amd64-linux ~x86-linux, bug 339821
 
 *libzip-0.9.3 (13 Apr 2010)
 
