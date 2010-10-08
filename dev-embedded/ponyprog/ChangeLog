@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.25 2010/06/20 13:35:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.26 2010/10/08 03:50:37 vapier Exp $
+
+  08 Oct 2010; Mike Frysinger <vapier@gentoo.org>
+  files/ponyprog-2.07a-build.patch:
+  Fix typo in makefile that breaks with make-3.82 #339002 by Diego E.
+  Pettenò.
 
 *ponyprog-2.07a-r2 (20 Jun 2010)
 
