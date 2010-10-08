@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.10 2010/01/25 23:38:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.11 2010/10/08 12:55:49 tupone Exp $
 
 EAPI=2
 fromcvs=0
@@ -79,7 +79,8 @@ src_prepare() {
 		"${FILESDIR}/${PV}-gcc34.patch" \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-noinline.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "/^use_opengl := / s:=.*:= $(use_tf opengl):" \
 		-e "/^use_physfs := / s:=.*:= false:" \
