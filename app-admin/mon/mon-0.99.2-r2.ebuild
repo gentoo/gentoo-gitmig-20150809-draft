@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.4 2009/10/11 23:36:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.5 2010/10/08 00:06:41 cla Exp $
 
 inherit toolchain-funcs
 
@@ -16,6 +16,8 @@ IUSE=""
 DEPEND=">=dev-perl/Mon-0.9
 	>=virtual/perl-Time-HiRes-1.20
 	>=dev-perl/Period-1.20-r2"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd "${S}"/mon.d
