@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-gearman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gearman/ChangeLog,v 1.5 2010/09/26 14:56:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gearman/ChangeLog,v 1.6 2010/10/08 18:37:12 olemarkus Exp $
+
+*pecl-gearman-0.7.0-r1 (08 Oct 2010)
+
+  08 Oct 2010; <olemarkus@gentoo.org> +pecl-gearman-0.7.0-r1.ebuild:
+  Added version supporting minor version slotting
 
   26 Sep 2010; <olemarkus@gentoo.org> pecl-gearman-0.7.0.ebuild:
   Added ~x86 keyword
