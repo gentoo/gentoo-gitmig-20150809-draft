@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.6.1.ebuild,v 1.1 2009/12/31 23:02:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.6.1.ebuild,v 1.2 2010/10/08 10:53:01 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -29,7 +29,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-64bit.patch
+		"${FILESDIR}"/${P}-64bit.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^DATADIR/s:=.*:=${GAMES_DATADIR}:" \
