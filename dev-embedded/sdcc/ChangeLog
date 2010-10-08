@@ -1,6 +1,16 @@
 # ChangeLog for dev-embedded/sdcc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.42 2009/08/10 08:11:49 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.43 2010/10/08 09:38:44 vapier Exp $
+
+*sdcc-9999 (08 Oct 2010)
+*sdcc-2.9.0 (08 Oct 2010)
+
+  08 Oct 2010; Mike Frysinger <vapier@gentoo.org> +sdcc-2.9.0.ebuild,
+  +files/sdcc-2.9.0-build.patch, +files/sdcc-2.9.0-gcc44.patch,
+  +files/sdcc-2.9.0-getline.patch, +files/sdcc-2.9.0-headers.patch,
+  +sdcc-9999.ebuild, +files/sdcc-9999-build.patch:
+  Version bump #270621 by Karl Hiramoto. Merge & clean up the sdcc-svn
+  package and fix #251876 #255659 by Diego E. Pettenò in the process.
 
   10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> sdcc-2.8.0.ebuild,
   +files/sdcc-2.8.0-gcc44.patch:
