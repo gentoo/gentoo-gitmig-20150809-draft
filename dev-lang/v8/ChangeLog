@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.4 2010/10/05 15:30:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.5 2010/10/08 11:25:27 hwoarang Exp $
+
+  08 Oct 2010; Markos Chandras <hwoarang@gentoo.org> v8-2.4.3.ebuild:
+  Keyworded for amd64. Bug #337766. Thanks to Priit Laes <plaes@plaes.org>
 
   05 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-2.4.3.ebuild:
   Add support for building on amd64, thanks to Priit Laes <plaes@plaes.org>

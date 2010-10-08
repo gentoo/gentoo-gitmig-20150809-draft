@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.3.ebuild,v 1.2 2010/10/05 15:30:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.3.ebuild,v 1.3 2010/10/08 11:25:27 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://code.google.com/p/v8"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
