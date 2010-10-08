@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4635 2010/10/08 13:58:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4636 2010/10/08 17:52:57 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Mask sys-libs/db-5.1 for testing.
 
   08 Oct 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask opera 10.63.
