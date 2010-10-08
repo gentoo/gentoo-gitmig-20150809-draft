@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gnome-blog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.28 2010/05/24 17:38:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.29 2010/10/08 23:08:03 eva Exp $
+
+  08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-blog-0.9.1.ebuild:
+  Clean up old revision.
 
   24 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnome-blog-0.9.2.ebuild:
