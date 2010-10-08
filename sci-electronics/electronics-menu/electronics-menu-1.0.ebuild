@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/electronics-menu-1.0.ebuild,v 1.6 2010/01/20 19:25:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/electronics-menu-1.0.ebuild,v 1.7 2010/10/08 19:24:05 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit gnome2-utils
 
@@ -12,14 +12,14 @@ SRC_URI="http://geda.seul.org/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-macos"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${ED}" install || die "emake install failed"
 	dodoc README
 }
 

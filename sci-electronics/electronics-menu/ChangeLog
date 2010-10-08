@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/electronics-menu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/ChangeLog,v 1.6 2010/01/20 19:25:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/ChangeLog,v 1.7 2010/10/08 19:24:05 darkside Exp $
+
+  08 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
+  electronics-menu-1.0.ebuild:
+  Migrate to EAPI3 for Gentoo Prefix mods, bug 339958
 
   20 Jan 2010; Brent Baude <ranger@gentoo.org> electronics-menu-1.0.ebuild:
   Marking electronics-menu-1.0 ppc64 for bug 300766
