@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.50 2010/08/28 21:45:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.51 2010/10/08 23:13:49 eva Exp $
+
+  08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtk-vnc-0.3.8-r1.ebuild:
+  Clean up old revision.
 
   28 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> gtk-vnc-0.4.1.ebuild:
   Disable automagic introspection and automagic gtk-3 support, closes:
