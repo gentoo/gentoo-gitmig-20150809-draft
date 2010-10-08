@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.14 2010/09/12 13:58:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.15 2010/10/08 21:35:11 billie Exp $
+
+  08 Oct 2010; Daniel Pielmeier <billie@gentoo.org>
+  -files/backlite-1.0.0-qt3support.patch:
+  Remove old patch. Fixes bug #340192, thanks jalan for reporting.
 
   12 Sep 2010; Markos Chandras <hwoarang@gentoo.org> backlite-1.0.1.ebuild:
   Stable on amd64 wrt bug #335426
