@@ -1,4 +1,4 @@
-From 8498f76fe6131577ce3e90af58a6be958b3795be Mon Sep 17 00:00:00 2001
+From 90b44830cdf0ee1c57d83917a6b95091bbcbd971 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 9 Oct 2008 15:51:09 -0400
 Subject: [PATCH 1/2] add uClibc guess support
@@ -8,7 +8,7 @@ Subject: [PATCH 1/2] add uClibc guess support
  1 files changed, 52 insertions(+), 37 deletions(-)
 
 diff --git a/config.guess b/config.guess
-index c2246a4..bf48496 100755
+index 4c8f032..e1f34b5 100755
 --- a/config.guess
 +++ b/config.guess
 @@ -140,6 +140,29 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
@@ -118,7 +118,7 @@ index c2246a4..bf48496 100755
  	exit ;;
      mips:Linux:*:* | mips64:Linux:*:*)
  	eval $set_cc_for_build
-@@ -931,51 +946,51 @@ EOF
+@@ -931,54 +946,54 @@ EOF
  	#endif
  EOF
  	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^CPU'`
@@ -171,6 +171,9 @@ index c2246a4..bf48496 100755
 -	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
  	exit ;;
+     tile*:Linux:*:*)
+ 	echo ${UNAME_MACHINE}-tilera-linux-gnu
+ 	exit ;;
      vax:Linux:*:*)
 -	echo ${UNAME_MACHINE}-dec-linux-gnu
 +	echo ${UNAME_MACHINE}-dec-linux-${LIBC}
@@ -186,5 +189,5 @@ index c2246a4..bf48496 100755
      i*86:DYNIX/ptx:4*:*)
  	# ptx 4.0 does uname -s correctly, with DYNIX/ptx in there.
 -- 
-1.6.6.1
+1.7.3
 
