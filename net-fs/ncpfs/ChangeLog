@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/ncpfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.25 2010/04/20 09:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.26 2010/10/08 16:22:59 mabi Exp $
+
+  08 Oct 2010; Matti Bickel <mabi@gentoo.org> ncpfs-2.2.6-r1.ebuild:
+  change virtual/php to dev-lang/php (bug #319623)
 
 *ncpfs-2.2.6-r1 (20 Apr 2010)
 
