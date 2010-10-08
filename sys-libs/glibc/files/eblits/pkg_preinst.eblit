@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.2 2009/12/19 23:44:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_preinst.eblit,v 1.3 2010/10/08 15:33:13 flameeyes Exp $
 
 fix_lib64_symlinks() {
 	# the original Gentoo/AMD64 devs decided that since 64bit is the native
@@ -75,9 +75,16 @@ eblit-glibc-pkg_preinst() {
 		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null)
 		[[ -z ${striptest} ]] && continue
 		[[ ${striptest} == *"statically linked"* ]] && continue
-		"${D}"/$(get_libdir)/ld-*.so \
-			--library-path "${D}"/$(get_libdir) \
-			${x} > /dev/null \
+		# we enter ${D} so to avoid trouble if the path contains
+		# special characters; for instance if the path contains the
+		# colon character (:), then the linker will try to split it
+		# and look for the libraries in an unexpected place. This can
+		# lead to unsafe code execution if the generated prefix is
+		# within a world-writable directory
+		# (e.g. /var/tmp/portage:${HOSTNAME})
+		pushd "${D}"/$(get_libdir) 2>/dev/null
+		./ld-*.so --library-path . ${x} > /dev/null \
 			|| die "simple run test (${x}) failed"
+		popd 2>/dev/null
 	done
 }
