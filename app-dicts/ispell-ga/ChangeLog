@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-ga
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ChangeLog,v 1.10 2008/11/16 22:43:36 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ga/ChangeLog,v 1.11 2010/10/08 01:31:50 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> ispell-ga-3.3.ebuild:
+  Drop to ~mips
 
   02 Nov 2008; Peter Weller <welp@gentoo.org> ispell-ga-4.4.ebuild:
   Keyword ~amd64; bug 245139

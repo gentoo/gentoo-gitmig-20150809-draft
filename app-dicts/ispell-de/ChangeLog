@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-de
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.12 2008/11/01 11:56:19 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.13 2010/10/08 01:29:36 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> ispell-de-20011124.ebuild:
+  Drop to ~mips
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-de-20071211.ebuild:
   Fixed multilib.
