@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.200 2010/10/07 20:12:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.201 2010/10/08 08:29:02 ali_bush Exp $
+
+*mono-2.8 (08 Oct 2010)
+
+  08 Oct 2010; Alistair Bush <ali_bush@gentoo.org> +mono-2.8.ebuild,
+  +files/mono-2.8-libdir.patch:
+  Version Bump to mono-2.8
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -files/mono-1.2-glibc28.patch,
   -files/mono-1.2.4-pic.patch, -mono-1.2.5.1-r1.ebuild,
