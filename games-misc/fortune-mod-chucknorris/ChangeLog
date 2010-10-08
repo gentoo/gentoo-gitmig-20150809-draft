@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-chucknorris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/ChangeLog,v 1.5 2010/01/03 11:55:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/ChangeLog,v 1.6 2010/10/08 02:51:53 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  fortune-mod-chucknorris-0.1.ebuild:
+  Drop to ~mips
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   fortune-mod-chucknorris-0.1.ebuild:
