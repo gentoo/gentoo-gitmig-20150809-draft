@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-smac
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.7 2006/07/19 19:59:03 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.8 2010/10/08 03:57:29 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> fortune-mod-smac-0.1.ebuild:
+  Drop to ~mips
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-smac-0.1.ebuild:

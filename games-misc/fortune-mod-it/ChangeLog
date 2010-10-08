@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-it
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/ChangeLog,v 1.6 2008/02/04 19:20:58 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/ChangeLog,v 1.7 2010/10/08 03:52:15 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> fortune-mod-it-1.99.ebuild:
+  Drop to ~mips
 
   04 Feb 2008; Tristan Heaven <nyhm@gentoo.org> fortune-mod-it-1.99.ebuild:
   Add fortune-mod to DEPEND for strfile

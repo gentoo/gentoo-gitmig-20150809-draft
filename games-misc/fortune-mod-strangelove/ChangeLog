@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-strangelove
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.5 2006/11/20 06:17:38 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.6 2010/10/08 03:59:02 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  fortune-mod-strangelove-20041203.ebuild:
+  Drop to ~mips
 
   20 Nov 2006; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Add to games herd

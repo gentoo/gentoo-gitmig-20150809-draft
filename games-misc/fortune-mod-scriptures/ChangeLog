@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-scriptures
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/ChangeLog,v 1.4 2007/04/27 02:19:43 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/ChangeLog,v 1.5 2010/10/08 03:56:27 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  fortune-mod-scriptures-1.1.0.ebuild:
+  Drop to ~mips
 
   27 Apr 2007; Steve Dibb <beandog@gentoo.org>
   fortune-mod-scriptures-1.1.0.ebuild:
