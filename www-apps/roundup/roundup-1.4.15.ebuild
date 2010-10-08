@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.15.ebuild,v 1.4 2010/09/18 18:06:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.15.ebuild,v 1.5 2010/10/08 20:11:19 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT ZPL"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/db-3.2.9"
