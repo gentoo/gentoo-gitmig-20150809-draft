@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.359 2010/10/07 15:47:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.360 2010/10/08 18:44:37 vapier Exp $
+
+  08 Oct 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8o-r2.ebuild:
+  Only remove libs when installing this SLOT for the first time, and warn
+  about it #340033 by Marcin Mirosław.
 
   07 Oct 2010; Jeroen Roovers <jer@gentoo.org> openssl-1.0.0a-r3.ebuild:
   Stable for HPPA PPC (bug #332027).
