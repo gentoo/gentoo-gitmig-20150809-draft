@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.5.2.ebuild,v 1.1 2010/10/06 09:17:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.5.2.ebuild,v 1.2 2010/10/08 11:35:24 scarabeus Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ inherit kde4-base
 
 DESCRIPTION="Oxygen SVG icon theme."
 HOMEPAGE="http://www.oxygen-icons.org/"
-#SRC_URI="mirror://kde/unstable/${PV}/src/${P}.tar.bz2"
+SRC_URI="http://gentoo.ccss.cz/${P}.tar.xz"
 
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
