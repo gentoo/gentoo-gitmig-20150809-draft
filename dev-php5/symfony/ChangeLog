@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.19 2010/07/12 17:55:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.20 2010/10/08 19:39:46 mabi Exp $
+
+*symfony-1.4.8 (08 Oct 2010)
+
+  08 Oct 2010; Matti Bickel <mabi@gentoo.org> -symfony-1.4.4.ebuild,
+  -symfony-1.4.6.ebuild, +symfony-1.4.8.ebuild:
+  cleanup, version bump (thanks to Jamie)
 
 *symfony-1.4.6 (12 Jul 2010)
 
