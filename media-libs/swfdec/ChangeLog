@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.67 2010/01/15 09:50:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.68 2010/10/08 23:24:12 eva Exp $
+
+  08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -swfdec-0.6.8.ebuild,
+  -swfdec-0.8.0.ebuild, -swfdec-0.8.2.ebuild, metadata.xml:
+  Clean up old revisions.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> swfdec-0.8.4.ebuild:
   Transfer Prefix keywords
