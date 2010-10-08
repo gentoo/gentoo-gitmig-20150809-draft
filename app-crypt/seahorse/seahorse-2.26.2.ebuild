@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.26.2.ebuild,v 1.9 2010/07/20 02:01:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.26.2.ebuild,v 1.10 2010/10/08 23:36:11 eva Exp $
 
 EAPI="2"
 
@@ -26,8 +26,8 @@ RDEPEND=">=gnome-base/libglade-2.0
 	net-misc/openssh
 	>=app-crypt/gpgme-1.0.0
 	|| (
-		=app-crypt/gnupg-1.4*
-		=app-crypt/gnupg-2.0* )
+		=app-crypt/gnupg-2.0*
+		=app-crypt/gnupg-1.4* )
 
 	avahi? ( >=net-dns/avahi-0.6 )
 	ldap? ( net-nds/openldap )
