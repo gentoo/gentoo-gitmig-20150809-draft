@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99.ebuild,v 1.1 2010/09/25 02:08:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99.ebuild,v 1.2 2010/10/08 00:04:53 ssuominen Exp $
 
-EAPI="2"
-
-inherit autotools eutils multilib pam
+EAPI=2
+inherit eutils multilib pam
 
 DESCRIPTION="Policy framework for controlling privileges for system-wide services"
 HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit"
@@ -15,23 +14,21 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples +introspection nls pam"
 
-# not mature enough
-RDEPEND=">=dev-libs/glib-2.25.12
+COMMON_DEPEND=">=dev-libs/glib-2.25.12
 	dev-libs/expat
 	introspection? ( dev-libs/gobject-introspection )
 	pam? ( virtual/pam )"
-DEPEND="${RDEPEND}
-	!!>=sys-auth/policykit-0.92
+RDEPEND="${COMMON_DEPEND}
+	>=sys-auth/consolekit-0.4[policykit]"
+DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.36
 	doc? ( >=dev-util/gtk-doc-1.13 )"
-PDEPEND=">=sys-auth/consolekit-0.4[policykit]"
-# gtk-doc-am-1.13 needed for eautoreconf
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.96-getcwd.patch"
+	epatch "${FILESDIR}"/${PN}-0.96-getcwd.patch
 }
 
 src_configure() {
@@ -63,9 +60,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc NEWS README AUTHORS ChangeLog || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc NEWS README AUTHORS ChangeLog || die
 
 	# We disable example compilation above, and handle it here
 	if use examples; then
@@ -73,7 +69,7 @@ src_install() {
 		doins src/examples/{*.c,*.policy*}
 	fi
 
-	# Need to keep a few directories around...
+	# Need to keep a few directories around.
 	diropts -m0700 -o root -g root
 	keepdir /var/run/polkit-1
 	keepdir /var/lib/polkit-1
