@@ -1,13 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8.ebuild,v 1.2 2010/10/06 09:21:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r1.ebuild,v 1.1 2010/10/08 13:52:47 voyageur Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz"
+# Upstream silently re-released the tarball...
+# drop the -> in 2.9
+SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz -> ${P}-r1.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"

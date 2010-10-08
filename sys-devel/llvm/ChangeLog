@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.24 2010/10/06 09:21:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.25 2010/10/08 13:52:47 voyageur Exp $
+
+*llvm-2.8-r1 (08 Oct 2010)
+
+  08 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> -llvm-2.8.ebuild,
+  +llvm-2.8-r1.ebuild:
+  SRC_URI arrow workaround to fetch updated tarball with correct package
+  version, thanks Alexey Charkov <alchark@gmail.com> in bug #340106 for
+  spotting it
 
   06 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.8.ebuild,
   llvm-9999.ebuild:
