@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.2.ebuild,v 1.5 2010/10/06 20:14:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.2.ebuild,v 1.6 2010/10/08 06:46:32 leio Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/J/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~mips ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples i18n test"
 
 RDEPEND="dev-python/setuptools
