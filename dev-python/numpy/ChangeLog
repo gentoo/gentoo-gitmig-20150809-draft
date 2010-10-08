@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.119 2010/09/11 10:24:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.120 2010/10/08 08:32:48 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> numpy-1.5.0-r2.ebuild:
+  Marked ~mips for bug #233554
 
   11 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -numpy-1.5.0-r1.ebuild, numpy-1.5.0-r2.ebuild,
