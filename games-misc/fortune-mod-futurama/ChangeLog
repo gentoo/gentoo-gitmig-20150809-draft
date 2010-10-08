@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-futurama
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.9 2008/01/04 21:18:05 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.10 2010/10/08 03:24:48 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  fortune-mod-futurama-0.2.ebuild:
+  Drop to ~mips
 
   04 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org>
   fortune-mod-futurama-0.2.ebuild:
