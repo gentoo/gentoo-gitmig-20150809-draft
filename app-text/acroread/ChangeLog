@@ -1,6 +1,17 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.155 2010/09/24 08:03:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.156 2010/10/08 13:21:12 scarabeus Exp $
+
+*acroread-9.4.0 (08 Oct 2010)
+
+  08 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +acroread-9.4.0.ebuild:
+  Version bump. Fixes 23 security vulnerabilities. CVE-2010-2883,
+  CVE-2010-2884, CVE-2010-2887, CVE-2010-2888, CVE-2010-2889, CVE-2010-2890,
+  CVE-2010-3619, CVE-2010-3620, CVE-2010-3621, CVE-2010-3622, CVE-2010-3623,
+  CVE-2010-3624, CVE-2010-3625, CVE-2010-3626, CVE-2010-3627, CVE-2010-3628,
+  CVE-2010-3629, CVE-2010-3630, CVE-2010-3631, CVE-2010-3632, CVE-2010-3656,
+  CVE-2010-3657, and CVE-2010-3658.
 
   24 Sep 2010; Zac Medico <zmedico@gentoo.org> acroread-9.3.3.ebuild,
   acroread-9.3.4.ebuild:
