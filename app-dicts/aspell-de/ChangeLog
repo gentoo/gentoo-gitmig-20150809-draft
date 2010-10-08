@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-de
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.21 2010/01/01 20:03:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.22 2010/10/08 00:18:34 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-de-0.50.2.ebuild:
+  Drop to ~mips
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   aspell-de-0.60_pre20030222.ebuild:
