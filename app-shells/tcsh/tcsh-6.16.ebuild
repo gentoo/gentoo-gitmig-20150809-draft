@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.16.ebuild,v 1.10 2010/10/06 07:45:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.16.ebuild,v 1.11 2010/10/08 14:29:18 grobian Exp $
 
 inherit eutils flag-o-matic autotools prefix
 
@@ -24,7 +24,6 @@ RDEPEND=">=sys-libs/ncurses-5.1
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	perl? ( dev-lang/perl )"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 CONFDIR=${WORKDIR}/tcsh-gentoo-patches-r${CONFVER}
