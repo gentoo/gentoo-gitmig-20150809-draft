@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.54 2010/04/16 17:52:07 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.55 2010/10/08 08:40:19 wired Exp $
+
+  08 Oct 2010; Alex Alexander <wired@gentoo.org>
+  -files/keepassx-0.4.1-compile-with-qt-4.6.patch:
+  removed old, unused patch, bug #339373
 
   16 Apr 2010; Dror Levin <spatz@gentoo.org> -keepassx-0.4.1.ebuild:
   Drop old.
