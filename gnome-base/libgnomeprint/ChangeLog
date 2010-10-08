@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.182 2010/09/28 20:55:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.183 2010/10/08 19:49:29 ssuominen Exp $
+
+  08 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libgnomeprint-2.18.7.ebuild:
+  ppc64 stable wrt #324077
 
 *libgnomeprint-2.18.8 (28 Sep 2010)
 
