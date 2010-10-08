@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.20 2009/10/18 20:36:32 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.21 2010/10/08 00:10:27 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-it-0.50.2.ebuild,
+  aspell-it-0.53.0.ebuild:
+  Drop to ~mips
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-it-0.50.2.ebuild,
   aspell-it-0.53.0.ebuild, aspell-it-2.2.20050523.ebuild:
