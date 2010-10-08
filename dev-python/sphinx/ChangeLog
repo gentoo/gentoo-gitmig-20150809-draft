@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.67 2010/09/28 16:41:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.68 2010/10/08 06:50:34 leio Exp $
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> sphinx-1.0.4.ebuild:
+  Marked ~mips for bug #233554
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> sphinx-1.0.3.ebuild:
   stable ppc, bug 335491
