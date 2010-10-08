@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6019 2010/10/08 14:14:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6020 2010/10/08 23:33:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1883,7 +1883,6 @@ media-libs/swfdec:doc - Build documentation
 media-libs/swfdec:ffmpeg - Use media-plugins/gst-plugins-ffmpeg to enable Flash video support. Necessary if you want to use sites like youtube
 media-libs/swfdec:gstreamer - Enable media-libs/gstreamer to support various media input formats. i.e. audio (mp3) and video (flv)
 media-libs/swfdec:gtk - Enable GTK+ convenience library while is necessary for all GTK+ apps using swfdec (gnome-extra/swfdec-gnome and www-plugins/swfdec-mozilla)
-media-libs/swfdec:oss - Use Open Sound System for audio output
 media-libs/swfdec:pulseaudio - Use media-sound/pulseaudio for audio output
 media-libs/taglib:asf - Provide support for Microsoft's 'advanced systems format' media container.
 media-libs/urt:gs - Add support for postscript
