@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.69 2010/10/07 20:45:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.70 2010/10/08 08:35:42 ali_bush Exp $
+
+*mod_mono-2.8 (08 Oct 2010)
+
+  08 Oct 2010; Alistair Bush <ali_bush@gentoo.org> +mod_mono-2.8.ebuild:
+  Version Bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -files/1.2.4/70_mod_mono.conf,
   -mod_mono-1.2.4.ebuild, -mod_mono-2.0.ebuild,
