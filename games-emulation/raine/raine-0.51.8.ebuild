@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.8.ebuild,v 1.2 2010/05/11 13:46:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.8.ebuild,v 1.3 2010/10/08 08:25:02 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -34,6 +34,7 @@ src_prepare() {
 		-e "/mandir/s:=.*:=\$(DESTDIR)/usr/share/man/man6:" \
 		makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
@@ -44,6 +45,7 @@ src_compile() {
 		|| myopts="${myopts} STATIC="
 	emake \
 		_MARCH="${CFLAGS}" \
+		VERBOSE=1 \
 		${myopts} || die "emake failed"
 }
 

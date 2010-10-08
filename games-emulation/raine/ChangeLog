@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/raine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.25 2010/05/11 13:46:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.26 2010/10/08 08:25:02 tupone Exp $
+
+  08 Oct 2010; Tupone Alfredo <tupone@gentoo.org> raine-0.51.8.ebuild,
+  +files/raine-0.51.8-ldflags.patch:
+  Respect LDFLAGS. Bug #337107 by flameeyes@gentoo.org
 
   11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> raine-0.51.8.ebuild:
   x86 stable wrt bug #318083
