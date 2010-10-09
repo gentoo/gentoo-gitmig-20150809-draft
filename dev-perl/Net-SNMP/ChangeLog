@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.47 2010/09/10 10:22:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.48 2010/10/09 13:27:27 klausman Exp $
+
+  09 Oct 2010; Tobias Klausmann <klausman@gentoo.org> Net-SNMP-6.0.1.ebuild:
+  Stable on alpha, bug #331022
 
 *Net-SNMP-6.0.1 (10 Sep 2010)
 
