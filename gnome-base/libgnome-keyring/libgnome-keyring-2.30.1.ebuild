@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.30.1.ebuild,v 1.10 2010/10/09 10:00:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.30.1.ebuild,v 1.11 2010/10/09 15:15:46 pacho Exp $
 
 EAPI=2
 
@@ -29,6 +29,14 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable debug)
 		$(use_enable test tests)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Remove silly CFLAGS
+	sed 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
+		-i configure.in configure || die "sed failed"
 }
 
 src_test() {
