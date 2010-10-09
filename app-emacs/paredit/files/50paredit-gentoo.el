@@ -1,6 +1,3 @@
-
-;;; paredit site-lisp configuration 
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'paredit-mode "paredit"
   "Minor mode for pseudo-structurally editing Lisp code." t)
