@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.8.4-r2.ebuild,v 1.1 2010/08/28 13:15:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.8.4-r2.ebuild,v 1.2 2010/10/09 12:43:56 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_NAME="RubyInline"
 
