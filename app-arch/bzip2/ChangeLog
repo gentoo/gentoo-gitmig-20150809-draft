@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.84 2010/09/29 04:48:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.85 2010/10/09 16:30:07 armin76 Exp $
+
+  09 Oct 2010; Raúl Porcel <armin76@gentoo.org> bzip2-1.0.6.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #338215
 
   29 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> bzip2-1.0.6.ebuild:
   ppc64 stable wrt #338215
