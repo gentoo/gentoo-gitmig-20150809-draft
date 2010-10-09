@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.138 2010/10/09 20:56:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.139 2010/10/09 21:05:44 radhermit Exp $
+
+  09 Oct 2010; Tim Harder <radhermit@gentoo.org> mediawiki-1.15.5.ebuild:
+  Call webapp_pkg_setup first in pkg_setup.
 
 *mediawiki-1.15.5 (09 Oct 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.15.5.ebuild,v 1.1 2010/10/09 20:56:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.15.5.ebuild,v 1.2 2010/10/09 21:05:44 radhermit Exp $
 
 EAPI="3"
 inherit webapp depend.php versionator eutils
@@ -33,11 +33,10 @@ need_httpd_cgi
 need_php_httpd
 
 pkg_setup() {
+	webapp_pkg_setup
 	if ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
 		die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
 	fi
-
-	webapp_pkg_setup
 }
 
 src_compile() {
