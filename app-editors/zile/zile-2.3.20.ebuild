@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.18.ebuild,v 1.1 2010/07/21 07:10:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.20.ebuild,v 1.1 2010/10/09 16:06:56 ulm Exp $
 
 EAPI=3
 
@@ -15,6 +15,7 @@ IUSE="livecd test valgrind"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	sys-apps/help2man
 	test? ( valgrind? ( dev-util/valgrind ) )"
 
