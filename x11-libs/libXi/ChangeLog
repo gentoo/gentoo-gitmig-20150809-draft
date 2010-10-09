@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.90 2010/10/03 15:34:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.91 2010/10/09 16:45:54 armin76 Exp $
+
+  09 Oct 2010; Raúl Porcel <armin76@gentoo.org> libXi-1.3.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #331277
 
   03 Oct 2010; Tobias Klausmann <klausman@gentoo.org> libXi-1.3.1.ebuild:
   Stable on alpha, bug #331277
