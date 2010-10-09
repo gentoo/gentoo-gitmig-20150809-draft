@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.89 2010/10/09 16:50:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.90 2010/10/09 20:26:38 wired Exp $
+
+  09 Oct 2010; Alex Alexander <wired@gentoo.org> qt-assistant-4.7.0.ebuild,
+  +files/qt-assistant-4.7-fix-compat.patch,
+  +files/qt-assistant-4.7-include.tar.gz, metadata.xml:
+  added optional compatibility package support
 
   09 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-assistant-4.7.0.ebuild:
   Add ~ia64 wrt #338289
