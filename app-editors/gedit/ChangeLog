@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.315 2010/09/28 20:33:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.316 2010/10/09 10:16:00 ssuominen Exp $
+
+  09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> gedit-2.30.3.ebuild:
+  ppc64 stable wrt #324077
 
 *gedit-2.30.4 (28 Sep 2010)
 
