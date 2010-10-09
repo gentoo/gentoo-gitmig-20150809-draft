@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>billie@gentoo.org</email>
+		<name>Daniel Pielmeier</name>
+	</maintainer>
+	<use>
+		<flag name="cover"> Enables editing of FLAC cover art</flag>
+		<flag name="quodlibet">Enables editing a QuodLibet library</flag>
+	</use>
+</pkgmetadata>
