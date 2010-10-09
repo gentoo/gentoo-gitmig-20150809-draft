@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.315 2010/10/01 14:54:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.316 2010/10/09 16:32:02 armin76 Exp $
+
+  09 Oct 2010; Raúl Porcel <armin76@gentoo.org> squid-3.1.8.ebuild:
+  ia64/sparc stable wrt #334263
 
   01 Oct 2010; Brent Baude <ranger@gentoo.org> squid-2.7.9.ebuild:
   Marking squid-2.7.9 ppc64 for bug 301828
