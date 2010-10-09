@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.56 2010/10/05 19:34:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.57 2010/10/09 17:16:17 armin76 Exp $
+
+  09 Oct 2010; Raúl Porcel <armin76@gentoo.org> acpid-2.0.6.ebuild:
+  ia64 stable wrt #338991
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org> acpid-2.0.6.ebuild:
   x86 stable, bug #338991
