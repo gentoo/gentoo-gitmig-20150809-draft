@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.205 2010/10/07 20:01:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.206 2010/10/09 20:37:55 pacho Exp $
+
+*atk-1.32.0 (09 Oct 2010)
+
+  09 Oct 2010; Pacho Ramos <pacho@gentoo.org> +atk-1.32.0.ebuild:
+  Version bump for Gnome 2.32: upstream bugfixes and translation updates.
+  Update HOMEPAGE, don't waste time building tests (bug #226353) and remove
+  DISABLE_DEPRECATED flags.
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> atk-1.30.0.ebuild:
   ppc64 stable wrt #324077
