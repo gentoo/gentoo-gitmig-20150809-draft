@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.5 2010/07/30 14:55:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.6 2010/10/09 08:36:00 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -35,7 +35,7 @@ ruby_add_bdepend "
 	doc? (
 		dev-ruby/rake-compiler
 		dev-ruby/rubygems )
-	test? ( dev-ruby/rspec )"
+	test? ( dev-ruby/rspec:0 )"
 
 each_ruby_configure() {
 	pushd ext

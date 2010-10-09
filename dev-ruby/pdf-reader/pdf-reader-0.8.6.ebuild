@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.8.6.ebuild,v 1.1 2010/09/24 14:31:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.8.6.ebuild,v 1.2 2010/10/09 08:39:02 graaff Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ IUSE=""
 ruby_add_rdepend dev-ruby/ascii85
 
 # rspec is loaded even during doc generation, so keep it around :(
-ruby_add_bdepend "dev-ruby/rake dev-ruby/rspec"
+ruby_add_bdepend "dev-ruby/rake dev-ruby/rspec:0"
 
 all_ruby_prepare() {
 	# Avoid forcing rcov on, this also seem to resolve a problem in

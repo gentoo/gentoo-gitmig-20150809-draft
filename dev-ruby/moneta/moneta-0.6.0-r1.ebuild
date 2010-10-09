@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/moneta-0.6.0-r1.ebuild,v 1.1 2010/07/10 05:47:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/moneta-0.6.0-r1.ebuild,v 1.2 2010/10/09 08:42:23 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -27,4 +27,4 @@ S="${WORKDIR}/${GITHUB_USER}-${PN}-*"
 
 RUBY_PATCHES=( "${P}-optional-memcache.patch" )
 
-ruby_add_bdepend "test? ( dev-ruby/rspec )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
