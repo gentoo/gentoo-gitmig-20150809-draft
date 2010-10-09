@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.8 2010/09/20 09:20:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.9 2010/10/09 14:42:36 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/cheese/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="doc v4l"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
