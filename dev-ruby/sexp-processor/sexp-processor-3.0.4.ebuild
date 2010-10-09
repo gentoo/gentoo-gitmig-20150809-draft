@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.4.ebuild,v 1.2 2010/08/18 11:13:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.4.ebuild,v 1.3 2010/10/09 13:05:32 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_NAME="sexp_processor"
 
