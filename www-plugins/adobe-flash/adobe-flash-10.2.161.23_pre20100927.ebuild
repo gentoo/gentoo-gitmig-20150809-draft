@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.23_pre20100927.ebuild,v 1.1 2010/10/09 19:31:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.23_pre20100927.ebuild,v 1.2 2010/10/09 19:50:18 lack Exp $
 
 EAPI=3
 inherit nsplugins multilib toolchain-funcs versionator
@@ -85,17 +85,16 @@ pkg_setup() {
 		fi
 
 		if use multilib && ! use 32bit && ! use 64bit; then
-			eerror "You must select at least one library USE flag (32bit or 64bit)"
+			eerror "You must select at least one architecture USE flag (32bit or 64bit)"
 			die "No library version selected [-32bit -64bit]"
 		fi
 
+		unset need_lahf_wrapper
 		if [[ $native_install ]]; then
 			# 64bit flash requires the 'lahf' instruction (bug #268336)
 			# Also, check if *any* of the processors are affected (bug #286159)
 			if grep '^flags' /proc/cpuinfo | grep -qv 'lahf_lm'; then
 				export need_lahf_wrapper=1
-			else
-				unset need_lahf_wrapper
 			fi
 		fi
 	fi
@@ -161,6 +160,14 @@ src_install() {
 
 pkg_postinst() {
 	if use amd64; then
+		if [[ $need_lahf_wrapper ]]; then
+			ewarn "Your processor does not support the 'lahf' instruction which is used"
+			ewarn "by Adobe's 64-bit flash binary.  We have installed a wrapper which"
+			ewarn "should allow this plugin to run.  If you encounter problems, please"
+			ewarn "adjust your USE flags to install only the 32-bit version and reinstall:"
+			ewarn "  ${CATEGORY}/$PN[+32bit -64bit]"
+			elog
+		fi
 		if has_version 'www-plugins/nspluginwrapper'; then
 			if [[ $native_install ]]; then
 				# TODO: Perhaps parse the output of 'nspluginwrapper -l'
@@ -171,27 +178,13 @@ pkg_postinst() {
 					einfo "Removing duplicate 32-bit plugin wrapper: Native 64-bit plugin installed"
 					nspluginwrapper -r "${FLASH_WRAPPER}"
 				fi
-				if [[ $need_lahf_wrapper ]]; then
-					ewarn "Your processor does not support the 'lahf' instruction which is used"
-					ewarn "by Adobe's 64-bit flash binary.  We have installed a wrapper which"
-					ewarn "should allow this plugin to run.  If you encounter problems, please"
-					ewarn "adjust your USE flags to install only the 32-bit version and reinstall:"
-					ewarn "  ${CATEGORY}/$PN[+32bit -64bit]"
-					elog
-				fi
-			fi
-			if [[ $amd64_32bit ]]; then
+			else
 				einfo "nspluginwrapper detected: Installing plugin wrapper"
 				local oldabi="${ABI}"
 				ABI="x86"
 				local FLASH_SOURCE="${ROOT}/${INSTALL_BASE}32/libflashplayer.so"
 				nspluginwrapper -i "${FLASH_SOURCE}"
 				ABI="${oldabi}"
-				ewarn "Using adobe-flash-10.1 in a 64-bit browser is unstable:"
-				ewarn "  http://bugs.gentoo.org/324365"
-				ewarn "The recommended configuration is to use the 32-bit plugin"
-				ewarn "in a 32-bit browser such as www-client/firefox-bin"
-				elog
 			fi
 		elif [[ ! $native_install ]]; then
 			elog "To use the 32-bit flash player in a native 64-bit browser,"
