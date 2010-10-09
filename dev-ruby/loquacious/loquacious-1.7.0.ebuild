@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/loquacious-1.7.0.ebuild,v 1.1 2010/08/17 05:57:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/loquacious-1.7.0.ebuild,v 1.2 2010/10/09 08:51:05 graaff Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-ruby_add_bdepend "test? ( dev-ruby/rspec )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
 
 all_ruby_compile() {
 	rdoc lib || die "Documentation generation failed."
