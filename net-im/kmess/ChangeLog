@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.63 2010/10/07 15:49:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.64 2010/10/09 19:18:53 fauli Exp $
+
+  09 Oct 2010; Christian Faulhammer <fauli@gentoo.org> kmess-2.0.4.ebuild:
+  stable x86, bug 338046
 
   07 Oct 2010; Markos Chandras <hwoarang@gentoo.org> kmess-2.0.4.ebuild:
   Stable on amd64 wrt bug #338046
