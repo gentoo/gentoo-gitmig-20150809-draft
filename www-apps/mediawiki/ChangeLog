@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.139 2010/10/09 21:05:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.140 2010/10/09 21:30:45 radhermit Exp $
+
+*mediawiki-1.16.0 (09 Oct 2010)
+
+  09 Oct 2010; Tim Harder <radhermit@gentoo.org> +mediawiki-1.16.0.ebuild,
+  +files/postupgrade-1.16-en.txt:
+  Version bump to the latest stable release (fixes bug #332745, thanks to
+  Tobias Margitan for reporting and William Cooke for patches). Add sqlite3
+  USE flag, replace remaining pkg_setup use flag check with use
+  dependencies, and add new postupgrade instructions since a few variables
+  are set in LocalSettings.php instead of using AdminSettings.php.
 
   09 Oct 2010; Tim Harder <radhermit@gentoo.org> mediawiki-1.15.5.ebuild:
   Call webapp_pkg_setup first in pkg_setup.
