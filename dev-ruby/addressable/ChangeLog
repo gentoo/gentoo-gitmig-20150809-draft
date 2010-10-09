@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.8 2010/09/29 22:08:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.9 2010/10/09 09:16:00 graaff Exp $
+
+  09 Oct 2010; Hans de Graaff <graaff@gentoo.org> -addressable-2.1.2.ebuild,
+  -addressable-2.2.0.ebuild:
+  Remove old versions.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> addressable-2.2.1.ebuild:
   Marking addressable-2.2.1 ~ppc64 for bug 321283
