@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.57 2010/10/08 19:09:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.58 2010/10/09 14:34:26 olemarkus Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -25,6 +25,10 @@ ELIBC="glibc"
 KERNEL="linux"
 USERLAND="GNU"
 INPUT_DEVICES="keyboard mouse"
+
+# Ole Markus With <olemarkus@gentoo.org> (09 Oct 2010)
+# Default PHP targets (should always be latest stable version)
+PHP_TARGETS="php-5.2"
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 Sep 2010)
 # Small default list of enabled plugins for collectd
