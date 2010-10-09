@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>chromium</herd>
-	<longdescription>Chromium is the open-source web browser project behind Google Chrome. This is a binary version, grabbed from chromium buildbot</longdescription>
-	<use>
-		<flag name='plugins-symlink'>Add support for system web browser plugins out of the box</flag>
-	</use>
+	<longdescription>Chromium is the open-source web browser project behind Google Chrome.</longdescription>
 </pkgmetadata>

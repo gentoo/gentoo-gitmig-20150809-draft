@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.76 2010/09/17 01:13:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.77 2010/10/09 14:20:52 phajdan.jr Exp $
+
+*chromium-bin-6.0.472.62 (09 Oct 2010)
+
+  09 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-bin-6.0.470.0_p52843.ebuild, +chromium-bin-6.0.472.62.ebuild:
+  Version bump. Remove old. This should fix bug #303080 by Oschtan
+  <dawnstyle@gmail.com>.
 
   17 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-bin-6.0.472.51.ebuild:
