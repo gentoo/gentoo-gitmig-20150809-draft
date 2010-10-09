@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.67 2010/09/17 07:41:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.68 2010/10/09 15:30:43 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -87,7 +87,9 @@
 # "[1-8][0-9]*-gentoo*.el", where the two digits at the beginning define
 # the loading order (numbers below 10 or above 89 are reserved for
 # internal use).  So if your initialisation depends on another Emacs
-# package, your site file's number must be higher!
+# package, your site file's number must be higher!  If there are no such
+# interdependencies then the number should be 50.  Otherwise, numbers
+# divisible by 10 are preferred.
 #
 # Best practice is to define a SITEFILE variable in the global scope of
 # your ebuild (e.g., right after S or RDEPEND):
