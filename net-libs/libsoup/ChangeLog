@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.234 2010/10/07 20:48:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.235 2010/10/09 20:34:13 pacho Exp $
+
+*libsoup-2.32.0 (09 Oct 2010)
+
+  09 Oct 2010; Pacho Ramos <pacho@gentoo.org> +libsoup-2.32.0.ebuild:
+  Version bump for Gnome 2.32: Fixed support for more recent
+  gobject-introspection, disabled TLS 1.2 in addition to the
+  already-disabled 1.1 and 1.0 making libsoup usable with gnutls 2.10, other
+  bugfixes and translation updates. 'Fix test to follow POSIX' looks to be
+  no longer needed, gir patches neither since they were pushed upstream,
+  system-lib patch taken from overlay, eautoreconf is only needed with USE
+  'doc' and don't waste time building tests (bug #226271).
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   libsoup-2.30.2-r1.ebuild:
