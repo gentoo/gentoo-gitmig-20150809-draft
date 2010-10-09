@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.55 2010/10/07 20:22:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.56 2010/10/09 16:04:04 pacho Exp $
+
+*libcanberra-0.26 (09 Oct 2010)
+
+  09 Oct 2010; Pacho Ramos <pacho@gentoo.org> +libcanberra-0.26.ebuild:
+  Version bump with gtk+3 fixes (but still disabled until ready for the
+  tree), bump to EAPI3 and run elibtoolize only when required (as read on
+  ChangeLog, only ~x86-fbsd needs it).
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   libcanberra-0.25.ebuild:
