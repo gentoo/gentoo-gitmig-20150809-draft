@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.74 2010/07/22 19:53:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.75 2010/10/09 15:01:12 scarabeus Exp $
+
+  09 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> libXau-1.0.5.ebuild,
+  libXau-1.0.6.ebuild:
+  Drop m68k keywords.
 
 *libXau-1.0.6 (22 Jul 2010)
 
