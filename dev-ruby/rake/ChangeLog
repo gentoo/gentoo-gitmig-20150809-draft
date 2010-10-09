@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.104 2010/06/30 15:39:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.105 2010/10/09 14:05:09 graaff Exp $
+
+*rake-0.8.7-r6 (09 Oct 2010)
+
+  09 Oct 2010; Hans de Graaff <graaff@gentoo.org> rake-0.8.7-r5.ebuild,
+  +rake-0.8.7-r6.ebuild:
+  Bump revision for ruby19 and drop it from -r5 to create a new stable
+  candidate.
 
   30 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> rake-0.8.7-r4.ebuild:
   x86 stable wrt bug #312547
