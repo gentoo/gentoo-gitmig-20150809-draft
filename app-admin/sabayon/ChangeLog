@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.78 2010/09/28 21:37:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.79 2010/10/09 14:50:33 ssuominen Exp $
+
+  09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> sabayon-2.30.0.ebuild:
+  ppc64 stable wrt #324077
 
 *sabayon-2.30.1 (28 Sep 2010)
 
