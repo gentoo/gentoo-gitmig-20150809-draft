@@ -2,7 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.93 2010/10/09 14:59:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.94 2010/10/09 19:06:30 hwoarang Exp $
+
+  09 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  quagga-0.99.17-r2.ebuild:
+  Stable on amd64 wrt bug #334303
 
   09 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   quagga-0.99.17-r2.ebuild:
