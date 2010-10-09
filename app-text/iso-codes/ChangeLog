@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.91 2010/10/06 15:09:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.92 2010/10/09 21:40:58 ssuominen Exp $
+
+  09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> iso-codes-3.19.ebuild:
+  ppc64 stable wrt #339778
 
   06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> iso-codes-3.19.ebuild:
   Stable on amd64 wrt bug #339778
