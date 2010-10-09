@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.21 2010/09/10 12:39:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.22 2010/10/09 01:32:33 radhermit Exp $
+
+*avfs-0.9.9 (09 Oct 2010)
+
+  09 Oct 2010; Tim Harder <radhermit@gentoo.org> -avfs-0.9.7.ebuild,
+  +avfs-0.9.9.ebuild, metadata.xml:
+  Version bump and remove oldest revision. Update to EAPI=3, add static-libs
+  and xz USE flags, use src_prepare and src_configure phases instead of
+  src_compile, replace einstall with emake, and clean up src_install.
 
   10 Sep 2010; Tobias Klausmann <klausman@gentoo.org> avfs-0.9.8-r1.ebuild:
   Stable on alpha, bug #294831
