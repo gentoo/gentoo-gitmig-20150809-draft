@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6021 2010/10/09 01:34:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6022 2010/10/09 14:04:17 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3822,6 +3822,7 @@ www-apps/viewvc:cvsgraph - Add dev-vcs/cvsgraph support to show graphical views 
 www-apps/viewvc:mod_python - Add www-apache/mod_python support
 www-apps/viewvc:mod_wsgi - Add www-apache/mod_wsgi support
 www-apps/viewvc:pygments - Add dev-python/pygments support for syntax highlighting
+www-client/chromium:gecko-mediaplayer - Allow the browser to load www-plugins/gecko-mediaplayer
 www-client/chromium:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/chromium-bin:plugins-symlink - Add support for system web browser plugins out of the box
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
