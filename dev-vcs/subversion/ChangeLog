@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.24 2010/10/07 15:44:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.25 2010/10/09 13:04:33 klausman Exp $
+
+  09 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  subversion-1.6.13.ebuild:
+  Stable on alpha, bug #339517
 
   07 Oct 2010; Jeroen Roovers <jer@gentoo.org> subversion-1.6.13.ebuild:
   Stable for HPPA (bug #339517).
