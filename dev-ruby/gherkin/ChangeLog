@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.12 2010/09/18 16:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.13 2010/10/09 09:18:45 graaff Exp $
+
+  09 Oct 2010; Hans de Graaff <graaff@gentoo.org> -gherkin-1.0.30.ebuild:
+  Remove old version.
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> gherkin-1.0.30-r1.ebuild:
   Add ~ia64 wrt #337113
