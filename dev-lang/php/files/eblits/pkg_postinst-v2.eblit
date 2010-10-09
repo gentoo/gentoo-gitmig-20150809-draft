@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.1 2010/10/08 18:25:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.2 2010/10/09 11:48:26 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -13,7 +13,7 @@ eblit-php-pkg_postinst() {
 	
 	# Create the symlinks for php
 	local m modules="cli apache2"
-	for m in modules; do
+	for m in $modules; do
 		if use $m ; then
 			local ci=$(eselect php show $m)
 			if [[ -z $ci ]]; then
