@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.137 2010/08/12 08:13:26 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.138 2010/10/09 20:56:22 radhermit Exp $
+
+*mediawiki-1.15.5 (09 Oct 2010)
+
+  09 Oct 2010; Tim Harder <radhermit@gentoo.org> +mediawiki-1.15.5.ebuild:
+  Version bump to the latest security release for bug #324029. Update to
+  EAPI=3 and add USE flag dependencies for php and ocaml instead of
+  pkg_setup tests.
 
   12 Aug 2010; Alex Legler <a3li@gentoo.org> -mediawiki-1.11.2.ebuild,
   -mediawiki-1.12.3.ebuild, -mediawiki-1.13.3.ebuild,
