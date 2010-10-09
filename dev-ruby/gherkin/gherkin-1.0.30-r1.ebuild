@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-1.0.30-r1.ebuild,v 1.2 2010/09/18 16:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-1.0.30-r1.ebuild,v 1.3 2010/10/09 09:20:00 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -24,7 +24,7 @@ IUSE=""
 DEPEND="${DEPEND} dev-util/ragel"
 
 ruby_add_bdepend "
-	>=dev-ruby/rspec-1.3.0
+	>=dev-ruby/rspec-1.3.0:0
 	>=dev-ruby/rake-compiler-0.7.0
 	test? ( >=dev-util/cucumber-0.7.0 )"
 
