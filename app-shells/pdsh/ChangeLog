@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.17 2010/04/22 17:08:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.18 2010/10/09 19:51:46 radhermit Exp $
+
+*pdsh-2.22 (09 Oct 2010)
+
+  09 Oct 2010; Tim Harder <radhermit@gentoo.org> +pdsh-2.22.ebuild:
+  Version bump. Remove unused eclasses, add static-libs and test USE flags,
+  add conditional test dependency on dejagnu, remove RESTRICT=test as the
+  tests should pass now, don't apply patch since a newer libltdl is used
+  now, and remove unnecessary die on econf.
 
   22 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> pdsh-2.18-r1.ebuild:
   amd64 stable wrt #252398
