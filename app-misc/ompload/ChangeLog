@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ompload
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.12 2010/09/21 11:51:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.13 2010/10/09 19:12:23 fauli Exp $
+
+  09 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  ompload-226-r1.ebuild:
+  stable x86, bug 287413
 
   21 Sep 2010; Markos Chandras <hwoarang@gentoo.org> ompload-226-r1.ebuild:
   Stable on amd64 wrt bug #287413
