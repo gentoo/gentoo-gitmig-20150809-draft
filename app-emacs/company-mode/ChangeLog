@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/company-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.10 2010/05/15 15:28:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.11 2010/10/09 16:25:08 ulm Exp $
+
+  03 Oct 2010; Ulrich Mueller <ulm@gentoo.org> company-mode-0.5.ebuild,
+  metadata.xml:
+  Add run-time dependency on dev-python/ropemacs, bug 338550.
 
 *company-mode-0.5 (15 May 2010)
 

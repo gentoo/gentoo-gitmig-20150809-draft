@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.5.ebuild,v 1.1 2010/05/15 15:28:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.5.ebuild,v 1.2 2010/10/09 16:25:16 ulm Exp $
 
 EAPI=2
 NEED_EMACS=22
@@ -21,7 +21,8 @@ IUSE="ropemacs +semantic"
 DEPEND="|| ( app-emacs/nxml-mode >=virtual/emacs-23 )
 	ropemacs? ( app-emacs/pymacs )
 	semantic? ( virtual/emacs-cedet )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	ropemacs? ( dev-python/ropemacs )"
 
 S="${WORKDIR}"
 SITEFILE="50${PN}-gentoo.el"
