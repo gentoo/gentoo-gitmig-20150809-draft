@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.21 2010/07/10 07:48:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.22 2010/10/09 09:29:25 graaff Exp $
+
+  09 Oct 2010; Hans de Graaff <graaff@gentoo.org> -gnome-do-0.8.2.ebuild:
+  Remove old version.
 
   10 Jul 2010; Hans de Graaff <graaff@gentoo.org> gnome-do-0.8.3.1.ebuild:
   Depend on the latest stable version of gnome-desktop-sharp to avoid bug
