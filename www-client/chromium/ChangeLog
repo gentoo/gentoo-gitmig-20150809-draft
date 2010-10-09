@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.198 2010/10/08 12:11:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.199 2010/10/09 14:00:16 phajdan.jr Exp $
+
+*chromium-7.0.544.0-r1 (09 Oct 2010)
+
+  09 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gecko-mediaplayer-r0.patch, +chromium-7.0.544.0-r1.ebuild,
+  chromium-9999.ebuild, metadata.xml:
+  Add optional support for www-plugins/gecko-mediaplayer, as suggested by
+  sandrain in Gentoo Forums.
 
 *chromium-7.0.517.36 (08 Oct 2010)
 

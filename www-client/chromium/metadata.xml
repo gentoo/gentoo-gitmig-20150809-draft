@@ -4,6 +4,8 @@
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
+		<flag name="gecko-mediaplayer">Allow the browser to load
+			<pkg>www-plugins/gecko-mediaplayer</pkg></flag>
 		<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 			installation with secure-delete enabled</flag>
 	</use>
