@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12034 2010/10/09 18:56:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12035 2010/10/09 20:12:14 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
+# This is Gnome 2.32 mask (#339225) , here will appear 
+# packages depending on our available time for bumping them.
+# Then, *don't report bugs* requesting version bumps
+# or blaming due missing dependencies in the tree. 
+# The mask will be dropped when all pieces are in the tree
+# and working and, then, you will finally able to report
+# missing dependencies and so ;-)
+>=gnome-base/gnome-desktop-2.32
+>=dev-libs/atk-1.32
+>=x11-libs/vte-0.26
+>=net-libs/libsoup-gnome-2.32
+>=net-libs/libsoup-2.32
+>=dev-libs/totem-pl-parser-2.32
+>=gnome-base/gnome-keyring-2.32
+>=gnome-base/libgnome-keyring-2.32
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
 # Removal of app-text/gnome-spell as it's no used by
