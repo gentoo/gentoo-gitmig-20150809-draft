@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.16 2010/10/04 04:28:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.17 2010/10/09 07:38:26 dirtyepic Exp $
+
+  09 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> barry-0.16.ebuild:
+  Rearrange dependencies to remove redundant entries.
 
   04 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> barry-0.16.ebuild:
   Fix libusb SLOT.
