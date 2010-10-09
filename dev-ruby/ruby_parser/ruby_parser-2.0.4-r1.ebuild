@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.0.4-r1.ebuild,v 1.8 2010/05/22 23:11:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.0.4-r1.ebuild,v 1.9 2010/10/09 12:46:52 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18"
 
 # Don't run tests, since they require the testcase from ParseTree;
 # ParseTree _is_ the testcase for ruby_parse
