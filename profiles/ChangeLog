@@ -1,11 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4638 2010/10/08 19:09:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4639 2010/10/09 18:56:02 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
-	
+
+  09 Oct 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask app-text/gnome-spell for removal.
 
   08 Oct 2010; Ole Markus With <olemarkus@gentoo.org> 
 	base/make.defaults,desc/php_targets.desc:

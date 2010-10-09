@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12033 2010/10/08 19:02:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12034 2010/10/09 18:56:02 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
+# Removal of app-text/gnome-spell as it's no used by
+# anything in the tree and its functionality is in
+# gtkhtml through enchant (bug #339771)
+# Removal on 2010-11-09
+app-text/gnome-spell
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
