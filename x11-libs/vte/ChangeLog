@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.258 2010/10/07 20:55:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.259 2010/10/09 20:45:22 pacho Exp $
+
+*vte-0.26.0 (09 Oct 2010)
+
+  09 Oct 2010; Pacho Ramos <pacho@gentoo.org> +vte-0.26.0.ebuild:
+  Version bump for Gnome 2.32: set terminal widget background color to
+  terminal background, fix 'Cursor invisible (plain black) in (xfce)
+  Terminal & terminator' bug, cleanup vte_terminal_determine_colors, other
+  bugfixes and translation updates. Add introspection support, update python
+  depends to work on systems with python3 as main interpreter, drop all
+  upstreamed patches.
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> vte-0.24.3.ebuild:
   ppc64 stable wrt #324077
