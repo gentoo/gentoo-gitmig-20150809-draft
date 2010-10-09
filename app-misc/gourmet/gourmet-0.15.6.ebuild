@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.6.ebuild,v 1.4 2010/10/06 17:09:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.6.ebuild,v 1.5 2010/10/09 20:00:31 nixphoeni Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.4"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-python/pygtk-2.3.93
 	>=gnome-base/libglade-2
 	|| ( dev-lang/python[sqlite]
 	     dev-python/pysqlite:2 )
-	dev-python/sqlalchemy
+	<dev-python/sqlalchemy-0.6.4
 	dev-python/imaging
 	dev-python/gtkspell-python
 	dev-db/metakit[python]

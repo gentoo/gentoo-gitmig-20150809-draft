@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.16 2010/10/06 17:09:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.17 2010/10/09 20:00:31 nixphoeni Exp $
+
+  09 Oct 2010; Joe Sapp <nixphoeni@gentoo.org> -gourmet-0.15.0.ebuild,
+  -gourmet-0.15.5.ebuild, gourmet-0.15.6.ebuild:
+  Adjusted sqlalchemy dependency per bug #339415 (thanks Ben Scanlon);
+  removed old ebuilds
 
   06 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gourmet-0.15.6.ebuild:
