@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.1.ebuild,v 1.1 2010/04/27 05:44:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.1.ebuild,v 1.2 2010/10/09 07:40:13 graaff Exp $
 
 EAPI=2
 
@@ -27,4 +27,4 @@ IUSE=""
 ruby_add_rdepend ">=dev-ruby/nokogiri-1.2.0
 	>=dev-ruby/rack-1.0"
 
-ruby_add_bdepend test "dev-ruby/rspec dev-ruby/rack-test dev-ruby/sinatra dev-ruby/mechanize"
+ruby_add_bdepend test "dev-ruby/rspec:0 dev-ruby/rack-test dev-ruby/sinatra dev-ruby/mechanize"

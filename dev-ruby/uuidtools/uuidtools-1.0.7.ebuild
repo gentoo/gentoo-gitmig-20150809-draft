@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-1.0.7.ebuild,v 1.2 2009/04/19 14:55:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-1.0.7.ebuild,v 1.3 2010/10/09 07:46:17 graaff Exp $
 
 inherit ruby
 

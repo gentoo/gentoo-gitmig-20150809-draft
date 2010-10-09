@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.1-r2.ebuild,v 1.1 2010/08/21 21:01:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.1-r2.ebuild,v 1.2 2010/10/09 07:46:17 graaff Exp $
 
 EAPI=2
 
@@ -26,8 +26,8 @@ IUSE=""
 # Rakefile does not work without rspec (and is quite difficult to work
 # it around).
 ruby_add_bdepend "
-	doc? ( >=dev-ruby/rspec-1.0.8 )
-	test? ( >=dev-ruby/rspec-1.0.8 )"
+	doc? ( >=dev-ruby/rspec-1.0.8:0 )
+	test? ( >=dev-ruby/rspec-1.0.8:0 )"
 
 all_ruby_prepare() {
 	sed -i \

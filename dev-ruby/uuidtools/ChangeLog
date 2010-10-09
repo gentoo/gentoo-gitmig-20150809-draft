@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.18 2010/08/21 21:01:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.19 2010/10/09 07:46:17 graaff Exp $
+
+  09 Oct 2010; Hans de Graaff <graaff@gentoo.org> uuidtools-2.1.1-r1.ebuild,
+  uuidtools-2.1.1-r2.ebuild:
+  Depend on rspec-1.
 
 *uuidtools-2.1.1-r2 (21 Aug 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/spork-0.8.4-r1.ebuild,v 1.1 2010/09/26 07:24:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/spork-0.8.4-r1.ebuild,v 1.2 2010/10/09 07:52:21 graaff Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE=""
 
 ruby_add_bdepend "dev-util/cucumber
-	>=dev-ruby/rspec-1.2.9
+	>=dev-ruby/rspec-1.2.9:0
 	>=dev-ruby/rspec-rails-1.2.9
 	dev-util/cucumber-rails
 	>=dev-ruby/rails-2.3
