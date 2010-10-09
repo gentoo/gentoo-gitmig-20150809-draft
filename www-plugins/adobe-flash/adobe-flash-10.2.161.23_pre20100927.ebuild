@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.22_pre20100915.ebuild,v 1.2 2010/09/17 18:25:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.23_pre20100927.ebuild,v 1.1 2010/10/09 19:31:40 lack Exp $
 
 EAPI=3
 inherit nsplugins multilib toolchain-funcs versionator
@@ -10,8 +10,8 @@ inherit nsplugins multilib toolchain-funcs versionator
 # uses MMDDYY
 EBUILD_DATE=$(get_version_component_range $(get_version_component_count))
 DATE_SUFFIX=${EBUILD_DATE: -4}${EBUILD_DATE:5:2}
-MY_32B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer_square_p1_32bit_linux_${DATE_SUFFIX}.tar.gz"
-MY_64B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer_square_p1_64bit_linux_${DATE_SUFFIX}.tar.gz"
+MY_32B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer_square_p2_32bit_linux_${DATE_SUFFIX}.tar.gz"
+MY_64B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer_square_p2_64bit_linux_${DATE_SUFFIX}.tar.gz"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="x86? ( ${MY_32B_URI} )
