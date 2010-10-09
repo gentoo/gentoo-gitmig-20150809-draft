@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/calendar_date_select-1.16.1.ebuild,v 1.3 2010/08/13 09:38:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/calendar_date_select-1.16.1.ebuild,v 1.4 2010/10/09 08:57:22 graaff Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-ruby_add_bdepend "test? ( dev-ruby/rspec >=dev-ruby/actionpack-2.2.0 >=dev-ruby/activesupport-2.3.4:2.3 )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:0 >=dev-ruby/actionpack-2.2.0 >=dev-ruby/activesupport-2.3.4:2.3 )"
 
 each_ruby_prepare() {
 	sed -i -e 's/2.3.4/~>2.3.4/' spec/spec_helper.rb || die
