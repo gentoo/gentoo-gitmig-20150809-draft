@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.6.ebuild,v 1.3 2010/08/01 13:56:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.6.ebuild,v 1.4 2010/10/09 21:28:50 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 	>=net-libs/webkit-gtk-1.1.1
 	dev-libs/libxml2
 	>=x11-libs/gtk+-2.10:2
-	gnome? ( net-libs/libsoup[gnome] )
+	gnome? ( net-libs/libsoup-gnome )
 	idn? ( net-dns/libidn )
 	sqlite? ( >=dev-db/sqlite-3.0 )
 	unique? ( dev-libs/libunique )"
