@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.4.1.ebuild,v 1.1 2010/09/29 16:15:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.4.2.ebuild,v 1.1 2010/10/09 19:36:25 radhermit Exp $
 
 EAPI="2"
 
