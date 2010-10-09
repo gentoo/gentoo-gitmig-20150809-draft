@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.16 2010/09/15 13:51:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.17 2010/10/09 13:10:07 pva Exp $
+
+*arptables-0.0.3.4-r2 (09 Oct 2010)
+
+  09 Oct 2010; Peter Volkov <pva@gentoo.org> +arptables-0.0.3.4-r2.ebuild,
+  +files/arptables-0.0.3.4-arptables_save.patch,
+  +files/arptables-0.0.3.4-manpage.patch,
+  +files/arptables-0.0.3.4-type.patch:
+  Fixed arptables-save, bug #339377, thank Alexey Vlasov for report.
+  Borrowed some additional patches from debian.
 
 *arptables-0.0.3.4-r1 (15 Sep 2010)
 
