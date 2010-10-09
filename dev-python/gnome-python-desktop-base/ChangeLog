@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.38 2010/09/11 19:03:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.39 2010/10/09 10:07:07 ssuominen Exp $
+
+  09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-python-desktop-base-2.30.2.ebuild:
+  ppc64 stable wrt #324077
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   gnome-python-desktop-base-2.30.2.ebuild:
