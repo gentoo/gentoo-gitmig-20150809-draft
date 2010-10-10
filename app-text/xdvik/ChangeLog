@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.74 2010/10/10 16:27:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.75 2010/10/10 17:34:56 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> xdvik-22.84.16.ebuild:
+  Fix openmotif dependency.
 
   10 Oct 2010; Alexis Ballier <aballier@gentoo.org> xdvik-22.84.16.ebuild,
   +files/xdvik-22.84.16-kpathsea_version.patch:
