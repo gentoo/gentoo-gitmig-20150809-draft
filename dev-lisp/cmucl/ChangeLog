@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.33 2010/05/27 00:47:18 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.34 2010/10/10 17:58:53 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> cmucl-19c.ebuild,
+  cmucl-19d_p2.ebuild, cmucl-20a.ebuild:
+  Fix openmotif dependency.
 
   27 May 2010; Tomas Touceda <chiiph@gentoo.org> cmucl-20a.ebuild,
   +files/cmuclrc, +files/site-init.lisp.in:
