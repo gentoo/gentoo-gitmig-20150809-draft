@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/crcmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.1 2010/07/22 21:03:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.2 2010/10/10 18:21:17 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  crcmod-1.7.ebuild:
+  Update EAPI.
 
 *crcmod-1.7 (22 Jul 2010)
 

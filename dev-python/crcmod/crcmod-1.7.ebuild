@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/crcmod-1.7.ebuild,v 1.1 2010/07/22 21:03:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/crcmod-1.7.ebuild,v 1.2 2010/10/10 18:21:17 arfrever Exp $
 
 # For the 2.x versions of Python, these versions have been tested: 2.4 2.5 2.6 2.7
 # For the 3.x versions of Python, these versions have been tested: 3.1
 
+EAPI="3"
 PYTHON_DEPEND="2:2.4:2.7 3:3.1:3.1"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.2"
