@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r2.ebuild,v 1.5 2010/10/09 19:06:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.17-r2.ebuild,v 1.6 2010/10/10 17:05:00 armin76 Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.quagga.net/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ppc ~s390 ~sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ~ppc s390 sparc x86"
 IUSE="caps doc ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra elibc_glibc +readline"
 
 COMMON_DEPEND="

@@ -2,7 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.94 2010/10/09 19:06:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.95 2010/10/10 17:05:00 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> quagga-0.99.17-r2.ebuild:
+  arm/s390/sparc stable wrt #334303
 
   09 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   quagga-0.99.17-r2.ebuild:
