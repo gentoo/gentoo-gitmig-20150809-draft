@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.8 2009/11/07 00:23:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.2.ebuild,v 1.9 2010/10/10 21:49:01 ulm Exp $
+
+EAPI=1
 
 inherit eutils flag-o-matic fdo-mime
 
@@ -14,7 +16,7 @@ SLOT="0"
 IUSE="avg bzip2 debug emacs netpbm pdf zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	virtual/opengl"
 
 RDEPEND="${DEPEND}
