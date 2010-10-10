@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/torrentinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.5 2010/04/22 17:50:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.6 2010/10/10 19:07:07 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  torrentinfo-1.0.2.ebuild:
+  Update EAPI. Don't inherit python.eclass twice. Call python_pkg_setup().
 
   22 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   torrentinfo-1.0.2.ebuild:
