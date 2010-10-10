@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.330.ebuild,v 1.2 2010/08/19 12:54:57 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.330.ebuild,v 1.3 2010/10/10 17:26:19 ulm Exp $
 
 inherit vim
 
@@ -31,7 +31,7 @@ DEPEND="${DEPEND}
 		)
 		!gtk? (
 			motif? (
-				x11-libs/openmotif
+				>=x11-libs/openmotif-2.3
 			)
 			!motif? (
 				nextaw? (
