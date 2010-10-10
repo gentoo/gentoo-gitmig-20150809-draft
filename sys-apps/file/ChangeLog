@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.180 2010/10/10 00:55:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.181 2010/10/10 12:20:17 phajdan.jr Exp $
+
+  10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> file-5.04.ebuild:
+  x86 stable wrt bug #340225
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> file-5.04.ebuild:
   Stable on amd64 wrt bug #340225
