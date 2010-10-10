@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.1 2010/10/04 17:50:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.2 2010/10/10 18:39:24 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  smart-live-rebuild-0.6.1.1.ebuild:
+  Update EAPI. Don't inherit python.eclass twice.
 
 *smart-live-rebuild-0.6.1.1 (04 Oct 2010)
 
