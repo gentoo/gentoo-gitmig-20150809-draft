@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r1.ebuild,v 1.1 2010/09/08 23:13:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r1.ebuild,v 1.2 2010/10/10 11:02:17 hwoarang Exp $
 
 EAPI=2
 
 inherit eutils multilib autotools
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 DESCRIPTION="NSS MySQL Library."
 HOMEPAGE="http://libnss-mysql.sourceforge.net/"
