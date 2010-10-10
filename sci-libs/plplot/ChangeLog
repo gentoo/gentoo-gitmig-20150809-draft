@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.29 2010/07/04 18:27:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.30 2010/10/10 20:12:41 bicatali Exp $
+
+*plplot-5.9.7 (10 Oct 2010)
+
+  10 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org> -plplot-5.9.5.ebuild,
+  +plplot-5.9.7.ebuild, metadata.xml:
+  Version bump, added flag for D compiler bindings
 
 *plplot-5.9.6 (04 Jul 2010)
 
