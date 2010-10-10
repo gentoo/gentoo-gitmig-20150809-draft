@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.18.ebuild,v 1.1 2010/10/10 07:57:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.18.ebuild,v 1.2 2010/10/10 07:59:25 tove Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="tk? 2"
 PYTHON_USE_WITH_OPT="tk"
 PYTHON_USE_WITH="tk"
 
-inherit python eutils autotools
+inherit python eutils
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://fetchmail.berlios.de"
@@ -55,8 +55,7 @@ src_configure() {
 		$(use kerberos && echo "--with-ssl" ) \
 		$(use_with kerberos gssapi) \
 		$(use_with kerberos kerberos5) \
-		$(use_with hesiod) \
-		${myconf}
+		$(use_with hesiod)
 }
 
 src_install() {
