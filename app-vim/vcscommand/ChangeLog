@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vcscommand
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.12 2010/10/06 15:36:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.13 2010/10/10 16:08:12 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> vcscommand-1.99.42.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #339672
 
   06 Oct 2010; Jeroen Roovers <jer@gentoo.org> vcscommand-1.99.42.ebuild:
   Marked ~hppa (bug #339672).
