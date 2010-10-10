@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/viewmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.12 2010/04/26 07:31:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.13 2010/10/10 21:30:32 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> viewmol-2.4.1-r1.ebuild:
+  Fix openmotif dependency.
 
   26 Apr 2010; Justin Lecher <jlec@gentoo.org> viewmol-2.4.1-r1.ebuild:
   Using python_get_library -l

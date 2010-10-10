@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/prekin-6.51.081122.ebuild,v 1.2 2010/10/03 08:28:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/prekin-6.51.081122.ebuild,v 1.3 2010/10/10 21:28:36 ulm Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="X"
 RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXt
-	X? ( 	x11-libs/openmotif )"
+	X? ( >=x11-libs/openmotif-2.3:0 )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

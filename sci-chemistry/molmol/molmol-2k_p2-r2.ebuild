@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.2 2010/04/23 14:19:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.3 2010/10/10 21:26:18 ulm Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ DEPEND="
 	media-libs/libpng
 	sys-libs/zlib
 	x11-apps/xdpyinfo
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/libXpm"
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
