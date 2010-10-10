@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.31 2010/10/05 08:41:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.32 2010/10/10 10:18:18 phajdan.jr Exp $
+
+  10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sparse-0.4.2.ebuild:
+  x86 stable wrt bug #339791
 
   05 Oct 2010; Mike Frysinger <vapier@gentoo.org> sparse-0.4.2.ebuild,
   sparse-9999.ebuild:
