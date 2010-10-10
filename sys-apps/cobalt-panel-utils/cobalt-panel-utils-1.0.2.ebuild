@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/cobalt-panel-utils-1.0.2.ebuild,v 1.4 2008/10/14 02:03:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/cobalt-panel-utils-1.0.2.ebuild,v 1.5 2010/10/10 19:00:16 gurligebis Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -16,6 +18,13 @@ IUSE="static"
 RDEPEND="sys-devel/gettext"
 DEPEND="${DEPEND}
 	sys-devel/autoconf"
+
+src_configure() {
+	sed -i \
+		-e"/^COPTS/s:= := ${CFLAGS} :" \
+		-e"/^LDFLAGS/s:= := ${LDFLAGS} :"\
+		Makefile || die "sed failed"
+}
 
 src_compile() {
 	if use static; then

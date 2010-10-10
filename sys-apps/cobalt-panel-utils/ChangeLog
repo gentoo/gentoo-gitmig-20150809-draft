@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cobalt-panel-utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.7 2008/10/14 02:03:19 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.8 2010/10/10 19:00:16 gurligebis Exp $
+
+  10 Oct 2010; <gurligebis@gentoo.org> -cobalt-panel-utils-1.0.1.ebuild,
+  cobalt-panel-utils-1.0.2.ebuild:
+  Removing old version and fixing LDFLAGS wrt. bug #335680
 
   14 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
   -cobalt-panel-utils-1.0.0.ebuild, cobalt-panel-utils-1.0.1.ebuild,
