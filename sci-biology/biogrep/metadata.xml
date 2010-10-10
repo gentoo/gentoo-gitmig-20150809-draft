@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+	<herd>sci-biology</herd>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
+	<email>jlec@gentoo.org</email>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
 
