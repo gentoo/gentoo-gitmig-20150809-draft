@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.27 2010/08/26 20:37:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.28 2010/10/10 18:38:12 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> freewrl-1.22.9.ebuild:
+  Fix openmotif dependency.
 
 *freewrl-1.22.9 (26 Aug 2010)
 

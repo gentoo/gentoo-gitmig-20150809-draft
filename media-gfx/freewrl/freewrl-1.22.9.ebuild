@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.9.ebuild,v 1.2 2010/08/28 22:11:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.9.ebuild,v 1.3 2010/10/10 18:38:12 ulm Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ COMMONDEPEND="x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libX11
-	motif? ( x11-libs/openmotif )
+	motif? ( >=x11-libs/openmotif-2.3:0 )
 	media-libs/mesa
 	glew? ( media-libs/glew )
 	virtual/opengl
