@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.20 2008/03/23 15:17:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.21 2010/10/10 21:04:36 ulm Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -21,7 +23,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-proto/xproto
-	motif? ( x11-libs/openmotif )"
+	motif? ( >=x11-libs/openmotif-2.3:0 )"
 
 S=${WORKDIR}/${PN}
 

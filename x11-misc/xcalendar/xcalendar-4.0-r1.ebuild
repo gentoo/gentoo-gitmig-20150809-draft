@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.1 2010/09/01 15:06:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0-r1.ebuild,v 1.2 2010/10/10 21:04:36 ulm Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-proto/xproto
 	x11-misc/gccmakedep
-	motif? ( x11-libs/openmotif )"
+	motif? ( >=x11-libs/openmotif-2.3:0 )"
 
 S=${WORKDIR}/${PN}
 

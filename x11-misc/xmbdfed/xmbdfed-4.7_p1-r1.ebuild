@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1-r1.ebuild,v 1.5 2009/11/21 17:29:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1-r1.ebuild,v 1.6 2010/10/10 21:10:50 ulm Exp $
 
 EAPI=2
 MY_P=${P/_p*}
@@ -18,7 +18,7 @@ IUSE=""
 
 RESTRICT="test"
 
-DEPEND=">=x11-libs/openmotif-2.3.0-r1
+DEPEND=">=x11-libs/openmotif-2.3.0-r1:0
 	media-libs/freetype"
 RDEPEND="${DEPEND}
 	media-fonts/font-adobe-75dpi

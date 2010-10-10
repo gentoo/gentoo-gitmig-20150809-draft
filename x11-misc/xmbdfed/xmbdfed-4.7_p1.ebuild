@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.9 2008/12/15 22:54:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.10 2010/10/10 21:10:50 ulm Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs
 MY_P=${P/_p*}
 
@@ -15,7 +16,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND=">=x11-libs/openmotif-2.3.0-r1
+DEPEND=">=x11-libs/openmotif-2.3.0-r1:0
 	media-libs/freetype"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4-r1.ebuild,v 1.1 2010/09/17 01:43:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4-r1.ebuild,v 1.2 2010/10/10 21:06:10 ulm Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	motif? ( x11-libs/openmotif )"
+	motif? ( >=x11-libs/openmotif-2.3:0 )"
 
 src_compile() {
 	local gui libs

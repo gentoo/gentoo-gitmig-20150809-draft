@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.28.ebuild,v 1.9 2009/08/10 15:10:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.28.ebuild,v 1.10 2010/10/10 21:07:53 ulm Exp $
 
 EAPI=2
 inherit flag-o-matic pam
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/libX11
 	pam? ( virtual/pam )
 	nas? ( media-libs/nas )
 	esd? ( media-sound/esound )
-	motif? ( x11-libs/openmotif )
+	motif? ( >=x11-libs/openmotif-2.3:0 )
 	gtk? ( >=x11-libs/gtk+-2:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
