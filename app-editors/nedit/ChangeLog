@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.58 2010/09/30 09:55:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.59 2010/10/10 17:28:57 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> nedit-5.5-r1.ebuild,
+  nedit-5.5_p20090914.ebuild:
+  Fix openmotif dependency. Change EAPI to 1 to allow for slot dependency.
 
   30 Sep 2010; Justin Lecher <jlec@gentoo.org> nedit-5.5_p20090914.ebuild:
   Probably necessary fix for PREFIX

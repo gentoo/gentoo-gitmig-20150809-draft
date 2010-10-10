@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.9 2009/09/15 02:51:23 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.10 2010/10/10 17:28:57 ulm Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +16,7 @@ KEYWORDS="alpha amd64 ~mips ppc sparc x86 ~x86-fbsd"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/libXp
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
