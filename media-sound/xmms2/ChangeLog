@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.3 2010/07/01 08:22:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.4 2010/10/10 18:35:22 slyfox Exp $
+
+  10 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r2.ebuild,
+  +files/xmms2-0.7DrNo-missing-protos.patch:
+  Fixed missing prototypes (bug #340361). Thanks to Misha
+  <thezogg@gmail.com> for the report.
 
 *xmms2-0.7-r2 (01 Jul 2010)
 

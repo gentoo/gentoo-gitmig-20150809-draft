@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.1 2010/07/01 08:22:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.2 2010/10/10 18:35:22 slyfox Exp $
 
 EAPI=3
 
@@ -72,7 +72,8 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=("${FILESDIR}/xmms2-0.7DrNo-windres-build-fix.patch")
+PATCHES=("${FILESDIR}/xmms2-0.7DrNo-windres-build-fix.patch"
+	"${FILESDIR}/xmms2-0.7DrNo-missing-protos.patch")
 
 # use_enable() is taken as proto
 # $1 - useflag
