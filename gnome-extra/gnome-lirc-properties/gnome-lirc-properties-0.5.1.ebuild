@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.1 2010/10/06 19:15:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.2 2010/10/10 16:40:12 ssuominen Exp $
 
 EAPI=3
 
@@ -33,6 +33,8 @@ RESTRICT="userpriv"
 pkg_setup() {
 	G2CONF="$(use_enable policykit policy-kit)"
 	DOCS="AUTHORS NEWS README TODO"
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
