@@ -1,35 +1,38 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.7 2010/10/10 17:09:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.8 2010/10/10 17:27:35 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit autotools eutils multilib python qt4
+inherit autotools eutils multilib python qt4-r2
 
 MY_PN=HippoDraw
 
 DESCRIPTION="Highly interactive data analysis Qt environment for C++ and python"
 HOMEPAGE="http://www.slac.stanford.edu/grp/ek/hippodraw/"
-SRC_URI="ftp://ftp.slac.stanford.edu/users/pfkeb/${PN}/${MY_PN}-${PV}.tar.gz
+SRC_URI="
+	ftp://ftp.slac.stanford.edu/users/pfkeb/${PN}/${MY_PN}-${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE="doc examples +fits +numpy root wcs"
 
-CDEPEND="dev-libs/boost[python]
-	virtual/latex-base
+CDEPEND="
+	dev-libs/boost[python]
 	media-libs/netpbm
-	fits? ( sci-libs/cfitsio )
-	numpy? ( dev-python/numpy )
+	virtual/latex-base
+	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-gui:4
 	x11-libs/qt-qt3support:4
-	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
+	fits? ( sci-libs/cfitsio )
+	numpy? ( dev-python/numpy )
 	root? ( >=sci-physics/root-5 )
 	!root? ( sci-libs/minuit )
 	wcs? ( sci-astronomy/wcslib )"
@@ -39,25 +42,27 @@ DEPEND="${CDEPEND}
 
 RDEPEND="${CDEPEND}
 	numpy? ( fits? ( dev-python/pyfits ) )"
-RESTRICT_PYTHON_ABIS="3.*"
 
-S=${WORKDIR}/${MY_PN}-${PV}
+S="${WORKDIR}"/${MY_PN}-${PV}
+
+PATCHES=(
+		"${WORKDIR}"/${P}-gcc4.3.patch \
+		"${WORKDIR}"/${P}-gcc4.4.patch \
+		"${WORKDIR}"/${P}-gcc45.patch \
+		"${WORKDIR}"/${P}-numarray.patch \
+		"${WORKDIR}"/${P}-test-fix.patch \
+		"${WORKDIR}"/${P}-minuit2.patch \
+		"${WORKDIR}"/${P}-wcslib.patch \
+		"${WORKDIR}"/${P}-qt4.patch \
+		"${WORKDIR}"/${P}-autoconf-2.64.patch \
+		"${WORKDIR}"/${P}-automake-1.11.patch )
 
 pkg_setup() {
 	python_pkg_setup
 }
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-gcc4.3.patch \
-	  "${WORKDIR}"/${P}-gcc4.4.patch \
-	  "${WORKDIR}"/${P}-gcc45.patch \
-	  "${WORKDIR}"/${P}-numarray.patch \
-	  "${WORKDIR}"/${P}-test-fix.patch \
-	  "${WORKDIR}"/${P}-minuit2.patch \
-	  "${WORKDIR}"/${P}-wcslib.patch \
-	  "${WORKDIR}"/${P}-qt4.patch \
-	  "${WORKDIR}"/${P}-autoconf-2.64.patch \
-	  "${WORKDIR}"/${P}-automake-1.11.patch
+	qt4-r2_src_prepare
 
 	echo "#!${EPREFIX}/bin/sh" > config/py-compile
 
