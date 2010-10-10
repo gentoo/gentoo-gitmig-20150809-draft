@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.90 2010/09/05 04:41:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.91 2010/10/10 21:45:31 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> grass-6.3.0.ebuild,
+  grass-6.4.0.ebuild:
+  Fix openmotif dependency.
 
   05 Sep 2010; Ryan Hill <dirtyepic@gentoo.org> grass-6.3.0.ebuild:
   s/wxwindows/wxwidgets
