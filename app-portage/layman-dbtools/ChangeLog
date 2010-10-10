@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman-dbtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/ChangeLog,v 1.1 2010/03/22 20:42:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/ChangeLog,v 1.2 2010/10/10 18:42:07 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  layman-dbtools-0_p20100322.ebuild:
+  Update EAPI. Fix dependencies. Delete needless call to die().
 
 *layman-dbtools-0_p20100322 (22 Mar 2010)
 

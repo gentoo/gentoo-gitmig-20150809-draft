@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/layman-dbtools-0_p20100322.ebuild,v 1.1 2010/03/22 20:42:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/layman-dbtools-0_p20100322.ebuild,v 1.2 2010/10/10 18:42:07 arfrever Exp $
 
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="*"
+EAPI="3"
+PYTHON_DEPEND="2"
 PYTHON_USE_WITH="xml"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit git python
 
@@ -26,9 +28,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="app-portage/layman"
 
-# Package not supporting Python 3.
-RESTRICT_PYTHON_ABIS="3.*"
-
 src_install() {
 	abi_specific_install() {
 		local code_dir="$(python_get_sitedir)"/layman/dbtools
@@ -45,8 +44,7 @@ src_install() {
 	}
 	python_execute_function abi_specific_install
 
-	python_generate_wrapper_scripts "${D}"/usr/bin/write-repositories-xml \
-		|| die 'python_generate_wrapper_scripts failed'
+	python_generate_wrapper_scripts "${ED}usr/bin/write-repositories-xml"
 }
 
 pkg_postinst() {
