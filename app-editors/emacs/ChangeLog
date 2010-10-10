@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.386 2010/10/10 15:10:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.387 2010/10/10 17:13:21 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r19.ebuild,
+  emacs-21.4-r20.ebuild, emacs-21.4-r21.ebuild, emacs-22.3-r3.ebuild,
+  emacs-22.3-r4.ebuild, emacs-22.3-r5.ebuild, emacs-23.1-r2.ebuild,
+  emacs-23.1-r3.ebuild, emacs-23.2.ebuild, emacs-23.2-r1.ebuild:
+  Fix openmotif dependency.
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r21.ebuild:
   Fix path for installation of Info dir.
