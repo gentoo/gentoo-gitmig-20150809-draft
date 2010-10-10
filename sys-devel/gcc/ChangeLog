@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.781 2010/10/08 19:10:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.782 2010/10/10 22:20:51 vapier Exp $
+
+  10 Oct 2010; Mike Frysinger <vapier@gentoo.org> gcc-4.5.1.ebuild:
+  Push out SuperH multilib fix #320251.
 
   08 Oct 2010; Raúl Porcel <armin76@gentoo.org> gcc-4.4.3-r3.ebuild:
   arm/ia64/sh stable
