@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.35 2010/03/11 22:56:11 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.36 2010/10/10 06:04:30 radhermit Exp $
+
+*dir2ogg-0.11.8-r1 (10 Oct 2010)
+
+  10 Oct 2010; Tim Harder <radhermit@gentoo.org> -dir2ogg-0.11.8.ebuild,
+  +dir2ogg-0.11.8-r1.ebuild, metadata.xml:
+  Revision bump to add mac USE flag for bug #334375 and remove old.
 
   11 Mar 2010; Sebastian Pipping <sping@gentoo.org> dir2ogg-0.11.6.ebuild,
   dir2ogg-0.11.8.ebuild:

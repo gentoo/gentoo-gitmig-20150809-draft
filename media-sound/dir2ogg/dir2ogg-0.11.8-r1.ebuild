@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.8.ebuild,v 1.2 2010/03/11 22:56:11 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.8-r1.ebuild,v 1.1 2010/10/10 06:04:30 radhermit Exp $
 
 EAPI=2
 inherit versionator
@@ -14,7 +14,7 @@ SRC_URI="http://jak-linux.org/projects/${PN}/${MY_PR}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="aac cdparanoia flac mp3 musepack wavpack wma"
+IUSE="aac cdparanoia flac mac mp3 musepack wavpack wma"
 
 RDEPEND=">=dev-lang/python-2.5
 	dev-python/pyid3lib
@@ -24,6 +24,8 @@ RDEPEND=">=dev-lang/python-2.5
 		media-video/mplayer ) )
 	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( || ( media-libs/flac
+		media-video/mplayer ) )
+	mac? ( || ( media-sound/mac
 		media-video/mplayer ) )
 	mp3? ( || ( media-sound/mpg123
 		media-sound/lame
