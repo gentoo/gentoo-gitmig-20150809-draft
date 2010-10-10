@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.79 2010/10/10 11:29:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.80 2010/10/10 13:46:33 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion" || SVN_ECLASS=""
@@ -12,10 +12,10 @@ inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 # BUMP ME PLZ, NO COOKIES OTHERWISE
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r30554
 
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec +ass bidi bindist bl bluray bs2b
-+cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac directfb
-doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon ftp
-gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
+bs2b +cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac
+directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon
+ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 libcaca lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas +network nut openal
 amr +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc
 rtmpdump samba +shm +schroedinger sdl +speex sse sse2 ssse3 tga +theora +tremor
@@ -170,7 +170,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris ~x64-macos"
 else
 	KEYWORDS=""
 fi
@@ -242,6 +242,9 @@ src_prepare() {
 		# Set version #
 		sed -i -e "s/UNKNOWN/${MPLAYER_REVISION}/" "${S}/version.sh" || die
 	fi
+
+	# fix path to bash executable in configure scripts
+	sed -i -e "1c\#!${EPREFIX}/bin/bash" configure version.sh || die
 
 	base_src_prepare
 }
@@ -329,16 +332,13 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-
-	if ! use ass; then
-		if ! use truetype; then
-			myconf+=" --disable-freetype"
-			if ! use iconv; then
-				myconf+="
-					--disable-iconv
-					--charset=noconv
-				"
-			fi
+	if ! use ass && ! use truetype; then
+		myconf+=" --disable-freetype"
+		if ! use iconv; then
+			myconf+="
+				--disable-iconv
+				--charset=noconv
+			"
 		fi
 	fi
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
@@ -496,6 +496,9 @@ src_configure() {
 		"
 	fi
 
+	# sun card, disable by default, see bug #258729
+	myconf+=" --disable-xvr100"
+
 	################
 	# Audio Output #
 	################
@@ -539,6 +542,11 @@ src_configure() {
 		use debug || append-flags -fomit-frame-pointer
 	fi
 
+	# workaround bug, x86 just has too few registers, see c.f.
+	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402950#44
+	# and 32b osx, bug 329861
+	[[ ${CHOST} == i?86-*solaris* || ${CHOST} == i?86-*darwin* ]] && append-flags -fomit-frame-pointer
+
 	###########################
 	# X enabled configuration #
 	###########################
@@ -571,19 +579,19 @@ src_configure() {
 		fi
 	else
 		myconf+="
-		--disable-dga1
-		--disable-dga2
-		--disable-dxr3
-		--disable-ggi
-		--disable-gl
-		--disable-vdpau
-		--disable-vidix
-		--disable-vidix-pcidb
-		--disable-xinerama
-		--disable-xss
-		--disable-xv
-		--disable-xvmc
-		--disable-x11
+			--disable-dga1
+			--disable-dga2
+			--disable-dxr3
+			--disable-ggi
+			--disable-gl
+			--disable-vdpau
+			--disable-vidix
+			--disable-vidix-pcidb
+			--disable-xinerama
+			--disable-xss
+			--disable-xv
+			--disable-xvmc
+			--disable-x11
 		"
 		uses="dga dxr3 ggi opengl osdmenu vdpau vidix xinerama xscreensaver xv"
 		for i in ${uses}; do
@@ -591,19 +599,31 @@ src_configure() {
 		done
 	fi
 
+	############################
+	# OSX (aqua) configuration #
+	############################
+	if use aqua; then
+		myconf+="
+			--enable-macosx-finder
+			--enable-macosx-bundle
+			--enable-libdvdcss-internal
+		"
+	fi
+
+
+	###################
+	# External FFmpeg #
+	###################
 	if [[ ${PV} == *9999* ]]; then
-		###################
-		# External FFmpeg #
-		###################
 		use external-ffmpeg && myconf+=" --disable-ffmpeg_a"
 	fi
 
 	myconf="--cc=$(tc-getCC) \
 		--host-cc=$(tc-getBUILD_CC) \
-		--prefix=/usr \
-		--confdir=/etc/mplayer \
-		--datadir=/usr/share/mplayer \
-		--libdir=/usr/$(get_libdir) \
+		--prefix=${EPREFIX}/usr \
+		--confdir=${EPREFIX}/etc/mplayer \
+		--datadir=${EPREFIX}/usr/share/mplayer \
+		--libdir=${EPREFIX}/usr/$(get_libdir) \
 		${myconf}"
 
 	CFLAGS="${CFLAGS}" ./configure ${myconf} || die "configure died"
@@ -633,12 +653,12 @@ src_compile() {
 src_install() {
 	local i
 
-	emake prefix="${D}/usr" \
-		BINDIR="${D}/usr/bin" \
-		LIBDIR="${D}/usr/$(get_libdir)" \
-		CONFDIR="${D}/etc/mplayer" \
-		DATADIR="${D}/usr/share/mplayer" \
-		MANDIR="${D}/usr/share/man" \
+	emake prefix="${ED}/usr" \
+		BINDIR="${ED}/usr/bin" \
+		LIBDIR="${ED}/usr/$(get_libdir)" \
+		CONFDIR="${ED}/etc/mplayer" \
+		DATADIR="${ED}/usr/share/mplayer" \
+		MANDIR="${ED}/usr/share/man" \
 		INSTALLSTRIP="" \
 		install || die "emake install failed"
 
@@ -667,10 +687,10 @@ src_install() {
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
 		for i in $(find "${WORKDIR}/" -type d -name 'font-arial-*'); do
-			cp -pPR "${i}" "${D}/usr/share/mplayer/fonts"
+			cp -pPR "${i}" "${ED}/usr/share/mplayer/fonts"
 		done
 		# Fix the font symlink ...
-		rm -rf "${D}/usr/share/mplayer/font"
+		rm -rf "${ED}/usr/share/mplayer/font"
 		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
 	fi
 
@@ -682,7 +702,7 @@ src_install() {
 	fi
 
 	if use ass || use truetype; then
-		cat >> "${D}/etc/mplayer/mplayer.conf" << _EOF_
+		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
@@ -691,8 +711,8 @@ _EOF_
 
 	# bug 256203
 	if use rar; then
-		cat >> "${D}/etc/mplayer/mplayer.conf" << _EOF_
-unrarexec=/usr/bin/unrar
+		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
+unrarexec=${EPREFIX}/usr/bin/unrar
 _EOF_
 	fi
 
@@ -701,17 +721,17 @@ _EOF_
 }
 
 pkg_preinst() {
-	[[ -d ${ROOT}/usr/share/mplayer/Skin/default ]] && \
-		rm -rf "${ROOT}/usr/share/mplayer/Skin/default"
+	[[ -d ${EROOT}/usr/share/mplayer/Skin/default ]] && \
+		rm -rf "${EROOT}/usr/share/mplayer/Skin/default"
 }
 
 pkg_postrm() {
 	# Cleanup stale symlinks
-	[ -L "${ROOT}/usr/share/mplayer/font" -a \
-			! -e "${ROOT}/usr/share/mplayer/font" ] && \
-		rm -f "${ROOT}/usr/share/mplayer/font"
+	[ -L "${EROOT}/usr/share/mplayer/font" -a \
+			! -e "${EROOT}/usr/share/mplayer/font" ] && \
+		rm -f "${EROOT}/usr/share/mplayer/font"
 
-	[ -L "${ROOT}/usr/share/mplayer/subfont.ttf" -a \
-			! -e "${ROOT}/usr/share/mplayer/subfont.ttf" ] && \
-		rm -f "${ROOT}/usr/share/mplayer/subfont.ttf"
+	[ -L "${EROOT}/usr/share/mplayer/subfont.ttf" -a \
+			! -e "${EROOT}/usr/share/mplayer/subfont.ttf" ] && \
+		rm -f "${EROOT}/usr/share/mplayer/subfont.ttf"
 }
