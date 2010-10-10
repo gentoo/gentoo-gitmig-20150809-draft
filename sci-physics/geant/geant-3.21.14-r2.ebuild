@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.14 2009/12/07 18:25:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.15 2010/10/10 21:54:51 ulm Exp $
 
 EAPI=2
 inherit eutils
@@ -21,7 +21,7 @@ KEYWORDS="amd64 hppa sparc x86"
 SLOT="3"
 IUSE=""
 
-RDEPEND="x11-libs/openmotif
+RDEPEND=">=x11-libs/openmotif-2.3:0
 	dev-lang/cfortran
 	sci-physics/cernlib
 	sci-physics/paw"

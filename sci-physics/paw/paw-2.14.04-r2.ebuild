@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.17 2010/06/25 13:33:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.18 2010/10/10 21:55:59 ulm Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ IUSE="static"
 
 RDEPEND="sci-physics/cernlib
 	x11-libs/libXaw
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/xbae"
 
 DEPEND="${RDEPEND}

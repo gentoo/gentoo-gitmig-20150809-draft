@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.22 2010/01/19 06:17:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.23 2010/10/10 21:51:50 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> cernlib-2006-r3.ebuild:
+  Fix openmotif dependency.
 
   19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -cernlib-2006.ebuild,
   -files/cernlib-2006-maketest.patch, -files/cernlib-2006-test64.patch,
