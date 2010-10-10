@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.14 2010/09/24 17:52:16 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.15 2010/10/10 18:43:46 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> xastir-1.9.8.ebuild,
+  xastir-1.9.8-r1.ebuild:
+  Fix openmotif dependency.
 
 *xastir-1.9.8-r1 (24 Sep 2010)
 

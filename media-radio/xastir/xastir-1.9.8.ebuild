@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.9.8.ebuild,v 1.4 2010/07/17 09:41:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.9.8.ebuild,v 1.5 2010/10/10 18:43:46 ulm Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="festival gdal geotiff imagemagick"
 
-DEPEND="x11-libs/openmotif
+DEPEND=">=x11-libs/openmotif-2.3:0
 	x11-libs/libXpm
 	x11-apps/xfontsel
 	dev-libs/libpcre
