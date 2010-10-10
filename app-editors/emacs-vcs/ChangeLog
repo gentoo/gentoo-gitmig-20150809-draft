@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.26 2010/09/25 11:32:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.27 2010/10/10 10:39:30 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
+  emacs-vcs-24.0.9999.ebuild:
+  Don't rename GNU Info files, bug 306445.
 
   25 Sep 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
   emacs-vcs-24.0.9999.ebuild:
