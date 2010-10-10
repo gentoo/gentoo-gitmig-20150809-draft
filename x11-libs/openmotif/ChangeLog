@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.246 2010/10/06 15:16:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.247 2010/10/10 05:38:00 ulm Exp $
+
+*openmotif-2.2.3-r10 (10 Oct 2010)
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> +openmotif-2.2.3-r10.ebuild:
+  Move x11-libs/openmotif-compat-2.2.3-r1 to openmotif-2.2.3-r10 in SLOT 2.2.
 
   06 Oct 2010; Jeroen Roovers <jer@gentoo.org> openmotif-2.3.3.ebuild:
   Stable for HPPA (bug #338208).
