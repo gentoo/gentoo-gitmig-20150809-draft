@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.201 2010/10/05 19:47:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.202 2010/10/10 11:56:54 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> mutt-1.5.20-r18.ebuild:
+  alpha/ia64/sparc stable wrt #339040
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org> mutt-1.5.20-r18.ebuild:
   x86 stable, bug #339040
