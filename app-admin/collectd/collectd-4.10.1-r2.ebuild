@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.4 2010/10/03 16:28:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.5 2010/10/10 18:15:48 dilfridge Exp $
 
 EAPI="2"
 
@@ -49,6 +49,7 @@ unset plugin
 # this cannot be in the dependencies if the USE flag is not listed
 # 	collectd_plugins_oracle?		( >=dev-db/oracle-instantclient-basic-11.1.0.7.0 )
 COMMON_DEPEND="
+	>=net-firewall/iptables-1.4.9.1-r2
 	collectd_plugins_apache?		( net-misc/curl )
 	collectd_plugins_ascent?		( net-misc/curl dev-libs/libxml2 )
 	collectd_plugins_bind?			( dev-libs/libxml2 )
