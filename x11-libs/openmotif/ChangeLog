@@ -1,12 +1,6 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.249 2010/10/10 15:47:30 ulm Exp $
-
-*openmotif-2.3.3-r1 (10 Oct 2010)
-
-  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -openmotif-2.3.3.ebuild,
-  +openmotif-2.3.3-r1.ebuild:
-  Revbump to remove blocker against SLOT 2.2. No changes to the ebuild.
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.250 2010/10/10 16:39:42 ulm Exp $
 
 *openmotif-2.2.3-r10 (10 Oct 2010)
 
