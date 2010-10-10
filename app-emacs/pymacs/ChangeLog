@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.49 2010/10/06 15:03:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.50 2010/10/10 19:03:55 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pymacs-0.23.ebuild, pymacs-0.23-r1.ebuild:
+  Update EAPI.
 
   06 Oct 2010; Jeroen Roovers <jer@gentoo.org> pymacs-0.23-r1.ebuild:
   Stable for HPPA (bug #330311).

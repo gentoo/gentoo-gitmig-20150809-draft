@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23-r1.ebuild,v 1.6 2010/10/06 15:03:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23-r1.ebuild,v 1.7 2010/10/10 19:03:55 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils elisp
