@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.26 2010/10/02 10:31:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.27 2010/10/10 17:55:12 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  ruby2ruby-1.2.5.ebuild:
+  Keyworded on alpha, bug #330337
 
 *ruby2ruby-1.2.5 (02 Oct 2010)
 

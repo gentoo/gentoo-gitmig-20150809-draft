@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.3.3-r1.ebuild,v 1.1 2010/08/23 19:35:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.3.3-r1.ebuild,v 1.2 2010/10/10 17:42:49 klausman Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ DESCRIPTION="ZenTest provides tools to support testing: zentest, unit_diff, auto
 HOMEPAGE="http://rubyforge.org/projects/zentest/"
 LICENSE="Ruby"
 
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 SLOT="0"
 IUSE=""
 
