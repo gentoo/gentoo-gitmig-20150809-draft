@@ -1,0 +1,60 @@
+diff -urN mercury-extras-10.04.2.orig/odbc/Mmakefile mercury-extras-10.04.1/odbc/Mmakefile
+--- mercury-extras-10.04.2.orig/odbc/Mmakefile	2006-04-03 18:19:54.000000000 +1200
++++ mercury-extras-10.04.2/odbc/Mmakefile	2010-09-06 19:42:52.000000000 +1200
+@@ -41,17 +41,20 @@
+ 	# The following are for Debian.
+ 
+ 	# for unixODBC
+-	MLLIBS=-lodbc -lpthread -lltdl -ldl
+-
++	MLLIBS=`odbc_config --libs`
++	ODBC_CFLAGS=`odbc_config --cflags`
+ 	# for iODBC
+ 	# MLLIBS=-liodbc l-pthread -ldl
+ 	# note: on a DEC Alpha using OSF1 remove the -ldl.
+ endif
+ 
+-MAIN_TARGET=odbc_test
++MAIN_TARGET=libodbc
+ 
+ .PHONY: depend
+-depend: odbc_test.depend
++depend: odbc.depend
++
++.PHONY: install
++install: libodbc.install
+ 
+ .PHONY: check
+ check:
+@@ -62,7 +65,7 @@
+ # `--no-ansi' is needed because the ODBC header files include C++-style
+ # "//" comments.  `--no-ansi' allows recognition of C++-style "//" comments,
+ # presuming you have gcc version 2.7.1 or greater.
+-MGNUCFLAGS=--no-ansi -D$(MODBC_DRIVER) -D$(MODBC_DB) -I$(ODBC_INCL_DIR)
++MGNUCFLAGS=--no-ansi -D$(MODBC_DRIVER) -D$(MODBC_DB) $(ODBC_CFLAGS)
+ 
+ #-----------------------------------------------------------------------------#
+ #-----------------------------------------------------------------------------#
+diff -urN mercury-extras-10.04.2.orig/odbc/odbc.m mercury-extras-10.04.1/odbc/odbc.m
+--- mercury-extras-10.04.2.orig/odbc/odbc.m	2006-08-31 23:09:50.000000000 +1200
++++ mercury-extras-10.04.2/odbc/odbc.m	2010-09-06 19:42:52.000000000 +1200
+@@ -2000,8 +2000,8 @@
+             ** Arbitrary size, only needs to hold a 
+             ** descriptive string like ""SQL Server"".
+             */
+-    String new_dsn;
+-    String new_desc;
++    LPSTR new_dsn;
++    LPSTR new_desc;
+     SWORD dsn_len;
+     SWORD desc_len;
+     SQLRETURN rc;
+@@ -2335,7 +2335,7 @@
+     SQLSMALLINT msg_len;
+     UCHAR       message[SQL_MAX_MESSAGE_LENGTH];
+     UCHAR       sql_state[SQL_SQLSTATE_SIZE + 1];
+-    String      mercury_message;
++    LPSTR       mercury_message;
+     MR_Word     new_message;
+ 
+     MR_ASSERT_IMPLY(connection_handle == SQL_NULL_HDBC, 
