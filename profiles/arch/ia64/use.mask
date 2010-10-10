@@ -78,6 +78,7 @@ eclipse
 vaapi
 rtmp
 vpx
+frei0r
 
 # Stuff that doesn't compile on ia64
 chicken
