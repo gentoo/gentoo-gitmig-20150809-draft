@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.30 2010/07/22 11:34:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.31 2010/10/10 16:45:44 gurligebis Exp $
+
+*iw-0.9.21 (10 Oct 2010)
+
+  10 Oct 2010; <gurligebis@gentoo.org> -iw-0.9.11.ebuild, -iw-0.9.16.ebuild,
+  -iw-0.9.20.ebuild, +iw-0.9.21.ebuild:
+  Bumping to 0.9.21 and removing old versions.
 
 *iw-0.9.20 (22 Jul 2010)
 
