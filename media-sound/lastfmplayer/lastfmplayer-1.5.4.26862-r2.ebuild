@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.26862-r2.ebuild,v 1.4 2010/10/05 20:10:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.26862-r2.ebuild,v 1.5 2010/10/10 17:30:57 maekke Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs qt4-r2
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/lastfm_${PV}+dfsg.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="ipod"
 
 RDEPEND="x11-libs/qt-gui:4
