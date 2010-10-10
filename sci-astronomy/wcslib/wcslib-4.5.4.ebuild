@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.5.3.ebuild,v 1.1 2010/09/23 22:37:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.5.4.ebuild,v 1.1 2010/10/10 01:27:25 bicatali Exp $
 
 EAPI=2
 inherit eutils virtualx flag-o-matic autotools
@@ -21,11 +21,9 @@ DEPEND="${RDEPEND}
 			media-fonts/font-cursor-misc )"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${PN}-4.4.2-flibs.patch
 	epatch "${FILESDIR}"/${PN}-4.4.4-destdir.patch
 	epatch "${FILESDIR}"/${PN}-4.4.4-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-4.5.3-fortran.patch
-	#append-flags -U_FORTIFY_SOURCE
 	eautoreconf
 }
 
