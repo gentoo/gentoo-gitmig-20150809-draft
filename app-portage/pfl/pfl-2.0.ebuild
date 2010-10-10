@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.6 2010/09/27 11:24:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.7 2010/10/10 18:55:10 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND=2
 
-inherit python multilib
+inherit python
 
 MY_PV=20081230
 
@@ -26,13 +27,14 @@ RDEPEND="${DEPEND}
 
 RESTRICT="mirror"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_unpack() {
 	cp "${DISTDIR}/${P}" "${WORKDIR}/${PN}.py"
 	cp "${DISTDIR}/e-file-${MY_PV}" "${WORKDIR}/e-file"
-}
-
-pkg_setup() {
-	python_set_active_version 2
 }
 
 src_install() {
@@ -55,7 +57,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 
 	if [[ ! -e "${ROOT%/}/var/lib/${PN}/pfl.info" ]]; then
 		touch "${ROOT%/}/var/lib/${PN}/pfl.info"
@@ -65,5 +67,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }

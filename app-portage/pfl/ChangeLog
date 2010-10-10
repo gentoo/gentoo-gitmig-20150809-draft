@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.14 2010/09/27 11:24:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.15 2010/10/10 18:55:10 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pfl-2.0.ebuild:
+  Update EAPI. Don't inherit unused eclass. Call python_pkg_setup().
 
   27 Sep 2010; Michael Weber <xmw@gentoo.org> pfl-2.0.ebuild:
   Added ~arm keyword
