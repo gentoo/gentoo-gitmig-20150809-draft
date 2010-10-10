@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.47 2010/10/10 06:58:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.48 2010/10/10 15:36:11 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> alternate-2.18.ebuild:
+  alpha/ia64/sparc stable wrt #339560
 
   10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   alternate-2.18.ebuild:
