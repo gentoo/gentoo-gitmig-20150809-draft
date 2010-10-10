@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.3 2008/11/26 21:59:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.4 2010/10/10 21:34:10 ulm Exp $
+
+EAPI=1
 
 inherit versionator flag-o-matic rpm eutils
 
@@ -16,7 +18,10 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
-DEPEND="x11-libs/openmotif"
+
+DEPEND=">=x11-libs/openmotif-2.3:0"
+RDEPEND="${DEPEND}"
+
 S="${WORKDIR}/${PN}-${UPSTREAM_VERSION}"
 
 src_unpack() {
