@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwget
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.19 2009/10/22 20:56:05 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.20 2010/10/10 12:03:11 hwoarang Exp $
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gwget-1.0.4.ebuild:
+  Stable on amd64 wrt bug #340205
 
 *gwget-1.0.4 (22 Oct 2009)
 
