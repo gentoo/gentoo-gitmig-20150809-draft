@@ -1,0 +1,15 @@
+--- solfege-3.16.4.orig/solfege/soundcard/Makefile	2010-07-22 14:51:27.000000000 -0700
++++ solfege-3.16.4/solfege/soundcard/Makefile	2010-10-10 11:43:12.977406663 -0700
+@@ -49,10 +49,10 @@
+ endif
+ 
+ solfege/soundcard/solfege_c_midimodule.so: $(OBJECTS)
+-	$(CC) -fPIC -shared $(OBJECTS) -o $@ -lc
++	$(CC) $(LDFLAGS) -fPIC -shared $(OBJECTS) -o $@ -lc
+ 
+ solfege/soundcard/_solfege_c_midi.so: $(OBJECTS)
+-	$(CC) -fPIC -shared $(OBJECTS) -o $@
++	$(CC) $(LDFLAGS) -fPIC -shared $(OBJECTS) -o $@
+ 
+ solfege/soundcard/solfege_c_midi_wrap.o: solfege/soundcard/solfege_c_midi_wrap.c solfege/soundcard/solfege_c_midi.i
+ 	(cd solfege/soundcard; $(CC) $(CFLAGS) -c solfege_c_midi_wrap.c $(PYTHON_INCLUDES))

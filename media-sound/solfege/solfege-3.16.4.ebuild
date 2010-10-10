@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.2 2010/08/29 06:19:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.3 2010/10/10 19:48:19 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -39,6 +39,7 @@ src_prepare() {
 		solfege/soundcard/Makefile || die
 
 	epatch "${FILESDIR}"/${P}-swig2.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_configure() {
