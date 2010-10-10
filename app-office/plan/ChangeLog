@@ -1,6 +1,10 @@
 # ChangeLog for app-office/plan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.20 2009/11/12 20:29:57 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.21 2010/10/10 17:32:11 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> plan-1.9-r1.ebuild:
+  Fix openmotif dependency. Change EAPI to 1 to allow for slot dependency.
+  Assign RDEPEND explicitly.
 
 *plan-1.9-r1 (12 Nov 2009)
 

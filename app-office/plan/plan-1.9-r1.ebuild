@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.1 2009/11/12 20:29:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.2 2010/10/10 17:32:11 ulm Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -14,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="x11-libs/openmotif"
+DEPEND=">=x11-libs/openmotif-2.3:0"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}/src
 
