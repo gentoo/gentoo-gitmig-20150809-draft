@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.16 2010/07/22 11:43:47 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.17 2010/10/10 18:07:36 gurligebis Exp $
+
+*anope-1.8.5 (10 Oct 2010)
+
+  10 Oct 2010; <gurligebis@gentoo.org> -anope-1.8.0_rc1.ebuild,
+  -anope-1.8.0.ebuild, -anope-1.8.4.ebuild, +anope-1.8.5.ebuild,
+  +files/ldflags-fix.patch:
+  Bumping to 1.8.5, removing old versions and fixing LDFLAGS problem
+  wrt. bug #339747 .
 
 *anope-1.8.4 (22 Jul 2010)
 
