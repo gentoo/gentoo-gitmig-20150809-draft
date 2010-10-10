@@ -1,6 +1,12 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.59 2010/10/01 07:09:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.60 2010/10/10 22:17:32 caster Exp $
+
+*taskcoach-1.1.4-r1 (10 Oct 2010)
+
+  10 Oct 2010; Vlastimil Babka <caster@gentoo.org> +files/3081666.patch,
+  +taskcoach-1.1.4-r1.ebuild:
+  Backport fix for upstream bug 3081666 from upstream svn.
 
 *taskcoach-1.1.4 (01 Oct 2010)
 
