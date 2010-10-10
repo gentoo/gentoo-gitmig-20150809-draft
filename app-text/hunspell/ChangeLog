@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.74 2010/09/30 20:08:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.75 2010/10/10 21:52:12 maekke Exp $
+
+  10 Oct 2010; Markus Meier <maekke@gentoo.org> hunspell-1.2.11.ebuild:
+  arm stable, bug #338341
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> hunspell-1.2.11.ebuild:
   stable ppc64, bug 338341
