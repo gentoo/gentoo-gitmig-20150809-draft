@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/shntool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.19 2010/01/07 14:40:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.20 2010/10/10 21:03:05 radhermit Exp $
+
+*shntool-3.0.10-r1 (10 Oct 2010)
+
+  10 Oct 2010; Tim Harder <radhermit@gentoo.org> +shntool-3.0.10-r1.ebuild,
+  metadata.xml:
+  Add mac and alac USE flags and dependencies (fixes bug #328399, thanks to
+  Alexander Kozyrev reporting).
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   shntool-3.0.10.ebuild:
