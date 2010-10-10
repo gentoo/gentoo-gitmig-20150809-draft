@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.20 2008/10/06 19:55:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.21 2010/10/10 17:23:14 ulm Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -17,7 +17,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_po
 
 IUSE="X Xaw3d motif neXt"
 
-DEPEND="X? ( motif? ( x11-libs/openmotif )
+DEPEND="X? ( motif? ( >=x11-libs/openmotif-2.3 )
 		!motif? ( neXt? ( x11-libs/neXtaw )
 			!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
 		!app-text/xdvik

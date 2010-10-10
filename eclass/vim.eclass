@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.190 2010/08/03 15:50:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.191 2010/10/10 17:23:14 ulm Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -138,7 +138,7 @@ else
 				)
 				!gtk? (
 					motif? (
-						x11-libs/openmotif
+						>=x11-libs/openmotif-2.3
 					)
 					!motif? (
 						nextaw? (
@@ -163,7 +163,7 @@ apply_vim_patches() {
 	#
 	# Allow either gzipped or uncompressed patches in the tarball.
 	# --lack 2009-05-18
-	# 
+	#
 	# Also removed date-seeking regexp to find first and second lines of the
 	# patch since as of 7.2.167 the date format has changed.  It is less work
 	# (while marginally less correct) to just look for lines that start with
