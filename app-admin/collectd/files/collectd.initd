@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.1 2010/09/28 15:17:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.2 2010/10/10 19:13:04 dilfridge Exp $
 
 : ${COLLECTD_PIDFILE:='/var/run/collectd.pid'}
 : ${COLLECTD_CFGFILE:='/etc/collectd.conf'}
@@ -14,7 +14,7 @@ depend() {
 
 start() {
 	ebegin "Starting collectd"
-	start-stop-daemon --start --quiet \
+	start-stop-daemon --start \
 		--nicelevel "${COLLECTD_NICELVL}" --exec /usr/sbin/collectd -- \
 			-P "${COLLECTD_PIDFILE}" -C "${COLLECTD_CFGFILE}"
 	eend $? "Failed to start collectd"
@@ -22,7 +22,7 @@ start() {
 
 stop() {
 	ebegin "Stopping collectd"
-	start-stop-daemon --stop --quiet \
+	start-stop-daemon --stop \
 		--pidfile "${COLLECTD_PIDFILE}"
 	eend $? "Failed to stop collectd"
 }
