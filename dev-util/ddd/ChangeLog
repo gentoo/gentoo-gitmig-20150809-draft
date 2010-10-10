@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ddd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.60 2010/08/23 07:43:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.61 2010/10/10 17:54:50 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> ddd-3.3.12-r1.ebuild,
+  ddd-3.3.12-r2.ebuild:
+  Fix openmotif dependency. Change EAPI to 1 to allow for slot dependency.
 
 *ddd-3.3.12-r2 (23 Aug 2010)
 

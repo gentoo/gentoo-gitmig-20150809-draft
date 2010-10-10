@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.6 2009/07/24 16:52:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.7 2010/10/10 17:54:50 ulm Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -14,7 +16,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-devel/gdb-6.5
-	>=x11-libs/openmotif-2.3
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/libX11
 	x11-libs/libXp"
 

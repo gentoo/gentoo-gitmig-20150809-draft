@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r2.ebuild,v 1.1 2010/08/23 07:43:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r2.ebuild,v 1.2 2010/10/10 17:54:50 ulm Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ DEPEND="
 	sys-devel/gdb
 	x11-libs/libXaw
 	x11-libs/libXpm
-	>=x11-libs/openmotif-2.3
+	>=x11-libs/openmotif-2.3:0
 	ppc? ( dev-libs/elfutils )
 	ppc64? ( dev-libs/elfutils )
 "
