@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vdpau-video
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.6 2010/10/10 12:00:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.7 2010/10/10 21:13:44 aballier Exp $
+
+*vdpau-video-0.7.2 (10 Oct 2010)
+
+  10 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  +vdpau-video-0.7.2.ebuild:
+  version bump
 
   10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -vdpau-video-0.6.9.ebuild:
