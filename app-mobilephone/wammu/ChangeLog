@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.43 2010/10/09 19:32:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.44 2010/10/10 16:38:38 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  wammu-0.34.ebuild:
+  Update EAPI.
 
 *wammu-0.34 (09 Oct 2010)
 
