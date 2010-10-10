@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.35 2010/09/04 07:26:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.36 2010/10/10 19:00:43 fauli Exp $
+
+  10 Oct 2010; Christian Faulhammer <fauli@gentoo.org> xboard-4.4.4.ebuild:
+  stable x86, bug 340014
 
 *xboard-4.4.4 (04 Sep 2010)
 
