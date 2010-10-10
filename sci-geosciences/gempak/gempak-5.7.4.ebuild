@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.7 2009/07/07 23:23:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.4.ebuild,v 1.8 2010/10/10 21:40:31 ulm Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -19,7 +21,8 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 RESTRICT="fetch"
 
-DEPEND="x11-libs/openmotif"
+DEPEND=">=x11-libs/openmotif-2.3:0"
+RDEPEND="${DEPEND}"
 
 # More inconsistencies, this sometimes changes on bumps.
 S="${WORKDIR}/GEMPAK${MY_PV}"
