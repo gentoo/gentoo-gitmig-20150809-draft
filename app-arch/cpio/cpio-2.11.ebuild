@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.11.ebuild,v 1.7 2010/07/18 20:47:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.11.ebuild,v 1.8 2010/10/10 00:04:57 vapier Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
 HOMEPAGE="http://www.gnu.org/software/cpio/cpio.html"
@@ -13,12 +15,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-stat.patch #328531
+}
+
 src_configure() {
 	econf \
 		$(use_enable nls) \
 		--bindir=/bin \
-		--with-rmt=/usr/sbin/rmt \
-		|| die
+		--with-rmt=/usr/sbin/rmt
 }
 
 src_install() {
