@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.20 2009/10/31 18:05:39 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.21 2010/10/10 21:18:22 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> clustalx-1.83-r2.ebuild:
+  Fix openmotif dependency.
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> clustalx-2.0.11.ebuild:
   amd64/x86 stable, bug #290938

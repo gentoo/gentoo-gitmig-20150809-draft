@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090809-r2.ebuild,v 1.1 2010/03/07 09:24:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090809-r2.ebuild,v 1.2 2010/10/10 21:22:56 ulm Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ IUSE="doc X"
 RDEPEND="app-shells/tcsh
 	dev-lang/perl
 	media-libs/libpng
-	X? ( x11-libs/openmotif )"
+	X? ( >=x11-libs/openmotif-2.3:0 )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/ncbi"

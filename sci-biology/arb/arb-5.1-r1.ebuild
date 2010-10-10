@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.2 2010/09/16 17:21:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.3 2010/10/10 21:16:13 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	app-text/sablotron
 	www-client/lynx
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/libXpm
 	x11-libs/libXaw
 	media-libs/tiff

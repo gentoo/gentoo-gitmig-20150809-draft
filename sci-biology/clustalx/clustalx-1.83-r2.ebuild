@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.8 2008/08/27 23:15:53 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.9 2010/10/10 21:18:22 ulm Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="sci-biology/clustalw:1
 	sci-biology/ncbi-tools
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/libXpm"
 
 S="${WORKDIR}/${PN}${PV}.sun"

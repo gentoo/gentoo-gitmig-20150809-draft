@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20080302.ebuild,v 1.5 2008/06/27 10:23:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20080302.ebuild,v 1.6 2010/10/10 21:22:56 ulm Exp $
+
+EAPI=1
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
@@ -24,7 +26,7 @@ IUSE="doc X"
 RDEPEND="app-shells/tcsh
 	dev-lang/perl
 	media-libs/libpng
-	X? ( x11-libs/openmotif )"
+	X? ( >=x11-libs/openmotif-2.3:0 )"
 
 DEPEND="${RDEPEND}
 		sys-devel/pmake"
