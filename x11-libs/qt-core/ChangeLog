@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.106 2010/09/24 06:59:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.107 2010/10/10 11:48:44 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-core-4.7.0.ebuild:
+  Mark -sparc because it sigbuses
 
   24 Sep 2010; Alex Alexander <wired@gentoo.org> qt-core-4.7.0.ebuild:
   prefix fix, thanks to heiko_
