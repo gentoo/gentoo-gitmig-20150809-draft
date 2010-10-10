@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.5 2010/08/13 12:35:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.6 2010/10/10 15:59:31 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -29,7 +29,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		$(use_with network)
 }
