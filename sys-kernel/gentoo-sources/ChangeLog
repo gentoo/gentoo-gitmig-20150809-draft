@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.756 2010/10/09 17:05:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.757 2010/10/10 21:01:24 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  gentoo-sources-2.6.34-r11.ebuild:
+  Stable on alpha, bug #339819
 
   09 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   gentoo-sources-2.6.32-r18.ebuild:
