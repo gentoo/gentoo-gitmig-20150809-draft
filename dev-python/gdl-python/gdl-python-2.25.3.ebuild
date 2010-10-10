@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.25.3.ebuild,v 1.4 2010/09/11 19:02:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.25.3.ebuild,v 1.5 2010/10/10 10:20:32 ssuominen Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2"
 DESCRIPTION="Python bindings for GDL"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=dev-libs/gdl-2.28"

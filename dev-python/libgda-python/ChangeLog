@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgda-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.15 2010/09/11 19:03:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.16 2010/10/10 10:23:50 ssuominen Exp $
+
+  10 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libgda-python-2.25.3.ebuild:
+  ppc64 stable wrt #324077
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> libgda-python-2.25.3.ebuild:
   Marked ppc for bug #324077.
