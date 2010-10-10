@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mpatrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.22 2010/08/15 19:52:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.23 2010/10/10 17:51:32 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> mpatrol-1.4.8.ebuild,
+  -mpatrol-1.4.8-r1.ebuild, -mpatrol-1.4.8-r2.ebuild,
+  mpatrol-1.4.8-r3.ebuild:
+  Fix openmotif dependency. Change EAPI to 1 to allow for slot dependency.
+  Assign RDEPEND explicitly; quote some vars. Remove intermediate versions.
 
 *mpatrol-1.4.8-r3 (15 Aug 2010)
 
