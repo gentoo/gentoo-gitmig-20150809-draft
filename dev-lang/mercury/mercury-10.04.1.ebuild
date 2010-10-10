@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.1.ebuild,v 1.2 2010/09/12 03:17:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.1.ebuild,v 1.3 2010/10/10 00:09:47 keri Exp $
 
-inherit elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
+inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
 MY_P=${PN}-compiler-${PV}
 
@@ -36,6 +36,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-multilib.patch
 	epatch "${FILESDIR}"/${P}-linker-flags.patch
+	epatch "${FILESDIR}"/${P}-bootstrap-depend.patch
 	epatch "${FILESDIR}"/${P}-default-grade.patch
 	epatch "${FILESDIR}"/${P}-boehm_gc.patch
 	epatch "${FILESDIR}"/${P}-sparc-llds-base-grade.patch
@@ -65,6 +66,9 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-tests-sandbox.patch
 		epatch "${FILESDIR}"/${P}-tests-static-link.patch
 	fi
+
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {
@@ -73,7 +77,6 @@ src_compile() {
 	local myconf
 	myconf="--libdir=/usr/$(get_libdir) \
 		--disable-gcc-back-end \
-		--disable-aditi-back-end \
 		--disable-deep-profiler \
 		--disable-dotnet-grades \
 		$(use_enable erlang erlang-grade) \
@@ -86,6 +89,11 @@ src_compile() {
 	econf \
 		${myconf} \
 		|| die "econf failed"
+
+	emake \
+		PARALLEL=${MAKEOPTS} \
+		bootstrap_depend || die "emake depend failed"
+
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \

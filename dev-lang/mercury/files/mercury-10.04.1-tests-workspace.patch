@@ -11,9 +11,9 @@
  endif
  
  # Avoid trying to make this file with `mmc --make' if it doesn't exist.
---- mercury-compiler-10.04.1.orig/configure	2010-08-29 19:27:34.000000000 +1200
-+++ mercury-compiler-10.04.1/configure	2010-09-05 09:37:11.000000000 +1200
-@@ -14798,10 +14798,10 @@
+--- mercury-compiler-10.04.1.orig/configure.in	2010-08-23 23:04:53.000000000 +1200
++++ mercury-compiler-10.04.1/configure.in	2010-10-10 11:49:06.000000000 +1300
+@@ -5048,10 +5048,10 @@
      test_flags="tests/TESTS_FLAGS"
      test_mdbrc="tests/mdbrc"
  else

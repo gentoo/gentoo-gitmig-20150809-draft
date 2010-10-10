@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.116 2010/09/12 03:17:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.117 2010/10/10 00:09:47 keri Exp $
+
+  09 Oct 2010; <keri@gentoo.org> mercury-10.04.1.ebuild,
+  +files/mercury-10.04.1-bootstrap-depend.patch,
+  files/mercury-10.04.1-char-det-from-int.patch,
+  files/mercury-10.04.1-sparc-llds-base-grade.patch,
+  files/mercury-10.04.1-tests-workspace.patch:
+  Run mmake depend when bootstrapping mercury_compile
 
   12 Sep 2010; <keri@gentoo.org> mercury-10.04.1.ebuild,
   +files/mercury-10.04.1-char-det-from-int.patch:
