@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12035 2010/10/09 20:12:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12036 2010/10/10 16:04:18 halcy0n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -124,7 +124,9 @@ dev-python/IcePy
 # Masking for removal in 30 days
 # Upstream is dead, does not build, would need massive work for current
 # gcc. Seems like nobody has missed it for some time. Bug 296651.
+# Also mask maxit as it depends on validation - halcy0n
 sci-chemistry/validation
+sci-chemistry/maxit
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (02 Oct 2010)
 #  on behalf of QA team
