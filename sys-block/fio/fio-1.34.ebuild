@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.34.ebuild,v 1.1 2009/09/22 05:21:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.34.ebuild,v 1.2 2010/10/10 20:06:51 gurligebis Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -18,6 +20,13 @@ IUSE=""
 
 DEPEND="dev-libs/libaio"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i \
+		-e '/filter /s:-o:$(LDFLAGS) -o:' \
+		-e '/: depend$/d' \
+		Makefile || die
+}
 
 src_compile() {
 	append-flags -W
