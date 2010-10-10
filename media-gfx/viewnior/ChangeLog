@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewnior
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.5 2010/07/06 22:13:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.6 2010/10/10 18:14:24 ricmm Exp $
+
+  10 Oct 2010; Ricardo Mendoza <ricmm@gentoo.org> metadata.xml:
+  Taking over package.
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> -viewnior-0.7.ebuild:
   Remove old ebuild
