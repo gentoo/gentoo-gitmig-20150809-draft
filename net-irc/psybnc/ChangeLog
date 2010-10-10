@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/psybnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.15 2010/09/26 17:28:39 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.16 2010/10/10 18:30:09 gurligebis Exp $
+
+  10 Oct 2010; <gurligebis@gentoo.org> psybnc-2.3.2.9-r2.ebuild,
+  +files/ldflags-fix.patch:
+  Really fixing LDFLAGS problem this time.
 
   26 Sep 2010; <gurligebis@gentoo.org> -psybnc-2.3.2.7-r2.ebuild:
   Removing old version

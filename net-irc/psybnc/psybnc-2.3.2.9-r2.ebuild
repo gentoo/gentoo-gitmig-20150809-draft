@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.4 2010/09/26 17:26:42 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.5 2010/10/10 18:30:09 gurligebis Exp $
+
+EAPI="2"
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
@@ -29,22 +31,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/compile.diff"
-
-	# add oidentd
-	use oidentd && epatch "${FILESDIR}/${P}-oidentd.patch"
-
-	# add scripting support
-	use scripting && epatch "${FILESDIR}/${P}-scripting.patch"
-
-	# add multinetwork support
-	use multinetwork && epatch "${FILESDIR}/${P}-multinetwork.patch"
-
 	# Useless files
 	rm -f */INFO
-
-	# Prevent stripping the binary
-	sed -i -e "/@strip/ d" tools/autoconf.c
 
 	# Pretend we already have a certificate, we generate it in pkg_config
 	mkdir key
@@ -55,6 +43,23 @@ src_unpack() {
 		einfo "Using existing salt.h for password encryption"
 		cp "${ROOT}"/usr/share/psybnc/salt.h salt.h
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/compile.diff"
+	epatch "${FILESDIR}/ldflags-fix.patch"
+
+	# add oidentd
+	use oidentd && epatch "${FILESDIR}/${P}-oidentd.patch"
+
+	# add scripting support
+	use scripting && epatch "${FILESDIR}/${P}-scripting.patch"
+
+	# add multinetwork support
+	use multinetwork && epatch "${FILESDIR}/${P}-multinetwork.patch"
+
+	# Prevent stripping the binary
+	sed -i -e "/@strip/ d" tools/autoconf.c
 }
 
 src_compile() {
