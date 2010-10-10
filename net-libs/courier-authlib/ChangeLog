@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.110 2010/07/16 09:15:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.111 2010/10/10 18:35:37 hanno Exp $
+
+*courier-authlib-0.63.0-r1 (10 Oct 2010)
+
+  10 Oct 2010; Hanno Boeck <hanno@gentoo.org>
+  +courier-authlib-0.63.0-r1.ebuild, +files/courier-authlib-r1:
+  Remove bash-ism from init script, see #340174, thanks to Alec Moskvin for
+  patch.
 
   16 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   courier-authlib-0.63.0.ebuild:

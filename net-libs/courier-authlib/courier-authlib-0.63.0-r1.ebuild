@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.61.0.ebuild,v 1.2 2010/06/17 20:51:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.63.0-r1.ebuild,v 1.1 2010/10/10 18:35:37 hanno Exp $
 
-inherit eutils flag-o-matic autotools libtool
+inherit eutils flag-o-matic
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		pam? ( virtual/pam )
-		postgres? ( dev-db/postgresql-base )"
+		postgres? ( >=dev-db/postgresql-base-8.4 )"
 
 pkg_setup() {
 	enewuser mail -1 -1 /var/spool/mail
@@ -45,34 +45,6 @@ pkg_setup() {
 		die "vpopmail support removed"
 	fi
 
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	if ! use gdbm ; then
-		epatch "${FILESDIR}/0.59.2-configure-db4.patch"
-	else
-		epatch "${FILESDIR}/0.59.2-remove-obsolete-macro.patch"
-	fi
-
-	sed -i -e "s|^chk_file .* |&\${DESTDIR}|g" authmigrate.in || die "sed failed"
-	sed -i -e'/for dir in/a\\t\t/etc/courier-imap \\' authmigrate.in || die "sed failed"
-	sed -i -e'/for dir in/a\\t\t/etc/courier/authlib \\' authmigrate.in || die "sed failed"
-	sed -i -e"s|\$sbindir/makeuserdb||g" authmigrate.in || die "sed failed"
-
-	sed -i -e 's:AC_LIBLTDL_INSTALLABLE:AC_LIBLTDL_CONVENIENCE:' configure.in \
-		|| die "fixing libltdl call failed"
-
-	local d
-	for d in $(find -name configure.in) ; do
-		[[ ${d} == */libltdl/* ]] && continue
-		cd "${S}"/${d%configure.in}
-		AT_NO_RECURSIVE="yes" AT_NOELIBTOOLIZE="yes" eautoreconf
-	done
-
-	elibtoolize
 }
 
 src_compile() {
@@ -145,7 +117,6 @@ src_install() {
 	keepdir /var/lib/courier/authdaemon
 	keepdir /etc/courier/authlib
 	emake DESTDIR="${D}" install || die "emake install failed"
-	emake DESTDIR="${D}" install-migrate|| die "emake install-migrate failed"
 	[[ ! -e "${D}/etc/courier/authlib/userdb" ]] && finduserdb
 	emake DESTDIR="${D}" install-configure || die "emake install-configure failed"
 	rm -f "${D}"/etc/courier/authlib/*.bak
@@ -171,7 +142,7 @@ src_install() {
 		dodir /etc/openldap/schema
 		cp -f authldap.schema "${D}/etc/openldap/schema/"
 	fi
-	doinitd "${FILESDIR}/${PN}" || die "doinitd failed"
+	newinitd "${FILESDIR}/${PN}-r1" "${PN}" || die "doinitd failed"
 }
 
 pkg_postinst() {
