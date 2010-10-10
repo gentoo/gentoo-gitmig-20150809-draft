@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.78 2010/10/10 09:04:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.79 2010/10/10 11:29:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -9,12 +9,13 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
+# BUMP ME PLZ, NO COOKIES OTHERWISE
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r30554
 
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec +ass bidi bindist bl bluray bs2b
 +cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac directfb
 doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon ftp
-gif ggi +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
+gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 libcaca lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas +network nut openal
 amr +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc
 rtmpdump samba +shm +schroedinger sdl +speex sse sse2 ssse3 tga +theora +tremor
@@ -107,6 +108,7 @@ RDEPEND+="
 	enca? ( app-i18n/enca )
 	faad? ( media-libs/faad2 )
 	gif? ( media-libs/giflib )
+	gsm? ( media-sound/gsm )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
@@ -350,7 +352,7 @@ src_configure() {
 	if { use dvb || use v4l || use v4l2 || use pvr || use radio; }; then
 		use dvb || myconf+=" --disable-dvb"
 		use pvr || myconf+=" --disable-pvr"
-		use v4l	|| myconf+=" --disable-tv-v4l1"
+		use v4l || myconf+=" --disable-tv-v4l1"
 		use v4l2 || myconf+=" --disable-tv-v4l2"
 		if use radio && { use dvb || use v4l || use v4l2; }; then
 			myconf+="
@@ -391,7 +393,7 @@ src_configure() {
 			--disable-mp3lib
 		"
 	fi
-	uses="a52 bs2b dv lzo"
+	uses="a52 bs2b dv gsm lzo"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
 	done

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.760 2010/10/10 09:04:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.761 2010/10/10 11:29:50 scarabeus Exp $
+
+  10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
+  Introduce gsm useflag. Adds support for the gsm lossy speech compression
+  codec.
 
   10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
   Always disable internal libmpeg2.
