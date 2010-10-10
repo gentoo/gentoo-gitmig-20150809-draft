@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6030 2010/10/10 11:54:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6031 2010/10/10 19:54:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2272,7 +2272,7 @@ media-video/mplayer:radio - Enable V4L2 radio interface and support
 media-video/mplayer:rar - Enable Unique RAR File Library
 media-video/mplayer:real - Adds real audo/video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
-media-video/mplayer:rtmpdump - Enables RTMPDump Streaming Media support
+media-video/mplayer:rtmp - Enables RTMPDump Streaming Media support
 media-video/mplayer:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/mplayer:shm - Enable support for shm
 media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
