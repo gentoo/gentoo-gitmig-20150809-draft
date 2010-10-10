@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.439 2010/09/05 05:52:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.440 2010/10/10 07:32:33 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1150,7 +1150,15 @@ gcc-compiler-configure() {
 		fi
 
 		if tc_version_is_at_least "4.2" ; then
-			confgcc="${confgcc} $(use_enable openmp libgomp)"
+			# Make sure target has pthreads support. #326757 #335883
+			# There shouldn't be a chicken&egg problem here as openmp won't
+			# build without a C library, and you can't build that w/out
+			# already having a compiler ...
+			if ! is_crosscompile || \
+			   $(tc-getCPP ${CTARGET}) -E - <<<"#include <pthread.h>" >& /dev/null
+			then
+				confgcc="${confgcc} $(use_enable openmp libgomp)"
+			fi
 		fi
 
 		# enable the cld workaround until we move things to stable.
