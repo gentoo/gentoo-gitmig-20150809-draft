@@ -1,6 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/coldfire/coldfire-0.3.1.ebuild,v 1.1 2006/05/03 03:26:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/coldfire/coldfire-0.3.1.ebuild,v 1.2 2010/10/10 04:44:06 vapier Exp $
+
+EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="Motorola Coldfire Emulator"
 HOMEPAGE="http://www.slicer.ca/coldfire/"
@@ -14,13 +18,13 @@ IUSE=""
 DEPEND="sys-libs/ncurses
 	sys-libs/readline"
 
-src_compile() {
-	econf || die
-	emake -j1 || die
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-headers.patch
 }
 
 src_install() {
 	dodir /usr/bin
 	einstall || die
-	dodoc AUTHORS HACKING README
+	dodoc CONTRIBUTORS HACKING README
 }
