@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.8 2010/07/19 08:07:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.9 2010/10/10 18:16:48 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> tth-3.77.ebuild:
+  Keyworded on alpha, bug #327811
 
   19 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> tth-3.77.ebuild:
   Keyword ~ppc64 wrt #327811.
