@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r21.ebuild,v 1.1 2010/09/25 13:55:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r21.ebuild,v 1.2 2010/10/10 15:10:24 ulm Exp $
 
 EAPI=2
 
@@ -111,7 +111,9 @@ src_compile() {
 src_install() {
 	local i m
 
-	einstall || die "einstall failed"
+	einstall infodir="${D}/usr/share/info/emacs-${SLOT}" \
+		|| die "einstall failed"
+
 	for i in "${D}"/usr/bin/* ; do
 		mv "${i}" "${i}-emacs-${SLOT}" || die "mv ${i} failed"
 	done
@@ -119,14 +121,9 @@ src_install() {
 	rm "${D}"/usr/bin/emacs-${PV}-emacs-${SLOT}
 
 	# move info documentation to the correct place
-	mkdir "${T}/emacs-${SLOT}"
-	mv "${D}/usr/share/info/dir" "${T}"
-	for i in "${D}"/usr/share/info/*
-	do
-		mv "${i}" "${T}/emacs-${SLOT}/${i##*/}.info"
+	for i in "${D}"/usr/share/info/emacs-${SLOT}/*; do
+		mv "${i}" "${i}.info" || die "mv ${i} failed"
 	done
-	mv "${T}/emacs-${SLOT}" "${D}/usr/share/info"
-	mv "${T}/dir" "${D}/usr/share/info/emacs-${SLOT}"
 
 	# move man pages to the correct place
 	for m in "${D}"/usr/share/man/man1/* ; do

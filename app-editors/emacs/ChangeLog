@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.385 2010/09/25 13:55:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.386 2010/10/10 15:10:24 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r21.ebuild:
+  Fix path for installation of Info dir.
 
 *emacs-23.2-r1 (25 Sep 2010)
 *emacs-22.3-r5 (25 Sep 2010)
