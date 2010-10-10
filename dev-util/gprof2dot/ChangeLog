@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gprof2dot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.1 2010/03/17 00:40:16 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.2 2010/10/10 18:27:23 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gprof2dot-0_p20100216.ebuild:
+  Update EAPI. Delete needless call to die().
 
 *gprof2dot-0_p20100216 (17 Mar 2010)
 
