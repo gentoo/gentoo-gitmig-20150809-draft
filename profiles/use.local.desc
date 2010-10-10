@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6032 2010/10/10 20:14:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6033 2010/10/10 21:14:58 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2098,6 +2098,8 @@ media-sound/rubyripper:cdrdao - Add support for advanced toc scanning using app-
 media-sound/rubyripper:cli - Build command line interface rubyripper
 media-sound/rubyripper:normalize - Add support for normalizing audio file volume levels
 media-sound/rubyripper:wav - Add support for wavegain
+media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
+media-sound/shntool:mac - Add support for Monkey's Audio files
 media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
