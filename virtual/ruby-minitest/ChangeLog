@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.17 2010/09/29 21:37:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.18 2010/10/10 17:41:58 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  ruby-minitest-0-r1.ebuild:
+  Keyworded on alpha, bug #330337
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-minitest-0.ebuild:
   Marking ruby-minitest-0 ppc64 for bug 321043
