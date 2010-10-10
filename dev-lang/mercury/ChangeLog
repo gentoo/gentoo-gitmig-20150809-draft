@@ -1,6 +1,23 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.118 2010/10/10 04:54:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.119 2010/10/10 05:01:38 keri Exp $
+
+*mercury-10.04.2 (10 Oct 2010)
+
+  10 Oct 2010; <keri@gentoo.org> +mercury-10.04.2.ebuild,
+  +files/mercury-10.04.2-boehm_gc.patch,
+  +files/mercury-10.04.2-bootstrap-depend.patch,
+  +files/mercury-10.04.2-char-det-from-int.patch,
+  +files/mercury-10.04.2-default-grade.patch,
+  +files/mercury-10.04.2-docs.patch,
+  +files/mercury-10.04.2-linker-flags.patch,
+  +files/mercury-10.04.2-multilib.patch,
+  +files/mercury-10.04.2-no-reconf.patch,
+  +files/mercury-10.04.2-sparc-llds-base-grade.patch,
+  +files/mercury-10.04.2-tests-sandbox.patch,
+  +files/mercury-10.04.2-tests-static-link.patch,
+  +files/mercury-10.04.2-tests-workspace.patch:
+  Version bump
 
   10 Oct 2010; <keri@gentoo.org> files/mercury-10.04.1-linker-flags.patch:
   Fix multilib support for mercury runtime

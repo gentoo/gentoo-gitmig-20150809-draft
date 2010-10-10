@@ -1,0 +1,29 @@
+--- mercury-tests-10.04.2.orig/Mmake.common	2010-02-15 19:49:51.000000000 +1300
++++ mercury-tests-10.04.2/Mmake.common	2010-09-05 09:34:38.000000000 +1200
+@@ -79,8 +79,8 @@
+ -include $(TESTS_DIR)/Mmake.params
+ 
+ MCFLAGS += --flags $(TESTS_DIR)/TESTS_FLAGS
+-ifdef WORKSPACE_FLAGS
+-MCFLAGS += --flags $(TESTS_DIR)/WS_FLAGS
++ifdef WORKSPACE
++MCFLAGS += --flags $(TESTS_DIR)/WS_FLAGS.ws
+ endif
+ 
+ # Avoid trying to make this file with `mmc --make' if it doesn't exist.
+--- mercury-compiler-10.04.2.orig/configure.in	2010-08-23 23:04:53.000000000 +1200
++++ mercury-compiler-10.04.2/configure.in	2010-10-10 11:49:06.000000000 +1300
+@@ -5048,10 +5048,10 @@
+     test_flags="tests/TESTS_FLAGS"
+     test_mdbrc="tests/mdbrc"
+ else
+-    if test -e ../tests/TESTS_FLAGS.in
++    if test -e ../mercury-tests-10.04.2/TESTS_FLAGS.in
+     then
+-        test_flags="../tests/TESTS_FLAGS"
+-        test_mdbrc="../tests/mdbrc"
++        test_flags="../mercury-tests-10.04.2/TESTS_FLAGS"
++        test_mdbrc="../mercury-tests-10.04.2/mdbrc"
+     else
+         test_flags=""
+         test_mdbrc=""
