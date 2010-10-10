@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/carl-0.9.ebuild,v 1.1 2010/04/18 18:46:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/carl-0.9.ebuild,v 1.2 2010/10/10 18:33:30 arfrever Exp $
 
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+
 inherit distutils
 
 DESCRIPTION="An rsync logfile analyzer"
