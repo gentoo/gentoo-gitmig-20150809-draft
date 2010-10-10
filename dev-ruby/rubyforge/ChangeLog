@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.69 2010/09/29 21:39:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.70 2010/10/10 13:13:09 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  rubyforge-2.0.4-r1.ebuild:
+  Keyworded on alpha, bug #325465
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> rubyforge-2.0.4.ebuild:
   Marking rubyforge-2.0.4 ppc64 for bug 321043
