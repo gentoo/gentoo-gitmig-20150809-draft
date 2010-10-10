@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/shutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.13 2010/07/14 13:10:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.14 2010/10/10 10:36:26 hwoarang Exp $
+
+*shutter-0.86.4 (10 Oct 2010)
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/0.86.4-disable-goocanvas.patch, +shutter-0.86.4.ebuild:
+  Version bump
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> -shutter-0.85.ebuild,
   -shutter-0.85.1-r1.ebuild, -shutter-0.86.1.ebuild:
