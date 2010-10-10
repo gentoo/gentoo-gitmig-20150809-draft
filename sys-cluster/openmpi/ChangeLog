@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.71 2010/09/15 14:35:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.72 2010/10/10 18:51:28 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> openmpi-1.4.2.ebuild:
+  alpha/sparc stable wrt #337129
 
   15 Sep 2010; Christian Faulhammer <fauli@gentoo.org> openmpi-1.4.2.ebuild:
   stable x86, bug 337129
