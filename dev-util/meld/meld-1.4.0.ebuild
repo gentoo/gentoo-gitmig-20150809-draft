@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.4.0.ebuild,v 1.1 2010/09/27 22:03:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.4.0.ebuild,v 1.2 2010/10/10 07:52:41 jlec Exp $
+
+EAPI="3"
 
 GCONF_DEBUG="no"
 
@@ -11,7 +13,7 @@ HOMEPAGE="http://meld.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc gnome"
 
 RDEPEND=">=dev-lang/python-2.4
@@ -30,11 +32,11 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS NEWS help/ChangeLog"
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# fix the prefix so its not in */local/*
-	sed -e 's:/usr/local:/usr:' \
+	sed -e 's:/usr/local:${EPREFIX}/usr:' \
 		-e "s:\$(prefix)/lib:\$(prefix)/$(get_libdir):" \
 		-i INSTALL || die "sed 1 failed"
 
@@ -67,8 +69,8 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	emake || die "make failed"
+src_configure() {
+	:
 }
 
 pkg_postinst() {
