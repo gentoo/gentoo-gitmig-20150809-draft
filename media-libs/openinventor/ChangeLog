@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.28 2009/08/06 14:57:11 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.29 2010/10/10 18:42:21 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org>
+  openinventor-2.1.5.10-r3.ebuild:
+  Fix openmotif dependency.
 
   06 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   openinventor-2.1.5.10-r3.ebuild,
