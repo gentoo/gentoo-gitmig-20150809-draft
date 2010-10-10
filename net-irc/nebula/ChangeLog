@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/nebula
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nebula/ChangeLog,v 1.5 2007/02/19 22:25:20 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nebula/ChangeLog,v 1.6 2010/10/10 18:04:53 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> nebula-0.5.ebuild:
+  Fix openmotif dependency. Change EAPI to 1. Assign RDEPEND explicitly.
 
   19 Feb 2007; Raúl Porcel <armin76@gentoo.org> -nebula-0.4.ebuild,
   nebula-0.5.ebuild:
