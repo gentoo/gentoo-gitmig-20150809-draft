@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.81 2010/10/10 19:43:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.82 2010/10/10 23:31:27 mr_bones_ Exp $
 
 EAPI=3
 
@@ -608,7 +608,6 @@ src_configure() {
 			--enable-libdvdcss-internal
 		"
 	fi
-
 
 	###################
 	# External FFmpeg #
