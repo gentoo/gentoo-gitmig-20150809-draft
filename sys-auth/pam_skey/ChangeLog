@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_skey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.14 2010/10/07 16:45:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.15 2010/10/10 00:58:38 hwoarang Exp $
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  pam_skey-1.1.5-r2.ebuild:
+  Stable on amd64 wrt bug #340095
 
   07 Oct 2010; Ulrich Mueller <ulm@gentoo.org> pam_skey-1.1.5-r2.ebuild:
   Update elog message in pkg_postinst.
