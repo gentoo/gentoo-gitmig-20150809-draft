@@ -1,6 +1,11 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.48 2010/08/21 20:13:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.49 2010/10/10 01:49:42 hwoarang Exp $
+
+*griffith-0.12 (10 Oct 2010)
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> +griffith-0.12.ebuild:
+  Version bump
 
   21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   -files/0.9.6-moving_share_dir.patch, -files/0.9.7.1-fix_spellcheck.patch:
