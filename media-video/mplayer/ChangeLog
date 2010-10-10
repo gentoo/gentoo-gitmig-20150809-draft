@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.762 2010/10/10 13:46:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.763 2010/10/10 19:43:25 scarabeus Exp $
+
+  10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild,
+  metadata.xml:
+  Replace rtmpdump with rtmp useflag. As is done in ffmpeg and xbmc.
 
   10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
   EAPI3fy for prefix support.

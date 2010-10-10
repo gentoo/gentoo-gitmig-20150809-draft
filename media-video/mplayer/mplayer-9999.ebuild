@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.80 2010/10/10 13:46:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.81 2010/10/10 19:43:25 scarabeus Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 libcaca lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas +network nut openal
 amr +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc
-rtmpdump samba +shm +schroedinger sdl +speex sse sse2 ssse3 tga +theora +tremor
+rtmp samba +shm +schroedinger sdl +speex sse sse2 ssse3 tga +theora +tremor
 +truetype +toolame +twolame +unicode v4l v4l2 vdpau vidix +vorbis vpx
 win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 [[ ${PV} == *9999* ]] && IUSE+=" external-ffmpeg"
@@ -132,7 +132,7 @@ RDEPEND+="
 			app-arch/rar
 		)
 	)
-	rtmpdump? ( media-video/rtmpdump )
+	rtmp? ( media-video/rtmpdump )
 	samba? ( net-fs/samba )
 	schroedinger? ( media-libs/schroedinger )
 	sdl? ( media-libs/libsdl )
@@ -284,7 +284,6 @@ src_configure() {
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
 	use rar || myconf+=" --disable-unrarexec"
-	use rtmpdump || myconf+=" --disable-librtmp"
 	use samba || myconf+=" --disable-smb"
 	if ! use lirc; then
 		myconf+="
@@ -393,7 +392,7 @@ src_configure() {
 			--disable-mp3lib
 		"
 	fi
-	uses="a52 bs2b dv gsm lzo"
+	uses="a52 bs2b dv gsm lzo rtmp"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
 	done
