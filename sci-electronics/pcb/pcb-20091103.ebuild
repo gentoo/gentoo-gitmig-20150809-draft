@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.3 2010/10/08 19:21:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.4 2010/10/10 21:36:08 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ CDEPEND="gif? ( >=media-libs/gd-2.0.23 )
 		dbus? ( sys-apps/dbus ) )
 	jpeg? ( >=media-libs/gd-2.0.23[jpeg] )
 	motif? ( !gtk? (
-		>=x11-libs/openmotif-2.3
+		>=x11-libs/openmotif-2.3:0
 		dbus? ( sys-apps/dbus )
 		xrender? ( >=x11-libs/libXrender-0.9 ) ) )
 	nelma? ( >=media-libs/gd-2.0.23 )

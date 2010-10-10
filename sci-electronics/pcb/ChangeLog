@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.53 2010/10/08 19:21:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.54 2010/10/10 21:36:08 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> pcb-20081128-r1.ebuild,
+  pcb-20091103.ebuild:
+  Fix openmotif dependency.
 
   08 Oct 2010; Jeremy Olexa <darkside@gentoo.org> pcb-20091103.ebuild:
   Add ~x86-macos, tested in bug 339960
