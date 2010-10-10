@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.45 2010/10/04 14:20:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.46 2010/10/10 07:03:17 phajdan.jr Exp $
+
+  10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> t-coffee-8.69.ebuild:
+  x86 stable wrt bug #339575
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org> t-coffee-8.69.ebuild:
   Stable on amd64 wrt bug #339575
