@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.0.ebuild,v 1.3 2010/06/16 12:24:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.0.ebuild,v 1.4 2010/10/10 15:59:44 flameeyes Exp $
 
 inherit vdr-plugin eutils flag-o-matic
 
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-tv/gentoo-vdr-scripts-0.2.2"
 
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.3.0.sh"
-#BUILD_PARAMS="-j1"
+BUILD_PARAMS="-j1"
 
 src_unpack() {
 	vdr-plugin_src_unpack

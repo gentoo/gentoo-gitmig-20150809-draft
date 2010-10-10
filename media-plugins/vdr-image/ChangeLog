@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.29 2010/06/16 12:24:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.30 2010/10/10 15:59:44 flameeyes Exp $
+
+  10 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  vdr-image-0.3.0.ebuild:
+  Restore -j1 until bug #278166 is fixed, as parallel build fails.
 
   16 Jun 2010; Alexis Ballier <aballier@gentoo.org> vdr-image-0.3.0.ebuild:
   fix build with ffmpeg >= 0.6
