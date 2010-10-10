@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.74 2010/10/07 20:21:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.75 2010/10/10 05:04:47 ali_bush Exp $
+
+*mono-tools-2.8 (10 Oct 2010)
+
+  10 Oct 2010; Alistair Bush <ali_bush@gentoo.org> +mono-tools-2.8.ebuild,
+  +files/mono-tools-2.8-html-renderer-fixes.patch:
+  Version Bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
   -files/mono-tools-1.1.17-html-renderer-fixes.diff,
