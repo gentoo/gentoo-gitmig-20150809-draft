@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.4.ebuild,v 1.2 2010/10/08 11:18:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.4.ebuild,v 1.3 2010/10/10 10:22:58 phajdan.jr Exp $
 
 EAPI=2
 inherit multilib toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="http://www.draisberghof.de/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/libusb:0"
