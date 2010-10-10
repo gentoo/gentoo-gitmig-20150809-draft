@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.5 2010/10/04 19:10:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.6 2010/10/10 09:21:25 jlec Exp $
+
+  10 Oct 2010; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild,
+  libchamplain-0.8.0.ebuild:
+  Fix libsoup-gnome dependencies wrt #340293
 
   04 Oct 2010; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild,
   libchamplain-0.8.0.ebuild:
