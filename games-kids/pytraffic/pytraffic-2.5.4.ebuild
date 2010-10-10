@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.5 2010/04/25 15:38:49 tupone Exp $
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.6 2010/10/10 23:15:57 mr_bones_ Exp $
 
+EAPI=2
+PYTHON_DEPEND="2"
 inherit python distutils eutils games
 
 DESCRIPTION="Python version of the board game Rush Hour"
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[audio]
 	media-libs/sdl-mixer"
 RDEPEND="${DEPEND}
 	dev-python/pygtk"
