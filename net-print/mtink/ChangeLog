@@ -1,6 +1,10 @@
 # ChangeLog for net-print/mtink
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.31 2009/10/27 20:31:27 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.32 2010/10/10 18:10:50 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> mtink-1.0.11.ebuild,
+  mtink-1.0.16.ebuild:
+  Fix openmotif dependency. Explicitly assign RDEPEND.
 
 *mtink-1.0.16 (27 Oct 2009)
 
