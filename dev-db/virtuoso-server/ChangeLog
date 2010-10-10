@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.15 2010/09/12 21:37:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.16 2010/10/10 10:53:04 hwoarang Exp $
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  virtuoso-server-6.1.2.ebuild:
+  Stable on amd64 wrt bug #333115
 
   12 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   virtuoso-server-6.1.2.ebuild:
