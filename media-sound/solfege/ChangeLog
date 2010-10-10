@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.42 2010/10/10 19:48:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.43 2010/10/10 20:04:05 radhermit Exp $
+
+  10 Oct 2010; Tim Harder <radhermit@gentoo.org> solfege-3.18.3.ebuild,
+  +files/solfege-3.18.3-swig2.patch:
+  Fix compile with swig-2.
 
   10 Oct 2010; Tim Harder <radhermit@gentoo.org> solfege-3.16.4.ebuild,
   +files/solfege-3.16.4-ldflags.patch:
