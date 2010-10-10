@@ -6,7 +6,7 @@
  rio:		app.cpp rio.cpp
 -		g++ -O1 -o rio app.cpp rio.cpp
 -		chmod +s rio
-+		$(CXX) $(CXXFLAGS) -o rio app.cpp rio.cpp
++		$(CXX) $(CXXFLAGS) $(LDFLAGS) -o rio app.cpp rio.cpp
 +
 +# 		suid binaries BAD! use sudo!
 +#		chmod +s rio

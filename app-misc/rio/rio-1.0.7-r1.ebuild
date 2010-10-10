@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/rio-1.0.7-r1.ebuild,v 1.4 2009/09/23 16:07:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/rio-1.0.7-r1.ebuild,v 1.5 2010/10/10 19:28:06 gurligebis Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -18,12 +20,10 @@ RDEPEND=""
 
 S="${WORKDIR}/${PN}${PV//./}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-includes.patch
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-includes.patch"
 }
 
 src_compile() {

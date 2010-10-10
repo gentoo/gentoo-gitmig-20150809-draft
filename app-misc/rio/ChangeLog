@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rio
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.10 2009/09/23 16:07:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.11 2010/10/10 19:28:06 gurligebis Exp $
+
+  10 Oct 2010; <gurligebis@gentoo.org> rio-1.0.7-r1.ebuild,
+  files/rio-1.0.7-makefile.patch:
+  Fixing LDFLAGS problem wrt. bug #335219
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> rio-1.0.7-r1.ebuild:
   Remove virtual/libc
