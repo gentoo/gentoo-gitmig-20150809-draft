@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mantissa
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.14 2009/11/30 14:27:22 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.15 2010/10/10 19:48:57 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mantissa-0.7.0.ebuild:
+  Update EAPI. Fix dependencies. Don't inherit distutils.eclass and
+  python.eclass twice. Use PyPI mirrors. Set PYTHON_MODNAME. Set
+  TWISTED_PLUGINS and avoid custom regeneration of Twisted plugin cache.
 
 *mantissa-0.7.0 (30 Nov 2009)
 

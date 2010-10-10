@@ -1,24 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.4 2010/03/07 10:20:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.7.0.ebuild,v 1.5 2010/10/10 19:48:57 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 DISTUTILS_SRC_TEST="trial xmantissa"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
 # build-${PYTHON_ABI} directories as packages.
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
-inherit distutils twisted
+inherit twisted
 
 MY_PN="Mantissa"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="An extensible, multi-protocol, multi-user, interactive application server"
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodMantissa http://pypi.python.org/pypi/Mantissa"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -34,12 +36,12 @@ DEPEND=">=dev-python/axiom-0.5.7
 	dev-python/twisted-mail
 	>=dev-python/vertex-0.2.0"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 DOCS="NAME.txt NEWS.txt"
-PYTHON_MODNAME="axiom nevow xmantissa"
+PYTHON_MODNAME="axiom/plugins nevow/plugins/mantissa_package.py xmantissa"
+TWISTED_PLUGINS="axiom.plugins nevow.plugins xmantissa.plugins"
 
 src_compile() {
 	# Skip distutils_src_compile to avoid installation of $(python_get_sitedir)/build directory.
@@ -52,33 +54,4 @@ src_test() {
 
 src_install() {
 	PORTAGE_PLUGINCACHE_NOOP="1" distutils_src_install
-}
-
-update_axiom_plugin_cache() {
-	einfo "Updating axiom plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from axiom import plugins; list(getPlugins(IPlugin, plugins))'
-}
-
-update_mantissa_plugin_cache() {
-	einfo "Updating mantissa plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from xmantissa import plugins; list(getPlugins(IPlugin, plugins))'
-}
-
-update_nevow_plugin_cache() {
-	einfo "Updating nevow plugin cache..."
-	"$(PYTHON)" -c 'from twisted.plugin import IPlugin, getPlugins;from nevow import plugins; list(getPlugins(IPlugin, plugins))'
-}
-
-pkg_postinst() {
-	twisted_pkg_postinst
-	python_execute_function update_axiom_plugin_cache
-	python_execute_function update_nevow_plugin_cache
-	python_execute_function update_mantissa_plugin_cache
-}
-
-pkg_postrm() {
-	twisted_pkg_postrm
-	python_execute_function update_axiom_plugin_cache
-	python_execute_function update_nevow_plugin_cache
-	python_execute_function update_mantissa_plugin_cache
 }
