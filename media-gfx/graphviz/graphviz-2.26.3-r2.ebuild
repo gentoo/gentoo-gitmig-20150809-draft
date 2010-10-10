@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r2.ebuild,v 1.1 2010/09/05 13:38:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r2.ebuild,v 1.2 2010/10/10 15:47:17 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="python? 2"
+
 inherit eutils autotools multilib python
 
 DESCRIPTION="Open Source Graph Visualization Software"
@@ -94,6 +96,13 @@ DEPEND="${RDEPEND}
 # And the commands (/cmd):
 # - dot, dotty, gvpr, lefty, lneato, tools/* :)
 # Lefty needs Xaw and X to build
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	# ToDo: Do the same thing for examples and/or
