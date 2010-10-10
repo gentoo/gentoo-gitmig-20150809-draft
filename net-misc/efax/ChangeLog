@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/efax
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.10 2008/12/30 18:04:51 mpagano Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.11 2010/10/10 19:09:56 gurligebis Exp $
+
+*efax-0.9a-r2 (10 Oct 2010)
+
+  10 Oct 2010; <gurligebis@gentoo.org> +efax-0.9a-r2.ebuild:
+  Fixing LDFLAGS problem wrt. bug #335609
 
   30 Dec 2008; Mike Pagano <mpagano@gentoo.org> efax-0.9a-r1.ebuild:
   Respect compiler and cflags as per bug #241062
