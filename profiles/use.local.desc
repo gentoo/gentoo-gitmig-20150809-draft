@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6029 2010/10/10 08:54:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6030 2010/10/10 11:54:34 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3170,7 +3170,7 @@ net-print/hplip:kde - Enables kde-misc/skanlite as scanner GUI with USE="scanner
 net-print/hplip:libnotify - Enables desktop notifications
 net-print/hplip:minimal - Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
-net-print/hplip:policykit - Enable sys-auth/policykit authentication support
+net-print/hplip:policykit - Enable sys-auth/polkit authentication support
 net-print/hplip:qt4 - Enable graphical interface using Qt 4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
