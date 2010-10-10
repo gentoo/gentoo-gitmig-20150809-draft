@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.19 2010/05/22 06:50:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.20 2010/10/10 21:47:00 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> pgplot-5.2.2-r3.ebuild,
+  pgplot-5.2.2-r4.ebuild:
+  Fix openmotif dependency.
 
 *pgplot-5.2.2-r4 (22 May 2010)
 
