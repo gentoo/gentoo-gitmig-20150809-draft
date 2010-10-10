@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/plcedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.10 2010/10/10 10:13:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.11 2010/10/10 13:09:06 hwoarang Exp $
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -plcedit-2.1.2.ebuild:
+  Remove old ebuild
 
   10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> plcedit-2.2.0.ebuild:
   x86 stable wrt bug #339632
