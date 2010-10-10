@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6027 2010/10/09 20:54:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6028 2010/10/10 06:14:21 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1994,6 +1994,7 @@ media-sound/cmus:zsh-completion - enable zsh completion support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:gnome - Adds Gnome media keys support, so you can control Decibel using hotkeys. 
 media-sound/decibel-audio-player:gnome-keyring - Adds support for storing your Last.fm password using gnome-keyring.
+media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
