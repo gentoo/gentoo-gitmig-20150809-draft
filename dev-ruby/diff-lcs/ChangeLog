@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/diff-lcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.17 2010/10/06 17:47:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.18 2010/10/10 17:28:46 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  diff-lcs-1.1.2-r3.ebuild:
+  Keyworded on alpha, bug #330337
 
 *diff-lcs-1.1.2-r3 (06 Oct 2010)
 

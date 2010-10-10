@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.43 2010/10/06 17:50:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.44 2010/10/10 17:27:05 klausman Exp $
+
+  10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  text-format-1.0.0-r3.ebuild:
+  Keyworded on alpha, bug #330337
 
 *text-format-1.0.0-r3 (06 Oct 2010)
 
