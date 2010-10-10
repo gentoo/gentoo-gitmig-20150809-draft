@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.35 2010/09/16 17:54:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.36 2010/10/10 11:16:32 hwoarang Exp $
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  ghemical-2.99.2-r2.ebuild:
+  Stable on amd64 wrt bug #325561
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ghemical-2.01.ebuild:
   virtual/glut -> media-libs/glut
