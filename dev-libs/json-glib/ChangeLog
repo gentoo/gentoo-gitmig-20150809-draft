@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.9 2010/07/23 11:47:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.10 2010/10/10 11:54:45 armin76 Exp $
+
+  10 Oct 2010; Raúl Porcel <armin76@gentoo.org> json-glib-0.7.6.ebuild,
+  json-glib-0.8.2.ebuild, json-glib-0.10.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #339179
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> json-glib-0.10.2.ebuild:
   amd64 stable, bug #327053
