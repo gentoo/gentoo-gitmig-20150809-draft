@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2.ebuild,v 1.14 2010/07/06 18:41:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2.ebuild,v 1.15 2010/10/10 20:30:52 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="*"
@@ -66,5 +66,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup sipconfig.py sipdistutils.py
 }
