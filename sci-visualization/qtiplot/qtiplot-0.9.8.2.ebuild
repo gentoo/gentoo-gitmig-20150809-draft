@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.3 2010/09/19 19:41:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.4 2010/10/10 16:55:37 jlec Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc python ods"
 
 LANGS="cn cz de es fr ro ru ja sv"
@@ -29,7 +29,7 @@ done
 CDEPEND="
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
-	x11-libs/qt-assistant:4
+	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-svg:4
 	>=x11-libs/gl2ps-1.3.5
 	>=dev-cpp/muParser-1.32

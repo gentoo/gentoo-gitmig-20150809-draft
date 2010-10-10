@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.68 2010/09/19 19:41:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.69 2010/10/10 16:55:37 jlec Exp $
+
+  10 Oct 2010; Justin Lecher <jlec@gentoo.org> -qtiplot-0.9.7.12.ebuild,
+  qtiplot-0.9.7.14-r1.ebuild, -qtiplot-0.9.8.ebuild, qtiplot-0.9.8.2.ebuild:
+  Removed old, Corrected qt-assistent-4.7 DEP, 335756; keyworded for ~-linux
+  prefix
 
   19 Sep 2010; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.2.ebuild:
   Removed not really needed dependencies for python support, 337471

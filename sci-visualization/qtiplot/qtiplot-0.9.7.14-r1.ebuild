@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14-r1.ebuild,v 1.3 2010/07/12 20:12:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14-r1.ebuild,v 1.4 2010/10/10 16:55:37 jlec Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ done
 CDEPEND="
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
-	x11-libs/qt-assistant:4
+	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-svg:4
 	>=x11-libs/gl2ps-1.3.5
 	>=dev-cpp/muParser-1.32
