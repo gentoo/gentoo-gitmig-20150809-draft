@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.13 2010/07/19 18:32:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.14 2010/10/10 20:00:32 ulm Exp $
 
 EAPI=3
 inherit eutils
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 IUSE="doc examples"
 
-RDEPEND="x11-libs/openmotif
+RDEPEND=">=x11-libs/openmotif-2.3:0
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXext
