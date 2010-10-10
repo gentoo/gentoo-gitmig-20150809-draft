@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.10 2008/06/27 10:18:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.2.ebuild,v 1.11 2010/10/10 21:13:34 ulm Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -12,7 +14,7 @@ IUSE=""
 SLOT="0"
 LICENSE="as-is"
 DEPEND="!media-gfx/feh
-	x11-libs/openmotif"
+	>=x11-libs/openmotif-2.3:0"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.4.ebuild,v 1.1 2009/07/26 15:33:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.4.ebuild,v 1.2 2010/10/10 21:13:34 ulm Exp $
 
 EAPI=2
 inherit eutils
@@ -12,7 +12,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 SLOT=0
 LICENSE="as-is"
-DEPEND="x11-libs/openmotif
+
+DEPEND=">=x11-libs/openmotif-2.3:0
 	media-libs/jpeg
 	media-libs/libpng"
 RDEPEND="${DEPEND}"

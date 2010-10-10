@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/xephem
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.32 2009/07/26 15:33:25 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.33 2010/10/10 21:13:34 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> xephem-3.7.2.ebuild,
+  xephem-3.7.3.ebuild, xephem-3.7.4.ebuild:
+  Fix openmotif dependency.
 
 *xephem-3.7.4 (26 Jul 2009)
 

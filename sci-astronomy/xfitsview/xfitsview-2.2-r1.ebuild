@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2-r1.ebuild,v 1.1 2010/09/15 13:01:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2-r1.ebuild,v 1.2 2010/10/10 21:14:52 ulm Exp $
 
 EAPI=2
 inherit eutils
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/openmotif"
+DEPEND=">=x11-libs/openmotif-2.3:0"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}
