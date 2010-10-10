@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.1 2010/09/12 19:50:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.2 2010/10/10 21:58:45 ulm Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="fortran fftw jpeg netcdf pdf png"
 
-DEPEND="x11-libs/openmotif
+DEPEND=">=x11-libs/openmotif-2.3:0
 	sys-libs/zlib
 	media-libs/t1lib
 	media-libs/tiff

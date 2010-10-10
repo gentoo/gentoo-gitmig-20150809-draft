@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.6 2010/03/09 12:47:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.7 2010/10/10 22:00:09 ulm Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ DEPEND="x11-libs/libXmu
 	x11-libs/libXi
 	x11-libs/libXp
 	x11-libs/libXpm
-	x11-libs/openmotif
+	>=x11-libs/openmotif-2.3:0
 	virtual/opengl
 	virtual/glu
 	szip? ( sci-libs/szip )

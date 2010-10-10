@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.23 2010/03/09 12:47:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.24 2010/10/10 22:00:09 ulm Exp $
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> opendx-4.4.4-r4.ebuild:
+  Fix openmotif dependency.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> opendx-4.4.4-r4.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
