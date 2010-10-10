@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.9 2010/05/25 21:01:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.10 2010/10/10 19:00:20 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2:2.4"
 
 inherit distutils
@@ -26,17 +27,15 @@ DEPEND=">=dev-python/pyxml-0.8.3
 			>=dev-lang/python-2.4 )"
 
 S="${WORKDIR}/${MY_P}"
-PYTHON_MODNAME=${MY_PN}
+PYTHON_MODNAME="${MY_PN}"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	if ! use twisted ; then
+src_prepare() {
+	if ! use twisted; then
 		sed -i \
 			-e "/version_info/d"\
 			-e "/ZSI.twisted/d"\
@@ -47,11 +46,11 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 
-	if use doc ; then
+	if use doc; then
 		dohtml doc/*.html doc/*.css doc/*.png
 	fi
 
-	if use examples ; then
+	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r doc/examples/* samples/*
 	fi
