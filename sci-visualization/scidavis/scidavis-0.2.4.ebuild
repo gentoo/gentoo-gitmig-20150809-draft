@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.1 2010/03/15 22:09:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.2 2010/10/10 17:27:25 jlec Exp $
 
 EAPI="3"
 
-inherit eutils fdo-mime prefix qt4
+inherit eutils fdo-mime prefix qt4-r2
 
 DESCRIPTION="Scientific Data Analysis and Visualization"
 HOMEPAGE="http://scidavis.sourceforge.net/"
@@ -23,7 +23,7 @@ done
 CDEPEND="sys-libs/zlib
 	>=x11-libs/qwt-5.1[svg]
 	>=x11-libs/qwtplot3d-0.2.7
-	x11-libs/qt-assistant:4
+	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-qt3support:4
 	>=dev-cpp/muParser-1.30
 	>=sci-libs/gsl-1.8"
@@ -38,6 +38,8 @@ RDEPEND="${CDEPEND}
 	>=dev-python/PyQt4-4.4[X]
 	dev-python/pygsl
 	sci-libs/scipy"
+
+DOCS="README CHANGES"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-profile.patch
@@ -56,13 +58,9 @@ src_prepare() {
 		${PN}/${PN}.pro || die "sed python failed"
 }
 
-src_configure() {
-	eqmake4
-}
-
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die 'emake install failed'
-	dodoc README CHANGES || die
+	qt4-r2_src_install
+
 	doicon scidavis/icons/hicolor-48/scidavis.png || die
 	cd ${PN}/translations
 	insinto /usr/share/${PN}/translations
