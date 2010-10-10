@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.7 2010/10/07 20:25:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.8 2010/10/10 12:30:33 olemarkus Exp $
+
+*eselect-php-0.5.2 (10 Oct 2010)
+
+  10 Oct 2010; <olemarkus@gentoo.org> -eselect-php-0.5.ebuild,
+  +eselect-php-0.5.2.ebuild:
+  Version bump of app-admin/eselect-php
 
 *eselect-php-0.5 (06 Oct 2010)
 
