@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.161 2010/09/30 20:09:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.162 2010/10/10 21:06:09 maekke Exp $
+
+  10 Oct 2010; Markus Meier <maekke@gentoo.org> man-1.6f-r4.ebuild:
+  arm stable, bug #338088
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> man-1.6f-r4.ebuild:
   stable ppc64, bug 338088
