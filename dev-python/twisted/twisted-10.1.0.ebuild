@@ -1,19 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.1.0.ebuild,v 1.2 2010/08/18 22:36:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.1.0.ebuild,v 1.3 2010/10/10 19:55:05 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+MY_PACKAGE="Core"
 
-inherit distutils eutils versionator
-
-MY_P="TwistedCore-${PV}"
+inherit eutils twisted versionator
 
 DESCRIPTION="An asynchronous networking framework written in Python"
 HOMEPAGE="http://www.twistedmatrix.com/ http://pypi.python.org/pypi/Twisted"
-SRC_URI="http://tmrc.mit.edu/mirror/${PN}/Core/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -25,8 +23,6 @@ DEPEND=">=net-zope/zope-interface-3.0.1
 	gtk? ( >=dev-python/pygtk-1.99 )
 	serial? ( dev-python/pyserial )"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_P}"
 
 DOCS="CREDITS NEWS README"
 
@@ -99,25 +95,4 @@ src_install() {
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
 	doins twisted/python/_twisted_zsh_stub
-}
-
-update_plugin_cache() {
-	rm -f "${EROOT%/}$(python_get_sitedir)/twisted/plugins/dropin.cache"
-
-	# Update dropin.cache only when Twisted is still installed.
-	if [[ -f "${EROOT%/}$(python_get_sitedir)/twisted/plugin.py" ]]; then
-		einfo "Regeneration of Twisted plugin cache with $(python_get_implementation) $(python_get_version)"
-		# http://twistedmatrix.com/documents/current/core/howto/plugin.html
-		"$(PYTHON)" -c "import sys; sys.path.insert(0, '${EROOT%/}$(python_get_sitedir)'); from twisted.plugin import IPlugin, getPlugins; list(getPlugins(IPlugin))"
-	fi
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
-	python_execute_function -q update_plugin_cache
-}
-
-pkg_postrm() {
-	distutils_pkg_postrm
-	python_execute_function -q update_plugin_cache
 }
