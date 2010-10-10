@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/resid-0.16_p2.ebuild,v 1.6 2009/06/25 18:08:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/resid-0.16_p2.ebuild,v 1.7 2010/10/10 19:54:10 klausman Exp $
 
 EAPI=2
 inherit autotools versionator
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sidplay2/${P/_p/-p}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 IUSE="static-libs"
 
 RDEPEND=""
