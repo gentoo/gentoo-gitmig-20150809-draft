@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tktray
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.4 2009/12/27 07:58:07 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.5 2010/10/10 18:45:29 jlec Exp $
+
+*tktray-1.1-r1 (10 Oct 2010)
+
+  10 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/1.1-ldflags.patch,
+  tktray-1.1.ebuild, +tktray-1.1-r1.ebuild:
+  Respect LDFLAGS, 334621
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> tktray-1.1.ebuild:
   Marked ~ppc for bug #254377.
