@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4640 2010/10/09 20:12:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4641 2010/10/10 05:01:57 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> updates/2Q-2008:
+  Remove old slotmove for x11-libs/openmotif, in order to prepare for
+  package move from openmotif-compat to openmotif:2.2.
 
   09 Oct 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Start Gnome 2.32 mask, here will more packages be added when I have time
