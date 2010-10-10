@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.18 2010/10/10 16:27:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.19 2010/10/10 16:30:10 arfrever Exp $
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gourmet-0.15.6.ebuild:
+  Update dependencies for compatibility with Python 3.
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -files/gourmet-0.15.0-empty_dictionary_insert.patch,
