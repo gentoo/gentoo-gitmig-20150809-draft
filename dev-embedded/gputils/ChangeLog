@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.39 2010/10/10 01:32:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.40 2010/10/10 11:55:01 phajdan.jr Exp $
+
+  10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gputils-0.13.6-r1.ebuild:
+  x86 stable wrt bug #340118
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   gputils-0.13.6-r1.ebuild:
