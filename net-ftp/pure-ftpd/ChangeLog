@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.98 2010/08/19 08:07:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.99 2010/10/11 05:41:02 polynomial-c Exp $
+
+*pure-ftpd-1.0.29-r2 (11 Oct 2010)
+
+  11 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +pure-ftpd-1.0.29-r2.ebuild, metadata.xml:
+  Adding sysquota support per request in bug #340133. Thanks to Martin
+  Korous for the ebuild patch.
 
   19 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
   pure-ftpd-1.0.29-r1.ebuild, +files/pure-ftpd.conf_d-2,
