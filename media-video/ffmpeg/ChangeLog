@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.378 2010/10/11 18:52:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.379 2010/10/11 22:13:00 maekke Exp $
+
+  11 Oct 2010; Markus Meier <maekke@gentoo.org> ffmpeg-0.6_p25423.ebuild:
+  restore ~arm, bug #340269
 
   11 Oct 2010; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.6.ebuild:
   Stable for HPPA (bug #332361).
