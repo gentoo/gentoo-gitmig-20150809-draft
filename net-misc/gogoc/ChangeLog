@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/gogoc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.1 2010/10/11 21:34:24 flameeyes Exp $
+
+*gogoc-1.2 (11 Oct 2010)
+
+  11 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> +gogoc-1.2.ebuild,
+  +files/gogoc-1.2-overflow.patch, +files/gogoc.rc, +metadata.xml:
+  Initial import of gogoc, the new name and codebase replacing
+  net-misc/gogoc.
+
