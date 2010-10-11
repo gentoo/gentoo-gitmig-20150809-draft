@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.4.ebuild,v 1.2 2010/10/10 21:13:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/xephem-3.7.4-r1.ebuild,v 1.1 2010/10/11 20:35:38 xarthisius Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Interactive tool for astronomical ephemeris and sky simulation"
 HOMEPAGE="http://www.clearskyinstitute.com/xephem"
@@ -18,9 +18,14 @@ DEPEND=">=x11-libs/openmotif-2.3:0
 	media-libs/libpng"
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	tc-export CC
+}
+
 src_prepare() {
 	# make sure we use system libs and respect user flags
-	epatch "${FILESDIR}"/${P}-libs-flags.patch
+	epatch "${FILESDIR}"/${P}-libs-flags.patch \
+		"${FILESDIR}"/${P}-overflows.patch
 }
 
 src_compile() {
