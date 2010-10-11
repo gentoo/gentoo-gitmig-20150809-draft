@@ -1,6 +1,13 @@
 # ChangeLog for app-xemacs/xemacs-eterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-eterm/ChangeLog,v 1.15 2010/08/13 07:21:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-eterm/ChangeLog,v 1.16 2010/10/11 06:12:10 graaff Exp $
+
+*xemacs-eterm-1.18-r1 (05 Oct 2010)
+
+  05 Oct 2010; Hans de Graaff <graaff@gentoo.org> -xemacs-eterm-1.18.ebuild,
+  +xemacs-eterm-1.18-r1.ebuild:
+  PKG_CAT must be set before inherit, otherwise files get installed to /.
+  Fixes bug 339508.
 
 *xemacs-eterm-1.18 (13 Aug 2010)
 
