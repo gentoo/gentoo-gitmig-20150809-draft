@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre9050.ebuild,v 1.1 2010/09/22 17:24:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre9067.ebuild,v 1.1 2010/10/11 10:37:37 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="mirror test"
 
-O_PWD="buckyballs"
+O_PWD="zen"
 O_V="${PV/_pre/-}"
 O_P="${PN}-${O_V}"
 O_HTTP="http://snapshot.opera.com/"
