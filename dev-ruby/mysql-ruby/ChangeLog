@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.84 2010/09/30 01:45:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.85 2010/10/11 12:14:46 jer Exp $
+
+  11 Oct 2010; Jeroen Roovers <jer@gentoo.org> mysql-ruby-2.8.1-r1.ebuild,
+  mysql-ruby-2.8.1-r2.ebuild:
+  Remove obsolete sed script.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> mysql-ruby-2.8.1-r1.ebuild:
   Marking mysql-ruby-2.8.1-r1 ppc64 for bug 333949
