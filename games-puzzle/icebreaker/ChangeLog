@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/icebreaker
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.12 2007/03/13 13:39:14 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.13 2010/10/11 16:08:48 tupone Exp $
+
+  11 Oct 2010; Tupone Alfredo <tupone@gentoo.org> icebreaker-1.9.5.ebuild,
+  +files/icebreaker-1.9.5-ldflags.patch:
+  Respect LDFLAGS. Bug #335797 by flameeyes@gentoo.org
 
   13 Mar 2007; Tristan Heaven <nyhm@gentoo.org> icebreaker-1.9.5.ebuild:
   Install menu entry, bug #160226
