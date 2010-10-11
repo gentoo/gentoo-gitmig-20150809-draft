@@ -75,6 +75,7 @@ fusion
 debug-utils
 schroedinger
 hardened
+frei0r
 
 # havent tested yet
 cupsddk

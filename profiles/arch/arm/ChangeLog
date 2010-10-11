@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.95 2010/08/27 17:19:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.96 2010/10/11 22:07:21 maekke Exp $
+
+  11 Oct 2010; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask frei0r
 
   27 Aug 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Unmask dvb, bug #327585
