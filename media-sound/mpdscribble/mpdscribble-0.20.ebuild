@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.18.ebuild,v 1.2 2009/07/29 09:22:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.20.ebuild,v 1.1 2010/10/11 17:03:25 radhermit Exp $
 
 EAPI=2
+WANT_AUTOMAKE="1.11"
 inherit autotools eutils
 
 DESCRIPTION="An MPD client that submits information to Audioscrobbler"
@@ -15,13 +16,14 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="+curl"
 
 RDEPEND=">=dev-libs/glib-2.16:2
+	media-libs/libmpdclient
 	curl? ( net-misc/curl )
 	!curl? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldadd_gthread.patch
+	epatch "${FILESDIR}"/${PN}-0.18-ldadd_gthread.patch
 	eautoreconf
 }
 
