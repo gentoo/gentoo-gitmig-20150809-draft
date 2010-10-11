@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.85 2010/10/11 12:14:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.86 2010/10/11 16:15:42 jer Exp $
+
+  11 Oct 2010; Jeroen Roovers <jer@gentoo.org> mysql-ruby-2.8.1-r1.ebuild:
+  Stable for HPPA (bug #333949).
 
   11 Oct 2010; Jeroen Roovers <jer@gentoo.org> mysql-ruby-2.8.1-r1.ebuild,
   mysql-ruby-2.8.1-r2.ebuild:
