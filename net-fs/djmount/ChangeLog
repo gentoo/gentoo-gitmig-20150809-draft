@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/djmount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/ChangeLog,v 1.6 2010/10/11 05:33:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/ChangeLog,v 1.7 2010/10/11 10:48:52 hwoarang Exp $
+
+  11 Oct 2010; Markos Chandras <hwoarang@gentoo.org> djmount-0.71-r1.ebuild:
+  Stable on amd64 wrt bug #340453
 
   11 Oct 2010; Mike Frysinger <vapier@gentoo.org> djmount-0.71-r1.ebuild:
   Clean up, fix USE=debug build #267508 by mimosinnet, and fix FEATURES=test
