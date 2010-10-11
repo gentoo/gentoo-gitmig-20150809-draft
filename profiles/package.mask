@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12039 2010/10/11 09:45:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12040 2010/10/11 21:38:46 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,11 +106,6 @@ net-misc/metacafe-dl
 #
 # Removal on 2010-12-03
 dev-util/autotoolset
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (03 Oct 2010)
-# Masked temporarily until overlap with dev-tex/translator is
-# sorted out
-=dev-tex/latex-beamer-3.10
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (02 Oct 2010)
 # Included in >=dev-libs/Ice-3.3. Masked for deletion in 30 days.
