@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.79 2010/09/11 18:35:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.80 2010/10/11 13:47:37 pacho Exp $
+
+*webkit-gtk-1.2.5 (11 Oct 2010)
+
+  11 Oct 2010; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.2.1.ebuild,
+  -files/webkit-gtk-1.2.1-icu-4.4.patch, +webkit-gtk-1.2.5.ebuild,
+  metadata.xml:
+  Version bump: fixes for CVE-2010-1780 CVE-2010-3113 CVE-2010-1814
+  CVE-2010-1812 CVE-2010-1815 CVE-2010-3115 CVE-2010-1807 CVE-2010-3114
+  CVE-2010-3116 CVE-2010-3257 CVE-2010-3259 CVE-2010-1781 CVE-2010-1782
+  CVE-2010-1784 CVE-2010-1785 CVE-2010-1786 CVE-2010-1787 CVE-2010-1788
+  CVE-2010-1790 CVE-2010-1792 CVE-2010-1793 CVE-2010-2648 CVE-2010-2647.
+  Bump to EAPI3, add introspection support, drop libtool-1 compatibility
+  hack that should no longer be needed, remove old.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> webkit-gtk-1.2.3.ebuild:
   Marked ppc for bug #324077.

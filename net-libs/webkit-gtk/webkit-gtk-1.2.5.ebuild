@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.1.ebuild,v 1.4 2010/07/09 08:07:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.5.ebuild,v 1.1 2010/10/11 13:47:37 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools flag-o-matic eutils virtualx
 
@@ -14,9 +14,8 @@ SRC_URI="http://www.webkitgtk.org/${MY_P}.tar.gz"
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-# geoclue
-# FIXME: we are still not ready for introspection
-IUSE="coverage debug doc +gstreamer +websockets" # aqua
+# geoclue is missing
+IUSE="coverage debug doc +gstreamer introspection" # aqua
 
 # use sqlite, svg by default
 # dependency on >=x11-libs/gtk+-2.13 for gail
@@ -38,11 +37,8 @@ RDEPEND="
 
 	gstreamer? (
 		media-libs/gstreamer:0.10
-		>=media-libs/gst-plugins-base-0.10.25:0.10 )"
-#	introspection? (
-#		>=dev-libs/gobject-introspection-0.6.2
-#		!!dev-libs/gir-repository[webkit]
-#		dev-libs/gir-repository[libsoup] )
+		>=media-libs/gst-plugins-base-0.10.25:0.10 )
+	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.33
@@ -55,23 +51,18 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	# Build failure with icu-4.4, bug 308699
-	epatch "${FILESDIR}"/${PN}-1.2.1-icu-4.4.patch
-
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775
-	use sparc && epatch "${FILESDIR}"/${PN}-1.1.15.2-unaligned.patch
+	use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
 
 	# Darwin/Aqua build is broken, needs autoreconf
 	# XXX: BROKEN. Patch does not apply anymore.
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
 	#epatch "${FILESDIR}"/${PN}-1.1.15.4-darwin-quartz.patch
 
-	# Make it libtool-1 compatible
-	rm -v autotools/lt* autotools/libtool.m4 \
-		|| die "removing libtool macros failed"
 	# Don't force -O2
 	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
+
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=autotools eautoreconf
 }
@@ -87,10 +78,12 @@ src_configure() {
 
 	myconf="
 		--disable-introspection
+		--disable-web_sockets
 		$(use_enable coverage)
 		$(use_enable debug)
 		$(use_enable gstreamer video)
-		$(use_enable websockets web_sockets)"
+		$(use_enable introspection)"
+		# Disable web-sockets per bug #326547
 		# quartz patch above does not apply anymore
 		#$(use aqua && echo "--with-target=quartz")"
 
@@ -105,14 +98,14 @@ src_test() {
 	Xemake check || die "Test phase failed"
 }
 
-#src_compile() {
+src_compile() {
 	# Fix sandbox error with USE="introspection"
 	# https://bugs.webkit.org/show_bug.cgi?id=35471
-#	addpredict "$(unset HOME; echo ~)/.local"
-#	emake || die "Compile failed"
-#}
+	addpredict "$(unset HOME; echo ~)/.local"
+	emake || die "Compile failed"
+}
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${ED}" install || die "Install failed"
 	dodoc WebKit/gtk/{NEWS,ChangeLog} || die "dodoc failed"
 }
