@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.361 2010/10/10 18:31:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.362 2010/10/11 07:05:25 fauli Exp $
+
+  11 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  openssl-0.9.8o-r2.ebuild:
+  stable x86, bug 330437
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0a-r3.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #330437
