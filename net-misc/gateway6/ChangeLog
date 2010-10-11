@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/gateway6
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.2 2009/06/04 07:40:34 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.3 2010/10/11 20:41:05 flameeyes Exp $
+
+*gateway6-6.0-r2 (11 Oct 2010)
+
+  11 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gateway6-6.0-r2.ebuild, +files/gateway6-6.0-overflow.patch,
+  +files/gw6c.rc2, -gateway6-6.0-r1.ebuild, metadata.xml:
+  Revision bump: fix overflow on 64-bit systems; update init script to note
+  use --quiet and stop correctly; respect LDFLAGS (bug #334815); add debug
+  USE flag.
 
 *gateway6-6.0-r1 (04 Jun 2009)
 

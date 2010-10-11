@@ -1,0 +1,26 @@
+Index: gw6c-6_0-RELEASE/gw6c-config/src/gw6cvalidation.cc
+===================================================================
+--- gw6c-6_0-RELEASE.orig/gw6c-config/src/gw6cvalidation.cc
++++ gw6c-6_0-RELEASE/gw6c-config/src/gw6cvalidation.cc
+@@ -516,7 +516,7 @@ bool Validate_ClientV4( const string& sC
+   if( sClientV4 != STR_AUTO )
+   {
+     struct in_addr address;
+-    unsigned long net;
++    in_addr_t net;
+ 
+     net = inet_addr( sClientV4.c_str() );
+     memcpy(&address, &net, sizeof(net));
+Index: gw6c-6_0-RELEASE/gw6c-config/src/hap6devicemappingconfig.cc
+===================================================================
+--- gw6c-6_0-RELEASE.orig/gw6c-config/src/hap6devicemappingconfig.cc
++++ gw6c-6_0-RELEASE/gw6c-config/src/hap6devicemappingconfig.cc
+@@ -269,7 +269,7 @@ bool HAP6DeviceMappingConfig::ValidateIP
+   // Check if IPv4 or IPv6 address
+   struct in6_addr addressv6;
+   struct in_addr  addressv4;
+-  unsigned long net;
++  in_addr_t net;
+ 
+   net = inet_addr( aIPAddress.c_str() );
+   memcpy(&addressv4, &net, sizeof(net));

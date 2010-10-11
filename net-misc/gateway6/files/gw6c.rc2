@@ -1,0 +1,36 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/files/gw6c.rc2,v 1.1 2010/10/11 20:41:05 flameeyes Exp $
+
+GATEWAY6_CLIENT="/usr/sbin/gw6c"
+
+depend() {
+	need net localmount
+	after bootmisc
+	use dns logger
+}
+
+checkconfig() {
+	[ $(uname -s) = "Linux" ] || return 0
+        [ -e /dev/net/tun ] && return 0
+        modprobe tun && return 0
+
+	eerror "TUN/TAP support is not available in the running kernel"
+	return 1
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting Gateway6 IPv6 Client"
+	start-stop-daemon --start --exec $GATEWAY6_CLIENT \
+		--chdir /var/lib/gateway6 -- -f /etc/gateway6/gw6c.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Gateway6 IPv6 Client"
+	start-stop-daemon --stop --exec $GATEWAY6_CLIENT
+	eend $?
+}
