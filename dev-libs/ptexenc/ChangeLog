@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/ptexenc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.1 2010/10/11 16:57:16 aballier Exp $
+
+*ptexenc-1.1.0_p20100722 (11 Oct 2010)
+
+  11 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  +ptexenc-1.1.0_p20100722.ebuild, +metadata.xml:
+  Initial import, will be used by TeX Live 2010
+
