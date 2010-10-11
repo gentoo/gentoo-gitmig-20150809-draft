@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.32 2010/10/10 20:51:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.33 2010/10/11 00:55:50 radhermit Exp $
+
+  11 Oct 2010; Tim Harder <radhermit@gentoo.org> -roundcube-0.3.1.ebuild,
+  -roundcube-0.3.1-r1.ebuild,
+  -files/roundcube-0.3.1-disable-dns-prefetching.patch:
+  Remove old versions with security issues (bug #308065).
 
   10 Oct 2010; Markus Meier <maekke@gentoo.org> roundcube-0.4.ebuild:
   arm stable, bug #308065
