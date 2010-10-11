@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/dungeon/dungeon-3.2.3.ebuild,v 1.9 2010/09/23 15:41:12 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-action/dungeon/dungeon-3.2.3.ebuild,v 1.10 2010/10/11 19:30:38 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A linux port of the Dungeon game once distributed by DECUS"
