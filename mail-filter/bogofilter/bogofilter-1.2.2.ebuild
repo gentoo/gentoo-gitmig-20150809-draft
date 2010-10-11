@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.6 2010/08/11 22:34:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.7 2010/10/11 07:39:08 tove Exp $
+
+EAPI=2
 
 inherit db-use flag-o-matic
 
@@ -42,7 +44,7 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf="" berkdb=true
 	myconf="--without-included-gsl"
 
@@ -75,7 +77,6 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	emake || die "emake failed"
 }
 
 src_install() {
