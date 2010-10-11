@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/foldutil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.19 2010/10/07 03:15:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.20 2010/10/11 05:26:09 radhermit Exp $
+
+  11 Oct 2010; Tim Harder <radhermit@gentoo.org> foldutil-3.0.ebuild:
+  Bump genutils dependency requirement (fixes bug #270300, thanks to James
+  Rowe for reporting).
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> foldutil-2.0.ebuild:
   Drop to ~mips
