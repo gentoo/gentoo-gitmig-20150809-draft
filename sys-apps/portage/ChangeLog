@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.747 2010/10/10 23:06:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.748 2010/10/11 00:15:40 zmedico Exp $
+
+*portage-2.2_rc92 (10 Oct 2010)
+
+  10 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc92.ebuild:
+  2.2_rc92 version bump. This fixes a regression since 2.2_rc90 which can
+  lead to excessive backtracking, as reported in forum thread #847890.
+  Bug #210077 tracks all bugs fixed since 2.1.x.
 
   10 Oct 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.13.ebuild,
   -portage-2.2_rc90.ebuild:
