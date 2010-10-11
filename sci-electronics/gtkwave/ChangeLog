@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.52 2010/09/29 01:30:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.53 2010/10/11 17:03:42 tomjbe Exp $
+
+  11 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> gtkwave-3.3.13.ebuild,
+  metadata.xml:
+  Switch IUSE=xz to IUSE=lzma (bug 340003)
 
 *gtkwave-3.3.13 (29 Sep 2010)
 

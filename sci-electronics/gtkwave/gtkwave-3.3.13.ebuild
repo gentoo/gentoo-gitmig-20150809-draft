@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.13.ebuild,v 1.1 2010/09/29 01:30:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.13.ebuild,v 1.2 2010/10/11 17:03:42 tomjbe Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkwave.sourceforge.net/"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="doc examples fasttree fatlines judy tcl xz"
+IUSE="doc examples fasttree fatlines judy lzma tcl"
 LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/pango
 	judy? ( dev-libs/judy )
 	tcl? ( dev-lang/tcl dev-lang/tk )
-	xz? ( app-arch/xz-utils )"
+	lzma? ( app-arch/xz-utils )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -36,7 +36,7 @@ src_configure(){
 		--enable-largefile \
 		$(use_enable fatlines) \
 		$(use_enable tcl) \
-		$(use_enable xz) \
+		$(use_enable lzma xz) \
 		$(use_enable fasttree) \
 		$(use_enable judy)
 }
