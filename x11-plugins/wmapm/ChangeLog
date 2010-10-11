@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmapm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.12 2010/08/31 10:00:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/ChangeLog,v 1.13 2010/10/11 09:17:28 s4t4n Exp $
+
+  11 Oct 2010; Michele Noberasco <s4t4n@gentoo.org>; wmapm-3.1-r1.ebuild:
+  Fixed HOMEPAGE and SRC_URI, closing bug #338810.
 
   31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org>; wmapm-3.1-r1.ebuild:
   Honour LDFLAGS, see bug #334747.
