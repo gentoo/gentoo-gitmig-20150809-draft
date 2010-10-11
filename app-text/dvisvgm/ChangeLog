@@ -1,0 +1,10 @@
+# ChangeLog for app-text/dvisvgm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.1 2010/10/11 15:45:12 aballier Exp $
+
+*dvisvgm-1.0.3 (11 Oct 2010)
+
+  11 Oct 2010; Alexis Ballier <aballier@gentoo.org> +dvisvgm-1.0.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me, this is part of TeX Live 2010
+
