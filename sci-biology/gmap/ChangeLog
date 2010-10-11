@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/gmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.6 2010/09/26 08:06:00 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.7 2010/10/11 07:19:50 hwoarang Exp $
+
+  11 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gmap-2010.07.27.ebuild:
+  Stable on amd64 wrt bug #340371
 
 *gmap-2010.07.27 (26 Sep 2010)
 
