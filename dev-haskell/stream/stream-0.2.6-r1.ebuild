@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/stream-0.2.6-r1.ebuild,v 1.3 2010/09/12 10:30:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/stream-0.2.6-r1.ebuild,v 1.4 2010/10/11 10:45:56 hwoarang Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.6.1
