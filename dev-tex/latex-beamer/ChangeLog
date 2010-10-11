@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.59 2010/10/03 19:27:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.60 2010/10/11 21:36:36 dilfridge Exp $
+
+  11 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  latex-beamer-3.10.ebuild:
+  Added block on dev-tex/translator since it is included in
+  dev-tex/latex-beamer now
 
   03 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   latex-beamer-3.10.ebuild:

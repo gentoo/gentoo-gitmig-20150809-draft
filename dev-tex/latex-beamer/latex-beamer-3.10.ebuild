@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10.ebuild,v 1.2 2010/10/03 19:27:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10.ebuild,v 1.3 2010/10/11 21:36:36 dilfridge Exp $
 
 EAPI=3
 
@@ -19,7 +19,8 @@ IUSE="doc examples lyx"
 
 DEPEND="lyx? ( app-office/lyx )
 	dev-texlive/texlive-latex"
-RDEPEND=">=dev-tex/pgf-1.10"
+RDEPEND=">=dev-tex/pgf-1.10
+	!dev-tex/translator"
 
 S=${WORKDIR}/beamer
 
