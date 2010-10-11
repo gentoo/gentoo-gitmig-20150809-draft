@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fifo-cronolog/fifo-cronolog-1.1.1.ebuild,v 1.1 2010/10/11 21:23:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fifo-cronolog/fifo-cronolog-1.1.1.ebuild,v 1.2 2010/10/11 21:33:03 idl0r Exp $
 
 EAPI=3
 
@@ -21,4 +21,12 @@ src_install() {
 
 	newinitd fifo-cronolog.initd fifo-cronolog || die
 	newconfd fifo-cronolog.confd fifo-cronolog || die
+
+	dosym /usr/sbin/fifo-cronolog /usr/sbin/squid-cronolog || die
+}
+
+pkg_postinst() {
+	elog "Warning: app-admin/squid-cronolog has been renamed to app-admin/fifo-cronolog."
+	elog "This also applies to the binary 'squid-cronolog' but there is a symlink for now"
+	elog "Please fix your scripts/configs."
 }
