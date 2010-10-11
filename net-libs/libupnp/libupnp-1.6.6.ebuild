@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.6.ebuild,v 1.6 2009/01/11 19:12:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.6.ebuild,v 1.7 2010/10/11 10:53:24 hwoarang Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -30,7 +30,6 @@ src_compile() {
 	# w/o docdir to avoid sandbox violations
 	econf \
 		$(use_enable debug) \
-		--without-docdir \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
