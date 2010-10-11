@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.5 2010/10/11 12:24:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.6 2010/10/11 12:54:17 hwoarang Exp $
+
+  11 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  Package-Stash-0.08.ebuild:
+  Stable on amd64 wrt bug #340024
 
   11 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Package-Stash-0.08.ebuild:

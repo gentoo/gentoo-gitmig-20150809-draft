@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.2 2010/10/11 12:25:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.3 2010/10/11 12:54:05 hwoarang Exp $
+
+  11 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  Package-DeprecationManager-0.04.ebuild:
+  Stable on amd64 wrt bug #340024
 
   11 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Package-DeprecationManager-0.04.ebuild:

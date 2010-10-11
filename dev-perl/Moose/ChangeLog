@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.58 2010/10/11 12:27:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.59 2010/10/11 12:53:41 hwoarang Exp $
+
+  11 Oct 2010; Markos Chandras <hwoarang@gentoo.org> Moose-1.14.ebuild:
+  Stable on amd64 wrt bug #340024
 
   11 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> Moose-1.14.ebuild:
   x86 stable wrt bug #340024
