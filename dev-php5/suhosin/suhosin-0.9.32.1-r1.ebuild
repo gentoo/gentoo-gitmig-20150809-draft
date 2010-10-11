@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1-r1.ebuild,v 1.1 2010/10/11 23:23:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1-r1.ebuild,v 1.2 2010/10/11 23:26:22 flameeyes Exp $
 
 EAPI="2"
 
@@ -26,6 +26,9 @@ need_php_by_category
 
 src_unpack() {
 	PHP_EXT_SKIP_PHPIZE=yes php-ext-source-r1_src_unpack
+}
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-libcrypt.patch
 	php-ext-source-r1_phpize
 }
