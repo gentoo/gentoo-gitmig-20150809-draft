@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.13 2007/07/22 04:35:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/wmppp-1.3.0.ebuild,v 1.14 2010/10/11 09:08:43 s4t4n Exp $
 
+EAPI=3
 IUSE=""
 S=${WORKDIR}/wmppp.app/wmppp
 DESCRIPTION="Network monitoring dock.app"
@@ -18,8 +19,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64 ppc"
 
+src_prepare() {
+	sed -ie 's/-o wmppp/\$(LDFLAGS) -o wmppp/' Makefile
+}
+
 src_compile() {
-	emake all || die
+	emake CFLAGS="${CFLAGS}" all || die
 }
 
 src_install () {

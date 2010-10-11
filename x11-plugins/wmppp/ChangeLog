@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmppp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/ChangeLog,v 1.11 2007/07/22 04:35:34 dberkholz Exp $
+# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmppp/ChangeLog,v 1.12 2010/10/11 09:08:43 s4t4n Exp $
+
+  11 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmppp-1.3.0.ebuild:
+  Made package honour Gentoo CFLAGS.
+  Made package honour Gentoo LDFLAGS, closing bug #338815.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmppp-1.3.0.ebuild:
   Drop virtual/x11 references.
@@ -21,7 +25,7 @@
   Added to ~ppc.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *wmppp-1.3.0 (7-Feb-2002)
 
   30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
@@ -29,5 +33,5 @@
   Relocated to x11-plugins
 
   7 Feb 2002; Vitaly Kushneriuk <vitaly@gentoo.org> wmppp-1.3.0.ebuild :
-  
+
   Just added to portage.
