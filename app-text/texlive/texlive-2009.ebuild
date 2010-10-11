@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2009.ebuild,v 1.3 2010/10/02 13:05:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2009.ebuild,v 1.4 2010/10/11 21:34:39 dilfridge Exp $
 
 EAPI="2"
 
@@ -63,7 +63,7 @@ RDEPEND="${DEPEND}
 		>=${TEXLIVE_CAT}/texlive-formatsextra-${PV}
 		>=${TEXLIVE_CAT}/texlive-genericextra-${PV}
 		>=${TEXLIVE_CAT}/texlive-latexextra-${PV}
-			dev-tex/translator
+			|| ( >=dev-tex/latex-beamer-3.10 dev-tex/translator )
 			dev-tex/glossaries
 			>=dev-tex/leaflet-20041222
 			>=dev-tex/currvita-0.9i-r1
