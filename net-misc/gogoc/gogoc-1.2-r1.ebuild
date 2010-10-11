@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2.ebuild,v 1.1 2010/10/11 21:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.1 2010/10/11 23:00:38 flameeyes Exp $
 
 EAPI=2
 
@@ -36,6 +36,10 @@ src_prepare() {
 		-e 's:LDFLAGS:LDLIBS:g' \
 		-e '/\$(LDLIBS)/s:-o:$(LDFLAGS) -o:' \
 		{} + || die "multised failed"
+
+	sed -i -e 's:/usr/local/etc/gogoc:/etc/gogoc:' \
+		gogoc-tsp/platform/*/tsp_local.c \
+		|| die "sed failed"
 }
 
 src_configure() { :; }
@@ -60,17 +64,20 @@ src_install() {
 
 	dodoc bin/gogoc.conf.sample || die
 
-	exeinto /etc/gateway6/template
+	exeinto /etc/gogoc/template
 	doexe template/linux.sh || die
 
 	newinitd "${FILESDIR}"/gogoc.rc gogoc || die
 
 	doman man/{man5/gogoc.conf.5,man8/gogoc.8} || die
 	keepdir /var/lib/gogoc || die
+
+	diropts -m0700
+	keepdir /etc/gogoc || die
 }
 
 pkg_postinst() {
-	elog "You should create an /etc/gogoc.conf file starting from"
+	elog "You should create an /etc/gogoc/gogoc.conf file starting from"
 	elog "the sample configuration in /usr/share/doc/${PF}/gogo.conf.sample.*"
 	elog ""
 	elog "To add support for a TSP IPv6 connection at startup,"

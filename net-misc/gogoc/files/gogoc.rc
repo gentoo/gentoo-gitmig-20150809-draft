@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/files/gogoc.rc,v 1.1 2010/10/11 21:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/files/gogoc.rc,v 1.2 2010/10/11 23:00:39 flameeyes Exp $
 
 depend() {
 	need net localmount
@@ -19,15 +19,10 @@ checktun() {
 }
 
 checkconfig() {
-	if ! [ -f /etc/gogoc.conf ]; then
+	if ! [ -f /etc/gogoc/gogoc.conf ]; then
 		eerror "Unable to find configuration file /etc/gogoc.conf"
 		return 1
 	fi
-
-        if [ `stat -c '%a' /etc/fstab | cut -c 2-` != '00' ]; then
-		eerror "Configuration file /etc/gogoc.conf should not be user-readable"
-		return 1
-        fi
 }
 
 start() {
@@ -36,7 +31,7 @@ start() {
 
 	ebegin "Starting gogoCLIENT"
 	start-stop-daemon --start --exec /usr/sbin/gogoc \
-		--chdir /var/lib/gogoc -- -f /etc/gogoc.conf
+		--chdir /var/lib/gogoc
 	eend $?
 }
 
