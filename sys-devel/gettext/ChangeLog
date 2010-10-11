@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.186 2010/10/07 09:37:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.187 2010/10/11 22:19:18 maekke Exp $
+
+  11 Oct 2010; Markus Meier <maekke@gentoo.org> gettext-0.18.1.1-r1.ebuild:
+  arm stable, bug #338654
 
   07 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gettext-0.18.1.1-r1.ebuild:
