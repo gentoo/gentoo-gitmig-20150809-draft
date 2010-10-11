@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtksourceview-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.41 2010/10/09 10:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.42 2010/10/11 16:35:54 eva Exp $
+
+  11 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtksourceview-python-2.26.0.ebuild:
+  Clean up old revisions.
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   gtksourceview-python-2.30.2.ebuild:
