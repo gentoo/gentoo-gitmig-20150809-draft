@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1-r2.ebuild,v 1.1 2010/09/30 02:48:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1-r2.ebuild,v 1.2 2010/10/11 22:50:07 flameeyes Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -183,7 +183,7 @@ src_install() {
 	emake install-nokeys DESTDIR="${D}" || die
 	fperms 600 /etc/ssh/sshd_config
 	dobin contrib/ssh-copy-id
-	newinitd "${FILESDIR}"/sshd.rc6 sshd
+	newinitd "${FILESDIR}"/sshd.rc6.1 sshd
 	newconfd "${FILESDIR}"/sshd.confd sshd
 	keepdir /var/empty
 

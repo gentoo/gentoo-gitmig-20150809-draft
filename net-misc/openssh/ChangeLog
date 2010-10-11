@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.392 2010/09/30 02:48:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.393 2010/10/11 22:50:07 flameeyes Exp $
+
+  11 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  openssh-5.6_p1-r2.ebuild, +files/sshd.rc6.1:
+  Update init script to not regenerate the RSA1 host key (for SSH Protocol
+  1) unless Protocol 1 is enabled. Modern OpenSSH versions disable Protocol
+  1 in the daemon by default.
 
 *openssh-5.6_p1-r2 (30 Sep 2010)
 
