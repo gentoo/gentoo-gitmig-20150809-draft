@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0-r4.ebuild,v 1.1 2010/07/13 11:57:23 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.1.0-r4.ebuild,v 1.2 2010/10/11 12:45:54 haubi Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"
@@ -56,7 +56,7 @@ src_unpack() {
 }
 
 pkg_preinst() {
-	if has_version '<dev-util/confix-2.1.0-r03.1'; then
+	if has_version '<dev-util/confix-2.1.0-r3'; then
 		einfo "After upgrading to ${P} you likely want to remerge all packages built"
 		einfo "with <dev-util/confix-2.1.0-r03.1 in your EPREFIX to fix a bug in"
 		einfo "libtool's la-files created using the old ${PN}."
