@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6035 2010/10/11 08:54:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6036 2010/10/11 13:54:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2854,6 +2854,7 @@ net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/telepathy-glib:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/webkit-gtk:coverage - enable code coverage support
+net-libs/webkit-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/webkit-gtk:websockets - enable full duplex single socket communication
 net-libs/xulrunner:custom-optimization - Fine-tune custom compiler optimizations
 net-libs/xulrunner:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
