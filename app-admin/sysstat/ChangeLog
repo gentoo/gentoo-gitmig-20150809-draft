@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.185 2010/09/14 05:24:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.186 2010/10/11 19:53:41 jer Exp $
+
+  11 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  -files/sysstat-9.1.1-nls.patch, files/sysstat-9.1.2-nls.patch:
+  Clean up patch. Remove unused patch by jalan (bug #340088).
 
 *sysstat-9.1.5 (14 Sep 2010)
 
