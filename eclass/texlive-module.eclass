@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.35 2010/10/11 18:26:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.36 2010/10/11 20:44:19 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -205,7 +205,7 @@ texlive-module_src_compile() {
 	# TeX Live 2007 was providing lists. For 2008 they are now tlpobj.
 	for i in "${S}"/tlpkg/tlpobj/*;
 	do
-		grep '^execute ' "${i}" | sed -e 's/^execute //' | tr ' ' '@' |sort|uniq >> "${T}/jobs"
+		grep '^execute ' "${i}" | sed -e 's/^execute //' | tr ' \t' '@@' |sort|uniq >> "${T}/jobs"
 	done
 
 	for i in $(<"${T}/jobs");
