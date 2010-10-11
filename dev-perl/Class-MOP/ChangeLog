@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.45 2010/10/09 07:31:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.46 2010/10/11 12:26:17 phajdan.jr Exp $
+
+  11 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Class-MOP-1.08.ebuild:
+  x86 stable wrt bug #340024
 
 *Class-MOP-1.09 (09 Oct 2010)
 
