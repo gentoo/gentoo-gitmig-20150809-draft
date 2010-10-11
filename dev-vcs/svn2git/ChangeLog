@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/svn2git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.6 2010/06/22 18:51:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.7 2010/10/11 18:27:08 sping Exp $
+
+*svn2git-0_pre20101008 (11 Oct 2010)
+
+  11 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  +svn2git-0_pre20101008.ebuild:
+  Bump to 0_pre20101008
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   svn2git-0_pre20100303.ebuild, svn2git-0_pre20100324.ebuild,
