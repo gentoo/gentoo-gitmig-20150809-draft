@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.377 2010/10/10 19:08:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.378 2010/10/11 18:52:45 jer Exp $
+
+  11 Oct 2010; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.6.ebuild:
+  Stable for HPPA (bug #332361).
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.6_p25423.ebuild:
   Re-add ~alpha/~ia64/~sparc wrt #340269
