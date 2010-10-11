@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/apricots
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.15 2009/05/06 01:50:54 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/ChangeLog,v 1.16 2010/10/11 14:58:49 tupone Exp $
+
+  11 Oct 2010; Tupone Alfredo <tupone@gentoo.org> apricots-0.2.6-r1.ebuild,
+  +files/apricots-0.2.6-ldflags.patch:
+  Respect LDFLAGS. Bug #340139 by flameeyes@gentoo.org
 
   06 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
   apricots-0.2.6-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.8 2009/05/06 01:50:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.9 2010/10/11 14:58:49 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,12 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/openal
 	media-libs/freealut"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-freealut.patch
+	epatch "${FILESDIR}"/${P}-freealut.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	cp admin/acinclude.m4.in acinclude.m4
 
