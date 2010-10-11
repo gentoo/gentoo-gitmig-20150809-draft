@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.16.ebuild,v 1.3 2010/10/11 08:36:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.17.ebuild,v 1.1 2010/10/11 08:36:34 flameeyes Exp $
 
 EAPI="3"
 
-SMARTCARD_DATE=20100630
+SMARTCARD_DATE=20101010
 
 inherit eutils fdo-mime multilib toolchain-funcs
 
@@ -17,15 +17,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 ## ~arm waiting for keywords
-IUSE="gtk usb"
+IUSE="gtk"
 
-RDEPEND=">=sys-apps/pcsc-lite-1.4.14
-	<sys-apps/pcsc-lite-1.6.2"
+RDEPEND=">=sys-apps/pcsc-lite-1.4.14"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
-	usb? ( app-crypt/ccid )
 	dev-perl/pcsc-perl
 	gtk? ( dev-perl/gtk2-perl )"
 
@@ -49,11 +47,7 @@ src_install() {
 	dodoc README Changelog || die
 
 	if use gtk; then
-		doicon "${FILESDIR}"/smartcard.svg
-		domenu gscriptor.desktop
-		dosed "s:Categories=Utility;GTK;:Icon=smartcard.svg\\nCategories=System;:g" \
-			/usr/share/applications/gscriptor.desktop
-
+		domenu gscriptor.desktop || die
 		dobin gscriptor || die
 		doman gscriptor.1p || die
 	fi

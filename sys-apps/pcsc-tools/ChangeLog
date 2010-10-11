@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.7 2010/06/30 01:38:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.8 2010/10/11 08:36:34 flameeyes Exp $
+
+*pcsc-tools-1.4.17 (11 Oct 2010)
+
+  11 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-tools-1.4.15.ebuild, pcsc-tools-1.4.16.ebuild,
+  +pcsc-tools-1.4.17.ebuild, -files/pcsc-tools_no-gtk.patch:
+  Version bump, and restrict dependencies on .16; thanks to Francesco Riosa
+  for reporting that older version does not work with the new pcsc-lite (bug
+  #340341). Remove oldest version and its patch. New version comes with new
+  smartcard-list.txt file and no longer installs the smartcard.svg file,
+  following instead the upstream-provided desktop file.
 
   30 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   pcsc-tools-1.4.16.ebuild:
