@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.19.ebuild,v 1.10 2010/10/03 15:44:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.19.ebuild,v 1.11 2010/10/11 20:32:03 jer Exp $
 
 inherit java-pkg-opt-2 mono elisp-common
 
@@ -17,7 +17,10 @@ COMMON_DEPEND="emacs? ( virtual/emacs )
 	mono? ( >=dev-lang/mono-0.95 )"
 DEPEND="${COMMON_DEPEND}
 	nls? ( >=sys-devel/gettext-0.17 )
-	java? ( >=virtual/jdk-1.4 dev-java/gjdoc )"
+	java? (
+		>=virtual/jdk-1.4
+		doc? ( dev-java/gjdoc )
+	)"
 RDEPEND="${COMMON_DEPEND}
 	nls? ( virtual/libintl )
 	java? ( >=virtual/jre-1.4 )"
