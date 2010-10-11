@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r2.ebuild,v 1.1 2010/09/05 04:27:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r2.ebuild,v 1.2 2010/10/11 10:54:57 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 unRAR"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~x86-fbsd"
 DEPEND="x11-libs/wxGTK:2.8"
 RDEPEND="${DEPEND}"
 IUSE=""
