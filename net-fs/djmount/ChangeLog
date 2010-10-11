@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/djmount
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/ChangeLog,v 1.5 2008/03/20 03:34:21 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/ChangeLog,v 1.6 2010/10/11 05:33:32 vapier Exp $
+
+  11 Oct 2010; Mike Frysinger <vapier@gentoo.org> djmount-0.71-r1.ebuild:
+  Clean up, fix USE=debug build #267508 by mimosinnet, and fix FEATURES=test
+  277557 by Diego E. Pettenò.
 
 *djmount-0.71-r1 (20 Mar 2008)
 

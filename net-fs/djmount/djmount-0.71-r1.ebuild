@@ -1,24 +1,44 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71-r1.ebuild,v 1.1 2008/03/20 03:34:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71-r1.ebuild,v 1.2 2010/10/11 05:33:32 vapier Exp $
+
+EAPI="2"
 
 DESCRIPTION="Mount UPnP audio/video servers as a filesystem"
 HOMEPAGE="http://djmount.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
-DEPEND="sys-fs/fuse
-		net-libs/libupnp"
-RDEPEND="${DEPEND}"
+IUSE="debug test"
 
-src_compile() {
-	econf $(use_enable debug) --with-external-libupnp || die "econf failed"
-	emake || die "emake failed"
+RDEPEND="sys-fs/fuse
+	net-libs/libupnp"
+DEPEND="${RDEPEND}
+	test? ( sys-libs/readline )"
+
+src_unpack() {
+	default
+	rm -rf libupnp/*/{src,inc} libupnp/configure # make sure we use external
+}
+
+src_prepare() {
+	sed -i 's:SetLogFileNames:UpnpSetLogFileNames:' djmount/fuse_main.c #267508
+	sed -i 's:InitLog:UpnpInitLog:' djmount/test_device.c #277557
+}
+
+src_configure() {
+	econf $(use_enable debug) --with-external-libupnp
+}
+
+src_test() {
+	# wants to do mounts :x
+	printf '#!/bin/sh\nexit 0\n' > djmount/test_vfs.sh
+	default
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README search_help.txt THANKS
 }
