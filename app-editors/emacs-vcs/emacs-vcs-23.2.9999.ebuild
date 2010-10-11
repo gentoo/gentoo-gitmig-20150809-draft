@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.5 2010/10/10 17:06:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.6 2010/10/11 21:52:45 fauli Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic
 if [ "${PV##*.}" = "9999" ]; then
 	inherit bzr
 	EMACS_BRANCH="emacs-23"
-	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/emacs/${EMACS_BRANCH}/"
+	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EMACS_BRANCH}/"
 	EBZR_CACHE_DIR="emacs-${EMACS_BRANCH#emacs-}"
 	SRC_URI=""
 else
