@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.183 2010/10/12 17:35:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.184 2010/10/12 17:38:37 jer Exp $
+
+  12 Oct 2010; Jeroen Roovers <jer@gentoo.org> file-5.04.ebuild:
+  Stable for PPC (bug #340225).
 
   12 Oct 2010; Jeroen Roovers <jer@gentoo.org> file-5.04.ebuild:
   Stable for HPPA (bug #340225).
