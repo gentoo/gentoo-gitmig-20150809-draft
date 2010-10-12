@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.73 2010/09/19 08:29:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.74 2010/10/12 18:29:30 dilfridge Exp $
+
+  12 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kipi-plugins-1.3.0.ebuild:
+  Cleanup
 
   19 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   kipi-plugins-1.2.0-r2.ebuild:
