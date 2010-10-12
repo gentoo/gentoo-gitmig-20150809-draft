@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.25 2010/10/03 19:00:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.26 2010/10/12 16:56:37 fauli Exp $
+
+  12 Oct 2010; Christian Faulhammer <fauli@gentoo.org> cone-0.79.ebuild:
+  stable x86, bug 331251
 
 *cone-0.84.20100819 (03 Oct 2010)
 
