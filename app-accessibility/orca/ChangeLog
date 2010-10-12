@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.89 2010/09/11 18:38:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.90 2010/10/12 18:17:47 pacho Exp $
+
+*orca-2.32.0 (12 Oct 2010)
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> +orca-2.32.0.ebuild:
+  Version bump for Gnome 2.32: lots of bugfixes and translation updates.
+  Improves python support but it's still not python3 safe (bug #308261
+  comment #3). Workaround for bug #325611 is also needed at configure phase.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> orca-2.30.2.ebuild:
   Marked ppc for bug #324077.
