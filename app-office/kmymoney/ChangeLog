@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kmymoney
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.10 2010/08/18 21:29:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.11 2010/10/12 16:28:24 tampakrap Exp $
+
+  12 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  -kmymoney-3.98.1.ebuild, kmymoney-4.5.ebuild:
+  Cleanup: EAPI3, merge with live ebuild, use add_kdebase_dep
 
 *kmymoney-4.5 (18 Aug 2010)
 
