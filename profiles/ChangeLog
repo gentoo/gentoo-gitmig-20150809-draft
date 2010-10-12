@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4644 2010/10/12 12:23:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4645 2010/10/12 17:51:01 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update Gnome 2.32 mask.
 
   12 Oct 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask x11-libs/openmotif-compat for removal.
