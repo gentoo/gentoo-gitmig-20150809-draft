@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.5 2010/10/12 01:47:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.6 2010/10/12 18:21:16 voyageur Exp $
+
+  12 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> files/gogoc.rc:
+  Small typo on configuration file path
 
   12 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> files/gogoc.rc:
   Fix init script parameters.
