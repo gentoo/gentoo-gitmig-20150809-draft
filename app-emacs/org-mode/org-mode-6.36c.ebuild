@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.36c.ebuild,v 1.5 2010/10/05 19:18:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.36c.ebuild,v 1.6 2010/10/12 15:50:22 armin76 Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://orgmode.org/org-${PV}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~ppc sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/org-${PV}"
