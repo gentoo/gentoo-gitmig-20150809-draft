@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.268 2010/10/10 16:53:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.269 2010/10/12 18:34:41 dirtyepic Exp $
+
+  12 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> freetype-2.4.2.ebuild,
+  freetype-2.4.3.ebuild:
+  Enable trace macros with USE=debug so FT2_DEBUG works as documented.
 
   10 Oct 2010; Alexis Ballier <aballier@gentoo.org>
   freetype-1.4_pre20080316-r2.ebuild,

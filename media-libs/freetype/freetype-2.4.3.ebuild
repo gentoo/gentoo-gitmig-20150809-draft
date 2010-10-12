@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.3.ebuild,v 1.1 2010/10/04 00:28:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.3.ebuild,v 1.2 2010/10/12 18:34:41 dirtyepic Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ src_prepare() {
 	fi
 
 	if use debug; then
-		enable_option FT_DEBUG_LEVEL_ERROR
+		enable_option FT_DEBUG_LEVEL_TRACE
 		enable_option FT_DEBUG_MEMORY
 	fi
 
