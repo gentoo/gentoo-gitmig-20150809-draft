@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.5 2010/10/05 07:42:25 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.6 2010/10/12 06:02:56 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Laserdisc Arcade Game Emulator"
@@ -14,14 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-RDEPEND="media-libs/libogg
+DEPEND="media-libs/libogg
 	media-libs/libvorbis
-	media-libs/libsdl
+	media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/glew"
-DEPEND="${RDEPEND}"
 
-S="${WORKDIR}"/v_1_0/src
+S=${WORKDIR}/v_1_0/src
 
 src_prepare() {
 	# Fix no sound issue with >=media-libs/libvorbis-1.2.0
