@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/treeviewx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.23 2010/10/11 10:57:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.24 2010/10/12 09:06:40 phajdan.jr Exp $
+
+  12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  treeviewx-0.5.1-r2.ebuild:
+  x86 stable wrt bug #340471
 
   11 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   treeviewx-0.5.1-r2.ebuild:

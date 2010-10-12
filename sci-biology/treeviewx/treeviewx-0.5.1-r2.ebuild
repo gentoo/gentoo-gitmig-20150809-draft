@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1-r2.ebuild,v 1.2 2010/10/11 10:57:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.5.1-r2.ebuild,v 1.3 2010/10/12 09:06:40 phajdan.jr Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
 SRC_URI="http://darwin.zoology.gla.ac.uk/~rpage/${PN}/download/0.5/tv-${PV}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
