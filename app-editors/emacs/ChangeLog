@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.388 2010/10/11 21:59:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.389 2010/10/12 20:02:58 ulm Exp $
+
+*emacs-23.2-r2 (12 Oct 2010)
+*emacs-22.3-r6 (12 Oct 2010)
+*emacs-21.4-r22 (12 Oct 2010)
+
+  12 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -emacs-21.4-r21.ebuild,
+  +emacs-21.4-r22.ebuild, -emacs-22.3-r5.ebuild, +emacs-22.3-r6.ebuild,
+  -emacs-23.2-r1.ebuild, +emacs-23.2-r2.ebuild:
+  Don't rename GNU Info files, bug 306445.
 
   11 Oct 2010; Christian Faulhammer <fauli@gentoo.org> emacs-23.2.ebuild,
   emacs-23.2-r1.ebuild:
