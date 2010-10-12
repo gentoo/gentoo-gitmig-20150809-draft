@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.128 2010/10/09 16:06:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.129 2010/10/12 15:36:47 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> zile-2.3.19.ebuild:
+  alpha/sparc stable wrt #338725
 
 *zile-2.3.20 (09 Oct 2010)
 
