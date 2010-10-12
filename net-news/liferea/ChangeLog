@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.194 2010/10/06 20:20:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.195 2010/10/12 16:34:12 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild:
+  sparc stable wrt #338934
 
   06 Oct 2010; Markus Meier <maekke@gentoo.org> liferea-1.6.4.ebuild:
   x86 stable, bug #338934
