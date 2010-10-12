@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71-r1.ebuild,v 1.3 2010/10/11 10:48:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/djmount/djmount-0.71-r1.ebuild,v 1.4 2010/10/12 08:40:57 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug test"
 
 RDEPEND="sys-fs/fuse
