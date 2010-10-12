@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.7 2010/10/08 01:28:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.8 2010/10/12 16:37:49 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> markupsafe-0.9.2.ebuild,
+  markupsafe-0.11.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #337663
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> markupsafe-0.11.ebuild:
   Add ~mips keyword.
