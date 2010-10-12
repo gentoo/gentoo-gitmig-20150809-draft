@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6044 2010/10/12 18:54:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6045 2010/10/12 19:14:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1425,6 +1425,8 @@ gnome-base/gnome-applets:battstat - Enable deprecated battery applet for people 
 gnome-base/gnome-light:automount - Use gnome-base/gvfs[gdu] for automounting of drives in nautilus
 gnome-base/gnome-menus:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/gnome-mount:nautilus - Enables the Nautilus plugin
+gnome-base/gnome-panel:bonobo - Enable Bonobo compatibility modules for applets still not ported to DBUS.
+gnome-base/gnome-panel:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/gnome-session:policykit - Enable sys-auth/policykit authentication support
 gnome-base/gnome-session:splash - Enable gnome splash screen
 gnome-base/gnome-volume-manager:automount - Enable support for automounting devices that are handled by gnome-base/nautilus since 2.22. This should be off on most Gnome systems.
