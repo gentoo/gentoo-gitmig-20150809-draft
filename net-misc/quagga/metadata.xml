@@ -26,10 +26,6 @@
       Apply unofficial patch to enable classless prefixes for BGP. Patch and information to be found
       at http://hasso.linux.ee/doku.php/english:network:quagga
     </flag>
-    <flag name="fix-connected-rt">
-      Remove interface connected routes from kernel table on link loss so that no packets get routed
-      to downed interface
-    </flag>
     <flag name="multipath">
       Enable multipath routes support for any number of routes
     </flag>
@@ -40,9 +36,6 @@
       Apply unofficial patch to enable realms support. Patch and information to be found at
       http://vcalinus.gemenii.ro/quaggarealms.html and http://linux.mantech.ro/quagga+realm_en.php
     </flag>
-    <flag name="tcpmd5">
-      Enable TCP MD5 checksumming
-    </flag>
     <flag name="tcp-zebra">
       Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain
       sockets are chosen otherwise.
@@ -52,7 +45,7 @@
       Interface Shell (vtysh).
     </flag>
     <flag name="pam">
-      Add support for PAM (via<pkg>sys-libs/pam</pkg>) to teh Quagga Virtual Terminal Interface
+      Add support for PAM (via<pkg>sys-libs/pam</pkg>) to the Quagga Virtual Terminal Interface
       Shell (vtysh); if the readline USE flag is disabled, this flag is ignored.
     </flag>
   </use>
