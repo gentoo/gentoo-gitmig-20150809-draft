@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20100820.ebuild,v 1.2 2010/10/12 20:05:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20101012.ebuild,v 1.1 2010/10/12 20:05:45 tampakrap Exp $
 
 EAPI=3
 
 KMNAME="extragear/base"
-KMMODULE="networkmanagement"
+KMMODULE="knetworkmanagement"
+KDE_MINIMAL="4.5"
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
@@ -42,9 +43,6 @@ src_prepare() {
 			"${S}/NetworkManager-kde4.conf" \
 			|| die "Fixing dbus policy failed"
 	fi
-
-	# Makes it KDE 4.4 compatible
-	sed -i -e 's/KCMUTILS/KUTILS/' "${S}/applet/CMakeLists.txt" || die "sed died"
 }
 
 src_configure() {
