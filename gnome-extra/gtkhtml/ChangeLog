@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.222 2010/10/12 17:58:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.223 2010/10/12 20:56:33 eva Exp $
+
+  12 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkhtml-3.26.3.ebuild, gtkhtml-3.32.0.ebuild:
+  Add slot limitation to gtk+, missing DEPEND on xproto and use gnome2
+  phases where needed.
 
 *gtkhtml-3.32.0 (12 Oct 2010)
 

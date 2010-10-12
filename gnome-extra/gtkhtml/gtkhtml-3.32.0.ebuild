@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.32.0.ebuild,v 1.1 2010/10/12 17:58:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.32.0.ebuild,v 1.2 2010/10/12 20:56:33 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SLOT="3.14"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.20
+RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=x11-themes/gnome-icon-theme-2.22.0
 	>=gnome-base/orbit-2
 	>=app-text/enchant-1.1.7
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.20
 	>=app-text/iso-codes-0.49
 	>=net-libs/libsoup-2.26.0:2.4"
 DEPEND="${RDEPEND}
+	x11-proto/xproto
 	sys-devel/gettext
 	>=dev-util/intltool-0.40.0
 	>=dev-util/pkgconfig-0.9"
@@ -36,15 +37,17 @@ pkg_setup() {
 }
 
 pkg_preinst() {
+	gnome2_pkg_preinst
 	preserve_old_lib /usr/$(get_libdir)/libgtkhtml-editor.so.0
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	preserve_old_lib_notify /usr/$(get_libdir)/libgtkhtml-editor.so.0
 }
 
 src_install() {
 	gnome2_src_install
 	# Remove .la files since old will be removed anyway while updating
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
+	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
 }
