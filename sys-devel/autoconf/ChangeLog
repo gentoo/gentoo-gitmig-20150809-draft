@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.156 2010/10/03 07:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.157 2010/10/12 11:33:55 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> autoconf-2.65-r1.ebuild:
+  sparc stable wrt #336381
 
   02 Oct 2010; Mike Frysinger <vapier@gentoo.org> autoconf-2.68.ebuild:
   Move into unstable.
