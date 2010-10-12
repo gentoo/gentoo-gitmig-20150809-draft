@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.23 2010/06/18 05:41:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.24 2010/10/12 11:57:41 flameeyes Exp $
+
+  12 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  itk-3.4_pre20090417.ebuild:
+  QA: Remove econf from src_compile in EAPI >= 2.
 
   18 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
   itk-3.3.1_pre20090417.ebuild:

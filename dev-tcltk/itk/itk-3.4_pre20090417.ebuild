@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417.ebuild,v 1.4 2010/06/18 17:33:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417.ebuild,v 1.5 2010/10/12 11:57:41 flameeyes Exp $
 
 EAPI="3"
 inherit multilib versionator
@@ -22,7 +22,6 @@ DEPEND="dev-lang/tk
 S="${WORKDIR}/${MY_PN}/${PN}"
 
 src_compile() {
-	econf || die "econf failed"
 	emake CFLAGS_DEFAULT="${CFLAGS}" || die "emake failed"
 }
 
