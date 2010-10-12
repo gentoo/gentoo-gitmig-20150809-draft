@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4643 2010/10/11 21:38:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4644 2010/10/12 12:23:12 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Oct 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask x11-libs/openmotif-compat for removal.
 
   11 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Removed package mask of dev-tex/latex-beamer-3.10

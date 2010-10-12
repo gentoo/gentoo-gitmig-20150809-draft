@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12040 2010/10/11 21:38:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12041 2010/10/12 12:23:12 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (12 Oct 2010)
+# Compatibility library for out-of-tree binaries, moved from
+# separate openmotif-compat package to SLOT 2.2 of openmotif.
+# Emerge x11-libs/openmotif:2.2 as a substitute.
+# Masked for removal in 60 days, bug 340673.
+x11-libs/openmotif-compat
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
 # This is Gnome 2.32 mask (#339225) , here will appear 
