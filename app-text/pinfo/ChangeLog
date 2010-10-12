@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.43 2010/10/10 20:59:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.44 2010/10/12 16:49:17 fauli Exp $
+
+  12 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  pinfo-0.6.9-r1.ebuild:
+  stable x86, bug 339957
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> pinfo-0.6.9-r1.ebuild:
   Stable on alpha, bug #339957
