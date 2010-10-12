@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-</maintainer>
-<longdescription lang="en">
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+	</maintainer>
+	<maintainer>
+		<email>chiiph@gentoo.org</email>
+		<name>Tomas Touceda</name>
+	</maintainer>
+	<longdescription lang="en">
+		Dissy is a graphical frontend to the objdump disassembler. Dissy 
+		can be used for debugging and browsing compiler-generated code.
+	</longdescription>
 </pkgmetadata>
 
