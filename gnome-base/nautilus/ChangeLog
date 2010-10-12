@@ -1,6 +1,18 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.357 2010/10/09 09:27:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.358 2010/10/12 18:49:52 pacho Exp $
+
+*nautilus-2.32.0 (12 Oct 2010)
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> +nautilus-2.32.0.ebuild:
+  Version bump for Gnome 2.32: Save passwords for the session by default,
+  don't show 'File Browser' anymore in the window title, port to GDBus,
+  change the default order for files in special directories, add 'Trashed
+  On' and 'Original Location' columns in the trash, new dialog to handle
+  conflicts within file copy/move operations, new button in the trashbar to
+  restore selected items, other bugfixes and translation updates. Add
+  introspection support, switch to upstream way of handling bug #266398, use
+  addpredict instead of addwrite since it looks to be enough.
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   nautilus-2.30.1-r1.ebuild:

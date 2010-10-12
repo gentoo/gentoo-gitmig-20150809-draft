@@ -5,6 +5,9 @@
 <use>
 	<flag name='beagle'>Enables support for searching using the Beagle
 		(<pkg>app-misc/beagle</pkg>) desktop search tool</flag>
+	<flag name="introspection">Use
+		<pkg>dev-libs/gobject-introspection</pkg> for
+		introspection</flag>
 	<flag name='tracker'>Enables support for searching using the Tracker
 		(<pkg>app-misc/tracker</pkg>) search tool</flag>
 </use>
