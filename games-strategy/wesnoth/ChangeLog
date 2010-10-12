@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.189 2010/09/28 01:27:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.190 2010/10/12 11:58:23 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> wesnoth-1.6.5.ebuild,
+  wesnoth-1.8.2.ebuild, wesnoth-1.8.4.ebuild, wesnoth-1.8.5.ebuild:
+  Drop sparc keywords
 
 *wesnoth-1.8.5 (28 Sep 2010)
 
