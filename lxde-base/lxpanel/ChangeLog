@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.21 2010/07/29 14:44:12 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.22 2010/10/12 16:54:17 vostorga Exp $
+
+  12 Oct 2010; Víctor Ostorga <vostorga@gentoo.org> lxpanel-0.5.6.ebuild,
+  +files/lxpanel-0.5.6-symbol-alarm.patch:
+  Fixing collision with the alarm structure, patch thanks to Ángel
+  Velásquez <angvp@archlinux.org> bug #339029
 
 *lxpanel-0.5.6 (29 Jul 2010)
 

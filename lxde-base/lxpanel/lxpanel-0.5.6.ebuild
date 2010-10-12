@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.1 2010/07/29 14:44:12 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.2 2010/10/12 16:54:17 vostorga Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.1-sandbox.patch
+	epatch "${FILESDIR}"/${P}-symbol-alarm.patch
 	eautoreconf
 }
 
