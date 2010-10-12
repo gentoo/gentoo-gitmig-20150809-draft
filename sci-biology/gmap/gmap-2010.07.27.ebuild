@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/gmap-2010.07.27.ebuild,v 1.2 2010/10/11 07:19:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/gmap-2010.07.27.ebuild,v 1.3 2010/10/12 08:23:10 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://research-pub.gene.com/gmap/src/gmap-gsnap-${MY_PV}.tar.gz"
 LICENSE="gmap"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=""
