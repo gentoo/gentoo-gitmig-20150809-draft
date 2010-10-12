@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event-ExecFlow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.28 2010/10/05 19:44:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.29 2010/10/12 15:53:08 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> Event-ExecFlow-0.64.ebuild:
+  sparc stable wrt #338997
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org> Event-ExecFlow-0.64.ebuild:
   x86 stable, bug #338997
