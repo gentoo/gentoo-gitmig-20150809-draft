@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.3 2010/10/01 05:24:08 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.4 2010/10/12 07:48:55 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Gamecube emulator"
