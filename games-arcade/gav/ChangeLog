@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gav
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.14 2008/04/30 22:01:06 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.15 2010/10/12 13:16:59 tupone Exp $
+
+  12 Oct 2010; Tupone Alfredo <tupone@gentoo.org> gav-0.9.0.ebuild,
+  +files/gav-0.9.0-ldflags.patch:
+  Respect LDFLAGS. Bug #335697 by flameeyes@gentoo.org
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/gav-0.9.0-gcc43.patch, gav-0.9.0.ebuild:

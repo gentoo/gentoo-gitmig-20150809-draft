@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.3 2008/04/30 22:01:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.4 2010/10/12 13:16:59 tupone Exp $
+EAPI="2"
 
 inherit eutils games
 
@@ -21,15 +22,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/sdl-image
+RDEPEND="media-libs/sdl-image
 	media-libs/sdl-net
 	media-libs/libsdl"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
+src_prepare() {
 	local d
 
-	unpack ${P}.tar.gz
-	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 
 	for d in . automa menu net ; do
 		cp ${d}/Makefile.Linux ${d}/Makefile || die "cp ${d}/Makefile failed"
@@ -38,22 +39,17 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "s:/usr/bin:${GAMES_BINDIR}:" \
-		-e "/strip/d" \
 		Makefile \
 		|| die "sed failed"
 	sed -i \
 		-e "/^CXXFLAGS=/s: -g : ${CXXFLAGS} :" CommonHeader \
 		|| die "sed failed"
 
-	# Now, unpack the additional themes
-	cd "${S}"/themes
-	# unpack everything because it's easy
-	unpack ${A}
-	# and kill off what we don't want
-	rm -rf ${P}
+	# Now, move the additional themes in the proper directory
+	mv ../{fabeach,florindo,inverted,naive,unnamed,yisus,yisus2} themes
 
 	# no reason to have executable files in the themes
-	find . -type f -exec chmod a-x \{\} \;
+	find themes -type f -exec chmod a-x \{\} \;
 }
 
 src_compile() {
