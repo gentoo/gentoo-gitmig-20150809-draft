@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.39 2010/09/22 18:43:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.40 2010/10/12 11:30:45 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  suite3270-3.3.10_p3-r1.ebuild:
+  s390/sparc stable wrt #335188
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   suite3270-3.3.10_p3-r1.ebuild:
