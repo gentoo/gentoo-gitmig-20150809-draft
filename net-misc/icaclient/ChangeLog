@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.76 2010/10/12 10:23:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.77 2010/10/12 10:25:30 fauli Exp $
+
+  12 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  icaclient-11.100-r1.ebuild:
+  add dependency on x11-libs/libXinerama for x86 as reported in bug 338401
+  by Ryan Harris <rh1 AT comcast DOT net>
 
   12 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   -icaclient-11.100.ebuild:
