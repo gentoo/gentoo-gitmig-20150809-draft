@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.14 2010/10/08 21:08:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.15 2010/10/12 18:08:01 pacho Exp $
+
+*accerciser-1.12.0 (12 Oct 2010)
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> +accerciser-1.12.0.ebuild:
+  Version bump for Gnome 2.32: A fix for AT-SPI2 issues and updated
+  translations. This also has improved python support (bug #308259 by
+  Arfrever Frehtes Taifersar Arahesis).
 
   08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -accerciser-1.6.1.ebuild, -accerciser-1.8.0.ebuild:
