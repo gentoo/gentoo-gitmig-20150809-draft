@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r1.ebuild,v 1.5 2010/09/30 20:30:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r1.ebuild,v 1.6 2010/10/12 16:08:26 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
 IUSE="apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax ncurses nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
 
 DEPEND_COMMON="

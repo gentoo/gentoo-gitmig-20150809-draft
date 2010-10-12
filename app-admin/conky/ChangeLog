@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.146 2010/10/10 19:58:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.147 2010/10/12 16:08:26 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> conky-1.8.0-r1.ebuild:
+  sparc stable wrt #328161
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> conky-1.8.1.ebuild:
   Keyworded on alpha, bug #326767
