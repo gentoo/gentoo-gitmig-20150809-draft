@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.48 2010/04/30 14:56:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.49 2010/10/12 22:30:04 ulm Exp $
+
+  12 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -files/setup.py:
+  Remove unused file, fixes bug 340705.
 
   30 Apr 2010; Fabian Groffen <grobian@gentoo.org> python-mode-5.1.0.ebuild:
   Marked ~x64-macos
