@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.265 2010/10/10 17:04:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.266 2010/10/12 15:36:15 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> dovecot-1.2.13-r1.ebuild:
+  alpha/arm/sparc stable wrt #335383
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> dovecot-1.2.15.ebuild:
   sparc stable wrt #339776
