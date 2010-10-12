@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.5 2007/06/10 14:29:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.6 2010/10/12 10:49:35 tupone Exp $
 
 DESCRIPTION="Fly about 3D-formed file system"
 HOMEPAGE="http://xcruiser.sourceforge.net/"
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	xmkmf -a
-	emake || die "emake failed"
+	emake LOCAL_LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
