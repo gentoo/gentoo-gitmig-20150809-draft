@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100903.ebuild,v 1.2 2010/10/12 12:09:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100903.ebuild,v 1.3 2010/10/12 12:38:59 jlec Exp $
 
 EAPI="3"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="Library for reading OriginLab OPJ project files"
 HOMEPAGE="http://soft.proindependent.com/liborigin2/"
@@ -21,8 +21,14 @@ DEPEND="${RDEPEND}
 	dev-cpp/tree
 	doc? ( app-doc/doxygen )"
 
+PATCHES=(
+	"${FILESDIR}/liborigin-20100420-build-parsers.patch"
+	)
+
+DOCS="readme FORMAT"
+
 src_prepare() {
-	epatch "${FILESDIR}/liborigin-20100420-build-parsers.patch"
+	qt4-r2_src_prepare
 	cat >> liborigin.pro <<-EOF
 		INCLUDEPATH += "${EPREFIX}/usr/include/tree"
 		headers.files = \$\$HEADERS
@@ -34,12 +40,8 @@ src_prepare() {
 	rm -f tree.hh || die
 }
 
-src_configure() {
-	eqmake4
-}
-
 src_compile() {
-	emake || die "emake failed"
+	qt4-r2_src_compile
 	if use doc; then
 		cd doc
 		doxygen Doxyfile || die "doc generation failed"
@@ -47,8 +49,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc readme FORMAT || die
+	qt4-r2_src_install
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r doc/html || die "doc install failed"
