@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.5 2010/10/06 16:03:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.6 2010/10/12 16:34:26 hwoarang Exp $
+
+  12 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gummi-0.5.1.ebuild:
+  Move gtkspell and gtksourceview to RDEPEND
 
   06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gummi-0.5.1.ebuild:
   Make cairo use flag mandatory to poppler dependency
