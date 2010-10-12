@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.496 2010/10/08 17:17:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.497 2010/10/12 20:40:50 djc Exp $
+
+*python-2.6.6-r1 (12 Oct 2010)
+
+  12 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> -python-2.6.6.ebuild,
+  +python-2.6.6-r1.ebuild:
+  2.6.6-r1 actually has the rwx-mmap patch and the portage blocker.
+
+  11 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> python-2.6.6.ebuild:
+  Block 2.6.6 on portage-2.1.9 (earlier portage suffers from bug 330937).
 
 *python-2.6.6 (08 Oct 2010)
 

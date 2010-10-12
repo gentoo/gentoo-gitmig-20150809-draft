@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.6.ebuild,v 1.1 2010/10/08 17:17:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.6-r1.ebuild,v 1.1 2010/10/12 20:40:50 djc Exp $
 
 EAPI="2"
 
@@ -8,12 +8,13 @@ inherit autotools eutils flag-o-matic multilib pax-utils python toolchain-funcs
 
 MY_P="Python-${PV}"
 
-PATCHSET_REVISION="0"
+PATCHSET_REVISION="1"
 
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
+	http://dev.gentoo.org/~djc/python-gentoo-patches-${PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
+#	mirror://gentoo/python-gentoo-patches-${PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.6"
@@ -21,7 +22,8 @@ PYTHON_ABI="${SLOT}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
-RDEPEND=">=app-admin/eselect-python-20091230
+RDEPEND="!!<sys-apps/portage-2.1.9
+		>=app-admin/eselect-python-20091230
 		>=sys-libs/zlib-1.1.3
 		virtual/libffi
 		virtual/libintl
