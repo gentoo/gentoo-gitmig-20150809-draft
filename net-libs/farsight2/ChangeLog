@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.36 2010/09/04 14:47:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.37 2010/10/12 08:15:38 ssuominen Exp $
+
+  12 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  farsight2-0.0.20.ebuild, +files/farsight2-0.0.20-make-382.patch:
+  Fix building with make >= 3.82 wrt #339534 by Diego E. Pettenò.
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> farsight2-0.0.17.ebuild:
   alpha/ia64/sparc stable wrt #320205
