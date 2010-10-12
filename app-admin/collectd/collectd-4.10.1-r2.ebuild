@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.5 2010/10/10 18:15:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.6 2010/10/12 17:59:52 dilfridge Exp $
 
 EAPI="2"
 
@@ -46,10 +46,7 @@ unset plugin
 
 # Now come the dependencies.
 
-# this cannot be in the dependencies if the USE flag is not listed
-# 	collectd_plugins_oracle?		( >=dev-db/oracle-instantclient-basic-11.1.0.7.0 )
 COMMON_DEPEND="
-	>=net-firewall/iptables-1.4.9.1-r2
 	collectd_plugins_apache?		( net-misc/curl )
 	collectd_plugins_ascent?		( net-misc/curl dev-libs/libxml2 )
 	collectd_plugins_bind?			( dev-libs/libxml2 )
@@ -97,7 +94,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	collectd_plugins_syslog?		( virtual/logger )"
 
-PATCHES=( "${FILESDIR}/${P}"-{libperl,libiptc}.patch )
+PATCHES=( "${FILESDIR}/${P}"-{libperl,libiptc,noowniptc}.patch )
 
 # @FUNCTION: collectd_plugin_kernel_linux
 # @DESCRIPTION:
@@ -249,6 +246,11 @@ src_configure() {
 	# Need JAVA_HOME for java.
 	if use collectd_plugins_java; then
 		myconf+=" --with-java=$(java-config -g JAVA_HOME)"
+	fi
+
+	# Need libiptc ONLY for iptables. If we try to use it otherwise bug 340109 happens.
+	if ! use collectd_plugins_iptables; then
+		myconf+=" --with-libiptc=no"
 	fi
 
 	# Finally, run econf.
