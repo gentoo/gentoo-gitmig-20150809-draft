@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.42 2010/10/10 01:13:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.43 2010/10/12 06:21:23 phajdan.jr Exp $
+
+  12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kdevplatform-1.0.2.ebuild:
+  x86 stable wrt bug #340094
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   kdevplatform-1.0.2.ebuild:
