@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.9 2010/07/17 10:52:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.10.ebuild,v 1.1 2010/10/12 13:52:24 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-63112
+MY_PV=${PV}-66523
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -50,7 +50,12 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	python? ( || ( dev-lang/python:2.6 dev-lang/python:2.4 ) )"
+	python? ( || (
+			dev-lang/python:2.7
+			dev-lang/python:2.6
+			dev-lang/python:2.5
+			dev-lang/python:2.4
+		) )"
 
 S=${WORKDIR}
 
