@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.6 2010/06/19 00:35:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.7 2010/10/12 15:14:08 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="nls"
 
-RDEPEND="media-libs/libsdl[opengl]
+RDEPEND="media-libs/libsdl[joystick,opengl,video]
 	media-libs/sdl-image
 	>=media-libs/openal-1
 	media-libs/freealut
@@ -23,7 +23,6 @@ RDEPEND="media-libs/libsdl[opengl]
 	virtual/glu
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-vcs/cvs
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}

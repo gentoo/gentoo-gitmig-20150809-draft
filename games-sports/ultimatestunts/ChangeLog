@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/ultimatestunts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.22 2010/06/19 00:35:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.23 2010/10/12 15:14:08 mr_bones_ Exp $
+
+  12 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  ultimatestunts-0.7.5.ebuild:
+  cvs is no longer needed; touch up libsdl use flag deps
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org>
   ultimatestunts-0.7.5.ebuild:
