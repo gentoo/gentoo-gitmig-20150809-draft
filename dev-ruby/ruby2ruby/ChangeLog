@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.27 2010/10/10 17:55:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.28 2010/10/12 20:45:59 klausman Exp $
+
+  12 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  ruby2ruby-1.2.5.ebuild:
+  Revert ~alpha keyword until parsetree works properly
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   ruby2ruby-1.2.5.ebuild:
