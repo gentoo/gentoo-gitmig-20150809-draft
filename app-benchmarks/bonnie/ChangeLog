@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/bonnie
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.16 2009/10/12 18:59:17 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.17 2010/10/12 18:22:07 jer Exp $
+
+*bonnie-2.0.6-r1 (12 Oct 2010)
+
+  12 Oct 2010; Jeroen Roovers <jer@gentoo.org> +bonnie-2.0.6-r1.ebuild,
+  +files/bonnie-2.0.6-includes.patch:
+  Use newbin instead of mv. Remove empty (R)DEPEND. Respect CC (bug
+  #243512), LDFLAGS (use emake instead of make).
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> bonnie-2.0.6.ebuild:
   QA fixes; unquoted variables
