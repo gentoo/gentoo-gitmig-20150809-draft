@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.2 2010/10/11 23:35:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.3 2010/10/12 00:20:34 flameeyes Exp $
 
 EAPI=2
 
@@ -59,6 +59,8 @@ src_compile() {
 }
 
 src_install() {
+	dodoc README || die
+
 	cd "${S}"/gogoc-tsp
 	dosbin bin/gogoc || die
 
@@ -74,8 +76,6 @@ src_install() {
 
 	diropts -m0700
 	keepdir /etc/gogoc || die
-
-	dodoc README || die
 }
 
 pkg_postinst() {
