@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.7 2010/09/16 17:04:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.8 2010/10/12 07:36:45 tupone Exp $
 
 inherit eutils games
 
@@ -38,7 +38,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-linux.patch
 
 	epatch "${FILESDIR}"/${P}-freeglut.patch \
-		"${FILESDIR}"/${P}-glibc-212.patch
+		"${FILESDIR}"/${P}-glibc-212.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	# Modify dirs and some fopen() permissions
 	epatch "${FILESDIR}/${P}-gentoo-paths.patch"

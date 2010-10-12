@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/netherearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/ChangeLog,v 1.7 2010/09/16 17:04:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/ChangeLog,v 1.8 2010/10/12 07:36:45 tupone Exp $
+
+  12 Oct 2010; Tupone Alfredo <tupone@gentoo.org> netherearth-0.52.ebuild,
+  +files/netherearth-0.52-ldflags.patch:
+  Respect LDFLAGS. Bug #335718 by flameeyes@gentoo.org
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   netherearth-0.52.ebuild:
