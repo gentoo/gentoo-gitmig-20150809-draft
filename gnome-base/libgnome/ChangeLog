@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.197 2010/10/07 21:41:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.198 2010/10/12 18:26:11 pacho Exp $
+
+*libgnome-2.32.0 (12 Oct 2010)
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> +libgnome-2.32.0.ebuild,
+  metadata.xml:
+  Version bump for Gnome 2.32: gnome-sound APIs now use libcanberra
+  internally (behind 'sound' USE flag, enabled by default for better user
+  experience).
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   libgnome-2.30.0.ebuild:
