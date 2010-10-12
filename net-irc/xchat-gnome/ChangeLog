@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.57 2010/09/11 10:28:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.58 2010/10/12 16:51:40 fauli Exp $
+
+  12 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  xchat-gnome-0.26.1-r1.ebuild:
+  stable x86, bug 331257
 
   11 Sep 2010; <nixnut@gentoo.org> xchat-gnome-0.26.1.ebuild:
   reverting premature stabling
