@@ -1,6 +1,15 @@
 # ChangeLog for sci-misc/gt-itm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/ChangeLog,v 1.5 2009/09/28 22:00:09 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/ChangeLog,v 1.6 2010/10/12 15:32:45 xarthisius Exp $
+
+*gt-itm-19961004-r1 (12 Oct 2010)
+
+  12 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -gt-itm-19961004.ebuild, +gt-itm-19961004-r1.ebuild,
+  +files/gt-itm-implicits.patch:
+  Respect LDFLAGS wrt bug 339742. Thanks to Diego for the report. Respect
+  CC, fix implicits, add missing dies. Drop old. Add explicit RDEPEND.
+  Shorten description.
 
   28 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> gt-itm-19961004.ebuild:
   Fixup to more modern standards, and confirmed to build against amd64 as
