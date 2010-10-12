@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.234 2010/10/08 19:43:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.235 2010/10/12 18:36:52 pacho Exp $
+
+*gconf-2.32.0 (12 Oct 2010)
+
+  12 Oct 2010; Pacho Ramos <pacho@gentoo.org> +gconf-2.32.0.ebuild:
+  Version bump for Gnome 2.32: libgconf-2 was ported to the DBus bindings in
+  gio, and no longer links to libdbus, allow external orbit-idl-2 compiler
+  for cross-compiling, add a GSettings backend to ease the transition from
+  GConf to GSettings/DConf, bugfixes and translation updates. Added
+  introspection support.
 
   08 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> gconf-2.28.1.ebuild:
   ppc64 stable wrt #324077
