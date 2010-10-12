@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.2.ebuild,v 1.6 2010/10/06 20:12:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.2.ebuild,v 1.7 2010/10/12 16:25:56 armin76 Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ~mips ~ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="eurephia examples iproute2 ipv6 minimal pam passwordsave selinux ssl static pkcs11 userland_BSD"
 
 DEPEND=">=dev-libs/lzo-1.07
