@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.6.ebuild,v 1.5 2010/09/16 16:26:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.10.ebuild,v 1.1 2010/10/12 14:00:54 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4 toolchain-funcs
+inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	# XXX: should finish merging the -9999 ebuild into this one ...
@@ -84,6 +84,7 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox-ose/VBoxPython2_4.so
 	usr/lib/virtualbox-ose/VBoxPython2_5.so
 	usr/lib/virtualbox-ose/VBoxPython2_6.so
+	usr/lib/virtualbox-ose/VBoxPython2_7.so
 	usr/lib/virtualbox-ose/VBoxXPCOMC.so
 	usr/lib/virtualbox-ose/VBoxOGLhostcrutil.so
 	usr/lib/virtualbox-ose/VBoxNetDHCP.so"
@@ -112,10 +113,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic mesa checks in configure
-	epatch "${FILESDIR}/${PN}-3.2.0-mesa-check.patch"
-
-	# fix with newer iasl (bug #319127)
-	epatch "${FILESDIR}/${PN}-3.1.8-iasl-length-calculation-fix.patch"
+	epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch"
 
 	# fix build with --as-needed (bug #249295)
 	epatch "${FILESDIR}/${PN}-asneeded.patch"
