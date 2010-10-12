@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.4 2010/10/12 13:16:59 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.5 2010/10/12 15:54:35 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="GPL Arcade Volleyball"
@@ -22,10 +22,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/sdl-image
+DEPEND="media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-net
-	media-libs/libsdl"
-DEPEND="${RDEPEND}"
+	media-libs/libsdl[joystick,video]"
 
 src_prepare() {
 	local d
