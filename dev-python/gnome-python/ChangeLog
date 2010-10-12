@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.159 2010/10/10 10:50:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.160 2010/10/12 08:15:17 eva Exp $
+
+  12 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-python-2.26.1.ebuild:
+  Clean up old revision.
 
   10 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   gnome-python-2.28.1.ebuild:
