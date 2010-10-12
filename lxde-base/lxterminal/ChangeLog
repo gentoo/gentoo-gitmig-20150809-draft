@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.13 2010/07/29 14:53:06 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.14 2010/10/12 15:22:13 vostorga Exp $
+
+*lxterminal-0.1.9 (12 Oct 2010)
+
+  12 Oct 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +lxterminal-0.1.9.ebuild:
+  Version bump to 0.1.9 . Fixes a configuration file corruption issue.
 
 *lxterminal-0.1.8 (29 Jul 2010)
 
