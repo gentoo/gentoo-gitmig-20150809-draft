@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.750 2010/10/12 05:23:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.751 2010/10/12 06:28:04 zmedico Exp $
+
+*portage-2.2_rc94 (12 Oct 2010)
+
+  12 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc94.ebuild:
+  2.2_rc94 version bump. This fixes a regression in repoman $Header handling
+  since 2.2_rc93, caused by an error in changes from bug #340475.
+
+*portage-2.1.9.16 (12 Oct 2010)
+
+  12 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.16.ebuild:
+  2.1.9.16 version bump. This fixes a regression in repoman $Header handling
+  since 2.1.9.15, caused by an error in changes from bug #340475.
 
   12 Oct 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.15.ebuild,
   -portage-2.2_rc93.ebuild:
