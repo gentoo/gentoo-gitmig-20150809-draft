@@ -1,5 +1,5 @@
---- makefile.orig	2010-04-03 12:13:41.000000000 +0200
-+++ makefile	2010-04-03 12:14:21.000000000 +0200
+--- makefile.orig	2010-10-12 13:13:59.000000000 +0200
++++ makefile	2010-10-12 13:15:19.000000000 +0200
 @@ -10,10 +10,6 @@
  # Documentation: http://spinroot.com/
  # Bug-reports:   bugs@spinroot.com
@@ -11,3 +11,12 @@
  # for a more picky compilation:
  # CFLAGS=-std=c99 -Wstrict-prototypes -pedantic -fno-strength-reduce -fno-builtin -W -Wshadow -Wpointer-arith -Wcast-qual -Winline -Wall -g
  
+@@ -37,7 +33,7 @@
+ 	tl_mem.o tl_rewrt.o tl_cache.o
+ 
+ spin:	$(SPIN_OS) $(TL_OS)
+-	$(CC) $(CFLAGS) -o spin $(SPIN_OS) $(TL_OS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o spin $(SPIN_OS) $(TL_OS)
+ 
+ spin.o:	spin.y
+ 	$(YACC) $(YFLAGS) spin.y

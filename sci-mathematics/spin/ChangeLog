@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/spin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.3 2010/06/22 17:49:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.4 2010/10/12 11:16:28 phajdan.jr Exp $
+
+  12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> -spin-5.2.4.ebuild,
+  -spin-5.2.5.ebuild, files/spin-makefile.patch:
+  Respect LDFLAGS, bug #337093 by flameeyes. Remove old.
 
 *spin-5.2.5-r1 (22 Jun 2010)
 
