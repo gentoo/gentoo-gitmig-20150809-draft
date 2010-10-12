@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.29 2010/10/10 07:25:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.30 2010/10/12 16:55:46 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> numlockx-1.2.ebuild:
+  alpha/sparc stable wrt #339726
 
   10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> numlockx-1.2.ebuild:
   x86 stable wrt bug #339726
