@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.12 2010/09/16 10:34:53 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.13 2010/10/12 02:07:55 mr_bones_ Exp $
 
-inherit games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="a multi-user dungeon game system server"
 HOMEPAGE="http://www.circlemud.org/"
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl"
 
-S="${WORKDIR}/circle-${PV}"
+S=${WORKDIR}/circle-${PV}
 
 src_prepare() {
 	cd src
@@ -26,10 +26,9 @@ src_prepare() {
 
 	# make circlemud fit into Gentoo nicely
 	sed -i \
-		-e "s:\"lib\":\"${GAMES_DATADIR}/${PN}\":g" config.c || die
-	sed -i \
-		-e "s:\(LOGNAME = \)NULL:\1\"${GAMES_LOGDIR}/${PN}.log\":g" config.c \
-			|| die
+		-e "s:\"lib\":\"${GAMES_DATADIR}/${PN}\":g" \
+		-e "s:\(LOGNAME = \)NULL:\1\"${GAMES_LOGDIR}/${PN}.log\":g" \
+		config.c || die
 	sed -i \
 		-e "s:etc/:${GAMES_SYSCONFDIR}/${PN}/:g" db.h || die
 
@@ -40,16 +39,15 @@ src_prepare() {
 }
 
 src_compile() {
-	cd src
-	emake || die "emake failed"
+	emake -C src || die "emake failed"
 }
 
 src_install() {
 	for bin in autowiz delobjs listrent mudpasswd play2to3 purgeplay \
 	           shopconv showplay sign split wld2html ; do
-		newgamesbin bin/${bin} ${PN}-${bin}
+		newgamesbin bin/${bin} ${PN}-${bin} || die
 	done
-	dogamesbin bin/circle
+	dogamesbin bin/circle || die
 
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r lib/*  "${D}/${GAMES_DATADIR}/${PN}" || die
