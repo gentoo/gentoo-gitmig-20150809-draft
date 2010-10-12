@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.148 2010/09/12 19:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.149 2010/10/12 12:34:06 flameeyes Exp $
+
+*strace-4.5.20-r1 (12 Oct 2010)
+
+  12 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -strace-4.5.18.ebuild, -files/strace-4.5.18-arm-cache.patch,
+  -files/strace-4.5.18-arm-syscalls.patch, +strace-4.5.20-r1.ebuild,
+  +files/strace-4.5.20-ioctlent.patch,
+  -files/strace-fix-arm-bad-syscall.patch, metadata.xml:
+  Remove old version and cleanup files; add new revision with an alsa USE
+  flag and with updated ioctl() list (regenerated at build time).
 
   12 Sep 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.20.ebuild,
   +files/strace-4.5.20-sparc.patch:
