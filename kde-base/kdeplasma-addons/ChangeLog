@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.73 2010/10/06 16:00:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.74 2010/10/12 20:21:57 dilfridge Exp $
+
+  12 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdeplasma-addons-4.4.5.ebuild, kdeplasma-addons-4.5.1.ebuild,
+  kdeplasma-addons-4.5.2.ebuild:
+  Add dependency on app-crypt/qca-ossl:2, fixing bug 327691
 
   06 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdeplasma-addons-4.5.2.ebuild:
