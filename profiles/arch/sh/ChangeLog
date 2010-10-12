@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.51 2010/08/15 11:46:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.52 2010/10/12 11:53:29 armin76 Exp $
+
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask wildmidi
 
   15 Aug 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask iphone, some cleanup
