@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.20 2010/02/04 18:18:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.21 2010/10/13 14:59:47 c1pher Exp $
+
+*cryptlib-3.3.3-r1 (13 Oct 2010)
+
+  13 Oct 2010; Dane Smith <c1pher@gentoo.org> +cryptlib-3.3.3-r1.ebuild:
+  Revision bump. Address the QA issues wrt bugs #298461 and bug #330289.
+  Also
+  contains some cosmetic fixes.
 
   04 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cryptlib-3.3.3.ebuild:
