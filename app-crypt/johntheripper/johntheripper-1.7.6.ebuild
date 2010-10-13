@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6.ebuild,v 1.1 2010/10/13 13:09:07 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6.ebuild,v 1.2 2010/10/13 17:28:08 c1pher Exp $
 
 EAPI="2"
 
@@ -122,31 +122,31 @@ src_test() {
 
 src_install() {
 	# executables
-	dosbin run/john
-	newsbin run/mailer john-mailer
+	dosbin run/john || die
+	newsbin run/mailer john-mailer || die
 
-	pax-mark -m "${D}"/usr/sbin/john
+	pax-mark -m "${D}"/usr/sbin/john || die
 
-	dosym john /usr/sbin/unafs
-	dosym john /usr/sbin/unique
-	dosym john /usr/sbin/unshadow
+	dosym john /usr/sbin/unafs || die
+	dosym john /usr/sbin/unique || die
+	dosym john /usr/sbin/unshadow || die
 
 	# jumbo-patch additions
 	if ! use minimal; then
-		dosym john /usr/sbin/undrop
-		dosbin run/calc_stat
-		dosbin run/genmkvpwd
-		dosbin run/mkvcalcproba
+		dosym john /usr/sbin/undrop || die
+		dosbin run/calc_stat || die
+		dosbin run/genmkvpwd || die
+		dosbin run/mkvcalcproba || die
 		insinto /etc/john
-		doins run/genincstats.rb run/stats
-		doins run/netscreen.py run/sap_prepare.pl
+		doins run/genincstats.rb run/stats || die
+		doins run/netscreen.py run/sap_prepare.pl || die
 	fi
 
 	# config files
 	insinto /etc/john
-	doins run/john.conf
-	doins run/*.chr run/password.lst
+	doins run/john.conf || die
+	doins run/*.chr run/password.lst || die
 
 	# documentation
-	dodoc doc/*
+	dodoc doc/* || die
 }
