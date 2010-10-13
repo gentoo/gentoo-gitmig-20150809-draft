@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.39 2010/10/13 17:59:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.40 2010/10/13 18:56:37 hwoarang Exp $
+
+  13 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  icedtea6-bin-1.9.ebuild, icedtea6-bin-1.9.1.ebuild:
+  Revert keywords in 1.9 and stabilize correct version. Bug #340819
 
   13 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   icedtea6-bin-1.9.1.ebuild:
