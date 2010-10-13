@@ -1,6 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.50 2010/09/28 05:15:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.51 2010/10/13 08:30:42 caster Exp $
+
+# Vlastimil Babka <caster@gentoo.org> (13 Oct 2010)
+# dev-util/systemtap not keyworded on ppc arches. Note that this currently applies for java-overlay
+# icedtea only, but the plan is to move it to main tree.
+dev-java/icedtea systemtap
 
 # Joseph Jezak <josejx@gentoo.org> (11 Aug 2010)
 # ppc32: Needs libimobiledevice keyworded, bug 325839
