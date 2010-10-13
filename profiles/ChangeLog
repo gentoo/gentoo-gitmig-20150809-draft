@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4648 2010/10/13 15:26:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4649 2010/10/13 21:32:41 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.mask:
+  Mask vala USE flag from net-libs/telepathy-glib.
 
   13 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Mask new libobjc2 package, some gnustep-base packages still need to

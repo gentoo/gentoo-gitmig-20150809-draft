@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.170 2010/09/27 20:04:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.171 2010/10/13 21:32:41 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Gilles Dartiguelongue <eva@gentoo.org> (13 Oct 2010)
+# Mask vala USE flag since it depends on a masked revision
+# of dev-libs/gobject-introspection
+net-libs/telepathy-glib vala
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (16 Sep 2010)
 # Mask ayatana USE flag, as its deps aren't in good shape
