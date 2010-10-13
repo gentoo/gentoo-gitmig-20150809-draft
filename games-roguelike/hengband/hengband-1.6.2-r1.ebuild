@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.4 2010/06/04 06:32:45 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.5 2010/10/13 23:46:42 mr_bones_ Exp $
 
-inherit toolchain-funcs eutils autotools games
+EAPI=2
+inherit eutils autotools games
 
 DESCRIPTION="An Angband variant, with a Japanese/fantasy theme"
 HOMEPAGE="http://hengband.sourceforge.jp/en/"
@@ -24,14 +24,15 @@ src_prepare() {
 	# Removing Xaw dependency as is not used
 	sed -i \
 		-e '/Xaw/d' src/main-xaw.c \
-			|| die "sed main-xaw failed"
+		|| die
 	sed -i \
 		-e 's|root\.|root:|' lib/*/Makefile.in \
-			|| die "sed Makefile.in failed"
+		|| die
 	sed -i \
 		-e 's:/games/:/:g' configure \
-			|| die "sed configure failed"
-	epatch "../${P}"-mispellings.patch	\
+		|| die
+	epatch \
+		"../${P}"-mispellings.patch	\
 		"${FILESDIR}/${P}"-added_faq.patch
 	eautoreconf
 }
@@ -40,12 +41,10 @@ src_configure() {
 	local myconf
 	use linguas_ja || myconf="--disable-japanese"
 
-	tc-export CC
 	egamesconf \
 		--with-setgid=${GAMES_GROUP} \
-		`use_with X x` \
-		${myconf} \
-		|| die
+		$(use_with X x) \
+		${myconf}
 }
 
 src_install() {
