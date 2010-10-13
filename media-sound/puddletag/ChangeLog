@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.1 2010/10/09 19:04:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.2 2010/10/13 11:30:52 hwoarang Exp $
+
+  13 Oct 2010; Markos Chandras <hwoarang@gentoo.org> puddletag-0.9.5.ebuild:
+  Keyworded for amd64. Bug #340497
 
 *puddletag-0.9.5 (09 Oct 2010)
 
