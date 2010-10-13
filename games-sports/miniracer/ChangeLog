@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/miniracer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/ChangeLog,v 1.7 2010/02/27 21:04:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/ChangeLog,v 1.8 2010/10/13 12:28:28 tupone Exp $
+
+  13 Oct 2010; Tupone Alfredo <tupone@gentoo.org> miniracer-1.04.ebuild,
+  +files/miniracer-1.04-ldflags.patch,
+  files/miniracer-1.04-nosharedelf.patch:
+  Respect LDFLAGS. Bug #335459 by flameeyes@gentoo.org
 
   27 Feb 2010; Tupone Alfredo <tupone@gentoo.org> miniracer-1.04.ebuild,
   +files/miniracer-1.04-nosharedelf.patch:

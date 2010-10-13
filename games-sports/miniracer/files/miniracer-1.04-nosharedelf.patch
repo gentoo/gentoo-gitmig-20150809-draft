@@ -21,15 +21,3 @@
 -      
 \ No newline at end of file
 +exec @GAMES_LIBDIR@/engine.glx $*
---- Makefile.old	2010-02-27 21:29:15.000000000 +0100
-+++ Makefile	2010-02-27 21:31:15.000000000 +0100
-@@ -48,7 +48,8 @@
- 	install -d $(DESTDIR)/usr/share/games/MiniRacer
- 	install -d $(DESTDIR)/usr/share/games/MiniRacer/data
- 	install -d $(DESTDIR)/usr/share/games/MiniRacer/data/maps
--	install -m 755 engine.glx $(DESTDIR)/usr/share/games/MiniRacer
-+	install -d $(DESTDIR)@GAMES_LIBDIR@
-+	install -m 755 engine.glx $(DESTDIR)@GAMES_LIBDIR@
- 	install -m 644 data/pak0.pak $(DESTDIR)/usr/share/games/MiniRacer/data
- 	install -m 644 data/config.cfg $(DESTDIR)/usr/share/games/MiniRacer/data
- 	install -m 755 miniracer $(DESTDIR)/usr/bin/miniracer
