@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.59 2010/09/16 16:04:11 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.60 2010/10/13 16:40:34 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -380,7 +380,7 @@ enable_cmake-utils_src_install() {
 
 	_check_build_dir
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
-	base_src_install
+	base_src_install "$@"
 	popd > /dev/null
 
 	# Backward compatibility, for non-array variables
