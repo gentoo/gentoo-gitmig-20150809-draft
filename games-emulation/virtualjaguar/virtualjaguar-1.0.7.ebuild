@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.6 2010/09/30 15:54:06 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.7 2010/10/13 17:55:20 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="an Atari Jaguar emulator"
 HOMEPAGE="http://www.icculus.org/virtualjaguar/"
@@ -15,36 +15,28 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
-	media-libs/libsdl"
+	media-libs/libsdl[audio,joystick,opengl,video]"
 
 S=${WORKDIR}/${P}-src
 
 src_prepare() {
-	sed -i \
-		-e '/^CC/d' \
-		-e "/^LD\b/s:=.*:=$(tc-getCXX):" \
-		-e 's:-O2:$(ECFLAGS):' Makefile \
-		|| die "sed Makefile failed"
-	mkdir obj || die "mkdir failed" # silly makefile
-
+	mkdir obj || die
 	edos2unix src/sdlemu_config.cpp
-	epatch "${FILESDIR}/${PV}-cdintf_linux.patch" \
-		"${FILESDIR}"/${P}-gcc43.patch
+	epatch \
+		"${FILESDIR}"/${PV}-cdintf_linux.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-array.patch
 
-	cp "${FILESDIR}/virtualjaguar" "${T}" || die "cp failed"
-
-	sed -i \
-		-e "s:GENTOODIR:${GAMES_BINDIR}:" \
-		"${T}/virtualjaguar" \
-		|| die "sed failed"
+	sed -e "s:GENTOODIR:${GAMES_BINDIR}:" \
+		"${FILESDIR}/virtualjaguar" > "${T}/virtualjaguar" || die
 }
 
 src_compile() {
-	export ECFLAGS="${CFLAGS}" \
-		SYSTYPE=__GCCUNIX__ \
+	export SYSTYPE=__GCCUNIX__ \
 		GLLIB=-lGL \
 		SDLLIBTYPE=--libs
-	emake obj/m68kops.h || die # silly makefile
+	emake obj/m68kops.h || die
 	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 

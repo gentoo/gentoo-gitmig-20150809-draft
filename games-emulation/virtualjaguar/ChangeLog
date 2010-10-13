@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/virtualjaguar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.13 2010/09/30 15:54:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.14 2010/10/13 17:55:20 mr_bones_ Exp $
+
+  13 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  virtualjaguar-1.0.7.ebuild, +files/virtualjaguar-1.0.7-array.patch,
+  +files/virtualjaguar-1.0.7-makefile.patch:
+  tidy; add use deps; fix some compile warnings
 
   30 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
   virtualjaguar-1.0.7.ebuild:
