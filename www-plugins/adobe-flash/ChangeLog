@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.52 2010/10/13 06:42:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.53 2010/10/13 11:29:43 hwoarang Exp $
+
+  13 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  adobe-flash-10.1.85.3.ebuild:
+  Stable on amd64 wrt bug #337204
 
   13 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   adobe-flash-10.1.85.3.ebuild:
