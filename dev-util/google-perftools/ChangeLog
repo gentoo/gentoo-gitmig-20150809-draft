@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.5 2010/10/06 12:01:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.6 2010/10/13 20:14:45 maekke Exp $
+
+  13 Oct 2010; Markus Meier <maekke@gentoo.org> google-perftools-1.6.ebuild:
+  x86 stable, bug #340130
 
   06 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   google-perftools-1.6.ebuild:
