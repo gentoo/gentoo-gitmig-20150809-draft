@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2a.ebuild,v 1.4 2009/08/31 21:53:26 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a.ebuild,v 1.1 2010/10/13 23:10:59 c1pher Exp $
 
 EAPI="2"
 
@@ -10,9 +10,9 @@ DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
 SRC_URI="${P}.tar.gz"
 
-LICENSE="truecrypt-2.7"
+LICENSE="truecrypt-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
 RESTRICT="bindist fetch mirror"
 
@@ -27,13 +27,13 @@ RDEPEND="${RDEPEND}
 S="${WORKDIR}/${P}-source"
 
 pkg_nofetch() {
-	elog "Please download tar.gz source from:"
-	elog "http://www.truecrypt.org/downloads2.php"
+	elog "Please download .tar.gz source from:"
+	elog "http://www.truecrypt.org/downloads2"
 	elog "Then put the file in ${DISTDIR}/${SRC_URI}"
 }
 
 pkg_setup() {
-	local CONFIG_CHECK="~BLK_DEV_DM ~DM_CRYPT ~FUSE_FS ~CRYPTO"
+	local CONFIG_CHECK="~BLK_DEV_DM ~DM_CRYPT ~FUSE_FS ~CRYPTO ~CRYPTO_XTS"
 	linux-info_pkg_setup
 
 	local WX_GTK_VER="2.8"
@@ -85,23 +85,15 @@ src_test() {
 }
 
 src_install() {
-	dobin Main/truecrypt
-	dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf"
-	insinto "/$(get_libdir)/rcscripts/addons"
-	newins "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh"
+	dobin Main/truecrypt || die
+	dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf" || die
+	exeinto "/$(get_libdir)/rcscripts/addons"
+	newexe "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh" || die
 }
 
 pkg_postinst() {
-	warn_license
-}
-pkg_preinst() {
-	warn_license
-}
-
-warn_license() {
 	ewarn "TrueCrypt has very restrictive license."
 	ewarn "Please read the ${LICENSE} license in ${PORTDIR}/licenses"
 	ewarn "directory before using TrueCrypt. Please be explicitly aware of"
 	ewarn "the limitations on redistribution of binaries or modified source."
-	ebeep 5
 }

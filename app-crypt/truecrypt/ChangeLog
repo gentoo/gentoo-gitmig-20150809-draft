@@ -1,6 +1,19 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.54 2010/10/13 18:03:22 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.55 2010/10/13 23:10:59 c1pher Exp $
+
+*truecrypt-7.0a (13 Oct 2010)
+
+  13 Oct 2010; Dane Smith <c1pher@gentoo.org> -truecrypt-4.3a.ebuild,
+  -files/truecrypt-4.3a-2.6.23.patch, -files/truecrypt-4.3a-2.6.24.patch,
+  -files/truecrypt-4.3a-2.6.29.patch, -truecrypt-6.2a.ebuild,
+  -truecrypt-6.3a.ebuild, +truecrypt-7.0a.ebuild:
+  Version bump wrt bug 329075. Uses new license that was already added.
+  truecrypt-stop is now executeable. Addresses bug 234618. Checks
+  CONFIG_CRYPTO_XTS wrt bug 298907. Only warns about the license once. Added
+  a number of missing || die. Thanks Eray Aslan for much of the ebuild
+  clean-up! Also removes all old versions as upstream will no longer provide 
+  sources for any of them.
 
   13 Oct 2010; Dane Smith <c1pher@gentoo.org> truecrypt-6.3a.ebuild:
   Updated the fetch link wrt bug 335854.
