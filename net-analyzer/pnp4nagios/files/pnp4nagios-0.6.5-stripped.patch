@@ -1,0 +1,13 @@
+--- Makefile.in	2010-06-03 10:00:23.000000000 -0400
++++ Makefile.in.new	2010-08-12 12:21:41.000000000 -0400
+@@ -121,8 +121,8 @@
+ 
+ install-unstripped:
+ 	cd $(SRC_BASE) && $(MAKE) $@
+-	cd $(SRC_SHARE) && $(MAKE) $@
+-	cd $(SRC_SCRIPTS) && $(MAKE) $@
++	cd $(SRC_SHARE) && $(MAKE) install
++	cd $(SRC_SCRIPTS) && $(MAKE) install
+ 	$(MAKE) install-basic
+ 
+ install-basic:

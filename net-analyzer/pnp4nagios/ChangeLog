@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.21 2010/07/30 15:56:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.22 2010/10/13 20:00:17 olemarkus Exp $
+
+*pnp4nagios-0.6.5-r1 (13 Oct 2010)
+
+  13 Oct 2010; <olemarkus@gentoo.org> +pnp4nagios-0.6.5-r1.ebuild,
+  +files/pnp4nagios-0.6.5-makefile.patch,
+  +files/pnp4nagios-0.6.5-stripped.patch:
+  Added pnp4nagios-0.6.5-r1.ebuild with QA fixes from bug 332451 by c1pher
+  as well as fixes required for PHP 5.3
 
   30 Jul 2010; Tobias Scherbaum <dertobi123@gentoo.org>
   pnp4nagios-0.6.4.ebuild, pnp4nagios-0.6.5.ebuild:
