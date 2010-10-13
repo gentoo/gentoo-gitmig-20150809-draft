@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.51 2010/10/08 23:13:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.52 2010/10/13 21:22:02 cardoe Exp $
+
+*gtk-vnc-0.4.2_pre20100917 (13 Oct 2010)
+
+  13 Oct 2010; Doug Goldstein <cardoe@gentoo.org>
+  +gtk-vnc-0.4.2_pre20100917.ebuild:
+  git snapshot of the latest master since it fixes a lot of bugs with
+  virt-manager and upstream for gtk-vnc doesn't recommend the current
+  version with virt-manager since it exposes a crasher in gtk-vnc through
+  normal usage. gtk-vnc upstream is too busy to make another release right
+  now so we'll go with a git snapshot.
 
   08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gtk-vnc-0.3.8-r1.ebuild:
