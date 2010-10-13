@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.18 2010/09/13 18:08:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.19 2010/10/13 01:30:40 zmedico Exp $
 
 # EAPI 1 since python-2.5 is also EAPI 1.
 EAPI=1
@@ -22,6 +22,7 @@ DEPEND="${python_dep}
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 # the debugedit blocker is for bug #289967
 RDEPEND="${python_dep}
+	!>=dev-lang/python-2.6.6:2.6 !dev-lang/python:2.7
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )

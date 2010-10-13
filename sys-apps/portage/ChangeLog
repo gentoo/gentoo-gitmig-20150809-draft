@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.751 2010/10/12 06:28:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.752 2010/10/13 01:30:40 zmedico Exp $
+
+  13 Oct 2010; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
+  portage-2.1.6.13.ebuild, portage-2.1.7.17.ebuild, portage-2.1.8.3.ebuild,
+  portage-2.2_rc67.ebuild:
+  Bug #330937 - Make older portage block incompatible versions of python2.
 
 *portage-2.2_rc94 (12 Oct 2010)
 
