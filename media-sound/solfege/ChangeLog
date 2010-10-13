@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.44 2010/10/12 22:52:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.45 2010/10/13 11:12:55 hwoarang Exp $
+
+  13 Oct 2010; Markos Chandras <hwoarang@gentoo.org> solfege-3.16.4.ebuild:
+  Stable on amd64 wrt bug #340309
 
 *solfege-3.18.4 (12 Oct 2010)
 
