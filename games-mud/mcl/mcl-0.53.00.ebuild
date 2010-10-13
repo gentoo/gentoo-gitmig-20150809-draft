@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.20 2010/04/21 11:48:50 tupone Exp $
-EAPI="2"
-PYTHON_DEPEND="python? 2"
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.21 2010/10/13 21:26:37 mr_bones_ Exp $
 
+EAPI=2
+PYTHON_DEPEND="python? 2"
 inherit eutils python games
 
 DESCRIPTION="A console MUD client scriptable in Perl and Python"
@@ -49,8 +49,7 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		$(use_enable perl) \
-		$(use_enable python) \
-		|| die
+		$(use_enable python)
 }
 
 src_install () {
