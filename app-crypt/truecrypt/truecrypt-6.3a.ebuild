@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.3a.ebuild,v 1.2 2009/12/27 08:54:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.3a.ebuild,v 1.3 2010/10/13 18:03:22 c1pher Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${P}-source"
 
 pkg_nofetch() {
 	elog "Please download .tar.gz source from:"
-	elog "http://www.truecrypt.org/downloads2"
+	elog "http://www.truecrypt.org/pastversions"
 	elog "Then put the file in ${DISTDIR}/${SRC_URI}"
 }
 

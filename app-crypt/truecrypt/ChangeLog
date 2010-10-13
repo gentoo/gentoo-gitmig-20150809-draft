@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/truecrypt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.53 2009/12/27 08:54:08 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.54 2010/10/13 18:03:22 c1pher Exp $
+
+  13 Oct 2010; Dane Smith <c1pher@gentoo.org> truecrypt-6.3a.ebuild:
+  Updated the fetch link wrt bug 335854.
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> truecrypt-6.3a.ebuild:
   Marked ~ppc for bug #275498.
