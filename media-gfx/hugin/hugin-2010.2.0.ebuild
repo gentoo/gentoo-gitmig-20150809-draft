@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.2.0_beta2.ebuild,v 1.2 2010/09/16 17:08:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.2.0.ebuild,v 1.1 2010/10/13 05:56:55 maekke Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -24,7 +24,7 @@ CDEPEND="
 	>=media-gfx/enblend-3.0_p20080807
 	media-gfx/exiv2
 	media-libs/jpeg:0
-	>=media-libs/libpano13-2.9.17_beta1
+	>=media-libs/libpano13-2.9.17
 	media-libs/libpng
 	media-libs/openexr
 	media-libs/tiff
