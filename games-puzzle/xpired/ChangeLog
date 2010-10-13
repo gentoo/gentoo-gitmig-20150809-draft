@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xpired
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/ChangeLog,v 1.5 2010/10/13 07:53:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/ChangeLog,v 1.6 2010/10/13 23:37:47 mr_bones_ Exp $
+
+  13 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> xpired-1.22.ebuild,
+  files/xpired-1.22-ldflags.patch:
+  tidy; honor CFLAGS and CC; install desktop files
 
   13 Oct 2010; Tupone Alfredo <tupone@gentoo.org> xpired-1.22.ebuild,
   +files/xpired-1.22-ldflags.patch:
