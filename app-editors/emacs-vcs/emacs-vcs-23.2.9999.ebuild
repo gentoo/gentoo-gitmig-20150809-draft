@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.6 2010/10/11 21:52:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.7 2010/10/13 14:41:48 ulm Exp $
 
 EAPI=2
 
@@ -266,6 +266,7 @@ pkg_preinst() {
 	if [ -f "${D}"${infodir}/dir.orig ]; then
 		# prefer existing file if it has survived to here
 		mv "${D}"${infodir}/dir{.orig,} || die "moving info dir failed"
+		touch "${D}"${infodir}/dir
 	else
 		einfo "Regenerating Info directory index in ${infodir} ..."
 		rm -f "${D}"${infodir}/dir{,.*}
