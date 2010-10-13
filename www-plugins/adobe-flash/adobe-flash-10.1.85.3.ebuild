@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.85.3.ebuild,v 1.3 2010/10/13 11:29:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.85.3.ebuild,v 1.4 2010/10/13 16:44:36 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -28,10 +28,11 @@ NATIVE_DEPS="x11-libs/gtk+:2
 EMUL_DEPS=">=app-emulation/emul-linux-x86-gtklibs-20100409-r1
 	app-emulation/emul-linux-x86-soundlibs"
 
+DEPEND="nspluginwrapper? ( www-plugins/nspluginwrapper )"
 RDEPEND="x86? ( $NATIVE_DEPS )
 	amd64? ( $EMUL_DEPS )
-	|| ( media-fonts/liberation-fonts media-fonts/corefonts )"
-DEPEND="nspluginwrapper? ( www-plugins/nspluginwrapper )"
+	|| ( media-fonts/liberation-fonts media-fonts/corefonts )
+	${DEPEND}"
 
 # Where should this all go? (Bug #328639)
 INSTALL_BASE="opt/Adobe/flash-player"

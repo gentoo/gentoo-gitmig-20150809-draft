@@ -1,6 +1,17 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.53 2010/10/13 11:29:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.54 2010/10/13 16:44:36 lack Exp $
+
+  13 Oct 2010; Jim Ramsay <lack@gentoo.org>
+  adobe-flash-10.1.85.3.ebuild:
+  nsplugin should be in RDEPEND too (Bug #334377)
+
+  13 Oct 2010; Jim Ramsay <lack@gentoo.org>
+  -adobe-flash-10.0.45.2-r2.ebuild, -adobe-flash-10.1.82.76.ebuild,
+  -adobe-flash-10.1.82.76-r1.ebuild:
+  Version cleanup: Removing 10.0 since 10.2 is the new more-secure release
+  with native 64-bit code, and removing 10.1.82.76 now that 10.1.85.3 is
+  stable
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   adobe-flash-10.1.85.3.ebuild:
