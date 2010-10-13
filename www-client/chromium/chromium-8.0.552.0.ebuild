@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.544.0-r1.ebuild,v 1.1 2010/10/09 14:00:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.0.ebuild,v 1.1 2010/10/13 14:13:33 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
+	>=media-video/ffmpeg-0.6_p25423[threads]
 	cups? ( >=net-print/cups-1.4.4 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
@@ -65,20 +66,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Small fixes to the system-provided sqlite support,
-	# to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-system-sqlite-r0.patch
-
 	# Small fix to the system-provided icu support,
 	# to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
+	epatch "${FILESDIR}"/${PN}-system-icu-r1.patch
 
 	# Enable optional support for gecko-mediaplayer.
 	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
-	remove_bundled_lib "third_party/cros"
 	remove_bundled_lib "third_party/icu"
 	remove_bundled_lib "third_party/jemalloc"
 	remove_bundled_lib "third_party/lcov"
@@ -93,6 +89,7 @@ src_prepare() {
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
+	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 
@@ -110,11 +107,11 @@ src_configure() {
 	myconf+=" -Ddisable_sse2=1"
 
 	# Use system-provided libraries.
-	# TODO: use_system_ffmpeg (http://crbug.com/50678).
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl (need to consult upstream).
 	myconf+="
 		-Duse_system_bzip2=1
+		-Duse_system_ffmpeg=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
@@ -159,6 +156,10 @@ src_configure() {
 		# thus making it possible to use gecko-mediaplayer.
 		append-flags -DGENTOO_CHROMIUM_ENABLE_GECKO_MEDIAPLAYER
 	fi
+
+	# Our system ffmpeg should support more codecs than the bundled one
+	# for Chromium.
+	myconf+=" -Dproprietary_codecs=1"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
@@ -219,8 +220,11 @@ src_install() {
 	newman out/Release/chrome.1 chrome.1 || die
 	newman out/Release/chrome.1 chromium.1 || die
 
-	doexe out/Release/ffmpegsumo_nolink || die
-	doexe out/Release/libffmpegsumo.so || die
+	# Chromium looks for these in its folder
+	# See media_posix.cc and base_paths_linux.cc
+	dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png || die
