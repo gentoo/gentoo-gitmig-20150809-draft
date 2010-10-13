@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.15 2010/10/07 09:06:55 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.16 2010/10/13 23:47:25 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="a general strategy game system"
@@ -27,8 +27,7 @@ PATCHES=( "${FILESDIR}"/${PN}-gcc-3.4.patch
 
 src_configure() {
 	egamesconf \
-		--enable-alternate-scoresdir="${GAMES_STATEDIR}"/${PN} \
-		|| die
+		--enable-alternate-scoresdir="${GAMES_STATEDIR}"/${PN}
 }
 
 src_compile() {
