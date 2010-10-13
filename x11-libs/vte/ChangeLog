@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.259 2010/10/09 20:45:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.260 2010/10/13 21:27:00 pacho Exp $
+
+*vte-0.26.1 (13 Oct 2010)
+
+  13 Oct 2010; Pacho Ramos <pacho@gentoo.org> -vte-0.26.0.ebuild,
+  +vte-0.26.1.ebuild:
+  Version bump with important fix: Pass the correct TERM value inside envp
+  when spawning (that will stop 'less' from working awfully). Remove old and
+  broken version.
 
 *vte-0.26.0 (09 Oct 2010)
 
