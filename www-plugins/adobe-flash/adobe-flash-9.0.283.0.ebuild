@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.280.0.ebuild,v 1.1 2010/08/15 00:43:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.283.0.ebuild,v 1.1 2010/10/13 01:37:55 lack Exp $
 
 inherit nsplugins
 
@@ -10,7 +10,9 @@ HOMEPAGE="http://www.adobe.com/go/kb406791"
 IUSE=""
 SLOT="0"
 
-KEYWORDS="-* amd64 x86"
+# NOTE: Please do not mark this legacy 9.0 series stable on any architecture.
+KEYWORDS="-* ~amd64 ~x86"
+
 LICENSE="AdobeFlash-9.0.31.0"
 RESTRICT="strip mirror"
 
