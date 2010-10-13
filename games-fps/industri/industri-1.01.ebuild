@@ -1,6 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.16 2010/03/10 22:35:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.17 2010/10/13 09:53:58 tupone Exp $
+EAPI="2"
 
 inherit eutils toolchain-funcs games
 
@@ -30,15 +31,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/industri_BIN
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"/linux
-	mv Makefile.i386linux Makefile
-	sed -i -e "s:-mpentiumpro.*:${CFLAGS} \\\\:" Makefile || die "sed failed"
+src_prepare() {
+	mv linux/Makefile{.i386linux,}
+	sed -i -e "s:-mpentiumpro.*:${CFLAGS} \\\\:" linux/Makefile || die "sed failed"
 
 	# Remove duplicated typedefs #71841
-	cd "${S}"
 	for typ in PFNGLFLUSHVERTEXARRAYRANGEAPPLEPROC PFNGLVERTEXARRAYRANGEAPPLEPROC ; do
 		if echo '#include <GL/gl.h>' | $(tc-getCC) -E - 2>/dev/null | grep -sq ${typ} ; then
 			sed -i \
@@ -52,7 +49,8 @@ src_unpack() {
 		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:g' \
 		gl_warp.c || die
 
-	epatch "${FILESDIR}"/${P}-exec-stack.patch
+	epatch "${FILESDIR}"/${P}-exec-stack.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
