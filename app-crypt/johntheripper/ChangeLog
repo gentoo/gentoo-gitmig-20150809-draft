@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.116 2010/10/08 22:08:43 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.117 2010/10/13 13:09:07 c1pher Exp $
+
+*johntheripper-1.7.6 (13 Oct 2010)
+
+  13 Oct 2010; Dane Smith <c1pher@gentoo.org> +johntheripper-1.7.6.ebuild,
+  +files/johntheripper-1.7.6-cflags.patch:
+  Version bump for johntheripper wrt bug #327383. Includes a new patch.
 
   08 Oct 2010; Dane Smith <c1pher@gentoo.org>
   -files/johntheripper-1.7.2-params.h.patch,
