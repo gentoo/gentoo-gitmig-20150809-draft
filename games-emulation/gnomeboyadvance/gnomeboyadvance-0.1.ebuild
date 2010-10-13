@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.12 2010/04/27 12:20:39 tupone Exp $
-EAPI="2"
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.13 2010/10/13 16:39:38 mr_bones_ Exp $
 
+EAPI=2
+PYTHON_DEPEND="2"
 inherit python games
 
 DESCRIPTION="A GNOME Python frontend to VisualBoyAdvance"
