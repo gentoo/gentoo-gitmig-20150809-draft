@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.12 2010/09/21 09:11:00 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.13 2010/10/13 21:23:33 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="text mode Quake II"

@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.17 2010/10/13 09:53:58 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.18 2010/10/13 21:25:00 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Quake/Tenebrae based, single player game"
