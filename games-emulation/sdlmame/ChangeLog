@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.35 2010/10/12 18:50:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.36 2010/10/13 15:06:31 mr_bones_ Exp $
+
+  13 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  sdlmame-0.139_p3.ebuild:
+  Only convert files that are mentioned in the patchs and only do it for _p
+  ebuilds.
 
   12 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   -sdlmame-0.139_p2.ebuild, sdlmame-0.139_p3.ebuild:
