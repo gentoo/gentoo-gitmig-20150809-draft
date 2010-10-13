@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6046 2010/10/13 08:34:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6047 2010/10/13 21:54:02 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2859,6 +2859,7 @@ net-libs/ptlib:video - Enable video support
 net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/telepathy-glib:introspection - Use dev-libs/gobject-introspection for introspection
+net-libs/telepathy-glib:vala - Enable bindings for dev-lang/vala
 net-libs/webkit-gtk:coverage - enable code coverage support
 net-libs/webkit-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/webkit-gtk:websockets - enable full duplex single socket communication
