@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.16 2010/10/03 15:09:24 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.17 2010/10/13 00:10:16 anarchy Exp $
+
+  13 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9.ebuild,
+  firefox-3.6.9-r1.ebuild:
+  drop cups useflag/dep making printing always enabled
 
   03 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9-r1.ebuild:
   Fix bug #339513, thanks William Throwe
