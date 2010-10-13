@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/sdl-sopwith
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.12 2010/09/08 19:17:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.13 2010/10/13 20:11:55 maekke Exp $
+
+  13 Oct 2010; Markus Meier <maekke@gentoo.org> sdl-sopwith-1.7.4.ebuild:
+  x86 stable, bug #340447
 
 *sdl-sopwith-1.7.4 (08 Sep 2010)
 
