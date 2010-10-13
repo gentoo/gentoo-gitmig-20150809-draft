@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/libnss-mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.16 2010/10/10 11:02:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/ChangeLog,v 1.17 2010/10/13 20:09:57 maekke Exp $
+
+  13 Oct 2010; Markus Meier <maekke@gentoo.org>
+  libnss-mysql-1.5_p20060915-r1.ebuild:
+  x86 stable, bug #339681
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   libnss-mysql-1.5_p20060915-r1.ebuild:
