@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/rainbowcrack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.16 2010/10/13 13:32:09 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.17 2010/10/13 13:39:30 tove Exp $
 
 *rainbowcrack-1.2-r2 (13 Oct 2010)
 
@@ -11,7 +11,7 @@
 
   11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   rainbowcrack-1.2-r1.ebuild, +files/rainbowcrack-1.2-openssl-1.patch:
-  Fix building with OpenSSL >= 1.0.0 wrt #327373 by Diego E. PettenÃ².
+  Fix building with OpenSSL >= 1.0.0 wrt #327373 by Diego E. Pettenò.
 
   29 Mar 2009; Patrick Lauer <patrick@gentoo.org>
   rainbowcrack-1.2-r1.ebuild:
@@ -21,7 +21,7 @@
   +files/rainbowcrack-1.2-asneeded.patch, rainbowcrack-1.2-r1.ebuild:
   QA: Fixed compilation with forced --as-needed (bug 246871)
 
-  14 Dec 2008; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  14 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/rainbowcrack-1.2+gcc-4.3.patch, rainbowcrack-1.2-r1.ebuild:
   Add patch to build with GCC 4.3, thanks to Bert Karwatzki in bug #250623.
 
@@ -40,7 +40,7 @@
   11 Nov 2007; Samuli Suominen <drac@gentoo.org> rainbowcrack-1.2-r1.ebuild:
   amd64 stable wrt #198673
 
-  11 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> ChangeLog:
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> ChangeLog:
   Stable on x86 (bug #198673)
 
 *rainbowcrack-1.2-r1 (01 Nov 2006)
