@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.1.ebuild,v 1.3 2010/03/01 19:05:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.1.ebuild,v 1.4 2010/10/13 06:18:29 radhermit Exp $
 
 EAPI=2
 inherit libtool
@@ -11,7 +11,7 @@ DESCRIPTION="Fluidsynth is a software real-time synthesizer based on the Soundfo
 HOMEPAGE="http://www.fluidsynth.org/"
 SRC_URI="http://savannah.nongnu.org/download/fluid/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
