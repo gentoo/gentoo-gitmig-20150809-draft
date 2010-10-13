@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.38 2010/10/13 15:25:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.39 2010/10/13 17:59:37 phajdan.jr Exp $
+
+  13 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  icedtea6-bin-1.9.1.ebuild:
+  x86 stable wrt security bug #340819
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   icedtea6-bin-1.9.ebuild:
