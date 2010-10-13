@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.108 2010/10/04 17:48:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.109 2010/10/13 11:19:59 wired Exp $
+
+  13 Oct 2010; Alex Alexander <wired@gentoo.org> awesome-3.4.8.ebuild:
+  bug #336492: qa: moved mycmakeargs to src_configure, removed cmake dep
+  (handled by eclass)
 
   04 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> awesome-3.4.8.ebuild:
   Bug #321433: update RDEPEND for all bg setters. Bug #314425: allow

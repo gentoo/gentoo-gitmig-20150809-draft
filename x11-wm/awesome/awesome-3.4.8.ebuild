@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.4 2010/10/05 04:24:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.5 2010/10/13 11:19:59 wired Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -30,7 +30,6 @@ RDEPEND=">=dev-lang/lua-5.1[deprecated]
 DEPEND="${RDEPEND}
 	>=app-text/asciidoc-8.4.5
 	app-text/xmlto
-	>=dev-util/cmake-2.6
 	dev-util/gperf
 	dev-util/pkgconfig
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
@@ -71,13 +70,19 @@ RDEPEND="${RDEPEND}
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
-mycmakeargs="-DPREFIX=${EPREFIX}/usr
-	-DSYSCONFDIR=${EPREFIX}/etc
-	$(cmake-utils_use_with dbus DBUS)
-	$(cmake-utils_use doc GENERATE_LUADOC)"
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.4.2-backtrace.patch"
+}
+
+src_configure() {
+	mycmakeargs=(
+		-DPREFIX="${EPREFIX}"/usr
+		-DSYSCONFDIR="${EPREFIX}"/etc
+		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use doc GENERATE_LUADOC)
+		)
+
+	cmake-utils_src_configure
 }
 
 src_compile() {
