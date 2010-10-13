@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.70 2010/09/19 19:32:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.71 2010/10/13 11:14:20 jlec Exp $
+
+*pymol-1.3.1_pre3923 (13 Oct 2010)
+
+  13 Oct 2010; Justin Lecher <jlec@gentoo.org> +pymol-1.3.1_pre3923.ebuild:
+  Version Bump to pre release
 
   19 Sep 2010; Justin Lecher <jlec@gentoo.org> pymol-1.2.3-r1.ebuild,
   pymol-1.3.0.ebuild:
