@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.11 2010/10/02 14:06:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.12 2010/10/13 16:18:49 eva Exp $
+
+*gobject-introspection-0.9.12 (13 Oct 2010)
+
+  13 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gobject-introspection-0.9.12.ebuild:
+  Version bump. More multi ABI python changes.
 
 *gobject-introspection-0.9.10 (02 Oct 2010)
 *gobject-introspection-0.9.0-r1 (02 Oct 2010)
