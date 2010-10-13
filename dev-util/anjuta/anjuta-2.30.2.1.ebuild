@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.6 2010/09/21 20:49:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.7 2010/10/13 21:53:44 pacho Exp $
 
 EAPI="2"
 
@@ -52,6 +52,7 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.14-r2
 	>=app-text/gnome-doc-utils-0.3.2
 	dev-util/gtk-doc-am
+	gnome-base/gnome-common
 	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? (
 		~app-text/docbook-xml-dtd-4.1.2
