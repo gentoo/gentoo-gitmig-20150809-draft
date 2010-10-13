@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12042 2010/10/12 17:51:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12043 2010/10/13 05:59:20 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -877,10 +877,6 @@ net-dialup/fxusb
 net-dialup/fxusb_CZ
 net-wireless/fwlanusb
 
-# Markus Meier <maekke@gentoo.org> (18 Jul 2010)
-# mask hugin beta versions for testing (needs masked libpano13)
->=media-gfx/hugin-2010.2.0_beta1
-
 # Daniel Black <dragonheart@gentoo.org> (18 Jul 2010)
 # Abandoned upstream.
 # Difficulties transitioning to python3 as per bug 308271
@@ -1298,10 +1294,6 @@ xfce-extra/thunar-vfs
 # Diego E. Pettenò <flameeyes@gmail.com> (9 Oct 2009)
 # Untested yet; documented only in Russian, help is appreciated.
 sys-auth/pam_keystore
-
-# Markus Meier <maekke@gentoo.org> (03 Oct 2009)
-# mask libpano13 beta versions for testing
->=media-libs/libpano13-2.9.15_beta3
 
 # Peter Alfredsen <loki_val@gentoo.org> (09 Sep 2009)
 # Fails to build with newest mono, causing dependency
