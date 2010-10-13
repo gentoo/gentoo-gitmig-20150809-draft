@@ -1,5 +1,5 @@
 Now please read the installation manual at
-http://moinmoin.wikiwikiweb.de/HelpOnInstalling
+http://master18.moinmo.in/HelpOnInstalling
 
 MoinMoin can work with a variety of webservers. Simple Apache instructions
 are given below:

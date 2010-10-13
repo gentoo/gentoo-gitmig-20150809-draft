@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/moinmoin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.64 2009/06/26 08:59:49 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.65 2010/10/13 00:15:54 radhermit Exp $
+
+*moinmoin-1.8.8 (13 Oct 2010)
+
+  13 Oct 2010; Tim Harder <radhermit@gentoo.org> +moinmoin-1.8.8.ebuild,
+  files/postinstall-en.txt:
+  Version bump to latest security release for bug #339295 and security bugs
+  #305663 and #334697. Bump to EAPI=3, use PYTHON_DEPEND, and update dead
+  links.
 
   26 Jun 2009; Alex Legler <a3li@gentoo.org> -moinmoin-1.8.1.ebuild:
   Removing vulnerable version, security bug 268565.
