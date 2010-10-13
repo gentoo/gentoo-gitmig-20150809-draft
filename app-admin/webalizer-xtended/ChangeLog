@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webalizer-xtended
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer-xtended/ChangeLog,v 1.1 2010/03/10 16:42:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer-xtended/ChangeLog,v 1.2 2010/10/13 12:11:32 sping Exp $
+
+  13 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  webalizer-xtended-2.01.10_p21.ebuild,
+  +files/webalizer-xtended-2.01.10_p21-strip.patch:
+  Fix pre-stripped files (bug #339476)
 
 *webalizer-xtended-2.01.10_p21 (10 Mar 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer-xtended/webalizer-xtended-2.01.10_p21.ebuild,v 1.1 2010/03/10 16:42:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer-xtended/webalizer-xtended-2.01.10_p21.ebuild,v 1.2 2010/10/13 12:11:32 sping Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/webalizer-db4.2.patch
 	epatch "${WORKDIR}"/webalizer-${MY_PV}-RB${PV/*_p/}-patch
 	epatch "${FILESDIR}"/${P}-etc-webalizer-xtended-conf.patch
+	epatch "${FILESDIR}"/${P}-strip.patch
 
 	eautoreconf
 }
