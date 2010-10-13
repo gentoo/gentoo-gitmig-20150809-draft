@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0.ebuild,v 1.1 2010/10/12 18:17:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0.ebuild,v 1.2 2010/10/13 20:58:07 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -60,6 +60,8 @@ src_configure() {
 	# FIXME: Workaround for bug #325611 until root cause is found
 	addpredict "$(unset HOME; echo ~)/.gconf"
 	addpredict "$(unset HOME; echo ~)/.gconfd"
+	# Needed for import pyatspi
+	unset DBUS_SESSION_BUS_ADDRESS
 	gnome2_src_configure
 }
 
