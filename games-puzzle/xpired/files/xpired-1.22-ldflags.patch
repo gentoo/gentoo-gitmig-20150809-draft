@@ -1,0 +1,24 @@
+--- Makefile.old	2010-10-13 09:31:42.000000000 +0200
++++ Makefile	2010-10-13 09:32:02.000000000 +0200
+@@ -1,7 +1,7 @@
+ PREFIX=/usr/local
+ SHARE_PREFIX=$(PREFIX)/share/xpired
+ CFLAGS=`sdl-config --cflags` -DUNIX -DPREFIX=\"$(PREFIX)\" -DSHARE_PREFIX=\"$(SHARE_PREFIX)\"
+-LDFLAGS=`sdl-config --libs` -lSDL -lSDL_mixer -lSDL_image -lSDL_gfx
++LDLIBS=`sdl-config --libs` -lSDL -lSDL_mixer -lSDL_image -lSDL_gfx
+ CC=gcc
+ 
+ BINARIES = xpired xpiredit
+@@ -9,10 +9,10 @@
+ all: $(BINARIES)
+ 
+ xpired: xpired.o
+-	$(CC) -o xpired xpired.o $(LDFLAGS)
++	$(CC) $(LDFLAGS) -o xpired xpired.o $(LDLIBS)
+ 
+ xpiredit: xpiredit.o xpired_unix.h
+-	$(CC) -o xpiredit xpiredit.o $(LDFLAGS)
++	$(CC) $(LDFLAGS) -o xpiredit xpiredit.o $(LDLIBS)
+ 
+ .PHONY: clean
+ 

@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/xpired-1.22.ebuild,v 1.9 2008/05/15 13:06:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/xpired-1.22.ebuild,v 1.10 2010/10/13 07:53:56 tupone Exp $
+EAPI="2"
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A Sokoban-styled puzzle game with lots more action."
 HOMEPAGE="http://xpired.sourceforge.net"
@@ -13,11 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/sdl-gfx
+RDEPEND="media-libs/sdl-gfx
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/src
+
+PATCHES=( "${FILESDIR}"/${P}-ldflags.patch )
 
 src_compile() {
 	emake PREFIX=/usr/games SHARE_PREFIX=/usr/share/games/xpired || \
