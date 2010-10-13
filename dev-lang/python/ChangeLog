@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.497 2010/10/12 20:40:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.498 2010/10/13 09:28:57 djc Exp $
+
+  13 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> python-2.6.6-r1.ebuild:
+  Use mirrors for the patch set.
 
 *python-2.6.6-r1 (12 Oct 2010)
 
