@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/FileHandle-Unget-0.16.23.ebuild,v 1.3 2010/07/24 17:42:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/FileHandle-Unget-0.16.23.ebuild,v 1.4 2010/10/14 18:46:35 ranger Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ DESCRIPTION="A FileHandle which supports ungetting of multiple bytes"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ia64 ~ppc sparc x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST=do
