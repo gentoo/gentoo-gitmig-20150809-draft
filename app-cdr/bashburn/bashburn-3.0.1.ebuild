@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.0.1.ebuild,v 1.4 2010/09/18 18:15:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.0.1.ebuild,v 1.5 2010/10/14 19:17:55 ranger Exp $
 
 EAPI=2
 MY_P=BashBurn-${PV}
@@ -13,7 +13,7 @@ SRC_URI="http://bashburn.dose.se/index.php?s=file_download&id=3
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="dvdr"
 
 RDEPEND="virtual/cdrtools
