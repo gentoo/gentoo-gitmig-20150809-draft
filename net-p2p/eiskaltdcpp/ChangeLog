@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.13 2010/09/15 08:47:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.14 2010/10/14 15:24:59 pva Exp $
+
+  14 Oct 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild,
+  metadata.xml:
+  libnotify became optional, web interface was added, thank Nikoli for this
+  job.
 
   15 Sep 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild,
   metadata.xml:

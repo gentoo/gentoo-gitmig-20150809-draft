@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.13 2010/09/15 08:47:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.14 2010/10/14 15:24:59 pva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ ESVN_REPO_URI="http://${PN%pp}.googlecode.com/svn/branches/trunk/"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus +emoticons examples -gnome -gtk -javascript kde lua +qt4 sounds spell upnp"
+IUSE="dbus +emoticons examples -gnome -gtk -javascript kde libnotify lua +qt4 sounds spell upnp web"
 
 RDEPEND="
 	app-arch/bzip2
@@ -30,7 +30,7 @@ RDEPEND="
 		>=x11-libs/gtk+-2.10:2
 		>=dev-libs/glib-2.10:2
 		>=gnome-base/libglade-2.4:2.0
-		>=x11-libs/libnotify-0.4.1
+		libnotify? ( >=x11-libs/libnotify-0.4.1 )
 		gnome? ( gnome-base/libgnome )
 	)
 	qt4? (
@@ -45,6 +45,7 @@ RDEPEND="
 		)
 		spell? ( app-text/aspell )
 	)
+	web? ( net-libs/wt[extjs] )
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.34.1
@@ -75,7 +76,8 @@ src_configure() {
 		-DLOCAL_MINIUPNP="0"
 		"$(cmake-utils_use gtk USE_GTK)"
 		"$(cmake-utils_use gnome USE_LIBGNOME2)"
-		-DUSE_WT="0"
+		"$(cmake-utils_use libnotify USE_LIBNOTIFY)"
+		"$(cmake-utils_use web USE_WT)"
 		"$(cmake-utils_use emoticons WITH_EMOTICONS)"
 		"$(cmake-utils_use examples WITH_EXAMPLES)"
 		"$(cmake-utils_use lua WITH_LUASCRIPTS)"
