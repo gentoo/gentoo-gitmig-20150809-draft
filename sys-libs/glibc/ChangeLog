@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.717 2010/10/13 23:58:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.718 2010/10/14 00:00:20 vapier Exp $
+
+*glibc-2.11.2-r1 (13 Oct 2010)
+
+  13 Oct 2010; Mike Frysinger <vapier@gentoo.org> +glibc-2.11.2-r1.ebuild:
+  Fix from upstream for locale problems #330923, bunches of random
+  alpha/arm/hppa/sparc fixes, and fix building with make-3.82 #331995.
 
   13 Oct 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.12.1-r1.ebuild:
   Add back sparc #336792 by Sergei Trofimovich and fix building with
