@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.260 2010/10/14 08:54:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.261 2010/10/14 14:50:48 phajdan.jr Exp $
+
+  14 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  poppler-0.14.4.ebuild:
+  x86 stable wrt security bug #338878
 
   14 Oct 2010; Markos Chandras <hwoarang@gentoo.org> poppler-0.14.4.ebuild:
   Stable on amd64 wrt bug #338878
