@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.2.ebuild,v 1.6 2010/05/22 19:38:27 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.2.ebuild,v 1.7 2010/10/14 16:55:17 ranger Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -14,7 +14,7 @@ HOMEPAGE="http://commons.apache.org/daemon/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"
