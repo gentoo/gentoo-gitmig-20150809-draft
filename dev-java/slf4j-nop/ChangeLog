@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/slf4j-nop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-nop/ChangeLog,v 1.10 2010/05/26 18:51:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-nop/ChangeLog,v 1.11 2010/10/14 17:01:55 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> slf4j-nop-1.5.11.ebuild:
+  stable ppc, bug 316319
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> slf4j-nop-1.5.11.ebuild:
   stable amd64, bug 316319
