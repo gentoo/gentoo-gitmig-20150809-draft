@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.22 2010/10/14 17:02:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.23 2010/10/14 18:37:06 eva Exp $
+
+  14 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -gwget-0.99.ebuild,
+  -gwget-1.0.2.ebuild, -gwget-1.0.3.ebuild:
+  Clean up old revisions.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> gwget-1.0.4.ebuild:
   stable ppc, bug 340205
