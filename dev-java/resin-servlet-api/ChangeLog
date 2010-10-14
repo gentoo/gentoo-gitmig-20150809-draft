@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/resin-servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.40 2010/08/19 19:27:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.41 2010/10/14 20:19:12 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org>
+  resin-servlet-api-3.0.26-r1.ebuild, resin-servlet-api-3.2.1-r1.ebuild:
+  Marking -3.0.26-r1 and -3.2.1-r1 ppc for bug 275672
 
 *resin-servlet-api-4.0.9 (19 Aug 2010)
 
