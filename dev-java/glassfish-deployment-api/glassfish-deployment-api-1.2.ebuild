@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/glassfish-deployment-api-1.2.ebuild,v 1.3 2009/08/02 14:10:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/glassfish-deployment-api-1.2.ebuild,v 1.4 2010/10/14 20:25:40 ranger Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source"
@@ -14,7 +14,7 @@ HOMEPAGE="https://glassfish.dev.java.net/"
 LICENSE="sun-bcla-j2ee-deployment"
 SLOT="1.2"
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 GLASSFISH_MAJOR="v2ur2"
 GLASSFISH_MINOR="b04"
