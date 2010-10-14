@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.1 2010/09/13 17:48:55 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.2 2010/10/14 16:10:06 phajdan.jr Exp $
 
 JAVA_PKG_IUSE="doc source"
 EAPI=2
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/java-readline/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD"
 
 COMMON_DEP="sys-libs/ncurses"
