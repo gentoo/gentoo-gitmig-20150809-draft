@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-ssh2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/ChangeLog,v 1.5 2009/12/29 21:16:55 hoffie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/ChangeLog,v 1.6 2010/10/14 14:42:36 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  pecl-ssh2-0.11.0-r1.ebuild:
+  stable x86, bug 339686
 
 *pecl-ssh2-0.11.0-r1 (29 Dec 2009)
 
