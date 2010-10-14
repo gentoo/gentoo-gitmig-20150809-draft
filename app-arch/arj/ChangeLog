@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/arj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.40 2010/03/29 23:43:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.41 2010/10/14 19:18:57 jer Exp $
+
+*arj-3.10.22-r3 (14 Oct 2010)
+
+  14 Oct 2010; Jeroen Roovers <jer@gentoo.org> -arj-3.10.22-r1.ebuild,
+  +arj-3.10.22-r3.ebuild:
+  Add newer Debian patches. Respect LDFLAGS (bug #337626). Remove empty
+  DEPEND.
 
   29 Mar 2010; Jonathan Callen <abcd@gentoo.org> arj-3.10.22-r2.ebuild,
   +files/arj-3.10.22-darwin.patch, +files/arj-3.10.22-interix.patch:
