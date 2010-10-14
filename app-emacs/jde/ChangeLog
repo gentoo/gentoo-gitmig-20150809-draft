@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/jde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.40 2010/10/14 15:01:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.41 2010/10/14 15:51:03 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  -jde-2.3.5.1-r2.ebuild, -files/jde-2.3.5.1-fix-efc.patch,
+  -files/jde-2.3.5.1-import.patch, -jde-2.3.6_pre20081208.ebuild,
+  -files/jde-2.3.6_pre20081208-classpath-gentoo.patch,
+  -files/jde-2.3.6_pre20081208-fix-paths-gentoo.patch:
+  clean up
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> jde-2.4.0.1.ebuild:
   Marking jde-2.4.0.1 ppc for bug 325939
