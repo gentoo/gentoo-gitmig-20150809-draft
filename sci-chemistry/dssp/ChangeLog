@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/dssp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.3 2010/07/15 20:31:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.4 2010/10/14 07:05:20 jlec Exp $
+
+*dssp-101007 (14 Oct 2010)
+
+  14 Oct 2010; Justin Lecher <jlec@gentoo.org> +dssp-101007.ebuild:
+  Version Bump
 
   15 Jul 2010; Markus Meier <maekke@gentoo.org> dssp-070831.ebuild:
   x86 stable, bug #326043
