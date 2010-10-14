@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.112 2010/10/12 15:50:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.113 2010/10/14 16:56:46 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> org-mode-6.36c.ebuild:
+  stable ppc, bug 338726
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> org-mode-6.36c.ebuild:
   sparc stable wrt #338726
