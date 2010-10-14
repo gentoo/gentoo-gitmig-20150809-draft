@@ -1,8 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6.ebuild,v 1.4 2007/11/04 08:15:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6-r1.ebuild,v 1.1 2010/10/14 09:26:35 hwoarang Exp $
 
-inherit eutils
+EAPI=3
+
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS=1
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit eutils python
 
 DESCRIPTION="NTLM proxy Authentication against MS proxy/web server"
 HOMEPAGE="http://ntlmaps.sourceforge.net/"
@@ -13,17 +19,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
-DEPEND="dev-lang/python"
-
 pkg_setup() {
 	enewgroup ntlmaps
 	enewuser ntlmaps -1 -1 -1 ntlmaps
 }
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	python_convert_shebangs 2 main.py
 
 	#stupid windoze style
 	cd "${S}"
@@ -31,14 +34,18 @@ src_unpack() {
 }
 
 src_install() {
+	installation() {
+		insinto $(python_get_sitedir)
+		doins lib/*.py || die
+	}
+	python_execute_function installation
+
 	# exes ------------------------------------------------------------------
 	exeinto /usr/bin
 	newexe main.py ntlmaps || die "failed to install main program"
-	insinto /usr/lib/ntlmaps
-	doins lib/* || die "failed to install python modules"
 	# doc -------------------------------------------------------------------
-	dodoc doc/*.txt
-	dohtml doc/*.{gif,htm}
+	dodoc doc/*.txt || die
+	dohtml doc/*.{gif,htm} ||die
 	# conf ------------------------------------------------------------------
 	insopts -m0640 -g ntlmaps
 	insinto /etc/ntlmaps
@@ -56,9 +63,4 @@ pkg_preinst() {
 		chmod 0640 "${ROOT}/etc/ntlmaps/server.cfg"
 		chgrp ntlmaps "${ROOT}/etc/ntlmaps/server.cfg"
 	fi
-}
-
-pkg_prerm() {
-	einfo "Removing python compiled bytecode"
-	rm -f "${ROOT}"/usr/lib/ntlmaps/*.py?
 }

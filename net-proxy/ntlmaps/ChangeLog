@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/ntlmaps
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.15 2008/03/14 10:41:10 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.16 2010/10/14 09:26:35 hwoarang Exp $
+
+*ntlmaps-0.9.9.6-r1 (14 Oct 2010)
+
+  14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  -ntlmaps-0.9.9.6.ebuild, +ntlmaps-0.9.9.6-r1.ebuild,
+  files/ntlmaps-0.9.9.6-gentoo.patch:
+  Revbump with QA fixes and updated gentoo patch thanks to Monjoie
+  <corentin.labbe@geomatys.com>. Bug #315877
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Christian Andreetta (satya, #48841) from metadata.xml.

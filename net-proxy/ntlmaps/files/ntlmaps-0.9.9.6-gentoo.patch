@@ -1,20 +1,19 @@
-diff -Nru ntlmaps-0.9.9.6.orig/__init__.py ntlmaps-0.9.9.6/__init__.py
---- ntlmaps-0.9.9.6.orig/__init__.py	2005-06-10 06:49:35.000000000 +0300
-+++ ntlmaps-0.9.9.6/__init__.py	2006-09-20 14:52:58.000000000 +0300
-@@ -22,8 +22,7 @@
+--- __init__.py.old	2010-10-06 16:03:54.000000000 +0200
++++ __init__.py	2010-10-06 16:05:38.000000000 +0200
+@@ -20,10 +20,3 @@
+ # 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+ #
  
- import os, sys
- 
+-import os, sys
+-
 -ntlmaps_dir = os.path.dirname(os.path.abspath(__file__))
 -ntlmaps_libdir = ntlmaps_dir + '/lib'
-+ntlmaps_dir = '/usr/lib/ntlmaps'
- sys.path.append(ntlmaps_libdir)
- 
- del os, sys
-diff -Nru ntlmaps-0.9.9.6.orig/main.py ntlmaps-0.9.9.6/main.py
---- ntlmaps-0.9.9.6.orig/main.py	2005-07-05 06:13:43.000000000 +0300
-+++ ntlmaps-0.9.9.6/main.py	2006-09-20 14:52:58.000000000 +0300
-@@ -18,17 +18,17 @@
+-sys.path.append(ntlmaps_libdir)
+-
+-del os, sys
+--- main.py.old	2010-10-06 16:26:57.000000000 +0200
++++ main.py	2010-10-06 16:27:29.000000000 +0200
+@@ -18,8 +18,6 @@
  # Free Software Foundation, Inc.,
  # 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  #
@@ -22,11 +21,8 @@ diff -Nru ntlmaps-0.9.9.6.orig/main.py ntlmaps-0.9.9.6/main.py
 -
  import sys
  
-+sys.path.append('/usr/lib/ntlmaps')
-+
  import server, config, config_affairs
- 
- 
+@@ -28,7 +26,7 @@
  #--------------------------------------------------------------
  # config affairs
  # look for default config name in lib/config.py
