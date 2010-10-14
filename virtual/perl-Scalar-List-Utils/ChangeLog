@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.42 2010/09/12 16:44:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.43 2010/10/14 20:19:40 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org>
+  perl-Scalar-List-Utils-1.23.ebuild:
+  Marking perl-Scalar-List-Utils-1.23 ppc stable for bug 333421
 
   12 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   perl-Scalar-List-Utils-1.23.ebuild:
