@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.30 2010/10/05 16:23:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.31 2010/10/14 19:33:50 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> Text-CSV-1.19.ebuild:
+  Marking Text-CSV-1.19 ~ppc for bug 340891
 
 *Text-CSV-1.19 (05 Oct 2010)
 
