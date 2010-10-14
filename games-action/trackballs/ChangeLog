@@ -1,6 +1,10 @@
 # ChangeLog for games-action/trackballs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.25 2009/11/07 18:39:22 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.26 2010/10/14 04:40:47 mr_bones_ Exp $
+
+  14 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  trackballs-1.1.4.ebuild:
+  add sed patches from Kevin Pyle for bug #340909
 
   07 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
   trackballs-1.1.4.ebuild:
