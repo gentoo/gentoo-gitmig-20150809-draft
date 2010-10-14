@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.6 2010/10/14 17:15:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.7 2010/10/14 23:17:50 hwoarang Exp $
+
+  14 Oct 2010; Markos Chandras <hwoarang@gentoo.org> guake-0.4.2.ebuild:
+  Stable on amd64 wrt bug #340995
 
   14 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> guake-0.4.2.ebuild:
   x86 stable wrt bug #340995
