@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.174 2010/10/07 21:08:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.175 2010/10/14 21:28:16 maekke Exp $
+
+  14 Oct 2010; Markus Meier <maekke@gentoo.org>
+  gtk-engines-2.20.1-r1.ebuild:
+  arm stable, bug #324077
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   gtk-engines-2.20.1-r1.ebuild:
