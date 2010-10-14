@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.36 2010/06/12 21:38:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.37 2010/10/14 15:30:06 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  PEAR-HTTP-1.4.1-r1.ebuild:
+  x86 stable, bug 336869
 
 *PEAR-HTTP-1.4.1-r1 (12 Jun 2010)
 
