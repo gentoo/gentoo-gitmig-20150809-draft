@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.94 2010/10/10 15:33:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.95 2010/10/14 17:04:38 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> iso-codes-3.19.ebuild:
+  stable ppc, bug 339778
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> iso-codes-3.19.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #339778
