@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.2.ebuild,v 1.4 2010/10/10 10:18:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.2.ebuild,v 1.5 2010/10/14 20:24:02 maekke Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/software/devel/sparse/dist/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+	KEYWORDS="~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 LICENSE="OSL-1.1"
