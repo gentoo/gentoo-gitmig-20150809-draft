@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-1.08.ebuild,v 1.3 2010/10/11 12:53:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/Class-MOP-1.08.ebuild,v 1.4 2010/10/14 18:55:37 ranger Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A Meta Object Protocol for Perl 5"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 RDEPEND="

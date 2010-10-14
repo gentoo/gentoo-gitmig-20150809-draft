@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.47 2010/10/11 12:53:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.48 2010/10/14 18:55:37 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> Class-MOP-1.08.ebuild:
+  Marking Class-MOP-1.08 ~ppc for bug 322961
 
   11 Oct 2010; Markos Chandras <hwoarang@gentoo.org> Class-MOP-1.08.ebuild:
   Stable on amd64 wrt bug #340024
