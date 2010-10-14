@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.123 2010/07/05 19:07:35 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.124 2010/10/14 09:44:58 grobian Exp $
+
+  14 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  gentoo-syntax-20100215.ebuild:
+  Marked ~x64-solaris
 
   05 Jul 2010; Dror Levin <spatz@gentoo.org> -gentoo-syntax-20090720.ebuild:
   Drop old.
