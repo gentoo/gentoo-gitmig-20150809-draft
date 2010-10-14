@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.37 2010/08/25 09:13:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.38 2010/10/14 15:41:22 pva Exp $
+
+*ipset-4.4 (14 Oct 2010)
+
+  14 Oct 2010; Peter Volkov <pva@gentoo.org> +ipset-4.4.ebuild:
+  Version bump.
 
 *ipset-4.3 (25 Aug 2010)
 
