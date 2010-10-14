@@ -1,6 +1,9 @@
 # ChangeLog for games-util/atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.21 2010/09/16 17:05:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.22 2010/10/14 20:26:06 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> atlas-0.3.1_p20100302.ebuild:
+  Marking atlas-0.3.1_p20100302 ppc for bug 313613
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   atlas-0.3.1_p20100302.ebuild:
