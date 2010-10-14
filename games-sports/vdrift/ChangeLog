@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.14 2010/10/06 15:05:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.15 2010/10/14 01:59:17 mr_bones_ Exp $
+
+  14 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  vdrift-20090615.ebuild:
+  use scons-utils
 
   06 Oct 2010; Tupone Alfredo <tupone@gentoo.org> vdrift-20090615.ebuild,
   +files/vdrift-20090615-ldflags.patch:

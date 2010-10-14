@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090615.ebuild,v 1.5 2010/10/06 15:05:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090615.ebuild,v 1.6 2010/10/14 01:59:17 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils scons-utils games
 
 MY_P=${PN}-${PV:0:4}-${PV:4:2}-${PV:6}
 DESCRIPTION="A driving simulation made with drift racing in mind"
@@ -27,7 +27,6 @@ RDEPEND="virtual/opengl
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-cpp/asio
-	dev-util/scons
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${PV:0:4}-${PV:4:2}-${PV:6:2}
@@ -41,12 +40,9 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-
-	scons \
-		${sconsopts} \
+	escons \
 		force_feedback=1 \
-		NLS=$(use nls && echo 1 || echo 0) \
+		$(use_scons nls NLS) \
 		destdir="${D}" \
 		bindir="${GAMES_BINDIR}" \
 		datadir="${GAMES_DATADIR}"/${PN} \
@@ -57,7 +53,7 @@ src_compile() {
 		os_cc=1 \
 		os_cxx=1 \
 		os_cxxflags=1 \
-		|| die "scons failed"
+		|| die
 }
 
 src_install() {
