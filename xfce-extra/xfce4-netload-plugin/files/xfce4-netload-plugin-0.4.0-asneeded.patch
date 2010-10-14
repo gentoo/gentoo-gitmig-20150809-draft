@@ -1,6 +1,9 @@
-diff -ur xfce4-netload-plugin-0.4.0.orig/panel-plugin/Makefile.am xfce4-netload-plugin-0.4.0/panel-plugin/Makefile.am
---- xfce4-netload-plugin-0.4.0.orig/panel-plugin/Makefile.am	2005-09-30 10:53:07.000000000 +0300
-+++ xfce4-netload-plugin-0.4.0/panel-plugin/Makefile.am	2007-01-21 23:09:59.000000000 +0200
+http://bugzilla.xfce.org/show_bug.cgi?id=6466
+http://git.xfce.org/panel-plugins/xfce4-netload-plugin/commit/?id=3d15b6fb40900b043dc3863d3ad5571029e45c3d
+http://bugs.gentoo.org/show_bug.cgi?id=331497
+
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
 @@ -18,7 +18,7 @@
  	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
  	@LIBXFCE4PANEL_CFLAGS@
