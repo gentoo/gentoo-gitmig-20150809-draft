@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.98 2010/08/31 14:40:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.99 2010/10/14 20:44:04 caster Exp $
+
+  14 Oct 2010; Vlastimil Babka <caster@gentoo.org> -files/3.0.25/resin.conf,
+  -resin-3.0.25.ebuild, -files/3.0.25/resin.init, -resin-3.1.8.ebuild,
+  -files/3.1.8/resin.conf, -resin-3.1.9.ebuild, -files/3.1.8/resin.init,
+  resin-3.2.1-r3.ebuild, -files/3.1.9/resin.conf, -files/3.1.9/resin.init:
+  Drop old versions and ppc/ppc64 keywords due to reliance on sun.* classes
+  not available in IBM JDK's.
 
   31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org> resin-4.0.9.ebuild:
   Respect LDFLAGS when linking, see bug #334417.
