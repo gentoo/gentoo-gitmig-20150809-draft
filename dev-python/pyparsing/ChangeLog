@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.62 2010/10/12 17:09:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.63 2010/10/14 16:46:24 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> pyparsing-1.5.5.ebuild:
+  stable ppc, bug 339532
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> pyparsing-1.5.5.ebuild:
   ia64/sparc stable wrt #339532
