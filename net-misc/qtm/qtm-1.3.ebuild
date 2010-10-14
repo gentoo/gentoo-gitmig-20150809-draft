@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.ebuild,v 1.2 2010/10/13 11:56:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.ebuild,v 1.3 2010/10/14 15:11:39 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/catkin/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus debug ssl"
 RESTRICT="strip"
 
