@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.3.4.ebuild,v 1.1 2010/10/12 22:05:13 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.3.4-r1.ebuild,v 1.1 2010/10/14 05:46:31 sochotnicky Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,5 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/pytrailer-0.3
-		dev-python/PyQt4"
+		dev-python/PyQt4
+		dev-python/python-dateutil"
 RDEPEND="$DEPEND"
