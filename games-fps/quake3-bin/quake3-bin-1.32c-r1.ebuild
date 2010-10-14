@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.10 2010/03/09 12:36:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.11 2010/10/14 05:53:27 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -86,7 +86,7 @@ src_install() {
 		doexe "Quake III Arena 1.32c"/linux/quake3*.x86 || die "doexe"
 		games_make_wrapper ${PN} ./quake3.x86 "${dir}" "${dir}"
 		newicon quake3.xpm ${PN}.xpm
-		make_desktop_entry ${PN} "Quake III Arena (binary)" ${PN}
+		make_desktop_entry ${PN} "Quake III Arena (binary)"
 		if use teamarena ; then
 			games_make_wrapper ${PN}-teamarena \
 				"./quake3.x86 +set fs_game missionpack" "${dir}" "${dir}"
