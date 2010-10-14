@@ -1,14 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.08.1742.ebuild,v 1.2 2010/09/06 20:21:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01.ebuild,v 1.1 2010/10/14 20:23:18 flameeyes Exp $
 
 EAPI=2
 
-inherit flag-o-matic libtool autotools eutils pam
+inherit flag-o-matic libtool autotools eutils pam versionator
+
+MY_P="${PN}$(replace_version_separator 1 -)"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Database optimized for Cloud and Net applications"
 HOMEPAGE="http://drizzle.org"
-SRC_URI="http://launchpad.net/drizzle/dexter/2010-08-30/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/drizzle/elliott/2010-10-11/+download/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -22,6 +26,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		sys-libs/readline
 		sys-apps/util-linux
 		dev-libs/libpcre
+		sys-devel/flex
 		>=dev-libs/libevent-1.4
 		>=dev-libs/protobuf-2.1.0
 		gearman? ( >=sys-cluster/gearmand-0.12 )
@@ -39,13 +44,14 @@ DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
 		>=dev-util/boost-build-1.32"
 
+
 pkg_setup() {
 	enewuser drizzle -1 -1 /dev/null nogroup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2009.12.1240-nolint.patch"
-	epatch "${FILESDIR}/${P}-pcre.patch"
+	epatch "${FILESDIR}/${PN}-2010.08.1742-pcre.patch"
 
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
@@ -87,12 +93,14 @@ src_configure() {
 		--without-hello-world-plugin \
 		--disable-pbxt-plugin --without-pbxt-plugin \
 		--disable-rabbitmq-plugin --without-rabbitmq-plugin \
-		--disable-embedded-innodb-plugin --without-embedded-innodb-plugin \
+		--without-haildb-plugin --disable-haildb-plugin \
 		--with-auth-test-plugin \
 		--with-auth-file-plugin \
 		--with-simple-user-policy-plugin \
 		--enable-logging-stats-plugin \
 		--with-logging-stats-plugin \
+		--enable-console-plugin \
+		--enable-archive-plugin \
 		${myconf}
 
 }

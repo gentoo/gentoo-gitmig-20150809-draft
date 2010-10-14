@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.15 2010/09/06 20:21:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.16 2010/10/14 20:23:18 flameeyes Exp $
+
+*drizzle-7.2010.10.01 (14 Oct 2010)
+*drizzle-6.2010.08.1742 (14 Oct 2010)
+
+  14 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +drizzle-6.2010.08.1742.ebuild, +drizzle-7.2010.10.01.ebuild,
+  -drizzle-2010.08.1742.ebuild:
+  Version bump from Pavel; rename old version to 6. so that the upgrade path
+  is clear.
 
   06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   drizzle-2010.08.1742.ebuild:
