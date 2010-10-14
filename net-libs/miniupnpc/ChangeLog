@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.1 2010/09/15 08:40:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.2 2010/10/14 15:16:45 pva Exp $
+
+*miniupnpc-1.4.20100609-r1 (14 Oct 2010)
+
+  14 Oct 2010; Peter Volkov <pva@gentoo.org>
+  +miniupnpc-1.4.20100609-r1.ebuild:
+  Fix OS detection (added dependency on sys-apps/lsb-release), thank Nikoli
+  for digging this.
 
 *miniupnpc-1.4.20100609 (15 Sep 2010)
 
