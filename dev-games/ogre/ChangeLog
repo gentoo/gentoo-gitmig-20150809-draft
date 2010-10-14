@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.66 2010/09/17 11:06:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.67 2010/10/14 05:04:40 mr_bones_ Exp $
+
+  14 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild:
+  work around build system that tries to build against the currently
+  installed version (bug #295987)
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> ogre-1.4.9.ebuild,
   ogre-1.6.5.ebuild:
