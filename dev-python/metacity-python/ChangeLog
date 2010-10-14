@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.44 2010/10/11 16:46:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.45 2010/10/14 22:35:18 maekke Exp $
+
+  14 Oct 2010; Markus Meier <maekke@gentoo.org>
+  metacity-python-2.30.2.ebuild:
+  arm stable, bug #324077
 
   11 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -metacity-python-2.26.0.ebuild:

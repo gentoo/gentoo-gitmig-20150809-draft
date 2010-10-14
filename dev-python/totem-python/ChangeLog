@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/totem-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.39 2010/10/11 16:49:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.40 2010/10/14 22:36:16 maekke Exp $
+
+  14 Oct 2010; Markus Meier <maekke@gentoo.org> totem-python-2.30.2.ebuild:
+  arm stable, bug #324077
 
   11 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -totem-python-2.26.0.ebuild:

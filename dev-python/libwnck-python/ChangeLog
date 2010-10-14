@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libwnck-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.41 2010/10/11 16:44:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.42 2010/10/14 22:34:21 maekke Exp $
+
+  14 Oct 2010; Markus Meier <maekke@gentoo.org>
+  libwnck-python-2.30.2-r1.ebuild:
+  arm stable, bug #324077
 
   11 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -libwnck-python-2.26.0.ebuild, -libwnck-python-2.30.2.ebuild:
