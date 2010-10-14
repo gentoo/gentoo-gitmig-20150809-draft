@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.34 2010/10/14 07:07:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.35 2010/10/14 07:19:46 radhermit Exp $
+
+  14 Oct 2010; Tim Harder <radhermit@gentoo.org> bio2jack-0.9.ebuild:
+  Add --disable-dependency-tracking to econf.
 
 *bio2jack-0.9 (14 Oct 2010)
 
