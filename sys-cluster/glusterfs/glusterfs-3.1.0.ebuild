@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.0.4.ebuild,v 1.1 2010/05/08 16:03:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.0.ebuild,v 1.1 2010/10/14 17:09:17 xarthisius Exp $
 
 EAPI="2"
 
@@ -10,40 +10,38 @@ DESCRIPTION="GlusterFS is a powerful network/cluster filesystem"
 HOMEPAGE="http://www.gluster.org/"
 SRC_URI="http://ftp.gluster.com/pub/gluster/${PN}/$(get_version_component_range '1-2')/${PV}/${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs +fuse infiniband static vim-syntax extras"
+IUSE="emacs +fuse infiniband static-libs vim-syntax extras"
 
 DEPEND="emacs? ( virtual/emacs )
 		fuse? ( >=sys-fs/fuse-2.7.0 )
 		infiniband? ( sys-infiniband/libibverbs )"
-RDEPEND="${DEPEND}
-		!net-fs/glusterfs"
+RDEPEND="${DEPEND}"
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.0.8-parallel-make.patch"
-	epatch "${FILESDIR}/${PN}-2.0.8-docdir.patch"
-	eautoreconf || die "eautoreconf failed"
+	epatch "${FILESDIR}/${P}-parallel-build.patch" \
+		"${FILESDIR}/${PN}-2.0.8-docdir.patch"
+	eautoreconf
 }
 
 src_configure() {
 	econf \
 		$(use_enable fuse fuse-client) \
 		$(use_enable infiniband ibverbs) \
-		$(use_enable static) \
+		$(use_enable static-libs static) \
 		--disable-bdb \
 		--docdir=/usr/share/doc/${PF} \
-		--localstatedir=/var || die
-#		$(use_enable berkdb bdb) \
+		--localstatedir=/var
 }
 
 src_compile() {
-	emake || die "Emake failed"
+	emake || die
 	if use emacs ; then
-		elisp-compile extras/glusterfs-mode.el || die "elisp-compile failed"
+		elisp-compile extras/glusterfs-mode.el || die
 	fi
 }
 
@@ -51,7 +49,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	if use emacs ; then
-		elisp-install ${PN} extras/glusterfs-mode.el* || die "elisp-install failed"
+		elisp-install ${PN} extras/glusterfs-mode.el* || die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
@@ -61,17 +59,17 @@ src_install() {
 	fi
 
 	if use extras ; then
-		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die "Failed to install bins"
-		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die "Failed to install bins"
-		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die "Failed to install bins"
+		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die
+		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die
+		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die
 	fi
 
-	dodoc AUTHORS ChangeLog NEWS README THANKS || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README THANKS || die
 
-	newinitd "${FILESDIR}/${PN}.initd" glusterfsd || die "newinitd failed"
-	newconfd "${FILESDIR}/${PN}.confd" glusterfsd || die "newconfd failed"
+	newinitd "${FILESDIR}/${PN}.initd" glusterfsd || die
+	newconfd "${FILESDIR}/${PN}.confd" glusterfsd || die
 
-	keepdir /var/log/${PN} || die "keepdir failed"
+	keepdir /var/log/${PN} || die
 }
 
 pkg_postinst() {
@@ -88,6 +86,9 @@ pkg_postinst() {
 	elog "You can mount exported GlusterFS filesystems through /etc/fstab instead of"
 	elog "through a startup script instance.  For more information visit:"
 	elog "http://www.gluster.org/docs/index.php/Mounting_a_GlusterFS_Volume"
+	echo
+	elog "If you are upgrading from glusterfs 3.0.x please read:"
+	elog "http://www.gluster.com/community/documentation/index.php/Gluster_3.0_to_3.1_Upgrade_Guide"
 	echo
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
 	ewarn "of your servers.  Setup a NTP synchronizing service before attempting to"
