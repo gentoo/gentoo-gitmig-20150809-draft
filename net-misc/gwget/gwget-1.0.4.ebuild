@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.3 2010/10/10 12:17:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.4 2010/10/14 17:02:29 ranger Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ inherit gnome2
 DESCRIPTION="GTK2 WGet Frontend"
 HOMEPAGE="http://gnome.org/projects/gwget/"
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="epiphany libnotify"
