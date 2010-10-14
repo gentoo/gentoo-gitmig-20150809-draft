@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/wrogue
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/ChangeLog,v 1.4 2009/12/16 21:22:52 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/ChangeLog,v 1.5 2010/10/14 10:15:09 tupone Exp $
+
+  14 Oct 2010; Tupone Alfredo <tupone@gentoo.org> wrogue-0.8.0b.ebuild,
+  +files/wrogue-0.8.0b-ldflags.patch:
+  Respect LDFLAGS. Bug #335235 by flameeyes@gentoo.org
 
   16 Dec 2009; Markus Meier <maekke@gentoo.org> wrogue-0.8.0b.ebuild:
   amd64/x86 stable, bug #296457

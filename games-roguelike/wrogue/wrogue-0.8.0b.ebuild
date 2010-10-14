@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/wrogue-0.8.0b.ebuild,v 1.2 2009/12/16 21:22:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/wrogue-0.8.0b.ebuild,v 1.3 2010/10/14 10:15:09 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -23,6 +23,7 @@ src_prepare() {
 		-e "/AppData\[0\]/ s:AppData.*:strcpy(AppData, \"${GAMES_DATADIR}/${PN}/\");:" \
 		src/lib/appdir.c \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
