@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-http
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/ChangeLog,v 1.13 2010/09/13 14:02:54 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/ChangeLog,v 1.14 2010/10/14 15:53:00 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  pecl-http-1.6.6.ebuild:
+  x86 stable, bug 336869
 
   13 Sep 2010; Matti Bickel <mabi@gentoo.org> pecl-http-1.6.6.ebuild:
   fix DEPEND for php-5.3 (bug #332489)
