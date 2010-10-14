@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPIx-Utilities
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.4 2010/10/10 17:45:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.5 2010/10/14 19:03:26 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org>
+  PPIx-Utilities-1.000001.ebuild:
+  Marking PPIx-Utilities-1.000001 ~ppc for bug 328393
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   PPIx-Utilities-1.000001.ebuild:
