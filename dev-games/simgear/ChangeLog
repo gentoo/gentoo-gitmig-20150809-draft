@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.44 2010/03/24 12:22:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.45 2010/10/14 20:23:23 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> simgear-1.9.1.ebuild:
+  Marking simgear-1.9.1 ppc for bug 313613
 
   24 Mar 2010; Tupone Alfredo <tupone@gentoo.org> simgear-2.0.0.ebuild:
   Added jpeg-factory to configure. Bug #310769 by Ingo Krabbe
