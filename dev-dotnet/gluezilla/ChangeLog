@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.19 2010/10/07 19:23:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.20 2010/10/14 10:28:43 ali_bush Exp $
+
+*gluezilla-2.6-r1 (14 Oct 2010)
+
+  14 Oct 2010; Alistair Bush <ali_bush@gentoo.org> +gluezilla-2.6-r1.ebuild:
+  Bump from stable to update mono dep.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -gluezilla-2.0.9999.ebuild,
   -gluezilla-2.4.2.ebuild, -gluezilla-2.4.9999.ebuild:
