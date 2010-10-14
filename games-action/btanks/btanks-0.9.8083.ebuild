@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.9.8083.ebuild,v 1.2 2010/02/27 18:10:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.9.8083.ebuild,v 1.3 2010/10/14 03:52:04 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils scons-utils games
 
 DESCRIPTION="Fast 2D tank arcade game with multiplayer and split-screen modes"
 HOMEPAGE="http://btanks.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/btanks/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +23,6 @@ RDEPEND=">=dev-lang/lua-5.1
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-gfx"
 DEPEND="${RDEPEND}
-	dev-util/scons
 	dev-util/pkgconfig"
 
 src_prepare() {
@@ -32,15 +31,12 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-
-	scons \
-		${sconsopts} \
+	escons \
 		prefix="${GAMES_PREFIX}" \
 		lib_dir="$(games_get_libdir)"/${PN} \
 		plugins_dir="$(games_get_libdir)"/${PN} \
 		resources_dir="${GAMES_DATADIR}"/${PN} \
-		|| die "scons failed"
+		|| die
 }
 
 src_install() {
