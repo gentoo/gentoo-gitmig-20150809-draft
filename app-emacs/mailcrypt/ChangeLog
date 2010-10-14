@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mailcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.22 2010/09/18 17:27:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.23 2010/10/14 16:49:05 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> mailcrypt-3.5.9.ebuild:
+  stable ppc, bug 332087
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> mailcrypt-3.5.9.ebuild:
   sparc stable wrt #332087
