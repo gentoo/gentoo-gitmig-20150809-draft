@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gupnp-dlna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.4 2010/10/14 20:19:43 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.5 2010/10/14 20:22:05 ford_prefect Exp $
+
+  14 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  -gupnp-dlna-0.2.1.ebuild, -gupnp-dlna-0.3.0.ebuild:
+  Prune old versions.
 
 *gupnp-dlna-0.4.2 (14 Oct 2010)
 
