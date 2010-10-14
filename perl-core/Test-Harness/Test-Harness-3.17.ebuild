@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.17.ebuild,v 1.9 2010/01/05 19:10:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.17.ebuild,v 1.10 2010/10/14 10:29:12 tove Exp $
 
 MODULE_AUTHOR=ANDYA
 inherit perl-module
@@ -16,3 +16,4 @@ DEPEND="dev-lang/perl"
 PREFER_BUILDPL=no
 SRC_TEST="do"
 mydoc="rfc*.txt"
+PATCHES=( "${FILESDIR}"/3.17-taint.patch )
