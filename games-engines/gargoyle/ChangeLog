@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.10 2010/08/31 15:38:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.11 2010/10/14 08:29:32 s4t4n Exp $
+
+*gargoyle-20100930 (14 Oct 2010)
+
+  14 Oct 2010; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20100930.ebuild:
+  Version bump. Closes bug #253098.
 
   31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20060917-r1.ebuild:
   Honour Gentoo LDFLAGS. Closes bug #333653.
