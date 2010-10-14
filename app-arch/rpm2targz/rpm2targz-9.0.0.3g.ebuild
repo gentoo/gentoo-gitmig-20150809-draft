@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.0.3g.ebuild,v 1.8 2009/10/18 16:46:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.0.3g.ebuild,v 1.9 2010/10/14 01:41:16 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -16,8 +16,7 @@ IUSE="userland_GNU"
 # NOTE: rpm2targz autodetects rpm2cpio at runtime, and uses it if available,
 #       so we don't explicitly set it as a dependency.
 RDEPEND="app-arch/cpio"
-DEPEND="${DEPEND}
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+DEPEND="app-arch/xz-utils"
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die
