@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.427 2010/10/07 19:55:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.428 2010/10/14 21:01:39 maekke Exp $
+
+  14 Oct 2010; Markus Meier <maekke@gentoo.org> glib-2.24.1-r1.ebuild:
+  arm stable, bug #324077
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> glib-2.24.1-r1.ebuild:
   ppc64 stable wrt #324077
