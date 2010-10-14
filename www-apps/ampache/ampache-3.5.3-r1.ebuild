@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.1 2010/07/03 13:36:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.2 2010/10/14 15:45:38 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ampache.org/"
 SRC_URI="http://www.ampache.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/php[gd,hash,iconv,mysql,session,unicode,xml,zlib]
