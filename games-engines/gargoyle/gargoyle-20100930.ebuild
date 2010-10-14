@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.1 2010/10/14 08:29:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.2 2010/10/14 15:01:24 mr_bones_ Exp $
 
 # Notes:
 #  - fmod support is based on an old version of fmod which is not in portage,
@@ -8,7 +8,7 @@
 #  - Have contacted upstream requesting overridable build variables and a
 #    configurable config file path, to obviate file editing in src_prepare.
 
-# Regarding licenses: libgarglk is licensed under the GPLv2. Bundled 
+# Regarding licenses: libgarglk is licensed under the GPLv2. Bundled
 # interpreters are licensed under GPLv2, BSD or MIT license, except:
 #   - alan2/alan3: status unclear!
 #   - glulxe: custom license, see "terps/glulxle/README"
