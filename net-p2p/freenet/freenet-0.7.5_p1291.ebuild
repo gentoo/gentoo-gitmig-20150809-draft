@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1277.ebuild,v 1.1 2010/09/13 17:48:04 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1291.ebuild,v 1.1 2010/10/14 16:45:23 tommy Exp $
 
 EAPI="2"
-DATE=20100701
+DATE=20101003
 
 inherit eutils java-pkg-2 java-ant-2 multilib
 
