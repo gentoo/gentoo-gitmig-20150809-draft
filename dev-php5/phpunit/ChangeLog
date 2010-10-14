@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/phpunit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.29 2010/10/04 22:51:07 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/ChangeLog,v 1.30 2010/10/14 15:40:51 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  phpunit-3.4.13.ebuild:
+  x86 stable, bug 336869
 
 *phpunit-3.5.0 (04 Oct 2010)
 

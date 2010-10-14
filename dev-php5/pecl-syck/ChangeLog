@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.18 2010/05/28 22:01:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.19 2010/10/14 15:37:59 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  pecl-syck-0.9.3.ebuild:
+  x86 stable, bug 336869
 
 *pecl-syck-0.9.3 (28 May 2010)
 
