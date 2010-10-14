@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.7 2010/10/09 19:09:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r4.ebuild,v 1.8 2010/10/14 23:05:06 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/TR/xhtml1/xhtml1.tgz"
 LICENSE="W3C"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-text/sgml-common

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.21 2010/10/09 19:09:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.22 2010/10/14 23:05:06 hwoarang Exp $
+
+  14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  xhtml1-20020801-r4.ebuild:
+  Stable on amd64 wrt bug #276400
 
   09 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   xhtml1-20020801-r4.ebuild:
