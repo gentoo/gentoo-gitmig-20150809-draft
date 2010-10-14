@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/pconsole
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.11 2010/06/02 06:44:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.12 2010/10/14 17:33:41 xarthisius Exp $
+
+*pconsole-1.0-r3 (14 Oct 2010)
+
+  14 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -pconsole-1.0-r2.ebuild, +pconsole-1.0-r3.ebuild:
+  Respect LDFLAGS wrt bug 339197. Thanks to Diego for the report. Simplify
+  ebuild, correct dependencies. Drop old.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tantive from metadata.xml (#200343)
