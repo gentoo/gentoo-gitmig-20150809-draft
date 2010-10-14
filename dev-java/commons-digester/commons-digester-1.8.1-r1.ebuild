@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.1-r1.ebuild,v 1.3 2010/05/22 19:20:16 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.1-r1.ebuild,v 1.4 2010/10/14 16:56:36 ranger Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/commons/digester/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4
