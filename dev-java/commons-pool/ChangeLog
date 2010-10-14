@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.53 2010/05/22 19:31:42 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.54 2010/10/14 16:57:52 ranger Exp $
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> commons-pool-1.5.4.ebuild:
+  stable ppc, bug 316307
 
   22 May 2010; Kenneth Prugh <ken69267@gentoo.org>
   commons-pool-1.5.4.ebuild:
