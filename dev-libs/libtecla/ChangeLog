@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libtecla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.16 2010/07/18 13:59:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.17 2010/10/14 13:44:53 xarthisius Exp $
+
+*libtecla-1.6.1-r1 (14 Oct 2010)
+
+  14 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -libtecla-1.6.0-r1.ebuild, libtecla-1.6.1.ebuild,
+  +libtecla-1.6.1-r1.ebuild, +files/libtecla-1.6.1-ldflags.patch,
+  +files/libtecla-1.6.1-parallel_build.patch:
+  Respect LDFLAGS wrt bug 334641. Thanks to Diego for the report. Fix
+  parallel build, add missing dies and explicit RDEPEND. Drop old.
 
   18 Jul 2010; <nixnut@gentoo.org> libtecla-1.6.1.ebuild:
   ppc stable #325201
