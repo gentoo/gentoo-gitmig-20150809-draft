@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-2.0.ebuild,v 1.2 2010/07/03 15:24:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-2.0.ebuild,v 1.3 2010/10/14 15:41:49 fauli Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.spaceparanoids.org/trac/bend/wiki/mplayer-resume"
 SRC_URI="http://spaceparanoids.org/downloads/mplayer-resume/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+lirc"
 DEPEND=""
 RDEPEND="lirc? ( app-misc/lirc

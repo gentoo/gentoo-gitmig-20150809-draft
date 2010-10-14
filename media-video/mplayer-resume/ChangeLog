@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer-resume
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/ChangeLog,v 1.8 2010/07/03 15:24:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/ChangeLog,v 1.9 2010/10/14 15:41:49 fauli Exp $
+
+  14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  mplayer-resume-2.0.ebuild:
+  x86 stable, bug 336869
 
   03 Jul 2010; Matti Bickel <mabi@gentoo.org> mplayer-resume-2.0.ebuild:
   update RDEPEND for php-5.3 (bug #298205)
