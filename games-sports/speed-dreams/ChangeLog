@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/speed-dreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.6 2010/09/16 17:52:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.7 2010/10/14 00:29:35 hwoarang Exp $
+
+  14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  speed-dreams-1.4.0.ebuild:
+  Stable on amd64 wrt bug #333261
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   speed-dreams-1.4.0.ebuild:
