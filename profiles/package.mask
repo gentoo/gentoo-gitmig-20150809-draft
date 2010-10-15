@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12048 2010/10/15 09:00:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12049 2010/10/15 13:36:45 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -800,30 +800,6 @@ app-emulation/qemu-kvm-spice
 #
 # Removal on 2010-10-09
 app-admin/webmin
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2010)
-#  on behalf of QA team
-#
-# Website's dead; install init scripts not suited for Gentoo
-# rc system; there are no source packages, the files are
-# directly in CVS; code comes 2002, and no way to track down
-# anything newer; LICENSE value and source files don't agree
-# on a GPL-2.
-#
-# Removal on 2010-10-09
-sys-apps/gluelog
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (06 Aug 2010)
-#  on behalf of QA team
-#
-# bsfilter is dead upstream, not bumped since 2006;
-# current stable was added in 2005 (and is not the last one
-# available); claws-mail-bsfilter is the only user and also
-# has broken dependencies.
-#
-# Removal on 2010-10-05
-mail-filter/bsfilter
-mail-client/claws-mail-bsfilter
 
 # Jeroen Roovers <jer@gentoo.org> (03 Aug 2010)
 # Alphas and snapshots are not for everyday use
