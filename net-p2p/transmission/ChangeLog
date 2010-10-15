@@ -1,6 +1,18 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.127 2010/10/15 11:23:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.128 2010/10/15 11:50:13 pva Exp $
+
+*transmission-2.10 (15 Oct 2010)
+
+  15 Oct 2010; Peter Volkov <pva@gentoo.org> +transmission-2.10.ebuild,
+  +files/transmission-daemon.confd.2, +files/transmission-daemon.initd.3:
+  Version bump, #340851 thank Dean Matzkov for report. Rewrote init script
+  to make use of upstream defaults instead of hardcoding them, added reload
+  target (#333767 by mark@tvk.rwth-aachen.de), should work with baselayout-1
+  (#336315 thank Domen Kožar for report) and also this should allow much
+  more flexible configurations (like requested in bug #323933). Added
+  warnings to store passwords in settings.json file for security reasons
+  (#323933 wrt Heorhii Valakhanovich).
 
   15 Oct 2010; Peter Volkov <pva@gentoo.org> -transmission-1.93.ebuild,
   -transmission-2.01.ebuild, -transmission-2.03.ebuild,
