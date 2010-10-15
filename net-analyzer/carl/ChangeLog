@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/carl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.9 2010/10/12 08:30:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.10 2010/10/15 21:03:59 arfrever Exp $
+
+  15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -carl-0.7.ebuild, -carl-0.8.ebuild:
+  Delete.
 
   12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> carl-0.9.ebuild:
   x86 stable wrt bug #340381
