@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.556 2010/10/15 02:03:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.557 2010/10/15 15:15:41 jer Exp $
+
+*opera-10.70_pre9071 (15 Oct 2010)
+
+  15 Oct 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.70_pre9071.ebuild:
+  http://my.opera.com/desktopteam/blog/2010/10/15/font-fixes-for-nix-the-las
+  t-10-70-build
 
   15 Oct 2010; Jeroen Roovers <jer@gentoo.org> -opera-10.61.ebuild,
   opera-10.63.ebuild, -files/opera:
