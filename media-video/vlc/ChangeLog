@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.632 2010/10/15 19:35:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.633 2010/10/15 20:02:58 aballier Exp $
+
+  15 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump live version requirement
 
   15 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.1.4.1.ebuild:
   propagate 1.1.4 keywords to 1.1.4.1, they are very similar and most likely
