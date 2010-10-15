@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.84 2010/08/23 19:11:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.85 2010/10/15 18:15:29 ssuominen Exp $
+
+*raptor-1.9.0 (15 Oct 2010)
+*raptor-1.4.21-r1 (15 Oct 2010)
+
+  15 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +raptor-1.4.21-r1.ebuild, +raptor-1.9.0.ebuild:
+  Version bump. Remove rapper (with it's manpage) from 1.4.21 for slotting.
 
   23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> raptor-1.4.21.ebuild:
   Punt .la files and fix HTML documentation directory.
