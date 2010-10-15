@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.65 2010/10/03 19:44:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.66 2010/10/15 02:05:39 vapier Exp $
+
+  15 Oct 2010; Mike Frysinger <vapier@gentoo.org> netatalk-2.0.5-r1.ebuild,
+  netatalk-2.1.ebuild, netatalk-2.1.3.ebuild:
+  Drop older linux-headers dependency #339680 by Robert Lippmann.
 
 *netatalk-2.1.3 (03 Oct 2010)
 

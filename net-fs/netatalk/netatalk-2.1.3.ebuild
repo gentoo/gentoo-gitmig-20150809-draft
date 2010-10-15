@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.1.3.ebuild,v 1.1 2010/10/03 19:44:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.1.3.ebuild,v 1.2 2010/10/15 02:05:39 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=sys-libs/db-4.2.52
 	>=sys-apps/coreutils-7.1
 	!app-text/yudit"
 DEPEND="${RDEPEND}
-	xfs? ( sys-fs/xfsprogs <sys-kernel/linux-headers-2.6.16 )"
+	xfs? ( sys-fs/xfsprogs )"
 
 src_prepare() {
 	# until someone that understands their config script build
