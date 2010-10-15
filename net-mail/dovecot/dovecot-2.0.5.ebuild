@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.5.ebuild,v 1.1 2010/10/05 03:42:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.5.ebuild,v 1.2 2010/10/15 12:57:12 darkside Exp $
 
 EAPI="3"
 
@@ -72,7 +72,8 @@ src_configure() {
 	done
 	[ "${storages}" ] || storages="maildir"
 
-	econf \
+	# turn valgrind tests off. Bug #340791
+	VALGRIND=no econf \
 		--localstatedir="${EPREFIX}/var" \
 		--with-moduledir="${EPREFIX}/usr/$(get_libdir)/dovecot" \
 		$( use_with bzip2 bzlib ) \
