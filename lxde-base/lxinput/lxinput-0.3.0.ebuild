@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/lxinput-0.3.0.ebuild,v 1.1 2010/10/12 15:05:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/lxinput-0.3.0.ebuild,v 1.2 2010/10/15 20:48:08 vostorga Exp $
 
 EAPI="1"
 
@@ -17,7 +17,8 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=dev-util/intltool-0.40.0"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
