@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.6 2010/10/14 17:17:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.7 2010/10/15 17:44:32 fauli Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cegui cg devil doc double-precision examples gtk threads"
 RESTRICT="test" #139905
 
