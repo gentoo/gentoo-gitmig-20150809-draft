@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tramp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.98 2010/10/14 16:51:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.99 2010/10/15 08:36:16 fauli Exp $
+
+  15 Oct 2010; Christian Faulhammer <fauli@gentoo.org> -tramp-2.1.17.ebuild:
+  clean up
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> tramp-2.1.18.ebuild:
   stable ppc, bug 332093
