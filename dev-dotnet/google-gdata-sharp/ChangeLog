@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/google-gdata-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.5 2010/10/15 07:44:06 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.6 2010/10/15 18:16:03 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  google-gdata-sharp-1.4.0.2-r1.ebuild:
+  Dropping base.eclass meant dropping eutils.eclass as well, fix missing
+  epatch.
 
 *google-gdata-sharp-1.4.0.2-r1 (15 Oct 2010)
 
