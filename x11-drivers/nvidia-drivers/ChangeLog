@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.256 2010/10/14 14:48:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.257 2010/10/15 23:30:21 cardoe Exp $
+
+*nvidia-drivers-260.19.12 (15 Oct 2010)
+
+  15 Oct 2010; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-260.19.12.ebuild:
+  Version bump for new upstream release. Added a note about what USE=gtk
+  does when you disable it.
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   nvidia-drivers-96.43.18.ebuild, nvidia-drivers-173.14.27.ebuild,
