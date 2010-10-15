@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.12 2010/10/14 15:09:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.13 2010/10/15 20:49:59 arfrever Exp $
+
+  15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -traits-3.2.0.ebuild, -traits-3.3.0.ebuild:
+  Delete.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> traits-3.4.0.ebuild:
   Marking traits-3.4.0 ppc for bug 326809
