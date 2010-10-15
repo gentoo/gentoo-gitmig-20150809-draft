@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.10 2010/08/15 13:35:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.11 2010/10/15 18:41:44 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ COMMON_DEPEND="
 	x11-libs/qt-core:4
 	clucene? ( dev-cpp/clucene )
 	dbus? ( x11-libs/qt-dbus:4 )
-	raptor? ( >=media-libs/raptor-1.4.16 )
+	raptor? ( >=media-libs/raptor-1.4.16
+		<media-libs/raptor-1.9.0 )
 	redland? (
 		>=dev-libs/rasqal-0.9.15
 		>=dev-libs/redland-1.0.6
