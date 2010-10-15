@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.126 2010/10/06 19:50:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.127 2010/10/15 11:23:56 pva Exp $
+
+  15 Oct 2010; Peter Volkov <pva@gentoo.org> -transmission-1.93.ebuild,
+  -transmission-2.01.ebuild, -transmission-2.03.ebuild,
+  -transmission-2.04.ebuild, transmission-2.04-r1.ebuild:
+  Depend qt-dbus, fixes build issue reported in bug #338059 by Robert Wolf.
+  Drop old.
 
   06 Oct 2010; Markus Meier <maekke@gentoo.org> transmission-2.04-r1.ebuild:
   x86 stable, bug #338059

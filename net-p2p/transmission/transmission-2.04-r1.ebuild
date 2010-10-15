@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.04-r1.ebuild,v 1.3 2010/10/06 19:50:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.04-r1.ebuild,v 1.4 2010/10/15 11:23:56 pva Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -27,7 +27,7 @@ RDEPEND="
 		gnome? ( >=gnome-base/gconf-2.20.0 )
 		libnotify? ( >=x11-libs/libnotify-0.4.3 )
 		sound? ( >=media-libs/libcanberra-0.10 ) )
-	qt4? ( x11-libs/qt-gui:4 )"
+	qt4? ( x11-libs/qt-gui:4[dbus] )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2.6b
 	sys-devel/gettext
