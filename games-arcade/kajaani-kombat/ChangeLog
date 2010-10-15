@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kajaani-kombat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.13 2008/05/22 20:54:56 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.14 2010/10/15 13:53:28 tupone Exp $
+
+  15 Oct 2010; Tupone Alfredo <tupone@gentoo.org> kajaani-kombat-0.7.ebuild,
+  +files/kajaani-kombat-0.7-ldflags.patch:
+  Respect LDFLAGS. Bug #334997 by flameeyes@gentoo.org
 
   22 May 2008; Markus Meier <maekke@gentoo.org> kajaani-kombat-0.7.ebuild:
   amd64/x86 stable, bug #223095

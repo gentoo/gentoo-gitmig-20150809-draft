@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.6 2008/05/22 20:54:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.7 2010/10/15 13:53:28 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -13,18 +14,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer
 	sys-libs/ncurses
 	sys-libs/readline"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-makefile.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-makefile.patch" \
+		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:GENTOODIR:${GAMES_DATADIR}/${PN}/:" \
 		Makefile \
