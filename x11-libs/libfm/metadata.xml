@@ -9,5 +9,6 @@
   <use>
     <flag name='demo'>Build demo</flag>
 	<flag name='udev'>Use sys-fs/udev to determine available devices</flag>
+	<flag name='udisks'>Use udisks backend to detect removal devices</flag>
   </use>
 </pkgmetadata>

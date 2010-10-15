@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.3 2010/10/01 10:59:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.4 2010/10/15 00:20:09 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,11 +13,11 @@ EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug demo gnome hal udev"
+IUSE="debug demo gnome hal udev udisks"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
-	sys-fs/udisks
+	udisks? ( sys-fs/udisks )
 	gnome? ( hal? ( gnome-base/gnome-mount ) )
 	gnome? ( gnome-base/gvfs[hal?,udev?] )
 	>=lxde-base/menu-cache-0.3.2"
@@ -41,7 +41,10 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --sysconfdir=/etc $(use_enable debug) $(use_enable demo)
+	econf --sysconfdir=/etc \
+		$(use_enable debug) \
+		$(use_enable demo) \
+		$(use_enable udisks)
 }
 
 src_install() {

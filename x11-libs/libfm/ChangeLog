@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.14 2010/10/01 10:59:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.15 2010/10/15 00:20:09 hwoarang Exp $
+
+  15 Oct 2010; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild,
+  metadata.xml:
+  Add udisks useflag to choose the prefered backend and add udisks configure
+  option. Bug #340120. Thanks to Michael Metsger <themixa@gmail.com for
+  reporting
 
   01 Oct 2010; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild,
   metadata.xml:
