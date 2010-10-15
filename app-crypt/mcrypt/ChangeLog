@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.32 2010/10/12 12:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.33 2010/10/15 21:02:20 arfrever Exp $
+
+  15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mcrypt-2.6.7.ebuild, -mcrypt-2.6.8.ebuild:
+  Delete.
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> mcrypt-2.6.8-r1.ebuild:
   sparc stable wrt #337158
