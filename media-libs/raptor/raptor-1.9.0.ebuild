@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.9.0.ebuild,v 1.1 2010/10/15 18:15:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.9.0.ebuild,v 1.2 2010/10/15 18:18:33 ssuominen Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -21,7 +21,8 @@ RDEPEND="unicode? ( dev-libs/glib:2 )
 	!xml? ( dev-libs/expat )
 	curl? ( net-misc/curl )
 	json? ( dev-libs/yajl )
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	!<media-libs/raptor-1.4.21-r1"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	dev-util/pkgconfig"
