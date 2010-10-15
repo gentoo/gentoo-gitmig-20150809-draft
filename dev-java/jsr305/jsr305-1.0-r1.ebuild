@@ -1,28 +1,28 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr305/jsr305-1.0.ebuild,v 1.2 2009/11/01 08:29:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr305/jsr305-1.0-r1.ebuild,v 1.1 2010/10/15 05:47:49 nerdboy Exp $
 
 EAPI=2
-JAVA_PKG_IUSE="doc source"
+
+JAVA_PKG_IUSE="doc examples source test"
 inherit eutils java-pkg-2 java-ant-2
 MY_PN=jsr-305
-ESVN_REPO_URI="http://${MY_PN}.googlecode.com/svn/trunk"
-inherit subversion
-ESVN_FETCH_CMD="svn checkout -r 49"
 
 DESCRIPTION="Reference implementation for JSR 305: Annotations for Software Defect Detection in Java"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${MY_PN}-source.tar.gz"
 HOMEPAGE="http://code.google.com/p/jsr-305/"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="examples test"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	test? ( dev-java/ant-junit )"
 RDEPEND=">=virtual/jre-1.5"
+
+S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
 	# create jar
