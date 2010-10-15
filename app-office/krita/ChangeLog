@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.117 2010/09/25 20:41:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.118 2010/10/15 21:49:52 dilfridge Exp $
+
+  15 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> krita-2.2.2.ebuild:
+  Drop powerpc keywords so the global package mask can be removed.
 
 *krita-2.2.2 (25 Sep 2010)
 

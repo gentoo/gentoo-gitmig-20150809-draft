@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.111 2010/09/25 20:20:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.112 2010/10/15 21:46:17 dilfridge Exp $
+
+  15 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  koffice-libs-2.2.2.ebuild:
+  Drop powerpc keywords so the global package mask can be removed.
 
 *koffice-libs-2.2.2 (25 Sep 2010)
 

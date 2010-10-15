@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-2.2.2.ebuild,v 1.1 2010/09/25 20:23:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-2.2.2.ebuild,v 1.2 2010/10/15 21:41:14 dilfridge Exp $
 
 EAPI="2"
 KMNAME="koffice"
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KOffice vector drawing application."
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+pstoedit wpg"
 
 DEPEND="

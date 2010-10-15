@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.77 2010/09/25 20:36:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.78 2010/10/15 21:55:47 dilfridge Exp $
+
+  15 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kplato-2.2.2.ebuild:
+  Drop powerpc keywords so the global package mask can be removed.
 
 *kplato-2.2.2 (25 Sep 2010)
 

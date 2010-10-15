@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.116 2010/09/25 20:33:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.117 2010/10/15 21:51:34 dilfridge Exp $
+
+  15 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kspread-2.2.2.ebuild:
+  Drop powerpc keywords so the global package mask can be removed.
 
 *kspread-2.2.2 (25 Sep 2010)
 
