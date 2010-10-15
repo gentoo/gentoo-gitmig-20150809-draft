@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.6 2010/10/12 18:21:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.7 2010/10/15 17:02:27 jer Exp $
+
+  15 Oct 2010; Jeroen Roovers <jer@gentoo.org> gogoc-1.2-r1.ebuild:
+  Marked ~hppa (bug #340685).
 
   12 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> files/gogoc.rc:
   Small typo on configuration file path
