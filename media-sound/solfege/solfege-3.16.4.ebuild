@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.5 2010/10/15 05:28:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.6 2010/10/15 17:42:33 fauli Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="oss"
 
 RDEPEND="gnome-base/librsvg
