@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.40 2010/07/17 17:26:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.41 2010/10/15 13:50:25 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> libsoundtouch-1.5.0.ebuild:
+  stable ppc, bug 325875
 
   17 Jul 2010; Raúl Porcel <armin76@gentoo.org> libsoundtouch-1.5.0.ebuild:
   sparc stable wrt #325875
