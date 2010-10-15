@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gateway6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.5 2010/10/13 11:32:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.6 2010/10/15 16:51:02 jer Exp $
+
+  15 Oct 2010; Jeroen Roovers <jer@gentoo.org> gateway6-6.0-r2.ebuild:
+  Stable for HPPA (bug #340587).
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gateway6-6.0-r2.ebuild:
   Stable on amd64 wrt bug #340587
