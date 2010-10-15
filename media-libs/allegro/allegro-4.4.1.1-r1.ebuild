@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.8 2010/10/07 08:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.9 2010/10/15 12:58:38 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -103,4 +103,7 @@ src_install() {
 		newicon misc/icon.png ${PN}.png
 		make_desktop_entry ${PN}-setup "Allegro Setup" ${PN} "Settings"
 	fi
+
+	rm -f "${D}"/usr/share/man/man3/init_dialog.3* #176020
+	newman docs/man/init_dialog.3 allegro_init_dialog.3
 }
