@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6-r1.ebuild,v 1.1 2010/09/21 17:59:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6-r1.ebuild,v 1.2 2010/10/15 17:08:26 lxnay Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ ALL_DEPEND="dev-libs/nss[utils]
 
 DEPEND="${ALL_DEPEND}
 	dev-util/pkgconfig
-	sys-devel/libtool:1.5
+	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 	selinux? ( sys-devel/m4 >=sys-apps/checkpolicy-1.30.12 )
 	sys-apps/sed"
