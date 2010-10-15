@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joni
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/ChangeLog,v 1.9 2010/08/01 12:42:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/ChangeLog,v 1.10 2010/10/15 12:37:44 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> joni-1.1.4.ebuild:
+  stable ppc, bug 330155
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> joni-1.1.4.ebuild:
   Stable on amd64 wrt bug #330155
