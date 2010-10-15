@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.21_p20090103.ebuild,v 1.10 2010/01/05 03:08:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.23.ebuild,v 1.1 2010/10/15 14:06:47 pva Exp $
 
-EAPI=1
-inherit fdo-mime flag-o-matic eutils multilib toolchain-funcs
+EAPI="2"
+inherit fdo-mime autotools flag-o-matic
 
 MY_P="${PN}libre-${PV#*_p}"
 
@@ -13,22 +13,27 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="xml jpeg tiff debug nls kde doc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="debug doc jpeg nls tiff xml"
 
-RDEPEND="jpeg? ( >=media-libs/jpeg-6b-r2 )
+RDEPEND="jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-LANGS="cs de en fr ja zh"
-for X in ${LANGS}; do
-	IUSE="${IUSE} linguas_${X}"
-done
+# No gui, only manual pages left and only on ja...
+LANGS="ja"
+IUSE+=" $(printf "linguas_%s" ${LANGS})"
 
-src_compile() {
-	local I18N
+src_prepare() {
+	sed 's/AC_CXX_OPTIMIZE/OPTS=;AC_SUBST(OPTS)/' -i configure.ac || die #263688
+	rm aclocal.m4 config/{libtool.m4,ltmain.sh,install-sh}
+	AT_M4DIR="config" eautoreconf
+}
+
+src_configure() {
+	local X I18N
 	if use nls; then
 		for X in ${LANGS}; do
 			if use linguas_${X}; then
@@ -45,22 +50,19 @@ src_compile() {
 		I18N="--disable-i18n"
 	fi
 
-	# We install all desktop files by hand and Qt3 is deprecated
+	use debug && append-cppflags "-DRUNTIME_DEBUG_ONLY"
+
+	# We install all desktop files by hand.
 	econf --disable-desktopfiles \
 		--without-qt \
 		$(use_enable xml xmltools) \
 		$(use_with jpeg) \
 		$(use_with tiff) \
-		"${I18N}" \
-		$(use_enable debug)
-
-	sed -e 's:nsdejavu::' -i "${S}"/gui/Makefile || die
-
-	emake || die "emake failed"
+		"${I18N}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" plugindir=/usr/$(get_libdir)/${PLUGINS_DIR} install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc README TODO NEWS
 
@@ -72,19 +74,13 @@ src_install() {
 	insinto	/usr/share/icons/hicolor/32x32/mimetypes && newins hi32-djvu.png image-vnd.djvu.png || die
 	insinto	/usr/share/icons/hicolor/48x48/mimetypes && newins hi48-djvu.png image-vnd.djvu.png || die
 	insinto	/usr/share/mime/packages && doins djvulibre-mime.xml || die
-	if use kde ; then
-		insinto /usr/share/mimelnk/image && doins vnd.djvu.desktop || die
-		cp "${D}"/usr/share/mimelnk/image/{vnd.djvu.desktop,x-djvu.desktop}
-		sed -i -e 's:image/vnd.djvu:image/x-djvu:' "${D}"/usr/share/mimelnk/image/x-djvu.desktop
-	fi
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	elog "For djviewer or browser plugin, emerge app-text/djview4."
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 }

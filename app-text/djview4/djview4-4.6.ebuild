@@ -1,38 +1,48 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.5.ebuild,v 1.10 2010/01/06 20:24:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.6.ebuild,v 1.1 2010/10/15 14:08:07 pva Exp $
 
-EAPI=2
+EAPI="3"
 
-inherit eutils versionator qt4 toolchain-funcs fdo-mime
+inherit eutils autotools versionator toolchain-funcs multilib nsplugins fdo-mime flag-o-matic
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 
 DESCRIPTION="Portable DjVu viewer using Qt4"
 HOMEPAGE="http://djvu.sourceforge.net/djview4.html"
 SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
-LICENSE="GPL-2"
 
-KEYWORDS="alpha amd64 hppa ~ia64 ppc64 x86"
+LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="debug nsplugin"
+
 RDEPEND="
-	>=app-text/djvu-3.5.19
-	x11-libs/qt-gui:4
-"
+	>=app-text/djvu-3.5.22-r1
+	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-"
+	nsplugin? ( dev-libs/glib:2 )"
 
-S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
+S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
+
+src_prepare() {
+	# Force XEmbed instead of Xt-based mainloop (disable Xt autodep)
+	sed -e 's:\(ac_xt=\)yes:\1no:' -i configure* || die
+	sed 's/AC_CXX_OPTIMIZE/OPTS=;AC_SUBST(OPTS)/' -i configure.ac || die #263688
+	rm aclocal.m4 config/{libtool.m4,install-sh,ltmain.sh,lt*.m4}
+	AT_M4DIR="config" eautoreconf
+}
 
 src_configure() {
+	# See config/acinclude.m4
+	use debug || append-cppflags "-DNDEBUG"
+
 	# QTDIR is needed because of kde3
 	QTDIR=/usr \
 	econf \
-		$(use_enable debug) \
 		--with-x \
-		--disable-nsdejavu \
+		$(use_enable nsplugin nsdejavu) \
 		--disable-desktopfiles
 }
 
@@ -41,9 +51,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	#remove conflicting symlinks
-	rm -f "${D}/usr/bin/djview" "${D}/usr/share/man/man1/djview.1"
+	emake DESTDIR="${D}" \
+		plugindir=/usr/$(get_libdir)/${PLUGINS_DIR} \
+			install || die "emake install failed"
 
 	dodoc README TODO NEWS || die "dodoc failed"
 
