@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.39 2010/02/14 23:53:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.40 2010/10/15 14:21:23 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -qemu-user-0.10.0.ebuild, -qemu-user-0.10.1.ebuild:
+  Spring cleaning of ebuilds.
 
 *qemu-user-0.12.2 (14 Feb 2010)
 
