@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/google-gdata-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.4 2010/07/12 17:49:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.5 2010/10/15 07:44:06 ford_prefect Exp $
+
+*google-gdata-sharp-1.4.0.2-r1 (15 Oct 2010)
+
+  15 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +google-gdata-sharp-1.4.0.2-r1.ebuild:
+  Pass arguments to emake instead of setting MAKEOPTS. Drop base.eclass
+  while we're at it.
 
   12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   google-gdata-sharp-1.4.0.2.ebuild:
