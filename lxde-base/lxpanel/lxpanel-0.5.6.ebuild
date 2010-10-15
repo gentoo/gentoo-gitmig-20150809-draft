@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.2 2010/10/12 16:54:17 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.3 2010/10/15 21:21:25 vostorga Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -42,4 +42,7 @@ src_configure() {
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README || die "dodoc failed"
+
+	# Get rid of the .la files.
+	find "${D}" -name '*.la' -delete
 }
