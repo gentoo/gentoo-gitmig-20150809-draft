@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.4.ebuild,v 1.2 2010/07/11 09:59:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.4-r1.ebuild,v 1.1 2010/10/15 13:25:01 lxnay Exp $
 
 EAPI="2"
 
@@ -53,11 +53,14 @@ src_compile() {
 
 src_install() {
 	java-pkg_jarinto /usr/share/dirsrv/html/java
-	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}.jar 389-admin.jar
-	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}_en.jar 389-admin_en.jar
+	# have to install versioned jars, otherwise 389-console will crash
+	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}.jar 389-admin-${MY_PV}.jar
+	java-pkg_newjar "${S}"/build/package/389-admin-${MY_PV}_en.jar 389-admin-${MY_PV}_en.jar
 
-	dosym 389-admin.jar /usr/share/dirsrv/html/java/389-admin-${MY_PV}.jar
-	dosym 389-admin_en.jar /usr/share/dirsrv/html/java/389-admin-${MY_PV}_en.jar
+	dosym 389-admin-${MY_PV}.jar /usr/share/dirsrv/html/java/389-admin.jar
+	dosym 389-admin-${MY_PV}.jar /usr/share/dirsrv/html/java/389-admin-${SLOT}.jar
+	dosym 389-admin-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-admin_en.jar
+	dosym 389-admin-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-admin-${SLOT}_en.jar
 
 	insinto /usr/share/dirsrv/manual/en/admin
 	doins "${S}"/help/en/*.html
