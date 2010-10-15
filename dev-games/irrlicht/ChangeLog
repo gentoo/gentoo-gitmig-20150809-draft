@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.42 2010/09/17 11:00:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.43 2010/10/15 12:50:04 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> irrlicht-1.7.1.ebuild:
+  stable ppc, bug 319629
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   irrlicht-1.5.1.ebuild, irrlicht-1.7.1.ebuild:
