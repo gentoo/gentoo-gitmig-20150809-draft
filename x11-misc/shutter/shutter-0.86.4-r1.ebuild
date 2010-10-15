@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.86.4.ebuild,v 1.1 2010/10/10 10:36:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.86.4-r1.ebuild,v 1.1 2010/10/15 10:56:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -43,6 +43,10 @@ RDEPEND="dev-lang/perl
 src_prepare() {
 	use webphoto || epatch "${FILESDIR}"/disable_webphoto.patch
 	use drawing || epatch "${FILESDIR}"/${PV}-disable-goocanvas.patch
+	#Fix tray icon because it doesn't pick the right icon using various themes
+	sed -i -e "/\$tray->set_from_icon_name/s:set_from_icon_name:set_from_file:" \
+	-e "s:shutter-panel:/usr/share/icons/hicolor/scalable/apps/&.svg:" \
+	bin/shutter || die "failed to fix trayicon"
 }
 
 src_install() {
@@ -54,6 +58,8 @@ src_install() {
 	doman share/man/man1/${PN}.1.gz || die "doman failed"
 	doicon share/pixmaps/${PN}.png
 	doins -r share/locale || die "doins failed"
+	insinto /usr/share/icons/hicolor
+	doins -r share/icons/hicolor/* || die "doins failed"
 	find "${D}"/usr/share/shutter/resources/system/plugins/ -type f ! -name '*.*' -exec chmod 755 {} \; \
 		|| die "failed to make plugins executables"
 }
