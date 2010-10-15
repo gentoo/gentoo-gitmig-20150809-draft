@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.33 2010/09/26 19:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.34 2010/10/15 18:13:38 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -emerald-0.8.4.ebuild, -emerald-0.8.4-r1.ebuild, emerald-0.8.4-r2.ebuild:
+  Fix build with gtk+ 2.22 (bug #341143) and cleanup old versions.
 
 *emerald-0.8.4-r2 (26 Sep 2010)
 
