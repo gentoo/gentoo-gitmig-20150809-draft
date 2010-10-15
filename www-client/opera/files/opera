@@ -1,4 +1,0 @@
-#!/bin/bash
-export OPERA_DIR=/usr/share/opera
-export OPERA_PERSONALDIR="${HOME}/.opera"
-exec OPERA_LIBDIR/opera/opera "$@"

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.555 2010/10/13 11:28:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.556 2010/10/15 02:03:20 jer Exp $
+
+  15 Oct 2010; Jeroen Roovers <jer@gentoo.org> -opera-10.61.ebuild,
+  opera-10.63.ebuild, -files/opera:
+  Stable for PPC (bug #340655). Remove old.
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org> opera-10.63.ebuild:
   Stable on amd64 wrt bug #340655

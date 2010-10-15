@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.63.ebuild,v 1.3 2010/10/13 11:28:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.63.ebuild,v 1.4 2010/10/15 02:03:20 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="mirror test"
