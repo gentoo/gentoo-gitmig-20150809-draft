@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/beaver
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.18 2010/10/15 17:01:42 ssuominen Exp $
+
+*beaver-0.4.1 (15 Oct 2010)
+
+  15 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +beaver-0.4.1.ebuild,
+  +files/beaver-0.4.1-desktop-file-validate.patch:
+  Initial commit wrt #231532 by Mirko Briemle.
+
