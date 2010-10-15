@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.37 2010/09/12 04:17:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.38 2010/10/15 15:04:55 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam_krb5-3.12.ebuild, -files/pam_krb5-3.12-CVE-2009-0361-0362.patch:
+  Remove old vulnerable version.
 
   12 Sep 2010; Joseph Jezak <josejx@gentoo.org> pam_krb5-4.3.ebuild:
   Marked ppc stable for bug #326953.
