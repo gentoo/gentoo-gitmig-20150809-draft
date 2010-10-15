@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3-r1.ebuild,v 1.1 2010/10/13 14:59:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.3-r1.ebuild,v 1.2 2010/10/15 17:25:08 flameeyes Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -123,6 +123,6 @@ src_install() {
 
 	dodoc README || die
 	if use doc; then
-		ewdoc "${DOC_PREFIX}-manual.pdf" "manual.pdf" || die
+		newdoc "${DOC_PREFIX}-manual.pdf" "manual.pdf" || die
 	fi
 }
