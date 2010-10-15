@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.14 2010/10/11 19:03:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.15 2010/10/15 13:24:19 flameeyes Exp $
 
 EAPI=2
 inherit eutils games
@@ -30,7 +30,8 @@ src_compile() {
 }
 
 src_install() {
-	emake \
+	# bug #341111
+	emake -j1 \
 		prefix="${D}/usr" \
 		bindir="${D}${GAMES_BINDIR}" \
 		datadir="${D}${GAMES_DATADIR}" \
