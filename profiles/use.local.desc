@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6049 2010/10/15 00:34:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6050 2010/10/15 07:14:09 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -276,7 +276,6 @@ app-editors/gvim:netbeans - Include netbeans externaleditor integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
-app-editors/jove:unix98 - Use Unix 98 pty's instead of BSD pts's
 app-editors/leafpad:emacs - Enable Emacs key theme
 app-editors/nano:debug -  Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility. 
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.
