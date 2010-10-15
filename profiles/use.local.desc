@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6051 2010/10/15 13:54:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6052 2010/10/15 14:34:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -388,14 +388,9 @@ app-emulation/qemu-kvm-spice:qemu-ifup - Provides the qemu-ifup script for use w
 app-emulation/qemu-kvm-spice:sdl - Enable the SDL-based console
 app-emulation/qemu-kvm-spice:vde - Enable VDE-based networking
 app-emulation/qemu-softmmu:alsa - Enable alsa output for sound emulation
-app-emulation/qemu-softmmu:esd - Enable esound output for sound emulation
 app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console server
 app-emulation/qemu-softmmu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
-app-emulation/qemu-softmmu:kvm - Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware
-app-emulation/qemu-softmmu:ncurses - Enable the ncurses-based console
-app-emulation/qemu-softmmu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu-softmmu:sdl - Enable the SDL-based console
-app-emulation/qemu-softmmu:vde - Enable VDE-based networking
 app-emulation/spice:gui - Build some GUI components (inside the guest window).
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use media-sound/sdl-sound for audio output
