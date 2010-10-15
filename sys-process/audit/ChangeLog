@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.58 2010/08/24 13:56:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.59 2010/10/15 21:09:12 arfrever Exp $
+
+  15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  audit-1.7.3.ebuild, audit-1.7.9.ebuild:
+  Fix calls to python_mod_optimize() and python_mod_cleanup() (bug #316965).
 
   24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> audit-1.7.4.ebuild,
   +files/audit-1.7.4-glibc212.patch:

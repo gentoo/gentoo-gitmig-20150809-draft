@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.3.ebuild,v 1.7 2009/08/28 14:06:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.3.ebuild,v 1.8 2010/10/15 21:09:12 arfrever Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -97,11 +97,11 @@ src_install() {
 
 pkg_postinst() {
 	lockdown_perms "${ROOT}"
-	python_mod_optimize
+	python_mod_optimize $(python_get_sitedir)/audit.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/audit.py
 }
 
 lockdown_perms() {
