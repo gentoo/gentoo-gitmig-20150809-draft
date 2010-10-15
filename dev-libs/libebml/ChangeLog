@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.98 2010/07/29 22:05:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.99 2010/10/15 21:38:00 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> libebml-0.8.0.ebuild:
+  stable ppc, bug 329629
 
   29 Jul 2010; Markos Chandras <hwoarang@gentoo.org> libebml-0.8.0.ebuild:
   Stable on amd64 wrt bug #329629
