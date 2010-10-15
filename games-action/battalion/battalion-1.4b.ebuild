@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.13 2007/03/13 14:33:58 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.14 2010/10/15 10:53:31 tupone Exp $
+EAPI=2
 
 inherit games
 
@@ -13,15 +14,13 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/glu"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Modify data paths
 	sed -i \
 		-e "s:SOUNDS/:${GAMES_DATADIR}/${PN}/SOUNDS/:" \
@@ -38,9 +37,14 @@ src_unpack() {
 	# Modify Makefile and add CFLAGS
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
+		-e "/^CC/d" \
 		Makefile || die "sed Makefile failed"
 	# Only .raw sound files are used on Linux. The .au files are not needed.
 	rm -f {SOUNDS,MUSIC}/*.au
+}
+
+src_compile() {
+	emake LIBFLAGS="${LDFLAGS}" || die "died running emake"
 }
 
 src_install() {
