@@ -76,6 +76,7 @@ debug-utils
 schroedinger
 hardened
 frei0r
+google-gadgets
 
 # havent tested yet
 cupsddk
@@ -122,6 +123,7 @@ vaapi
 rtmp
 vpx
 iplayer
+plotutils
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
