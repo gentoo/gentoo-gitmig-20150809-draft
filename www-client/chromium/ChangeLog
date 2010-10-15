@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.202 2010/10/14 08:07:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.203 2010/10/15 07:45:03 phajdan.jr Exp $
+
+  15 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-8.0.552.0.ebuild, chromium-9999.ebuild:
+  Make sure the build system uses the right toolchain binaries, bug #340795
+  by Nikoli <nikoli@lavabit.com>
 
 *chromium-7.0.517.41 (14 Oct 2010)
 

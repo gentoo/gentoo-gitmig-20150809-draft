@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.95 2010/10/13 14:13:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.96 2010/10/15 07:45:03 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -108,6 +108,9 @@ remove_bundled_lib() {
 
 pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
+
+	# Make sure the build system will use the right tools, bug #340795.
+	tc-export AR CC CXX RANLIB
 }
 
 src_prepare() {
