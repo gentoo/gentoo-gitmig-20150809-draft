@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01.ebuild,v 1.1 2010/10/14 20:23:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01.ebuild,v 1.2 2010/10/15 14:51:10 mr_bones_ Exp $
 
 EAPI=2
 
@@ -43,7 +43,6 @@ DEPEND="${RDEPEND}
 		dev-util/gperf
 		doc? ( app-doc/doxygen )
 		>=dev-util/boost-build-1.32"
-
 
 pkg_setup() {
 	enewuser drizzle -1 -1 /dev/null nogroup
