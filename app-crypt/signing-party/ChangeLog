@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.28 2010/08/23 17:56:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.29 2010/10/15 23:00:34 c1pher Exp $
+
+*signing-party-1.1.3-r4 (15 Oct 2010)
+
+  15 Oct 2010; Dane Smith <c1pher@gentoo.org>
+  +signing-party-1.1.3-r4.ebuild, +files/signing-party-makefile.diff:
+  Rebump for signing-party. Address lack of LDFLAGS respect wrt bug 339124,
+  prevention of pre-stripping files wrt bug 339125, lack of jobserver
+  respect,
+  and numbers other simple QA fixes.
 
   23 Aug 2010; Robin H. Johnson <robbat2@gentoo.org>
   -signing-party-1.1.3-r2.ebuild:
