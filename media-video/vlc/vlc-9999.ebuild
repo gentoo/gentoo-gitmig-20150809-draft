@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.95 2010/10/15 20:02:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.96 2010/10/15 21:43:36 aballier Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ if [ "${PV%9999}" != "${PV}" ] ; then
 	fi
 fi
 
-inherit eutils multilib autotools toolchain-funcs gnome2 nsplugins qt4 flag-o-matic ${SCM}
+inherit eutils multilib autotools toolchain-funcs gnome2 qt4 flag-o-matic ${SCM}
 
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
@@ -53,7 +53,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gnome gnutls httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
-	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
+	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
 	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
@@ -101,7 +101,6 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-1.0.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? ( >=net-libs/xulrunner-1.9.2 x11-libs/libXpm x11-libs/libXt x11-libs/libxcb x11-libs/xcb-util )
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl || ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 ) )
 		png? ( media-libs/libpng sys-libs/zlib )
@@ -176,7 +175,6 @@ pkg_setup() {
 	vlc_use_force skins qt4
 	vlc_use_force vlm stream
 	vlc_use_force vaapi ffmpeg
-	vlc_use_force nsplugin xcb
 
 	# Useflags that will be automagically discarded if deps are not met
 	vlc_use_needs bidi truetype
@@ -223,7 +221,6 @@ src_configure() {
 		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
-		--disable-asademux \
 		$(use_enable atmo) \
 		$(use_enable avahi bonjour) \
 		$(use_enable bidi fribidi) \
@@ -268,7 +265,6 @@ src_configure() {
 		$(use_enable mtp) \
 		$(use_enable musepack mpc) \
 		$(use_enable ncurses) \
-		$(use_enable nsplugin mozilla) --with-mozilla-pkg=libxul \
 		$(use_enable ogg) \
 		$(use_enable opengl glx) \
 		$(use_enable optimisememory optimize-memory) \
@@ -323,8 +319,7 @@ src_configure() {
 		$(vlc_use_enable_force skins freetype) \
 		$(vlc_use_enable_force remoteosd libgcrypt) \
 		$(vlc_use_enable_force gnutls libgcrypt) \
-		$(vlc_use_enable_force vaapi avcodec) \
-		$(vlc_use_enable_force nsplugin xcb)
+		$(vlc_use_enable_force vaapi avcodec)
 }
 
 src_install() {
@@ -335,12 +330,6 @@ src_install() {
 
 	rm -rf "${D}/usr/share/doc/vlc" \
 		"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
-
-	if use nsplugin; then
-		dodir "/usr/$(get_libdir)/${PLUGINS_DIR}"
-		mv "${D}"/usr/$(get_libdir)/mozilla/plugins/* \
-			"${D}/usr/$(get_libdir)/${PLUGINS_DIR}/"
-	fi
 
 	use skins || rm -rf "${D}/usr/share/vlc/skins2"
 

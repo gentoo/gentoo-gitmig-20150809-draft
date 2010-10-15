@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.633 2010/10/15 20:02:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.634 2010/10/15 21:43:36 aballier Exp $
+
+  15 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  nsplugin is gone to a separate repository now, see
+  http://mailman.videolan.org/pipermail/videolan-announce/2010-October/00015
+  8.html , asademux has been long gone, remove both options
 
   15 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   bump live version requirement
