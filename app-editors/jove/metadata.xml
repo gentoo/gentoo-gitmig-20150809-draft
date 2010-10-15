@@ -9,7 +9,4 @@
   language specific modes) while weighing in with CPU, memory, and disk
   requirements comparable to vi.
 </longdescription>
-<use>
-  <flag name='unix98'>Use Unix 98 pty's instead of BSD pts's</flag>
-</use>
 </pkgmetadata>

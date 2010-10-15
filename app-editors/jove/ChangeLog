@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jove
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.32 2010/10/14 16:53:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.33 2010/10/15 07:03:39 ulm Exp $
+
+  15 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -jove-4.16.0.70.3.1.ebuild,
+  metadata.xml:
+  Remove old.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> jove-4.16.0.73.ebuild:
   stable ppc, bug 336803
