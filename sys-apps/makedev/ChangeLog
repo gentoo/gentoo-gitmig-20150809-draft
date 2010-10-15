@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/makedev
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.2 2007/08/07 14:51:37 uberlord Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.3 2010/10/15 18:23:05 vapier Exp $
+
+  15 Oct 2010; Mike Frysinger <vapier@gentoo.org> makedev-3.23.1.ebuild,
+  +files/makedev-3.23.1-headers.patch:
+  Fix building with newer glibc #339674 by Ruediger Kramolisch.
 
   07 Aug 2007; Roy Marples <uberlord@gentoo.org> makedev-3.23.1.ebuild:
   Block on <baselayout-2, #187766 thanks to Jakub Moc

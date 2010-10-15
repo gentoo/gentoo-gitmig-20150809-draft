@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.4 2007/08/07 14:51:37 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.5 2010/10/15 18:23:05 vapier Exp $
 
-inherit toolchain-funcs
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 MY_PN="MAKEDEV"
 MY_VER=${PV%.*}
@@ -21,6 +23,10 @@ RDEPEND="!<sys-apps/baselayout-2.0.0_rc"
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-headers.patch #339674
+}
 
 src_compile() {
 	use selinux && export SELINUX=1
