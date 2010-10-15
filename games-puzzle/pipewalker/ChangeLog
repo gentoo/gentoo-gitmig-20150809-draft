@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/pipewalker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/ChangeLog,v 1.6 2010/07/11 12:30:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/ChangeLog,v 1.7 2010/10/15 21:38:13 mr_bones_ Exp $
+
+*pipewalker-0.9.1 (15 Oct 2010)
+
+  15 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +pipewalker-0.9.1.ebuild:
+  version bump
 
   11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   pipewalker-0.8.2.ebuild:
