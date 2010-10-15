@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.4 2010/10/13 11:12:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.5 2010/10/15 05:28:08 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -36,10 +36,11 @@ pkg_setup() {
 src_prepare() {
 	sed -i \
 		-e '/^CFLAGS/s:-I/usr/src/linux/include::' \
-		solfege/soundcard/Makefile || die
+		solfege/soundcard/Makefile || die "sed failed"
 
 	epatch "${FILESDIR}"/${P}-swig2.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_configure() {
@@ -51,6 +52,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" nopycompile=YES install || die "emake install failed"
 	dodoc AUTHORS *hange*og FAQ README
 }

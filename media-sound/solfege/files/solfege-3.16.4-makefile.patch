@@ -1,0 +1,11 @@
+--- solfege-3.16.4/Makefile.in.orig	2010-10-14 21:55:14.486591065 -0700
++++ solfege-3.16.4/Makefile.in	2010-10-14 21:55:39.833798332 -0700
+@@ -141,7 +141,7 @@
+ 	echo $(installfiles) | $(PYTHON) tools/pcopy.py $(DESTDIR)/$(datadir)/$(PACKAGE)/
+ 
+ compileall:
+-ifneq (x"$(nopycompile)",xYES)
++ifneq "$(nopycompile)" "YES"
+ 	$(PYTHON) -c "import compileall; compileall.compile_dir('$(DESTDIR)/$(datadir)/$(PACKAGE)/solfege')"
+ endif
+ 
