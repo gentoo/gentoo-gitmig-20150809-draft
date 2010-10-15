@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4.ebuild,v 1.4 2010/04/03 21:41:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4-r2.ebuild,v 1.1 2010/10/15 07:15:15 xarthisius Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${PV}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="dev-lang/perl
 	media-libs/gd"
@@ -27,6 +27,9 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.8.3-gcc4.3.patch
 	"${FILESDIR}"/${PN}-1.8.3-disable-gd.patch
 	"${FILESDIR}"/${P}-jobserver-fix.patch
+	"${FILESDIR}"/${P}-bindir.patch
+	"${FILESDIR}"/${P}-overflows.patch
+	"${FILESDIR}"/${P}-implicits.patch
 )
 
 src_prepare() {
@@ -39,7 +42,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-cluster || die "Configuration failed."
+	econf --with-cluster
 	sed -e "s:LIBDIR = /usr/lib:LIBDIR = ${D}/usr/$(get_libdir):" \
 		-e "s:INCDIR = /usr/include:INCDIR = ${D}/usr/include:" \
 		-i RNAforester/g2-0.70/Makefile \
@@ -50,7 +53,7 @@ src_configure() {
 
 src_compile() {
 	emake clean || die
-	emake || die "Compilation failed."
+	emake || die
 	emake -C Readseq || die "Failed to compile readseq."
 	# TODO: Add (optional?) support for the NCBI toolkit.
 }
@@ -61,16 +64,12 @@ src_test() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Installation failed."
-	dodoc AUTHORS ChangeLog NEWS README THANKS \
-		|| die "Failed to install documentation."
-	newbin Readseq/readseq readseq-vienna \
-		|| die "Installing readseq failed."
-	dodoc Readseq/Readseq.help || die \
-		"Readseq Documentation installation failed."
-	newdoc Readseq/Readme README.readseq && \
-		newdoc Readseq/Formats Formats.readseq \
-		|| die "Installing readseq Readme failed."
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README THANKS || die
+	newbin Readseq/readseq readseq-vienna || die
+	dodoc Readseq/Readseq.help || die
+	newdoc Readseq/Readme README.readseq || die
+	newdoc Readseq/Formats Formats.readseq || die
 
 	# remove perlocal.pod to avoid file collisions (see #240358)
 	fixlocalpod || die "Failed to remove perlocal.pod"
