@@ -1,6 +1,15 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.75 2010/10/10 21:52:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.76 2010/10/15 13:36:00 pva Exp $
+
+*hunspell-1.2.12 (15 Oct 2010)
+
+  15 Oct 2010; Peter Volkov <pva@gentoo.org>
+  -files/hunspell-1.1.5-renameexes.patch, -hunspell-1.1.9.ebuild,
+  -files/hunspell-1.2.2-renameexes.patch, -hunspell-1.2.6.ebuild,
+  -hunspell-1.2.7.ebuild, -hunspell-1.2.8.ebuild, +hunspell-1.2.12.ebuild,
+  +files/hunspell-1.2.12-renameexes.patch:
+  Version bump, drop old.
 
   10 Oct 2010; Markus Meier <maekke@gentoo.org> hunspell-1.2.11.ebuild:
   arm stable, bug #338341
