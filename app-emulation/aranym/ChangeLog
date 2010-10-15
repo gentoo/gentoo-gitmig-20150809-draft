@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/aranym
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.17 2010/09/01 15:00:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.18 2010/10/15 00:07:28 xmw Exp $
+
+  15 Oct 2010; Michael Weber <xmw@gentoo.org>
+  -files/aranym-0.9.0_beta2-fix.patch:
+  remove unused FILESDIR (wrt bug 340713 by jalan)
 
 *aranym-0.9.10 (01 Sep 2010)
 
