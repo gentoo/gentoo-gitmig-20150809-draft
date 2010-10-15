@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.41 2010/10/14 19:17:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.42 2010/10/15 12:50:01 darkside Exp $
+
+  15 Oct 2010; Jeremy Olexa <darkside@gentoo.org> -bashburn-2.1.2.ebuild,
+  -bashburn-3.0.ebuild:
+  remove old versions
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> bashburn-3.0.1.ebuild:
   stable ppc, bug 328505
