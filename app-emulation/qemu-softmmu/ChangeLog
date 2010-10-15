@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/qemu-softmmu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.66 2009/04/24 10:59:50 lu_zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.67 2010/10/15 14:21:52 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -qemu-softmmu-0.9.0.ebuild, -qemu-softmmu-0.9.0-r1.ebuild,
+  -files/qemu-softmmu-0.9.0-block-qcow2.patch,
+  -files/qemu-softmmu-0.9.0-ide-cd.patch, -qemu-softmmu-0.9.1.ebuild,
+  -qemu-softmmu-0.9.1-r1.ebuild, -qemu-softmmu-0.9.1-r2.ebuild,
+  -files/qemu-softmmu-0.9.1-block-device-address-range.patch,
+  -qemu-softmmu-0.10.0.ebuild, -qemu-softmmu-0.10.1.ebuild,
+  -files/qemu-softmmu-0.10.1-nopl-fix.patch, -files/qemu-ifdown,
+  -files/qemu-ifup, metadata.xml:
+  Belated spring cleaning of ebuilds and files.
 
   24 Apr 2009; Luca Barbato <lu_zero@gentoo.org>
   +files/qemu-softmmu-0.10.1-nopl-fix.patch, qemu-softmmu-0.10.1.ebuild:
