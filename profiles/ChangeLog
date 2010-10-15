@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4650 2010/10/15 08:54:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4651 2010/10/15 09:00:29 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask dev-tex/mpm for removal
 
   15 Oct 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   drop mask for mail-client/claws-mail-gtkhtml by user request in bug

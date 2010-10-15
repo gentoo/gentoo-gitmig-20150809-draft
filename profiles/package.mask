@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12047 2010/10/15 08:54:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12048 2010/10/15 09:00:29 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (15 Oct 2010)
+# Mask for removal in 30 days
+# Has lots of bundled libraries for ages (bug 250049), even as so
+# files, upstream does not care, even with security vulnerable expat
+# library, about that
+# No real use in the last couple of years
+dev-tex/mpm
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Oct 2010)
 # New Objective-C Runtime for GNUstep
@@ -1293,10 +1301,6 @@ sys-auth/pam_keystore
 # Fails to build with newest mono, causing dependency
 # conflicts (#259700).
 dev-lang/nemerle
-
-# Christian Faulhammer <fauli@gentoo.org> (24 Aug 2009)
-# Has bundled security-vulnerable expat library, see bug 250049
-dev-tex/mpm
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Aug 2009)
 #  on behalf of QA Team
