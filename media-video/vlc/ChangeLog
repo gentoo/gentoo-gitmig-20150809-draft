@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.630 2010/10/08 19:45:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.631 2010/10/15 19:32:39 aballier Exp $
+
+  15 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  fix cachegen patch, bug #336689
 
   08 Oct 2010; Brent Baude <ranger@gentoo.org> vlc-1.1.4.ebuild:
   Marking vlc-1.1.4 ppc for bug 332361
