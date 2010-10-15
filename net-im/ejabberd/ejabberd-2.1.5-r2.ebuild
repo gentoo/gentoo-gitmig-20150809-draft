@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.5-r1.ebuild,v 1.1 2010/08/30 11:02:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.5-r2.ebuild,v 1.1 2010/10/15 17:34:36 pva Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
 SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz
 	mod_statsdx? ( mirror://gentoo/2.1.1-mod_statsdx.patch.bz2 )
-	mod_srl? ( https://alioth.debian.org/frs/download.php/3283/mod_shared_roster_ldap-0.5.2.tgz )"
+	mod_srl? ( https://alioth.debian.org/frs/download.php/3354/mod_shared_roster_ldap-0.5.3.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
