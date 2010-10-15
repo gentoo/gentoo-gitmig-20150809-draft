@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r2.ebuild,v 1.2 2010/05/10 19:18:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r3.ebuild,v 1.1 2010/10/15 20:52:29 idl0r Exp $
 
 EAPI="2"
 
@@ -25,8 +25,10 @@ PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 src_prepare() {
 	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=520696
 	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511666
+	# http://bugs.gentoo.org/339808
 	epatch "${FILESDIR}/admit-noclass-520696.patch" \
-		"${FILESDIR}/511666-segfault.patch"
+		"${FILESDIR}/511666-segfault.patch" \
+		"${FILESDIR}/${P}-snprintf_buffer_overflow.patch"
 }
 
 src_configure() {
