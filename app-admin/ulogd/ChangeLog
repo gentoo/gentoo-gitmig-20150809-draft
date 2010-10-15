@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.64 2010/10/07 05:31:53 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.65 2010/10/15 19:33:54 wormo Exp $
+
+  15 Oct 2010; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  -files/ulogd-1.23-configure.in.patch, -files/configure-fixes.patch:
+  Thanks to Jalan who pointed out that a couple of files got left behind
+  after removing the referencing ebuilds (bug #340102)
 
 *ulogd-2.0.0_beta4 (07 Oct 2010)
 
