@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.36 2010/07/21 10:54:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.37 2010/10/15 12:41:05 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> physfs-2.0.1.ebuild:
+  stable ppc, bug 317239
 
   21 Jul 2010; Jeroen Roovers <jer@gentoo.org> physfs-2.0.1.ebuild:
   Stable for HPPA (bug #317239).
