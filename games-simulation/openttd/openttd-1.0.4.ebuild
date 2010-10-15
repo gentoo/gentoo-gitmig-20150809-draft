@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.4.ebuild,v 1.1 2010/09/16 19:52:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.4.ebuild,v 1.2 2010/10/15 13:57:45 maekke Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
 
 DEPEND="
