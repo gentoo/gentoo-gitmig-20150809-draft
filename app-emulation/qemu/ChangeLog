@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.78 2010/06/30 21:46:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.79 2010/10/15 14:21:09 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> -qemu-0.9.0.ebuild,
+  qemu-0.9.1.ebuild, -qemu-0.10.0.ebuild, -qemu-0.10.1.ebuild,
+  -qemu-0.10.3.ebuild, -files/qemu-0.10.3-nopl-fix.patch,
+  -qemu-0.10.4.ebuild, -qemu-0.10.5.ebuild, -qemu-0.10.6.ebuild,
+  -qemu-0.11.0.ebuild:
+  Belated spring cleaning of ebuilds and files; this also re-sync the ppc
+  keyword with the qemu-softmmu package which this is just an alias of.
 
   30 Jun 2010; Harald van Dĳk <truedfx@gentoo.org> qemu-0.10.3.ebuild,
   qemu-0.10.4.ebuild, qemu-0.10.5.ebuild, qemu-0.10.6.ebuild,
