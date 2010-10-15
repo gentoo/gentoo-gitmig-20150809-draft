@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.45 2010/09/03 19:28:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.46 2010/10/15 09:50:35 maekke Exp $
+
+  15 Oct 2010; Markus Meier <maekke@gentoo.org> libqalculate-0.9.7.ebuild:
+  add ~arm
 
   03 Sep 2010; Joseph Jezak <josejx@gentoo.org> libqalculate-0.9.7.ebuild:
   Marked ppc64 stable for bug #322791.
