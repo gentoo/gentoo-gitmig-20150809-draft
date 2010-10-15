@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.2 2010/08/12 03:38:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.3 2010/10/15 13:15:42 ranger Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/epiar/${P}.0-src.zip"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc x86 ~x86-fbsd"
+KEYWORDS="ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[video]
