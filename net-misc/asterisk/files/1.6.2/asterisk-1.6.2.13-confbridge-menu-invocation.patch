@@ -1,0 +1,13 @@
+Index: apps/app_confbridge.c
+===================================================================
+--- apps/app_confbridge.c	(revision 271056)
++++ apps/app_confbridge.c	(working copy)
+@@ -734,7 +734,7 @@
+ 
+ 	/* If the menu option is enabled provide a user or admin menu as a custom feature hook */
+ 	if (ast_test_flag(&conference_bridge_user.flags, OPTION_MENU)) {
+-		ast_bridge_features_hook(&conference_bridge_user.features, "#", menu_callback, &conference_bridge_user);
++		ast_bridge_features_hook(&conference_bridge_user.features, "*", menu_callback, &conference_bridge_user);
+ 	}
+ 
+ 	/* If the caller should be joined already muted, make it so */

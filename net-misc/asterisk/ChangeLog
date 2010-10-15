@@ -1,6 +1,16 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.269 2010/09/16 17:31:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.270 2010/10/15 17:30:59 chainsaw Exp $
+
+*asterisk-1.6.2.13-r2 (15 Oct 2010)
+
+  15 Oct 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.13-r2.ebuild,
+  +files/1.6.2/asterisk-1.6.2.13-alarm-receiver-use-playtones.patch,
+  +files/1.6.2/asterisk-1.6.2.13-confbridge-menu-invocation.patch,
+  +files/1.6.2/asterisk-1.6.2.13-pbxstart-failed-spurious-bye.patch,
+  +files/1.6.2/asterisk.logrotate3:
+  Log rotation fixes by Jaco Kroon, closes bug #339799. Scavenged fixes from
+  upstream issue reports #17368, #17524 & #18010.
 
 *asterisk-1.6.2.13-r1 (16 Sep 2010)
 

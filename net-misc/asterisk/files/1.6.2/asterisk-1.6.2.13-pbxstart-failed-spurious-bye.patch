@@ -1,0 +1,17 @@
+---
+ channels/chan_sip.c |    2 ++
+ 1 file changed, 2 insertions(+)
+
+Index: b/channels/chan_sip.c
+===================================================================
+--- a/channels/chan_sip.c
++++ b/channels/chan_sip.c
+@@ -20871,6 +20871,8 @@ static int handle_request_invite(struct 
+ 
+ 				if (result) {
+ 
++					sip_alreadygone(p);
++
+ 					/* Unlock locks so ast_hangup can do its magic */
+ 					ast_channel_unlock(c);
+ 					sip_pvt_unlock(p);
