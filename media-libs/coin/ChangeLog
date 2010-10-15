@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/coin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.37 2010/06/29 06:29:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.38 2010/10/15 13:26:30 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> coin-3.1.0.ebuild:
+  Marking coin-3.1.0 ppc for bug 332329
 
   29 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> coin-3.1.3-r1.ebuild,
   +files/coin-3.1.3-pkgconfig-partial.patch:
