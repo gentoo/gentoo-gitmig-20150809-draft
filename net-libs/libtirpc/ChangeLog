@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.13 2010/10/10 12:13:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.14 2010/10/15 22:02:28 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> libtirpc-0.2.1-r1.ebuild:
+  stable ppc, bug 340189
 
   10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libtirpc-0.2.1-r1.ebuild:
