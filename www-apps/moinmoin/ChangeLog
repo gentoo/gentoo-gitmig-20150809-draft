@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.67 2010/10/13 20:11:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.68 2010/10/15 12:51:26 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> moinmoin-1.8.8.ebuild:
+  Marking moinmoin-1.8.8 ppc for bug 305663
 
   13 Oct 2010; Markus Meier <maekke@gentoo.org> moinmoin-1.8.8.ebuild:
   x86 stable, bug #305663
