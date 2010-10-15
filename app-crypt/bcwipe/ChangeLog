@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bcwipe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.42 2009/12/29 18:41:59 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.43 2010/10/15 18:27:07 c1pher Exp $
+
+*bcwipe-1.9.6 (15 Oct 2010)
+
+  15 Oct 2010; Dane Smith <c1pher@gentoo.org> +bcwipe-1.9.6.ebuild:
+  Version bump for bcwipe wrt bug 309987.
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> bcwipe-1.9.3.ebuild:
   sparc stable wrt #296029
