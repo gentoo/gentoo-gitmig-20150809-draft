@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.05.ebuild,v 1.5 2010/10/09 17:21:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.05.ebuild,v 1.6 2010/10/15 21:29:36 ranger Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( http://github.com/downloads/kaio/${PN}/${PN}-ttf-${PV}.zip )
 fontforge? ( http://github.com/downloads/kaio/${PN}/${P}.tar.gz )"
 
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="fontforge X"
