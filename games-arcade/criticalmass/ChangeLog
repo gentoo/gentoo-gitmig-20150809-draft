@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.18 2010/05/23 21:05:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.19 2010/10/15 12:36:01 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> criticalmass-1.0.0-r1.ebuild:
+  stable ppc, bug 313911
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> criticalmass-1.0.0-r1.ebuild:
   stable amd64, bug 313911
