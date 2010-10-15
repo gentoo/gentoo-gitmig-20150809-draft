@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.126 2010/10/15 07:45:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.127 2010/10/15 08:04:22 graaff Exp $
+
+  15 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  -activesupport-2.3.9.ebuild:
+  Remove vulnerable version.
 
 *activesupport-2.3.10 (15 Oct 2010)
 
