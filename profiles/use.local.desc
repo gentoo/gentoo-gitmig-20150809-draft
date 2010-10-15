@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6052 2010/10/15 14:34:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6053 2010/10/15 18:34:21 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1866,6 +1866,7 @@ media-libs/opencv:octave - Enable octave support
 media-libs/opencv:sse3 - Enable optimization for SSE3 capable chips
 media-libs/opencv:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-libs/openjpeg:tools - Installs tools (j2k_to_image and image_to_j2k)
+media-libs/raptor:json - Enable support for JSON parsing
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-mixer:midi - basic support for MIDI files
 media-libs/sdl-mixer:wav - support WAVE files
