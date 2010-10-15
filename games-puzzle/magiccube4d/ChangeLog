@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/magiccube4d
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/ChangeLog,v 1.10 2007/10/22 20:30:05 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/ChangeLog,v 1.11 2010/10/15 08:53:26 tupone Exp $
+
+  15 Oct 2010; Tupone Alfredo <tupone@gentoo.org> magiccube4d-2.2.ebuild,
+  +files/magiccube4d-2.2-ldflags.patch:
+  Respect LDFLAGS. Bug #335142 by flameeyes@gentoo.org
 
   22 Oct 2007; Christoph Mende <angelos@gentoo.org>
   +files/magiccube4d-2.2-64bit-ptr.patch, magiccube4d-2.2.ebuild:
