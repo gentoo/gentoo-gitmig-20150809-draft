@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.6.ebuild,v 1.1 2010/06/07 08:21:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.6.ebuild,v 1.2 2010/10/15 21:22:39 arfrever Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="The GNU Calendar - a replacement for cal"
-HOMEPAGE="http://www.gnu.org/software/gcal/gcal.html"
+HOMEPAGE="http://www.gnu.org/software/gcal/"
 SRC_URI="mirror://gnu/gcal/${P}.tar.gz"
 
 LICENSE="GPL-3"
