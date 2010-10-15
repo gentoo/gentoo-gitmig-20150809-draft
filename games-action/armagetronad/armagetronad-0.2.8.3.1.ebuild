@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.6 2010/07/10 21:37:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.7 2010/10/15 12:39:40 ranger Exp $
 
 EAPI=2
 inherit autotools eutils gnome2-utils games
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.src.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="dedicated"
 
 RDEPEND="dev-libs/libxml2
