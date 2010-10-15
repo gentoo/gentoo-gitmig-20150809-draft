@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6-r1.ebuild,v 1.1 2010/10/14 09:26:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6-r1.ebuild,v 1.2 2010/10/15 21:44:40 arfrever Exp $
 
 EAPI=3
 
@@ -20,6 +20,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
 pkg_setup() {
+	python_pkg_setup
 	enewgroup ntlmaps
 	enewuser ntlmaps -1 -1 -1 ntlmaps
 }
@@ -40,6 +41,10 @@ src_install() {
 	}
 	python_execute_function installation
 
+	pushd lib > /dev/null
+	PYTHON_MODULES=(*.py)
+	popd > /dev/null
+
 	# exes ------------------------------------------------------------------
 	exeinto /usr/bin
 	newexe main.py ntlmaps || die "failed to install main program"
@@ -56,11 +61,10 @@ src_install() {
 	keepdir /var/log/ntlmaps
 }
 
-pkg_preinst() {
-	#Remove the following lines sometime in December 2005
-	#Their purpose is to fix security bug #107766
-	if [ -f "${ROOT}/etc/ntlmaps/server.cfg" ]; then
-		chmod 0640 "${ROOT}/etc/ntlmaps/server.cfg"
-		chgrp ntlmaps "${ROOT}/etc/ntlmaps/server.cfg"
-	fi
+pkg_postinst() {
+	python_mod_optimize "${PYTHON_MODULES[@]}"
+}
+
+pkg_postrm() {
+	python_mod_cleanup "${PYTHON_MODULES[@]}"
 }
