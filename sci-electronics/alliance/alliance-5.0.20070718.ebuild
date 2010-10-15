@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.4 2010/10/10 21:34:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.5 2010/10/15 14:37:12 tomjbe Exp $
 
 EAPI=1
 
@@ -29,6 +29,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/alliance-5.0-gcc43.patch
 
+	#fix tests (bug #282490) and buffer overrun (bug 340789)
+	epatch "${FILESDIR}"/${P}-test.patch \
+		"${FILESDIR}"/${P}-overun.patch
+
 	# Fix compilation issue
 	sed -i -e "s/private: static void  operator delete/public: static void  operator delete/" nero/src/ADefs.h || die "sed failed"
 }
@@ -44,7 +48,7 @@ src_compile() {
 		--with-x \
 		--with-motif \
 		--with-xpm \
-		|| die "./configure failed"
+		--with-alc-shared
 
 	# See bug #134145
 	emake -j1 || die "emake failed"

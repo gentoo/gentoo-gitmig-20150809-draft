@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/alliance
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.12 2010/10/10 21:34:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.13 2010/10/15 14:37:12 tomjbe Exp $
+
+  15 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org>
+  alliance-5.0.20070718.ebuild, +files/alliance-5.0.20070718-overun.patch,
+  +files/alliance-5.0.20070718-test.patch:
+  Switch to shared linking (bug 252469). Fix tests (bug 282490). Fix buffer
+  overrun (bug 340789).
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> alliance-5.0.20060509.ebuild,
   alliance-5.0.20070718.ebuild:
