@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.15 2010/07/28 16:23:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.16 2010/10/15 18:07:00 flameeyes Exp $
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  gkrellm-plugins-2.0.ebuild:
+  Remove from the dependencies the packages that are slated for removal.
 
   28 Jul 2010; Jim Ramsay <lack@gentoo.org> gkrellm-plugins-2.0.ebuild:
   x11-plugins/gkrellm-hddtemp is masked for removal
