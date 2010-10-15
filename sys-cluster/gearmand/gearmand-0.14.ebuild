@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.14.ebuild,v 1.2 2010/09/16 19:43:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.14.ebuild,v 1.3 2010/10/15 14:59:29 flameeyes Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/libevent
 	|| ( >=sys-apps/util-linux-2.16 <sys-libs/e2fsprogs-libs-1.41.8 )
 	tcmalloc? ( dev-util/google-perftools )
 	memcache? ( dev-libs/libmemcached )
-	drizzle? ( >=dev-db/drizzle-2010.08.1742 )
+	drizzle? ( dev-db/drizzle )
 	sqlite? ( dev-db/sqlite:3 )
 	tokyocabinet? ( dev-db/tokyocabinet )"
 	#postgres? ( dev-db/postgresql-base )"
