@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.7.2.ebuild,v 1.1 2010/10/06 00:02:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.7.2.ebuild,v 1.2 2010/10/15 18:47:50 ssuominen Exp $
 
 EAPI=2
-
 inherit eutils qt4
 
 DESCRIPTION="Music audio files viewer and analiser"
@@ -22,7 +21,7 @@ RDEPEND="x11-libs/qt-core:4
 	fftw? ( =sci-libs/fftw-3* )
 	app-arch/bzip2
 	>=media-libs/dssi-0.9.1
-	media-libs/raptor
+	<media-libs/raptor-1.9.0
 	media-libs/liblrdf
 	dev-libs/redland
 	media-libs/ladspa-sdk
@@ -34,7 +33,7 @@ RDEPEND="x11-libs/qt-core:4
 	!pulseaudio? ( !portaudio? ( media-sound/jack-audio-connection-kit ) )
 	mad? ( media-libs/libmad )
 	id3tag? ( media-libs/libid3tag )
-	ogg? ( media-libs/libfishsound media-libs/liboggz )
+	ogg? ( media-libs/libfishsound >=media-libs/liboggz-1.1.0 )
 	portaudio? ( >=media-libs/portaudio-19_pre20071207 )
 	pulseaudio? ( media-sound/pulseaudio )"
 
@@ -48,7 +47,7 @@ pkg_setup() {
 src_prepare() {
 	# remove crap
 	sed -i -e "s:-O3::" prf/sv.prf
-	has_version '>=media-libs/liboggz-1.1.0' && epatch "${FILESDIR}/${PN}-1.7.1-liboggz11.patch"
+	epatch "${FILESDIR}/${PN}-1.7.1-liboggz11.patch"
 }
 
 sv_disable_opt() {
