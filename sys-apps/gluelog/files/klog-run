@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /usr/sbin/glueklog /usr/bin/multilog t /var/log/klog.d

@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /usr/sbin/gluelog /usr/bin/multilog t /var/log/syslog.d
