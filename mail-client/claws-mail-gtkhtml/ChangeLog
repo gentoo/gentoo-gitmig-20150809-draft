@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.75 2010/08/07 14:15:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.76 2010/10/15 08:52:08 fauli Exp $
+
+  15 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-gtkhtml-0.26.ebuild, claws-mail-gtkhtml-0.27.ebuild:
+  drop all stable keywords and clean up, due to bug 221925 (bundled
+  libraries)
 
   07 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   claws-mail-gtkhtml-0.27.ebuild:
