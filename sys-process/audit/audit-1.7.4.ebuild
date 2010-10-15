@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.4.ebuild,v 1.3 2010/08/24 13:56:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.4.ebuild,v 1.4 2010/10/15 21:15:49 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit autotools multilib toolchain-funcs python
 
@@ -16,17 +19,18 @@ IUSE="ldap"
 # kernels.
 RESTRICT="test"
 
-RDEPEND=">=dev-lang/python-2.4
-		ldap? ( net-nds/openldap )"
+RDEPEND="ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	>=sys-kernel/linux-headers-2.6.23"
 # Do not use os-headers as this is linux specific
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
+src_prepare() {
 	# Old patch applies fine
 	#EPATCH_OPTS="-p0 -d${S}" epatch "${FILESDIR}"/${PN}-1.5.4-build.patch
 
@@ -57,14 +61,19 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-glibc212.patch
 
+	# Don't build static version of Python module.
+	epatch "${FILESDIR}"/${P}-python.patch
+
 	# Regenerate autotooling
 	eautoreconf
+
+	# Disable byte-compilation of Python modules.
+	echo "#!/bin/sh" > py-compile
 }
 
-src_compile() {
+src_configure() {
 	#append-flags -D'__attribute__(x)='
-	econf --sbindir=/sbin --without-prelude || die
-	emake || die "emake failed"
+	econf --sbindir=/sbin --without-prelude
 }
 
 src_install() {
@@ -95,15 +104,18 @@ src_install() {
 
 	# Security
 	lockdown_perms "${D}"
+
+	# Don't install .la files in Python directories.
+	python_clean_installation_image
 }
 
 pkg_postinst() {
 	lockdown_perms "${ROOT}"
-	python_mod_optimize
+	python_mod_optimize audit.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup audit.py
 }
 
 lockdown_perms() {
