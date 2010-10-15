@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.36.0.ebuild,v 1.1 2009/11/22 23:30:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.36.0.ebuild,v 1.2 2010/10/15 16:10:52 phajdan.jr Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="net-libs/libpcap

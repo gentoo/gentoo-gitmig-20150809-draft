@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/netwib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.35 2010/10/15 01:52:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.36 2010/10/15 16:10:52 phajdan.jr Exp $
+
+  15 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> netwib-5.36.0.ebuild:
+  x86 stable wrt bug #341081
 
 *netwib-5.38.0 (15 Oct 2010)
 
