@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.2 2010/07/15 08:51:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.3 2010/10/15 07:52:21 tupone Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils games
@@ -45,7 +45,7 @@ src_prepare() {
 src_compile() {
 	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[:space:]*[0-9]\+\).*/\1/; p }")
 
-	scons CXX=$(tc-getCXX) ${sconsopts} || die "scons failed"
+	scons CXX=$(tc-getCXX) LINKFLAGS="${LDFLAGS}" ${sconsopts} || die "scons failed"
 }
 
 src_install() {
