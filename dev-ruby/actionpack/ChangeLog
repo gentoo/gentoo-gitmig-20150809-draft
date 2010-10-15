@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.159 2010/09/29 22:27:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.160 2010/10/15 07:47:46 graaff Exp $
+
+*actionpack-2.3.10 (15 Oct 2010)
+
+  15 Oct 2010; Hans de Graaff <graaff@gentoo.org> +actionpack-2.3.10.ebuild:
+  Version bump for rails 2.3.10.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> actionpack-2.3.8.ebuild:
   Marking actionpack-2.3.8 ~ppc64 for bug 322175

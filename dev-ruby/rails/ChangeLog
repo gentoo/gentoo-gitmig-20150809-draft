@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.178 2010/09/29 22:29:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.179 2010/10/15 07:52:59 graaff Exp $
+
+*rails-2.3.10 (15 Oct 2010)
+
+  15 Oct 2010; Hans de Graaff <graaff@gentoo.org> +rails-2.3.10.ebuild:
+  Version bump for rails 2.3.10.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> rails-2.3.8.ebuild:
   Marking rails-2.3.8 ~ppc64 for bug 322175
