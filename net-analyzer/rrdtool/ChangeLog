@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.205 2010/06/08 11:55:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.206 2010/10/16 13:52:19 graaff Exp $
+
+  16 Oct 2010; Hans de Graaff <graaff@gentoo.org> rrdtool-1.3.8.ebuild:
+  Also apply the patch for bug 321749 to the stable version to fix USE=ruby
+  build, as discussed with jer on #gentoo-dev.
 
   08 Jun 2010; Fabian Groffen <grobian@gentoo.org> rrdtool-1.4.3.ebuild:
   Avoid installing examples for non-installed features, helps to please
