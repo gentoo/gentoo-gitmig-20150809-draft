@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/npapi-vlc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.1 2010/10/16 15:21:31 aballier Exp $
+
+*npapi-vlc-9999 (16 Oct 2010)
+
+  16 Oct 2010; Alexis Ballier <aballier@gentoo.org> +npapi-vlc-9999.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me, vlc nsplugin separated from the main tree
+
