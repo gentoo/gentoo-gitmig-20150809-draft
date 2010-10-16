@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.757 2010/10/10 21:01:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.758 2010/10/16 17:58:29 armin76 Exp $
+
+  16 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  gentoo-sources-2.6.34-r11.ebuild:
+  arm/ia64/sh/sparc stable wrt #339819
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   gentoo-sources-2.6.34-r11.ebuild:
