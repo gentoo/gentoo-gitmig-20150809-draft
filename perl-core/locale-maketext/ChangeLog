@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/locale-maketext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.27 2010/10/14 23:01:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/locale-maketext/ChangeLog,v 1.28 2010/10/16 14:31:57 maekke Exp $
+
+  16 Oct 2010; Markus Meier <maekke@gentoo.org>
+  locale-maketext-1.13-r1.ebuild:
+  arm stable, bug #340949
 
   14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   locale-maketext-1.13-r1.ebuild:
