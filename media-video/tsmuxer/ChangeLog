@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tsmuxer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.2 2010/07/30 11:11:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.3 2010/10/16 21:32:36 sbriesen Exp $
+
+  16 Oct 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  tsmuxer-1.10.6-r1.ebuild:
+  added libpng:1.2 dependency, solving bug #340227.
 
 *tsmuxer-1.10.6-r1 (30 Jul 2010)
 
