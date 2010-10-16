@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.11 2010/09/30 08:47:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.12 2010/10/16 19:24:48 arfrever Exp $
+
+*pysvn-1.7.4 (16 Oct 2010)
+
+  16 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/pysvn-1.7.0-darwin-freebsd.patch, -pysvn-1.7.2.ebuild,
+  +pysvn-1.7.4.ebuild:
+  Version bump (bug #338897). Respect LDFLAGS (bug #339967).
 
   30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pysvn-1.7.2.ebuild:
   Fixed pycxx detection in Prefix, marked ~x86-solaris, ~x86-linux
