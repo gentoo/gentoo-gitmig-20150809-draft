@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.97 2010/10/16 01:15:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.98 2010/10/16 17:13:54 aballier Exp $
 
 EAPI="3"
 
@@ -22,16 +22,12 @@ inherit eutils multilib autotools toolchain-funcs gnome2 qt4 flag-o-matic ${SCM}
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
-VLC_SNAPSHOT_TIME="0013"
 
 PATCHLEVEL="89"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
 	SRC_URI=""
-elif [[ "${P}" == *_alpha* ]]; then # Snapshots taken from nightlies.videolan.org
-	SRC_URI="http://nightlies.videolan.org/build/source/trunk-${PV/*_alpha/}-${VLC_SNAPSHOT_TIME}/${PN}-snapshot-${PV/*_alpha/}.tar.bz2"
-	MY_P="${P/_alpha*/}-git"
 elif [[ "${MY_P}" == "${P}" ]]; then
 	SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 else
