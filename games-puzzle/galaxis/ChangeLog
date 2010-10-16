@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/galaxis
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.10 2009/01/29 02:10:20 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.11 2010/10/16 19:55:52 tupone Exp $
+
+  16 Oct 2010; Tupone Alfredo <tupone@gentoo.org> galaxis-1.7.ebuild:
+  Respect LDFLAGS. Bug #334635 by flameeyes@gentoo.org
 
   29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> galaxis-1.7.ebuild:
   EAPI=2; respect CC
