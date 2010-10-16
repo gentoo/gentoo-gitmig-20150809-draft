@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.21 2010/08/28 17:21:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.22 2010/10/16 13:57:44 ranger Exp $
+
+  16 Oct 2010; Brent Baude <ranger@gentoo.org> slrn-0.9.9_p1.ebuild:
+  stable ppc, bug 330849
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org> slrn-0.9.9_p1.ebuild:
   alpha/ia64/sparc stable wrt #330849
