@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.40 2010/10/12 11:30:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.41 2010/10/16 18:13:12 ranger Exp $
+
+  16 Oct 2010; Brent Baude <ranger@gentoo.org>
+  suite3270-3.3.10_p3-r1.ebuild:
+  stable ppc, bug 335188
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   suite3270-3.3.10_p3-r1.ebuild:

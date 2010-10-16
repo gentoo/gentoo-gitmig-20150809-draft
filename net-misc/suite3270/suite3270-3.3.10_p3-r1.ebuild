@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.10_p3-r1.ebuild,v 1.4 2010/10/12 11:30:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.10_p3-r1.ebuild,v 1.5 2010/10/16 18:13:12 ranger Exp $
 
 MY_PV=${PV/_p/ga}
 MY_P=${PN}-${MY_PV}
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/x3270/${MY_P}-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc s390 sparc x86"
+KEYWORDS="amd64 ppc s390 sparc x86"
 IUSE="cjk doc ncurses ssl tcl X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
