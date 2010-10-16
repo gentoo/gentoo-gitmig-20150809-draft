@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12053 2010/10/15 22:04:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12054 2010/10/16 09:20:25 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2010)
+# dev-libs/soprano with USE redland is unported to raptor2 API
+# see bug 341237
+>=dev-libs/rasqal-0.9.20
+>=dev-libs/redland-1.0.12
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (15 Oct 2010)
 #  on behalf of QA team
