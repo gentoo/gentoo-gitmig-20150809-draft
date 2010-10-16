@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.902.ebuild,v 1.1 2010/10/15 18:55:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.902.ebuild,v 1.2 2010/10/16 04:51:37 chithanh Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -105,7 +105,6 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
-	"${FILESDIR}"/1.9.0-fix-VbeModeInfoBlock-memcpy.patch
 
 	# Fixes for bug #318609
 	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
