@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.11 2008/03/08 00:04:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.12 2010/10/16 19:17:06 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -22,21 +23,23 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}"/xboing-${PV}-debian.patch
 	sed -i '/^#include/s:xpm\.h:X11/xpm.h:' *.c
 }
 
-src_compile() {
+src_configure() {
 	xmkmf -a || die
 	sed -i \
 		-e "s:GENTOO_VER:${PF/${PN}-/}:" \
 		Imakefile
+}
+
+src_compile() {
 	emake \
 		CXXOPTIONS="${CXXFLAGS}" \
 		CDEBUGFLAGS="${CFLAGS}" \
+		LOCAL_LDFLAGS="${LDFLAGS}" \
 		XBOING_DIR=${GAMES_DATADIR}/${PN} \
 		|| die
 }
