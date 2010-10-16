@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.44 2010/08/11 15:49:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.45 2010/10/16 08:52:30 ssuominen Exp $
+
+*rasqal-0.9.20 (16 Oct 2010)
+
+  16 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +rasqal-0.9.20.ebuild:
+  Version bump.
 
   11 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> rasqal-0.9.19.ebuild:
   Disable static libs.
