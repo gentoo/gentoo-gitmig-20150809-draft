@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.24.ebuild,v 1.1 2010/03/27 09:14:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.24.ebuild,v 1.2 2010/10/16 07:12:19 tove Exp $
 
 EAPI=2
 
@@ -19,4 +19,4 @@ RDEPEND="dev-perl/libwww-perl
 	>=dev-perl/HTML-Parser-2.2"
 DEPEND="${RDEPEND}"
 
-SRC_TEST="do"
+SRC_TEST=online

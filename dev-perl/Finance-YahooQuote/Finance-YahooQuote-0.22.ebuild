@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.22.ebuild,v 1.5 2007/11/10 13:09:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/Finance-YahooQuote-0.22.ebuild,v 1.6 2010/10/16 07:12:19 tove Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE=""
 
-SRC_TEST="do"
+SRC_TEST=online
 
 DEPEND="dev-perl/libwww-perl
 	virtual/perl-MIME-Base64
