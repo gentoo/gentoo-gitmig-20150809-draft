@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.58 2010/10/09 17:20:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.59 2010/10/16 14:07:09 ranger Exp $
+
+  16 Oct 2010; Brent Baude <ranger@gentoo.org> g-cpan-0.16.2.ebuild:
+  stable ppc, bug 337981
 
   09 Oct 2010; Raúl Porcel <armin76@gentoo.org> g-cpan-0.16.2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #337981
