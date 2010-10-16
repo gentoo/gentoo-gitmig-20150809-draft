@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.4 2010/07/06 15:59:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.5 2010/10/16 17:37:24 xarthisius Exp $
 
 EAPI=3
 
@@ -105,6 +105,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-make-3.82.patch
 	epatch "${WORKDIR}"/${P}-svn34137.patch
 	epatch "${WORKDIR}"/${P}-prop-ldflags.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch

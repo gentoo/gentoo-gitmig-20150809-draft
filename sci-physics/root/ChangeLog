@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.73 2010/07/10 19:05:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.74 2010/10/16 17:37:24 xarthisius Exp $
+
+  16 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  root-5.26.00-r4.ebuild, +files/root-5.26.00-make-3.82.patch:
+  Fix building with gmake-3.82 wrt 333083. Thanks to Diego for reporting.
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> root-5.26.00-r2.ebuild:
   sparc stable wrt #318469
