@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.8 2010/05/19 06:45:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.0.14.ebuild,v 1.9 2010/10/16 19:03:20 tupone Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils versionator games
@@ -51,6 +51,7 @@ src_compile() {
 		localedir="${GAMES_DATADIR}/${PN}/locale" \
 		extra_compile_flags="${CXXFLAGS}" \
 		pretty_compile_output=no \
+		extra_link_flags="${LDFLAGS}" \
 		|| die "scons failed"
 }
 
