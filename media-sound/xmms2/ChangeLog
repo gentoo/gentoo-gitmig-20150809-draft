@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.5 2010/10/10 19:54:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.6 2010/10/16 18:32:03 slyfox Exp $
+
+  16 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r2.ebuild:
+  Added missing pkgconfig depend. Reported by dE <de.techno@gmail.com> (bug
+  #341273)
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> xmms2-0.7-r2.ebuild:
   Keyworded on alpha, bug #326767

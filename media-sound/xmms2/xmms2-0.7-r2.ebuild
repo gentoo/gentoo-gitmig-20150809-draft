@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.3 2010/10/10 19:54:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.4 2010/10/16 18:32:03 slyfox Exp $
 
 EAPI=3
 
@@ -68,7 +68,8 @@ RDEPEND="server? (
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
-	python? ( dev-python/pyrex )"
+	python? ( dev-python/pyrex )
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
