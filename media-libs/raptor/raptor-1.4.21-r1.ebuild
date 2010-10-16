@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.1 2010/10/15 18:15:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.2 2010/10/16 08:54:27 ssuominen Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -9,7 +9,7 @@ DESCRIPTION="The RDF Parser Toolkit"
 HOMEPAGE="http://librdf.org/raptor"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
-LICENSE="LGPL-2.1 Apache-2.0"
+LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+curl debug static-libs unicode +xml"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epunt_cxx
-	elibtoolize # Required by FreeBSD .so versioning
+	elibtoolize
 }
 
 src_configure() {
@@ -57,7 +57,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS NOTICE README
-	dohtml NEWS.html README.html RELEASE.html
+	dohtml {NEWS,README,RELEASE}.html
 	find "${ED}" -name '*.la' -exec rm -f '{}' +
 
 	# Fix file collision with SLOT="2"
