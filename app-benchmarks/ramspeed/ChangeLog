@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/ramspeed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.3 2010/08/27 23:32:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.4 2010/10/16 15:45:57 c1pher Exp $
+
+  16 Oct 2010; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Updated maintainer info in metadata.xml.
 
   27 Aug 2010; Markos Chandras <hwoarang@gentoo.org> ramspeed-2.6.0.ebuild:
   Stable on amd64 wrt bug #334667
