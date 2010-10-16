@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-posix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.24 2010/07/01 19:58:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.25 2010/10/16 18:35:32 hwoarang Exp $
+
+  16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  regex-posix-0.94.1.ebuild:
+  Stable on amd64 wrt bug #339580
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> regex-posix-0.71.ebuild,
   regex-posix-0.72.0.3.ebuild, regex-posix-0.93.1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/terminfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.6 2010/09/09 19:36:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.7 2010/10/16 18:25:23 hwoarang Exp $
+
+  16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  terminfo-0.3.1.1.ebuild:
+  Stable on amd64 wrt bug #339580
 
   09 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
   terminfo-0.3.1.1.ebuild:

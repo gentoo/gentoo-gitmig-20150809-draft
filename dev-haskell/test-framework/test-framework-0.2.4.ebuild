@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.2.4.ebuild,v 1.5 2010/09/09 19:13:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.2.4.ebuild,v 1.6 2010/10/16 18:28:53 hwoarang Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit base haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.10
