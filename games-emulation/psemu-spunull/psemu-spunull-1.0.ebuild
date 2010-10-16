@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/psemu-spunull-1.0.ebuild,v 1.6 2009/01/30 06:55:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/psemu-spunull-1.0.ebuild,v 1.7 2010/10/16 20:13:51 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,6 +22,7 @@ src_prepare() {
 		-e 's/gcc/$(CC)/' \
 		src/Makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
