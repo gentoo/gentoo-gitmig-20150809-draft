@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-XMPP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.26 2010/02/05 20:56:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.27 2010/10/16 08:03:29 tove Exp $
+
+*Net-XMPP-1.02-r1 (16 Oct 2010)
+
+  16 Oct 2010; Torsten Veller <tove@gentoo.org> +files/1.02-defined.patch,
+  +Net-XMPP-1.02-r1.ebuild:
+  Patch the "Use of uninitialized value" warning
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> Net-XMPP-1.02.ebuild:
   Fix LICENSE (#301969). Maintenance
