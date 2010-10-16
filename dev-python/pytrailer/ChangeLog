@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytrailer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytrailer/ChangeLog,v 1.1 2010/10/12 22:01:57 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytrailer/ChangeLog,v 1.2 2010/10/16 16:59:47 sochotnicky Exp $
+
+*pytrailer-0.3.1 (16 Oct 2010)
+
+  16 Oct 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -pytrailer-0.3.ebuild, +pytrailer-0.3.1.ebuild:
+  Updated to lastest version. Changed homepage to current one
 
 *pytrailer-0.3 (12 Oct 2010)
 
