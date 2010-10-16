@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qoauth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.8 2010/08/01 14:48:43 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.9 2010/10/16 10:19:51 ayoy Exp $
+
+  16 Oct 2010; Dominik Kapusta <ayoy@gentoo.org> qoauth-1.0.1.ebuild:
+  Adding x11-libs/qt-test conditional dependency to compile and run tests
+  (bug #337643).
 
 *qoauth-1.0.1 (01 Aug 2010)
 

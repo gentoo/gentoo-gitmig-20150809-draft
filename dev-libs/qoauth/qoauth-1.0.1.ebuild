@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.1 2010/08/01 14:48:43 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.2 2010/10/16 10:19:51 ayoy Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ IUSE="debug doc static-libs test"
 
 COMMON_DEPEND="app-crypt/qca:2[debug?]"
 DEPEND="${COMMON_DEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	test? ( x11-libs/qt-test )"
 RDEPEND="${COMMON_DEPEND}
 	app-crypt/qca-ossl:2[debug?]"
 
