@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/uade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.58 2010/03/19 14:08:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.59 2010/10/16 22:26:39 spock Exp $
+
+  16 Oct 2010; Michał Januszewski <spock@gentoo.org>
+  -files/uade-2.12-asneeded.patch:
+  Remove an unused patch (bug #340729).
 
   19 Mar 2010; Michał Januszewski <spock@gentoo.org> uade-2.13.ebuild:
   Now that the audacious flag has been removed, do not actually build the
