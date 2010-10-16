@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertransball2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.4 2009/01/27 10:45:10 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.5 2010/10/16 19:41:49 tupone Exp $
+
+  16 Oct 2010; Tupone Alfredo <tupone@gentoo.org>
+  supertransball2-1.5.ebuild, +files/supertransball2-1.5-ldflags.patch:
+  Respect LDFLAGS. Bug #334637 by flameeyes@gentoo.org
 
   27 Jan 2009; Raúl Porcel <armin76@gentoo.org> supertransball2-1.5.ebuild:
   x86 stable wrt #255779
