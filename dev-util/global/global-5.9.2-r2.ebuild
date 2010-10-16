@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.2-r2.ebuild,v 1.1 2010/09/10 16:15:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.2-r2.ebuild,v 1.2 2010/10/16 18:14:50 arfrever Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ DEPEND="${DEPEND}
 SITEFILE="50gtags-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-localstatedir.patch
+	epatch "${FILESDIR}/${P}-localstatedir.patch"
 	eautoreconf
 }
 
@@ -52,19 +52,19 @@ src_install() {
 		[[ -f doc/global.pdf ]] && dodoc doc/global.pdf
 	fi
 
-	dodoc AUTHORS FAQ NEWS README THANKS
+	dodoc AUTHORS FAQ NEWS README THANKS || die "dodoc failed"
 
 	insinto /etc
-	doins gtags.conf
+	doins gtags.conf || die "doins gtags.conf failed"
 
 	if use vim; then
 		insinto /usr/share/vim/vimfiles/plugin
-		doins gtags.vim
+		doins gtags.vim || die "doins gtags.vim failed"
 	fi
 
 	if use emacs; then
-		elisp-install ${PN} *.{el,elc} || die
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+		elisp-install ${PN} *.{el,elc} || die "elisp-install failed"
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die "elisp-site-file-install failed"
 	fi
 }
 
