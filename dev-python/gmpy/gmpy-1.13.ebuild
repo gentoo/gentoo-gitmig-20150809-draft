@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.13.ebuild,v 1.1 2010/09/13 19:59:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.13.ebuild,v 1.2 2010/10/16 19:44:30 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DISTUTILS_SETUP_FILES=("setup.py" "setes.py")
+DOCS="doc/gmpydoc.txt"
 
 src_test() {
 	testing() {
@@ -39,6 +40,5 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	dohtml doc/index.html
-	dodoc doc/gmpydoc.txt
+	dohtml doc/index.html || die "dohtml failed"
 }
