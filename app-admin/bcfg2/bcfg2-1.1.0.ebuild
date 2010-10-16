@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.1 2010/10/07 21:52:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.2 2010/10/16 01:13:16 arfrever Exp $
 
-EAPI=3
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+# ssl module required.
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 
 inherit distutils
 
@@ -20,20 +24,21 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="server"
 
 DEPEND="app-portage/gentoolkit
-	>=dev-lang/python-2.6
 	server? (
 		dev-python/lxml
 		app-admin/gam-server )"
 RDEPEND="${DEPEND}"
+
+PYTHON_MODNAME="Bcfg2"
 
 src_install() {
 	distutils_src_install --record=PY_SERVER_LIBS --install-scripts "${EPREFIX}"/usr/sbin
 
 	# Remove files only necessary for a server installation
 	if ! use server; then
-		rm -rf "${ED}"/usr/sbin/bcfg2-*
-		rm -rf "${ED}"/usr/share/bcfg2
-		rm -rf "${ED}"/usr/share/man/man8
+		rm -rf "${ED}"usr/sbin/bcfg2-*
+		rm -rf "${ED}"usr/share/bcfg2
+		rm -rf "${ED}"usr/share/man/man8
 	fi
 
 	# Install a server init.d script
@@ -42,14 +47,14 @@ src_install() {
 	fi
 
 	insinto /etc
-	doins "${S}"/examples/bcfg2.conf
+	doins examples/bcfg2.conf
 }
 
 pkg_postinst () {
-	use server && einfo "If this is a new installation, you probably need to run: "
-	use server && einfo "    bcfg2-admin init"
-}
+	distutils_pkg_postinst
 
-pkg_postrm () {
-	python_mod_cleanup
+	if use server; then
+		einfo "If this is a new installation, you probably need to run:"
+		einfo "    bcfg2-admin init"
+	fi
 }
