@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.96 2010/10/15 21:43:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.97 2010/10/16 01:15:49 aballier Exp $
 
 EAPI="3"
 
@@ -216,6 +216,7 @@ src_configure() {
 	use x86 && filter-flags -fforce-addr
 
 	econf \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable a52) \
 		$(use_enable aalib aa) \
 		$(use_enable aac faad) \
@@ -327,11 +328,6 @@ src_install() {
 
 	dodoc AUTHORS HACKING THANKS NEWS README \
 		doc/fortunes.txt doc/intf-vcd.txt
-
-	rm -rf "${D}/usr/share/doc/vlc" \
-		"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
-
-	use skins || rm -rf "${D}/usr/share/vlc/skins2"
 
 	# Punt useless libtool's .la files
 	find "${D}" -name '*.la' -delete
