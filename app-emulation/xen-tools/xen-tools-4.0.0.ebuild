@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.0.ebuild,v 1.4 2010/06/25 16:43:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.0.ebuild,v 1.5 2010/10/16 14:50:34 arfrever Exp $
 
 EAPI="3"
 
@@ -50,8 +50,6 @@ RDEPEND="${CDEPEND}
 		app-admin/logrotate
 	)
 	|| ( sys-fs/udev sys-apps/hotplug )"
-
-PYTHON_MODNAME="xen grub"
 
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032
@@ -263,9 +261,9 @@ pkg_postinst() {
 		elog "Please remove '${ROOT%/}/etc/conf.d/xend', as it is no longer needed."
 	fi
 
-	python_mod_optimize
+	python_mod_optimize $(use pygrub && echo grub) xen
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(use pygrub && echo grub) xen
 }
