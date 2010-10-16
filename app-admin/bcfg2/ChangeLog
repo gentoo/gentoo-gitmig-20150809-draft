@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bcfg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.13 2010/10/07 21:52:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.14 2010/10/16 00:54:21 arfrever Exp $
+
+  16 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -bcfg2-1.0.1.ebuild:
+  Delete.
 
 *bcfg2-1.1.0 (07 Oct 2010)
 
