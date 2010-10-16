@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/kramdown
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.1 2010/10/16 09:19:38 graaff Exp $
+
+*kramdown-0.11.0 (16 Oct 2010)
+
+  16 Oct 2010; Hans de Graaff <graaff@gentoo.org> +kramdown-0.11.0.ebuild,
+  +metadata.xml:
+  Initial import. This is a mandatory dependency of app-text/webgen, bug
+  341067.
+
