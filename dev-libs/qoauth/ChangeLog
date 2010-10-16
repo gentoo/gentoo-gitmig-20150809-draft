@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qoauth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.9 2010/10/16 10:19:51 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.10 2010/10/16 13:04:51 ayoy Exp $
+
+  16 Oct 2010; Dominik Kapusta <ayoy@gentoo.org> qoauth-1.0.1.ebuild,
+  +files/qoauth-1.0.1-disable-ft.patch:
+  Disable functional tests that require network connection and rely on
+  3rd party external server (bug #341267).
 
   16 Oct 2010; Dominik Kapusta <ayoy@gentoo.org> qoauth-1.0.1.ebuild:
   Adding x11-libs/qt-test conditional dependency to compile and run tests
