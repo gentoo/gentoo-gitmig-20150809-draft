@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.12.ebuild,v 1.1 2010/09/15 20:30:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.12.ebuild,v 1.2 2010/10/16 20:21:16 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -55,9 +55,12 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
-	use doc && dohtml -r "${WORKDIR}/${DOC_P}"/*
+	if use doc; then
+		dohtml -r "${WORKDIR}/${DOC_P}"/* || die "dohtml failed"
+	fi
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r Demo
+		doins -r Demo || die "doins failed"
 	fi
 }

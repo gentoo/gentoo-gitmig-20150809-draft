@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.12 2010/09/15 19:56:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.13 2010/10/16 20:21:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils multilib
+inherit distutils multilib
 
 DOC_P="${PN}-docs-html-2.3.7"
 
@@ -24,7 +25,6 @@ RDEPEND=">=net-nds/openldap-2.3
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${DEPEND}
 	dev-python/setuptools"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="CHANGES README"
 PYTHON_MODNAME="dsml.py ldapurl.py ldif.py ldap"
@@ -52,9 +52,12 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
-	use doc && dohtml -r "${WORKDIR}/${DOC_P}"/*
+	if use doc; then
+		dohtml -r "${WORKDIR}/${DOC_P}"/* || die "dohtml failed"
+	fi
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r Demo
+		doins -r Demo || die "doins failed"
 	fi
 }
