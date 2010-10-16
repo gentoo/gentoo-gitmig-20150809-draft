@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gsasl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.3 2010/10/10 01:02:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.4 2010/10/16 12:11:23 ranger Exp $
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> gsasl-1.4.1.ebuild:
+  stable ppc, bug 339980
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gsasl-1.4.1.ebuild:
   Stable on amd64 wrt bug #339980
