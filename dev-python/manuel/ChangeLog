@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/manuel
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.1 2010/10/17 17:02:38 arfrever Exp $
+
+*manuel-1.3.0 (17 Oct 2010)
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +manuel-1.3.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
