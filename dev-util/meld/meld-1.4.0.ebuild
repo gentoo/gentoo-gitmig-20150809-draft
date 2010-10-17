@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.4.0.ebuild,v 1.3 2010/10/13 20:35:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.4.0.ebuild,v 1.4 2010/10/17 20:18:57 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -31,6 +31,11 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 DOCS="AUTHORS NEWS help/ChangeLog"
+
+pkg_setup() {
+	# Needed for optimizing python modules against proper interpreter
+	python_set_active_version 2
+}
 
 src_prepare() {
 	gnome2_src_prepare
@@ -86,7 +91,6 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	PYTHON_ABI=$(PYTHON -2 --ABI)
 	python_mod_optimize /usr/$(get_libdir)/meld
 }
 
