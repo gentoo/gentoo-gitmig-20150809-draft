@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.14.ebuild,v 1.1 2010/10/17 11:01:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.14.ebuild,v 1.2 2010/10/17 12:00:33 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/pcmanfm/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug demo gnome hal udev udisks"
+IUSE="debug demo gnome hal udev"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
-	udisks? ( sys-fs/udisks )
+	udev? ( sys-fs/udisks )
 	gnome? ( hal? ( gnome-base/gnome-mount ) )
 	gnome? ( gnome-base/gvfs[hal?,udev?] )
 	>=lxde-base/menu-cache-0.3.2"
@@ -44,7 +44,7 @@ src_configure() {
 	econf --sysconfdir=/etc \
 		$(use_enable debug) \
 		$(use_enable demo) \
-		$(use_enable udisks)
+		$(use_enable udev udisks)
 }
 
 src_install() {
