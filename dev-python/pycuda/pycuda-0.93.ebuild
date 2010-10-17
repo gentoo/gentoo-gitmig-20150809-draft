@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-0.93.ebuild,v 1.3 2010/10/17 21:48:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-0.93.ebuild,v 1.4 2010/10/17 21:50:20 arfrever Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit distutils eutils
 
 DESCRIPTION="Python wrapper for NVIDIA CUDA"
 HOMEPAGE="http://mathema.tician.de/software/pycuda http://pypi.python.org/pypi/pycuda"
-SRC_URI="http://pypi.python.org/packages/source/p/pycuda/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
