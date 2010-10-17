@@ -1,17 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.5 2009/05/24 15:56:55 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999-r1.ebuild,v 1.1 2010/10/17 22:06:04 weaver Exp $
 
 EAPI="2"
 
-inherit perl-module subversion
+inherit perl-module git
 
 SUBPROJECTS="+db +network +run"
 
 DESCRIPTION="Perl tools for bioinformatics - Core modules"
 HOMEPAGE="http://www.bioperl.org/"
 SRC_URI=""
-ESVN_REPO_URI="svn://code.open-bio.org/bioperl/bioperl-live/trunk"
+EGIT_REPO_URI="git://github.com/${PN}/${PN}-live.git"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
