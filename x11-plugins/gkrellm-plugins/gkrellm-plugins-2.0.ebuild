@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.7 2010/10/15 18:07:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.8 2010/10/17 16:34:34 flameeyes Exp $
 
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
 HOMEPAGE="http://www.gkrellm.net/"
@@ -15,7 +15,6 @@ RDEPEND="!<app-admin/gkrellm-2
 		x11-plugins/gkrellflynn
 		>=x11-plugins/gkrellkam-2.0.0
 		>=x11-plugins/gkrellm-leds-0.8.0
-		>=x11-plugins/gkrellm-mailwatch-2.4.2
 		>=x11-plugins/gkrellm-volume-2.1.4
 		>=x11-plugins/gkrellmlaunch-0.5
 		>=x11-plugins/gkrellmoon-0.6

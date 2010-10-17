@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.16 2010/10/15 18:07:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.17 2010/10/17 16:34:34 flameeyes Exp $
+
+  17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  gkrellm-plugins-2.0.ebuild:
+  Remove reference to another plugin slated for removal.
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gkrellm-plugins-2.0.ebuild:
