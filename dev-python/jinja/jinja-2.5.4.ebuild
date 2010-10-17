@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.4.ebuild,v 1.1 2010/10/17 16:56:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.5.4.ebuild,v 1.2 2010/10/17 18:44:40 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,11 +32,6 @@ DISTUTILS_GLOBAL_OPTIONS=("--with-debugsupport")
 DOCS="CHANGES"
 PYTHON_MODNAME="jinja2"
 
-src_prepare() {
-	distutils_src_prepare
-	find examples -name "*.py[co]" -print0 | xargs -0 rm -f
-}
-
 src_compile(){
 	distutils_src_compile
 
@@ -57,6 +52,6 @@ src_install(){
 
 	if use examples; then
 		insinto "/usr/share/doc/${PF}"
-		doins -r examples || die "Failed to install examples"
+		doins -r examples || die "Installation of examples failed"
 	fi
 }
