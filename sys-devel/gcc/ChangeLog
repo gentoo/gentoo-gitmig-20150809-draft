@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.783 2010/10/17 09:08:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.784 2010/10/17 11:54:40 dirtyepic Exp $
+
+*gcc-4.4.5 (17 Oct 2010)
+
+  17 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> +gcc-4.4.5.ebuild:
+  Version bump.
 
   17 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> -gcc-4.3.2-r3.ebuild,
   -gcc-4.3.2-r4.ebuild, gcc-4.3.4.ebuild, gcc-4.3.5.ebuild,
