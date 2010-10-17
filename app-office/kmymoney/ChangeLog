@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kmymoney
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.11 2010/10/12 16:28:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.12 2010/10/17 02:21:11 jmbsvicetto Exp $
+
+  17 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kmymoney-4.5.ebuild:
+  Fix the ebuild logic to specify SRC_URI for versions != 9999.
 
   12 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   -kmymoney-3.98.1.ebuild, kmymoney-4.5.ebuild:

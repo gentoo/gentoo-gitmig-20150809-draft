@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.ebuild,v 1.2 2010/10/12 16:28:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.ebuild,v 1.3 2010/10/17 02:21:11 jmbsvicetto Exp $
 
 EAPI=3
 
@@ -11,7 +11,6 @@ if [[ ${PV} != *9999* ]]; then
 	ms nds nl pl pt pt_BR ro ru sk sv tr uk zh_CN zh_TW"
 	KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 	KDE_HANDBOOK="optional"
-else
 	SRC_URI="mirror://sourceforge/kmymoney2/${P}.tar.bz2"
 fi
 
