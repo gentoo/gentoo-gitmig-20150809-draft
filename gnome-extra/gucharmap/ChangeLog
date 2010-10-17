@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.147 2010/10/14 21:58:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.148 2010/10/17 15:31:44 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gucharmap-2.30.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> gucharmap-2.30.2.ebuild:
   arm stable, bug #324077
