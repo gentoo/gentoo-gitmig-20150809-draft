@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.255 2010/09/16 21:37:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.256 2010/10/17 15:38:14 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> epiphany-2.30.2-r1.ebuild:
+  alpha/ia64/sparc stable wrt #324077
 
 *epiphany-2.30.6 (16 Sep 2010)
 
