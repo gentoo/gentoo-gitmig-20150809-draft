@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.4.ebuild,v 1.1 2010/09/15 21:39:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.4.ebuild,v 1.2 2010/10/17 17:56:09 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -79,12 +79,12 @@ src_install() {
 	if use doc; then
 		pushd doc > /dev/null
 		rm -fr build
-		dohtml -r [a-z]* _images _static
+		dohtml -r [a-z]* _images _static || die "dohtml failed"
 		popd > /dev/null
 	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die "doins failed"
 	fi
 }
