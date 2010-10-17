@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0.ebuild,v 1.2 2010/10/13 20:58:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0-r1.ebuild,v 1.1 2010/10/17 18:22:19 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -52,8 +52,6 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-
-	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
@@ -62,7 +60,7 @@ src_configure() {
 	addpredict "$(unset HOME; echo ~)/.gconfd"
 	# Needed for import pyatspi
 	unset DBUS_SESSION_BUS_ADDRESS
-	gnome2_src_configure
+	PYTHON="$(PYTHON)" gnome2_src_configure
 }
 
 src_compile() {
