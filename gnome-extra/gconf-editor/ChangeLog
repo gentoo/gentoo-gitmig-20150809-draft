@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.165 2010/10/14 22:10:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.166 2010/10/17 15:44:46 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gconf-editor-2.30.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> gconf-editor-2.30.0.ebuild:
   arm stable, bug #324077
