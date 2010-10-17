@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.64 2010/09/11 18:54:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.65 2010/10/17 15:37:26 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> empathy-2.30.2.ebuild:
+  alpha stable wrt #324077
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> empathy-2.30.2.ebuild:
   Marked ppc for bug #324077.
