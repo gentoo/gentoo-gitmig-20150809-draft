@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12061 2010/10/17 18:53:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12062 2010/10/17 19:40:43 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1151,11 +1151,6 @@ net-fs/samba-client
 # and suffers of QA issues, see bug 251575
 # Masked for removal in 30 days
 net-voip/wengophone-bin
-
-# Lance Albertson <ramereth@gentoo.org> (07 Mar 2010)
-# Cfengine 3 is mostly incompatible with Cfengine 2, so lets mask 3.x
-# for a while until a sane upgrade path can be assumed in Gentoo.
->=net-misc/cfengine-3
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
