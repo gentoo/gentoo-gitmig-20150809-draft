@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.4.ebuild,v 1.1 2010/10/05 10:48:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.4.ebuild,v 1.2 2010/10/17 20:08:08 vapier Exp $
 
-EAPI=3
+EAPI="3"
+
 inherit eutils libtool multilib prefix
 
 DESCRIPTION="Portable Network Graphics library"
@@ -26,7 +27,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ANNOUNCE CHANGES README TODO
+	dodoc ANNOUNCE CHANGES README TODO libpng-*.txt
 	dosbin "${T}"/libpng-1.4.x-update.sh
 }
 
@@ -36,9 +37,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog
 	elog "Run ${EPREFIX}/usr/sbin/libpng-1.4.x-update.sh to fix libtool archives (.la)"
-	elog
 
 	has_version ${CATEGORY}/${PN}:1.2 && return 0
 	preserve_old_lib_notify /usr/$(get_libdir)/libpng12.so.0
