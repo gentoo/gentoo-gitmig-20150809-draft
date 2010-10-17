@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.301 2010/10/14 22:08:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.302 2010/10/17 15:36:40 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> totem-2.30.2.ebuild:
+  alpha/ia64/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> totem-2.30.2.ebuild:
   arm stable, bug #324077
