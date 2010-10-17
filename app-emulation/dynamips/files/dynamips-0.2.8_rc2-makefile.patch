@@ -1,6 +1,6 @@
-diff -uNr dynamips-0.2.8-RC2.ORIG/Makefile dynamips-0.2.8-RC2/Makefile
---- dynamips-0.2.8-RC2.ORIG/Makefile	2009-08-07 17:24:11.000000000 +0100
-+++ dynamips-0.2.8-RC2/Makefile	2009-08-07 17:24:52.000000000 +0100
+diff -uNr dynamips-0.2.8-RC2.ORIG//Makefile dynamips-0.2.8-RC2/Makefile
+--- dynamips-0.2.8-RC2.ORIG//Makefile	2010-10-17 13:50:01.000000000 +0100
++++ dynamips-0.2.8-RC2/Makefile	2010-10-17 13:50:57.000000000 +0100
 @@ -3,7 +3,7 @@
  
  # Replace x86 by amd64 for a build on x86_64.
@@ -28,7 +28,7 @@ diff -uNr dynamips-0.2.8-RC2.ORIG/Makefile dynamips-0.2.8-RC2/Makefile
  	-DJIT_ARCH=\"$(DYNAMIPS_ARCH)\" -DJIT_CPU=CPU_$(DYNAMIPS_ARCH) \
  	-DMIPS64_ARCH_INC_FILE=$(MIPS64_ARCH_INC_FILE) \
  	-DPPC32_ARCH_INC_FILE=$(PPC32_ARCH_INC_FILE) \
-@@ -215,8 +215,7 @@
+@@ -215,10 +215,9 @@
  .PHONY: all
  all: $(PROG) nvram_export
  
@@ -36,9 +36,12 @@ diff -uNr dynamips-0.2.8-RC2.ORIG/Makefile dynamips-0.2.8-RC2/Makefile
 -	$(LEX_C) $(C_OBJS) $(A_OBJS)
 +$(PROG): $(LEX_C) $(C_OBJS) $(A_OBJS)
  	@echo "Linking $@"
- 	@$(CC) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
+-	@$(CC) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
++	@$(CC) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS) $(LDFLAGS)
  
-@@ -246,6 +245,8 @@
+ udp_send$(BIN_EXT): udp_send.c net.c crc.c
+ 	@echo "Linking $@"
+@@ -246,9 +245,11 @@
  	@echo "Building assembly definitions header file"
  	@./asmdefs
  
@@ -46,4 +49,8 @@ diff -uNr dynamips-0.2.8-RC2.ORIG/Makefile dynamips-0.2.8-RC2/Makefile
 +
  nvram_export$(BIN_EXT): nvram_export.c
  	@echo "Linking $@"
- 	@$(CC) -Wall $(CFLAGS) -o $@ nvram_export.c
+-	@$(CC) -Wall $(CFLAGS) -o $@ nvram_export.c
++	@$(CC) -Wall $(CFLAGS) -o $@ nvram_export.c $(LDFLAGS)
+ 
+ install: $(PROG) nvram_export
+ 	@echo "Installing"
