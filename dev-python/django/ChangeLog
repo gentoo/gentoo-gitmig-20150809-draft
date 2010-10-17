@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.52 2010/09/22 19:57:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.53 2010/10/17 22:30:21 arfrever Exp $
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  django-1.2.3.ebuild:
+  Don't try to install nonexistent examples (bug #341159).
 
   22 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   django-1.0.4.ebuild, django-1.1.2.ebuild:
