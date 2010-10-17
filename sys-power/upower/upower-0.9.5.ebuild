@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.5.ebuild,v 1.11 2010/10/13 21:37:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.5.ebuild,v 1.12 2010/10/17 08:16:04 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
@@ -18,6 +18,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.76
 	>=dev-libs/glib-2.21.5:2
 	>=sys-apps/dbus-1
 	>=sys-auth/polkit-0.91
+	<sys-auth/polkit-0.97
 	introspection? ( dev-libs/gobject-introspection )
 	kernel_linux? ( >=sys-fs/udev-151[extras]
 		virtual/libusb:1
