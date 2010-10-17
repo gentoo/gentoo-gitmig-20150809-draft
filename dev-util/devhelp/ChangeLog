@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.115 2010/09/21 20:46:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.116 2010/10/17 16:24:42 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> devhelp-2.30.1.ebuild:
+  sparc stable wrt #324077
 
   21 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> devhelp-2.30.1.ebuild:
   Drop unneeded intltool fix.

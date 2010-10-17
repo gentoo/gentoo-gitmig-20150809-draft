@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.120 2010/10/13 21:53:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.121 2010/10/17 16:27:00 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> anjuta-2.30.2.1.ebuild:
+  sparc stable wrt #324077
 
   13 Oct 2010; Pacho Ramos <pacho@gentoo.org> anjuta-2.30.2.1.ebuild:
   Add missing gnome-base/gnome-common to DEPEND per bug #339991 by Vicente
