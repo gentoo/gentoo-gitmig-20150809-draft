@@ -10,4 +10,7 @@
 		<email>oli.borm@web.de</email>
 		<name>Oliver Borm</name>
 	</maintainer>
+	<use>
+  		<flag name='extras'>Enable optional dependencies</flag>
+	</use>
 </pkgmetadata>
