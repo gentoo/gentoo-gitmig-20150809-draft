@@ -37,7 +37,7 @@ diff -uNr dynamips-0.2.8-RC2.ORIG//Makefile dynamips-0.2.8-RC2/Makefile
 +$(PROG): $(LEX_C) $(C_OBJS) $(A_OBJS)
  	@echo "Linking $@"
 -	@$(CC) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
-+	@$(CC) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS) $(LDFLAGS)
++	@$(CC) $(LDFLAGS) -o $@ $(C_OBJS) $(A_OBJS) $(LIBS)
  
  udp_send$(BIN_EXT): udp_send.c net.c crc.c
  	@echo "Linking $@"
@@ -50,7 +50,7 @@ diff -uNr dynamips-0.2.8-RC2.ORIG//Makefile dynamips-0.2.8-RC2/Makefile
  nvram_export$(BIN_EXT): nvram_export.c
  	@echo "Linking $@"
 -	@$(CC) -Wall $(CFLAGS) -o $@ nvram_export.c
-+	@$(CC) -Wall $(CFLAGS) -o $@ nvram_export.c $(LDFLAGS)
++	@$(CC) $(LDFLAGS) -Wall $(CFLAGS) -o $@ nvram_export.c
  
  install: $(PROG) nvram_export
  	@echo "Installing"

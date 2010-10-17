@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dynamips
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.3 2010/10/17 12:58:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.4 2010/10/17 13:51:26 chainsaw Exp $
+
+  17 Oct 2010; <chainsaw@gentoo.org>
+  files/dynamips-0.2.8_rc2-makefile.patch:
+  Patch rediffed as per feedback by Samuli Suominen.
 
 *dynamips-0.2.8_rc2-r1 (17 Oct 2010)
 
