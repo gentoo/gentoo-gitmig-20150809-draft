@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.350 2010/09/16 22:38:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.351 2010/10/17 21:35:44 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1966,3 +1966,32 @@ EOF
 #	ecompressdir --ignore /usr/share/doc/${PF}/html
 #	ecompressdir --queue /usr/share/doc
 #}
+
+# @FUNCTION: path_exists
+# @USAGE: [-a|-o] <paths>
+# @DESCRIPTION:
+# Check if the specified paths exist.  Works for all types of paths
+# (files/dirs/etc...).  The -a and -o flags control the requirements
+# of the paths.  They correspond to "and" and "or" logic.  So the -a
+# flag means all the paths must exist while the -o flag means at least
+# one of the paths must exist.  The default behavior is "and".  If no
+# paths are specified, then the return value is "false".
+path_exists() {
+	local opt=$1
+	[[ ${opt} == -[ao] ]] && shift || opt="-a"
+
+	# no paths -> return false
+	# same behavior as: [[ -e "" ]]
+	[[ $# -eq 0 ]] && return 1
+
+	local p r=0
+	for p in "$@" ; do
+		[[ -e ${p} ]]
+		: $(( r += $? ))
+	done
+
+	case ${opt} in
+		-a) return $(( r != 0 )) ;;
+		-o) return $(( r == $# )) ;;
+	esac
+}
