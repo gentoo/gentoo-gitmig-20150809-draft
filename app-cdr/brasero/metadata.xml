@@ -6,6 +6,9 @@
 <use>
 	<flag name='beagle'>Enable <pkg>app-misc/beagle</pkg> support for
 		searches</flag>
+	<flag name="introspection">Use
+		<pkg>dev-libs/gobject-introspection</pkg> for
+		introspection</flag>
 	<flag name='nautilus'> Build <pkg>gnome-base/nautilus</pkg> extension</flag>
 	<flag name='libburn'>Enable <pkg>dev-libs/libburn</pkg> backend</flag>
 	<flag name='playlist'>Enable support for playlists through

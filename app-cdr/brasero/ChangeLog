@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.110 2010/10/17 15:25:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.111 2010/10/17 19:08:51 pacho Exp $
+
+*brasero-2.32.0 (17 Oct 2010)
+
+  17 Oct 2010; Pacho Ramos <pacho@gentoo.org> +brasero-2.32.0.ebuild:
+  Version bump for Gnome 2.32: includes tons of bugfixes and translation
+  updates. Add introspection support.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> brasero-2.30.2.ebuild:
   alpha/ia64/sparc stable wrt #324077
