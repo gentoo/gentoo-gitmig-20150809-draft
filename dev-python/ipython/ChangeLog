@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.75 2010/06/29 04:14:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.76 2010/10/17 20:15:09 arfrever Exp $
+
+*ipython-0.10.1 (17 Oct 2010)
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +ipython-0.10.1.ebuild:
+  Version bump.
 
   29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ipython-0.10.ebuild:
