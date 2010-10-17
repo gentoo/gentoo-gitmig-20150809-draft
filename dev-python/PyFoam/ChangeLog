@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyFoam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.6 2010/03/22 03:30:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.7 2010/10/17 16:28:19 patrick Exp $
+
+*PyFoam-0.5.4 (17 Oct 2010)
+
+  17 Oct 2010; Patrick Lauer <patrick@gentoo.org> +PyFoam-0.5.4.ebuild:
+  Bump for #340171
 
   22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
