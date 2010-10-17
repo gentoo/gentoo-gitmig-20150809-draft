@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.30 2010/03/23 20:39:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.31 2010/10/17 01:33:33 flameeyes Exp $
+
+  17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -kanatest-0.4.2.ebuild, -kanatest-0.4.3.ebuild, -kanatest-0.4.4.ebuild,
+  -kanatest-0.4.6.ebuild, kanatest-0.4.8.ebuild,
+  +files/kanatest-0.4.8+gtk-2.22.patch:
+  Cleanup old versions; fix build with GTK+ 2.22 (bug #339480); install
+  TRANSLATORS file and avoid installing duplicate icon/desktop file.
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> kanatest-0.4.8.ebuild:
   stable ppc, bug 302320
