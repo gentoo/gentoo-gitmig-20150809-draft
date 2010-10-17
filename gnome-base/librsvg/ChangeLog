@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.225 2010/10/14 21:04:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.226 2010/10/17 14:46:16 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> librsvg-2.26.3.ebuild:
+  alpha/ia64/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> librsvg-2.26.3.ebuild:
   arm stable, bug #324077
