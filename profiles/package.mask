@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12055 2010/10/16 10:27:00 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12056 2010/10/17 06:20:32 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -598,11 +598,6 @@ media-sound/rip-l
 # Dead upstream. Masked for removal in 30 days.
 # Please switch to x11-drivers/xf86-video-ati
 x11-drivers/xf86-video-radeonhd
-
-# Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2010)
-# Mask for removal 20101014
-# Looks dead upstream.
-games-server/greenhouse
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Sep 2010)
 # Last stand-alone release in 2008. Newer versions are included
