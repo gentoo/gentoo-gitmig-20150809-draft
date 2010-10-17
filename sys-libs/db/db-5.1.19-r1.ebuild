@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.1.19.ebuild,v 1.1 2010/10/08 17:54:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.1.19-r1.ebuild,v 1.1 2010/10/17 22:26:02 robbat2 Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
@@ -27,7 +27,7 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 done
 
 LICENSE="OracleDB"
-SLOT="5.0"
+SLOT="5.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc java nocxx tcl test"
 
