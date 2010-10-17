@@ -8,3 +8,6 @@ inherit() {
 		source ../${e}.eclass
 	done
 }
+
+hasq() { [[ " ${*:2} " == *" $1 "* ]]; }
+has() { hasq "$@"; }
