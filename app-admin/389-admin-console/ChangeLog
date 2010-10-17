@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/389-admin-console
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.3 2010/10/15 13:25:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.4 2010/10/17 10:09:12 lxnay Exp $
+
+  17 Oct 2010; Fabio Erculiani <lxnay@gentoo.org>
+  389-admin-console-1.1.4-r1.ebuild:
+  tweak jdk/jre RDEPEND
 
 *389-admin-console-1.1.4-r1 (15 Oct 2010)
 

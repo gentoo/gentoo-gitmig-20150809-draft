@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/389-ds-console
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.6 2010/07/11 10:06:12 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.7 2010/10/17 10:07:00 lxnay Exp $
+
+  17 Oct 2010; Fabio Erculiani <lxnay@gentoo.org>
+  389-ds-console-1.2.3-r1.ebuild:
+  tweak jdk/jre RDEPEND
 
   11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
   389-ds-console-1.2.3-r1.ebuild:
