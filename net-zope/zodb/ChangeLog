@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.42 2010/09/29 04:39:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.43 2010/10/17 18:57:40 arfrever Exp $
+
+*zodb-3.10.0 (17 Oct 2010)
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zodb-3.10.0.ebuild:
+  Version bump.
 
 *zodb-3.9.7 (29 Sep 2010)
 
