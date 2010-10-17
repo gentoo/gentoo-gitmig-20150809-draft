@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.15 2010/09/23 21:41:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.16 2010/10/17 22:16:10 arfrever Exp $
+
+*testtools-0.9.7 (17 Oct 2010)
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +testtools-0.9.7.ebuild:
+  Version bump. Install tests (bug #341095).
 
 *testtools-0.9.6 (23 Sep 2010)
 
