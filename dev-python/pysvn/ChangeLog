@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.12 2010/10/16 19:24:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.13 2010/10/17 22:44:42 arfrever Exp $
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysvn-1.7.4.ebuild:
+  Update dependencies (bug #341399).
 
 *pysvn-1.7.4 (16 Oct 2010)
 
