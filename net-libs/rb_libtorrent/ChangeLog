@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.92 2010/10/05 19:09:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.93 2010/10/17 13:17:40 hwoarang Exp $
+
+  17 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.15.4.ebuild:
+  Add ssl useflag for encryption purposes. Fix debug useflag usage
 
 *rb_libtorrent-0.15.4 (05 Oct 2010)
 

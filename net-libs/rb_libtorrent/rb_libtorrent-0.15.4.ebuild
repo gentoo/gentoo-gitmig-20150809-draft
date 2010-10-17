@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.1 2010/10/05 19:09:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.2 2010/10/17 13:17:40 hwoarang Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -16,7 +16,7 @@ SRC_URI="http://libtorrent.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="debug doc examples python"
+IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
 DEPEND="|| ( >=dev-libs/boost-1.35
@@ -24,7 +24,9 @@ DEPEND="|| ( >=dev-libs/boost-1.35
 	python? ( >=dev-libs/boost-1.35.0-r5[python] dev-lang/python:2.6[threads] )
 	=sys-devel/libtool-2.2*
 	sys-libs/zlib
-	examples? ( !net-p2p/mldonkey )"  #292998
+	examples? ( !net-p2p/mldonkey )
+	ssl? ( dev-libs/openssl )"
+
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -42,12 +44,13 @@ src_configure() {
 	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
 
 	local LOGGING
-	use debug && LOGGING="--with-logging=verbose"
+	use debug && LOGGING="--enable-logging=verbose --enable-statistics"
 
 	econf $(use_enable debug) \
 		$(use_enable test tests) \
 		$(use_enable examples) \
 		$(use_enable python python-binding) \
+		$(use_enable ssl encryption) \
 		--with-zlib=system \
 		${LOGGING} \
 		--with-boost=${BOOST_INC} \
