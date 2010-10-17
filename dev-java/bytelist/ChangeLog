@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bytelist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.13 2010/10/15 12:35:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.14 2010/10/17 12:30:32 caster Exp $
+
+  17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -bytelist-1.0.ebuild,
+  -bytelist-1.0.2.ebuild:
+  Remove old.
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> bytelist-1.0.6.ebuild:
   stable ppc, bug 324437

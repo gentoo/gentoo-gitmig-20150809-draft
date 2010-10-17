@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/slf4j-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.12 2010/10/14 16:59:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.13 2010/10/17 12:26:35 caster Exp $
+
+  17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -slf4j-api-1.5.2.ebuild:
+  Remove old.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> slf4j-api-1.5.11.ebuild:
   stable ppc, bug 316317

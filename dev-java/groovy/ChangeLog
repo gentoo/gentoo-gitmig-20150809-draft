@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/groovy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.43 2010/10/15 17:40:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.44 2010/10/17 12:31:30 caster Exp $
+
+  17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -groovy-1.6.5.ebuild,
+  -groovy-1.6.7.ebuild:
+  Remove old.
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> groovy-1.6.8.ebuild:
   Marking groovy-1.6.8 ppc for bug 321355
