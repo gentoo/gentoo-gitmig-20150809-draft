@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12056 2010/10/17 06:20:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12057 2010/10/17 08:14:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -316,6 +316,7 @@ dev-tex/achemso
 >=gnome-extra/polkit-gnome-0.99
 >=x11-libs/gtk+-2.21
 >=dev-lang/vala-0.11
+>=sys-power/upower-0.9.6
 
 # Pacho Ramos <pacho@gentoo.org> (24 Sep 2010)
 # Broken since more than a year when using nvidia-drivers (bug #260433),
