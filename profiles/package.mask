@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12064 2010/10/17 22:52:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12065 2010/10/17 23:56:26 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (18 Oct 2010)
+#  on behalf of QA team
+#
+# TCT has been retired upstream for a while, the site
+# pointing to sleuthkit as its successor. Within Gentoo
+# there hasn't been a committed maintainer since 2004 and the
+# latest bumps have been done blindly. Bug #336254 was opened
+# for a build failure with Perl 5.12, and reports a number
+# of other issues making the package useless. Furthermore,
+# it fails to respect LDFLAGS.
+#
+# Removal on 2010-12-17
+app-forensics/tct
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Oct 2010)
 # Masking beta releases
