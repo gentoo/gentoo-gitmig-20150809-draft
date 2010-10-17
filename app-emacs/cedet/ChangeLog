@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.61 2010/10/14 17:05:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.62 2010/10/17 07:14:09 ulm Exp $
+
+  16 Oct 2010; Ulrich Mueller <ulm@gentoo.org> files/50cedet-gentoo.el:
+  Test if image-load-path exists in site-init file, fixes bug 341377.
 
   14 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -cedet-1.0_pre6.ebuild,
   -cedet-1.0_pre7-r1.ebuild, -files/cedet-1.0_pre6-fix-eieio-comp.patch,

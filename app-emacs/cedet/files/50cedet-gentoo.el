@@ -1,6 +1,7 @@
 (require 'cedet "@SITELISP@/common/cedet")
-(add-to-list 'image-load-path "@SITEETC@/common/icons" t)
-(add-to-list 'image-load-path "@SITEETC@/cogre" t)
+(when (boundp 'image-load-path)
+  (add-to-list 'image-load-path "@SITEETC@/common/icons" t)
+  (add-to-list 'image-load-path "@SITEETC@/cogre" t))
 (setq srecode-map-load-path
       (list "@SITEETC@/srecode/templates"
 	    "@SITEETC@/ede/templates"
