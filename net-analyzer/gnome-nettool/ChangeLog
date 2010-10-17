@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.106 2010/10/14 22:13:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.107 2010/10/17 15:48:54 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  gnome-nettool-2.30.0.ebuild:
+  alpha/ia64/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> gnome-nettool-2.30.0.ebuild:
   arm stable, bug #324077
