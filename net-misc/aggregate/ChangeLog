@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.14 2008/10/10 08:35:14 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.15 2010/10/17 04:46:37 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> aggregate-1.6.ebuild:
+  Drop to ~mips
 
   10 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
   +files/aggregate-1.6-build-fixup.patch, aggregate-1.6.ebuild:
