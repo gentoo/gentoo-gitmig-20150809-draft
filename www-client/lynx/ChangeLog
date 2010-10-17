@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.103 2010/09/11 22:01:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.104 2010/10/17 04:41:00 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> lynx-2.8.6-r2.ebuild:
+  Drop to ~mips
 
 *lynx-2.8.8_pre5 (11 Sep 2010)
 
