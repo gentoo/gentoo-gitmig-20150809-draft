@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/daemontools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.16 2010/02/11 18:57:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.17 2010/10/17 03:46:48 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> daemontools-0.76-r5.ebuild:
+  Drop to ~mips
 
   11 Feb 2010; Jeroen Roovers <jer@gentoo.org> daemontools-0.76-r7.ebuild:
   Stable for HPPA (bug #299625).

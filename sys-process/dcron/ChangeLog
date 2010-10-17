@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/dcron
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.15 2009/12/19 14:47:28 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.16 2010/10/17 03:51:47 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> dcron-3.2-r1.ebuild:
+  Drop to ~mips
 
 *dcron-3.2-r1 (19 Dec 2009)
 
