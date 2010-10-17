@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12062 2010/10/17 19:40:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12063 2010/10/17 21:07:04 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -623,12 +623,6 @@ media-sound/rip-l
 # Dead upstream. Masked for removal in 30 days.
 # Please switch to x11-drivers/xf86-video-ati
 x11-drivers/xf86-video-radeonhd
-
-# Ulrich Mueller <ulm@gentoo.org> (13 Sep 2010)
-# Last stand-alone release in 2008. Newer versions are included
-# with app-editors/emacs or app-editors/emacs-vcs.
-# Masked for removal in 30 days, bug 337133.
-app-emacs/gnus
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2010)
 # Masked before final release.
