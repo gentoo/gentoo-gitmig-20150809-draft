@@ -6,7 +6,7 @@ diff -uNr irda-utils-0.9.18.ORIG/findchip/Makefile irda-utils-0.9.18/findchip/Ma
  findchip: $(OBJS)
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(OBJS) $(CFLAGS) -o $@
-+	$(ECMD)$(CC) $(OBJS) $(CFLAGS) -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(OBJS) $(CFLAGS) -o $@
  
  
  clean:
@@ -15,7 +15,7 @@ diff -uNr irda-utils-0.9.18.ORIG/findchip/Makefile irda-utils-0.9.18/findchip/Ma
  gfindchip: gfindchip.c 
  	$(prn_cc)
 -	$(ECMD))$(CC) $(CFLAGS) `gtk-config --cflags`  $< -o $@ `gtk-config --libs`
-+	$(ECMD))$(CC) $(CFLAGS) `gtk-config --cflags`  $< -o $@ `gtk-config --libs` $(LDFLAGS)
++	$(ECMD))$(CC) $(LDFLAGS) $(CFLAGS) `gtk-config --cflags`  $< -o $@ `gtk-config --libs`
  
 diff -uNr irda-utils-0.9.18.ORIG/irattach/Makefile irda-utils-0.9.18/irattach/Makefile
 --- irda-utils-0.9.18.ORIG/irattach/Makefile	2010-10-17 14:30:57.000000000 +0100
@@ -25,14 +25,14 @@ diff -uNr irda-utils-0.9.18.ORIG/irattach/Makefile irda-utils-0.9.18/irattach/Ma
  irattach: irattach.o util.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) irattach.o util.o -o $@
-+	$(ECMD)$(CC) $(CFLAGS) irattach.o util.o -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) irattach.o util.o -o $@
  
  
  
  dongle_attach: dongle_attach.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) dongle_attach.o -o $@
-+	$(ECMD)$(CC) $(CFLAGS) dongle_attach.o -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) dongle_attach.o -o $@
  
  
  install: $(TARGETS)
@@ -44,7 +44,7 @@ diff -uNr irda-utils-0.9.18.ORIG/irdadump/Makefile irda-utils-0.9.18/irdadump/Ma
  irdadump: $(IRDADUMP_OBJS) $(LIBIRDADUMP_TARGET)
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) -o  $(IRDADUMP_TARGET) $< $(LIBIRDADUMP_TARGET) `pkg-config --libs glib-2.0`
-+	$(ECMD)$(CC) $(CFLAGS) -o  $(IRDADUMP_TARGET) $< $(LIBIRDADUMP_TARGET) `pkg-config --libs glib-2.0` $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) -o  $(IRDADUMP_TARGET) $< $(LIBIRDADUMP_TARGET) `pkg-config --libs glib-2.0`
  
  
  .c.o:
@@ -56,7 +56,7 @@ diff -uNr irda-utils-0.9.18.ORIG/irdaping/Makefile irda-utils-0.9.18/irdaping/Ma
  irdaping: $(OBJS)
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) $(OBJS) -o $@
-+	$(ECMD)$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) $(OBJS) -o $@
  
  
  .c.o:
@@ -68,7 +68,7 @@ diff -uNr irda-utils-0.9.18.ORIG/irnetd/Makefile irda-utils-0.9.18/irnetd/Makefi
  irnetd: $(OBJS)
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) $(OBJS) -o $@
-+	$(ECMD)$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) $(OBJS) -o $@
  
  
  install: irnetd
@@ -80,7 +80,7 @@ diff -uNr irda-utils-0.9.18.ORIG/irsockets/Makefile irda-utils-0.9.18/irsockets/
  %: %.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS)
-+	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS) $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(XCFLAGS) -o $@ $^ $(LIBS)
  
  
  %.o: %.c
@@ -93,7 +93,7 @@ diff -uNr irda-utils-0.9.18.ORIG/psion/Makefile irda-utils-0.9.18/psion/Makefile
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(CFLAGS) $(PSION_SRC) -o $@
 \ No newline at end of file
-+	$(ECMD)$(CC) $(CFLAGS) $(PSION_SRC) -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(CFLAGS) $(PSION_SRC) -o $@
 diff -uNr irda-utils-0.9.18.ORIG/smcinit/Makefile irda-utils-0.9.18/smcinit/Makefile
 --- irda-utils-0.9.18.ORIG/smcinit/Makefile	2010-10-17 14:30:57.000000000 +0100
 +++ irda-utils-0.9.18/smcinit/Makefile	2010-10-17 14:31:21.000000000 +0100
@@ -102,19 +102,19 @@ diff -uNr irda-utils-0.9.18.ORIG/smcinit/Makefile irda-utils-0.9.18/smcinit/Make
  smcinit: smcinit.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) -o $@ $^ $(LIBS) -lpci
-+	$(ECMD)$(CC) -o $@ $^ $(LIBS) -lpci $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) -o $@ $^ $(LIBS) -lpci
  
  
  tosh1800-smcinit: tosh1800-smcinit.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci
-+	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci
  
  
  tosh2450-smcinit: tosh2450-smcinit.o
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci
-+	$(ECMD)$(CC) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(XCFLAGS) -o $@ $^ $(LIBS) -lpci
  
  
  %o: %c
@@ -126,7 +126,7 @@ diff -uNr irda-utils-0.9.18.ORIG/tekram/Makefile irda-utils-0.9.18/tekram/Makefi
  irkbd: $(OBJS)
  	$(prn_cc_o)
 -	$(ECMD)$(CC) $(OBJS) -o $@
-+	$(ECMD)$(CC) $(OBJS) -o $@ $(LDFLAGS)
++	$(ECMD)$(CC) $(LDFLAGS) $(OBJS) -o $@
  
  
  .c.o:
