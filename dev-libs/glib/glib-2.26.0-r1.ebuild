@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.0.ebuild,v 1.2 2010/10/06 21:53:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.0-r1.ebuild,v 1.1 2010/10/17 15:12:35 pacho Exp $
 
 EAPI="2"
 
@@ -66,6 +66,15 @@ src_prepare() {
 	# Disable failing tests, upstream bug #???
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-locale-sensitive-test.patch"
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-volumemonitor-broken-test.patch"
+
+	# Don't unref data->message if it is NULL, fixes evince-2.32 crash
+	epatch "${FILESDIR}/${P}-unref-null.patch"
+
+	# Don't call close() on -1 in testglib.c
+	epatch "${FILESDIR}/${P}-not-close.patch"
+
+	# Prevent error pileup
+	epatch "${FILESDIR}/${P}-error-pileup.patch"
 
 	# Needed for the punt-python-check patch.
 	# Also needed to prevent croscompile failures, see bug #267603

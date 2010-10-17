@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.429 2010/10/17 14:43:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.430 2010/10/17 15:12:35 pacho Exp $
+
+*glib-2.26.0-r1 (17 Oct 2010)
+
+  17 Oct 2010; Pacho Ramos <pacho@gentoo.org> -glib-2.26.0.ebuild,
+  +glib-2.26.0-r1.ebuild, +files/glib-2.26.0-error-pileup.patch,
+  +files/glib-2.26.0-not-close.patch, +files/glib-2.26.0-unref-null.patch:
+  Revision bump to include one important upstream fix to prevent evince
+  crash at startup, also fix test and prevent error pileup. Remove previous
+  broken version.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> glib-2.24.1-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #324077
