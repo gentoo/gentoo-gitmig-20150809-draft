@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/pam_fprint
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/ChangeLog,v 1.1 2010/10/17 22:54:30 xmw Exp $
+
+*pam_fprint-0.2 (17 Oct 2010)
+
+  17 Oct 2010; Michael Weber <xmw@gentoo.org> +pam_fprint-0.2.ebuild,
+  +files/pam_fprint-0.2-headers.patch, +metadata.xml:
+  Initial import, fixes bug 227671, thanks to Jan Buecken and others on this
+  bug.
+
