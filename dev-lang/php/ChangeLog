@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.420 2010/10/14 15:11:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.421 2010/10/17 19:23:35 mabi Exp $
+
+  17 Oct 2010; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_install-v1.eblit, files/eblits/src_install-v2.eblit:
+  change allow_url_fopen back to Off (bug #332763)
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org> php-5.3.3-r1.ebuild:
   x86 stable, bug 336869
