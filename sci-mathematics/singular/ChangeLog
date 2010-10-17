@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.33 2010/04/28 14:55:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.34 2010/10/17 08:20:13 xarthisius Exp $
+
+*singular-3.1.1-r1 (17 Oct 2010)
+
+  17 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -singular-3.1.0.7.ebuild, -singular-3.1.1.ebuild,
+  +singular-3.1.1-r1.ebuild:
+  Respect LDFLAGS wrt bug 341357. Thanks to Diego for the report. Remove
+  redundant die messages. Drop old.
 
   28 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org>
   singular-3.1.1.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.1.ebuild,v 1.2 2010/04/28 14:55:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.1-r1.ebuild,v 1.1 2010/10/17 08:20:13 xarthisius Exp $
 
 EAPI="2"
 
-inherit eutils elisp-common autotools multilib versionator
+inherit autotools eutils elisp-common flag-o-matic multilib versionator
 
 MY_PN=Singular
 MY_PV=$(replace_all_version_separators -)
@@ -39,13 +39,14 @@ src_prepare () {
 
 	sed -i \
 		-e "s/PFSUBST/${PF}/" \
-		kernel/feResource.cc || die "sed failed on feResource.cc"
+		kernel/feResource.cc || die
 
 	sed -i \
 		-e '/CXXFLAGS/ s/--no-exceptions//g' \
+		-e "s/SLDFLAGS=-shared/SLDFLAGS=\"$(raw-ldflags) -shared\"/" \
 		"${S}"/Singular/configure.in || die
 
-	cd "${S}"/Singular || die "failed to cd into Singular/"
+	cd "${S}"/Singular || die
 	eautoconf
 }
 
@@ -66,44 +67,42 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1 || die
 	if use emacs; then
 		cd "${WORKDIR}"/${MY_PN}/${MY_PV}/emacs/
-		elisp-compile *.el || die "elisp-compile failed"
+		elisp-compile *.el || die
 	fi
 }
 
 src_install () {
-	dodoc README
+	dodoc README || die
 	# execs and libraries
 	cd "${S}"/*-Linux
 	dobin ${MY_PN}* gen_test change_cost solve_IP toric_ideal LLL \
-		|| die "failed to install binaries"
+		|| die
 	insinto /usr/$(get_libdir)/${PN}
-	doins *.so || die "failed to install libraries"
+	doins *.so || die
 
-	dosym ${MY_PN}-${MY_PV} /usr/bin/${MY_PN} \
-		|| die "failed to create symbolic link"
+	dosym ${MY_PN}-${MY_PV} /usr/bin/${MY_PN} || die
 
 	# stuff from the share tar ball
 	cd "${WORKDIR}"/${MY_PN}/${MY_PV}
 	insinto /usr/share/${PN}
-	doins -r LIB  || die "failed to install lib files"
+	doins -r LIB  || die
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "failed to install examples"
+		doins -r examples || die
 	fi
 	if use doc; then
-		dohtml -r html/* || die "failed to install html docs"
+		dohtml -r html/* || die
 		insinto /usr/share/${PN}
-		doins doc/singular.idx || die "failed to install idx file"
+		doins doc/singular.idx || die
 		cp info/${PN}.hlp info/${PN}.info &&
-		doinfo info/${PN}.info \
-			|| die "failed to install info files"
+		doinfo info/${PN}.info || die
 	fi
 	if use emacs; then
 		elisp-install ${PN} emacs/*.el emacs/*.elc emacs/.emacs* \
-			|| die "elisp-install failed"
+			|| die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 }
