@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.428 2010/10/14 21:01:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.429 2010/10/17 14:43:05 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> glib-2.24.1-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> glib-2.24.1-r1.ebuild:
   arm stable, bug #324077
