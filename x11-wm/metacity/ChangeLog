@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.261 2010/10/14 21:39:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.262 2010/10/17 15:12:41 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> metacity-2.30.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> metacity-2.30.1.ebuild:
   arm stable, bug #324077
