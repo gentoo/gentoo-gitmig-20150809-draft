@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4656 2010/10/17 12:59:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4657 2010/10/17 16:36:38 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask two more gkrellm plugins for removal. All plugins checked now and
+  these are all those with a broken gdk_string_width or overflows that I
+  have been able to find.
 
   17 Oct 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   Masked sci-visualization/qtiplot as I broke it
