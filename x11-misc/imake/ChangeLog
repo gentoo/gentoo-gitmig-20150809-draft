@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.35 2010/09/28 13:34:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.36 2010/10/17 03:27:47 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> imake-1.0.2.ebuild:
+  Drop to ~mips
 
   28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> imake-1.0.3.ebuild:
   ppc64 stable wrt #327777
