@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.35 2010/10/01 10:59:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.36 2010/10/17 11:02:33 hwoarang Exp $
+
+*pcmanfm-0.9.8 (17 Oct 2010)
+
+  17 Oct 2010; Markos Chandras <hwoarang@gentoo.org> +pcmanfm-0.9.8.ebuild:
+  Version bump
 
   01 Oct 2010; Markos Chandras <hwoarang@gentoo.org> pcmanfm-9999.ebuild:
   Move gnome,hal,udev dependencies from pcmanfm to libfm to actually reflect
