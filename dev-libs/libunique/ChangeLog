@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.33 2010/10/14 21:02:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.34 2010/10/17 14:44:42 armin76 Exp $
+
+  17 Oct 2010; Raúl Porcel <armin76@gentoo.org> libunique-1.1.6.ebuild:
+  alpha/ia64/sh/sparc stable wrt #324077
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org> libunique-1.1.6.ebuild:
   arm stable, bug #324077
