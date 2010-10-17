@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/silver-xcursors
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.22 2009/03/23 22:14:04 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.23 2010/10/17 03:11:37 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> silver-xcursors-0.4.ebuild:
+  Drop to ~mips
 
   23 Mar 2009; Ben de Groot <yngwin@gentoo.org> silver-xcursors-0.4:
   Fix SRC_URI, bug 223483

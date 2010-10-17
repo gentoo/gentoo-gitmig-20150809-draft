@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/golden-xcursors
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.22 2007/02/06 01:36:43 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/ChangeLog,v 1.23 2010/10/17 03:08:51 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> golden-xcursors-0.8.ebuild:
+  Drop to ~mips
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

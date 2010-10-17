@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/blueglass-xcursors
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.24 2008/12/21 00:41:39 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.25 2010/10/17 03:13:52 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  blueglass-xcursors-0.4.ebuild:
+  Drop to ~mips
 
   21 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   blueglass-xcursors-0.4.ebuild:

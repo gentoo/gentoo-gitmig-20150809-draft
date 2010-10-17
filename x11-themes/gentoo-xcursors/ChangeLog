@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gentoo-xcursors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.18 2010/02/11 15:03:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.19 2010/10/17 03:07:26 leio Exp $
+
+  17 Oct 2010; Mart Raudsepp <leio@gentoo.org> gentoo-xcursors-0.3.1.ebuild:
+  Drop to ~mips
 
   11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> gentoo-xcursors-0.3.1.ebuild:
   Fix LICENSE, bug 298556.
