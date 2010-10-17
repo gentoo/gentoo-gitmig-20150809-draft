@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.281 2010/10/17 15:24:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.282 2010/10/17 19:03:49 pacho Exp $
+
+*file-roller-2.32.0 (17 Oct 2010)
+
+  17 Oct 2010; Pacho Ramos <pacho@gentoo.org> +file-roller-2.32.0.ebuild:
+  Version bump for Gnome 2.32: Migrated from dbus-glib to glib's GDBus,
+  added support for lrzip archives and lrzip compressed tar archives, bring
+  back support for archives on remote GIO mounts when the fuse daemon is not
+  available, other bugfixes and translation updates.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> file-roller-2.30.2.ebuild:
   alpha/ia64/sparc stable wrt #324077
