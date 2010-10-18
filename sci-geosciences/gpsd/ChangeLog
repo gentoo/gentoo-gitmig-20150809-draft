@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.54 2010/10/18 04:20:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.55 2010/10/18 09:03:11 nerdboy Exp $
+
+  18 Oct 2010; Steve Arnold <nerdboy@gentoo.org> gpsd-2.95.ebuild:
+  Keyworded for ~ppc (tested on G4 ibook).
 
   18 Oct 2010; Steve Arnold <nerdboy@gentoo.org> gpsd-2.39-r1.ebuild:
   Updated for new python eclass.
