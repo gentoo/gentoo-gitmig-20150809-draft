@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.17 2010/06/17 21:01:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.18 2010/10/18 02:54:59 nerdboy Exp $
+
+*mapnik-0.7.1 (18 Oct 2010)
+
+  18 Oct 2010; Steve Arnold <nerdboy@gentoo.org> +mapnik-0.7.1.ebuild,
+  +files/mapnik-0.7.1-libagg.patch:
+  Updated to new version for new gpsdrive and boost support (among other 
+  things).  Tested with boost-1.42, gpsd-2.95, and gpsdrive-2.11 (and a 
+  USB gps device).
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> mapnik-0.5.1.ebuild,
   mapnik-0.6.0.ebuild, mapnik-0.6.1-r3.ebuild:
