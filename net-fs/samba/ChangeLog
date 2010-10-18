@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.449 2010/09/27 16:40:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.450 2010/10/18 16:48:59 vostorga Exp $
+
+*samba-3.5.6 (18 Oct 2010)
+
+  18 Oct 2010; Víctor Ostorga <vostorga@gentoo.org> -samba-3.4.6.ebuild,
+  +samba-3.5.6.ebuild:
+  Version bump to 3.5.6 bug #341581 . Fixing dependency version on
+  dev-db/ctdb bug #339283
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> samba-3.5.5.ebuild:
   Re-keyword ~mips for bug #285952 and to fix a lot of deptrees
