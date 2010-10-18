@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.43 2010/09/29 00:50:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.44 2010/10/18 16:53:48 hwoarang Exp $
+
+  18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> astng-0.20.3.ebuild:
+  Stable on amd64 wrt bug #341607
 
 *astng-0.20.3 (29 Sep 2010)
 

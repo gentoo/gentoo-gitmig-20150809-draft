@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.20.3.ebuild,v 1.1 2010/09/29 00:50:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.20.3.ebuild,v 1.2 2010/10/18 16:53:48 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/astng/logilab-${P}.tar.gz mirror://pypi/l/log
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
 IUSE="test"
 
 # Version specified in __pkginfo__.py.
