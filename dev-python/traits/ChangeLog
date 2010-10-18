@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.13 2010/10/15 20:49:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.14 2010/10/18 13:02:19 arfrever Exp $
+
+*traits-3.5.0 (18 Oct 2010)
+
+  18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +traits-3.5.0.ebuild:
+  Version bump.
 
   15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -traits-3.2.0.ebuild, -traits-3.3.0.ebuild:
