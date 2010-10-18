@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.5 2010/05/30 20:49:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.6 2010/10/18 04:20:43 nerdboy Exp $
 
 EAPI="2"
 
-inherit autotools eutils distutils flag-o-matic
+inherit autotools eutils flag-o-matic python
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
@@ -144,7 +144,7 @@ src_install() {
 		"${D}usr/share/man/man1/xgps.1.bz2"
 	fi
 
-	distutils_src_install
+	python_src_install
 
 	dodoc INSTALL README TODO
 
