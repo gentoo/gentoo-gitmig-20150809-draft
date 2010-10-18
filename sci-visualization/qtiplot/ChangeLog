@@ -1,6 +1,8 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.71 2010/10/18 06:53:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.72 2010/10/18 06:55:12 jlec Exp $
+
+*qtiplot-0.9.8.3 (18 Oct 2010)
 
   18 Oct 2010; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.2.ebuild,
   qtiplot-0.9.8.3.ebuild, +files/qtiplot-0.9.8.3-odf.patch,
