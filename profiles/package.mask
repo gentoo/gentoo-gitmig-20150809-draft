@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12065 2010/10/17 23:56:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12066 2010/10/18 00:01:44 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (18 Oct 2010)
+#  on behalf of QA team
+#
+# Another package that originally failed to work with Perl
+# 5.12 (bug #330087) and that shown itself as not working
+# right. Additionally, it currently bundles an enormous
+# amount of Perl modules (bug #335396).
+#
+# Removal on 2010-12-17
+net-analyzer/sara
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (18 Oct 2010)
 #  on behalf of QA team
