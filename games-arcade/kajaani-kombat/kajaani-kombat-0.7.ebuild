@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.7 2010/10/15 13:53:28 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.8 2010/10/18 16:21:00 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A rampart-like game set in space"
@@ -14,14 +14,13 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[audio,video]
 	media-libs/sdl-net
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/sdl-ttf
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer[vorbis]
 	sys-libs/ncurses
 	sys-libs/readline"
-DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-makefile.patch" \
