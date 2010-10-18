@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r8,v 1.1 2010/09/23 17:49:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r8,v 1.2 2010/10/18 17:26:25 idl0r Exp $
 
 opts="start stop reload restart"
 
@@ -178,7 +178,7 @@ reload() {
 	else
 		ewarn "Neither an rndc key has been specified nor a pidfile... this is"
 		ewarn "a fallback mode. Please check your installation!"
-		
+
 		$RC_SERVICE restart
 		ret=$?
 	fi
