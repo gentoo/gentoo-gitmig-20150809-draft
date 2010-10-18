@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.4 2010/10/13 18:42:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.5 2010/10/18 18:05:44 mgorny Exp $
+
+  18 Oct 2010; Michał Górny <mgorny@gentoo.org>
+  smart-live-rebuild-0.6.3.ebuild:
+  Add PYTHON_MODNAME to fix Python bytecode compiling.
 
 *smart-live-rebuild-0.6.3 (13 Oct 2010)
 

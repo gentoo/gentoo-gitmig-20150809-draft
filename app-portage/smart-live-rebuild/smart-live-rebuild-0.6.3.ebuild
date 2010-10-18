@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-0.6.3.ebuild,v 1.1 2010/10/13 18:42:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-0.6.3.ebuild,v 1.2 2010/10/18 18:05:44 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND='*:2.6'
@@ -16,6 +16,8 @@ LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+
+PYTHON_MODNAME=SmartLiveRebuild
 
 src_install() {
 	distutils_src_install
