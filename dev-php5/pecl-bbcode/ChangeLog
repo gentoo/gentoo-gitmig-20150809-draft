@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-bbcode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-bbcode/ChangeLog,v 1.5 2008/08/19 21:58:47 hoffie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-bbcode/ChangeLog,v 1.6 2010/10/18 18:25:32 olemarkus Exp $
+
+  18 Oct 2010; <olemarkus@gentoo.org> -pecl-bbcode-0.10.4.ebuild,
+  -pecl-bbcode-1.0.0.ebuild, pecl-bbcode-1.0.2.ebuild:
+  Removing older versions. Made the remaining version block php 5.3 (bug 341367)
 
 *pecl-bbcode-1.0.2 (19 Aug 2008)
 
