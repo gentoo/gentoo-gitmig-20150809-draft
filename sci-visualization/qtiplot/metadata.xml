@@ -9,12 +9,14 @@
   	<email>pva@gentoo.org</email>
 	<name>Peter Volkov</name>
 </maintainer>
-  <use>
-    <flag name="xls">Import support for Microsoft office excel sheets</flag>
-    <flag name="ods">Import support for OpenOffice .ods sheets</flag>
+	<use>
+		<flag name="emf">Export support for Windows Enhanced Metafile</flag>
+		<flag name="ods">Import support for OpenOffice .ods sheets</flag>
+		<flag name="origin">Import support for Origin project files</flag>
+		<flag name="xls">Import support for Microsoft office excel sheets</flag>
   </use>
   <longdescription>
-    Data analysis and scientific plotting package. This is a clone of the
+	Data analysis and scientific plotting package. This is a clone of the
 	popular Origin software available on another well known platform implemented
 	in Qt with powerful 2D and 3D data plotting, ASCII import and powerful
 	spreadsheet data manipulation using column logic. Curve fitting and other
