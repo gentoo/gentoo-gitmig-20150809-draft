@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.31 2010/01/02 17:22:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.32 2010/10/18 09:58:21 jlec Exp $
+
+  18 Oct 2010; Justin Lecher <jlec@gentoo.org> libemf-1.0.4.ebuild:
+  Keyworded ~-linux prefix
 
   02 Jan 2010; Patrick Kursawe <phosphan@gentoo.org> -libemf-1.0.3.ebuild,
   -files/libemf-1.0.3-gcc4.3.patch:
