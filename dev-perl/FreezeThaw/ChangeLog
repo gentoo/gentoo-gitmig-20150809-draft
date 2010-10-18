@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FreezeThaw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.26 2010/06/27 19:10:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.27 2010/10/18 19:22:15 jer Exp $
+
+  18 Oct 2010; Jeroen Roovers <jer@gentoo.org> FreezeThaw-0.50.01.ebuild:
+  Stable for HPPA (bug #323529).
 
   27 Jun 2010; <nixnut@gentoo.org> FreezeThaw-0.50.01.ebuild:
   ppc stable #323529

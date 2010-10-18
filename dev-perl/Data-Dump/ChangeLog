@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Dump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.11 2010/06/27 19:27:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.12 2010/10/18 19:25:11 jer Exp $
+
+  18 Oct 2010; Jeroen Roovers <jer@gentoo.org> Data-Dump-1.15.ebuild:
+  Stable for HPPA (bug #323529).
 
   27 Jun 2010; <nixnut@gentoo.org> Data-Dump-1.15.ebuild:
   ppc stable #323529
