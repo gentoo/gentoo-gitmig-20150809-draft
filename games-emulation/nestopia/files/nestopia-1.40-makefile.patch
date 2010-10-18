@@ -44,7 +44,7 @@
  objs/%.o: source/%.cpp
  	@echo Compiling $<...
 -	@$(CC) $(CFLAGS) $(CPPFLAGS) $< -o $@
-+	@$(CC) $(CXXFLAGS) $< -o $@
++	$(CC) $(CXXFLAGS) $< -o $@
  
  objs/%.o: source/%.o
  	@echo Compiling $<...
@@ -63,7 +63,7 @@
  $(EXE): $(OBJS)
  	@echo Linking $@...
 -	@$(CPP) -g -o $(EXE) $^ $(LIBS)
-+	@$(CXX) -g -o $(EXE) $^ $(LIBS)
++	$(CXX) $(LDFLAGS) -g -o $(EXE) $^ $(LIBS)
  
  clean:
  	-@rm -f $(OBJS) $(EXE) $(GENNSTCONTROLS)

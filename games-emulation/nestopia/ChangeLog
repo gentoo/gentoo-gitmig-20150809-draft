@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/nestopia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/ChangeLog,v 1.4 2010/05/31 20:49:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/ChangeLog,v 1.5 2010/10/18 10:57:11 tupone Exp $
+
+  18 Oct 2010; Tupone Alfredo <tupone@gentoo.org>
+  files/nestopia-1.40-makefile.patch:
+  Respect LDFLAGS. Bug #333659 by flameeyes@gentoo.org
 
   31 May 2010; Joseph Jezak <josejx@gentoo.org> nestopia-1.40.ebuild:
   Marked ~ppc for bug #321497.
