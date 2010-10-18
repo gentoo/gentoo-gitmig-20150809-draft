@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.4 2009/09/04 09:32:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.5 2010/10/18 15:41:11 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -22,14 +23,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	edos2unix readme.txt x11/*.{cpp,h} cmn/*.{cpp,h} makefile config.mk
 	epatch "${WORKDIR}"/xevil_${MY_PV}-${DEB_PATCH}.diff
 	sed -i \
 		-e 's:-static::' \
 		-e "s:CFLAGS=\":CFLAGS=\"${CFLAGS} :g" \
 		-e 's:-lXpm:-lXpm -lpthread:g' \
+		-e "s:LINK_FLAGS=\":LINK_FLAGS=\"${LDFLAGS} :" \
 		config.mk || die "sed failed"
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
