@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.11 2010/10/09 07:43:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.12 2010/10/18 19:01:37 graaff Exp $
+
+*webmock-1.4.0 (18 Oct 2010)
+
+  18 Oct 2010; Hans de Graaff <graaff@gentoo.org> +webmock-1.4.0.ebuild,
+  +files/webmock-1.4.0-network-specs.patch,
+  +files/webmock-1.4.0-tmpdir.patch:
+  Version bump. Specs are now run as well.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> webmock-0.9.1.ebuild:
   Depend on rspec-1.
