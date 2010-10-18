@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.12.ebuild,v 1.1 2010/09/20 20:08:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.12.ebuild,v 1.2 2010/10/18 12:34:03 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -42,6 +42,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r samples
+		doins -r samples || die "Installation of examples failed"
 	fi
 }
