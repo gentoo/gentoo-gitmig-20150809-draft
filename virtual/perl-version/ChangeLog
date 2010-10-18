@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.26 2010/10/14 20:21:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.27 2010/10/18 08:32:01 tove Exp $
+
+*perl-version-0.83 (18 Oct 2010)
+
+  18 Oct 2010; Torsten Veller <tove@gentoo.org> +perl-version-0.83.ebuild:
+  Version bump
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> perl-version-0.82.ebuild:
   Marking perl-version-0.82 ppc stable for bug 333421
