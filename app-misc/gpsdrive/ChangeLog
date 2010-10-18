@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.39 2010/04/09 12:14:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.40 2010/10/18 09:09:30 nerdboy Exp $
+
+*gpsdrive-2.11 (18 Oct 2010)
+
+  18 Oct 2010; Steve Arnold <nerdboy@gentoo.org> +gpsdrive-2.11.ebuild,
+  +files/gpsdrive-2.11_DefineOptions_gpsd.patch:
+  Updated to new version for new gpsd and boost support.  Tested with 
+  boost-1.42, gpsd-2.95, and mapnik-0.7.1 (and USB/PL2303 gps device).
 
   09 Apr 2010; Tupone Alfredo <tupone@gentoo.org>
   gpsdrive-2.10_pre7-r1.ebuild:
