@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/log-dispatch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.59 2009/12/10 09:46:18 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.60 2010/10/18 07:38:50 tove Exp $
+
+*log-dispatch-2.27 (18 Oct 2010)
+
+  18 Oct 2010; Torsten Veller <tove@gentoo.org> +log-dispatch-2.27.ebuild:
+  Version bump
 
   10 Dec 2009; Torsten Veller <tove@gentoo.org> log-dispatch-2.22.ebuild:
   Add Sys-Syslog dependency (#296349)
