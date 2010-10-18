@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/qct-0.7.ebuild,v 1.9 2010/04/08 08:48:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/qct-0.7.ebuild,v 1.10 2010/10/18 19:17:41 mr_bones_ Exp $
+
 EAPI=2
 PYTHON_DEPEND="2"
-
 inherit eutils python games
 
 DESCRIPTION="Quiet Console Town puts you in the place of the mayor of a budding new console RPG city"
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-python/pygame-1.5.5"
-DEPEND="${RDEPEND}"
+DEPEND=">=dev-python/pygame-1.5.5"
 
 S=${WORKDIR}/${PN}
 
