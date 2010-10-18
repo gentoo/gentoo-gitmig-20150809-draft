@@ -1,0 +1,12 @@
+# ChangeLog for dev-db/haildb
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.1 2010/10/18 01:42:43 flameeyes Exp $
+
+*haildb-2.3.1 (17 Oct 2010)
+*haildb-2.2.0 (17 Oct 2010)
+
+  17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +haildb-2.2.0.ebuild, +haildb-2.3.1.ebuild, +metadata.xml:
+  Initial import of haildb proxy-maintained by Pavel Stratil, that will be
+  used in the (near) future by dev-db/drizzle.
+
