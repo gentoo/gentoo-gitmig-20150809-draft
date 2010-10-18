@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-fingerd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.18 2010/02/27 18:39:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.19 2010/10/18 07:24:17 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  netkit-fingerd-0.17-r3.ebuild:
+  Drop to ~mips
 
   27 Feb 2010; <solar@gentoo.org> netkit-fingerd-0.17-r3.ebuild:
   make netkit-fingerd cross compile happy
