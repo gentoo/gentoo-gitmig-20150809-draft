@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.5 2010/10/18 15:41:11 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2-r1.ebuild,v 1.6 2010/10/18 16:14:49 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DEB_PATCH=7
@@ -28,15 +28,12 @@ src_prepare() {
 	epatch "${WORKDIR}"/xevil_${MY_PV}-${DEB_PATCH}.diff
 	sed -i \
 		-e 's:-static::' \
-		-e "s:CFLAGS=\":CFLAGS=\"${CFLAGS} :g" \
+		-e 's/CC="g++"/CC=$(CXX)/' \
+		-e "s:CFLAGS=\":CFLAGS=\"${CXXFLAGS} :g" \
 		-e 's:-lXpm:-lXpm -lpthread:g' \
 		-e "s:LINK_FLAGS=\":LINK_FLAGS=\"${LDFLAGS} :" \
 		config.mk || die "sed failed"
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
-}
-
-src_compile() {
-	emake STRIP=true || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xevil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.14 2010/10/18 15:41:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/ChangeLog,v 1.15 2010/10/18 16:14:49 mr_bones_ Exp $
+
+  18 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  xevil-2.02_p2-r1.ebuild:
+  honor CXX; tidy
 
   18 Oct 2010; Tupone Alfredo <tupone@gentoo.org> xevil-2.02_p2-r1.ebuild:
   Respect LDFLAGS. Bug #331897 by flameeyes@gentoo.org
