@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.4.ebuild,v 1.1 2010/10/18 19:59:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.4.ebuild,v 1.2 2010/10/18 20:04:51 scarabeus Exp $
 
 EAPI=3
 KMNAME="extragear/network"
-inherit kde4-base versionator
-
 if [[ ${PV} != 9999* ]]; then
+	inherit versionator
 	# upstream likes to skip that _ in beta releases
 	KTORRENT_VERSION=$(($(get_major_version)+3)).$(get_after_major_version)
 	MY_PV="${PV/_/}"
@@ -19,6 +18,7 @@ if [[ ${PV} != 9999* ]]; then
 	SRC_URI="http://ktorrent.org/downloads/${KTORRENT_VERSION}/${MY_P}.tar.bz2"
 	S="${WORKDIR}"/"${MY_P}"
 fi
+inherit kde4-base
 
 DESCRIPTION="A BitTorrent library based on KDE Platform"
 HOMEPAGE="http://ktorrent.org/"
