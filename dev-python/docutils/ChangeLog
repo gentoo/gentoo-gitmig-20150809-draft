@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.123 2010/10/08 02:38:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.124 2010/10/18 18:58:43 jer Exp $
+
+  18 Oct 2010; Jeroen Roovers <jer@gentoo.org> docutils-0.7.ebuild:
+  Stable for HPPA (bug #333191).
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> docutils-0.7.ebuild:
   Marked ~mips for bug #281161
