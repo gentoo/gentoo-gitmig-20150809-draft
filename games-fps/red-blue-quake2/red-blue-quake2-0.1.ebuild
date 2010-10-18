@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.11 2007/04/09 18:19:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/red-blue-quake2/red-blue-quake2-0.1.ebuild,v 1.12 2010/10/18 07:42:31 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -20,12 +21,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/quake2-3.21/linux
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
-	cd quake2-3.21
-	epatch "${FILESDIR}/${P}"-gcc41.patch
-	cd linux
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}/${P}"-ldflags.patch
 	sed -i "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" sys_linux.c \
 		|| die "sed failed"
 	sed -i "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" \
