@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p2.ebuild,v 1.1 2010/09/27 04:31:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p2.ebuild,v 1.2 2010/10/18 18:30:07 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils multilib
 
-MY_PV="${PV/_p/pl}"
-MY_P="${PN}-${MY_PV}"
+MY_PV=${PV/_p/pl}
+MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Coq is a proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
@@ -31,7 +30,11 @@ DEPEND="${RDEPEND}
 		|| ( dev-texlive/texlive-mathextra app-text/ptex )
 		)"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-make-3.82.patch
+}
 
 src_configure() {
 	ocaml_lib=`ocamlc -where`
