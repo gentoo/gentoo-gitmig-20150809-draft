@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/blockcanvas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.8 2010/07/07 03:58:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.9 2010/10/18 15:19:01 arfrever Exp $
+
+*blockcanvas-3.2.0 (18 Oct 2010)
+
+  18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -blockcanvas-3.1.1.ebuild, +blockcanvas-3.2.0.ebuild:
+  Version bump.
 
   07 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   blockcanvas-3.1.1.ebuild:
