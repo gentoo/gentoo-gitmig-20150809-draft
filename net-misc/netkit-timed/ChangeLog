@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.23 2010/08/26 20:56:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.24 2010/10/18 16:08:30 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org> netkit-timed-0.17-r7.ebuild:
+  Drop to ~mips
 
 *netkit-timed-0.17-r9 (26 Aug 2010)
 
