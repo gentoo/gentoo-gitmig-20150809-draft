@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.15 2009/11/04 06:29:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.16 2010/10/18 13:26:44 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -37,7 +37,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-x-inc.patch \
 		"${FILESDIR}"/${P}-sizeof-cast.patch \
-		"${FILESDIR}"/${P}-gcc41.patch
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 	if use vorbis ; then
 		sed -i \
 			-e "s:${MY_OGG}:${GAMES_DATADIR}/csmash/${MY_OGG}:" ttinc.h \
