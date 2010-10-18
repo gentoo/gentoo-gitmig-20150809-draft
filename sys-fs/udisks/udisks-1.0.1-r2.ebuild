@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r2.ebuild,v 1.2 2010/09/18 12:38:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r2.ebuild,v 1.3 2010/10/18 13:02:38 ssuominen Exp $
 
 EAPI=3
-inherit eutils bash-completion
+inherit eutils bash-completion linux-info
 
 DESCRIPTION="Daemon providing interfaces to work with storage devices"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
@@ -37,6 +37,13 @@ DEPEND="${COMMON_DEPEND}
 
 # This would require running dbus and also sudo.
 RESTRICT="test"
+
+pkg_setup() {
+	if use amd64 || use x86; then
+		CONFIG_CHECK="~USB_SUSPEND"
+		linux-info_pkg_setup
+	fi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-lvm2_api_support.patch \
