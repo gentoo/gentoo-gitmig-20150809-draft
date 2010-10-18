@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/em-http-request
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.1 2010/10/03 08:05:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.2 2010/10/18 18:54:35 graaff Exp $
+
+*em-http-request-0.2.14 (18 Oct 2010)
+
+  18 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  +em-http-request-0.2.14.ebuild:
+  Version bump: form-encode keys/values of ruby objects passed in as body.
 
 *em-http-request-0.2.13 (03 Oct 2010)
 
