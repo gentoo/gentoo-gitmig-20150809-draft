@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.31 2010/10/14 08:12:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.32 2010/10/18 08:17:49 tove Exp $
+
+*NetPacket-1.0.0 (18 Oct 2010)
+
+  18 Oct 2010; Torsten Veller <tove@gentoo.org> +NetPacket-1.0.0.ebuild:
+  Version bump. Drop NetPacket::ICMPv6, NetPacket::IPv6 and NetPacket::PFLog
+  because of license clashes
 
 *NetPacket-0.43.2 (14 Oct 2010)
 
