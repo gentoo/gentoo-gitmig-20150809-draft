@@ -1,6 +1,10 @@
 # ChangeLog for games-action/cylindrix
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.6 2008/04/08 00:15:28 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.7 2010/10/18 09:11:25 tupone Exp $
+
+  18 Oct 2010; Tupone Alfredo <tupone@gentoo.org> cylindrix-1.0.ebuild,
+  +files/cylindrix-1.0-ldflags.patch:
+  Respect LDFLAGS. Bug #341529 by flameeyes@gentoo.org
 
   08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org> cylindrix-1.0.ebuild:
   link fix (bug #216632)
