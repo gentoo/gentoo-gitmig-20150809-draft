@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.34 2010/10/17 04:22:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.35 2010/10/18 00:21:12 vapier Exp $
+
+  18 Oct 2010; Mike Frysinger <vapier@gentoo.org> mtools-4.0.14.ebuild:
+  Regen configure #341443 by Priit Laes.
 
 *mtools-4.0.14 (17 Oct 2010)
 
