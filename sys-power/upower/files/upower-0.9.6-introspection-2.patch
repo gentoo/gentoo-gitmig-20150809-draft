@@ -1,0 +1,168 @@
+From 58f3d9fbdff88173276f05e0d6da2cf864758381 Mon Sep 17 00:00:00 2001
+From: Richard Hughes <richard@hughsie.com>
+Date: Tue, 05 Oct 2010 10:13:09 +0000
+Subject: Fix up all the warnings when building with new versions of gobject-introspection
+
+---
+diff --git a/libupower-glib/up-client.c b/libupower-glib/up-client.c
+index 13d5bf7..01ceeb8 100644
+--- a/libupower-glib/up-client.c
++++ b/libupower-glib/up-client.c
+@@ -120,7 +120,7 @@ up_client_get_device (UpClient *client, const gchar *object_path)
+  * You must have called up_client_enumerate_devices_sync() before calling this
+  * function.
+  *
+- * Return value: an array of #UpDevice objects, free with g_ptr_array_unref()
++ * Return value: (transfer full): an array of #UpDevice objects, free with g_ptr_array_unref()
+  *
+  * Since: 0.9.0
+  **/
+diff --git a/libupower-glib/up-device.c b/libupower-glib/up-device.c
+index 41097b2..999f25b 100644
+--- a/libupower-glib/up-device.c
++++ b/libupower-glib/up-device.c
+@@ -568,7 +568,7 @@ out:
+  *
+  * Gets the device history.
+  *
+- * Return value: an array of #UpHistoryItem's, else #NULL and @error is used
++ * Return value: (transfer full): an array of #UpHistoryItem's, else #NULL and @error is used
+  *
+  * Since: 0.9.0
+  **/
+@@ -653,7 +653,7 @@ out:
+  *
+  * Gets the device current statistics.
+  *
+- * Return value: an array of #UpStatsItem's, else #NULL and @error is used
++ * Return value: (transfer full): an array of #UpStatsItem's, else #NULL and @error is used
+  *
+  * Since: 0.9.0
+  **/
+diff --git a/libupower-glib/up-wakeup-item.c b/libupower-glib/up-wakeup-item.c
+index 776473b..7060a3d 100644
+--- a/libupower-glib/up-wakeup-item.c
++++ b/libupower-glib/up-wakeup-item.c
+@@ -66,7 +66,7 @@ G_DEFINE_TYPE (UpWakeupItem, up_wakeup_item, G_TYPE_OBJECT)
+ 
+ /**
+  * up_wakeup_item_get_is_userspace:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets if the item is userspace.
+  *
+@@ -83,7 +83,7 @@ up_wakeup_item_get_is_userspace (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_is_userspace:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @is_userspace: the new value
+  *
+  * Sets if the item is userspace.
+@@ -100,7 +100,7 @@ up_wakeup_item_set_is_userspace (UpWakeupItem *wakeup_item, gboolean is_userspac
+ 
+ /**
+  * up_wakeup_item_get_id:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets the item id.
+  *
+@@ -117,7 +117,7 @@ up_wakeup_item_get_id (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_id:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @id: the new value
+  *
+  * Sets the item id.
+@@ -134,7 +134,7 @@ up_wakeup_item_set_id (UpWakeupItem *wakeup_item, guint id)
+ 
+ /**
+  * up_wakeup_item_get_old:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets the item old.
+  *
+@@ -151,7 +151,7 @@ up_wakeup_item_get_old (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_old:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @old: the new value
+  *
+  * Sets the item old.
+@@ -168,7 +168,7 @@ up_wakeup_item_set_old (UpWakeupItem *wakeup_item, guint old)
+ 
+ /**
+  * up_wakeup_item_get_value:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets the item value.
+  *
+@@ -185,7 +185,7 @@ up_wakeup_item_get_value (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_value:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @value: the new value
+  *
+  * Sets the item value.
+@@ -202,7 +202,7 @@ up_wakeup_item_set_value (UpWakeupItem *wakeup_item, gdouble value)
+ 
+ /**
+  * up_wakeup_item_get_cmdline:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets the item cmdline.
+  *
+@@ -219,7 +219,7 @@ up_wakeup_item_get_cmdline (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_cmdline:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @cmdline: the new value
+  *
+  * Sets the item cmdline.
+@@ -237,7 +237,7 @@ up_wakeup_item_set_cmdline (UpWakeupItem *wakeup_item, const gchar *cmdline)
+ 
+ /**
+  * up_wakeup_item_get_details:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  *
+  * Gets the item details.
+  *
+@@ -254,7 +254,7 @@ up_wakeup_item_get_details (UpWakeupItem *wakeup_item)
+ 
+ /**
+  * up_wakeup_item_set_details:
+- * @history_item: #UpWakeupItem
++ * @wakeup_item: #UpWakeupItem
+  * @details: the new value
+  *
+  * Sets the item details.
+diff --git a/libupower-glib/up-wakeups.c b/libupower-glib/up-wakeups.c
+index 1388eab..2843891 100644
+--- a/libupower-glib/up-wakeups.c
++++ b/libupower-glib/up-wakeups.c
+@@ -95,7 +95,7 @@ up_wakeups_get_total_sync (UpWakeups *wakeups, GCancellable *cancellable, GError
+  *
+  * Gets the wakeups data from the daemon.
+  *
+- * Return value: an array of %UpWakeupItem's
++ * Return value: (transfer full): an array of %UpWakeupItem's
+  *
+  * Since: 0.9.1
+  **/
+--
+cgit v0.8.3-6-g21f6
