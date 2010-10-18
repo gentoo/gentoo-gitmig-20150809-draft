@@ -41,23 +41,20 @@
       properly.
     </flag>
 
-    <flag name="pam" restrict="&lt;dev-db/drizzle-2010.03.1412">
-      Enable the PAM authentication plugin (using
-      <pkg>sys-libs/pam</pkg>).
-
-      Warning: currently the pam configuration file is missing so it
-      will not work out of the box.
-    </flag>
-
-    <flag name="pam" restrict="&gt;=dev-db/drizzle-2010.03.1412">
+    <flag name="pam">
       Enable the PAM authentication plugin (using
       <pkg>sys-libs/pam</pkg>). The configuration file created will be
       /etc/pam.d/drizzle.
     </flag>
 
-    <flag name="md5" restrict="&gt;=dev-db/drizzle-2010.03.1412">
+    <flag name="md5">
       Enable the MD5 plugin, using <pkg>dev-libs/libgcrypt</pkg>; this
       replaces the older openssl and gnutls USE flags.
+    </flag>
+
+    <flag name="haildb">
+      Use the <pkg>dev-db/haildb</pkg> libraries to replace the innodb
+      plugin storage engine with haildb (an innodb fork).
     </flag>
   </use>
 </pkgmetadata>

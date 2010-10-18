@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.16 2010/10/14 20:23:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.17 2010/10/18 13:06:02 flameeyes Exp $
+
+*drizzle-7.2010.10.01-r1 (18 Oct 2010)
+
+  18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +drizzle-7.2010.10.01-r1.ebuild, metadata.xml:
+  Bump ebuild to support haildb (bug right now tests fail if haildb is used,
+  waiting for upstream to express their recommendation); also improve
+  parallel build of documentation, running it within the same make process
+  as the code build. Cleanup metadata.
 
 *drizzle-7.2010.10.01 (14 Oct 2010)
 *drizzle-6.2010.08.1742 (14 Oct 2010)
