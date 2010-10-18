@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.2.ebuild,v 1.2 2010/09/14 19:25:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.3.ebuild,v 1.1 2010/10/18 16:20:16 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nsplugin pulseaudio"
 
-RDEPEND="dev-libs/libpcre[cxx]
+RDEPEND="dev-cpp/libxmlpp:2.6
+	dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
 	media-video/ffmpeg
 	media-libs/fontconfig
@@ -35,14 +36,16 @@ RDEPEND="dev-libs/libpcre[cxx]
 		x11-libs/gtkglext
 	)
 	x11-libs/libX11"
+# Require sys-devel/llvm-2.7 during build, bug #340437
 DEPEND="${RDEPEND}
+	=sys-devel/llvm-2.7*
 	dev-lang/nasm
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.4.2-cmakelists.patch
+	"${FILESDIR}"/${PN}-0.4.4.3-cmakelists.patch
 )
 
 src_configure() {
