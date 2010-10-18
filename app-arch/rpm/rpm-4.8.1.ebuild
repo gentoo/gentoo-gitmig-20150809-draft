@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.1 2010/09/24 19:35:27 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.2 2010/10/18 19:38:54 sochotnicky Exp $
 
 EAPI=2
 
@@ -39,6 +39,10 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	epatch "${FILESDIR}"/${P}-db-path.patch
+
+	# fix #326665
+	sed -i 's:rpmio/librpmio.la:rpmio/.libs/librpmio.la:' \
+			lib/Makefile.am || die "Patching librpm Makefile.am failed"
 
 	eautoreconf
 }

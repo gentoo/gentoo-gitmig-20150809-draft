@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.116 2010/09/24 19:35:27 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.117 2010/10/18 19:38:54 sochotnicky Exp $
+
+  18 Oct 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  rpm-4.8.1.ebuild:
+  Fix #326665 (build with lua flag enabled failing)
 
 *rpm-4.8.1 (24 Sep 2010)
 
