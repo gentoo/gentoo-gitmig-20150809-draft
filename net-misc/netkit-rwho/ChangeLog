@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.23 2010/09/15 15:28:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.24 2010/10/18 13:39:05 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org> netkit-rwho-0.17-r3.ebuild:
+  Drop to ~mips
 
 *netkit-rwho-0.17-r4 (15 Sep 2010)
 
