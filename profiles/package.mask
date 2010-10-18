@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12067 2010/10/18 07:03:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12068 2010/10/18 09:53:57 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -59,10 +59,6 @@ app-forensics/tct
 # Markos Chandras <hwoarang@gentoo.org> (17 Oct 2010)
 # Masking beta releases
 =net-p2p/qbittorrent-2.5.0_beta*
-
-# Justin Lecher <jlec@gentoo.org> (17 Oct 2010)
-# Broke the package. Masked until fixed
-=sci-visualization/qtiplot-0.9.8.3
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Oct 2010)
 # Masking experimental releases
