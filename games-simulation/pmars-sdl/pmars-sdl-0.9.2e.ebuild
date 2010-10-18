@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.12 2010/10/13 07:22:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.13 2010/10/18 19:16:34 mr_bones_ Exp $
 
+EAPI=2
 inherit toolchain-funcs games
 
 MY_PN="${PN/-sdl/}"
@@ -15,13 +16,11 @@ SRC_URI="http://www.cs.helsinki.fi/u/jpihlaja/cw/pmars-sdl/${MY_P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="sdl X svga"
+IUSE="sdl X"
 
-RDEPEND="sdl? ( x11-libs/libX11 media-libs/libsdl )
+DEPEND="sdl? ( x11-libs/libX11 media-libs/libsdl[video] )
 	X? ( x11-libs/libX11 )
-	svga? ( media-libs/svgalib )
-	!sdl? ( !X? ( !svga? ( sys-libs/ncurses ) ) )"
-DEPEND="${RDEPEND}"
+	!sdl? ( !X? ( sys-libs/ncurses ) )"
 
 S=${WORKDIR}/${MY_P}
 
