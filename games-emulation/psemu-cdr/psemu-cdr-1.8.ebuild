@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.9 2007/04/09 15:56:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.10 2010/10/18 12:51:22 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -19,11 +20,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${PV}-makefile-cflags.patch
-	sed -i '/STRIP/d' src/{,cfg-gtk2/}Makefile || die "sed failed"
-}
+PATCHES=( "${FILESDIR}"/${PV}-makefile-cflags.patch
+	"${FILESDIR}"/${P}-ldflags.patch )
 
 src_compile() {
 	emake -C src OPTFLAGS="${CFLAGS}" GUI="gtk+2" || die "emake failed"
