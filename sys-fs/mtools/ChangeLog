@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.37 2010/10/18 17:07:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.38 2010/10/18 19:34:54 jer Exp $
+
+  18 Oct 2010; Jeroen Roovers <jer@gentoo.org> mtools-4.0.13.ebuild:
+  Stable for HPPA (bug #341405).
 
   18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> mtools-4.0.13.ebuild:
   Stable on amd64 wrt bug #341405
