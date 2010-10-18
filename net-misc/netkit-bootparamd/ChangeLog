@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-bootparamd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.6 2010/09/15 03:24:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/ChangeLog,v 1.7 2010/10/18 07:10:08 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  netkit-bootparamd-0.17-r1.ebuild:
+  Drop to ~mips
 
 *netkit-bootparamd-0.17-r3 (15 Sep 2010)
 

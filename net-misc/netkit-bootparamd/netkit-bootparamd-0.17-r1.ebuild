@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r1.ebuild,v 1.2 2007/11/01 21:56:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootparamd/netkit-bootparamd-0.17-r1.ebuild,v 1.3 2010/10/18 07:10:08 leio Exp $
 
 DESCRIPTION="Netkit - bootparamd"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/n/netkit-bootparamd/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~hppa mips ppc sparc x86"
+KEYWORDS="~hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="!<=net-misc/netkit-bootpd-0.17-r2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r4.ebuild,v 1.23 2010/08/26 21:26:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r4.ebuild,v 1.24 2010/10/18 07:06:47 leio Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
