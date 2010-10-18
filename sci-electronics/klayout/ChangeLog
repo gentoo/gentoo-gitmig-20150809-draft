@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.1 2010/09/20 23:31:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.2 2010/10/18 14:39:02 tomka Exp $
+
+  18 Oct 2010; Thomas Kahle <tomka@gentoo.org> klayout-0.20.2.ebuild:
+  x86 stable per bug 341543
 
 *klayout-0.20.2 (20 Sep 2010)
 
