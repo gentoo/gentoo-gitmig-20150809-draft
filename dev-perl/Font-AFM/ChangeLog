@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.14 2010/10/16 07:07:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.15 2010/10/18 13:38:09 hwoarang Exp $
+
+  18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> Font-AFM-1.20.ebuild:
+  Stable on amd64 wrt bug #341205
 
   16 Oct 2010; Torsten Veller <tove@gentoo.org> Font-AFM-1.20.ebuild:
   Maintenance. EAPI bump
