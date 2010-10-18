@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.8.ebuild,v 1.1 2010/08/12 06:42:56 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.8.ebuild,v 1.2 2010/10/18 14:59:57 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -85,7 +85,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog
 
