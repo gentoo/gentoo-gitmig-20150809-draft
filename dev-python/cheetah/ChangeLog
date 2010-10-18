@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.69 2010/09/19 23:18:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.70 2010/10/18 23:41:22 hwoarang Exp $
+
+  18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> cheetah-2.4.3.ebuild:
+  Stable on amd64 wrt bug #341615
 
 *cheetah-2.4.3 (19 Sep 2010)
 
