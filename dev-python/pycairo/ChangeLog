@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.95 2010/10/03 14:44:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.96 2010/10/18 19:01:15 jer Exp $
+
+  18 Oct 2010; Jeroen Roovers <jer@gentoo.org> pycairo-1.8.10.ebuild:
+  Stable for HPPA (bug #337146).
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org> pycairo-1.8.10.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #337146
