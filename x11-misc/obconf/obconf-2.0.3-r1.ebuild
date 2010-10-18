@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3-r1.ebuild,v 1.1 2010/09/07 11:25:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3-r1.ebuild,v 1.2 2010/10/18 20:58:53 flameeyes Exp $
 
 EAPI="2"
 
@@ -28,11 +28,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-hardened.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		|| die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {

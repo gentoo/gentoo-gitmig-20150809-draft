@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.68 2010/09/07 11:25:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.69 2010/10/18 20:58:53 flameeyes Exp $
+
+  18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  obconf-2.0.3-r1.ebuild:
+  QA: fix call to econf in src_compile for EAPI=2.
 
 *obconf-2.0.3-r1 (07 Sep 2010)
 
