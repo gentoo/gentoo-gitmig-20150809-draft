@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.48 2009/09/23 19:43:36 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.49 2010/10/18 16:54:29 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org> rdate-1.4-r3.ebuild:
+  Drop to ~mips
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> rdate-1.4-r3.ebuild:
   Remove virtual/libc
