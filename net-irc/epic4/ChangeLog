@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/epic4
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.87 2009/03/07 21:14:47 cla Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.88 2010/10/18 08:11:39 flameeyes Exp $
+
+  18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> epic4-2.10.ebuild:
+  Fix phases for EAPI=2 add quote around $D.
 
   07 Mar 2009; Dawid Węgliński <cla@gentoo.org> epic4-2.10.ebuild:
   Migrate to EAPI 2

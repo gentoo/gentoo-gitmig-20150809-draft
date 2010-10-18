@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.ebuild,v 1.7 2009/03/07 21:14:47 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.ebuild,v 1.8 2010/10/18 08:11:39 flameeyes Exp $
 
 EAPI="2"
 
@@ -24,17 +24,14 @@ DEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/epic-defaultserver.patch
 
 	rm -f "${WORKDIR}"/help/Makefile
 	find "${WORKDIR}"/help -type d -name CVS -print0 | xargs -0 rm -r
 }
 
-src_compile() {
+src_configure() {
 	replace-flags "-O?" "-O"
 
 	econf \
@@ -43,13 +40,16 @@ src_compile() {
 		$(use_with perl) \
 		$(use_with ssl) \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install () {
 	einstall \
-		sharedir=${D}/usr/share \
-		libexecdir=${D}/usr/lib/misc || die "einstall failed"
+		sharedir="${D}"/usr/share \
+		libexecdir="${D}"/usr/lib/misc || die "einstall failed"
 
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 
