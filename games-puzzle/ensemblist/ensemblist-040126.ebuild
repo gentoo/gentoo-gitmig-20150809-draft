@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.9 2010/10/04 10:38:52 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.10 2010/10/18 16:39:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,13 +14,12 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/libXmu
+DEPEND="x11-libs/libXmu
 	virtual/opengl
 	media-libs/freeglut
 	virtual/glu
 	media-libs/libpng
 	media-libs/libmikmod[oss]"
-DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-build.patch )
 
