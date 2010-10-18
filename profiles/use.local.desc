@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6060 2010/10/18 06:54:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6061 2010/10/18 11:54:24 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1343,7 +1343,6 @@ games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
-games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
@@ -3928,7 +3927,6 @@ x11-base/xorg-server:udev - Enable devices discovery via udev
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-drivers/ati-drivers:modules - Build the kernel modules
 x11-drivers/ati-drivers:qt4 -  Install qt4 dependent optional tools (e.g Catalyst Control Panel) 
-x11-drivers/linuxwacom:modules - Build kernel module
 x11-libs/agg:gpc - Enable gpc polygon clipper library
 x11-libs/cairo:cleartype - Add ClearType-style behavior for sub-pixel hinting. Patch taken from Arch Linux
 x11-libs/cairo:drm - Use Linux DRM for backend acceleration
