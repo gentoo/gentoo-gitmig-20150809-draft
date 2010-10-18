@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.9.ebuild,v 1.1 2010/09/17 21:43:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.9.ebuild,v 1.2 2010/10/18 11:28:38 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,15 +34,15 @@ src_install() {
 	if use doc; then
 		cd Documents
 		insinto /usr/share/doc/${PF}
-		doins manual.pdf
+		doins manual.pdf || die "doins failed"
 		insinto /usr/share/doc/${PF}/html
 		doins -r manual.html manimages \
 			|| die "doc install failed"
 	fi
 	newicon "${S}"/windows/icons/veusz_48.png veusz.png
-	domenu "${FILESDIR}"/veusz.desktop
+	domenu "${FILESDIR}"/veusz.desktop || die "domenu failed"
 	insinto /usr/share/mime/packages
-	doins "${FILESDIR}"/veusz.xml
+	doins "${FILESDIR}"/veusz.xml || die "doins failed"
 }
 
 pkg_postinst() {
