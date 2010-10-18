@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/xbattle
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/ChangeLog,v 1.9 2007/03/12 18:17:53 genone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/ChangeLog,v 1.10 2010/10/18 14:17:48 tupone Exp $
+
+  18 Oct 2010; Tupone Alfredo <tupone@gentoo.org> xbattle-5.4.1.ebuild:
+  Respect LDFLAGS. Bug #331949 by flameeyes@gentoo.org
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> xbattle-5.4.1.ebuild:
   Replacing einfo with elog

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.12 2009/03/10 19:07:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.13 2010/10/18 14:17:48 tupone Exp $
 
 EAPI=2
 inherit games
@@ -33,7 +33,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed"
+	emake CDEBUGFLAGS="${CFLAGS}" \
+		LOCAL_LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
