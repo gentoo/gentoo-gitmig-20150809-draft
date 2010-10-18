@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.15 2010/09/29 17:01:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.16 2010/10/18 12:48:16 arfrever Exp $
+
+*setupdocs-1.0.5 (18 Oct 2010)
+
+  18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +setupdocs-1.0.5.ebuild:
+  Version bump.
 
   29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -setupdocs-1.0.3.ebuild:
