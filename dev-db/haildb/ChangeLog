@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/haildb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.1 2010/10/18 01:42:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.2 2010/10/18 13:24:54 flameeyes Exp $
+
+  18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> haildb-2.2.0.ebuild,
+  haildb-2.3.1.ebuild:
+  Add missing flag-o-matic inherit.
 
 *haildb-2.3.1 (17 Oct 2010)
 *haildb-2.2.0 (17 Oct 2010)
