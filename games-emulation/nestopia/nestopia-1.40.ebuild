@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.5 2010/10/18 10:57:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.6 2010/10/18 15:45:52 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,13 +17,12 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4:2
+DEPEND=">=x11-libs/gtk+-2.4:2
 	media-libs/alsa-lib
 	>=media-libs/libsdl-1.2.12[audio,joystick,video]
 	sys-libs/zlib
 	virtual/opengl
 	virtual/glu"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
 

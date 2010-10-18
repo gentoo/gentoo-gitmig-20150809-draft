@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.10 2010/10/18 12:51:22 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.11 2010/10/18 15:43:30 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="PSEmu plugin to read from CD-ROM"
