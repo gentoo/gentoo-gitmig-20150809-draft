@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01-r1.ebuild,v 1.1 2010/10/18 13:06:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01-r1.ebuild,v 1.2 2010/10/18 13:07:02 flameeyes Exp $
 
 EAPI=2
 
@@ -26,7 +26,6 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		sys-libs/readline
 		sys-apps/util-linux
 		dev-libs/libpcre
-		sys-devel/flex
 		>=dev-libs/libevent-1.4
 		>=dev-libs/protobuf-2.1.0
 		gearman? ( >=sys-cluster/gearmand-0.12 )
@@ -42,6 +41,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 DEPEND="${RDEPEND}
 		dev-util/intltool
 		dev-util/gperf
+		sys-devel/flex
 		doc? ( app-doc/doxygen )
 		>=dev-util/boost-build-1.32"
 
