@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.40 2010/10/06 00:13:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.41 2010/10/18 17:39:02 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -25,7 +25,7 @@ db_fix_so() {
 
 	# now rebuild all the correct ones
 	for ext in so a; do
-		for name in libdb libdb_{cxx,tcl,java,stl}; do
+		for name in libdb libdb_{cxx,tcl,java,sql,stl}; do
 			target=`find . -maxdepth 1 -type f -name "${name}-*.${ext}" |sort -n |tail -n 1`
 			[ -n "${target}" ] && ln -sf ${target//.\//} ${name}.${ext}
 		done;
@@ -38,7 +38,7 @@ db_fix_so() {
 		ln -sf libdb1.so.2 libdb-1.so
 	fi
 	# what do we do if we ever get 3.3 ?
-	for i in libdb libdb_{cxx,tcl,java,stl}; do
+	for i in libdb libdb_{cxx,tcl,java,sql,stl}; do
 		if [ -f $i-3.2.so ]; then
 			ln -sf $i-3.2.so $i-3.so
 			ln -sf $i-3.2.so $i.so.3
@@ -137,7 +137,7 @@ db_src_install_usrlibcleanup() {
 
 	rm -f \
 		"${D}"/usr/include/{db,db_185}.h \
-		"${LIB}"/libdb{,_{cxx,stl,java,tcl}}.a
+		"${LIB}"/libdb{,_{cxx,sql,stl,java,tcl}}.a
 }
 
 db_src_test() {
