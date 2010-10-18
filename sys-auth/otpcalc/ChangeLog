@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.9 2010/07/12 20:39:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.10 2010/10/18 20:38:18 ulm Exp $
+
+*otpcalc-0.97-r5 (18 Oct 2010)
+
+  18 Oct 2010; Ulrich Mueller <ulm@gentoo.org> +otpcalc-0.97-r5.ebuild,
+  +files/otpcalc.desktop:
+  Add "System" category to desktop entry to make desktop-file-validate happy.
+  Symlink otpCalc to otpcalc.
 
   12 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   otpcalc-0.97-r4.ebuild:
