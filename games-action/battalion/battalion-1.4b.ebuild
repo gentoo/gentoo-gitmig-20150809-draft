@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.14 2010/10/15 10:53:31 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.15 2010/10/18 16:18:38 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="Be a rampaging monster and destroy the city."
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}${PV}
 
