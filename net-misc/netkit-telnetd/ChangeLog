@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-telnetd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.47 2008/12/07 05:53:35 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.48 2010/10/18 16:01:06 leio Exp $
+
+  18 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  netkit-telnetd-0.17-r6.ebuild:
+  Drop to ~mips
 
   07 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   netkit-telnetd-0.17-r6.ebuild:
