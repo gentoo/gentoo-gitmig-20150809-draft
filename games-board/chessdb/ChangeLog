@@ -1,6 +1,9 @@
 # ChangeLog for games-board/chessdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/ChangeLog,v 1.6 2009/11/26 19:46:36 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/ChangeLog,v 1.7 2010/10/18 09:45:08 tupone Exp $
+
+  18 Oct 2010; Tupone Alfredo <tupone@gentoo.org> chessdb-3.6.18.ebuild:
+  Respect LDFLAGS. Bug #334409 by flameeyes@gentoo.org
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> chessdb-3.6.18.ebuild:
   amd64/x86 stable, bug #294520
