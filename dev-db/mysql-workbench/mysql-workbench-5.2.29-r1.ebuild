@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.29.ebuild,v 1.1 2010/10/13 17:03:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.29-r1.ebuild,v 1.1 2010/10/18 19:48:29 graaff Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -39,6 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=x11-libs/cairo-1.5.12[svg]
 	dev-python/pexpect
 	dev-python/paramiko
+	sys-apps/net-tools
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -46,6 +47,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/"${MY_P}"
 
 src_prepare() {
+	# ifconfig isn't in the normal path
+	sed -i -e 's:ifconfig:/sbin/ifconfig:' plugins/wb.admin/backend/wb_server_control.py || die
+
 	epatch "${FILESDIR}/${PN}-5.2.17-python-libs.patch"
 	epatch "${FILESDIR}/${PN}-5.2.17-as-needed-modules.patch"
 	eautoreconf
