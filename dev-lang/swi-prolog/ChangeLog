@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.242 2010/10/17 05:35:53 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.243 2010/10/18 06:01:43 keri Exp $
+
+  18 Oct 2010; <keri@gentoo.org> swi-prolog-5.11.7.ebuild:
+  Support Berkeley DB-5.1
 
   17 Oct 2010; <keri@gentoo.org> swi-prolog-5.10.1.ebuild:
   QA tidyups - ChangeLog is no longer supplied in tarballs; remove unused
