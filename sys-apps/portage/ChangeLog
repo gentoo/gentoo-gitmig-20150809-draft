@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.755 2010/10/16 03:30:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.756 2010/10/18 11:54:33 zmedico Exp $
+
+*portage-2.2_rc98 (18 Oct 2010)
+
+  18 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc98.ebuild:
+  2.2_rc98 version bump. This includes all of the fixes in portage-2.1.9.20,
+  and also fixes bug #341299 (erroneous messages about missing repo_name).
+  Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.20 (18 Oct 2010)
+
+  18 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.20.ebuild:
+  2.1.9.20 version bump. This fixes a NameError for 'basestring' with
+  python3 during SLOT conflict display. Bug #335925 tracks all bugs fixed
+  since 2.1.8.x.
 
 *portage-2.2_rc97 (16 Oct 2010)
 
