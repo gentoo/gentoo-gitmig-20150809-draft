@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.16 2010/05/31 07:23:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.17 2010/10/18 14:49:12 arfrever Exp $
+
+*mayavi-3.4.0 (18 Oct 2010)
+
+  18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mayavi-3.3.2.ebuild, +mayavi-3.4.0.ebuild:
+  Version bump.
 
 *mayavi-3.3.2 (31 May 2010)
 
