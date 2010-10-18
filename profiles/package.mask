@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12069 2010/10/18 11:59:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12070 2010/10/18 12:10:59 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -650,11 +650,6 @@ dev-lisp/xlispstat
 dev-vcs/mcvs
 media-sound/rip-l
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (17 Sep 2010)
-# Dead upstream. Masked for removal in 30 days.
-# Please switch to x11-drivers/xf86-video-ati
-x11-drivers/xf86-video-radeonhd
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2010)
 # Masked before final release.
 =net-zope/zope-2.13*
@@ -670,43 +665,6 @@ x11-drivers/xf86-video-radeonhd
 # (bug 333957) and doesn't have an autotools based build system.
 x11-libs/gtkscintilla2
 
-# Pacho Ramos <pacho@gentoo.org> (13 Sep 2010)
-# Upstream says is no longer developed, no updates since 2007,
-# nothing in the tree uses it, build failures (bug #276918).
-# Removal on 2010-10-13
-x11-libs/diacanvas
-
-# Tobias Heinlein <keytoaster@gentoo.org> (12 Sep 2010)
-# Remote command injection, bug #336916
-# Removal in 30 days if upstream does not respond
-x11-plugins/pidgin-knotify
-
-# Pacho Ramos <pacho@gentoo.org> (12 Sep 2010)
-# No developed by upstream since years, orca replaces it,
-# fails to compile (bug #221283).
-# Removal on 2010-10-12
-app-accessibility/gnopernicus
-
-# Pacho Ramos <pacho@gentoo.org> (12 Sep 2010)
-# No upstream update since 2004, looks to be no longer supported
-# by them. Unable to locate any distribution still shipping it
-# but PLD (with last update in 2007), nothing in the tree needs it,
-# does not respect LDFLAGS (bug #335227).
-# Removal on 2010-10-12
-dev-libs/phlib
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (11 Sep 2010)
-# Masked for removal in 30 days.
-# Depends on removed xorg-server version.
-# Migrate to x11-drivers/xf86-input-wacom
-x11-drivers/linuxwacom
-
-# Christian Birchinger <joker@gentoo.org> (11 Sep 2010)
-# Masked for removal in 30 days. Doesn't work
-# with recent Audacious and the included ghosd
-# plugin is a perfect replacment.
-media-plugins/audacious-xosd
-
 # Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
 # masked live version
 =x11-libs/cairo-9999*
@@ -718,13 +676,6 @@ media-plugins/audacious-xosd
 # Kacper Kowalik <xarthisius@gentoo.org> (7 Sep 2010)
 # Mask until fully tested
 x11-misc/lightdm
-
-# Pacho Ramos <pacho@gentoo.org> (2 Sep 2010)
-# They don't work since >=x11-themes/gtk-engines-2.16 lost
-# support for Smooth engine (bug #330181).
-# Removal on 2010-10-01
-x11-themes/smooth-themes
-x11-themes/smoothgnome
 
 # Sebastian Pipping <sping@gentoo.org> (1 Sep 2010)
 # Mask upcoming bumps, potentially too hot to push to everyone
@@ -815,23 +766,11 @@ app-i18n/imhangul-status-applet
 # The 1.8.6 packages will be removed in 60 days. Reference: Bug 332597.
 =dev-lang/ruby-1.8.6*
 
-# Michael Sterrett <mr_bones_@gentoo.org> (17 Aug 2010)
-# Mask for removal 20100916
-# Development has moved to games-emulation/sdlmame;
-# use that package instead.
-games-emulation/xmame
-
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (16 Aug 2010)
 # Experimental binary package compiled on Gentoo.
 ~www-client/chromium-bin-5.0.375.125
 ~www-client/chromium-bin-5.0.375.127
 ~www-client/chromium-bin-6.0.472.51
-
-# Hans de Graaff <graaff@gentoo.org> (13 Aug 2010)
-# Mask for removal 20100913
-# Dead upstream. No longer compatible with recent capistrano versions
-# in our tree.
-dev-ruby/palmtree
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # Mask until prime time
@@ -920,12 +859,6 @@ app-admin/kedpm
 # Difficulties transitioning to python3 as per bug 308331
 app-cdr/sync2cd
 
-# Hans de Graaff <graaff@gentoo.org> (17 Jul 2010)
-# Abandoned upstream, according to the author better alternatives
-# are available. Nothing in the tree depends on it.
-# Masked for deletion in 30 days.
-dev-ruby/testunit-mock
-
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # The ebuild still needs work, but if you can help testing
 # it, then please unmask (bug #317325)
@@ -953,11 +886,6 @@ net-misc/netcf
 # Severe security issues (bug #322855)
 =www-plugins/adobe-flash-10.0*
 
-# Matti Bickel <mabi@gentoo.org> (04 Jul 2010)
-# Dead upstream (bug #324825)
-# Masked for removal in 30 days
-dev-php5/znf
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (04 Jul 2010)
 # Python 2.7 masked until sufficient number of reverse dependencies is fixed.
 =dev-lang/python-2.7*
@@ -966,12 +894,6 @@ dev-php5/znf
 # Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
 # Also needs USE=introspection to be unmasked
 dev-libs/seed
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (28 Jun 2010)
-# Mask dev-haskell/filepath for removal, not earlier than Aug 2010.
-# It's already part of dev-lang/ghc since version 6.6.1.
-# See bug #324411.
-dev-haskell/filepath
 
 # Christian Faulhammer <fauli@gentoo.org> (28 Jun 2010)
 # Beta version
@@ -987,12 +909,6 @@ dev-haskell/filepath
 #
 >=sys-cluster/heartbeat-3.0.3
 
-# Patrick Lauer <patrick@gentoo.org> (18 Jun 2010)
-# Only one provider left, so the virtuals serve
-# no purpose and will be removed soon
-virtual/postgresql-base
-virtual/postgresql-server
-
 # Alexis Ballier <aballier@gentoo.org> (17 Jun 2010)
 # New major release, some packages fail to build
 # Mask until they are fixed
@@ -1004,35 +920,14 @@ virtual/postgresql-server
 # Just working with the masked experimental version of refmac
 >=sci-libs/monomer-db-5.16
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2010)
-#  on behalf of QA team
-#
-# Has a number of QA issues, see bug #278192. Build happens
-# in src_test or src_install, and it has been failing since
-# July 2009 in the tinderbox. No reverse dependencies to
-# take into consideration.
-#
-# Removal on 2010-08-15
-sci-biology/mpiblast
-
 # Peter Volkov <pva@gentoo.org> (13 Jun 2010)
 # Mask release candidate
 =net-analyzer/wireshark-1.4.0*
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
-# Depends on HAL, replacement is x11-plugins/wmudmount
-# Removed in 60 days by treecleaners. bug 313395
-x11-plugins/wmvolman
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
 # Dead upstream, last update from 2005, no maintainer.
 # Removed in 60 days by treecleaners, bug 311533
 app-misc/mved
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
-# Does not compile with latest kernel. Not supported by upstream
-# Removed in 60 days by treecleaners, bug 309655
-net-firewall/ipp2p
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Jun 2010)
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
@@ -1170,12 +1065,6 @@ net-fs/samba-client
 ~app-editors/emacs-vcs-23.2.9999
 ~app-editors/emacs-vcs-24.0.9999
 ~virtual/emacs-24
-
-# Mounir Lamouri <volkmar@gentoo.org> (09 Mar 2010)
-# net-voip/wengophone-bin has been superseeded by net-im/qutecom
-# and suffers of QA issues, see bug 251575
-# Masked for removal in 30 days
-net-voip/wengophone-bin
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
