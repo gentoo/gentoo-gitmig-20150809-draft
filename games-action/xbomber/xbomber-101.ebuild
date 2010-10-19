@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.15 2010/10/19 07:39:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.16 2010/10/19 07:52:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/libX11"
-DEPEND="${RDEPEND}"
+DEPEND="x11-libs/libX11"
 
 src_prepare() {
 	sed -i \
