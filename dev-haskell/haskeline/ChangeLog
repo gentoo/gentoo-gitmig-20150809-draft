@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.7 2010/10/16 18:22:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.8 2010/10/19 21:54:39 tomka Exp $
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> haskeline-0.6.2.2.ebuild:
+  x86 stable per bug 339580
 
   16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   haskeline-0.6.2.2.ebuild:

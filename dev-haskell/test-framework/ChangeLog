@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/test-framework
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.6 2010/10/16 18:28:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.7 2010/10/19 22:01:07 tomka Exp $
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> test-framework-0.2.4.ebuild:
+  x86 stable per bug 339580
 
   16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   test-framework-0.2.4.ebuild:

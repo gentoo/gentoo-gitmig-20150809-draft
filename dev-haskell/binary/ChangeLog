@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.9 2010/10/16 18:26:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.10 2010/10/19 21:46:59 tomka Exp $
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> binary-0.5.0.2.ebuild:
+  x86 stable per bug 339580
 
   16 Oct 2010; Markos Chandras <hwoarang@gentoo.org> binary-0.5.0.2.ebuild:
   Stable on amd64 wrt bug #339580
