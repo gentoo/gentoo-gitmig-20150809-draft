@@ -1,6 +1,15 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.74 2010/10/16 17:37:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.75 2010/10/19 03:49:05 bicatali Exp $
+
+*root-5.26.00e (19 Oct 2010)
+
+  19 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +root-5.26.00e.ebuild, +files/root-5.26.00e-configure-paths.patch,
+  +files/root-5.26.00e-glibc212.patch, +files/root-5.26.00e-make-3.82.patch,
+  +files/root-5.26.00e-nobyte-compile.patch,
+  +files/root-5.26.00e-prop-ldflags.patch:
+  Version bump, patch for afs submitted by Andrew Savchenko.
 
   16 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
   root-5.26.00-r4.ebuild, +files/root-5.26.00-make-3.82.patch:
