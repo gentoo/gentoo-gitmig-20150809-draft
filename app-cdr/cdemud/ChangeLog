@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdemud
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.14 2010/02/09 06:32:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.15 2010/10/19 14:32:35 pva Exp $
+
+*cdemud-1.3.0 (19 Oct 2010)
+
+  19 Oct 2010; Peter Volkov <pva@gentoo.org> +cdemud-1.3.0.ebuild:
+  Version bump.
 
   09 Feb 2010; Peter Volkov <pva@gentoo.org> files/cdemud.init.d-1.1.0:
   Remove bashism from init script, bug #303847 by Michał Górny
