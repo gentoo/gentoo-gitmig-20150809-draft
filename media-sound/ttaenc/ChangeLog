@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ttaenc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.5 2010/01/14 21:00:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ttaenc/ChangeLog,v 1.6 2010/10/19 20:34:01 chainsaw Exp $
+
+*ttaenc-3.4.1-r1 (19 Oct 2010)
+
+  19 Oct 2010; <chainsaw@gentoo.org> +ttaenc-3.4.1-r1.ebuild:
+  Instill LDFLAGS respect into build system. Port to EAPI=2. Closes bug
+  #337848 by Diego Elio "Flameeyes" Pettenò <flameeyes@gentoo.org>.
 
   14 Jan 2010; Markus Meier <maekke@gentoo.org> ttaenc-3.4.1.ebuild:
   amd64/x86 stable, bug #298565
