@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.106 2010/07/27 22:59:38 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.107 2010/10/19 18:08:46 flameeyes Exp $
 
 # Only available on x86
 fdftk
@@ -261,3 +261,7 @@ introspection
 # Jonathan Callen <abcd@gentoo.org> (23 Jun 2010)
 # x11-libs/gtk+:3 is not yet in the tree
 gtk3
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (19 oct 2010)
+# masking flags that only apply to FreeBSD
+kqueue

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.61 2010/10/12 17:03:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.62 2010/10/19 18:08:46 flameeyes Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -36,9 +36,6 @@ krb4
 lcd_devices_g15
 lcd_devices_graphlcd
 lcd_devices_ula200
-# Mask BSDisms, used in net-proxy/squid for example
-ipf-transparent
-pf-transparent
 # mzscheme seems somewhat b0rked and we want vim7
 mzscheme
 # Masking hardened, it isn't really supported, see bugs #144126 #78951
