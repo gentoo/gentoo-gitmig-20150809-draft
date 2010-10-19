@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.4 2010/10/17 19:23:35 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.5 2010/10/19 20:07:25 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -143,8 +143,7 @@ php_install_ini() {
 		doins "${WORKDIR}/sapis-build/fpm/sapi/fpm/php-fpm.conf"
 		dodir "/etc/init.d"
 		insinto "/etc/init.d"
-		newins  "${FILESDIR}/php-fpm.init" "php-fpm"
-		fperms 755 "/etc/init.d/php-fpm"
+		newinitd "${FILESDIR}/php-fpm-r1.init" "php-fpm"
 #		dosym "${PHP_DESTDIR}/bin/php-fpm" "/usr/bin/php-fpm"
 	fi
 }
