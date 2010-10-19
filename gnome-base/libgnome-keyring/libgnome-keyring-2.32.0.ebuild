@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.2 2010/10/18 18:08:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-2.32.0.ebuild,v 1.3 2010/10/19 18:44:45 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -45,6 +45,6 @@ src_prepare() {
 }
 
 src_test() {
-	# Needed to run tests on console, bug #323661
-	dbus-launch emake check || die "tests failed"
+	unset DBUS_SESSION_BUS_ADDRESS
+	emake check || die "tests failed"
 }
