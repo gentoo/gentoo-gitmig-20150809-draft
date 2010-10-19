@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.13.ebuild,v 1.3 2010/10/18 19:34:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.13.ebuild,v 1.4 2010/10/19 17:51:26 jer Exp $
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 HOMEPAGE="http://mtools.linux.lu/"
@@ -24,7 +24,9 @@ DEPEND="
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:/usr/local/etc:/etc:g' mtools.5 mtools.texi
+	sed -i mtools.tmpl.5 mtools.texi \
+		-e 's:/usr/local/etc:/etc:g' \
+		|| die "sed man pages"
 }
 
 src_compile() {
