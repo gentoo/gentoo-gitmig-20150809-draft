@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.53 2010/09/26 18:11:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.54 2010/10/19 16:00:23 hwoarang Exp $
+
+  19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> qt-demo-4.6.3.ebuild:
+  Stable on amd64 wrt bug #341703
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> qt-demo-4.6.2.ebuild,
   qt-demo-4.6.3.ebuild:
