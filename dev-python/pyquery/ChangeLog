@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pyquery
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.1 2010/10/19 11:46:49 ssuominen Exp $
+
+*pyquery-0.6.1 (19 Oct 2010)
+
+  19 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +pyquery-0.6.1.ebuild:
+  Initial commit wrt #339489 by Stefan Talpalaru.
+
