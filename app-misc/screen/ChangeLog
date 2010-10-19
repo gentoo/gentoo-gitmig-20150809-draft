@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.147 2010/06/15 11:47:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.148 2010/10/19 06:22:05 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> screen-4.0.3.ebuild:
+  Drop to ~mips
 
 *screen-4.0.3-r1 (15 Jun 2010)
 

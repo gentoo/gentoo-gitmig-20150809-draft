@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mtail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/ChangeLog,v 1.21 2010/05/24 19:01:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/ChangeLog,v 1.22 2010/10/19 06:20:38 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> mtail-1.1.1-r1.ebuild:
+  Drop to ~mips
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> mtail-1.1.1-r2.ebuild:
   stable amd64, bug 317415
