@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.18 2010/09/09 07:14:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.19 2010/10/19 10:06:51 hwoarang Exp $
+
+  19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> openarena-0.8.5.ebuild:
+  Stable on amd64 wrt bug #341415
 
 *openarena-0.8.5 (09 Sep 2010)
 
