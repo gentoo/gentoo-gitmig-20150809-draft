@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.5.2.ebuild,v 1.2 2010/10/19 21:16:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.5.2-r1.ebuild,v 1.1 2010/10/19 21:16:33 chainsaw Exp $
 
-inherit eutils toolchain-funcs
+EAPI=2
+
+inherit base toolchain-funcs
 
 DESCRIPTION="Intelligent Battery Monitor"
 HOMEPAGE="http://ibam.sourceforge.net/"
@@ -16,15 +18,15 @@ IUSE="gkrellm"
 
 DEPEND="gkrellm? ( app-admin/gkrellm )"
 RDEPEND="${DEPEND}"
+PATCHES=( "${FILESDIR}/${P}-ldflags.patch" )
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
+	base_src_prepare
 	sed -i \
 		-e "s:^CFLAGS=-O3:CFLAGS=${CFLAGS}:" \
 		-e "s:^CC=g++:CC=$(tc-getCXX):" \
 		"${S}"/Makefile \
-		|| die "Sed Makefile failed"
+		|| die "Failed to set CFLAGS/compiler"
 }
 
 src_compile() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/ibam
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.6 2009/07/29 22:01:07 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.7 2010/10/19 21:16:33 chainsaw Exp $
+
+*ibam-0.5.2-r1 (19 Oct 2010)
+
+  19 Oct 2010; <chainsaw@gentoo.org> +ibam-0.5.2-r1.ebuild,
+  +files/ibam-0.5.2-ldflags.patch:
+  Instill LDFLAGS respect into build system. Port to EAPI=2. Closes bug
+  #341479 by Diego Elio "Flameeyes" Pettenò <flameeyes@gentoo.org>.
 
 *ibam-0.5.2 (29 Jul 2009)
 
