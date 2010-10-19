@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/banner
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.33 2009/11/24 16:31:53 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/ChangeLog,v 1.34 2010/10/19 05:58:01 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> banner-1.3.2.ebuild:
+  Drop to ~mips
 
   24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> banner-1.3.2.ebuild:
   Add prefix keywords from prefix overlay, no other changes needed
