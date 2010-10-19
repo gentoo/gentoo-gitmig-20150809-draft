@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gspiceui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.1 2010/09/23 20:53:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.2 2010/10/19 09:40:15 hwoarang Exp $
+
+  19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gspiceui-0.9.99.ebuild:
+  Stable on amd64 wrt bug #341545
 
 *gspiceui-0.9.99 (23 Sep 2010)
 
