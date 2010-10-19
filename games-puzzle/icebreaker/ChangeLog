@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/icebreaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.15 2010/10/15 13:24:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.16 2010/10/19 08:48:21 tupone Exp $
+
+  19 Oct 2010; Tupone Alfredo <tupone@gentoo.org> icebreaker-1.9.5.ebuild,
+  +files/icebreaker-1.9.5-parallell-install.patch:
+  Fix parallel install. Bug #341111 by flameeyes@gentoo.org
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   icebreaker-1.9.5.ebuild:
