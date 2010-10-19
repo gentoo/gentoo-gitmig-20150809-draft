@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.5.2.ebuild,v 1.1 2010/10/06 09:17:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.5.2.ebuild,v 1.2 2010/10/19 18:39:32 scarabeus Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ inherit python kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug google-gadgets python qalculate rss semantic-desktop xinerama"
+IUSE="debug google-gadgets gps python qalculate rss semantic-desktop xinerama"
 
 COMMONDEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
@@ -28,6 +28,7 @@ COMMONDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrender
 	google-gadgets? ( >=x11-misc/google-gadgets-0.11.0[qt4] )
+	gps? ( >=sci-geosciences/gpsd-2.37 )
 	python? (
 		>=dev-python/PyQt4-4.4.0[X]
 		>=dev-python/sip-4.7.1
@@ -86,6 +87,7 @@ src_unpack() {
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with google-gadgets Googlegadgets)
+		$(cmake-utils_use_with gps libgps)
 		$(cmake-utils_use_with python SIP)
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PyKDE4)
