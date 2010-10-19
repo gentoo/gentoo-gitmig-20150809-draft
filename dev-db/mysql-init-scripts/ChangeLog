@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-init-scripts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.3 2007/04/28 16:58:36 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.4 2010/10/19 05:53:42 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  mysql-init-scripts-1.2.ebuild:
+  Drop to ~mips
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org>
   mysql-init-scripts-1.2.ebuild:
