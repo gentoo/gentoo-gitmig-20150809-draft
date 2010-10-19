@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.18 2010/08/11 14:58:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.19 2010/10/19 14:31:12 pva Exp $
+
+*vhba-20101015 (19 Oct 2010)
+
+  19 Oct 2010; Peter Volkov <pva@gentoo.org> +vhba-20101015.ebuild:
+  Version bump.
 
 *vhba-1.2.1_p682 (11 Aug 2010)
 
