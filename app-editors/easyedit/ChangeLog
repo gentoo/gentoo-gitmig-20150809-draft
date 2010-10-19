@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/easyedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.21 2010/01/01 20:55:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.22 2010/10/19 06:24:01 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> easyedit-1.4.6.ebuild:
+  Drop to ~mips
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   easyedit-1.4.7.ebuild:
