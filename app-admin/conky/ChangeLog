@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.148 2010/10/12 17:05:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.149 2010/10/19 18:20:44 ranger Exp $
+
+  19 Oct 2010; Brent Baude <ranger@gentoo.org> conky-1.8.0-r1.ebuild:
+  Marking conky-1.8.0-r1 ppc for bug 328161
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> conky-1.8.1.ebuild:
   Add ~sparc wrt #326767
