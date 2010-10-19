@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linux-kernel-in-a-nutshell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/ChangeLog,v 1.4 2008/12/07 05:38:49 gregkh Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/ChangeLog,v 1.5 2010/10/19 09:05:30 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  linux-kernel-in-a-nutshell-1.ebuild:
+  Drop to ~mips
 
   07 Dec 2008; Greg Kroah-Hartman <gregkh@gentoo.org> metadata.xml:
   Took over the abandonded package, as I did write the thing :)

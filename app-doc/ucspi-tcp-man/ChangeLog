@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/ucspi-tcp-man
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ucspi-tcp-man/ChangeLog,v 1.11 2005/01/01 13:20:44 eradicator Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ucspi-tcp-man/ChangeLog,v 1.12 2010/10/19 09:11:31 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  ucspi-tcp-man-20020317.ebuild:
+  Drop to ~mips
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org>
   ucspi-tcp-man-20020317.ebuild:

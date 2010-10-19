@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.16 2010/03/06 21:45:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.17 2010/10/19 09:10:31 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  single-unix-specification-3.ebuild:
+  Drop to ~mips
 
   06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org>
   single-unix-specification-4-r1.ebuild:
