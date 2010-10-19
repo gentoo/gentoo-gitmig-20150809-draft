@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.15.ebuild,v 1.1 2010/10/18 02:01:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.15.ebuild,v 1.2 2010/10/19 22:31:55 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i 's:/usr/local/etc:/etc:g' mtools.5 mtools.texi
 	eautoconf #341443
 }
 
