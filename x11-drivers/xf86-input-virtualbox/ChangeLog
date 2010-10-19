@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.45 2010/10/12 14:10:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.46 2010/10/19 10:26:18 polynomial-c Exp $
+
+*xf86-input-virtualbox-3.2.10-r1 (19 Oct 2010)
+
+  19 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-input-virtualbox-3.2.10.ebuild,
+  +xf86-input-virtualbox-3.2.10-r1.ebuild:
+  Make the driver work with xorg-server-1.9*, too.
 
 *xf86-input-virtualbox-3.2.10 (12 Oct 2010)
 
