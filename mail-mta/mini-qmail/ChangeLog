@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/mini-qmail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.10 2008/04/06 18:19:23 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.11 2010/10/19 05:30:27 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> mini-qmail-1.05.ebuild,
+  mini-qmail-1.05-r1.ebuild:
+  Drop to ~mips
 
 *mini-qmail-1.06 (06 Apr 2008)
 

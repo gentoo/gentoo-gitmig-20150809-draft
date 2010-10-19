@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.9 2007/12/03 21:37:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.10 2010/10/19 05:30:27 leio Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://qmail/netqmail-${PV}.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 arm hppa mips ppc sparc x86"
+KEYWORDS="amd64 arm hppa ~mips ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/groff"
