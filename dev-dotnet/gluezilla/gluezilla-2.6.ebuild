@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6.ebuild,v 1.4 2010/09/12 04:25:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6.ebuild,v 1.5 2010/10/19 21:20:40 loki_val Exp $
 
 EAPI=2
 
@@ -15,7 +15,9 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-libs/xulrunner:1.9
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+	>=dev-lang/mono-${PV}
+	"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
