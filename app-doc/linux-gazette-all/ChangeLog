@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linux-gazette-all
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/ChangeLog,v 1.14 2009/11/15 02:36:14 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/ChangeLog,v 1.15 2010/10/19 07:09:12 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> linux-gazette-all-168.ebuild:
+  Drop to ~mips
 
 *linux-gazette-all-* (21 Aug 2003)
 
