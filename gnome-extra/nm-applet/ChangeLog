@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.51 2010/09/29 21:08:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.52 2010/10/19 19:13:10 ranger Exp $
+
+  19 Oct 2010; Brent Baude <ranger@gentoo.org> nm-applet-0.8.ebuild:
+  Marking nm-applet-0.8 ppc for bug 321593
 
   29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   nm-applet-0.8.1-r2.ebuild:
