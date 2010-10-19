@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/ibp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ibp/ChangeLog,v 1.1 2010/09/12 11:15:53 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ibp/ChangeLog,v 1.2 2010/10/19 07:57:36 tomjbe Exp $
+
+  19 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> ibp-0.21.ebuild,
+  +files/ibp-0.21-ldflags.patch:
+  Make Imakefile respect LDFLAGS (bug #341475)
 
 *ibp-0.21 (12 Sep 2010)
 
