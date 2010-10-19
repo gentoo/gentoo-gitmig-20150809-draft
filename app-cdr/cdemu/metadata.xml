@@ -5,4 +5,7 @@
 <maintainer>
  <email>vanquirius@gentoo.org</email>
 </maintainer>
+<use>
+<flag name='nocdemud'>Don't pull <pkg>app-cdr/cdemud</pkg> dependency, useful in chroot environment (bug #315491)</flag>
+</use>
 </pkgmetadata>

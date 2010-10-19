@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.22 2010/07/06 16:55:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.23 2010/10/19 14:35:39 pva Exp $
+
+*cdemu-1.3.0 (19 Oct 2010)
+
+  19 Oct 2010; Peter Volkov <pva@gentoo.org> +cdemu-1.3.0.ebuild,
+  metadata.xml:
+  Version bump. Added nocdemud USE flag to avoid cdemud dependency #315491
+  wrt Michał Górny.
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cdemu-1.2.0.ebuild:
