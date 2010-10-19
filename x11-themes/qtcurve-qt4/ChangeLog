@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.112 2010/10/05 00:15:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.113 2010/10/19 10:08:41 wired Exp $
+
+*qtcurve-qt4-1.6.4-r1 (19 Oct 2010)
+
+  19 Oct 2010; Alex Alexander <wired@gentoo.org>
+  +files/qtcurve-qt4_kwin_automagic_fix.patch, +qtcurve-qt4-1.6.4-r1.ebuild:
+  fixed automagic kwin dep, bug #338628. warn the user instead of dying if
+  use windeco && ! use kde.
 
 *qtcurve-qt4-1.6.4 (05 Oct 2010)
 
