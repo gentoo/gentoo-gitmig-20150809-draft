@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.16 2010/10/19 08:48:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.5.ebuild,v 1.17 2010/10/19 15:14:32 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[video]
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-ldflags.patch
 	"${FILESDIR}"/${P}-gentoo.patch
