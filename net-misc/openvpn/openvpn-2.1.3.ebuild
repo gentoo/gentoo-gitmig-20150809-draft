@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.2 2010/10/12 20:06:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.3 2010/10/19 07:32:37 djc Exp $
 
 EAPI=2
 
@@ -133,7 +133,7 @@ pkg_postinst() {
 	enewgroup openvpn
 	enewuser openvpn "" "" "" openvpn
 
-	if [[ -n $(ls ${ROOT}/etc/openvpn/*/local.conf 2>/dev/null) ]] ; then
+	if [ path_exists -o "${ROOT}/etc/openvpn/*/local.conf" ] ; then
 		ewarn "WARNING: The openvpn init script has changed"
 		ewarn ""
 	fi
