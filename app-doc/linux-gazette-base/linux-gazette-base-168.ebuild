@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-168.ebuild,v 1.1 2009/11/15 02:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-168.ebuild,v 1.2 2010/10/19 07:45:58 leio Exp $
 
 # the SRC_URI always has the same file name ... make sure you
 # `rm ${DISTDIR}/lg-base.tar.gz` and make a new digest with
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/lg-base-${PV}.tar.gz"
 
 LICENSE="OPL"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 S=${WORKDIR}/lg
