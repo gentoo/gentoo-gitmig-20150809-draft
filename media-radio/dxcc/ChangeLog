@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/dxcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/dxcc/ChangeLog,v 1.1 2010/09/12 14:10:01 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/dxcc/ChangeLog,v 1.2 2010/10/19 10:45:35 hwoarang Exp $
+
+  19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> dxcc-20080225.ebuild:
+  Stable on amd64 wrt bug #341467
 
 *dxcc-20080225 (12 Sep 2010)
 
