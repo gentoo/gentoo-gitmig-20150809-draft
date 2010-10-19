@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.392 2010/10/19 00:49:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.393 2010/10/19 01:42:08 robbat2 Exp $
+
+*gnupg-2.0.16-r2 (19 Oct 2010)
+
+  19 Oct 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +gnupg-2.0.16-r2.ebuild, +files/gnupg-2.0.16-opengpgv2-sha2.patch:
+  Bug #339005: SHA2 support. Bug #285289: CONFIG_PROTECT for
+  /usr/share/gnupg/qualified.txt. Bug #301941: USE=openct/pcsc-lite without
+  USE=smartcard is useless. Bug #219423: USE=smartcard/openct/pcsc-lite and
+  USE=static are not permitted together.
 
 *gnupg-1.4.11 (19 Oct 2010)
 
