@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/fmtools-1.0.2.ebuild,v 1.5 2010/10/19 20:05:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/fmtools-1.0.2-r1.ebuild,v 1.1 2010/10/19 20:05:00 chainsaw Exp $
 
 EAPI=2
-inherit toolchain-funcs
+inherit base toolchain-funcs
 
 DESCRIPTION="A collection of programs for controlling v4l radio card drivers."
 HOMEPAGE="http://www.stanford.edu/~blp/fmtools"
@@ -11,8 +11,9 @@ SRC_URI="http://www.stanford.edu/~blp/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
+PATCHES=( "${FILESDIR}/${P}-ldflags.patch" )
 
 RDEPEND=""
 DEPEND=""
