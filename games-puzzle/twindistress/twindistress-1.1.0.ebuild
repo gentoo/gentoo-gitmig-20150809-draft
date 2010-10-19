@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.5 2010/10/19 07:14:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.6 2010/10/19 07:48:33 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils games
 
 MY_P="twind-${PV}"
 DESCRIPTION="Match and remove all of the blocks before time runs out"
@@ -15,21 +15,22 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[video]
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image[png]"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i \
-		-e "/^CC/s:gcc:$(tc-getCC):" \
+		-e '/^CC/d' \
 		-e "/^CFLAGS/s:-g:${CFLAGS}:" \
 		-e "/^DATA_PREFIX/s:/.*$:${GAMES_DATADIR}/${PN}/:" \
 		-e "/^HIGH_SCORE_PREFIX/s:/.*$:${GAMES_STATEDIR}/${PN}/:" \
 		Makefile || die "sed failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-warnings.patch
 }
 
 src_install() {
@@ -39,7 +40,7 @@ src_install() {
 	doins -r graphics music sound || die "doins failed"
 
 	doicon graphics/twind.png
-	make_desktop_entry twind "Twin Distress" twind
+	make_desktop_entry twind "Twin Distress"
 
 	dodoc AUTHORS ChangeLog CREDITS NEWS README TODO
 
