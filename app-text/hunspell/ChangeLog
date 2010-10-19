@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.77 2010/10/15 19:00:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.78 2010/10/19 02:28:38 jer Exp $
+
+  19 Oct 2010; Jeroen Roovers <jer@gentoo.org> hunspell-1.2.11.ebuild:
+  Stable for HPPA (bug #338341).
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> hunspell-1.2.11.ebuild:
   stable ppc, bug 338341
