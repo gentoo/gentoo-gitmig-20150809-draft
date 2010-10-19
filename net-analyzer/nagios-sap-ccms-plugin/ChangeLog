@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nagios-sap-ccms-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.6 2009/03/07 14:34:57 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.7 2010/10/19 23:36:01 jer Exp $
+
+*nagios-sap-ccms-plugin-0.8 (19 Oct 2010)
+
+  19 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  +nagios-sap-ccms-plugin-0.8.ebuild,
+  +files/nagios-sap-ccms-plugin-0.8-gentoo.patch:
+  Version bump by Elias Probst (bug #283557). Fix quoting issue. Use system
+  iniparser (bug #259717). Respect LDFLAGS (bug #337888), CC.
 
   07 Mar 2009; Markus Meier <maekke@gentoo.org>
   nagios-sap-ccms-plugin-0.7.3-r1.ebuild:

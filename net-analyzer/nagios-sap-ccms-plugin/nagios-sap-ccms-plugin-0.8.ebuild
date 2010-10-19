@@ -1,0 +1,63 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.8.ebuild,v 1.1 2010/10/19 23:36:01 jer Exp $
+
+EAPI="2"
+
+inherit eutils toolchain-funcs
+
+MY_P="sap-ccms-plugin-${PV}"
+
+DESCRIPTION="Nagios plugin that provides an interface to SAP CCMS
+Infrastructure"
+HOMEPAGE="http://sourceforge.net/projects/nagios-sap-ccms/"
+SRC_URI="mirror://sourceforge/nagios-sap-ccms/${MY_P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE=""
+
+DEPEND="
+	net-analyzer/nagios-core
+	dev-libs/iniparser
+"
+RDEPEND=${DEPEND}
+
+S="${WORKDIR}/${PN/-plugin*}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	sed -i src/sap_moni/* \
+		-e 's|#include "iniparser.h"|#include <iniparser.h>|g' \
+		|| die "sed sap_moni/"
+}
+
+src_compile() {
+	emake -C src CC=$(tc-getCC) || die "emake failed"
+}
+
+src_install() {
+	cd "${S}/src"
+	exeinto /usr/$(get_libdir)/nagios/plugins
+
+	for file in {check_sap{,_cons,_instance,_instance_cons,_mult_no_thr,_multiple,_system,_system_cons},create_cfg,sap_change_thr}
+	do
+		doexe ${file}
+	done
+
+	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins || die "Failed Chown of ${D}usr/$(get_libdir)/nagios/plugins"
+
+	dolib.so sap_moni.so
+	cd "${S}/config"
+
+	dodir /etc/sapmon
+	insinto /etc/sapmon
+	doins "${S}"/config/*
+}
+
+pkg_postinst() {
+	elog "Have a look at /etc/sapmon for configuring ${PN}"
+	elog "Further information can be found at"
+	elog "http://nagios-sap-ccms.sourceforge.net/"
+}
