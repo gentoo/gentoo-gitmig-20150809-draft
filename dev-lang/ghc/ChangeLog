@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.195 2010/10/09 14:26:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.196 2010/10/19 17:58:22 tomka Exp $
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> ghc-6.12.3.ebuild:
+  x86 stable per bug 338652
 
   09 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild:
   Updated binaries for alpha and ia64 (export typechecker API for haddock)
