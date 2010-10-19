@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/phrack-all
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/ChangeLog,v 1.13 2009/12/17 10:12:40 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/ChangeLog,v 1.14 2010/10/19 06:54:52 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> phrack-all-66.ebuild:
+  Drop to ~mips
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> phrack-all-66.ebuild:
   QA: add prefix keywords
