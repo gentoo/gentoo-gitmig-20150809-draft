@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/epm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.25 2008/01/26 16:00:27 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.26 2010/10/19 11:21:56 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> epm-0.9.1.ebuild,
+  epm-1.33.ebuild:
+  Drop to ~mips
 
   26 Jan 2008; Fabian Groffen <grobian@gentoo.org> epm-0.9.1.ebuild,
   epm-1.33.ebuild:

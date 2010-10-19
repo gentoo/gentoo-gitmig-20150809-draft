@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.19 2010/08/21 19:31:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.20 2010/10/19 11:20:40 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  eclass-manpages-20100821.ebuild:
+  Drop to ~mips
 
 *eclass-manpages-20100821 (21 Aug 2010)
 
