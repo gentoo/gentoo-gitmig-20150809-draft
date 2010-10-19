@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.9 2010/10/05 20:49:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.10 2010/10/19 21:21:36 loki_val Exp $
 
 # @ECLASS: go-mono.eclass
 # @MAINTAINER:
@@ -48,7 +48,7 @@ else
 fi
 
 
-NO_MONO_DEPEND=( "dev-lang/mono" "dev-dotnet/libgdiplus" )
+NO_MONO_DEPEND=( "dev-lang/mono" "dev-dotnet/libgdiplus" "dev-dotnet/gluezilla" )
 
 if [[ "$(get_version_component_range 3)" != "9999" ]]
 then
