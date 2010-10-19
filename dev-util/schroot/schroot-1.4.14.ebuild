@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.14.ebuild,v 1.1 2010/10/03 22:06:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.14.ebuild,v 1.2 2010/10/19 02:32:52 abcd Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="1.11"
@@ -74,6 +74,10 @@ src_configure() {
 		--disable-static \
 		--localstatedir="${EPREFIX}"/var \
 		--with-bash-completion-dir="${EPREFIX}"/usr/share/bash-completion
+}
+
+src_compile() {
+	emake all $(usev doc) || die "emake failed"
 }
 
 src_test() {
