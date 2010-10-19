@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.5.2.ebuild,v 1.2 2010/10/19 18:39:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.5.2.ebuild,v 1.3 2010/10/19 19:05:33 scarabeus Exp $
 
 EAPI="3"
 
@@ -82,6 +82,15 @@ src_unpack() {
 	fi
 
 	kde4-meta_src_unpack
+}
+
+src_prepare() {
+	sed -i \
+		-e 's/find_package(libgps)/macro_optional_find_package(libgps)/' \
+		plasma/generic/dataengines/geolocation/CMakeLists.txt \
+		|| die "Failed to make GPS optional"
+
+	kde4-meta_src_prepare
 }
 
 src_configure() {
