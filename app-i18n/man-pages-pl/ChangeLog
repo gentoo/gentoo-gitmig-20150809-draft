@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.12 2010/08/20 12:11:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.13 2010/10/19 10:23:57 leio Exp $
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> man-pages-pl-20070628.ebuild:
+  Drop to ~mips
 
   20 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   man-pages-pl-20070628.ebuild, metadata.xml:

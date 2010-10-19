@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.4 2010/08/20 12:11:24 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.5 2010/10/19 10:23:57 leio Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.batnet.pl/ptm/man-PL${PV:6:2}-${PV:4:2}-${PV:0:4}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=""
