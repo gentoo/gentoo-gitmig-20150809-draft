@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mobile-broadband-provider-info
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.6 2010/08/20 10:16:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.7 2010/10/19 19:09:09 ranger Exp $
+
+  19 Oct 2010; Brent Baude <ranger@gentoo.org>
+  mobile-broadband-provider-info-20100510.ebuild:
+  Marking mobile-broadband-provider-info-20100510 ppc for bug 321593
 
   20 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   mobile-broadband-provider-info-20100510.ebuild:
