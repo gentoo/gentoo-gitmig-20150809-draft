@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4667 2010/10/19 20:22:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4668 2010/10/19 20:32:35 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2010; Ole Markus With <olemarkus@gentoo.org> 
+	default/bsd/fbsd/make.defaults,	default/linux/make.defaults:
+	PHP ebuilds now make use of default USE flags. No longer any point in enabling
+	them by default in make.defaults.
 
   19 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> license_groups:
   Added libertas-fw to license group BINARY-REDISTRIBUTABLE, ok'ed by
