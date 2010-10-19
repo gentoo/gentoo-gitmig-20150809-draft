@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.243 2010/10/18 06:01:43 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.244 2010/10/19 06:33:22 keri Exp $
+
+  19 Oct 2010; <keri@gentoo.org> swi-prolog-5.10.1.ebuild,
+  swi-prolog-5.11.7.ebuild:
+  Respect LDFLAGS in swipl-ld. Closes #341707
 
   18 Oct 2010; <keri@gentoo.org> swi-prolog-5.11.7.ebuild:
   Support Berkeley DB-5.1
