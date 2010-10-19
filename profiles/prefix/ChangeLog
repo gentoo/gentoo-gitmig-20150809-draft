@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.217 2010/10/02 12:40:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.218 2010/10/19 11:39:33 mduft Exp $
+
+  19 Oct 2010; Markus Duft <mduft@gentoo.org>
+  windows/interix/6.0/x86/make.defaults,
+  windows/interix/6.1/x86/make.defaults:
+  changed CHOST of interix profiles to be based on LIBC version, not kernel version
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.use.mask:
   unmask xz, we do have xz-utils in our overlay

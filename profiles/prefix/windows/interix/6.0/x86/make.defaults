@@ -1,7 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/6.0/x86/make.defaults,v 1.1 2009/06/06 03:55:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/6.0/x86/make.defaults,v 1.2 2010/10/19 11:39:33 mduft Exp $
+
+# the CHOST version number is the version number of the host libc, not the version of the interix SDK package.
 
 ARCH="x86-interix"
-CHOST="i586-pc-interix6.0"
+CHOST="i586-pc-interix5.2"
 ACCEPT_KEYWORDS="~x86-interix"
