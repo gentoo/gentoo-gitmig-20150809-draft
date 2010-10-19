@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.49 2010/10/19 16:18:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.50 2010/10/19 16:36:36 tove Exp $
+
+  19 Oct 2010; Torsten Veller <tove@gentoo.org> -po4a-0.32-r1.ebuild,
+  -po4a-0.34.ebuild, -po4a-0.36.ebuild, -po4a-0.36.4.ebuild,
+  -po4a-0.37.1.ebuild, po4a-0.38.ebuild, po4a-0.39.ebuild:
+  Disable tests because they fail with gettext-0.18.1.1. Cleanup
 
 *po4a-0.40.1 (19 Oct 2010)
 

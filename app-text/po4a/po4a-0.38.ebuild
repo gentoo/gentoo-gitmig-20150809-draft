@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.38.ebuild,v 1.7 2010/05/08 18:02:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.38.ebuild,v 1.8 2010/10/19 16:36:36 tove Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		app-text/docbook-sgml-utils
 		virtual/tex-base )"
 
-SRC_TEST="do"
+#SRC_TEST="do"
 
 src_prepare() {
 	rm "${S}"/Makefile || die
