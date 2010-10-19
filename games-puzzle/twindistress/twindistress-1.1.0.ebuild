@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.4 2010/01/25 21:47:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.5 2010/10/19 07:14:44 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -15,9 +15,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[video]
+RDEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image[png]"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -28,6 +29,7 @@ src_prepare() {
 		-e "/^DATA_PREFIX/s:/.*$:${GAMES_DATADIR}/${PN}/:" \
 		-e "/^HIGH_SCORE_PREFIX/s:/.*$:${GAMES_STATEDIR}/${PN}/:" \
 		Makefile || die "sed failed"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_install() {

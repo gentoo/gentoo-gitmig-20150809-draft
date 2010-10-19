@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/twindistress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/ChangeLog,v 1.10 2010/01/25 21:47:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/ChangeLog,v 1.11 2010/10/19 07:14:44 tupone Exp $
+
+  19 Oct 2010; Tupone Alfredo <tupone@gentoo.org> twindistress-1.1.0.ebuild,
+  +files/twindistress-1.1.0-ldflags.patch:
+  Respect LDFLAGS. Bug #331865 by flameeyes@gentoo.org
 
   25 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
   twindistress-1.1.0.ebuild:
