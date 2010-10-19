@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.16-r2.ebuild,v 1.1 2010/10/19 01:42:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.16-r2.ebuild,v 1.2 2010/10/19 03:43:08 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -76,7 +76,7 @@ src_configure() {
 			die "Upstream explicitly disallows static builds when combining with smartcard support: http://www.mail-archive.com/gnupg-users@gnupg.org/msg10851.html"
 		fi
 	fi
-	
+
 	[[ $want_scdaemon -eq 1 ]] && myconf="--enable-scdaemon" || myconf="--disable-scdaemon"
 
 	econf \
