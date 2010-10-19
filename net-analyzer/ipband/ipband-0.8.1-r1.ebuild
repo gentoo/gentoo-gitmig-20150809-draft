@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.1.ebuild,v 1.2 2009/01/15 05:38:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.1-r1.ebuild,v 1.1 2010/10/19 14:33:39 jer Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -14,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/libpcap-0.4"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# Provide a postfix MTA string in the author's ipband.conf example
-	sed -rie 's:(#mtastring.*):# Sendmail\n\1\n# Postfix\n#mtastring "/usr/sbin/sendmail -t":g' \
-		"${S}"/ipband.sample.conf
+	sed -ri ipband.sample.conf \
+		-e 's:(#mtastring.*):# Sendmail\n\1\n# Postfix\n#mtastring "/usr/sbin/sendmail -t":g' \
+		|| die "sed ipband.sample.conf"
 
-	# Do not strip and do use toolchain
+	# Do not strip, and do respect CC, LDFLAGS
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 

@@ -1,5 +1,5 @@
---- ipband-0.8.1/Makefile.orig	2008-06-17 19:23:19.000000000 +0200
-+++ ipband-0.8.1/Makefile	2009-01-15 06:33:07.000000000 +0100
+--- Makefile.orig	2008-06-17 19:23:19.000000000 +0200
++++ Makefile	2010-10-19 16:23:35.000000000 +0200
 @@ -12,7 +12,6 @@
  CPPFLAGS=-I/usr/include/pcap
  LIBS=-lpcap
@@ -8,11 +8,13 @@
  
  ifndef PREFIX
  PREFIX=/usr
-@@ -50,7 +49,6 @@
+@@ -49,8 +48,7 @@
+ all: 	$(BIN)
  
  $(BIN):	$(OBJ_C)
- 	$(CC) -o $(BIN) $(OBJ_C) $(LIBS) $(CFLAGS)
+-	$(CC) -o $(BIN) $(OBJ_C) $(LIBS) $(CFLAGS)
 -	strip $(BIN)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(BIN) $(OBJ_C) $(LIBS)
  
  install-strip:	install
  
