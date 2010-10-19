@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.40 2010/09/12 06:43:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.41 2010/10/19 06:50:34 keri Exp $
+
+*yap-6.2.0 (19 Oct 2010)
+
+  19 Oct 2010; <keri@gentoo.org> +yap-6.2.0.ebuild,
+  +files/yap-6.2.0-chr-sublist.patch, +files/yap-6.2.0-ldflags.patch,
+  +files/yap-6.2.0-yapsharedir.patch:
+  Version bump
 
 *yap-6.0.6 (12 Sep 2010)
 
