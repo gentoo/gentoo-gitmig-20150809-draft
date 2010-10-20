@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.17 2010/10/19 06:07:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-222.ebuild,v 1.18 2010/10/20 05:11:54 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils bash-completion toolchain-funcs
 
 MY_P=${P/-/}
@@ -19,28 +20,25 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND=""
-
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	cp "${WORKDIR}"/contributed/C64-fonts/*.flf fonts/ || die
 	cp "${WORKDIR}"/contributed/bdffonts/*.flf fonts/ || die
 	cp "${WORKDIR}"/ms-dos/*.flf fonts/ || die
 	cp "${WORKDIR}"/contributed/*.flf fonts/ || die
 
-	epatch "${FILESDIR}"/${P}-gentoo.diff
-	sed -i \
-		-e "s@CFLAGS = -g@CFLAGS = ${CFLAGS}@g" Makefile \
-		|| die "sed failed"
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.diff \
+		"${FILESDIR}"/${P}-includes.diff
 }
 
 src_compile() {
-	tc-export CC
-	emake CC="${CC}" clean all || die "emake failed"
+	emake clean
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS} ${LDFLAGS}" \
+		all || die
 }
 
 src_install() {
