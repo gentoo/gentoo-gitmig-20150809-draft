@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBIx-Migration
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/ChangeLog,v 1.1 2009/08/30 18:22:16 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/ChangeLog,v 1.2 2010/10/20 16:53:22 tove Exp $
+
+*DBIx-Migration-0.06 (20 Oct 2010)
+
+  20 Oct 2010; Torsten Veller <tove@gentoo.org> +DBIx-Migration-0.06.ebuild:
+  Version bump
 
 *DBIx-Migration-0.05 (30 Aug 2009)
 
