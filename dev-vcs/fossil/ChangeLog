@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.4 2010/10/19 21:38:36 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.5 2010/10/20 05:31:21 rafaelmartins Exp $
+
+  20 Oct 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  fossil-20100918155143.ebuild, fossil-20101005035549.ebuild:
+  Fixed sqlite dependency. Thanks to Domen Kožar (bug #340245).
 
 *fossil-20101005035549 (19 Oct 2010)
 

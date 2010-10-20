@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20101005035549.ebuild,v 1.1 2010/10/19 21:38:36 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20101005035549.ebuild,v 1.2 2010/10/20 05:31:21 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-db/sqlite:3
+DEPEND=">=dev-db/sqlite-3.7.0
 	dev-libs/openssl
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
