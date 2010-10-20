@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/cman-lib-2.03.09.ebuild,v 1.3 2009/02/10 22:31:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/cman-lib-2.03.09.ebuild,v 1.4 2010/10/20 12:34:52 cla Exp $
 
 inherit eutils versionator
 
@@ -36,6 +36,9 @@ src_compile() {
 			--somajor="$MAJ_PV" \
 			--sominor="$MIN_PV" \
 	) || die "configure problem"
+
+	sed -e 's:\($(CC)\):\1 $(LDFLAGS):' -i Makefile
+	sed -e 's:\($(CC)\):\1 $(LDFLAGS):' -i "${WORKDIR}/${MY_P}/make/cobj.mk"
 
 	emake clean || die "clean problem"
 	emake || die "compile problem"

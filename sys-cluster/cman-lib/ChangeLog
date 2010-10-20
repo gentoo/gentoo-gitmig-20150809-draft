@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cman-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.6 2010/09/11 14:21:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.7 2010/10/20 12:34:52 cla Exp $
+
+  20 Oct 2010; Dawid Węgliński <cla@gentoo.org> cman-lib-2.03.09.ebuild:
+  Respect LDFLAGS (#337652)
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop useles maintainer line
