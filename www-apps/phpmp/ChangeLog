@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/ChangeLog,v 1.11 2010/10/14 15:42:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/ChangeLog,v 1.12 2010/10/20 14:19:14 hwoarang Exp $
+
+  20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> phpmp-0.11.0-r1.ebuild:
+  Stable on amd64 wrt bug #336869
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   phpmp-0.11.0-r1.ebuild:
