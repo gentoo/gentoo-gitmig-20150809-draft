@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.26 2010/10/18 19:48:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.27 2010/10/20 13:52:37 darkside Exp $
+
+  20 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
+  mysql-workbench-5.2.29-r1.ebuild:
+  Use EAPI3, add prefix keywords as tested in bug 339823 by Thomas Burkard
 
 *mysql-workbench-5.2.29-r1 (18 Oct 2010)
 
