@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.78 2010/10/18 16:06:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.79 2010/10/20 10:22:52 fauli Exp $
+
+  20 Oct 2010; Christian Faulhammer <fauli@gentoo.org> pytz-2010l.ebuild:
+  stable x86, bug 341315
 
   18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> pytz-2010l.ebuild:
   Stable on amd64 wrt bug #341315
