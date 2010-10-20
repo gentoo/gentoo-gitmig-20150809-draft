@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.80 2010/09/28 04:56:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.81 2010/10/20 13:39:45 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -tracker-0.8.15.ebuild, tracker-0.8.17.ebuild,
+  +files/tracker-0.8.17-build-with-eds232.patch, tracker-9999.ebuild:
+  Fix build against evolution-data-server-2.32. Drop unneeded la files.
 
   28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> tracker-0.8.15.ebuild,
   tracker-0.8.17.ebuild, tracker-9999.ebuild:
