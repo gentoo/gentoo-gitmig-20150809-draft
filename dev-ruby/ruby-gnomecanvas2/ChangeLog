@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.53 2010/08/28 17:31:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.54 2010/10/20 21:53:35 ranger Exp $
+
+  20 Oct 2010; Brent Baude <ranger@gentoo.org>
+  ruby-gnomecanvas2-0.19.4.ebuild:
+  Marking ruby-gnomecanvas2-0.19.4 ppc stable for bug 329807
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   ruby-gnomecanvas2-0.19.4.ebuild:
