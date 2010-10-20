@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.0.ebuild,v 1.1 2010/10/17 19:03:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.0.ebuild,v 1.2 2010/10/20 20:15:18 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,11 +20,12 @@ RDEPEND=">=dev-libs/glib-2.25.5
 	>=gnome-base/gconf-2.6
 	nautilus? ( >=gnome-base/nautilus-2.22.2 )"
 DEPEND="${RDEPEND}
-	gnome-base/gnome-common
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils"
+# eautoreconf needs:
+#	gnome-base/gnome-common
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -45,6 +46,12 @@ src_prepare() {
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}"usr/$(get_libdir)/nautilus -name "*.la" -delete \
+		|| die "la file removal failed"
 }
 
 pkg_postinst() {
