@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.32.0.ebuild,v 1.1 2010/10/12 18:29:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.32.0.ebuild,v 1.2 2010/10/20 21:29:54 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,9 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-
 IUSE="test"
 
 # gtk+-2.20 needed for tests
-RDEPEND=">=dev-libs/glib-2.18
+RDEPEND=">=dev-libs/glib-2.18:2
 	>=gnome-base/gconf-2.14
-	>=x11-libs/gtk+-2.20
+	>=x11-libs/gtk+-2.20:2
 	>=x11-libs/libxklavier-5.0"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
