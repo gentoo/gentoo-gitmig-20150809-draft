@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.5.ebuild,v 1.2 2010/07/30 15:56:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.7.ebuild,v 1.1 2010/10/20 16:37:27 dertobi123 Exp $
 
 EAPI="2"
 
-inherit depend.apache
+inherit depend.apache eutils
 
 DESCRIPTION="A performance data analyzer for nagios"
 HOMEPAGE="http://www.pnp4nagios.org"
@@ -16,8 +16,9 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/php-4.3[json,pcre,filter,reflection,spl,simplexml,xml,zlib]
-   || ( >=dev-lang/php-4.3[gd-external] >=dev-lang/php-4.3[gd] )
+DEPEND="dev-lang/php[json,simplexml,zlib,xml,filter]
+	|| ( <dev-lang/php-5.3[pcre,reflection,spl] >=dev-lang/php-5.3 )
+	|| ( >=dev-lang/php-4.3[gd-external] >=dev-lang/php-4.3[gd] )
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
@@ -30,6 +31,10 @@ want_apache2
 
 pkg_setup() {
 	depend.apache_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_configure() {
@@ -45,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-config || die "emake install failed"
+	emake DESTDIR="${D}" install-unstripped install-config || die "emake install failed"
 	doinitd "${FILESDIR}/npcd"
 	rm "${D}/usr/share/pnp/install.php"
 

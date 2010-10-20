@@ -1,12 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/files/npcd,v 1.1 2009/10/27 19:40:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/files/npcd,v 1.2 2010/10/20 16:37:27 dertobi123 Exp $
 
 opts="${opts} reload"
 
 depend() {
-	need net nagios
+	need net
 }
 
 start() {
