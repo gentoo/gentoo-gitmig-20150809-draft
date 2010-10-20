@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.104 2010/10/15 21:44:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.105 2010/10/20 20:57:26 dilfridge Exp $
+
+  20 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  -koffice-data-2.1.1.ebuild, koffice-data-2.1.2.ebuild:
+  Cleanup
 
   15 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   koffice-data-2.2.2.ebuild:
