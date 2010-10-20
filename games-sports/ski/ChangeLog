@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/ski
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.9 2010/04/07 13:24:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.10 2010/10/20 15:58:09 mr_bones_ Exp $
+
+*ski-6.6 (20 Oct 2010)
+
+  20 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> +ski-6.6.ebuild:
+  version bump
 
   07 Apr 2010; Alfredo Tupone <tupone@gentoo.org> ski-6.5.ebuild:
   Force python 2. Bug #312283 by arfrever@gentoo.org
