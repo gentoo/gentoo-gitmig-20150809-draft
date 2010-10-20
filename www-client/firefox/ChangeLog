@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.17 2010/10/13 00:10:16 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.18 2010/10/20 03:20:00 anarchy Exp $
+
+*firefox-3.6.11 (20 Oct 2010)
+
+  20 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.11.ebuild:
+  Security Bump
 
   13 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9.ebuild,
   firefox-3.6.9-r1.ebuild:
