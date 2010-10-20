@@ -1,6 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.18 2010/08/18 10:20:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.19 2010/10/20 18:19:11 zmedico Exp $
+
+# Zac Medico <zmedico@gentoo.org> (20 Oct 2010)
+# Force ipc USE flag since it should remain enabled unless
+# it is found to be incompatible with a specific profile
+# or environment. When enabled, it fixes bug #278895,
+# bug #315615, and makes subshell die support more robust
+# (so that repoman's ebuild.nesteddie check is irrelevant).
+sys-apps/portage ipc
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
 # Python should use wide Unicode implementation by default.

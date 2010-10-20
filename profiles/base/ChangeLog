@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.177 2010/09/28 14:58:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.178 2010/10/20 18:19:11 zmedico Exp $
+
+  20 Oct 2010; Zac Medico <zmedico@gentoo.org> package.use.force:
+  Force ipc USE flag for sys-apps/portage since it should remain enabled
+  unless it is found to be incompatible with a specific profile or
+  environment. When enabled, it fixes bug #278895, bug #315615, and makes
+  subshell die support more robust (so that repoman's ebuild.nesteddie check
+  is irrelevant).
 
   28 Sep 2010; Andreas K. Huettel (dilfridge) <mail@akhuettel.de>
   make.defaults:
