@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-sap-ccms-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.8 2010/10/20 00:26:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.9 2010/10/20 00:31:55 jer Exp $
+
+  20 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  nagios-sap-ccms-plugin-0.8.ebuild:
+  And "fix" the librfccm.so related QA warnings.
 
   20 Oct 2010; Jeroen Roovers <jer@gentoo.org>
   nagios-sap-ccms-plugin-0.8.ebuild:
