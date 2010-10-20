@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.423 2010/10/19 20:23:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.424 2010/10/20 14:21:36 hwoarang Exp $
+
+  20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> php-5.3.3-r1.ebuild:
+  Stable on amd64 wrt bug #336869
 
   19 Oct 2010; <olemarkus@gentoo.org> -php-5.2.13.ebuild:
   Removing old version
