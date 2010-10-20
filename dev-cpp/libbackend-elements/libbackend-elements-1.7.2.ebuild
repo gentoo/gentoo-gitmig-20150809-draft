@@ -1,30 +1,31 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/libbackend-elements-1.7.0.ebuild,v 1.1 2010/10/20 05:56:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/libbackend-elements-1.7.2.ebuild,v 1.1 2010/10/20 05:59:57 dev-zero Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit toolchain-funcs versionator
 
 DESCRIPTION="A collection of elementary building blocks for implementing compiler backends in c++."
 HOMEPAGE="http://kolpackov.net/projects/libbackend-elements/"
-SRC_URI="ftp://kolpackov.net/pub/projects/${PN}/${PV%.?}/${P}.tar.bz2"
+SRC_URI="ftp://kolpackov.net/pub/projects/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-cpp/libcult-1.4.3
+RDEPEND=">=dev-cpp/libcult-1.4.6
 	dev-libs/boost"
 DEPEND="${RDEPEND}
-	dev-util/build"
+	dev-util/build:0.3"
 
 src_configure() {
-	mkdir -p build/{c,cxx/gnu,import/libboost,import/libcult}
+	BOOST_PKG="$(best_version ">=dev-libs/boost-1.35.0-r5")"
+	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
+	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
+	BOOST_INC="/usr/include/boost-${BOOST_VER}"
 
-	cat >> build/c/configuration-lib-dynamic.make <<- EOF
-c_lib_type   := shared
-	EOF
+	mkdir -p build/{ld,cxx/gnu,import/libboost,import/libcult}
 
 	cat >> build/cxx/configuration-dynamic.make <<- EOF
 cxx_id       := gnu
@@ -32,7 +33,7 @@ cxx_optimize := n
 cxx_debug    := n
 cxx_rpath    := n
 cxx_pp_extra_options :=
-cxx_extra_options    := ${CXXFLAGS}
+cxx_extra_options    := ${CXXFLAGS} -I${BOOST_INC}
 cxx_ld_extra_options := ${LDFLAGS}
 cxx_extra_libs       :=
 cxx_extra_lib_paths  :=
@@ -46,11 +47,18 @@ cxx_gnu_optimization_options :=
 
 	cat >> build/import/libboost/configuration-dynamic.make <<- EOF
 libboost_installed := y
+libboost_suffix := -mt-${BOOST_VER}
 	EOF
 
 	cat >> build/import/libcult/configuration-dynamic.make <<- EOF
 libcult_installed := y
 	EOF
+
+	cat >> build/ld/configuration-lib-dynamic.make <<- EOF
+ld_lib_type   := shared
+	EOF
+
+	MAKEOPTS+=" verbose=1"
 }
 
 src_install() {
@@ -64,6 +72,6 @@ src_install() {
 	insinto /usr/include
 	doins -r backend-elements
 
-	dodoc NEWS README
+	dodoc NEWS README documentation/[[:upper:]]*
 	dohtml -A xhtml -r documentation/*
 }
