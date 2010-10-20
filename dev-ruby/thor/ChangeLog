@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/thor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.2 2010/10/02 11:41:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.3 2010/10/20 11:06:35 flameeyes Exp $
+
+  20 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> thor-0.14.0.ebuild,
+  thor-0.14.2.ebuild:
+  Fix build with USE=-doc (bug #341881).
 
 *thor-0.14.2 (02 Oct 2010)
 

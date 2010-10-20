@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.14.0.ebuild,v 1.1 2010/08/31 20:14:24 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.14.0.ebuild,v 1.2 2010/10/20 11:06:35 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -36,7 +36,9 @@ all_ruby_prepare() {
 
 all_ruby_compile() {
 	einfo $(pwd)
-	use doc && ruby -Ilib bin/thor rdoc || die "RDoc generation failed"
+	if use doc; then
+		ruby -Ilib bin/thor rdoc || die "RDoc generation failed"
+	fi
 }
 
 each_ruby_test() {
