@@ -1,6 +1,10 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.62 2010/10/20 08:34:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.63 2010/10/20 11:44:31 phajdan.jr Exp $
+
+  20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  taskcoach-1.1.4-r1.ebuild:
+  x86 stable wrt bug #341675
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   taskcoach-1.1.4-r1.ebuild:
