@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.105 2010/10/06 18:27:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.106 2010/10/20 17:06:52 pacho Exp $
+
+  20 Oct 2010; Pacho Ramos <pacho@gentoo.org> tomboy-1.4.0.ebuild:
+  tomboy requires mono-addins with gtk support (bug #341917 by Michiel
+  Helvensteijn).
 
 *tomboy-1.4.0 (06 Oct 2010)
 
