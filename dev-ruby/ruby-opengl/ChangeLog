@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.44 2010/09/16 16:45:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.45 2010/10/20 21:50:04 ranger Exp $
+
+  20 Oct 2010; Brent Baude <ranger@gentoo.org> ruby-opengl-0.60.1-r1.ebuild:
+  Marking ruby-opengl-0.60.1-r1 ppc for bug 329807
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   ruby-opengl-0.60.1.ebuild, ruby-opengl-0.60.1-r1.ebuild:
