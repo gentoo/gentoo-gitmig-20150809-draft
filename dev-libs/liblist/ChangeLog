@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.8 2010/10/08 11:08:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.9 2010/10/20 13:56:58 darkside Exp $
+
+  20 Oct 2010; Jeremy Olexa <darkside@gentoo.org> liblist-2.3.1-r1.ebuild:
+  Fix doc location for Gentoo Prefix, bug 340683 by Nathan Phillip Brink
 
   08 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   liblist-2.3.1-r1.ebuild:

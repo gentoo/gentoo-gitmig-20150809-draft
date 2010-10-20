@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/liblist-2.3.1-r1.ebuild,v 1.3 2010/10/08 11:08:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/liblist-2.3.1-r1.ebuild,v 1.4 2010/10/20 13:56:58 darkside Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ DEPEND="doc? ( media-gfx/transfig
 	virtual/latex-base )"
 
 src_configure() {
-	econf --docdir=/usr/share/doc/${P} \
+	econf --docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable doc docs) \
 		$(use_enable examples) \
 		$(use_enable static-libs static)
@@ -32,9 +32,9 @@ src_install() {
 	dodoc README || die
 
 	if use examples; then
-		insinto /usr/share/doc/${P}/examples
+		insinto /usr/share/doc/${PF}/examples
 		doins examples/{*.c,Makefile,README} || die
-		insinto /usr/share/doc/${P}/examples/cache
+		insinto /usr/share/doc/${PF}/examples/cache
 		doins examples/cache/{*.c,README} || die
 	fi
 
