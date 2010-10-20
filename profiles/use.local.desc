@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6066 2010/10/19 20:33:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6067 2010/10/20 07:13:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3300,6 +3300,7 @@ sci-chemistry/avogadro:glsl - Enable glsl features via GLEW.
 sci-chemistry/caver:pymol - Install the PyMol plugin (sci-chemistry/pymol) 
 sci-chemistry/ccp4:arpwarp - Add binary arp-warp for molecular replacement
 sci-chemistry/ccp4:balbes - Install sci-chemistry/balbes
+sci-chemistry/ccpn:extendnmr - Install needed packages for extendNMR support
 sci-chemistry/cns:aria -  Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
