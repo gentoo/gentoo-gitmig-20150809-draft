@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6067 2010/10/20 07:13:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6068 2010/10/20 19:53:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -711,6 +711,7 @@ app-text/xpdf:nodrm - Disable the drm feature decoder
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings 
 dev-cpp/sptk:aspell - Enable support for app-text/aspell
 dev-cpp/sptk:excel - Enable Excel support
+dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
 dev-db/drizzle:curl -  Enable the HTTP authentication plugin (using net-misc/curl). This is needed for the tests to apply properly. 
 dev-db/drizzle:doc -  Build the API documentation for the package, using app-doc/doxygen. Warning, this might take over an hour on slower machines. 
 dev-db/drizzle:gearman -  Enable the gearman plugins for user-defined functions and logging (using sys-cluster/gearman). 
