@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.262 2010/10/17 14:52:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.263 2010/10/20 20:43:30 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> vte-0.26.1.ebuild:
+  Assign glib/gtk+ dependencies to slot 2. Force maintainer mode to off.
+  Clean unneeded files for python module.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> vte-0.24.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077

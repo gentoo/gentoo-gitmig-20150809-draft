@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.26.1.ebuild,v 1.1 2010/10/13 21:27:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.26.1.ebuild,v 1.2 2010/10/20 20:43:30 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc glade +introspection python"
 
-RDEPEND=">=dev-libs/glib-2.22.0
-	>=x11-libs/gtk+-2.20.0
+RDEPEND=">=dev-libs/glib-2.22:2
+	>=x11-libs/gtk+-2.20:2
 	>=x11-libs/pango-1.22.0
 	sys-libs/ncurses
 	glade? ( dev-util/glade:3 )
@@ -35,6 +35,7 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
+		--disable-maintainer-mode
 		--disable-deprecation
 		--disable-static
 		$(use_enable debug)
@@ -45,4 +46,9 @@ pkg_setup() {
 		--with-gtk=2.0"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 	use python && python_set_active_version 2
+}
+
+src_install() {
+	gnome2_src_install
+	python_clean_installation_image
 }
