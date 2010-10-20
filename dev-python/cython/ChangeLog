@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.50 2010/10/18 15:54:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.51 2010/10/20 10:20:13 fauli Exp $
+
+  20 Oct 2010; Christian Faulhammer <fauli@gentoo.org> cython-0.13.ebuild:
+  stable x86, bug 341313
 
   18 Oct 2010; Markos Chandras <hwoarang@gentoo.org> cython-0.13.ebuild:
   Stable on amd64 wrt bug #341313
