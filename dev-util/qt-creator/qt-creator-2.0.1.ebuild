@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.0.1.ebuild,v 1.1 2010/09/26 17:04:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.0.1.ebuild,v 1.2 2010/10/20 15:02:55 ranger Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -16,7 +16,7 @@ SRC_URI="http://get.qt.nokia.com/${MY_PN}/${MY_P}-src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
 	kde mercurial perforce +qml qtscript rss subversion"
 
