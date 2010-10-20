@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0083.ebuild,v 1.1 2010/09/24 10:55:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0086.ebuild,v 1.1 2010/10/20 06:32:26 jlec Exp $
 
 EAPI="2"
 

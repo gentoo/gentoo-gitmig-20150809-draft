@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.18 2010/09/30 08:06:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.19 2010/10/20 06:32:26 jlec Exp $
+
+*refmac-5.6.0086 (20 Oct 2010)
+
+  20 Oct 2010; Justin Lecher <jlec@gentoo.org>
+  +files/5.6.0086-allow-dynamic-linking.patch, -refmac-5.6.0083.ebuild,
+  -refmac-5.6.0084.ebuild, +refmac-5.6.0086.ebuild:
+  Version Bump, removed old
 
 *refmac-5.6.0085 (30 Sep 2010)
 
