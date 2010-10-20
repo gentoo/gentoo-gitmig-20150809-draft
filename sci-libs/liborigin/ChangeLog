@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.25 2010/10/18 16:03:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.26 2010/10/20 10:12:53 fauli Exp $
+
+  20 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  liborigin-20100903.ebuild:
+  stable x86, bug 335673
 
   18 Oct 2010; Justin Lecher <jlec@gentoo.org> +liborigin-20100630.ebuild:
   Readded liborigin-20100630.ebuild
