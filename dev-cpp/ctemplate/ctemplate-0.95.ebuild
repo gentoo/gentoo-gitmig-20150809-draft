@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.3 2010/02/24 11:19:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.4 2010/10/20 13:54:28 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://code.google.com/p/google-ctemplate/"
 SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs vim-syntax"
 
 DEPEND=""
@@ -32,7 +32,7 @@ src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	# Installs just every piece
-	rm -rf "${D}/usr/share/doc"
+	rm -rf "${ED}/usr/share/doc"
 
 	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml doc/*

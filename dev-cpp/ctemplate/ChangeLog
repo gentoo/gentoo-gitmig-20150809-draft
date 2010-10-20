@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.6 2010/02/24 11:19:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.7 2010/10/20 13:54:28 darkside Exp $
+
+  20 Oct 2010; Jeremy Olexa <darkside@gentoo.org> ctemplate-0.95.ebuild:
+  Use EAPI3, add prefix keywords as tested in bug 339818 by Thomas Burkard
 
   24 Feb 2010; Christian Ruppert <idl0r@gentoo.org> ctemplate-0.95.ebuild:
   Move -j1 to emake install since this caused the parallel-build issues.
