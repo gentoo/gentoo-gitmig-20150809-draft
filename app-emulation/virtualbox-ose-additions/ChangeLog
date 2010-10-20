@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.48 2010/10/12 15:40:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.49 2010/10/20 21:37:18 polynomial-c Exp $
+
+  20 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-additions-3.1.8.ebuild,
+  virtualbox-ose-additions-3.2.8.ebuild,
+  virtualbox-ose-additions-3.2.10.ebuild:
+  Removed INTERACTIVE stuff from ebuilds now that we have a working license
+  management in portage. Thanks to a3li for pointing this out in bug
+  #336795.
 
 *virtualbox-ose-additions-3.2.10 (12 Oct 2010)
 

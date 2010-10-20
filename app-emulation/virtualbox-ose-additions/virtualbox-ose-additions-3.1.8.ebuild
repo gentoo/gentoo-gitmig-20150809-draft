@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.1.8.ebuild,v 1.4 2010/07/14 13:02:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.1.8.ebuild,v 1.5 2010/10/20 21:37:18 polynomial-c Exp $
 
 EAPI=2
 
@@ -18,16 +18,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
-PROPERTIES="interactive"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	!=app-emulation/virtualbox-ose-9999"
-
-pkg_setup() {
-	# We cannot mirror VirtualBox PUEL licensed files see:
-	# http://www.virtualbox.org/wiki/Licensing_FAQ
-	check_license
-}
 
 src_unpack() {
 	return 0
