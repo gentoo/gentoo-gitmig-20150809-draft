@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/figlet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.36 2010/10/19 06:07:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.37 2010/10/20 04:56:27 jer Exp $
+
+*figlet-222-r1 (20 Oct 2010)
+
+  20 Oct 2010; Jeroen Roovers <jer@gentoo.org> +figlet-222-r1.ebuild,
+  +files/figlet-222-includes.diff:
+  Set CFLAGS to override the Makefile instead of sedding it in, respecting
+  LDFLAGS (bug #337895) too. Add patch to fix (some) compiler warnings. Use
+  tc-getCC instead of tc-export. Remove empty DEPEND.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> figlet-222.ebuild:
   Drop to ~mips
