@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.8.ebuild,v 1.1 2010/10/19 23:36:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.8.ebuild,v 1.2 2010/10/20 00:26:23 jer Exp $
 
 EAPI="2"
 
@@ -49,6 +49,7 @@ src_install() {
 	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins || die "Failed Chown of ${D}usr/$(get_libdir)/nagios/plugins"
 
 	dolib.so sap_moni.so
+	newlib.so $(readlink librfccm.so) librfccm.so
 	cd "${S}/config"
 
 	dodir /etc/sapmon
