@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.13 2010/10/19 21:28:32 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.14 2010/10/20 18:27:43 reavertm Exp $
+
+  20 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  system-config-printer-gnome-1.2.2.ebuild,
+  system-config-printer-gnome-1.2.4.ebuild,
+  system-config-printer-gnome-1.2.5.ebuild:
+  Explicitly require in-tree xmlto as spotted by rangerpb
 
 *system-config-printer-gnome-1.2.5 (19 Oct 2010)
 
