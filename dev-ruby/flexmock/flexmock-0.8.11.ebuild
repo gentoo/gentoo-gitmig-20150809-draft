@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.6-r1.ebuild,v 1.4 2010/06/19 14:13:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.11.ebuild,v 1.1 2010/10/20 17:54:12 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby ree18"
 
 RUBY_FAKEGEM_DOCDIR="html"
-RUBY_FAKEGEM_EXTRADOC="CHANGES README"
+RUBY_FAKEGEM_EXTRADOC="CHANGES README.rdoc doc/*.rdoc doc/releases/*"
 
 inherit ruby-fakegem
 
