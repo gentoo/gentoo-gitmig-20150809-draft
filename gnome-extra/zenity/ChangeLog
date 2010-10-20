@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.192 2010/10/17 15:14:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.193 2010/10/20 22:08:39 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> zenity-2.32.0.ebuild:
+  Pin glib/gtk to slot 2.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> zenity-2.30.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
