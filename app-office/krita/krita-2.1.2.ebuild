@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.5 2010/06/21 13:56:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.6 2010/10/20 20:34:50 dilfridge Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="KOffice image manipulation program."
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~ppc ~ppc64"
 IUSE="gmm +kdcraw openexr +pdf +tiff"
 
 DEPEND="
