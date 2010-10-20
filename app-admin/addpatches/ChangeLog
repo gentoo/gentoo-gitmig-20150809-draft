@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/addpatches
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.19 2009/10/17 22:13:17 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.20 2010/10/20 23:51:06 leio Exp $
+
+  20 Oct 2010; Mart Raudsepp <leio@gentoo.org> addpatches-0.2.ebuild:
+  Drop to ~mips
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> addpatches-0.2.ebuild:
   QA fixes; implicit RDEPEND
