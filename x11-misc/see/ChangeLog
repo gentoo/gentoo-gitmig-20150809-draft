@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/see
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/see/ChangeLog,v 1.1 2010/10/20 20:35:02 dev-zero Exp $
+
+*see-0.6 (20 Oct 2010)
+
+  20 Oct 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.6-respect_destdir.patch, +see-0.6.ebuild, +metadata.xml:
+  Initial commit (ebuild written by me).
+
