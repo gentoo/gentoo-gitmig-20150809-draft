@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-Dumper-Concise
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.9 2010/09/01 06:51:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper-Concise/ChangeLog,v 1.10 2010/10/20 08:48:16 tove Exp $
+
+  20 Oct 2010; Torsten Veller <tove@gentoo.org>
+  -Data-Dumper-Concise-1.200.ebuild, -Data-Dumper-Concise-2.000.ebuild,
+  -Data-Dumper-Concise-2.010.ebuild:
+  Cleanup
 
 *Data-Dumper-Concise-2.012 (01 Sep 2010)
 
