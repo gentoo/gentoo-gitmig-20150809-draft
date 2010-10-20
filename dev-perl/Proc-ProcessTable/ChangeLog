@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Proc-ProcessTable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.46 2010/05/20 21:56:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.47 2010/10/20 19:12:38 tove Exp $
+
+*Proc-ProcessTable-0.45-r2 (20 Oct 2010)
+
+  20 Oct 2010; Torsten Veller <tove@gentoo.org>
+  +files/0.45-fix-format-errors.patch, +Proc-ProcessTable-0.45-r2.ebuild,
+  +files/0.45-pthread.patch:
+  Add -lpthread to LIBS (#341241)
 
 *Proc-ProcessTable-0.45-r1 (20 May 2010)
 
