@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.0.ebuild,v 1.1 2010/10/12 19:10:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.0.ebuild,v 1.2 2010/10/20 22:03:54 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
 
 # TODO: configure says python stuff is optional
 HALDEPEND=" hal? ( >=sys-apps/hal-0.5.3 ) "
-RDEPEND=">=x11-libs/gtk+-2.20.0
-	>=dev-libs/glib-2.22.0
+RDEPEND=">=x11-libs/gtk+-2.20:2
+	>=dev-libs/glib-2.22:2
 	>=gnome-base/gconf-2.8
 	>=gnome-base/gnome-panel-2.31.2
 	>=x11-libs/libxklavier-4.0
