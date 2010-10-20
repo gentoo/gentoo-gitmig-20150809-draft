@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.112 2010/10/20 20:23:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.113 2010/10/20 20:25:40 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> brasero-2.32.0.ebuild:
+  Drop hppa keyword per bug #324511.
 
   20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -brasero-2.26.3.ebuild, -brasero-2.28.3.ebuild, brasero-2.32.0.ebuild,
