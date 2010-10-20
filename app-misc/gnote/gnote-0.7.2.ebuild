@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.2.ebuild,v 1.1 2010/03/31 22:40:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.2.ebuild,v 1.2 2010/10/20 13:55:37 eva Exp $
 
 EAPI="2"
 
 inherit gnome2
 
 DESCRIPTION="Desktop note-taking application"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://live.gnome.org/Gnote"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -51,4 +51,9 @@ src_prepare() {
 	# Do not set idiotic defines in a released tarball, bug #311979
 	sed 's/-DG.*_DISABLE_DEPRECATED//g' -i libtomboy/Makefile.am \
 		libtomboy/Makefile.in || die "sed failed"
+}
+
+src_install() {
+	gnome2_src_install
+	find -name "${D}" -name "*.la" -delete || die "la file removal failed"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.7 2010/03/31 22:40:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.8 2010/10/20 13:55:37 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnote-0.6.1-dbus-switch.patch, -gnote-0.6.3.ebuild,
+  -gnote-0.7.1.ebuild, gnote-0.7.2.ebuild:
+  Clean up old revisions.
 
 *gnote-0.7.2 (31 Mar 2010)
 
