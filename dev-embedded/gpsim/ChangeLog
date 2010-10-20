@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.50 2010/10/16 19:01:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.51 2010/10/20 11:11:33 phajdan.jr Exp $
+
+  20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gpsim-0.24.0-r1.ebuild:
+  x86 stable wrt bug #341169
 
   16 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gpsim-0.24.0-r1.ebuild:
   Stable on amd64 wrt bug #341169
