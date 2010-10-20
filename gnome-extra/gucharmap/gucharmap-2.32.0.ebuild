@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.32.0.ebuild,v 1.1 2010/10/17 19:39:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.32.0.ebuild,v 1.2 2010/10/20 20:26:19 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE="cjk doc gnome +introspection python test"
 # FIXME: add gobject-introspection support once available
 RDEPEND=">=dev-libs/glib-2.16.3
 	>=x11-libs/pango-1.2.1
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.14:2
 	gnome? ( gnome-base/gconf )
 	introspection? ( >=dev-libs/gobject-introspection-0.6 )
 	python? ( >=dev-python/pygtk-2.7.1 )"
