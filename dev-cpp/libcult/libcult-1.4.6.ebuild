@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/libcult-1.4.6.ebuild,v 1.1 2010/10/20 05:55:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/libcult-1.4.6.ebuild,v 1.2 2010/10/20 05:58:54 dev-zero Exp $
 
 EAPI="2"
 
@@ -55,6 +55,8 @@ cxx_gnu_optimization_options :=
 	cat >> build/ld/configuration-lib-dynamic.make <<- EOF
 ld_lib_type   := shared
 	EOF
+
+	MAKEOPTS+=" verbose=1"
 }
 
 src_install() {
