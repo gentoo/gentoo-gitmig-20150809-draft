@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_Passwd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.17 2010/10/14 15:25:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.18 2010/10/20 14:15:35 hwoarang Exp $
+
+  20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  PEAR-File_Passwd-1.1.7-r1.ebuild:
+  Stable on amd64 wrt bug #336869
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   PEAR-File_Passwd-1.1.7-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTTP_Download
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/ChangeLog,v 1.7 2010/10/14 15:28:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/ChangeLog,v 1.8 2010/10/20 14:17:27 hwoarang Exp $
+
+  20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  PEAR-HTTP_Download-1.1.3-r1.ebuild:
+  Stable on amd64 wrt bug #336869
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   PEAR-HTTP_Download-1.1.3-r1.ebuild:
