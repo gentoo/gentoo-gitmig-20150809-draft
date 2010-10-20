@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.5 2010/05/07 18:18:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.6 2010/10/20 18:24:47 scarabeus Exp $
+
+*linux-firmware-20100930 (20 Oct 2010)
+
+  20 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +linux-firmware-20100930.ebuild:
+  Version bump (needed for my wifi).
 
   07 May 2010; Robin H. Johnson <robbat2@gentoo.org>
   linux-firmware-20090421.ebuild, linux-firmware-99999999.ebuild:
