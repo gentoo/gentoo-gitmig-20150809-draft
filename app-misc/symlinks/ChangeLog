@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.24 2010/05/19 12:08:12 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.25 2010/10/20 02:14:30 jer Exp $
+
+*symlinks-1.4 (20 Oct 2010)
+
+  20 Oct 2010; Jeroen Roovers <jer@gentoo.org> +symlinks-1.4.ebuild:
+  Version bump.
 
   19 May 2010; Robert Piasek <dagger@gentoo.org> symlinks-1.2-r2.ebuild:
   corrected alphabetic order of keywords
