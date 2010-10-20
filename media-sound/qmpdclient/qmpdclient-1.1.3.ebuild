@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.3.ebuild,v 1.3 2010/10/15 18:58:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.3.ebuild,v 1.4 2010/10/20 10:07:43 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://dump.bitcheese.net/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 IUSE="debug dbus"
 
 DEPEND="x11-libs/qt-gui:4[dbus?]"
