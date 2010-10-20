@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tgt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.5 2010/08/11 23:58:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.6 2010/10/20 12:50:43 cla Exp $
+
+  20 Oct 2010; Dawid Węgliński <cla@gentoo.org> tgt-1.0.7.ebuild:
+  Respect LDFLAGS (#332725)
 
 *tgt-1.0.7 (11 Aug 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.7.ebuild,v 1.1 2010/08/11 23:58:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.7.ebuild,v 1.2 2010/10/20 12:50:43 cla Exp $
 
 EAPI="3"
 
@@ -35,6 +35,8 @@ src_configure() {
 	use infiniband && myconf="${myconf} ISCSI_RDMA=1"
 	use fcp && 	myconf="${myconf} FCP=1"
 	use fcoe && myconf="${myconf} FCOE=1"
+
+	sed -e 's:\($(CC)\):\1 $(LDFLAGS):' -i usr/Makefile
 }
 
 src_compile() {
