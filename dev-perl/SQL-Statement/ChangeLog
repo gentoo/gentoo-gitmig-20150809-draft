@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.36 2010/10/14 19:13:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.37 2010/10/20 07:32:08 tove Exp $
+
+  20 Oct 2010; Torsten Veller <tove@gentoo.org> -SQL-Statement-1.27.ebuild,
+  -SQL-Statement-1.28.ebuild, -SQL-Statement-1.30.ebuild:
+  Cleanup
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> SQL-Statement-1.31.ebuild:
   Marking SQL-Statement-1.31 ~ppc for bug 330301
