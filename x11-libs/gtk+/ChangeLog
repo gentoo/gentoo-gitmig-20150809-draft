@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.476 2010/10/17 14:47:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.477 2010/10/20 21:11:52 eva Exp $
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> gtk+-2.22.0.ebuild:
+  Fix shebang of gtk-builder-convert script.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gtk+-2.20.1-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
