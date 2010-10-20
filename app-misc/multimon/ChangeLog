@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/multimon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.11 2009/09/23 16:05:55 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.12 2010/10/20 04:25:33 jer Exp $
+
+*multimon-1.0-r2 (20 Oct 2010)
+
+  20 Oct 2010; Jeroen Roovers <jer@gentoo.org> +multimon-1.0-r2.ebuild,
+  +files/multimon-1.0-flags.patch, +files/multimon-1.0-includes.patch:
+  Respect LDFLAGS (bug #337700), CC. Fix compiler warnings.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> multimon-1.0.ebuild,
   multimon-1.0-r1.ebuild:
