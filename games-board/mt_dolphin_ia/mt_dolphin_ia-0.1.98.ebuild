@@ -1,7 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.5 2009/12/31 16:25:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.6 2010/10/20 19:05:55 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="client for the french tarot game maitretarot"
@@ -13,13 +14,13 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="=dev-libs/glib-2*
+DEPEND="dev-libs/glib:2
 	dev-libs/libxml2
 	dev-games/libmaitretarot
 	dev-games/libmt_client"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install ||
 	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
 }
