@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/tgt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.6 2010/10/20 12:50:43 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.7 2010/10/20 13:30:07 cla Exp $
+
+*tgt-1.0.7-r1 (20 Oct 2010)
+
+  20 Oct 2010; Dawid Węgliński <cla@gentoo.org> +tgt-1.0.7-r1.ebuild:
+  Revbump for respecting LDFLAGS and die on sed
 
   20 Oct 2010; Dawid Węgliński <cla@gentoo.org> tgt-1.0.7.ebuild:
   Respect LDFLAGS (#332725)
