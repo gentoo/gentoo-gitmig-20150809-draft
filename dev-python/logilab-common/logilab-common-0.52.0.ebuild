@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.52.0.ebuild,v 1.1 2010/09/29 00:43:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.52.0.ebuild,v 1.2 2010/10/20 17:03:07 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/common/${P}.tar.gz mirror://pypi/${PN:0:1}/${
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~s390 ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~s390 ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND="dev-python/setuptools"
