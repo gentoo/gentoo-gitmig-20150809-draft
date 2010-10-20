@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0.ebuild,v 1.1 2010/02/26 16:07:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0.ebuild,v 1.2 2010/10/20 13:31:46 ssuominen Exp $
 
 EAPI=2
-inherit linux-mod
+inherit eutils linux-mod
 
 MY_P=${P/-modules}
 
@@ -23,6 +23,10 @@ CONFIG_CHECK="I2C_ALGOBIT"
 MODULE_NAMES="em8300(video:) bt865(video:) adv717x(video:)"
 
 S=${WORKDIR}/${MY_P}/modules
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-2.6.35.patch
+}
 
 src_compile() {
 	set_arch_to_kernel
