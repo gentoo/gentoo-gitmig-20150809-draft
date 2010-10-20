@@ -2,11 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>lavajoe@gentoo.org</email>
-</maintainer>
-<maintainer>
-  <email>gbugs@stargazer.at</email>
-  <name>Toei Rei</name>
-</maintainer>
 </pkgmetadata>
