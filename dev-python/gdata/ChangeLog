@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.76 2010/10/19 10:52:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.77 2010/10/20 11:23:39 phajdan.jr Exp $
+
+  20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gdata-2.0.12.ebuild:
+  x86 stable wrt bug #341621
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gdata-2.0.12.ebuild:
   Stable on amd64 wrt bug #341621
