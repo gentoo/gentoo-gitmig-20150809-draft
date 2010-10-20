@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.205 2010/10/20 09:13:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.206 2010/10/20 10:31:19 fauli Exp $
+
+  20 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  chromium-7.0.517.41.ebuild:
+  stable x86, security bug 341797
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   chromium-7.0.517.41.ebuild:
