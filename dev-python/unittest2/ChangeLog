@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.7 2010/07/12 21:41:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.8 2010/10/20 17:00:20 ranger Exp $
+
+  20 Oct 2010; Brent Baude <ranger@gentoo.org> unittest2-0.5.1.ebuild:
+  Marking unittest2-0.5.1 ~ppc for bug 339072
 
 *unittest2-0.5.1 (12 Jul 2010)
 
