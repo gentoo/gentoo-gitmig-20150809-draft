@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/galaxis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.12 2010/10/18 17:14:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.13 2010/10/20 08:07:43 mr_bones_ Exp $
+
+*galaxis-1.8 (20 Oct 2010)
+
+  20 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> +galaxis-1.8.ebuild,
+  +files/galaxis-1.8-gentoo.patch:
+  version bump
 
   18 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> galaxis-1.7.ebuild,
   +files/galaxis-1.7-gentoo.patch:
