@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.77 2010/10/09 14:20:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.78 2010/10/20 14:26:32 phajdan.jr Exp $
+
+*chromium-bin-6.0.472.62-r1 (20 Oct 2010)
+
+  20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-bin-6.0.472.51.ebuild, +chromium-bin-6.0.472.62-r1.ebuild:
+  Fix problems with creating application shortcuts and setting as default
+  browser, bug #340939 by Anton Bolshakov <anton.bugs@gmail.com>. Remove
+  old.
 
 *chromium-bin-6.0.472.62 (09 Oct 2010)
 

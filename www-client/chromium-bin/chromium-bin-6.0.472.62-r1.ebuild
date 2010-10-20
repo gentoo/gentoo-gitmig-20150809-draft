@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-6.0.472.51.ebuild,v 1.2 2010/09/17 01:13:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-6.0.472.62-r1.ebuild,v 1.1 2010/10/20 14:26:32 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -47,16 +47,19 @@ RDEPEND="app-arch/bzip2
 		x11-themes/xfce4-icon-theme
 	)"
 
-get_chromium_home() {
-	echo "/opt/chromium.org"
+pkg_setup() {
+	CHROMIUM_HOME="/opt/chromium.org"
 }
 
 src_install() {
-	dodir "$(get_chromium_home)" || die
-	insinto "$(get_chromium_home)"
-	cp -R usr/$(get_libdir)/chromium-browser/* "${D}/$(get_chromium_home)" || die
+	dodir "${CHROMIUM_HOME}" || die
+	insinto "${CHROMIUM_HOME}"
+	cp -R usr/$(get_libdir)/chromium-browser/* "${D}/${CHROMIUM_HOME}" || die
 
-	make_wrapper chromium-bin ./chrome "$(get_chromium_home)"
+	sed -e 's/chromium-chromium.desktop/chromium-bin-chromium-bin.desktop/g' \
+		-i "${D}/${CHROMIUM_HOME}/chromium-launcher.sh" || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-bin || die
+
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium (bin)" ${PN} "Network;WebBrowser"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
