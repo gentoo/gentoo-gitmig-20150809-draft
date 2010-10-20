@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r4.ebuild,v 1.1 2010/10/04 17:02:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r4.ebuild,v 1.2 2010/10/20 13:33:10 darkside Exp $
 
 EAPI="3"
 
@@ -189,7 +189,7 @@ src_configure() {
 
 src_compile() {
 	emake -j1 \
-		DESTDIR="${ED}" onlylib || die "emake failed"
+		DESTDIR="${D}" onlylib || die "emake failed"
 }
 
 src_install() {
@@ -197,7 +197,7 @@ src_install() {
 	source "${S}"/include/ccp4.setup
 
 	emake -j1 \
-		DESTDIR="${ED}" \
+		DESTDIR="${D}" \
 		includedir="${EPREFIX}"/usr/include \
 		library_includedir="${EPREFIX}"/usr/include \
 		install || die
