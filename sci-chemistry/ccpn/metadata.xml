@@ -5,4 +5,7 @@
 <maintainer>
   <email>jlec@gentoo.org</email>
 </maintainer>
+<use>
+  <flag name='extendnmr'>Install needed packages for extendNMR support</flag>
+</use>
 </pkgmetadata>
