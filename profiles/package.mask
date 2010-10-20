@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12072 2010/10/18 18:33:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12073 2010/10/20 20:54:14 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -134,6 +134,7 @@ x11-libs/openmotif-compat
 >=gnome-base/gnome-desktop-2.32
 >=dev-libs/atk-1.32
 >=x11-libs/vte-0.26
+>=x11-terms/gnome-terminal-2.32
 >=net-libs/libsoup-gnome-2.32
 >=net-libs/libsoup-2.32
 >=dev-libs/totem-pl-parser-2.32
