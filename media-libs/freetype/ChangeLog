@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.269 2010/10/12 18:34:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.270 2010/10/20 10:04:28 hwoarang Exp $
+
+  20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> freetype-2.4.3.ebuild:
+  Stable on amd64 wrt bug #341845
 
   12 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> freetype-2.4.2.ebuild,
   freetype-2.4.3.ebuild:
