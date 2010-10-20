@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/build
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.1 2010/10/20 05:53:31 dev-zero Exp $
+
+*build-0.3.8 (20 Oct 2010)
+
+  20 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> +build-0.3.8.ebuild,
+  +metadata.xml:
+  Initial commit (ebuild written by me), needed for xsd and the required
+  libraries.
+
