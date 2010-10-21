@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.6.2-r1.ebuild,v 1.2 2010/09/06 17:48:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.6.2-r1.ebuild,v 1.3 2010/10/21 13:57:51 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
+	# This patch is bogus, drop it from next version or revision
 	PATCHES=( "${FILESDIR}"/${PN}-4.6.x-ck-launch-session.patch )
 	XFCONF="--disable-dependency-tracking
 		$(use_enable dbus)
