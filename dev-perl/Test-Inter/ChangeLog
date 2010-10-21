@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.5 2010/10/21 19:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.6 2010/10/21 19:44:46 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> Test-Inter-1.01.ebuild:
+  Marked ~ppc (bug #341969).
 
   21 Oct 2010; Jeroen Roovers <jer@gentoo.org> Test-Inter-1.01.ebuild:
   Marked ~hppa (bug #341969).
