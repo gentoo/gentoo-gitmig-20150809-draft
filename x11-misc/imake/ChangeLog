@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.36 2010/10/17 03:27:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.37 2010/10/21 01:21:42 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> imake-1.0.3.ebuild:
+  Marking imake-1.0.3 ppc stable for bug 239063
 
   17 Oct 2010; Mart Raudsepp <leio@gentoo.org> imake-1.0.2.ebuild:
   Drop to ~mips
