@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.28 2010/10/12 09:24:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.29 2010/10/21 08:14:07 voyageur Exp $
+
+*clang-2.8-r2 (21 Oct 2010)
+
+  21 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> -clang-2.7-r2.ebuild,
+  -clang-2.8.ebuild, +clang-2.8-r2.ebuild:
+  Also set GCC C headers path with USE=system-cxx-headers, reported by
+  Guillaume Chatelet <chatelet.guillaume@gmail.com>, bug #341891, tested
+  with boost compilation. Clean some versions
 
 *clang-2.8-r1 (12 Oct 2010)
 
