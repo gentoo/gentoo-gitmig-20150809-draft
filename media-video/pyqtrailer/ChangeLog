@@ -1,6 +1,12 @@
 # ChangeLog for media-video/pyqtrailer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.4 2010/10/18 14:05:26 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.5 2010/10/21 21:33:29 sochotnicky Exp $
+
+*pyqtrailer-0.4.0 (21 Oct 2010)
+
+  21 Oct 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -pyqtrailer-0.3.6.ebuild, +pyqtrailer-0.4.0.ebuild:
+  Rebase to latest upstream
 
   18 Oct 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   pyqtrailer-0.3.6.ebuild:
