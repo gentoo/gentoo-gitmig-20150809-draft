@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-sun-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sun-misc/ChangeLog,v 1.24 2010/09/28 11:50:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-sun-misc/ChangeLog,v 1.25 2010/10/21 01:04:32 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking font-sun-misc-1.0.1 ppc stable for bug 239063
 
   28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   font-sun-misc-1.0.1.ebuild:
