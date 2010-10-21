@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.41 2010/10/21 07:47:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.42 2010/10/21 12:24:19 anarchy Exp $
+
+  21 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> thunderbird-3.1.5.ebuild,
+  +files/bug-606109.patch:
+  Address build failure with -alsa
 
   21 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
   thunderbird-3.1.5.ebuild:

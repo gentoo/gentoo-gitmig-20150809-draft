@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.5.ebuild,v 1.2 2010/10/21 07:47:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.5.ebuild,v 1.3 2010/10/21 12:24:19 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -113,6 +113,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	epatch "${FILESDIR}/bug-606109.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
