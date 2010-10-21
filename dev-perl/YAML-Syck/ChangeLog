@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.28 2010/09/24 15:54:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.29 2010/10/21 17:02:31 armin76 Exp $
+
+  21 Oct 2010; Raúl Porcel <armin76@gentoo.org> YAML-Syck-1.05.ebuild,
+  YAML-Syck-1.07.ebuild, YAML-Syck-1.08.ebuild, YAML-Syck-1.10.ebuild,
+  YAML-Syck-1.12.ebuild, YAML-Syck-1.14.ebuild, YAML-Syck-1.15.ebuild:
+  Add ~alpha/~arm/~ia64/~s390/~sh/~sparc wrt #341969
 
 *YAML-Syck-1.15 (24 Sep 2010)
 
