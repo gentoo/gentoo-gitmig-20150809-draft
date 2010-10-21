@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrender
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.79 2010/09/28 13:54:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.80 2010/10/21 01:18:16 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking libXrender-0.9.6 ppc stable for bug 239063
 
   28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   libXrender-0.9.6.ebuild:
