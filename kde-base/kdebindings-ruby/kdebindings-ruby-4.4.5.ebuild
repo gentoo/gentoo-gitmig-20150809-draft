@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.5.ebuild,v 1.5 2010/09/15 09:04:04 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.4.5.ebuild,v 1.6 2010/10/21 22:25:26 dilfridge Exp $
 
 EAPI="2"
 
@@ -19,6 +19,8 @@ IUSE="akonadi debug okular phonon plasma qscintilla qwt semantic-desktop"
 DEPEND="
 	$(add_kdebase_dep smoke 'akonadi?,okular?,phonon?,qscintilla?,qwt?,semantic-desktop?,webkit?')
 "
+
+ruby_add_bdepend virtual/rubygems
 
 RDEPEND="${DEPEND}
 	!dev-ruby/qt4-qtruby
