@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.76 2010/10/21 01:20:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.77 2010/10/21 14:04:05 scarabeus Exp $
+
+  21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -pixman-0.17.2.ebuild, -files/pixman-0.17.2-armv7.patch:
+  old
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> pixman-0.18.2.ebuild:
   Marking pixman-0.18.2 ppc stable for bug 239063

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXrender
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.80 2010/10/21 01:18:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.81 2010/10/21 14:12:50 scarabeus Exp $
+
+  21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0001-Make-libXrender-use-docdir-for-documentation-placeme.patch,
+  -libXrender-0.9.5.ebuild:
+  old
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking libXrender-0.9.6 ppc stable for bug 239063

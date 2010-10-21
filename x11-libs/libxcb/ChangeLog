@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.70 2010/10/21 01:20:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.71 2010/10/21 14:05:27 scarabeus Exp $
+
+  21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libxcb-1.5.ebuild:
+  old
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking libxcb-1.6 ppc stable for bug 239063
