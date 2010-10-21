@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.5 2010/10/21 18:57:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.6 2010/10/21 18:59:05 ssuominen Exp $
 
 # Sandbox should work now, leaving commented for testing.
 # FEATURES="-sandbox"
@@ -17,7 +17,7 @@ USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
 # These USE flags were originally inserted here because of PHP
 # and were later removed by me. Reinserting the USE flags again because they are
 # global USE flags that may be expected to be set by other packages.
-USE="${USE} cli pcre  session"
+USE="${USE} cli pcre session"
 
 # Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
 # Enabled again for testing.
