@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.17 2010/10/17 12:00:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.18 2010/10/21 20:57:07 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> libfm-0.1.12.ebuild:
+  Marking libfm-0.1.12 ~ppc for bug 341031
 
   17 Oct 2010; Markos Chandras <hwoarang@gentoo.org> libfm-0.1.14.ebuild,
   libfm-9999.ebuild, metadata.xml:
