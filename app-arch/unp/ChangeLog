@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.27 2010/01/01 19:44:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unp/ChangeLog,v 1.28 2010/10/21 19:55:35 hanno Exp $
+
+*unp-2.0_pre5 (21 Oct 2010)
+
+  21 Oct 2010; Hanno Boeck <hanno@gentoo.org> +unp-2.0_pre5.ebuild:
+  Version bump, nls and bash-completion support, no more patches needed.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> unp-1.0.15-r2.ebuild:
   Transfer Prefix keywords
