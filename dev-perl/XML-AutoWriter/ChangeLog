@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-AutoWriter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.19 2010/10/18 13:41:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/ChangeLog,v 1.20 2010/10/21 20:20:36 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> XML-AutoWriter-0.40.ebuild:
+  Stable for HPPA (bug #341211).
 
   18 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   XML-AutoWriter-0.40.ebuild:
