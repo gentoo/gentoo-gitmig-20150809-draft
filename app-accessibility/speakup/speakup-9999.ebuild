@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.4 2010/06/29 14:26:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.5 2010/10/21 19:12:16 williamh Exp $
 
 EAPI="2"
 
@@ -16,29 +16,29 @@ SLOT="0"
 KEYWORDS=""
 IUSE="modules"
 
-MODULE_NAMES="speakup(${PN}:\"${S}\"/src)
-	speakup_acntpc(${PN}:\"${S}\"/src)
-	speakup_acntsa(${PN}:\"${S}\"/src)
-	speakup_apollo(${PN}:\"${S}\"/src)
-	speakup_audptr(${PN}:\"${S}\"/src)
-	speakup_bns(${PN}:\"${S}\"/src)
-	speakup_decext(${PN}:\"${S}\"/src)
-	speakup_decpc(${PN}:\"${S}\"/src)
-	speakup_dectlk(${PN}:\"${S}\"/src)
-	speakup_dtlk(${PN}:\"${S}\"/src)
-	speakup_dummy(${PN}:\"${S}\"/src)
-	speakup_keypc(${PN}:\"${S}\"/src)
-	speakup_ltlk(${PN}:\"${S}\"/src)
-	speakup_soft(${PN}:\"${S}\"/src)
-	speakup_spkout(${PN}:\"${S}\"/src)
-	speakup_txprt(${PN}:\"${S}\"/src)"
+MODULE_NAMES="speakup(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_acntpc(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_acntsa(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_apollo(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_audptr(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_bns(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_decext(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_decpc(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_dectlk(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_dtlk(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_dummy(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_keypc(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_ltlk(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_soft(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_spkout(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
+	speakup_txprt(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)"
 BUILD_PARAMS="KERNELDIR=${KERNEL_DIR}"
 BUILD_TARGETS="clean all"
 
 src_prepare() {
 	use modules && cmd=die || cmd=ewarn
-	if kernel_is lt 2 6 26; then
-		$cmd "Speakup requires at least kernel version 2.6.26"
+	if kernel_is lt 2 6 36; then
+		$cmd "Speakup requires at least kernel version 2.6.36"
 	fi
 }
 
@@ -48,10 +48,9 @@ src_compile() {
 
 src_install() {
 	use modules && linux-mod_src_install
-	dobin tools/speakupconf
-	dosbin tools/talkwith
-	dodoc Bugs.txt README To-Do doc/DefaultKeyAssignments doc/spkguide.txt
-	newdoc tools/README README.tools
+	dodoc Bugs.txt README To-Do
+	dodoc drivers/staging/speakup/DefaultKeyAssignments
+	dodoc drivers/staging/speakup/spkguide.txt
 }
 
 pkg_postinst() {
