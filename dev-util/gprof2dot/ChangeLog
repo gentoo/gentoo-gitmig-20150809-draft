@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gprof2dot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.2 2010/10/10 18:27:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.3 2010/10/21 00:45:46 sping Exp $
+
+  21 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20100216.ebuild:
+  Migrate from mercurial checkout to snapshot tarball (bug #337088)
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gprof2dot-0_p20100216.ebuild:

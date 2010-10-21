@@ -1,23 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20100216.ebuild,v 1.2 2010/10/10 18:27:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/gprof2dot-0_p20100216.ebuild,v 1.3 2010/10/21 00:45:46 sping Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="*"
 PYTHON_USE_WITH="xml"
 
-inherit mercurial python
+inherit python
 
 DESCRIPTION="Converts profiling output to dot graphs"
 HOMEPAGE="http://code.google.com/p/jrfonseca/wiki/Gprof2Dot"
-SRC_URI=""
-EHG_REPO_URI="https://gprof2dot.jrfonseca.googlecode.com/hg/"
-EHG_REVISION="9c41dcfc9906"
-
-if [[ ${PV} != 0_p20100216 ]]; then
-	die 'Broken bump detected: same \${EHG_REVISION} again'
-fi
+SRC_URI="http://www.hartwork.org/public/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,8 +20,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-S="${WORKDIR}/hg"
 
 src_install() {
 	abi_specific_install() {
