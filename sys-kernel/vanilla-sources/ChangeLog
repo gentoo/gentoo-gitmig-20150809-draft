@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.814 2010/10/21 17:49:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.815 2010/10/21 17:53:38 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  vanilla-sources-2.6.35.4.ebuild, vanilla-sources-2.6.35.5.ebuild,
+  vanilla-sources-2.6.35.6.ebuild, vanilla-sources-2.6.35.7.ebuild:
+  Marked ~hppa too.
 
   21 Oct 2010; Mike Pagano <mpagano@gentoo.org>
   -vanilla-sources-2.6.27.10.ebuild, -vanilla-sources-2.6.27.12.ebuild,

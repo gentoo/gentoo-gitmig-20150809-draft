@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.35.5.ebuild,v 1.1 2010/09/21 08:19:01 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.35.5.ebuild,v 1.2 2010/10/21 17:53:38 jer Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -13,5 +13,5 @@ DESCRIPTION="Full sources for the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
 
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
