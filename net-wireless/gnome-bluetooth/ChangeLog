@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.79 2010/08/01 12:41:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.80 2010/10/21 22:03:38 eva Exp $
+
+*gnome-bluetooth-2.32.0 (21 Oct 2010)
+
+  21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-bluetooth-2.32.0.ebuild, metadata.xml:
+  Version bump for gnome 2.32.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gnome-bluetooth-2.30.0.ebuild:
