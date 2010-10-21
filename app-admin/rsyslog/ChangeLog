@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.31 2010/06/17 20:00:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.32 2010/10/21 07:38:29 dev-zero Exp $
+
+*rsyslog-5.4.0 (21 Oct 2010)
+
+  21 Oct 2010; Tiziano Müller <dev-zero@gentoo.org>
+  -files/3-devel/rsyslog.conf, -files/3-devel/rsyslog.init,
+  -files/3-devel/rsyslog.logrotate, -files/3-devel/rsyslog-gentoo.conf,
+  +files/5-stable/rsyslog.confd, +files/5-stable/rsyslog.initd,
+  +files/5-stable/rsyslog.logrotate, +files/5-stable/rsyslog-gentoo.conf,
+  +rsyslog-5.4.0.ebuild, metadata.xml:
+  Version bump (bug #292919), also solves bug #283416 and #339985. Thanks to
+  Ultrabug for the version bump and extensions/fixes and Mike Nerone for
+  testing.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> rsyslog-3.20.4.ebuild,
   rsyslog-3.22.0.ebuild, rsyslog-3.22.1.ebuild:

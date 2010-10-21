@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/3-devel/rsyslog.init,v 1.2 2008/08/14 06:47:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/5-stable/rsyslog.initd,v 1.1 2010/10/21 07:38:29 dev-zero Exp $
 
 opts="reload"
 
@@ -30,8 +30,8 @@ reload() {
 		eerror "rsyslogd not running"
 		return 1
 	fi
-	
-	ebegin "Reloading configuration and re-opening log files"
+
+	ebegin "Re-opening rsyslogd log files"
 	start-stop-daemon --stop --oknodo --signal HUP \
 		--pidfile "${PIDFILE}"
 	eend $?
