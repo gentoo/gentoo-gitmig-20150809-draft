@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.9.ebuild,v 1.1 2010/10/20 14:13:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.9.ebuild,v 1.2 2010/10/21 13:06:35 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -145,6 +145,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patch"
+
+	epatch "${FILESDIR}"/bug-606109.patch
 
 	if use crypt && use mailclient ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail

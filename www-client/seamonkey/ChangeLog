@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.262 2010/10/20 14:13:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.263 2010/10/21 13:06:35 polynomial-c Exp $
+
+  21 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.9.ebuild, +files/bug-606109.patch:
+  Fixed compilation with disabled wav/ogg support (upstream bug #606109).
 
 *seamonkey-2.0.9 (20 Oct 2010)
 
