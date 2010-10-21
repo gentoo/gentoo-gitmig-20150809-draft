@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/socnetv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.9 2010/10/04 21:29:25 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.10 2010/10/21 11:19:24 hwoarang Exp $
+
+*socnetv-0.81-r1 (21 Oct 2010)
+
+  21 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  +socnetv-0.81-r1.ebuild:
+  Respect CXX,LDFLAGS. Bug #341875. Thanks to Diego E. 'Flameeyes' Pettenò
+  <flameeyes@gentoo.org> for reporting
 
 *socnetv-0.81 (04 Oct 2010)
 
