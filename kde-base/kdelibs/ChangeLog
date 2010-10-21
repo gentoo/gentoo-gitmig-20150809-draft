@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.705 2010/10/06 09:17:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.706 2010/10/21 15:04:21 tampakrap Exp $
+
+  21 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  kdelibs-4.5.2.ebuild, +files/kdelibs-4.5.2-open-https.patch:
+  Fix https urls being actually shown instead of getting downloaded, patch
+  backported from upstream 4.5 branch, fixes bug 340257 kde bug 253294
 
 *kdelibs-4.5.2 (05 Oct 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.5.2.ebuild,v 1.1 2010/10/06 09:17:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.5.2.ebuild,v 1.2 2010/10/21 15:04:21 tampakrap Exp $
 
 EAPI="3"
 
@@ -126,6 +126,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.3.3-klauncher_mac.patch"
 	"${FILESDIR}/${PN}-4.4.3-mimetypes.patch"
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
+	"${FILESDIR}/${P}-open-https.patch"
 )
 
 src_prepare() {
