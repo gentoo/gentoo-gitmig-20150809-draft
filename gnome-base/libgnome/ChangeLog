@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.200 2010/10/17 15:09:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.201 2010/10/21 21:33:15 eva Exp $
+
+  21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgnome-2.24.1.ebuild, -libgnome-2.26.0.ebuild, -libgnome-2.28.0.ebuild,
+  libgnome-2.32.0.ebuild:
+  Make libcanberra non-optional as per herd policy. Clean old revisions.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> libgnome-2.30.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
