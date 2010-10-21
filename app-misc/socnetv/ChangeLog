@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/socnetv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.10 2010/10/21 11:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.11 2010/10/21 15:25:27 hwoarang Exp $
+
+  21 Oct 2010; Markos Chandras <hwoarang@gentoo.org> socnetv-0.81-r1.ebuild:
+  Explicitly inherit eutils. Fix typo
 
 *socnetv-0.81-r1 (21 Oct 2010)
 

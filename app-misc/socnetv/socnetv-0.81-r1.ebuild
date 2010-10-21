@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/socnetv-0.81-r1.ebuild,v 1.1 2010/10/21 11:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/socnetv-0.81-r1.ebuild,v 1.2 2010/10/21 15:25:27 hwoarang Exp $
 
 EAPI="2"
 
-inherit qt4-r2 toolchain-funcs
+inherit eutils qt4-r2 toolchain-funcs
 
 MY_PN="SocNetV"
 MY_P="${MY_PN}-${PV}"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	qt4-r2_src_prepare
 	sed -i "s/@make/@+make/" Makefile.in \
-		|| die "Fix parallalel build"
+		|| die "Fix parallel build"
 }
 
 src_compile() {
