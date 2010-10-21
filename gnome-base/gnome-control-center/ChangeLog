@@ -1,6 +1,20 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.71 2010/10/17 19:28:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.72 2010/10/21 15:01:50 eva Exp $
+
+  21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-control-center-2.24.0.1-fbsd.patch,
+  -gnome-control-center-2.26.0-r1.ebuild,
+  -files/gnome-control-center-2.26.0-automagics-canberra+polkit.patch,
+  -files/gnome-control-center-2.26.0-default-background.patch,
+  -files/gnome-control-center-2.26.0-gconf-unref.patch,
+  -files/gnome-control-center-2.26.0-keybinding-crash.patch,
+  -files/gnome-control-center-2.26.0-libxklavier4.patch,
+  -gnome-control-center-2.28.1.ebuild,
+  -gnome-control-center-2.28.1-r2.ebuild,
+  gnome-control-center-2.32.0.ebuild:
+  Pin glib/gtk dependency to slot 2, re-add libunique and libcanberra-gtk to
+  RDEPEND. Clean up old revisions.
 
 *gnome-control-center-2.32.0 (17 Oct 2010)
 

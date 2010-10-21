@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.0.ebuild,v 1.1 2010/10/17 19:28:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.0.ebuild,v 1.2 2010/10/21 15:01:50 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -18,8 +18,8 @@ IUSE="eds"
 # TODO: appindicator
 RDEPEND="x11-libs/libXft
 	>=x11-libs/libXi-1.2
-	>=x11-libs/gtk+-2.20.0:2
-	>=dev-libs/glib-2.17.4
+	>=x11-libs/gtk+-2.20:2
+	>=dev-libs/glib-2.17.4:2
 	>=gnome-base/gconf-2.0
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/nautilus-2.6
@@ -32,10 +32,11 @@ RDEPEND="x11-libs/libXft
 	>=gnome-base/gnome-menus-2.11.1
 	gnome-base/gnome-settings-daemon
 
+	dev-libs/libunique
 	x11-libs/pango
 	dev-libs/libxml2
 	media-libs/freetype
-	media-libs/libcanberra
+	media-libs/libcanberra[gtk]
 
 	eds? ( >=gnome-extra/evolution-data-server-1.7.90 )
 
