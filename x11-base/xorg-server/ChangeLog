@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.544 2010/10/16 04:51:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.545 2010/10/21 13:03:33 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> xorg-server-1.7.7-r1.ebuild:
+  Marking xorg-server-1.7.7-r1 ppc for bug 330593
 
   16 Oct 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.9.0.902.ebuild:
