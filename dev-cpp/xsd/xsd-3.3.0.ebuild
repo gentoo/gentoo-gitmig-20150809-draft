@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.1 2010/10/20 19:44:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.2 2010/10/21 05:49:02 dev-zero Exp $
 
 EAPI="2"
 
@@ -136,7 +136,7 @@ src_install() {
 
 	dohtml -r -A xhtml -A pdf documentation/*
 
-	dodoc NEWS README FLOSSE
+	dodoc NEWS README FLOSSE documentation/custom-literals.xsd
 	newdoc libxsd/README README.libxsd
 	newdoc libxsd/FLOSSE FLOSSE.libxsd
 

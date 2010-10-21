@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/xsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/ChangeLog,v 1.1 2010/10/20 19:44:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/ChangeLog,v 1.2 2010/10/21 05:49:02 dev-zero Exp $
+
+  21 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> xsd-3.3.0.ebuild:
+  Added example xsd file to docs.
 
 *xsd-3.3.0 (20 Oct 2010)
 
