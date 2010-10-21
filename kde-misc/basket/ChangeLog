@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/basket
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.6 2010/08/09 16:38:52 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.7 2010/10/21 21:54:00 dilfridge Exp $
+
+*basket-1.81 (21 Oct 2010)
+
+  21 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +basket-1.81.ebuild, +files/basket-1.81-crypt.patch:
+  Version bump
 
   09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> basket-1.80.ebuild:
   Remove unnecessary KDE_MINIMAL
