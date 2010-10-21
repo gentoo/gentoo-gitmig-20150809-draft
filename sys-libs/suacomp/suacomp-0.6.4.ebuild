@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.3.ebuild,v 1.2 2010/09/03 14:44:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.4.ebuild,v 1.1 2010/10/21 14:28:48 mduft Exp $
 
 EAPI=2
 
 inherit toolchain-funcs
 
 DESCRIPTION="library wrapping the interix lib-c to make it less buggy."
-HOMEPAGE="http://dev.gentoo.org/~mduft/suacomp"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+HOMEPAGE="http://suacomp.sf.net"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BEER-WARE"
 SLOT="0"
