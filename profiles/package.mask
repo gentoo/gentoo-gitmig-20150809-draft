@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12075 2010/10/21 02:35:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12076 2010/10/21 08:54:25 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1125,11 +1125,6 @@ media-sound/teamspeak-server-bin
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02 Dec 2009)
 # cvs ebuild vdr-xineliboutput-9999 masked for lifetime
 =media-plugins/vdr-xineliboutput-9999
-
-# Torsten Veller <tove@gentoo.org> (26 Nov 2009)
-# Complete reorganization (and almost complete rewrite),
-# depends on perl-5.10, needs testing
->=dev-perl/DateManip-6.0
 
 # Krzysztof Pawlik <nelchael@gentoo.org> (23 Nov 2009)
 # Borken TPM patch, see bug #294119
