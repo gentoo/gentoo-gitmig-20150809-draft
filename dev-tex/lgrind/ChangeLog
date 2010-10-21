@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/lgrind
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.13 2007/04/28 16:19:32 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.14 2010/10/21 20:27:50 aballier Exp $
+
+*lgrind-3.67-r3 (21 Oct 2010)
+
+  21 Oct 2010; Alexis Ballier <aballier@gentoo.org> +lgrind-3.67-r3.ebuild,
+  +files/lgrind-3.67-fgets.patch:
+  Honour CC, LDFLAGS (bug #339749), CFLAGS, fix potential overflow (bug
+  #339750)
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> lgrind-3.67-r2.ebuild:
   Use doenvd (#173884)
