@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.81 2010/10/06 09:17:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.82 2010/10/21 22:08:43 dilfridge Exp $
+
+  21 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  okular-4.4.5.ebuild, okular-4.5.2.ebuild:
+  Require poppler without exception support (bug 338240)
 
 *okular-4.5.2 (05 Oct 2010)
 

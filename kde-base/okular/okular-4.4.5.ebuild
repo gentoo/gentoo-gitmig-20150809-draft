@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.4.5.ebuild,v 1.5 2010/08/09 17:35:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.4.5.ebuild,v 1.6 2010/10/21 22:08:43 dilfridge Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ DEPEND="
 	djvu? ( app-text/djvu )
 	ebook? ( app-text/ebook-tools )
 	jpeg? ( media-libs/jpeg:0 )
-	pdf? ( >=app-text/poppler-0.12.3-r3[lcms,qt4] )
+	pdf? ( >=app-text/poppler-0.12.3-r3[lcms,qt4,-exceptions] )
 	ps? ( app-text/libspectre )
 	tiff? ( media-libs/tiff )
 "
