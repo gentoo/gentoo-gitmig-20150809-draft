@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.813 2010/10/21 17:43:08 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.814 2010/10/21 17:49:39 mpagano Exp $
+
+  21 Oct 2010; Mike Pagano <mpagano@gentoo.org>
+  -vanilla-sources-2.6.27.10.ebuild, -vanilla-sources-2.6.27.12.ebuild,
+  -vanilla-sources-2.6.27.32.ebuild, -vanilla-sources-2.6.27.33.ebuild,
+  -vanilla-sources-2.6.27.34.ebuild, -vanilla-sources-2.6.27.35.ebuild,
+  -vanilla-sources-2.6.27.36.ebuild, -vanilla-sources-2.6.27.38.ebuild,
+  -vanilla-sources-2.6.27.39.ebuild, -vanilla-sources-2.6.27.40.ebuild,
+  -vanilla-sources-2.6.27.41.ebuild, -vanilla-sources-2.6.27.42.ebuild,
+  -vanilla-sources-2.6.27.43.ebuild, -vanilla-sources-2.6.27.44.ebuild,
+  -vanilla-sources-2.6.27.45.ebuild, -vanilla-sources-2.6.27.46.ebuild,
+  -vanilla-sources-2.6.27.47.ebuild, -vanilla-sources-2.6.27.48.ebuild,
+  -vanilla-sources-2.6.27.49.ebuild, -vanilla-sources-2.6.27.50.ebuild,
+  -vanilla-sources-2.6.27.51.ebuild, -vanilla-sources-2.6.27.52.ebuild:
+  More version cleanups
 
   21 Oct 2010; Mike Pagano <mpagano@gentoo.org>
   -vanilla-sources-2.6.32.ebuild, -vanilla-sources-2.6.32.1.ebuild,
