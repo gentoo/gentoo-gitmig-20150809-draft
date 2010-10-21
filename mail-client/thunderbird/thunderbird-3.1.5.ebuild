@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.5.ebuild,v 1.1 2010/10/20 03:00:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.5.ebuild,v 1.2 2010/10/21 07:47:05 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -53,7 +53,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	x11-libs/pango[X]
 	alsa? ( media-libs/alsa-lib )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
-	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.1[fts3,secure-delete] )
 	wifi? ( net-wireless/wireless-tools )
 	!x11-plugins/lightning"
 
