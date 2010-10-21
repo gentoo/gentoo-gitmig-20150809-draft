@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.39 2010/10/19 17:51:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.40 2010/10/21 19:50:52 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> mtools-4.0.13.ebuild:
+  stable ppc, bug 341405
 
   19 Oct 2010; Jeroen Roovers <jer@gentoo.org> mtools-4.0.13.ebuild:
   Fix sed expression target thanks to reavertm.
