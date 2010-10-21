@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.88 2010/10/20 09:55:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.89 2010/10/21 19:52:24 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> smartmontools-5.39.1.ebuild:
+  stable ppc, bug 341827
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   smartmontools-5.39.1.ebuild:
