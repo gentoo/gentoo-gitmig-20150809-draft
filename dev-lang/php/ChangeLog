@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.424 2010/10/20 14:21:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.425 2010/10/21 19:37:24 olemarkus Exp $
+
+  21 Oct 2010; <olemarkus@gentoo.org> files/eblits/pkg_postinst-v1.eblit:
+  Added an additional warning about extension_dir to pkg_postinst
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> php-5.3.3-r1.ebuild:
   Stable on amd64 wrt bug #336869
