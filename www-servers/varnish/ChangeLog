@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.32 2010/10/21 20:31:50 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.33 2010/10/21 21:43:30 bangert Exp $
+
+*varnish-2.1.4 (21 Oct 2010)
+
+  21 Oct 2010; Thilo Bangert <bangert@gentoo.org> +varnish-2.1.4.ebuild,
+  +files/varnish-2.1.4-find-rst2man.py.patch,
+  +files/varnish-2.1.4-virtual-ncsa.patch:
+  version bump (#313377)
 
 *varnish-2.1.3 (21 Oct 2010)
 
