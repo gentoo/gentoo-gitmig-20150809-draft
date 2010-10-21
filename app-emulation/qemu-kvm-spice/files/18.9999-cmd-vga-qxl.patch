@@ -1,0 +1,11 @@
+--- qemu-options.hx.o	2010-09-04 14:45:09.044685370 +0800
++++ qemu-options.hx	2010-09-04 14:45:46.535315718 +0800
+@@ -752,7 +752,7 @@
+ ETEXI
+ 
+ DEF("vga", HAS_ARG, QEMU_OPTION_vga,
+-    "-vga [std|cirrus|vmware|xenfb|none]\n"
++    "-vga [std|cirrus|vmware|xenfb|qxl|none]\n"
+     "                select video card type\n", QEMU_ARCH_ALL)
+ STEXI
+ @item -vga @var{type}

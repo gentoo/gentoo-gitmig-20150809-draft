@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu-kvm-spice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm-spice/ChangeLog,v 1.1 2010/08/12 08:41:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm-spice/ChangeLog,v 1.2 2010/10/21 12:29:58 dev-zero Exp $
+
+*qemu-kvm-spice-18.9999 (21 Oct 2010)
+
+  21 Oct 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +files/18.9999-cmd-vga-qxl.patch, +qemu-kvm-spice-18.9999.ebuild,
+  +files/18.9999-pc_piix.patch, +files/18.9999-qxl-640x480x8.patch:
+  Version bump (bug #335931), also solves bug #335752. Thanks to fkhp for
+  the patches.
 
 *qemu-kvm-spice-14.9999 (12 Aug 2010)
 

@@ -1,0 +1,13 @@
+--- hw/qxl.c.o	2010-09-05 15:49:07.155580239 +0800
++++ hw/qxl.c	2010-09-05 16:03:02.143974552 +0800
+@@ -63,6 +63,10 @@
+     QXL_MODE_16_32(y_res, x_res, 3)
+ 
+ static QXLMode qxl_modes[] = {
++    QXL_MODE(640, 480, 8, 0),
++    QXL_MODE(640, 480, 8, 1),
++    QXL_MODE(640, 480, 8, 2),
++    QXL_MODE(640, 480, 8, 3),
+     QXL_MODE_EX(640, 480),
+     QXL_MODE_EX(800, 480),
+     QXL_MODE_EX(800, 600),
