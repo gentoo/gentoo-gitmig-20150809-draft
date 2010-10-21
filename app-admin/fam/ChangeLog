@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.63 2010/02/13 16:29:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.64 2010/10/21 17:40:38 jer Exp $
+
+*fam-2.7.0-r6 (21 Oct 2010)
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> -fam-2.7.0-r4.ebuild,
+  +fam-2.7.0-r6.ebuild:
+  Use Debian patch set. Use sed instead of dosed, emake instead of make.
+  Make static-libs optional. Remove extra spaces. Remove upgrade warning
+  after ~7 years. Remove rc-update advice.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> fam-2.7.0-r5.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #302499
