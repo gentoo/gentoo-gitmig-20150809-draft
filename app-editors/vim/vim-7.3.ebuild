@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.3.ebuild,v 1.2 2010/09/27 21:14:26 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.3.ebuild,v 1.3 2010/10/21 14:53:52 mduft Exp $
 
 EAPI=3
 VIM_VERSION="7.3"
@@ -22,8 +22,7 @@ src_prepare() {
 	vim_src_prepare
 
 	if [[ ${CHOST} == *-interix* ]]; then
-		epatch "${FILESDIR}"/${PN}-7.1-interix-link.patch
-		epatch "${FILESDIR}"/${PN}-7.1.319-interix-cflags.patch
+		epatch "${FILESDIR}"/${PN}-7.3-interix-link.patch
 	fi
 	epatch "${FILESDIR}"/${PN}-7.1.285-darwin-x11link.patch
 }
