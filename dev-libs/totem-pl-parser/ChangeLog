@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.70 2010/10/17 14:55:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.71 2010/10/21 20:22:18 eva Exp $
+
+  21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/totem-pl-parser-2.26.1-fix-tests-without-gtk-doc.patch,
+  -totem-pl-parser-2.26.3-r1.ebuild,
+  -files/totem-pl-parser-2.26.3-no-libcamel-use-gmime.patch,
+  -totem-pl-parser-2.28.2.ebuild, -totem-pl-parser-2.28.3.ebuild,
+  -totem-pl-parser-2.30.2.ebuild, -totem-pl-parser-2.30.3.ebuild:
+  Clean up old revisions.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   totem-pl-parser-2.30.1.ebuild:
