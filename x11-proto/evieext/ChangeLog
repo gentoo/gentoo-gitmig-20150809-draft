@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.39 2010/09/10 17:53:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.40 2010/10/21 01:23:26 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking evieext-1.1.0 ppc stable for bug 239063
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -evieext-1.0.2.ebuild, evieext-1.1.0.ebuild:
