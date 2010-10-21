@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.8.2.ebuild,v 1.2 2010/08/27 09:51:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.8.2.ebuild,v 1.3 2010/10/21 21:39:36 cedk Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -30,6 +30,8 @@ src_unpack() {
 		-e "s/LDFLAGS = /LDFLAGS += /" \
 		-e "s/#XINERAMALIBS =/XINERAMALIBS ?=/" \
 		-e "s/#XINERAMAFLAGS =/XINERAMAFLAGS ?=/" \
+		-e "s@/usr/X11R6/include@/usr/include/X11@" \
+		-e "s@/usr/X11R6/lib@/usr/lib@" \
 		config.mk || die "sed failed"
 
 	if use savedconfig; then
