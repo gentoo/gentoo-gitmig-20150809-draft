@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-user-dirs-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.8 2010/10/03 14:49:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.9 2010/10/21 20:28:26 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org>
+  xdg-user-dirs-gtk-0.8-r1.ebuild:
+  Marking xdg-user-dirs-gtk-0.8-r1 ~ppc for bug 337632
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   xdg-user-dirs-gtk-0.8-r1.ebuild:
