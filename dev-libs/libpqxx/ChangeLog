@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.64 2010/06/17 18:23:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.65 2010/10/21 14:52:04 flameeyes Exp $
+
+  21 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libpqxx-3.0.2.ebuild:
+  QA: don't call econf during src_compile on EAPI=2.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libpqxx-2.6.8.ebuild,
   libpqxx-2.6.9.ebuild, libpqxx-3.0.2.ebuild:
