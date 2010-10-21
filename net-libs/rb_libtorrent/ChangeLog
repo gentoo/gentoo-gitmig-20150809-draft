@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.94 2010/10/20 13:52:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.95 2010/10/21 20:09:27 hwoarang Exp $
+
+  21 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.15.4.ebuild:
+  Fix my latest commit and remove useless --enable-statistics switch
 
   20 Oct 2010; Brent Baude <ranger@gentoo.org> rb_libtorrent-0.15.1.ebuild:
   stable ppc, bug 333775

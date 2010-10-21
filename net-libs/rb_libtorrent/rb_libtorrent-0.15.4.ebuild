@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.2 2010/10/17 13:17:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.3 2010/10/21 20:09:27 hwoarang Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -44,7 +44,7 @@ src_configure() {
 	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
 
 	local LOGGING
-	use debug && LOGGING="--enable-logging=verbose --enable-statistics"
+	use debug && LOGGING="--enable-logging=verbose"
 
 	econf $(use_enable debug) \
 		$(use_enable test tests) \
