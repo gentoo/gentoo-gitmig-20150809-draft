@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.72 2010/10/10 17:33:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.73 2010/10/21 19:55:54 ranger Exp $
+
+  21 Oct 2010; Brent Baude <ranger@gentoo.org> freeglut-2.6.0.ebuild:
+  Marking freeglut-2.6.0 ppc for bug 325215
 
   10 Oct 2010; Markus Meier <maekke@gentoo.org> freeglut-2.6.0.ebuild:
   arm stable, bug #325215
