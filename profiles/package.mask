@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12074 2010/10/20 22:06:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12075 2010/10/21 02:35:43 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1232,7 +1232,6 @@ net-irc/irssi-svn
 net-misc/netcomics-cvs
 dev-lisp/cl-ansi-tests-cvs
 app-portage/layman-dbtools
-dev-util/gprof2dot
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
