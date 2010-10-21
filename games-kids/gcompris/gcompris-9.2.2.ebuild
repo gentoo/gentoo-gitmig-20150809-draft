@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.7 2010/08/12 04:00:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.8 2010/10/21 11:43:36 tupone Exp $
 
 EAPI=2
 
@@ -55,7 +55,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-gtk2.22.patch
 	cp /usr/share/gettext/config.rpath .
 	if has_version '>=x11-libs/gtk+-2.20:2' ; then
 		sed -i \

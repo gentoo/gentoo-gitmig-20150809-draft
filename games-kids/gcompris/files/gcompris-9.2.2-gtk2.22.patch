@@ -1,0 +1,10 @@
+--- src/goocanvas/src/Makefile.am.old	2010-10-21 12:29:13.000000000 +0200
++++ src/goocanvas/src/Makefile.am	2010-10-21 12:30:14.000000000 +0200
+@@ -3,7 +3,6 @@
+ INCLUDES = \
+ 	-DG_DISABLE_DEPRECATED -DPANGO_DISABLE_DEPRECATED \
+ 	-DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED \
+-	-DGTK_DISABLE_DEPRECATED \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+ 	-DG_LOG_DOMAIN=\"GooCanvas\" \
