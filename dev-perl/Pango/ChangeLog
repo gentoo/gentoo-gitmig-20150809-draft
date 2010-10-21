@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.8 2010/08/11 20:00:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.9 2010/10/21 20:12:13 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> Pango-1.221.ebuild:
+  Marked ~hppa (bug #322187).
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> Pango-1.221.ebuild:
   Marked ~ppc/~ppc64 for bug #322187.
