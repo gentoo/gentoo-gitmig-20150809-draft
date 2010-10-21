@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kcollectd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.1 2010/09/28 19:06:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.2 2010/10/21 20:41:56 dilfridge Exp $
+
+  21 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kcollectd-0.9.ebuild:
+  Manually apply DTD workaround
 
 *kcollectd-0.9 (28 Sep 2010)
 
