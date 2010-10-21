@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4678 2010/10/21 20:07:02 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4679 2010/10/21 20:13:01 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Added net-wireless/gnome-bluetooth to gnome 2.32 mask
 
   21 Oct 2010; <olemarkus@gentoo.org> base/make.defaults:
   Fixed a rather embarassing typo

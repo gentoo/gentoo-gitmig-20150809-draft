@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12078 2010/10/21 15:48:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12079 2010/10/21 20:13:01 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -139,6 +139,7 @@ x11-libs/openmotif-compat
 # The mask will be dropped when all pieces are in the tree
 # and working and, then, you will finally able to report
 # missing dependencies and so ;-)
+# BEGIN GNOME 2.32 mask
 >=gnome-base/gnome-desktop-2.32
 >=dev-libs/atk-1.32
 >=x11-libs/vte-0.26
@@ -180,6 +181,8 @@ gnome-base/dconf
 >=media-gfx/eog-2.32
 >=media-sound/sound-juicer-2.32
 >=net-misc/vino-2.32
+>=net-wireless/gnome-bluetooth-2.32
+# END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
 # Removal of app-text/gnome-spell as it's no used by
