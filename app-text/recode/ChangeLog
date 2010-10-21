@@ -1,6 +1,11 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.83 2010/10/08 21:28:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.84 2010/10/21 10:38:51 grobian Exp $
+
+  21 Oct 2010; Fabian Groffen <grobian@gentoo.org> recode-3.6_p17-r2.ebuild,
+  -files/recode-3.6-ppc-macos-new.diff:
+  Drop unnecessary patching and copying, it actually breaks things, bug
+  #324519
 
   08 Oct 2010; Jeremy Olexa <darkside@gentoo.org> -recode-3.6_p15-r1.ebuild,
   -recode-3.6_p17.ebuild:
