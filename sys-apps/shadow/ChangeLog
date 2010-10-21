@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.246 2010/10/10 17:12:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.247 2010/10/21 13:21:52 flameeyes Exp $
+
+*shadow-4.1.4.2-r6 (21 Oct 2010)
+
+  21 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -shadow-4.1.4.2-r1.ebuild, -shadow-4.1.4.2-r2.ebuild,
+  -shadow-4.1.4.2-r3.ebuild, -shadow-4.1.4.2-r4.ebuild,
+  +shadow-4.1.4.2-r6.ebuild, -files/login.pamd, -files/login.pamd.1,
+  metadata.xml:
+  Add pam herd to the maintainers (for USE=pam); unbreak /etc/pam.d/login
+  that was dropped during the 4.0.18.2 → 4.1.0 bump; remove 4.1.4.2
+  ebuilds with totally broken PAM support; remove two files that shouldn't
+  be used anymore.
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> shadow-4.1.4.2-r5.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #338591
