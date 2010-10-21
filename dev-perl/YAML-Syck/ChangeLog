@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.29 2010/10/21 17:02:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.30 2010/10/21 19:24:44 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> YAML-Syck-1.15.ebuild:
+  Marked ~hppa (bug #341969).
 
   21 Oct 2010; Raúl Porcel <armin76@gentoo.org> YAML-Syck-1.05.ebuild,
   YAML-Syck-1.07.ebuild, YAML-Syck-1.08.ebuild, YAML-Syck-1.10.ebuild,
