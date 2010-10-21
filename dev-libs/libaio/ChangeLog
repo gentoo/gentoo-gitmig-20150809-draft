@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.51 2010/08/25 21:41:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.52 2010/10/21 23:56:38 vapier Exp $
+
+*libaio-0.3.109-r1 (21 Oct 2010)
+
+  21 Oct 2010; Mike Frysinger <vapier@gentoo.org> +libaio-0.3.109-r1.ebuild,
+  +files/libaio-0.3.109-generic-arch.patch,
+  files/libaio-0.3.109-install.patch,
+  +files/libaio-0.3.109-unify-bits-endian.patch:
+  Clean up ebuild by restoring patches and drop aio_init man page #341953 by
+  Alec M.
 
 *libaio-0.3.109 (25 Aug 2010)
 
