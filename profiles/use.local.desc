@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6068 2010/10/20 19:53:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6069 2010/10/21 07:53:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -152,6 +152,8 @@ app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
 app-admin/puppet:augeas - Enable augeas support
 app-admin/puppet:rrdtool - Enable rrdtool support
 app-admin/puppet:shadow - Enable shadow support
+app-admin/rsyslog:extras - Add support for the UDP spoofing module (omudpspoof) using net-libs/libnet
+app-admin/rsyslog:logrotate - Add a configuration snippet for logrotate
 app-admin/rsyslog:relp - Add support for the Reliable Event Logging Protocol using dev-libs/librelp
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
