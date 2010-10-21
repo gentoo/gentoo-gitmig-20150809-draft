@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-ProcessTable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.48 2010/10/20 22:58:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.49 2010/10/21 20:14:37 jer Exp $
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  Proc-ProcessTable-0.45-r2.ebuild:
+  Stable for HPPA (bug #341241).
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   Proc-ProcessTable-0.45-r2.ebuild:
