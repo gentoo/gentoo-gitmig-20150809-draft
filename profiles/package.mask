@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12077 2010/10/21 15:20:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12078 2010/10/21 15:48:29 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -800,6 +800,7 @@ app-admin/webmin
 # Alphas and snapshots are not for everyday use
 # <http://my.opera.com/desktopteam/blog>
 =www-client/opera-10.70*
+=www-client/opera-11*
 
 # Sergei Trofimovich <slyfox@gentoo.org> (1 Aug 2010)
 # Masked for removal in 30 days. Bunch of serious

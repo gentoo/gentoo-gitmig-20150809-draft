@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4674 2010/10/21 15:20:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4675 2010/10/21 15:48:29 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask Opera 11.
 
   21 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking media-plugins/vdr-audiorecorder for QA removal.
