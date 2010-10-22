@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.785 2010/10/19 14:25:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.786 2010/10/22 05:17:14 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> gcc-4.4.4-r2.ebuild:
+  Stable for HPPA (bug #331531).
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gcc-4.4.4-r2.ebuild:
   Stable on amd64 wrt bug #331531
