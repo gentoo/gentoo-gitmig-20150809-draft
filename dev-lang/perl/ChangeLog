@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.327 2010/10/22 17:44:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.328 2010/10/22 17:57:11 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> perl-5.12.2-r1.ebuild:
+  Stable on amd64 wrt bug #340023
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   perl-5.12.2-r1.ebuild:
