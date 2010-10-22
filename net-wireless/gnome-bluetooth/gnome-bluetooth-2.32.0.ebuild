@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.1 2010/10/21 22:03:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.2 2010/10/22 21:34:36 eva Exp $
 
 EAPI="3"
 
@@ -53,8 +53,10 @@ src_install() {
 	gnome2_src_install
 	find "${ED}"/usr/$(get_libdir)/${PN}/plugins -name "*.la" -delete \
 		|| die "la file removal failed (1)"
-	find "${ED}"/usr/$(get_libdir)/nautilus-sendto/plugins -name "*.la" -delete \
-		|| die "la file removal failed (1)"
+	if use nautilus; then
+		find "${ED}"/usr/$(get_libdir)/nautilus-sendto/plugins -name "*.la" -delete \
+			|| die "la file removal failed (1)"
+	fi
 }
 
 pkg_preinst() {

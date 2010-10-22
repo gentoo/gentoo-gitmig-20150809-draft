@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.80 2010/10/21 22:03:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.81 2010/10/22 21:34:36 eva Exp $
+
+  22 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-bluetooth-2.32.0.ebuild:
+  Move nautilus-sendto la file removal behind nautilus USE flag.
 
 *gnome-bluetooth-2.32.0 (21 Oct 2010)
 
