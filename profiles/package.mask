@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12083 2010/10/22 07:23:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12084 2010/10/22 08:42:30 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1161,6 +1161,7 @@ net-libs/libjingle
 # experimental features and accept a more unstable release.
 ~www-client/chromium-7.0.544.0
 ~www-client/chromium-8.0.552.0
+~www-client/chromium-8.0.552.11
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
