@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12081 2010/10/21 21:57:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12082 2010/10/22 06:05:35 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (22 Oct 2010)
+#  on behalf of QA team
+#
+# Fails to work properly, upstream doesn't seem to care. As
+# maintainer I'm going to remove this, and eventually package
+# something for mod_security to query it.
+#
+# Removal on 2010-11-21
+www-apache/mod_httpbl
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Oct 2010)
 # Dead upstream
