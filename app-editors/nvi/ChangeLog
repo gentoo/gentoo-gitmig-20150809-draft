@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.76 2010/05/11 22:58:10 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.77 2010/10/22 17:38:11 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> nvi-1.81.6-r3.ebuild:
+  stable x86, bug 341179
 
   11 May 2010; Harald van Dĳk <truedfx@gentoo.org> nvi-1.81.6-r3.ebuild:
   Allow building with DB 4.8.30
