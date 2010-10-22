@@ -1,3 +1,16 @@
+diff -ur mercury-compiler-10.04.2.orig/Mmakefile mercury-compiler-10.04.1/Mmakefile
+--- mercury-compiler-10.04.2.orig/Mmakefile	2009-10-20 17:07:24.000000000 +1300
++++ mercury-compiler-10.04.2/Mmakefile	2010-10-23 09:45:13.000000000 +1300
+@@ -533,8 +533,7 @@
+ 	install_slice \
+ 	install_profiler \
+ 	install_deep_profiler \
+-	install_doc \
+-	install_config
++	install_doc
+ 
+ .PHONY: install_scripts
+ install_scripts: scripts
 diff -ur mercury-compiler-10.04.2.orig/runtime/Mmakefile mercury-compiler-10.04.1/runtime/Mmakefile
 --- mercury-compiler-10.04.2.orig/runtime/Mmakefile	2010-07-16 03:24:52.000000000 +1200
 +++ mercury-compiler-10.04.2/runtime/Mmakefile	2010-09-05 09:15:31.000000000 +1200
