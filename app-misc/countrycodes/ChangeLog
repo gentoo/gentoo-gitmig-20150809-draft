@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.22 2010/10/19 06:01:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.23 2010/10/22 16:54:30 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  countrycodes-1.0.5-r1.ebuild:
+  Stable on amd64 wrt bug #342137
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> countrycodes-1.0.5.ebuild:
   Drop to ~mips
