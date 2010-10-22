@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jaf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/ChangeLog,v 1.14 2010/07/16 19:32:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/ChangeLog,v 1.15 2010/10/22 10:43:33 grobian Exp $
+
+  22 Oct 2010; Fabian Groffen <grobian@gentoo.org> jaf-1.1-r1.ebuild:
+  Marked ~ppc-macos
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> jaf-1.1-r1.ebuild:
   Marked ~x64-macos
