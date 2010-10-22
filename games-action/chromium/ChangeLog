@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.43 2010/10/19 11:32:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.44 2010/10/22 14:37:45 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  chromium-0.9.14.1.ebuild:
+  stable x86, bug 341421
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   chromium-0.9.14.1.ebuild:
