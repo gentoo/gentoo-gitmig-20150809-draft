@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.73 2010/09/29 15:55:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.74 2010/10/22 20:14:18 ulm Exp $
+
+*gentoo-syntax-1.18 (22 Oct 2010)
+
+  22 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -gentoo-syntax-1.16.ebuild,
+  +gentoo-syntax-1.18.ebuild:
+  Version bump. Remove old.
 
   29 Sep 2010; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.17.ebuild:
   Stable for HPPA (bug #332079).
