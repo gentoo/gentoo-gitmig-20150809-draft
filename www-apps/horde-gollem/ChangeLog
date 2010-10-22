@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-gollem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.27 2010/10/10 17:01:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.28 2010/10/22 04:01:52 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> horde-gollem-1.1.2.ebuild:
+  Stable for HPPA (bug #339168).
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> horde-gollem-1.1.2.ebuild:
   sparc stable wrt #339168
