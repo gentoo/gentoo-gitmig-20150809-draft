@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.23 2010/08/21 07:29:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.24 2010/10/22 06:03:34 keri Exp $
+
+  22 Oct 2010; <keri@gentoo.org> xsb-3.2-r1.ebuild:
+  Disable verbose debugging - it's broken in -3.2
 
 *xsb-3.2-r1 (21 Aug 2010)
 

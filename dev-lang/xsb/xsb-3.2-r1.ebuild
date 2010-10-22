@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2-r1.ebuild,v 1.1 2010/08/21 07:29:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2-r1.ebuild,v 1.2 2010/10/22 06:03:34 keri Exp $
 
 MY_P="XSB"
 
@@ -55,8 +55,6 @@ src_compile() {
 		$(use_with iodbc) \
 		$(use_enable threads mt) \
 		$(use_enable debug) \
-		$(use_enable debug debug-verbose) \
-		$(use_enable debug profile) \
 		|| die "econf failed"
 	emake || die "emake failed"
 
