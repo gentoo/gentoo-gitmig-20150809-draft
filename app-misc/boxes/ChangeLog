@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.23 2010/09/18 16:49:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.24 2010/10/22 16:59:56 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> boxes-1.1-r1.ebuild:
+  Stable on amd64 wrt bug #342145
 
 *boxes-1.1-r1 (18 Sep 2010)
 
