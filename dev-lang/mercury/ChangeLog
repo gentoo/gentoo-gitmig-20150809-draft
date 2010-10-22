@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.120 2010/10/22 21:08:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.121 2010/10/22 22:23:30 keri Exp $
+
+*mercury-10.04.2-r1 (22 Oct 2010)
+
+  22 Oct 2010; <keri@gentoo.org> +mercury-10.04.2-r1.ebuild:
+  Support installing Mercury code samples
 
   22 Oct 2010; <keri@gentoo.org> files/mercury-10.04.2-no-reconf.patch:
   Tidy up no-reconf target in Mercury toplevel
