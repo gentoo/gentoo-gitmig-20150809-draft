@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6071 2010/10/21 22:13:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6072 2010/10/22 07:13:27 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1441,7 +1441,6 @@ gnome-base/gvfs:gdu - Enable sys-apps/gnome-disk-utility integration
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup-gnome
 gnome-base/gvfs:iphone - Enables support for the iPhone and iPod touch
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
-gnome-base/libgnome:sound - Enable sound using media-libs/libcanberra
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/librsvg:tools - Build miscellaneous tools
 gnome-base/nautilus:introspection - Use dev-libs/gobject-introspection for introspection
