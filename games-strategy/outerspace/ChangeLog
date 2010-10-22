@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/outerspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.14 2010/10/19 11:44:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.15 2010/10/22 14:16:56 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  outerspace-0.5.67.ebuild:
+  stable x86, bug 341419
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   outerspace-0.5.67.ebuild:
