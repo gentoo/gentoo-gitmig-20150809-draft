@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-chora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.26 2010/10/22 04:15:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.27 2010/10/22 17:37:59 a3li Exp $
+
+  22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-chora-2.0.1.ebuild:
+  cleanup
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> horde-chora-2.0.2.ebuild:
   Stable for HPPA (bug #333207).

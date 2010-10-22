@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-mnemo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.32 2010/10/22 04:15:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.33 2010/10/22 17:40:13 a3li Exp $
+
+  22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-mnemo-2.1.2.ebuild:
+  cleanup
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> horde-mnemo-2.2.3.ebuild:
   Stable for HPPA (bug #333207).
