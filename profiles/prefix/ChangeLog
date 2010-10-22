@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.221 2010/10/22 07:30:08 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.222 2010/10/22 10:38:22 grobian Exp $
+
+  22 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop Date-Manip unmask, since the mask was removed from
+  profiles/package.mask
 
   22 Oct 2010; Markus Duft <mduft@gentoo.org>
   windows/interix/profile.bashrc:
