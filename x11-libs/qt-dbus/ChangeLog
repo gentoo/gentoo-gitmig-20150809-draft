@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.75 2010/10/19 21:20:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.76 2010/10/22 15:07:20 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> qt-dbus-4.6.3.ebuild:
+  stable x86, bug 341703
 
   19 Oct 2010; Brent Baude <ranger@gentoo.org> qt-dbus-4.6.3.ebuild:
   Marking qt-dbus-4.6.3 ppc stable for bug 341703
