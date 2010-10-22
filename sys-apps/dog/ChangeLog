@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.34 2010/09/18 16:55:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.35 2010/10/22 16:55:13 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> dog-1.7-r4.ebuild:
+  Stable on amd64 wrt bug #342147
 
 *dog-1.7-r4 (18 Sep 2010)
 
