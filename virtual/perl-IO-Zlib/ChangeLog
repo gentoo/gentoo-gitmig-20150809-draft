@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO-Zlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Zlib/ChangeLog,v 1.17 2010/10/14 20:18:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Zlib/ChangeLog,v 1.18 2010/10/22 02:26:12 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> perl-IO-Zlib-1.10.ebuild:
+  Stable for HPPA (bug #333421).
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> perl-IO-Zlib-1.10.ebuild:
   Marking perl-IO-Zlib-1.10 ppc stable for bug 333421

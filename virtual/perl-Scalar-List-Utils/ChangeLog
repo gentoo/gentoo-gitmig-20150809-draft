@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.43 2010/10/14 20:19:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.44 2010/10/22 02:23:37 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  perl-Scalar-List-Utils-1.23.ebuild:
+  Stable for HPPA (bug #333421).
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org>
   perl-Scalar-List-Utils-1.23.ebuild:
