@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.2.ebuild,v 1.2 2010/10/16 19:06:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.2.ebuild,v 1.3 2010/10/22 08:01:02 flameeyes Exp $
 
 EAPI="3"
 
@@ -163,7 +163,7 @@ src_install() {
 
 	# Get rid of the .la files. We certainly don't need them for PAM
 	# modules, and libpam is installed as a shared object only, so we
-	# don't ned them for static linking either.
+	# don't need them for static linking either.
 	find "${D}" -name '*.la' -delete
 }
 
