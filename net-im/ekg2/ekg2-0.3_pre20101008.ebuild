@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3_pre20101008.ebuild,v 1.1 2010/10/08 18:18:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3_pre20101008.ebuild,v 1.2 2010/10/22 17:24:29 mgorny Exp $
 
 EAPI=2
 
-inherit multilib perl-module scons-utils toolchain-funcs
+inherit base multilib perl-module scons-utils toolchain-funcs
 
 DESCRIPTION="Text-based, multi-protocol instant messenger"
 HOMEPAGE="http://www.ekg2.org"
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/downloads/mgorny/${PN}-scons/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="dbus extra gadu gif gnutls gpg gpm gsm gtk icq idn inotify irc
+IUSE="dbus extra gadu gif gnutls gpg gpm gsm icq idn inotify irc
 	jabber jogger jpeg mail minimal ncurses nls nntp oracle oss pcap
 	perl python readline remote rss ruby sim sms spell
 	sqlite sqlite3 srv ssl static unicode web xosd zlib"
@@ -28,7 +28,6 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	gpg? ( app-crypt/gpgme )
 	gsm? ( media-sound/gsm )
-	gtk? ( x11-libs/gtk+:2 )
 	idn? ( net-dns/libidn )
 	nls? ( virtual/libintl )
 	oracle?	( dev-db/oracle-instantclient-basic )
@@ -59,11 +58,15 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
+PATCHES=(
+	"${FILESDIR}"/0001-Drop-duplicate-config_audio_device-declaration-it-wa.patch
+)
+
 pkg_setup() {
-	if ! use gtk && ! use ncurses && ! use readline && ! use remote && ! use web; then
+	if ! use ncurses && ! use readline && ! use remote && ! use web; then
 		ewarn 'ekg2 is being compiled without any frontend, you should consider'
 		ewarn 'enabling at least one of following USEflags:'
-		ewarn '  gtk, ncurses, readline, remote, web.'
+		ewarn '  ncurses, readline, remote, web.'
 	fi
 }
 
@@ -81,7 +84,6 @@ build_plugin_list() {
 	$(use_plug gadu gg) \
 	$(use_plug gpg) \
 	$(use_plug gsm) \
-	$(use_plug gtk) \
 	$(use_plug icq) \
 	$(use_plug irc) \
 	$(use_plug jabber jabber) \
