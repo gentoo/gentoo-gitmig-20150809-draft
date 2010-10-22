@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/apple-jdk-bin-1.6.0.ebuild,v 1.2 2010/10/22 10:57:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/apple-jdk-bin-1.6.0.ebuild,v 1.3 2010/10/22 10:57:58 grobian Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils
@@ -10,6 +10,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.6.0/"
 SLOT="1.6"
 LICENSE="as-is"
 KEYWORDS="-* ~x64-macos"
+IUSE=""
 
 JAVA_PROVIDE="jdbc-stdext"
 
