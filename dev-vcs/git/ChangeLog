@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.38 2010/10/22 11:38:12 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.39 2010/10/22 20:11:13 billie Exp $
+
+  22 Oct 2010; Daniel Pielmeier <billie@gentoo.org>
+  +files/git-1.6.6.1-interix6.patch, +files/git-1.7.1-interix.patch:
+  Interix patches are still needed for some older versions.
 
 *git-1.7.3.2 (22 Oct 2010)
 
