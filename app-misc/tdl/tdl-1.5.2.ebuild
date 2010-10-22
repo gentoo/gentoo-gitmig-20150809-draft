@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.18 2009/04/13 02:32:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.19 2010/10/22 17:35:49 jlec Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc amd64"
 IUSE="doc readline"
 
-RDEPEND=">=sys-libs/readline-4.3
+RDEPEND="
+	>=sys-libs/readline-4.3
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
@@ -29,29 +30,33 @@ src_compile() {
 
 		sed -i 's#\($(LIB_READLINE)\)#\1 -lncurses##g' "${S}"/Makefile.in
 	fi
-	sed -i 's#-ltermcap#-lncurses#g' "${S}"/configure
+	sed -i 's#-ltermcap#-lncurses#g' "${S}"/configure || die
 
 	# XXX: do not replace with econf.
 	"${S}"/configure ${myconf} || die "configure failed, sorry!"
 	emake all tdl.info tdl.html tdl.txt || die
-	use doc && emake tdl.dvi tdl.ps tdl.pdf
+	if use doc; then
+		emake tdl.dvi tdl.ps tdl.pdf || die
+	fi
 }
 
 src_install() {
 	local i
 
-	dodoc README NEWS tdl.txt "${FILESDIR}/screenshot.png"
-	doinfo tdl.info
-	dohtml tdl.html
+	dodoc README NEWS tdl.txt "${FILESDIR}/screenshot.png" || die
+	doinfo tdl.info || die
+	dohtml tdl.html || die
 
-	dobin tdl
-	doman tdl.1
+	dobin tdl || die
+	doman tdl.1 || die
 
 	for i in tdl{a,l,d,g}
 	do
-		dosym tdl /usr/bin/${i}
-		dosym tdl.1 /usr/share/man/man1/${i}.1
+		dosym tdl /usr/bin/${i} || die
+		dosym tdl.1 /usr/share/man/man1/${i}.1 || die
 	done
 
-	use doc && dodoc tdl.dvi tdl.ps tdl.pdf
+	if use doc; then
+		dodoc tdl.dvi tdl.ps tdl.pdf || die
+	fi
 }
