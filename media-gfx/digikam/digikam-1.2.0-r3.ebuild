@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r3.ebuild,v 1.1 2010/09/25 16:40:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r3.ebuild,v 1.2 2010/10/22 00:07:34 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="addressbook debug doc geolocation gphoto2 handbook lensfun semantic-desktop +thumbnails video"
 
