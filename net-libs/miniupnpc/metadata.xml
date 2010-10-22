@@ -7,7 +7,11 @@
 	<name>Peter Volkov</name>
 </maintainer>
 <maintainer>
-  <email>nikoli@lavabit.com</email>
-  <name>Nikoli</name>
+	<email>mgorny@gentoo.org</email>
+	<name>Michał Górny</name>
+</maintainer>
+<maintainer>
+	<email>nikoli@lavabit.com</email>
+	<name>Nikoli</name>
 </maintainer>
 </pkgmetadata>
