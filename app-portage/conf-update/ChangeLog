@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.24 2010/10/09 19:20:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.25 2010/10/22 22:56:12 sping Exp $
+
+*conf-update-1.0.1 (22 Oct 2010)
+
+  22 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  +conf-update-1.0.1.ebuild, metadata.xml:
+  Bump to 1.0.1 for nimiux
 
   09 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   conf-update-1.0-r1.ebuild:

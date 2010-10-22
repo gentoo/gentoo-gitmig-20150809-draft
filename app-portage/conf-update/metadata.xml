@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>nimiux@gentoo.org</email>
+  <name>José María Alonso</name>
 </maintainer>
 <longdescription lang="en">
   conf-update is a ncurses-based config managment tool
