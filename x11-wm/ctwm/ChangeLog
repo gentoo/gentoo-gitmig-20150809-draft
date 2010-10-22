@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/ctwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.22 2010/09/16 15:06:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.23 2010/10/22 16:13:05 xarthisius Exp $
+
+*ctwm-3.8a-r1 (22 Oct 2010)
+
+  22 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org> -ctwm-3.8a.ebuild,
+  +ctwm-3.8a-r1.ebuild:
+  Fix buffer overflows wrt bug 338180. Thanks to Diego for the report. Fix
+  implicit function declarations, drop uredundant die messages. Drop old.
 
   16 Sep 2010; Jeroen Roovers <jer@gentoo.org> ctwm-3.8a.ebuild:
   Remove unused USE flag.

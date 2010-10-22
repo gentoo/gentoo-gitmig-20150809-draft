@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.8a.ebuild,v 1.2 2010/09/16 15:06:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.8a-r1.ebuild,v 1.1 2010/10/22 16:13:05 xarthisius Exp $
 
 EAPI="2"
 
@@ -28,44 +28,46 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
+	sed -e "/char modStr/ s/5/6/" -i menus.c || die #overflow bug 338180
+	sed -e "/<stdio.h>/ a#include <ctype.h>" -i parse.c || die #implicit 'isspace'
 	sed -i Imakefile \
 		-e "s@\(CONFDIR =\).*@\1 /etc/X11/twm@g" \
-		|| die "sed Imakefile"
+		|| die
 
 	cp Imakefile.local-template Imakefile.local
 
 	# TODO: Add GNOME support
 	sed -i Imakefile.local \
 		-e '/^#define GNOME/d' \
-		|| die "sed Imakefile.local"
+		|| die
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed"
+	xmkmf || die
 	emake \
 		CC=$(tc-getCC) \
 		CFLAGS="${CFLAGS}" \
 		EXTRA_LDOPTIONS="${LDFLAGS}" \
 		TWMDIR=/usr/share/${PN} \
-		|| die "emake failed"
+		|| die
 }
 
 src_install() {
 	make BINDIR=/usr/bin \
 		MANPATH=/usr/share/man \
 		TWMDIR=/usr/share/${PN} \
-		DESTDIR="${D}" install || die "make install failed"
+		DESTDIR="${D}" install || die
 
 	make MANPATH=/usr/share/man \
 		DOCHTMLDIR=/usr/share/doc/${PF}/html \
-		DESTDIR="${D}" install.man || die "make install.man failed"
+		DESTDIR="${D}" install.man || die
 
 	echo "#!/bin/sh" > ${T}/ctwm
 	echo "/usr/bin/ctwm" >> ${T}/ctwm
 
 	exeinto /etc/X11/Sessions
-	doexe "${T}"/ctwm
+	doexe "${T}"/ctwm || die
 
-	dodoc CHANGES README* TODO* PROBLEMS
-	dodoc *.ctwmrc*
+	dodoc CHANGES README* TODO* PROBLEMS || die
+	dodoc *.ctwmrc* || die
 }
