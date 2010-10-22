@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.7 2010/09/24 20:45:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.8 2010/10/22 14:43:23 betelgeuse Exp $
+
+  22 Oct 2010; Petteri Räty <betelgeuse@gentoo.org> libvpx-0.9.2.ebuild,
+  libvpx-9999.ebuild:
+  Force -j1 to emake install until the build system is patched. Bug #323805.
 
   24 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   libvpx-0.9.0_p20100612.ebuild:
