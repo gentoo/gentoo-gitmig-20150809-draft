@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.37 2010/10/20 08:10:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.38 2010/10/22 18:18:25 mr_bones_ Exp $
+
+  22 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  sdlmame-0.139_p4.ebuild:
+  Avoid linking against gtk+ (used by the built-in debugger) unless
+  USE=debug is specified (bug #336062)
 
 *sdlmame-0.139_p4 (20 Oct 2010)
 
