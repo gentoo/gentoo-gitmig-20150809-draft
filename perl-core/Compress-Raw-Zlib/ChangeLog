@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Compress-Raw-Zlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Zlib/ChangeLog,v 1.33 2010/09/12 16:50:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Zlib/ChangeLog,v 1.34 2010/10/22 02:01:30 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  Compress-Raw-Zlib-2.024.ebuild:
+  Stable for HPPA (bug #333421).
 
   12 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   Compress-Raw-Zlib-2.024.ebuild:

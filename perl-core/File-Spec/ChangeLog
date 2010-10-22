@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.76 2010/09/21 19:18:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.77 2010/10/22 02:11:01 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> File-Spec-3.31.ebuild:
+  Stable for HPPA (bug #333421).
 
 *File-Spec-3.33 (21 Sep 2010)
 
