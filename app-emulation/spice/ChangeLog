@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.2 2010/10/21 09:26:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.3 2010/10/22 09:39:21 dev-zero Exp $
+
+  22 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> spice-0.6.3.ebuild:
+  Added x11-libs/libXfixes depency.
 
 *spice-0.6.3 (21 Oct 2010)
 
