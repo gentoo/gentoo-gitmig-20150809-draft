@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS-Resolver-Programmable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.10 2010/10/14 19:37:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.11 2010/10/22 19:19:19 ssuominen Exp $
+
+  22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  Net-DNS-Resolver-Programmable-0.003.ebuild:
+  ppc64 stable wrt #333883
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org>
   Net-DNS-Resolver-Programmable-0.003.ebuild:
