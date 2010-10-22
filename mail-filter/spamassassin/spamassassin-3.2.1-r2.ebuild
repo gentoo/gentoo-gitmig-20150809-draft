@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r2.ebuild,v 1.7 2010/10/22 19:35:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r2.ebuild,v 1.8 2010/10/22 19:36:22 ssuominen Exp $
 
 inherit perl-module eutils
 
@@ -54,6 +54,7 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 	ipv6? (
 		dev-perl/IO-Socket-INET6
 	)"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
