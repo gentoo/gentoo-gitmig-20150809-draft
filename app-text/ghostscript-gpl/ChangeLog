@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.103 2010/10/19 21:00:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.104 2010/10/22 18:31:40 ranger Exp $
+
+  22 Oct 2010; Brent Baude <ranger@gentoo.org>
+  ghostscript-gpl-8.71-r6.ebuild:
+  Marking ghostscript-gpl-8.71-r6 ppc for bug 332061
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ghostscript-gpl-8.71-r6.ebuild:
