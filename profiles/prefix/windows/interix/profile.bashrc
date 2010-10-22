@@ -1,12 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.4 2010/02/25 09:36:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.5 2010/10/22 07:30:09 mduft Exp $
 
-# One basically always wants -D_ALL_SOURCE, it's some stupid restriction
-# to hide useful stuff. newer GCCs have this define built-int, so no need
-# for it anymore. if there are problems, uncomment this again!
-#[[ ${CFLAGS} != *"-D_ALL_SOURCE"* ]] && CFLAGS="-D_ALL_SOURCE ${CFLAGS}"
-#[[ ${CXXFLAGS} != *"-D_ALL_SOURCE"* ]] && CXXFLAGS="-D_ALL_SOURCE ${CXXFLAGS}"
+# use bash as config shell. this avoids _big_ problems with new libtool (>=2.2.10),
+# as wrong asumptions about the shell arise when checking against /bin/sh.
+export CONFIG_SHELL=${BASH}
 
 # On interix, binary files (executables, shared libraries) in use
 # cannot be replaced during merge.

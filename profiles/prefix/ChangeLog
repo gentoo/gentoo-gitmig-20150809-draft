@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.220 2010/10/21 13:59:45 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.221 2010/10/22 07:30:08 mduft Exp $
+
+  22 Oct 2010; Markus Duft <mduft@gentoo.org>
+  windows/interix/profile.bashrc:
+  always set CONFIG_SHELL to ${BASH}, as the system /bin/sh is not suitable to
+  used with new libtool (>=2.2.10) on interix.
 
   21 Oct 2010; Markus Duft <mduft@gentoo.org>
   +windows/interix/packages:
