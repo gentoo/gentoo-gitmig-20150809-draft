@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.5 2010/10/18 18:05:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.6 2010/10/22 14:52:41 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  smart-live-rebuild-0.6.3.ebuild:
+  keyworded ~arch for x86, bug 339730
 
   18 Oct 2010; Michał Górny <mgorny@gentoo.org>
   smart-live-rebuild-0.6.3.ebuild:
