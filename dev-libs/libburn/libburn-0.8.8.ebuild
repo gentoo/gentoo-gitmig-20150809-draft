@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.8.6.ebuild,v 1.1 2010/09/27 20:38:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.8.8.ebuild,v 1.1 2010/10/22 16:46:22 billie Exp $
 
 EAPI=2
 
@@ -27,6 +27,7 @@ S=${WORKDIR}/${P%_p*}
 
 src_configure() {
 	econf --disable-static \
+	--enable-ldconfig-at-install \
 	--disable-dvd-obs-64k \
 	--disable-libcdio \
 	$(use_enable track-src-odirect)
