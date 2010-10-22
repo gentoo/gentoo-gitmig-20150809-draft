@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-gollem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.28 2010/10/22 04:01:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/ChangeLog,v 1.29 2010/10/22 17:35:45 a3li Exp $
+
+  22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-gollem-1.0.2.ebuild,
+  -horde-gollem-1.1.1.ebuild:
+  remove vulnerable ebuilds
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> horde-gollem-1.1.2.ebuild:
   Stable for HPPA (bug #339168).
