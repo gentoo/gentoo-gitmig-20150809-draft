@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r2.ebuild,v 1.6 2010/01/02 15:18:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.2.1-r2.ebuild,v 1.7 2010/10/22 19:35:05 ssuominen Exp $
 
 inherit perl-module eutils
 
@@ -140,7 +140,7 @@ src_install () {
 	dosym /etc/mail/spamassassin /etc/spamassassin
 
 	# Disable plugin by default
-	sed -i -e 's/^loadplugin/\#loadplugin/g' ${D}/etc/mail/spamassassin/init.pre
+	sed -i -e 's/^loadplugin/\#loadplugin/g' "${D}"/etc/mail/spamassassin/init.pre
 
 	# Add the init and config scripts.
 	newinitd "${FILESDIR}"/3.0.0-spamd.init spamd
@@ -170,7 +170,7 @@ src_install () {
 		dodoc tools/*
 	fi
 
-	cp ${FILESDIR}/secrets.cf ${D}/etc/mail/spamassassin/secrets.cf.example
+	cp "${FILESDIR}"/secrets.cf "${D}"/etc/mail/spamassassin/secrets.cf.example
 	fperms 0400 /etc/mail/spamassassin/secrets.cf.example
 	echo "">>${D}/etc/mail/spamassassin/local.cf.example
 	echo "# Sensitive data, such as database connection info, should">>${D}/etc/mail/spamassassin/local.cf.example
