@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/dvtm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.3 2010/06/24 21:36:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.4 2010/10/22 07:20:39 chithanh Exp $
+
+*dvtm-0.6 (22 Oct 2010)
+
+  22 Oct 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +dvtm-0.6.ebuild:
+  Version bump.
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> dvtm-0.5.2.ebuild:
   stable amd64, bug 323169
