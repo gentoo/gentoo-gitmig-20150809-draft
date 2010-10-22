@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/upnpscan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.5 2009/01/15 07:48:14 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.6 2010/10/22 01:27:41 jer Exp $
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> upnpscan-0.4.ebuild:
+  Update HOMEPAGE. Remove empty DEPEND.
 
   15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
   +files/upnpscan-0.4-cflags.patch, upnpscan-0.4.ebuild:
