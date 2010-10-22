@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.6 2010/10/22 01:27:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.7 2010/10/22 01:34:13 jer Exp $
+
+*upnpscan-0.4-r1 (22 Oct 2010)
+
+  22 Oct 2010; Jeroen Roovers <jer@gentoo.org> +upnpscan-0.4-r1.ebuild:
+  Fix building with grep 2.7 (bug #342085).
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> upnpscan-0.4.ebuild:
   Update HOMEPAGE. Remove empty DEPEND.
