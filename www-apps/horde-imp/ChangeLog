@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.68 2010/10/22 04:08:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.69 2010/10/22 17:32:43 a3li Exp $
+
+  22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-imp-4.3.4.ebuild,
+  -horde-imp-4.3.7.ebuild:
+  cleanup
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> horde-imp-4.3.8.ebuild:
   Stable for HPPA (bug #307759).
