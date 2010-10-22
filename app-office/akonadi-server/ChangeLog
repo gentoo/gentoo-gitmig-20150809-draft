@@ -1,6 +1,13 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.47 2010/09/08 13:43:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.48 2010/10/22 17:07:36 reavertm Exp $
+
+*akonadi-server-1.4.1 (22 Oct 2010)
+
+  22 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -akonadi-server-1.4.0.ebuild, -akonadi-server-1.4.0-r2.ebuild,
+  +akonadi-server-1.4.1.ebuild:
+  Version bump, remove old
 
 *akonadi-server-1.4.0-r2 (08 Sep 2010)
 
