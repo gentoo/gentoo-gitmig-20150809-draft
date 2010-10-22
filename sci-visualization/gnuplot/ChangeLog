@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.139 2010/10/15 09:49:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.140 2010/10/22 17:34:14 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gnuplot-4.4.2.ebuild:
+  Stable on amd64 wrt bug #342167
 
   15 Oct 2010; Markus Meier <maekke@gentoo.org> gnuplot-4.4.2.ebuild:
   add ~arm
