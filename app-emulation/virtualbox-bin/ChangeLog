@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.92 2010/10/12 13:52:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.93 2010/10/22 21:14:05 polynomial-c Exp $
+
+*virtualbox-bin-3.2.10-r1 (22 Oct 2010)
+
+  22 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-bin-3.2.10.ebuild, +virtualbox-bin-3.2.10-r1.ebuild:
+  Upstream updated the packages only with build-ID bump. Thanks to Balazs
+  Nemeth for reporting this in bug #342231.
 
 *virtualbox-bin-3.2.10 (12 Oct 2010)
 
