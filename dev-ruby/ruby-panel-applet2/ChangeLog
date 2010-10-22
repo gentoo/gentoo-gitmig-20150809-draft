@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-panel-applet2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet2/ChangeLog,v 1.17 2010/08/01 09:56:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet2/ChangeLog,v 1.18 2010/10/22 13:59:28 graaff Exp $
+
+  22 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  -ruby-panel-applet2-0.19.1.ebuild, -ruby-panel-applet2-0.19.3.ebuild:
+  Remove old versions.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-panel-applet2-0.19.4.ebuild:

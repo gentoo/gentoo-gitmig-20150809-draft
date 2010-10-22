@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.76 2010/08/28 17:34:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.77 2010/10/22 13:52:42 graaff Exp $
+
+  22 Oct 2010; Hans de Graaff <graaff@gentoo.org> -ruby-gtk2-0.19.1.ebuild,
+  -ruby-gtk2-0.19.3.ebuild:
+  Remove old versions.
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org> ruby-gtk2-0.19.4.ebuild:
   alpha/ia64/sparc stable wrt #329807

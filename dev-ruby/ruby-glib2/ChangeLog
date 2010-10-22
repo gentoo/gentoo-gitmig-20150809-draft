@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-glib2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.70 2010/10/20 21:52:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ChangeLog,v 1.71 2010/10/22 13:43:19 graaff Exp $
+
+  22 Oct 2010; Hans de Graaff <graaff@gentoo.org> -ruby-glib2-0.19.1.ebuild,
+  -ruby-glib2-0.19.3.ebuild:
+  Remove old versions.
 
   20 Oct 2010; Brent Baude <ranger@gentoo.org> ruby-glib2-0.19.4.ebuild:
   Marking ruby-glib2-0.19.4 ppc stable for bug 329807
