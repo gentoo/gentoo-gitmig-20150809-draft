@@ -1,20 +1,21 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.28.0.ebuild,v 1.6 2010/08/18 22:30:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.32.0.ebuild,v 1.1 2010/10/22 21:31:14 eva Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Collection of network tools"
 HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.12:2
+COMMON_DEPEND=">=x11-libs/gtk+-2.19.7:2
 	>=gnome-base/gconf-2
 	gnome-base/libgtop:2"
 RDEPEND="${COMMON_DEPEND}
@@ -30,21 +31,14 @@ RDEPEND="${COMMON_DEPEND}
 # app-admin/gnome-system-tools
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9
 	app-text/gnome-doc-utils"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		$(use_enable debug)
+		--with-gtk=2.0
 		--disable-scrollkeeper"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
