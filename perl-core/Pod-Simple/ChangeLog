@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Pod-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.21 2010/10/22 02:28:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.22 2010/10/22 18:09:07 ssuominen Exp $
+
+  22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  Pod-Simple-3.14.ebuild:
+  ppc64 stable wrt #333421
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> Pod-Simple-3.14.ebuild:
   Stable for HPPA (bug #333421).

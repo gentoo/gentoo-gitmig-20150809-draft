@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.79 2010/10/22 02:06:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.80 2010/10/22 18:10:01 ssuominen Exp $
+
+  22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> CGI-3.49.ebuild:
+  ppc64 stable wrt #333421
 
   22 Oct 2010; Jeroen Roovers <jer@gentoo.org> CGI-3.49.ebuild:
   Stable for HPPA (bug #333421).
