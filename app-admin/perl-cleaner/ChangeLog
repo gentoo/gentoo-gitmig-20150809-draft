@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.67 2010/10/22 17:57:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.68 2010/10/22 18:34:14 ssuominen Exp $
+
+  22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  perl-cleaner-2.7.ebuild:
+  ppc64 stable wrt #340023
 
   22 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   perl-cleaner-2.7.ebuild:
