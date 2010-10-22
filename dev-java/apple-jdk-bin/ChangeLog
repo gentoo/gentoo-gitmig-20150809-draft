@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/apple-jdk-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.1 2010/01/25 16:26:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.2 2010/10/22 10:57:15 grobian Exp $
+
+  22 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  apple-jdk-bin-1.4.2.ebuild, apple-jdk-bin-1.6.0.ebuild:
+  Sort out keywords, based on architectures really available on 10.5 for the
+  binaries, bug #341625
 
 *apple-jdk-bin-1.6.0 (25 Jan 2010)
 *apple-jdk-bin-1.5.0 (25 Jan 2010)
