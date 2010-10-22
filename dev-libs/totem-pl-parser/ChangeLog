@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.71 2010/10/21 20:22:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.72 2010/10/22 21:42:47 eva Exp $
+
+*totem-pl-parser-2.32.1 (22 Oct 2010)
+
+  22 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +totem-pl-parser-2.32.1.ebuild:
+  Version bump. Fix introspection, some parsing issues and signal ordering
+  issues.
 
   21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/totem-pl-parser-2.26.1-fix-tests-without-gtk-doc.patch,
