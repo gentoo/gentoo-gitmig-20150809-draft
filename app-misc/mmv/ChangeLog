@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.23 2010/06/15 11:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.24 2010/10/22 17:19:05 hwoarang Exp $
+
+  22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> mmv-1.01b_p15.ebuild:
+  Stable on amd64 wrt bug #341945
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> mmv-1.01b_p15.ebuild:
   imported prefix changes
