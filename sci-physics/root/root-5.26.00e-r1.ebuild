@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e.ebuild,v 1.1 2010/10/19 03:49:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.1 2010/10/22 07:11:29 xarthisius Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ TMVA_DOC_PV=4
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
-	mirror://gentoo/${P}-xrootd-prop-flags.patch.gz
+	mirror://gentoo/${P}-patches.tar.bz2
 	doc? (
 		ftp://root.cern.ch/root/doc/Users_Guide_${DOC_PV}.pdf
 		ftp://root.cern.ch/root/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
@@ -103,12 +103,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-make-3.82.patch
-	epatch "${FILESDIR}"/${P}-prop-ldflags.patch
-	epatch "${FILESDIR}"/${P}-configure-paths.patch
-	epatch "${FILESDIR}"/${P}-nobyte-compile.patch
-	epatch "${FILESDIR}"/${P}-glibc212.patch
-	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
+	epatch "${WORKDIR}"/${P}-make-3.82.patch \
+		"${WORKDIR}"/${P}-prop-ldflags.patch \
+		"${WORKDIR}"/${P}-configure-paths.patch \
+		"${WORKDIR}"/${P}-nobyte-compile.patch \
+		"${WORKDIR}"/${P}-glibc212.patch \
+		"${WORKDIR}"/${P}-xrootd-prop-flags.patch
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc

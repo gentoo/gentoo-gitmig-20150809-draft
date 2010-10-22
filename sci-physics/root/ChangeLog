@@ -1,6 +1,15 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.75 2010/10/19 03:49:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.76 2010/10/22 07:11:29 xarthisius Exp $
+
+*root-5.26.00e-r1 (22 Oct 2010)
+
+  22 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org> -root-5.26.00e.ebuild,
+  +root-5.26.00e-r1.ebuild, -files/root-5.26.00e-configure-paths.patch,
+  -files/root-5.26.00e-glibc212.patch, -files/root-5.26.00e-make-3.82.patch,
+  -files/root-5.26.00e-nobyte-compile.patch,
+  -files/root-5.26.00e-prop-ldflags.patch:
+  Move patches to mirrors. Fixes bug 341971.
 
 *root-5.26.00e (19 Oct 2010)
 
