@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4683 2010/10/22 08:42:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4684 2010/10/22 18:48:45 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Oct 2010; <olemarkus@gentoo.org> default/linux/make.defaults:
+  Moved the previously entered block a few lines down so that it will not be
+  overridden by the following USE= line
 
   22 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Mask www-client/chromium dev channel release.

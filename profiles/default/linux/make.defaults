@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.11 2010/10/21 18:59:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.12 2010/10/22 18:48:45 olemarkus Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -10,17 +10,18 @@
 # has a conditional dependency on java (which it does,) then a JDK will be 
 # pulled in during *emerge system*!
 
-# 2010/10/21 - Ole Markus With <olemarkus@gentoo.org>
-# These USE flags were originally inserted here because of PHP
-# and were later removed by me. Reinserting the USE flags again because they are
-# global USE flags that may be expected to be set by other packages.
-USE="${USE} cli pcre session"
 
 # Default starting set of USE flags for all default/linux profiles.
 USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
 
 # make sure toolchain has sane defaults <tooclhain@gentoo.org>
 USE="${USE} fortran mudflap openmp"
+
+# 2010/10/21 - Ole Markus With <olemarkus@gentoo.org>
+# These USE flags were originally inserted here because of PHP
+# and were later removed by me. Reinserting the USE flags again because they are
+# global USE flags that may be expected to be set by other packages.
+USE="${USE} cli pcre session"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default
