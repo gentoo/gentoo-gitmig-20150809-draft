@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.201 2010/10/21 21:33:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.202 2010/10/22 06:56:44 eva Exp $
+
+  22 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Drop local sound USE flag description, not used anymore.
 
   21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnome-2.24.1.ebuild, -libgnome-2.26.0.ebuild, -libgnome-2.28.0.ebuild,
