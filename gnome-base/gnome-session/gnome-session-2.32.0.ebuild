@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.0.ebuild,v 1.1 2010/10/12 19:01:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.0.ebuild,v 1.2 2010/10/22 21:28:46 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 
-inherit eutils gnome2 autotools
+inherit autotools eutils gnome2
 
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -16,8 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 
 IUSE="doc ipv6 elibc_FreeBSD"
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.14.0
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gconf-2
 	>=sys-power/upower-0.9.0
@@ -64,7 +64,7 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	dodir /etc/X11/Sessions || die
+	dodir /etc/X11/Sessions || die "dodir failed"
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}/Gnome" || die "doexe failed"
 }
