@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-PBS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.10 2010/10/20 10:11:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.11 2010/10/22 17:28:28 fauli Exp $
+
+  22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> perl-PBS-0.33.ebuild:
+  stable x86, bug 341555
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> perl-PBS-0.33.ebuild:
   Stable on amd64 wrt bug #341555
