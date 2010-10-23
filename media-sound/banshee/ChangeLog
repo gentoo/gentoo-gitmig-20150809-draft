@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.122 2010/09/30 09:32:53 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.123 2010/10/23 14:36:16 pacho Exp $
+
+  23 Oct 2010; Pacho Ramos <pacho@gentoo.org> banshee-1.8.0.ebuild:
+  Enable 'web' by default as needed by community extensions (that are
+  commonly used).
 
   30 Sep 2010; Arun Raghavan <ford_prefect@gentoo.org>
   -banshee-1.7.4.ebuild, -files/banshee-1.7.4-fix-collisions.patch,

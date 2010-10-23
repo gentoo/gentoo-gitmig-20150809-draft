@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.0.ebuild,v 1.1 2010/09/30 09:19:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.0.ebuild,v 1.2 2010/10/23 14:36:16 pacho Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${PN}-1-${PV}.ta
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test web youtube"
+IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test +web youtube"
 
 # Hal is required until upstream bug 612616 is solved
 RDEPEND=">=dev-lang/mono-2.4.3
