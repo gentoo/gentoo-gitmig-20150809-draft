@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.271 2010/10/22 14:48:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.272 2010/10/23 02:37:58 dirtyepic Exp $
+
+*freetype-2.4.3-r1 (23 Oct 2010)
+
+  23 Oct 2010; Ryan Hill <dirtyepic@gentoo.org>
+  -files/freetype-2.3.9-CVE-2009-0946.patch, -freetype-2.3.11.ebuild,
+  -freetype-2.3.12.ebuild, +freetype-2.4.3-r1.ebuild,
+  +files/freetype-2.4.3-SA41738.patch:
+  Security patch for bug #342121 (SA41738). Remove old.
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   freetype-2.4.3.ebuild:
