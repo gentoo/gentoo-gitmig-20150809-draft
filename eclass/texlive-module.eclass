@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.43 2010/10/23 23:21:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.44 2010/10/23 23:22:47 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -229,13 +229,14 @@ texlive-module_make_language_lua_lines() {
 # @FUNCTION: texlive-module_src_compile
 # @DESCRIPTION:
 # exported function:
-# Will look for format.foo.cnf and build foo format files using fmtutil
+# Generates the config files that are to be installed in /etc/texmf;
+# texmf-update script will take care of merging the different config files for
+# different packages in a single one used by the whole tex installation.
+# 
+# Once the config files are generated, we build the format files using fmtutil
 # (provided by texlive-core). The compiled format files will be sent to
 # texmf-var/web2c, like fmtutil defaults to but with some trick to stay in the
-# sandbox
-# The next step is to generate config files that are to be installed in
-# /etc/texmf; texmf-update script will take care of merging the different config
-# files for different packages in a single one used by the whole tex installation.
+# sandbox.
 
 texlive-module_src_compile() {
 	# Generate config files from the tlpobj files provided by TeX Live 2008 and
