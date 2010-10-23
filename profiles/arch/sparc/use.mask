@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.62 2010/10/19 18:08:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.63 2010/10/23 12:01:24 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -20,6 +20,8 @@ libburn
 srtp
 # bug #290154
 tokyocabinet
+# bug 235685
+webkit
 
 # Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
 # Mono needs gcc4 and it's not yet stable
