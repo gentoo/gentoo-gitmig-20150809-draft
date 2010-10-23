@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.01.ebuild,v 1.4 2010/10/19 11:37:16 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.13.01.ebuild,v 1.5 2010/10/23 09:02:23 ssuominen Exp $
 
 DESCRIPTION="g-cpan: generate and install CPAN modules using portage"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -15,14 +15,14 @@ DEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_install() {
 	dodir /usr/bin
-	cp ${S}/bin/g-cpan.pl ${D}/usr/bin/
+	cp "${S}"/bin/g-cpan.pl "${D}"/usr/bin/
 	dodir /usr/share/man/man1
-	cp ${S}/man/g-cpan.pl.1 ${D}/usr/share/man/man1/
+	cp "${S}"/man/g-cpan.pl.1 "${D}"/usr/share/man/man1/
 	dodoc Changes
 	dosym /usr/bin/g-cpan.pl /usr/bin/g-cpan
 	dosym /usr/share/man/man1/g-cpan.pl.1.gz /usr/share/man/man1/g-cpan.1.gz
