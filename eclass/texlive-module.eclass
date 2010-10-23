@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.40 2010/10/23 22:41:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.41 2010/10/23 23:18:31 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -100,7 +100,7 @@ RDEPEND="${COMMON_DEPEND}"
 
 S="${WORKDIR}"
 
-if [ "${PV#2008}" == "${PV}" ]; then
+if [ "${PV#2008}" = "${PV}" ]; then
 
 # @FUNCTION: texlive-module_src_unpack
 # @DESCRIPTION:
@@ -146,7 +146,7 @@ texlive-module_add_format() {
 	einfo "Appending to format.${PN}.cnf for $@"
 	[ -d texmf/fmtutil ] || mkdir -p texmf/fmtutil
 	[ -f texmf/fmtutil/format.${PN}.cnf ] || { echo "# Generated for ${PN} by texlive-module.eclass" > texmf/fmtutil/format.${PN}.cnf; }
-	if [ "${mode}" == "disabled" ]; then
+	if [ "${mode}" = "disabled" ]; then
 		printf "#! " >> texmf/fmtutil/format.${PN}.cnf
 	fi
 	[ -z "${patterns}" ] && patterns="-"
