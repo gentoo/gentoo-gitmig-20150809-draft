@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.49 2010/10/23 23:30:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.50 2010/10/23 23:31:59 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -141,7 +141,7 @@ fi
 # Creates/appends to a format.${PN}.cnf file for fmtutil.
 # It parses the AddFormat directive of tlpobj files to create it.
 # This will make fmtutil generate the formats when asked and allow the remaining
-# src_compile phase to build the formats
+# src_compile phase to build the formats.
 
 texlive-module_add_format() {
 	local name engine mode patterns options
@@ -158,7 +158,7 @@ texlive-module_add_format() {
 
 # @FUNCTION: texlive-module_make_language_def_lines
 # @DESCRIPTION:
-# Creates a language.${PN}.def entry to put in /etc/texmf/language.def.d
+# Creates a language.${PN}.def entry to put in /etc/texmf/language.def.d.
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_def_lines() {
@@ -178,7 +178,7 @@ texlive-module_make_language_def_lines() {
 
 # @FUNCTION: texlive-module_make_language_dat_lines
 # @DESCRIPTION:
-# Creates a language.${PN}.dat entry to put in /etc/texmf/language.dat.d
+# Creates a language.${PN}.dat entry to put in /etc/texmf/language.dat.d.
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_dat_lines() {
@@ -197,7 +197,7 @@ texlive-module_make_language_dat_lines() {
 # @FUNCTION: texlive-module_synonyms_to_language_lua_line
 # @DESCRIPTION:
 # Helper function for texlive-module_make_language_lua_lines to generate a
-# correctly formatted synonyms entry for language.dat.lua
+# correctly formatted synonyms entry for language.dat.lua.
 
 texlive-module_synonyms_to_language_lua_line() {
 	local prev=""
@@ -210,7 +210,8 @@ texlive-module_synonyms_to_language_lua_line() {
 # @FUNCTION: texlive-module_make_language_lua_lines
 # @DESCRIPTION:
 # Only valid for TeXLive 2010.
-# Creates a language.${PN}.dat.lua entry to put in /etc/texmf/language.dat.lua.d
+# Creates a language.${PN}.dat.lua entry to put in
+# /etc/texmf/language.dat.lua.d.
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_lua_lines() {
@@ -296,7 +297,7 @@ texlive-module_src_compile() {
 # @FUNCTION: texlive-module_src_install
 # @DESCRIPTION:
 # exported function:
-# Install texmf and config files to the system
+# Installs texmf and config files to the system.
 
 texlive-module_src_install() {
 	for i in texmf/fmtutil/format*.cnf; do
@@ -348,7 +349,7 @@ texlive-module_src_install() {
 # @FUNCTION: texlive-module_pkg_postinst
 # @DESCRIPTION:
 # exported function:
-# run texmf-update to ensure the tex installation is consistent with the
+# Run texmf-update to ensure the tex installation is consistent with the
 # installed texmf trees.
 
 texlive-module_pkg_postinst() {
@@ -364,7 +365,7 @@ texlive-module_pkg_postinst() {
 # @FUNCTION: texlive-module_pkg_postrm
 # @DESCRIPTION:
 # exported function:
-# run texmf-update to ensure the tex installation is consistent with the
+# Run texmf-update to ensure the tex installation is consistent with the
 # installed texmf trees.
 
 texlive-module_pkg_postrm() {
