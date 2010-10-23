@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r1.ebuild,v 1.1 2010/09/29 23:54:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r1.ebuild,v 1.2 2010/10/23 17:29:37 flameeyes Exp $
 
 EAPI=2
 
-inherit multilib linux-info
+inherit multilib linux-info toolchain-funcs
 
 DESCRIPTION="Entropy Key userspace daemon"
 HOMEPAGE="http://www.entropykey.co.uk/"
@@ -73,6 +73,7 @@ src_compile() {
 	# We don't slot LUA so we don't really need to have the variables
 	# set at all.
 	emake -C daemon \
+		CC="$(tc-getCC)" \
 		LUA_V= LUA_INC= \
 		OSNAME=${osname} \
 		OPT="${CFLAGS}" \
@@ -127,6 +128,11 @@ pkg_postinst() {
 	elog "The service supports multiplexing if you wish to use multiple"
 	elog "keys, just symlink /etc/init.d/ekeyd → /etc/init.d/ekeyd.identifier"
 	elog "and it'll be looking for /etc/init.d/identifier.conf"
+	elog ""
+	elog "If you intend on providing entropy for more than your running host"
+	elog "you'll have to set the ekeyd daemon into EGD-server mode, and install"
+	elog "on both the ekey host and the clients the app-crypt/ekey-egd-linux"
+	elog "package that connects to the egd socket to receive entropy."
 	elog ""
 
 	if use usb; then
