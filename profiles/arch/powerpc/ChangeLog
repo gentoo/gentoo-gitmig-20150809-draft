@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.83 2010/10/13 08:30:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.84 2010/10/23 09:18:46 ssuominen Exp $
+
+  23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ppc64/package.use.mask:
+  Mask USE debug-utils for btrfs-progs because matplotlib isn't tested yet.
 
   13 Oct 2010; Vlastimil Babka <caster@gentoo.org> package.use.mask:
   package.use.mask systemtap for dev-java/icedtea due to missing keywords
