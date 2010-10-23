@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.176 2010/10/19 07:37:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.177 2010/10/23 19:01:43 peper Exp $
+
+*paludis-0.54.5 (23 Oct 2010)
+
+  23 Oct 2010; Piotr Jaroszyński <peper@gentoo.org> -paludis-0.54.3.ebuild,
+  +paludis-0.54.5.ebuild:
+  Add 0.54.5
 
   19 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> paludis-0.54.4.ebuild:
   Added ~sparc keyword since it works perfectly on my SunBlade 100.
