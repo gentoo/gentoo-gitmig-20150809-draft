@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.41 2010/10/23 23:18:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.42 2010/10/23 23:19:29 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -195,7 +195,7 @@ texlive-module_make_language_dat_lines() {
 # @FUNCTION: texlive-module_synonyms_to_language_lua_line
 # @DESCRIPTION:
 # Helper function for texlive-module_make_language_lua_lines to generate a
-# correctly formatted synonyms entry for language.lua.dat
+# correctly formatted synonyms entry for language.dat.lua
 
 texlive-module_synonyms_to_language_lua_line() {
 	local prev=""
@@ -215,7 +215,7 @@ texlive-module_make_language_lua_lines() {
 	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions luaspecial
 	local dest="${S}/language.${PN}.dat.lua"
 	eval $@
-	einfo "Generating language.lua.dat entry for $@"
+	einfo "Generating language.dat.lua entry for $@"
 	printf "\t['%s'] = {\n" "$name"                                                                 >> "$dest"
 	printf "\t\tloader = '%s',\n" "$file"                                                           >> "$dest"
 	printf "\t\tlefthyphenmin = %s,\n\t\trighthyphenmin = %s,\n" "$lefthyphenmin" "$righthyphenmin" >> "$dest"
