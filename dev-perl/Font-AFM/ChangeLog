@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.16 2010/10/20 11:13:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.17 2010/10/23 17:41:59 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> Font-AFM-1.20.ebuild:
+  ia64/sparc stable wrt #341205
 
   20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> Font-AFM-1.20.ebuild:
   x86 stable wrt bug #341205
