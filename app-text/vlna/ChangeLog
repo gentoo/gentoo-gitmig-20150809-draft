@@ -1,6 +1,11 @@
 # ChangeLog for app-text/vlna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.30 2010/02/02 22:01:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.31 2010/10/23 01:46:57 aballier Exp $
+
+*vlna-1.5 (23 Oct 2010)
+
+  23 Oct 2010; Alexis Ballier <aballier@gentoo.org> +vlna-1.5.ebuild:
+  version bump
 
   02 Feb 2010; Jonathan Callen <abcd@gentoo.org> vlna-1.4.ebuild:
   Add ~amd64-linux/~x86-linux keywords
