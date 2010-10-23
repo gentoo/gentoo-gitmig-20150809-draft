@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fotowall
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.14 2010/06/25 22:11:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.15 2010/10/23 00:42:19 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   25 Jun 2010; Markos Chandras <hwoarang@gentoo.org> -fotowall-0.7.1.ebuild,
   -fotowall-0.8.2.ebuild:
