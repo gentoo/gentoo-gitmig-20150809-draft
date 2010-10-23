@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.21.3.ebuild,v 1.1 2010/09/29 01:01:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.21.3.ebuild,v 1.2 2010/10/23 13:58:13 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,6 +29,11 @@ DEPEND="${RDEPEND}
 DOCS="doc/*.txt"
 
 src_test() {
+	if has_version "<dev-python/logilab-common-0.52.0"; then
+		ewarn "Skipping tests due to old version of dev-python/logilab-common"
+		return
+	fi
+
 	testing() {
 		PYTHONPATH="build-${PYTHON_ABI}/lib" pytest -v
 	}

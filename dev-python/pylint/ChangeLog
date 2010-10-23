@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.74 2010/09/29 01:01:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.75 2010/10/23 13:58:13 arfrever Exp $
+
+  23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pylint-0.21.3.ebuild:
+  Skip tests with old versions of dev-python/logilab-common (bug #341651).
 
 *pylint-0.21.3 (29 Sep 2010)
 
