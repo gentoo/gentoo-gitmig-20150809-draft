@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7-r1.ebuild,v 1.1 2010/02/04 16:33:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7-r1.ebuild,v 1.2 2010/10/23 10:07:36 hwoarang Exp $
 
 EAPI="2"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -87,7 +87,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.5.4-gcc43.patch" \
 		"${FILESDIR}/${PN}-1.5.4-zhTW.patch" \
 		"${FILESDIR}/${P}-kde4.patch" \
-		"${FILESDIR}/${P}-kde4-applet.patch"
+		"${FILESDIR}/${P}-kde4-applet.patch" \
+		"${FILESDIR}/${P}-qt4.7.patch"
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die

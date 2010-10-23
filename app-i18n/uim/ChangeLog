@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.221 2010/07/10 19:17:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.222 2010/10/23 10:07:36 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> uim-1.5.7-r1.ebuild,
+  +files/uim-1.5.7-qt4.7.patch:
+  Patch to build against Qt-4.7. Thanks to Muneyuki
+  Noguchi<nogu.dev@gmail.com>. Bug #331133
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> uim-1.5.7.ebuild:
   alpha/sparc stable wrt #298221
