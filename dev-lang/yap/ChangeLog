@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.41 2010/10/19 06:50:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.42 2010/10/23 20:55:08 keri Exp $
+
+  23 Oct 2010; <keri@gentoo.org> yap-6.2.0.ebuild,
+  +files/yap-6.2.0-have-config.patch:
+  Enable Prolog engine to bootstrap with gcc-4.5; QA tidyup - include
+  config.h when compiling SWI packages
 
 *yap-6.2.0 (19 Oct 2010)
 

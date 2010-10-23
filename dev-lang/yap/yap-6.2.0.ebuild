@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0.ebuild,v 1.1 2010/10/19 06:50:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0.ebuild,v 1.2 2010/10/23 20:55:08 keri Exp $
 
-inherit eutils java-pkg-opt-2
+inherit eutils flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="YAP is a high-performance Prolog compiler."
 HOMEPAGE="http://www.ncc.up.pt/~vsc/Yap/"
@@ -33,10 +33,13 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-yapsharedir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-have-config.patch
 	epatch "${FILESDIR}"/${P}-chr-sublist.patch
 }
 
 src_compile() {
+	append-flags -fno-strict-aliasing
+
 	local myddas_conf
 	if use mysql || use odbc; then
 		myddas_conf="--enable-myddas \
