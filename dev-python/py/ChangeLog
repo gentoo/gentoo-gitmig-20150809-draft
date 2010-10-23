@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.65 2010/10/21 22:09:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.66 2010/10/23 18:17:23 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> py-1.3.4.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #341335
 
   21 Oct 2010; Christian Faulhammer <fauli@gentoo.org> py-1.3.4.ebuild:
   stable x86, bug 341335
