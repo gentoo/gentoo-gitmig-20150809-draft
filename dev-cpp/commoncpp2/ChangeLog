@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.54 2010/08/24 14:12:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.55 2010/10/23 22:24:23 halcy0n Exp $
+
+  23 Oct 2010; Mark Loeser <halcy0n@gentoo.org> commoncpp2-1.8.0.ebuild:
+  Mark stable on ppc64; bug #321931
 
   24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   +files/1.8.0-glibc212.patch, commoncpp2-1.8.0.ebuild:
