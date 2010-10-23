@@ -1,6 +1,13 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.65 2010/10/12 19:36:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.66 2010/10/23 19:34:25 hwoarang Exp $
+
+*kmess-9999 (23 Oct 2010)
+*kmess-2.0.9999 (23 Oct 2010)
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> +kmess-2.0.9999.ebuild,
+  +kmess-9999.ebuild:
+  Initial commit of live ebuilds. Moved from kde overlay
 
   12 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -kmess-2.0.3.ebuild:
   Remove old ebuild
