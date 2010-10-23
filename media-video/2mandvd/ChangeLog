@@ -1,6 +1,9 @@
 # ChangeLog for media-video/2mandvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.14 2010/10/05 22:15:07 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.15 2010/10/23 00:41:36 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
 *2mandvd-1.4 (05 Oct 2010)
 
