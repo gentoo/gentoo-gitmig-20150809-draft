@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.1.ebuild,v 1.2 2010/09/26 13:49:26 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.1.ebuild,v 1.3 2010/10/23 08:25:41 olemarkus Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -24,7 +24,7 @@ IUSE="debug disassembler inode doccommentinclusion session"
 DEPEND="!dev-php5/pecl-apc !dev-php5/xcache"
 RDEPEND="${DEPEND}
 	>=dev-lang/php-5.1[zlib,session?]
-	|| ( dev-lang/php[cgi] dev-lang/php[apache2] )
+	virtual/httpd-php
 "
 
 # Webserver user and group, here for Apache by default
