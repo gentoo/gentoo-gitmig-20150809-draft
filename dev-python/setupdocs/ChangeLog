@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.16 2010/10/18 12:48:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.17 2010/10/23 09:13:54 ssuominen Exp $
+
+  23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  setupdocs-1.0.5.ebuild:
+  Keyword ~ppc64 wrt #341699
 
 *setupdocs-1.0.5 (18 Oct 2010)
 
