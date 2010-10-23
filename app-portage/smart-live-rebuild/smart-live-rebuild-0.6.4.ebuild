@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-0.6.3.ebuild,v 1.3 2010/10/22 14:52:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-0.6.4.ebuild,v 1.1 2010/10/23 08:10:08 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND='*:2.6'
