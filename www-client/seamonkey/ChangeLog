@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.264 2010/10/22 01:51:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.265 2010/10/23 06:01:54 jer Exp $
+
+  23 Oct 2010; Jeroen Roovers <jer@gentoo.org> seamonkey-2.0.9.ebuild:
+  Stable for HPPA (bug #341821).
 
   22 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> seamonkey-2.0.9.ebuild:
   Bump nss dep
