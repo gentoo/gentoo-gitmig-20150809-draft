@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.25 2010/10/22 17:35:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.26 2010/10/23 22:43:17 c1pher Exp $
+
+  23 Oct 2010; Dane Smith <c1pher@gentoo.org> tdl-1.5.2-r1.ebuild:
+  Stable x86 wrt bug 342139.
 
   22 Oct 2010; Justin Lecher <jlec@gentoo.org> tdl-1.5.2.ebuild,
   tdl-1.5.2-r1.ebuild:
