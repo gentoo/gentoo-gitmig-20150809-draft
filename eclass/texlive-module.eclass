@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.36 2010/10/11 20:44:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.37 2010/10/23 16:38:26 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -156,7 +156,7 @@ texlive-module_add_format() {
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_def_lines() {
-	local lefthyphenmin righthyphenmin synonyms name file
+	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions
 	eval $@
 	einfo "Generating language.def entry for $@"
 	[ -z "$lefthyphenmin" ] && lefthyphenmin="2"
@@ -177,7 +177,7 @@ texlive-module_make_language_def_lines() {
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_dat_lines() {
-	local lefthyphenmin righthyphenmin synonyms name file
+	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions
 	eval $@
 	einfo "Generating language.dat entry for $@"
 	echo "$name $file" >> "${S}/language.${PN}.dat"
