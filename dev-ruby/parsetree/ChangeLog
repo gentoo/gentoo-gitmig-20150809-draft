@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.31 2010/08/29 13:01:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.32 2010/10/23 15:50:28 jer Exp $
+
+  23 Oct 2010; Jeroen Roovers <jer@gentoo.org> parsetree-3.0.5-r2.ebuild:
+  Marked ~hppa (bug #337956).
 
   29 Aug 2010; Hans de Graaff <graaff@gentoo.org> parsetree-3.0.5-r2.ebuild:
   Simplify build system. Apply fixes from bug 299367.

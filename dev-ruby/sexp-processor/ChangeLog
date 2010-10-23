@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sexp-processor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.21 2010/10/10 17:46:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.22 2010/10/23 15:46:32 jer Exp $
+
+  23 Oct 2010; Jeroen Roovers <jer@gentoo.org> sexp-processor-3.0.4.ebuild,
+  sexp-processor-3.0.5.ebuild:
+  Marked ~hppa (bug #337956).
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   sexp-processor-3.0.5.ebuild:

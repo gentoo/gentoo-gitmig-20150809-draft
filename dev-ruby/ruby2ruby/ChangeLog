@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.28 2010/10/12 20:45:59 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.29 2010/10/23 15:49:49 jer Exp $
+
+  23 Oct 2010; Jeroen Roovers <jer@gentoo.org> ruby2ruby-1.2.4-r2.ebuild,
+  ruby2ruby-1.2.5.ebuild:
+  Marked ~hppa (bug #337956).
 
   12 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   ruby2ruby-1.2.5.ebuild:
