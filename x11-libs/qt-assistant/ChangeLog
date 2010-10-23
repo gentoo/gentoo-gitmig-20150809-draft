@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.94 2010/10/23 15:12:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.95 2010/10/23 15:22:41 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-assistant-4.6.3.ebuild:
+  alpha/arm/ia64 stable wrt #341703
 
   23 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-assistant-4.5.3.ebuild,
   qt-assistant-4.6.2.ebuild, qt-assistant-4.6.2-r2.ebuild,
