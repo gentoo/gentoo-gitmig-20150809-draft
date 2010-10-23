@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.45 2010/10/23 23:24:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.46 2010/10/23 23:25:58 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -62,8 +62,8 @@ COMMON_DEPEND=">=app-text/texlive-core-${TL_PV:-${PV}}"
 
 IUSE="source"
 
-# TeX Live 2008 was providing .tar.lzma files of CTAN packages. For 2009 they are now
-# .tar.xz
+# TeX Live 2008 was providing .tar.lzma files of CTAN packages.
+# For 2009 and 2010 they are now .tar.xz
 if [ "${PV#2008}" != "${PV}" ]; then
 	PKGEXT=tar.lzma
 	DEPEND="${COMMON_DEPEND}
