@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.14 2010/10/15 18:29:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r1.ebuild,v 1.15 2010/10/23 18:14:58 armin76 Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="berkdb iodbc mysql odbc postgres sqlite ssl xml"
 
 RDEPEND="mysql? ( virtual/mysql )
