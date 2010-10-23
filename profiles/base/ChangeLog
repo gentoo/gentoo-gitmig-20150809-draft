@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.178 2010/10/20 18:19:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.179 2010/10/23 11:43:46 arfrever Exp $
+
+  23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.use.mask:
+  Mask "declarative" USE flag for dev-python/PyQt4.
 
   20 Oct 2010; Zac Medico <zmedico@gentoo.org> package.use.force:
   Force ipc USE flag for sys-apps/portage since it should remain enabled

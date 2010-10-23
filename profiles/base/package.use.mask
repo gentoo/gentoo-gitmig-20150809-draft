@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.171 2010/10/13 21:32:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.172 2010/10/23 11:43:46 arfrever Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (23 Oct 2010)
+# Masked until Qt 4.7 is unmasked.
+dev-python/PyQt4 declarative
 
 # Gilles Dartiguelongue <eva@gentoo.org> (13 Oct 2010)
 # Mask vala USE flag since it depends on a masked revision
