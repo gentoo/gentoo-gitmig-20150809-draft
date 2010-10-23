@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.47 2010/10/23 23:26:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.48 2010/10/23 23:28:24 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -106,6 +106,8 @@ if [ "${PV#2008}" = "${PV}" ]; then
 # @DESCRIPTION:
 # Only for TeX Live 2009 and later.
 # Gives tar.xz unpack support until we can use an EAPI with that support.
+# If EAPI supports tar.xz then it calls unpack instead of its own unpacker.
+# After unpacking, the files that need to relocated are moved accordingly.
 
 RELOC_TARGET=texmf-dist
 
