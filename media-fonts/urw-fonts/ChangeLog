@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.55 2010/10/22 18:30:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.56 2010/10/23 16:34:10 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> urw-fonts-2.4.9.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #332061
 
   22 Oct 2010; Brent Baude <ranger@gentoo.org> urw-fonts-2.4.9.ebuild:
   Marking urw-fonts-2.4.9 ppc for bug 332061
