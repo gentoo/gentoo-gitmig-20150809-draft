@@ -1,11 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.20 2010/10/09 21:28:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.21 2010/10/23 13:00:01 ssuominen Exp $
 
 EAPI=2
-
-PYTHON_DEPEND="2:2.6"
-
 inherit pax-utils eutils multilib python xfconf git
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
@@ -30,6 +27,7 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 	unique? ( dev-libs/libunique )
 	vala? ( dev-lang/vala:0 )"
 DEPEND="${RDEPEND}
+	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	dev-util/intltool
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
