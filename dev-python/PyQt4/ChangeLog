@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.130 2010/10/06 11:05:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.131 2010/10/23 11:44:54 arfrever Exp $
+
+*PyQt4-4.8 (23 Oct 2010)
+
+  23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -PyQt4-4.7.ebuild, -PyQt4-4.7.5.ebuild, -PyQt4-4.7.7.ebuild,
+  +PyQt4-4.8.ebuild, metadata.xml:
+  Version bump.
 
 *PyQt4-4.7.7-r1 (06 Oct 2010)
 
