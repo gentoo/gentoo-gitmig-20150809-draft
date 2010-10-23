@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/splitvt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.27 2010/10/22 16:57:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.28 2010/10/23 22:34:45 c1pher Exp $
+
+  23 Oct 2010; Dane Smith <c1pher@gentoo.org> splitvt-1.6.6-r2.ebuild:
+  Stable x86 wrt bug 342143.
 
   22 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   splitvt-1.6.6-r2.ebuild:
