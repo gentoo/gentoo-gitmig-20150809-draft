@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.39 2010/10/23 21:48:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.40 2010/10/23 22:41:44 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -14,8 +14,11 @@
 # Ebuilds have to provide TEXLIVE_MODULE_CONTENTS variable that contains the list
 # of packages that it will install. (See below)
 #
-# What is assumed is that it unpacks texmf and texmf-dist directories to
-# ${WORKDIR}.
+# For TeX Live versions prior to 2009, the ebuild was supposed to unpack the
+# texmf and texmf-dist directories to ${WORKDIR} (which is what the default
+# src_unpack does).
+# Starting from TeX Live 2009, the eclass provides a src_unpack function taking
+# care of unpacking and relocating the files that need it.
 #
 # It inherits texlive-common
 
