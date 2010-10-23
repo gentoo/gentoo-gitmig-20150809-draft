@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.37 2010/10/23 16:38:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.38 2010/10/23 21:47:07 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -156,7 +156,7 @@ texlive-module_add_format() {
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_def_lines() {
-	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions
+	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions luaspecial
 	eval $@
 	einfo "Generating language.def entry for $@"
 	[ -z "$lefthyphenmin" ] && lefthyphenmin="2"
@@ -177,7 +177,7 @@ texlive-module_make_language_def_lines() {
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_dat_lines() {
-	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions
+	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions luaspecial
 	eval $@
 	einfo "Generating language.dat entry for $@"
 	echo "$name $file" >> "${S}/language.${PN}.dat"
@@ -187,6 +187,40 @@ texlive-module_make_language_dat_lines() {
 			echo "=$i" >> "${S}/language.${PN}.dat"
 		done
 	fi
+}
+
+# @FUNCTION: texlive-module_synonyms_to_language_lua_line
+# @DESCRIPTION:
+# Helper function for texlive-module_make_language_lua_lines to generate a
+# correctly formatted synonyms entry for language.lua.dat
+
+texlive-module_synonyms_to_language_lua_line() {
+	local prev=""
+	for i in $(echo $@ | tr ',' ' ') ; do
+		printf "${prev} '%s'" $i
+		prev=","
+	done
+}
+
+# @FUNCTION: texlive-module_make_language_lua_lines
+# @DESCRIPTION:
+# Only valid for TeXLive 2010.
+# Creates a language.${PN}.dat entry to put in /etc/texmf/language.lua.d
+# It parses the AddHyphen directive of tlpobj files to create it.
+
+texlive-module_make_language_lua_lines() {
+	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions luaspecial
+	local dest="${S}/language.${PN}.dat.lua"
+	eval $@
+	einfo "Generating language.lua.dat entry for $@"
+	printf "\t['%s'] = {\n" "$name"                                                                 >> "$dest"
+	printf "\t\tloader = '%s',\n" "$file"                                                           >> "$dest"
+	printf "\t\tlefthyphenmin = %s,\n\t\trighthyphenmin = %s,\n" "$lefthyphenmin" "$righthyphenmin" >> "$dest"
+	printf "\t\tsynonyms = {%s },\n" "$(texlive-module_synonyms_to_language_lua_line "$synonyms")"  >> "$dest"
+	[ -n "$file_patterns"   ] && printf "\t\tpatterns = '%s',\n" "$file_patterns"                   >> "$dest"
+	[ -n "$file_exceptions" ] && printf "\t\thyphenation = '%s',\n"	"$file_exceptions"              >> "$dest"
+	[ -n "$luaspecial"      ] && printf "\t\tspecial = '%s',\n" "$luaspecial"                       >> "$dest"
+	printf "\t},\n"                                                                                 >> "$dest"
 }
 
 # @FUNCTION: texlive-module_src_compile
@@ -224,7 +258,9 @@ texlive-module_src_compile() {
 				echo "f	${parameter}" >> "${S}/${PN}-config";;
 			AddHyphen)
 				texlive-module_make_language_def_lines "$parameter"
-				texlive-module_make_language_dat_lines "$parameter";;
+				texlive-module_make_language_dat_lines "$parameter"
+				[ "${PV#2008}" = "${PV}" -a "${PV#2009}" = "${PV}" ] && texlive-module_make_language_lua_lines "$parameter"
+				;;
 			AddFormat)
 				texlive-module_add_format "$parameter";;
 			BuildFormat)
@@ -292,6 +328,12 @@ texlive-module_src_install() {
 		insinto /etc/texmf/language.dat.d
 		doins "${S}/language.${PN}.dat"
 	fi
+
+	if [ -f "${S}/language.${PN}.dat.lua" ] ; then
+		insinto /etc/texmf/language.dat.lua.d
+		doins "${S}/language.${PN}.dat.lua"
+	fi
+
 	[ -n "${TEXLIVE_MODULE_BINSCRIPTS}" ] && dobin_texmf_scripts ${TEXLIVE_MODULE_BINSCRIPTS}
 
 	texlive-common_handle_config_files
