@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.757 2010/10/21 17:13:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.758 2010/10/23 11:44:32 zmedico Exp $
+
+*portage-2.2.0_alpha1 (23 Oct 2010)
+
+  23 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha1.ebuild:
+  2.2.0_alpha1 version bump. This includes all of the fixes in
+  portage-2.1.9.22. The 2.2.0_alpha1 release extends upon the previous
+  2.2_rc series which never became stable. Because version comparison rules
+  work such that 2.2.0 > 2.2, this release is appropriately recognized as
+  an upgrade from the 2.2_rc series. Bug #210077 tracks all bugs fixed since
+  2.1.x.
+
+*portage-2.1.9.22 (23 Oct 2010)
+
+  23 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.22.ebuild:
+  2.1.9.22 version bump. This fixes bug #342157 (show relevant atoms in the
+  'skipped updates' message). Bug #335925 tracks all bugs fixed since
+  2.1.8.x.
 
 *portage-2.2_rc99 (21 Oct 2010)
 
