@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.97 2010/10/18 20:11:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.98 2010/10/23 12:21:38 arfrever Exp $
+
+  23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pycairo-1.8.8.ebuild, -files/pycairo-1.8.8-pkgconfig_dir.patch:
+  Delete.
 
   18 Oct 2010; Jeroen Roovers <jer@gentoo.org> pycairo-1.8.10.ebuild:
   Stable for PPC (bug #337146).
