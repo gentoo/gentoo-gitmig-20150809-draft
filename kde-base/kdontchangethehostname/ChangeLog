@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdontchangethehostname
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.5 2010/10/06 09:17:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.6 2010/10/23 16:14:46 dilfridge Exp $
+
+  23 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdontchangethehostname-4.5.2.ebuild:
+  Added RDEPEND on x11-apps/xauth, fixes bug 337005
 
 *kdontchangethehostname-4.5.2 (05 Oct 2010)
 
