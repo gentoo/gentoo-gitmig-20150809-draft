@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS-Feed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.24 2010/10/20 11:19:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS-Feed/ChangeLog,v 1.25 2010/10/23 17:44:45 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> XML-RSS-Feed-2.3.2.ebuild:
+  ia64/sparc stable wrt #341217
 
   20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   XML-RSS-Feed-2.3.2.ebuild:
