@@ -4,5 +4,18 @@
 	<herd>no-herd</herd>
 	<maintainer>
 		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
 	</maintainer>
+	<longdescription>
+		A set of udev rules and scripts to mount USB media automatically
+		as soon as they are inserted. Features flexible configuration,
+		including mountpoint naming rules, and hooks.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>mgorny@gentoo.org</email>
+			<name>Michał Górny</name>
+		</maintainer>
+		<bugs-to>http://github.com/mgorny/uam/issues</bugs-to>
+	</upstream>
 </pkgmetadata>
