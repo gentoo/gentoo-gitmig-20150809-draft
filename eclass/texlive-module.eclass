@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.50 2010/10/23 23:31:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.51 2010/10/23 23:37:24 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@
 # Starting from TeX Live 2009, the eclass provides a src_unpack function taking
 # care of unpacking and relocating the files that need it.
 #
-# It inherits texlive-common
+# It inherits texlive-common.
 
 # @ECLASS-VARIABLE: TEXLIVE_MODULE_CONTENTS
 # @DESCRIPTION:
@@ -34,13 +34,13 @@
 # @DESCRIPTION:
 # The list of packages that will be installed if the doc useflag is enabled.
 # Expansion to SRC_URI is the same as for TEXLIVE_MODULE_CONTENTS. This is only
-# valid for TeX Live 2008 and later
+# valid for TeX Live 2008 and later.
 
 # @ECLASS-VARIABLE: TEXLIVE_MODULE_SRC_CONTENTS
 # @DESCRIPTION:
 # The list of packages that will be installed if the source useflag is enabled.
 # Expansion to SRC_URI is the same as for TEXLIVE_MODULE_CONTENTS. This is only
-# valid for TeX Live 2008 and later
+# valid for TeX Live 2008 and later.
 
 # @ECLASS-VARIABLE: TEXLIVE_MODULE_BINSCRIPTS
 # @DESCRIPTION:
