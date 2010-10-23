@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.12.0.ebuild,v 1.1 2010/09/21 08:59:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.12.1.ebuild,v 1.1 2010/10/23 18:00:35 scarabeus Exp $
 
 EAPI=3
 
@@ -32,14 +32,12 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 
-	insinto /usr/share/pixmaps
-	newins "${S}/pgadmin/include/images/pgAdmin3.png" ${PN}.png || die
+	newicon "${S}/pgadmin/include/images/pgAdmin3.png" ${PN}.png || die
 
 	insinto /usr/share/pgadmin3
 	newins "${S}/pgadmin/include/images/pgAdmin3.png" ${PN}.png || die
 
-	insinto /usr/share/applications
-	doins "${S}/pkg/pgadmin3.desktop" || die
+	domenu "${S}/pkg/pgadmin3.desktop" || die
 
 	# Fixing world-writable files
 	chmod -R go-w "${D}/usr/share" || die
