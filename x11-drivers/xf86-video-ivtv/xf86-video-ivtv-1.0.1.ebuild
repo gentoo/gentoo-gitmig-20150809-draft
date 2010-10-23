@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-1.0.1.ebuild,v 1.6 2009/12/14 12:04:25 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/xf86-video-ivtv-1.0.1.ebuild,v 1.7 2010/10/23 15:08:05 ssuominen Exp $
 
 inherit flag-o-matic x-modular
 DESCRIPTION="X.Org driver for TV-out on ivtvdev cards"
@@ -12,9 +12,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-base/xorg-server
-		x11-misc/imake
-		|| ( media-tv/ivtv
-			media-tv/ivtv-utils )"
+		x11-misc/imake"
 RDEPEND="x11-proto/xextproto
 		x11-proto/videoproto
 		x11-proto/xproto
