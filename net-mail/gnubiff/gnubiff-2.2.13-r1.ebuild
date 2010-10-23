@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r1.ebuild,v 1.3 2010/10/05 20:11:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r1.ebuild,v 1.4 2010/10/23 17:12:27 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 x86"
+KEYWORDS="alpha amd64 ia64 x86"
 IUSE="debug fam gnome nls password"
 
 RDEPEND=">=x11-libs/gtk+-2.6
