@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.37 2010/10/21 23:41:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.38 2010/10/23 18:19:56 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> powertop-1.13.ebuild:
+  arm/sparc stable wrt #342047
 
   21 Oct 2010; Markos Chandras <hwoarang@gentoo.org> powertop-1.13.ebuild:
   Stable on amd64 wrt bug #342047
