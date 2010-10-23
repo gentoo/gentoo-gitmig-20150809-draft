@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dnetstats
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.6 2010/09/13 10:32:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.7 2010/10/23 00:47:10 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   13 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   -dnetstats-1.2.5.ebuild, dnetstats-1.2.6.ebuild:
