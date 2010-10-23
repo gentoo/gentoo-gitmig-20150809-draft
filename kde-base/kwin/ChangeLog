@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.209 2010/10/06 09:17:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.210 2010/10/23 15:43:54 dilfridge Exp $
+
+  23 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> kwin-4.5.2.ebuild:
+  Added RDEPEND on x11-apps/scripts, fixes bug 337008
 
 *kwin-4.5.2 (05 Oct 2010)
 

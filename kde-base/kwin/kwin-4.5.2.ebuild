@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.5.2.ebuild,v 1.1 2010/10/06 09:17:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.5.2.ebuild,v 1.2 2010/10/23 15:43:54 dilfridge Exp $
 
 EAPI="3"
 
@@ -33,7 +33,8 @@ DEPEND="${COMMONDEPEND}
 	xcomposite? ( x11-proto/compositeproto )
 	xinerama? ( x11-proto/xineramaproto )
 "
-RDEPEND="${COMMONDEPEND}"
+RDEPEND="${COMMONDEPEND}
+	x11-apps/scripts"
 
 KMEXTRACTONLY="
 	ksmserver/
