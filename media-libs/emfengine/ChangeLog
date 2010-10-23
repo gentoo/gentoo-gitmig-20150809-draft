@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/emfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emfengine/ChangeLog,v 1.1 2010/10/18 06:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emfengine/ChangeLog,v 1.2 2010/10/23 17:35:43 jlec Exp $
+
+  23 Oct 2010; Justin Lecher <jlec@gentoo.org> emfengine-0.8.ebuild:
+  Keyworded for ~linux prefix
 
 *emfengine-0.8 (18 Oct 2010)
 
