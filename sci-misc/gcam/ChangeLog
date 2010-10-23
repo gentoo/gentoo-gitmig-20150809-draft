@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gcam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.2 2010/10/19 09:46:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.3 2010/10/23 06:52:42 dilfridge Exp $
+
+  23 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  gcam-2010.07.27.ebuild:
+  Added ~x86 (see bug 341631)
 
   19 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gcam-2010.07.27.ebuild:
   Stable on amd64 wrt bug #341547
