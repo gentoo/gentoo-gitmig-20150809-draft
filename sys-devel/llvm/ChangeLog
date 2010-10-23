@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.25 2010/10/08 13:52:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.26 2010/10/23 15:12:26 grobian Exp $
+
+  23 Oct 2010; Fabian Groffen <grobian@gentoo.org> llvm-2.8-r1.ebuild,
+  +files/llvm-2.8-darwin8.patch, llvm-9999.ebuild:
+  Fix compilation on Mac OS X Tiger (10.4, Darwin 8), fix install_names for
+  new libs also, bug #342289
 
 *llvm-2.8-r1 (08 Oct 2010)
 

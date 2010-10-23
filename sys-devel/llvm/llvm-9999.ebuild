@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.7 2010/10/06 09:21:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.8 2010/10/23 15:12:26 grobian Exp $
 
 EAPI="3"
 inherit subversion eutils multilib toolchain-funcs
@@ -156,11 +156,18 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in lib{EnhancedDisassembly,LLVM-${PN},LLVMHello,LTO,profile_rt}.dylib ; do
-			# libEnhancedDisassembly is Darwin10 only
-			[[ -f ${ED}/usr/lib/${PN}/${lib} ]] || continue
-			install_name_tool -id "${EPREFIX}"/usr/lib/${PN}/${lib} \
+		for lib in lib{EnhancedDisassembly,LLVM-${PV},BugpointPasses,LLVMHello,LTO,profile_rt}.dylib ; do
+			ebegin "fixing install_name of $lib"
+			if [[ ! -f ${ED}/usr/lib/${PN}/${lib} ]] ; then
+				# libEnhancedDisassembly is Darwin10 only, so non-fatal
+				ewarn "$lib not found"
+				eend 1
+				continue
+			fi
+			install_name_tool \
+				-id "${EPREFIX}"/usr/lib/${PN}/${lib} \
 				"${ED}"/usr/lib/${PN}/${lib}
+			eend $?
 		done
 	fi
 }
