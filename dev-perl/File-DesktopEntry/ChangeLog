@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-DesktopEntry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.18 2010/07/14 15:41:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.19 2010/10/23 08:23:17 ssuominen Exp $
+
+  23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  File-DesktopEntry-0.04.ebuild:
+  ppc64 stable wrt #321147
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   File-DesktopEntry-0.04.ebuild:
