@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.111 2010/10/10 18:35:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.112 2010/10/23 23:58:42 ranger Exp $
+
+  23 Oct 2010; Brent Baude <ranger@gentoo.org>
+  courier-authlib-0.63.0.ebuild:
+  Marking courier-authlib-0.63.0 ppc for bug 319785
 
 *courier-authlib-0.63.0-r1 (10 Oct 2010)
 
