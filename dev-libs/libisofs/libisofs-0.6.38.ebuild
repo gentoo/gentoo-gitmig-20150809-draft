@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.36.ebuild,v 1.1 2010/09/27 20:40:35 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.38.ebuild,v 1.1 2010/10/23 21:33:15 billie Exp $
 
 EAPI=2
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf --disable-static \
+	--disable-ldconfig-at-install \
+	--disable-libjte \
 	$(use_enable acl libacl) \
 	$(use_enable xattr) \
 	$(use_enable zlib)
