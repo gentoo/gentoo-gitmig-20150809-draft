@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ostinato
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.1 2010/10/23 02:02:19 c1pher Exp $
+
+*ostinato-0.2 (23 Oct 2010)
+
+  23 Oct 2010; Dane Smith <c1pher@gentoo.org> +ostinato-0.2.ebuild,
+  +metadata.xml:
+  New ebuild for Ostinato. Moved from Sunrise overlay wrt bug 317201.
+
