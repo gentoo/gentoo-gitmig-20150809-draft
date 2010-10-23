@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.38 2010/10/23 21:47:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.39 2010/10/23 21:48:18 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -205,7 +205,7 @@ texlive-module_synonyms_to_language_lua_line() {
 # @FUNCTION: texlive-module_make_language_lua_lines
 # @DESCRIPTION:
 # Only valid for TeXLive 2010.
-# Creates a language.${PN}.dat entry to put in /etc/texmf/language.lua.d
+# Creates a language.${PN}.dat.lua entry to put in /etc/texmf/language.dat.lua.d
 # It parses the AddHyphen directive of tlpobj files to create it.
 
 texlive-module_make_language_lua_lines() {
