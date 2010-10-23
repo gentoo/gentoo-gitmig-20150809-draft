@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.4.ebuild,v 1.2 2010/10/17 22:44:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.4.ebuild,v 1.3 2010/10/23 15:08:07 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python toolchain-funcs
+inherit python toolchain-funcs
 
 DESCRIPTION="Object-oriented python bindings for subversion"
 HOMEPAGE="http://pysvn.tigris.org/"
@@ -23,9 +23,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 src_prepare() {
-	# Skip test test-06 if executed as root to avoid failure.
-	epatch "${FILESDIR}/${PN}-1.7.1-skip_root_test.patch"
-
 	# Don't use internal copy of dev-python/pycxx.
 	rm -fr Import
 
