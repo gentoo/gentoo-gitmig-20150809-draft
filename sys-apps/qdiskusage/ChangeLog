@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qdiskusage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.10 2010/07/14 13:46:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.11 2010/10/23 00:45:55 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   -qdiskusage-1.0.2.ebuild, -qdiskusage-1.0.3-r1.ebuild:
