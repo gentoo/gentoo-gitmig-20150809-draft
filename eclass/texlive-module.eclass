@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.42 2010/10/23 23:19:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.43 2010/10/23 23:21:10 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -238,8 +238,8 @@ texlive-module_make_language_lua_lines() {
 # files for different packages in a single one used by the whole tex installation.
 
 texlive-module_src_compile() {
-	# Generate config files
-	# TeX Live 2007 was providing lists. For 2008 they are now tlpobj.
+	# Generate config files from the tlpobj files provided by TeX Live 2008 and
+	# later
 	for i in "${S}"/tlpkg/tlpobj/*;
 	do
 		grep '^execute ' "${i}" | sed -e 's/^execute //' | tr ' \t' '@@' |sort|uniq >> "${T}/jobs"
