@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.44 2010/10/23 23:22:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.45 2010/10/23 23:24:40 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -175,7 +175,6 @@ texlive-module_make_language_def_lines() {
 
 # @FUNCTION: texlive-module_make_language_dat_lines
 # @DESCRIPTION:
-# Only valid for TeXLive 2008.
 # Creates a language.${PN}.dat entry to put in /etc/texmf/language.dat.d
 # It parses the AddHyphen directive of tlpobj files to create it.
 
