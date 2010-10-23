@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/kpathsea
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.1 2010/10/23 02:47:32 aballier Exp $
+
+*kpathsea-6.0.0_p20100722 (23 Oct 2010)
+
+  23 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  +kpathsea-6.0.0_p20100722.ebuild, +metadata.xml:
+  Initial import. Ebuild by me, split out of texlive-core for TeX Live 2010.
+
