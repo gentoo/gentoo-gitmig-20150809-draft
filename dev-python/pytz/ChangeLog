@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.81 2010/10/21 15:33:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.82 2010/10/23 18:06:55 armin76 Exp $
+
+  23 Oct 2010; Raúl Porcel <armin76@gentoo.org> pytz-2010l.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #341315
 
   21 Oct 2010; Jeroen Roovers <jer@gentoo.org> pytz-2010l.ebuild:
   Stable for HPPA (bug #341315).
