@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/banshee-community-extensions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.8 2010/07/12 20:28:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.9 2010/10/23 14:33:47 pacho Exp $
+
+*banshee-community-extensions-1.8.0 (23 Oct 2010)
+
+  23 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  +banshee-community-extensions-1.8.0.ebuild:
+  Version bump: Add a Copy button to the lyrics window, fix up the label in
+  LyricsPanel, use Banshee.WebBrowser instead of webkit-sharp, user help is
+  now available and automatically integrated into the Banshee help pages,
+  lots of bugfixes and translation updates. Also drop useless .la files and
+  install docs.
 
   12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   banshee-community-extensions-1.6.1.ebuild:
