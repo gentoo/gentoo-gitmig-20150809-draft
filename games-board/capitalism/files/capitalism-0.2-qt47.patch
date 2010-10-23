@@ -1,0 +1,19 @@
+Index: Capitalism-0.2/src/Capic/Gui/capiclientplayer.cpp
+===================================================================
+--- Capitalism-0.2.orig/src/Capic/Gui/capiclientplayer.cpp
++++ Capitalism-0.2/src/Capic/Gui/capiclientplayer.cpp
+@@ -36,12 +36,12 @@ CapiClientPlayer::CapiClientPlayer(int i
+ 
+ 	playerWidget = new PlayerInfo(0, 32);
+ 	playerWidget->setName(getName());
+-	playerWidget->setMoney(QString(0));
++	playerWidget->setMoney(QString());
+ 	playerWidget->setAvatar(getAvatar());
+ 
+ 	auction = new PlayerAuction();
+ 	auction->setName(getName());
+-	auction->setMoney(QString(0));
++	auction->setMoney(QString());
+ 	auction->setAvatar(getAvatar());
+ 
+ 	playerWidget->playerId = getId();
