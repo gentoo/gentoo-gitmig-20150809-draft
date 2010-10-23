@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.48 2010/10/23 23:28:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.49 2010/10/23 23:30:14 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -139,6 +139,7 @@ fi
 # @FUNCTION: texlive-module_add_format
 # @DESCRIPTION:
 # Creates/appends to a format.${PN}.cnf file for fmtutil.
+# It parses the AddFormat directive of tlpobj files to create it.
 # This will make fmtutil generate the formats when asked and allow the remaining
 # src_compile phase to build the formats
 
