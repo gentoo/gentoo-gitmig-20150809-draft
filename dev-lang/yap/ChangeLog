@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.42 2010/10/23 20:55:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.43 2010/10/23 21:39:25 keri Exp $
+
+*yap-6.2.0-r1 (23 Oct 2010)
+
+  23 Oct 2010; <keri@gentoo.org> +yap-6.2.0-r1.ebuild:
+  Yap client mode is unsupported; accordingly, drop tkyap client
 
   23 Oct 2010; <keri@gentoo.org> yap-6.2.0.ebuild,
   +files/yap-6.2.0-have-config.patch:
