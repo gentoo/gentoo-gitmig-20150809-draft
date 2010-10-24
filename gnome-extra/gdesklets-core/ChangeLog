@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.131 2010/08/28 17:00:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.132 2010/10/24 14:16:04 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org>
+  gdesklets-core-0.36.2-r3.ebuild:
+  stable ppc, bug 329603
 
   28 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   gdesklets-core-0.36.2-r3.ebuild:
