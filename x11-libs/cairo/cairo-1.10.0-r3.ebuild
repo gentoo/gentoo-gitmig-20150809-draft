@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.0-r3.ebuild,v 1.1 2010/09/10 10:30:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.0-r3.ebuild,v 1.2 2010/10/24 20:04:02 grobian Exp $
 
 EAPI=3
 
@@ -85,6 +85,9 @@ src_configure() {
 
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
+
+	# bug #342319
+	[[ ${CHOST} == powerpc*-*-darwin* ]] && filter-flags -mcpu=*
 
 	if use X; then
 		myopts+="
