@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.9 2010/10/24 17:22:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.10 2010/10/24 17:34:55 ssuominen Exp $
+
+  24 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  unittest2-0.5.1.ebuild:
+  Keyword ~ppc64 wrt #339072
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org> unittest2-0.5.1.ebuild:
   Add ~ia64/~s390/~sparc wrt #339072
