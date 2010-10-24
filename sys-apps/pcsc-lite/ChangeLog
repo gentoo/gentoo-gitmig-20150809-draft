@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.90 2010/10/14 17:00:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.91 2010/10/24 20:43:57 c1pher Exp $
+
+  24 Oct 2010; Dane Smith <c1pher@gentoo.org> pcsc-lite-1.5.5.ebuild,
+  pcsc-lite-1.6.1.ebuild:
+  Updated homepage for 1.5.5 and 1.6.1 wrt bug 333689.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> pcsc-lite-1.6.1.ebuild:
   stable ppc, bug 330601
