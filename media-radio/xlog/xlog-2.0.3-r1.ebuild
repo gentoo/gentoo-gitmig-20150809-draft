@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.3.ebuild,v 1.6 2010/10/24 10:51:30 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.3-r1.ebuild,v 1.1 2010/10/24 10:51:30 tomjbe Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/hamlib
@@ -28,6 +28,8 @@ src_prepare() {
 	# and patch wrong ADIF export
 	epatch "${FILESDIR}/${PN}-2.0.1-adif.patch" \
 	    "${FILESDIR}/${PN}-2.0.2-qsl.patch"
+	# patch buffer overflow for new cty.dat
+	epatch "${FILESDIR}"/${P}-dxcc.patch
 	# fix buffer overflow (bug 339652)
 	epatch "${FILESDIR}/${P}-memmove.patch"
 	eautoreconf
