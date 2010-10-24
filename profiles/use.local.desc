@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6074 2010/10/23 11:53:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6075 2010/10/24 13:13:27 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4104,7 +4104,6 @@ x11-wm/windowmaker:modelock - Enable XKB language status lock support. README sa
 x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with software that works on the edges of the screen)
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfcegui4:glade - Build glade bindings
-xfce-base/thunar:udev - Enable udev support (required by xfce-extra/thunar-volman)
 xfce-base/xfce-utils:lock - Enable screen locking
 xfce-base/xfce4-session:fortune - Install tips and tricks app (xfce4-tips), adds dependency on games-misc/fortune-mod
 xfce-base/xfce4-session:gnome-keyring - Support for storing your password.
