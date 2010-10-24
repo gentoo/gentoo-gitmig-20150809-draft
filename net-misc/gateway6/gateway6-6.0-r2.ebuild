@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/gateway6-6.0-r2.ebuild,v 1.4 2010/10/15 16:51:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/gateway6-6.0-r2.ebuild,v 1.5 2010/10/24 17:59:21 armin76 Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://go6.net/4105/file.asp?file_id=158&file=/${MY_P}.tar.gz"
 
 LICENSE="VPL-1.0"
 SLOT="0"
-KEYWORDS="amd64 hppa ~sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"
