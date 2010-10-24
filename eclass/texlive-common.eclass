@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.13 2010/10/24 04:35:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.14 2010/10/24 16:22:33 aballier Exp $
 
 # @ECLASS: texlive-common.eclass
 # @MAINTAINER:
@@ -125,4 +125,20 @@ dobin_texmf_scripts() {
 		dosym ../share/${1} /usr/bin/${trg} || die "failed to install ${1} as $trg"
 		shift
 	done
+}
+
+# @FUNCTION: etexmf-update
+# @USAGE: In ebuilds' pkg_postinst and pkg_postrm phases
+# @DESCRIPTION:
+# Runs texmf-update if it is available and prints a warning otherwise. This
+# function helps in factorizing some code.
+
+etexmf-update() {
+	if [ "$ROOT" = "/" ] && [ -x /usr/sbin/texmf-update ] ; then
+		/usr/sbin/texmf-update
+	else
+		ewarn "Cannot run texmf-update for some reason."
+		ewarn "Your texmf tree might be inconsistent with your configuration"
+		ewarn "Please try to figure what has happened"
+	fi
 }
