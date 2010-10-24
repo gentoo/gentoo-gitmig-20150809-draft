@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/cogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/ChangeLog,v 1.2 2010/09/18 18:01:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/ChangeLog,v 1.3 2010/10/24 23:39:14 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> cogre-1.02.ebuild:
+  Marking cogre-1.02 ~ppc for bug 332607
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> cogre-1.02.ebuild:
   Add ~alpha/~sparc wrt #332607
