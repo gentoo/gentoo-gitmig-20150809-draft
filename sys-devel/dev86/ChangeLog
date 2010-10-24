@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/dev86
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.16 2009/11/09 12:46:38 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.17 2010/10/24 22:07:49 polynomial-c Exp $
+
+  24 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  dev86-0.16.17-r6.ebuild, +files/dev86-0.16.17-make382.patch:
+  Fixed compilation with make-3.82 (bug #336544). Patch kindly provided by
+  upstream.
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> dev86-0.16.17-r6.ebuild:
   amd64 stable, bug #289014

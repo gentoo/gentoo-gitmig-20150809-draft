@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.4 2009/11/09 12:46:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.5 2010/10/24 22:07:49 polynomial-c Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/dev86-pic.patch
 	epatch "${FILESDIR}"/${P}-fortify.patch
+	epatch "${FILESDIR}"/${P}-make382.patch
 	sed -i \
 		-e "s:-O2 -g:${CFLAGS} ${CPPFLAGS}:" \
 		-e '/INEXE=/s:-s::' \
