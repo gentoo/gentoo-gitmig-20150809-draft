@@ -9,7 +9,6 @@
         <use>
                 <flag name="atmodem">ETSI AT modem support.</flag>
 		<flag name="isimodem">Enable PhoNet/ISI modem support.</flag>
-		<flag name="udev">Use <pkg>sys-fs/udev</pkg> for modem detection.</flag>
         </use>        
 </pkgmetadata>
 
