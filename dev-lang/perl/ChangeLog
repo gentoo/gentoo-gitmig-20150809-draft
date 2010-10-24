@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.330 2010/10/24 14:09:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.331 2010/10/24 18:22:25 jer Exp $
+
+  24 Oct 2010; Jeroen Roovers <jer@gentoo.org> perl-5.12.2-r1.ebuild:
+  Stable for HPPA (bug #340023).
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> perl-5.12.2-r1.ebuild:
   Marking perl-5.12.2-r1 ppc for bug 340023
