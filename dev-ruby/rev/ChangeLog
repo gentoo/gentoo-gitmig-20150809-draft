@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/rev
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rev/ChangeLog,v 1.1 2010/10/24 09:30:25 graaff Exp $
+
+*rev-0.3.2 (24 Oct 2010)
+
+  24 Oct 2010; Hans de Graaff <graaff@gentoo.org> +rev-0.3.2.ebuild,
+  +metadata.xml:
+  Initial import. Miscompiles with --no-undefined so people won't be able to
+  install the gem directly.
+
