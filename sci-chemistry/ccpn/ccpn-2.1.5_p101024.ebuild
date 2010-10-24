@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p100924.ebuild,v 1.1 2010/09/24 06:26:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p101024.ebuild,v 1.1 2010/10/24 11:28:52 jlec Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+opengl"
+IUSE="extendnmr +opengl"
 
 RDEPEND="
 	dev-lang/tk[threads]
@@ -33,7 +33,14 @@ RDEPEND="
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*
 	x11-libs/libXext
 	x11-libs/libX11
-	opengl? ( media-libs/freeglut )"
+	extendnmr? (
+		sci-chemistry/aria
+		sci-chemistry/prodecomp )
+	opengl? (
+		media-libs/freeglut
+		dev-python/pyglet )"
+# We need to fix this
+#		sci-chemistry/mdd
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror"
@@ -104,20 +111,24 @@ src_compile() {
 src_install() {
 	local libdir
 	local tkver
+	local _wrapper
 
 	find . -name "*.pyc" -type d -delete
 
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	for wrapper in analysis dangle dataShifter depositionFileImporter extendNmr eci formatConverter pipe2azara; do
-		sed -e "s:gentoo_sitedir:${EPREFIX}$(python_get_sitedir -f):g" \
-		    -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara"
+	use extendnmr && _wrapper="${_wrapper} extendNmr"
+	for wrapper in ${_wrapper}; do
+		sed \
+			-e "s:gentoo_sitedir:${EPREFIX}$(python_get_sitedir -f):g" \
+		   -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
 			-e "s:gentootk:${EPREFIX}/usr/${libdir}/tk${tkver}:g" \
 			-e "s:gentootcl:${EPREFIX}/usr/${libdir}/tclk${tkver}:g" \
 			-e "s:gentoopython:${EPREFIX}/usr/bin/python:g" \
 			-e "s://:/:g" \
-		    "${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
+			"${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
 		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
 	done
 
@@ -156,6 +167,7 @@ src_install() {
 		einfo "Adjusting permissions"
 
 		files="
+			cambridge/c/BayesPeakSeparator.so
 			ccp/c/StructUtil.so
 			ccp/c/StructStructure.so
 			ccp/c/StructBond.so
