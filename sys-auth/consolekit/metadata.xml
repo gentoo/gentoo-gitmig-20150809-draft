@@ -4,7 +4,7 @@
 <herd>freedesktop</herd>
 <use>
 	<flag name="policykit">
-	Use the PolicyKit framework (<pkg>sys-auth/policykit</pkg>) to get
+	Use the PolicyKit framework (<pkg>sys-auth/polkit</pkg>) to get
 	authorization for suspend/shutdown.
 	</flag>
 </use>
