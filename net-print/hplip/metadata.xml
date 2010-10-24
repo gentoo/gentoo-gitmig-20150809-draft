@@ -23,7 +23,6 @@
 		<flag name="libnotify">Enables desktop notifications</flag>
 		<flag name="minimal">Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)</flag>
 		<flag name="parport">Enable parallel port for devices which require it</flag>
-		<flag name="policykit">Enable sys-auth/polkit authentication support</flag>
 		<flag name="qt4">Enable graphical interface using Qt 4</flag>
 		<flag name="scanner">Enable scanner on multifunction devices which support it</flag>
 		<flag name="snmp">Add support for <pkg>net-analyzer/net-snmp</pkg> which enables this driver to work over networks (both for server and client)</flag>
