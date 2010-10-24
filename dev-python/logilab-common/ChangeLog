@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.75 2010/10/24 17:24:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.76 2010/10/24 17:36:39 ssuominen Exp $
+
+  24 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  logilab-common-0.52.1.ebuild:
+  Rekeyword ~ppc64 wrt #339072
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   logilab-common-0.52.0.ebuild, logilab-common-0.52.1.ebuild:
