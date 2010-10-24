@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.56 2010/10/24 09:58:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.57 2010/10/24 15:47:08 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> pyserial-2.5-r1.ebuild:
+  stable ppc, bug 342445
 
 *pyserial-2.5-r1 (24 Oct 2010)
 
