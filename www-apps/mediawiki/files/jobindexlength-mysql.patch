@@ -1,9 +1,0 @@
---- mediawiki-1.7.1/maintenance/archives/patch-job.sql.orig	2006-12-11 12:41:04.000000000 +0200
-+++ mediawiki-1.7.1/maintenance/archives/patch-job.sql		2006-12-11 12:41:17.000000000 +0200
-@@ -16,5 +16,5 @@
-   job_params blob NOT NULL default '',
- 
-   PRIMARY KEY job_id (job_id),
--  KEY (job_cmd, job_namespace, job_title)
-+  KEY (job_cmd(128), job_namespace, job_title(128))
- ) TYPE=InnoDB;
