@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.3.1.ebuild,v 1.3 2010/07/10 07:48:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.3.1.ebuild,v 1.4 2010/10/24 07:57:16 graaff Exp $
 
 # TODO: GNOME Do defaults to a debug build; to disable, --enable-release must
 # be passed. However, when doing this the build fails; figure out why.
@@ -41,6 +41,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-mono-2.8.patch
+}
 
 src_configure() {
 	gnome2_src_configure
