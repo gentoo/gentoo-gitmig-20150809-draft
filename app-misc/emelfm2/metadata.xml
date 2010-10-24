@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-misc</herd>
-  <use>
-    <flag name="udev">Enable udev support using <pkg>sys-fs/udisks</pkg></flag>
-  </use>
 </pkgmetadata>
