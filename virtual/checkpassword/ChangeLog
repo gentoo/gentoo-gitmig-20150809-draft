@@ -1,6 +1,10 @@
 # ChangeLog for virtual/checkpassword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.6 2010/09/25 13:40:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.7 2010/10/24 15:33:40 klausman Exp $
+
+  24 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  checkpassword-0.ebuild:
+  Stable on alpha, bug #333915
 
   25 Sep 2010; Markus Meier <maekke@gentoo.org> checkpassword-0.ebuild:
   arm stable, bug #333915
