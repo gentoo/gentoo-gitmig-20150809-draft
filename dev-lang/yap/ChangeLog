@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.43 2010/10/23 21:39:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.44 2010/10/24 05:18:11 keri Exp $
+
+  24 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
+  +files/yap-6.2.0-parallel-make.patch:
+  Support parallel make install
 
 *yap-6.2.0-r1 (23 Oct 2010)
 

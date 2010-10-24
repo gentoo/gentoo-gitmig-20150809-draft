@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.1 2010/10/23 21:39:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.2 2010/10/24 05:18:11 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-yapsharedir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-have-config.patch
@@ -69,7 +70,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" -j1 install || die "make install failed."
+	emake DESTDIR="${D}" install || die "make install failed."
 
 	dodoc changes*.html README
 
