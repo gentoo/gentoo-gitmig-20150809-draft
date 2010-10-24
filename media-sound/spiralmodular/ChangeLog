@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spiralmodular
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.22 2008/12/15 01:49:43 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.23 2010/10/24 16:40:29 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  spiralmodular-0.2.2a-r1.ebuild:
+  Drop sparc keywords
 
   15 Dec 2008; Ben de Groot <yngwin@gentoo.org>
   spiralmodular-0.2.2a-r1.ebuild:
