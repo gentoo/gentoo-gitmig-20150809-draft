@@ -7,8 +7,6 @@
 		<name>Doug Goldstein</name>
 	</maintainer>
 	<use>
-		<flag name='udev'>Use <pkg>sys-fs/udev</pkg> to determine available
-			devices</flag>
 		<flag name='iscsi'>Add support for iSCSI (Internet SCSI) remote
 			storage</flag>
 		<flag name='lvm'>Add support for the Logical Volume Manager
