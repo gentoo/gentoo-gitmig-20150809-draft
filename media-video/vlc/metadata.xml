@@ -43,7 +43,6 @@
     <flag name="skins">Enables support for the skins2 interface.</flag>
     <flag name="stream">Enables vlc to stream video.</flag>
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
-    <flag name="udev">Enables Linux udev services discovery.</flag>
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
     <flag name="vcdinfo">Enables VCD information library support.</flag>
