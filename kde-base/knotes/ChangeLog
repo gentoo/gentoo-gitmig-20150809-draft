@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.154 2010/09/11 05:50:47 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.155 2010/10/24 16:23:42 tampakrap Exp $
+
+*knotes-4.4.7 (24 Oct 2010)
+
+  24 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +knotes-4.4.7.ebuild:
+  Version bump KDEPIM 4.4.7
 
 *knotes-4.4.6 (11 Sep 2010)
 
