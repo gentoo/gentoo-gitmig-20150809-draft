@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langarmenian
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.30 2010/02/02 21:07:26 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.31 2010/10/24 18:11:55 aballier Exp $
+
+*texlive-langarmenian-2010 (24 Oct 2010)
+
+  24 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langarmenian-2010.ebuild:
+  Bump to TeX Live 2010
 
   02 Feb 2010; Jonathan Callen <abcd@gentoo.org>
   texlive-langarmenian-2009.ebuild:

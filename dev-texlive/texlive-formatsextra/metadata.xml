@@ -7,7 +7,8 @@
 		<name>Alexis Ballier</name>
 	</maintainer>
 <longdescription lang="en">
-A collection of TeX `formats', ie large-scale macro packages
-designed to be dumped into .fmt file
+Collected TeX `formats', i.e., large-scale macro packages
+designed to be dumped into .fmt files, other than most common
+ones, such as latex and context.
 </longdescription>
 </pkgmetadata>
