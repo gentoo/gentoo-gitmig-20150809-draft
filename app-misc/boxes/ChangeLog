@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.25 2010/10/23 22:26:18 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.26 2010/10/24 15:41:59 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> boxes-1.1-r1.ebuild:
+  alpha/ia64/sparc stable wrt #342145
 
   23 Oct 2010; Dane Smith <c1pher@gentoo.org> boxes-1.1-r1.ebuild:
   Stable x86 wrt bug 342145.
