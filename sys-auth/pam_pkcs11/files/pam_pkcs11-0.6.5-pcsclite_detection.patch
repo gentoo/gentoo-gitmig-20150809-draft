@@ -1,0 +1,12 @@
+--- configure.in
++++ configure.in
+@@ -166,8 +166,7 @@
+ 
+ # Check for PCSC-Lite
+ AC_ARG_WITH(pcsclite,
+-  AC_HELP_STRING([--with-pcsclite], [Use pcsc-lite (default=yes)]),
+-  [ with_pcsclite=no ])
++  AC_HELP_STRING([--with-pcsclite], [Use pcsc-lite (default=yes)]))
+ 
+ if test "$with_pcsclite" != "no"; then
+ 	OLD_CFLAGS="$CFLAGS"

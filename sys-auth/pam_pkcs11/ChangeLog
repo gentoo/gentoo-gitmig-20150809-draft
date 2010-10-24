@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.16 2010/06/14 21:59:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.17 2010/10/24 11:05:20 arfrever Exp $
+
+*pam_pkcs11-0.6.5 (24 Oct 2010)
+
+  24 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pam_pkcs11-0.6.2.ebuild, +pam_pkcs11-0.6.5.ebuild,
+  +files/pam_pkcs11-0.6.5-pcsclite_detection.patch:
+  Version bump.
 
 *pam_pkcs11-0.6.4 (14 Jun 2010)
 
