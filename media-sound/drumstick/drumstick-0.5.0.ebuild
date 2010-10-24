@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.1 2010/10/20 09:28:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.2 2010/10/24 09:02:15 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils fdo-mime gnome2-utils
@@ -16,6 +16,7 @@ IUSE="dbus"
 
 RDEPEND="media-libs/alsa-lib
 	x11-libs/qt-gui:4
+	x11-libs/qt-svg:4
 	dbus? ( x11-libs/qt-dbus:4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
