@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.4.ebuild,v 1.11 2010/10/14 21:00:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.6.4.ebuild,v 1.12 2010/10/24 13:29:13 pacho Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="doc gnome" # introspection
 RDEPEND=">=dev-libs/glib-2.19
 	>=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2
-	>=net-libs/libsoup-2.26.1:2.4[gnome?]
+	>=net-libs/libsoup-2.26.1:2.4
 	gnome? ( >=net-libs/libsoup-gnome-2.26.1:2.4 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
