@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mixlib-log
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-log/ChangeLog,v 1.1 2010/07/03 11:52:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-log/ChangeLog,v 1.2 2010/10/24 12:57:30 graaff Exp $
+
+*mixlib-log-1.2.0 (24 Oct 2010)
+
+  24 Oct 2010; Hans de Graaff <graaff@gentoo.org> +mixlib-log-1.2.0.ebuild:
+  Version bump. Install documentation. Run specs and features. Add ree18.
 
 *mixlib-log-1.1.0 (03 Jul 2010)
 
