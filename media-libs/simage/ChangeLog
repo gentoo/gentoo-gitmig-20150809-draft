@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/simage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/ChangeLog,v 1.2 2010/06/29 06:22:10 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/ChangeLog,v 1.3 2010/10/24 23:37:28 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> simage-1.7.0.ebuild:
+  Marking simage-1.7.0 ppc for bug 325623
 
   29 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> simage-1.7.0.ebuild,
   +files/simage-1.7.0-pkgconfig-partial.patch:
