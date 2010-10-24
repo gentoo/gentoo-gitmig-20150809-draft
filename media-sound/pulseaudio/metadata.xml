@@ -29,11 +29,6 @@
       libpulse client library, to allow using libpulse on glib-based
       programs.
     </flag>
-    <flag name="udev">
-      Use <pkg>sys-fs/udev</pkg> for autodiscovery of sound devices;
-      this replaces the deprecated <pkg>sys-apps/hal</pkg>
-      autodiscovery code.
-    </flag>
     <flag name="system-wide" restrict="&gt;=media-sound/pulseaudio-0.9.21.1">
       Allow preparation and installation of the system-wide init
       script for PulseAudio. Since this support is only supported for
