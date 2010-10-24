@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.107 2010/10/24 15:03:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.108 2010/10/24 21:19:05 hwoarang Exp $
+
+  24 Oct 2010; Markos Chandras <hwoarang@gentoo.org> rake-0.8.7-r5.ebuild:
+  Stable on amd64 wrt bug #342455
 
   24 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> rake-0.8.7-r5.ebuild:
   x86 stable wrt bug #342455
