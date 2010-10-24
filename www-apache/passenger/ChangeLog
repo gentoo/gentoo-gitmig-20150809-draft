@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.24 2010/06/30 18:32:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.25 2010/10/24 13:25:23 graaff Exp $
+
+  24 Oct 2010; Hans de Graaff <graaff@gentoo.org> -passenger-2.2.4.ebuild,
+  -passenger-2.2.9.ebuild, -passenger-2.2.11.ebuild:
+  Remove old versions.
 
 *passenger-2.2.15 (30 Jun 2010)
 
