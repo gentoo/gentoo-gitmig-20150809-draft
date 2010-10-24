@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.53 2010/10/23 23:51:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.54 2010/10/24 00:41:41 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -219,6 +219,8 @@ texlive-module_make_language_lua_lines() {
 	local lefthyphenmin righthyphenmin synonyms name file file_patterns file_exceptions luaspecial
 	local dest="${S}/language.${PN}.dat.lua"
 	eval $@
+	[ -z "$lefthyphenmin"  ] && lefthyphenmin="2"
+	[ -z "$righthyphenmin" ] && righthyphenmin="3"
 	einfo "Generating language.dat.lua entry for $@"
 	printf "\t['%s'] = {\n" "$name"                                                                 >> "$dest"
 	printf "\t\tloader = '%s',\n" "$file"                                                           >> "$dest"
