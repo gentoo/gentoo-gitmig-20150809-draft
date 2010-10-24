@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.13 2010/07/02 18:22:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.14 2010/10/24 12:05:36 graaff Exp $
+
+*ruby-test-unit-0-r3 (24 Oct 2010)
+
+  24 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  ruby-test-unit-0-r2.ebuild, +ruby-test-unit-0-r3.ebuild:
+  Add new revision and drop ruby19 support from the previous to create a
+  stable candidate for ree18.
 
   02 Jul 2010; Hans de Graaff <graaff@gentoo.org>
   ruby-test-unit-0-r1.ebuild:
