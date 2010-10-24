@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.20 2010/10/13 20:21:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.21 2010/10/24 10:13:30 mgorny Exp $
+
+  24 Oct 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Clarify the maintainership information in metadata.xml
 
   13 Oct 2010; Markus Meier <maekke@gentoo.org> pe-format-2.0.3.ebuild:
   add ~x86, bug #336937

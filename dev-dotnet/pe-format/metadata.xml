@@ -2,8 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dotnet</herd>
-<maintainer>
+<maintainer restrict="&gt;=dev-dotnet/pe-format-2">
 	<email>mgorny@gentoo.org</email>
 	<name>Michał Górny</name>
 </maintainer>
+<upstream>
+	<maintainer restrict="&gt;=dev-dotnet/pe-format-2" status="active">
+		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
+	</maintainer>
+</upstream>
 </pkgmetadata>
