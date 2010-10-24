@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r2.ebuild,v 1.2 2010/10/24 12:11:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r2.ebuild,v 1.3 2010/10/24 17:42:05 grobian Exp $
 
 EAPI=3
 
@@ -157,18 +157,22 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in lib{CIndex,clang}.dylib ; do
+		for lib in libclang.dylib ; do
 			ebegin "fixing install_name of $lib"
 			install_name_tool -id "${EPREFIX}"/usr/lib/llvm/${lib} \
 				"${ED}"/usr/lib/llvm/${lib}
 			eend $?
 		done
-		for f in c-index-test ; do
-			ebegin "fixing reference to libclang.dylib in $f"
+		for f in usr/bin/{c-index-test,clang} usr/lib/llvm/libclang.dylib ; do
+			ebegin "fixing references in ${f##*/}"
 			install_name_tool \
 				-change "@rpath/libclang.dylib" \
 					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
-				"${ED}"/usr/bin/$f
+				-change "${S}"/Release/lib/libLLVM-${PV}.dylib \
+					"${EPREFIX}"/usr/lib/llvm/libLLVM-${PV}.dylib \
+				-change "${S}"/Release/lib/libclang.dylib \
+					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
+				"${ED}"/$f
 			eend $?
 		done
 	fi
