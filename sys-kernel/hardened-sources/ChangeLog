@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.348 2010/10/24 10:16:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.349 2010/10/24 10:24:23 blueness Exp $
+
+  24 Oct 2010; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-2.6.32-r22.ebuild:
+  Broken on ppc/ppc64, bug #341915#c6
 
   24 Oct 2010; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-2.6.32-r16.ebuild, -hardened-sources-2.6.32-r17.ebuild,
