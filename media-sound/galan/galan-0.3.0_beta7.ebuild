@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.1 2009/06/09 19:25:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.2 2010/10/24 16:59:27 armin76 Exp $
 
 IUSE="vorbis alsa opengl esd jack"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=x11-libs/gtk+-2.0
 	vorbis? ( >=media-sound/vorbis-tools-1.0 )

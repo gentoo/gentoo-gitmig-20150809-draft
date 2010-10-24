@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/galan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.22 2009/06/09 19:25:54 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.23 2010/10/24 16:59:27 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> galan-0.3.0_beta7.ebuild:
+  Drop sparc keywords
 
 *galan-0.3.0_beta7 (09 Jun 2009)
 
