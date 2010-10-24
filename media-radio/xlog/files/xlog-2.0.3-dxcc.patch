@@ -1,0 +1,30 @@
+# prevent buffer overflow for big cty.dat files
+--- src/dxcc.c.orig	2010-10-24 11:47:15.000000000 +0200
++++ src/dxcc.c	2010-10-24 11:47:59.000000000 +0200
+@@ -364,7 +364,7 @@
+ gint
+ readctyversion (void)
+ {
+-	gchar buf[65536], *ver, *ch, *cty_location;
++	gchar buf[131072], *ver, *ch, *cty_location;
+ 	FILE *fp;
+ 
+ #ifdef G_OS_WIN32
+@@ -378,7 +378,7 @@
+ 		return (1);
+ 	}
+ 	g_free (cty_location);
+-	gint n = fread (buf, 1, 65536, fp);
++	gint n = fread (buf, 1, 131072, fp);
+ 	buf[n] = '\0';
+ 	ver = strstr (buf, "VER2");
+ 	if (ver)
+@@ -400,7 +400,7 @@
+ readctydata (void)
+ {
+ 
+-	gchar buf[8192], *cty_location, *pfx, **split, **pfxsplit;
++	gchar buf[65536], *cty_location, *pfx, **split, **pfxsplit;
+ 	gint ichar = 0, dxccitem = 0, ipfx = 0, ch = 0;
+ 	gboolean firstcolon = FALSE;
+ 	FILE *fp;

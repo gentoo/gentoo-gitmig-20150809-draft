@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.14 2010/10/04 15:19:36 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.15 2010/10/24 10:03:18 tomjbe Exp $
+
+  24 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> xlog-2.0.3.ebuild,
+  +files/xlog-2.0.3-dxcc.patch:
+  Fix buffer overflow for big cty.dat files
 
   04 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> xlog-2.0.3.ebuild,
   +files/xlog-2.0.3-memmove.patch:
