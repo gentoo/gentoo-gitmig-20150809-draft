@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.1 2010/10/11 21:29:15 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.2 2010/10/24 17:28:17 xarthisius Exp $
 
 EAPI=3
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
@@ -30,19 +30,18 @@ DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if use mpi-threads; then
-		ewarn
+		echo
 		ewarn "WARNING: use of MPI_THREAD_MULTIPLE is still disabled by"
 		ewarn "default and officially unsupported by upstream."
 		ewarn "You may stop now and set USE=-mpi-threads"
-		ewarn
-		epause 5
+		echo
 	fi
 
-	elog
+	echo
 	elog "OpenMPI has an overwhelming count of configuration options."
 	elog "Don't forget the EXTRA_ECONF environment variable can let you"
 	elog "specify configure options if you find them necessary."
-	elog
+	echo
 
 	if use fortran; then
 		FORTRAN="g77 gfortran ifc"
