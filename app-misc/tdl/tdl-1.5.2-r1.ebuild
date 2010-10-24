@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2-r1.ebuild,v 1.4 2010/10/23 22:43:17 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2-r1.ebuild,v 1.5 2010/10/24 15:51:26 ranger Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.rpcurnow.force9.co.uk/tdl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="~alpha amd64 ppc x86"
 IUSE="doc readline"
 
 RDEPEND="
