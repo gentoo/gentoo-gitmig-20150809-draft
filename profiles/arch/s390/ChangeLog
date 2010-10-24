@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.28 2010/05/22 15:20:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.29 2010/10/24 18:06:10 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask libvirt, tokyocabinet
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask svg
