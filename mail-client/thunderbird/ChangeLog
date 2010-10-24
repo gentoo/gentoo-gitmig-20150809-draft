@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.43 2010/10/22 01:46:06 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.44 2010/10/24 03:06:44 hwoarang Exp $
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  thunderbird-3.1.5.ebuild:
+  Stable on amd64 wrt bug #341821
 
   22 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> thunderbird-3.1.5.ebuild:
   Update nss dep
