@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.20 2010/10/12 15:32:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.21 2010/10/24 15:19:29 phajdan.jr Exp $
+
+  24 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> rubygems-0-r3.ebuild:
+  x86 stable wrt bug #342455
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> rubygems-0-r2.ebuild:
   ia64/s390/sparc stable wrt #320733
