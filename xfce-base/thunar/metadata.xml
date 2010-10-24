@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
-  <use>
-    <flag name='udev'>Enable udev support (required by <pkg>xfce-extra/thunar-volman</pkg>)</flag>
-  </use>
 </pkgmetadata>
