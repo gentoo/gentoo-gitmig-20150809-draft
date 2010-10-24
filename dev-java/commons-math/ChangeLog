@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.3 2010/03/21 09:08:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.4 2010/10/24 09:09:34 serkan Exp $
+
+*commons-math-2.1 (24 Oct 2010)
+
+  24 Oct 2010; Serkan Kaba <serkan@gentoo.org> +commons-math-2.1.ebuild:
+  Version bump. Also fixes bugs #291663 and #336536.
 
   21 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   -commons-math-1.2.ebuild:
