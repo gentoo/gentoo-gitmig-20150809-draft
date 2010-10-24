@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.34 2010/05/17 15:40:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.35 2010/10/24 14:14:22 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> kchmviewer-5.2.ebuild:
+  stable ppc, bug 338343
 
   17 May 2010; Peter Volkov <pva@gentoo.org> kchmviewer-5.2.ebuild,
   +files/kchmviewer-5.2-kde-build.patch:
