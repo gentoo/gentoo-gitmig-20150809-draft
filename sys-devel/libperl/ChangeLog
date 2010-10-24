@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.158 2010/10/24 14:07:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.159 2010/10/24 18:22:11 jer Exp $
+
+  24 Oct 2010; Jeroen Roovers <jer@gentoo.org> libperl-5.10.1.ebuild:
+  Stable for HPPA (bug #340023).
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> libperl-5.10.1.ebuild:
   Marking libperl-5.10.1 ppc for bug 340023
