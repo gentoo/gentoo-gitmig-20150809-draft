@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ibp/ibp-0.21.ebuild,v 1.3 2010/10/19 09:35:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ibp/ibp-0.21.ebuild,v 1.4 2010/10/24 15:33:31 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://wwwhome.cs.utwente.nl/~ptdeboer/ham/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
