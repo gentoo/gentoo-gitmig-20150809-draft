@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2man
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.18 2010/01/02 11:41:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.19 2010/10/24 15:41:57 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> txt2man-1.5.5.ebuild:
+  Marking txt2man-1.5.5 ppc for bug 340309
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> txt2man-1.5.5.ebuild:
   Transfer Prefix keywords
