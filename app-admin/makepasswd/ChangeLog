@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/makepasswd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.21 2010/06/14 00:08:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.22 2010/10/24 01:58:26 xmw Exp $
+
+  24 Oct 2010; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Taking maintainership
 
   14 Jun 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Taking over maintainership. Adding Michael (xmw) Weber as proxy
