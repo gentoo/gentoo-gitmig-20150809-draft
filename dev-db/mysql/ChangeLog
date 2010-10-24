@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.550 2010/10/07 19:05:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.551 2010/10/24 19:36:12 halcy0n Exp $
+
+  24 Oct 2010; Mark Loeser <halcy0n@gentoo.org> mysql-5.1.50-r1.ebuild:
+  Stable for ppc64; bug #321791
 
   07 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.51.ebuild:
   We need a newer libtool now, bug #339717 comment #3.
