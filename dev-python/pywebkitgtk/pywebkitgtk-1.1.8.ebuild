@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.1 2010/09/22 22:15:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.2 2010/10/24 21:12:00 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -16,7 +16,7 @@ SRC_URI="http://pywebkitgtk.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-python/pygobject:2
