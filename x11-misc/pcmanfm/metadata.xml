@@ -6,7 +6,4 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
-  <use>
-  	<flag name="udev">Use sys-fs/udev to determine available devices</flag>
-  </use>
 </pkgmetadata>
