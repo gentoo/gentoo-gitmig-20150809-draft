@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.45 2010/10/13 20:26:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.46 2010/10/24 17:45:04 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  mod_security-2.5.12-r1.ebuild:
+  Add ~sparc wrt #338548
 
   13 Oct 2010; Markus Meier <maekke@gentoo.org>
   mod_security-2.5.12-r1.ebuild:
