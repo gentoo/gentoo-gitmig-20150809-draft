@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.53 2010/10/19 05:35:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.54 2010/10/24 15:34:20 klausman Exp $
+
+  24 Oct 2010; Tobias Klausmann <klausman@gentoo.org> netqmail-1.06.ebuild:
+  Stable on alpha, bug #333915
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> netqmail-1.05-r4.ebuild:
   Drop to ~mips
