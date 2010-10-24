@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.86 2010/10/20 05:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.87 2010/10/24 17:01:14 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> raptor-1.4.20.ebuild,
+  raptor-1.4.21.ebuild:
+  Drop sparc keywords
 
   20 Oct 2010; Jeroen Roovers <jer@gentoo.org> raptor-1.4.21-r1.ebuild,
   raptor-1.9.0.ebuild:
