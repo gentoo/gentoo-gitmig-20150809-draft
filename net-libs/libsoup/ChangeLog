@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.237 2010/10/17 14:49:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.238 2010/10/24 13:43:42 pacho Exp $
+
+  24 Oct 2010; Pacho Ramos <pacho@gentoo.org> libsoup-2.32.0.ebuild:
+  Drop PDEPEND on libsoup-gnome, it shouldn't be needed now (see bug #340293
+  for reference).
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> libsoup-2.30.2-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
