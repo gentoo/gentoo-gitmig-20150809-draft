@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gaupol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.11 2010/10/24 17:03:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.12 2010/10/24 20:40:10 hwoarang Exp $
+
+  24 Oct 2010; Markos Chandras <hwoarang@gentoo.org> gaupol-0.17.ebuild:
+  Stable on amd64 wrt bug #342483
 
   24 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> gaupol-0.17.ebuild:
   Call gnome2_icon_savelist from pkg_preinst.
