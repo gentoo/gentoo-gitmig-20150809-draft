@@ -1,14 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.ebuild,v 1.1 2010/09/27 23:08:33 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1.ebuild,v 1.1 2010/10/24 01:06:00 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="*:2.6"
 
-DB_COMMIT="cd6b664df376d50455efc19ad23a1463484f81f7"
-DB_COMMIT_ID="cd6b664"
-DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT_ID}"
+DB_COMMIT="d66097a24ed9654f350f16ba6f7395f314e9e48f"
+DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"
 
 inherit distutils
 
@@ -16,7 +15,8 @@ DESCRIPTION="A tool that generates and installs ebuilds for Octave-Forge"
 HOMEPAGE="http://www.g-octave.org/"
 
 SRC_URI="http://www.g-octave.org/releases/${P}.tar.gz
-	http://github.com/rafaelmartins/${PN}-db/tarball/${DB_COMMIT} -> ${PF}-db.tar.gz"
+	http://github.com/rafaelmartins/${PN}-db/tarball/${DB_COMMIT} ->
+		${PN}-db-${DB_COMMIT:0:7}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,7 +37,7 @@ src_prepare() {
 src_compile() {
 	distutils_src_compile
 	if use doc; then
-		emake -C docs html
+		emake -C docs html || die 'failed to compile the documentation.'
 	fi
 }
 
@@ -67,7 +67,7 @@ pkg_postinst() {
 	elog "    emerge --config =${PF}"
 	elog
 	elog "If you are upgrading from =${PN}-0.3, please read this:"
-	elog 'http://doc.g-octave.org/0.4/upgrading/#from-0-3-to-0-4'
+	elog "http://doc.g-octave.org/${PV}/upgrading/#from-0-3-to-0-4"
 	elog
 	elog 'Please install the package manager that you want to use before run g-octave'
 	elog
@@ -79,6 +79,6 @@ pkg_config() {
 	einfo "Extracting g-octave database files to: ${db}"
 	tar -xzf "${DISTDIR}/${PF}-db.tar.gz" -C "${db}" || die 'tar failed.'
 	rm -rf "${db}"/{patches,octave-forge,info.json,timestamp}
-	mv -f "${db}/${DB_DIR}"/* ${db} || die 'mv failed.'
+	mv -f "${db}/${DB_DIR}"/* "${db}" || die 'mv failed.'
 	rm -rf "${db}/${DB_DIR}"
 }
