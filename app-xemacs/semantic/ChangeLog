@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/semantic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/ChangeLog,v 1.15 2010/09/18 18:04:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/ChangeLog,v 1.16 2010/10/24 23:41:30 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> semantic-1.21.ebuild:
+  Marking semantic-1.21 ~ppc for bug 332607
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> semantic-1.21.ebuild:
   Add ~alpha/~sparc wrt #332607
