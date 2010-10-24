@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.24 2010/10/10 10:56:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.25 2010/10/24 17:31:34 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> avfs-0.9.8-r1.ebuild:
+  ia64/sparc stable wrt #294831
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> avfs-0.9.8-r1.ebuild:
   Stable on amd64 wrt bug #294831
