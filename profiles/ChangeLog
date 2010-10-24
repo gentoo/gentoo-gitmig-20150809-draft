@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4692 2010/10/24 17:17:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4693 2010/10/24 21:15:39 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Oct 2010; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Mask gcj-jdk-4.5 together with gcc.
 
   24 Oct 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask TeX Live 2010 for testing and keywording
