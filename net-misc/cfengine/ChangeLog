@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.107 2010/10/15 20:52:29 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.108 2010/10/24 18:05:18 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  cfengine-3.0.5_p1-r1.ebuild:
+  Re-add ~sparc wrt #341163
 
 *cfengine-2.2.10-r3 (15 Oct 2010)
 
