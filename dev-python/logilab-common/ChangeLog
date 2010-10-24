@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.74 2010/10/20 17:03:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.75 2010/10/24 17:24:52 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  logilab-common-0.52.0.ebuild, logilab-common-0.52.1.ebuild:
+  Add ~ia64/~sparc wrt #339072
 
   20 Oct 2010; Brent Baude <ranger@gentoo.org> logilab-common-0.52.0.ebuild:
   Marking logilab-common-0.52.0 ~ppc for bug 339072
