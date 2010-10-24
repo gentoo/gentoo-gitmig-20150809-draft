@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.74 2010/10/22 14:44:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.75 2010/10/24 15:35:56 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> sphinx-1.0.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #341513
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> sphinx-1.0.4.ebuild:
   stable x86, bug 341513
