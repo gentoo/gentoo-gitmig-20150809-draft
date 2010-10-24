@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/bodr-9.ebuild,v 1.1 2010/10/24 18:23:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/bodr-9-r1.ebuild,v 1.1 2010/10/24 20:52:22 xarthisius Exp $
 
-EAPI=2
+EAPI=3
 
 inherit base
 
@@ -25,5 +25,5 @@ src_prepare(){
 }
 
 src_configure() {
-	econf --docdir=/usr/share/doc/${PF}
+	econf --docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
