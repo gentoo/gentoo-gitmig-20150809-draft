@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.5 2010/10/19 20:07:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.6 2010/10/24 12:17:01 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -130,8 +130,7 @@ php_install_ini() {
 
 	# SAPI-specific handling
 	if [[ "${sapi}" == "apache2" ]] ; then
-			einfo "Installing Apache2 config 70_mod_php${PHP_MV}.conf (${PHP_DESTDIR})"
-			insinto ${PHP_DESTDIR}/apache2
+			insinto "${APACHE_MODULES_CONFDIR}"
 			newins "${FILESDIR}/70_mod_php${PHP_MV}.conf-apache2" \
 				"70_mod_php${PHP_MV}.conf"
 	fi
