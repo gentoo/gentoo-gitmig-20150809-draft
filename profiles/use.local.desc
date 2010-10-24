@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6075 2010/10/24 13:13:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6076 2010/10/24 13:33:20 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -335,7 +335,6 @@ app-emulation/libvirt:parted - Add support for the sys-block/parted partition ed
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
 app-emulation/libvirt:phyp - Support the PHYP hypervisor protocol
 app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
-app-emulation/libvirt:udev - Use sys-fs/udev to determine available devices
 app-emulation/libvirt:uml - Add support for User Mode Linux based virtual machines
 app-emulation/libvirt:virtualbox - Adds support for VirtualBox based virtual machines
 app-emulation/libvirt:xen - Add support for app-emulation/xen based virtual machines
@@ -486,7 +485,6 @@ app-misc/beagle:xscreensaver - Allow Beagle to detect when the screensaver is sw
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
-app-misc/emelfm2:udev - Enable udev support using sys-fs/udisks
 app-misc/fdupes:md5sum-external - Use external md5sum program instead of bundled md5sum routines
 app-misc/freemind:groovy - Build plugin for scripting via Groovy
 app-misc/freemind:latex - Build plugin for inserting mathematical formulas in LaTeX syntax
@@ -970,7 +968,6 @@ dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspec
 dev-libs/crypto++:sse3 - Enable optimizations via sse3 assembly code
 dev-libs/cyberjack:fox - Enable installation of x11-libs/fox based fxcyberjack program
 dev-libs/cyberjack:pcsc-lite - Enable installation of sys-apps/pcsc-lite driver
-dev-libs/cyberjack:udev - Enable installation of udev rules
 dev-libs/cyrus-sasl:authdaemond - Enable Courier-IMAP authdaemond's unix socket support (net-mail/courier-imap, mail-mta/courier) 
 dev-libs/cyrus-sasl:ntlm_unsupported_patch - Add NTLM net-fs/samba NOT supported patch
 dev-libs/cyrus-sasl:sample - Build sample client and server
@@ -1845,7 +1842,6 @@ media-libs/libchamplain:introspection - Use dev-libs/gobject-introspection for i
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgpod:gtk - Enables ArtWorkDB support (including Photos and album covers)
 media-libs/libgpod:iphone - Enables support for the iPhone and iPod touch
-media-libs/libgpod:udev - Enable udev support
 media-libs/libmediainfo:libmms - Support for Microsoft Media Server (MMS) streams via libmms
 media-libs/libmikmod:raw - Enable raw file writer plug-in
 media-libs/libmp4v2:utils - Install command-line utilities
@@ -2083,7 +2079,6 @@ media-sound/pulseaudio:gnome -  Use GConf to store user preferences on streams a
 media-sound/pulseaudio:oss -  Enable OSS sink/source (output/input). Deprecated, upstream does not support this on systems where other sink/source systems are available (i.e.: Linux). The padsp wrapper is now always build if the system supports OSS at all. 
 media-sound/pulseaudio:realtime -  Makes PulseAudio use RealtimeKit (sys-auth/rtkit) to get real-time priority while running. 
 media-sound/pulseaudio:system-wide -  Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode . 
-media-sound/pulseaudio:udev -  Use sys-fs/udev for autodiscovery of sound devices; this replaces the deprecated sys-apps/hal autodiscovery code. 
 media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-sound/qmmp:cover - Enable album cover support
 media-sound/qmmp:enca - Detects the character encoding automatically
@@ -2103,7 +2098,6 @@ media-sound/qtscrobbler:cli - Build commandline client
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:daap - Enable support for local network music sharing via daap
-media-sound/rhythmbox:udev - Enable hardware detection via sys-fs/udev replacing the deprecated sys-apps/hal code.
 media-sound/rhythmbox:upnp - Enable support for local network music sharing via upnp
 media-sound/rhythmbox:webkit - Enable context panel plugin.
 media-sound/rubyripper:cdrdao - Add support for advanced toc scanning using app-cdr/cdrdao
@@ -2246,7 +2240,6 @@ media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
 media-video/google2srt:html - Install HTML documentation
 media-video/griffith:csv - Enable proper support for csv import (respectively auto-detection encoding of csv files)
-media-video/gxine:udev - Use sys-fs/udev for autodiscovery of devices; this replaces the deprecated sys-apps/hal autodiscovery code.
 media-video/h264enc:ogm - Support for OGM container format
 media-video/hwdecode-demos:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/hwdecode-demos:vdpau - Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card
@@ -2404,7 +2397,6 @@ media-video/vlc:shout - Enables libshout output.
 media-video/vlc:skins - Enables support for the skins2 interface.
 media-video/vlc:stream - Enables vlc to stream video.
 media-video/vlc:twolame - Enables twolame support (MPEG Audio Layer 2 encoder).
-media-video/vlc:udev - Enables Linux udev services discovery.
 media-video/vlc:upnp - Enables support for Intel UPnP stack.
 media-video/vlc:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/vlc:vcdinfo - Enables VCD information library support.
@@ -2976,7 +2968,6 @@ net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:google - Enable Google Public DNS support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:tools - Enable testing tools.
-net-misc/connman:udev - Enable udev support.
 net-misc/connman:wimax - Use net-wireless/wimax for WiMAX support.
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
@@ -3016,7 +3007,6 @@ net-misc/nxcl:nxclient - Use nxssh from net-misc/nxclient instead of standard ss
 net-misc/nxserver-freenx:nxclient - Allow to install net-misc/nxclient in parallel with this package, using it to display messages in the sessions
 net-misc/ofono:atmodem - ETSI AT modem support.
 net-misc/ofono:isimodem - Enable PhoNet/ISI modem support.
-net-misc/ofono:udev - Use sys-fs/udev for modem detection.
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:hpn - Enable high performance ssh
@@ -3609,7 +3599,6 @@ sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/corosync:infiniband - Enable Infiniband RDMA transport support
 sys-cluster/drbd:heartbeat - Enable Heartbeat integration
 sys-cluster/drbd:pacemaker - Enable Pacemaker integration
-sys-cluster/drbd:udev - Enable udev integration
 sys-cluster/drbd:xen - Enable Xen integration
 sys-cluster/gearmand:drizzle -  Support dev-db/libdrizzle for the queue storage. This also adds support for MySQL storage. 
 sys-cluster/gearmand:memcache -  Support memcache daemon (via dev-libs/libmemcached) for the queue storage. 
@@ -3930,7 +3919,6 @@ x11-apps/xsm:rsh - This allows the use of rsh (remote shell) and rcp (remote cop
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:tslib - Build with tslib support for touchscreen devices
-x11-base/xorg-server:udev - Enable devices discovery via udev
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-drivers/ati-drivers:modules - Build the kernel modules
 x11-drivers/ati-drivers:qt4 -  Install qt4 dependent optional tools (e.g Catalyst Control Panel) 
@@ -3951,7 +3939,6 @@ x11-libs/gtksourceview:glade - Install a glade catalog file
 x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time. 
 x11-libs/libdrm:libkms - Enable building of libkms, a library for applications to interface with KMS
 x11-libs/libfm:demo - Build demo
-x11-libs/libfm:udev - Use sys-fs/udev to determine available devices
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
 x11-libs/libqxt:berkdb - Build the QxtBerkeley module
@@ -4011,7 +3998,6 @@ x11-misc/google-gadgets:soup - Enables XML HTTP request extension based on net-l
 x11-misc/google-gadgets:webkit - Enables browser element and script runtime based on net-libs/webkit-gtk
 x11-misc/lightdm:consolekit - Enables support for authorization using consolekit
 x11-misc/lightdm:webkit - Build greeter based on net-libs/webkit-gtk
-x11-misc/pcmanfm:udev - Use sys-fs/udev to determine available devices
 x11-misc/rednotebook:libyaml - enable libyaml support
 x11-misc/rednotebook:webkit - enable previews using webkit engine
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
