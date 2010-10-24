@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.248 2010/10/16 14:27:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.249 2010/10/24 15:20:02 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> sudo-1.7.4_p4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #340687
 
   16 Oct 2010; Markus Meier <maekke@gentoo.org> sudo-1.7.4_p4.ebuild:
   arm stable, bug #340687
