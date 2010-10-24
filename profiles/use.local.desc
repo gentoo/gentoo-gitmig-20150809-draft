@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6077 2010/10/24 17:33:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6078 2010/10/24 20:13:29 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1430,7 +1430,6 @@ gnome-base/gnome-menus:introspection - Use dev-libs/gobject-introspection for in
 gnome-base/gnome-mount:nautilus - Enables the Nautilus plugin
 gnome-base/gnome-panel:bonobo - Enable Bonobo compatibility modules for applets still not ported to DBUS.
 gnome-base/gnome-panel:introspection - Use dev-libs/gobject-introspection for introspection
-gnome-base/gnome-session:policykit - Enable sys-auth/policykit authentication support
 gnome-base/gnome-session:splash - Enable gnome splash screen
 gnome-base/gnome-volume-manager:automount - Enable support for automounting devices that are handled by gnome-base/nautilus since 2.22. This should be off on most Gnome systems.
 gnome-base/gnome-volume-manager:consolekit - Use sys-auth/consolekit to determine policy on removable media.
@@ -1452,9 +1451,7 @@ gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee)
 gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
 gnome-extra/gnome-games:clutter - Build games that use media-libs/clutter and are written in JavaScript using dev-libs/seed
 gnome-extra/gnome-games:sound - Enable sound using media-libs/libcanberra
-gnome-extra/gnome-lirc-properties:policykit - Use sys-auth/policykit to gain privileges to change configuration files
 gnome-extra/gnome-media:sound - Adds support for sound notification themes using media-libs/libcanberra
-gnome-extra/gnome-power-manager:policykit - Enable sys-auth/policykit authentication support
 gnome-extra/gtkhtml:glade - Provide integration with dev-util/glade.
 gnome-extra/gucharmap:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-extra/libgda:canvas - Enables support for x11-libs/goocanvas
@@ -3181,7 +3178,6 @@ net-print/hplip:kde - Enables kde-misc/skanlite as scanner GUI with USE="scanner
 net-print/hplip:libnotify - Enables desktop notifications
 net-print/hplip:minimal - Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
-net-print/hplip:policykit - Enable sys-auth/polkit authentication support
 net-print/hplip:qt4 - Enable graphical interface using Qt 4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
@@ -3554,7 +3550,7 @@ sys-apps/usermode-utilities:fuse - Build tools (currently umlmount) needing fuse
 sys-apps/util-linux:loop-aes - include support for Loop AES encryption
 sys-apps/util-linux:perl - install the chkdupexe helper script
 sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
-sys-auth/consolekit:policykit -  Use the PolicyKit framework (sys-auth/policykit) to get authorization for suspend/shutdown. 
+sys-auth/consolekit:policykit -  Use the PolicyKit framework (sys-auth/polkit) to get authorization for suspend/shutdown. 
 sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support
 sys-auth/pam_pkcs11:pcsc-lite - build with sys-apps/pcsc-lite instead of dev-libs/openct
 sys-auth/pambase:consolekit -  Enable pam_ck_connector module on local system logins. This allows for console logins to make use of ConsoleKit authorization. 
