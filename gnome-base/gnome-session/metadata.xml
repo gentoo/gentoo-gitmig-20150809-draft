@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="policykit">Enable <pkg>sys-auth/policykit</pkg>
-			authentication support</flag>
 		<flag name="splash">Enable gnome splash screen</flag>
 	</use>
 </pkgmetadata>
