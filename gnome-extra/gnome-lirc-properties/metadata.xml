@@ -6,9 +6,4 @@
   <email>cardoe@gentoo.org</email>
   <name>Doug Goldstein</name>
 </maintainer>
-<use>
-  <flag name='policykit'>Use <pkg>sys-auth/policykit</pkg> to gain
-    privileges to change configuration files</flag>
-</use>
 </pkgmetadata>
-
