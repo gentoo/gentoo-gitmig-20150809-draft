@@ -8,6 +8,5 @@
   </maintainer>
   <use>
     <flag name='demo'>Build demo</flag>
-	<flag name='udev'>Use sys-fs/udev to determine available devices</flag>
   </use>
 </pkgmetadata>
