@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.451.ebuild,v 1.3 2010/06/29 19:53:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/dbhub-0.451.ebuild,v 1.4 2010/10/24 18:40:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,7 +18,8 @@ DEPEND="perl? ( dev-lang/perl )
 	switch_user? ( sys-libs/libcap )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-gentoo.patch \
+		"${FILESDIR}"/${PN}-no-dynaloader.patch
 	eautoreconf
 }
 
