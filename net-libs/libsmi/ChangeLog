@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.32 2010/10/23 06:04:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.33 2010/10/24 13:28:53 fauli Exp $
+
+  24 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  libsmi-0.4.8-r1.ebuild:
+  stable x86, security bug 342127
 
   23 Oct 2010; Jeroen Roovers <jer@gentoo.org> libsmi-0.4.8-r1.ebuild:
   Stable for HPPA (bug #342127).
