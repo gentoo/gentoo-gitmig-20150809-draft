@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.29-r1.ebuild,v 1.2 2010/10/20 13:52:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.29-r1.ebuild,v 1.3 2010/10/24 09:55:05 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -51,7 +51,6 @@ src_prepare() {
 	sed -i -e 's:ifconfig:/sbin/ifconfig:' plugins/wb.admin/backend/wb_server_control.py || die
 
 	epatch "${FILESDIR}/${PN}-5.2.17-python-libs.patch"
-	epatch "${FILESDIR}/${PN}-5.2.17-as-needed-modules.patch"
 	eautoreconf
 
 	# Remove bundled ctemplate version to make sure we use the system version.

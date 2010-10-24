@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.27 2010/10/20 13:52:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.28 2010/10/24 09:55:05 graaff Exp $
+
+  24 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.29-r1.ebuild:
+  Drop patch for --as-needed for validation modules because these modules
+  are no longer installed. See http://bugs.mysql.com/bug.php?id=56877
 
   20 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
   mysql-workbench-5.2.29-r1.ebuild:
