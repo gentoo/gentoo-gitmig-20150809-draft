@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.194 2010/09/25 18:42:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.195 2010/10/24 17:31:36 armin76 Exp $
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
+  sparc stable wrt #330773
 
   25 Sep 2010; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   Add ~sparc wrt #308763
