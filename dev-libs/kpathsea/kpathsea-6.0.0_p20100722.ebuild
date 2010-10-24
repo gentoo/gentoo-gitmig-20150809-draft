@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.1 2010/10/23 02:47:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.2 2010/10/24 16:33:43 aballier Exp $
 
 EAPI=3
 
@@ -80,4 +80,12 @@ src_install() {
 	keepdir /var/lib/texmf
 
 	dodoc BUGS ChangeLog NEWS PROJECTS README || die
+}
+
+pkg_postinst() {
+	etexmf-update
+}
+
+pkg_postrm() {
+	etexmf-update
 }

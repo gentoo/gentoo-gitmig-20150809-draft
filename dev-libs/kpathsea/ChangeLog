@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.1 2010/10/23 02:47:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.2 2010/10/24 16:33:43 aballier Exp $
+
+  24 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  kpathsea-6.0.0_p20100722.ebuild:
+  Run temxf-update since we install texmf files
 
 *kpathsea-6.0.0_p20100722 (23 Oct 2010)
 
