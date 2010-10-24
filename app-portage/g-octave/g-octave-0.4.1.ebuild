@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1.ebuild,v 1.1 2010/10/24 01:06:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1.ebuild,v 1.2 2010/10/24 01:19:50 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -77,7 +77,7 @@ pkg_config() {
 	local db="$(g-octave --config db)"
 	mkdir -p "${db}"
 	einfo "Extracting g-octave database files to: ${db}"
-	tar -xzf "${DISTDIR}/${PF}-db.tar.gz" -C "${db}" || die 'tar failed.'
+	tar -xzf "${DISTDIR}/${PN}-db-${DB_COMMIT:0:7}.tar.gz" -C "${db}" || die 'tar failed.'
 	rm -rf "${db}"/{patches,octave-forge,info.json,timestamp}
 	mv -f "${db}/${DB_DIR}"/* "${db}" || die 'mv failed.'
 	rm -rf "${db}/${DB_DIR}"
