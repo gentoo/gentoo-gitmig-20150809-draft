@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r2.ebuild,v 1.1 2010/10/21 08:14:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r2.ebuild,v 1.2 2010/10/24 12:11:06 grobian Exp $
 
 EAPI=3
 
@@ -32,6 +32,14 @@ src_prepare() {
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+
+	# Fix toolchain lookup for Darwin/Prefix.
+	epatch "${FILESDIR}"/${PN}-2.8-darwin-prefix.patch
+	sed -e "s|@GENTOO_PORTAGE_CHOST_ARCH@|${CHOST%%-darwin*}-darwin|g" \
+		-e "s|@GENTOO_PORTAGE_CHOST@|${CHOST}|g" \
+		-e "s|@GENTOO_PORTAGE_EPREFIX@|${EPREFIX}|g" \
+		-i tools/clang/lib/Driver/ToolChains.cpp \
+		|| die "fixing toolchain lookup"
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
@@ -149,9 +157,19 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in libCIndex.dylib ; do
+		for lib in lib{CIndex,clang}.dylib ; do
+			ebegin "fixing install_name of $lib"
 			install_name_tool -id "${EPREFIX}"/usr/lib/llvm/${lib} \
 				"${ED}"/usr/lib/llvm/${lib}
+			eend $?
+		done
+		for f in c-index-test ; do
+			ebegin "fixing reference to libclang.dylib in $f"
+			install_name_tool \
+				-change "@rpath/libclang.dylib" \
+					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
+				"${ED}"/usr/bin/$f
+			eend $?
 		done
 	fi
 }

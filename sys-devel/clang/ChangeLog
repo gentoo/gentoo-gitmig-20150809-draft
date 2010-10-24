@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.29 2010/10/21 08:14:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.30 2010/10/24 12:11:06 grobian Exp $
+
+  24 Oct 2010; Fabian Groffen <grobian@gentoo.org> clang-2.8-r2.ebuild,
+  +files/clang-2.8-darwin-prefix.patch:
+  Fix compilation on Darwin, fixes bug #342373, adds back necessary bits for
+  bug #339922
 
 *clang-2.8-r2 (21 Oct 2010)
 
