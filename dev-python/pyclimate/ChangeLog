@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyclimate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.21 2010/09/29 21:23:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.22 2010/10/24 16:05:36 klausman Exp $
+
+  24 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  pyclimate-1.2.2-r1.ebuild:
+  Stable on alpha, bug #337153
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> pyclimate-1.2.2-r1.ebuild:
   Marking pyclimate-1.2.2-r1 ppc for bug 337153
