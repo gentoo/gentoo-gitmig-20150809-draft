@@ -8,7 +8,6 @@
 	<description>Primary maintainer</description>
 </maintainer>
 <use>
-  <flag name='udev'>Enable installation of udev rules</flag>
   <flag name='pcsc-lite'>Enable installation of <pkg>sys-apps/pcsc-lite</pkg>
     driver</flag>
   <flag name='fox'>Enable installation of <pkg>x11-libs/fox</pkg> based
