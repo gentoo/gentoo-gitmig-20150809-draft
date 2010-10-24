@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.79 2010/07/30 11:34:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.80 2010/10/24 15:45:16 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> rosegarden-10.04.ebuild:
+  Marking rosegarden-10.04 ppc for bug 329675
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   rosegarden-10.04.ebuild:
