@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.41 2010/10/23 01:05:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.42 2010/10/24 15:35:20 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> hydra-5.7.ebuild:
+  stable ppc, bug 341133
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> hydra-5.7.ebuild:
   Stable on amd64 wrt bug #341133
