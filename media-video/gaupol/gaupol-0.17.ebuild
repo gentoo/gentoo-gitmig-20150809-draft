@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.17.ebuild,v 1.1 2010/09/21 22:10:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.17.ebuild,v 1.2 2010/10/24 17:03:07 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -37,6 +37,10 @@ src_compile() {
 	addpredict /root/.gconf
 	addpredict /root/.gconfd
 	distutils_src_compile
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
