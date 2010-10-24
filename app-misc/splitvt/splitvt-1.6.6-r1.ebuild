@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r1.ebuild,v 1.6 2008/03/29 13:29:04 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r1.ebuild,v 1.7 2010/10/24 08:24:43 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,13 +24,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${MY_P}-${DEB_PL}.diff
 	sed -i -e "s:/usr/local/bin:${D}/usr/bin:g" \
-		-e "s:/usr/local/man/:${D}/usr/share/man/:g" config.c
+		-e "s:/usr/local/man/:${D}/usr/share/man/:g" config.c || die
 }
 
 src_compile() {
 	# upstream has their own weirdo configure script...
 	./configure || die "configure failed"
-	sed -i -e "s:-O2:${CFLAGS}:" -e "s:^CC = gcc:CC = $(tc-getCC):" Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" -e "s:^CC = gcc:CC = $(tc-getCC):" Makefile || die
 	emake || die "emake failed"
 }
 
@@ -38,6 +38,6 @@ src_install() {
 	dodir /usr/bin /usr/share/man/man1/
 	make install || die "make install failed"
 	fperms 755 /usr/bin/xsplitvt
-	dodoc ANNOUNCE BLURB CHANGES NOTES README TODO
-	doman splitvt.1
+	dodoc ANNOUNCE BLURB CHANGES NOTES README TODO || die
+	doman splitvt.1 || die
 }

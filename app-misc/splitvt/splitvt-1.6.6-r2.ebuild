@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r2.ebuild,v 1.3 2010/10/23 22:34:45 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r2.ebuild,v 1.4 2010/10/24 08:24:43 jlec Exp $
 
 EAPI="3"
 
@@ -24,18 +24,18 @@ DEPEND=">=sys-libs/ncurses-5.2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${WORKDIR}"/${MY_P}-${DEB_PL}.diff
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch \
+		"${WORKDIR}"/${MY_P}-${DEB_PL}.diff \
+		"${FILESDIR}"/${PV}-ldflags.patch
 	sed -i \
 		-e "s:/usr/local/bin:${D}/usr/bin:g" \
 		-e "s:/usr/local/man/:${D}/usr/share/man/:g" config.c || die
 }
 
-src_compile() {
+src_configure() {
 	# upstream has their own weirdo configure script...
 	./configure || die "configure failed"
 	sed -i -e "s:-O2:${CFLAGS}:" -e "s:^CC = gcc:CC = $(tc-getCC):" Makefile || die
-	emake || die "emake failed"
 }
 
 src_install() {
