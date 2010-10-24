@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.1_p5428.ebuild,v 1.4 2010/09/18 11:06:52 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.1_p5428.ebuild,v 1.5 2010/10/24 10:00:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -30,7 +30,6 @@ RDEPEND="dev-libs/libxml2
 	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
 	libsamplerate? ( media-libs/libsamplerate )
-	oss? ( media-libs/alsa-oss )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl? ( media-libs/libsdl )
 	truetype? ( media-libs/freetype:2
