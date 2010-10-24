@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.24 2010/10/23 22:49:52 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.25 2010/10/24 15:50:11 ranger Exp $
+
+  24 Oct 2010; Brent Baude <ranger@gentoo.org> countrycodes-1.0.5-r1.ebuild:
+  stable ppc, bug 342137
 
   23 Oct 2010; Dane Smith <c1pher@gentoo.org> countrycodes-1.0.5-r1.ebuild:
   Stable x86 wrt bug 342137.
