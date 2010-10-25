@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.10 2010/10/14 16:13:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.11 2010/10/25 08:18:36 swegener Exp $
+
+  25 Oct 2010; Sven Wegener <swegener@gentoo.org>
+  xtables-addons-1.28-r1.ebuild, xtables-addons-1.30.ebuild:
+  linux-sources is only required at build-time and the ipset extension can
+  be build with ipset installed, just not being installed at the same time.
 
   14 Oct 2010; Peter Volkov <pva@gentoo.org> -xtables-addons-1.27.ebuild,
   -xtables-addons-1.28.ebuild:
