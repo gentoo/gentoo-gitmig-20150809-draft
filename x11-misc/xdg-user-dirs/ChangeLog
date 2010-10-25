@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.10 2010/10/21 20:26:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.11 2010/10/25 03:19:06 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> xdg-user-dirs-0.13.ebuild:
+  Marked ~hppa (bug #337632).
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> xdg-user-dirs-0.13.ebuild:
   Marking xdg-user-dirs-0.13 ~ppc for bug 337632
