@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.103 2010/10/25 20:40:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.104 2010/10/25 22:17:23 flameeyes Exp $
+
+  25 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  usbutils-0.91.ebuild:
+  QA: while waiting for Mike to update this to use libusb-1 exclusively,
+  avoid breaking on new installs.
 
   25 Oct 2010; Markos Chandras <hwoarang@gentoo.org> usbutils-0.90.ebuild:
   Stable on amd64 wrt bug #342525
