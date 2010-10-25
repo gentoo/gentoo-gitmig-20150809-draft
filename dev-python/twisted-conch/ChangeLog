@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.58 2010/08/18 22:36:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.59 2010/10/25 02:54:30 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> twisted-conch-10.1.0.ebuild:
+  Stable for HPPA (bug #333211).
 
   18 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   twisted-conch-10.1.0.ebuild:

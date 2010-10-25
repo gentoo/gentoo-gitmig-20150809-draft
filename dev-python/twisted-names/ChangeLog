@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.47 2010/08/18 23:34:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.48 2010/10/25 02:56:22 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> twisted-names-10.1.0.ebuild:
+  Stable for HPPA (bug #333211).
 
   18 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   twisted-names-10.1.0.ebuild:
