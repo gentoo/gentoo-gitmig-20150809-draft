@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.129 2010/10/24 15:30:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.130 2010/10/25 13:29:41 pva Exp $
+
+*transmission-2.11 (25 Oct 2010)
+
+  25 Oct 2010; Peter Volkov <pva@gentoo.org> -transmission-1.92.ebuild,
+  -transmission-2.10.ebuild, +transmission-2.11.ebuild,
+  -files/transmission-daemon.initd.3, +files/transmission-daemon.initd.4:
+  Version bump, #342027, thank Samuli Suominen for report. Fixed init script
+  for baselayout-1 again, #341451 wrt Sebastian LechteSebastian Lechte and
+  masc. Fix desktop entry for qt4 ebuild, recognize magnet links in kde,
+  #341507 thank Michel Lang for report. Drop old.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> transmission-2.04-r1.ebuild:
   stable ppc, bug 338059

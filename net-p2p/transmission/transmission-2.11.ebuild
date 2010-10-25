@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.10.ebuild,v 1.1 2010/10/15 11:50:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11.ebuild,v 1.1 2010/10/25 13:29:41 pva Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -12,7 +12,7 @@ SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.bz2"
 LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="gnome gtk libnotify sound qt4"
+IUSE="gnome gtk kde libnotify sound qt4"
 
 RDEPEND="
 	sys-libs/zlib
@@ -42,6 +42,23 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e 's:-ggdb3::g' configure || die
+	# Magnet link support
+	if use kde; then
+		cat > transmission-magnet.protocol <<-EOF
+		[Protocol]
+		exec=transmission-qt '%u'
+		protocol=magnet
+		Icon=transmission
+		input=none
+		output=none
+		helper=true
+		listing=
+		reading=false
+		writing=false
+		makedir=false
+		deleting=false
+		EOF
+	fi
 }
 
 src_configure() {
@@ -67,7 +84,7 @@ src_install() {
 	dodoc AUTHORS NEWS qt/README.txt
 	rm -f "${D}"/usr/share/${PN}/web/LICENSE
 
-	newinitd "${FILESDIR}"/${PN}-daemon.initd.3 ${PN}-daemon || die
+	newinitd "${FILESDIR}"/${PN}-daemon.initd.4 ${PN}-daemon || die
 	newconfd "${FILESDIR}"/${PN}-daemon.confd.2 ${PN}-daemon || die
 
 	keepdir /var/{transmission/{config,downloads},log/transmission}
@@ -76,9 +93,14 @@ src_install() {
 	if use qt4; then
 		cd qt
 		emake INSTALL_ROOT="${D}/usr" install || die
-		make_desktop_entry qtr "Transmission Qt BitTorrent Client" ${PN} \
-			"Network;FileTransfer;P2P;Qt"
-		use gtk || { doicon icons/transmission.png || die; }
+		insinto /usr/share/applications/
+		doins transmission-qt.desktop || die
+		mv icons/transmission{,-qt}.png
+		doicon icons/transmission-qt.png || die
+		if use kde; then
+			insinto /usr/share/kde4/services/
+			doins transmission-magnet.protocol || die
+		fi
 	fi
 }
 
@@ -91,12 +113,19 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	# Keep default permissions on default dirs
-	chmod -R transmission:transmission /var/{transmission/{,config,downloads},log/transmission}
+	chown -R transmission:transmission /var/{transmission/{,config,downloads},log/transmission}
 
 	ewarn "If you use transmission-daemon, please, set 'rpc-username' and"
 	ewarn "'rpc-password' (in plain text, transmission-daemon will hash it on"
 	ewarn "start) in settings.json file located at /var/transmission/config or"
 	ewarn "any other appropriate config directory."
+
+	if use gtk; then
+		elog 'If you want magnet link support in gnome run this commands:'
+		elog 'gconftool-2 -t string -s /desktop/gnome/url-handlers/magnet/command "/usr/bin/transmission-gtk %s"'
+		elog 'gconftool-2 -s /desktop/gnome/url-handlers/magnet/needs_terminal false -t bool'
+		elog 'gconftool-2 -t bool -s /desktop/gnome/url-handlers/magnet/enabled true'
+	fi
 }
 
 pkg_postrm() {

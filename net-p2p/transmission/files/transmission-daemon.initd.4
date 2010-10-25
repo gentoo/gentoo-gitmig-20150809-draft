@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/files/transmission-daemon.initd.3,v 1.1 2010/10/15 11:50:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/files/transmission-daemon.initd.4,v 1.1 2010/10/25 13:29:41 pva Exp $
 
 opts="start stop reload"
 description="Transmission is a fast, easy and free bittorrent client"
@@ -45,31 +45,21 @@ check_config() {
 			SSD_OPTIONS="${SSD_OPTIONS} --chuid ${runas_user}"
 		fi
 	fi
-
-	if [ -n "${logfile}" ]; then
-		if [ -f /etc/init.d/sysfs ]; then
-			SSD_OPTIONS="${SSD_OPTIONS} --stdout ${logfile} --stderr ${logfile}"
-		else
-			SSD_OPTIONS="${SSD_OPTIONS} >${logfile} 2>&1"
-		fi
-	fi
 }
 
 start() {
 	check_config
 
 	ebegin "Starting transmission daemon"
-	start-stop-daemon --start --quiet --background --make-pidfile \
-		--pidfile ${pidfile} ${SSD_OPTIONS} --exec \
-		/usr/bin/transmission-daemon -- --foreground \
+	start-stop-daemon --start --quiet --background --pidfile ${pidfile} ${SSD_OPTIONS} \
+		--exec /usr/bin/transmission-daemon -- --pid-file ${pidfile} --logfile ${logfile} \
 		${TRANSMISSION_OPTIONS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping transmission daemon"
-	start-stop-daemon --stop --quiet --retry TERM/45/QUIT/15 \
-		--pidfile ${pidfile}
+	start-stop-daemon --stop --quiet --retry TERM/45/QUIT/15 --pidfile ${pidfile}
 	eend $?
 }
 
