@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtexu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.1 2010/10/24 17:12:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.2 2010/10/25 09:06:39 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  bibtexu-3.71_p20100722.ebuild:
+  Marked ~hppa (bug #342513).
 
 *bibtexu-3.71_p20100722 (24 Oct 2010)
 
