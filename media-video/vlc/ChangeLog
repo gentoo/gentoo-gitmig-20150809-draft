@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.635 2010/10/16 01:15:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.636 2010/10/25 18:38:39 halcy0n Exp $
+
+  25 Oct 2010; Mark Loeser <halcy0n@gentoo.org> vlc-1.1.4.ebuild:
+  Mark stable on ppc64; bug #332361
 
   16 Oct 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   Remove useless code and simplify doc handling
