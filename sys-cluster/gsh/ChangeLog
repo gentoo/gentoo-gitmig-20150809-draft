@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gsh/ChangeLog,v 1.3 2010/09/19 12:09:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gsh/ChangeLog,v 1.4 2010/10/25 05:30:56 jlec Exp $
+
+  25 Oct 2010; Justin Lecher <jlec@gentoo.org> gsh-0.3.ebuild:
+  Keyworded for ~linux prefix
 
   19 Sep 2010; Markos Chandras <hwoarang@gentoo.org> gsh-0.3.ebuild:
   Stable on amd64 wrt bug #336750
