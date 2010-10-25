@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3_pre20101008.ebuild,v 1.3 2010/10/25 00:19:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3_pre20101008.ebuild,v 1.4 2010/10/25 00:24:12 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/downloads/mgorny/${PN}-scons/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dbus extra gadu gif gnutls gpg gpm gsm icq idn inotify irc
 	jabber jogger jpeg mail minimal ncurses nls nntp oracle oss pcap
 	perl python readline remote rss ruby sim sms spell
