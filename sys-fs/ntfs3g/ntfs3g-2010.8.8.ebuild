@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.8.8.ebuild,v 1.1 2010/08/10 14:38:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.8.8.ebuild,v 1.2 2010/10/25 07:50:44 ssuominen Exp $
 
 EAPI=2
 inherit linux-info
@@ -20,6 +20,7 @@ IUSE="acl debug hal suid udev +external-fuse"
 RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )
 	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-apps/attr"
 
 S="${WORKDIR}/${MY_P}"

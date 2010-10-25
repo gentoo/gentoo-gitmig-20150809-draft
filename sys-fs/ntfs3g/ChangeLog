@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.103 2010/08/13 13:54:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.104 2010/10/25 07:50:44 ssuominen Exp $
+
+  25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ntfs3g-2010.8.8.ebuild:
+  Missing dev-util/pkgconfig DEPEND wrt #340967 by "Faustus".
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> ntfs3g-2010.3.6.ebuild:
   Marked ppc/ppc64 stable for bug #328171.
