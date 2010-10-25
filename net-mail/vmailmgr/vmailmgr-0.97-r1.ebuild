@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97-r1.ebuild,v 1.1 2009/06/20 11:09:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97-r1.ebuild,v 1.2 2010/10/25 08:41:29 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,8 +21,12 @@ RDEPEND=">=sys-apps/ucspi-unix-0.34
 	>=net-mail/qmail-autoresponder-0.95"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-strcasestr.patch"
+	sed -i \
+		-e 's:vadduser.pod vadduser.pod:vadduser.pod:' \
+		commands/Makefile.am || die #327431
+
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-strcasestr.patch
 	eautoreconf
 }
 
