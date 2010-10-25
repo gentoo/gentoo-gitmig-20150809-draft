@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.1 2010/03/07 10:07:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.2 2010/10/25 05:28:54 jlec Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ pkg_nofetch() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-typo.patch
 	epatch "${FILESDIR}"/${PV}-exec.patch
+	epatch "${FILESDIR}"/${PV}-expire.patch
 
 	cat >> etc/config <<- EOF
 	VERSION=${PV}
