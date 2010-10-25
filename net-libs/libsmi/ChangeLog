@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.34 2010/10/24 14:54:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.35 2010/10/25 19:06:29 halcy0n Exp $
+
+  25 Oct 2010; Mark Loeser <halcy0n@gentoo.org> libsmi-0.4.8-r1.ebuild:
+  Stable on ppc64; bug #342127
 
   24 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   libsmi-0.4.8-r1.ebuild:
