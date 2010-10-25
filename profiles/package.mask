@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12094 2010/10/24 21:15:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12095 2010/10/25 05:10:08 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
+# Masked until reverse dependencies are sorted out (bug #342461)
+=dev-libs/libnl-2*
 
 # Alexis Ballier <aballier@gentoo.org> (24 Oct 2010)
 # Mask TeX Live 2010 for testing and keywording
