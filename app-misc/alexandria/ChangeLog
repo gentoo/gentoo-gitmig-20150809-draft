@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.44 2010/08/02 18:26:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.45 2010/10/25 12:33:32 fauli Exp $
+
+  25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  -files/alexandria-rakefile.patch:
+  clean up stray files, reported by jalan <jalanpalmer AT gmail DOT com> in
+  bug 342567
 
 *alexandria-0.6.6-r2 (02 Aug 2010)
 
