@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.14 2010/10/14 15:24:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.15 2010/10/25 13:34:31 pva Exp $
+
+  25 Oct 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild,
+  metadata.xml:
+  9999 ebuild update: Upstream moved on git, don't use net-libs/wt any more,
+  thank Nikoly for this job.
 
   14 Oct 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild,
   metadata.xml:
