@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.193 2010/10/25 10:59:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.194 2010/10/25 13:45:37 fauli Exp $
+
+  25 Oct 2010; Christian Faulhammer <fauli@gentoo.org> pidgin-2.7.4.ebuild:
+  stable x86, security bug 342059
 
 *pidgin-2.7.4 (25 Oct 2010)
 
