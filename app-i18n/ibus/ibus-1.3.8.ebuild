@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.3 2010/08/11 18:15:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.8.ebuild,v 1.1 2010/10/25 16:13:55 matsuu Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="python? 2:2.5"
 inherit eutils gnome2-utils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
@@ -12,19 +12,29 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc nls"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc +gconf gtk nls +python vala X"
 
 RDEPEND=">=dev-libs/glib-2.18
-	>=x11-libs/gtk+-2
-	>=gnome-base/gconf-2.12
+	gconf? ( >=gnome-base/gconf-2.12 )
 	>=gnome-base/librsvg-2
 	sys-apps/dbus
 	app-text/iso-codes
-	x11-libs/libX11
-	>=dev-python/pygobject-2.14
-	dev-python/notify-python
-	nls? ( virtual/libintl )"
+	gtk? (
+		x11-libs/gtk+:2
+	)
+	X? (
+		x11-libs/libX11
+		x11-libs/gtk+:2
+	)
+	python? (
+		dev-python/notify-python
+		>=dev-python/dbus-python-0.83
+	)
+	nls? ( virtual/libintl )
+	vala? ( dev-lang/vala )"
+#	X? ( x11-libs/libX11 )
+#	gtk? ( x11-libs/gtk+:2 x11-libs/gtk+:3 )
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-perl/XML-Parser
@@ -32,9 +42,10 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
-	dev-python/pygtk
-	>=dev-python/dbus-python-0.83
-	dev-python/pyxdg"
+	python? (
+		dev-python/pygtk
+		dev-python/pyxdg
+	)"
 
 RESTRICT="test"
 
@@ -56,12 +67,21 @@ src_prepare() {
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 	echo "ibus/_config.py" >> po/POTFILES.skip || die
+	sed -i -e "s/python/python2/" setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in || die
 }
 
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
-		$(use_enable nls) || die
+		$(use_enable doc gtk-doc-html) \
+		$(use_enable gconf) \
+		$(use_enable gtk gtk2) \
+		$(use_enable gtk xim) \
+		$(use_enable nls) \
+		$(use_enable python) \
+		$(use_enable vala) \
+		$(use_enable X xim) || die
+		#$(use_enable gtk gtk3) \
 }
 
 src_install() {
@@ -92,15 +112,15 @@ pkg_postinst() {
 	elog "   export QT_IM_MODULE=\"xim\""
 	elog "   ibus-daemon -d -x"
 
-	update_gtk_immodules
+	use gtk && update_gtk_immodules
 
-	python_mod_optimize /usr/share/${PN}
+	use python && python_mod_optimize /usr/share/${PN}
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	update_gtk_immodules
+	use gtk && update_gtk_immodules
 
-	python_mod_cleanup /usr/share/${PN}
+	use python && python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
