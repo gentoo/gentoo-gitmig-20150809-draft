@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jaxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.14 2010/10/24 15:44:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.15 2010/10/25 02:51:22 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> jaxml-3.02.ebuild:
+  Stable for HPPA (bug #341345).
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> jaxml-3.02.ebuild:
   stable ppc, bug 341345
