@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/khmer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/khmer/ChangeLog,v 1.4 2010/10/20 22:49:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/khmer/ChangeLog,v 1.5 2010/10/25 12:03:16 fauli Exp $
+
+  25 Oct 2010; Christian Faulhammer <fauli@gentoo.org> khmer-5.0-r1.ebuild:
+  stable x86, bug 341843
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> khmer-5.0-r1.ebuild:
   Stable on amd64 wrt bug #341843
