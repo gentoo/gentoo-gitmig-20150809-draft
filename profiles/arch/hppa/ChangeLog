@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.95 2010/08/13 10:17:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.96 2010/10/25 01:50:29 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
+  FFI does not work: "Unknown cpu type" (bug #337956)
 
   13 Aug 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   MKL not available on this arch
