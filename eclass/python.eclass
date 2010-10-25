@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.103 2010/10/03 00:38:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.104 2010/10/25 11:54:19 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -18,6 +18,36 @@ fi
 _CPYTHON2_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
 _CPYTHON3_SUPPORTED_ABIS=(3.0 3.1 3.2)
 _JYTHON_SUPPORTED_ABIS=(2.5-jython)
+_PYTHON_SUPPORTED_ABIS=(${_CPYTHON2_SUPPORTED_ABIS[@]} ${_CPYTHON3_SUPPORTED_ABIS[@]} ${_JYTHON_SUPPORTED_ABIS[@]})
+
+# ================================================================================================
+# ===================================== HANDLING OF METADATA =====================================
+# ================================================================================================
+
+_python_set_IUSE() {
+	local PYTHON_ABI restricted_ABI restricted_ABIs support_ABI
+
+	_PYTHON_ABIS_USE_FLAGS=""
+	restricted_ABIs="${RESTRICT_PYTHON_ABIS// /$'\n'}"
+
+	for PYTHON_ABI in "${_PYTHON_SUPPORTED_ABIS[@]}"; do
+		support_ABI="1"
+		while read restricted_ABI; do
+			if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
+				support_ABI="0"
+				break
+			fi
+		done <<< "${restricted_ABIs}"
+		[[ "${support_ABI}" == "1" ]] && _PYTHON_ABIS_USE_FLAGS+="${_PYTHON_ABIS_USE_FLAGS:+ }python_abis_${PYTHON_ABI}"
+	done
+
+	IUSE="${_PYTHON_ABIS_USE_FLAGS}"
+}
+
+if ! has "${EAPI:-0}" 0 1 2 3 && [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+	_python_set_IUSE
+fi
+unset -f _python_set_IUSE
 
 # @ECLASS-VARIABLE: PYTHON_DEPEND
 # @DESCRIPTION:
@@ -29,7 +59,7 @@ _JYTHON_SUPPORTED_ABIS=(2.5-jython)
 #   minimal_version:           <minimal_major_version.minimal_minor_version>
 #   maximal_version:           <maximal_major_version.maximal_minor_version>
 
-_parse_PYTHON_DEPEND() {
+_python_parse_PYTHON_DEPEND() {
 	local major_version maximal_version minimal_version python_all="0" python_maximal_version python_minimal_version python_versions=() python2="0" python2_maximal_version python2_minimal_version python3="0" python3_maximal_version python3_minimal_version USE_flag= version_components_group version_components_group_regex version_components_groups
 
 	version_components_group_regex="(2|3|\*)(:([[:digit:]]+\.[[:digit:]]+)?(:([[:digit:]]+\.[[:digit:]]+)?)?)?"
@@ -155,30 +185,16 @@ _parse_PYTHON_DEPEND() {
 DEPEND=">=app-admin/eselect-python-20091230"
 RDEPEND="${DEPEND}"
 
-if [[ -n "${PYTHON_DEPEND}" && -n "${NEED_PYTHON}" ]]; then
-	die "PYTHON_DEPEND and NEED_PYTHON cannot be set simultaneously"
-elif [[ -n "${PYTHON_DEPEND}" ]]; then
-	_parse_PYTHON_DEPEND
-elif [[ -n "${NEED_PYTHON}" ]]; then
-	if ! has "${EAPI:-0}" 0 1 2; then
-		eerror "Use PYTHON_DEPEND variable instead of NEED_PYTHON variable."
-		die "NEED_PYTHON variable cannot be used in this EAPI"
-	fi
-
-	ewarn
-	ewarn "\"${EBUILD}\":"
-	ewarn "Deprecation Warning: NEED_PYTHON variable is deprecated and will be banned on 2010-10-01."
-	ewarn "Use PYTHON_DEPEND variable instead of NEED_PYTHON variable."
-	ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-	ewarn
-
-	unset _BOLD _NORMAL
-
-	_PYTHON_ATOMS=(">=dev-lang/python-${NEED_PYTHON}")
-	DEPEND+="${DEPEND:+ }${_PYTHON_ATOMS[@]}"
-	RDEPEND+="${RDEPEND:+ }${_PYTHON_ATOMS[@]}"
+if [[ -n "${PYTHON_DEPEND}" ]]; then
+	_python_parse_PYTHON_DEPEND
 else
 	_PYTHON_ATOMS=("dev-lang/python")
+fi
+unset -f _python_parse_PYTHON_DEPEND
+
+if [[ -n "${NEED_PYTHON}" ]]; then
+	eerror "Use PYTHON_DEPEND variable instead of NEED_PYTHON variable."
+	die "NEED_PYTHON variable is banned"
 fi
 
 # @ECLASS-VARIABLE: PYTHON_USE_WITH
@@ -222,6 +238,135 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 fi
 
 unset _PYTHON_ATOMS
+
+# @FUNCTION: python_abi_depend
+# @USAGE: [-e|--exclude-ABIs Python_ABIs] [-i|--include-ABIs Python_ABIs] [--] <dependency_atom> [dependency_atoms]
+# @DESCRIPTION:
+# Print dependency atoms with USE dependencies for Python ABIs added.
+# If --exclude-ABIs option is specified, then Python ABIs matching its argument are not used.
+# If --include-ABIs option is specified, then only Python ABIs matching its argument are used.
+# --exclude-ABIs and --include-ABIs options cannot be specified simultaneously.
+python_abi_depend() {
+	local atom atom_index atoms=() exclude_ABIs="0" excluded_ABI excluded_ABIs include_ABIs="0" included_ABI included_ABIs support_ABI USE_dependencies USE_flag USE_flag_index USE_flags=()
+
+	if has "${EAPI:-0}" 0 1 2 3; then
+		die "${FUNCNAME}() cannot be used in this EAPI"
+	fi
+
+	if [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
+		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+	fi
+
+	while (($#)); do
+		case "$1" in
+			-e|--exclude-ABIs)
+				exclude_ABIs="1"
+				excluded_ABIs="${2// /$'\n'}"
+				shift
+				;;
+			-i|--include-ABIs)
+				include_ABIs="1"
+				included_ABIs="${2// /$'\n'}"
+				shift
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${exclude_ABIs}" == "1" && "${include_ABIs}" == "1" ]]; then
+		die "${FUNCNAME}(): '--exclude-ABIs' and '--include-ABIs' options cannot be specified simultaneously"
+	fi
+
+	if [[ "$#" -eq 0 ]]; then
+		die "${FUNCNAME}(): Missing dependency atoms"
+	fi
+
+	atoms=("$@")
+
+	if [[ "${exclude_ABIs}" == "0" && "${include_ABIs}" == "0" ]]; then
+		USE_dependencies="$(printf ",%s?" ${_PYTHON_ABIS_USE_FLAGS})"
+		USE_dependencies="${USE_dependencies#,}"
+
+		for atom_index in "${!atoms[@]}"; do
+			atom="${atoms[${atom_index}]}"
+
+			if [[ "${atom}" == *"["*"]" ]]; then
+				echo -n "${atom%]},"
+			else
+				echo -n "${atom}["
+			fi
+			echo -n "${USE_dependencies}]"
+
+			if [[ "${atom_index}" -ne $((${#atoms[@]} - 1)) ]]; then
+				echo -n " "
+			fi
+		done
+	else
+		if [[ "${exclude_ABIs}" == "1" ]]; then
+			for USE_flag in ${_PYTHON_ABIS_USE_FLAGS}; do
+				while read excluded_ABI; do
+				support_ABI="1"
+					if [[ "${USE_flag}" == python_abis_${excluded_ABI} ]]; then
+						support_ABI="0"
+						break
+					fi
+				done <<< "${excluded_ABIs}"
+			[[ "${support_ABI}" == "1" ]] && USE_flags+=("${USE_flag}")
+			done
+		elif [[ "${include_ABIs}" == "1" ]]; then
+			for USE_flag in ${_PYTHON_ABIS_USE_FLAGS}; do
+				while read included_ABI; do
+				support_ABI="0"
+					if [[ "${USE_flag}" == python_abis_${included_ABI} ]]; then
+						support_ABI="1"
+						break
+					fi
+				done <<< "${included_ABIs}"
+			[[ "${support_ABI}" == "1" ]] && USE_flags+=("${USE_flag}")
+			done
+		else
+			die "${FUNCNAME}(): Internal error"
+		fi
+
+		for USE_flag_index in "${!USE_flags[@]}"; do
+			USE_flag="${USE_flags[${USE_flag_index}]}"
+			USE_dependencies="${USE_flag}"
+
+			echo -n "${USE_flag}? ( "
+
+			for atom_index in "${!atoms[@]}"; do
+				atom="${atoms[${atom_index}]}"
+
+				if [[ "${atom}" == *"["*"]" ]]; then
+					echo -n "${atom%]},"
+				else
+					echo -n "${atom}["
+				fi
+				echo -n "${USE_dependencies}]"
+
+				if [[ "${atom_index}" -ne $((${#atoms[@]} - 1)) ]]; then
+					echo -n " "
+				fi
+			done
+
+			echo -n " )"
+
+			if [[ "${USE_flag_index}" -ne $((${#USE_flags[@]} - 1)) ]]; then
+				echo -n " "
+			fi
+		done
+	fi
+}
 
 # ================================================================================================
 # =================================== MISCELLANEOUS FUNCTIONS ====================================
@@ -410,7 +555,7 @@ python_pkg_setup() {
 	PYTHON_PKG_SETUP_EXECUTED="1"
 }
 
-if ! has "${EAPI:-0}" 0 1 2 3 || has "${EAPI:-0}" 2 3 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; then
+if ! has "${EAPI:-0}" 0 1 2 3 || { has "${EAPI:-0}" 2 3 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; }; then
 	EXPORT_FUNCTIONS pkg_setup
 fi
 
@@ -603,7 +748,9 @@ if ! has "${EAPI:-0}" 0 1; then
 	fi
 fi
 
-unset PYTHON_ABIS
+if has "${EAPI:-0}" 0 1 2 3; then
+	unset PYTHON_ABIS
+fi
 
 _python_calculate_PYTHON_ABIS() {
 	if ! _python_package_supporting_installation_for_multiple_python_abis; then
@@ -612,10 +759,10 @@ _python_calculate_PYTHON_ABIS() {
 
 	_python_initial_sanity_checks
 
-	# USE_${ABI_TYPE^^} and RESTRICT_${ABI_TYPE^^}_ABIS variables hopefully will be included in EAPI >= 5.
-	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
-		local PYTHON_ABI restricted_ABI support_ABI supported_PYTHON_ABIS=
-		PYTHON_ABI_SUPPORTED_VALUES="${_CPYTHON2_SUPPORTED_ABIS[@]} ${_CPYTHON3_SUPPORTED_ABIS[@]} ${_JYTHON_SUPPORTED_ABIS[@]}"
+	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3; then
+		local PYTHON_ABI restricted_ABI restricted_ABIs support_ABI supported_PYTHON_ABIS
+
+		restricted_ABIs="${RESTRICT_PYTHON_ABIS// /$'\n'}"
 
 		if [[ "$(declare -p USE_PYTHON 2> /dev/null)" == "declare -x USE_PYTHON="* ]]; then
 			local cpython_enabled="0"
@@ -625,7 +772,7 @@ _python_calculate_PYTHON_ABIS() {
 			fi
 
 			for PYTHON_ABI in ${USE_PYTHON}; do
-				if ! has "${PYTHON_ABI}" ${PYTHON_ABI_SUPPORTED_VALUES}; then
+				if ! has "${PYTHON_ABI}" ${_PYTHON_SUPPORTED_ABIS[@]}; then
 					die "USE_PYTHON variable contains invalid value '${PYTHON_ABI}'"
 				fi
 
@@ -634,12 +781,12 @@ _python_calculate_PYTHON_ABIS() {
 				fi
 
 				support_ABI="1"
-				for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+				while read restricted_ABI; do
 					if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
 						support_ABI="0"
 						break
 					fi
-				done
+				done <<< "${restricted_ABIs}"
 				[[ "${support_ABI}" == "1" ]] && export PYTHON_ABIS+="${PYTHON_ABIS:+ }${PYTHON_ABI}"
 			done
 
@@ -668,19 +815,19 @@ _python_calculate_PYTHON_ABIS() {
 
 				for PYTHON_ABI in "${_CPYTHON2_SUPPORTED_ABIS[@]}"; do
 					support_python_major_version="1"
-					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+					while read restricted_ABI; do
 						if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
 							support_python_major_version="0"
 						fi
-					done
+					done <<< "${restricted_ABIs}"
 					[[ "${support_python_major_version}" == "1" ]] && break
 				done
 				if [[ "${support_python_major_version}" == "1" ]]; then
-					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+					while read restricted_ABI; do
 						if [[ "${python2_version}" == ${restricted_ABI} ]]; then
 							die "Active version of Python 2 is not supported by ${CATEGORY}/${PF}"
 						fi
-					done
+					done <<< "${restricted_ABIs}"
 				else
 					python2_version=""
 				fi
@@ -695,19 +842,19 @@ _python_calculate_PYTHON_ABIS() {
 
 				for PYTHON_ABI in "${_CPYTHON3_SUPPORTED_ABIS[@]}"; do
 					support_python_major_version="1"
-					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+					while read restricted_ABI; do
 						if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
 							support_python_major_version="0"
 						fi
-					done
+					done <<< "${restricted_ABIs}"
 					[[ "${support_python_major_version}" == "1" ]] && break
 				done
 				if [[ "${support_python_major_version}" == "1" ]]; then
-					for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+					while read restricted_ABI; do
 						if [[ "${python3_version}" == ${restricted_ABI} ]]; then
 							die "Active version of Python 3 is not supported by ${CATEGORY}/${PF}"
 						fi
-					done
+					done <<< "${restricted_ABIs}"
 				else
 					python3_version=""
 				fi
@@ -1564,10 +1711,18 @@ python_get_implementational_package() {
 		fi
 	fi
 
-	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
-		echo "dev-lang/python:${PYTHON_ABI}"
-	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
-		echo "dev-java/jython:${PYTHON_ABI%-jython}"
+	if [[ "${EAPI:-0}" == "0" ]]; then
+		if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
+			echo "=dev-lang/python-${PYTHON_ABI}*"
+		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
+			echo "=dev-java/jython-${PYTHON_ABI%-jython}*"
+		fi
+	else
+		if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
+			echo "dev-lang/python:${PYTHON_ABI}"
+		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
+			echo "dev-java/jython:${PYTHON_ABI%-jython}"
+		fi
 	fi
 }
 
@@ -2116,7 +2271,7 @@ _python_clean_compiled_modules() {
 	_python_initialize_prefix_variables
 	_python_set_color_variables
 
-	[[ "${FUNCNAME[1]}" =~ ^(python_mod_optimize|python_mod_compile|python_mod_cleanup)$ ]] || die "${FUNCNAME}(): Invalid usage"
+	[[ "${FUNCNAME[1]}" =~ ^(python_mod_optimize|python_mod_cleanup)$ ]] || die "${FUNCNAME}(): Invalid usage"
 
 	local base_module_name compiled_file compiled_files=() dir path py_file root
 
@@ -2203,15 +2358,10 @@ _python_clean_compiled_modules() {
 }
 
 # @FUNCTION: python_mod_optimize
-# @USAGE: [options] [directory|file]
+# @USAGE: [--allow-evaluated-non-sitedir-paths] [-d directory] [-f] [-l] [-q] [-x regular_expression] [--] <file|directory> [files|directories]
 # @DESCRIPTION:
-# If no arguments supplied, it will recompile not recursively all modules
-# under sys.path (eg. /usr/lib/python2.6, /usr/lib/python2.6/site-packages).
-#
-# If supplied with arguments, it will recompile all modules recursively
-# in the supplied directory.
-#
-# Options passed to this function are passed to compileall.py.
+# Byte-compile specified Python modules.
+# -d, -f, -l, -q and -x options passed to this function are passed to compileall.py.
 #
 # This function can be used only in pkg_postinst() phase.
 python_mod_optimize() {
@@ -2221,7 +2371,7 @@ python_mod_optimize() {
 	# Check if phase is pkg_postinst().
 	[[ "${EBUILD_PHASE}" != "postinst" ]] && die "${FUNCNAME}() can be used only in pkg_postinst() phase"
 
-	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
+	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis || _python_implementation || [[ "${CATEGORY}/${PN}" == "sys-apps/portage" ]]; then
 		# PYTHON_ABI variable cannot be local in packages not supporting installation for multiple Python ABIs.
 		local allow_evaluated_non_sitedir_paths="0" dir dirs=() evaluated_dirs=() evaluated_files=() file files=() iterated_PYTHON_ABIS options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_dirs=() site_packages_files=()
 
@@ -2272,11 +2422,7 @@ python_mod_optimize() {
 		fi
 
 		if [[ "$#" -eq 0 ]]; then
-			ewarn
-			ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
-			ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
-			ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-			ewarn
+			die "${FUNCNAME}(): Missing files or directories"
 		fi
 
 		while (($#)); do
@@ -2388,12 +2534,18 @@ python_mod_optimize() {
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
-				_python_clean_compiled_modules "${other_dirs[@]}"
+				_python_clean_compiled_modules "${other_files[@]}"
 			fi
 			eend "${return_code}"
 		fi
 	else
 		# Deprecated part of python_mod_optimize()
+		# ewarn
+		# ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
+		# ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-06-01."
+		# ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
+		# ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		# ewarn
 
 		local myroot mydirs=() myfiles=() myopts=() return_code="0"
 
@@ -2425,11 +2577,7 @@ python_mod_optimize() {
 		done
 
 		if [[ "$#" -eq 0 ]]; then
-			ewarn
-			ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
-			ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
-			ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-			ewarn
+			die "${FUNCNAME}(): Missing files or directories"
 		fi
 
 		while (($#)); do
@@ -2438,8 +2586,7 @@ python_mod_optimize() {
 			elif [[ -d "${myroot}/${1#/}" ]]; then
 				mydirs+=("${myroot}/${1#/}")
 			elif [[ -f "${myroot}/${1#/}" ]]; then
-				# Files are passed to python_mod_compile which is EROOT-aware
-				myfiles+=("$1")
+				myfiles+=("${myroot}/${1#/}")
 			elif [[ -e "${myroot}/${1#/}" ]]; then
 				eerror "${FUNCNAME}(): ${myroot}/${1#/} is not a regular file or directory"
 			else
@@ -2461,7 +2608,9 @@ python_mod_optimize() {
 		fi
 
 		if ((${#myfiles[@]})); then
-			python_mod_compile "${myfiles[@]}"
+			"$(PYTHON ${PYTHON_ABI})" "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}" || return_code="1"
+			"$(PYTHON ${PYTHON_ABI})" -O "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}" &> /dev/null || return_code="1"
+			_python_clean_compiled_modules "${myfiles[@]}"
 		fi
 
 		eend "${return_code}"
@@ -2469,14 +2618,9 @@ python_mod_optimize() {
 }
 
 # @FUNCTION: python_mod_cleanup
-# @USAGE: [directory|file]
+# @USAGE: [--allow-evaluated-non-sitedir-paths] [--] <file|directory> [files|directories]
 # @DESCRIPTION:
-# Run with optional arguments, where arguments are Python modules. If none given,
-# it will look in /usr/lib/python[0-9].[0-9].
-#
-# It will recursively scan all compiled Python modules in the directories and
-# determine if they are orphaned (i.e. their corresponding .py files are missing.)
-# If they are, then it will remove their corresponding .pyc and .pyo files.
+# Delete orphaned byte-compiled Python modules corresponding to specified Python modules.
 #
 # This function can be used only in pkg_postrm() phase.
 python_mod_cleanup() {
@@ -2527,61 +2671,48 @@ python_mod_cleanup() {
 		die "${FUNCNAME}(): '--allow-evaluated-non-sitedir-paths' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 	fi
 
-	if [[ "$#" -gt 0 ]]; then
-		if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
-			while (($#)); do
-				if [[ "$1" =~ ^($|(\.|\.\.|/)($|/)) ]]; then
-					die "${FUNCNAME}(): Invalid argument '$1'"
-				elif ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
-					die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
-				elif [[ "$1" =~ ^/ ]]; then
-					if _python_package_supporting_installation_for_multiple_python_abis; then
-						if [[ "${allow_evaluated_non_sitedir_paths}" != "1" ]]; then
-							die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
-						fi
-						if [[ "$1" != *\$* ]]; then
-							die "${FUNCNAME}(): '$1' has invalid syntax"
-						fi
-						for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
-							eval "search_paths+=(\"\${root}$1\")"
-						done
-					else
-						search_paths+=("${root}$1")
+	if [[ "$#" -eq 0 ]]; then
+		die "${FUNCNAME}(): Missing files or directories"
+	fi
+
+	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis || _python_implementation || [[ "${CATEGORY}/${PN}" == "sys-apps/portage" ]]; then
+		while (($#)); do
+			if [[ "$1" =~ ^($|(\.|\.\.|/)($|/)) ]]; then
+				die "${FUNCNAME}(): Invalid argument '$1'"
+			elif ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
+				die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
+			elif [[ "$1" =~ ^/ ]]; then
+				if _python_package_supporting_installation_for_multiple_python_abis; then
+					if [[ "${allow_evaluated_non_sitedir_paths}" != "1" ]]; then
+						die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
 					fi
-				else
+					if [[ "$1" != *\$* ]]; then
+						die "${FUNCNAME}(): '$1' has invalid syntax"
+					fi
 					for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
-						search_paths+=("${root}$(python_get_sitedir)/$1")
+						eval "search_paths+=(\"\${root}$1\")"
 					done
+				else
+					search_paths+=("${root}$1")
 				fi
-				shift
-			done
-		else
-			# Deprecated part of python_mod_cleanup()
-
-			search_paths=("${@#/}")
-			search_paths=("${search_paths[@]/#/${root}/}")
-		fi
-	else
-		ewarn
-		ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
-		ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
-		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-		ewarn
-
-		for dir in "${root}"/usr/lib*; do
-			if [[ -d "${dir}" && ! -L "${dir}" ]]; then
-				for sitedir in "${dir}"/python*/site-packages; do
-					if [[ -d "${sitedir}" ]]; then
-						search_paths+=("${sitedir}")
-					fi
+			else
+				for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
+					search_paths+=("${root}$(python_get_sitedir)/$1")
 				done
 			fi
+			shift
 		done
-		for sitedir in "${root}"/usr/share/jython-*/Lib/site-packages; do
-			if [[ -d "${sitedir}" ]]; then
-				search_paths+=("${sitedir}")
-			fi
-		done
+	else
+		# Deprecated part of python_mod_cleanup()
+		# ewarn
+		# ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
+		# ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-06-01."
+		# ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
+		# ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		# ewarn
+
+		search_paths=("${@#/}")
+		search_paths=("${search_paths[@]/#/${root}/}")
 	fi
 
 	_python_clean_compiled_modules "${search_paths[@]}"
@@ -2609,52 +2740,8 @@ python_tkinter_exists() {
 	die "${FUNCNAME}() is banned"
 }
 
-# @FUNCTION: python_mod_compile
-# @USAGE: <file> [more files ...]
-# @DESCRIPTION:
-# Given filenames, it will pre-compile the module's .pyc and .pyo.
-# This function can be used only in pkg_postinst() phase.
-#
-# Example:
-#         python_mod_compile /usr/lib/python2.3/site-packages/pygoogle.py
-#
+# Scheduled for deletion on 2011-04-01.
 python_mod_compile() {
-	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
-		eerror "Use python_mod_optimize() instead of ${FUNCNAME}()."
-		die "${FUNCNAME}() cannot be used in this EAPI"
-	fi
-
-	_python_initialize_prefix_variables
-	_python_set_color_variables
-
-	if [[ "${FUNCNAME[1]}" != "python_mod_optimize" ]]; then
-		ewarn
-		ewarn "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01."
-		ewarn "Use python_mod_optimize() instead of ${FUNCNAME}()."
-		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-		ewarn
-	fi
-
-	local f myroot myfiles=()
-
-	# Check if phase is pkg_postinst()
-	[[ "${EBUILD_PHASE}" != "postinst" ]] && die "${FUNCNAME}() can be used only in pkg_postinst() phase"
-
-	# strip trailing slash
-	myroot="${EROOT%/}"
-
-	# respect EROOT
-	for f in "$@"; do
-		[[ -f "${myroot}/${f}" ]] && myfiles+=("${myroot}/${f}")
-	done
-
-	PYTHON_ABI="$(PYTHON --ABI)"
-
-	if ((${#myfiles[@]})); then
-		"$(PYTHON ${PYTHON_ABI})" "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}"
-		"$(PYTHON ${PYTHON_ABI})" -O "${myroot}$(python_get_libdir)/py_compile.py" "${myfiles[@]}" &> /dev/null
-		_python_clean_compiled_modules "${myfiles[@]}"
-	else
-		ewarn "No files to compile!"
-	fi
+	eerror "Use python_mod_optimize() instead of ${FUNCNAME}()."
+	die "${FUNCNAME}() is banned"
 }
