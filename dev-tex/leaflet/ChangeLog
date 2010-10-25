@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/leaflet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.27 2010/01/03 11:39:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.28 2010/10/25 01:02:07 aballier Exp $
+
+  25 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  -leaflet-19990601.ebuild:
+  remove old
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   leaflet-20041222.ebuild:
