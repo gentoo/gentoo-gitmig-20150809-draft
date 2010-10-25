@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.1.ebuild,v 1.2 2010/10/20 08:33:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.1.ebuild,v 1.3 2010/10/25 12:12:13 fauli Exp $
 
 EAPI=2
 inherit savedconfig toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://zathura.pwmt.org/attachments/download/10/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/cairo-1.8.8
