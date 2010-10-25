@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.139 2010/09/14 05:09:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.140 2010/10/25 05:20:14 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> dpkg-1.15.6.1.ebuild,
+  dpkg-1.15.8.3.ebuild, dpkg-1.15.8.4.ebuild, dpkg-1.15.8.5.ebuild:
+  Add pkgconfig dependency by Enrico nekrad Weigelt (bug #342573).
 
 *dpkg-1.15.8.5 (14 Sep 2010)
 
