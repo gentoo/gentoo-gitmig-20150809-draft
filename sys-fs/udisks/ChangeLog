@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.20 2010/10/18 13:02:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.21 2010/10/25 17:19:08 ssuominen Exp $
+
+  25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  udisks-1.0.1-r2.ebuild:
+  Check for CONFIG_IDE wrt #319829 by Kete Tefid.
 
   18 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   udisks-1.0.1-r2.ebuild:
