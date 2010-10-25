@@ -6,6 +6,6 @@
  <email>vanquirius@gentoo.org</email>
 </maintainer>
 <use>
-<flag name='nocdemud'>Don't pull <pkg>app-cdr/cdemud</pkg> dependency, useful in chroot environment (bug #315491)</flag>
+<flag name='cdemud'>Pull <pkg>app-cdr/cdemud</pkg> dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.</flag>
 </use>
 </pkgmetadata>
