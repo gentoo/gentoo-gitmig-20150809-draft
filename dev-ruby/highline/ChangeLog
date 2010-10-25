@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.40 2010/09/30 01:19:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.41 2010/10/25 02:33:55 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> highline-1.6.1.ebuild:
+  Marked ~hppa (bug #322175).
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> highline-1.5.2.ebuild:
   Marking highline-1.5.2 ppc64 for bug 316881
