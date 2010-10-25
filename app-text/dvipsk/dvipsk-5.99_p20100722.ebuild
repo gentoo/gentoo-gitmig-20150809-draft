@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/dvipsk-5.99_p20100722.ebuild,v 1.1 2010/10/24 16:29:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/dvipsk-5.99_p20100722.ebuild,v 1.2 2010/10/25 09:59:45 jer Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI} ) "
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE="doc source"
 
 DEPEND="dev-libs/kpathsea"
