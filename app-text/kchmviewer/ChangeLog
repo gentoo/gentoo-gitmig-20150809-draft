@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.35 2010/10/24 14:14:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.36 2010/10/25 10:05:03 pva Exp $
+
+*kchmviewer-5.2-r1 (25 Oct 2010)
+
+  25 Oct 2010; Peter Volkov <pva@gentoo.org> +kchmviewer-5.2-r1.ebuild:
+  Use qt4-r2.eclass, thatnk Markos Chandras for report #338343.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> kchmviewer-5.2.ebuild:
   stable ppc, bug 338343
