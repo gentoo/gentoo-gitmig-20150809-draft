@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.74 2010/10/18 17:29:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.75 2010/10/25 11:58:54 chithanh Exp $
+
+*syslinux-4.03 (25 Oct 2010)
+
+  25 Oct 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-4.03.ebuild:
+  Version bump, bug #342503.
 
   18 Oct 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/syslinux-3.31-nossp.patch, -files/syslinux-3.72-nopie.patch,
