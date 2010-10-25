@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lchown
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/ChangeLog,v 1.1 2010/10/25 15:17:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/ChangeLog,v 1.2 2010/10/25 15:53:20 jlec Exp $
+
+  25 Oct 2010; Justin Lecher <jlec@gentoo.org> Lchown-1.01.ebuild:
+  Added virtual/perl-Module-Build to DEPEND
 
 *Lchown-1.01 (25 Oct 2010)
 
