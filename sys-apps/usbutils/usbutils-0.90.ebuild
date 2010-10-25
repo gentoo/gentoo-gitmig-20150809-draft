@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.90.ebuild,v 1.2 2010/10/24 22:46:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.90.ebuild,v 1.3 2010/10/25 20:40:29 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/usb/usbutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="network-cron zlib"
 
 RDEPEND="virtual/libusb:0
