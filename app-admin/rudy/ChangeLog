@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rudy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.17 2010/09/03 13:49:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.18 2010/10/25 22:26:04 flameeyes Exp $
+
+*rudy-0.9.8.015 (25 Oct 2010)
+
+  25 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +rudy-0.9.8.015.ebuild:
+  Version bump to allow starting instances without sudo installed.
 
 *rudy-0.9.8.012 (03 Sep 2010)
 
