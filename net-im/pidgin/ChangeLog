@@ -1,6 +1,19 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.192 2010/10/15 16:29:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.193 2010/10/25 10:59:05 pva Exp $
+
+*pidgin-2.7.4 (25 Oct 2010)
+
+  25 Oct 2010; Peter Volkov <pva@gentoo.org>
+  -files/pidgin-2.7.0-icq-fix.patch, -pidgin-2.7.1-r1.ebuild,
+  -pidgin-2.7.2.ebuild, -pidgin-2.7.2-r1.ebuild,
+  +files/pidgin-2.7.3-ldflags.patch, +pidgin-2.7.4.ebuild:
+  Version bump, bug #342017 by tman. Fixes remote crash, security bug
+  #342059 by Tim Sammut. Respect LDFLAGS in perl bindings, bug #331851,
+  thank Diego E. 'Flameeyes' Pettenò for report and Markos Chandras for
+  initial patch. Should fix crash reported in bug #339938 by Wu, Shanliang.
+  Force nls if gtk enabled to have desktop entry, bug #322717, thank Marcin
+  Deranek for report. Remove .la files. Drop old.
 
   15 Oct 2010; Jeroen Roovers <jer@gentoo.org> pidgin-2.7.3.ebuild:
   Stable for HPPA (bug #338022).
