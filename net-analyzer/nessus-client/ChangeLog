@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.11 2010/08/22 23:25:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.12 2010/10/25 07:46:38 ssuominen Exp $
+
+  25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  nessus-client-1.0.2-r1.ebuild:
+  Missing dev-util/pkgconfig DEPEND wrt #239798.
 
   22 Aug 2010; Jeroen Roovers <jer@gentoo.org>
   nessus-client-1.0.2-r1.ebuild, files/nessus-client-1.0.2-make.patch:
