@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gateway6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.7 2010/10/24 17:59:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.8 2010/10/25 11:04:07 voyageur Exp $
+
+  25 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> -gateway6-5.1.ebuild,
+  -files/gateway6-5.1-gcc43.patch, -files/gw6c.rc:
+  Drop old version
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org> gateway6-6.0-r2.ebuild:
   sparc stable wrt #340587
