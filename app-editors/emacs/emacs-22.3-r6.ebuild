@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r6.ebuild,v 1.3 2010/10/13 21:37:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r6.ebuild,v 1.4 2010/10/25 21:02:24 ulm Exp $
 
 EAPI=2
 
@@ -82,7 +82,7 @@ src_prepare() {
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
-	#unset LDFLAGS
+	filter-flags -fstack-protector -fstack-protector-all	#285778
 	replace-flags -O[3-9] -O2
 	sed -i -e "s/-lungif/-lgif/g" configure* src/Makefile* || die
 

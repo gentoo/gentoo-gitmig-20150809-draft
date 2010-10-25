@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r22.ebuild,v 1.3 2010/10/13 21:37:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r22.ebuild,v 1.4 2010/10/25 21:02:24 ulm Exp $
 
 EAPI=2
 
@@ -58,7 +58,7 @@ src_prepare() {
 
 src_configure() {
 	# -fstack-protector gets internal compiler error at xterm.c (bug 33265)
-	filter-flags -fstack-protector
+	filter-flags -fstack-protector -fstack-protector-all
 
 	# emacs doesn't handle LDFLAGS properly (bug #77430 and bug #65002)
 	unset LDFLAGS
