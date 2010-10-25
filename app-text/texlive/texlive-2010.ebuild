@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2010.ebuild,v 1.1 2010/10/24 18:24:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2010.ebuild,v 1.2 2010/10/25 01:11:19 aballier Exp $
 
 EAPI="2"
 
@@ -68,7 +68,7 @@ RDEPEND="${DEPEND}
 		>=${TEXLIVE_CAT}/texlive-formatsextra-${PV}
 		>=${TEXLIVE_CAT}/texlive-genericextra-${PV}
 		>=${TEXLIVE_CAT}/texlive-latexextra-${PV}
-			dev-tex/glossaries
+			>=dev-tex/glossaries-2.07
 			>=dev-tex/leaflet-20041222
 			>=dev-tex/currvita-0.9i-r1
 			>=dev-tex/g-brief-4.0.2
