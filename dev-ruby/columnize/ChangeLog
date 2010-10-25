@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/columnize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.14 2010/09/24 15:26:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.15 2010/10/25 02:03:27 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> columnize-0.3.1-r2.ebuild:
+  Marked ~hppa (bug #337956).
 
 *columnize-0.3.1-r2 (24 Sep 2010)
 

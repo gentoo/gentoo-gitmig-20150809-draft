@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.40 2010/09/30 01:39:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.41 2010/10/25 01:51:23 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> nokogiri-1.4.1-r1.ebuild,
+  nokogiri-1.4.3.1.ebuild, nokogiri-1.4.3.1-r1.ebuild:
+  Marked ~hppa (bug #337956).
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> nokogiri-1.4.3.1.ebuild:
   Marking nokogiri-1.4.3.1 ~ppc64 for bug 330283

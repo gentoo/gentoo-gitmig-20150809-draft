@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.31 2010/09/20 20:07:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.32 2010/10/25 02:09:25 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> facter-1.5.8.ebuild:
+  Marked ~hppa (bug #337956).
 
   20 Sep 2010; Guy Martin <gmsoft@gentoo.org> facter-1.5.7-r1.ebuild:
   hppa stable.

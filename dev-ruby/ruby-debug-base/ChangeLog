@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-debug-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.14 2010/09/25 05:52:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.15 2010/10/25 02:01:50 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  ruby-debug-base-0.10.3-r2.ebuild:
+  Marked ~hppa (bug #337956).
 
 *ruby-debug-base-0.10.3-r2 (25 Sep 2010)
 
