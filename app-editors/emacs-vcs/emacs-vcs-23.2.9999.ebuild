@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.8 2010/10/13 21:36:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.9 2010/10/25 21:31:09 ulm Exp $
 
 EAPI=2
 
@@ -91,7 +91,8 @@ src_prepare() {
 	#	EPATCH_SUFFIX=patch epatch
 	fi
 
-	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
+	sed -i \
+		-e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
 
@@ -115,7 +116,8 @@ src_prepare() {
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
-	#unset LDFLAGS
+	filter-flags -fstack-protector -fstack-protector-all	#285778
+
 	if use sh; then
 		replace-flags -O[1-9] -O0		#262359
 	elif use ia64; then

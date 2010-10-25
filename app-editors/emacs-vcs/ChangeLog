@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.32 2010/10/21 20:41:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.33 2010/10/25 21:31:09 ulm Exp $
+
+  25 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
+  emacs-vcs-24.0.9999.ebuild:
+  Filter -fstack-protector and -fstack-protector-all flags that cause
+  segmentation faults in hardened profiles. Bug 285778.
 
   21 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-24.0.9999.ebuild:
   New USE flags: gnutls and selinux.
