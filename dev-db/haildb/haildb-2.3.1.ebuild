@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/haildb-2.3.1.ebuild,v 1.2 2010/10/18 13:24:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/haildb-2.3.1.ebuild,v 1.3 2010/10/25 00:23:07 fauli Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.haildb.com/"
 SRC_URI="http://launchpad.net/haildb/$(get_version_component_range 1-2)/athens/+download/${P}.tar.gz"
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug tcmalloc zlib"
 
 RDEPEND="tcmalloc? ( dev-util/google-perftools )

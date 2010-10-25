@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/haildb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.2 2010/10/18 13:24:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.3 2010/10/25 00:23:07 fauli Exp $
+
+  25 Oct 2010; Christian Faulhammer <fauli@gentoo.org> haildb-2.3.1.ebuild:
+  add ~x86, bug 341633
 
   18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> haildb-2.2.0.ebuild,
   haildb-2.3.1.ebuild:
