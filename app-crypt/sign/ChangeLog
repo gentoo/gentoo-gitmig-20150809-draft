@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/sign
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.14 2010/01/01 20:01:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.15 2010/10/25 18:20:02 grobian Exp $
+
+  25 Oct 2010; Fabian Groffen <grobian@gentoo.org> sign-1.0.7.ebuild:
+  Fix building on ppc-macos by dropping -g from hardwired CFLAGS
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> sign-1.0.7.ebuild:
   Transfer Prefix keywords

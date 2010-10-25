@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.10 2010/01/01 20:01:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.11 2010/10/25 18:20:02 grobian Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,6 +20,8 @@ src_unpack() {
 
 	has_version ">=dev-libs/openssl-0.9.8" && epatch "${FILESDIR}"/${PV}-openssl-0.9.8.patch
 	epatch "${FILESDIR}"/${PV}-as-needed.patch
+	# remove -g from CFLAGS, it happens to break the build on ppc-macos
+	sed -i -e 's/-g//' src/Makefile || die
 }
 
 src_compile() {
