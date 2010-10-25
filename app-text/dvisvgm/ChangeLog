@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.1 2010/10/11 15:45:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.2 2010/10/25 09:06:52 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> dvisvgm-1.0.3.ebuild:
+  Marked ~hppa (bug #342513).
 
 *dvisvgm-1.0.3 (11 Oct 2010)
 
