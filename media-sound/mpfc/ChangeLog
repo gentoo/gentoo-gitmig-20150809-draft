@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpfc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.26 2009/07/22 15:57:16 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.27 2010/10/25 09:06:15 ssuominen Exp $
+
+  25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> mpfc-1.3.7-r1.ebuild,
+  +files/mpfc-1.3.7-INT_MAX.patch:
+  Missing include limits.h, required by recent linux-headers for cdrom.h and
+  INT_MAX. Fix installation with recent coreutils wrt #335449 by Diego E.
+  Pettenò.
 
   22 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> mpfc-1.3.7-r1.ebuild:
   Rename USE cdaudio to USE cdda.
