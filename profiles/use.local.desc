@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6081 2010/10/25 14:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6082 2010/10/25 18:53:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1950,6 +1950,7 @@ media-plugins/vdr-streamdev:server -  Compile the VDR plugin vdr-streamdev-serve
 media-plugins/vdr-text2skin:direct_blit - not buffer picture, faster, but only for modified skins
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color depth for dxr3 cards
 media-plugins/vdr-xineliboutput:libextractor - Use media-libs/libextract to gather files' metadata in media-player
+media-plugins/vdr-xineliboutput:vdpau - Enables VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
