@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.27 2010/03/31 09:20:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.28 2010/10/25 11:35:35 tupone Exp $
+
+  25 Oct 2010; Tupone Alfredo <tupone@gentoo.org> cel-1.2.1.ebuild:
+  Fix build as per bug #327867 by flameeyes@gentoo.org
 
   31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cel-1.2.1.ebuild:
   x86 stable wrt bug #309017
