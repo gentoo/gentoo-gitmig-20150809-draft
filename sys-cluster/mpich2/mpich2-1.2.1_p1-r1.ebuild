@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.6 2010/10/07 14:21:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.7 2010/10/25 17:59:05 ranger Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${MY
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="+cxx debug doc fortran threads romio mpi-threads"
 
 COMMON_DEPEND="dev-libs/libaio
