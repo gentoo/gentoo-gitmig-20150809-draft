@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.2 2010/10/24 21:41:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.3 2010/10/25 19:11:37 mgorny Exp $
+
+*diffmask-0.3.2 (25 Oct 2010)
+
+  25 Oct 2010; Michał Górny <mgorny@gentoo.org> -diffmask-0.3.1.ebuild,
+  +diffmask-0.3.2.ebuild:
+  Version bump. The new version makes --add action independent of --update,
+  introduces --delete support for lazy and makes --update preserve
+  package.mask entry order.
 
   24 Oct 2010; Thomas Kahle <tomka@gentoo.org> diffmask-0.3.1.ebuild:
   ~x86 per bug 342443
