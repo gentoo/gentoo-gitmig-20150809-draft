@@ -1,0 +1,201 @@
+Index: Makefile
+===================================================================
+RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/Makefile,v
+retrieving revision 1.94
+diff -u -b -B -r1.94 Makefile
+--- Makefile	19 Oct 2010 11:53:31 -0000	1.94
++++ Makefile	21 Oct 2010 15:33:10 -0000
+@@ -127,9 +127,9 @@
+ ### The name of executable and libraries
+ ###
+ 
+-VDRPLUGIN            = libvdr-$(PLUGIN).so
+-VDRPLUGIN_SXFE       = lib$(PLUGIN)-sxfe.so
+-VDRPLUGIN_FBFE       = lib$(PLUGIN)-fbfe.so
++VDRPLUGIN            = libvdr-$(PLUGIN).so.$(APIVERSION)
++VDRPLUGIN_SXFE       = lib$(PLUGIN)-sxfe.so.$(VERSION)
++VDRPLUGIN_FBFE       = lib$(PLUGIN)-fbfe.so.$(VERSION)
+ VDRSXFE              = vdr-sxfe
+ VDRFBFE              = vdr-fbfe
+ XINEINPUTVDR         = xineplug_inp_xvdr.so
+@@ -273,9 +273,9 @@
+ 	$(CC) $(CFLAGS) -c $(DEFINES) $(INCLUDES) $(CFLAGS_X11) $(OPTFLAGS) -o $@ $<
+ 
+ ### Internationalization (I18N):
+-
++ifeq ($(HAVE_I18N), yes)
+ PODIR     = po
+-LOCALEDIR ?= $(VDRDIR)/locale
++LOCALEDIR ?= $(DESTDIR)$(VDRDIR)/locale
+ I18Npo    = $(wildcard $(PODIR)/*.po)
+ I18Nmsgs  = $(addprefix $(LOCALEDIR)/, $(addsuffix /LC_MESSAGES/vdr-$(PLUGIN).mo, $(notdir $(foreach file, $(I18Npo), $(basename $(file))))))
+ I18Npot   = $(PODIR)/$(PLUGIN).pot
+@@ -293,6 +293,7 @@
+ $(I18Nmsgs): $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.mo
+ 	@mkdir -p $(dir $@)
+ 	cp $< $@
++endif
+ 
+ .PHONY: i18n
+ i18n: $(I18Nmsgs)
+@@ -311,7 +312,7 @@
+ install : XINELIBOUTPUT_INSTALL_MSG =
+ 
+ .PHONY: all
+-all: config $(TARGETS_VDR) frontends i18n
++all: config $(TARGETS_VDR) frontends
+ 
+ frontends: config $(TARGETS_FE) $(TARGETS_XINE)
+ 	$(XINELIBOUTPUT_INSTALL_MSG)
+@@ -327,50 +328,44 @@
+ #
+ 
+ $(VDRPLUGIN): $(OBJS) $(OBJS_MPG)
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS_SO) $(OBJS) $(OBJS_MPG) $(LIBS) $(LIBS_VDR) -o $@
+-	@-rm -rf $(LIBDIR)/$@.$(APIVERSION)
+-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS) $(OBJS_MPG) $(LIBS) $(LIBS_VDR) -o $@
+ 
+ #
+ # vdr-sxfe
+ #
+ 
+ $(VDRPLUGIN_SXFE): $(OBJS_SXFE_SO)
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(OBJS_SXFE_SO) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) -o $@
+-	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_SXFE).$(VERSION)
+-	@cp $@ $(LIBDIR)/$(VDRPLUGIN_SXFE).$(VERSION)
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_SXFE_SO) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) -o $@
+ $(VDRSXFE): $(OBJS_SXFE)
+-	$(CC) -g $(OBJS_SXFE) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_SXFE) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
+ 
+ #
+ # vdr-fbfe
+ #
+ 
+ $(VDRPLUGIN_FBFE): $(OBJS_FBFE_SO)
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(OBJS_FBFE_SO) $(LIBS_XINE) $(LIBS_JPEG) -o $@
+-	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_FBFE).$(VERSION)
+-	@cp $@ $(LIBDIR)/$(VDRPLUGIN_FBFE).$(VERSION)
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_FBFE_SO) $(LIBS_XINE) $(LIBS_JPEG) -o $@
+ $(VDRFBFE): $(OBJS_FBFE)
+-	$(CC) -g $(OBJS_FBFE) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_FBFE) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
+ 
+ #
+ # xine plugins
+ #
+ 
+ $(XINEINPUTVDR): $(OBJS_XINEINPUTVDR)
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LIBS_XINE) $(LIBS_AVUTIL) $(LIBS_PTHREAD) -o $@ $(OBJS_XINEINPUTVDR)
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_XINEINPUTVDR) $(LIBS_XINE) $(LIBS_AVUTIL) $(LIBS_PTHREAD) -o $@
+ $(XINEPOSTAUTOCROP): xine_post_autocrop.o
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LIBS_XINE) -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $< -o $@ $(LIBS_XINE)
+ $(XINEPOSTSWSCALE): xine_post_swscale.o
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LIBS_XINE) -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $< -o $@ $(LIBS_XINE)
+ $(XINEPOSTAUDIOCHANNEL): xine_post_audiochannel.o
+-	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LIBS_XINE) -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $< -o $@ $(LIBS_XINE)
+ 
+ #
+ # install
+ #
+ 
+-install: all
++install: all i18n
+ ifeq ($(XINELIBOUTPUT_XINEPLUGIN), yes)
+ 	@mkdir -p $(DESTDIR)/$(XINEPLUGINDIR)/post
+ 	@echo Installing $(DESTDIR)/$(XINEPLUGINDIR)/$(XINEINPUTVDR)
+@@ -391,12 +386,30 @@
+ 	@mkdir -p $(DESTDIR)/$(BINDIR)
+ 	@-rm -rf $(DESTDIR)/$(BINDIR)/vdr-fbfe
+ 	@$(INSTALL) -m 0755 vdr-fbfe $(DESTDIR)/$(BINDIR)/vdr-fbfe
++ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
++	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
++	@mkdir -p $(DESTDIR)$(LIBDIR)
++	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
++	@$(INSTALL) -m 0755 $(VDRPLUGIN_FBFE) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
++endif
+ endif
+ ifeq ($(XINELIBOUTPUT_X11), yes)
+ 	@echo Installing $(DESTDIR)/$(BINDIR)/vdr-sxfe
+ 	@mkdir -p $(DESTDIR)/$(BINDIR)
+ 	@-rm -rf $(DESTDIR)/$(BINDIR)/vdr-sxfe
+ 	@$(INSTALL) -m 0755 vdr-sxfe $(DESTDIR)/$(BINDIR)/vdr-sxfe
++ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
++	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
++	@mkdir -p $(DESTDIR)$(LIBDIR)
++	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
++	@$(INSTALL) -m 0755 $(VDRPLUGIN_SXFE) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
++endif
++endif
++ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
++	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
++	@mkdir -p $(DESTDIR)$(LIBDIR)
++	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
++	@$(INSTALL) -D -m 0755 $(VDRPLUGIN) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
+ endif
+ 
+ dist: clean
+@@ -413,6 +426,7 @@
+ 		tools/*.o tools/*~ tools/*.flc xine/*.o xine/*~ \
+ 		xine/*.flc $(VDR_FBFE) $(VDR_SXFE) mpg2c black_720x576.c \
+ 		nosignal_720x576.c vdrlogo_720x576.c vdr-sxfe vdr-fbfe \
+-		$(PODIR)/*.mo $(PODIR)/*.pot \
+ 		features.h config.mak configure.log
+-
++ifeq ($(HAVE_I18N), yes)
++	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
++endif
+Index: configure
+===================================================================
+RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/configure,v
+retrieving revision 1.28
+diff -u -b -B -r1.28 configure
+--- configure	19 Oct 2010 11:59:20 -0000	1.28
++++ configure	21 Oct 2010 15:33:10 -0000
+@@ -231,11 +231,11 @@
+   xshm
+   xdpms
+   xinerama
+-  xrandr
+   xrender
+   xshape
+   opengl
+   vdpau
++  i18n
+ "
+ 
+ # set defaults
+@@ -266,11 +266,11 @@
+   echo "  --disable-xshm         disable XShm support [no]"
+   echo "  --disable-xdpms        disable Xdpms support [no]"
+   echo "  --disable-xinerama     disable Xinerama support [no]"
+-  echo "  --disable-xrandr       disable Xrandr support (video mode switching) [no]"
+   echo "  --disable-xrender      disable Xrender support (HUD OSD) [no]"
+   echo "  --disable-xshape       disable Xshape support (non-transparent HUD OSD without composite manager) [no]"
+   echo "  --disable-opengl       disable OpenGL support (transparent HUD OSD without composite manager) [no]"
+   echo "  --disable-vdpau        disable VDPAU support (X11) [no]"
++  echo "  --disable-xrandr       disable Xrandr support (video mode switching) [no]"
+   echo
+   echo "  --debug                debug configure script"
+   echo "  --disable-pkgconfig    do not use pkg-config"
+@@ -324,7 +324,7 @@
+ 
+ check_deps(){
+   disabled libxine && disable x11 fb libavutil libjpeg
+-  disabled x11     && disable dbus-glib-1 xshm xrender xshape opengl xrandr xdpms xinerama vdpau
++  disabled x11     && disable dbus-glib-1 xshm xrender xshape opengl xdpms xinerama vdpau
+   disabled vdr     && disable libextractor
+   disabled xrender && disable opengl
+   disabled xshape  && disable opengl
+@@ -365,7 +365,6 @@
+     test_library X11  xshm         "X11/extensions/XShm.h"     "-lXext"      "XShmQueryExtension(0)"
+     test_library X11  xrender      "X11/extensions/Xrender.h"  "-lXrender"   "XRenderQueryFormats(0)"
+     test_library X11  xshape       "X11/extensions/shape.h"    "-lXext"      "XShapeQueryExtension(0,0,0)"
+-    test_library X11  xrandr       "X11/extensions/Xrandr.h"   "-lXrandr"    "XRRGetScreenInfo(0,0)"
+     test_library X11  xdpms        "X11/extensions/dpms.h"     "-lXext"      "DPMSDisable(0)"
+     test_library X11  xinerama     "X11/extensions/Xinerama.h" "-lXinerama"  "XineramaQueryScreens(0,0)"
+     test_library X11  opengl       "GL/glx.h"                  "-lGL -lGLU -lglut"  "glXQueryVersion(0,0,0)"

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.55 2010/10/05 13:35:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.56 2010/10/25 18:31:17 idl0r Exp $
+
+  25 Oct 2010; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-9999.ebuild,
+  +files/vdr-xineliboutput-9999-build-system.patch, metadata.xml:
+  New useflags. Cleanup & QA fixes. Dependencies fixed. Respect
+  CFLAGS/CXXFLAGS/LDFLAGS and fix linking with as-needed through the
+  build-system patch.
 
 *vdr-xineliboutput-1.0.5-r1 (05 Oct 2010)
 
