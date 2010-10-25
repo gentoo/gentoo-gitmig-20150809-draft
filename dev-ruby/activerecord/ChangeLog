@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.142 2010/10/15 07:59:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.143 2010/10/25 02:48:10 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> activerecord-2.3.10.ebuild:
+  Marked ~hppa (bug #322175).
 
   15 Oct 2010; Hans de Graaff <graaff@gentoo.org>
   -activerecord-2.3.9.ebuild:

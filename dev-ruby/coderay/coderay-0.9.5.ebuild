@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.5.ebuild,v 1.1 2010/10/02 07:20:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.5.ebuild,v 1.2 2010/10/25 02:46:35 jer Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://coderay.rubychan.de/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # Redcloth is optional but automagically tested, so we add this
