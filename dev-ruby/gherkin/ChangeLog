@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.14 2010/10/09 09:20:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.15 2010/10/25 01:32:57 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> gherkin-1.0.30-r1.ebuild:
+  Marked ~hppa (bug #337956).
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> gherkin-1.0.30-r1.ebuild:
   Depend on rspec-1.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.9 2010/09/19 19:46:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.10 2010/10/25 01:38:41 jer Exp $
+
+  25 Oct 2010; Jeroen Roovers <jer@gentoo.org> rexical-1.0.4-r1.ebuild:
+  Marked ~hppa (bug #337956).
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> rexical-1.0.4.ebuild,
   rexical-1.0.4-r1.ebuild:
