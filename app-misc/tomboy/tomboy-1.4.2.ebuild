@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.0.ebuild,v 1.3 2010/10/20 17:06:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.2.ebuild,v 1.1 2010/10/25 18:39:43 pacho Exp $
 
-EAPI=2
+EAPI="3"
+GCONF_DEBUG="no"
 
-inherit eutils gnome2 mono
+inherit gnome2 mono
 
 DESCRIPTION="Desktop note-taking application"
-HOMEPAGE="http://www.beatniksoftware.com/tomboy/"
+HOMEPAGE="http://projects.gnome.org/tomboy/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,17 +39,21 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
 pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable applet panel-applet)
 		$(use_enable eds evolution)
 		$(use_enable galago)
 		--disable-update-mimedb"
+	DOCS="AUTHORS ChangeLog NEWS README"
 }
 
 src_compile() {
 	# Not parallel build safe due upstream bug #631546
 	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_compile
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
 }
