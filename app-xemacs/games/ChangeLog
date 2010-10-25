@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/games
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/ChangeLog,v 1.22 2010/10/15 12:47:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/games/ChangeLog,v 1.23 2010/10/25 22:19:21 halcy0n Exp $
+
+  25 Oct 2010; Mark Loeser <halcy0n@gentoo.org> games-1.20.ebuild:
+  Stable for ppc64; bug #313687
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> games-1.20.ebuild:
   Marking games-1.20 ppc for bug 313687
