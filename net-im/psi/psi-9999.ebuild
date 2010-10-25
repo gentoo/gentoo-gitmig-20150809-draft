@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.5 2010/08/02 09:58:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.6 2010/10/25 12:43:26 pva Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
 	jingle? (
 		net-im/psimedia
 		app-crypt/qca-ossl:2
-		)
+	)
 	ssl? ( app-crypt/qca-ossl:2 )"
 
 RESTRICT="test"
@@ -95,20 +95,16 @@ src_unpack() {
 				EGIT_REPO_URI="${LANGS_URI}-${x}"
 				EGIT_PROJECT="psi-l10n/${x}"
 			fi
-			S="${WORKDIR}/psi-l10n/${x}"
-			git_fetch
-			S="${WORKDIR}/${P}"
+			S="${WORKDIR}/psi-l10n/${x}" git_fetch
 		fi
 	done
 
 	if use extras; then
-		S="${WORKDIR}/patches"
-		subversion_fetch "${ESVN_REPO_URI}/patches"
-		S="${WORKDIR}/${P}"
+		S="${WORKDIR}/patches" subversion_fetch "${ESVN_REPO_URI}/patches"
 		if use iconsets; then
 			subversion_fetch "${ESVN_REPO_URI}/iconsets" "iconsets"
 		else
-			for x in clients moods activities system; do
+			for x in clients moods activities system roster; do
 				ESVN_PROJECT="psiplus/${x}"
 				subversion_fetch "${ESVN_REPO_URI}/iconsets/${x}/default" "iconsets/${x}/default"
 			done
@@ -117,12 +113,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm -rf third-party/qca # We use system libraries.
-
 	if use extras; then
 		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE}
-			*-win32-*
-			*dirty-check*" \
+				" \
 		EPATCH_SOURCE="${WORKDIR}/patches/" EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch
 
 		use powersave && epatch "${WORKDIR}/patches/dev/psi-reduce-power-consumption.patch"
@@ -141,6 +134,8 @@ src_prepare() {
 
 		qconf || die "Failed to create ./configure."
 	fi
+
+	rm -rf third-party/qca # We use system libraries. Remove after patching, some patches may affect qca.
 }
 
 src_configure() {
@@ -164,11 +159,11 @@ src_configure() {
 
 	echo "${confcmd}"
 	${confcmd} || die "configure failed"
+
+	eqmake4
 }
 
 src_compile() {
-	eqmake4
-
 	emake || die "emake failed"
 
 	if use doc; then
@@ -210,7 +205,7 @@ src_install() {
 		if use linguas_${x}; then
 			lrelease "${x}/${PN}_${x}.ts" || die "lrelease ${x} failed"
 			doins "${x}/${PN}_${x}.qm" || die
-			newins "${x}/INFO" "INFO.${x}" || die
+			newins "${x}/INFO" "INFO.${x}"
 		fi
 	done
 }
