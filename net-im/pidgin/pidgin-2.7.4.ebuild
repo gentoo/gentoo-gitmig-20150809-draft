@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.4.ebuild,v 1.2 2010/10/25 13:45:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.4.ebuild,v 1.3 2010/10/25 16:22:46 mr_bones_ Exp $
 
 EAPI=2
 
@@ -65,7 +65,7 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
-	gtk? ( x11-proto/scrnsaverproto 
+	gtk? ( x11-proto/scrnsaverproto
 		${NLS_DEPEND} )
 	dbus? ( <dev-lang/python-3 )
 	doc? ( app-doc/doxygen )
