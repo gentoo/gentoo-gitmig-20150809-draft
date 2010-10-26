@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2-r1.ebuild,v 1.2 2010/10/15 18:16:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2-r2.ebuild,v 1.1 2010/10/26 16:40:34 pacho Exp $
 
 EAPI=3
 
@@ -29,7 +29,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/pkgconfig-typo-fix.patch
 }
 
+src_compile() {
+	emake PREFIX=/usr || die "compilation failed"
+}
+
 src_install() {
 	# The Makefile has prefix=/usr/local by default :|
-	emake PREFIX=/usr || die "compilation failed"
+	emake PREFIX=/usr DESTDIR="${ED}" install || die "installation failed"
 }

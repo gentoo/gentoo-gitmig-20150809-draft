@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/google-gdata-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.6 2010/10/15 18:16:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.7 2010/10/26 16:40:34 pacho Exp $
+
+*google-gdata-sharp-1.4.0.2-r2 (26 Oct 2010)
+
+  26 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -google-gdata-sharp-1.4.0.2-r1.ebuild,
+  +google-gdata-sharp-1.4.0.2-r2.ebuild:
+  r1 wasn't installing anything, and PREFIX is also needed at compile time
+  to generate pkgconfig files properly. Remove broken version.
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   google-gdata-sharp-1.4.0.2-r1.ebuild:
