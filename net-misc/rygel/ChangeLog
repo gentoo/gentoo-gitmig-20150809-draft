@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.1 2010/10/26 11:08:19 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.2 2010/10/26 11:25:52 ford_prefect Exp $
+
+*rygel-0.9.1 (26 Oct 2010)
+
+  26 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org> +rygel-0.9.1.ebuild:
+  Add unstable Rygel release, 0.9.1 (masked).
 
 *rygel-0.8.2 (26 Oct 2010)
 
