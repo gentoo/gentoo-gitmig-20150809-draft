@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/dvipsk-5.99_p20100722.ebuild,v 1.3 2010/10/25 12:01:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/dvipsk-5.99_p20100722.ebuild,v 1.4 2010/10/26 13:34:53 aballier Exp $
 
 EAPI=3
 
@@ -32,6 +32,7 @@ IUSE="doc source"
 DEPEND="dev-libs/kpathsea"
 RDEPEND="
 	!<app-text/texlive-core-2010
+	!<dev-texlive/texlive-basic-2009
 	!app-text/ptex
 	${DEPEND}"
 
