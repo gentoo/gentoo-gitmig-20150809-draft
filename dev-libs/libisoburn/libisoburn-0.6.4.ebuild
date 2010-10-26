@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.6.2.ebuild,v 1.1 2010/09/27 20:44:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.6.4.ebuild,v 1.1 2010/10/26 17:39:57 billie Exp $
 
 EAPI=2
 
@@ -33,7 +33,9 @@ S=${WORKDIR}/${P%_p*}
 
 src_configure() {
 	econf --disable-static \
+	--disable-ldconfig-at-install \
 	--disable-dvd-obs-64k \
+	--disable-libjte \
 	--disable-libcdio \
 	$(use_enable acl libacl) \
 	$(use_enable external-filters) \
