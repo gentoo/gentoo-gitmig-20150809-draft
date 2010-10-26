@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.3 2010/10/20 05:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.4 2010/10/26 09:34:51 grobian Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -61,5 +61,5 @@ src_install() {
 	find "${ED}" -name '*.la' -exec rm -f '{}' +
 
 	# Fix file collision with SLOT="2"
-	rm -f "${D}"/usr/bin/rapper "${D}"/usr/share/man/man1/rapper.1*
+	rm -f "${ED}"/usr/bin/rapper "${ED}"/usr/share/man/man1/rapper.1*
 }

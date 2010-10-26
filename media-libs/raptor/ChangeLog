@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.87 2010/10/24 17:01:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.88 2010/10/26 09:34:51 grobian Exp $
+
+  26 Oct 2010; Fabian Groffen <grobian@gentoo.org> raptor-1.4.21-r1.ebuild:
+  Ebuild is EAPI=3, fix rm of rapper for Prefix
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org> raptor-1.4.20.ebuild,
   raptor-1.4.21.ebuild:
