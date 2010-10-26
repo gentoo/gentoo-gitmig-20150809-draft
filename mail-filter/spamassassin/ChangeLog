@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.190 2010/10/23 19:09:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.191 2010/10/26 07:33:59 tove Exp $
+
+*spamassassin-3.3.1-r4 (26 Oct 2010)
+
+  26 Oct 2010; Torsten Veller <tove@gentoo.org>
+  +spamassassin-3.3.1-r4.ebuild,
+  +files/spamassassin-3.3.1-uninitialized_value.patch:
+  Avoid undef warning: Use of uninitialized value $opt{"syslog-socket"} in
+  spamd. Thanks to Toralf Förster and David Abbott (#342591)
 
   23 Oct 2010; Brent Baude <ranger@gentoo.org> spamassassin-3.3.1-r3.ebuild:
   Marking spamassassin-3.3.1-r3 ppc for bug 338233
