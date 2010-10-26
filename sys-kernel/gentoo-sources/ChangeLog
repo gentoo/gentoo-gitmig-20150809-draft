@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.773 2010/10/24 15:14:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.774 2010/10/26 19:29:48 mpagano Exp $
+
+  26 Oct 2010; Mike Pagano <mpagano@gentoo.org>
+  -gentoo-sources-2.6.32-r7.ebuild, -gentoo-sources-2.6.32-r18.ebuild,
+  -gentoo-sources-2.6.32-r19.ebuild:
+  Remove old vulnerable versions
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.34-r12.ebuild:
