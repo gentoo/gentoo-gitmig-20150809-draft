@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.18.5.ebuild,v 1.1 2010/10/19 06:25:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.18.6.ebuild,v 1.1 2010/10/26 05:21:49 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
