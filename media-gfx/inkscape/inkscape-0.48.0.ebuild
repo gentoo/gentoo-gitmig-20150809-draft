@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.0.ebuild,v 1.2 2010/09/05 13:54:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.0.ebuild,v 1.3 2010/10/26 20:06:05 maekke Exp $
 
 EAPI=2
-inherit eutils flag-o-matic gnome2
+inherit eutils flag-o-matic autotools gnome2
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -73,7 +73,15 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_with inkjar)"
 	G2CONF="${G2CONF} $(use_enable lcms)"
 	G2CONF="${G2CONF} $(use_enable nls)"
+	G2CONF="${G2CONF} $(use_with spell aspell)"
+	G2CONF="${G2CONF} $(use_with spell gtkspell)"
 	DOCS="AUTHORS ChangeLog NEWS README*"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-spell.patch
+	eautoreconf
 }
 
 src_configure() {
