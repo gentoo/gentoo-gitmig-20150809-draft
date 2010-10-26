@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.24.ebuild,v 1.1 2010/10/25 05:18:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.24.ebuild,v 1.2 2010/10/26 06:31:44 ssuominen Exp $
 
 EAPI="2"
 
@@ -38,6 +38,7 @@ src_configure() {
 	use userland_GNU || myconf="--program-prefix=g"
 	# Work around bug in sandbox #67051
 	gl_cv_func_chown_follows_symlink=yes \
+	FORCE_UNSAFE_CONFIGURE=1 \
 	econf \
 		--enable-backup-scripts \
 		--bindir=/bin \
