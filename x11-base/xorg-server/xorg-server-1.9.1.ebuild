@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.0.902.ebuild,v 1.2 2010/10/16 04:51:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.1.ebuild,v 1.1 2010/10/26 07:55:12 wired Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -97,9 +97,12 @@ EPATCH_FORCE="yes"
 EPATCH_SUFFIX="patch"
 
 # These have been sent upstream
-#UPSTREAMED_PATCHES=(
+UPSTREAMED_PATCHES=(
 #	"${WORKDIR}/patches/"
-#	)
+
+	# http://lists.x.org/archives/xorg-devel/2010-October/014150.html
+	"${FILESDIR}"/"${PN}"-1.9-xinerama-crash-fix.patch
+	)
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"

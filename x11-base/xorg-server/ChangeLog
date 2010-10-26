@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.545 2010/10/21 13:03:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.546 2010/10/26 07:55:12 wired Exp $
+
+*xorg-server-1.9.1 (26 Oct 2010)
+
+  26 Oct 2010; Alex Alexander <wired@gentoo.org>
+  -xorg-server-1.9.0-r2.ebuild, -xorg-server-1.9.0.902.ebuild,
+  +xorg-server-1.9.1.ebuild,
+  +files/xorg-server-1.9-xinerama-crash-fix.patch:
+  1.9.1 version bump, added xinerama crash fix, removed old.
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> xorg-server-1.7.7-r1.ebuild:
   Marking xorg-server-1.7.7-r1 ppc for bug 330593
