@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.104 2010/10/25 22:17:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.105 2010/10/26 12:27:48 xmw Exp $
+
+  26 Oct 2010; Michael Weber <xmw@gentoo.org> usbutils-0.90.ebuild:
+  Stable on arm wrt bug #342525
 
   25 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   usbutils-0.91.ebuild:
