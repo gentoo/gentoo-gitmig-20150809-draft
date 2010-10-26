@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.5.0.ebuild,v 1.1 2010/10/15 22:26:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.5.0.ebuild,v 1.2 2010/10/26 19:14:54 dilfridge Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ CDEPEND="
 	x11-libs/qt-gui[qt3support]
 	|| ( x11-libs/qt-sql[mysql] x11-libs/qt-sql[sqlite] )
 	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
-	geolocation? ( >=kde-base/marble-${KDE_MINIMAL} )
+	geolocation? ( >=kde-base/marble-${KDE_MINIMAL}[plasma] )
 	gphoto2? ( media-libs/libgphoto2 )
 "
 RDEPEND="${CDEPEND}
