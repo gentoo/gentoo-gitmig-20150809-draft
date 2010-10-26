@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.9.1.ebuild,v 1.1 2010/10/26 11:25:52 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.9.1.ebuild,v 1.2 2010/10/26 16:50:59 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -54,6 +54,7 @@ pkg_setup() {
 		--enable-gst-launch-plugin
 		$(use_enable nls)
 		$(use_enable sqlite media-export-plugin)
+		$(use_enable tracker tracker-plugin)
 		$(use_with X ui)"
 }
 
