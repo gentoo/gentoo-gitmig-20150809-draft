@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7.ebuild,v 1.2 2010/07/17 12:51:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7.ebuild,v 1.3 2010/10/26 21:54:14 billie Exp $
 
 EAPI=2
 
@@ -51,8 +51,8 @@ create_ssl_cert() {
 }
 
 pkg_setup() {
-	enewuser ${VDRADMIN_USER} -1 /bin/bash ${CACHE_DIR} ${VDRADMIN_GROUP}
 	enewgroup ${VDRADMIN_GROUP}
+	enewuser ${VDRADMIN_USER} -1 /bin/bash ${CACHE_DIR} ${VDRADMIN_GROUP}
 
 	if ! use vdr; then
 		elog
