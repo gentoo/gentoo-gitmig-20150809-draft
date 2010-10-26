@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.72 2010/10/25 22:57:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.73 2010/10/26 08:47:20 jer Exp $
+
+  26 Oct 2010; Jeroen Roovers <jer@gentoo.org> luatex-0.63.0.ebuild:
+  Stable for HPPA (bug #341933).
 
   25 Oct 2010; Markos Chandras <hwoarang@gentoo.org> luatex-0.63.0.ebuild:
   Stable on amd64 wrt bug #341933
