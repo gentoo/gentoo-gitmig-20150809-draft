@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/rygel
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.1 2010/10/26 11:08:19 ford_prefect Exp $
+
+*rygel-0.8.2 (26 Oct 2010)
+
+  26 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org> +rygel-0.8.2.ebuild,
+  +metadata.xml:
+  Add current stable Rygel release, 0.8.2. Almost identical to EvaSDK's
+  original from his overlay.
+
