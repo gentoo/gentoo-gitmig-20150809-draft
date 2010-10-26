@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.2 2010/10/26 13:10:10 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.3 2010/10/26 14:04:27 elvanor Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug gnome gsm iax networkmanager speex"
 
-DEPEND="media-sound/pulseaudio
+CDEPEND="media-sound/pulseaudio
 	media-libs/libsamplerate
 	net-libs/ccrtp
 	net-libs/libzrtpcpp
@@ -31,22 +31,25 @@ DEPEND="media-sound/pulseaudio
 	speex? ( media-libs/speex )
 	networkmanager? ( net-misc/networkmanager )
 	iax? ( net-libs/iax )
-	gnome? ( app-text/gnome-doc-utils
-		dev-libs/atk
+	gnome? ( dev-libs/atk
 		dev-libs/check
 		dev-libs/log4c
-		net-libs/libsoup
 		gnome-base/libgnomeui
 		gnome-base/orbit
 		gnome-extra/evolution-data-server
 		media-libs/libart_lgpl
 		media-libs/freetype
 		media-libs/fontconfig
+		net-libs/libsoup
 		x11-libs/cairo
 		x11-libs/libnotify
 		x11-libs/libICE
 		x11-libs/libSM )"
-RDEPEND="${DEPEND}"
+
+DEPEND="${CDEPEND}
+		gnome? ( app-text/gnome-doc-utils )"
+
+RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	if ! use gnome; then

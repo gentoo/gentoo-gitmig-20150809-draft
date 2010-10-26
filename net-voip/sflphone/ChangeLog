@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/sflphone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.2 2010/10/26 13:10:10 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.3 2010/10/26 14:04:27 elvanor Exp $
+
+  26 Oct 2010; <elvanor@gentoo.org> sflphone-0.9.8.4.ebuild:
+  Bug #339294, again. Put gnome-doc-utils as DEPEND only.
 
   26 Oct 2010; <elvanor@gentoo.org> sflphone-0.9.8.4.ebuild:
   Fixed bug #339294.
