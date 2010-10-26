@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/coolkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.8 2010/09/25 03:55:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.9 2010/10/26 03:24:55 nerdboy Exp $
+
+*coolkey-1.1.0-r3 (26 Oct 2010)
+
+  26 Oct 2010; Steve Arnold <nerdboy@gentoo.org> +coolkey-1.1.0-r3.ebuild:
+  Added upstream patch for pcsc-lite and updated to dated patch file for 
+  ease of maintenance (includes patches up through r17). Required until 
+  upstream makes new coolkey release.
 
 *coolkey-1.1.0-r2 (25 Sep 2010)
 
