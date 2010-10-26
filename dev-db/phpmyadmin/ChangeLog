@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.405 2010/10/22 17:29:20 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.406 2010/10/26 18:28:39 a3li Exp $
+
+*phpmyadmin-3.3.8 (26 Oct 2010)
+
+  26 Oct 2010; Alex Legler <a3li@gentoo.org> +phpmyadmin-3.3.8.ebuild:
+  Version bump. 3.3.8 is a bugfix release.
 
   22 Oct 2010; Alex Legler <a3li@gentoo.org> -files/reconfig-2.8,
   -files/postinstall-en-2.8.0.txt,
