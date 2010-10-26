@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.30 2010/10/03 20:15:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.31 2010/10/26 10:59:27 hwoarang Exp $
+
+  26 Oct 2010; Markos Chandras <hwoarang@gentoo.org> +files/dhcp6x.confd.in,
+  +files/dhcp6x.initd.in:
+  Bring confd/initd back
 
   03 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -files/dhcp6x.confd.in,
   -files/dhcp6x.initd.in:
