@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2-r1.ebuild,v 1.2 2010/10/26 14:44:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2-r1.ebuild,v 1.3 2010/10/26 20:58:17 hwoarang Exp $
 
 EAPI="2"
 KDE_REQUIRED="never"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="kde"
 
 RDEPEND="dev-libs/chmlib
