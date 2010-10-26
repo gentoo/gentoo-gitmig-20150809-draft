@@ -1,16 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.90.ebuild,v 1.2 2008/09/17 11:59:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.98.ebuild,v 1.1 2010/10/26 07:41:45 radhermit Exp $
 
-inherit elisp-common eutils
+EAPI="3"
+
+inherit elisp-common
 
 DESCRIPTION="A simple but powerful template language for C++"
 HOMEPAGE="http://code.google.com/p/google-ctemplate/"
 SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="emacs vim-syntax"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc emacs vim-syntax"
 
 DEPEND=""
 RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
@@ -18,14 +21,7 @@ RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 
 SITEFILE="70ctemplate-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-missing_includes.patch"
-}
-
 src_compile() {
-	econf || die "econf failed"
 	emake || die "emake failed"
 
 	if use emacs ; then
@@ -37,10 +33,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Installs just every piece
-	rm -rf "${D}/usr/share/doc"
+	rm -rf "${ED}/usr/share/doc"
 
 	dodoc AUTHORS ChangeLog NEWS README
-	dohtml doc/*
+	use doc && dohtml doc/*
 
 	if use vim-syntax ; then
 		cd "${S}/contrib"
