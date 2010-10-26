@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.817 2010/10/22 14:36:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.818 2010/10/26 18:37:04 mpagano Exp $
+
+  26 Oct 2010; Mike Pagano <mpagano@gentoo.org>
+  -vanilla-sources-2.6.19.7.ebuild, -vanilla-sources-2.6.23.17.ebuild,
+  -vanilla-sources-2.6.24.7.ebuild, -vanilla-sources-2.6.25.20.ebuild,
+  -vanilla-sources-2.6.26.7.ebuild, -vanilla-sources-2.6.26.8.ebuild,
+  -vanilla-sources-2.6.27.31.ebuild, -vanilla-sources-2.6.27.37.ebuild,
+  -vanilla-sources-2.6.27.53.ebuild:
+  Remove vulnerable versions from portage
 
   22 Oct 2010; Mike Pagano <mpagano@gentoo.org>
   -vanilla-sources-2.6.31.ebuild, -vanilla-sources-2.6.31.1.ebuild,
