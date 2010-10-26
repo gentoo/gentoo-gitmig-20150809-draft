@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.10 2010/10/15 10:09:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.11 2010/10/26 20:19:04 grobian Exp $
+
+  26 Oct 2010; Fabian Groffen <grobian@gentoo.org> orc-0.4.11.ebuild:
+  Fix compilation on PPC/Darwin by dropping any optimisation level
 
   15 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org> -orc-0.4.7.ebuild:
   Prune older version.

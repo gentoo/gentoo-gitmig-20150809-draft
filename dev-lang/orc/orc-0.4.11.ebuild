@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.11.ebuild,v 1.1 2010/10/15 10:05:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.11.ebuild,v 1.2 2010/10/26 20:19:04 grobian Exp $
 
 EAPI=3
-inherit autotools
+inherit autotools flag-o-matic
 
 DESCRIPTION="The Oil Runtime Compiler"
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
@@ -22,6 +22,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# any optimisation on PPC/Darwin yields in a complaint from the assembler
+	# Parameter error: r0 not allowed for parameter %lu (code as 0 not r0)
+	[[ ${CHOST} == powerpc*-*-darwin* ]] && filter-flags -O*
 	econf \
 		$(use_enable static-libs static) \
 		--disable-dependency-tracking \
