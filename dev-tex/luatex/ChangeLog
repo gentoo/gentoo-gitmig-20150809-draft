@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.74 2010/10/26 09:10:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.75 2010/10/26 14:55:43 fauli Exp $
+
+  26 Oct 2010; Christian Faulhammer <fauli@gentoo.org> luatex-0.63.0.ebuild:
+  stable x86, bug 341933
 
   26 Oct 2010; Jeroen Roovers <jer@gentoo.org> luatex-0.63.0.ebuild:
   Stable for PPC (bug #341933).
