@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.22 2009/02/13 22:40:21 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.23 2010/10/26 12:34:31 tupone Exp $
+
+  26 Oct 2010; Tupone Alfredo <tupone@gentoo.org> liquidwar-5.6.4.ebuild,
+  +files/liquidwar-5.6.4-ovflfix.patch:
+  Fix overflow. Bug #342307 by flameeyes@gentoo.org
 
   13 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   liquidwar-5.6.4.ebuild:
