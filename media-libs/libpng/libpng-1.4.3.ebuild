@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.3.ebuild,v 1.10 2010/07/19 01:06:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.3.ebuild,v 1.11 2010/10/26 10:11:36 ssuominen Exp $
 
 EAPI=3
 inherit eutils libtool multilib prefix
@@ -31,6 +31,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	has_version ${CATEGORY}/${PN}:1.2 && return 0
 	preserve_old_lib /usr/$(get_libdir)/libpng12.so.0
 }
 
@@ -38,5 +39,7 @@ pkg_postinst() {
 	elog
 	elog "Run ${EPREFIX}/usr/sbin/libpng-1.4.x-update.sh to fix libtool archives (.la)"
 	elog
+
+	has_version ${CATEGORY}/${PN}:1.2 && return 0
 	preserve_old_lib_notify /usr/$(get_libdir)/libpng12.so.0
 }
