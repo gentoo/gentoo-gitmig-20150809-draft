@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.107 2010/10/21 11:09:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.108 2010/10/26 19:03:31 zmedico Exp $
+
+*calibre-0.7.24-r1 (26 Oct 2010)
+
+  26 Oct 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.7.24-r1.ebuild:
+  Bug #342751 - Fix for PyQt4-4.8 compatibility.
 
   21 Oct 2010; Zac Medico <zmedico@gentoo.org> -calibre-0.7.18.ebuild,
   -calibre-0.7.20.ebuild, -calibre-0.7.22.ebuild:
