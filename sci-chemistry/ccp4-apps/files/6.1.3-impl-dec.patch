@@ -1,0 +1,36 @@
+diff --git a/lib/src/fsplit.c b/lib/src/fsplit.c
+index ee8af24..c6fb3cd 100755
+--- a/lib/src/fsplit.c
++++ b/lib/src/fsplit.c
+@@ -50,6 +50,7 @@ static char sccsid[] = "@(#)fsplit.c	5.5 (Berkeley) 3/12/91";
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <unistd.h>
+ 
+ /*
+  *	usage:		fsplit [-e efile] ... [file]
+diff --git a/src/clipper_progs/src/pirate/compress42.c b/src/clipper_progs/src/pirate/compress42.c
+index ea52e96..30dbd56 100755
+--- a/src/clipper_progs/src/pirate/compress42.c
++++ b/src/clipper_progs/src/pirate/compress42.c
+@@ -142,6 +142,7 @@
+ #include	<sys/types.h>
+ #include	<sys/stat.h>
+ #include	<errno.h>
++#include	<unistd.h>
+ 
+ #ifdef DIRENT
+ #	include	<dirent.h>
+diff --git a/src/mtz2cif_/mtz2cif.c b/src/mtz2cif_/mtz2cif.c
+index e224430..c7b82f4 100755
+--- a/src/mtz2cif_/mtz2cif.c
++++ b/src/mtz2cif_/mtz2cif.c
+@@ -28,6 +28,7 @@
+ #include "cmtzlib.h"
+ #include "ccp4_parser.h"
+ #include "ccp4_general.h"
++#include "ccp4_program.h"
+ #include "csymlib.h"
+ #include "mtz2cif_lib.h"
+ 
