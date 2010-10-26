@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.1 2010/09/07 15:45:38 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.2 2010/10/26 13:10:10 elvanor Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit autotools
 
 DESCRIPTION="SFLphone is a robust standards-compliant enterprise softphone, for desktop and embedded systems."
 HOMEPAGE="http://www.sflphone.org/"
-SRC_URI="https://projects.savoirfairelinux.com/attachments/download/1327/${P}.tar.gz"
+SRC_URI="http://www.elvanor.net/files/gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -31,7 +31,8 @@ DEPEND="media-sound/pulseaudio
 	speex? ( media-libs/speex )
 	networkmanager? ( net-misc/networkmanager )
 	iax? ( net-libs/iax )
-	gnome? ( dev-libs/atk
+	gnome? ( app-text/gnome-doc-utils
+		dev-libs/atk
 		dev-libs/check
 		dev-libs/log4c
 		net-libs/libsoup
