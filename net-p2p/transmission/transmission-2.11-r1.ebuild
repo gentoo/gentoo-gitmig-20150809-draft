@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11.ebuild,v 1.1 2010/10/25 13:29:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11-r1.ebuild,v 1.1 2010/10/26 07:23:29 pva Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -44,7 +44,7 @@ src_prepare() {
 	sed -i -e 's:-ggdb3::g' configure || die
 	# Magnet link support
 	if use kde; then
-		cat > transmission-magnet.protocol <<-EOF
+		cat > qt/transmission-magnet.protocol <<-EOF
 		[Protocol]
 		exec=transmission-qt '%u'
 		protocol=magnet
