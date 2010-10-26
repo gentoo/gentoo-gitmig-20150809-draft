@@ -1,0 +1,11 @@
+# ChangeLog for app-shells/autojump
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.1 2010/10/26 22:15:00 xmw Exp $
+
+*autojump-13 (26 Oct 2010)
+
+  26 Oct 2010; Michael Weber <xmw@gentoo.org> +autojump-13.ebuild,
+  +metadata.xml:
+  Initial import fixes 335401, thanks to Olivier Mehani
+  <shtrom-gentoo@ssji.net> for the initial ebuild.
+
