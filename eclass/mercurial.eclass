@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.13 2010/08/24 16:49:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.14 2010/10/26 19:04:44 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -126,7 +126,7 @@ function mercurial_fetch {
 	# id           num  branch
 	# fd6e32d61721 6276 default
 	local HG_REVDATA=($(hg identify -b -i "${WORKDIR}/${module}"))
-	local HG_REV_ID=${HG_REVDATA[0]}
+	export HG_REV_ID=${HG_REVDATA[0]}
 	local HG_REV_BRANCH=${HG_REVDATA[1]}
 	einfo "Work directory: ${WORKDIR}/${module} global id: ${HG_REV_ID} branch: ${HG_REV_BRANCH}"
 }
