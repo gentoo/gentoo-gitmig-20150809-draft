@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/plotutils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.51 2009/01/07 15:58:17 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.52 2010/10/26 22:18:13 radhermit Exp $
+
+*plotutils-2.6 (26 Oct 2010)
+
+  26 Oct 2010; Tim Harder <radhermit@gentoo.org> +plotutils-2.6.ebuild,
+  +files/plotutils-2.6-makefile.patch:
+  Version bump for bug #300559. Update info about extra fonts (bug #256086
+  by Martin Mokrejš), bump to EAPI=3, add png and static-libs USE flags,
+  set RDEPEND=, apply patch to fix sandbox issues, remove old CFLAGS
+  replacement, and use emake rather than einstall.
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> plotutils-2.5.1.ebuild:
   stable ppc64, bug 245690
