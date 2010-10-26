@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.4 2010/10/24 09:09:34 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.5 2010/10/26 16:28:02 serkan Exp $
+
+  26 Oct 2010; Serkan Kaba <serkan@gentoo.org>
+  +files/commons-math-2.1-buildfixes.patch:
+  Add missing patch reported by Marat <marat.buharov@gmail.com> in bug
+  #342775.
 
 *commons-math-2.1 (24 Oct 2010)
 
