@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/treeviewx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.24 2010/10/12 09:06:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/ChangeLog,v 1.25 2010/10/26 16:18:39 dirtyepic Exp $
+
+  26 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> -treeviewx-0.5.1.ebuild,
+  -treeviewx-0.5.1-r1.ebuild:
+  Remove old.
 
   12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   treeviewx-0.5.1-r2.ebuild:
