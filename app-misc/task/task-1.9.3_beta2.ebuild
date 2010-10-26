@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.3_beta1.ebuild,v 1.1 2010/10/20 17:43:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.3_beta2.ebuild,v 1.1 2010/10/26 06:36:27 radhermit Exp $
 
 EAPI=3
 
