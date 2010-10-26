@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.7.ebuild,v 1.1 2010/07/21 00:12:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.7.ebuild,v 1.2 2010/10/26 11:19:16 flameeyes Exp $
 
 EAPI="2"
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit eutils autotools
 
@@ -24,10 +22,9 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myopts="$(use_with tcpd tcp-wrappers) --with-uucp-locking"
 	econf ${myopts} || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install () {

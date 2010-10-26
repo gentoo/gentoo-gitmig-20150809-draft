@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.22 2010/07/21 00:12:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.23 2010/10/26 11:19:16 flameeyes Exp $
+
+  26 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> ser2net-2.7.ebuild:
+  QA: remove redundant autotools definition and avoid running econf twice.
 
 *ser2net-2.7 (21 Jul 2010)
 
