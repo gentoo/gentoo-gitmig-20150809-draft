@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.0.ebuild,v 1.1 2010/10/26 14:18:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.0.ebuild,v 1.2 2010/10/26 14:43:14 vapier Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -44,7 +44,6 @@ fi
 
 src_configure() {
 	econf \
-		--enable-dynamic=yes \
 		$(use_enable nls) \
 		$(use_enable threads) \
 		$(use_enable static-libs static)
