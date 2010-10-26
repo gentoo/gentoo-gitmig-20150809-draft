@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/thunarx-python
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/ChangeLog,v 1.1 2010/10/26 19:59:48 xmw Exp $
+
+*thunarx-python-0.2.0 (26 Oct 2010)
+
+  26 Oct 2010; Michael Weber <xmw@gentoo.org> +thunarx-python-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import. Thanks to Samuli for the xfconf.eclass quickstart.
+
