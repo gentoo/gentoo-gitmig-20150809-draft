@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.49 2010/10/24 15:42:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.50 2010/10/26 05:18:59 radhermit Exp $
+
+  26 Oct 2010; Tim Harder <radhermit@gentoo.org> -solfege-3.14.2.ebuild:
+  Remove old version.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> solfege-3.16.4.ebuild:
   Marking solfege-3.16.4 ppc for bug 340309
