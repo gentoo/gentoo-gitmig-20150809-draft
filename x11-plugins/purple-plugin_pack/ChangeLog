@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.33 2010/05/21 15:52:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.34 2010/10/26 14:38:24 jer Exp $
+
+  26 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  purple-plugin_pack-2.6.2-r1.ebuild:
+  Stable for HPPA (bug #310021).
 
   21 May 2010; Peter Volkov <pva@gentoo.org>
   purple-plugin_pack-2.6.2-r1.ebuild:

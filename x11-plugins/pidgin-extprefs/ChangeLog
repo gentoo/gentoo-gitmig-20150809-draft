@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-extprefs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.13 2010/07/08 19:24:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/ChangeLog,v 1.14 2010/10/26 14:32:32 jer Exp $
+
+  26 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  pidgin-extprefs-0.7-r1.ebuild:
+  Stable for HPPA (bug #310021).
 
   08 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   pidgin-extprefs-0.7-r1.ebuild:
