@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/groovy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.44 2010/10/17 12:31:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.45 2010/10/26 11:16:13 elvanor Exp $
+
+*groovy-1.7.5 (26 Oct 2010)
+
+  26 Oct 2010; <elvanor@gentoo.org> +groovy-1.7.5.ebuild:
+  Version bump (#320835).
 
   17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -groovy-1.6.5.ebuild,
   -groovy-1.6.7.ebuild:
