@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-6.6.ebuild,v 1.1 2010/03/06 03:26:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-6.6.ebuild,v 1.2 2010/10/26 17:37:43 dirtyepic Exp $
 
 MY_SRC="http://www.linuxfromscratch.org/lfs/downloads/${PV}"
 
@@ -17,7 +17,7 @@ SRC_URI="${MY_SRC}/LFS-BOOK-${PV}-HTML.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="htmlsingle pdf"
 
 DEPEND=""

@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/linuxfromscratch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.11 2010/03/06 03:31:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.12 2010/10/26 17:37:43 dirtyepic Exp $
+
+*linuxfromscratch-6.7 (26 Oct 2010)
+
+  26 Oct 2010; Ryan Hill <dirtyepic@gentoo.org>
+  -linuxfromscratch-6.4.ebuild, -linuxfromscratch-6.5.ebuild,
+  linuxfromscratch-6.6.ebuild, +linuxfromscratch-6.7.ebuild:
+  Version bump and mark 6.6 stable for all. Remove old.
 
   06 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> linuxfromscratch-6.5.ebuild:
   Stabilize everywhere (only docs, no DEPENDs).
