@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxlauncher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/ChangeLog,v 1.8 2010/01/10 15:30:40 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/ChangeLog,v 1.9 2010/10/27 19:42:03 vostorga Exp $
+
+*lxlauncher-0.2.1-r1 (27 Oct 2010)
+
+  27 Oct 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +lxlauncher-0.2.1-r1.ebuild, +files/lxlauncher-0.2.1-fix-segfault.patch:
+  Fixing segmentation fault, bug #341561
 
   10 Jan 2010; Mounir Lamouri <volkmar@gentoo.org> lxlauncher-0.2.1.ebuild:
   Stable for ppc, bug 292698
