@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.25 2010/10/20 22:54:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.26 2010/10/27 12:42:57 fauli Exp $
+
+  27 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  ttf2pt1-3.4.4-r1.ebuild:
+  stable x86, bug 341847
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ttf2pt1-3.4.4-r1.ebuild:
