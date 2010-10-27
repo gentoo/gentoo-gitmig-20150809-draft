@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.2-r1.ebuild,v 1.1 2010/10/26 21:06:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.2-r1.ebuild,v 1.2 2010/10/27 07:42:07 robbat2 Exp $
 
 EAPI=3
 
@@ -271,7 +271,10 @@ src_install() {
 		install || \
 		die "make install failed"
 
-	doman man?/*.[157] Documentation/*.[157]
+	# Depending on the tarball and manual rebuild of the documentation, the
+	# manpages may exist in either OR both of these directories.
+	find man?/*.[157] >/dev/null 2>&1 && doman man?/*.[157]
+	find Documentation/*.[157] >/dev/null 2>&1 && doman Documentation/*.[157]
 
 	dodoc README Documentation/{SubmittingPatches,CodingGuidelines}
 	use doc && dodir /usr/share/doc/${PF}/html
@@ -318,8 +321,8 @@ src_install() {
 	# thunderbird-patch-inline - fixes thunderbird
 	for i in \
 		blameview buildsystems ciabot continuous convert-objects fast-import \
-		git-shell-commands hg-to-git hooks remotes2config.sh remotes2config.sh \
-		rerere-train.sh stats svn-fe vim workdir \
+		hg-to-git hooks remotes2config.sh remotes2config.sh rerere-train.sh \
+		stats svn-fe vim workdir \
 		; do
 		cp -rf \
 			"${S}"/contrib/${i} \
