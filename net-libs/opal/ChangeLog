@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.67 2010/10/27 23:22:06 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.68 2010/10/27 23:43:35 volkmar Exp $
 
-  27 Oct 2010; <volkmar@gentoo.org> -opal-3.6.4.ebuild,
+  27 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.8.ebuild:
+  Updating celt required version.
+
+  27 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> -opal-3.6.4.ebuild,
   -opal-3.6.4-r1.ebuild, -opal-3.6.6.ebuild, -opal-3.6.7.ebuild,
   -files/opal-3.6.7-celt-0.7-update.patch:
   Removing old ebulid and patches.
