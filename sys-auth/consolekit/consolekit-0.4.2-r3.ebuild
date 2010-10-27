@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r3.ebuild,v 1.1 2010/10/21 13:37:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r3.ebuild,v 1.2 2010/10/27 19:10:11 ssuominen Exp $
 
 EAPI=3
-inherit autotools eutils multilib pam
+inherit autotools eutils linux-info multilib pam
 
 MY_PN=ConsoleKit
 MY_P=${MY_PN}-${PV}
@@ -15,7 +15,7 @@ SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="debug doc pam policykit test"
+IUSE="debug doc kernel_linux pam policykit test"
 
 RDEPEND=">=dev-libs/dbus-glib-0.80
 	>=dev-libs/glib-2.20
@@ -31,6 +31,13 @@ DEPEND="${RDEPEND}
 	test? ( app-text/docbook-xml-dtd:4.1.2 )"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if use kernel_linux; then
+		CONFIG_CHECK="~AUDITSYSCALL"
+		linux-info_pkg_setup
+	fi
+}
 
 src_prepare() {
 	epatch \
