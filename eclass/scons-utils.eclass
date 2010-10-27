@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.1 2010/10/07 19:14:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.2 2010/10/27 18:23:58 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -12,9 +12,10 @@
 # @EXAMPLE:
 #
 # @CODE
-# inherit scons-utils
+# inherit scons-utils toolchain-funcs
 # 
 # src_compile() {
+# 	tc-export CC CXX
 # 	escons \
 # 		$(use_scons nls ENABLE_NLS) \
 # 		|| die
