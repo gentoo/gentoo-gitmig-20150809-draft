@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.3 2010/06/29 15:06:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.4 2010/10/27 13:43:37 ssuominen Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -35,7 +35,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-coreutils.patch
 	eautoreconf
 }
 
