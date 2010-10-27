@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.152 2010/10/06 00:13:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.153 2010/10/27 07:19:24 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -979,6 +979,12 @@ mysql_src_configure() {
 
 	# bug #283926, with GCC4.4, this is required to get correct behavior.
 	append-flags -fno-strict-aliasing
+	
+	# bug #335185, with GCC4.5 on x86 only, omit-frame-pointer causes a
+	# mis-compile
+	use x86 && [[ "$(gcc-version)" == "4.5" ]] && \
+		append-flags -fno-omit-frame-pointer && \
+		filter-flags -fomit-frame-pointer
 
 	econf \
 		--libexecdir="/usr/sbin" \
