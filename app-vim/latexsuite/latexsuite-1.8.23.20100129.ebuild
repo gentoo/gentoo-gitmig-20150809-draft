@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.8.23.20100129.ebuild,v 1.1 2010/09/26 05:42:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.8.23.20100129.ebuild,v 1.2 2010/10/27 15:41:04 radhermit Exp $
 
 EAPI=3
 
@@ -32,15 +32,15 @@ src_prepare() {
 src_install() {
 	dohtml -r doc/
 
-	# don't mess up vim's doc dir with random files
+	# Don't mess up vim's doc dir with random files
 	mv doc mydoc || die
 	mkdir doc || die
 	mv mydoc/*.txt doc/ || die
 	rm -rf mydoc || die
 
-	into /usr
-	dobin latextags ltags
-	rm latextags ltags
+	# Don't install buggy tags scripts, use ctags instead
+	rm latextags ltags || die
+
 	vim-plugin_src_install
 }
 
