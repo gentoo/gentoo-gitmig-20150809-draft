@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.121 2010/10/23 01:36:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.122 2010/10/27 19:23:46 tomka Exp $
+
+  27 Oct 2010; Thomas Kahle <tomka@gentoo.org> freeciv-2.2.3.ebuild:
+  x86 stable per bug 341787
 
   23 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> freeciv-2.2.1.ebuild,
   freeciv-2.2.2.ebuild, freeciv-2.2.3.ebuild:
