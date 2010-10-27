@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12105 2010/10/27 08:39:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12106 2010/10/27 12:48:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1323,13 +1323,6 @@ sys-libs/ss
 # since long time included in media-tv/gentoo-vdr-scripts
 media-tv/vdr-dvd-scripts
 media-tv/vdrplugin-rebuild
-
-# Olivier Crête <tester@gentoo.org> (07 Jan 2010)
-# Mask for removal. Replaced by net-libs/telepathy-farsight and farsight2
-net-voip/telepathy-stream-engine
-media-libs/farsight
-media-plugins/gst-plugins-farsight
-net-libs/libjingle
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
 # Dev channel releases are only for people who are developers or want more
