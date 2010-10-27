@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.114 2010/10/14 17:01:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.115 2010/10/27 05:53:50 ulm Exp $
+
+*org-mode-7.01h-r1 (27 Oct 2010)
+
+  27 Oct 2010; Ulrich Mueller <ulm@gentoo.org> +org-mode-7.01h-r1.ebuild:
+  Install GNU Info file without .info extension. Install orgguide.pdf.
 
   14 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -org-mode-6.33f.ebuild:
   Remove old.
