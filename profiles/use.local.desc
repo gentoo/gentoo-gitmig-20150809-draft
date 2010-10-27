@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6085 2010/10/26 21:14:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6086 2010/10/27 00:54:08 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2920,7 +2920,11 @@ net-misc/aria2:ares - Enables support for asynchronous DNS using the c-ares libr
 net-misc/aria2:bittorrent - Enables support for the bittorrent protocol
 net-misc/aria2:metalink - Enables support for metalink
 net-misc/aria2:scripts - Install additional scripts which use aria2's xmlrpc functionality
+net-misc/asterisk:ais - Support clustering using the Application Interface Specification framework
 net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel).
+net-misc/asterisk:gtalk - Enable support for Google Talk services
+net-misc/asterisk:h323 - Enable support for the H323 telephony protocol
+net-misc/asterisk:http - Enable embedded web server
 net-misc/asterisk:keepsrc - Install sources into /usr/src for custom patching
 net-misc/asterisk:logrotate - Install a configuration snippet for the logrotate cronjob
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
@@ -2928,9 +2932,11 @@ net-misc/asterisk:misdn - Build with mISDN (chan_misdn) support for BRI ISDN car
 net-misc/asterisk:newt - Include additional tools that require redhats windowing toolkit
 net-misc/asterisk:nosamples - Don't install sample sound and configuration files
 net-misc/asterisk:osp - Enable support for the Open Settlement Protocol
+net-misc/asterisk:osplookup - Support secure peering using the Open Settlement Protocol
 net-misc/asterisk:pri - Enables pri support
 net-misc/asterisk:samples - Install sample sound and configuration files (default: on)
 net-misc/asterisk:span - Enable support for the spandsp codec
+net-misc/asterisk:srtp - Enable support for encrypted voice transmission (secure RTP)
 net-misc/asterisk:zaptel - Enables deprecated zaptel support (use dahdi if available)
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/asterisk-core-sounds:alaw - Install the sounds files for the alaw codec.
