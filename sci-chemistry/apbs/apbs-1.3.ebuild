@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.8 2010/10/27 17:19:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3.ebuild,v 1.1 2010/10/27 17:19:45 jlec Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 SLOT="0"
 LICENSE="BSD"
 IUSE="arpack doc mpi openmp python tools"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="dev-libs/maloc[mpi=]
 	virtual/blas
@@ -36,14 +36,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-openmp.patch \
-		"${FILESDIR}"/${P}-install-fix.patch \
-		"${FILESDIR}"/${PN}-1.2.0-contrib.patch \
-		"${FILESDIR}"/${PN}-1.2.0-link.patch \
-		"${FILESDIR}"/${P}-autoconf-2.64.patch \
+	epatch \
+		"${FILESDIR}"/${P}-openmp.patch \
+		"${FILESDIR}"/${PN}-1.2.1b-install-fix.patch \
+		"${FILESDIR}"/${P}-contrib.patch \
+		"${FILESDIR}"/${P}-link.patch \
+		"${FILESDIR}"/${PN}-1.2.1b-autoconf-2.64.patch \
 		"${FILESDIR}"/${P}-shared.patch \
-		"${FILESDIR}"/${P}-multilib.patch \
-		"${FILESDIR}"/${P}-parallelbuild.patch
+		"${FILESDIR}"/${PN}-1.2.1b-multilib.patch \
+		"${FILESDIR}"/${PN}-1.2.1b-parallelbuild.patch
 	sed "s:GENTOO_PKG_NAME:${PN}:g" \
 		-i Makefile.am || die "Cannot correct package name"
 	# this test is broken
