@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/dnsproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.6 2010/08/17 00:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.7 2010/10/27 03:17:56 jer Exp $
+
+*dnsproxy-1.16-r1 (27 Oct 2010)
+
+  27 Oct 2010; Jeroen Roovers <jer@gentoo.org> +dnsproxy-1.16-r1.ebuild,
+  +files/dnsproxy-1.16-include.patch:
+  Fix some compiler warnings. Set RDEPEND.
 
   17 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   dnsproxy-1.16.ebuild:
