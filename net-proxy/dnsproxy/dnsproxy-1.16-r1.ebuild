@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16-r1.ebuild,v 1.1 2010/10/27 03:17:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16-r1.ebuild,v 1.2 2010/10/27 03:27:32 jer Exp $
 
 EAPI="2"
 
@@ -20,11 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-include.patch
-}
-
-src_configure() {
 	append-flags -D_GNU_SOURCE
-	econf --with-native-libevent || die "econf failed"
 }
 
 src_compile() {
