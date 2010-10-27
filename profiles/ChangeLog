@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4699 2010/10/26 15:43:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4700 2010/10/27 00:12:55 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Oct 2010; <chainsaw@gentoo.org> package.mask:
+  Mask Asterisk 1.8 branch; it is the bleeding edge.
 
   26 Oct 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Add text to tar mask comments
