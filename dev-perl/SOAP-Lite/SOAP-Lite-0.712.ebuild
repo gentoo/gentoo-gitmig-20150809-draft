@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.712.ebuild,v 1.1 2010/08/10 15:35:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.712.ebuild,v 1.2 2010/10/27 20:13:08 tove Exp $
 
 MODULE_AUTHOR="MKUTTER"
 inherit perl-module eutils
@@ -21,7 +21,8 @@ myconf="${myconf} --noprompt"
 # 24/10/04
 SRC_TEST="do"
 
-DEPEND="dev-perl/XML-Parser
+DEPEND="dev-perl/Class-Inspector
+	dev-perl/XML-Parser
 	dev-perl/libwww-perl
 	virtual/perl-libnet
 	dev-perl/MIME-Lite
