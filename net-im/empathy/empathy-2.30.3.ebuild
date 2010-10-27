@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.3.ebuild,v 1.1 2010/08/30 18:47:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.3.ebuild,v 1.2 2010/10/27 16:40:03 ford_prefect Exp $
 
 EAPI="2"
 
@@ -16,6 +16,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="nautilus networkmanager spell test webkit" # map
 
 # FIXME: libnotify & libcanberra hard deps
+# gst-plugins-bad is required for the valve plugin. This should move to good
+# eventually at which point the dep can be dropped
 RDEPEND=">=dev-libs/glib-2.22.0
 	>=x11-libs/gtk+-2.18.0
 	>=gnome-base/gconf-2
@@ -30,6 +32,8 @@ RDEPEND=">=dev-libs/glib-2.22.0
 	net-libs/farsight2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
+	media-libs/gst-plugins-bad
+	media-plugins/gst-plugins-gconf
 	net-libs/telepathy-farsight
 	dev-libs/libxml2
 	x11-libs/libX11

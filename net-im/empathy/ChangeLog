@@ -1,6 +1,11 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.65 2010/10/17 15:37:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.66 2010/10/27 16:40:03 ford_prefect Exp $
+
+  27 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  empathy-2.30.3.ebuild:
+  Add gst-plugins-bad (for valve) and gst-plugins-gconf (for
+  gconfaudio{src,sink} as dependencies
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> empathy-2.30.2.ebuild:
   alpha stable wrt #324077
