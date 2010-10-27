@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.35 2010/10/25 19:06:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.36 2010/10/27 04:39:51 jer Exp $
+
+  27 Oct 2010; Jeroen Roovers <jer@gentoo.org> libsmi-0.4.8-r1.ebuild:
+  Stable for PPC (bug #342127).
 
   25 Oct 2010; Mark Loeser <halcy0n@gentoo.org> libsmi-0.4.8-r1.ebuild:
   Stable on ppc64; bug #342127
