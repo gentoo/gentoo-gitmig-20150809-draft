@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.2 2010/09/30 12:04:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.3 2010/10/27 13:28:48 ssuominen Exp $
 
 EAPI=2
 
@@ -44,6 +44,7 @@ COMMON_DEPEND="
 # http://code.google.com/p/clementine-player/source/browse/#svn/trunk/3rdparty/libprojectm/patches
 # r1966 "Compile with a static sqlite by default, since Qt 4.7 doesn't seem to expose the symbols we need to use FTS"
 RDEPEND="${COMMON_DEPEND}
+	mtp? ( gnome-base/gvfs )
 	projectm? ( >=media-libs/libprojectm-1.2.0 )
 	>=media-plugins/gst-plugins-meta-0.10
 	>=media-plugins/gst-plugins-gio-0.10
@@ -58,6 +59,8 @@ DEPEND="${COMMON_DEPEND}
 DOCS="Changelog TODO"
 
 PATCHES=( "${FILESDIR}"/${PN}-0.5.1-automagic.patch )
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_configure() {
 	# linguas
