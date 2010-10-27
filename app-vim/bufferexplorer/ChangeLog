@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/bufferexplorer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bufferexplorer/ChangeLog,v 1.1 2010/06/08 20:54:22 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bufferexplorer/ChangeLog,v 1.2 2010/10/27 05:49:21 radhermit Exp $
+
+  27 Oct 2010; Tim Harder <radhermit@gentoo.org>
+  bufferexplorer-7.2.7.ebuild:
+  Use the correct DESCRIPTION (fixes bug #342183, thanks to Juho Rosqvist
+  for reporting).
 
 *bufferexplorer-7.2.7 (08 Jun 2010)
 
