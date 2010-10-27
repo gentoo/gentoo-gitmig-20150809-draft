@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.3 2010/10/20 03:46:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.4 2010/10/27 22:08:16 maekke Exp $
+
+  27 Oct 2010; Markus Meier <maekke@gentoo.org> yajl-1.0.11.ebuild:
+  add ~arm, bug #341149
 
   20 Oct 2010; Jeroen Roovers <jer@gentoo.org> yajl-1.0.11.ebuild:
   Marked ~hppa (bug #341149).
