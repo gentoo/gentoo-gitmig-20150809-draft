@@ -1,0 +1,12 @@
+diff -uNr asterisk-1.8.0.ORIG//include/asterisk/autoconfig.h.in asterisk-1.8.0/include/asterisk/autoconfig.h.in
+--- asterisk-1.8.0.ORIG//include/asterisk/autoconfig.h.in	2010-10-27 00:41:40.000000000 +0100
++++ asterisk-1.8.0/include/asterisk/autoconfig.h.in	2010-10-27 00:43:34.000000000 +0100
+@@ -573,6 +573,8 @@
+ /* Define to 1 if you have the ISDN PRI hangup fix library. */
+ #undef HAVE_PRI_HANGUP_FIX
+ 
++#undef HAVE_PRI_PROG_W_CAUSE
++
+ /* Define to 1 if you have the ISDN PRI set_inbanddisconnect library. */
+ #undef HAVE_PRI_INBANDDISCONNECT
+ 

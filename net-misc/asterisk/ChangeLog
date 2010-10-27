@@ -1,6 +1,22 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.272 2010/10/15 18:04:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.273 2010/10/27 00:32:28 chainsaw Exp $
+
+*asterisk-1.8.0 (27 Oct 2010)
+
+  27 Oct 2010; <chainsaw@gentoo.org> +asterisk-1.8.0.ebuild,
+  +files/1.8.0/asterisk-1.8.0-alarm-receiver-use-playtones.patch,
+  +files/1.8.0/asterisk-1.8.0-confbridge-menu-invocation.patch,
+  +files/1.8.0/asterisk-1.8.0-dahdiras-without-root.patch,
+  +files/1.8.0/asterisk-1.8.0-gsm-pic.patch,
+  +files/1.8.0/asterisk-1.8.0-iax2-peerstate.patch,
+  +files/1.8.0/asterisk-1.8.0-inband-indications.patch,
+  +files/1.8.0/asterisk-1.8.0-pbxstart-failed-spurious-bye.patch,
+  +files/1.8.0/asterisk-1.8.0-pri-missing-keyword.patch,
+  +files/1.8.0/asterisk-1.8.0-uclibc.patch, metadata.xml:
+  Initial 1.8 branch ebuild, masked for your protection. Extensive patch
+  rebasing, dropped oddball fax detection. Closes bug #342225 by Oliver
+  Jaksch. Ebuild changes inspired by Oliver, some additional work done.
 
   15 Oct 2010; <chainsaw@gentoo.org>
   -files/1.6.1/asterisk-1.6.1.6-fxsks-hookstate.patch,

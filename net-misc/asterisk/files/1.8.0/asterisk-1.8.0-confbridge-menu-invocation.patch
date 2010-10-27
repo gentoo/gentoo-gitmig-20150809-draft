@@ -1,0 +1,12 @@
+diff -uNr asterisk-1.8.0.ORIG//apps/app_confbridge.c asterisk-1.8.0/apps/app_confbridge.c
+--- asterisk-1.8.0.ORIG//apps/app_confbridge.c	2010-10-27 00:41:40.000000000 +0100
++++ asterisk-1.8.0/apps/app_confbridge.c	2010-10-27 00:54:18.000000000 +0100
+@@ -734,7 +734,7 @@
+ 
+ 	/* If the menu option is enabled provide a user or admin menu as a custom feature hook */
+ 	if (ast_test_flag(&conference_bridge_user.flags, OPTION_MENU)) {
+-		ast_bridge_features_hook(&conference_bridge_user.features, "#", menu_callback, &conference_bridge_user);
++		ast_bridge_features_hook(&conference_bridge_user.features, "*", menu_callback, &conference_bridge_user);
+ 	}
+ 
+ 	/* If the caller should be joined already muted, make it so */
