@@ -1,6 +1,11 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.78 2010/10/19 02:28:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.79 2010/10/27 08:22:16 pva Exp $
+
+*hunspell-1.2.12-r1 (27 Oct 2010)
+
+  27 Oct 2010; Peter Volkov <pva@gentoo.org> +hunspell-1.2.12-r1.ebuild:
+  Create libhunspell.so symlink, bug #342449, thank Laslo Forro for report.
 
   19 Oct 2010; Jeroen Roovers <jer@gentoo.org> hunspell-1.2.11.ebuild:
   Stable for HPPA (bug #338341).
