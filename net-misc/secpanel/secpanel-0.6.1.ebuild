@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.6.1.ebuild,v 1.1 2010/09/05 23:03:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.6.1.ebuild,v 1.2 2010/10/27 14:29:24 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~sparc ~x86"
 IUSE="gif"
 
 DEPEND="!gif? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )"

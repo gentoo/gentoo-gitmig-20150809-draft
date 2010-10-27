@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/secpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.18 2010/10/26 21:21:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.19 2010/10/27 14:29:24 hwoarang Exp $
+
+  27 Oct 2010; Markos Chandras <hwoarang@gentoo.org> secpanel-0.6.1.ebuild:
+  Stable on amd64 wrt bug #342829
 
   26 Oct 2010; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking care of this package
