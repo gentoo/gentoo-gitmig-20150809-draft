@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.18 2010/08/31 20:07:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.19 2010/10/27 09:33:04 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -32,7 +32,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-errno.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-parallel.patch
+		"${FILESDIR}"/${P}-parallel.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch
 	# respect LDFLAGS bug #335444
 	sed -i \
 		-e '/^LDFLAGS/s/=/+=/' \
