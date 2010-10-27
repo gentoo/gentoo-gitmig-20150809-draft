@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.208 2010/10/27 08:41:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.209 2010/10/27 14:20:22 voyageur Exp $
+
+  27 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> chromium-9999.ebuild:
+  Drop icu patch, merged upstream, thanks Keith Rusler
+  <xzekecomax@gmail.com> in bug #342877
 
 *chromium-8.0.552.18 (27 Oct 2010)
 

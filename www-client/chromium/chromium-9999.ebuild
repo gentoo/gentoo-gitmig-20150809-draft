@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.96 2010/10/15 07:45:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.97 2010/10/27 14:20:22 voyageur Exp $
 
 EAPI="2"
 
@@ -114,10 +114,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Small fix to the system-provided icu support,
-	# to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-system-icu-r1.patch
-
 	# Enable optional support for gecko-mediaplayer.
 	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
 
