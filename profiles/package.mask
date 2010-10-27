@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12104 2010/10/27 00:12:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12105 2010/10/27 08:39:09 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1334,9 +1334,9 @@ net-libs/libjingle
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
-~www-client/chromium-7.0.544.0
 ~www-client/chromium-8.0.552.0
 ~www-client/chromium-8.0.552.11
+~www-client/chromium-8.0.552.18
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
