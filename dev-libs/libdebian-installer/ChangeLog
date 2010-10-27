@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdebian-installer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.3 2010/10/25 22:41:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.4 2010/10/27 12:54:05 fauli Exp $
+
+  27 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  libdebian-installer-0.74-r1.ebuild:
+  stable x86, bug 342207
 
   25 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   libdebian-installer-0.74-r1.ebuild:
