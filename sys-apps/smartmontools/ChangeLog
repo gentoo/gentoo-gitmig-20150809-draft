@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.91 2010/10/26 06:52:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.92 2010/10/27 14:37:56 xmw Exp $
+
+  27 Oct 2010; Michael Weber <xmw@gentoo.org> smartmontools-5.38.ebuild,
+  smartmontools-5.39.1.ebuild, smartmontools-5.40.ebuild:
+  Added ~arm keyword (bug #302981).
 
   26 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   smartmontools-5.39.1.ebuild:
