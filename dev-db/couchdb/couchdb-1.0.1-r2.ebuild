@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1-r1.ebuild,v 1.2 2010/09/09 14:50:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.0.1-r2.ebuild,v 1.1 2010/10/27 08:58:43 djc Exp $
 
 EAPI="2"
 
@@ -49,8 +49,10 @@ src_install() {
 		/var/lib/couchdb \
 		/var/log/couchdb
 
-	fowners root:couchdb /etc/couchdb/*.ini
-	fperms 660 /etc/couchdb/*.ini
+	for f in /etc/couchdb/*.ini ; do
+		fowners root:couchdb ${f#"${D}"}
+		fperms 660 ${f#"${D}"}
+	done
 
 	newinitd "${FILESDIR}/couchdb.init-0.10" couchdb || die
 	newconfd "${FILESDIR}/couchdb.conf-0.10" couchdb || die
