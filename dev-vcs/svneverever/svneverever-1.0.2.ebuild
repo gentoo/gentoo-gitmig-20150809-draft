@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/svneverever-1.0.2.ebuild,v 1.1 2010/10/27 17:15:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/svneverever-1.0.2.ebuild,v 1.2 2010/10/27 17:18:22 sping Exp $
 
 EAPI="2"
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 

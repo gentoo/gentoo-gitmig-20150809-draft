@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svneverever
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.1 2010/10/27 17:15:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.2 2010/10/27 17:18:22 sping Exp $
+
+  27 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  svneverever-1.0.2.ebuild:
+  Drop back to Python 2.x only
 
 *svneverever-1.0.2 (27 Oct 2010)
 
