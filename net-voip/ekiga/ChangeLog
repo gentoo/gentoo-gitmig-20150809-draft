@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.18 2010/08/19 17:10:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.19 2010/10/27 22:46:32 volkmar Exp $
+
+  27 Oct 2010; <volkmar@gentoo.org> ekiga-3.2.7.ebuild:
+  Update required glib version.
 
 *ekiga-3.2.7 (19 Aug 2010)
 
