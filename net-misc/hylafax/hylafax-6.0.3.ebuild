@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-6.0.3.ebuild,v 1.8 2010/10/27 03:18:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-6.0.3.ebuild,v 1.9 2010/10/27 04:28:13 dirtyepic Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ src_configure() {
 		-e "s|3.8.|3.9.|" \
 			configure || die
 	# strip missing header to prevent failure with GCC 4.5 (bug #318485)
-	sed -i -e 's|libc\.h ||' configure
+	sed -i -e 's|libc\.h ||' configure || die
 
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
