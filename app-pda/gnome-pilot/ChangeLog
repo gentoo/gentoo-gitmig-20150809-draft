@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gnome-pilot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.62 2009/11/01 13:43:09 leio Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.63 2010/10/27 21:51:01 eva Exp $
+
+*gnome-pilot-2.32.0 (27 Oct 2010)
+
+  27 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-pilot-2.32.0.ebuild:
+  Version bump. Update usage of gnome APIs. Move eds conduits support to
+  gnome-pilot.
 
   01 Nov 2009; Mart Raudsepp <leio@gentoo.org> -gnome-pilot-2.0.17.ebuild:
   Remove old
