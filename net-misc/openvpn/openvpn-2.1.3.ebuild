@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.3 2010/10/19 07:32:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.4 2010/10/27 15:04:32 djc Exp $
 
 EAPI=2
 
@@ -116,6 +116,7 @@ src_install() {
 	fi
 
 	# Install plugins and easy-rsa
+	doenvd "${FILESDIR}/65openvpn" # config-protect easy-rsa
 	if ! use minimal ; then
 		cd easy-rsa/2.0
 		make install "DESTDIR=${D}/usr/share/${PN}/easy-rsa"

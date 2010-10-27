@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.195 2010/10/19 07:40:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.196 2010/10/27 15:04:32 djc Exp $
+
+  27 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> +files/65openvpn,
+  openvpn-2.1.3.ebuild:
+  Add CONFIG_PROTECT for /usr/share/openvpn/easy-rsa, as suggested by
+  hwoarang.
 
   19 Oct 2010; Dirkjan Ochtman <djc@gentoo.org>
   -files/openvpn-2.0.9-pam.patch, -files/openvpn-2.0.9-persistent.patch,
