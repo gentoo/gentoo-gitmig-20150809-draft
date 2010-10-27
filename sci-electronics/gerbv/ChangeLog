@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.36 2010/05/21 15:10:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.37 2010/10/27 20:37:57 tomka Exp $
+
+  27 Oct 2010; Thomas Kahle <tomka@gentoo.org> gerbv-2.4.0.ebuild:
+  x86 stable per bug #342811
 
   21 May 2010; Peter Volkov <pva@gentoo.org> gerbv-2.4.0.ebuild:
   amd64 stable, bug 270735.
