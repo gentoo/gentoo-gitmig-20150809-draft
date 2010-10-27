@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/gtk-sunlight
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-sunlight/ChangeLog,v 1.1 2010/10/27 23:25:17 xmw Exp $
+
+*gtk-sunlight-0.2.1 (27 Oct 2010)
+
+  27 Oct 2010; Michael Weber <xmw@gentoo.org> +gtk-sunlight-0.2.1.ebuild,
+  +files/gtk-sunlight-0.2.1-makefile.patch, +files/gtk-sunlight-0.2.1.patch,
+  +metadata.xml:
+  Initial import, fixes bug 342975 by David <write2David@gmail.com>.
+
