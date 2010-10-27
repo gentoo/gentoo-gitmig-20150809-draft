@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4703 2010/10/27 10:23:33 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4704 2010/10/27 21:48:18 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add gnome-pilot stuff to gnome 2.32 mask.
 
   27 Oct 2010; Hanno Boeck <hanno@gentoo.org> license_groups:
   Add bea.ri.jsr173 license to MISC-FREE license group.
