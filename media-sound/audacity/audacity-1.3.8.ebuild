@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.8.ebuild,v 1.7 2009/10/12 19:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.8.ebuild,v 1.8 2010/10/27 03:09:01 radhermit Exp $
 
 EAPI=2
 
@@ -50,6 +50,7 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.8-automagic.patch"
 	epatch "${FILESDIR}/${PN}-1.3.8-gsocket-conflict.patch"
+	epatch "${FILESDIR}/${PN}-1.3.12-ffmpeg.patch"
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
