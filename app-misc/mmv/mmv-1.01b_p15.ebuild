@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.3 2010/10/22 17:19:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.4 2010/10/27 12:46:19 fauli Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}"/${PN}-${MY_VER}.orig

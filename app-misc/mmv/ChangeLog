@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.24 2010/10/22 17:19:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.25 2010/10/27 12:46:19 fauli Exp $
+
+  27 Oct 2010; Christian Faulhammer <fauli@gentoo.org> mmv-1.01b_p15.ebuild:
+  stable x86, bug 341945
 
   22 Oct 2010; Markos Chandras <hwoarang@gentoo.org> mmv-1.01b_p15.ebuild:
   Stable on amd64 wrt bug #341945
