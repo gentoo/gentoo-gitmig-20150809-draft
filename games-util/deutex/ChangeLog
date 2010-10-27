@@ -1,6 +1,10 @@
 # ChangeLog for games-util/deutex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.6 2010/10/15 12:37:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.7 2010/10/27 12:15:40 tupone Exp $
+
+  27 Oct 2010; Tupone Alfredo <tupone@gentoo.org> deutex-4.4.0.ebuild,
+  +files/deutex-4.4.0-ovflfix.patch:
+  Fix overflow. Bug #340829 by flameeyes@gentoo.org
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> deutex-4.4.0.ebuild:
   stable ppc, bug 315049
