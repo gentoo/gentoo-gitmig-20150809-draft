@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.6 2010/10/24 21:07:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.7 2010/10/27 12:58:24 fauli Exp $
+
+  27 Oct 2010; Christian Faulhammer <fauli@gentoo.org> tornado-1.1.ebuild:
+  stable x86, bug 342487
 
   24 Oct 2010; Markos Chandras <hwoarang@gentoo.org> tornado-1.1.ebuild:
   Stable on amd64 wrt bug #342487
