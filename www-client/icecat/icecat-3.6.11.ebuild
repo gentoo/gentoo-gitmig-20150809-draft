@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.8.ebuild,v 1.3 2010/09/08 02:14:46 anarchy Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.11.ebuild,v 1.1 2010/10/27 17:24:06 polynomial-c Exp $
+EAPI="3"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension java-pkg-opt-2
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension java-pkg-opt-2 python
 
-LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR
-es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it ja
-ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
-ru si sk sl sq sr sv-SE ta te th tr uk vi zh-CN zh-TW"
+LANGS="af ar as ast be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR
+es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it
+ja ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
+ru si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
 # Malformed install.rdf: ta-LK
 
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
@@ -19,33 +19,35 @@ MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
 XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-FIREFOX_PN="mozilla-firefox"
+FIREFOX_PN="firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
-PATCH="${FIREFOX_PN}-3.6-patches-0.6"
+PATCH="${FIREFOX_PN}-3.6-patches-0.2"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +ipc java libnotify system-sqlite wifi"
 
-SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
-LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
+SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.xz
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
+# Currently most 3.6.11 xpi language files are malformed. As soon as upstream
+# replaced them with working ones we can go back using those from 3.6.11
+LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/3.6.10"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -53,10 +55,10 @@ done
 
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.4
-	>=dev-libs/nspr-4.8
+	>=dev-libs/nss-3.12.8
+	>=dev-libs/nspr-4.8.6
 	>=app-text/hunspell-1.2
-	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.1[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
@@ -66,6 +68,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )
+	=dev-lang/python-2*[threads]
 	dev-util/pkgconfig"
 
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.4 )"
@@ -104,6 +107,8 @@ pkg_setup() {
 	export LC_CTYPE="C"
 
 	java-pkg-opt-2_pkg_setup
+
+	python_set_active_version 2
 }
 
 src_unpack() {
@@ -119,7 +124,7 @@ src_unpack() {
 
 src_prepare() {
 	# Integrate rebranding
-	sed -i "s|/mozilla-firefox|/icecat|" \
+	sed -i "s|/firefox|/icecat|" \
 		"${WORKDIR}"/001-firefox_gentoo_install_dirs.patch
 
 	# Fix preferences location
@@ -128,14 +133,7 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch" \
 	epatch "${WORKDIR}"
-
-	# The patch excluded above failed, ported patch is applied below
-	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
-
-	# Enable tracemonkey for amd64 (bug #315997)
-	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
@@ -197,11 +195,11 @@ src_configure() {
 	# Use system libraries
 	mozconfig_annotate '' --enable-system-cairo
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --with-system-nspr
-	mozconfig_annotate '' --with-system-nss
+	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --with-system-bz2
 	mozconfig_annotate '' --with-system-libxul
-	mozconfig_annotate '' --with-libxul-sdk=/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
+	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
 	mozconfig_use_enable ipc # +ipc, upstream default
 	mozconfig_use_enable libnotify
@@ -227,7 +225,7 @@ src_configure() {
 	#
 	####################################
 
-	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" econf
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" PYTHON="$(PYTHON)" econf
 }
 
 src_compile() {
@@ -252,14 +250,14 @@ src_install() {
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification ; then
-		echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
+		echo "StartupNotify=true" >> "${ED}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
-	pax-mark m "${D}"/${MOZILLA_FIVE_HOME}/${PN}
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/${PN}
 
 	# Enable very specific settings not inherited from xulrunner
 	cp "${FILESDIR}"/firefox-default-prefs.js \
-		"${D}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
+		"${ED}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
 		die "failed to cp icecat-default-prefs.js"
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
