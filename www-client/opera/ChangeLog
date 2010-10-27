@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.558 2010/10/21 15:54:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.559 2010/10/27 04:52:50 jer Exp $
+
+  27 Oct 2010; Jeroen Roovers <jer@gentoo.org> opera-10.63.ebuild,
+  opera-10.70_pre9053.ebuild, opera-10.70_pre9067.ebuild,
+  opera-10.70_pre9071.ebuild, opera-11.00_pre1029.ebuild:
+  In the latest license, distribution is specifically allowed, so remove
+  RESTRICT=mirror. Also, use share/opera/defaults/license.txt for symlinks
+  from the locale directories instead of using usr/share/doc/opera (bug
+  #315473).
 
 *opera-11.00_pre1029 (21 Oct 2010)
 

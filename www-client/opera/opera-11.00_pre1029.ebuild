@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1029.ebuild,v 1.1 2010/10/21 15:54:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1029.ebuild,v 1.2 2010/10/27 04:52:50 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
-RESTRICT="mirror test"
+RESTRICT="test"
 
 O_PWD="alpha1-with-extensions"
 O_V="${PV/_pre/-}"
@@ -103,8 +103,14 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Remove "license directory" (bug #315473)
-	rm -rf share/doc/opera
+	# Remove doc directory but keep the LICENSE under another name (bug #315473)
+	mv share/doc/opera/LICENSE share/opera/defaults/license.txt
+	rm -rf share/doc
+	for license in share/opera/locale/*/license.txt; do
+		rm -v "${license}"
+		ln -svn /usr/share/opera/defaults/license.txt "${license}" \
+			|| die "mv license"
+	done
 
 	# Remove package directory
 	rm -rf share/opera/package
