@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12106 2010/10/27 12:48:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12107 2010/10/27 13:15:17 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1375,12 +1375,6 @@ media-sound/teamspeak-server-bin
 # Broken, will stay masked until fixed.
 # see bug #290086 for more info
 =x11-apps/xdm-1.1.9
-
-# Víctor Ostorga <vostorga@gentoo.org> (02 Nov 2009)
-# If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29
-# as well, otherwise net-firewall/ipsec-tools won't compile.
-# See bug #264233 for reference
-=net-firewall/ipsec-tools-0.7.2
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
 # Mask pre-4.8 Xfce4 for testing.
