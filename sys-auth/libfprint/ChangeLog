@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.1 2010/10/17 00:54:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.2 2010/10/27 09:38:00 xmw Exp $
+
+*libfprint-0.3.0 (27 Oct 2010)
+
+  27 Oct 2010; Michael Weber <xmw@gentoo.org> +libfprint-0.3.0.ebuild:
+  Version bump to new upstream location, closing bug #341639, thanks Jan
+  Buecken <jb.faq@gmx.de>
 
 *libfprint-0.1.0_pre2 (17 Oct 2010)
 *libfprint-0.0.6 (17 Oct 2010)
