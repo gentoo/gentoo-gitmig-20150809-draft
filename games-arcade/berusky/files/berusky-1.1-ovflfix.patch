@@ -1,0 +1,11 @@
+--- src/editor.cpp.old	2010-10-27 10:33:00.000000000 +0200
++++ src/editor.cpp	2010-10-27 10:33:21.000000000 +0200
+@@ -1606,7 +1606,7 @@
+   
+   va_list   arguments;
+   va_start(arguments,p_text);
+-  vsnprintf(output_lines[1]+2,CONSOLE_MAX_INPUT_LINE,p_text,arguments);
++  vsnprintf(output_lines[1]+2,CONSOLE_MAX_INPUT_LINE-2,p_text,arguments);
+   va_end(arguments);  
+   output_lines[1][0] = '*';
+   output_lines[1][1] = ' ';

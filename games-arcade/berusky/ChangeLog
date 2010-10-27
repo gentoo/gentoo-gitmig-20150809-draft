@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/berusky
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/ChangeLog,v 1.3 2009/10/29 15:00:46 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/ChangeLog,v 1.4 2010/10/27 08:44:12 tupone Exp $
+
+  27 Oct 2010; Tupone Alfredo <tupone@gentoo.org> berusky-1.1.ebuild,
+  +files/berusky-1.1-ovflfix.patch:
+  Fix overflow. Bug #341103 by flameeyes@gentoo.org
 
   29 Oct 2009; Markus Meier <maekke@gentoo.org> berusky-1.1.ebuild:
   amd64/x86 stable, bug #289127

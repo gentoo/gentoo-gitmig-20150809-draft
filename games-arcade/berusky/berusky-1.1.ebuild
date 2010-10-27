@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.4 2009/10/29 15:00:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/berusky-1.1.ebuild,v 1.5 2010/10/27 08:44:12 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,12 +16,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[video]"
+RDEPEND="media-libs/libsdl[video]"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	mv ../${DATAFILE}/{berusky.ini,GameData,Graphics,Levels} . \
 		|| die "failed moving data"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
