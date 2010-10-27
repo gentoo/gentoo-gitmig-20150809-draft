@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.156 2010/10/26 06:31:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.157 2010/10/27 18:19:39 ssuominen Exp $
+
+*tar-1.24-r1 (27 Oct 2010)
+
+  27 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +tar-1.24-r1.ebuild,
+  +files/tar-1.24-mkdirat.patch, +files/tar-1.24-transform.patch,
+  +files/tar-1.24-transform-2.patch:
+  Fix -C switch wrt #342735 by "ferret". Fix --transform switch wrt #342785.
 
   26 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> tar-1.24.ebuild:
   Fix ./configure with FEATURES="-userpriv" wrt #342593.

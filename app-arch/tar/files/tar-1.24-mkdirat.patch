@@ -1,0 +1,31 @@
+From acb77ac5bd4bf9248070c9c512525eee8258aebd Mon Sep 17 00:00:00 2001
+From: Paul Eggert <eggert@cs.ucla.edu>
+Date: Tue, 26 Oct 2010 03:20:19 +0000
+Subject: tar: fix bug with -C and extracting directories
+
+Problem reported by Denis Excoffier in
+<http://lists.gnu.org/archive/html/bug-tar/2010-10/msg00034.html>.
+
+* src/extract.c (extract_dir): Use mkdirat, not mkdir.
+* tests/extrac16.at: New file, to test for this bug.
+* tests/Makefile.am (TESTSUITE_AT): Add it.
+* tests/testsuite.at: Include it.
+
+This file is a placeholder. It will be replaced with the actual ChangeLog
+by make dist.  Run make ChangeLog if you wish to create it earlier.
+---
+diff --git a/src/extract.c b/src/extract.c
+index 0d23d4a..98236ac 100644
+--- a/src/extract.c
++++ b/src/extract.c
+@@ -777,7 +777,7 @@ extract_dir (char *file_name, int typeflag)
+ 
+   for (;;)
+     {
+-      status = mkdir (file_name, mode);
++      status = mkdirat (chdir_fd, file_name, mode);
+       if (status == 0)
+ 	{
+ 	  current_mode = mode & ~ current_umask;
+--
+cgit v0.8.3.2

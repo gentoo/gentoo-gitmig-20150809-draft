@@ -1,0 +1,53 @@
+From 5af29cb944c84e2d539ce9df527d63c29f6012b9 Mon Sep 17 00:00:00 2001
+From: Sergey Poznyakoff <gray@gnu.org.ua>
+Date: Wed, 27 Oct 2010 11:07:46 +0000
+Subject: Transform file names when updating and appendig to archives.
+
+This complements 28e91b48.
+
+* src/common.h (transform_stat_info): New prototype.
+* src/list.c (transform_stat_info): Remove static qualifier.
+* src/update.c (update_archive): Call transform_stat_info.
+* tests/Makefile.am (TESTSUITE_AT): Add append03.at
+* tests/testsuite.at: Include append03.at
+---
+diff --git a/src/common.h b/src/common.h
+index 192cf9e..4a63824 100644
+--- a/src/common.h
++++ b/src/common.h
+@@ -550,6 +550,7 @@ extern size_t recent_long_link_blocks;
+ 
+ void decode_header (union block *header, struct tar_stat_info *stat_info,
+ 		    enum archive_format *format_pointer, int do_user_group);
++void transform_stat_info (int typeflag, struct tar_stat_info *stat_info);
+ char const *tartime (struct timespec t, bool full_time);
+ 
+ #define OFF_FROM_HEADER(where) off_from_header (where, sizeof (where))
+diff --git a/src/list.c b/src/list.c
+index e1e06ca..c65e171 100644
+--- a/src/list.c
++++ b/src/list.c
+@@ -116,7 +116,7 @@ transform_member_name (char **pinput, int type)
+   return transform_name_fp (pinput, type, decode_xform, &type);
+ }
+ 
+-static void
++void
+ transform_stat_info (int typeflag, struct tar_stat_info *stat_info)
+ {
+   if (typeflag == GNUTYPE_VOLHDR)
+diff --git a/src/update.c b/src/update.c
+index 69fa592..e3228d4 100644
+--- a/src/update.c
++++ b/src/update.c
+@@ -130,6 +130,8 @@ update_archive (void)
+ 
+ 	    decode_header (current_header, &current_stat_info,
+ 			   &current_format, 0);
++	    transform_stat_info (current_header->header.typeflag,
++				 &current_stat_info);
+ 	    archive_format = current_format;
+ 
+ 	    if (subcommand_option == UPDATE_SUBCOMMAND
+--
+cgit v0.8.3.2
