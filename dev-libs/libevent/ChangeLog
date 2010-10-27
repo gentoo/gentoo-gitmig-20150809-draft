@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.167 2010/10/15 15:15:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.168 2010/10/27 02:54:44 jer Exp $
+
+*libevent-1.4.14b-r1 (27 Oct 2010)
+
+  27 Oct 2010; Jeroen Roovers <jer@gentoo.org> +libevent-1.4.14b-r1.ebuild:
+  Add a 1.* version that has IUSE=static-libs (bug #342859).
 
 *libevent-2.0.8 (15 Oct 2010)
 
