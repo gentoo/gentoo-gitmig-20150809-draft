@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/342817
+
+--- catdvi-0.14-orig/kpathsea.c
++++ catdvi-0.14/kpathsea.c
+@@ -36,7 +36,6 @@
+ 
+ void version_findtfm(void)
+ {
+-        extern char * kpathsea_version_string;
+         puts(kpathsea_version_string);
+ }
+ 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/catdvi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.5 2008/09/17 07:29:18 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.6 2010/10/27 21:54:21 ulm Exp $
+
+*catdvi-0.14-r1 (26 Oct 2010)
+
+  26 Oct 2010; Ulrich Mueller <ulm@gentoo.org> +catdvi-0.14-r1.ebuild,
+  +files/catdvi-0.14-kpathsea.patch:
+  Fix compilation with kpathsea-6 library, bug 342817. Thanks to Martin Väth
+  <vaeth@mathematik.uni-wuerzburg.de>.
 
   17 Sep 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add package to tex herd.
