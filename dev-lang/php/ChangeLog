@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.427 2010/10/24 12:17:01 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.428 2010/10/27 10:33:18 olemarkus Exp $
+
+  27 Oct 2010; <olemarkus@gentoo.org> files/eblits/src_install-v1.eblit,
+  files/eblits/src_install-v2.eblit:
+  Corrected typo in the src_install eblit (#342769)
 
   24 Oct 2010; Matti Bickel <mabi@gentoo.org>
   files/eblits/src_install-v2.eblit:
