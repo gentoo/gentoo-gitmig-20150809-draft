@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.3 2008/10/10 10:49:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/sjphone-1.60.2235.ebuild,v 1.4 2010/10/28 12:31:46 ssuominen Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_install() {
 	sed -i -e 's:$(dirname "$0"):/opt/sjphone:' \
 		-e 's:$WD/lib:$WD:' sjphone
 	dobin sjphone
-	dodoc LICENSE README
+	dodoc README
 	doicon lib/sjphone.png
 	make_desktop_entry sjphone
 }
