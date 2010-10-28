@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4.ebuild,v 1.2 2008/01/25 21:27:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4.ebuild,v 1.3 2010/10/28 10:38:19 ssuominen Exp $
 
 inherit eutils
 
@@ -27,5 +27,5 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc CREDITS ChangeLog INSTALL LICENSE README
+	dodoc CREDITS ChangeLog INSTALL README
 }
