@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.759 2010/10/26 00:43:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.760 2010/10/28 04:02:20 zmedico Exp $
+
+*portage-2.2.0_alpha2 (28 Oct 2010)
+
+  28 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha2.ebuild:
+  2.2.0_alpha2 version bump. This includes all of the fixes in
+  portage-2.1.9.23. Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.23 (28 Oct 2010)
+
+  28 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.23.ebuild:
+  2.1.9.23 version bump. This fixes bug #342561 (ignore autotest and
+  help2man in automake maintainer-mode QA check) and also fixes a regression
+  which causes ebuild(1) to crash with a KeyError when invoked with an
+  an ebuild located in /var/db/pkg. Bug #335925 tracks all bugs fixed since
+  2.1.8.x.
 
   26 Oct 2010; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.20.ebuild,
   -portage-2.1.9.21.ebuild, -portage-2.2_rc98.ebuild,
