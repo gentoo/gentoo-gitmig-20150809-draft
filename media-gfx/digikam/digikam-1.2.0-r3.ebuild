@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r3.ebuild,v 1.2 2010/10/22 00:07:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r3.ebuild,v 1.3 2010/10/28 19:18:16 dilfridge Exp $
 
 EAPI="2"
 
@@ -58,7 +58,10 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	sys-devel/gcc[fortran]
 	sys-devel/gettext
-	doc? ( virtual/latex-base )
+	doc? (
+		app-doc/doxygen
+		virtual/latex-base
+		)
 "
 
 S="${WORKDIR}/${MY_P}"

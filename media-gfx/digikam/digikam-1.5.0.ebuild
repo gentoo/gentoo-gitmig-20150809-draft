@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.5.0.ebuild,v 1.2 2010/10/26 19:14:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.5.0.ebuild,v 1.3 2010/10/28 19:18:16 dilfridge Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ RDEPEND="${CDEPEND}
 "
 DEPEND="${CDEPEND}
 	sys-devel/gettext
+	doc? ( app-doc/doxygen )
 "
 
 S="${WORKDIR}/${MY_P}"
