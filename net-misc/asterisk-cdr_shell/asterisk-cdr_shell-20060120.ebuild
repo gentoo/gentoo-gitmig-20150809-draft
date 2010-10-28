@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/asterisk-cdr_shell-20060120.ebuild,v 1.1 2006/05/06 15:16:25 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/asterisk-cdr_shell-20060120.ebuild,v 1.2 2010/10/28 09:44:17 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,6 +14,7 @@ SRC_URI="http://www.netdomination.org/pub/asterisk/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
+IUSE=""
 
 DEPEND=">=net-misc/asterisk-1.2.0
 	!=net-misc/asterisk-1.0*"
