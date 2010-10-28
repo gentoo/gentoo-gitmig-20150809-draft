@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12108 2010/10/27 21:48:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12109 2010/10/28 09:14:54 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Oct 2010)
+# Time to upgrade to 0.8 already people
+# Masked for removal due to usage of sys-auth/policykit, bug 340329
+# Removal in approx. 14 days
+<net-misc/networkmanager-0.8
+<gnome-extra/nm-applet-0.8
+<net-misc/networkmanager-openvpn-0.8
+<net-misc/networkmanager-pptp-0.8
+<net-misc/networkmanager-vpnc-0.8
 
 # Tony Vroon <chainsaw@gentoo.org> (27 Oct 2010)
 # This is very new, very exciting and quite probably not ready for your 
