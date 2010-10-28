@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.82 2010/04/11 20:33:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.83 2010/10/28 06:12:54 radhermit Exp $
+
+*lshw-02.15b (28 Oct 2010)
+
+  28 Oct 2010; Tim Harder <radhermit@gentoo.org> +lshw-02.15b.ebuild,
+  +files/lshw-02.15b-build.patch:
+  Version bump. Update to EAPI=3, add sqlite USE flag and dependency, use
+  src_prepare instead of src_unpack, and update build patch.
 
   11 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> lshw-02.14b.ebuild,
   +files/lshw-02.14b-gcc45.patch:
