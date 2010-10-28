@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.202 2010/10/15 20:25:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.203 2010/10/28 16:25:14 pacho Exp $
+
+  28 Oct 2010; Pacho Ramos <pacho@gentoo.org> mono-2.8-r1.ebuild:
+  Mono.Data.SqliteClient was dropped by upstream in 2.8, thanks to Bernard
+  Cafarelli for reporting.
 
 *mono-2.8-r1 (15 Oct 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8-r1.ebuild,v 1.1 2010/10/15 20:25:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8-r1.ebuild,v 1.2 2010/10/28 16:25:14 pacho Exp $
 
 EAPI="2"
 
@@ -197,7 +197,6 @@ pkg_postinst() {
 	elog ""
 	elog "dev-db/sqlite:3"
 	elog "	Mono.Data.Sqlite"
-	elog "	Mono.Data.SqliteClient"
 	elog "Also read:"
 	elog "http://www.mono-project.com/SQLite"
 	elog ""
