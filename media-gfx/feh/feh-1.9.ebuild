@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.9.ebuild,v 1.3 2010/09/07 15:15:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.9.ebuild,v 1.4 2010/10/28 20:58:44 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -25,7 +25,8 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	x11-libs/libXt
 	x11-proto/xproto
-	test? ( dev-perl/Test-Command )"
+	test? ( >=dev-lang/perl-5.10
+		dev-perl/Test-Command )"
 
 pkg_setup() {
 	fehopts=(
@@ -44,12 +45,6 @@ src_prepare() {
 src_compile() {
 	tc-export CC
 	emake "${fehopts[@]}" || die
-}
-
-src_test() {
-	if has_version ">=dev-lang/perl-5.10"; then
-		emake test || die
-	fi
 }
 
 src_install() {
