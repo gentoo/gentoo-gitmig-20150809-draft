@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/librsync-0.9.6.ebuild,v 1.10 2009/09/23 18:50:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/librsync-0.9.6.ebuild,v 1.11 2010/10/28 14:29:21 ssuominen Exp $
 
 DESCRIPTION="Flexible remote checksum-based differencing"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -19,9 +19,9 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+	make prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man \
 		install  || die
 
-	dodoc COPYING NEWS INSTALL AUTHORS THANKS README TODO
+	dodoc NEWS INSTALL AUTHORS THANKS README TODO
 }
