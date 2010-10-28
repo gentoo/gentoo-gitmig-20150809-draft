@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.153 2010/10/27 07:19:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.154 2010/10/28 20:46:11 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -573,7 +573,10 @@ configure_51() {
 	myconf="${myconf} --without-pstack"
 	myconf="${myconf} --with-plugindir=/usr/$(get_libdir)/mysql/plugin"
 
-	use max-idx-128 && myconf="${myconf} --with-max-indexes=128"
+	# This is an explict die here, because if we just forcibly disable it, then the
+	# user's data is not accessible.
+	use max-idx-128 && die "Bug #336027: upstream has a corruption issue with max-idx-128 presently"
+	#use max-idx-128 && myconf="${myconf} --with-max-indexes=128"
 	if [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
 		myconf="${myconf} $(use_enable community community-features)"
 		if use community; then
