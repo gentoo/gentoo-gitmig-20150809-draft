@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipsorcery
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ChangeLog,v 1.12 2010/08/21 19:13:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ChangeLog,v 1.13 2010/10/28 12:07:07 ssuominen Exp $
+
+  28 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ipsorcery-2.0.9-r1.ebuild:
+  Remove USE="gtk" because GTK+ 1.2.x is obsolete.
 
 *ipsorcery-2.0.9-r1 (21 Aug 2010)
 
