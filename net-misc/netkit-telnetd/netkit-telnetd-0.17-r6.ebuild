@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r6.ebuild,v 1.17 2010/10/18 16:01:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r6.ebuild,v 1.18 2010/10/28 10:14:13 ssuominen Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/netkit-telnet-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# Patch: [0]
 	# Gentoo lacks a maintainer for this package right now. And a
 	# security problem arose. While reviewing our options for how
@@ -30,13 +30,13 @@ src_unpack() {
 	# better to just stay in sync with debian's own netkit-telnet
 	# package. Lots of bug fixes by them over time which were not in
 	# our telnetd.
-	epatch ${WORKDIR}/netkit-telnet_0.17-${PATCHLEVEL}.diff || die
+	epatch "${WORKDIR}"/netkit-telnet_0.17-${PATCHLEVEL}.diff || die
 
 	# Patch: [1]
 	# after the deb patch we need to add a small patch that defines
 	# gnu source. This is needed for gcc-3.4.x (needs to be pushed
 	# back to the deb folk?)
-	epatch ${FILESDIR}/netkit-telnetd-0.17-cflags-gnu_source.patch \
+	epatch "${FILESDIR}"/netkit-telnetd-0.17-cflags-gnu_source.patch \
 		|| die
 }
 
@@ -64,9 +64,9 @@ src_install() {
 	dosym telnetd.8 /usr/share/man/man8/in.telnetd.8
 	doman telnetlogin/telnetlogin.8
 	dodoc BUGS ChangeLog README
-	dodoc ${FILESDIR}/net.issue.sample
+	dodoc "${FILESDIR}"/net.issue.sample
 	newdoc telnet/README README.telnet
 	newdoc telnet/TODO TODO.telnet
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/telnetd.xinetd telnetd
+	newins "${FILESDIR}"/telnetd.xinetd telnetd
 }

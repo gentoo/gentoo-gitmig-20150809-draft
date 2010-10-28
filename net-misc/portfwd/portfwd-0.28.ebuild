@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.8 2008/06/04 17:25:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.28.ebuild,v 1.9 2010/10/28 10:15:42 ssuominen Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.4"
@@ -20,7 +20,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}/${P/_/}
+	cd "${WORKDIR}"/${P/_/}
 
 	epatch "${FILESDIR}"/${P}-64bit.patch
 
@@ -44,22 +44,22 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${WORKDIR}/${P/_/}
+	cd "${WORKDIR}"/${P/_/}
 
 	econf || die "econf failed"
 	emake
 }
 
 src_install() {
-	cd ${WORKDIR}/${P/_/}
+	cd "${WORKDIR}"/${P/_/}
 
 	einstall
 	prepalldocs
 
 	dodoc cfg/*
 
-	newinitd ${FILESDIR}/${PN}.init ${PN}
-	newconfd ${FILESDIR}/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r8.ebuild,v 1.5 2009/09/23 19:40:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r8.ebuild,v 1.6 2010/10/28 10:13:28 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,8 +16,8 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/0.17-CFLAG-DEF-fix.patch
-	epatch ${FILESDIR}/0.17-timed-opt-parsing.patch
+	epatch "${FILESDIR}"/0.17-CFLAG-DEF-fix.patch
+	epatch "${FILESDIR}"/0.17-timed-opt-parsing.patch
 }
 
 src_compile() {
@@ -34,5 +34,5 @@ src_install() {
 	doman  timed/timedc/timedc.8
 	dodoc  README ChangeLog BUGS
 
-	newinitd ${FILESDIR}/timed.rc6 timed
+	newinitd "${FILESDIR}"/timed.rc6 timed
 }

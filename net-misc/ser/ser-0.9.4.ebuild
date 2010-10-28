@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.9 2010/06/17 21:56:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.10 2010/10/28 10:11:49 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,7 +48,7 @@ src_unpack() {
 	# unpack ser source
 	unpack ${P}_src.tar.gz
 
-	cd ${S}
+	cd "${S}"
 	use ipv6 || \
 		sed -i -e "s/-DUSE_IPV6//g" Makefile.defs
 
@@ -86,28 +86,28 @@ src_unpack() {
 	# ugly i know...
 	for x in ${extmodules}; do
 		MY_A=$(eval echo ${x}-\${$(echo ${x} | tr "[:lower:]" "[:upper:]")_PV}-${PN}-0.9.0)
-		mkdir -p ${S}/modules/${x}
-		cd ${S}/modules/${x}
+		mkdir -p "${S}"/modules/${x}
+		cd "${S}"/modules/${x}
 		unpack ${MY_A}.tar.gz
 		# fix makefiles
 		if [[ -f ${FILESDIR}/${MY_A}.diff ]]; then
-			epatch ${FILESDIR}/${MY_A}.diff
+			epatch "${FILESDIR}"/${MY_A}.diff
 		fi
 	done
 
 	if use mysql || use postgres; then
 		sed -i -e "s:^#DEFS+=-DSQL_ACC$:DEFS+=-DSQL_ACC:" \
-			${S}/modules/acc/Makefile
+			"${S}"/modules/acc/Makefile
 	fi
 
 	# remove sasl if openldap hasn't been built with it
 	if use ldap && ! built_with_use net-nds/openldap sasl; then
 		sed -i -e "s:-lsasl::g" \
-			${S}/modules/ldap/Makefile
+			"${S}"/modules/ldap/Makefile
 
 		if use ssl; then
 			sed -i -e "s:-lsasl::g" \
-				${S}/modules/ldaps/Makefile
+				"${S}"/modules/ldaps/Makefile
 		fi
 	fi
 }
@@ -126,34 +126,34 @@ src_compile() {
 src_install () {
 	make install \
 		prefix="" \
-		bin-prefix=${D}/usr/sbin \
+		bin-prefix="${D}"/usr/sbin \
 		bin-dir="" \
-		cfg-prefix=${D}/etc \
+		cfg-prefix="${D}"/etc \
 		cfg-dir=ser/ \
 		cfg-target=/etc/ser/ \
-		modules-prefix=${D}/usr/lib/ser \
+		modules-prefix="${D}"/usr/lib/ser \
 		modules-dir=modules \
 		modules-target=/usr/lib/ser/modules/ \
-		man-prefix=${D}/usr/share/man \
+		man-prefix="${D}"/usr/share/man \
 		man-dir="" \
-		doc-prefix=${D}/usr/share/doc \
+		doc-prefix="${D}"/usr/share/doc \
 		doc-dir=${P} || die
 
-	newinitd ${FILESDIR}/ser.rc6 ser
-	newconfd ${FILESDIR}/ser.confd ser
+	newinitd "${FILESDIR}"/ser.rc6 ser
+	newconfd "${FILESDIR}"/ser.confd ser
 	exeinto /usr/sbin
 	newexe scripts/harv_ser.sh harv_ser.sh
 	newexe scripts/sc serctl
 	newexe scripts/ser_mysql.sh ser_mysql.sh
 
-	chown -R root:ser ${D}/etc/ser
-	chmod 750 ${D}/etc/ser
-	chmod 640 ${D}/etc/ser/*
+	chown -R root:ser "${D}"/etc/ser
+	chmod 750 "${D}"/etc/ser
+	chmod 640 "${D}"/etc/ser/*
 
 	# fix manpages
 	sed -i	-e "s:^.B /ser-${PV}AUTHORS:.B /usr/share/doc/${PF}/AUTHORS:" \
 		-e "s:^.B /ser:.B /usr/sbin/ser:" \
-		${D}/usr/share/man/*/*
+		"${D}"/usr/share/man/*/*
 }
 
 pkg_preinst() {
@@ -165,8 +165,8 @@ pkg_postinst() {
 	if [[ $previous_installed_version = 0 ]] ; then
 		einfo "Changing permissions on ${ROOT}etc/ser"
 
-		chown -R root:ser ${ROOT}/etc/ser
-		chmod 750 ${ROOT}/etc/ser
-		chmod 640 ${ROOT}/etc/ser/*
+		chown -R root:ser "${ROOT}"/etc/ser
+		chmod 750 "${ROOT}"/etc/ser
+		chmod 640 "${ROOT}"/etc/ser/*
 	fi
 }
