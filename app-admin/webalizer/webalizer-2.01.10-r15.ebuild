@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r15.ebuild,v 1.12 2010/10/28 03:05:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r15.ebuild,v 1.13 2010/10/28 03:14:50 sping Exp $
 
 EAPI="2"
 
@@ -32,18 +32,12 @@ IUSE="apache2 geoip nls xtended"
 DEPEND=">=sys-libs/db-4.2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
-	>=media-libs/gd-1.8.3
+	>=media-libs/gd-1.8.3[png]
 	geoip? ( dev-libs/geoip )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	webapp_pkg_setup
-
-	# prevents "undefined reference" errors... see bug #65163
-	if ! built_with_use media-libs/gd png; then
-		ewarn "media-libs/gd must be built with png for this package"
-		ewarn "to function."
-		die "recompile gd with USE=\"png\""
-	fi
 
 	# USE=nls has no real meaning if LINGUAS isn't set
 	if use nls && [ -z "${LINGUAS}" ]; then
