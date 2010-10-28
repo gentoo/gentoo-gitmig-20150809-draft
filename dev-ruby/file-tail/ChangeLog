@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/file-tail
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.1 2010/10/28 06:17:43 graaff Exp $
+
+*file-tail-1.0.5 (28 Oct 2010)
+
+  28 Oct 2010; Hans de Graaff <graaff@gentoo.org> +file-tail-1.0.5.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of www-apache/passenger.
+
