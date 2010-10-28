@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.10.ebuild,v 1.1 2010/09/26 17:06:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.12.ebuild,v 1.1 2010/10/28 17:48:20 polynomial-c Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -133,16 +133,25 @@ src_install() {
 	fi
 
 		# Create /usr/bin/firefox-bin
+if use amd64 ; then
 		dodir /usr/bin/
 		cat <<EOF >"${D}"/usr/bin/${PN}
 #!/bin/sh
 unset LD_PRELOAD
 LD_LIBRARY_PATH="/opt/firefox/"
-if use amd64 ; then
 GTK_PATH=/usr/lib32/gtk-2.0/
-fi
 exec /opt/${MY_PN}/${MY_PN} "\$@"
 EOF
+else
+		dodir /usr/bin/
+		cat <<EOF >"${D}"/usr/bin/${PN}
+#!/bin/sh
+unset LD_PRELOAD
+LD_LIBRARY_PATH="/opt/firefox/"
+GTK_PATH=/usr/lib32/gtk-2.0/
+exec /opt/${MY_PN}/${MY_PN} "\$@"
+EOF
+fi
 		fperms 0755 /usr/bin/${PN}
 
 	# revdep-rebuild entry
