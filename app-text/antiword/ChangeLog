@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antiword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.41 2010/04/05 21:38:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.42 2010/10/28 17:24:21 hwoarang Exp $
+
+  28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add Montjoie as maintainer and me as proxy
 
   05 Apr 2010; Jonathan Callen <abcd@gentoo.org> antiword-0.37.ebuild,
   +files/antiword-0.37-prefix.patch:
