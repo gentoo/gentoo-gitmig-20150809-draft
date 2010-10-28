@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.34.ebuild,v 1.1 2010/07/17 03:56:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.34.ebuild,v 1.2 2010/10/28 16:51:14 radhermit Exp $
 
 EAPI="2"
 
@@ -21,14 +21,14 @@ IUSE="curl debug libmms static wxwidgets"
 RDEPEND="
 	sys-libs/zlib
 	!static? (
-		media-libs/libzen[wxwidgets=]
+		media-libs/libzen
 		~media-libs/lib${P}[curl=,libmms=]
 	)
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	static? (
-		media-libs/libzen[static-libs,wxwidgets=]
+		media-libs/libzen[static-libs]
 		~media-libs/lib${P}[curl=,libmms=,static-libs]
 	)"
 
