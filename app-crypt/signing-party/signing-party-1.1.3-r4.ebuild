@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r4.ebuild,v 1.1 2010/10/15 23:00:34 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r4.ebuild,v 1.2 2010/10/28 17:07:52 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/s/signing-party/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos"
 IUSE=""
 
 DEPEND=""
@@ -39,10 +39,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.diff
 
 	sed -i -e \
-	"s:/usr/share/doc/signing-party/caff/caffrc.sample:/usr/share/doc/${P}/caff/caffrc.sample.gz:g" \
+	"s:/usr/share/doc/signing-party/caff/caffrc.sample:${EPREFIX}/usr/share/doc/${P}/caff/caffrc.sample.gz:g" \
 	caff/caff || die "Sed failed"
 	sed -i -e "s/make pgpring/\$(MAKE) pgpring/" keyanalyze/Makefile \
 	|| die "Sed failed"
+	sed -i -e \
+		"s|:/usr/share/signing-party|:${EPREFIX}/usr/share/signing-party|" \
+		gpgsigs/gpgsigs || die "Sed failed"
 }
 
 src_compile() {
