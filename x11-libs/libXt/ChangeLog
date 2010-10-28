@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.81 2010/09/10 17:13:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.82 2010/10/28 22:00:14 scarabeus Exp $
+
+*libXt-1.0.9 (28 Oct 2010)
+
+  28 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> +libXt-1.0.9.ebuild:
+  Version bump.
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -libXt-1.0.7-r1.ebuild, -files/libXt-1.0.7-fix-cross-compile-again.patch:
