@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.5.ebuild,v 1.1 2008/09/02 18:02:27 sbriesen Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ser2net-2.5.ebuild,v 1.2 2010/10/28 09:38:59 ssuominen Exp $
 
 inherit eutils autotools
 
