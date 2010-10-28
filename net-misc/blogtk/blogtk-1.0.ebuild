@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.0.ebuild,v 1.6 2008/07/26 22:48:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.0.ebuild,v 1.7 2010/10/28 12:32:21 ssuominen Exp $
 
 inherit eutils
 

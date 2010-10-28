@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.4 2007/01/07 10:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ixp4xx/ixp4xx-2.1.ebuild,v 1.5 2010/10/28 12:32:57 ssuominen Exp $
 
 inherit eutils toolchain-funcs linux-mod
 
