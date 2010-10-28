@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.15 2010/10/17 04:54:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.16 2010/10/28 09:58:35 ssuominen Exp $
 
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/cbqinit"
@@ -17,7 +17,7 @@ DEPEND=""
 S=${WORKDIR}
 
 src_unpack() {
-	cp ${DISTDIR}/cbq.init-v${PV} ${S}
+	cp "${DISTDIR}"/cbq.init-v${PV} "${S}"
 }
 
 src_compile() {
@@ -33,10 +33,10 @@ src_install() {
 	exeinto /usr/sbin
 	doexe cbqinit
 
-	newinitd ${FILESDIR}/rc_cbqinit cbqinit
+	newinitd "${FILESDIR}"/rc_cbqinit cbqinit
 
 	insinto /etc/cbqinit/sample
-	newins ${FILESDIR}/cbq-1280.My_first_shaper.sample cbq-1280.My_first_shaper
+	newins "${FILESDIR}"/cbq-1280.My_first_shaper.sample cbq-1280.My_first_shaper
 
 	dodoc cbqinit
 }

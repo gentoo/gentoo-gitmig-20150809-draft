@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.4.1.ebuild,v 1.3 2007/04/28 22:44:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.4.1.ebuild,v 1.4 2010/10/28 09:59:52 ssuominen Exp $
 
 inherit eutils
 
@@ -19,12 +19,12 @@ DIBBLER_DOCDIR=${WORKDIR}/doc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-gcc-4.1.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-gcc-4.1.patch
 }
 
 src_compile() {
-	emake server client relay || die "Compilation failed"
+	emake server client relay || die
 }
 
 src_install() {
@@ -39,9 +39,9 @@ src_install() {
 	dodir /var/lib/dibbler
 	use doc && dodoc ${DIBBLER_DOCDIR}/dibbler-user.pdf \
 			${DIBBLER_DOCDIR}/dibbler-devel.pdf
-	doinitd ${FILESDIR}/dibbler-server \
-			${FILESDIR}/dibbler-client \
-			${FILESDIR}/dibbler-relay
+	doinitd "${FILESDIR}"/dibbler-server \
+			"${FILESDIR}"/dibbler-client \
+			"${FILESDIR}"/dibbler-relay
 }
 
 pkg_postinst() {

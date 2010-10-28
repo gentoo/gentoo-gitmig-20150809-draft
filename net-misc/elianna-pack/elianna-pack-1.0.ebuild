@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.4 2007/01/06 16:38:09 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.5 2010/10/28 10:02:33 ssuominen Exp $
 
 DESCRIPTION="Argentinean spanish sounds for asterisk"
 HOMEPAGE="http://www.ip-flow.com.ar/elianna_pack.html"
@@ -25,8 +25,8 @@ src_install() {
 
 	# fix permissions
 	einfo "Fixing permissions"
-	chown -R asterisk:asterisk ${D}/var/lib/asterisk
-	chmod -R u=rwX,g=rX,o=     ${D}/var/lib/asterisk
+	chown -R asterisk:asterisk "${D}"/var/lib/asterisk
+	chmod -R u=rwX,g=rX,o=     "${D}"/var/lib/asterisk
 }
 
 pkg_postinst() {

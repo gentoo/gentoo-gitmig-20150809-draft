@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r5.ebuild,v 1.2 2010/07/11 13:50:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r5.ebuild,v 1.3 2010/10/28 10:03:16 ssuominen Exp $
 
 inherit eutils linux-info
 
@@ -40,11 +40,11 @@ pkg_setup() {
 
 src_compile() {
 	# Patching Makefile and tuncfg source code
-	epatch ${FILESDIR}/tuncfg-forcebuild.patch
+	epatch "${FILESDIR}"/tuncfg-forcebuild.patch
 	# forcing compile of tuncfg
-	rm -f ${S}/tuncfg/tuncfg
+	rm -f "${S}"/tuncfg/tuncfg
 	# Compile Tuncfg
-	emake -sC ${S}/tuncfg || die "Compiling of tunecfg failed"
+	emake -sC "${S}"/tuncfg || die "Compiling of tunecfg failed"
 }
 
 src_install() {
