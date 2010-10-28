@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.9 2009/03/12 19:36:43 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.10 2010/10/28 14:35:43 ssuominen Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -27,13 +27,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	tar -xzf ${DISTDIR}/${A} -C ${WORKDIR} || die "Unpacking failed"
+	tar -xzf "${DISTDIR}"/${A} -C "${WORKDIR}" || die
 
-	cd ${S}
+	cd "${S}"
 	# Makefile does not work correctly, fix
-	epatch ${FILESDIR}/${PN}-1.18.0-install.diff
+	epatch "${FILESDIR}"/${PN}-1.18.0-install.diff
 	# Do not include compiler.h, bug #168791
-	epatch "${FILESDIR}/${P}-compilerh.patch"
+	epatch "${FILESDIR}"/${P}-compilerh.patch
 }
 
 src_compile() {
@@ -51,16 +51,16 @@ src_compile() {
 }
 
 src_install() {
-	emake ${makeopts} PREFIX=/usr DESTDIR=${D} install || die "emake install failed"
+	emake ${makeopts} PREFIX=/usr DESTDIR="${D}" install || die
 
 	###
 	# Compatibility "hacks"
 	#
 
 	# debug / no debug use different suffixes - some packages build with only one
-	for i in ${D}/usr/lib/libh323_linux_x86_*; do
-		use debug && ln -s ${D}/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_r/_n} \
-			|| ln -s ${D}/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_n/_r}
+	for i in "${D}"/usr/lib/libh323_linux_x86_*; do
+		use debug && ln -s "${D}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_r/_n} \
+			|| ln -s "${D}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_n/_r}
 	done
 
 	# set notrace corerctly
@@ -69,7 +69,7 @@ src_install() {
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
 	echo -e "opt:\n\t:" > ${T}/Makefile
-	doins ${T}/Makefile
+	doins "${T}"/Makefile
 
 	# these should point to the right directories,
 	# openh323.org apps and others need this
