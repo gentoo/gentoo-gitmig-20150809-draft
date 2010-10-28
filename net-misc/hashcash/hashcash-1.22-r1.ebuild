@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.22-r1.ebuild,v 1.2 2009/09/23 19:36:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/hashcash-1.22-r1.ebuild,v 1.3 2010/10/28 10:07:31 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,16 +13,14 @@ LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 
-DEPEND=""
-RDEPEND=""
-
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}
+	cd "${S}"
 	sed -i -e "/COPT_GENERIC = -O3/d" Makefile || die
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) generic || die
+	emake CC="$(tc-getCC)" generic || die
 }
 
 src_install() {
