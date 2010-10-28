@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.2 2010/06/30 06:47:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.3 2010/10/28 07:33:31 radhermit Exp $
+
+*libzen-0.4.16 (28 Oct 2010)
+
+  28 Oct 2010; Tim Harder <radhermit@gentoo.org> -libzen-0.4.15.ebuild,
+  +libzen-0.4.16.ebuild:
+  Version bump and remove old. Update DESCRIPTION, remove old wxwidgets
+  support, and use emake instead of einstall.
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libzen-0.4.15.ebuild:
   keyworded ~arch for x86, bug 324205

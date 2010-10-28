@@ -1,14 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.15.ebuild,v 1.2 2010/06/30 06:47:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.16.ebuild,v 1.1 2010/10/28 07:33:31 radhermit Exp $
 
 EAPI="2"
-WX_GTK_VER="2.8"
 
-inherit autotools wxwidgets multilib
+inherit autotools multilib
 
 MY_PN="ZenLib"
-DESCRIPTION="Shared library for libmediainfo and medianfo-gui"
+DESCRIPTION="Shared library for libmediainfo and mediainfo"
 HOMEPAGE="http://sourceforge.net/projects/zenlib"
 SRC_URI="mirror://sourceforge/zenlib/${MY_PN}%20-%20Sources/${PV}/${PN}_${PV}.tar.bz2"
 
@@ -17,10 +16,9 @@ S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 LICENSE="as-is ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc static-libs wxwidgets"
+IUSE="debug doc static-libs"
 
-RDEPEND="sys-libs/zlib
-	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )"
+RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
@@ -34,8 +32,6 @@ src_configure() {
 		--enable-shared \
 		--enable-unicode \
 		$(use_enable debug) \
-		$(use_with wxwidgets) \
-		$(use_with wxwidgets wx-gui) \
 		$(use_enable static-libs static)
 }
 
@@ -48,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto "/usr/$(get_libdir)/pkgconfig"
 	doins "${PN}.pc" || die
