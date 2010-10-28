@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/apt-proxy-1.3.0.ebuild,v 1.6 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/apt-proxy-1.3.0.ebuild,v 1.7 2010/10/28 10:41:42 ssuominen Exp $
 
 inherit eutils
 
@@ -25,23 +25,22 @@ pkg_setup () {
 }
 
 src_compile() {
-	einfo "Applying patch..."
 	#patch -u apt-proxy < ${FILESDIR}/${P}-sh.patch
-	epatch ${FILESDIR}/${P}-sh.patch
+	epatch "${FILESDIR}"/${P}-sh.patch
 }
 
 src_install() {
 	dosbin apt-proxy
 
 	insinto /etc/apt-proxy ; doins apt-proxy.conf
-	insinto /etc/xinetd.d ; doins ${FILESDIR}/apt-proxy
+	insinto /etc/xinetd.d ; doins "${FILESDIR}"/apt-proxy
 
 	dodoc README INSTALL HISTORY
 	doman apt-proxy.{8,conf.5}
 
 	# Create the log file with the proper permissions
 	dodir /var/log
-	touch ${D}/var/log/apt-proxy.log
+	touch "${D}"/var/log/apt-proxy.log
 	fowners apt-proxy:apt-proxy /var/log/apt-proxy.log
 
 	# Create the cache directories and set the proper permissions

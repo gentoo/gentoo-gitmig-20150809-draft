@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.53.ebuild,v 1.2 2008/03/25 18:06:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.53.ebuild,v 1.3 2010/10/28 10:37:49 ssuominen Exp $
 
 DESCRIPTION="Graphical frontend for managing and running SSH and SCP connections"
 HOMEPAGE="http://themediahost.de/secpanel/"
@@ -24,14 +24,14 @@ src_unpack() {
 	# optionally remove gifs...
 	if ! use gif; then
 		ebegin "Setting secpanel to use PPM images"
-		sed -i 's/\.gif/\.ppm/g' ${S}/usr/local/bin/secpanel
+		sed -i 's/\.gif/\.ppm/g' "${S}"/usr/local/bin/secpanel
 		eend $?
 	fi
 }
 
 src_compile() {
 	if ! use gif; then
-		cd ${S}/usr/local/lib/secpanel/images
+		cd "${S}"/usr/local/lib/secpanel/images
 		einfo "Converting all GIF images to PPM format..."
 		for i in *.gif
 		do
@@ -47,22 +47,22 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/usr/local/bin/secpanel
+	dobin "${S}"/usr/local/bin/secpanel
 	dodir /usr/lib/secpanel /usr/lib/secpanel/images
 
 	insinto /usr/lib/secpanel
-	doins ${S}/usr/local/lib/secpanel/*.{tcl,config,profile,dist,wait}
+	doins "${S}"/usr/local/lib/secpanel/*.{tcl,config,profile,dist,wait}
 
 	insinto /usr/lib/secpanel/images
 
 	if ! use gif; then
-		doins ${S}/usr/local/lib/secpanel/images/*.ppm
+		doins "${S}"/usr/local/lib/secpanel/images/*.ppm
 	else
-		doins ${S}/usr/local/lib/secpanel/images/*.gif
+		doins "${S}"/usr/local/lib/secpanel/images/*.gif
 	fi
 
 	fperms 755 /usr/lib/secpanel/{listserver.tcl,secpanel.dist,secpanel.wait}
 
-	cd ${S}/usr/share/doc/${P/53/5.3/}
+	cd "${S}"/usr/share/doc/${P/53/5.3/}
 	dodoc CHANGES README
 }

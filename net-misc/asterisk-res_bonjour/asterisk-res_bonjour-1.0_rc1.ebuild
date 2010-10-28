@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bonjour/asterisk-res_bonjour-1.0_rc1.ebuild,v 1.2 2009/08/29 17:41:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-res_bonjour/asterisk-res_bonjour-1.0_rc1.ebuild,v 1.3 2010/10/28 10:46:25 ssuominen Exp $
 
 inherit eutils
 
@@ -24,9 +24,9 @@ S="${WORKDIR}/${MY_PN}-${PV/_/}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# use asterisk-config...
-	epatch ${FILESDIR}/${MY_PN}-1.0_rc1-astcfg.diff
+	epatch "${FILESDIR}"/${MY_PN}-1.0_rc1-astcfg.diff
 }
 
 src_compile() {
@@ -34,13 +34,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc README bonjour.conf.sample
 
 	# fix permissions
 	if [[ -n "$(egetent group asterisk)" ]]; then
-		chown -R root:asterisk ${D}etc/asterisk
-		chmod -R u=rwX,g=rX,o= ${D}etc/asterisk
+		chown -R root:asterisk "${D}"etc/asterisk
+		chmod -R u=rwX,g=rX,o= "${D}"etc/asterisk
 	fi
 }

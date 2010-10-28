@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-1.6.ebuild,v 1.10 2004/07/15 02:54:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-1.6.ebuild,v 1.11 2010/10/28 10:48:18 ssuominen Exp $
 
 IUSE="gtk"
 
@@ -15,7 +15,7 @@ DEPEND="gtk?	( =x11-libs/gtk+-1.2* )"
 
 src_unpack() {
 	unpack ipsorc-${PV}.tar.gz
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	mv ipsorc-${PV} ipsorcery-${PV}
 }
 

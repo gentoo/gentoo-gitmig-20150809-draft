@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.29.ebuild,v 1.2 2010/08/26 20:43:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.29.ebuild,v 1.3 2010/10/28 10:41:08 ssuominen Exp $
 
 EAPI="2"
 
@@ -25,9 +25,9 @@ DEPEND="sys-apps/sed"
 RDEPEND=""
 
 src_prepare() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	epatch "${DISTDIR}"/${DEBIAN_PATCH}
-	cd ${S}
+	cd "${S}"
 	for i in debian/adjtimexconfig debian/adjtimexconfig.8 ; do
 		sed -e 's|/etc/default/adjtimex|/etc/conf.d/adjtimex|' \
 			-i.orig ${i}

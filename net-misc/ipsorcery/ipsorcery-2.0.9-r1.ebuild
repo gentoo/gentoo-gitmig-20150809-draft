@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-2.0.9-r1.ebuild,v 1.1 2010/08/21 19:13:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-2.0.9-r1.ebuild,v 1.2 2010/10/28 10:48:18 ssuominen Exp $
 
 inherit toolchain-funcs
 DESCRIPTION="Ipsorcery allows you to generate IP, TCP, UDP, ICMP, and IGMP packets."
@@ -20,7 +20,7 @@ S=${WORKDIR}/ipsorc-${PV}
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:-g -O2:${CFLAGS} ${LDFLAGS}:g" \
-		-e "/^CC/s:=.*$:="$(tc-getCC)":" ${S}/Makefile \
+		-e "/^CC/s:=.*$:="$(tc-getCC)":" "${S}"/Makefile \
 			|| die "sed failed"
 }
 
