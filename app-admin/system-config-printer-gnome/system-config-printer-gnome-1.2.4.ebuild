@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.4.ebuild,v 1.4 2010/10/20 18:29:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.4.ebuild,v 1.5 2010/10/28 18:50:55 reavertm Exp $
 
 EAPI="3"
 
@@ -24,7 +24,6 @@ RESTRICT="test"
 
 RDEPEND="
 	>=app-admin/system-config-printer-common-${PV}
-	dev-python/libgnome-python
 	dev-python/notify-python
 	>=dev-python/pygtk-2.4
 	dev-python/pyxml
