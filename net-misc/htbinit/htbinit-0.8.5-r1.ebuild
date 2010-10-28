@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r1.ebuild,v 1.3 2010/10/28 10:06:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r1.ebuild,v 1.4 2010/10/28 10:08:38 ssuominen Exp $
 
 inherit eutils linux-mod
 
@@ -70,11 +70,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	cp ${DISTDIR}/htb.init-v${PV} ${S}/htb.init
+	cp "${DISTDIR}"/htb.init-v${PV} "${S}"/htb.init
 }
 
 src_compile() {
-	sed -i 's|/etc/sysconfig/htb|/etc/htb|g' ${S}/htb.init
+	sed -i 's|/etc/sysconfig/htb|/etc/htb|g' "${S}"/htb.init
 	epatch "${FILESDIR}"/htb.init-v0.8.5_tos.patch
 	use ipv6 && epatch "${FILESDIR}"/htb_0.8.5_ipv6.diff
 	use esfq && epatch "${FILESDIR}"/htb_0.8.5_esfq.diff
