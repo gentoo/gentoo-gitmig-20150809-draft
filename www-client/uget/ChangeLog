@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.15 2010/08/17 01:04:15 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.16 2010/10/28 21:13:16 wired Exp $
+
+*uget-1.6.1 (28 Oct 2010)
+
+  28 Oct 2010; Alex Alexander <wired@gentoo.org> +uget-1.6.1.ebuild,
+  +files/uget-1.6.1-as-needed.patch:
+  version bump
 
 *uget-1.6.0 (17 Aug 2010)
 *uget-1.5.0.3 (17 Aug 2010)
