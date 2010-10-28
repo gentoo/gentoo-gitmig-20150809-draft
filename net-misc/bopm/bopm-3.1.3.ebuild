@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.3.ebuild,v 1.3 2010/06/26 17:40:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.3.ebuild,v 1.4 2010/10/28 09:55:53 ssuominen Exp $
 
 inherit eutils
 
@@ -30,20 +30,20 @@ src_install () {
 		-e 's!/some/path/scan.log!/var/log/bopm/scan.log!' bopm.conf.sample
 
 	make \
-		DESTDIR=${D} \
-		sysconfdir=${D}/etc \
+		DESTDIR="${D}" \
+		sysconfdir="${D}"/etc \
 		datadir=/usr/share/doc/${PF} \
-		localstatedir=${D}/var/log/bopm \
+		localstatedir="${D}"/var/log/bopm \
 		install || die "install failed"
 
 	fperms 600 /etc/bopm.conf
 
 	# Remove libopm related files, because bopm links statically to it
 	# If anybody wants libopm, please install net-libs/libopm
-	rm -r ${D}/usr/lib ${D}/usr/include
+	rm -r "${D}"/usr/lib "${D}"/usr/include
 
-	newinitd ${FILESDIR}/bopm.init.d bopm
-	newconfd ${FILESDIR}/bopm.conf.d bopm
+	newinitd "${FILESDIR}"/bopm.init.d bopm
+	newconfd "${FILESDIR}"/bopm.conf.d bopm
 
 	dodoc ChangeLog INSTALL README TODO
 }
@@ -51,7 +51,7 @@ src_install () {
 pkg_postinst() {
 	enewuser bopm
 
-	install -d -m 0700 -o bopm -g root ${ROOT}/var/log/bopm
-	install -d -m 0700 -o bopm -g root ${ROOT}/var/run/bopm
-	chown bopm ${ROOT}/etc/bopm.conf
+	install -d -m 0700 -o bopm -g root "${ROOT}"/var/log/bopm
+	install -d -m 0700 -o bopm -g root "${ROOT}"/var/run/bopm
+	chown bopm "${ROOT}"/etc/bopm.conf
 }
