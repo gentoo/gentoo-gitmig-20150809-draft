@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.14 2010/10/23 20:53:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.15 2010/10/28 11:43:33 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -257,6 +257,11 @@ xorg-2_flags_setup() {
 	[[ ${CHOST} == *-winnt* ]] && append-cppflags -DWIN32 -D__STDC__
 	# hardened ldflags
 	[[ ${PN} = xorg-server || -n ${DRIVER} ]] && append-ldflags -Wl,-z,lazy
+
+	# Quite few packages fail on runtime without these:
+	filter-flags -Wl,-Bdirect
+	filter-ldflags -Bdirect
+	filter-ldflags -Wl,-Bdirect
 }
 
 # @FUNCTION: xorg-2_src_configure
