@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.9 2010/10/26 07:26:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.10 2010/10/28 06:45:18 nirbheek Exp $
+
+  28 Oct 2010; <nirbheek@gentoo.org> clutter-1.4.0.ebuild:
+  Fix broken sed
 
 *clutter-1.4.0 (26 Oct 2010)
 

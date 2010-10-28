@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.4.0.ebuild,v 1.1 2010/10/26 07:26:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.4.0.ebuild,v 1.2 2010/10/28 06:45:18 nirbheek Exp $
 
 EAPI="2"
 
@@ -47,7 +47,9 @@ DEPEND="${RDEPEND}
 src_configure() {
 	# We only need conformance tests, the rest are useless for us
 	sed -e 's/^\(SUBDIRS =\).*/\1/g' \
-		-i tests/Makefile.{am,in} || die "tests sed failed"
+		-i tests/Makefile.am || die "am tests sed failed"
+	sed -e 's/^\(SUBDIRS =\).*/\1 \\/g' \
+		-i tests/Makefile.in || die "in tests sed failed"
 
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
 	# XXX: Profiling, coverage disabled for now
