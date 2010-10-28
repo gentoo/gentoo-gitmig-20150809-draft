@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-1.5.7.ebuild,v 1.2 2005/07/14 13:07:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-1.5.7.ebuild,v 1.3 2010/10/28 09:39:29 ssuominen Exp $
 
 DESCRIPTION="vde is a virtual distributed ethernet emulator for emulators like qemu, bochs, and uml."
 SRC_URI="mirror://sourceforge/vde/${P}.tgz"
@@ -31,5 +31,5 @@ src_install() {
 
 	BIN_DIR=/usr/bin LIB_DIR=/usr/lib MAN_DIR=/usr/man make DESTDIR=${D} install || die
 
-	dodoc COPYING INSTALL PORTS README
+	dodoc INSTALL PORTS README
 }
