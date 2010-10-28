@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pdb-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.2 2010/10/28 16:43:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.3 2010/10/28 20:01:39 jlec Exp $
+
+*pdb-tools-0.1.4-r2 (28 Oct 2010)
+
+  28 Oct 2010; Justin Lecher <jlec@gentoo.org> -pdb-tools-0.1.4-r1.ebuild,
+  +pdb-tools-0.1.4-r2.ebuild:
+  important fix and Support for Python ABIs
 
 *pdb-tools-0.1.4-r1 (28 Oct 2010)
 
