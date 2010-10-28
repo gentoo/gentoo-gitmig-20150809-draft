@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r17.ebuild,v 1.5 2010/10/28 03:14:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r17.ebuild,v 1.6 2010/10/28 03:35:18 sping Exp $
 
 EAPI="2"
 
@@ -53,7 +53,8 @@ pkg_setup() {
 
 src_prepare() {
 	if use geoip && ! use xtended; then
-		epatch "${WORKDIR}"/geolizer_${MY_PV}-patch/geolizer.patch
+		epatch "${WORKDIR}"/geolizer_${MY_PV}-patch/geolizer.patch \
+				"${FILESDIR}"/geolizer-2.01.10_p20070115-strip.patch
 	else
 		epatch "${FILESDIR}"/${PN}-db4.2.patch
 		if use xtended; then
