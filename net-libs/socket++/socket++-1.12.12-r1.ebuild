@@ -1,9 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.7 2009/03/07 04:32:06 darkside Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.8 2010/10/28 14:38:10 ssuominen Exp $
 
 inherit autotools
 
@@ -31,7 +28,7 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use doc ; then
-		cd ${S}/doc
+		cd "${S}"/doc
 		einfo "Building HTML documentation"
 		# the 'html' target in both ${S}/Makefile and ${S}/doc/Makefile
 		# do indeed exist (and succeed when run manually), but fail when
@@ -41,7 +38,7 @@ src_compile() {
 }
 
 src_test() {
-	cd ${S}/test
+	cd "${S}"/test
 	make check || die "make check failed"
 }
 
@@ -50,7 +47,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README* THANKS || die "dodoc failed"
 
 	insinto /usr/lib/pkgconfig
-	doins ${FILESDIR}/${PN}.pc || die "failed to install pkgconfig script"
+	doins "${FILESDIR}"/${PN}.pc || die "failed to install pkgconfig script"
 	dosed "s/PV/${PV}/" /usr/lib/pkgconfig/${PN}.pc || die "sed failed"
 
 	if use doc ; then
