@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r1.ebuild,v 1.1 2009/10/21 21:46:11 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r1.ebuild,v 1.2 2010/10/28 10:35:11 ssuominen Exp $
 
 EAPI=0
 inherit eutils
@@ -17,14 +17,13 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	cd "${S}"
 	epatch "${FILESDIR}"/rwhoisd-destdir-${PV}.patch  || die "epatch failed"
 	econf
 	emake -j1
 }
 
 src_install () {
-	emake -j1 install DESTDIR=${D}
+	emake -j1 install DESTDIR="${D}" || die
 	doinitd "${FILESDIR}"/rwhoisd  || die "doinitd failed"
 	newconfd "${FILESDIR}"/rwhoisd.conf rwhoisd || die "newconfd failed"
 }
