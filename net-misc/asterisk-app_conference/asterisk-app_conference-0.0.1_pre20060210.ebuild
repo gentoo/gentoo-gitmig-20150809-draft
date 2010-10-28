@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/asterisk-app_conference-0.0.1_pre20060210.ebuild,v 1.2 2007/03/12 20:23:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/asterisk-app_conference-0.0.1_pre20060210.ebuild,v 1.3 2010/10/28 10:27:37 ssuominen Exp $
 
 inherit eutils
 
@@ -18,26 +18,23 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 # depends on glibc's iconv support
-DEPEND="sys-libs/glibc
-	>=net-misc/asterisk-1.2.0
+DEPEND=">=net-misc/asterisk-1.2.0
 	!=net-misc/asterisk-1.0*"
 
 S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
+	cd "${S}"
 	# use asterisk-config...
-	epatch ${FILESDIR}/${MY_PN}-20060210-astcfg.diff
+	epatch "${FILESDIR}"/${MY_PN}-20060210-astcfg.diff
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1 || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
-	dodoc README LICENSE
+	make DESTDIR="${D}" install || die
+	dodoc README
 }
