@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.4.8.ebuild,v 1.2 2010/10/24 21:13:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/winpdb-1.4.8.ebuild,v 1.3 2010/10/28 17:39:04 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE="+wxwidgets"
 
 DEPEND=">=dev-python/pycrypto-2.0.1

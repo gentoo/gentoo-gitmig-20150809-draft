@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/winpdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.23 2010/10/24 21:13:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.24 2010/10/28 17:39:04 phajdan.jr Exp $
+
+  28 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> winpdb-1.4.8.ebuild:
+  x86 stable wrt bug #342493
 
   24 Oct 2010; Markos Chandras <hwoarang@gentoo.org> winpdb-1.4.8.ebuild:
   Stable on amd64 wrt bug #342493
