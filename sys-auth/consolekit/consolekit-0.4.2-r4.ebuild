@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r4.ebuild,v 1.1 2010/10/28 16:02:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r4.ebuild,v 1.2 2010/10/28 16:16:45 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils linux-info multilib pam
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.80
 	x11-libs/libX11
 	pam? ( virtual/pam )
 	policykit? ( >=sys-auth/polkit-0.96 )
-	!<sys-apps/shadow-4.1.4.2-r6"
+	!<sys-apps/shadow-4.1.4.2-r6
+	!<sys-auth/pambase-20101024"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt

@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.80 2010/10/28 16:02:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.81 2010/10/28 16:16:45 ssuominen Exp $
+
+  28 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  consolekit-0.4.2-r4.ebuild:
+  Block <pambase-20101024 because of missing pam_loginuid.so.
 
 *consolekit-0.4.2-r4 (28 Oct 2010)
 
