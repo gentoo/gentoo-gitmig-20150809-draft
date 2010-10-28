@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12112 2010/10/28 19:36:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12113 2010/10/28 21:29:28 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (28 Oct 2010)
+# testing mask for development series
+>=app-misc/tracker-0.9
 
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Oct 2010)
 # testing mask for upcoming nasm releases
