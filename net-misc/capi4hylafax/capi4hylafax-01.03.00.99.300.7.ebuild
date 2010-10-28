@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.7.ebuild,v 1.1 2007/11/18 01:50:26 sbriesen Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.7.ebuild,v 1.2 2010/10/28 10:01:23 ssuominen Exp $
 
 inherit eutils versionator autotools
 
