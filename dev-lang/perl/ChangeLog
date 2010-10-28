@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.332 2010/10/24 21:20:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.333 2010/10/28 18:05:38 tove Exp $
+
+  28 Oct 2010; Torsten Veller <tove@gentoo.org> perl-5.12.2-r1.ebuild:
+  Add Tie::Hash to MINIMAL_PERL_INSTALL
 
   24 Oct 2010; Markus Meier <maekke@gentoo.org> perl-5.12.2-r1.ebuild:
   arm stable, bug #340023
