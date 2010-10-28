@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.7 2009/09/23 19:48:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.8 2010/10/28 09:40:53 ssuominen Exp $
 
 inherit eutils
 
@@ -26,9 +26,9 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile.patch
-	epatch ${FILESDIR}/${P}-lzo2.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-lzo2.patch
 }
 
 src_compile() {
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} prefix=/usr \
+	make DESTDIR="${D}" prefix=/usr \
 		mandir=/usr/share/man \
 		infodir=/usr/share/info \
 		datadir=/usr/share \
@@ -55,10 +55,10 @@ src_install () {
 
 	dodoc ChangeLog Credits FAQ README README.Setup README.Shaper TODO
 
-	newinitd ${FILESDIR}/vtun.rc vtun
+	newinitd "${FILESDIR}"/vtun.rc vtun
 
 	insinto etc
-	doins ${FILESDIR}/vtund-start.conf
+	doins "${FILESDIR}"/vtund-start.conf
 }
 
 pkg_postinst () {

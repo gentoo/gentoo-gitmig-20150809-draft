@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/vncrec-0.2.ebuild,v 1.6 2007/07/22 08:06:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/vncrec-0.2.ebuild,v 1.7 2010/10/28 09:41:11 ssuominen Exp $
 
 DESCRIPTION="VNC session recorder and player"
 HOMEPAGE="http://www.sodan.org/~penny/vncrec/"
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc ChangeLog README README.vnc
 }

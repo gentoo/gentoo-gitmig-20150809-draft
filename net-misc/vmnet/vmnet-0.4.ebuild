@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.9 2006/03/25 19:39:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.10 2010/10/28 09:39:53 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ DEPEND="sys-apps/net-tools"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${DISTDIR}/${P/-/_}-1.diff.gz
+	epatch "${DISTDIR}"/${P/-/_}-1.diff.gz
 }
 
 src_compile() {
