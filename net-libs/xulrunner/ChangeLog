@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.370 2010/10/28 13:53:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.371 2010/10/28 15:06:59 polynomial-c Exp $
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/1009-armv4t-nanojit-v2.patch, +xulrunner-1.9.2.8.ebuild:
+  Readded latest stable sparc version which I foolishly removed from the
+  tree.
 
 *xulrunner-1.9.2.12 (28 Oct 2010)
 
