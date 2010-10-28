@@ -6,6 +6,10 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
 	<use>
 		<flag name="html">Install HTML documentation</flag>
 		<flag name="libvirt">Enable support for virtual machine management through <pkg>app-emulation/libvirt</pkg></flag>
