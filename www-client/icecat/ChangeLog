@@ -1,6 +1,10 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.52 2010/10/28 15:58:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.53 2010/10/28 17:56:28 polynomial-c Exp $
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org> ChangeLog:
+  Recreated manifest for ru language pack. Thanks to Paramonov Valeriy who
+  reported this in bug #343121.
 
   28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
   +files/xulrunner-1.9.2-gtk+-2.21.patch, icecat-3.6.11.ebuild:
