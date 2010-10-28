@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.40 2010/09/30 18:08:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.41 2010/10/28 09:20:32 ssuominen Exp $
+
+  28 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  files/libproxy-0.4.6-mozjs-link_directory.patch:
+  Update to upstream patch wrt #339216 by Nicolas Dufresne.
 
   30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> libproxy-0.4.6.ebuild,
   +files/libproxy-0.4.6-mozjs-link_directory.patch:
