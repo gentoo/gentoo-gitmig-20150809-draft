@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4.ebuild,v 1.1 2010/10/28 15:48:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4.ebuild,v 1.2 2010/10/28 15:52:00 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,6 +32,7 @@ src_prepare() {
 	python_convert_shebangs -r 2 .
 	PDB_PY="$(ls pdb_*.py)"
 	sed "s:script_dir,\"pdb_data\":\"${EPREFIX}/usr/share/${PN}\",\"pdb_data\":g" -i pdb_sasa.py || die
+	sed "/satk_path =/s:^.*$:satk_path = \"${EPREFIX}/usr/bin\":g" -i pdb_satk.py || die
 }
 
 src_compile() {
@@ -61,6 +62,7 @@ src_install() {
 	done
 
 	dobin bin/* || die
+	dodoc README || die
 }
 
 pkg_postinst() {
