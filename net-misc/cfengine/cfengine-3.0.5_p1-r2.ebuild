@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5_p1-r1.ebuild,v 1.3 2010/10/24 18:05:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5_p1-r2.ebuild,v 1.1 2010/10/28 19:39:02 idl0r Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.cfengine.org/tarballs/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="3"
-KEYWORDS="~amd64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~s390 ~x86"
 
 IUSE="examples gd graphviz html ldap libvirt mysql pcre postgres qdbm selinux tests tokyocabinet vim-syntax"
 
@@ -91,7 +91,7 @@ src_configure() {
 }
 
 src_install() {
-	newinitd "${FILESDIR}"/cf-serverd.rc6 cf-servd || die
+	newinitd "${FILESDIR}"/cf-serverd.rc6 cf-serverd || die
 	newinitd "${FILESDIR}"/cf-monitord.rc6 cf-monitord || die
 	newinitd "${FILESDIR}"/cf-execd.rc6 cf-execd || die
 
@@ -112,7 +112,7 @@ src_install() {
 	# binaries here. This is the default search location for the
 	# binaries.
 	for bin in know promises agent monitord serverd execd runagent key report; do
-		dosym /usr/sbin/cf-$bin /var/cfengine/bin/$bin || die
+		dosym /usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
 	done
 
 	if use html; then
@@ -122,13 +122,37 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	echo
 	einfo "Init scripts for cf-serverd, cf-monitord, and cf-execd are provided."
 	einfo
 	einfo "To run cfengine out of cron every half hour modify your crontab:"
 	einfo "0,30 * * * *    /usr/sbin/cf-execd -F"
-	einfo
+	echo
 
 	elog "If you run cfengine the very first time, you MUST generate the keys for cfengine by running:"
-	elog "/usr/sbin/cf-key"
+	elog "emerge --config ${CATEGORY}/${PN}"
+
+	# Fix old cf-servd, remove it after some releases.
+	local found=0
+	for fname in $(find /etc/runlevels/ -type f -or -type l -name 'cf-servd'); do
+		found=1
+		rm $fname
+		ln -s /etc/init.d/cf-serverd $(echo $fname | sed 's:cf-servd:cf-serverd:')
+	done
+
+	if [ "${found}" -eq 1 ]; then
+		echo
+		elog "/etc/init.d/cf-servd has been renamed to /etc/init.d/cf-serverd"
+	fi
+}
+
+pkg_config() {
+	if [ "${ROOT}" == "/" ]; then
+		if [ ! -f "/var/cfengine/ppkeys/localhost.priv" ]; then
+			einfo "Generating keys for localhost."
+			/usr/sbin/cf-key
+		fi
+	else
+		die "cfengine cfkey does not support any value of ROOT other than /."
+	fi
 }

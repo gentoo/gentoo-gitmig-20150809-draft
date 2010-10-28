@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting cf-serverd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/cf-serverd 
+	start-stop-daemon --start --exec /usr/sbin/cf-serverd -- ${EXTRA_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping cf-serverd"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/cf-serverd
+	start-stop-daemon --stop --exec /usr/sbin/cf-serverd
 	eend $?
 }
