@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.6 2010/05/01 00:54:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.4 2010/10/28 08:21:35 volkmar Exp $
 
 EAPI="2"
 
@@ -20,11 +20,11 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="avahi dbus debug doc eds gconf gnome gstreamer h323 kde kontact ldap
 libnotify mmx nls +shm static v4l xcap xv"
 
-RDEPEND=">=dev-libs/glib-2.8.0:2
+RDEPEND=">=dev-libs/glib-2.14.0:2
 	dev-libs/libsigc++:2
 	dev-libs/libxml2:2
-	>=net-libs/opal-3.6.4[audio,sip,video,debug=,h323?]
-	>=net-libs/ptlib-2.6.4[stun,video,wav,debug=]
+	>=net-libs/opal-3.6.8[audio,sip,video,debug=,h323?]
+	>=net-libs/ptlib-2.6.7[stun,video,wav,debug=]
 	>=x11-libs/gtk+-2.12.0:2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	dbus? ( >=sys-apps/dbus-0.36
@@ -38,8 +38,7 @@ RDEPEND=">=dev-libs/glib-2.8.0:2
 	kde? ( kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
 	ldap? ( dev-libs/cyrus-sasl:2
 		net-nds/openldap )
-	libnotify? ( x11-libs/libnotify
-		debug? ( >=x11-libs/libnotify-0.4.5 ) )
+	libnotify? ( x11-libs/libnotify )
 	shm? ( x11-libs/libXext )
 	xcap? ( net-libs/libsoup:2.4 )
 	xv? ( x11-libs/libXv )"
@@ -59,7 +58,6 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 # TODO: gnome2 eclass add --[dis|en]able-gtk-doc wich throws a QA warning
 #	a patch has been submitted, see bug 262491
 # ptlib/opal needed features are not checked by ekiga, upstream bug 577249
-# libnotify-0.4.4 bug with +debug, upstream bug 583719
 # +doc is not installing dev doc (doxygen)
 
 # UPSTREAM:
@@ -104,6 +102,7 @@ pkg_setup() {
 		$(use_enable gconf schemas-install)
 		$(use_enable gnome)
 		$(use_enable gstreamer)
+		$(use_enable h323)
 		$(use_enable kde)
 		$(use_enable kontact kab)
 		$(use_enable ldap)
@@ -123,15 +122,6 @@ src_prepare() {
 	# remove call to gconftool-2 --shutdown, upstream bug 555976
 	# gnome-2 eclass is reloading schemas with SIGHUP
 	sed -i -e '/gconftool-2 --shutdown/d' Makefile.in || die "sed failed"
-
-	# H323 is automatically enabled with opal[h323], want it to be a user choice
-	# upstream bug 575833
-	if ! use h323; then
-		sed -i -e "s/H323=\"yes\"/H323=\"no\"/" configure || die "sed failed"
-		sed -i -e \
-			"s:H323=\`\$PKG_CONFIG --variable=OPAL_H323 opal\`:H323=\"no\":" \
-			configure || die "sed failed"
-	fi
 
 	# V4L support is auto-enabled, want it to be a user choice
 	# do not contact upstream because that's a hack

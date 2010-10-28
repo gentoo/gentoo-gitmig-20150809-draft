@@ -1,12 +1,16 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.20 2010/10/27 22:53:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.21 2010/10/28 08:21:35 volkmar Exp $
 
-  27 Oct 2010; <volkmar@gentoo.org> -ekiga-3.2.6.ebuild,
+  28 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> -ekiga-3.2.5-r2.ebuild,
+  +ekiga-3.2.7.ebuild:
+  Didn't meant to remove ekiga-3.2.7...
+
+  27 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> -ekiga-3.2.6.ebuild,
   -ekiga-3.2.7.ebuild:
   Removing old ebuilds.
 
-  27 Oct 2010; <volkmar@gentoo.org> ekiga-3.2.7.ebuild:
+  27 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> ekiga-3.2.7.ebuild:
   Update required glib version.
 
 *ekiga-3.2.7 (19 Aug 2010)
