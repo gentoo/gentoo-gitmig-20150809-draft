@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-3.1.3.ebuild,v 1.1 2010/10/25 16:23:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-3.1.3.ebuild,v 1.2 2010/10/28 18:10:10 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -9,7 +9,7 @@ MY_P=${P//./-}-open
 
 DESCRIPTION="embedded SSL implementation"
 HOMEPAGE="http://www.matrixssl.org/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${MY_P}.tgz"
+SRC_URI="mirror://gentoo/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
