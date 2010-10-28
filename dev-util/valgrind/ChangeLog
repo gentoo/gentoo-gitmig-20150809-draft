@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.116 2010/08/31 14:23:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.117 2010/10/28 17:39:53 blueness Exp $
+
+*valgrind-3.5.0-r1 (28 Oct 2010)
+
+  28 Oct 2010; Anthony G. Basile <blueness@gentoo.org>
+  +valgrind-3.5.0-r1.ebuild, metadata.xml:
+  Added pax markings to fix bug #341599
+  Added myself as maintainer
 
   31 Aug 2010; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   griffon26 is retiring, reassign to maintainer-needed.

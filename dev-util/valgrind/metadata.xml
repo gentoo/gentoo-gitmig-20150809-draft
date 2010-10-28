@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>blueness@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Valgrind is a GPL'd tool to help you find memory-management problems
