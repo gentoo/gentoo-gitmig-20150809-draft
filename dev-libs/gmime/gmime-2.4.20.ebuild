@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.19.ebuild,v 1.2 2010/10/28 21:15:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.20.ebuild,v 1.1 2010/10/28 21:15:38 eva Exp $
 
 EAPI="2"
 
