@@ -15,5 +15,6 @@
   <flag name="playlist">Add support for playlists</flag>
   <flag name="strigi">Add support for <pkg>app-misc/strigi</pkg> search
   engine.</flag>
+  <flag name="upnp">Add support for video extraction via <pkg>media-libs/gupnp-dlna</pkg>.</flag>
 </use>
 </pkgmetadata>
