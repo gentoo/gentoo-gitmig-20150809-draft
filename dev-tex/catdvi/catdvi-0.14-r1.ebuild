@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/catdvi-0.14-r1.ebuild,v 1.1 2010/10/27 21:54:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/catdvi-0.14-r1.ebuild,v 1.2 2010/10/28 16:40:39 ulm Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="DVI to plain text translator"
 HOMEPAGE="http://catdvi.sourceforge.net"
@@ -20,6 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-kpathsea.patch"
+	eautoconf
 }
 
 src_compile() {
