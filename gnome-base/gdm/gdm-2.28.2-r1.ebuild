@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2-r1.ebuild,v 1.5 2010/09/30 15:51:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2-r1.ebuild,v 1.6 2010/10/28 21:56:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -36,10 +36,7 @@ RDEPEND="
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/gnome-session-2.28
 	>=x11-misc/xdg-utils-1.0.2-r3
-	|| (
-		sys-power/upower
-		>=sys-apps/devicekit-power-008 )
-
+	sys-power/upower
 	app-text/iso-codes
 
 	x11-base/xorg-server
