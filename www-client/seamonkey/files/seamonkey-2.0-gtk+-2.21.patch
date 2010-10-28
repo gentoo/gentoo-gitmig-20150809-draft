@@ -1,0 +1,10 @@
+--- mozilla/toolkit/system/gnome/Makefile.in
++++ mozilla/toolkit/system/gnome/Makefile.in
+@@ -72,6 +72,7 @@
+ include $(topsrcdir)/config/rules.mk
+ 
+ CXXFLAGS += \
++	$(MOZ_GTK2_CFLAGS) \
+ 	$(MOZ_GCONF_CFLAGS) \
+ 	$(MOZ_GNOMEVFS_CFLAGS) \
+ 	$(MOZ_LIBGNOME_CFLAGS) \

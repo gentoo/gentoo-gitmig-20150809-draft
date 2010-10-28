@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.267 2010/10/25 00:33:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.268 2010/10/28 15:19:22 polynomial-c Exp $
+
+*seamonkey-2.0.10 (28 Oct 2010)
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/seamonkey-2.0-gtk+-2.21.patch, -seamonkey-2.0.8-r1.ebuild,
+  +seamonkey-2.0.10.ebuild:
+  Security bump (bug #342847).
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   seamonkey-2.0.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.8-r1.ebuild,v 1.1 2010/09/20 17:57:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.10.ebuild,v 1.1 2010/10/28 15:19:22 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -41,7 +41,7 @@ HOMEPAGE="http://www.seamonkey-project.org"
 
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +chatzilla +composer +crypt +cups java ldap +mailclient +roaming system-sqlite"
+IUSE="+alsa +chatzilla +composer +crypt java ldap +mailclient +roaming system-sqlite"
 
 SRC_URI="${REL_URI}/source/${MY_P}.source.tar.bz2
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.bz2
@@ -67,15 +67,14 @@ fi
 
 RDEPEND="java? ( virtual/jre )
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.7
+	>=dev-libs/nss-3.12.8
 	>=dev-libs/nspr-4.8.6
 	alsa? ( media-libs/alsa-lib )
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	>=app-text/hunspell-1.2
 	>=x11-libs/gtk+-2.10.0
 	>=x11-libs/pango-1.14.0[X]
-	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )
-	cups? ( net-print/cups[gnutls] )"
+	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -147,6 +146,9 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patch"
 
+	epatch "${FILESDIR}"/bug-606109.patch
+	epatch "${FILESDIR}"/${PN}-2.0-gtk+-2.21.patch
+
 	if use crypt && use mailclient ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		cd "${S}"/mailnews/extensions/enigmail || die
@@ -212,11 +214,11 @@ src_configure() {
 	mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
 	mozconfig_annotate '' --disable-installer
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+	mozconfig_annotate '' --enable-printing
 
 	# Enable/Disable based on USE flags
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
-	mozconfig_use_enable cups printing
 	mozconfig_use_enable java javaxpcom
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
