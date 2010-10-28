@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.5 2009/09/23 19:42:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.6 2010/10/28 10:28:52 ssuominen Exp $
 
 inherit versionator toolchain-funcs eutils
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
-	epatch ${DISTDIR}/${DEBIAN_A}
+	epatch "${DISTDIR}"/${DEBIAN_A}
 }
 
 src_compile() {
