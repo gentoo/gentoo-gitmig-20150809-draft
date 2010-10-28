@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4.ebuild,v 1.1 2010/10/26 20:47:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4-r1.ebuild,v 1.1 2010/10/28 11:03:42 hwoarang Exp $
 
 EAPI="2"
 
@@ -54,6 +54,8 @@ done
 
 PATCHES=(
 	"${FILESDIR}/${P}-build-plugins-fix.patch"
+	#bug 342909
+	"${FILESDIR}/${P}-dummy-sound-fix.patch"
 )
 
 src_prepare() {
