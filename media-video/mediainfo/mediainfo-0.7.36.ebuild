@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.33.ebuild,v 1.3 2010/07/11 12:31:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.36.ebuild,v 1.1 2010/10/28 07:12:01 radhermit Exp $
 
 EAPI="2"
 
