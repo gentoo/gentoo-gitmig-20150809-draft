@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.102 2010/09/11 17:12:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.103 2010/10/28 04:16:27 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -277,25 +277,25 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		nios2*)		echo nios2;;
 		nios*)		echo nios;;
 		powerpc*)
-					# Starting with linux-2.6.15, the 'ppc' and 'ppc64' trees
-					# have been unified into simply 'powerpc', but until 2.6.16,
-					# ppc32 is still using ARCH="ppc" as default
-					if [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.16) ]] && [[ ${type} == "kern" ]] ; then
-						echo powerpc
-					elif [[ $(KV_to_int ${KV}) -eq $(KV_to_int 2.6.15) ]] && [[ ${type} == "kern" ]] ; then
-						if [[ ${host} == powerpc64* ]] || [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
-							echo powerpc
-						else
-							echo ppc
-						fi
-					elif [[ ${host} == powerpc64* ]] ; then
-						echo ppc64
-					elif [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
-						ninj ppc64 ppc
-					else
-						echo ppc
-					fi
-					;;
+			# Starting with linux-2.6.15, the 'ppc' and 'ppc64' trees
+			# have been unified into simply 'powerpc', but until 2.6.16,
+			# ppc32 is still using ARCH="ppc" as default
+			if [[ ${type} == "kern" ]] && [[ $(KV_to_int ${KV}) -ge $(KV_to_int 2.6.16) ]] ; then
+				echo powerpc
+			elif [[ ${type} == "kern" ]] && [[ $(KV_to_int ${KV}) -eq $(KV_to_int 2.6.15) ]] ; then
+				if [[ ${host} == powerpc64* ]] || [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
+					echo powerpc
+				else
+					echo ppc
+				fi
+			elif [[ ${host} == powerpc64* ]] ; then
+				echo ppc64
+			elif [[ ${PROFILE_ARCH} == "ppc64" ]] ; then
+				ninj ppc64 ppc
+			else
+				echo ppc
+			fi
+			;;
 		s390*)		echo s390;;
 		sh64*)		ninj sh64 sh;;
 		sh*)		echo sh;;
