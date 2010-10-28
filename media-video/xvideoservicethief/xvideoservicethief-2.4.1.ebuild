@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.1 2010/09/11 13:02:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.2 2010/10/28 21:00:49 hwoarang Exp $
 
 EAPI=2
 
@@ -34,10 +34,14 @@ S="${WORKDIR}"
 
 src_prepare() {
 	# fix translations
-	mv "${S}"/resources/translations/${RES_NAME}_cz.ts	"${S}"/resources/translations/${RES_NAME}_cs.ts
-	mv "${S}"/resources/translations/${RES_NAME}_jp.ts	"${S}"/resources/translations/${RES_NAME}_ja.ts
-	mv "${S}"/resources/translations/${RES_NAME}_du.ts	"${S}"/resources/translations/${RES_NAME}_nl.ts
-	mv "${S}"/resources/translations/${RES_NAME}_kr.ts	"${S}"/resources/transaltions/${RES_NAME}_ko.ts
+	mv "${S}"/resources/translations/${RES_NAME}_cz.ts \
+		"${S}"/resources/translations/${RES_NAME}_cs.ts ||die 
+	mv "${S}"/resources/translations/${RES_NAME}_jp.ts	\
+		"${S}"/resources/translations/${RES_NAME}_ja.ts || die
+	mv "${S}"/resources/translations/${RES_NAME}_du.ts	\
+		"${S}"/resources/translations/${RES_NAME}_nl.ts || die
+	mv "${S}"/resources/translations/${RES_NAME}_kr.ts	\
+		"${S}"/resources/translations/${RES_NAME}_ko.ts || die
 	# fix plugins, language path
 	sed -i -e "s/getApplicationPath()\ +\ \"/\"\/usr\/share\/${PN}/g" \
 		"${S}"/src/options.cpp || die "failed to fix paths"
