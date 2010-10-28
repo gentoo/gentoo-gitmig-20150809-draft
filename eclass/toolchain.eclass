@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.440 2010/10/10 07:32:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.441 2010/10/28 04:24:13 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1362,7 +1362,7 @@ gcc_do_configure() {
 		case ${CTARGET} in
 			*-linux)		 needed_libc=no-fucking-clue;;
 			*-dietlibc)		 needed_libc=dietlibc;;
-			*-elf)			 needed_libc=newlib;;
+			*-elf|*-eabi)	 needed_libc=newlib;;
 			*-freebsd*)		 needed_libc=freebsd-lib;;
 			*-gnu*)			 needed_libc=glibc;;
 			*-klibc)		 needed_libc=klibc;;
@@ -1399,23 +1399,30 @@ gcc_do_configure() {
 				confgcc="${confgcc} --enable-threads=posix" ;;
 		esac
 	fi
-	[[ ${CTARGET} == *-elf ]] && confgcc="${confgcc} --with-newlib"
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
-	if [[ ${CTARGET} == *-uclibc* ]] ; then
+	case ${CTARGET} in
+	*-uclibc*)
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace $(use_enable nptl tls)"
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
 		if tc_version_is_at_least 3.4 && [[ ${GCCMAJOR}.${GCCMINOR} < 4.3 ]] ; then
 			confgcc="${confgcc} --enable-clocale=uclibc"
 		fi
-	elif [[ ${CTARGET} == *-gnu* ]] ; then
+		;;
+	*-elf|*-eabi)
+		confgcc="${confgcc} --with-newlib"
+		;;
+	*-gnu*)
 		confgcc="${confgcc} --enable-__cxa_atexit"
 		confgcc="${confgcc} --enable-clocale=gnu"
-	elif [[ ${CTARGET} == *-freebsd* ]]; then
+		;;
+	*-freebsd*)
 		confgcc="${confgcc} --enable-__cxa_atexit"
-	elif [[ ${CTARGET} == *-solaris* ]]; then
+		;;
+	*-solaris*)
 		confgcc="${confgcc} --enable-__cxa_atexit"
-	fi
+		;;
+	esac
 	[[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] && confgcc="${confgcc} --disable-libunwind-exceptions"
 
 	# create a sparc*linux*-{gcc,g++} that can handle -m32 and -m64 (biarch)
