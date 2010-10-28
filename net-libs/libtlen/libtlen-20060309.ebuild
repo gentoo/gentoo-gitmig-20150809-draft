@@ -1,9 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.8 2009/09/23 18:50:31 patrick Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.9 2010/10/28 14:30:07 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -20,10 +17,10 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if use amd64; then
-		epatch ${FILESDIR}/20040912-fPIC.patch
+		epatch "${FILESDIR}"/20040912-fPIC.patch
 	fi
 
 	AT_M4DIR="m4" eautoreconf
