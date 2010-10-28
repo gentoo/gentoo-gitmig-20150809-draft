@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.13 2010/10/10 17:38:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.14 2010/10/28 16:45:09 phajdan.jr Exp $
+
+  28 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  hoe-seattlerb-1.2.2.ebuild:
+  x86 stable wrt bug #333947
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
   hoe-seattlerb-1.2.2-r1.ebuild:
