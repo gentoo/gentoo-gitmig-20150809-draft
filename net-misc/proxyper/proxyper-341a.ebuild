@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/proxyper-341a.ebuild,v 1.8 2010/01/25 05:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxyper/proxyper-341a.ebuild,v 1.9 2010/10/28 12:30:14 ssuominen Exp $
 
 DESCRIPTION="distributed.net personal proxy"
 HOMEPAGE="http://www.distributed.net"
@@ -12,28 +12,30 @@ IUSE=""
 DEPEND=""
 RDEPEND="net-dns/host"
 
-S="${WORKDIR}/${PN}${PV}-linux-x86-uclibc"
+S=${WORKDIR}/${PN}${PV}-linux-x86-uclibc
 
 RESTRICT="mirror"
-QA_PRESTRIPPED="/opt/proxyper/proxyper"
+
+QA_PRESTRIPPED="opt/proxyper/proxyper"
 
 src_install() {
-	local DESTDIR="/opt/proxyper"
-	exeinto ${DESTDIR} ; doexe proxyper
+	local DESTDIR=/opt/proxyper
+	exeinto ${DESTDIR}
+	doexe proxyper || die
 
 	# don't clobber an already existing ini file!
 	insinto ${DESTDIR}
 	if [ ! -f ${DESTDIR}/proxyper.ini ]
 	then
-		doins proxyper.ini
+		doins proxyper.ini || die
 	else
-		newins ${DESTDIR}/proxyper.ini proxyper.ini
+		newins ${DESTDIR}/proxyper.ini proxyper.ini || die
 	fi
 
 	dodoc ChangeLog.txt
 	dohtml manual.html
 
-	newinitd ${FILESDIR}/proxyper.init proxyper
+	newinitd "${FILESDIR}"/proxyper.init proxyper
 }
 
 pkg_postinst() {
