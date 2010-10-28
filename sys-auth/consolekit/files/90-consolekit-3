@@ -28,5 +28,5 @@ is_on_console() {
 # calls if we have $GDMSESSION
 if [ -z "$GDMSESSION" ] && [ -x "$CK_LAUNCH_SESSION" ] && \
  ( [ -z "$XDG_SESSION_COOKIE" ] || is_on_console ) ; then
-    STARTUP="$CK_LAUNCH_SESSION $STARTUP"
+    command="$CK_LAUNCH_SESSION $command"
 fi

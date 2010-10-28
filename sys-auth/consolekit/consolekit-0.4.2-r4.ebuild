@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r3.ebuild,v 1.2 2010/10/27 19:10:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.2-r4.ebuild,v 1.1 2010/10/28 16:02:49 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils linux-info multilib pam
@@ -78,7 +78,7 @@ src_install() {
 	keepdir /var/log/ConsoleKit
 
 	exeinto /etc/X11/xinit/xinitrc.d
-	newexe "${FILESDIR}"/90-consolekit-2 90-consolekit || die
+	newexe "${FILESDIR}"/90-consolekit-3 90-consolekit || die
 
 	exeinto /usr/$(get_libdir)/ConsoleKit/run-session.d
 	doexe "${FILESDIR}"/pam-foreground-compat.ck || die
