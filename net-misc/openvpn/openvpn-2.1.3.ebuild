@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.4 2010/10/27 15:04:32 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.3.ebuild,v 1.5 2010/10/28 10:43:29 djc Exp $
 
 EAPI=2
 
@@ -71,7 +71,10 @@ src_configure() {
 }
 
 src_compile() {
-	use static && sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
+
+	if use static ; then
+		sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile || die "sed failed"
+	fi
 
 	emake || die "make failed"
 
@@ -88,7 +91,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	# install documentation
 	dodoc AUTHORS ChangeLog PORTS README
