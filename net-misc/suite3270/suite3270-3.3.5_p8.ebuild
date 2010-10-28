@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.5_p8.ebuild,v 1.8 2009/12/15 19:28:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.5_p8.ebuild,v 1.9 2010/10/28 11:09:07 ssuominen Exp $
 
 inherit eutils
 
@@ -48,8 +48,8 @@ src_unpack() {
 	cd "${S}"
 	# Patches were sent upstream to maintainer
 	# as of 11 May 2007, by Jesse Farinacci <jieryn@gmail.com>
-	epatch ${FILESDIR}/configure-3.3.5.patch
-	use cjk && epatch ${FILESDIR}/makeconv-3.3.5.patch
+	epatch "${FILESDIR}"/configure-3.3.5.patch
+	use cjk && epatch "${FILESDIR}"/makeconv-3.3.5.patch
 	return 0
 }
 
