@@ -1,6 +1,23 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.369 2010/10/25 00:31:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.370 2010/10/28 13:53:46 polynomial-c Exp $
+
+*xulrunner-1.9.2.12 (28 Oct 2010)
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/000_flex-configure-LANG.patch,
+  -files/xulrunner-1.9-solaris64.patch,
+  -files/066-fix-includedir-mozilla-js.patch,
+  -files/xulrunner-1.9.1.5-solaris-undef-regs.patch,
+  -files/1000_fix_alignment.patch, -files/xulrunner-1.9.2-arm-fixes.patch,
+  -files/1002_fix-system-hunspell-dict-detections.patch,
+  -files/xulrunner-1.9.2-fix-pkgconfig-file.patch,
+  -files/1009-armv4t-nanojit-v2.patch,
+  +files/xulrunner-1.9.2-gtk+-2.21.patch,
+  -files/301-xulrunner-xpctools.diff, -xulrunner-1.9.2.8.ebuild,
+  -files/801-enable-x86_64-tracemonkey.patch, +xulrunner-1.9.2.12.ebuild,
+  -files/xulrunner-1.9-no_sunstudio.patch:
+  Security bump (bug #342847).
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   xulrunner-1.9.2.11.ebuild:
