@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12113 2010/10/28 21:29:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12114 2010/10/28 22:05:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
+# Replaced by sys-fs/udisks
+# Masked for removal in about 30 days
+sys-apps/devicekit-disks
 
 # Gilles Dartiguelongue <eva@gentoo.org> (28 Oct 2010)
 # testing mask for development series
