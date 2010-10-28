@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/hengband
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.13 2010/06/04 06:32:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/ChangeLog,v 1.14 2010/10/28 11:12:45 tupone Exp $
+
+  28 Oct 2010; Tupone Alfredo <tupone@gentoo.org> hengband-1.6.2-r1.ebuild,
+  +files/hengband-1.6.2-ovflfix.patch:
+  Fix overflow. Bug #340255 by flameeyes@gentoo.org
 
   04 Jun 2010; Tupone Alfredo <tupone@gentoo.org> hengband-1.6.2-r1.ebuild,
   files/hengband-1.6.2-added_faq.patch:
