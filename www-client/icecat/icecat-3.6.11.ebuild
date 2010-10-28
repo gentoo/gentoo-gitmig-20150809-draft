@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.11.ebuild,v 1.3 2010/10/28 14:49:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.11.ebuild,v 1.4 2010/10/28 15:58:01 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -132,6 +132,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	epatch "${FILESDIR}/xulrunner-1.9.2-gtk+-2.21.patch"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
