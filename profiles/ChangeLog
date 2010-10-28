@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4705 2010/10/28 09:14:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4706 2010/10/28 17:17:25 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked sci-libs/csparse for removal
 
   28 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask obsolete networkmanager wrt #340329.
