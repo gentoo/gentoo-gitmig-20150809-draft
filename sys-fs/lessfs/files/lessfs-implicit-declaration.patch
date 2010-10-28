@@ -1,0 +1,29 @@
+Index: lessfs-1.1.9.10/file_io.c
+===================================================================
+--- lessfs-1.1.9.10.orig/file_io.c
++++ lessfs-1.1.9.10/file_io.c
+@@ -86,6 +86,8 @@ extern unsigned int dbu_qcount;
+ 
+ #define die_dataerr(f...) { LFATAL(f); exit(EXIT_DATAERR); }
+ 
++// missing declarations
++void write_trunc_todolist(struct truncate_thread_data *trunc_data);
+ INUSE *file_get_inuse(unsigned char *stiger)
+ {
+     INUSE *inuse;
+Index: lessfs-1.1.9.10/lessfs.c
+===================================================================
+--- lessfs-1.1.9.10.orig/lessfs.c
++++ lessfs-1.1.9.10/lessfs.c
+@@ -84,6 +84,11 @@
+ 
+ #include "commons.h"
+ 
++//missing declarations
++void invalidate_p2i(char *filename);
++int send_backlog();
++void restart_truncation();
++
+ void segvExit()
+ {
+     LFATAL("Exit caused by segfault!, exitting\n");

@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lessfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.19 2010/10/18 17:09:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.20 2010/10/28 10:41:07 hwoarang Exp $
+
+*lessfs-1.1.9.10 (28 Oct 2010)
+
+  28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -lessfs-1.1.9.6.ebuild,
+  -lessfs-1.1.9.7.ebuild, +lessfs-1.1.9.10.ebuild,
+  +files/lessfs-implicit-declaration.patch:
+  Version bump. Remove old. Apply patch to fix QA problems wrt implicit
+  function declarations
 
 *lessfs-1.1.9.7 (18 Oct 2010)
 
