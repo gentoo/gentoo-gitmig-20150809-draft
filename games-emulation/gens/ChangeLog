@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gens
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.20 2009/11/20 14:21:52 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.21 2010/10/28 08:14:45 tupone Exp $
+
+  28 Oct 2010; Tupone Alfredo <tupone@gentoo.org> gens-2.15.5.ebuild,
+  +files/gens-2.15.5-ovflfix.patch:
+  Fix overflow. Bug #340665 by flameeyes@gentoo.org
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> gens-2.15.5.ebuild:
   x86 stable, bug #286310
