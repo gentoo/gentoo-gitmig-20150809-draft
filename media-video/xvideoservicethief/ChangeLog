@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xvideoservicethief
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.18 2010/09/11 13:02:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.19 2010/10/28 17:12:40 hwoarang Exp $
+
+  28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add myself as maintainer
 
 *xvideoservicethief-2.4.1 (11 Sep 2010)
 
