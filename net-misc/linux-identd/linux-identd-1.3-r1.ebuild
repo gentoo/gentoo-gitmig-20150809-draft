@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.5 2010/10/28 11:00:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.6 2010/10/28 12:34:21 ssuominen Exp $
 
 IUSE="xinetd"
 DESCRIPTION="A real IDENT daemon for linux."
@@ -20,7 +20,7 @@ src_compile() {
 
 src_install() {
 	dodir /etc/init.d /usr/sbin /usr/share/man/man8
-	dodoc README COPYING ChangeLog
+	dodoc README ChangeLog
 	make install DESTDIR="${D}" MANDIR=/usr/share/man || die
 
 	if use xinetd; then

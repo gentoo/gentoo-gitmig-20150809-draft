@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-rate_engine/asterisk-rate_engine-0.5.4.ebuild,v 1.5 2010/10/28 10:45:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-rate_engine/asterisk-rate_engine-0.5.4.ebuild,v 1.6 2010/10/28 12:31:06 ssuominen Exp $
 
 inherit eutils
 
@@ -36,9 +36,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install samples || die "make install failed"
-
-	dodoc COPYING COPYRIGHT ChangeLog
-	dodoc DISCLAIMER NEWS README TODO
-	dodoc *.sql *.conf*
+	make DESTDIR="${D}" install samples || die
+	dodoc ChangeLog DISCLAIMER NEWS README TODO *.sql *.conf*
 }
