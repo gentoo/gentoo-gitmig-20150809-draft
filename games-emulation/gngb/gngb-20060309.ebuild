@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20060309.ebuild,v 1.6 2010/10/15 12:32:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/gngb-20060309.ebuild,v 1.7 2010/10/28 12:46:57 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,10 +14,13 @@ SLOT="0"
 KEYWORDS="ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="opengl"
 
-DEPEND="media-libs/libsdl[audio,joystick,video]
+RDEPEND="media-libs/libsdl[audio,joystick,video]
 	sys-libs/zlib
 	app-arch/bzip2
 	opengl? ( virtual/opengl )"
+DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}"/${P}-ovflfix.patch )
 
 src_configure() {
 	egamesconf $(use_with opengl gl)
