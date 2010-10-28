@@ -1,6 +1,20 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.23 2010/10/25 00:31:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.24 2010/10/28 13:59:35 polynomial-c Exp $
+
+*firefox-3.6.12 (28 Oct 2010)
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/000_flex-configure-LANG.patch,
+  -files/xulrunner-1.9.2-arm-fixes.patch,
+  +files/xulrunner-1.9.2-gtk+-2.21.patch,
+  -files/xulrunner-1.9.2-noalsa-fixup.patch,
+  -files/firefox-3.0-solaris64.patch,
+  -files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  -firefox-3.6.8.ebuild, -files/1000_fix_alignment.patch,
+  +firefox-3.6.12.ebuild, -files/801-enable-x86_64-tracemonkey.patch,
+  -files/mozilla-filepicker.patch:
+  Security bump (bug #342847).
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   firefox-3.6.11.ebuild:
