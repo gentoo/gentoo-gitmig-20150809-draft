@@ -1,17 +1,15 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.162 2010/09/10 07:27:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.163 2010/10/28 16:38:06 ssuominen Exp $
 
-  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
-  xfce-utils-4.7.0.ebuild,
-  +files/xfce-utils-4.7.0-ck-launch-session-2.patch:
-  Run ck-launch-session again to restore functionality with Thunar disk
-  handling wrt upstream #6690.
+  28 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce-utils-4.6.2-r1.ebuild,
+  -files/xfce-utils-4.6.x-ck-launch-session.patch:
+  Don't mess with ck-launch-session from xinitrc.
 
   09 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce-utils-4.7.0.ebuild, +files/xfce-utils-4.7.0-ck-launch-session.patch:
-  Don't run ck-launch-session from xinitrc because latest xfce4-session will
-  start consolekit session on it's own.
+  Don't mess with ck-launch-session from xinitrc.
 
   07 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce-utils-4.7.0.ebuild:

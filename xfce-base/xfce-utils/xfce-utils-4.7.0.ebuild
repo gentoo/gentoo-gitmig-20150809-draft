@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.7 2010/10/21 13:57:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.8 2010/10/28 16:38:06 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -33,11 +33,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	# These patches are bogus, drop them from next version or revision
-	PATCHES=(
-		"${FILESDIR}"/${P}-ck-launch-session.patch
-		"${FILESDIR}"/${P}-ck-launch-session-2.patch
-		)
+	PATCHES=( "${FILESDIR}"/${P}-ck-launch-session.patch )
 	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
 		--disable-dependency-tracking
 		$(use_enable dbus)
