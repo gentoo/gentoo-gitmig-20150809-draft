@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.0.ebuild,v 1.3 2010/10/03 08:31:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.0.ebuild,v 1.4 2010/10/28 15:47:26 jlec Exp $
 
 EAPI="2"
 FORTRAN="gfortran ifc"
@@ -20,7 +20,6 @@ DEPEND=">=virtual/jdk-1.6"
 RDEPEND="
 	dev-libs/maloc
 	!dev-util/diffuse
-   >=sci-chemistry/apbs-1.2.1b-r4[tinker]
 	>=virtual/jre-1.6"
 RESTRICT="mirror"
 
