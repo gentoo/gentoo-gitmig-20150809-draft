@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0.ebuild,v 1.1 2010/06/04 21:16:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0.ebuild,v 1.2 2010/10/28 18:28:18 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 src_prepare() {
 	sed -i  -e "/^INCLUDES\ =.*/d" \
-		-e "s/^CXXFLAGS\ =.*/CXXFLAGS\ =\ ${CXXFLAGS}/" \
+		-e "s/^CXXFLAGS\ =.*/CXXFLAGS\ =\ ${CXXFLAGS} ${LDFLAGS}/" \
 		-e "s/^CXX\ =.*/CXX\ =\ $(tc-getCXX)/" src/Makefile || die "sed failed"
 }
 
