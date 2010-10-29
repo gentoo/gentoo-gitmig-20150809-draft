@@ -1,6 +1,10 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.130 2010/10/28 20:34:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.131 2010/10/29 00:18:03 radhermit Exp $
+
+  29 Oct 2010; Tim Harder <radhermit@gentoo.org> bitlbee-3.0.ebuild:
+  Add conditional otr dependency on net-libs/libotr (bug #343181 by Manu
+  Wächter) and install the plugin in the correct place for multilib.
 
   28 Oct 2010; Alex Alexander <wired@gentoo.org> -bitlbee-1.2.4.ebuild,
   -bitlbee-1.2.4-r1.ebuild, -bitlbee-1.2.6a.ebuild, -bitlbee-1.2.7.ebuild:

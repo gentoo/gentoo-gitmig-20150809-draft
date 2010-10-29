@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.ebuild,v 1.1 2010/10/28 19:53:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.ebuild,v 1.2 2010/10/29 00:18:03 radhermit Exp $
 
 EAPI="3"
-inherit eutils toolchain-funcs confutils
+inherit eutils toolchain-funcs confutils multilib
 
 DESCRIPTION="irc to IM gateway that support multiple IM protocols"
 HOMEPAGE="http://www.bitlbee.org/"
@@ -17,6 +17,7 @@ IUSE="debug gnutls ipv6 +jabber libevent msn nss +oscar otr +plugins purple ssl 
 COMMON_DEPEND="purple? ( net-im/pidgin )
 	libevent? ( dev-libs/libevent )
 	!libevent? ( >=dev-libs/glib-2.4 )
+	otr? ( net-libs/libotr )
 	msn? ( gnutls? ( net-libs/gnutls )
 		!gnutls? ( nss? ( dev-libs/nss ) )
 		!gnutls? ( !nss? ( ssl? ( dev-libs/openssl ) ) )
@@ -138,7 +139,8 @@ src_configure() {
 	# NOTE: bitlbee's configure script is not an autotool creation,
 	# so that is why we don't use econf.
 	./configure --prefix=/usr --datadir=/usr/share/bitlbee \
-		--etcdir=/etc/bitlbee --strip=0 ${myconf} || die "econf failed"
+		--etcdir=/etc/bitlbee --plugindir=/usr/$(get_libdir)/bitlbee \
+		--strip=0 ${myconf} || die "econf failed"
 
 	sed -i \
 		-e "s/CFLAGS=.*$/CFLAGS=${CFLAGS}/" \
