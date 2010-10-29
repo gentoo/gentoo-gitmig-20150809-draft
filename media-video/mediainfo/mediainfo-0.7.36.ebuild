@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.36.ebuild,v 1.2 2010/10/28 16:51:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.36.ebuild,v 1.3 2010/10/29 06:01:17 radhermit Exp $
 
 EAPI="2"
 
@@ -62,13 +62,13 @@ src_configure() {
 src_compile() {
 	for x in ${TARGETS}; do
 		cd "${S}/Project/GNU/${x}"
-		emake || die "emake failed failed for ${x}"
+		emake || die "emake failed for ${x}"
 	done
 }
 src_install() {
 	for x in ${TARGETS}; do
 		cd "${S}/Project/GNU/${x}"
-		einstall
+		emake DESTDIR="${D}" install || die "emake install failed"
 		dodoc "${S}/History_${x}.txt" || die
 		if [[ "${x}" = "GUI" ]]; then
 			newicon "${S}/Source/Ressource/Image/MediaInfo.png" "${PN}.png"
