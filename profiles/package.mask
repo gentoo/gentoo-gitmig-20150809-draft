@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12118 2010/10/29 19:25:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12119 2010/10/29 19:31:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,11 +34,13 @@
 # Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
 # Fails to compile with Qt 4.7, project appears dead
 # http://bugs.gentoo.org/338489
+# Use qt-creator instead
 # Removal in 30 days
 dev-util/qdevelop
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
 # Bugs 124544, 241624 and 255822
+# Use cabal instead
 # Masked for removal in 30 days
 dev-haskell/hmake
 
