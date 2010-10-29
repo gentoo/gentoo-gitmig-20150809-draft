@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.11 2010/07/03 21:46:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.12 2010/10/29 11:32:04 ssuominen Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -32,7 +32,7 @@ IUSE="cjk cairo doc gif debug jpeg nls pasteafter png +python tiff tilepath true
 
 RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	png? ( >=media-libs/libpng-1.2.4 )
+	png? ( >=media-libs/libpng-1.4 )
 	python? ( dev-lang/python )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
@@ -60,10 +60,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/fontforge-desktop.patch
 	epatch "${FILESDIR}"/${P}-configure.patch
-
-	# info_ptr->trans_alpha might be no-go with libpng12
-	has_version ">=media-libs/libpng-1.4" && epatch \
-		"${FILESDIR}"/${P}-libpng14.patch
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 
 	eautoconf
 	if use doc; then
