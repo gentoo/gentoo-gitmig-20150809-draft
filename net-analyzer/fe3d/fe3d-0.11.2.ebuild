@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.4 2010/10/27 13:43:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.5 2010/10/29 10:15:47 hwoarang Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -20,7 +20,7 @@ HOMEPAGE="http://projects.icapsid.net/fe3d/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/wxGTK:2.8
