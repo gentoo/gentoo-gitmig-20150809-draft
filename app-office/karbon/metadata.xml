@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<maintainer><email>dilfridge@gentoo.org</email></maintainer>
 <use>
 	<flag name="wpg">Build wordperfect image support.</flag>
 	<flag name="pstoedit">Build support for PDF and PS import.</flag>
