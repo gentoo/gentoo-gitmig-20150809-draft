@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.77 2010/10/29 16:55:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.78 2010/10/29 17:17:42 flameeyes Exp $
+
+  29 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update and try to put order into USE flags descriptions.
 
 *libvirt-0.8.5 (29 Oct 2010)
 

@@ -7,36 +7,66 @@
     <name>Doug Goldstein</name>
   </maintainer>
   <use>
-    <flag name='iscsi'>Add support for iSCSI (Internet SCSI) remote
-    storage</flag>
-    <flag name='lvm'>Add support for the Logical Volume Manager
-    <pkg>sys-apps/lvm2</pkg></flag>
-    <flag name='lxc'>Add support for the Linux Containers</flag>
-    <flag name='openvz'>Add support for <pkg>sys-kernel/openvz-sources</pkg>
-    OpenVZ-based virtual machines</flag>
-    <flag name='parted'>Add support for the <pkg>sys-block/parted</pkg>
-    partition editor</flag>
-    <flag name='uml'>Add support for User Mode Linux based virtual
-    machines</flag>
-    <flag name='qemu'>Add support for <pkg>app-emulation/qemu</pkg> based
-    virtual machines</flag>
-    <flag name='xen'>Add support for <pkg>app-emulation/xen</pkg> based
-    virtual machines</flag>
-    <flag name='network'>Enable networking support for guests</flag>
-    <flag name='virtualbox'>Adds support for VirtualBox based virtual
-    machines</flag>
-    <flag name='numa'>Use NUMA for memory segmenting via
-    <pkg>sys-process/numactl</pkg></flag>
-    <flag name='nfs'>Allow the libvirtd daemon store VM images on NFS
-    mounts</flag>
-    <flag name='libvirtd'>Builds the libvirtd daemon as well as the client
-    utilities instead of just the client utilities</flag>
-    <flag name='phyp'>Support the PHYP hypervisor protocol</flag>
-    <flag name='pcap'>Support auto learning IP addreses for routing</flag>
-    <flag name='macvtap'>Support for MAC-based TAP (macvlan/macvtap). For
-    networking instead of the normal TUN/TAP. It has its advantages and
-    disadvantages. macvtap support requires very new kernels and is
-    currently evolving. Support for this is experimental at best</flag>
+    <!-- Pool backend flags -->
+    <flag name='iscsi'>
+      Allow using an iSCSI remote storage server as pool for disk image storage
+    </flag>
+    <flag name='lvm'>
+      Allow using the Logical Volume Manager (<pkg>sys-apps/lvm2</pkg>) as pool for disk image
+      storage
+    </flag>
+    <flag name='nfs'>
+      Allow using Network File System mounts as pool for disk image storage
+    </flag>
+    <flag name='parted'>
+      Allow using real disk partitions as pool for disk image storage, using
+      <pkg>sys-block/parted</pkg> to create, resize and delete them.
+    </flag>
+
+    <!-- Virtualisation backends -->
+    <flag name='lxc'>
+      Support management of Linux Containers virtualisation (<pkg>app-emulation/lxc</pkg>)
+    </flag>
+    <flag name='openvz'>
+      Support management of OpenVZ virtualisation (see <pkg>sys-kernel/openvz-sources</pkg>)
+    </flag>
+    <flag name='uml'>
+      Support management of User Mode Linux virtualisation
+    </flag>
+    <flag name='qemu'>
+      Support management of QEmu virtualisation (one of <pkg>app-emulation/qemu</pkg>,
+      <pkg>app-emulation/qemu-kvm</pkg> or <pkg>app-emulation/qemu-spice</pkg>)
+    </flag>
+    <flag name='xen'>
+      Support management of Xen virtualisation (<pkg>app-emulation/xen</pkg>)
+    </flag>
+    <flag name='virtualbox'>
+      Support management of VirtualBox virtualisation (one of <pkg>app-emulation/virtualbox</pkg> or
+      <pkg>app-emulation/virtualbox-ose</pkg>)
+    </flag>
+    <flag name='phyp'>
+      Support management of virtualisation through the PHYP hypervisor protocol.
+    </flag>
+
+    <!-- Miscellaneous flags -->
+    <flag name='network'>
+      Enable networking support for guests
+    </flag>
+    <flag name='numa'>
+      Use NUMA for memory segmenting via <pkg>sys-process/numactl</pkg>
+    </flag>
+    <flag name='libvirtd'>
+      Builds the libvirtd daemon as well as the client utilities instead of just the client
+      utilities
+    </flag>
+    <flag name='pcap'>
+      Support auto learning IP addreses for routing
+    </flag>
+    <flag name='macvtap'>
+      Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP. It
+      has its advantages and disadvantages. macvtap support requires very new kernels and is
+      currently evolving. Support for this is experimental at best
+    </flag>
     <flag name='json'>
       Support QEmu 0.13 JSON-based interface, using <pkg>dev-libs/yajl</pkg>.
     </flag>
