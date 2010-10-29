@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.01h.ebuild,v 1.1 2010/08/18 07:46:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.02.ebuild,v 1.1 2010/10/29 13:13:50 ulm Exp $
 
 NEED_EMACS=22
 
@@ -34,9 +34,8 @@ src_install() {
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
-	mv doc/org doc/org.info
-	doinfo doc/org.info || die "doinfo failed"
-	dodoc README Changes.org doc/org.pdf doc/orgcard.pdf \
+	doinfo doc/org || die "doinfo failed"
+	dodoc README Changes.org doc/org.pdf doc/orgcard.pdf doc/orgguide.pdf \
 		|| die
 	newdoc contrib/README README.contrib || die
 }
