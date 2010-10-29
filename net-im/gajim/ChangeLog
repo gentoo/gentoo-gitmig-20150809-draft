@@ -1,8 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.106 2010/10/29 14:27:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.107 2010/10/29 14:32:11 jlec Exp $
 
-  29 Oct 2010; Justin Lecher <jlec@gentoo.org> gajim-0.14.1.ebuild:
+*gajim-0.14.1-r1 (29 Oct 2010)
+
+  29 Oct 2010; Justin Lecher <jlec@gentoo.org> -gajim-0.14.1.ebuild,
+  +gajim-0.14.1-r1.ebuild:
   Restrict py3
 
 *gajim-0.14.1 (27 Oct 2010)
