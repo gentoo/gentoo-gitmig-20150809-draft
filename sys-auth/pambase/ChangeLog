@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.95 2010/10/23 23:37:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.96 2010/10/29 10:39:19 hwoarang Exp $
+
+  29 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  pambase-20101024.ebuild:
+  Stable on amd64 wrt bug #343099
 
 *pambase-20101024 (23 Oct 2010)
 
