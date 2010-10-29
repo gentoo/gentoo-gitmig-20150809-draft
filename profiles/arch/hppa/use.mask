@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.30 2010/10/25 01:50:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.31 2010/10/29 04:05:37 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (29 Oct 2010)
+# Webkit does not work on HPPA right now.
+webkit
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # FFI does not work: "Unknown cpu type" (bug #337956)
