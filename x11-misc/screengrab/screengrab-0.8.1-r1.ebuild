@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.8.1.ebuild,v 1.1 2010/10/05 01:14:54 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.8.1-r1.ebuild,v 1.1 2010/10/29 13:34:14 hwoarang Exp $
 
 EAPI="2"
 
@@ -28,4 +28,5 @@ src_prepare() {
 	# install docs in the right dir
 	sed -i "s#DESTINATION share/doc/screengrab#DESTINATION share/doc/${PF}#" \
 		CMakeLists.txt || die "failed to patch doc dir"
+	sed -i "s:screengrab%1html:${PF}%1html:" src/mainwindow.cpp || die
 }
