@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.22 2010/10/24 19:36:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.23 2010/10/29 13:56:06 maekke Exp $
+
+  29 Oct 2010; Markus Meier <maekke@gentoo.org> mysql-5.1.ebuild:
+  arm stable, bug #321791
 
   24 Oct 2010; Mark Loeser <halcy0n@gentoo.org> mysql-5.1.ebuild:
   Stable for ppc64; bug #321791
