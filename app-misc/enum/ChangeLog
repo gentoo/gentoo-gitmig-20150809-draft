@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/enum
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/enum/ChangeLog,v 1.1 2010/10/25 22:45:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/enum/ChangeLog,v 1.2 2010/10/29 01:19:48 sping Exp $
+
+*enum-1.0.1-r1 (29 Oct 2010)
+
+  29 Oct 2010; Sebastian Pipping <sping@gentoo.org> +enum-1.0.1-r1.ebuild:
+  Remove bundled getopt, add --disable-dependency-tracking
 
 *enum-1.0.1 (25 Oct 2010)
 
