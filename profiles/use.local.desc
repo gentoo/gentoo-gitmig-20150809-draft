@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6091 2010/10/29 17:14:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6092 2010/10/29 17:34:25 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -322,23 +322,23 @@ app-emulation/ganeti:filestorage - Enable File Storage
 app-emulation/ganeti:kvm - Enable KVM support
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/lib765:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
-app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote storage
+app-emulation/libvirt:iscsi -  Allow using an iSCSI remote storage server as pool for disk image storage 
 app-emulation/libvirt:json -  Support QEmu 0.13 JSON-based interface, using dev-libs/yajl. 
-app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
-app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
-app-emulation/libvirt:lxc - Add support for the Linux Containers
-app-emulation/libvirt:macvtap - Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP. It has its advantages and disadvantages. macvtap support requires very new kernels and is currently evolving. Support for this is experimental at best
-app-emulation/libvirt:network - Enable networking support for guests
-app-emulation/libvirt:nfs - Allow the libvirtd daemon store VM images on NFS mounts
-app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numactl
-app-emulation/libvirt:openvz - Add support for sys-kernel/openvz-sources OpenVZ-based virtual machines
-app-emulation/libvirt:parted - Add support for the sys-block/parted partition editor
-app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
-app-emulation/libvirt:phyp - Support the PHYP hypervisor protocol
-app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
-app-emulation/libvirt:uml - Add support for User Mode Linux based virtual machines
-app-emulation/libvirt:virtualbox - Adds support for VirtualBox based virtual machines
-app-emulation/libvirt:xen - Add support for app-emulation/xen based virtual machines
+app-emulation/libvirt:libvirtd -  Builds the libvirtd daemon as well as the client utilities instead of just the client utilities 
+app-emulation/libvirt:lvm -  Allow using the Logical Volume Manager (sys-apps/lvm2) as pool for disk image storage 
+app-emulation/libvirt:lxc -  Support management of Linux Containers virtualisation (app-emulation/lxc) 
+app-emulation/libvirt:macvtap -  Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP. It has its advantages and disadvantages. macvtap support requires very new kernels and is currently evolving. Support for this is experimental at best 
+app-emulation/libvirt:network -  Enable networking support for guests 
+app-emulation/libvirt:nfs -  Allow using Network File System mounts as pool for disk image storage 
+app-emulation/libvirt:numa -  Use NUMA for memory segmenting via sys-process/numactl 
+app-emulation/libvirt:openvz -  Support management of OpenVZ virtualisation (see sys-kernel/openvz-sources) 
+app-emulation/libvirt:parted -  Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them. 
+app-emulation/libvirt:pcap -  Support auto learning IP addreses for routing 
+app-emulation/libvirt:phyp -  Support management of virtualisation through the PHYP hypervisor protocol. 
+app-emulation/libvirt:qemu -  Support management of QEmu virtualisation (one of app-emulation/qemu, app-emulation/qemu-kvm or app-emulation/qemu-spice) 
+app-emulation/libvirt:uml -  Support management of User Mode Linux virtualisation 
+app-emulation/libvirt:virtualbox -  Support management of VirtualBox virtualisation (one of app-emulation/virtualbox or app-emulation/virtualbox-ose) 
+app-emulation/libvirt:xen -  Support management of Xen virtualisation (app-emulation/xen) 
 app-emulation/lxc:vanilla -  Avoid adding Gentoo Linux-specific modifications, which include the custom init script. This is present as a flag to avoid forcing dependencies over users that might not want have them around as they use LXC in contexts where the init script is not useful. 
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
@@ -3535,6 +3535,7 @@ sys-apps/hal:selinux - Installs SELinux policies and links HAL to the SELinux li
 sys-apps/halevt:rpath - Hardcode runtime library paths
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
+sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/man:lzma - Uses app-arch/lzma-utils for the COMPRESS feature. Could also be used to guarantee that lzma is on the system.
