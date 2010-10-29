@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>kernel-misc</herd>
   <use>
+	  <flag name='lzma'>Enables support for LZMA compressed kernel images</flag>
 	  <flag name='xen'>Enable extended xen support</flag>
   </use>
 </pkgmetadata>

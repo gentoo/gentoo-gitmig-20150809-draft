@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.36 2010/10/29 06:44:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.37 2010/10/29 17:14:29 radhermit Exp $
+
+*kexec-tools-2.0.2 (29 Oct 2010)
+
+  29 Oct 2010; Tim Harder <radhermit@gentoo.org> +kexec-tools-2.0.2.ebuild,
+  metadata.xml:
+  Version bump (bug #343209 by jlec). Update SRC_URI, add lzma USE flag and
+  dependency, and add a couple die statements to helper functions.
 
   29 Oct 2010; Justin Lecher <jlec@gentoo.org> files/kexec.init:
   Cleaned extra whitespaces in init script
