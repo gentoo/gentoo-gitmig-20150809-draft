@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.129 2010/10/27 00:43:27 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.130 2010/10/29 18:42:02 maekke Exp $
+
+  29 Oct 2010; Markus Meier <maekke@gentoo.org> libtasn1-2.8.ebuild:
+  arm stable, bug #342495
 
   27 Oct 2010; Dane Smith <c1pher@gentoo.org> libtasn1-2.8.ebuild:
   Stable x86 wrt bug 342495.
