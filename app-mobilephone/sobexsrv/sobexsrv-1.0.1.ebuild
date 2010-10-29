@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.1.ebuild,v 1.9 2010/06/11 11:43:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.1.ebuild,v 1.10 2010/10/29 21:23:23 joker Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="${P/_pre/pre}"
 
@@ -41,10 +41,12 @@ src_unpack() {
 
 	sed -e 's/^CFLAGS =/CFLAGS +=/' \
 	    -e 's/^CC =/CC ?=/' \
+	    -e 's/$(CC) $(CFLAGS)/$(CC) $(LDFLAGS) $(CFLAGS)/' \
 	    -i src/Makefile
 }
 
 src_compile() {
+	tc-export CC
 	emake || die "emake failed"
 }
 

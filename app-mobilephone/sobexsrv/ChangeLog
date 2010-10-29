@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sobexsrv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.21 2010/06/11 11:43:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.22 2010/10/29 21:23:23 joker Exp $
+
+  29 Oct 2010; Christian Birchinger <joker@gentoo.org>
+  sobexsrv-1.0.1.ebuild:
+  Honor the user's CC and LDFLAGS values
 
   11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> sobexsrv-1.0.1.ebuild:
   Drop bluez-libs and bluez-utils support wrt #301630.
