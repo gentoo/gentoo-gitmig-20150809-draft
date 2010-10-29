@@ -1,6 +1,16 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.197 2010/10/26 13:44:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.198 2010/10/29 09:59:46 pva Exp $
+
+*pidgin-2.7.4-r1 (29 Oct 2010)
+
+  29 Oct 2010; Peter Volkov <pva@gentoo.org> +pidgin-2.7.4-r1.ebuild,
+  +files/pidgin-2.7.4-bonjour-crash.patch,
+  +files/pidgin-2.7.4-icq-authorization-empty-nick.patch,
+  +files/pidgin-2.7.4-icq-html-regression.patch,
+  +files/pidgin-2.7.4-missing-break-bug-12810.patch:
+  Backport upstream patches to fix ICQ regressions (e.g. bug #342779 thank
+  Phil Stracchino for report) and crashes.
 
   26 Oct 2010; Jeroen Roovers <jer@gentoo.org> pidgin-2.7.4.ebuild:
   Stable for PPC (bug #342059).

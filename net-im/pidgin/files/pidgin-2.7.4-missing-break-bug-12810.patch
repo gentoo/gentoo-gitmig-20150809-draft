@@ -1,0 +1,22 @@
+http://developer.pidgin.im/viewmtn/revision/info/7d1c9a75673aed36deaeca9e96975462a68e2dcd
+
+There seems to be a missing break here. I noticed it in the log, but
+probably not related. Refs #12810.
+
+#
+#
+# patch "pidgin/minidialog.c"
+#  from [0ff3f39351172aebcd5504f3915242777b6d05cd]
+#    to [2e29d56ddb428c86d1e4ee9854fd56b0925b948c]
+#
+============================================================
+--- pidgin/minidialog.c	0ff3f39351172aebcd5504f3915242777b6d05cd
++++ pidgin/minidialog.c	2e29d56ddb428c86d1e4ee9854fd56b0925b948c
+@@ -332,6 +332,7 @@ pidgin_mini_dialog_set_property(GObject 
+ 			break;
+ 		case PROP_CUSTOM_ICON:
+ 			gtk_image_set_from_pixbuf(priv->icon, g_value_get_object(value));
++			break;
+ 		default:
+ 			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+ 	}

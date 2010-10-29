@@ -1,0 +1,23 @@
+http://developer.pidgin.im/viewmtn/revision/info/82e935b340047646fa99de444cd143a4523928cc
+
+Fix crash when attempting to log into a bonjour account and init failed
+
+#
+#
+# patch "libpurple/protocols/bonjour/bonjour.c"
+#  from [9f373f1963c40837750948ec0b072e6eb1abb608]
+#    to [e0955c7f0b8020ffa9848c290b42f88f981a3572]
+#
+============================================================
+--- libpurple/protocols/bonjour/bonjour.c	9f373f1963c40837750948ec0b072e6eb1abb608
++++ libpurple/protocols/bonjour/bonjour.c	e0955c7f0b8020ffa9848c290b42f88f981a3572
+@@ -189,7 +189,8 @@ bonjour_close(PurpleConnection *connecti
+ 		purple_xfer_cancel_local(bd->xfer_lists->data);
+ 	}
+ 
+-	g_free(bd->jid);
++	if (bd != NULL)
++		g_free(bd->jid);
+ 	g_free(bd);
+ 	connection->proto_data = NULL;
+ }
