@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.88 2010/07/20 18:37:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.89 2010/10/29 18:06:33 williamh Exp $
+
+*espeak-1.44.05 (29 Oct 2010)
+
+  29 Oct 2010; William Hubbs <williamh@gentoo.org> +espeak-1.44.05.ebuild,
+  +files/espeak-1.44.05-respect-ldflags.patch:
+  Version bump, also fixes bug #303094 thanks to Kacper Kowalik.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> espeak-1.42.04.ebuild:
   Stable for HPPA (bug #301793).
