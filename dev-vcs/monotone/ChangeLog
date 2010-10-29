@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.8 2010/10/29 07:58:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.9 2010/10/29 15:24:17 pva Exp $
+
+*monotone-0.99-r1 (29 Oct 2010)
+*monotone-0.48.1 (29 Oct 2010)
+
+  29 Oct 2010; Peter Volkov <pva@gentoo.org> +monotone-0.48.1.ebuild,
+  +files/monotone-0.48.1-sqlite-3.7.3.patch, -monotone-0.99.ebuild,
+  +monotone-0.99-r1.ebuild, +files/monotone-0.99-crash.patch:
+  Apply upstream patch for 0.99 to fix crash. Add better version for fast
+  stabilization for security bug #342705.
 
 *monotone-0.99 (29 Oct 2010)
 

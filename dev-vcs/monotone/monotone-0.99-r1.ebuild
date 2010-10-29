@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.ebuild,v 1.1 2010/10/29 07:58:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99-r1.ebuild,v 1.1 2010/10/29 15:24:17 pva Exp $
 
 EAPI=2
 inherit bash-completion elisp-common eutils toolchain-funcs
@@ -36,6 +36,7 @@ src_prepare() {
 		( $(gcc-major-version) -eq "3" && $(gcc-minor-version) -le 3 ) ]]; then
 		die 'requires >=gcc-3.4'
 	fi
+	epatch "${FILESDIR}/${P}-crash.patch"
 }
 
 src_configure() {
