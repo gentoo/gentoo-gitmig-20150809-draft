@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.68 2010/09/09 03:27:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.69 2010/10/29 06:22:59 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> sg3_utils-1.29.ebuild:
+  Stable for HPPA (bug #329621).
 
   09 Sep 2010; Joseph Jezak <josejx@gentoo.org> sg3_utils-1.29.ebuild:
   Marked ppc stable.
