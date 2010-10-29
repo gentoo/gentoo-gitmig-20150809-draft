@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/kding-0.6.ebuild,v 1.3 2009/11/19 09:37:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/kding-0.6.ebuild,v 1.4 2010/10/29 12:48:37 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="de"
@@ -14,3 +14,5 @@ LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug +handbook"
+
+PATCHES=( "${FILESDIR}"/${P}-dtd.patch )
