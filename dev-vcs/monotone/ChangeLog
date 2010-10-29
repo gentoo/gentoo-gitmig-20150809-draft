@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.7 2010/10/19 18:12:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.8 2010/10/29 07:58:13 pva Exp $
+
+*monotone-0.99 (29 Oct 2010)
+
+  29 Oct 2010; Peter Volkov <pva@gentoo.org> +monotone-0.99.ebuild:
+  Version bump, fixes security bug #342705 thank Tim Sammut for report.
 
   19 Oct 2010; Brent Baude <ranger@gentoo.org> monotone-0.48.ebuild:
   stable ppc, bug 338345
