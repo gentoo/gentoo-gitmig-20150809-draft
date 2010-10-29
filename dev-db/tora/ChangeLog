@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.86 2010/06/17 21:29:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.87 2010/10/29 19:14:43 hwoarang Exp $
+
+  29 Oct 2010; Markos Chandras <hwoarang@gentoo.org> tora-2.1.2.ebuild,
+  +files/tora-2.1.2-qt47.patch:
+  Apply patch to compile with Qt 4.7. Bug #338478
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> tora-2.1.1.ebuild,
   tora-2.1.2.ebuild:
