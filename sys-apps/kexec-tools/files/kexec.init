@@ -1,10 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.14 2009/04/12 04:45:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.15 2010/10/29 06:44:51 jlec Exp $
 
 depend() {
-	need localmount 
+	need localmount
 }
 
 image_path() {
@@ -27,7 +27,7 @@ load_image() {
 		eend $?
 		return $?
 	fi
-	
+
 	BOOTPART="${BOOTPART:-/boot}"
 	local img="$(image_path)" mounted=false initrdopt=
 
@@ -40,7 +40,7 @@ load_image() {
 			img="$(image_path)"
 		fi
 	fi
-	
+
 	if [ -z "${img}" ] ; then
 		eerror "No kernel image found in ${BOOTPART}!"
 		${mounted} && umount "${BOOTPART}"
@@ -56,7 +56,7 @@ load_image() {
 	fi
 
 	# Use the default initrd if it exists and none other given
-	if  [ -z "${INITRD}" -a -e "${BOOTPART}"/initrd ] ; then 
+	if  [ -z "${INITRD}" -a -e "${BOOTPART}"/initrd ] ; then
 	    INITRD="${BOOTPART}/initrd"
 	fi
 	if [ -e "${INITRD}" ] ; then
@@ -65,7 +65,7 @@ load_image() {
 
 	kexec -l "${img}" --append="root=${ROOTPART} ${KPARAM}" ${initrdopt}
 	local res=$?
-	
+
 	${mounted} && umount "${BOOTPART}"
 	eend ${res}
 	return ${res}
