@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.172 2010/10/17 15:33:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.173 2010/10/29 19:50:01 eva Exp $
+
+  29 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-doc-utils-0.20.2.ebuild:
+  Enhance multiple python ABI support, bug #312103.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-doc-utils-0.20.1.ebuild:
