@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.4.ebuild,v 1.1 2010/10/29 13:49:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.4.ebuild,v 1.2 2010/10/29 13:50:14 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -14,8 +14,9 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-DEPEND="media-libs/alsa-lib
+RDEPEND="media-libs/alsa-lib
 	media-sound/drumstick"
+DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
