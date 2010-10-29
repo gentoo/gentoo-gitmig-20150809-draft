@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1.ebuild,v 1.1 2010/10/27 17:19:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1.ebuild,v 1.2 2010/10/29 14:27:45 jlec Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils python versionator
 
