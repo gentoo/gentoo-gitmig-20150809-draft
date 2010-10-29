@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.3.ebuild,v 1.1 2010/04/28 00:07:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.4.ebuild,v 1.1 2010/10/29 13:49:19 ssuominen Exp $
 
 EAPI=2
-# FIXME. Doesn't build with KDE_LINGUAS added.
-# KDE_LINGUAS="cs es"
 inherit kde4-base
 
 DESCRIPTION="A MIDI monitor for ALSA sequencer"
@@ -23,7 +21,7 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_configure() {
 	mycmakeargs=(
-		"-DSTATIC_DRUMSTICK=OFF"
+		-DSTATIC_DRUMSTICK=OFF
 		)
 
 	kde4-base_src_configure
