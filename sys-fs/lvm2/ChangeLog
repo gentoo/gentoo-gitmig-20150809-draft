@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.238 2010/10/06 20:57:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.239 2010/10/29 06:19:12 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.73-r1.ebuild:
+  Stable for HPPA (bug #324485).
 
 *lvm2-2.02.74 (06 Oct 2010)
 
