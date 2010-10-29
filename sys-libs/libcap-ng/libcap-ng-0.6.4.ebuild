@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.4.ebuild,v 1.4 2010/10/29 04:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.4.ebuild,v 1.5 2010/10/29 19:26:50 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -65,6 +65,11 @@ src_compile() {
 }
 
 src_test() {
+	if [[ "${EUID}" -eq 0 ]]; then
+		ewarn "Skipping tests due to root permissions."
+		return
+	fi
+
 	default
 
 	if use python; then
