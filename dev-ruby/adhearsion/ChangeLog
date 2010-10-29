@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/adhearsion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.16 2010/09/30 15:20:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.17 2010/10/29 15:06:58 graaff Exp $
+
+  29 Oct 2010; Hans de Graaff <graaff@gentoo.org> -adhearsion-0.8.3.ebuild,
+  -adhearsion-0.8.4.ebuild:
+  Remove old versions.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> adhearsion-0.8.3-r1.ebuild:
   Marking adhearsion-0.8.3-r1 ~ppc64 for bug 306909
