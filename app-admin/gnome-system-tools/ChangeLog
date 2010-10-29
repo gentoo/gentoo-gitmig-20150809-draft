@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.95 2010/09/19 16:42:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.96 2010/10/29 21:24:31 pacho Exp $
+
+*gnome-system-tools-2.32.0 (29 Oct 2010)
+
+  29 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-system-tools-2.32.0.ebuild:
+  Version bump for Gnome 2.32: Don't allow locked accounts to use
+  password-less login, improve support for changing home directory, make
+  groups management UI clearer, other bugfixes and translation updates. Let
+  it build on a system using python3 as main interpreter.
 
   19 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-system-tools-2.30.2.ebuild:
