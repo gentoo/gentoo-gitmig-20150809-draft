@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.77 2010/10/23 15:35:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.78 2010/10/29 11:17:45 hwoarang Exp $
+
+*qt-opengl-4.7.0-r1 (29 Oct 2010)
+
+  29 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qt-opengl-4.7.0-r1.ebuild:
+  Add QTCONFIG definition for EGL too. Bug 340355. Thanks to Andrei Slavoiu
+  <ansla80@yahoo.com> for the patch
 
   23 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-opengl-4.6.3.ebuild:
   alpha/arm/ia64/sparc stable wrt #341703
