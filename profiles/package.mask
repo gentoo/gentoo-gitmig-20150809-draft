@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12115 2010/10/29 09:47:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12116 2010/10/29 10:15:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
-# freqtweak, bug 336160, uses obsolete exgtk
+# freqtweak, bug 336160, uses obsolete wxgtk
 # mplinuxman, bug 338863, for old MP3 players, overflows buffers
 # padevchooser, bug 341191, doesnt work with new pulseaudio
 # Masked for removal in 30 days
