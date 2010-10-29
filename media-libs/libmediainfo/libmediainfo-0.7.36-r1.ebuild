@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.36.ebuild,v 1.1 2010/10/28 07:07:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.36-r1.ebuild,v 1.1 2010/10/29 05:56:16 radhermit Exp $
 
 EAPI="2"
 
@@ -32,6 +32,11 @@ src_prepare() {
 		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libmms.cpp" \
 		|| die "sed failed"
 
+	# Fix linking problem for bug #343125
+	sed -i -e "s:\(#define LIBCURL_DLL_RUNTIME\)://\1:" \
+		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libcurl.cpp" \
+		|| die "sed failed"
+
 	eautoreconf
 }
 
@@ -55,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto "/usr/$(get_libdir)/pkgconfig"
 	doins "${PN}.pc" || die
