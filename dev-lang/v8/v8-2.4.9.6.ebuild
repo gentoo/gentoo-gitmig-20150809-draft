@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.3.ebuild,v 1.3 2010/10/08 11:25:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.6.ebuild,v 1.1 2010/10/29 08:34:53 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib subversion
+inherit eutils flag-o-matic multilib subversion toolchain-funcs
 
 ESVN_REPO_URI="http://v8.googlecode.com/svn/tags/${PV}"
 
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 
 v8_scons_opts() {
 	echo "$(echo ${MAKEOPTS} | sed -r 's/.*(-j\s*|--jobs=)([0-9]+).*/-j\2/')"
+}
+
+pkg_setup() {
+	tc-export AR CC CXX RANLIB
 }
 
 src_prepare() {
@@ -45,11 +49,6 @@ src_configure() {
 }
 
 src_compile() {
-	# TODO: use SONAME, but in a way more consistent
-	# with the rest of a Linux system. Currently the name
-	# looks like libv8-2.2.24.so, but should be more like
-	# libv8.so.2.2.24.
-
 	local myconf=""
 
 	# Use target arch detection logic from bug #296917.
@@ -70,7 +69,7 @@ src_compile() {
 		myconf="${myconf} console=dumb"
 	fi
 
-	scons library=shared $(v8_scons_opts) ${myconf} . || die
+	scons library=shared soname=on $(v8_scons_opts) ${myconf} . || die
 }
 
 src_install() {
@@ -79,10 +78,8 @@ src_install() {
 
 	dobin d8 || die
 
-	dolib libv8.so || die
-
-	insinto /usr/share/${PN}/tools
-	doins tools/*.js || die
+	dolib libv8-${PV}.so || die
+	dosym libv8-${PV}.so /usr/$(get_libdir)/libv8.so || die
 
 	dodoc AUTHORS ChangeLog || die
 }
