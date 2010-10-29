@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/weberror-0.10.2.ebuild,v 1.1 2010/06/07 23:13:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/weberror-0.10.2.ebuild,v 1.2 2010/10/29 19:53:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,14 +20,15 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
-DEPEND=">=dev-python/paste-1.7.1
+RDEPEND=">=dev-python/paste-1.7.1
 	dev-python/pygments
 	dev-python/setuptools
 	dev-python/simplejson
 	dev-python/tempita
 	dev-python/webob"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/webtest )"
 
 S="${WORKDIR}/${MY_P}"
