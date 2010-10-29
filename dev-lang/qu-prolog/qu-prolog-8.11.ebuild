@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.11.ebuild,v 1.5 2010/10/24 15:12:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.11.ebuild,v 1.6 2010/10/29 20:18:06 keri Exp $
 
 EAPI=1
 
@@ -50,41 +50,41 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/bin
-	doexe bin/qa bin/qdeal bin/qem bin/ql
-	doexe bin/qc bin/qc1.qup bin/qecat bin/qg bin/qp bin/qppp
-	doexe bin/kq
+	doexe bin/qa bin/qdeal bin/qem bin/ql || die
+	doexe bin/qc bin/qc1.qup bin/qecat bin/qg bin/qp bin/qppp || die
+	doexe bin/kq || die
 
 	if use qt4; then
-		doexe src/xqp/xqp
+		doexe src/xqp/xqp || die
 	fi
 
 	insinto /usr/$(get_libdir)/${PN}/bin
 	doins prolog/qc1/qc1.qx \
 		prolog/qecat/qecat.qx \
 		prolog/qg/qg.qx \
-		prolog/qp/qp.qx
+		prolog/qp/qp.qx || die
 
 	insinto /usr/$(get_libdir)/${PN}/library
-	doins prolog/library/*.qo
+	doins prolog/library/*.qo || die
 
 	insinto /usr/$(get_libdir)/${PN}/compiler
-	doins prolog/compiler/*.qo
+	doins prolog/compiler/*.qo || die
 
-	doman doc/man/man1/*.1
+	doman doc/man/man1/*.1 || die
 
-	dodoc README
+	dodoc README || die
 
 	if use doc ; then
 		docinto reference-manual
-		dodoc doc/manual/*.html
+		dodoc doc/manual/*.html || die
 		docinto user-guide
-		dodoc doc/user/main.pdf
+		dodoc doc/user/main.pdf || die
 	fi
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/*.ql
+		doins examples/*.ql || die
 		docinto examples
-		dodoc examples/README
+		dodoc examples/README || die
 	fi
 }
