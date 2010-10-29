@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.44 2010/10/24 05:18:11 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.45 2010/10/29 19:35:15 keri Exp $
+
+  29 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
+  Tidy up examples installation; QA - remove die from call to econf, add die
+  to calls to doins
 
   24 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
   +files/yap-6.2.0-parallel-make.patch:
