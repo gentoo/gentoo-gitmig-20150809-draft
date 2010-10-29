@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/prefix-chain-setup/prefix-chain-setup-0.4-r4.ebuild,v 1.2 2010/07/13 15:12:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/prefix-chain-setup/prefix-chain-setup-0.4-r5.ebuild,v 1.1 2010/10/29 09:59:31 mduft Exp $
 
 inherit prefix
 

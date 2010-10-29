@@ -111,7 +111,8 @@ ebegin "creating make.conf"
 	echo "READONLY_EPREFIX=\"${PARENT_EPREFIX}:DEPEND\""
 
 	if test "${DO_SOURCES}" == "yes"; then
-		egrep "^source .*" "${PARENT_EPREFIX}/etc/make.conf" 2>/dev/null
+        # don't fail if nothing found
+		egrep "^source .*" "${PARENT_EPREFIX}/etc/make.conf" 2>/dev/null || true
 	fi
 ) > "${CHILD_EPREFIX}"/etc/make.conf
 eend_exit $?
@@ -140,7 +141,7 @@ eend_exit $?
 ebegin "installing required basic packages"
 (
 	# this -pv is there to avoid the global update output, which is
-	# there on the first emerge run.
+	# there on the first emerge run. (thus, just cosmetics).
 	EPREFIX="${CHILD_EPREFIX}" emerge -p1qO baselayout > /dev/null 2>&1
 
 	EPREFIX="${CHILD_EPREFIX}" emerge -1qO baselayout prefix-chain-utils
