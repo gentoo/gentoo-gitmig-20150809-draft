@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.16 2010/08/20 21:14:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.17 2010/10/29 03:28:45 robbat2 Exp $
+
+  29 Oct 2010; Robin H. Johnson <robbat2@gentoo.org>
+  -mogilefs-server-2.30.ebuild,
+  -files/mogilefs-server-2.30-pidfile-etc.patch,
+  -mogilefs-server-2.32.ebuild, -mogilefs-server-2.33.ebuild,
+  -mogilefs-server-2.33-r1.ebuild, -mogilefs-server-2.34.ebuild,
+  -mogilefs-server-2.35.ebuild, -mogilefs-server-2.36.ebuild,
+  mogilefs-server-2.37.ebuild:
+  Trim old ebuilds and cleanup, also prepare for upstream distfile rename.
 
 *mogilefs-server-2.37 (20 Aug 2010)
 
