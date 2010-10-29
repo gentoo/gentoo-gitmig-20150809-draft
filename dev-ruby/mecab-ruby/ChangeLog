@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.23 2010/06/26 07:09:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.24 2010/10/29 19:41:54 halcy0n Exp $
+
+  29 Oct 2010; Mark Loeser <halcy0n@gentoo.org> mecab-ruby-0.97.ebuild:
+  Mark stable for ppc64; bug #239980
 
 *mecab-ruby-0.98-r1 (26 Jun 2010)
 
