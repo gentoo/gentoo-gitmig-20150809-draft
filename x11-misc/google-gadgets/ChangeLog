@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.32 2010/02/23 15:33:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.33 2010/10/29 04:06:45 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org>
+  google-gadgets-0.11.1-r1.ebuild, google-gadgets-0.11.2.ebuild:
+  Marked ~hppa (bug #272194).
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
   google-gadgets-0.11.2.ebuild:
