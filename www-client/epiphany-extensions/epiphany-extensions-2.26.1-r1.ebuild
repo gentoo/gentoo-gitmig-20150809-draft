@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.7 2010/07/20 15:46:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.8 2010/10/29 21:17:08 pacho Exp $
 
 EAPI="2"
 
@@ -59,7 +59,7 @@ pkg_setup() {
 
 	G2CONF="${G2CONF} --with-extensions=$(echo "${extensions}" | sed -e 's/[[:space:]]\+/,/g')"
 
-	G2CONF="${G2CONF} --with-gecko=libxul-embedding"
+	G2CONF="${G2CONF} --with-gecko=libxul-embedding --disable-maintainer-mode"
 }
 
 src_prepare() {
