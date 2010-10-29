@@ -8,5 +8,7 @@
 			<pkg>www-plugins/gecko-mediaplayer</pkg></flag>
 		<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 			installation with secure-delete enabled</flag>
+		<flag name="system-v8">Use the system-wide <pkg>dev-lang/v8</pkg>
+			installation</flag>
 	</use>
 </pkgmetadata>

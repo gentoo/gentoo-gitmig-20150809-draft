@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.209 2010/10/27 14:20:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.210 2010/10/29 08:52:07 phajdan.jr Exp $
+
+  29 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> +files/v8.gyp,
+  chromium-8.0.552.18.ebuild, chromium-9999.ebuild, metadata.xml:
+  Add experimental support for building with system-provided v8.
 
   27 Oct 2010; Bernard Cafarelli <voyageur@gentoo.org> chromium-9999.ebuild:
   Drop icu patch, merged upstream, thanks Keith Rusler

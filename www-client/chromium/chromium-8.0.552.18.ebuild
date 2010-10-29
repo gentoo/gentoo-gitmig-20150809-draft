@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.18.ebuild,v 1.1 2010/10/27 08:41:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.18.ebuild,v 1.2 2010/10/29 08:52:07 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,12 +13,13 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite"
+IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
 
 RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
+	system-v8? ( ~dev-lang/v8-2.4.9.6 )
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
@@ -54,7 +55,7 @@ RDEPEND+="
 remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
 	local out
-	out="$(find $1 -mindepth 1 \! -iname '*.gyp' -print -delete)" \
+	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
 		|| die "failed to remove bundled library $1"
 	if [[ -z $out ]]; then
 		die "no files matched when removing bundled library $1"
@@ -99,6 +100,21 @@ src_prepare() {
 	if use system-sqlite; then
 		remove_bundled_lib "third_party/sqlite/src"
 		remove_bundled_lib "third_party/sqlite/preprocessed"
+	fi
+
+	if use system-v8; then
+		# Provide our own gyp file that links with the system v8.
+		# TODO: move this upstream.
+		cp "${FILESDIR}"/v8.gyp v8/tools/gyp || die
+
+		remove_bundled_lib "v8"
+
+		# The implementation files include v8 headers with full path,
+		# like #include "v8/include/v8.h". Make sure the system headers
+		# will be used.
+		# TODO: find a solution that can be upstreamed.
+		rmdir v8/include || die
+		ln -s /usr/include v8/include || die
 	fi
 }
 
