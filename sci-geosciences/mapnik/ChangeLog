@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.18 2010/10/18 02:54:59 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.19 2010/10/29 23:01:54 arfrever Exp $
+
+  29 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mapnik-0.5.1.ebuild, -files/mapnik-0.5.1-include-fix.patch,
+  -mapnik-0.6.0.ebuild, -files/mapnik-0.6.0-gentoo.patch:
+  Delete.
 
 *mapnik-0.7.1 (18 Oct 2010)
 
