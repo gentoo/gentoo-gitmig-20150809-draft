@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.269 2010/10/29 02:53:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.270 2010/10/29 11:34:50 hwoarang Exp $
+
+  29 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  seamonkey-2.0.10.ebuild:
+  Stable on amd64 wrt bug #342847
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> seamonkey-2.0.10.ebuild:
   Stable for HPPA PPC (bug #342847).
