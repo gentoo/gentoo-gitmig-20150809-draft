@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.4.ebuild,v 1.10 2010/08/20 17:02:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.4.ebuild,v 1.11 2010/10/29 18:46:37 halcy0n Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://fedorahosted.org/pyparted/"
 SRC_URI="https://fedorahosted.org/releases/p/y/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="
