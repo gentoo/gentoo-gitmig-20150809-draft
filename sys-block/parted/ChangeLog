@@ -1,6 +1,10 @@
-# ChangeLog for sys-apps/parted
+# ChangeLog for sys-block/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.1 2010/08/20 16:59:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.2 2010/10/29 15:42:37 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> parted-2.3.ebuild:
+  Add dev-util/pkgconfig to DEPEND by Mike Hiretsky (bug #343239). Set
+  explicit RDEPEND too.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> parted-2.3.ebuild:
   Marked ppc/ppc64 stable for bug #316453.
