@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SQL-Abstract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.45 2010/10/14 19:27:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.46 2010/10/29 02:14:11 robbat2 Exp $
+
+*SQL-Abstract-1.69 (29 Oct 2010)
+
+  29 Oct 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +SQL-Abstract-1.69.ebuild:
+  Version bump via perl-bump experimental tool.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> SQL-Abstract-1.68.ebuild:
   Marking SQL-Abstract-1.68 ~ppc for bug 337974
