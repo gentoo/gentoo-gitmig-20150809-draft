@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.4.0.ebuild,v 1.1 2010/10/21 07:38:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.4.0.ebuild,v 1.2 2010/10/29 13:44:46 maekke Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
 SLOT="0"
 IUSE="dbi debug doc extras gnutls kerberos logrotate mysql oracle postgres relp snmp static-libs zlib"
 
