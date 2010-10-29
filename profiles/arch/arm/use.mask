@@ -77,6 +77,7 @@ schroedinger
 hardened
 frei0r
 google-gadgets
+oracle
 
 # havent tested yet
 cupsddk
