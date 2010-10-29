@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.21 2010/09/23 16:08:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.22 2010/10/29 03:43:22 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  Stable for HPPA (bug #330657).
 
   23 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   gupnp-igd-0.1.7.ebuild, +files/gupnp-igd-0.1.7-make-382.patch:
