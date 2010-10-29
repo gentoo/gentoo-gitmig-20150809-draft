@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.63 2010/10/29 18:41:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.64 2010/10/29 18:47:08 caster Exp $
+
+  29 Oct 2010; Vlastimil Babka <caster@gentoo.org> -maven-bin-2.0.8.ebuild,
+  -maven-bin-2.0.9.ebuild, -maven-bin-2.0.10-r1.ebuild,
+  maven-bin-2.0.11.ebuild, maven-bin-2.1.0.ebuild, maven-bin-2.2.1.ebuild:
+  Add the configuration to CONFIG_PROTECT, bug #342901.
 
 *maven-bin-3.0 (29 Oct 2010)
 
