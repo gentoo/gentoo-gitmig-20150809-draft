@@ -1,13 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r1.ebuild,v 1.1 2010/10/29 14:32:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.1 2010/10/29 15:21:16 jlec Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils python versionator
 
@@ -73,6 +71,7 @@ pkg_setup() {
 		fi
 	fi
 	python_pkg_setup
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -80,7 +79,6 @@ src_prepare() {
 		"${FILESDIR}"/0.14-python-version.patch \
 		"${FILESDIR}"/0.14.1-testing.patch
 	echo '#!/bin/sh' > config/py-compile
-
 }
 
 src_configure() {
@@ -88,31 +86,21 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_with X x) \
 		--docdir="/usr/share/doc/${PF}" \
+		--libdir="$(python_get_sitedir)" \
 		--enable-site-packages
 }
 
-src_test() {
-	testing() {
-		emake \
-			GENTOOPY="$(PYTHON)" \
-			test || die
-	}
-# not implemented
-#	python_execute_function testing
-}
-
 src_install() {
-	installation() {
-		emake \
-			GAJIM_SRCDIR="$(python_get_sitedir)"/${PN} \
-			pythondir="$(python_get_sitedir)" \
-			pyexecdir="$(python_get_sitedir)" \
-			DESTDIR="${D}" \
-			install || die
-	}
-
-	python_execute_function installation
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	rm "${D}/usr/share/doc/${PF}/"{README.html,COPYING} || die
 	dohtml README.html || die
+}
+
+pkg_postinst() {
+	python_mod_optimize $(python_get_sitedir)/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
