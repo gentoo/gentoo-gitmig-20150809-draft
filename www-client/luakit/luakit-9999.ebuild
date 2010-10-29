@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.9 2010/09/23 13:52:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.10 2010/10/29 13:33:17 wired Exp $
 
 EAPI=3
 
@@ -40,6 +40,7 @@ DEPEND="
 
 RDEPEND="
 	${COMMON_DEPEND}
+	dev-libs/luafilesystem
 	helpers? (
 		x11-misc/dmenu
 	)
