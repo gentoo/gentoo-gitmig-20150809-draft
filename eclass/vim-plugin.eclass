@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.23 2008/08/30 07:59:18 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.24 2010/10/29 06:44:06 mduft Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -20,17 +20,34 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 SLOT="0"
 
 vim-plugin_src_install() {
+	has "${EAPI:-0}" 0 1 2 && use !prefix && ED="${D}"
+
 	local f
+	local _portage_user='portage'
+	local _portage_group='portage'
+	local _root=root
+	local _group=wheel
+
+	# no wheel group here.
+	if use userland_BSD || use userland_Darwin; then 
+		_group=root
+	fi
+
+	# in prefix, we don't want to give away rights to root
+	if use prefix; then
+		_portage_user=${PORTAGE_USER}
+		_portage_group=${PORTAGE_GROUP}
+		_root=${PORTAGE_ROOT_USER}
+		_group=${_portage_group}
+	fi
 
 	ebegin "Fixing file permissions"
 	# Make sure perms are good
 	chmod -R a+rX "${S}" || die "chmod failed"
-	find "${S}" -user  'portage' -exec chown root '{}' \; || die "chown failed"
-	if use userland_BSD || use userland_Darwin ; then
-		find "${S}" -group 'portage' -exec chgrp wheel '{}' \; || die "chgrp failed"
-	else
-		find "${S}" -group 'portage' -exec chgrp root '{}' \; || die "chgrp failed"
-	fi
+	[[ ${_portage} != ${_root} ]] && \
+		find "${S}" -user  ${_portage_user} -exec chown ${_root} '{}' \; || die "chown failed"
+	[[ ${_portage} != ${_group} ]] && \
+		find "${S}" -group ${_portage_group} -exec chgrp ${_group} '{}' \; || die "chgrp failed"
 	eend $?
 
 	# Install non-vim-help-docs
@@ -48,10 +65,10 @@ vim-plugin_src_install() {
 	# Install remainder of plugin
 	cd "${WORKDIR}"
 	dodir /usr/share/vim
-	mv "${S}" "${D}"/usr/share/vim/vimfiles
+	mv "${S}" "${ED}"/usr/share/vim/vimfiles
 
 	# Fix remaining bad permissions
-	chmod -R -x+X "${D}"/usr/share/vim/vimfiles/ || die "chmod failed"
+	chmod -R -x+X "${ED}"/usr/share/vim/vimfiles/ || die "chmod failed"
 }
 
 vim-plugin_pkg_postinst() {
@@ -73,7 +90,8 @@ vim-plugin_pkg_postrm() {
 # /usr/share/vim/vimfiles/after/* comprised of the snippets in
 # /usr/share/vim/vimfiles/after/*/*.d
 update_vim_afterscripts() {
-	local d f afterdir="${ROOT}"/usr/share/vim/vimfiles/after
+	has "${EAPI:-0}" 0 1 2 && use !prefix && EROOT="${ROOT}"
+	local d f afterdir="${EROOT}"/usr/share/vim/vimfiles/after
 
 	# Nothing to do if the dir isn't there
 	[ -d "${afterdir}" ] || return 0
