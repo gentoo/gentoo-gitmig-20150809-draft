@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/kmagnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kmagnet/ChangeLog,v 1.4 2010/05/23 20:09:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kmagnet/ChangeLog,v 1.5 2010/10/29 19:56:27 mr_bones_ Exp $
+
+*kmagnet-0.09 (29 Oct 2010)
+
+  29 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> +kmagnet-0.09.ebuild:
+  version bump
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> kmagnet-0.08.ebuild:
   stable amd64, bug 313023
