@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/axel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.56 2010/04/08 01:36:59 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.57 2010/10/29 03:14:50 jer Exp $
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> axel-2.3-r1.ebuild,
+  axel-2.4.ebuild:
+  Marked ~hppa (bug #343067).
 
   08 Apr 2010; Tomas Touceda <chiiph@gentoo.org> metadata.xml:
   Update metadata. Putting myself as the direct maintainer
