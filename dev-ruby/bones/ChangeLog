@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.4 2010/05/22 13:16:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.5 2010/10/29 15:23:00 graaff Exp $
+
+*bones-3.5.1 (29 Oct 2010)
+
+  29 Oct 2010; Hans de Graaff <graaff@gentoo.org> +bones-3.5.1.ebuild:
+  Version bump. Closes bug 325477.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> -bones-3.2.0.ebuild,
   -bones-3.2.1.ebuild, bones-3.4.1.ebuild:
