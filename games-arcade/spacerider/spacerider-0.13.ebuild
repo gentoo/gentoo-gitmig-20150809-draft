@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/spacerider-0.13.ebuild,v 1.7 2010/01/05 02:35:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/spacerider-0.13.ebuild,v 1.8 2010/10/29 08:21:52 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,15 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/sdl-gfx
+RDEPEND="media-libs/sdl-gfx
 	media-libs/sdl-mixer
 	media-libs/sdl-image[jpeg]
 	media-libs/sdl-net
 	media-libs/sdl-ttf"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch
 	sed -i \
 		-e "s:/usr/share/games/spacerider:${GAMES_DATADIR}/${PN}:" \
 		globals.cpp \

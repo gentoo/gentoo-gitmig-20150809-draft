@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/spacerider
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.6 2010/01/05 02:35:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.7 2010/10/29 08:21:52 tupone Exp $
+
+  29 Oct 2010; Tupone Alfredo <tupone@gentoo.org> spacerider-0.13.ebuild,
+  +files/spacerider-0.13-ovflfix.patch:
+  Fix overflow. Bug #340166 by flameeyes@gentoo.org
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> spacerider-0.13.ebuild:
   Marked ~ppc for bug #293677.
