@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.2 2010/10/28 21:00:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.3 2010/10/29 05:04:20 mr_bones_ Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ S="${WORKDIR}"
 src_prepare() {
 	# fix translations
 	mv "${S}"/resources/translations/${RES_NAME}_cz.ts \
-		"${S}"/resources/translations/${RES_NAME}_cs.ts ||die 
+		"${S}"/resources/translations/${RES_NAME}_cs.ts ||die
 	mv "${S}"/resources/translations/${RES_NAME}_jp.ts	\
 		"${S}"/resources/translations/${RES_NAME}_ja.ts || die
 	mv "${S}"/resources/translations/${RES_NAME}_du.ts	\
