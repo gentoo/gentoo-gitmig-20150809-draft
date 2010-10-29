@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.44.05.ebuild,v 1.1 2010/10/29 18:06:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.44.05.ebuild,v 1.2 2010/10/29 20:37:35 williamh Exp $
 
 EAPI="3"
 
@@ -68,7 +68,7 @@ src_install() {
 	cd ..
 	insinto /usr/share/espeak-data
 	doins -r dictsource
-	dodoc ChangeLog ReadMe
+	dodoc ChangeLog.txt ReadMe
 	dohtml -r docs/*
 }
 
