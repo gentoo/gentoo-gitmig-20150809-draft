@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.76 2010/10/15 14:28:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.77 2010/10/29 16:55:55 flameeyes Exp $
+
+*libvirt-0.8.5 (29 Oct 2010)
+
+  29 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libvirt-0.8.5.ebuild, metadata.xml:
+  Version bump, which include my (partial) fix for USB devices from
+  upstream; add a backport for the check target broken in 0.8.5 release when
+  xen is not enabled; allow the backport tarball to be fetched either from
+  my dev space or from Doug's. Audit support is disabled until properly
+  tested.
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -libvirt-0.8.2-r1.ebuild, -libvirt-0.8.3.ebuild, -libvirt-0.8.3-r1.ebuild,
