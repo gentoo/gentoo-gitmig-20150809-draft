@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.104 2010/10/25 11:54:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.105 2010/10/29 19:09:08 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -23,31 +23,6 @@ _PYTHON_SUPPORTED_ABIS=(${_CPYTHON2_SUPPORTED_ABIS[@]} ${_CPYTHON3_SUPPORTED_ABI
 # ================================================================================================
 # ===================================== HANDLING OF METADATA =====================================
 # ================================================================================================
-
-_python_set_IUSE() {
-	local PYTHON_ABI restricted_ABI restricted_ABIs support_ABI
-
-	_PYTHON_ABIS_USE_FLAGS=""
-	restricted_ABIs="${RESTRICT_PYTHON_ABIS// /$'\n'}"
-
-	for PYTHON_ABI in "${_PYTHON_SUPPORTED_ABIS[@]}"; do
-		support_ABI="1"
-		while read restricted_ABI; do
-			if [[ "${PYTHON_ABI}" == ${restricted_ABI} ]]; then
-				support_ABI="0"
-				break
-			fi
-		done <<< "${restricted_ABIs}"
-		[[ "${support_ABI}" == "1" ]] && _PYTHON_ABIS_USE_FLAGS+="${_PYTHON_ABIS_USE_FLAGS:+ }python_abis_${PYTHON_ABI}"
-	done
-
-	IUSE="${_PYTHON_ABIS_USE_FLAGS}"
-}
-
-if ! has "${EAPI:-0}" 0 1 2 3 && [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-	_python_set_IUSE
-fi
-unset -f _python_set_IUSE
 
 # @ECLASS-VARIABLE: PYTHON_DEPEND
 # @DESCRIPTION:
@@ -238,135 +213,6 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 fi
 
 unset _PYTHON_ATOMS
-
-# @FUNCTION: python_abi_depend
-# @USAGE: [-e|--exclude-ABIs Python_ABIs] [-i|--include-ABIs Python_ABIs] [--] <dependency_atom> [dependency_atoms]
-# @DESCRIPTION:
-# Print dependency atoms with USE dependencies for Python ABIs added.
-# If --exclude-ABIs option is specified, then Python ABIs matching its argument are not used.
-# If --include-ABIs option is specified, then only Python ABIs matching its argument are used.
-# --exclude-ABIs and --include-ABIs options cannot be specified simultaneously.
-python_abi_depend() {
-	local atom atom_index atoms=() exclude_ABIs="0" excluded_ABI excluded_ABIs include_ABIs="0" included_ABI included_ABIs support_ABI USE_dependencies USE_flag USE_flag_index USE_flags=()
-
-	if has "${EAPI:-0}" 0 1 2 3; then
-		die "${FUNCNAME}() cannot be used in this EAPI"
-	fi
-
-	if [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
-		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
-	fi
-
-	while (($#)); do
-		case "$1" in
-			-e|--exclude-ABIs)
-				exclude_ABIs="1"
-				excluded_ABIs="${2// /$'\n'}"
-				shift
-				;;
-			-i|--include-ABIs)
-				include_ABIs="1"
-				included_ABIs="${2// /$'\n'}"
-				shift
-				;;
-			--)
-				shift
-				break
-				;;
-			-*)
-				die "${FUNCNAME}(): Unrecognized option '$1'"
-				;;
-			*)
-				break
-				;;
-		esac
-		shift
-	done
-
-	if [[ "${exclude_ABIs}" == "1" && "${include_ABIs}" == "1" ]]; then
-		die "${FUNCNAME}(): '--exclude-ABIs' and '--include-ABIs' options cannot be specified simultaneously"
-	fi
-
-	if [[ "$#" -eq 0 ]]; then
-		die "${FUNCNAME}(): Missing dependency atoms"
-	fi
-
-	atoms=("$@")
-
-	if [[ "${exclude_ABIs}" == "0" && "${include_ABIs}" == "0" ]]; then
-		USE_dependencies="$(printf ",%s?" ${_PYTHON_ABIS_USE_FLAGS})"
-		USE_dependencies="${USE_dependencies#,}"
-
-		for atom_index in "${!atoms[@]}"; do
-			atom="${atoms[${atom_index}]}"
-
-			if [[ "${atom}" == *"["*"]" ]]; then
-				echo -n "${atom%]},"
-			else
-				echo -n "${atom}["
-			fi
-			echo -n "${USE_dependencies}]"
-
-			if [[ "${atom_index}" -ne $((${#atoms[@]} - 1)) ]]; then
-				echo -n " "
-			fi
-		done
-	else
-		if [[ "${exclude_ABIs}" == "1" ]]; then
-			for USE_flag in ${_PYTHON_ABIS_USE_FLAGS}; do
-				while read excluded_ABI; do
-				support_ABI="1"
-					if [[ "${USE_flag}" == python_abis_${excluded_ABI} ]]; then
-						support_ABI="0"
-						break
-					fi
-				done <<< "${excluded_ABIs}"
-			[[ "${support_ABI}" == "1" ]] && USE_flags+=("${USE_flag}")
-			done
-		elif [[ "${include_ABIs}" == "1" ]]; then
-			for USE_flag in ${_PYTHON_ABIS_USE_FLAGS}; do
-				while read included_ABI; do
-				support_ABI="0"
-					if [[ "${USE_flag}" == python_abis_${included_ABI} ]]; then
-						support_ABI="1"
-						break
-					fi
-				done <<< "${included_ABIs}"
-			[[ "${support_ABI}" == "1" ]] && USE_flags+=("${USE_flag}")
-			done
-		else
-			die "${FUNCNAME}(): Internal error"
-		fi
-
-		for USE_flag_index in "${!USE_flags[@]}"; do
-			USE_flag="${USE_flags[${USE_flag_index}]}"
-			USE_dependencies="${USE_flag}"
-
-			echo -n "${USE_flag}? ( "
-
-			for atom_index in "${!atoms[@]}"; do
-				atom="${atoms[${atom_index}]}"
-
-				if [[ "${atom}" == *"["*"]" ]]; then
-					echo -n "${atom%]},"
-				else
-					echo -n "${atom}["
-				fi
-				echo -n "${USE_dependencies}]"
-
-				if [[ "${atom_index}" -ne $((${#atoms[@]} - 1)) ]]; then
-					echo -n " "
-				fi
-			done
-
-			echo -n " )"
-
-			if [[ "${USE_flag_index}" -ne $((${#USE_flags[@]} - 1)) ]]; then
-				echo -n " "
-			fi
-		done
-	fi
-}
 
 # ================================================================================================
 # =================================== MISCELLANEOUS FUNCTIONS ====================================
