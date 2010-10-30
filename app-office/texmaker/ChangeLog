@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.71 2010/10/23 14:48:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.72 2010/10/30 21:36:24 aballier Exp $
+
+*texmaker-2.10 (30 Oct 2010)
+
+  30 Oct 2010; Alexis Ballier <aballier@gentoo.org> +texmaker-2.10.ebuild,
+  +files/texmaker-2.10-hunspell.patch:
+  Version bump, readd wrongly dropped ppc* keywords, readd wrongly removed
+  minimal qt versions
 
   23 Oct 2010; Raúl Porcel <armin76@gentoo.org> texmaker-1.80.ebuild,
   texmaker-1.91.ebuild, texmaker-1.92.ebuild, texmaker-1.99.ebuild,
