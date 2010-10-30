@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.33 2010/02/07 21:06:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.34 2010/10/30 23:46:43 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  soappy-0.12.0.ebuild:
+  Update EAPI. Fix dependencies. Call python_pkg_setup().
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> soappy-0.12.0.ebuild:
   Add inherit eutils: epatch is defined there.

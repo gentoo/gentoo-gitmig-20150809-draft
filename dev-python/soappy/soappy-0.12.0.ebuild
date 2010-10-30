@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.0.ebuild,v 1.18 2010/02/07 21:06:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.0.ebuild,v 1.19 2010/10/30 23:46:43 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils
 
@@ -23,15 +25,16 @@ DEPEND=">=dev-python/fpconst-0.7.1
 		dev-python/pyxml"
 RDEPEND="${DEPEND}
 		ssl? ( dev-python/m2crypto )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="${MY_PN}"
 DOCS="RELEASE_INFO"
+PYTHON_MODNAME="${MY_PN}"
 
 pkg_setup() {
-	if use ssl && ! has_version dev-lang/python[ssl]; then
+	python_pkg_setup
+
+	if use ssl && ! has_version "=dev-lang/python-2*[ssl]"; then
 		ewarn "The 'ssl' USE-flag is enabled, but dev-lang/python is"
 		ewarn "not compiled with it. You'll only get server-side SSL support."
 		ewarn "Just emerge dev-lang/python afterwards with the ssl USE-flag to"
