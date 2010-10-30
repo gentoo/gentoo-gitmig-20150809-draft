@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.46 2009/07/15 18:42:42 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.47 2010/10/30 11:20:23 maekke Exp $
+
+  30 Oct 2010; Markus Meier <maekke@gentoo.org> quota-3.17.ebuild:
+  add ~arm, bug #340455
 
   15 Jul 2009; nixnut <nixnut@gentoo.org> quota-3.17.ebuild:
   ppc stable #272531
