@@ -1,13 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/louie-1.1.ebuild,v 1.5 2010/10/15 14:19:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/louie-1.1.ebuild,v 1.6 2010/10/30 20:56:46 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
-MY_P="Louie-${PV}"
+MY_PN="Louie"
+MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Signal dispatching mechanism for Python"
-HOMEPAGE="http://pypi.python.org/pypi/Louie/"
-SRC_URI="http://cheeseshop.python.org/packages/source/L/Louie/${MY_P}.tar.gz"
+HOMEPAGE="http://pypi.python.org/pypi/Louie"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
@@ -18,7 +27,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
-# This has changed with upstream migrating to setuptools. No idea how to actually run them tests now ...
-#src_test() {
-#	python selftest.py || die "selftest.py failed"
-#}
+src_prepare() {
+	distutils_src_prepare
+	sed -e "/'nose >= 0.8.3'/d" -i setup.py || die "sed failed"
+}
