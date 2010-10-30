@@ -78,6 +78,7 @@ hardened
 frei0r
 google-gadgets
 oracle
+libvirt
 
 # havent tested yet
 cupsddk
