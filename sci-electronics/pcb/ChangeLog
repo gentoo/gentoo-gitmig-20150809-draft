@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.56 2010/10/23 06:57:09 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.57 2010/10/30 14:25:48 tomjbe Exp $
+
+  30 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> pcb-20100929.ebuild:
+  Fix tests wrt bug #342835. Thanks for reporting Diego.
 
 *pcb-20100929 (22 Oct 2010)
 

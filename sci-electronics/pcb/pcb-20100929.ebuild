@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20100929.ebuild,v 1.1 2010/10/22 18:37:25 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20100929.ebuild,v 1.2 2010/10/30 14:25:48 tomjbe Exp $
 
 EAPI="2"
 
@@ -56,6 +56,18 @@ pkg_setup() {
 	fi
 	if (use gtk || (! use gtk && ! use motif)) &&  (use xrender); then
 		elog "The XRender extension is only usable with the Motif/Lesstif GUI."
+	fi
+}
+
+src_prepare() {
+	if use test; then
+		# adapt the list of tests to run according to USE flag settings
+		if ! use png; then
+			sed -i '/^hid_png/d' tests/tests.list || die
+		fi
+		if ! use gcode; then
+			sed -i '/^hid_gcode/d' tests/tests.list || die
+		fi
 	fi
 }
 
