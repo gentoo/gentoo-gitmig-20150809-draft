@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.5 2010/06/08 11:31:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.6 2010/10/30 23:26:53 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -14,14 +16,13 @@ DESCRIPTION="A toolkit for building high-level compound widgets in Python using 
 HOMEPAGE="http://pmw.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux"
-LICENSE="BSD"
 IUSE="doc examples"
 
-DEPEND="dev-lang/python[tk]"
-RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
+DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}/src"
 

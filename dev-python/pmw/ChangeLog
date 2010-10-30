@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pmw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.31 2010/06/08 11:31:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.32 2010/10/30 23:26:53 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pmw-1.3.2-r2.ebuild:
+  Update EAPI. Fix dependencies.
 
   08 Jun 2010; Markos Chandras <hwoarang@gentoo.org> pmw-1.3.2-r2.ebuild:
   Stable on amd64 wrt bug #310775
