@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.561 2010/10/29 06:13:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.562 2010/10/30 13:53:54 zzam Exp $
+
+*udev-164 (30 Oct 2010)
+
+  30 Oct 2010; Matthias Schwarzott <zzam@gentoo.org>
+  +files/164/40-gentoo.rules, +files/164/90-network.rules,
+  +files/164/shell-compat-KV.sh, +files/164/shell-compat-addon.sh,
+  +files/164/udev.confd, +files/164/udev.initd,
+  +files/164/udev-dev-tarball.initd, +files/164/udev-mount.initd,
+  +files/164/udev-postmount.initd, +udev-164.ebuild,
+  +files/164/udev-start.sh, +files/164/udev-stop.sh:
+  Version bumped. Changed udev-postmount script to better check for ro
+  filesystems and non bash shells. Bugs 342403, 326825. Remove /dev/loop if
+  it is empty, Bug #338766.
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> udev-151-r4.ebuild:
   Stable for HPPA (bug #324507).
