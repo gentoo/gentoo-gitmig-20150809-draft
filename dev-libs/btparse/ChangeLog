@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/btparse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.11 2009/09/23 17:16:52 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.12 2010/10/30 21:30:14 aballier Exp $
+
+  30 Oct 2010; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  put it under the tex umbrella
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> btparse-0.33.ebuild,
   btparse-0.35.ebuild:
