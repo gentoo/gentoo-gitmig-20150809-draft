@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.4 2010/10/30 03:52:12 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.5 2010/10/30 08:34:24 keri Exp $
 
 inherit autotools eutils flag-o-matic java-pkg-opt-2
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-yapsharedir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-ld-library-path.patch
+	epatch "${FILESDIR}"/${P}-lib-soname.patch
 	epatch "${FILESDIR}"/${P}-have-config.patch
 	epatch "${FILESDIR}"/${P}-chr-sublist.patch
 

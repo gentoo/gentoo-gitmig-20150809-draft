@@ -1,0 +1,119 @@
+diff -ur yap-6.orig/Makefile.in yap-6/Makefile.in
+--- yap-6.orig/Makefile.in	2010-10-18 21:48:20.000000000 +1300
++++ yap-6/Makefile.in	2010-10-30 21:27:55.000000000 +1300
+@@ -96,6 +96,7 @@
+ TEXI2HTML=texi2html
+ TEXI2PDF=texi2pdf
+ YAPLIB=@YAPLIB@
++SONAMEFLAG=@SONAMEFLAG@
+ 
+ #4.1VPATH=@srcdir@:@srcdir@/OPTYap
+ CWD=$(PWD)
+@@ -531,7 +532,7 @@
+ 	$(RANLIB) libYap.a
+ 
+ @DYNYAPLIB@: $(LIB_OBJECTS)
+-	@YAPLIB_LD@ -o @YAPLIB@ $(LIB_OBJECTS) $(LIBS) $(LDFLAGS)
++	@YAPLIB_LD@ -o @YAPLIB@ $(LIB_OBJECTS) $(LIBS) $(LDFLAGS) $(SONAMEFLAG)
+ 
+ install: install_bin install_data
+ 
+diff -ur yap-6.orig/configure.in yap-6/configure.in
+--- yap-6.orig/configure.in	2010-10-30 21:28:41.000000000 +1300
++++ yap-6/configure.in	2010-10-30 21:27:06.000000000 +1300
+@@ -915,6 +915,7 @@
+           fi
+ 	  LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+           DYNYAPLIB=libYap."$SO"
++	  SONAMEFLAG="-Wl,-soname=$DYNYAPLIB"
+         fi
+         if test "$have_nsl" = yes
+ 	 then
+@@ -944,6 +945,7 @@
+ 	INSTALL_DLLS=""
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,-R,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -983,6 +985,7 @@
+ 	fi
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,-R,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -996,6 +999,7 @@
+ 	#INSTALL_DLLS=""
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -1014,6 +1018,7 @@
+         fi
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,-R,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -1028,6 +1033,7 @@
+ 	INSTALL_DLLS=""
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,-R,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -1066,6 +1072,7 @@
+         fi
+         CC="$CC -fstrict-aliasing -freorder-blocks -fsched-interblock -Wall -Wstrict-aliasing=2"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         YAPLIB_LD="$CC -dynamiclib -Wl,-install_name,$prefix/lib/libYap.dylib"
+         PRE_INSTALL_ENV="DYLD_LIBRARY_PATH=\$(abs_top_builddir)"
+ 	;;
+@@ -1089,6 +1096,7 @@
+         fi
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG="-Wl,--soname=$DYNYAPLIB"
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -Wl,-R,\$(YAPLIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -1105,6 +1113,7 @@
+ 	INSTALL_DLLS=""
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG="-Wl,--soname=$DYNYAPLIB"
+         if test "$dynamic_loading" = "yes"
+         then 
+            YAPLIB_LD="\$(CC)"
+@@ -1123,6 +1132,7 @@
+         # and -fomit-frame-point -DBP_FREE
+ 	YAPLIB="yap.dll"
+ 	DYNYAPLIB="yap.dll"
++	SONAMEFLAG=""
+ 	SHLIB_CFLAGS="$CFLAGS"
+ 	SHLIB_CXXFLAGS="$CXXFLAGS"
+         if test "$target_win64" = no
+@@ -1163,6 +1173,7 @@
+         fi
+ 	LDFLAGS="$LDFLAGS -L\$(abs_top_builddir) -Wl,-R,\$(LIBDIR) -Wl,-R,\$(YAPLIBDIR)"
+         DYNYAPLIB=libYap."$SO"
++	SONAMEFLAG=""
+         EXTRA_LIBS_FOR_DLLS="$EXTRA_LIBS_FOR_DLLS -L\$(abs_top_builddir) -lYap -Wl,-R,\$(YAPLIBDIR) -Wl,-R,\$(LIBDIR)"
+         PRE_INSTALL_ENV="LD_LIBRARY_PATH=\$(abs_top_builddir)"
+         INSTALL_ENV="LD_LIBRARY_PATH=\$(DESTDIR)\$(LIBDIR):\$(DESTDIR)\$(YAPLIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR) YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+@@ -1469,6 +1480,7 @@
+ AC_SUBST(YAPLIB)
+ AC_SUBST(DYNYAPLIB)
+ AC_SUBST(LDFLAGS)
++AC_SUBST(SONAMEFLAG)
+ dnl install_info
+ AC_SUBST(INSTALL_INFO)
+ dnl let YAP_EXTRAS fall through configure, from the env into Makefile

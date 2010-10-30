@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.46 2010/10/30 03:52:12 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.47 2010/10/30 08:34:24 keri Exp $
+
+  30 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
+  +files/yap-6.2.0-lib-soname.patch:
+  Ensure libYap.so is generated with a defined SONAME
 
   30 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
   +files/yap-6.2.0-ld-library-path.patch:
