@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/upnpscan-0.4-r1.ebuild,v 1.1 2010/10/22 01:34:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/upnpscan-0.4-r1.ebuild,v 1.2 2010/10/30 09:24:23 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,12 +22,15 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	if use static ; then
 		econf || die
 	else
 		econf --enable-static=no || die
 	fi
+}
+
+src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
 }
 

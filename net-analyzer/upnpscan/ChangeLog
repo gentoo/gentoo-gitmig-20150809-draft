@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.7 2010/10/22 01:34:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.8 2010/10/30 09:24:23 flameeyes Exp $
+
+  30 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  upnpscan-0.4-r1.ebuild:
+  QA: fix phases for EAPI=2.
 
 *upnpscan-0.4-r1 (22 Oct 2010)
 
