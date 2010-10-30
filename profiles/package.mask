@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12124 2010/10/30 09:20:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12125 2010/10/30 20:44:56 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (30 Oct 2010)
+# Build failures (bug 244543) and not required by
+# anything in the tree.
+# Pending Removal: 2010-11-30
+=dev-cpp/gtkmm-2.2.12
 
 # Samuli Suominen <ssuominen@gentoo.org> (30 Oct 2010)
 # Uninstallable for over a year now, bug 276203
