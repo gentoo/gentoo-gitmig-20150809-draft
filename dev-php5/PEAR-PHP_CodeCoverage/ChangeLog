@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/PEAR-PHP_CodeCoverage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-PHP_CodeCoverage/ChangeLog,v 1.1 2010/10/04 22:48:27 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-PHP_CodeCoverage/ChangeLog,v 1.2 2010/10/30 14:14:53 olemarkus Exp $
+
+  30 Oct 2010; <olemarkus@gentoo.org> PEAR-PHP_CodeCoverage-1.0.0.ebuild:
+  Added version to the xdebug dep
 
 *PEAR-PHP_CodeCoverage-1.0.0 (04 Oct 2010)
 
