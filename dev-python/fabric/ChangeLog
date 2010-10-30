@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.9 2010/09/19 22:25:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.10 2010/10/30 19:41:49 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -fabric-0.9.1.ebuild:
+  Delete.
 
 *fabric-0.9.2 (19 Sep 2010)
 
