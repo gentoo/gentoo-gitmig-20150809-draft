@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12125 2010/10/30 20:44:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12126 2010/10/30 20:54:10 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -494,6 +494,8 @@ gnome-base/dconf
 >=media-video/cheese-2.32
 >=dev-util/gnome-devel-docs-2.32
 >=gnome-extra/gnome-user-docs-2.32
+dev-cpp/atkmm
+>=dev-cpp/gtkmm-2.22
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
