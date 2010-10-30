@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.18 2010/07/13 23:48:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.19 2010/10/30 17:01:25 olemarkus Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -33,7 +33,7 @@ php-pear-lib-r1_src_install() {
 	addpredict /var/lib/net-snmp/
 	addpredict /session_mm_cli0.sem
 
-	PHP_BIN="/usr/$(get_libdir)/php5/bin/php"
+	PHP_BIN="/usr/bin/php"
 
 	cd "${S}"
 
