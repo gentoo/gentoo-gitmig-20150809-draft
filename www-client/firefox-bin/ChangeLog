@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.39 2010/10/29 11:33:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.40 2010/10/30 09:58:50 maekke Exp $
+
+  30 Oct 2010; Markus Meier <maekke@gentoo.org> firefox-bin-3.6.12.ebuild:
+  x86 stable, bug #342847
 
   29 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   firefox-bin-3.6.12.ebuild:
