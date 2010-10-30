@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.03.ebuild,v 1.1 2010/08/04 07:25:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.06.ebuild,v 1.1 2010/10/30 10:28:44 grozin Exp $
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="python? 2"
