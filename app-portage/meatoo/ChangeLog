@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/meatoo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.5 2009/01/05 19:23:55 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.6 2010/10/30 22:17:06 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  meatoo-0.1.1.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS (bug #311785). Enable
+  tests. Use PyPI mirrors.
 
   05 Jan 2009; Patrick Lauer <patrick@gentoo.org> meatoo-0.1.1.ebuild:
   adding ~amd64 keyword
