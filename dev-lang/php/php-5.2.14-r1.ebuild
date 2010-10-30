@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r1.ebuild,v 1.1 2010/10/08 18:25:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r1.ebuild,v 1.2 2010/10/30 21:41:10 olemarkus Exp $
 
 EAPI=2
 
@@ -78,7 +78,7 @@ IUSE="kolab"
 # SAPIs and SAPI-specific USE flags (cli SAPI is default on):
 IUSE="${IUSE}
 	${SAPIS/cli/+cli}
-	threads"
+	threads force-cgi-redirect discard-path"
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	crypt +ctype curl curlwrappers db2 dbase dbmaker debug doc empress
@@ -238,8 +238,24 @@ PROVIDE="virtual/php"
 SLOT="$(get_version_component_range 1-2)"
 S="${WORKDIR}/${PHP_P}"
 
+# Allow users to install production version if they want to
+# PHP 5.2 has other filenames for prod and dev versions
+
+case "${PHP_INI_VERSION}" in
+	production) 
+		PHP_INI_UPSTREAM="php.ini-recommended"
+		;;
+	development)
+		PHP_INI_UPSTREAM="php.ini-dist"
+		;;
+	*)
+		PHP_INI_VERSION="development"
+		PHP_INI_UPSTREAM="php.ini-dist"
+		;;
+esac
+
+
 PHP_INI_FILE="php.ini"
-PHP_INI_UPSTREAM="php.ini-dist"
 
 want_apache
 

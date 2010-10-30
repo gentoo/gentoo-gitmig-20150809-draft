@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.7 2010/10/27 10:33:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.8 2010/10/30 21:41:10 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -145,4 +145,16 @@ php_install_ini() {
 		newinitd "${FILESDIR}/php-fpm-r1.init" "php-fpm"
 #		dosym "${PHP_DESTDIR}/bin/php-fpm" "/usr/bin/php-fpm"
 	fi
+
+  # Install PHP ini files into /usr/share/php
+	if [[ ${SLOT} == '5.2' ]]; then
+		newdoc php.ini-dist php.ini-development
+		newdoc php.ini-recommended php.ini-production
+	fi
+
+	if [[ ${SLOT} == '5.3' ]]; then
+		dodoc php.ini-development
+		dodoc php.ini-production
+	fi
+
 }

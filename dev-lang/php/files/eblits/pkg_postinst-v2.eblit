@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.3 2010/10/19 06:20:34 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.4 2010/10/30 21:41:10 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -12,19 +12,21 @@ eblit-php-pkg_postinst() {
 
 	
 	# Create the symlinks for php
-	local m modules="cli apache2 fpm"
+	local m modules="cli apache2 fpm cgi"
 	for m in $modules; do
 		if use $m ; then
 			local ci=$(eselect php show $m)
 			if [[ -z $ci ]]; then
 				eselect php set $m php${SLOT}
 			elif [[ $ci != "php${SLOT}" ]] ; then
-				ewarn "To switch $m to use php-${SLOT}, run"
-				ewarn "    eselect php set $m php${SLOT}"
-				ewarn
+				elog "To switch $m to use php-${SLOT}, run"
+				elog "    eselect php set $m php${SLOT}"
+				elog
 			fi
 		fi
 	done
+
+  
 
 	ewarn "You may have to recompile third-party extensions now"
 	ewarn "(includes every dev-php5/pecl-* package and probably others in that category)"
@@ -33,5 +35,9 @@ eblit-php-pkg_postinst() {
 		ewarn "the readline USE flag or php -a will hang"
 	fi
 	ewarn
+	ewarn "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
+	ewarn "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
+	ewarn "'production' or 'development' in /etc/make.conf"
+	ewarn "Both versions of php.ini can be found in /usr/share/doc/${PF}"
 }
 

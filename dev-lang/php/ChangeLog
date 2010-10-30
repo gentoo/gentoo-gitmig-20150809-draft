@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.428 2010/10/27 10:33:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.429 2010/10/30 21:41:10 olemarkus Exp $
+
+  30 Oct 2010; <olemarkus@gentoo.org> files/eblits/pkg_postinst-v2.eblit,
+  php-5.2.14-r1.ebuild, files/eblits/src_install-v2.eblit,
+  php-5.3.3-r2.ebuild:
+  Changed ebuild to use php.ini-development by default
+  Also made ebuilds add symlink to php-cgi if the cgi SAPI is installed
 
   27 Oct 2010; <olemarkus@gentoo.org> files/eblits/src_install-v1.eblit,
   files/eblits/src_install-v2.eblit:
