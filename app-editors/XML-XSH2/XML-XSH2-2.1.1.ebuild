@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.1.1.ebuild,v 1.1 2008/05/21 19:45:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/XML-XSH2-2.1.1.ebuild,v 1.2 2010/10/30 10:07:24 ssuominen Exp $
 
 MODULE_AUTHOR=PAJAS
 inherit perl-module
