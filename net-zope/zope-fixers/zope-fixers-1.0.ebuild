@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/zope-fixers-1.0.ebuild,v 1.1 2010/05/05 20:49:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/zope-fixers-1.0.ebuild,v 1.2 2010/10/30 19:02:26 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="3:3.1"
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="2to3 fixers for Zope"
 HOMEPAGE="http://pypi.python.org/pypi/zope.fixers"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="ZPL"
 SLOT="0"

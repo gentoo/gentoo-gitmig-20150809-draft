@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/zope-app-form-4.0.2.ebuild,v 1.1 2010/03/12 19:10:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/zope-app-form-4.0.2.ebuild,v 1.2 2010/10/30 18:52:55 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="The Original Zope 3 Form Framework"
 HOMEPAGE="http://pypi.python.org/pypi/zope.app.form"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="ZPL"
 SLOT="0"
