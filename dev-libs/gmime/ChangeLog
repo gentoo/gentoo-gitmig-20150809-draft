@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.128 2010/10/29 14:19:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.129 2010/10/30 18:04:47 armin76 Exp $
+
+  30 Oct 2010; Raúl Porcel <armin76@gentoo.org> gmime-2.4.19.ebuild:
+  alpha/ia64/sparc stable wrt #340198
 
   29 Oct 2010; Markus Meier <maekke@gentoo.org> gmime-2.4.19.ebuild:
   arm/x86 stable, bug #340198
