@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.26 2010/10/27 15:56:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.27 2010/10/30 06:44:15 matsuu Exp $
+
+*broadcom-sta-5.60.246.2-r1 (30 Oct 2010)
+
+  30 Oct 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +broadcom-sta-5.60.246.2-r1.ebuild,
+  +files/broadcom-sta-5.60.246.2-linux-2.6.34.patch:
+  Fixed 2.6.34 issue, bug #343025.
 
 *broadcom-sta-5.60.246.2 (27 Oct 2010)
 
