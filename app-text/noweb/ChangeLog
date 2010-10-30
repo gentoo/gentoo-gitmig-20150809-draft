@@ -1,6 +1,13 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.47 2010/10/30 22:01:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.48 2010/10/30 22:23:22 aballier Exp $
+
+*noweb-2.11b-r2 (30 Oct 2010)
+
+  30 Oct 2010; Alexis Ballier <aballier@gentoo.org> +noweb-2.11b-r2.ebuild,
+  +files/noweb-2.11b-ldflags.patch, +files/noweb-2.11b-recmake.patch:
+  Respect ldflags (bug #338899) and use $(MAKE) for recursive make, by
+  Wormo, bug #264273
 
   30 Oct 2010; Alexis Ballier <aballier@gentoo.org> -noweb-2.9-r5.ebuild,
   -noweb-2.9-r6.ebuild, -files/noweb-2.9-gentoo.diff, -noweb-2.11b.ebuild:
