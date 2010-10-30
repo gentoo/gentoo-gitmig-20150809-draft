@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11.ebuild,v 1.1 2010/10/18 09:09:30 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r1.ebuild,v 1.1 2010/10/30 01:12:00 nerdboy Exp $
 
 EAPI=2
 
@@ -28,7 +28,8 @@ COMMON_DEP=">=sci-geosciences/gpsd-2.94
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
 	kismet? ( net-wireless/kismet )
-	mapnik? ( >=sci-geosciences/mapnik-0.7.0 )
+	mapnik? ( >=sci-geosciences/mapnik-0.7.0[postgres]
+		>=dev-db/postgis-1.5.2 )
 	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
 	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
 
@@ -79,6 +80,7 @@ src_configure() {
 	local mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with scripts SCRIPTS)
 		$(cmake-utils_use_with mapnik MAPNIK)
+		$(cmake-utils_use_with mapnik POSTGIS)
 		$(cmake-utils_use_with kismet KISMET)
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with libgda GDA3)
