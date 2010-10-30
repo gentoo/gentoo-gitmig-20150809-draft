@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.6 2010/09/28 15:33:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.7 2010/10/30 23:24:16 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+PYTHON_USE_WITH_OPT="tk"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 WX_GTK_VER="2.8"
@@ -27,7 +29,6 @@ CDEPEND="dev-python/numpy
 	media-libs/freetype:2
 	media-libs/libpng
 	gtk? ( dev-python/pygtk )
-	tk? ( dev-lang/python[tk] )
 	wxwidgets? ( dev-python/wxpython:2.8 )"
 
 DEPEND="${CDEPEND}
