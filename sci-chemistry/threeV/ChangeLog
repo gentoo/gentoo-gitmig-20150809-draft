@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/threeV
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/threeV/ChangeLog,v 1.1 2010/10/30 13:44:13 jlec Exp $
+
+*threeV-1.2 (30 Oct 2010)
+
+  30 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/1.2-gentoo.patch,
+  +threeV-1.2.ebuild, +metadata.xml:
+  New addition
+
