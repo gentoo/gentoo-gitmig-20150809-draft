@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/pam_p11
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.29 2009/06/09 02:22:29 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.30 2010/10/30 19:52:16 flameeyes Exp $
+
+*pam_p11-0.1.5-r1 (30 Oct 2010)
+
+  30 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam_p11-0.1.3.ebuild, -files/pam_p11-0.1.3-qa.patch,
+  -pam_p11-0.1.4.ebuild, pam_p11-0.1.5.ebuild, +pam_p11-0.1.5-r1.ebuild,
+  +files/pam_symbols.ver, metadata.xml:
+  Cleanup old versions; add a new revision hiding symbols. Add to pam herd
+  as well as crypto.
 
   09 Jun 2009; Jeroen Roovers <jer@gentoo.org> pam_p11-0.1.5.ebuild:
   Stable for HPPA (bug #268674).
