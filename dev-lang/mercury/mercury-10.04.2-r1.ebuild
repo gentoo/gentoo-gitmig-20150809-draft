@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.1 2010/10/22 22:23:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.2 2010/10/30 04:14:00 keri Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -49,7 +49,8 @@ src_unpack() {
 		"${S}"/compiler/libs.file_util.c \
 		"${S}"/compiler/make.program_target.m \
 		"${S}"/compiler/make.program_target.c \
-		"${S}"/scripts/Mmake.vars.in
+		"${S}"/scripts/Mmake.vars.in \
+		|| die "sed libdir failed"
 
 	touch "${S}"/compiler/*.date
 	touch "${S}"/compiler/*.date0
@@ -86,9 +87,7 @@ src_compile() {
 		$(use_enable !minimal most-grades) \
 		$(use_with readline)"
 
-	econf \
-		${myconf} \
-		|| die "econf failed"
+	econf ${myconf}
 
 	emake \
 		PARALLEL=${MAKEOPTS} \
@@ -123,7 +122,8 @@ src_test() {
 	fi
 
 	cd "${TESTDIR}"
-	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws
+	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws \
+		|| die "sed WORKSPACE failed"
 
 	PATH="${TWS}"/scripts:"${TWS}"/util:"${TWS}"/slice:"${PATH}" \
 	TERM="" \
@@ -164,28 +164,28 @@ src_install() {
 	dodoc \
 		BUGS HISTORY LIMITATIONS NEWS README README.Linux \
 		README.Linux-Alpha README.Linux-m68k README.Linux-PPC \
-		RELEASE_NOTES TODO VERSION WORK_IN_PROGRESS
+		RELEASE_NOTES TODO VERSION WORK_IN_PROGRESS || die
 
 	if use erlang; then
-		dodoc README.Erlang
+		dodoc README.Erlang || die
 	fi
 
 	if use java; then
-		dodoc README.Java
+		dodoc README.Java || die
 	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/samples
-		doins samples/{*.m,README,Mmakefile}
+		doins samples/{*.m,README,Mmakefile} || die
 		doins -r samples/c_interface \
 			samples/diff \
 			samples/muz \
 			samples/rot13 \
 			samples/solutions \
-			samples/solver_types
+			samples/solver_types || die
 
 		if use java; then
-			doins -r samples/java_interface
+			doins -r samples/java_interface || die
 		fi
 
 		rm -rf $(find "${D}"/usr/share/doc/${PF}/samples \
