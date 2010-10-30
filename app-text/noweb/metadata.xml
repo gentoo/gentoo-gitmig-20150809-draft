@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
-<use>
-  <flag name='icon'>Enable <pkg>dev-lang/icon</pkg> language support</flag>
-</use>
 </pkgmetadata>
