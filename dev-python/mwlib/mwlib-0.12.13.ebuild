@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.12.13.ebuild,v 1.1 2010/07/20 01:48:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.12.13.ebuild,v 1.2 2010/10/30 05:20:00 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -11,7 +11,7 @@ inherit distutils
 
 DESCRIPTION="Tools for parsing Mediawiki content to other formats"
 HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib"
-SRC_URI="http://pypi.python.org/packages/source/m/mwlib/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -31,7 +31,7 @@ RDEPEND="dev-lang/perl
 	>=dev-python/twisted-web-9.0.0
 	>=dev-python/webob-0.9
 	virtual/latex-base
-	|| ( >=dev-lang/python-2.6 >=dev-python/simplejson-1.3 )"
+	|| ( dev-lang/python:2.7 dev-lang/python:2.6 >=dev-python/simplejson-1.3 )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
