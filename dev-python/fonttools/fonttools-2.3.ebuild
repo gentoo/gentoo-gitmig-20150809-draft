@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.3.ebuild,v 1.5 2010/01/16 14:54:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.3.ebuild,v 1.6 2010/10/30 22:51:24 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -16,16 +19,13 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=">=dev-python/numpy-1.0.2
-	|| ( dev-lang/python[xml] dev-python/pyxml )"
-RESTRICT_PYTHON_ABIS="3.*"
-
-PYTHON_MODNAME="FontTools"
+DEPEND=">=dev-python/numpy-1.0.2"
+RDEPEND="${DEPEND}"
 
 DOCS="README.txt Doc/*.txt"
+PYTHON_MODNAME="FontTools"
 
 src_install() {
 	distutils_src_install
-	dohtml Doc/*.html
+	dohtml Doc/*.html || die "dohtml failed"
 }
