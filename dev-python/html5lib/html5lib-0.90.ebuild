@@ -1,11 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.90.ebuild,v 1.4 2010/09/04 05:29:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.90.ebuild,v 1.5 2010/10/30 22:59:19 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="HTML parser based on the HTML5 specification"
 HOMEPAGE="http://code.google.com/p/html5lib/ http://pypi.python.org/pypi/html5lib"
@@ -16,11 +19,9 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="examples"
 
-RDEPEND="dev-lang/python[xml]"
-DEPEND="${RDEPEND}
-	app-arch/unzip
-	>=dev-python/setuptools-0.6_rc5"
-RESTRICT_PYTHON_ABIS="3.*"
+DEPEND="app-arch/unzip
+	dev-python/setuptools"
+RDEPEND=""
 
 src_install() {
 	distutils_src_install
