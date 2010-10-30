@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.379 2010/10/11 22:13:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.380 2010/10/30 15:42:43 aballier Exp $
+
+  30 Oct 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  bump x264 requirements
 
   11 Oct 2010; Markus Meier <maekke@gentoo.org> ffmpeg-0.6_p25423.ebuild:
   restore ~arm, bug #340269
