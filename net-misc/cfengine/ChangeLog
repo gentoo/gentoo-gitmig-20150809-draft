@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.109 2010/10/28 19:39:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.110 2010/10/30 11:45:10 idl0r Exp $
+
+  30 Oct 2010; Christian Ruppert <idl0r@gentoo.org>
+  cfengine-3.0.5_p1-r2.ebuild:
+  Add ~sparc back again, I accidentally removed it during my last revbump.
 
 *cfengine-3.0.5_p1-r2 (28 Oct 2010)
 
