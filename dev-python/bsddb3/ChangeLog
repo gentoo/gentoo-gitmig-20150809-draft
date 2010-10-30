@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.57 2010/06/20 18:28:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.58 2010/10/30 19:28:33 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -bsddb3-4.8.1.ebuild, -bsddb3-4.8.3.ebuild,
+  -files/bsddb3-4.8.3-BSDDB_TEST_PATH.patch, -bsddb3-4.8.4.ebuild:
+  Delete.
 
   20 Jun 2010; Raúl Porcel <armin76@gentoo.org> bsddb3-5.0.0.ebuild:
   sparc stable wrt #319731
