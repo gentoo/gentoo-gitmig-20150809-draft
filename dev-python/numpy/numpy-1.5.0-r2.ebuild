@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0-r2.ebuild,v 1.3 2010/10/08 08:32:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0-r2.ebuild,v 1.4 2010/10/30 00:07:32 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-python/nose-0.10 )"
 
 PYTHON_CFLAGS=("* + -fno-strict-aliasing")
+
+DOCS="COMPATIBILITY DEV_README.txt THANKS.txt"
 
 pkg_setup() {
 	python_pkg_setup
@@ -133,11 +135,16 @@ src_test() {
 
 src_install() {
 	distutils_src_install ${NUMPY_FCONFIG}
-	dodoc THANKS.txt DEV_README.txt COMPATIBILITY
-	rm -f "${ED}"usr/lib/python*/site-packages/numpy/*.txt || die
+
+	delete_txt() {
+		rm -f "${ED}"$(python_get_sitedir)/numpy/*.txt
+	}
+	python_execute_function -q delete_txt
+
 	docinto f2py
 	dodoc numpy/f2py/docs/*.txt || die "dodoc f2py failed"
 	doman numpy/f2py/f2py.1 || die "doman failed"
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r "${WORKDIR}"/html || die
