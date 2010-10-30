@@ -1,6 +1,17 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.17 2010/10/24 11:05:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.18 2010/10/30 16:22:53 flameeyes Exp $
+
+*pam_pkcs11-0.6.5-r1 (30 Oct 2010)
+
+  30 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam_pkcs11-0.6.4.ebuild, -pam_pkcs11-0.6.5.ebuild,
+  +pam_pkcs11-0.6.5-r1.ebuild, metadata.xml:
+  Revision bump to fix config file; also add OpenSC to the dependencies
+  (since it's always used), add an nss USE flag to use nss as upstream
+  allows (but make sure to have a compatible curl if requested). Update
+  metadata to add pam to the list of maintainers and to update the
+  documentation of pcsc-lite USE flag (now enabled by default).
 
 *pam_pkcs11-0.6.5 (24 Oct 2010)
 
