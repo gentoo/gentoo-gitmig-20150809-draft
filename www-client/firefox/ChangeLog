@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.28 2010/10/29 11:33:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.29 2010/10/30 00:04:00 halcy0n Exp $
+
+  30 Oct 2010; Mark Loeser <halcy0n@gentoo.org> firefox-3.6.12.ebuild:
+  Stable for ppc64; bug #342847
 
   29 Oct 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.12.ebuild:
   Stable on amd64 wrt bug #342847
