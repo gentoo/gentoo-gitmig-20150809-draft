@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.139 2010/10/22 14:19:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.140 2010/10/30 16:15:39 jer Exp $
+
+  30 Oct 2010; Jeroen Roovers <jer@gentoo.org> eric-4.4.3.ebuild,
+  eric-4.4.4a.ebuild, eric-4.4.5.ebuild, eric-4.4.6.ebuild,
+  eric-4.4.7.ebuild, eric-4.4.8.ebuild, eric-4.4.9.ebuild,
+  eric-5.0.2.ebuild, eric-5.0.3.ebuild:
+  Drop HPPA keywording because of USE=webkit mask.
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org> eric-4.4.8.ebuild:
   stable x86, bug 341523
