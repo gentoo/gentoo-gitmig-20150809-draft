@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.19 2010/10/29 23:01:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.20 2010/10/30 01:20:39 nerdboy Exp $
+
+*mapnik-0.7.1-r1 (30 Oct 2010)
+
+  30 Oct 2010; Steve Arnold <nerdboy@gentoo.org> -mapnik-0.7.1.ebuild,
+  +mapnik-0.7.1-r1.ebuild:
+  Updated for latest gpsdrive (currently open mapnik bugs are OBE or not 
+  repreducible).
 
   29 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -mapnik-0.5.1.ebuild, -files/mapnik-0.5.1-include-fix.patch,

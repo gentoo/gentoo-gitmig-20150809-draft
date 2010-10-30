@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1.ebuild,v 1.1 2010/10/18 02:54:59 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.1 2010/10/30 01:20:40 nerdboy Exp $
 
 EAPI=2
 
@@ -33,8 +33,8 @@ RDEPEND="dev-libs/boost
 	curl? ( net-misc/curl )
 	gdal? ( sci-libs/gdal )
 	postgres? (
-		>=dev-db/postgresql-base-8.0
-		>=dev-db/postgis-1.1.2
+		>=dev-db/postgresql-base-8.3
+		>=dev-db/postgis-1.5.2
 	)
 	python? ( dev-libs/boost[python] )
 	sqlite? ( dev-db/sqlite:3 )
