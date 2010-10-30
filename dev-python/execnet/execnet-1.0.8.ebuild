@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.0.8.ebuild,v 1.1 2010/07/31 18:09:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.0.8.ebuild,v 1.2 2010/10/30 19:39:52 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ inherit distutils eutils
 
 DESCRIPTION="Rapid multi-Python deployment"
 HOMEPAGE="http://codespeak.net/execnet/ http://pypi.python.org/pypi/execnet/"
-SRC_URI="http://pypi.python.org/packages/source/e/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

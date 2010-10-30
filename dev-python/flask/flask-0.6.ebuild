@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.6.ebuild,v 1.1 2010/07/27 16:38:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.6.ebuild,v 1.2 2010/10/30 19:42:49 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A microframework based on Werkzeug, Jinja2 and good intentions"
 HOMEPAGE="http://pypi.python.org/pypi/Flask"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
