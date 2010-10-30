@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zlog/zlog-2.11.1.ebuild,v 1.5 2010/02/14 19:17:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zlog/zlog-2.11.1.ebuild,v 1.6 2010/10/30 18:17:55 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A general logging facility"
 HOMEPAGE="http://pypi.python.org/pypi/zLOG"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="ZPL"
 SLOT="0"
