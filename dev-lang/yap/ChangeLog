@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.45 2010/10/29 19:35:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.46 2010/10/30 03:52:12 keri Exp $
+
+  30 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
+  +files/yap-6.2.0-ld-library-path.patch:
+  Add YAPLIBDIR to LD_LIBRARY_PATH when bootstrapping chr
 
   29 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
   Tidy up examples installation; QA - remove die from call to econf, add die

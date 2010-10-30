@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.3 2010/10/29 19:35:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.4 2010/10/30 03:52:12 keri Exp $
 
-inherit eutils flag-o-matic java-pkg-opt-2
+inherit autotools eutils flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="YAP is a high-performance Prolog compiler."
 HOMEPAGE="http://www.ncc.up.pt/~vsc/Yap/"
@@ -31,8 +31,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-yapsharedir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ld-library-path.patch
 	epatch "${FILESDIR}"/${P}-have-config.patch
 	epatch "${FILESDIR}"/${P}-chr-sublist.patch
+
+	eautoconf
 }
 
 src_compile() {
