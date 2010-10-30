@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/msms-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.3 2010/10/30 13:42:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.4 2010/10/30 15:01:28 jlec Exp $
+
+  30 Oct 2010; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild:
+  Keyworded for ~-linux prefix
 
   30 Oct 2010; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild:
   Correct location of atmtypenumber file
