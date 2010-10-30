@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.10 2007/07/22 09:00:58 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.11 2010/10/30 10:06:41 ssuominen Exp $
 
 inherit eutils
 
@@ -32,11 +32,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack vile-9.4.tgz
-	cd ${S} || die "cd failed"
+	cd "${S}"
 
 	local p
-	for p in ${DISTDIR}/vile-${PV%[a-z]}[a-${P##*[0-9]}].patch.gz; do
-		epatch ${p} || die "epatch failed"
+	for p in "${DISTDIR}"/vile-${PV%[a-z]}[a-${P##*[0-9]}].patch.gz; do
+		epatch ${p}
 	done
 }
 
