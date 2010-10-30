@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.4d.ebuild,v 1.12 2007/10/10 07:26:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.4d.ebuild,v 1.13 2010/10/30 10:02:56 ssuominen Exp $
 
 inherit eutils
 
@@ -25,11 +25,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack vile-9.4.tgz
-	cd ${S}
+	cd "${S}"
 
 	local p
-	for p in ${DISTDIR}/${P%[a-z]}[a-${P##*[0-9]}].patch.gz; do
-		epatch ${p} || die "epatch failed"
+	for p in "${DISTDIR}"/${P%[a-z]}[a-${P##*[0-9]}].patch.gz; do
+		epatch ${p}
 	done
 }
 
@@ -42,6 +42,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc CHANGES* INSTALL README* doc/*
 }

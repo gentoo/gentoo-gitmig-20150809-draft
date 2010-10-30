@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.13 2007/10/10 07:26:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.3h.ebuild,v 1.14 2010/10/30 10:02:56 ssuominen Exp $
 
 S=${WORKDIR}/vile-9.3
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
@@ -28,11 +28,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack vile-9.3.tgz
 
-	cd ${S}
+	cd "${S}"
 	local i
 	for i in a b c d e f g h
 	do
-		gunzip -c ${DISTDIR}/vile-9.3$i.patch.gz | patch -p1
+		gunzip -c "${DISTDIR}"/vile-9.3$i.patch.gz | patch -p1
 	done
 }
 
@@ -49,6 +49,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc CHANGES* MANIFEST INSTALL README* doc/*
 }
