@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/texlive-xetex-2010.ebuild,v 1.2 2010/10/30 17:22:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/texlive-xetex-2010-r1.ebuild,v 1.1 2010/10/30 18:22:12 aballier Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ TEXLIVE_MODULE_CONTENTS="arabxetex euenc fontspec fontwrap harvardkyoto mathspec
 "
 TEXLIVE_MODULE_DOC_CONTENTS="arabxetex.doc euenc.doc fontspec.doc fontwrap.doc mathspec.doc philokalia.doc polyglossia.doc xecjk.doc xecolour.doc xecyr.doc xeindex.doc xepersian.doc xesearch.doc xetex.doc xetex-itrans.doc xetex-pstricks.doc xetexfontinfo.doc xltxtra.doc xunicode.doc "
 TEXLIVE_MODULE_SRC_CONTENTS="arabxetex.source euenc.source fontspec.source philokalia.source polyglossia.source xecjk.source xltxtra.source "
-inherit texlive-module
+inherit font texlive-module
 DESCRIPTION="TeXLive XeTeX packages"
 
 LICENSE="GPL-2 Apache-2.0 as-is GPL-1 LPPL-1.3 OFL public-domain "
@@ -22,3 +22,19 @@ dev-texlive/texlive-latexextra
 >=app-text/texlive-core-2010[xetex]
 "
 RDEPEND="${DEPEND} "
+FONT_CONF=( "${FILESDIR}"/09-texlive.conf )
+
+src_install() {
+	texlive-module_src_install
+	font_fontconfig
+}
+
+pkg_postinst() {
+	texlive-module_pkg_postinst
+	font_pkg_postinst
+}
+
+pkg_postrm() {
+	texlive-module_pkg_postrm
+	font_pkg_postrm
+}
