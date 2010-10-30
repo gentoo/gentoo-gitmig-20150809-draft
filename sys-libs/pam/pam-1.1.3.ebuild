@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.15 2010/04/26 12:04:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.1 2010/10/30 16:42:45 flameeyes Exp $
 
-inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
+EAPI="3"
+
+# if you have to re-run autotools, remember to depend on libtool-2
+
+inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
@@ -15,19 +19,22 @@ SRC_URI="mirror://kernel/linux/libs/pam/library/${MY_P}.tar.bz2
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="cracklib nls elibc_FreeBSD selinux vim-syntax audit test elibc_glibc debug"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="cracklib nls elibc_FreeBSD selinux vim-syntax audit test elibc_glibc debug berkdb"
 
 RDEPEND="nls? ( virtual/libintl )
 	cracklib? ( >=sys-libs/cracklib-2.8.3 )
 	audit? ( sys-process/audit )
 	selinux? ( >=sys-libs/libselinux-1.28 )
+	berkdb? ( sys-libs/db )
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	nls? ( sys-devel/gettext )"
 PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
+RDEPEND="${RDEPEND}
+	!sys-auth/pam_userdb"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -36,7 +43,7 @@ PROVIDE="virtual/pam"
 check_old_modules() {
 	local retval="0"
 
-	if sed -e 's:#.*::' "${ROOT}"/etc/pam.d/* 2>/dev/null | fgrep -q pam_stack.so; then
+	if sed -e 's:#.*::' "${EROOT}"/etc/pam.d/* 2>/dev/null | fgrep -q pam_stack.so; then
 		eerror ""
 		eerror "Your current setup is using the pam_stack module."
 		eerror "This module is deprecated and no longer supported, and since version"
@@ -47,12 +54,11 @@ check_old_modules() {
 		eerror "following the PAM Upgrade guide at the following URL"
 		eerror "  http://www.gentoo.org/proj/en/base/pam/upgrade-0.99.xml"
 		eerror ""
-		ebeep 15
 
 		retval=1
 	fi
 
-	if sed -e 's:#.*::' "${ROOT}"/etc/pam.d/* 2>/dev/null | egrep -q 'pam_(pwdb|console)'; then
+	if sed -e 's:#.*::' "${EROOT}"/etc/pam.d/* 2>/dev/null | egrep -q 'pam_(pwdb|console)'; then
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
@@ -63,7 +69,6 @@ check_old_modules() {
 		eerror "Please also make sure to read the PAM Upgrade guide at the following URL:"
 		eerror "  http://www.gentoo.org/proj/en/base/pam/upgrade-0.99.xml"
 		eerror ""
-		ebeep 10
 
 		retval=1
 	fi
@@ -75,37 +80,11 @@ pkg_setup() {
 	check_old_modules
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Avoid building xtests during "make all"; note that for what
-	# we're concerned xtests are not even executed, so we should
-	# probably use EXTRA_PROGRAMS.
-	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
-
-	# Remove NIS dependencies, see bug #235431
-	epatch "${FILESDIR}/${MY_PN}-1.0.2-noyp.patch"
-
-	# Fix building with debug USE flag enabled
-	epatch "${FILESDIR}/${MY_PN}-1.1.0-debug.patch"
-
-	# Fix building with nls USE flag disabled
-	epatch "${FILESDIR}/${MY_PN}-1.1.0-nonls.patch"
-
-	# make it possible to skip libxcrypt detection if header is not
-	# found
-	epatch "${FILESDIR}/${MY_PN}-1.1.0-xcrypt.patch"
-
-	# Remove libtool-2 libtool macros, see bug 261167
-	rm m4/libtool.m4 m4/lt*.m4 || die "rm libtool macros failed."
-
-	AT_M4DIR="m4" eautoreconf
-
+src_prepare() {
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use hppa || use elibc_FreeBSD; then
@@ -118,35 +97,50 @@ src_compile() {
 	export ac_cv_header_xcrypt_h=no
 
 	econf \
-		--libdir=/usr/$(get_libdir) \
-		--docdir=/usr/share/doc/${PF} \
-		--htmldir=/usr/share/doc/${PF}/html \
-		--enable-securedir=/$(get_libdir)/security \
-		--enable-isadir=/$(get_libdir)/security \
+		--disable-dependency-tracking \
+		--enable-fast-install \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		--enable-securedir="${EPREFIX}"/$(get_libdir)/security \
+		--enable-isadir="${EPREFIX}"/$(get_libdir)/security \
 		$(use_enable nls) \
 		$(use_enable selinux) \
 		$(use_enable cracklib) \
 		$(use_enable audit) \
 		$(use_enable debug) \
-		--disable-db \
-		--disable-dependency-tracking \
+		$(use_enable berkdb db) \
+		--with-db-uniquename=-$(db_findver sys-libs/db) \
 		--disable-prelude \
-		${myconf} || die "econf failed"
-	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"
+		${myconf}
+}
+
+src_compile() {
+	emake sepermitlockdir="${EPREFIX}/var/run/sepermit" || die "emake failed"
+}
+
+src_test() {
+	# explicitly allow parallel-build during testing
+	emake sepermitlockdir="${EPREFIX}/var/run/sepermit" check || die "emake check failed"
 }
 
 src_install() {
+	local lib
+
 	emake DESTDIR="${D}" install \
-		 sepermitlockdir="/var/run/sepermit" || die "make install failed"
+		 sepermitlockdir="${EPREFIX}/var/run/sepermit" || die "make install failed"
 
 	# Need to be suid
 	fperms u+s /sbin/unix_chkpwd
 
-	dodir /$(get_libdir)
-	mv "${D}/usr/$(get_libdir)/libpam.so"* "${D}/$(get_libdir)/"
-	mv "${D}/usr/$(get_libdir)/libpamc.so"* "${D}/$(get_libdir)/"
-	mv "${D}/usr/$(get_libdir)/libpam_misc.so"* "${D}/$(get_libdir)/"
-	gen_usr_ldscript libpam.so libpamc.so libpam_misc.so
+	gen_usr_ldscript -a pam pamc pam_misc
+
+	# create extra symlinks just in case something depends on them...
+	for lib in pam pamc pam_misc; do
+		if ! [[ -f "${ED}"/$(get_libdir)/lib${lib}$(get_libname) ]]; then
+			dosym lib${lib}$(get_libname 0) /$(get_libdir)/lib${lib}$(get_libname)
+		fi
+	done
 
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright NEWS || die
 
@@ -155,16 +149,29 @@ src_install() {
 		newdoc "${dir}"/README README."$(basename "${dir}")"
 	done
 
-	# Remove the wrongly installed manpages
-	rm "${D}"/usr/share/man/man8/pam_userdb.8*
-	use cracklib || rm "${D}"/usr/share/man/man8/pam_cracklib.8*
-
 	# Get rid of the .la files. We certainly don't need them for PAM
 	# modules, and libpam is installed as a shared object only, so we
-	# don't ned them for static linking either.
+	# don't need them for static linking either.
 	find "${D}" -name '*.la' -delete
 }
 
 pkg_preinst() {
 	check_old_modules || die "deprecated PAM modules still used"
+}
+
+pkg_postinst() {
+	ewarn "Some software with pre-loaded PAM libraries might experience"
+	ewarn "warnings or failures related to missing symbols and/or versions"
+	ewarn "after any update. While unfortunate this is a limit of the"
+	ewarn "implementation of PAM and the software, and it requires you to"
+	ewarn "restart the software manually after the update."
+	ewarn ""
+	ewarn "You can get a list of such software running a command like"
+	ewarn "  lsof / | egrep 'DEL.*libpam\\.so'"
+	elog ""
+	elog "Because of a bug present up to version 1.1.1-r2, you might have"
+	elog "an executable /var/log/tallylog file. If it is so, you can safely"
+	elog "correct it by running the command"
+	elog "  chmod -x /var/log/tallylog"
+	elog ""
 }
