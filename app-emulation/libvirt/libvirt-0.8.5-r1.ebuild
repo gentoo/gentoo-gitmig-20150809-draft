@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5.ebuild,v 1.1 2010/10/29 16:55:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r1.ebuild,v 1.1 2010/10/30 17:54:35 flameeyes Exp $
 
-BACKPORTS=1
+BACKPORTS=2
 
 EAPI="2"
 

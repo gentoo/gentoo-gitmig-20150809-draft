@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.78 2010/10/29 17:17:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.79 2010/10/30 17:54:35 flameeyes Exp $
+
+*libvirt-0.8.5-r1 (30 Oct 2010)
+
+  30 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libvirt-0.8.5.ebuild, +libvirt-0.8.5-r1.ebuild:
+  Bump backports with a patch of mine to fix bug #329427 (USB devices can't
+  be accessed with enabled cgroup), and one (fixed) from Eric Blake to fix
+  bug #343353 (build failure with USE=xen).
 
   29 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update and try to put order into USE flags descriptions.
