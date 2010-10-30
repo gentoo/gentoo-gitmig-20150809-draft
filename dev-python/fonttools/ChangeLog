@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.25 2010/02/07 20:37:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.26 2010/10/30 22:46:42 arfrever Exp $
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -fonttools-2.2-r1.ebuild, -files/fonttools-2.2-fix_syntax.patch:
+  Delete.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> fonttools-2.2-r1.ebuild:
   Add inherit eutils: epatch is defined there.
