@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.48 2010/10/29 09:31:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.49 2010/10/30 10:14:24 olemarkus Exp $
+
+  30 Oct 2010; <olemarkus@gentoo.org> -php-docs-20101022.ebuild,
+  +php-docs-20101029.ebuild:
+  Version bump. Also fixes bug 343289
 
 *php-docs-20101022 (29 Oct 2010)
 

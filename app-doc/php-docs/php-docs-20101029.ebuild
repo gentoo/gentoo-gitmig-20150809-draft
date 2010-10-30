@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20101022.ebuild,v 1.1 2010/10/29 09:31:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20101029.ebuild,v 1.1 2010/10/30 10:14:24 olemarkus Exp $
 
 EAPI="3"
 
@@ -12,26 +12,28 @@ MY_PN="php_manual"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="+linguas_en"
-SRC_URI="linguas_en? ( http://www.php.net/distributions/manual/${MY_PN}_en.tar.gz )"
+IUSE=""
 
 RESTRICT="strip binchecks"
 
-LANGS="de es fa fr ja pl pt_BR ro tr"
+LANGS="en de es fa fr ja pl pt_BR ro tr"
 for lang in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${lang}"
 	SRC_URI="${SRC_URI}
-		linguas_${lang}? ( http://www.php.net/distributions/manual/${MY_PN}_${lang}.tar.gz )"
+		linguas_${lang}? ( http://olemarkus.org/~olemarkus/gentoo/${MY_PN}_${lang}-${PV}.tar.gz )"
 done
+
+# Set English to default
+IUSE="${IUSE/linguas_en/+linguas_en}"
 
 S=${WORKDIR}
 
 src_unpack() {
-	for lang in en ${LANGS} ; do
+	for lang in ${LANGS} ; do
 		if use linguas_${lang} ; then
 			mkdir ${lang}
 			pushd ${lang} >/dev/null
-			unpack ${MY_PN}_${lang}.tar.gz || die "unpack failed on ${lang}"
+			unpack ${MY_PN}_${lang}-${PV}.tar.gz || die "unpack failed on ${lang}"
 			popd >/dev/null
 		fi
 	done
@@ -45,7 +47,7 @@ pkg_preinst() {
 src_install() {
 	dodir /usr/share/doc/${PF}
 
-	for lang in en ${LANGS} ; do
+	for lang in ${LANGS} ; do
 		if use linguas_${lang} ; then
 			ebegin "Installing ${lang} manual, will take a while"
 			cp -R "${WORKDIR}"/${lang} "${ED}"/usr/share/doc/${PF} || die "cp failed on ${lang}"
