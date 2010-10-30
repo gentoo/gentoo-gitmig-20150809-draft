@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.127 2010/10/24 17:24:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.128 2010/10/30 18:46:04 aballier Exp $
+
+  30 Oct 2010; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2010.ebuild:
+  Import icu patch to fix building on arm, bug #343351
 
 *texlive-core-2010 (24 Oct 2010)
 
