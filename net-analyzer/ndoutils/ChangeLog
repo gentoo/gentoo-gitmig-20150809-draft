@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ndoutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.10 2010/06/03 18:41:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.11 2010/10/30 14:15:50 dertobi123 Exp $
+
+  30 Oct 2010; Tobias Scherbaum <dertobi123@gentoo.org> -files/ndo2db.init,
+  files/ndo2db.init-nagios3:
+  Fix init script (#313739)
 
 *ndoutils-1.4_beta9 (03 Jun 2010)
 
