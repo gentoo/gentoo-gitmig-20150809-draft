@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.181 2010/10/09 22:56:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.182 2010/10/30 21:05:21 pacho Exp $
+
+*gtkmm-2.22.0 (30 Oct 2010)
+
+  30 Oct 2010; Pacho Ramos <pacho@gentoo.org> gtkmm-1.2.9-r2.ebuild,
+  -files/gtkmm-2.12.7-gtk2_14-compatibility.patch, -gtkmm-2.16.0.ebuild,
+  +gtkmm-2.22.0.ebuild:
+  Version bump, atkmm has now its own package. Remove old and make
+  gtkmm-1.2.9-r2.ebuild repoman compliant (set RDEPEND).
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> gtkmm-2.20.3.ebuild:
   ppc64 stable wrt #324077
