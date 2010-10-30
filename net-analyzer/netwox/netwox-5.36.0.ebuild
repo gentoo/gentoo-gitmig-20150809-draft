@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.36.0.ebuild,v 1.3 2010/10/15 16:11:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.36.0.ebuild,v 1.4 2010/10/30 16:54:33 armin76 Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE="doc"
 
 RDEPEND=">=net-libs/libnet-1.1.1"
