@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/msms-bin-2.6.1-r1.ebuild,v 1.2 2010/10/30 13:36:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/msms-bin-2.6.1-r1.ebuild,v 1.3 2010/10/30 13:42:57 jlec Exp $
 
 EAPI=3
 
@@ -35,6 +35,11 @@ src_install() {
 	elif use x86; then
 		newexe ${PN%-bin}.i86Linux2.${PV} msms || die
 	fi
-	sed 's:nawk:awk:g' -i pdb_to_xyz* || die
+	insinto /usr/share/${PN}/
+	doins atmtypenumbers || die
+	sed \
+		-e 's:nawk:awk:g' \
+		-e "s:./atmtypenumbers:${EPREFIX}/usr/share/${PN}/atmtypenumbers:g" \
+		-i pdb_to_xyz* || die
 	dobin pdb_to_xyz* || die
 }
