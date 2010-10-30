@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.2 2010/08/21 23:10:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.3 2010/10/30 13:19:00 jlec Exp $
 
 EAPI="3"
 
@@ -36,7 +36,7 @@ DEPEND="
 
 RDEPEND="${DEPEND}
 	x11-terms/xterm
-	msms? ( sci-chemistry/msms )
+	msms? ( sci-chemistry/msms-bin )
 	povray? ( media-gfx/povray )
 	tachyon? ( media-gfx/tachyon )"
 
