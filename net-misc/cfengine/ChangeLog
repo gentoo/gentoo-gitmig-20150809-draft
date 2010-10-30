@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.110 2010/10/30 11:45:10 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.111 2010/10/30 11:57:44 maekke Exp $
+
+  30 Oct 2010; Markus Meier <maekke@gentoo.org> cfengine-3.0.5_p1-r2.ebuild:
+  restore ~arm, bug #341163
 
   30 Oct 2010; Christian Ruppert <idl0r@gentoo.org>
   cfengine-3.0.5_p1-r2.ebuild:
