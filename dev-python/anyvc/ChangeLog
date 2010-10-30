@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/anyvc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/ChangeLog,v 1.4 2010/10/02 23:23:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/ChangeLog,v 1.5 2010/10/30 16:25:34 arfrever Exp $
+
+*anyvc-0.3.5 (30 Oct 2010)
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -anyvc-0.3.4.ebuild, +anyvc-0.3.5.ebuild:
+  Version bump. Restrict 2.4 Python ABI (bug #343231).
 
 *anyvc-0.3.4 (02 Oct 2010)
 
