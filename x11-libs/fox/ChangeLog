@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.148 2010/10/29 06:50:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.149 2010/10/31 22:15:44 mabi Exp $
+
+*fox-1.7.23 (31 Oct 2010)
+
+  31 Oct 2010; Matti Bickel <mabi@gentoo.org> -fox-1.6.36.ebuild,
+  -fox-1.7.21.ebuild, +fox-1.7.23.ebuild:
+  cleanup, new upstream version
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> fox-1.6.40.ebuild:
   Stable for HPPA (bug #338510).
