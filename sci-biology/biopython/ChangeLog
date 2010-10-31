@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.51 2010/10/21 20:04:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.52 2010/10/31 17:47:54 armin76 Exp $
+
+  31 Oct 2010; Raúl Porcel <armin76@gentoo.org> biopython-1.55.ebuild:
+  alpha/sparc stable wrt #341519
 
   21 Oct 2010; Thomas Kahle <tomka@gentoo.org> biopython-1.55.ebuild:
   x86 stable per bug 341519
