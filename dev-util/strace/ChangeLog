@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.149 2010/10/12 12:34:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.150 2010/10/31 13:13:31 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> strace-4.5.20.ebuild:
+  Stable on amd64 wrt bug #343255
 
 *strace-4.5.20-r1 (12 Oct 2010)
 
