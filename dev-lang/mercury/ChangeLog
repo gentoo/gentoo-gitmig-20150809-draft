@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.122 2010/10/30 04:14:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.123 2010/10/31 00:02:59 keri Exp $
+
+  31 Oct 2010; <keri@gentoo.org> mercury-10.04.2-r1.ebuild,
+  +files/mercury-10.04.2-prepare-install-dir.patch:
+  Ensure libgrade boehm_gc doesnt run automake called by mainter-mode.
+  Closes
 
   30 Oct 2010; <keri@gentoo.org> mercury-10.04.2-r1.ebuild:
   QA - add die to do... function calls, add die to sed calls, remove die

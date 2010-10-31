@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.2 2010/10/30 04:14:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.3 2010/10/31 00:02:59 keri Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-linker-flags.patch
 	epatch "${FILESDIR}"/${P}-bootstrap-depend.patch
 	epatch "${FILESDIR}"/${P}-default-grade.patch
+	epatch "${FILESDIR}"/${P}-prepare-install-dir.patch
 	epatch "${FILESDIR}"/${P}-boehm_gc.patch
 	epatch "${FILESDIR}"/${P}-sparc-llds-base-grade.patch
 	epatch "${FILESDIR}"/${P}-char-det-from-int.patch
