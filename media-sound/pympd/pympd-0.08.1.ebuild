@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.8 2010/05/28 21:30:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.9 2010/10/31 13:28:04 ssuominen Exp $
 
-EAPI=2
-inherit eutils toolchain-funcs python multilib gnome2-utils
+EAPI=3
+
+PYTHON_DEPEND="2:2.6"
+
+inherit eutils gnome2-utils multilib python toolchain-funcs
 
 DESCRIPTION="a Rhythmbox-like PyGTK+ client for Music Player Daemon"
 HOMEPAGE="http://sourceforge.net/projects/pympd"
@@ -14,27 +17,29 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
-RDEPEND=">=virtual/python-2.4
-	>=dev-python/pygtk-2.6
-	x11-libs/gtk+[jpeg]
+RDEPEND=">=dev-python/pygtk-2.6
+	x11-libs/gtk+:2[jpeg]
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
-	sed -i -e 's:CFLAGS =:CFLAGS +=:' src/modules/tray/Makefile \
-		|| die "sed failed"
-	sed -i -e 's:\..\/py:/usr/share/pympd/py:g' src/glade/pympd.glade \
-		|| die "sed failed"
+	sed -i -e 's:CFLAGS =:CFLAGS +=:' src/modules/tray/Makefile || die
+	sed -i -e 's:\..\/py:/usr/share/pympd/py:g' src/glade/pympd.glade || die
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" PREFIX="/usr" DESTDIR="${D}" || die "emake failed"
+	emake CC="$(tc-getCC)" PREFIX=/usr DESTDIR="${D}" || die
 }
 
 src_install() {
-	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
+	emake PREFIX=/usr DESTDIR="${D}" install || die
 	dodoc README
 }
 
@@ -43,11 +48,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/pympd
+	python_mod_optimize pympd
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/pympd
+	python_mod_cleanup pympd
 	gnome2_icon_cache_update
 }
