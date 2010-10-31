@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-2.9.ebuild,v 1.1 2010/10/31 18:05:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-2.9.ebuild,v 1.2 2010/10/31 18:16:59 ssuominen Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+dbus bluetooth gstreamer ipod mtp webkit"
+IUSE="+dbus bluetooth gstreamer ipod mtp test webkit"
 
 RDEPEND="dev-python/eyeD3
 	dev-python/feedparser
