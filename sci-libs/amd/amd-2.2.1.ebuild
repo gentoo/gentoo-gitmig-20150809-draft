@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.1 2010/10/31 12:01:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.2 2010/10/31 20:16:21 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -23,7 +23,6 @@ RDEPEND="sci-libs/ufconfig"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
-
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.0-autotools.patch
