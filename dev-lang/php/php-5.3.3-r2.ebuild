@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r2.ebuild,v 1.2 2010/10/30 21:41:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r2.ebuild,v 1.3 2010/10/31 17:24:34 mabi Exp $
 
 EAPI=2
 
@@ -265,7 +265,7 @@ S="${WORKDIR}/${PHP_P}"
 # Allow users to install production version if they want to
 
 case "${PHP_INI_VERSION}" in
-	production|development) 
+	production|development)
 		;;
 	*)
 		PHP_INI_VERSION="development"
@@ -274,7 +274,6 @@ esac
 
 PHP_INI_UPSTREAM="php.ini-${PHP_INI_VERSION}"
 PHP_INI_FILE="php.ini"
-
 
 want_apache
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.430 2010/10/31 09:26:32 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.431 2010/10/31 17:24:34 mabi Exp $
+
+  31 Oct 2010; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_configure-v2.eblit:
+  properly fix bug #281316 (thanks to Alex Kiesel for noticing)
 
   31 Oct 2010; <olemarkus@gentoo.org> files/eblits/pkg_postinst-v2.eblit:
   Fixed a QA issue related to nonexisting SAPIs

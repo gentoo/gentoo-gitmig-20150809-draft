@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r1.ebuild,v 1.2 2010/10/30 21:41:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r1.ebuild,v 1.3 2010/10/31 17:24:34 mabi Exp $
 
 EAPI=2
 
@@ -242,7 +242,7 @@ S="${WORKDIR}/${PHP_P}"
 # PHP 5.2 has other filenames for prod and dev versions
 
 case "${PHP_INI_VERSION}" in
-	production) 
+	production)
 		PHP_INI_UPSTREAM="php.ini-recommended"
 		;;
 	development)
@@ -253,7 +253,6 @@ case "${PHP_INI_VERSION}" in
 		PHP_INI_UPSTREAM="php.ini-dist"
 		;;
 esac
-
 
 PHP_INI_FILE="php.ini"
 
