@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12130 2010/10/31 19:00:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12131 2010/10/31 19:22:28 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (31 Oct 2010)
+# =dev-python/pysqlite-1* depends on deprecated =dev-db/sqlite-2*. Masked for deletion in 30 days.
+=dev-python/pysqlite-1*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (30 Oct 2010)
 # Replaced by dev-python/virtualenv. Masked for deletion in 30 days.
