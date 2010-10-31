@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.2 2010/06/08 12:53:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.3 2010/10/31 22:36:01 ssuominen Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gnome hal network nls pulseaudio"
+IUSE="gnome hal network nls policykit pulseaudio"
 
 CDEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.12:2
@@ -35,10 +35,8 @@ RDEPEND="${CDEPEND}
 	network? ( || ( net-dns/dnsmasq
 		=net-misc/dhcp-3*
 		>=net-misc/networkmanager-0.8 ) )
+	policykit? ( sys-auth/polkit )
 	pulseaudio? ( media-sound/pulseaudio )"
-
-# TODO:
-# - add policykit-support as soon as policykit-1 is available in the tree
 
 pkg_setup() {
 	python_set_active_version 2
@@ -56,7 +54,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-static \
-		--disable-polkit \
+		$(use_enable policykit polkit) \
 		$(use_enable hal) \
 		$(use_enable nls)
 }
@@ -66,7 +64,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	rm "${D}"/$(python_get_sitedir)/*.la
-	rm -rf "${D}/usr/share/polkit-1"
 
 	use gnome || rm "${D}/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py"
 	use pulseaudio || rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py,plugins/applet/Pulse*.py}
