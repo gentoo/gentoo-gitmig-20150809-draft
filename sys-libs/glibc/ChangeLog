@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.726 2010/10/30 10:03:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.727 2010/10/31 21:02:33 flameeyes Exp $
+
+*glibc-2.12.1-r3 (31 Oct 2010)
+*glibc-2.11.2-r3 (31 Oct 2010)
+
+  31 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +glibc-2.11.2-r3.ebuild, +glibc-2.12.1-r3.ebuild:
+  Bump glibc version to fully cover the recent security issues.
 
   30 Oct 2010; Markus Meier <maekke@gentoo.org> glibc-2.11.2-r2.ebuild:
   x86 stable, bug #341755
