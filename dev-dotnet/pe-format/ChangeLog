@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.21 2010/10/24 10:13:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.22 2010/10/31 17:15:17 armin76 Exp $
+
+  31 Oct 2010; Raúl Porcel <armin76@gentoo.org> pe-format-1.ebuild:
+  Drop sparc keywords
 
   24 Oct 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Clarify the maintainership information in metadata.xml
