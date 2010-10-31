@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.9 2010/09/18 11:11:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.10 2010/10/31 22:14:44 mabi Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -101,6 +101,9 @@ fox_src_prepare() {
 	# Respect system CXXFLAGS
 	sed -i -e 's:CXXFLAGS=""::' $confFile || die "sed ${confFile} error"
 
+	# don't strip binaries
+	sed -i -e '/LDFLAGS="-s ${LDFLAGS}"/d' $confFile || die "sed ${confFile} error"
+
 	# don't build apps from top-level (i.e. x11-libs/fox)
 	# utils == reswrap
 	local d
@@ -109,9 +112,10 @@ fox_src_prepare() {
 	done
 
 	# use the installed reswrap for everything else
-	for d in ${FOX_APPS} chart tests ; do
-		sed -i -e 's:$(top_builddir)/utils/reswrap:reswrap:' \
-			${d}/Makefile.am || die "sed ${d}/Makefile.am error"
+	for d in ${FOX_APPS} chart controlpanel tests ; do
+		[[ -d ${d} ]] &&
+		(sed -i -e 's:$(top_builddir)/utils/reswrap:reswrap:' \
+			${d}/Makefile.am || die "sed ${d}/Makefile.am error")
 	done
 
 	# use the installed headers and library for apps
