@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12132 2010/10/31 20:00:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12133 2010/10/31 20:20:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1491,6 +1491,8 @@ xfce-extra/thunar-vfs
 >=xfce-extra/xfce4-xkb-plugin-0.5.3.3-r9
 >=xfce-base/libxfce4util-4.7.2
 >=xfce-extra/thunar-thumbnailers-4.7.0
+>=dev-util/xfce4-dev-tools-4.7.3
+>=xfce-base/libxfcegui4-4.7.0
 
 # Peter Alfredsen <loki_val@gentoo.org> (21 Oct 2009)
 # Masked because this needs a patch to be applied to portage
