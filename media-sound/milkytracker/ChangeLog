@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/milkytracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/ChangeLog,v 1.4 2010/08/09 07:05:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/ChangeLog,v 1.5 2010/10/31 14:41:14 ssuominen Exp $
+
+*milkytracker-0.90.85 (31 Oct 2010)
+
+  31 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +milkytracker-0.90.85.ebuild, +files/milkytracker-0.90.85-64bit.patch:
+  Version bump wrt #301891 by "hiyuh" and Kim Nilsson.
 
   09 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   milkytracker-0.90.80.ebuild:
