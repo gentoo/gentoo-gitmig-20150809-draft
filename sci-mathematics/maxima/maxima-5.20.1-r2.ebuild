@@ -1,7 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.20.1-r2.ebuild,v 1.1 2010/04/12 11:58:46 grozin Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.20.1-r2.ebuild,v 1.2 2010/10/31 19:17:41 grobian Exp $
+EAPI=3
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64  ~ppc ~sparc ~x86"
+KEYWORDS="~amd64  ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 # Supported lisps with readline
 SUPP_RL="gcl clisp"
@@ -73,7 +73,7 @@ RDEPEND="${RDEPEND}
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
-TEXMF=/usr/share/texmf-site
+TEXMF="${EPREFIX}"/usr/share/texmf-site
 NO_INIT_PATCH_PV="5.19.1"
 
 pkg_setup() {
@@ -148,11 +148,11 @@ src_configure() {
 		done
 	fi
 
-	econf ${myconf}
+	econf ${myconf} --with-lispdir="${SITELISP}/${PN}"
 }
 
 src_install() {
-	einstall emacsdir="${D}${SITELISP}/${PN}" || die "einstall failed"
+	einstall emacsdir="${ED}${SITELISP}/${PN}" || die "einstall failed"
 
 	use tk && make_desktop_entry xmaxima xmaxima \
 		/usr/share/${PN}/${PV}/xmaxima/maxima-new.png \
@@ -177,7 +177,7 @@ src_install() {
 
 pkg_preinst() {
 	# some lisps do not read compress info files (bug #176411)
-	for infofile in "${D}"/usr/share/info/*.bz2 ; do
+	for infofile in "${ED}"/usr/share/info/*.bz2 ; do
 		bunzip2 "${infofile}"
 	done
 }
