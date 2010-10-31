@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.109 2010/10/30 14:25:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.110 2010/10/31 18:06:39 zmedico Exp $
+
+*calibre-0.7.26 (31 Oct 2010)
+
+  31 Oct 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.7.26.ebuild:
+  0.7.26 version bump, and fix bug #343545 (FEATURES=multilib-strict).
 
 *calibre-0.7.25 (30 Oct 2010)
 
