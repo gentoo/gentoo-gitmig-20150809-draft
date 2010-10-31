@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.6 2010/10/12 17:59:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.7 2010/10/31 21:19:00 dilfridge Exp $
+
+*collectd-4.10.1-r3 (31 Oct 2010)
+
+  31 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +collectd-4.10.1-r3.ebuild, +files/logrotate:
+  Added support for the ipmi and netlink plugins and added a small logrotate
+  control file. Thanks to Daniel Deptula.
 
   12 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   collectd-4.10.1-r2.ebuild, +files/collectd-4.10.1-noowniptc.patch:
