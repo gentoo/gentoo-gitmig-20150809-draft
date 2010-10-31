@@ -1,6 +1,15 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.83 2010/09/16 10:20:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.84 2010/10/31 05:15:44 grozin Exp $
+
+*texmacs-1.0.7.7 (31 Oct 2010)
+
+  31 Oct 2010; Andrey Grozin <grozin@gentoo.org> texmacs-1.0.7.2.ebuild,
+  -files/texmacs-1.0.7.2-strip.patch, -files/texmacs-1.0.7.5-strip.patch,
+  texmacs-1.0.7.6.ebuild, -files/texmacs-1.0.7.6-strip.patch,
+  +texmacs-1.0.7.7.ebuild, +files/texmacs-ldflags.patch,
+  +files/texmacs-strip.patch:
+  Version bump, bug #338459 fixed, identical patch files combined
 
 *texmacs-1.0.7.6 (16 Sep 2010)
 
