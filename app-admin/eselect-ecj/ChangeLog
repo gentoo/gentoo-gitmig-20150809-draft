@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-ecj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.7 2010/02/28 18:52:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.8 2010/10/31 17:17:43 caster Exp $
+
+*eselect-ecj-0.6 (31 Oct 2010)
+
+  31 Oct 2010; Vlastimil Babka <caster@gentoo.org> +eselect-ecj-0.6.ebuild,
+  +files/ecj-0.6.eselect:
+  Version bump, promoting the 0.5-r1 version from java-overlay to 0.6.
+  Changes by Andrew John Hughes <andrew@gentoo.org>, adding support for
+  ecj-gcj and manage a /usr/share/eclipse-ecj/ecj.jar symlink along with the
+  launcher.
 
 *eselect-ecj-0.5 (28 Feb 2010)
 
