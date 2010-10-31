@@ -153,3 +153,6 @@ ipp
 
 # dev-lang/orc doesn't play nice
 schroedinger
+
+# This will need >=media-libs/libgpod-0.8.0 keyworded and stabilized on both ppc/ppc64, bug 313691
+ipod
