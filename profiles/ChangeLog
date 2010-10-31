@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4728 2010/10/31 21:09:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4729 2010/10/31 22:03:21 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update Gnome 2.32 mask.
 
   31 Oct 2010; <olemarkus@gentoo.org> package.mask:
   Remasked some packages while waiting for rekeywording of php:5.3 and
