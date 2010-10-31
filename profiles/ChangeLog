@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4723 2010/10/31 15:11:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4724 2010/10/31 19:00:55 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2010; <olemarkus@gentoo.org> package.mask:
+  Removed masking of various PHP packages now ready for a broader audience
 
   31 Oct 2010; Jim Ramsay <lack@gentoo.org> package.mask:
   gkrellm-bgchanger update to 0.1.10 fixed all currently reported QA issues,
