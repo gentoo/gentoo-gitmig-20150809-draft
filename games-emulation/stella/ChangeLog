@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.53 2010/10/15 13:40:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.54 2010/10/31 13:37:27 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> stella-3.2.2.ebuild:
+  Stable on amd64 wrt bug #343451
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> stella-3.2.1.ebuild:
   stable ppc, bug 339190
