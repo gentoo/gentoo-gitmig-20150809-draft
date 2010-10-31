@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-0.7.3-r1.ebuild,v 1.3 2010/10/25 02:05:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-0.7.3-r1.ebuild,v 1.4 2010/10/31 08:22:46 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -26,6 +26,7 @@ ruby_add_rdepend "
 	>=dev-ruby/builder-2.1.2
 	>=dev-ruby/diff-lcs-1.1.2
 	>=dev-ruby/gherkin-1.0.27
+	<dev-ruby/gherkin-2.0.0
 	>=dev-ruby/json-1.2.4
 	>=dev-ruby/term-ansicolor-1.0.4
 "
