@@ -1,9 +1,6 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.98 2010/10/31 16:43:13 ssuominen Exp $
-
-  31 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
-  Mask USE="iphone" and USE="ipod" wrt #313691 and #325839.
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.99 2010/10/31 17:19:05 ssuominen Exp $
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=webkit generally (but specifically for bug #272194).
