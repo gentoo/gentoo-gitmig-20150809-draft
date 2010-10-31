@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.24 2010/09/20 01:06:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.25 2010/10/31 16:04:05 flameeyes Exp $
+
+  31 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -at-3.1.8-r11.ebuild, -at-3.1.8-r12.ebuild,
+  -files/at-3.1.8-longuser.patch, -files/at-3.1.8-makefile.patch,
+  -files/at.deny:
+  QA: cleanup old versions, PAM situation is still broken and needs a
+  version bump.
 
   20 Sep 2010; Michael Weber <xmw@gentoo.org> at-3.1.10.2-r1.ebuild:
   Added ~arm keyword
