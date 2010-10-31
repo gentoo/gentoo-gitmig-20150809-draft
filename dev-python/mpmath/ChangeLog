@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.13 2010/09/24 18:30:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.14 2010/10/31 16:30:58 grozin Exp $
+
+  01 Nov 2010; Andrey Grozin <grozin@gentoo.org> mpmath-0.15.ebuild,
+  mpmath-0.16.ebuild, metadata.xml:
+  Fixed #278251 (I hope); new USE flag matplotlib
 
 *mpmath-0.16 (24 Sep 2010)
 

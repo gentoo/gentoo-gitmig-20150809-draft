@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.15.ebuild,v 1.2 2010/06/08 00:39:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.15.ebuild,v 1.3 2010/10/31 16:30:58 grozin Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gmp"
 
 RDEPEND="gmp? ( dev-python/gmpy )"
-DEPEND="doc? ( dev-python/sphinx )"
+DEPEND="doc? ( dev-python/sphinx )
+	test? ( dev-python/py )"
 
 DOCS="CHANGES"
 

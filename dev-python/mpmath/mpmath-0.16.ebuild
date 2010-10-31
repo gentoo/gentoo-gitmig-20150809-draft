@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.16.ebuild,v 1.1 2010/09/24 18:30:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.16.ebuild,v 1.2 2010/10/31 16:30:58 grozin Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,13 +18,22 @@ SRC_URI="http://mpmath.googlecode.com/files/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples gmp"
+IUSE="doc examples gmp matplotlib"
 
 RDEPEND="gmp? ( dev-python/gmpy )"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx )
+	matplotlib? ( dev-python/matplotlib )
+	test? ( dev-python/py )"
 
 DOCS="CHANGES"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# This test requires X
+	rm ${PN}/tests/test_visualization.py
+}
 
 src_compile() {
 	distutils_src_compile
