@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.23.ebuild,v 1.1 2010/10/30 08:03:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.23.ebuild,v 1.2 2010/10/31 20:47:30 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( ~dev-lang/v8-2.4.9.6 )
+	system-v8? ( ~dev-lang/v8-2.4.9.10 )
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
