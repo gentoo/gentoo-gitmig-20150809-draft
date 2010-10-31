@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.106 2010/08/22 07:59:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.107 2010/10/31 10:39:32 graaff Exp $
+
+  31 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  gtk-gnutella-0.96.8.ebuild:
+  Let gtk dependency depend on the gtk USE flag.
 
   22 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   gtk-gnutella-0.96.8.ebuild:

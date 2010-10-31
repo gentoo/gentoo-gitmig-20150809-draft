@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.6 2010/08/22 07:59:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.7 2010/10/31 10:39:32 graaff Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 RDEPEND=">=dev-libs/libxml2-2.6.0
-	>=x11-libs/gtk+-2.2.1
+	gtk? ( >=x11-libs/gtk+-2.2.1 )
 	dbus? ( >=sys-apps/dbus-0.35.2 )
 	gnutls? ( >=net-libs/gnutls-1.0.16 )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
