@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.9.ebuild,v 1.1 2010/10/31 10:47:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.9.ebuild,v 1.2 2010/10/31 20:16:50 mr_bones_ Exp $
 
 EAPI=3
 inherit xorg-2 flag-o-matic
@@ -25,4 +25,3 @@ src_compile() {
 	[[ ${CHOST} == *-solaris* ]] && append-libs -lintl
 	xorg-2_src_compile
 }
-
