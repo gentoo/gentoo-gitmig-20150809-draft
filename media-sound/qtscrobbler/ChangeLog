@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qtscrobbler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/ChangeLog,v 1.5 2009/03/15 20:44:08 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/ChangeLog,v 1.6 2010/10/31 11:33:28 ssuominen Exp $
+
+*qtscrobbler-0.10 (31 Oct 2010)
+
+  31 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +qtscrobbler-0.10.ebuild, +files/qtscrobbler-0.10-Makefile.patch:
+  Version bump.
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> qtscrobbler-0.9.ebuild:
   amd64/x86 stable, bug #262543
