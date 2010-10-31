@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.21 2010/10/23 15:37:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.22 2010/10/31 08:47:19 graaff Exp $
+
+  31 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  -archive-tar-minitar-0.5.2.ebuild:
+  Remove old version.
 
   23 Oct 2010; Jeroen Roovers <jer@gentoo.org>
   archive-tar-minitar-0.5.2-r2.ebuild, archive-tar-minitar-0.5.2-r3.ebuild:
