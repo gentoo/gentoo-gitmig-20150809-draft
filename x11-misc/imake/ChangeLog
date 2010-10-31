@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.38 2010/10/21 14:00:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.39 2010/10/31 12:22:00 scarabeus Exp $
+
+*imake-1.0.4 (31 Oct 2010)
+
+  31 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> +imake-1.0.4.ebuild:
+  Version bump
 
   21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> -imake-1.0.2.ebuild:
   old
