@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/openipmi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.23 2010/10/16 15:56:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.24 2010/10/31 21:01:50 dilfridge Exp $
+
+*openipmi-2.0.16-r1 (31 Oct 2010)
+
+  31 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +openipmi-2.0.16-r1.ebuild, +files/openipmi-2.0.16-pthreads.patch:
+  Added fix for bug 338499 (OpenIPMIpthread.pc depends on non-existing
+  pthread.pc)
 
   16 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   openipmi-2.0.16.ebuild:
