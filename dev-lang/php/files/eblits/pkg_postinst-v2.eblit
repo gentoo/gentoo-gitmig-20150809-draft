@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.4 2010/10/30 21:41:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.5 2010/10/31 09:26:32 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -12,14 +12,16 @@ eblit-php-pkg_postinst() {
 
 	
 	# Create the symlinks for php
-	local m modules="cli apache2 fpm cgi"
-	for m in $modules; do
+	for m in ${SAPI}; do
+		[[ ${m} == 'embed' ]] && continue;
 		if use $m ; then
 			local ci=$(eselect php show $m)
 			if [[ -z $ci ]]; then
 				eselect php set $m php${SLOT}
+				einfo "Switched ${m} to use php:${SLOT}"
+				einfo
 			elif [[ $ci != "php${SLOT}" ]] ; then
-				elog "To switch $m to use php-${SLOT}, run"
+				elog "To switch $m to use php:${SLOT}, run"
 				elog "    eselect php set $m php${SLOT}"
 				elog
 			fi
