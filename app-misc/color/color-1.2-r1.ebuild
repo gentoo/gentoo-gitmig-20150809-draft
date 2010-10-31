@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.2-r1.ebuild,v 1.4 2010/10/23 22:15:14 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.2-r1.ebuild,v 1.5 2010/10/31 18:50:56 armin76 Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://runslinux.net/projects/color/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 src_prepare() {
