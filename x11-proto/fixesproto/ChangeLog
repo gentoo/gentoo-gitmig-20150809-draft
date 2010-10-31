@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/fixesproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.37 2010/09/10 17:54:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.38 2010/10/31 12:40:32 scarabeus Exp $
+
+*fixesproto-4.1.2 (31 Oct 2010)
+
+  31 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +fixesproto-4.1.2.ebuild:
+  Version bump
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -fixesproto-4.0.ebuild:
