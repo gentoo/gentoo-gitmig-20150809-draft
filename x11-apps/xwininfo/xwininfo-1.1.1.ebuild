@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/xwininfo-1.1.0-r1.ebuild,v 1.1 2010/10/01 20:50:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/xwininfo-1.1.1.ebuild,v 1.1 2010/10/31 12:25:33 scarabeus Exp $
 
 EAPI=3
 XORG_STATIC=no
@@ -15,5 +15,3 @@ RDEPEND=">=x11-libs/libxcb-1.6
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	>=x11-proto/xproto-7.0.17"
-
-PATCHES=( "${FILESDIR}/${PV}-build.patch" )
