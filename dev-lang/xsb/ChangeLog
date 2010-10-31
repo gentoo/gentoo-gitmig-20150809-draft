@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.25 2010/10/27 12:47:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.26 2010/10/31 19:41:11 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> xsb-3.2-r1.ebuild:
+  Stable on amd64 wrt bug #341963
 
   27 Oct 2010; Christian Faulhammer <fauli@gentoo.org> xsb-3.2-r1.ebuild:
   stable x86, bug 341963
