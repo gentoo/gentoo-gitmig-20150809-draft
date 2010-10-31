@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4727 2010/10/31 20:59:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4728 2010/10/31 21:09:11 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -12,10 +12,6 @@
 
   31 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   dev-tex/algorithms and dev-tex/achemso are gone, so remove package mask
-
-  31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
-  package.mask:
-  Mask dev-python/pysqlite:0.
 
   31 Oct 2010; <olemarkus@gentoo.org> package.mask:
   Removed masking of various PHP packages now ready for a broader audience
