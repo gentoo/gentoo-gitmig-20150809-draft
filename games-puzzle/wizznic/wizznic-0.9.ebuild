@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/wizznic-0.9.ebuild,v 1.3 2010/09/05 17:37:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/wizznic-0.9.ebuild,v 1.4 2010/10/31 18:09:01 hwoarang Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wizznic/${P}${EXTRA_PV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio,joystick,video]
