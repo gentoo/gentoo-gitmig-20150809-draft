@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3.ebuild,v 1.1 2010/10/27 17:19:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3.ebuild,v 1.2 2010/10/31 09:43:48 jlec Exp $
 
 EAPI="3"
 
@@ -33,6 +33,10 @@ S="${WORKDIR}"/"${MY_P}-source"
 pkg_setup() {
 	use python && python_set_active_version 2
 	fortran_pkg_setup
+	if use mpi && use python; then
+		einfo "mpi and python support are incompatible"
+		einfo "Disabling USE=python"
+	fi
 }
 
 src_prepare() {
