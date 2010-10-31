@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12128 2010/10/31 10:36:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12129 2010/10/31 15:11:59 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -390,9 +390,8 @@ app-forensics/tct
 # gkrellm needs more maintainers, but these packages
 # in particular are gong to cause trouble, as they have
 # either obsolete gtk+ API calls (bug #340959, #340137,
-# #339910, #339908, #339907, #339905), have been failing
+# #339910, #339908, #339907, #339905), or have been failing
 # for a while because of their dependencies (bug #338307)
-# or have overflows (bug #338971).
 #
 # Further broken packages may be added in the future as
 # they are discovered, removal date will be the same for
@@ -406,7 +405,6 @@ x11-plugins/gkrellm-gkfreq
 x11-plugins/gkrellm-gamma
 x11-plugins/gkrellmbups
 x11-plugins/gkrellmms
-x11-plugins/gkrellm-bgchanger
 x11-plugins/gkrellmwho2
 x11-plugins/gkrellm-mailwatch
 

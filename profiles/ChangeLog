@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4722 2010/10/31 10:36:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4723 2010/10/31 15:11:59 lack Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Oct 2010; Jim Ramsay <lack@gentoo.org> package.mask:
+  gkrellm-bgchanger update to 0.1.10 fixed all currently reported QA issues,
+  so unmasking
 
   31 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask padevchooser wrt #341191, Comment #3.
