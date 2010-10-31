@@ -6,6 +6,5 @@
     <flag name="celt">High quality, low delay audio codec</flag>
     <flag name="espeak">Text to speach engine</flag>
     <flag name="g15">Logitech g15 lcd support</flag>
-    <flag name="nowplaying">Shows what music is playing</flag>
   </use>
 </pkgmetadata>
