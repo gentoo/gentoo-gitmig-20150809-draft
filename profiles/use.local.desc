@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6094 2010/10/30 22:14:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6095 2010/10/31 11:14:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2034,7 +2034,6 @@ media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Win
 media-sound/mangler:celt - High quality, low delay audio codec
 media-sound/mangler:espeak - Text to speach engine
 media-sound/mangler:g15 - Logitech g15 lcd support
-media-sound/mangler:nowplaying - Shows what music is playing
 media-sound/mixxx:hifieq - Enable hifi equalizer support
 media-sound/mixxx:shout - Enable shoutcast support
 media-sound/mixxx:tonal - Enable tonal analysis support
