@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6099 2010/10/31 18:14:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6100 2010/10/31 21:34:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -59,6 +59,7 @@ app-admin/collectd:collectd_plugins_fscache - Build the fscache input plugin (in
 app-admin/collectd:collectd_plugins_gmond - Build the gmond input plugin (receive data from gmond, the client daemon of the Ganglia project)
 app-admin/collectd:collectd_plugins_hddtemp - Build the hddtemp input plugin (temperature of hard disks)
 app-admin/collectd:collectd_plugins_interface - Build the interface input plugin (information about traffic, packets and errors of interfaces)
+app-admin/collectd:collectd_plugins_ipmi - Build the ipmi input plugin (read hardware sensors from servers using the Intelligent Platform Management Interface (IPMI))
 app-admin/collectd:collectd_plugins_iptables - Build the iptables input plugin (statistics from a ip_tables based packet filter)
 app-admin/collectd:collectd_plugins_irq - Build the irq input plugin (number of times each interrupt has been handled by the os)
 app-admin/collectd:collectd_plugins_java - Build the java input plugin (embeds a JVM into collectd for writing plugins)
@@ -77,6 +78,7 @@ app-admin/collectd:collectd_plugins_memcached - Build the memcached input plugin
 app-admin/collectd:collectd_plugins_memory - Build the memory input plugin (physical memory utilization)
 app-admin/collectd:collectd_plugins_multimeter - Build the multimeter input plugin (reads a voltage or current from a multimeter connected to a serial bus)
 app-admin/collectd:collectd_plugins_mysql - Build the mysql input plugin (connects to an MySQL-database and issues a SHOW STATUS command)
+app-admin/collectd:collectd_plugins_netlink - Build the netlink input plugin (opens a netlink socket to the Linux kernel for getting statistics)
 app-admin/collectd:collectd_plugins_network - Build the network input/output plugin (communicates with other instances of collectd)
 app-admin/collectd:collectd_plugins_nfs - Build the nfs input plugin (usage of the Network File System)
 app-admin/collectd:collectd_plugins_nginx - Build the nginx input plugin (number of requests handled by the nginx daemon)
