@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r3.ebuild,v 1.2 2010/05/17 20:15:47 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r3.ebuild,v 1.3 2010/10/31 22:23:39 joker Exp $
 
 inherit fixheadtails autotools eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/ccze-fbsd.patch || die "epatch ccze-fbsd.patch failed"
 	epatch "${FILESDIR}"/ccze-segfault.patch || die "epatch ccze-segfault.patch"
-	epatch "${FILESDIR}"/ccze-ldflags.patch || die "epatch ccze-segfault.patch"
+	epatch "${FILESDIR}"/ccze-ldflags.patch || die "epatch ccze-ldflags.patch"
 
 	# GCC 4.x fixes
 	sed -e 's/-Wswitch -Wmulticharacter/-Wswitch/' \
