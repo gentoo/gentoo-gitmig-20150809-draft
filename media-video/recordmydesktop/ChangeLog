@@ -1,6 +1,13 @@
 # ChangeLog for media-video/recordmydesktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.36 2010/05/24 16:10:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.37 2010/10/31 05:57:33 radhermit Exp $
+
+*recordmydesktop-0.3.8.1-r4 (31 Oct 2010)
+
+  31 Oct 2010; Tim Harder <radhermit@gentoo.org>
+  +files/0.3.8.1-fix-libjack-check.patch,
+  +recordmydesktop-0.3.8.1-r4.ebuild:
+  Revision bump to fix check for jack support (bug #338234 by darkbasic).
 
   23 May 2010; <nixnut@gentoo.org> recordmydesktop-0.3.8.1-r3.ebuild:
   ppc stable #315023
