@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.3 2010/10/31 22:36:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.4 2010/10/31 22:38:42 ssuominen Exp $
 
 EAPI="3"
 
@@ -66,6 +66,7 @@ src_install() {
 	rm "${D}"/$(python_get_sitedir)/*.la
 
 	use gnome || rm "${D}/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py"
+	use policykit || rm -rf "${D}/usr/share/polkit-1"
 	use pulseaudio || rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py,plugins/applet/Pulse*.py}
 
 	python_need_rebuild
