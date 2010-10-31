@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyelemental
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelemental/ChangeLog,v 1.2 2008/11/24 17:51:16 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelemental/ChangeLog,v 1.3 2010/10/31 23:19:42 arfrever Exp $
+
+  31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyelemental-1.2.0.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Re-assign to sci-chemistry and python herds.
