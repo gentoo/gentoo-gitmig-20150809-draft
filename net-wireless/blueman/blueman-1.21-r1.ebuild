@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.4 2010/10/31 22:38:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.5 2010/10/31 22:47:05 ssuominen Exp $
 
 EAPI="3"
 
@@ -11,6 +11,7 @@ inherit python gnome2-utils
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks."
 HOMEPAGE="http://blueman-project.org/"
 SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -65,19 +66,23 @@ src_install() {
 
 	rm "${D}"/$(python_get_sitedir)/*.la
 
-	use gnome || rm "${D}/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py"
-	use policykit || rm -rf "${D}/usr/share/polkit-1"
+	use gnome || rm "${D}"/$(python_get_sitedir)/${PN}/plugins/config/Gconf.py
+	use policykit || rm -rf "${D}"/usr/share/polkit-1
 	use pulseaudio || rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py,plugins/applet/Pulse*.py}
 
 	python_need_rebuild
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
-	python_mod_optimize "${PN}"
+	python_mod_optimize ${PN}
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${PN}"
+	python_mod_cleanup ${PN}
 	gnome2_icon_cache_update
 }
