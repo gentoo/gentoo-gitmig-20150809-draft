@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.9 2010/10/25 01:32:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.10 2010/10/31 08:43:55 graaff Exp $
+
+  31 Oct 2010; Hans de Graaff <graaff@gentoo.org> -trollop-1.16.2.ebuild,
+  -trollop-1.16.2-r1.ebuild:
+  Remove old versions.
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> trollop-1.16.2-r2.ebuild:
   Marked ~hppa (bug #337956).
