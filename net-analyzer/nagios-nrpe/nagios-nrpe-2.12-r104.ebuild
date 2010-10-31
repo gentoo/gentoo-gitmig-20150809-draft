@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r1.ebuild,v 1.1 2008/08/04 15:55:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r104.ebuild,v 1.1 2010/10/31 15:49:13 dertobi123 Exp $
+
+EAPI=2
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +16,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="ssl command-args"
+IUSE="ssl"
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 	ssl? ( dev-libs/openssl )"
 S="${WORKDIR}/nrpe-${PV}"
@@ -24,11 +26,16 @@ pkg_setup() {
 	enewuser nagios -1 /bin/bash /dev/null nagios
 }
 
-src_compile() {
+src_prepare() {
+	# Add support for large output,
+	# http://opsview-blog.opsera.com/dotorg/2008/08/enhancing-nrpe.html
+	epatch "${FILESDIR}/multiline.patch"
+}
+
+src_configure() {
 	local myconf
 
-	myconf="${myconf} $(use_enable ssl) \
-					  $(use_enable command-args)"
+	myconf="${myconf} $(use_enable ssl)"
 
 	# Generate the dh.h header file for better security (2005 Mar 20 eldad)
 	if useq ssl ; then
@@ -37,15 +44,19 @@ src_compile() {
 
 	econf ${myconf} \
 		--host=${CHOST} \
-		--prefix=/usr/nagios \
+		--prefix=/usr \
+		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		--localstatedir=/var/nagios \
 		--sysconfdir=/etc/nagios \
 		--with-nrpe-user=nagios \
 		--with-nrpe-grp=nagios || die "econf failed"
+}
+
+src_compile() {
 	emake all || die "make failed"
 	# Add nifty nrpe check tool
 	cd contrib
-	$(tc-getCC) ${CFLAGS} -o nrpe_check_control	nrpe_check_control.c
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o nrpe_check_control	nrpe_check_control.c
 }
 
 src_install() {
@@ -58,21 +69,14 @@ src_install() {
 	fperms 0640 /etc/nagios/nrpe.cfg
 
 	exeopts -m0750 -o nagios -g nagios
-	exeinto /usr/nagios/bin
+	exeinto /usr/bin
 	doexe src/nrpe
 
 	exeopts -m0750 -o nagios -g nagios
-	exeinto /usr/nagios/libexec
+	exeinto /usr/$(get_libdir)/nagios/plugins
 	doexe src/check_nrpe contrib/nrpe_check_control
 
-	newinitd "${FILESDIR}"/nrpe nrpe
-
-	cat << EOF > "${T}"/55-nagios-nrpe-revdep
-SEARCH_DIRS="/usr/nagios/bin /usr/nagios/libexec"
-EOF
-
-	insinto /etc/revdep-rebuild
-	doins "${T}"/55-nagios-nrpe-revdep
+	newinitd "${FILESDIR}"/nrpe-nagios3 nrpe
 
 	# Create pidfile in /var/run/nrpe, bug #233859
 	keepdir /var/run/nrpe
@@ -87,12 +91,4 @@ pkg_postinst() {
 	einfo "If you are using the nrpe daemon, remember to edit"
 	einfo "the config file /etc/nagios/nrpe.cfg"
 	einfo
-
-	if useq command-args ; then
-		ewarn "You have enabled command-args for NRPE. This enables"
-		ewarn "the ability for clients to supply arguments to commands"
-		ewarn "which should be run. "
-		ewarn "THIS IS CONSIDERED A SECURITY RISK!"
-		ewarn "Please read /usr/share/doc/${PF}/SECURITY.bz2 for more info"
-	fi
 }

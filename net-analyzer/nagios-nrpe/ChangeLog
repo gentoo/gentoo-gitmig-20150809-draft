@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nagios-nrpe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.66 2009/12/31 10:06:18 dertobi123 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.67 2010/10/31 15:49:13 dertobi123 Exp $
+
+*nagios-nrpe-2.12-r104 (31 Oct 2010)
+
+  31 Oct 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  -nagios-nrpe-2.12.ebuild, -nagios-nrpe-2.12-r1.ebuild,
+  -nagios-nrpe-2.12-r103.ebuild, +nagios-nrpe-2.12-r104.ebuild:
+  Remove command-args use flag, as it pretty much does nothing anyways ...
+  (#289722)
 
 *nagios-nrpe-2.12-r103 (31 Dec 2009)
 
