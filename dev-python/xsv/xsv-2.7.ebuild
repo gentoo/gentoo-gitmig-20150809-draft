@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/xsv-2.7.ebuild,v 1.8 2010/10/31 22:55:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/xsv-2.7.ebuild,v 1.9 2010/10/31 22:56:22 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -35,7 +35,7 @@ src_install() {
 	dohtml xsv-status.html || die "dohtml failed"
 	insinto /usr/share/doc/${PF}/examples
 	doins triv.xml triv.xsd tiny.xml tiny.xsd || die "doins failed"
-	
+
 	delete_docs_and_examples() {
 		rm -fr "${ED}$(python_get_sitedir)/XSV/"{doc,example}
 	}
