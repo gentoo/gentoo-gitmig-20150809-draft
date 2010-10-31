@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.66 2010/04/07 21:50:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.67 2010/10/31 10:47:40 scarabeus Exp $
+
+*libXpm-3.5.9 (31 Oct 2010)
+
+  31 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> +libXpm-3.5.9.ebuild:
+  Version bump
 
   07 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libXpm-3.5.8.ebuild:
