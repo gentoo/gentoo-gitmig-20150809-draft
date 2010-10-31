@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.145 2010/10/26 20:06:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.146 2010/10/31 13:08:18 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> inkscape-0.48.0.ebuild:
+  Stable on amd64 wrt bug #343371
 
   26 Oct 2010; Markus Meier <maekke@gentoo.org> inkscape-0.48.0.ebuild,
   +files/inkscape-0.48.0-spell.patch:
