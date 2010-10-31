@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.1.ebuild,v 1.1 2010/10/26 07:55:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.1-r1.ebuild,v 1.1 2010/10/31 11:48:28 scarabeus Exp $
 
 EAPI=3
+# They generate the configure.ac with wrong version of util-macros
+# see bug #339988
+XORG_EAUTORECONF="yes"
 inherit xorg-2 multilib versionator
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
@@ -157,10 +160,6 @@ pkg_setup() {
 		--without-fop
 		--with-os-vendor=Gentoo
 		${conf_opts}"
-
-	if use kdrive && use tslib; then
-		XORG_EAUTORECONF=yes
-	fi
 
 	# Xorg-server requires includes from OS mesa which are not visible for
 	# users of binary drivers.

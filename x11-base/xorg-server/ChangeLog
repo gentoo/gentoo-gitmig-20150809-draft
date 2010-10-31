@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.546 2010/10/26 07:55:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.547 2010/10/31 11:48:28 scarabeus Exp $
+
+*xorg-server-1.9.1-r1 (31 Oct 2010)
+
+  31 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xorg-server-1.9.1.ebuild, +xorg-server-1.9.1-r1.ebuild:
+  Revbump to fix bug #339988. Thanks to Chris Coleman for the solution and
+  problem investigation.
 
 *xorg-server-1.9.1 (26 Oct 2010)
 
