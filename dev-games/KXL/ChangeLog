@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/KXL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.14 2010/09/23 12:27:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.15 2010/10/31 19:31:53 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> KXL-1.1.7-r2.ebuild:
+  Stable on amd64 wrt bug #343453
 
 *KXL-1.1.7-r2 (23 Sep 2010)
 
