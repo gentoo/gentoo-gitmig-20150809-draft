@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.4 2010/10/06 21:07:41 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.5 2010/10/31 23:35:44 arfrever Exp $
+
+  31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paver-1.0.3.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS. Use PyPI mirrors.
 
 *paver-1.0.3 (06 Oct 2010)
 
