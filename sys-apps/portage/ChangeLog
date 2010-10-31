@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.760 2010/10/28 04:02:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.761 2010/10/31 18:48:42 zmedico Exp $
+
+*portage-2.2.0_alpha3 (31 Oct 2010)
+
+  31 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha3.ebuild:
+  2.2.0_alpha3 version bump. This includes all of the fixes in
+  portage-2.1.9.24. Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.24 (31 Oct 2010)
+
+  31 Oct 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.24.ebuild:
+  2.1.9.24 version bump. This fixes bug #342721 (rpm creation does not work
+  with empty FILESDIR), and also fixes an incompatibility with the
+  implementation of deepcopy in python-2.7. Bug #335925 tracks all bugs
+  fixed since 2.1.8.x.
 
 *portage-2.2.0_alpha2 (28 Oct 2010)
 
