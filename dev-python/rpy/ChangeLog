@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.47 2010/10/19 16:08:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.48 2010/10/31 12:50:34 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> rpy-2.1.5.ebuild:
+  Stable on amd64 wrt bug #343375
 
 *rpy-2.1.7 (19 Oct 2010)
 
