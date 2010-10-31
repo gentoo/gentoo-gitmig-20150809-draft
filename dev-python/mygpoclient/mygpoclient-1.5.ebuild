@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/mygpoclient-1.5.ebuild,v 1.1 2010/10/31 17:32:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/mygpoclient-1.5.ebuild,v 1.2 2010/10/31 17:35:38 ssuominen Exp $
 
 EAPI=3
 
@@ -22,7 +22,5 @@ IUSE="test"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	test? ( dev-python/coverage
-	dev-python/minimock
-	dev-python/nose )"
-
-#DOCS=""
+		dev-python/minimock
+		dev-python/nose )"
