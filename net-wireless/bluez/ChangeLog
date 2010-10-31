@@ -1,6 +1,28 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.55 2010/10/07 20:52:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.56 2010/10/31 11:23:38 pacho Exp $
+
+*bluez-4.77 (31 Oct 2010)
+
+  31 Oct 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.66-r1.ebuild,
+  -bluez-4.71.ebuild, -bluez-4.72.ebuild, +bluez-4.77.ebuild:
+  Remove old and version bump:
+	Fix issue with device name and accessing already freed memory.
+	Fix issue with handling CHLD=0 command for handsfree.
+	Fix issue with manager properties and no adapters.
+	Fix issue with properties and broken service records.
+	Fix issue with A2DP playback and sample rate changes.
+	Update MCAP and HDP support.
+	Fix issue in telephony driver with hanging up held call.
+	Fix issue in telephony driver with notifications when on hold.
+	Fix issue with blocking on setconf confirmation callback.
+	Fix issue with not always signaling new streams as sinks.
+	Fix issue with errors in case of endpoint request timeout.
+	Fix issue with HFP/HSP microphone and speaker gain values.
+	Add source if the device attempt to configure local sink stream.
+	Add PSM option for GATT/ATT over BR/EDR on gatttool.
+	Add support for GATT/ATT Attribute Write Request.
+	Update MCAP and HDP support.
 
 *bluez-4.75 (07 Oct 2010)
 
