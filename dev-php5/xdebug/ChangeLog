@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/xdebug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.29 2010/10/20 14:18:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.30 2010/10/31 23:56:54 mabi Exp $
+
+  31 Oct 2010; Matti Bickel <mabi@gentoo.org> xdebug-2.1.0-r1.ebuild:
+  dropped keywords pending bug #343597
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> xdebug-2.0.5.ebuild:
   Stable on amd64 wrt bug #336869
