@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12131 2010/10/31 19:22:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12132 2010/10/31 20:00:40 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -605,11 +605,6 @@ app-doc/heirloom-doctools
 # Removal on 2010-11-30
 app-i18n/fcitx
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (30 Sep 2010)
-# Masking for removal in 30 days
-# This package is obsolete, texlive contains a way newer version
-dev-tex/algorithms
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Sep 2010)
 #  on behalf of QA team
 #
@@ -661,11 +656,6 @@ net-p2p/overnet
 #
 # Removal on 2010-11-26
 app-benchmarks/xfbsuite
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (26 Sep 2010)
-# Masking for removal in 30 days
-# This package is obsolete, texlive contains a way newer version
-dev-tex/achemso
 
 # Markos Chandras <hwoarang@gentoo.org> ( 26 Sep 2010 )
 # Masking because of masked Qt-4.7
