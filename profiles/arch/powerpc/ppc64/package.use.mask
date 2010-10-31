@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.28 2010/10/25 18:37:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.29 2010/10/31 16:35:53 ssuominen Exp $
 
 # Mark Loeser <halcy0n@gentoo.org> (25 Oct 2010)
 # Requires a stable kdelibs
@@ -17,8 +17,7 @@ sys-fs/btrfs-progs debug-utils
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913
-# Needs libimobiledevice keyworded (bug 325839)
-gnome-base/gvfs bluetooth iphone
+gnome-base/gvfs bluetooth
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Jun 2010)
 # These will need stable kdelibs-4.
