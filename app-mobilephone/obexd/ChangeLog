@@ -1,6 +1,19 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.29 2010/10/07 20:57:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.30 2010/10/31 11:31:50 pacho Exp $
+
+*obexd-0.35 (31 Oct 2010)
+
+  31 Oct 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/obexd-0.21-fix_configure.patch, -obexd-0.28.ebuild,
+  -obexd-0.32.ebuild, -obexd-0.33.ebuild, +obexd-0.35.ebuild:
+  Drop old and version bump:
+	Fix regression on suspend on opening.
+	Fix suspend stream on opening if no data.
+	Fix memory leaks in phonebook-tracker module.
+	Fix not responding Not Found for filtered vcard-listing.
+	Fix not responding Not Found when no entry is found.
+	Fix issue with X-IRMC-CALL-DATETIME format.
 
 *obexd-0.34 (07 Oct 2010)
 

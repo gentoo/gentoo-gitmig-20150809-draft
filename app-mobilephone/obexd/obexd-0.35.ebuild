@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.32.ebuild,v 1.1 2010/09/08 14:13:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.35.ebuild,v 1.1 2010/10/31 11:31:50 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -35,6 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README doc/*.txt
+	emake DESTDIR="${ED}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog README doc/*.txt || die
 }
