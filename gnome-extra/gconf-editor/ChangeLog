@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.168 2010/10/22 20:11:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.169 2010/11/01 13:51:16 eva Exp $
+
+  01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gconf-editor-2.30.0.ebuild, gconf-editor-2.32.0.ebuild:
+  docbook dtd needed not only for tests.
 
 *gconf-editor-2.32.0 (22 Oct 2010)
 
