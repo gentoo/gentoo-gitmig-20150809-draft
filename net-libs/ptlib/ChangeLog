@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.19 2010/10/28 00:10:37 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.20 2010/11/01 22:39:30 halcy0n Exp $
+
+  01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ptlib-2.6.7-r1.ebuild:
+  Add ~ppc64; bug #276355
 
   28 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> -ptlib-2.6.4-r1.ebuild,
   -ptlib-2.6.5.ebuild, -ptlib-2.6.6.ebuild:

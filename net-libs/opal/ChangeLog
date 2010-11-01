@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.68 2010/10/27 23:43:35 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.69 2010/11/01 22:40:14 halcy0n Exp $
+
+  01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> opal-3.6.8.ebuild:
+  Add ~ppc64; bug #276355
 
   27 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.8.ebuild:
   Updating celt required version.
