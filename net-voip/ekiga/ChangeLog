@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.21 2010/10/28 08:21:35 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.22 2010/11/01 22:41:03 halcy0n Exp $
+
+  01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ekiga-3.2.7.ebuild:
+  Add ~ppc64; bug #276355
 
   28 Oct 2010; Mounir Lamouri <volkmar@gentoo.org> -ekiga-3.2.5-r2.ebuild,
   +ekiga-3.2.7.ebuild:
