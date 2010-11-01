@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadPassword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.9 2010/10/31 20:49:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadPassword/ChangeLog,v 1.10 2010/11/01 12:20:51 fauli Exp $
+
+  01 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  Term-ReadPassword-0.11.ebuild:
+  stable x86, bug 343559
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   Term-ReadPassword-0.11.ebuild:
