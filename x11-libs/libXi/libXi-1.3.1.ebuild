@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.3.1.ebuild,v 1.11 2010/10/22 20:30:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/libXi-1.3.1.ebuild,v 1.12 2010/11/01 14:27:59 scarabeus Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -14,9 +14,9 @@ RDEPEND="
 	>=x11-libs/libX11-1.3
 	>=x11-libs/libXext-1.1
 	>=x11-proto/inputproto-2.0
+	>=x11-proto/xproto-7.0.16
 "
 DEPEND="${RDEPEND}
-	>=x11-proto/xproto-7.0.16
 	doc? (
 		>=app-text/asciidoc-8.5.1
 		app-text/xmlto

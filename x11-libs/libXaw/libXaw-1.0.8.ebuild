@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.8.ebuild,v 1.1 2010/10/28 11:38:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.8.ebuild,v 1.2 2010/11/01 14:28:00 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2
@@ -14,10 +14,10 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXt
 	x11-libs/libXmu
-	x11-libs/libXpm"
-DEPEND="${RDEPEND}
+	x11-libs/libXpm
 	x11-proto/xproto
-	x11-proto/xextproto
+	x11-proto/xextproto"
+DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto )"
 
 pkg_setup() {

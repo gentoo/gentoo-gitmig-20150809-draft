@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.9.ebuild,v 1.2 2010/10/31 20:16:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.9.ebuild,v 1.3 2010/11/01 14:28:01 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2 flag-o-matic
@@ -12,11 +12,11 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
-	x11-libs/libXext"
-DEPEND="${RDEPEND}
-	sys-devel/gettext
+	x11-libs/libXext
 	x11-proto/xextproto
 	x11-proto/xproto"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 src_compile() {
 	# the gettext configure check and code in sxpm are incorrect; they assume

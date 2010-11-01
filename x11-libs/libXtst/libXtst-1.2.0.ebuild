@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/libXtst-1.2.0.ebuild,v 1.1 2010/10/31 10:57:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/libXtst-1.2.0.ebuild,v 1.2 2010/11/01 14:28:03 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2
@@ -12,11 +12,11 @@ IUSE="doc"
 
 RDEPEND="x11-libs/libX11
 	>=x11-libs/libXext-1.0.99.4
-	  x11-libs/libXi"
-DEPEND="${RDEPEND}
+	  x11-libs/libXi
 	x11-proto/inputproto
 	>=x11-proto/recordproto-1.13.99.1
-	>=x11-proto/xextproto-7.0.99.3
+	>=x11-proto/xextproto-7.0.99.3"
+DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto )"
 
 pkg_setup() {

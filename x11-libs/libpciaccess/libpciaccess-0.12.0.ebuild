@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.0.ebuild,v 1.1 2010/07/22 20:06:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.0.ebuild,v 1.2 2010/11/01 14:28:00 scarabeus Exp $
 
 EAPI=3
 
@@ -14,6 +14,8 @@ DEPEND="zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
+	xorg-2_pkg_setup
+
 	CONFIGURE_OPTIONS="$(use_with zlib)
 		--with-pciids-path=/usr/share/misc"
 }

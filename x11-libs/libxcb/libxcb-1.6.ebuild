@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.6.ebuild,v 1.10 2010/10/21 01:20:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.6.ebuild,v 1.11 2010/11/01 14:27:59 scarabeus Exp $
 
 EAPI=3
 
@@ -17,11 +17,11 @@ IUSE="doc selinux"
 
 RDEPEND="x11-libs/libXau
 	x11-libs/libXdmcp
-	dev-libs/libpthread-stubs"
+	dev-libs/libpthread-stubs
+	>=x11-proto/xcb-proto-1.6"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-libs/libxslt
-	>=x11-proto/xcb-proto-1.6
 	=dev-lang/python-2*[xml]"
 
 pkg_setup() {
