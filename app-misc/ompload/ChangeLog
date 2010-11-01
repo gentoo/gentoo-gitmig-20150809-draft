@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ompload
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.14 2010/10/31 20:40:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.15 2010/11/01 13:36:04 phajdan.jr Exp $
+
+  01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ompload-20100909.ebuild:
+  x86 stable wrt bug #342823
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ompload-20100909.ebuild:
