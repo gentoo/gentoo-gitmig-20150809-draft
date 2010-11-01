@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.85.ebuild,v 1.1 2010/10/31 14:41:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.85.ebuild,v 1.2 2010/11/01 19:27:13 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="FastTracker 2 inspired music tracker"
-HOMEPAGE="http://www.milkytracker.net/"
-SRC_URI="http://www.milkytracker.net/files/${P}.tar.bz2"
+HOMEPAGE="http://milkytracker.org/"
+SRC_URI="http://milkytracker.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"

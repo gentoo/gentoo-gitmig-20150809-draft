@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/milkytracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/ChangeLog,v 1.5 2010/10/31 14:41:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/ChangeLog,v 1.6 2010/11/01 19:27:13 ssuominen Exp $
+
+  01 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  milkytracker-0.90.80.ebuild, milkytracker-0.90.85.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt #343741 by Jouni Rinne.
 
 *milkytracker-0.90.85 (31 Oct 2010)
 
