@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.9 2010/11/01 04:17:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.10 2010/11/01 04:32:45 jer Exp $
+
+  01 Nov 2010; Jeroen Roovers <jer@gentoo.org> upnpscan-0.4-r2.ebuild,
+  files/upnpscan-0.4-cflags.patch, +files/upnpscan-0.4-r2-cflags.patch:
+  Readd the old patch or we introduce more QA issues to -r0.
 
 *upnpscan-0.4-r2 (01 Nov 2010)
 
