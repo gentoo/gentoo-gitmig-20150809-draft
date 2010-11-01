@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.102 2010/10/21 01:22:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.103 2010/11/01 12:14:09 scarabeus Exp $
+
+*xkeyboard-config-2.0-r1 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xkeyboard-config-2.0.ebuild, +xkeyboard-config-2.0-r1.ebuild:
+  Revision bump to fix bug #328455 c#26. Thanks to Oldrich Jedlicka for the
+  solution.
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking xkeyboard-config-1.9 ppc stable for bug 239063
