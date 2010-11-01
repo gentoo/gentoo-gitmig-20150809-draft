@@ -1,5 +1,5 @@
 diff --git a/Makefile.am b/Makefile.am
-index b400095..9e6d698 100644
+index b400095..af3a3a3 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -16,6 +16,9 @@ SUFFIXES = .H .h .C .cc .c .f .o
@@ -81,16 +81,16 @@ index 73fbe21..31a0053 100644
  AC_OUTPUT
  
 diff --git a/src/aaa_lib/Makefile.am b/src/aaa_lib/Makefile.am
-index 2c5026b..d8d0650 100644
+index 0064aaa..8b33f70 100644
 --- a/src/aaa_lib/Makefile.am
 +++ b/src/aaa_lib/Makefile.am
-@@ -22,7 +22,8 @@ libdir = ${prefix}/lib
+@@ -21,7 +21,8 @@ BLAS_LIBS = @blas_lib@
  lib_LTLIBRARIES = libapbs.la
  
  libapbs_la_SOURCES = apbs_link.c
 -libapbs_la_LIBADD  = ${GEN_LIBS} ${FEM_LIBS} ${MG_LIBS} ${PMGZ_LIBS} ${AQUA_LIBS} ${BLAS_LIBS}
 +libapbs_la_LIBADD  = ${GEN_LIBS} ${FEM_LIBS} ${MG_LIBS} ${PMGZ_LIBS} ${AQUA_LIBS} ${BLAS_LIBS} \
-+		     @OPENMP_LIBS@ @maloc_lib@
++		     @OPENMP_LIBS@ @maloc_lib@ @mc_lib@
  libapbs_la_LDFLAGS = -version-info ${APBS_VERSION}
  
  INCLUDES         = -I${top_srcdir}/src/generic -I${top_srcdir}/src/mg -I${top_srcdir}/src/fem @inc_list@

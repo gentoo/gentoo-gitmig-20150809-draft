@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3.ebuild,v 1.2 2010/10/31 09:43:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3.ebuild,v 1.3 2010/11/01 17:25:22 jlec Exp $
 
 EAPI="3"
 
@@ -18,13 +18,22 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-IUSE="arpack doc mpi openmp python tools"
+IUSE="arpack doc fetk mpi openmp python tools"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-DEPEND="dev-libs/maloc[mpi=]
+DEPEND="
+	dev-libs/maloc[mpi=]
 	virtual/blas
 	sys-libs/readline
 	arpack? ( sci-libs/arpack )
+	fetk? (
+		media-libs/sg
+		sci-libs/amd
+		sci-libs/punc
+		sci-libs/mc
+		sci-libs/gamer
+		sci-libs/umfpack
+		sci-libs/superlu )
 	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
@@ -37,6 +46,12 @@ pkg_setup() {
 		einfo "mpi and python support are incompatible"
 		einfo "Disabling USE=python"
 	fi
+	if [[ -z ${MAXMEM} ]]; then
+		einfo "You can specify the max amount of RAM used"
+		einfo "by setting MAXMEM=\"your size in MB\""
+	else
+		einfo "Settings max memory usage to ${MAXMEM} MB"
+	fi
 }
 
 src_prepare() {
@@ -48,11 +63,13 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.2.1b-autoconf-2.64.patch \
 		"${FILESDIR}"/${P}-shared.patch \
 		"${FILESDIR}"/${PN}-1.2.1b-multilib.patch \
-		"${FILESDIR}"/${PN}-1.2.1b-parallelbuild.patch
+		"${FILESDIR}"/${PN}-1.2.1b-parallelbuild.patch \
+		"${FILESDIR}"/${P}-mainroutines.patch
 	sed "s:GENTOO_PKG_NAME:${PN}:g" \
 		-i Makefile.am || die "Cannot correct package name"
 	# this test is broken
 	sed '/ion-pmf/d' -i examples/Makefile.am || die
+	sed 's:libmaloc.a:libmaloc.so:g' -i configure.ac || die
 	eautoreconf
 	find . -name "._*" -exec rm -f '{}' \;
 }
@@ -79,6 +96,14 @@ src_configure() {
 	if use python && ! use tools; then
 		myconf="${myconf} --enable-tools"
 	fi
+
+	if use fetk; then
+		myconf="${myconf} --with-fetk-include=${EPREFIX}/usr/include --with-fetk-library=${EPREFIX}/usr/$(get_libdir)"
+	else
+		myconf="${myconf} --disable-fetk"
+	fi
+
+	[[ -n ${MAXMEM} ]] && myconf="${myconf} --with-maxmem=${MAXMEM}"
 
 	econf \
 		--disable-maloc-rebuild \
