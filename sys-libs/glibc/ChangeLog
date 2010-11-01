@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.731 2010/11/01 17:22:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.732 2010/11/01 19:52:40 jer Exp $
+
+  01 Nov 2010; Jeroen Roovers <jer@gentoo.org> glibc-2.11.2-r3.ebuild:
+  Stable for HPPA PPC (bug #341755).
 
   01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> glibc-2.11.2-r3.ebuild:
   Mark stable for ppc64; bug #341755
