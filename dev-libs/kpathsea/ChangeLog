@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.4 2010/10/25 11:47:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.5 2010/11/01 22:10:25 maekke Exp $
+
+  01 Nov 2010; Markus Meier <maekke@gentoo.org>
+  kpathsea-6.0.0_p20100722.ebuild:
+  add ~arm, bug #342513
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   kpathsea-6.0.0_p20100722.ebuild:
