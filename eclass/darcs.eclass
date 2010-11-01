@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.9 2010/07/19 02:52:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.10 2010/11/01 20:54:46 slyfox Exp $
 #
 # darcs eclass author:  Andres Loeh <kosmikus@gentoo.org>
 # tla eclass author:    <rphillips@gentoo.org>
@@ -54,6 +54,12 @@ SRC_URI=""
 
 # add darcs to deps
 DEPEND="dev-vcs/darcs"
+
+darcs_patchcount() {
+	set -- $(${EDARCS_DARCS_CMD} show repo | grep "Num Patches")
+	# handle string like: "    Num Patches: 3860"
+	echo ${3}
+}
 
 # is called from darcs_src_unpack
 darcs_fetch() {
@@ -113,6 +119,9 @@ darcs_fetch() {
 		einfo "Running $cmdupdate"
 		eval $cmdupdate || die "darcs update command failed"
 	fi
+
+	export EDARCS_PATCHCOUNT=$(darcs_patchcount)
+	einfo "    patches in repo: ${EDARCS_PATCHCOUNT}"
 
 	popd
 }
