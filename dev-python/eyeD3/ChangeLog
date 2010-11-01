@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.43 2010/02/16 07:44:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.44 2010/11/01 00:28:13 xmw Exp $
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> eyeD3-0.6.17.ebuild:
+  Added ~arm keyword
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org> eyeD3-0.6.17.ebuild:
   Add ~x64-macos for bug 305355
