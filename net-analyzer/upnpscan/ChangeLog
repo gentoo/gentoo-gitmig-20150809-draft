@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.8 2010/10/30 09:24:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.9 2010/11/01 04:17:09 jer Exp $
+
+*upnpscan-0.4-r2 (01 Nov 2010)
+
+  01 Nov 2010; Jeroen Roovers <jer@gentoo.org> -upnpscan-0.4-r1.ebuild,
+  +upnpscan-0.4-r2.ebuild, files/upnpscan-0.4-cflags.patch:
+  Clean up patch (remove LIBTOOL dep and unset CFLAGS in configure.in,
+  extend it (Makefile.am) so we can simply use emake install without trying
+  to install empty/non-existent files, and do not set CFLAGS again
+  (src/Makefile.am). Bug #343333.
 
   30 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   upnpscan-0.4-r1.ebuild:
