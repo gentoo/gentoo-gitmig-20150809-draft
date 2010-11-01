@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.30.3.ebuild,v 1.14 2010/11/01 16:18:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.30.3.ebuild,v 1.15 2010/11/01 20:12:20 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -58,7 +58,7 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	find "${ED}"/$(get_libdir)/security -name "*.la" -delete \
+	find "${D}"/$(get_libdir)/security -name "*.la" -delete \
 		|| die "la file removal failed"
 }
 
