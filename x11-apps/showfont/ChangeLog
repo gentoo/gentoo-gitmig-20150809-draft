@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/showfont
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/showfont/ChangeLog,v 1.26 2010/01/23 18:40:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/showfont/ChangeLog,v 1.27 2010/11/01 14:58:42 scarabeus Exp $
+
+*showfont-1.0.3 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +showfont-1.0.3.ebuild:
+  Version bump
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -showfont-1.0.1.ebuild:
