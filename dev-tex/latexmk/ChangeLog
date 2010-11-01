@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.19 2010/10/25 09:07:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.20 2010/11/01 22:16:01 maekke Exp $
+
+  01 Nov 2010; Markus Meier <maekke@gentoo.org> latexmk-418.ebuild:
+  add ~arm, bug #342513
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> latexmk-418.ebuild:
   Marked ~hppa (bug #342513).
