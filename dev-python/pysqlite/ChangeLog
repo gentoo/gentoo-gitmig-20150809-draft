@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.123 2010/10/31 18:43:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.124 2010/11/01 02:59:10 xmw Exp $
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> pysqlite-2.6.0-r1.ebuild:
+  add ~arm keyword wrt #343519
 
 *pysqlite-2.6.0-r1 (31 Oct 2010)
 
