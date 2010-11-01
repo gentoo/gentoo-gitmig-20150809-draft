@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.156 2010/09/28 06:51:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.157 2010/11/01 19:02:52 halcy0n Exp $
+
+  01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> zsh-4.3.10-r2.ebuild:
+  Stable on ppc64; bug #297117
 
   28 Sep 2010; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add myself as co-maintainer.
