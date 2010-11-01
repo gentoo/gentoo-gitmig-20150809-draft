@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gnome-devel-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.4 2010/10/29 21:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.5 2010/11/01 15:23:30 eva Exp $
+
+  01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-devel-docs-2.32.0.ebuild:
+  Drop python changes, it's unneeded since gnome-doc-utils has been fixed.
 
 *gnome-devel-docs-2.32.0 (29 Oct 2010)
 
