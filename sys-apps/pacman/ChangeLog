@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pacman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.1 2010/05/12 21:04:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.2 2010/11/01 00:56:08 hwoarang Exp $
+
+*pacman-3.4.1 (01 Nov 2010)
+
+  01 Nov 2010; Markos Chandras <hwoarang@gentoo.org> +pacman-3.4.1.ebuild:
+  Version bump. Thanks to Nathan Phillip Brink
+  (ohnobinki)<ohnobinki@ohnopublishing.net>. Bug #341229
 
 *pacman-3.3.3 (12 May 2010)
 
