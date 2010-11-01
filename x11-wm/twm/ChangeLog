@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/twm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.48 2010/09/25 16:16:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.49 2010/11/01 15:06:51 scarabeus Exp $
+
+*twm-1.0.5 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +twm-1.0.5.ebuild:
+  Version bump
 
   25 Sep 2010; Mart Raudsepp <leio@gentoo.org> -twm-1.0.3.ebuild:
   Remove old
