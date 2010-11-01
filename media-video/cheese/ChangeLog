@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.37 2010/10/29 21:33:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.38 2010/11/01 14:49:26 eva Exp $
+
+  01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> cheese-2.32.0.ebuild:
+  Drop python changes, it's unneeded since gnome-doc-utils has been fixed.
 
 *cheese-2.32.0 (29 Oct 2010)
 

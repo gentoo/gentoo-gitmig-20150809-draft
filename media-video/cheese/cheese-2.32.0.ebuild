@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.1 2010/10/29 21:33:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.2 2010/11/01 14:49:26 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2"
 
-inherit gnome2 python
+inherit gnome2
 
 DESCRIPTION="A cheesy program to take pictures and videos from your webcam"
 HOMEPAGE="http://www.gnome.org/projects/cheese/"
@@ -53,7 +52,6 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper --disable-static"
 	DOCS="AUTHORS ChangeLog NEWS README"
-	python_set_active_version 2
 }
 
 src_install() {
