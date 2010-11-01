@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.10.ebuild,v 1.1 2010/10/31 20:45:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.10.ebuild,v 1.2 2010/11/01 11:47:22 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib subversion toolchain-funcs
+inherit eutils flag-o-matic multilib scons-utils subversion toolchain-funcs
 
 ESVN_REPO_URI="http://v8.googlecode.com/svn/tags/${PV}"
 
@@ -17,12 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
-DEPEND="${RDEPEND}
-	>=dev-util/scons-1.3.0"
+DEPEND="${RDEPEND}"
 
-v8_scons_opts() {
-	echo "$(echo ${MAKEOPTS} | sed -r 's/.*(-j\s*|--jobs=)([0-9]+).*/-j\2/')"
-}
+EXTRA_ESCONS="library=shared soname=on"
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
@@ -63,13 +60,7 @@ src_compile() {
 		die "Failed to determine target arch, got '$myarch'."
 	fi
 
-	if use readline; then
-		myconf="${myconf} console=readline"
-	else
-		myconf="${myconf} console=dumb"
-	fi
-
-	scons library=shared soname=on $(v8_scons_opts) ${myconf} . || die
+	escons $(use_scons readline console readline dumb) ${myconf} . || die
 }
 
 src_install() {
