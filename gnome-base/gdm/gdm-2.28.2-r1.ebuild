@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2-r1.ebuild,v 1.6 2010/10/28 21:56:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2-r1.ebuild,v 1.7 2010/11/01 07:19:28 ford_prefect Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ SRC_URI="${SRC_URI}
 RDEPEND="
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.15.4
-	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/gtk+-2.10.0:2
 	>=x11-libs/pango-1.3
 	>=media-libs/libcanberra-0.4[gtk]
 	>=gnome-base/libglade-2
