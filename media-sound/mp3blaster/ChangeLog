@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.49 2010/09/19 15:00:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.50 2010/11/01 01:53:47 xmw Exp $
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> mp3blaster-3.2.5.ebuild:
+  arm stable
 
   19 Sep 2010; Michael Weber <xmw@gentoo.org> mp3blaster-3.2.5.ebuild:
   Added ~arm keyword
