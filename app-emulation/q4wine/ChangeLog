@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.23 2010/10/01 09:54:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.24 2010/11/01 19:26:50 phajdan.jr Exp $
+
+  01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> q4wine-0.120.ebuild:
+  x86 stable wrt bug #343689
 
 *q4wine-0.120 (01 Oct 2010)
 
