@@ -1,16 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-2.32.0.2.ebuild,v 1.1 2010/11/01 01:21:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-2.32.0.2.ebuild,v 1.2 2010/11/01 20:14:00 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit eutils distutils
+inherit distutils versionator
 
-DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
-with Python and GTK."
+DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed with Python and GTK"
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://launchpad.net/gwibber/2.32/2.32.0/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/gwibber/$(get_version_component_range 1-2)/$(get_version_component_range 1-3)/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,6 +32,11 @@ RDEPEND=">=dev-python/dbus-python-0.80.2
 	>=dev-db/desktopcouch-0.4.6
 	>=dev-python/pygtk-2.16
 	>=gnome-base/librsvg-2.22.2"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install

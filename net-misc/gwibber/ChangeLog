@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.9 2010/11/01 01:21:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.10 2010/11/01 20:14:00 arfrever Exp $
+
+  01 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gwibber-2.32.0.2.ebuild:
+  Update EAPI. Use Python 2 (bug #315829).
 
 *gwibber-2.32.0.2 (01 Nov 2010)
 
