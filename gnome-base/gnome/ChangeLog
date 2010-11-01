@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.394 2010/10/17 16:22:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.395 2010/11/01 14:32:05 ssuominen Exp $
+
+  01 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> gnome-2.30.2.ebuild:
+  ppc64 stable wrt #324077
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gnome-2.30.2.ebuild:
   alpha/ia64/sparc stable wrt #324077

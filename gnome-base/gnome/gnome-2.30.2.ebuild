@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.9 2010/10/17 16:22:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.10 2010/11/01 14:32:05 ssuominen Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 IUSE="accessibility cdr cups dvdr ldap mono policykit"
 
@@ -22,6 +22,7 @@ S=${WORKDIR}
 # XXX: lower gdm to 2.20 since we still keep 2.28 masked
 # Lower epiphany to 2.26 since 2.28 is not ready to go stable
 # Lower ekiga since 3.x cannot be stabilized yet as talked with voip herd
+# ppc64 and epiphany, bug 323857
 RDEPEND="
 	>=dev-libs/glib-2.24.1
 	>=x11-libs/gtk+-2.20.1
@@ -72,7 +73,7 @@ RDEPEND="
 
 	>=media-gfx/eog-2.30.2
 
-	>=www-client/epiphany-2.30.2
+	!ppc64? ( >=www-client/epiphany-2.30.2 )
 	>=app-arch/file-roller-2.30.2
 	>=gnome-extra/gcalctool-5.28.2
 
