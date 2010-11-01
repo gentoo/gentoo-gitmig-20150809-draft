@@ -1,0 +1,8 @@
+# Copyright 2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/32ul/package.mask,v 1.1 2010/11/01 22:14:29 halcy0n Exp $
+
+# Mark Loeser <halcy0n@gentoo.org> (01 Nov 2010)
+# lirc does not work with a 64bit kernel; bug #209552
+app-misc/lirc
+
