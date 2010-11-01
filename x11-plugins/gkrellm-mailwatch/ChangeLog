@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/gkrellm-mailwatch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.28 2010/03/12 00:43:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.29 2010/11/01 13:10:36 lack Exp $
+
+*gkrellm-mailwatch-2.4.3-r1 (01 Nov 2010)
+
+  01 Nov 2010; Jim Ramsay <lack@gentoo.org>
+  +files/2.4.3-0001-Respect-LDFLAGS.patch,
+  +gkrellm-mailwatch-2.4.3-r1.ebuild,
+  +files/2.4.3-0002-Use-gkrellm_gkd_string_width.patch,
+  +files/2.4.3-0003-Remove-a-few-more-GCC-warnings.patch:
+  Patches to fix bug #341483 and #335085
 
   12 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   gkrellm-mailwatch-2.4.3.ebuild:
