@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.32.0.ebuild,v 1.1 2010/10/17 19:41:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.32.0.ebuild,v 1.2 2010/11/01 14:56:53 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 python
+inherit gnome2
 
 DESCRIPTION="Mouse accessibility enhancements for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Mousetweaks/Home"
@@ -34,5 +33,4 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-	python_set_active_version 2
 }
