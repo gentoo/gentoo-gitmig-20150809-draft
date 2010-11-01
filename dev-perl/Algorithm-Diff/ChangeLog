@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Diff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.34 2010/10/25 10:08:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.35 2010/11/01 22:05:37 maekke Exp $
+
+  01 Nov 2010; Markus Meier <maekke@gentoo.org>
+  Algorithm-Diff-1.1902.ebuild:
+  add ~arm, bug #342513
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> Algorithm-Diff-1.1902.ebuild:
   Marked ~hppa (bug #342513).
