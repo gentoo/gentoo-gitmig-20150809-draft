@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.26 2010/10/31 19:41:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.27 2010/11/01 05:39:35 keri Exp $
+
+  01 Nov 2010; <keri@gentoo.org> -xsb-3.0.1.ebuild,
+  -files/xsb-3.0.1-chr_d.patch, -files/xsb-3.0.1-configure.patch,
+  -files/xsb-3.0.1-debug.patch, -files/xsb-3.0.1-gap.patch,
+  -files/xsb-3.0.1-justify.patch, -files/xsb-3.0.1-libwww.patch,
+  -files/xsb-3.0.1-mysql.patch, -files/xsb-3.0.1-nostrip.patch,
+  -files/xsb-3.0.1-odbc.patch, -files/xsb-3.0.1-packages.patch,
+  -files/xsb-3.0.1-perlmatch.patch, -files/xsb-3.0.1-portage.patch,
+  -files/xsb-3.0.1-sgml.patch, -files/xsb-3.0.1-slx.patch,
+  -files/xsb-3.0.1-wildmatch.patch, -files/xsb-3.0.1-xpath.patch,
+  -files/xsb-3.0.1-xsb-script.patch, -xsb-3.1.ebuild, -xsb-3.2.ebuild:
+  Remove old versions
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> xsb-3.2-r1.ebuild:
   Stable on amd64 wrt bug #341963
