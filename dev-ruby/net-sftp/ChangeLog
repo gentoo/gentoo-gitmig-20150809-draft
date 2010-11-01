@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-sftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.42 2010/08/25 05:12:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.43 2010/11/01 19:11:25 graaff Exp $
+
+  01 Nov 2010; Hans de Graaff <graaff@gentoo.org> -net-sftp-2.0.4-r1.ebuild,
+  net-sftp-2.0.5.ebuild:
+  Add missing dependency on dev-ruby/mocha fr FEATURES="test", fixing bug
+  342815.
 
 *net-sftp-2.0.5 (25 Aug 2010)
 

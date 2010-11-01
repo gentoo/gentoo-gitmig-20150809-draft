@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/net-sftp-2.0.5.ebuild,v 1.1 2010/08/25 05:12:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/net-sftp-2.0.5.ebuild,v 1.2 2010/11/01 19:11:25 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -27,4 +27,5 @@ ruby_add_bdepend "
 		dev-ruby/echoe
 		virtual/ruby-test-unit
 		!dev-ruby/test-unit:2
+		dev-ruby/mocha
 	)"
