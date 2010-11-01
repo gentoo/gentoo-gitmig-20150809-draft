@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.29 2010/10/31 16:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.30 2010/11/01 22:57:56 halcy0n Exp $
+
+# Mark Loeser <halcy0n@gentoo.org> (01 Nov 2010)
+# net-libs/webkit-gtk is not stable
+=net-news/liferea-1.4* webkit
 
 # Mark Loeser <halcy0n@gentoo.org> (25 Oct 2010)
 # Requires a stable kdelibs
