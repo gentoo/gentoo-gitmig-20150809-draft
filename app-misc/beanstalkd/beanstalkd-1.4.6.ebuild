@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.4.6.ebuild,v 1.7 2010/08/17 17:19:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.4.6.ebuild,v 1.8 2010/11/01 17:46:59 halcy0n Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://xph.us/dist/beanstalkd/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc ~ppc64 x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~mips x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos"
 
 RDEPEND="dev-libs/libevent"
 DEPEND="${RDEPEND}
