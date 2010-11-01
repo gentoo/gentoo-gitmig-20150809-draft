@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xmag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmag/ChangeLog,v 1.39 2010/01/23 19:12:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmag/ChangeLog,v 1.40 2010/11/01 15:27:04 scarabeus Exp $
+
+*xmag-1.0.4 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xmag-1.0.4.ebuild:
+  Version bump
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xmag-1.0.2-r1.ebuild:

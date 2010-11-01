@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xgc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.23 2010/08/19 00:01:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.24 2010/11/01 15:20:09 scarabeus Exp $
+
+*xgc-1.0.3 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xgc-1.0.3.ebuild:
+  Version bump
 
   19 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> xgc-1.0.1-r1.ebuild:
   Works on AMD64.
