@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.3 2010/08/16 16:37:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.4 2010/11/01 20:35:22 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,8 +29,17 @@ src_test() {
 	cd test
 
 	testing() {
-		"$(PYTHON)" testlex.py || return 1
-		"$(PYTHON)" testyacc.py || return 1
+		local exit_status="0" test
+
+		for test in testlex.py testyacc.py; do
+			einfo "Running ${test}..."
+			if ! "$(PYTHON)" testlex.py; then
+				ewarn "${test} failed with $(python_get_implementation) $(python_get_version)"
+				exit_status="1"
+			fi
+		done
+
+		return "${exit_status}"
 	}
 	python_execute_function testing
 
@@ -44,6 +53,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r example
+		doins -r example || die "doins failed"
 	fi
 }
