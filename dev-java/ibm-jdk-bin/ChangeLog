@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.231 2010/10/05 20:28:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.232 2010/11/01 21:25:08 caster Exp $
+
+*ibm-jdk-bin-1.6.0.8_p1-r1 (01 Nov 2010)
+
+  01 Nov 2010; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.5.0.11_p1.ebuild, -ibm-jdk-bin-1.6.0.7.ebuild,
+  -ibm-jdk-bin-1.6.0.8.ebuild, +ibm-jdk-bin-1.6.0.8_p1-r1.ebuild:
+  Revbump to add sandbox.d file to suppress sandbox violations of
+  /proc/self/coredump_filter when ibm-jdk-bin is used to build a package.
+  Fixes bug #321695.
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org>
   ibm-jdk-bin-1.5.0.12_p1.ebuild, ibm-jdk-bin-1.6.0.8_p1.ebuild:

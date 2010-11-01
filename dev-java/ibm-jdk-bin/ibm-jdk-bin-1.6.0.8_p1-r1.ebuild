@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.7.ebuild,v 1.4 2009/12/31 18:16:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.8_p1-r1.ebuild,v 1.1 2010/11/01 21:25:08 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -8,9 +8,22 @@ JDK_RELEASE=$(get_version_component_range 2-3)
 JAVACOMM_RELEASE=$(get_version_component_range 3)
 SERVICE_RELEASE=$(get_version_component_range 4)
 SERVICE_RELEASE_LINK="${SERVICE_RELEASE}"
-TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
+
+# versions ending with _pX translate to .X in distfile and fpX in SRC_URI
+if [[ $(get_version_component_count) == 5 ]]; then
+	FP_VERSION="$(get_version_component_range 5)"
+	FP_VERSION="${FP_VERSION#p}"
+	FP_WEB="-FP${FP_VERSION}"
+	FP_LINK="fp${FP_VERSION}"
+	TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.${FP_VERSION}"
+else
+	FP_WEB=""
+	FP_LINK=""
+	TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
+fi
+
 #JAVACOMM_PV="3.${JAVACOMM_RELEASE}-${SERVICE_RELEASE}.0"
-# looks like they didn't bump javacomm
+# looks like they don't bump javacomm in service releases anymore
 JAVACOMM_PV_ORIG="3.${JAVACOMM_RELEASE}-0.0"
 JAVACOMM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 
@@ -60,7 +73,7 @@ elif use ppc64; then
 	LINK_ARCH="ipseries64"
 fi
 
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}_6sr${SERVICE_RELEASE}&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}_6sr${SERVICE_RELEASE}${FP_LINK}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.6"
 DESCRIPTION="IBM Java SE Development Kit"
@@ -169,7 +182,7 @@ pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
+	einfo "Under Java SE 6, download SR${SERVICE_RELEASE}${FP_WEB} for your arch:"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
 		einfo "Also download ${JAVACOMM_DIST_ORIG}"
@@ -182,7 +195,7 @@ pkg_nofetch() {
 	einfo "Place the file(s) in: ${DISTDIR}"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE}${FP_WEB} is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."
@@ -259,4 +272,8 @@ src_install() {
 	fi
 
 	java-vm_revdep-mask
+
+	# bug #321695
+	dodir /etc/sandbox.d
+	echo 'SANDBOX_PREDICT="/proc/self/coredump_filter"' > "${D}/etc/sandbox.d/20${VMHANDLE}"
 }
