@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/psybnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.16 2010/10/10 18:30:09 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.17 2010/11/01 00:15:24 hwoarang Exp $
+
+  01 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  files/ldflags-fix.patch:
+  Apply correct patch. Thanks to Nathan Phillip Brink (ohnobinki)
+  <ohnobinki@ohnopublishing.net>. Bug #343139
 
   10 Oct 2010; <gurligebis@gentoo.org> psybnc-2.3.2.9-r2.ebuild,
   +files/ldflags-fix.patch:

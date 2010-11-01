@@ -7,6 +7,6 @@ diff -aurp a/tools/autoconf.c b/tools/autoconf.c
      fprintf(makefile,"all:	$(OBJS)\n");
 -    fprintf(makefile,"	$(CC) -o $(TARGET) $(CFLAGS) $(OBJS) $(LIBS)\n");
 +    fprintf(makefile,"	$(CC) -o $(TARGET) $(CFLAGS) $(LDFLAGS) $(OBJS) $(LIBS)\n");
+     fprintf(makefile,"	@strip $(TARGET)\n");
      if(ssl==0)
      {
- 	if(!fexists("key/psybnc.cert.pem")) /* only create, if not exist */
