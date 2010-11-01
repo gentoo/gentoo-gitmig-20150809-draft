@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.1-r1.ebuild,v 1.1 2010/10/31 11:48:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.ebuild,v 1.1 2010/11/01 11:41:57 scarabeus Exp $
 
 EAPI=3
 # They generate the configure.ac with wrong version of util-macros
