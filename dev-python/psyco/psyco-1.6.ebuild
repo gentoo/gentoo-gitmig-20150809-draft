@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.6.ebuild,v 1.3 2010/10/25 11:34:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.6.ebuild,v 1.4 2010/11/01 12:30:46 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2::2.6"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/psyco/${P}-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~x86-linux"
+KEYWORDS="x86 ~x86-linux"
 IUSE="examples"
 
 DEPEND=""
