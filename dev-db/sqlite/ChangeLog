@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.354 2010/10/31 09:27:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.355 2010/11/01 19:38:59 arfrever Exp $
+
+  01 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlite-3.7.3.ebuild, +files/sqlite-3.7.3-icu_tests.patch:
+  Fix tests with USE="icu" (bug #342469).
 
 *sqlite-3.7.3 (31 Oct 2010)
 

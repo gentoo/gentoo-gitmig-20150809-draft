@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.3.ebuild,v 1.1 2010/10/31 09:27:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.3.ebuild,v 1.2 2010/11/01 19:38:59 arfrever Exp $
 
 EAPI="3"
 
@@ -32,13 +32,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )"
 
 src_prepare() {
-	if use icu; then
-		rm -f test/like.test
-	fi
-
 	if use tcl || use test; then
 		epatch "${FILESDIR}/${PN}-3.6.22-interix-fixes.patch"
 		epatch "${FILESDIR}/${PN}-3.6.22-dlopen.patch"  # bug 300836
+		epatch "${FILESDIR}/${P}-icu_tests.patch"
 		eautoreconf  # dlopen.patch patches configure.ac
 	else
 		epatch "${FILESDIR}/${PN}-3.6.22-interix-fixes-amalgamation.patch"
