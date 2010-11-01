@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.11.ebuild,v 1.8 2008/10/04 14:51:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-2.11.ebuild,v 1.9 2010/11/01 18:08:53 mr_bones_ Exp $
 
+EAPI=2
 DESCRIPTION="Server statics collector supporting many FPS games"
 HOMEPAGE="http://www.qstat.org/"
 SRC_URI="mirror://sourceforge/qstat/${P}.tar.gz"
@@ -13,13 +14,12 @@ IUSE="debug"
 
 DEPEND="!sys-cluster/torque"
 
-src_compile() {
-	econf $(use_enable debug) || die
-	emake || die "emake failed"
+src_configure() {
+	econf $(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dosym qstat /usr/bin/quakestat
 
 	dodoc CHANGES.txt COMPILE.txt template/README.txt

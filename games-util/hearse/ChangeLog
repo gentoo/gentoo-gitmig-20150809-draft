@@ -1,6 +1,9 @@
 # ChangeLog for games-util/hearse
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.9 2007/02/08 22:43:41 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.10 2010/11/01 18:12:49 mr_bones_ Exp $
+
+  01 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> hearse-1.5.ebuild:
+  EAPI=2
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

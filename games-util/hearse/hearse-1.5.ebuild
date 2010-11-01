@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.5.ebuild,v 1.3 2005/06/05 11:40:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.5.ebuild,v 1.4 2010/11/01 18:12:49 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="exchange Nethack bones files with other players"
@@ -13,31 +14,24 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND=">=games-roguelike/nethack-3.4.1
-	>=dev-lang/perl-5.8.0
-	dev-perl/libwww-perl
-	app-arch/bzip2"
 DEPEND=">=dev-lang/perl-5.8.0
 	dev-perl/libwww-perl
 	app-arch/bzip2"
+RDEPEND=">=games-roguelike/nethack-3.4.1
+	${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# patch because Gentoo's nethack ebuild uses bz2 and not gz for bones
+src_prepare() {
+	# patch because Gentoo's nethack ebuild
+	# uses bz2 and not gz for bones.
 	sed -i \
 		-e "s:gzip :bzip2 :" \
-		-e "s:.gz:.bz2:" hearse \
-			|| die "sed failed"
+		-e "s:.gz:.bz2:" hearse || die
 	sed -i \
 		-e 's:gzip :bzip2 :' \
-		-e "s:gz|z|Z:bz2:" bones-info \
-			|| die "sed failed"
+		-e "s:gz|z|Z:bz2:" bones-info || die
 }
-src_compile() {
-	perl Makefile.PL || die "perl failed"
-	emake || die "emake failed"
+src_configure() {
+	perl Makefile.PL || die
 }
 
 src_install() {
