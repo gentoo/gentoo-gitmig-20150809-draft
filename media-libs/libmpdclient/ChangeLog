@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.16 2010/09/19 15:38:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.17 2010/11/01 02:00:57 xmw Exp $
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> libmpdclient-2.1.ebuild:
+  arm stable
 
   19 Sep 2010; Michael Weber <xmw@gentoo.org> libmpdclient-2.1.ebuild:
   Added ~arm keyword
