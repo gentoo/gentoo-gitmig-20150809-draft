@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.21 2010/10/28 15:17:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.22 2010/11/01 15:23:36 fauli Exp $
+
+  01 Nov 2010; Christian Faulhammer <fauli@gentoo.org> xvkbd-3.2.ebuild:
+  stable x86, bug 342831
 
   28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> xvkbd-3.2.ebuild:
   Stable on amd64 wrt bug #342831
