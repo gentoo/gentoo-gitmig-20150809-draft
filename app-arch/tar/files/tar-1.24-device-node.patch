@@ -1,0 +1,23 @@
+From 3913675640f65bb4774429d369681957b528996e Mon Sep 17 00:00:00 2001
+From: Sergey Poznyakoff <gray@gnu.org.ua>
+Date: Mon, 01 Nov 2010 13:04:41 +0000
+Subject: Fix extraction of device nodes.
+
+* src/extract.c (extract_node): Do not mask out node type.
+The bug was introduced in commit ea964cce.
+---
+diff --git a/src/extract.c b/src/extract.c
+index 44233b9..6711f87 100644
+--- a/src/extract.c
++++ b/src/extract.c
+@@ -1205,7 +1205,7 @@ static int
+ extract_node (char *file_name, int typeflag)
+ {
+   bool interdir_made = false;
+-  mode_t mode = (current_stat_info.stat.st_mode & MODE_RWX
++  mode_t mode = (current_stat_info.stat.st_mode & (MODE_RWX | S_IFBLK | S_IFCHR)
+ 		 & ~ (0 < same_owner_option ? S_IRWXG | S_IRWXO : 0));
+ 
+   while (mknodat (chdir_fd, file_name, mode, current_stat_info.stat.st_rdev)
+--
+cgit v0.8.3.2
