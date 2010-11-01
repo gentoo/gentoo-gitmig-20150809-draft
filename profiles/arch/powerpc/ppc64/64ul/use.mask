@@ -13,6 +13,10 @@ beagle
 networkmanager
 ocamlopt
 
+# not tested on ppc64
+celt
+capi
+
 # dietlibc
 diet
 
