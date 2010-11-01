@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-SSH-AuthorizedKeysFile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.4 2010/10/27 14:40:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.5 2010/11/01 12:58:24 phajdan.jr Exp $
+
+  01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Net-SSH-AuthorizedKeysFile-0.13.ebuild:
+  x86 stable wrt bug #342765
 
   27 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   Net-SSH-AuthorizedKeysFile-0.13.ebuild:
