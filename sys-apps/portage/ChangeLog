@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.761 2010/10/31 18:48:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.762 2010/11/01 16:33:47 zmedico Exp $
+
+  01 Nov 2010; Zac Medico <zmedico@gentoo.org> portage-2.2_rc67.ebuild,
+  portage-2.2.0_alpha1.ebuild, portage-2.2.0_alpha2.ebuild,
+  portage-2.2.0_alpha3.ebuild:
+  Drop keywords from portage-2.2*, as a substitute for masking via
+  package.mask. This alleviates issues for cases like bug #336692 in which
+  people want to use profiles to unmask portage-2.2.
 
 *portage-2.2.0_alpha3 (31 Oct 2010)
 
