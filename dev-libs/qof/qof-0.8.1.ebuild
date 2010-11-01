@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.1.ebuild,v 1.1 2010/01/04 13:31:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.1.ebuild,v 1.2 2010/11/01 14:19:04 fauli Exp $
 
 EAPI=2
 
@@ -15,11 +15,10 @@ SLOT="2"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc nls"
+IUSE="doc nls sqlite"
 
-RDEPEND="gnome-extra/libgda:3
-	dev-libs/libxml2
-	>=dev-db/sqlite-2.8.0:0"
+RDEPEND="dev-libs/libxml2
+	sqlite? ( >=dev-db/sqlite-2.8.0:0 )"
 DEPEND="${DEPEND}
 	dev-util/pkgconfig
 	!dev-libs/qof:0
@@ -33,8 +32,8 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable doc html-docs) --disable-error-on-warning \
-		$(use_enable nls) --enable-sqlite  $(use_enable doc doxygen) \
-		$(use_enable doc latex-docs) --enable-gdabackend --enable-gdasql \
+		$(use_enable nls) $(use_enable sqlite)  $(use_enable doc doxygen) \
+		$(use_enable doc latex-docs) --disable-gdabackend --disable-gdasql \
 		--disable-deprecated-glib --disable-dot \
 		|| die
 }
