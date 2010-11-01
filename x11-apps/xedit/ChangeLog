@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xedit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.30 2009/07/07 01:34:59 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.31 2010/11/01 15:13:46 scarabeus Exp $
+
+*xedit-1.2.0 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xedit-1.2.0.ebuild:
+  Version bump
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> xedit-1.1.2.ebuild:
   Stable for HPPA too.
