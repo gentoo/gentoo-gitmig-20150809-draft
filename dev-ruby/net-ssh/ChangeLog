@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.77 2010/09/30 01:43:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.78 2010/11/01 19:17:57 graaff Exp $
+
+  01 Nov 2010; Hans de Graaff <graaff@gentoo.org> -net-ssh-2.0.15.ebuild:
+  Remove old version.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> net-ssh-2.0.23.ebuild:
   Marking net-ssh-2.0.23 ppc64 for bug 333951
