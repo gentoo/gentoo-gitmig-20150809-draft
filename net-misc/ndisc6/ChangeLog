@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ndisc6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.3 2010/10/07 09:53:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.4 2010/11/01 03:44:51 xmw Exp $
+
+*ndisc6-0.9.9-r1 (01 Nov 2010)
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> +ndisc6-0.9.9-r1.ebuild,
+  +files/rdnssd.rc-1, +files/resolvconf-1:
+  Revbump to fix wrong file contents. Thanks to Maxime de Roucy
+  <maxime.deroucy@gmail.com> on bug #343431 for the report.
 
   07 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ndisc6-0.9.9.ebuild:
   x86 stable wrt bug #339337
