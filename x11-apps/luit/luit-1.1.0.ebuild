@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/luit-1.1.0.ebuild,v 1.1 2010/10/08 11:16:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/luit-1.1.0.ebuild,v 1.2 2010/11/01 12:46:28 scarabeus Exp $
 
 EAPI=3
-XORG_STATIC=no
+
 inherit xorg-2
 
 DESCRIPTION="Locale and ISO 2022 support for Unicode terminals"

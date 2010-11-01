@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/xf86dga-1.0.3.ebuild,v 1.1 2010/11/01 12:26:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/xf86dga-1.0.3.ebuild,v 1.2 2010/11/01 12:46:32 scarabeus Exp $
 
 EAPI=3
-XORG_STATIC=no
+
 inherit xorg-2
 
 DESCRIPTION="test program for the XFree86-DGA extension"

@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/bitmap-1.0.5.ebuild,v 1.1 2010/10/08 11:23:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/bitmap-1.0.5.ebuild,v 1.2 2010/11/01 12:46:31 scarabeus Exp $
 
 EAPI=3
-XORG_STATIC=no
+
 inherit xorg-2
 
 DESCRIPTION="X.Org bitmap application"
