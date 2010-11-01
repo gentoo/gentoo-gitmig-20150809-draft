@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.20 2010/10/29 19:26:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.21 2010/11/01 12:26:06 phajdan.jr Exp $
+
+  01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libcap-ng-0.6.4.ebuild:
+  x86 stable wrt bug #341619
 
   29 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libcap-ng-0.6.4.ebuild:
