@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.69 2010/07/28 15:41:10 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.70 2010/11/01 19:07:40 graaff Exp $
+
+  01 Nov 2010; Hans de Graaff <graaff@gentoo.org>
+  ruby-gettext-2.1.0_p20100728-r1.ebuild:
+  Fix building with USE=doc due to allison template generating illegal HTML.
 
 *ruby-gettext-2.1.0_p20100728-r1 (28 Jul 2010)
 
