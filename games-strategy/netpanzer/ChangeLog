@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/netpanzer
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.30 2009/03/09 16:52:28 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.31 2010/11/01 18:31:20 mr_bones_ Exp $
+
+  01 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  netpanzer-0.8.2.ebuild:
+  EAPI=2
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org> netpanzer-0.8.2.ebuild:
   sparc/x86 stable wrt #245295

@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.6 2009/03/09 16:52:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.7 2010/11/01 18:31:20 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DATAVERSION="0.8"
@@ -23,18 +24,18 @@ RDEPEND="dedicated? ( app-misc/screen )
 DEPEND="${RDEPEND}
 	dev-util/ftjam"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
+
+src_configure() {
+	egamesconf || die
+	cd "${WORKDIR}"/${PN}-data-${DATAVERSION} \
+		&& egamesconf || die
 }
 
 src_compile() {
-	egamesconf || die
 	jam -q || die "jam failed"
 
 	cd "${WORKDIR}"/${PN}-data-${DATAVERSION}
-	egamesconf || die
 	jam -q || die "jam failed (on data package)"
 }
 
