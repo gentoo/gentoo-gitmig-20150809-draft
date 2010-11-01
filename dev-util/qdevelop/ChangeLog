@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/qdevelop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.9 2009/11/16 15:22:55 spatz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.10 2010/11/01 13:34:40 wired Exp $
+
+*qdevelop-0.28 (01 Nov 2010)
+
+  01 Nov 2010; Alex Alexander <wired@gentoo.org> -qdevelop-0.26.1.ebuild,
+  -qdevelop-0.27.4.ebuild, +qdevelop-0.28.ebuild,
+  +files/qdevelop-0.28-qt-4.7_fix.patch, metadata.xml:
+  bumped to version 0.28, switched to cmake, added Qt-4.7 build fix, added
+  plugins USE flag, removed old versions. bug #338489
 
 *qdevelop-0.27.4 (16 Nov 2009)
 

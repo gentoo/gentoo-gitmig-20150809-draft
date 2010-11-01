@@ -6,4 +6,7 @@
     <email>jokey@gentoo.org</email>
     <name>Markus Ullmann</name>
 </maintainer>
+<use>
+	<flag name="plugins">Build and install additional plugins</flag>
+</use>
 </pkgmetadata>
