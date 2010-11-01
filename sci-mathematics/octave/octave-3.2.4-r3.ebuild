@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.1 2010/10/03 23:45:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.2 2010/11/01 17:19:54 bicatali Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -11,22 +11,23 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="curl doc emacs fltk fftw opengl readline sparse test xemacs zlib"
+IUSE="curl doc emacs fltk fftw readline sparse test xemacs zlib"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="dev-libs/libpcre
 	media-gfx/graphicsmagick[cxx]
+	media-libs/ftgl
 	media-libs/qhull
 	sci-libs/qrupdate
 	sci-mathematics/glpk
 	sci-visualization/gnuplot
 	sys-libs/ncurses
 	virtual/lapack
+	virtual/opengl
 	x11-libs/libX11
 	curl? ( net-misc/curl )
-	fltk? ( x11-libs/fltk:1.1[opengl?] )
+	fltk? ( x11-libs/fltk:1.1[opengl] )
 	fftw? ( sci-libs/fftw:3.0 )
-	opengl? ( virtual/opengl media-libs/ftgl )
 	sparse? ( sci-libs/arpack
 		sci-libs/camd
 		sci-libs/ccolamd
@@ -75,7 +76,6 @@ src_configure() {
 		$(use_with curl) \
 		$(use_with fftw) \
 		$(use_with fltk) \
-		$(use_with opengl framework-opengl) \
 		$(use_with sparse arpack) \
 		$(use_with sparse umfpack) \
 		$(use_with sparse colamd) \
