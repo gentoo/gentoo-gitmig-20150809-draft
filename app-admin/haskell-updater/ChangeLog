@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.15 2010/10/19 17:54:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.16 2010/11/01 22:13:03 slyfox Exp $
+
+  01 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-updater-1.1.0.0.ebuild:
+  sparc stable (bug #338652)
 
   19 Oct 2010; Thomas Kahle <tomka@gentoo.org>
   haskell-updater-1.1.0.0.ebuild:
