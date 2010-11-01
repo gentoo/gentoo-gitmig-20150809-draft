@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.763 2010/10/10 19:43:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.764 2010/11/01 13:50:53 scarabeus Exp $
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild,
+  metadata.xml:
+  Fix mga videocard check per bug #341171. Add missing options per bug #334793.
 
   10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild,
   metadata.xml:
