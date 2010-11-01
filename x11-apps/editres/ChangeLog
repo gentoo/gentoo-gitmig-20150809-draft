@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/editres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.39 2010/01/23 18:32:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.40 2010/11/01 14:39:10 scarabeus Exp $
+
+*editres-1.0.5 (01 Nov 2010)
+
+  01 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +editres-1.0.5.ebuild:
+  Version bump
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -editres-1.0.3-r1.ebuild:
