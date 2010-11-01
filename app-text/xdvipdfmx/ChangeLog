@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.33 2010/10/25 12:01:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.34 2010/11/01 22:21:46 maekke Exp $
+
+  01 Nov 2010; Markus Meier <maekke@gentoo.org>
+  xdvipdfmx-0.7.8_p20100722.ebuild:
+  add ~arm, bug #342513
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   xdvipdfmx-0.7.8_p20100722.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipsk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.4 2010/10/26 13:34:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.5 2010/11/01 22:24:27 maekke Exp $
+
+  01 Nov 2010; Markus Meier <maekke@gentoo.org>
+  dvipsk-5.99_p20100722.ebuild:
+  add ~arm, bug #342513
 
   26 Oct 2010; Alexis Ballier <aballier@gentoo.org>
   dvipsk-5.99_p20100722.ebuild:
