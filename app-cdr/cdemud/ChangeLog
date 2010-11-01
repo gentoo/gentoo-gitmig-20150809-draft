@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemud
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.15 2010/10/19 14:32:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.16 2010/11/01 10:34:59 pva Exp $
+
+  01 Nov 2010; Peter Volkov <pva@gentoo.org> cdemud-1.3.0.ebuild:
+  Unify HOMEPAGE with {g,}cdemu
 
 *cdemud-1.3.0 (19 Oct 2010)
 

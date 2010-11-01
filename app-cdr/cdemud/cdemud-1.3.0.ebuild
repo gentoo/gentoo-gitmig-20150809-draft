@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.3.0.ebuild,v 1.1 2010/10/19 14:32:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.3.0.ebuild,v 1.2 2010/11/01 10:34:59 pva Exp $
 
 EAPI="2"
 
 DESCRIPTION="Daemon of the cdemu cd image mounting suite"
-HOMEPAGE="http://www.cdemu.org"
+HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.gz"
 
 LICENSE="GPL-2"
