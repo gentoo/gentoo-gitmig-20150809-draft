@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.30.1.ebuild,v 1.10 2010/10/17 14:55:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.30.1.ebuild,v 1.11 2010/11/01 12:21:41 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ pkg_setup() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	emake check || die "emake check failed"
+	emake check || die "emake check failed"
 }
 
 pkg_preinst() {
