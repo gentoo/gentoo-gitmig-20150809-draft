@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.3 2010/10/26 20:50:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.4 2010/11/01 12:52:58 phajdan.jr Exp $
 
 EAPI=2
 inherit multilib rpm toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://download.opensuse.org/source/factory/repo/oss/suse/src/${P}-9.8.
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RESTRICT="test" #339656
