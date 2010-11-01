@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.278 2010/11/01 11:56:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.279 2010/11/01 12:23:03 klausman Exp $
+
+  01 Nov 2010; Tobias Klausmann <klausman@gentoo.org> pam-1.1.3.ebuild:
+  Stable on alpha, bug #343399
 
   01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pam-1.1.3.ebuild:
   x86 stable wrt security bug #343399
