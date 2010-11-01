@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.196 2010/10/19 17:58:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.197 2010/11/01 22:14:46 slyfox Exp $
+
+  01 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild:
+  sparc stable (bug #338652)
 
   19 Oct 2010; Thomas Kahle <tomka@gentoo.org> ghc-6.12.3.ebuild:
   x86 stable per bug 338652
