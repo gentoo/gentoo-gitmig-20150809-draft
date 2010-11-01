@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.1 2010/06/18 13:10:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.2 2010/11/01 12:30:24 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -31,6 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.14
 			>=dev-python/pygtksourceview-2.2.0
 		)
 		terminal? (
+			dev-python/gconf-python
 			>=x11-libs/vte-0.19.4[python]
 		)"
 DEPEND="${RDEPEND}
