@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.74 2010/09/19 15:03:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.75 2010/11/01 02:02:40 xmw Exp $
+
+  01 Nov 2010; Michael Weber <xmw@gentoo.org> mpc-0.19.ebuild:
+  arm stable
 
   19 Sep 2010; Michael Weber <xmw@gentoo.org> mpc-0.19.ebuild:
   Added ~arm keyword
