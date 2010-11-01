@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.0.ebuild,v 1.2 2010/10/10 11:57:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.0.ebuild,v 1.3 2010/11/01 12:18:13 eva Exp $
 
 EAPI="3"
 
@@ -82,7 +82,7 @@ pkg_setup() {
 		$(use_with freetds tds /usr)
 		$(use_with gnome-keyring)
 		$(use_with gtk ui)
-		$(use_enable http libsoup)
+		$(use_with http libsoup)
 		$(use_enable introspection)
 		$(use_with java java $JAVA_HOME)
 		$(use_enable json)

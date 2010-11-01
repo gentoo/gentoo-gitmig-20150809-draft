@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.152 2010/10/28 16:49:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.153 2010/11/01 12:18:13 eva Exp $
+
+  01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> -libgda-4.1.0.ebuild,
+  libgda-4.2.0.ebuild:
+  Remove old revision. Fix http use flag handling, bug #343613.
 
   28 Oct 2010; Jeroen Roovers <jer@gentoo.org> libgda-4.1.4-r1.ebuild:
   Stable for PPC (bug #327803).
