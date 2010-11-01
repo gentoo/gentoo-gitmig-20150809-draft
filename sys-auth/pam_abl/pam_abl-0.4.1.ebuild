@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.4.1.ebuild,v 1.1 2010/10/31 19:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.4.1.ebuild,v 1.2 2010/11/01 10:38:58 flameeyes Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dopamsecurity . conf/pam_abl.conf
 
-	keepdir /var/lib/abl
+	keepdir /var/db/abl
 }
 
 pkg_postinst() {

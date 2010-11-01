@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_abl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/ChangeLog,v 1.10 2010/10/31 19:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/ChangeLog,v 1.11 2010/11/01 10:38:58 flameeyes Exp $
+
+  01 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  pam_abl-0.4.1.ebuild:
+  Create the correct directory; upstream moved from /var/lib to /var/db.
 
 *pam_abl-0.4.1 (31 Oct 2010)
 
