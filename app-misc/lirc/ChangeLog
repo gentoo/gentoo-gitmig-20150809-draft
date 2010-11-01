@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.216 2010/05/21 02:47:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.217 2010/11/01 09:00:14 fauli Exp $
+
+  01 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  lirc-0.8.3_pre1.ebuild, lirc-0.8.3-r2.ebuild, lirc-0.8.4.ebuild,
+  lirc-0.8.4a.ebuild, lirc-0.8.5.ebuild, lirc-0.8.6-r3.ebuild,
+  lirc-0.8.7_pre1.ebuild:
+  drop ppc64 for bug 275872
 
 *lirc-0.8.7_pre1 (21 May 2010)
 
