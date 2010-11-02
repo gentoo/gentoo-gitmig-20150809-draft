@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>ruby</herd>
 	<maintainer>
-		<email>neysx@gentoo.org</email>
-		<name>Xavier Neys</name>
-	</maintainer>
-	<maintainer>
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
