@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.183 2010/11/01 15:51:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.184 2010/11/02 23:27:18 ssuominen Exp $
+
+*xinit-1.3.0-r1 (02 Nov 2010)
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xinit-1.3.0-r1.ebuild, files/xserverrc:
+  Fix default xserverrc to accept parameters wrt #343911 by "Faustus".
 
 *xinit-1.3.0 (01 Nov 2010)
 
