@@ -3,9 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 	<use>
-		<flag name='vim'>Install vim plugin allowing to paste from vim by :Wklej</flag>
+		<flag name='vim'>Install the vim plugin allowing to paste
+			through ':Wklej'.</flag>
 	</use>
 </pkgmetadata>

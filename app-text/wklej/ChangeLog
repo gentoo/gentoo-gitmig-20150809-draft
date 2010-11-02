@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.24 2010/10/01 15:47:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.25 2010/11/02 21:14:16 mgorny Exp $
+
+*wklej-0.2.1 (02 Nov 2010)
+
+  02 Nov 2010; Michał Górny <mgorny@gentoo.org> +wklej-0.2.1.ebuild,
+  -files/wklejrc.txt, metadata.xml:
+  Version bump per bug #339018. General metadata cleanup, and removed
+  obsolete AUX file.
 
   01 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org> -wklej-0.1.1.ebuild,
   -wklej-0.1.2.ebuild, -wklej-0.1.3.ebuild, -wklej-0.1.4.ebuild,

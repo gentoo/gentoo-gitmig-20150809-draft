@@ -1,5 +1,0 @@
-# Sample of wklejrc
-# To get your SALT_KEY go to http://wklej.org/salt
-
-[DEFAULT]
-KEY = SOME_SALT_KEY
