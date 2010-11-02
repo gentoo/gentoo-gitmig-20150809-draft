@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.72 2010/10/21 15:01:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.73 2010/11/02 02:49:27 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  gnome-control-center-2.32.0.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gnome-control-center-2.24.0.1-fbsd.patch,
