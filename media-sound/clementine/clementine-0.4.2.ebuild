@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.2.ebuild,v 1.4 2010/10/05 21:18:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.2.ebuild,v 1.5 2010/11/02 20:59:29 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils flag-o-matic
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
-HOMEPAGE="http://code.google.com/p/clementine-player/"
+HOMEPAGE="http://www.clementine-player.org/ http://code.google.com/p/clementine-player/"
 SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
