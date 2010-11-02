@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.30 2009/07/26 01:23:22 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.31 2010/11/02 16:31:05 tomka Exp $
+
+  02 Nov 2010; Thomas Kahle <tomka@gentoo.org> xaos-3.5.ebuild:
+  adding missing dep for USE=doc, fixes bug 342531
 
 *xaos-3.5 (26 Jul 2009)
 
