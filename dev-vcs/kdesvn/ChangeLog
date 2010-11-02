@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/kdesvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.13 2010/10/04 01:11:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.14 2010/11/02 16:04:05 tomka Exp $
+
+  02 Nov 2010; Thomas Kahle <tomka@gentoo.org> kdesvn-1.5.5.ebuild:
+  x86 stable per bug #338887
 
   04 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org> kdesvn-1.5.5.ebuild:
   ru and nl linguas disabled upstream, bug 339011
