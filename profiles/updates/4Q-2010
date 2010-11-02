@@ -1,6 +1,4 @@
-slotmove =gnome-base/gnome-desktop-2.28.2-r1 0 2
-slotmove =gnome-base/gnome-desktop-2.30.2 0 2
-slotmove =gnome-base/gnome-desktop-2.32.0 0 2
+slotmove gnome-base/gnome-desktop 0 2
 slotmove =media-libs/libchamplain-0.8.0 0.6 0.8
 move kde-misc/dikt app-dicts/dikt
 move app-admin/squid-cronolog app-admin/fifo-cronolog
