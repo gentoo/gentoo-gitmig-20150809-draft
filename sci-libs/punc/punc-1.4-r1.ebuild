@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4.ebuild,v 1.2 2010/11/02 08:37:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.1 2010/11/02 09:16:28 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,8 @@ src_prepare() {
 	rm -rf src/{amd,blas,lapack,arpack,superlu,umfpack}
 	epatch \
 		"${FILESDIR}"/${PV}-linking.patch \
-		"${FILESDIR}"/${PV}-doc.patch
+		"${FILESDIR}"/${PV}-doc.patch \
+		"${FILESDIR}"/${PV}-header.patch
 
 	cp tools/tests/pmg/*.f src/pmg/ -f
 	cp tools/tests/pmg/*.c src/pmg/ -f

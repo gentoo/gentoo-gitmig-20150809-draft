@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/mc-1.4.ebuild,v 1.1 2010/11/01 14:52:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/mc-1.4.ebuild,v 1.2 2010/11/02 09:15:35 jlec Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-IUSE="debug"
+IUSE="debug doc"
 
 RDEPEND="
 	dev-libs/maloc
@@ -23,7 +23,11 @@ RDEPEND="
 	sci-libs/punc
 	sci-libs/superlu
 	sci-libs/umfpack"
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	doc? (
+		media-gfx/graphviz
+		app-doc/doxygen )"
 
 S="${WORKDIR}"/${PN}
 
@@ -31,7 +35,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-superlu.patch \
 		"${FILESDIR}"/${PV}-overflow.patch \
-		"${FILESDIR}"/${PV}-multilib.patch
+		"${FILESDIR}"/${PV}-multilib.patch \
+		"${FILESDIR}"/${PV}-doc.patch
 	sed \
 		-e 's:AMD_order:amd_order:g' \
 		-e 's:UMFPACK_numeric:umfpack_di_numeric:g' \
@@ -43,6 +48,9 @@ src_prepare() {
 src_configure() {
 	local fetk_include
 	local fetk_lib
+	local myconf
+
+	use doc || myconf="${myconf} --with-doxygen= --with-dot="
 
 	fetk_include="${EPREFIX}"/usr/include
 	fetk_lib="${EPREFIX}"/usr/$(get_libdir)
@@ -60,9 +68,11 @@ src_configure() {
 	export FETK_PMG_LIBRARY="${fetk_lib}"
 
 	econf \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable debug vdebug) \
 		--disable-triplet \
-		--enable-shared
+		--enable-shared \
+		${myconf}
 }
 
 src_install() {
