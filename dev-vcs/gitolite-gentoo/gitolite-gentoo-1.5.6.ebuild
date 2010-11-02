@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6.ebuild,v 1.1 2010/11/02 21:08:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6.ebuild,v 1.2 2010/11/02 21:11:43 idl0r Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ src_prepare() {
 
 	rm -rf Makefile doc/COPYING contrib/{autotoc,gitweb,vim}
 
-	echo "${PF}" > conf/VERSION
+	echo "${PF}-gentoo" > conf/VERSION
 }
 
 src_install() {
