@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.4 2010/11/02 15:09:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.5 2010/11/02 15:10:38 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="gnome kde mono networkmanager perl python test webkit xulrunner"
 
 RDEPEND="

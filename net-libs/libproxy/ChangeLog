@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.43 2010/11/02 15:09:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.44 2010/11/02 15:10:38 ssuominen Exp $
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> libproxy-0.4.6.ebuild,
+  libproxy-0.4.6-r1.ebuild:
+  Rekeyword ~ppc because dev-lang/vala is now keyworded wrt #320429.
 
   02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> libproxy-0.4.6.ebuild:
   ppc64 stable wrt #343069
