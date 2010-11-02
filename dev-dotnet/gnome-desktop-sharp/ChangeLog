@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnome-desktop-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/ChangeLog,v 1.17 2010/10/15 17:14:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/ChangeLog,v 1.18 2010/11/02 02:49:05 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  gnome-desktop-sharp-2.26.0-r1.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org>
   gnome-desktop-sharp-2.26.0-r1.ebuild:
