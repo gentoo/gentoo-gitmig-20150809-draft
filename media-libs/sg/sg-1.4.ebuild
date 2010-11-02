@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.1 2010/11/01 13:59:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.2 2010/11/02 08:59:07 jlec Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-IUSE="opengl"
+IUSE="doc opengl"
 
 RDEPEND="
 	dev-libs/maloc
@@ -22,13 +22,19 @@ RDEPEND="
 		virtual/glu
 		virtual/opengl
 	)"
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	doc? (
+		media-gfx/graphviz
+		app-doc/doxygen )"
 
 S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	rm src/{gl,glu,glw} -rf
-	epatch "${FILESDIR}"/${PV}-opengl.patch
+	epatch \
+		"${FILESDIR}"/${PV}-opengl.patch \
+		"${FILESDIR}"/${PV}-doc.patch
 	eautoreconf
 }
 
@@ -50,12 +56,15 @@ src_configure() {
 	export FETK_GL_INCLUDE="${sg_include}"/GL
 	export FETK_MOTIF_INCLUDE="${sg_include}"
 
+	use doc || myconf="${myconf} --with-doxygen= --with-dot="
+
 	use opengl && myconf="${myconf} --enable-glforce --enable-gluforce --enable-glwforce"
 
 	econf \
-		${myconf} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--disable-triplet \
 		--enable-shared \
-		--disable-triplet
+		${myconf}
 }
 
 src_install() {
