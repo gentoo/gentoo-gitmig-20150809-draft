@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12144 2010/11/02 19:34:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12145 2010/11/02 19:57:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,11 +31,19 @@
 
 #--- END OF EXAMPLES ---
 
-# Markos Chandras <hwoarang@gentoo.org> (1 Nov 2010)
+# Samuli Suominen <ssuominen@gentoo.org> (02 Nov 2010)
+# acerhk fails to build with Linux >= 2.6.30 wrt #277598
+# acer_acpi is included in Linux since >= 2.6.25 wrt #208577
+# and fails parallel make too
+# Removal in 30 days
+app-laptop/acerhk
+app-laptop/acer_acpi
+
+# Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases
 net-analyzer/ncrack
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (1 Nov 2010)
+# Tomáš Chvátal <scarabeus@gentoo.org> (01 Nov 2010)
 # Useless since we don't have xfs. Remove in 30 days.
 x11-apps/xfsinfo
 
