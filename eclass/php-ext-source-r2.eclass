@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.3 2010/11/02 17:09:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.4 2010/11/02 21:46:05 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -18,7 +18,7 @@
 
 inherit flag-o-matic autotools depend.php
 
-EXPORT_FUNCTIONS src_unpack src_configure src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install
 
 # @ECLASS-VARIABLE: PHP_EXT_NAME
 # @DESCRIPTION:
@@ -92,10 +92,14 @@ php-ext-source-r2_src_unpack() {
 	local slot orig_s="$S"
 	for slot in $(php_get_slots); do
 		cp -r "${orig_s}" "${WORKDIR}/${slot}"
+	done
+}
+
+php-ext-source-r2_src_prepare() {
+	local slot orig_s="$S"
+	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
-		if [[ "${PHP_EXT_SKIP_PHPIZE}" != 'yes' ]] ; then
-			php-ext-source-r2_phpize
-		fi
+		php-ext-source-r2_phpize
 	done
 }
 
@@ -103,14 +107,16 @@ php-ext-source-r2_src_unpack() {
 # @DESCRIPTION:
 # Runs phpize and autotools in addition to the standard src_unpack
 php-ext-source-r2_phpize() {
-	# Create configure out of config.m4
-	# I wish I could run this to solve #329071, but I cannot
-	#autotools_run_tool ${PHPIZE} 
-	${PHPIZE}
-	# force run of libtoolize and regeneration of related autotools
-	# files (bug 220519)
-	rm aclocal.m4
-	eautoreconf
+	if [[ "${PHP_EXT_SKIP_PHPIZE}" != 'yes' ]] ; then
+		# Create configure out of config.m4
+		# I wish I could run this to solve #329071, but I cannot
+		#autotools_run_tool ${PHPIZE} 
+		${PHPIZE}
+		# force run of libtoolize and regeneration of related autotools
+		# files (bug 220519)
+		rm aclocal.m4
+		eautoreconf
+	fi	
 }
 
 # @FUNCTION: php-ext-source-r2_src_configure
