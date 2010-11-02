@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/visualboyadvance
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.35 2009/06/13 15:50:14 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.36 2010/11/02 14:48:59 tupone Exp $
+
+  02 Nov 2010; Tupone Alfredo <tupone@gentoo.org>
+  visualboyadvance-1.7.2-r2.ebuild,
+  +files/visualboyadvance-1.7.2-ovflfix.patch:
+  Fix overflow. Bug #339122 by flameeyes@gentoo.org
 
   13 Jun 2009; Tristan Heaven <nyhm@gentoo.org>
   visualboyadvance-1.7.2-r2.ebuild,

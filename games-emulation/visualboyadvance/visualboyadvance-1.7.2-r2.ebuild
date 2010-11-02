@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.3 2009/06/13 15:50:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.4 2010/11/02 14:48:59 tupone Exp $
+EAPI=2
 
 inherit eutils flag-o-matic games
 
@@ -29,10 +30,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/VisualBoyAdvance-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e 's:$(localedir):/usr/share/locale:' \
 		-e 's:$(datadir)/locale:/usr/share/locale:' \
@@ -51,10 +49,11 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-gcc41.patch \
 		"${WORKDIR}"/${P}-deprecatedsigc++.patch \
 		"${FILESDIR}"/${P}-uninit.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch
 }
 
-src_compile() {
+src_configure() {
 	# -O3 causes GCC to behave badly and hog memory, bug #64670.
 	replace-flags -O3 -O2
 
@@ -65,7 +64,6 @@ src_compile() {
 		$(use_enable gtk gtk 2.4) \
 		$(use_enable nls) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
