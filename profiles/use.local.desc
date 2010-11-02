@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6105 2010/11/02 18:13:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6106 2010/11/02 18:33:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2475,24 +2475,27 @@ net-analyzer/scapy:pyx - Enable dev-python/pyx support for psdump/pdfdump comman
 net-analyzer/scapy:tcpreplay - Enable net-analyzer/tcpreply support for fast packet replay
 net-analyzer/scapy:visual - Enable dev-python/visual support for 3d graphs
 net-analyzer/smokeping:speedy - Use dev-perl/SpeedyCGI instead of perl to speed up cgi scripts
-net-analyzer/snort:aruba - Enable Aruba support
-net-analyzer/snort:decoder-preprocessor-rules - 
-net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library
-net-analyzer/snort:flexresp - Enable new connection tearing (not recommended)
-net-analyzer/snort:flexresp2 - Enable new connection tearing
-net-analyzer/snort:gre - Enable GRE support
-net-analyzer/snort:inline - Enable snort-inline for accepting packets from net-firewall/iptables, via libipq, rather than net-libs/libpcap.
-net-analyzer/snort:inline-init-failopen - Enable inline-init-failopen support
-net-analyzer/snort:linux-smp-stats - Enable statistics reporting through proc on smp systems
-net-analyzer/snort:mpls - Enable support for mpls networks
-net-analyzer/snort:perfprofiling - Enable preprocessor and rule performance profiling
-net-analyzer/snort:ppm - Enable ppm support
-net-analyzer/snort:react - Enable interception and termination of offending HTTP accesses
-net-analyzer/snort:reload - Enable reloading a configuration without restarting
-net-analyzer/snort:reload-error-restart - Enable restarting on reload error
-net-analyzer/snort:targetbased - Enable targetbased support
-net-analyzer/snort:timestats - Enable TimeStats functionality
-net-analyzer/snort:zlib - Enable Http Response Decompression
+net-analyzer/snort:active-response -  Enables support for automatically sending TCP resets and ICMP unreachable messages to terminate connections. Used with inline deployments. 
+net-analyzer/snort:aruba -  Adds support for monitoring wireless traffic using a Aruba Mobility Controler. 
+net-analyzer/snort:decoder-preprocessor-rules -  Added support to provide action control (alert, drop, pass, etc) over preprocessor and decoder generated events. 
+net-analyzer/snort:dynamicplugin -  Enable ability to dynamically load preprocessors, detection engine, and rules library. This is required if you want to use shared object (SO) snort rules. 
+net-analyzer/snort:flexresp -  (DEPRECIATED) Original method for enabling connection tearing for inline deployments. Replaced with flexresp3 in Snort-2.9.0. 
+net-analyzer/snort:flexresp2 -  (DEPRECIATED) Replaced flexresp for enabling connection tearing for inline deployments. Replaced with flexresp3 in Snort-2.9.0. 
+net-analyzer/snort:flexresp3 -  Enables support for new flexable response preprocessor for enabling connection tearing for inline deployments. Replaces flexresp and flexresp2. 
+net-analyzer/snort:gre -  Enable support for inspecting and processing Generic Routing Encapsulation (GRE) packet headders. Only needed if you are monitoring GRE tunnels. 
+net-analyzer/snort:inline -  (DEPRECIATED) Enables support for deploying snort inline. Uses net-firewall/iptables, via libipq, rather than net-libs/libpcap. Replaced by DAQ in Snort-2.9.0 
+net-analyzer/snort:inline-init-failopen -  Enables support to allow traffic to pass (fail-open) through inline deployments while snort is starting and not ready to begin inspecting traffic. If this option is not enabled, network traffic will not pass (fail-closed) until snort has fully started and is ready to perform packet inspection. 
+net-analyzer/snort:linux-smp-stats -  Enable accurate statistics reporting through /proc on systems with multipule processors. 
+net-analyzer/snort:mpls -  Enables support for processing and inspecting Multiprotocol Label Switching MPLS network network traffic. Only needed if you are monitoring an MPLS network. 
+net-analyzer/snort:normalizer -  Enables support for normalizing packets in inline deployments to help minimize the chances of detection evasion. 
+net-analyzer/snort:perfprofiling -  Enables support for preprocessor and rule performance profiling using the perfmonitor preprocessor. 
+net-analyzer/snort:ppm -  Enables support for setting per rule or per packet latency limits. Helps protect against introducing network latency with inline deployments. 
+net-analyzer/snort:react -  Enables support for the react rule keyword. Supports interception, termination, and redirection of HTTP connections. 
+net-analyzer/snort:reload -  Enables support for reloading a configuration without restarting snort. 
+net-analyzer/snort:reload-error-restart -  Enables support for completely restarting snort if an error is detected durring a reload. 
+net-analyzer/snort:targetbased -  Enables support in snort for using a host attibute XML file (attribute_table.dtd). This file needs to be created by the user and should define the IP address, operating system, and services for all hosts on the monitored network. This is cumbersome, but can improve intrusion detection accuracy. 
+net-analyzer/snort:timestats -  (DEPRECIATED) Enables support for printing packet stats on a per hour and per protocol breakdown. Depreciated in Snort-2.9.0. 
+net-analyzer/snort:zlib -  Enables HTTP inspection of compressed web traffic. Requires dynamicplugin be enabled. 
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
@@ -3854,6 +3857,7 @@ www-apps/gallery:netpbm - Add media-libs/netpbm support
 www-apps/gallery:unzip - Add app-arch/unzip support for the archive upload module
 www-apps/gallery:zip - Add app-arch/zip for the zip download module
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
+www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Ads math rendering support
 www-apps/postfixadmin:extras - Install contributed scripts and plugins
