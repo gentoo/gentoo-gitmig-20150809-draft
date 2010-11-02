@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.33 2010/06/01 11:59:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.34 2010/11/02 01:41:19 rafaelmartins Exp $
+
+*iverilog-0.9.3 (02 Nov 2010)
+
+  02 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +iverilog-0.9.3.ebuild:
+  Version bump.
 
   01 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> iverilog-0.9.1.ebuild,
   +files/iverilog-0.9.1-gcc45.patch:
