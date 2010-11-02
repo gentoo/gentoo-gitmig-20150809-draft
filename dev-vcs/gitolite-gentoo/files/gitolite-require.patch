@@ -1,0 +1,133 @@
+From 66b65e5e1db512e695588f326f7339fb5d5a7478 Mon Sep 17 00:00:00 2001
+From: Sitaram Chamarty <sitaram@atc.tcs.com>
+Date: Sat, 23 Oct 2010 16:43:47 +0530
+Subject: [PATCH 03/14] (doh!) make gitolite.pm easier for packagers
+
+should have done this long ago...
+---
+ contrib/adc/gl-reflog      |    4 +++-
+ contrib/gitweb/gitweb.conf |    3 ++-
+ hooks/common/update        |    3 ++-
+ src/gl-auth-command        |    3 ++-
+ src/gl-compile-conf        |    3 ++-
+ src/gl-install             |    3 ++-
+ src/gl-setup-authkeys      |    3 ++-
+ src/gl-time                |    3 ++-
+ 8 files changed, 17 insertions(+), 8 deletions(-)
+
+diff --git a/contrib/adc/gl-reflog b/contrib/adc/gl-reflog
+index aa59e15..c6f134b 100755
+--- a/contrib/adc/gl-reflog
++++ b/contrib/adc/gl-reflog
+@@ -33,7 +33,9 @@ use warnings;
+ my($cmd, $repo, $ref, $limit) = @ARGV;
+ $limit ||= 10;
+ 
+-require "$ENV{GL_BINDIR}/gitolite.pm" or die "parse gitolite.pm failed\n";
++unshift @INC, $ENV{GL_BINDIR};
++require gitolite or die "parse gitolite.pm failed\n";
++
+ my ($perm, $creator, $wild) = &repo_rights($repo);
+ die "you don't have read access to $repo\n" unless $perm =~ /R/;
+ 
+diff --git a/contrib/gitweb/gitweb.conf b/contrib/gitweb/gitweb.conf
+index edf9af4..283879f 100644
+--- a/contrib/gitweb/gitweb.conf
++++ b/contrib/gitweb/gitweb.conf
+@@ -25,7 +25,8 @@ $ENV{GL_REPO_BASE_ABS} = ( $REPO_BASE =~ m(^/) ? $REPO_BASE : "$gl_home/$REPO_BA
+ $projects_list = $projectroot = $ENV{GL_REPO_BASE_ABS};
+ 
+ # load gitolite helper routines
+-require "$GL_ADMINDIR/src/gitolite.pm"
++unshift @INC, "$GL_ADMINDIR/src";
++require gitolite
+     or die_error(500, "Failed to parse gitolite.pm: " . ($! or $@));
+ 
+ $export_auth_hook = sub {
+diff --git a/hooks/common/update b/hooks/common/update
+index 93d3dac..d7296ae 100755
+--- a/hooks/common/update
++++ b/hooks/common/update
+@@ -35,7 +35,8 @@ exit 0 if exists $ENV{GL_BYPASS_UPDATE_HOOK};
+ # we should already have the GL_RC env var set when we enter this hook
+ die "parse $ENV{GL_RC} failed: "       . ($! or $@) unless do $ENV{GL_RC};
+ 
+-require "$ENV{GL_BINDIR}/gitolite.pm";
++unshift @INC, $ENV{GL_BINDIR};
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ my ($perm, $creator, $wild) = &repo_rights($ENV{GL_REPO});
+ my $reported_repo = $ENV{GL_REPO} . ( $ENV{GL_REPOPATT} ? " ($ENV{GL_REPOPATT})" : "" );
+diff --git a/src/gl-auth-command b/src/gl-auth-command
+index 0ef6ceb..0db6862 100755
+--- a/src/gl-auth-command
++++ b/src/gl-auth-command
+@@ -43,7 +43,8 @@ our %repo_config;
+ my $bindir = $0;
+ $bindir =~ s/\/[^\/]+$//;
+ $bindir = "$ENV{PWD}/$bindir" unless $bindir =~ /^\//;
+-require "$bindir/gitolite.pm";
++unshift @INC, $bindir;
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ # ask where the rc file is, get it, and "do" it
+ &where_is_rc();
+diff --git a/src/gl-compile-conf b/src/gl-compile-conf
+index efc4bc5..82f73f4 100755
+--- a/src/gl-compile-conf
++++ b/src/gl-compile-conf
+@@ -60,7 +60,8 @@ our ($REPONAME_PATT, $REPOPATT_PATT, $USERNAME_PATT, $ABRT, $WARN);
+ my $bindir = $0;
+ $bindir =~ s/\/[^\/]+$//;
+ $bindir = "$ENV{PWD}/$bindir" unless $bindir =~ /^\//;
+-require "$bindir/gitolite.pm";
++unshift @INC, $bindir;
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ # ask where the rc file is, get it, and "do" it
+ &where_is_rc();
+diff --git a/src/gl-install b/src/gl-install
+index e941092..844b2c9 100755
+--- a/src/gl-install
++++ b/src/gl-install
+@@ -28,7 +28,8 @@ sub wrap_mkdir
+ # the common setup module is in the same directory as this running program is
+ my $bindir = $0;
+ $bindir =~ s/\/[^\/]+$//;
+-require "$bindir/gitolite.pm";
++unshift @INC, $bindir;
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ # ask where the rc file is, get it, and "do" it
+ &where_is_rc();
+diff --git a/src/gl-setup-authkeys b/src/gl-setup-authkeys
+index 758adac..c431cc5 100755
+--- a/src/gl-setup-authkeys
++++ b/src/gl-setup-authkeys
+@@ -30,7 +30,8 @@ our ($GL_PERFLOGT);
+ my $bindir = $0;
+ $bindir =~ s/\/[^\/]+$//;
+ $bindir = "$ENV{PWD}/$bindir" unless $bindir =~ /^\//;
+-require "$bindir/gitolite.pm";
++unshift @INC, $bindir;
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ # prevent newbie from running it accidentally and clobbering his authkeys
+ # file!
+diff --git a/src/gl-time b/src/gl-time
+index d68df5e..26102f9 100755
+--- a/src/gl-time
++++ b/src/gl-time
+@@ -22,7 +22,8 @@ do "$ENV{HOME}/.gitolite.rc";
+ my $bindir = $0;
+ $bindir =~ s/\/[^\/]+$//;
+ $bindir = "$ENV{PWD}/$bindir" unless $bindir =~ /^\//;
+-require "$bindir/gitolite.pm";
++unshift @INC, $bindir;
++require gitolite or die "parse gitolite.pm failed\n";
+ 
+ # ---------------------------------------------------------------
+ 
+-- 
+1.7.2.2
+
