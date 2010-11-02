@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.116 2010/10/29 13:13:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.117 2010/11/02 07:36:10 ulm Exp $
+
+*org-mode-7.3 (02 Nov 2010)
+
+  02 Nov 2010; Ulrich Mueller <ulm@gentoo.org> +org-mode-7.3.ebuild,
+  metadata.xml:
+  Version bump. Install contributed files with USE=contrib, bug 293773.
 
 *org-mode-7.02 (29 Oct 2010)
 
