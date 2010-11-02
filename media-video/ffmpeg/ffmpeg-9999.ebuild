@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.24 2010/11/02 21:38:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.25 2010/11/02 22:16:09 aballier Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ RDEPEND="
 	dirac? ( media-video/dirac )
 	encode? (
 		faac? ( media-libs/faac )
-		mp3? ( >=media-sound/lame--3.98.3 )
+		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
 		x264? ( >=media-libs/x264-0.0.20101029 )
