@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.19 2010/10/31 14:23:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.20 2010/11/02 08:02:34 jlec Exp $
+
+  02 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.4-doc.patch,
+  maloc-1.4.ebuild:
+  Fixed automagic doxygen usage
 
 *maloc-1.4 (31 Oct 2010)
 
