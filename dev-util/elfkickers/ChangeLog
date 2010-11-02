@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.31 2010/03/05 22:06:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.32 2010/11/02 18:21:20 blueness Exp $
+
+*elfkickers-2.0a-r5 (02 Nov 2010)
+
+  02 Nov 2010; Anthony G. Basile <blueness@gentoo.org>
+  +elfkickers-2.0a-r5.ebuild, -files/elfkickers-2.0a.diff,
+  -files/elfkickers-2.0a-bsd.patch, -files/elfkickers-2.0a-elfls-core.patch,
+  -files/sstrip-mjn3.c, -files/elfkickers-2.0a-make.patch, metadata.xml:
+  Rev bump, bug #337108
 
   05 Mar 2010; <solar@gentoo.org> -elfkickers-2.0a.ebuild,
   -elfkickers-2.0a-r1.ebuild, -elfkickers-2.0a-r2.ebuild,
