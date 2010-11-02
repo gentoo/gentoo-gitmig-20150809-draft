@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/gitolite-syntax
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/ChangeLog,v 1.1 2010/11/02 21:07:14 idl0r Exp $
+
+*gitolite-syntax-20100826 (02 Nov 2010)
+
+  02 Nov 2010; Christian Ruppert <idl0r@gentoo.org>
+  +gitolite-syntax-20100826.ebuild, +metadata.xml:
+  Initial import of app-vim/gitolite-syntax-20100826.
+
