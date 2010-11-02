@@ -1,19 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.48.ebuild,v 1.3 2010/10/06 13:25:02 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.48.ebuild,v 1.4 2010/11/02 17:10:59 mpagano Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit eutils python git
+inherit eutils python
 
 DESCRIPTION="A helper program for maintaining the package.keyword and package.unmask files"
 HOMEPAGE="http://www.mpagano.com/blog/?page_id=3"
-SRC_URI=""
-
-EGIT_REPO_URI="git://mpagano.com/var/git/portpeek.git"
-EGIT_BRANCH="1.9"
-EGIT_COMMIT="v${PV}"
+SRC_URI="http://www.mpagano.com/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

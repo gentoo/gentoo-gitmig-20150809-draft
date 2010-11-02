@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.93 2010/11/02 16:58:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.94 2010/11/02 17:10:59 mpagano Exp $
+
+  02 Nov 2010; Mike Pagano <mpagano@gentoo.org> portpeek-1.9.48.ebuild,
+  -portpeek-2.0.5.ebuild:
+  Remove old version and move back to tar package for 1.9 series
 
   02 Nov 2010; Mike Pagano <mpagano@gentoo.org> portpeek-2.0.7.ebuild:
   Portpeek 2.0.7 uses src tarball now.
