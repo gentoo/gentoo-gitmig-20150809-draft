@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.62 2010/10/31 23:53:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.63 2010/11/02 19:55:03 olemarkus Exp $
+
+*pecl-apc-3.1.5 (02 Nov 2010)
+
+  02 Nov 2010; <olemarkus@gentoo.org> +pecl-apc-3.1.5.ebuild:
+  Version bump
 
   31 Oct 2010; Matti Bickel <mabi@gentoo.org> pecl-apc-3.1.4-r1.ebuild:
   dropped keywords pending bug #343597
