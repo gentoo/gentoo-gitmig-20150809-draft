@@ -5,11 +5,7 @@
 <maintainer>
 <email>iaindb@netspace.net.au</email>
 <name>Iain Buchanan</name>
-<description>Proxy maintaining through mescalinum</description>
-</maintainer>
-<maintainer>
-<email>mescalinum@gentoo.org</email>
-<name>Federico Ferri</name>
+<description>Proxy maintainer</description>
 </maintainer>
 <longdescription>
 The KDE (and Gnome) PDA Manager is an application to manage WM5/WM6 PDA devices from Linux

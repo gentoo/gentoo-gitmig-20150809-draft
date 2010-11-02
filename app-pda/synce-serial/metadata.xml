@@ -5,11 +5,7 @@
 <maintainer>
 <email>iaindb@netspace.net.au</email>
 <name>Iain Buchanan</name>
-<description>Proxy maintaining through mescalinum</description>
-</maintainer>
-<maintainer>
-<email>mescalinum@gentoo.org</email>
-<name>Federico Ferri</name>
+<description>Proxy maintainer</description>
 </maintainer>
 <longdescription>
 Used to connect to WM 2003 and earlier devices, replaced by synce-hal.

@@ -5,11 +5,7 @@
 <maintainer>
 <email>iaindb@netspace.net.au</email>
 <name>Iain Buchanan</name>
-<description>Proxy maintaining through mescalinum</description>
-</maintainer>
-<maintainer>
-<email>mescalinum@gentoo.org</email>
-<name>Federico Ferri</name>
+<description>Proxy maintainer</description>
 </maintainer>
 <use>
 <flag name="void-chmod">enable a fake fuse hook for "chmod" that just returns 0</flag>

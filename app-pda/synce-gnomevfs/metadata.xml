@@ -5,10 +5,6 @@
 <maintainer>
 <email>iaindb@netspace.net.au</email>
 <name>Iain Buchanan</name>
-<description>Proxy maintaining through mescalinum</description>
-</maintainer>
-<maintainer>
-<email>mescalinum@gentoo.org</email>
-<name>Federico Ferri</name>
+<description>Proxy maintainer</description>
 </maintainer>
 </pkgmetadata>
