@@ -1,0 +1,28 @@
+diff -uNr fossil-src-20101101142335.orig/Makefile fossil-src-20101101142335/Makefile
+--- fossil-src-20101101142335.orig/Makefile	2010-11-01 15:16:44.000000000 -0200
++++ fossil-src-20101101142335/Makefile	2010-11-02 04:14:27.645206756 -0200
+@@ -42,7 +42,7 @@
+ #    so that we can build a static executable that will run in a
+ #    chroot jail.
+ #
+-LIB = -lz $(LDFLAGS)
++LIB = -lz -lsqlite3
+ 
+ # If using HTTPS:
+ LIB += -lcrypto -lssl
+diff -uNr fossil-src-20101101142335.orig/src/main.mk fossil-src-20101101142335/src/main.mk
+--- fossil-src-20101101142335.orig/src/main.mk	2010-11-01 15:16:44.000000000 -0200
++++ fossil-src-20101101142335/src/main.mk	2010-11-02 04:19:50.511128354 -0200
+@@ -266,10 +266,10 @@
+ 	awk '{ printf "#define MANIFEST_VERSION \"[%.10s]\"\n", $$1}'  $(SRCDIR)/../manifest.uuid >>VERSION.h
+ 	awk '$$1=="D"{printf "#define MANIFEST_DATE \"%s %s\"\n", substr($$2,1,10),substr($$2,12)}'  $(SRCDIR)/../manifest >>VERSION.h
+ 
+-EXTRAOBJ =  $(OBJDIR)/sqlite3.o  $(OBJDIR)/shell.o  $(OBJDIR)/th.o  $(OBJDIR)/th_lang.o
++EXTRAOBJ =  $(OBJDIR)/shell.o  $(OBJDIR)/th.o  $(OBJDIR)/th_lang.o
+ 
+ $(APPNAME):	headers $(OBJ) $(EXTRAOBJ)
+-	$(TCC) -o $(APPNAME) $(OBJ) $(EXTRAOBJ) $(LIB)
++	$(TCC) $(LDFLAGS) -o $(APPNAME) $(OBJ) $(EXTRAOBJ) $(LIB)
+ 
+ # This rule prevents make from using its default rules to try build
+ # an executable named "manifest" out of the file named "manifest.c"
