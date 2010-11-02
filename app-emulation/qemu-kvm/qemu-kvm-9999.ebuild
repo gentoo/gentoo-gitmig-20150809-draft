@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.12 2010/09/06 11:07:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.13 2010/11/02 16:29:19 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -90,8 +90,8 @@ kvm_kern_warn() {
 }
 
 pkg_setup() {
-
 	local counter="0" check
+
 	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
 	for check in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${check}" && counter="1"
@@ -188,6 +188,7 @@ src_configure() {
 	use sdl && audio_opts="sdl ${audio_opts}"
 	./configure --prefix=/usr \
 		--disable-strip \
+		--disable-werror \
 		--enable-kvm \
 		--enable-nptl \
 		--enable-uuid \
@@ -217,10 +218,6 @@ src_install() {
 		doins kvm/scripts/qemu-ifup || die
 	fi
 
-	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
-	newdoc pc-bios/README README.pc-bios || die
-	dohtml qemu-doc.html qemu-tech.html || die
-
 	if use qemu_softmmu_targets_x86_64 ; then
 		dobin "${FILESDIR}"/qemu-kvm
 		dosym /usr/bin/qemu-kvm /usr/bin/kvm
@@ -228,6 +225,10 @@ src_install() {
 		elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
 		elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
 	fi
+
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
+	newdoc pc-bios/README README.pc-bios || die
+	dohtml qemu-doc.html qemu-tech.html || die
 }
 
 pkg_postinst() {
