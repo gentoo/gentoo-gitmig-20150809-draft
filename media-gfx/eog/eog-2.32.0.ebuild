@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.0.ebuild,v 1.1 2010/10/17 19:45:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.0.ebuild,v 1.2 2010/11/02 02:22:50 ford_prefect Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.18:2[jpeg?,tiff?]
 	>=dev-libs/glib-2.25.9
 	>=dev-libs/libxml2-2
 	>=gnome-base/gconf-2.31.1
-	>=gnome-base/gnome-desktop-2.25.1:0
+	>=gnome-base/gnome-desktop-2.25.1:2
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=x11-misc/shared-mime-info-0.20
 	x11-libs/libX11
