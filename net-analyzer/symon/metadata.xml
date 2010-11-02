@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>tcunha@gentoo.org</email>
-	</maintainer>
 	<use>
 		<flag name='perl'>Enables a generic perl symux client</flag>
 		<flag name='symon'>Enables the system monitor. Offers no functionality
