@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.2 2010/10/29 21:57:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.3 2010/11/02 02:16:02 ford_prefect Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="eds spell"
 
 RDEPEND="
 	>=x11-libs/gtk+-2.20:2
-	>=gnome-base/gnome-desktop-2.10
+	>=gnome-base/gnome-desktop-2.10:2
 	>=gnome-base/gconf-2
 
 	>=dev-python/pygtk-2.12
