@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.6 2010/11/01 18:26:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.7 2010/11/02 17:12:42 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -32,6 +32,9 @@ eblit-php-pkg_postinst() {
 
 	ewarn "You may have to recompile third-party extensions now"
 	ewarn "(includes every dev-php5/pecl-* package and probably others in that category)"
+	ewarn "Make sure that PHP_TARGETS in /etc/make.conf includes php${SLOT/./-} in order"
+	ewarn "to compile extensions for the ${SLOT} ABI"
+	ewarn
 	if ! use readline && use cli ; then
 		ewarn "Note that in order to use php interactivly, you need to enable"
 		ewarn "the readline USE flag or php -a will hang"

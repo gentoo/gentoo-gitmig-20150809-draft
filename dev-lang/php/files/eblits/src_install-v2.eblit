@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.8 2010/10/30 21:41:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v2.eblit,v 1.9 2010/11/02 17:12:42 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -112,6 +112,9 @@ php_install_ini() {
 	dodir "${PHP_INI_DIR}"
 	insinto "${PHP_INI_DIR}"
 	newins "${phpinisrc}" "${PHP_INI_FILE}"
+
+	elog "Installing php.ini for ${phpsapi} into ${PHP_INI_DIR}"
+	elog
 
 	dodir "${PHP_EXT_INI_DIR}"
 	dodir "${PHP_EXT_INI_DIR_ACTIVE}"
