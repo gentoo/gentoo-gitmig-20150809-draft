@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>jason.r.wallace@gmail.com</email>
+  <name>Jason Wallace</name>
+</maintainer>
+<maintainer>
+  <email>patrick@gentoo.org</email>
+  <name>Patrick Lauer</name>
+</maintainer>
+
+<herd>netmon</herd>
+<longdescription>Data Acquisition library, for packet I/O with Snort 2.9 and later</longdescription>
+<use>
+<flag name='afpacket'>Build the AFPacket data acquisition module</flag>
+<flag name='dump'>Build the Dump data acquisition module</flag>
+<flag name='pcap'>Build the PCAP data acquisition module</flag>
+</use>
+</pkgmetadata>
+
