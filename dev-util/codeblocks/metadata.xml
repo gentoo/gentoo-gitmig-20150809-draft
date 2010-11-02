@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>wxwidgets</herd>
-  <maintainer>
-    <email>jurek@gentoo.org</email>
-    <name>Jurek Bartuszek</name>
-  </maintainer>
   <use>
     <flag name="contrib">Build additional contrib components</flag>
   </use>
