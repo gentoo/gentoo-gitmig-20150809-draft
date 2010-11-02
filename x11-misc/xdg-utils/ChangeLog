@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.65 2010/07/24 16:13:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.66 2010/11/02 14:48:17 ssuominen Exp $
+
+*xdg-utils-1.0.2_p20101101 (02 Nov 2010)
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xdg-utils-1.0.2_p20101101.ebuild:
+  New snapshot.
 
   24 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xdg-utils-1.0.2-r3.ebuild, -files/xdg-utils-1.0.2-arb-comm-exec.patch,
@@ -32,7 +38,7 @@
 
   18 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   +xdg-utils-1.0.2_p20100618.ebuild:
-  CVS snapshot for e.g. KDE 4 and gvfs support.
+  New snapshot.
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xdg-utils-1.0.2-r3.ebuild:
