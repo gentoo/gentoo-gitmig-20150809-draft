@@ -1,14 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.30 2010/11/01 22:57:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.31 2010/11/02 15:08:48 ssuominen Exp $
 
 # Mark Loeser <halcy0n@gentoo.org> (01 Nov 2010)
 # net-libs/webkit-gtk is not stable
 =net-news/liferea-1.4* webkit
-
-# Mark Loeser <halcy0n@gentoo.org> (25 Oct 2010)
-# Requires a stable kdelibs
-media-video/vlc kde
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2010)
 # This will need dev-python/matplotlib keyworded, which isn't tested yet.
@@ -24,10 +20,12 @@ sys-fs/btrfs-progs debug-utils
 gnome-base/gvfs bluetooth
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Jun 2010)
-# These will need stable kdelibs-4.
+# These need stable kdelibs-4.
 app-i18n/uim kde
-dev-vcs/subversion kde
 app-arch/p7zip kde
+dev-vcs/subversion kde
+media-video/vlc kde
+net-libs/libproxy kde
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
 # requires more keywording per bug #323003

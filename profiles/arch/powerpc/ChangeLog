@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.89 2010/11/01 17:21:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.90 2010/11/02 15:08:48 ssuominen Exp $
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ppc64/package.use.mask:
+  Mask USE="kde" for net-libs/libproxy because of missing stable kdelibs wrt
+  #343069.
 
   01 Nov 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Masked sci-chemistry/apbs USE=fetk as DEPS are not KEyworded
