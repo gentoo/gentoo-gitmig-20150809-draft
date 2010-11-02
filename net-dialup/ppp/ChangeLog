@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.263 2010/09/30 21:19:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.264 2010/11/02 06:58:39 jer Exp $
+
+  02 Nov 2010; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r25.ebuild:
+  Stable for HPPA (bug #331611).
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> ppp-2.4.4-r25.ebuild:
   stable ppc64, bug 331611
