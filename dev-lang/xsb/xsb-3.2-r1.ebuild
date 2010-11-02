@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2-r1.ebuild,v 1.4 2010/10/31 19:41:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2-r1.ebuild,v 1.5 2010/11/02 05:59:46 keri Exp $
 
 MY_P="XSB"
 
@@ -54,28 +54,28 @@ src_compile() {
 		$(use_with odbc) \
 		$(use_with iodbc) \
 		$(use_enable threads mt) \
-		$(use_enable debug) \
-		|| die "econf failed"
+		$(use_enable debug)
+
 	emake || die "emake failed"
 
 	if use libwww ; then
 		cd "${S}"/packages/libwww
-		econf --with-libwww=/usr || die "econf libwww package failed"
+		econf --with-libwww=/usr
 	fi
 
 	if use mysql ; then
 		cd "${S}"/packages/dbdrivers/mysql
-		econf || die "econf mysql package failed"
+		econf
 	fi
 
 	if use odbc ; then
 		cd "${S}"/packages/dbdrivers/odbc
-		econf || die "econf odbc package failed"
+		econf
 	fi
 
 	if use xml ; then
 		cd "${S}"/packages/xpath
-		econf || die "econf xpath package failed"
+		econf
 	fi
 
 	# All XSB Packages are compiled using a single Prolog engine.
@@ -108,98 +108,98 @@ src_compile() {
 
 src_install() {
 	cd "${S}"/build
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	local XSB_INSTALL_DIR=/usr/$(get_libdir)/xsb-${PV}
-	dosym ${XSB_INSTALL_DIR}/bin/xsb /usr/bin/xsb
+	dosym ${XSB_INSTALL_DIR}/bin/xsb /usr/bin/xsb || die
 
 	cd "${S}"/packages
 	local PACKAGES=${XSB_INSTALL_DIR}/packages
 	insinto ${PACKAGES}
-	doins *.xwam
+	doins *.xwam || die
 
 	insinto ${PACKAGES}/chr
-	doins chr/*.xwam
+	doins chr/*.xwam || die
 
 	insinto ${PACKAGES}/chr_d
-	doins chr_d/*.xwam
+	doins chr_d/*.xwam || die
 
 	insinto ${PACKAGES}/gap
-	doins gap/*.xwam
+	doins gap/*.xwam || die
 
 	insinto ${PACKAGES}/justify
-	doins justify/*.xwam
-	doins justify/*.H
+	doins justify/*.xwam || die
+	doins justify/*.H || die
 
 	insinto ${PACKAGES}/regmatch
-	doins regmatch/*.xwam
+	doins regmatch/*.xwam || die
 	insinto ${PACKAGES}/regmatch/cc
-	doins regmatch/cc/*.H
+	doins regmatch/cc/*.H || die
 
 	insinto ${PACKAGES}/sgml
-	doins sgml/*.xwam
+	doins sgml/*.xwam || die
 	insinto ${PACKAGES}/sgml/cc
-	doins sgml/cc/*.H
+	doins sgml/cc/*.H || die
 	insinto ${PACKAGES}/sgml/cc/dtd
-	doins sgml/cc/dtd/*
+	doins sgml/cc/dtd/* || die
 
 	insinto ${PACKAGES}/slx
-	doins slx/*.xwam
+	doins slx/*.xwam || die
 
 	insinto ${PACKAGES}/wildmatch
-	doins wildmatch/*.xwam
+	doins wildmatch/*.xwam || die
 	insinto ${PACKAGES}/wildmatch/cc
-	doins wildmatch/cc/*.H
+	doins wildmatch/cc/*.H || die
 
 	if use libwww ; then
 		insinto ${PACKAGES}/libwww
-		doins libwww/*.xwam
+		doins libwww/*.xwam || die
 		insinto ${PACKAGES}/libwww/cc
-		doins libwww/cc/*.H
+		doins libwww/cc/*.H || die
 	fi
 
 	if use mysql || use odbc ; then
 		insinto ${PACKAGES}/dbdrivers
-		doins dbdrivers/*.xwam
-		doins dbdrivers/*.H
+		doins dbdrivers/*.xwam || die
+		doins dbdrivers/*.H || die
 		insinto ${PACKAGES}/dbdrivers/cc
-		doins dbdrivers/cc/*.H
+		doins dbdrivers/cc/*.H || die
 		if use mysql ; then
 			insinto ${PACKAGES}/dbdrivers/mysql
-			doins dbdrivers/mysql/*.xwam
+			doins dbdrivers/mysql/*.xwam || die
 			insinto ${PACKAGES}/dbdrivers/mysql/cc
-			doins dbdrivers/mysql/cc/*.H
+			doins dbdrivers/mysql/cc/*.H || die
 		fi
 		if use odbc ; then
 			insinto ${PACKAGES}/dbdrivers/odbc
-			doins dbdrivers/odbc/*.xwam
+			doins dbdrivers/odbc/*.xwam || die
 			insinto ${PACKAGES}/dbdrivers/odbc/cc
-			doins dbdrivers/odbc/cc/*.H
+			doins dbdrivers/odbc/cc/*.H || die
 		fi
 	fi
 
 	if use perl ; then
 		insinto ${PACKAGES}/perlmatch
-		doins perlmatch/*.xwam
+		doins perlmatch/*.xwam || die
 		insinto ${PACKAGES}/perlmatch/cc
-		doins perlmatch/cc/*.H
+		doins perlmatch/cc/*.H || die
 	fi
 
 	if use xml ; then
 		insinto ${PACKAGES}/xpath
-		doins xpath/*xwam
+		doins xpath/*xwam || die
 		insinto ${PACKAGES}/xpath/cc
-		doins xpath/cc/*.H
+		doins xpath/cc/*.H || die
 	fi
 
 	if use examples ; then
 		cd "${S}"/build
-		make \
+		emake \
 			DESTDIR="${D}" \
 			install_examples="${D}"/usr/share/doc/${PF}/examples \
 			install_examples || die "make install_examples failed"
 	fi
 
 	cd "${S}"
-	dodoc FAQ README
+	dodoc FAQ README || die
 }

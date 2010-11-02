@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.27 2010/11/01 05:39:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.28 2010/11/02 05:59:46 keri Exp $
+
+  02 Nov 2010; <keri@gentoo.org> xsb-3.2-r1.ebuild:
+  QA - remove calls to die from econf; add calls to die to do... functions
 
   01 Nov 2010; <keri@gentoo.org> -xsb-3.0.1.ebuild,
   -files/xsb-3.0.1-chr_d.patch, -files/xsb-3.0.1-configure.patch,
