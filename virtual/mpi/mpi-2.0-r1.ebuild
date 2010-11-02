@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/mpi-2.0-r1.ebuild,v 1.1 2010/06/17 02:20:55 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/mpi-2.0-r1.ebuild,v 1.2 2010/11/02 17:48:35 jer Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ HOMEPAGE=""
 SRC_URI=""
 LICENSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="cxx fortran romio"
 
 RDEPEND="|| (
