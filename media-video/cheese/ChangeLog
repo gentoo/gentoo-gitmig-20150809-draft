@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.38 2010/11/01 14:49:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.39 2010/11/02 02:51:13 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> cheese-2.32.0.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> cheese-2.32.0.ebuild:
   Drop python changes, it's unneeded since gnome-doc-utils has been fixed.
