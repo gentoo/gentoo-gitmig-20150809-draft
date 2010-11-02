@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4.ebuild,v 1.1 2010/10/31 13:30:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4.ebuild,v 1.2 2010/11/02 08:37:41 jlec Exp $
 
 EAPI="3"
 
@@ -13,9 +13,9 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug mpi static-libs"
+IUSE="debug doc mpi static-libs"
 
-DEPEND="
+RDEPEND="
 	dev-libs/maloc[mpi=]
 	dev-libs/libf2c
 	sci-libs/amd
@@ -25,14 +25,19 @@ DEPEND="
 	sci-libs/umfpack
 	virtual/blas
 	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+DEPEND="
+	${RDEPEND}
+	doc? (
+		media-gfx/graphviz
+		app-doc/doxygen )"
 
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	rm -rf src/{amd,blas,lapack,arpack,superlu,umfpack}
 	epatch \
-		"${FILESDIR}"/${PV}-linking.patch
+		"${FILESDIR}"/${PV}-linking.patch \
+		"${FILESDIR}"/${PV}-doc.patch
 
 	cp tools/tests/pmg/*.f src/pmg/ -f
 	cp tools/tests/pmg/*.c src/pmg/ -f
@@ -42,21 +47,31 @@ src_prepare() {
 }
 
 src_configure() {
-	export FETK_INCLUDE="${EPREFIX}/usr/include"
-	export FETK_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
+	local fetk_include
+	local fetk_lib
+	local myconf
+
+	use doc || myconf="${myconf} --with-doxygen= --with-dot="
+
+	fetk_include="${EPREFIX}"/usr/include
+	fetk_lib="${EPREFIX}"/usr/$(get_libdir)
+	export FETK_INCLUDE="${fetk_include}"
+	export FETK_LIBRARY="${fetk_lib}"
 	export FETK_LAPACK_LIBRARY="$(pkg-config --libs lapack)"
-	export FETK_BLAS_LIBRARY="${FETK_LIBRARY}"
+	export FETK_BLAS_LIBRARY="${fetk_lib}"
 	export FETK_SUPERLU_LIBRARY="-lsuperlu"
-	export FETK_ARPACK_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
-	export FETK_UMFPACK_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
-	export FETK_CGCODE_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
-	export FETK_AMD_LIBRARY="${EPREFIX}/usr/$(get_libdir)"
+	export FETK_ARPACK_LIBRARY="${fetk_lib}"
+	export FETK_UMFPACK_LIBRARY="${fetk_lib}"
+	export FETK_CGCODE_LIBRARY="${fetk_lib}"
+	export FETK_AMD_LIBRARY="${fetk_lib}"
 
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable debug vdebug) \
 		--enable-shared \
-		--disable-triplet
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--disable-triplet \
+		${myconf}
 }
 
 src_install() {
