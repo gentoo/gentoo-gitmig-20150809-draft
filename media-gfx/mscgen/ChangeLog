@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/mscgen
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.1 2010/11/02 19:13:34 ssuominen Exp $
+
+*mscgen-0.18 (02 Nov 2010)
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> +mscgen-0.18.ebuild,
+  +files/mscgen-0.18-pkg.patch:
+  Initial commit wrt #173570 by Roy, Peter, Walter (and others).
+
