@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.2 2009/11/09 19:23:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.3 2010/11/02 02:55:05 ford_prefect Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade:2.0
 	gnome-base/libgnome
 	gnome-base/libgnomeui
-	gnome-base/gnome-desktop"
+	gnome-base/gnome-desktop:2"
 
 DEPEND="${RDEPEND}
 	gnome-base/gconf

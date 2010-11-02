@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tsclient
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.32 2009/11/09 19:23:39 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.33 2010/11/02 02:55:05 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  tsclient-2.0.1.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   09 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   tsclient-2.0.1.ebuild:
