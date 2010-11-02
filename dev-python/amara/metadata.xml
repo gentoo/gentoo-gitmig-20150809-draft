@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>marineam@gentoo.org</email>
-		<name>Michael Marineau</name>
-	</maintainer>
 	<longdescription lang="en">
 		Amara provides a Pythonic interface for processing XML on top of 4suite
 	</longdescription>
