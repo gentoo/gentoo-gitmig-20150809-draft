@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.8.ebuild,v 1.3 2010/10/23 13:00:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.8.ebuild,v 1.4 2010/11/02 09:27:27 ssuominen Exp $
 
 EAPI=2
 inherit pax-utils eutils multilib python xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
-IUSE="doc gnome +html idn libnotify nls +unique vala"
+IUSE="doc gnome +html idn libnotify nls +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	>=net-libs/libsoup-2.25.2
@@ -22,8 +22,7 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 	>=x11-libs/gtk+-2.10:2
 	gnome? ( net-libs/libsoup-gnome )
 	idn? ( net-dns/libidn )
-	unique? ( dev-libs/libunique )
-	vala? ( dev-lang/vala:0 )"
+	unique? ( dev-libs/libunique )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	dev-util/intltool
@@ -56,7 +55,7 @@ src_configure() {
 		$(use_enable libnotify) \
 		$(use_enable nls) \
 		$(use_enable unique) \
-		$(use_enable vala) \
+		--disable-vala \
 		configure || die
 }
 

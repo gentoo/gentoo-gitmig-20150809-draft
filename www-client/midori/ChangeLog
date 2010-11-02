@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.40 2010/11/01 19:41:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.41 2010/11/02 09:27:27 ssuominen Exp $
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> midori-0.2.8.ebuild:
+  Disable dev-lang/vala support because it's not ready to be stabilized wrt
+  #343737.
 
 *midori-0.2.9 (01 Nov 2010)
 
