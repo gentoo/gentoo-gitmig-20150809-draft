@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.98 2010/10/24 15:50:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.99 2010/11/02 02:52:28 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  java-gnome-4.0.16.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> java-gnome-4.0.15.ebuild:
   stable ppc, bug 316309
