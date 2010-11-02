@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.85.ebuild,v 1.2 2010/11/01 19:27:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/milkytracker/milkytracker-0.90.85.ebuild,v 1.3 2010/11/02 19:24:11 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/libsdl-1.2
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i -e '/PKG_CHECK_MODULES([ZZIP]/d' configure.in || die
+	sed -i -e '/PKG_CHECK_MODULES(\[ZZIP]/d' configure.in || die
 	epatch "${FILESDIR}"/${P}-64bit.patch
 	eautoreconf
 }
