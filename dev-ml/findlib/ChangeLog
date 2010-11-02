@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.60 2010/11/01 23:55:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.61 2010/11/02 00:05:26 hwoarang Exp $
+
+  02 Nov 2010; Markos Chandras <hwoarang@gentoo.org> findlib-1.2.5.ebuild:
+  Revert my last commit and bring ~amd64 back
 
   01 Nov 2010; Markos Chandras <hwoarang@gentoo.org> findlib-1.2.5.ebuild:
   Stable on amd64 wrt bug #343751
