@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.177 2010/10/28 11:03:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.178 2010/11/02 13:39:21 scarabeus Exp $
+
+  02 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  avidemux-2.5.4-r1.ebuild:
+  Use cmake-utils eclass more extensively.
 
 *avidemux-2.5.4-r1 (28 Oct 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4-r1.ebuild,v 1.1 2010/10/28 11:03:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4-r1.ebuild,v 1.2 2010/11/02 13:39:21 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,9 +19,11 @@ IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls oss
 	pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
 
 RDEPEND="dev-libs/libxml2
-	aac? ( media-libs/faac
-		media-libs/faad2 )
-	aften? ( media-libs/aften )
+	aac? (
+		media-libs/faac
+		media-libs/faad2
+	)
+	aften? ( media-libs/aften[cxx] )
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	dts? ( media-libs/libdca )
@@ -31,8 +33,10 @@ RDEPEND="dev-libs/libxml2
 	libsamplerate? ( media-libs/libsamplerate )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl? ( media-libs/libsdl )
-	truetype? ( media-libs/freetype:2
-		media-libs/fontconfig )
+	truetype? (
+		media-libs/freetype:2
+		media-libs/fontconfig
+	)
 	vorbis? ( media-libs/libvorbis )
 	x264? ( media-libs/x264 )
 	xv? ( x11-libs/libXv )
@@ -41,8 +45,7 @@ RDEPEND="dev-libs/libxml2
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig
-	dev-util/cmake"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 BUILD_S=${WORKDIR}/${P}_build
@@ -93,46 +96,33 @@ src_configure() {
 		append-cflags "-flax-vector-conversions"
 	fi
 
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs+="
 		-DAVIDEMUX_SOURCE_DIR='${S}'
 		-DAVIDEMUX_INSTALL_PREFIX='${BUILD_S}'
-		-DAVIDEMUX_CORECONFIG_DIR='${BUILD_S}/config'"
-
-	# CMakeLists.txt
-	use gtk || mycmakeargs="${mycmakeargs} -DGTK=0"
-	use qt4 || mycmakeargs="${mycmakeargs} -DQT4=0"
-
-	# cmake/admCheckMiscLibs.cmake
-	use nls || mycmakeargs="${mycmakeargs} -DGETTEXT=0"
-	use sdl || mycmakeargs="${mycmakeargs} -DSDL=0"
-	use xv || mycmakeargs="${mycmakeargs} -DXVIDEO=0"
-
-	# cmake/admCheckAudioDeviceLibs.cmake
-	use alsa || mycmakeargs="${mycmakeargs} -DALSA=0"
-	use esd || mycmakeargs="${mycmakeargs} -DESD=0"
-	use jack || mycmakeargs="${mycmakeargs} -DJACK=0"
-	use oss || mycmakeargs="${mycmakeargs} -DOSS=0"
-	use pulseaudio || mycmakeargs="${mycmakeargs} -DPULSEAUDIOSIMPLE=0"
-
-	# cmake/admCheckAudioEncoderLibs.cmake
-	use aften || mycmakeargs="${mycmakeargs} -DAFTEN=0"
-	use mp3 || mycmakeargs="${mycmakeargs} -DLAME=0"
-	use aac || mycmakeargs="${mycmakeargs} -DFAAC=0"
-	use vorbis || mycmakeargs="${mycmakeargs} -DVORBIS=0"
-
-	# plugins/ADM_audioDecoders
-	use aac || mycmakeargs="${mycmakeargs} -DFAAD=0"
-	use dts || mycmakeargs="${mycmakeargs} -DLIBDCA=0"
-
-	# opencore
-	use amr || mycmakeargs="${mycmakeargs} -DOPENCORE_AMRNB=0 -DOPENCORE_AMRWB=0"
-
-	# plugins/ADM_videoFilters
-	use truetype || mycmakeargs="${mycmakeargs} -DFREETYPE2=0 -DFONTCONFIG=0"
-
-	# plugins/ADM_videoEncoder
-	use xvid || mycmakeargs="${mycmakeargs} -DXVID=0"
-	use x264 || mycmakeargs="${mycmakeargs} -DX264=0"
+		-DAVIDEMUX_CORECONFIG_DIR='${BUILD_S}/config'
+		$(cmake-utils_use gtk)
+		$(cmake-utils_use qt4)
+		$(cmake-utils_use nls GETTEXT)
+		$(cmake-utils_use sdl)
+		$(cmake-utils_use xv XVIDEO)
+		$(cmake-utils_use alsa)
+		$(cmake-utils_use esd)
+		$(cmake-utils_use jack)
+		$(cmake-utils_use oss)
+		$(cmake-utils_use pulseaudio PULSEAUDIOSIMPLE)
+		$(cmake-utils_use aften)
+		$(cmake-utils_use mp3 LAME)
+		$(cmake-utils_use aac FAAC)
+		$(cmake-utils_use aac FAAD)
+		$(cmake-utils_use vorbis)
+		$(cmake-utils_use dts LIBDCA)
+		$(cmake-utils_use amr OPENCORE_AMRNB)
+		$(cmake-utils_use amr OPENCORE_AMRWB)
+		$(cmake-utils_use truetype FREETYPE2)
+		$(cmake-utils_use truetype FONTCONFIG)
+		$(cmake-utils_use xvid)
+		$(cmake-utils_use x264)
+	"
 
 	cmake-utils_src_configure
 }
