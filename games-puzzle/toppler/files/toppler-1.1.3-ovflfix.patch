@@ -1,0 +1,11 @@
+--- leveledit.cc.old	2010-11-02 09:33:24.000000000 +0100
++++ leveledit.cc	2010-11-02 10:12:11.000000000 +0100
+@@ -436,7 +436,7 @@
+ 
+       snprintf(knam, 256, "%s%s", keymod2str(_ed_keys[k].mod), SDL_GetKeyName(_ed_keys[k].key));
+       
+-      snprintf(tabbuf2, 256, "%3i", maxkeylen - scr_textlength(knam));
++      snprintf(tabbuf2, sizeof(tabbuf2), "%3i", maxkeylen - scr_textlength(knam));
+       if (tabbuf2[0] < '0') tabbuf2[0] = '0';
+       if (tabbuf2[1] < '0') tabbuf2[1] = '0';
+       if (tabbuf2[2] < '0') tabbuf2[2] = '0';
