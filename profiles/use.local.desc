@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6104 2010/11/02 07:54:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6105 2010/11/02 18:13:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2783,6 +2783,9 @@ net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/clinkcc:mythtv - Enable MythTV support
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
+net-libs/daq:afpacket - Build the AFPacket data acquisition module
+net-libs/daq:dump - Build the Dump data acquisition module
+net-libs/daq:pcap - Build the PCAP data acquisition module
 net-libs/farsight2:upnp - Enable UPnP IGD support
 net-libs/gnutls:nettle - Use dev-libs/nettle as crypto backend
 net-libs/gssdp:introspection - Use dev-libs/gobject-introspection for introspection
