@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.57 2010/10/30 14:25:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.58 2010/11/02 07:10:10 grobian Exp $
+
+  02 Nov 2010; Fabian Groffen <grobian@gentoo.org> pcb-20100929.ebuild:
+  Fix ebuild for Prefix, bug #343777
 
   30 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org> pcb-20100929.ebuild:
   Fix tests wrt bug #342835. Thanks for reporting Diego.

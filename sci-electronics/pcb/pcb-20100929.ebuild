@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20100929.ebuild,v 1.2 2010/10/30 14:25:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20100929.ebuild,v 1.3 2010/11/02 07:10:10 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit fdo-mime gnome2-utils
 
@@ -87,7 +87,7 @@ src_configure() {
 	fi
 	use nelma && exporters="${exporters} nelma"
 	use gcode && exporters="${exporters} gcode"
-	use tk || export WISH="/bin/true"
+	use tk || export WISH="${EPREFIX}/bin/true"
 
 	econf \
 		${myconf} \
@@ -105,7 +105,7 @@ src_configure() {
 		--disable-rpath \
 		--disable-update-mime-database \
 		--disable-update-desktop-database \
-		--docdir="/usr/share/doc/${PF}"
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 # toporouter-output USE flag removed, there seems to be no result
 #		$(use_enable toporouter-output) \
