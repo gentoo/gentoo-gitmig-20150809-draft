@@ -4,8 +4,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 	<maintainer>
-		<email>marineam@gentoo.org</email>
-		<description>Actively maintained</description>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		Run a command with a new system hostname. Requires utsname namespaces.
