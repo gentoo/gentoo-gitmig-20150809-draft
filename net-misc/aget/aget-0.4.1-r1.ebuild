@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.1-r1.ebuild,v 1.2 2010/10/01 10:28:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.1-r1.ebuild,v 1.3 2010/11/02 14:27:11 darkside Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${ED}" install || die
 	dodoc AUTHORS ChangeLog README* THANKS TODO || die
 }
