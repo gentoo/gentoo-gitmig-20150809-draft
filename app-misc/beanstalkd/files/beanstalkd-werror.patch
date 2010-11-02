@@ -1,9 +1,0 @@
---- Makefile	2009-02-26 00:26:15.000000000 +0000
-+++ Makefile	2009-02-26 00:19:25.000000000 +0000
-@@ -1,5 +1,5 @@
- program := beanstalkd
--export CFLAGS := $(CFLAGS) -Wall -Werror
-+export CFLAGS := $(CFLAGS) -Wall
- export LDFLAGS := $(LDFLAGS) -levent
- export BINDIR := $(DESTDIR)/usr/bin
- 
