@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-desktop-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-desktop-python/ChangeLog,v 1.41 2010/10/14 22:27:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-desktop-python/ChangeLog,v 1.42 2010/11/02 02:17:27 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  gnome-desktop-python-2.30.2.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org>
   gnome-desktop-python-2.30.2.ebuild:
