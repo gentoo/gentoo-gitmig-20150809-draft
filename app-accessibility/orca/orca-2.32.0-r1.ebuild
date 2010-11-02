@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0-r1.ebuild,v 1.1 2010/10/17 18:22:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.0-r1.ebuild,v 1.2 2010/11/02 01:42:12 ford_prefect Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE=""
 # liblouis is not in portage yet
 # it is used to provide contracted braille support
 RDEPEND=">=dev-libs/glib-2.10
-	>=gnome-extra/at-spi-1.24
+	>=gnome-extra/at-spi-1.32
 	>=gnome-base/orbit-2
 	>=dev-python/pyorbit-2.24
 	>=gnome-base/libbonobo-2.24
