@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6103 2010/11/01 17:53:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6104 2010/11/02 07:54:18 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -245,6 +245,7 @@ app-crypt/seahorse-plugins:gedit - Enable text encryption plugin to integrate in
 app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate into the gnome-base/nautilus context menu
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
+app-doc/doxygen:tcl - adds experimental support for parsing/documenting Tcl source code
 app-doc/heirloom-doctools:cxx -  Build the mpm utility; this is disabled by default because it's rarely used and the only C++ tool in the suite. 
 app-doc/linuxfromscratch:htmlsingle - Also install all-in-one-page HTML version
 app-doc/pms:html - Generate PMS as .html as well
@@ -307,6 +308,7 @@ app-emacs/delicious:planner - Include support for app-emacs/planner
 app-emacs/easypg:gnus - Include support for the Gnus newsreader
 app-emacs/emacs-common-gentoo:emacs22icons - Install Emacs 22 style icons
 app-emacs/emhacks:jde - Enable support for Java Development Environment
+app-emacs/org-mode:contrib - Install user-contributed files
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
 app-emacs/remember:planner - Include support for app-emacs/planner
 app-emacs/slime:xref - Install xref.lisp cross-referencing tool
