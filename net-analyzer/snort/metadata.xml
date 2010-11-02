@@ -1,37 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>patrick@gentoo.org</email>
-  <name>Patrick Lauer</name>
-</maintainer>
-<maintainer>
-  <email>jason.r.wallace@gmail.com</email>
-  <name>Jason Wallace</name>
-</maintainer>
-
-<herd>netmon</herd>
-<longdescription>Libpcap-based packet sniffer/logger/lightweight IDS</longdescription>
-<use>
-
-<flag name='aruba'>Enable Aruba support</flag>                                                   
-<flag name='decoder-preprocessor-rules'></flag>
-<flag name='dynamicplugin'>Enable ability to dynamically load preprocessors, detection engine, and rules library</flag>
-<flag name='flexresp'>Enable new connection tearing (not recommended)</flag>
-<flag name='flexresp2'>Enable new connection tearing</flag>
-<flag name='gre'>Enable GRE support</flag>
-<flag name='inline'>Enable snort-inline for accepting packets from <pkg>net-firewall/iptables</pkg>, via libipq, rather than 
-	<pkg>net-libs/libpcap</pkg>.</flag>
-<flag name='inline-init-failopen'>Enable inline-init-failopen support</flag>
-<flag name='linux-smp-stats'>Enable statistics reporting through proc on smp systems</flag>
-<flag name='mpls'>Enable support for mpls networks</flag>
-<flag name='perfprofiling'>Enable preprocessor and rule performance profiling</flag>
-<flag name='ppm'>Enable ppm support</flag>
-<flag name='react'>Enable interception and termination of offending HTTP accesses</flag>
-<flag name='targetbased'>Enable targetbased support</flag>
-<flag name='timestats'>Enable TimeStats functionality</flag>
-<flag name='reload'>Enable reloading a configuration without restarting</flag>
-<flag name='reload-error-restart'>Enable restarting on reload error</flag>
-<flag name='zlib'>Enable Http Response Decompression</flag>
-</use>
+	<herd>netmon</herd>
+	<maintainer>
+		<email>patrick@gentoo.org</email>
+  		<name>Patrick Lauer</name>
+	</maintainer>
+	<maintainer>
+  		<email>jason.r.wallace@gmail.com</email>
+  		<name>Jason Wallace</name>
+	</maintainer>
+	<longdescription>
+		The de facto standard for intrusion detection and prevention
+	</longdescription>
+    <use>
+        <flag name='aruba'>
+            Adds support for monitoring wireless traffic using a Aruba Mobility
+			Controler.
+        </flag>
+        <flag name='decoder-preprocessor-rules'>
+            Added support to provide action control (alert, drop, pass, etc)
+			over preprocessor and decoder generated events.
+        </flag>
+        <flag name='dynamicplugin'>
+            Enable ability to dynamically load preprocessors, detection engine,
+            and rules library. This is required if you want to use shared 
+			object (SO) snort rules.
+        </flag>
+        <flag name='flexresp'>
+            (DEPRECIATED) Original method for enabling connection tearing for 
+			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
+        </flag>
+        <flag name='flexresp2'>
+            (DEPRECIATED) Replaced flexresp for enabling connection tearing for
+			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
+        </flag>
+        <flag name='gre'>
+			Enable support for inspecting and processing Generic Routing 
+			Encapsulation (GRE) packet headders. Only needed if you are
+			monitoring GRE tunnels.
+        </flag>
+        <flag name='inline'>
+			(DEPRECIATED) Enables support for deploying snort inline. Uses
+            <pkg>net-firewall/iptables</pkg>, via libipq, rather than
+            <pkg>net-libs/libpcap</pkg>. Replaced by DAQ in Snort-2.9.0
+        </flag>
+        <flag name='inline-init-failopen'>
+			Enables support to allow traffic to pass (fail-open) through
+			inline deployments while snort is starting and not ready to begin
+			inspecting traffic. If this option is not enabled, network
+			traffic will not pass (fail-closed) until snort has fully started
+			and is ready to perform packet inspection.
+        </flag>
+        <flag name='linux-smp-stats'>
+			Enable accurate statistics reporting through /proc on systems with
+			multipule processors.
+        </flag>
+        <flag name='mpls'>
+			Enables support for processing and inspecting Multiprotocol Label 
+			Switching MPLS network network traffic. Only needed if you are
+			monitoring an MPLS network.
+        </flag>
+        <flag name='perfprofiling'>
+            Enables support for preprocessor and rule performance profiling 
+			using the perfmonitor preprocessor.
+        </flag>
+        <flag name='ppm'>
+            Enables support for setting per rule or per packet latency limits.
+			Helps protect against introducing network latency with inline 
+			deployments.
+		</flag>
+        <flag name='react'>
+			Enables support for the react rule keyword. Supports interception,
+			termination, and redirection of HTTP connections.
+		</flag>
+		<flag name='targetbased'>
+			Enables support in snort for using a host attibute XML file 
+			(attribute_table.dtd). This file needs to be created by the user
+			and should define the IP address, operating system, and services
+			for all hosts on the monitored network. This is cumbersome, but
+			can improve intrusion detection accuracy.
+		</flag>
+		<flag name='timestats'>
+			(DEPRECIATED) Enables support for printing packet stats on a per
+			hour and per protocol breakdown. Depreciated in Snort-2.9.0.
+		</flag>
+		<flag name='reload'>
+			Enables support for reloading a configuration without restarting
+			snort.
+		</flag>
+		<flag name='reload-error-restart'>
+			Enables support for completely restarting snort if an error is 
+			detected durring a reload.
+		</flag>
+		<flag name='zlib'>
+			Enables HTTP inspection of compressed web traffic. Requires 
+			dynamicplugin be enabled.
+		</flag>
+		<flag name='active-response'>
+			Enables support for automatically sending TCP resets and ICMP 
+			unreachable messages to terminate connections. Used with inline
+			deployments.
+		</flag>
+		<flag name='normalizer'>
+			Enables support for normalizing packets in inline deployments to
+			help minimize the chances of detection evasion.
+		</flag>
+		<flag name='flexresp3'>
+			Enables support for new flexable response preprocessor for enabling
+			connection tearing for inline deployments. Replaces flexresp and 
+			flexresp2.
+		</flag>
+	</use>
 </pkgmetadata>
