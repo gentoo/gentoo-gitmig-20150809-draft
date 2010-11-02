@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/uf-view
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.13 2010/05/30 10:28:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.14 2010/11/02 02:54:16 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> uf-view-2.4.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   30 May 2010; Markos Chandras <hwoarang@gentoo.org> uf-view-2.4.ebuild:
   Fix dodoc command wrt bug #315579. Keyworded for amd64
