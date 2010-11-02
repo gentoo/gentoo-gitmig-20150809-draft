@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.7 2010/07/03 17:14:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.8 2010/11/02 02:56:36 ford_prefect Exp $
+
+EAPI=1
 
 inherit eutils autotools
 
@@ -30,7 +32,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/gnome-desktop )
+	gnome? ( gnome-base/gnome-desktop:2 )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )

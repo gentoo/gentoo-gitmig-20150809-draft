@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.56 2010/09/21 07:42:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.57 2010/11/02 02:54:24 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  compiz-0.8.6-r1.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> compiz-0.8.4.ebuild,
   compiz-0.8.4-r1.ebuild, compiz-0.8.4-r2.ebuild, compiz-0.8.4-r3.ebuild,

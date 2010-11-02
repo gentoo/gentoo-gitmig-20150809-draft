@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.143 2010/07/03 17:14:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.144 2010/11/02 02:56:36 ford_prefect Exp $
+
+  02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> icewm-1.2.37.ebuild:
+  Clarify gnome-desktop dep as being slot 2
 
   03 Jul 2010; Raúl Porcel <armin76@gentoo.org> icewm-1.2.37.ebuild:
   sparc/x86 stable wrt #266700
