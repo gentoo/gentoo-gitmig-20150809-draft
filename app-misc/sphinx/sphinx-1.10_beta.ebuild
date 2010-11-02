@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-1.10_beta.ebuild,v 1.1 2010/07/21 13:02:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-1.10_beta.ebuild,v 1.2 2010/11/02 18:13:16 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils autotools
 
 MY_P=${P/_/-}
@@ -38,12 +38,14 @@ src_unpack() {
 }
 
 src_prepare() {
+	# drop nasty hardcoded search path breaking Prefix
+	sed -i -e '/\/usr\/local\//d' configure.ac || die
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--sysconfdir="/etc/${PN}" \
+		--sysconfdir="${EPREFIX}/etc/${PN}" \
 		$(use_enable id64) \
 		$(use_with debug) \
 		$(use_with mysql) \
