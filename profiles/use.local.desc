@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6107 2010/11/02 20:34:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6108 2010/11/02 21:14:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1296,6 +1296,7 @@ dev-vcs/git:mozsha1 - Makes git use an optimized SHA1 routine from Mozilla that 
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch.
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support.
 dev-vcs/git:webdav - Adds support for push'ing to HTTP repositories via DAV.
+dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
