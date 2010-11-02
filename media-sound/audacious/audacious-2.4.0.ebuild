@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.4.0.ebuild,v 1.3 2010/10/13 15:20:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.4.0.ebuild,v 1.4 2010/11/02 00:07:23 halcy0n Exp $
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -11,7 +11,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="altivec chardet debug nls session sse2"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
