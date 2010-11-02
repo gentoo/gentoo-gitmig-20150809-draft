@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.182 2010/10/07 23:08:03 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.183 2010/11/02 07:28:59 nerdboy Exp $
+
+*doxygen-1.7.2 (02 Nov 2010)
+
+  02 Nov 2010; Steve Arnold <nerdboy@gentoo.org> +doxygen-1.7.2.ebuild,
+  metadata.xml:
+  Updated to latest release and added (optional) native Tcl support.  See
+  upstream bug #633448 and Gentoo bug #340397.
 
   07 Oct 2010; Alex Alexander <wired@gentoo.org> doxygen-1.5.8-r1.ebuild:
   only call eqmake4 if use qt4, bug #340092
