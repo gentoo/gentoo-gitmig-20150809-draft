@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.2 2010/10/06 19:58:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.3 2010/11/02 17:09:56 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -16,7 +16,7 @@
 # This eclass provides a unified interface for compiling and installing standalone
 # PHP extensions (modules).
 
-inherit flag-o-matic autotools
+inherit flag-o-matic autotools depend.php
 
 EXPORT_FUNCTIONS src_unpack src_configure src_compile src_install
 
@@ -60,22 +60,22 @@ esac
 # @ECLASS-VARIABLE: USE_PHP
 # @DESCRIPTION:
 # Lists the PHP slots compatibile the extension is compatibile with
-[[ -z "$USE_PHP" ]] && USE_PHP="php5-2 php5-3"
+[[ -z "${USE_PHP}" ]] && USE_PHP="php5-2 php5-3"
 
 #Make sure at least one target is installed. Abuses USE dependencies.
-for target in $USE_PHP; do
-	IUSE="${IUSE} php_targets_$target"
+for target in ${USE_PHP}; do
+	IUSE="${IUSE} php_targets_${target}"
 	target=${target/+}
-	SELFDEPEND="$SELFDEPEND =$CATEGORY/$PF[php_targets_$target]"
+	SELFDEPEND="${SELFDEPEND} =${CATEGORY}/${PF}[php_targets_${target}]"
 	slot=${target/php}
 	slot=${slot/-/.}
-	PHPDEPEND="$PHPDEPEND 
-	php_targets_$target? ( dev-lang/php:${slot} )"
+	PHPDEPEND="${PHPDEPEND} 
+	php_targets_${target}? ( dev-lang/php:${slot} )"
 done
 	
 RDEPEND="${RDEPEND} 
-	|| ( $SELFDEPEND )
-	$PHPDEPEND"
+	|| ( ${SELFDEPEND} )
+	${PHPDEPEND}"
 
 
 # @FUNCTION: php-ext-source-r2_src_unpack
@@ -91,8 +91,8 @@ php-ext-source-r2_src_unpack() {
 	unpack ${A}
 	local slot orig_s="$S"
 	for slot in $(php_get_slots); do
-		cp -r "$orig_s" "${WORKDIR}/$slot"
-		php_init_slot_env $slot
+		cp -r "${orig_s}" "${WORKDIR}/${slot}"
+		php_init_slot_env ${slot}
 		if [[ "${PHP_EXT_SKIP_PHPIZE}" != 'yes' ]] ; then
 			php-ext-source-r2_phpize
 		fi
@@ -123,7 +123,7 @@ php-ext-source-r2_phpize() {
 php-ext-source-r2_src_configure() {
 	local slot
 	for slot in $(php_get_slots); do
-		php_init_slot_env $slot
+		php_init_slot_env ${slot}
 		# Set the correct config options
 		# We cannot use econf here, phpize/php-config deals with setting
 		# --prefix etc to whatever the php slot was configured to use
@@ -141,7 +141,7 @@ php-ext-source-r2_src_compile() {
 	addpredict /session_mm_cli0.sem
 	local slot	
 	for slot in $(php_get_slots); do
-		php_init_slot_env $slot
+		php_init_slot_env ${slot}
 		emake || die "Unable to make code"
 
 	done
@@ -157,12 +157,13 @@ php-ext-source-r2_src_compile() {
 php-ext-source-r2_src_install() {
 	local slot
 	for slot in $(php_get_slots); do
-		php_init_slot_env $slot
+		php_init_slot_env ${slot}
 
 		# Let's put the default module away
 		insinto "${EXT_DIR}"
 		newins "modules/${PHP_EXT_NAME}.so" "${PHP_EXT_NAME}.so" || die "Unable to install extension"
 
+		local doc
 		for doc in ${DOCS} ; do
 			[[ -s ${doc} ]] && dodoc ${doc}
 		done
@@ -173,10 +174,9 @@ php-ext-source-r2_src_install() {
 
 
 php_get_slots() {
-	local s
-	local slot
-	for slot in $USE_PHP; do
-		use php_targets_$slot && s+=" ${slot/-/.}"
+	local s slot
+	for slot in ${USE_PHP}; do
+		use php_targets_${slot} && s+=" ${slot/-/.}"
 	done
 	echo $s
 }
@@ -184,16 +184,16 @@ php_get_slots() {
 php_init_slot_env() {
 	libdir=$(get_libdir)
 
-	PHPIZE="/usr/${libdir}/$1/bin/phpize"
-	PHPCONFIG="/usr/${libdir}/$1/bin/php-config"
-	PHPCLI="/usr/${libdir}/$1/bin/php"
-	PHPCGI="/usr/${libdir}/$1/bin/php-cgi"
+	PHPIZE="/usr/${libdir}/${1}/bin/phpize"
+	PHPCONFIG="/usr/${libdir}/${1}/bin/php-config"
+	PHPCLI="/usr/${libdir}/${1}/bin/php"
+	PHPCGI="/usr/${libdir}/${1}/bin/php-cgi"
 	PHP_PKG="$(best_version =dev-lang/php-${1:3}*)"
-	PHPPREFIX="/usr/${libdir}/$slot"
+	PHPPREFIX="/usr/${libdir}/${slot}"
 	EXT_DIR="$(${PHPCONFIG} --extension-dir 2>/dev/null)"
 
-	S="${WORKDIR}/$1"
-	cd $S
+	S="${WORKDIR}/${1}"
+	cd "${S}"
 }
 
 php-ext-source-r2_buildinilist() {
@@ -203,7 +203,7 @@ php-ext-source-r2_buildinilist() {
 	fi
 
 	PHPINIFILELIST=""
-
+	local x
 	for x in ${PHPSAPILIST} ; do
 		if [[ -f "/etc/php/${x}-${1}/php.ini" ]] ; then
 			PHPINIFILELIST="${PHPINIFILELIST} etc/php/${x}-${1}/ext/${PHP_EXT_NAME}.ini"
@@ -217,11 +217,11 @@ php-ext-source-r2_buildinilist() {
 php-ext-source-r2_createinifiles() {
 	local slot
 	for slot in $(php_get_slots); do 
-		php_init_slot_env $slot		
+		php_init_slot_env ${slot}
 		# Pull in the PHP settings
 
 		# Build the list of <ext>.ini files to edit/add to
-		php-ext-source-r2_buildinilist $slot
+		php-ext-source-r2_buildinilist ${slot}
 
 		# Add the needed lines to the <ext>.ini files
 		if [[ "${PHP_EXT_INI}" = "yes" ]] ; then
@@ -251,14 +251,14 @@ php-ext-source-r2_addextension() {
 			else
 				ext_type="zend_extension_ts"
 			fi
-			ext_file="${EXT_DIR}/$1"
+			ext_file="${EXT_DIR}/${1}"
 		else
 			if has_debug ; then
 				ext_type="zend_extension_debug"
 			else
 				ext_type="zend_extension"
 			fi
-			ext_file="${EXT_DIR}/$1"
+			ext_file="${EXT_DIR}/${1}"
 		fi
 
 		# php-5.3 unifies zend_extension loading and just requires the
@@ -271,7 +271,7 @@ php-ext-source-r2_addextension() {
 	else
 		# We don't need the full path for normal extensions!
 		ext_type="extension"
-		ext_file="$1"
+		ext_file="${1}"
 	fi
 
 	php-ext-source-r2_addtoinifiles "${ext_type}" "${ext_file}" "Extension added"
@@ -282,27 +282,27 @@ php-ext-source-r2_addextension() {
 # $3 - File to add to
 # $4 - Sanitized text to output
 php-ext-source-r2_addtoinifile() {
-	if [[ ! -d $(dirname $3) ]] ; then
-		mkdir -p $(dirname $3)
+	if [[ ! -d $(dirname ${3}) ]] ; then
+		mkdir -p $(dirname ${3})
 	fi
 
 	# Are we adding the name of a section?
 	if [[ ${1:0:1} == "[" ]] ; then
-		echo "$1" >> "$3"
-		my_added="$1"
+		echo "${1}" >> "${3}"
+		my_added="${1}"
 	else
-		echo "$1=$2" >> "$3"
-		my_added="$1=$2"
+		echo "${1}=${2}" >> "${3}"
+		my_added="${1}=${2}"
 	fi
 
-	if [[ -z "$4" ]] ; then
-		einfo "Added '$my_added' to /$3"
+	if [[ -z "${4}" ]] ; then
+		einfo "Added '${my_added}' to /${3}"
 	else
-		einfo "$4 to /$3"
+		einfo "${4} to /${3}"
 	fi
 
-	insinto /$(dirname $3)
-	doins "$3"
+	insinto /$(dirname ${3})
+	doins "${3}"
 }
 
 # @FUNCTION: php-ext-source-r2_addtoinifiles
@@ -325,7 +325,8 @@ php-ext-source-r2_addtoinifile() {
 # php-ext-source-r2_addtoinifiles "debugger.profiler_enabled" "on"
 # @CODE
 php-ext-source-r2_addtoinifiles() {
+	local x
 	for x in ${PHPINIFILELIST} ; do
-		php-ext-source-r2_addtoinifile "$1" "$2" "$x" "$3"
+		php-ext-source-r2_addtoinifile "${1}" "${2}" "${x}" "${3}"
 	done
 }
