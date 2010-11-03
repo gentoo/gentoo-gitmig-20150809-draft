@@ -43,13 +43,10 @@ move net-libs/aqhbci-qt-wizard net-libs/aqhbci-qt-tools
 move app-misc/mindterm-bin net-misc/mindterm
 slotmove =dev-java/rhino-1.5* 0 1.5
 slotmove =dev-java/rhino-1.6* 0 1.6
-slotmove sys-libs/libchipcard 0 1
 move net-misc/ksambaplugin kde-base/kdenetwork
 move media-gfx/kolourpaint kde-base/kdegraphics
 move x11-misc/kmousetool kde-base/kdeaccessibility
 move net-www/drupal www-apps/drupal
-slotmove sys-libs/chipcard-client 0 2
-slotmove sys-libs/chipcard-server 0 2
 move sys-libs/chipcard-client sys-libs/libchipcard
 move sys-libs/chipcard-server sys-libs/libchipcard
 move app-misc/tinyca app-crypt/tinyca
