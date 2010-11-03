@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-5.0.1.ebuild,v 1.1 2010/11/03 14:09:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-5.0.1.ebuild,v 1.2 2010/11/03 14:10:39 ssuominen Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ MAKEOPTS="${MAKEOPTS} -j1" # Last known version to fail is 5.0.1
 src_configure() {
 	local backends="aqhbci aqnone aqpaypal"
 	use ofx && backends="${backends} aqofxconnect"
-	
+
 	local myconf
 	use gtk && myconf="--enable-gui-tests"
 
@@ -53,7 +53,6 @@ src_install() {
 		README.aqhbci-tool
 	newdoc src/plugins/backends/aqpaypal/tools/aqpaypal-tool/README \
 		README.aqpaypal-tool
-
 
 	if use examples; then
 		docinto tutorials
