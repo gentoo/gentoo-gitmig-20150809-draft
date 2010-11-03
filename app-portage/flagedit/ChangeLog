@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.23 2010/08/25 17:27:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.24 2010/11/03 00:18:33 jmbsvicetto Exp $
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Retiring dams from metadata - bug 200330.
 
   25 Aug 2010; Christian Ruppert <idl0r@gentoo.org> flagedit-0.0.5.ebuild,
   flagedit-0.0.7.ebuild, flagedit-0.0.8.ebuild:
