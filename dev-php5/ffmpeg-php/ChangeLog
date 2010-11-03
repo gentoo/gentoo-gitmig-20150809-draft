@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ffmpeg-php
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ChangeLog,v 1.5 2009/09/22 04:44:18 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ChangeLog,v 1.6 2010/11/03 23:06:16 mabi Exp $
+
+*ffmpeg-php-0.6.0-r1 (03 Nov 2010)
+
+  03 Nov 2010; Matti Bickel <mabi@gentoo.org> +ffmpeg-php-0.6.0-r1.ebuild:
+  create minor slotting compatible version
 
   22 Sep 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0.ebuild,
   +files/ffmpeg-php-0.6.0-avutil50.patch:
