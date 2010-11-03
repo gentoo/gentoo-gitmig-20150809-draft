@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.10 2010/11/01 04:32:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.11 2010/11/03 21:52:46 maekke Exp $
+
+  03 Nov 2010; Markus Meier <maekke@gentoo.org> upnpscan-0.4-r2.ebuild:
+  x86 stable, bug #343333
 
   01 Nov 2010; Jeroen Roovers <jer@gentoo.org> upnpscan-0.4-r2.ebuild,
   files/upnpscan-0.4-cflags.patch, +files/upnpscan-0.4-r2-cflags.patch:
