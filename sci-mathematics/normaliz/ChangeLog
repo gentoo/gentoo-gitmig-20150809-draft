@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/normaliz
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.1 2010/11/03 08:24:52 tomka Exp $
+
+*normaliz-2.5-r1 (03 Nov 2010)
+
+  03 Nov 2010; Thomas Kahle <tomka@gentoo.org> +normaliz-2.5-r1.ebuild,
+  +files/normaliz-2.5-makefile.patch, +metadata.xml:
+  Initial import of normaliz from science overlay
+

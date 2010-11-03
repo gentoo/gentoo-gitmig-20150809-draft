@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>tomka@gentoo.org</email>
+  <name>Thomas Kahle</name>
+</maintainer>
+<herd>sci</herd>
+<use>
+  <flag name="extras"> Install Macaulay2 and Singular packages as shipped by upstream</flag>
+</use>
+<longdescription lang="en">
+Normaliz is a (command line) tool for computations in affine monoids, vector configurations, lattice polytopes, and
+rational cones.
+</longdescription>
+</pkgmetadata>
