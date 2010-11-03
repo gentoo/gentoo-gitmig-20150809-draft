@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.54 2010/10/13 21:49:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.55 2010/11/03 21:07:34 ford_prefect Exp $
+
+*telepathy-glib-0.12.3 (03 Nov 2010)
+
+  03 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +telepathy-glib-0.12.3.ebuild:
+  Bump to 0.12.3 - small fixes and a bunch of bug fixese since 0.12.0. Also,
+  don't let USE=debug control --enable-debug - this is only enables
+  conditionally enabled code to get debugging output (which upstream needs
+  to actually debug any issues remotely).
 
   13 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   telepathy-glib-0.12.0.ebuild, metadata.xml:
