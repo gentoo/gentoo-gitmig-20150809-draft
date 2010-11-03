@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.20 2010/09/16 17:51:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.21 2010/11/03 08:56:15 tupone Exp $
+
+  03 Nov 2010; Alfredo Tupone <tupone@gentoo.org> supertuxkart-0.6.2.ebuild,
+  +files/supertuxkart-0.6.2-ovflfix.patch:
+  Fix overflow. Bug #339107 by flameeyes@gentoo.org
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   supertuxkart-0.6.2.ebuild:
