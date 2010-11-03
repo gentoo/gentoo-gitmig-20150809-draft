@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.89 2010/08/30 17:58:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.90 2010/11/03 12:58:17 ssuominen Exp $
+
+*libchipcard-5.0.0 (03 Nov 2010)
+
+  03 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libchipcard-5.0.0.ebuild, +files/libchipcard-5.0.0-pcsc-lite-1.6.2.patch:
+  Version bump wrt #343941 by Sebastian Lüttich.
 
   30 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libchipcard-4.2.9.ebuild:
