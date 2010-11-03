@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.11 2010/09/13 10:22:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.12 2010/11/03 22:01:25 hwoarang Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac hal jack kde ladspa
 libsamplerate lyrics +mad mms modplug mplayer mpris musepack notifier oss
 projectm pulseaudio scrobbler sndfile tray udisks +vorbis wavpack"
 
-RDEPEND="x11-libs/qt-gui:4[qt3support]
+RDEPEND="x11-libs/qt-qt3support:4
 	media-libs/taglib
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )

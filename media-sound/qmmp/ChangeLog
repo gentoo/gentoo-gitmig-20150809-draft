@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.55 2010/11/03 21:32:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.56 2010/11/03 22:01:25 hwoarang Exp $
+
+  03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> qmmp-0.4.2.ebuild,
+  qmmp-0.4.3.ebuild, qmmp-9999.ebuild:
+  Replace qt-gui dependency with qt-qt3support
 
 *qmmp-0.4.3 (03 Nov 2010)
 
