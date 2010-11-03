@@ -1,6 +1,43 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.124 2010/11/03 06:54:29 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.125 2010/11/03 07:10:08 keri Exp $
+
+  03 Nov 2010; <keri@gentoo.org> mercury-10.04.ebuild,
+  mercury-10.04.1.ebuild, -files/mercury-10.04.1-boehm_gc.patch,
+  -files/mercury-10.04.1-bootstrap-depend.patch,
+  -files/mercury-10.04.1-char-det-from-int.patch,
+  -files/mercury-10.04.1-default-grade.patch,
+  -files/mercury-10.04.1-docs.patch,
+  -files/mercury-10.04.1-linker-flags.patch,
+  -files/mercury-10.04.1-multilib.patch,
+  -files/mercury-10.04.1-no-reconf.patch,
+  -files/mercury-10.04.1-sparc-llds-base-grade.patch,
+  -files/mercury-10.04.1-tests-sandbox.patch,
+  -files/mercury-10.04.1-tests-static-link.patch,
+  -files/mercury-10.04.1-tests-workspace.patch, mercury-10.04.2.ebuild,
+  mercury-10.04.2-r1.ebuild, -files/mercury-10.04.2-boehm_gc.patch,
+  -files/mercury-10.04.2-bootstrap-depend.patch,
+  -files/mercury-10.04.2-char-det-from-int.patch,
+  -files/mercury-10.04.2-default-grade.patch,
+  -files/mercury-10.04.2-docs.patch,
+  -files/mercury-10.04.2-linker-flags.patch,
+  -files/mercury-10.04.2-multilib.patch,
+  -files/mercury-10.04.2-no-reconf.patch,
+  -files/mercury-10.04.2-prepare-install-dir.patch,
+  -files/mercury-10.04.2-sparc-llds-base-grade.patch,
+  -files/mercury-10.04.2-tests-sandbox.patch,
+  -files/mercury-10.04.2-tests-static-link.patch,
+  -files/mercury-10.04.2-tests-workspace.patch,
+  -files/mercury-10.04-boehm_gc.patch,
+  -files/mercury-10.04-default-grade.patch, -files/mercury-10.04-docs.patch,
+  -files/mercury-10.04-linker-flags.patch,
+  -files/mercury-10.04-multilib.patch, -files/mercury-10.04-no-reconf.patch,
+  -files/mercury-10.04-sparc-llds-base-grade.patch,
+  -files/mercury-10.04-tests-mercury-float.patch,
+  -files/mercury-10.04-tests-sandbox.patch,
+  -files/mercury-10.04-tests-static-link.patch,
+  -files/mercury-10.04-tests-workspace.patch:
+  Bundle patches into distfiles tarball. Closes #343731
 
   03 Nov 2010; <keri@gentoo.org> -mercury-10.04_beta1.ebuild,
   -files/mercury-10.04_beta1-atomic-ops.patch,
