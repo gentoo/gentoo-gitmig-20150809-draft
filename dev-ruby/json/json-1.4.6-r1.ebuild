@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.6-r1.ebuild,v 1.1 2010/10/31 08:37:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.6-r1.ebuild,v 1.2 2010/11/03 18:37:47 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -44,17 +44,12 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	# We have to set RUBYLIB because otherwise the tests will run
-	# against the sytem-installed json; at the same time, we cannot
-	# use the -I parameter because rake won't let it pass to the
-	# testrb call that is executed down the road.
-
-	RUBYLIB="${RUBYLIB}${RUBYLIB+:}lib:ext/json/ext" \
-		${RUBY} -S rake test_pure || die "pure ruby tests failed"
+	JSON=pure \
+	${RUBY} -Iext:lib -S testrb tests/*.rb || die "pure ruby tests failed"
 
 	if [[ $(basename ${RUBY}) != "jruby" ]]; then
-		RUBYLIB="${RUBYLIB}${RUBYLIB+:}lib:ext" \
-			${RUBY} -Ilib:ext -S rake test_ext || die " ruby extension tests failed"
+		JSON=ext \
+		${RUBY} -Iext:lib -S testrb tests/*.rb || die "ext ruby tests failed"
 	fi
 }
 
