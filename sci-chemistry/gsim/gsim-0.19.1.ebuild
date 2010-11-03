@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.19.1.ebuild,v 1.1 2010/11/03 09:37:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.19.1.ebuild,v 1.2 2010/11/03 09:54:03 jlec Exp $
 
 EAPI="3"
 
@@ -34,17 +34,17 @@ src_prepare() {
 	qt4-r2_src_prepare
 
 	cat >> build.conf <<- EOF
-	INCLUDEPATH += ${EPREFIX}/usr/include/libcmatrixR3/ \
-		${EPREFIX}/usr/include/Minuit2 \
-		${EPREFIX}/usr/include
+	INCLUDEPATH += \"${EPREFIX}/usr/include/libcmatrixR3/\" \
+		\"${EPREFIX}/usr/include/Minuit2\" \
+		\"${EPREFIX}/usr/include\"
 	LIBS += -lcmatrix  -lMinuit2 -lmuparser $(pkg-config --libs cblas)
 	EOF
 	use opengl && echo "CONFIG+=use_opengl" >> build.conf
 	if use emf; then
 	cat >> build.conf <<- EOF
 	CONFIG+=use_emf
-   DEFINES+=USE_EMF_OUTPUT
-	LIBS += -L${EPREFIX}/usr/include/libEMF -lEMF
+	DEFINES+=USE_EMF_OUTPUT
+	LIBS += -L\"${EPREFIX}/usr/include/libEMF\" -lEMF
 	EOF
 	fi
 	sed \
