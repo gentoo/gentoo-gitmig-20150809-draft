@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.2 2010/10/28 21:14:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.3 2010/11/03 21:51:25 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc examples" #introspection
 
 RDEPEND=">=x11-libs/gtk+-2.17.1
