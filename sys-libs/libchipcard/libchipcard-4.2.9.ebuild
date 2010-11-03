@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.9.ebuild,v 1.2 2010/08/30 17:58:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.9.ebuild,v 1.3 2010/11/03 12:59:13 ssuominen Exp $
 
 EAPI=2
 
@@ -13,10 +13,11 @@ SLOT="2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-DEPEND=">=sys-libs/gwenhywfar-3.11.3
+RDEPEND=">=sys-libs/gwenhywfar-3.11.3
 	dev-libs/libgcrypt
 	net-libs/gnutls
 	sys-apps/hal"
+DEPEND="${RDEPEND}"
 
 src_configure() {
 	econf \
