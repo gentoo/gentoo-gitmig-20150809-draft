@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.186 2010/11/03 09:36:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.187 2010/11/03 13:08:19 scarabeus Exp $
+
+  03 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> -xinit-1.2.1.ebuild,
+  -xinit-1.2.1-r2.ebuild:
+  old
 
   03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xinit-1.2.0-r4.ebuild:
