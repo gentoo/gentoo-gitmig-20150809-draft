@@ -1,12 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.2.ebuild,v 1.1 2010/10/10 05:32:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.2.ebuild,v 1.2 2010/11/03 07:51:27 keri Exp $
 
 inherit eutils
 
+PATCHSET_VER="0"
+
 DESCRIPTION="Additional libraries and tools that are not part of the Mercury standard library"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/${P}.tar.gz"
+SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,22 +31,18 @@ DEPEND="~dev-lang/mercury-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-curs.patch
-	epatch "${FILESDIR}"/${P}-dynamic-linking.patch
-	epatch "${FILESDIR}"/${P}-lex.patch
-	epatch "${FILESDIR}"/${P}-mercury-glut.patch
-	epatch "${FILESDIR}"/${P}-mercury-tcltk.patch
-	epatch "${FILESDIR}"/${P}-mercury-opengl.patch
-	epatch "${FILESDIR}"/${P}-posix.patch
-	epatch "${FILESDIR}"/${P}-no-java-grade-no-erlang-grade.patch
+
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
 
 	if use odbc; then
-		epatch "${FILESDIR}"/${P}-odbc.patch
+		epatch "${WORKDIR}"/${PV}-odbc/${P}-odbc.patch
 	elif use iodbc; then
-		epatch "${FILESDIR}"/${P}-iodbc.patch
+		epatch "${WORKDIR}"/${PV}-odbc/${P}-iodbc.patch
 	fi
 
+	cd "${S}"
 	sed -i	-e "s:posix:posix quickcheck:" \
 		-e "s:references::" \
 		-e "s:windows_installer_generator ::" Mmakefile
