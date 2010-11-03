@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.224 2010/10/23 15:40:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.225 2010/11/03 02:05:23 darkside Exp $
+
+  03 Nov 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Remove portage-2.2 mask now that it isn't masked in gx86
 
   23 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.use.mask:
   Mask USE=ipc for portage, since it causes more trouble than anything
