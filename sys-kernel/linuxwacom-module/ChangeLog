@@ -1,0 +1,13 @@
+# ChangeLog for sys-kernel/linuxwacom-module
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/ChangeLog,v 1.1 2010/11/03 10:46:29 pva Exp $
+
+*linuxwacom-module-0.8.8_p10 (03 Nov 2010)
+
+  03 Nov 2010; Peter Volkov <pva@gentoo.org>
+  +linuxwacom-module-0.8.8_p10.ebuild,
+  +files/linuxwacom-module-2.6.36.patch, +files/check_driver,
+  +files/check_driver.1, +metadata.xml:
+  Inital import. Work based on linuxwacom package that was removed from the
+  tree, bug #335821, thank Julien Sanchez for help.
+
