@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6110 2010/11/03 08:34:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6111 2010/11/03 09:34:38 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3412,6 +3412,7 @@ sci-libs/getdata:lzma - Support for encodings provided by liblzma
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/indilib:fits - Enable support for the FITS image format through cfitsio
 sci-libs/indilib:nova - Enable support for nova celestial mechanics calculations
+sci-libs/libcmatrix:atlas - Use of atlas blas implementation
 sci-libs/libgeda:threads - Enable (posix) threads for the GTK GUI
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
