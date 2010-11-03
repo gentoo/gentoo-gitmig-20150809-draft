@@ -1,0 +1,12 @@
+--- src/session.c.orig	2010-11-03 19:24:35.000000000 +0100
++++ src/session.c	2010-11-03 19:25:02.000000000 +0100
+@@ -2280,8 +2280,8 @@
+             if (ctest->runmode && cfg->rig_clr_rit){
+                 trig_set_rit(trig, 0.0);
+             }
+-            qso_saved = 1;
+ #endif
++            qso_saved = 1;
+         }
+     }
+     dbg("process_input(runmode=%d, len=%d, cq=%d, last_cq=%p)\n", ctest->runmode, strlen(text), cq, gses->last_cq);
