@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.9.ebuild,v 1.5 2010/10/29 00:22:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.9.ebuild,v 1.6 2010/11/03 21:50:23 maekke Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
