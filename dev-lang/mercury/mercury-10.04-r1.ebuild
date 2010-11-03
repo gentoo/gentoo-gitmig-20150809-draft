@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04-r1.ebuild,v 1.1 2010/08/22 06:09:57 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04-r1.ebuild,v 1.2 2010/11/03 07:32:54 keri Exp $
 
 inherit elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
+PATCHSET_VER="0"
 MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
 SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/${MY_P}.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz
 	test? ( http://www.mercury.cs.mu.oz.au/download/files/mercury-tests-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
@@ -34,23 +36,16 @@ SITEFILE=50${PN}-gentoo.el
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-multilib.patch
-	epatch "${FILESDIR}"/${P}-linker-flags.patch
-	epatch "${FILESDIR}"/${P}-default-grade.patch
-	epatch "${FILESDIR}"/${P}-boehm_gc.patch
-	epatch "${FILESDIR}"/${P}-sparc-llds-base-grade.patch
-	epatch "${FILESDIR}"/${P}-docs.patch
-	epatch "${FILESDIR}"/${P}-no-reconf.patch
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
 
 	sed -i -e "s/@libdir@/$(get_libdir)/" \
 		"${S}"/compiler/make.program_target.c \
 		"${S}"/scripts/Mmake.vars.in
 
 	if use test; then
-		epatch "${FILESDIR}"/${P}-tests-workspace.patch
-		epatch "${FILESDIR}"/${P}-tests-sandbox.patch
-		epatch "${FILESDIR}"/${P}-tests-mercury-float.patch
-		epatch "${FILESDIR}"/${P}-tests-static-link.patch
+		epatch "${WORKDIR}"/${PV}-tests
 	fi
 }
 
