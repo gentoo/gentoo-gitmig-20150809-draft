@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.123 2010/10/31 00:02:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.124 2010/11/03 06:54:29 keri Exp $
+
+  03 Nov 2010; <keri@gentoo.org> -mercury-10.04_beta1.ebuild,
+  -files/mercury-10.04_beta1-atomic-ops.patch,
+  -files/mercury-10.04_beta1-boehm_gc.patch,
+  -files/mercury-10.04_beta1-docs.patch,
+  -files/mercury-10.04_beta1-multilib.patch,
+  -files/mercury-10.04_beta1-no-reconf.patch,
+  -files/mercury-10.04_beta1-ppc-lexer.patch,
+  -files/mercury-10.04_beta1-tests-sandbox.patch,
+  -files/mercury-10.04_beta1-tests-subdir.patch,
+  -files/mercury-10.04_beta1-tests-workspace.patch:
+  Remove old beta version
 
   31 Oct 2010; <keri@gentoo.org> mercury-10.04.2-r1.ebuild,
   +files/mercury-10.04.2-prepare-install-dir.patch:
