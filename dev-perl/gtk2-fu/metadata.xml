@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
-  <maintainer>
-    <email>dams@gentoo.org</email>
-    <name>dams</name>
-  </maintainer>
   <upstream>
     <remote-id type="cpan">Gtk2Fu</remote-id>
   </upstream>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-fu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.28 2010/03/28 00:13:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.29 2010/11/03 00:27:33 jmbsvicetto Exp $
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Retiring dams from metadata - bug 200330.
 
 *gtk2-fu-0.11 (28 Mar 2010)
 
