@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/polymake
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.1 2010/11/03 08:39:25 tomka Exp $
+
+*polymake-2.9.8 (03 Nov 2010)
+
+  03 Nov 2010; Thomas Kahle <tomka@gentoo.org> +polymake-2.9.8.ebuild,
+  +metadata.xml:
+  initial import, fixes bug 207033
+
