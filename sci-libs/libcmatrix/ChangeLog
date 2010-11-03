@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libcmatrix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.1 2010/11/03 09:30:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.2 2010/11/03 09:35:06 jlec Exp $
+
+  03 Nov 2010; Justin Lecher <jlec@gentoo.org> libcmatrix-3.2.1.ebuild:
+  Keyworded for ~-linux prefix
 
 *libcmatrix-3.2.1 (03 Nov 2010)
 
