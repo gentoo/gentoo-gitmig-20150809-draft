@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.552 2010/10/29 14:00:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.553 2010/11/03 09:18:14 phajdan.jr Exp $
+
+  03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mysql-5.1.51.ebuild:
+  x86 stable wrt security bug #339717
 
   29 Oct 2010; Markus Meier <maekke@gentoo.org> mysql-5.1.50-r1.ebuild:
   arm stable, bug #321791
