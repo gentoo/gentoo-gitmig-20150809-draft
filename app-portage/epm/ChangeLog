@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/epm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.26 2010/10/19 11:21:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.27 2010/11/03 02:50:15 jmbsvicetto Exp $
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Retiring kanaka from metadata - bug 42662.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> epm-0.9.1.ebuild,
   epm-1.33.ebuild:
