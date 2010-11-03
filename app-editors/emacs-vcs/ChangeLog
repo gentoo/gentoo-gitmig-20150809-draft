@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.33 2010/10/25 21:31:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.34 2010/11/03 20:16:40 ulm Exp $
+
+  03 Nov 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild:
+  Pass the --with-crt-dir option to configure, as it was backported upstream.
 
   25 Oct 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
   emacs-vcs-24.0.9999.ebuild:
