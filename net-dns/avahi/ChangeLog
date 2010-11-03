@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.187 2010/10/06 22:47:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.188 2010/11/03 13:02:49 scarabeus Exp $
+
+  03 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> avahi-0.6.28.ebuild:
+  QA: add missing dies, remove dies from pkg_setup, cleanup conditions in
+  configure phase.
 
   06 Oct 2010; Sven Wegener <swegener@gentoo.org> avahi-0.6.28.ebuild:
   Bump libdaemon dependency to 0.14, bug #339885.
