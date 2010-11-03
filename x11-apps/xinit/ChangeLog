@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.185 2010/11/02 23:35:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.186 2010/11/03 09:36:23 phajdan.jr Exp $
+
+  03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xinit-1.2.0-r4.ebuild:
+  x86 stable wrt security bug #343911
 
 *xinit-1.2.0-r4 (02 Nov 2010)
 
