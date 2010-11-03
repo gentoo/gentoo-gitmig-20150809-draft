@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.19 2010/11/03 17:39:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.20 2010/11/03 17:43:13 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -113,7 +113,7 @@ xfconf_src_prepare() {
 
 # @FUNCTION: xfconf_src_configure
 # @DESCRIPTION:
-# Run econf with opts in XFCONF variable
+# Run econf with opts in XFCONF array
 xfconf_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
