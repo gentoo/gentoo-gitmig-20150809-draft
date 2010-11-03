@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/kabcclient-4.4.7.ebuild,v 1.1 2010/10/24 16:17:21 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/kabcclient-4.4.7.ebuild,v 1.2 2010/11/03 20:57:39 hwoarang Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ KMMODULE="console/${PN}"
 inherit kde4-meta
 
 DESCRIPTION="A command line client for accessing the KDE addressbook"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 DEPEND="

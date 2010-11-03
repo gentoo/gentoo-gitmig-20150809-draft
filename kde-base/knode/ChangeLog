@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.161 2010/10/24 16:23:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.162 2010/11/03 20:59:56 hwoarang Exp $
+
+  03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> knode-4.4.7.ebuild:
+  Stable on amd64 wrt bug #343969
 
 *knode-4.4.7 (24 Oct 2010)
 
