@@ -1,6 +1,10 @@
 # ChangeLog for media-video/matroxset
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.15 2009/06/02 10:29:45 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.16 2010/11/03 02:57:12 jmbsvicetto Exp $
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Retiring kanaka from metadata - bug 42662.
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   matroxset-0.4.ebuild:

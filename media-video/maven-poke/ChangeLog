@@ -1,6 +1,10 @@
 # ChangeLog for media-video/maven-poke
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/ChangeLog,v 1.6 2007/11/27 12:14:23 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/ChangeLog,v 1.7 2010/11/03 02:59:54 jmbsvicetto Exp $
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Retiring kanaka from metadata - bug 42662.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   maven-poke-0.0.1.ebuild:
