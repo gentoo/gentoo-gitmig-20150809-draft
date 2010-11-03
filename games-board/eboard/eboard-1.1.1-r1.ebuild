@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.5 2010/10/15 12:44:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.6 2010/11/03 15:53:03 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -32,7 +32,8 @@ src_prepare() {
 	epatch \
 		"${WORKDIR}"/${PN}_${DEB_V}.diff \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch
 	sed -i \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" \
 		configure \

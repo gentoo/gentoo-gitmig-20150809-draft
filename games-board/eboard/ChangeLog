@@ -1,6 +1,10 @@
 # ChangeLog for games-board/eboard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.30 2010/10/15 12:44:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.31 2010/11/03 15:53:03 tupone Exp $
+
+  03 Nov 2010; Tupone Alfredo <tupone@gentoo.org> -eboard-1.1.1.ebuild,
+  eboard-1.1.1-r1.ebuild, +files/eboard-1.1.1-ovflfix.patch:
+  Fix overflow. Bug #339004 by flameeyes@gentoo.org
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> eboard-1.1.1-r1.ebuild:
   stable ppc, bug 317245
