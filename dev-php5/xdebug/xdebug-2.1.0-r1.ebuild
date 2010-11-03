@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.1.0-r1.ebuild,v 1.3 2010/11/02 21:51:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.1.0-r1.ebuild,v 1.4 2010/11/03 03:12:42 mr_bones_ Exp $
 
 PHP_EXT_NAME="xdebug"
 PHP_EXT_INI="yes"
@@ -75,7 +75,7 @@ src_install() {
 	php-ext-source-r2_addtoinifiles "xdebug.var_display_max_data" '"512"'
 	php-ext-source-r2_addtoinifiles "xdebug.var_display_max_depth" '"2"'
 	php-ext-source-r2_addtoinifiles "xdebug.var_display_max_children" '"128"'
-	
+
 }
 
 pkg_postinst() {
