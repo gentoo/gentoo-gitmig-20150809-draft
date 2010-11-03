@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12147 2010/11/03 12:15:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12148 2010/11/03 17:52:22 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Nov 2010)
+# - kmymoney-4.5 is not compatible with aqbanking 5.x, waiting for next release
+# - only package.masked gnucash is compiling against 5.x, and doesn't work:
+# http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029188.html
+>=net-libs/aqbanking-5
+>=sys-libs/gwenhywfar-4
+>=sys-libs/libchipcard-5
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Nov 2010)
 # acerhk fails to build with Linux >= 2.6.30 wrt #277598
