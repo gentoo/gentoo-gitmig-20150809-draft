@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10.ebuild,v 1.1 2010/11/03 10:46:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10.ebuild,v 1.2 2010/11/03 18:26:01 pva Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs linux-mod autotools
@@ -43,7 +43,7 @@ wacom_check() {
 		eerror "EHCI , OHCI , USB Human Interface Device+HID input layer)"
 		eerror
 		eerror "Then recompile kernel."
-		die "Wacom statically built in kernel!"
+		die "Wacom module already built in kernel!"
 	fi
 }
 

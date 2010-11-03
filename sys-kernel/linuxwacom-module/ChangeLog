@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linuxwacom-module
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/ChangeLog,v 1.1 2010/11/03 10:46:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/ChangeLog,v 1.2 2010/11/03 18:26:01 pva Exp $
+
+  03 Nov 2010; Peter Volkov <pva@gentoo.org>
+  linuxwacom-module-0.8.8_p10.ebuild, metadata.xml:
+  Add Julien Sanchez as maintainer. Fixed die message, thank new maintainer.
 
 *linuxwacom-module-0.8.8_p10 (03 Nov 2010)
 

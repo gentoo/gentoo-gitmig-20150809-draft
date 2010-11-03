@@ -5,7 +5,11 @@
   <maintainer>
   	<email>pva@gentoo.org</email>
 	<name>Peter Volkov</name>
-</maintainer>
+  </maintainer>
+  <maintainer>
+  	<email>julien.sanchez@gmail.com</email>
+	<name>Julien Sanchez</name>
+  </maintainer>
   <longdescription>kernel driver for wacom tablets</longdescription>
   <use>
 	  <flag name='modules'>Build kernel module</flag>
