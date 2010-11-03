@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.21 2010/08/20 07:42:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.22 2010/11/03 17:13:20 idl0r Exp $
+
+*tint2-0.11-r1 (03 Nov 2010)
+
+  03 Nov 2010; Christian Ruppert <idl0r@gentoo.org> -tint2-0.9.ebuild,
+  -tint2-0.10.ebuild, +tint2-0.11-r1.ebuild, +files/battery_segfault.patch:
+  Revision bump, fixes bug 343963, thanks to Andrew Brouwers
+  <abrouwers@gmail.com>. Remove old ebuilds.
 
   20 Aug 2010; Christian Faulhammer <fauli@gentoo.org> tint2-0.11.ebuild:
   stable x86, bug 333149

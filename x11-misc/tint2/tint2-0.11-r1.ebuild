@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.10.ebuild,v 1.1 2010/05/30 19:09:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.11-r1.ebuild,v 1.1 2010/11/03 17:13:20 idl0r Exp $
 
 EAPI="3"
+
+inherit cmake-utils eutils
 
 MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="A lightweight panel/taskbar"
 HOMEPAGE="http://code.google.com/p/tint2/"
-SRC_URI="http://tint2.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://tint2.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,28 +27,32 @@ COMMON_DEPEND="dev-libs/glib:2
 	x11-libs/libXrender
 	x11-libs/libXrandr
 	media-libs/imlib2[X]"
-# autoconf >= 2.61 for --docdir, bug 296890
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
-	x11-proto/xineramaproto
-	>=sys-devel/autoconf-2.61"
+	x11-proto/xineramaproto"
 RDEPEND="${COMMON_DEPEND}
 	tint2conf? ( x11-misc/tintwizard )"
 
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -i -e 's:python /usr/bin/tintwizard.py:tintwizard:' src/tint2conf/main.c || die
+	epatch "${FILESDIR}/battery_segfault.patch" # bug 343963
 }
 
 src_configure() {
-	econf --docdir=/usr/share/doc/${PF} \
-		$(use_enable battery) \
-		$(use_enable examples) \
-		$(use_enable tint2conf)
+	local mycmakeargs=(
+		$(cmake-utils_use_enable battery BATTERY)
+		$(cmake-utils_use_enable examples EXAMPLES)
+		$(cmake-utils_use_enable tint2conf TINT2CONF)
+
+		# bug 296890
+		"-DDOCDIR=/usr/share/doc/${PF}"
+	)
+
+	cmake-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	cmake-utils_src_install
 	rm -f "${D}/usr/bin/tintwizard.py"
 }
