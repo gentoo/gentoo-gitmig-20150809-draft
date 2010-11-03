@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.4 2010/11/02 21:46:05 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.5 2010/11/03 22:47:19 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -16,7 +16,7 @@
 # This eclass provides a unified interface for compiling and installing standalone
 # PHP extensions (modules).
 
-inherit flag-o-matic autotools depend.php
+inherit flag-o-matic autotools
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install
 
@@ -197,6 +197,7 @@ php_init_slot_env() {
 	PHP_PKG="$(best_version =dev-lang/php-${1:3}*)"
 	PHPPREFIX="/usr/${libdir}/${slot}"
 	EXT_DIR="$(${PHPCONFIG} --extension-dir 2>/dev/null)"
+	PHP_CURRENTSLOT=${1:3}
 
 	S="${WORKDIR}/${1}"
 	cd "${S}"
@@ -251,15 +252,15 @@ php-ext-source-r2_addextension() {
 	if [[ "${PHP_EXT_ZENDEXT}" = "yes" ]] ; then
 		# We need the full path for ZendEngine extensions
 		# and we need to check for debugging enabled!
-		if has_zts ; then
-			if has_debug ; then
+		if has_version "dev-lang/php:${PHP_CURRENTSLOT}[threads]" ; then
+			if has_version "dev-lang/php:${PHP_CURRENTSLOT}[debug]" ; then
 				ext_type="zend_extension_debug_ts"
 			else
 				ext_type="zend_extension_ts"
 			fi
 			ext_file="${EXT_DIR}/${1}"
 		else
-			if has_debug ; then
+			if has_version "dev-lang/php:${PHP_CURRENTSLOT}[debug]"; then
 				ext_type="zend_extension_debug"
 			else
 				ext_type="zend_extension"
