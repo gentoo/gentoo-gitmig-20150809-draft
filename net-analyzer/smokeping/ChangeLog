@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.30 2010/06/16 18:24:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.31 2010/11/03 19:00:25 pva Exp $
+
+*smokeping-2.4.2-r3 (03 Nov 2010)
+
+  03 Nov 2010; Peter Volkov <pva@gentoo.org> +smokeping-2.4.2-r3.ebuild:
+  Update dev-perl/Socket6 version and mv enew{user,group} into pkg_setup as
+  user/group are use in src_install, thank blain 'Doc' Anderson and Torsten
+  Veller for report, bug #341175.
 
 *smokeping-2.4.2-r2 (16 Jun 2010)
 
