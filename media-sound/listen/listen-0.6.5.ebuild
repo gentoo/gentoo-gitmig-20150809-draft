@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.4 2010/06/19 19:02:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.5 2010/11/03 11:43:30 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="dev-python/dbus-python
 	dev-python/pyxdg
 	|| ( dev-python/python-xlib dev-python/egg-python )
 	gnome? ( dev-python/gnome-vfs-python )
-	|| ( x11-misc/notification-daemon xfce-extra/xfce4-notifyd )
+	x11-libs/libnotify
 	media-libs/mutagen
 	dev-python/gst-python:0.10
 	media-plugins/gst-plugins-meta:0.10
