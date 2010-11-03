@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.148 2010/10/06 09:17:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.149 2010/11/03 16:30:42 scarabeus Exp $
+
+*kdewebdev-meta-4.5.3 (03 Nov 2010)
+
+  03 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +kdewebdev-meta-4.5.3.ebuild:
+  Version bump
 
 *kdewebdev-meta-4.5.2 (05 Oct 2010)
 

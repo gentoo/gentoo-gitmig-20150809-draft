@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kvtml-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.31 2010/10/06 09:17:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.32 2010/11/03 16:30:45 scarabeus Exp $
+
+*kvtml-data-4.5.3 (03 Nov 2010)
+
+  03 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +kvtml-data-4.5.3.ebuild:
+  Version bump
 
 *kvtml-data-4.5.2 (05 Oct 2010)
 
