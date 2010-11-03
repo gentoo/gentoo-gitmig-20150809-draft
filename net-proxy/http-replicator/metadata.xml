@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-proxy</herd>
-<maintainer>
-  <email>griffon26@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
