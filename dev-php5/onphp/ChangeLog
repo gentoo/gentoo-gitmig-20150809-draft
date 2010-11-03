@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/onphp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.64 2009/09/13 14:28:56 voxus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp/ChangeLog,v 1.65 2010/11/03 23:47:28 mabi Exp $
+
+*onphp-1.0.10 (03 Nov 2010)
+
+  03 Nov 2010; Matti Bickel <mabi@gentoo.org> -onphp-0.10.12.ebuild,
+  -onphp-1.0.7.ebuild, -onphp-1.0.8.ebuild, +onphp-1.0.10.ebuild:
+  EAPI and version bump
 
 *onphp-1.0.9 (13 Sep 2009)
 
