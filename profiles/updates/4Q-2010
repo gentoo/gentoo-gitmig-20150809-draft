@@ -5,3 +5,4 @@ move app-admin/squid-cronolog app-admin/fifo-cronolog
 move sci-chemistry/msms sci-chemistry/msms-bin
 move games-misc/fortune-mod-prolinux games-misc/fortune-mod-flashrider
 slotmove sys-libs/libchipcard 2 0
+move xfce-base/tumbler xfce-extra/tumbler
