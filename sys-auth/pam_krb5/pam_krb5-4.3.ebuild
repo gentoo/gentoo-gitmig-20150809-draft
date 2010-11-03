@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.3.ebuild,v 1.11 2010/11/01 20:45:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.3.ebuild,v 1.12 2010/11/03 21:11:41 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://archives.eyrie.org/software/kerberos/pam-krb5-${PV}.tar.gz"
 
 LICENSE="|| ( BSD-2 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/krb5
