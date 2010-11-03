@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dtc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.5 2010/07/06 20:06:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.6 2010/11/03 13:11:48 lu_zero Exp $
+
+*dtc-1.2.0 (03 Nov 2010)
+
+  03 Nov 2010; Luca Barbato <lu_zero@gentoo.org> +dtc-1.2.0.ebuild:
+  Version Bump
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> dtc-1.0.0.ebuild,
   +files/dtc-1.0.0-Makefile.patch:
