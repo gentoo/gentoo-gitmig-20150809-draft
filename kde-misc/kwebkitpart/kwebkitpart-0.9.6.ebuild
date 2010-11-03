@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-0.9.6.ebuild,v 1.2 2010/10/23 18:58:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-0.9.6.ebuild,v 1.3 2010/11/03 16:22:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,6 +16,6 @@ HOMEPAGE="http://opendesktop.org/content/show.php?content=127960"
 SRC_URI="http://opendesktop.org/CONTENT/content-files/127960-${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug"
