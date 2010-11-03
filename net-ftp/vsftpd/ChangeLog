@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.133 2010/11/02 11:57:32 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.134 2010/11/03 21:19:41 maekke Exp $
+
+  03 Nov 2010; Markus Meier <maekke@gentoo.org> vsftpd-2.3.2-r1.ebuild:
+  arm stable, bug #342991
 
   02 Nov 2010; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Updated metadata to switch myself from proxy-maintainer to maintainer.
