@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-XSAccessor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XSAccessor/ChangeLog,v 1.9 2010/10/14 19:26:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XSAccessor/ChangeLog,v 1.10 2010/11/03 19:05:52 tove Exp $
+
+*Class-XSAccessor-1.09 (03 Nov 2010)
+
+  03 Nov 2010; Torsten Veller <tove@gentoo.org>
+  +Class-XSAccessor-1.09.ebuild:
+  Version bump
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> Class-XSAccessor-1.08.ebuild:
   Marking Class-XSAccessor-1.08 ~ppc for bug 337974
