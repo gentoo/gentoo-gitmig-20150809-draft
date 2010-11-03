@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.5.ebuild,v 1.9 2010/08/31 12:26:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.5.ebuild,v 1.10 2010/11/03 17:45:59 ssuominen Exp $
 
 EAPI=3
 MY_P=${P/t/T}
@@ -30,10 +30,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
-		--docdir=${EPREFIX}/usr/share/doc/${PF}
+	XFCONF=(
+		--disable-dependency-tracking
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable dbus)
 		$(use_enable debug)
-		$(use_enable doc gen-doc)"
+		$(use_enable doc gen-doc)
+		)
+
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS"
 }
