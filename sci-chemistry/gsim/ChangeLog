@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/gsim
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/ChangeLog,v 1.1 2010/11/03 09:37:05 jlec Exp $
+
+*gsim-0.19.1 (03 Nov 2010)
+
+  03 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.19.1-build.conf.patch, +gsim-0.19.1.ebuild, +metadata.xml:
+  New Addition, imported from sci opverlay
+
