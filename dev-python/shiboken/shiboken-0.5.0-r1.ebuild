@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-0.5.0.ebuild,v 1.1 2010/10/06 22:04:39 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-0.5.0-r1.ebuild,v 1.1 2010/11/03 05:34:53 ayoy Exp $
 
 EAPI="2"
 
@@ -20,6 +20,8 @@ DEPEND=">=dev-python/apiextractor-0.8.0
 	>=x11-libs/qt-core-4.5.0"
 RDEPEND="${DEPEND}
 	!dev-python/boostpythongenerator"
+
+PATCHES=( "${FILESDIR}/${PN}-fix-pkgconfig.patch" )
 
 src_install() {
 	cmake-utils_src_install
