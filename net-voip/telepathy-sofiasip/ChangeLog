@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-sofiasip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.17 2010/09/29 18:52:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.18 2010/11/03 21:18:56 ford_prefect Exp $
+
+*telepathy-sofiasip-0.6.4-r1 (03 Nov 2010)
+
+  03 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +telepathy-sofiasip-0.6.4-r1.ebuild:
+  Don't let USE=debug control --enable-debug - this is only enables
+  conditionally enabled code to get debugging output (which upstream needs
+  to actually debug any issues remotely).
 
 *telepathy-sofiasip-0.6.4 (29 Sep 2010)
 
