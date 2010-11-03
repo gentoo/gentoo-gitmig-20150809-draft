@@ -12,6 +12,6 @@ start() {
 
 stop() {
 	ebegin "Stopping cf-serverd"
-	start-stop-daemon --stop --exec /usr/sbin/cf-serverd
+	start-stop-daemon --stop --pidfile /var/cfengine/cf-serverd.pid --exec /usr/sbin/cf-serverd
 	eend $?
 }

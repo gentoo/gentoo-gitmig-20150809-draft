@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 depend() {
-	need net
+	need net cf-serverd
 }
 
 start() {
@@ -12,6 +12,6 @@ start() {
 
 stop() {
 	ebegin "Stopping cf-execd"
-	start-stop-daemon --stop --exec /usr/sbin/cf-execd
+	start-stop-daemon --stop --pidfile /var/cfengine/cf-execd.pid --exec /usr/sbin/cf-execd
 	eend $?
 }

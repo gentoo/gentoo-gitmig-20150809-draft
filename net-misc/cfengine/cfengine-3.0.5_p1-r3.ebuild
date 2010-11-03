@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5_p1-r2.ebuild,v 1.3 2010/10/30 11:57:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5_p1-r3.ebuild,v 1.1 2010/11/03 18:40:42 idl0r Exp $
 
 EAPI="3"
 
