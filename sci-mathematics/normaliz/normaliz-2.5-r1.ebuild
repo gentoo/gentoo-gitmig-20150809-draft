@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.1 2010/11/03 08:24:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.2 2010/11/03 22:39:59 mr_bones_ Exp $
 
 EAPI=2
 
