@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r2.ebuild,v 1.3 2009/12/09 18:30:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.42.10-r2.ebuild,v 1.4 2010/11/03 00:25:14 jmbsvicetto Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -20,6 +20,7 @@ DEPEND="dev-lang/perl
 	dev-perl/XML-Twig
 	python? ( >=dev-lang/python-2.4.2 )
 	ruby? ( >=dev-lang/ruby-1.8.3 )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
