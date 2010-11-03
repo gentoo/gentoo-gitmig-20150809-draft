@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.2.ebuild,v 1.2 2010/10/31 17:39:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.2.ebuild,v 1.3 2010/11/03 14:59:02 mr_bones_ Exp $
 
 PYTHON_DEPEND="2"
 EAPI=2
@@ -20,6 +20,7 @@ DEPEND=">=media-libs/libsdl-1.2[video]
 	sys-libs/zlib
 	media-libs/libvorbis
 	media-libs/libpng
+	media-libs/sdl-mixer
 	media-libs/openal"
 
 pkg_setup() {
