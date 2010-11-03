@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/fastercsv-1.5.3.ebuild,v 1.4 2010/10/31 13:19:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/fastercsv-1.5.3.ebuild,v 1.5 2010/11/03 21:44:58 maekke Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DESCRIPTION="FasterCSV is a replacement for the standard CSV library"
 HOMEPAGE="http://fastercsv.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastercsv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.11 2010/10/31 13:19:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.12 2010/11/03 21:44:58 maekke Exp $
+
+  03 Nov 2010; Markus Meier <maekke@gentoo.org> fastercsv-1.5.3.ebuild:
+  x86 stable, bug #342233
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> fastercsv-1.5.3.ebuild:
   Stable on amd64 wrt bug #342233
