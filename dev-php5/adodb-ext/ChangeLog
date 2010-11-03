@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/adodb-ext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/ChangeLog,v 1.5 2010/09/11 12:45:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/ChangeLog,v 1.6 2010/11/03 22:12:52 mabi Exp $
+
+*adodb-ext-504-r2 (03 Nov 2010)
+
+  03 Nov 2010; Matti Bickel <mabi@gentoo.org> +adodb-ext-504-r2.ebuild:
+  create minor slotting compatible version
 
 *adodb-ext-504-r1 (11 Sep 2010)
 
