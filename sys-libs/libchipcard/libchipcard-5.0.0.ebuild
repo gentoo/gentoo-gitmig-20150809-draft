@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-5.0.0.ebuild,v 1.1 2010/11/03 12:58:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-5.0.0.ebuild,v 1.2 2010/11/03 13:01:24 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -28,7 +28,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--localstatedir=/var \
 		--disable-dependency-tracking \
 		--disable-static \
 		$(use_enable doc full-doc) \
