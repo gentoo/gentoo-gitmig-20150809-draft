@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.12 2010/07/11 11:13:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.13 2010/11/03 02:30:28 matsuu Exp $
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
 inherit eutils autotools
@@ -34,7 +34,7 @@ DEPEND="${DEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-pkg_config() {
+pkg_setup() {
 	if use mhash && use postgres ; then
 		eerror "We cannot emerge aide with mhash and postgres USE flags at the same time."
 		eerror "Please remove mhash OR postgres USE flags."

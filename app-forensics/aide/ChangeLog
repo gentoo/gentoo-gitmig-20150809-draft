@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.52 2010/10/27 16:45:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.53 2010/11/03 02:30:28 matsuu Exp $
+
+  03 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> aide-0.13.1.ebuild,
+  aide-0.13.1-r3.ebuild, aide-0.13.1-r5.ebuild, -aide-0.14-r1.ebuild,
+  aide-0.14.2.ebuild, aide-0.15.1.ebuild:
+  Fixed USE flags conflicts, bug #343221.
 
 *aide-0.15.1 (27 Oct 2010)
 
