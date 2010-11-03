@@ -5,7 +5,7 @@
   <email>tomka@gentoo.org</email>
   <name>Thomas Kahle</name>
 </maintainer>
-<herd>sci</herd>
+<herd>sci-mathematics</herd>
 <use>
   <flag name="extras"> Install Macaulay2 and Singular packages as shipped by upstream</flag>
 </use>
