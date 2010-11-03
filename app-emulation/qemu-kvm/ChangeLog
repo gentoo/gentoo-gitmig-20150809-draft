@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.45 2010/11/02 16:29:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.46 2010/11/03 14:40:38 jmbsvicetto Exp $
+
+*qemu-kvm-0.13.0-r2 (03 Nov 2010)
+
+  03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -qemu-kvm-0.11.1-r1.ebuild,
+  -files/qemu-kvm-0.12.2-virtio-large-iovecs.patch,
+  -qemu-kvm-0.12.3-r1.ebuild, -qemu-kvm-0.12.4-r1.ebuild,
+  -files/qemu-kvm-0.12.4-large-virtio-corruption.patch,
+  -qemu-kvm-0.13.0.ebuild, qemu-kvm-0.13.0-r1.ebuild,
+  +qemu-kvm-0.13.0-r2.ebuild, metadata.xml:
+  Fixed the non installation of binaries due to a bad variable declaration -
+  bug 343951.
+  Updated dtc dep to fix the build failures on amd64 - bug 339044.
+  Restricted parallel build until we fix it - bug 343175.
+  Dropped old ebuilds and files.
 
 *qemu-kvm-0.13.0-r1 (02 Nov 2010)
 

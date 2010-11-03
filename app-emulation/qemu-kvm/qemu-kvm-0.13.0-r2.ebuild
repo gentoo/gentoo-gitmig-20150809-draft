@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.13.0.ebuild,v 1.1 2010/10/28 09:54:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.13.0-r2.ebuild,v 1.1 2010/11/03 14:40:38 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -25,8 +25,8 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened kvm-trace \
-ncurses pulseaudio qemu-ifup sasl sdl ssl static vde"
+IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
+png pulseaudio qemu-ifup sasl sdl ssl static vde"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -57,8 +57,10 @@ RDEPEND="
 	brltty? ( app-accessibility/brltty )
 	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
-	fdt? ( sys-apps/dtc )
+	fdt? ( >=sys-apps/dtc-1.2.0 )
+	jpeg? ( media-libs/jpeg )
 	ncurses? ( sys-libs/ncurses )
+	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	sasl? ( dev-libs/cyrus-sasl )
@@ -82,20 +84,6 @@ kvm_kern_warn() {
 }
 
 pkg_setup() {
-	for target in ${IUSE_SOFTMMU_TARGETS} ; do
-		use "qemu_softmmu_targets_${target}" && \
-		softmmu_targets="${softmmu_targets} ${target}-softmmu"
-	done
-
-	for target in ${IUSE_USER_TARGETS} ; do
-		use "qemu_user_targets_${target}" && \
-		user_targets="${user_targets} ${target}-linux-user"
-	done
-
-	if [ -z "${softmmu_targets}" ]; then
-		return
-	fi
-
 	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
 
 	if kernel_is lt 2 6 25; then
@@ -125,17 +113,30 @@ src_prepare() {
 	# remove part to make udev happy
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
-	epatch "${FILESDIR}"/qemu-0.11.0-mips64-user-fix.patch \
-		"${FILESDIR}"/${PN}-0.12.3-include-madvise-defines.patch
+	# ${PN}-guest-hang-on-usb-add.patch was sent by Timothy Jones
+	# to the qemu-devel ml - bug 337988
+	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch" \
+		"${FILESDIR}/${PN}-0.12.3-include-madvise-defines.patch"
+#		"${FILESDIR}/${PN}-guest-hang-on-usb-add.patch"
 }
 
 src_configure() {
-	local conf_opts audio_opts
+	local conf_opts audio_opts user_targets
 
-	if [ ! -z "${softmmu_targets}" ]; then
-		einfo "Building the following softmmu targets: ${softmmu_targets}"
-	else
+	for target in ${IUSE_SOFTMMU_TARGETS} ; do
+		use "qemu_softmmu_targets_${target}" && \
+		softmmu_targets="${softmmu_targets} ${target}-softmmu"
+	done
+
+	for target in ${IUSE_USER_TARGETS} ; do
+		use "qemu_user_targets_${target}" && \
+		user_targets="${user_targets} ${target}-linux-user"
+	done
+
+	if [ -z "${softmmu_targets}" ]; then
 		conf_opts="${conf_opts} --disable-system"
+	else
+		einfo "Building the following softmmu targets: ${softmmu_targets}"
 	fi
 
 	if [ ! -z "${user_targets}" ]; then
@@ -151,6 +152,9 @@ src_configure() {
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static"
 
+	# Fix the $(prefix)/etc issue
+	conf_opts="${conf_opts} --sysconfdir=/etc"
+
 	#config options
 	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
 	conf_opts="${conf_opts} $(use_enable bluetooth bluez)"
@@ -158,8 +162,9 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable curl)"
 	conf_opts="${conf_opts} $(use_enable fdt)"
 	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
-	use kvm-trace && conf_opts="${conf_opts} --with-kvm-trace"
+	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
+	conf_opts="${conf_opts} $(use_enable png vnc-png)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
 	conf_opts="${conf_opts} $(use_enable sdl)"
 	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
@@ -191,7 +196,12 @@ src_configure() {
 		# in development and broken
 		# the kvm project has its own support for threaded IO
 		# which is always on and works
-#		--enable-io-thread \
+		# --enable-io-thread \
+}
+
+src_compile() {
+	# Restricting parallel build until we get a patch to fix this
+	emake -j1 || die
 }
 
 src_install() {
@@ -211,8 +221,7 @@ src_install() {
 			dobin "${FILESDIR}"/qemu-kvm
 			dosym /usr/bin/qemu-kvm /usr/bin/kvm
 		else
-			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64,"\
-				 " this disables install"
+			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
 			elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
 		fi
 	fi
@@ -223,25 +232,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -z "${softmmu_targets}" ]; then
-		return
+
+	if [ ! -z "${softmmu_targets}" ]; then
+		elog "If you don't have kvm compiled into the kernel, make sure you have"
+		elog "the kernel module loaded before running kvm. The easiest way to"
+		elog "ensure that the kernel module is loaded is to load it on boot."
+		elog "For AMD CPUs the module is called 'kvm-amd'"
+		elog "For Intel CPUs the module is called 'kvm-intel'"
+		elog "Please review /etc/conf.d/modules for how to load these"
+		elog
+		elog "Make sure your user is in the 'kvm' group"
+		elog "Just run 'gpasswd -a <USER> kvm', then have <USER> re-login."
+		elog
+		elog "You will need the Universal TUN/TAP driver compiled into your"
+		elog "kernel or loaded as a module to use the virtual network device"
+		elog "if using -net tap.  You will also need support for 802.1d"
+		elog "Ethernet Bridging and a configured bridge if using the provided"
+		elog "kvm-ifup script from /etc/kvm."
+		elog
+		elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
 	fi
-	elog "If you don't have kvm compiled into the kernel, make sure you have"
-	elog "the kernel module loaded before running kvm. The easiest way to"
-	elog "ensure that the kernel module is loaded is to load it on boot."
-	elog "For AMD CPUs the module is called 'kvm-amd'"
-	elog "For Intel CPUs the module is called 'kvm-intel'"
-	elog "Please review /etc/conf.d/modules for how to load these"
-	elog
-	elog "Make sure your user is in the 'kvm' group"
-	elog "Just run 'gpasswd -a <USER> kvm', then have <USER> re-login."
-	elog
-	elog "You will need the Universal TUN/TAP driver compiled into your"
-	elog "kernel or loaded as a module to use the virtual network device"
-	elog "if using -net tap.  You will also need support for 802.1d"
-	elog "Ethernet Bridging and a configured bridge if using the provided"
-	elog "kvm-ifup script from /etc/kvm."
-	elog
-	elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
-	echo
 }
