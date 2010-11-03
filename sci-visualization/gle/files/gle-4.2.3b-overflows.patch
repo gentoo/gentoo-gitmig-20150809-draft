@@ -1,0 +1,26 @@
+Fix buffer overflows
+
+http://bugs.gentoo.org/show_bug.cgi?id=338823
+
+--- src/gle/d_svg.cpp
++++ src/gle/d_svg.cpp
+@@ -636,7 +636,7 @@
+ 	static int init_done;
+ 	FILE *fptr;
+ 	char *s;
+-	char inbuff[90];
++	char inbuff[200];
+ 	if (init_done) return;
+ 	init_done = true;
+ 
+--- src/gle/d_ps.cpp
++++ src/gle/d_ps.cpp
+@@ -1002,7 +1002,7 @@
+ 	static int init_done;
+ 	FILE *fptr;
+ 	char *s;
+-	char inbuff[90];
++	char inbuff[200];
+ 	if (init_done) return;
+ 	init_done = true;
+ 

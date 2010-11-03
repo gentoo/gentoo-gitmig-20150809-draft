@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.3b.ebuild,v 1.1 2010/10/30 10:48:16 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.3b.ebuild,v 1.2 2010/11/03 16:48:30 grozin Exp $
 
 EAPI=2
-inherit eutils elisp-common qt4 flag-o-matic autotools
+inherit eutils elisp-common qt4-r2 flag-o-matic autotools
 
 DESCRIPTION="Graphics Layout Engine"
 HOMEPAGE="http://glx.sourceforge.net/"
@@ -34,6 +34,7 @@ S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch "${FILESDIR}"/${P}-overflows.patch
 	eaclocal
 	eautoconf
 }
