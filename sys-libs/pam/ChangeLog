@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.281 2010/11/01 20:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.282 2010/11/03 18:05:34 maekke Exp $
+
+  03 Nov 2010; Markus Meier <maekke@gentoo.org> pam-1.1.3.ebuild:
+  arm stable, bug #343399
 
   01 Nov 2010; Jeroen Roovers <jer@gentoo.org> pam-1.1.3.ebuild:
   Stable for HPPA PPC (bug #343399).
