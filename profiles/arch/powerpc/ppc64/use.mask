@@ -1,9 +1,5 @@
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
-# Christian Faulhammer <fauli@gentoo.org> (01 Nov 2010)
-# app-misc/lirc fails to compile on PPC64, see bug 275872 for example
-lirc
-
 # Brent Baude <ranger@gentoo.org> (3 Oct 2008)
 # Masking xindy use flag for ppc64
 xindy
