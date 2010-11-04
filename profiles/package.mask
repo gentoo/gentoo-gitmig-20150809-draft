@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12155 2010/11/04 19:40:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12156 2010/11/04 20:05:09 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,7 +47,7 @@ app-pda/synce-kpm
 app-pda/synce-librapi2
 app-pda/synce-librra
 app-pda/synce-librtfcomp
-<app-pda/synce-libsynce-0.14
+<app-pda/synce-libsynce-0.15
 app-pda/synce-odccm
 app-pda/synce-pywbxml
 app-pda/synce-serial
@@ -55,7 +55,6 @@ app-pda/synce-software-manager
 app-pda/synce-sync-engine
 app-pda/synce-trayicon
 app-pda/libopensync-plugin-synce
-<app-pda/orange-0.4
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Nov 2010)
 # Only package.masked gnucash is compiling against 5.x, and doesn't work:
