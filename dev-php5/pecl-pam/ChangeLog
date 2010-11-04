@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-pam
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pam/ChangeLog,v 1.4 2008/02/23 18:13:48 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pam/ChangeLog,v 1.5 2010/11/04 15:33:56 mabi Exp $
+
+*pecl-pam-1.0.2-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-pam-1.0.2-r1.ebuild:
+  add version supporting minor version slotting
 
   23 Feb 2008; Sven Wegener <swegener@gentoo.org> pecl-pam-1.0.2.ebuild:
   Add ~amd64 keyword.
