@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.52 2010/11/04 14:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.53 2010/11/04 14:41:57 scarabeus Exp $
 
 EAPI=3
 
@@ -25,9 +25,9 @@ IUSE="ayatana crypt dbus debug kde +logrotate monolithic phonon postgres +server
 SERVER_RDEPEND="
 	crypt? ( app-crypt/qca:2 )
 	logrotate? ( app-admin/logrotate )
-	!postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe] )
+	!postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe,-secure-delete] )
 	postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[postgres] )
-	x11-libs/qt-script:4
+	>=x11-libs/qt-script-${QT_MINIMAL}:4
 "
 
 GUI_RDEPEND="
@@ -47,6 +47,7 @@ GUI_RDEPEND="
 "
 
 RDEPEND="
+	>=x11-libs/qt-core-${QT_MINIMAL}:4[ssl?]
 	monolithic? (
 		${SERVER_RDEPEND}
 		${GUI_RDEPEND}
@@ -55,7 +56,6 @@ RDEPEND="
 		server? ( ${SERVER_RDEPEND} )
 		X? ( ${GUI_RDEPEND} )
 	)
-	ssl? ( x11-libs/qt-core:4[ssl] )
 	!monolithic? (
 		!server? (
 			!X? (
