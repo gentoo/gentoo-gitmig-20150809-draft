@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>sci-chemistry</herd>
 <use>
-        <flag name='opal'>Add web interface via opal</flag>
+	<flag name='opal'>Add web interface via opal</flag>
+	<flag name='pdb2pka'>Install experimental pdb2pka interface</flag>
 </use>
 </pkgmetadata>
