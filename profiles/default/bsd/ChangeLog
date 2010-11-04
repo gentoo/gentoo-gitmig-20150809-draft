@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.38 2010/06/11 14:10:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.39 2010/11/04 21:48:22 aballier Exp $
+
+  04 Nov 2010; Alexis Ballier <aballier@gentoo.org> fbsd/package.mask:
+  remove unmask of portage 2.2, its unmasked and keyworded for us
 
   11 Jun 2010; Ulrich Mueller <ulm@gentoo.org> fbsd/amd64/7.2/make.defaults,
   fbsd/amd64/8.0/make.defaults:

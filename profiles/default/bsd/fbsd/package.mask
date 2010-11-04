@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.9 2010/04/10 15:32:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.10 2010/11/04 21:48:22 aballier Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 May 2005)
 # SGI's FAM is dead upstream, and requires mayor changes.
@@ -20,7 +20,3 @@ dev-util/strace
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
-
-# Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
-# We are the bleeding edge here.
-->=sys-apps/portage-2.2_pre
