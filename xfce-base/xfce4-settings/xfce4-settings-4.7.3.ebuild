@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.3.ebuild,v 1.1 2010/11/03 21:09:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.3.ebuild,v 1.2 2010/11/04 15:54:21 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -29,7 +29,8 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	libnotify? ( >=x11-libs/libnotify-0.1.3 )
 	keyboard? ( >=x11-libs/libxklavier-0.3 )
 	sound? ( >=media-libs/libcanberra-0.25[sound] )
-	!<x11-base/xorg-server-1.5.3"
+	!<x11-base/xorg-server-1.5.3
+	!<xfce-base/libxfcegui4-4.7.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
