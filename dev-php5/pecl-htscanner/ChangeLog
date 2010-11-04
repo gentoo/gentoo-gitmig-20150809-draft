@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-htscanner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.9 2010/06/17 21:42:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.10 2010/11/04 13:32:01 mabi Exp $
+
+*pecl-htscanner-0.9.0-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org>
+  +pecl-htscanner-0.9.0-r1.ebuild:
+  add version that supports minor version slotting
 
   17 Jun 2010; <mabi@gentoo.org> pecl-htscanner-0.9.0.ebuild:
   restrict to <php-5.3, as the functionality is included in 5.3 and the
