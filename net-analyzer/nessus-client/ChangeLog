@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.12 2010/10/25 07:46:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.13 2010/11/04 08:28:32 phajdan.jr Exp $
+
+  04 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nessus-client-1.0.2-r1.ebuild:
+  x86 stable wrt bug #342587
 
   25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   nessus-client-1.0.2-r1.ebuild:
