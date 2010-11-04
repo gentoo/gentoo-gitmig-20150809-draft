@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.71 2010/10/24 22:46:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.72 2010/11/04 16:49:53 ssuominen Exp $
+
+  04 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  qmpdclient-1.1.3.ebuild:
+  Missing x11-libs/qt-xmlpatterns:4 depend wrt #344083 by Ivan Ponomarev.
 
   24 Oct 2010; Jeroen Roovers <jer@gentoo.org> qmpdclient-1.1.3.ebuild:
   Stable for HPPA (bug #340759).

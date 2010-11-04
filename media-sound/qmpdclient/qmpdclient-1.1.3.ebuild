@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.3.ebuild,v 1.5 2010/10/24 22:46:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.3.ebuild,v 1.6 2010/11/04 16:49:53 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE="debug dbus"
 
-DEPEND="x11-libs/qt-gui:4[dbus?]"
+DEPEND="x11-libs/qt-gui:4[dbus?]
+	x11-libs/qt-xmlpatterns:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
