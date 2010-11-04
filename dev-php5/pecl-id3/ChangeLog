@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-id3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-id3/ChangeLog,v 1.3 2007/12/06 01:10:42 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-id3/ChangeLog,v 1.4 2010/11/04 15:06:30 mabi Exp $
+
+*pecl-id3-0.2-r2 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-id3-0.2-r2.ebuild:
+  add version supporting minor version slotting
 
 *pecl-id3-0.2-r1 (06 Dec 2007)
 
