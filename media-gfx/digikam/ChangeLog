@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.164 2010/11/03 21:42:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.165 2010/11/04 00:19:47 dilfridge Exp $
+
+  04 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  -digikam-1.1.0-r1.ebuild, -files/digikam-1.1.0-libpgf.patch,
+  -files/digikam-1.1.0-libpng14.patch, metadata.xml:
+  Cleanup
 
   03 Nov 2010; Markus Meier <maekke@gentoo.org> digikam-1.2.0-r3.ebuild:
   x86 stable, bug #342073
