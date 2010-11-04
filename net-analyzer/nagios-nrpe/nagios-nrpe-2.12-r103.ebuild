@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r104.ebuild,v 1.1 2010/10/31 15:49:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r103.ebuild,v 1.3 2010/11/04 20:08:19 dertobi123 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="ssl"
+IUSE="ssl command-args"
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 	ssl? ( dev-libs/openssl )"
 S="${WORKDIR}/nrpe-${PV}"
@@ -35,7 +35,8 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	myconf="${myconf} $(use_enable ssl)"
+	myconf="${myconf} $(use_enable ssl) \
+					  $(use_enable command-args)"
 
 	# Generate the dh.h header file for better security (2005 Mar 20 eldad)
 	if useq ssl ; then
@@ -91,4 +92,12 @@ pkg_postinst() {
 	einfo "If you are using the nrpe daemon, remember to edit"
 	einfo "the config file /etc/nagios/nrpe.cfg"
 	einfo
+
+	if useq command-args ; then
+		ewarn "You have enabled command-args for NRPE. This enables"
+		ewarn "the ability for clients to supply arguments to commands"
+		ewarn "which should be run. "
+		ewarn "THIS IS CONSIDERED A SECURITY RISK!"
+		ewarn "Please read /usr/share/doc/${PF}/SECURITY.bz2 for more info"
+	fi
 }

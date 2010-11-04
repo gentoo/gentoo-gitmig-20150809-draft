@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.67 2010/10/31 15:49:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.68 2010/11/04 20:08:19 dertobi123 Exp $
+
+  04 Nov 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  +nagios-nrpe-2.12-r103.ebuild, -nagios-nrpe-2.12-r104.ebuild:
+  Revert revbump, restore -r103 (#289722)
 
 *nagios-nrpe-2.12-r104 (31 Oct 2010)
 
