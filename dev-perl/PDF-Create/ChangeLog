@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PDF-Create
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.26 2010/07/15 13:40:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.27 2010/11/04 13:32:17 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  PDF-Create-1.06.ebuild:
+  x86 stable, bug 341865
 
 *PDF-Create-1.06 (15 Jul 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MessageID
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.19 2010/07/16 06:20:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.20 2010/11/04 13:19:46 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  Email-MessageID-1.40.2.ebuild:
+  x86 stable, bug 341865
 
 *Email-MessageID-1.40.2 (16 Jul 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.131 2010/09/24 18:08:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.132 2010/11/04 13:12:53 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> DBI-1.615.ebuild:
+  x86 stable, bug 341865
 
 *DBI-1.615 (24 Sep 2010)
 

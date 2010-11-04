@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.113 2010/10/21 20:12:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.114 2010/11/04 13:49:04 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  gtk2-perl-1.222.ebuild:
+  x86 stable, bug 341865
 
   21 Oct 2010; Jeroen Roovers <jer@gentoo.org> gtk2-perl-1.222.ebuild:
   Marked ~hppa (bug #322187).

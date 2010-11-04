@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Ident
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.19 2010/06/16 07:35:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.20 2010/11/04 13:30:48 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  Net-Ident-1.23.ebuild:
+  x86 stable, bug 341865
 
 *Net-Ident-1.23 (16 Jun 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.38 2010/10/23 08:36:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.39 2010/11/04 13:35:31 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  SQL-Statement-1.31.ebuild:
+  x86 stable, bug 341865
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   SQL-Statement-1.31.ebuild:

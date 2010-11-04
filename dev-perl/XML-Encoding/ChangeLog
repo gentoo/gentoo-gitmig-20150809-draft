@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Encoding
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Encoding/ChangeLog,v 1.29 2010/09/21 17:47:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Encoding/ChangeLog,v 1.30 2010/11/04 13:42:49 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  XML-Encoding-2.08.ebuild:
+  x86 stable, bug 341865
 
 *XML-Encoding-2.08 (21 Sep 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.147 2010/03/18 19:38:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.148 2010/11/04 13:29:38 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  Net-DNS-0.66-r1.ebuild:
+  x86 stable, bug 341865
 
   18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> Net-DNS-0.66-r1.ebuild:
   add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683

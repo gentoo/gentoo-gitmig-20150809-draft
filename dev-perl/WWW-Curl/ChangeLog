@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.17 2010/10/27 18:38:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.18 2010/11/04 13:41:23 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> WWW-Curl-4.13.ebuild:
+  x86 stable, bug 341865
 
 *WWW-Curl-4.14 (27 Oct 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.78 2010/09/03 07:34:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.79 2010/11/04 13:13:45 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  DBD-Pg-2.17.1-r1.ebuild:
+  x86 stable, bug 341865
 
 *DBD-Pg-2.17.1-r1 (03 Sep 2010)
 
