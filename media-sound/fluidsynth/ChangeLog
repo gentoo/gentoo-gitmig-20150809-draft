@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.61 2010/10/31 23:09:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.62 2010/11/04 17:04:05 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  fluidsynth-1.1.1.ebuild:
+  stable x86, bug 343589
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   fluidsynth-1.1.1.ebuild:
