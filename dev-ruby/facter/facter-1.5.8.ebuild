@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.8.ebuild,v 1.2 2010/10/25 02:09:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.8.ebuild,v 1.3 2010/11/04 03:13:30 matsuu Exp $
 
 EAPI="2"
 # jruby failed to install
@@ -22,4 +22,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-maco
 
 RUBY_PATCHES=( "${P}-freebsd-spec.patch" )
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
+ruby_add_bdepend "test? (
+		dev-ruby/mocha
+		dev-ruby/rspec:0
+	)"
