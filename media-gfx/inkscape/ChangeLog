@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.146 2010/10/31 13:08:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.147 2010/11/04 10:06:47 phajdan.jr Exp $
+
+  04 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  inkscape-0.48.0.ebuild:
+  x86 stable wrt bug #343371
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> inkscape-0.48.0.ebuild:
   Stable on amd64 wrt bug #343371
