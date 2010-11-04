@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.37 2010/10/31 19:13:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.38 2010/11/04 12:48:18 maekke Exp $
+
+  04 Nov 2010; Markus Meier <maekke@gentoo.org> supybot-0.83.4.1-r1.ebuild:
+  add ~arm, bug #343509
 
   31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   supybot-0.83.4.1-r1.ebuild:
