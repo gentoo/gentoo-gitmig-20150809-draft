@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.95 2010/09/27 20:24:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.96 2010/11/04 12:25:30 matsuu Exp $
+
+  04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> a2ps-4.14-r1.ebuild,
+  +files/a2ps-4.14-ja-cleanup.patch:
+  Fixed cleanup patch for LINGUAS="ja", bug #335803.
 
   27 Sep 2010; Jeroen Roovers <jer@gentoo.org> a2ps-4.14-r1.ebuild:
   Stable for HPPA (bug #322867).
