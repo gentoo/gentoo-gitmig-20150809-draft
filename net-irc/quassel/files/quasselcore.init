@@ -1,18 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore.init,v 1.6 2010/07/03 10:30:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore.init,v 1.7 2010/11/04 14:22:45 scarabeus Exp $
 
 depend() {
-	need net
-	use postgres
+	need localmount net
+	after bootmisc postgres
 }
 
-LOGFILE="/var/log/quassel.log"
 CORE="$(which quasselcore)"
 PID="/var/run/quassel.pid"
-CONFIGDIR="/var/lib/quassel"
-QUASSEL_USER="quassel"
+LOGFILE=${LOGFILE:-"/var/log/quassel.log"}
+CONFIGDIR=${CONFIGDIR:-"/var/lib/quassel"}
+QUASSEL_USER=${QUASSEL_USER:-"quassel"}
 
 checkconfig() {
 	# set defaults
