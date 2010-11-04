@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/zinnia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.1 2010/05/04 02:38:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.2 2010/11/04 13:38:00 matsuu Exp $
+
+*zinnia-0.06 (04 Nov 2010)
+
+  04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +zinnia-0.06.ebuild:
+  Version bumped, bug #331563. Added perl USE flag.
 
 *zinnia-0.05 (04 May 2010)
 
