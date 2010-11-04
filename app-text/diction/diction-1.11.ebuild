@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.12 2010/02/10 19:52:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/diction-1.11.ebuild,v 1.13 2010/11/04 20:07:53 jer Exp $
 
 DESCRIPTION="Diction and style checkers for english and german texts"
 HOMEPAGE="http://www.gnu.org/software/diction/diction.html"
@@ -13,6 +13,7 @@ IUSE="unicode"
 
 DEPEND="sys-devel/gettext
 	virtual/libintl"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
