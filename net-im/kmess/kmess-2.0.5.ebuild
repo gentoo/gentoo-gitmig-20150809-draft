@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5.ebuild,v 1.2 2010/11/04 11:39:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5.ebuild,v 1.3 2010/11/04 12:05:35 maekke Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.kmess.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug gif konqueror xscreensaver"
 RESTRICT="test"
