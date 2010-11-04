@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.210 2010/10/04 21:03:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.211 2010/11/04 21:07:49 pacho Exp $
+
+  04 Nov 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/gnumeric-1.8.4-CVE-2009-0318.patch,
+  -files/gnumeric-1.8.4-gtk216-abi-spinbuttons.patch,
+  -files/gnumeric-1.8.4-gtk216-im-block.patch, -gnumeric-1.10.7.ebuild,
+  -gnumeric-1.10.10.ebuild:
+  Cleanup (bug #344155 by jalan).
 
 *gnumeric-1.10.11 (04 Oct 2010)
 
