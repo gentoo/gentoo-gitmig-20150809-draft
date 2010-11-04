@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.517.41-r1.ebuild,v 1.1 2010/10/19 19:23:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.28.ebuild,v 1.1 2010/11/04 20:58:33 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -13,9 +13,13 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome gnome-keyring"
+IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
 
 RDEPEND="app-arch/bzip2
+	system-sqlite? (
+		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
+	)
+	system-v8? ( ~dev-lang/v8-2.4.9.10 )
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
@@ -26,7 +30,8 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	cups? ( >=net-print/cups-1.4.4 )
+	>=media-video/ffmpeg-0.6_p25423[threads]
+	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver"
@@ -44,12 +49,13 @@ RDEPEND+="
 	)
 	x11-apps/xmessage
 	x11-misc/xdg-utils
-	virtual/ttf-fonts"
+	virtual/ttf-fonts
+	gecko-mediaplayer? ( !www-plugins/gecko-mediaplayer[gnome] )"
 
 remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
 	local out
-	out="$(find $1 -mindepth 1 \! -iname '*.gyp' -print -delete)" \
+	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
 		|| die "failed to remove bundled library $1"
 	if [[ -z $out ]]; then
 		die "no files matched when removing bundled library $1"
@@ -58,18 +64,24 @@ remove_bundled_lib() {
 
 pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
+
+	# Make sure the build system will use the right tools, bug #340795.
+	tc-export AR CC CXX RANLIB
 }
 
 src_prepare() {
-	# Add Gentoo plugin paths.
-	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
+	# Small fix to the system-provided icu support,
+	# to be upstreamed.
+	epatch "${FILESDIR}"/${PN}-system-icu-r1.patch
 
-	# Make compile-time dependency on gnome-keyring optional, bug #332411.
-	epatch "${FILESDIR}"/${PN}-gnome-keyring-r0.patch
+	# Enable optional support for gecko-mediaplayer.
+	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
+
+	# Backport a fix for bug #343971.
+	epatch "${FILESDIR}"/${PN}-locale-glib-r1.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
-	remove_bundled_lib "third_party/cros"
 	remove_bundled_lib "third_party/icu"
 	remove_bundled_lib "third_party/jemalloc"
 	remove_bundled_lib "third_party/lcov"
@@ -84,8 +96,29 @@ src_prepare() {
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
+	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
+
+	if use system-sqlite; then
+		remove_bundled_lib "third_party/sqlite/src"
+		remove_bundled_lib "third_party/sqlite/preprocessed"
+	fi
+
+	if use system-v8; then
+		# Provide our own gyp file that links with the system v8.
+		# TODO: move this upstream.
+		cp "${FILESDIR}"/v8.gyp v8/tools/gyp || die
+
+		remove_bundled_lib "v8"
+
+		# The implementation files include v8 headers with full path,
+		# like #include "v8/include/v8.h". Make sure the system headers
+		# will be used.
+		# TODO: find a solution that can be upstreamed.
+		rmdir v8/include || die
+		ln -s /usr/include v8/include || die
+	fi
 }
 
 src_configure() {
@@ -96,18 +129,21 @@ src_configure() {
 	myconf+=" -Ddisable_sse2=1"
 
 	# Use system-provided libraries.
-	# TODO: use_system_ffmpeg (http://crbug.com/50678).
-	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_ssl when we have a recent enough system NSS.
+	# TODO: use_system_ssl (need to consult upstream).
 	myconf+="
 		-Duse_system_bzip2=1
+		-Duse_system_ffmpeg=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_libxml=1
 		-Duse_system_zlib=1"
+
+	if use system-sqlite; then
+		myconf+=" -Duse_system_sqlite=1"
+	fi
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
@@ -129,13 +165,23 @@ src_configure() {
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
-	# and the performance gain isn't worth it.
-	myconf+=" -Dv8_use_snapshot=0"
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
+	fi
 
-	# Disable tcmalloc memory allocator. It causes problems,
-	# for example bug #320419.
-	myconf+=" -Dlinux_use_tcmalloc=0"
+	if use gecko-mediaplayer; then
+		# Disable hardcoded blacklist for gecko-mediaplayer.
+		# When www-plugins/gecko-mediaplayer is compiled with USE=gnome, it causes
+		# the browser to hang. We can handle the situation via dependencies,
+		# thus making it possible to use gecko-mediaplayer.
+		append-flags -DGENTOO_CHROMIUM_ENABLE_GECKO_MEDIAPLAYER
+	fi
+
+	# Our system ffmpeg should support more codecs than the bundled one
+	# for Chromium.
+	myconf+=" -Dproprietary_codecs=1"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
@@ -169,16 +215,11 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die
+	build/gyp_chromium --depth=. ${myconf} || die
 }
 
 src_compile() {
-	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
-		CC="$(tc-getCC)" \
-		CXX="$(tc-getCXX)" \
-		AR="$(tc-getAR)" \
-		RANLIB="$(tc-getRANLIB)" \
-		|| die
+	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 }
 
 src_install() {
@@ -201,8 +242,11 @@ src_install() {
 	newman out/Release/chrome.1 chrome.1 || die
 	newman out/Release/chrome.1 chromium.1 || die
 
-	doexe out/Release/ffmpegsumo_nolink || die
-	doexe out/Release/libffmpegsumo.so || die
+	# Chromium looks for these in its folder
+	# See media_posix.cc and base_paths_linux.cc
+	dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png || die
