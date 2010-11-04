@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.5-r1.ebuild,v 1.1 2010/11/04 09:03:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.5-r1.ebuild,v 1.2 2010/11/04 19:13:10 hanno Exp $
 
 EAPI=2
 
@@ -37,7 +37,7 @@ src_install() {
 
 	php-ext-base-r1_addtoinifiles "apc.enabled" '"1"'
 	php-ext-base-r1_addtoinifiles "apc.shm_segments" '"1"'
-	php-ext-base-r1_addtoinifiles "apc.shm_size" '"30"'
+	php-ext-base-r1_addtoinifiles "apc.shm_size" '"30M"'
 	php-ext-base-r1_addtoinifiles "apc.num_files_hint" '"1024"'
 	php-ext-base-r1_addtoinifiles "apc.ttl" '"7200"'
 	php-ext-base-r1_addtoinifiles "apc.user_ttl" '"7200"'

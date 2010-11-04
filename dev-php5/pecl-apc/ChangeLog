@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.64 2010/11/04 09:03:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.65 2010/11/04 19:13:10 hanno Exp $
+
+  04 Nov 2010; Hanno Boeck <hanno@gentoo.org> pecl-apc-3.1.5-r1.ebuild:
+  Change to new format of ini option shm_size (3.1.5-r2 and 3.1.4-r1 were
+  already changed).
 
 *pecl-apc-3.1.5-r2 (04 Nov 2010)
 *pecl-apc-3.1.5-r1 (04 Nov 2010)
