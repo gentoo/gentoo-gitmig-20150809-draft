@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-uploadprogress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-uploadprogress/ChangeLog,v 1.1 2010/04/26 20:45:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-uploadprogress/ChangeLog,v 1.2 2010/11/04 16:19:55 mabi Exp $
+
+*pecl-uploadprogress-1.0.1-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org>
+  +pecl-uploadprogress-1.0.1-r1.ebuild:
+  add version supporting minor version slotting
 
 *pecl-uploadprogress-1.0.1 (26 Apr 2010)
 
