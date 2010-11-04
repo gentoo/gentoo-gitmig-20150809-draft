@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.120 2010/10/29 20:56:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.121 2010/11/04 10:19:34 dilfridge Exp $
+
+  04 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> krita-2.2.2.ebuild,
+  +files/krita-2.2.2-xlibs.patch:
+  Added patch to fix x11 linkage (needed only on x86???), fixes bug 343283
 
   29 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Added myself to maintainers
