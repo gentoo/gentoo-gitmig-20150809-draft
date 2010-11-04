@@ -1,9 +1,0 @@
---- synce-libsynce-0.8.9-orig/lib/Makefile.am	2004-03-10 16:30:22.818512576 +0000
-+++ synce-libsynce-0.8.9/lib/Makefile.am	2004-03-10 16:30:35.237624584 +0000
-@@ -1,5 +1,5 @@
- ## useful flags
--AM_CFLAGS = -g -Wall -Wsign-compare -Wno-long-long -Werror -ansi @CFLAGS@ @APPLE_CFLAGS@ -I..
-+AM_CFLAGS = -g -Wall -Wsign-compare -Wno-long-long -ansi @CFLAGS@ @APPLE_CFLAGS@ -I..
- 
- ## create this library
- lib_LTLIBRARIES = libsynce.la
