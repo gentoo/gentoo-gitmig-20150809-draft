@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.4.ebuild,v 1.1 2010/10/21 14:28:48 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.6.ebuild,v 1.1 2010/11/04 15:12:43 mduft Exp $
 
-EAPI=2
+EAPI=3
 
 inherit toolchain-funcs
 
@@ -36,7 +36,10 @@ get_opts() {
 }
 
 src_compile() {
-	emake all CC=$(tc-getCC) CFLAGS="${CFLAGS}" $(get_opts) || die "emake failed"
+	local mycflags=
+	[[ ${CHOST} == *-interix3* ]] && mycflags="-DINTERIX3"
+
+	emake all CC=$(tc-getCC) CFLAGS="${CFLAGS} ${mycflags}" $(get_opts) || die "emake failed"
 }
 
 src_install() {

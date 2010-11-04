@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.5.ebuild,v 1.1 2010/10/21 14:28:48 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.5.ebuild,v 1.2 2010/11/04 15:12:43 mduft Exp $
 
-EAPI=2
+EAPI=3
 
 inherit toolchain-funcs
 
