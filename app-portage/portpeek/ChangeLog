@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.94 2010/11/02 17:10:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.95 2010/11/04 14:28:30 mpagano Exp $
+
+*portpeek-1.9.50 (04 Nov 2010)
+
+  04 Nov 2010; Mike Pagano <mpagano@gentoo.org> +portpeek-1.9.50.ebuild:
+  Check for invalid atom exception in function call: check_tilde_masked_pkg
 
   02 Nov 2010; Mike Pagano <mpagano@gentoo.org> portpeek-1.9.48.ebuild,
   -portpeek-2.0.5.ebuild:
