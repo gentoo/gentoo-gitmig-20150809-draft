@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.555 2010/11/04 16:05:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.556 2010/11/04 18:49:45 robbat2 Exp $
+
+*mysql-5.1.52 (04 Nov 2010)
+
+  04 Nov 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.52.ebuild:
+  Version bump.
 
   04 Nov 2010; Jeroen Roovers <jer@gentoo.org> mysql-5.1.51.ebuild:
   Stable for HPPA (bug #339717).
