@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.0.ebuild,v 1.3 2008/05/05 20:54:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.7.0.ebuild,v 1.1 2010/11/04 13:41:07 mabi Exp $
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -8,21 +8,24 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="docs/examples/tutorial.txt ThanksTo.txt KnownIssues.txt"
 
+EAPI="2"
+
 inherit php-ext-pecl-r1 php-ext-base-r1
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Extended HTTP Support for PHP."
 LICENSE="BSD-2 MIT"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=net-misc/curl-7.16.4
+DEPEND=">=net-misc/curl-7.19.4
 	sys-libs/zlib
-	dev-libs/libevent"
+	dev-libs/libevent
+	|| ( <dev-lang/php-5.3[spl] >=dev-lang/php-5.3 )
+	>=dev-lang/php-5[hash,session,iconv]
+	"
 RDEPEND="${DEPEND}"
-
-need_php_by_category
 
 src_compile() {
 	my_conf="--enable-http \
@@ -58,12 +61,4 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "http.send.deflate.start_auto" "0"
 	php-ext-base-r1_addtoinifiles "http.send.deflate.start_flags" "0"
 	php-ext-base-r1_addtoinifiles "http.send.not_found_404" "1"
-}
-
-pkg_postinst() {
-	has_php
-	if ! built_with_use --missing true =${PHP_PKG} hash iconv session spl ; then
-		elog "${PN} can optionally use hash, iconv, session and spl features."
-		elog "If you want those, recompile ${PHP_PKG} with those flags in USE."
-	fi
 }

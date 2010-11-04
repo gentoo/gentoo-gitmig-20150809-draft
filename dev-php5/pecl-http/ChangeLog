@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/pecl-http
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/ChangeLog,v 1.15 2010/10/20 14:20:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/ChangeLog,v 1.16 2010/11/04 13:41:07 mabi Exp $
+
+*pecl-http-1.7.0-r1 (04 Nov 2010)
+*pecl-http-1.7.0 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> -pecl-http-1.6.0.ebuild,
+  +pecl-http-1.7.0.ebuild, +pecl-http-1.7.0-r1.ebuild:
+  add version that supports minor version slotting, version bump, cleanup
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org> pecl-http-1.6.6.ebuild:
   Stable on amd64 wrt bug #336869
