@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r3.ebuild,v 1.1 2010/10/31 19:01:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r3.ebuild,v 1.2 2010/11/04 12:01:29 mabi Exp $
 
 EAPI=2
 
@@ -238,7 +238,7 @@ RDEPEND="${DEPEND}
 	!cli? ( !cgi? ( !apache2? ( !embed? ( $php[cli] ) ) ) )
 
 	enchant? ( !dev-php${PHP_MV}/pecl-enchant )
-	fileinfo? ( !dev-php${PHP_MV}/pecl-fileinfo )
+	fileinfo? ( !<dev-php${PHP_MV}/pecl-fileinfo-1.0.4-r2 )
 	filter? ( !dev-php${PHP_MV}/pecl-filter )
 	json? ( !dev-php${PHP_MV}/pecl-json )
 	phar? ( !dev-php${PHP_MV}/pecl-phar )
