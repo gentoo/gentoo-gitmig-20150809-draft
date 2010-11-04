@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.111 2010/11/04 12:24:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.112 2010/11/04 13:42:44 hwoarang Exp $
+
+  04 Nov 2010; Markos Chandras <hwoarang@gentoo.org> kchart-2.2.2.ebuild:
+  Stable on amd64 wrt bug #340070
 
   04 Nov 2010; Thomas Kahle <tomka@gentoo.org> kchart-2.2.2.ebuild:
   x86 stable per bug 340070

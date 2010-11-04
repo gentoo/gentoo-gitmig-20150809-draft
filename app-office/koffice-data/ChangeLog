@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.107 2010/11/04 12:18:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.108 2010/11/04 13:43:10 hwoarang Exp $
+
+  04 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  koffice-data-2.2.2.ebuild:
+  Stable on amd64 wrt bug #340070
 
   04 Nov 2010; Thomas Kahle <tomka@gentoo.org> koffice-data-2.2.2.ebuild:
   x86 stable per bug 340070
