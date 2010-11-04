@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-svn/ChangeLog,v 1.1 2010/07/05 10:53:38 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-svn/ChangeLog,v 1.2 2010/11/04 16:01:28 mabi Exp $
+
+*pecl-svn-1.0.0-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-svn-1.0.0-r1.ebuild:
+  add version supporting minor version slotting
 
 *pecl-svn-1.0.0 (05 Jul 2010)
 
