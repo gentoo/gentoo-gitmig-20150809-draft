@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-dbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.10 2010/11/04 10:46:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.11 2010/11/04 17:41:43 mabi Exp $
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> pecl-dbx-1.1.0-r1.ebuild:
+  fix USE_PHP placement
 
 *pecl-dbx-1.1.0-r1 (04 Nov 2010)
 
