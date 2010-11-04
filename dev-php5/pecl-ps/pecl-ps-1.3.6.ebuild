@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ps/pecl-ps-1.3.5.ebuild,v 1.2 2007/12/06 01:20:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ps/pecl-ps-1.3.6.ebuild,v 1.1 2010/11/04 15:45:35 mabi Exp $
+
+EAPI=3
 
 PHP_EXT_NAME="ps"
 PHP_EXT_INI="yes"
@@ -17,5 +19,3 @@ IUSE="examples"
 
 DEPEND="dev-libs/pslib"
 RDEPEND="${DEPEND}"
-
-need_php_by_category
