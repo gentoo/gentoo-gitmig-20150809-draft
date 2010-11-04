@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Detect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.8 2010/11/03 22:38:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Detect/ChangeLog,v 1.9 2010/11/04 12:35:46 maekke Exp $
+
+  04 Nov 2010; Markus Meier <maekke@gentoo.org> Encode-Detect-1.01.ebuild:
+  x86 stable, bug #343437
 
   03 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   Encode-Detect-1.01.ebuild:
