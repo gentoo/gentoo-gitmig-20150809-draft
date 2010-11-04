@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-dbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.9 2010/07/03 19:25:31 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.10 2010/11/04 10:46:12 mabi Exp $
+
+*pecl-dbx-1.1.0-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-dbx-1.1.0-r1.ebuild:
+  add version that supports minor version slotting
 
   03 Jul 2010; Matti Bickel <mabi@gentoo.org> pecl-dbx-1.1.0.ebuild:
   does not compile with php-5.3
