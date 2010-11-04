@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6117 2010/11/04 09:53:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6118 2010/11/04 12:14:36 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3464,7 +3464,7 @@ sci-mathematics/maxima:ecls - Compile maxima with Embeddable Common Lisp (dev-li
 sci-mathematics/maxima:gcl - Compile maxima with GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/maxima:openmcl - Compile maxima with Clozure Common Lisp (former OpenMCL, dev-lisp/closurecl)
 sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-lisp/sbcl)
-sci-mathematics/normaliz:extras -  Install Macaulay2 and Singular packages as shipped by upstream
+sci-mathematics/normaliz:extras -  Install sci-mathematics/Macaulay2 and sci-mathematics/singular packages as shipped by upstream
 sci-mathematics/nusmv:minisat - Enable support for MiniSat
 sci-mathematics/octave:sparse - Enable enhanced support for sparse matrix algebra
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
