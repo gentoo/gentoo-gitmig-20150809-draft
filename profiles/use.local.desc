@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6121 2010/11/04 21:54:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6122 2010/11/04 22:14:33 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1218,8 +1218,10 @@ dev-tex/dot2texi:pstricks - Enable pstricks support
 dev-tex/latex-beamer:lyx - Install with app-office/lyx layouts
 dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
+dev-util/anjuta:introspection - Use dev-libs/gobject-introspection for introspection
 dev-util/anjuta:sourceview - Build sourceview editing plugin for anjuta
 dev-util/anjuta:symbol-db - Enable symbol database plugin for anjuta
+dev-util/anjuta:vala - Enable support for the Vala programming language
 dev-util/astyle:libs - builds and installs both shared and static library interfaces
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
