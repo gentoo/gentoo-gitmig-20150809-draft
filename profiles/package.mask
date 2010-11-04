@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12153 2010/11/04 11:52:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12154 2010/11/04 19:01:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,32 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2010)
+# Over 20 open bugs, http://tinyurl.com/2wurbtz
+# Bugs assigned to a proxy maintainer without CVS access
+# Every package outdated, bug 340007
+# Removal in 30 days
+app-pda/synce
+app-pda/synce-dccm
+app-pda/synce-fur
+app-pda/synce-gcemirror
+app-pda/synce-gnomevfs
+app-pda/synce-gvfs
+app-pda/synce-hal
+app-pda/synce-kpm
+app-pda/synce-librapi2
+app-pda/synce-librra
+app-pda/synce-librtfcomp
+app-pda/synce-libsynce
+app-pda/synce-odccm
+app-pda/synce-pywbxml
+app-pda/synce-serial
+app-pda/synce-software-manager
+app-pda/synce-sync-engine
+app-pda/synce-trayicon
+app-pda/orange
+app-pda/libopensync-plugin-synce
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Nov 2010)
 # Only package.masked gnucash is compiling against 5.x, and doesn't work:
