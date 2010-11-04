@@ -90,7 +90,7 @@ index 0064aaa..8b33f70 100644
  libapbs_la_SOURCES = apbs_link.c
 -libapbs_la_LIBADD  = ${GEN_LIBS} ${FEM_LIBS} ${MG_LIBS} ${PMGZ_LIBS} ${AQUA_LIBS} ${BLAS_LIBS}
 +libapbs_la_LIBADD  = ${GEN_LIBS} ${FEM_LIBS} ${MG_LIBS} ${PMGZ_LIBS} ${AQUA_LIBS} ${BLAS_LIBS} \
-+		     @OPENMP_LIBS@ @maloc_lib@ @mc_lib@
++		     @OPENMP_LIBS@ @maloc_lib@ @mc_lib@ @z_lib@
  libapbs_la_LDFLAGS = -version-info ${APBS_VERSION}
  
  INCLUDES         = -I${top_srcdir}/src/generic -I${top_srcdir}/src/mg -I${top_srcdir}/src/fem @inc_list@

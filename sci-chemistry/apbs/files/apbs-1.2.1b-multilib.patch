@@ -20,13 +20,3 @@ Respect multilib directories
  lib_LTLIBRARIES = libapbsmainroutines.la
  libapbsmainroutines_la_SOURCES = routines.c
  libapbsmainroutines_la_LDFLAGS = -version-info ${APBS_VERSION}
---- contrib/maloc/src/aaa_lib/Makefile.am
-+++ contrib/maloc/src/aaa_lib/Makefile.am
-@@ -49,7 +49,6 @@
- LIBEFENCE =
- endif
- 
--libdir = ${prefix}/lib
- lib_LTLIBRARIES = libmaloc.la ${LIBEFENCE}
- 
- libmaloc_la_SOURCES =
