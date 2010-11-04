@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.1.ebuild,v 1.2 2008/06/09 19:40:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.2-r1.ebuild,v 1.1 2010/11/04 13:13:32 mabi Exp $
 
 PHP_EXT_NAME="gnupg"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
-inherit php-ext-pecl-r1
+EAPI="3"
+
+inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~x86"
 DESCRIPTION="PHP wrapper around the gpgme library"
@@ -16,5 +18,3 @@ IUSE=""
 
 DEPEND="app-crypt/gpgme"
 RDEPEND="${DEPEND}"
-
-need_php_by_category
