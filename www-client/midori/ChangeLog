@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.42 2010/11/03 19:50:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.43 2010/11/04 17:14:15 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> midori-0.2.8.ebuild:
+  stable x86, bug 343735
 
   03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> midori-0.2.8.ebuild:
   Stable on amd64 wrt bug #343735

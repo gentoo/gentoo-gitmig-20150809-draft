@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.8.ebuild,v 1.5 2010/11/03 19:50:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.8.ebuild,v 1.6 2010/11/04 17:14:15 fauli Exp $
 
 EAPI=2
 inherit pax-utils eutils multilib python xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd"
 IUSE="doc gnome +html idn libnotify nls +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
