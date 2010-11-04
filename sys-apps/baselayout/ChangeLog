@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.482 2010/10/08 01:43:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.483 2010/11/04 00:33:57 ssuominen Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.1-r1 (04 Nov 2010)
+
+  04 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +baselayout-2.0.1-r1.ebuild, +files/baselayout-2.0.1-proc_touch.patch:
+  Fix Stage1 building wrt #232823.
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> baselayout-1.11.15-r3.ebuild:
   Drop to ~mips
