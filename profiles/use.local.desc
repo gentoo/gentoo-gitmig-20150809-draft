@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6119 2010/11/04 20:34:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6120 2010/11/04 21:14:17 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3777,7 +3777,6 @@ sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to pr
 sys-kernel/gentoo-sources:ultra1 - Enable if you have a SUN Ultra 1 with a HME interface
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/linux-docs:html - Install HTML documentation
-sys-kernel/linuxwacom-module:modules - Build kernel module
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/mips-sources:impactdebug - Enables use of the Impact Early Console Hack. FOR DEBUGGING ONLY!
