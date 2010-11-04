@@ -1,6 +1,11 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.4 2010/11/04 22:24:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.5 2010/11/04 23:15:48 dilfridge Exp $
+
+  04 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  bombono-dvd-0.8.0.ebuild, +files/bombono-dvd-0.8.0-boost.patch:
+  Added upstream patch to build against system boost. Thanks to Ilya
+  Muravev, author of bombono-dvd, for the help!
 
 *bombono-dvd-0.8.0 (04 Nov 2010)
 

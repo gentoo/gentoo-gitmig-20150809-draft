@@ -1,0 +1,210 @@
+diff --git a/SConstruct b/SConstruct
+index fa391c9..4ca4bd1 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -107,6 +107,13 @@ def CalcCommonFlags():
+                     '_ISOC99_SOURCE'                # C99 extentions: snprintf()
+                   ]
+ 
++#
++# Users CPPFLAGS support
++# Because SCons cannot handle -U option (~ #undef) it is done via
++# additional variable named POST_CPPFLAGS
++#
++UserCppFlags = ''
++
+ def AdjustConfigOptions(env):
+     CalcCommonFlags()
+ 
+@@ -130,6 +137,7 @@ def AdjustConfigOptions(env):
+     env.Append(CCFLAGS = BV.CFlags.split())
+     env.Append(CXXFLAGS = BV.CxxFlags.split())
+     env.Append(LINKFLAGS = BV.LdFlags.split())
++    env.Append(POST_CPPFLAGS = UserCppFlags.split())
+         
+     # :TODO: set them when need
+     #env.Replace (PATH = user_options_dict['PATH'])
+@@ -185,9 +193,10 @@ def ParseVariables(user_options):
+             ('DESTDIR', 'Set the intermediate install directory.', ''),
+             ('CC', 'C compiler.'),
+             ('CXX', 'C++ compiler.'),
+-    		('CFLAGS',  'Extra C Compiler flags (for C++ too).', ''),
+-    		('CXXFLAGS','Extra C++ Compiler flags.', ''),
+-    		('LDFLAGS', 'Extra Linker flags.', ''),
++            ('CPPFLAGS','Extra CPP flags.', ''),
++            ('CFLAGS',  'Extra C Compiler flags (for C++ too).', ''),
++            ('CXXFLAGS','Extra C++ Compiler flags.', ''),
++            ('LDFLAGS', 'Extra Linker flags.', ''),
+             (BoolVariable('TEST',
+                         'Set to 1 if you want to build and run tests.',
+                         'false')),
+@@ -230,6 +239,8 @@ def ParseVariables(user_options):
+ 
+     BV.Cc  = user_options_dict['CC']
+     BV.Cxx = user_options_dict['CXX']
++    global UserCppFlags
++    UserCppFlags  = user_options_dict['CPPFLAGS']
+     BV.CFlags = user_options_dict['CFLAGS']
+     BV.CxxFlags = user_options_dict['CXXFLAGS']
+     BV.LdFlags  = user_options_dict['LDFLAGS']
+@@ -262,8 +273,10 @@ else:
+     user_options = Variables(None, BV.Args)
+     ParseVariables(user_options)
+     try:
++        def write_name_value(name, val):
++            config.write('%s = %r\n' % (name, val))
+         def write_dict_value(name):
+-            config.write('%s = %r\n' % (name, user_options_dict[name]))
++            write_name_value(name, user_options_dict[name])
+ 
+         # save to file
+         config = open(BV.CfgFile, 'w')
+@@ -280,6 +293,7 @@ else:
+         config.write('\n# Compiler information\n')
+         config.write('CC = %r\n' % (BV.Cc))
+         config.write('CXX = %r\n' % (BV.Cxx))
++        write_name_value('CPPFLAGS', UserCppFlags)
+         config.write('CFLAGS = %r\n' % (BV.CFlags))
+         config.write('CXXFLAGS = %r\n' % (BV.CxxFlags))
+         config.write('LDFLAGS = %r\n' % (BV.LdFlags))
+diff --git a/libs/SConscript b/libs/SConscript
+index 043b809..bbb1072 100644
+--- a/libs/SConscript
++++ b/libs/SConscript
+@@ -19,7 +19,7 @@ else:
+ 
+ boost_dict = { 'LIBPATH' : user_options_dict['BOOST_LIBPATH'] }
+ if BV.IsToBuildQuick():
+-    boost_dict['CPP_POST_FLAGS'] = BV.MakeIncludeOptions(user_options_dict['BOOST_INCLUDE'], 1)
++    boost_dict['POST_CPPINCFLAGS'] = BV.MakeIncludeOptions(user_options_dict['BOOST_INCLUDE'], 1)
+ else:
+     boost_dict['CPPPATH'] = user_options_dict['BOOST_INCLUDE']
+ if not embedded_boost:
+diff --git a/src/mgui/author/render.cpp b/src/mgui/author/render.cpp
+index c91a244..4310898 100644
+--- a/src/mgui/author/render.cpp
++++ b/src/mgui/author/render.cpp
+@@ -453,6 +453,17 @@ static void FFmpegError(const std::string& msg)
+     Author::Error(FFmpegErrorTemplate(), msg);
+ }
+ 
++static std::string errno2str()
++{
++    namespace bs = boost::system;
++#if BOOST_MINOR_VERSION >= 44
++    const bs::error_category& s_cat = bs::system_category();
++#else
++    const bs::error_category& s_cat = bs::system_category; // = bs::get_system_category();
++#endif 
++    return bs::error_code(errno, s_cat).message();
++}
++
+ static void WriteAsPPM(int fd, RefPtr<Gdk::Pixbuf> pix, TrackBuf& buf)
+ {
+     int wdh = pix->get_width();
+@@ -491,10 +502,7 @@ static void WriteAsPPM(int fd, RefPtr<Gdk::Pixbuf> pix, TrackBuf& buf)
+     ASSERT( cur - beg == sz );
+     //checked_writeall(fd, beg, sz);
+     if( !writeall(fd, beg, sz) )
+-    {
+-        namespace bs = boost::system;
+-        FFmpegError(bs::error_code(errno, bs::system_category()).message());
+-    }
++        FFmpegError(errno2str());
+ }
+ 
+ std::string FFmpegPostArgs(const std::string& out_fname, bool is_4_3, bool is_pal, 
+diff --git a/src/mlib/tech.h b/src/mlib/tech.h
+index 771c463..0cd9867 100644
+--- a/src/mlib/tech.h
++++ b/src/mlib/tech.h
+@@ -27,6 +27,7 @@
+ // 
+ #include <boost/current_function.hpp>  // для BOOST_CURRENT_FUNCTION
+ #include <boost/detail/endian.hpp>     // для BOOST_XXX_ENDIAN
++#include <boost/version.hpp>           // для BOOST_MINOR_VERSION
+ 
+ // для С-шного кода в С++
+ #if defined(__cplusplus) || defined(c_plusplus)
+@@ -85,6 +86,8 @@ void AssertImpl(const char* assertion, const char* file,
+ #   error mlib/tech.h: unknown endianness (legacy PDP arch?)
+ #endif
+ 
++#define BOOST_MINOR_VERSION (BOOST_VERSION / 100 % 1000)
++
+ // gcc 4.4 вываливает кучу предупреждений о strict-alias rules
+ // (только при >= -O2), но чувствую, что неправильно
+ 
+diff --git a/src/mlib/tests/turn_on_test_main.h b/src/mlib/tests/turn_on_test_main.h
+index fa3e545..f67e4aa 100644
+--- a/src/mlib/tests/turn_on_test_main.h
++++ b/src/mlib/tests/turn_on_test_main.h
+@@ -22,12 +22,12 @@
+ #ifndef __MLIB_TESTS_TEST_TOTM_H__
+ #define __MLIB_TESTS_TEST_TOTM_H__
+ 
+-#include <boost/version.hpp>
++#include <mlib/tech.h>
+ 
+ //
+ // for Boost > 1.33 dynamic version begin to be built
+ // 
+-#if BOOST_VERSION / 100 % 1000 > 33
++#if BOOST_MINOR_VERSION > 33
+ #   ifndef STILL_HAVE_STATIC_BOOST_WITH_MAIN
+ #       define BOOST_TEST_DYN_LINK 
+ #   endif
+diff --git a/tools/scripts/BuildVars.py b/tools/scripts/BuildVars.py
+index fe992e4..59408ac 100644
+--- a/tools/scripts/BuildVars.py
++++ b/tools/scripts/BuildVars.py
+@@ -458,12 +458,12 @@ def MakeIncludeOptions(dir_list, to_convert=0):
+ 
+ def MoveIncludeOptions(dict):
+     if 'CPPPATH' in dict.keys():
+-        dict['CPP_POST_FLAGS'] = MakeIncludeOptions(dict['CPPPATH'])
++        dict['POST_CPPINCFLAGS'] = MakeIncludeOptions(dict['CPPPATH'])
+         del dict['CPPPATH']
+ 
+ def GetDict(name):
+     dict = UserOptDict[MakeDictName(name)]
+-    #reduce SCons' C scanner area, CPPPATH -> CPP_POST_FLAGS
++    #reduce SCons' C scanner area, CPPPATH -> POST_CPPINCFLAGS
+     if IsToBuildQuick():
+         MoveIncludeOptions(dict)
+     return dict
+@@ -499,6 +499,9 @@ def IsToBuildQuick():
+ 
+     return res
+ 
++def ExtendEnvVariable(env, name, add_name):
++    env[name] = '%s $%s' % (env[name], add_name)
++
+ def CreateEnvVersion2(**kw):
+     tools = ['default', 'AuxTools']
+     if kw.has_key('tools'):
+@@ -514,6 +517,12 @@ def CreateEnvVersion2(**kw):
+         # thin archives ('T' option) are to speed up static libraries build
+         # :TRICKY: libmpeg2.a and etc have to be built directly to build/lib (withour copying/symlinking)
+         env.Replace(ARFLAGS = str(env['ARFLAGS']) + 'T')
++
++    # User defines
++    # it is cosmetically better to place POST_CPPFLAGS just after _CPPDEFFLAGS
++    # but 1) extending _CPPDEFFLAGS is bad such way 2) it still works 
++    ExtendEnvVariable(env, '_CCCOMCOM', 'POST_CPPFLAGS')
++
+     return env
+ 
+ def MakeMainEnv():
+@@ -562,8 +571,9 @@ def MakeMainEnv():
+         suffix = '.pch' if is_clang else '.gch'
+         env['GCHSUFFIX'] = suffix
+     
+-        # 2 - reduce SCons' C scanner area, CPPPATH -> CPP_POST_FLAGS
+-        env['_CPPINCFLAGS'] = env['_CPPINCFLAGS'] + ' $CPP_POST_FLAGS'
++        # 2 - reduce SCons' C scanner area, CPPPATH -> POST_CPPINCFLAGS
++        #env['_CPPINCFLAGS'] = env['_CPPINCFLAGS'] + ' $POST_CPPINCFLAGS'
++        ExtendEnvVariable(env, '_CPPINCFLAGS', 'POST_CPPINCFLAGS')
+     else:
+         def SetPCH(env, header_name, additional_envs=[]):
+             pass
