@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-mcve
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.29 2010/07/04 22:44:59 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.30 2010/11/04 15:26:52 mabi Exp $
+
+*pecl-mcve-7.0.3-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-mcve-7.0.3-r1.ebuild:
+  add version supporting minor version slotting
 
 *pecl-mcve-7.0.3 (04 Jul 2010)
 
