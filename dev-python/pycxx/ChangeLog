@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.17 2010/10/31 12:51:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.18 2010/11/04 12:37:08 maekke Exp $
+
+  04 Nov 2010; Markus Meier <maekke@gentoo.org> pycxx-6.2.1.ebuild:
+  x86 stable, bug #343381
 
   31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> pycxx-6.2.1.ebuild:
   Stable on amd64 wrt bug #343381
