@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.2 2010/11/03 22:39:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.3 2010/11/04 12:02:49 tomka Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MYP}
 
 src_prepare () {
-	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-respect-flags.patch"
 
 	if use openmp && tc-has-openmp; then
 		export OPENMP=yes
