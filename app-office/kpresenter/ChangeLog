@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.103 2010/10/29 20:55:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.104 2010/11/04 12:28:45 tomka Exp $
+
+  04 Nov 2010; Thomas Kahle <tomka@gentoo.org> kpresenter-2.2.2.ebuild:
+  x86 stable per bug 340070
 
   29 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Added myself to maintainers

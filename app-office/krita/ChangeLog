@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.121 2010/11/04 10:19:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.122 2010/11/04 12:30:40 tomka Exp $
+
+  04 Nov 2010; Thomas Kahle <tomka@gentoo.org> krita-2.2.2.ebuild:
+  x86 stable per bug 340070
 
   04 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> krita-2.2.2.ebuild,
   +files/krita-2.2.2-xlibs.patch:

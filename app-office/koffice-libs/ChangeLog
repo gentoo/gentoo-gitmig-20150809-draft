@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.114 2010/10/29 20:49:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.115 2010/11/04 12:20:09 tomka Exp $
+
+  04 Nov 2010; Thomas Kahle <tomka@gentoo.org> koffice-libs-2.2.2.ebuild:
+  x86 stable per bug 340070
 
   29 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Added myself to maintainers
