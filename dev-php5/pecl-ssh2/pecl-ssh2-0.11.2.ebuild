@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/pecl-ssh2-0.11.0.ebuild,v 1.4 2009/12/27 23:19:42 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/pecl-ssh2-0.11.2.ebuild,v 1.1 2010/11/04 16:00:47 mabi Exp $
 
 PHP_EXT_NAME="ssh2"
 PHP_EXT_INI="yes"
@@ -13,8 +13,7 @@ DESCRIPTION="Provides bindings to the functions of libssh2 which implements the 
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
-DEPEND=">=net-libs/libssh2-0.18"
+KEYWORDS="~amd64 ~x86"
+DEPEND=">=net-libs/libssh2-0.18
+		dev-lang/php"
 RDEPEND="${DEPEND}"
-
-need_php_by_category

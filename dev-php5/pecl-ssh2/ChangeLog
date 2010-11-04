@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/pecl-ssh2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/ChangeLog,v 1.7 2010/10/14 23:30:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-ssh2/ChangeLog,v 1.8 2010/11/04 16:00:47 mabi Exp $
+
+*pecl-ssh2-0.11.2-r1 (04 Nov 2010)
+*pecl-ssh2-0.11.2 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> -pecl-ssh2-0.11.0.ebuild,
+  +pecl-ssh2-0.11.2.ebuild, +pecl-ssh2-0.11.2-r1.ebuild:
+  add version supporting minor version slotting, version bump
 
   14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   pecl-ssh2-0.11.0-r1.ebuild:
