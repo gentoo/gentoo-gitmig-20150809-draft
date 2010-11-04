@@ -2,5 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer><email>maintainer-needed@gentoo.org></email></maintainer>
 <longdescription>A perl script designed for monitoring disk usage. Similar to du</longdescription>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/durep
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.7 2006/09/21 22:02:35 blubb Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.8 2010/11/04 17:23:35 jer Exp $
+
+  04 Nov 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add maintainer-needed@.
 
   21 Sep 2006; <blubb@gentoo.org> durep-0.9-r2.ebuild:
   stable on amd64
