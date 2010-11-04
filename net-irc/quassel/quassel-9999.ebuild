@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.51 2010/08/27 11:34:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.52 2010/11/04 14:33:59 scarabeus Exp $
 
 EAPI=3
 
@@ -20,10 +20,11 @@ HOMEPAGE="http://quassel-irc.org/"
 LICENSE="GPL-3"
 KEYWORDS=""
 SLOT="0"
-IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl webkit X"
+IUSE="ayatana crypt dbus debug kde +logrotate monolithic phonon postgres +server +ssl webkit X"
 
 SERVER_RDEPEND="
 	crypt? ( app-crypt/qca:2 )
+	logrotate? ( app-admin/logrotate )
 	!postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe] )
 	postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[postgres] )
 	x11-libs/qt-script:4
@@ -122,8 +123,10 @@ src_install() {
 		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
 
 		# logrotate
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/quassel.logrotate" quassel || die "newins failed"
+		if use logrotate; then
+			insinto /etc/logrotate.d
+			newins "${FILESDIR}/quassel.logrotate" quassel || die "newins failed"
+		fi
 	fi
 }
 
