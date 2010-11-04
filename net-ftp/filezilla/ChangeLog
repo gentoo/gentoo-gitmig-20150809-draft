@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.70 2010/11/03 20:14:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.71 2010/11/04 08:18:50 phajdan.jr Exp $
+
+  04 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  filezilla-3.3.4.1.ebuild:
+  x86 stable wrt bug #343711
 
   03 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   filezilla-3.3.4.1.ebuild:
