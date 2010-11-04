@@ -14,9 +14,6 @@
 		<description>Upstream author, please CC on bugs</description>
 	</maintainer>
 	<use>
-		<flag name="logrotate">
-			Install support files for app-admin/logrotate.
-		</flag>
 		<flag name="monolithic">
 			Build Standalone client with integrated core, no external
 			quasselcore needed. Only useful if you don't want to use quassels

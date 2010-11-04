@@ -1,6 +1,6 @@
-g# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.54 2010/11/04 14:44:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.55 2010/11/04 14:46:11 scarabeus Exp $
 
 EAPI=3
 
