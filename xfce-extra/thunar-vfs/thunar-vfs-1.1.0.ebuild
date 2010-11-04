@@ -1,14 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100824.ebuild,v 1.4 2010/10/28 14:57:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-1.1.0.ebuild,v 1.1 2010/11/04 20:53:34 ssuominen Exp $
 
 EAPI=3
-EAUTORECONF=yes
 inherit xfconf
 
 DESCRIPTION="Separate package for (old) Thunar VFS libraries"
 HOMEPAGE="http://git.xfce.org/xfce/thunar-vfs/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/1.1/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -21,7 +20,7 @@ RDEPEND=">=xfce-base/exo-0.5.3
 	>=xfce-base/libxfce4util-4.6
 	>=media-libs/libpng-1.4
 	>=media-libs/freetype-2
-	>=media-libs/jpeg-8a
+	virtual/jpeg
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	gnome? ( >=gnome-base/gconf-2 )
 	startup-notification? ( >=x11-libs/startup-notification-0.4 )
@@ -30,20 +29,21 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext
-	dev-lang/perl
-	dev-util/gtk-doc-am"
+	dev-lang/perl"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
-
-	XFCONF="--enable-maintainer-mode
+	XFCONF=(
+		--enable-maintainer-mode
 		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(use_enable gnome gnome-thumbnailers)
 		$(use_enable startup-notification)
 		$(xfconf_use_debug)
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		--with-volume-manager=none
-		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
+		)
+
+	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 }
 
 src_install() {
