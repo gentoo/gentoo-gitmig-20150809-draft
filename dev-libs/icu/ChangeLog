@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.123 2010/11/02 07:11:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.124 2010/11/04 12:47:13 hwoarang Exp $
+
+  04 Nov 2010; Markos Chandras <hwoarang@gentoo.org> icu-4.4.2.ebuild:
+  Stable on amd64 wrt bug #343759
 
   02 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   icu-4.4.2.ebuild, +files/icu-4.4.2-gcc-4.5.patch:
