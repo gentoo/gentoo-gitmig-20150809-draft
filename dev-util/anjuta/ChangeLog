@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.121 2010/10/17 16:27:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.122 2010/11/04 21:57:44 pacho Exp $
+
+*anjuta-2.32.0.0 (04 Nov 2010)
+
+  04 Nov 2010; Pacho Ramos <pacho@gentoo.org> +anjuta-2.32.0.0.ebuild,
+  +files/anjuta-2.32.0.0-automagic-vala.patch, metadata.xml:
+  Version bump for Gnome 2.32 with lots of fixed bugs and updated
+  translations. Uses python2 since upstream still doesn't support python3
+  yet (upstream bug #633786#c2), introspection.m4 needs to be present when
+  running eautoreconf (upstream bug #633730), vala support is no longer
+  automagic (upstream bug #633661), adds introspection and graphviz support
+  via their respective USE flags, stop making symbol-db optional since it's
+  a headache to maintain on major version bumps and upstream really
+  discourages it (upstream bug #621920).
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> anjuta-2.30.2.1.ebuild:
   sparc stable wrt #324077

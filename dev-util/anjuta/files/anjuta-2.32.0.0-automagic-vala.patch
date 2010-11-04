@@ -1,0 +1,40 @@
+From bf96448d1a3d04b19c0e742a5541f8399fc374e0 Mon Sep 17 00:00:00 2001
+From: Pacho Ramos <pacho@condmat1.ciencias.uniovi.es>
+Date: Thu, 04 Nov 2010 09:37:19 +0000
+Subject: build: bgo#633661 - vala support is automagic
+
+---
+diff --git a/configure.in b/configure.in
+index 1fd6f03..1f40614 100644
+--- a/configure.in
++++ b/configure.in
+@@ -266,10 +266,23 @@ AM_CONDITIONAL(HAVE_PLUGIN_SOURCEVIEW, [test x$sourceview = xyes])
+ dnl Check for vala
+ dnl -------------------------------------------------------------
+ 
+-PKG_CHECK_MODULES(VALA,
+-	[vala-0.10 >= $VALA_REQUIRED],
+-	[enable_vala="yes"],
+-	[enable_vala="no"])
++AC_ARG_ENABLE(vala,
++	AC_HELP_STRING([--disable-vala],[Disable vala support]),
++	[ if test "$enableval" = "no"; then
++		user_disabled_vala=1
++	  fi ],
++	[ user_disabled_vala=0 ])
++
++AC_MSG_CHECKING(if vala support is disabled)
++if test "$user_disabled_vala" = 1; then
++        AC_MSG_RESULT(yes)
++	enable_vala="no"
++else
++	AC_MSG_RESULT(no)
++	enable_vala="yes"
++	PKG_CHECK_MODULES(VALA,
++		[vala-0.10 >= $VALA_REQUIRED])
++fi
+ 
+ if test x$enable_vala = xyes; then
+ 	AC_PATH_PROG(VALAC, valac, valac)
+--
+cgit v0.8.3.1
