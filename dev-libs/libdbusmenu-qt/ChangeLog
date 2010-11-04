@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.11 2010/11/04 11:34:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.12 2010/11/04 14:22:56 scarabeus Exp $
+
+  04 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libdbusmenu-qt-0.3.0.ebuild,
+  -files/libdbusmenu-qt-0.3.0-set-link-directories.patch:
+  old
 
   04 Nov 2010; Markus Meier <maekke@gentoo.org> libdbusmenu-qt-0.6.2.ebuild:
   x86 stable, bug #341637
