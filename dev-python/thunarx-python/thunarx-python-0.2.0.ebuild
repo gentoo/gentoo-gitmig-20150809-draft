@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.2.0.ebuild,v 1.3 2010/10/26 20:08:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.2.0.ebuild,v 1.4 2010/11/04 22:05:25 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND=2
@@ -25,8 +25,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
-		$(xfconf_use_debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README"
 
 	python_set_active_version 2
