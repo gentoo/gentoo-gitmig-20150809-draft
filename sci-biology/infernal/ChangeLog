@@ -1,6 +1,17 @@
 # ChangeLog for sci-biology/infernal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.7 2010/04/05 12:14:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.8 2010/11/04 10:06:22 xarthisius Exp $
+
+*infernal-1.0.2-r1 (04 Nov 2010)
+
+  04 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> -infernal-1.0.ebuild,
+  +infernal-1.0.2-r1.ebuild, +files/infernal-1.0.2-ldflags.patch,
+  +files/infernal-1.0.2-overflows.patch,
+  +files/infernal-1.0.2-parallel-build.patch:
+  Fix parallel build wrt bug 311919. Thanks to Myckel Habets
+  <m.e.j.habets@biology.leidenuniv.nl> for patch and report. Fix buffer
+  overflow wrt bug 338179 and respect LDFLAGS wrt bug 338177. Thanks to
+  Diego Elio Pettenò for the reports. Drop old.
 
   05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   infernal-1.0.2.ebuild:
