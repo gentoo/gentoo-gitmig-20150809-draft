@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1.ebuild,v 1.2 2010/11/04 12:38:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1.ebuild,v 1.3 2010/11/04 18:51:34 jer Exp $
 
 EAPI="3"
 
@@ -21,7 +21,8 @@ RDEPEND=""
 S="${WORKDIR}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_build_system.patch"
+	epatch "${FILESDIR}/${P}-fix_build_system.patch" \
+		"${FILESDIR}/${P}-sunos.patch"
 }
 
 src_compile() {
@@ -30,7 +31,8 @@ src_compile() {
 	filter-flags -fomit-frame-pointer
 	use amd64 && append-flags -DCRYPTOPP_DISABLE_ASM
 
-	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LIBDIR="$(get_libdir)" || die "emake failed"
+	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
+		LIBDIR="$(get_libdir)" || die "emake failed"
 }
 
 src_test() {
@@ -41,12 +43,13 @@ src_test() {
 	done
 
 	if ! emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" test; then
-	    eerror "Crypto++ self-tests failed."
-	    eerror "Try to remove some optimization flags and reemerge Crypto++."
-	    die "emake test failed"
+		eerror "Crypto++ self-tests failed."
+		eerror "Try to remove some optimization flags and reemerge Crypto++."
+		die "emake test failed"
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" install || die "emake install failed"
+	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" install \
+		|| die "emake install failed"
 }

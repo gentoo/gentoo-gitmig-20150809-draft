@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.60 2010/11/04 12:38:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.61 2010/11/04 18:51:34 jer Exp $
+
+  04 Nov 2010; Jeroen Roovers <jer@gentoo.org> crypto++-5.6.1.ebuild,
+  +files/crypto++-5.6.1-sunos.patch:
+  Fix building on HPPA (bug #343909). Wrap long lines. Replace spaces with
+  tabs.
 
   04 Nov 2010; Markus Meier <maekke@gentoo.org> crypto++-5.6.1.ebuild:
   x86 stable, bug #343373
