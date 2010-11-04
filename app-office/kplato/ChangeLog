@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.80 2010/10/29 20:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.81 2010/11/04 09:14:12 dilfridge Exp $
+
+  04 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kplato-2.2.2.ebuild:
+  Explicitly DEPEND on koffice-libs[reports]
 
   29 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Added myself to maintainers
