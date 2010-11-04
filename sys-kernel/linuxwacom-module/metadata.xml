@@ -11,7 +11,4 @@
 	<name>Julien Sanchez</name>
   </maintainer>
   <longdescription>kernel driver for wacom tablets</longdescription>
-  <use>
-	  <flag name='modules'>Build kernel module</flag>
-  </use>
 </pkgmetadata>
