@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.31 2010/10/14 16:57:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.32 2010/11/04 14:04:36 matsuu Exp $
+
+*ddskk-14.1 (04 Nov 2010)
+
+  04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +ddskk-14.1.ebuild:
+  Version bumped, bug #339426.
 
   14 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -ddskk-12.2.0-r1.ebuild,
   -ddskk-13.1.ebuild:
@@ -9,7 +14,7 @@
   14 Oct 2010; Brent Baude <ranger@gentoo.org> ddskk-13.1-r1.ebuild:
   stable ppc, bug 330313
 
-  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> ddskk-13.1-r1.ebuild:
+  18 Sep 2010; Ra炭l Porcel <armin76@gentoo.org> ddskk-13.1-r1.ebuild:
   alpha/sparc stable wrt #330313
 
   01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ddskk-13.1-r1.ebuild:
@@ -54,7 +59,7 @@
   added some die comments; exchanged manual make calls with emake; adjusted
   DESCRIPTION; cleaned-up DEPEND lines; added some quotes
 
-  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ddskk-12.2.0-r1.ebuild:
+  03 Feb 2007; Diego Petten嘆 <flameeyes@gentoo.org> ddskk-12.2.0-r1.ebuild:
   Regenerate digest in Manifest2 format.
 
   01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
