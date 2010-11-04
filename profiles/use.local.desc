@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6115 2010/11/03 14:54:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6116 2010/11/04 00:34:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1751,7 +1751,6 @@ media-gfx/blender:verse -  Adds verse clustering features to blender
 media-gfx/comix:rar -  Pulls app-arch/unrar for rar file support 
 media-gfx/digikam:addressbook - Add support for kdepim
 media-gfx/digikam:geolocation - Add support for marble
-media-gfx/digikam:glib - Enable support for liquid rescale tool
 media-gfx/digikam:lensfun - Enable support for lens-correnction library
 media-gfx/digikam:themedesigner - Build the digikam theme designer
 media-gfx/digikam:thumbnails - Enable thumbnails database support
