@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6.ebuild,v 1.2 2010/11/02 21:11:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6-r1.ebuild,v 1.1 2010/11/04 18:15:26 idl0r Exp $
 
 EAPI=3
 
 inherit eutils perl-module
 
-DESCRIPTION="Highly flexible server for git directory version tracker"
-HOMEPAGE="http://github.com/sitaramc/gitolite"
+DESCRIPTION="Highly flexible server for git directory version tracker, Gentoo fork"
+HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gitolite-gentoo.git;a=summary"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -27,6 +27,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/gl-setup-tempfile.patch"
 	epatch "${FILESDIR}/gitolite-require.patch"
 
 	rm -rf Makefile doc/COPYING contrib/{autotoc,gitweb,vim}
