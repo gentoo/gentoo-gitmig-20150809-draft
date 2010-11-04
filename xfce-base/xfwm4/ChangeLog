@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.152 2010/11/03 21:32:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.153 2010/11/04 14:59:43 ssuominen Exp $
+
+  04 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> xfwm4-4.7.1.ebuild:
+  Block <libxfcegui4-4.7.0 to avoid conflict with function
+  xfce_shortcuts_provider_set_shortcut.
 
 *xfwm4-4.7.1 (03 Nov 2010)
 

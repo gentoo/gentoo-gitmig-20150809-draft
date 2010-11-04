@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.7.1.ebuild,v 1.1 2010/11/03 21:32:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.7.1.ebuild,v 1.2 2010/11/04 14:59:43 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -31,7 +31,8 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	startup-notification? ( x11-libs/startup-notification )
 	xcomposite? ( x11-libs/libXcomposite
 		x11-libs/libXdamage
-		x11-libs/libXfixes )"
+		x11-libs/libXfixes )
+	!<xfce-base/libxfcegui4-4.7.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
