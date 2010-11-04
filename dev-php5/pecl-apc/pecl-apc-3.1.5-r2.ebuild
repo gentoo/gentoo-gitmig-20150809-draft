@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.5.ebuild,v 1.1 2010/11/02 19:55:03 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.5-r2.ebuild,v 1.1 2010/11/04 09:03:50 olemarkus Exp $
 
 EAPI=2
 

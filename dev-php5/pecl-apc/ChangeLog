@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.63 2010/11/02 19:55:03 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.64 2010/11/04 09:03:50 olemarkus Exp $
+
+*pecl-apc-3.1.5-r2 (04 Nov 2010)
+*pecl-apc-3.1.5-r1 (04 Nov 2010)
+
+  04 Nov 2010; <olemarkus@gentoo.org> -pecl-apc-3.1.5.ebuild,
+  +pecl-apc-3.1.5-r1.ebuild, +pecl-apc-3.1.5-r2.ebuild:
+  Created versions for php-ext-*r{1,2}. The revbumps is there to get the
+  version ordering straight
 
 *pecl-apc-3.1.5 (02 Nov 2010)
 
