@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.39 2010/01/23 02:52:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.40 2010/11/04 08:19:32 matsuu Exp $
+
+*fribidi-0.19.2-r1 (04 Nov 2010)
+
+  04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +fribidi-0.19.2-r1.ebuild,
+  +files/fribidi-0.19.2-glib.patch, +files/fribidi-0.19.2-nodoc.patch:
+  Fixed glib issue, bug #318569.
 
 *fribidi-0.19.2 (23 Jan 2010)
 
