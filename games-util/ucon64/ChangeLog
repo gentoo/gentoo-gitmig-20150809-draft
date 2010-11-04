@@ -1,6 +1,10 @@
 # ChangeLog for games-util/ucon64
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.13 2009/12/30 15:32:37 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.14 2010/11/04 08:20:12 tupone Exp $
+
+  04 Nov 2010; Tupone Alfredo <tupone@gentoo.org> ucon64-2.0.0.ebuild,
+  +files/ucon64-2.0.0-ovflfix.patch:
+  Fix overflow. Bug #337889 by flameeyes@gentoo.org
 
   30 Dec 2009; Tupone Alfredo <tupone@gentoo.org> ucon64-2.0.0.ebuild:
   EAPI=2 and not installing missing files. Bug #298670 by
