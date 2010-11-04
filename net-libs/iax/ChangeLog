@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/iax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.10 2010/10/28 13:41:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.11 2010/11/04 17:32:53 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> iax-0.2.2-r1.ebuild:
+  stable x86, bug 342757
 
   28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> iax-0.2.2-r1.ebuild:
   Keyworded for amd64. Bug 342757

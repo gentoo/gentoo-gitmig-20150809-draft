@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/pjsip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.2 2010/10/28 13:39:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.3 2010/11/04 17:33:44 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> pjsip-1.6.ebuild:
+  stable x86, bug 342757
 
   28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> pjsip-1.6.ebuild:
   Keyworded for amd64. Bug 342757
