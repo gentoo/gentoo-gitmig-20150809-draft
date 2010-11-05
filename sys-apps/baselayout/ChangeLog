@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.484 2010/11/04 00:35:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.485 2010/11/05 04:48:00 jer Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> baselayout-1.12.14-r1.ebuild:
+  Stable for HPPA PPC (bug #343925).
 
 *baselayout-2.0.1-r1 (04 Nov 2010)
 
