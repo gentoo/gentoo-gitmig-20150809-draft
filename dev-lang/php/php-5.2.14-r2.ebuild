@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r2.ebuild,v 1.1 2010/10/31 19:01:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14-r2.ebuild,v 1.2 2010/11/05 10:39:07 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ inherit eutils autotools flag-o-matic versionator depend.apache apache-module db
 SUHOSIN_VERSION="$PV-0.9.7"
 EXPECTED_TEST_FAILURES=""
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 function php_get_uri ()
 {
