@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.435 2010/11/04 12:01:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.436 2010/11/05 04:14:54 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> php-5.3.3-r1.ebuild:
+  Stable for HPPA (bug #336869).
 
   04 Nov 2010; Matti Bickel <mabi@gentoo.org> php-5.3.3-r3.ebuild:
   do not block versions of pecl-fileinfo supporting minor version slotting
