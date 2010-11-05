@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.121 2010/10/30 17:09:16 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.122 2010/11/05 04:18:21 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> PEAR-PEAR-1.9.1-r1.ebuild:
+  Stable for HPPA (bug #336869).
 
 *PEAR-PEAR-1.9.1-r3 (30 Oct 2010)
 
