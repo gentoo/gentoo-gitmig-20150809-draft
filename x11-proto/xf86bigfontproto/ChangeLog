@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86bigfontproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.40 2010/09/10 18:29:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.41 2010/11/05 09:38:57 mduft Exp $
+
+  05 Nov 2010; Markus Duft <mduft@gentoo.org> xf86bigfontproto-1.2.0.ebuild:
+  migrate to xorg-2 eclass, raise EAPI accordingly.
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86bigfontproto-1.1.2.ebuild:

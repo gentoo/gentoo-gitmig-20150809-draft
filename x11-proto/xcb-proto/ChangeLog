@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.51 2010/09/10 18:25:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.52 2010/11/05 09:37:19 mduft Exp $
+
+  05 Nov 2010; Markus Duft <mduft@gentoo.org> xcb-proto-1.6.ebuild:
+  migrate to xorg-2 eclass, raise EAPI accordingly.
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xcb-proto-1.5.ebuild:

@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.12 2010/08/02 18:13:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.13 2010/11/05 09:37:19 mduft Exp $
 
+EAPI=3
 PYTHON_DEPEND="2:2.5"
 
-inherit python x-modular
+inherit python xorg-2
 
 DESCRIPTION="X C-language Bindings protocol headers"
 HOMEPAGE="http://xcb.freedesktop.org/"
@@ -24,7 +25,7 @@ pkg_setup() {
 }
 
 src_install() {
-	x-modular_src_install
+	xorg-2_src_install
 	python_clean_installation_image
 }
 
