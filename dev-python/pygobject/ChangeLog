@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.101 2010/10/02 18:10:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.102 2010/11/05 22:06:04 eva Exp $
+
+*pygobject-2.21.5 (05 Nov 2010)
+
+  05 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pygobject-2.21.4-make_check.patch, +pygobject-2.21.5.ebuild,
+  metadata.xml:
+  Version bump. Enable introspection support but disable related tests, they
+  seem broken.
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org>
   pygobject-2.20.0-r1.ebuild:

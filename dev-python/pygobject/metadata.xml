@@ -4,6 +4,8 @@
 <herd>gnome</herd>
 <herd>python</herd>
 <use>
+	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
+	introspection</flag>
 	<flag name='libffi'>Enable support to connect to signals on python objects from C.</flag>
 </use>
 </pkgmetadata>
