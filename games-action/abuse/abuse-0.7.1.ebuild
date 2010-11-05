@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.10 2009/09/22 18:54:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.11 2010/11/05 16:39:59 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -23,23 +24,22 @@ RDEPEND=">=media-libs/libsdl-1.1.6"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	virtual/opengl"
-src_unpack() {
-	unpack ${A}
+
+src_prepare() {
 	# fix placing additional patches
 	use levels && cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-frabs-2.11/
 	use demo && cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-lib-2.00.orig/
 	use sounds && cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-sfx-2.00.orig/
-	cd "${S}"
 	# fix bug #231822
 	sed -i \
 		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
 		src/sdlport/setup.cpp || or die "sed setup.cpp failed"
+	epatch "${FILESDIR}"/${P}-ovflfix.patch
 }
 
-src_compile() {
+src_configure() {
 	# Abuse auto-appends games, so point to the base
 	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
-	emake || die "emake failed"
 }
 
 src_install() {
