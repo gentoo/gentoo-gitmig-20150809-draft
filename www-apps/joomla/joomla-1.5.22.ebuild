@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.22.ebuild,v 1.1 2010/11/05 09:29:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.22.ebuild,v 1.2 2010/11/05 12:05:05 fauli Exp $
+
+EAPI=2
 
 inherit webapp depend.php
 
@@ -19,12 +21,7 @@ S="${WORKDIR}"
 
 DEPEND="${DEPEND}
 	app-arch/unzip"
-RDEPEND=""
-
-pkg_setup () {
-	webapp_pkg_setup
-	require_php_with_use mysql zlib xml
-}
+RDEPEND="dev-lang/php[mysql,zlib,xml]"
 
 src_install () {
 	webapp_src_preinst
