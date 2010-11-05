@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.59 2010/07/20 00:09:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.60 2010/11/05 05:48:55 jer Exp $
+
+*lilo-23.1 (05 Nov 2010)
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> +lilo-23.1.ebuild:
+  Version bump.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> lilo-23.0-r1.ebuild:
   Remove useless doman call.
