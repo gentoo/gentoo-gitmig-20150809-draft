@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.122 2010/11/04 21:57:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.123 2010/11/05 20:00:58 eva Exp $
+
+  05 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  anjuta-2.32.0.0.ebuild:
+  Pin glib/gtk+ to slot 2.
 
 *anjuta-2.32.0.0 (04 Nov 2010)
 

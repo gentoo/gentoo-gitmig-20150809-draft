@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.0.0.ebuild,v 1.1 2010/11/04 21:57:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.0.0.ebuild,v 1.2 2010/11/05 20:00:58 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug devhelp doc glade graphviz +introspection +sourceview subversion test vala"
 
-RDEPEND=">=dev-libs/glib-2.25.15
-	>=x11-libs/gtk+-2.20.0
+RDEPEND=">=dev-libs/glib-2.25.15:2
+	>=x11-libs/gtk+-2.20.0:2
 	>=dev-libs/dbus-glib-0.70
 	>=gnome-base/gconf-2.12
 	>=x11-libs/vte-0.13.1
