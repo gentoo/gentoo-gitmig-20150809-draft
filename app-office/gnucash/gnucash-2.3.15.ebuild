@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.15.ebuild,v 1.1 2010/08/23 13:23:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.15.ebuild,v 1.2 2010/11/05 15:34:19 halcy0n Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 #IUSE="+doc ofx hbci chipcard debug mysql python quotes sqlite postgres webkit"
 IUSE="+doc ofx hbci chipcard debug mysql quotes sqlite postgres webkit"
