@@ -1,22 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0-r2.ebuild,v 1.1 2010/01/19 05:18:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r2.ebuild,v 1.1 2010/11/05 22:20:46 ssuominen Exp $
 
 EAPI=2
 
-inherit eutils linux-mod linux-info
+inherit eutils linux-mod linux-info toolchain-funcs
 
 DESCRIPTION="IVTV utilities for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
-SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/1.3.x/${P}.tar.gz"
+SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/1.4.x/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl"
-RDEPEND=">=sys-fs/udev-103"
+RDEPEND=">=sys-fs/udev-103
+	media-tv/v4l-utils"
 DEPEND="app-arch/unzip
-	<sys-kernel/linux-headers-2.6.29
-	>=sys-kernel/linux-headers-2.6.26
+	>=sys-kernel/linux-headers-2.6.29
 	!media-tv/ivtv"
 PDEPEND=">=media-tv/ivtv-firmware-20070217
 	perl? (
@@ -29,29 +29,28 @@ PDEPEND=">=media-tv/ivtv-firmware-20070217
 pkg_setup() {
 	linux-info_pkg_setup
 
-	MODULE_NAMES="saa717x(extra:${S}/i2c-drivers)"
+	### Commented out following line because it causes failure and because the module should already be in the kernel
+	#       MODULE_NAMES="saa717x(extra:${S}/i2c-drivers)"
 	BUILD_TARGETS="all"
-	CONFIG_CHECK="~EXPERIMENTAL ~KMOD ~HAS_IOMEM ~FW_LOADER ~I2C ~I2C_ALGOBIT
+	CONFIG_CHECK="~EXPERIMENTAL ~MODULES ~HAS_IOMEM ~FW_LOADER ~I2C ~I2C_ALGOBIT
 		~VIDEO_DEV ~VIDEO_CAPTURE_DRIVERS ~VIDEO_V4L1 ~VIDEO_V4L2 ~VIDEO_IVTV"
 
-	if ! ( kernel_is ge 2 6 26 && kernel_is le 2 6 28 ); then
+	if ! ( kernel_is ge 2 6 29 ); then
 		eerror "This package is only for the fully in-kernel"
-		eerror "IVTV driver shipping with kernel 2.6.26 - 2.6.28"
+		eerror "IVTV driver shipping with kernel 2.6.29 or newer"
 		eerror ""
 		eerror "You will need to either:"
-		eerror "a) emerge a 2.6.26.x - 2.6.28.x kernel"
+		eerror "a) emerge a 2.6.29 or newer kernel"
 		eerror "b) emerge media-tv/ivtv or media-tv/ivtv-utils for"
-		eerror "your kernel version"
+		eerror "your kernel"
 		eerror ""
 		eerror "See http://ivtvdriver.org/ for more information"
-		die "This only works on 2.6.26 - 2.6.28 kernels"
+		die "This only works on 2.6.29 or newer kernels"
 	fi
 
-	ewarn ""
 	ewarn "Make sure that your I2C and V4L kernel drivers are loaded as"
 	ewarn "modules, and not compiled into the kernel, or IVTV will not"
 	ewarn "work."
-	ewarn ""
 
 	linux-mod_pkg_setup
 
@@ -59,24 +58,21 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-2.6.27.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
-	emake  || die "failed to build"
-
-	linux-mod_src_compile
+	tc-export CC CXX
+	emake || die
 }
 
 src_install() {
-	make DESTDIR="${D}" PREFIX="/usr" install || die "failed to install"
-	use perl && dobin utils/perl/*.pl
-
-	cd "${S}"
-	dodoc README doc/* ChangeLog
-	use perl && dodoc utils/perl/README.ptune
-
-	linux-mod_src_install
+	emake DESTDIR="${D}" PREFIX="/usr" install || die "failed to install"
+	dodoc README doc/* ChangeLog || die
+	if use perl; then
+		dobin utils/perl/*.pl || die
+		dodoc utils/perl/README.ptune || die
+	fi
 }
 
 pkg_postinst() {

@@ -3,7 +3,7 @@ Fixing multiple QA issues
  * fix linking order
  * make job server for install phase
 
-Don't install v4l2-ctl (bug #278255)
+Don't install ivtv-ctl (bug #333291) and v4l2-ctl (bug #278255)
 Don't install duplicate kernel headers (bug #244584)
 
 https://bugs.gentoo.org/show_bug.cgi?id=321303
@@ -37,7 +37,7 @@ Patch written by Kacper Kowalik <xarthisius.kk@gmail.com>
  endif
  
 -EXES := v4l2-ctl ivtv-ctl ivtv-radio $(X86_EXES)
-+EXES := ivtv-ctl ivtv-radio $(X86_EXES)
++EXES := ivtv-radio $(X86_EXES)
  
  BIN := $(EXES) ivtv-tune/ivtv-tune cx25840ctl/cx25840ctl
  
