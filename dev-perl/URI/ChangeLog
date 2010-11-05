@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.78 2010/11/04 13:40:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.79 2010/11/05 04:00:38 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> URI-1.55.ebuild:
+  Stable for HPPA (bug #341865).
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> URI-1.55.ebuild:
   x86 stable, bug 341865
