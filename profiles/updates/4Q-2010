@@ -11,3 +11,4 @@ move dev-libs/luaexpat dev-lua/luaexpat
 move dev-libs/luasec dev-lua/luasec
 move dev-libs/luasocket dev-lua/luasocket
 move dev-lang/luarocks dev-lua/luarocks
+move dev-libs/luafilesystem dev-lua/luafilesystem

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4751 2010/11/05 22:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4752 2010/11/05 23:21:53 rafaelmartins Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> updates/4Q-2010:
+  Moving dev-libs/luafilesystem to dev-lua/luafilesystem
 
   05 Nov 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Update Gnome 2.32 mask.
