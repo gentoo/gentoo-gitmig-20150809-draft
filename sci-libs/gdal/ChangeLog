@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.98 2010/09/18 23:25:59 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.99 2010/11/05 18:35:02 halcy0n Exp $
+
+  05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> gdal-1.6.3-r1.ebuild:
+  Stable for ppc64; bug #315659
 
   18 Sep 2010; Steve Arnold <nerdboy@gentoo.org> metadata.xml:
   Removed crufty old local USE flags from metadata.
