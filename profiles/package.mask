@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12161 2010/11/05 15:04:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12162 2010/11/05 17:19:03 ricmm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -571,11 +571,6 @@ sys-auth/policykit-qt
 #
 # Removal on 2010-11-07
 dev-dotnet/ant-dotnet
-
-# Ricardo Mendoza <ricmm@gentoo.org> (04 Oct 2010)
-# Dead upstream, project no longer exists and doesn't work.
-# Masked for removal in 30 days.
-net-misc/metacafe-dl
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Oct 2010)
 #  on behalf of QA team
