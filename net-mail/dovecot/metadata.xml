@@ -3,21 +3,17 @@
 <pkgmetadata>
   <herd>net-mail</herd>
         <maintainer>
-                <email>eray.aslan@caf.com.tr</email>
+                <email>eras@gentoo.org</email>
                 <name>Eray Aslan</name>
         </maintainer>
-        <maintainer>
-                <email>patrick@gentoo.org</email>
-                <name>Patrick Lauer (proxy maint)</name>
-        </maintainer>
   <use>
-    <flag name="cydir">Adds cydir storage support</flag>
-    <flag name="dbox">Adds dbox storage support</flag>
-    <flag name="managesieve">Adds managesieve protocol support</flag>
-    <flag name="mdbox">Adds mdbox storage support</flag>
-    <flag name="pop3d">Build pop3d support</flag>
-    <flag name="sdbox">Adds sdbox storage support</flag>
-    <flag name="sieve">Build the sieve plugin</flag>
+    <flag name="cydir">Add cydir storage support</flag>
+    <flag name="dbox">Add dbox storage support</flag>
+    <flag name="managesieve">Add managesieve protocol support</flag>
+    <flag name="mdbox">Add mdbox storage support</flag>
+    <flag name="pop3d">Add pop3d support</flag>
+    <flag name="sdbox">Add sdbox storage support</flag>
+    <flag name="sieve">Add sieve support</flag>
     <flag name="vpopmail">Add vpopmail support</flag>
   </use>
 </pkgmetadata>
