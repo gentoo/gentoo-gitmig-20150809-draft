@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bug-buddy-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.42 2010/10/14 22:24:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.43 2010/11/05 23:00:12 pacho Exp $
+
+*bug-buddy-python-2.32.0 (05 Nov 2010)
+
+  05 Nov 2010; Pacho Ramos <pacho@gentoo.org>
+  +bug-buddy-python-2.32.0.ebuild:
+  Version bump for Gnome 2.32.
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org>
   bug-buddy-python-2.30.2.ebuild:
