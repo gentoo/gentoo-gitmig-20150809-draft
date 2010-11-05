@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.4 2010/11/05 23:44:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.5 2010/11/05 23:55:42 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-generics.patch
 	epatch "${FILESDIR}"/${P}-javadocs.patch
 
-	cp "${FILESDIR}"/build.xml "${S}"
+	cp "${FILESDIR}"/build.xml "${S}" || die
 }
 
 src_compile() {
@@ -43,8 +43,8 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	if use doc ; then
-		java-pkg_dohtml -r docs/*
+		java-pkg_dohtml -r docs/* || die
 	fi
 
-	dodoc CHANGELOG
+	dodoc CHANGELOG || die
 }
