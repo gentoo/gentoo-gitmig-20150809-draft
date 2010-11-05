@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.27 2010/10/07 19:52:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.28 2010/11/05 23:51:17 pacho Exp $
+
+*nant-0.86_beta1-r1 (05 Nov 2010)
+
+  05 Nov 2010; Pacho Ramos <pacho@gentoo.org> +nant-0.86_beta1-r1.ebuild:
+  Revision bump to force USE='bootstrap' as ndoc will go away due bug
+  #342023.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -nant-0.85.ebuild,
   -files/nant-0.85-obselencense.patch, -files/nant-0.85-threadingfix.patch:
