@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.64 2010/11/05 03:59:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.65 2010/11/05 11:19:09 maekke Exp $
+
+  05 Nov 2010; Markus Meier <maekke@gentoo.org> Pod-Coverage-0.21.ebuild:
+  arm stable, bug #341865
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> Pod-Coverage-0.21.ebuild:
   Stable for HPPA (bug #341865).
