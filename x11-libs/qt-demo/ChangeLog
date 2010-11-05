@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.58 2010/11/01 12:30:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.59 2010/11/05 18:07:22 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-demo-4.5.3.ebuild:
+  Needs qt-webkit, so dropping HPPA keywording (bug #239441).
 
   01 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> qt-demo-4.7.0.ebuild:
   Keyword ~ppc64 wrt #338289.
