@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4745 2010/11/05 19:53:56 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4746 2010/11/05 20:34:18 rafaelmartins Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> updates/4Q-2010:
+  Moving dev-libs/luaevent-prosody to dev-lua/luaevent-prosody.
 
   05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> categories:
   Added dev-lua category.
