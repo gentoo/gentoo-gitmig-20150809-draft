@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-jsch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jsch/ChangeLog,v 1.25 2010/07/16 20:44:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jsch/ChangeLog,v 1.26 2010/11/05 02:52:21 halcy0n Exp $
+
+  05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ant-jsch-1.8.1.ebuild:
+  Stable for ppc64; bug #305929
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> ant-jsch-1.8.1.ebuild:
   Marked ~x64-macos

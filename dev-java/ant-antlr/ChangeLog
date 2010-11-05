@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.32 2010/07/16 19:49:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.33 2010/11/05 03:02:37 halcy0n Exp $
+
+  05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ant-antlr-1.8.1.ebuild:
+  Stable for ppc64; bug #305929
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> ant-antlr-1.8.1.ebuild:
   Marked ~x64-macos

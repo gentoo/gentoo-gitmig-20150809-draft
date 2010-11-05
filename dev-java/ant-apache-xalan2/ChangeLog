@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-apache-xalan2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.5 2010/07/16 21:01:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.6 2010/11/05 02:49:22 halcy0n Exp $
+
+  05 Nov 2010; Mark Loeser <halcy0n@gentoo.org>
+  ant-apache-xalan2-1.8.1.ebuild:
+  Stable for ppc64; bug #305929
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org>
   ant-apache-xalan2-1.8.1.ebuild:
