@@ -1,0 +1,42 @@
+# ChangeLog for dev-lua/luafilesystem
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.1 2010/11/05 23:12:31 rafaelmartins Exp $
+
+  05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +luafilesystem-1.4.1.ebuild, +luafilesystem-1.4.2.ebuild, +metadata.xml:
+  Moved from dev-libs to dev-lua. Added myself to metadata.xml.
+
+*luafilesystem-1.4.2 (19 May 2009)
+
+  19 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +luafilesystem-1.4.2.ebuild:
+  Version bumped.
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> luafilesystem-1.4.1.ebuild:
+  Stable on ppc wrt bug 250795
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> luafilesystem-1.4.1.ebuild:
+  amd64/x86 stable, bug #250795
+
+  16 Dec 2008; Brent Baude <ranger@gentoo.org> luafilesystem-1.4.1.ebuild:
+  stable ppc64, bug 250795
+
+  23 Sep 2008; Markus Rothe <corsair@gentoo.org> luafilesystem-1.4.1.ebuild:
+  Added ~ppc
+
+  24 Aug 2008; Markus Rothe <corsair@gentoo.org> luafilesystem-1.4.1.ebuild:
+  Added ~ppc64; bug #234421
+
+  14 Aug 2008; Alexis Ballier <aballier@gentoo.org>
+  luafilesystem-1.4.1.ebuild:
+  keyword ~x86-fbsd
+
+  08 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> luafilesystem-1.4.1.ebuild:
+  Fixed LICENSE. Added docs.
+
+*luafilesystem-1.4.1 (08 Aug 2008)
+
+  08 Aug 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +luafilesystem-1.4.1.ebuild:
+  Initial import.
+
