@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12162 2010/11/05 17:19:03 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12163 2010/11/05 22:25:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -298,12 +298,6 @@ media-libs/amanith
 >=dev-texlive/texlive-science-2010
 >=dev-texlive/texlive-texinfo-2010
 >=dev-texlive/texlive-xetex-2010
-
-# Samuli Suominen <ssuominen@gentoo.ogr> (23 Oct 2010)
-# Replaced by media-tv/v4l-utils, bug 333291
-# Removal in about 30 days
-media-tv/ivtv-utils
-media-tv/v4l2-ctl
 
 # Markos Chandras <hwoarang@gentoo.org> (23 Oct 2010)
 #  on behalf of QA team
