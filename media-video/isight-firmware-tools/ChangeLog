@@ -1,6 +1,14 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.13 2010/05/22 11:44:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.14 2010/11/05 21:06:09 eva Exp $
+
+*isight-firmware-tools-1.5.93 (05 Nov 2010)
+
+  05 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -isight-firmware-tools-1.5.90-r1.ebuild,
+  +isight-firmware-tools-1.5.93.ebuild:
+  Version bump. Handle new firmwares and enhance UVC specs compliance. Drop
+  old revision.
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)

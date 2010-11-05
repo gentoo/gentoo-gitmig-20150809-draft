@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.5.90-r1.ebuild,v 1.1 2010/05/05 22:07:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.5.93.ebuild,v 1.1 2010/11/05 21:06:09 eva Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.14
+RDEPEND=">=dev-libs/glib-2.14:2
 	virtual/libusb:0
 	dev-libs/libgcrypt
 	>=sys-fs/udev-149"
@@ -25,16 +25,9 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
 src_prepare() {
-	# Fix rules for recent udev versions, bug #316027
-	sed 's/SYSFS/ATTR/g' -i src/isight.rules.in.in || die "sed 1 failed"
-
 	# Fix multilib support
 	sed "s:/lib/firmware:/$(get_libdir)/firmware:" \
-		-i src/isight.rules.in.in || die "sed 2 failed"
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed 3 failed"
+		-i src/isight.rules.in.in || die "sed failed"
 
 	# Fix build with -O0, bug #221325
 	epatch "${FILESDIR}/${PN}-1.5.90-build-O0.patch"
@@ -42,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	# https://bugs.launchpad.net/isight-firmware-tools/+bug/243255
-	econf --docdir="${ROOT}/usr/share/doc/${PF}"
+	econf --docdir=/usr/share/doc/${PF}
 }
 
 src_install() {
