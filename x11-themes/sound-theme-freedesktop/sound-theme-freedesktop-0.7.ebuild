@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sound-theme-freedesktop/sound-theme-freedesktop-0.7.ebuild,v 1.9 2010/09/11 18:37:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sound-theme-freedesktop/sound-theme-freedesktop-0.7.ebuild,v 1.10 2010/11/05 13:42:56 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="
 	sys-devel/gettext
+	dev-libs/glib:2
 	>=dev-util/intltool-0.40"
 
 src_prepare() {
