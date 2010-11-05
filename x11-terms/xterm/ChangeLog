@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.299 2010/10/12 16:52:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.300 2010/11/05 20:35:14 ssuominen Exp $
+
+  05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> xterm-262.ebuild:
+  ppc64 stable wrt #339640
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> xterm-262.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #339640
