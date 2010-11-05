@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.43 2010/11/05 21:47:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.44 2010/11/05 22:02:17 mr_bones_ Exp $
+
+  05 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  files/cdw-0.6.0-asneeded.patch:
+  add -lm to the libs as reported by Arseny Solokha (bug #344315)
 
   05 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> cdw-0.6.0.ebuild:
   remove ricer flags

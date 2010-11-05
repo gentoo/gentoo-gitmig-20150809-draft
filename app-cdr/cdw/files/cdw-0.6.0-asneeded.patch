@@ -18,7 +18,7 @@ diff -ru cdw-0.6.0.orig/src/Makefile.am cdw-0.6.0/src/Makefile.am
  	$(top_builddir)/src/user_interface/libcdwuserinterface.a \
 -	$(top_builddir)/gnulib/lib/libgnulib.a
 +	$(top_builddir)/gnulib/lib/libgnulib.a \
-+	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660
++	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660 -lm
  
  cdw_SOURCES = $(cdw_source_files)
  
@@ -28,7 +28,7 @@ diff -ru cdw-0.6.0.orig/src/Makefile.am cdw-0.6.0/src/Makefile.am
  	$(top_builddir)/src/user_interface/libcdwuserinterface_check.a \
 -	$(top_builddir)/gnulib/lib/libgnulib.a
 +	$(top_builddir)/gnulib/lib/libgnulib.a \
-+	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660
++	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660 -lm
  
  cdw_tests_SOURCES = $(cdw_source_files)
  
