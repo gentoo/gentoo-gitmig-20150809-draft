@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.8.8.ebuild,v 1.4 2008/04/14 13:28:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-12.8.8.ebuild,v 1.5 2010/11/05 22:16:05 bicatali Exp $
 
 inherit eutils
 
 DESCRIPTION="Automatic algebraic manipulator"
-HOMEPAGE="http://www.mathomatic.com/"
-SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
+HOMEPAGE="http://www.mathomatic.org/"
+SRC_URI="${HOMEPAGE}/archive/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
