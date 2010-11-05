@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.31 2010/11/03 19:00:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.32 2010/11/05 11:58:25 fauli Exp $
+
+  05 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  smokeping-2.4.2-r3.ebuild:
+  stable x86, bug 341175
 
 *smokeping-2.4.2-r3 (03 Nov 2010)
 
