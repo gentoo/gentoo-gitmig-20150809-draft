@@ -8,3 +8,4 @@ slotmove sys-libs/libchipcard 2 0
 move xfce-base/tumbler xfce-extra/tumbler
 move dev-libs/luaevent-prosody dev-lua/luaevent-prosody
 move dev-libs/luaexpat dev-lua/luaexpat
+move dev-libs/luasec dev-lua/luasec
