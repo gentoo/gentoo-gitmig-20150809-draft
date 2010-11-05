@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.3.ebuild,v 1.1 2010/11/03 19:49:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.3.ebuild,v 1.2 2010/11/05 19:00:17 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug ffmpeg jpeg pdf"
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.72
 	>=sys-apps/dbus-1
 	>=media-libs/libpng-1.4
