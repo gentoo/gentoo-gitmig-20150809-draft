@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/iguanaIR
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.5 2010/11/04 17:28:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.6 2010/11/05 13:41:57 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> iguanaIR-0.93.ebuild:
+  Stable on amd64 wrt bug #343659
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> iguanaIR-0.93.ebuild:
   stable x86, bug 343659
