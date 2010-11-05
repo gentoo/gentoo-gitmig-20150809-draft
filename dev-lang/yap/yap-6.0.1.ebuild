@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.1.ebuild,v 1.1 2010/03/03 08:23:05 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.1.ebuild,v 1.2 2010/11/05 22:01:24 keri Exp $
 
 inherit eutils java-pkg-opt-2
 
+PATCHSET_VER="0"
 MY_P="Yap-${PV}"
 
 DESCRIPTION="YAP is a high-performance Prolog compiler."
 HOMEPAGE="http://www.ncc.up.pt/~vsc/Yap/"
-SRC_URI="http://www.ncc.up.pt/~vsc/Yap/yap-6.0.1.tar.gz"
+SRC_URI="http://www.ncc.up.pt/~vsc/Yap/yap-6.0.1.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="Artistic LGPL-2"
 SLOT="0"
@@ -30,12 +32,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-bootfile.patch
-	epatch "${FILESDIR}"/${P}-dynamic-lib.patch
-	epatch "${FILESDIR}"/${P}-mpi-include.patch
-	epatch "${FILESDIR}"/${P}-myddas-include.patch
-	epatch "${FILESDIR}"/${P}-multilib.patch
-	epatch "${FILESDIR}"/${P}-yapsharedir.patch
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
 }
 
 src_compile() {

@@ -1,6 +1,30 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.47 2010/10/30 08:34:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.48 2010/11/05 22:01:24 keri Exp $
+
+  05 Nov 2010; <keri@gentoo.org> yap-6.0.1.ebuild,
+  -files/yap-6.0.1-bootfile.patch, -files/yap-6.0.1-dynamic-lib.patch,
+  -files/yap-6.0.1-mpi-include.patch, -files/yap-6.0.1-multilib.patch,
+  -files/yap-6.0.1-myddas-include.patch, -files/yap-6.0.1-yapsharedir.patch,
+  yap-6.0.2.ebuild, -files/yap-6.0.2-bootfile.patch,
+  -files/yap-6.0.2-dynamic-lib.patch, -files/yap-6.0.2-mpi-include.patch,
+  -files/yap-6.0.2-multilib.patch, -files/yap-6.0.2-myddas-include.patch,
+  -files/yap-6.0.2-yapsharedir.patch, yap-6.0.3.ebuild,
+  -files/yap-6.0.3-install-clause.patch, -files/yap-6.0.3-yapsharedir.patch,
+  yap-6.0.4.ebuild, -files/yap-6.0.4-JAVALIBPATH.patch,
+  -files/yap-6.0.4-chr-sublist.patch, -files/yap-6.0.4-yapsharedir.patch,
+  yap-6.0.5.ebuild, yap-6.0.5-r1.ebuild, -files/yap-6.0.5-JAVALIBPATH.patch,
+  -files/yap-6.0.5-chr-sublist.patch, -files/yap-6.0.5-ldflags.patch,
+  -files/yap-6.0.5-yapsharedir.patch, yap-6.0.6.ebuild,
+  -files/yap-6.0.6-DESTDIR.patch, -files/yap-6.0.6-chr-sublist.patch,
+  -files/yap-6.0.6-itries.patch, -files/yap-6.0.6-ldflags.patch,
+  -files/yap-6.0.6-runpath.patch, -files/yap-6.0.6-yapsharedir.patch,
+  yap-6.2.0.ebuild, yap-6.2.0-r1.ebuild, -files/yap-6.2.0-chr-sublist.patch,
+  -files/yap-6.2.0-have-config.patch,
+  -files/yap-6.2.0-ld-library-path.patch, -files/yap-6.2.0-ldflags.patch,
+  -files/yap-6.2.0-lib-soname.patch, -files/yap-6.2.0-parallel-make.patch,
+  -files/yap-6.2.0-yapsharedir.patch:
+  Bundle patches into tarballs; Closes #344013
 
   30 Oct 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild,
   +files/yap-6.2.0-lib-soname.patch:
