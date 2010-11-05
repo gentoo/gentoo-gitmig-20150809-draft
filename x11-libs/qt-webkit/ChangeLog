@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.106 2010/10/23 15:46:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.107 2010/11/05 18:05:45 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-webkit-4.5.3.ebuild,
+  qt-webkit-4.5.3-r1.ebuild, qt-webkit-4.5.3-r2.ebuild,
+  qt-webkit-4.5.3-r3.ebuild, qt-webkit-4.6.2.ebuild,
+  qt-webkit-4.6.2-r1.ebuild, qt-webkit-4.6.3.ebuild,
+  qt-webkit-4.6.3-r1.ebuild, qt-webkit-4.7.0.ebuild:
+  Drop HPPA keywording as this will probably never work as expected (bug
+  #239441).
 
   23 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-webkit-4.6.3-r1.ebuild:
   alpha/arm/ia64/sparc stable wrt #341703
