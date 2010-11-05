@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.46 2010/09/16 06:30:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.47 2010/11/05 14:14:30 ssuominen Exp $
+
+  05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  XML-Parser-2.36-r1.ebuild:
+  ppc64 stable wrt #341865
 
 *XML-Parser-2.40 (16 Sep 2010)
 

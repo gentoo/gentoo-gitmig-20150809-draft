@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Ident
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.22 2010/11/05 13:15:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.23 2010/11/05 14:10:54 ssuominen Exp $
+
+  05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> Net-Ident-1.23.ebuild:
+  ppc64 stable wrt #341865
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> Net-Ident-1.23.ebuild:
   Stable on amd64 wrt bug #341865

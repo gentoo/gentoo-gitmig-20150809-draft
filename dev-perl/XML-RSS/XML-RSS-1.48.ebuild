@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.48.ebuild,v 1.4 2010/06/27 19:23:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/XML-RSS-1.48.ebuild,v 1.5 2010/11/05 14:15:09 ssuominen Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="a basic framework for creating and maintaining RSS files"
 HOMEPAGE="http://perl-rss.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
 IUSE="test"
 
 SRC_TEST="do"
