@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6123 2010/11/05 12:34:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6124 2010/11/05 14:33:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -445,6 +445,7 @@ app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:dbtool - Add patch for dbtool interface from PyFlag
 app-forensics/sleuthkit:ewf - Enable libewf support
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
+app-i18n/ibus:introspection - Use dev-libs/gobject-introspection for introspection
 app-i18n/ibus:vala - Enable support for dev-lang/vala
 app-i18n/ibus-mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/ibus-mozc:scim - Enable support for app-i18n/scim
@@ -2896,13 +2897,13 @@ net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/cyrus-imapd:replication - Enable replication support in the cyrus imap server
 net-mail/cyrus-imapd:sieve - Enable sieve support
 net-mail/dbmail:sieve - Enable sieve filter support
-net-mail/dovecot:cydir - Adds cydir storage support
-net-mail/dovecot:dbox - Adds dbox storage support
-net-mail/dovecot:managesieve - Adds managesieve protocol support
-net-mail/dovecot:mdbox - Adds mdbox storage support
-net-mail/dovecot:pop3d - Build pop3d support
-net-mail/dovecot:sdbox - Adds sdbox storage support
-net-mail/dovecot:sieve - Build the sieve plugin
+net-mail/dovecot:cydir - Add cydir storage support
+net-mail/dovecot:dbox - Add dbox storage support
+net-mail/dovecot:managesieve - Add managesieve protocol support
+net-mail/dovecot:mdbox - Add mdbox storage support
+net-mail/dovecot:pop3d - Add pop3d support
+net-mail/dovecot:sdbox - Add sdbox storage support
+net-mail/dovecot:sieve - Add sieve support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/fdm:courierauth - Add support for Courier authentication library
 net-mail/fetchmail:hesiod - Enable support for hesiod
