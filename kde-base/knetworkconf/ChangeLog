@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knetworkconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.86 2010/11/03 16:31:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetworkconf/ChangeLog,v 1.87 2010/11/05 02:34:33 abcd Exp $
+
+  05 Nov 2010; Jonathan Callen <abcd@gentoo.org> knetworkconf-4.4.5.ebuild,
+  knetworkconf-4.5.2.ebuild, knetworkconf-4.5.3.ebuild:
+  Fix typos in description
 
 *knetworkconf-4.5.3 (03 Nov 2010)
 
