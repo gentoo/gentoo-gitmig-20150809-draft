@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12158 2010/11/05 08:19:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12159 2010/11/05 14:32:26 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1002,11 +1002,6 @@ x11-misc/lightdm
 # Mask upcoming bumps, potentially too hot to push to everyone
 =media-libs/libdvdread-4.1.3_p1217
 =media-video/dvdbackup-0.4.1
-
-# Markos Chandras <hwoarang@gentoo.org> (31 Aug 2010)
-# Several QA issues listed on bug #272200. Masked until
-# I clean this up
-net-analyzer/w3af
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (31 Aug 2010)
 #  on behalf of QA team
