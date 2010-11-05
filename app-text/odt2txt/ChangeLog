@@ -1,0 +1,11 @@
+# ChangeLog for app-text/odt2txt
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.1 2010/11/05 14:38:46 hwoarang Exp $
+
+*odt2txt-0.4 (05 Nov 2010)
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> +odt2txt-0.4.ebuild,
+  +files/odt2txt-0.4-darwin_iconv.patch, +metadata.xml:
+  Moved from sunrise overlay. Bug #263574. Thanks to Dirk Tilger
+  <dirk@miriup.de> for the initial ebuild. Montjoie will be proxy maintainer
+
