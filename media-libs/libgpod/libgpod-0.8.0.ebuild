@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.4 2010/11/04 17:17:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.5 2010/11/05 08:55:03 ssuominen Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+gtk python +udev iphone mono static-libs"
 
 RDEPEND=">=app-pda/libplist-1.0
