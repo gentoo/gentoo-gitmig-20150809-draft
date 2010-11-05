@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4-r1.ebuild,v 1.3 2010/06/10 02:50:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4-r2.ebuild,v 1.1 2010/11/05 16:21:00 jer Exp $
+
+EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="GNU system accounting utilities"
 HOMEPAGE="https://savannah.gnu.org/projects/acct/"
@@ -11,9 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nan.patch
+}
+
+src_configure() {
 	econf --enable-linux-multiformat
-	emake || die
 }
 
 src_install() {
