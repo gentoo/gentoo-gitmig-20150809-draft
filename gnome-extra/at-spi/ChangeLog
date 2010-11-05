@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.213 2010/10/17 15:04:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.214 2010/11/05 18:56:21 eva Exp $
+
+  05 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> at-spi-1.32.0.ebuild:
+  Pin gtk+ dependency to slot 2.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> at-spi-1.30.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
