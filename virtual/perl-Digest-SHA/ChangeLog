@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.20 2010/09/07 20:21:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.21 2010/11/05 11:14:42 maekke Exp $
+
+  05 Nov 2010; Markus Meier <maekke@gentoo.org> perl-Digest-SHA-5.47.ebuild:
+  straight to stable for arm, needed for dev-perl/Net-DNS-0.66-r1
 
   07 Sep 2010; Torsten Veller <tove@gentoo.org> perl-Digest-SHA-5.47.ebuild:
   Add perl-5.12.2 as provider
