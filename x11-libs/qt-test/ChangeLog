@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.76 2010/10/23 15:45:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.77 2010/11/05 18:18:14 jer Exp $
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-test-4.6.3.ebuild:
+  Stable for HPPA (bug #341703).
 
   23 Oct 2010; Raúl Porcel <armin76@gentoo.org> qt-test-4.6.3.ebuild:
   alpha/arm/ia64/sparc stable wrt #341703
