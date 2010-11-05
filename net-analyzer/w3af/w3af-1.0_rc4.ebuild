@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc3-r2.ebuild,v 1.1 2010/10/27 20:54:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc4.ebuild,v 1.1 2010/11/05 14:31:23 hwoarang Exp $
 
 EAPI=2
 
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gtk"
 
-RDEPEND="dev-python/beautifulsoup
-	>=dev-python/fpconst-0.7.2
+RDEPEND=">=dev-python/fpconst-0.7.2
+	dev-python/lxml
 	dev-python/nltk
 	dev-python/pyopenssl
 	dev-python/pyPdf
@@ -36,9 +36,8 @@ RDEPEND="dev-python/beautifulsoup
 S=${WORKDIR}/${PN}
 
 src_prepare(){
-	rm -r extlib/{BeautifulSoup.py,cluster,fpconst-0.7.2,jsonpy,nltk,nltk_contrib,pyPdf,scapy,SOAPpy,yaml} || die
+	rm -r extlib/{cluster,fpconst-0.7.2,nltk,nltk_contrib,pyPdf,scapy,simplejson,SOAPpy,yaml} || die
 	rm readme/{GPL,INSTALL} || die
-	epatch "${FILESDIR}"/use_simplejson_instead_of_jsonpy.patch
 }
 
 src_install() {
