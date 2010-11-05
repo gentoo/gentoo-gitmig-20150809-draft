@@ -6,11 +6,7 @@
     <email>pam-bugs@gentoo.org</email>
   </maintainer>
   <maintainer>
-    <email>kerberos@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>eray.aslan@caf.com.tr</email>
+    <email>eras@gentoo.org</email>
     <name>Eray Aslan</name>
-    <description>Proxy maintainer</description>
   </maintainer>
 </pkgmetadata>

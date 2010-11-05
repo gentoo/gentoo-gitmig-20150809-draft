@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.42 2010/11/03 21:11:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.43 2010/11/05 19:58:18 eras Exp $
+
+  05 Nov 2010; Eray Aslan <eras@gentoo.org> metadata.xml:
+  Correct maintainer info - kerberos part
 
   03 Nov 2010; Markus Meier <maekke@gentoo.org> pam_krb5-4.3.ebuild:
   arm stable, bug #343099
