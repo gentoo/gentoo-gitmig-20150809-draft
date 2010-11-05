@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12163 2010/11/05 22:25:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12164 2010/11/05 22:55:21 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -534,7 +534,23 @@ gnome-base/dconf
 dev-cpp/atkmm
 >=dev-cpp/gtkmm-2.22
 >=dev-util/anjuta-2.32
+>=dev-python/gnome-python-desktop-base-2.32
+>=dev-python/bug-buddy-python-2.32
+>=dev-python/evolution-python-2.32
 >=dev-python/evince-python-2.32
+>=dev-python/gnome-applets-python-2.32
+>=dev-python/gnome-desktop-python-2.32
+>=dev-python/gnome-keyring-python-2.32
+>=dev-python/gnome-media-python-2.32
+>=dev-python/gtksourceview-python-2.32
+>=dev-python/libgnomeprint-python-2.32
+>=dev-python/libgtop-python-2.32
+>=dev-python/librsvg-python-2.32
+>=dev-python/libwnck-python-2.32
+>=dev-python/metacity-python-2.32
+>=dev-python/brasero-python-2.32
+>=dev-python/totem-python-2.32
+>=dev-python/gnome-python-desktop-2.32
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
