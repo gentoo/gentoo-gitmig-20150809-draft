@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12159 2010/11/05 14:32:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12160 2010/11/05 14:51:13 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -707,13 +707,6 @@ app-benchmarks/xfbsuite
 >=x11-libs/gtk+-2.21
 >=dev-lang/vala-0.11
 >=sys-power/upower-0.9.6
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Sep 2010)
-# Package is masked because of missing exo-0.5 and garcon support.
-# exo-0.3 and libxfce4menu is deprecated, no reason to provide vala bindings to them anymore
-# Also missing vala-0.10.0 support, pulls in old slot of vala
-# Unless 4.7.0 is out in 60 days, the package will be removed
-xfce-extra/xfce4-vala
 
 # Rémi Cardona <remi@gentoo.org> (21 Sep 2010)
 # Dead upstream, ebuild does more work than its Makefiles,
@@ -1475,29 +1468,6 @@ media-sound/teamspeak-server-bin
 # Broken, will stay masked until fixed.
 # see bug #290086 for more info
 =x11-apps/xdm-1.1.9
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Oct 2009)
-# Mask pre-4.8 Xfce4 for testing.
-#
->=xfce-base/xfwm4-4.7.0
->=xfce-base/xfdesktop-4.7.0
->=xfce-base/xfce4-session-4.7.0
->=xfce-base/xfce-utils-4.7.0
->=xfce-base/exo-0.5.1
->=xfce-base/xfce4-settings-4.7.0
->=xfce-base/thunar-1.1.0
->=xfce-extra/thunar-volman-0.5
->=xfce-extra/thunar-media-tags-plugin-0.1.2-r1
->=xfce-base/xfce4-panel-4.7.0
-xfce-extra/thunar-vfs
->=xfce-extra/xfce4-xkb-plugin-0.5.3.3-r9
->=xfce-base/libxfce4util-4.7.2
->=xfce-extra/thunar-thumbnailers-4.7.0
->=dev-util/xfce4-dev-tools-4.7.3
->=xfce-base/libxfcegui4-4.7.0
->=xfce-base/garcon-0.1.2
->=xfce-base/libxfce4ui-4.7.4
->=xfce-extra/xfce4-appfinder-4.7.1
 
 # Peter Alfredsen <loki_val@gentoo.org> (21 Oct 2009)
 # Masked because this needs a patch to be applied to portage
