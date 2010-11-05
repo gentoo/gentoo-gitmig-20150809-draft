@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.58 2010/08/04 19:01:30 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.59 2010/11/05 16:27:29 lxnay Exp $
+
+  05 Nov 2010; Fabio Erculiani <lxnay@gentoo.org>
+  vmware-modules-1.0.0.25-r1.ebuild, vmware-modules-1.0.0.26.ebuild,
+  +files/1.0.0.26-ioctl-2.6.36.patch:
+  add 2.6.36 Linux kernel support
 
   04 Aug 2010; Vadim Kuznetsov <vadimk@gentoo.org>
   +files/1.0.0.24-sk_sleep.patch, vmware-modules-1.0.0.24-r1.ebuild,
