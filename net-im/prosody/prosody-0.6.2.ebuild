@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.5 2010/11/05 21:36:11 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.6 2010/11/05 23:15:54 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ DEPEND="net-im/jabber-base
 		dev-lua/luasocket
 		ssl? ( dev-lua/luasec )
 		dev-lua/luaexpat
-		dev-libs/luafilesystem
+		dev-lua/luafilesystem
 		>=net-dns/libidn-1.1
 		>=dev-libs/openssl-0.9.8"
 RDEPEND="${DEPEND}"
