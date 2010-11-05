@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.3 2010/09/13 07:29:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.0_alpha.ebuild,v 1.4 2010/11/05 23:44:34 keri Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -29,6 +29,7 @@ EANT_GENTOO_CLASSPATH="javassist-3"
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-generics.patch
 	epatch "${FILESDIR}"/${P}-javadocs.patch
 
 	cp "${FILESDIR}"/build.xml "${S}"
