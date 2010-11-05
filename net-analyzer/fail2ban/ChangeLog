@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.58 2010/02/08 08:35:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.59 2010/11/05 15:05:51 hwoarang Exp $
+
+*fail2ban-0.8.4-r1 (05 Nov 2010)
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/fail2ban-0.8.4-hashlib.patch, files/fail2ban-logrotate,
+  +fail2ban-0.8.4-r1.ebuild, +files/fail2ban-0.8.4-sshd-breakin.patch:
+  Bugfix revision. Fixes bug 260337,283629,301139,315073,343955. Thanks to
+  Robert Trace <bugzilla-gentoo@farcaster.org>, Harley Peters
+  <harley@thepetersclan.com> for the patches.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> fail2ban-0.8.3-r1.ebuild:
   Add inherit eutils for epatch.
