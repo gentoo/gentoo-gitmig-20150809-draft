@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.21 2010/11/04 16:04:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.22 2010/11/05 12:21:18 maekke Exp $
+
+  05 Nov 2010; Markus Meier <maekke@gentoo.org> pecl-syck-0.9.3-r1.ebuild:
+  add ~arm, bug #344137
 
 *pecl-syck-0.9.3-r1 (04 Nov 2010)
 
