@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.8.ebuild,v 1.1 2010/10/25 16:13:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.8.ebuild,v 1.2 2010/11/05 14:11:27 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
-inherit eutils gnome2-utils multilib python
+inherit confutils eutils gnome2-utils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -13,7 +13,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc +gconf gtk nls +python vala X"
+IUSE="doc +gconf gtk introspection nls +python vala X"
 
 RDEPEND=">=dev-libs/glib-2.18
 	gconf? ( >=gnome-base/gconf-2.12 )
@@ -27,6 +27,7 @@ RDEPEND=">=dev-libs/glib-2.18
 		x11-libs/libX11
 		x11-libs/gtk+:2
 	)
+	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
 	python? (
 		dev-python/notify-python
 		>=dev-python/dbus-python-0.83
@@ -60,6 +61,8 @@ update_gtk_immodules() {
 }
 
 pkg_setup() {
+	# bug #342903
+	confutils_require_any X gtk
 	python_set_active_version 2
 }
 
@@ -74,6 +77,7 @@ src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
 		$(use_enable doc gtk-doc-html) \
+		$(use_enable introspection) \
 		$(use_enable gconf) \
 		$(use_enable gtk gtk2) \
 		$(use_enable gtk xim) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.7.ebuild,v 1.4 2010/11/05 14:11:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.99.20101028.ebuild,v 1.1 2010/11/05 14:11:27 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"

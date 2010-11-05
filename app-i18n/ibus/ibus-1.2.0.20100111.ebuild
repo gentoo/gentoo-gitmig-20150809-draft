@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.5 2010/08/11 18:15:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.6 2010/11/05 14:11:27 matsuu Exp $
 
 EAPI="1"
-inherit eutils gnome2-utils multilib python
+inherit confutils eutils gnome2-utils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -39,6 +39,8 @@ RDEPEND="${RDEPEND}
 RESTRICT="test"
 
 pkg_setup() {
+	# bug #342903
+	confutils_require_any X gtk
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
