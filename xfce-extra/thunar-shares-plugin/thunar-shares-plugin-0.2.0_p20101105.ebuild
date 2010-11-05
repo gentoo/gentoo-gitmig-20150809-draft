@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0_p20101105.ebuild,v 1.1 2010/11/05 15:08:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0_p20101105.ebuild,v 1.2 2010/11/05 15:45:56 ssuominen Exp $
 
 # git clone -b thunarx-2 git://git.xfce.org/thunar-plugins/thunar-shares-plugin
 
@@ -26,10 +26,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-			--disable-dependency-tracking
-			--disable-static
-			$(xfconf_use_debug)
-			)
+		--disable-dependency-tracking
+		--disable-static
+		$(xfconf_use_debug)
+		)
 
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }

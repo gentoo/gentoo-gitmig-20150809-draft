@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2_p20101105.ebuild,v 1.1 2010/11/05 15:35:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.2_p20101105.ebuild,v 1.2 2010/11/05 15:45:30 ssuominen Exp $
 
 # git clone -b thunarx-2 git://git.xfce.org/thunar-plugins/thunar-vcs-plugin
 
@@ -29,11 +29,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-			--disable-dependency-tracking
-			$(use_enable subversion)
-			$(use_enable git)
-			$(xfconf_use_debug)
-			)
+		--disable-dependency-tracking
+		$(use_enable subversion)
+		$(use_enable git)
+		$(xfconf_use_debug)
+		)
 
 	DOCS="AUTHORS ChangeLog NEWS README"
 }
