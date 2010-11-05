@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.41 2010/09/19 16:48:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.42 2010/11/05 08:44:57 mr_bones_ Exp $
+
+*cdw-0.6.0 (05 Nov 2010)
+
+  05 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> +cdw-0.6.0.ebuild,
+  +files/cdw-0.6.0-asneeded.patch:
+  version bump
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> cdw-0.5.0.ebuild:
   sparc stable wrt #334103
