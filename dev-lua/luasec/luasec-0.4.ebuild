@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.1 2010/11/05 21:07:54 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.2 2010/11/05 21:33:44 rafaelmartins Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]
-		dev-libs/luasocket
+		dev-lua/luasocket
 		dev-libs/openssl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
