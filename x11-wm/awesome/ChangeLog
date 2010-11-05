@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.109 2010/10/13 11:19:59 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.110 2010/11/05 23:42:06 rafaelmartins Exp $
+
+  05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  awesome-3.4.4.ebuild, awesome-3.4.5.ebuild, awesome-3.4.6.ebuild,
+  awesome-3.4.7.ebuild, awesome-3.4.8.ebuild:
+  Fixed luadoc dependency.
 
   13 Oct 2010; Alex Alexander <wired@gentoo.org> awesome-3.4.8.ebuild:
   bug #336492: qa: moved mycmakeargs to src_configure, removed cmake dep
