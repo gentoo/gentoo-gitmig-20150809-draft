@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.2-r1.ebuild,v 1.1 2010/09/06 20:49:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.2-r1.ebuild,v 1.2 2010/11/05 13:57:33 hwoarang Exp $
 
 EAPI=2
 inherit multilib nsplugins xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug libnotify nsplugin taglib"
 
 RDEPEND=">=x11-libs/gtk+-2.16:2
