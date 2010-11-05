@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.5.ebuild,v 1.2 2010/07/03 16:36:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.5_p1.ebuild,v 1.1 2010/11/05 16:38:27 xarthisius Exp $
 
 EAPI=2
+
+MY_P=${P/_p/-patch}
 
 inherit autotools eutils
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
-SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.gz"
+SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${MY_P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
@@ -23,6 +25,8 @@ RDEPEND="mpi? ( virtual/mpi[romio] )
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	sys-process/time"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use mpi; then
@@ -47,7 +51,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.3-as-needed.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3-includes.patch
-	epatch "${FILESDIR}"/${P}-noreturn.patch
+	epatch "${FILESDIR}"/${PN}-1.8.5-noreturn.patch
 	epatch "${FILESDIR}"/${PN}-1.8.4-scaleoffset.patch
 
 	# respect gentoo examples directory
