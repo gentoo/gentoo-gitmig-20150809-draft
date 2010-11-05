@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.18 2010/11/01 12:37:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.19 2010/11/05 12:11:55 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -93,20 +93,26 @@ fi
 # are under the MIT license. (This is what Red Hat does in their rpms)
 : ${LICENSE:=MIT}
 
-# Set up shared dependencies
-if [[ ${XORG_EAUTORECONF} != no ]]; then
-	DEPEND+="
-		>=sys-devel/libtool-2.2.6a
-		sys-devel/m4"
-	# This MUST BE STABLE
-	if [[ ${PN} != util-macros ]] ; then
-		DEPEND+=" >=x11-misc/util-macros-1.11.0"
-		# Required even by xorg-server
-		[[ ${PN} == "font-util" ]] || DEPEND+=" >=media-fonts/font-util-1.1.1-r1"
-	fi
-	WANT_AUTOCONF="latest"
-	WANT_AUTOMAKE="latest"
+# Set up autotools shared dependencies
+# Remember that all versions here MUST be stable
+XORG_EAUTORECONF_ARCHES="x86-interix ppc-aix x86-winnt"
+EAUTORECONF_DEPEND+="
+	>=sys-devel/libtool-2.2.6a
+	sys-devel/m4"
+if [[ ${PN} != util-macros ]] ; then
+	EAUTORECONF_DEPEND+=" >=x11-misc/util-macros-1.11.0"
+	# Required even by xorg-server
+	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.1.1-r1"
 fi
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+for arch in ${XORG_EAUTORECONF_ARCHES}; do
+	EAUTORECONF_DEPENDS+=" ${arch}? ( ${EAUTORECONF_DEPEND} )"
+done
+DEPEND+=" ${EAUTORECONF_DEPENDS}"
+[[ ${XORG_EAUTORECONF} != no ]] && DEPEND+=" ${EAUTORECONF_DEPEND}"
+unset EAUTORECONF_DEPENDS
+unset EAUTORECONF_DEPEND
 
 if [[ ${FONT} == yes ]]; then
 	RDEPEND+=" media-fonts/encodings
