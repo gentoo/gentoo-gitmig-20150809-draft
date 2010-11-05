@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Writer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.39 2010/11/05 11:23:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.40 2010/11/05 13:20:12 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  XML-SAX-Writer-0.53.ebuild:
+  Stable on amd64 wrt bug #341865
 
   05 Nov 2010; Markus Meier <maekke@gentoo.org> XML-SAX-Writer-0.53.ebuild:
   arm stable, bug #341865

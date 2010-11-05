@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/B-Keywords
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.15 2010/11/04 13:00:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.16 2010/11/05 13:06:35 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> B-Keywords-1.10.ebuild:
+  Stable on amd64 wrt bug #341865
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   B-Keywords-1.10.ebuild:

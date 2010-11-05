@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/config-general
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.61 2010/11/04 13:45:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.62 2010/11/05 13:20:39 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  config-general-2.49.ebuild:
+  Stable on amd64 wrt bug #341865
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   config-general-2.49.ebuild:

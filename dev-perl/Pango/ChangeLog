@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.10 2010/11/04 13:50:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.11 2010/11/05 13:22:02 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> Pango-1.221.ebuild:
+  Stable on amd64 wrt bug #341865
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> Pango-1.221.ebuild:
   x86 stable, bug 341865

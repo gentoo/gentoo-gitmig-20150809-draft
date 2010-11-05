@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.115 2010/11/05 11:25:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.116 2010/11/05 13:21:07 hwoarang Exp $
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> glib-perl-1.223.ebuild:
+  Stable on amd64 wrt bug #341865
 
   05 Nov 2010; Markus Meier <maekke@gentoo.org> glib-perl-1.223.ebuild:
   arm stable, bug #341865
