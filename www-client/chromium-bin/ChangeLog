@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.79 2010/10/26 14:38:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.80 2010/11/06 17:10:55 phajdan.jr Exp $
+
+*chromium-bin-7.0.517.44 (06 Nov 2010)
+
+  06 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-bin-7.0.517.44.ebuild:
+  Version bump. Fix bug #343971 by Sok Ann Yap <sokann@gmail.com>.
 
 *chromium-bin-7.0.517.41 (26 Oct 2010)
 
