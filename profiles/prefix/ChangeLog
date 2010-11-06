@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.225 2010/11/03 02:05:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.226 2010/11/06 11:02:42 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> package.mask:
+  Masked Qt-4.7 as requested by prefix team, bug #338289
 
   03 Nov 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Remove portage-2.2 mask now that it isn't masked in gx86
