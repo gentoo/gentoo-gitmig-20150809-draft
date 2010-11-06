@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a.ebuild,v 1.1 2010/10/13 23:10:59 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r1.ebuild,v 1.1 2010/11/06 01:15:14 c1pher Exp $
 
 EAPI="2"
 
-inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets
+inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets eutils
 
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
@@ -89,6 +89,11 @@ src_install() {
 	dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf" || die
 	exeinto "/$(get_libdir)/rcscripts/addons"
 	newexe "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh" || die
+
+	if use X; then
+		newicon Resources/Icons/TrueCrypt-48x48.xpm truecrypt.xpm || die
+		make_desktop_entry ${PN} "TrueCrypt" ${PN} "System" || die
+	fi
 }
 
 pkg_postinst() {
