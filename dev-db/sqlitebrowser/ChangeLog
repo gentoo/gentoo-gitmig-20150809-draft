@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlitebrowser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.9 2009/12/31 15:19:51 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.10 2010/11/06 12:13:13 xmw Exp $
+
+  06 Nov 2010; Michael Weber <xmw@gentoo.org>
+  sqlitebrowser-2.00_beta1.ebuild:
+  Adjust DEPEND to exclude qt-gui-4.7 (bug 338476 by flameeyes)
 
 *sqlitebrowser-2.00_beta1 (31 Dec 2009)
 
