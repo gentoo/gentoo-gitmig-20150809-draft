@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.197 2010/11/01 22:14:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.198 2010/11/06 20:28:25 slyfox Exp $
+
+  06 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.10.4-r1.ebuild:
+  Fixed failure when building against autoconf-2.66+ (bug #343111 by
+  Jean-Francis Roy <jeanfrancisroy@gmail.com>)
 
   01 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild:
   sparc stable (bug #338652)

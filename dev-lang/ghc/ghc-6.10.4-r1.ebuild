@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.11 2010/09/19 16:45:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.12 2010/11/06 20:28:25 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -197,6 +197,9 @@ src_unpack() {
 
 		# patch aclocal.m4 and configure.ac to work with >=autoconf-2.64
 		epatch "${FILESDIR}/${P}-autoconf.patch"
+
+		# >=autoconf-2.66 compatibility
+		epatch "${FILESDIR}/ghc-6.12.3-autoconf-2.66-4252.patch"
 
 		# fix configure.ac to detect libm need
 		#    http://bugs.gentoo.org/show_bug.cgi?id=293208
