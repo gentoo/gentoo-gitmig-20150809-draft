@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12167 2010/11/06 12:36:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12168 2010/11/06 12:44:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,14 +70,6 @@ app-pda/synce-software-manager
 app-pda/synce-sync-engine
 app-pda/synce-trayicon
 app-pda/libopensync-plugin-synce
-
-# Samuli Suominen <ssuominen@gentoo.org> (03 Nov 2010)
-# Only package.masked gnucash is compiling against 5.x, and doesn't work:
-# http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029188.html
->=net-libs/aqbanking-5
->=sys-libs/gwenhywfar-4
->=sys-libs/libchipcard-5
->=app-office/kmymoney-4.5-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Nov 2010)
 # acerhk fails to build with Linux >= 2.6.30 wrt #277598
