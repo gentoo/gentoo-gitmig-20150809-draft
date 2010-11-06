@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.13 2010/11/05 09:37:19 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.14 2010/11/06 14:42:30 scarabeus Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -30,9 +30,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/xcbgen
+	python_mod_optimize xcbgen
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/xcbgen
+	python_mod_cleanup xcbgen
 }
