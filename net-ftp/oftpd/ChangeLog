@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/oftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.28 2010/09/01 10:00:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.29 2010/11/06 01:37:10 xmw Exp $
+
+*oftpd-0.3.7-r6 (06 Nov 2010)
+
+  06 Nov 2010; Michael Weber <xmw@gentoo.org> -oftpd-0.3.7-r4.ebuild,
+  -oftpd-0.3.7-r5.ebuild, +oftpd-0.3.7-r6.ebuild, -files/conf.d.oftpd-r1,
+  +files/conf.d.oftpd-r6:
+  Rev bump to fix default port and description in config file (bug #344169,
+  thanks to Christohper Harrington <ironiridis@gmail.com>).
 
 *oftpd-0.3.7-r5 (01 Sep 2010)
 
