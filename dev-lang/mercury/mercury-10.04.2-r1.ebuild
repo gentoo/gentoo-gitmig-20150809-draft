@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.4 2010/11/03 07:10:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.5 2010/11/06 09:18:00 keri Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
@@ -41,29 +41,15 @@ src_unpack() {
 	epatch "${WORKDIR}"/${PV}
 
 	sed -i -e "s/@libdir@/$(get_libdir)/" \
-		"${S}"/compiler/file_util.m \
-		"${S}"/compiler/libs.file_util.c \
-		"${S}"/compiler/make.program_target.m \
-		"${S}"/compiler/make.program_target.c \
 		"${S}"/scripts/Mmake.vars.in \
 		|| die "sed libdir failed"
-
-	touch "${S}"/compiler/*.date
-	touch "${S}"/compiler/*.date0
-	touch "${S}"/compiler/*.date3
-	touch "${S}"/compiler/*.int
-	touch "${S}"/compiler/*.int0
-	touch "${S}"/compiler/*.int2
-	touch "${S}"/compiler/*.int3
-	touch "${S}"/compiler/*.c_date
-	touch "${S}"/compiler/*.c
 
 	if use test; then
 		epatch "${WORKDIR}"/${PV}-tests
 	fi
 
 	cd "${S}"
-	eautoreconf
+	eautoconf
 }
 
 src_compile() {
@@ -85,14 +71,27 @@ src_compile() {
 
 	emake \
 		PARALLEL=${MAKEOPTS} \
-		bootstrap_depend || die "emake depend failed"
+		EXTRA_MLFLAGS=--no-strip \
+		EXTRA_LDFLAGS="${LDFLAGS}" \
+		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
+		|| die "emake failed"
+
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}-mmc
+
+	sed -i -e "s/@libdir@/$(get_libdir)/" \
+		"${S}"/compiler/file_util.m \
+		"${S}"/compiler/make.program_target.m \
+		|| die "sed libdir failed"
 
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \
 		EXTRA_LDFLAGS="${LDFLAGS}" \
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
-		|| die "emake failed"
+		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
+		compiler || die "emake compiler failed"
 
 	emake \
 		PARALLEL=${MAKEOPTS} \

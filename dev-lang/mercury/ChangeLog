@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.126 2010/11/03 07:32:54 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.127 2010/11/06 09:18:00 keri Exp $
+
+  06 Nov 2010; <keri@gentoo.org> mercury-10.04.2-r1.ebuild:
+  Use 2-pass mercury_compiler bootstrap to allow patching .m files; closes
+  #341793. Support building with MMAKE_USE_MMC_MAKE and GNU make 3.82
 
   03 Nov 2010; <keri@gentoo.org> mercury-10.04-r1.ebuild:
   Bundle patches into distfiles tarball.
