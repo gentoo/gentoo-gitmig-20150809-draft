@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.13.ebuild,v 1.9 2010/09/19 17:00:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.13.ebuild,v 1.10 2010/11/06 18:45:52 halcy0n Exp $
 
 EAPI="2"
 inherit python autotools
@@ -12,7 +12,7 @@ HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
 SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.1/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ppc ~ppc64 ~sh sparc ~x86"
 SLOT="0"
 IUSE="doc"
 
