@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.5 2010/11/06 09:18:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.6 2010/11/06 20:58:43 keri Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="1"
+PATCHSET_VER="2"
 MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
@@ -69,6 +69,15 @@ src_compile() {
 
 	econf ${myconf}
 
+	# Generate Mercury .m dependencies. This step will vacuously
+	# succeed if we do not have a bootstrappable instance of mmc
+	# already installed. This step is required as mmc does not wait
+	# for all dependencies to be generated before compiling .m files.
+	emake \
+		PARALLEL=${MAKEOPTS} \
+		bootstrap_depend || die "emake depend failed"
+
+	# Build Mercury using base llds grade
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \
@@ -76,6 +85,8 @@ src_compile() {
 		EXTRA_LD_LIBFLAGS="${LDFLAGS}" \
 		|| die "emake failed"
 
+	# We can now patch .m Mercury compiler files since we
+	# have just built mercury_compiler.
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
 	epatch "${WORKDIR}"/${PV}-mmc
@@ -85,6 +96,7 @@ src_compile() {
 		"${S}"/compiler/make.program_target.m \
 		|| die "sed libdir failed"
 
+	# Rebuild Mercury compiler using the just built mercury_compiler
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \
@@ -93,6 +105,9 @@ src_compile() {
 		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
 		compiler || die "emake compiler failed"
 
+	# The default Mercury grade may not be the same as the grade used to
+	# compile the llds base grade. Since src_test() is run before
+	# src_install() we compile the default grade now
 	emake \
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \
