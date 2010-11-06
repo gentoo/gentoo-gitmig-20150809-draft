@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.17 2010/09/16 17:31:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.18 2010/11/06 04:13:45 bicatali Exp $
+
+*bullet-2.77 (06 Nov 2010)
+
+  06 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> +bullet-2.77.ebuild,
+  +files/bullet-2.77-libdir.patch, +files/bullet-2.77-soversion.patch,
+  metadata.xml:
+  Version bump
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   bullet-2.76-r1.ebuild:
