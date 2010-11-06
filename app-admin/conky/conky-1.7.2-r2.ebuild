@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.10 2010/03/11 18:25:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r2.ebuild,v 1.11 2010/11/06 01:42:29 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -20,8 +20,8 @@ IUSE="alsa apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo 
 DEPEND_COMMON="
 	X? (
 		imlib? ( media-libs/imlib2 )
-		lua-cairo? ( >=dev-lang/toluapp-1.0.93 x11-libs/cairo[X] )
-		lua-imlib? ( >=dev-lang/toluapp-1.0.93 media-libs/imlib2 )
+		lua-cairo? ( >=dev-lua/toluapp-1.0.93 x11-libs/cairo[X] )
+		lua-imlib? ( >=dev-lua/toluapp-1.0.93 media-libs/imlib2 )
 		nvidia? ( media-video/nvidia-settings )
 		truetype? ( x11-libs/libXft >=media-libs/freetype-2 )
 		x11-libs/libX11
