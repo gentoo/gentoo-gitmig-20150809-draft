@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6-r1.ebuild,v 1.1 2010/11/04 18:15:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6-r1.ebuild,v 1.2 2010/11/06 23:05:05 idl0r Exp $
 
 EAPI=3
 
@@ -19,6 +19,7 @@ DEPEND="dev-lang/perl
 	>=dev-vcs/git-1.6.2"
 RDEPEND="${DEPEND}
 	!dev-vcs/gitolite
+	dev-perl/Net-SSH-AuthorizedKeysFile
 	vim-syntax? ( app-vim/gitolite-syntax )"
 
 pkg_setup() {
