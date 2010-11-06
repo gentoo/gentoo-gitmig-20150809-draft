@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.10 2010/11/06 10:49:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.11 2010/11/06 19:35:06 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org>
+  qt-declarative-4.7.0.ebuild:
+  added ~ia64 keyword wrt to bug #338289
 
   06 Nov 2010; Alex Alexander <wired@gentoo.org>
   qt-declarative-4.7.0.ebuild, metadata.xml:
