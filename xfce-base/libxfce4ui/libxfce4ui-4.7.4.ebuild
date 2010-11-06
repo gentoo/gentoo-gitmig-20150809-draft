@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.7.4.ebuild,v 1.1 2010/11/03 20:50:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.7.4.ebuild,v 1.2 2010/11/06 12:56:38 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -22,7 +22,8 @@ RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfce4util-4.7.3
 	>=xfce-base/xfconf-4.6
 	glade? ( dev-util/glade:3 )
-	startup-notification? ( x11-libs/startup-notification )"
+	startup-notification? ( x11-libs/startup-notification )
+	!<xfce-base/libxfcegui4-4.7.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
