@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.107 2010/11/05 18:05:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.108 2010/11/06 09:38:53 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> qt-webkit-4.7.0.ebuild:
+  removed alpha keyword from qt-4.7, bug #338289
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-webkit-4.5.3.ebuild,
   qt-webkit-4.5.3-r1.ebuild, qt-webkit-4.5.3-r2.ebuild,

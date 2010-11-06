@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.32 2010/11/05 18:19:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.33 2010/11/06 09:35:44 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> qt-multimedia-4.7.0.ebuild:
+  removed alpha keyword from qt-4.7, bug #338289
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-multimedia-4.6.3.ebuild:
   Stable for HPPA (bug #341703).

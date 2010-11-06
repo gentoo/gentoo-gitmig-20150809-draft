@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.78 2010/11/05 18:10:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.79 2010/11/06 09:34:54 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> qt-dbus-4.7.0.ebuild:
+  removed alpha keyword from qt-4.7, bug #338289
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-dbus-4.6.3.ebuild:
   Stable for HPPA (bug #341703).

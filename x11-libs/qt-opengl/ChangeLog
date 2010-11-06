@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.79 2010/11/05 18:23:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.80 2010/11/06 09:36:08 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> qt-opengl-4.7.0.ebuild,
+  qt-opengl-4.7.0-r1.ebuild:
+  removed alpha keyword from qt-4.7, bug #338289
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-opengl-4.6.3.ebuild:
   Stable for HPPA (bug #341703).
