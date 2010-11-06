@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3.ebuild,v 1.1 2010/10/29 15:56:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3.ebuild,v 1.2 2010/11/06 10:03:27 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
 # (e.g. memcache). Skip for now.
 RUBY_FAKEGEM_TASK_TEST=""
 
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG PUBLIC_CHANGELOG REAME TODO"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG PUBLIC_CHANGELOG README TODO"
 
 inherit ruby-fakegem
 
