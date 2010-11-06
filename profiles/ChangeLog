@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4754 2010/11/05 23:46:12 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4755 2010/11/06 01:48:46 rafaelmartins Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> updates/4Q-2010:
+  Moving dev-lang/toluapp to dev-lua/toluapp
 
   05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> updates/4Q-2010:
   Moving dev-util/luadoc to dev-lua/luadoc
