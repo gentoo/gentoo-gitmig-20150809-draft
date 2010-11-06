@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.173 2010/11/03 21:00:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.174 2010/11/06 17:55:53 fauli Exp $
+
+  06 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  libkdepim-4.4.7.ebuild:
+  stable x86, bug 343969
 
   03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> libkdepim-4.4.7.ebuild:
   Stable on amd64 wrt bug #343969
