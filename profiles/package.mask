@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12165 2010/11/05 23:41:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12166 2010/11/06 11:10:21 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -736,25 +736,6 @@ x11-misc/videogen
 # maintained fork (x11-misc/transset-df) and doesn't respect LDFLAGS
 # (see bug #338150). Masked for removal in 30 days.
 x11-misc/transset
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (21 Sep 2010)
-# Mask Qt 4.7.0, it will be unmasked as soon as it is tinderboxed
-~x11-libs/qt-assistant-4.7.0
-~x11-libs/qt-core-4.7.0
-~x11-libs/qt-dbus-4.7.0
-~x11-libs/qt-declarative-4.7.0
-~x11-libs/qt-demo-4.7.0
-~x11-libs/qt-gui-4.7.0
-~x11-libs/qt-multimedia-4.7.0
-~x11-libs/qt-opengl-4.7.0
-~x11-libs/qt-phonon-4.7.0
-~x11-libs/qt-qt3support-4.7.0
-~x11-libs/qt-script-4.7.0
-~x11-libs/qt-sql-4.7.0
-~x11-libs/qt-svg-4.7.0
-~x11-libs/qt-test-4.7.0
-~x11-libs/qt-webkit-4.7.0
-~x11-libs/qt-xmlpatterns-4.7.0
 
 # Panagiotis Christopoulos <pchrist@gentoo.org> (17 Sep 2010)
 # Masked for removal in 30 days. Most of them are too old/
