@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/specto-0.3.1.ebuild,v 1.3 2010/10/29 21:54:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/specto-0.3.1.ebuild,v 1.4 2010/11/06 00:35:02 xmw Exp $
 
 EAPI=2
 
@@ -24,9 +24,12 @@ RDEPEND="dev-python/gconf-python
 	dev-python/notify-python
 	>=dev-python/pygtk-2.10"
 
-src_prepare() {
+pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
+}
 
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-icon-theme.patch
 
 	sed -e "s:share/doc/specto:share/doc/${PF}:" \

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/specto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/ChangeLog,v 1.3 2010/10/29 21:54:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/ChangeLog,v 1.4 2010/11/06 00:35:02 xmw Exp $
+
+  06 Nov 2010; Michael Weber <xmw@gentoo.org> specto-0.3.1.ebuild:
+  Python 3 fix, thanks to Arfrever.
 
   29 Oct 2010; Michael Weber <xmw@gentoo.org> specto-0.3.1.ebuild:
   Random edit to fix bug 343287.
