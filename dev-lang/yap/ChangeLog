@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.48 2010/11/05 22:01:24 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.49 2010/11/06 19:50:59 keri Exp $
+
+  06 Nov 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
+  Ensure checking saved-state headers works when timezone is not set
 
   05 Nov 2010; <keri@gentoo.org> yap-6.0.1.ebuild,
   -files/yap-6.0.1-bootfile.patch, -files/yap-6.0.1-dynamic-lib.patch,
