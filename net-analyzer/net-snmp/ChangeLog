@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.217 2010/08/11 02:20:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.218 2010/11/06 20:22:32 halcy0n Exp $
+
+  06 Nov 2010; Mark Loeser <halcy0n@gentoo.org> net-snmp-5.4.2.1-r4.ebuild:
+  Stable for ppc64; bug #323197
 
   11 Aug 2010; Jeroen Roovers <jer@gentoo.org> net-snmp-5.5.ebuild:
   Build perl modules respecting LDFLAGS too (bug #328685).
