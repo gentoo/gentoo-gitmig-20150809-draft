@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.45 2010/09/16 01:14:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.46 2010/11/06 17:57:58 ssuominen Exp $
+
+*gnome-mplayer-1.0.0 (06 Nov 2010)
+
+  06 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gnome-mplayer-1.0.0.ebuild:
+  Version bump.
 
 *gnome-mplayer-0.9.9.2_p1762 (16 Sep 2010)
 
