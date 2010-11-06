@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/i18n-langtags
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.6 2009/12/23 16:55:39 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/i18n-langtags/ChangeLog,v 1.7 2010/11/06 08:35:50 tove Exp $
+
+  06 Nov 2010; Torsten Veller <tove@gentoo.org> i18n-langtags-0.35.ebuild:
+  Fix "defined(%hash) is deprecated" warning. Maintenance, EAPI bump.
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   i18n-langtags-0.35.ebuild:
