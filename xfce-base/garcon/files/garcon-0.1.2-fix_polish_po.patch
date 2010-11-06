@@ -1,0 +1,15 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6783
+
+--- a/po/pl.po
++++ b/po/pl.po
+@@ -12,8 +12,8 @@
+ "Language-Team: Polish <>\n"
+ "Language: pl\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=\n"
+-"Content-Transfer-Encoding: \n"
++"Content-Type: text/plain; charset=utf-8\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: ../data/xfce/xfce-accessories.directory.in.h:1
+ msgid "Accessories"
