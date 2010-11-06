@@ -1,6 +1,10 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.44 2010/10/15 19:10:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.45 2010/11/06 22:28:24 halcy0n Exp $
+
+  06 Nov 2010; Mark Loeser <halcy0n@gentoo.org>
+  projectx-0.90.4.00_p33.ebuild:
+  Stable for ppc64; bug #328157
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org>
   projectx-0.90.4.00_p33.ebuild:
