@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.31 2010/06/22 08:41:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.32 2010/11/06 12:16:51 hwoarang Exp $
+
+  06 Nov 2010; Markos Chandras <hwoarang@gentoo.org> csync2-1.34-r2.ebuild:
+  Stable on amd64 wrt bug #344257
 
 *csync2-1.34-r2 (22 Jun 2010)
 
