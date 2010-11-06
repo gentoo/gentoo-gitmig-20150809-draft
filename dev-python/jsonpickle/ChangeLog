@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jsonpickle
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.4 2009/12/12 20:06:49 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.5 2010/11/06 22:43:49 arfrever Exp $
+
+  06 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -jsonpickle-0.2.0.ebuild, -jsonpickle-0.3.0.ebuild:
+  Delete.
 
 *jsonpickle-0.3.1 (12 Dec 2009)
 
