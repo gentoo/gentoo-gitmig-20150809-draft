@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ndisc6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.4 2010/11/01 03:44:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.5 2010/11/06 01:56:29 xmw Exp $
+
+*ndisc6-0.9.9-r2 (06 Nov 2010)
+
+  06 Nov 2010; Michael Weber <xmw@gentoo.org> ndisc6-0.9.9.ebuild,
+  -ndisc6-0.9.9-r1.ebuild, +ndisc6-0.9.9-r2.ebuild:
+  Revbump to fix binary name, thanks to maxime.deroucy@gmail.com. Added ~arm
+  keyword
 
 *ndisc6-0.9.9-r1 (01 Nov 2010)
 
