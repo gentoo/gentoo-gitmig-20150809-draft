@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r1.ebuild,v 1.2 2010/10/23 17:29:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r1.ebuild,v 1.3 2010/11/06 01:34:36 rafaelmartins Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="dev-lang/lua
 	usb? ( virtual/libusb:0 )"
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
-	dev-libs/luasocket
+	dev-lua/luasocket
 	kernel_linux? ( sys-fs/udev )
 	usb? ( !kernel_linux? ( sys-apps/usbutils ) )"
 
