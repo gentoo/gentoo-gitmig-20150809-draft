@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.102 2010/11/05 22:06:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.103 2010/11/06 00:07:16 eva Exp $
+
+*pygobject-2.26.0 (06 Nov 2010)
+
+  06 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +pygobject-2.26.0.ebuild,
+  +files/pygobject-2.26.0-disable-non-working-tests.patch,
+  +files/pygobject-2.26.0-make_check.patch:
+  Version bump. Disable some non-working tests, but still has more enabled
+  than 2.21.5. It is supposed to build against python 3 but failed to link,
+  keep it restricted for now.
 
 *pygobject-2.21.5 (05 Nov 2010)
 
