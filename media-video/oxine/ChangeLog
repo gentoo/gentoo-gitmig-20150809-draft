@@ -1,6 +1,9 @@
 # ChangeLog for media-video/oxine
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.36 2008/09/20 21:31:01 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.37 2010/11/06 11:48:54 ssuominen Exp $
+
+  06 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> oxine-0.7.1-r1.ebuild:
+  Remove USE="hal" wrt #313389.
 
 *oxine-0.7.1-r1 (20 Sep 2008)
 

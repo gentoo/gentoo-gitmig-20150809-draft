@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1-r1.ebuild,v 1.1 2008/09/20 21:31:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1-r1.ebuild,v 1.2 2010/11/06 11:48:54 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -11,12 +11,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 SLOT="0"
-IUSE="X curl debug dvb exif hal joystick jpeg lirc nls png v4l"
+IUSE="X curl debug dvb exif joystick jpeg lirc nls png v4l"
 
 COMMON_DEPEND="media-libs/xine-lib
 	dev-libs/libcdio
 	curl? ( net-misc/curl )
-	hal? ( sys-apps/hal )
 	joystick? ( media-libs/libjsw )
 	jpeg? ( media-gfx/imagemagick
 		media-libs/netpbm
@@ -98,7 +97,7 @@ src_compile() {
 		$( use_enable debug ) \
 		$( use_enable dvb ) \
 		$( use_enable exif ) \
-		$( use_enable hal ) \
+		--disable-hal \
 		$( use_enable joystick ) \
 		$( use_enable lirc ) \
 		$( use_enable nls ) \
