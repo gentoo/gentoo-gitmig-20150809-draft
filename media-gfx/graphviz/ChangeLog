@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.227 2010/11/04 20:43:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.228 2010/11/06 13:30:24 maekke Exp $
+
+  06 Nov 2010; Markus Meier <maekke@gentoo.org> graphviz-2.26.3-r2.ebuild:
+  arm stable, bug #343369
 
   04 Nov 2010; Jeroen Roovers <jer@gentoo.org> graphviz-2.26.3-r2.ebuild:
   Stable for HPPA (bug #343369).
