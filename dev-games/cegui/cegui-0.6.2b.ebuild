@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.9 2010/09/17 10:53:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.10 2010/11/06 01:45:36 rafaelmartins Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/libpcre
 	irrlicht? ( dev-games/irrlicht )
 	lua? (
 		dev-lang/lua
-		dev-lang/toluapp
+		dev-lua/toluapp
 	)
 	opengl? (
 		virtual/opengl
