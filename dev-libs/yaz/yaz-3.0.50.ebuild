@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.50.ebuild,v 1.8 2010/10/16 14:05:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.50.ebuild,v 1.9 2010/11/06 22:59:31 halcy0n Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.indexdata.dk/pub/${PN}/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="debug icu tcpd ziffy"
 
 RDEPEND="dev-libs/libxml2
