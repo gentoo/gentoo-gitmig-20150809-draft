@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ignuit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.16 2010/11/06 16:51:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.17 2010/11/06 17:37:30 ken69267 Exp $
+
+  06 Nov 2010; Kenneth Prugh <ken69267@gentoo.org> -ignuit-0.0.13.ebuild,
+  -ignuit-0.0.14.ebuild, -ignuit-0.0.15.ebuild:
+  drop old versions
 
   06 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ignuit-0.0.16.ebuild:
   Stable for ppc64; bug #319903
