@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.219 2010/11/05 15:34:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.220 2010/11/06 12:42:17 ssuominen Exp $
+
+*gnucash-2.2.9-r3 (06 Nov 2010)
+
+  06 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gnucash-2.2.9-r3.ebuild:
+  Remove USE="chipcard hbci" from 2.2.9-r3 because it doesn't work with
+  AqBanking 5.x.
 
   05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> gnucash-2.2.9-r2.ebuild,
   gnucash-2.3.15.ebuild:
