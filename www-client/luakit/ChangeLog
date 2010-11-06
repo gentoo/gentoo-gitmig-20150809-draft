@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.12 2010/10/29 13:33:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.13 2010/11/06 11:05:18 wired Exp $
+
+  06 Nov 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  dev-libs -> dev-lua for luafilesystem
 
   29 Oct 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   added new rdep, dev-libs/luafilesystem
