@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.264 2010/10/24 20:04:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.265 2010/11/06 15:34:56 scarabeus Exp $
+
+  06 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> cairo-1.10.0-r3.ebuild,
+  cairo-9999.ebuild:
+  Add missing openvg dependency
 
   24 Oct 2010; Fabian Groffen <grobian@gentoo.org> cairo-1.10.0-r3.ebuild:
   fix building on PowerPC Darwin, bug #342319
