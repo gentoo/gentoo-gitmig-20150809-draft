@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.133 2010/10/30 18:23:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.134 2010/11/06 17:32:34 jer Exp $
+
+  06 Nov 2010; Jeroen Roovers <jer@gentoo.org> PyQt4-4.5.4-r4.ebuild,
+  PyQt4-4.6.2.ebuild, PyQt4-4.7.3.ebuild, PyQt4-4.7.7-r1.ebuild,
+  PyQt4-4.8.ebuild, PyQt4-4.8.1.ebuild:
+  Remove HPPA keywording (bug #239441).
 
 *PyQt4-4.8.1 (30 Oct 2010)
 
