@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5.ebuild,v 1.3 2010/11/02 16:55:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.1 2010/11/06 15:03:30 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -71,11 +71,11 @@ src_install() {
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins doc/xaos.pdf || die
-		dohtml help/* || die
+		dohtml -r help/* || die
 	fi
 	local driver="x11"
 	use gtk && driver="\"GTK+ Driver\""
 	make_desktop_entry "xaos -driver ${driver}" "XaoS Fractal Zoomer" \
 		xaos "Application;Education;Math;Graphics;"
-	doicon "${FILESDIR}"/${PN}.png
+	doicon "${FILESDIR}"/${PN}.png || die
 }
