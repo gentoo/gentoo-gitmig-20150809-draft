@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.11 2010/11/05 16:39:59 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.12 2010/11/06 09:01:41 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 ZOY="http://abuse.zoy.org/raw/Downloads"
@@ -20,10 +20,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="demo levels sounds"
 
-RDEPEND=">=media-libs/libsdl-1.1.6"
-DEPEND="${RDEPEND}
-	x11-libs/libXt
+RDEPEND=">=media-libs/libsdl-1.1.6[audio,opengl,video]
 	virtual/opengl"
+DEPEND="${RDEPEND}
+	x11-libs/libXt"
 
 src_prepare() {
 	# fix placing additional patches
@@ -33,29 +33,28 @@ src_prepare() {
 	# fix bug #231822
 	sed -i \
 		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
-		src/sdlport/setup.cpp || or die "sed setup.cpp failed"
+		src/sdlport/setup.cpp || or die
 	epatch "${FILESDIR}"/${P}-ovflfix.patch
 }
 
 src_configure() {
 	# Abuse auto-appends games, so point to the base
-	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
+	egamesconf --datadir="${GAMES_DATADIR_BASE}"
 }
 
 src_install() {
 	# Source-based install
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO
 
 	# Data install
-	insinto "${GAMES_DATADIR}"/"${PN}"
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r "${WORKDIR}"/{addon,art,levels,lisp,music,netlevel,register,sfx} \
 		"${WORKDIR}"/abuse.lsp \
-		|| die "doins failed"
+		|| die
 
-	# Icons/desktop entry
 	doicon ${PN}.png
-	make_desktop_entry abuse "Abuse" ${PN}
+	make_desktop_entry abuse "Abuse"
 
 	prepgamesdirs
 }
