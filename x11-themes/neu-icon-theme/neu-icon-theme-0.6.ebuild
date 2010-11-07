@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/neu-icon-theme/neu-icon-theme-0.6.ebuild,v 1.1 2010/11/07 17:57:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/neu-icon-theme/neu-icon-theme-0.6.ebuild,v 1.2 2010/11/07 18:02:37 ssuominen Exp $
 
 inherit gnome2-utils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+RDEPEND="x11-themes/gnome-icon-theme"
 DEPEND=""
-RDEPEND="${DEPEND}"
 
 RESTRICT="binchecks strip"
 
