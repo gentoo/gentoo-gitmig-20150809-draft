@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.383 2010/11/07 20:23:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.384 2010/11/07 20:36:13 aballier Exp $
+
+  07 Nov 2010; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg-0.6_p25423.ebuild, ffmpeg-9999.ebuild:
+  set LD_LIBRARY_PATH for libavcore too for running the tests, bug #341849
 
   07 Nov 2010; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   update description of the vpx useflag, bug #337690

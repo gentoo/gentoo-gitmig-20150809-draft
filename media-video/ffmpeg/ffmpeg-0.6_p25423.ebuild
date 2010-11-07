@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.6_p25423.ebuild,v 1.4 2010/11/02 21:38:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.6_p25423.ebuild,v 1.5 2010/11/07 20:36:13 aballier Exp $
 
 EAPI="2"
 
@@ -256,7 +256,7 @@ src_install() {
 src_test() {
 	if use encode ; then
 		for t in codectest lavftest seektest ; do
-			LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
+			LD_LIBRARY_PATH="${S}/libavcore:${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
 				emake ${t} || die "Some tests in ${t} failed"
 		done
 	else
