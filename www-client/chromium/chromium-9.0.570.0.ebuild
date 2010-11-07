@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.570.0.ebuild,v 1.3 2010/11/04 20:58:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.570.0.ebuild,v 1.4 2010/11/07 14:37:55 phajdan.jr Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
 
-inherit eutils flag-o-matic multilib pax-utils toolchain-funcs
+inherit eutils flag-o-matic multilib pax-utils python toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -67,6 +68,9 @@ pkg_setup() {
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX RANLIB
+
+	# Make sure the build system will use the right python, bug #344367.
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -112,6 +116,12 @@ src_prepare() {
 		rmdir v8/include || die
 		ln -s /usr/include v8/include || die
 	fi
+
+	# Make sure the build system will use the right python, bug #344367.
+	# Only convert directories that need it, to save time.
+	for dir in build tools; do
+		python_convert_shebangs -q -r 2 "${dir}"
+	done
 }
 
 src_configure() {
