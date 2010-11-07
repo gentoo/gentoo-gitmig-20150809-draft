@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rlcompleter2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.10 2010/02/23 11:24:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.11 2010/11/07 00:34:16 arfrever Exp $
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -rlcompleter2-0.95.ebuild, -rlcompleter2-0.96.ebuild:
+  Delete.
 
   23 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   rlcompleter2-0.98.ebuild:
