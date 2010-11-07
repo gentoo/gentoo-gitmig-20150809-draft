@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0-r2.ebuild,v 1.6 2010/11/07 17:38:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.0-r2.ebuild,v 1.7 2010/11/07 17:41:38 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -126,7 +126,7 @@ src_test() {
 			--home="${S}/test-${PYTHON_ABI}" --no-compile || die "install test failed"
 		pushd "${S}/test-${PYTHON_ABI}/"lib* > /dev/null
 		PYTHONPATH=python "$(PYTHON)" -c "import numpy; numpy.test()" 2>&1 | tee test.log
-		grep -Eq '^(ERROR|FAIL):' test.log || return 1
+		grep -Eq '^(ERROR|FAIL):' test.log && return 1
 		popd > /dev/null
 		rm -fr test-${PYTHON_ABI}
 	}
