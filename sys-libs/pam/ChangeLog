@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.282 2010/11/03 18:05:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.283 2010/11/07 17:42:02 constanze Exp $
+
+  07 Nov 2010; Constanze Hausner <constanze@gentoo.org> pam-1.1.3.ebuild:
+  Added condition for tallylog elog-output, see bug #344499
 
   03 Nov 2010; Markus Meier <maekke@gentoo.org> pam-1.1.3.ebuild:
   arm stable, bug #343399

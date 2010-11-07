@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.7 2010/11/03 18:05:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.8 2010/11/07 17:42:02 constanze Exp $
 
 EAPI="3"
 
@@ -168,10 +168,12 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "You can get a list of such software running a command like"
 	ewarn "  lsof / | egrep 'DEL.*libpam\\.so'"
-	elog ""
-	elog "Because of a bug present up to version 1.1.1-r2, you might have"
-	elog "an executable /var/log/tallylog file. If it is so, you can safely"
-	elog "correct it by running the command"
-	elog "  chmod -x /var/log/tallylog"
-	elog ""
+	if [ -x "${ROOT}"/var/log/tallylog ] ; then
+		elog ""
+		elog "Because of a bug present up to version 1.1.1-r2, you have"
+		elog "an executable /var/log/tallylog file. You can safely"
+		elog "correct it by running the command"
+		elog "  chmod -x /var/log/tallylog"
+		elog ""
+	fi
 }
