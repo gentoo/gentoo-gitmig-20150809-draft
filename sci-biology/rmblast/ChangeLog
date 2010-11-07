@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/rmblast
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/ChangeLog,v 1.1 2010/11/07 20:41:37 weaver Exp $
+
+*rmblast-1.2 (06 Nov 2010)
+
+  06 Nov 2010; Andrey Kislyuk <weaver@gentoo.org> +rmblast-1.2.ebuild,
+  +metadata.xml:
+  New package, dependency of sci-biology/repeatmasker. Ebuild written by me
+
