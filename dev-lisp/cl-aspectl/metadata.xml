@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
-AspectL is a library that provides aspect-oriented extensions for Common
-Lisp/CLOS.
-</longdescription>
-</pkgmetadata>
