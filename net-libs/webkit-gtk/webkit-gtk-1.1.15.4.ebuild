@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.13 2010/03/29 22:28:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.14 2010/11/07 21:13:34 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,8 +22,8 @@ IUSE="aqua coverage debug doc +gstreamer +websockets"
 RDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
-	media-libs/jpeg:0
-	media-libs/libpng
+	virtual/jpeg
+	>=media-libs/libpng-1.4
 	x11-libs/cairo
 
 	>=x11-libs/gtk+-2.13[aqua=]
