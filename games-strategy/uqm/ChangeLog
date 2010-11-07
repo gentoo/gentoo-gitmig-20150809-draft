@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/uqm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.26 2010/02/02 17:29:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.27 2010/11/07 22:26:25 ssuominen Exp $
+
+  07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> uqm-0.6.2.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   02 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> uqm-0.6.2.ebuild:
   EAPI=2
