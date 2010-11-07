@@ -27,6 +27,6 @@
     <flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 	<flag name="vdpau">Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card</flag>
-	<flag name="vpx">Enables vp8 codec support using libvpx</flag>
+	<flag name="vpx">Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.</flag>
   </use>
 </pkgmetadata>
