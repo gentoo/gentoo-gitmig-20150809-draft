@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.765 2010/11/07 14:58:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.766 2010/11/07 19:37:38 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org>
+  mplayer-1.0_rc4_p20091026-r1.ebuild, mplayer-1.0_rc4_p20100506.ebuild,
+  mplayer-1.0_rc4_p20100612.ebuild, mplayer-1.0_rc4_p20101107.ebuild,
+  mplayer-9999.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
 *mplayer-1.0_rc4_p20101107 (07 Nov 2010)
 
