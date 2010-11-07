@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.9 2010/01/22 17:15:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.10 2010/11/07 19:15:03 anarchy Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ SLOT="1"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="gtk dv quicktime sdl X yv12 v4l dga png mmx"
 
-RDEPEND="media-libs/jpeg:0
+RDEPEND="virtual/jpeg
 	gtk? ( x11-libs/gtk+:2 )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )

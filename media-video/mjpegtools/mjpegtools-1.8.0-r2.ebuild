@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.7 2009/08/27 20:19:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.8 2010/11/07 19:15:03 anarchy Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool autotools
 
@@ -14,7 +14,7 @@ SLOT="1"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="gtk dv quicktime sdl X yv12 v4l dga png mmx"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.148 2010/02/20 14:46:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.149 2010/11/07 19:15:03 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org>
+  mjpegtools-1.8.0-r2.ebuild, mjpegtools-1.9.0.ebuild,
+  mjpegtools-1.9.0-r1.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   20 Feb 2010; Raúl Porcel <armin76@gentoo.org> mjpegtools-1.9.0-r1.ebuild:
   alpha/sparc stable wrt #302435
