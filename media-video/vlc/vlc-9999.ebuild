@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.98 2010/10/16 17:13:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.99 2010/11/07 18:13:16 aballier Exp $
 
 EAPI="3"
 
@@ -47,7 +47,7 @@ else
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
-	+gcrypt gnome gnutls httpd ieee1394 jack kate kde libass libcaca
+	+gcrypt gme gnome gnutls httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
@@ -77,6 +77,7 @@ RDEPEND="
 		fluidsynth? ( media-sound/fluidsynth )
 		fontconfig? ( media-libs/fontconfig )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
+		gme? ( media-libs/game-music-emu )
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.7.4 >=dev-libs/libgcrypt-1.2.0 )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
@@ -101,8 +102,7 @@ RDEPEND="
 		opengl? ( virtual/opengl || ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 ) )
 		png? ( media-libs/libpng sys-libs/zlib )
 		projectm? ( media-libs/libprojectm )
-		pulseaudio? ( >=media-sound/pulseaudio-0.9.11
-			!X? ( >=media-sound/pulseaudio-0.9.11[-X] ) )
+		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.4 ) )
@@ -236,6 +236,7 @@ src_configure() {
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
+		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
 		$(use_enable httpd) \
