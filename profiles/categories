@@ -45,7 +45,6 @@ dev-scheme
 dev-tcltk
 dev-tex
 dev-texlive
-dev-tinyos
 dev-util
 dev-vcs
 games-action
