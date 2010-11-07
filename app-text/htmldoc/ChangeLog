@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.55 2010/06/01 13:26:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.56 2010/11/07 21:15:51 ssuominen Exp $
+
+  07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  htmldoc-1.8.27-r1.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> htmldoc-1.8.27-r1.ebuild:
   Marked ppc64 stable.

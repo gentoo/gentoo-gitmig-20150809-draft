@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r1.ebuild,v 1.9 2010/06/01 13:26:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r1.ebuild,v 1.10 2010/11/07 21:15:51 ssuominen Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 
-DEPEND="media-libs/jpeg
-	media-libs/libpng
+DEPEND="virtual/jpeg
+	>=media-libs/libpng-1.4
 	fltk? ( >=x11-libs/fltk-1.0.11 )
 	ssl? ( >=dev-libs/openssl-0.9.6e )"
 RDEPEND="${DEPEND}"

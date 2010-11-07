@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.9 2010/06/05 21:37:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.7.0.ebuild,v 1.10 2010/11/07 21:11:46 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils multilib
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/lua
 	>=dev-libs/STLport-5.1.5
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/tiff
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
