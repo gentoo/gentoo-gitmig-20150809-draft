@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.5 2010/04/05 20:04:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.6 2010/11/07 19:34:33 xarthisius Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -28,6 +28,9 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-graphviz.patch
 	epatch "${FILESDIR}"/${P}-syslibltdl.patch
 	epatch "${FILESDIR}"/${P}-plugindir.patch
+	for f in $(find "${S}" -name "configure.ac"); do
+		sed -i -e '/AM_INIT/ a\AM_MAINTAINER_MODE' $f || die #342747
+	done
 	eautoreconf
 }
 

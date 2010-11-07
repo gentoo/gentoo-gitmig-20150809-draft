@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/ggobi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.5 2010/04/05 20:04:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.6 2010/11/07 19:34:33 xarthisius Exp $
+
+  07 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> ggobi-2.1.8.ebuild:
+  Fix automake called by maintainer-mode wrt bug 342747. Thanks to Diego
+  Elio Pettenò for the report.
 
   05 Apr 2010; Markos Chandras <hwoarang@gentoo.org> ggobi-2.1.8.ebuild:
   Stable on amd64 wrt bug #301484
