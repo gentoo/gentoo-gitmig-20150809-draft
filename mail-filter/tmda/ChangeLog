@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.17 2010/01/07 14:37:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.18 2010/11/07 14:46:36 arfrever Exp $
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  tmda-1.1.12.ebuild:
+  Update EAPI. Use Python 2, call python_mod_optimize() and
+  python_mod_cleanup() (bug #313481). Don't install nonexistent
+  documentation files (bug #300511).
 
 *tmda-1.1.12 (07 Jan 2010)
 

@@ -1,67 +1,73 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.1.12.ebuild,v 1.1 2010/01/07 14:37:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.1.12.ebuild,v 1.2 2010/11/07 14:46:36 arfrever Exp $
 
-inherit eutils
+EAPI="3"
+PYTHON_DEPEND="2"
+
+inherit eutils multilib python
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://www.tmda.net/"
-LICENSE="GPL-2"
-
-DEPEND=">=dev-lang/python-2.2
-	virtual/mta"
-
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-src_compile () {
-	# Do not open /dev/tty when in batch mode. (bug #67150) -ticho
-	epatch ${FILESDIR}/tmda-1.0-non-interactive-tty.patch
+DEPEND="virtual/mta"
+RDEPEND="${DEPEND}"
 
-	./compileall || die "tmda compilation failed"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }
 
-src_install () {
-	# Figure out python version
-	# below hack should be replaced w/ pkg-config, when we get it working
-	local pv=`python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:'`
+src_prepare() {
+	# Do not open /dev/tty when in batch mode. (bug #67150) -ticho
+	epatch "${FILESDIR}/tmda-1.0-non-interactive-tty.patch"
 
+	python_convert_shebangs -r $(python_get_version) bin
+}
+
+src_install() {
 	# Executables
-	dobin bin/tmda-*
+	dobin bin/tmda-* || die "dobin failed"
 
 	# The Python TMDA module
-	insinto "/usr/lib/python${pv}/site-packages/TMDA"
-	doins TMDA/*.py*
-	insinto "/usr/lib/python${pv}/site-packages/TMDA/Queue"
-	doins TMDA/Queue/*.py*
-	insinto "/usr/lib/python${pv}/site-packages/TMDA/pythonlib/email"
-	doins TMDA/pythonlib/email/*.py*
-	insinto "/usr/lib/python${pv}/site-packages/TMDA/pythonlib/email/mime"
-	doins TMDA/pythonlib/email/mime/*.py*
+	insinto $(python_get_sitedir)
+	doins -r TMDA || die "doins failed"
 
 	# The templates
 	insinto /etc/tmda
-	doins templates/*.txt
+	doins templates/*.txt || die "doins failed"
 
 	# Documentation
-	dodoc COPYING ChangeLog README THANKS UPGRADE CRYPTO CODENAMES INSTALL
-	dohtml -r htdocs/*.html
-	dohtml -r htdocs/img
+	dodoc ChangeLog CODENAMES CRYPTO NEWS README THANKS UPGRADE || die "dodoc failed"
+	dohtml -r doc/html/* || die "dohtml failed"
 
 	# Contributed binaries and stuff
-	cd ${S}/contrib
+	pushd contrib > /dev/null
 
-	exeinto /usr/lib/tmda/contrib
+	exeinto /usr/$(get_libdir)/tmda/contrib
 	doexe collectaddys def2html printcdb printdbm \
 	      sendit.sh smtp-check-sender update-internaldomains vadduser-tmda \
-	      vmailmgr-vdir.sh vpopmail-vdir.sh wrapfd3.sh
+	      vmailmgr-vdir.sh vpopmail-vdir.sh wrapfd3.sh || die "doexe failed"
 
-	insinto /usr/lib/tmda/contrib
+	insinto /usr/$(get_libdir)/tmda/contrib
 	doins ChangeLog tmda.el tmda.spec \
-	      tofmipd.init tofmipd.sysconfig vtmdarc
+	      tofmipd.init tofmipd.sysconfig vtmdarc || die "doins failed"
 
-	insinto /usr/lib/tmda/contrib/dot-tmda
-	doins dot-tmda/*
+	insinto /usr/$(get_libdir)/tmda/contrib/dot-tmda
+	doins dot-tmda/* || die "doins failed"
+	popd > /dev/null
+}
+
+pkg_postinst() {
+	python_mod_optimize TMDA
+}
+
+pkg_postrm() {
+	python_mod_cleanup TMDA
 }
