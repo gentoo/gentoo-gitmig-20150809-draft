@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.24 2010/09/26 18:14:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.25 2010/11/07 06:09:19 graaff Exp $
+
+*hpricot-0.8.3 (07 Nov 2010)
+
+  07 Nov 2010; Hans de Graaff <graaff@gentoo.org> +hpricot-0.8.3.ebuild:
+  Version bump. Drop patch applied by upstream.
 
   26 Sep 2010; Hans de Graaff <graaff@gentoo.org> hpricot-0.8.2-r1.ebuild:
   Drop ruby19 to make this a stable candidate.
