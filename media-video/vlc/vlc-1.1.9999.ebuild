@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.20 2010/09/21 07:58:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.21 2010/11/07 18:30:02 aballier Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ else
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
-	+gcrypt ggi gnome gnutls httpd id3tag ieee1394 jack kate kde libass libcaca
+	+gcrypt ggi gme gnome gnutls httpd id3tag ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
@@ -82,6 +82,7 @@ RDEPEND="
 		fontconfig? ( media-libs/fontconfig )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		ggi? ( media-libs/libggi )
+		gme? ( media-libs/game-music-emu )
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.7.4 >=dev-libs/libgcrypt-1.2.0 )
 		id3tag? ( media-libs/libid3tag sys-libs/zlib )
@@ -249,6 +250,7 @@ src_configure() {
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
 		$(use_enable ggi) \
+		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
 		$(use_enable httpd) \
