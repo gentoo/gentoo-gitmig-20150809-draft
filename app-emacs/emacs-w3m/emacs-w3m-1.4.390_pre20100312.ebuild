@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.390_pre20100312.ebuild,v 1.1 2010/03/15 21:10:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.390_pre20100312.ebuild,v 1.2 2010/11/07 10:36:46 ulm Exp $
 
 EAPI=3
 
@@ -52,9 +52,4 @@ pkg_postinst() {
 	einfo
 	elog "If you want to use the shimbun library, please emerge app-emacs/apel"
 	elog "and app-emacs/flim."
-	einfo
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }

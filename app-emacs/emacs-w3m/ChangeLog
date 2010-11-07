@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.68 2010/03/15 21:10:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.69 2010/11/07 10:36:46 ulm Exp $
+
+  07 Nov 2010; Ulrich Mueller <ulm@gentoo.org> emacs-w3m-1.4.4-r3.ebuild:
+  Depend on <emacs-23 and check for Emacs version in pkg_setup. Drop package
+  to unstable because the released version doesn't support Emacs 23.
 
 *emacs-w3m-1.4.390_pre20100312 (15 Mar 2010)
 
