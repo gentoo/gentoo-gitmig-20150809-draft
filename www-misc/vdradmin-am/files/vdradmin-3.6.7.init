@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/files/vdradmin-3.6.7.init,v 1.1 2010/10/26 21:52:31 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/files/vdradmin-3.6.7.init,v 1.2 2010/11/07 21:43:12 billie Exp $
 
 depend() {
 	use vdr
@@ -16,8 +16,13 @@ start() {
 
 	# Prepare directories
 	for dir in cache log run; do
-		[ ! -d /var/${dir}/vdradmin ] && checkpath -d -m 0755 -o ${VDRADMIN_USER}:vdradmin "/var/${dir}/vdradmin"
+		checkpath -q -d -m 0755 -o ${VDRADMIN_USER}:vdradmin "/var/${dir}/vdradmin"
 	done
+	checkpath -q -d -m 0755 -o ${VDRADMIN_USER}:vdradmin "/etc/vdradmin" \
+		"/etc/vdradmin/certs"
+	checkpath -q -f -m 0644 -o ${VDRADMIN_USER}:vdradmin "/etc/vdradmin/vdradmind.conf" \
+		"/etc/vdradmin/certs/server-cert.pem" \
+		"/etc/vdradmin/certs/server-key.pem"
 
 	if [ "${SSL}" = "yes" ]; then vdradmin_opts="${vdradmin_opts} --ssl"; fi
 	if [ "${IPV6}" = "yes" ]; then vdradmin_opts="${vdradmin_opts} --ipv6"; fi

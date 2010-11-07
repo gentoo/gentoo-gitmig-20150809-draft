@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.1 2010/10/26 21:52:31 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.2 2010/11/07 21:43:12 billie Exp $
 
 EAPI=2
 
@@ -102,8 +102,6 @@ pkg_preinst() {
 		elog "Creating a new config-file."
 		echo
 
-		install -m 0644 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} /dev/null "${D}"${ETC_DIR}/vdradmind.conf || die
-
 		cat <<-EOF > "${D}"${ETC_DIR}/vdradmind.conf
 			VDRCONFDIR = "${ROOT%/}"/etc/vdr
 			VIDEODIR = "${ROOT%/}"/var/vdr/video
@@ -126,6 +124,9 @@ pkg_preinst() {
 		elog "do not match your installation or change them in the Setup-Menu"
 		elog "of the Web-Interface."
 	fi
+
+	chmod 0644 "${D}"${ETC_DIR}/vdradmind.conf || die
+	chown ${VDRADMIN_USER}:${VDRADMIN_GROUP} "${D}"${ETC_DIR}/vdradmind.conf || die
 }
 
 pkg_postinst() {
@@ -140,13 +141,10 @@ pkg_postinst() {
 		elog "To use ssl connection to your vdr"
 		elog "you need to enable it in ${ROOT%/}/etc/conf.d/vdradmin"
 
-		if [[ ! -f "${ROOT}"${CERTS_DIR}/server-cert.pem || \
-			! -f "${ROOT}"${CERTS_DIR}/server-key.pem ]]; then
-			create_ssl_cert
-			local base=$(get_base 1)
-			install -D -m 0400 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".key "${ROOT}"${CERTS_DIR}/server-key.pem || die
-			install -D -m 0444 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".crt "${ROOT}"${CERTS_DIR}/server-cert.pem || die
-		fi
+		create_ssl_cert
+		local base=$(get_base 1)
+		install -D -m 0400 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".key "${ROOT}"${CERTS_DIR}/server-key.pem || die
+		install -D -m 0444 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".crt "${ROOT}"${CERTS_DIR}/server-cert.pem || die
 	fi
 
 	elog
@@ -159,7 +157,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	rm -f "${ROOT}"${CERTS_DIR}/server-{cert,key}.pem
-	rmdir --ignore-fail-on-non-empty "${ROOT}"${CERTS_DIR}
+	rmdir --ignore-fail-on-non-empty "${ROOT}"${CERTS_DIR} \
+		"${ROOT}"${ETC_DIR}
 }
 
 pkg_config() {
