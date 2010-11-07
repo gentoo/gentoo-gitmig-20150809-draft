@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.9 2010/07/01 09:23:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.10 2010/11/07 22:44:35 fauli Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -230,6 +230,9 @@ bzr_fetch() {
 		${EBZR_EXPORT_CMD} -r "${EBZR_REVISION}" "${WORKDIR}/${P}" \
 			|| die "${EBZR}: export failed"
 	fi
+
+	export EBZR_TREE_CRC32=$(awk '$1 == "crc32:" { print $2; exit }' \
+		.bzr/checkout/dirstate)
 
 	popd > /dev/null
 }
