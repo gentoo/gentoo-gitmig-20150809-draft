@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.53 2010/11/01 17:21:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.54 2010/11/07 14:56:57 scarabeus Exp $
 
 # Justin Lecher <jlec@gentoo.org> (01 Nov 2010)
 # Deps not Keyworded
@@ -10,10 +10,6 @@ sci-chemistry/apbs fetk
 # dev-util/systemtap not keyworded on ppc arches. Note that this currently applies for java-overlay
 # icedtea only, but the plan is to move it to main tree.
 dev-java/icedtea systemtap
-
-# Joseph Jezak <josejx@gentoo.org> (13 Sep 2010)
-# Masked libvpx, we'll wait for native vp8 support
-media-video/ffmpeg vpx
 
 # Alexey Shvetsov <alexxy@gentoo.org> (22 Aug 2010)
 # sci-chemistry/msms not available for this arch
