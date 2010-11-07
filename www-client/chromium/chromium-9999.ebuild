@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.104 2010/11/07 18:53:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.105 2010/11/07 19:23:50 anarchy Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -31,7 +31,7 @@ RDEPEND="app-arch/bzip2
 	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libpng
 	>=media-video/ffmpeg-0.6_p25423[threads]
 	cups? ( >=net-print/cups-1.3.11 )
