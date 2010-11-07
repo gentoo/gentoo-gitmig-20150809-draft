@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
-TRIVIAL-HTTP is a trivial networking library for doing HTTP POST and
-GET over a socket interface.  TRIVIAL-HTTP builds on TRIVIAL-SOCKETS.
-</longdescription>
-</pkgmetadata>
