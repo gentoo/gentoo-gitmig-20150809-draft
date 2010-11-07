@@ -1,14 +1,9 @@
-Gentoo Linux
+Gentoo Xfce Team is <xfce@gentoo.org>
 
-Thank you for using Gentoo Linux, a special flavor of Linux that can be
-automatically optimized and customized for just about any application or
-need. Extreme configurability, performance and a top-notch user and developer
-community are all hallmarks of the Gentoo experience.
+Maintainers are:
 
-Thanks to our package manager, Portage, Gentoo Linux can become an ideal secure 
-server, development workstation, professional desktop, gaming system, embedded 
-solution or something else -- whatever you need it to be. Because of its 
-near-unlimited adaptability, we call Gentoo Linux a metadistribution. 
+Jeremy Olexa <darkside@gentoo.org>
+Christoph Mende <angelos@gentoo.org>
+Samuli Suominen <ssuominen@gentoo.org>
 
-                -- The Gentoo Linux Team --
-
+Bugs should be reported to Gentoo BTS at: http://bugs.gentoo.org/
