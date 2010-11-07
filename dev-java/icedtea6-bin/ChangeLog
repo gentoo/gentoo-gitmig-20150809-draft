@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.40 2010/10/13 18:56:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.41 2010/11/07 22:08:20 ssuominen Exp $
+
+  07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  icedtea6-bin-1.9.1.ebuild:
+  Fix libjpeg depend to accept libjpeg-turbo >= 1.0.90 wrt #327487.
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   icedtea6-bin-1.9.ebuild, icedtea6-bin-1.9.1.ebuild:
