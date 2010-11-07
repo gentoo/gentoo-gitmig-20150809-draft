@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5-r1.ebuild,v 1.1 2010/11/04 11:52:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5-r1.ebuild,v 1.2 2010/11/07 11:21:34 ssuominen Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ if [[ ${PV} != *9999* ]]; then
 	KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 	KDE_HANDBOOK="optional"
 	SRC_URI="mirror://sourceforge/kmymoney2/${P}.tar.bz2
-		http://dev.gentoo.org/~ssuominen/${P}-aqbanking-5_x.patch.bz2"
+		mirror://gentoo/${P}-aqbanking-5_x.patch.bz2"
 fi
 
 inherit virtualx kde4-base
