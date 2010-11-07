@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.8.2-r1.ebuild,v 1.1 2010/11/06 17:55:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.8.2-r1.ebuild,v 1.2 2010/11/07 22:50:09 tomka Exp $
 
 EAPI=2
 
@@ -36,14 +36,14 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/frobby
-	dolib.a bin/libfrobby.a
+	dobin bin/frobby || die
+	dolib.a bin/libfrobby.a || die
 	insinto /usr/include
-	doins src/frobby.h
-	dodir /usr/include/"${PN}"
+	doins src/frobby.h || die
+	dodir /usr/include/"${PN}" || die
 	insinto /usr/include/"${PN}"
-	doins src/stdinc.h
+	doins src/stdinc.h || die
 	if use doc; then
-		dodoc bin/manual.pdf
+		dodoc bin/manual.pdf || die
 	fi
 }

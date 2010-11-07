@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/frobby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.1 2010/11/06 17:55:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.2 2010/11/07 22:50:09 tomka Exp $
+
+  07 Nov 2010; Thomas Kahle <tomka@gentoo.org> frobby-0.8.2-r1.ebuild:
+  ebuild QA: missing || die statments
 
 *frobby-0.8.2-r1 (06 Nov 2010)
 
