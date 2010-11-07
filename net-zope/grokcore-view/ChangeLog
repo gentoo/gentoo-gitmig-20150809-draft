@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/grokcore-view
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-view/ChangeLog,v 1.1 2010/09/19 23:52:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-view/ChangeLog,v 1.2 2010/11/07 20:28:23 arfrever Exp $
+
+*grokcore-view-2.1 (07 Nov 2010)
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -grokcore-view-1.13.5.ebuild, +grokcore-view-2.1.ebuild:
+  Version bump.
 
 *grokcore-view-1.13.5 (19 Sep 2010)
 
