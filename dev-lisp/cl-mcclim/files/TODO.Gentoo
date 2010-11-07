@@ -1,8 +1,0 @@
-                                                                 -*- outline -*-
-* Investigate CLISP portability
-
-* Port CLIM based software
-
-  * dev-lisp/cl-clim-listener
-  * dev-lisp/cl-clim-scigraph
-  * dev-lisp/cl-org-davep-dict (CLIM client)
