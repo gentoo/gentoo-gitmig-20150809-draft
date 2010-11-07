@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.70 2010/11/07 10:59:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.71 2010/11/07 11:01:42 ulm Exp $
+
+*emacs-w3m-1.4.417_pre20101104 (07 Nov 2010)
+
+  07 Nov 2010; Ulrich Mueller <ulm@gentoo.org>
+  -emacs-w3m-1.4.379_pre20100125.ebuild,
+  +emacs-w3m-1.4.417_pre20101104.ebuild:
+  New snapshot from CVS.
 
   07 Nov 2010; Ulrich Mueller <ulm@gentoo.org> emacs-w3m-1.4.4-r3.ebuild:
   Depend on <emacs-23 and check for Emacs version in pkg_setup, bug 344361.

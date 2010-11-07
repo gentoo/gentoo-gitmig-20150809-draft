@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.379_pre20100125.ebuild,v 1.2 2010/11/07 10:36:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.417_pre20101104.ebuild,v 1.1 2010/11/07 11:01:42 ulm Exp $
 
 EAPI=3
 
