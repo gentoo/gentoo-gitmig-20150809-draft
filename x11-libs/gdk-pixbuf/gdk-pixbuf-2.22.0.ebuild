@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.0.ebuild,v 1.2 2010/09/24 23:35:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.0.ebuild,v 1.3 2010/11/07 19:11:27 anarchy Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-libs/glib-2.25.9
 	>=media-libs/libpng-1.2.43-r2:0
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	jpeg? ( >=media-libs/jpeg-6b-r9:0 )
+	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	tiff? ( >=media-libs/tiff-3.9.2 )
 	X? ( x11-libs/libX11 )

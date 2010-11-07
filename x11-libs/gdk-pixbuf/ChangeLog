@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.2 2010/09/24 23:35:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.3 2010/11/07 19:11:27 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> gdk-pixbuf-2.22.0.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   24 Sep 2010; <nirbheek@gentoo.org> gdk-pixbuf-2.22.0.ebuild:
   Remove .la files too
