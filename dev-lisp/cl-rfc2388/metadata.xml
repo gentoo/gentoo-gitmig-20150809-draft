@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
- This port contains an implementation of RFC 2388, which is used to process form
- data posted with HTTP POST method using enctype "multipart/form-data".
-</longdescription>
-</pkgmetadata>
