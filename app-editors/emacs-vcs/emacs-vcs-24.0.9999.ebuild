@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.19 2010/10/25 21:31:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.20 2010/11/07 22:19:08 ulm Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ RDEPEND="sys-libs/ncurses
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		libxml2? ( >=dev-libs/libxml2-2.2.0 )
 		gif? ( media-libs/giflib )
-		jpeg? ( media-libs/jpeg:0 )
+		jpeg? ( virtual/jpeg )
 		png? ( media-libs/libpng )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
