@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.99 2010/11/07 18:13:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.100 2010/11/07 19:14:31 aballier Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ if [ "${PV%9999}" != "${PV}" ] ; then
 	fi
 fi
 
-inherit eutils multilib autotools toolchain-funcs gnome2 qt4 flag-o-matic ${SCM}
+inherit eutils multilib autotools toolchain-funcs gnome2 qt4-r2 flag-o-matic ${SCM}
 
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
@@ -180,9 +180,7 @@ pkg_setup() {
 	vlc_use_needs libtiger kate
 	vlc_use_needs xv xcb
 
-	if use qt4 || use skins ; then
-		qt4_pkg_setup
-	else
+	if use !qt4 && use !skins ; then
 		ewarn "You have disabled the qt4 useflag, ${PN} will not have any"
 		ewarn "graphical interface. Maybe that is not what you want..."
 	fi
