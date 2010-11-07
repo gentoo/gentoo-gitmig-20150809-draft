@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.33.ebuild,v 1.13 2010/09/25 05:35:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.33.ebuild,v 1.14 2010/11/07 21:57:52 ssuominen Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
 	gsm? ( media-sound/gsm )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( =media-libs/lcms-1* )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
