@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.0.1.ebuild,v 1.3 2010/03/08 18:54:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.0.1.ebuild,v 1.4 2010/11/07 19:22:17 jer Exp $
 
 # leave this ebuild around please, it's the only one that compiles (and hence
 # isn't masked) -- grobian
@@ -16,8 +16,6 @@ S=${WORKDIR}/CSSC-${PV}
 KEYWORDS="~ppc-macos ~x86-macos"
 IUSE=""
 RESTRICT="test"
-
-DEPEND=""
 
 src_configure() {
 	econf --enable-binary || die
