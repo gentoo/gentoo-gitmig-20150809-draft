@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.106 2010/10/25 00:02:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.107 2010/11/07 19:17:54 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org>
+  ghostscript-gpl-8.71-r1.ebuild, ghostscript-gpl-8.71-r6.ebuild,
+  ghostscript-gpl-9.00.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org>
   ghostscript-gpl-8.71-r6.ebuild:
