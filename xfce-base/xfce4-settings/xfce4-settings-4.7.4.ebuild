@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.3.ebuild,v 1.3 2010/11/06 12:57:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.4.ebuild,v 1.1 2010/11/07 10:40:21 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -34,7 +34,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
 	dev-util/pkgconfig
-	>=x11-proto/inputproto-1.4"
+	>=x11-proto/inputproto-1.4
+	x11-proto/xproto"
 
 pkg_setup() {
 	XFCONF=(
