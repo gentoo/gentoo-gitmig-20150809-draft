@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.33 2010/11/06 15:03:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.34 2010/11/07 13:12:01 hwoarang Exp $
+
+  07 Nov 2010; Markos Chandras <hwoarang@gentoo.org> xaos-3.5-r1.ebuild:
+  Stable on amd64 wrt bug #342295
 
 *xaos-3.5-r1 (06 Nov 2010)
 
