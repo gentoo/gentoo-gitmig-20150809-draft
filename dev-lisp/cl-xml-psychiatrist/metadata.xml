@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
-xml-psychiatrist is an XML sanity checker for Common Lisp which is
-more powerful than DTD or XML Schema.
-</longdescription>
-</pkgmetadata>
