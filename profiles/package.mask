@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12170 2010/11/07 16:21:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12171 2010/11/07 17:04:03 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1420,10 +1420,6 @@ media-sound/teamspeak-server-bin
 # Krzysztof Pawlik <nelchael@gentoo.org> (23 Nov 2009)
 # Borken TPM patch, see bug #294119
 =sys-apps/rng-tools-2-r2
-
-# Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
-# beta release
->=dev-ml/ocamlnet-3.0_beta
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Nov 2009)
 # upstream MythTV development versions
