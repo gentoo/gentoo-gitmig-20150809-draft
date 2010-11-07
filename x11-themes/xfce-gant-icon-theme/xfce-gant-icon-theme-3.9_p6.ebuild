@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce-gant-icon-theme/xfce-gant-icon-theme-3.9_p6.ebuild,v 1.2 2010/02/27 10:39:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce-gant-icon-theme/xfce-gant-icon-theme-3.9_p6.ebuild,v 1.3 2010/11/07 17:42:02 ssuominen Exp $
 
 inherit gnome2-utils
 
@@ -10,7 +10,7 @@ SRC_URI="http://overlay.uberpenguin.net/icons-xfce-gant-${PV/_p/-}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-themes/hicolor-icon-theme"
