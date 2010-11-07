@@ -1,6 +1,12 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.13 2010/10/12 18:20:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.14 2010/11/07 18:44:54 tampakrap Exp $
+
+*rekonq-0.6.1 (07 Nov 2010)
+
+  07 Nov 2010; <tampakrap@gentoo.org> -rekonq-0.5.0.ebuild,
+  +rekonq-0.6.1.ebuild, +files/rekonq-0.6.1-cve-2010-2536.patch:
+  Version bump, remove old
 
   12 Oct 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   rekonq-0.5.0-r1.ebuild:
