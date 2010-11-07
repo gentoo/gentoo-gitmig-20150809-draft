@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.2 2010/10/13 01:37:39 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.3 2010/11/07 02:27:11 rafaelmartins Exp $
+
+  07 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  luajit-2.0.0_beta5.ebuild:
+  Fixed multilib, DESTDIR and PREFIX paths for luajit:2
 
 *luajit-2.0.0_beta5 (13 Oct 2010)
 
