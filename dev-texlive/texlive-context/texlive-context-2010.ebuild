@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2010.ebuild,v 1.1 2010/10/24 18:12:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2010.ebuild,v 1.2 2010/11/07 19:48:45 aballier Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ TEXLIVE_MODULE_CONTENTS="context jmn lmextra context-account context-algorithmic
 "
 TEXLIVE_MODULE_DOC_CONTENTS="context.doc context-account.doc context-bnf.doc context-chromato.doc context-construction-plan.doc context-degrade.doc context-filter.doc context-fixme.doc context-french.doc context-fullpage.doc context-games.doc context-letter.doc context-lettrine.doc context-lilypond.doc context-mathsets.doc context-notes-zh-cn.doc context-ruby.doc context-simplefonts.doc context-simpleslides.doc context-top-ten.doc context-typearea.doc context-typescripts.doc context-vim.doc "
 TEXLIVE_MODULE_SRC_CONTENTS="context-fixme.source context-letter.source context-simplefonts.source "
-inherit texlive-module
+inherit  texlive-module
 DESCRIPTION="TeXLive ConTeXt format"
 
 LICENSE="GPL-2 as-is FDL-1.1 GPL-1 GPL-2 public-domain "
@@ -39,3 +39,11 @@ pkg_setup() {
 		rm -f "${ROOT}/var/lib/texmf/web2c/metapost/metafun.log"
 	fi
 }
+
+TL_MODULE_INFORMATION="For using ConTeXt mkII simply use 'texexec' to generate
+your documents.
+If you plan to use mkIV and its 'context' command to generate your documents,
+you have to run 'luatools --generate' as normal user before first use.
+
+More information and advanced options on:
+http://wiki.contextgarden.net/TeX_Live_2010"
