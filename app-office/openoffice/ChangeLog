@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.538 2010/09/17 10:49:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.539 2010/11/07 18:50:48 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> openoffice-3.2.1.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   openoffice-3.2.0.ebuild, openoffice-3.2.1.ebuild:
