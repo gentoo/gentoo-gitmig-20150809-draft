@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201008292125.ebuild,v 1.1 2010/09/02 22:14:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.2.0.201011061849.ebuild,v 1.1 2010/11/07 12:23:49 blueness Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DEPEND="sys-devel/bison
 S="${WORKDIR}/${PN}2"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}.patch"
+	epatch "${FILESDIR}/${PN}-udev.patch"
 }
 
 src_compile() {
