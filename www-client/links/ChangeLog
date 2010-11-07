@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.124 2010/04/11 20:31:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.125 2010/11/07 21:34:44 ssuominen Exp $
+
+  07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> links-2.2.ebuild,
+  links-2.3_pre1.ebuild:
+  Use virtual/jpeg wrt #327487.
 
 *links-2.3_pre1 (11 Apr 2010)
 

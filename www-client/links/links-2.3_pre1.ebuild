@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1.ebuild,v 1.1 2010/04/11 20:31:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1.ebuild,v 1.2 2010/11/07 21:34:44 ssuominen Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=none
@@ -27,21 +27,21 @@ IUSE="bzip2 directfb fbcon gpm jpeg livecd png sdl ssl svga tiff unicode X zlib"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
-	png? ( >=media-libs/libpng-1.2.1 )
-	jpeg? ( >=media-libs/jpeg-6b )
-	fbcon? ( >=media-libs/libpng-1.2.1
-		>=media-libs/jpeg-6b
+	png? ( >=media-libs/libpng-1.4 )
+	jpeg? ( virtual/jpeg )
+	fbcon? ( >=media-libs/libpng-1.4
+		virtual/jpeg
 		sys-libs/gpm )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3
-		>=media-libs/libpng-1.2.1 )
+		>=media-libs/libpng-1.4 )
 	X? ( x11-libs/libXext
-		>=media-libs/libpng-1.2.1 )
+		>=media-libs/libpng-1.4 )
 	directfb? ( dev-libs/DirectFB )
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	sys-libs/ncurses
-	livecd? ( >=media-libs/libpng-1.2.1
-		>=media-libs/jpeg-6b
+	livecd? ( >=media-libs/libpng-1.4
+		virtual/jpeg
 		sys-libs/gpm )"
 
 DEPEND="${RDEPEND}
