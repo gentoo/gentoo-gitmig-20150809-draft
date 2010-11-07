@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.179 2010/10/23 11:43:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.180 2010/11/07 14:06:11 arfrever Exp $
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.use.mask:
+  Unmask "declarative" USE flag for dev-python/PyQt4.
 
   23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.use.mask:
