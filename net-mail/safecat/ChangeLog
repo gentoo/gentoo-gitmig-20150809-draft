@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/safecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.17 2010/06/07 12:49:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.18 2010/11/07 22:49:13 radhermit Exp $
+
+*safecat-1.13 (07 Nov 2010)
+
+  07 Nov 2010; Tim Harder <radhermit@gentoo.org> -safecat-1.12.ebuild,
+  +safecat-1.13.ebuild, +files/safecat-1.13-makefile.patch:
+  Version bump for bug #341841 and remove old. Update HOMEPAGE and SRC_URI,
+  use EAPI 3, add patch to fix parallel make errors (bug #295751), move
+  variable settings to default places, and don't install useless doc files.
 
   07 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> safecat-1.12.ebuild:
   Package fails to build with parallel make (bug #295751).
