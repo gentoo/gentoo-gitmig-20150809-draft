@@ -1,6 +1,10 @@
 # ChangeLog for games-board/eboard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.31 2010/11/03 15:53:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.32 2010/11/07 21:56:52 mr_bones_ Exp $
+
+  07 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  eboard-1.1.1-r1.ebuild:
+  perl is only strictly used at build-time (bug #344521); tidy
 
   03 Nov 2010; Tupone Alfredo <tupone@gentoo.org> -eboard-1.1.1.ebuild,
   eboard-1.1.1-r1.ebuild, +files/eboard-1.1.1-ovflfix.patch:
