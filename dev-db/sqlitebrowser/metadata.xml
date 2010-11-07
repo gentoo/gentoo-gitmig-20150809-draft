@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>xmw@gentoo.org</email>
+  <name>Michael Weber</name>
 </maintainer>
 <longdescription lang="en">
 SQLite Database Browser is a freeware, public domain, open source visual tool
