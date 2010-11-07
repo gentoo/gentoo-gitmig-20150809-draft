@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.3.ebuild,v 1.1 2010/09/29 22:07:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.3.ebuild,v 1.2 2010/11/07 17:00:58 hwoarang Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.delorie.com/store/ace/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
@@ -20,7 +20,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-xpm.patch
+	epatch \
+		"${FILESDIR}"/${P}-no-xpm.patch \
+		"${FILESDIR}"/${P}-implicit-pointer.patch
 }
 
 src_configure() {
