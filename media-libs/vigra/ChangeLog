@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.26 2010/08/06 21:26:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.27 2010/11/07 19:33:53 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> vigra-1.6.0.ebuild,
+  vigra-1.6.0-r1.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
 *vigra-1.6.0-r1 (06 Aug 2010)
 

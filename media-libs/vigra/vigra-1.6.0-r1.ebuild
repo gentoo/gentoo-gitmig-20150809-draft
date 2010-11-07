@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.6.0-r1.ebuild,v 1.1 2010/08/06 21:26:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.6.0-r1.ebuild,v 1.2 2010/11/07 19:33:53 anarchy Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="doc fftw jpeg png tiff zlib test"
 
 RDEPEND="png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	fftw? ( >=sci-libs/fftw-3 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
