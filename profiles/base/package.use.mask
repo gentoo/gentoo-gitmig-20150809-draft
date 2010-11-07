@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.175 2010/11/07 14:50:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.176 2010/11/07 17:20:03 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -27,8 +27,9 @@ net-irc/quassel ayatana
 <net-mail/dovecot-2 bzip2
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (8 Sep 2010)
-# Drm don't even build here so mask everywhere expect live.
-<x11-libs/cairo-9999 drm
+# drm don't even build here so mask everywhere expect live.
+# openvg require openvg-1.1 implemenatation so mask until there is some
+<x11-libs/cairo-9999 drm openvg
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.
