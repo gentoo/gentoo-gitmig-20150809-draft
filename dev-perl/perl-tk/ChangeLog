@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.76 2010/10/21 19:47:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.77 2010/11/07 21:25:51 ssuominen Exp $
+
+  07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  perl-tk-804.028-r2.ebuild, perl-tk-804.029.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   21 Oct 2010; Jeroen Roovers <jer@gentoo.org> perl-tk-804.029.ebuild:
   Stable for HPPA (bug #333573).
