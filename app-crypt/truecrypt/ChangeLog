@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.56 2010/11/06 01:15:14 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.57 2010/11/07 14:45:38 c1pher Exp $
+
+  07 Nov 2010; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r1.ebuild:
+  Removed the fetch restrict. Note for future version bumps: the source
+  archives
+  will need to be added to the Gentoo mirrors manually.
 
 *truecrypt-7.0a-r1 (06 Nov 2010)
 

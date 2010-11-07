@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r1.ebuild,v 1.1 2010/11/06 01:15:14 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r1.ebuild,v 1.2 2010/11/07 14:45:38 c1pher Exp $
 
 EAPI="2"
 
@@ -8,13 +8,13 @@ inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets eutils
 
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
-SRC_URI="${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="truecrypt-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
-RESTRICT="bindist fetch mirror"
+RESTRICT="bindist"
 
 RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	sys-fs/fuse
@@ -29,7 +29,7 @@ S="${WORKDIR}/${P}-source"
 pkg_nofetch() {
 	elog "Please download .tar.gz source from:"
 	elog "http://www.truecrypt.org/downloads2"
-	elog "Then put the file in ${DISTDIR}/${SRC_URI}"
+	elog "Then put the file in ${DISTDIR}/${P}.tar.gz"
 }
 
 pkg_setup() {
