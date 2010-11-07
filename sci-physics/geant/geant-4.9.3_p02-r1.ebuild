@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p01.ebuild,v 1.3 2010/10/10 21:54:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.1 2010/11/07 21:06:38 xarthisius Exp $
 
 EAPI=2
 
@@ -52,25 +52,16 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	eval unset ${!G4*}
+	tc-export CXX CC
 }
 
 src_prepare() {
 	# fix bad zlib dependency
-	epatch "${FILESDIR}"/${PN}-4.9.3-zlib.patch
+	epatch "${FILESDIR}"/${PN}-4.9.3-zlib.patch \
+		"${FILESDIR}"/${PN}-4.9.3-respect_flags.patch
 
 	# propagate user's flags and compiler settings
 	sed -i -e 's/-o/$(LDFLAGS) -o/g' source/GNUmakefile || die
-	sed -i \
-		-e '/CXX.*:=.*g++/d' \
-		-e '/FC.*:=.*gfortran/d' \
-		-e 's/\(CXXFLAGS.*:=\).*/\1 -ansi/' \
-		-e '/CXXFLAGS.*+=.*pipe/d' \
-		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FCFLAGS}:" \
-		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
-		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
-		-e "s/libq\*/lib\[q,Q\]t*/g" \
-		config/sys/Linux*gmk || die "flag substitution failed"
 	sed -i \
 		-e 's:g++:$(CXX):g' \
 		config/*.gmk || die "sed for forced g++ failed"

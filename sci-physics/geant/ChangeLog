@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.42 2010/10/10 21:54:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.43 2010/11/07 21:06:38 xarthisius Exp $
+
+*geant-4.9.3_p02-r1 (07 Nov 2010)
+
+  07 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -geant-4.9.3_p01.ebuild, -geant-4.9.3_p02.ebuild,
+  +geant-4.9.3_p02-r1.ebuild, +files/geant-4.9.3-respect_flags.patch:
+  Fix building with --as-needed wrt bug 344119, respect CXX. Drop old.
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> geant-3.21.14-r2.ebuild,
   geant-4.9.2_p02.ebuild, geant-4.9.3_p01.ebuild, geant-4.9.3_p02.ebuild:
