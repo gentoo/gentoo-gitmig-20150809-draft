@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.6 2010/11/06 09:35:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.0.ebuild,v 1.7 2010/11/07 19:31:49 anarchy Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -12,7 +12,7 @@ IUSE="+accessibility cups dbus egl +glib gtk mng nas nis private-headers qt3supp
 
 RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libpng
 	sys-libs/zlib
 	~x11-libs/qt-core-${PV}[aqua=,debug=,glib=,qt3support=]

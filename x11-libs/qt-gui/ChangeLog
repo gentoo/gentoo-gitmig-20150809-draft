@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.123 2010/11/06 09:35:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.124 2010/11/07 19:31:49 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> qt-gui-4.6.2.ebuild,
+  qt-gui-4.6.2-r1.ebuild, qt-gui-4.7.0.ebuild, qt-gui-4.7.0-r1.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   06 Nov 2010; Alex Alexander <wired@gentoo.org> qt-gui-4.7.0.ebuild,
   qt-gui-4.7.0-r1.ebuild:
