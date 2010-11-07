@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
-Anaphora is the anaphoric macro collection from Hell, it includes many
-new fiends in addition to olds friends like AIF and AWHEN.
-</longdescription>
-</pkgmetadata>
