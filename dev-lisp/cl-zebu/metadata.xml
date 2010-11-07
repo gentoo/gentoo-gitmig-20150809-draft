@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
-Zebu is a Library for LALR(1) parser generation -- similar to YACC,
-but it generates Common Lisp code.
-</longdescription>
-</pkgmetadata>
