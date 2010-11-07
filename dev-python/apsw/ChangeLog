@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.32 2010/10/25 00:26:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.33 2010/11/07 15:47:35 arfrever Exp $
+
+*apsw-3.7.3.1 (07 Nov 2010)
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -apsw-3.6.23.1.1.ebuild, -apsw-3.7.0.1.ebuild, +apsw-3.7.3.1.ebuild:
+  Version bump. Enable support for loadable sqlite extensions.
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org> apsw-3.7.2.1.ebuild:
   stable x86, bug 342325
