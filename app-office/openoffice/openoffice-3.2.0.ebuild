@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.28 2010/09/17 10:49:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.29 2010/11/07 19:45:55 anarchy Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -96,7 +96,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.3.0
 	cups? ( net-print/cups )
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	app-arch/zip
 	app-arch/unzip
