@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.282 2010/10/10 18:46:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.283 2010/11/07 19:06:05 anarchy Exp $
+
+  07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> transcode-1.0.7.ebuild,
+  transcode-1.1.4.ebuild, transcode-1.1.5.ebuild, transcode-1.1.5-r1.ebuild,
+  transcode-1.1.5-r2.ebuild:
+  Convert media-libs/jpeg to virtual/jpeg
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> transcode-1.1.5-r2.ebuild:
   sparc stable wrt #335429
