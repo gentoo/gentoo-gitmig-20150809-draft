@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.26 2010/06/26 13:11:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.27 2010/11/07 18:28:38 c1pher Exp $
+
+*xca-0.9.0 (07 Nov 2010)
+
+  07 Nov 2010; Dane Smith <c1pher@gentoo.org> +xca-0.9.0.ebuild,
+  +files/xca-0.9.0-qt_detection.patch:
+  Version bump to 0.9.0 wrt bug 343599. Added new QT patch. Fixed a number
+  of QA issues.
 
   26 Jun 2010; <nixnut@gentoo.org> xca-0.8.1.ebuild:
   ppc stable #322283
