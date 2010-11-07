@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
+	</maintainer>
+	<longdescription>
+		A CLI-based mangling utility for package.{use,keywords,license}
+		files. Meant to be almost drop-in replacement for
+		<pkg>app-misc/flagedit</pkg> with an extended feature set
+		and improved simplicity of use.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>mgorny@gentoo.org</email>
+			<name>Michał Górny</name>
+		</maintainer>
+		<bugs-to>http://github.com/mgorny/flaggie/issues</bugs-to>
+	</upstream>
+</pkgmetadata>
