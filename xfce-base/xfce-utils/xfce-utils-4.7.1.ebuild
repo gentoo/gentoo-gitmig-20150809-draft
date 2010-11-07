@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.0.ebuild,v 1.8 2010/10/28 16:38:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.1.ebuild,v 1.1 2010/11/07 10:27:02 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus debug +lock"
 
-# XML-Parser is really a runtime dependency for xfconf-migration-4.6.pl script
-RDEPEND="dev-perl/XML-Parser
-	x11-apps/xrdb
+RDEPEND="x11-apps/xrdb
 	x11-libs/libX11
 	>=x11-libs/gtk+-2.10:2
 	>=xfce-base/libxfce4util-4.6
@@ -33,20 +31,22 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-ck-launch-session.patch )
-	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
+	XFCONF=(
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-dependency-tracking
+		--disable-xfconf-migration
 		$(use_enable dbus)
 		$(xfconf_use_debug)
 		--with-vendor-info=Gentoo
-		--with-xsession-prefix=${EPREFIX}/usr"
-	DOCS="AUTHORS ChangeLog NEWS README"
+		--with-xsession-prefix="${EPREFIX}"/usr
+		)
+
+	DOCS="AUTHORS ChangeLog NEWS"
 }
 
 src_install() {
 	xfconf_src_install
 
-	# Help is outdated and we install HTML files to $PF
 	rm -f "${ED}"/usr/share/applications/xfhelp4.desktop
 
 	insinto /usr/share/xfce4
