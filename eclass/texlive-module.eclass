@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.55 2010/10/24 16:26:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.56 2010/11/07 19:24:18 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -114,6 +114,9 @@ RELOC_TARGET=texmf-dist
 texlive-module_src_unpack() {
 	if has "${EAPI:-0}" 0 1 2 ; then
 		local i s
+		# Avoid installing world writable files 
+		# Bugs #309997, #310039, #338881
+		umask 022
 		for i in ${A}
 		do
 			s="${DISTDIR%/}/${i}"
