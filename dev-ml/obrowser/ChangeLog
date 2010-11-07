@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/obrowser
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.1 2010/11/07 19:22:39 aballier Exp $
+
+*obrowser-1.1 (07 Nov 2010)
+
+  07 Nov 2010; Alexis Ballier <aballier@gentoo.org> +obrowser-1.1.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me
+
