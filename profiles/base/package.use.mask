@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.174 2010/11/07 14:06:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.175 2010/11/07 14:50:59 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (07 Nov 2010)
+# Masked since there is no release just git version of the library
+<media-video/mplayer-9999 bluray
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (29 Oct 2010)
 # Masked, it's work in progress not supported by upstream.
