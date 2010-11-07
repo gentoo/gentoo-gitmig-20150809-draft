@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.29 2010/11/07 22:44:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.30 2010/11/07 22:52:44 fauli Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -342,7 +342,7 @@ _ruby_apply_patches() {
 _ruby_source_copy() {
 	# Until we actually find a reason not to, we use hardlinks, this
 	# should reduce the amount of disk space that is wasted by this.
-	cp -pr all ${_ruby_implementation} \
+	cp -prl all ${_ruby_implementation} \
 		|| die "Unable to copy ${_ruby_implementation} environment"
 }
 
