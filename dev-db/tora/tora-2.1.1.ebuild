@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.9 2010/06/17 21:29:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.10 2010/11/07 15:51:20 jer Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ IUSE="debug mysql oracle oci8-instant-client postgres"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 
 RDEPEND="${DEPEND}"
 DEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.87 2010/10/29 19:14:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.88 2010/11/07 15:51:20 jer Exp $
+
+  07 Nov 2010; Jeroen Roovers <jer@gentoo.org> tora-2.1.1.ebuild,
+  tora-2.1.2.ebuild:
+  Remove HPPA keywording (bug #239441).
 
   29 Oct 2010; Markos Chandras <hwoarang@gentoo.org> tora-2.1.2.ebuild,
   +files/tora-2.1.2-qt47.patch:
