@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.84 2010/11/07 14:58:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20101107.ebuild,v 1.1 2010/11/07 14:58:26 scarabeus Exp $
 
 EAPI=3
 
