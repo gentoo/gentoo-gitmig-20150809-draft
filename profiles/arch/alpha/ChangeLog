@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.71 2010/10/10 18:39:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.72 2010/11/07 14:11:18 arfrever Exp $
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.use.mask:
+  Mask "declarative" USE flag for dev-python/PyQt4.
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask frei0r

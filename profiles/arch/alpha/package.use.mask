@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.41 2010/08/15 13:56:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.42 2010/11/07 14:11:18 arfrever Exp $
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (07 Nov 2010)
+# x11-libs/qt-declarative is not keyworded.
+dev-python/PyQt4 declarative
 
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch
