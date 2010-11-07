@@ -1,0 +1,10 @@
+# ChangeLog for dev-vcs/gitolite
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.1 2010/11/07 00:42:01 ramereth Exp $
+
+*gitolite-1.5.7 (07 Nov 2010)
+
+  07 Nov 2010; Lance Albertson <ramereth@gentoo.org> +gitolite-1.5.7.ebuild,
+  +metadata.xml:
+  Initial ebuild
+
