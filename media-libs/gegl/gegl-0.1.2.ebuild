@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.2.ebuild,v 1.5 2010/10/02 18:04:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.2.ebuild,v 1.6 2010/11/07 18:53:16 anarchy Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/babl-0.1.2
 		media-gfx/graphviz
 		media-gfx/imagemagick[png] )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	openexr? ( media-libs/openexr )
 	raw? ( >=media-libs/libopenraw-0.0.5 )
 	sdl? ( media-libs/libsdl )
