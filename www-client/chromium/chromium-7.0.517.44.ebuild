@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.517.44.ebuild,v 1.3 2010/11/05 03:11:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-7.0.517.44.ebuild,v 1.4 2010/11/07 18:53:35 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib pax-utils toolchain-funcs
+inherit eutils flag-o-matic multilib pax-utils portability toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -42,7 +42,6 @@ RDEPEND+="
 		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
-	x11-apps/xmessage
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -58,6 +57,19 @@ remove_bundled_lib() {
 
 pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
+
+	# Prevent user problems like bug #299777.
+	if ! grep -q /dev/shm <<< $(get_mounts); then
+		ewarn "You don't have tmpfs mounted at /dev/shm."
+		ewarn "${PN} may fail to start in that configuration."
+		ewarn "Please uncomment the /dev/shm entry in /etc/fstab,"
+		ewarn "and run 'mount /dev/shm'."
+	fi
+	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+		ewarn "/dev/shm does not have correct permissions."
+		ewarn "${PN} may fail to start in that configuration."
+		ewarn "Please run 'chmod 1777 /dev/shm'."
+	fi
 }
 
 src_prepare() {
