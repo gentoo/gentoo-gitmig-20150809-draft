@@ -3,6 +3,13 @@
 # $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.118
 # 2010/09/13 04:26:28 josejx Exp $
 
+*beagle-0.3.9-r4 (08 Nov 2010)
+
+  08 Nov 2010; Pacho Ramos <pacho@gentoo.org> +beagle-0.3.9-r4.ebuild,
+  +files/beagle-0.3.9-mono2.8.patch:
+  Fix building against mono-2.8 (bug #341195 with a patch created by
+  Alexandre Rostovtsev (and with Arun Raghavan approval). Remove .la files.
+
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -beagle-0.3.9-r2.ebuild,
   -files/beagle-0.3.9-firefox-3.5.patch, -files/beagle-0.3.9-sqlite.patch,
   -files/beagle-log-level-warn.patch, metadata.xml:
