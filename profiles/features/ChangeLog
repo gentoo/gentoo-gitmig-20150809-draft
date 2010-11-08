@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.22 2010/09/18 12:14:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.23 2010/11/08 17:55:24 alexxy Exp $
+
+  08 Nov 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  64bit-native/package.mask, 64bit-native/package.use.mask:
+  unmask wimax on 64bit
 
   18 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   64bit-native/package.mask:
