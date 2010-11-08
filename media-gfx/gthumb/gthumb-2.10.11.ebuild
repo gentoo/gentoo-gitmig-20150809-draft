@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.11.ebuild,v 1.7 2010/05/15 17:05:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.10.11.ebuild,v 1.8 2010/11/08 22:27:27 eva Exp $
 
 EAPI=2
 inherit gnome2
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
 	>=gnome-base/gconf-2.6
-	media-libs/jpeg
+	virtual/jpeg:0
 	tiff? ( media-libs/tiff )
 	raw? ( media-libs/libopenraw )
 	x11-libs/libXrender

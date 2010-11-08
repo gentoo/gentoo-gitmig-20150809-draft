@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.0.ebuild,v 1.1 2010/09/28 19:04:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.0.ebuild,v 1.2 2010/11/08 22:27:27 eva Exp $
 
 EAPI="3"
 
@@ -19,8 +19,8 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.20:2
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libunique-1.1.2
-	>=media-libs/jpeg-8:0
 	media-libs/libpng:0
+	virtual/jpeg:0
 	cdr? ( >=app-cdr/brasero-2.28 )
 	exif? ( >=media-gfx/exiv2-0.18 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28 )
@@ -73,5 +73,5 @@ src_install() {
 	gnome2_src_install
 
 	# gthumb does not need *.la files
-	find "${D}" -name "*.la" -delete || die "*.la files removal failed"
+	find "${ED}" -name "*.la" -delete || die "*.la files removal failed"
 }

@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.117 2010/09/28 19:04:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.118 2010/11/08 22:27:27 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gthumb-2.10.11.ebuild,
+  -files/gthumb-2.11.2.1-configure.patch, -gthumb-2.11.5-r1.ebuild,
+  -files/gthumb-2.11.5-configure-exiv2.patch,
+  -files/gthumb-2.11.5-exif-rotation.patch,
+  -files/gthumb-2.11.5-jpeg8-rotation.patch, -gthumb-2.11.6.ebuild,
+  gthumb-2.12.0.ebuild:
+  Allow use of alternate jpeg implementation.
 
 *gthumb-2.12.0 (28 Sep 2010)
 
