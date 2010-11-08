@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/irman-python
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/ChangeLog,v 1.11 2007/02/09 07:38:17 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/ChangeLog,v 1.12 2010/11/08 17:37:50 arfrever Exp $
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  irman-python-0.1.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
