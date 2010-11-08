@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.3.ebuild,v 1.2 2009/12/04 07:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.3.ebuild,v 1.3 2010/11/08 15:13:00 ssuominen Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="sdl"
 
 DEPEND="sys-libs/zlib
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff
 	sdl? ( media-libs/libsdl )"
 

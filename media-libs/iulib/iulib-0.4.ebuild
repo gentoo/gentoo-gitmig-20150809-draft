@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.5 2010/03/21 05:06:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.6 2010/11/08 15:13:00 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE="sdl"
 
 RDEPEND="sys-libs/zlib
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff
 	sdl? (
 		media-libs/libsdl

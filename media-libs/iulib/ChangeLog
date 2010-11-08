@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/iulib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.9 2010/03/21 05:06:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.10 2010/11/08 15:13:00 ssuominen Exp $
+
+  08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> iulib-0.3.ebuild,
+  iulib-0.4.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   21 Mar 2010; Mike Frysinger <vapier@gentoo.org> iulib-0.4.ebuild:
   Do not put scons into RDEPEND per repoman.
