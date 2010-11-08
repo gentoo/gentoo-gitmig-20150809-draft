@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.83 2010/11/03 16:31:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.84 2010/11/08 14:55:25 jmbsvicetto Exp $
+
+*okular-4.4.5-r1 (08 Nov 2010)
+
+  08 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +okular-4.4.5-r1.ebuild, okular-4.5.3.ebuild:
+  Replaced media-libs/jpeg dep with virtual/jpeg as requested in the dev ml.
 
 *okular-4.5.3 (03 Nov 2010)
 
