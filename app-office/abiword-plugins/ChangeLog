@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.80 2010/07/20 15:13:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.81 2010/11/08 22:54:33 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  abiword-plugins-2.4.6.ebuild, abiword-plugins-2.6.8.ebuild:
+  Allow use of alternate jpeg implementation.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> abiword-plugins-2.4.6.ebuild,
   abiword-plugins-2.6.8.ebuild:
