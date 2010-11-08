@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.63 2010/11/08 14:48:15 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.64 2010/11/08 23:29:39 jmbsvicetto Exp $
+
+  08 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libkexiv2-4.4.5-r1.ebuild:
+  Restored amd64 keyword - bug 344689.
 
 *libkexiv2-4.4.5-r1 (08 Nov 2010)
 
