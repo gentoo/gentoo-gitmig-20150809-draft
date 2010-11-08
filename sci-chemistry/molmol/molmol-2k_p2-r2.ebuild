@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.3 2010/10/10 21:26:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.4 2010/11/08 17:14:25 xarthisius Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND="
 	media-libs/mesa[motif]
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff
 	media-libs/libpng
 	sys-libs/zlib
