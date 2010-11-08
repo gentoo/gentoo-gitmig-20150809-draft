@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.3 2010/11/07 19:11:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.4 2010/11/08 23:22:59 eva Exp $
+
+*gdk-pixbuf-2.22.1 (09 Nov 2010)
+
+  09 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gdk-pixbuf-2.22.1.ebuild:
+  Version bump. Implement GIcon interface, fix loader.cache detection on
+  windows, translation updates.
 
   07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> gdk-pixbuf-2.22.0.ebuild:
   Convert media-libs/jpeg to virtual/jpeg
