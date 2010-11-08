@@ -1,8 +1,0 @@
---- a/misc/syntax/Syntax
-+++ b/misc/syntax/Syntax
-@@ -140,5 +140,5 @@
- include spec.syntax
- 
--file ..\*\\.repo$ YUM\sRepo File
-+file ..\*\\.repo$ YUM\sRepo\sFile
- include yum-repo.syntax
