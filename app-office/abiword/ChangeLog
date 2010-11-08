@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.229 2010/10/07 07:42:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.230 2010/11/08 22:47:31 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> abiword-2.8.6.ebuild:
+  Allow use of alternate jpeg implementation.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6.ebuild:
   Fix icon installation (thanks to Faustus for reminding the problem in bug

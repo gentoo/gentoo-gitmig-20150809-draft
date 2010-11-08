@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.11 2010/10/07 07:42:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.12 2010/11/08 22:47:31 eva Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	>=gnome-base/librsvg-2.16
 	>=gnome-extra/libgsf-1.14.15
 	>=media-libs/libpng-1.2
-	media-libs/jpeg:0
+	virtual/jpeg:0
 	>=x11-libs/cairo-1.8[X]
 	>=x11-libs/gtk+-2.14[cups?]
 	gnome? (
