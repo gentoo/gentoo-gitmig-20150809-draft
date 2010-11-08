@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.9 2010/06/17 22:41:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.10 2010/11/08 18:00:51 xarthisius Exp $
 
 EAPI="2"
 
@@ -18,9 +18,9 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gentoo/${P}-openfoam-r173.patch.bz2"
 
 LICENSE="paraview GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="mpi +python doc examples +gui plugins boost streaming cg overview mysql postgres odbc"
+IUSE="boost cg doc examples +gui mpi mysql plugins +python postgres streaming odbc overview"
 RDEPEND="sci-libs/hdf5[mpi=]
 	mpi? ( || (
 				sys-cluster/openmpi
@@ -34,7 +34,7 @@ RDEPEND="sci-libs/hdf5[mpi=]
 	odbc? ( dev-db/unixODBC )
 	dev-libs/libxml2
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff
 	media-video/ffmpeg
 	dev-libs/expat
