@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.10 2010/11/01 14:32:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.11 2010/11/08 07:30:00 ford_prefect Exp $
 
 EAPI="2"
 
@@ -84,7 +84,7 @@ RDEPEND="
 
 	>=app-text/evince-2.30.2
 
-	>=gnome-base/gnome-desktop-2.30.2
+	>=gnome-base/gnome-desktop-2.30.2:2
 	>=gnome-base/gnome-session-2.30.2
 	>=dev-libs/libgweather-2.30.2
 	>=gnome-base/gnome-applets-2.30.0
