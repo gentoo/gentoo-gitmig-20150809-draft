@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.35 2010/11/08 12:24:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.36 2010/11/08 19:52:41 arfrever Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (08 Nov 2010)
 # Tests masked until dev-python/mock is keyworded.
-dev-util/buildbot test
+>=dev-util/buildbot-0.8.1 test
 dev-util/buildbot-slave test
 
 # Raúl Porcel <armin76@gentoo.org> (19 Sep 2010)
