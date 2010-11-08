@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.7 2010/07/22 14:39:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.8 2010/11/08 16:32:38 voyageur Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE="jpeg"
 
 RDEPEND="x11-libs/libXpm
 	x11-libs/libSM
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( virtual/jpeg )"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"

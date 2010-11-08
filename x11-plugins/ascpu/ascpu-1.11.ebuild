@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.11.ebuild,v 1.6 2006/11/27 12:51:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.11.ebuild,v 1.7 2010/11/08 16:30:03 voyageur Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
 
 RDEPEND="x11-libs/libXpm
 	x11-libs/libSM
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( virtual/jpeg )"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"

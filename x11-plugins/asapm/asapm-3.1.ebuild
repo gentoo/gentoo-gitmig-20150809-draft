@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1.ebuild,v 1.4 2006/11/27 13:14:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1.ebuild,v 1.5 2010/11/08 16:29:09 voyageur Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE="jpeg"
 
 RDEPEND="x11-libs/libXpm
 	x11-libs/libSM
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( virtual/jpeg )"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"

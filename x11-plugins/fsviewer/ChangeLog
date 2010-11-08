@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/fsviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.17 2010/06/26 23:42:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.18 2010/11/08 16:34:25 voyageur Exp $
+
+  08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  fsviewer-0.2.5.ebuild:
+  Move to virtual/jpeg
 
 *fsviewer-0.2.6 (26 Jun 2010)
 
