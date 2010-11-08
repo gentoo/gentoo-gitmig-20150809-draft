@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.87 2010/08/20 12:30:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.88 2010/11/08 13:21:25 voyageur Exp $
+
+  08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-gui-0.18.0.ebuild:
+  Move to virtual/jpeg
 
   20 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -gnustep-gui-0.16.0.ebuild, -gnustep-gui-0.16.0-r1.ebuild:

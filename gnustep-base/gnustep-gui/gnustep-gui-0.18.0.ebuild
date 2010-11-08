@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.6 2010/08/13 17:30:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.7 2010/11/08 13:21:25 voyageur Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-base-1.20.0
 	x11-libs/libXt
 	>=media-libs/tiff-3
-	jpeg? ( >=media-libs/jpeg-6b:0 )
+	jpeg? ( virtual/jpeg )
 	gif? ( >=media-libs/giflib-4.1 )
 	png? ( >=media-libs/libpng-1.2 )
 	cups? ( >=net-print/cups-1.1 )
