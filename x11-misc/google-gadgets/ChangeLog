@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.33 2010/10/29 04:06:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.34 2010/11/08 04:29:18 jer Exp $
+
+  07 Nov 2010; Jeroen Roovers <jer@gentoo.org> google-gadgets-0.10.5.ebuild,
+  google-gadgets-0.11.1-r1.ebuild, google-gadgets-0.11.2.ebuild:
+  Remove HPPA keywording (bug #239441).
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org>
   google-gadgets-0.11.1-r1.ebuild, google-gadgets-0.11.2.ebuild:
