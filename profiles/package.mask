@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12178 2010/11/08 06:42:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12179 2010/11/08 09:50:02 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (08 Oct 2010)
+# Broken on newer X setups and public server seems dead.
+# Also the last user of yiff in the tree.  Time to move on.
+# Mask for removal on 20101208
+games-action/xshipwars
+media-libs/yiff
 
 # MATSUU Takuto <matsuu@gentoo.org> (08 Oct 2010)
 # testing mask for development series
