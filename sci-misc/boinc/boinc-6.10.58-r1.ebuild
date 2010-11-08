@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58-r1.ebuild,v 1.2 2010/08/07 16:32:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58-r1.ebuild,v 1.3 2010/11/08 17:52:35 xarthisius Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ RDEPEND="
 	X? (
 		dev-db/sqlite:3
 		media-libs/freeglut
-		media-libs/jpeg
+		virtual/jpeg
 		x11-libs/wxGTK:2.8[X,opengl]
 	)
 "
