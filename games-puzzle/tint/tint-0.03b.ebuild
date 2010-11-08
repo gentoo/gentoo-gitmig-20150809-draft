@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.6 2009/05/31 02:32:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.7 2010/11/08 10:34:40 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -15,6 +16,8 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.4-r1"
+
+PATCHES=( "${FILESDIR}"/${P}-ovflfix.patch )
 
 src_compile() {
 	emake \

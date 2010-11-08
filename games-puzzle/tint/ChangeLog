@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/tint
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.15 2009/05/31 02:32:13 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.16 2010/11/08 10:34:40 tupone Exp $
+
+  08 Nov 2010; Alfredo Tupone <tupone@gentoo.org> tint-0.03b.ebuild,
+  +files/tint-0.03b-ovflfix.patch:
+  Fix overflow. Bug #337233 by flameeyes@gentoo.org
 
   31 May 2009; Tristan Heaven <nyhm@gentoo.org> tint-0.03b.ebuild:
   Fix LICENSE: as-is -> BSD

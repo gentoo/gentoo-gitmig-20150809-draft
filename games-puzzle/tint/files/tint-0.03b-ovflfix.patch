@@ -1,0 +1,20 @@
+--- tint.c.old	2010-11-08 11:15:12.000000000 +0100
++++ tint.c	2010-11-08 11:16:06.000000000 +0100
+@@ -365,7 +365,7 @@
+    FILE *handle;
+    int i,j;
+    score_t scores[NUMSCORES];
+-   char header[strlen (SCORE_HEADER)];
++   char header[strlen(SCORE_HEADER) + 1];
+    if (score == 0) return;	/* No need saving this */
+    for (i = 1; i < NUMSCORES; i++)
+ 	 {
+@@ -418,7 +418,7 @@
+    FILE *handle;
+    int i,j,ch;
+    score_t scores[NUMSCORES];
+-   char header[strlen (SCORE_HEADER)];
++   char header[strlen(SCORE_HEADER) + 1];
+    time_t tmp = 0;
+    if ((handle = fopen (scorefile,"r")) == NULL)
+ 	 {
