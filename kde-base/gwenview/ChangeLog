@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.78 2010/11/03 16:30:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.79 2010/11/08 15:07:51 jmbsvicetto Exp $
+
+*gwenview-4.4.5-r1 (08 Nov 2010)
+
+  08 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +gwenview-4.4.5-r1.ebuild, gwenview-4.5.3.ebuild:
+  Replaced media-libs/jpeg dep with virtual/jpeg as requested in the dev ml.
 
 *gwenview-4.5.3 (03 Nov 2010)
 
