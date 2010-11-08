@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.126 2010/10/24 15:30:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.127 2010/11/08 13:16:52 mduft Exp $
+
+  08 Nov 2010; Markus Duft <mduft@gentoo.org> tcl-8.5.8-r2.ebuild:
+  added ~x86-interix keyword
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> tcl-8.5.8-r1.ebuild:
   Marking tcl-8.5.8-r1 ppc for bug 332415
