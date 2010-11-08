@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.17 2010/10/19 05:59:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.18 2010/11/08 23:03:08 swegener Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -15,14 +17,12 @@ IUSE=""
 RDEPEND=""
 DEPEND=">=sys-apps/sed-4"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e s/strip/true/ Makefile
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
