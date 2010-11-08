@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.7 2010/11/08 10:34:40 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.8 2010/11/08 18:48:17 mr_bones_ Exp $
 
-inherit eutils games
+EAPI=2
+inherit games
 
 MY_P=${P/-/_}
 DESCRIPTION="Tint Is Not Tetris, a ncurses based clone of the original Tetris(tm) game"
