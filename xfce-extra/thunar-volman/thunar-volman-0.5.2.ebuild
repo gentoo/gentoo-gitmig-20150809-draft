@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.5.2.ebuild,v 1.1 2010/11/07 14:20:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.5.2.ebuild,v 1.2 2010/11/08 09:40:40 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -37,4 +37,9 @@ pkg_setup() {
 		)
 
 	DOCS="AUTHORS ChangeLog NEWS README THANKS"
+}
+
+src_prepare() {
+	sed -i -e '/ALL_LINGUAS/s:kk ::' configure || die #344651
+	xfconf_src_prepare
 }

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.57 2010/11/07 14:20:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.58 2010/11/08 09:40:40 ssuominen Exp $
+
+  08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-volman-0.5.2.ebuild:
+  Fix building with LINGUAS="kk" wrt #344651 by Joost Ruis.
 
 *thunar-volman-0.5.2 (07 Nov 2010)
 
