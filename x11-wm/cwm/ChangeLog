@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.4 2010/09/30 12:42:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.5 2010/11/08 01:48:06 xmw Exp $
+
+  08 Nov 2010; Michael Weber <xmw@gentoo.org> -cwm-20100809-r1.ebuild,
+  cwm-20100930.ebuild:
+  Updated HOMEPAGE and switched SRC_URI to Gentoo infra. Dropped old version.
 
 *cwm-20100930 (30 Sep 2010)
 
