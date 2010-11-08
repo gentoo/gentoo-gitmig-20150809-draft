@@ -1,6 +1,10 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.92 2010/08/26 10:14:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.93 2010/11/08 12:38:58 nelchael Exp $
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> dillo-2.2.ebuild,
+  dillo-9999.ebuild:
+  Change dependency: media-libs/jpeg -> virtual/jpeg.
 
   26 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> dillo-2.2.ebuild,
   dillo-9999.ebuild:

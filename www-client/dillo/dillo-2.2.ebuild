@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.9 2010/08/26 10:14:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.2.ebuild,v 1.10 2010/11/08 12:38:58 nelchael Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib
@@ -16,7 +16,7 @@ IUSE="doc +gif ipv6 +jpeg +png ssl"
 
 RDEPEND="x11-libs/fltk:2[-cairo,jpeg=,png=]
 	sys-libs/zlib
-	jpeg? ( media-libs/jpeg:0 )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
