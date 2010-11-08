@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/burgerspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.29 2010/10/10 15:59:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.30 2010/11/08 04:25:01 mr_bones_ Exp $
+
+  08 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  burgerspace-1.9.0.ebuild:
+  fix desktop file
 
   10 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   burgerspace-1.9.0.ebuild:

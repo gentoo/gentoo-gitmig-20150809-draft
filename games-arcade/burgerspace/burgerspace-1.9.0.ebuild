@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.6 2010/10/10 15:59:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.7 2010/11/08 04:25:01 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -25,6 +25,12 @@ src_prepare() {
 		-e "/^desktopentrydir/ s:=.*:=/usr/share/applications:" \
 		-e "/^pixmapdir/ s:=.*:=/usr/share/pixmaps:" \
 		src/Makefile.am \
+		|| die "sed failed"
+	sed -i \
+		-e "/Categories/s:Application;::" \
+		-e "/Icon/s:\..*::" \
+		-e "/Terminal/s:0:false:" \
+		src/burgerspace.desktop.in \
 		|| die "sed failed"
 	eautoreconf
 }
