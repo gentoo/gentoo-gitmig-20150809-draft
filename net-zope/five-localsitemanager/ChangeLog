@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/five-localsitemanager
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-localsitemanager/ChangeLog,v 1.1 2010/11/08 14:16:54 arfrever Exp $
+
+*five-localsitemanager-2.0.4 (08 Nov 2010)
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +five-localsitemanager-2.0.4.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
