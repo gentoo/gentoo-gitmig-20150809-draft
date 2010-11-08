@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8.ebuild,v 1.10 2010/04/30 17:21:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8.ebuild,v 1.11 2010/11/08 18:31:18 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit distutils eutils
 
 DESCRIPTION="A python wrapper for Gnuplot"
@@ -18,18 +22,26 @@ DEPEND="dev-python/numpy"
 RDEPEND="${DEPEND}
 	sci-visualization/gnuplot"
 
+DOCS="ANNOUNCE.txt CREDITS.txt FAQ.txt NEWS.txt TODO.txt"
 PYTHON_MODNAME="Gnuplot"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7-mousesupport.patch
+	distutils_src_prepare
+	epatch "${FILESDIR}/${PN}-1.7-mousesupport.patch"
+	python_convert_shebangs 2 demo.py test.py
 }
 
 src_install() {
 	distutils_src_install
-	dodoc ANNOUNCE.txt CREDITS.txt NEWS.txt TODO.txt FAQ.txt
-	dodir /usr/share/doc/${PF}/examples
-	mv "${ED}"/usr/$(get_libdir)/python*/site-packages/Gnuplot/{test,demo}.py \
-		"${ED}"/usr/share/doc/${PF}/examples || die
+
+	delete_examples() {
+		rm -f "${ED}$(python_get_sitedir)/Gnuplot/"{demo,test}.py
+	}
+	python_execute_function -q delete_examples
+
+	insinto /usr/share/doc/${PF}/examples
+	doins demo.py test.py
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}/html
 		doins -r doc/Gnuplot/* || die "doc install failed"
