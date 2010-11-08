@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.15 2010/08/08 18:58:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.16 2010/11/08 13:43:13 voyageur Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -18,7 +18,7 @@ IUSE="alsa debug dbus gif gtk jpeg mmx nls png svg tiff xinerama"
 RDEPEND="media-libs/freetype
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	gif?  ( >=media-libs/giflib-4.1.0 )
 	gtk? ( x11-libs/gtk+:2 )
 	png? ( >=media-libs/libpng-1.2.5 )
