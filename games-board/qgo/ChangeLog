@@ -1,6 +1,10 @@
 # ChangeLog for games-board/qgo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.42 2010/06/01 08:13:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.43 2010/11/08 13:50:09 tupone Exp $
+
+  08 Nov 2010; Tupone Alfredo <tupone@gentoo.org>
+  qgo-1.5.4_p20100322.ebuild, +files/qgo-1.5.4_p20100322-qt47.patch:
+  Fix build with qt-4.7 Bug #338502 by flameeyes@gentoo.org
 
   01 Jun 2010; Tupone Alfredo <tupone@gentoo.org>
   qgo-1.5.4_p20100322.ebuild, +files/qgo-1.5.4_p20100322-gcc45.patch:

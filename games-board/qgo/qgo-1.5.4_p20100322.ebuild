@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.6 2010/09/03 17:22:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.7 2010/11/08 13:50:09 tupone Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/alsa-lib
+RDEPEND="media-libs/alsa-lib
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-test:4"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -30,7 +31,8 @@ src_prepare() {
 		-e "/TRANSLATIONS_PATH_PREFIX/s:/usr/share:${GAMES_DATADIR}:" \
 		src/defines.h || die
 
-	epatch "${FILESDIR}"/${P}-gcc45.patch
+	epatch "${FILESDIR}"/${P}-gcc45.patch \
+		"${FILESDIR}"/${P}-qt47.patch
 }
 
 src_configure() {
