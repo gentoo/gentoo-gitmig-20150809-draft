@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.3.ebuild,v 1.1 2010/11/07 06:09:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.3.ebuild,v 1.2 2010/11/08 20:23:38 graaff Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ DEPEND="${DEPEND}
 	ruby_targets_jruby? ( >=virtual/jdk-1.5 )"
 
 ruby_add_bdepend "dev-ruby/rake
+	dev-ruby/rake-compiler
 	test? ( virtual/ruby-test-unit )"
 
 each_ruby_compile() {

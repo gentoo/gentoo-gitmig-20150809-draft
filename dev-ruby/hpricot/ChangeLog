@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.25 2010/11/07 06:09:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.26 2010/11/08 20:23:38 graaff Exp $
+
+  08 Nov 2010; Hans de Graaff <graaff@gentoo.org> hpricot-0.8.3.ebuild:
+  Add missing dependency on dev-ruby/rake-compiler, fixing bug 344637.
 
 *hpricot-0.8.3 (07 Nov 2010)
 
