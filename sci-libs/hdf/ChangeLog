@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.18 2010/03/26 01:11:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.19 2010/11/08 17:38:23 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> hdf-4.2_p4.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   26 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> hdf-4.2_p4.ebuild:
   Fixing headers to avoid conflicts with netcdf, thanks Kacper Kowalik, bug

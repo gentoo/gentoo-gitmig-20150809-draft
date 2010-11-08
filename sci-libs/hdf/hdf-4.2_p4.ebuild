@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.6 2010/03/26 01:11:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.7 2010/11/08 17:38:23 xarthisius Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs autotools flag-o-matic
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="fortran netcdf szip"
 
 RDEPEND="sys-libs/zlib
-	media-libs/jpeg
+	virtual/jpeg
 	szip? ( >=sci-libs/szip-2 )"
 
 DEPEND="${RDEPEND}"

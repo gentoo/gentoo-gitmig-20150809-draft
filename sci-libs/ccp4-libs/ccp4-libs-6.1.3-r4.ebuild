@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r4.ebuild,v 1.2 2010/10/20 13:33:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r4.ebuild,v 1.3 2010/11/08 17:33:46 xarthisius Exp $
 
 EAPI="3"
 
@@ -47,7 +47,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	media-libs/jpeg:0
+	virtual/jpeg
 	app-shells/tcsh
 	!<sci-chemistry/ccp4-6.1.3
 	sci-libs/cbflib

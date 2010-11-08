@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.14 2010/10/20 13:33:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.15 2010/11/08 17:33:46 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  ccp4-libs-6.1.3-r3.ebuild, ccp4-libs-6.1.3-r4.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   20 Oct 2010; Jeremy Olexa <darkside@gentoo.org> ccp4-libs-6.1.3-r4.ebuild:
   Fix for Gentoo Prefix, bug 341811 by Johan Hattne
