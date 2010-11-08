@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.3.1-r1.ebuild,v 1.1 2010/08/21 00:33:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.3.1-r1.ebuild,v 1.2 2010/11/08 07:30:59 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,8 +36,7 @@ src_compile() {
 		--with-install-dir="${D}"/usr \
 		--with-doc-dir="${D}"/usr/share/doc/${PF} \
 		--with-html-dir="${D}"/usr/share/doc/${PF}/html \
-		--with-examples-dir="${D}"/usr/share/doc/${PF}/examples \
-		|| die "econf failed"
+		--with-examples-dir="${D}"/usr/share/doc/${PF}/examples
 
 	emake || die "emake failed"
 }
@@ -53,5 +52,5 @@ src_install() {
 	fi
 
 	cd "${S}"/..
-	dodoc ChangeLog NEWS PROBLEMS README VERSION
+	dodoc ChangeLog NEWS PROBLEMS README VERSION || die
 }
