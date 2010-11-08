@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.65 2009/07/22 18:20:01 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.66 2010/11/08 22:43:29 swegener Exp $
+
+  08 Nov 2010; Sven Wegener <swegener@gentoo.org> pdns-2.9.22-r1.ebuild:
+  Replace dev-cpp/libpqpp dependency with native postgresql client
+  libraries, bug #343527.
 
   22 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> pdns-2.9.22-r1.ebuild:
   amd64/x86 stable
