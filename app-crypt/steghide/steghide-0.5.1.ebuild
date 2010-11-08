@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.14 2010/04/01 21:33:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.15 2010/11/08 19:40:59 c1pher Exp $
 
 EAPI="3"
 inherit autotools eutils
@@ -16,8 +16,9 @@ IUSE="debug"
 
 DEPEND=">=app-crypt/mhash-0.8.18-r1
 	>=dev-libs/libmcrypt-2.5.7
-	media-libs/jpeg:0
-	>=sys-libs/zlib-1.1.4-r2"
+	>=sys-libs/zlib-1.1.4-r2
+	virtual/jpeg"
+RDEPEND="${DEPEND}"
 
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-gcc34.patch \

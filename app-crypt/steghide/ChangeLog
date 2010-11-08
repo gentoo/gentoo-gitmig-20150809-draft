@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.19 2010/04/01 21:33:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.20 2010/11/08 19:40:59 c1pher Exp $
+
+  08 Nov 2010; Dane Smith <c1pher@gentoo.org> steghide-0.5.1.ebuild,
+  metadata.xml:
+  Switched to virtual/jpeg wrt bug 327487. Added myself as a maintainer and
+  added the packages to the crypto herd.
 
   01 Apr 2010; Jonathan Callen <abcd@gentoo.org> steghide-0.5.1.ebuild:
   Bump to EAPI=3, add prefix keywords
