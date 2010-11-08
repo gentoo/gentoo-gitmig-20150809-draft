@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.198 2010/09/30 19:29:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.199 2010/11/08 00:47:30 fauli Exp $
+
+*erlang-14.2 (08 Nov 2010)
+
+  08 Nov 2010; Christian Faulhammer <fauli@gentoo.org> +erlang-14.2.ebuild,
+  +files/epmd.init:
+  version bump to fix 325073, some hints by Boris Faure <billiob AT gmail
+  DOT com>; this also fixes 263129 for LDFLAGS (again, reported
+  upstream...again) and bug 334979 which provides an init script for epmd.
+  This release seems to incorporate an upstream fix for bug 338664
 
   30 Sep 2010; Fabian Groffen <grobian@gentoo.org> erlang-13.2.4.ebuild,
   erlang-14.1.ebuild:
