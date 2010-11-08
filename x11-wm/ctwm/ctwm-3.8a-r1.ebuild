@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.8a-r1.ebuild,v 1.1 2010/10/22 16:13:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.8a-r1.ebuild,v 1.2 2010/11/08 18:47:31 xarthisius Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXt"
 DEPEND="${RDEPEND}
 	app-text/rman
-	media-libs/jpeg
+	virtual/jpeg
 	x11-misc/imake
 	x11-proto/xextproto
 	x11-proto/xproto"

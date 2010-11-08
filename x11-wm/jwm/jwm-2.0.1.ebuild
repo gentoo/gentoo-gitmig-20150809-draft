@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.8 2010/07/06 15:24:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.9 2010/11/08 18:48:32 xarthisius Exp $
 
 EAPI=3
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="xpm? ( x11-libs/libXpm )
 	x11-libs/libXdmcp
 	truetype? ( x11-libs/libXft )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	bidi? ( dev-libs/fribidi )
 	dev-libs/expat"
 DEPEND="${RDEPEND}

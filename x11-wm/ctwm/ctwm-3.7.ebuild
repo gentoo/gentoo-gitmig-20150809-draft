@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.10 2009/08/03 10:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.11 2010/11/08 18:47:31 xarthisius Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXt"
 DEPEND="${RDEPEND}
 	app-text/rman
-	media-libs/jpeg
+	virtual/jpeg
 	x11-misc/imake
 	x11-proto/xextproto
 	x11-proto/xproto"

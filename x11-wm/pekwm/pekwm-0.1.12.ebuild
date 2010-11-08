@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.12.ebuild,v 1.2 2010/07/04 08:46:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.12.ebuild,v 1.3 2010/11/08 18:49:50 xarthisius Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug truetype xinerama"
 
-CDEPEND="media-libs/jpeg:0
+CDEPEND="virtual/jpeg
 	media-libs/libpng
 	x11-libs/libXpm
 	x11-libs/libXrandr

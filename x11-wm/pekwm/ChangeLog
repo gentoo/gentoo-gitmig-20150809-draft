@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.56 2010/07/08 18:14:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.57 2010/11/08 18:49:50 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> pekwm-0.1.11.ebuild,
+  pekwm-0.1.12.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   08 Jul 2010; Raúl Porcel <armin76@gentoo.org> pekwm-0.1.11.ebuild:
   sparc stable wrt #319551
