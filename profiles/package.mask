@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12182 2010/11/08 18:15:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12183 2010/11/08 19:15:56 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -605,10 +605,6 @@ dev-dotnet/ant-dotnet
 #
 # Removal on 2010-12-03
 dev-util/autotoolset
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (02 Oct 2010)
-# Included in >=dev-libs/Ice-3.3. Masked for deletion in 30 days.
-dev-python/IcePy
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (02 Oct 2010)
 #  on behalf of QA team
