@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/amanith
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.8 2009/12/25 18:14:57 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.9 2010/11/08 23:13:02 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> amanith-0.3-r2.ebuild:
+  change jpeg dep to virtual/jpeg
 
   25 Dec 2009; Ben de Groot <yngwin@gentoo.org> amanith-0.3-r2.ebuild:
   Remove deprecated dependency on x11-libs/qt

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.5 2009/12/25 18:14:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.6 2010/11/08 23:13:02 maekke Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs qt4
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples jpeg opengl png truetype"
 
 DEPEND="
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	opengl? ( media-libs/glew )
 	png? ( >=media-libs/libpng-1.2.10 )
 	truetype? ( >=media-libs/freetype-2.2.1 )

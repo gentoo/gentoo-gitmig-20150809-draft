@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.29 2010/10/10 18:42:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.30 2010/11/08 23:18:37 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org>
+  openinventor-2.1.5.10-r3.ebuild:
+  change jpeg dep to virtual/jpeg
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org>
   openinventor-2.1.5.10-r3.ebuild:

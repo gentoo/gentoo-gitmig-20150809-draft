@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.10 2010/08/06 17:30:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.11 2010/11/08 23:20:19 maekke Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -15,8 +15,8 @@ KEYWORDS="alpha amd64 ppc x86"
 IUSE="linguas_ja static-libs"
 
 RDEPEND="media-libs/libpng
-	media-libs/jpeg
-	media-libs/tiff"
+	media-libs/tiff
+	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
 src_configure() {

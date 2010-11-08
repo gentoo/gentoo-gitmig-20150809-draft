@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.38 2010/05/24 16:05:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.39 2010/11/08 23:17:00 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> libsvg-0.1.4-r1.ebuild:
+  change jpeg dep to virtual/jpeg
 
 *libsvg-0.1.4-r1 (24 May 2010)
 
