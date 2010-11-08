@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpano13
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.22 2010/09/21 05:55:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.23 2010/11/08 22:13:38 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> libpano13-2.9.14.ebuild,
+  libpano13-2.9.17.ebuild:
+  change jpeg dep to virtual/jpeg
 
 *libpano13-2.9.17 (21 Sep 2010)
 
