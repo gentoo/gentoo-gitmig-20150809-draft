@@ -1,0 +1,114 @@
+From 6435becb440cd66098adf9424f99a5099935bbea Mon Sep 17 00:00:00 2001
+From: Paul Donohue <wimax@PaulSD.com>
+Date: Tue, 5 Oct 2010 11:38:52 -0700
+Subject: [PATCH] wimax-network-service: 64-bit fixes
+
+Correct assorted 64-bit issues.
+
+Signed-off-by: Paul Donohue <wimax@PaulSD.com>
+---
+ .../Common/L4Common/SourceControl/BitmanCommon.h   |    4 ++++
+ .../Common/L4Common/SourceControl/CommonTypes.h    |    2 ++
+ .../OSAgnostic/Common/L5Common/L5CommonUtils.c     |    2 +-
+ .../Product/AppSrvInfra/L5SocketsDispatcher.c      |    7 ++++---
+ .../Linux/OSAL/Primitives/wimax_osal_basictypes.h  |    3 ++-
+ 5 files changed, 13 insertions(+), 5 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/Common/L4Common/SourceControl/BitmanCommon.h b/InfraStack/OSAgnostic/Common/L4Common/SourceControl/BitmanCommon.h
+index bdb48dc..874df35 100644
+--- a/InfraStack/OSAgnostic/Common/L4Common/SourceControl/BitmanCommon.h
++++ b/InfraStack/OSAgnostic/Common/L4Common/SourceControl/BitmanCommon.h
+@@ -67,6 +67,10 @@
+ #define MASK_1 (0xFFFFFFFFFFFFFFFF)
+ #define MASK_2 (0xFFFFFFFFFFFFFFFE)
+ #define MASK_4 (0xFFFFFFFFFFFFFFFC)
++#elif __x86_64__
++#define MASK_1 (0xFFFFFFFFFFFFFFFF)
++#define MASK_2 (0xFFFFFFFFFFFFFFFE)
++#define MASK_4 (0xFFFFFFFFFFFFFFFC)
+ #else
+ #define MASK_1 (0xFFFFFFFF)
+ #define MASK_2 (0xFFFFFFFE)
+diff --git a/InfraStack/OSAgnostic/Common/L4Common/SourceControl/CommonTypes.h b/InfraStack/OSAgnostic/Common/L4Common/SourceControl/CommonTypes.h
+index b410c38..f8aba19 100644
+--- a/InfraStack/OSAgnostic/Common/L4Common/SourceControl/CommonTypes.h
++++ b/InfraStack/OSAgnostic/Common/L4Common/SourceControl/CommonTypes.h
+@@ -91,6 +91,8 @@ typedef const char*	PCSTR;
+ /// when you need to hold both a pointer and a number
+ #ifdef WIN64
+ typedef UINT64 POINTER_AND_UINT;
++#elif __x86_64__
++typedef UINT64 POINTER_AND_UINT;
+ #else
+ typedef UINT POINTER_AND_UINT;
+ #endif
+diff --git a/InfraStack/OSAgnostic/Common/L5Common/L5CommonUtils.c b/InfraStack/OSAgnostic/Common/L5Common/L5CommonUtils.c
+index 840a89c..229a2e1 100644
+--- a/InfraStack/OSAgnostic/Common/L5Common/L5CommonUtils.c
++++ b/InfraStack/OSAgnostic/Common/L5Common/L5CommonUtils.c
+@@ -182,7 +182,7 @@ L5_RESULT L5_COMMON_UTILS_SendControlMessage(
+ 
+ 	result = l5_common_utils_ActuallySendMessage( Socket, pMessage );
+ 
+-	TRACE(TR_MOD_SERVICE, TR_SEV_NOTICE, "Result of ActuallySendMessage is %d %d", result);
++	TRACE(TR_MOD_SERVICE, TR_SEV_NOTICE, "Result of ActuallySendMessage is %d", result);
+ 
+ 	return result;
+ }
+diff --git a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
+index aa3a58c..33618cc 100644
+--- a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
++++ b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
+@@ -61,7 +61,8 @@ typedef struct
+ 	L5_CONNECTION L5Conn;			// Can be NULL before handshake
+ 
+ 	// Is this an active slot?
+-	BOOL bActive;
++	// Updated using OSAL_atomic_exchange, so this must be a LONG not a BOOL
++	LONG bActive;
+ 
+ 	// Connections from both sides
+ 	SOCKETS_CLIENT_ID Socket;
+@@ -702,7 +703,7 @@ void l5_sockets_dispatcher_HandleNewConnection( SOCKETS_CLIENT_ID Socket, void**
+ 	// XXX SEH error handling
+ 	OSAL_init_critical_section( &(pConn->csSendReceive) );
+ 	OSAL_init_critical_section( &(pConn->csHandlingRequest) );
+-	OSAL_atomic_exchange( (LPLONG)&(pConn->bActive), TRUE );
++	OSAL_atomic_exchange( &(pConn->bActive), TRUE );
+ 
+ 	*context = pConn;
+ 
+@@ -1034,7 +1035,7 @@ void l5_sockets_dispatcher_DisconnectClient( tL5SocketsDispatcherConnection *pCo
+ 			L5_DISPATCHER_Disconnect( pConn->L5Conn );
+ 		}
+ 
+-		OSAL_atomic_exchange( (LPLONG)&(pConn->bActive), FALSE );
++		OSAL_atomic_exchange( &(pConn->bActive), FALSE );
+ 
+ 		OSAL_exit_critical_section( &(pConn->csHandlingRequest) );
+ 		OSAL_delete_critical_section(&pConn->csSendReceive);
+diff --git a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_basictypes.h b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_basictypes.h
+index 1085c4b..f13fade 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_basictypes.h
++++ b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_basictypes.h
+@@ -39,6 +39,7 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <sys/stat.h>
++#include <pthread.h>
+ 
+ #if 0
+ #include <sys/socket.h>
+@@ -90,7 +91,7 @@ typedef void* OSAL_critical_section;
+ 
+ typedef int pid_t;
+ 
+-typedef int OSAL_thread_t;
++typedef pthread_t OSAL_thread_t;
+ 
+ typedef void * OSAL_event_t;
+ 
+-- 
+1.7.3.1
+
+

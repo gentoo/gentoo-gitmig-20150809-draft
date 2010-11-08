@@ -1,0 +1,90 @@
+From 3bf826a20047b1d5071369ec0b8bdbc4efe30a22 Mon Sep 17 00:00:00 2001
+From: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+Date: Tue, 5 Oct 2010 15:55:33 -0700
+Subject: [PATCH] Fix pthread_mutex_unlock duplicate call in OSALTrace()
+
+Fix pthread_mutex_unlock duplicate call in OSALTrace(), i.e. second
+pthread_mutex_unlock() called against already unlocked mutex. glibc
+tolerant to this inconsistency, but uClibc not.
+
+Signed-off-by: Leonid Lisovskiy <lly.dev@gmail.com>
+Signed-off-by: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+---
+ .../Linux/OSAL/Primitives/wimax_osal_trace.c       |   24 ++++++++-----------
+ 1 files changed, 10 insertions(+), 14 deletions(-)
+
+diff --git a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
+index 6ced165..cbdd24f 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
++++ b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
+@@ -53,7 +53,7 @@ int g_iloglevel = 2;
+ int g_iloglevelreadflag = 0;
+ 
+ // to avoid multi tread environment to log the thread
+-pthread_mutex_t g_mutex = PTHREAD_MUTEX_INITIALIZER;
++static pthread_mutex_t g_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 
+ /*
+  *
+@@ -97,23 +97,19 @@ pthread_mutex_t g_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 
+ void OSALTrace(char *szformat, ...)
+ {
+-	time_t currTime;
+-        struct tm timeinfo;
+-
+ 	// log type should be 0 to 4 default value will assign info
+ 	if (g_OsalTraceInfo.loglevel > g_iloglevel
+ 	    || g_OsalTraceInfo.loglevel < 0) {
+-		// release the lock if get any errors
+-		pthread_mutex_unlock(&g_mutex);
+-		return;
++		goto out;
+ 	}
+ 	// if argument path  null....
+ 	if (szformat == NULL) {
+-		// release the lock if get any errors
+-		pthread_mutex_unlock(&g_mutex);
+-		return;
++		goto out;
+ 	}
+ 
++	time_t currTime;
++        struct tm timeinfo;
++
+ 	va_list args;
+ 	static char Buffer[EGIHT_X_BUFFER] = { 0 };
+ 	static char outBuffer[EGIHT_X_BUFFER] = { 0 };
+@@ -137,6 +133,10 @@ void OSALTrace(char *szformat, ...)
+ 	sprintf(outBuffer, "%s\n", Buffer);
+ 
+ 	osallog(outBuffer, 1);
++
++out:
++	// release the lock once done
++	pthread_mutex_unlock(&g_mutex);
+ }
+ 
+ /*
+@@ -167,8 +167,6 @@ void osallog(char *ch, int flush)
+             log = fopen(OSALTRACE_FILE, "wt");
+ 		if (!log) {
+ 			syslog(LOG_ERR, "wimaxd[osal] - can not open logfile (%s) for writing.\n", OSALTRACE_FILE);
+-			// release the lock if get any errors
+-			pthread_mutex_unlock(&g_mutex);
+ 			return;	// bail out if we can't log
+ 		}
+ 	}
+@@ -182,8 +180,6 @@ void osallog(char *ch, int flush)
+ #ifdef OSAL_CONSOLE
+ 	printf(ch);
+ #endif
+-	// release the lock once done with log
+-	pthread_mutex_unlock(&g_mutex);
+ 
+ 	// fclose(log);
+ }
+-- 
+1.7.3.1
+
+

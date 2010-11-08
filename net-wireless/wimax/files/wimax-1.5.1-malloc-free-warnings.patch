@@ -1,0 +1,118 @@
+From 763bfcc760083c2f2731f97578e053a945d5e19d Mon Sep 17 00:00:00 2001
+From: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+Date: Tue, 5 Oct 2010 15:58:06 -0700
+Subject: [PATCH] Fix a lot of warnings about undefined malloc/free
+
+Signed-off-by: Leonid Lisovskiy <lly.dev@gmail.com>
+Signed-off-by: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+---
+ .../OSAgnostic/Common/CommonServices/Messenger.c   |    1 +
+ .../OSAgnostic/Common/CommonServices/Queue.c       |    1 +
+ .../Common/CommonServices/VersionHandshake.c       |    1 +
+ .../OSAgnostic/Common/L5Common/EventSubscribers.c  |    1 +
+ .../Common/L5Common/IndicatorsSubscribers.c        |    1 +
+ .../Common/WrappersCommon/WrappersUtils.c          |    1 +
+ .../OSAgnostic/Product/AppSrvInfra/L4MsgProxy.c    |    1 +
+ .../OSAgnostic/Product/AppSrvInfra/L5Dispatcher.c  |    1 +
+ 8 files changed, 8 insertions(+), 0 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/Common/CommonServices/Messenger.c b/InfraStack/OSAgnostic/Common/CommonServices/Messenger.c
+index 54c920e..20168bb 100644
+--- a/InfraStack/OSAgnostic/Common/CommonServices/Messenger.c
++++ b/InfraStack/OSAgnostic/Common/CommonServices/Messenger.c
+@@ -29,6 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ 
+ ***************************************************************************/
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "wimax_osal_primitives.h"
+ 
+ #include "Messenger.h"
+diff --git a/InfraStack/OSAgnostic/Common/CommonServices/Queue.c b/InfraStack/OSAgnostic/Common/CommonServices/Queue.c
+index b5f27f1..5323001 100644
+--- a/InfraStack/OSAgnostic/Common/CommonServices/Queue.c
++++ b/InfraStack/OSAgnostic/Common/CommonServices/Queue.c
+@@ -29,6 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ 
+ ***************************************************************************/
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "wimax_osal_primitives.h"
+ #include "Queue.h"
+ #include "CommonServices.h"
+diff --git a/InfraStack/OSAgnostic/Common/CommonServices/VersionHandshake.c b/InfraStack/OSAgnostic/Common/CommonServices/VersionHandshake.c
+index bc53cf9..1c49cea 100644
+--- a/InfraStack/OSAgnostic/Common/CommonServices/VersionHandshake.c
++++ b/InfraStack/OSAgnostic/Common/CommonServices/VersionHandshake.c
+@@ -30,6 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ ***************************************************************************/
+ // Project
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "PipeHandlerInternal.h"
+ #include "VersionUtils.h"
+ #include "L5OpCodes.h"	
+diff --git a/InfraStack/OSAgnostic/Common/L5Common/EventSubscribers.c b/InfraStack/OSAgnostic/Common/L5Common/EventSubscribers.c
+index 9262520..d6fa160 100644
+--- a/InfraStack/OSAgnostic/Common/L5Common/EventSubscribers.c
++++ b/InfraStack/OSAgnostic/Common/L5Common/EventSubscribers.c
+@@ -29,6 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ 
+ ***************************************************************************/
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "EventSubscribers.h"
+ 
+ #include "CommonServices.h"
+diff --git a/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c b/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
+index 53559af..97e7b8e 100644
+--- a/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
++++ b/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
+@@ -29,6 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ 
+ ***************************************************************************/
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "IndicatorsSubscribers.h"
+ 
+ #include "CommonServices.h"
+diff --git a/InfraStack/OSAgnostic/Common/WrappersCommon/WrappersUtils.c b/InfraStack/OSAgnostic/Common/WrappersCommon/WrappersUtils.c
+index c0a40e3..6df4dcd 100644
+--- a/InfraStack/OSAgnostic/Common/WrappersCommon/WrappersUtils.c
++++ b/InfraStack/OSAgnostic/Common/WrappersCommon/WrappersUtils.c
+@@ -30,6 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ ***************************************************************************/
+ #include "wimax_osal_primitives.h"
+ #include <unistd.h>
++#include <stdlib.h>
+ #include "Services_Ctrl.h"
+ #include "WrappersUtils.h"
+ #include "WrappersCommon.h"
+diff --git a/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.c b/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.c
+index 2ca1915..cfd965c 100644
+--- a/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.c
++++ b/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.c
+@@ -30,6 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ ***************************************************************************/
+ //#pragma warning(disable : 4201) // warning C4201: nonstandard extension used : nameless struct/union
+ #include <unistd.h>
++#include <stdlib.h>
+ 
+ #include "Services_Ctrl.h"
+ #include "L5Common.h"
+diff --git a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5Dispatcher.c b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5Dispatcher.c
+index acf6e58..8ce4c9a 100644
+--- a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5Dispatcher.c
++++ b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5Dispatcher.c
+@@ -32,6 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ // OSAL
+ #include "wimax_osal_primitives.h"
+ #include <unistd.h>
++#include <stdlib.h>
+ 
+ // Project
+ #include "L5Dispatcher.h"
+-- 
+1.7.3.1
+
+

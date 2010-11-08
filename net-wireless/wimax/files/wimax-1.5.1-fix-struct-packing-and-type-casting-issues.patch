@@ -1,0 +1,430 @@
+From: Paul Donohue <wimax@PaulSD.com>
+Date: Tue, 5 Oct 2010 20:40:55 +0000 (-0400)
+Subject: cleanup: fix struct packing and type casting issues
+X-Git-Url: http://git.kernel.org/?p=linux%2Fnetworking%2Fwimax%2Fwimax-network-service.git;a=commitdiff_plain;h=bb496da3c393e415ae85917d66e3bf0610303c11
+
+cleanup: fix struct packing and type casting issues
+
+cleanup: fix struct packing and type casting issues
+
+Signed-off-by: Paul Donohue <wimax@PaulSD.com>
+---
+
+diff --git a/InfraStack/OSAgnostic/Common/CommonServices/VersionUtils.h b/InfraStack/OSAgnostic/Common/CommonServices/VersionUtils.h
+index 2b881eb..526f8f4 100644
+--- a/InfraStack/OSAgnostic/Common/CommonServices/VersionUtils.h
++++ b/InfraStack/OSAgnostic/Common/CommonServices/VersionUtils.h
+@@ -51,6 +51,7 @@ typedef struct _wmx_Version_t
+ 	UINT32	revision;
+ 	UINT32	branch;
+ } wmx_Version_t, *wmx_pVersion_t;
++#pragma pack( pop )
+ 
+ typedef char* wmx_ModuleName_t;
+ typedef char* wmx_pVersionStr_t;
+@@ -62,6 +63,7 @@ typedef struct _wmx_VersionEntry_t
+ 	wmx_ModuleName_t moduleName;
+ 	wmx_Version_t version;
+ } wmx_VersionEntry_t, *wmx_pVersionEntry_t;
++#pragma pack( pop )
+ 
+ 
+ BOOL VersionUtils_Init();
+@@ -73,4 +75,4 @@ EXPORT void GetFullVersionString(char *str, wmx_Version_t version);
+ EXTERN_C EXPORT VERSION_RESULT ValidateVersion(wmx_ModuleName_t moduleName, wmx_Version_t actualVersion, wmx_Version_t expectedVersion);
+ 
+ 
+-#endif // _VERSION_UTILS_H
+\ No newline at end of file
++#endif // _VERSION_UTILS_H
+diff --git a/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c b/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
+index 41bb044..53559af 100644
+--- a/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
++++ b/InfraStack/OSAgnostic/Common/L5Common/IndicatorsSubscribers.c
+@@ -153,7 +153,7 @@ EXPORT void SendIndicationToSubscribers( UINT32 internalRequestID, void *_buffer
+ 	SendIndData *buffer = _buffer;
+ 	ListItem* handle;
+ 	L5_TARGET_ID targetID;
+-	ULONG_PTR data;
++	L5_TARGET_ID data;
+ 	L5_RESULT res;
+ 	IndicatorSubscribers *indSubscribers;
+ 	List tempList;
+@@ -174,12 +174,12 @@ EXPORT void SendIndicationToSubscribers( UINT32 internalRequestID, void *_buffer
+ 		handle = CreateIterator(&(indSubscribers->subscribersList));
+ //		handle = Iterator_GetNext(&(indSubscribers->subscribersList), handle, (void**)&targetID);
+ 		handle = Iterator_GetNext(&(indSubscribers->subscribersList), handle, (void**)(&data));
+-		targetID = (int) data; 
++		targetID = data;
+ 		while (handle != NULL)
+ 		{
+ 			List_AddItem(&tempList, (void *)targetID);
+ 			handle = Iterator_GetNext(&(indSubscribers->subscribersList), handle, (void**)(&data));
+-    		targetID = (int)data; ////
++    		targetID = data; ////
+ 
+ 	//		handle = Iterator_GetNext(&(indSubscribers->subscribersList), handle, (void**)&targetID);
+ 		}
+@@ -189,7 +189,7 @@ EXPORT void SendIndicationToSubscribers( UINT32 internalRequestID, void *_buffer
+ 		//iterate the temp list and send the targets indication:
+ 		handle = CreateIterator(&tempList);
+ 		handle = Iterator_GetNext(&tempList, handle, (void**)(&data));
+-    	targetID = (int) data;
++    	targetID = data;
+ 
+ 	//	handle = Iterator_GetNext(&tempList, handle, (void**)&targetID);
+ 		while (handle != NULL)
+@@ -219,7 +219,7 @@ EXPORT void SendIndicationToSubscribers( UINT32 internalRequestID, void *_buffer
+ 	//		handle = Iterator_GetNext(&tempList, handle, (void**)&targetID);
+ 
+ 			handle = Iterator_GetNext(&tempList, handle, (void**)(&data));
+-    		targetID = (int) data;
++    		targetID = data;
+ 
+ 
+ 			// TODO - XXX - check L5_COMMON_UTILS_IsTargetNotExist
+diff --git a/InfraStack/OSAgnostic/Common/L5Common/L5Common.h b/InfraStack/OSAgnostic/Common/L5Common/L5Common.h
+index 037ccd5..6050052 100644
+--- a/InfraStack/OSAgnostic/Common/L5Common/L5Common.h
++++ b/InfraStack/OSAgnostic/Common/L5Common/L5Common.h
+@@ -282,5 +282,6 @@ typedef struct _tL5DispatcherFunctions
+ extern tL5DispatcherFunctions *GetL5Funcs();
+ extern tUtilityFunctions *GetUtilsFuncs();
+ 
++#pragma pack(pop)
+ 
+ #endif
+diff --git a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
+index 33618cc..a7346a3 100644
+--- a/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
++++ b/InfraStack/OSAgnostic/Product/AppSrvInfra/L5SocketsDispatcher.c
+@@ -61,7 +61,7 @@ typedef struct
+ 	L5_CONNECTION L5Conn;			// Can be NULL before handshake
+ 
+ 	// Is this an active slot?
+-	// Updated using OSAL_atomic_exchange, so this must be a LONG not a BOOL
++	// Updated using OSAL_atomic_exchange(), so this must be a LONG not a BOOL
+ 	LONG bActive;
+ 
+ 	// Connections from both sides
+diff --git a/InfraStack/OSAgnostic/WiMax/Agents/NDnS/APDO/NDnSAgent_APDO_CBs.c b/InfraStack/OSAgnostic/WiMax/Agents/NDnS/APDO/NDnSAgent_APDO_CBs.c
+index 5e9fcbc..75d5786 100644
+--- a/InfraStack/OSAgnostic/WiMax/Agents/NDnS/APDO/NDnSAgent_APDO_CBs.c
++++ b/InfraStack/OSAgnostic/WiMax/Agents/NDnS/APDO/NDnSAgent_APDO_CBs.c
+@@ -487,8 +487,8 @@ void NDnSAgent_HandleApdoLinkStatus(wmx_ApdoLinkStatus_t linkStatus)
+ 	lastConnectedStatus = Ndns_GetLastConnectedState();	
+ 
+ 	// Check if the link status has changed
+-	if (linkStatus == APDO_linkUp && lastConnectedStatus == FALSE ||
+-		linkStatus == APDO_linkDown && lastConnectedStatus == TRUE)
++	if ((linkStatus == APDO_linkUp && lastConnectedStatus == FALSE) ||
++		(linkStatus == APDO_linkDown && lastConnectedStatus == TRUE))
+ 	{
+ 		return; // No change in the link status
+ 	}
+diff --git a/InfraStack/OSAgnostic/WiMax/Agents/NDnS/Source/NDnSAgent_Internals.h b/InfraStack/OSAgnostic/WiMax/Agents/NDnS/Source/NDnSAgent_Internals.h
+index e247d28..da7a344 100644
+--- a/InfraStack/OSAgnostic/WiMax/Agents/NDnS/Source/NDnSAgent_Internals.h
++++ b/InfraStack/OSAgnostic/WiMax/Agents/NDnS/Source/NDnSAgent_Internals.h
+@@ -200,8 +200,8 @@ typedef struct _wmx_NDnS_Context_t
+ 	wmx_ConnectStatus_t connectStatus;
+ 	int  DummyForCompilerHappy3;
+ 	TinyFSM_t fsm;
+-	L4C_Task scheduledTask;
+-	wmx_ScheduledTaskData_t scheduledTaskData;	
++	LONG scheduledTask;  // Updated using OSAL_atomic_exchange(), so this must be a LONG not an L4C_Task
++	wmx_ScheduledTaskData_t scheduledTaskData;
+ 	wmx_Status_t scanStatus;
+ 	wmx_LinkLossType_t linkLossType;
+ 	wmx_ScanType_t currentScanType;
+diff --git a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
+index 1eeae5b..3948615 100644
+--- a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
++++ b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
+@@ -482,7 +482,7 @@ wmx_Status_t InitSupplicantLibrary(VOID)
+ 	eap_ctx.eap_config.password_len = 8;
+ 	eap_ctx.eap_config.ca_cert = (u8 *) os_strdup("ca.pem");
+ 	eap_ctx.eap_config.fragment_size = TLS_MAX_SIZE;
+-	eap_ctx.eap_config.eap_methods = eap_methods;
++	eap_ctx.eap_config.eap_methods = &eap_methods;
+ 
+ 	memset(&eap_cb, 0, sizeof(eap_cb));
+ 	eap_cb.get_config = peer_get_config;
+diff --git a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/ds/driver_broadcom.h b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/ds/driver_broadcom.h
+index 8973978..72f6384 100644
+--- a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/ds/driver_broadcom.h
++++ b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/ds/driver_broadcom.h
+@@ -20,15 +20,15 @@ typedef s8 int8;
+ typedef	unsigned char	bool;			/* consistent w/BOOL */
+ 
+ /* require default structure packing */
+-#if !defined(__GNUC__)
+-#pragma pack(push,8)
+-#endif
++//#if !defined(__GNUC__)
++//#pragma pack(push,8)
++//#endif
+ 
+ /* enable structure packing */
+ #if defined(__GNUC__)
+ #define	PACKED	__attribute__((packed))
+ #else
+-#pragma pack(1)
++#pragma pack(push,1)
+ #define	PACKED
+ #endif
+ 
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Msc_2.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Msc_2.h
+index 33b3336..236217d 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Msc_2.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Msc_2.h
+@@ -87,6 +87,7 @@ typedef struct _wmx_ModelType_t
+ 	UINT32	modelTypeID;
+ 	char	modelTypeName[WMX_MODEL_TYPE_NAME_MAX_LENGTH];
+ } wmx_ModelType_t, *wmx_pModelType_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A constant specifying the maximal length of the manufacturer string.
+@@ -102,6 +103,7 @@ typedef struct _wmx_Manufacturer_t
+ 	UINT32	manufacturerID;
+ 	char	manufacturerName[WMX_MANUFACTURER_NAME_MAX_LENGTH];
+ } wmx_Manufacturer_t, *wmx_pManufacturer_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// Definition of a struct that holds the manufacturer ID and string. 
+@@ -111,6 +113,7 @@ typedef struct _wmx_DevicePID_t
+ {
+ 	UINT32	productID;	
+ } wmx_DevicePID_t, *wmx_pDevicePID_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A constant specifying the maximal length of the serial number string.
+@@ -125,6 +128,7 @@ typedef struct _wmx_SerialNumber_t
+ {	
+ 	char	serialNumber[WMX_SERIAL_NUMBER_MAX_LENGTH];
+ } wmx_SerialNumber_t, *wmx_pSerialNumber_t;
++#pragma pack( pop )
+ 
+ 
+ 
+@@ -140,6 +144,7 @@ typedef struct _wmx_SerialNumber_t
+ //	UINT32	TotalTxBytes;
+ //	UINT32	TotalTxPackets;
+ //} wmx_Statistics_t, *wmx_pStatistics_t;
++//#pragma pack( pop )
+ 
+ 
+ /// <summary>
+@@ -153,6 +158,7 @@ typedef struct _wmx_SfStatistics_t
+ 	UINT32	noReceivedBytes;
+ 	UINT32	noTransmittedBytes;
+ } wmx_SfStatistics_t, *wmx_pSfStatistics_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A constant specifying the maximal length of the strings in the wmx_DeviceVersion_t struct.
+@@ -171,6 +177,7 @@ typedef struct _wmx_DeviceVersion_t
+ 	char	BoardName[WMX_DEVICE_VERSION_MAX_LENGTH];
+ 	char	Software[WMX_DEVICE_VERSION_MAX_LENGTH];
+ } wmx_DeviceVersion_t, *wmx_pDeviceVersion_t;
++#pragma pack( pop )
+ 
+ 
+ 
+@@ -230,4 +237,4 @@ wmx_Status_t WMX_WRAPPER_API WMX_EXT_CALL_CONV wmx_GetDeviceDetailsEx(	wmx_MacAd
+ wmx_Status_t WMX_WRAPPER_API WMX_EXT_CALL_CONV wmx_GetDeviceVersion( wmx_pDeviceVersion_t pDeviceVersion	);
+ 
+ wmx_Status_t WMX_WRAPPER_API WMX_EXT_CALL_CONV wmx_ResetDevice( );
+-#endif // _WMX_SDK_MSC_2_H
+\ No newline at end of file
++#endif // _WMX_SDK_MSC_2_H
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
+index 9a7863f..7fb5817 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
+@@ -235,6 +235,7 @@ typedef struct _wmx_Statistics_t
+ 	UINT32	TotalTxBytes;
+ 	UINT32	TotalTxPackets;
+ } wmx_Statistics_t, *wmx_pStatistics_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// Type definition for a structure giving a detailed info on a system state.
+@@ -671,4 +672,4 @@ wmx_Status_t WMX_WRAPPER_API WMX_EXT_CALL_CONV wmx_IsAssociated(wmx_pAssociate_t
+ wmx_Status_t WMX_WRAPPER_API WMX_EXT_CALL_CONV wmx_GetSpLockStatus(wmx_pSpLock_t pSpLockStatus);
+ wmx_Status_t wmx_CmdSpLockUnLock(wmx_SpLockCode_t SpLockCode);
+ 
+-#endif // _WMX_SDK_NDS_1_H
+\ No newline at end of file
++#endif // _WMX_SDK_NDS_1_H
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_3.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_3.h
+index 05fc677..2bb463d 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_3.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_3.h
+@@ -110,6 +110,7 @@ typedef struct _wmx_SLA_t
+ 	wmx_LinkSpeed_t		downLinkSpeed;
+ 	UINT32				agreementLevel;
+ } wmx_SLA_t, *wmx_pSLA_t;
++#pragma pack( pop )
+ 
+ #define WMX_SUBSCRIBER_NAME_MAX_SIZE 100
+ #define WMX_SUBSCRIBER_ID_MAX_SIZE 256
+@@ -125,6 +126,7 @@ typedef struct _wmx_SubscriberInfo_t
+ 	BOOL					userCredRequired;
+ 	//////////////////
+ } wmx_SubscriberInfo_t, *wmx_pSubscriberInfo_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// Type definition for a struct containing information of a specific NSP.
+@@ -149,6 +151,7 @@ typedef struct _wmx_NSP_t
+ 	wmx_SubscriberInfo_t	subscribers[WMX_NSP_SUBSCRIBERS_MAX_NUM];		// The list of subscribers associated with this NSP on this device.
+ 	UINT32					numOfSubscribers;
+ } wmx_NSP_t, *wmx_pNSP_t;
++#pragma pack( pop )
+ 
+ // TODO: Add description
+ #pragma pack( push, 1 )
+@@ -158,6 +161,7 @@ typedef struct _wmx_ContactInformation_t
+ 	UINT32	uriType; //TODO - don't forget to validate the values 0-255
+ 	char	text[MAX_SIZE_OF_STRING_BUFFER];
+ } wmx_ContactInformation_t, *wmx_pContactInformation_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// Type definition for an enum specifying the possible outcomes of a scan cycle.
+@@ -224,6 +228,7 @@ typedef struct _wmx_UserLinkStatus_t
+ 	wmx_LinkSpeed_t				downLinkSpeed;
+ 	wmx_BSid_t					bsId;
+ } wmx_UserLinkStatus_t, *wmx_pUserLinkStatus_t;
++#pragma pack( pop )
+ 
+ #pragma pack( push, 1 )
+ typedef struct _wmx_UserStatistics_t
+@@ -234,6 +239,7 @@ typedef struct _wmx_UserStatistics_t
+ 	UINT32	TotalTxBytes;
+ 	UINT32	TotalTxPackets;
+ } wmx_UserStatistics_t, *wmx_pUserStatistics_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A constant specifying the maximal length of a NSPs structs vector (in terms of the number of wmx_NSP_t structs the vector can contain).
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
+index 2dc5f37..21fdf62 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
+@@ -435,6 +435,7 @@ typedef struct _wmx_RfSwitchesStatus_t
+ 	wmx_RfStatus_t swRfStatus;
+ 	wmx_RfStatus_t hwRfStatus;
+ }wmx_RfSwitchesStatus_t, *wmx_pRfSwitchesStatus_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A struct in which the API will place information (such as URLs, VoIP numbers, ï¿½) that are relevant to the
+@@ -446,6 +447,7 @@ typedef struct _wmx_APDOContactInfo_t
+ {
+ 	char	contactDetails[MAX_CONTACT_DETAILS_SIZE];
+ } wmx_APDOContactInfo_t, *wmx_pAPDOContactInfo_t;
++#pragma pack( pop )
+ 
+ /// <summary>
+ /// A struct in which the API will place information which is needed in the package update process.
+@@ -460,6 +462,7 @@ typedef struct _wmx_PackageInfo_t
+ 	BOOL	mandatoryUpdate;                     /**< (TRUE = mandatory FALSE, optional) */
+ 	BOOL	warnUser;                            /**< (TRUE = warn user, FALSE = no user warning */
+ } wmx_PackageInfo_t, *wmx_pPackageInfo_t;
++#pragma pack( pop )
+ 
+ typedef enum _wmx_SPLockStatus_t
+ {
+@@ -507,5 +510,6 @@ typedef struct _wmx_InstallationInfo_t
+ 	char	fwVersion[MAX_INSTALLAION_VERSION_SIZE];		 
+ 	char	hwVersion[MAX_INSTALLAION_VERSION_SIZE];
+ } wmx_InstallationInfo_t, *wmx_pInstallationInfo_t;
++#pragma pack( pop )
+ 
+ #endif // _WMX_SDK_NDS_CMN_H
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/NDnS/wmxSDK_Coex_1.c b/InfraStack/OSAgnostic/WiMax/Wrappers/NDnS/wmxSDK_Coex_1.c
+index 97bd45c..beac961 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/NDnS/wmxSDK_Coex_1.c
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/NDnS/wmxSDK_Coex_1.c
+@@ -64,7 +64,7 @@ wmx_Status_t wmx_SetCoexistenceMode(wmx_CoexistenceMode_t coexMode)
+ 		if (coexMode == WMX_MODE_CM && UserCall){
+ 			TRACE(TR_MOD_NDNS_AGENT, TR_SEV_NOTICE, "SetCoexistanceMode recieved set CM mode in CM mode.");
+ 			if (act_thread_coexHandler!=NULL){
+-				OSAL_kill_thread(&act_thread_coexHandler);
++				OSAL_kill_thread(act_thread_coexHandler);
+ 				retStatus = WMX_ST_OK;
+ 			}
+ 			// setting fall to xor key to zero so we never fall to xor even when driver falls and brings itself up
+diff --git a/InfraStack/OSDependent/Linux/InfraStackModules/CommonAPIHeaders/WiMaxType.h b/InfraStack/OSDependent/Linux/InfraStackModules/CommonAPIHeaders/WiMaxType.h
+index 9afb111..4c56ab9 100644
+--- a/InfraStack/OSDependent/Linux/InfraStackModules/CommonAPIHeaders/WiMaxType.h
++++ b/InfraStack/OSDependent/Linux/InfraStackModules/CommonAPIHeaders/WiMaxType.h
+@@ -305,7 +305,7 @@ typedef struct _WIMAX_API_RF_SWITCHES_STATUS
+ 	{
+ 		UINT32                structureSize;                          /**< size of this structure. */
+ 		WIMAX_API_PROFILE_ID  profileID;                              /**< profile ID. Profile id 0 is reserve to connection without specifying a user account. */
+-		char	                profileName[MAX_SIZE_OF_STRING_BUFFER]; /**< profile name. */ 
++		WIMAX_CHAR            profileName[MAX_SIZE_OF_STRING_BUFFER]; /**< profile name. */ 
+ 	} WIMAX_API_PROFILE_INFO, *WIMAX_API_PROFILE_INFO_P;
+ 	
+ 	/// Device version
+@@ -467,6 +467,8 @@ typedef struct _WIMAX_API_RF_SWITCHES_STATUS
+ 	} WIMAX_API_INTERFACE_INFO, *WIMAX_API_INTERFACE_INFO_P;
+ #endif
+ 
++#pragma pack( pop )
++
+ /// The statuses provided by this API can generally be mapped to movements along the SDK common state machine. The indications may provide further detailed information using the API�s arguments when relevant.
+ /// \param[in] pDeviceId - Pointer to Device Identifier passed on open of device.
+ /// \param[in] deviceStatus - The device Status value
+diff --git a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_linux_types.h b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_linux_types.h
+index 99b01f6..364c511 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_linux_types.h
++++ b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_linux_types.h
+@@ -105,7 +105,7 @@ typedef unsigned long long UINT64;
+ 
+ typedef unsigned int DWORD;
+ 
+-typedef int INT_PTR;
++typedef int * INT_PTR;
+ 
+ 
+ typedef char INT8;
+diff --git a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
+index 26e2a91..6ced165 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
++++ b/InfraStack/OSDependent/Linux/OSAL/Primitives/wimax_osal_trace.c
+@@ -173,7 +173,7 @@ void osallog(char *ch, int flush)
+ 		}
+ 	}
+ 	// write into file
+-	fprintf(log, ch);
++	fprintf(log, "%s", ch);
+ 	// put extra to log next line to build
+ 	//fprintf(log,"\n");
+ 	if (flush == 1)
+diff --git a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_scan_op.c b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_scan_op.c
+index 2f438ab..7d7b0a5 100644
+--- a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_scan_op.c
++++ b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_scan_op.c
+@@ -468,7 +468,7 @@ int wimaxcu_get_network_list(WIMAX_API_DEVICE_ID_P p_device_id, CMD_ARGS scan_mo
+ 
+ 	} else if (scan_mode == CMD_SCAN_ARG_WIDE) {
+ 		// Get User Connect Mode
+-		int userConnectMode;
++		WIMAX_API_CONNECTION_MODE userConnectMode;
+ 		wmxStatus = GetConnectionMode(p_device_id, &userConnectMode);
+ 		if (WIMAX_API_RET_SUCCESS != wmxStatus) {
+ 			PrintWmxStatus(wmxStatus);
+@@ -904,4 +904,4 @@ int wimaxcu_stop_scan(WIMAX_API_DEVICE_ID_P p_device_id)
+ 		}
+ 			
+ 	}
+-}
+\ No newline at end of file
++}

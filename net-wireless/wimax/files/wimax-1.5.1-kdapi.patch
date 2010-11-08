@@ -1,0 +1,13 @@
+--- InfraStack/OSDependent/Linux/InfraStackModules/KDapi/KDapi.c.orig	2010-11-08 20:15:15.000000000 +0300
++++ InfraStack/OSDependent/Linux/InfraStackModules/KDapi/KDapi.c	2010-11-08 20:16:01.000000000 +0300
+@@ -921,8 +921,8 @@
+ 		return -1;
+ 	}
+ 
+-	OpcodeName = GetL4Opcode(requestBuffer);
+-	TRACE(TR_MOD_KDAPI, TR_SEV_INFO, "Op code name for preconfig=%s", OpcodeName);
++	//OpcodeName = GetL4Opcode(requestBuffer);
++	//TRACE(TR_MOD_KDAPI, TR_SEV_INFO, "Op code name for preconfig=%s", OpcodeName);
+ 
+ 	// allocate the response buffer
+ 	responseBufferSize = SetPreInitConfiguration_Funcs.getMaxBufferSizeFunc();
