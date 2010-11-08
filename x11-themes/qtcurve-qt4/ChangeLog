@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.113 2010/10/19 10:08:41 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.114 2010/11/08 22:58:28 wired Exp $
+
+  08 Nov 2010; Alex Alexander <wired@gentoo.org> -qtcurve-qt4-1.4.3.ebuild,
+  -qtcurve-qt4-1.5.0.ebuild, -qtcurve-qt4-1.5.1.ebuild,
+  -qtcurve-qt4-1.5.2.ebuild, -qtcurve-qt4-1.6.0.ebuild,
+  -qtcurve-qt4-1.6.1.ebuild, -qtcurve-qt4-1.6.4.ebuild,
+  qtcurve-qt4-1.6.4-r1.ebuild, metadata.xml:
+  removed broken parentless-dialog-fix USE - bug #344141. removed old
+  versions.
 
 *qtcurve-qt4-1.6.4-r1 (19 Oct 2010)
 

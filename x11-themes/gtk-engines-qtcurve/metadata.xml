@@ -15,8 +15,5 @@
 			browsers, including version 2 of
 			<pkg>www-client/firefox</pkg>
 		</flag>
-		<flag name='parentless-dialog-fix'>Enable support for the "parent-less dialog
-			fix" option. WARNING: Upstream allows this, but does NOT support it.
-		</flag>
 	</use>
 </pkgmetadata>

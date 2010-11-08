@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.6.4.ebuild,v 1.1 2010/10/05 00:17:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.6.4.ebuild,v 1.2 2010/11/08 22:59:35 wired Exp $
 
 EAPI=1
 inherit eutils cmake-utils
@@ -14,7 +14,7 @@ SRC_URI="http://craigd.wikispaces.com/file/view/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="mozilla firefox3 parentless-dialog-fix"
+IUSE="mozilla firefox3"
 
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/cairo
@@ -31,6 +31,5 @@ src_compile() {
 	local mycmakeargs=""
 	use mozilla && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_OLD_MOZILLA=true"
 	use firefox3 && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_OLD_MOZILLA=false"
-	mycmakeargs+=" $(cmake-utils_use parentless-dialog-fix QTC_ENABLE_PARENTLESS_DIALOG_FIX_SUPPORT)"
 	cmake-utils_src_compile
 }

@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.95 2010/10/05 00:17:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.96 2010/11/08 22:59:35 wired Exp $
+
+  08 Nov 2010; Alex Alexander <wired@gentoo.org>
+  -gtk-engines-qtcurve-1.4.1.ebuild, -gtk-engines-qtcurve-1.5.0.ebuild,
+  -gtk-engines-qtcurve-1.5.1.ebuild, -gtk-engines-qtcurve-1.5.2.ebuild,
+  -gtk-engines-qtcurve-1.6.0.ebuild, -gtk-engines-qtcurve-1.6.1.ebuild,
+  gtk-engines-qtcurve-1.6.4.ebuild, metadata.xml:
+  removed broken parentless-dialog-fix USE - bug #344141. removed old
+  versions.
 
 *gtk-engines-qtcurve-1.6.4 (05 Oct 2010)
 
