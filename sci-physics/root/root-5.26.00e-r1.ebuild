@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.1 2010/10/22 07:11:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.2 2010/11/08 17:54:05 xarthisius Exp $
 
 EAPI=3
 
@@ -35,7 +35,7 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
 	>=media-libs/ftgl-2.1.3_rc5
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/giflib
 	media-libs/glew
 	media-libs/tiff

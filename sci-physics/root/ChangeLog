@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.76 2010/10/22 07:11:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.77 2010/11/08 17:54:05 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  root-5.26.00-r2.ebuild, root-5.26.00-r4.ebuild, root-5.26.00e-r1.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
 *root-5.26.00e-r1 (22 Oct 2010)
 
