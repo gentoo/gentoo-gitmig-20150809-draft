@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-2-r2.ebuild,v 1.1 2009/11/10 03:15:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-3.ebuild,v 1.1 2010/11/08 12:18:52 nelchael Exp $
 
 EAPI=2
 inherit autotools
@@ -16,8 +16,6 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/rngd_tpm_support.patch
-
 	echo 'bin_PROGRAMS = randstat' >> contrib/Makefile.am
 	eautoreconf
 }
@@ -26,6 +24,6 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog
-	doinitd "${FILESDIR}/2-r2/rngd"
-	newconfd "${FILESDIR}/2-r2/rngd-conf" rngd
+	newinitd "${FILESDIR}/rngd-initd-${PV}" rngd
+	newconfd "${FILESDIR}/rngd-confd-${PV}" rngd
 }

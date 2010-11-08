@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.29 2010/09/15 08:36:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.30 2010/11/08 12:18:52 nelchael Exp $
+
+*rng-tools-3 (08 Nov 2010)
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -rng-tools-2-r2.ebuild, -rng-tools-2-r3.ebuild, +files/rngd-confd-3,
+  -files/2-r2/rngd, +files/rngd-initd-3, +rng-tools-3.ebuild,
+  -files/2-r2/rngd-conf, -files/rngd_tpm_support.patch,
+  -files/rngd_tpm_support2.patch:
+  Version bump, remove old versions. rng-tools-3 contains support for TPM
+  devices.
 
   15 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> files/2-r2/rngd,
   files/2-r2/rngd-conf:

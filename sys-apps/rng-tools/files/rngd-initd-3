@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/2-r2/rngd,v 1.2 2010/09/15 08:36:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-3,v 1.1 2010/11/08 12:18:53 nelchael Exp $
 
 depend() {
 	need localmount
