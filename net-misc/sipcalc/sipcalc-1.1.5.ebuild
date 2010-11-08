@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/sipcalc-1.1.2.ebuild,v 1.8 2009/09/23 19:44:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/sipcalc-1.1.5.ebuild,v 1.1 2010/11/08 11:53:27 nelchael Exp $
 
 DESCRIPTION="Sipcalc is an advanced console-based IP subnet calculator."
 HOMEPAGE="http://www.routemeister.net/projects/sipcalc/"
 SRC_URI="http://www.routemeister.net/projects/${PN}/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

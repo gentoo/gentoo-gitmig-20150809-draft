@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/sipcalc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.12 2009/09/23 19:44:24 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.13 2010/11/08 11:53:27 nelchael Exp $
+
+*sipcalc-1.1.5 (08 Nov 2010)
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> -sipcalc-1.1.2.ebuild,
+  +sipcalc-1.1.5.ebuild, metadata.xml:
+  Add myself as maintainer, remove old stable version, version bump.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> sipcalc-1.1.2.ebuild,
   sipcalc-1.1.4.ebuild:

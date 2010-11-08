@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>nelchael@gentoo.org</email>
+		<name>Krzysztof Pawlik</name>
 	</maintainer>
 	<longdescription lang="en">
 		Sipcalc is an advanced console-based IP subnet calculator.
