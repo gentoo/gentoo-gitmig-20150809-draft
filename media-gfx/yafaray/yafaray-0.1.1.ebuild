@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/yafaray-0.1.1.ebuild,v 1.3 2010/01/24 23:12:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/yafaray-0.1.1.ebuild,v 1.4 2010/11/08 23:08:55 maekke Exp $
 
 EAPI=2
 MY_PN="YafaRay"
@@ -22,10 +22,10 @@ IUSE="+blender debug qt4"
 RDEPEND="
 	dev-libs/libxml2
 	media-libs/freetype
-	media-libs/jpeg
 	media-libs/libpng
 	media-libs/openexr
 	sys-libs/zlib
+	virtual/jpeg
 	blender? ( >=media-gfx/blender-2.49 )
 	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )"
 DEPEND="${RDEPEND}

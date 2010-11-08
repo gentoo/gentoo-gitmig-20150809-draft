@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/metapixel/metapixel-1.0.2.ebuild,v 1.3 2009/09/29 09:48:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/metapixel/metapixel-1.0.2.ebuild,v 1.4 2010/11/08 22:56:03 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="media-libs/libpng
+RDEPEND="dev-lang/perl
 	media-libs/giflib
-	media-libs/jpeg
-	dev-lang/perl"
+	media-libs/libpng
+	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

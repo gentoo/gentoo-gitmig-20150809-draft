@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.1 2010/05/30 10:13:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.2 2010/11/08 23:07:20 maekke Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs
@@ -18,7 +18,7 @@ IUSE="tiff jpeg png"
 RDEPEND="x11-libs/libX11
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg:0 )"
+	jpeg? ( virtual/jpeg:0 )"
 DEPEND="${RDEPEND}
 	!media-gfx/xli"
 

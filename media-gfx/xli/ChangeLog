@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.55 2010/03/09 21:15:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.56 2010/11/08 23:05:18 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> xli-1.17.0-r4.ebuild:
+  change jpeg dep to virtual/jpeg
 
   09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> xli-1.17.0-r4.ebuild,
   +files/xli-1.17.0-libpng14.patch:

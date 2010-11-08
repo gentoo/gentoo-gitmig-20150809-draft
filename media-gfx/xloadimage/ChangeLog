@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.52 2010/05/30 10:13:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.53 2010/11/08 23:07:20 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> xloadimage-4.1-r10.ebuild,
+  xloadimage-4.1-r11.ebuild:
+  change jpeg dep to virtual/jpeg
 
 *xloadimage-4.1-r11 (29 May 2010)
 
