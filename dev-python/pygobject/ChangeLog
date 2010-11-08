@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.103 2010/11/06 00:07:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.104 2010/11/08 13:23:18 dang Exp $
+
+*pygobject-2.26.0-r1 (08 Nov 2010)
+
+  08 Nov 2010; Daniel Gryniewicz <dang@gentoo.org>
+  +pygobject-2.26.0-r1.ebuild, +files/pygobject-2.26.0-nocrash.patch:
+  Bump to pygobject-2.26.0-r1
+  - Fix crash in programs like rhythmbox using it, due to bad instance
+  property
+
+  bindings. Bug #344459
+
 
 *pygobject-2.26.0 (06 Nov 2010)
 
