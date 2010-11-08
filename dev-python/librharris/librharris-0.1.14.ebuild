@@ -1,23 +1,30 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/librharris-0.1.14.ebuild,v 1.1 2009/02/03 20:07:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/librharris-0.1.14.ebuild,v 1.2 2010/11/08 17:59:48 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-SLOT="0"
+MY_PN="lib_rharris"
+MY_P="${MY_PN}-${PV}"
 
-MY_P="${P/lib/lib_}"
-DESCRIPTION="A Python library for pulling, parsing \
-and pickling remote web page data and related net-aware tasks."
-HOMEPAGE="http://www.python.org/pypi/lib_rharris"
-SRC_URI="http://pypi.python.org/packages/source/l/${PN/lib/lib_}/${MY_P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
+DESCRIPTION="Python Internet Programming Library"
+HOMEPAGE="http://pypi.python.org/pypi/lib_rharris"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/python"
+DEPEND=""
+RDEPEND=""
 
-src_install() {
-	distutils_src_install
-}
+S="${WORKDIR}/${MY_P}"
+
+DOCS="changelog"
+PYTHON_MODNAME="${MY_PN}"
