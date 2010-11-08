@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.272 2010/11/02 02:22:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.273 2010/11/08 22:58:08 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> -eog-2.26.3.ebuild,
+  -eog-2.28.2.ebuild, eog-2.30.2.ebuild, eog-2.32.0.ebuild:
+  Allow use of alternate jpeg implementation. Re-drop hppa keyword, clean up
+  old revisions.
 
   02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> eog-2.32.0.ebuild:
   Fix gnome-desktop slot (2)

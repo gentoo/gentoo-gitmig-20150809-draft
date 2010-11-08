@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.0.ebuild,v 1.2 2010/11/02 02:22:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.0.ebuild,v 1.3 2010/11/08 22:58:08 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus doc exif jpeg lcms python svg tiff xmp"
 
 RDEPEND=">=x11-libs/gtk+-2.18:2[jpeg?,tiff?]
@@ -28,8 +28,8 @@ RDEPEND=">=x11-libs/gtk+-2.18:2[jpeg?,tiff?]
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	exif? (
 		>=media-libs/libexif-0.6.14
-		>=media-libs/jpeg-8:0 )
-	jpeg? ( >=media-libs/jpeg-8:0 )
+		virtual/jpeg:0 )
+	jpeg? ( virtual/jpeg:0 )
 	lcms? ( =media-libs/lcms-1* )
 	python? (
 		>=dev-python/pygobject-2.15.1
