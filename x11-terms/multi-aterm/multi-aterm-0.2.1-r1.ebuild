@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.9 2010/03/11 00:44:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.10 2010/11/08 12:40:47 nelchael Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE="cjk debug jpeg png"
 
 RDEPEND="x11-libs/libXpm
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
