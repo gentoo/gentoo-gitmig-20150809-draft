@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.33 2010/11/06 12:33:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.34 2010/11/08 11:06:18 phajdan.jr Exp $
+
+  08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  haskell-src-1.0.1.3.ebuild:
+  x86 stable wrt bug #344343
 
   06 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   haskell-src-1.0.1.3.ebuild:
