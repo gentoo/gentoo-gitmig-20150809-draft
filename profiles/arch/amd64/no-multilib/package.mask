@@ -1,13 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.88 2010/09/18 12:14:08 ssuominen Exp $
-
-# Alexey Shvetsov <alexxy@gentoo.org>
-# Mask wimax stack since it doesnt works correctly on 64bit systems (mainly net-wireless/wimax,
-# but it requires 32bit wimax-tools and libeap)
-net-wireless/wimax
-net-wireless/wimax-tools
-net-wireless/libeap
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.89 2010/11/08 17:51:44 alexxy Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
