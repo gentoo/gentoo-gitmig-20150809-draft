@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
-<use>
-	<flag name='ode'>include support for Open Dynamics Engine</flag>
-</use>
 </pkgmetadata>
