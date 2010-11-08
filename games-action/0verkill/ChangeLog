@@ -1,6 +1,10 @@
 # ChangeLog for games-action/0verkill
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.17 2010/11/08 10:57:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.18 2010/11/08 18:34:45 mr_bones_ Exp $
+
+  08 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  0verkill-0.16-r3.ebuild, +files/0verkill-0.16-CC.patch:
+  honor CC
 
   08 Nov 2010; Alfredo Tupone <tupone@gentoo.org> 0verkill-0.16-r3.ebuild,
   +files/0verkill-0.16-ovflfix.patch:
