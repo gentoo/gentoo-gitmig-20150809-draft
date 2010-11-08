@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.25 2010/10/28 21:32:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.26 2010/11/08 22:17:30 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -53,7 +53,7 @@ RDEPEND="
 		>=dev-libs/libgee-0.3
 		>=x11-libs/gtk+-2.18 )
 	iptc? ( media-libs/libiptcdata )
-	jpeg? ( media-libs/jpeg:0 )
+	jpeg? ( virtual/jpeg:0 )
 	laptop? (
 		hal? ( >=sys-apps/hal-0.5 )
 		!hal? ( >=sys-power/upower-0.9 ) )
