@@ -1,6 +1,15 @@
 # ChangeLog for games-simulation/searchandrescue
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.27 2010/10/22 14:35:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.28 2010/11/08 09:47:29 mr_bones_ Exp $
+
+  08 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -searchandrescue-0.8.2-r1.ebuild,
+  -files/searchandrescue-0.8.2-gcc33.patch,
+  -files/searchandrescue-0.8.2-gcc41.patch,
+  -files/searchandrescue-0.8.2-gcc412.patch,
+  -files/searchandrescue-0.8.2-gcc441.patch,
+  -files/searchandrescue-0.8.2-makejs.patch:
+  clean old version and files (drops ppc to ~)
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   searchandrescue-1.1.0.ebuild:

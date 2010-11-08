@@ -1,9 +1,0 @@
---- Makefile.old	2009-09-04 10:13:22.000000000 +0200
-+++ Makefile	2009-09-04 10:16:43.000000000 +0200
-@@ -1,5 +1,5 @@
- ALL_SRC_DIRS=sar
- all install clean:
- 	@for subdir in $(ALL_SRC_DIRS); do			\
--	  make -s -C $$subdir -f Makefile $@; 			\
-+	  $(MAKE) -s -C $$subdir -f Makefile $@; 			\
- 	done
