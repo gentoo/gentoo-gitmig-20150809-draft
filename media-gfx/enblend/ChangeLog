@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.43 2010/09/16 17:06:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.44 2010/11/08 22:05:28 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> enblend-4.0.ebuild:
+  change jpeg dep to virtual/jpeg
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> enblend-4.0.ebuild:
   virtual/glut -> media-libs/glut

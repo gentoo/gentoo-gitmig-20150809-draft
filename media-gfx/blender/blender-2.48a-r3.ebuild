@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.12 2010/05/31 15:02:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.13 2010/11/08 22:00:56 maekke Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 RDEPEND=">=dev-libs/openssl-0.9.6
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	media-libs/tiff
 	>=dev-lang/python-2.4
 	nls? ( >=media-libs/freetype-2.0
