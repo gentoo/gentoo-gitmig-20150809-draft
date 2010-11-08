@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.4 2010/06/24 21:34:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.5 2010/11/08 19:42:51 jer Exp $
+
+  08 Nov 2010; Jeroen Roovers <jer@gentoo.org> mock-0.6.0.ebuild:
+  Marked ~hppa (bug #344673).
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> mock-0.6.0.ebuild:
   stable amd64, bug 323033
