@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.148 2010/10/19 06:22:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.149 2010/11/08 22:58:14 swegener Exp $
+
+  08 Nov 2010; Sven Wegener <swegener@gentoo.org>
+  -files/screen-4.0.3_p20070403-map.patch:
+  Remove unused file, bug #343203.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> screen-4.0.3.ebuild:
   Drop to ~mips
