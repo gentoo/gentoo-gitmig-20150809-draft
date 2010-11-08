@@ -1,17 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.0.0.ebuild,v 1.3 2010/11/08 22:53:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.0.1.ebuild,v 1.1 2010/11/08 22:53:28 maekke Exp $
 
 EAPI="2"
 
-LANGS="cs de es fr hu id it pl ru tr"
+# hu id
+LANGS="cs de es fr it pl ru tr"
 inherit qt4-r2
 
 OLD_PN="qtpfsgui"
+MY_P="luminance-v${PV}"
 
 DESCRIPTION="Luminance HDR is a graphical user interface that provides a workflow for HDR imaging."
 HOMEPAGE="http://qtpfsgui.sourceforge.net"
-SRC_URI="mirror://sourceforge/${OLD_PN}/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${OLD_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +37,7 @@ RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS Changelog README TODO"
 
-S="${WORKDIR}/${PN}_${PV}"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	qt4-r2_src_prepare

@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.2 2010/06/13 17:06:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.3 2010/11/08 22:53:28 maekke Exp $
+
+*luminance-hdr-2.0.1 (08 Nov 2010)
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org>
+  luminance-hdr-1.9.2-r1.ebuild, luminance-hdr-1.9.3.ebuild,
+  luminance-hdr-2.0.0.ebuild, +luminance-hdr-2.0.1.ebuild:
+  version bump, change jpeg dep to virtual/jpeg
 
   13 Jun 2010; Markus Meier <maekke@gentoo.org> luminance-hdr-2.0.0.ebuild:
   unset CXXFLAGS, fix LINGUAS handling and update description

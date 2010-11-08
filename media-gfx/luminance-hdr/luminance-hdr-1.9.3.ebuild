@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-1.9.3.ebuild,v 1.1 2010/06/05 20:15:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-1.9.3.ebuild,v 1.2 2010/11/08 22:53:28 maekke Exp $
 
 EAPI="2"
 
@@ -23,10 +23,10 @@ IUSE="openmp $(echo ${LANGS//\ /\ linguas_})"
 DEPEND="
 	media-gfx/dcraw
 	>=media-gfx/exiv2-0.14
-	>=media-libs/jpeg-6b-r7
 	>=media-libs/openexr-1.2.2-r2
 	>=media-libs/tiff-3.8.2-r2
 	>=sci-libs/fftw-3.0.1-r2
+	virtual/jpeg
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	>=sys-devel/gcc-4.2[openmp?]"
