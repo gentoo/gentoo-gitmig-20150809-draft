@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.0.ebuild,v 1.1 2010/10/20 22:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.0.ebuild,v 1.2 2010/11/08 22:59:37 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.17:2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
 	gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	libnotify? ( >=x11-libs/libnotify-0.4.4 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	ssl? ( >=net-libs/gnutls-1 )

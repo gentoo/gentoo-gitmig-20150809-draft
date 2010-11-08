@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.153 2010/10/20 22:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.154 2010/11/08 22:59:37 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -vino-2.26.2-r2.ebuild, vino-2.28.2.ebuild, vino-2.32.0.ebuild:
+  Allow use of alternate jpeg implementation. Clean up old revisions.
 
 *vino-2.32.0 (20 Oct 2010)
 
