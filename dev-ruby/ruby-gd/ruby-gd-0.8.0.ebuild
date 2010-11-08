@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.1 2010/01/16 18:06:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.2 2010/11/08 19:53:49 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -24,7 +24,7 @@ IUSE="jpeg truetype X"
 
 DEPEND="
 	>=media-libs/gd-2.0[png]
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	truetype? ( media-libs/freetype )
 	X? ( x11-libs/libX11 )"
 RDEPEND="${DEPEND}"
