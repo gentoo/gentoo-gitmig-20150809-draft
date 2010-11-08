@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6970-r1.ebuild,v 1.1 2010/06/10 13:39:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6970-r1.ebuild,v 1.2 2010/11/08 12:50:02 nelchael Exp $
 
 EAPI="2"
 inherit multilib autotools flag-o-matic
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libXext
 	x11-libs/libXt
 	xft? ( x11-libs/libXft )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
 	cairo? ( x11-libs/cairo )
 	xinerama? ( x11-libs/libXinerama )

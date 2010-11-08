@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9.ebuild,v 1.13 2010/09/17 11:22:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9.ebuild,v 1.14 2010/11/08 12:50:02 nelchael Exp $
 
 EAPI=2
 inherit eutils autotools versionator fdo-mime
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libXext
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXt
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	sys-libs/zlib
 	opengl? ( virtual/opengl )
