@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.118 2010/10/24 13:39:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.119 2010/11/08 02:30:18 dang Exp $
+
+*gvfs-1.6.4-r2 (08 Nov 2010)
+
+  08 Nov 2010; Daniel Gryniewicz <dang@gentoo.org> +gvfs-1.6.4-r2.ebuild,
+  +files/gvfs-1.6.4-O_TRUNC-fix.patch:
+  Fix file truncation on open; bug #344079
 
   24 Oct 2010; Pacho Ramos <pacho@gentoo.org> -gvfs-1.2.3.ebuild,
   -gvfs-1.4.3-r1.ebuild:
