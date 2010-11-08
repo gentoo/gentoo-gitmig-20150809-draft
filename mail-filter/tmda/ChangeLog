@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.18 2010/11/07 14:46:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.19 2010/11/08 12:02:05 phajdan.jr Exp $
+
+  08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmda-1.1.12.ebuild:
+  x86 stable wrt bug #344525
 
   07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tmda-1.1.12.ebuild:
