@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0.ebuild,v 1.3 2009/11/25 13:57:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0.ebuild,v 1.4 2010/11/08 09:56:53 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -31,9 +31,9 @@ RDEPEND="x11-libs/libXau
 	x11-libs/libXpm
 	x11-libs/libXrandr
 	x11-libs/libXtst
-	>=media-libs/jpeg-6b-r4
 	>=media-libs/libpng-1.2.8
-	>=sys-libs/zlib-1.2.3"
+	>=sys-libs/zlib-1.2.3
+	virtual/jpeg"
 
 DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
