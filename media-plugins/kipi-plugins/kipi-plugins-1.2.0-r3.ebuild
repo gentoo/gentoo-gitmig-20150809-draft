@@ -1,26 +1,23 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.5.0.ebuild,v 1.3 2010/11/08 21:32:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.2.0-r3.ebuild,v 1.1 2010/11/08 21:32:43 dilfridge Exp $
 
 EAPI="2"
 
 OPENGL_REQUIRED="optional"
-KDE_LINGUAS="ar be ca ca@valencia cs de el en_GB eo es eu fi gl hi hne hr is ja km
-lt lv mai ms nds nl pt pt_BR ro ru se sk sv th uk zh_CN zh_TW"
+KDE_LINGUAS="ar be ca cs da de el en_GB es et fi fr ga gl hi hne is it ja km
+lt lv ms nb nds nl nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zh_CN zh_TW"
 KMNAME="extragear/graphics"
-KDE_MINIMAL="4.5"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
 HOMEPAGE="http://www.kipi-plugins.org"
-[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2
-	handbook? ( mirror://gentoo/${PN}-doc-${PV}.tar.bz2 )"
+[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2 mirror://gentoo/${P}-jpeg.patch.bz2"
 
-LICENSE="GPL-2
-	handbook? ( FDL-1.2 )"
+LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending handbook +imagemagick ipod mjpeg redeyes scanner"
+IUSE="cdr calendar crypt debug expoblending +imagemagick ipod mjpeg redeyes scanner"
 
 DEPEND="
 	>=dev-libs/expat-2.0.1
@@ -38,7 +35,7 @@ DEPEND="
 		>=media-libs/libgpod-0.7
 		x11-libs/gtk+:2
 	)
-	redeyes? ( media-libs/opencv )
+	redeyes? ( >=media-libs/opencv-1.0 )
 	scanner? (
 		>=kde-base/libksane-${KDE_MINIMAL}
 		media-gfx/sane-backends
@@ -47,22 +44,12 @@ DEPEND="
 RDEPEND="${DEPEND}
 	cdr? ( app-cdr/k3b )
 	expoblending? ( media-gfx/hugin )
-	imagemagick? ( media-gfx/imagemagick )
+	imagemagick? ( >=media-gfx/imagemagick-5.5.4 )
 	mjpeg? ( media-video/mjpegtools )
 "
 
-PATCHES=( "${FILESDIR}/${PN}-1.3.0-expoblending.patch" )
-
-src_prepare() {
-	if use handbook; then
-		echo "add_subdirectory( doc )" >> CMakeLists.txt
-	else
-		mkdir doc || die
-		echo >> doc/CMakeLists.txt || die
-	fi
-
-	kde4-base_src_prepare
-}
+PATCHES=( "${DISTDIR}/${P}-jpeg.patch.bz2"
+	"${FILESDIR}/${P}-expoblending.patch" )
 
 src_configure() {
 	# Remove flags -floop-block -floop-interchange
@@ -85,12 +72,4 @@ src_configure() {
 	)
 
 	kde4-base_src_configure
-}
-
-src_install() {
-	kde4-base_src_install
-
-	if use handbook; then
-		dodoc readme-handbook.txt || die
-	fi
 }
