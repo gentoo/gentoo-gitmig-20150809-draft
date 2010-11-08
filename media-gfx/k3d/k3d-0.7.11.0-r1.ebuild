@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.6 2010/05/12 09:45:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.7 2010/11/08 22:49:01 maekke Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND="
 	graphviz? ( media-gfx/graphviz )
 	gts? ( sci-libs/gts )
 	imagemagick? ( media-gfx/imagemagick )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	openexr? ( media-libs/openexr )
 	png? ( >=media-libs/libpng-1.2.43-r2 )
 	python? ( >=dev-lang/python-2.3 dev-python/cgkit )

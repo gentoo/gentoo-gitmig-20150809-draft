@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.2 2010/07/08 21:22:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.3 2010/11/08 22:36:11 maekke Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/agg[truetype]
 	sys-libs/zlib
 	expat? ( dev-libs/expat )
 	jpeg2k? ( media-libs/jasper )
-	jpeg? ( >=media-libs/jpeg-8a )
+	jpeg? ( virtual/jpeg )
 	lcms? ( =media-libs/lcms-1* )
 	lua? ( dev-lang/lua )
 	openexr? ( media-libs/openexr )

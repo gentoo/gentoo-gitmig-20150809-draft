@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exact-image
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.5 2010/10/23 00:44:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.6 2010/11/08 22:36:11 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> exact-image-0.8.1.ebuild:
+  change jpeg dep to virtual/jpeg
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata

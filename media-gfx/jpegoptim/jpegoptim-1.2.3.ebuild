@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/jpegoptim-1.2.3.ebuild,v 1.2 2010/02/02 20:51:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/jpegoptim-1.2.3.ebuild,v 1.3 2010/11/08 22:45:08 maekke Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND="media-libs/jpeg:0"
+DEPEND="virtual/jpeg"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel_make.patch

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/jpegoptim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.14 2010/02/02 20:51:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.15 2010/11/08 22:45:08 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> jpegoptim-1.2.2.ebuild,
+  jpegoptim-1.2.3.ebuild:
+  change jpeg dep to virtual/jpeg
 
   02 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   jpegoptim-1.2.3.ebuild, +files/jpegoptim-1.2.3-parallel_make.patch:
