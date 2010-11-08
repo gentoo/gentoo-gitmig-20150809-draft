@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.99 2010/10/13 05:56:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.100 2010/11/08 22:10:44 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org> hugin-2010.0.0.ebuild,
+  hugin-2010.2.0.ebuild:
+  change jpeg dep to virtual/jpeg
 
 *hugin-2010.2.0 (13 Oct 2010)
 
