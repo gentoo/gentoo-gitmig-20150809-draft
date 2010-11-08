@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.10 2010/11/08 11:20:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.11 2010/11/08 11:22:54 nelchael Exp $
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
+  Improve metadata: add no-herd and my name.
 
 *gflags-1.4 (08 Nov 2010)
 
