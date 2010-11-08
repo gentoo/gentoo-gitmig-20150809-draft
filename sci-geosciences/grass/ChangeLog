@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.91 2010/10/10 21:45:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.92 2010/11/08 17:27:39 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> grass-6.3.0.ebuild,
+  grass-6.4.0.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> grass-6.3.0.ebuild,
   grass-6.4.0.ebuild:

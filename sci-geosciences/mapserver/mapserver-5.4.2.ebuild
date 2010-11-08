@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.3 2010/08/21 19:44:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.4 2010/11/08 17:31:45 xarthisius Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -21,7 +21,7 @@ IUSE="agg doc flash gdal geos java pdf perl php postgis proj python ruby tcl thr
 
 # compilation fails with jdk > 1.4 on some native part probably
 RDEPEND="media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/freetype
 	>=media-libs/gd-2.0.12
 	sys-libs/zlib

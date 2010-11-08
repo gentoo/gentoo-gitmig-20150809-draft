@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.20 2010/10/30 01:20:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.21 2010/11/08 17:30:15 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  mapnik-0.6.1-r3.ebuild, mapnik-0.7.1-r1.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
 *mapnik-0.7.1-r1 (30 Oct 2010)
 

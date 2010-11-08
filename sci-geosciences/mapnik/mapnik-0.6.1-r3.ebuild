@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r3.ebuild,v 1.2 2010/06/17 21:01:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.1-r3.ebuild,v 1.3 2010/11/08 17:30:15 xarthisius Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -20,7 +20,7 @@ RDEPEND="=dev-libs/boost-1.39*
 	dev-libs/libxml2
 	dev-libs/icu
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff
 	media-libs/freetype:2
 	sci-libs/proj

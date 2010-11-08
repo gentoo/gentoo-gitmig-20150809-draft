@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.21 2010/08/21 19:44:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.22 2010/11/08 17:31:45 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  mapserver-5.4.2.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   21 Aug 2010; Mike Frysinger <vapier@gentoo.org> mapserver-5.4.2.ebuild:
   Remove unused reference to long dead (circa 2006) AT_GNUCONF_UPDATE variable.
