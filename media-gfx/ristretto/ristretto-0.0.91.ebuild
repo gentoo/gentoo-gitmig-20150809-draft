@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.91.ebuild,v 1.6 2010/11/08 11:16:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.91.ebuild,v 1.7 2010/11/08 13:00:02 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -42,7 +42,10 @@ src_prepare() {
 		-e "/TARGET_DIR/s:(datadir)/doc/ristretto:(datadir)/doc/${PF}:" \
 		docs/manual/C/Makefile.am || die
 
-	sed -i -e '/XDT_I18N/s:hr ::' configure.in || die #344657
+	sed -i \
+		-e '/XDT_I18N/s:hr ::' \
+		-e '/XDT_I18N/s:vi ::' \
+		configure.in || die #344657
 
 	xfconf_src_prepare
 }
