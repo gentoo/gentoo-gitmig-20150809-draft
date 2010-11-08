@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.2 2010/06/24 16:09:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.3 2010/11/08 17:51:19 xarthisius Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/blas
 	virtual/cblas
 	sys-libs/ncurses
 	gtk? (
-		media-libs/jpeg
+		virtual/jpeg
 		media-libs/libpng
 		sys-libs/zlib
 		>=x11-libs/gtk+-2
