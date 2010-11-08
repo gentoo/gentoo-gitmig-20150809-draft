@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.9 2010/10/15 12:58:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.10 2010/11/08 15:54:41 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -17,8 +17,8 @@ IUSE="alsa fbcon jack jpeg opengl oss png svga test vga vorbis X"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg? ( >=media-libs/jpeg-6b )
-	png? ( >=media-libs/libpng-1.2 )
+	jpeg? ( virtual/jpeg )
+	png? ( >=media-libs/libpng-1.4 )
 	svga? ( media-libs/svgalib )
 	vorbis? ( media-libs/libvorbis )
 	X? (

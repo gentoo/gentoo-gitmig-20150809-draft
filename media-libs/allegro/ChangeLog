@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.98 2010/10/15 12:58:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.99 2010/11/08 15:54:41 ssuominen Exp $
+
+  08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  allegro-4.4.1.1-r1.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   15 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   allegro-4.4.1.1-r1.ebuild:
