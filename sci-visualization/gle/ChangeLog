@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.13 2010/11/03 16:48:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.14 2010/11/08 17:55:39 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> gle-4.2.3b.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   04 Nov 2010; Andrey Grozin <grozin@gentoo.org> -gle-4.2.3.ebuild,
   -files/gle-4.2.3-parallel.patch, gle-4.2.3b.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.3b.ebuild,v 1.2 2010/11/03 16:48:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.3b.ebuild,v 1.3 2010/11/08 17:55:39 xarthisius Exp $
 
 EAPI=2
 inherit eutils elisp-common qt4-r2 flag-o-matic autotools
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="sys-libs/ncurses
 	X? ( x11-libs/libX11 )
 	qt4? ( x11-libs/qt-gui:4 )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	emacs? ( virtual/emacs )"

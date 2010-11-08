@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.9 2010/10/10 21:58:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.10 2010/11/08 17:57:05 xarthisius Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ DEPEND=">=x11-libs/openmotif-2.3:0
 	fftw? ( sci-libs/fftw:2.1 )
 	netcdf? ( sci-libs/netcdf )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	pdf? ( media-libs/pdflib )"
 
 RDEPEND="${DEPEND}
