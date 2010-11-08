@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.570.0-r1.ebuild,v 1.3 2010/11/07 19:23:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.570.0-r1.ebuild,v 1.4 2010/11/08 16:45:35 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -134,9 +134,7 @@ src_prepare() {
 
 	# Make sure the build system will use the right python, bug #344367.
 	# Only convert directories that need it, to save time.
-	for dir in build tools; do
-		python_convert_shebangs -q -r 2 "${dir}"
-	done
+	python_convert_shebangs -q -r 2 build tools
 }
 
 src_configure() {
