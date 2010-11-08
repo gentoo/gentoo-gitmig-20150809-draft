@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/asmem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.25 2010/11/08 16:31:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.26 2010/11/08 19:45:51 voyageur Exp $
+
+  08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -asmem-1.10-r1.ebuild:
+  Actually drop the old version
 
   08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -files/asmem-1.10-gentoo.patch, asmem-1.12.ebuild:
