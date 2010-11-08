@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.22 2010/11/01 19:41:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.23 2010/11/08 02:45:35 ssuominen Exp $
 
 EAPI=2
 inherit pax-utils eutils multilib python xfconf git
@@ -36,11 +36,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
-}
-
-src_prepare() {
-	# moving docs to version-specific directory
-	sed -i -e "s:/${PN}/user/midori.html:/user/midori.html:g" midori/midori-browser.c || die
 }
 
 src_configure() {
