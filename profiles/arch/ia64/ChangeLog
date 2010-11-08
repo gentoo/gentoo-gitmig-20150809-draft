@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.87 2010/10/10 18:40:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.88 2010/11/08 12:24:21 arfrever Exp $
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.use.mask:
+  Mask "test" USE flag of dev-util/buildbot*.
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask frei0r

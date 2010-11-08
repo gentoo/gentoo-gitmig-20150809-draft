@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.72 2010/11/07 14:11:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.73 2010/11/08 12:24:21 arfrever Exp $
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.use.mask:
+  Mask "test" USE flag of dev-util/buildbot*.
 
   07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.use.mask:
