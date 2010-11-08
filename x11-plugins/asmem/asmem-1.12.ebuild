@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.12.ebuild,v 1.6 2008/06/27 20:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.12.ebuild,v 1.7 2010/11/08 16:31:39 voyageur Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libXpm
 	x11-libs/libXext
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( virtual/jpeg )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 

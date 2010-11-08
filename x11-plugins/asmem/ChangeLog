@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/asmem
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.24 2008/06/27 20:47:47 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/ChangeLog,v 1.25 2010/11/08 16:31:39 voyageur Exp $
+
+  08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/asmem-1.10-gentoo.patch, asmem-1.12.ebuild:
+  Move to virtual/jpeg, drop old versions
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> asmem-1.12.ebuild:
   x86 stable wrt #229541
