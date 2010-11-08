@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4764 2010/11/08 01:05:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4765 2010/11/08 12:15:41 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Update qt-creator mask entry
 
   08 Nov 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Erlang 14A (aka dev-lang/erlang-14.1) is gone from the tree, so remove

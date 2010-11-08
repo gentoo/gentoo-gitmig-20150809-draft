@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12179 2010/11/08 09:50:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12180 2010/11/08 12:15:42 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (08 Nov 2010)
+# Beta releases should be masked
+=dev-util/qt-creator-2.1.0_beta*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (08 Oct 2010)
 # Broken on newer X setups and public server seems dead.
@@ -692,10 +696,6 @@ net-p2p/overnet
 #
 # Removal on 2010-11-26
 app-benchmarks/xfbsuite
-
-# Markos Chandras <hwoarang@gentoo.org> ( 26 Sep 2010 )
-# Masking because of masked Qt-4.7
-=dev-util/qt-creator-2.0.1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> ( 26 Sep 2010 )
 # masked for removel in 30 days,
