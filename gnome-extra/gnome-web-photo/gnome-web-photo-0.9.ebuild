@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.9.ebuild,v 1.4 2010/05/16 20:33:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.9.ebuild,v 1.5 2010/11/08 22:49:40 eva Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=dev-libs/libxml2-2.6.12
 	media-libs/libpng
 	gnome-base/gconf
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	>=net-libs/xulrunner-1.9.2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
