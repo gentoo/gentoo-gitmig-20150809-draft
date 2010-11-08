@@ -1,15 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9.ebuild,v 1.1 2009/09/03 12:25:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9.ebuild,v 1.2 2010/11/08 18:44:19 arfrever Exp $
 
-inherit distutils flag-o-matic
+EAPI="3"
+PYTHON_DEPEND="2"
 
-MY_P=${P/_/}
+inherit distutils
+
+MY_P="${P/_/}"
+
 DESCRIPTION="Python library for creating 3D images"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://cgkit.sourceforge.net"
-RDEPEND="dev-lang/python
-	dev-python/pyrex
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
+RDEPEND="dev-python/pyrex
 	dev-libs/boost
 	dev-python/pyprotocols
 	dev-python/pyopengl
@@ -19,16 +23,20 @@ RDEPEND="dev-lang/python
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
-SLOT="0"
 LICENSE="LGPL-2.1 MPL-1.1 GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="3ds"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
 
 	sed -i -e "s/fPIC/fPIC\",\"${CFLAGS// /\",\"}/" supportlib/SConstruct
 	cp config_template.cfg config.cfg
@@ -52,16 +60,16 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"/supportlib
+	pushd supportlib > /dev/null
 	scons ${MAKEOPTS}
-	cd "${S}"
+	popd > /dev/null
+
 	distutils_src_compile
 }
 
 src_test() {
 	cd unittests
 	# Remove failing tests due to non-existing files
-	rm test_maimport.py test_mayaascii.py test_mayabinary.py test_ri.py \
-		test_slparams.py
-	PYTHONPATH=$(ls -d ../build/lib*) ${python} all.py || die "tests failed"
+	rm test_maimport.py test_mayaascii.py test_mayabinary.py test_ri.py test_slparams.py
+	PYTHONPATH="$(ls -d ../build/lib*)" "$(PYTHON)" all.py || die "Tests failed"
 }
