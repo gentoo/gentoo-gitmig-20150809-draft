@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/csindex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.7 2009/09/23 17:24:26 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.8 2010/11/08 00:07:21 aballier Exp $
+
+*csindex-2.11c-r1 (08 Nov 2010)
+
+  08 Nov 2010; Alexis Ballier <aballier@gentoo.org>
+  +csindex-2.11c-r1.ebuild, +files/csindex-2.11c-decl.patch,
+  +files/csindex-2.11c-flags.patch:
+  respect ldflags bug #334863, keyword ~amd64, fix implicit functions
+  declarations
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> csindex-2.11c.ebuild:
   Remove virtual/libc
