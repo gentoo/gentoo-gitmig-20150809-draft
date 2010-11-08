@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/buildbot-slave
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.1 2010/11/08 12:21:18 arfrever Exp $
+
+*buildbot-slave-0.8.2 (08 Nov 2010)
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +buildbot-slave-0.8.2.ebuild, +files/buildslave.confd,
+  +files/buildslave.initd, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
