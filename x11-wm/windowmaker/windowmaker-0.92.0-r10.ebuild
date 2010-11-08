@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r10.ebuild,v 1.1 2010/08/25 12:42:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r10.ebuild,v 1.2 2010/11/08 15:01:38 voyageur Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ DEPEND="x11-libs/libXv
 	media-libs/fontconfig
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	png? ( >=media-libs/libpng-1.2.1 )
-	jpeg? ( >=media-libs/jpeg-6b:0 )
+	jpeg? ( virtual/jpeg )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )
 	gnustep? ( >=gnustep-base/gnustep-make-2.0 )
 	xinerama? ( x11-libs/libXinerama )"
@@ -34,7 +34,6 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 src_prepare() {
-	cd "${S}"
 	local psd="${WORKDIR}"/${P}-patchset-${PATCHVER}
 
 	epatch "${psd}"/WindowMaker-0.92.0-cvs20060123.patch

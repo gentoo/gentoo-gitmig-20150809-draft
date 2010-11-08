@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r9.ebuild,v 1.6 2010/10/19 02:21:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r9.ebuild,v 1.7 2010/11/08 15:01:38 voyageur Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ DEPEND="x11-libs/libXv
 	media-libs/fontconfig
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
 	png? ( >=media-libs/libpng-1.2.1 )
-	jpeg? ( >=media-libs/jpeg-6b:0 )
+	jpeg? ( virtual/jpeg )
 	tiff? ( >=media-libs/tiff-3.6.1-r2 )
 	gnustep? ( >=gnustep-base/gnustep-make-2.0 )
 	xinerama? ( x11-libs/libXinerama )"
