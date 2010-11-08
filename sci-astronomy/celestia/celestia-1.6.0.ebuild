@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.16 2010/09/16 18:15:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.17 2010/11/08 17:03:53 xarthisius Exp $
 
 EAPI=2
 inherit eutils flag-o-matic gnome2 autotools
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="cairo gnome gtk nls pch theora threads"
 
 RDEPEND="virtual/opengl
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	>=dev-lang/lua-5.0
 	gtk? ( !gnome? ( >=x11-libs/gtk+-2.6 >=x11-libs/gtkglext-1.0 ) )

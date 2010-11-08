@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.66 2010/09/30 10:03:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.67 2010/11/08 17:06:29 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  stellarium-0.10.4.ebuild, stellarium-0.10.5.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   stellarium-0.10.5.ebuild:

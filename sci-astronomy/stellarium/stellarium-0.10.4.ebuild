@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.4.ebuild,v 1.5 2010/07/06 10:37:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.4.ebuild,v 1.6 2010/11/08 17:06:29 xarthisius Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -26,7 +26,7 @@ RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libpng
 	media-libs/freetype:2
-	media-libs/jpeg
+	virtual/jpeg
 	>=x11-libs/qt-core-4.6.0:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4

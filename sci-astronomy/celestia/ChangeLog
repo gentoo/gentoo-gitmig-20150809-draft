@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.66 2010/09/16 18:15:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.67 2010/11/08 17:03:53 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.0.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   celestia-1.6.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stiff/ChangeLog,v 1.4 2010/02/26 19:47:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stiff/ChangeLog,v 1.5 2010/11/08 17:08:39 xarthisius Exp $
+
+  08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> stiff-2.1.2.ebuild:
+  media-libs/jpeg -> virtual/jpeg
 
 *stiff-2.1.2 (26 Feb 2010)
 
