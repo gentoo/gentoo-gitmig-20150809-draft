@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.9.ebuild,v 1.3 2010/08/05 19:39:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.9.ebuild,v 1.4 2010/11/08 18:05:28 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -16,9 +16,9 @@ IUSE="fftw imagemagick jpeg lapack png tiff"
 
 RDEPEND="fftw? ( >=sci-libs/fftw-3 )
 	imagemagick? ( media-gfx/imagemagick )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
-	png? ( media-libs/libpng )
+	png? ( >=media-libs/libpng-1.4 )
 	tiff? ( media-libs/tiff )
 	x11-libs/libX11
 	x11-libs/libXext
