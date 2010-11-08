@@ -1,0 +1,26 @@
+From 04dd349103ac1db8660d5c4fd86e91e3b488650c Mon Sep 17 00:00:00 2001
+From: Martin Pitt <martin.pitt@ubuntu.com>
+Date: Thu, 04 Nov 2010 22:45:10 +0000
+Subject: Fix compilation eror against Linux 2.6.36
+
+Include <stdint.h> so that <linux/fs.h> can use uint64_t. Arguably a bug in the
+kernel headers, but it costs us nothing to safeguard against it.
+
+  CC     libupshared_la-up-device-idevice.lo
+In file included from sysfs-utils.c:39:0:
+/usr/include/linux/fs.h:37:2: error: expected specifier-qualifier-list before ‘uint64_t’
+---
+diff --git a/src/linux/sysfs-utils.c b/src/linux/sysfs-utils.c
+index 01c3623..efba253 100644
+--- a/src/linux/sysfs-utils.c
++++ b/src/linux/sysfs-utils.c
+@@ -36,6 +36,7 @@
+ #include <fcntl.h>
+ #include <pwd.h>
+ #include <grp.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ #include <sys/ioctl.h>
+ #include <glib.h>
+--
+cgit v0.8.3-6-g21f6

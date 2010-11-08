@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.4.ebuild,v 1.8 2010/10/17 08:16:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.4.ebuild,v 1.9 2010/11/08 11:36:05 ssuominen Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -11,7 +11,7 @@ SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="ppc"
 IUSE="debug doc nls introspection kernel_FreeBSD kernel_linux"
 
 COMMON_DEPEND=">=dev-libs/glib-2.21.5:2
