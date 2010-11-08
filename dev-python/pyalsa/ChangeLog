@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.10 2010/06/01 14:52:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.11 2010/11/08 01:10:08 fauli Exp $
+
+  08 Nov 2010; Christian Faulhammer <fauli@gentoo.org> pyalsa-1.0.22.ebuild:
+  stable x86, bug 344571
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> pyalsa-1.0.20.ebuild,
   pyalsa-1.0.21.ebuild, pyalsa-1.0.22.ebuild:
