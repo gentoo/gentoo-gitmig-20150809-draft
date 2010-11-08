@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.11 2010/01/14 16:44:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.12 2010/11/08 22:40:48 eva Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="=virtual/libusb-0*
 	ncurses? ( dev-libs/cdk )
 	aalib? (
 		media-libs/aalib
-		media-libs/jpeg )
+		virtual/jpeg:0 )
 	exif? (	media-libs/libexif )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.102 2010/11/05 20:27:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.103 2010/11/08 22:40:48 eva Exp $
+
+  08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gphoto2-2.4.5.ebuild,
+  gphoto2-2.4.8.ebuild, gphoto2-2.4.9.ebuild:
+  Allow use of alternate jpeg implementation.
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> gphoto2-2.4.9.ebuild:
   ppc64 stable wrt #339475
