@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/colubrid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.5 2010/07/09 08:40:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.6 2010/11/08 19:09:50 arfrever Exp $
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  colubrid-0.10-r1.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   09 Jul 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update metadata.xml. antarus is staffer now (#119161)
