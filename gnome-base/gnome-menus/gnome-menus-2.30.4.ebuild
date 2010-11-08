@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.4.ebuild,v 1.1 2010/09/27 21:37:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.4.ebuild,v 1.2 2010/11/08 22:08:18 eva Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.4"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils gnome2 python
 
@@ -23,9 +25,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40"
 
-DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+
 	# Do NOT compile with --disable-debug/--enable-debug=no
 	# It disables api usage checks
 	if ! use debug ; then
@@ -47,16 +49,25 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile-disabled
 	ln -s $(type -P true) py-compile
+
+	python_copy_sources
 }
 
 src_configure() {
-	gnome2_src_configure
+	python_execute_function -s gnome2_src_configure
+}
+
+src_compile() {
+	python_execute_function -s gnome2_src_compile
+}
+
+src_test() {
+	python_execute_function -s -d
 }
 
 src_install() {
-	gnome2_src_install
-
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
+	python_execute_function -s gnome2_src_install
+	python_clean_installation_image
 
 	# Prefix menu, bug #256614
 	mv "${D}"/etc/xdg/menus/applications.menu \
@@ -69,8 +80,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	if use python; then
-		python_need_rebuild
-		python_mod_optimize $(python_get_sitedir)/GMenuSimpleEditor
+		python_mod_optimize GMenuSimpleEditor
 	fi
 
 	ewarn "Due to bug #256614, you might lose icons in applications menus."
@@ -82,6 +92,6 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 	if use python; then
-		python_mod_cleanup $(python_get_sitedir)/GMenuSimpleEditor
+		python_mod_cleanup GMenuSimpleEditor
 	fi
 }
