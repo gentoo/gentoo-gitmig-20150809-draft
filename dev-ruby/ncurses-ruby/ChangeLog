@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.48 2010/11/05 14:04:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.49 2010/11/08 21:06:04 graaff Exp $
+
+*ncurses-ruby-1.2.4-r2 (08 Nov 2010)
+
+  08 Nov 2010; Hans de Graaff <graaff@gentoo.org>
+  +ncurses-ruby-1.2.4-r2.ebuild, +files/ncurses-ruby-1.2.4-fix-trace.patch:
+  Fix compilation when ncurses is compiled with USE=trace, fixing report in
+  bug 344243.
+
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   ncurses-ruby-1.2.4-r1.ebuild:
