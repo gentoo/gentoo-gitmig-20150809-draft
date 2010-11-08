@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2-r1.ebuild,v 1.1 2010/08/27 16:24:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2-r1.ebuild,v 1.2 2010/11/08 12:42:35 nelchael Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto
 	media-libs/imlib
-	media-libs/jpeg
+	virtual/jpeg
 	>=sys-apps/sed-4"
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.1.ebuild,v 1.5 2010/07/04 10:00:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.1.ebuild,v 1.6 2010/11/08 12:44:04 nelchael Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="X? ( x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXext )
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng
 		media-libs/netpbm )

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pogo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.15 2010/08/27 16:25:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.16 2010/11/08 12:42:35 nelchael Exp $
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> pogo-2.2.ebuild,
+  pogo-2.2-r1.ebuild:
+  Change dependency: media-libs/jpeg -> virtual/jpeg.
 
 *pogo-2.2-r1 (27 Aug 2010)
 

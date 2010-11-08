@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.6.ebuild,v 1.6 2010/07/11 14:53:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.6.ebuild,v 1.7 2010/11/08 12:46:04 nelchael Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -18,7 +18,7 @@ COMMON_DEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm
 	media-libs/libpng
-	media-libs/jpeg"
+	virtual/jpeg"
 RDEPEND="${COMMON_DEPEND}
 	media-fonts/font-misc-misc"
 DEPEND="${COMMON_DEPEND}
