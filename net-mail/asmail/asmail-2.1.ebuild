@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.1 2008/01/17 06:51:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.2 2010/11/08 16:36:07 voyageur Exp $
 
 inherit toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/openssl
 	x11-libs/libXpm
 	x11-libs/libICE
 	x11-libs/libSM
-	jpeg? ( media-libs/jpeg )"
+	jpeg? ( virtual/jpeg )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
