@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.9 2008/05/12 16:02:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.10 2010/11/08 17:41:42 xarthisius Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ~mips ~ppc ppc64 sparc x86"
 IUSE="doc python"
 
 RDEPEND=">=media-libs/tiff-3.7
-	media-libs/jpeg
+	virtual/jpeg
 	sci-libs/proj"
 
 DEPEND="${RDEPEND}

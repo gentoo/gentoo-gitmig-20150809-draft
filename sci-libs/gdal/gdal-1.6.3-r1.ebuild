@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.12 2010/11/05 18:35:02 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.13 2010/11/08 17:37:06 xarthisius Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -28,7 +28,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	sci-libs/libgeotiff
 	dev-libs/expat
 	curl? ( net-misc/curl )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	perl? ( dev-lang/perl )

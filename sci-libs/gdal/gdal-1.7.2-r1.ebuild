@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r1.ebuild,v 1.1 2010/09/11 14:55:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r1.ebuild,v 1.2 2010/11/08 17:37:06 xarthisius Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ RDEPEND="
 	gif? ( media-libs/giflib )
 	gml? ( >=dev-libs/xerces-c-3 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4[szip] )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	mysql? ( virtual/mysql )
 	netcdf? ( sci-libs/netcdf )
