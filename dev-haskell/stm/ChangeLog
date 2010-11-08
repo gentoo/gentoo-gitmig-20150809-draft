@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/stm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.9 2010/10/10 11:17:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.10 2010/11/08 07:49:51 phajdan.jr Exp $
+
+  08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> stm-2.1.2.2.ebuild:
+  x86 stable wrt bug #339155
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> stm-2.1.2.2.ebuild:
   Stable on amd64 wrt bug #339155
