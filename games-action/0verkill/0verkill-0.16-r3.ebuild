@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.7 2010/01/02 23:09:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r3.ebuild,v 1.8 2010/11/08 10:57:53 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -22,6 +22,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-home-overflow.patch \
 		"${FILESDIR}"/${P}-segv.patch \
 		"${FILESDIR}"/${P}-gentoo-paths.patch \
+		"${FILESDIR}"/${P}-ovflfix.patch \
 		"${FILESDIR}"/${P}-underflow-check.patch #136222
 	sed -i \
 		-e "s:data/:${GAMES_DATADIR}/${PN}/data/:" cfg.h \

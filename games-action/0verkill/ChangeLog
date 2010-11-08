@@ -1,6 +1,10 @@
 # ChangeLog for games-action/0verkill
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.16 2008/03/07 23:54:07 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.17 2010/11/08 10:57:53 tupone Exp $
+
+  08 Nov 2010; Alfredo Tupone <tupone@gentoo.org> 0verkill-0.16-r3.ebuild,
+  +files/0verkill-0.16-ovflfix.patch:
+  Fix overflow. Bug #337188 by flameeyes@gentoo.org
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   0verkill-0.16-r3.ebuild:
