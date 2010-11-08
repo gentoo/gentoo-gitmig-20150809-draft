@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.5 2010/10/31 23:35:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.6 2010/11/08 12:04:09 phajdan.jr Exp $
+
+  08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> paver-1.0.3.ebuild:
+  x86 stable wrt bug #344527
 
   31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   paver-1.0.3.ebuild:
