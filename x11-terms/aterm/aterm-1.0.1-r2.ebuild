@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r2.ebuild,v 1.4 2010/08/17 05:12:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r2.ebuild,v 1.5 2010/11/08 12:55:59 nelchael Exp $
 
 EAPI=3
 inherit flag-o-matic
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="background cjk xgetdefault"
 
-RDEPEND="media-libs/jpeg:0
+RDEPEND="virtual/jpeg
 	media-libs/libpng
 	background? ( x11-wm/afterstep )
 	x11-libs/libX11

@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.115 2010/08/17 05:12:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.116 2010/11/08 12:55:59 nelchael Exp $
+
+  08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> aterm-1.0.1-r1.ebuild,
+  aterm-1.0.1-r2.ebuild:
+  Change dependency: media-libs/jpeg -> virtual/jpeg.
 
   17 Aug 2010; Jonathan Callen <abcd@gentoo.org> aterm-1.0.1-r2.ebuild:
   Transfer prefix keywords, bump to EAPI=3
