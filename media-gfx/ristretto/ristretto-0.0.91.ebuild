@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.91.ebuild,v 1.5 2010/09/21 17:04:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.91.ebuild,v 1.6 2010/11/08 11:16:27 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 EAUTORECONF=yes
 inherit xfconf
 
@@ -29,8 +29,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
-		$(xfconf_use_debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
@@ -38,6 +41,8 @@ src_prepare() {
 	sed -i \
 		-e "/TARGET_DIR/s:(datadir)/doc/ristretto:(datadir)/doc/${PF}:" \
 		docs/manual/C/Makefile.am || die
+
+	sed -i -e '/XDT_I18N/s:hr ::' configure.in || die #344657
 
 	xfconf_src_prepare
 }
