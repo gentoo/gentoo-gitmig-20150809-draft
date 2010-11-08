@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mt_dolphin_ia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/ChangeLog,v 1.5 2010/10/20 19:05:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/ChangeLog,v 1.6 2010/11/08 19:55:44 hwoarang Exp $
+
+  08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  mt_dolphin_ia-0.1.98.ebuild:
+  Keyworded for amd64. Bug #344437
 
   20 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   mt_dolphin_ia-0.1.98.ebuild:

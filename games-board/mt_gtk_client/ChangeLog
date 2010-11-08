@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mt_gtk_client
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/ChangeLog,v 1.4 2007/02/08 21:01:38 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/ChangeLog,v 1.5 2010/11/08 19:56:22 hwoarang Exp $
+
+  08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  mt_gtk_client-0.1.98.ebuild:
+  Keyworded for amd64. Bug #344437
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
