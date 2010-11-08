@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.3 2009/09/07 06:55:54 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.4 2010/11/08 17:28:26 arfrever Exp $
+
+*ipdb-0.2 (08 Nov 2010)
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ipdb-0.1_p1716.ebuild, +ipdb-0.2.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   07 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ipdb-0.1_p1716.ebuild:
