@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6135 2010/11/07 20:53:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6136 2010/11/08 07:35:16 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -461,7 +461,9 @@ app-i18n/sunpinyin:xim - Enable support for XIM
 app-i18n/tomoe:hyperestraier - Enable support for app-text/hyperestraier
 app-i18n/uim:anthy - Enable support for app-i18n/anthy input method 
 app-i18n/uim:eb - Enable support for dev-libs/eb
+app-i18n/uim:ffi - Enable support for virtual/libffi
 app-i18n/uim:prime - Enable support for app-i18n/prime
+app-i18n/uim:skk - Enable support for app-i18n/skk-jisyo
 app-laptop/ibam:gkrellm - Enable building of app-admin/gkrellm module
 app-laptop/laptop-mode-tools:scsi - Adds dependency on sdparm to control non-SATA SCSI drivers
 app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
