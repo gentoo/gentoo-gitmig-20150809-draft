@@ -1,18 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20070626b.ebuild,v 1.9 2008/05/12 15:40:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107.ebuild,v 1.1 2010/11/09 22:17:08 ramereth Exp $
 
 inherit webapp depend.php
 
 # upstream uses dashes in the datestamp
-MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}${PV:8:1}"
+MY_BASE_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
+MY_PV="${MY_BASE_PV}${PV:8:1}"
 
 DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small company's documentation needs."
 HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
@@ -20,6 +21,8 @@ RDEPEND=""
 
 need_httpd_cgi
 need_php_httpd
+
+S="${WORKDIR}/${PN}-${MY_BASE_PV}"
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -33,7 +36,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	mv ${PN}-${MY_PV} ${P}
 	cd "${S}"
 
 	# create initial changes file
@@ -57,7 +59,7 @@ src_install() {
 		webapp_serverowned "${MY_HTDOCSDIR}"/${x}
 	done
 
-	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
+	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess.dist
 	webapp_configfile "${MY_HTDOCSDIR}"/conf
 
 	for x in $(find conf/ -not -name 'msg'); do

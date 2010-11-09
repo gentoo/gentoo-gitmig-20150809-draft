@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.47 2010/03/14 19:23:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.48 2010/11/09 22:17:08 ramereth Exp $
+
+*dokuwiki-20101107 (09 Nov 2010)
+
+  09 Nov 2010; Lance Albertson <ramereth@gentoo.org>
+  -dokuwiki-20070626b.ebuild, -dokuwiki-20090214b.ebuild,
+  -dokuwiki-20091225b.ebuild, +dokuwiki-20101107.ebuild:
+  Version bump, resolves #344681. Cleanup
 
   14 Mar 2010; Raúl Porcel <armin76@gentoo.org> dokuwiki-20091225c.ebuild:
   sparc stable wrt #301310
