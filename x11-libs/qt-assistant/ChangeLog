@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.97 2010/11/05 18:05:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.98 2010/11/09 09:12:02 wired Exp $
+
+  09 Nov 2010; Alex Alexander <wired@gentoo.org> qt-assistant-4.7.0.ebuild,
+  metadata.xml:
+  added qt3support USE, fixes bug #342423
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org> qt-assistant-4.5.3.ebuild,
   qt-assistant-4.6.2.ebuild, qt-assistant-4.6.2-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.0.ebuild,v 1.7 2010/11/01 12:29:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.0.ebuild,v 1.8 2010/11/09 09:12:02 wired Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -8,13 +8,13 @@ inherit qt4-build
 DESCRIPTION="The assistant help module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="compat doc +glib trace"
+IUSE="compat doc +glib qt3support trace"
 SRC_URI+=" compat? ( ftp://ftp.qt.nokia.com/qt/source/${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz )"
 
-DEPEND="~x11-libs/qt-gui-${PV}[aqua=,glib=,trace?]
-	~x11-libs/qt-sql-${PV}[aqua=,sqlite]
+DEPEND="~x11-libs/qt-gui-${PV}[aqua=,glib=,qt3support=,trace?]
+	~x11-libs/qt-sql-${PV}[aqua=,qt3support=,sqlite]
 	~x11-libs/qt-webkit-${PV}[aqua=]
-	~x11-libs/qt-declarative-${PV}"
+	~x11-libs/qt-declarative-${PV}[qt3support=]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -66,7 +66,7 @@ src_configure() {
 		-no-nas-sound -no-dbus -iconv -no-cups -no-nis -no-gif -no-libpng
 		-no-libmng -no-libjpeg -no-openssl -system-zlib -no-phonon
 		-no-xmlpatterns -no-freetype -no-libtiff -no-accessibility
-		-no-fontconfig -no-multimedia -no-qt3support -no-svg"
+		-no-fontconfig -no-multimedia -no-svg $(qt_use qt3support)"
 	! use glib && myconf="${myconf} -no-glib"
 	qt4-build_src_configure
 }
