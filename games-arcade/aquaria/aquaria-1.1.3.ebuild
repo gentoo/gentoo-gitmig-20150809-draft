@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/aquaria-1.1.3.ebuild,v 1.2 2010/05/21 01:30:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/aquaria-1.1.3.ebuild,v 1.3 2010/11/09 15:29:21 tupone Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/data"
 
 pkg_nofetch() {
 	echo
-	elog "Download ${A} from ${HOMEPAGE} and place it in ${DISTDIR}"
+	elog "Download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
 	echo
 }
 
