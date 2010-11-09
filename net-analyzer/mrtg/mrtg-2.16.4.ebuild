@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4.ebuild,v 1.1 2010/08/09 13:03:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4.ebuild,v 1.2 2010/11/09 14:16:06 pva Exp $
 
 EAPI="3"
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="dev-lang/perl
 	dev-perl/SNMP_Session
+	>=dev-perl/Socket6-0.20
 	>=media-libs/gd-1.8.4"
 
 src_prepare() {
