@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.28 2010/07/18 09:29:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.29 2010/11/09 14:00:47 ssuominen Exp $
+
+*lzop-1.03 (09 Nov 2010)
+
+  09 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> +lzop-1.03.ebuild:
+  Version bump.
 
   18 Jul 2010; Daniel Black <dragonheart@gentoo.org> -lzop-1.01.ebuild,
   -lzop-1.02_rc1.ebuild:
