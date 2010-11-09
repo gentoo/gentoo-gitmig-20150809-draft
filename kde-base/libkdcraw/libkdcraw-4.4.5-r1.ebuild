@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.4.5-r1.ebuild,v 1.2 2010/11/08 23:28:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.4.5-r1.ebuild,v 1.3 2010/11/09 01:56:10 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="KDE Image Plugin Interface: a dcraw library wrapper"
 HOMEPAGE="http://www.kipi-plugins.org"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

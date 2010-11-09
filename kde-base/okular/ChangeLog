@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.85 2010/11/08 23:32:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.86 2010/11/09 02:01:23 jmbsvicetto Exp $
+
+  09 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  okular-4.4.5-r1.ebuild:
+  Restored x86 keyword - bug 344689.
 
   08 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   okular-4.4.5-r1.ebuild:
