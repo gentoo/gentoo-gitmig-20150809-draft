@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6138 2010/11/08 23:14:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6139 2010/11/09 00:13:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2558,6 +2558,7 @@ net-dns/pdnsd:isdn - Enable ISDN features
 net-dns/pdnsd:nptl -  Linux-only: override auto-detection of the system threading implementation and force usage of the Native Posix Thread Library. 
 net-dns/pdnsd:underscores -  Enable support for domain names containing underscores 
 net-dns/pdnsd:urandom -  Linux-only: use /dev/urandom (pseudo-random number generation) instead of the default use of random() PRNG. 
+net-dns/unbound:gost - Enable GOST support
 net-dns/unbound:libevent - Use dev-libs/libevent instead of internal select based events
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
@@ -2795,6 +2796,7 @@ net-libs/gssdp:introspection - Use dev-libs/gobject-introspection for introspect
 net-libs/gupnp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-av:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
+net-libs/ldns:gost - Enable GOST support
 net-libs/libeXosip:srv - enable support for SRV records DNS queries
 net-libs/libesmtp:ssl -  Enable support for advanced SMTP authentication methods, like NTML and STARTTLS. Also use OpenSSL's MD5 implementation over internal version. 
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
