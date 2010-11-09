@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/topcom
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/topcom/ChangeLog,v 1.1 2010/11/09 17:48:55 tomka Exp $
+
+*topcom-0.16.2 (09 Nov 2010)
+
+  09 Nov 2010; Thomas Kahle <tomka@gentoo.org> +topcom-0.16.2.ebuild,
+  +files/topcom-0.16.2-no-internal-libs.patch, +metadata.xml:
+  New package: sci-mathematics/topcom, revised import from sci overlay,
+  fixes bug 285619
+
