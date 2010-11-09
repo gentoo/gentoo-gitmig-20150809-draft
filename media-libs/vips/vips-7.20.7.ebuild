@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.6 2010/06/21 10:05:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.7 2010/11/09 15:02:07 ssuominen Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	python? ( >=dev-lang/python-2.2 )
 	exif? ( >=media-libs/libexif-0.6 )
 	tiff? ( media-libs/tiff )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am"

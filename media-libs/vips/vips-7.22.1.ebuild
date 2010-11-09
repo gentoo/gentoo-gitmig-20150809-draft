@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.22.1.ebuild,v 1.2 2010/06/25 22:24:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.22.1.ebuild,v 1.3 2010/11/09 15:02:07 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	openexr? ( >=media-libs/openexr-1.2.2 )
 	exif? ( >=media-libs/libexif-0.6 )
 	tiff? ( media-libs/tiff )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am"
