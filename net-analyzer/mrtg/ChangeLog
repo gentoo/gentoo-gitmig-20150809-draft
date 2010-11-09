@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.102 2010/11/09 14:16:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.103 2010/11/09 17:57:07 pva Exp $
+
+*mrtg-2.16.4-r1 (09 Nov 2010)
+
+  09 Nov 2010; Peter Volkov <pva@gentoo.org> +mrtg-2.16.4-r1.ebuild,
+  +files/mrtg-2.16.4-disable-static.patch,
+  +files/mrtg-2.16.4-no-rpath.patch:
+  Fix static linkage and rpath, bug #332287, thank Diego Elio Pettenò for
+  report.
 
   09 Nov 2010; Peter Volkov <pva@gentoo.org> mrtg-2.16.4.ebuild:
   Depend on >=dev-perl/Socket6-0.20 to avoid duplicate definitions, bug
