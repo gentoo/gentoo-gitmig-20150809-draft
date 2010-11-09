@@ -1,7 +1,8 @@
 #!/sbin/runscript
 
 depend() {
-	need net cf-serverd
+	need net
+	after cf-serverd
 }
 
 start() {

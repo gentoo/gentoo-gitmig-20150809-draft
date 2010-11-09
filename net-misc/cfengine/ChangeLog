@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.112 2010/11/03 18:40:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.113 2010/11/09 17:35:14 idl0r Exp $
+
+*cfengine-3.1.0 (09 Nov 2010)
+
+  09 Nov 2010; Christian Ruppert <idl0r@gentoo.org> +cfengine-3.1.0.ebuild,
+  +files/cfengine-3.1.0-configure.ac.patch, files/cf-execd.rc6:
+  Version bump to 3.1.0. Start cf-execd after cf-serverd.
 
 *cfengine-3.0.5_p1-r3 (03 Nov 2010)
 
