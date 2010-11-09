@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.4.5.ebuild,v 1.5 2010/08/09 17:33:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.4.5.ebuild,v 1.6 2010/11/09 08:47:50 ssuominen Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ IUSE="debug +handbook jpeg rdp vnc zeroconf"
 #telepathy? ( >=net-libs/telepathy-qt4-0.18 ) not yet in portage/overlay
 
 DEPEND="
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	vnc? ( >=net-libs/libvncserver-0.9 )
 	zeroconf? (
 		|| (
