@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r1.ebuild,v 1.1 2010/11/08 23:33:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r1.ebuild,v 1.2 2010/11/09 05:55:33 mr_bones_ Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1" # Upstream ticket 240 -> wontfix
@@ -23,7 +23,7 @@ SRC_URI="${SRC_COM}${MY_DIR}/${MY_PN}-${MY_PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux"
-IUSE="boost doc emacs examples +readline"
+IUSE="boost doc emacs examples +readline test"
 
 RDEPEND="dev-libs/gmp
 	>=dev-libs/ntl-5.5.1
