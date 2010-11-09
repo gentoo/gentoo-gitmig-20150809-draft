@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/fff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/ChangeLog,v 1.5 2008/12/29 14:38:40 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/fff/ChangeLog,v 1.6 2010/11/09 20:29:57 ssuominen Exp $
+
+  09 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> fff-20050517.ebuild:
+  Use mlocate as default instead of slocate wrt #338380.
 
   29 Dec 2008; Ulrich Mueller <ulm@gentoo.org> fff-20050517.ebuild:
   rlocate is gone, don't depend on it; bug 207421.
