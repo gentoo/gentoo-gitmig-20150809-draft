@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5-r1.ebuild,v 1.2 2010/07/09 05:58:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5-r1.ebuild,v 1.3 2010/11/09 21:38:02 dilfridge Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ IUSE="cups foomaticdb gimp gtk readline ppds"
 
 DESCRIPTION="Ghostscript and cups printer drivers"
 HOMEPAGE="http://gutenprint.sourceforge.net"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 RESTRICT="test"
 
