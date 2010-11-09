@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.35 2010/11/07 22:19:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.36 2010/11/09 07:36:57 ulm Exp $
+
+*emacs-vcs-23.2.90 (09 Nov 2010)
+
+  09 Nov 2010; Ulrich Mueller <ulm@gentoo.org> +emacs-vcs-23.2.90.ebuild:
+  Pretest for Emacs 23.3.
 
   07 Nov 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
   emacs-vcs-24.0.9999.ebuild:
