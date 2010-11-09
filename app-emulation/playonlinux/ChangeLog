@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/playonlinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.8 2010/07/11 11:09:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.9 2010/11/09 00:32:18 volkmar Exp $
+
+*playonlinux-3.8.5 (09 Nov 2010)
+
+  09 Nov 2010; Mounir Lamouri <volkmar@gentoo.org>
+  +playonlinux-3.8.5.ebuild:
+  Version bump to 3.8.5. Fix bug 338764.
 
 *playonlinux-3.7.6 (11 Jul 2010)
 
