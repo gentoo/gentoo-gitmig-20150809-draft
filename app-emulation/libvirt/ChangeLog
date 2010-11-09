@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.79 2010/10/30 17:54:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.80 2010/11/09 13:25:58 flameeyes Exp $
+
+*libvirt-0.8.5-r2 (09 Nov 2010)
+
+  09 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libvirt-0.8.4.ebuild, +libvirt-0.8.5-r2.ebuild:
+  Cleanup old version; add new revbump that disables the xen-proxy in all
+  cases, since upstream deprecated it and won't be in the next version
+  anyway.
 
 *libvirt-0.8.5-r1 (30 Oct 2010)
 

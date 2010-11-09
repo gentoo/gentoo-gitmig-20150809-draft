@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.4.ebuild,v 1.1 2010/09/17 17:58:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r2.ebuild,v 1.1 2010/11/09 13:25:58 flameeyes Exp $
 
-#BACKPORTS=3
+BACKPORTS=2
 
 EAPI="2"
 
@@ -15,13 +15,15 @@ inherit eutils python autotools
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 SRC_URI="http://libvirt.org/sources/${P}.tar.gz
-	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
+	${BACKPORTS:+
+		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
+		http://dev.gentoo.org/~cardoe/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="avahi caps debug iscsi +libvirtd lvm +lxc macvtap +network nfs nls \
 	numa openvz parted pcap phyp policykit python qemu sasl selinux
-	uml virtualbox xen udev"
+	uml virtualbox xen udev +json"
 # IUSE=one : bug #293416 & bug #299011
 
 RDEPEND="sys-libs/readline
@@ -51,7 +53,8 @@ RDEPEND="sys-libs/readline
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( >=app-emulation/virtualbox-ose-2.2.0 >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
-	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )"
+	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
+	json? ( dev-libs/yajl )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -81,10 +84,7 @@ src_configure() {
 	myconf="${myconf} $(use_with avahi)"
 
 	## hypervisors on the local host
-	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
-	if ! use policykit && use xen; then
-		myconf="${myconf} --with-xen-proxy"
-	fi
+	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify) --without-xen-proxy"
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
@@ -128,9 +128,10 @@ src_configure() {
 	## other
 	myconf="${myconf} $(use_enable nls)"
 	myconf="${myconf} $(use_with python)"
+	myconf="${myconf} $(use_with json yajl)"
 
 	## stuff we don't yet support
-	myconf="${myconf} --without-netcf"
+	myconf="${myconf} --without-netcf --without-audit"
 
 	# we use udev over hal
 	myconf="${myconf} --without-hal"
