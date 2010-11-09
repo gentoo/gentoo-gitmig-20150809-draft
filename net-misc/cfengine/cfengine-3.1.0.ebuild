@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.0.ebuild,v 1.1 2010/11/09 17:35:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.0.ebuild,v 1.2 2010/11/09 20:02:35 idl0r Exp $
 
 EAPI="3"
 
@@ -70,8 +70,7 @@ src_configure() {
 		$(use_with pcre) \
 		$(use_with qdbm) \
 		$(use_enable selinux) \
-		$(use_with tokyocabinet) \
-		$(use_with mongo)
+		$(use_with tokyocabinet)
 
 	# Fix Makefile to skip inputs, see below "examples"
 	sed -i -e 's/\(SUBDIRS.*\) inputs/\1/' Makefile || die
