@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.80 2010/11/06 17:10:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.81 2010/11/09 15:53:45 phajdan.jr Exp $
+
+  09 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-bin-6.0.472.62-r1.ebuild, -chromium-bin-7.0.517.41.ebuild,
+  chromium-bin-7.0.517.44.ebuild:
+  Convert deps to virtual/jpeg. Remove old.
 
 *chromium-bin-7.0.517.44 (06 Nov 2010)
 
