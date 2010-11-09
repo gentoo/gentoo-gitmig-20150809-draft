@@ -19,5 +19,6 @@ as a server, but are linked into an application) are easily possible.
 <use>
   <flag name='libevent'>Use <pkg>dev-libs/libevent</pkg> instead of internal
   select based events</flag>
+  <flag name='gost'>Enable GOST support</flag>
 </use>
 </pkgmetadata>

@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.4.ebuild,v 1.2 2010/04/23 08:51:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.7.ebuild,v 1.1 2010/11/09 00:03:12 matsuu Exp $
 
 EAPI="3"
-
-inherit autotools eutils multilib
+PYTHON_DEPEND="python? 2"
+inherit eutils multilib python
 
 DESCRIPTION="A validating, recursive and caching DNS resolver"
 HOMEPAGE="http://unbound.net/"
@@ -13,12 +13,12 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
-IUSE="debug libevent python static test threads"
+IUSE="debug gost python static test threads"
 
-RDEPEND=">=dev-libs/openssl-0.9.8
-	>=net-libs/ldns-1.4[ssl]
-	libevent? ( dev-libs/libevent )"
-#	gost? ( >=dev-libs/openssl-1 )
+RDEPEND="dev-libs/expat
+	dev-libs/libevent
+	>=dev-libs/openssl-0.9.8
+	>=net-libs/ldns-1.4[ssl,gost?]"
 
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
@@ -29,26 +29,23 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
+	python_set_active_version 2
 	enewgroup unbound
 	enewuser unbound -1 -1 /etc/unbound unbound
-}
-
-src_prepare() {
-	sed -i -e "s:\(withval\|thedir\)/lib:\1/$(get_libdir):" configure.ac || die
-	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
 		--with-ldns="${EPREFIX}"/usr \
+		--with-libevent="${EPREFIX}"/usr \
 		$(use_enable debug) \
 		$(use_enable debug lock-checks) \
 		$(use_enable debug alloc-checks) \
 		$(use_enable debug alloc-lite) \
 		$(use_enable debug alloc-nonregional) \
+		$(use_enable gost) \
 		$(use_enable static static-exe) \
-		$(use_with libevent) \
 		$(use_with threads pthreads) \
 		$(use_with python pyunbound) \
 		$(use_with python pythonmodule) || die
