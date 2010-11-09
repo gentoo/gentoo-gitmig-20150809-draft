@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.139 2010/11/01 19:08:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.140 2010/11/09 19:17:44 armin76 Exp $
+
+  09 Nov 2010; Raúl Porcel <armin76@gentoo.org> mdadm-3.1.4.ebuild:
+  ia64/sparc stable wrt #302116
 
   01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> mdadm-3.1.4.ebuild:
   Stable for ppc64; bug #302116
