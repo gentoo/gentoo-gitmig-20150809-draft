@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1.ebuild,v 1.3 2010/08/07 17:38:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1.ebuild,v 1.4 2010/11/09 15:21:53 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,8 @@ IUSE=""
 
 DEPEND="
 	media-libs/freetype:2
-	media-libs/jpeg
+	virtual/jpeg
+	=media-libs/lcms-1*
 	>=media-libs/lcms-1.15[python]"
 RDEPEND="${DEPEND}
 	app-text/ghostscript-gpl
