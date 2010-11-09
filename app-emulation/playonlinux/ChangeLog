@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/playonlinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.9 2010/11/09 00:32:18 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.10 2010/11/09 00:34:29 volkmar Exp $
+
+  09 Nov 2010; Mounir Lamouri <volkmar@gentoo.org>
+  -playonlinux-3.7-r1.ebuild:
+  Removing old ebuilds.
 
 *playonlinux-3.8.5 (09 Nov 2010)
 
