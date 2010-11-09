@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.24 2010/10/30 01:18:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.25 2010/11/09 15:13:43 tupone Exp $
+
+  09 Nov 2010; Tupone Alfredo <tupone@gentoo.org>
+  ut2004-ded-3369.3-r1.ebuild:
+  Fixing patch mirror. Bug #343301
 
   30 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   ut2004-ded-3369.3-r1.ebuild:
