@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.30 2010/11/02 18:13:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.31 2010/11/09 20:31:01 graaff Exp $
+
+*sphinx-1.10_beta-r1 (09 Nov 2010)
+*sphinx-0.9.9-r2 (09 Nov 2010)
+
+  09 Nov 2010; Hans de Graaff <graaff@gentoo.org> +sphinx-0.9.9-r2.ebuild,
+  +sphinx-1.10_beta-r1.ebuild, +files/sphinx-1.10_beta-nosigpipe.patch:
+  Build the libsphinxclient library as well and fix prefix issues with
+  patches from grobian. This fixes bug 328213.
 
   02 Nov 2010; Fabian Groffen <grobian@gentoo.org> sphinx-0.9.9-r1.ebuild,
   sphinx-1.10_beta.ebuild:
