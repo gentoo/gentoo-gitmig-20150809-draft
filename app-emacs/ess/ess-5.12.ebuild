@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.7.1.ebuild,v 1.4 2010/01/11 18:04:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.12.ebuild,v 1.1 2010/11/09 20:58:59 ulm Exp $
+
+EAPI=3
 
 inherit elisp
 
@@ -10,7 +12,7 @@ SRC_URI="http://ess.r-project.org/downloads/ess/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="app-text/texi2html
@@ -24,16 +26,16 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX="${D}/usr" \
-		INFODIR="${D}/usr/share/info" \
-		LISPDIR="${D}${SITELISP}/ess" \
-		DOCDIR="${D}/usr/share/doc/${PF}" \
+	emake PREFIX="${ED}/usr" \
+		INFODIR="${ED}/usr/share/info" \
+		LISPDIR="${ED}${SITELISP}/ess" \
+		DOCDIR="${ED}/usr/share/doc/${PF}" \
 		install || die "emake install failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
 	# Most documentation is installed by the package's build system
-	rm -f "${D}${SITELISP}/ess/lisp/ChangeLog"
+	rm -f "${ED}${SITELISP}/ess/lisp/ChangeLog"
 	dodoc ChangeLog *NEWS doc/{TODO,ess-intro.pdf} || die "dodoc failed"
 	newdoc lisp/ChangeLog ChangeLog-lisp || die "newdoc failed"
 	prepalldocs
