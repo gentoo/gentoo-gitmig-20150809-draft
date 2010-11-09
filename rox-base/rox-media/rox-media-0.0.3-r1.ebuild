@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3-r1.ebuild,v 1.1 2010/08/11 14:52:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3-r1.ebuild,v 1.2 2010/11/09 19:55:57 maekke Exp $
 
 EAPI=3
 inherit rox eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/Media-0.0.3.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

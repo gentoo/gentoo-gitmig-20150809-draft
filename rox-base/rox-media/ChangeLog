@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-media
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/ChangeLog,v 1.2 2010/08/11 14:52:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/ChangeLog,v 1.3 2010/11/09 19:55:57 maekke Exp $
+
+  09 Nov 2010; Markus Meier <maekke@gentoo.org> rox-media-0.0.3-r1.ebuild:
+  x86 stable, bug #343713
 
 *rox-media-0.0.3-r1 (11 Aug 2010)
 
