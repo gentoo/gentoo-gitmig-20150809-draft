@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-memcache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.37 2010/10/31 23:54:15 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.38 2010/11/09 13:21:07 jer Exp $
+
+  09 Nov 2010; Jeroen Roovers <jer@gentoo.org>
+  pecl-memcache-3.0.5-r1.ebuild:
+  Marked ~hppa (bug #343597).
 
   31 Oct 2010; Matti Bickel <mabi@gentoo.org> pecl-memcache-3.0.5-r1.ebuild:
   dropped keywords pending bug #343597
