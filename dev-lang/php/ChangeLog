@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.438 2010/11/05 10:39:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.439 2010/11/09 13:20:12 jer Exp $
+
+  09 Nov 2010; Jeroen Roovers <jer@gentoo.org> php-5.2.14-r2.ebuild,
+  php-5.3.3-r3.ebuild:
+  Marked ~hppa (bug #343597).
 
   05 Nov 2010; Markus Meier <maekke@gentoo.org> php-5.2.14-r2.ebuild:
   add ~arm, bug #343597
