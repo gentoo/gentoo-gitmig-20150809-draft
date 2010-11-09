@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.214 2010/11/07 17:21:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.215 2010/11/09 23:22:19 radhermit Exp $
+
+*mpd-0.15.15 (09 Nov 2010)
+
+  09 Nov 2010; Tim Harder <radhermit@gentoo.org> -mpd-0.15.14.ebuild,
+  +mpd-0.15.15.ebuild:
+  Version bump to brown paper bag release and remove broken version (bug
+  #344785 by Duncan).
 
 *mpd-0.15.14 (07 Nov 2010)
 
