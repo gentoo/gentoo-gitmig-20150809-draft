@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.8 2010/07/27 19:27:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.9 2010/11/09 09:08:33 ssuominen Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ RDEPEND="sys-libs/zlib
 	gstreamer? ( media-libs/gstreamer )
 	gtk? ( x11-libs/gtk+:2 )
 	jpeg2k? ( media-libs/jasper )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	xine? ( media-libs/xine-lib )

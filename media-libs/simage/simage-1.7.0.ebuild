@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.3 2010/10/24 23:37:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.4 2010/11/09 09:05:53 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="debug gif jpeg jpeg2k png sndfile static-libs tiff vorbis zlib"
 
 RDEPEND="
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg:0 )
+	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	png? ( media-libs/libpng:0 )
 	sndfile? ( media-libs/libsndfile )
