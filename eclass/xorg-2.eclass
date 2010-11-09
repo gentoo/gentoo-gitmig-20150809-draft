@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.19 2010/11/05 12:11:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.20 2010/11/09 18:25:00 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -80,8 +80,14 @@ if [[ -z ${MODULE} ]]; then
 	esac
 fi
 
+# @ECLASS-VARIABLE: PACKAGE_NAME
+# @DESCRIPTION:
+# For git checkout git repository migth differ from package name
+# so it can be overriden via this variable.
+: ${PACKAGE_NAME:=${PN}}
+
 if [[ -n ${GIT_ECLASS} ]]; then
-	EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/${MODULE}/${PN}"
+	EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/${MODULE}/${PACKAGE_NAME}"
 else
 	SRC_URI+=" ${BASE_INDIVIDUAL_URI}/${MODULE}/${P}.tar.bz2"
 fi
