@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.9.ebuild,v 1.2 2010/03/18 21:29:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.9.ebuild,v 1.3 2010/11/09 19:51:02 maekke Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ fi
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
