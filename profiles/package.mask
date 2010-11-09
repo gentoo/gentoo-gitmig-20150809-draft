@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12184 2010/11/09 07:53:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12185 2010/11/09 15:39:10 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Alexander <wired@gentoo.org> (09 Nov 2010)
+# Qt 4.7.1: masked for testing
+~x11-libs/qt-assistant-4.7.1
+~x11-libs/qt-core-4.7.1
+~x11-libs/qt-dbus-4.7.1
+~x11-libs/qt-declarative-4.7.1
+~x11-libs/qt-demo-4.7.1
+~x11-libs/qt-gui-4.7.1
+~x11-libs/qt-multimedia-4.7.1
+~x11-libs/qt-opengl-4.7.1
+~x11-libs/qt-phonon-4.7.1
+~x11-libs/qt-qt3support-4.7.1
+~x11-libs/qt-script-4.7.1
+~x11-libs/qt-sql-4.7.1
+~x11-libs/qt-svg-4.7.1
+~x11-libs/qt-test-4.7.1
+~x11-libs/qt-webkit-4.7.1
+~x11-libs/qt-xmlpatterns-4.7.1
 
 # Torsten Veller <tove@gentoo.org> (09 Nov 2010)
 # spamassassin doesn't work with NetAddr-IP-4.035 (#343059)
