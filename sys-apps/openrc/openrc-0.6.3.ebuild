@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.3.ebuild,v 1.1 2010/09/02 15:47:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.3.ebuild,v 1.2 2010/11/10 09:51:31 vapier Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ else
 fi
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
-HOMEPAGE="http://roy.marples.name/openrc"
+HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 
 LICENSE="BSD-2"
 SLOT="0"
