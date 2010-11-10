@@ -1,0 +1,71 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/files/amavisd.initd,v 1.1 2010/11/10 11:13:15 eras Exp $
+
+opts="${opts} reload debug debug-sa"
+
+prog="/usr/sbin/amavisd"
+progname="amavisd-new"
+conffile="/etc/amavisd.conf"
+
+depend() {
+	need net
+	use logger antivirus snmpd
+	before mta
+}
+
+checkconfig() {
+	local piddir pidfile
+	if [ -r "${conffile}" ] ; then
+		pidfile=$(grep -m1 ^[^#].*pid_file "${conffile}"|sed -e 's/.*"\(.*\)".*/\1/')
+		piddir=${pidfile%/*}
+		if [ ! -d "${piddir:-/var/amavis}" ] ; then
+			checkpath -q -d -o root:amavis -m 0770 "${piddir}" || return 1
+		fi
+	else
+		eerror "Missing conf file."
+		return 1
+	fi
+}
+
+start() {
+	ebegin "Starting ${progname}"
+	checkconfig || return 1
+	"${prog}" start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${progname}"
+	"${prog}" stop 2>/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading ${progname}"
+	"${prog}" reload 2>/dev/null
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting ${progname}"
+	svc_stop
+	sleep 3
+	svc_start
+	eend $?
+}
+
+debug() {
+	ebegin "Starting ${progname} in debug mode"
+	checkconfig || return 1
+	"${prog}" debug
+	eend $?
+}
+
+debug-sa() {
+	ebegin "Starting ${progname} in debug-sa mode"
+	checkconfig || return 1
+	"${prog}" debug-sa
+	eend $?
+}
