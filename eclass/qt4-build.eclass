@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.84 2010/10/13 19:33:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.85 2010/11/10 13:45:38 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -329,6 +329,12 @@ qt4-build_src_configure() {
 		# freetype2 include dir is non-standard, thus include it on configure
 		# use -I from configure
 		myconf+=" $(pkg-config --cflags freetype2)"
+	fi
+
+	# Disable SSE4.x, since auto-detection is currently broken
+	# Upstream bug http://bugreports.qt.nokia.com/browse/QTBUG-13623
+	if version_is_at_least 4.7.1; then
+		myconf+=" -no-sse4.1 -no-sse4.2"
 	fi
 
 	echo ./configure ${myconf}
