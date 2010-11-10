@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.37 2010/09/17 11:18:54 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.38 2010/11/10 20:33:26 c1pher Exp $
 
 # This file requires >=portage-2.1.1
+
+# Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
+# Valgrind is only available on amd64/x86/ppc/ppc64.
+net-libs/gnutls -valgrind
 
 # Kacper Kowalik <xarthisius@gentoo.org> (1 Jul 2010)
 # >=heartbeat-3.0 is pmasked

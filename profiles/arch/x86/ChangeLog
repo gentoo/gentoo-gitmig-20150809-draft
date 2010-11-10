@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.50 2010/09/17 11:18:54 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.51 2010/11/10 20:33:26 c1pher Exp $
+
+  10 Nov 2010; Dane Smith <c1pher@gentoo.org> package.use.mask:
+  Unmask valgrind use flag for net-libs/gnutls on x86.
 
   17 Sep 2010; Andrey Grozin <grozin@gentoo.org> package.use.mask:
   Unmasking the USE flag clozurecl for maxima (formerly it was openmcl)
