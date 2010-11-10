@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.69 2010/10/05 21:11:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.70 2010/11/10 20:09:53 williamh Exp $
+
+*speech-dispatcher-0.7.1-r1 (10 Nov 2010)
+
+  10 Nov 2010; William Hubbs <williamh@gentoo.org>
+  +speech-dispatcher-0.7.1-r1.ebuild:
+  this revision bump removes speech dispatcher's testing framework
+  for bug #344643.
+
 
 *speech-dispatcher-0.7.1 (05 Oct 2010)
 
