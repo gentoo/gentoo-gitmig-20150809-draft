@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.51 2010/10/20 11:11:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.52 2010/11/10 11:06:07 vapier Exp $
+
+*gpsim-0.25.0 (10 Nov 2010)
+
+  10 Nov 2010; Mike Frysinger <vapier@gentoo.org> +gpsim-0.25.0.ebuild:
+  Version bump #343739 by Andrew Ray.
 
   20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gpsim-0.24.0-r1.ebuild:
