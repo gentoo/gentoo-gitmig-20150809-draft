@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cgcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.1 2010/10/31 10:37:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.2 2010/11/10 14:16:40 jlec Exp $
+
+  10 Nov 2010; Justin Lecher <jlec@gentoo.org> cgcode-1.0.ebuild:
+  Keyworded for ~-linux prefix
 
 *cgcode-1.0 (31 Oct 2010)
 

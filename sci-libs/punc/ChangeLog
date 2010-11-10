@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/punc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.7 2010/11/02 09:16:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.8 2010/11/10 14:14:27 jlec Exp $
+
+  10 Nov 2010; Justin Lecher <jlec@gentoo.org> punc-1.4-r1.ebuild:
+  Keyworded for ~-linux prefix
 
 *punc-1.4-r1 (02 Nov 2010)
 
