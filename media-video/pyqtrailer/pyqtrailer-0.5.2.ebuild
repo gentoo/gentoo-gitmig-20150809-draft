@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.5.1.ebuild,v 1.1 2010/11/10 00:05:58 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.5.2.ebuild,v 1.1 2010/11/10 20:00:45 sochotnicky Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
