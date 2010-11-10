@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.126 2010/11/10 10:43:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.127 2010/11/10 11:35:07 wired Exp $
+
+  10 Nov 2010; Alex Alexander <wired@gentoo.org> qt-gui-4.6.3-r1.ebuild,
+  qt-gui-4.7.1-r1.ebuild:
+  added missing -no-gtkstyle
 
 *qt-gui-4.7.1-r1 (10 Nov 2010)
 *qt-gui-4.6.3-r1 (10 Nov 2010)

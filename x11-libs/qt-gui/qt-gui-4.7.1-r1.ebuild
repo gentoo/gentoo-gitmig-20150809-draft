@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.1-r1.ebuild,v 1.1 2010/11/10 10:43:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.1-r1.ebuild,v 1.2 2010/11/10 11:35:07 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -106,7 +106,7 @@ src_configure() {
 	myconf="${myconf} -qt-gif -system-libpng -system-libjpeg
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2
 		-no-sql-odbc -xrender -xrandr -xkb -xshape -sm -no-svg -no-webkit
-		-no-phonon -no-opengl"
+		-no-phonon -no-opengl -no-gtkstyle"
 
 	qt4-build_src_configure
 }
