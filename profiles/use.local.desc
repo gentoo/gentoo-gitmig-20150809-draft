@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6141 2010/11/10 13:54:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6142 2010/11/10 14:14:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1646,11 +1646,11 @@ mail-client/thunderbird:custom-optimization - Enable user CFLAGS
 mail-client/thunderbird:lightning - Enable calendar support
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-mail-filter/amavisd-new:courier - Add support for usage with courierfilter
-mail-filter/amavisd-new:dkim - Add optional Yahoo! DomainKey support
-mail-filter/amavisd-new:qmail - Add support for qmail
-mail-filter/amavisd-new:razor - Configure mail-filter/razor, a distributed, collaborative spam detection and filtering network for use with amavisd-new
-mail-filter/amavisd-new:spamassassin - Enable usage of mail-filter/spamassassin for spam protection
+mail-filter/amavisd-new:courier - Add courier support
+mail-filter/amavisd-new:dkim - Add DomainKeys Identified Mail support
+mail-filter/amavisd-new:qmail - Add qmail support
+mail-filter/amavisd-new:razor - Add support for mail-filter/razor
+mail-filter/amavisd-new:spamassassin - Add support for mail-filter/spamassassin
 mail-filter/ask:procmail - Adds support for mail-filter/procmail
 mail-filter/assp:spf - Adds support for Sender Policy Framework
 mail-filter/assp:srs - Adds support for Sender Rewriting Scheme
