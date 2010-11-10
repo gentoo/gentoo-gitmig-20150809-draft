@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.128 2010/11/08 21:06:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.129 2010/11/10 12:53:12 maekke Exp $
+
+  10 Nov 2010; Markus Meier <maekke@gentoo.org>
+  alsa-plugins-1.0.23-r1.ebuild:
+  arm stable, bug #344571
 
   08 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   alsa-plugins-1.0.23-r1.ebuild:
