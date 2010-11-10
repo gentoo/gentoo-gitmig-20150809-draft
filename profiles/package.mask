@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12190 2010/11/10 16:49:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12191 2010/11/10 18:54:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -187,16 +187,6 @@ app-emulation/vmware-dsp
 # Causes conflicts (bug #342915)
 # Masked for removal in 30 days
 sci-libs/csparse
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Oct 2010)
-# Time to upgrade to 0.8 already people
-# Masked for removal due to usage of sys-auth/policykit, bug 340329
-# Removal in approx. 14 days
-<net-misc/networkmanager-0.8
-<gnome-extra/nm-applet-0.8
-<net-misc/networkmanager-openvpn-0.8
-<net-misc/networkmanager-pptp-0.8
-<net-misc/networkmanager-vpnc-0.8
 
 # Tony Vroon <chainsaw@gentoo.org> (27 Oct 2010)
 # This is very new, very exciting and quite probably not ready for your 
@@ -1161,14 +1151,6 @@ sys-libs/ss
 # We want to use ghc-6.12.3, not the older versions.
 =dev-lang/ghc-6.12.1*
 =dev-lang/ghc-6.12.2*
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (25 Jan 2010)
-# Final rc of networkmanager-0.8 and friends
-# Mask for testing
-=net-misc/networkmanager-pptp-0.7.999*
-=net-misc/networkmanager-vpnc-0.7.999*
-=net-misc/networkmanager-openvpn-0.7.999*
-=gnome-extra/nm-applet-0.7.999*
 
 # Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
 # since long time included in media-tv/gentoo-vdr-scripts
