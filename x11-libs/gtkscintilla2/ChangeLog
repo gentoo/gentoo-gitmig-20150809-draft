@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkscintilla2
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.11 2007/02/21 23:58:04 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.12 2010/11/10 21:59:39 eva Exp $
+
+  10 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkscintilla2-0.0.8.ebuild:
+  Clean up old revision.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
