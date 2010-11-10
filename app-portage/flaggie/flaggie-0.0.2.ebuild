@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.1.ebuild,v 1.1 2010/11/07 08:12:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.2.ebuild,v 1.1 2010/11/10 17:23:46 mgorny Exp $
 
 EAPI=2
 PYTHON_DEPEND="*:2.6"
@@ -10,8 +10,8 @@ RESTRICT_PYTHON_ABIS="2.4 2.5"
 inherit base distutils
 
 DESCRIPTION="A smart CLI mangler for package.* files"
-HOMEPAGE="http://github.com/mgorny/flaggie/"
-SRC_URI="http://github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://github.com/mgorny/flaggie/"
+SRC_URI="https://github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

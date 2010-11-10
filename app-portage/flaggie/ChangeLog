@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.1 2010/11/07 08:12:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.2 2010/11/10 17:23:46 mgorny Exp $
+
+*flaggie-0.0.2 (10 Nov 2010)
+
+  10 Nov 2010; Michał Górny <mgorny@gentoo.org> -flaggie-0.0.1.ebuild,
+  +flaggie-0.0.2.ebuild, metadata.xml:
+  Version bump. The new version fixes important runtime issues, and supplies
+  a few new cleanup actions. Fixing typos in metadata.xml too.
 
 *flaggie-0.0.1 (07 Nov 2010)
 

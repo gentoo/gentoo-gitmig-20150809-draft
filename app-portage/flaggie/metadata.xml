@@ -9,7 +9,7 @@
 	<longdescription>
 		A CLI-based mangling utility for package.{use,keywords,license}
 		files. Meant to be almost drop-in replacement for
-		<pkg>app-misc/flagedit</pkg> with an extended feature set
+		<pkg>app-portage/flagedit</pkg> with an extended feature set
 		and improved simplicity of use.
 	</longdescription>
 	<upstream>
