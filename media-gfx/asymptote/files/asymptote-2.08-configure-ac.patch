@@ -1,7 +1,7 @@
-Index: asymptote-2.04/configure.ac
+Index: asymptote-2.08/configure.ac
 ===================================================================
---- asymptote-2.04.orig/configure.ac
-+++ asymptote-2.04/configure.ac
+--- asymptote-2.08.orig/configure.ac
++++ asymptote-2.08/configure.ac
 @@ -150,7 +150,7 @@ if test "x$ac_cv_use_gc" != "xno" ; then
        fi
        CPPFLAGS_SAVE=$CPPFLAGS
