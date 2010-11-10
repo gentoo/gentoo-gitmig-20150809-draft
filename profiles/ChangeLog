@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4770 2010/11/09 15:39:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4771 2010/11/10 05:54:54 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask www-client/chromium dev channel release.
 
   09 Nov 2010; Alex Alexander <wired@gentoo.org> package.mask:
   Qt 4.7.1: masked for testing

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12185 2010/11/09 15:39:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12186 2010/11/10 05:54:54 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1198,11 +1198,8 @@ media-tv/vdrplugin-rebuild
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
-~www-client/chromium-8.0.552.0
-~www-client/chromium-8.0.552.11
-~www-client/chromium-8.0.552.18
-~www-client/chromium-8.0.552.23
 ~www-client/chromium-9.0.570.0
+~www-client/chromium-9.0.576.0
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
