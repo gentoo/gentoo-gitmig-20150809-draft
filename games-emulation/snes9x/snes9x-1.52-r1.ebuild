@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.8 2010/09/13 19:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.9 2010/11/10 22:44:27 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -48,11 +48,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cd "${WORKDIR}"/${P}-src
 	epatch "${FILESDIR}"/${P}-build.patch
+	cd unix
 	eautoreconf
 	if use gtk; then
 		cd ../gtk
-		sed -i -e '/PKG_CHECK_MODULES(\[LIBPNG/d' configure.ac || die
 		eautoreconf
 	fi
 }
