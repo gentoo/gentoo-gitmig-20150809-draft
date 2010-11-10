@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.6 2010/11/08 20:06:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.7 2010/11/10 15:51:41 phajdan.jr Exp $
+
+  10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cwm-20100930.ebuild:
+  x86 stable wrt bug #344619
 
   08 Nov 2010; Markos Chandras <hwoarang@gentoo.org> cwm-20100930.ebuild:
   Stable on amd64 wrt bug #344619
