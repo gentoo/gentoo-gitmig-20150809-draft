@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.176 2010/11/07 17:20:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.177 2010/11/10 13:02:42 grozin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -38,10 +38,6 @@ dev-lang/ruby-enterprise fastthreading
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (12 Jul 2010)
 # lirc support is broken in the snapshot
 >=www-plugins/gnash-0.8.7_p20100706 lirc
-
-# Andrey Grozin <grozin@gentoo.org> (7 Jul 2010)
-# Doesn't work with the current qt
-app-office/texmacs qt4
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask clutter till introspection is unmasked

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.182 2010/11/07 17:20:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.183 2010/11/10 13:02:42 grozin Exp $
+
+  10 Nov 2010; Andrey Grozin <grozin@gentoo.org> package.use.mask:
+  Unmask qt4 USE flag for app-office/texmacs
 
   07 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   Mask openvg use on cairo
