@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.10.2-r1.ebuild,v 1.1 2010/11/10 20:23:59 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.10.2-r1.ebuild,v 1.2 2010/11/10 20:45:01 c1pher Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ fi
 # GPL-3 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist +cxx doc examples guile lzo nls test valgrind zlib"
 
 RDEPEND="dev-libs/libgpg-error
