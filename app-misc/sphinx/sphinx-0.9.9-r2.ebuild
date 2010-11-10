@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9-r2.ebuild,v 1.1 2010/11/09 20:31:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9-r2.ebuild,v 1.2 2010/11/10 07:54:57 grobian Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -45,6 +45,9 @@ src_prepare() {
 	sed -i -e '270,290s/void sock_close/static void sock_close/' \
 		api/libsphinxclient/sphinxclient.c || die
 
+	eautoreconf
+
+	cd api/libsphinxclient || die
 	eautoreconf
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-1.10_beta-r1.ebuild,v 1.1 2010/11/09 20:31:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-1.10_beta-r1.ebuild,v 1.2 2010/11/10 07:54:57 grobian Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -18,7 +18,7 @@ SRC_URI="http://sphinxsearch.com/downloads/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos"
 IUSE="debug id64 mysql odbc postgres stemmer test"
 
 RDEPEND="mysql? ( virtual/mysql )
@@ -43,6 +43,8 @@ src_prepare() {
 	sed -i -e '/\/usr\/local\//d' configure.ac || die
 
 	epatch "${FILESDIR}"/${P}-nosigpipe.patch
+	epatch "${FILESDIR}"/${P}-darwin8.patch
+	epatch "${FILESDIR}"/${P}-libsphinxclient-darwin.patch
 
 	eautoreconf
 

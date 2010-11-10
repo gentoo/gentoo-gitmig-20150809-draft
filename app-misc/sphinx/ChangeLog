@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.31 2010/11/09 20:31:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.32 2010/11/10 07:54:57 grobian Exp $
+
+  10 Nov 2010; Fabian Groffen <grobian@gentoo.org> sphinx-0.9.9-r2.ebuild,
+  sphinx-1.10_beta-r1.ebuild, +files/sphinx-1.10_beta-darwin8.patch,
+  +files/sphinx-1.10_beta-libsphinxclient-darwin.patch:
+  Fix building on Darwin for both versions with libsphinxclient, keyword
+  1.10_beta appropriately now it builds
 
 *sphinx-1.10_beta-r1 (09 Nov 2010)
 *sphinx-0.9.9-r2 (09 Nov 2010)
