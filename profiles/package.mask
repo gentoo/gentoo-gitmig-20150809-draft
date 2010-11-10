@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12188 2010/11/10 10:51:11 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12189 2010/11/10 10:58:28 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (10 Nov 2010)
+# masking prerelease versions
+=mail-filter/amavisd-new-2.7.0_pre*
 
 # Torsten Veller <tove@gentoo.org> (09 Nov 2010)
 # spamassassin doesn't work with NetAddr-IP-4.035 (#343059)
