@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xmpppy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.19 2010/06/23 18:27:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.20 2010/11/10 23:11:09 xmw Exp $
+
+  10 Nov 2010; Michael Weber <xmw@gentoo.org> xmpppy-0.5.0_rc1.ebuild:
+  Added ~arm keyword (bug #343517)
 
   23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   xmpppy-0.5.0_rc1.ebuild:
