@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.3.ebuild,v 1.2 2010/11/10 09:51:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.3.ebuild,v 1.3 2010/11/10 10:20:14 vapier Exp $
 
 EAPI="1"
 
@@ -336,6 +336,20 @@ migrate_from_baselayout_1() {
 			rmdir "${ROOT}"/etc/modules.autoload.d 2>/dev/null
 		fi
 	fi
+
+	# Handle the conf.d/local.{start,stop} -> conf.d/local transition
+	if path_exists -o "${ROOT}"/etc/conf.d/local.{start,stop} ; then
+		elog "Converting your /etc/conf.d/local.{start,stop} files to /etc/conf.d/local"
+		(
+		sed -n '0,/local_start/p' "${D}"/etc/conf.d/local
+		sed 's:^:\t:' "${ROOT}"/etc/conf.d/local.start 2>/dev/null
+		sed -n '/local_start/,/local_stop/{s:^local_start.*::;p}' "${D}"/etc/conf.d/local
+		sed 's:^:\t:' "${ROOT}"/etc/conf.d/local.stop 2>/dev/null
+		sed -n '/local_stop/,${s:^local_stop.*::;p}' "${D}"/etc/conf.d/local
+		) > "${T}"/conf.d.local
+		mv "${T}"/conf.d.local "${D}"/etc/conf.d/local
+		touch "${D}"/etc/conf.d/local.{start,stop}
+	fi
 }
 
 pkg_postinst() {
@@ -395,6 +409,11 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
+	fi
+
+	if path_exists -o "${ROOT}"/etc/conf.d/local.{start,stop} ; then
+		ewarn "/etc/conf.d/local.{start,stop} are deprecated.  Please convert"
+		ewarn "your files to /etc/conf.d/local and delete the files."
 	fi
 
 	# update the dependency tree after touching all files #224171
