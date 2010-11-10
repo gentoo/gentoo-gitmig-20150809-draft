@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.92 2010/06/15 11:15:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.93 2010/11/10 19:06:35 billie Exp $
+
+  10 Nov 2010; Daniel Pielmeier <billie@gentoo.org> -star-1.5.ebuild,
+  -files/star-1.5-glibc-2.10.patch:
+  Remove old.
 
 *star-1.5.1-r1 (15 Jun 2010)
 
