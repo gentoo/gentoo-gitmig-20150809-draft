@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.22.1.ebuild,v 1.1 2010/06/25 11:06:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.22.3.ebuild,v 1.1 2010/11/10 05:57:55 pva Exp $
 
 EAPI=2
 inherit eutils autotools fdo-mime gnome2-utils versionator
@@ -54,6 +54,10 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README* || die
 	insinto /usr/share/icons/hicolor/128x128/apps
 	newins share/nip2/data/vips-128.png nip2.png || die
+
+	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF} || die
+	rmdir "${D}"/usr/share/doc/${PN}/ || die
+	dosym /usr/share/doc/${PF}/html /usr/share/doc/${PN}/
 }
 
 pkg_preinst() {

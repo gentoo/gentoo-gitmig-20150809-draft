@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.26 2010/09/03 15:39:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.27 2010/11/10 05:57:55 pva Exp $
+
+*nip2-7.22.3 (10 Nov 2010)
+
+  10 Nov 2010; Peter Volkov <pva@gentoo.org> -nip2-7.22.1.ebuild,
+  +nip2-7.22.3.ebuild:
+  Version bump. Install docs to /usr/share/doc/, bug #314101, thank Diego
+  Elio Pettenò for report. Drop old.
 
 *nip2-7.22.2 (03 Sep 2010)
 
