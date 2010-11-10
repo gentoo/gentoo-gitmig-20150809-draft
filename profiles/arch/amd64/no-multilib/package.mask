@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.89 2010/11/08 17:51:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.90 2010/11/10 21:20:22 hwoarang Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -138,7 +138,6 @@ games-server/nwn-ded
 games-server/ut2003-ded
 games-simulation/bcs-demo
 games-simulation/secondlife-bin
-games-simulation/simutrans
 games-strategy/coldwar
 games-strategy/coldwar-demo
 games-strategy/darwinia
