@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/neu-icon-theme/neu-icon-theme-0.6.ebuild,v 1.2 2010/11/07 18:02:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/neu-icon-theme/neu-icon-theme-0.6.ebuild,v 1.3 2010/11/10 14:36:39 ssuominen Exp $
 
 inherit gnome2-utils
 
@@ -11,9 +11,9 @@ SRC_URI="http://www.silvestre.com.ar/icons/Neu-${PV}-PR3.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="minimal"
 
-RDEPEND="x11-themes/gnome-icon-theme"
+RDEPEND="!minimal? ( x11-themes/gnome-icon-theme )"
 DEPEND=""
 
 RESTRICT="binchecks strip"
