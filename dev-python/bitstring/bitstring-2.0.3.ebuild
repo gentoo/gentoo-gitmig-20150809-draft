@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-2.0.3.ebuild,v 1.1 2010/08/17 16:51:52 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-2.0.3.ebuild,v 1.2 2010/11/10 22:29:29 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="*"
@@ -13,7 +13,7 @@ SRC_URI="http://python-bitstring.googlecode.com/files/${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 
