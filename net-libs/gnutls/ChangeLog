@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.276 2010/11/06 17:40:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.277 2010/11/10 20:23:59 c1pher Exp $
+
+*gnutls-2.11.4-r1 (10 Nov 2010)
+*gnutls-2.10.2-r1 (10 Nov 2010)
+
+  10 Nov 2010; Dane Smith <c1pher@gentoo.org> -gnutls-2.10.1-r1.ebuild,
+  +gnutls-2.10.2-r1.ebuild, +gnutls-2.11.4-r1.ebuild, metadata.xml:
+  *Revision bumps for 2.10.2 and 2.11.4 include new valgrind use flag to fix
+  automahic dependency wrt bug 333403. 
+  *Small QA fixes in both.
+  *Removed keywords for alpha ia64 m68k s390 sh sparc in 2.10.2-r1 as
+  datefudge
+  is not keyworded for those archs. I will be opening a keyword req for
+  datefudge.
+  *Removed 2.10.1-r1 as it contained an ~alpha keyword when datefudge was
+  not
+  keyworded for alpha.
 
   06 Nov 2010; Markus Meier <maekke@gentoo.org> gnutls-2.10.2.ebuild:
   arm stable, bug #343755
