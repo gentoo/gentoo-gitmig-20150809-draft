@@ -1,11 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.36 2010/11/08 19:52:40 arfrever Exp $
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (08 Nov 2010)
-# Tests masked until dev-python/mock is keyworded.
->=dev-util/buildbot-0.8.1 test
-dev-util/buildbot-slave test
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.37 2010/11/10 13:00:16 maekke Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.

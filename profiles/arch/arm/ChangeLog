@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.102 2010/11/08 12:24:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.103 2010/11/10 13:00:16 maekke Exp $
+
+  10 Nov 2010; Markus Meier <maekke@gentoo.org> package.use.mask:
+  remove buildbot{,-slave}[test] mask, as dev-python/mock is keyworded
 
   08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.use.mask:
