@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.10.1.ebuild,v 1.1 2010/11/09 13:55:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.10.1.ebuild,v 1.2 2010/11/10 05:41:56 pva Exp $
 
 inherit versionator
 
@@ -50,7 +50,9 @@ SRC_URI="${KERNEL_URI} ${ARCH_URI}
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KV}-combined.gz
 ${FILESDIR}/${P}-cpt_process.c-build.patch
-${FILESDIR}/${P}-orphans.patch"
+${FILESDIR}/${P}-orphans.patch
+${FILESDIR}/${P}-VDSO_sysenter_return.patch
+"
 
 K_EXTRAEINFO="For more information about this kernel take a look at:
 http://wiki.openvz.org/Download/kernel/${CKV}/${CKV}-${OVZ_KV}"
