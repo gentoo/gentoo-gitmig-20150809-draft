@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager-openvpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.13 2010/07/28 09:59:30 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.14 2010/11/10 13:11:02 dagger Exp $
+
+*networkmanager-openvpn-0.8.2 (10 Nov 2010)
+
+  10 Nov 2010; Robert Piasek <dagger@gentoo.org>
+  +networkmanager-openvpn-0.8.2.ebuild:
+  added version 0.8.2
 
 *networkmanager-openvpn-0.8.1 (28 Jul 2010)
 
