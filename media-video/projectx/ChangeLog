@@ -1,6 +1,11 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.45 2010/11/06 22:28:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.46 2010/11/10 19:17:49 billie Exp $
+
+  10 Nov 2010; Daniel Pielmeier <billie@gentoo.org>
+  -projectx-0.90.4.00_p32.ebuild,
+  -files/projectx-0.90.4.00-stdout-corrupt.diff, -files/build-0.90.4.xml:
+  Remove old.
 
   06 Nov 2010; Mark Loeser <halcy0n@gentoo.org>
   projectx-0.90.4.00_p33.ebuild:
