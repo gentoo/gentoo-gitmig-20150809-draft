@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta1.ebuild,v 1.1 2010/11/08 12:16:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta2.ebuild,v 1.1 2010/11/10 15:28:58 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -20,14 +20,14 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
 	kde mercurial perforce +qml qtscript rss subversion"
 
-QTVER="4.7.0_beta1:4"
-DEPEND=">x11-libs/qt-assistant-${QTVER}[doc?]"
+QTVER="4.7.1:4"
+DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]"
 RDEPEND="${DEPEND}
-	>x11-libs/qt-sql-${QTVER}
-	>x11-libs/qt-svg-${QTVER}
-	>x11-libs/qt-test-${QTVER}
-	>x11-libs/qt-webkit-${QTVER}
-	!kde? ( || ( >x11-libs/qt-phonon-${QTVER} media-sound/phonon ) )
+	>=x11-libs/qt-sql-${QTVER}
+	>=x11-libs/qt-svg-${QTVER}
+	>=x11-libs/qt-test-${QTVER}
+	>=x11-libs/qt-webkit-${QTVER}
+	!kde? ( || ( >=x11-libs/qt-phonon-${QTVER} media-sound/phonon ) )
 	kde? ( media-sound/phonon )
 	cmake? ( dev-util/cmake )
 	cvs? ( dev-vcs/cvs )
@@ -42,7 +42,7 @@ RDEPEND="${DEPEND}
 		>=x11-libs/qt-gui-${QTVER}[qt3support,private-headers]
 		>=x11-libs/qt-script-${QTVER}[private-headers]
 	)
-	qtscript? ( >x11-libs/qt-script-${QTVER} )
+	qtscript? ( >=x11-libs/qt-script-${QTVER} )
 	subversion? ( dev-vcs/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce
