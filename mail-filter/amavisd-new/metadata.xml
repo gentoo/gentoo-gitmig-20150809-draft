@@ -4,12 +4,10 @@
 <herd>net-mail</herd>
 <herd>antivirus</herd>
 <use>
-	<flag name='courier'>Add support for usage with courierfilter</flag>
-	<flag name='dkim'>Add optional Yahoo! DomainKey support</flag>
-	<flag name='qmail'>Add support for qmail</flag>
-	<flag name='razor'>Configure mail-filter/razor, a distributed, collaborative
-	spam detection and filtering network for use with amavisd-new</flag>
-	<flag name='spamassassin'>Enable usage of mail-filter/spamassassin for spam
-	protection</flag>
+	<flag name='courier'>Add courier support</flag>
+	<flag name='dkim'>Add DomainKeys Identified Mail support</flag>
+	<flag name='qmail'>Add qmail support</flag>
+	<flag name='razor'>Add support for mail-filter/razor</flag>
+	<flag name='spamassassin'>Add support for mail-filter/spamassassin</flag>
 </use>
 </pkgmetadata>
