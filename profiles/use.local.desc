@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6142 2010/11/10 14:14:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6143 2010/11/10 20:34:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2792,6 +2792,7 @@ net-libs/daq:dump - Build the Dump data acquisition module
 net-libs/daq:pcap - Build the PCAP data acquisition module
 net-libs/farsight2:upnp - Enable UPnP IGD support
 net-libs/gnutls:nettle - Use dev-libs/nettle as crypto backend
+net-libs/gnutls:valgrind - Enable testing using dev-util/valgrind.
 net-libs/gssdp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-av:introspection - Use dev-libs/gobject-introspection for introspection
