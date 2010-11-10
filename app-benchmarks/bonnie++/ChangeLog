@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.36 2010/11/10 19:01:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.37 2010/11/10 19:11:26 patrick Exp $
+
+  10 Nov 2010; Patrick Lauer <patrick@gentoo.org>
+  -files/bonnie++-1.94-64bit.patch:
+  Removing unneeded file #340180
 
   10 Nov 2010; Patrick Lauer <patrick@gentoo.org> bonnie++-1.93c.ebuild:
   Make repoman happy
