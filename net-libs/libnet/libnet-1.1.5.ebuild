@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.5.ebuild,v 1.2 2010/11/10 00:28:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.5.ebuild,v 1.3 2010/11/10 05:59:15 jer Exp $
 
 EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
-HOMEPAGE="http://sourceforge.net/projects/libnet-dev/"
+HOMEPAGE="http://libnet-dev.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}-dev/${P}.tar.gz"
 
 LICENSE="LGPL-2"
