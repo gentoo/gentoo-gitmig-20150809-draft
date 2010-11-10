@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.570.0.ebuild,v 1.7 2010/11/08 16:45:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.576.0.ebuild,v 1.1 2010/11/10 15:33:23 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -20,17 +20,19 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( ~dev-lang/v8-2.5.2 )
+	system-v8? ( ~dev-lang/v8-2.5.4 )
+	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
-	>=gnome-base/gconf-2.24.0
+	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	virtual/jpeg
 	media-libs/libpng
+	media-libs/libvpx
 	>=media-video/ffmpeg-0.6_p25423[threads]
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
@@ -51,6 +53,12 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts
 	gecko-mediaplayer? ( !www-plugins/gecko-mediaplayer[gnome] )"
+
+egyp() {
+	set -- build/gyp_chromium --depth=. "${@}"
+	echo "${@}" >&2
+	"${@}"
+}
 
 remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
@@ -89,6 +97,12 @@ src_prepare() {
 	# Enable optional support for gecko-mediaplayer.
 	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
 
+	# Make GConf dependency optional, http://crbug.com/13322.
+	epatch "${FILESDIR}"/${PN}-gconf-optional-r0.patch
+
+	# Make sure we don't use bundled libvpx headers.
+	epatch "${FILESDIR}"/${PN}-system-vpx-r0.patch
+
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/icu"
@@ -97,6 +111,7 @@ src_prepare() {
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
 	remove_bundled_lib "third_party/libpng"
+	remove_bundled_lib "third_party/libvpx"
 	remove_bundled_lib "third_party/libxml"
 	remove_bundled_lib "third_party/libxslt"
 	remove_bundled_lib "third_party/lzma_sdk"
@@ -105,6 +120,7 @@ src_prepare() {
 	remove_bundled_lib "third_party/pyftpdlib"
 	remove_bundled_lib "third_party/simplejson"
 	remove_bundled_lib "third_party/tlslite"
+	remove_bundled_lib "third_party/yasm"
 	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
@@ -152,6 +168,7 @@ src_configure() {
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_libxml=1
+		-Duse_system_vpx=1
 		-Duse_system_zlib=1"
 
 	if use system-sqlite; then
@@ -163,6 +180,13 @@ src_configure() {
 		myconf+=" -Duse_cups=1"
 	else
 		myconf+=" -Duse_cups=0"
+	fi
+
+	# Make GConf dependency optional, http://crbug.com/13322.
+	if use gnome; then
+		myconf+=" -Duse_gconf=1"
+	else
+		myconf+=" -Duse_gconf=0"
 	fi
 
 	if use "gnome-keyring"; then
@@ -214,21 +238,12 @@ src_configure() {
 		die "Failed to determine target arch, got '$myarch'."
 	fi
 
-	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
-		myconf+=" -Dno_strict_aliasing=1 -Dgcc_version=44"
-	fi
-
-	# Work around a likely GCC bug, see bug #331945.
-	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "45" ]]; then
-		append-flags -fno-ipa-cp
-	fi
-
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	build/gyp_chromium --depth=. ${myconf} || die
+	egyp ${myconf} || die
 }
 
 src_compile() {
