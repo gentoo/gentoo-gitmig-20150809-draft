@@ -1,15 +1,15 @@
 --- util/grub.d/10_linux.in
 +++ util/grub.d/10_linux.in
-@@ -102,7 +102,7 @@
+@@ -109,7 +109,7 @@
  EOF
  }
  
--list=`for i in /boot/vmlinu[zx]-* /vmlinu[zx]-* ; do
-+list=`for i in /boot/kernel-* /boot/vmlinu[zx]-* /vmlinu[zx]-* ; do
+-list=`for i in /boot/vmlinuz-* /boot/vmlinux-* /vmlinuz-* /vmlinux-* ; do
++list=`for i in /boot/kernel-* /boot/vmlinuz-* /boot/vmlinux-* /vmlinuz-* /vmlinux-* ; do
          if grub_file_is_not_garbage "$i" ; then echo -n "$i " ; fi
        done`
  prepare_boot_cache=
-@@ -120,6 +120,7 @@
+@@ -127,6 +127,7 @@
    initrd=
    for i in "initrd.img-${version}" "initrd-${version}.img" \
  	   "initrd-${version}" "initramfs-${version}.img" \
