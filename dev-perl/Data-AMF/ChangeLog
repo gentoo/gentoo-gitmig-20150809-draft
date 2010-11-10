@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-AMF
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/ChangeLog,v 1.7 2010/11/10 00:11:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/ChangeLog,v 1.8 2010/11/10 16:34:38 tomka Exp $
+
+  10 Nov 2010; Thomas Kahle <tomka@gentoo.org> Data-AMF-0.09.ebuild:
+  x86 stable per bug #344747
 
   10 Nov 2010; Markos Chandras <hwoarang@gentoo.org> Data-AMF-0.09.ebuild:
   Stable on amd64 wrt bug #
