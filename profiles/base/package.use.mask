@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.177 2010/11/10 13:02:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.178 2010/11/10 19:13:47 c1pher Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
+# Mask valgrind use flag for net-libs/gnutls as valgrind isn't usable
+# on several of the archs gnutls is stable for.
+net-libs/gnutls valgrind
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (07 Nov 2010)
 # Masked since there is no release just git version of the library
