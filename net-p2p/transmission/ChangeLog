@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.131 2010/10/26 07:23:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.132 2010/11/10 12:53:30 pva Exp $
+
+*transmission-2.11-r2 (10 Nov 2010)
+
+  10 Nov 2010; Peter Volkov <pva@gentoo.org> +transmission-2.11-r2.ebuild,
+  +files/transmission-daemon.initd.5:
+  Update regex to match beginning of the word, bug #342849 thank Sok Ann Yap
+  for report and fix.
 
 *transmission-2.11-r1 (26 Oct 2010)
 
