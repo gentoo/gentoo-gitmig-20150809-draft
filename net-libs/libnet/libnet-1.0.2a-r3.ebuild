@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.20 2010/07/19 21:37:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.21 2010/11/10 00:28:27 sping Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
-HOMEPAGE="http://www.packetfactory.net/libnet/"
-SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/libnet-dev/"
+SRC_URI="http://ips-builder.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.0"
