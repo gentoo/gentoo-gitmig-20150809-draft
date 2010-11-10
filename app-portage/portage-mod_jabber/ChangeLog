@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-mod_jabber
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-mod_jabber/ChangeLog,v 1.5 2008/07/19 13:37:11 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-mod_jabber/ChangeLog,v 1.6 2010/11/10 23:12:46 xmw Exp $
+
+  10 Nov 2010; Michael Weber <xmw@gentoo.org>
+  portage-mod_jabber-0.0.5.1.ebuild:
+  Added ~arm keyword (bug #344959)
 
   19 Jul 2008; Hanno Boeck <hanno@gentoo.org>
   portage-mod_jabber-0.0.3.ebuild, -portage-mod_jabber-0.0.5.ebuild,
