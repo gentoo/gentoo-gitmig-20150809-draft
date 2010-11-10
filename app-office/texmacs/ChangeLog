@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.85 2010/10/31 05:18:40 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.86 2010/11/10 12:55:14 grozin Exp $
+
+  10 Nov 2010; Andrey Grozin <grozin@gentoo.org> texmacs-1.0.7.6.ebuild,
+  texmacs-1.0.7.7.ebuild, +files/texmacs-qt.patch:
+  Added a patch to fix compilation error with USE=qt4
 
   31 Oct 2010; Andrey Grozin <grozin@gentoo.org> -texmacs-1.0.7.5.ebuild:
   Cleaning old version
