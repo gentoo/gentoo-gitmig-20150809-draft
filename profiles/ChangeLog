@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4771 2010/11/10 05:54:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4772 2010/11/10 07:33:01 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Remove p.mask entries for www-client/chromium-bin, it's reasonably tested
+  now.
 
   10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask www-client/chromium dev channel release.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12186 2010/11/10 05:54:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12187 2010/11/10 07:33:01 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -857,12 +857,6 @@ app-i18n/imhangul-status-applet
 # Fails to install with the latest stable versions of OpenSSL and Tk.
 # The 1.8.6 packages will be removed in 60 days. Reference: Bug 332597.
 =dev-lang/ruby-1.8.6*
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (16 Aug 2010)
-# Experimental binary package compiled on Gentoo.
-~www-client/chromium-bin-5.0.375.125
-~www-client/chromium-bin-5.0.375.127
-~www-client/chromium-bin-6.0.472.51
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # Mask until prime time
