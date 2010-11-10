@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.48 2010/09/17 10:56:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.49 2010/11/10 16:42:06 mr_bones_ Exp $
+
+  10 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  crystalspace-1.4.0.ebuild:
+  fix paths in environment file with patch from Sven Eden (bug #335921)
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   crystalspace-1.2.1.ebuild:

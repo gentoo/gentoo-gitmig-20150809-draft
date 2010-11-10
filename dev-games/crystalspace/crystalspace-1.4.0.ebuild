@@ -1,11 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.6 2010/06/24 11:33:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.7 2010/11/10 16:42:06 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets
+inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator
 
 MY_P=${PN}-src-${PV}
+PATH_P=${PN}-$(get_version_component_range 1-2)
+
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
 HOMEPAGE="http://crystal.sourceforge.net/"
 SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
@@ -47,7 +49,7 @@ DEPEND="${COMMON_DEP}
 	dev-lang/swig
 	dev-util/pkgconfig"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# Installing doc conflict with dodoc on src_install
@@ -63,7 +65,7 @@ src_prepare() {
 }
 
 src_configure() {
-	if useq wxwidgets; then
+	if use wxwidgets; then
 		WX_GTK_VER="2.8"
 		need-wxwidgets gtk2
 	fi
@@ -114,8 +116,8 @@ src_install() {
 	fi
 	dodoc README docs/history*
 
-	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/${P}" > 90crystalspace
-	echo "CRYSTAL_CONFIG=/etc/${P}" >> 90crystalspace
+	echo "CRYSTAL_PLUGIN=/usr/$(get_libdir)/${PATH_P}" > 90crystalspace
+	echo "CRYSTAL_CONFIG=/etc/${PATH_P}" >> 90crystalspace
 	doenvd 90crystalspace
 }
 
@@ -127,6 +129,6 @@ pkg_postinst() {
 	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
 		terrain terrainf;
 	do
-		elog "cslight -video=null /usr/share/${P}/data/maps/${dir}"
+		elog "cslight -video=null /usr/share/${PATH_P}/data/maps/${dir}"
 	done
 }
