@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.311 2010/11/08 21:03:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.312 2010/11/10 12:50:42 maekke Exp $
+
+  10 Nov 2010; Markus Meier <maekke@gentoo.org> alsa-lib-1.0.23.ebuild:
+  arm stable, bug #344571
 
   08 Nov 2010; Jeroen Roovers <jer@gentoo.org> alsa-lib-1.0.23.ebuild:
   Stable for HPPA PPC (bug #344571).
