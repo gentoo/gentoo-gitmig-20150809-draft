@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.9 2010/10/15 12:40:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.10 2010/11/10 05:45:45 grozin Exp $
+
+*fotoxx-10.11.2 (10 Nov 2010)
+
+  10 Nov 2010; Andrey Grozin <grozin@gentoo.org> -fotoxx-10.10.ebuild,
+  -files/fotoxx-10.10-makefile.patch, +fotoxx-10.11.2.ebuild,
+  +files/fotoxx-10.11.2-makefile.patch:
+  Version bump
 
 *fotoxx-10.10.2 (15 Oct 2010)
 
