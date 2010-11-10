@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1296.ebuild,v 1.1 2010/10/28 18:45:53 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1302.ebuild,v 1.1 2010/11/10 21:08:56 tommy Exp $
 
 EAPI="2"
 DATE=20101003
@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2 multilib
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
-SRC_URI="http://github.com/${PN}/fred-official/zipball/build0${PV#*p} -> ${P}.zip
+SRC_URI="mirror://gentoo/${P}.zip
 	mirror://gentoo/seednodes-${DATE}.fref"
 
 LICENSE="as-is GPL-2"
@@ -57,10 +57,11 @@ src_prepare() {
 	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
-	epatch "${FILESDIR}"/ext.patch
+	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch
 	epatch "${FILESDIR}"/strip-openjdk-check.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
+	cp "${FILESDIR}"/build.xml . || die
 	java-ant_rewrite-classpath
 	java-pkg-2_src_prepare
 }

@@ -121,7 +121,7 @@
 
 		
 		<javac target="1.5" destdir="${build}" source="1.5" debug="on" srcdir="${src}" optimize="on" classpath="${gentoo.classpath}" >
-			<compilerarg value="-Xlint" ></compilerarg>
+<!--			<compilerarg value="-Xlint" ></compilerarg> -->
 			
 			<sourcepath >
 				<pathelement path="${build}" ></pathelement>
