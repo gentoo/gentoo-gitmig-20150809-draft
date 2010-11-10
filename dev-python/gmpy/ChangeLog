@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.22 2010/10/20 10:32:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.23 2010/11/10 17:53:18 grobian Exp $
+
+  10 Nov 2010; Fabian Groffen <grobian@gentoo.org> gmpy-1.13.ebuild:
+  Marked ~x86-linux, ~ppc-macos, bug #341995
 
   20 Oct 2010; Christian Faulhammer <fauli@gentoo.org> gmpy-1.13.ebuild:
   stable x86, bug 341329
