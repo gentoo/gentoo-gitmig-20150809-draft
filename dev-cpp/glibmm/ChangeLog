@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.156 2010/10/09 22:53:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.157 2010/11/10 21:49:02 eva Exp $
+
+  10 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> -glibmm-2.22.2.ebuild,
+  -glibmm-2.24.2.ebuild:
+  Drop old revisions.
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   glibmm-2.24.2-r1.ebuild:
