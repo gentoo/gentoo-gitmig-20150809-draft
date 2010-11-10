@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.14 2009/10/12 19:04:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.15 2010/11/10 19:05:42 patrick Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}

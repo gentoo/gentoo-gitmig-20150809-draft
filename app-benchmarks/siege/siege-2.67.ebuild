@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.67.ebuild,v 1.3 2009/11/19 04:10:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.67.ebuild,v 1.4 2010/11/10 19:07:56 patrick Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -16,6 +16,7 @@ SLOT="0"
 IUSE="debug ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

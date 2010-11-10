@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.35 2010/09/27 22:55:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.36 2010/11/10 19:01:52 patrick Exp $
+
+  10 Nov 2010; Patrick Lauer <patrick@gentoo.org> bonnie++-1.93c.ebuild:
+  Make repoman happy
 
 *bonnie++-1.96-r1 (27 Sep 2010)
 

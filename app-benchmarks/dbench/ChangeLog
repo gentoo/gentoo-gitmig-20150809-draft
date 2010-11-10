@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.38 2009/09/13 22:20:15 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.39 2010/11/10 19:03:35 patrick Exp $
+
+  10 Nov 2010; Patrick Lauer <patrick@gentoo.org> dbench-2.0.ebuild:
+  Make repoman happy
 
   13 Sep 2009; Patrick Lauer <patrick@gentoo.org> dbench-3.04.ebuild:
   Removing virtual/libc deps

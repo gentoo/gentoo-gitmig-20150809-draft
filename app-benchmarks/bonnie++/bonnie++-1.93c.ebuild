@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.14 2010/03/06 16:24:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.15 2010/11/10 19:01:52 patrick Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="debug"
 
 DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
