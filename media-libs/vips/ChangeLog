@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.31 2010/11/09 15:02:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.32 2010/11/10 05:54:59 pva Exp $
+
+*vips-7.22.4 (10 Nov 2010)
+
+  10 Nov 2010; Peter Volkov <pva@gentoo.org> -vips-7.22.1.ebuild,
+  +vips-7.22.4.ebuild:
+  Version bump to fix privelege escalation, #344561, thank Tim Sammut for
+  report. Don't install .la files and add static-libs USE flag, #344805,
+  thank Samuli Suominen for report. Install documentation to
+  /usr/share/doc/, bug #314101, thank Diego Elio Pettenò for report. Add
+  graphicsmagick as an alternative for imagemagick, bug #314297, thank
+  Wojciech Porczyk for report. Drop old.
 
   09 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> vips-7.20.7.ebuild,
   vips-7.22.1.ebuild, vips-7.22.2.ebuild:
