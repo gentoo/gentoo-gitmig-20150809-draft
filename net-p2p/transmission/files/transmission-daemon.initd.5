@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/files/transmission-daemon.initd.5,v 1.1 2010/11/10 12:53:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/files/transmission-daemon.initd.5,v 1.2 2010/11/11 16:05:43 pva Exp $
 
 opts="start stop reload"
 description="Transmission is a fast, easy and free bittorrent client"
@@ -30,7 +30,7 @@ check_config() {
 	fi
 
 	# In case no config directory option passed use default
-	if ! $(echo ${TRANSMISSION_OPTIONS} | grep -q -e '\b-g' -e '\b--config-dir'); then
+	if ! $(echo ${TRANSMISSION_OPTIONS} | grep -q -e '\B-g' -e '\B--config-dir'); then
 		TRANSMISSION_OPTIONS="${TRANSMISSION_OPTIONS} --config-dir ${config_dir}"
 		# put download dir location on first run (and take it from config later)
 		if [ ! -f ${config_dir}/settings.json ]; then
