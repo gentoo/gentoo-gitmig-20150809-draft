@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r2.ebuild,v 1.10 2010/07/20 15:33:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r2.ebuild,v 1.11 2010/11/11 11:48:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -61,7 +61,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=app-text/scrollkeeper-0.1.4
 	>=app-text/gnome-doc-utils-0.3.2"
-PDEPEND="pam? ( >=sys-auth/pambase-20090430[consolekit=,gnome-keyring=] )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

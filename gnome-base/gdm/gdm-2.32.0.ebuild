@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.0.ebuild,v 1.1 2010/11/04 23:22:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.0.ebuild,v 1.2 2010/11/11 11:48:55 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -67,7 +67,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=app-text/scrollkeeper-0.1.4
 	>=app-text/gnome-doc-utils-0.3.2"
-PDEPEND=">=sys-auth/pambase-20090430[consolekit=,gnome-keyring=]"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"

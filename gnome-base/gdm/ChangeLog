@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.332 2010/11/04 23:22:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.333 2010/11/11 11:48:55 ssuominen Exp $
+
+  11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> gdm-2.20.10-r2.ebuild,
+  gdm-2.20.11.ebuild, gdm-2.28.2-r1.ebuild, gdm-2.32.0.ebuild:
+  Remove false PDEPEND on pambase wrt #344989: GDM doesn't use
+  pam_ck_connector.so and works without.
 
 *gdm-2.32.0 (04 Nov 2010)
 
