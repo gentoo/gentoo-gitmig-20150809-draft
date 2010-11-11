@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.46 2010/07/15 10:00:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.47 2010/11/11 23:22:46 dilfridge Exp $
+
+  11 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kphotoalbum-4.1.1.ebuild, +files/kphotoalbum-4.1.1-docbook_fix.patch:
+  Added patch to update docbook files to XML V4.2-Based Variant. Fixes bug
+  335023
 
   15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   kphotoalbum-4.1.1.ebuild:
