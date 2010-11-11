@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.18 2010/11/03 12:17:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.19 2010/11/11 12:07:38 xmw Exp $
+
+*cppcheck-1.45-r1 (11 Nov 2010)
+
+  11 Nov 2010; Michael Weber <xmw@gentoo.org> -cppcheck-1.45.ebuild,
+  +cppcheck-1.45-r1.ebuild, metadata.xml:
+  Taking maintainership. Added python/distutils eclasses and IUSE htmlreport
+  to support cppcheck-htmlreport (thanks to David Hallas <david@cgp.dk> on
+  bug #320369). Fixed cppcheck-gui installation (thanks to John Keeping
+  <john.keeping@lineone.net> on bug #343997).
 
   03 Nov 2010; Patrick Lauer <patrick@gentoo.org> cppcheck-1.45.ebuild:
   Adding missing qt-assistant dep, #343959

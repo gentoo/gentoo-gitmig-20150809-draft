@@ -2,8 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-        <maintainer>
-                <email>patrick@gentoo.org</email>
-                <name>Patrick Lauer (until someone else wants to handle it)</name>
-        </maintainer>
+<maintainer>
+<email>xmw@gentoo.org</email>
+<name>Michael Weber</name>
+</maintainer>
+<use>
+<flag name="htmlreport">install cppcheck-htmlreport</flag>
+</use>
 </pkgmetadata>
