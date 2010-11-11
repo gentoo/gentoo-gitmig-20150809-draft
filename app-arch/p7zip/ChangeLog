@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.134 2010/11/04 17:39:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.135 2010/11/11 09:04:50 xmw Exp $
+
+  11 Nov 2010; Michael Weber <xmw@gentoo.org> p7zip-9.13.ebuild,
+  p7zip-9.13-r2.ebuild:
+  Added ~arm keyword (bug #344821)
 
   04 Nov 2010; Justin Lecher <jlec@gentoo.org> -files/4.65-hardlink.patch,
   -p7zip-4.65-r1.ebuild, -files/4.65-kde4.patch, -p7zip-9.13-r1.ebuild,
