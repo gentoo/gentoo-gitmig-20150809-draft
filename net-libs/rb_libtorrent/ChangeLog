@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.95 2010/10/21 20:09:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.96 2010/11/11 15:27:23 ssuominen Exp $
+
+  11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  rb_libtorrent-0.14.9-r1.ebuild, rb_libtorrent-0.14.12.ebuild,
+  rb_libtorrent-0.15.0.ebuild, rb_libtorrent-0.15.1.ebuild,
+  rb_libtorrent-0.15.3.ebuild, rb_libtorrent-0.15.4.ebuild:
+  Fix sys-devel/libtool depend from = to >= wrt #345115 by Attila Jecs.
 
   21 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   rb_libtorrent-0.15.4.ebuild:
