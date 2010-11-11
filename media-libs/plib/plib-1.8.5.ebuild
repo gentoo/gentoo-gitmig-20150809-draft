@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.5.ebuild,v 1.7 2010/09/16 17:15:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.5.ebuild,v 1.8 2010/11/11 04:33:41 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="media-libs/freeglut
-	virtual/opengl
-	media-libs/libsdl"
+DEPEND="virtual/opengl"
 
 src_unpack() {
 	unpack ${A}
@@ -25,6 +23,6 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog KNOWN_BUGS NOTICE README* TODO*
 }
