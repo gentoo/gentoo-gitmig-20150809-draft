@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta2.ebuild,v 1.1 2010/11/10 15:28:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta2.ebuild,v 1.2 2010/11/11 12:58:21 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -46,7 +46,7 @@ RDEPEND="${DEPEND}
 	subversion? ( dev-vcs/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce
-	qml qtscript subversion"
+	+qml qtscript subversion"
 
 S="${WORKDIR}"/"${MY_P}"-src
 
@@ -63,8 +63,11 @@ src_prepare() {
 				plugin="qtscripteditor"
 			elif [[ ${plugin} == "qml" ]]; then
 				plugins="qmljseditor"
-				sed -i "/^include(qml\/qml.pri)/d" \
-					src/plugins/debugger/debugger.pro
+				sed -i -e "/^include(qml\/qml.pri)/d" \
+					src/plugins/debugger/debugger.pro \
+					-e "/plugin_qt4projectmanager/s:^:#:" \
+					src/plugins/plugins.pro \
+					|| die "failed to disable qml plugins"
 			fi
 			if [[ ${plugin} == "designer" ]]; then
 				sed -i "/plugin_qt4projectmanager/s:^:#:" \
