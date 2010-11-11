@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/paragui
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.33 2009/10/10 15:08:40 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.34 2010/11/11 10:14:02 ssuominen Exp $
+
+  11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> paragui-1.1.8.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> paragui-1.1.8.ebuild:
   sparc stable wrt #275747
