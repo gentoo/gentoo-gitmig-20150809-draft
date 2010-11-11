@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.62 2010/01/10 16:57:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.63 2010/11/11 22:02:30 hwoarang Exp $
+
+  11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> MP3-Info-1.24.ebuild:
+  Stable on amd64 wrt bug #344439
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> MP3-Info-1.24.ebuild:
   Transfer Prefix keywords
