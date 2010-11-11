@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.4 2010/09/09 01:00:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.5 2010/11/11 17:34:49 ssuominen Exp $
+
+  11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> mupdf-0.6.ebuild,
+  mupdf-0.7.ebuild, mupdf-0.7-r1.ebuild:
+  Use virtual/jpeg wrt #345125 by "Shark".
 
 *mupdf-0.7-r1 (09 Sep 2010)
 
