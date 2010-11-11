@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12192 2010/11/11 07:51:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12193 2010/11/11 17:31:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -167,8 +167,10 @@ media-sound/freqtweak
 app-misc/mplinuxman
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
-# Replaced by sys-fs/udisks
+# Replaced by sys-fs/udisks and sys-power/upower
+# Bug 345123
 # Masked for removal in about 30 days
+sys-apps/devicekit
 sys-apps/devicekit-disks
 
 # Gilles Dartiguelongue <eva@gentoo.org> (28 Oct 2010)
