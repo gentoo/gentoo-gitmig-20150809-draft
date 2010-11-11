@@ -13,8 +13,14 @@
  
 --- tools/Makefile.inc.unix.old	2008-04-23 15:22:50.000000000 +0200
 +++ tools/Makefile.inc.unix	2008-04-23 15:23:04.000000000 +0200
-@@ -9,7 +9,7 @@
- OCAMLOPT=ocamlopt.opt -warn-error A
+@@ -5,11 +5,11 @@
+ CAMLP5F=-DUNIX
+ CAMLP5D=+camlp5
+ LIBUNIX=-cclib -lunix
+-OCAMLC=ocamlc.opt -warn-error A
+-OCAMLOPT=ocamlopt.opt -warn-error A
++OCAMLC=ocamlc.opt
++OCAMLOPT=ocamlopt.opt
  OCAMLI=
  OCAMLD=
 -STRIP=strip

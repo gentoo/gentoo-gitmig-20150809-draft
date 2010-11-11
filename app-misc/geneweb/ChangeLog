@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geneweb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.11 2008/12/15 09:54:19 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.12 2010/11/11 08:37:26 tupone Exp $
+
+  11 Nov 2010; Alfredo Tupone <tupone@gentoo.org>
+  files/geneweb-5.01-gentoo.patch:
+  Removing -warn-error A to fix build. Bug #299756 by flameeyes@gentoo.org
 
   15 Dec 2008; Alfredo Tupone <tupone@gentoo.org>
   -files/geneweb-5.00-gentoo.patch, -geneweb-5.00.ebuild,
