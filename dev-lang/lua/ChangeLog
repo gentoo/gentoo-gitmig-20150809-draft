@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.148 2010/06/19 17:04:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.149 2010/11/11 18:56:20 rafaelmartins Exp $
+
+  11 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
+  Added myself to metadata.xml
 
 *lua-5.1.4-r6 (19 Jun 2010)
 
