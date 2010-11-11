@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.57 2010/11/02 02:54:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.58 2010/11/11 09:14:56 xmw Exp $
+
+*compiz-0.8.6-r2 (11 Nov 2010)
+
+  11 Nov 2010; Michael Weber <xmw@gentoo.org> +compiz-0.8.6-r2.ebuild,
+  +files/compiz-0.8.6-r2-fontcorruption.patch:
+  Add fontcorruption.patch, thanks to Manuel Danisch
+  <oeffentlicheszeug@googlemail.com> for his report (bug #343861).
 
   02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
   compiz-0.8.6-r1.ebuild:
