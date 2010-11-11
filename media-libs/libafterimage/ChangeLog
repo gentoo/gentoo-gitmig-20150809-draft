@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.28 2010/04/14 13:01:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.29 2010/11/11 10:08:26 ssuominen Exp $
+
+  11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libafterimage-1.18-r1.ebuild:
+  Use virtual/jpeg wrt #327487.
 
   14 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Move to afterstep herd

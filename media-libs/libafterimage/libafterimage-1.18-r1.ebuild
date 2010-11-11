@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.18-r1.ebuild,v 1.8 2009/10/28 21:29:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.18-r1.ebuild,v 1.9 2010/11/11 10:08:26 ssuominen Exp $
 
 EAPI=2
 inherit eutils
 
-MY_PN="libAfterImage"
+MY_PN=libAfterImage
 
 DESCRIPTION="Afterstep's standalone generic image manipulation library"
 HOMEPAGE="http://www.afterstep.org/afterimage/index.php"
@@ -20,16 +20,15 @@ RDEPEND="media-libs/freetype
 	x11-libs/libSM
 	x11-libs/libXext
 	x11-libs/libXrender
-	png?  ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	png?  ( >=media-libs/libpng-1.4 )
+	jpeg? ( virtual/jpeg )
 	gif?  ( media-libs/giflib )
 	tiff? ( media-libs/tiff )"
-
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	!x11-wm/afterstep"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+S=${WORKDIR}/${MY_PN}-${PV}
 
 src_prepare() {
 	# fix some ldconfig problem in makefile.in
