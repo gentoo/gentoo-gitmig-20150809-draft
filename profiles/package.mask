@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12193 2010/11/11 17:31:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12194 2010/11/11 18:43:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2010)
+# Masked until sandbox bug 342983 is fixed. Causing nasty
+# problems, such as missing files after extracting.
+#
+# http://bugs.gentoo.org/342983
+#
+>=app-arch/tar-1.24
 
 # Torsten Veller <tove@gentoo.org> (11 Nov 2010)
 # Masked for removal. Unmaintained with bugs
