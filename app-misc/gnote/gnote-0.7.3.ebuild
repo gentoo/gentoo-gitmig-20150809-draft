@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.2.ebuild,v 1.3 2010/11/11 19:21:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.3.ebuild,v 1.1 2010/11/11 19:21:56 eva Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="applet debug" # dbus
 
-RDEPEND=">=x11-libs/gtk+-2.14
+RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-cpp/glibmm-2
 	>=dev-cpp/gtkmm-2.12
 	>=dev-libs/libxml2-2
@@ -35,9 +35,8 @@ DEPEND="${DEPEND}
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-dbus
 		--disable-static
@@ -55,5 +54,5 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name "*.la" -delete || die "la file removal failed"
+	find "${ED}" -name "*.la" -delete || die "la file removal failed"
 }
