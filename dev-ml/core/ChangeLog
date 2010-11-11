@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/core
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.1 2009/10/27 12:36:35 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.2 2010/11/11 20:09:18 aballier Exp $
+
+  11 Nov 2010; Alexis Ballier <aballier@gentoo.org> core-0.6.0.ebuild,
+  +files/core-0.6.0-ocaml312.patch:
+  Import a patch from debian to fix build with ocaml 3.12, bug #343811
 
 *core-0.6.0 (27 Oct 2009)
 

@@ -1,0 +1,22 @@
+--- janest-core-0.6.0.orig/lib/core_gc.mli
++++ janest-core-0.6.0/lib/core_gc.mli
+@@ -71,6 +71,8 @@
+ 
+     top_heap_words : int;
+     (** Maximum size reached by the major heap, in words. *)
++
++    stack_size : int;
+   }
+   include Binable.S with type binable = t
+   include Sexpable.S with type sexpable = t
+--- janest-core-0.6.0.orig/lib/core_gc.ml
++++ janest-core-0.6.0/lib/core_gc.ml
+@@ -54,6 +54,7 @@
+     fragments : pretty_int;
+     compactions : pretty_int;
+     top_heap_words : pretty_int;
++    stack_size : pretty_int;
+   } with bin_io, sexp
+   type binable = t
+   type sexpable = t
+
