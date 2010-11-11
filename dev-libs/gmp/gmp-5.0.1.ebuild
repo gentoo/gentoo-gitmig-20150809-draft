@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.1.ebuild,v 1.6 2010/08/30 17:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.1.ebuild,v 1.7 2010/11/11 17:33:36 jer Exp $
 
 inherit flag-o-matic eutils libtool flag-o-matic toolchain-funcs
 
@@ -41,13 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# GMP believes hppa2.0 is 64bit
-	local is_hppa_2_0
-	if [[ ${CHOST} == hppa2.0-* ]] ; then
-		is_hppa_2_0=1
-		export CHOST=${CHOST/2.0/1.1}
-	fi
-
 	# ABI mappings (needs all architectures supported)
 	case ${ABI} in
 		32|x86)       GMPABI=32;;
