@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/muParser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.15 2010/04/26 20:35:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.16 2010/11/11 17:00:58 jlec Exp $
+
+*muParser-1.34 (11 Nov 2010)
+
+  11 Nov 2010; Justin Lecher <jlec@gentoo.org> +muParser-1.34.ebuild:
+  Version Bump
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> muParser-1.32-r1.ebuild:
   amd64/x86 stable, bug #314045
