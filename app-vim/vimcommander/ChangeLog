@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimcommander
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.26 2010/10/03 17:23:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.27 2010/11/11 13:38:23 hwoarang Exp $
+
+  11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> vimcommander-80.ebuild:
+  Stable on amd64 wrt bug #345069
 
 *vimcommander-80 (03 Oct 2010)
 
