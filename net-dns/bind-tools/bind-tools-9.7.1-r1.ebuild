@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.7.2_p2.ebuild,v 1.1 2010/10/05 15:47:56 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.7.1-r1.ebuild,v 1.1 2010/11/11 18:18:46 idl0r Exp $
 
 EAPI="3"
 
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 MY_PN=${PN//-tools}
 MY_PV=${PV/_p/-P}
@@ -54,6 +54,9 @@ src_configure() {
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
 
+	# bug 344029
+	append-cppflags "-DDIG_SIGCHASE"
+
 	econf \
 		$(use_enable ipv6) \
 		$(use_with idn) \
@@ -89,7 +92,6 @@ src_install() {
 	cd "${S}"/bin/dnssec
 	dobin dnssec-keygen || die
 	doman dnssec-keygen.8 || die
-
 	if use doc; then
 		dohtml dnssec-keygen.html || die
 	fi

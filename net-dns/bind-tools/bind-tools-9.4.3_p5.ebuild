@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.3_p5.ebuild,v 1.6 2010/09/28 15:00:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.4.3_p5.ebuild,v 1.7 2010/11/11 18:18:46 idl0r Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_PN=${PN//-tools}
 MY_PV=${PV/_p/-P}
 MY_P="${MY_PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="bind tools: dig, nslookup, host, nsupdate, dnssec-keygen"
-HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
+HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
@@ -18,7 +18,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="idn ipv6"
 
 DEPEND="idn? ( || ( sys-libs/glibc dev-libs/libiconv )
-			net-dns/idnkit )"
+	net-dns/idnkit )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} || die
