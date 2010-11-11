@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.200 2010/11/08 01:03:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.201 2010/11/11 13:44:58 fauli Exp $
+
+  11 Nov 2010; <fauli@gentoo.org> erlang-14.2.ebuild:
+  block app-accessibility/speech-dispatcher to avoid file collisions as
+  reported in bug 344643 by Alexander Koryushkin <madcored AT gmail DOT com>
 
   08 Nov 2010; Christian Faulhammer <fauli@gentoo.org> -erlang-14.1.ebuild,
   -files/erlang-14.1-lm.patch:

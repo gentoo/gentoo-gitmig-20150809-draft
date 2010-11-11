@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2.ebuild,v 1.1 2010/11/08 00:47:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2.ebuild,v 1.2 2010/11/11 13:44:58 fauli Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -33,6 +33,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 IUSE="doc emacs hipe java kpoll odbc smp sctp ssl tk wxwidgets"
 
 RDEPEND=">=dev-lang/perl-5.6.1
+	!<app-accessibility/speech-dispatcher-0.7.1-r1
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	emacs? ( virtual/emacs )
 	java? ( >=virtual/jdk-1.2 )
