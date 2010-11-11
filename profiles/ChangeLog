@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4777 2010/11/11 18:43:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4778 2010/11/11 20:11:24 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2010; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mentioned app-portage/flaggie as an alternative to masked
+  app-portage/flagedit.
 
   11 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask >=app-arch/tar-1.24 until #342983 is solved.
