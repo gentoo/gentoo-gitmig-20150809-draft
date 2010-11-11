@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.2-r1.ebuild,v 1.3 2010/11/09 20:49:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.2-r1.ebuild,v 1.4 2010/11/11 03:26:16 sping Exp $
 
 EAPI=3
 
@@ -70,12 +70,11 @@ DEPEND="${CDEPEND}
 		sys-apps/texinfo
 	)"
 
-# Live ebuild builds HTML docs, additionally
+# Live ebuild builds man pages and HTML docs, additionally
 if [ "$PV" == "9999" ]; then
 	DEPEND="${DEPEND}
-		doc?    (
-			app-text/xmlto
-		)"
+		app-text/asciidoc
+		app-text/xmlto"
 fi
 
 SITEFILE=50${PN}-gentoo.el
