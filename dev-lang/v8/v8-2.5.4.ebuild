@@ -1,15 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.5.4.ebuild,v 1.1 2010/11/10 15:27:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.5.4.ebuild,v 1.2 2010/11/11 11:06:41 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib scons-utils subversion toolchain-funcs
-
-ESVN_REPO_URI="http://v8.googlecode.com/svn/tags/${PV}"
+inherit eutils flag-o-matic multilib scons-utils toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
