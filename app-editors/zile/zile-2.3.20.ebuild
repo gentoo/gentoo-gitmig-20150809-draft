@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.20.ebuild,v 1.2 2010/11/08 01:17:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.20.ebuild,v 1.3 2010/11/11 17:35:45 hwoarang Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="livecd test valgrind"
 
 RDEPEND="sys-libs/ncurses"
