@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.2 2010/08/12 13:28:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.3 2010/11/11 16:40:13 pva Exp $
 
 # This file contains descriptions of XTABLES_ADDONS USE-EXPANDED variables.
 # Keep it sorted.
@@ -14,6 +14,7 @@ dhcpmac - DHCPMAC target/match in conjunction with ebtables can be used to compl
 echo - ECHO target sends back all packets it received
 fuzzy - matches a rate limit based on a fuzzy logic controller (FLC)
 geoip - match a packet by its source or destination country
+gradm - match packets based on grsecurity RBAC status
 iface - match allows to check interface states
 ipmark - IPMARK target allows mark a received packet basing on its IP address
 ipp2p - matches certain packets in P2P flows
