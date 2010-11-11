@@ -1,6 +1,6 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.540 2010/11/11 19:24:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.541 2010/11/11 19:26:08 suka Exp $
 
 *openoffice-3.2.1-r1 (11 Nov 2010)
 
@@ -8,6 +8,7 @@
   +files/enable-startup-notification.diff, +files/scrap-pixmap-links.diff:
   Add new revision, based on ooo-build 3.2.1.6, bump for security fixes bug
   #332321
+  Also remove useless icon symlinks and add startup notifications
 
   07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> openoffice-3.2.1.ebuild:
   Convert media-libs/jpeg to virtual/jpeg
