@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.20 2010/11/03 16:31:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.21 2010/11/11 22:45:55 dilfridge Exp $
+
+  11 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.5.3.ebuild,
+  +files/rocs-4.5.3-double.patch:
+  Added patch for building correctly on arm, fixes bug 341069
 
 *rocs-4.5.3 (03 Nov 2010)
 

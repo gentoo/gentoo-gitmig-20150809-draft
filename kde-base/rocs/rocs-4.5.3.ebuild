@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.5.3.ebuild,v 1.1 2010/11/03 16:31:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.5.3.ebuild,v 1.2 2010/11/11 22:45:55 dilfridge Exp $
 
 EAPI="3"
 
@@ -16,3 +16,5 @@ DEPEND="
 	>=dev-cpp/eigen-2.0.3:2
 "
 RDEPEND=""
+
+PATCHES=( "${FILESDIR}/${P}-double.patch" )
