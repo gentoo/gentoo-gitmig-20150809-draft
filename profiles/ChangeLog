@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4773 2010/11/10 10:51:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4774 2010/11/11 07:51:20 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2010; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask flagedit, profuse, libconf and config_confd for removal
 
   10 Nov 2010; Alex Alexander <wired@gentoo.org> package.mask:
   unmasked Qt 4.7.1

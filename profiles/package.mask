@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12191 2010/11/10 18:54:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12192 2010/11/11 07:51:20 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (11 Nov 2010)
+# Masked for removal. Unmaintained with bugs
+# (#162753,#196552,#225071,#297650,#300104,#326099)
+app-admin/config_confd
+app-portage/flagedit
+app-portage/profuse
+dev-util/libconf
 
 # Eray Aslan <eras@gentoo.org> (10 Nov 2010)
 # masking prerelease versions
