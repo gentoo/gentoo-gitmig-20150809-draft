@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/latexsuite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.39 2010/11/01 15:31:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.40 2010/11/11 10:07:34 radhermit Exp $
+
+*latexsuite-1.8.23.20101027 (11 Nov 2010)
+
+  11 Nov 2010; Tim Harder <radhermit@gentoo.org>
+  +latexsuite-1.8.23.20101027.ebuild, metadata.xml:
+  Version bump. Add html USE flag to optionally install the extra HTML
+  documentation.
 
   01 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   latexsuite-1.8.23.20100129.ebuild:

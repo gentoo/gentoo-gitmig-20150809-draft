@@ -8,4 +8,7 @@
 			developer) on any bugs related to this package as he knows more
 			about it than me.</description>
 	</maintainer>
+	<use>
+		<flag name="html">Install HTML documentation</flag>
+	</use>
 </pkgmetadata>
