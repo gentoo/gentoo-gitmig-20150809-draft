@@ -12,6 +12,7 @@
     daily
     rotate 31
     create 0600 root root
+		missingok
     postrotate
         if [ -h /lib/rc/init.d/started/acct ]; then
              /etc/init.d/acct start > /dev/null 2>&1 || true
