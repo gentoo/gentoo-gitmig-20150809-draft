@@ -1,0 +1,9 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.32 2010/11/11 17:41:08 jer Exp $
+
+# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (11 Nov 2010)
+# Masked until bug #344613 is resolved.
+=dev-libs/gmp-5*
