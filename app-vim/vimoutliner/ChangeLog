@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vimoutliner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.17 2010/10/07 04:10:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.18 2010/11/11 13:46:39 hwoarang Exp $
+
+  11 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  vimoutliner-0.3.4-r2.ebuild:
+  Stable on amd64 wrt bug #345091
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> vimoutliner-0.3.3a-r1.ebuild:
   Drop to ~mips
