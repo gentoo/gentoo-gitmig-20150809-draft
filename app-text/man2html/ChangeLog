@@ -1,6 +1,13 @@
 # ChangeLog for app-text/man2html
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.21 2008/05/23 23:29:29 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.22 2010/11/11 10:04:13 xmw Exp $
+
+*man2html-1.6f-r1 (11 Nov 2010)
+
+  11 Nov 2010; Michael Weber <xmw@gentoo.org> +man2html-1.6f-r1.ebuild,
+  +files/man2html-1.6f-apostrophe.patch:
+  Revbump to fix bug 343943, thanks to OKUMURA N. Shin-ya
+  <oku.ns@dream.com>. Updated SRC_URI/HOMEPAGE.
 
   23 May 2008; Jeremy Olexa <darkside@gentoo.org> files/man2html.cron:
   Modified files/man2html.cron, see bug 189582. Thanks to Harvey Chapman for
