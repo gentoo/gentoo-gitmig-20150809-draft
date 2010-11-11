@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.10 2010/04/06 17:14:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.11 2010/11/11 10:26:46 ssuominen Exp $
 
 EAPI="3"
 
@@ -24,8 +24,8 @@ RDEPEND="app-text/ghostscript-gpl
 	expat? ( dev-libs/expat )
 	>=media-libs/freetype-2.0.1
 	sys-libs/zlib
-	media-libs/libpng
-	media-libs/jpeg
+	>=media-libs/libpng-1.4
+	virtual/jpeg
 	X? (
 		x11-libs/libICE
 		x11-libs/libSM
@@ -83,6 +83,8 @@ src_install() {
 	# bug #298596
 	emake -j1 install DESTDIR="${D}" || die
 	dodoc README AUTHORS CREDITS ChangeLog NEWS TODO
+
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
 
 set_gtk_confdir() {
