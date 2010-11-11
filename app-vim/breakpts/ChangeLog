@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/breakpts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.10 2010/10/07 02:57:25 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.11 2010/11/11 13:43:27 hwoarang Exp $
+
+  11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> breakpts-4.0.ebuild:
+  Stable on amd64 wrt bug #345083
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> breakpts-3.1.ebuild:
   Drop to ~mips
