@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.49 2010/10/07 02:48:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.50 2010/11/11 13:20:40 hwoarang Exp $
+
+  11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> align-41.ebuild:
+  Stable on amd64 wrt bug #345035
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> align-32.ebuild:
   Drop to ~mips
