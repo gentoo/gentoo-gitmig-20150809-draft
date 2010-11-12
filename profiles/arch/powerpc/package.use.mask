@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.56 2010/11/08 19:52:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.57 2010/11/12 18:14:31 c1pher Exp $
+
+# Dane Smith <c1pher@gentoo.org> (12 Nov 2010)
+# Valgrind is only available on amd64/x86/ppc/ppc64.
+net-libs/gnutls -valgrind
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (08 Nov 2010)
 # Tests masked until dev-python/mock is keyworded.

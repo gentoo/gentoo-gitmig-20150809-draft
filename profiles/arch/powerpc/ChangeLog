@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.93 2010/11/08 12:24:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.94 2010/11/12 18:14:31 c1pher Exp $
+
+  12 Nov 2010; Dane Smith <c1pher@gentoo.org> package.use.mask:
+  Unmask valgrind USE flag for net-libs/gnutls.
 
   08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.use.mask:
