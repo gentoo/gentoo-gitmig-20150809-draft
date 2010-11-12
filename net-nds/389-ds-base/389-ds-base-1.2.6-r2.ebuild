@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6-r1.ebuild,v 1.2 2010/10/15 17:08:26 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6-r2.ebuild,v 1.1 2010/11/12 12:26:37 lxnay Exp $
 
 EAPI=2
 
@@ -140,10 +140,11 @@ src_install () {
 	echo "LDPATH=/usr/$(get_libdir)/dirsrv" > "${D}"/etc/env.d/08dirsrv
 
 	# create the directory where our log file and database
-	diropts -m 0750 -o dirsrv -g dirsrv
+	diropts -m 0755
+	dodir /var/lib/dirsrv
 	keepdir /var/lib/dirsrv
 	dodir /var/lock/dirsrv
-
+	keepdir /var/lock/dirsrv
 	# snmp agent, required directory
 	keepdir /var/agentx
 	dodir /var/agentx
