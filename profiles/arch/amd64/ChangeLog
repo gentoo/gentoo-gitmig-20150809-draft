@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.105 2010/11/08 17:54:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.106 2010/11/12 18:11:52 c1pher Exp $
+
+  12 Nov 2010; Dane Smith <c1pher@gentoo.org> package.use.mask:
+  Unmask valgrind USE flag for gnutls.
 
   08 Nov 2010; Alexey Shvetsov <alexxy@gentoo.org> no-multilib/use.mask:
   unmask wimax on 64bit
