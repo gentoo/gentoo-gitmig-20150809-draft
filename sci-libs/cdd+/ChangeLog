@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/cdd+
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdd+/ChangeLog,v 1.1 2010/11/12 15:04:32 tomka Exp $
+
+*cdd+-077a (12 Nov 2010)
+
+  12 Nov 2010; Thomas Kahle <tomka@gentoo.org> +cdd+-077a.ebuild,
+  +files/cdd+-077a-gentoo.patch, +files/cdd+-077a-headers.patch,
+  +metadata.xml:
+  initial import from science overlay. Fixes bug #301567.
+
