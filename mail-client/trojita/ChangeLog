@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.6 2010/11/12 14:46:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.7 2010/11/12 15:33:02 scarabeus Exp $
+
+  12 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Drop now not required virtualx eclass.
 
   12 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
   Update ebuild to reflect tests change. Fix license specification. Per jkt's
