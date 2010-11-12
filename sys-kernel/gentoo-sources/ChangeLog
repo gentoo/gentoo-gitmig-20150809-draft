@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.776 2010/11/01 00:27:22 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.777 2010/11/12 12:23:59 mpagano Exp $
+
+*gentoo-sources-2.6.36-r1 (11 Nov 2010)
+
+  11 Nov 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.36-r1.ebuild:
+  xconfig patch for qt4, PCM stream assignments fix, support for lzma, lzo
+  and bzip2 compressions
 
 *gentoo-sources-2.6.35-r12 (01 Nov 2010)
 
