@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.84 2010/11/03 14:09:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.85 2010/11/12 09:49:36 ssuominen Exp $
+
+  12 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  aqbanking-4.2.0.ebuild, aqbanking-4.2.3.ebuild, aqbanking-4.2.4.ebuild:
+  Restrict sys-libs/gwenhywfar depend to < 4 wrt #345179 by Martin von
+  Gagern.
 
 *aqbanking-5.0.1 (03 Nov 2010)
 

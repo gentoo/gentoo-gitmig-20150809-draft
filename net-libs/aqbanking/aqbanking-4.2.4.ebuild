@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.2.4.ebuild,v 1.2 2010/02/06 19:43:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.2.4.ebuild,v 1.3 2010/11/12 09:49:36 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="chipcard debug ofx qt4"
 
 RDEPEND=">=sys-libs/gwenhywfar-3.11.3
+	<sys-libs/gwenhywfar-4
 	>=app-misc/ktoblzcheck-1.24
 	ofx? ( >=dev-libs/libofx-0.9.1 )
 	chipcard? ( >=sys-libs/libchipcard-4.2.9 )
