@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.131 2010/11/09 20:48:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.132 2010/11/12 15:27:54 jer Exp $
+
+*debootstrap-1.0.26 (12 Nov 2010)
+
+  12 Nov 2010; Jeroen Roovers <jer@gentoo.org> +debootstrap-1.0.26.ebuild:
+  Version bump.
 
   09 Nov 2010; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.25.ebuild:
   Stable for PPC (bug #343947).
