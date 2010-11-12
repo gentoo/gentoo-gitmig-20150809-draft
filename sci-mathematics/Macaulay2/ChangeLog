@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/Macaulay2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.19 2010/11/12 18:56:55 tomka Exp $
+
+*Macaulay2-1.4 (12 Nov 2010)
+
+  12 Nov 2010; Thomas Kahle <tomka@gentoo.org>
+  +files/1.4-paths-of-external-programs.patch, +files/70Macaulay2-gentoo.el,
+  +Macaulay2-1.4.ebuild, +metadata.xml:
+  Macaulay2 is back! Was removed in bug #248365, readd fixes bug #246095.
+
