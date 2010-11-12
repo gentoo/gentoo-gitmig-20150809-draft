@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/arm-fdisk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.9 2009/01/14 02:57:36 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/ChangeLog,v 1.10 2010/11/12 13:03:15 maekke Exp $
+
+  12 Nov 2010; Markus Meier <maekke@gentoo.org> arm-fdisk-3.0.6-r1.ebuild:
+  respect LDFLAGS, bug #337247
 
 *arm-fdisk-3.0.6-r1 (14 Jan 2009)
 

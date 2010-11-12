@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.1 2009/01/14 02:57:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.2 2010/11/12 13:03:15 maekke Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 		sed -i \
 		-e "s:-O2 -Wall\( -g\)\?::" \
 		-e "/^CFLAGS/s:=:+=:" \
+		-e "/^LDFLAGS/s:=:+=:" \
 		-e '/^STRIP/s:strip:true:'
 }
 
