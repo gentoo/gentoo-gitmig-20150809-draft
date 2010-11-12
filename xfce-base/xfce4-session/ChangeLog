@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.122 2010/11/08 19:30:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.123 2010/11/12 20:50:57 ssuominen Exp $
+
+*xfce4-session-4.7.1-r2 (12 Nov 2010)
+
+  12 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-session-4.7.1-r2.ebuild,
+  +files/xfce4-session-4.7.1-stop_using_subject_cookie.patch:
+  Fix Hibernate and Suspend wrt upstream #6817.
 
 *xfce4-session-4.7.1-r1 (08 Nov 2010)
 
