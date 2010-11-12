@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/lrslib
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/ChangeLog,v 1.1 2010/11/12 18:43:10 tomka Exp $
+
+*lrslib-042c (12 Nov 2010)
+
+  12 Nov 2010; Thomas Kahle <tomka@gentoo.org> +lrslib-042c.ebuild,
+  +metadata.xml:
+  Initial import from science overlay. Fixes bug 338685
+
