@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r1.ebuild,v 1.13 2010/08/10 20:54:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r3.ebuild,v 1.1 2010/11/12 17:52:31 armin76 Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -105,10 +105,13 @@ src_prepare() {
 	# detect recent libgnutls versions, upstream bug STR #3178
 	epatch "${FILESDIR}/${PN}-1.3.10-str3178.patch"
 
-	# security fix CUPS XSS and HTTP header/body attacks via attribute injection
+	# CVE-2009-2820: Several XSS flaws in forms processed by CUPS web interface
 	# upstream bug STR #3178 and STR #3401
 	epatch "${FILESDIR}/${PN}-1.3.11-str3367-security-1.3v2.patch"
 	epatch "${FILESDIR}/${PN}-1.3.11-str3401-security-1.3v2-regression.patch"
+	# CVE-2009-3553: Use-after-free (crash) due improper reference counting in abstract file descriptors handling interface
+	# upstream bug STR #3200
+	epatch "${FILESDIR}/${PN}-1.3.11-str3200.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -160,7 +163,7 @@ src_configure() {
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
 		--with-languages=${LINGUAS} \
-		--with-pdftops=/usr/bin/pdftops \
+		--with-pdftops=pdftops \
 		--with-system-groups=lpadmin \
 		--with-xinetd=/etc/xinetd.d \
 		$(use_enable acl) \
