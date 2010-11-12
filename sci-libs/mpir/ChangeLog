@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/mpir
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/ChangeLog,v 1.1 2010/11/12 13:15:46 tomka Exp $
+
+*mpir-2.1.3 (12 Nov 2010)
+
+  12 Nov 2010; Thomas Kahle <tomka@gentoo.org>
+  +files/mpir-1.3.0-ABI-multilib.patch, +files/mpir-2.0.0-yasm.patch,
+  +mpir-2.1.3.ebuild, +metadata.xml:
+  Initial import from science overlay, fixes bug 293383
+
