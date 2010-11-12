@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1.ebuild,v 1.6 2010/11/06 21:30:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1.ebuild,v 1.7 2010/11/12 17:21:57 billie Exp $
 
 EAPI=2
 
@@ -53,7 +53,8 @@ DEPEND="
 	"
 
 src_prepare() {
-	epatch "${FILESDIR}/conky-1.8.1-nvidia-x.patch"
+	epatch "${FILESDIR}/conky-${PV}-nvidia-x.patch"
+	epatch "${FILESDIR}/conky-${PV}-xmms2.patch"
 }
 
 src_configure() {
