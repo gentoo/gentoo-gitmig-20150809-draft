@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6146 2010/11/12 13:34:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6147 2010/11/12 19:15:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3448,6 +3448,7 @@ sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
+sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation)
 sci-mathematics/coq:realanalysis - Build real analysis modules (slower compilation)
 sci-mathematics/dataplot:gs - Add Ghostscript support (app-text/ghostscript-gpl) 
