@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.84.20100819.ebuild,v 1.1 2010/10/03 19:00:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.84.20100819-r1.ebuild,v 1.1 2010/11/12 08:37:00 radhermit Exp $
 
 EAPI="2"
+
+inherit eutils autotools
 
 DESCRIPTION="CONE: COnsole News reader and Emailer"
 HOMEPAGE="http://www.courier-mta.org/cone/"
@@ -26,8 +28,23 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-aspell-automagic.patch
+
+	cd cone
+	LIBTOOLIZE="true" eautoreconf
+}
+
 src_configure() {
+	local myconf
+	if use spell ; then
+	   myconf="--with-spellcheck=aspell"
+	else
+	   myconf="--with-spellcheck=none"
+	fi
+
 	econf \
+		${myconf} \
 		$(use_with ldap ldapaddressbook) \
 		$(use_with gnutls) \
 		$(use_with idn libidn) \
