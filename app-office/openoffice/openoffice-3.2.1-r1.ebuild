@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.1 2010/11/11 19:24:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.2 2010/11/12 19:56:43 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -225,6 +225,7 @@ src_prepare() {
 	epatch "${FILESDIR}/enable-startup-notification.diff"
 	cp -f "${FILESDIR}/qt-use-native-backend.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/neon-remove-SSPI-support.diff" "${S}/patches/hotfixes" || die
+	cp -f "${FILESDIR}/libX11-fix.diff" "${S}/patches/hotfixes" || die
 
 	#Use flag checks
 	if use java ; then

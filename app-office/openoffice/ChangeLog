@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.541 2010/11/11 19:26:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.542 2010/11/12 19:56:43 suka Exp $
+
+  12 Nov 2010; Andreas Proschofsky <suka@gentoo.org> +files/libX11-fix.diff,
+  openoffice-3.2.1-r1.ebuild:
+  Fix build with >=libX11-1.3.99 bug #344993
 
 *openoffice-3.2.1-r1 (11 Nov 2010)
 
