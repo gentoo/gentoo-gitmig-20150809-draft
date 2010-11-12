@@ -1,32 +1,36 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.4 2010/06/06 10:53:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.5 2010/11/12 14:46:12 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
-
-inherit qt4-r2 git
+QT_REQUIRED="4.6.0"
+VIRTUALX_REQUIRED="optional"
+inherit qt4-r2 git virtualx
 
 DESCRIPTION="A Qt IMAP e-mail client"
 HOMEPAGE="http://trojita.flaska.net/"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS=""
 IUSE="debug test"
-RESTRICT="test"
 
 RDEPEND="
-	>=x11-libs/qt-gui-4.6.0:4
-	>=x11-libs/qt-sql-4.6.0:4[sqlite]
-	>=x11-libs/qt-webkit-4.6.0:4
+	>=x11-libs/qt-gui-${QT_REQUIRED}:4
+	>=x11-libs/qt-sql-${QT_REQUIRED}:4[sqlite]
+	>=x11-libs/qt-webkit-${QT_REQUIRED}:4
 "
 DEPEND="${RDEPEND}
-	test? ( x11-libs/qt-test:4 )
+	test? ( >=x11-libs/qt-test-${QT_REQUIRED}:4 )
 "
 
 src_configure() {
 	eqmake4 PREFIX=/usr
+}
+
+src_test() {
+	Xemake check || die
 }
