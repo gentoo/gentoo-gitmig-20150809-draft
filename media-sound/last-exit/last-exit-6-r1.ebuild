@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.5 2009/06/05 11:00:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.6 2010/11/12 21:58:27 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
 inherit mono gnome2 eutils autotools
 
 DESCRIPTION="Gnome/GTK+ alternative to the last.fm player"
-HOMEPAGE="http://lastexit-player.org/"
-SRC_URI="http://lastexit-player.org/releases/${P}.tar.bz2"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
