@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.21 2010/10/03 18:36:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.22 2010/11/12 04:13:58 mattst88 Exp $
+
+  12 Nov 2010; <mattst88@gentoo.org> mpc-0.8.2.ebuild:
+  Add ~mips keyword, wrt #279851.
 
   03 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> mpc-0.8.2.ebuild:
   ppc64 stable wrt #338064
