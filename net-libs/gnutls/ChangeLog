@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.278 2010/11/10 20:45:01 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.279 2010/11/12 20:05:57 c1pher Exp $
+
+  12 Nov 2010; Dane Smith <c1pher@gentoo.org> gnutls-2.10.2-r1.ebuild,
+  gnutls-2.11.4-r1.ebuild:
+  Changed guile dependency in 2.10.2-r1 and 2.11.4-r1 to be >=1.8 wrt bug
+  302619.
 
   10 Nov 2010; Dane Smith <c1pher@gentoo.org> gnutls-2.10.2-r1.ebuild:
   Readd alpha keyword as per bug 326999 as alpha *has* in fact keyworded

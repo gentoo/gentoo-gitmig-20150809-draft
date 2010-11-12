@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.10.2-r1.ebuild,v 1.2 2010/11/10 20:45:01 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.10.2-r1.ebuild,v 1.3 2010/11/12 20:05:57 c1pher Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ RDEPEND="dev-libs/libgpg-error
 	>=dev-libs/libgcrypt-1.4.0
 	>=dev-libs/libtasn1-0.3.4
 	nls? ( virtual/libintl )
-	guile? ( dev-scheme/guile[networking] )
+	guile? ( >=dev-scheme/guile-1.8[networking] )
 	zlib? ( >=sys-libs/zlib-1.1 )
 	!bindist? ( lzo? ( >=dev-libs/lzo-2 ) )"
 DEPEND="${RDEPEND}
