@@ -1,20 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.0.2-r1.ebuild,v 1.1 2010/01/26 19:08:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.2.ebuild,v 1.1 2010/11/12 18:16:24 dertobi123 Exp $
 
 inherit eutils
 
-MY_PBASE_amd64="${PN/oracle-instantclient-/oracle-instantclient11.2-}-${PV}-1.x86_64"
-MY_P_amd64="${PN/oracle-instantclient-/oracle-instantclient11.2-}-${PV}-1.x86_64"
-MY_PSDK_amd64="${MY_PBASE_amd64/basic/devel}"
+MY_P_x86="${PN/oracle-/}-linux32-${PV}.0"
+MY_PSDK_x86="${MY_P_x86/basic/sdk}"
+
+MY_PBASE_amd64="${PN/oracle-instantclient-basic/instantclient-basic-linux}-x86-64-${PV}.0"
+MY_P_amd64="${PN/oracle-instantclient-basic/instantclient-basic-linux}-x86-64-${PV}.0"
+MY_PSDK_amd64="${MY_PBASE_amd64/basic/sdk}"
 
 DESCRIPTION="Oracle 11g client installation for Linux with SDK"
-HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
-SRC_URI="amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )"
+HOMEPAGE="http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html"
+SRC_URI="x86? ( ${MY_P_x86}.zip ${MY_PSDK_x86}.zip )
+		 amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="fetch"
 IUSE=""
 

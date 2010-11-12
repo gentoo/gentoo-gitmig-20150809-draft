@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/oracle-instantclient-sqlplus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.27 2009/12/31 10:41:57 dertobi123 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.28 2010/11/12 18:19:42 dertobi123 Exp $
+
+*oracle-instantclient-sqlplus-11.2.0.2 (12 Nov 2010)
+
+  12 Nov 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  -oracle-instantclient-sqlplus-10.2.0.3-r1.ebuild,
+  -oracle-instantclient-sqlplus-11.1.0.7.0-r1.ebuild,
+  -oracle-instantclient-sqlplus-11.2.0.0.2.ebuild,
+  -oracle-instantclient-sqlplus-11.2.0.1.ebuild,
+  +oracle-instantclient-sqlplus-11.2.0.2.ebuild:
+  Version bump
 
 *oracle-instantclient-sqlplus-11.2.0.1 (31 Dec 2009)
 *oracle-instantclient-sqlplus-11.2.0.0.2 (31 Dec 2009)
