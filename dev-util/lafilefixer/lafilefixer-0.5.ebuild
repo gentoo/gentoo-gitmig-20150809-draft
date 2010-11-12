@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/lafilefixer-0.5.ebuild,v 1.14 2009/09/26 19:50:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/lafilefixer-0.5.ebuild,v 1.15 2010/11/12 15:20:21 mattst88 Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 RDEPEND=">=app-shells/bash-3.2
