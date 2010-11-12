@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.11_rc1.ebuild,v 1.4 2010/10/17 14:04:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.11_rc1-r1.ebuild,v 1.1 2010/11/12 06:36:48 lxnay Exp $
 
 EAPI="2"
 
