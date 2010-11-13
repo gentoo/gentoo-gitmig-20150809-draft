@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qgtkstyle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.4 2010/11/13 20:36:00 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.5 2010/11/13 20:53:07 wired Exp $
+
+  13 Nov 2010; Alex Alexander <wired@gentoo.org> qgtkstyle-4.6.3-r1.ebuild,
+  qgtkstyle-4.7.1-r1.ebuild:
+  fix cairo dep
 
 *qgtkstyle-4.7.1-r1 (13 Nov 2010)
 *qgtkstyle-4.6.3-r1 (13 Nov 2010)

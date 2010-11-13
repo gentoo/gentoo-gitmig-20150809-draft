@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.6.3-r1.ebuild,v 1.1 2010/11/13 20:36:00 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.6.3-r1.ebuild,v 1.2 2010/11/13 20:53:07 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -15,7 +15,7 @@ COMMON_DEPEND="
 	>=x11-libs/qt-gui-${PV}-r1
 "
 DEPEND="${COMMON_DEPEND}
-	x11-libs/cairo
+	|| ( >=x11-libs/cairo-1.10.0[-qt4] <x11-libs/cairo-1.10.0 )
 "
 RDEPEND="${COMMON_DEPEND}
 	!>x11-libs/qt-gui-${PV}-r9999
