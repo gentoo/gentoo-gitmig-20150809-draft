@@ -1,0 +1,31 @@
+In file included from libnet_write.c:36:
+/usr/include/netinet/udp.h:66: error: expected specifier-qualifier-list before 'u_short'
+make: *** [libnet_write.lo] Error 1
+
+
+--- src/libnet_write.c
++++ src/libnet_write.c
+@@ -32,9 +32,6 @@
+  *
+  */
+ 
+-#include <netinet/in.h>
+-#include <netinet/udp.h>
+-
+ #if (HAVE_CONFIG_H)
+ #include "../include/config.h"
+ #endif
+@@ -47,6 +44,13 @@
+ #include "Ntddndis.h"
+ #endif
+ 
++#ifdef HAVE_SYS_TYPES_H
++#include <sys/types.h>  /* for u_short in udphdr on Darwin */
++#endif
++
++#include <netinet/in.h>
++#include <netinet/udp.h>
++
+ int
+ libnet_write(libnet_t *l)
+ {

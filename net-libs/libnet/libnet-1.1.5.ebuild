@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.5.ebuild,v 1.3 2010/11/10 05:59:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.5.ebuild,v 1.4 2010/11/13 08:40:15 grobian Exp $
 
 EAPI="2"
 
@@ -18,7 +18,11 @@ IUSE="doc"
 DEPEND="sys-devel/autoconf"
 RDEPEND=""
 
-src_install(){
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-darwin.patch
+}
+
+src_install() {
 	emake DESTDIR="${D}" install || die "Failed to install"
 
 	dodoc README \

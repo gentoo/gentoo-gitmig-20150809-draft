@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.67 2010/11/10 05:59:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.68 2010/11/13 08:40:15 grobian Exp $
+
+  13 Nov 2010; Fabian Groffen <grobian@gentoo.org> libnet-1.1.5.ebuild,
+  +files/libnet-1.1.5-darwin.patch:
+  Fix compilation on Darwin
 
   10 Nov 2010; Jeroen Roovers <jer@gentoo.org> libnet-1.1.5.ebuild:
   Forgot one.
