@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.5.7.ebuild,v 1.1 2010/11/07 09:32:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.5.7.ebuild,v 1.2 2010/11/13 21:25:52 ssuominen Exp $
 
 EAPI=3
 inherit multilib toolchain-funcs
@@ -24,10 +24,8 @@ DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	myglewopts=(
-		GLEW_DEST="${ED}/usr"
-		LIBDIR="${ED}/usr/$(get_libdir)"
 		AR="$(tc-getAR)"
-		STRIP="true"
+		STRIP=true
 		CC="$(tc-getCC)"
 		LD="$(tc-getCC) ${LDFLAGS}"
 		M_ARCH=""
@@ -51,7 +49,11 @@ src_compile(){
 }
 
 src_install() {
-	emake "${myglewopts[@]}" install || die
+	emake \
+		GLEW_DEST="${ED}/usr" \
+		LIBDIR="${ED}/usr/$(get_libdir)" \
+		"${myglewopts[@]}" install || die
+
 	dodoc doc/*.txt README.txt TODO.txt || die
 	dohtml doc/*.{css,html,jpg,png} || die
 }
