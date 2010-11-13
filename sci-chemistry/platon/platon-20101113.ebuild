@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20100712.ebuild,v 1.1 2010/07/13 07:23:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20101113.ebuild,v 1.1 2010/11/13 12:42:17 jlec Exp $
 
 EAPI="3"
 
