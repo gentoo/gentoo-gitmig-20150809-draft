@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.24 2010/11/06 19:21:13 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.25 2010/11/13 12:17:01 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #321791
 
   06 Nov 2010; Mart Raudsepp <leio@gentoo.org> mysql-4.0.ebuild,
   mysql-4.1.ebuild, mysql-5.1.ebuild:
