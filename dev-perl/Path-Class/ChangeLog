@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.22 2010/11/05 13:16:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.23 2010/11/13 19:48:43 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> Path-Class-0.21.ebuild:
+  sparc stable wrt #341865
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> Path-Class-0.21.ebuild:
   Stable on amd64 wrt bug #341865
