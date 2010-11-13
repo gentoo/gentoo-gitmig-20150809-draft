@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.560 2010/11/06 19:18:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.561 2010/11/13 12:21:36 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.50-r1.ebuild:
+  ia64/s390/sh/sparc stable wrt #321791
 
   06 Nov 2010; Mart Raudsepp <leio@gentoo.org> mysql-5.1.52.ebuild:
   Add ~mips keyword, bug 189223
