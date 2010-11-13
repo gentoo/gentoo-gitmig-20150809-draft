@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.81 2010/10/24 18:27:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.82 2010/11/13 14:33:37 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> nvi-1.81.6-r3.ebuild:
+  alpha/sparc stable wrt #341179
 
   24 Oct 2010; Jeroen Roovers <jer@gentoo.org> nvi-1.81.6-r3.ebuild:
   Stable for HPPA (bug #341179).
