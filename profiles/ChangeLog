@@ -1,10 +1,34 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4778 2010/11/11 20:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4779 2010/11/13 12:39:32 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Nov 2010; Anthony G. Basile <blueness@gentoo.org>
+  hardened/ia64/deprecated, +hardened/linux/ia64/10.0/deprecated,
+  +hardened/linux/ia64/10.0/desktop/deprecated,
+  hardened/linux/ia64/10.0/desktop/parent,
+  +hardened/linux/ia64/10.0/developer/deprecated,
+  hardened/linux/ia64/10.0/developer/parent,
+  hardened/linux/ia64/10.0/parent,
+  +hardened/linux/ia64/10.0/server/deprecated,
+  hardened/linux/ia64/10.0/server/parent,
+  -hardened/linux/ia64/2008.0/deprecated,
+  -hardened/linux/ia64/2008.0/desktop/deprecated,
+  -hardened/linux/ia64/2008.0/desktop/make.defaults,
+  -hardened/linux/ia64/2008.0/desktop/parent,
+  -hardened/linux/ia64/2008.0/developer/deprecated,
+  -hardened/linux/ia64/2008.0/developer/parent,
+  -hardened/linux/ia64/2008.0/make.defaults,
+  -hardened/linux/ia64/2008.0/parent,
+  -hardened/linux/ia64/2008.0/server/deprecated,
+  -hardened/linux/ia64/2008.0/server/parent,
+  +hardened/linux/ia64/desktop/parent,
+  +hardened/linux/ia64/developer/parent, +hardened/linux/ia64/make.defaults,
+  hardened/linux/ia64/parent, +hardened/linux/ia64/server/parent:
+  Updated hardened/linux/ia64 profiles, bug #344861
 
   11 Nov 2010; Michał Górny <mgorny@gentoo.org> package.mask:
   Mentioned app-portage/flaggie as an alternative to masked
