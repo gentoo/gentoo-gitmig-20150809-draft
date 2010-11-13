@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.0.2.ebuild,v 1.1 2010/09/11 13:36:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.0.2.ebuild,v 1.2 2010/11/13 18:49:13 jer Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="displays the hardware topology in convenient formats"
 HOMEPAGE="http://www.open-mpi.org/projects/hwloc/"
 SRC_URI="http://www.open-mpi.org/software/hwloc/v1.0/downloads/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="cairo svg xml X"
 SLOT="0"
 LICENSE="BSD"
