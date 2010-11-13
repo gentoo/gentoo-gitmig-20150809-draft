@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.2 2010/11/10 14:14:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.3 2010/11/13 13:43:21 jlec Exp $
 
 EAPI="3"
 
@@ -24,6 +24,7 @@ RDEPEND="
 	sci-libs/superlu
 	sci-libs/umfpack
 	virtual/blas
+	virtual/lapack
 	mpi? ( virtual/mpi )"
 DEPEND="
 	${RDEPEND}
