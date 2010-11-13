@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11.ebuild,v 1.2 2010/10/18 21:27:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11.ebuild,v 1.3 2010/11/13 12:37:03 hwoarang Exp $
 
 EAPI=2
 
@@ -14,6 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="png static-libs"
 
 DEPEND="png? ( >=media-libs/libpng-1.4 )"
+
+RESTRICT="test" #324275
 
 src_configure() {
 	econf \
