@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.5.7.ebuild,v 1.2 2010/11/13 21:25:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.5.7-r1.ebuild,v 1.1 2010/11/13 21:27:19 ssuominen Exp $
 
 EAPI=3
 inherit multilib toolchain-funcs
