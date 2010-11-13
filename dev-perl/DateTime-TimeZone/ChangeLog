@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.148 2010/11/05 14:00:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.149 2010/11/13 19:34:58 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
+  DateTime-TimeZone-1.22.ebuild:
+  alpha/ia64/sparc stable wrt #341865
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   DateTime-TimeZone-1.22.ebuild:

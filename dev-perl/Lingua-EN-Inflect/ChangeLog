@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-EN-Inflect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.25 2010/11/07 09:41:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.26 2010/11/13 19:43:04 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
+  Lingua-EN-Inflect-1.89.2.ebuild:
+  alpha/ia64/sparc stable wrt #341865
 
 *Lingua-EN-Inflect-1.89.3 (07 Nov 2010)
 
