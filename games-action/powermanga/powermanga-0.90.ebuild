@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.7 2010/03/19 20:35:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.8 2010/11/13 07:39:56 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-0.11.0
+DEPEND=">=media-libs/libsdl-0.11.0[audio,joystick,video]
 	media-libs/libpng
 	x11-libs/libXext
 	x11-libs/libXxf86dga
@@ -46,7 +46,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/powermanga"
 	doins -r data sounds graphics texts || die "doins failed"
 
-	find "${D}${GAMES_DATADIR}/powermanga/" -name "Makefil*" -exec rm -f \{\} \;
+	find "${D}${GAMES_DATADIR}/powermanga/" -name "Makefil*" -exec rm -f \{\} +
 
 	insinto /var/games
 	local f
