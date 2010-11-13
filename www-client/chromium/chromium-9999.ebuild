@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.109 2010/11/10 15:33:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.110 2010/11/13 15:19:19 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils flag-o-matic multilib pax-utils portability python subversion toolchain-funcs
+inherit eutils flag-o-matic multilib pax-utils portability python subversion \
+	toolchain-funcs versionator
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -22,7 +23,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( ~dev-lang/v8-2.5.4 )
+	system-v8? ( dev-lang/v8 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -105,8 +106,15 @@ egyp() {
 	"${@}"
 }
 
+get_bundled_v8_version() {
+	"$(PYTHON -2)" "${FILESDIR}"/extract_v8_version.py v8/src/version.cc
+}
+
+get_installed_v8_version() {
+	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
+}
+
 remove_bundled_lib() {
-	einfo "Removing bundled library $1 ..."
 	local out
 	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
 		|| ewarn "failed to remove bundled library $1"
@@ -166,6 +174,15 @@ src_prepare() {
 	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
+
+	local v8_bundled="$(get_bundled_v8_version)"
+	if use system-v8; then
+		local v8_installed="$(get_installed_v8_version)"
+		einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
+		version_is_at_least "${v8_bundled}" "${v8_installed}" || die
+	else
+		einfo "Bundled V8 version: ${v8_bundled}"
+	fi
 
 	if use system-sqlite; then
 		remove_bundled_lib "third_party/sqlite/src"
