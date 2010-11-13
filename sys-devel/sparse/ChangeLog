@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.36 2010/10/27 06:23:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.37 2010/11/13 16:15:50 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> sparse-0.4.2.ebuild:
+  ia64/s390/sh/sparc stable wrt #339791
 
   27 Oct 2010; Jeroen Roovers <jer@gentoo.org> sparse-0.4.2.ebuild:
   Stable for HPPA (bug #339791).
