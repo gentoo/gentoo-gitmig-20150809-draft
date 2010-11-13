@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.117 2010/11/05 14:17:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.118 2010/11/13 19:58:07 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> glib-perl-1.223.ebuild:
+  alpha/ia64/sh/sparc stable wrt #341865
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   glib-perl-1.223.ebuild:
