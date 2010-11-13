@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-11.2.0.2.ebuild,v 1.1 2010/11/12 18:17:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/oracle-instantclient-jdbc-11.2.0.2.ebuild,v 1.2 2010/11/13 16:03:09 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P_x86="${PN/oracle-/}-linux32-${PV}.0"
 MY_P_amd64="${PN/oracle-instantclient-/instantclient-}-linux-x86-64-${PV}.0"
-
 
 S="${WORKDIR}"
 DESCRIPTION="Oracle 11g client installation for Linux: JDBC supplement"
