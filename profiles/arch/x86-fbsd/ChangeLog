@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.21 2010/09/19 09:22:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.22 2010/11/13 16:56:03 aballier Exp $
+
+  13 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513
 
   19 Sep 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Mask app-arch/p7zip[kde] as kde-base/konqueror is not keyworded

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.10 2010/05/14 14:48:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.11 2010/11/13 16:56:02 aballier Exp $
 
 # Mask pam_ldap and nss_ldap - openldap dep missing.
 sys-auth/pam_ldap
@@ -95,6 +95,102 @@ sys-auth/nss_ldap
 >=dev-texlive/texlive-science-2009
 >=dev-texlive/texlive-texinfo-2009
 >=dev-texlive/texlive-xetex-2009
+
+
+
+# Alexis Ballier <aballier@gentoo.org> (24 Oct 2010)
+# TeXLive 2010 is masked on your arch because not all the packages are
+# keyworded, see bug #342513
+# Mask moved to per-arch package.mask on 13 Nov 2010
+>=app-text/texlive-2010
+>=app-text/texlive-core-2010
+>=dev-texlive/texlive-basic-2010
+>=dev-texlive/texlive-bibtexextra-2010
+>=dev-texlive/texlive-context-2010
+>=dev-texlive/texlive-documentation-arabic-2010
+>=dev-texlive/texlive-documentation-base-2010
+>=dev-texlive/texlive-documentation-bulgarian-2010
+>=dev-texlive/texlive-documentation-chinese-2010
+>=dev-texlive/texlive-documentation-czechslovak-2010
+>=dev-texlive/texlive-documentation-dutch-2010
+>=dev-texlive/texlive-documentation-english-2010
+>=dev-texlive/texlive-documentation-finnish-2010
+>=dev-texlive/texlive-documentation-french-2010
+>=dev-texlive/texlive-documentation-german-2010
+>=dev-texlive/texlive-documentation-greek-2010
+>=dev-texlive/texlive-documentation-italian-2010
+>=dev-texlive/texlive-documentation-japanese-2010
+>=dev-texlive/texlive-documentation-korean-2010
+>=dev-texlive/texlive-documentation-mongolian-2010
+>=dev-texlive/texlive-documentation-polish-2010
+>=dev-texlive/texlive-documentation-portuguese-2010
+>=dev-texlive/texlive-documentation-russian-2010
+>=dev-texlive/texlive-documentation-serbian-2010
+>=dev-texlive/texlive-documentation-slovenian-2010
+>=dev-texlive/texlive-documentation-spanish-2010
+>=dev-texlive/texlive-documentation-thai-2010
+>=dev-texlive/texlive-documentation-turkish-2010
+>=dev-texlive/texlive-documentation-ukrainian-2010
+>=dev-texlive/texlive-documentation-vietnamese-2010
+>=dev-texlive/texlive-fontsextra-2010
+>=dev-texlive/texlive-fontsrecommended-2010
+>=dev-texlive/texlive-fontutils-2010
+>=dev-texlive/texlive-formatsextra-2010
+>=dev-texlive/texlive-games-2010
+>=dev-texlive/texlive-genericextra-2010
+>=dev-texlive/texlive-genericrecommended-2010
+>=dev-texlive/texlive-htmlxml-2010
+>=dev-texlive/texlive-humanities-2010
+>=dev-texlive/texlive-langafrican-2010
+>=dev-texlive/texlive-langarab-2010
+>=dev-texlive/texlive-langarabic-2010
+>=dev-texlive/texlive-langarmenian-2010
+>=dev-texlive/texlive-langcjk-2010
+>=dev-texlive/texlive-langcroatian-2010
+>=dev-texlive/texlive-langcyrillic-2010
+>=dev-texlive/texlive-langczechslovak-2010
+>=dev-texlive/texlive-langdanish-2010
+>=dev-texlive/texlive-langdutch-2010
+>=dev-texlive/texlive-langenglish-2010
+>=dev-texlive/texlive-langfinnish-2010
+>=dev-texlive/texlive-langfrench-2010
+>=dev-texlive/texlive-langgerman-2010
+>=dev-texlive/texlive-langgreek-2010
+>=dev-texlive/texlive-langhebrew-2010
+>=dev-texlive/texlive-langhungarian-2010
+>=dev-texlive/texlive-langindic-2010
+>=dev-texlive/texlive-langitalian-2010
+>=dev-texlive/texlive-langlatin-2010
+>=dev-texlive/texlive-langlatvian-2010
+>=dev-texlive/texlive-langlithuanian-2010
+>=dev-texlive/texlive-langmongolian-2010
+>=dev-texlive/texlive-langnorwegian-2010
+>=dev-texlive/texlive-langother-2010
+>=dev-texlive/texlive-langpolish-2010
+>=dev-texlive/texlive-langportuguese-2010
+>=dev-texlive/texlive-langspanish-2010
+>=dev-texlive/texlive-langswedish-2010
+>=dev-texlive/texlive-langtibetan-2010
+>=dev-texlive/texlive-langturkmen-2010
+>=dev-texlive/texlive-langukenglish-2010
+>=dev-texlive/texlive-langvietnamese-2010
+>=dev-texlive/texlive-latex-2010
+>=dev-texlive/texlive-latex3-2010
+>=dev-texlive/texlive-latexextra-2010
+>=dev-texlive/texlive-latexrecommended-2010
+>=dev-texlive/texlive-luatex-2010
+>=dev-texlive/texlive-mathextra-2010
+>=dev-texlive/texlive-metapost-2010
+>=dev-texlive/texlive-music-2010
+>=dev-texlive/texlive-omega-2010
+>=dev-texlive/texlive-pictures-2010
+>=dev-texlive/texlive-plainextra-2010
+>=dev-texlive/texlive-pstricks-2010
+>=dev-texlive/texlive-psutils-2010
+>=dev-texlive/texlive-publishers-2010
+>=dev-texlive/texlive-science-2010
+>=dev-texlive/texlive-texinfo-2010
+>=dev-texlive/texlive-xetex-2010
 
 
 

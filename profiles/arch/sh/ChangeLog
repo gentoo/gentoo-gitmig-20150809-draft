@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.52 2010/10/12 11:53:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.53 2010/11/13 16:56:03 aballier Exp $
+
+  13 Nov 2010; Alexis Ballier <aballier@gentoo.org> +package.mask:
+  Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask wildmidi

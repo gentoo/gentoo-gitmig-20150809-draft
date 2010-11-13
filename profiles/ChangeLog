@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4780 2010/11/13 15:50:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4781 2010/11/13 16:56:01 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Nov 2010; Alexis Ballier <aballier@gentoo.org> arch/alpha/ChangeLog,
+  +arch/alpha/package.mask, arch/ia64/ChangeLog, +arch/ia64/package.mask,
+  arch/mips/ChangeLog, arch/mips/package.mask, arch/powerpc/ChangeLog,
+  arch/powerpc/package.mask, arch/s390/ChangeLog, arch/s390/package.mask,
+  arch/sh/ChangeLog, +arch/sh/package.mask, arch/sparc/ChangeLog,
+  arch/sparc/package.mask, arch/x86-fbsd/ChangeLog,
+  arch/x86-fbsd/package.mask, package.mask:
+  Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513
 
   13 Nov 2010; Anthony G. Basile <blueness@gentoo.org>
   -hardened/linux/ia64/10.0/make.defaults, profiles.desc:
