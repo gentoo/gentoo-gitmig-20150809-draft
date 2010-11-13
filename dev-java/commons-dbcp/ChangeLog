@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.49 2010/03/20 13:23:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.50 2010/11/13 22:14:20 caster Exp $
+
+*commons-dbcp-1.4 (13 Nov 2010)
+
+  13 Nov 2010; Vlastimil Babka <caster@gentoo.org> +commons-dbcp-1.4.ebuild:
+  Version bump, thanks to wltjr.
 
   20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   commons-dbcp-1.2.2-r1.ebuild:
