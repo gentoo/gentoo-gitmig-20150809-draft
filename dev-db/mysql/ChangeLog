@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.561 2010/11/13 12:21:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.562 2010/11/13 19:21:44 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.51.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #339717
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.50-r1.ebuild:
   ia64/s390/sh/sparc stable wrt #321791
