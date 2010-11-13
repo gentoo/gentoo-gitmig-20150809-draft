@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.86 2010/11/13 20:30:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.87 2010/11/13 20:50:57 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -28,9 +28,7 @@ HOMEPAGE="http://qt.nokia.com/"
 SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
-IUSE+=" debug"
-[[ ${CATEGORY}/${PN} != x11-themes/qgtkstyle ]] && 
-	IUSE+=" pch aqua"
+IUSE+=" debug pch aqua"
 
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
