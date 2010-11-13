@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12196 2010/11/13 16:56:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12197 2010/11/13 17:05:22 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (13 Nov 2010)
+# Last rites: app-text/ptex
+# Ebuilds have been unmaintained for years. ptex is now merged in TeX Live with
+# the 2010 version: enable the cjk useflag. If you have any feature ptex had
+# that is not available with TeX Live, please file a bug.
+# Will be removed on max{13 Dec 2010, TeX Live 2010 stabilized}.
+# Bugs: 303965, 323559 and 344585
+app-text/ptex
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2010)
 # Masked until sandbox bug 342983 is fixed. Causing nasty
