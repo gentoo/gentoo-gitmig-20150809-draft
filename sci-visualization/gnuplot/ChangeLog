@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.143 2010/10/29 03:55:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.144 2010/11/13 18:34:49 armin76 Exp $
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> gnuplot-4.4.2.ebuild:
+  alpha/ia64/s390/sparc stable wrt #342167
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> gnuplot-4.4.2.ebuild:
   Stable for HPPA (bug #342167).
