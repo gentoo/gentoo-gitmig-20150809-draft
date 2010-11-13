@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.13.ebuild,v 1.1 2010/09/29 11:48:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.13.ebuild,v 1.2 2010/11/13 21:21:13 grobian Exp $
 
 EAPI="2"
+
+inherit eutils libtool
 
 DESCRIPTION="An implementation of the Interactice Connectivity Establishment standard (ICE)"
 HOMEPAGE="http://nice.freedesktop.org/wiki/"
@@ -10,7 +12,7 @@ SRC_URI="http://nice.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+gstreamer upnp"
 
 RDEPEND=">=dev-libs/glib-2.10
@@ -20,6 +22,11 @@ RDEPEND=">=dev-libs/glib-2.10
 	upnp? ( >=net-libs/gupnp-igd-0.1.3 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-darwin.patch
+	elibtoolize  # for .bundle on Darwin
+}
 
 src_configure() {
 	econf $(use_with gstreamer) $(use_enable upnp gupnp)
