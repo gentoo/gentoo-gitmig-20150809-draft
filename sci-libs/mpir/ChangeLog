@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mpir
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/ChangeLog,v 1.1 2010/11/12 13:15:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/ChangeLog,v 1.2 2010/11/13 12:51:24 jlec Exp $
+
+  13 Nov 2010; Justin Lecher <jlec@gentoo.org> mpir-2.1.3.ebuild:
+  Some QA
 
 *mpir-2.1.3 (12 Nov 2010)
 

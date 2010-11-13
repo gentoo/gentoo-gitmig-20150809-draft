@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.1.3.ebuild,v 1.1 2010/11/12 13:15:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.1.3.ebuild,v 1.2 2010/11/13 12:51:24 jlec Exp $
 
 EAPI="3"
 
 inherit eutils autotools
 
-DESCRIPTION="library for arbitrary precision integer arithmetic derived from version 4.2.1 of gmp"
+DESCRIPTION="Library for arbitrary precision integer arithmetic derived from version 4.2.1 of gmp"
 HOMEPAGE="http://www.mpir.org/"
 SRC_URI="http://www.mpir.org/${P}.tar.gz"
 
@@ -20,8 +20,9 @@ DEPEND="x86? ( dev-lang/yasm )
 RDEPEND=""
 
 src_prepare(){
-	epatch "${FILESDIR}/${PN}-2.0.0-yasm.patch"
-	epatch "${FILESDIR}/${PN}-1.3.0-ABI-multilib.patch"
+	epatch \
+		"${FILESDIR}/${PN}-2.0.0-yasm.patch" \
+		"${FILESDIR}/${PN}-1.3.0-ABI-multilib.patch"
 	# In the same way there was QA regarding executable stacks
 	# with GMP we have some here as well. We cannot apply the
 	# GMP solution as yasm is used, at least on x86/amd64.
@@ -55,11 +56,10 @@ src_configure() {
 # Place mpir in profiles/arch/$arch/package.use.mask when making it available on $arch.
 	econf \
 		$(use_enable cxx) \
-		$(use_enable cpudetection fat) \
-		|| "econf failed"
+		$(use_enable cpudetection fat)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README NEWS
+	dodoc ChangeLog README NEWS || die
 }
