@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/qgtkstyle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.3 2010/11/10 21:29:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.4 2010/11/13 20:36:00 wired Exp $
+
+*qgtkstyle-4.7.1-r1 (13 Nov 2010)
+*qgtkstyle-4.6.3-r1 (13 Nov 2010)
+
+  13 Nov 2010; Alex Alexander <wired@gentoo.org> +qgtkstyle-4.6.3-r1.ebuild,
+  +qgtkstyle-4.7.1-r1.ebuild, +files/main.cpp, files/qgtkstyle.pro,
+  +files/qgtkstyle-gentoo.patch:
+  fixed qgtkstyle, it actually works now.
 
   10 Nov 2010; Markos Chandras <hwoarang@gentoo.org> qgtkstyle-4.6.3.ebuild:
   Stable on amd64 wrt bug #341703
