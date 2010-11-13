@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.625 2010/11/06 20:12:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.626 2010/11/13 21:40:55 wired Exp $
+
+*qt-4.7.1 (13 Nov 2010)
+
+  13 Nov 2010; Alex Alexander <wired@gentoo.org> +qt-4.7.1.ebuild:
+  version bump
 
 *qt-4.7.0 (06 Nov 2010)
 
