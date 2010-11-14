@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.384 2010/11/07 20:36:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.385 2010/11/14 19:14:12 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.6.ebuild:
+  sparc stable wrt #332361
 
   07 Nov 2010; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.6_p25423.ebuild, ffmpeg-9999.ebuild:
