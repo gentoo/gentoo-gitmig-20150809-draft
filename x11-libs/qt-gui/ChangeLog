@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.130 2010/11/14 11:06:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.131 2010/11/14 11:46:40 wired Exp $
+
+*qt-gui-4.6.3-r2 (14 Nov 2010)
+
+  14 Nov 2010; Alex Alexander <wired@gentoo.org> +qt-gui-4.6.3-r2.ebuild:
+  revbumped -r0 to -r2 for unlucky users who upgraded to -r1.
 
   14 Nov 2010; Alex Alexander <wired@gentoo.org> qt-gui-4.6.3.ebuild:
   added qgtkstyle block
