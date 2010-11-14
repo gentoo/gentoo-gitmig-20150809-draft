@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3.ebuild,v 1.1 2010/09/13 16:25:29 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3.ebuild,v 1.2 2010/11/14 13:39:27 jlec Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_with bzip2 libbz2) \
 		$(use_with lzma liblzma)"
-	econf ${myconf} || die "econf failed"
+	econf ${myconf}
 }
 
 src_install() {

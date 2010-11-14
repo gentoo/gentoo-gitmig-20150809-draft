@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/getdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.1 2010/09/13 16:25:29 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.2 2010/11/14 13:39:27 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> getdata-0.6.3.ebuild,
+  metadata.xml:
+  Move local USE lzma to global USE
 
 *getdata-0.6.3 (13 Sep 2010)
 
