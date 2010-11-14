@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.5 2010/09/02 12:54:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.6 2010/11/14 12:14:43 fauli Exp $
+
+  14 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  bzr-gtk-0.99.0.ebuild:
+  make dev-python/notify-python mandatory and eliminate libnotify USE flag,
+  as reported by Alex Barker <alex AT 1stleg DOT com> in bug 345127
 
 *bzr-gtk-0.99.0 (02 Sep 2010)
 
