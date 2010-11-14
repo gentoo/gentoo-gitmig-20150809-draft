@@ -1,6 +1,20 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.136 2010/10/17 14:54:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.137 2010/11/14 15:40:27 eva Exp $
+
+*gtk-doc-1.15-r2 (14 Nov 2010)
+
+  14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gtk-doc-1.10-no-m4.patch, -gtk-doc-1.11.ebuild,
+  -files/gtk-doc-1.11-fix-index-id-gen.patch,
+  -files/gtk-doc-1.11-quote-filenames-with-space.patch,
+  -files/gtk-doc-1.11-tests-fixes.patch, -gtk-doc-1.13-r2.ebuild,
+  -files/gtk-doc-1.13-fixxref-compat.patch,
+  -files/gtk-doc-1.13-scan-touch-module-overrides.patch,
+  +gtk-doc-1.15-r2.ebuild,
+  +files/gtk-doc-1.15-allow-selection-highlighter.patch, metadata.xml:
+  Fix automagic highlighting program detection, bug #334489. Handle
+  multi-slot python. Clean up old revisions.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gtk-doc-1.15.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #324077
