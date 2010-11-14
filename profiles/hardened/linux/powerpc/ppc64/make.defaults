@@ -1,0 +1,8 @@
+# Copyright 1999-2010 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/powerpc/ppc64/make.defaults,v 1.1 2010/11/14 15:44:24 blueness Exp $
+
+# STAGE1_USE does not stack
+STAGE1_USE="hardened nptl nptlonly pic"
+
+USE="-unicode"
