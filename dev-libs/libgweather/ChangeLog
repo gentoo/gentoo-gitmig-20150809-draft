@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.69 2010/11/01 07:23:17 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.70 2010/11/14 23:05:07 eva Exp $
+
+  14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  libgweather-2.30.3.ebuild:
+  Make sure timezone data is at least 2010k, bug #333667.
 
   01 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
   libgweather-2.30.3.ebuild:
