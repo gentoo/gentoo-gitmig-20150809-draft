@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.4 2009/12/07 23:01:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.5 2010/11/14 13:49:59 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -36,5 +36,5 @@ src_install() {
 	newbin mksquashfs mksquashfs-${SLOT} || die
 	newbin unsquashfs unsquashfs-${SLOT} || die
 	cd ..
-	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README README
+	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README README || die
 }

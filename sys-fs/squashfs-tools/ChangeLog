@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.71 2010/10/07 02:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.72 2010/11/14 13:49:59 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> squashfs-tools-3.2_p2.ebuild,
+  squashfs-tools-3.4.ebuild, squashfs-tools-4.0.ebuild,
+  squashfs-tools-4.0-r1.ebuild, squashfs-tools-4.1.ebuild, metadata.xml:
+  Move local USE lzma to global USE
 
   07 Oct 2010; Mike Frysinger <vapier@gentoo.org> squashfs-tools-4.1.ebuild:
   Fix by Martin Väth for IUSE=xattr handling #338671, and clean up general
