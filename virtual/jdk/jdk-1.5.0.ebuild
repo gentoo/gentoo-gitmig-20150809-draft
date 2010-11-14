@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0.ebuild,v 1.17 2010/07/20 18:54:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0.ebuild,v 1.18 2010/11/14 01:08:00 caster Exp $
 
 DESCRIPTION="Virtual for JDK"
 HOMEPAGE=""
@@ -30,5 +30,6 @@ RDEPEND="|| (
 		=dev-java/ibm-jdk-bin-1.5.0*
 		=dev-java/jrockit-jdk-bin-1.5.0*
 		=dev-java/apple-jdk-bin-1.5.0*
+		dev-java/gcj-jdk
 	)"
 DEPEND=""
