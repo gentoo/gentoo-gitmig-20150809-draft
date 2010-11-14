@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.75 2010/11/14 16:43:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.76 2010/11/14 20:15:54 aballier Exp $
+
+  14 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  Mask app-i18n/canna[doc], app-text/ptex does not build and ptex is
+  provided by TeX Live 2010, please remove the mask when TeX Live 2010 is
+  unmasked, bug #342513
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   unmask test USE flag of dev-util/buildbot*.

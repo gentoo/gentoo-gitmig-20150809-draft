@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.57 2010/11/12 18:14:31 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.58 2010/11/14 20:15:54 aballier Exp $
 
 # Dane Smith <c1pher@gentoo.org> (12 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
@@ -101,3 +101,10 @@ gnome-base/gnome mono
 # Joseph Jezak <josejx@gentoo.org> (12 November 2008)
 # Mask the JIT for pearpc, it's x86 only
 app-emulation/pearpc jit
+
+# Alexis Ballier <aballier@gentoo.org> (14 Nov 2010)
+# building the documentation needs ptex
+# app-text/ptex does not build: bug #323559
+# >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
+# unmask when TeX Live 2010 keywording is done (bug #342513)
+app-i18n/canna doc
