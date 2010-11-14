@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.35 2010/11/14 10:52:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.36 2010/11/14 17:04:17 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> gtk-syntax-20091024.ebuild:
+  alpha/ia64/sh/sparc stable wrt #345059
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> gtk-syntax-20091024.ebuild:
   arm/x86 stable, bug #345059
