@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.180 2010/11/13 19:31:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.181 2010/11/14 23:06:06 eva Exp $
+
+  14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgphoto2-2.4.6.ebuild, -libgphoto2-2.4.8.ebuild,
+  libgphoto2-2.4.9.ebuild:
+  Clean up old revisions. Avoid automagic dependency for ax203 and st2205
+  drivers, bug #345149. Re-add libtool to RDEPEND.
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> libgphoto2-2.4.9.ebuild:
   alpha/ia64/sparc stable wrt #339475

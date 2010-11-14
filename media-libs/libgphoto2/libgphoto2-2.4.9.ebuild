@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.9.ebuild,v 1.10 2010/11/13 19:31:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.9.ebuild,v 1.11 2010/11/14 23:06:06 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -44,13 +44,16 @@ done
 
 # libgphoto2 actually links to libtool
 RDEPEND="virtual/libusb:0
+	cameras_ax203? ( media-libs/gd )
+	cameras_st2205? ( media-libs/gd )
 	zeroconf? ( || (
 		net-dns/avahi[mdnsresponder-compat]
 		net-misc/mDNSResponder ) )
 	exif? ( >=media-libs/libexif-0.5.9 )
 	hal? (
 		>=sys-apps/hal-0.5
-		>=sys-apps/dbus-1 )"
+		>=sys-apps/dbus-1 )
+	sys-devel/libtool"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex
