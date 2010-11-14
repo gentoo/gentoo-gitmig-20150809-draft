@@ -1,0 +1,64 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.9.ebuild,v 1.1 2010/11/14 23:04:40 jsbronder Exp $
+
+EAPI=3
+inherit eutils
+
+DESCRIPTION="An authentication service for creating and validating credentials."
+HOMEPAGE="http://code.google.com/p/munge/"
+SRC_URI="http://munge.googlecode.com/files/${P}.tar.bz2"
+
+LICENSE="GPL-3"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="gcrypt"
+
+DEPEND="app-arch/bzip2
+	sys-libs/zlib
+	gcrypt? ( dev-libs/libgcrypt )
+	!gcrypt? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	enewgroup munge
+	enewuser munge -1 -1 /var/lib/munge munge
+}
+
+src_configure() {
+	local conf=""
+
+	if use gcrypt; then
+		conf="${conf} --with-crypto-lib=libgcrypt"
+	else
+		conf="${conf} --with-crypto-lib=openssl"
+	fi
+
+	econf ${conf} \
+		--localstatedir=/var \
+		|| die
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	diropts -o munge -g munge -m700
+	dodir /etc/munge || die
+
+	diropts -o munge -g munge -m711
+	dodir /var/lib/munge || die
+
+	diropts -o munge -g munge -m755
+	dodir /var/run/munge || die
+
+	diropts -o munge -g munge -m700
+	dodir /var/log/munge || die
+
+	rm -r "${D}"/etc/{init.d,default} || die
+
+	newconfd "${FILESDIR}"/${PN}d.confd ${PN}d || die
+	newinitd "${FILESDIR}"/${PN}d.initd ${PN}d || die
+}
+
+src_test() {
+	emake check || die
+}
