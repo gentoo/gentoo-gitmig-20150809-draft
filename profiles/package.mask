@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12200 2010/11/14 16:17:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12201 2010/11/14 16:54:36 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -506,6 +506,11 @@ dev-cpp/atkmm
 >=dev-python/brasero-python-2.32
 >=dev-python/totem-python-2.32
 >=dev-python/gnome-python-desktop-2.32
+>=gnome-extra/evolution-data-server-2.32
+>=gnome-extra/evolution-exchange-2.32
+>=gnome-extra/evolution-webcal-2.32
+>=mail-client/evolution-2.32
+>=media-video/totem-2.32
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
