@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/gcj-jdk
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.1 2010/11/14 01:04:19 caster Exp $
+
+*gcj-jdk-4.5.1 (14 Nov 2010)
+*gcj-jdk-4.4.5 (14 Nov 2010)
+*gcj-jdk-4.4.4 (14 Nov 2010)
+
+  14 Nov 2010; Vlastimil Babka <caster@gentoo.org> +gcj-jdk-4.4.4.ebuild,
+  +gcj-jdk-4.4.5.ebuild, +gcj-jdk-4.5.1.ebuild, +files/gcj-jdk.env,
+  +metadata.xml:
+  Initial import from java-overlay. Great thanks to Hanno Meyer-Thurow
+  (geki) <h.mth@web.de> and Andrew John Hughes <gnu_andrew@member.fsf.org>
+  for maintaining it in the overlays.
+
