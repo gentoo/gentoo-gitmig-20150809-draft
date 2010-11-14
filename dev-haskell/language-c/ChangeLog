@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/language-c
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.7 2010/09/18 19:20:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.8 2010/11/14 19:22:35 slyfox Exp $
+
+  14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  language-c-0.3.1.1.ebuild:
+  alpha/ia64/sparc stable (bug #339161)
 
   18 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
   language-c-0.3.1.1.ebuild:
