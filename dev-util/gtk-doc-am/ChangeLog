@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.50 2010/10/17 14:53:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.51 2010/11/14 15:22:23 eva Exp $
+
+  14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtk-doc-am-1.11.ebuild, -gtk-doc-am-1.13.ebuild:
+  Clean up old revisions.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gtk-doc-am-1.15.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #324077
