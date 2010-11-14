@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.5.ebuild,v 1.7 2010/11/11 10:22:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.5.ebuild,v 1.8 2010/11/14 12:08:12 ssuominen Exp $
 
 inherit libtool eutils
 
@@ -49,9 +49,8 @@ PROVIDE="virtual/quicktime"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Needed for sane .so versionning on g/fbsd
-	elibtoolize
+	sed -i -e 's:-DGTK_DISABLE_DEPRECATED::' configure || die #343419
+	elibtoolize # .so versioning for gfbsd
 }
 
 src_compile() {
