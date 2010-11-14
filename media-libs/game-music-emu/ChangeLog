@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/game-music-emu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.2 2010/11/14 12:54:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.3 2010/11/14 17:03:06 maekke Exp $
+
+  14 Nov 2010; Markus Meier <maekke@gentoo.org> game-music-emu-0.5.5.ebuild:
+  add ~x86, bug #344565
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> game-music-emu-0.5.5.ebuild:
   add ~arm, bug #344565
