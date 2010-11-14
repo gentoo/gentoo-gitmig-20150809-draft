@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.2 2010/09/26 17:48:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.3 2010/11/14 22:39:04 eva Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2 BSD DB"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
-IUSE="doc ipv6 kerberos gnome-keyring ldap ssl"
+IUSE="doc ipv6 kerberos gnome-keyring ldap ssl weather"
 
 RDEPEND=">=dev-libs/glib-2.16.1
 	>=x11-libs/gtk+-2.18
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.16.1
 	>=dev-db/sqlite-3.5
 	>=dev-libs/libxml2-2
 	>=net-libs/libsoup-2.4:2.4
-	>=dev-libs/libgweather-2.25.4
 	>=dev-libs/libical-0.43
 	>=dev-libs/dbus-glib-0.6
 	>=sys-libs/db-4
@@ -32,7 +31,8 @@ RDEPEND=">=dev-libs/glib-2.16.1
 		>=dev-libs/nspr-4.4
 		>=dev-libs/nss-3.9 )
 	ldap? ( >=net-nds/openldap-2 )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	weather? ( >=dev-libs/libgweather-2.25.4 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
@@ -52,7 +52,7 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_enable ssl ssl)
 		$(use_enable ssl smime)
-		--with-weather
+		$(use_with weather)
 		--enable-largefile
 		--with-libdb=/usr/$(get_libdir)"
 }
