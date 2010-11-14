@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.1-r1.ebuild,v 1.11 2008/01/10 10:45:08 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.1-r1.ebuild,v 1.12 2010/11/14 17:26:48 armin76 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geda.seul.org"
 IUSE="doc png xinerama"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="=x11-libs/gtk+-2*
 	png? ( media-libs/libpng )"

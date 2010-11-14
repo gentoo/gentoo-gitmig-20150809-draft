@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.37 2010/10/27 20:37:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.38 2010/11/14 17:26:48 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> gerbv-1.0.1-r1.ebuild,
+  gerbv-2.1.0.ebuild, gerbv-2.3.0-r2.ebuild, gerbv-2.4.0.ebuild:
+  Drop sparc keywords
 
   27 Oct 2010; Thomas Kahle <tomka@gentoo.org> gerbv-2.4.0.ebuild:
   x86 stable per bug #342811

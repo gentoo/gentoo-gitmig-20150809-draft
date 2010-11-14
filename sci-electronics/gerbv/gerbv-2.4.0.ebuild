@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.4.0.ebuild,v 1.3 2010/10/27 20:37:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.4.0.ebuild,v 1.4 2010/11/14 17:26:48 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gerbv.sourceforge.net/"
 IUSE="unit-mm doc examples"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 RESTRICT="test"
 
 RDEPEND=">=x11-libs/gtk+-2.4

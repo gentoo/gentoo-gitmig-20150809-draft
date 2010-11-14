@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.58 2010/11/02 07:10:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.59 2010/11/14 17:25:42 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> pcb-20081128-r1.ebuild,
+  pcb-20091103.ebuild, pcb-20100929.ebuild:
+  Drop sparc keywords
 
   02 Nov 2010; Fabian Groffen <grobian@gentoo.org> pcb-20100929.ebuild:
   Fix ebuild for Prefix, bug #343777
