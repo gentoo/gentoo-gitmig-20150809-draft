@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.707 2010/11/03 16:30:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.708 2010/11/14 13:46:54 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Move local USE lzma to global USE
 
 *kdelibs-4.5.3 (03 Nov 2010)
 
