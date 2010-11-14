@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.50 2010/10/30 10:00:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.51 2010/11/14 12:47:59 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> thunderbird-3.1.6.ebuild:
+  alpha/ia64/sparc stable wrt #342847
 
   30 Oct 2010; Markus Meier <maekke@gentoo.org> thunderbird-3.1.6.ebuild:
   x86 stable, bug #342847
