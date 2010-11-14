@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.6 2010/11/14 17:20:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.7 2010/11/14 23:02:18 hwoarang Exp $
+
+  14 Nov 2010; Markos Chandras <hwoarang@gentoo.org> mupdf-0.7-r1.ebuild:
+  Stable on amd64 wrt bug #344771
 
   14 Nov 2010; Christian Faulhammer <fauli@gentoo.org> mupdf-0.7-r1.ebuild:
   stable x86, bug 344771

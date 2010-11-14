@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.7-r1.ebuild,v 1.3 2010/11/14 17:20:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.7-r1.ebuild,v 1.4 2010/11/14 23:02:18 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.com/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="X"
 
 RDEPEND="media-libs/freetype:2
