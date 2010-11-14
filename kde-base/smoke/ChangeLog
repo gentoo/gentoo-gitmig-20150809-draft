@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.117 2010/11/03 16:30:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.118 2010/11/14 04:39:45 reavertm Exp $
+
+  14 Nov 2010; Maciej Mrozowski <reavertm@gentoo.org> smoke-4.5.2.ebuild,
+  smoke-4.5.3.ebuild:
+  Fix Qwt automagic
 
 *smoke-4.5.3 (03 Nov 2010)
 

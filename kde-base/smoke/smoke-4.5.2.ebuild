@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.5.2.ebuild,v 1.1 2010/10/06 09:17:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.5.2.ebuild,v 1.2 2010/11/14 04:39:45 reavertm Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ src_configure() {
 		$(cmake-utils_use_with phonon)
 		$(cmake-utils_use_with qimageblitz QImageBlitz)
 		$(cmake-utils_use_with qscintilla QScintilla)
-		$(cmake-utils_use_with qwt Qwt)
+		$(cmake-utils_use_disable qwt)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_disable webkit QtWebKit)
