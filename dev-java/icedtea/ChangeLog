@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.11 2010/11/14 00:02:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.12 2010/11/14 00:54:22 caster Exp $
+
+  14 Nov 2010; Vlastimil Babka <caster@gentoo.org>
+  -files/6.1.8.0-systemtap-gcc-4.5.patch, -icedtea-6.1.8.0.ebuild,
+  -icedtea-6.1.8.1.ebuild, -icedtea-6.1.9.ebuild:
+  Remove old.
 
   14 Nov 2010; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.8.0.ebuild,
   icedtea-6.1.8.1.ebuild, icedtea-6.1.9.ebuild, icedtea-6.1.9.1.ebuild:
