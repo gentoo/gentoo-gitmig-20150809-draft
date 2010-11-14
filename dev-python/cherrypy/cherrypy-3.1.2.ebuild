@@ -1,16 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.1.2.ebuild,v 1.7 2010/04/02 18:49:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.1.2.ebuild,v 1.8 2010/11/14 21:06:25 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 MY_P="CherryPy-${PV}"
 
-DESCRIPTION="CherryPy is a pythonic, object-oriented web development framework."
+DESCRIPTION="CherryPy is a pythonic, object-oriented HTTP framework"
 HOMEPAGE="http://www.cherrypy.org/ http://pypi.python.org/pypi/CherryPy"
 SRC_URI="http://download.cherrypy.org/${PN}/${PV}/${MY_P}.tar.gz"
 
@@ -21,7 +22,6 @@ IUSE="doc"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
