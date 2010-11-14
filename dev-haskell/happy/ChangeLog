@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.46 2010/07/12 19:43:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.47 2010/11/14 18:38:14 slyfox Exp $
+
+  14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> happy-1.18.2.ebuild,
+  happy-1.18.4.ebuild:
+  alpha stable (bug #339161)
+
+  14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> happy-1.18.2.ebuild:
+  ia64 stable (bug #339161)
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ChangeLog:
   happy-1.18.4.ebuild: marked ~alpha

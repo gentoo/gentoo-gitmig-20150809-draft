@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.42 2010/07/12 19:32:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.43 2010/11/14 18:39:19 slyfox Exp $
+
+  14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> alex-2.3.1.ebuild,
+  alex-2.3.2.ebuild:
+  alpha stable (bug #339161)
+
+  14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> alex-2.3.1.ebuild:
+  ia64 stable (bug #339161)
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> alex-2.3.2.ebuild:
   Marked ~alpha
