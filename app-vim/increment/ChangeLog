@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/increment
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/increment/ChangeLog,v 1.10 2008/09/20 14:48:48 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/increment/ChangeLog,v 1.11 2010/11/14 23:03:17 hwoarang Exp $
+
+  14 Nov 2010; Markos Chandras <hwoarang@gentoo.org> increment-1.1.ebuild:
+  Stable on amd64 wrt bug #345355
 
 *increment-1.1 (20 Sep 2008)
 
