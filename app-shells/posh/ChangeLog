@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/posh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.15 2010/10/01 12:54:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.16 2010/11/14 20:06:10 mgorny Exp $
+
+*posh-0.9 (14 Nov 2010)
+
+  14 Nov 2010; Michał Górny <mgorny@gentoo.org> -posh-0.6.18.ebuild,
+  +posh-0.9.ebuild:
+  Version bump.
 
   01 Oct 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Take over the maintainership.
