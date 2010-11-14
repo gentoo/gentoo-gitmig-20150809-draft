@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.32 2010/11/14 17:13:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.33 2010/11/14 22:59:40 hwoarang Exp $
+
+  14 Nov 2010; Markos Chandras <hwoarang@gentoo.org> atlas-c++-0.6.2.ebuild:
+  Stable on amd64 wrt bug #345181
 
   14 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   atlas-c++-0.6.2.ebuild:
