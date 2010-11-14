@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.4 2010/11/10 00:14:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.5 2010/11/14 17:02:55 fauli Exp $
+
+  14 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  luminance-hdr-2.0.0.ebuild:
+  stable x86, bug 344765
 
   10 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   luminance-hdr-2.0.0.ebuild:
