@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta38.ebuild,v 1.2 2010/08/13 10:45:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta38.ebuild,v 1.3 2010/11/14 14:36:43 jlec Exp $
 
 EAPI="3"
 
@@ -97,7 +97,8 @@ src_configure() {
 		$(use_with X x) \
 		--disable-strip \
 		--disable-optimiz \
-		--disable-optimiz-arch
+		--disable-optimiz-arch \
+		--with-boost-libdir=${EPREFIX}/usr/$(get_libdir)
 }
 
 src_test() {
