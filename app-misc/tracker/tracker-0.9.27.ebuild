@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.27.ebuild,v 1.2 2010/11/08 22:17:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.27.ebuild,v 1.3 2010/11/14 16:17:32 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -44,7 +44,9 @@ RDEPEND="
 	flac? ( >=media-libs/flac-1.2.1 )
 	gif? ( media-libs/giflib )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26 )
-	gsf? ( >=gnome-extra/libgsf-1.13 )
+	gsf? (
+		app-text/odt2txt
+		>=gnome-extra/libgsf-1.13 )
 	upnp? ( >=media-libs/gupnp-dlna-0.3 )
 	!upnp? (
 		gstreamer? ( >=media-libs/gstreamer-0.10.12 )
