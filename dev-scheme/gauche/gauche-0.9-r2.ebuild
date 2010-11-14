@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9-r1.ebuild,v 1.2 2010/11/14 15:53:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9-r2.ebuild,v 1.1 2010/11/14 15:53:29 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://practical-scheme.net/gauche"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -33,7 +33,7 @@ src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		--enable-multibyte=utf8 \
-		--with-slib=/usr/share/slib
+		--with-slib="${EPREFIX}"/usr/share/slib
 }
 
 src_compile() {
