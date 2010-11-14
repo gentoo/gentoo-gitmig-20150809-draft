@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.6.0.ebuild,v 1.7 2010/11/10 12:56:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.6.0.ebuild,v 1.8 2010/11/14 16:41:19 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://www.voidspace.org.uk/downloads/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~s390 ~sh ~sparc x86"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.6 2010/11/10 12:56:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.7 2010/11/14 16:41:19 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> mock-0.6.0.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #344673
 
   10 Nov 2010; Markus Meier <maekke@gentoo.org> mock-0.6.0.ebuild:
   add ~arm, bug #344673
