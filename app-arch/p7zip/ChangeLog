@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.135 2010/11/11 09:04:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.136 2010/11/14 12:10:32 jlec Exp $
+
+*p7zip-9.13-r3 (14 Nov 2010)
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> +p7zip-9.13-r3.ebuild:
+  Fix for Native multilib support
 
   11 Nov 2010; Michael Weber <xmw@gentoo.org> p7zip-9.13.ebuild,
   p7zip-9.13-r2.ebuild:
