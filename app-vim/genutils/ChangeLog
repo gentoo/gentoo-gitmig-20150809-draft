@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.25 2010/11/11 13:30:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.26 2010/11/14 11:09:12 maekke Exp $
+
+  14 Nov 2010; Markus Meier <maekke@gentoo.org> genutils-2.5.ebuild:
+  x86 stable, bug #345051
 
   11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> genutils-2.5.ebuild:
   Stable on amd64 wrt bug #345051
