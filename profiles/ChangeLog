@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4782 2010/11/13 17:05:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4783 2010/11/14 11:51:08 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Nov 2010; Alex Alexander <wired@gentoo.org> package.mask:
+  masked the 4.6.3 qt-gui/qgtkstyle split
 
   13 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   last rites ptex
