@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-1.4.ebuild,v 1.1 2010/11/08 11:24:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-1.4.ebuild,v 1.2 2010/11/14 21:30:04 arfrever Exp $
 
-EAPI=3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -15,5 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+DEPEND="dev-python/setuptools"
+RDEPEND=""
+
+PYTHON_MODNAME="gflags.py"
+
+src_prepare() {
+	distutils_src_prepare
+	sed -e 's/data_files=\[("bin", \["gflags2man.py"\])\]/scripts=\["gflags2man.py"\]/' -i setup.py
+}

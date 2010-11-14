@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gflags
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.1 2010/11/08 11:24:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.2 2010/11/14 21:30:04 arfrever Exp $
+
+  14 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-gflags-1.4.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS. Set PYTHON_MODNAME. Improve
+  installation of scripts.
 
 *python-gflags-1.4 (08 Nov 2010)
 
