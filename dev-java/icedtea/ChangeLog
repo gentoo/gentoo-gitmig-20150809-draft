@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.10 2010/10/13 08:22:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.11 2010/11/14 00:02:00 caster Exp $
+
+  14 Nov 2010; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.8.0.ebuild,
+  icedtea-6.1.8.1.ebuild, icedtea-6.1.9.ebuild, icedtea-6.1.9.1.ebuild:
+  Fix eselect-ecj deps.
 
 *icedtea-6.1.9.1 (13 Oct 2010)
 
