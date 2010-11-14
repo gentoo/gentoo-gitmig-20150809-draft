@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.46 2010/10/02 20:42:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.47 2010/11/14 12:35:39 jlec Exp $
+
+*blas-reference-20070226-r2 (14 Nov 2010)
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  +blas-reference-20070226-r2.ebuild,
+  +files/blas-reference-20070226-pkg-config.patch:
+  Fix for prefix linking, #343113
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org>
   blas-reference-20070226-r1.ebuild:
