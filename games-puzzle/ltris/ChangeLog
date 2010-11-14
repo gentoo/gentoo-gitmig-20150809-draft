@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ltris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.37 2010/10/27 12:50:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.38 2010/11/14 17:26:40 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> ltris-1.0.14.ebuild,
+  ltris-1.0.15.ebuild:
+  Drop sparc keywords
 
   27 Oct 2010; Christian Faulhammer <fauli@gentoo.org> ltris-1.0.15.ebuild:
   stable x86, bug 342083
