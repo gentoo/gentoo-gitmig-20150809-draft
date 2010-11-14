@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.3 2010/06/01 12:58:33 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.4 2010/11/14 14:40:52 jlec Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -28,6 +28,7 @@ DEPEND="media-libs/libpng
 	sys-libs/zlib
 	X? ( x11-libs/libXaw )
 	>=dev-libs/boost-1.36"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -90,8 +91,7 @@ src_compile() {
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
 		$(use_with tiff libtiff) \
 		$(use_with X x) \
-		--disable-strip \
-		|| die
+		--disable-strip
 
 	emake || die
 }

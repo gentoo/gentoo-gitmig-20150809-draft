@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta38.ebuild,v 1.3 2010/11/14 14:36:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta38.ebuild,v 1.4 2010/11/14 14:40:52 jlec Exp $
 
 EAPI="3"
 
@@ -35,6 +35,7 @@ DEPEND="
 	mkl? ( sci-libs/mkl )
 	tiff? ( >=media-libs/tiff-3.6.1 )
 	X? ( media-libs/libsdl )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -98,7 +99,7 @@ src_configure() {
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch \
-		--with-boost-libdir=${EPREFIX}/usr/$(get_libdir)
+		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_test() {

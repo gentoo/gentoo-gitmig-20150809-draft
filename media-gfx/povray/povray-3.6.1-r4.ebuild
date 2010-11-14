@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r4.ebuild,v 1.10 2010/08/13 10:45:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r4.ebuild,v 1.11 2010/11/14 14:40:52 jlec Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -19,6 +19,7 @@ DEPEND="media-libs/libpng
 	sys-libs/zlib
 	X? ( x11-libs/libXaw )
 	svga? ( media-libs/svgalib )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -65,8 +66,7 @@ src_compile() {
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
 		$(use_with svga) \
 		$(use_with tiff) \
-		$(use_with X) \
-		|| die
+		$(use_with X)
 
 	emake || die
 }
