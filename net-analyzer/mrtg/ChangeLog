@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.104 2010/11/12 21:20:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.105 2010/11/14 17:08:11 fauli Exp $
+
+  14 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  mrtg-2.16.4-r1.ebuild:
+  stable x86, bug 342475
 
   12 Nov 2010; Markos Chandras <hwoarang@gentoo.org> mrtg-2.16.4-r1.ebuild:
   Stable on amd64 wrt bug #342475
