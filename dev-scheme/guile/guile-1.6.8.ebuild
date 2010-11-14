@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.6.8.ebuild,v 1.15 2008/02/20 12:57:47 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.6.8.ebuild,v 1.16 2010/11/14 16:05:58 jlec Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -15,8 +15,10 @@ IUSE=""
 # bug 179738
 MAKEOPTS="${MAKEOPTS} -j1"
 
-DEPEND=">=sys-libs/ncurses-5.1
+DEPEND="
+	>=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1"
+RDEPEND="${DEPEND}"
 
 # NOTE: in README-PACKAGERS, guile recommends different versions be installed
 #		in parallel. They're talking about LIBRARY MAJOR versions and not
@@ -43,7 +45,7 @@ src_compile() {
 	econf \
 		--with-threads \
 		--with-modules \
-		--enable-deprecation=no || die
+		--enable-deprecation=no
 
 	# Please keep --enable-deprecation=no in future bumps.
 	# Danny van Dyk <kugelfang@gentoo.org 2004/09/19
@@ -54,7 +56,7 @@ src_compile() {
 
 src_install() {
 	einstall || die "install failed"
-	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS
+	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS || die
 
 	# texmacs needs this, closing bug #23493
 	dodir /etc/env.d

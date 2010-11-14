@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.6.ebuild,v 1.4 2010/03/08 22:46:31 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.6.ebuild,v 1.5 2010/11/14 16:05:58 jlec Exp $
 
 EAPI=1
 inherit flag-o-matic elisp-common
@@ -13,10 +13,12 @@ LICENSE="LGPL-2.1"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 RESTRICT="!regex? ( test )"
 
-DEPEND=">=dev-libs/gmp-4.1
+DEPEND="
+	>=dev-libs/gmp-4.1
 	>=sys-devel/libtool-1.5.6
 	sys-devel/gettext
 	emacs? ( virtual/emacs )"
+RDEPEND="${DEPEND}"
 
 # Guile seems to contain some slotting support, /usr/share/guile/ is slotted,
 # but there are lots of collisions. Most in /usr/share/libguile. Therefore

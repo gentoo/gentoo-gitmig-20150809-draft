@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.4-r1.ebuild,v 1.3 2009/07/31 17:26:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.4-r1.ebuild,v 1.4 2010/11/14 16:05:58 jlec Exp $
 
 EAPI=1
 inherit eutils autotools flag-o-matic
@@ -13,7 +13,11 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 RESTRICT="!regex? ( test )"
 
-DEPEND=">=dev-libs/gmp-4.1 >=sys-devel/libtool-1.5.6 sys-devel/gettext"
+DEPEND="
+	>=dev-libs/gmp-4.1
+	>=sys-devel/libtool-1.5.6
+	sys-devel/gettext"
+RDEPEND="${DEPEND}"
 
 # Guile seems to contain some slotting support, /usr/share/guile/ is slotted,
 # but there are lots of collisions. Most in /usr/share/libguile. Therefore
@@ -69,7 +73,7 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 
-	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS
+	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS || die
 
 	# texmacs needs this, closing bug #23493
 	dodir /etc/env.d
