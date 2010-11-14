@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.89 2010/11/13 16:56:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.90 2010/11/14 16:43:59 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  unmask test USE flag of dev-util/buildbot*.
 
   13 Nov 2010; Alexis Ballier <aballier@gentoo.org> +package.mask:
   Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513
