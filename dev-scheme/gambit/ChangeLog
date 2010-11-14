@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.30 2010/11/14 15:46:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.31 2010/11/14 15:49:26 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> gambit-4.5.3-r1.ebuild:
+  QA
 
 *gambit-4.5.3-r1 (14 Nov 2010)
 

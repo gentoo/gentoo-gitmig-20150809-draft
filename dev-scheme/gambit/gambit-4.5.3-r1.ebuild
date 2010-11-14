@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.3-r1.ebuild,v 1.1 2010/11/14 15:46:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.3-r1.ebuild,v 1.2 2010/11/14 15:49:26 jlec Exp $
 
 EAPI="3"
 
@@ -31,17 +31,16 @@ S=${WORKDIR}/${MY_P} #-devel
 
 IUSE="emacs static"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.4.0-install_name.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable !static shared) --docdir="${EPREFIX}"/usr/share/doc/${PF} --enable-single-host --disable-absolute-shared-libs
+}
 
+src_compile() {
 	emake bootstrap || die
 
 	if use emacs; then
