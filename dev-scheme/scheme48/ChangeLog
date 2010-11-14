@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/scheme48
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.12 2010/08/10 15:43:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.13 2010/11/14 16:05:32 jlec Exp $
+
+*scheme48-1.8-r2 (14 Nov 2010)
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> +scheme48-1.8-r2.ebuild:
+  Imported prefix changes from overlay
 
   10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   scheme48-1.8-r1.ebuild:

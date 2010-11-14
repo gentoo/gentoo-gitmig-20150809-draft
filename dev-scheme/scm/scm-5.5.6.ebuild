@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.2 2010/04/16 21:23:21 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.3 2010/11/14 16:10:32 jlec Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SCM"
 
 SLOT="0"
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
 IUSE="arrays bignums cautious dynamic-linking engineering-notation gsubr inexact
 ioext macro ncurses posix readline regex sockets unix"
 
@@ -36,7 +36,7 @@ src_prepare() {
 
 src_compile() {
 	# SLIB is required to build SCM.
-	local slibpath="/usr/share/slib/"
+	local slibpath="${EPREFIX}/usr/share/slib/"
 	if [ -n "$SCHEME_LIBRARY_PATH" ]; then
 		einfo "using SLIB $SCHEME_LIBRARY_PATH"
 	elif [ -d ${slibpath} ]; then
@@ -67,8 +67,8 @@ src_compile() {
 
 	./build \
 		--compiler-options="${CFLAGS}" \
-		--linker-options="${LDFLAGS} -L/lib" \
-		-s /usr/lib/scm \
+		--linker-options="${LDFLAGS} -L${EPREFIX}/$(get_libdir)" \
+		-s ${EPREFIX}/usr/$(get_libdir)/scm \
 		-F ${features:="none"} \
 		-h system \
 		-o scm || die
