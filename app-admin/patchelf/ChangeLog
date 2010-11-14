@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/patchelf
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/patchelf/ChangeLog,v 1.1 2010/11/14 12:53:31 jlec Exp $
+
+*patchelf-0.5 (14 Nov 2010)
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> +patchelf-0.5.ebuild,
+  +metadata.xml:
+  New addition
+
