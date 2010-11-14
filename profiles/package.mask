@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12199 2010/11/14 15:22:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12200 2010/11/14 16:17:32 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -80,10 +80,6 @@ dev-util/libconf
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (08 Nov 2010)
 # csv module is included in Python >=2.3. Masked for deletion in 30 days.
 dev-python/csv
-
-# Markos Chandras <hwoarang@gentoo.org> (08 Nov 2010)
-# Beta releases should be masked
-=dev-util/qt-creator-2.1.0_beta*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (08 Oct 2010)
 # Broken on newer X setups and public server seems dead.
