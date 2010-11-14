@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gauche
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.24 2010/11/14 15:53:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.25 2010/11/14 15:56:30 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> gauche-0.8.10.ebuild,
+  gauche-0.8.13.ebuild, gauche-0.8.14.ebuild:
+  Some QA on empty lines, quoting, ebuild style
 
 *gauche-0.9-r2 (14 Nov 2010)
 

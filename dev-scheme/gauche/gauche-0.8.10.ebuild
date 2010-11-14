@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.10.ebuild,v 1.4 2007/09/09 11:47:38 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.8.10.ebuild,v 1.5 2010/11/14 15:56:30 jlec Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -18,9 +18,9 @@ SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=sys-libs/gdbm-1.8.0"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 
@@ -28,32 +28,24 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-runpath.diff
 	epatch "${FILESDIR}"/${P}-stack-trace.diff
 	eautoconf
-
 }
 
 src_compile() {
-
 	strip-flags
 
 	econf \
 		`use_enable ipv6` \
 		--enable-threads=pthreads \
 		--enable-multibyte=utf8 \
-		--with-slib=/usr/share/slib \
-		|| die
+		--with-slib=/usr/share/slib
 	emake -j1 || die
-
 }
 
 src_test() {
-
 	emake -j1 -s check || die
-
 }
 
 src_install() {
-
 	emake DESTDIR="${D}" install-pkg install-doc || die
-	dodoc AUTHORS ChangeLog HACKING README
-
+	dodoc AUTHORS ChangeLog HACKING README || die
 }
