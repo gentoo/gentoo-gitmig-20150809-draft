@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.5.0.ebuild,v 1.1 2010/11/14 22:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.5.0.ebuild,v 1.2 2010/11/14 23:16:38 patrick Exp $
 
 SRC_URI="http://www.metasploit.com/releases/framework-${PV}.tar.bz2"
 
@@ -49,10 +49,6 @@ src_install() {
 
 	chown -R root:0 "${D}"
 
-	newinitd "${FILESDIR}"/msfweb${SLOT}.initd msfweb${SLOT} \
-		|| die "newinitd failed"
-	newconfd "${FILESDIR}"/msfweb${SLOT}.confd msfweb${SLOT} \
-		|| die "newconfd failed"
 }
 
 pkg_postinst() {
