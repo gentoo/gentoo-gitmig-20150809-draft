@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.8-r1.ebuild,v 1.5 2010/10/24 17:31:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.8-r1.ebuild,v 1.6 2010/11/14 13:37:29 jlec Exp $
 
 inherit eutils linux-info
 
@@ -11,11 +11,10 @@ SRC_URI="mirror://sourceforge/avf/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc x86"
+IUSE=""
 
 DEPEND=">=sys-fs/fuse-2.4"
 RDEPEND="${DEPEND}"
-
-IUSE=""
 
 pkg_setup() {
 	kernel_is lt 2 6 && die "Must have a version 2.6 kernel. Cannot continue. :("
@@ -24,25 +23,24 @@ pkg_setup() {
 src_compile() {
 	# Fixs bug #258295
 	epatch "${FILESDIR}/${P}-gcc43_fix_open_missing_mode.patch"
-	econf --enable-fuse --enable-library || die "Sorry, can't configure :("
+	econf --enable-fuse --enable-library
 	emake || die "Sorry make failed :("
 }
 
 src_install() {
 	einstall || die "Sorry, make install failed :("
 	# remove cruft
-	dobin scripts/avfs-config
+	dobin scripts/avfs-config || die
 	cd "${D}"/usr
-	rm -f bin/davpass bin/ftppass
-	rm -fr sbin ../etc
-	cd "${S}"
-	cd doc
-	dodoc api-overview background FORMAT INSTALL.* README.avfs-fuse
+	rm -f bin/davpass bin/ftppass || die
+	rm -fr sbin ../etc || die
+	cd "${S}"/doc
+	dodoc api-overview background FORMAT INSTALL.* README.avfs-fuse || die
 	cd ..
-	dodoc AUTHORS ChangeLog COPYING* INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO || die
 	docinto scripts
-	dodoc scripts/avfs* scripts/*pass scripts/*mountavfs
-	dosym /usr/lib/avfs/extfs/README /usr/share/doc/${PF}/README.extfs
+	dodoc scripts/avfs* scripts/*pass scripts/*mountavfs || die
+	dosym /usr/lib/avfs/extfs/README /usr/share/doc/${PF}/README.extfs || die
 }
 
 pkg_postinst() {
