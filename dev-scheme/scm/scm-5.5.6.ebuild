@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.4 2010/11/14 16:11:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.5 2010/11/14 16:13:11 jlec Exp $
 
 EAPI="3"
 
@@ -68,7 +68,7 @@ src_compile() {
 	./build \
 		--compiler-options="${CFLAGS}" \
 		--linker-options="${LDFLAGS} -L${EPREFIX}/$(get_libdir)" \
-		-s ${EPREFIX}/usr/$(get_libdir)/scm \
+		-s "${EPREFIX}"/usr/$(get_libdir)/scm \
 		-F ${features:="none"} \
 		-h system \
 		-o scm || die
