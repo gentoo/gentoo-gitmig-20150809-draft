@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6150 2010/11/14 13:53:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6151 2010/11/14 15:53:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1240,6 +1240,8 @@ dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/google-perftools:debug -  Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc. 
 dev-util/google-perftools:largepages -  Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations. 
 dev-util/google-perftools:minimal -  Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers. 
+dev-util/gtk-doc:highlight - Enable source code highlighting
+dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
 dev-util/kdevelop:cmake - Enable support for CMake build system
 dev-util/kdevelop:okteta - Enable hex editor plugin
 dev-util/kdevelop:qmake - Enable support for QMake build system
