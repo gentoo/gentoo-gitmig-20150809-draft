@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6152 2010/11/14 16:33:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6153 2010/11/14 22:53:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1466,6 +1466,7 @@ gnome-base/nautilus:introspection - Use dev-libs/gobject-introspection for intro
 gnome-extra/avant-window-navigator:vala - Enables support for applets written in dev-lang/vala.
 gnome-extra/avant-window-navigator:xfce - Enables support for the XFCE 4 desktop environment
 gnome-extra/avant-window-navigator-extras:webkit - Enables support for net-libs/webkit-gtk.
+gnome-extra/evolution-data-server:weather - Enable optional weather calendar support.
 gnome-extra/file-browser-applet:gtkhotkey - Enable hotkey support via x11-libs/gtkhotkey
 gnome-extra/gget:epiphany - Install epiphany extensions
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
@@ -1617,11 +1618,7 @@ mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/claws-mail:ssl - Use gnutls for Secure Socket Layer transactions (deprecated, USE=gnutls should be used)
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
-mail-client/evolution:dbus - Allow the Mail Notification plugin to notify you about new messages via an icon in the tray using sys-apps/dbus
-mail-client/evolution:exchange - Build optional Microsoft Exchange support
-mail-client/evolution:hal - Enable support for auto-detection of inserted iPods and syncing data with them using sys-apps/hal
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
-mail-client/evolution:mono - Build the dev-lang/mono plugins included in Evolution
 mail-client/evolution:networkmanager - Allows Evolution to automagically toggle online/offline mode by talking to net-misc/networkmanager and getting the current network state
 mail-client/evolution:pda - Enable support for syncing Evolution Calendar and Addressbooks with PDAs using app-pda/gnome-pilot and app-pda/gnome-pilot-conduit
 mail-client/evolution:profile - Build support for profiling Evolution for development purposes
