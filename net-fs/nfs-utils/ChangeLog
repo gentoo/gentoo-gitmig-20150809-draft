@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.174 2010/10/08 19:48:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.175 2010/11/14 00:49:39 vapier Exp $
+
+*nfs-utils-1.2.3-r1 (14 Nov 2010)
+
+  14 Nov 2010; Mike Frysinger <vapier@gentoo.org>
+  +nfs-utils-1.2.3-r1.ebuild,
+  +files/nfs-utils-1.2.3-ti-rpc-static-ports.patch:
+  Add fix from upstream for ti-rpc static port bindings #340797 by John J.
+  Aylward.
 
 *nfs-utils-1.2.3 (08 Oct 2010)
 
