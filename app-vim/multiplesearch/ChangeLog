@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/multiplesearch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/multiplesearch/ChangeLog,v 1.18 2010/11/14 11:05:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/multiplesearch/ChangeLog,v 1.19 2010/11/14 17:13:15 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> multiplesearch-1.3.ebuild:
+  alpha/ia64/sparc stable
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> multiplesearch-1.3.ebuild:
   x86 stable, bug #345075

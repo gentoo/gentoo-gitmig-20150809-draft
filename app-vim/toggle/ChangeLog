@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/toggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/toggle/ChangeLog,v 1.17 2010/11/14 11:04:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/toggle/ChangeLog,v 1.18 2010/11/14 17:12:12 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> toggle-0.5.ebuild:
+  alpha/ia64/sparc stable
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> toggle-0.5.ebuild:
   x86 stable, bug #345073

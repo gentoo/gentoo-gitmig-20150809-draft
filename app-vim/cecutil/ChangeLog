@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cecutil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.28 2010/11/14 10:53:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.29 2010/11/14 17:04:43 armin76 Exp $
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> cecutil-17.ebuild:
+  alpha/ia64/sparc stable
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> cecutil-17.ebuild:
   x86 stable, bug #345041
