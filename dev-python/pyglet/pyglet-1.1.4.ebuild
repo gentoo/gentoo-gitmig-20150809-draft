@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/pyglet-1.1.4.ebuild,v 1.1 2010/09/23 13:08:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/pyglet-1.1.4.ebuild,v 1.2 2010/11/14 13:15:33 jlec Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://pyglet.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="alsa doc examples gtk +openal"
 
 RDEPEND="
