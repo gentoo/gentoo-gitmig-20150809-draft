@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.68 2010/07/04 19:09:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.69 2010/11/14 20:16:35 aballier Exp $
+
+  14 Nov 2010; Alexis Ballier <aballier@gentoo.org> canna-3.7_p3.ebuild,
+  canna-3.7_p3-r2.ebuild:
+  dev-texlive/texlive-langcjk-2010 provides ptex/platex too
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> canna-3.7_p2.ebuild,
   canna-3.7_p3-r1.ebuild:
