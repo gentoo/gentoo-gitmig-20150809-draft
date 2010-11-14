@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/scm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/ChangeLog,v 1.11 2010/11/14 16:10:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/ChangeLog,v 1.12 2010/11/14 16:11:53 jlec Exp $
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> scm-5.5.6.ebuild:
+  Wrong EAPI
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> scm-5.5.6.ebuild:
   Imported prefix changes from overlay

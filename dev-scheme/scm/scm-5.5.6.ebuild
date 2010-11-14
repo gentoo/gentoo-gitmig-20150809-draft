@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.3 2010/11/14 16:10:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.4 2010/11/14 16:11:53 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit versionator eutils flag-o-matic
 
