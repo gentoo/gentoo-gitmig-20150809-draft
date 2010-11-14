@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-13.ebuild,v 1.2 2010/11/11 13:21:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-13.ebuild,v 1.3 2010/11/14 10:51:18 maekke Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: automatically align bib, c, c++, tex and vim code"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=884"
 LICENSE="vim"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=app-vim/align-30
