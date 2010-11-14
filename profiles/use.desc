@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.446 2010/10/24 20:04:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.447 2010/11/14 13:23:26 jlec Exp $
 
 # Keep them sorted
 
@@ -196,6 +196,7 @@ lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
 livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building
 lm_sensors - Adds linux lm_sensors (hardware sensors) support
 lua - Enable Lua scripting support
+lzma - Support for LZMA (de)compression algorithm
 lzo - Enables support for lzo compression
 m17n-lib - Enable m17n-lib support
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
