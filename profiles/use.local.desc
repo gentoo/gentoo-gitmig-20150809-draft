@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6148 2010/11/14 08:33:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6149 2010/11/14 13:33:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3736,7 +3736,6 @@ sys-fs/aufs2:inotify - Enable inotify support
 sys-fs/aufs2:kernel-patch - Patch the current kernel for aufs2 support
 sys-fs/aufs2:nfs - Enable support for nfs export
 sys-fs/aufs2:ramfs - Enable initramfs/rootfs support
-sys-fs/avfs:xz - Enable LZMA/XZ archive support
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
 sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
