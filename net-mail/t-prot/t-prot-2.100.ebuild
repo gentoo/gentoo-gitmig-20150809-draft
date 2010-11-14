@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.100.ebuild,v 1.2 2010/11/12 21:03:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.100.ebuild,v 1.3 2010/11/14 11:25:37 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.escape.de/~tolot/mutt/t-prot/downloads/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
