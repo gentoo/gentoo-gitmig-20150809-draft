@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.2 2010/10/09 03:38:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.3 2010/11/14 13:32:08 jlec Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/avf/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="static-libs +xz"
+IUSE="static-libs +lzma"
 
 DEPEND=">=sys-fs/fuse-2.4
-	xz? ( app-arch/xz-utils )"
+	lzma? ( app-arch/xz-utils )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -33,7 +33,7 @@ src_configure() {
 		--enable-library \
 		--enable-shared \
 		$(use_enable static-libs static) \
-		$(use_with xz)
+		$(use_with lzma xz)
 }
 
 src_install() {

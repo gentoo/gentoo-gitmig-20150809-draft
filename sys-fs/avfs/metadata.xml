@@ -6,7 +6,4 @@
     <email>pete4abw@comcast.net</email>
     <name>Peter Hyman</name>
   </maintainer>
-  <use>
-    <flag name="xz">Enable LZMA/XZ archive support</flag>
-  </use>
 </pkgmetadata>
