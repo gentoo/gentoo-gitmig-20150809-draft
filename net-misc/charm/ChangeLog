@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/charm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.7 2010/05/24 13:57:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.8 2010/11/14 15:03:36 arfrever Exp $
+
+  14 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  charm-1.9.1.ebuild:
+  Fix dependencies (bug #345261).
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> charm-1.9.1.ebuild:
   sparc stable wrt #315145
