@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lrslib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/ChangeLog,v 1.1 2010/11/12 18:43:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/ChangeLog,v 1.2 2010/11/14 20:47:54 tomka Exp $
+
+  14 Nov 2010; Thomas Kahle <tomka@gentoo.org> lrslib-042c.ebuild:
+  added missing || die statements
 
 *lrslib-042c (12 Nov 2010)
 

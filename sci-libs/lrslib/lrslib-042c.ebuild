@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/lrslib-042c.ebuild,v 1.1 2010/11/12 18:43:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/lrslib-042c.ebuild,v 1.2 2010/11/14 20:47:54 tomka Exp $
 
 EAPI=2
 
@@ -19,8 +19,8 @@ DEPEND="gmp? ( dev-libs/gmp )"
 RDEPEND="${DEPEND}"
 
 src_prepare(){
-	sed -i "s/gcc/$(tc-getCC)/g" makefile
-	sed -i "s/-O3/${CFLAGS} ${LDFLAGS}/g" makefile
+	sed -i "s/gcc/$(tc-getCC)/g" makefile || die
+	sed -i "s/-O3/${CFLAGS} ${LDFLAGS}/g" makefile || die
 }
 
 src_compile () {
@@ -35,13 +35,15 @@ src_compile () {
 }
 
 src_install() {
-	dobin lrs redund redund1 buffer
+	dobin lrs redund redund1 buffer || die
 	if use x86; then
-		dobin nash setupnash setupnash2 2nash
+		dobin nash setupnash setupnash2 2nash || die
 		# Prevent clash with cddlib:
-		newbin fourier lrsfourier
+		newbin fourier lrsfourier || die
 	fi
-	use gmp && dobin glrs gnash gredund gfourier
-	dodoc readme
-	dohtml lrslib.html
+	if use gmp; then
+		dobin glrs gnash gredund gfourier || die
+	fi
+	dodoc readme || die
+	dohtml lrslib.html || die
 }
