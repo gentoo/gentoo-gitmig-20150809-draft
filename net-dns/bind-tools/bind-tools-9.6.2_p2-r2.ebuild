@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.6.2_p2-r1.ebuild,v 1.1 2010/11/11 18:18:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.6.2_p2-r2.ebuild,v 1.1 2010/11/14 19:07:03 idl0r Exp $
 
 EAPI="3"
 
@@ -58,7 +58,7 @@ src_configure() {
 	fi
 
 	# bug 344029
-	append-cppflags "-DDIG_SIGCHASE"
+	append-cflags "-DDIG_SIGCHASE"
 
 	econf \
 		$(use_enable ipv6) \

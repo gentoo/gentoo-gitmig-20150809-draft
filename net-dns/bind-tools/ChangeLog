@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.170 2010/11/11 18:18:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.171 2010/11/14 19:07:03 idl0r Exp $
+
+*bind-tools-9.7.2_p2-r2 (14 Nov 2010)
+*bind-tools-9.7.1-r2 (14 Nov 2010)
+*bind-tools-9.6.2_p2-r2 (14 Nov 2010)
+*bind-tools-9.4.3_p5-r2 (14 Nov 2010)
+
+  14 Nov 2010; Christian Ruppert <idl0r@gentoo.org>
+  -bind-tools-9.4.3_p5-r1.ebuild, +bind-tools-9.4.3_p5-r2.ebuild,
+  -bind-tools-9.6.2_p2-r1.ebuild, +bind-tools-9.6.2_p2-r2.ebuild,
+  -bind-tools-9.7.1-r1.ebuild, +bind-tools-9.7.1-r2.ebuild,
+  -bind-tools-9.7.2_p2-r1.ebuild, +bind-tools-9.7.2_p2-r2.ebuild:
+  Revbump. Re bug 344029, use append-cflags instead of append-cppflags.
 
 *bind-tools-9.7.2_p2-r1 (11 Nov 2010)
 *bind-tools-9.7.1-r1 (11 Nov 2010)
