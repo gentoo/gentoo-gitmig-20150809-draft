@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-0.7.ebuild,v 1.1 2010/11/14 00:00:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-0.7.ebuild,v 1.2 2010/11/14 00:01:12 ssuominen Exp $
 
 inherit gnome2-utils
 
@@ -22,9 +22,9 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	unpack ./Faenza.tar.gz           
-	unpack ./Faenza-Dark.tar.gz      
-	unpack ./emesene-faenza-theme.tar.gz  
+	unpack ./Faenza.tar.gz
+	unpack ./Faenza-Dark.tar.gz
+	unpack ./emesene-faenza-theme.tar.gz
 }
 
 src_install() {
