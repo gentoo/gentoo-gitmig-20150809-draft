@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p101106.ebuild,v 1.1 2010/11/08 08:32:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p101114.ebuild,v 1.1 2010/11/14 16:39:16 jlec Exp $
 
 EAPI="3"
 
@@ -33,15 +33,16 @@ RDEPEND="
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*
 	x11-libs/libXext
 	x11-libs/libX11
-	extendnmr? (
-		sci-chemistry/aria
-		sci-chemistry/prodecomp )
 	opengl? (
 		media-libs/freeglut
 		dev-python/pyglet )"
 # We need to fix this
 #		sci-chemistry/mdd
 DEPEND="${RDEPEND}"
+PDEPEND="
+	extendnmr? (
+		sci-chemistry/aria
+		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
 S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2 ${PV})

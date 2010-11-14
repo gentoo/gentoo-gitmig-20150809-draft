@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.45 2010/11/08 08:32:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.46 2010/11/14 16:39:16 jlec Exp $
+
+*ccpn-2.1.5_p101114 (14 Nov 2010)
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> -ccpn-2.1.5_p101020.ebuild,
+  -ccpn-2.1.5_p101024.ebuild, -ccpn-2.1.5_p101104.ebuild,
+  -ccpn-2.1.5_p101106.ebuild, +ccpn-2.1.5_p101114.ebuild:
+  Version Bump, fix for circular deps
 
 *ccpn-2.1.5_p101106 (08 Nov 2010)
 
