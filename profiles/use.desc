@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.447 2010/11/14 13:23:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.448 2010/11/14 13:29:09 jlec Exp $
 
 # Keep them sorted
 
@@ -23,10 +23,10 @@ altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 ao - Use libao audio output library for sound playback
 apache2 - Add Apache2 support
 apm - Adds APM (Advanced Power Management) support
+aqua - Include support for the Aqua / Carbon GUI
 atm - Enable Asynchronous Transfer Mode protocol support
 audiofile - Adds support for libaudiofile where applicable
 avahi - Add avahi/Zeroconf support
-aqua - Include support for the Aqua / Carbon GUI
 bash-completion - Enable bash-completion support
 bcmath - Adds support for libbcmath
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
@@ -173,12 +173,12 @@ jingle - Enables voice calls for jabber
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format
-kontact - Enable support for the KDE personal information manager (kde-base/kdepim*)
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yielding compilation speedups at the cost of heavy mem usage and potentially causing problems. We strongly discourage setting this
 kdeprefix - Makes a KDE prefixed install into /usr/kde/${SLOT} if enabled or into /usr (FHS compatible) otherwise
 kerberos - Adds kerberos support
 kolab - Adds support for the Kolab groupware server
+kontact - Enable support for the KDE personal information manager (kde-base/kdepim*)
 ladspa - Enables the ability to support ladspa plugins
 lame - Prefer using LAME libraries for MP3 encoding support
 lapack - Adds support for the virtual/lapack numerical library
@@ -217,9 +217,9 @@ mmap - Adds mmap (memory map) support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 mng - Adds support for libmng (MNG images)
 modplug - Adds libmodplug support
+modules - Build the kernel modules
 mono - Build Mono bindings to support dotnet type stuff
 motif - Adds support for the Motif toolkit
-modules - Build the kernel modules
 mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
 mp4 - Support for MP4 container format
@@ -283,8 +283,8 @@ portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
 ppds - Adds support for automatically generated ppd (printing driver) files
-prelude - Adds support/bindings for the Prelude Intrusion Detection System
 prefix - Defines if a Gentoo Prefix offset installation is used
+prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds support for software performance analysis (will likely vary from ebuild to ebuild)
 pulseaudio - Adds support for PulseAudio sound server
 python - Adds support/bindings for the Python language
