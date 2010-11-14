@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.2.2.ebuild,v 1.2 2010/01/06 20:26:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/slib/slib-3.2.2.ebuild,v 1.3 2010/11/14 16:11:56 jlec Exp $
+
+EAPI="3"
 
 inherit versionator eutils
 
@@ -17,7 +19,7 @@ HOMEPAGE="http://swiss.csail.mit.edu/~jaffer/SLIB"
 
 SLOT="0"
 LICENSE="public-domain BSD"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="" #test"
 
 #unzip for unpacking
@@ -27,21 +29,17 @@ DEPEND="app-arch/unzip"
 
 INSTALL_DIR="/usr/share/slib/"
 
-src_unpack() {
-	unpack ${A}; cd "${S}"
+src_prepare() {
+	sed "s:prefix = /usr/local/:prefix = ${ED}/usr/:" -i Makefile || die
+	sed 's:libdir = $(exec_prefix)lib/:libdir = $(exec_prefix)share/:' -i Makefile || die
+	sed 's:man1dir = $(prefix)man/:man1dir = $(prefix)/share/man/:' -i Makefile || die
+	sed 's:infodir = $(prefix)info/:infodir = $(prefix)share/info/:' -i Makefile || die
 
-#	cp Makefile Makefile.old
-
-	sed "s:prefix = /usr/local/:prefix = ${D}/usr/:" -i Makefile
-	sed 's:libdir = $(exec_prefix)lib/:libdir = $(exec_prefix)share/:' -i Makefile
-	sed 's:man1dir = $(prefix)man/:man1dir = $(prefix)/share/man/:' -i Makefile
-	sed 's:infodir = $(prefix)info/:infodir = $(prefix)share/info/:' -i Makefile
-
-	sed 's:echo SCHEME_LIBRARY_PATH=$(libslibdir)  >> $(bindir)slib:echo SCHEME_LIBRARY_PATH=/usr/share/slib/ >> $(bindir)slib:' -i Makefile
+	sed 's:echo SCHEME_LIBRARY_PATH=$(libslibdir)  >> $(bindir)slib:echo SCHEME_LIBRARY_PATH='"${EPREFIX}"'/usr/share/slib/ >> $(bindir)slib:' -i Makefile || die
 
 #	diff -u Makefile.old Makefile
 
-	sed 's:(lambda () "/usr/local/share/gambc/")):(lambda () "/usr/share/gambit")):' -i gambit.init
+	sed 's:(lambda () "/usr/local/share/gambc/")):(lambda () "'"${EPREFIX}"'/usr/share/gambit")):' -i gambit.init || die
 }
 
 src_compile() {
@@ -52,7 +50,7 @@ src_install() {
 	emake infoz || die "infoz failed"
 	emake install || die "install failed"
 
-	dodoc ANNOUNCE ChangeLog FAQ README
+	dodoc ANNOUNCE ChangeLog FAQ README || die
 	dodir /usr/share/gambit/
 	more_install
 }
@@ -60,11 +58,11 @@ src_install() {
 more_install() {
 	dosym ${INSTALL_DIR} /usr/share/guile/slib # link from guile dir
 	dosym ${INSTALL_DIR} /usr/lib/slib
-	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=\"${INSTALL_DIR}\"" > "${D}"/etc/env.d/50slib
+	dodir /etc/env.d/ && echo "SCHEME_LIBRARY_PATH=\"${EPREFIX}${INSTALL_DIR}\"" > "${ED}"/etc/env.d/50slib
 
 	mkdir "${S}"/installers
 	pushd installers; make_installers; popd
-	dosbin installers/*
+	dosbin installers/* || die
 }
 
 pkg_postinst() {
@@ -81,7 +79,7 @@ pkg_config() {
 }
 
 make_load_expression() {
-	echo "(load \\\"${INSTALL_DIR}$1.init\\\")"
+	echo "(load \\\"${EPREFIX}${INSTALL_DIR}$1.init\\\")"
 }
 
 make_installers()
@@ -113,7 +111,7 @@ install_slib() {
 	if has_version dev-scheme/$1; then
 		script=install_slib_for_${1//-/}
 		einfo "Registering slib with $1..."
-#		echo running: $(cat /usr/sbin/${script})
+#		echo running: $(cat "${EPREFIX}"/usr/sbin/${script})
 		$script
 	else
 		einfo "$1 not installed, not registering..."
