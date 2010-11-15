@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlgsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ChangeLog,v 1.2 2010/06/11 20:12:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ChangeLog,v 1.3 2010/11/15 09:19:51 tomka Exp $
+
+  15 Nov 2010; Thomas Kahle <tomka@gentoo.org> ocamlgsl-0.6.0.ebuild:
+  x86 stable per bug #344435
 
   11 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ocamlgsl-0.6.0.ebuild:
   Adding dev-ml/fort to dependencies. Fixes bug 323543. Thanks Diego for the
