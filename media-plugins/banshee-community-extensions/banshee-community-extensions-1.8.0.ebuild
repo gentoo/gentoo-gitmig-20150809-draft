@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-1.8.0.ebuild,v 1.1 2010/10/23 14:33:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-1.8.0.ebuild,v 1.2 2010/11/15 13:16:57 tomka Exp $
 
 EAPI=3
 
@@ -20,6 +20,7 @@ DEPEND=">=dev-lang/mono-2.0
 	>=gnome-base/gconf-2.0
 	dev-dotnet/gconf-sharp:2
 	doc? ( >=app-text/gnome-doc-utils-0.17.3 )
+	lirc? ( app-misc/lirc  )
 	mirage? (
 		dev-libs/glib:2
 		dev-db/sqlite:3
