@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.6 2010/06/27 16:30:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.7 2010/11/15 10:51:10 grobian Exp $
+
+  15 Nov 2010; Fabian Groffen <grobian@gentoo.org>
+  Sub-Exporter-0.982.ebuild:
+  Marked ~ppc-macos and ~x86-solaris, bug #345435
 
   27 Jun 2010; <nixnut@gentoo.org> Sub-Exporter-0.982.ebuild:
   ppc stable #323529
