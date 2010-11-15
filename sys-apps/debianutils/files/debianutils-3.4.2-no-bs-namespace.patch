@@ -1,0 +1,15 @@
+Allow dots in the names, bug #95173.  Patch by Kerin Millar.
+Re-sourced for 3.4.2 since the man page has now been corrected but not the
+regex itself (dot files are still OK upstream?) - jer
+
+--- a/run-parts.c
++++ b/run-parts.c
+@@ -501,7 +501,7 @@
+                     != 0)
+             pt_regex = &tradre;
+ 
+-    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-]+$",
++    } else if ( (err = regcomp(&classicalre, "^[a-zA-Z0-9_-][a-zA-Z0-9._-]+$",
+                     REG_EXTENDED | REG_NOSUB)) != 0)
+         pt_regex = &classicalre;
+ 
