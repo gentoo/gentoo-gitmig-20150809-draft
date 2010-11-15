@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.172 2010/07/03 13:25:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.173 2010/11/15 15:38:09 pva Exp $
+
+*cacti-0.8.7g (15 Nov 2010)
+
+  15 Nov 2010; Peter Volkov <pva@gentoo.org> -cacti-0.8.7e-r1.ebuild,
+  +cacti-0.8.7g.ebuild:
+  Version bump, bug #324457, thank Luca Lesinigo for report and Jens Ott for
+  initial work. Fixes multiple vulnerabilities, security bug #324031, thank
+  Matthias Geerdsen for report. Fixes installation with new php version, bug
+  #343205, thank Bradley Leininger for report.
 
 *cacti-0.8.7e-r3 (03 Jul 2010)
 

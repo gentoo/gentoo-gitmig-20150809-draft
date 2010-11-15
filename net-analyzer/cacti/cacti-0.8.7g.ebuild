@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7e-r1.ebuild,v 1.10 2010/04/14 20:41:50 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7g.ebuild,v 1.1 2010/11/15 15:38:09 pva Exp $
+
+EAPI="2"
 
 inherit eutils webapp depend.php
 
@@ -14,42 +16,47 @@ SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
 if [ "${HAS_PATCHES}" == "1" ] ; then
-	UPSTREAM_PATCHES="cli_add_graph
-		snmp_invalid_response
-		template_duplication
-		fix_icmp_on_windows_iis_servers
-		cross_site_fix"
+	UPSTREAM_PATCHES="data_source_deactivate
+		graph_list_view
+		html_output
+		ldap_group_authenication
+		script_server_command_line_parse
+		ping
+		poller_interval"
 	for i in ${UPSTREAM_PATCHES} ; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
 	done
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="snmp doc"
 
 DEPEND=""
 
-need_php_cli
 need_httpd_cgi
-need_php_httpd
 
 RDEPEND="snmp? ( >=net-analyzer/net-snmp-5.1.2 )
-	<net-analyzer/rrdtool-1.4
+	net-analyzer/rrdtool
 	dev-php/adodb
 	virtual/mysql
-	virtual/cron"
+	virtual/cron
+	dev-lang/php[cli,mysql,xml,session,sockets]
+	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
 
 src_unpack() {
+	unpack ${MY_P}.tar.gz
 	if [ "${HAS_PATCHES}" == "1" ] ; then
-		unpack ${MY_P}.tar.gz
 		[ ! ${MY_P} == ${P} ] && mv ${MY_P} ${P}
+	fi
+}
+
+src_prepare() {
+	if [ "${HAS_PATCHES}" == "1" ] ; then
 		# patches
 		for i in ${UPSTREAM_PATCHES} ; do
 			EPATCH_OPTS="-p1 -d ${S} -N" epatch "${DISTDIR}"/${i}.patch
 		done ;
-	else
-		unpack ${MY_P}.tar.gz
 	fi
 
 	sed -i -e \
@@ -57,12 +64,6 @@ src_unpack() {
 		"${S}"/include/global.php
 
 	rm -rf lib/adodb # don't use bundled adodb
-}
-
-pkg_setup() {
-	webapp_pkg_setup
-	has_php
-	require_php_with_use cli mysql xml session pcre sockets
 }
 
 src_compile() { :; }
