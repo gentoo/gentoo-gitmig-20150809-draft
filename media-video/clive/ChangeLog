@@ -1,6 +1,12 @@
 # ChangeLog for media-video/clive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.61 2010/04/12 10:18:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.62 2010/11/15 07:25:57 radhermit Exp $
+
+*clive-2.2.17 (15 Nov 2010)
+
+  15 Nov 2010; Tim Harder <radhermit@gentoo.org> +clive-2.2.17.ebuild:
+  Version bump (fixes bug #329809 by Dennis Nezic). Add dependency on
+  dev-perl/URI.
 
 *clive-2.2.11 (12 Apr 2010)
 
