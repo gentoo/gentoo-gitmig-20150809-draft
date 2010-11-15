@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Pod-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.29 2010/10/22 18:24:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.30 2010/11/15 08:53:08 tove Exp $
+
+*perl-Pod-Simple-3.15 (15 Nov 2010)
+
+  15 Nov 2010; Torsten Veller <tove@gentoo.org>
+  +perl-Pod-Simple-3.15.ebuild:
+  Version bump
 
   22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   perl-Pod-Simple-3.14.ebuild:
