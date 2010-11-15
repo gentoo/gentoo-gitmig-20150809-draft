@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.50 2010/10/06 20:35:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.51 2010/11/15 22:29:46 chithanh Exp $
+
+  15 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.8.ebuild:
+  Fix building on ppc64, bug #342535. Require agg for fbcon, bug #340567.
 
   06 Oct 2010; Markus Meier <maekke@gentoo.org> gnash-0.8.8.ebuild:
   x86 stable, bug #339102
