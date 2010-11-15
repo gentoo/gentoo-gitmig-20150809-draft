@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-Long-Descriptive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.12 2010/09/21 18:59:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.13 2010/11/15 10:59:25 grobian Exp $
+
+  15 Nov 2010; Fabian Groffen <grobian@gentoo.org>
+  Getopt-Long-Descriptive-0.086.ebuild:
+  Marked ~ppc-macos and ~x86-solaris, bug #345435
 
 *Getopt-Long-Descriptive-0.086 (21 Sep 2010)
 

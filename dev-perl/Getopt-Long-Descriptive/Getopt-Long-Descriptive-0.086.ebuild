@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/Getopt-Long-Descriptive-0.086.ebuild,v 1.1 2010/09/21 18:59:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/Getopt-Long-Descriptive-0.086.ebuild,v 1.2 2010/11/15 10:59:25 grobian Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Getopt::Long with usage text"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=dev-perl/Params-Validate-0.91
