@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12202 2010/11/14 20:20:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12203 2010/11/15 15:55:44 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -517,6 +517,9 @@ dev-cpp/atkmm
 >=gnome-extra/evolution-webcal-2.32
 >=mail-client/evolution-2.32
 >=media-video/totem-2.32
+>=dev-libs/guiloader-2.21.0
+>=dev-libs/guiloader-c++-2.21.0
+>=dev-util/crow-designer-2.21.0
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4790 2010/11/14 20:20:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4791 2010/11/15 15:55:44 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2010; Peter Volkov <pva@gentoo.org> package.mask:
+  Mask apps that depend on gtk+-2.22/gtkmm-2.22: dev-libs/guiloader{,-c++}
+  dev-util/crow-designer}
 
   14 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   last rites dev-tex/ha-prosper
