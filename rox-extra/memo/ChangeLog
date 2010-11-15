@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/memo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.26 2009/05/31 22:01:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.27 2010/11/15 16:08:19 arfrever Exp $
+
+  15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  memo-2.1.ebuild:
+  Fix dependencies.
 
   31 May 2009; Markus Meier <maekke@gentoo.org> memo-2.1.ebuild:
   amd64 stable, bug #270738

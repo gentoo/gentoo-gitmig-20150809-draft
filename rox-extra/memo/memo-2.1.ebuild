@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.1.ebuild,v 1.6 2009/05/31 22:01:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/memo-2.1.ebuild,v 1.7 2010/11/15 16:08:19 arfrever Exp $
 
 EAPI=2
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 ROX_LIB_VER=1.9.8
-inherit rox
+inherit python rox
 
 MY_PN="Memo"
 DESCRIPTION="Memo is a simple alarm clock and clock applet for the ROX Desktop."
@@ -18,8 +20,7 @@ IUSE="libnotify"
 
 RDEPEND="libnotify? (
 	>=dev-python/dbus-python-0.71
-	x11-libs/libnotify )
-	dev-lang/python[xml]"
+	x11-libs/libnotify )"
 
 APPNAME=${MY_PN}
 APPCATEGORY="Utility;Clock"
