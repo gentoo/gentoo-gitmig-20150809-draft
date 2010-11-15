@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.16 2010/11/15 12:36:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.17 2010/11/15 12:38:51 fauli Exp $
+
+  15 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  -g-ctan-2009.2.ebuild:
+  clean up not working version
 
 *g-ctan-2010.1 (15 Nov 2010)
 
