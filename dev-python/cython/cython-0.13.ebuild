@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.13.ebuild,v 1.6 2010/11/09 19:51:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.13.ebuild,v 1.7 2010/11/15 02:17:14 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Cython"
 MY_P="${MY_PN}-${PV/_/.}"
@@ -29,6 +29,11 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="ToDo.txt USAGE.txt"
 PYTHON_MODNAME="Cython pyximport"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-python-3.1.3.patch"
+}
 
 src_test() {
 	testing() {
