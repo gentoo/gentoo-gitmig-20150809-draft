@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.6.ebuild,v 1.1 2010/08/05 17:38:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.6.ebuild,v 1.2 2010/11/15 16:13:16 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -18,7 +18,7 @@ IUSE="debug python static test threads"
 
 RDEPEND="dev-libs/libevent
 	>=dev-libs/openssl-0.9.8
-	>=net-libs/ldns-1.4[ssl]"
+	>=net-libs/ldns-1.6.5[ssl]"
 #	gost? ( >=dev-libs/openssl-1 )
 
 DEPEND="${RDEPEND}
