@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.84.20100819-r1.ebuild,v 1.1 2010/11/12 08:37:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.84.20100819-r1.ebuild,v 1.2 2010/11/15 02:37:53 radhermit Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-aspell-automagic.patch
+	epatch "${FILESDIR}"/${P}-rfc2045-tests-lang.patch
 
 	cd cone
 	LIBTOOLIZE="true" eautoreconf
