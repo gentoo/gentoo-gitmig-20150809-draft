@@ -1,21 +1,21 @@
 # Logrotate file for acct
  
 /var/account/pacct {
-    prerotate
-        if [ -h /lib/rc/init.d/started/acct ]; then
-             /etc/init.d/acct stop > /dev/null 2>&1 || true
-        fi
-    endscript
-    compress
-    delaycompress
-    notifempty
-    daily
-    rotate 31
-    create 0600 root root
-		missingok
-    postrotate
-        if [ -h /lib/rc/init.d/started/acct ]; then
-             /etc/init.d/acct start > /dev/null 2>&1 || true
-        fi
-    endscript
-}     
+	prerotate
+		if [ -h /lib/rc/init.d/started/acct ]; then
+			 /etc/init.d/acct stop > /dev/null 2>&1 || true
+		fi
+	endscript
+	compress
+	delaycompress
+	notifempty
+	daily
+	rotate 31
+	create 0600 root root
+	missingok
+	postrotate
+		if [ -h /lib/rc/init.d/started/acct ]; then
+			 /etc/init.d/acct start > /dev/null 2>&1 || true
+		fi
+	endscript
+}	 
