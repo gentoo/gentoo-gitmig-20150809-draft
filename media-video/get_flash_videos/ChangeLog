@@ -1,6 +1,10 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.6 2010/11/10 16:38:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.7 2010/11/15 13:14:36 hwoarang Exp $
+
+  15 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  get_flash_videos-1.23-r1.ebuild:
+  Stable on amd64 wrt bug #343607
 
   10 Nov 2010; Thomas Kahle <tomka@gentoo.org>
   get_flash_videos-1.23-r1.ebuild:
