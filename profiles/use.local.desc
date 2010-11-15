@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6154 2010/11/14 23:14:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6155 2010/11/15 07:55:15 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3867,6 +3867,7 @@ www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Ads math rendering support
 www-apps/postfixadmin:extras - Install contributed scripts and plugins
 www-apps/postfixadmin:tests - Install model unit tests
+www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/redmine:darcs - Enable support for dev-vcs/darcs
 www-apps/redmine:git - Enable support for dev-vcs/git
 www-apps/redmine:mercurial - Enable support for dev-vcs/mercurial
