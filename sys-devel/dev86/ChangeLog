@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.17 2010/10/24 22:07:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.18 2010/11/15 06:19:51 polynomial-c Exp $
+
+  15 Nov 2010; Lars Wendler <polynomial-c@gentoo.org>
+  dev86-0.16.17-r6.ebuild:
+  Don't mess with CPPFLAGS as they tend to break compilation (bug #343655).
 
   24 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
   dev86-0.16.17-r6.ebuild, +files/dev86-0.16.17-make382.patch:

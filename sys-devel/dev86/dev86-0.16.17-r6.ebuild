@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.5 2010/10/24 22:07:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.6 2010/11/15 06:19:51 polynomial-c Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-fortify.patch
 	epatch "${FILESDIR}"/${P}-make382.patch
 	sed -i \
-		-e "s:-O2 -g:${CFLAGS} ${CPPFLAGS}:" \
+		-e "s:-O2 -g:${CFLAGS}:" \
 		-e '/INEXE=/s:-s::' \
 		makefile.in
 	sed -i -e '/INSTALL_OPTS=/s:-s::' bin86/Makefile
@@ -40,6 +40,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# Don't mess with CPPFLAGS as they tend to break compilation
+	# (bug #343655).
+	CPPFLAGS=""
+
 	emake -j1 DIST="${D}" || die
 
 	export PATH=${S}/bin:${PATH}
