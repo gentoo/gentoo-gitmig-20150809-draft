@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-irclib
-# Copyright 1999-2009 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.6 2009/09/04 18:18:53 patrick Exp $
+# Copyright 1999-2010 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.7 2010/11/15 03:22:57 arfrever Exp $
+
+  15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-irclib-0.4.8.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS. Set
+  PYTHON_MODNAME.
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -python-irclib-0.4.6.ebuild:
