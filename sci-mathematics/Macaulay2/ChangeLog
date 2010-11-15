@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.19 2010/11/12 18:56:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.20 2010/11/15 18:13:46 tomka Exp $
+
+  15 Nov 2010; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4.ebuild:
+  Fixing a build failure if user had libatomic and boehm_gc installed
 
 *Macaulay2-1.4 (12 Nov 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.1 2010/11/12 18:56:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.2 2010/11/15 18:13:46 tomka Exp $
 
 EAPI="2"
 
@@ -92,7 +92,7 @@ src_configure (){
 		--disable-encap \
 		--disable-strip \
 		$(use_enable optimization optimize) \
-		--enable-build-libraries="factory libfac" \
+		--enable-build-libraries="factory gc libfac" \
 		--with-unbuilt-programs="4ti2 gfan normaliz nauty cddplus lrslib" \
 		|| die "failed to configure Macaulay"
 }
