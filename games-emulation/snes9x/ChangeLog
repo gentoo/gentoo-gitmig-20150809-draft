@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.50 2010/11/10 22:44:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.51 2010/11/15 09:49:52 tupone Exp $
+
+  15 Nov 2010; Alfredo Tupone <tupone@gentoo.org> snes9x-1.52-r1.ebuild:
+  Require app-emulation/emul-linux-x86-soundlibs when needed. Bug #345099 by
+  Onteria
 
   10 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   snes9x-1.52-r1.ebuild, files/snes9x-1.52-build.patch:
