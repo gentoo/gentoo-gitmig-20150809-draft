@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1-r1.ebuild,v 1.5 2010/10/21 01:21:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1-r1.ebuild,v 1.6 2010/11/15 15:47:02 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
+
 inherit distutils eutils
 
 DESCRIPTION="driconf is a GTK+2 GUI configurator for DRI."
@@ -15,12 +18,16 @@ KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4
-	dev-lang/python[xml]
 	>=dev-python/pygtk-2.4
 	x11-apps/xdriinfo"
 DEPEND="${RDEPEND}"
 
 DOCS="CHANGELOG COPYING PKG-INFO README TODO"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glxinfo-unicode.patch \
@@ -41,4 +48,12 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 	domenu driconf.desktop
+}
+
+pkg_postinst() {
+	python_mod_optimize /usr/lib/driconf
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/lib/driconf
 }

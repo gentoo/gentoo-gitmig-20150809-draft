@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/driconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.29 2010/10/21 14:02:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.30 2010/11/15 15:47:02 arfrever Exp $
+
+  15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  driconf-0.9.1-r1.ebuild:
+  Update EAPI. Fix dependencies, use Python 2, call python_mod_optimize() and
+  python_mod_cleanup() (bug 317007).
 
   21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -driconf-0.9.1.ebuild:
