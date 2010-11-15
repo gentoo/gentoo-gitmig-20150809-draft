@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.22 2010/10/15 17:25:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.23 2010/11/15 13:31:42 hwoarang Exp $
+
+  15 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  cryptlib-3.3.3-r1.ebuild:
+  Stable on amd64 wrt bug #345489
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   cryptlib-3.3.3-r1.ebuild:
