@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.225 2010/10/03 13:07:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.226 2010/11/15 16:51:22 darkside Exp $
+
+  15 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.1-r5.ebuild:
+  remove old version
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org> bash-completion-1.2.ebuild:
   ia64/s390/sh/sparc stable wrt #333511
