@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11-r3.ebuild,v 1.1 2010/11/11 16:05:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11-r3.ebuild,v 1.2 2010/11/15 06:56:00 pva Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -121,6 +121,7 @@ pkg_postinst() {
 	ewarn "any other appropriate config directory."
 
 	if use gtk; then
+		# Requires gconf support that is installed only if USE=gnome
 		elog 'If you want magnet link support in gnome run this commands:'
 		elog 'gconftool-2 -t string -s /desktop/gnome/url-handlers/magnet/command "/usr/bin/transmission-gtk %s"'
 		elog 'gconftool-2 -s /desktop/gnome/url-handlers/magnet/needs_terminal false -t bool'
