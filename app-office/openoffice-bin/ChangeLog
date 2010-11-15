@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.233 2010/11/13 12:35:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.234 2010/11/15 11:10:48 tomka Exp $
+
+  15 Nov 2010; Thomas Kahle <tomka@gentoo.org> openoffice-bin-3.2.1.ebuild:
+  x86 stable per bug #340917
 
   13 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   openoffice-bin-3.2.1.ebuild:
