@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.8 2010/10/23 01:28:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.9 2010/11/15 05:51:11 radhermit Exp $
+
+*quvi-0.2.8 (15 Nov 2010)
+
+  15 Nov 2010; Tim Harder <radhermit@gentoo.org> +quvi-0.2.8.ebuild:
+  Version bump. Don't try to install the TODO file since it was removed in
+  this release.
 
   23 Oct 2010; Alexis Ballier <aballier@gentoo.org> -quvi-0.1.1.ebuild,
   -quvi-0.1.4.ebuild, -quvi-0.2.0.ebuild, -quvi-0.2.1.ebuild,
