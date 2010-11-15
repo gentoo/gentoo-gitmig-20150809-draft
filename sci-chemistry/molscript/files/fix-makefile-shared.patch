@@ -56,7 +56,7 @@ diff -urN molscript-2.1.2.orig/Makefile.complete molscript-2.1.2/Makefile.comple
  #  Correctness flags:
  #CCHECK = -ansi -fullwarn -g -DSELECT_DEBUG
 -CCHECK = -ansi -fullwarn
-+CCHECK = -ansi -Wall
++CCHECK = -ansi
  #CCHECK = -ansi -fullwarn -DNDEBUG
  
  # General cc compile flags.

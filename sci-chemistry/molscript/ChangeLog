@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molscript
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.12 2010/11/08 17:16:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.13 2010/11/15 22:44:29 jlec Exp $
+
+  15 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/2.1.2-prll.patch,
+  molscript-2.1.2-r1.ebuild, files/fix-makefile-shared.patch:
+  Fix prll compilation
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -molscript-2.1.2.ebuild, molscript-2.1.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.5 2010/11/08 17:16:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.6 2010/11/15 22:44:29 jlec Exp $
 
 EAPI="3"
 
@@ -33,15 +33,17 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/fix-makefile-shared.patch
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/fix-makefile-shared.patch \
+		"${FILESDIR}"/${PV}-ldflags.patch \
+		"${FILESDIR}"/${PV}-prll.patch
 
 	# Provide glutbitmap.h, because freeglut doesn't have it
 	cp "${FILESDIR}"/glutbitmap.h "${S}"/clib/
 
 	# Stop an incredibly hacky include
 	sed -i -e 's:<../lib/glut/glutbitmap.h>:"glutbitmap.h":g' \
-		"${S}"/clib/ogl_bitmap_character.c
+		"${S}"/clib/ogl_bitmap_character.c || die
 }
 
 src_compile() {
