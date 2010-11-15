@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.32 2010/06/18 06:47:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.33 2010/11/15 22:02:51 robbat2 Exp $
+
+*tw_cli-10.2 (15 Nov 2010)
+
+  15 Nov 2010; Robin H. Johnson <robbat2@gentoo.org> +tw_cli-10.2.ebuild:
+  Version bump. Change the RESTRICT=fetch to primaryuri, and let upstream
+  count the downloads that way. Also update my test list as some of that
+  hardware is long gone.
 
 *tw_cli-10.1 (18 Jun 2010)
 
