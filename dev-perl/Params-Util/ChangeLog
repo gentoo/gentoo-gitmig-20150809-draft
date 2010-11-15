@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Params-Util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.76 2010/10/23 08:35:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.77 2010/11/15 09:45:05 grobian Exp $
+
+  15 Nov 2010; Fabian Groffen <grobian@gentoo.org> Params-Util-1.01.ebuild:
+  Marked ~x86-solaris, bug #345435
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   Params-Util-1.01.ebuild:
