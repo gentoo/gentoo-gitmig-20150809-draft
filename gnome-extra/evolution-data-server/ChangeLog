@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.279 2010/11/15 10:09:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.280 2010/11/15 17:54:49 cardoe Exp $
+
+  15 Nov 2010; Doug Goldstein <cardoe@gentoo.org>
+  evolution-data-server-2.30.3.ebuild:
+  Enable USE weather by default so that 'emerge gnome' does not require a
+  package.use change.
 
   15 Nov 2010; Pacho Ramos <pacho@gentoo.org>
   evolution-data-server-2.32.0.ebuild:
