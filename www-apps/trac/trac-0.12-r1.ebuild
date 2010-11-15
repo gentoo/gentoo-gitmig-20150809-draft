@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12-r1.ebuild,v 1.1 2010/08/13 13:23:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12-r1.ebuild,v 1.2 2010/11/15 15:36:06 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -38,10 +38,7 @@ RDEPEND="
 	postgres? ( >=dev-python/psycopg-2 )
 	sqlite? (
 		>=dev-db/sqlite-3.3.4
-		|| (
-			>=dev-lang/python-2.5[sqlite]
-			>=dev-python/pysqlite-2.3.2
-		)
+		|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )
 	)
 	subversion? ( dev-vcs/subversion[python] )
 	!www-apps/trac-webadmin
