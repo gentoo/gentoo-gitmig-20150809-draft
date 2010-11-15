@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.123 2010/10/23 14:36:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.124 2010/11/15 05:34:04 ford_prefect Exp $
+
+*banshee-1.8.0-r1 (15 Nov 2010)
+
+  15 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.8.0-r1.ebuild,
+  +files/banshee-1.8.0-fix-insecure-lib-path.patch:
+  Bump to -r1 to fix insecure LD_LIBRARY_PATH usage (bug #345567).
 
   23 Oct 2010; Pacho Ramos <pacho@gentoo.org> banshee-1.8.0.ebuild:
   Enable 'web' by default as needed by community extensions (that are
