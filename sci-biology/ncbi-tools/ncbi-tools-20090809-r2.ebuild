@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090809-r2.ebuild,v 1.2 2010/10/10 21:22:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090809-r2.ebuild,v 1.3 2010/11/15 21:03:06 jlec Exp $
 
 EAPI="3"
 
@@ -108,12 +108,17 @@ src_prepare() {
 
 	# We use dynamic libraries
 	sed -i -e "s/-Wl,-Bstatic//" *linux*.ncbi.mk || die
+
+	sed \
+		-re "s:/usr(/bin/.*sh):\1:g" \
+		-e "s:(/bin/.*sh):${EPREFIX}\1:g" \
+		-i $(find ${S} -type f) || die
 }
 
 src_compile() {
 	export EXTRA_VIB
 	cd "${WORKDIR}"
-	ncbi/make/makedis.csh || die
+	csh ncbi/make/makedis.csh || die
 	mkdir "${S}"/cgi
 	mkdir "${S}"/real
 	mv "${S}"/bin/*.cgi "${S}"/cgi || die
