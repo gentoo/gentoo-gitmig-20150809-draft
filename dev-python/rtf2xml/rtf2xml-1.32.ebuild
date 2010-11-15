@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/rtf2xml-1.32.ebuild,v 1.2 2009/12/25 13:08:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/rtf2xml-1.32.ebuild,v 1.3 2010/11/15 03:28:57 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -13,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/python"
+DEPEND=""
+RDEPEND=""
 
 src_install() {
 	distutils_src_install

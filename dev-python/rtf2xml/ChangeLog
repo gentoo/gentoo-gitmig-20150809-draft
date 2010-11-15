@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rtf2xml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.3 2009/12/25 13:08:58 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.4 2010/11/15 03:28:57 arfrever Exp $
+
+  15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rtf2xml-1.32.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   25 Dec 2009; <hwoarang@gentoo.org> rtf2xml-1.32.ebuild:
   Added amd64 keyword wrt bug #296192
