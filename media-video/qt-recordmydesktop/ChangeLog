@@ -1,6 +1,14 @@
 # ChangeLog for media-video/qt-recordmydesktop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.18 2009/06/06 15:44:04 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.19 2010/11/15 20:38:20 radhermit Exp $
+
+*qt-recordmydesktop-0.3.8-r1 (15 Nov 2010)
+
+  15 Nov 2010; Tim Harder <radhermit@gentoo.org>
+  +qt-recordmydesktop-0.3.8-r1.ebuild,
+  +files/qt-recordmydesktop-0.3.8-check-for-jack.patch:
+  Revision bump to fix check for jack support (bug #321313 by Fabio Rossi).
+  Bump to the qt4-r2 eclass.
 
   06 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
   qt-recordmydesktop-0.3.8.ebuild:
