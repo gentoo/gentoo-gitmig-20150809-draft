@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.35.ebuild,v 1.1 2010/08/28 20:01:18 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.35.ebuild,v 1.2 2010/11/15 16:34:31 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,8 +23,7 @@ DEPEND="dev-libs/libpcre
 	net-libs/libpcap
 	gtk? ( >=x11-libs/gtk+-2.6
 		   >=dev-python/pygtk-2.6
-		   || ( >=dev-lang/python-2.5[sqlite]
-				>=dev-python/pysqlite-2 )
+		   || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 )
 		 )
 	lua? ( >=dev-lang/lua-5.1.4-r1[deprecated] )
 	ssl? ( dev-libs/openssl )"
