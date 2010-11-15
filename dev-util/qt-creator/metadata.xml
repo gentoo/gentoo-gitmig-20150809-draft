@@ -18,7 +18,6 @@
 	<flag name="perforce">enable perforce software configuration manager plugin</flag>
 	<flag name="qml">Simple way of building UIs based on Qt Declarative module</flag>
 	<flag name="qtscript">enable qt script editor plugin</flag>
-	<flag name="qt3support">Use Qt3support compatibility API</flag>
 	<flag name="subversion">enable subversion plugin</flag>
 </use>
 <longdescription lang="en">

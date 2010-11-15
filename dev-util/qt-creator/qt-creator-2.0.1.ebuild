@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.0.1.ebuild,v 1.5 2010/11/15 18:55:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.0.1.ebuild,v 1.6 2010/11/15 21:35:18 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -18,31 +18,28 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
-	kde mercurial perforce +qml qt3support qtscript rss subversion"
+	mercurial perforce +qml qtscript rss subversion"
 
 QTVER="4.7.0:4"
-DEPEND="~x11-libs/qt-assistant-${QTVER}[doc?]"
-RDEPEND="${DEPEND}
+DEPEND="~x11-libs/qt-assistant-${QTVER}[doc?]
 	~x11-libs/qt-sql-${QTVER}
 	~x11-libs/qt-svg-${QTVER}
-	~x11-libs/qt-test-${QTVER}
-	~x11-libs/qt-webkit-${QTVER}
-	!kde? ( || ( ~x11-libs/qt-phonon-${QTVER} media-sound/phonon ) )
-	kde? ( media-sound/phonon )
+	!qml? ( ~x11-libs/qt-gui-${QTVER} )
+	qml? (
+		~x11-libs/qt-declarative-${QTVER}[private-headers]
+		~x11-libs/qt-core-${QTVER}[private-headers]
+		~x11-libs/qt-gui-${QTVER}[private-headers]
+		~x11-libs/qt-script-${QTVER}[private-headers]
+	)
+	qtscript? ( >x11-libs/qt-script-${QTVER} )"
+
+RDEPEND="${DEPEND}
 	cmake? ( dev-util/cmake )
 	cvs? ( dev-vcs/cvs )
 	sys-devel/gdb
 	examples? ( ~x11-libs/qt-demo-${QTVER} )
 	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
-	!qml? ( ~x11-libs/qt-gui-${QTVER}[qt3support?] )
-	qml? (
-		~x11-libs/qt-declarative-${QTVER}[private-headers]
-		~x11-libs/qt-core-${QTVER}[private-headers]
-		~x11-libs/qt-gui-${QTVER}[qt3support?,private-headers]
-		~x11-libs/qt-script-${QTVER}[private-headers]
-	)
-	qtscript? ( >x11-libs/qt-script-${QTVER} )
 	subversion? ( dev-vcs/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce
