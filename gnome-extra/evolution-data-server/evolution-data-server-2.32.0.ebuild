@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.0.ebuild,v 1.1 2010/11/14 22:39:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.0.ebuild,v 1.2 2010/11/15 10:09:06 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2 BSD DB"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
-IUSE="doc ipv6 kerberos gnome-keyring ldap ssl weather"
+IUSE="doc ipv6 kerberos gnome-keyring ldap ssl +weather"
 
 RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.20:2
@@ -38,9 +38,9 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35.5
+	sys-devel/bison
 	>=gnome-base/gnome-common-2
 	>=dev-util/gtk-doc-am-1.9
-	sys-devel/bison
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
@@ -67,7 +67,7 @@ src_prepare() {
 	# Adjust to gentoo's /etc/service
 	epatch "${FILESDIR}/${PN}-2.31-gentoo_etc_services.patch"
 
-	# Rewind in camel-disco-diary to fix a crash
+	# Rewind in camel-disco-diary to fix a crash, upstream bug #632376
 	epatch "${FILESDIR}/${PN}-2.31-camel-rewind.patch"
 
 	# GNOME bug 611353 (skips failing test atm)
@@ -80,11 +80,6 @@ src_prepare() {
 	sed -e 's/\(SUBDIRS =.*\)ebook/\1/' \
 		-i addressbook/tests/Makefile.{am,in} \
 		|| die "failing test sed 1 failed"
-
-	# Failing calendar checks ?
-	sed -e 's/\(SUBDIRS =.*\)ecal/\1/' \
-		-i calendar/tests/Makefile.{am,in} \
-		|| die "failing test sed 2 failed"
 
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS
@@ -114,6 +109,8 @@ src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	unset ORBIT_SOCKETDIR
 	unset SESSION_MANAGER
+	export XDG_DATA_HOME="${T}"
+	unset DISPLAY
 	Xemake check || die "Tests failed."
 }
 
