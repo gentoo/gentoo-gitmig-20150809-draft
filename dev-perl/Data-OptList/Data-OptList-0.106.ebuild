@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/Data-OptList-0.106.ebuild,v 1.3 2010/06/27 16:24:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/Data-OptList-0.106.ebuild,v 1.4 2010/11/15 10:42:24 grobian Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="parse and validate simple name/value option pairs"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="dev-perl/Sub-Install
