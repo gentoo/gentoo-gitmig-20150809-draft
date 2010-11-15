@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20100808.ebuild,v 1.3 2010/11/15 21:03:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20100808.ebuild,v 1.4 2010/11/15 21:07:43 jlec Exp $
 
 EAPI="3"
 
@@ -112,7 +112,7 @@ src_prepare() {
 	sed \
 		-re "s:/usr(/bin/.*sh):\1:g" \
 		-e "s:(/bin/.*sh):${EPREFIX}\1:g" \
-		-i $(find ${S} -type f) || die
+		-i $(find "${S}" -type f) || die
 }
 
 src_compile() {
