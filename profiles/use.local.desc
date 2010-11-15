@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6155 2010/11/15 07:55:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6156 2010/11/15 19:15:14 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1275,6 +1275,7 @@ dev-util/qt-creator:git - enable git plugin
 dev-util/qt-creator:mercurial - enable mercurial plugin
 dev-util/qt-creator:perforce - enable perforce software configuration manager plugin
 dev-util/qt-creator:qml - Simple way of building UIs based on Qt Declarative module
+dev-util/qt-creator:qt3support - Use Qt3support compatibility API
 dev-util/qt-creator:qtscript - enable qt script editor plugin
 dev-util/qt-creator:subversion - enable subversion plugin
 dev-util/radare:gui -  Enable the graphical user interface of radare (broken) 
