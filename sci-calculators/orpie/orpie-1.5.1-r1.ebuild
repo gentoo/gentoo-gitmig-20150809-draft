@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1-r1.ebuild,v 1.2 2010/06/03 21:22:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/orpie-1.5.1-r1.ebuild,v 1.3 2010/11/15 09:21:06 tomka Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://pessimization.com/software/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc"
 
 DEPEND="dev-ml/ocamlgsl

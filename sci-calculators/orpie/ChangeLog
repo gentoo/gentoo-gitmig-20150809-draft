@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/orpie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.17 2010/06/23 20:03:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.18 2010/11/15 09:21:06 tomka Exp $
+
+  15 Nov 2010; Thomas Kahle <tomka@gentoo.org> orpie-1.5.1-r1.ebuild:
+  x86 stable per bug #344435
 
   23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> orpie-1.5.1.ebuild:
   Removed bindist flag, orpie should be compatible GPL-3 anyway
