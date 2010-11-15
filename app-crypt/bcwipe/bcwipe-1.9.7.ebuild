@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.9.7.ebuild,v 1.1 2010/10/16 16:24:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.9.7.ebuild,v 1.2 2010/11/15 23:56:02 c1pher Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.jetico.com/linux/BCWipe-${MY_PV}.tar.gz
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND=""
 RDEPEND=""
