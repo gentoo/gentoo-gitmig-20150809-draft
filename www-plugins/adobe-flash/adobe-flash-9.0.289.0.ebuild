@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.283.0.ebuild,v 1.1 2010/10/13 01:37:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.289.0.ebuild,v 1.1 2010/11/15 18:16:35 lack Exp $
 
 inherit nsplugins
 
