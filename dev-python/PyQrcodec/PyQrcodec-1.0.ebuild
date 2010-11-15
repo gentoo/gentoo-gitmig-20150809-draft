@@ -1,6 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/PyQrcodec-1.0.ebuild,v 1.3 2010/08/07 14:32:46 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/PyQrcodec-1.0.ebuild,v 1.4 2010/11/15 03:12:00 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -15,10 +20,13 @@ IUSE=""
 
 DEPEND="dev-python/imaging
 	media-libs/opencv"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/PyQrCodec"
 
-src_unpack() {
-	distutils_src_unpack
-	epatch "$FILESDIR"/opencv-2.0-compat.patch
+PYTHON_MODNAME="PyQrcodec"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/opencv-2.0-compat.patch"
 }
