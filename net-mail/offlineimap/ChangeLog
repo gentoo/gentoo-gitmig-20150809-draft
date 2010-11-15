@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.50 2010/09/24 00:47:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.51 2010/11/15 16:25:13 arfrever Exp $
+
+  15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  offlineimap-6.2.0.2.ebuild:
+  Update EAPI. Fix dependencies, set SUPPORT_PYTHON_ABIS, call
+  distutils_pkg_postinst() (bug #315337).
 
 *offlineimap-6.2.0.2 (24 Sep 2010)
 

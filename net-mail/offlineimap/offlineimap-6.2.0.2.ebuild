@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.2.0.2.ebuild,v 1.1 2010/09/24 00:47:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.2.0.2.ebuild,v 1.2 2010/11/15 16:25:13 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils
 
@@ -16,9 +19,11 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-
 IUSE="doc ssl"
 
 DEPEND="doc? ( app-text/docbook-sgml-utils )"
-RDEPEND="dev-lang/python[threads,ssl?]"
+# PYTHON_USE_WITH* don't support this situation. PYTHON_DEPEND in EAPI >=4 maybe will support it.
+RDEPEND="=dev-lang/python-2*[threads,ssl?]"
 
 src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}"/${PN}-6.2.0-darwin10.patch
 }
 
@@ -38,6 +43,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	elog ""
 	elog "You will need to configure offlineimap by creating ~/.offlineimaprc"
 	elog "Sample configurations are in /usr/share/doc/${PF}/"
