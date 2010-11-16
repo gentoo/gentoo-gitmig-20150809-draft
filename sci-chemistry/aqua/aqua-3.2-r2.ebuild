@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r1.ebuild,v 1.2 2010/07/19 06:33:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r2.ebuild,v 1.1 2010/11/16 17:12:12 jlec Exp $
 
 EAPI="3"
 
@@ -33,7 +33,11 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	sed 's:nwak:gawk:g' -i scripts/* || die
+	sed \
+		-e 's:nawk:gawk:g' \
+		-e "s:/bin/gawk:${EPREFIX}/usr/bin/gawk:g" \
+		-e "s:/usr/local/bin/perl:${EPREFIX}/usr/bin/perl:g" \
+		-i $(find . -type f) || die
 	epatch "${FILESDIR}"/${PV}-flags.patch
 }
 
