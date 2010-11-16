@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.75 2010/10/20 06:51:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.76 2010/11/16 19:18:45 mr_bones_ Exp $
+
+*scorched3d-43.2 (16 Nov 2010)
+
+  16 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +scorched3d-43.2.ebuild, +files/scorched3d-43.2-fixups.patch,
+  +files/scorched3d-43.2-gcc43.patch, +files/scorched3d-43.2-odbc.patch,
+  +files/scorched3d-43.2-win32.patch:
+  version bump
 
   20 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   +files/scorched3d-43.1c-gcc45.patch:
