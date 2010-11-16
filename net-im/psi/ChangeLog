@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.201 2010/11/16 15:34:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.202 2010/11/16 20:15:46 pva Exp $
+
+  16 Nov 2010; Peter Volkov <pva@gentoo.org> psi-9999.ebuild:
+  Some icons were not installed, thank Nikoli for this job.
 
   16 Nov 2010; Peter Volkov <pva@gentoo.org> psi-9999.ebuild:
   Drop USE=debug as it strips symbols and breaks debugging, #345285 thank
