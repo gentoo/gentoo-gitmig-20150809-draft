@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-uploadprogress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-uploadprogress/ChangeLog,v 1.2 2010/11/04 16:19:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-uploadprogress/ChangeLog,v 1.3 2010/11/16 13:12:37 fauli Exp $
+
+  16 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  pecl-uploadprogress-1.0.1-r1.ebuild:
+  add ~x86, bug 344741
 
 *pecl-uploadprogress-1.0.1-r1 (04 Nov 2010)
 
