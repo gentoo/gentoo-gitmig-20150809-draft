@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.24 2010/06/28 21:05:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.25 2010/11/16 20:05:49 xarthisius Exp $
+
+*cns-1.2.1-r5 (16 Nov 2010)
+
+  16 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> +cns-1.2.1-r5.ebuild:
+  Link proper openmp lib when using intel compiler
 
   28 Jun 2010; Justin Lecher <jlec@gentoo.org> cns-1.2.1.ebuild,
   cns-1.2.1-r1.ebuild, cns-1.2.1-r2.ebuild, cns-1.2.1-r3.ebuild,
