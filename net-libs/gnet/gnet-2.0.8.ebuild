@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8.ebuild,v 1.7 2009/06/27 11:49:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8.ebuild,v 1.8 2010/11/16 20:54:50 eva Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="A simple network library."
-HOMEPAGE="http://www.gnetlibrary.org/"
+HOMEPAGE="http://live.gnome.org/GNetLibrary"
 
 LICENSE="LGPL-2"
 SLOT="2"

@@ -1,33 +1,45 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.2 2010/01/10 16:36:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.3 2010/11/16 20:54:50 eva Exp $
 
 EAPI="2"
+GCONF_DEBUG="yes"
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="A simple network library."
-HOMEPAGE="http://www.gnetlibrary.org/"
+HOMEPAGE="http://live.gnome.org/GNetLibrary"
 
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
-
 IUSE="doc test"
 
-# FIXME: network-tests & use of valgrind
-
-RDEPEND=">=dev-libs/glib-2.6"
+# FIXME: automagic use of valgrind
+RDEPEND=">=dev-libs/glib-2.6:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.2 )
-	test? ( >=dev-libs/check-0.9.4 )"
+	test? ( >=dev-libs/check-0.9.7 )"
 
-DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README* TODO"
+pkg_setup() {
+	DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README* TODO"
+	# Do not enable network tests in an ebuild environment
+	G2CONF="${G2CONF} --disable-network-tests"
+}
 
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix #define location
-	epatch "${FILESDIR}/${P}-define-location.patch"
+	# Do not leak main context reference, from master
+	epatch "${FILESDIR}/${PN}-2.0.8-context-leak.patch"
+
+	# Fix usage of check framework, bug #296849, from master
+	epatch "${FILESDIR}/${PN}-2.0.8-check-usage-update.patch"
+
+	# ifdef around network tests code, refs. bug #320759
+	epatch "${FILESDIR}/${PN}-2.0.8-network-tests.patch"
+
+	# Do not pass silly cflags with USE=debug, bug #320759
+	sed 's/-Werror//' -i configure.ac configure || die "sed failed"
 }

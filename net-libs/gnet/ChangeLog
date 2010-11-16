@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.68 2010/01/10 16:36:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.69 2010/11/16 20:54:50 eva Exp $
+
+  16 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gnet-2.0.8.ebuild,
+  gnet-2.0.8-r1.ebuild, +files/gnet-2.0.8-check-usage-update.patch,
+  +files/gnet-2.0.8-context-leak.patch,
+  +files/gnet-2.0.8-network-tests.patch:
+  Version bump. Fix usage of check test framework, bug #296849. Do not
+  enable and build network tests, bug #320759. Disable -Werror in configure,
+  bug #320759. Fix homepage URL.
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gnet-2.0.8-r1.ebuild:
   Transfer Prefix keywords
