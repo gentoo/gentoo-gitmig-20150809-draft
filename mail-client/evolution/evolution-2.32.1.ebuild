@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.0.ebuild,v 1.1 2010/11/14 22:43:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.1.ebuild,v 1.1 2010/11/16 19:30:29 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.4"
 
@@ -16,20 +16,18 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="crypt doc gstreamer kerberos ldap networkmanager profile python ssl"
-# pst
-# mono - disabled because it just crashes on startup :S
+IUSE="clutter connman crypt doc gstreamer kerberos ldap networkmanager profile python ssl"
 
-# Pango dependency required to avoid font rendering problems
-# We need a graphical pinentry frontend to be able to ask for the GPG.
-# Note that separate pinenetry-qt is actually newer than USE=qt4 in pinentry.
+# We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
-PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pinentry[qt4] app-crypt/pinentry[qt3] )"
+PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pinentry[qt4] )"
 
-# TODO: enable champlain support
-# TODO: enable glade-3 support
+# contacts-map plugin requires libchaimplain and geoclue
+# glade-3 support is for maintainers only per configure.ac
+# mono plugin disabled as it's incompatible with 2.8 and lacks maintainance (see bgo#634571)
+# pst is not mature enough and changes API/ABI frequently
 RDEPEND=">=dev-libs/glib-2.25.12:2
-	>=x11-libs/gtk+-2.20:2
+	>=x11-libs/gtk+-2.20.0:2
 	>=dev-libs/libunique-1.1.2
 	>=gnome-base/gnome-desktop-2.26:2
 	>=dev-libs/libgweather-2.25.3
@@ -40,16 +38,19 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=gnome-base/gconf-2
 	>=gnome-base/libgnomecanvas-2
 	dev-libs/atk
-	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/libxml2-2.7.3
 	>=net-libs/libsoup-2.4:2.4
 	>=media-gfx/gtkimageview-1.6
 	>=x11-misc/shared-mime-info-0.22
 	>=x11-themes/gnome-icon-theme-2.30.2.1
+	>=dev-libs/libgdata-0.4
 
+	clutter? ( media-libs/clutter[gtk] )
+	connman? ( net-misc/connman )
 	crypt? ( || (
-		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
-		=app-crypt/gnupg-1.4* ) )
+				  ( >=app-crypt/gnupg-2.0.1-r2
+					${PINENTRY_DEPEND} )
+				  =app-crypt/gnupg-1.4* ) )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
@@ -61,8 +62,6 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 		>=dev-libs/nss-3.11 )
 
 	!<gnome-extra/evolution-exchange-2.32"
-# champlain, geoclue, clutter, gtkimageview
-#	mono? ( >=dev-lang/mono-1 )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.16
@@ -80,27 +79,29 @@ DEPEND="${RDEPEND}
 #	>=dev-util/gtk-doc-am-1.9
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 	ELTCONF="--reverse-deps"
+	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 	G2CONF="${G2CONF}
 		--without-kde-applnk-path
 		--enable-plugins=experimental
 		--enable-image-inline
 		--enable-canberra
 		--enable-weather
-		--disable-gtk3
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
+		$(use_enable connman)
 		$(use_enable gstreamer audio-inline)
-		--disable-pst-import
 		$(use_enable profile profiling)
+		--disable-pst-import
 		$(use_enable python)
+		$(use_with clutter)
 		$(use_with ldap openldap)
 		$(use_with kerberos krb5 /usr)
-		--disable-contacts-map"
-
-#		$(use_enable mono)
+		--disable-contacts-map
+		--without-glade-catalog
+		--disable-mono
+		--disable-gtk3"
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will
 	# autodetect new-mail-notify and exchange, but that cannot be helped for the
@@ -118,18 +119,20 @@ pkg_setup() {
 			--without-nss-includes"
 	fi
 
+	# NM and connman support cannot coexist
+	if use networkmanager && use connman ; then
+		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
+		G2CONF="${G2CONF} --disable-connman"
+	fi
+
 	python_set_active_version 2
 }
 
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix invalid use of la file in contact-editor
+	# Fix invalid use of la file in contact-editor, upstream bug #635002
 	epatch "${FILESDIR}/${PN}-2.32.0-wrong-lafile-usage.patch"
-
-	# FIXME: Fix compilation flags crazyness
-	sed -e 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
-		-i configure.ac configure || die "sed 1 failed"
 
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
@@ -137,6 +140,10 @@ src_prepare() {
 			-e 's|mozilla-nspr|nspr|' \
 			-i configure.ac configure || die "sed 2 failed"
 	fi
+
+	# Fix compilation flags crazyness
+	sed -e 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
+		-i configure.ac configure || die "sed 1 failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
@@ -155,10 +162,10 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	elog "To change the default browser if you are not using GNOME, do:"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
+	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'firefox %s'"
+	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'firefox %s'"
 	elog ""
-	elog "Replace 'mozilla %s' with which ever browser you use."
+	elog "Replace 'firefox %s' with which ever browser you use."
 	elog ""
 	elog "Junk filters are now a run-time choice. You will get a choice of"
 	elog "bogofilter or spamassassin based on which you have installed"
