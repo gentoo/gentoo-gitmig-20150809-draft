@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.47 2010/11/05 12:05:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.48 2010/11/16 08:32:05 fauli Exp $
+
+  16 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  -joomla-1.5.21.ebuild:
+  clean up
 
   05 Nov 2010; Christian Faulhammer <fauli@gentoo.org> joomla-1.5.22.ebuild:
   use EAPI 2 features to check for PHP USE flags instead of eclass functions
