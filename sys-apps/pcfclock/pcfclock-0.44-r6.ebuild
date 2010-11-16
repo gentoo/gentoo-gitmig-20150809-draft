@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r6.ebuild,v 1.2 2010/07/20 22:17:03 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r6.ebuild,v 1.3 2010/11/16 16:31:29 sbriesen Exp $
 
-EAPI="2"
+#EAPI="2"  can't be used because of linux-mod
 
 inherit eutils linux-mod
 
@@ -14,8 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
-
-DEPEND="virtual/linux-sources"
 
 pkg_setup() {
 	CONFIG_CHECK="PARPORT"
@@ -33,7 +31,9 @@ pkg_setup() {
 	)
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-kernel-2.6.27.diff"
 	epatch "${FILESDIR}/${P}-configure.diff"
 	convert_to_m "linux/Makefile.in"
