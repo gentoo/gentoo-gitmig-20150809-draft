@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/logrotate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.88 2009/11/03 22:18:36 dang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.89 2010/11/16 00:41:09 dang Exp $
+
+*logrotate-3.7.9 (16 Nov 2010)
+
+  16 Nov 2010; Daniel Gryniewicz <dang@gentoo.org> +logrotate-3.7.9.ebuild:
+  Bump to logrotate-3.7.9; bug #345199
 
   03 Nov 2009; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.7.8.ebuild:
   Move selinux-logroate to RDEPEND; bug #287481
