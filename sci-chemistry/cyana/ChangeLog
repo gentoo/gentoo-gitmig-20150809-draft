@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cyana
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/ChangeLog,v 1.2 2010/10/25 05:28:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/ChangeLog,v 1.3 2010/11/16 17:16:51 jlec Exp $
+
+  16 Nov 2010; Justin Lecher <jlec@gentoo.org> cyana-2.1.ebuild:
+  Removed not needed line from ebuild
 
   25 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/2.1-expire.patch,
   cyana-2.1.ebuild:
