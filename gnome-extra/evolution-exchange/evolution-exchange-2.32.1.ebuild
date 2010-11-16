@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.32.0.ebuild,v 1.1 2010/11/15 10:03:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.32.1.ebuild,v 1.1 2010/11/16 20:34:13 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
