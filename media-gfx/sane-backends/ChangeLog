@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.174 2010/09/01 21:21:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.175 2010/11/16 21:00:45 phosphan Exp $
+
+  16 Nov 2010; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.17.ebuild, sane-backends-1.0.18-r6.ebuild,
+  sane-backends-1.0.19-r2.ebuild, sane-backends-1.0.20-r3.ebuild,
+  sane-backends-1.0.21.ebuild, sane-backends-1.0.21-r1.ebuild:
+  Moving to virtual/jpeg.
 
   01 Sep 2010; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.21-r1.ebuild, +files/xerox-grey.patch:
