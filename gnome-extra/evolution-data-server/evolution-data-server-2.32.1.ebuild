@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.0.ebuild,v 1.2 2010/11/15 10:09:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.1.ebuild,v 1.1 2010/11/16 19:03:21 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -67,14 +67,8 @@ src_prepare() {
 	# Adjust to gentoo's /etc/service
 	epatch "${FILESDIR}/${PN}-2.31-gentoo_etc_services.patch"
 
-	# Rewind in camel-disco-diary to fix a crash, upstream bug #632376
-	epatch "${FILESDIR}/${PN}-2.31-camel-rewind.patch"
-
 	# GNOME bug 611353 (skips failing test atm)
 	epatch "${FILESDIR}/e-d-s-camel-skip-failing-test.patch"
-
-	# Fix libtool re-linking mess, bug #341493
-	epatch "${FILESDIR}/${PN}-2.32.0-libtool-fix.patch"
 
 	# GNOME bug 621763 (skip failing test-ebook-stress-factory--fifo)
 	sed -e 's/\(SUBDIRS =.*\)ebook/\1/' \
