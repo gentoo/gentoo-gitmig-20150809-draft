@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.1-r1.ebuild,v 1.2 2010/09/28 16:53:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.1-r1.ebuild,v 1.3 2010/11/16 12:14:41 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -177,11 +177,14 @@ src_compile() {
 	export SKIP_STRIP=y
 
 	emake busybox || die "build failed"
-	if ! use static && ! use pam ; then
+	if ! use static ; then
+		cp .config{,.bak}
 		mv busybox_unstripped{,.bak}
+		use pam && busybox_config_option n PAM
 		emake CONFIG_STATIC=y busybox || die "static build failed"
 		mv busybox_unstripped bb
 		mv busybox_unstripped{.bak,}
+		mv .config{.bak,}
 	fi
 }
 
