@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.22 2010/11/05 08:57:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.23 2010/11/16 19:40:20 beandog Exp $
+
+  16 Nov 2010; Steve Dibb <beandog@gentoo.org> clementine-0.5.3.ebuild:
+  Fix glib dep, bug 344869
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   clementine-0.5.3.ebuild:

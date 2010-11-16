@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.6 2010/11/05 08:57:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.5.3.ebuild,v 1.7 2010/11/16 19:40:20 beandog Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	dev-db/sqlite[fts3]
 	>=media-libs/taglib-1.6
 	media-libs/liblastfm
-	>=dev-libs/glib-2.10:2
+	>=dev-libs/glib-2.24.1-r1:2
 	dev-libs/libxml2
 	>=media-libs/gstreamer-0.10
 	>=media-libs/gst-plugins-base-0.10
