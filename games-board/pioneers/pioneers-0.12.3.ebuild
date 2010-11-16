@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.12.3.ebuild,v 1.5 2010/08/13 12:07:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.12.3.ebuild,v 1.6 2010/11/16 20:52:16 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND=">=dev-libs/glib-2.6:2
 	>=gnome-base/libgnome-2.10
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	>=app-text/scrollkeeper-0.3.8
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
