@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/pidgin-festival
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.8 2009/12/21 21:02:03 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.9 2010/11/16 08:45:40 pva Exp $
+
+  16 Nov 2010; Peter Volkov <pva@gentoo.org> -pidgin-festival-2.2-r1.ebuild:
+  Drop old.
 
 *pidgin-festival-2.4 (21 Dec 2009)
 
