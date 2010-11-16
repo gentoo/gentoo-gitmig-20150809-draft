@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6157 2010/11/15 21:54:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6158 2010/11/16 13:14:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2601,8 +2601,6 @@ net-ftp/proftpd:deflate - Enable support for the mod_deflate module
 net-ftp/proftpd:exec - Enable support for the mod_exec module. WARNING: this could be a security risk
 net-ftp/proftpd:ident - Enable support for the mod_ident module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
-net-ftp/proftpd:noauthunix - Disable support for the auth-unix module
-net-ftp/proftpd:opensslcrypt - Enable support for OpenSSL crypto
 net-ftp/proftpd:ratio - Enable support for the mod_ratio module
 net-ftp/proftpd:readme - Enable support for the mod_readme module
 net-ftp/proftpd:rewrite - Enable support for the rewrite module
