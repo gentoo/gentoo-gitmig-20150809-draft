@@ -14,8 +14,6 @@ server.</longdescription>
 	<flag name='exec'>Enable support for the mod_exec module. WARNING: this could be a security risk</flag>
 	<flag name='ident'>Enable support for the mod_ident module</flag>
 	<flag name='ifsession'>Enable support for the ifsession module</flag>
-	<flag name='noauthunix'>Disable support for the auth-unix module</flag>
-	<flag name='opensslcrypt'>Enable support for OpenSSL crypto</flag>
 	<flag name='ratio'>Enable support for the mod_ratio module</flag>
 	<flag name='readme'>Enable support for the mod_readme module</flag>
 	<flag name='rewrite'>Enable support for the rewrite module</flag>
