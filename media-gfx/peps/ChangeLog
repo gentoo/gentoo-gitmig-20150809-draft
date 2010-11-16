@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/peps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/ChangeLog,v 1.4 2010/05/28 09:47:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/ChangeLog,v 1.5 2010/11/16 16:12:18 sbriesen Exp $
+
+  16 Nov 2010; Stefan Briesenick <sbriesen@gentoo.org> peps-2.0.ebuild:
+  moved to EAPI=2, added RDEPEND, respect LDFLAGS (solving bug #340603).
 
   28 May 2010; Markus Meier <maekke@gentoo.org> peps-2.0.ebuild:
   x86 stable, bug #286571

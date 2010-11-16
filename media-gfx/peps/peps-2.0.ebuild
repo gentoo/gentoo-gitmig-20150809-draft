@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/peps-2.0.ebuild,v 1.4 2010/05/28 09:47:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/peps-2.0.ebuild,v 1.5 2010/11/16 16:12:18 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -15,6 +17,7 @@ IUSE="X"
 
 DEPEND="app-text/ghostscript-gpl
 	app-arch/gzip"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if use X && ! grep -q x11gray4 <(gs -h 2>/dev/null); then
@@ -22,12 +25,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# adding <string.h> include
 	sed -i -e "s:^\(#include.*<unistd.h>.*\):\1\n#include <string.h>:" peps.c
+	# adding LDFLAGS to Makefile
+	sed -i -e "s:\( -o \): \${LDFLAGS}\1:g" Makefile
 }
 
 src_compile() {
