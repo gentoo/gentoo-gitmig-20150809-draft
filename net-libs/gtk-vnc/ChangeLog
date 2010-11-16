@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.52 2010/10/13 21:22:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.53 2010/11/16 21:50:37 eva Exp $
+
+*gtk-vnc-0.4.2 (16 Nov 2010)
+
+  16 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> +gtk-vnc-0.4.2.ebuild,
+  metadata.xml:
+  Version bump. Fix configure with python:3. Add introspection support.
 
 *gtk-vnc-0.4.2_pre20100917 (13 Oct 2010)
 
