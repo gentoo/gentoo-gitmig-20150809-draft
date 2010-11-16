@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12205 2010/11/16 09:11:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12206 2010/11/16 12:26:16 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -73,7 +73,9 @@ app-text/ptex
 >=app-arch/tar-1.24
 
 # Torsten Veller <tove@gentoo.org> (11 Nov 2010)
-# Masked for removal. Unmaintained with bugs
+# Mask dev-util/libconf and its reverse dependencies
+# app-portage/flagedit, app-portage/profuse, app-admin/config_confd
+# for removal. Unmaintained with bugs
 # (#162753,#196552,#225071,#297650,#300104,#326099)
 # app-portage/flaggie can be used as an alternative.
 app-admin/config_confd
