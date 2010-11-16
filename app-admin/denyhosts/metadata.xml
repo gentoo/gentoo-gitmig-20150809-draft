@@ -3,6 +3,9 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
+    <email>darkside@gentoo.org</email>
+  </maintainer>
+  <maintainer>
     <email>tanderson@gentoo.org</email>
 	<name>Thomas Anderson</name>
   </maintainer>
