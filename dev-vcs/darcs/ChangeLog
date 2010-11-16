@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.15 2010/10/19 22:06:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.16 2010/11/16 23:06:41 slyfox Exp $
+
+  16 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4-r1.ebuild,
+  +files/darcs-2.4.4-tests-emailformat.patch:
+  Fix FEATURES=test failure on ghci-less platforms (alpha, ia64, ppc64)
 
   19 Oct 2010; Thomas Kahle <tomka@gentoo.org> darcs-2.4.4-r1.ebuild:
   x86 stable per bug 339580

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.8 2010/10/19 22:06:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.9 2010/11/16 23:06:41 slyfox Exp $
 
 EAPI="2"
 CABAL_FEATURES="bin lib profile haddock"
@@ -65,6 +65,7 @@ src_prepare() {
 	popd
 
 	epatch "${FILESDIR}/${P}-issue1770-curl_multi_perform-no-running-handles.patch"
+	epatch "${FILESDIR}/${P}-tests-emailformat.patch"
 
 	# Loosen dependency on hashed-storage
 	sed -i -e "s/hashed-storage == 0.4.13/hashed-storage == 0.4.*/" \
