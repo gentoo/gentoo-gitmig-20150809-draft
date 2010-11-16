@@ -1,8 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.use.mask,v 1.1 2009/06/06 03:55:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.use.mask,v 1.2 2010/11/16 08:16:36 mduft Exp $
+
+# Markus Duft <mduft@gentoo.org> (28 Oct 2010)
+# mask optimization flags from eix, as they cause build troubles
+# wrt visibility flags - seems gcc 4.2.4 on interix needs another
+# patch (it already has one to disable -fvisibility=, but that
+# seems to miss -fvisibility-inlines-hidden, etc.)
+app-portage/eix optimization strong-optimization
 
 dev-scheme/guile threads
 x11-wm/fluxbox nls
 net-libs/libsoup ssl
 app-arch/pdv X
+

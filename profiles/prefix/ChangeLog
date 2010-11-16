@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.226 2010/11/06 11:02:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.227 2010/11/16 08:16:36 mduft Exp $
+
+  16 Nov 2010; Markus Duft <mduft@gentoo.org> windows/interix/package.mask,
+  windows/interix/package.use.force, windows/interix/package.use.mask:
+  updated masks on interix, make coreutils static (for suacomp
+  rebuildability)
 
   06 Nov 2010; Alex Alexander <wired@gentoo.org> package.mask:
   Masked Qt-4.7 as requested by prefix team, bug #338289
