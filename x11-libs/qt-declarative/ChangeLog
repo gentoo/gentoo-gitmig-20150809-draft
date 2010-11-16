@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.12 2010/11/09 15:51:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.13 2010/11/16 23:20:29 wired Exp $
+
+  16 Nov 2010; Alex Alexander <wired@gentoo.org>
+  qt-declarative-4.7.1.ebuild:
+  removed false deps
 
 *qt-declarative-4.7.1 (09 Nov 2010)
 

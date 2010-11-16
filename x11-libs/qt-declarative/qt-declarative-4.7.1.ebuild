@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.1.ebuild,v 1.1 2010/11/09 15:51:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.1.ebuild,v 1.2 2010/11/16 23:20:29 wired Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -12,12 +12,10 @@ IUSE="private-headers qt3support"
 
 DEPEND="~x11-libs/qt-core-${PV}[aqua=,qt3support=]
 	~x11-libs/qt-gui-${PV}[aqua=,qt3support=]
-	~x11-libs/qt-multimedia-${PV}[aqua=]
 	~x11-libs/qt-opengl-${PV}[aqua=,qt3support=]
 	~x11-libs/qt-script-${PV}[aqua=]
 	~x11-libs/qt-sql-${PV}[aqua=,qt3support=]
 	~x11-libs/qt-svg-${PV}[aqua=]
-	~x11-libs/qt-webkit-${PV}[aqua=]
 	~x11-libs/qt-xmlpatterns-${PV}[aqua=]
 	qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=] )
 	"
