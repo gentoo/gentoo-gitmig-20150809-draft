@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12204 2010/11/16 06:40:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12205 2010/11/16 09:11:49 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -411,14 +411,6 @@ x11-plugins/gkrellmms
 x11-plugins/gkrellmwho2
 <x11-plugins/gkrellm-bgchanger-0.1.10
 <x11-plugins/gkrellm-mailwatch-2.4.3-r1
-
-# Christian Faulhammer <fauli@gentoo.org> (15 Oct 2010)
-# Mask for removal in 30 days
-# Has lots of bundled libraries for ages (bug 250049), even as so
-# files, upstream does not care, even with security vulnerable expat
-# library, about that
-# No real use in the last couple of years
-dev-tex/mpm
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Oct 2010)
 # New Objective-C Runtime for GNUstep
