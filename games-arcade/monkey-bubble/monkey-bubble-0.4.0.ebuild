@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.8 2009/03/03 20:35:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.9 2010/11/16 21:02:39 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils gnome2
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
-	>=dev-libs/glib-2.12
+	>=dev-libs/glib-2.12:2
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/librsvg-2.0
