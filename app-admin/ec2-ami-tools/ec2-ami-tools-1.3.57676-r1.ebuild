@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.3.57676.ebuild,v 1.1 2010/10/05 11:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.3.57676-r1.ebuild,v 1.1 2010/11/16 22:16:38 flameeyes Exp $
 
 EAPI=2
 
@@ -36,6 +36,8 @@ src_prepare() {
 src_install() {
 	insinto /opt/${PN}
 	doins -r lib bin etc || die
+
+	chmod 0755 "${D}/opt/${PN}/bin/"*
 
 	dodir /etc/env.d
 	cat - > "${T}"/99${PN} <<EOF
