@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4791 2010/11/15 15:55:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4792 2010/11/16 06:40:58 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2010; Peter Volkov <pva@gentoo.org> package.mask:
+  Last rites mask for dev-python/py-rrdtool
 
   15 Nov 2010; Peter Volkov <pva@gentoo.org> package.mask:
   Mask apps that depend on gtk+-2.22/gtkmm-2.22: dev-libs/guiloader{,-c++}
