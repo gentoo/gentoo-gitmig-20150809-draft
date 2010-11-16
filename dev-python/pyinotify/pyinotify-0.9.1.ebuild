@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/pyinotify-0.9.1.ebuild,v 1.1 2010/10/17 20:25:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/pyinotify-0.9.1.ebuild,v 1.2 2010/11/16 17:39:46 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://seb.dbzteam.org/pub/pyinotify/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~amd64-linux"
 IUSE="examples"
 
 DEPEND=""
