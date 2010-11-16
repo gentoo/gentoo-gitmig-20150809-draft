@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/polymake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.1 2010/11/03 08:39:25 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.2 2010/11/16 23:33:43 tomka Exp $
+
+*polymake-2.9.9 (16 Nov 2010)
+
+  16 Nov 2010; Thomas Kahle <tomka@gentoo.org>
+  +files/2.9.9-gentoo-binutils.patch, -polymake-2.9.8.ebuild,
+  +polymake-2.9.9.ebuild:
+  bump to 2.9.9, remove 2.9.8. Fixes a build failure that Luigi Malago
+  found.
 
 *polymake-2.9.8 (03 Nov 2010)
 

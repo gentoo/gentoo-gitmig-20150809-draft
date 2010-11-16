@@ -1,0 +1,22 @@
+diff -U 3 -dHrN polymake-2.9.9.orig/perllib/Polymake/Core/CPlusPlus_config.pm polymake-2.9.9/perllib/Polymake/Core/CPlusPlus_config.pm
+--- polymake-2.9.9.orig/perllib/Polymake/Core/CPlusPlus_config.pm	2010-11-17 00:09:21.000000000 +0100
++++ polymake-2.9.9/perllib/Polymake/Core/CPlusPlus_config.pm	2010-11-17 00:10:49.000000000 +0100
+@@ -83,7 +83,7 @@
+    open my $nm, "$nm_util $file.exe |" or die "can't run nm utility: $!\n";
+    my %mangled;
+    while (<$nm>) {
+-      if (my ($mangled)=/\s[TW]\s+(\S*PolymakeTest\S*)/) {
++      if (my ($mangled)=/\s[TWV]\s+(\S*PolymakeTest\S*)/) {
+          my $case= $mangled =~ /TestWrap/ ? 3 : $mangled =~ /TestNam/ ? 2 : $mangled =~ /TestGlob/ ? 1 : 0;
+          next if exists $mangled{$case};
+ 	 dbg_print( "nm extracted global name $mangled" ) if $DebugLevel;
+@@ -109,7 +109,8 @@
+ to proper utility paths and optional flags if necessary
+ .
+ 	 }
+-         if ($demangled =~ ($case<=2 ? $constructor_re : $wrapped_constructor_re)) {
++	 declare $wr_con_re=qr{.*}xo;
++         if ($demangled =~ ($case<=2 ? $constructor_re : $wr_con_re)) {
+             $mangled{$case}=$mangled;
+          } else {
+ 	    dbg_print( "c++filt returned '$demangled',\n",
