@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.134 2010/08/03 17:19:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.135 2010/11/16 11:33:02 kumba Exp $
+
+*mips-sources-2.6.36 (16 Nov 2010)
+*mips-sources-2.6.35.8 (16 Nov 2010)
+*mips-sources-2.6.34.7 (16 Nov 2010)
+
+  16 Nov 2010; Joshua Kinard <kumba@gentoo.org> -mips-sources-2.6.34.ebuild,
+  +mips-sources-2.6.34.7.ebuild, +mips-sources-2.6.35.8.ebuild,
+  +mips-sources-2.6.36.ebuild:
+  Updated 2.6.34 to 2.6.34.7 and added ebuilds for 2.6.35.8 and 2.6.36.
+  Octane is still broke as-of these releases and no ETA is set yet for its
+  return.
 
   03 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   kernel-2 deblob support for 2.6.35; bug #324505: deblob-check usage.
