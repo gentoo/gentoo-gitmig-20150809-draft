@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6159 2010/11/16 19:34:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6160 2010/11/16 21:54:27 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2790,6 +2790,7 @@ net-libs/farsight2:upnp - Enable UPnP IGD support
 net-libs/gnutls:nettle - Use dev-libs/nettle as crypto backend
 net-libs/gnutls:valgrind - Enable testing using dev-util/valgrind.
 net-libs/gssdp:introspection - Use dev-libs/gobject-introspection for introspection
+net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-av:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
@@ -4077,6 +4078,7 @@ x11-terms/mrxvt:menubar - Enable mrxvt menubar
 x11-terms/mrxvt:utempter - REcords user logins. Useful on multi-user systems
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
+x11-terms/rxvt-unicode:256-color - Enable 256 color support
 x11-terms/rxvt-unicode:afterimage - Enable support for media-libs/libafterimage
 x11-terms/rxvt-unicode:blink - Enable blinking text
 x11-terms/rxvt-unicode:iso14755 - Enable ISO-14755 support
