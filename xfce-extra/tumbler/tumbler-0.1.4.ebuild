@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.4.ebuild,v 1.1 2010/11/07 14:05:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.4.ebuild,v 1.2 2010/11/16 16:00:32 darkside Exp $
 
 EAPI=3
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.1/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug ffmpeg jpeg pdf"
 
 RDEPEND=">=dev-libs/glib-2.16:2
