@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.ebuild,v 1.2 2010/11/16 14:19:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.901.ebuild,v 1.1 2010/11/16 14:19:40 scarabeus Exp $
 
 EAPI=3
 # They generate the configure.ac with wrong version of util-macros
@@ -111,10 +111,6 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
-
-	# Fixes for bug #318609
-	"${FILESDIR}"/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch
-	"${FILESDIR}"/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch
 	)
 
 pkg_setup() {
