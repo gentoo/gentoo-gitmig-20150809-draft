@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.43 2010/11/17 22:59:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.44 2010/11/17 23:13:29 xmw Exp $
+
+*avrdude-5.10 (17 Nov 2010)
+
+  17 Nov 2010; Michael Weber <xmw@gentoo.org> +avrdude-5.10.ebuild,
+  +files/avrdude-5.10-jtagmkII-debugWire.patch:
+  Version bump with patch. Thanks to Joe Sapp <nixphoeni@gentoo.org> for the
+  report on bug #304361 and Timon Van Overveldt <timonvo@gmail.com> for his
+  patch.
 
 *avrdude-5.8-r1 (17 Nov 2010)
 

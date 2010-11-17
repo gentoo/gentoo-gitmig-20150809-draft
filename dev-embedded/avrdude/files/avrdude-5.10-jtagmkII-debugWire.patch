@@ -1,0 +1,22 @@
+Suggested by Timon Van Overveldt <timonvo@gmail.com> 
+on https://savannah.nongnu.org/bugs/index.php?30268
+
+--- avrdude-5.10/jtagmkII.c
++++ avrdude-5.10/jtagmkII.c
+@@ -1270,10 +1270,12 @@
+       return -1;
+   }
+ 
+-  if (jtagmkII_setparm(pgm, PAR_DAISY_CHAIN_INFO, PDATA(pgm)->jtagchain) < 0) {
+-    fprintf(stderr, "%s: jtagmkII_initialize(): Failed to setup JTAG chain\n",
+-            progname);
+-    return -1;
++  if(strcmp(ifname, "debugWire") != 0) {
++    if (jtagmkII_setparm(pgm, PAR_DAISY_CHAIN_INFO, PDATA(pgm)->jtagchain) < 0) {
++      fprintf(stderr, "%s: jtagmkII_initialize(): Failed to setup JTAG chain\n",
++              progname);
++      return -1;
++    }
+   }
+ 
+   /*
