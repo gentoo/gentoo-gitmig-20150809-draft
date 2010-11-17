@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.9.9.ebuild,v 1.1 2010/11/16 23:33:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.9.9.ebuild,v 1.2 2010/11/17 08:10:17 tomka Exp $
 
 EAPI=2
 
@@ -41,7 +41,8 @@ src_configure () {
 	export CXXOPT=$(get-flag -O)
 	# Configure does not accept --host, therefore econf cannot be used
 	./configure --prefix=/usr \
-				--libdir=/usr/$(get_libdir)
+		--libdir=/usr/$(get_libdir) \
+		|| die "configure failed"
 }
 
 src_install(){
