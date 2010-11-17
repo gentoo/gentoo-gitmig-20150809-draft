@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.150 2010/11/17 14:51:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.151 2010/11/17 16:42:00 jlec Exp $
+
+*screen-4.0.3-r3 (17 Nov 2010)
+
+  17 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  +files/4.0.3-extend-d_termname-ng.patch, -screen-4.0.3-r2.ebuild,
+  +screen-4.0.3-r3.ebuild:
+  Important fix for the namelength fix
 
 *screen-4.0.3-r2 (17 Nov 2010)
 

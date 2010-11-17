@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r2.ebuild,v 1.1 2010/11/17 14:51:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r3.ebuild,v 1.1 2010/11/17 16:42:00 jlec Exp $
 
 EAPI="3"
 
@@ -86,7 +86,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-setenv_autoconf.patch
 
 	# Allow TERM string large enough to use with rxvt-unicode-256color
-	epatch "${FILESDIR}"/${PV}-extend-d_termname.patch
+	epatch "${FILESDIR}"/${PV}-extend-d_termname-ng.patch
 
 	# reconfigure
 	eautoconf
