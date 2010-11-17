@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.53 2010/11/03 02:02:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.54 2010/11/17 22:41:04 radhermit Exp $
+
+*fetchyahoo-2.14.0 (17 Nov 2010)
+
+  17 Nov 2010; Tim Harder <radhermit@gentoo.org> -fetchyahoo-2.13.7.ebuild,
+  +fetchyahoo-2.14.0.ebuild:
+  Version bump (bug #341033 by Pun) and remove old. Reformat ebuild, update
+  license to GPL-2, bump to EAPI 3, and move all dependencies into RDEPEND.
 
   03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
