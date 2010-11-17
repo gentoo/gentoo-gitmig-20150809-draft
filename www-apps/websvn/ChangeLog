@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.40 2010/10/17 19:34:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.41 2010/11/17 22:24:20 hwoarang Exp $
+
+  17 Nov 2010; Markos Chandras <hwoarang@gentoo.org> websvn-2.3.1.ebuild:
+  Stable on amd64 wrt bug #345491
 
 *websvn-2.3.1 (17 Oct 2010)
 
