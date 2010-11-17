@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.14 2010/10/26 19:04:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.15 2010/11/17 18:42:03 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -68,12 +68,12 @@ DEPEND="dev-vcs/mercurial"
 EHG_OFFLINE="${EHG_OFFLINE:-${ESCM_OFFLINE}}"
 
 # @FUNCTION: mercurial_fetch
-# @USAGE: [repository_uri] [module]
+# @USAGE: [repository_uri] [module] [sourcedir]
 # @DESCRIPTION:
 # Clone or update repository.
 #
-# If not repository URI is passed it defaults to EHG_REPO_URI, if module is
-# empty it defaults to basename of EHG_REPO_URI.
+# If repository URI is not passed it defaults to EHG_REPO_URI, if module is
+# empty it defaults to basename of EHG_REPO_URI, sourcedir defaults to S.
 function mercurial_fetch {
 	debug-print-function ${FUNCNAME} ${*}
 
@@ -81,6 +81,7 @@ function mercurial_fetch {
 	[[ -z "${EHG_REPO_URI}" ]] && die "EHG_REPO_URI is empty"
 
 	local module="${2-$(basename "${EHG_REPO_URI}")}"
+	local sourcedir="${3-${S}}"
 
 	# Should be set but blank to prevent using $HOME/.hgrc
 	export HGRCPATH=
@@ -116,19 +117,19 @@ function mercurial_fetch {
 	fi
 
 	# Checkout working copy:
-	einfo "Creating working directory in ${WORKDIR}/${module} (target revision: ${EHG_REVISION})"
+	einfo "Creating working directory in ${sourcedir} (target revision: ${EHG_REVISION})"
 	hg clone \
 		${EHG_QUIET_CMD_OPT} \
 		--rev="${EHG_REVISION}" \
 		"${EHG_STORE_DIR}/${EHG_PROJECT}/${module}" \
-		"${WORKDIR}/${module}" || die "hg clone failed"
+		"${sourcedir}" || die "hg clone failed"
 	# An exact revision helps a lot for testing purposes, so have some output...
 	# id           num  branch
 	# fd6e32d61721 6276 default
-	local HG_REVDATA=($(hg identify -b -i "${WORKDIR}/${module}"))
+	local HG_REVDATA=($(hg identify -b -i "${sourcedir}"))
 	export HG_REV_ID=${HG_REVDATA[0]}
 	local HG_REV_BRANCH=${HG_REVDATA[1]}
-	einfo "Work directory: ${WORKDIR}/${module} global id: ${HG_REV_ID} branch: ${HG_REV_BRANCH}"
+	einfo "Work directory: ${sourcedir} global id: ${HG_REV_ID} branch: ${HG_REV_BRANCH}"
 }
 
 # @FUNCTION: mercurial_src_unpack
