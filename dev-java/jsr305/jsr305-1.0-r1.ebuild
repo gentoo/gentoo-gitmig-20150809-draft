@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr305/jsr305-1.0-r1.ebuild,v 1.1 2010/10/15 05:47:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr305/jsr305-1.0-r1.ebuild,v 1.2 2010/11/17 11:17:15 maekke Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://code.google.com/p/jsr-305/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5
