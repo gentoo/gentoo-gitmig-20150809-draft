@@ -1,24 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.12.5.ebuild,v 1.2 2010/05/24 11:46:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.20.29.ebuild,v 1.1 2010/11/17 12:27:22 tomjbe Exp $
 
 EAPI=2
 
-inherit eutils versionator
-
-MY_DOC_PN=${PN}-$(get_version_component_range 1-2)
-
 DESCRIPTION="Sound card based multimode software modem for Amateur Radio use"
 HOMEPAGE="http://www.w1hkj.com/Fldigi.html"
-SRC_URI="http://www.w1hkj.com/${PN}-distro/${P}.tar.gz
-	doc? ( http://www.w1hkj.com/${PN}-distro/${MY_DOC_PN}.pdf )"
+SRC_URI="http://www.w1hkj.com/downloads/fldigi/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc hamlib nls portaudio pulseaudio sndfile xmlrpc"
+IUSE="hamlib nls portaudio pulseaudio sndfile xmlrpc"
 
-RDEPEND="|| ( >=x11-libs/fltk-1.1.9:1.1[threads] <x11-libs/fltk-1.1.9:1.1 )
+RDEPEND=">=x11-libs/fltk-1.1.9:1.1[threads,xft]
 	media-libs/libsamplerate
 	media-libs/libpng
 	x11-misc/xdg-utils
@@ -33,10 +28,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng14.patch
-}
-
 src_configure() {
 	econf $(use_with sndfile) \
 		$(use_with portaudio) \
@@ -49,8 +40,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README  || die "dodoc failed"
-	if use doc ; then
-		dodoc "${DISTDIR}"/${MY_DOC_PN}.pdf || die "dodoc failed"
-	fi
+	dodoc AUTHORS ChangeLog NEWS README  || die "dodoc failed"
 }
