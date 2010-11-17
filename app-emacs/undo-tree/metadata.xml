@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>tomka@gentoo.org</email>
+  <name>Thomas Kahle</name>
+</maintainer>
+<herd>emacs</herd>
+<longdescription lang="en">
+undo-tree brings undo trees to emacs. The only downside to this more
+advanced yet simpler undo system is that it was inspired by Vim. But,
+after all, most successful religions steal the best ideas from their
+competitors!
+</longdescription>
+</pkgmetadata>

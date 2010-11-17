@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/undo-tree
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.1 2010/11/17 18:17:24 tomka Exp $
+
+*undo-tree-0.1.7_pre20101117 (17 Nov 2010)
+
+  17 Nov 2010; Thomas Kahle <tomka@gentoo.org> +files/50undo-tree-gentoo.el,
+  +undo-tree-0.1.7_pre20101117.ebuild, +metadata.xml:
+  initial import.
+
