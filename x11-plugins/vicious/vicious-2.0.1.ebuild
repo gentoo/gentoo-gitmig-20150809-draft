@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/vicious-2.0.1.ebuild,v 1.1 2010/11/16 23:51:34 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/vicious-2.0.1.ebuild,v 1.2 2010/11/17 13:35:33 wired Exp $
 
 EAPI=3
 
 DESCRIPTION="Modular widget library for x11-wm/awesome"
 HOMEPAGE="http://awesome.naquadah.org/wiki/Vicious"
-SRC_URI="http://git.sysphere.org/vicious/snapshot/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
