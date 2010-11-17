@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.171 2010/11/15 13:21:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.172 2010/11/17 10:58:04 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org> hplip-3.10.9.ebuild:
+  x86 stable, bug #345457
 
   15 Nov 2010; Markos Chandras <hwoarang@gentoo.org> hplip-3.10.9.ebuild:
   Stable on amd64 wrt bug #345457
