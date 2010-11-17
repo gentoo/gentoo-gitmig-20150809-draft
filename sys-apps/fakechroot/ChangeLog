@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakechroot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.12 2010/11/15 13:17:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.13 2010/11/17 10:55:33 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org> fakechroot-2.11.ebuild:
+  x86 stable, bug #345367
 
   15 Nov 2010; Markos Chandras <hwoarang@gentoo.org> fakechroot-2.11.ebuild:
   Stable on amd64 wrt bug #345367
