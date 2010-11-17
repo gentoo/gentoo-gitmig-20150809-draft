@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.6 2010/06/28 21:05:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.7 2010/11/17 13:14:53 jlec Exp $
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -32,15 +32,7 @@ pkg_nofetch() {
 
 pkg_setup() {
 	fortran_pkg_setup
-
-	if use openmp; then
-		if [[ gcc-major-version < 4 ]] \
-			|| ( [[ gcc-major-version < 4 ]] && [[ gcc-minor-version < 2 ]] ); then
-			local msg="Sorry, you need gcc 4.2 or newer to use OpenMP."
-			eerror "$msg"
-			die "$msg"
-		fi
-	fi
+	tc-has-openmp
 }
 
 src_unpack() {

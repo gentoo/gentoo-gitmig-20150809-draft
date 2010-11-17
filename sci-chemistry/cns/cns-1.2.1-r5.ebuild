@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.1 2010/11/16 20:05:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.2 2010/11/17 13:14:53 jlec Exp $
 
 EAPI="3"
 
@@ -39,14 +39,7 @@ pkg_nofetch() {
 
 pkg_setup() {
 	fortran_pkg_setup
-
-	if [[ $(tc-getCC) == *gcc* ]] &&
-		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-		! built_with_use sys-devel/gcc openmp )
-	then
-		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
-		ewarn "Switch CC to an OpenMP capable compiler"
-	fi
+	tc-has-openmp
 }
 
 src_prepare() {
