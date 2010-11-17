@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.18 2010/05/25 02:37:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.19 2010/11/17 18:26:49 mr_bones_ Exp $
+
+*gnurobbo-0.66 (17 Nov 2010)
+
+  17 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnurobbo-0.66.ebuild:
+  version bump
 
   25 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
   gnurobbo-0.65.6.ebuild:
