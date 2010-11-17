@@ -1,6 +1,9 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.15 2010/11/12 21:29:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.16 2010/11/17 10:51:38 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org> cyphesis-0.5.24.ebuild:
+  x86 stable, bug #344625
 
   12 Nov 2010; Markos Chandras <hwoarang@gentoo.org> cyphesis-0.5.24.ebuild:
   Stable on amd64 wrt bug #344625
