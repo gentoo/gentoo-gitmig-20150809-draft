@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7g.ebuild,v 1.2 2010/11/16 16:49:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7g.ebuild,v 1.3 2010/11/17 22:19:01 hwoarang Exp $
 
 EAPI="2"
 inherit autotools
@@ -15,7 +15,7 @@ SRC_URI="http://www.cacti.net/downloads/spine/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
