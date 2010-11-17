@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.141 2010/11/17 11:08:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.142 2010/11/17 11:13:54 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org> eric-5.0.3.ebuild:
+  amd64/x86 stable, bug #345505
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> eric-4.4.9.ebuild:
   amd64/x86 stable, bug #345503
