@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.126 2010/11/15 13:19:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.127 2010/11/17 20:56:08 hwoarang Exp $
+
+  17 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  banshee-1.8.0-r1.ebuild:
+  Stable on amd64 wrt bug #345567
 
   15 Nov 2010; Thomas Kahle <tomka@gentoo.org> banshee-1.8.0-r1.ebuild:
   x86 stable per bug #345567
