@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.417 2010/11/17 10:16:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.418 2010/11/17 17:21:41 jer Exp $
+
+  17 Nov 2010; Jeroen Roovers <jer@gentoo.org> imagemagick-6.6.5.6.ebuild:
+  Stable for PPC (bug #345569).
 
 *imagemagick-6.6.5.6 (17 Nov 2010)
 
