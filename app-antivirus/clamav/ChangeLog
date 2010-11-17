@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.362 2010/09/20 21:52:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.363 2010/11/17 22:59:43 radhermit Exp $
+
+*clamav-0.96.4 (17 Nov 2010)
+
+  17 Nov 2010; Tim Harder <radhermit@gentoo.org> +clamav-0.96.4.ebuild:
+  Version bump (bug #345189 by Deniss Gaplevsky).
 
 *clamav-0.96.3 (20 Sep 2010)
 
