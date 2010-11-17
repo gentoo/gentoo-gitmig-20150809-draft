@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.2.2.ebuild,v 1.1 2010/10/04 22:13:29 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.2.2.ebuild,v 1.2 2010/11/17 17:35:14 chiiph Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit cmake-utils eutils flag-o-matic versionator
 MY_P=${PN}-$(replace_version_separator _ .)
 DESCRIPTION="X11 desktop video grabber tray"
 HOMEPAGE="http://qx11grab.hjcms.de/"
-SRC_URI="http://gitweb.hjcms.de/cgi-bin/index.cgi/qx11grab/snapshot/${P}.tar.gz"
+SRC_URI="ftp://ftp.hjcms.de/qx11grab/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

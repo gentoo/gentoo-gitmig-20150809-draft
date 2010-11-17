@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.5 2010/10/23 00:48:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.6 2010/11/17 17:35:14 chiiph Exp $
+
+  17 Nov 2010; Tomas Touceda <chiiph@gentoo.org> qx11grab-0.2.2.ebuild:
+  Replace SRC_URI for an ftp one to maintain digest, wrt bug 340025
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata
