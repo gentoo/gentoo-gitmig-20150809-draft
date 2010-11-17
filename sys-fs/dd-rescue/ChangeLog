@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/dd-rescue
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.15 2010/10/17 14:28:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.16 2010/11/17 10:30:20 flameeyes Exp $
+
+*dd-rescue-1.23 (17 Nov 2010)
+
+  17 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> -dd-rescue-1.11.ebuild,
+  -dd-rescue-1.12.ebuild, -dd-rescue-1.14.ebuild, +dd-rescue-1.23.ebuild:
+  Version bump (closes bug #340415); avoid using patch for fixing LDFLAGS;
+  respect CC (solves half of the original bug #212296); optionally use the
+  fallocate-capable version if using GNU/Linux.
 
 *dd-rescue-1.14-r1 (17 Oct 2010)
 
