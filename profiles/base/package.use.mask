@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.178 2010/11/10 19:13:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.179 2010/11/17 12:23:32 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
+# Upstream didn't release patches for aria yet
+>sci-chemistry/cns-1.3 aria
 
 # Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
 # Mask valgrind use flag for net-libs/gnutls as valgrind isn't usable

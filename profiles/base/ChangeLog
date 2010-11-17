@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.184 2010/11/10 19:13:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.185 2010/11/17 12:23:32 jlec Exp $
+
+  17 Nov 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Mask USE=aria sci-chemistry/cns
+  Upstream didn't release patches for aria yet
 
   10 Nov 2010; Dane Smith <c1pher@gentoo.org> package.use.mask:
   Mask the valgrind use flag for net-libs/gnutls.
