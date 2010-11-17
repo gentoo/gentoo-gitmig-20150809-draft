@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.543 2010/11/15 00:11:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.544 2010/11/17 14:40:23 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org> openoffice-3.2.1-r1.ebuild:
+  x86 stable, bug #345309
 
   14 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   openoffice-3.2.1-r1.ebuild:
