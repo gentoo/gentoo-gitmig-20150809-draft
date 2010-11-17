@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12206 2010/11/16 12:26:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12207 2010/11/17 20:35:09 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (17 Nov 2010)
+# Security mask for bug #345691
+games-simulation/openttd
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2010)
 # Last rites: dev-python/py-rrdtool #345701
