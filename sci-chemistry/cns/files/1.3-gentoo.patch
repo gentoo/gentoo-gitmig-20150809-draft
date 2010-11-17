@@ -1,0 +1,76 @@
+diff --git a/instlib/source/Makefile.proto b/instlib/source/Makefile.proto
+index 0d0dd3e..dd4b680 100644
+--- a/instlib/source/Makefile.proto
++++ b/instlib/source/Makefile.proto
+@@ -11,6 +11,8 @@
+ 
+ SHELL=/bin/sh
+ 
++cns_string=`date "+%y%m%d%H%M"`
++
+ # commands
+ RM = /bin/rm
+ 
+@@ -19,32 +21,26 @@ DEPENDS = $(OBJS) dmemory.o machine_c.o
+ 
+ # the default is to make the cns executable
+ cns_solve:
+-	@ make -k printflags       F77BUG="$(debug)" DEBUG="$(debug)"
+-	@ make -k ../bin/cns_solve F77BUG="$(debug)" DEBUG="$(debug)"
+-	@ make -k exepurge
++	@ make printflags       F77BUG="$(debug)" DEBUG="$(debug)"
++	@ make ${MAKEOPTS} ../bin/cns_solve F77BUG="$(debug)" DEBUG="$(debug)"
++	@ make exepurge
+ 
+ # rule for the fortran routines
+ $(OBJS): 
+-	@ echo "compiling: $(@:.o=.f)"; \
+-	  $(F77) -c $(F77FLAGS) $(@:.o=.f)
++	$(F77) -c $(F77FLAGS) $(@:.o=.f)
+ 
+ # rule for the dynamic memory allocation C routines
+ dmemory.o: dmemory.c
+-	@ echo ; echo "compiling: $?"
+-	@ $(CC) -c $(CCFLAGS) $?
++	$(CC) -c $(CCFLAGS) $?
+ 
+ # rule for the machine specific C routines
+ machine_c.o: machine_c.c
+-	@ echo ; echo "compiling: $?"
+-	@ $(CC) -c $(CCFLAGS) $?
++	$(CC) -c $(CCFLAGS) $?
+ 
+ # rule for the executable itself
+ ../bin/cns_solve: $(DEPENDS) 
+-	@ echo ; echo "linking: cns_solve"; echo
+-	@ cns_string=`date "+%y%m%d%H%M"`; \
+-	  $(LD) -o cns_solve-$$cns_string.exe $(OBJS) dmemory.o machine_c.o \
+-	                                      $(LDFLAGS) \
+-	                                      $(CNS_FFTDIR) $(CNS_FFTLIB); \
++	$(LD) $(LDFLAGS) -o cns_solve-$$cns_string.exe $(OBJS) dmemory.o machine_c.o \
++	                                      $(CNS_FFTDIR) $(CNS_FFTLIB) $(OMPLIB); \
+ 	  if [ -x cns_solve-$$cns_string.exe ]; \
+ 	    then echo "created executable file cns_solve-$$cns_string.exe"; \
+ 	         echo ""; cd ../bin; $(RM) -f cns_solve; $(RM) -f cns; \
+@@ -59,7 +55,7 @@ printflags:
+ 	@ echo; echo "flags:"; \
+ 	  echo " fortran -> [$(F77)] $(F77FLAGS)"; \
+ 	  echo "       c -> [$(CC)] $(CCFLAGS)"; \
+-	  echo "    link -> [$(LD)] $(LDFLAGS) $(CNS_FFTDIR) $(CNS_FFTLIB)"; \
++	  echo "    link -> [$(LD)] $(LDFLAGS) $(CNS_FFTDIR) $(CNS_FFTLIB)  $(OMP_LIB)"; \
+ 	  echo
+ 
+ # regenerate makefiles
+diff --git a/instlib/utils/Makefile b/instlib/utils/Makefile
+index 98de84f..2b0a9ce 100644
+--- a/instlib/utils/Makefile
++++ b/instlib/utils/Makefile
+@@ -28,7 +28,7 @@ utils:
+ 	$(CC) -o $@ $(CCFLAGS) $(@).c $(CCLINK)
+ 
+ .cpp:
+-	$(CPP) -o $@ $(CCFLAGS) $(@).cpp $(CCLINK)
++	$(CXX) -o $@ $(CXXFLAGS) $(@).cpp $(CCLINK)
+ 
+ .l:
+ 	lex $(@).l
