@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/scripts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.15 2010/08/19 00:04:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.16 2010/11/17 23:39:08 hwoarang Exp $
+
+  17 Nov 2010; Markos Chandras <hwoarang@gentoo.org> scripts-1.0.1.ebuild:
+  Stable on amd64 wrt bug #342337
 
   19 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> scripts-1.0.1.ebuild:
   Works on AMD64.
