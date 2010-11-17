@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/font-mutt-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.31 2010/10/21 01:02:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.32 2010/11/17 16:30:18 mgorny Exp $
+
+*font-mutt-misc-1.0.3 (17 Nov 2010)
+
+  17 Nov 2010; Michał Górny <mgorny@gentoo.org> +font-mutt-misc-1.0.3.ebuild:
+  Version bump.
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking font-mutt-misc-1.0.1 ppc stable for bug 239063

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/font-xfree86-type1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/ChangeLog,v 1.42 2010/10/21 01:06:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/ChangeLog,v 1.43 2010/11/17 16:35:01 mgorny Exp $
+
+*font-xfree86-type1-1.0.4 (17 Nov 2010)
+
+  17 Nov 2010; Michał Górny <mgorny@gentoo.org>
+  +font-xfree86-type1-1.0.4.ebuild:
+  Version bump.
 
   21 Oct 2010; Brent Baude <ranger@gentoo.org>
   font-xfree86-type1-1.0.2.ebuild:
