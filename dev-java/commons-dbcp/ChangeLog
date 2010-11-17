@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.51 2010/11/14 00:40:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.52 2010/11/17 16:35:16 caster Exp $
+
+*commons-dbcp-1.4-r1 (17 Nov 2010)
+
+  17 Nov 2010; Vlastimil Babka <caster@gentoo.org>
+  +commons-dbcp-1.4-r1.ebuild:
+  Revbump to use glassfish-transaction-api package instead of fetch
+  restricted jta.
 
   14 Nov 2010; Vlastimil Babka <caster@gentoo.org>
   commons-dbcp-1.2.2-r1.ebuild, commons-dbcp-1.4.ebuild:
