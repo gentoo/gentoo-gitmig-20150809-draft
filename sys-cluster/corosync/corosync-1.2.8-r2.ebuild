@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.2.8-r1.ebuild,v 1.1 2010/10/03 17:50:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.2.8-r2.ebuild,v 1.1 2010/11/17 07:07:03 xarthisius Exp $
 
 EAPI=3
 

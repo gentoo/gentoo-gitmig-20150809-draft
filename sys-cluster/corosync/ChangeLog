@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/corosync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.9 2010/10/03 17:50:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.10 2010/11/17 07:07:03 xarthisius Exp $
+
+*corosync-1.2.8-r2 (17 Nov 2010)
+
+  17 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -corosync-1.2.8-r1.ebuild, +corosync-1.2.8-r2.ebuild,
+  files/corosync.initd:
+  Use logger instead of syslog wrt #345781. Thanks to Laurento Frittella
+  (mrfree) for the report.
 
 *corosync-1.2.8-r1 (03 Oct 2010)
 
