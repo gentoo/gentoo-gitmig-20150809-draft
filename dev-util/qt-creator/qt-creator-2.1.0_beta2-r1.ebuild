@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta2.ebuild,v 1.4 2010/11/15 21:35:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0_beta2-r1.ebuild,v 1.1 2010/11/17 09:31:57 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -19,7 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
 	mercurial perforce +qml qtscript rss subversion"
-
 QTVER="4.7.1:4"
 DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	>=x11-libs/qt-sql-${QTVER}
@@ -57,21 +56,30 @@ src_prepare() {
 				plugin="cmakeprojectmanager"
 			elif [[ ${plugin} == "qtscript" ]]; then
 				plugin="qtscripteditor"
-			elif [[ ${plugin} == "qml" ]]; then
-				plugins="qmljseditor"
-				sed -i -e "/^include(qml\/qml.pri)/d" \
-					src/plugins/debugger/debugger.pro \
-					-e "/plugin_qt4projectmanager/s:^:#:" \
-					src/plugins/plugins.pro \
-					|| die "failed to disable qml plugins"
+			# Make sure that qt4project manager does NOT depend
+			# on designer
+			elif [[ ${plugin} == "designer" ]];then
+				plugin="designer"
+				sed -i -e "/designer/d" \
+					src/plugins/qt4projectmanager/qt4projectmanager_dependencies.pri \
+					|| die "failed to disable qml plugin"
 			fi
-			if [[ ${plugin} == "designer" ]]; then
-				sed -i "/plugin_qt4projectmanager/s:^:#:" \
-					src/plugins/plugins.pro \
-					|| die "Failed to disable qt4projectmanager plugin"
-			fi
+			# Now disable the plugins
 			sed -i "/plugin_${plugin}/s:^:#:" src/plugins/plugins.pro \
 				|| die "Failed to disable ${plugin} plugin"
+			# qml needs special treatment
+			if [[ ${plugin} == "qml" ]]; then
+				# remove qml support from debugger and qt4project manager
+				sed -i -e "/^include(qml\/qml.pri)/d" \
+						src/plugins/debugger/debugger.pro \
+					-e "/qmljseditor/d" \
+						src/plugins/qt4projectmanager/qt4projectmanager_dependencies.pri
+					# drop all the qml plugins
+					for x in qmlprojectmanager qmljsinspector qmljseditor qmldesigner; do
+						sed -i "/plugin_${x}/s:^:#:" src/plugins/plugins.pro \
+							|| die "Failed to disable ${x} plugin"
+					done
+			fi
 		fi
 	done
 

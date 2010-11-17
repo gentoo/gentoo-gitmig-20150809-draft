@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.64 2010/11/15 21:35:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.65 2010/11/17 09:31:57 hwoarang Exp $
+
+*qt-creator-2.1.0_beta2-r1 (17 Nov 2010)
+
+  17 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  -qt-creator-2.1.0_beta2.ebuild, +qt-creator-2.1.0_beta2-r1.ebuild:
+  Revbump to fix broken package when building with -qml. At this point, qml
+  is by far the safest choice in order to have a fully working qt-creator.
+  Building with -qml is ideal for pure C++ development yet many qt-creator
+  plugins will be missing because of this. Bug #345757
 
   15 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   qt-creator-2.0.1.ebuild, qt-creator-2.1.0_beta2.ebuild, metadata.xml:
