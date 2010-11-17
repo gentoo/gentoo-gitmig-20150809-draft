@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.56 2010/03/30 08:32:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.57 2010/11/17 00:32:57 sping Exp $
+
+  17 Nov 2010; Sebastian Pipping <sping@gentoo.org>
+  -files/03-htmltidy-docbook.patch:
+  Remove unused patch (bug #344411)
 
 *htmltidy-20090325-r1 (30 Mar 2010)
 
