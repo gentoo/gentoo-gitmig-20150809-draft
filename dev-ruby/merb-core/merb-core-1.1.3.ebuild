@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3.ebuild,v 1.2 2010/11/06 10:03:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3.ebuild,v 1.3 2010/11/17 18:40:36 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -24,6 +24,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+ruby_add_bdepend "doc? ( dev-ruby/rspec:0 )"
 
 ruby_add_rdepend "dev-ruby/bundler
 	>=dev-ruby/erubis-2.6.2
