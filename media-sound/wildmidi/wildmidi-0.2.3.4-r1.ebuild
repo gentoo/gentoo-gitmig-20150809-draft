@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4-r1.ebuild,v 1.7 2010/11/16 13:14:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4-r1.ebuild,v 1.8 2010/11/17 21:20:13 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 arm ~hppa ~ppc ~ppc64 x86"
 IUSE="alsa debug"
 
 DEPEND="alsa? ( media-libs/alsa-lib )"

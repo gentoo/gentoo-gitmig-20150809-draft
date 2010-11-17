@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-freepats
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.8 2010/11/16 13:11:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.9 2010/11/17 21:18:37 maekke Exp $
+
+  17 Nov 2010; Markus Meier <maekke@gentoo.org>
+  timidity-freepats-20060219.ebuild:
+  arm stable, bug #345245
 
   16 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   timidity-freepats-20060219.ebuild:
