@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.149 2010/11/08 22:58:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.150 2010/11/17 14:51:18 jlec Exp $
+
+*screen-4.0.3-r2 (17 Nov 2010)
+
+  17 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  +files/4.0.3-extend-d_termname.patch, screen-4.0.3.ebuild,
+  +screen-4.0.3-r2.ebuild:
+  Fix for long names in TERM, thanks Stelian Ionescu #345863
 
   08 Nov 2010; Sven Wegener <swegener@gentoo.org>
   -files/screen-4.0.3_p20070403-map.patch:

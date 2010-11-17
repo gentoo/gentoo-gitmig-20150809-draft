@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.23 2010/11/17 14:51:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r2.ebuild,v 1.1 2010/11/17 14:51:18 jlec Exp $
+
+EAPI="3"
 
 WANT_AUTOCONF="2.5"
 
@@ -12,7 +14,7 @@ SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~hppa-hpux ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug nethack pam selinux multiuser"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -25,10 +27,7 @@ pkg_setup() {
 	enewgroup utmp 406
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Bug 34599: integer overflow in 4.0.1
 	# (Nov 29 2003 -solar)
 	epatch "${FILESDIR}"/screen-4.0.1-int-overflow-fix.patch
@@ -75,27 +74,35 @@ src_unpack() {
 
 	# Fix manpage.
 	sed -i \
-		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g" \
-		-e "s:/usr/local/screens:/var/run/screen:g" \
-		-e "s:/local/etc/screenrc:/etc/screenrc:g" \
-		-e "s:/etc/utmp:/var/run/utmp:g" \
-		-e "s:/local/screens/S-:/var/run/screen/S-:g" \
+		-e "s:/usr/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
+		-e "s:/usr/local/screens:${EPREFIX}/var/run/screen:g" \
+		-e "s:/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
+		-e "s:/etc/utmp:${EPREFIX}/var/run/utmp:g" \
+		-e "s:/local/screens/S-:${EPREFIX}/var/run/screen/S-:g" \
 		doc/screen.1 \
 		|| die "sed doc/screen.1 failed"
+
+	# proper setenv detection for Solaris
+	epatch "${FILESDIR}"/${P}-setenv_autoconf.patch
+
+	# Allow TERM string large enough to use with rxvt-unicode-256color
+	epatch "${FILESDIR}"/${PV}-extend-d_termname.patch
 
 	# reconfigure
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
 	append-flags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
+
+	[[ ${CHOST} == *-solaris* ]] && append-libs -lsocket -lnsl
 
 	use nethack || append-flags "-DNONETHACK"
 	use debug && append-flags "-DDEBUG"
 
 	econf \
-		--with-socket-dir=/var/run/screen \
-		--with-sys-screenrc=/etc/screenrc \
+		--with-socket-dir="${EPREFIX}/var/run/screen" \
+		--with-sys-screenrc="${EPREFIX}/etc/screenrc" \
 		--with-pty-mode=0620 \
 		--with-pty-group=5 \
 		--enable-rxvt_osc \
@@ -108,19 +115,18 @@ src_compile() {
 	# The last try seemed to break screen at run-time.
 	# (16 Jan 2003 agriffis)
 	LC_ALL=POSIX make term.h || die "Failed making term.h"
-
-	emake || die "emake failed"
 }
 
 src_install() {
 	dobin screen || die "dobin failed"
 	keepdir /var/run/screen || die "keepdir failed"
 
-	if use multiuser
+	if use multiuser || use prefix
 	then
 		fperms 4755 /usr/bin/screen || die "fperms failed"
 	else
-		fowners root:utmp /{usr/bin,var/run}/screen || die "fowners failed"
+		fowners root:utmp /{usr/bin,var/run}/screen \
+			|| die "fowners failed, use multiuser USE-flag instead"
 		fperms 2755 /usr/bin/screen || die "fperms failed"
 	fi
 
@@ -143,13 +149,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use multiuser
+	if use multiuser || use prefix
 	then
-		chown root:0 "${ROOT}"/var/run/screen
-		chmod 0755 "${ROOT}"/var/run/screen
+		use prefix || chown root:0 "${EROOT}"/var/run/screen
+		if use prefix; then
+			chmod 0777 "${EROOT}"/var/run/screen
+		else
+			chmod 0755 "${EROOT}"/var/run/screen
+		fi
 	else
-		chown root:utmp "${ROOT}"/var/run/screen
-		chmod 0775 "${ROOT}"/var/run/screen
+		chown root:utmp "${EROOT}"/var/run/screen
+		chmod 0775 "${EROOT}"/var/run/screen
 	fi
 
 	elog "Some dangerous key bindings have been removed or changed to more safe values."
