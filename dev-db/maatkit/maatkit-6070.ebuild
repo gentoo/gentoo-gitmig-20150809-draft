@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-6070.ebuild,v 1.1 2010/05/03 19:16:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-6070.ebuild,v 1.2 2010/11/17 18:03:49 idl0r Exp $
 
 EAPI=2
 inherit perl-app toolchain-funcs
@@ -40,10 +40,8 @@ mysql-udf_src_compile() {
 	done
 	einfo "UDF ${udfname}: compiling from ${src}"
 	${CXX} \
-		${CXXFLAGS} -fPIC \
-		-I/usr/include/mysql \
-		-shared -o "${udfoutpath}" \
-		$src \
+		${CXXFLAGS} -I/usr/include/mysql \
+		${LDFLAGS} -fPIC -shared -o "${udfoutpath}" $src \
 		|| die "UDF ${udfname}: Failed to compile"
 }
 
