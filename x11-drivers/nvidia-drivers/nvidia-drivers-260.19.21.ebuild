@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-260.19.06.ebuild,v 1.1 2010/09/20 14:56:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-260.19.21.ebuild,v 1.1 2010/11/18 18:33:48 cardoe Exp $
 
 EAPI="2"
 
@@ -510,7 +510,15 @@ pkg_postinst() {
 	elog "To work with compiz, you must enable the AddARGBGLXVisuals option."
 	elog
 	elog "If you are having resolution problems, try disabling DynamicTwinView."
-	echo
+	elog
+
+	if ! use gtk; then
+		elog "USE=gtk controls whether the nvidia-settings application"
+		elog "is installed. If you would like to use it, enable that"
+		elog "flag and re-emerge this ebuild. media-video/nvidia-settings"
+		elog "no longer installs nvidia-settings but only installs the"
+		elog "associated user space libraries."
+	fi
 }
 
 pkg_postrm() {
