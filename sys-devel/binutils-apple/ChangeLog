@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.15 2010/08/16 07:39:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.16 2010/11/18 19:37:05 grobian Exp $
+
+*binutils-apple-3.2.3-r2 (18 Nov 2010)
+
+  18 Nov 2010; Fabian Groffen <grobian@gentoo.org>
+  +binutils-apple-3.2.3-r2.ebuild, metadata.xml:
+  Revbump for added support for LTO via USE=lto. This requires LLVM to be
+  installed for the LTO library.
 
   16 Aug 2010; Fabian Groffen <grobian@gentoo.org>
   binutils-apple-3.2.3-r1.ebuild:
