@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/eeze
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.1 2010/11/18 14:25:30 tommy Exp $
+
+*eeze-1.0.0_beta2 (18 Nov 2010)
+
+  18 Nov 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +eeze-1.0.0_beta2.ebuild, +metadata.xml:
+  Initial commit, based on ebuild in enlightenment overlay
+
