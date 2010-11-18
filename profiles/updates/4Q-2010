@@ -14,3 +14,4 @@ move dev-lang/luarocks dev-lua/luarocks
 move dev-libs/luafilesystem dev-lua/luafilesystem
 move dev-util/luadoc dev-lua/luadoc
 move dev-lang/toluapp dev-lua/toluapp
+move media-gfx/gimp-lqr-plugin media-plugins/gimp-lqr

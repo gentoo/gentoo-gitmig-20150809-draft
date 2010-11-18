@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4794 2010/11/18 10:31:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4795 2010/11/18 12:49:48 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> updates/4Q-2010:
+  Move media-gfx/gimp-lqr-plugin to media-plugins/gimp-lqr, bug #345919 by
+  mgorny.
 
   18 Nov 2010; Pacho Ramos <pacho@gentoo.org> base/ChangeLog,
   base/package.use.mask:
