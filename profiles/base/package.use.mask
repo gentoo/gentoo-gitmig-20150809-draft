@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.180 2010/11/18 07:27:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.181 2010/11/18 10:31:54 pacho Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Pacho Ramos <pacho@gentoo.org> (18 Nov 2010)
+# clutter support requires mx-1.0 that is still not in the tree,
+# bug #345937
+mail-client/evolution clutter
 
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet

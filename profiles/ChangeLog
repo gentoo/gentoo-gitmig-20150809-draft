@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4793 2010/11/16 09:11:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4794 2010/11/18 10:31:54 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2010; Pacho Ramos <pacho@gentoo.org> base/ChangeLog,
+  base/package.use.mask:
+  Mask clutter USE on evolution due bug #345937
 
   16 Nov 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Remove mask for dev-tex/mpm, is gone from the tree
