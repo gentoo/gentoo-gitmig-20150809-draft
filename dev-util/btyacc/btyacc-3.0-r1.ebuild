@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/btyacc/btyacc-3.0-r1.ebuild,v 1.2 2010/02/21 01:10:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/btyacc/btyacc-3.0-r1.ebuild,v 1.3 2010/11/18 19:37:08 patrick Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.siber.com/btyacc/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
 
 S="${WORKDIR}"
 
