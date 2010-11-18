@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.194 2010/10/28 20:22:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.195 2010/11/18 21:48:20 fuzzyray Exp $
+
+  18 Nov 2010; Paul Varner <fuzzyray@gentoo.org> -gentoolkit-0.2.4.5.ebuild,
+  -gentoolkit-0.2.4.6.1.ebuild, -gentoolkit-0.3.0_rc7.ebuild,
+  -gentoolkit-0.3.0_rc8.ebuild, -gentoolkit-0.3.0_rc8-r1.ebuild,
+  -gentoolkit-0.3.0_rc9.ebuild, -gentoolkit-0.3.0_rc10.ebuild:
+  Remove unused ebuilds
 
   28 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   gentoolkit-9999.ebuild:
