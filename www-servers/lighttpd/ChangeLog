@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.233 2010/11/03 12:16:41 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.234 2010/11/18 15:13:47 hwoarang Exp $
+
+*lighttpd-1.4.28 (15 Nov 2010)
+
+  15 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  +lighttpd-1.4.28.ebuild, files/conf/lighttpd.conf, metadata.xml:
+  Version bump. Bug 338753. Drop fastcgi use flag per bug #345583 and add
+  ipv6 support to configuration file per bug 312421. Thanks to Jeremy Olexa
+  darkside@gentoo.org
 
   03 Nov 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
   added hwoarang and myself as maintainers

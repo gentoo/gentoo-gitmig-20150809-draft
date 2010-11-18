@@ -19,6 +19,7 @@
 		for every server that is suffering load problems.
 	</longdescription>
 	<use>
+		<flag name='libev'>Enable fdevent handler</flag>
 		<flag name='memcache'>Enable memcache support for mod_cml and
 			mod_trigger_b4_dl</flag>
 		<flag name='rrdtool'>Enable rrdtool support via mod_rrdtool</flag>
