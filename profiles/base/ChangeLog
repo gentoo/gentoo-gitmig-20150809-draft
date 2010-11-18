@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.187 2010/11/18 10:31:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.188 2010/11/18 20:25:24 ford_prefect Exp $
+
+  19 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
+  Mask orc for gst-plugins-base by default (to be unmasked on supported platforms)
 
   18 Nov 2010; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask clutter USE on evolution due bug #345937

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.181 2010/11/18 10:31:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.182 2010/11/18 20:25:24 ford_prefect Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -229,3 +229,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Alexis Ballier <aballier@gentoo.org> (07 Jul 2009)
 # The pda interface doesnt build, bug #277037
 >=media-video/vlc-1.0.0 pda
+
+# Arun Raghavan <ford_prefect@gentoo.org> (19 Nov 2010)
+# Orc isn't yet ready to be used on anything other than x86/amd64/arm
+>=media-libs/gst-plugins-base-0.10.30 orc
