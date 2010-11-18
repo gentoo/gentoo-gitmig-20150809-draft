@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.3.57419.ebuild,v 1.1 2010/10/05 11:08:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.3.57419.ebuild,v 1.2 2010/11/18 16:12:35 flameeyes Exp $
 
 inherit versionator
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/jre"
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}/${PN}-${EC2_VERSION}-${EC2_PATCHLEVEL}"
-	find . -name *.cmd -exec rm {} \;
+	find . -name '*.cmd' -delete || die
 }
 
 src_install() {
@@ -37,6 +37,7 @@ src_install() {
 	cat - > "${T}"/99${PN} <<EOF
 EC2_HOME=/opt/${PN}
 PATH=/opt/${PN}/bin
+ROOTPATH=/opt/${PN}/bin
 EOF
 	doenvd "${T}"/99${PN}
 
