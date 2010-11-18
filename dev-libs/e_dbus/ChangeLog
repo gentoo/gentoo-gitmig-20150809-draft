@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/e_dbus
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.1 2010/11/18 14:14:59 tommy Exp $
+
+*e_dbus-1.0.0_beta2 (18 Nov 2010)
+
+  18 Nov 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +e_dbus-1.0.0_beta2.ebuild, +metadata.xml:
+  Initial commit, based on ebuild in enlightenment overlay
+
