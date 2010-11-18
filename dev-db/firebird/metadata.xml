@@ -12,4 +12,9 @@
 	language support for stored procedures and triggers. It has been used
 	in production systems, under a variety of names, since 1981.
 	</longdescription>
+	<use>
+		<flag name='client'>Install client library and header files only</flag>
+		<flag name='superserver'>Install SuperServer</flag>
+		<flag name='xinetd'>Install ClassicServer</flag>
+	</use>
 </pkgmetadata>
