@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.4.0.ebuild,v 1.1 2010/01/16 10:38:29 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.4.0.ebuild,v 1.2 2010/11/18 14:50:34 phajdan.jr Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc source"
 
 DEPEND="!dev-lang/fpc-bin

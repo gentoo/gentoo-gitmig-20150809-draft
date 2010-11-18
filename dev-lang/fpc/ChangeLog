@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.50 2010/01/16 10:38:29 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.51 2010/11/18 14:50:34 phajdan.jr Exp $
+
+  18 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> fpc-2.4.0.ebuild:
+  x86 stable wrt bug #345663
 
 *fpc-2.4.0 (16 Jan 2010)
 
