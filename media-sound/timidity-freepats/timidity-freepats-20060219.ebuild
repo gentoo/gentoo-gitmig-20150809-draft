@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/timidity-freepats-20060219.ebuild,v 1.9 2010/11/17 21:18:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/timidity-freepats-20060219.ebuild,v 1.10 2010/11/18 00:15:29 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RESTRICT="binchecks strip"
