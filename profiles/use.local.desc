@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6163 2010/11/18 13:54:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6164 2010/11/18 14:15:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -977,6 +977,12 @@ dev-libs/cyrus-sasl:ntlm_unsupported_patch - Add NTLM net-fs/samba NOT supported
 dev-libs/cyrus-sasl:sample - Build sample client and server
 dev-libs/cyrus-sasl:srp - Enable SRP
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/ecore:ares - Enables support for asynchronous DNS using the net-dns/c-ares library
+dev-libs/ecore:evas - Provides easy to use canvas by gluing media-libs/evas and various input/output systems.
+dev-libs/ecore:glib - Enable dev-libs/glib eventloop support
+dev-libs/ecore:inotify - Enable support for inotify
+dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
+dev-libs/ecore:xprint - Enable X11 Xprint support
 dev-libs/eggdbus:largefile - Support for large files
 dev-libs/eina:default-mempool - By default use system's allocator (pass-through) instead of custom choice for Eina's own data structures.
 dev-libs/eina:mempool-buddy - Compile "buddy" memory pool allocation.
@@ -1829,6 +1835,7 @@ media-libs/clutter-gst:introspection - Use dev-libs/gobject-introspection for in
 media-libs/clutter-gtk:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
+media-libs/edje:cache - Enable caching
 media-libs/esdl:image - Enable image support
 media-libs/evas:cache - Enable experimental caching to speed up rendering
 media-libs/evas:eet - Support dev-libs/eet
