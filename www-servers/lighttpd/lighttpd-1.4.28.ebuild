@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.28.ebuild,v 1.1 2010/11/18 15:13:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.28.ebuild,v 1.2 2010/11/18 16:16:21 hwoarang Exp $
 
 EAPI="2"
 
@@ -95,7 +95,7 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
-	dev-python/docutils installs rst2html.py not rst2html
+	#dev-python/docutils installs rst2html.py not rst2html
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.am || \
 		die "sed doc/Makefile.am failed"
 	eautoreconf
