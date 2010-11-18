@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.185 2010/11/17 12:23:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.186 2010/11/18 07:27:33 jlec Exp $
+
+  18 Nov 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Fix Version of cns which is masked
 
   17 Nov 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Mask USE=aria sci-chemistry/cns
