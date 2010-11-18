@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6162 2010/11/18 12:54:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6163 2010/11/18 13:54:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1830,6 +1830,8 @@ media-libs/clutter-gtk:introspection - Use dev-libs/gobject-introspection for in
 media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/esdl:image - Enable image support
+media-libs/evas:cache - Enable experimental caching to speed up rendering
+media-libs/evas:eet - Support dev-libs/eet
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/freeglut:mpx -  Enable support for multi-pointer-X. One pointer for each pointer device. 
 media-libs/freetype:auto-hinter - Use the unpatented auto-hinter instead of the (recommended) TrueType bytecode interpreter
