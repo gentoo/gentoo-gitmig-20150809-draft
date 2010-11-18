@@ -16,3 +16,4 @@ move dev-util/luadoc dev-lua/luadoc
 move dev-lang/toluapp dev-lua/toluapp
 move media-gfx/gimp-lqr-plugin media-plugins/gimp-lqr
 move x11-libs/evas media-libs/evas
+move x11-libs/ecore dev-libs/ecore
