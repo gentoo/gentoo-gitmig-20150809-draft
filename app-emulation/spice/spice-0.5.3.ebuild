@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.5.3.ebuild,v 1.1 2010/08/11 16:22:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.5.3.ebuild,v 1.2 2010/11/18 12:52:29 dev-zero Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ RDEPEND="~app-emulation/spice-protocol-${PV}
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	gui? ( dev-games/cegui[opengl?] )
 	opengl? ( virtual/opengl )"
