@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.29 2010/04/24 15:07:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.30 2010/11/18 17:50:14 flameeyes Exp $
+
+*libelf-0.8.13-r1 (18 Nov 2010)
+
+  18 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> -libelf-0.8.12.ebuild,
+  -libelf-0.8.13.ebuild, +libelf-0.8.13-r1.ebuild,
+  +files/libelf-0.8.13-build.patch:
+  Apply a patch to sanitise build system that actually allows for it to pass
+  properly. Also fix bug #347059, and make the package cross-compilable.
 
 *libelf-0.8.13 (24 Apr 2010)
 

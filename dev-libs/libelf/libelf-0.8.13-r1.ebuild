@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13.ebuild,v 1.1 2010/04/24 15:07:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r1.ebuild,v 1.1 2010/11/18 17:50:14 flameeyes Exp $
 
 EAPI=2
-inherit eutils multilib
+inherit eutils multilib autotools
 
 DESCRIPTION="A ELF object file access library"
 HOMEPAGE="http://www.mr511.de/software/"
@@ -15,28 +15,20 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug nls elibc_FreeBSD"
 
 RDEPEND="!dev-libs/elfutils"
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	if use elibc_FreeBSD; then
-		# Stop libelf from stamping on the system nlist.h
-		sed -i \
-			-e 's:nlist.h::g' \
-			lib/Makefile.in || die
+	epatch "${FILESDIR}/${P}-build.patch"
+	eautoreconf
 
-		# Enable shared libs
-		sed -i \
-			-e 's:\*-linux\*\|\*-gnu\*:\*-linux\*\|\*-gnu\*\|\*-freebsd\*:' \
-			configure || die
-	fi
-
-	sed -i \
-		-e 's:$(LINK_SHLIB) -o:$(LINK_SHLIB) $(LDFLAGS) -o:' \
-		lib/Makefile.in || die
 }
 
 src_configure() {
+	# prefix might want to play with this; unfortunately the stupid
+	# macro used to detect whether we're building ELF is so screwed up
+	# that trying to fix it is just a waste of time.
+	export mr_cv_target_elf=yes
+
 	econf \
 		$(use_enable nls) \
 		--enable-shared \
@@ -44,10 +36,15 @@ src_configure() {
 }
 
 src_install() {
-	emake -j1 \
+	emake \
 		prefix="${D}usr" \
 		libdir="${D}usr/$(get_libdir)" \
 		install \
 		install-compat || die
-	dodoc ChangeLog README
+
+	dodoc ChangeLog README || die
+
+	# Stop libelf from stamping on the system nlist.h
+	use elibc_FreeBSD && rm "${D}"/usr/include/nlist.h
 }
+
