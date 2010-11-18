@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.26 2010/07/03 16:55:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.27 2010/11/18 11:14:53 maekke Exp $
+
+  18 Nov 2010; Markus Meier <maekke@gentoo.org> libev-3.90-r2.ebuild:
+  add ~arm, bug #345611
 
 *libev-3.90-r2 (03 Jul 2010)
 
