@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.0.0.ebuild,v 1.2 2010/11/05 20:00:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.0.ebuild,v 1.1 2010/11/18 21:21:57 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -88,9 +88,7 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix automagic dep on vala
-	epatch "${FILESDIR}/${PN}-2.32.0.0-automagic-vala.patch"
-
+	# Needed to preserve introspection configure option, see bgo#633730
 	# eautoreconf needs introspection.m4
 	mv "${WORKDIR}"/introspection.m4 . || die
 	intltoolize --force --copy --automake || die "intltoolize failed"
