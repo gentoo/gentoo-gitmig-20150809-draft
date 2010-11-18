@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12208 2010/11/18 13:44:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12209 2010/11/18 18:39:47 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -709,10 +709,6 @@ x11-libs/gtkscintilla2
 # Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
 # masked live version
 =x11-libs/cairo-9999*
-
-# Doug Goldstein <cardoe@gentoo.org> (7 Sep 2010)
-# beta series mask
->=x11-drivers/nvidia-drivers-260
 
 # Kacper Kowalik <xarthisius@gentoo.org> (7 Sep 2010)
 # Mask until fully tested
