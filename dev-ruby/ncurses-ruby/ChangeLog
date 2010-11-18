@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.49 2010/11/08 21:06:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.50 2010/11/18 11:53:17 graaff Exp $
+
+  18 Nov 2010; Hans de Graaff <graaff@gentoo.org>
+  ncurses-ruby-1.2.4-r1.ebuild:
+  Depend on ncurses without USE=trace since this doesn't work. This is fixed
+  in 1.2.4-r2. See #344243.
 
 *ncurses-ruby-1.2.4-r2 (08 Nov 2010)
 
