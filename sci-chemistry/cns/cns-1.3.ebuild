@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3.ebuild,v 1.2 2010/11/17 13:14:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3.ebuild,v 1.3 2010/11/18 17:05:04 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,6 @@ IUSE="aria openmp"
 
 RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
-PDEPEND="aria? ( ~sci-chemistry/aria-2.3.1 )"
 
 RESTRICT="fetch"
 S="${WORKDIR}/${MY_P}"
