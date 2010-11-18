@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/miscfiles
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.36 2010/11/17 08:15:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.37 2010/11/18 02:31:39 darkside Exp $
+
+  18 Nov 2010; Jeremy Olexa <darkside@gentoo.org> miscfiles-1.5.ebuild:
+  Fix for Gentoo Prefix, bug 345935 by Dan Wallis
 
 *miscfiles-1.5 (17 Nov 2010)
 

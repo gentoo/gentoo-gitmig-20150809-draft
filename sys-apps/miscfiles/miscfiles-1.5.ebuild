@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5.ebuild,v 1.1 2010/11/17 08:15:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5.ebuild,v 1.2 2010/11/18 02:31:39 darkside Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --datadir=/usr/share/misc || die
+	econf --datadir="${EPREFIX}"/usr/share/misc || die
 }
 
 src_install() {
