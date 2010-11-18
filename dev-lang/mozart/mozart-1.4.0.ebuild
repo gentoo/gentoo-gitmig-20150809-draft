@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.9 2010/08/26 07:29:03 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.10 2010/11/18 08:01:21 keri Exp $
 
 inherit elisp-common eutils
 
+PATCHSET_VER="0"
 MY_P="mozart-${PV}.20080704"
 
 DESCRIPTION="Mozart is an advanced development platform for intelligent, distributed applications"
 HOMEPAGE="http://www.mozart-oz.org/"
 SRC_URI="http://www.mozart-oz.org/download/mozart-ftp/store/1.4.0-2008-07-02-tar/mozart-1.4.0.20080704-src.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz
 	doc? ( http://www.mozart-oz.org/download/mozart-ftp/store/1.4.0-2008-07-02-tar/mozart-1.4.0.20080704-doc.tar.gz )"
 LICENSE="Mozart"
 
@@ -34,22 +36,10 @@ S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-cstdio.patch
-	epatch "${FILESDIR}"/${P}-const-cast.patch
-	epatch "${FILESDIR}"/${P}-ozhome.patch
-	epatch "${FILESDIR}"/${P}-ozplatform-amd64.patch
-	epatch "${FILESDIR}"/${P}-ozplatform-sparc.patch
-	epatch "${FILESDIR}"/${P}-parallel-make.patch
-	epatch "${FILESDIR}"/${P}-mkinstalldirs.patch
-	epatch "${FILESDIR}"/${P}-contrib.patch
-	epatch "${FILESDIR}"/${P}-dss-prefix.patch
-	epatch "${FILESDIR}"/${P}-dss-pic.patch
-	epatch "${FILESDIR}"/${P}-dss-ldflags.patch
-	epatch "${FILESDIR}"/${P}-dss-libpath.patch
-	epatch "${FILESDIR}"/${P}-ozbison-string.patch
-	epatch "${FILESDIR}"/${P}-nostrip.patch
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
 }
 
 src_compile() {
