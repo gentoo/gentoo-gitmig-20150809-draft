@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r1.ebuild,v 1.1 2010/11/18 17:50:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r1.ebuild,v 1.2 2010/11/18 23:53:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils multilib autotools
@@ -47,4 +47,3 @@ src_install() {
 	# Stop libelf from stamping on the system nlist.h
 	use elibc_FreeBSD && rm "${D}"/usr/include/nlist.h
 }
-
