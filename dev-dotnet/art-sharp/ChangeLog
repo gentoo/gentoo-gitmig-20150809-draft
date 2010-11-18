@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.69 2010/01/02 12:16:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.70 2010/11/18 08:51:09 pacho Exp $
+
+*art-sharp-2.24.2 (18 Nov 2010)
+
+  18 Nov 2010; Pacho Ramos <pacho@gentoo.org> +art-sharp-2.24.2.ebuild:
+  Version bump for mono-2.8.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   art-sharp-2.24.1.ebuild:

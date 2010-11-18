@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gconf-sharp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.64 2009/05/06 00:32:54 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.65 2010/11/18 08:55:36 pacho Exp $
+
+*gconf-sharp-2.24.2 (18 Nov 2010)
+
+  18 Nov 2010; Pacho Ramos <pacho@gentoo.org> +gconf-sharp-2.24.2.ebuild:
+  Version bump for mono-2.8.
 
   06 May 2009; Peter Alfredsen <loki_val@gentoo.org>
   -gconf-sharp-2.8.2.ebuild, -gconf-sharp-2.16.0.ebuild:
