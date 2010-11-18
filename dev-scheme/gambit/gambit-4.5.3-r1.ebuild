@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.3-r1.ebuild,v 1.2 2010/11/14 15:49:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.3-r1.ebuild,v 1.3 2010/11/18 12:16:14 jlec Exp $
 
 EAPI="3"
 
-inherit eutils elisp-common autotools
+inherit eutils elisp-common
 
 MY_PN=gambc
 MY_PV=${PV//./_}
@@ -30,11 +30,6 @@ SITEFILE="50gambit-gentoo.el"
 S=${WORKDIR}/${MY_P} #-devel
 
 IUSE="emacs static"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.4.0-install_name.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf $(use_enable !static shared) --docdir="${EPREFIX}"/usr/share/doc/${PF} --enable-single-host --disable-absolute-shared-libs

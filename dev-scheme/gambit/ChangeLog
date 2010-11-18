@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gambit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.32 2010/11/17 18:30:46 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.33 2010/11/18 12:16:14 jlec Exp $
+
+  18 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  -files/gambit-4.4.0-install_name.patch, gambit-4.5.3-r1.ebuild:
+  Removed not needed darwin patch, because apllied upstream
 
   17 Nov 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   files/gambit-4.4.0-install_name.patch:
