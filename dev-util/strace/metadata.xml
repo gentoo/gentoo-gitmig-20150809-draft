@@ -6,8 +6,5 @@
     <flag name="aio">
       Enable <pkg>dev-libs/libaio</pkg> support for tracing Asynchronous I/O operations
     </flag>
-    <flag name="alsa">
-      Read ioctl() values from <pkg>media-sound/alsa-headers</pkg> for ALSA device.
-    </flag>
   </use>
 </pkgmetadata>

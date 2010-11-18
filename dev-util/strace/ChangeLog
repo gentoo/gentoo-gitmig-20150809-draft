@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.156 2010/11/17 23:53:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.157 2010/11/18 00:11:39 flameeyes Exp $
+
+  18 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove alsa USE description from metadata.xml.
 
 *strace-4.5.20-r2 (17 Nov 2010)
 
