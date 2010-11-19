@@ -8,7 +8,8 @@
   management conventions and comprises several shell-based
   utilities. It is an attempt to formalize software production and
   especially configuration management around a package-oriented
-  principle. Used a lot in High Energy Physics large experiments, where
-  a lot of tailored packages are developped.
+  principle. Used in High Energy Physics large experiments, where
+  tailored packages are developped and they do not know the existence
+  of portage and overlays.
 </longdescription>
 </pkgmetadata>

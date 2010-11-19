@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20090520.ebuild,v 1.1 2009/09/09 23:06:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20090520.ebuild,v 1.2 2010/11/19 05:41:28 bicatali Exp $
 
 EAPI=2
 inherit eutils elisp-common toolchain-funcs versionator
@@ -34,6 +34,7 @@ src_compile() {
 	emake -j1 \
 		cpp="$(tc-getCXX)" \
 		cppflags="${CXXFLAGS}" \
+		cpplink="$(tc-getCXX) ${LDFLAGS}" \
 		|| die "emake failed"
 
 	sed -i -e "s:${WORKDIR}:/usr/$(get_libdir):g" setup.*sh || die

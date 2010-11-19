@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/ChangeLog,v 1.7 2009/09/09 23:06:25 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/ChangeLog,v 1.8 2010/11/19 05:41:28 bicatali Exp $
+
+  19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -cmt-1.20.20081118.ebuild, cmt-1.20.20090520.ebuild, metadata.xml:
+  Respect LDFLAGS
 
 *cmt-1.20.20090520 (09 Sep 2009)
 
