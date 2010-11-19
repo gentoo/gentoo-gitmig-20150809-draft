@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.420 2010/11/18 11:27:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.421 2010/11/19 15:47:33 jer Exp $
+
+  19 Nov 2010; Jeroen Roovers <jer@gentoo.org> imagemagick-6.6.5.6.ebuild:
+  Stable for HPPA (bug #345569).
 
   18 Nov 2010; Thomas Kahle <tomka@gentoo.org> imagemagick-6.6.5.6.ebuild:
   x86 stable per bug 345569
