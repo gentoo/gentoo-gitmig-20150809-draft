@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.66 2010/10/19 05:27:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.67 2010/11/19 07:54:40 vapier Exp $
+
+*ccache-2.4-r9 (19 Nov 2010)
+
+  19 Nov 2010; Mike Frysinger <vapier@gentoo.org> +ccache-2.4-r9.ebuild,
+  +files/ccache-2.4-xrealloc.patch:
+  Add fix from upstream for realloc bug #338137 by Chris Coleman.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> ccache-2.4-r6.ebuild,
   ccache-2.4-r7.ebuild:
