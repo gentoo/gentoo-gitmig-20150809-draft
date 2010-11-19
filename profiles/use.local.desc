@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6170 2010/11/19 03:15:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6171 2010/11/19 03:35:09 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4048,6 +4048,7 @@ x11-libs/qt-qt3support:exceptions - Add support for exceptions - like catching t
 x11-libs/qt-qt3support:kde -  Select media-sound/phonon as phonon variant needed for kde 
 x11-libs/qt-qt3support:phonon -  Enable phonon configuration dialog in qtconfig 
 x11-libs/qt-script:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+x11-libs/qt-script:jit - Enables JIT for Javascript usage inside Qt
 x11-libs/qt-script:private-headers - Install Qt declarative private headers required by Qt-creator QmlDesigner and QmlInspector plugins"
 x11-libs/qt-sql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 x11-libs/qt-sql:qt3support - Enable the Qt3Support libraries for Qt4
