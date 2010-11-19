@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/euler
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.16 2008/01/07 23:44:34 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.17 2010/11/19 18:33:25 bicatali Exp $
+
+  19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> euler-1.61.0.ebuild,
+  +files/euler-fortify.patch:
+  Added a patch to help on x86_64 pointers, closing bug #343587
 
   07 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/euler-xdg.patch, euler-1.61.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.7 2008/01/07 23:44:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.8 2010/11/19 18:33:25 bicatali Exp $
 
 inherit autotools eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/command-gcc4-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-glibc-2.4-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-xdg.patch
+	epatch "${FILESDIR}"/${PN}-fortify.patch
 	# gentoo specific stuff
 	sed -i -e '/COPYING/d' -e '/INSTALL/d' Makefile.am
 	sed -i \
