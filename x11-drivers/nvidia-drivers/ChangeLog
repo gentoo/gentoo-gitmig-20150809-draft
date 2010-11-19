@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.258 2010/11/18 18:33:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.259 2010/11/19 05:55:52 jer Exp $
+
+*nvidia-drivers-96.43.19 (19 Nov 2010)
+
+  19 Nov 2010; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-96.43.19.ebuild:
+  Version bump by Miguel R. Caudevilla (bug #345929).
 
 *nvidia-drivers-260.19.21 (18 Nov 2010)
 
