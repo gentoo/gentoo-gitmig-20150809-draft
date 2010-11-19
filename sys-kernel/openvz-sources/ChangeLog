@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.157 2010/11/17 17:47:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.158 2010/11/19 13:40:31 pva Exp $
+
+*openvz-sources-2.6.18.028.070.14 (19 Nov 2010)
+
+  19 Nov 2010; Peter Volkov <pva@gentoo.org>
+  -openvz-sources-2.6.18.028.070.12.ebuild,
+  +openvz-sources-2.6.18.028.070.14.ebuild:
+  Version bump. Fixes ARP entries bug.
 
   17 Nov 2010; Peter Volkov <pva@gentoo.org>
   -openvz-sources-2.6.18.028.070.5.ebuild,
