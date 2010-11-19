@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03-r1.ebuild,v 1.1 2010/08/09 20:34:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03-r1.ebuild,v 1.2 2010/11/19 15:14:25 tomka Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/${PN}.tar
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="linguas_ja debug"
 
 DEPEND="sys-libs/ncurses"
