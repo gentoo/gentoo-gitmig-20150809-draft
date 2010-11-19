@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.279 2010/11/18 12:59:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.280 2010/11/19 15:14:52 maekke Exp $
+
+  19 Nov 2010; Markus Meier <maekke@gentoo.org> freetype-2.4.3-r2.ebuild:
+  arm stable, bug #345843
 
   18 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   freetype-2.4.3-r2.ebuild:
