@@ -1,15 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.10.ebuild,v 1.3 2010/11/02 08:49:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.5.6.ebuild,v 1.1 2010/11/19 09:49:19 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib scons-utils subversion toolchain-funcs
-
-ESVN_REPO_URI="http://v8.googlecode.com/svn/tags/${PV}"
+inherit eutils flag-o-matic multilib scons-utils toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
@@ -19,10 +18,13 @@ IUSE="readline"
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}"
 
-EXTRA_ESCONS="library=shared soname=on"
+EXTRA_ESCONS="library=shared soname=on importenv=\"LINKFLAGS\""
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
+
+	# Make the build respect LDFLAGS.
+	export LINKFLAGS="${LDFLAGS}"
 }
 
 src_prepare() {
@@ -53,6 +55,8 @@ src_compile() {
 		myconf+=" arch=x64"
 	elif [[ $myarch = x86 ]] ; then
 		myconf+=" arch=ia32"
+	elif [[ $myarch = arm ]] ; then
+		myconf+=" arch=arm"
 	else
 		die "Failed to determine target arch, got '$myarch'."
 	fi
