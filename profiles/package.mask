@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12210 2010/11/19 09:56:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12211 2010/11/19 10:05:45 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Nov 2010)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+# Currently v8-2.5.x versions are used for chromium-9.x versions.
+>=dev-lang/v8-2.5.0
 
 # Peter Volkov <pva@gentoo.org> (18 Nov 2010)
 # This kernel has fatal bug: ARP entries are not set for
@@ -824,12 +829,6 @@ app-admin/webmin
 # <http://my.opera.com/desktopteam/blog>
 =www-client/opera-10.70*
 =www-client/opera-11*
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (25 Jul 2010)
-# The v8 package is still very experimental and not ready for general use.
-# All comments, feedback, and patches are welcome, see the project page:
-# http://www.gentoo.org/proj/en/desktop/chromium/index.xml
-dev-lang/v8
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (22 Jul 2010)
 # Development versions.
