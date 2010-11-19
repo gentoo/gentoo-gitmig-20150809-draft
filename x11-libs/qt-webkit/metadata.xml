@@ -8,5 +8,6 @@
 		<flag name='kde'>
 			Select <pkg>media-sound/phonon</pkg> as phonon variant needed for kde
 		</flag>
+		<flag name="jit">Enables JIT for Javascript usage inside Qt</flag>
 	</use>
 </pkgmetadata>
