@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/gnome-color-manager
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.1 2010/11/19 13:26:03 flameeyes Exp $
+
+*gnome-color-manager-2.32.0 (19 Nov 2010)
+
+  19 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gnome-color-manager-2.32.0.ebuild, +metadata.xml:
+  Initial import of gnome-color-manager; thanks to Stephan Ritscher and Gilles
+  Dartiguelongue. Closes bug #291666.
+
