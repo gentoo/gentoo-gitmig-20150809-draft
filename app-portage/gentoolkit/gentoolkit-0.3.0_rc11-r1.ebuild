@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r1.ebuild,v 1.1 2010/11/19 14:24:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r1.ebuild,v 1.2 2010/11/19 16:50:20 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
 RESTRICT_PYTHON_ABIS="2.[45]"
@@ -21,7 +21,7 @@ IUSE=""
 # Drop "~m68k ~s390 ~sh ~sparc-fbsd ~x86-fbsd" due to dev-python/argparse dependency
 # Note: argparse is provided in python 2.7 and 3.2
 # KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~x64-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 DEPEND="sys-apps/portage"
 RDEPEND="${DEPEND}
@@ -48,8 +48,13 @@ src_install() {
 	# Create cache directory for revdep-rebuild
 	dodir /var/cache/revdep-rebuild
 	keepdir /var/cache/revdep-rebuild
-	fowners root:root /var/cache/revdep-rebuild
+	use prefix || fowners root:root /var/cache/revdep-rebuild
 	fperms 0700 /var/cache/revdep-rebuild
+
+	# remove on Gentoo Prefix platforms where it's broken anyway
+	if use prefix; then
+		[[ ${CHOST} != *-aix* ]] && rm "${ED}"/usr/bin/revdep-rebuild
+	fi
 
 	# Can distutils handle this?
 	dosym eclean /usr/bin/eclean-dist
@@ -60,8 +65,8 @@ pkg_postinst() {
 	distutils_pkg_postinst
 
 	# Make sure that our ownership and permissions stuck
-	chown root:root "${ROOT}/var/cache/revdep-rebuild"
-	chmod 0700 "${ROOT}/var/cache/revdep-rebuild"
+	use prefix || chown root:root "${EROOT}/var/cache/revdep-rebuild"
+	chmod 0700 "${EROOT}/var/cache/revdep-rebuild"
 
 	einfo
 	einfo "For further information on gentoolkit, please read the gentoolkit"

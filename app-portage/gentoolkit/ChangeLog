@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.197 2010/11/19 14:24:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.198 2010/11/19 16:50:20 darkside Exp $
+
+  19 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
+  gentoolkit-0.3.0_rc11-r1.ebuild:
+  Import Gentoo Prefix changes. Bump to EAPI3, add keywords, use EROOT.
+  Approved by tools-portage team
 
 *gentoolkit-0.3.0_rc11-r1 (19 Nov 2010)
 
