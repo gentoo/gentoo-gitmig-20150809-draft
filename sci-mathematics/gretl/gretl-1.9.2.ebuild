@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.2.ebuild,v 1.1 2010/11/19 07:14:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.2.ebuild,v 1.2 2010/11/19 07:16:09 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -82,7 +82,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 	if use emacs; then
 		elisp-compile utils/emacs/gretl.el || die "elisp-compile failed"
 	fi
