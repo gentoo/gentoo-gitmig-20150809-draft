@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.7 2010/10/10 22:00:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/opendx-4.4.4-r4.ebuild,v 1.8 2010/11/19 05:45:02 bicatali Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="x11-libs/libXmu
 	cdf? ( sci-libs/cdf )
 	netcdf? ( sci-libs/netcdf )
 	tiff? ( media-libs/tiff )
-	imagemagick? ( >=media-gfx/imagemagick-5.3.4[-hdri] )"
+	imagemagick? ( >=media-gfx/imagemagick-5.3.4 )"
 
 RDEPEND="${DEPEND}"
 # waiting on bug #36349 for media-libs/jasper in imagemagick

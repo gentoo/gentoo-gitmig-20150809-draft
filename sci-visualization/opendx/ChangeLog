@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/opendx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.24 2010/10/10 22:00:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.25 2010/11/19 05:45:02 bicatali Exp $
+
+  19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> opendx-4.4.4-r4.ebuild:
+  Remove the no hdri restriction on imagemagick dependency. Thanks Jaroslaw
+  Kalinowski (bug #344819)
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> opendx-4.4.4-r4.ebuild:
   Fix openmotif dependency.
