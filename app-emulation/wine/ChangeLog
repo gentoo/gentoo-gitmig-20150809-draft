@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.337 2010/11/14 00:40:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.338 2010/11/19 09:03:23 vapier Exp $
+
+  19 Nov 2010; Mike Frysinger <vapier@gentoo.org> wine-1.3.6.ebuild,
+  wine-9999.ebuild:
+  Add support for USE=gstreamer #345917 by Zorzo Luca.
 
 *wine-1.2.1 (14 Nov 2010)
 
