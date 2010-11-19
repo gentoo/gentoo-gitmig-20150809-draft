@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.224 2010/10/09 17:11:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.225 2010/11/19 18:49:02 jlec Exp $
+
+*e2fsprogs-1.41.12-r1 (19 Nov 2010)
+
+  19 Nov 2010; Justin Lecher <jlec@gentoo.org>
+  +files/e2fsprogs-1.41.4-darwin-no-mntent.patch,
+  +files/e2fsprogs-1.41.7-mint-blkid.patch, +e2fsprogs-1.41.12-r1.ebuild,
+  +files/e2fsprogs-1.41.12-darwin-makefile.patch,
+  +files/e2fsprogs-1.41.12-darwin-no-mntent.patch,
+  +files/e2fsprogs-1.41-mint.patch:
+  Import Prefix Changes
 
   09 Oct 2010; Raúl Porcel <armin76@gentoo.org> e2fsprogs-1.41.12.ebuild:
   alpha/sparc stable wrt #337270
