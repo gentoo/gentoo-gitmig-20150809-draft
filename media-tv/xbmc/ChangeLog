@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.68 2010/09/18 16:06:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.69 2010/11/19 08:46:51 vapier Exp $
+
+  19 Nov 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Drop USE=aac like upstream has #345939 by BT.
 
 *xbmc-9.11-r5 (18 Sep 2010)
 

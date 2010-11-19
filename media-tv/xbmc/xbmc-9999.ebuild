@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.64 2010/09/18 09:13:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.65 2010/11/19 08:46:51 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="aac alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau webserver xrandr"
+IUSE="alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau webserver xrandr"
 
 RDEPEND="virtual/opengl
 	app-arch/bzip2
@@ -43,7 +43,6 @@ RDEPEND="virtual/opengl
 	>=dev-python/pysqlite-2
 	media-libs/a52dec
 	media-libs/alsa-lib
-	aac? ( media-libs/faac )
 	media-libs/faad2
 	media-libs/flac
 	media-libs/fontconfig
@@ -172,7 +171,6 @@ src_configure() {
 		$(use_enable avahi) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
-		$(use_enable aac faac) \
 		$(use_enable hal) \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
