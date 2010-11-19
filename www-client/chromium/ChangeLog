@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.227 2010/11/19 07:59:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.228 2010/11/19 14:45:41 phajdan.jr Exp $
+
+*chromium-9.0.587.0 (19 Nov 2010)
+
+  19 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-vpx-r1.patch, +chromium-9.0.587.0.ebuild,
+  chromium-9999.ebuild:
+  Version bump for dev channel release. Back to bundled ffmpeg.
 
 *chromium-8.0.552.208 (19 Nov 2010)
 
