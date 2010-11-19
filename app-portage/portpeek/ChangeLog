@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.99 2010/11/19 01:44:58 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.100 2010/11/19 20:52:52 mpagano Exp $
+
+*portpeek-1.9.60 (19 Nov 2010)
+
+  19 Nov 2010; Mike Pagano <mpagano@gentoo.org> -portpeek-1.9.51.ebuild,
+  +portpeek-1.9.60.ebuild:
+  Port portpeek to use newer version of gentoolkit
 
   19 Nov 2010; Michael Pagano <mpagano@gentoo.org> -portpeek-1.9.48.ebuild:
   Cleanup old version

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.51.ebuild,v 1.1 2010/11/11 14:11:02 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.60.ebuild,v 1.1 2010/11/19 20:52:52 mpagano Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND="=app-portage/gentoolkit-0.3.0_rc9
+RDEPEND=">app-portage/gentoolkit-0.3.0_rc10
 	>=sys-apps/portage-2.1.9.24
 	dev-lang/python:2.6"
 
