@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.275 2010/11/14 12:49:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.276 2010/11/19 09:49:50 polynomial-c Exp $
+
+  19 Nov 2010; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.0.7.ebuild:
+  Removed old.
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> seamonkey-2.0.10.ebuild:
   alpha/ia64/sparc stable wrt #342847
