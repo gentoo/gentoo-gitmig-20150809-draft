@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.1.ebuild,v 1.1 2010/11/09 15:49:44 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.1-r1.ebuild,v 1.1 2010/11/19 01:27:29 chiiph Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -8,7 +8,7 @@ inherit qt4-build
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
 SLOT="4"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="+glib iconv optimized-qmake private-headers qt3support ssl"
+IUSE="+glib iconv +jit optimized-qmake private-headers qt3support ssl"
 
 RDEPEND="sys-libs/zlib
 	glib? ( dev-libs/glib )
@@ -84,7 +84,8 @@ src_configure() {
 		$(qt_use iconv)
 		$(qt_use optimized-qmake)
 		$(qt_use ssl openssl)
-		$(qt_use qt3support)"
+		$(qt_use qt3support)
+		$(qt_use jit javascript-jit)"
 
 	myconf="${myconf} -no-xkb -no-fontconfig -no-xrender -no-xrandr
 		-no-xfixes -no-xcursor -no-xinerama -no-xshape -no-sm -no-opengl
