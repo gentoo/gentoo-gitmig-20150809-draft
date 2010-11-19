@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.10 2010/11/18 08:01:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.11 2010/11/19 04:55:39 keri Exp $
 
 inherit elisp-common eutils
 
@@ -63,8 +63,7 @@ src_compile() {
 		$(use_enable tk contrib-tk) \
 		$(use_enable emacs compile-elisp) \
 		$(use_enable static link-static) \
-		$(use_enable threads threaded) \
-		|| die "econf failed"
+		$(use_enable threads threaded)
 
 	emake bootstrap || die "emake bootstrap failed"
 }
@@ -82,17 +81,17 @@ src_install() {
 		ELISPDIR="${D}${SITELISP}/${PN}" \
 		install || die "emake install failed"
 
-	dosym /usr/lib/mozart/bin/convertTextPickle /usr/bin/convertTextPickle
-	dosym /usr/lib/mozart/bin/oldpickle2text /usr/bin/oldpickle2text
-	dosym /usr/lib/mozart/bin/oz /usr/bin/oz
-	dosym /usr/lib/mozart/bin/ozc /usr/bin/ozc
-	dosym /usr/lib/mozart/bin/ozd /usr/bin/ozd
-	dosym /usr/lib/mozart/bin/ozengine /usr/bin/ozengine
-	dosym /usr/lib/mozart/bin/ozl /usr/bin/ozl
-	dosym /usr/lib/mozart/bin/ozplatform /usr/bin/ozplatform
-	dosym /usr/lib/mozart/bin/oztool /usr/bin/oztool
-	dosym /usr/lib/mozart/bin/pickle2text /usr/bin/pickle2text
-	dosym /usr/lib/mozart/bin/text2pickle /usr/bin/text2pickle
+	dosym /usr/lib/mozart/bin/convertTextPickle /usr/bin/convertTextPickle || die
+	dosym /usr/lib/mozart/bin/oldpickle2text /usr/bin/oldpickle2text || die
+	dosym /usr/lib/mozart/bin/oz /usr/bin/oz || die
+	dosym /usr/lib/mozart/bin/ozc /usr/bin/ozc || die
+	dosym /usr/lib/mozart/bin/ozd /usr/bin/ozd || die
+	dosym /usr/lib/mozart/bin/ozengine /usr/bin/ozengine || die
+	dosym /usr/lib/mozart/bin/ozl /usr/bin/ozl || die
+	dosym /usr/lib/mozart/bin/ozplatform /usr/bin/ozplatform || die
+	dosym /usr/lib/mozart/bin/oztool /usr/bin/oztool || die
+	dosym /usr/lib/mozart/bin/pickle2text /usr/bin/pickle2text || die
+	dosym /usr/lib/mozart/bin/text2pickle /usr/bin/text2pickle || die
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
@@ -100,10 +99,10 @@ src_install() {
 	fi
 
 	if use doc ; then
-		dohtml -r "${WORKDIR}"/mozart/doc/*
+		dohtml -r "${WORKDIR}"/mozart/doc/* || die
 	fi
 
-	dodoc README
+	dodoc README || die
 }
 
 pkg_postinst() {
