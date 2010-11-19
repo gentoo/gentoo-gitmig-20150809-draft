@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4.ebuild,v 1.4 2010/09/11 20:37:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4.ebuild,v 1.5 2010/11/19 23:08:31 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils scons-utils games
 
 DESCRIPTION="Real Time Strategy (RTS) game involving a brave army of globs"
 HOMEPAGE="http://globulation2.org/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ppc x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
 	>=dev-libs/boost-1.34
 	media-libs/libsdl[opengl]
@@ -24,21 +24,13 @@ RDEPEND="virtual/opengl
 	media-libs/libvorbis
 	dev-libs/fribidi
 	media-libs/speex"
-DEPEND="${RDEPEND}
-	>=dev-util/scons-1"
 
-PATCHES=( "${FILESDIR}"/${P}-gcc44.patch )
+PATCHES=( "${FILESDIR}"/${P}-gcc44.patch "${FILESDIR}"/${P}-scons-blows.patch )
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[:space:]*[0-9]\+\).*/\1/; p }")
-
-	scons \
-		${sconsopts} \
-		CXXFLAGS="${CXXFLAGS}" \
-		LINKFLAGS="${LDFLAGS}" \
+	escons \
 		INSTALLDIR="${GAMES_DATADIR}"/${PN} \
-		DATADIR="${GAMES_DATADIR}"/${PN} \
-		|| die "scons failed again"
+		DATADIR="${GAMES_DATADIR}"/${PN}
 }
 
 src_install() {
