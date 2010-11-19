@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.196 2010/11/18 21:57:20 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.197 2010/11/19 14:24:23 scarabeus Exp $
+
+*gentoolkit-0.3.0_rc11-r1 (19 Nov 2010)
+
+  19 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.3.0_rc11-eshowkw_indir.patch, -gentoolkit-0.3.0_rc11.ebuild,
+  +gentoolkit-0.3.0_rc11-r1.ebuild:
+  Revision bump to fix eshowkw bug 346035
 
 *gentoolkit-0.3.0_rc11 (18 Nov 2010)
 
