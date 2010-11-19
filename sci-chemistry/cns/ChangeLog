@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.28 2010/11/18 17:05:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.29 2010/11/19 08:57:24 jlec Exp $
+
+  19 Nov 2010; Justin Lecher <jlec@gentoo.org> -cns-1.2.ebuild,
+  -cns-1.2-r1.ebuild, -cns-1.2.1-r1.ebuild, -cns-1.2.1-r3.ebuild,
+  -cns-1.2.1-r4.ebuild:
+  Dropp old
 
   18 Nov 2010; Justin Lecher <jlec@gentoo.org> -cns-1.2.1-r2.ebuild,
   cns-1.2.1-r3.ebuild, cns-1.2.1-r4.ebuild, cns-1.2.1-r5.ebuild,
