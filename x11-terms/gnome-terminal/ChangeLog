@@ -1,6 +1,18 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.229 2010/10/20 20:52:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.230 2010/11/19 22:17:31 pacho Exp $
+
+*gnome-terminal-2.32.1 (19 Nov 2010)
+
+  19 Nov 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-terminal-2.13.90-TERM-gnome.patch,
+  -files/gnome-terminal-2.24.2-restore-switch-to-tab.patch,
+  -files/gnome-terminal-2.26.3.1-cwd-on-new-tab.patch,
+  -files/gnome-terminal-2.26.3.1-en_GB.patch,
+  -files/gnome-terminal-2.26.3.1-partial-fix-dbus-error.patch,
+  -files/gnome-terminal-2.26.3.1-remove-plural.patch,
+  -gnome-terminal-2.32.0.ebuild, +gnome-terminal-2.32.1.ebuild:
+  Version bump and remove old.
 
 *gnome-terminal-2.32.0 (20 Oct 2010)
 

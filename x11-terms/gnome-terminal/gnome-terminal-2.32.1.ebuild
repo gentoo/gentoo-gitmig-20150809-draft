@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.0.ebuild,v 1.1 2010/10/20 20:52:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.1.ebuild,v 1.1 2010/11/19 22:17:31 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.18:2
 	>=gnome-base/gconf-2.31.3
-	>=x11-libs/vte-0.25.91
+	>=x11-libs/vte-0.26.0
 	x11-libs/libSM
 	gnome-base/libgnome"
 DEPEND="${RDEPEND}
@@ -36,9 +36,4 @@ src_prepare() {
 
 	# Use login shell by default (#12900)
 	epatch "${FILESDIR}"/${PN}-2.22.0-default_shell.patch
-
-	# patch gnome terminal to report as GNOME rather than xterm
-	# This needs to resolve a few bugs (#120294,)
-	# Leave out for now; causing too many problems
-	#epatch ${FILESDIR}/${PN}-2.13.90-TERM-gnome.patch
 }
