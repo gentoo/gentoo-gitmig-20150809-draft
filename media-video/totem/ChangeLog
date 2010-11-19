@@ -1,6 +1,23 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.302 2010/10/17 15:36:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.303 2010/11/19 19:04:22 eva Exp $
+
+*totem-2.32.0 (19 Nov 2010)
+
+  19 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/totem-2.26.3-youtube-plugin-404-error.patch,
+  -files/totem-2.26.4-youtube-plug-play-vids.patch, -totem-2.26.5-r1.ebuild,
+  -files/totem-2.26.5-firefox-plugin-apple-trailers.patch,
+  -totem-2.28.5-r3.ebuild, -totem-2.28.6.ebuild, -totem-2.30.0-r1.ebuild,
+  -files/totem-2.30.1-fix-constant-buffering.patch,
+  -files/totem-2.30.1-fix-gmp-plugin.patch,
+  -files/totem-2.30.1-fix-pygtk-include.patch,
+  -files/totem-2.30.1-fix-qt-eos.patch, totem-2.30.2.ebuild,
+  +totem-2.32.0.ebuild, +files/totem-2.32.0-smclient-target-detection.patch,
+  metadata.xml:
+  Version bump for Gnome 2.32. Youtube plugin updates, de-interlacing support,
+  support for WebM, RGBA gtk+ themes support. Update various API usage. Clean
+  up old revisions. Update dbus-glib dependency, bug #340295.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> totem-2.30.2.ebuild:
   alpha/ia64/sparc stable wrt #324077

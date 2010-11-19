@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.8 2010/10/17 15:36:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.30.2.ebuild,v 1.9 2010/11/19 19:04:22 eva Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.24
 	>=x11-themes/gnome-icon-theme-2.16
 	x11-libs/cairo
 	>=dev-libs/libxml2-2.6
-	>=dev-libs/dbus-glib-0.71
+	>=dev-libs/dbus-glib-0.82
 	>=media-libs/gstreamer-0.10.28.1
 	>=media-libs/gst-plugins-good-0.10
 	>=media-libs/gst-plugins-base-0.10.26
