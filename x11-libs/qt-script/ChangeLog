@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.83 2010/11/09 15:48:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.84 2010/11/19 03:25:40 chiiph Exp $
+
+*qt-script-4.7.1-r1 (19 Nov 2010)
+
+  19 Nov 2010; Tomas Touceda <chiiph@gentoo.org> -qt-script-4.7.1.ebuild,
+  +qt-script-4.7.1-r1.ebuild, metadata.xml:
+  Revbump: Adds jit useflag wrt bug 338243
 
 *qt-script-4.7.1 (09 Nov 2010)
 

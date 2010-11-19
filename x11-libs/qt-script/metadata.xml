@@ -7,5 +7,6 @@
 			inside the event loop (recommended by Nokia)</flag>
 		<flag name="private-headers">Install Qt declarative private headers
 			required by Qt-creator QmlDesigner and QmlInspector plugins"</flag>
+		<flag name="jit">Enables JIT for Javascript usage inside Qt</flag>
 	</use>
 </pkgmetadata>
