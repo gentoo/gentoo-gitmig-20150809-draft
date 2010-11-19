@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6173 2010/11/19 17:14:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6174 2010/11/19 19:14:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2339,12 +2339,13 @@ media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
 media-video/totem:bluetooth - Enable support for user-presence detection via the user's bluetooth handset using net-wireless/bluez
-media-video/totem:galago - Enable the galago plugin
+media-video/totem:galago - Allow Totem to set your IM client to "away" when a movie is playing in fullscreen using dev-libs/libgalago
 media-video/totem:iplayer - Enable BBC player support
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-video/totem:nautilus - Enable the nautilus extension
 media-video/totem:python - Build support for dev-lang/python plugins
-media-video/totem:tracker - Enable the search plugin using app-misc/tracker
+media-video/totem:tracker - Enable support for searching media files using the indexer app-misc/tracker
+media-video/totem:upnp - Enable DLNA support through media-video/coherence
 media-video/totem:youtube - Enable youtube plugin
 media-video/transcode:extrafilters - Install some filters only if we ask for them
 media-video/transcode:fame - Enables libfame support
