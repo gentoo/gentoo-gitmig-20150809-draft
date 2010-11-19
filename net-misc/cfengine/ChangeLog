@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.115 2010/11/17 10:54:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.116 2010/11/19 20:20:34 idl0r Exp $
+
+*cfengine-3.1.0-r1 (19 Nov 2010)
+
+  19 Nov 2010; Christian Ruppert <idl0r@gentoo.org> -cfengine-3.1.0.ebuild,
+  +cfengine-3.1.0-r1.ebuild, +files/cfengine-3.1.0-cf-key.patch:
+  Revision bump. Fix cf-key --output-file/-f option, upstream bug:
+  https://cfengine.com/bugtracker/view.php?id=390
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> cfengine-2.2.10-r3.ebuild:
   x86 stable, bug #344841

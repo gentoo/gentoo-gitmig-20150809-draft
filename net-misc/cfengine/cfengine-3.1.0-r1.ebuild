@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.0.ebuild,v 1.2 2010/11/09 20:02:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.0-r1.ebuild,v 1.1 2010/11/19 20:20:34 idl0r Exp $
 
 EAPI="3"
 
@@ -40,8 +40,11 @@ PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	# https://cfengine.com/bugtracker/view.php?id=243
 	epatch "${FILESDIR}/${P}-configure.ac.patch"
 	epatch "${FILESDIR}/${PN}-3.0.5_p1-Makefile.am.patch"
+	# https://cfengine.com/bugtracker/view.php?id=390
+	epatch "${FILESDIR}/${P}-cf-key.patch"
 	eautoreconf
 }
 
