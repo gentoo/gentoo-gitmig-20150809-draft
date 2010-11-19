@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.18 2010/07/04 11:47:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.19 2010/11/19 17:42:29 bicatali Exp $
+
+*tkimg-1.4 (19 Nov 2010)
+
+  19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> +tkimg-1.4.ebuild,
+  metadata.xml:
+  Non-dev version bump. Unfortunately the package is bundled with image
+  libraries, needs more work to unbundle them if possible
 
   04 Jul 2010; Justin Lecher <jlec@gentoo.org>
   -files/tkimg-1.3.20081202-prefix.patch,
