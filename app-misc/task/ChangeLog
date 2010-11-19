@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.5 2010/11/09 07:32:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.6 2010/11/19 14:50:46 tomka Exp $
+
+  19 Nov 2010; Thomas Kahle <tomka@gentoo.org> task-1.9.2-r1.ebuild:
+  x86 stable per bug 345575
 
 *task-1.9.3 (09 Nov 2010)
 
