@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/partimage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.48 2010/08/11 21:00:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.49 2010/11/19 19:36:33 flameeyes Exp $
+
+*partimage-0.6.9 (19 Nov 2010)
+
+  19 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +partimage-0.6.9.ebuild, +files/partimaged.init.2, +files/partimaged.pam.2,
+  -files/partimage.1, -files/partimaged.8, -files/partimagedusers.5:
+  Version bump (bug #330159), with fixes for PAM (bug #261686) and init script.
+  Remove man pages that we no longer install.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> partimage-0.6.8.ebuild:
   Marked ppc stable for bug #159556.
