@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.74 2010/11/17 21:16:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.75 2010/11/19 20:06:46 hwoarang Exp $
+
+  19 Nov 2010; Markos Chandras <hwoarang@gentoo.org> mysql-python-1.2.3.ebuild:
+  Stable on amd64 wrt bug #345493
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> mysql-python-1.2.3.ebuild:
   arm stable, bug #345493
