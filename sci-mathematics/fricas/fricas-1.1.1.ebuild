@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.0.9.ebuild,v 1.1 2010/01/24 12:35:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.1.ebuild,v 1.1 2010/11/19 08:30:54 grozin Exp $
 EAPI=2
 inherit multilib elisp-common
 
@@ -18,9 +18,10 @@ DEPS=(  .    .     .   ecls-9 .     .         )
 # command name: . means just ${LISP}
 COMS=(  .    lisp  .   .      .     ccl       )
 
-IUSE="${LISPS[*]} X emacs"
+IUSE="${LISPS[*]} X emacs gmp"
 RDEPEND="X? ( x11-libs/libXpm x11-libs/libICE )
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs )
+	gmp? ( dev-libs/gmp )"
 
 # Generating lisp deps
 n=${#LISPS[*]}
@@ -60,7 +61,7 @@ src_configure() {
 	einfo "Using lisp: ${LISP}"
 
 	# aldor is not yet in portage
-	econf --disable-aldor --with-lisp=${LISP} $(use_with X x)
+	econf --disable-aldor --with-lisp=${LISP} $(use_with X x) $(use_with gmp)
 }
 
 src_compile() {
