@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.7 2010/10/29 14:39:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.8 2010/11/19 17:11:28 wired Exp $
+
+  19 Nov 2010; Alex Alexander <wired@gentoo.org> pf-sources-2.6.36_p1.ebuild,
+  metadata.xml:
+  added experimental useflag. it currently applies a BFS patch that provides
+  group_thread_accounting and fork_depth_penalty. for more info:
+  http://ck-hack.blogspot.com/2010/11/create-task-groups-by-tty-comment.html
 
 *pf-sources-2.6.36_p1 (29 Oct 2010)
 

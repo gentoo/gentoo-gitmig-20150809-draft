@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.36_p1.ebuild,v 1.1 2010/10/29 14:39:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.36_p1.ebuild,v 1.2 2010/11/19 17:11:28 wired Exp $
 
 EAPI="2"
 
@@ -23,10 +23,19 @@ PF_KERNEL="${PV/_p[0-9]*}"
 PF_KERNEL="${PF_KERNEL/_/-}"
 PF_FILE="patch-${PF_KERNEL}-pf${PF_PATCHSET}${COMPRESSTYPE}"
 PF_URI="http://pf-kernel.org.ua/sources/$(get_version_component_range 1-3)/${PF_FILE}"
-SRC_URI="${KERNEL_URI} ${PF_URI}"
+EXPERIMENTAL_PATCHES=(
+	# http://ck-hack.blogspot.com/2010/11/create-task-groups-by-tty-comment.html
+	http://ck.kolivas.org/patches/bfs/bfs357-penalise_fork_depth_account_threads.patch
+)
+EXPERIMENTAL_URI="
+	experimental? (
+		${EXPERIMENTAL_PATCHES[@]}
+	)
+"
+SRC_URI="${KERNEL_URI} ${PF_URI} ${EXPERIMENTAL_URI}"
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="experimental"
 
 KV_FULL="${PVR/_p/-pf}"
 S="${WORKDIR}"/linux-"${KV_FULL}"
@@ -44,6 +53,11 @@ pkg_setup(){
 
 src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
+	if use experimental; then
+		for patch in ${EXPERIMENTAL_PATCHES[@]}; do
+			epatch "${DISTDIR}"/"${patch/*\/}"
+		done
+	fi
 }
 
 K_EXTRAEINFO="For more info on pf-sources and details on how to report problems, see: \
