@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.19 2010/09/09 17:59:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.20 2010/11/19 09:01:14 jlec Exp $
+
+  19 Nov 2010; Justin Lecher <jlec@gentoo.org> goocanvas-0.14.ebuild:
+  Cleaned DESCRIPTION to fit ebuild writing guide lines
 
   09 Sep 2010; Brent Baude <ranger@gentoo.org> goocanvas-0.14.ebuild:
   Marking goocanvas-0.14 ppc64 for bug 327899
