@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.146 2010/09/23 16:31:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.147 2010/11/19 05:31:11 ford_prefect Exp $
+
+*gst-plugins-base-0.10.30 (19 Nov 2010)
+
+  19 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-base-0.10.30.ebuild, metadata.xml:
+  Bump to current upstream release. Ebuild now adds gobject-introspection
+  and Orc support controller by USE-flags. Highlights of this release:
+  Use of Orc to completely replace liboil
+  Number of ffmpegcolorspace enhancements and fixes
+  Other fixes and enhancements
 
   23 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   gst-plugins-base-0.10.29.ebuild,
