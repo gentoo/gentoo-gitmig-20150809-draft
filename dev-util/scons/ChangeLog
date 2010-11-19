@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.91 2010/10/24 17:16:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.92 2010/11/19 13:45:34 maekke Exp $
+
+  19 Nov 2010; Markus Meier <maekke@gentoo.org> scons-2.0.1.ebuild:
+  add ~arm, bug #343791
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org> scons-2.0.1.ebuild:
   alpha/ia64/sparc stable wrt #339531
