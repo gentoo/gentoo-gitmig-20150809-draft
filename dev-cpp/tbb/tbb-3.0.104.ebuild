@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.104.ebuild,v 1.1 2010/11/05 19:51:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.104.ebuild,v 1.2 2010/11/19 06:11:07 bicatali Exp $
 
 EAPI=3
 inherit eutils versionator toolchain-funcs
@@ -29,9 +29,25 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tests.patch
+	# use fully qualified compilers. do not force pentium4 for x86 users
+	local CC="$(tc-getCC)"
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
+		-e 's/^\(CPLUS = \)g++ $/\1'"$(tc-getCXX)/" \
+		-e 's/^\(CONLY = \)gcc$/\1'"${CC}/" \
+		-e 's/\(shell \)gcc\( --version\)/\1'"${CC}"'\2/' \
+		-e '/CPLUS_FLAGS +=/s/-march=pentium4//' \
 		build/*.inc || die
+	# - Strip the $(shell ... >$(NUL) 2>$(NUL)) wrapping, leaving just the
+	#   actual command.
+	# - Force generation of version_string.tmp immediately after the directory
+	#   is created.  This avoids a race when the user builds tbb and tbbmalloc
+	#   concurrently.  The choice of Makefile.tbb (instead of
+	#   Makefile.tbbmalloc) is arbitrary.
+	sed -i \
+		-e 's/^\t\$(shell \(.*\) >\$(NUL) 2>\$(NUL))\s*/\t\1/' \
+		-e 's!^\t@echo Created \$(work_dir)_\(debug\|release\).*$!&\n\t$(MAKE) -C "$(work_dir)_\1"  -r -f $(tbb_root)/build/Makefile.tbb cfg=\1 tbb_root=$(tbb_root) version_string.tmp!' \
+		src/Makefile || die
 }
 
 src_compile() {
@@ -40,20 +56,19 @@ src_compile() {
 	elif [[ $(tc-getCXX) == *ic*c ]]; then
 		myconf="compiler=icc"
 	fi
-	# from the Makefile, split debug
-	cd src
-	emake ${myconf} tbb_release tbbmalloc_release || die "emake failed"
+	local ccconf="${myconf}"
 	if use debug || use examples; then
-		emake ${myconf} tbb_debug tbbmalloc_debug || die "emake debug failed"
+		ccconf="${ccconf} tbb_debug tbbmalloc_debug"
 	fi
+	emake -C src ${ccconf} tbb_release tbbmalloc_release || die "emake failed"
 }
 
 src_test() {
-	cd src
-	emake -j1 ${myconf} test_release || die "emake test failed"
+	local ccconf="${myconf}"
 	if use debug || use examples; then
-		emake -j1 ${myconf} test_debug tbbmalloc_test_debug || die "emake test debug failed"
+		${ccconf}="${myconf} test_debug tbbmalloc_test_debug"
 	fi
+	emake -C src ${ccconf} test_release || die "emake test failed"
 }
 
 src_install(){

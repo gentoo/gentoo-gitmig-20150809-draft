@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.8 2010/11/05 19:51:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.9 2010/11/19 06:11:07 bicatali Exp $
+
+  19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> -tbb-3.0.056.ebuild,
+  tbb-3.0.104.ebuild:
+  Fixed random parallel failures. Respect compilers. Removed forced pentium4
+  for x86 users. Minor other fixes. Thanks Kevin Pyle for his work (bug
+  #331011)
 
 *tbb-3.0.104 (05 Nov 2010)
 
