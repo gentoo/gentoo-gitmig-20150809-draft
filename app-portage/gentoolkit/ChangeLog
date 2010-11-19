@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.198 2010/11/19 16:50:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.199 2010/11/19 20:24:24 fuzzyray Exp $
+
+  19 Nov 2010; Paul Varner <fuzzyray@gentoo.org>
+  +files/0.3.0_rc11-setup.py.patch, gentoolkit-0.3.0_rc11-r1.ebuild:
+  Fix UnicodeDecodeError in setup.py, bug 346001
 
   19 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
   gentoolkit-0.3.0_rc11-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r1.ebuild,v 1.2 2010/11/19 16:50:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r1.ebuild,v 1.3 2010/11/19 20:24:24 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,6 +39,7 @@ distutils_src_compile_pre_hook() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-eshowkw_indir.patch"
+	epatch "${FILESDIR}/${PV}-setup.py.patch"
 }
 
 src_install() {
