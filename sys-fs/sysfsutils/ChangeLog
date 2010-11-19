@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.49 2009/10/11 18:02:08 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.50 2010/11/19 17:45:25 jlec Exp $
+
+  19 Nov 2010; Justin Lecher <jlec@gentoo.org> sysfsutils-2.1.0.ebuild:
+  Import Prefix Changes
 
   11 Oct 2009; Mike Frysinger <vapier@gentoo.org> sysfsutils-2.1.0.ebuild:
   Use epunt_cxx #288544 by Michał Masłowski and gen_usr_ldscript -a.
