@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6168 2010/11/18 20:15:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6169 2010/11/19 01:35:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4022,6 +4022,7 @@ x11-libs/qt-assistant:qt3support - Enable the Qt3Support libraries for Qt4. Note
 x11-libs/qt-assistant:trace - Build the qttracereplay utility which is required to play drawings recorded with the trace graphicssystem engine
 x11-libs/qt-core:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 x11-libs/qt-core:glib - Enable dev-libs/glib eventloop support
+x11-libs/qt-core:jit - Enables JIT for Javascript usage inside Qt
 x11-libs/qt-core:optimized-qmake - Enable qmake optimization
 x11-libs/qt-core:private-headers - Install Qt declarative private headers required by Qt-creator QmlDesigner and QmlInspector plugins"
 x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
