@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.3.ebuild,v 1.4 2010/10/15 13:32:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.3.ebuild,v 1.5 2010/11/19 22:40:35 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils scons-utils toolchain-funcs games
 
 DESCRIPTION="free Lemmings clone"
 HOMEPAGE="http://pingus.seul.org/"
@@ -14,17 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[joystick,video]
+DEPEND="media-libs/libsdl[joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer
 	media-libs/libpng
 	dev-libs/boost"
-DEPEND="${RDEPEND}
-	>=dev-util/scons-0.97"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-paths.patch
+	epatch "${FILESDIR}"/${P}-paths.patch
 	sed -i \
 		-e "s:GENTOO_BINDIR:${GAMES_BINDIR}:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
@@ -41,10 +38,7 @@ src_configure() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-	[[ ${MAKEOPTS/-s/} != ${MAKEOPTS} ]] && sconsopts="${sconsopts} -s"
-
-	scons ${sconsopts} || die "scons failed"
+	escons || die
 }
 
 src_install() {
