@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.1.16.ebuild,v 1.4 2010/04/05 20:36:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.10.2.ebuild,v 1.1 2010/11/19 16:34:51 chutzpah Exp $
 
 EAPI=2
+inherit linux-info
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -13,15 +14,27 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
-IUSE="acl debug hal suid +external-fuse"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="acl debug hal suid udev +external-fuse"
 
-RDEPEND=">=sys-fs/fuse-2.6.0
+RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )
 	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-apps/attr"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use external-fuse && use kernel_linux; then
+		if kernel_is lt 2 6 9; then
+			die "Your kernel is too old."
+		fi
+		CONFIG_CHECK="~FUSE_FS"
+		FUSE_FS_WARNING="You need to have FUSE module built to use ntfs-3g"
+		linux-info_pkg_setup
+	fi
+}
 
 src_configure() {
 	econf \
@@ -36,14 +49,18 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
-	prepalldocs || die "prepalldocs failed"
-	dodoc AUTHORS ChangeLog CREDITS
+	dodoc AUTHORS ChangeLog CREDITS README
 
 	use suid && fperms u+s "/bin/${MY_PN}"
 
 	if use hal; then
 		insinto /etc/hal/fdi/policy/
 		newins "${FILESDIR}/10-ntfs3g.fdi.2009-r1" "10-ntfs3g.fdi"
+	fi
+
+	if use udev; then
+		insinto /etc/udev/rules.d/
+		doins "${FILESDIR}/99-ntfs3g.rules"
 	fi
 }
 

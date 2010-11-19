@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.8.8.ebuild,v 1.2 2010/10/25 07:50:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.8.8.ebuild,v 1.3 2010/11/19 16:34:51 chutzpah Exp $
 
 EAPI=2
 inherit linux-info
@@ -49,8 +49,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
-	prepalldocs || die "prepalldocs failed"
-	dodoc AUTHORS ChangeLog CREDITS
+	dodoc AUTHORS ChangeLog CREDITS README
 
 	use suid && fperms u+s "/bin/${MY_PN}"
 
