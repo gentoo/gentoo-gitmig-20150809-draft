@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.18 2010/08/12 16:32:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.19 2010/11/20 07:33:16 bicatali Exp $
+
+*hepmc-2.06.03 (20 Nov 2010)
+
+  20 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> +hepmc-2.06.03.ebuild:
+  Version bump
 
 *hepmc-2.06.01 (12 Aug 2010)
 
