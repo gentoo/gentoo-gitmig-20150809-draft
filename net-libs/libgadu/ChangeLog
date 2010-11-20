@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.47 2010/11/03 21:35:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.48 2010/11/20 12:03:08 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> libgadu-1.9.0-r1.ebuild,
+  libgadu-1.9.1.ebuild:
+  Added ~arm keyword (bug 343505)
 
 *libgadu-1.9.1 (03 Nov 2010)
 

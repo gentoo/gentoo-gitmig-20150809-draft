@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.52 2009/08/18 21:12:06 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.53 2010/11/20 12:00:36 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> meanwhile-1.0.2.ebuild:
+  Added ~arm keyword (bug 343505)
 
   18 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> meanwhile-1.0.2.ebuild:
   Fixing Quoted ${A}
