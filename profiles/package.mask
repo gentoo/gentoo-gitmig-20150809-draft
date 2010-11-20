@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12213 2010/11/20 12:30:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12214 2010/11/20 19:16:47 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Nov 2010)
+# Unsupportable.  masked for removal on 20101220
+# Use games-action/gltron instead
+games-action/armagetronad
 
 # Markos Chandras <hwoarang@gentoo.org> (20 Nov 2010)
 # Masking qbittorrent live ebuild
