@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fceux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.8 2010/09/22 18:19:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.9 2010/11/20 10:51:02 mr_bones_ Exp $
+
+  20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> fceux-2.1.4a.ebuild:
+  use scons-utils
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> fceux-2.1.4a.ebuild:
   Stable on amd64 wrt bug #335836
