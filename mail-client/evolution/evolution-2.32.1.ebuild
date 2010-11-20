@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.1.ebuild,v 1.1 2010/11/16 19:30:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.1.ebuild,v 1.2 2010/11/20 09:50:39 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -9,6 +9,8 @@ PYTHON_DEPEND="python? 2:2.4"
 inherit autotools flag-o-matic gnome2 python versionator
 
 MY_MAJORV=$(get_version_component_range 1-2)
+# Redefined due to bug 345831, remove for next release cycle
+MY_MAJORV="2.32.1"
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
