@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.182 2010/10/30 21:05:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.183 2010/11/20 23:58:01 eva Exp $
+
+  20 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gtkmm-2.22.0.ebuild:
+  Pin some dependencies to their expected slot.
 
 *gtkmm-2.22.0 (30 Oct 2010)
 
