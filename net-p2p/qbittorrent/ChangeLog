@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.121 2010/11/11 17:48:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.122 2010/11/20 12:50:41 hwoarang Exp $
+
+*qbittorrent-9999 (20 Nov 2010)
+*qbittorrent-2.5.0_beta4 (20 Nov 2010)
+
+  20 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  -qbittorrent-2.5.0_beta1.ebuild, +qbittorrent-2.5.0_beta4.ebuild,
+  +qbittorrent-9999.ebuild:
+  Version bump. Introduce live ebuild. Thanks to Ishan Arora
+  <ishanarora@gmail.com>
 
 *qbittorrent-2.4.10 (11 Nov 2010)
 
