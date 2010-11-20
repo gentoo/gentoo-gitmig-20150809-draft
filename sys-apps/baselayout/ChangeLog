@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.487 2010/11/05 13:30:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.488 2010/11/20 10:29:30 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  20 Nov 2010; Mike Frysinger <vapier@gentoo.org>
+  baselayout-1.12.14-r1.ebuild:
+  Update dhcpcd blocker #345943 by Brendan Shanks.
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   baselayout-1.12.14-r1.ebuild:
