@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.15.ebuild,v 1.1 2010/11/20 10:08:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.15.ebuild,v 1.2 2010/11/20 17:48:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator cmake-utils games
@@ -33,7 +33,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-locale.patch
 
 	sed -i \
 		-e 's:__ppc__:__PPC__:' src/s2map.cc \
