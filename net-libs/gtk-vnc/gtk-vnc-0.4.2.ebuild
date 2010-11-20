@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.2.ebuild,v 1.1 2010/11/16 21:50:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.2.ebuild,v 1.2 2010/11/20 23:09:02 eva Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.4"
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
+	dev-perl/Text-CSV
 	dev-util/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.40"

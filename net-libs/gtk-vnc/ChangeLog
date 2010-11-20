@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.53 2010/11/16 21:50:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.54 2010/11/20 23:09:02 eva Exp $
+
+  20 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gtk-vnc-0.4.2.ebuild:
+  Add missing Text-CSV dependency, bug #345857. Thanks to Diego for reporting.
 
 *gtk-vnc-0.4.2 (16 Nov 2010)
 
