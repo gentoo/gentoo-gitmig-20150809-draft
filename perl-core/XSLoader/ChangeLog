@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/XSLoader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.2 2010/11/18 11:11:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.3 2010/11/20 17:31:27 jer Exp $
+
+  20 Nov 2010; Jeroen Roovers <jer@gentoo.org> XSLoader-0.10.ebuild:
+  Marked ~hppa ~ppc (bug #345605).
 
   18 Nov 2010; Markus Meier <maekke@gentoo.org> XSLoader-0.10.ebuild:
   add ~arm, bug #345605
