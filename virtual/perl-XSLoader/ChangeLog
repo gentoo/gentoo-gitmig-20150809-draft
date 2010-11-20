@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-XSLoader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.5 2010/11/18 10:58:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.6 2010/11/20 17:32:14 jer Exp $
+
+  20 Nov 2010; Jeroen Roovers <jer@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Marked ~hppa ~ppc (bug #345605).
 
   18 Nov 2010; Markus Meier <maekke@gentoo.org> perl-XSLoader-0.10.ebuild:
   add ~arm, bug #345605
