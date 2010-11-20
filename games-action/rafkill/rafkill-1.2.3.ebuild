@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/rafkill-1.2.3.ebuild,v 1.5 2010/10/07 08:43:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/rafkill-1.2.3.ebuild,v 1.6 2010/11/20 01:32:15 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils scons-utils games
 
 DESCRIPTION="space shoot-em-up game"
 HOMEPAGE="http://raptorv2.sourceforge.net/"
@@ -14,10 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/allegro
+DEPEND="media-libs/allegro
 	media-libs/aldumb"
-DEPEND="${RDEPEND}
-	dev-util/scons"
 
 src_prepare() {
 	rm -f {data,music}/.sconsign
@@ -32,9 +30,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-
-	scons ${sconsopts} || die "scons failed"
+	escons || die
 }
 
 src_install() {
