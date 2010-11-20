@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mozart-stdlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/ChangeLog,v 1.12 2010/11/20 00:03:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/ChangeLog,v 1.13 2010/11/20 00:57:18 keri Exp $
+
+*mozart-stdlib-1.4.0-r1 (20 Nov 2010)
+
+  20 Nov 2010; <keri@gentoo.org> +mozart-stdlib-1.4.0-r1.ebuild,
+  +files/mozart-stdlib-1.4.0-docroot.patch:
+  Drop doc USE flag since ozmake always installs docs; install docs into
+  /usr/share/doc
 
   20 Nov 2010; <keri@gentoo.org> mozart-stdlib-1.4.0.ebuild:
   QA - remove die from econf call; add die to do... function calls
