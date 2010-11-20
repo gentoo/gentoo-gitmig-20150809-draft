@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.281 2010/11/19 20:03:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.282 2010/11/20 12:19:20 armin76 Exp $
+
+  20 Nov 2010; Raúl Porcel <armin76@gentoo.org> freetype-2.4.3-r2.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #345843
 
   19 Nov 2010; Markos Chandras <hwoarang@gentoo.org> freetype-2.4.3-r2.ebuild:
   Stable on amd64 wrt bug #345843
