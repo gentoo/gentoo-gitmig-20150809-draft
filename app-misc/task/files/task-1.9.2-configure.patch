@@ -1,5 +1,16 @@
---- task-1.9.2/configure.ac.orig	2010-10-06 10:12:58.910069290 -0700
-+++ task-1.9.2/configure.ac	2010-10-06 10:31:02.943655695 -0700
+--- task-1.9.3/configure.ac.orig	2010-11-20 12:50:26.249141946 -0800
++++ task-1.9.3/configure.ac	2010-11-20 12:51:13.939550053 -0800
+@@ -29,8 +29,8 @@
+   CXXFLAGS="$CXXFLAGS -Wall -pedantic -ggdb3 -DDEBUG"
+   AC_MSG_RESULT(yes)
+ else
+-  CFLAGS="$CFLAGS -Wall -pedantic -O3"
+-  CXXFLAGS="$CXXFLAGS -Wall -pedantic -O3"
++  CFLAGS="$CFLAGS -Wall -pedantic"
++  CXXFLAGS="$CXXFLAGS -Wall -pedantic"
+   AC_MSG_RESULT(no)
+ fi
+ 
 @@ -66,31 +66,10 @@
  
  # ncurses enabled by default.

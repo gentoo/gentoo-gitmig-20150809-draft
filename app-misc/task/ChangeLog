@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.7 2010/11/19 20:10:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.8 2010/11/20 22:24:17 radhermit Exp $
+
+*task-1.9.3-r1 (20 Nov 2010)
+
+  20 Nov 2010; Tim Harder <radhermit@gentoo.org>
+  files/task-1.9.2-configure.patch, -task-1.9.3.ebuild, +task-1.9.3-r1.ebuild:
+  Revbump and remove old. Change theme install path (bug #346159 by Roger
+  Luethi), change i18n install path, use correct directory locations in man
+  pages, remove old MY_P usage, and update patch file to remove hardcoded -O3
+  optimization.
 
   19 Nov 2010; Markos Chandras <hwoarang@gentoo.org> task-1.9.2-r1.ebuild:
   Stable on amd64 wrt bug #345575
