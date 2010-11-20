@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.00-r1.ebuild,v 1.1 2010/11/07 17:27:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.00-r1.ebuild,v 1.2 2010/11/20 13:07:59 armin76 Exp $
 
 EAPI=2
 
@@ -61,7 +61,7 @@ src_prepare() {
 
 	# Create additional symlinks needed for some archs.
 	local t
-	for t in ppc64 s390x; do
+	for t in armv4l armv5l armv6l armv7l ppc64 s390x; do
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
