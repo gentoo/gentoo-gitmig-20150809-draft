@@ -158,7 +158,7 @@ ia64		hardened/linux/ia64					dev
 ppc		hardened/linux/powerpc/ppc32				dev
 ppc		hardened/linux/powerpc/ppc64/32bit-userland		dev
 ppc64		hardened/linux/powerpc/ppc64/64bit-userland		dev
-x86		hardened/linux/x86/10.0					stable
+x86		hardened/linux/x86					stable
 
 # selinux profiles
 amd64		selinux/2007.0/amd64				dev

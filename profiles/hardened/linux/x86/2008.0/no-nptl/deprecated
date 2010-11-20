@@ -1,8 +1,0 @@
-hardened/linux/x86/10.0/no-nptl
-# Example change to hardened/linux/x86/10.0/no-nptl profile:
-# cd /etc
-# rm make.profile
-# ln -s ../usr/portage/profiles/hardened/linux/x86/10.0/no-nptl make.profile
-#
-# Reference: http://www.gentoo.org/doc/en/gentoo-upgrading.xml
-# See: "General instructions" in Section 3. "Profile updating instructions"

@@ -1,10 +1,39 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4799 2010/11/19 13:41:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4800 2010/11/20 00:29:27 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2010; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/x86/10.0/deprecated,
+  +hardened/linux/x86/10.0/desktop/deprecated,
+  hardened/linux/x86/10.0/desktop/parent,
+  +hardened/linux/x86/10.0/developer/deprecated,
+  hardened/linux/x86/10.0/developer/parent,
+  +hardened/linux/x86/10.0/no-nptl/deprecated,
+  hardened/linux/x86/10.0/no-nptl/parent, hardened/linux/x86/10.0/parent,
+  +hardened/linux/x86/10.0/server/deprecated,
+  hardened/linux/x86/10.0/server/parent,
+  -hardened/linux/x86/2008.0/deprecated,
+  -hardened/linux/x86/2008.0/desktop/deprecated,
+  -hardened/linux/x86/2008.0/desktop/make.defaults,
+  -hardened/linux/x86/2008.0/desktop/parent,
+  -hardened/linux/x86/2008.0/developer/deprecated,
+  -hardened/linux/x86/2008.0/developer/parent,
+  -hardened/linux/x86/2008.0/make.defaults,
+  -hardened/linux/x86/2008.0/no-nptl/deprecated,
+  -hardened/linux/x86/2008.0/no-nptl/parent,
+  -hardened/linux/x86/2008.0/parent,
+  -hardened/linux/x86/2008.0/server/deprecated,
+  -hardened/linux/x86/2008.0/server/parent,
+  +hardened/linux/x86/desktop/parent, +hardened/linux/x86/developer/parent,
+  hardened/linux/x86/make.defaults, +hardened/linux/x86/no-nptl/parent,
+  hardened/linux/x86/parent, +hardened/linux/x86/server/parent,
+  hardened/x86/2.6/deprecated, hardened/x86/deprecated,
+  hardened/x86/minimal/deprecated, profiles.desc:
+  Update hardened/linux/x86 profile, bug #344861
 
   19 Nov 2010; Peter Volkov <pva@gentoo.org> package.mask:
   Drop openvz-sources-2.6.18.028.070.12 mask: dropped from the tree and

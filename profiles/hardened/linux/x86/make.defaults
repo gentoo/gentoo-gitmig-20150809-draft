@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation.
+# Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.7 2009/12/13 21:45:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.8 2010/11/20 00:29:27 blueness Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -9,7 +9,10 @@ CHOST="i686-pc-linux-gnu"
 CFLAGS="-march=i686 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 
-USE="berkdb crypt hardened nptl nptlonly pam pic readline ssl tcpd zlib"
+# STAGE1_USE does not stack
+STAGE1_USE="hardened nptl nptlonly pic"
+
+USE="berkdb crypt hardened nptl nptlonly pam pic readline ssl tcpd zlib -unicode"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

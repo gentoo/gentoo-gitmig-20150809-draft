@@ -1,6 +1,6 @@
-hardened/linux/x86/10.0
+hardened/linux/x86
 # Check 'eselect profile list'.
-# Find the number that corresponds with the hardened/linux/x86/10.0 profile.
+# Find the number that corresponds with the hardened/linux/x86 profile.
 # Use 'eselect profile set <number>' to set a new /etc/make.profile symlink.
 #
 # Reference: http://www.gentoo.org/doc/en/gentoo-upgrading.xml
