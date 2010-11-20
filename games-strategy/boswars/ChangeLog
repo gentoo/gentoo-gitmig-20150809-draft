@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/boswars
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.18 2010/11/17 00:46:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.19 2010/11/20 02:15:54 mr_bones_ Exp $
+
+  20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.6.1.ebuild,
+  +files/boswars-2.6.1-scons-blows.patch:
+  use scons-utils; honor LDFLAGS
 
   17 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   +files/boswars-2.6.1-gentoo.patch, -files/boswars-2.6-gentoo.patch:
