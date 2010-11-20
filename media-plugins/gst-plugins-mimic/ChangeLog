@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mimic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.19 2010/09/04 12:17:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.20 2010/11/20 12:07:33 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> gst-plugins-mimic-0.10.18.ebuild,
+  gst-plugins-mimic-0.10.19.ebuild:
+  Added ~arm keyword (bug 343505)
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-mimic-0.10.18.ebuild:
