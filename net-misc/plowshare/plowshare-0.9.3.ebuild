@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.3.ebuild,v 1.1 2010/07/25 12:13:49 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.3.ebuild,v 1.2 2010/11/20 11:54:33 armin76 Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="examples +javascript +perl view-captcha"
 
 RDEPEND="
