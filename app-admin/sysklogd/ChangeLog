@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sysklogd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.71 2008/06/07 16:24:09 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.72 2010/11/20 17:39:33 vapier Exp $
+
+*sysklogd-1.5-r1 (20 Nov 2010)
+
+  20 Nov 2010; Mike Frysinger <vapier@gentoo.org> +sysklogd-1.5-r1.ebuild,
+  +files/sysklogd-1.5-syslog-func-collision.patch:
+  Update Debian patchset for #225847 by oRo and #337279 by Yuri Karaban, and
+  add patch to avoid glibc syslog() collision #342601 by Dmitriy Matrosov.
 
 *sysklogd-1.5 (07 Jun 2008)
 
