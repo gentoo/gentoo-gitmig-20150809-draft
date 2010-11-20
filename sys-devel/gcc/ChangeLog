@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.790 2010/11/19 06:15:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.791 2010/11/20 12:27:40 armin76 Exp $
+
+  20 Nov 2010; Raúl Porcel <armin76@gentoo.org> gcc-4.4.4-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #331531
 
   19 Nov 2010; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.1.ebuild:
   Patchset 1.3 fixes the following bugs:
