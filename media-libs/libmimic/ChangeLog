@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmimic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.16 2010/09/04 12:16:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.17 2010/11/20 12:04:58 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> libmimic-1.0.4-r1.ebuild:
+  Added ~arm keyword (bug 343505)
 
   04 Sep 2010; Raúl Porcel <armin76@gentoo.org> libmimic-1.0.4-r1.ebuild:
   alpha stable
