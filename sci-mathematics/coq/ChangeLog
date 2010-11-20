@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.57 2010/11/18 22:12:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.58 2010/11/20 12:44:09 tomka Exp $
+
+  20 Nov 2010; Thomas Kahle <tomka@gentoo.org> coq-8.3.ebuild,
+  +files/coq-8.3-camlp5-6-compat.patch, +files/coq-8.3-make-3.82-compat.patch:
+  adding compatibility patches for make-3.82 and camlp5-6.02.0, fixes bug
+  #346061
 
 *coq-8.3 (18 Nov 2010)
 

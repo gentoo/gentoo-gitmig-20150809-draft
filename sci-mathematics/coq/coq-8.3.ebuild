@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3.ebuild,v 1.1 2010/11/18 22:12:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3.ebuild,v 1.2 2010/11/20 12:44:09 tomka Exp $
 
 EAPI="2"
 
@@ -30,6 +30,9 @@ DEPEND="${RDEPEND}
 		)"
 
 src_prepare() {
+	# From upstream CVS, remove on next patchlevel:
+	epatch "${FILESDIR}/${P}-camlp5-6-compat.patch"
+	epatch "${FILESDIR}/${P}-make-3.82-compat.patch"
 	# configure has an error at line 640 leading to closing a string
 	# to early in the generated coq_config.ml. Here is a wild sed :)
 	# It replaces \"$LABLGTKLIB\" by $LABLGTKLIB
