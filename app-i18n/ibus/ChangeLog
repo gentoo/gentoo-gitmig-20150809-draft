@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.72 2010/11/12 09:37:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.73 2010/11/20 15:21:55 matsuu Exp $
+
+*ibus-1.3.99.20101118 (20 Nov 2010)
+
+  20 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +ibus-1.3.99.20101118.ebuild:
+  Version bumped.
 
   12 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> ibus-1.2.0.20100111.ebuild,
   ibus-1.3.99.20101028.ebuild:
