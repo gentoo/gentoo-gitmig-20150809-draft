@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.181 2010/11/17 21:46:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.182 2010/11/20 12:14:50 armin76 Exp $
+
+  20 Nov 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-3.2.9.ebuild:
+  alpha/ia64/sparc stable wrt #344081
 
   17 Nov 2010; Markos Chandras <hwoarang@gentoo.org> bugzilla-3.2.9.ebuild:
   Stable on amd64 wrt bug #344081
