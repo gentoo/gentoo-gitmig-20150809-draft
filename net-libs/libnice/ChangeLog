@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.17 2010/11/13 21:21:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.18 2010/11/20 12:26:05 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> libnice-0.0.10.ebuild,
+  libnice-0.0.13.ebuild:
+  Added ~arm keyword (bug 343505)
 
   13 Nov 2010; Fabian Groffen <grobian@gentoo.org> libnice-0.0.13.ebuild,
   +files/libnice-0.0.13-darwin.patch:

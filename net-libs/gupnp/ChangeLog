@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.30 2010/10/29 03:43:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.31 2010/11/20 12:21:40 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> gupnp-0.13.4.ebuild:
+  Added ~arm keyword (bug 343505)
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> gupnp-0.13.4.ebuild:
   Stable for HPPA (bug #330657).

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.33 2010/10/29 03:41:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.34 2010/11/20 12:19:56 xmw Exp $
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> gssdp-0.7.2.ebuild:
+  Added ~arm keyword (bug 343505)
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> gssdp-0.7.2.ebuild:
   Stable for HPPA (bug #330657).
