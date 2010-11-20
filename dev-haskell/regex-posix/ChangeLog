@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-posix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.26 2010/10/19 22:00:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.27 2010/11/20 23:17:57 slyfox Exp $
+
+  20 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  regex-posix-0.94.1.ebuild:
+  alpha/ia64/sparc stable (bug #339580). Marked ~x86-fbsd (bug #227677).
 
   19 Oct 2010; Thomas Kahle <tomka@gentoo.org> regex-posix-0.94.1.ebuild:
   x86 stable per bug 339580
