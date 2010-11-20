@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.285 2010/11/20 15:55:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.286 2010/11/20 18:22:08 flameeyes Exp $
+
+  20 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/Linux-PAM-0.99.8.1-xtests.patch, -files/Linux-PAM-1.1.0-uclibc.patch,
+  -pam-1.1.1-r2.ebuild, -files/Linux-PAM-1.1.1+berkdb-5.patch,
+  -files/Linux-PAM-1.1.1-gentoodb.patch,
+  -files/Linux-PAM-1.1.1-pam_tally2-mode.patch,
+  -files/Linux-PAM-1.1.1-xcrypt.patch:
+  Cleanup old version and required patches.
 
   20 Nov 2010; Raúl Porcel <armin76@gentoo.org> pam-1.1.3.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #343399
