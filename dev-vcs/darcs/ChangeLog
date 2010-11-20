@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.16 2010/11/16 23:06:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.17 2010/11/20 23:35:27 slyfox Exp $
+
+  20 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4-r1.ebuild:
+  alpha/ia64/sparc stable (bug #339580). Marked ~x86-fbsd (bug #227677).
 
   16 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4-r1.ebuild,
   +files/darcs-2.4.4-tests-emailformat.patch:
