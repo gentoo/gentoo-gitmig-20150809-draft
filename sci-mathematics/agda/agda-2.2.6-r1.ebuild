@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.2.6.ebuild,v 1.1 2010/09/14 19:53:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.2.6-r1.ebuild,v 1.1 2010/11/20 13:45:12 kolmodin Exp $
 
 EAPI="2"
 
-CABAL_FEATURES="bin"
+CABAL_FEATURES="lib"
 inherit haskell-cabal eutils elisp-common
 
 MY_PN="Agda"
