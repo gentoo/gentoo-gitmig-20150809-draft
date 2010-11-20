@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.20 2010/10/25 10:20:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.21 2010/11/20 10:47:58 mr_bones_ Exp $
+
+  20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  armagetronad-0.2.8.3.1.ebuild:
+  revert language breakage
 
   25 Oct 2010; Tupone Alfredo <tupone@gentoo.org>
   armagetronad-0.2.8.3.1.ebuild:

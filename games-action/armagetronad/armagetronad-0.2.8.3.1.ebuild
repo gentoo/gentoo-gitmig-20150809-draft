@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.8 2010/10/25 10:20:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.9 2010/11/20 10:47:58 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils gnome2-utils games
@@ -37,7 +37,6 @@ src_prepare() {
 
 	sed -i \
 		-e '/^SUBDIRS/s/desktop//' \
-		-e '/^nobase_language_DATA/d' \
 		Makefile.am || die
 
 	eautoreconf
