@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.9 2009/11/23 01:32:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.10 2010/11/20 01:35:35 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils scons-utils games
 
 MY_PN=${PN/c/C}
 DESCRIPTION="3D and open source chess game"
@@ -15,12 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl
 	media-libs/sdl-image[jpeg,png]
 	virtual/glu
 	virtual/opengl"
-DEPEND="${RDEPEND}
-	dev-util/scons"
 
 S=${WORKDIR}/${PN}_src_${PV}
 PATCHES=( "${FILESDIR}/${P}-sconstruct-sandbox.patch"
@@ -49,9 +47,7 @@ src_configure() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-
-	scons ${sconsopts} || die "scons failed"
+	escons || die
 }
 
 src_install() {

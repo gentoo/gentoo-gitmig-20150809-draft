@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pouetchess
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.13 2009/07/23 15:45:52 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.14 2010/11/20 01:35:35 mr_bones_ Exp $
+
+  20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  pouetchess-0.2.0-r1.ebuild:
+  use scons-utils
 
   23 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
   pouetchess-0.2.0-r1.ebuild:
