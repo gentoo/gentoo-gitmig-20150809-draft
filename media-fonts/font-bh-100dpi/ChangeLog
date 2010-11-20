@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-100dpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/ChangeLog,v 1.35 2010/11/17 16:03:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/ChangeLog,v 1.36 2010/11/20 16:27:21 scarabeus Exp $
+
+  20 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -font-bh-100dpi-1.0.0.ebuild:
+  old
 
 *font-bh-100dpi-1.0.3 (17 Nov 2010)
 
