@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.4.0.ebuild,v 1.2 2008/11/27 05:35:34 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.4.0.ebuild,v 1.3 2010/11/20 00:03:35 keri Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake -j1 || die "emake failed"
 }
 
@@ -36,12 +36,12 @@ src_install() {
 		PREFIX="${D}"/usr/lib/mozart \
 		install || die "emake install failed"
 
-	dosym /usr/lib/mozart/bin/ozmake /usr/bin/ozmake
+	dosym /usr/lib/mozart/bin/ozmake /usr/bin/ozmake || die
 
 	if use doc ; then
-		dohtml -r *
+		dohtml -r * || die
 	fi
 
-	doman ozmake/ozmake.1
-	dodoc ozmake/{CHANGES,DESIGN,NOTES,README}
+	doman ozmake/ozmake.1 || die
+	dodoc ozmake/{CHANGES,DESIGN,NOTES,README} || die
 }
