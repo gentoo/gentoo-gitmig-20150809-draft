@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt-FastCalc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.10 2010/11/18 11:08:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.11 2010/11/20 18:38:33 jer Exp $
+
+  20 Nov 2010; Jeroen Roovers <jer@gentoo.org>
+  Math-BigInt-FastCalc-0.24.ebuild:
+  Marked ~hppa ~ppc (bug #345605).
 
   18 Nov 2010; Markus Meier <maekke@gentoo.org>
   Math-BigInt-FastCalc-0.24.ebuild:
