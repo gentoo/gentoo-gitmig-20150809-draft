@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-dec-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.35 2010/11/17 16:29:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.36 2010/11/20 17:23:22 mgorny Exp $
+
+  20 Nov 2010; Michał Górny <mgorny@gentoo.org> -font-dec-misc-1.0.0.ebuild:
+  Remove redundant version.
 
 *font-dec-misc-1.0.3 (17 Nov 2010)
 

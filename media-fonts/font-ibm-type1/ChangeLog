@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-ibm-type1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.37 2010/11/17 16:23:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-ibm-type1/ChangeLog,v 1.38 2010/11/20 17:21:03 mgorny Exp $
+
+  20 Nov 2010; Michał Górny <mgorny@gentoo.org> -font-ibm-type1-1.0.0.ebuild:
+  Remove redundant version.
 
 *font-ibm-type1-1.0.3 (17 Nov 2010)
 
