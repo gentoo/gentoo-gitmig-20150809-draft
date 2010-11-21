@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731-r1.ebuild,v 1.3 2010/11/21 11:13:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.1 2010/11/21 11:13:48 ulm Exp $
 
 EAPI=3
 
@@ -32,6 +32,7 @@ src_prepare() {
 	SLIME_CHANGELOG_DATE=$(awk '/^[-0-9]+ / { print $1; exit; }' ChangeLog)
 	[ -n "${SLIME_CHANGELOG_DATE}" ] || die "cannot determine ChangeLog date"
 
+	sed -i '/^section :=/d' doc/Makefile || die
 	sed -i "/(defvar \*swank-wire-protocol-version\*/s:nil:\"${SLIME_CHANGELOG_DATE}\":" swank.lisp || die
 	sed -i "s:@SLIME-CHANGELOG-DATE@:${SLIME_CHANGELOG_DATE}:" slime.el || die
 
@@ -46,7 +47,7 @@ src_compile() {
 	emake -j1 -C doc slime.info || die
 
 	if use doc; then
-		VARTEXFONTS="${T}/fonts" emake -j1 -C doc slime.{ps,pdf} || die
+		VARTEXFONTS="${T}/fonts" emake -j1 -C doc slime.pdf || die
 	fi
 }
 
@@ -75,5 +76,5 @@ src_install() {
 	dodoc README* ChangeLog HACKING NEWS PROBLEMS
 	newdoc contrib/README README.contrib
 	newdoc contrib/ChangeLog ChangeLog.contrib
-	use doc && dodoc doc/slime.{ps,pdf}
+	use doc && dodoc doc/slime.pdf
 }

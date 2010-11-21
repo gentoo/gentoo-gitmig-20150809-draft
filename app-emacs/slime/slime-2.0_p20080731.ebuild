@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.6 2009/02/19 19:25:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.7 2010/11/21 11:13:48 ulm Exp $
 
 inherit common-lisp elisp eutils
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-patches.tar.bz2"
 
 LICENSE="GPL-2 xref.lisp"
 SLOT="0"
@@ -24,13 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PV}/module-load-gentoo.patch
-	epatch "${FILESDIR}"/${PV}/dont-call-init.patch
-	epatch "${FILESDIR}"/${PV}/inspect-presentations.patch
-	epatch "${FILESDIR}"/${PV}/fix-ecl.patch
-	epatch "${FILESDIR}"/${PV}/fix-swank-listener-hooks-contrib.patch
-	epatch "${FILESDIR}"/${PV}/fix-slime-indentation.patch
-	epatch "${FILESDIR}"/${PV}/changelog-date.patch
+	EPATCH_SUFFIX=patch epatch
+	mv "${WORKDIR}/swank.asd" "${S}" || die
 
 	# extract date of last update from ChangeLog, bug 233270
 	SLIME_CHANGELOG_DATE=$(awk '/^[-0-9]+ / { print $1; exit; }' ChangeLog)
@@ -57,13 +53,12 @@ src_install() {
 	## install core
 	elisp-install ${PN} *.el{,c} "${FILESDIR}"/swank-loader.lisp \
 		|| die "Cannot install SLIME core"
-	elisp-site-file-install "${FILESDIR}"/${PV}/${SITEFILE} \
+	elisp-site-file-install "${FILESDIR}"/${SITEFILE} \
 		|| die "elisp-site-file-install failed"
-	cp "${FILESDIR}"/${PV}/swank.asd "${S}"
 	# remove upstream swank-loader, since it won't be used
 	rm "${S}"/swank-loader.lisp
 	insinto "${CLSOURCEROOT%/}"/swank
-	doins *.lisp "${FILESDIR}"/${PV}/swank.asd
+	doins *.lisp swank.asd
 	dodir "${CLSYSTEMROOT}"
 	dosym "${CLSOURCEROOT%/}"/swank/swank.asd "${CLSYSTEMROOT}"
 	dosym "${SITELISP}"/${PN}/swank-version.el "${CLSOURCEROOT%/}"/swank
