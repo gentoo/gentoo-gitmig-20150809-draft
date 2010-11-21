@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.96 2010/11/14 20:15:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.97 2010/11/21 18:48:06 chiiph Exp $
+
+  21 Nov 2010; Tomas Touceda <chiiph@gentoo.org> package.use.mask:
+  Mask x11-libs/qt-script[jit] wrt bug 346167
 
   14 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   Mask app-i18n/canna[doc], app-text/ptex does not build and ptex is

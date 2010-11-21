@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.58 2010/11/14 20:15:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.59 2010/11/21 18:48:06 chiiph Exp $
 
 # Dane Smith <c1pher@gentoo.org> (12 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
@@ -108,3 +108,7 @@ app-emulation/pearpc jit
 # >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
 # unmask when TeX Live 2010 keywording is done (bug #342513)
 app-i18n/canna doc
+
+# Tomas Touceda <chiiph@gentoo.org> (21 Nov 2010)
+# JIT isn't implemented on ppc: bug #346167
+x11-libs/qt-script jit
