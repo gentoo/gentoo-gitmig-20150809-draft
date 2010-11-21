@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.105 2010/11/14 23:08:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.106 2010/11/21 22:51:25 eva Exp $
+
+*gphoto2-2.4.10 (21 Nov 2010)
+
+  21 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> +gphoto2-2.4.10.ebuild:
+  Version bump.
 
   14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> -gphoto2-2.4.5.ebuild,
   -gphoto2-2.4.8.ebuild:
