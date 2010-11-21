@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.33 2010/11/05 13:37:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.34 2010/11/21 15:44:21 armin76 Exp $
+
+  21 Nov 2010; Raúl Porcel <armin76@gentoo.org> smokeping-2.4.2-r3.ebuild:
+  sparc stable wrt #341175
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   smokeping-2.4.2-r3.ebuild:

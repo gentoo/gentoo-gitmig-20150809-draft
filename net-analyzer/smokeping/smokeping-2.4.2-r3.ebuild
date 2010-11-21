@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2-r3.ebuild,v 1.3 2010/11/05 13:37:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2-r3.ebuild,v 1.4 2010/11/21 15:44:21 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://oss.oetiker.ch/smokeping/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~sparc x86"
+KEYWORDS="amd64 ~hppa sparc x86"
 IUSE="apache2 speedy"
 
 # dev-perl/JSON-1.x is bundled and is incompatible with version 2.x wich is in
