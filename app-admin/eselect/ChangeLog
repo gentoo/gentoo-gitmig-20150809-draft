@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.174 2010/11/14 16:29:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.175 2010/11/21 14:09:28 ulm Exp $
+
+*eselect-1.2.12 (21 Nov 2010)
+
+  21 Nov 2010; Ulrich Mueller <ulm@gentoo.org> +eselect-1.2.12.ebuild:
+  Version bump.
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> eselect-1.2.11.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #344537
