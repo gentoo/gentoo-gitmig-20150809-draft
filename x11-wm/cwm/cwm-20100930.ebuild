@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-20100930.ebuild,v 1.4 2010/11/10 15:51:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-20100930.ebuild,v 1.5 2010/11/21 19:37:03 xmw Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXft

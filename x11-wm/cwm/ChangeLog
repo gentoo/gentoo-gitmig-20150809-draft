@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.7 2010/11/10 15:51:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.8 2010/11/21 19:37:03 xmw Exp $
+
+  21 Nov 2010; Michael Weber <xmw@gentoo.org> cwm-20100930.ebuild:
+  Added ~arm and ~sparc keyword
 
   10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cwm-20100930.ebuild:
   x86 stable wrt bug #344619
