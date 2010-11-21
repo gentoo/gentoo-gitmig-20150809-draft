@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.20-r2.ebuild,v 1.1 2010/11/17 23:53:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.20-r2.ebuild,v 1.2 2010/11/21 23:54:43 vapier Exp $
 
 EAPI="2"
 
@@ -37,5 +37,5 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	dodoc ChangeLog CREDITS NEWS PORTING README* TODO || die
+	dodoc ChangeLog CREDITS NEWS PORTING README* TODO
 }
