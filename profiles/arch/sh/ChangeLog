@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.53 2010/11/13 16:56:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.54 2010/11/21 06:15:50 dirtyepic Exp $
+
+  21 Nov 2010; Ryan Hill <dirtyepic@gentoo.org> use.mask:
+  Mask lpsol USE flag, needs sci-mathematics/glpk.
 
   13 Nov 2010; Alexis Ballier <aballier@gentoo.org> +package.mask:
   Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513

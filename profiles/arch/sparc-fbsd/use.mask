@@ -1,6 +1,6 @@
-# Copyright 2006-2009 Gentoo Foundation.
+# Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.5 2010/03/22 08:58:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.6 2010/11/21 06:15:50 dirtyepic Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc-fbsd
@@ -28,3 +28,7 @@ qt4
 tk
 xpm
 X
+
+# Ryan Hill <dirtyepic@gentoo.org>
+# Needs sci-mathematics/glpk
+lpsol

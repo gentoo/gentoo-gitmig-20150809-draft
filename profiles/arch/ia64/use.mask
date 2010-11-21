@@ -79,6 +79,7 @@ vaapi
 rtmp
 vpx
 frei0r
+lpsol
 
 # Stuff that doesn't compile on ia64
 chicken
