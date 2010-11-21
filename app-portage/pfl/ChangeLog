@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.16 2010/11/20 10:36:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.17 2010/11/21 13:23:46 billie Exp $
+
+*pfl-2.1 (21 Nov 2010)
+
+  21 Nov 2010; Daniel Pielmeier <billie@gentoo.org> +pfl-2.1.ebuild:
+  Version bump. Only information from the offical Gentoo repository is
+  submitted, overlays are excluded from now on. Works with portage-2.2.*, Fixes
+  bug #346165, thanks Dan Johansson for reporting.
 
   20 Nov 2010; Michael Weber <xmw@gentoo.org> pfl-2.0.ebuild:
   Added ~sparc keyword
