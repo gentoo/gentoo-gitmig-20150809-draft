@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.31 2010/10/16 20:58:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.32 2010/11/21 13:32:43 hwoarang Exp $
+
+  21 Nov 2010; Markos Chandras <hwoarang@gentoo.org> rawdog-2.13.ebuild:
+  Stable on amd64 wrt bug #345485
 
 *rawdog-2.13 (16 Oct 2010)
 
