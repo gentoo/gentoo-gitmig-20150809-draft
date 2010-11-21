@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.157 2010/11/18 00:11:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.158 2010/11/21 23:56:01 vapier Exp $
+
+  21 Nov 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.20.ebuild:
+  Mark alpha/ia64/s390/sparc/sh stable #343255.
 
   18 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove alsa USE description from metadata.xml.
