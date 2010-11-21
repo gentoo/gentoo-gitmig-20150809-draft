@@ -1,6 +1,10 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.84 2010/10/21 10:38:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.85 2010/11/21 02:51:40 sping Exp $
+
+  21 Nov 2010; Sebastian Pipping <sping@gentoo.org>
+  -files/recode-3.6-interix-getopt.patch:
+  Remove unused patch (bug #344607)
 
   21 Oct 2010; Fabian Groffen <grobian@gentoo.org> recode-3.6_p17-r2.ebuild,
   -files/recode-3.6-ppc-macos-new.diff:
