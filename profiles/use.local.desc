@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6175 2010/11/20 16:14:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6176 2010/11/21 06:34:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1033,7 +1033,7 @@ dev-libs/opensc:openct - Build using dev-libs/openct compatibility
 dev-libs/opensc:pcsc-lite - Build with sys-apps/pcsc-lite
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
-dev-libs/ppl:prolog - Build SWI Prolog interface
+dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
 dev-libs/ppl:watchdog - Build the PPL Watchdog library - a C++ library for multiple, concurrent watchdog timers
 dev-libs/seed:dbus - Build the JS module for sys-apps/dbus and dev-libs/dbus-glib
 dev-libs/seed:mpfr - Build the JS module for dev-libs/mpfr
