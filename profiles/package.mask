@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12215 2010/11/21 00:30:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12216 2010/11/21 12:59:14 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -141,11 +141,6 @@ games-mud/panache
 # a lot of time. Nothing in the tree needs it (bug #344331)
 # Replaced by gnome-base/nautilus. Removal 2010-12-06.
 gnome-base/gnome-volume-manager
-
-# Markos Chandras <hwoarang@gentoo.org> (05 Nov 2010)
-# Masking bugfix revision for testing
-# due 2010-11-10
-=net-analyzer/fail2ban-0.8.4-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2010)
 # Over 20 open bugs, http://tinyurl.com/2wurbtz
