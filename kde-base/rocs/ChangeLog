@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.21 2010/11/11 22:45:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.22 2010/11/21 22:05:15 dilfridge Exp $
+
+  21 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.5.3.ebuild,
+  files/rocs-4.5.3-double.patch, +files/rocs-4.5.3-double-handbook.patch:
+  Fixed build for USE=-handbook
 
   11 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.5.3.ebuild,
   +files/rocs-4.5.3-double.patch:
