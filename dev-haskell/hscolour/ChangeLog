@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.9 2010/09/18 19:32:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.10 2010/11/21 19:32:32 slyfox Exp $
+
+  21 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.17.ebuild:
+  sparc stable wrt bug #331623
 
   18 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.17.ebuild:
   alpha and ia64 stable wrt bug #331623
