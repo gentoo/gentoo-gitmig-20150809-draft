@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.4.ebuild,v 1.1 2010/09/05 21:26:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.5.ebuild,v 1.1 2010/11/21 14:14:44 ssuominen Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/perl-5.6
 	dev-perl/URI
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
-	>=xfce-base/libxfce4util-4.2.2
+	xfce-base/libxfce4util
 	python? ( >=dev-python/pygtk-2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -34,13 +34,15 @@ pkg_setup() {
 		python_pkg_setup
 	fi
 
-	PATCHES=( "${FILESDIR}"/${PN}-0.5.3-opera-10_60.patch )
-	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
+	XFCONF=(
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-dependency-tracking
 		--disable-static
 		$(use_enable python)
 		$(xfconf_use_debug)
-		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
+		)
+
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
 }
 
