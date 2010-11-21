@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12214 2010/11/20 19:16:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12215 2010/11/21 00:30:38 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Pagano <mpagano@gentoo.org> (20 Nov 2010)
+# Mask this version of gentoo-sources while we test
+# the effectiveness of the TTY-based group scheduling 
+# patch. 
+=sys-kernel/gentoo-sources-2.6.36-r2
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Nov 2010)
 # Unsupportable.  masked for removal on 20101220
