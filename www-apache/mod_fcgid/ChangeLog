@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.47 2010/11/09 22:29:41 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.48 2010/11/21 17:55:37 maekke Exp $
+
+  21 Nov 2010; Markus Meier <maekke@gentoo.org> mod_fcgid-2.3.6.ebuild:
+  amd64/x86 stable, bug #344685
 
 *mod_fcgid-2.3.6 (09 Nov 2010)
 
