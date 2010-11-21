@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25-r2.ebuild,v 1.2 2010/11/21 15:58:59 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.24-r2.ebuild,v 1.1 2010/11/21 15:58:59 vadimk Exp $
 
 EAPI="2"
 
@@ -10,13 +10,13 @@ DESCRIPTION="VMware kernel modules"
 HOMEPAGE="http://www.vmware.com/"
 
 SRC_URI="x86? (
-		mirror://gentoo/${P}.x86.tar.bz2
-		http://dev.gentoo.org/~vadimk/${P}.x86.tar.bz2
-	)
-	amd64? (
-	 	mirror://gentoo/${P}.amd64.tar.bz2
-		http://dev.gentoo.org/~vadimk/${P}.amd64.tar.bz2
-	)"
+			mirror://gentoo/${P}.x86.tar.bz2
+			http://dev.gentoo.org/~vadimk/${P}.x86.tar.bz2
+			)
+		 amd64? (
+		 	mirror://gentoo/${P}.amd64.tar.bz2
+			http://dev.gentoo.org/~vadimk/${P}.amd64.tar.bz2
+			)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -57,13 +57,13 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-makefile-kernel-dir.patch"
-	epatch "${FILESDIR}/${PV}-makefile-include.patch"
+	epatch "${FILESDIR}/${PV}-kernel-2.6.29.patch"
+	epatch "${FILESDIR}/${PV}-kernel-2.6.30.patch"
+	epatch "${FILESDIR}/${PV}-vmnet-2.6.31.patch"
 	epatch "${FILESDIR}/sched_h-2.6.32.patch"
 	epatch "${FILESDIR}/${PV}-autoconf-generated.patch"
-	epatch "${FILESDIR}/apic.patch"
 	kernel_is ge 2 6 35 && epatch "${FILESDIR}/${PV}-sk_sleep.patch"
 	kernel_is ge 2 6 36 && epatch "${FILESDIR}/${PV}-unlocked_ioctl.patch"
-
 }
 
 src_install() {
