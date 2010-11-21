@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.65 2010/11/14 17:10:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.66 2010/11/21 17:29:06 jer Exp $
+
+  21 Nov 2010; Jeroen Roovers <jer@gentoo.org> MP3-Info-1.24.ebuild:
+  Stable for HPPA PPC (bug #344439).
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> MP3-Info-1.24.ebuild:
   alpha/ia64/sparc stable wrt #344439
