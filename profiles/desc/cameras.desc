@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.6 2010/08/30 19:59:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cameras.desc,v 1.7 2010/11/21 22:16:32 eva Exp $
 
 # This file contains descriptions of CAMERAS USE_EXPAND flags.
 
@@ -12,7 +12,6 @@ aox - libgphoto support for aox cameras
 ax203 - libgphoto support for ax203 cameras
 barbie - libgphoto support for barbie cameras
 canon - libgphoto support for canon cameras
-casio - libgphoto support for casio cameras
 casio_qv - libgphoto support for casio_qv cameras
 clicksmart310 - libgphoto support for clicksmart310 cameras
 digigr8 - libgphoto support for digigr8 cameras
@@ -28,6 +27,7 @@ iclick - libgphoto support for iclick cameras
 jamcam - libgphoto support for jamcam cameras
 jd11 - libgphoto support for jd11 cameras
 jl2005a - libgphoto support for "American Idol Keychain Camera"
+jl2005c - libgphoto support for "American Idol Keychain Camera"
 kodak_dc120 - libgphoto support for kodak_dc120 cameras
 kodak_dc210 - libgphoto support for kodak_dc210 cameras
 kodak_dc240 - libgphoto support for kodak_dc240 cameras
@@ -68,6 +68,5 @@ stv0674 - libgphoto support for stv0674 cameras
 stv0680 - libgphoto support for stv0680 cameras
 sx330z - libgphoto support for sx330z cameras
 template - libgphoto support for template cameras (obsolete)
-toshiba - libgphoto support for toshiba cameras
-toshiba_pdrm11 - libgphoto support for toshiba_pdrm11 cameras
 topfield - libgphoto support for Topfield PVR5000 cameras
+toshiba_pdrm11 - libgphoto support for toshiba_pdrm11 cameras
