@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4801 2010/11/20 12:30:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4802 2010/11/21 10:30:08 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Nov 2010; Pacho Ramos <pacho@gentoo.org> arch/amd64/ChangeLog,
+  arch/amd64/package.use.mask:
+  Mask gstreamer USE flag on wine due bug #346077
 
   20 Nov 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking qbittorrent live ebuild
