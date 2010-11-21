@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/simh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.12 2010/01/15 02:26:32 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.13 2010/11/21 03:57:46 mattst88 Exp $
+
+*simh-3.8.1 (21 Nov 2010)
+
+  21 Nov 2010; <mattst88@gentoo.org> +simh-3.8.1.ebuild,
+  +files/simh-3.8.1-asneeded.patch, +files/simh-3.8.1-makefile.patch:
+  Revision bump to 3.8.1, bug #305523.
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> simh-3.7.0.ebuild:
   Add prefix keywords
