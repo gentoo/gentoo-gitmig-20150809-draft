@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.43 2010/10/07 03:05:31 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.44 2010/11/21 02:55:28 sping Exp $
+
+  21 Nov 2010; Sebastian Pipping <sping@gentoo.org> -files/cream.sh:
+  Remove unused file (bug #344617)
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> cream-0.32.ebuild:
   Drop to ~mips
