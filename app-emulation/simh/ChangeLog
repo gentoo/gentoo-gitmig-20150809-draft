@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/simh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.13 2010/11/21 03:57:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.14 2010/11/21 19:54:26 xmw Exp $
+
+  21 Nov 2010; Michael Weber <xmw@gentoo.org> simh-3.8.1.ebuild:
+  Added ~sparc keyword (bug #346285)
 
 *simh-3.8.1 (21 Nov 2010)
 
