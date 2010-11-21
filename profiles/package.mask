@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12216 2010/11/21 12:59:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12217 2010/11/21 19:32:08 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -989,12 +989,6 @@ net-misc/asterisk-app_nv_faxdetect
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Apr 2010)
 # Replaced by >sci-libs/netcdf-4.0
 sci-libs/libnc-dap
-
-# Mark Loeser <halcy0n@gentoo.org> (24 Apr 2010)
-# Masked for testing.  Only use this version of gcc if you know what you are
-# doing
-=sys-devel/gcc-4.5*
-=dev-java/gcj-jdk-4.5*
 
 # Peter Volkov <pva@gentoo.org> (22 Apr 2010)
 # Masking development kernels. Test it and report bugs upstream.
