@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.0.ebuild,v 1.1 2010/10/14 17:09:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.0-r1.ebuild,v 1.1 2010/11/21 18:56:20 xarthisius Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.gluster.com/pub/gluster/${PN}/$(get_version_component_range 
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs +fuse infiniband static-libs vim-syntax extras"
+IUSE="emacs extras +fuse infiniband static-libs vim-syntax"
 
 DEPEND="emacs? ( virtual/emacs )
 		fuse? ( >=sys-fs/fuse-2.7.0 )
@@ -24,7 +24,8 @@ SITEFILE="50${PN}-mode-gentoo.el"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-parallel-build.patch" \
-		"${FILESDIR}/${PN}-2.0.8-docdir.patch"
+		"${FILESDIR}/${PN}-2.0.8-docdir.patch" \
+		"${FILESDIR}/glusterd-workdir.patch"
 	eautoreconf
 }
 
@@ -67,29 +68,34 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS || die
 
 	newinitd "${FILESDIR}/${PN}.initd" glusterfsd || die
+	newinitd "${FILESDIR}/glusterd.initd" glusterd || die
 	newconfd "${FILESDIR}/${PN}.confd" glusterfsd || die
 
 	keepdir /var/log/${PN} || die
+	keepdir /var/lib/glusterd || die
 }
 
 pkg_postinst() {
-	elog "The glusterfs startup script can be multiplexed."
-	elog "The default startup script uses /etc/conf.d/glusterfs to configure the"
-	elog "separate service.  To create additional instances of the glusterfs service"
-	elog "simply create a symlink to the glusterfs startup script."
+	elog "Starting with ${PN}-3.1.0, you can use the glusterd daemon to configure your"
+	elog "volumes dynamically. To do so, simply use the gluster CLI after running:"
+	elog "  /etc/init.d/glusterd start"
+	elog
+	elog "For static configurations, the glusterfsd startup script can be multiplexed."
+	elog "The default startup script uses /etc/conf.d/glusterfsd to configure the"
+	elog "separate service.  To create additional instances of the glusterfsd service"
+	elog "simply create a symlink to the glusterfsd startup script."
 	elog
 	elog "Example:"
 	elog "    # ln -s glusterfsd /etc/init.d/glusterfsd2"
 	elog "    # ${EDITOR} /etc/glusterfs/glusterfsd2.vol"
 	elog "You can now treat glusterfsd2 like any other service"
-	echo
-	elog "You can mount exported GlusterFS filesystems through /etc/fstab instead of"
-	elog "through a startup script instance.  For more information visit:"
+	elog
+	elog "For more information on how to mount exported GlusterFS filesystems visit:"
 	elog "http://www.gluster.org/docs/index.php/Mounting_a_GlusterFS_Volume"
-	echo
+	elog
 	elog "If you are upgrading from glusterfs 3.0.x please read:"
 	elog "http://www.gluster.com/community/documentation/index.php/Gluster_3.0_to_3.1_Upgrade_Guide"
-	echo
+	elog
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
 	ewarn "of your servers.  Setup a NTP synchronizing service before attempting to"
 	ewarn "run GlusterFS."
