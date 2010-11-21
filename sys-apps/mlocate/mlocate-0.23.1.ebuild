@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.23.1.ebuild,v 1.12 2010/11/15 12:31:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.23.1.ebuild,v 1.13 2010/11/21 14:57:13 fauli Exp $
 
 EAPI="3"
 
@@ -49,6 +49,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Note that the /etc/updatedb.conf file is generic;"
-	elog "Please customize it to your system requirements."
+	elog "The database for the locate command is generated daily by a cron job,"
+	elog "if you install for the first time you can run the updatedb command manually now."
+	elog
+	elog "Note that the /etc/updatedb.conf file is generic,"
+	elog "please customize it to your system requirements."
 }
