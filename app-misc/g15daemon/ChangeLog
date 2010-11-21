@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.33 2010/03/09 21:53:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.34 2010/11/21 02:59:34 sping Exp $
+
+  21 Nov 2010; Sebastian Pipping <sping@gentoo.org>
+  -files/g15daemon-1.2.6a.confd, -files/g15daemon-1.2.6a.initd,
+  -files/g15daemon-1.2.7-r1.initd, -files/g15daemon-1.2.7.initd:
+  Remove unused files (bug #342671)
 
   09 Mar 2010; Joseph Jezak <josejx@gentoo.org> g15daemon-1.9.5.3-r3.ebuild:
   Marked ppc stable for bug #284520.
