@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.55 2010/10/18 09:03:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.56 2010/11/21 12:42:45 armin76 Exp $
+
+  21 Nov 2010; Raúl Porcel <armin76@gentoo.org> gpsd-2.32.ebuild,
+  gpsd-2.38.ebuild, gpsd-2.39-r1.ebuild:
+  Drop sparc keywords
 
   18 Oct 2010; Steve Arnold <nerdboy@gentoo.org> gpsd-2.95.ebuild:
   Keyworded for ~ppc (tested on G4 ibook).
