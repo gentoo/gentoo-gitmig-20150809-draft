@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.6.ebuild,v 1.1 2010/11/20 16:06:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.6.ebuild,v 1.2 2010/11/21 11:24:50 armin76 Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -26,8 +26,7 @@ RDEPEND="dev-lang/perl
 	magic? ( sys-apps/file )"
 
 DEPEND="${RDEPEND}
-	>=dev-lang/ocaml-3.10.2[ocamlopt?]
-	sys-apps/sed"
+	>=dev-lang/ocaml-3.10.2[ocamlopt?]"
 
 MLUSER="p2p"
 
@@ -88,7 +87,7 @@ src_configure() {
 		$(use_enable gnutella gnutella2) \
 		$(use_enable gd) \
 		$(use_enable magic) \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_compile() {
