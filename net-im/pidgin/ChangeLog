@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.205 2010/11/14 16:10:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.206 2010/11/21 00:55:56 xmw Exp $
+
+  21 Nov 2010; Michael Weber <xmw@gentoo.org> pidgin-2.7.5.ebuild:
+  Added ~arm keyword (bug 343505)
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> pidgin-2.7.5.ebuild:
   alpha/ia64/sparc stable wrt #343653
