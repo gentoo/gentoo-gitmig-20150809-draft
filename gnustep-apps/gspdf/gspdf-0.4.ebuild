@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gspdf/gspdf-0.2.ebuild,v 1.2 2009/12/26 19:40:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gspdf/gspdf-0.4.ebuild,v 1.1 2010/11/22 14:42:56 voyageur Exp $
 
 inherit eutils gnustep-2
 
