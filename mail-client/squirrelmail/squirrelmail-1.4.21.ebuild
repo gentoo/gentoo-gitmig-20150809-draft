@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.21.ebuild,v 1.2 2010/11/22 10:05:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.21.ebuild,v 1.3 2010/11/22 20:31:24 hwoarang Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 HOMEPAGE="http://www.squirrelmail.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND=""
 

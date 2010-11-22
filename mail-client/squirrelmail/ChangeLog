@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.154 2010/11/22 10:05:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.155 2010/11/22 20:31:24 hwoarang Exp $
+
+  22 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  squirrelmail-1.4.21.ebuild:
+  Stable on amd64 wrt bug #329863
 
   22 Nov 2010; Thomas Kahle <tomka@gentoo.org> squirrelmail-1.4.21.ebuild:
   x86 stable per bug 329863
