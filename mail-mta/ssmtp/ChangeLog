@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.95 2010/06/27 09:18:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.96 2010/11/22 17:46:03 flameeyes Exp $
+
+  22 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/ssmtp-2.62-darwin-crypto.patch:
+  Use a saner approacy to link in libcrypto.
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ssmtp-2.62-r8.ebuild:
   add ~x86-freebsd

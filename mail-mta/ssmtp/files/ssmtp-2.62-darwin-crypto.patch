@@ -8,11 +8,11 @@ ld: symbol(s) not found
 
 --- configure.in
 +++ configure.in
-@@ -53,6 +53,7 @@
+@@ -53,6 +53,6 @@
  if test x$enableval = xyes ; then
  	AC_DEFINE(HAVE_SSL)
- 	LIBS="$LIBS -lssl"
-+	AC_SEARCH_LIBS([X509_free], [crypto])
+- 	LIBS="$LIBS -lssl"
++ 	LIBS="$LIBS -lssl -lcrypto"
  fi
  enableval=""
  
