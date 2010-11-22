@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 2010-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/files/c-icap.init,v 1.1 2010/11/22 15:44:40 flameeyes Exp $
+
+depend() {
+    need localmount net
+}
+
+start() {
+	# Find the currently-configured pid file and command socket
+	pidfile=$(awk '$1 == "PidFile" { print $2 }' /etc/c-icap/c-icap.conf)
+	cmdsocket=$(awk '$1 == "CommandsSocket" { print $2 }' /etc/c-icap/c-icap.conf)
+
+	if ! [ -d "$(dirname "${pidfile}")" ] || ! [ -d "$(dirname "${cmdsocket}")" ]; then
+		mkdir -p "$(dirname "${pidfile}")" "$(dirname "${cmdsocket}")"
+	fi
+
+	ebegin "Starting c-icap daemon"
+	start-stop-daemon \
+		--start --pidfile ${pidfile} \
+		--exec /usr/libexec/c-icap -- ${EXTRA_OPTS}
+	eend $?
+}
+
+stop() {
+	# Find the currently-configured pid file
+	pidfile=$(awk '$1 == "PidFile" { print $2 }' /etc/c-icap/c-icap.conf)
+
+	ebegin "Stopping c-icap daemon"
+	start-stop-daemon \
+		--stop --pidfile ${pidfile} \
+		--exec /usr/libexec/c-icap
+	eend $?
+}
