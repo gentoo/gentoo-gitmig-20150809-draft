@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.148 2010/11/22 04:59:45 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.149 2010/11/22 05:37:26 ford_prefect Exp $
+
+  22 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  gst-plugins-base-0.10.30.ebuild,
+  +files/gst-plugins-base-0.10.30-fix-tag-test-linking.patch:
+  Fix include order problem in tags test. Fixes bug #346169.
 
   22 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
   gst-plugins-base-0.10.30.ebuild:

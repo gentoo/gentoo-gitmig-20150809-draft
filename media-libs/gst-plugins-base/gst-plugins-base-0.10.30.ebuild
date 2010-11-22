@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.30.ebuild,v 1.2 2010/11/22 04:59:45 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.30.ebuild,v 1.3 2010/11/22 05:37:26 ford_prefect Exp $
 
 EAPI=1
 
@@ -35,6 +35,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.10.29-make-382.patch
+	# From upstream commit 5f5c52cb
+	epatch "${FILESDIR}"/${P}-fix-tag-test-linking.patch
 	eautoreconf
 }
 
