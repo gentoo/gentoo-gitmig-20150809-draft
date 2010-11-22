@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.15 2010/07/06 03:53:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.16 2010/11/22 01:04:58 vapier Exp $
 
 EAPI="2"
 
@@ -19,19 +19,20 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
-		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-ng-2.17.1-20100308.diff.bz2 )"
+		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-ng-2.18-20100706.diff.bz2 )"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="crypt loop-aes nls old-linux perl selinux slang uclibc unicode"
+IUSE="+cramfs crypt loop-aes nls old-linux perl selinux slang uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
 	>=sys-libs/ncurses-5.2-r2
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
+	cramfs? ( sys-libs/zlib )
 	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )"
@@ -69,7 +70,7 @@ src_configure() {
 		--enable-fs-paths-extra=/usr/sbin \
 		$(use_enable nls) \
 		--enable-agetty \
-		--enable-cramfs \
+		$(use_enable cramfs) \
 		$(use_enable old-linux elvtune) \
 		--disable-init \
 		--disable-kill \
