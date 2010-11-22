@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.7 2010/11/02 17:12:42 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.8 2010/11/22 11:53:15 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -44,5 +44,8 @@ eblit-php-pkg_postinst() {
 	ewarn "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
 	ewarn "'production' or 'development' in /etc/make.conf"
 	ewarn "Both versions of php.ini can be found in /usr/share/doc/${PF}"
+	ewarn
+	ewarn "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
+	ewarn "http://www.gentoo.org/proj/en/php/php-guide.xml"
 }
 

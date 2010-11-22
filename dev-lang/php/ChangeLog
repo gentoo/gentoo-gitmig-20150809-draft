@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.439 2010/11/09 13:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.440 2010/11/22 11:53:15 olemarkus Exp $
+
+  22 Nov 2010; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/pkg_postinst-v1.eblit, files/eblits/pkg_postinst-v2.eblit:
+  Added link to upgrade guide
 
   09 Nov 2010; Jeroen Roovers <jer@gentoo.org> php-5.2.14-r2.ebuild,
   php-5.3.3-r3.ebuild:
