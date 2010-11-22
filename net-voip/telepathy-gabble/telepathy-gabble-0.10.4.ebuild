@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.4.ebuild,v 1.1 2010/11/03 21:09:25 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.4.ebuild,v 1.2 2010/11/22 19:42:59 eva Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2:2.5"
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="A Jabber/XMPP connection manager, this handles single and multi user chats and voice calls."
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -31,6 +32,10 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-python/twisted-0.8.2
 		>=dev-python/twisted-words-0.8.2
 		>=dev-python/dbus-python-0.83 )"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_configure() {
 	econf \

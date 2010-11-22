@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.65 2010/11/03 21:09:25 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.66 2010/11/22 19:42:59 eva Exp $
+
+  22 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  telepathy-gabble-0.10.4.ebuild:
+  Make sure package builds with multiple python slots installation.
 
 *telepathy-gabble-0.10.4 (03 Nov 2010)
 
