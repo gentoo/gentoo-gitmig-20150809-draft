@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.11 2010/08/20 19:15:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.12 2010/11/22 15:54:20 tommy Exp $
 
-EAPI="1"
-DATE=20100820
+EAPI="2"
+DATE=20101030
+JAVA_PKG_IUSE="doc source"
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
 EGIT_PROJECT="freenet/fred-official"
@@ -17,7 +18,7 @@ SRC_URI="mirror://gentoo/seednodes-${DATE}.fref"
 LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="freemail"
+IUSE="freemail test"
 
 CDEPEND="dev-db/db-je:3.3
 	dev-java/fec
@@ -30,7 +31,8 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/lzmajio
 	dev-java/mersennetwister"
 DEPEND=">=virtual/jdk-1.5
-	${CDEPEND}"
+	${CDEPEND}
+	test? ( dev-java/junit )"
 RDEPEND=">=virtual/jre-1.5
 	net-libs/nativebiginteger
 	${CDEPEND}"
@@ -38,8 +40,12 @@ PDEPEND="net-libs/NativeThread
 	freemail? ( dev-java/bcprov )"
 S=${WORKDIR}/${PN}
 
-EANT_BUILD_TARGET="dist"
+EANT_BUILD_TARGET="package"
+EANT_BUILD_XML="build-clean.xml"
 EANT_GENTOO_CLASSPATH="ant-core db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
+EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true"
+use test || export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
+use test && EANT_GENTOO_CLASSPATH+=" junit"
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
@@ -47,20 +53,18 @@ pkg_setup() {
 	enewuser freenet -1 -1 /var/freenet freenet
 }
 
-src_unpack() {
-	git_src_unpack
-	cd "${S}"
+src_prepare() {
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
-	epatch "${FILESDIR}"/ext.patch
+	epatch "${FILESDIR}"/{0.7.5_p1302-ext,strip-openjdk-check}.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
-	java-ant_rewrite-classpath
+	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
 	cp "${DISTDIR}"/seednodes-${DATE}.fref seednodes.fref || die
 }
 
 src_install() {
-	java-pkg_newjar lib/freenet-cvs-snapshot.jar ${PN}.jar
+	java-pkg_dojar dist/freenet.jar
 	if has_version =sys-apps/baselayout-2*; then
 		doinitd "${FILESDIR}"/freenet
 	else
@@ -73,6 +77,8 @@ src_install() {
 	doins seednodes.fref run.sh || die
 	fperms +x /var/freenet/run.sh
 	dosym java-service-wrapper/libwrapper.so /usr/$(get_libdir)/libwrapper.so
+	use doc && java-pkg_dojavadoc javadoc
+	use source && java-pkg_dosrc src
 }
 
 pkg_postinst() {
