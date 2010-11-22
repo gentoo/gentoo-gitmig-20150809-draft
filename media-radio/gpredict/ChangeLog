@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/gpredict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/ChangeLog,v 1.3 2010/09/04 17:00:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/ChangeLog,v 1.4 2010/11/22 20:01:46 tomjbe Exp $
+
+*gpredict-1.2 (22 Nov 2010)
+
+  22 Nov 2010; Thomas Beierlein <tomjbe@gentoo.org> +gpredict-1.2.ebuild:
+  Version bump.
 
   04 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gpredict-1.1.ebuild:
   x86 stable wrt bug #335264
