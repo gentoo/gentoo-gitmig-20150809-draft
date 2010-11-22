@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.31 2010/10/23 08:53:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.32 2010/11/22 15:22:53 tove Exp $
+
+*YAML-Syck-1.17 (22 Nov 2010)
+
+  22 Nov 2010; Torsten Veller <tove@gentoo.org> +YAML-Syck-1.17.ebuild:
+  Version bump
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> YAML-Syck-1.15.ebuild:
   Keyword ~ppc64 wrt #341969
