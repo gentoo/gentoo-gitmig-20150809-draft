@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.2 2010/11/07 13:12:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.3 2010/11/22 17:25:07 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -20,7 +20,6 @@ RDEPEND="sys-libs/zlib
 	gtk? ( >=x11-libs/gtk+-2 )
 	png? ( media-libs/libpng )
 	X? ( x11-libs/libX11
-		 x11-libs/libXxf86dga
 		 x11-libs/libXext
 		 x11-libs/libXxf86vm )"
 
@@ -30,7 +29,6 @@ DEPEND="${RDEPEND}
 		dev-texlive/texlive-texinfo )
 	X? ( x11-proto/xf86vidmodeproto
 		 x11-proto/xextproto
-		 x11-proto/xf86dgaproto
 		 x11-proto/xproto )"
 
 src_prepare() {
