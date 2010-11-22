@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.4.1.ebuild,v 1.4 2010/07/13 18:01:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.4.2.ebuild,v 1.1 2010/11/22 08:01:17 xarthisius Exp $
 
 EAPI=2
 
@@ -46,6 +46,8 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${D}" -name "*.la" -delete
+
 	dodoc AUTHORS NEWS README TODO || die
 
 	if use server ; then
