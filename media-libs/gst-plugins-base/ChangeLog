@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.147 2010/11/19 05:31:11 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.148 2010/11/22 04:59:45 ford_prefect Exp $
+
+  22 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  gst-plugins-base-0.10.30.ebuild:
+  Fix gstreamer required version as pointed out by EvaSDK (bug #346363)
 
 *gst-plugins-base-0.10.30 (19 Nov 2010)
 
