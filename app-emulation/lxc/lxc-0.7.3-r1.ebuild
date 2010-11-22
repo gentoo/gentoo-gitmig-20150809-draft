@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.3-r1.ebuild,v 1.1 2010/11/22 10:42:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.3-r1.ebuild,v 1.2 2010/11/22 10:48:32 flameeyes Exp $
 
 EAPI="2"
 
@@ -104,6 +104,12 @@ pkg_postinst() {
 		elog "http://blog.flameeyes.eu/tag/lxc" # remove once proper doc is available
 		elog ""
 	fi
-	ewarn "To use the lxc-debian and lxc-fedora commands, you need respectively"
-	ewarn "dev-util/debootstrap and sys-apps/yum."
+	ewarn "Starting from version 0.7.3, you have to specify mount points of bind mounts"
+	ewarn "using the rootfs mount point as a base. This means you'd then have something"
+	ewarn "along the lines of the following in your lxc configuration files:"
+	ewarn ""
+	ewarn "    lxc.mount.entry = /usr/portage /usr/lib/lxc/rootfs/usr/portage none bind 0 0"
+	ewarn ""
+	ewarn "To use the lxc-fedora, lxc-debian and lxc-ubuntu commands, you need respectively"
+	ewarn "sys-apps/yum and dev-util/debootstrap."
 }
