@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.17 2010/11/16 14:14:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.18 2010/11/22 10:42:14 flameeyes Exp $
+
+*lxc-0.7.3-r1 (22 Nov 2010)
+
+  22 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> -lxc-0.7.3.ebuild,
+  +lxc-0.7.3-r1.ebuild:
+  Revision bump to make sure that the rootfs mount point is the same between
+  32-bit and 64-bit systems.
 
 *lxc-0.7.3 (16 Nov 2010)
 

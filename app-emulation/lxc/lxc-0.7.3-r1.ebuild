@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.3.ebuild,v 1.1 2010/11/16 14:14:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.3-r1.ebuild,v 1.1 2010/11/22 10:42:14 flameeyes Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ src_configure() {
 		--bindir=/usr/sbin \
 		--docdir=/usr/share/doc/${PF} \
 		--with-config-path=/etc/lxc	\
+		--with-rootfs-path=/usr/lib/lxc/rootfs \
 		$(use_enable doc) \
 		$(use_enable examples) \
 		|| die "configure failed"
@@ -82,7 +83,7 @@ src_install() {
 		"${D}"/usr/share/man/man1/lxc-ls.1 \
 		|| die "unable to remove extraenous content"
 
-	keepdir /etc/lxc
+	keepdir /etc/lxc /usr/lib/lxc/rootfs
 
 	find "${D}" -name '*.la' -delete
 
