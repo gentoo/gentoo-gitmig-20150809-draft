@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.10-r1.ebuild,v 1.1 2008/08/23 03:52:46 mrness Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.10-r1.ebuild,v 1.2 2010/11/22 02:56:12 vapier Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -34,7 +31,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-plugin-options.patch"
 	epatch "${FILESDIR}/${P}-autotools.patch"
 	epatch "${FILESDIR}/${P}-session-offset.patch" # bug 204476
-	epatch "${FILESDIR}/${P}-linux-headers.patch"
+	has_version '<sys-kernel/linux-headers-2.6.35' && \
+		epatch "${FILESDIR}/${P}-linux-headers.patch" #334197
+	epatch "${FILESDIR}/${P}-posix-source-sigaction.patch"
 
 	cd "${S}"/src
 	eautoreconf
