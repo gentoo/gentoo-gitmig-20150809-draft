@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rendercheck
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.13 2009/09/19 21:22:50 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.14 2010/11/22 15:05:36 scarabeus Exp $
+
+*rendercheck-1.4 (22 Nov 2010)
+
+  22 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +rendercheck-1.4.ebuild:
+  Version bump
 
   19 Sep 2009; Rémi Cardona <remi@gentoo.org> rendercheck-1.3.ebuild:
   complete ebuild overhaul, drop dep on xorg-x11 (fixes bug #242588)
