@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.351 2010/10/17 21:35:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.352 2010/11/22 00:31:03 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1787,7 +1787,7 @@ preserve_old_lib_notify() {
 			ewarn "helper program, simply emerge the 'gentoolkit' package."
 			ewarn
 		fi
-		ewarn "  # revdep-rebuild --library ${lib##*/}"
+		ewarn "  # revdep-rebuild --library '${lib}'"
 	done
 	if [[ ${notice} -eq 1 ]] ; then
 		ewarn
