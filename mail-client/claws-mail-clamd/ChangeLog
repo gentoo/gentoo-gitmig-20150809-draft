@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/claws-mail-clamd
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-clamd/ChangeLog,v 1.1 2010/11/22 14:43:01 fauli Exp $
+
+*claws-mail-clamd-3.5 (22 Nov 2010)
+
+  22 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-clamd-3.5.ebuild, +metadata.xml:
+  initial import, a Claws Mail plugin to scan for viruses
+
