@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.11 2010/10/25 12:12:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.12 2010/11/22 22:05:17 wired Exp $
+
+*zathura-0.0.8.2 (22 Nov 2010)
+
+  22 Nov 2010; Alex Alexander <wired@gentoo.org> +zathura-0.0.8.2.ebuild:
+  version bump
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   zathura-0.0.8.1.ebuild:
