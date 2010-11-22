@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.46 2010/04/25 11:34:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.47 2010/11/22 18:10:15 jlec Exp $
+
+*xforms-1.0.93 (22 Nov 2010)
+
+  22 Nov 2010; Justin Lecher <jlec@gentoo.org> +xforms-1.0.93.ebuild:
+  Version bump
 
 *xforms-1.0.92_p2 (03 Feb 2010)
 
