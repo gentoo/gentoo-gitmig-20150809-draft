@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/claws-mail-mailmbox-1.14.3.ebuild,v 1.7 2009/03/14 15:34:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/claws-mail-mailmbox-1.14.3.ebuild,v 1.8 2010/11/23 08:57:07 fauli Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -18,8 +18,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README
 
 	# kill useless files
 	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}

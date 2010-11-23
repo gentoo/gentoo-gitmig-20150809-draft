@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.7.ebuild,v 1.3 2010/08/07 14:13:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.7.ebuild,v 1.4 2010/11/23 08:44:04 fauli Exp $
 
 inherit eutils
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README
 
 	# kill useless files
 	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}

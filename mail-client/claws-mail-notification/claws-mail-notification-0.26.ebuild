@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.26.ebuild,v 1.1 2010/11/22 14:23:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.26.ebuild,v 1.2 2010/11/23 09:00:32 fauli Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -25,8 +25,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README
 
 	# kill useless files
 	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}

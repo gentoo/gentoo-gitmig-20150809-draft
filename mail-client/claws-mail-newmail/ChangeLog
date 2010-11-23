@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-newmail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.25 2009/03/14 15:46:34 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.26 2010/11/23 08:58:18 fauli Exp $
+
+  23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-newmail-0.0.15.ebuild:
+  add a die after emake and don't install NEWS file (no contents)
 
   14 Mar 2009; nixnut <nixnut@gentoo.org> claws-mail-newmail-0.0.15.ebuild:
   ~ppc'd
