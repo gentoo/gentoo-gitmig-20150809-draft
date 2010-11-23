@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.65 2010/05/17 20:37:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.66 2010/11/23 10:27:17 jlec Exp $
+
+*foomatic-filters-4.0.5 (23 Nov 2010)
+
+  23 Nov 2010; Justin Lecher <jlec@gentoo.org> +foomatic-filters-4.0.5.ebuild:
+  Version Bump
 
 *foomatic-filters-4.0.4 (17 May 2010)
 
