@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/claws-mail-perl-0.9.18.ebuild,v 1.3 2010/08/07 14:16:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/claws-mail-perl-0.9.18.ebuild,v 1.4 2010/11/23 09:03:04 fauli Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -24,12 +24,11 @@ src_compile() {
 
 	pod2man --section=1 --release=${PV} --name=cm_perl cm_perl.pod > cm_perl.1
 
-	cd tools
-	emake || die
+	emake -C tools || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 
 	doman cm_perl.1
