@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/claws-mail-fancy-0.9.10.ebuild,v 1.3 2010/08/07 14:14:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/claws-mail-fancy-0.9.10.ebuild,v 1.4 2010/11/23 08:49:45 fauli Exp $
 
 MY_P="${PN#claws-mail-}-${PV}"
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 
 	# kill useless files

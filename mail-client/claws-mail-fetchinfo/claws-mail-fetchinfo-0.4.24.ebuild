@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/claws-mail-fetchinfo-0.4.24.ebuild,v 1.5 2009/03/14 15:44:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/claws-mail-fetchinfo-0.4.24.ebuild,v 1.6 2010/11/23 08:51:02 fauli Exp $
 
 MY_P="${PN#claws-mail-}-plugin-${PV}"
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 
 	# kill useless files
