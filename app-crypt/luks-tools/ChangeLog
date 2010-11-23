@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/luks-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/ChangeLog,v 1.8 2009/03/23 08:52:58 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/ChangeLog,v 1.9 2010/11/23 00:46:56 hanno Exp $
+
+*luks-tools-0.0.14 (23 Nov 2010)
+
+  23 Nov 2010; Hanno Boeck <hanno@gentoo.org> +luks-tools-0.0.14.ebuild:
+  Version bump, although this still depends on hal, maybe a candidate for
+  removal soon.
 
 *luks-tools-0.0.13 (23 Mar 2009)
 
