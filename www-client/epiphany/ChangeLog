@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.256 2010/10/17 15:38:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.257 2010/11/23 22:35:48 eva Exp $
+
+  23 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/epiphany-2.22.3-CVE-2008-5985.patch,
+  -files/epiphany-2.22.3-firefox2.0-header-fix.patch,
+  -files/epiphany-2.22.3-notify-crash-fix.patch, -epiphany-2.28.2.ebuild,
+  -epiphany-2.30.5.ebuild, epiphany-2.30.6.ebuild:
+  Add missing ca-certificates to RDEPEND, bug #344539. Pin some dependencies to
+  approriate slots. Use gnome2_src_compile instead of plain emake. Clean up old
+  revisions.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> epiphany-2.30.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #324077
