@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12223 2010/11/23 16:05:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12224 2010/11/23 22:14:19 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -293,18 +293,6 @@ media-libs/amanith
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # Masked until reverse dependencies are sorted out (bug #342461)
 =dev-libs/libnl-2*
-
-# Markos Chandras <hwoarang@gentoo.org> (23 Oct 2010)
-#  on behalf of QA team
-#
-# Does not work with recent versions of ffmpeg.
-# Does not work with youtube anymore due to API changes.
-# Dead upstream.
-# Removal in 30 days.
-# Alternatives:
-# media-video/minitube
-# media-video/xvideoservicethief
-media-video/elltube
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2010)
 #  on behalf of QA team
