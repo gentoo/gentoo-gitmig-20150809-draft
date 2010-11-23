@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.46 2010/09/17 07:39:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.47 2010/11/23 20:56:08 ulm Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -79,14 +79,7 @@ IUSE=""
 # version requirement of the NEED_EMACS variable.
 
 elisp_pkg_setup() {
-	local need_emacs=${NEED_EMACS:-21}
-	local have_emacs=$(elisp-emacs-version)
-	if [ "${have_emacs%%.*}" -lt "${need_emacs%%.*}" ]; then
-		eerror "This package needs at least Emacs ${need_emacs%%.*}."
-		eerror "Use \"eselect emacs\" to select the active version."
-		die "Emacs version ${have_emacs} is too low."
-	fi
-	einfo "Emacs version: ${have_emacs}"
+	elisp-need-emacs "${NEED_EMACS:-21}" || die "Emacs version too low"
 }
 
 # @FUNCTION: elisp_src_unpack
