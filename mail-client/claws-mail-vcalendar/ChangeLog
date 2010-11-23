@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-vcalendar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.85 2010/11/22 14:36:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.86 2010/11/23 09:14:20 fauli Exp $
+
+  23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-vcalendar-2.0.7.ebuild, claws-mail-vcalendar-2.0.8.ebuild,
+  claws-mail-vcalendar-2.0.9.ebuild:
+  add a die after emake and don't install NEWS file (no contents)
 
 *claws-mail-vcalendar-2.0.9 (22 Nov 2010)
 
