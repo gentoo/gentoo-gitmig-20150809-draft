@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.2.ebuild,v 1.1 2010/11/19 18:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.2.ebuild,v 1.2 2010/11/23 15:43:30 ramereth Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu-kvm )
-	drbd? ( >=sys-cluster/drbd-8.0 )
+	drbd? ( >=sys-cluster/drbd-8.3 )
 	dev-libs/openssl
 	dev-python/paramiko
 	dev-python/pyopenssl

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.34 2010/11/19 18:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.35 2010/11/23 15:43:30 ramereth Exp $
+
+  23 Nov 2010; Lance Albertson <ramereth@gentoo.org> ganeti-2.2.0.ebuild,
+  ganeti-2.2.1.ebuild, ganeti-2.2.2.ebuild, ganeti-2.3.0_rc0.ebuild,
+  ganeti-2.3.0_rc1.ebuild:
+  require drbd-8.3 on >=ganeti-2.2 which was an undocumented requirement
 
 *ganeti-2.3.0_rc1 (19 Nov 2010)
 *ganeti-2.2.2 (19 Nov 2010)
