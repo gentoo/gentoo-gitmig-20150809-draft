@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.10 2010/11/22 14:25:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.11 2010/11/23 09:04:38 fauli Exp $
+
+  23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-python-0.3.ebuild, claws-mail-python-0.4.ebuild,
+  claws-mail-python-0.5.ebuild:
+  add a die after emake
 
 *claws-mail-python-0.5 (22 Nov 2010)
 
