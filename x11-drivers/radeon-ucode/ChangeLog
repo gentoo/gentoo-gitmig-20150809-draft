@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/radeon-ucode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.5 2010/07/15 09:05:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.6 2010/11/23 01:29:03 chithanh Exp $
+
+*radeon-ucode-20101122 (23 Nov 2010)
+
+  23 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20101122.ebuild:
+  add new Bobcat microcode
 
   15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   radeon-ucode-20100408.ebuild:
