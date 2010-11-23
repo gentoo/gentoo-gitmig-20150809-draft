@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hdl_dump/hdl_dump-0.8.6.20060901.ebuild,v 1.4 2010/05/20 00:39:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hdl_dump/hdl_dump-0.8.6.20060901.ebuild,v 1.5 2010/11/23 12:53:04 vapier Exp $
 
-EAPI=2
-inherit toolchain-funcs versionator
+EAPI="2"
+
+inherit eutils toolchain-funcs versionator
 
 MY_PV=$(replace_version_separator 3 -)
 DESCRIPTION="game installer for playstation 2 HD Loader"
@@ -18,14 +19,15 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fortify.patch #340145
 	sed -i \
 		-e "s/-O0 -g/${CFLAGS}/" \
 		-e "s/@\$(CC)/$(tc-getCC)/" \
 		-e '/LDFLAGS =/d' \
-		Makefile || die "sed failed"
+		Makefile || die
 }
 
 src_install() {
-	dobin hdl_dump || die "dobin failed"
+	dobin hdl_dump || die
 	dodoc AUTHORS CHANGELOG README TODO
 }
