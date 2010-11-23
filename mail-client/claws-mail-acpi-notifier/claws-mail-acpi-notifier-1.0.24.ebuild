@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.24.ebuild,v 1.1 2010/11/22 14:03:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/claws-mail-acpi-notifier-1.0.24.ebuild,v 1.2 2010/11/23 08:33:17 fauli Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# kill useless files
