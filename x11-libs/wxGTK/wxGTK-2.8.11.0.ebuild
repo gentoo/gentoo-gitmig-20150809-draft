@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.11.0.ebuild,v 1.2 2010/06/29 01:06:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.11.0.ebuild,v 1.3 2010/11/23 17:50:12 jlec Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="
 	X?  (
 		>=x11-libs/gtk+-2.4
 		>=dev-libs/glib-2.4
-		media-libs/jpeg
+		virtual/jpeg
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
