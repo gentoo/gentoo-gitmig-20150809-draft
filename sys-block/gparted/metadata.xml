@@ -14,6 +14,7 @@
 	déplacer et copier différents systèmes de fichiers.
 </longdescription>
 <use>
+  <flag name='btrfs'>Include Btrfs support (<pkg>sys-fs/btrfs-progs</pkg>)</flag>
   <flag name="dmraid">Support for dmraid devices, also known as ATA-RAID, or
   Fake RAID.</flag>
   <flag name='fat'>Include FAT16/FAT32 support (<pkg>sys-fs/dosfstools</pkg>)
