@@ -11,8 +11,8 @@ ld: symbol(s) not found
 @@ -53,6 +53,6 @@
  if test x$enableval = xyes ; then
  	AC_DEFINE(HAVE_SSL)
-- 	LIBS="$LIBS -lssl"
-+ 	LIBS="$LIBS -lssl -lcrypto"
+-	LIBS="$LIBS -lssl"
++	LIBS="$LIBS -lssl -lcrypto"
  fi
  enableval=""
  
