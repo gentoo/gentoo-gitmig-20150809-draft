@@ -1,7 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.18 2010/09/14 06:35:40 grobian Exp $
-# $Id: package.mask,v 1.18 2010/09/14 06:35:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.19 2010/11/23 20:56:25 darkside Exp $
+# $Id: package.mask,v 1.19 2010/11/23 20:56:25 darkside Exp $
+
+# Jeremy Olexa <darkside@gentoo.org> (23 Nov 2010)
+# Pre-emptive mask, breaks bootstrapping. bug 346335
+=sys-apps/grep-2.7
 
 # Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
 # Requires thread-local storage (__thread), Darwin has pthread_getspecific

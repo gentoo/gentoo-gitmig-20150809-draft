@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.227 2010/11/16 08:16:36 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.228 2010/11/23 20:56:25 darkside Exp $
+
+  23 Nov 2010; Jeremy Olexa <darkside@gentoo.org> darwin/package.mask:
+  Pre-emptive mask for =grep-2.7, breaks bootstrapping on macos. bug 346335
 
   16 Nov 2010; Markus Duft <mduft@gentoo.org> windows/interix/package.mask,
   windows/interix/package.use.force, windows/interix/package.use.mask:
