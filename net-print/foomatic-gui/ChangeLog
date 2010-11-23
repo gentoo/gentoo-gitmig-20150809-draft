@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.11 2010/05/17 20:10:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.12 2010/11/23 10:39:30 jlec Exp $
+
+*foomatic-gui-0.7.9.4 (23 Nov 2010)
+
+  23 Nov 2010; Justin Lecher <jlec@gentoo.org> +foomatic-gui-0.7.9.4.ebuild:
+  Version Bump
 
 *foomatic-gui-0.7.9.2 (17 May 2010)
 
