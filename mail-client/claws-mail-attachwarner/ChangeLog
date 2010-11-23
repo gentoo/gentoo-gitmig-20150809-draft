@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.49 2010/11/22 14:09:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.50 2010/11/23 08:36:35 fauli Exp $
+
+  23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-attachwarner-0.2.19.ebuild,
+  claws-mail-attachwarner-0.2.20.ebuild:
+  remove some useless messages
 
 *claws-mail-attachwarner-0.2.20 (22 Nov 2010)
 

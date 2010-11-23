@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-0.2.19.ebuild,v 1.3 2010/08/07 14:13:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-0.2.19.ebuild,v 1.4 2010/11/23 08:36:35 fauli Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -19,12 +19,12 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf $(use_enable nls) || die "econf failed"
-	emake || die "emake failed"
+	econf $(use_enable nls) || die
+	emake || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 
 	# kill useless files
