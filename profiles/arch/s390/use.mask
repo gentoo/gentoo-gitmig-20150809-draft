@@ -2,6 +2,7 @@
 -s390
 
 # Stuff we don't want/not tested
+pbins
 chicken
 clisp
 R
