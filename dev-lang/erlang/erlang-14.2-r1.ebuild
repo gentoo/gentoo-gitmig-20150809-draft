@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2-r1.ebuild,v 1.1 2010/11/24 01:12:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.2-r1.ebuild,v 1.2 2010/11/24 10:14:17 fauli Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -61,22 +61,15 @@ src_prepare() {
 		sed -i 's: wx : :' lib/Makefile
 		rm -rf lib/wx
 	else
-		# Fix runtime issues with WX and --as-needed, see bug 338664, reported upstream
+		# Fix runtime issues with WX and --as-needed, see bug 338664, reported upstream, should be fixed
 		epatch "${FILESDIR}"/${P}-respect_LDFLAGS-wx.patch
-	fi
-
-	if use hipe; then
-		ewarn
-		ewarn "You enabled High performance Erlang. Be aware that this extension"
-		ewarn "can break the compilation in many ways, especially on hardened systems."
-		ewarn "Don't cry, don't file bugs, just disable it! If you have a fix, tell us though on Bugzilla."
-		ewarn
 	fi
 
 	# Nasty workaround, reported upstream
 	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in || die
 
 	# prevent configure from injecting -m32 by default on Darwin, bug #334155
+	# Nasty hack
 	sed -i -e 's/Darwin-i386/Darwin-NO/' configure.in || die
 	sed -i -e '/\<\(LD\|C\)FLAGS="-m32/s/-m32//' erts/configure.in || die
 }
