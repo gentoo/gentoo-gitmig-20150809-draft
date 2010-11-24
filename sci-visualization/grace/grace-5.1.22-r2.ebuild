@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.3 2010/11/08 17:57:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.4 2010/11/24 20:52:12 bicatali Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -76,7 +76,7 @@ src_configure() {
 		--disable-xmhtml \
 		--without-bundled-xbae \
 		--without-bundled-t1lib \
-		--enable-grace-home=/usr/share/${PN} \
+		--enable-grace-home="${EPREFIX}"/usr/share/${PN} \
 		--with-helpviewer="xdg-open %s" \
 		--with-editor="xdg-open %s" \
 		--with-printcmd="lpr" \
