@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.3 2009/07/07 23:03:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.4 2010/11/24 02:30:15 mattst88 Exp $
 
 inherit rpm
 
@@ -19,8 +19,7 @@ KEYWORDS="~x86"
 IUSE="X"
 
 DEPEND="=sys-libs/db-4.3*
-	>=dev-libs/openssl-0.9.8
-	>=app-arch/rpm2targz-9.0-r7"
+	>=dev-libs/openssl-0.9.8"
 
 PDEPEND="X? ( net-analyzer/nessus-client )"
 
