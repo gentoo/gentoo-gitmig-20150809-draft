@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.150 2010/11/22 17:18:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.151 2010/11/24 20:06:16 darkside Exp $
+
+  24 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
+  DateTime-TimeZone-1.26.ebuild:
+  add prefix keywords, bug 346449
 
 *DateTime-TimeZone-1.26 (22 Nov 2010)
 
