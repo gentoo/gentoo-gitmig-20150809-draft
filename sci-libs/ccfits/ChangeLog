@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ccfits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccfits/ChangeLog,v 1.1 2010/01/20 02:32:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccfits/ChangeLog,v 1.2 2010/11/24 20:11:54 bicatali Exp $
+
+*ccfits-2.3 (24 Nov 2010)
+
+  24 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> +ccfits-2.3.ebuild:
+  Bump
 
 *ccfits-2.2 (20 Jan 2010)
 
