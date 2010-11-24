@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/pcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.2 2010/08/30 19:40:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.3 2010/11/24 13:56:14 patrick Exp $
+
+*pcc-1.0.0_pre101124 (24 Nov 2010)
+
+  24 Nov 2010; Patrick Lauer <patrick@gentoo.org> +pcc-1.0.0_pre101124.ebuild:
+  Bump
 
 *pcc-1.0.0_pre100830 (30 Aug 2010)
 
