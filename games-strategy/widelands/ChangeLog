@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.27 2010/11/20 17:48:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.28 2010/11/24 13:00:01 tupone Exp $
+
+  24 Nov 2010; Tupone Alfredo <tupone@gentoo.org> widelands-0.15.ebuild,
+  +files/widelands-0.15-gcc45.patch:
+  Fix buld with gcc-4.5 Bug #346543 by tobias muser
 
   20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   widelands-0.15.ebuild, +files/widelands-0.15-locale.patch:
