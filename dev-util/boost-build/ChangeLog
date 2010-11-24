@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.57 2010/09/19 17:52:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.58 2010/11/24 14:51:25 jer Exp $
+
+  24 Nov 2010; Jeroen Roovers <jer@gentoo.org> boost-build-1.42.0.ebuild:
+  Stable for HPPA (bug #344677).
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> boost-build-1.41.0.ebuild:
   s390 stable wrt #306335
