@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.2 2010/11/02 08:59:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.3 2010/11/24 08:23:56 jlec Exp $
+
+  24 Nov 2010; Justin Lecher <jlec@gentoo.org> sg-1.4.ebuild:
+  Fixed dep for opengl to force motif support, thanks Jaroslaw Kalinowski
+  #344817
 
   02 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.4-doc.patch,
   sg-1.4.ebuild:
