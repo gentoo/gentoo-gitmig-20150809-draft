@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.117 2010/11/21 12:43:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.118 2010/11/24 16:56:35 idl0r Exp $
+
+*cfengine-3.1.1 (24 Nov 2010)
+
+  24 Nov 2010; Christian Ruppert <idl0r@gentoo.org>
+  -cfengine-3.0.5_p1-r3.ebuild, -files/cfengine-3.0.5_p1-Makefile.am.patch,
+  -files/cfengine-3.0.5_p1-configure.ac.patch,
+  -files/cfengine-3.0.5_p1-regex.c.patch, -cfengine-3.1.0-r1.ebuild,
+  -files/cfengine-3.1.0-configure.ac.patch, +cfengine-3.1.1.ebuild:
+  Version bump to 3.1.1. Cleanup.
 
   21 Nov 2010; Raúl Porcel <armin76@gentoo.org> cfengine-2.2.10-r3.ebuild:
   arm/sparc stable wrt #344841
