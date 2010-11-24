@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.235 2010/11/23 18:02:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.236 2010/11/24 16:44:34 eras Exp $
+
+*mit-krb5-1.9_beta1 (24 Nov 2010)
+
+  24 Nov 2010; Eray Aslan <eras@gentoo.org> +mit-krb5-1.9_beta1.ebuild,
+  metadata.xml:
+  Version bump. Dropped m68k bug #324087. Working test suite bug #346549.
+  Added test and pkinit USE flags.
 
   23 Nov 2010; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.8.3-r1.ebuild:
   Stable for HPPA PPC (bug #339866).
