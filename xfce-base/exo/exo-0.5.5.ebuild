@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.5.ebuild,v 1.1 2010/11/21 14:14:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.5.ebuild,v 1.2 2010/11/24 14:17:43 ssuominen Exp $
 
 EAPI=3
 
@@ -55,10 +55,10 @@ src_prepare() {
 
 pkg_postinst() {
 	xfconf_pkg_postinst
-	python_mod_optimize exo-0.5 pyexo.py
+	use python && python_mod_optimize exo-0.5 pyexo.py
 }
 
 pkg_postrm() {
 	xfconf_pkg_postrm
-	python_mod_cleanup exo-0.5 pyexo.py
+	use python && python_mod_cleanup exo-0.5 pyexo.py
 }

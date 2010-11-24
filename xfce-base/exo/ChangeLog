@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.45 2010/11/21 14:14:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.46 2010/11/24 14:17:43 ssuominen Exp $
+
+  24 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> exo-0.5.5.ebuild:
+  Missing USE python for byte compiling wrt #346597 by Peter Volkov.
 
 *exo-0.5.5 (21 Nov 2010)
 
