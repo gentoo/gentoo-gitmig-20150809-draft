@@ -1,11 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.20.7.ebuild,v 1.6 2010/04/18 12:06:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.22.4.ebuild,v 1.1 2010/11/24 12:36:00 pva Exp $
 
 EAPI=2
 inherit eutils autotools fdo-mime gnome2-utils versionator
-
-# TODO: goffice we need 0.7 which is not in portage ATM
 
 MY_MAJ_VER=$(get_version_component_range 1-2)
 DESCRIPTION="VIPS Image Processing Graphical User Interface"
@@ -14,20 +12,21 @@ HOMEPAGE="http://vips.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="fftw gsl test"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="fftw goffice gsl test"
 
 RDEPEND=">=dev-libs/glib-2.14:2
 	dev-libs/libxml2
 	x11-misc/xdg-utils
 	>=media-libs/vips-${MY_MAJ_VER}
 	>=x11-libs/gtk+-2.18:2
+	goffice? ( x11-libs/goffice:0.8 )
 	gsl? ( sci-libs/gsl )
 	fftw? ( sci-libs/fftw:3.0 )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
-	test? ( media-libs/vips[lcms] )"
+	test? ( media-libs/vips[jpeg,lcms] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.16.4-fftw3-build.patch
@@ -37,6 +36,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-update-desktop \
+		$(use_with goffice libgoffice) \
 		$(use_with gsl) \
 		$(use_with fftw fftw3)
 }
@@ -54,6 +54,10 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README* || die
 	insinto /usr/share/icons/hicolor/128x128/apps
 	newins share/nip2/data/vips-128.png nip2.png || die
+
+	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF} || die
+	rmdir "${D}"/usr/share/doc/${PN}/ || die
+	dosym /usr/share/doc/${PF}/html /usr/share/doc/${PN}/
 }
 
 pkg_preinst() {
