@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.201 2010/11/11 13:44:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.202 2010/11/24 01:12:07 fauli Exp $
+
+*erlang-14.2-r1 (24 Nov 2010)
+
+  24 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  +erlang-14.2-r1.ebuild, +files/erlang-14.2-respect_LDFLAGS-wx.patch:
+  Fix runtime issues with --as-needed and wxWidgets interface as reported by
+  Andrian Nord <NightNord AT gmail DOT com> in bug 338664. With help by
+  dirtyepic.
 
   11 Nov 2010; <fauli@gentoo.org> erlang-14.2.ebuild:
   block app-accessibility/speech-dispatcher to avoid file collisions as
