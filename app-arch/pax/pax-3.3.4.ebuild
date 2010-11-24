@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.18 2010/07/06 10:53:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.19 2010/11/24 02:19:37 mattst88 Exp $
 
 inherit eutils rpm
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh ~sparc x86"
 IUSE=""
 
-DEPEND="app-arch/rpm2targz"
+DEPEND=""
 RDEPEND=""
 
 src_unpack() {

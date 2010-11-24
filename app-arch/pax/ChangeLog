@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.14 2010/11/24 02:17:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.15 2010/11/24 02:19:37 mattst88 Exp $
+
+  24 Nov 2010; <mattst88@gentoo.org> pax-3.3.4.ebuild:
+  Remove redundant dependency on rpm2targz, bug #345225.
 
   24 Nov 2010; <mattst88@gentoo.org> metadata.xml:
   seemant is retired. Assign to maintainer-needed.
