@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.16 2010/11/08 14:40:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.17 2010/11/24 11:42:22 pva Exp $
+
+*eiskaltdcpp-2.1.1 (24 Nov 2010)
+
+  24 Nov 2010; Peter Volkov <pva@gentoo.org> +eiskaltdcpp-2.1.1.ebuild,
+  eiskaltdcpp-9999.ebuild:
+  Version bump. Thank Nikoli for this job. Updated 9999 ebuild.
 
 *eiskaltdcpp-2.1.0 (08 Nov 2010)
 
