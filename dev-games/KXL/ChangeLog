@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/KXL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.16 2010/11/09 19:41:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.17 2010/11/24 14:55:34 jer Exp $
+
+  24 Nov 2010; Jeroen Roovers <jer@gentoo.org> KXL-1.1.7-r1.ebuild,
+  KXL-1.1.7-r2.ebuild:
+  Remove HPPA keywording (bug #343453).
 
   09 Nov 2010; Markus Meier <maekke@gentoo.org> KXL-1.1.7-r2.ebuild:
   x86 stable, bug #343453
