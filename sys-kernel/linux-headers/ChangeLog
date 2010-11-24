@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.313 2010/11/22 03:01:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.314 2010/11/24 07:10:22 vapier Exp $
+
+*linux-headers-2.6.36.1 (24 Nov 2010)
+
+  24 Nov 2010; Mike Frysinger <vapier@gentoo.org>
+  +linux-headers-2.6.36.1.ebuild:
+  Add files for mips and update to 2.6.36.1 #346591 by Matt Turner.
 
 *linux-headers-2.6.36 (22 Nov 2010)
 
