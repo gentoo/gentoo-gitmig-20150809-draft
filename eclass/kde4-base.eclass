@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.76 2010/10/27 21:24:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.77 2010/11/24 23:54:55 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -656,11 +656,13 @@ kde4-base_src_prepare() {
 		load_library_dependencies
 	fi
 
-	# Hack for manuals relying on outdated DTD
-	find "${S}" -name "*.docbook" \
-		-exec sed -i -r \
-			-e 's:-//KDE//DTD DocBook XML V4\.1(\..)?-Based Variant V1\.[01]//EN:-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN:g' {} + \
-		|| die 'failed to fix DocBook variant version'
+	# Hack for manuals relying on outdated DTD, only outside kde-base/koffice/...
+	if [ -z ${KDEBASE} ]; then 
+		find "${S}" -name "*.docbook" \
+			-exec sed -i -r \
+				-e 's:-//KDE//DTD DocBook XML V4\.1(\..)?-Based Variant V1\.[01]//EN:-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN:g' {} + \
+			|| die 'failed to fix DocBook variant version'
+	fi
 }
 
 # @FUNCTION: kde4-base_src_configure
