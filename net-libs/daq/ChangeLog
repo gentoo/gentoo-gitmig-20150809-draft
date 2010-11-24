@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.2 2010/11/02 18:19:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.3 2010/11/24 14:01:27 patrick Exp $
+
+  24 Nov 2010; Patrick Lauer <patrick@gentoo.org> daq-0.3.ebuild:
+  Reducing makeopts to -j1 for #345915
 
 *daq-0.3 (02 Nov 2010)
 
