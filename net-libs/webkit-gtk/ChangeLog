@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.83 2010/11/07 21:13:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.84 2010/11/24 08:12:00 grobian Exp $
+
+  24 Nov 2010; Fabian Groffen <grobian@gentoo.org> webkit-gtk-1.2.5.ebuild:
+  Fix double-prefix issue, bug #346595
 
   07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   webkit-gtk-1.1.15.4.ebuild, webkit-gtk-1.2.3.ebuild,
