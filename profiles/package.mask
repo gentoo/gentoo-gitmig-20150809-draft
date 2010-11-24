@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12224 2010/11/23 22:14:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12225 2010/11/24 16:00:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -94,14 +94,6 @@ sys-apps/slocate
 # Will be removed on max{13 Dec 2010, TeX Live 2010 stabilized}.
 # Bugs: 303965, 323559 and 344585
 app-text/ptex
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2010)
-# Masked until sandbox bug 342983 is fixed. Causing nasty
-# problems, such as missing files after extracting.
-#
-# http://bugs.gentoo.org/342983
-#
->=app-arch/tar-1.24
 
 # Torsten Veller <tove@gentoo.org> (11 Nov 2010)
 # Mask dev-util/libconf and its reverse dependencies
