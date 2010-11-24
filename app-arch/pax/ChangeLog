@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.13 2010/07/06 10:53:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.14 2010/11/24 02:17:34 mattst88 Exp $
+
+  24 Nov 2010; <mattst88@gentoo.org> metadata.xml:
+  seemant is retired. Assign to maintainer-needed.
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pax-3.3.4.ebuild:
   Keyword ~ppc64 wrt #324521 by Andreas Thalhammer.
