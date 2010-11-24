@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.229 2010/11/24 15:59:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.230 2010/11/24 20:43:21 phajdan.jr Exp $
+
+*chromium-9.0.587.0-r1 (24 Nov 2010)
+
+  24 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-9.0.570.0-r1.ebuild, -chromium-9.0.587.0.ebuild,
+  +chromium-9.0.587.0-r1.ebuild, chromium-9999.ebuild:
+  Use system ffmpeg (a more recent snapshot), bug #345325 by Mike Gilbert
+  <floppymaster@gmail.com>.
 
 *chromium-8.0.552.210 (24 Nov 2010)
 
