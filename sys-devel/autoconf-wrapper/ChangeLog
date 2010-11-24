@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.79 2010/09/24 02:20:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.80 2010/11/24 12:51:51 fauli Exp $
+
+  24 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  autoconf-wrapper-10-r1.ebuild:
+  stable x86, bug 346029
 
 *autoconf-wrapper-10-r1 (24 Sep 2010)
 
