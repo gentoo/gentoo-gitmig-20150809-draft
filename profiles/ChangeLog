@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4811 2010/11/23 22:14:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4812 2010/11/24 16:41:19 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2010; Eray Aslan <eras@gentoo.org> package.mask:
+  Masking beta versions =app-crypt/mit-krb5-1.9_beta*
 
   23 Nov 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Remove elltube entry
