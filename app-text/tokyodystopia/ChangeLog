@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tokyodystopia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.4 2010/08/13 10:59:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.5 2010/11/24 15:10:45 patrick Exp $
+
+  24 Nov 2010; Patrick Lauer <patrick@gentoo.org> -tokyodystopia-0.9.13.ebuild,
+  -tokyodystopia-0.9.13-r1.ebuild, -tokyodystopia-0.9.14.ebuild:
+  Remove old
 
 *tokyodystopia-0.9.15 (13 Aug 2010)
 
