@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5-r3.ebuild,v 1.6 2008/12/02 22:59:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5-r3.ebuild,v 1.7 2010/11/24 12:16:59 pva Exp $
 
 inherit eutils multilib
 
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/libXaw
 		x11-libs/libXp
 		x11-libs/Xaw3d
-		media-libs/jpeg
+		virtual/jpeg
 		media-libs/libpng
 		>=media-gfx/transfig-3.2.5-r1
 		media-libs/netpbm"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b.ebuild,v 1.8 2010/02/10 03:32:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b.ebuild,v 1.9 2010/11/24 12:16:59 pva Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libXaw
 		x11-libs/libXp
 		x11-libs/Xaw3d
 		x11-libs/libXi
-		media-libs/jpeg
+		virtual/jpeg
 		media-libs/libpng
 		media-fonts/font-misc-misc
 		media-fonts/urw-fonts

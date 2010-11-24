@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5-r2.ebuild,v 1.7 2008/12/02 22:58:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5-r2.ebuild,v 1.8 2010/11/24 12:15:06 pva Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm
-	>=media-libs/jpeg-6
+	virtual/jpeg
 	media-libs/libpng
 	x11-apps/rgb"
 DEPEND="${RDEPEND}
