@@ -1,8 +1,8 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.46 2010/11/23 20:50:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.47 2010/11/25 16:11:38 darkside Exp $
 
-  23 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
+  25 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
   font-misc-misc-1.1.2.ebuild:
   Restore prefix keywords that were dropped for no reason
 
