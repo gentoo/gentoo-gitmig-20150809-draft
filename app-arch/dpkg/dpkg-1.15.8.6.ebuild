@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.3.ebuild,v 1.2 2010/10/25 05:20:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.6.ebuild,v 1.1 2010/11/25 15:01:31 jer Exp $
 
 EAPI=3
 
@@ -41,12 +41,11 @@ src_prepare() {
 	# installed, so no need to worry about hardcoding a temporary bash)
 	sed -i -e '1c\#!'"${BASH}" get-version || die
 
-	# On every version bump, update the version manually after establishing
-	# which tests fail (bug #310847)
-	if [[ "${PV}" = "1.15.8.3" ]]; then
-		sed -i scripts/Makefile.am -e '/850_Dpkg_Compression.t/d' \
-			|| die "sed failed"
-	fi
+	# this test depends on a Debian only gzip extension that adds --rsyncable
+	# which will therefore always fail on Gentoo. (bug #310847).
+	sed -i scripts/Makefile.am \
+		-e '/850_Dpkg_Compression.t/d' \
+		|| die "sed failed"
 
 	eautoreconf
 }
@@ -67,6 +66,7 @@ src_configure() {
 		$(use_with bzip2 bz2) \
 		$(use_enable unicode) \
 		$(use_with zlib) \
+		--disable-compiler-warnings \
 		--without-selinux \
 		--without-start-stop-daemon
 }
