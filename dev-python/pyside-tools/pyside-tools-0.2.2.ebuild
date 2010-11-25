@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.0.ebuild,v 1.1 2010/08/25 17:16:17 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.2.ebuild,v 1.1 2010/11/25 01:21:24 chiiph Exp $
 
 EAPI="2"
 
@@ -20,10 +20,12 @@ DEPEND=">=dev-python/pyside-0.4.0
 	>=x11-libs/qt-gui-4.6.0"
 RDEPEND="${DEPEND}"
 
-src_test() {
-	cd "${S}"/tests/rcc
-	./run_test.sh $(PYTHON -a) ./rcc_test.py ./example.qrc . \
-		|| die "tests failed"
+TEST_VERBOSE=1
+
+src_prepare() {
+	sed -e 's#pyside-rcc4#PATH=$PATH:${WORKDIR}/${P}_build/pyrcc pyside-rcc#' \
+		-i tests/rcc/run_test.sh \
+		|| die "sed failed"
 }
 
 src_install() {
