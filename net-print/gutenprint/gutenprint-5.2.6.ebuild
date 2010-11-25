@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5.ebuild,v 1.2 2010/02/23 12:51:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.1 2010/11/25 13:22:35 alexxy Exp $
+
+EAPI="3"
 
 inherit autotools flag-o-matic eutils multilib
 
@@ -8,7 +10,7 @@ IUSE="cups foomaticdb gimp gtk readline ppds"
 
 DESCRIPTION="Ghostscript and cups printer drivers"
 HOMEPAGE="http://gutenprint.sourceforge.net"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 RESTRICT="test"
 
@@ -25,20 +27,16 @@ DEPEND="${RDEPEND}
 LICENSE="GPL-2"
 SLOT="0"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-5.2.4-CFLAGS.patch"
-
 	# IJS Patch
 	sed -i -e "s:<ijs\([^/]\):<ijs/ijs\1:g" src/ghost/ijsgutenprint.c || die "sed failed"
-
+	# Regen configure
 	mkdir m4local
 	AT_M4DIR="m4extra" eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	if use cups && use ppds; then
 		myconf="${myconf} --enable-cups-ppds --enable-cups-level3-ppds"
 	else
@@ -69,8 +67,6 @@ src_compile() {
 		$(use_with gimp gimp2-as-gutenprint) \
 		$(use_with cups) \
 		${myconf} || die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install () {
@@ -78,7 +74,7 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
 	dohtml doc/FAQ.html
-	dohtml -r doc/users_guide/html doc/developer/developer-html
+	dohtml -r doc/gutenprintui2/html doc/gutenprint/developer-html
 	rm -fR "${D}"/usr/share/gutenprint/doc
 	if ! use gtk && ! use gimp; then
 		rm -f "${D}"/usr/$(get_libdir)/pkgconfig/gutenprintui2.pc
