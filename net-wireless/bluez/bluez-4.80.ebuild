@@ -1,19 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.69.ebuild,v 1.5 2010/09/25 13:51:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.80.ebuild,v 1.1 2010/11/25 23:36:27 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit autotools multilib eutils
+inherit multilib eutils
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
-HOMEPAGE="http://bluez.sourceforge.net/"
-SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
+HOMEPAGE="http://www.bluez.org/"
+
+OUIDATE="20101126" # Needed because of bug #345263
+SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
+	http://standards.ieee.org/regauth/oui/oui.txt -> oui-${OUIDATE}.txt"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
-IUSE="alsa caps +consolekit cups debug gstreamer maemo6 old-daemons pcmcia test-programs usb"
+IUSE="alsa attrib caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
 
 CDEPEND="alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
@@ -53,13 +56,9 @@ src_prepare() {
 	fi
 
 	if use cups; then
-		epatch "${FILESDIR}/4.60/cups-location.patch"
+		sed -i -e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
+			Makefile.tools Makefile.in || die
 	fi
-
-	# Fix alsa files location
-	epatch "${FILESDIR}/${PN}-alsa_location.patch"
-
-	eautoreconf
 }
 
 src_configure() {
@@ -73,13 +72,15 @@ src_configure() {
 		$(use_enable gstreamer) \
 		$(use_enable alsa) \
 		$(use_enable usb) \
-		--enable-netlink \
 		--enable-tools \
 		--enable-bccmd \
 		--enable-dfutool \
 		$(use_enable old-daemons hidd) \
 		$(use_enable old-daemons pand) \
 		$(use_enable old-daemons dund) \
+		$(use_enable attrib) \
+		$(use_enable health) \
+		$(use_enable pnat) \
 		$(use_enable maemo6) \
 		$(use_enable cups) \
 		$(use_enable test-programs test) \
@@ -87,30 +88,33 @@ src_configure() {
 		--enable-configfiles \
 		$(use_enable pcmcia) \
 		$(use_enable debug) \
-		--localstatedir=/var
+		--localstatedir=/var \
+		--disable-hal
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${ED}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README || die
 
 	if use test-programs ; then
 		cd "${S}/test"
-		dobin simple-agent simple-service monitor-bluetooth
-		newbin list-devices list-bluetooth-devices
+		dobin simple-agent simple-service monitor-bluetooth || die
+		newbin list-devices list-bluetooth-devices || die
 		for b in apitest hsmicro hsplay test-* ; do
-			newbin "${b}" "bluez-${b}"
+			newbin "${b}" "bluez-${b}" || die
 		done
 		insinto /usr/share/doc/${PF}/test-services
-		doins service-*
+		doins service-* || die
 
 		cd "${S}"
 	fi
 
 	if use old-daemons; then
 		newconfd "${FILESDIR}/4.18/conf.d-hidd" hidd || die
-		newinitd "${FILESDIR}/4.18/init.d-hidd" hidd || die
+		newinitd "${FILESDIR}/init.d-hidd" hidd || die
+		newconfd "${FILESDIR}/conf.d-dund" dund || die
+		newinitd "${FILESDIR}/init.d-dund" dund || die
 	fi
 
 	insinto /etc/bluetooth
@@ -126,33 +130,44 @@ src_install() {
 	exeinto /$(get_libdir)/udev/
 	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh || die
 
-	newinitd "${FILESDIR}/4.60/bluetooth-init.d" bluetooth || die
+	newinitd "${FILESDIR}/bluetooth-init.d" bluetooth || die
 	newconfd "${FILESDIR}/4.60/bluetooth-conf.d" bluetooth || die
+
+	# Install oui.txt as requested in bug #283791 and approved by upstream
+	insinto /var/lib/misc
+	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt || die
+
+	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
 }
 
 pkg_postinst() {
 	udevadm control --reload-rules && udevadm trigger --subsystem-match=bluetooth
 
-	elog
-	elog "To use dial up networking you must install net-dialup/ppp."
-	elog
-	elog "For a password agent, there is for example net-wireless/bluez-gnome"
-	elog "for gnome and net-wireless/kdebluetooth for kde. You can also give a"
-	elog "try to net-wireless/blueman"
-	elog
-	elog "Use the old-daemons use flag to get the old daemons like hidd"
-	elog "installed. Please note that the init script doesn't stop the old"
-	elog "daemons after you update it so it's recommended to run:"
-	elog "  /etc/init.d/bluetooth stop"
-	elog "before updating your configuration files or you can manually kill"
-	elog "the extra daemons you previously enabled in /etc/conf.d/bluetooth."
+	if ! has_version "net-dialup/ppp"; then
+		elog
+		elog "To use dial up networking you must install net-dialup/ppp."
+	fi
+
+	if ! has_version "net-wireless/gnome-bluetooth" && ! has_version "net-wireless/kbluetooth"; then
+		elog
+		elog "For desktop integration you can try net-wireless/gnome-bluetooth"
+		elog "for gnome and net-wireless/kbluetooth for kde."
+	fi
+
+	if ! use old-daemons; then
+		elog
+		elog "Use the old-daemons use flag to get the old daemons like hidd or pand"
+		elog "installed. Please note that 'bluetooth' init script doesn't stop the old"
+		elog "daemons after you update it, so it's recommended to stop all of them using"
+		elog "their own init scripts or manually killing them."
+	fi
 
 	if use consolekit; then
-		elog ""
+		elog
 		elog "If you want to use rfcomm as a normal user, you need to add the user"
 		elog "to the uucp group."
 	else
-		elog ""
+		elog
 		elog "Since you have the consolekit use flag disabled, you will only be able to run"
 		elog "bluetooth clients as root. If you want to be able to run bluetooth clientes as "
 		elog "a regular user, you need to enable the consolekit use flag for this package or"
@@ -160,10 +175,10 @@ pkg_postinst() {
 	fi
 
 	if use old-daemons; then
-		elog ""
-		elog "The hidd init script was installed because you have the old-daemons"
-		elog "use flag on. It is not started by default via udev so please add it"
-		elog "to the required runlevels using rc-update <runlevel> add hidd. If"
+		elog
+		elog "dund and hidd init scripts were installed because you have the old-daemons"
+		elog "use flag on. They are not started by default via udev so please add them"
+		elog "to the required runlevels using rc-update <runlevel> add <dund/hidd>. If"
 		elog "you need init scripts for the other daemons, please file requests"
 		elog "to https://bugs.gentoo.org."
 	fi
