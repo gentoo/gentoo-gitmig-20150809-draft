@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/rss2email-2.69.ebuild,v 1.1 2010/11/25 02:06:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/rss2email-2.69.ebuild,v 1.2 2010/11/25 03:43:04 sping Exp $
 
 EAPI="2"
 
@@ -30,8 +30,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-config-location.patch
 
 	# Extract man page from Debian patch
-	filterdiff --include=*/r2e.1 --decompress \
-		"${DISTDIR}"/${PN}_${DEBIAN_PV}-1.diff.gz > "${S}"/r2e.1.patch || die
+	zcat "${DISTDIR}"/${PN}_${DEBIAN_PV}-1.diff.gz \
+		| filterdiff -i '*/r2e.1' \
+		> "${S}"/r2e.1.patch || die
 	EPATCH_OPTS="-p1" epatch r2e.1.patch
 }
 

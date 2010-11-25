@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/rss2email
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.3 2010/11/25 02:06:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.4 2010/11/25 03:43:04 sping Exp $
+
+  25 Nov 2010; Sebastian Pipping <sping@gentoo.org> rss2email-2.69.ebuild:
+  Require dev-util/patchutils-0.3.0 (stable), not 0.3.1 (testing)
 
 *rss2email-2.69 (25 Nov 2010)
 
