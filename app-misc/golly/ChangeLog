@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.4 2010/11/01 15:33:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.5 2010/11/25 21:02:07 xmw Exp $
+
+*golly-2.2 (25 Nov 2010)
+
+  25 Nov 2010; Michael Weber <xmw@gentoo.org> +golly-2.2.ebuild:
+  Version bump, thanks to Maks Verver <maksverver@geocities.com> for his report
+  and ebuild on bug #346405.
 
   01 Nov 2010; Christian Faulhammer <fauli@gentoo.org> golly-2.1-r1.ebuild:
   stable x86, bug 342889
