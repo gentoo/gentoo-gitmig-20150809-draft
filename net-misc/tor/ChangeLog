@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.212 2010/10/14 16:58:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.213 2010/11/25 14:21:19 fauli Exp $
+
+*tor-0.2.1.27 (25 Nov 2010)
+
+  25 Nov 2010; Christian Faulhammer <fauli@gentoo.org> +tor-0.2.1.27.ebuild:
+  version bump, fixes OpenSSL issues, see bug 346715
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> tor-0.2.1.26.ebuild:
   stable ppc, bug 329879
