@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.84 2010/11/24 08:12:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.85 2010/11/25 07:25:39 grobian Exp $
+
+  25 Nov 2010; Fabian Groffen <grobian@gentoo.org> webkit-gtk-1.2.5.ebuild,
+  +files/webkit-gtk-1.2.5-darwin-quartz.patch,
+  +files/webkit-gtk-1.2.5-darwin8.patch:
+  Re-introduce USE=aqua, add necessary patches
 
   24 Nov 2010; Fabian Groffen <grobian@gentoo.org> webkit-gtk-1.2.5.ebuild:
   Fix double-prefix issue, bug #346595
