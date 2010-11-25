@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.223 2010/11/08 07:10:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.224 2010/11/25 16:29:57 matsuu Exp $
+
+*uim-1.6.0-r1 (25 Nov 2010)
+
+  25 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +uim-1.6.0-r1.ebuild,
+  +files/uim-1.6.0-sandbox-violation.patch:
+  Fixed sandbox violation. The patch is submitted by Muneyuki Noguchi, bug
+  #345217.
 
 *uim-1.6.0 (08 Nov 2010)
 
