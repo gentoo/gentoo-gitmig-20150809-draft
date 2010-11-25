@@ -1,6 +1,15 @@
 # ChangeLog for dev-dotnet/gnome-keyring-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.6 2010/10/07 19:32:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.7 2010/11/25 22:50:36 pacho Exp $
+
+*gnome-keyring-sharp-1.0.2 (25 Nov 2010)
+
+  25 Nov 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-keyring-sharp-1.0.0-r2.ebuild,
+  -files/gnome-keyring-sharp-1.0.0-monodoc-r1.patch,
+  +gnome-keyring-sharp-1.0.2.ebuild:
+  Version bump including the patches we were applying and solving glue path
+  (bug #345119 by Wojciech Dzierżanowski). Remove old.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
   -gnome-keyring-sharp-1.0.0-r1.ebuild,
