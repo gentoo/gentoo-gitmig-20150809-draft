@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>net-mail</herd>
 	<maintainer>
+		<email>sping@gentoo.org</email>
+		<name>Sebastian Pipping</name>
+	</maintainer>
+	<maintainer>
 		<email>rbu@gentoo.org</email>
 		<name>Robert Buchholz</name>
 	</maintainer>

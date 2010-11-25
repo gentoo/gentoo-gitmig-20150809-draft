@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/rss2email
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.2 2009/07/26 13:57:27 rbu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.3 2010/11/25 02:06:45 sping Exp $
+
+*rss2email-2.69 (25 Nov 2010)
+
+  25 Nov 2010; Sebastian Pipping <sping@gentoo.org> +rss2email-2.69.ebuild,
+  +files/rss2email-2.69-config-location.patch, metadata.xml:
+  Bump to 2.69, add support for several Python ABIs, move code and config out
+  of /usr/share, add myself as maintainer
 
   26 Jul 2009; Robert Buchholz <rbu@gentoo.org> rss2email-2.65.ebuild:
   Include sample config on regular runs
