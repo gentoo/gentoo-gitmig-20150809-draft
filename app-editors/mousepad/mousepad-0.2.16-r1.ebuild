@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.2.16-r1.ebuild,v 1.6 2010/07/04 09:19:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.2.16-r1.ebuild,v 1.7 2010/11/25 19:11:43 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="A simple text editor for Xfce"
@@ -21,9 +21,21 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
+	PATCHES=(
+		"${FILESDIR}"/${P}-resensitize-find-button.patch
+		"${FILESDIR}"/${P}-fix-first-replace.patch
+		)
+
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+	
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
-	PATCHES=( "${FILESDIR}/${P}-resensitize-find-button.patch"
-		"${FILESDIR}/${P}-fix-first-replace.patch" )
+}
+
+src_prepare() {
+	sed -i -e 's:-Werror::' configure || die #346771
+	sed -i -e '/MimeType/s:plain:&;:' mousepad.desktop.in
+	xfconf_src_prepare
 }

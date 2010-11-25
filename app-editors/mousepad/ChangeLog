@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.25 2010/07/04 09:19:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.26 2010/11/25 19:11:43 ssuominen Exp $
+
+  25 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mousepad-0.2.16-r1.ebuild:
+  Remove -Werror from configure wrt #346771 by David Abbott. Validate desktop
+  entry.
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   mousepad-0.2.16-r1.ebuild:
