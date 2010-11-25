@@ -1,27 +1,28 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.1.ebuild,v 1.1 2010/09/14 12:59:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r5.ebuild,v 1.1 2010/11/25 13:08:58 alexxy Exp $
 
 EAPI="3"
 
 LIBTOOLIZE="true"
 TEST_PV="4.0.4"
-MANUAL_PV="4.5"
 
 inherit autotools bash-completion eutils fortran multilib toolchain-funcs
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
 SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz
+		mirror://gentoo/${P}_upstream2010-09-15.patch.bz2
+		mirror://gentoo/${P}_missing_distfiles.patch.bz2
 		test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )
-		doc? (
-		http://www.gromacs.org/@api/deki/files/126/=gromacs_manual-${MANUAL_PV}.pdf -> gromacs-${MANUAL_PV}.pdf )"
+		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-4.0.pdf -> gromacs-manual-4.0.pdf )
+		ffamber? ( http://ffamber.cnsm.csulb.edu/ffamber_v4.0-doc.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="X blas dmalloc doc -double-precision +fftw fkernels +gsl lapack
-mpi +single-precision static static-libs test +threads +xml zsh-completion"
+IUSE="X blas dmalloc doc -double-precision ffamber +fftw fkernels +gsl lapack
+mpi +single-precision static static-libs test +xml zsh-completion"
 
 DEPEND="app-shells/tcsh
 	X? ( x11-libs/libX11
@@ -58,18 +59,21 @@ src_prepare() {
 	( use single-precision || use double-precision ) || \
 		die "Nothing to compile, enable single-precision and/or double-precision"
 
-	if use mpi && use threads; then
-		elog "mdrun uses only threads OR mpi, and gromacs favours the"
-		elog "use of mpi over threads, so a mpi-version of mdrun will"
-		elog "be compiled. If you want to run mdrun on shared memory"
-		elog "machines only, you can safely disable mpi"
-	fi
-
 	if use static; then
 		use X && die "You cannot compile a static version with X support, disable X or static"
 		use xml && die "You cannot compile a static version with xml support
 		(see bug #306479), disable xml or static"
 	fi
+
+	epatch "${WORKDIR}/${P}_upstream2010-09-15.patch"
+	epatch "${WORKDIR}/${P}_missing_distfiles.patch"
+	sed -e '/AC_INIT/s/4\.0\.7/&-2010-09-15/' -i configure.ac \
+		|| die "Failed to change version in configure.ac"
+
+	# Fix typos in a couple of files.
+	sed -e "s:+0f:-f:" -i share/tutor/gmxdemo/demo \
+		|| die "Failed to fixup demo script."
+
 	epatch_user
 	eautoreconf
 	GMX_DIRS=""
@@ -147,7 +151,6 @@ src_configure() {
 			$(use_with gsl) \
 			$(use_with X x) \
 			$(use_with xml) \
-			$(use_enable threads) \
 			${myconf}"
 
 	#if we build single and double - double is suffixed
@@ -220,6 +223,8 @@ src_install() {
 		cd "${S}-${x}_mpi"
 		emake DESTDIR="${D}" install-mdrun || die "emake install-mdrun for ${x} failed"
 	done
+	#we have pkg-config files
+	rm "${ED}"/usr/$(get_libdir)/*.la
 
 	sed -n -e '/^GMXBIN/,/^GMXDATA/p' "${ED}"/usr/bin/GMXRC.bash > "${T}/80gromacs"
 	doenvd "${T}/80gromacs"
@@ -232,17 +237,61 @@ src_install() {
 	fi
 	rm -f "${ED}"/usr/bin/completion.*
 
-	# Fix typos in a couple of files.
-	sed -e "s:+0f:-f:" -i "${ED}"usr/share/gromacs/tutor/gmxdemo/demo \
-		|| die "Failed to fixup demo script."
-
 	cd "${S}"
 	dodoc AUTHORS INSTALL README
 	if use doc; then
-		dodoc "${DISTDIR}/manual-${MANUAL_PV}.pdf"
+		newdoc "${DISTDIR}/gromacs-manual-4.0.pdf" "manual-4.0.pdf"
 		dohtml -r "${ED}usr/share/gromacs/html/"
 	fi
 	rm -rf "${ED}usr/share/gromacs/html/"
+
+	if use ffamber; then
+		use doc && dodoc "${WORKDIR}/ffamber_v4.0/README/pdfs/*.pdf"
+		# prepare vdwradii.dat
+		cat >>"${ED}"/usr/share/gromacs/top/vdwradii.dat <<-EOF
+			SOL  MW    0
+			SOL  LP    0
+		EOF
+		# regenerate aminoacids.dat
+		cat "${WORKDIR}"/ffamber_v4.0/aminoacids*.dat \
+		"${ED}"/usr/share/gromacs/top/aminoacids.dat \
+		| awk '{print $1}' | sort -u | tail -n+4 | wc -l \
+		>> "${ED}"/usr/share/gromacs/top/aminoacids.dat.new
+		cat "${WORKDIR}"/ffamber_v4.0/aminoacids*.dat \
+		"${ED}"/usr/share/gromacs/top/aminoacids.dat \
+		| awk '{print $1}' | sort -u | tail -n+4 \
+		>> "${ED}"/usr/share/gromacs/top/aminoacids.dat.new
+		mv -f "${ED}"/usr/share/gromacs/top/aminoacids.dat.new \
+		"${ED}"/usr/share/gromacs/top/aminoacids.dat
+		# copy ff files
+		for x in ffamber94 ffamber96 ffamber99 ffamber99p ffamber99sb \
+				ffamberGS ffamberGSs ffamber03 ; do
+			einfo "Adding ${x} to gromacs"
+			cp "${WORKDIR}"/ffamber_v4.0/${x}/* "${ED}"/usr/share/gromacs/top
+		done
+		# copy suplementary files
+		cp "${WORKDIR}"/ffamber_v4.0/*.gro "${ED}"/usr/share/gromacs/top
+		cp "${WORKDIR}"/ffamber_v4.0/*.itp "${ED}"/usr/share/gromacs/top
+		# actualy add records to FF.dat
+		cat >>"${ED}"/usr/share/gromacs/top/FF.dat.new <<-EOF
+			ffamber94   AMBER94 Cornell protein/nucleic forcefield
+			ffamber96   AMBER96 Kollman protein/nucleic forcefield
+			ffamberGS   AMBER-GS Garcia &  Sanbonmatsu forcefield
+			ffamberGSs  AMBER-GSs Nymeyer &  Garcia forcefield
+			ffamber99   AMBER99 Wang protein/nucleic acid forcefield
+			ffamber99p  AMBER99p protein/nucleic forcefield
+			ffamber99sb AMBER99sb Hornak protein/nucleic forcefield
+			ffamber03   AMBER03 Duan protein/nucleic forcefield
+		EOF
+		cat "${ED}"/usr/share/gromacs/top/FF.dat \
+			"${ED}"/usr/share/gromacs/top/FF.dat.new \
+			| tail -n+2 > "${ED}"/usr/share/gromacs/top/FF.dat.new2
+		cat "${ED}"/usr/share/gromacs/top/FF.dat.new2 | wc -l > \
+			"${ED}"/usr/share/gromacs/top/FF.dat
+		cat "${ED}"/usr/share/gromacs/top/FF.dat.new2 >> \
+			"${ED}"/usr/share/gromacs/top/FF.dat
+		rm -f "${ED}"/usr/share/gromacs/top/FF.dat.new*
+	fi
 }
 
 pkg_postinst() {
@@ -254,7 +303,7 @@ pkg_postinst() {
 	elog
 	bash-completion_pkg_postinst
 	elog
-	elog $(g_luck)
+	elog $(luck)
 	elog "For more Gromacs cool quotes (gcq) add luck to your .bashrc"
 	elog
 }
