@@ -1,6 +1,6 @@
-hardened/linux/amd64/10.0
+hardened/linux/amd64/no-multilib
 # Check 'eselect profile list'.
-# Find the number that corresponds with the hardened/linux/amd64/10.0 profile.
+# Find the number that corresponds with the hardened/linux/amd64/no-multilib profile.
 # Use 'eselect profile set <number>' to set a new /etc/make.profile symlink.
 #
 # Reference: http://www.gentoo.org/doc/en/gentoo-upgrading.xml

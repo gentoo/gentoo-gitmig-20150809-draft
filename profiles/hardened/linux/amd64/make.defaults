@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation.
+# Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/make.defaults,v 1.2 2009/07/09 00:47:47 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/make.defaults,v 1.3 2010/11/25 13:22:11 blueness Exp $
 
-USE="justify"
+USE="justify -unicode"
 
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
+
+# STAGE1_USE does not stack
+STAGE1_USE="hardened multilib nptl nptlonly pic"
