@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.12 2010/11/14 00:54:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.13 2010/11/25 21:22:46 caster Exp $
+
+*icedtea-6.1.9.2 (25 Nov 2010)
+
+  25 Nov 2010; Vlastimil Babka <caster@gentoo.org> +icedtea-6.1.9.2.ebuild,
+  metadata.xml:
+  Security version bump, bug #346799, thanks to Andrew John Hughes
+  (gnu_andrew@member.fsf.org). Also adds webstart useflag.
 
   14 Nov 2010; Vlastimil Babka <caster@gentoo.org>
   -files/6.1.8.0-systemtap-gcc-4.5.patch, -icedtea-6.1.8.0.ebuild,
