@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.130 2010/01/23 07:45:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.131 2010/11/25 12:30:06 hattya Exp $
+
+  25 Nov 2010; Akinori Hattori <hattya@gentoo.org>
+  -files/anthy-7500b-asneeded.patch, -files/anthy-mkdic-gcc34.patch,
+  -files/anthy-7900-asneeded.diff:
+  remove unused files. fixes bug #342499.
 
   23 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> -anthy-9100d.ebuild:
   Removed old version.
