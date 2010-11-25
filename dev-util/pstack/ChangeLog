@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pstack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.10 2010/09/17 04:25:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.11 2010/11/25 17:38:28 xmw Exp $
+
+  25 Nov 2010; Michael Weber <xmw@gentoo.org> pstack-1.1.ebuild,
+  pstack-1.1-r1.ebuild:
+  Adjusting keywords, doesn't run on non-32bit/x86
 
 *pstack-1.1-r1 (17 Sep 2010)
 

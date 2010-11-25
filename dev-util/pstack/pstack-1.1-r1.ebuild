@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1-r1.ebuild,v 1.1 2010/09/17 04:25:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1-r1.ebuild,v 1.2 2010/11/25 17:38:28 xmw Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.linuxcommand.org/man_pages/pstack1.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="~x86 -*"
 IUSE=""
 
 S=${WORKDIR}/${PN}
