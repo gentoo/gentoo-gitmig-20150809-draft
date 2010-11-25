@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.12 2010/05/16 02:59:01 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.13 2010/11/25 13:05:07 xarthisius Exp $
+
+*gchemutils-0.13.1 (25 Nov 2010)
+
+  25 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +gchemutils-0.13.1.ebuild:
+  Version bump. Fixes #271998, #342743 and #345095. Thanks to urcindalo and
+  Diego Elio Pettenò for the reports. Thanks to Argon <argonovsky@gmail.com>
+  for his work on version bump.
 
   16 May 2010; Jeff Gardner <je_fro@gentoo.org> gchemutils-0.10.12.ebuild:
   Removing gnome USE flag from libgsf and goffice.
