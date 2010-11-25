@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.93.ebuild,v 1.1 2010/11/22 18:10:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.93_p1.ebuild,v 1.1 2010/11/25 21:21:43 xmw Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="A graphical user interface toolkit for X"
 HOMEPAGE="http://www.nongnu.org/xforms/"
-SRC_URI="http://savannah.nongnu.org/download/xforms/${MY_P}sp1.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/xforms/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.47 2010/11/22 18:10:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.48 2010/11/25 21:21:43 xmw Exp $
+
+*xforms-1.0.93_p1 (25 Nov 2010)
+
+  25 Nov 2010; Michael Weber <xmw@gentoo.org> -xforms-1.0.93.ebuild,
+  +xforms-1.0.93_p1.ebuild:
+  Changing ebuilds name according to upstream version, fix bug #346525.
 
 *xforms-1.0.93 (22 Nov 2010)
 
