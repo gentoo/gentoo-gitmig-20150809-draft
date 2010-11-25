@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.166 2010/11/08 21:29:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.167 2010/11/25 20:30:29 dilfridge Exp $
+
+*digikam-1.6.0 (25 Nov 2010)
+
+  25 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +digikam-1.6.0.ebuild, +files/digikam-1.6.0-docs.patch:
+  Version bump
 
 *digikam-1.2.0-r4 (08 Nov 2010)
 

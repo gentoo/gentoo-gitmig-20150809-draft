@@ -1,0 +1,49 @@
+diff -ru digikam-1.6.0.orig/CMakeLists.txt digikam-1.6.0/CMakeLists.txt
+--- digikam-1.6.0.orig/CMakeLists.txt	2010-11-22 18:50:48.000000000 +0100
++++ digikam-1.6.0/CMakeLists.txt	2010-11-25 00:16:54.000000000 +0100
+@@ -1423,7 +1423,14 @@
+ # ==================================================================================================
+ # API documentation generation
+ 
+-IF(DOXYGEN_FOUND)
++# Checks if user ask to build documentation.
++IF(BUILD_DOC)
++
++  IF(DOXYGEN_FOUND)
++
++    MESSAGE(STATUS "")
++    MESSAGE(STATUS "API documentation will be installed")
++    MESSAGE(STATUS "")
+ 
+     SET(API_DIR ${CMAKE_BINARY_DIR}/api)
+     SET(SOURCE_DIR ${CMAKE_SOURCE_DIR})
+@@ -1432,8 +1439,27 @@
+ 
+     CONFIGURE_FILE(Doxyfile.cmake ${DOXYFILE})
+ 
+-    ADD_CUSTOM_TARGET(doc ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
++    ADD_CUSTOM_TARGET(doc ALL ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
+                       WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+-ENDIF(DOXYGEN_FOUND)
++
++  ELSE(DOXYGEN_FOUND)
++
++    MESSAGE(FATAL_ERROR "API documentation requested but doxygen not found")
++
++  ENDIF(DOXYGEN_FOUND)
++
++ELSE(BUILD_DOC)
++
++  MESSAGE(STATUS "")
++  MESSAGE(STATUS "Documentation will NOT be installed")
++  MESSAGE(STATUS "Because the option -DBUILD_DOC=ON wasn't passed to cmake")
++  MESSAGE(STATUS "")
++
++ENDIF(BUILD_DOC)
++
++
+ include(MacroOptionalAddSubdirectory)
+ macro_optional_add_subdirectory( po )
++
++# Build the handbook
++add_subdirectory( doc )
