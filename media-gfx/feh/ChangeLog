@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.60 2010/11/25 01:19:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.61 2010/11/25 13:35:58 jer Exp $
+
+  25 Nov 2010; Jeroen Roovers <jer@gentoo.org> feh-1.9.ebuild:
+  Stable for PPC (bug #343149).
 
 *feh-1.10 (25 Nov 2010)
 
