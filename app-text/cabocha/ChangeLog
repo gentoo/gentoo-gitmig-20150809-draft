@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cabocha
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.5 2008/10/08 00:24:19 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.6 2010/11/25 12:37:10 hattya Exp $
+
+  25 Nov 2010; Akinori Hattori <hattya@gentoo.org>
+  -files/cabocha-0.52-amd64.patch:
+  remove unused files. fixes bug #344189.
 
 *cabocha-0.60_pre4 (08 Oct 2008)
 
