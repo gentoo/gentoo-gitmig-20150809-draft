@@ -1,6 +1,11 @@
 # ChangeLog for app-text/focuswriter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/ChangeLog,v 1.7 2010/10/19 07:26:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/ChangeLog,v 1.8 2010/11/25 13:57:57 chiiph Exp $
+
+*focuswriter-1.3.1 (25 Nov 2010)
+
+  25 Nov 2010; Tomas Touceda <chiiph@gentoo.org> +focuswriter-1.3.1.ebuild:
+  Version bump wrt bug 346739
 
   19 Oct 2010; Alex Alexander <wired@gentoo.org> focuswriter-1.3.0.ebuild:
   added missing dep, bug #340279, thanks to Jan Psota
