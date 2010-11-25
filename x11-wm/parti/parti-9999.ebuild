@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-9999.ebuild,v 1.1 2010/08/31 12:29:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-9999.ebuild,v 1.2 2010/11/25 16:55:42 xmw Exp $
 
 EAPI=2
 
@@ -42,6 +42,6 @@ pkg_setup() {
 
 src_prepare() {
 	if [ ! -e wimpiggy/lowlevel/constants.pxi ] ; then
-		cp "${FILESDIR}"/${P}-constants.pxi wimpiggy/lowlevel/constants.pxi || die
+		$(PYTHON -2 -a) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/parti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.5 2010/11/25 16:51:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.6 2010/11/25 16:55:42 xmw Exp $
+
+  25 Nov 2010; Michael Weber <xmw@gentoo.org> parti-0.0.6_p456.ebuild,
+  parti-9999.ebuild, -files/parti-9999-constants.pxi:
+  Better solution for the missing constants.pxi
 
 *parti-0.0.6_p456 (25 Nov 2010)
 
