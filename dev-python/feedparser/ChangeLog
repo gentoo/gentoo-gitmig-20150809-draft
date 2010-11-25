@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.20 2010/08/14 17:38:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.21 2010/11/25 15:15:10 sping Exp $
+
+*feedparser-4.2_pre316 (25 Nov 2010)
+
+  25 Nov 2010; Sebastian Pipping <sping@gentoo.org>
+  +feedparser-4.2_pre316.ebuild:
+  Bump to snapshot of revision 316 (current trunk) to fix email subjects of
+  rss2email. Except feedparser.py, all files in the snapshot are taken from the
+  4.1 release. Fix license from Python to BSD-2.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> feedparser-4.1.ebuild:
   sparc stable
