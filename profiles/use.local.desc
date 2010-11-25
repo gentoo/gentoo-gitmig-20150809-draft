@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6183 2010/11/25 05:14:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6184 2010/11/25 21:34:26 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -860,6 +860,7 @@ dev-java/icedtea:hs19 - Use the new version of HotSpot (19).
 dev-java/icedtea:nio2 - Enable backport of NIO2 to OpenJDK6.
 dev-java/icedtea:nss - Enable NSS security provider support.
 dev-java/icedtea:systemtap - Enable SystemTap probes in HotSpot.
+dev-java/icedtea:webstart - Enable Web Start support (via NetX).
 dev-java/icedtea:xrender - Enable support for using XRender with the AWT libraries.
 dev-java/icedtea:zero - Enable the zero assembler port of HotSpot.
 dev-java/itext:rtf - Build and provide libraries for rich text format
