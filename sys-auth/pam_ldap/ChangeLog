@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_ldap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.40 2009/05/29 13:26:11 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.41 2010/11/25 20:28:10 constanze Exp $
+
+*pam_ldap-186 (25 Nov 2010)
+
+  25 Nov 2010; Constanze Hausner <constanze@gentoo.org> +pam_ldap-186.ebuild:
+  Version bump, contains only bugfixes (requested by bug #302765)
 
   29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -pam_ldap-180.ebuild, -pam_ldap-182.ebuild:
