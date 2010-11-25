@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.21 2010/11/01 12:26:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.22 2010/11/25 17:19:15 flameeyes Exp $
+
+*libcap-ng-0.6.5 (25 Nov 2010)
+
+  25 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libcap-ng-0.6.5.ebuild:
+  Version bump, thanks to Gary Macindoe in bug #346517. Fixes build with
+  linux-headers 2.6.36.1.
 
   01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libcap-ng-0.6.4.ebuild:
