@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.11 2010/08/25 17:19:42 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.12 2010/11/25 01:20:31 chiiph Exp $
+
+*pyside-0.4.2 (25 Nov 2010)
+
+  25 Nov 2010; Tomas Touceda <chiiph@gentoo.org> -pyside-0.3.2.ebuild,
+  -pyside-0.4.0-r1.ebuild, +pyside-0.4.2.ebuild:
+  Version bump, remove old and restrict tests wrt bug 338485
 
 *pyside-0.4.0-r1 (25 Aug 2010)
 
