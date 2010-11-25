@@ -1,7 +1,6 @@
-diff --git a/data/shiboken.pc.in b/data/shiboken.pc.in
-index ed1cc6c..528fd26 100644
---- a/data/shiboken.pc.in
-+++ b/data/shiboken.pc.in
+diff -Naur shiboken-0.5.1.orig/data/shiboken.pc.in shiboken-0.5.1/data/shiboken.pc.in
+--- shiboken-0.5.1.orig/data/shiboken.pc.in	2010-10-11 19:23:01.000000000 -0300
++++ shiboken-0.5.1/data/shiboken.pc.in	2010-11-24 22:01:54.000000000 -0300
 @@ -1,12 +1,13 @@
  prefix=@CMAKE_INSTALL_PREFIX@
  exec_prefix=@CMAKE_INSTALL_PREFIX@
@@ -14,7 +13,7 @@ index ed1cc6c..528fd26 100644
  Name: shiboken
  Description: Support library for Python bindings created with Shiboken generator.
  Version: @shiboken_VERSION@
- Libs: -L${libdir} -lpython -lshiboken${shiboken_SUFFIX}
--Cflags: -I${includedir}/shiboken${shiboken_SUFFIX}
+ Libs: -L${libdir} -lpython -lshiboken@shiboken_SUFFIX@@LIBRARY_OUTPUT_SUFFIX@
+-Cflags: -I${includedir}/shiboken@shiboken_SUFFIX@
 +Cflags: -I${includedir}
  
