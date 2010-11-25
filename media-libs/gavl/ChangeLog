@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gavl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.10 2010/01/06 23:34:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.11 2010/11/25 16:16:15 jer Exp $
+
+*gavl-1.1.0-r1 (25 Nov 2010)
+
+  25 Nov 2010; Jeroen Roovers <jer@gentoo.org> +gavl-1.1.0-r1.ebuild:
+  Respect LDFLAGS (bug #338174).
 
   06 Jan 2010; Joseph Jezak <josejx@gentoo.org> gavl-1.1.0.ebuild:
   Marked ~ppc/~ppc64.
