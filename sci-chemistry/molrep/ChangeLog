@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/molrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.9 2010/07/23 08:04:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.10 2010/11/25 08:21:44 jlec Exp $
+
+*molrep-11.0.02 (25 Nov 2010)
+
+  25 Nov 2010; Justin Lecher <jlec@gentoo.org> -molrep-10.2.35.ebuild,
+  -molrep-11.0.00-r1.ebuild, -molrep-11.0.00_p1.ebuild,
+  -molrep-11.0.00_p2.ebuild, +molrep-11.0.02.ebuild:
+  Version Bump and cleaned old
 
 *molrep-11.0.00_p3 (23 Jul 2010)
 
