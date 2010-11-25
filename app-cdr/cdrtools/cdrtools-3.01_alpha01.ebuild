@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.00-r1.ebuild,v 1.3 2010/11/20 16:34:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha01.ebuild,v 1.1 2010/11/25 18:52:59 billie Exp $
 
 EAPI=2
 
@@ -59,9 +59,9 @@ src_prepare() {
 	sed -i -e "s|^#CONFFLAGS +=\t-cc=\$(XCC_COM)$|CONFFLAGS +=\t-cc=${tcCC}|g" \
 		rules.cnf || die "sed rules.cnf"
 
-	# Create additional symlinks needed for some archs.
+	# Create additional symlinks needed for some archs (armv4l already created)
 	local t
-	for t in armv4l armv4tl armv5l armv5tel armv6l armv7l ppc64 s390x; do
+	for t in armv4tl armv5l armv5tel armv6l armv7l ppc64 s390x; do
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
