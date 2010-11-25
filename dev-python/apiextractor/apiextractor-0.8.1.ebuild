@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.8.0.ebuild,v 1.1 2010/10/06 20:47:52 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/apiextractor-0.8.1.ebuild,v 1.1 2010/11/25 01:16:25 chiiph Exp $
 
 EAPI="2"
 
@@ -24,15 +24,11 @@ RDEPEND=">=dev-libs/boost-1.41.0[python]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	test? ( >=x11-libs/qt-test-4.5.0 )"
+TEST_VERBOSE="1"
 
 src_configure() {
 	mycmakeargs="$(cmake-utils_use_build test TESTS)"
 	cmake-utils_src_configure
-}
-
-src_test() {
-	# bug 299766
-	Xemake test -C "${CMAKE_BUILD_DIR}/tests" || die "running tests failed"
 }
 
 src_install() {
