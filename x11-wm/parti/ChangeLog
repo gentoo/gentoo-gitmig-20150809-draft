@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/parti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.4 2010/10/07 09:46:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.5 2010/11/25 16:51:10 xmw Exp $
+
+*parti-0.0.6_p456 (25 Nov 2010)
+
+  25 Nov 2010; Michael Weber <xmw@gentoo.org> +parti-0.0.6_p456.ebuild:
+  Version bump to solve clipboard issues
 
   07 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> parti-0.0.6.ebuild:
   x86 stable wrt bug #339332
