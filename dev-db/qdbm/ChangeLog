@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.130 2010/07/31 10:28:55 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.131 2010/11/25 09:51:32 hattya Exp $
+
+*qdbm-1.8.78 (25 Nov 2010)
+
+  25 Nov 2010; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.78.ebuild,
+  files/qdbm-perl-runpath-vendor.diff:
+  new upstream release. fixes bug #331553.
 
   31 Jul 2010; Akinori Hattori <hattya@gentoo.org>
   -files/qdbm-1.8.75-runpath.diff, qdbm-1.8.77.ebuild,
