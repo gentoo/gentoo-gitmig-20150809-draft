@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.29 2010/11/19 08:57:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.30 2010/11/25 13:35:42 jlec Exp $
+
+*cns-1.3_p3 (25 Nov 2010)
+
+  25 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.3_p3-delete.patch,
+  +files/1.3_p3-gentoo.patch, -files/1.3-delete.patch, -files/1.3-gentoo.patch,
+  -files/cns_solve_env_sh-1.3, -cns-1.3.ebuild, +files/cns_solve_env_sh-1.3_p3,
+  +cns-1.3_p3.ebuild:
+  Version Bump, thanks alexxy telling me this; fix for correct linking
 
   19 Nov 2010; Justin Lecher <jlec@gentoo.org> -cns-1.2.ebuild,
   -cns-1.2-r1.ebuild, -cns-1.2.1-r1.ebuild, -cns-1.2.1-r3.ebuild,

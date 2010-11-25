@@ -62,15 +62,28 @@ index 0d0dd3e..dd4b680 100644
  
  # regenerate makefiles
 diff --git a/instlib/utils/Makefile b/instlib/utils/Makefile
-index 98de84f..2b0a9ce 100644
+index 98de84f..4f32b34 100644
 --- a/instlib/utils/Makefile
 +++ b/instlib/utils/Makefile
-@@ -28,7 +28,7 @@ utils:
- 	$(CC) -o $@ $(CCFLAGS) $(@).c $(CCLINK)
+@@ -22,17 +22,17 @@ utils:
+ 	make clean
+ 
+ .f:
+-	$(F77) -o $@ $(F77FLAGS) $(@).f $(F77LINK)
++	$(F77) $(LDFLAGS) -o $@ $(F77FLAGS) $(@).f $(F77LINK)
+ 
+ .c:
+-	$(CC) -o $@ $(CCFLAGS) $(@).c $(CCLINK)
++	$(CC) $(LDFLAGS) -o $@ $(CCFLAGS) $(@).c $(CCLINK)
  
  .cpp:
 -	$(CPP) -o $@ $(CCFLAGS) $(@).cpp $(CCLINK)
-+	$(CXX) -o $@ $(CXXFLAGS) $(@).cpp $(CCLINK)
++	$(CXX) $(LDFLAGS) -o $@ $(CXXFLAGS) $(@).cpp $(CCLINK)
  
  .l:
  	lex $(@).l
+-	$(CC) $(CCFLAGS) -o $@ lex.yy.c $(CCLINK) -l$(LEXLIB)
++	$(CC) $(LDFLAGS) $(CCFLAGS) -o $@ lex.yy.c $(CCLINK) -l$(LEXLIB)
+ 
+ relink:
+ 	@ cd $(CNS_INST)/utils; touch x; rm -f x `ls * | grep -v Makefile`
