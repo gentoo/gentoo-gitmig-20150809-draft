@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.89 2010/05/18 03:54:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.90 2010/11/26 16:17:53 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> taglib-1.6.3.ebuild:
+  Stable for HPPA SPARC (bug #346471).
 
 *taglib-1.6.3 (18 May 2010)
 
