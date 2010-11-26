@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.196 2010/09/21 22:36:43 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.197 2010/11/26 04:14:08 ford_prefect Exp $
+
+*pulseaudio-0.9.22 (26 Nov 2010)
+
+  26 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +pulseaudio-0.9.22.ebuild:
+  Bump to 0.9.22. Lots of bug fixes. Remove SRC_URI munging till a newer
+  release scheme gets decided. Also use --with-udev-rules-dir instead of
+  emake variable override and make pulling gnome-sounds dependent on USE=X
+  (bug #341551).
 
 *pulseaudio-0.9.21.2-r2 (21 Sep 2010)
 
