@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.21 2010/11/26 08:34:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.22 2010/11/26 22:02:03 fauli Exp $
+
+  26 Nov 2010; Christian Faulhammer <fauli@gentoo.org> ilmbase-1.0.2.ebuild:
+  stable x86, security bug 277202
 
   26 Nov 2010; Markos Chandras <hwoarang@gentoo.org> ilmbase-1.0.2.ebuild:
   Stable on amd64 wrt bug #277202
