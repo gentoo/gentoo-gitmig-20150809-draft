@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.185 2010/11/25 07:41:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.186 2010/11/26 08:42:45 hwoarang Exp $
+
+  26 Nov 2010; Markos Chandras <hwoarang@gentoo.org> bugzilla-3.6.3.ebuild:
+  Stable on amd64 wrt bug #346403
 
   25 Nov 2010; Torsten Veller <tove@gentoo.org> -bugzilla-3.2.8.ebuild,
   -bugzilla-3.4.8.ebuild, -bugzilla-3.6.2.ebuild:
