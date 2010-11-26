@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.3.ebuild,v 1.1 2010/10/07 06:34:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.3.ebuild,v 1.2 2010/11/26 08:46:03 hwoarang Exp $
 
 EAPI="2"
 inherit toolchain-funcs eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.${PN}.org/downloads/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-db/sqlite-3.5:3
