@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.35 2010/11/08 23:33:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.36 2010/11/26 09:47:24 tomka Exp $
+
+*singular-3.1.2-r2 (26 Nov 2010)
+
+  26 Nov 2010; Thomas Kahle <tomka@gentoo.org>
+  -files/singular-3.1.0-glibc-2.10.patch, -singular-3.1.1-r1.ebuild,
+  -singular-3.1.2-r1.ebuild, +singular-3.1.2-r2.ebuild:
+  Upstream updated share-tarball.
+  Use latest emacs.eclass gadgets
+  Removed old.
 
 *singular-3.1.2-r1 (08 Nov 2010)
 

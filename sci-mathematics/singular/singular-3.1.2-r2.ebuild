@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r1.ebuild,v 1.2 2010/11/09 05:55:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r2.ebuild,v 1.1 2010/11/26 09:47:24 tomka Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1" # Upstream ticket 240 -> wontfix
@@ -10,8 +10,9 @@ inherit autotools eutils elisp-common flag-o-matic multilib prefix versionator
 MY_PN=Singular
 MY_PV=$(replace_all_version_separators -)
 MY_DIR=$(get_version_component_range 1-3 ${MY_PV})
-MY_SHARE_DIR="3-1-1"
-MY_PV_SHARE="${MY_SHARE_DIR}-4a"  # What an awesome filenaming scheme...
+# There 'share' tarball does not get updated on every release
+MY_SHARE_DIR="3-1-2"
+MY_PV_SHARE="${MY_SHARE_DIR}"
 
 DESCRIPTION="Computer algebra system for polynomial computations"
 HOMEPAGE="http://www.singular.uni-kl.de/"
@@ -43,6 +44,11 @@ pkg_setup() {
 	append-flags "-fPIC"
 	append-ldflags "-fPIC"
 	tc-export CC CPP CXX
+
+	# Ensure that >=emacs-22 is selected 
+	if use emacs; then
+		lisp-need-emacs 22 || die "Emacs version too low"
+	fi
 }
 
 src_prepare () {
