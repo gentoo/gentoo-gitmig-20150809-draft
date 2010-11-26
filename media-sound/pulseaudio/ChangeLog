@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.197 2010/11/26 04:14:08 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.198 2010/11/26 06:56:03 radhermit Exp $
+
+  26 Nov 2010; Tim Harder <radhermit@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Fix libX11 xcb USE flag dependency since >=x11-libs/libX11-1.4.0 comes with
+  xcb by default.
 
 *pulseaudio-0.9.22 (26 Nov 2010)
 

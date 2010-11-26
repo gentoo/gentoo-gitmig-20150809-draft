@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22.ebuild,v 1.1 2010/11/26 04:14:08 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22.ebuild,v 1.2 2010/11/26 06:56:03 radhermit Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ IUSE="+alsa avahi +caps jack lirc oss tcpd +X hal dbus libsamplerate gnome bluet
 
 RDEPEND="app-admin/eselect-esd
 	X? (
-		x11-libs/libX11[xcb]
+		|| ( <x11-libs/libX11-1.4.0[xcb] >=x11-libs/libX11-1.4.0 )
 		x11-libs/xcb-util
 		x11-libs/libSM
 		x11-libs/libICE
