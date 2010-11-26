@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4-r1.ebuild,v 1.4 2010/11/14 17:29:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4-r1.ebuild,v 1.5 2010/11/26 15:54:16 jer Exp $
 
 EAPI="3"
 
@@ -12,17 +12,18 @@ SRC_URI="http://oss.oetiker.ch/mrtg/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
 	dev-perl/SNMP_Session
 	>=dev-perl/Socket6-0.20
 	>=media-libs/gd-1.8.4"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}-disable-static.patch
-	epatch ${FILESDIR}/${P}-no-rpath.patch
+	epatch "${FILESDIR}"/${P}-disable-static.patch
+	epatch "${FILESDIR}"/${P}-no-rpath.patch
 	rm ./lib/mrtg2/{SNMP_{Session,util},BER}.pm || die
 	eautoreconf
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.106 2010/11/14 17:29:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.107 2010/11/26 15:54:16 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> mrtg-2.16.4-r1.ebuild:
+  Set RDEPEND. Fix quoting issues. Stable for HPPA (bug #342475).
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> mrtg-2.16.4-r1.ebuild:
   alpha/sparc stable wrt #342475
