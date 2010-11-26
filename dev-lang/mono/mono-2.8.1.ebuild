@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8-r1.ebuild,v 1.2 2010/10/28 16:25:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.1.ebuild,v 1.1 2010/11/26 10:47:43 pacho Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 RESTRICT="test"
 
 PATCHES=(
-	"${WORKDIR}/${P}-libdir.patch"
+	"${WORKDIR}/${PN}-2.8-libdir.patch"
 	"${FILESDIR}/mono-2.2-ppc-threading.patch"
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
 )
@@ -62,8 +62,8 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
-		< "${FILESDIR}"/${P}-libdir.patch \
-		> "${WORKDIR}"/${P}-libdir.patch ||
+		< "${FILESDIR}"/${PN}-2.8-libdir.patch \
+		> "${WORKDIR}"/${PN}-2.8-libdir.patch ||
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 
