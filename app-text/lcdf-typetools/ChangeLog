@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.57 2010/11/21 17:42:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.58 2010/11/26 15:40:36 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> lcdf-typetools-2.85.ebuild:
+  Stable for HPPA (bug #345745).
 
   21 Nov 2010; Markus Meier <maekke@gentoo.org> lcdf-typetools-2.85.ebuild:
   arm/x86 stable, bug #345745
