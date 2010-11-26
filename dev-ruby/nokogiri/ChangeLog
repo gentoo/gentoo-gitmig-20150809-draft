@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.42 2010/11/26 12:26:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.43 2010/11/26 12:29:21 graaff Exp $
+
+*nokogiri-1.4.4 (26 Nov 2010)
+
+  26 Nov 2010; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.4.4.ebuild:
+  Version bump.
 
   26 Nov 2010; Hans de Graaff <graaff@gentoo.org> -nokogiri-1.4.1.ebuild,
   -nokogiri-1.4.1-r1.ebuild:
