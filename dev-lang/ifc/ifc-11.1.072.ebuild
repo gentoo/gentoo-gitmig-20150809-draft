@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.1 2010/05/28 22:32:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.2 2010/11/26 13:09:16 jlec Exp $
 
 EAPI="3"
 
@@ -105,8 +105,8 @@ src_install() {
 	cat > ${envf} <<-EOF
 		PATH="${EROOT}${DESTINATION}/bin/${IARCH}"
 		ROOTPATH="${EROOT}${DESTINATION}/bin/${IARCH}"
-		LDPATH="${EROOT}${DESTINATION}/lib/${IARCH}"
-		LIBRARY_PATH="${EROOT}${DESTINATION}/lib/${IARCH}"
+		LDPATH="${EROOT}${DESTINATION}/lib/${IARCH}:${EROOT}${DESTINATION}/idb/lib/${IARCH}"
+		LIBRARY_PATH="${EROOT}${DESTINATION}/lib/${IARCH}:${EROOT}${DESTINATION}/idb/lib/${IARCH}"
 		NLSPATH="${EROOT}${DESTINATION}/lib/locale/en_US/%N"
 		MANPATH="${EROOT}${DESTINATION}/man/en_US"
 	EOF
