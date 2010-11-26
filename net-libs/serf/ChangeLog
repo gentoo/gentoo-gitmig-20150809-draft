@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.36 2010/11/06 13:40:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.37 2010/11/26 16:01:35 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> serf-0.7.0.ebuild:
+  Stable for HPPA (bug #343757).
 
   06 Nov 2010; Markus Meier <maekke@gentoo.org> serf-0.7.0.ebuild:
   arm stable, bug #343757
