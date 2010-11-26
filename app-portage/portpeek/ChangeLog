@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.102 2010/11/22 19:40:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.103 2010/11/26 21:07:27 mpagano Exp $
+
+  26 Nov 2010; Mike Pagano <mpagano@gentoo.org> portpeek-1.5.8.4.ebuild,
+  portpeek-1.5.9.0-r1.ebuild, portpeek-1.5.9.3.ebuild:
+  Add lower portage dependency to 1.5 series
 
 *portpeek-2.0.9 (22 Nov 2010)
 
