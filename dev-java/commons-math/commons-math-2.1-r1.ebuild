@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-2.1.ebuild,v 1.1 2010/10/24 09:09:34 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-2.1-r1.ebuild,v 1.1 2010/11/26 20:30:38 serkan Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jre-1.5"
 S="${WORKDIR}/${P}-src"
 
 java_prepare() {
-	epatch "${FILESDIR}"/${P}-buildfixes.patch
+	epatch "${FILESDIR}"/${PF}-buildfixes.patch
 }
 
 src_test() {
@@ -39,6 +39,6 @@ src_test() {
 src_install() {
 	java-pkg_newjar target/${P}.jar ${PN}.jar
 
-#	use doc && java-pkg_dojavadoc dist/docs/api
+	use doc && java-pkg_dojavadoc target/apidocs
 	use source && java-pkg_dosrc src/main/java/org
 }

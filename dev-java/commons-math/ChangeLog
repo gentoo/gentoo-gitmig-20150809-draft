@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.5 2010/10/26 16:28:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.6 2010/11/26 20:30:38 serkan Exp $
+
+*commons-math-2.1-r1 (26 Nov 2010)
+
+  26 Nov 2010; Serkan Kaba <serkan@gentoo.org> -commons-math-2.1.ebuild,
+  +commons-math-2.1-r1.ebuild, -files/commons-math-2.1-buildfixes.patch,
+  +files/commons-math-2.1-r1-buildfixes.patch:
+  Fix empty jar when tests are not run. Reported in bug #346823 by Hendrik
+  Iben <hiben@tzi.de>. Reenable docs.
 
   26 Oct 2010; Serkan Kaba <serkan@gentoo.org>
   +files/commons-math-2.1-buildfixes.patch:

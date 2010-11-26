@@ -13,7 +13,7 @@
  <!-- ========== Create Jar ================================================ -->
  
 -  <target name="jar" depends="test" description="Create jar file">
-+  <target name="jar" description="Create jar file">
++  <target name="jar" depends="compile" description="Create jar file">
  
      <mkdir dir="${build.home}/classes/META-INF"/>
      <copy file="LICENSE.txt" tofile="${build.home}/classes/META-INF/LICENSE.txt"/>
