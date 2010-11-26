@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/mspdebug
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/ChangeLog,v 1.1 2010/11/26 07:53:55 radhermit Exp $
+
+*mspdebug-0.13 (26 Nov 2010)
+
+  26 Nov 2010; Tim Harder <radhermit@gentoo.org> +mspdebug-0.13.ebuild,
+  +metadata.xml:
+  Initial import.
+
