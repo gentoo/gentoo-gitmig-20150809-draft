@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.62 2010/10/24 14:11:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.63 2010/11/26 16:25:36 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> soprano-2.4.4.ebuild:
+  Stable for HPPA (bug #331761).
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> soprano-2.4.4.ebuild:
   stable ppc, bug 331761
