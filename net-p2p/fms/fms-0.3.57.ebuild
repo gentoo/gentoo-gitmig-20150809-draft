@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.54.ebuild,v 1.1 2010/07/17 01:18:59 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.57.ebuild,v 1.1 2010/11/26 14:11:25 tommy Exp $
 
 EAPI="2"
 
