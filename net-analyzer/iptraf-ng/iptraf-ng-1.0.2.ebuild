@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.12 2010/11/01 19:19:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.13 2010/11/26 17:12:56 jer Exp $
 
 EAPI=2
 
 inherit autotools
 
-DESCRIPTION="console-based network monitoring utility, fork off iptraf 3.0.0"
+DESCRIPTION="console-based network monitoring utility, fork of iptraf 3.0.0"
 HOMEPAGE="https://fedorahosted.org/iptraf-ng/"
 SRC_URI="https://fedorahosted.org/releases/i/p/${PN}/${P}.tar.gz"
 
