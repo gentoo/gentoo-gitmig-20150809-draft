@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.8.ebuild,v 1.2 2010/11/07 22:06:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.8.1.ebuild,v 1.1 2010/11/26 10:54:11 pacho Exp $
 
 EAPI=2
 
 inherit eutils go-mono mono flag-o-matic
 
 DESCRIPTION="Library for using System.Drawing with mono"
-HOMEPAGE="http://www.go-mono.com/"
+HOMEPAGE="http://www.mono-project.com"
 
 LICENSE="MIT"
 SLOT="0"
