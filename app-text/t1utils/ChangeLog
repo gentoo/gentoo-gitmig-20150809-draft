@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.54 2010/11/21 17:43:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.55 2010/11/26 15:39:03 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> t1utils-1.36.ebuild:
+  Stable for HPPA (bug #345747).
 
   21 Nov 2010; Markus Meier <maekke@gentoo.org> t1utils-1.36.ebuild:
   arm/x86 stable, bug #345747
