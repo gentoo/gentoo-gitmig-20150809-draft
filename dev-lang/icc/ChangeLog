@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.81 2010/07/28 13:05:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.82 2010/11/26 13:20:12 jlec Exp $
+
+*icc-11.1.072-r1 (26 Nov 2010)
+
+  26 Nov 2010; Justin Lecher <jlec@gentoo.org> +icc-11.1.072-r1.ebuild:
+  Adding missing LIBRARY/LDPATH for idb, QA check fixes #330211
 
   28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   icc-11.1.046-r2.ebuild, icc-11.1.056.ebuild, icc-11.1.056-r1.ebuild,
