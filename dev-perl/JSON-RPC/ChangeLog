@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON-RPC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.3 2010/08/11 22:14:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.4 2010/11/26 08:41:32 hwoarang Exp $
+
+  26 Nov 2010; Markos Chandras <hwoarang@gentoo.org> JSON-RPC-0.96.ebuild:
+  Stable on amd64 wrt bug #346403
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> JSON-RPC-0.96.ebuild:
   Marked ~ppc/~ppc64 for bug #315793.

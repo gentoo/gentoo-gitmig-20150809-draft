@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Flock
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.4 2009/12/10 21:12:46 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.5 2010/11/26 08:41:46 hwoarang Exp $
+
+  26 Nov 2010; Markos Chandras <hwoarang@gentoo.org> File-Flock-2008.01.ebuild:
+  Stable on amd64 wrt bug #346403
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> File-Flock-2008.01.ebuild:
   Marking File-Flock-2008.01 ~ppc64 for bug 284166
