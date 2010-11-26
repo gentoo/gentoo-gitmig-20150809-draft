@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.84 2010/10/07 20:29:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.85 2010/11/26 11:31:31 pacho Exp $
+
+*monodevelop-2.4.1 (26 Nov 2010)
+
+  26 Nov 2010; Pacho Ramos <pacho@gentoo.org> +monodevelop-2.4.1.ebuild:
+  Version bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -monodevelop-2.0.ebuild,
   -monodevelop-2.1.1.ebuild, -monodevelop-2.2.1.ebuild,
