@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.54.7.ebuild,v 1.1 2010/10/29 21:25:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.54.10.ebuild,v 1.1 2010/11/26 15:10:19 dagger Exp $
 
 inherit bash-completion eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.pioto.org/"
 SRC_URI="http://paludis.pioto.org/download/${P}.tar.bz2"
 
-IUSE="doc portage pink python-bindings ruby-bindings search-index vim-syntax visibility xml zsh-completion"
+IUSE="doc pbins portage pink python-bindings ruby-bindings search-index vim-syntax visibility xml zsh-completion"
 LICENSE="GPL-2 vim-syntax? ( vim )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -18,6 +18,8 @@ COMMON_DEPEND="
 	>=app-shells/bash-3.2
 	>=sys-devel/gcc-4.4
 	dev-libs/libpcre
+	sys-apps/file
+	pbins? ( >=app-arch/libarchive-2.8.4 )
 	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
 	xml? ( >=dev-libs/libxml2-2.6 )
@@ -62,6 +64,13 @@ pkg_setup() {
 		die "Rebuild dev-libs/boost with USE python"
 	fi
 
+	if use pbins && \
+		built_with_use app-arch/libarchive xattr; then
+		eerror "With USE pbins you need libarchive build without the xattr"
+		eerror "use flag."
+		die "Rebuild app-arch/libarchive without USE xattr"
+	fi
+
 	create-paludis-user
 }
 
@@ -71,6 +80,7 @@ src_compile() {
 	local environments=`echo default $(usev portage ) | tr -s \  ,`
 	econf \
 		$(use_enable doc doxygen ) \
+		$(use_enable pbins ) \
 		$(use_enable pink ) \
 		$(use_enable ruby-bindings ruby ) \
 		$(useq ruby-bindings && useq doc && echo --enable-ruby-doc ) \
