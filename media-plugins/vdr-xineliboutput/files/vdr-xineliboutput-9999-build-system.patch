@@ -1,41 +1,11 @@
 Index: Makefile
 ===================================================================
 RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/Makefile,v
-retrieving revision 1.99
-diff -u -b -B -r1.99 Makefile
---- Makefile	23 Nov 2010 13:46:59 -0000	1.99
-+++ Makefile	23 Nov 2010 17:53:25 -0000
-@@ -127,9 +127,9 @@
- ### The name of executable and libraries
- ###
- 
--VDRPLUGIN            = libvdr-$(PLUGIN).so
--VDRPLUGIN_SXFE       = lib$(PLUGIN)-sxfe.so
--VDRPLUGIN_FBFE       = lib$(PLUGIN)-fbfe.so
-+VDRPLUGIN            = libvdr-$(PLUGIN).so.$(APIVERSION)
-+VDRPLUGIN_SXFE       = lib$(PLUGIN)-sxfe.so.$(VERSION)
-+VDRPLUGIN_FBFE       = lib$(PLUGIN)-fbfe.so.$(VERSION)
- VDRSXFE              = vdr-sxfe
- VDRFBFE              = vdr-fbfe
- XINEINPUTVDR         = xineplug_inp_xvdr.so
-@@ -273,7 +273,7 @@
- 	$(CC) $(CFLAGS) -c $(DEFINES) $(INCLUDES) $(CFLAGS_X11) $(OPTFLAGS) -o $@ $<
- 
- ### Internationalization (I18N):
--
-+ifeq ($(HAVE_I18N), yes)
- PODIR     = po
- LOCALEDIR ?= $(DESTDIR)$(VDRDIR)/locale
- I18Npo    = $(wildcard $(PODIR)/*.po)
-@@ -293,6 +293,7 @@
- $(I18Nmsgs): $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.mo
- 	@mkdir -p $(dir $@)
- 	cp $< $@
-+endif
- 
- .PHONY: i18n
- i18n: $(I18Nmsgs)
-@@ -311,7 +312,7 @@
+retrieving revision 1.101
+diff -u -b -B -r1.101 Makefile
+--- Makefile	25 Nov 2010 14:28:49 -0000	1.101
++++ Makefile	26 Nov 2010 19:42:55 -0000
+@@ -312,7 +312,7 @@
  install : XINELIBOUTPUT_INSTALL_MSG =
  
  .PHONY: all
@@ -44,34 +14,34 @@ diff -u -b -B -r1.99 Makefile
  
  frontends: config $(TARGETS_FE) $(TARGETS_XINE)
  	$(XINELIBOUTPUT_INSTALL_MSG)
-@@ -328,8 +329,6 @@
+@@ -329,8 +329,6 @@
  
  $(VDRPLUGIN): $(OBJS) $(OBJS_MPG)
  	$(CXX) $(CXXFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS) $(OBJS_MPG) $(LIBS) $(LIBS_VDR) -o $@
--	@-rm -rf $(LIBDIR)/$@.$(APIVERSION)
--	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
+-	@-rm -rf $(LIBDIR)/$@
+-	@cp $@ $(LIBDIR)/$@
  
  #
  # vdr-sxfe
-@@ -337,8 +336,6 @@
+@@ -338,8 +336,6 @@
  
  $(VDRPLUGIN_SXFE): $(OBJS_SXFE_SO)
  	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_SXFE_SO) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) -o $@
--	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_SXFE).$(VERSION)
--	@cp $@ $(LIBDIR)/$(VDRPLUGIN_SXFE).$(VERSION)
+-	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_SXFE)
+-	@cp $@ $(LIBDIR)/$(VDRPLUGIN_SXFE)
  $(VDRSXFE): $(OBJS_SXFE)
  	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_SXFE) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
  
-@@ -348,8 +345,6 @@
+@@ -349,8 +345,6 @@
  
  $(VDRPLUGIN_FBFE): $(OBJS_FBFE_SO)
  	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_FBFE_SO) $(LIBS_XINE) $(LIBS_JPEG) -o $@
--	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_FBFE).$(VERSION)
--	@cp $@ $(LIBDIR)/$(VDRPLUGIN_FBFE).$(VERSION)
+-	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_FBFE)
+-	@cp $@ $(LIBDIR)/$(VDRPLUGIN_FBFE)
  $(VDRFBFE): $(OBJS_FBFE)
  	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_FBFE) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
  
-@@ -370,7 +365,7 @@
+@@ -371,7 +365,7 @@
  # install
  #
  
@@ -80,7 +50,7 @@ diff -u -b -B -r1.99 Makefile
  ifeq ($(XINELIBOUTPUT_XINEPLUGIN), yes)
  	@mkdir -p $(DESTDIR)/$(XINEPLUGINDIR)/post
  	@echo Installing $(DESTDIR)/$(XINEPLUGINDIR)/$(XINEINPUTVDR)
-@@ -391,12 +386,30 @@
+@@ -392,12 +386,30 @@
  	@mkdir -p $(DESTDIR)/$(BINDIR)
  	@-rm -rf $(DESTDIR)/$(BINDIR)/vdr-fbfe
  	@$(INSTALL) -m 0755 vdr-fbfe $(DESTDIR)/$(BINDIR)/vdr-fbfe
@@ -111,23 +81,13 @@ diff -u -b -B -r1.99 Makefile
  endif
  
  dist: clean
-@@ -413,6 +426,7 @@
- 		tools/*.o tools/*~ tools/*.flc xine/*.o xine/*~ \
- 		xine/*.flc $(VDR_FBFE) $(VDR_SXFE) mpg2c black_720x576.c \
- 		nosignal_720x576.c vdrlogo_720x576.c vdr-sxfe vdr-fbfe \
--		$(PODIR)/*.mo $(PODIR)/*.pot \
- 		features.h config.mak configure.log
--
-+ifeq ($(HAVE_I18N), yes)
-+	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
-+endif
 Index: configure
 ===================================================================
 RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/configure,v
 retrieving revision 1.29
 diff -u -b -B -r1.29 configure
 --- configure	23 Nov 2010 13:21:06 -0000	1.29
-+++ configure	23 Nov 2010 17:53:25 -0000
++++ configure	26 Nov 2010 19:42:55 -0000
 @@ -231,7 +231,6 @@
    xshm
    xdpms
