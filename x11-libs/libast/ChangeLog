@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libast
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.32 2010/01/15 21:37:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.33 2010/11/26 05:22:15 vapier Exp $
+
+  26 Nov 2010; Mike Frysinger <vapier@gentoo.org> libast-0.7.ebuild,
+  libast-9999.ebuild:
+  Block sci-astronomy/ast #277649 by Henry Gebhardt.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libast-0.7.ebuild:
   Transfer Prefix keywords

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.10 2009/05/05 08:13:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.11 2010/11/26 05:22:15 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE="imlib mmx pcre"
 
-RDEPEND="x11-libs/libXt
+RDEPEND="!sci-astronomy/ast
+	x11-libs/libXt
 	x11-proto/xproto
 	x11-libs/libICE
 	x11-libs/libSM
