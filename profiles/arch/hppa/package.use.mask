@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.67 2010/11/25 15:57:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.68 2010/11/26 16:04:44 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -79,10 +79,6 @@ app-text/texlive xindy
 # Tobias Scherbaum <dertobi123@gentoo.org> (31 May 2008)
 # Mask ups for nagios-plugins which would pull in sys-power/nut
 net-analyzer/nagios-plugins ups
-
-# Jeroen Roovers <jer@gentoo.org> (09 Apr 2008)
-# Mask sys-cluster/mpich2 which would pull in Java
-sci-libs/hdf5 mpi
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
