@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.5 2010/10/29 15:23:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.6 2010/11/26 12:01:53 graaff Exp $
+
+*bones-3.5.2 (26 Nov 2010)
+
+  26 Nov 2010; Hans de Graaff <graaff@gentoo.org> +bones-3.5.2.ebuild:
+  Version bump: Markdown is the default README format
 
 *bones-3.5.1 (29 Oct 2010)
 
