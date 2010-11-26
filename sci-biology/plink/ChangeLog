@@ -1,33 +1,11 @@
 # ChangeLog for sci-biology/plink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.7 2010/04/05 12:13:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.8 2010/11/26 13:57:26 jlec Exp $
 
-  05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> plink-1.07.ebuild:
-  x86 stable wrt bug #311835
+*plink-1.07-r1 (26 Nov 2010)
 
-  29 Mar 2010; Pacho Ramos <pacho@gentoo.org> plink-1.07.ebuild:
-  amd64 stable, bug 311835
-
-*plink-1.07 (27 Jan 2010)
-
-  27 Jan 2010; Andrey Kislyuk <weaver@gentoo.org> +plink-1.07.ebuild:
-  Version bump
-
-  05 Aug 2009; Markus Meier <maekke@gentoo.org> plink-1.06.ebuild:
-  x86 stable, bug #279345
-
-  02 Aug 2009; <chainsaw@gentoo.org> plink-1.06.ebuild:
-  Marked stable on AMD64 as requested by Andrey "weaver" Kislyuk
-  <weaver@gentoo.org> in bug #279345. Arch-tested by Chad A. Simmons who
-  reports he has no test-suite; reporter confirmed and agreed compile-test
-  was sufficient.
-
-*plink-1.06 (21 Jun 2009)
-
-  21 Jun 2009; Andrey Kislyuk <weaver@gentoo.org>
-  -files/plink-1.05-gcc43.patch, -plink-1.05.ebuild, +plink-1.06.ebuild:
-  Version bump, change name to follow Debian, and drop old files
-
-  06 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
-  New package, ebuild written by Neil Shephard <nshephard@gmail.com> and me
+  26 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.07-flags.patch,
+  -plink-1.06.ebuild, +plink-1.07-r1.ebuild, metadata.xml:
+  Fixes for #335975, respecting LDFLAGS/CXXFLAGS, supporting lapack, making R
+  support optional
 

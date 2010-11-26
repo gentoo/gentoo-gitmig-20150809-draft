@@ -10,5 +10,8 @@
 		<flag name='webcheck'>
 			add support for online update checking every time the program starts
 		</flag>
+		<flag name='R'>
+			add support R language
+		</flag>
 	</use>
 </pkgmetadata>

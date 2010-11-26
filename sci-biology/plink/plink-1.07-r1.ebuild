@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.06.ebuild,v 1.3 2009/08/05 21:16:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.1 2010/11/26 13:57:26 jlec Exp $
 
 EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Whole genome association analysis toolset"
 HOMEPAGE="http://pngu.mgh.harvard.edu/~purcell/plink/"
@@ -10,11 +12,11 @@ SRC_URI="http://pngu.mgh.harvard.edu/~purcell/plink/dist/${P}-src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="-webcheck"
-KEYWORDS="amd64 x86"
+IUSE="lapack -webcheck R"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
-RDEPEND=""
+RDEPEND="lapack? ( virtual/lapack )"
 
 S="${WORKDIR}/${P}-src"
 
@@ -22,11 +24,19 @@ S="${WORKDIR}/${P}-src"
 # Package contains bytecode-only jar gPLINK.jar. Ignored, notified upstream.
 
 src_prepare() {
-	sed -i -e '/CXXFLAGS =/ s/^/#/' -e 's/-static//' "${S}/Makefile" || die
+	epatch "${FILESDIR}"/${PV}-flags.patch
 	use webcheck || sed -i '/WITH_WEBCHECK =/ s/^/#/' "${S}/Makefile" || die
+	use R || sed -i '/WITH_R_PLUGINS =/ s/^/#/' "${S}/Makefile" || die
+	use lapack || sed -i '/WITH_LAPACK =/ s/^/#/' "${S}/Makefile" || die
+}
+
+src_compile() {
+	emake \
+		CXX_UNIX=$(tc-getCXX) \
+		|| die
 }
 
 src_install() {
 	newbin plink p-link || die
-	dodoc README.txt
+	dodoc README.txt || die
 }
