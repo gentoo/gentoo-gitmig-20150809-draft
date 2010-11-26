@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.8.ebuild,v 1.1 2010/10/08 08:30:16 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.8.1.ebuild,v 1.1 2010/11/26 11:00:04 pacho Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit go-mono mono
 PATCHDIR="${FILESDIR}/2.2/"
 
 DESCRIPTION="XSP is a small web server that can host ASP.NET pages"
-HOMEPAGE="http://www.go-mono.com/"
+HOMEPAGE="http://www.mono-project.com/"
 
 LICENSE="MIT"
 SLOT="0"
