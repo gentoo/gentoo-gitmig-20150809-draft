@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.128 2010/08/16 09:38:50 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.129 2010/11/26 23:47:42 caster Exp $
+
+*swt-3.6.1 (26 Nov 2010)
+
+  26 Nov 2010; Vlastimil Babka <caster@gentoo.org> swt-3.6.ebuild,
+  +swt-3.6.1.ebuild, metadata.xml:
+  Version bump. Fixes bug #342931. Xulrunner dep restricted to 1.9 as 2.0 is
+  not supported anymore. Disable the flag if you have xulrunner-2.0. In
+  future versions, swt should use webkit instead. Bug #335165.
 
 *swt-3.6 (16 Aug 2010)
 
