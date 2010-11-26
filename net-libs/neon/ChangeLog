@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.8 2010/11/17 21:24:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.9 2010/11/26 15:35:08 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> neon-0.29.5.ebuild:
+  Stable for HPPA (bug #345481).
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> neon-0.29.5.ebuild:
   arm stable, bug #345481
