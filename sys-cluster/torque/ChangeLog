@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.102 2010/11/23 09:34:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.103 2010/11/26 15:38:00 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> torque-2.3.13.ebuild:
+  Stable for HPPA (bug #345463).
 
   23 Nov 2010; Christian Faulhammer <fauli@gentoo.org> torque-2.3.13.ebuild:
   stable x86, bug 345463
