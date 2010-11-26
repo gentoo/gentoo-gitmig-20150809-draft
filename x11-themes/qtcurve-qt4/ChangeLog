@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.117 2010/11/20 12:17:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.118 2010/11/26 16:41:10 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
+  Stable for HPPA (bug #339424).
 
   20 Nov 2010; Thomas Kahle <tomka@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
   x86 stable per bug 339424
