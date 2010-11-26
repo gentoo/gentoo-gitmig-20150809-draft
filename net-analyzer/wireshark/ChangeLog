@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.257 2010/11/26 08:38:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.258 2010/11/26 20:07:36 fauli Exp $
+
+  26 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
+  wireshark-1.2.13.ebuild:
+  stable x86, security bug 346191
 
   26 Nov 2010; Markos Chandras <hwoarang@gentoo.org> wireshark-1.2.13.ebuild:
   Stable on amd64 wrt bug #346191
