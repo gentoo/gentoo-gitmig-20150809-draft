@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.4 2010/02/16 20:15:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.5 2010/11/26 05:19:37 vapier Exp $
 
-EAPI=2
+EAPI="2"
+
 inherit eutils multilib
 
 DESCRIPTION="Framework for biometric-based authentication"
@@ -20,11 +21,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-enroll-ret.patch #236654
 	epatch "${FILESDIR}"/${P}-no-delete.patch
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-build.patch #336107
+	rm -f config.{guess,sub} #337805
+	touch config.{guess,sub}
 }
 
 src_configure() {
-	econf \
-		--without-Qt-dir
+	econf --without-Qt-dir
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/bioapi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.13 2010/02/16 20:15:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.14 2010/11/26 05:19:37 vapier Exp $
+
+  26 Nov 2010; Mike Frysinger <vapier@gentoo.org> bioapi-1.2.3-r2.ebuild,
+  +files/bioapi-1.2.3-build.patch:
+  Respect build settings #336107 by Diego Elio Pettenò and make
+  config.guess/config.sub into plain files #337805 by Ben Kero.
 
   16 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   bioapi-1.2.3-r2.ebuild:
