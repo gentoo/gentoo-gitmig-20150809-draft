@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.16 2010/11/26 16:34:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.17 2010/11/26 17:26:44 jer Exp $
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> wildmidi-0.2.3.4-r1.ebuild:
+  Stable for PPC (bug #345245).
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> wildmidi-0.2.3.4-r1.ebuild:
   Stable for HPPA (bug #345245).
