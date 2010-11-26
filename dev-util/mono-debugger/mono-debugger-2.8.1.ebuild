@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.8.ebuild,v 1.1 2010/10/09 20:05:25 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.8.1.ebuild,v 1.1 2010/11/26 11:06:48 pacho Exp $
 
 # bah, tests fail. Needs to be fixed ...
 RESTRICT="test"
@@ -12,7 +12,7 @@ PATCHLEVEL=1
 inherit go-mono mono autotools flag-o-matic eutils
 
 DESCRIPTION="Debugger for .NET managed and unmanaged applications"
-HOMEPAGE="http://www.go-mono.com"
+HOMEPAGE="http://www.mono-project.com/"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
@@ -29,9 +29,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	go-mono_src_prepare
-
 	epatch "${FILESDIR}/${PN}-2.8-system-bfd.patch"
-
 	eautoreconf
 }
 
