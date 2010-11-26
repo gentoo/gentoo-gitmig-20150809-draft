@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.766 2010/11/25 06:05:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.767 2010/11/26 13:53:45 pacho Exp $
+
+  26 Nov 2010; Pacho Ramos <pacho@gentoo.org> portage-2.1.9.24.ebuild:
+  amd64 stable, bug 346819
 
 *portage-2.2.0_alpha5 (25 Nov 2010)
 
