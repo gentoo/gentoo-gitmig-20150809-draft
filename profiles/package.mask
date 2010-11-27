@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12227 2010/11/25 01:39:04 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12228 2010/11/27 07:27:13 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -604,17 +604,6 @@ app-doc/heirloom-doctools
 # Luca Barbato <lu_zero@gentoo.org> (01 Oct 2010)
 # beta version, has known issues
 =x11-drivers/ati-drivers-8.780*
-
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (01 Oct 2010)
-#  on behalf of QA team
-#
-# Overflows during build (bug #301795); need a new maintainer
-# at least, but there are a number of alternative IMEs that
-# shouldn't have these problems.
-#
-# Removal on 2010-11-30
-app-i18n/fcitx
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Sep 2010)
 #  on behalf of QA team
