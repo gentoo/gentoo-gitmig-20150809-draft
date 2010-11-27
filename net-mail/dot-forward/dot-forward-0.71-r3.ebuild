@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r3.ebuild,v 1.6 2010/10/24 15:32:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r3.ebuild,v 1.7 2010/11/27 11:31:05 armin76 Exp $
 
 inherit eutils fixheadtails qmail
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 # See bug 97850
