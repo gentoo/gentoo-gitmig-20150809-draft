@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.34.ebuild,v 1.1 2010/07/17 03:53:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.37.ebuild,v 1.1 2010/11/27 05:43:20 radhermit Exp $
 
 EAPI="2"
 
@@ -10,8 +10,6 @@ MY_PN="MediaInfo"
 DESCRIPTION="MediaInfo libraries"
 HOMEPAGE="http://mediainfo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mediainfo/source/${PN}/${PV}/${PN}_${PV}.tar.bz2"
-
-S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -26,10 +24,17 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
+S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
+
 src_prepare() {
 	# https://bugs.launchpad.net/libmms/+bug/531326
 	sed -i -e 's/mmsx/mms/g' \
 		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libmms.cpp" \
+		|| die "sed failed"
+
+	# Fix linking problem for bug #343125
+	sed -i -e "s:\(#define LIBCURL_DLL_RUNTIME\)://\1:" \
+		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libcurl.cpp" \
 		|| die "sed failed"
 
 	eautoreconf
@@ -55,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto "/usr/$(get_libdir)/pkgconfig"
 	doins "${PN}.pc" || die
