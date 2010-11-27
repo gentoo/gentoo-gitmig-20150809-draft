@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/xl2tpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.21 2010/09/19 11:31:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.22 2010/11/27 11:01:36 mrness Exp $
+
+*xl2tpd-1.2.7 (27 Nov 2010)
+
+  27 Nov 2010; Alin Năstac <mrness@gentoo.org> +xl2tpd-1.2.7.ebuild,
+  +files/xl2tpd-1.2.7-as-needed.patch, +files/xl2tpd-1.2.7-qa-fixes.patch:
+  Version bump.
 
 *xl2tpd-1.2.6-r1 (19 Sep 2010)
 
