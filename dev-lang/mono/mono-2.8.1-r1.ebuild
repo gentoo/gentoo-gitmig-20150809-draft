@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.1.ebuild,v 1.1 2010/11/26 10:47:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.1-r1.ebuild,v 1.1 2010/11/27 15:50:40 pacho Exp $
 
 EAPI="2"
 
@@ -34,8 +34,9 @@ RESTRICT="test"
 
 PATCHES=(
 	"${WORKDIR}/${PN}-2.8-libdir.patch"
-	"${FILESDIR}/mono-2.2-ppc-threading.patch"
-	"${FILESDIR}/mono-2.2-uselibdir.patch"
+	"${FILESDIR}/${PN}-2.2-ppc-threading.patch"
+	"${FILESDIR}/${PN}-2.2-uselibdir.patch"
+	"${FILESDIR}/${PN}-2.8.1-radegast-crash.patch"
 )
 
 pkg_setup() {
