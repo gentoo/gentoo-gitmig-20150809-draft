@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.5.1.0.ebuild,v 1.1 2010/10/07 21:18:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.5.1.0.ebuild,v 1.2 2010/11/27 00:53:08 caster Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="
 	dev-java/bcprov:1.3
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
-	dev-java/swt:3.6[cairo,xulrunner]
+	dev-java/swt:3.6[cairo]
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.5"
 
@@ -127,6 +127,12 @@ pkg_postinst() {
 	elog "modify this file, rather than the startup script."
 	elog "Using this config file you can start the console UI."
 	elog
+
+	if ! has_version dev-java/swt:3.6[xulrunner]; then
+		elog
+		elog "Your dev-java/swt:3.6 was built without xulrunner support. Features such as Vuze HD Network will not work."
+		elog "Rebuild swt with USE=xulrunner (needs xulrunner-1.9) to use these features."
+	fi
 
 	fdo-mime_desktop_database_update
 }
