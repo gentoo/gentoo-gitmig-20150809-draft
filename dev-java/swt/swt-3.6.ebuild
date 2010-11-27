@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.6.ebuild,v 1.2 2010/11/26 23:47:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.6.ebuild,v 1.3 2010/11/27 00:51:07 caster Exp $
 
 EAPI=2
 
@@ -114,7 +114,7 @@ src_compile() {
 	fi
 
 	# Fix the pointer size for AMD64
-	[[ ${ARCH} == "amd64" || ${ARCH} == "ppc64" ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
+	[[ ${ARCH} == "amd64" || ${ARCH} == "ppc64" ]] && export SWT_PTR_CFLAGS=-DJNI64
 
 	local platform="linux"
 
