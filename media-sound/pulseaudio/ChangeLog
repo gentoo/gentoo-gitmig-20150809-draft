@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.198 2010/11/26 06:56:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.199 2010/11/27 06:52:54 ford_prefect Exp $
+
+  27 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/pulseaudio-0.9.21-armv5-build-fix.patch,
+  pulseaudio-0.9.21.1.ebuild, pulseaudio-0.9.21.2-r2.ebuild,
+  pulseaudio-0.9.22.ebuild:
+  Add a patch to fix compilation on ARMv5. Adding to stable candidate and 2
+  most recent ebuilds. 0.9.21.2 and 0.9.21.2-r1 can be removed after a newer
+  version is keyworded on arm.
 
   26 Nov 2010; Tim Harder <radhermit@gentoo.org> pulseaudio-0.9.22.ebuild:
   Fix libX11 xcb USE flag dependency since >=x11-libs/libX11-1.4.0 comes with
