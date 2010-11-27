@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xeyes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xeyes/ChangeLog,v 1.25 2010/10/17 03:39:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xeyes/ChangeLog,v 1.26 2010/11/27 02:10:13 scarabeus Exp $
+
+*xeyes-1.1.1 (27 Nov 2010)
+
+  27 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xeyes-1.1.1.ebuild:
+  Version bump
 
   17 Oct 2010; Mart Raudsepp <leio@gentoo.org> -xeyes-1.0.1.ebuild:
   Remove old
