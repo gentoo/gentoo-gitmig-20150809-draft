@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.826 2010/11/24 14:59:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.827 2010/11/27 20:56:01 mpagano Exp $
+
+  27 Nov 2010; Michael Pagano <mpagano@gentoo.org>
+  vanilla-sources-2.6.36.ebuild, vanilla-sources-2.6.36.1.ebuild:
+  Add deblob support to 2.6.36.X kernels
 
   24 Nov 2010; Jeroen Roovers <jer@gentoo.org> vanilla-sources-2.6.35.8.ebuild:
   Stable for HPPA (bug #334341).
