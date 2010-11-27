@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.29 2010/01/12 17:32:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.30 2010/11/27 16:09:03 jer Exp $
+
+*inn-2.5.2 (27 Nov 2010)
+
+  27 Nov 2010; Jeroen Roovers <jer@gentoo.org> +inn-2.5.2.ebuild:
+  Version bump.
 
   12 Jan 2010; Jeroen Roovers <jer@gentoo.org> inn-2.5.1.ebuild:
   dev-lang/perl and dev-perl/MIME-tools are not optional.
