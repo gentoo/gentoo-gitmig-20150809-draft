@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.7 2010/11/06 17:13:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.8 2010/11/27 02:05:16 xmw Exp $
 
 EAPI="2"
 PYTHON_DEPEND="*:2.6"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
