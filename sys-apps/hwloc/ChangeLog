@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.2 2010/11/13 18:49:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.3 2010/11/27 18:47:29 armin76 Exp $
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> hwloc-1.0.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #345231
 
   13 Nov 2010; Jeroen Roovers <jer@gentoo.org> hwloc-1.0.2.ebuild:
   Marked ~hppa ~ppc (bug #345231).
