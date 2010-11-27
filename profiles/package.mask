@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12231 2010/11/27 11:55:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12232 2010/11/27 12:46:13 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1092,12 +1092,6 @@ sys-libs/ss
 =virtual/mysql-5.4*
 >=dev-db/mysql-5.5
 >=virtual/mysql-5.5
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (26 Jan 2010)
-# Masked earlier releases of dev-lang/ghc-6.12*.
-# We want to use ghc-6.12.3, not the older versions.
-=dev-lang/ghc-6.12.1*
-=dev-lang/ghc-6.12.2*
 
 # Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
 # since long time included in media-tv/gentoo-vdr-scripts
