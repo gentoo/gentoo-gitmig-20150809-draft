@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.107 2010/11/21 17:46:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.108 2010/11/27 22:24:32 xmw Exp $
+
+  27 Nov 2010; Michael Weber <xmw@gentoo.org> ntfs3g-2010.8.8.ebuild,
+  ntfs3g-2010.10.2.ebuild:
+  add ~arm.
 
   21 Nov 2010; Markus Meier <maekke@gentoo.org> ntfs3g-2010.8.8.ebuild:
   x86 stable, bug #346097
