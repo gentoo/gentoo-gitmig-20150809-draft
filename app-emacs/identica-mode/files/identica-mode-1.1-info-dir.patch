@@ -1,0 +1,14 @@
+--- identica-mode-1.1-orig/doc/identica-mode.texi
++++ identica-mode-1.1/doc/identica-mode.texi
+@@ -15,6 +15,11 @@
+   Free Documentation License".
+ @end copying
+ 
++@dircategory Emacs
++@direntry
++* Identica mode: (identica-mode).	Emacs mode for microblogging services.
++@end direntry
++
+ @titlepage
+   @title Identica mode manual
+   @subtitle v0.3 for identica-mode.el v0.9

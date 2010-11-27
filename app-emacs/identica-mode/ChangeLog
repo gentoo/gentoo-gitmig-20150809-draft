@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/identica-mode
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/ChangeLog,v 1.1 2010/11/27 15:26:57 ulm Exp $
+
+*identica-mode-1.1 (27 Nov 2010)
+
+  27 Nov 2010; Ulrich Mueller <ulm@gentoo.org>
+  +files/50identica-mode-gentoo.el, +identica-mode-1.1.ebuild,
+  +files/identica-mode-1.1-info-dir.patch, +metadata.xml:
+  Initial import, from Emacs overlay, bug 339077. Ebuild contributed by me.
+
