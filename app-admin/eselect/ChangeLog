@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.175 2010/11/21 14:09:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.176 2010/11/27 13:21:36 ulm Exp $
+
+*eselect-1.2.13 (27 Nov 2010)
+
+  27 Nov 2010; Ulrich Mueller <ulm@gentoo.org> -eselect-1.2.12.ebuild,
+  +eselect-1.2.13.ebuild:
+  Version bump, fixes bug 346837. Remove intermediate version.
 
 *eselect-1.2.12 (21 Nov 2010)
 
