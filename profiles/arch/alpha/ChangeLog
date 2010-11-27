@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.76 2010/11/14 20:15:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.77 2010/11/27 12:24:43 armin76 Exp $
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Add portage python3 use-flag to p.use.mask
 
   14 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   Mask app-i18n/canna[doc], app-text/ptex does not build and ptex is

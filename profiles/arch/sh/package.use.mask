@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.12 2010/07/29 21:14:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.13 2010/11/27 12:28:45 armin76 Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
+=sys-apps/portage-2.1.9* python3
 =sys-apps/portage-2.1.8* python3
 =sys-apps/portage-2.1.7* python3
 

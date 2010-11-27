@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.54 2010/11/21 06:15:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.55 2010/11/27 12:28:45 armin76 Exp $
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Add portage python3 use-flag to p.use.mask
 
   21 Nov 2010; Ryan Hill <dirtyepic@gentoo.org> use.mask:
   Mask lpsol USE flag, needs sci-mathematics/glpk.
