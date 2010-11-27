@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/markaby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.21 2010/10/24 12:40:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/ChangeLog,v 1.22 2010/11/27 17:44:04 armin76 Exp $
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> markaby-0.7.1.ebuild:
+  Add ~ia64 wrt #339588
 
   24 Oct 2010; Christian Faulhammer <fauli@gentoo.org> markaby-0.7.1.ebuild:
   keyword ~x86, bug 339588
