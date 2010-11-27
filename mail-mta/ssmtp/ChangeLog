@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.101 2010/11/27 01:44:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.102 2010/11/27 19:42:36 armin76 Exp $
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> ssmtp-2.62-r8.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #346453
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> ssmtp-2.62-r8.ebuild:
   Stable for arm/sparc (bug #346453).
