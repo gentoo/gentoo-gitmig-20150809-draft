@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4815 2010/11/27 11:00:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4816 2010/11/27 11:55:16 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Nov 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask qbittorrent rc releases. Remove masking for live ebuild
 
   27 Nov 2010; Sebastian Pipping <sping@gentoo.org> package.mask:
   app-text/xmlstarlet-1.0.3: Mask upcoming bump as test suite one error
