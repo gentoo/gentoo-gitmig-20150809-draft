@@ -1,38 +1,32 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.6.2.ebuild,v 1.2 2010/02/06 15:36:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.0.0.ebuild,v 1.1 2010/11/27 07:05:07 matsuu Exp $
 
-EAPI=2
-inherit autotools eutils
+EAPI="3"
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
+SRC_URI="http://fcitx.googlecode.com/files/${P}_all.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="dbus pango"
 
 RDEPEND="x11-libs/libX11
-	x11-libs/libXpm
 	x11-libs/libXrender
-	x11-libs/libXt
-	x11-libs/libXtst
-	x11-libs/libXext
-	x11-libs/libXft"
+	x11-libs/cairo[X]
+	media-libs/fontconfig
+	pango? ( x11-libs/pango )
+	dbus? ( >=sys-apps/dbus-0.2 )"
 DEPEND="${RDEPEND}
+	x11-proto/xproto
 	dev-util/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautoreconf
-}
-
 src_configure() {
-	# --disable-xft doesn't work
-	# econf $(use_enable xft) || die
-	econf || die
+	econf \
+		$(use_enable dbus) \
+		$(use_enable pango) || die
 }
 
 src_install() {
@@ -40,7 +34,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README THANKS TODO || die
 
-	rm -rf "${D}"/usr/share/fcitx/doc/ || die
+	rm -rf "${ED}"/usr/share/fcitx/doc/ || die
 	dodoc doc/pinyin.txt doc/cjkvinput.txt || die
 	dohtml doc/wb_fh.htm || die
 }
