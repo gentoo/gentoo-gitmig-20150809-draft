@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.1 2010/11/24 07:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.2 2010/11/27 00:45:02 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -96,7 +96,9 @@ src_prepare() {
 	use elibc_glibc && sed -i 's:-Wl,--gc-sections::' Makefile
 	sed -i \
 		-e "/^CROSS_COMPILE/s:=.*:= ${CHOST}-:" \
-		-e "/^CC/s:=.*:= $(tc-getCC):" \
+		-e "/^AR\>/s:=.*:= $(tc-getAR):" \
+		-e "/^CC\>/s:=.*:= $(tc-getCC):" \
+		-e "/^LD\>/s:=.*:= $(tc-getLD):" \
 		-e "/^HOSTCC/s:=.*:= $(tc-getBUILD_CC):" \
 		Makefile || die
 }

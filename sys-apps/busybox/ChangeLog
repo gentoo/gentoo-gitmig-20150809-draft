@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.258 2010/11/24 07:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.259 2010/11/27 00:45:02 vapier Exp $
+
+  27 Nov 2010; Mike Frysinger <vapier@gentoo.org> busybox-1.17.4.ebuild:
+  Respect env AR/LD #311589 by Thomas Sachau.
 
 *busybox-1.17.4 (24 Nov 2010)
 
