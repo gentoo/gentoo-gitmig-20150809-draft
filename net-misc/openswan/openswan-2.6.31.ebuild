@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.28.ebuild,v 1.1 2010/08/15 20:45:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.31.ebuild,v 1.1 2010/11/27 12:32:18 mrness Exp $
 
 EAPI="2"
 
@@ -79,6 +79,7 @@ get_make_options() {
 		INC_USRLOCAL=/usr\
 		INC_MANDIR=share/man\
 		FINALDOCDIR=/usr/share/doc/${PF}/html\
+		FINALLIBDIR=/usr/$(get_libdir)/ipsec\
 		DESTDIR=\"${D}\"\
 		USERCOMPILE=\"${CFLAGS}\"\
 		CC=\"$(tc-getCC)\"

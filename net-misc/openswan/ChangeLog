@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.74 2010/09/29 22:54:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.75 2010/11/27 12:32:18 mrness Exp $
+
+*openswan-2.6.31 (27 Nov 2010)
+
+  27 Nov 2010; Alin Năstac <mrness@gentoo.org> -openswan-2.6.28.ebuild,
+  -files/openswan-2.6.28-gentoo.patch, +openswan-2.6.31.ebuild,
+  +files/openswan-2.6.31-gentoo.patch:
+  Fix multilib-strict checks (#344735).
 
 *openswan-2.6.29 (29 Sep 2010)
 
