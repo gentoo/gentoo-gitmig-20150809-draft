@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.2.ebuild,v 1.4 2010/11/07 15:51:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.3.ebuild,v 1.1 2010/11/27 14:27:45 dertobi123 Exp $
 
 EAPI=2
 
@@ -44,7 +44,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-qt47.patch
 	sed -i \
 		-e "/COPYING/ d" \
 		CMakeLists.txt || die "Removal of COPYING file failed"
