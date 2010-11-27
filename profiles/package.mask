@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12228 2010/11/27 07:27:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12229 2010/11/27 08:26:43 ford_prefect Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arun Raghavan <ford_prefect@gentoo.org> (27 Nov 2010)
+# Mask till python-gudev moves from sunrise to tree
+=media-video/arista-0.9.5
 
 # Sebastian Pipping <sping@gentoo.org> (25 Nov 2010)
 # Experimental bump, ~arch seems too risky right now
