@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.77 2010/11/07 21:25:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.78 2010/11/27 07:09:07 tove Exp $
+
+  27 Nov 2010; Torsten Veller <tove@gentoo.org>
+  +files/804.029-X11_XLIB_H.patch, perl-tk-804.029.ebuild:
+  Fix build failure with libX11-1.4.0 where they added an "X11_" string to
+  header guards to avoid possible collision (#345987)
 
   07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   perl-tk-804.028-r2.ebuild, perl-tk-804.029.ebuild:

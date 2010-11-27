@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.9 2010/11/07 21:25:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.10 2010/11/27 07:09:07 tove Exp $
 
 EAPI=3
 
@@ -28,7 +28,8 @@ S=${WORKDIR}/${MY_P}
 SRC_TEST="skip"
 
 PATCHES=( "${FILESDIR}"/xorg.patch
-	"${FILESDIR}"/804.028-path.patch )
+	"${FILESDIR}"/804.028-path.patch
+	"${FILESDIR}"/804.029-X11_XLIB_H.patch )
 #	"${FILESDIR}"/${PN}-804.027-interix-x11.patch )
 
 myconf="X11ROOT=${EPREFIX}/usr XFT=1 -I${EPREFIX}/usr/include/ -l${EPREFIX}/usr/$(get_libdir)"
