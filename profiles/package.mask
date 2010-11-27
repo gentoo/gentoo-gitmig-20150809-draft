@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12229 2010/11/27 08:26:43 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12230 2010/11/27 11:00:05 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastian Pipping <sping@gentoo.org> (27 Nov 2010)
+# Test suite gives one error, previous version did not.
+# Upcoming bump seems too risky for ~arch right now.
+~app-text/xmlstarlet-1.0.3
 
 # Arun Raghavan <ford_prefect@gentoo.org> (27 Nov 2010)
 # Mask till python-gudev moves from sunrise to tree

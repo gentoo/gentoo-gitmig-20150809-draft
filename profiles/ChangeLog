@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4814 2010/11/25 13:22:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4815 2010/11/27 11:00:05 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Nov 2010; Sebastian Pipping <sping@gentoo.org> package.mask:
+  app-text/xmlstarlet-1.0.3: Mask upcoming bump as test suite one error
 
   25 Nov 2010; Anthony G. Basile <blueness@gentoo.org>
   hardened/amd64/deprecated, hardened/amd64/multilib/deprecated,
