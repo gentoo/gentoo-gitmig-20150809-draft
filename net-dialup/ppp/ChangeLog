@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.265 2010/11/02 07:01:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.266 2010/11/27 10:06:57 mrness Exp $
+
+*ppp-2.4.5-r1 (27 Nov 2010)
+
+  27 Nov 2010; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r24.ebuild,
+  +ppp-2.4.5-r1.ebuild:
+  Fix PPPOE freeze when garbage packets are received iso PADO/PADS
+  (#340267). Add lcp-echo-adaptive option (#344273).
 
   02 Nov 2010; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r25.ebuild:
   Stable for PPC (bug #331611).

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r24.ebuild,v 1.12 2010/01/06 19:13:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r1.ebuild,v 1.1 2010/11/27 10:06:57 mrness Exp $
 
 EAPI="2"
 
@@ -9,66 +9,45 @@ inherit eutils toolchain-funcs linux-info pam
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20090816.tar.gz
+	mirror://gentoo/${P}-gentoo-20101127.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="activefilter atm dhcp eap-tls gtk ipv6 mppe-mppc pam radius"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="activefilter atm dhcp eap-tls gtk ipv6 pam radius"
 
-DEPEND="activefilter? ( >=virtual/libpcap-0.9.4 )
+DEPEND="activefilter? ( virtual/libpcap )
 	atm? ( net-dialup/linux-atm )
 	pam? ( virtual/pam )
-	gtk? ( >=x11-libs/gtk+-2.8 )
-	eap-tls? ( net-misc/curl >=dev-libs/openssl-0.9.7 )"
+	gtk? ( x11-libs/gtk+:2 )
+	eap-tls? ( net-misc/curl dev-libs/openssl )"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if use mppe-mppc; then
-		echo
-		ewarn "The mppe-mppc flag overwrites the pppd native MPPE support with MPPE-MPPC"
-		ewarn "patch developed by Jan Dubiec."
-		ewarn "The resulted pppd will work only with patched kernels with version <= 2.6.14."
-		ewarn "You could obtain the kernel patch from MPPE-MPPC homepage:"
-		ewarn "   http://mppe-mppc.alphacron.de/"
-		ewarn "CAUTION: MPPC is a U.S. patented algorithm!"
-		ewarn "Ask yourself if you really need it and, if you do, consult your lawyer first."
-		ebeep
-	fi
-}
 
 src_prepare() {
 	epatch "${WORKDIR}/patch/make-vars.patch"
 	epatch "${WORKDIR}/patch/mpls.patch"
 	epatch "${WORKDIR}/patch/killaddr-smarter.patch"
 	epatch "${WORKDIR}/patch/wait-children.patch"
-	epatch "${WORKDIR}/patch/maxoctets-2Glimit.patch"
 	epatch "${WORKDIR}/patch/defaultgateway.patch"
-	epatch "${WORKDIR}/patch/mschapv2-initialize-response.patch"
 	epatch "${WORKDIR}/patch/linkpidfile.patch"
 	epatch "${WORKDIR}/patch/qa-fixes.patch"
-	epatch "${WORKDIR}/patch/kill-pg.patch"
 	epatch "${WORKDIR}/patch/auth-fail.patch"
 	epatch "${WORKDIR}/patch/defaultmetric.patch"
 	epatch "${WORKDIR}/patch/dev-ppp.patch"
 	epatch "${WORKDIR}/patch/gtk2.patch"
-	epatch "${WORKDIR}/patch/pppoe-lcp-timeout.patch"
 	epatch "${WORKDIR}/patch/passwordfd-read-early.patch"
 	epatch "${WORKDIR}/patch/pppd-usepeerwins.patch"
 	epatch "${WORKDIR}/patch/connect-errors.patch"
+	epatch "${WORKDIR}/patch/Makefile.patch"
+	epatch "${WORKDIR}/patch/pppol2tpv3-2.6.35.patch"
+	epatch "${WORKDIR}/patch/pado-timeout.patch"
+	epatch "${WORKDIR}/patch/lcp-echo-adaptive.patch"
 
 	use eap-tls && {
-		# see http://eaptls.spe.net/index.html for more info
+		# see http://www.nikhef.nl/~janjust/ppp for more info
 		einfo "Enabling EAP-TLS support"
-		epatch "${WORKDIR}/patch/eaptls-0.7-gentoo.patch"
-		use mppe-mppc || epatch "${WORKDIR}/patch/eaptls-mppe-0.7.patch"
-	}
-
-	use mppe-mppc && {
-		einfo "Enabling MPPE-MPPC support"
-		epatch "${WORKDIR}/patch/mppe-mppc-1.1.patch"
-		use eap-tls && epatch "${WORKDIR}/patch/eaptls-mppe-0.7-with-mppc.patch"
+		epatch "${WORKDIR}/patch/eaptls-mppe-0.98-gentoo.patch"
 	}
 
 	use atm && {
@@ -96,9 +75,9 @@ src_prepare() {
 
 	use dhcp && {
 		# copy the ppp-dhcp plugin files
-		einfo "Copying ppp-dhcp plugin files..."
-		tar -xzf "${DISTDIR}/ppp-dhcpc.tgz" -C pppd/plugins/ \
-			&& sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux \
+		einfo "Adding ppp-dhcp plugin files..."
+		mv "${WORKDIR}/dhcp" "${S}/pppd/plugins" \
+			&& sed -i -e 's/\(SUBDIRS := .*rp-pppoe.*\)$/\1 dhcp/' pppd/plugins/Makefile.linux \
 			|| die "ppp-dhcp plugin addition failed"
 		epatch "${WORKDIR}/patch/dhcp-make-vars.patch"
 		epatch "${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch"
@@ -108,7 +87,7 @@ src_prepare() {
 	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
 		pppd/{pathnames.h,pppd.8}
 
-	use radius && {
+	if use radius; then
 		#set the right paths in radiusclient.conf
 		sed -i -e "s:/usr/local/etc:/etc:" \
 			-e "s:/usr/local/sbin:/usr/sbin:" pppd/plugins/radius/etc/radiusclient.conf
@@ -116,7 +95,10 @@ src_prepare() {
 		sed -i -e "s:/etc/radiusclient:/etc/ppp/radius:g" \
 			pppd/plugins/radius/{*.8,*.c,*.h} \
 			pppd/plugins/radius/etc/*
-	}
+	else
+		einfo "Disabling radius"
+		sed -i -e '/+= radius/s:^:#:' pppd/plugins/Makefile.linux
+	fi
 }
 
 src_configure() {
@@ -140,23 +122,23 @@ src_compile() {
 src_install() {
 	local i
 	for i in chat pppd pppdump pppstats ; do
-		doman ${i}/${i}.8
-		dosbin ${i}/${i} || die
+		doman ${i}/${i}.8 || die "man page for ${i} not build"
+		dosbin ${i}/${i} || die "${i} not build"
 	done
 	fperms u+s-w /usr/sbin/pppd
 
 	# Install pppd header files
 	pushd pppd >/dev/null
-	emake INSTROOT="${D}" install-devel || die
+	emake INSTROOT="${D}" install-devel || die "emake install-devel failed"
 	popd >/dev/null
 
-	dosbin pppd/plugins/rp-pppoe/pppoe-discovery || die
+	dosbin pppd/plugins/rp-pppoe/pppoe-discovery || die "pppoe-discovery not build"
 
 	dodir /etc/ppp/peers
 	insinto /etc/ppp
 	insopts -m0600
-	newins etc.ppp/pap-secrets pap-secrets.example
-	newins etc.ppp/chap-secrets chap-secrets.example
+	newins etc.ppp/pap-secrets pap-secrets.example || die "pap-secrets.example not found"
+	newins etc.ppp/chap-secrets chap-secrets.example || die "chap-secrets.example not found"
 
 	insopts -m0644
 	doins etc.ppp/options
@@ -180,6 +162,8 @@ src_install() {
 	doins pppd/plugins/passwordfd.so || die "passwordfd.so not build"
 	doins pppd/plugins/winbind.so || die "winbind.so not build"
 	doins pppd/plugins/rp-pppoe/rp-pppoe.so || die "rp-pppoe.so not build"
+	doins pppd/plugins/pppol2tp/openl2tp.so || die "openl2tp.so not build"
+	doins pppd/plugins/pppol2tp/pppol2tp.so || die "pppol2tp.so not build"
 	if use atm; then
 		doins pppd/plugins/pppoatm/pppoatm.so || die "pppoatm.so not build"
 	fi
@@ -203,9 +187,6 @@ src_install() {
 	insinto /etc/modprobe.d
 	insopts -m0644
 	newins "${FILESDIR}/modules.ppp" ppp.conf
-	if use mppe-mppc; then
-		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' "${D}/etc/modprobe.d/ppp.conf"
-	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dodoc "${FILESDIR}/README.mpls"
@@ -243,16 +224,10 @@ pkg_postinst() {
 			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_FILTER"
 			local ERROR_PPP_FILTER="CONFIG_PPP_FILTER:\t missing PPP filtering support (REQUIRED)"
 		fi
-		CONFIG_CHECK="${CONFIG_CHECK} ~PPP_DEFLATE ~PPP_BSDCOMP"
+		CONFIG_CHECK="${CONFIG_CHECK} ~PPP_DEFLATE ~PPP_BSDCOMP ~PPP_MPPE"
 		local ERROR_PPP_DEFLATE="CONFIG_PPP_DEFLATE:\t missing Deflate compression (optional, but highly recommended)"
 		local ERROR_PPP_BSDCOMP="CONFIG_PPP_BSDCOMP:\t missing BSD-Compress compression (optional, but highly recommended)"
-		if use mppe-mppc ; then
-			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_MPPE_MPPC"
-			local WARNING_PPP_MPPE_MPPC="CONFIG_PPP_MPPE_MPPC:\t missing MPPE/MPPC encryption/compression (optional, mostly used by PPTP links)"
-		else
-			CONFIG_CHECK="${CONFIG_CHECK} ~PPP_MPPE"
-			local WARNING_PPP_MPPE="CONFIG_PPP_MPPE:\t missing MPPE encryption (optional, mostly used by PPTP links)"
-		fi
+		local WARNING_PPP_MPPE="CONFIG_PPP_MPPE:\t missing MPPE encryption (optional, mostly used by PPTP links)"
 		CONFIG_CHECK="${CONFIG_CHECK} ~PPPOE ~PACKET"
 		local WARNING_PPPOE="CONFIG_PPPOE:\t missing PPPoE support (optional, needed by rp-pppoe plugin)"
 		local WARNING_PACKET="CONFIG_PACKET:\t missing AF_PACKET support (optional, used by rp-pppoe and dhcpc plugins)"
