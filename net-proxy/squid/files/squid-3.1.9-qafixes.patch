@@ -1,6 +1,6 @@
-diff -Nru squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in
---- squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-07 07:29:18.000000000 +0200
-+++ squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-07 07:29:50.000000000 +0200
+diff -Nru squid-3.1.9.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.9/helpers/negotiate_auth/squid_kerb_auth/configure.in
+--- squid-3.1.9.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-11-27 13:44:10.000000000 +0100
++++ squid-3.1.9/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-11-27 13:44:46.000000000 +0100
 @@ -94,7 +94,7 @@
                         else
                           ac_gssapi_libs=`krb5-config --libs gssapi 2>/dev/null`
