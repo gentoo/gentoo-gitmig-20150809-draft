@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<herd>pam</herd> <!-- only or USE=pam -->
+<herd>pam</herd> <!-- only for USE=pam -->
 <use>
 	<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 	<flag name='nousuid'>When nousuid is enabled only su from the shadow package
