@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.68 2010/11/14 15:16:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.69 2010/11/27 13:47:31 tampakrap Exp $
+
+  27 Nov 2010; <tampakrap@gentoo.org> phonon-kde-4.4.5.ebuild,
+  phonon-kde-4.5.3.ebuild:
+  Add blocker for media-sound/phonon 4.4.3, it is intented to KDE SC 4.6
 
   14 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   phonon-kde-4.5.3.ebuild:
