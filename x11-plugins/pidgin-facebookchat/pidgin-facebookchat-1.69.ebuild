@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.67.ebuild,v 1.1 2010/06/04 14:38:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.69.ebuild,v 1.1 2010/11/27 20:30:16 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Facebook chat plugin for libpurple"
 HOMEPAGE="http://code.google.com/p/pidgin-facebookchat/"
 
-SRC_URI="http://pidgin-facebookchat.googlecode.com/files/${PN}-source-${PV}-1.tar.bz2"
+SRC_URI="http://pidgin-facebookchat.googlecode.com/files/${PN}-source-${PV}.tar.bz2"
 LICENSE="GPL-3"
 
 SLOT="0"
@@ -32,7 +32,8 @@ pkg_setup() {
 
 src_compile() {
 	# Grabbed from makefile
-	FACEBOOK_SOURCES="libfacebook.c fb_blist.c fb_connection.c fb_conversation.c fb_friendlist.c fb_info.c fb_json.c fb_managefriends.c fb_messages.c fb_notifications.c fb_search.c fb_util.c"
+	FACEBOOK_SOURCES="libfacebook.c fb_blist.c fb_connection.c fb_conversation.c fb_info.c fb_managefriends.c fb_messages.c fb_notifications.c fb_search.c fb_util.c fb_friendlist.c fb_json.c fb_chat.c"
+
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} `pkg-config --cflags purple json-glib-1.0` \
 		-DPURPLE_PLUGINS -DENABLE_NLS -DHAVE_ZLIB -shared -fPIC -DPIC \
 		${FACEBOOK_SOURCES} `pkg-config --libs json-glib-1.0` \
