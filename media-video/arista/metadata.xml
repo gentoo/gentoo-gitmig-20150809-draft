@@ -8,6 +8,8 @@
   </maintainer>
   <use>
 	<flag name="faac">Use external faac library for AAC encoding</flag>
+	<flag name="nautilus">Add an entry in the Nautilus context menu to transcode
+		media files for a specified device.</flag>
   </use>
 </pkgmetadata>
 
