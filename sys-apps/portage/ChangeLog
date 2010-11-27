@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.770 2010/11/27 12:30:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.771 2010/11/27 18:13:14 zmedico Exp $
+
+*portage-2.2.0_alpha6 (27 Nov 2010)
+
+  27 Nov 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha6.ebuild:
+  2.2.0_alpha6 version bump. This includes all of the fixes in
+  portage-2.1.9.25. Bug #210077 tracks all bugs fixed since 2.1.x.
+
+*portage-2.1.9.25 (27 Nov 2010)
+
+  27 Nov 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.25.ebuild:
+  2.1.9.25 version bump. This fixes bug #315421 (proxy settings don't work
+  sometimes), bug #344845 (regenworld AttributeError), bug #345097 (slot
+  conflict display shows malformed atoms), bug #345289 (^C traceback),
+  bug #345979 (broken handling of USE deps for masked USE flags), and
+  bug #346349 (accept 'y' for emerge options that accept 'n). Bug #346909
+  tracks all bugs fixed since 2.1.9.24.
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> portage-2.1.9.24.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #346819
