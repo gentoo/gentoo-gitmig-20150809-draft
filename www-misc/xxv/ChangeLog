@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.12 2010/05/09 21:10:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.13 2010/11/27 15:54:09 hd_brummy Exp $
+
+*xxv-1.6.1 (27 Nov 2010)
+
+  27 Nov 2010; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.6.1.ebuild:
+  version bump
 
   09 May 2010; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.ebuild:
   added missing depend dev-perl/JSON; fixed permisssion for xxv.cfg
