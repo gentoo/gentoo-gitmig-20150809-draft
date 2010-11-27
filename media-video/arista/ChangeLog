@@ -1,6 +1,10 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.4 2010/11/27 08:10:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.5 2010/11/27 08:13:49 ford_prefect Exp $
+
+  27 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  arista-0.9.3-r1.ebuild:
+  Add amd64 keyword
 
 *arista-0.9.5 (27 Nov 2010)
 
