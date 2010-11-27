@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.47 2010/06/21 17:19:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.48 2010/11/27 23:28:06 xmw Exp $
+
+*fish-1.23.1-r1 (27 Nov 2010)
+
+  27 Nov 2010; Michael Weber <xmw@gentoo.org> +fish-1.23.1-r1.ebuild,
+  +files/fish-1.23.1-fish_indent.patch:
+  Revbump to optionally include indentation patch from James Bowlin
+  <bowlin@mindspring.com> (bug 346509). Thanks
 
   21 Jun 2010; Christian Faulhammer <fauli@gentoo.org> fish-1.23.1.ebuild:
   stable x86, bug 319473
