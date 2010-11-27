@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.220 2010/11/07 23:23:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.221 2010/11/27 22:47:41 radhermit Exp $
+
+*postfix-2.7.2 (27 Nov 2010)
+
+  27 Nov 2010; Tim Harder <radhermit@gentoo.org> -postfix-2.7.1-r1.ebuild,
+  +postfix-2.7.2.ebuild:
+  Version bump (bug #346875 by Michael Orlitzky) and remove old. Remove
+  unnecessary version restriction on net-mail/mailbase dependency, remove old
+  warnings, use emake instead of make, and add warning for a potential
+  compatibility problem on systems using certificate verification.
 
 *postfix-2.7.1-r1 (07 Nov 2010)
 

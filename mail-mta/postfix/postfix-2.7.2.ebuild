@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.1-r1.ebuild,v 1.1 2010/11/07 23:23:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.2.ebuild,v 1.1 2010/11/27 22:47:41 radhermit Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ DEPEND=">=sys-libs/db-3.2
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 RDEPEND="${DEPEND}
-	>=net-mail/mailbase-0.00
+	net-mail/mailbase
 	!virtual/mta
 	!net-mail/mailwrapper
 	selinux? ( sec-policy/selinux-postfix )"
@@ -53,39 +53,6 @@ group_user_check() {
 }
 
 pkg_setup() {
-	echo
-	ewarn "Read \"ftp://ftp.porcupine.org/mirrors/postfix-release/official/${MY_SRC}.RELEASE_NOTES\""
-	ewarn "for incompatible changes before continueing."
-	ewarn "Bugs should be filed at \"http://bugs.gentoo.org/\" and"
-	ewarn "assigned to \"net-mail@gentoo.org\"."
-	echo
-
-	# TLS non-prod warning
-	if use ssl ; then
-		echo
-		ewarn "You have \"ssl\" in your USE flags, TLS will be enabled."
-		ewarn "This service is incompatible with the previous TLS patch."
-		ewarn "Visit http://www.postfix.org/TLS_README.html for more info."
-		echo
-	fi
-
-	# IPV6 non-prod warn
-	if use ipv6 ; then
-		echo
-		ewarn "You have \"ipv6\" in your USE flags, IPV6 will be enabled."
-		ewarn "Visit http://www.postfix.org/IPV6_README.html for more info."
-		echo
-	fi
-
-	# SASL non-prod warning
-	if use sasl ; then
-		echo
-		elog "Postfix 2.3 and newer supports two SASL implementations."
-		elog "Cyrus SASL and Dovecot protocol version 1 (server only)"
-		elog "Visit http://www.postfix.org/SASL_README.html for more info."
-		echo
-	fi
-
 	# Add postfix, postdrop user/group (bug #77565)
 	group_user_check || die "Failed to check/add needed user/group"
 }
@@ -181,7 +148,7 @@ src_configure() {
 		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
 	fi
 
-	make DEBUG="" CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
+	emake DEBUG="" CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
 }
 
@@ -264,10 +231,6 @@ pkg_postinst() {
 	"${ROOT}/usr/$(get_libdir)/postfix/post-install" upgrade-permissions \
 		daemon_directory=${ROOT}/usr/$(get_libdir)/postfix
 	echo
-	ewarn "If you upgraded from Postfix-1.x, you must revisit"
-	ewarn "your configuration files. See"
-	ewarn "  /usr/share/doc/${PF}/RELEASE_NOTES"
-	ewarn "for a list of changes."
 
 	if [[ ! -e /etc/mail/aliases.db ]] ; then
 		echo
@@ -281,5 +244,18 @@ pkg_postinst() {
 		einfo "mailwrapper support is discontinued."
 		einfo "You may want to 'emerge -C mailwrapper' now."
 		einfo
+	fi
+
+	if use ssl ; then
+		elog
+		elog "Postfix no longer appends the system-supplied default CA certificates to"
+		elog "the lists specified with *_tls_CAfile or with *_tls_CApath. This"
+		elog "prevents third-party certificates from getting mail relay permission"
+		elog "with the permit_tls_all_clientcerts feature."
+		elog
+		elog "Unfortunately this change may cause compatibility problems when"
+		elog "configurations rely on certificate verification for other purposes."
+		elog "Specify \"tls_append_default_CA = yes\" for backwards compatibility."
+		elog
 	fi
 }
