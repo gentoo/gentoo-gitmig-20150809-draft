@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.107 2010/11/05 13:59:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.108 2010/11/27 20:43:18 tove Exp $
+
+*DateTime-0.66 (27 Nov 2010)
+
+  27 Nov 2010; Torsten Veller <tove@gentoo.org> +DateTime-0.66.ebuild:
+  Version bump
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> DateTime-0.55.ebuild:
   ppc64 stable wrt #341865
