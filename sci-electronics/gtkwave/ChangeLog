@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.55 2010/11/14 13:49:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.56 2010/11/28 16:10:55 rafaelmartins Exp $
+
+*gtkwave-3.3.16 (28 Nov 2010)
+
+  28 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -gtkwave-3.1.6.ebuild, -gtkwave-3.1.7.ebuild, -gtkwave-3.2.0.ebuild,
+  -gtkwave-3.2.1.ebuild, -gtkwave-3.2.3.ebuild, +gtkwave-3.3.16.ebuild:
+  Version bump. Clean up old versions.
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Move local USE lzma to global USE
