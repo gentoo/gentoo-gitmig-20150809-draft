@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.356 2010/11/14 12:41:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.357 2010/11/28 15:15:53 ranger Exp $
+
+  28 Nov 2010; Brent Baude <ranger@gentoo.org> sqlite-3.7.3.ebuild:
+  Marking sqlite-3.7.3 ppc64 for bug 342323
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #342323
