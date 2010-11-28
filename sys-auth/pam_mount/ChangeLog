@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.46 2010/10/05 11:32:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.47 2010/11/28 01:56:52 hanno Exp $
+
+*pam_mount-2.6 (28 Nov 2010)
+
+  28 Nov 2010; Hanno Boeck <hanno@gentoo.org> +pam_mount-2.6.ebuild,
+  +files/pam_mount-2.6-pmvarrun-bin.diff:
+  Version bump and install pmvarrun to bin instead of sbin (#330995).
 
 *pam_mount-2.5 (05 Oct 2010)
 

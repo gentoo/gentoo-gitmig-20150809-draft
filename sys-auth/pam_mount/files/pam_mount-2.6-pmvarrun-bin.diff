@@ -1,0 +1,12 @@
+--- pam_mount-2.6-vanilla/src/Makefile.am	2010-11-23 02:47:43.365455635 +0100
++++ pam_mount-2.6/src/Makefile.am	2010-11-23 02:48:30.226227213 +0100
+@@ -8,7 +8,8 @@
+ 
+ moduledir		= @PAM_MODDIR@
+ module_LTLIBRARIES	= pam_mount.la
+-sbin_PROGRAMS		= pmvarrun
++sbin_PROGRAMS		=
++bin_PROGRAMS		= pmvarrun
+ if HAVE_LIBCRYPTO
+ sbin_PROGRAMS		+= pmt-ehd
+ endif
