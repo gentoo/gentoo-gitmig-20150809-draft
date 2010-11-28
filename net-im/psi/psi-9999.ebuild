@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.8 2010/11/16 20:15:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.9 2010/11/28 18:41:26 pva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ EGIT_HAS_SUBMODULES=1
 LANGS_URI="git://pv.et-inf.fho-emden.de/git/psi-l10n"
 
 ESVN_DISABLE_DEPENDENCIES="true"
-ESVN_REPO_URI="http://psi-dev.googlecode.com/svn/trunk"
+ESVN_REPO_URI="http://psi-dev.googlecode.com/svn/trunk/patches"
 ESVN_PROJECT="psiplus"
 
 inherit eutils qt4-r2 multilib git subversion
@@ -21,7 +21,7 @@ HOMEPAGE="http://psi-im.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="crypt dbus doc enchant extras jingle iconsets spell ssl xscreensaver powersave
+IUSE="crypt dbus debug doc enchant extras jingle iconsets spell ssl xscreensaver powersave
 plugins -whiteboarding webkit"
 
 RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
@@ -41,8 +41,9 @@ DEPEND="${RDEPEND}
 		${SUBVERSION_DEPEND}
 		sys-devel/qconf
 	)
-	doc? ( app-doc/doxygen )"
-
+	doc? ( app-doc/doxygen )
+	dev-util/pkgconfig
+"
 PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
 	jingle? (
 		net-im/psimedia
@@ -59,21 +60,20 @@ pkg_setup() {
 	done
 
 	if use extras; then
-		ewarn
+		echo
 		ewarn "You're about to build heavily patched version of Psi called Psi+."
 		ewarn "It has really nice features but still is under heavy development."
 		ewarn "Take a look at homepage for more info: http://code.google.com/p/psi-dev"
 		ewarn "If you wish to disable some patches just put"
 		ewarn "MY_EPATCH_EXCLUDE=\"list of patches\""
 		ewarn "into /etc/portage/env/${CATEGORY}/${PN} file."
-		ewarn
+		echo
 		ewarn "Note: some patches depend on other. So if you disabled some patch"
 		ewarn "and other started to fail to apply, you'll have to disable patches"
 		ewarn "that fail too."
-		ebeep
 
 		if use iconsets; then
-			ewarn
+			echo
 			ewarn "Some artwork is from open source projects, but some is provided 'as-is'"
 			ewarn "and has not clear licensing."
 			ewarn "Possibly this build is not redistributable in some countries."
@@ -100,13 +100,13 @@ src_unpack() {
 	done
 
 	if use extras; then
-		S="${WORKDIR}/patches" subversion_fetch "${ESVN_REPO_URI}/patches"
+		S="${WORKDIR}/patches" subversion_fetch
 		if use iconsets; then
-			subversion_fetch "${ESVN_REPO_URI}/iconsets" "iconsets"
+			subversion_fetch "${ESVN_REPO_URI%patches}iconsets" "iconsets"
 		else
 			for x in activities affiliations clients moods roster system; do
-				ESVN_PROJECT="psiplus/${x}"
-				subversion_fetch "${ESVN_REPO_URI}/iconsets/${x}/default" "iconsets/${x}/default"
+				ESVN_PROJECT="psiplus/${x}" \
+				subversion_fetch "${ESVN_REPO_URI%patches}iconsets/${x}/default" "iconsets/${x}/default"
 			done
 		fi
 	fi
@@ -146,7 +146,9 @@ src_configure() {
 			--qtdir=/usr
 			--disable-bundled-qca
 			--disable-growl
+			--no-separate-debug-info
 			$(use dbus || echo '--disable-qdbus')
+			$(use debug && echo '--debug')
 			$(use spell && {
 				use enchant && echo '--disable-aspell' || echo '--disable-enchant'
 				} || echo '--disable-aspell --disable-enchant')

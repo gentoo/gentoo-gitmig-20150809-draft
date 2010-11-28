@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.202 2010/11/16 20:15:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.203 2010/11/28 18:41:26 pva Exp $
+
+  28 Nov 2010; Peter Volkov <pva@gentoo.org> psi-9999.ebuild, metadata.xml:
+  Fixed debug USE flag, update svn paths, thank Nikoli for this job.
 
   16 Nov 2010; Peter Volkov <pva@gentoo.org> psi-9999.ebuild:
   Some icons were not installed, thank Nikoli for this job.
