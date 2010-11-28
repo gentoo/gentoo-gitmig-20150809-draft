@@ -10,7 +10,7 @@ index 18f539c..142f7e6 100644
 -CFLAGS           = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Werror -g -DVERSION='"$(VERSION)"' -DPACKAGE='"$(PACKAGE)"' -DLOCALEDIR='"$(nlsdir)"'
 -LDFLAGS         :=
 +CC              ?= gcc
-+CFLAGS          += -DVERSION='"$(VERSION)"' -DPACKAGE='"$(PACKAGE)"' -DLOCALEDIR='"$(nlsdir)"'
++CFLAGS          += -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -DVERSION='"$(VERSION)"' -DPACKAGE='"$(PACKAGE)"' -DLOCALEDIR='"$(nlsdir)"'
 +LDFLAGS         +=
  LIBS            := 
  
