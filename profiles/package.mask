@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12233 2010/11/27 15:19:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12234 2010/11/28 05:07:49 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -79,10 +79,6 @@ games-action/armagetronad
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-2.5.x versions are used for chromium-9.x versions.
 >=dev-lang/v8-2.5.0
-
-# Michael Sterrett <mr_bones_@gentoo.org> (17 Nov 2010)
-# Security mask for bug #345691
-<games-simulation/openttd-1.0.5
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2010)
 # Last rites: dev-python/py-rrdtool #345701
