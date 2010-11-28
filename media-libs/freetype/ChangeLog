@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.283 2010/11/23 16:20:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.284 2010/11/28 14:29:36 ranger Exp $
+
+  28 Nov 2010; Brent Baude <ranger@gentoo.org> freetype-2.4.3-r2.ebuild:
+  Marking freetype-2.4.3-r2 ppc64 for bug 345843
 
   23 Nov 2010; Jeroen Roovers <jer@gentoo.org> freetype-2.4.3-r2.ebuild:
   Stable for HPPA PPC (bug #345843).
