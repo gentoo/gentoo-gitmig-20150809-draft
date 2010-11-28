@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt-FastCalc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.17 2010/11/20 18:36:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.18 2010/11/28 19:10:56 armin76 Exp $
+
+  28 Nov 2010; Raúl Porcel <armin76@gentoo.org>
+  perl-Math-BigInt-FastCalc-0.24.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #345605
 
   20 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   perl-Math-BigInt-FastCalc-0.24.ebuild:
