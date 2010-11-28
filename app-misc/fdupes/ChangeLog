@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.33 2010/11/25 13:47:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.34 2010/11/28 12:14:00 hwoarang Exp $
+
+  28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> fdupes-1.40-r4.ebuild:
+  Stable on amd64 wrt bug #339119
 
   25 Nov 2010; Jeroen Roovers <jer@gentoo.org> fdupes-1.40-r4.ebuild:
   Stable for HPPA PPC (bug #339119).
