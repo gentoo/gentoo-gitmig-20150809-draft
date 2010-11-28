@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.105 2010/11/25 01:24:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.106 2010/11/28 12:19:11 hwoarang Exp $
+
+  28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> openttd-1.0.5.ebuild:
+  Stable on amd64 wrt bug #345691
 
   25 Nov 2010; Brent Baude <ranger@gentoo.org> openttd-1.0.5.ebuild:
   Marking openttd-1.0.5 ppc64 for bug 345691
