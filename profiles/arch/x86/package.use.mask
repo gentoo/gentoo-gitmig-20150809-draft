@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.39 2010/11/19 05:20:07 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.40 2010/11/28 15:52:19 chithanh Exp $
 
 # This file requires >=portage-2.1.1
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
+# sys-devel/llvm is keyworded on x86
+media-libs/mesa -llvm
 
 # Arun Raghavan <ford_prefect@gentoo.org> (19 Nov 2010)
 # Orc optimisations in gst-plugins-base work fine on x86

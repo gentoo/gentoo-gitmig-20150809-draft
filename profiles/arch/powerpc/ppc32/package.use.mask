@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.19 2010/10/31 16:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.20 2010/11/28 15:52:19 chithanh Exp $
 
 # This file requires >=portage-2.1.1
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
+# sys-devel/llvm is keyworded on ppc
+media-libs/mesa -llvm
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jul 2010)
 # Needs clutter, bug 318691

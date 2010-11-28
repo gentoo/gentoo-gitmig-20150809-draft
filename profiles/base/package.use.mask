@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.182 2010/11/18 20:25:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.183 2010/11/28 15:52:19 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
+# sys-devel/llvm is not keyworded on many arches, bug #320221
+media-libs/mesa llvm
 
 # Pacho Ramos <pacho@gentoo.org> (18 Nov 2010)
 # clutter support requires mx-1.0 that is still not in the tree,

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.188 2010/11/18 20:25:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.189 2010/11/28 15:52:19 chithanh Exp $
+
+  28 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask mesa's llvm flag, bug #320221
 
   19 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
   Mask orc for gst-plugins-base by default (to be unmasked on supported platforms)
