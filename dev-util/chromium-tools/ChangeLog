@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/chromium-tools
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/chromium-tools/ChangeLog,v 1.1 2010/11/28 18:46:04 phajdan.jr Exp $
+
+*chromium-tools-0.1.2 (28 Nov 2010)
+
+  28 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-tools-0.1.2.ebuild, +metadata.xml:
+  Initial import.
+
