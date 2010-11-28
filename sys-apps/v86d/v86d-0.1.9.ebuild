@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.4 2008/11/05 19:58:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.5 2010/11/28 18:27:20 spock Exp $
 
-inherit eutils linux-info multilib
+inherit eutils flag-o-matic linux-info multilib
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
@@ -34,6 +34,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# Disable stack protector, as it does not work with klibc (bug #346397).
+	filter-flags -fstack-protector -fstack-protector-all
 	./configure --with-klibc $(use_with debug) $(use_with x86emu) || die
 	emake KDIR="${KV_DIR}" || die
 }
