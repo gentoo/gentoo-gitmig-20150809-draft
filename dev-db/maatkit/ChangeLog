@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.15 2010/11/21 17:45:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.16 2010/11/28 12:15:01 hwoarang Exp $
+
+  28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> maatkit-6070.ebuild:
+  Stable on amd64 wrt bug #345809
 
   21 Nov 2010; Markus Meier <maekke@gentoo.org> maatkit-6070.ebuild:
   x86 stable, bug #345809
