@@ -1,0 +1,91 @@
+diff -ru freedroidrpg-0.14.1.orig/configure.ac freedroidrpg-0.14.1/configure.ac
+--- freedroidrpg-0.14.1.orig/configure.ac	2010-11-26 17:47:26.000000000 -0500
++++ freedroidrpg-0.14.1/configure.ac	2010-11-28 04:40:12.524987716 -0500
+@@ -110,6 +110,14 @@
+ 	AC_MSG_ERROR([SDL_image library needed for FreedroidRPG!
+ see http://www.libsdl.org/]))
+ 
++AC_CHECK_LIB([SDL_gfx], [rotozoomSurface],,
++       AC_MSG_ERROR([SDL_gfx library needed to run FreedroidRPG
++see http://www.ferzkopp.net/Software/SDL_gfx-2.0/]))
++
++AC_CHECK_LIB([lua], [luaL_openlibs],,
++       AC_MSG_ERROR([lua library needed to run FreedroidRPG
++see http://www.lua.org/]))
++
+ AC_MSG_NOTICE([[Checking for optional SDL libraries:]])
+ AC_CHECK_LIB([SDL_mixer], [Mix_ChannelFinished],, AC_MSG_WARN([
+ --------------------------------------------------
+diff -ru freedroidrpg-0.14.1.orig/src/Makefile.am freedroidrpg-0.14.1/src/Makefile.am
+--- freedroidrpg-0.14.1.orig/src/Makefile.am	2010-11-26 17:41:13.000000000 -0500
++++ freedroidrpg-0.14.1/src/Makefile.am	2010-11-28 04:40:12.524987716 -0500
+@@ -1,9 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-freedroidRPG_LDADD = ../lua/liblua.a
+-
+ if WIN32
+-freedroidRPG_LDADD += ../win32/freedroidRPG.coff
++freedroidRPG_LDADD = ../win32/freedroidRPG.coff
+ endif
+ 
+ bin_PROGRAMS = freedroidRPG
+@@ -22,7 +20,7 @@
+ 	enemy.c input.c keyboard.c main.c hud.c view.c automap.c BFont.c \
+ 	defs.h map.h vars.h takeover.h global.h \
+ 	proto.h struct.h system.h BFont.h \
+-	SDL_rotozoom.c SDL_rotozoom.h open_gl.c open_gl_atlas.c mission.c chat.c light.c \
++	open_gl.c open_gl_atlas.c mission.c chat.c light.c \
+ 	getopt.c getopt1.c getopt.h scandir.c scandir.h sound.h sound_effects.c \
+ 	lang.h lists.c lists.h gen_savestruct.py savestruct.c savestruct.h string.c pathfinder.c \
+ 	benchmark.c \
+@@ -56,8 +54,3 @@
+ savestruct.c savestruct.h: struct.h gen_savestruct.py
+ 	python gen_savestruct.py struct.h savestruct
+ 
+-clean-local:
+-	cd ../lua; make clean
+-
+-../lua/liblua.a: 
+-	cd ../lua; make CC=${CC} AR="${AR} rcu" RANLIB="${RANLIB}" liblua.a
+diff -ru freedroidrpg-0.14.1.orig/src/lua.c freedroidrpg-0.14.1/src/lua.c
+--- freedroidrpg-0.14.1.orig/src/lua.c	2010-11-26 17:41:13.000000000 -0500
++++ freedroidrpg-0.14.1/src/lua.c	2010-11-28 04:40:12.525987480 -0500
+@@ -37,9 +37,9 @@
+ #include "lvledit/lvledit_actions.h"
+ #include "lvledit/lvledit_map.h"
+ 
+-#include "../lua/lua.h"
+-#include "../lua/lauxlib.h"
+-#include "../lua/lualib.h"
++#include <lua.h>
++#include <lauxlib.h>
++#include <lualib.h>
+ 
+ /* Our Lua state for event execution */
+ lua_State *global_lua_state;
+diff -ru freedroidrpg-0.14.1.orig/src/luaconfig.c freedroidrpg-0.14.1/src/luaconfig.c
+--- freedroidrpg-0.14.1.orig/src/luaconfig.c	2010-11-26 17:41:13.000000000 -0500
++++ freedroidrpg-0.14.1/src/luaconfig.c	2010-11-28 04:40:32.263348025 -0500
+@@ -33,8 +33,8 @@
+ #include "global.h"
+ #include "proto.h"
+ 
+-#include "../lua/lua.h"
+-#include "../lua/lauxlib.h"
++#include <lua.h>
++#include <lauxlib.h>
+ 
+ /* Our Lua state for event execution (defined in lua.c) */
+ extern lua_State *global_lua_state;
+diff -ru freedroidrpg-0.14.1.orig/src/system.h freedroidrpg-0.14.1/src/system.h
+--- freedroidrpg-0.14.1.orig/src/system.h	2010-11-26 17:41:13.000000000 -0500
++++ freedroidrpg-0.14.1/src/system.h	2010-11-28 04:40:12.525987480 -0500
+@@ -111,6 +111,7 @@
+ 
+ #include "SDL.h"
+ #include "SDL_image.h"
++#include "SDL_rotozoom.h"
+ 
+ #ifdef HAVE_LIBSDL_MIXER
+ #include "SDL_mixer.h"
