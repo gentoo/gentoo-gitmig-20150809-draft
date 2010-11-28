@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.70 2010/11/28 02:24:58 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.71 2010/11/28 18:12:32 reavertm Exp $
+
+  28 Nov 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  phonon-kde-4.4.5.ebuild, phonon-kde-4.5.3.ebuild,
+  +files/phonon-kde-4.5.3-duplicated-definitions.patch:
+  Backport small patch from 4.5 branch to fix phonon-4.4.3 compatibility,
+  bug 346951.
 
   14 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   phonon-kde-4.5.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.5.3.ebuild,v 1.4 2010/11/28 02:24:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.5.3.ebuild,v 1.5 2010/11/28 18:12:32 reavertm Exp $
 
 EAPI="3"
 
@@ -20,6 +20,10 @@ DEPEND="
 	alsa? ( media-libs/alsa-lib )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-duplicated-definitions.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
