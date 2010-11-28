@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.2.0.ebuild,v 1.1 2010/11/20 21:26:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.2.0.ebuild,v 1.2 2010/11/28 02:13:12 mr_bones_ Exp $
 
 EAPI=3
 
