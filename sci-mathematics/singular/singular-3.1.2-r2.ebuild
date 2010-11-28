@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r2.ebuild,v 1.2 2010/11/26 09:56:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r2.ebuild,v 1.3 2010/11/28 02:12:24 mr_bones_ Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1" # Upstream ticket 240 -> wontfix
@@ -45,7 +45,7 @@ pkg_setup() {
 	append-ldflags "-fPIC"
 	tc-export CC CPP CXX
 
-	# Ensure that >=emacs-22 is selected 
+	# Ensure that >=emacs-22 is selected
 	if use emacs; then
 		elisp-need-emacs 22 || die "Emacs version too low"
 	fi
