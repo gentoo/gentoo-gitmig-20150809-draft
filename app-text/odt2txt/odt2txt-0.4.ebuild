@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/odt2txt-0.4.ebuild,v 1.1 2010/11/05 14:38:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/odt2txt-0.4.ebuild,v 1.2 2010/11/28 14:33:02 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://stosberg.net/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86 ~x86-macos"
 IUSE=""
 
 RDEPEND="sys-libs/zlib

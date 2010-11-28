@@ -1,6 +1,9 @@
 # ChangeLog for app-text/odt2txt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.1 2010/11/05 14:38:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.2 2010/11/28 14:33:02 armin76 Exp $
+
+  28 Nov 2010; Raúl Porcel <armin76@gentoo.org> odt2txt-0.4.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #296794
 
 *odt2txt-0.4 (05 Nov 2010)
 
