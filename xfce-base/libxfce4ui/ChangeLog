@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.14 2010/11/16 15:55:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.15 2010/11/28 17:05:39 ssuominen Exp $
+
+*libxfce4ui-4.7.5 (28 Nov 2010)
+
+  28 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> +libxfce4ui-4.7.5.ebuild:
+  Version bump.
 
   16 Nov 2010; Jeremy Olexa <darkside@gentoo.org> libxfce4ui-4.7.4.ebuild:
   align keywords with Gentoo Prefix
