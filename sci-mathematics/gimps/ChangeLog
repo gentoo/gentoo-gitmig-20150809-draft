@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.37 2010/10/16 21:24:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.38 2010/11/28 18:18:17 spock Exp $
+
+*gimps-26.4 (28 Nov 2010)
+
+  28 Nov 2010; Michał Januszewski <spock@gentoo.org> +gimps-26.4.ebuild:
+  Version bump (bug #345733).
 
 *gimps-26.3 (14 Oct 2010)
 
