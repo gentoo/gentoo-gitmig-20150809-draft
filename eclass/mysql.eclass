@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.155 2010/11/02 20:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.156 2010/11/28 21:55:54 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -754,6 +754,13 @@ mysql_pkg_setup() {
 		M="MySQL does not support being built statically with SSL support enabled!"
 		eerror "${M}"
 		die "${M}"
+	fi
+
+	if mysql_version_is_at_least "5.1.51" \
+	   && ! mysql_version_is_at_least "5.2" \
+	   && use debug ; then
+	   # Also in package.use.mask
+	   die "Bug #344885: Upstream has broken USE=debug for 5.1 series >=5.1.51"
 	fi
 
 	if ! mysql_version_is_at_least "5.0" \
