@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r2.ebuild,v 1.5 2010/11/27 18:20:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r2.ebuild,v 1.6 2010/11/28 17:18:59 maekke Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ else
 	fi
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="http://developer.osdl.org/dev/iproute2/download/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc ~x86"
+	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86"
 	S=${WORKDIR}/${MY_P}
 fi
 
