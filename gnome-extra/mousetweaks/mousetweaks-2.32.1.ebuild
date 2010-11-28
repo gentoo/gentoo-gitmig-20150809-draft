@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.32.0.ebuild,v 1.2 2010/11/01 14:56:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.32.1.ebuild,v 1.1 2010/11/28 14:47:24 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
