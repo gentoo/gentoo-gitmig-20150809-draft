@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.101 2010/11/27 12:35:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.102 2010/11/28 16:04:45 constanze Exp $
+
+  28 Nov 2010; Constanze Hausner <constanze@gentoo.org>
+  pambase-20090620.1-r1.ebuild, pambase-20100310.ebuild,
+  pambase-20100925.ebuild, pambase-20101024.ebuild, metadata.xml:
+  Renamed useflags ssh/kerberos to pam_ssh/pam_krb5 and changed kerberos dep
+  to >=sys-auth/pam_krb5-4.3
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> pambase-20101024.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable

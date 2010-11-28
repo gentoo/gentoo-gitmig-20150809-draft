@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100310.ebuild,v 1.8 2010/09/03 14:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100310.ebuild,v 1.9 2010/11/28 16:04:45 constanze Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~flameeyes/pambase/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp ssh +sha512"
+IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp pam_ssh +sha512"
 RESTRICT="binchecks"
 
 RDEPEND="
@@ -29,7 +29,7 @@ RDEPEND="
 	selinux? ( >=sys-libs/pam-0.99[selinux] )
 	passwdqc? ( >=sys-auth/pam_passwdqc-1.0.4 )
 	mktemp? ( sys-auth/pam_mktemp )
-	ssh? ( sys-auth/pam_ssh )
+	pam_ssh? ( sys-auth/pam_ssh )
 	sha512? ( >=sys-libs/pam-1.0.1 )
 	!<sys-freebsd/freebsd-pam-modules-6.2-r1
 	!<sys-libs/pam-0.99.9.0-r1"
@@ -64,7 +64,7 @@ src_compile() {
 		$(use_var GNOME_KEYRING gnome-keyring) \
 		$(use_var selinux) \
 		$(use_var mktemp) \
-		$(use_var PAM_SSH ssh) \
+		$(use_var PAM_SSH pam_ssh) \
 		$(use_var sha512) \
 		IMPLEMENTATION=${implementation} \
 		LINUX_PAM_VERSION=${linux_pam_version} \

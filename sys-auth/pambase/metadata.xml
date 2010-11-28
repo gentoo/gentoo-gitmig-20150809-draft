@@ -40,7 +40,7 @@
       handling. This module creates a private temporary directory for
       the user, and sets TMP and TMPDIR accordingly.
     </flag>
-    <flag name="ssh">
+    <flag name="pam_ssh">
       Enable pam_ssh module on system auth stack for authentication
       and session handling. This module will accept as password the
       passphrase of a private SSH key (one of ~/.ssh/id_rsa,
@@ -61,7 +61,7 @@
       will not be compatible with systems using an earlier glibc
       version.
     </flag>
-    <flag name="kerberos">
+    <flag name="pam_krb5">
       Enable pam_krb5 module on system auth stack, as an alternative
       to pam_unix. If Kerberos authentication succeed, only pam_unix
       will be ignore, and all the other modules will proceed as usual,
