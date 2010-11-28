@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.112 2010/10/22 17:31:41 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.113 2010/11/28 14:00:38 a3li Exp $
+
+*horde-3.3.11 (28 Nov 2010)
+
+  28 Nov 2010; Alex Legler <a3li@gentoo.org> +horde-3.3.11.ebuild:
+  Version bump, fixes security bug 346697, thanks to Tim Sammut.
 
   22 Oct 2010; Alex Legler <a3li@gentoo.org> -horde-3.3.6.ebuild,
   -horde-3.3.8.ebuild:
