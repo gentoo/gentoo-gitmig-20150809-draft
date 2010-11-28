@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/five-formlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.4 2010/09/11 21:15:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.5 2010/11/28 22:11:19 arfrever Exp $
+
+  28 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  five-formlib-1.0.3.ebuild:
+  Restrict Jython ABIs.
 
   11 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   five-formlib-1.0.3.ebuild:

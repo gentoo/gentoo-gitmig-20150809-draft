@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/accesscontrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/accesscontrol/ChangeLog,v 1.2 2010/09/11 21:25:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/accesscontrol/ChangeLog,v 1.3 2010/11/28 22:04:13 arfrever Exp $
+
+  28 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  accesscontrol-2.13.3.ebuild:
+  Restrict Jython ABIs.
 
 *accesscontrol-2.13.3 (11 Sep 2010)
 

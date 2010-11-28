@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/acquisition/acquisition-2.13.5.ebuild,v 1.1 2010/09/29 18:01:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/acquisition/acquisition-2.13.5.ebuild,v 1.2 2010/11/28 22:05:23 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
