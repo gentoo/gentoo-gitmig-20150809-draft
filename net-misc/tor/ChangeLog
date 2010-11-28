@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.213 2010/11/25 14:21:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.214 2010/11/28 12:45:26 hwoarang Exp $
+
+  28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> tor-0.2.1.27.ebuild:
+  Stable on amd64 wrt bug #346759
 
 *tor-0.2.1.27 (25 Nov 2010)
 
