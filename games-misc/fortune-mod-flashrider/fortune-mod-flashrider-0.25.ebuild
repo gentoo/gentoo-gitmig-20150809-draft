@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/fortune-mod-flashrider-0.25.ebuild,v 1.1 2010/10/30 15:08:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/fortune-mod-flashrider-0.25.ebuild,v 1.2 2010/11/28 01:59:18 mr_bones_ Exp $
 
 EAPI=2
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="games-misc/fortune-mod"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN/-mod-flashrider/s-prolinux}
 
