@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.54 2010/04/29 15:37:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.55 2010/11/28 02:11:19 mr_bones_ Exp $
+
+*gnubg-20101126 (28 Nov 2010)
+
+  28 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnubg-20101126.ebuild, +files/gnubg-20101126-build.patch:
+  version bump
 
   29 Apr 2010; Tupone Alfredo <tupone@gentoo.org> gnubg-20100107.ebuild:
   Force python2 fixing bug #312239 by arfrever@gentoo.org
