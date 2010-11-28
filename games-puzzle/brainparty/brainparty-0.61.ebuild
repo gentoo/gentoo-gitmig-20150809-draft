@@ -1,25 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.61.ebuild,v 1.1 2010/11/28 19:47:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.61.ebuild,v 1.2 2010/11/28 21:16:07 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="A puzzle-solving, brain-stretching game for all ages"
 HOMEPAGE="http://www.tuxradar.com/brainparty"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}${PV}.tar.gz"
+SRC_URI="http://launchpad.net/brainparty/trunk/${PV}/+download/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[audio,opengl,video]
+DEPEND="media-libs/libsdl[audio,opengl,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-image[png]
 	media-libs/sdl-gfx"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
