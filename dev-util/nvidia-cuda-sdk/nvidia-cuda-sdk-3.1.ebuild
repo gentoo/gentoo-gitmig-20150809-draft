@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.1.ebuild,v 1.2 2010/09/16 16:46:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.1.ebuild,v 1.3 2010/11/28 20:54:55 spock Exp $
 
 EAPI=2
 
@@ -74,12 +74,14 @@ src_install() {
 			continue
 		fi
 
-		if [[ -x "${f}" && ! -d "${f}" ]]; then
-			exeinto "/opt/cuda/sdk/${t}"
-			doexe "${f}"
-		else
-			insinto "/opt/cuda/sdk/${t}"
-			doins "${f}"
+		if [[ ! -d "${f}" ]]; then
+			if [[ -x "${f}" ]]; then
+				exeinto "/opt/cuda/sdk/${t}"
+				doexe "${f}"
+			else
+				insinto "/opt/cuda/sdk/${t}"
+				doins "${f}"
+			fi
 		fi
 	done
 }

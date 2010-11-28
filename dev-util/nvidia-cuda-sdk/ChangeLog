@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.22 2010/09/30 08:59:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.23 2010/11/28 20:54:55 spock Exp $
+
+  28 Nov 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-sdk-3.1.ebuild:
+  Do not try to install directories with doins.
 
   30 Sep 2010; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-sdk-2.1.1215.2015.ebuild, nvidia-cuda-sdk-2.2.ebuild,
