@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/readseq
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.8 2009/03/24 21:21:41 ribosome Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.9 2010/11/28 08:56:48 jlec Exp $
+
+*readseq-19930201-r1 (28 Nov 2010)
+
+  28 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/19930201-buffer.patch,
+  +files/19930201-getline.patch, +files/19930201-ldflags.patch,
+  +readseq-19930201-r1.ebuild, +files/19930201-impl-dec.patch:
+  Fixes fo various problems, #346883
+
 
   24 Mar 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.
