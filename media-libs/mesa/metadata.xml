@@ -3,7 +3,10 @@
 <pkgmetadata>
 <herd>x11</herd>
 <use>
+	<flag name='classic'>Build drivers based on the classic architecture.</flag>
+	<flag name='gallium'>Build drivers based on Gallium3D, the new architecture for 3D graphics drivers.</flag>
+	<flag name='gles'>Enable GLES support for Gallium3D.</flag>
+	<flag name='llvm'>Enable LLVM backend for Gallium3D.</flag>
 	<flag name='pic'>disable optimized assembly code that is not PIC friendly</flag>
-	<flag name='gallium'>Gallium3D is new architecture for building 3D graphics drivers.</flag>
 </use>
 </pkgmetadata>
