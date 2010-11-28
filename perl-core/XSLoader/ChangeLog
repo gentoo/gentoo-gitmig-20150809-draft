@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/XSLoader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.3 2010/11/20 17:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.4 2010/11/28 15:56:20 armin76 Exp $
+
+  28 Nov 2010; Raúl Porcel <armin76@gentoo.org> XSLoader-0.10.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #345607
 
   20 Nov 2010; Jeroen Roovers <jer@gentoo.org> XSLoader-0.10.ebuild:
   Marked ~hppa ~ppc (bug #345605).
