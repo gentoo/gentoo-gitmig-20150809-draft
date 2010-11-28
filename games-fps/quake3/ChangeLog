@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.54 2010/11/13 07:33:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.55 2010/11/28 05:29:05 mr_bones_ Exp $
+
+  28 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> quake3-1.36.ebuild,
+  quake3-9999.ebuild:
+  fix KEYWORDS (bug #346329)
 
 *quake3-1.36 (13 Nov 2010)
 
