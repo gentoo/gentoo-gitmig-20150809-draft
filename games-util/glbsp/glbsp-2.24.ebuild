@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.24.ebuild,v 1.1 2010/11/25 10:58:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.24.ebuild,v 1.2 2010/11/28 01:01:43 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="fltk"
 
-RDEPEND="fltk? ( x11-libs/fltk:1.1 )"
-DEPEND="${RDEPEND}"
-S="${WORKDIR}"/${P}-source
+DEPEND="fltk? ( x11-libs/fltk:1.1 )"
+
+S=${WORKDIR}/${P}-source
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
