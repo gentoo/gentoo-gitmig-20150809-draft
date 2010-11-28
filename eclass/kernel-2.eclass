@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.242 2010/11/26 23:41:45 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.243 2010/11/28 05:07:28 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -85,7 +85,8 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ ${HOMEPAGE}"
 	LICENSE="GPL-2"
 
 # This is the latest KV_PATCH of the deblob tool available from the
-# libre-sources upstream.
+# libre-sources upstream. If you bump this, you MUST regenerate the Manifests
+# for ALL kernel-2 consumer packages where deblob is available.
 [[ -z ${DEBLOB_MAX_VERSION} ]] && DEBLOB_MAX_VERSION=36
 
 # No need to run scanelf/strip on kernel sources/headers (bug #134453).
