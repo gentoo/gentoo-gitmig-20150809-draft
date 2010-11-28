@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.1 2010/10/31 09:10:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.2 2010/11/28 19:18:02 armin76 Exp $
+
+  28 Nov 2010; Raúl Porcel <armin76@gentoo.org> Test-Fatal-0.003.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #345605
 
 *Test-Fatal-0.003 (31 Oct 2010)
 
