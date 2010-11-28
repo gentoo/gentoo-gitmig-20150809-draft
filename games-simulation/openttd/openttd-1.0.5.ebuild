@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.5.ebuild,v 1.4 2010/11/25 01:24:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.5.ebuild,v 1.5 2010/11/28 00:59:21 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,7 +28,6 @@ DEPEND="
 	iconv? ( virtual/libiconv )
 	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${DEPEND}"
 PDEPEND="
 	!dedicated? (
 		openmedia? (
