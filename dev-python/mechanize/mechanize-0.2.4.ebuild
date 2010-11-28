@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.2.4.ebuild,v 1.1 2010/10/30 05:03:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.2.4.ebuild,v 1.2 2010/11/28 21:07:28 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ DOCS="docs/*.txt"
 src_test() {
 	testing() {
 		# Ignore warnings (http://github.com/jjlee/mechanize/issues/issue/13).
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" -Wignore test.py
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" -W ignore test.py
 	}
 	python_execute_function testing
 }
