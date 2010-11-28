@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.35 2010/11/28 12:18:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.36 2010/11/28 17:24:31 maekke Exp $
+
+  28 Nov 2010; Markus Meier <maekke@gentoo.org> qcomicbook-0.6.0.ebuild:
+  x86 stable, bug #346935
 
   28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> qcomicbook-0.6.0.ebuild:
   Stable on amd64 wrt bug #346935
