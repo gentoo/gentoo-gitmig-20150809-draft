@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.57 2010/10/08 01:52:07 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.58 2010/11/28 20:07:42 radhermit Exp $
+
+*ethtool-2.6.36 (28 Nov 2010)
+
+  28 Nov 2010; Tim Harder <radhermit@gentoo.org> +ethtool-2.6.36.ebuild:
+  Version bump.
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> ethtool-0.6.ebuild:
   Drop to ~mips
