@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.34 2010/10/28 06:28:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.35 2010/11/28 21:34:59 radhermit Exp $
+
+*multipath-tools-0.4.9-r1 (28 Nov 2010)
+
+  28 Nov 2010; Tim Harder <radhermit@gentoo.org>
+  -multipath-tools-0.4.8-r2.ebuild, -multipath-tools-0.4.9.ebuild,
+  +multipath-tools-0.4.9-r1.ebuild,
+  +files/multipath-tools-0.4.9-buffer-overflows.patch,
+  files/multipath-tools-0.4.9-build.patch:
+  Revbump and remove old. Specify the library directory before the library name
+  (fixes bug #346345 by Benjamin Schulz) and fix buffer overflows (bug #329049
+  by vapier).
 
 *multipath-tools-0.4.9 (28 Oct 2010)
 

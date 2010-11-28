@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8-r2.ebuild,v 1.1 2009/11/05 04:15:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r1.ebuild,v 1.1 2010/11/28 21:34:59 radhermit Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -23,28 +23,22 @@ RDEPEND="|| (
 	dev-libs/libaio"
 DEPEND="${RDEPEND}"
 
+S="${WORKDIR}"
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.4.8-build.patch
-	epatch "${FILESDIR}"/${PN}-0.4.8-udev-scsi_id-changes.patch
-	# Patch per upstream tree for 1GiB limit of kpartx
-	epatch "${FILESDIR}"/${PN}-0.4.8-r1-kpartx.patch
-	# CVE-2009-0115, world writable socket
-	epatch "${FILESDIR}"/${PN}-0.4.8-socket-cve-2009-0115.patch
-	# kpartx fails on extended partitions
-	epatch "${FILESDIR}"/${PN}-0.4.8-kparted-ext-partitions.patch
+	 epatch "${FILESDIR}"/${PN}-0.4.9-build.patch
+	 epatch "${FILESDIR}"/${PN}-0.4.9-buffer-overflows.patch
+	 # kpartx fails on extended partitions
+	 epatch "${FILESDIR}"/${PN}-0.4.8-kparted-ext-partitions.patch
 }
 
 src_compile() {
-	# The -j1 is NOT a joke. The 0.4.8-era upstream code rebuilds several object
-	# files with different compiler defines. The upstream git, as yet unreleased
-	# moves to proper automake, but it's a large jump and is not being
-	# backported to 0.4.8.
-	emake -j1 CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
 	dodir /sbin /usr/share/man/man8
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto /etc
 	newins "${S}"/multipath.conf.annotated multipath.conf
@@ -75,6 +69,7 @@ pkg_preinst() {
 			> "${D}"/etc/dev.d/block/multipath.dev
 	fi
 }
+
 pkg_postinst() {
 	elog "If you need multipath on your system, you should ensure that a"
 	elog "'multipath' entry is present in your RC_VOLUME_ORDER variable!"
