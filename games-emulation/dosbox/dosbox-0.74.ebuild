@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.74.ebuild,v 1.6 2010/11/23 09:24:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.74.ebuild,v 1.7 2010/11/28 00:57:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,7 +21,6 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libsdl[joystick,video,X]
 	media-libs/sdl-net
 	media-libs/sdl-sound"
-RDEPEND="${DEPEND}"
 
 src_configure() {
 	egamesconf \
