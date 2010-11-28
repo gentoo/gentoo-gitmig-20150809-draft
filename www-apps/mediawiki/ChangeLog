@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.144 2010/10/24 19:27:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.145 2010/11/28 09:35:08 radhermit Exp $
+
+  28 Nov 2010; Tim Harder <radhermit@gentoo.org> mediawiki-1.15.5.ebuild,
+  mediawiki-1.16.0.ebuild:
+  Add sqlite USE flag to mediawiki-1.15.5, change sqlite3 USE flag to sqlite
+  for mediawiki-1.16.0, and fix php dependencies with sqlite (bug #343275 by
+  UnclePain@gmx.de). Add graphicsmagick alternative to imagemagick (bug #314389
+  by Wojciech Porczyk) and depend on GD support via php if the imagemagick USE
+  flag is not enabled.
 
   24 Oct 2010; Tim Harder <radhermit@gentoo.org>
   -files/postinstall-1.11-en.txt, -mediawiki-1.14.1.ebuild,

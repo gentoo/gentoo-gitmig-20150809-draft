@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.16.0.ebuild,v 1.1 2010/10/09 21:30:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.16.0.ebuild,v 1.2 2010/11/28 09:35:08 radhermit Exp $
 
 EAPI="3"
 inherit webapp depend.php versionator eutils
@@ -13,7 +13,7 @@ SRC_URI="http://download.wikimedia.org/mediawiki/${MY_BRANCH}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="imagemagick math mysql postgres +ocamlopt sqlite3"
+IUSE="imagemagick math mysql postgres +ocamlopt sqlite"
 
 DEPEND="math? ( >=dev-lang/ocaml-3.0.6[ocamlopt?] )"
 RDEPEND="${DEPEND}
@@ -21,13 +21,14 @@ RDEPEND="${DEPEND}
 		app-text/dvipng
 		virtual/tex-base
 		app-text/ghostscript-gpl
-		media-gfx/imagemagick
+		|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	)
-	imagemagick? ( media-gfx/imagemagick )
+	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
+	!imagemagick? ( || ( dev-lang/php[gd] dev-lang/php[gd-external] ) )
 	|| ( <dev-lang/php-5.3[mysql?,pcre,postgres?,session,spl,xml]
 		>=dev-lang/php-5.3[mysql?,postgres?,session,xml] )
-	|| ( dev-lang/php[gd] dev-lang/php[gd-external] )
-	sqlite3? ( >=dev-db/sqlite-3.6[fts3] )"
+	sqlite? ( dev-db/sqlite:3[fts3]
+		dev-lang/php[sqlite,pdo] )"
 
 RESTRICT="test"
 
