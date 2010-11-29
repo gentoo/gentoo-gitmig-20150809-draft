@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.1.ebuild,v 1.1 2010/11/28 19:05:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.1.ebuild,v 1.2 2010/11/29 11:40:45 sping Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -337,15 +337,7 @@ pkg_preinst() {
 	fi
 }
 
-eselect_python_update() {
-	if [[ -z "$(eselect python show --python${PV%%.*})" ]]; then
-		eselect python update --python${PV%%.*}
-	fi
-}
-
 pkg_postinst() {
-	eselect_python_update
-
 	python_mod_optimize -f -x "/(site-packages|test|tests)/" $(python_get_libdir)
 
 	if [[ "${python_updater_warning}" == "1" ]]; then
@@ -362,7 +354,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	eselect_python_update
-
 	python_mod_cleanup $(python_get_libdir)
 }
