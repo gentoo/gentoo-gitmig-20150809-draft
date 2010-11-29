@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gri
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.4 2009/12/26 17:46:54 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.5 2010/11/29 21:29:18 fauli Exp $
+
+  29 Nov 2010; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Drop from emacs herd
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> gri-2.12.19.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
