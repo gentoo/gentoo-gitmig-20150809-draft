@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.101 2010/10/17 18:02:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.102 2010/11/29 13:43:03 flameeyes Exp $
+
+*opensc-0.11.13-r1 (29 Nov 2010)
+
+  29 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> opensc-0.11.13.ebuild,
+  +opensc-0.11.13-r1.ebuild, +files/opensc-0.11.13+pcsc-lite-1.6.2.patch:
+  Fix build with recent pcsc-lite (backport from upstream); closes bug #341371;
+  add dependency over libtool (needed for ltdl), and over readline (it was
+  automagic before). In r1 instead add USE flag for readline, OpenSSL and zlib,
+  and rebuild autotools with modern versions to fix bug #317295.
 
   17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   opensc-0.11.13.ebuild:
