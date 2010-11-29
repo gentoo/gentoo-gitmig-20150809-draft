@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.91 2010/05/20 01:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.92 2010/11/29 13:18:59 flameeyes Exp $
+
+  29 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> openct-0.6.20.ebuild:
+  Add missing runtime dependency over libtool (for ltdl).
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> openct-0.6.20.ebuild:
   Stable for HPPA (bug #310771).
