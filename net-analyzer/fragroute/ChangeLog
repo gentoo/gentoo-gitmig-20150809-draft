@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.20 2010/10/27 02:58:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.21 2010/11/29 20:45:55 jer Exp $
+
+*fragroute-1.2-r3 (29 Nov 2010)
+
+  29 Nov 2010; Jeroen Roovers <jer@gentoo.org> files/1.2-libevent.patch,
+  -fragroute-1.2-r2.ebuild, +fragroute-1.2-r3.ebuild:
+  Fix libevent dependency and check for libevent.so instead of libevent.a in
+  configure (still bug #342859).
 
 *fragroute-1.2-r2 (27 Oct 2010)
 

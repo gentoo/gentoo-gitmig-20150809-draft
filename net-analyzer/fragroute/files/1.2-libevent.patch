@@ -1,5 +1,5 @@
---- fragroute-1.2.orig/fragroute.c	2002-04-08 00:55:20.000000000 +0200
-+++ fragroute-1.2/fragroute.c	2010-02-03 21:23:21.451754240 +0100
+--- a/fragroute.c	2002-04-08 00:55:20.000000000 +0200
++++ b/fragroute.c	2010-02-03 21:23:21.451754240 +0100
 @@ -36,10 +36,6 @@
  
  static struct fr_ctx 	 ctx;
