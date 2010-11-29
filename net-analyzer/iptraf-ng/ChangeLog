@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.13 2010/11/26 17:12:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.14 2010/11/29 19:15:05 jer Exp $
+
+  29 Nov 2010; Jeroen Roovers <jer@gentoo.org> iptraf-ng-1.0.2.ebuild:
+  Stable for HPPA PPC SPARC (bug #305781).
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> iptraf-ng-1.0.2.ebuild:
   Fix typo in DESCRIPTION.
