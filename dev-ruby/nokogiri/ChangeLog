@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.43 2010/11/26 12:29:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.44 2010/11/29 08:12:16 graaff Exp $
+
+  29 Nov 2010; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.4.1-r1.ebuild:
+  Add back nokogiri-1.4.1-r1 since it is the last version that supports
+  jruby and dev-ruby/mechanize depends on it.
 
 *nokogiri-1.4.4 (26 Nov 2010)
 
