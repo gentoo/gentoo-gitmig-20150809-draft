@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.65 2010/11/26 16:02:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.66 2010/11/29 16:14:20 jsbronder Exp $
+
+  29 Nov 2010; Justin Bronder <jsbronder@gentoo.org> -mpich2-1.0.8.ebuild,
+  metadata.xml:
+  cleanup
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> mpich2-1.2.1_p1-r1.ebuild:
   Stable for HPPA (bug #324417).
