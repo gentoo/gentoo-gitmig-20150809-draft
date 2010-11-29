@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.69 2010/11/23 20:56:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.70 2010/11/29 17:07:22 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -166,25 +166,6 @@ EMACSFLAGS="-batch -q --no-site-file"
 # Emacs flags used for byte-compilation in elisp-compile().
 BYTECOMPFLAGS="-L ."
 
-# @FUNCTION: elisp-compile
-# @USAGE: <list of elisp files>
-# @DESCRIPTION:
-# Byte-compile Emacs Lisp files.
-#
-# This function uses GNU Emacs to byte-compile all ".el" specified by
-# its arguments.  The resulting byte-code (".elc") files are placed in
-# the same directory as their corresponding source file.
-#
-# The current directory is added to the load-path.  This will ensure
-# that interdependent Emacs Lisp files are visible between themselves,
-# in case they require or load one another.
-
-elisp-compile() {
-	ebegin "Compiling GNU Emacs Elisp files"
-	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -f batch-byte-compile "$@"
-	eend $? "elisp-compile: batch-byte-compile failed"
-}
-
 # @FUNCTION: elisp-emacs-version
 # @DESCRIPTION:
 # Output version of currently active Emacs.
@@ -213,6 +194,25 @@ elisp-need-emacs() {
 		return 1
 	fi
 	return 0
+}
+
+# @FUNCTION: elisp-compile
+# @USAGE: <list of elisp files>
+# @DESCRIPTION:
+# Byte-compile Emacs Lisp files.
+#
+# This function uses GNU Emacs to byte-compile all ".el" specified by
+# its arguments.  The resulting byte-code (".elc") files are placed in
+# the same directory as their corresponding source file.
+#
+# The current directory is added to the load-path.  This will ensure
+# that interdependent Emacs Lisp files are visible between themselves,
+# in case they require or load one another.
+
+elisp-compile() {
+	ebegin "Compiling GNU Emacs Elisp files"
+	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -f batch-byte-compile "$@"
+	eend $? "elisp-compile: batch-byte-compile failed"
 }
 
 # @FUNCTION: elisp-make-autoload-file
@@ -353,9 +353,9 @@ elisp-site-regen() {
 	sed '$q' "${sflist[@]}" </dev/null >>"${T}"/site-gentoo.el
 	cat <<-EOF >>"${T}"/site-gentoo.el
 
+	${page}
 	(provide 'site-gentoo)
 
-	${page}
 	;; Local ${null}Variables:
 	;; no-byte-compile: t
 	;; buffer-read-only: t
