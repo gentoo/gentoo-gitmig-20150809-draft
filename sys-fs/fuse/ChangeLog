@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.135 2010/11/27 22:22:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.136 2010/11/29 08:51:02 phajdan.jr Exp $
+
+  29 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> fuse-2.8.5.ebuild:
+  x86 stable wrt security bug #308073
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> fuse-2.8.1.ebuild,
   fuse-2.8.5.ebuild:
