@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.22 2010/09/30 20:15:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.23 2010/11/29 06:58:34 graaff Exp $
+
+  29 Nov 2010; Hans de Graaff <graaff@gentoo.org> -ruby-xslt-0.9.6.ebuild,
+  -ruby-xslt-0.9.6-r1.ebuild:
+  Remove old versions.
 
   30 Sep 2010; Markus Meier <maekke@gentoo.org> ruby-xslt-0.9.7.ebuild:
   amd64/x86 stable, bug #338736
