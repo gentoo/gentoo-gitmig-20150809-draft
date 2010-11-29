@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12238 2010/11/28 16:51:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12239 2010/11/29 19:28:07 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Nov 2010)
+# Non-games-team addition that is too painful to maintain.
+# Masked for removal on 20101229
+games-simulation/secondlife-bin
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Nov 2010)
+# No upstream, no real gameplay, crashes (bug #347199)
+# Masked for removal on 20101229
+games-sports/race
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (28 Nov 2010)
 # New, experimental package.
