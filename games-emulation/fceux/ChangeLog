@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.9 2010/11/20 10:51:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.10 2010/11/29 16:01:44 tupone Exp $
+
+  29 Nov 2010; Tupone Alfredo <tupone@gentoo.org> fceux-2.1.4a.ebuild,
+  +files/fceux-2.1.4a-ovflfix.patch:
+  Overflow fix. Bug #329055 by SpanKY <vapier@gentoo.org>
 
   20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> fceux-2.1.4a.ebuild:
   use scons-utils

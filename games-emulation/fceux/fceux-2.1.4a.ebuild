@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.5 2010/11/20 10:51:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.6 2010/11/29 16:01:44 tupone Exp $
 
 EAPI=2
-inherit scons-utils games
+inherit eutils scons-utils games
 
 DESCRIPTION="A portable Famicom/NES emulator, an evolution of the original FCE Ultra"
 HOMEPAGE="http://fceux.com/"
@@ -26,6 +26,7 @@ RDEPEND="lua? ( dev-lang/lua )
 S=${WORKDIR}/fceu${PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-ovflfix.patch
 	# mentioned in bug #335836
 	if ! use lua ; then
 		sed -i -e '/_S9XLUA_H/d' SConstruct || die
