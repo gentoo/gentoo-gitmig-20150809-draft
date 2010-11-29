@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.54 2010/11/28 08:39:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.55 2010/11/29 09:43:50 radhermit Exp $
+
+  29 Nov 2010; Tim Harder <radhermit@gentoo.org> solfege-3.16.4.ebuild,
+  +files/solfege-3.16.4-parallel-install.patch, solfege-3.18.7.ebuild,
+  solfege-3.19.1.ebuild:
+  Fix parallel install issue (bug #347055 by Teun).
 
 *solfege-3.19.1 (28 Nov 2010)
 

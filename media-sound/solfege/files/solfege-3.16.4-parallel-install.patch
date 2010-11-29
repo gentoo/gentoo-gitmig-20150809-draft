@@ -1,0 +1,12 @@
+--- solfege-3.16.4/Makefile.in.orig	2010-11-29 01:22:56.006406814 -0800
++++ solfege-3.16.4/Makefile.in	2010-11-29 01:23:12.252510667 -0800
+@@ -129,8 +129,7 @@
+ 
+ install: all mkinstalldirs install-po install-soundcard install-graphics install-program-files compileall
+ 
+-install-program-files:
+-	$(INSTALL_PROGRAM) run-solfege.py $(DESTDIR)/$(bindir)/solfege
++install-program-files: mkinstalldirs
+ 	$(INSTALL_PROGRAM) run-solfege.py $(DESTDIR)/$(bindir)/solfege
+ 	$(INSTALL_DATA) solfege.gtkrc $(DESTDIR)/$(datadir)/$(PACKAGE)
+ 	$(INSTALL_DATA) default.config $(DESTDIR)/$(datadir)/$(PACKAGE)

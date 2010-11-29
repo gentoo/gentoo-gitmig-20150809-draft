@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.7 2010/10/24 15:42:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.4.ebuild,v 1.8 2010/11/29 09:43:50 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-swig2.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-parallel-install.patch
 }
 
 src_configure() {
