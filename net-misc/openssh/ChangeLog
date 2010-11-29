@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.397 2010/11/27 11:01:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.398 2010/11/29 23:07:41 ranger Exp $
+
+  29 Nov 2010; Brent Baude <ranger@gentoo.org> openssh-5.6_p1-r2.ebuild:
+  stable ppc64, bug 346395
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> openssh-5.6_p1-r2.ebuild:
   arm/sparc stable (bug 346395)
