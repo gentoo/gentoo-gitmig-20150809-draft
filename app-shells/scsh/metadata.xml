@@ -18,7 +18,9 @@ interactive environment.
 Scsh comes with extensive documentation describing these and other
 features.
 </longdescription>
+<!--
 <use>
   <flag name='scsh'>Use a non-FHS directory layout</flag>
 </use>
+-->
 </pkgmetadata>

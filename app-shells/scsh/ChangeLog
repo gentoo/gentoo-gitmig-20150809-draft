@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/scsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.30 2010/08/12 14:25:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.31 2010/11/29 09:46:59 hkbst Exp $
+
+  29 Nov 2010; Marijn Schouten <hkBst@gentoo.org> -scsh-0.6.6.ebuild,
+  metadata.xml:
+  remove broken version 0.6.6 to fix bug 206019
 
 *scsh-0.6.7-r1 (12 Aug 2010)
 
