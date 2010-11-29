@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.2-r1.ebuild,v 1.1 2010/04/02 14:30:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.2-r1.ebuild,v 1.2 2010/11/29 19:50:45 graaff Exp $
 
 EAPI=2
 
@@ -30,6 +30,11 @@ src_prepare() {
 	use banshee || sed -i -r -e "/(BANSHEE_INDEXER_DLL)/d" BundledLibraries/Makefile.am
 
 	epatch "${FILESDIR}/${P}-mono26.patch"
+	epatch "${FILESDIR}/${P}-mono28.patch"
+
+	# Use the new Sqlite client instead of the deprecated one
+	# https://bugs.launchpad.net/do-plugins/+bug/682832
+	sed -i -e "s/SqliteClient/Sqlite/" Firefox/Makefile.am Firefox/src/PlacesItemSource.cs || die "Unable to use newer Sqlite client."
 
 	eautomake
 }

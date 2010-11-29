@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-do-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.18 2010/10/16 10:28:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.19 2010/11/29 19:50:45 graaff Exp $
+
+  29 Nov 2010; Hans de Graaff <graaff@gentoo.org>
+  gnome-do-plugins-0.8.2-r1.ebuild,
+  +files/gnome-do-plugins-0.8.2-mono28.patch:
+  Add various patches to fix compilation with Mono 2.8, fixing bug 340785.
 
   16 Oct 2010; Hans de Graaff <graaff@gentoo.org>
   -gnome-do-plugins-0.8.2.ebuild:
