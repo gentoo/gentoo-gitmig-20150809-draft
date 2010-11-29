@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.3.ebuild,v 1.1 2010/09/15 22:28:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.5.ebuild,v 1.1 2010/11/29 19:17:43 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="no"
+
 PYTHON_DEPEND="python? 2:2.4"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils gnome2 python
 
@@ -13,18 +17,19 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug python"
+IUSE="debug +introspection python"
 
-RDEPEND=">=dev-libs/glib-2.18.0
-	python? ( dev-python/pygtk )"
+RDEPEND=">=dev-libs/glib-2.18
+	python? ( dev-python/pygtk )
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40"
 
-DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+
 	# Do NOT compile with --disable-debug/--enable-debug=no
 	# It disables api usage checks
 	if ! use debug ; then
@@ -32,9 +37,9 @@ pkg_setup() {
 	fi
 
 	G2CONF="${G2CONF}
-		$(use_enable python)
 		--disable-static
-		--disable-introspection"
+		$(use_enable python)
+		$(use_enable introspection)"
 }
 
 src_prepare() {
@@ -43,27 +48,32 @@ src_prepare() {
 	# Don't show KDE standalone settings desktop files in GNOME others menu
 	epatch "${FILESDIR}/${PN}-2.18.3-ignore_kde_standalone.patch"
 
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed failed"
-
 	# disable pyc compiling
 	mv py-compile py-compile-disabled
 	ln -s $(type -P true) py-compile
+
+	python_copy_sources
 }
 
 src_configure() {
-	gnome2_src_configure
+	python_execute_function -s gnome2_src_configure
+}
+
+src_compile() {
+	python_execute_function -s gnome2_src_compile
+}
+
+src_test() {
+	python_execute_function -s -d
 }
 
 src_install() {
-	gnome2_src_install
-
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
+	python_execute_function -s gnome2_src_install
+	python_clean_installation_image
 
 	# Prefix menu, bug #256614
-	mv "${D}"/etc/xdg/menus/applications.menu \
-		"${D}"/etc/xdg/menus/gnome-applications.menu || die "menu move failed"
+	mv "${ED}"/etc/xdg/menus/applications.menu \
+		"${ED}"/etc/xdg/menus/gnome-applications.menu || die "menu move failed"
 
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}/10-xdg-menu-gnome" || die "doexe failed"
@@ -72,8 +82,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	if use python; then
-		python_need_rebuild
-		python_mod_optimize $(python_get_sitedir)/GMenuSimpleEditor
+		python_mod_optimize GMenuSimpleEditor
 	fi
 
 	ewarn "Due to bug #256614, you might lose icons in applications menus."
@@ -85,6 +94,6 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 	if use python; then
-		python_mod_cleanup $(python_get_sitedir)/GMenuSimpleEditor
+		python_mod_cleanup GMenuSimpleEditor
 	fi
 }
