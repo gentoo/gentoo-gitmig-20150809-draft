@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/sdljoytest-11102003.ebuild,v 1.3 2010/06/03 16:10:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/sdljoytest-11102003.ebuild,v 1.4 2010/11/29 05:08:17 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[joystick,video]
+DEPEND="media-libs/libsdl[joystick,opengl,video]
 	virtual/opengl
 	media-libs/sdl-image"
 
@@ -25,6 +25,7 @@ src_prepare() {
 	sed -i \
 		-e 's:/usr/local:/usr:' \
 		joytest.h || die "seding data path"
+	sed -i -e 's:SDL/::' *.c || die
 }
 
 src_compile() {
