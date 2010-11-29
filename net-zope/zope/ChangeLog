@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.186 2010/11/07 16:46:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.187 2010/11/29 02:16:51 arfrever Exp $
+
+  29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-2.12.12.ebuild, zope-2.12.13.ebuild, zope-2.13.0.ebuild:
+  Restrict Jython ABIs.
 
 *zope-2.12.13 (07 Nov 2010)
 

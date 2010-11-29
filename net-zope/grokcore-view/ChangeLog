@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/grokcore-view
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-view/ChangeLog,v 1.2 2010/11/07 20:28:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/grokcore-view/ChangeLog,v 1.3 2010/11/29 02:02:02 arfrever Exp $
+
+  29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  grokcore-view-2.1.ebuild:
+  Restrict Jython ABIs.
 
 *grokcore-view-2.1 (07 Nov 2010)
 

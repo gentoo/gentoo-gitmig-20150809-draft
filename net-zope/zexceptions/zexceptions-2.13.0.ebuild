@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zexceptions/zexceptions-2.13.0.ebuild,v 1.2 2010/10/30 18:17:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zexceptions/zexceptions-2.13.0.ebuild,v 1.3 2010/11/29 02:13:54 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
@@ -25,7 +25,8 @@ IUSE=""
 RDEPEND="net-zope/zope-interface
 	net-zope/zope-publisher
 	net-zope/zope-security"
-DEPEND="app-arch/unzip
+DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-python/setuptools"
 
 S="${WORKDIR}/${MY_P}"

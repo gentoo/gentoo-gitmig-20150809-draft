@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-annotation/zope-annotation-3.5.0.ebuild,v 1.5 2010/10/30 18:49:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-annotation/zope-annotation-3.5.0.ebuild,v 1.6 2010/11/29 02:19:20 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -26,7 +27,6 @@ RDEPEND="net-zope/zodb
 	net-zope/zope-proxy"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 

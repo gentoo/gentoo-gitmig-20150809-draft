@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-app-applicationcontrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-applicationcontrol/ChangeLog,v 1.1 2010/11/15 13:34:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-applicationcontrol/ChangeLog,v 1.2 2010/11/29 02:22:40 arfrever Exp $
+
+  29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-app-applicationcontrol-3.5.8.ebuild:
+  Restrict Jython ABIs.
 
 *zope-app-applicationcontrol-3.5.8 (15 Nov 2010)
 

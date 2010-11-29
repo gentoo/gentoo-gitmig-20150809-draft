@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.7.ebuild,v 1.1 2010/09/29 04:39:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.9.7.ebuild,v 1.2 2010/11/29 02:15:49 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils

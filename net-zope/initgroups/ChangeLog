@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/initgroups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/initgroups/ChangeLog,v 1.1 2010/07/04 05:41:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/initgroups/ChangeLog,v 1.2 2010/11/29 02:05:04 arfrever Exp $
+
+  29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  initgroups-2.13.0.ebuild:
+  Restrict Jython ABIs.
 
 *initgroups-2.13.0 (04 Jul 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.44 2010/10/30 04:53:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.45 2010/11/29 02:15:48 arfrever Exp $
+
+  29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zodb-3.9.7.ebuild, zodb-3.10.1.ebuild:
+  Restrict Jython ABIs.
 
 *zodb-3.10.1 (30 Oct 2010)
 
