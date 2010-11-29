@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.112 2010/11/24 20:43:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.113 2010/11/29 11:39:42 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -44,6 +44,7 @@ RDEPEND="app-arch/bzip2
 	x11-libs/libXtst"
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	>=dev-util/chromium-tools-0.1.4
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
@@ -105,10 +106,6 @@ egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
 	echo "${@}" >&2
 	"${@}"
-}
-
-get_bundled_v8_version() {
-	"$(PYTHON -2)" "${FILESDIR}"/extract_v8_version.py v8/src/version.cc
 }
 
 get_installed_v8_version() {
@@ -176,7 +173,7 @@ src_prepare() {
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 
-	local v8_bundled="$(get_bundled_v8_version)"
+	local v8_bundled="$(v8-extract-version v8/src/version.cc)"
 	if use system-v8; then
 		local v8_installed="$(get_installed_v8_version)"
 		einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
