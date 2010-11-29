@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.191 2010/10/26 07:33:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.192 2010/11/29 23:24:45 jer Exp $
+
+  29 Nov 2010; Jeroen Roovers <jer@gentoo.org> spamassassin-3.3.1-r4.ebuild:
+  Stable for HPPA (bug #342591).
 
 *spamassassin-3.3.1-r4 (26 Oct 2010)
 
