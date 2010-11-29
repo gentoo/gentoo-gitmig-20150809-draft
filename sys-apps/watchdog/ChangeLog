@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.28 2010/08/24 21:01:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.29 2010/11/29 10:12:20 dev-zero Exp $
+
+*watchdog-5.9 (29 Nov 2010)
+
+  29 Nov 2010; Tiziano Müller <dev-zero@gentoo.org> +watchdog-5.9.ebuild:
+  Version bump (bug #346851).
 
   24 Aug 2010; Mike Frysinger <vapier@gentoo.org> files/watchdog-init.d:
   Fix infinite loop bug in get_config #333441 by mario.
