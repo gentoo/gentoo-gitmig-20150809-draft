@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.42 2010/03/03 13:41:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.43 2010/11/29 21:32:32 fauli Exp $
+
+  29 Nov 2010; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Add to emacs herd
 
   03 Mar 2010; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Fix metadata.xml, bug 298013.
