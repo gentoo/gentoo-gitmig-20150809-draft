@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9.ebuild,v 1.1 2010/11/28 21:36:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9.ebuild,v 1.2 2010/11/29 18:23:36 chithanh Exp $
 
 EAPI=3
 
@@ -174,6 +174,10 @@ src_configure() {
 	fi
 
 	myconf="${myconf} $(use_enable gallium)"
+	if use !gallium && use !classic; then
+		ewarn "You enabled neither classic nor gallium USE flags. No hardware"
+		ewarn "drivers will be built."
+	fi
 	if use gallium; then
 		elog "You have enabled gallium infrastructure."
 		elog "This infrastructure currently support these drivers:"
@@ -255,36 +259,38 @@ src_install() {
 		done
 	eend $?
 
-	ebegin "Moving DRI/Gallium drivers for dynamic switching"
-		local gallium_drivers=( i915_dri.so i965_dri.so r300_dri.so r600_dri.so swrast_dri.so )
-		dodir /usr/$(get_libdir)/mesa
-		for x in ${gallium_drivers[@]}; do
-			if [ -f "${S}/$(get_libdir)/gallium/${x}" ]; then
-				mv -f "${D}/usr/$(get_libdir)/dri/${x}" "${D}/usr/$(get_libdir)/dri/${x/_dri.so/g_dri.so}" \
-					|| die "Failed to move ${x}"
-				insinto "/usr/$(get_libdir)/dri/"
-				if [ -f "${S}/$(get_libdir)/${x}" ]; then
-					insopts -m0755
-					doins "${S}/$(get_libdir)/${x}" || die "failed to install ${x}"
+	if use classic || use gallium; then
+		ebegin "Moving DRI/Gallium drivers for dynamic switching"
+			local gallium_drivers=( i915_dri.so i965_dri.so r300_dri.so r600_dri.so swrast_dri.so )
+			dodir /usr/$(get_libdir)/mesa
+			for x in ${gallium_drivers[@]}; do
+				if [ -f "${S}/$(get_libdir)/gallium/${x}" ]; then
+					mv -f "${D}/usr/$(get_libdir)/dri/${x}" "${D}/usr/$(get_libdir)/dri/${x/_dri.so/g_dri.so}" \
+						|| die "Failed to move ${x}"
+					insinto "/usr/$(get_libdir)/dri/"
+					if [ -f "${S}/$(get_libdir)/${x}" ]; then
+						insopts -m0755
+						doins "${S}/$(get_libdir)/${x}" || die "failed to install ${x}"
+					fi
 				fi
-			fi
-		done
-		for x in "${D}"/usr/$(get_libdir)/dri/*.so; do
-			if [ -f ${x} -o -L ${x} ]; then
-				mv -f "${x}" "${x/dri/mesa}" \
-					|| die "Failed to move ${x}"
-			fi
-		done
-		pushd "${D}"/usr/$(get_libdir)/dri || die "pushd failed"
-		ln -s ../mesa/*.so . || die "Creating symlink failed"
-		# remove symlinks to drivers known to eselect
-		for x in ${gallium_drivers[@]}; do
-			if [ -f ${x} -o -L ${x} ]; then
-				rm "${x}" || die "Failed to remove ${x}"
-			fi
-		done
-		popd
-	eend $?
+			done
+			for x in "${D}"/usr/$(get_libdir)/dri/*.so; do
+				if [ -f ${x} -o -L ${x} ]; then
+					mv -f "${x}" "${x/dri/mesa}" \
+						|| die "Failed to move ${x}"
+				fi
+			done
+			pushd "${D}"/usr/$(get_libdir)/dri || die "pushd failed"
+			ln -s ../mesa/*.so . || die "Creating symlink failed"
+			# remove symlinks to drivers known to eselect
+			for x in ${gallium_drivers[@]}; do
+				if [ -f ${x} -o -L ${x} ]; then
+					rm "${x}" || die "Failed to remove ${x}"
+				fi
+			done
+			popd
+		eend $?
+	fi
 }
 
 pkg_postinst() {

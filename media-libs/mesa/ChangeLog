@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.295 2010/11/28 21:36:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.296 2010/11/29 18:23:36 chithanh Exp $
+
+  29 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-7.9.ebuild:
+  Fix building when both classic and gallium are disabled, bug #347125
 
 *mesa-7.9 (28 Nov 2010)
 
