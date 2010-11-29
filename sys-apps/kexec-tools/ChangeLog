@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.37 2010/10/29 17:14:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.38 2010/11/29 20:42:14 radhermit Exp $
+
+  29 Nov 2010; Tim Harder <radhermit@gentoo.org> kexec-tools-9999.ebuild:
+  Use the correct upstream git repository (bug #339600 by Pinky).
 
 *kexec-tools-2.0.2 (29 Oct 2010)
 
