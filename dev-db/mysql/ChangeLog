@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.562 2010/11/13 19:21:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.563 2010/11/29 00:22:28 robbat2 Exp $
+
+*mysql-5.1.53 (29 Nov 2010)
+*mysql-5.1.52-r1 (29 Nov 2010)
+
+  29 Nov 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.52-r1.ebuild,
+  +mysql-5.1.53.ebuild:
+  Version bump & revision bump (for .52 release), both include the fix for bug
+  #344031: TEXTREL in libmystrings.so.0.
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.51.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #339717
