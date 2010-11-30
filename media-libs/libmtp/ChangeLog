@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.89 2010/11/04 11:30:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.90 2010/11/30 03:17:48 ken69267 Exp $
+
+*libmtp-1.0.3-r2 (30 Nov 2010)
+
+  30 Nov 2010; Kenneth Prugh <ken69267@gentoo.org> +libmtp-1.0.3-r2.ebuild:
+  install udev rules in /$(get_libdir)/udev/rules.d/, bug #345727
 
   04 Nov 2010; Markus Meier <maekke@gentoo.org> libmtp-1.0.3-r1.ebuild:
   x86 stable, bug #341913
