@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.10 2010/09/16 17:44:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.11 2010/11/30 11:01:59 bangert Exp $
+
+*libimobiledevice-1.0.4 (30 Nov 2010)
+
+  30 Nov 2010; Thilo Bangert <bangert@gentoo.org>
+  +libimobiledevice-1.0.4.ebuild:
+  version bump, remove blocker on non-existent libiphone, fix dep on libusb:1
+  (#335904)
 
   16 Sep 2010; Joseph Jezak <josejx@gentoo.org>
   libimobiledevice-1.0.2.ebuild:
