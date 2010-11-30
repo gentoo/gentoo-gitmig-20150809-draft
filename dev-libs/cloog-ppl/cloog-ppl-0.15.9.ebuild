@@ -1,8 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/cloog-ppl-0.15.9.ebuild,v 1.2 2010/11/12 13:33:02 mattst88 Exp $
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/cloog-ppl-0.15.9.ebuild,v 1.3 2010/11/30 03:50:44 dirtyepic Exp $
 
 DESCRIPTION="Port of CLooG (Chunky LOOp Generator) to PPL (Parma Polyhedra Library)"
 HOMEPAGE="http://repo.or.cz/w/cloog-ppl.git"

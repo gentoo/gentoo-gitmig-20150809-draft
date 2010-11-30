@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.24 2010/11/12 13:33:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.25 2010/11/30 03:50:44 dirtyepic Exp $
+
+  30 Nov 2010; Ryan Hill <dirtyepic@gentoo.org> -cloog-ppl-0.15.7.ebuild,
+  cloog-ppl-0.15.9.ebuild:
+  Remove old. Drop useless autotools inherit.
 
   12 Nov 2010; <mattst88@gentoo.org> cloog-ppl-0.15.9.ebuild:
   Add ~mips keyword, bug #269088.
