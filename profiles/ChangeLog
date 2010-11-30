@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4822 2010/11/30 17:25:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4823 2010/11/30 20:51:21 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Nov 2010; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmask wireshark-1.4*, stable version in tree now.
 
   30 Nov 2010; Justin Lecher <jlec@gentoo.org> ChangeLog:
   Moving app-admin/patchelf to dev-util/patchelf

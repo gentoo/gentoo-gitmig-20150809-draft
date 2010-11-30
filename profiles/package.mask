@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12239 2010/11/29 19:28:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12240 2010/11/30 20:51:21 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -947,10 +947,6 @@ dev-libs/seed
 # Justin Lecher <jlec@gentoo.org> (16 Jun 10)
 # Just working with the masked experimental version of refmac
 >=sci-libs/monomer-db-5.16
-
-# Peter Volkov <pva@gentoo.org> (13 Jun 2010)
-# Mask release candidate
-=net-analyzer/wireshark-1.4.0*
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
 # Dead upstream, last update from 2005, no maintainer.
