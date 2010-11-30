@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.3 2010/11/30 17:23:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.4 2010/11/30 20:40:34 jer Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -210,8 +210,8 @@ pkg_postinst() {
 		fcaps 0:wireshark 550 cap_net_raw,cap_net_admin "${ROOT}"/usr/bin/dumpcap
 	fi
 	echo
-	ewarn "NOTE: To run wireshark as normal user you have to add yourself into"
-	ewarn "wireshark group. This security measure ensures that only trusted"
-	ewarn "users allowed to sniff your traffic."
+	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
+	ewarn "the wireshark group. This security measure ensures that only trusted"
+	ewarn "users are allowed to sniff your traffic."
 	echo
 }
