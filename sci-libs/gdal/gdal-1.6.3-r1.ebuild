@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.13 2010/11/08 17:37:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.14 2010/11/30 03:04:15 nerdboy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -8,7 +8,7 @@ RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
 PYTHON_DEPEND="2"
 
-inherit autotools distutils eutils perl-module ruby toolchain-funcs
+inherit autotools distutils eutils perl-module ruby-ng toolchain-funcs
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -108,7 +108,7 @@ src_configure() {
 	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
-	    $(use_with sqlite sqlite3 =${EPREFIX}/usr) $(use_with geos) \
+	    $(use_with sqlite sqlite3 ="${EPREFIX}"/usr) $(use_with geos) \
 	    $(use_with jpeg2k jasper) $(use_with odbc) $(use_enable debug)"
 
 	# It can't find this

@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.101 2010/11/08 17:37:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.102 2010/11/30 03:04:14 nerdboy Exp $
+
+*gdal-1.7.2-r2 (29 Nov 2010)
+
+  29 Nov 2010; Steve Arnold <nerdboy@gentoo.org> -gdal-1.7.2-r1.ebuild,
+  +gdal-1.7.2-r2.ebuild:
+  Updated USE flag handling and config for bug #343531.  Now fixed...
+  Also corrected some QA issues and updated to the ruby-ng eclass.
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> gdal-1.6.3-r1.ebuild,
   -gdal-1.7.1-r1.ebuild, -files/gdal-1.7.1-warp_fix.patch,

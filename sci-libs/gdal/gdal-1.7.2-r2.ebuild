@@ -1,14 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r1.ebuild,v 1.2 2010/11/08 17:37:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r2.ebuild,v 1.1 2010/11/30 03:04:15 nerdboy Exp $
 
-EAPI="3"
+EAPI="2"
 
 WANT_AUTOCONF="2.5"
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
 PYTHON_DEPEND="python? 2"
-inherit autotools eutils perl-module python ruby toolchain-funcs
+
+inherit autotools eutils perl-module python ruby-ng toolchain-funcs
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -18,7 +19,7 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos"
 
-IUSE="curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql netcdf odbc ogdi pam perl png postgres python ruby sqlite threads"
+IUSE="+aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql netcdf odbc ogdi perl png postgres python ruby sqlite threads"
 
 RDEPEND="
 	dev-libs/expat
@@ -32,13 +33,12 @@ RDEPEND="
 	gif? ( media-libs/giflib )
 	gml? ( >=dev-libs/xerces-c-3 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4[szip] )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( media-libs/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	mysql? ( virtual/mysql )
 	netcdf? ( sci-libs/netcdf )
 	odbc?   ( dev-db/unixODBC )
 	ogdi? ( sci-libs/ogdi )
-	pam? ( sys-libs/pam )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )
 	postgres? (
@@ -48,7 +48,7 @@ RDEPEND="
 		)
 	)
 	python? ( dev-python/numpy )
-	ruby? ( >=dev-lang/ruby-1.8.4.20060226 )
+	ruby? ( $(ruby_implementation_depend ruby18) )
 	sqlite? ( >=dev-db/sqlite-3 )
 "
 
@@ -60,12 +60,16 @@ DEPEND="${RDEPEND}
 "
 
 AT_M4DIR="${S}/m4"
-
 MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	# only py2 is supported
 	python_set_active_version 2
+}
+
+src_unpack() {
+	# prevent ruby-ng.eclass from messing with the src path
+	default
 }
 
 src_prepare() {
@@ -91,7 +95,8 @@ src_prepare() {
 
 src_configure() {
 	if use ruby; then
-		RUBY_MOD_DIR=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
+		RUBY_MOD_DIR="$(ruby18 -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')"
+		echo "Ruby module dir is: $RUBY_MOD_DIR"
 	fi
 
 	# pcidsk is internal, because there is no such library yet released
@@ -147,12 +152,12 @@ src_configure() {
 		$(use_with sqlite sqlite3 "${EPREFIX}"/usr) \
 		$(use_with mysql mysql "${EPREFIX}"/usr/bin/mysql_config) \
 		$(use_with geos) \
-		$(use_with pam) \
+		$(use_with aux_xml pam) \
 		$(use_with perl) \
 		$(use_with ruby) \
 		$(use_with python) \
 		$(use_with threads) \
-		--with-pymoddir=${EPREFIX}/$(python_get_sitedir)
+		--with-pymoddir="${EPREFIX}"/$(python_get_sitedir)
 
 	# mysql-config puts this in (and boy is it a PITA to get it out)
 	if use mysql; then
@@ -202,7 +207,7 @@ src_install() {
 	if use perl ; then
 	    pushd "${S}"/swig/perl > /dev/null
 	    perl-module_src_install
-		popd > /dev/null
+	    popd > /dev/null
 	    sed -i \
 			-e "s:BINDINGS        =       python ruby perl:BINDINGS        =       python ruby:g" \
 			GDALmake.opt || die

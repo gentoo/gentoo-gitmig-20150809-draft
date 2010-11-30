@@ -10,6 +10,7 @@
 <longdescription>GDAL is the Geospatial Data Abstraction Library, a set of tools for
  converting between geospatial raster data formats (includes OGR for vector data).</longdescription>
 <use>
+  <flag name='aux_xml'>Enable Portable Auxilliary Metadata generation</flag>
   <flag name='ecwj2k'>Enable support for alternate jpeg2k library
     <pkg>sci-libs/libecwj2</pkg></flag>
   <flag name='fits'>Enable support for NASA's <pkg>sci-libs/cfitsio</pkg>
