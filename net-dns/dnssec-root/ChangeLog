@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/dnssec-root
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.1 2010/11/30 08:53:15 dragonheart Exp $
+
+*dnssec-root-20100715 (30 Nov 2010)
+
+  30 Nov 2010; Daniel Black <dragonheart@gentoo.org> +files/anchors2ds.xsl,
+  +dnssec-root-20100715.ebuild, +metadata.xml:
+  initial ebuild
+
