@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.66 2010/11/14 19:11:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.67 2010/11/30 15:44:00 olemarkus Exp $
+
+*pecl-apc-3.1.6-r1 (30 Nov 2010)
+*pecl-apc-3.1.6 (30 Nov 2010)
+
+  30 Nov 2010; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-apc-3.1.6.ebuild, +pecl-apc-3.1.6-r1.ebuild:
+  Version bump
 
   14 Nov 2010; <olemarkus@gentoo.org> pecl-apc-3.1.5-r1.ebuild:
   No need to depend on any specific SAPI. (bug #344709)
