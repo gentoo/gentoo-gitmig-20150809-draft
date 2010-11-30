@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.1 2010/11/30 18:09:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.2 2010/11/30 18:25:16 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,6 @@ IUSE=""
 DEPEND="dev-python/pygame
 	media-libs/libvorbis
 	media-libs/sdl-mixer"
-RDEPEND="${DEPEND}"
 PDEPEND="games-arcade/pydance-songs"
 
 src_prepare() {
