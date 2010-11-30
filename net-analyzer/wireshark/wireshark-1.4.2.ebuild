@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.4 2010/11/30 20:40:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.5 2010/11/30 20:51:27 pva Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -21,10 +21,10 @@ RDEPEND=">=dev-libs/glib-2.14.0:2
 	zlib? ( sys-libs/zlib
 		!=sys-libs/zlib-1.2.4 )
 	smi? ( net-libs/libsmi )
-	x11-misc/xdg-utils
 	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
-		dev-libs/atk )
+		dev-libs/atk
+		x11-misc/xdg-utils )
 	ssl? ( net-libs/gnutls )
 	gcrypt? ( dev-libs/libgcrypt )
 	pcap? ( net-libs/libpcap )
