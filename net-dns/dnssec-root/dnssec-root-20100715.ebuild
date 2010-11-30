@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20100715.ebuild,v 1.1 2010/11/30 08:53:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20100715.ebuild,v 1.2 2010/11/30 15:27:35 mr_bones_ Exp $
 
 DESCRIPTION="The DNSSEC root key(s)"
 HOMEPAGE="https://www.iana.org/dnssec/"
@@ -25,12 +25,11 @@ RDEPEND=""
 
 S="${WORKDIR}"
 
-
 # xsl and checking as per:
 # http://permalink.gmane.org/gmane.network.dns.unbound.user/1039
 
 src_unpack() {
-	einfo 'unpack not needed'	
+	einfo 'unpack not needed'
 }
 
 src_compile() {
