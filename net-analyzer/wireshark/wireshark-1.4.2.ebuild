@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.1 2010/11/30 08:51:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.2 2010/11/30 15:26:48 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 # borrowed from GSoC2010_Gentoo_Capabilities by constanze and flameyeys
-# @FUNCTION: fcaps 
+# @FUNCTION: fcaps
 # @USAGE: fcaps {uid:gid} {file-mode} {cap1[,cap2,...]} {file}
 # @RETURN: 0 if all okay; non-zero if failure and fallback
 # @DESCRIPTION:
