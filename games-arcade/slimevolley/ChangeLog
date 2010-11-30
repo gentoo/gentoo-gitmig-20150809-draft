@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/slimevolley
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.6 2010/06/21 20:13:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.7 2010/11/30 19:54:03 mr_bones_ Exp $
+
+*slimevolley-2.4.2 (30 Nov 2010)
+
+  30 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +slimevolley-2.4.2.ebuild, +files/slimevolley-2.4.2-nodatalocal.patch:
+  version bump
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> slimevolley-2.4.1-r1.ebuild:
   amd64/x86 stable, bug #322807
