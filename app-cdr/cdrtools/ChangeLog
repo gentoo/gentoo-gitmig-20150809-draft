@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.273 2010/11/25 18:52:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.274 2010/11/30 16:22:21 xmw Exp $
+
+  30 Nov 2010; Michael Weber <xmw@gentoo.org> cdrtools-3.00.ebuild:
+  sparc stable (bug 328163)
 
 *cdrtools-3.01_alpha01 (25 Nov 2010)
 
