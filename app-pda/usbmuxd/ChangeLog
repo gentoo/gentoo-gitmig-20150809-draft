@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/usbmuxd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.7 2010/08/03 12:47:56 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.8 2010/11/30 11:04:15 bangert Exp $
+
+*usbmuxd-1.0.6 (30 Nov 2010)
+
+  30 Nov 2010; Thilo Bangert <bangert@gentoo.org> +usbmuxd-1.0.6.ebuild:
+  version bump
 
 *usbmuxd-1.0.5 (03 Aug 2010)
 
