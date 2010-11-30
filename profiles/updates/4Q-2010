@@ -18,3 +18,4 @@ move media-gfx/gimp-lqr-plugin media-plugins/gimp-lqr
 move x11-libs/evas media-libs/evas
 move x11-libs/ecore dev-libs/ecore
 move x11-libs/e_dbus dev-libs/e_dbus
+move app-admin/patchelf dev-util/patchelf
