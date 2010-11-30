@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.2 2010/11/30 15:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.3 2010/11/30 17:23:39 jer Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
 profile +pcap pcre portaudio python +caps selinux smi ssl threads zlib"
 
