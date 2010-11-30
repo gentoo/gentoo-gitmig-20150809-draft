@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-freedict-eng-tur
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-tur/ChangeLog,v 1.7 2009/05/15 18:01:21 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-eng-tur/ChangeLog,v 1.8 2010/11/30 23:33:59 xmw Exp $
+
+  30 Nov 2010; Michael Weber <xmw@gentoo.org>
+  stardict-freedict-eng-tur-2.4.2.ebuild:
+  sparc stable (bug 258485)
 
   19 Feb 2009; nixnut <nixnut@gentoo.org>
   stardict-freedict-eng-tur-2.4.2.ebuild:
