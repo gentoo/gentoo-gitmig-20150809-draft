@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.1 2010/11/29 06:40:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.2 2010/11/30 15:31:36 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -45,7 +45,7 @@ src_configure() {
 		$(use_with vorbis)
 }
 src_compile() {
-	emake || die
+	emake -j1 || die
 
 	if use doc ; then
 		emake doc || die
