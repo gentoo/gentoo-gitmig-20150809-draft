@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.96-r1.ebuild,v 1.2 2006/09/07 11:39:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.96-r1.ebuild,v 1.3 2010/11/30 08:14:50 robbat2 Exp $
 
 DESCRIPTION="Static GNU GRUB boot loader"
 
@@ -11,8 +11,9 @@ SLOT="0"
 KEYWORDS="-* amd64 ~x86"
 IUSE=""
 DEPEND="!sys-boot/grub"
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/bootloader"
 
 src_install() {
-	cp -a ${WORKDIR}/* ${D}/
+	cp -a "${WORKDIR}"/* "${D}"/
 }

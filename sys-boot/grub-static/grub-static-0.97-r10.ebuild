@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r10.ebuild,v 1.1 2010/11/30 08:06:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r10.ebuild,v 1.2 2010/11/30 08:14:50 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -20,6 +20,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 DEPEND="!sys-boot/grub"
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/bootloader"
 
 # These are already stripped since we use a binpkg.
