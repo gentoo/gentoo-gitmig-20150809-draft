@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/v4l-dvb-hg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.21 2009/11/18 19:39:51 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.22 2010/11/30 21:44:26 hd_brummy Exp $
+
+*v4l-dvb-hg-0.1-r4 (30 Nov 2010)
+
+  30 Nov 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +v4l-dvb-hg-0.1-r4.ebuild:
+  r4; addapted to new hg repo file struct
 
   18 Nov 2009; Matthias Schwarzott <zzam@gentoo.org>
   v4l-dvb-hg-0.1-r3.ebuild:
