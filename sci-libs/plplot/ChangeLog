@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.30 2010/10/10 20:12:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.31 2010/11/30 23:23:59 bicatali Exp $
+
+*plplot-5.9.7-r1 (30 Nov 2010)
+
+  30 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/plplot-5.9.0-python.patch, -plplot-5.9.6.ebuild, -plplot-5.9.7.ebuild,
+  +plplot-5.9.7-r1.ebuild, metadata.xml:
+  Added ocaml, lua and testing options. tk use flag depends on tcl. More
+  complete qt4 support for drivers and pyqt. Disabling doc generation (too
+  buggy on Gentoo), using prebuilt docs. Switch to EAPI=3 for prefix install.
+  Remove a few obsolete options and general cmake cleaning.
 
 *plplot-5.9.7 (10 Oct 2010)
 
