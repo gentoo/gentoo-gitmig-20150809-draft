@@ -5,6 +5,9 @@
 	<maintainer>
 		<email>tommy@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>jlec@gentoo.org</email>
+	</maintainer>
 	<use>
 		<flag name='debug'>Enable additional debugging support</flag>
 		<flag name='inotify'>Enable inotify support</flag>

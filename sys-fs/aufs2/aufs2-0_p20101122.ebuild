@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100726.ebuild,v 1.1 2010/07/26 11:33:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20101122.ebuild,v 1.1 2010/11/30 21:25:04 tommy Exp $
 
 EAPI="2"
 
@@ -27,9 +27,10 @@ pkg_setup() {
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
 
 	get_version
-	kernel_is lt 2 6 27 && die "kernel too old"
-	kernel_is gt 2 6 34 && die "kernel too new"
+	kernel_is lt 2 6 31 && die "kernel too old"
+	kernel_is gt 2 6 36 && die "kernel too new"
 
+	linux-mod_pkg_setup
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
 		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
 		if use kernel-patch; then
@@ -48,12 +49,11 @@ pkg_setup() {
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
-	linux-mod_pkg_setup
 	export PKG_SETUP_HAS_BEEN_RAN=1
 }
 
 src_prepare() {
-	local branch=origin/aufs2-${KV_PATCH}
+	local branch=origin/aufs2.1-${KV_PATCH}
 	git checkout -q $branch || die
 	if ! use debug; then
 		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
@@ -69,7 +69,10 @@ src_prepare() {
 		epatch "${FILESDIR}"/pax.patch
 	fi
 
+	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
+	sed -i "s:__user::g" include/linux/aufs_type.h || die
 	cd "${WORKDIR}"/${PN}-util
+	git checkout -q origin/aufs2.1
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
 	sed -i -e "s:m 644 -s:m 644:g" -e "s:/usr/lib:/usr/$(get_libdir):g" libau/Makefile || die
 }
