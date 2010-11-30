@@ -1,6 +1,17 @@
 # ChangeLog for sys-block/qla-fc-firmware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.23 2008/07/17 19:23:45 corsair Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/ChangeLog,v 1.24 2010/11/30 20:48:24 robbat2 Exp $
+
+*qla-fc-firmware-20101015 (30 Nov 2010)
+
+  30 Nov 2010; Robin H. Johnson <robbat2@gentoo.org>
+  -qla-fc-firmware-20060312.ebuild, -qla-fc-firmware-20060312-r1.ebuild,
+  -qla-fc-firmware-20070226.ebuild, -qla-fc-firmware-20071207.ebuild,
+  qla-fc-firmware-20071207-r1.ebuild, qla-fc-firmware-20080423.ebuild,
+  +qla-fc-firmware-20101015.ebuild:
+  Version bump. Also block linux-firmware package. Note that the qlogic
+  firmware in this package is a major version newer than the linux-firmware
+  package.
 
   17 Jul 2008; Markus Rothe <corsair@gentoo.org>
   qla-fc-firmware-20080423.ebuild:

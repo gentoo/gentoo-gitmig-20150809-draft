@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20071207-r1.ebuild,v 1.5 2008/06/25 02:54:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/qla-fc-firmware/qla-fc-firmware-20071207-r1.ebuild,v 1.6 2010/11/30 20:48:24 robbat2 Exp $
 
 DESCRIPTION="QLogic Linux Fibre Channel HBA Firmware for ql2xxx cards"
 HOMEPAGE="ftp://ftp.qlogic.com/outgoing/linux/firmware/"
@@ -12,7 +12,7 @@ IUSE=""
 
 # really depends on absolutely nothing
 DEPEND=""
-RDEPEND=""
+RDEPEND="!sys-kernel/linux-firmware"
 
 FW_BASENAME="ql2100_fw.bin ql2200_fw.bin ql2300_fw.bin ql2322_fw.bin ql2400_fw.bin ql2500_fw.bin ql6312_fw.bin"
 
