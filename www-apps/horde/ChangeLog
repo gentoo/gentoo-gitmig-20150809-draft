@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.113 2010/11/28 14:00:38 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.114 2010/11/30 18:17:46 jer Exp $
+
+  30 Nov 2010; Jeroen Roovers <jer@gentoo.org> horde-3.3.11.ebuild:
+  Stable for HPPA (bug #346697).
 
 *horde-3.3.11 (28 Nov 2010)
 
