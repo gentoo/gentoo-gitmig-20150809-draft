@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.229 2010/11/23 21:44:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.230 2010/11/30 00:22:43 darkside Exp $
+
+  30 Nov 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  mask latest portage, reported issues
 
   23 Nov 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Grabbed patch for grep-2.7 issue, drop mask

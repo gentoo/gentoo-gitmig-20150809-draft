@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.80 2010/11/06 19:57:46 mr_bones_ Exp $
+# $Id: package.mask,v 1.81 2010/11/30 00:22:43 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (30 Nov 2010)
+# Issues, can't emerge packages and can't downgrade portage
+=sys-apps/portage-2.2.01.17294
 
 # Alex Alexander <wired@gentoo.org> (06 Nov 2010)
 # Masked Qt-4.7 as requested by prefix team, bug #338289
