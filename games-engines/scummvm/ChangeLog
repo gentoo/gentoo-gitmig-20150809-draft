@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.96 2010/11/23 03:21:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.97 2010/11/30 21:19:38 maekke Exp $
+
+  30 Nov 2010; Markus Meier <maekke@gentoo.org> scummvm-1.2.0-r1.ebuild:
+  amd64/x86 stable, bug #347119
 
 *scummvm-1.2.0-r1 (23 Nov 2010)
 
