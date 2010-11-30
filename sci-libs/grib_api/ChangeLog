@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/grib_api
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.1 2010/11/30 17:49:46 bicatali Exp $
+
+*grib_api-1.9.5 (30 Nov 2010)
+
+  30 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> +grib_api-1.9.5.ebuild,
+  +files/grib_api-1.9.5-autotools.patch, +metadata.xml:
+  Initial import
+
