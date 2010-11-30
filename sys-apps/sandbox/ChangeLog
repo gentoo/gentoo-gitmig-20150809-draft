@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.143 2010/11/24 07:46:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.144 2010/11/30 16:27:28 xmw Exp $
+
+  30 Nov 2010; Michael Weber <xmw@gentoo.org> sandbox-2.3-r1.ebuild:
+  sparc stable (bug 338113)
 
 *sandbox-2.4 (24 Nov 2010)
 
