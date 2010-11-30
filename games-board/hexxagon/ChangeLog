@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.27 2010/11/29 12:11:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.28 2010/11/30 21:12:09 maekke Exp $
+
+  30 Nov 2010; Markus Meier <maekke@gentoo.org> hexxagon-1.0.1.ebuild:
+  x86 stable, bug #347065
 
   29 Nov 2010; Markos Chandras <hwoarang@gentoo.org> hexxagon-1.0.1.ebuild:
   Stable on amd64 wrt bug #347065
