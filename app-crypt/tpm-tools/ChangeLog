@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/tpm-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.10 2009/05/10 23:11:27 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/ChangeLog,v 1.11 2010/11/30 13:21:06 c1pher Exp $
+
+*tpm-tools-1.3.5 (30 Nov 2010)
+
+  30 Nov 2010; Dane Smith <c1pher@gentoo.org> +tpm-tools-1.3.5.ebuild:
+  Version bump to 1.3.5 wrt bug 329457.
+  *Moved to EAPI 2.
+  *A few small QA fixes.
 
   10 May 2009; Robin H. Johnson <robbat2@gentoo.org> tpm-tools-1.3.1.ebuild:
   Working on this for ~amd64.
