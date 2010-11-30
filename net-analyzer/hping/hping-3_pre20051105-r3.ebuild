@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r2.ebuild,v 1.2 2010/05/11 15:43:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r3.ebuild,v 1.1 2010/11/30 21:30:45 jer Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="net-libs/libpcap
 	tcl? ( dev-lang/tcl )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -27,7 +28,8 @@ src_prepare() {
 		"${FILESDIR}"/bytesex.h.patch \
 		"${FILESDIR}"/${P}-tcl.patch \
 		"${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-libtcl.patch
+		"${FILESDIR}"/${P}-libtcl.patch \
+		"${FILESDIR}"/${P}-scan-overflow.patch
 
 	# Correct hard coded values
 	sed -i Makefile.in \
@@ -46,18 +48,16 @@ src_prepare() {
 }
 
 src_configure() {
-	myconf=""
-	use tcl || myconf="--no-tcl"
+	tc-export CC
 
 	# Not an autotools type configure:
-	sh configure ${myconf} || die "configure failed"
+	sh configure $(use tcl || echo --no-tcl) || die "configure failed"
 }
 
 src_compile() {
 	emake \
 		DEBUG="" \
 		"CFLAGS=${CFLAGS}" \
-		"CC=$(tc-getCC)" \
 		"AR=$(tc-getAR)" \
 		"RANLIB=$(tc-getRANLIB)" \
 		"LIBDIR=$(get_libdir)" \

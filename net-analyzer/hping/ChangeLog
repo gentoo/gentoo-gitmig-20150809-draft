@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.49 2010/05/11 04:08:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.50 2010/11/30 21:30:45 jer Exp $
+
+*hping-3_pre20051105-r3 (30 Nov 2010)
+
+  30 Nov 2010; Jeroen Roovers <jer@gentoo.org> -hping-3_pre20051105-r1.ebuild,
+  -hping-3_pre20051105-r2.ebuild, +hping-3_pre20051105-r3.ebuild,
+  +files/hping-3_pre20051105-scan-overflow.patch:
+  Fix overflow in scan.c (bug #340251). Simplify src_configure and export CC
+  there. Set RDEPEND.
 
 *hping-3_pre20051105-r2 (11 May 2010)
 
