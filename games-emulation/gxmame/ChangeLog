@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gxmame
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.20 2008/04/08 01:44:15 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.21 2010/12/01 10:06:53 tupone Exp $
+
+  01 Dec 2010; Tupone Alfredo <tupone@gentoo.org> gxmame-0.35_beta2.ebuild,
+  +files/gxmame-0.35_beta2-ovflfix.patch:
+  Fix buffer overflow. Bug #325281 by David Carlos Manuelda
 
   08 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   gxmame-0.35_beta2.ebuild:
