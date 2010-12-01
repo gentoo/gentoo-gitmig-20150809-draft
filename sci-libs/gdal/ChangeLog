@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.102 2010/11/30 03:04:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.103 2010/12/01 08:09:44 tomka Exp $
+
+  01 Dec 2010; Thomas Kahle <tomka@gentoo.org> gdal-1.6.3-r1.ebuild:
+  Reverted ruby->ruby-ng as per bug 347249
 
 *gdal-1.7.2-r2 (29 Nov 2010)
 

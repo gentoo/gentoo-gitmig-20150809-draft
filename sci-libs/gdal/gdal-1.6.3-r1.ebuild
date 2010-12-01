@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.14 2010/11/30 03:04:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.15 2010/12/01 08:09:44 tomka Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -8,7 +8,7 @@ RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
 PYTHON_DEPEND="2"
 
-inherit autotools distutils eutils perl-module ruby-ng toolchain-funcs
+inherit autotools distutils eutils perl-module ruby toolchain-funcs
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
