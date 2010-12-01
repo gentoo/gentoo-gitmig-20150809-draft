@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-7.0.517.44.ebuild,v 1.2 2010/11/09 15:53:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-7.0.517.44.ebuild,v 1.3 2010/12/01 18:35:19 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -19,7 +19,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
 	dev-libs/expat
 	dev-libs/glib
-	>=dev-libs/icu-4.4.1
+	=dev-libs/icu-4.4*
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12.3
