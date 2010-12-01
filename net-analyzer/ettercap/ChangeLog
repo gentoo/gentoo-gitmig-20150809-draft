@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ettercap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.76 2009/10/17 18:27:12 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.77 2010/12/01 06:04:16 flameeyes Exp $
+
+  01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ettercap-0.7.3-r4.ebuild, +files/ettercap-0.7.3-autotools.patch:
+  Fix build with libtool 2.4 by patching up the build system to work with
+  automake 1.11; dependency tracking is broken though, so make sure to
+  hard-disable it (we don't need it anyway). Also make it more obvious that
+  libtool is a _runtime_ dependency for this package.
 
 *ettercap-0.7.3-r4 (17 Oct 2009)
 
