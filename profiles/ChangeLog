@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4825 2010/12/01 19:17:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4826 2010/12/01 21:35:39 spock Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2010; Michał Januszewski <spock@gentoo.org> package.mask:
+  Mask the latest beta drivers from NVIDIA.
 
   01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   removed ebuild mask, depend on bug 335785
