@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.2_p2-r1.ebuild,v 1.1 2010/10/24 20:47:16 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.2_p3.ebuild,v 1.1 2010/12/01 18:16:32 idl0r Exp $
 
 EAPI="3"
 
@@ -63,6 +63,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug 278364 (workaround)
+	epatch "${FILESDIR}/${PN}-9.6.1-parallel.patch"
+
 	# Adjusting PATHs in manpages
 	for i in bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8} ; do
 		sed -i \
@@ -73,10 +76,18 @@ src_prepare() {
 	done
 
 	if use dlz; then
+		epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
+
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
 		if use mysql && has_version ">=dev-db/mysql-5"; then
 			epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+		fi
+
+		if use ldap; then
+			# bug 238681
+			epatch "${FILESDIR}/bind-9.6.1-dlz-patch-ldap-url.patch" \
+				"${FILESDIR}/bind-9.6.1-dlz-patch-dollar2.patch"
 		fi
 	fi
 
@@ -168,10 +179,10 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc CHANGES FAQ README
+	dodoc CHANGES FAQ KNOWN-DEFECTS README
 
 	if use idn; then
-		dodoc contrib/idn/README.idnkit || die
+		dodoc README.idnkit || die
 	fi
 
 	if use doc; then
@@ -231,8 +242,8 @@ src_install() {
 	dodir /var/{run,log}/named || die
 
 	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri}
-	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
-	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
+	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/named.conf
+	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/named.conf
 	fperms 0750 /etc/bind /var/bind/pri
 	fperms 0770 /var/{run,log}/named /var/bind/{,sec}
 }
