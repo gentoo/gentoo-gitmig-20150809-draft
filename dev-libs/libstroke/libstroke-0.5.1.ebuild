@@ -1,8 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.22 2007/09/19 09:24:33 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.23 2010/12/01 22:09:17 flameeyes Exp $
 
-WANT_AUTOMAKE=1.4
 inherit eutils autotools
 
 DESCRIPTION="A Stroke and Gesture recognition Library"
@@ -14,14 +13,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
+RDEPEND="x11-libs/libX11"
 DEPEND="x11-proto/xproto
-	x11-libs/libX11"
+	${RDEPEND}"
 
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-m4_syntax.patch
-	epatch ${FILESDIR}/${P}-no_gtk1.patch
+	epatch "${FILESDIR}"/${P}-m4_syntax.patch
+	epatch "${FILESDIR}"/${P}-no_gtk1.patch
+	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf || die 'eautoreconf failed'
 }
 
