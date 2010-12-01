@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/undo-tree-0.1.7_pre20101117-r1.ebuild,v 1.2 2010/11/25 07:00:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/undo-tree-0.1.7.ebuild,v 1.1 2010/12/01 11:45:14 tomka Exp $
 
 NEED_EMACS=22
 
