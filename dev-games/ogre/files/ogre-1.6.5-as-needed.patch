@@ -1,0 +1,11 @@
+--- acinclude.m4.orig	2008-04-09 17:49:30.848987000 +0100
++++ acinclude.m4	2008-04-09 17:53:25.652068359 +0100
+@@ -340,7 +340,7 @@
+ 	* --disable-cg to this configure script but this is highly     *
+ 	* discouraged as this breaks many of the examples.             *
+ 	****************************************************************])
+-	)
++	,-Xlinker --no-as-needed -lstdc++)
+ fi
+ 
+ AM_CONDITIONAL(BUILD_CGPLUGIN, test x$build_cg = xyes)

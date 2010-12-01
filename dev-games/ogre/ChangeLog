@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.69 2010/10/15 17:44:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.70 2010/12/01 17:22:21 mr_bones_ Exp $
+
+  01 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild,
+  +files/ogre-1.6.5-as-needed.patch:
+  fix patching for as-needed to fit the naming convention (bug #347377)
 
   15 Oct 2010; Christian Faulhammer <fauli@gentoo.org> ogre-1.6.5.ebuild:
   stable x86, bug 340925
