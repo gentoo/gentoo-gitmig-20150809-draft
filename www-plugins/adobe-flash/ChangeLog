@@ -1,6 +1,16 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.58 2010/11/15 18:16:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.59 2010/12/01 13:51:02 lack Exp $
+
+*adobe-flash-10.2.161.23_pre20101117 (01 Dec 2010)
+
+  01 Dec 2010; Jim Ramsay <lack@gentoo.org>
+  +adobe-flash-10.2.161.23_pre20101117.ebuild:
+  Next prerelease is ready (11-17-2010). Unfortunately Adobe has split up
+  the versions so the 32-bit version is actually internally versioned as
+  10.2.151.49 (went down) while the 64-bit version is now 10.3.162.29 (went
+  way up). So I'm keeping the ebulid version number the same (10.2.161.23)
+  and just bumping the prerelease version number for this one.
 
 *adobe-flash-9.0.289.0 (15 Nov 2010)
 
