@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.168 2010/08/30 18:10:29 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.169 2010/12/01 20:42:44 scarabeus Exp $
+
+*curl-7.21.2 (01 Dec 2010)
+
+  01 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> +curl-7.21.2.ebuild:
+  QA: version bump, fixes one issue i had during writting my app. Also should
+  fix some security issue based on changelog i found upstream.
 
 *curl-7.21.1 (30 Aug 2010)
 
