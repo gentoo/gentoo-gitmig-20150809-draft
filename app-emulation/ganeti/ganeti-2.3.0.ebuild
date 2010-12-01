@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.3.0_rc0.ebuild,v 1.2 2010/11/23 15:43:30 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.3.0.ebuild,v 1.1 2010/12/01 17:26:57 ramereth Exp $
 
 EAPI=2
 
