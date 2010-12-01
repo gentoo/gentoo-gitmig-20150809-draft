@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-pvrinput
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.22 2010/04/16 20:45:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.23 2010/12/01 19:29:41 hd_brummy Exp $
+
+  01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-pvrinput-1.0.0.20070523.ebuild, -vdr-pvrinput-1.0.0.20080601.ebuild,
+  -vdr-pvrinput-2008.06.19.ebuild, -vdr-pvrinput-2008.07.05.ebuild,
+  -vdr-pvrinput-2010.04.03_rc1.ebuild:
+  cleanup; fixed #315405
 
 *vdr-pvrinput-2010.04.14 (16 Apr 2010)
 
