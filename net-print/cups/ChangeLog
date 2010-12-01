@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.401 2010/12/01 12:34:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.402 2010/12/01 13:03:55 scarabeus Exp $
+
+*cups-1.3.11-r4 (01 Dec 2010)
+
+  01 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> -cups-1.3.11-r2.ebuild,
+  -cups-1.3.11-r3.ebuild, +cups-1.3.11-r4.ebuild,
+  +files/cups-1.3.11-pdf-m4.patch:
+  Revision bump (directly stable) to fix nasty issue with pstopdf buildtime
+  requirement (only changed the m4 to work properly).
 
 *cups-1.4.5 (01 Dec 2010)
 

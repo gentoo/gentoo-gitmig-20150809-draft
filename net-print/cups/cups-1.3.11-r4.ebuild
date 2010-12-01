@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r2.ebuild,v 1.13 2010/08/10 20:54:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.1 2010/12/01 13:03:55 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -112,6 +112,8 @@ src_prepare() {
 	# CVE-2009-3553: Use-after-free (crash) due improper reference counting in abstract file descriptors handling interface
 	# upstream bug STR #3200
 	epatch "${FILESDIR}/${PN}-1.3.11-str3200.patch"
+	# Fix failing if poppler is not around
+	epatch "${FILESDIR}/${PN}-1.3.11-pdf-m4.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -181,7 +183,6 @@ src_configure() {
 		$(use_with php) \
 		$(use_with python) \
 		--enable-libpaper \
-		--enable-pdftops \
 		--enable-threads \
 		--with-optim="${CFLAGS}" \
 		${myconf}
