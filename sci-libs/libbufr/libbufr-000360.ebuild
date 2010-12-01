@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.2 2008/12/31 03:41:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.3 2010/12/01 16:59:04 bicatali Exp $
 
-inherit fortran eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 MY_P="${PN/lib/}_${PV}"
 
@@ -24,16 +24,14 @@ DEPEND="sys-apps/findutils"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	FORTRAN="gfortran g77 ifc ifort pgf77 pgf90"
-	fortran_pkg_setup
-	case "${FORTRANC}" in
-		gfortran)
+	case "$(tc-getFC)" in
+		*gfortran)
 			export CNAME="_gfortran"
 			;;
-		g77)
+		*g77)
 			export CNAME="_gnu"
 			;;
-		pgf90|pgf77)
+		*pgf90|*pgf77)
 			export CNAME="_linux"
 			;;
 		ifc|ifort)

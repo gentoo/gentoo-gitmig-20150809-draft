@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.14 2010/06/22 14:30:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.15 2010/12/01 16:55:59 bicatali Exp $
 
 EAPI=2
 
-inherit fortran eutils toolchain-funcs flag-o-matic autotools
+inherit eutils toolchain-funcs flag-o-matic autotools
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
 SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.gz"
@@ -20,13 +20,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	doc? ( virtual/latex-base )"
 
-pkg_setup() {
-	if use fortran ; then
-		FORTRAN="gfortran ifc g77 pgf77 pgf90"
-		fortran_pkg_setup
-	fi
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-parallel.patch
@@ -37,8 +30,8 @@ src_configure() {
 	use debug || append-cppflags -DNDEBUG
 	local myconf
 	if use fortran; then
-		case "${FORTRANC}" in
-			g77)
+		case "$(tc-getFC)" in
+			*g77)
 				myconf="${myconf} --enable-f77 --disable-f90"
 				myconf="${myconf} F77=g77"
 				;;

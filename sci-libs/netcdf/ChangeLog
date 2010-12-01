@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.74 2010/10/22 10:31:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.75 2010/12/01 16:55:59 bicatali Exp $
+
+  01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> netcdf-3.6.3.ebuild:
+  Remove use of fortran eclass
 
   22 Oct 2010; Fabian Groffen <grobian@gentoo.org> netcdf-4.1.1.ebuild:
   Marked ~ppc-macos

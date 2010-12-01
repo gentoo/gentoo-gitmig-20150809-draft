@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libbufr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.1 2008/12/07 02:48:14 nerdboy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.2 2010/12/01 16:59:04 bicatali Exp $
+
+  01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> libbufr-000360.ebuild:
+  Remove use of fortran eclass
 
 *libbufr-000360 (07 Dec 2008)
 

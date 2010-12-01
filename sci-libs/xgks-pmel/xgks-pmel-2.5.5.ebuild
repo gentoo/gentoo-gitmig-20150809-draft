@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.4 2009/12/04 21:01:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.5 2010/12/01 16:51:21 bicatali Exp $
 
-inherit eutils fortran toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="PMEL fork of XGKS, an X11-based version of the ANSI Graphical Kernel System."
 HOMEPAGE="http://www.gentoogeek.org/viewvc/Linux/xgks-pmel/"
@@ -29,7 +29,7 @@ src_compile() {
 		fontdb/Makefile.in || die "sed 1 failed"
 
 	CFLAGS=${CFLAGS} LD_X11='-L/usr/$(get_libdir) -lX11' \
-		FC=${FORTRANC} CC=$(tc-getCC) OS=linux \
+		FC=$(tc-getFC) CC=$(tc-getCC) OS=linux \
 		./configure --prefix=/usr --exec_prefix=/usr/bin \
 		|| die "configure failed"
 

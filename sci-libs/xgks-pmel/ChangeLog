@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xgks-pmel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.4 2009/12/04 21:01:44 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.5 2010/12/01 16:51:21 bicatali Exp $
+
+  01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> xgks-pmel-2.5.5.ebuild:
+  Remove use of fortran eclass
 
   04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   xgks-pmel-2.5.5.ebuild:
