@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.4 2010/11/01 22:11:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.5 2010/12/01 19:13:52 grobian Exp $
+
+  01 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  ptexenc-1.1.0_p20100722.ebuild:
+  Marked ~ppc-macos
 
   01 Nov 2010; Markus Meier <maekke@gentoo.org>
   ptexenc-1.1.0_p20100722.ebuild:
