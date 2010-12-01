@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r4.ebuild,v 1.1 2010/11/30 21:44:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r4.ebuild,v 1.2 2010/12/01 17:54:13 hd_brummy Exp $
 
 : ${EHG_REPO_URI:=${V4L_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-S="${WORKDIR}/${EHG_REPO_URI##*/}/v4l"
+S="${WORKDIR}/v4l"
 
 CONFIG_CHECK="!DVB_CORE !VIDEO_DEV"
 

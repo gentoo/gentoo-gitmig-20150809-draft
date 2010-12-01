@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/v4l-dvb-hg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.22 2010/11/30 21:44:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.23 2010/12/01 17:54:13 hd_brummy Exp $
+
+  01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  v4l-dvb-hg-0.1-r4.ebuild:
+  removed bash replacement part in S=
 
 *v4l-dvb-hg-0.1-r4 (30 Nov 2010)
 
