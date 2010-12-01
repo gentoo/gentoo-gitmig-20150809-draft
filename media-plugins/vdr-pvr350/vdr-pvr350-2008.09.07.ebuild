@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-2008.09.07.ebuild,v 1.2 2009/04/14 18:15:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-2008.09.07.ebuild,v 1.3 2010/12/01 22:47:52 hd_brummy Exp $
 inherit vdr-plugin eutils
 
 IUSE="yaepg"
@@ -23,7 +23,7 @@ DEPEND=">=media-video/vdr-1.4.0
 RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
-	|| ( >=sys-kernel/linux-headers-2.6.22-r2 media-tv/ivtv )"
+	|| ( >=sys-kernel/linux-headers-2.6.22-r2 )"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

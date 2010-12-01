@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pvr350
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.17 2009/04/14 20:38:30 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.18 2010/12/01 22:47:52 hd_brummy Exp $
+
+  01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-pvr350-2008.09.07.ebuild:
+  removed ivtv depend; bug #263295
 
   14 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -vdr-pvr350-0.0.4_pre1.ebuild, -vdr-pvr350-0.0.4.20070807.ebuild,
