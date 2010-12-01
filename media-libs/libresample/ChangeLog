@@ -1,9 +1,0 @@
-# ChangeLog for media-libs/libresample
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libresample/ChangeLog,v 1.1 2010/12/01 16:59:41 chainsaw Exp $
-
-*libresample-0.1.3 (01 Dec 2010)
-
-  01 Dec 2010; <chainsaw@gentoo.org> +libresample-0.1.3.ebuild, +metadata.xml:
-  Initial commit. Ebuild by Oliver Jaksch, closes bug #342181.
-
