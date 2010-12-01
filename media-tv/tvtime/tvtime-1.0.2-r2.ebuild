@@ -1,9 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.6 2010/05/03 23:26:07 ssuominen Exp $
-
-WANT_AUTOMAKE=1.7
-WANT_AUTOCONF=2.5
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.7 2010/12/01 05:10:42 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -33,7 +30,8 @@ RDEPEND="x11-libs/libSM
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -55,6 +53,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}+linux-headers-2.6.18.patch"
 
 	epatch "${FILESDIR}/${P}-libsupc++.patch"
+
+	epatch "${FILESDIR}/${P}-autotools.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
