@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethloop
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.5 2006/07/23 23:40:18 vanquirius Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.6 2010/12/01 01:03:37 jer Exp $
+
+*ethloop-10-r2 (01 Dec 2010)
+
+  01 Dec 2010; Jeroen Roovers <jer@gentoo.org> +ethloop-10-r2.ebuild,
+  +files/ethloop-10-gcc44.patch:
+  Fix recv call (bug #336755), add some more includes. Use make command line
+  variables instead of patching Makefile. Remove empty DEPEND.
 
   23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -ethloop-10.ebuild,
   ethloop-10-r1.ebuild:
