@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.9 2009/11/07 13:29:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.10 2010/12/01 23:37:00 flameeyes Exp $
 
 inherit eutils rpm autotools
 
@@ -21,14 +21,14 @@ RDEPEND=">=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
-	media-gfx/icon-slicer
-	=sys-devel/automake-1.8*"
+	media-gfx/icon-slicer"
 
 RESTRICT="test"
 
-src_compile() {
-
+src_unpack() {
+	rpm_src_unpack
 	cd "${S}"
+
 	epatch "${WORKDIR}/redhat-artwork-5.0.5-add-dirs-to-bluecurve-theme-index.patch"
 	epatch "${WORKDIR}/redhat-artwork-5.0.8-echo.patch"
 
@@ -36,35 +36,32 @@ src_compile() {
 	export LANG=C
 	export LC_ALL=C
 
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.8
-
 	rm -f configure
 	sed -i -e "s|.*MCOPIDL.*||" \
-	       -e "s|.*ARTSCCONFIG.*||" \
+		   -e "s|.*ARTSCCONFIG.*||" \
 		acinclude.m4
 
 	sed -i -e "s|KDE_SET_PREFIX||" \
-	       -e "s|KDE_CHECK_FINAL||" \
-	       -e "s|dnl KDE_USE_QT||" \
-	       -e "s|AC_PATH_KDE||" \
-	       -e "s|art/kde/Makefile||" \
-	       -e "s|art/kde/kwin/Makefile||" \
-	       -e "s|art/kde/kwin/Bluecurve/Makefile||" \
+		   -e "s|KDE_CHECK_FINAL||" \
+		   -e "s|dnl KDE_USE_QT||" \
+		   -e "s|AC_PATH_KDE||" \
+		   -e "s|art/kde/Makefile||" \
+		   -e "s|art/kde/kwin/Makefile||" \
+		   -e "s|art/kde/kwin/Bluecurve/Makefile||" \
 			configure.in
 
 	sed -i -e "s|kde||" \
-	       -e "s|qt||" \
+		   -e "s|qt||" \
 			art/Makefile.am
 
 	sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
-	       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
-	       -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
-	       -e "s|AC_MSG_ERROR(.*gtk_style.*||" \
-	       -e "s|             \$GTK_LIBS)||" \
-	       -e "s|AM_PATH_GDK_PIXBUF||" \
-	       -e "s|art/gtk/Bluecurve1/Makefile||" \
-	       -e "s|art/gtk/Bluecurve1/gtk/Makefile||" \
+		   -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
+		   -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
+		   -e "s|AC_MSG_ERROR(.*gtk_style.*||" \
+		   -e "s|             \$GTK_LIBS)||" \
+		   -e "s|AM_PATH_GDK_PIXBUF||" \
+		   -e "s|art/gtk/Bluecurve1/Makefile||" \
+		   -e "s|art/gtk/Bluecurve1/gtk/Makefile||" \
 		configure.in
 
 	sed -i -e "s|Bluecurve1||" \
@@ -78,17 +75,18 @@ src_compile() {
 		art/icon/Makefile.am \
 		art/icon/Bluecurve/sheets/Makefile.am || die
 
-	eautoreconf --force --install || die "autoreconf failed"
+	eautoreconf
 
 	ebegin "Running intltoolize"
 	intltoolize --force || die "intltoolize failed"
 	eend $?
 
 	sed -i -e "s|GtkStyle|4|" art/qt/Bluecurve/bluecurve.cpp || die
+}
 
+src_compile() {
 	econf || die
 	emake QTDIR="${QTDIR}" styledir="${QTDIR}/plugins/styles" || die
-
 }
 
 src_install () {
@@ -98,7 +96,7 @@ src_install () {
 	export LC_ALL=C
 
 	make QTDIR="${QTDIR}" styledir="${QTDIR}/plugins/styles" \
-	     DESTDIR="${D}" install || die
+		 DESTDIR="${D}" install || die
 
 	# yank redhat logos (registered trademarks, etc)
 	rm -f "${D}/usr/share/gdm/themes/Bluecurve/rh_logo-header.png"

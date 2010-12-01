@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.100 2009/11/07 13:29:58 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.101 2010/12/01 23:37:00 flameeyes Exp $
+
+  01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  Cleanup autotools handling, and use unpack for applying patches and
+  preparing, so that the package will build properly when using libtool 2.4 and
+  a modern automake.
 
   07 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
