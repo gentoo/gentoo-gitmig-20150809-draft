@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.13 2010/11/27 15:54:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.14 2010/12/01 15:41:28 hd_brummy Exp $
+
+  01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.1.ebuild:
+  fixed versions depend to xxv-skins; thx to negril@irc#gentoo-vdr
 
 *xxv-1.6.1 (27 Nov 2010)
 
