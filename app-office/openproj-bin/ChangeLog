@@ -1,0 +1,9 @@
+# ChangeLog for app-office/openproj-bin
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openproj-bin/ChangeLog,v 1.1 2010/12/01 13:37:38 vapier Exp $
+
+*openproj-bin-1.4 (01 Dec 2010)
+
+  01 Dec 2010; Mike Frysinger <vapier@gentoo.org> +openproj-bin-1.4.ebuild:
+  New package by Christian Affolter & Julien Cynober & Artem Sidorenko
+  #190636 by Robert Buchholz.
