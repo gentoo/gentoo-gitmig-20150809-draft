@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.12 2010/09/12 19:24:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.13 2010/12/01 16:48:33 bicatali Exp $
+
+  01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> -udunits-1.12.1.ebuild,
+  -udunits-1.12.11.ebuild, -files/udunits-1.12.11-fixingtests.patch,
+  -udunits-2.1.11-r1.ebuild, -files/udunits-2.1.11-autotools.patch,
+  -files/udunits_configure_in.patch, -files/udunits_customize.patch,
+  -files/udunits_lib_make.patch, -files/udunits_master_mk.patch:
+  Remove old
 
   12 Sep 2010; Tobias Klausmann <klausman@gentoo.org> udunits-2.1.15.ebuild:
   Stable on alpha, bug #326431
