@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r10.ebuild,v 1.2 2010/11/08 15:01:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r10.ebuild,v 1.3 2010/12/01 17:54:34 grobian Exp $
 
 EAPI=3
 
 inherit autotools eutils gnustep-base flag-o-matic
 
+# note: patchset is in gentoo/src/patchsets/windowmaker
 PATCHVER=4
 S=${WORKDIR}/${P/windowm/WindowM}
 
