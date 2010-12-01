@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opencryptoki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.8 2010/12/01 03:25:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.9 2010/12/01 03:32:17 flameeyes Exp $
+
+  01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  opencryptoki-2.3.2.ebuild, files/pkcsslotd.init.2:
+  Make it a use, not need, dependency as you might not have tpm hardware.
 
 *opencryptoki-2.3.2 (01 Dec 2010)
 
