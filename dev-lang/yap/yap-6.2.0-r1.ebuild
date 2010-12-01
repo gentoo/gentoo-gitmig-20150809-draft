@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.7 2010/11/06 19:50:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.8 2010/12/01 07:24:42 keri Exp $
 
 inherit autotools eutils flag-o-matic java-pkg-opt-2
 
-PATCHSET_VER="1"
+PATCHSET_VER="2"
 
 DESCRIPTION="YAP is a high-performance Prolog compiler."
 HOMEPAGE="http://www.ncc.up.pt/~vsc/Yap/"
@@ -16,13 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc examples gmp java mpi mysql odbc readline static threads"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	gmp? ( dev-libs/gmp )
 	java? ( >=virtual/jdk-1.4 )
 	mpi? ( virtual/mpi )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline )"
+
+DEPEND="${RDEPEND}
 	doc? ( app-text/texi2html )"
 
 S="${WORKDIR}"/${PN}-6
