@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.0.ebuild,v 1.2 2009/05/07 17:56:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.0.ebuild,v 1.3 2010/12/01 22:52:56 hd_brummy Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 src_install() {
 	vdr-plugin_src_install
 
-	dodoc README HISTORY
+	dodoc README
 
 	insinto /etc/vdr/plugins/vomp
 	newins vomp.conf.sample vomp.conf
