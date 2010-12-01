@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/gtest-1.5.0.ebuild,v 1.3 2010/11/01 22:02:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/gtest-1.5.0.ebuild,v 1.4 2010/12/01 19:01:14 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 inherit autotools eutils python
 
@@ -12,7 +12,7 @@ SRC_URI="http://googletest.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~ppc-macos"
 IUSE="examples threads static-libs"
 
 pkg_setup() {
@@ -40,7 +40,7 @@ src_install() {
 	dodoc CHANGES CONTRIBUTORS README || die
 
 	if ! use static-libs ; then
-		rm "${D}"/usr/lib*/*.la || die
+		rm "${ED}"/usr/lib*/*.la || die
 	fi
 
 	if use examples ; then
