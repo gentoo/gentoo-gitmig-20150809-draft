@@ -1,6 +1,20 @@
 # ChangeLog for dev-libs/opencryptoki
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.7 2009/06/28 10:48:58 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.8 2010/12/01 03:25:11 flameeyes Exp $
+
+*opencryptoki-2.3.2 (01 Dec 2010)
+
+  01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -opencryptoki-2.2.4.1.ebuild, -opencryptoki-2.2.8.ebuild,
+  +files/opencryptoki-2.2.8-remove_openlog.patch,
+  +files/opencryptoki-2.2.8-remove_recursive_chmod.patch,
+  +files/opencryptoki-2.2.8-steal_shmem.patch, +opencryptoki-2.3.2.ebuild,
+  +files/opencryptoki-2.3.2-build.patch, +files/pkcsslotd.init.2,
+  -files/pkcsslotd.init, metadata.xml:
+  Version bump, rewrite ebuild to actually make sense and work, with the help
+  of the one to be found in chromiumos-overlay. Many thanks to Nathan Williams
+  and Chris Masone for their fixes and the patches. Drop all the previous
+  ebuilds and the previous init script as they are totally broken by design.
 
 *opencryptoki-2.2.8 (28 Jun 2009)
 
