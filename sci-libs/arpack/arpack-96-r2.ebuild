@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.19 2010/07/09 10:01:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.20 2010/12/01 18:15:49 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools toolchain-funcs
@@ -72,7 +72,7 @@ src_test() {
 
 	if use mpi; then
 		pushd PARPACK/EXAMPLES/MPI
-		${FORTRANC} ${FFLAGS} -c ../../../LAPACK/dpttr{f,s}.f \
+		mpif77 ${FFLAGS} -c ../../../LAPACK/dpttr{f,s}.f \
 			|| die "compiling dpttrf,s failed"
 		emake \
 			FC=mpif77 \
