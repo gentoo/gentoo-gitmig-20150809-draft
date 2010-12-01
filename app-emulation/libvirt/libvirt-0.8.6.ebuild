@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r1.ebuild,v 1.1 2010/10/30 17:54:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.6.ebuild,v 1.1 2010/12/01 21:14:37 flameeyes Exp $
 
-BACKPORTS=2
+BACKPORTS=1
 
 EAPI="2"
 
@@ -85,9 +85,6 @@ src_configure() {
 
 	## hypervisors on the local host
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
-	if ! use policykit && use xen; then
-		myconf="${myconf} --with-xen-proxy"
-	fi
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
