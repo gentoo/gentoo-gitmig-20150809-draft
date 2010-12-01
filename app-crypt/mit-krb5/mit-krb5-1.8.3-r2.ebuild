@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r2.ebuild,v 1.1 2010/12/01 07:22:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r2.ebuild,v 1.2 2010/12/01 15:50:58 eras Exp $
 
 EAPI=2
 
@@ -24,8 +24,8 @@ RDEPEND="!!app-crypt/heimdal
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )
-	test? ( dev-lang/tcl
-	        dev-lang/perl
+	test? (	dev-lang/tcl
+			dev-lang/perl
 			dev-util/dejagnu )"
 
 S=${WORKDIR}/${MY_P}/src
@@ -44,10 +44,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=""
-	if use test; then
-		myconf="--with-tcl=/usr"
-	fi
 	append-flags "-I/usr/include/et"
 	econf \
 		$(use_with ldap) \

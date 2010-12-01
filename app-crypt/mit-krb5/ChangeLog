@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.241 2010/12/01 07:22:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.242 2010/12/01 15:50:58 eras Exp $
+
+  01 Dec 2010; Eray Aslan <eras@gentoo.org> mit-krb5-1.8.3-r2.ebuild:
+  Ebuild clean up. No functional change.
 
 *mit-krb5-1.8.3-r2 (01 Dec 2010)
 
