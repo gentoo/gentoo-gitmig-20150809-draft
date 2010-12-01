@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.240 2010/11/27 15:23:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.241 2010/12/01 07:22:44 eras Exp $
+
+*mit-krb5-1.8.3-r2 (01 Dec 2010)
+
+  01 Dec 2010; Eray Aslan <eras@gentoo.org> +mit-krb5-1.8.3-r2.ebuild,
+  +files/CVE-2010-1323.1324.4020.patch, +files/mit-krb5_testsuite.patch:
+  Security bump. Working test suite with test USE flag.
 
   27 Nov 2010; Eray Aslan <eras@gentoo.org> -mit-krb5-1.8.2.ebuild,
   -mit-krb5-1.8.2-r1.ebuild, -mit-krb5-1.8.3.ebuild:
