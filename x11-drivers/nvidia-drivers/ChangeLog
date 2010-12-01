@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.260 2010/11/20 05:00:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.261 2010/12/01 21:43:49 spock Exp $
+
+*nvidia-drivers-260.19.26 (01 Dec 2010)
+
+  01 Dec 2010; Michał Januszewski <spock@gentoo.org>
+  +nvidia-drivers-260.19.26.ebuild:
+  Version bump. This is a beta version (and thus masked), but it is also the
+  first 260.x release that works with GF330M.
 
   20 Nov 2010; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.19.ebuild:
   Free xorg-server dependency (bug #345929).
