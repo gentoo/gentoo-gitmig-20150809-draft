@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.1 2010/11/30 23:23:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.2 2010/12/01 16:19:40 bicatali Exp $
 
 EAPI="3"
 
@@ -40,7 +40,6 @@ RDEPEND="
 	qt4? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-svg:4 )
-	svga? ( media-libs/svgalib )
 	tcl? ( dev-lang/tcl dev-tcltk/itcl
 		tk? ( dev-lang/tk dev-tcltk/itk ) )
 	truetype? (
