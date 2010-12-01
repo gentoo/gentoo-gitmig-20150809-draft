@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.4 2010/06/22 13:47:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/noegnud-nethack-0.8.3.ebuild,v 1.5 2010/12/01 07:52:26 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 VAR_NAME=nethack
@@ -32,7 +33,9 @@ S=${WORKDIR}/noegnud-${PV}/variants
 src_unpack() {
 	unpack noegnud-${PV}_linux_src-minimal.tar.bz2
 	ln -s "${DISTDIR}"/${VAR_TAR} noegnud-${PV}/variants/tarballs/${VAR_TAR}
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
