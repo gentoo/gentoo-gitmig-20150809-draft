@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.407 2010/11/30 19:36:17 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.408 2010/12/01 20:16:07 rich0 Exp $
+
+  01 Dec 2010; Richard Freeman <rich0@gentoo.org> phpmyadmin-3.3.8.1.ebuild:
+  amd64 stable - 347327
 
 *phpmyadmin-3.3.8.1 (30 Nov 2010)
 
