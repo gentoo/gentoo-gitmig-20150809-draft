@@ -4,8 +4,8 @@
 +++ cups-1.4.5/config-scripts/cups-pdf.m4	2009-08-08 00:30:30.000000000 +0200
 @@ -1,5 +1,5 @@
  dnl
--dnl "$Id: cups-1.3.11-pdf-m4.patch,v 1.1 2010/12/01 13:03:55 scarabeus Exp $"
-+dnl "$Id: cups-1.3.11-pdf-m4.patch,v 1.1 2010/12/01 13:03:55 scarabeus Exp $"
+-dnl "$Id: cups-1.3.11-pdf-m4.patch,v 1.2 2010/12/01 15:39:57 scarabeus Exp $"
++dnl "$Id: cups-1.3.11-pdf-m4.patch,v 1.2 2010/12/01 15:39:57 scarabeus Exp $"
  dnl
  dnl   PDF filter configuration stuff for the Common UNIX Printing System (CUPS).
  dnl
@@ -61,6 +61,6 @@
  AC_SUBST(PDFTOPS)
  
  dnl
--dnl End of "$Id: cups-1.3.11-pdf-m4.patch,v 1.1 2010/12/01 13:03:55 scarabeus Exp $".
-+dnl End of "$Id: cups-1.3.11-pdf-m4.patch,v 1.1 2010/12/01 13:03:55 scarabeus Exp $".
+-dnl End of "$Id: cups-1.3.11-pdf-m4.patch,v 1.2 2010/12/01 15:39:57 scarabeus Exp $".
++dnl End of "$Id: cups-1.3.11-pdf-m4.patch,v 1.2 2010/12/01 15:39:57 scarabeus Exp $".
  dnl
