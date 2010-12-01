@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.2.ebuild,v 1.3 2010/05/19 21:00:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.4.ebuild,v 1.1 2010/12/01 23:17:36 bicatali Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples gnuplot lua readline python wxwidgets"
+IUSE="doc examples gnuplot lua readline python static-libs wxwidgets"
 
 CDEPEND=">=sci-libs/xylib-0.6
 	lua? ( dev-lang/lua )
@@ -52,6 +52,7 @@ src_configure() {
 		--disable-xyconvert \
 		$(use_enable lua) \
 		$(use_enable python) \
+		$(use_enable static-libs static) \
 		$(use_enable wxwidgets GUI) \
 		$(use_with doc) \
 		$(use_with examples samples) \
@@ -89,7 +90,7 @@ src_install() {
 		python_execute_function -s --source-dir swig installation
 		python_clean_installation_image
 	fi
-	dodoc NEWS README TODO || die
+	dodoc NEWS README TODO
 }
 
 pkg_postinst() {
