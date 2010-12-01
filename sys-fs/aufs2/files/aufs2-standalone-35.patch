@@ -1,5 +1,37 @@
-aufs2 standalone patch for linux-2.6.35
+aufs2.1 standalone patch for linux-2.6.35
 
+diff --git a/fs/file_table.c b/fs/file_table.c
+index 5c7d10e..9031acf 100644
+--- a/fs/file_table.c
++++ b/fs/file_table.c
+@@ -34,6 +34,7 @@ struct files_stat_struct files_stat = {
+ 
+ /* public. Not pretty! */
+ __cacheline_aligned_in_smp DEFINE_SPINLOCK(files_lock);
++EXPORT_SYMBOL(files_lock);
+ 
+ /* SLAB cache for file structures */
+ static struct kmem_cache *filp_cachep __read_mostly;
+@@ -346,6 +347,7 @@ void file_kill(struct file *file)
+ 		file_list_unlock();
+ 	}
+ }
++EXPORT_SYMBOL(file_kill);
+ 
+ int fs_may_remount_ro(struct super_block *sb)
+ {
+diff --git a/fs/inode.c b/fs/inode.c
+index 722860b..bfb0698 100644
+--- a/fs/inode.c
++++ b/fs/inode.c
+@@ -84,6 +84,7 @@ static struct hlist_head *inode_hashtable __read_mostly;
+  * the i_state of an inode while it is in use..
+  */
+ DEFINE_SPINLOCK(inode_lock);
++EXPORT_SYMBOL(inode_lock);
+ 
+ /*
+  * iprune_sem provides exclusion between the kswapd or try_to_free_pages
 diff --git a/fs/namei.c b/fs/namei.c
 index 6e92c81..334130e 100644
 --- a/fs/namei.c
@@ -29,10 +61,18 @@ index 6e92c81..334130e 100644
  /**
   * lookup_one_len - filesystem helper to lookup single pathname component
 diff --git a/fs/namespace.c b/fs/namespace.c
-index 88058de..397afcc 100644
+index 88058de..6e39b69 100644
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
-@@ -1279,6 +1279,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
+@@ -39,6 +39,7 @@
+ 
+ /* spinlock for vfsmount related operations, inplace of dcache_lock */
+ __cacheline_aligned_in_smp DEFINE_SPINLOCK(vfsmount_lock);
++EXPORT_SYMBOL(vfsmount_lock);
+ 
+ static int event;
+ static DEFINE_IDA(mnt_id_ida);
+@@ -1279,6 +1280,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
  	}
  	return 0;
  }
