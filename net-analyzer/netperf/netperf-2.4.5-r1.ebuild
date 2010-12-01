@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5.ebuild,v 1.2 2010/06/24 16:00:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5-r1.ebuild,v 1.1 2010/12/01 00:38:44 jer Exp $
 
 EAPI="2"
 
@@ -19,8 +19,14 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND="!sci-mathematics/snns"
 
 src_prepare() {
-	sed -i 's:^\(#define DEBUG_LOG_FILE "\)/tmp/netperf.debug:\1/var/log/netperf.debug:' src/netserver.c
-	epatch "${FILESDIR}"/${PN}-fix-scripts.patch
+cp -av src/netserver.c{,.orig}
+#	sed -i src/netserver.c \
+#		-e '/^#define DEBUG_LOG_FILE/s:/tmp/:/var/log/:' \
+#		-e 's:sizeof(netperf_response) - 7:MAXSPECDATA:g'
+
+	epatch \
+		"${FILESDIR}"/${PN}-fix-scripts.patch \
+		"${FILESDIR}"/${P}-netserver.patch
 
 	# Fixing paths in scripts
 	sed -i -e 's:^\(NETHOME=\).*:\1"/usr/bin":' \

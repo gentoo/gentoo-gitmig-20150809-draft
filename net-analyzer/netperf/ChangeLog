@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.45 2010/06/28 15:32:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.46 2010/12/01 00:38:44 jer Exp $
+
+*netperf-2.4.5-r1 (01 Dec 2010)
+
+  01 Dec 2010; Jeroen Roovers <jer@gentoo.org> -netperf-2.4.5.ebuild,
+  +netperf-2.4.5-r1.ebuild, +files/netperf-2.4.5-netserver.patch:
+  Fix buffer overflow, compiler warnings (bug #337422).
 
   28 Jun 2010; Guy Martin <gmsoft@gentoo.org> netperf-2.4.4.ebuild:
   hppa stable.
