@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/qrupdate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.17 2010/12/01 16:45:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.18 2010/12/01 21:17:49 constanze Exp $
+
+  01 Dec 2010; Constanze Hausner <constanze@gentoo.org>
+  +files/qrupdate-1.0.1-makefile.patch:
+  QA: added back wrongly removed patch file
 
   01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> -qrupdate-1.0.1.ebuild,
   -files/qrupdate-1.0.1-makefile.patch, -qrupdate-1.1.0.ebuild,
