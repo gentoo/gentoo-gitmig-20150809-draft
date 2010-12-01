@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.274 2010/10/27 22:57:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.275 2010/12/01 17:54:28 chainsaw Exp $
+
+*asterisk-1.4.37 (01 Dec 2010)
+
+  01 Dec 2010; <chainsaw@gentoo.org> +files/1.4.0/asterisk-1.4.0-uclibc.patch,
+  +files/1.4.0/asterisk-1.4.0-var_rundir.patch,
+  +files/1.4.0/asterisk-1.4.33-inband-indications.patch,
+  +files/1.4.0/asterisk-1.4.37-imap-libs.patch, +files/1.4.0/asterisk.confd,
+  +files/1.4.0/asterisk.initd, +files/1.4.0/asterisk-1.4.33-gsm-pic.patch,
+  +files/1.4.0/asterisk.logrotate, +asterisk-1.4.37.ebuild,
+  +files/1.4.0/func_devstate-r6.c, +files/1.4.0/func_volume.c:
+  Add 1.4 branch ebuild & patchset by Kerin Millar, who will be proxy
+  maintaining.
 
   27 Oct 2010; <chainsaw@gentoo.org> asterisk-1.8.0.ebuild:
   Apparently production releases can now depend on beta code. Notch up
