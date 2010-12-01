@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12240 2010/11/30 20:51:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12241 2010/12/01 19:17:15 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -682,12 +682,6 @@ net-p2p/overnet
 #
 # Removal on 2010-11-26
 app-benchmarks/xfbsuite
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> ( 26 Sep 2010 )
-# masked for removel in 30 days,
-# bug 335785
-# ttf-bitstream-vera issues
-=media-plugins/vdr-graphtft-0.1.21_alpha-r1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Sep 2010)
 # Mask new versions of glib, polkit, gtk+, etc
