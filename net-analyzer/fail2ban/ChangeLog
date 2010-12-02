@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.59 2010/11/05 15:05:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.60 2010/12/02 21:53:01 hwoarang Exp $
+
+*fail2ban-0.8.4-r2 (02 Dec 2010)
+
+  02 Dec 2010; Markos Chandras <hwoarang@gentoo.org> +fail2ban-0.8.4-r2.ebuild,
+  +files/gentoo-initd_create_run_dir.patch, metadata.xml:
+  Create /var/run/fail2ban on runtime and remove stalled sock file in case of
+  system crash. Thanks to Michael Lorant <mikel@mlvision.com.au>. Bug #347477.
+  Taking over maintainership
 
 *fail2ban-0.8.4-r1 (05 Nov 2010)
 
