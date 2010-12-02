@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.30 2010/04/12 17:52:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.31 2010/12/02 15:33:38 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  wmnetload-1.3-r3.ebuild:
+  Don't force the use of automake-1.4 (works fine with 1.11), also fix calls to
+  autotools.eclass interfaces.
 
   12 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
   wmnetload-1.3-r3.ebuild:
