@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.43 2010/11/29 21:32:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.44 2010/12/02 15:31:41 williamh Exp $
+
+*emacspeak-33.0 (02 Dec 2010)
+
+  02 Dec 2010; William Hubbs <williamh@gentoo.org> +emacspeak-33.0.ebuild,
+  +files/emacspeak-33.0-greader-garbage.patch,
+  +files/emacspeak-33.0-respect-ldflags.patch:
+  version bump
 
   29 Nov 2010; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   Add to emacs herd
