@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.2 2010/07/11 09:00:45 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.3 2010/12/02 14:27:39 flameeyes Exp $
 
 EAPI="2"
-
-WANT_AUTOMAKE="1.6"
 
 inherit base autotools apache-module
 
