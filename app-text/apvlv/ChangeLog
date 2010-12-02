@@ -1,6 +1,9 @@
 # ChangeLog for app-text/apvlv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.6 2010/10/07 08:06:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.7 2010/12/02 12:57:04 hwoarang Exp $
+
+  02 Dec 2010; Markos Chandras <hwoarang@gentoo.org> apvlv-0.0.9.8.ebuild:
+  Stable on amd64 wrt bug #347115
 
 *apvlv-0.0.9.8 (07 Oct 2010)
 
