@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.10 2010/10/16 15:36:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.11 2010/12/02 15:23:45 flameeyes Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.9"
-inherit eutils
+
+inherit eutils autotools
 
 MY_P=${P/_/-}
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
@@ -37,6 +37,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	epatch "${FILESDIR}"/${P}-parallel-install.patch
+
+	eautoreconf
 }
 
 src_configure() {
