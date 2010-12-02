@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.297 2010/12/01 18:16:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.298 2010/12/02 17:56:06 idl0r Exp $
+
+  02 Dec 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.2_p3.ebuild,
+  bind-9.7.2_p3.ebuild:
+  Fix geoip patch, bug 347525.
 
 *bind-9.7.2_p3 (01 Dec 2010)
 *bind-9.6.2_p3 (01 Dec 2010)
