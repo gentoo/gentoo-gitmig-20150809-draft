@@ -1,8 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.11 2009/05/05 08:04:42 ssuominen Exp $
-
-WANT_AUTOMAKE="1.5"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.12 2010/12/02 14:14:42 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -39,12 +37,6 @@ src_unpack()
 	epatch "${FILESDIR}/legacy.patch-${PV}"
 
 	eautoreconf
-}
-
-src_compile()
-{
-	econf || die "configure failed"
-	emake || die "parallel make failed"
 }
 
 src_install()

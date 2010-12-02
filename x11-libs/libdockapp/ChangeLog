@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdockapp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.35 2008/04/01 10:37:24 s4t4n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.36 2010/12/02 14:14:42 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libdockapp-0.6.1.ebuild:
+  Remove requeest for automake 1.5 (allows building with libtool-2.4); remove
+  default src_compile.
 
   01 Apr 2008; Michele Noberasco <s4t4n@gentoo.org>; libdockapp-0.6.1.ebuild:
   Moved eautoreconf call to src_unpack(). Closes bug #207484.
