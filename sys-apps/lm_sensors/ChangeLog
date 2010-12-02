@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.109 2010/11/12 13:42:36 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.110 2010/12/02 21:27:16 rich0 Exp $
+
+  02 Dec 2010; Richard Freeman <rich0@gentoo.org> lm_sensors-3.2.0.ebuild:
+  amd64 stable - 347435
 
   12 Nov 2010; <mattst88@gentoo.org> lm_sensors-3.2.0.ebuild:
   Added ~mips keyword.
