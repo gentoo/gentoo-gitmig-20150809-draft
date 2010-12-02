@@ -1,16 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.5.16.ebuild,v 1.4 2010/12/02 07:28:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.1 2010/12/02 07:28:54 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
 DESCRIPTION="Typing tutorial with lots of eye-candy"
 HOMEPAGE="http://alioth.debian.org/projects/tux4kids/"
-SRC_URI="http://alioth.debian.org/frs/download.php/2209/tuxtype_w_fonts-${PV}.tar.gz"
+SRC_URI="http://alioth.debian.org/frs/download.php/3270/tuxtype_w_fonts-${PV}.tar.gz"
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
@@ -22,17 +23,11 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/tuxtype_w_fonts-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e 's:$(prefix)/share:'${GAMES_DATADIR}':g' \
 		-e 's:$(prefix)/doc/$(PACKAGE):/usr/share/doc/'${PF}':g' \
 		$(find -name Makefile.in) || die "fixing Makefile paths"
-	sed -i \
-		-e '/\.\/data/d' \
-		-e 's:/usr/share:'${GAMES_DATADIR}':' \
-		tuxtype/setup.c || die "fixing src paths"
 }
 
 src_install() {
