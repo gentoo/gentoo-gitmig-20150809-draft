@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.576.0.ebuild,v 1.2 2010/11/13 15:19:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.0.ebuild,v 1.1 2010/12/02 10:12:46 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( ~dev-lang/v8-2.5.4 )
+	system-v8? ( >=dev-lang/v8-2.5.9.1 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -34,13 +34,15 @@ RDEPEND="app-arch/bzip2
 	virtual/jpeg
 	media-libs/libpng
 	media-libs/libvpx
-	>=media-video/ffmpeg-0.6_p25423[threads]
+	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
-	x11-libs/libXScrnSaver"
+	x11-libs/libXScrnSaver
+	x11-libs/libXtst"
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	>=dev-util/chromium-tools-0.1.4
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
@@ -59,10 +61,6 @@ egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
 	echo "${@}" >&2
 	"${@}"
-}
-
-get_bundled_v8_version() {
-	"$(PYTHON -2)" "${FILESDIR}"/extract_v8_version.py v8/src/version.cc
 }
 
 get_installed_v8_version() {
@@ -105,11 +103,8 @@ src_prepare() {
 	# Enable optional support for gecko-mediaplayer.
 	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
 
-	# Make GConf dependency optional, http://crbug.com/13322.
-	epatch "${FILESDIR}"/${PN}-gconf-optional-r0.patch
-
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}"/${PN}-system-vpx-r0.patch
+	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
@@ -133,7 +128,7 @@ src_prepare() {
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 
-	local v8_bundled="$(get_bundled_v8_version)"
+	local v8_bundled="$(v8-extract-version v8/src/version.cc)"
 	if use system-v8; then
 		local v8_installed="$(get_installed_v8_version)"
 		einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
