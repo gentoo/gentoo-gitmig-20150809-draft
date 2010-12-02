@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4826 2010/12/01 21:35:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4827 2010/12/02 06:43:07 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> desc/apache2_modules.desc:
+  Bug #347227: add in mod_reqtimeout (for use on Gentoo Infra). Also add
+  mod_proxy_scgi.
 
   01 Dec 2010; Michał Januszewski <spock@gentoo.org> package.mask:
   Mask the latest beta drivers from NVIDIA.
