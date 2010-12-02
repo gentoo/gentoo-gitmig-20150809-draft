@@ -1,14 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.9 2009/09/09 21:38:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.10 2010/12/02 20:09:48 jlec Exp $
 
 EAPI=2
-inherit eutils
+
+inherit autotools eutils
 
 DEB_PATCH="${PN}_${PV}-7"
 DESCRIPTION="OpenGL interactive relativistic simulator"
 HOMEPAGE="http://lightspeed.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/objects-1.tar.gz
 	mirror://debian/pool/main/${PN:0:1}/${PN}/${DEB_PATCH}.diff.gz"
 
@@ -37,6 +39,7 @@ S2="${WORKDIR}/objects"
 
 src_prepare() {
 	epatch "${WORKDIR}/${DEB_PATCH}.diff"
+	eautoreconf
 }
 
 src_configure() {
