@@ -1,0 +1,14 @@
+# ChangeLog for app-i18n/fcitx-sunpinyin
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-sunpinyin/ChangeLog,v 1.1 2010/12/02 07:13:47 qiaomuf Exp $
+
+  02 Dec 2010; <gentoo@gentoo.org> +fcitx-sunpinyin-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
+*fcitx-sunpinyin-0.2.0 (02 Dec 2010)
+
+  02 Dec 2010; <gentoo@gentoo.org> +fcitx-sunpinyin-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
