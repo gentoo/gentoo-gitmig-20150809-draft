@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/buffer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/ChangeLog,v 1.4 2010/09/20 00:54:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/ChangeLog,v 1.5 2010/12/02 23:58:07 xmw Exp $
+
+  02 Dec 2010; Michael Weber <xmw@gentoo.org> buffer-1.19-r2.ebuild:
+  add ~sparc
 
   20 Sep 2010; Michael Weber <xmw@gentoo.org> buffer-1.19-r2.ebuild:
   Added ~arm keyword
