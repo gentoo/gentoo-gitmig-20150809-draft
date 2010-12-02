@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-extb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.4 2009/06/20 23:56:07 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.5 2010/12/02 15:10:01 hd_brummy Exp $
+
+*vdr-extb-0.3.1 (02 Dec 2010)
+
+  02 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-extb-0.2.9.ebuild, -files/vdr-extb-0.2.9-gentoo.diff,
+  -vdr-extb-0.3.0.ebuild, -files/vdr-extb-0.3.0-gcc4.3.diff,
+  +vdr-extb-0.3.1.ebuild, +files/vdr-extb-0.3.1-gentoo.diff,
+  +files/vdr-extb-0.3.1_vdr-1.7.13.diff:
+  clean up; version bump, fixed also bug #336198
 
   20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/extb-wakeup-0.2.9.tar.gz, -files/vdr.extb:

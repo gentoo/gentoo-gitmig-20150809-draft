@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.2.9.ebuild,v 1.2 2008/03/30 12:29:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.1.ebuild,v 1.1 2010/12/02 15:10:01 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
 DESCRIPTION="VDR Plugin: used to control the VDR Extension Board"
 HOMEPAGE="http://www.deltab.de/content/view/74/76/"
-SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz
+SRC_URI="http://www.deltab.de/component/option,com_docman/task,doc_download/gid,102/ -> "${P}".tar.gz
 		mirror://vdrfiles/${PN}/extb_firmware_1.08_lircd.conf.zip
 		mirror://vdrfiles/${PN}/extb.tar.gz"
 
@@ -15,14 +17,15 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.2.5
+DEPEND=">=media-video/vdr-1.6.0
 	app-misc/lirc"
 
-src_unpack() {
-	vdr-plugin_src_unpack
+src_prepare() {
+	vdr-plugin_src_prepare
 
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}_vdr-1.7.13.diff"
 }
 
 src_install() {
@@ -53,6 +56,7 @@ pkg_postinst() {
 
 	einfo
 	einfo "You need to upload the included firmware (1.08)"
+	einfo "(you will find it in /usr/share/extb/)"
 	einfo "into the extension board and update your lircd.conf"
 	einfo "See the supplied lircd.conf.extb_FW1.08 in"
 	einfo "/usr/share/doc/vdrplugin-extb"
