@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.74 2010/11/03 16:30:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.75 2010/12/02 21:17:27 alexxy Exp $
+
+*kioclient-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +kioclient-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
 *kioclient-4.5.3 (03 Nov 2010)
 

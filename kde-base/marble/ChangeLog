@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.82 2010/11/14 14:55:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.83 2010/12/02 21:18:19 alexxy Exp $
+
+*marble-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +marble-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
   14 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   marble-4.5.3.ebuild:

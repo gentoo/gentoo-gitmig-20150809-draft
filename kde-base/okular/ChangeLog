@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.87 2010/11/09 08:50:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.88 2010/12/02 21:16:16 alexxy Exp $
+
+*okular-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +okular-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
   09 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> okular-4.4.5.ebuild:
   Use virtual/jpeg wrt #327487.

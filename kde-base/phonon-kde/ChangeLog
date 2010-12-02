@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.71 2010/11/28 18:12:32 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.72 2010/12/02 21:15:51 alexxy Exp $
+
+*phonon-kde-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +phonon-kde-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
   28 Nov 2010; Maciej Mrozowski <reavertm@gentoo.org>
   phonon-kde-4.4.5.ebuild, phonon-kde-4.5.3.ebuild,

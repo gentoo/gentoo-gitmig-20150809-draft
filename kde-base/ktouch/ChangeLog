@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.169 2010/11/03 16:30:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.170 2010/12/02 21:14:27 alexxy Exp $
+
+*ktouch-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +ktouch-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
 *ktouch-4.5.3 (03 Nov 2010)
 

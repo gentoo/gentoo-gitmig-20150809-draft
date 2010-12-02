@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.173 2010/11/14 13:44:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.174 2010/12/02 21:15:53 alexxy Exp $
+
+*ark-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +ark-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Move local USE lzma to global USE

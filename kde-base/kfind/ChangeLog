@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.171 2010/11/03 16:30:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.172 2010/12/02 21:17:12 alexxy Exp $
+
+*kfind-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +kfind-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
 *kfind-4.5.3 (03 Nov 2010)
 

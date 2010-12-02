@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.170 2010/11/03 16:30:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.171 2010/12/02 21:15:53 alexxy Exp $
+
+*kig-4.5.4 (02 Dec 2010)
+
+  02 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +kig-4.5.4.ebuild:
+  Version bump KDE SC 4.5.4
 
 *kig-4.5.3 (03 Nov 2010)
 
