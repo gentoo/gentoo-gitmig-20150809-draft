@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qenv/qenv-0.1.ebuild,v 1.2 2007/01/04 13:59:48 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qenv/qenv-0.1.ebuild,v 1.3 2010/12/02 01:12:00 flameeyes Exp $
 
 inherit autotools eutils
 
@@ -23,14 +20,13 @@ RDEPEND=">=app-emulation/qemu-0.7.2
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch	${FILESDIR}/${PN}-0.1-qemu-0.7.2.patch
-
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-0.1-qemu-0.7.2.patch
 	eautoreconf
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc README AUTHORS
+	emake install DESTDIR="${D}" || die
+	dodoc README AUTHORS || die
 }
