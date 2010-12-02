@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/ChangeLog,v 1.8 2007/12/02 18:36:11 hd_brummy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/ChangeLog,v 1.9 2010/12/02 16:14:05 hd_brummy Exp $
+
+  02 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-pin-0.0.20.ebuild, vdr-pin-0.1.9.ebuild, files/vdr-pin-0.1.9.diff:
+  clean up; moved to EAPI=2, fixed bug #339250
 
 *vdr-pin-0.1.9 (02 Dec 2007)
 
