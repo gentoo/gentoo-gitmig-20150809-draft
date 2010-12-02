@@ -1,6 +1,11 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.53 2010/05/30 11:46:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.54 2010/12/02 15:25:35 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  mdbtools-0.6_pre2-r2.ebuild:
+  Ad interim fix for building with libtool-2.4, by using automake-1.9. Thanks
+  to Alexander Dubov in bug #347395.
 
   30 May 2010; Hans de Graaff <graaff@gentoo.org>
   mdbtools-0.6_pre2-r2.ebuild,

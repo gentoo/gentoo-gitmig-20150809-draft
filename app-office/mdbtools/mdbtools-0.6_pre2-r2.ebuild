@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.8 2010/05/30 11:46:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.9 2010/12/02 15:25:35 flameeyes Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.7"
+
+# Will fail with 1.10+ because of config.rpath
+WANT_AUTOMAKE="1.9"
 
 inherit eutils autotools
 
