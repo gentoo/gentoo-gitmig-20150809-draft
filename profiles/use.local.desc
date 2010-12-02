@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6198 2010/12/01 20:32:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6199 2010/12/02 13:52:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1711,6 +1711,8 @@ mail-filter/spamassassin-fuzzyocr:ocrad - Enable support for the ocrad OCR engin
 mail-filter/spamassassin-fuzzyocr:tesseract - Enable support for the tesseract OCR engine
 mail-filter/spamdyke:tls - Enables TLS protocol for spamdyke
 mail-filter/zdkimfilter:debug -  Log process and signal information. Also leave the child process running for gdb examination. 
+mail-filter/zdkimfilter:mysql -  MySQL client based statistics based storage. 
+mail-filter/zdkimfilter:opendbx -  An alternate statistics based storage engine. 
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/courier:web - Enable the web interface
