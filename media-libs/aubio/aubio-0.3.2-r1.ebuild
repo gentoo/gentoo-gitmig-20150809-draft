@@ -1,8 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.8 2009/10/03 16:53:36 maekke Exp $
-
-WANT_AUTOMAKE=1.8
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r1.ebuild,v 1.9 2010/12/02 18:41:32 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -32,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/aubio-0.3.2-multilib.patch
-	eautomake
+	eautoreconf
 }
 
 src_compile() {
