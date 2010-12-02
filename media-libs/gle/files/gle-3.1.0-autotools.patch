@@ -1,0 +1,54 @@
+Index: gle-3.1.0/doc/Makefile.am
+===================================================================
+--- gle-3.1.0.orig/doc/Makefile.am
++++ gle-3.1.0/doc/Makefile.am
+@@ -7,5 +7,5 @@ doc_DATA =  COPYING.artistic gle-3.0.lsm
+ 
+ EXTRA_DIST = .cvsignore COPYING.artistic gle-3.0.lsm
+ 
+-SUFFIXES += .lsm
++SUFFIXES = .lsm
+ 
+Index: gle-3.1.0/doc/html/Makefile.am
+===================================================================
+--- gle-3.1.0.orig/doc/html/Makefile.am
++++ gle-3.1.0/doc/html/Makefile.am
+@@ -87,5 +87,5 @@ doc_DATA =  $(html_HTML) $(gif_HTML) $(g
+ 
+ EXTRA_DIST = .cvsignore $(doc_DATA)
+ 
+-SUFFIXES += .html .gif .jpg
++SUFFIXES = .html .gif .jpg
+ 
+Index: gle-3.1.0/man/Makefile.am
+===================================================================
+--- gle-3.1.0.orig/man/Makefile.am
++++ gle-3.1.0/man/Makefile.am
+@@ -22,7 +22,7 @@ EXTRA_DIST = \
+   $(man_RAW) \
+   Makefile.sgi
+ 
+-SUFFIXES += .man .3gle
++SUFFIXES = .man .3gle
+ 
+ # for the ordinary install, just copy the raw files ....
+ .man.3gle:
+@@ -38,4 +38,4 @@ SUFFIXES += .man .3gle
+ 	psroff -t -man < $< > $*.ps
+ 
+ 
+-CLEANFILES += $(man_MANS)
++CLEANFILES = $(man_MANS)
+Index: gle-3.1.0/src/Makefile.am
+===================================================================
+--- gle-3.1.0.orig/src/Makefile.am
++++ gle-3.1.0/src/Makefile.am
+@@ -49,7 +49,7 @@ EXTRA_DIST = \
+ INCLUDES = \
+   @X_CFLAGS@
+ 
+-CFLAGS = @CFLAGS@ -Wall -pedantic -Wstrict-prototypes  -Wconversion
++AM_CFLAGS = -Wall -pedantic -Wstrict-prototypes  -Wconversion
+ 
+ docdir = $(datadir)/doc/gle/
+ 

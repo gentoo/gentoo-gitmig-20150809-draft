@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.30 2010/09/16 17:13:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.31 2010/12/02 15:20:39 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> gle-3.1.0-r1.ebuild,
+  +files/gle-3.1.0-autotools.patch:
+  Fix buildsystem to work with modern automake, allows building with
+  libtool-2.4.
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> gle-3.0.1-r2.ebuild,
   gle-3.1.0-r1.ebuild:
