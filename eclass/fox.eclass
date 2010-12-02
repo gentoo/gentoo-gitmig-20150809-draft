@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.10 2010/10/31 22:14:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.11 2010/12/02 16:11:32 flameeyes Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -81,7 +81,6 @@ fi
 
 DEPEND="${DOXYGEN_DEP}
 	${RESWRAP_DEP}
-	=sys-devel/automake-1.4*
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/fox-${FOX_PV}"
@@ -135,7 +134,7 @@ fox_src_configure() {
 		  || FOXCONF+=" --enable-release"
 
 	econf ${FOXCONF} \
-	      $(use_with profile profiling)
+		  $(use_with profile profiling)
 }
 
 
