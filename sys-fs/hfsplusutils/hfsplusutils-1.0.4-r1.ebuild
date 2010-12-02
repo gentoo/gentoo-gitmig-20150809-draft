@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.18 2009/09/23 20:50:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.19 2010/12/02 00:44:07 flameeyes Exp $
 
-WANT_AUTOMAKE=1.6
-inherit autotools eutils libtool
+inherit autotools eutils
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (a PPC filesystem)"
@@ -28,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 	epatch "${FILESDIR}/${P}-string.patch"
 	#let's avoid the Makefile.cvs since isn't working for us
-	AM_OPTS="-a" eautoreconf
+	eautoreconf
 }
 
 src_install() {

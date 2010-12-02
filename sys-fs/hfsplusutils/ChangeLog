@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/hfsplusutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.14 2009/09/23 20:50:43 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.15 2010/12/02 00:44:07 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  hfsplusutils-1.0.4-r1.ebuild:
+  No longer force automake 1.6; this allows the package to be built with
+  libtool-2.4
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   hfsplusutils-1.0.4-r1.ebuild:
