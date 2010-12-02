@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.5 2010/11/01 22:10:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.6 2010/12/02 16:19:12 aballier Exp $
 
 EAPI=3
 
 inherit texlive-common
 
-TEXMFD_VERSION="1"
+TEXMFD_VERSION="2"
 
 DESCRIPTION="Library implementing generic path searching, configuration, and TeX-specific file searching"
 HOMEPAGE="http://tug.org/texlive/"

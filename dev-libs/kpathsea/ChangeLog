@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.5 2010/11/01 22:10:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.6 2010/12/02 16:19:12 aballier Exp $
+
+  02 Dec 2010; Alexis Ballier <aballier@gentoo.org>
+  kpathsea-6.0.0_p20100722.ebuild:
+  Update the config files for better prefix support, by Fabian Groffen
+  <grobian@gentoo.org>, bug #347295
 
   01 Nov 2010; Markus Meier <maekke@gentoo.org>
   kpathsea-6.0.0_p20100722.ebuild:
