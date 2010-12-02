@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.43 2010/09/15 11:06:33 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.44 2010/12/02 21:49:54 alexxy Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -356,16 +356,23 @@ kde4-meta_create_extractlists() {
 			;;
 		koffice)
 			KMEXTRACTONLY+="
-				config-endian.h.cmake
 				filters/config-filters.h.cmake
-				config-openexr.h.cmake
-				config-opengl.h.cmake
-				config-prefix.h.cmake
 			"
 			case ${PV} in
 				2.0.*)
 					KMEXTRACTONLY+="
-						config-openctl.h.cmake"
+						config-openctl.h.cmake
+						config-endian.h.cmake
+						config-openexr.h.cmake
+						config-opengl.h.cmake
+						config-prefix.h.cmake"
+				;;
+				2.[12].*)
+					KMEXTRACTONLY+="
+						config-endian.h.cmake
+						config-openexr.h.cmake
+						config-opengl.h.cmake
+						config-prefix.h.cmake"
 				;;
 			esac
 			;;

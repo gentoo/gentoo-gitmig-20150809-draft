@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.77 2010/11/24 23:54:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.78 2010/12/02 21:49:54 alexxy Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -13,7 +13,20 @@
 # NOTE: KDE 4 ebuilds by default define EAPI="2", this can be redefined but
 # eclass will fail with version older than 2.
 
-inherit kde4-functions base eutils
+# @ECLASS-VARIABLE: VIRTUALX_REQUIRED
+# @DESCRIPTION:
+#  Do we need an X server? Valid values are "always", "optional", and "manual".
+#  "tests" is a synonym for "optional". While virtualx.eclass supports in principle
+#  also the use of an X server during other ebuild phases, we only use it in
+#  src_test here. Most likely you'll want to set "optional", which introduces the
+#  use-flag "test" (if not already present), adds dependencies conditional on that
+#  use-flag, and automatically runs (only) the ebuild test phase with a virtual X server
+#  present. This makes things a lot more comfortable than the bare virtualx eclass.
+
+# In case the variable is not set in the ebuild, let virtualx eclass not do anything
+: ${VIRTUALX_REQUIRED:=manual}
+
+inherit kde4-functions base virtualx eutils
 
 get_build_type
 if [[ ${BUILD_TYPE} = live ]]; then
@@ -113,6 +126,18 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare ${export_fns} pkg_postinst pkg
 unset buildsystem_eclass
 unset export_fns
 
+# @ECLASS-VARIABLE: DECLARATIVE_REQUIRED
+# @DESCRIPTION:
+# Is qt-declarative required? Possible values are 'always', 'optional' and 'never'.
+# This variable must be set before inheriting any eclasses. Defaults to 'never'.
+DECLARATIVE_REQUIRED="${DECLARATIVE_REQUIRED:-never}"
+
+# @ECLASS-VARIABLE: QTHELP_REQUIRED
+# @DESCRIPTION:
+# Is qt-assistant required? Possible values are 'always', 'optional' and 'never'.
+# This variable must be set before inheriting any eclasses. Defaults to 'never'.
+QTHELP_REQUIRED="${QTHELP_REQUIRED:-never}"
+
 # @ECLASS-VARIABLE: OPENGL_REQUIRED
 # @DESCRIPTION:
 # Is qt-opengl required? Possible values are 'always', 'optional' and 'never'.
@@ -192,12 +217,45 @@ esac
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Determine version of qt we enforce as minimal for the package. 4.4.0 4.5.1...
-# 4.6.0 for 4.4 and 4.6.3 for 4.5 and later
-if slot_is_at_least 4.5 "${KDE_MINIMAL}"; then
+# 4.6.0 for 4.4, 4.6.3 for 4.5, and 4.7.0 for 4.6 and later
+if slot_is_at_least 4.6 "${KDE_MINIMAL}"; then
+	QT_MINIMAL="${QT_MINIMAL:-4.7.0}"
+elif slot_is_at_least 4.5 "${KDE_MINIMAL}"; then
 	QT_MINIMAL="${QT_MINIMAL:-4.6.3}"
 else
 	QT_MINIMAL="${QT_MINIMAL:-4.6.0}"
 fi
+
+# Declarative dependencies
+qtdeclarativedepend="
+	>=x11-libs/qt-declarative-${QT_MINIMAL}:4
+"
+case ${DECLARATIVE_REQUIRED} in
+	always)
+		COMMONDEPEND+=" ${qtdeclarativedepend}"
+		;;
+	optional)
+		IUSE+=" declarative"
+		COMMONDEPEND+=" declarative? ( ${qtdeclarativedepend} )"
+		;;
+	*) ;;
+esac
+unset qtdeclarativedepend
+
+# QtHelp dependencies
+qthelpdepend="
+	>=x11-libs/qt-assistant-${QT_MINIMAL}:4
+"
+case ${QTHELP_REQUIRED} in
+	always)
+		COMMONDEPEND+=" ${qthelpdepend}"
+		;;
+	optional)
+		IUSE+=" qthelp"
+		COMMONDEPEND+=" qthelp? ( ${qthelpdepend} )"
+		;;
+esac
+unset qthelpdepend
 
 # OpenGL dependencies
 qtopengldepend="
@@ -454,7 +512,7 @@ case ${BUILD_TYPE} in
 			fi
 			case ${KDEBASE} in
 				kdevelop)
-					EGIT_REPO_URI="git://gitorious.org/${KMNAME}/${KMMODULE}.git"
+					EGIT_REPO_URI="git://git.kde.org/${KMMODULE}"
 					;;
 			esac
 		fi
@@ -656,8 +714,27 @@ kde4-base_src_prepare() {
 		load_library_dependencies
 	fi
 
+	# Replace KDE4Workspace library targets
+	find "${S}" -name CMakeLists.txt \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_TASKMANAGER_(LIBRARY|LIBS)\}/taskmanager/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KWORKSPACE_(LIBRARY|LIBS)\}/kworkspace/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_SOLIDCONTROLIFACES_(LIBRARY|LIBS)\}/solidcontrolifaces/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_SOLIDCONTROL_(LIBRARY|LIBS)\}/solidcontrol/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_PROCESSUI_(LIBRARY|LIBS)\}/processui/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_LSOFUI_(LIBRARY|LIBS)\}/lsofui/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_PLASMACLOCK_(LIBRARY|LIBS)\}/plasmaclock/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERYCLIENT_(LIBRARY|LIBS)\}/nepomukqueryclient/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERY_(LIBRARY|LIBS)\}/nepomukquery/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KSCREENSAVER_(LIBRARY|LIBS)\}/kscreensaver/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_WEATHERION_(LIBRARY|LIBS)\}/weather_ion/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KWINEFFECTS_(LIBRARY|LIBS)\}/kwineffects/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KDECORATIONS_(LIBRARY|LIBS)\}/kdecorations/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KSGRD_(LIBRARY|LIBS)\}/ksgrd/g' {} + \
+		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KEPHAL_(LIBRARY|LIBS)\}/kephal/g' {} + \
+		|| die 'failed to replace KDE4Workspace library targets'
+
 	# Hack for manuals relying on outdated DTD, only outside kde-base/koffice/...
-	if [ -z ${KDEBASE} ]; then 
+	if [[ -z ${KDEBASE} ]]; then
 		find "${S}" -name "*.docbook" \
 			-exec sed -i -r \
 				-e 's:-//KDE//DTD DocBook XML V4\.1(\..)?-Based Variant V1\.[01]//EN:-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN:g' {} + \
@@ -755,7 +832,21 @@ kde4-base_src_test() {
 	cmake-utils_src_configure
 	kde4-base_src_compile
 
-	cmake-utils_src_test
+	if [[ ${VIRTUALX_REQUIRED} == always ]] ||
+		( [[ ${VIRTUALX_REQUIRED} != manual ]] && use test ); then
+
+		if [[ ${maketype} ]]; then
+			# surprise- we are already INSIDE virtualmake!!!
+			ewarn "QA Notice: This version of kde4-base.eclass includes the virtualx functionality."
+			ewarn "           You may NOT set maketype or call virtualmake from the ebuild. Applying workaround."
+			cmake-utils_src_test
+		else
+			export maketype="cmake-utils_src_test"
+			virtualmake
+		fi
+	else
+		cmake-utils_src_test
+	fi
 }
 
 # @FUNCTION: kde4-base_src_install
