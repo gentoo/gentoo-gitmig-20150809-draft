@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.36 2010/10/14 07:30:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.37 2010/12/02 18:24:24 flameeyes Exp $
+
+*bio2jack-0.9-r1 (02 Dec 2010)
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> -bio2jack-0.4.ebuild,
+  -bio2jack-0.7.ebuild, -bio2jack-0.9.ebuild, +bio2jack-0.9-r1.ebuild:
+  Remove old versions (yes this means removing stable versions) as they are
+  generated from prebuild tarballs that are not properly cleared out, add new
+  revision that clears out the prebuilt files before proceeding, and also work
+  when automake 1.9 is not installed in the system.
 
   14 Oct 2010; Tim Harder <radhermit@gentoo.org> bio2jack-0.9.ebuild:
   Remove --disable-dependency-tracking as it causes the static-libs USE flag
