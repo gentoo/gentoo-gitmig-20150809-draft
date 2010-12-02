@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.105 2010/11/03 07:02:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.106 2010/12/02 21:50:49 jlec Exp $
+
+*fftw-3.2.2-r1 (02 Dec 2010)
+
+  02 Dec 2010; Justin Lecher <jlec@gentoo.org> +fftw-3.2.2-r1.ebuild,
+  +files/fftw-3.2.2-pc-threads.patch:
+  Install pc files for threads
 
 *fftw-2.1.5-r7 (03 Nov 2010)
 
