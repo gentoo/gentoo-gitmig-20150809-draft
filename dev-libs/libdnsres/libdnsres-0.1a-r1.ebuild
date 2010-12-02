@@ -1,9 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.8 2007/11/16 15:30:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.9 2010/12/02 17:27:28 flameeyes Exp $
 
-WANT_AUTOMAKE=1.8
-inherit autotools
+inherit eutils autotools
 
 DESCRIPTION="A non-blocking DNS resolver library"
 HOMEPAGE="http://www.monkey.org/~provos/libdnsres/"
@@ -19,18 +18,13 @@ DEPEND="dev-libs/libevent"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:LIBOBJS:LTLIBOBJS:" \
-	-e "s:CFLAGS:AM_CFLAGS:" Makefile.am || die "sed of Makefile.am failed"
-	# See Makefile.in for automake version upstream dev uses.
-	eautomake || die "automake failed"
-}
 
-src_compile() {
-	econf || die "econf failed"
-	emake -j1 || die "make failed"
+	epatch "${FILESDIR}/${P}-autotools.patch"
+
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README
 }
