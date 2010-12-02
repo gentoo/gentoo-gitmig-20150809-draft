@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.0.1.ebuild,v 1.2 2010/12/02 11:58:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.0.2.ebuild,v 1.1 2010/12/02 11:58:18 tampakrap Exp $
 
 EAPI="2"
 
