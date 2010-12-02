@@ -1,19 +1,24 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.3 2009/11/01 18:46:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.4 2010/12/02 16:12:01 williamh Exp $
 
 EAPI="2"
 
 inherit eutils
-ESVN_REPO_URI="http://${PN}.googlecode.com/svn/trunk"
-inherit subversion
+
+if [[ ${PV} == "9999" ]] ; then
+	ESVN_REPO_URI="http://${PN}.googlecode.com/svn/trunk"
+	inherit subversion
+	KEYWORDS=""
+else
+	SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
+	KEYWORDS="~ppc ~x86"
+fi
 
 DESCRIPTION="the emacspeak audio desktop"
 HOMEPAGE="http://emacspeak.sourceforge.net/"
-SRC_URI=""
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="+espeak"
 
 DEPEND=">=virtual/emacs-22
@@ -21,6 +26,11 @@ DEPEND=">=virtual/emacs-22
 
 RDEPEND="${DEPEND}
 	>=dev-tcltk/tclx-8.4"
+
+src_prepare() {
+	# Allow user patches to be applied without modifying the ebuild
+	epatch_user
+}
 
 src_configure() {
 	make config || die
