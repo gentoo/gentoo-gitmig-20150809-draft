@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.54 2010/12/02 15:25:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.55 2010/12/02 15:51:21 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -mdbtools-0.6_pre1-r1.ebuild:
+  Remove old version as well.
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   mdbtools-0.6_pre2-r2.ebuild:
