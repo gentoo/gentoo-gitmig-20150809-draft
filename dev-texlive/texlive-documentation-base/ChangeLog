@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.33 2010/10/24 18:11:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.34 2010/12/02 19:51:45 grobian Exp $
+
+  02 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  texlive-documentation-base-2010.ebuild:
+  Marked ~ppc-macos
 
 *texlive-documentation-base-2010 (24 Oct 2010)
 
