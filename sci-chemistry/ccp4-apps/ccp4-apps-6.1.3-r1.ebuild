@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r1.ebuild,v 1.3 2010/06/15 08:48:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r1.ebuild,v 1.4 2010/12/02 07:25:57 jlec Exp $
 
 EAPI="2"
 
@@ -91,7 +91,6 @@ RDEPEND="X? ( ${X11DEPS} )
 	!app-office/sc
 	!<sci-chemistry/ccp4-6.1.2"
 DEPEND="${RDEPEND}
-	=sys-devel/automake-1.6*
 	X? (
 		x11-misc/imake
 		x11-proto/inputproto
