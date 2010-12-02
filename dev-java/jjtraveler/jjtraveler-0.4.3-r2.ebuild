@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r2.ebuild,v 1.3 2008/01/10 23:10:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3-r2.ebuild,v 1.4 2010/12/02 16:45:13 flameeyes Exp $
 
 JAVA_PKG_IUSE="source doc"
-WANT_AUTOMAKE="1.7"
 
 inherit autotools java-pkg-2
 
@@ -27,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/0.4.3-makefile.am.patch"
-	eautomake
+	eautoreconf
 
 	(
 		echo "#!/bin/sh"
