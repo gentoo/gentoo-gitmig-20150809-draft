@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.6 2010/09/27 06:35:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.7 2010/12/02 10:34:58 jlec Exp $
+
+  02 Dec 2010; Justin Lecher <jlec@gentoo.org> nlopt-2.2.ebuild,
+  nlopt-2.2.1.ebuild:
+  Restrict Py 3.*
 
 *nlopt-2.2.1 (27 Sep 2010)
 

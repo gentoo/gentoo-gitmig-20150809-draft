@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.1.ebuild,v 1.1 2010/09/27 06:35:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.1.ebuild,v 1.2 2010/12/02 10:34:58 jlec Exp $
 
 EAPI=3
+
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="python? *"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit eutils python
 
 DESCRIPTION="Non-linear optimization library"
@@ -13,11 +16,11 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MIT"
 KEYWORDS="~amd64 ~x86"
-
 SLOT="0"
 IUSE="cxx guile octave python static-libs"
 
-DEPEND="guile? ( dev-scheme/guile )
+DEPEND="
+	guile? ( dev-scheme/guile )
 	octave? ( sci-mathematics/octave )
 	python? ( dev-python/numpy )"
 RDEPEND="${DEPEND}"
@@ -77,7 +80,7 @@ src_install() {
 		python_clean_installation_image
 	fi
 
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 	for r in */README; do newdoc ${r} README.$(dirname ${r}); done
 }
 
