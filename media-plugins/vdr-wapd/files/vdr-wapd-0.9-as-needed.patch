@@ -10,7 +10,7 @@
  
  wappasswd: wappasswd.c
 -	$(CXX) $(CXXFLAGS) $(LIBS) -o wappasswd wappasswd.c
-+	$(CXX) $(CXXFLAGS) -o wappasswd wappasswd.c $(LIBS)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o wappasswd wappasswd.c $(LIBS)
  
  dist: clean
  	@-rm -rf $(TMPDIR)/$(ARCHIVE)
