@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12243 2010/12/02 07:39:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12244 2010/12/02 15:38:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -700,6 +700,7 @@ app-benchmarks/xfbsuite
 >=dev-lang/vala-0.11
 >=sys-power/upower-0.9.6
 >=dev-libs/dbus-glib-0.92
+>=sys-fs/udisks-1.0.2
 
 # Rémi Cardona <remi@gentoo.org> (21 Sep 2010)
 # Dead upstream, ebuild does more work than its Makefiles,
