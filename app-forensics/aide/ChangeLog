@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.54 2010/11/20 08:50:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.55 2010/12/02 01:14:51 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> aide-0.13.1.ebuild:
+  Drop WANT_AUTOMAKE=latest.
 
   20 Nov 2010; Thomas Kahle <tomka@gentoo.org> aide-0.14.2.ebuild:
   x86 stable per bug 342725

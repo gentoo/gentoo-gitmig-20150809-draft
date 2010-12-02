@@ -1,8 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.13 2010/11/03 02:30:28 matsuu Exp $
-WANT_AUTOCONF='latest'
-WANT_AUTOMAKE='latest'
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.14 2010/12/02 01:14:51 flameeyes Exp $
+
 inherit eutils autotools
 
 DESCRIPTION="AIDE (Advanced Intrusion Detection Environment) is a replacement for Tripwire"
