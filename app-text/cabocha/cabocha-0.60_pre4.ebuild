@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/cabocha-0.60_pre4.ebuild,v 1.1 2008/10/08 00:24:19 matsuu Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/cabocha-0.60_pre4.ebuild,v 1.2 2010/12/02 01:17:51 flameeyes Exp $
 
 inherit autotools eutils multilib
 

@@ -1,9 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.4 2010/08/06 17:25:50 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.5 2010/12/02 01:21:49 flameeyes Exp $
 
 inherit autotools eutils ruby
 

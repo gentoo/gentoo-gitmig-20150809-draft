@@ -1,9 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.53.ebuild,v 1.1 2009/11/08 13:09:49 patrick Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/crf++-0.53.ebuild,v 1.2 2010/12/02 01:18:51 flameeyes Exp $
 
 inherit autotools eutils
 

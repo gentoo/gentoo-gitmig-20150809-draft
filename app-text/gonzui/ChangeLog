@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gonzui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.13 2010/08/06 17:25:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.14 2010/12/02 01:21:49 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> gonzui-1.2-r1.ebuild:
+  Drop WANT_AUTOMAKE=latest.
 
   06 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> gonzui-1.2.ebuild,
   gonzui-1.2-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cabocha
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.6 2010/11/25 12:37:10 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cabocha/ChangeLog,v 1.7 2010/12/02 01:17:51 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  cabocha-0.60_pre4.ebuild:
+  Drop WANT_AUTOMAKE=latest.
 
   25 Nov 2010; Akinori Hattori <hattya@gentoo.org>
   -files/cabocha-0.52-amd64.patch:
