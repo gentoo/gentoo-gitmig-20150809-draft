@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.1 2010/12/02 07:28:54 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.2 2010/12/02 08:05:34 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Typing tutorial with lots of eye-candy"
@@ -14,12 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl
 	media-libs/sdl-pango
 	media-libs/sdl-mixer
 	media-libs/sdl-image
 	media-libs/sdl-ttf"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/tuxtype_w_fonts-${PV}
 
