@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.46 2010/02/21 21:41:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.47 2010/12/02 17:18:47 hd_brummy Exp $
+
+  02 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-burn-0.2.0_beta1.ebuild, +files/vdr-burn-0.2.0_beta1_ldflags.diff:
+  minor fixes; fixed #339328 dont respect LDFLAGS
 
   21 Feb 2010; Matthias Schwarzott <zzam@gentoo.org>
   vdr-burn-0.2.0_beta1.ebuild:

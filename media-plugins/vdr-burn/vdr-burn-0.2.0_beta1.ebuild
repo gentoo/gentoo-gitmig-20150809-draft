@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta1.ebuild,v 1.2 2010/02/21 21:41:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta1.ebuild,v 1.3 2010/12/02 17:18:47 hd_brummy Exp $
 
 EAPI="2"
 
@@ -59,10 +59,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/vdr-burn-0.2.0_beta1-makefile.diff"
-	epatch "${FILESDIR}/vdr-burn-0.2.0_beta1-gentoo-projectx.diff"
-	epatch "${FILESDIR}/vdr-burn-0.2.0_beta1-gentoo-paths.diff"
-	epatch "${FILESDIR}/vdr-burn-0.2.0_beta1-setdefaults-V2.diff"
+	epatch "${FILESDIR}/${P}-makefile.diff"
+	epatch "${FILESDIR}/${P}-gentoo-projectx.diff"
+	epatch "${FILESDIR}/${P}-gentoo-paths.diff"
+	epatch "${FILESDIR}/${P}-setdefaults-V2.diff"
+	epatch "${FILESDIR}/${P}_ldflags.diff"
 
 	vdr-plugin_src_prepare
 
