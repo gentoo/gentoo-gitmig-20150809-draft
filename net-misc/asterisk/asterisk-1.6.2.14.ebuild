@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.13-r1.ebuild,v 1.1 2010/09/16 17:31:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.14.ebuild,v 1.1 2010/12/02 13:37:30 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -9,12 +9,16 @@ MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz"
+SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
+	 mirror://gentoo/gentoo-asterisk-patchset-0.1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps dahdi debug doc freetds iconv jabber ldap lua keepsrc logrotate misdn newt +samples oss postgres radius snmp span speex ssl sqlite static vorbis"
+IUSE="alsa +caps dahdi doc freetds iconv jabber ldap lua keepsrc misdn newt +samples oss postgres radius snmp span speex ssl sqlite vorbis"
+
+EPATCH_SUFFIX="patch"
+PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
@@ -49,18 +53,6 @@ PDEPEND="net-misc/asterisk-core-sounds
 	net-misc/asterisk-moh-opsound"
 
 S="${WORKDIR}/${MY_P}"
-
-PATCHES=(
-	"${FILESDIR}/1.6.2/${PN}-1.6.2.9-gsm-pic.patch"
-	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-pri-missing-keyword.patch"
-	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-inband-indications.patch"
-	"${FILESDIR}/1.6.1/${PN}-1.6.1-uclibc.patch"
-	"${FILESDIR}/1.6.2/${PN}-1.6.2.2-nv-faxdetect.patch"
-	"${FILESDIR}/1.6.2/${PN}-1.6.2.11-strip-noapi.patch"
-	"${FILESDIR}/1.6.2/${P}-iax2-peerstate.patch"
-	"${FILESDIR}/1.6.2/${P}-dahdiras-without-root.patch"
-	"${FILESDIR}/1.6.2/${P}-backport-bri-net-ptmp.patch"
-)
 
 pkg_setup() {
 	CONFIG_CHECK="~!NF_CONNTRACK_SIP"
@@ -111,7 +103,7 @@ src_configure() {
 	#
 	# blank out sounds/sounds.xml file to prevent
 	# asterisk from installing sounds files (we pull them in via
-	# asterisk-{core,extra}-sounds and asterisk-moh-opsound.
+	# asterisk-{core,extra}-sounds and asterisk-moh-opsound).
 	#
 	>"${S}"/sounds/sounds.xml
 }
@@ -204,13 +196,8 @@ src_install() {
 	dodoc "${FILESDIR}/1.6.2/find_call_ids.sh"
 	dodoc "${FILESDIR}/1.6.2/call_data.txt"
 
-	# install logrotate snippet; bug #329281
-	#
-	if use logrotate
-	then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/1.6.2/asterisk.logrotate2" asterisk
-	fi
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/1.6.2/asterisk.logrotate3" asterisk
 }
 
 pkg_preinst() {
@@ -223,22 +210,15 @@ pkg_postinst() {
 	# Announcements, warnings, reminders...
 	#
 	einfo "Asterisk has been installed"
-	echo
+	einfo
 	elog "If you want to know more about asterisk, visit these sites:"
 	elog "http://www.asteriskdocs.org/"
 	elog "http://www.voip-info.org/wiki-Asterisk"
-	echo
+	einfo
 	elog "http://www.automated.it/guidetoasterisk.htm"
-	echo
+	einfo
 	elog "Gentoo VoIP IRC Channel:"
 	elog "#gentoo-voip @ irc.freenode.net"
-	echo
-	echo
-	elog "1.6.1 -> 1.6.2 changes that you may care about:"
-	elog "canreinvite -> directmedia (sip.conf)"
-	elog "extensive T.38 (fax) changes"
-	elog "http://svn.asterisk.org/svn/${PN}/tags/${PV}/UPGRADE.txt"
-	elog "or: bzless ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.bz2"
 }
 
 pkg_config() {

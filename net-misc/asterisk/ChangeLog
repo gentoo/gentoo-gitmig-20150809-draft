@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.275 2010/12/01 17:54:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.276 2010/12/02 13:37:30 chainsaw Exp $
+
+*asterisk-1.6.2.14 (02 Dec 2010)
+
+  02 Dec 2010; <chainsaw@gentoo.org> +files/1.6.2/asterisk.initd3,
+  -files/1.6.2/asterisk.logrotate, -files/1.6.2/asterisk.logrotate2,
+  -asterisk-1.6.2.13.ebuild, -asterisk-1.6.2.13-r1.ebuild,
+  +asterisk-1.6.2.14.ebuild:
+  Consolidate patchset in a tarball on the mirrors, closes bug #344015 by
+  Marcin Baczyński. Drop logrotate USE-flag, always install snippet, closes
+  bug #344181 by Jeroen Roovers. Updated init script to fix restart bug by Jaco
+  Kroon, closes bug #345307. Version bump closes bug #346737 by Jesse Adelman,
+  with an honourable mention for Kerin Millar for pointing out some QA matters
+  which are now fixed.
 
 *asterisk-1.4.37 (01 Dec 2010)
 
