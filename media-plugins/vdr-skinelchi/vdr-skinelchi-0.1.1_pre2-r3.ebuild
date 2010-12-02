@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.10 2010/12/01 18:29:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.11 2010/12/02 18:11:13 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -42,4 +42,3 @@ src_unpack() {
 	#fix compile warnings , gcc-1.4.x
 	sed -i symbols/*.xpm -e "s:static char:static const char:"
 }
-
