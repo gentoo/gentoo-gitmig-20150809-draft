@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.3.ebuild,v 1.1 2010/12/02 17:16:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.3.ebuild,v 1.2 2010/12/02 19:38:54 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -121,6 +121,11 @@ pkg_setup() {
 #		die "Rebuild without the shark USE flag on or with the zero USE flag turned on."
 #	  fi
 #	fi
+
+	if use nsplugin && ! use webstart ; then
+		eerror "WebStart is required if building the plugin."
+		die 'Re-try with USE="webstart"'
+	fi
 
 	# quite a hack since java-config does not provide a way for a package
 	# to limit supported VM's for building and their preferred order
