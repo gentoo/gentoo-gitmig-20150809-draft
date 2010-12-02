@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.2 2010/10/31 20:16:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.3 2010/12/02 11:14:44 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,9 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.2.0-autotools.patch
+	epatch \
+		"${FILESDIR}"/${PN}-2.2.0-autotools.patch \
+		"${FILESDIR}"/${PV}-test.patch
 	eautoreconf
 }
 
