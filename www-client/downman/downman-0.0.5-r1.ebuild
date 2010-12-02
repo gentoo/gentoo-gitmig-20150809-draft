@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.3 2007/11/04 14:02:32 drac Exp $
-
-WANT_AUTOMAKE=1.7
+# $Header: /var/cvsroot/gentoo-x86/www-client/downman/downman-0.0.5-r1.ebuild,v 1.4 2010/12/02 18:56:13 flameeyes Exp $
 
 inherit autotools eutils gnome2
 
