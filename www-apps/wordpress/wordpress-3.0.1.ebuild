@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.0.1.ebuild,v 1.2 2010/12/02 11:58:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.0.1.ebuild,v 1.3 2010/12/02 12:06:07 tampakrap Exp $
 
 EAPI="2"
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-		 ( || ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) )"
+RDEPEND="|| ( dev-lang/php[mysql] dev-lang/php[mysqli] )
+		 || ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
 
 S="${WORKDIR}"/${PN}
 
