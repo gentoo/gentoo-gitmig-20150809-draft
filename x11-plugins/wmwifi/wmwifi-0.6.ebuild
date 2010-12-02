@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.6.ebuild,v 1.4 2008/06/28 07:22:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.6.ebuild,v 1.5 2010/12/02 15:46:06 flameeyes Exp $
 
 IUSE=""
 HOMEPAGE="http://wmwifi.digitalssg.net"
@@ -17,16 +17,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	x11-proto/xproto
-	=sys-devel/automake-1.4*"
-
-src_unpack()
-{
-	unpack ${A}
-
-	# eek - package is already compiled!
-	rm "${S}/src/*.o" "${S}/src/wmwifi"
-}
+	x11-proto/xproto"
 
 src_compile()
 {
@@ -38,7 +29,7 @@ src_compile()
 
 src_install()
 {
-	dobin src/wmwifi
-	doman wmwifi.1
-	dodoc AUTHORS README
+	dobin src/wmwifi || die
+	doman wmwifi.1 || die
+	dodoc AUTHORS README || die
 }

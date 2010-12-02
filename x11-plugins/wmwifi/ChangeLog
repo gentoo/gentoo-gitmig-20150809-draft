@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmwifi
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.19 2008/06/28 07:22:01 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.20 2010/12/02 15:46:06 flameeyes Exp $
+
+  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> wmwifi-0.6.ebuild:
+  QA: remove unneeded dependency over automake 1.4; remove unneeded src_unpack;
+  add die statements to install.
 
   28 Jun 2008; Markus Meier <maekke@gentoo.org> wmwifi-0.6.ebuild:
   x86 stable, bug #229597
