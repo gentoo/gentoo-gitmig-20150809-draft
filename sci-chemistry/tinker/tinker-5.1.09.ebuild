@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.09.ebuild,v 1.2 2010/10/28 15:47:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.09.ebuild,v 1.3 2010/12/02 10:51:37 jlec Exp $
 
 EAPI="2"
 FORTRAN="gfortran ifc"
@@ -48,7 +48,7 @@ src_compile() {
 		OPTFLAGS="${FFLAGS}" \
 		LINKFLAGS="${LDFLAGS} -Wl,-rpath ${javalib}" \
 		INCLUDEDIR="$(java-pkg_get-jni-cflags) -I${EPREFIX}/usr/include" \
-		LIBS="$(pkg-config --libs apbs) -lmaloc -L${javalib} -ljvm" \
+		LIBS=" -lmaloc -L${javalib} -ljvm" \
 		all || die
 	mkdir "${S}"/../bin || die
 
