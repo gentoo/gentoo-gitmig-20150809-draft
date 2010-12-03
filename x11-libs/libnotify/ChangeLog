@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.55 2010/07/20 17:06:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.56 2010/12/03 22:57:11 wired Exp $
+
+  03 Dec 2010; Alex Alexander <wired@gentoo.org> libnotify-0.4.5.ebuild:
+  added x11-wm/awesome to PDEPEND, bug #342259
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libnotify-0.4.5.ebuild:
   Drop HPPA keywording (bug #324511).

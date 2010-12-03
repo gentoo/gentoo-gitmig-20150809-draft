@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.4.5.ebuild,v 1.15 2010/07/20 17:06:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.4.5.ebuild,v 1.16 2010/12/03 22:57:11 wired Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 PDEPEND="|| ( x11-misc/notification-daemon
-	xfce-extra/xfce4-notifyd )"
+	xfce-extra/xfce4-notifyd
+	>=x11-wm/awesome-3.4.4 )"
 
 src_configure() {
 	econf \
