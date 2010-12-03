@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.9.ebuild,v 1.1 2010/11/27 12:57:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.9.ebuild,v 1.2 2010/12/03 16:29:41 flameeyes Exp $
 
 EAPI="2"
 
-inherit eutils pam toolchain-funcs
+inherit eutils pam toolchain-funcs autotools
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -33,9 +33,6 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	>=sys-libs/db-4
 	dev-lang/perl"
 DEPEND="${COMMON_DEPEND}
-	sys-devel/automake
-	sys-devel/autoconf
-	sys-devel/libtool
 	sys-apps/ed
 	test? ( dev-util/cppunit )"
 RDEPEND="${COMMON_DEPEND}
@@ -69,8 +66,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-qafixes.patch
 	epatch "${FILESDIR}"/${P}-libmd5.patch
 
-	# eautoreconf breaks lib/libLtdl/libtool script
-	./bootstrap.sh || die "autoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
