@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Template
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.38 2009/05/01 22:22:03 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.39 2010/12/03 00:47:15 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> HTML-Template-2.9.ebuild:
+  add ~arm (bug 302981)
 
   01 May 2009; Torsten Veller <tove@gentoo.org> -HTML-Template-2.8.ebuild:
   Cleanup

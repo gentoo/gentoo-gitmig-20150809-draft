@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/HTML-Template-2.9.ebuild,v 1.6 2007/07/11 15:45:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/HTML-Template-2.9.ebuild,v 1.7 2010/12/03 00:47:15 xmw Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/S/SA/SAMTREGAR/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 SRC_TEST="do"
 

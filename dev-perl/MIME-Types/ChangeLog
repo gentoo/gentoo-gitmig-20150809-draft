@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.67 2010/11/05 14:08:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.68 2010/12/03 00:45:02 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> MIME-Types-1.29.ebuild,
+  MIME-Types-1.30.ebuild, MIME-Types-1.31.ebuild:
+  add ~arm (bug 302981)
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   MIME-Types-1.29.ebuild:
