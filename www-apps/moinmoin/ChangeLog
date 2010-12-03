@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.69 2010/10/30 17:55:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.70 2010/12/03 00:38:12 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> moinmoin-1.8.4.ebuild,
+  moinmoin-1.8.8.ebuild:
+  added ~arm (bug 302981)
 
   30 Oct 2010; Raúl Porcel <armin76@gentoo.org> moinmoin-1.8.8.ebuild:
   sparc stable wrt #305663
