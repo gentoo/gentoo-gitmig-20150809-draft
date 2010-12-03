@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.46 2010/12/03 07:16:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.47 2010/12/03 18:35:56 williamh Exp $
+
+  03 Dec 2010; William Hubbs <williamh@gentoo.org> emacspeak-33.0.ebuild,
+  emacspeak-9999.ebuild:
+  Add ~amd64 for bug #347668.
 
   02 Dec 2010; William Hubbs <williamh@gentoo.org> emacspeak-9999.ebuild:
   Rework live ebuild so that it can be a template for future ebuilds and

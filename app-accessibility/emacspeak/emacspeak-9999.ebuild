@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.4 2010/12/02 16:12:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.5 2010/12/03 18:35:56 williamh Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
-	KEYWORDS="~ppc ~x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
 fi
 
 DESCRIPTION="the emacspeak audio desktop"
