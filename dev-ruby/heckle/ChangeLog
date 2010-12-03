@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/heckle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.16 2010/10/23 15:51:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.17 2010/12/03 17:29:21 grobian Exp $
+
+  03 Dec 2010; Fabian Groffen <grobian@gentoo.org> heckle-1.4.3-r2.ebuild:
+  Added Prefix keywords
 
   23 Oct 2010; Jeroen Roovers <jer@gentoo.org> heckle-1.4.3-r2.ebuild:
   Marked ~hppa (bug #337956).
