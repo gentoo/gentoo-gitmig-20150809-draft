@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.10 2010/11/28 19:16:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.11 2010/12/03 01:28:21 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Try-Tiny-0.06.ebuild,
+  Try-Tiny-0.07.ebuild:
+  add ~arm (bug 302981)
 
   28 Nov 2010; Raúl Porcel <armin76@gentoo.org> Try-Tiny-0.07.ebuild:
   Add ~alpha/~ia64/~sparc wrt #345605

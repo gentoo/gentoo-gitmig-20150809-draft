@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Singleton
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.22 2010/01/09 17:34:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.23 2010/12/03 01:24:11 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Class-Singleton-1.03.ebuild,
+  Class-Singleton-1.4.ebuild:
+  add ~arm (bug 302981)
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Class-Singleton-1.4.ebuild:
