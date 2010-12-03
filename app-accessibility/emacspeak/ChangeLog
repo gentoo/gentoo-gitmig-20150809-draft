@@ -1,6 +1,6 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.45 2010/12/02 16:12:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.46 2010/12/03 07:16:27 tove Exp $
 
   02 Dec 2010; William Hubbs <williamh@gentoo.org> emacspeak-9999.ebuild:
   Rework live ebuild so that it can be a template for future ebuilds and
@@ -97,7 +97,7 @@
   emacspeak-23.ebuild, emacspeak-24.ebuild, emacspeak-25.ebuild:
   Fix the quotation.
 
-  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org> emacspeak-22.ebuild:
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> emacspeak-22.ebuild:
   (QA) RESTRICT clean up.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
