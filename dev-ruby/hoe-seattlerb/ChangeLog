@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.15 2010/11/13 17:36:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.16 2010/12/03 16:42:58 grobian Exp $
+
+  03 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  hoe-seattlerb-1.2.2-r1.ebuild:
+  Added Prefix keywords
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> hoe-seattlerb-1.2.2.ebuild:
   ia64 stable wrt #333947
