@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.1 2010/11/26 12:29:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.2 2010/12/03 18:37:00 grobian Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc CHANGELOG.ja.rdoc README.rdoc README.ja.rdoc"
 
-inherit ruby-fakegem eutils
+inherit ruby-fakegem eutils multilib
 
 DESCRIPTION="Nokogiri is an HTML, XML, SAX, and Reader parser."
 HOMEPAGE="http://nokogiri.rubyforge.org/"
@@ -66,7 +66,7 @@ each_ruby_compile() {
 	emake -Cext/${PN} \
 		CFLAGS="${CFLAGS} -fPIC" \
 		archflag="${LDFLAGS}" || die "make extension failed"
-	cp -l ext/${PN}/${PN}.so lib/${PN}/ || die
+	cp -l ext/${PN}/${PN}$(get_modname) lib/${PN}/ || die
 }
 
 each_ruby_test() {
