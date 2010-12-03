@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072.ebuild,v 1.3 2010/07/28 13:05:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072.ebuild,v 1.4 2010/12/03 18:46:33 patrick Exp $
 
 EAPI="3"
 
@@ -141,7 +141,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Make sure you have recieved the an Intel license."
+	elog "Make sure you have recieved an Intel license."
 	elog "To receive a non-commercial license, you need to register at:"
 	elog "http://software.intel.com/en-us/articles/non-commercial-software-development/"
 	elog "Install the license file into ${EROOT}opt/intel/licenses."
