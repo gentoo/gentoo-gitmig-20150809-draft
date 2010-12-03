@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/takcd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/ChangeLog,v 1.15 2008/11/30 10:07:20 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/ChangeLog,v 1.16 2010/12/03 00:33:13 flameeyes Exp $
+
+  03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> takcd-0.10.ebuild:
+  Rebuild with modern autotools.
 
   30 Nov 2008; <ssuominen@gentoo.org> takcd-0.10.ebuild:
   Remove redudant src_compile. Use DESTDIR. Don't install README.SunOS.

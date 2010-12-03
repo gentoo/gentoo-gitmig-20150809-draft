@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.14 2008/11/30 10:07:20 ssuominen Exp $
-
-WANT_AUTOMAKE="1.4"
-WANT_AUTOCONF="2.5"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.15 2010/12/03 00:33:13 flameeyes Exp $
 
 inherit autotools
 
