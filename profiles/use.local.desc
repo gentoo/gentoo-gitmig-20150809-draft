@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6202 2010/12/03 14:32:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6203 2010/12/03 17:33:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -641,6 +641,7 @@ app-portage/layman:mercurial - Support dev-vcs/mercurial based overlays
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
 app-portage/portato:eix - Enable eix support
 app-portage/portato:userpriv - Allow emerge processes as normal user
+app-portage/tatt:templates - Install template scripts to be used with tatt
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/bash:mem-scramble - Build with custom malloc/free overwriting allocated/freed memory
 app-shells/bash:net - Enable /dev/tcp/host/port redirection
@@ -3574,13 +3575,23 @@ sec-policy/selinux-base-policy:peer_perms - Enable the labeled networking peer p
 sys-apps/acl:nfs -  add support for NFS acls 
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
 sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
+sys-apps/flashrom:atahpt - Highpoint (HPT) ATA/RAID controller support
+sys-apps/flashrom:bitbang_spi - Bitbanging SPI infrastructure
+sys-apps/flashrom:buspirate_spi - Enable Bus Pirate SPI programmer
 sys-apps/flashrom:buspiratespi - Enable Bus Pirate SPI programmer
+sys-apps/flashrom:dediprog - Dediprog SF100 support
 sys-apps/flashrom:drkaiser - Enable Dr. Kaiser programmer
 sys-apps/flashrom:dummy - Enable dummy tracing
+sys-apps/flashrom:ft2232_spi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
 sys-apps/flashrom:ftdi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
+sys-apps/flashrom:gfxnvidia - Enable NVIDIA programmer
 sys-apps/flashrom:internal - Enable internal/onboard support
 sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
+sys-apps/flashrom:nicintel_spi - Support for SPI on Intel NICs
+sys-apps/flashrom:nicnatsemi - Support for National Semiconductor NICs
+sys-apps/flashrom:nicrealtek - Support for Realtek NICs
 sys-apps/flashrom:nvidia - Enable NVIDIA programmer
+sys-apps/flashrom:rayer_spi - RayeR SPIPGM hardware support
 sys-apps/flashrom:satasii - Enable programmer for SiI SATA controllers
 sys-apps/flashrom:serprog - Enable Serial Flasher programmer
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
