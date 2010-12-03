@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.378 2010/11/14 12:44:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.379 2010/12/03 12:55:59 anarchy Exp $
+
+*xulrunner-1.9.2.12-r1 (03 Dec 2010)
+
+  03 Dec 2010; Jory A. Pratt <anarchy@gentoo.org>
+  +xulrunner-1.9.2.12-r1.ebuild, +files/fix-animated-gifs.patch:
+  Resovle anitmated gif rendering when using cairo-1.10.0, bug #337813
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.12.ebuild:
   alpha/ia64/sparc stable wrt #342847
