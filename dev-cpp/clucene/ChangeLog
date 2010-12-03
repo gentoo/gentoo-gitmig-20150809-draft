@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.31 2010/07/22 08:11:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.32 2010/12/03 10:41:24 grozin Exp $
+
+  03 Dec 2010; Andrey Grozin <grozin@gentoo.org> clucene-0.9.21b-r1.ebuild,
+  +files/clucene-0.9.21b-doxygen.patch:
+  Trivial fix (bug #346607), thanks to Keith Amidon <camalot@picnicpark.org>
 
   22 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org> clucene-9999.ebuild,
   +files/clucene-9999-cmake.patch:

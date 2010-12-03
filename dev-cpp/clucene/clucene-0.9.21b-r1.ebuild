@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.3 2010/05/26 14:47:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.4 2010/12/03 10:41:24 grozin Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ RDEPEND=""
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc44.patch"
+	"${FILESDIR}/${P}-doxygen.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
