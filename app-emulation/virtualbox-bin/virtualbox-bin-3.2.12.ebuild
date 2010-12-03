@@ -1,19 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.8.ebuild,v 1.1 2010/08/06 23:49:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.12.ebuild,v 1.1 2010/12/03 13:58:57 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-64453
+MY_PV=${PV}-68302
+SDK_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${MY_PV}.zip )"
+	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )"
 
 LICENSE="PUEL"
 SLOT="0"
@@ -158,7 +159,7 @@ src_unpack() {
 	unpack ./VirtualBox.tar.bz2
 
 	if use sdk; then
-		unpack VirtualBoxSDK-${MY_PV}.zip
+		unpack VirtualBoxSDK-${SDK_PV}.zip
 	fi
 }
 
