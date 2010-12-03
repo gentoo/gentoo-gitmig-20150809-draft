@@ -1,6 +1,12 @@
 # ChangeLog for games-board/capitalism
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/ChangeLog,v 1.7 2010/11/30 21:13:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/ChangeLog,v 1.8 2010/12/03 12:58:19 tupone Exp $
+
+*capitalism-0.5.1 (03 Dec 2010)
+
+  03 Dec 2010; Tupone Alfredo <tupone@gentoo.org> +capitalism-0.5.1.ebuild,
+  +files/capitalism-0.5.1-qt47.patch:
+  Version bump to 0.5.1 Bug #306013 by hitachi
 
   30 Nov 2010; Markus Meier <maekke@gentoo.org> capitalism-0.2-r1.ebuild:
   x86 stable, bug #347203
