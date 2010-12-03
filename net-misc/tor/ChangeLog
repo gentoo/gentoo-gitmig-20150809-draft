@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.214 2010/11/28 12:45:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.215 2010/12/03 08:55:31 fauli Exp $
+
+  03 Dec 2010; Christian Faulhammer <fauli@gentoo.org> tor-0.2.1.27.ebuild:
+  request USE=tordns on net-proxy/tsocks to raise level of anonymity
 
   28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> tor-0.2.1.27.ebuild:
   Stable on amd64 wrt bug #346759
