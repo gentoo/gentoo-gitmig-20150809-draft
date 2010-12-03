@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.201 2010/11/24 19:00:55 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.202 2010/12/03 21:41:22 darkside Exp $
+
+  03 Dec 2010; Jeremy Olexa <darkside@gentoo.org>
+  gentoolkit-0.3.0_rc11-r3.ebuild:
+  Add ~amd64-linux, not sure how/why it was missed earlier by me
 
 *gentoolkit-0.3.0_rc11-r3 (24 Nov 2010)
 
