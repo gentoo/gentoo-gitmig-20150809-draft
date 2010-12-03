@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.22 2010/09/12 14:32:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.23 2010/12/03 18:02:33 grobian Exp $
+
+  03 Dec 2010; Fabian Groffen <grobian@gentoo.org> syntax-1.0.0-r2.ebuild:
+  Added Prefix keywords
 
 *syntax-1.0.0-r2 (12 Sep 2010)
 
