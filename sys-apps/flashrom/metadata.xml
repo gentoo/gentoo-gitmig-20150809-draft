@@ -14,13 +14,25 @@
 		<description>Please CC on all bugs</description>
 	</maintainer>
 	<use>
+		<!-- flashrom 0.9.2 only -->
 		<flag name="buspiratespi">Enable Bus Pirate SPI programmer</flag>
+		<flag name="ftdi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
+		<flag name="nvidia">Enable NVIDIA programmer</flag>
+
+		<flag name="atahpt">Highpoint (HPT) ATA/RAID controller support</flag>
+		<flag name="bitbang_spi">Bitbanging SPI infrastructure</flag>
+		<flag name="buspirate_spi">Enable Bus Pirate SPI programmer</flag>
+		<flag name="dediprog">Dediprog SF100 support</flag>
 		<flag name="drkaiser">Enable Dr. Kaiser programmer</flag>
 		<flag name="dummy">Enable dummy tracing</flag>
-		<flag name="ftdi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
+		<flag name="ft2232_spi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
+		<flag name="gfxnvidia">Enable NVIDIA programmer</flag>
 		<flag name="internal">Enable internal/onboard support</flag>
 		<flag name="nic3com">Enable 3Com NIC programmer</flag>
-		<flag name="nvidia">Enable NVIDIA programmer</flag>
+		<flag name="nicintel_spi">Support for SPI on Intel NICs</flag>
+		<flag name="nicnatsemi">Support for National Semiconductor NICs</flag>
+		<flag name="nicrealtek">Support for Realtek NICs</flag>
+		<flag name="rayer_spi">RayeR SPIPGM hardware support</flag>
 		<flag name="satasii">Enable programmer for SiI SATA controllers</flag>
 		<flag name="serprog">Enable Serial Flasher programmer</flag>
 		<flag name="wiki">Enable wiki informations, like supported devices etc.</flag>
@@ -28,7 +40,7 @@
 	<longdescription lang="en">
 flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images on mainboards, network/graphics/storage controller cards, and various programmer devices.
 
-    * Supports more than 225 flash chips, 128 chipsets, 186 mainboards, 19 PCI devices, 3 USB devices and all external programmers which use the serprog protocol.
+    * Supports more than 261 flash chips, 152 chipsets, 259 mainboards, 43 PCI devices, 5 USB devices and various parallel/serial port-based programmers.
     * Supports parallel, LPC, FWH and SPI flash interfaces and various chip packages (DIP32, PLCC32, DIP8, SO8/SOIC8, TSOP32, TSOP40, TSOP48, and more)
     * No physical access needed, root access is sufficient.
     * No bootable floppy disk, bootable CD-ROM or other media needed.
@@ -37,6 +49,6 @@ flashrom is a utility for identifying, reading, writing, verifying and erasing f
     * Crossflashing and hotflashing is possible as long as the flash chips are electrically and logically compatible (same protocol). Great for recovery.
     * Scriptability. Reflash a whole pool of identical machines at the same time from the command line. It is recommended to check flashrom output and error codes.
     * Speed. flashrom is often much faster than most vendor flash tools.
-    * Portability. Supports DOS, Linux, FreeBSD, NetBSD, DragonFly BSD, Solaris, Mac OS X, and other Unix-like OSes. Partial Windows support is available (full support as patch). 
+    * Portability. Supports DOS, Linux, FreeBSD, NetBSD, OpenBSD, DragonFly BSD, Solaris, Mac OS X, and other Unix-like OSes. Partial Windows support is available (full support as patch).
 	</longdescription>
 </pkgmetadata>
