@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.8.ebuild,v 1.1 2010/08/06 23:53:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.12.ebuild,v 1.1 2010/12/03 14:01:43 polynomial-c Exp $
 
 EAPI=2
 
-inherit x-modular eutils multilib linux-info
+inherit eutils multilib linux-info
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox input driver"
@@ -66,18 +66,15 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/input
 
+		# xorg-server-1.9
+		if has_version ">=x11-base/xorg-server-1.9" ; then
+				newins vboxmouse_drv_19.so vboxmouse_drv.so
 		# xorg-server-1.8
-		if has_version ">=x11-base/xorg-server-1.8" ; then
+		elif has_version ">=x11-base/xorg-server-1.8" ; then
 				newins vboxmouse_drv_18.so vboxmouse_drv.so
 		# xorg-server-1.7
-		elif has_version ">=x11-base/xorg-server-1.7" ; then
-				newins vboxmouse_drv_17.so vboxmouse_drv.so
-		# xorg-server-1.6.x
-		elif has_version ">=x11-base/xorg-server-1.6" ; then
-				newins vboxmouse_drv_16.so vboxmouse_drv.so
-		# xorg-server-1.5.x
 		else
-				newins vboxmouse_drv_15.so vboxmouse_drv.so
+				newins vboxmouse_drv_17.so vboxmouse_drv.so
 		fi
 
 		# install hal information file about the mouse driver
@@ -95,9 +92,7 @@ pkg_postinst() {
 		elog ""
 		elog "in the Core Pointer's InputDevice section (Section \"InputDevice\")"
 		elog ""
-		if has_version ">=x11-base/xorg-server-1.5" ; then
-			elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection."
-			elog "This ebuild provides a working default which has been installed into:"
-			elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
-		fi
+		elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection."
+		elog "This ebuild provides a working default which has been installed into:"
+		elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
 }

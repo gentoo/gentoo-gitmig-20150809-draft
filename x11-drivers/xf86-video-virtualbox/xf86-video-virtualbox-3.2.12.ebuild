@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.8.ebuild,v 1.1 2010/08/06 23:53:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.12.ebuild,v 1.1 2010/12/03 14:02:24 polynomial-c Exp $
 
 EAPI=2
 
-inherit x-modular eutils linux-mod multilib versionator
+inherit eutils linux-mod multilib versionator
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox video driver"
@@ -113,18 +113,15 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.9.x
+		if has_version ">=x11-base/xorg-server-1.9" ; then
+				newins vboxvideo_drv_19.so vboxvideo_drv.so
 		# xorg-server-1.8.x
-		if has_version ">=x11-base/xorg-server-1.8" ; then
+		elif has_version ">=x11-base/xorg-server-1.8" ; then
 				newins vboxvideo_drv_18.so vboxvideo_drv.so
 		# xorg-server-1.7.x
-		elif has_version ">=x11-base/xorg-server-1.7" ; then
-				newins vboxvideo_drv_17.so vboxvideo_drv.so
-		# xorg-server-1.6.x
-		elif has_version ">=x11-base/xorg-server-1.6" ; then
-				newins vboxvideo_drv_16.so vboxvideo_drv.so
-		# xorg-server-1.5.x
 		else
-				newins vboxvideo_drv_15.so vboxvideo_drv.so
+				newins vboxvideo_drv_17.so vboxvideo_drv.so
 		fi
 
 		# Guest OpenGL driver
