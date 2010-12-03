@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/idutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.1 2007/11/26 18:57:49 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.2 2010/12/03 16:42:31 ulm Exp $
+
+  03 Dec 2010; Ulrich Mueller <ulm@gentoo.org> idutils-4.2.ebuild:
+  Fix configure test for Emacs, bug 336731.
 
 *idutils-4.2 (26 Nov 2007)
 
