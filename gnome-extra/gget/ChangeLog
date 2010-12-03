@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/ChangeLog,v 1.2 2010/07/08 12:48:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/ChangeLog,v 1.3 2010/12/03 23:42:42 eva Exp $
+
+  03 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> gget-0.0.4.ebuild:
+  Fix python eclass usage. Use split python bindings. Update for EAPI=2. Pin
+  some dependencies to appropriate SLOT.
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gget-0.0.4.ebuild:
