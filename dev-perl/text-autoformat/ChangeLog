@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-autoformat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.37 2010/11/13 20:12:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/ChangeLog,v 1.38 2010/12/03 00:58:10 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> text-autoformat-1.13.ebuild,
+  text-autoformat-1.669001.ebuild, text-autoformat-1.669002.ebuild:
+  add ~arm (bug 302981)
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
   text-autoformat-1.669002.ebuild:

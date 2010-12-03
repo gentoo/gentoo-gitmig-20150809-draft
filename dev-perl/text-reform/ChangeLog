@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/text-reform
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.20 2010/01/14 16:10:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.21 2010/12/03 00:56:40 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> text-reform-1.11.ebuild,
+  text-reform-1.20.ebuild:
+  add ~arm (bug 302981)
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org> text-reform-1.20.ebuild:
   Transfer Prefix keywords
