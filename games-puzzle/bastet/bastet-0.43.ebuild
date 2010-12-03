@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.43.ebuild,v 1.1 2010/12/03 07:55:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.43.ebuild,v 1.2 2010/12/03 08:21:40 mr_bones_ Exp $
 
 EAPI=2
-inherit toolchain-funcs eutils games
+inherit eutils games
 
 DESCRIPTION="a simple, evil, ncurses-based Tetris(R) clone"
 HOMEPAGE="http://fph.altervista.org/prog/bastet.shtml"
@@ -14,15 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="sys-libs/ncurses
+DEPEND="sys-libs/ncurses
 	dev-libs/boost"
-DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
-
-src_compile() {
-	emake CXX=$(tc-getCC) || die "make failed"
-}
 
 src_install() {
 	dogamesbin bastet || die "dogamesbin failed"
