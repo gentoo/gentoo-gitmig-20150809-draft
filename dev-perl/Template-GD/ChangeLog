@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-GD
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.17 2009/12/23 19:37:59 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.18 2010/12/03 02:26:13 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Template-GD-2.66.ebuild:
+  add ~arm (bug 302981)
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org> Template-GD-2.66.ebuild:
   Marked ~x86-solaris, bug #296509
