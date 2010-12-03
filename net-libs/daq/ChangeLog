@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.3 2010/11/24 14:01:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.4 2010/12/03 18:40:04 patrick Exp $
+
+*daq-0.4 (03 Dec 2010)
+
+  03 Dec 2010; Patrick Lauer <patrick@gentoo.org> +daq-0.4.ebuild:
+  Bump for #347445, default-enabling more useflags
 
   24 Nov 2010; Patrick Lauer <patrick@gentoo.org> daq-0.3.ebuild:
   Reducing makeopts to -j1 for #345915
