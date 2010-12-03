@@ -6,4 +6,7 @@
     <email>chainsaw@gentoo.org</email>
     <name>Tony Vroon</name>
   </maintainer>
+  <use>
+    <flag name="flash">Support (short) flash on FXS</flag>
+  </use>
 </pkgmetadata>
