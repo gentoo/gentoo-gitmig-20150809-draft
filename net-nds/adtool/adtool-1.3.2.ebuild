@@ -1,8 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/adtool-1.3.2.ebuild,v 1.1 2009/08/03 15:39:46 dertobi123 Exp $
-
-WANT_AUTOMAKE="1.7"
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/adtool-1.3.2.ebuild,v 1.2 2010/12/03 01:01:39 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -24,12 +22,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/adtool-1.3-10-asneeded.patch"
 
-	eautomake
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
+	eautoreconf
 }
 
 src_install() {

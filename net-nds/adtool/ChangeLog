@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/adtool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.13 2009/08/03 15:39:46 dertobi123 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.14 2010/12/03 01:01:39 flameeyes Exp $
+
+  03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> adtool-1.3.2.ebuild:
+  Do a full-rebuild of autotools rather than sticking to automake, so that it
+  works with the latest versions. Drop default src_compile.
 
 *adtool-1.3.2 (03 Aug 2009)
 
