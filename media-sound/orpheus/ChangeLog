@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/orpheus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.25 2009/05/10 14:22:56 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.26 2010/12/03 00:28:03 flameeyes Exp $
+
+  03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> orpheus-1.6-r1.ebuild,
+  files/orpheus-1.6-nolibghttp.patch:
+  Upgrade to automake 1.9 at least, drop libghttp check pre-rebuild. Do a
+  recursive rebuild.
 
   10 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   -files/1.5-gcc34.patch, -orpheus-1.5.ebuild,
