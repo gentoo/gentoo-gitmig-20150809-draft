@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.298 2010/12/02 17:56:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.299 2010/12/03 18:06:24 idl0r Exp $
+
+*bind-9.7.2_p3-r1 (03 Dec 2010)
+*bind-9.6.2_p3-r1 (03 Dec 2010)
+*bind-9.4.3_p5-r3 (03 Dec 2010)
+
+  03 Dec 2010; Christian Ruppert <idl0r@gentoo.org> -bind-9.4.3_p5-r2.ebuild,
+  +bind-9.4.3_p5-r3.ebuild, -bind-9.6.2_p3.ebuild, +bind-9.6.2_p3-r1.ebuild,
+  -bind-9.7.2_p3.ebuild, +bind-9.7.2_p3-r1.ebuild, +files/named.conf-r5:
+  Bump named-conf. Now without views again to not confuse users.
 
   02 Dec 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.2_p3.ebuild,
   bind-9.7.2_p3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.2_p3.ebuild,v 1.2 2010/12/02 17:56:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.2_p3-r1.ebuild,v 1.1 2010/12/03 18:06:24 idl0r Exp $
 
 EAPI="3"
 
@@ -202,7 +202,7 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r4 named.conf || die
+	newins "${FILESDIR}"/named.conf-r5 named.conf || die
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
