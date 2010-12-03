@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.32.0.ebuild,v 1.1 2010/10/12 18:05:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.32.1.ebuild,v 1.1 2010/12/03 23:22:07 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -49,4 +49,8 @@ src_prepare() {
 			icon-themes/Makefile.am icon-themes/Makefile.in \
 			|| die "sed failed"
 	fi
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "intltool rules fix failed"
 }
