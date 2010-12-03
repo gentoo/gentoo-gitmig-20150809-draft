@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.0.10.ebuild,v 1.1 2010/12/01 21:38:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.0.10.ebuild,v 1.2 2010/12/03 01:34:34 flameeyes Exp $
 
 EAPI=2
 
@@ -64,4 +64,12 @@ pkg_postinst() {
 	elog
 	elog "If you want to enable further rules, check the following directory:"
 	elog "	${APACHE_MODULES_CONFDIR}/mod_security/optional_rules"
+	elog ""
+	elog "Starting from version 2.0.9, the default for the Core Rule Set is again to block"
+	elog "when rules hit. If you wish to go back to the 2.0.8 method of anomaly scoring, you"
+	elog "should change modsecurity_crs_10_config.conf so that you have these settings enabled:"
+	elog ""
+	elog "    SecDefaultAction \"phase:1,pass\""
+	elog "    SecAction \"phase:1,t:none,nolog,pass,setvar:tx.anomaly_score_blocking=on\""
+	elog ""
 }
