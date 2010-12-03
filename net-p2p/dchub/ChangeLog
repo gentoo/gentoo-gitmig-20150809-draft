@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/dchub
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.24 2009/12/22 21:18:18 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.25 2010/12/03 01:16:38 flameeyes Exp $
+
+  03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> dchub-0.5.2.ebuild:
+  Properly rebuild autotools (in latest version) rather than relying on
+  maintainer-mode triggered rebuilds.
 
   22 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> dchub-0.5.2.ebuild:
   Fix obvious typo.
