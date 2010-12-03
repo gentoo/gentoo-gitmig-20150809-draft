@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.15 2010/10/24 21:19:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.16 2010/12/03 17:56:34 grobian Exp $
+
+  03 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  ruby-test-unit-0-r3.ebuild:
+  Added Prefix keywords
 
   24 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-test-unit-0-r2.ebuild:
