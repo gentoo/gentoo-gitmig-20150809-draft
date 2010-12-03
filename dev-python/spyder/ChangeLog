@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.10 2010/10/23 20:41:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.11 2010/12/03 11:30:22 grozin Exp $
+
+*spyder-2.0.2 (03 Dec 2010)
+
+  03 Dec 2010; Andrey Grozin <grozin@gentoo.org> -spyder-1.1.6.ebuild,
+  +spyder-2.0.2.ebuild, metadata.xml:
+  Version bump (bug #341453), thanks to Martin Gysel (bearsh) <m.gysel@gmx.ch>
 
 *spyder-1.1.8 (23 Oct 2010)
 
