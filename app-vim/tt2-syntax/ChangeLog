@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tt2-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.6 2010/04/27 09:36:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.7 2010/12/03 01:56:52 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> tt2-syntax-1.13.ebuild:
+  add ~arm (bug 302981)
 
   27 Apr 2010; Alexis Ballier <aballier@gentoo.org> tt2-syntax-1.13.ebuild:
   keyword ~x86-fbsd, bug #191500
