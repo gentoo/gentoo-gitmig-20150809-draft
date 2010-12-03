@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.1-r2.ebuild,v 1.1 2010/11/12 20:50:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.2.ebuild,v 1.1 2010/12/03 21:40:23 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -32,11 +32,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	PATCHES=(
-		"${FILESDIR}"/${P}-fix_logout_with_sudo.patch
-		"${FILESDIR}"/${P}-stop_using_subject_cookie.patch
-		)
-
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-dependency-tracking
