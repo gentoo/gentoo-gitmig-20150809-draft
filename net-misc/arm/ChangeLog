@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/arm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.1 2010/12/03 08:37:57 fauli Exp $
+
+*arm-1.4.0 (03 Dec 2010)
+
+  03 Dec 2010; Christian Faulhammer <fauli@gentoo.org> +arm-1.4.0.ebuild,
+  +metadata.xml:
+  Initial commit for bug 341731, ebuild by Jesse Adelman <jesse AT
+  boldandbusted DOT com>, reviewed by me
+
