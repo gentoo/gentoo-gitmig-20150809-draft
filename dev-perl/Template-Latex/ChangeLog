@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Latex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.16 2009/12/23 19:39:27 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.17 2010/12/03 02:39:46 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Template-Latex-2.17.ebuild:
+  add ~arm (bug 302981)
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   Template-Latex-2.17.ebuild:

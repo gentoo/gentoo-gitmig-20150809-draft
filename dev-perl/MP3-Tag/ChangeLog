@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.42 2010/11/05 14:09:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.43 2010/12/03 02:47:30 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> MP3-Tag-1.12.ebuild,
+  MP3-Tag-1.13.ebuild:
+  add ~arm (bug 302981)
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> MP3-Tag-1.12.ebuild:
   ppc64 stable wrt #341865

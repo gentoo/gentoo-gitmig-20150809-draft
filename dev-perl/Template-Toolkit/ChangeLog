@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.62 2010/01/10 10:34:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.63 2010/12/03 02:43:44 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Template-Toolkit-2.22-r1.ebuild:
+  add ~arm (bug 302981)
 
 *Template-Toolkit-2.22-r1 (10 Jan 2010)
 
