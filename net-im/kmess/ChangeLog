@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.69 2010/11/04 12:05:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.70 2010/12/03 17:48:44 hwoarang Exp $
+
+  03 Dec 2010; Markos Chandras <hwoarang@gentoo.org> kmess-2.0.5.ebuild:
+  Add kde-base/oxygen-icons dependency. Thanks to Markellos Orfanos for
+  pointing this out
 
   04 Nov 2010; Markus Meier <maekke@gentoo.org> kmess-2.0.5.ebuild:
   amd64 stable, bug #342759

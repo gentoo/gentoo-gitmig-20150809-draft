@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5.ebuild,v 1.3 2010/11/04 12:05:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5.ebuild,v 1.4 2010/12/03 17:48:44 hwoarang Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ DEPEND="${COMMONDEPEND}
 "
 RDEPEND="${COMMONDEPEND}
 	konqueror? ( >=kde-base/konqueror-${KDE_MINIMAL} )
+	kde-base/oxygen-icons
 "
 
 S="${WORKDIR}/${MY_P}"
