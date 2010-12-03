@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.61 2010/11/05 13:56:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.62 2010/12/03 02:07:20 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Clone-0.31.ebuild:
+  add ~arm (bug 302981)
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> Clone-0.31.ebuild:
   ppc64 stable wrt #341865

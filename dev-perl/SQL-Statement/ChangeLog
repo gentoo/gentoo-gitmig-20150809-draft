@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.41 2010/11/13 19:51:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.42 2010/12/03 02:09:48 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> SQL-Statement-1.25.ebuild,
+  SQL-Statement-1.31.ebuild:
+  add ~arm (bug 302981)
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> SQL-Statement-1.31.ebuild:
   ia64/sparc stable wrt #341865
