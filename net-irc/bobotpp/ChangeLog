@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bobotpp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.21 2009/12/21 15:33:35 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.22 2010/12/03 00:40:33 flameeyes Exp $
+
+  03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> bobotpp-2.2.2.ebuild:
+  Use modern autotools for rebuilding.
 
   21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> bobotpp-2.2.2.ebuild,
   +files/bobotpp-2.2.2-asneeded.patch:
