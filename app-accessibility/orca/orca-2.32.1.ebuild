@@ -1,24 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.28.3.ebuild,v 1.6 2010/08/14 18:32:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.1 2010/12/03 23:44:57 pacho Exp $
 
-PYTHON_DEPEND="2" # Support for Python 3 not verified
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
 inherit gnome2 python
 
 DESCRIPTION="Extensible screen reader that provides access to the desktop"
-HOMEPAGE="http://www.gnome.org/projects/orca/"
+HOMEPAGE="http://projects.gnome.org/orca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 # liblouis is not in portage yet
 # it is used to provide contracted braille support
 RDEPEND=">=dev-libs/glib-2.10
-	>=gnome-extra/at-spi-1.24
+	>=gnome-extra/at-spi-1.32
 	>=gnome-base/orbit-2
 	>=dev-python/pyorbit-2.24
 	>=gnome-base/libbonobo-2.24
@@ -26,6 +27,7 @@ RDEPEND=">=dev-libs/glib-2.10
 
 	dev-python/pygobject
 	dev-python/pycairo
+	dev-python/pyxdg
 	>=dev-python/dbus-python-0.83
 	>=dev-python/pygtk-2.12
 
@@ -40,26 +42,41 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9"
 
-DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
+	python_set_active_version 2
+}
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+}
 
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed 2 failed"
+src_configure() {
+	# FIXME: Workaround for bug #325611 until root cause is found
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	# Needed for import pyatspi
+	unset DBUS_SESSION_BUS_ADDRESS
+	PYTHON="$(PYTHON)" gnome2_src_configure
+}
+
+src_compile() {
+	# FIXME: Workaround for bug #325611 until root cause is found
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	gnome2_src_compile
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/orca
+	python_mod_optimize "${PN}"
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/orca
+	python_mod_cleanup "${PN}"
 }
