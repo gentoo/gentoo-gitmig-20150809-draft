@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.43 2010/11/29 14:04:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.44 2010/12/03 03:07:27 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> mtools-4.0.13.ebuild,
+  mtools-4.0.15.ebuild:
+  added ~arm (bug 302981)
 
   29 Nov 2010; Brent Baude <ranger@gentoo.org> mtools-4.0.13.ebuild:
   stable ppc64, bug 341405

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.15.ebuild,v 1.2 2010/10/19 22:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.15.ebuild,v 1.3 2010/12/03 03:07:27 xmw Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X"
 
 DEPEND="
