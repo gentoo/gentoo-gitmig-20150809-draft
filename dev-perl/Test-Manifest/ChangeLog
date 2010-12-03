@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.44 2010/01/14 14:39:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.45 2010/12/03 01:49:04 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org> Test-Manifest-1.21.ebuild,
+  Test-Manifest-1.22.ebuild, Test-Manifest-1.23.ebuild:
+  add ~arm (bug 302981)
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Test-Manifest-1.23.ebuild:

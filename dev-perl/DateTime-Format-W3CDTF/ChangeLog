@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-W3CDTF
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.14 2010/01/20 16:24:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.15 2010/12/03 01:44:36 xmw Exp $
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org>
+  DateTime-Format-W3CDTF-0.04.ebuild, DateTime-Format-W3CDTF-0.05.ebuild:
+  add ~arm (bug 302981)
 
   20 Jan 2010; Torsten Veller <tove@gentoo.org>
   DateTime-Format-W3CDTF-0.05.ebuild:
