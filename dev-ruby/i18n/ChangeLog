@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.22 2010/10/25 02:48:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.23 2010/12/04 09:36:39 graaff Exp $
+
+*i18n-0.5.0 (04 Dec 2010)
+
+  04 Dec 2010; Hans de Graaff <graaff@gentoo.org> +i18n-0.5.0.ebuild:
+  Version bump.
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> i18n-0.3.7.ebuild,
   i18n-0.4.1.ebuild:
