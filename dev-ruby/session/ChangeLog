@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.11 2010/10/25 01:55:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.12 2010/12/04 08:39:05 graaff Exp $
+
+  04 Dec 2010; Hans de Graaff <graaff@gentoo.org> session-3.1.0.ebuild:
+  Move ppc and ppc64 keywords forward. Looking at the timeline this was most
+  likely the intention.
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> session-3.1.0.ebuild:
   Marked ~hppa (bug #337956).
