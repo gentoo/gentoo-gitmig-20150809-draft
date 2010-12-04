@@ -1,6 +1,10 @@
 # ChangeLog for app-text/qgoogletranslator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qgoogletranslator/ChangeLog,v 1.1 2010/12/03 14:29:27 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qgoogletranslator/ChangeLog,v 1.2 2010/12/04 11:28:25 hwoarang Exp $
+
+  04 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  qgoogletranslator-1.2.1.ebuild:
+  Keyworded for amd64. Bug #347691
 
 *qgoogletranslator-1.2.1 (03 Dec 2010)
 
