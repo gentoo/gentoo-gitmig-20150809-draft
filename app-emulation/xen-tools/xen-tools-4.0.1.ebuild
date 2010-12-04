@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.1.ebuild,v 1.1 2010/12/03 19:09:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.1.ebuild,v 1.2 2010/12/04 15:31:48 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -112,7 +112,6 @@ pkg_setup() {
 
 src_prepare() {
 #	use vtpm && cp "${DISTDIR}"/${TPMEMUFILE}  tools/vtpm
-
 
 	sed -i -e 's/-Wall//' Config.mk || die "Couldn't sanitize CFLAGS"
 	# if the user *really* wants to use their own custom-cflags, let them
