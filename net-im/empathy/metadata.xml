@@ -4,7 +4,6 @@
 <herd>net-im</herd>
 <herd>gnome</herd>
 <use>
-  <flag name="applet">Enable Empathy's applets for <pkg>gnome-base/gnome-panel</pkg></flag>
   <flag name="nautilus">Enable nautilus-sendto support</flag>
   <flag name="webkit">Build support for Adium-style HTML-based conversation
 	  window themes using <pkg>net-libs/webkit-gtk</pkg></flag>

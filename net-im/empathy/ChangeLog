@@ -1,6 +1,13 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.66 2010/10/27 16:40:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.67 2010/12/04 19:16:37 pacho Exp $
+
+*empathy-2.32.2 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/empathy-2.28-networkmanager-0.8.patch, -empathy-2.28.2-r1.ebuild,
+  +empathy-2.32.2.ebuild:
+  Version bump for Gnome 2.32, remove old.
 
   27 Oct 2010; Arun Raghavan <ford_prefect@gentoo.org>
   empathy-2.30.3.ebuild:
