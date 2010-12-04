@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.50 2010/11/03 18:37:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.51 2010/12/04 21:31:08 phajdan.jr Exp $
+
+  04 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> json-1.4.6.ebuild:
+  x86 stable wrt bug #343473
 
   03 Nov 2010; Hans de Graaff <graaff@gentoo.org> json-1.4.6-r1.ebuild:
   Simplify running of tests to hopefully fix bug 325745.
