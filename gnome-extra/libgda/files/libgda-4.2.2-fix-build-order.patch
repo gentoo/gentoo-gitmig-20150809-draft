@@ -1,0 +1,20 @@
+--- libgda/sqlite/Makefile.am.orig	2010-12-04 11:33:12.000000000 +0100
++++ libgda/sqlite/Makefile.am	2010-12-04 11:34:50.000000000 +0100
+@@ -58,9 +58,9 @@
+ 	gda-sqlite.h \
+ 	keywords_hash.h \
+ 	gda-symbols-util.h \
+-	gda-symbols-util.c
+-
+-BUILT_SOURCES = xml_embedded.h keywords_hash.c
++	gda-symbols-util.c \
++	xml_embedded.h \
++	keywords_hash.c
+ 
+ libgda_sqlite_la_SOURCES = $(sqlitesources)
+ libgda_sqlite_la_CFLAGS = -DPNAME=\""SQLite"\" -DCLASS_PREFIX=\""GdaSqlite"\" -DSEARCH_LIB_PATH=\""$(SQLITE_PATH)"\"
+@@ -86,3 +86,4 @@
+ EXTRA_DIST = gen_emb_string.c mkkeywordhash.c keywords.list
+ 
+ CLEANFILES = gen_emb_string$(EXEEXT_FOR_BUILD) mkkeywordhash$(EXEEXT_FOR_BUILD) $(BUILT_SOURCES)
++BUILT_SOURCES = xml_embedded.h keywords_hash.c
