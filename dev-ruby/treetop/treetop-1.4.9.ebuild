@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.9.ebuild,v 1.1 2010/11/16 06:54:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.9.ebuild,v 1.2 2010/12/04 08:59:15 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 # jruby fails tests, not investigated yet.
 
 RUBY_FAKEGEM_TASK_DOC=""
