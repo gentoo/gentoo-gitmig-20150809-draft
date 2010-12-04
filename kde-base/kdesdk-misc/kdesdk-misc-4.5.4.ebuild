@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.4.ebuild,v 1.2 2010/12/03 22:38:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.5.4.ebuild,v 1.3 2010/12/04 15:32:35 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 # see bug 332319, let's find out how well portage handles this - dilfridge
 # summary for maintainers:
-# at build time an earlier installed version causes the build to fail. 
+# at build time an earlier installed version causes the build to fail.
 # we cannot use add_blocker since we need a *hard* blocker in *DEPEND*
 # nobody knows what happens with kdeprefix, but probably also nobody cares.
 
