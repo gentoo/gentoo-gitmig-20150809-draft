@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.65 2010/11/02 02:32:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.66 2010/12/04 16:50:12 pacho Exp $
+
+*gnome-settings-daemon-2.32.1 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-settings-daemon-2.32.1.ebuild:
+  Version bump with bugfixes and translation updates, use old gst patch as
+  newer one was causing more important problems (bug #339732) and then, bug
+  #327609 is back again. Also include upstream patches from master to improve
+  lcdfilter experience and stop monitoring some network filesystems.
 
   02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
   gnome-settings-daemon-2.32.0.ebuild:
