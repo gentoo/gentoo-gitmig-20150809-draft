@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.1 2010/12/04 00:53:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.2 2010/12/04 18:16:38 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,11 +17,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
 
 # TODO: configure says python stuff is optional
+# null applet still needs bonobo support for gnome-panel
 HALDEPEND=" hal? ( >=sys-apps/hal-0.5.3 ) "
 RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/glib-2.22:2
 	>=gnome-base/gconf-2.8
-	>=gnome-base/gnome-panel-2.31.2
+	>=gnome-base/gnome-panel-2.31.2[bonobo]
 	>=x11-libs/libxklavier-4.0
 	>=x11-libs/libwnck-2.9.3
 	>=gnome-base/gnome-desktop-2.11.1:2
