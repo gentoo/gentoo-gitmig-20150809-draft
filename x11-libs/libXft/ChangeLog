@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.67 2010/10/31 09:58:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.68 2010/12/04 12:36:53 scarabeus Exp $
+
+  04 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> libXft-2.2.0.ebuild:
+  RDepend on virtual/ttf-fonts, otherwise we get backtrace on runtime. Per bug
+  #344911.
 
 *libXft-2.2.0 (31 Oct 2010)
 
