@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openexr_viewers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.23 2010/11/26 22:12:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.24 2010/12/04 19:22:15 armin76 Exp $
+
+  04 Dec 2010; Raúl Porcel <armin76@gentoo.org> openexr_viewers-1.0.2.ebuild:
+  alpha/ia64/sparc stable wrt #277202
 
   26 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   openexr_viewers-1.0.2.ebuild:
