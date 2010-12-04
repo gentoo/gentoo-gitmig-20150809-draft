@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6203 2010/12/03 17:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6204 2010/12/04 16:33:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -214,6 +214,7 @@ app-cdr/k3b:emovix - Enable burning support for eMoviX images
 app-cdr/k3b:wav - Enable support for reading WAVE files
 app-cdr/mybashburn:normalize - Add support for normalizing audio file volume levels
 app-cdr/serpentine:muine - Enable support for the GNOME music player Muine
+app-cdr/xfburn:thunar - Use Thunar VFS layer for mimetype and icons support (WARNING: deprecated, will be replaced by GIO in future)
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/ekeyd:usb -  Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems. 
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
