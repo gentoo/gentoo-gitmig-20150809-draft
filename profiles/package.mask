@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12246 2010/12/04 11:40:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12247 2010/12/04 18:56:55 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -494,6 +494,10 @@ x11-libs/openmotif-compat
 # and working and, then, you will finally able to report
 # missing dependencies and so ;-)
 # BEGIN GNOME 2.32 mask
+>=dev-libs/glib-2.25
+>=x11-libs/gdk-pixbuf-2.21
+>=gnome-base/librsvg-2.31
+>=x11-libs/gtk+-2.21
 >=gnome-base/gnome-desktop-2.32
 >=dev-libs/atk-1.32
 >=x11-libs/vte-0.26
@@ -579,6 +583,7 @@ dev-cpp/atkmm
 >=dev-libs/guiloader-2.21.0
 >=dev-libs/guiloader-c++-2.21.0
 >=dev-util/crow-designer-2.21.0
+>=dev-libs/gobject-introspection-0.9.3
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
@@ -702,14 +707,10 @@ net-p2p/overnet
 app-benchmarks/xfbsuite
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Sep 2010)
-# Mask new versions of glib, polkit, gtk+, etc
-# Will be unmasked after proper testing
->=dev-libs/glib-2.25
->=x11-libs/gdk-pixbuf-2.21
->=gnome-base/librsvg-2.31
+# Mask new versions of these apps that will be unmasked after
+# proper testing
 >=sys-auth/polkit-0.99
 >=gnome-extra/polkit-gnome-0.99
->=x11-libs/gtk+-2.21
 >=dev-lang/vala-0.11
 >=sys-power/upower-0.9.6
 >=dev-libs/dbus-glib-0.92
@@ -821,10 +822,6 @@ dev-libs/pcl
 #
 # Removal on 2010-10-24
 app-i18n/imhangul-status-applet
-
-# Jonathan Callen <abcd@gentoo.org> (24 Aug 2010)
-# Breaks API and ABI, not all packages fixed yet
->=dev-libs/gobject-introspection-0.9.3
 
 # Alex Legler <a3li@gentoo.org> (18 Aug 2010)
 # Fails to install with the latest stable versions of OpenSSL and Tk.
