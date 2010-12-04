@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.301 2010/12/04 17:27:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.302 2010/12/04 17:45:18 rich0 Exp $
+
+  04 Dec 2010; Richard Freeman <rich0@gentoo.org> bind-9.7.2_p3-r1.ebuild:
+  amd64 stable - 347621
 
   04 Dec 2010; Jeroen Roovers <jer@gentoo.org> bind-9.6.2_p3-r1.ebuild,
   bind-9.7.2_p3-r1.ebuild:
