@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.4 2010/07/26 17:29:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.5 2010/12/04 16:21:43 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.4/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="dbus debug gstreamer"
+IUSE="dbus debug gstreamer thunar"
 
 RDEPEND=">=dev-libs/libburn-0.4.2
 	>=dev-libs/libisofs-0.6.2
@@ -21,18 +21,22 @@ RDEPEND=">=dev-libs/libburn-0.4.2
 	>=xfce-base/exo-0.3
 	dbus? ( dev-libs/dbus-glib )
 	gstreamer? ( media-libs/gstreamer
-		>=media-libs/gst-plugins-base-0.10.20 )"
+		>=media-libs/gst-plugins-base-0.10.20 )
+	thunar? ( || ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
+	XFCONF=(
+		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(xfconf_use_debug)
 		$(use_enable gstreamer)
 		--disable-hal
-		--disable-thunar-vfs"
+		$(use_enable thunar thunar-vfs)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }

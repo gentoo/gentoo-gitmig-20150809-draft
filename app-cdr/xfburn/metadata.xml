@@ -14,4 +14,7 @@
       <name>David Mohr</name>
     </maintainer>
   </upstream>
+  <use>
+    <flag name='thunar'>Use Thunar VFS layer for mimetype and icons support (WARNING: deprecated, will be replaced by GIO in future)</flag>
+  </use>
 </pkgmetadata>
