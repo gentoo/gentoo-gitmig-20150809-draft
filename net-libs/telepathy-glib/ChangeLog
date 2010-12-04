@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.55 2010/11/03 21:07:34 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.56 2010/12/04 19:04:24 pacho Exp $
+
+*telepathy-glib-0.12.5 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org> -telepathy-glib-0.12.0.ebuild,
+  +telepathy-glib-0.12.5.ebuild:
+  Version bump that will have vala support enabled as needed for Gnome 2.32,
+  empathy and co. Remove old testing.
 
 *telepathy-glib-0.12.3 (03 Nov 2010)
 

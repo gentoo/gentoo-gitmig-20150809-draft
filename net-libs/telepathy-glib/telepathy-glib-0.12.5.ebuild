@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.12.0.ebuild,v 1.3 2010/10/13 21:49:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.12.5.ebuild,v 1.1 2010/12/04 19:04:24 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
 inherit python
@@ -14,7 +14,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug +introspection vala"
+IUSE="debug +introspection +vala"
 
 RDEPEND=">=dev-libs/glib-2.24
 	>=dev-libs/dbus-glib-0.82
@@ -42,7 +42,6 @@ src_configure() {
 	fi
 
 	econf \
-		$(use_enable debug) \
 		$(use_enable debug backtrace) \
 		$(use_enable debug handle-leak-debug) \
 		$(use_enable introspection) \
@@ -57,6 +56,6 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake install DESTDIR="${ED}" || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
