@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.75 2010/12/01 16:55:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.76 2010/12/04 21:40:09 xarthisius Exp $
+
+*netcdf-4.1.1-r1 (04 Dec 2010)
+
+  04 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> -netcdf-4.0.1-r1.ebuild,
+  -files/netcdf-4.0.1-as-needed.patch, -files/netcdf-4.0.1-cfortran.patch,
+  -files/netcdf-4.0.1-pkgconfig.patch, +netcdf-4.1.1-r1.ebuild,
+  +files/netcdf-4.1.1-implicits.patch,
+  +files/netcdf-4.1.1-parallel-build.patch:
+  Fix parallel build wrt #296174 by MarisN <maris.gis@gmail.com>. Fix implicit
+  function declarations. Drop old.
 
   01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> netcdf-3.6.3.ebuild:
   Remove use of fortran eclass
