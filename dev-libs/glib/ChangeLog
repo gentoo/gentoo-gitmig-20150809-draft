@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.430 2010/10/17 15:12:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.431 2010/12/04 20:11:36 pacho Exp $
+
+*glib-2.26.1 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org> -glib-2.25.17.ebuild,
+  +glib-2.26.1.ebuild:
+  Version bump with bugfixes and translation updates, remove old and skip tests
+  building when unneeded.
 
 *glib-2.26.0-r1 (17 Oct 2010)
 
