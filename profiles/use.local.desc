@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6206 2010/12/04 19:32:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6207 2010/12/04 22:33:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1550,7 +1550,17 @@ kde-base/kdebindings-csharp:qimageblitz - Compile bindings for media-libs/qimage
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
+kde-base/kdebindings-perl:akonadi - Compile bindings for Akonadi.
+kde-base/kdebindings-perl:attica - Compile bindings for dev-libs/libattica.
+kde-base/kdebindings-perl:multimedia - Compile bindings for x11-libs/qt-multimedia.
+kde-base/kdebindings-perl:okular - Compile bindings for kde-base/okular.
+kde-base/kdebindings-perl:phonon - Compile bindings for Phonon.
 kde-base/kdebindings-perl:plasma - Compile bindings for KDE's Plasma.
+kde-base/kdebindings-perl:qimageblitz - Compile bindings for media-libs/qimageblitz.
+kde-base/kdebindings-perl:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/kdebindings-perl:qthelp - Compile bindings for QtHelp from x11-libs/qt-assistant.
+kde-base/kdebindings-perl:qwt - Compile bindings for x11-libs/qwt.
+kde-base/kdebindings-perl:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-ruby:akonadi - Compile bindings for Akonadi.
 kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
 kde-base/kdebindings-ruby:phonon - Compile bindings for Phonon.
@@ -1623,6 +1633,7 @@ kde-base/smoke:okular - Compile bindings for kde-base/okular.
 kde-base/smoke:phonon - Compile bindings for Phonon.
 kde-base/smoke:qimageblitz - Compile bindings for media-libs/qimageblitz.
 kde-base/smoke:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/smoke:qthelp - Compile bindings for QtHelp from x11-libs/qt-assistant.
 kde-base/smoke:qwt - Compile bindings for x11-libs/qwt.
 kde-base/smoke:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
