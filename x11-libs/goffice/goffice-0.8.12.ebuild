@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.10.ebuild,v 1.1 2010/09/05 20:22:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.12.ebuild,v 1.1 2010/12/04 01:07:09 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit eutils gnome2 flag-o-matic
@@ -25,16 +25,14 @@ RDEPEND=">=dev-libs/glib-2.16
 	x11-libs/libXext
 	x11-libs/libXrender
 	>=x11-libs/gtk+-2.16
-	gnome? ( >=gnome-base/gconf-2 )
-"
+	gnome? ( >=gnome-base/gconf-2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.11 )"
 
-DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		--without-lasem
 		--with-gtk
@@ -44,5 +42,5 @@ pkg_setup() {
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name "*.la" -delete || die
+	find "${ED}" -name "*.la" -delete || die
 }
