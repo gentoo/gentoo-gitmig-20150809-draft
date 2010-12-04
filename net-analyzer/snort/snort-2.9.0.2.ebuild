@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.2.ebuild,v 1.1 2010/12/03 18:30:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.2.ebuild,v 1.2 2010/12/04 15:33:22 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -141,7 +141,7 @@ src_install() {
 		etc/unicode.map \
 		|| die "Failed to add files in /etc/snort"
 
-	# We use snort.conf.distrib because the config file is complicated 
+	# We use snort.conf.distrib because the config file is complicated
 	# and the one shipped with snort can change drastically between versions.
 	# Users should migrate setting by hand and not with etc-update.
 	newins etc/snort.conf snort.conf.distrib \
@@ -160,7 +160,6 @@ src_install() {
 	newinitd "${FILESDIR}/snort.rc10" snort || die "Failed to add snort.rc10"
 
 	newconfd "${FILESDIR}/snort.confd" snort || die "Failed to add snort.confd"
-
 
 	# Set the correct lib path for dynamicengine, dynamicpreprocessor, and dynamicdetection
 	sed -i -e 's:/usr/local/lib:/usr/'$(get_libdir)':g' \
