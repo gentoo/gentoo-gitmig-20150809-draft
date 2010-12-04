@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/folks
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.1 2010/12/04 19:08:19 pacho Exp $
+
+*folks-0.2.1 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org> +folks-0.2.1.ebuild,
+  +metadata.xml:
+  Add folks as needed by empathy-2.32.
+
