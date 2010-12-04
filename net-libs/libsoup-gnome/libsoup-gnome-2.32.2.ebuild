@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.32.0.ebuild,v 1.1 2010/10/09 20:35:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.32.2.ebuild,v 1.1 2010/12/04 16:00:25 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ MY_PN=${PN/-gnome}
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="GNOME plugin for libsoup"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://live.gnome.org/LibSoup"
 SRC_URI="${SRC_URI//-gnome}"
 
 LICENSE="LGPL-2"
