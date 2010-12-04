@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/thor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.5 2010/10/29 15:39:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.6 2010/12/04 20:29:05 graaff Exp $
+
+  04 Dec 2010; Hans de Graaff <graaff@gentoo.org> -thor-0.14.2.ebuild:
+  Remove old version.
 
 *thor-0.14.3 (29 Oct 2010)
 
