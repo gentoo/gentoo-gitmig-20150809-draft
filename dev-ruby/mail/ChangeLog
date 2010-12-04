@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/mail
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.1 2010/12/04 19:49:05 graaff Exp $
+
+*mail-2.2.11 (04 Dec 2010)
+
+  04 Dec 2010; Hans de Graaff <graaff@gentoo.org> +mail-2.2.11.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for Rails 3. Supersedes dev-ruby/tmail.
+
