@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.42 2010/10/10 13:08:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.43 2010/12/04 15:29:27 grobian Exp $
+
+  04 Dec 2010; Fabian Groffen <grobian@gentoo.org> ragel-6.6.ebuild:
+  Bump to EAPI=3 for Prefix, add Prefix keywords
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> ragel-6.6.ebuild:
   Keyworded on alpha, bug #325465
