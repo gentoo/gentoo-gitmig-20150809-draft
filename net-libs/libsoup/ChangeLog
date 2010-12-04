@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.239 2010/10/29 20:05:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.240 2010/12/04 15:56:50 pacho Exp $
+
+*libsoup-2.32.2 (04 Dec 2010)
+
+  04 Dec 2010; Pacho Ramos <pacho@gentoo.org> -libsoup-2.32.0.ebuild,
+  +libsoup-2.32.2.ebuild:
+  Version bump with bugfixes and translation updates, remove old. Make it skip
+  apache related tests until they are ready (bug #326957).
 
   29 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> libsoup-2.24.3.ebuild,
   -libsoup-2.26.3-r3.ebuild,
