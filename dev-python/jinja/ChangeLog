@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.38 2010/12/03 08:46:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.39 2010/12/04 11:30:25 hwoarang Exp $
+
+  04 Dec 2010; Markos Chandras <hwoarang@gentoo.org> jinja-2.5.5.ebuild:
+  Stable on amd64 wrt bug #347109
 
   03 Dec 2010; Christian Faulhammer <fauli@gentoo.org> jinja-2.5.5.ebuild:
   stable x86, bug 347109
