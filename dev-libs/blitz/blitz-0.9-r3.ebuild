@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.2 2010/06/25 13:21:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.3 2010/12/04 14:31:11 grobian Exp $
+
+EAPI="3"
 
 inherit eutils
 
@@ -9,15 +11,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
 IUSE="debug doc examples"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
 LICENSE="|| ( GPL-2 Blitz-Artistic )"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# remove examples compiling
 	sed -i \
 		-e 's/blitz-uninstalled.pc//' \
@@ -26,7 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc-4.3-missing-includes.patch
 }
 
-src_compile() {
+src_configure() {
 	# blas and fortran are only useful for benchmarks
 	econf \
 		--enable-shared \
@@ -37,6 +37,9 @@ src_compile() {
 		$(use_enable doc html-docs) \
 		$(use_enable debug) \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake \
 		LDFLAGS="${LDFLAGS}" \
 		lib || die "emake lib failed"
@@ -52,7 +55,7 @@ src_install () {
 	dodir /usr/share/doc/${PF}/html
 	emake \
 		DESTDIR="${D}" \
-		docdir=/usr/share/doc/${PF}/html \
+		docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		install || die "emake install failed"
 	dodoc ChangeLog ChangeLog.1 README README.binutils TODO AUTHORS NEWS
 
