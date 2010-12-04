@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.36 2010/10/25 01:29:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.37 2010/12/04 15:09:31 grobian Exp $
+
+  04 Dec 2010; Fabian Groffen <grobian@gentoo.org> rdoc-2.5.11.ebuild:
+  Marked ~x{86,64}-macos
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> rdoc-2.5.11.ebuild:
   Marked ~hppa (bug #337956).
