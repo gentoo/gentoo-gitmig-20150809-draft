@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-0.3.1.ebuild,v 1.1 2010/12/04 02:06:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-0.3.1.ebuild,v 1.2 2010/12/04 15:24:56 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://gitorious.org/phonon/phonon-vlc"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
