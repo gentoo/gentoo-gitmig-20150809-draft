@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.13 2010/09/30 20:23:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.14 2010/12/04 14:38:05 grobian Exp $
+
+  04 Dec 2010; Fabian Groffen <grobian@gentoo.org> argparse-1.1.ebuild:
+  Marked ~m68k-mint, bug #347655
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> argparse-1.1.ebuild:
   keyworded ~arch for ppc64, bug 330569
