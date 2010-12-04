@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.13.ebuild,v 1.1 2010/06/29 00:22:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.1.ebuild,v 1.1 2010/12/04 02:10:23 flameeyes Exp $
 
 EAPI="3"
 
-STUPID_NUM="3300"
+STUPID_NUM="3475"
+
+inherit eutils
 
 DESCRIPTION="CCID free software driver"
 HOMEPAGE="http://pcsclite.alioth.debian.org/ccid.html"
@@ -15,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="twinserial +usb"
 
-DEPEND=">=sys-apps/pcsc-lite-1.6
-	usb? ( virtual/libusb:0 )"
+DEPEND=">=sys-apps/pcsc-lite-1.6.5
+	usb? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -30,7 +32,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS
-	insinto /etc/udev/rules.d
-	newins src/pcscd_ccid.rules 60-pcscd_ccid.rules
+	dodoc README AUTHORS || die
+	insinto /lib/udev/rules.d
+	doins src/92_pcscd_ccid.rules || die
 }
