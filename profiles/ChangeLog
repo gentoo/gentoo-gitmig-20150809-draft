@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4830 2010/12/03 09:16:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4831 2010/12/04 11:40:25 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Dec 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking ies4linux for removal. Bug #344233
 
   03 Dec 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/rrd for removal.

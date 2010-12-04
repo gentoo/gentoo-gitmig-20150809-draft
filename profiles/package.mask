@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12245 2010/12/03 09:16:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12246 2010/12/04 11:40:25 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (04 Dec 2010)
+#  on behalf of QA team
+#
+# ies4linux does not work with recent versions of wine.
+# Last update back in 2008. Bug #344233
+# Masked for removal in 2011-01-04
+app-emulation/ies4linux
 
 # Hans de Graaff <graaff@gentoo.org> (3 Dec 2010)
 # Old ruby bindins that currently are included into net-analyzer/rrdtool
