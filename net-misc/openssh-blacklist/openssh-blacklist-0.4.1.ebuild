@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh-blacklist/openssh-blacklist-0.4.1.ebuild,v 1.4 2010/12/01 08:03:32 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh-blacklist/openssh-blacklist-0.4.1.ebuild,v 1.5 2010/12/04 12:50:29 phajdan.jr Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 DEPEND=""
