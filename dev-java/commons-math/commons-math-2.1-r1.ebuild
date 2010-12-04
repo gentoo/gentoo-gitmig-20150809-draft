@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-2.1-r1.ebuild,v 1.1 2010/11/26 20:30:38 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-2.1-r1.ebuild,v 1.2 2010/12/04 10:30:19 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://commons.apache.org/math/"
 SRC_URI="mirror://apache/commons/math/source/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5
