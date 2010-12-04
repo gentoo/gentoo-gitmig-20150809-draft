@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12247 2010/12/04 18:56:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12248 2010/12/04 19:01:39 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -584,6 +584,10 @@ dev-cpp/atkmm
 >=dev-libs/guiloader-c++-2.21.0
 >=dev-util/crow-designer-2.21.0
 >=dev-libs/gobject-introspection-0.9.3
+>=net-libs/telepathy-glib-0.12.5
+dev-libs/folks
+net-im/telepathy-logger
+>=net-im/empathy-2.32
 # END GNOME 2.32 mask
 
 # Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
