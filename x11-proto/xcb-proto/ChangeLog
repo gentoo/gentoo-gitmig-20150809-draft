@@ -1,6 +1,16 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.53 2010/11/06 14:42:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.54 2010/12/04 12:48:49 scarabeus Exp $
+
+  04 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.6-fix_negative.patch, +xcb-proto-1.6-r1.ebuild:
+  Revision bump to fix bug #341999.
+
+*xcb-proto-1.6-r1 (04 Dec 2010)
+
+  04 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.6-fix_negative.patch, +xcb-proto-1.6-r1.ebuild:
+  Revision bump to fix bug #341999.
 
   06 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> xcb-proto-1.6.ebuild:
   Make the python generating work again
