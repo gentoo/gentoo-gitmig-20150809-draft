@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.0.ebuild,v 1.2 2010/11/02 02:01:43 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.1 2010/12/04 00:38:41 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -35,8 +35,6 @@ PDEPEND=">=dev-python/pygtk-2.8
 # Includes X11/extensions/Xrandr.h that includes randr.h from randrproto (and
 # eventually libXrandr shouldn't RDEPEND on randrproto)
 
-DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-gnome-distributor=Gentoo
@@ -44,4 +42,5 @@ pkg_setup() {
 		--disable-static
 		--disable-deprecations
 		$(use_enable doc desktop-docs)"
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 }
