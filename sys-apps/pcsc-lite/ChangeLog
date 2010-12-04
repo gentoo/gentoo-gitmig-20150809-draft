@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.91 2010/10/24 20:43:57 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.92 2010/12/04 02:08:39 flameeyes Exp $
+
+*pcsc-lite-1.6.5 (04 Dec 2010)
+
+  04 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/99-pcscd-hotplug.rules, +pcsc-lite-1.6.5.ebuild, +files/pcscd-init.3:
+  Version bump; since upstream is working around init script craziness over
+  Ubuntu and other binary distributions, we apply our own workaround by running
+  pcscd as nobody:pcscd and hotplug it via udev. This version also drops HAL
+  support entirely.
 
   24 Oct 2010; Dane Smith <c1pher@gentoo.org> pcsc-lite-1.5.5.ebuild,
   pcsc-lite-1.6.1.ebuild:
