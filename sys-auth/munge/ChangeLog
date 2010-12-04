@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/munge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.1 2010/11/14 23:04:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.2 2010/12/04 18:22:24 jsbronder Exp $
+
+  04 Dec 2010; Justin Bronder <jsbronder@gentoo.org> munge-0.5.9.ebuild:
+  Conditionally remove unnecessary directories; they're only created if certain
+  directories already exist in /etc. #346683
 
 *munge-0.5.9 (14 Nov 2010)
 

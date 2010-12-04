@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.9.ebuild,v 1.1 2010/11/14 23:04:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.9.ebuild,v 1.2 2010/12/04 18:22:24 jsbronder Exp $
 
 EAPI=3
 inherit eutils
@@ -53,7 +53,9 @@ src_install() {
 	diropts -o munge -g munge -m700
 	dodir /var/log/munge || die
 
-	rm -r "${D}"/etc/{init.d,default} || die
+	[ -d "${D}"/etc/init.d ] && rm -r "${D}"/etc/init.d
+	[ -d "${D}"/etc/default ] && rm -r "${D}"/etc/default
+	[ -d "${D}"/etc/sysconfig ] && rm -r "${D}"/etc/sysconfig
 
 	newconfd "${FILESDIR}"/${PN}d.confd ${PN}d || die
 	newinitd "${FILESDIR}"/${PN}d.initd ${PN}d || die
