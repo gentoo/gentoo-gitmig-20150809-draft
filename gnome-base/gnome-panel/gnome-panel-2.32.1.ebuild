@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.0.2.ebuild,v 1.2 2010/12/03 05:10:23 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.1 2010/12/04 17:50:20 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,18 +22,19 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	>=x11-libs/gtk+-2.22:2
 	>=dev-libs/libgweather-2.27.90
 	dev-libs/libxml2
-	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/gconf-2.6.1
 	>=media-libs/libcanberra-0.23[gtk]
 	>=gnome-base/gnome-menus-2.27.92
-	>=gnome-base/libbonobo-2.20.4
 	gnome-base/librsvg
 	>=dev-libs/dbus-glib-0.80
 	>=sys-apps/dbus-1.1.2
+	dev-libs/eggdbus
 	>=x11-libs/cairo-1
 	x11-libs/libXau
 	>=x11-libs/libXrandr-1.2
 	bonobo? (
+		>=gnome-base/libbonobo-2.20.4
+		>=gnome-base/libbonoboui-2.1.1
 		>=gnome-base/orbit-2.4
 		>=x11-libs/libwnck-2.19.5 )
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )
