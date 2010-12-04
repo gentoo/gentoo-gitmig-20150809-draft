@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.2 2010/12/03 16:20:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.3 2010/12/04 19:58:58 graaff Exp $
+
+  04 Dec 2010; Hans de Graaff <graaff@gentoo.org> activemodel-3.0.3.ebuild:
+  Move activemodel into the right SLOT.
 
   03 Dec 2010; Hans de Graaff <graaff@gentoo.org> activemodel-3.0.3.ebuild:
   activemodel does not contain database-specific parts: remove USE flags.
