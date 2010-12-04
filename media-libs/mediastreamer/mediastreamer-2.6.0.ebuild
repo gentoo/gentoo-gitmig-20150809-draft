@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.6.0.ebuild,v 1.1 2010/07/23 09:15:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.6.0.ebuild,v 1.2 2010/12/04 14:50:05 pva Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://nongnu/linphone/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~ppc-macos ~x86-macos"
-IUSE="+alsa coreaudio debug examples gsm ilbc ipv6 jack oss portaudio +speex theora video v4l2 x264 X"
+IUSE="+alsa coreaudio debug examples gsm ilbc ipv6 jack oss portaudio pulseaudio +speex theora video v4l2 x264 X"
 
 RDEPEND=">=net-libs/ortp-0.16.2
 	alsa? ( media-libs/alsa-lib )
@@ -21,6 +21,7 @@ RDEPEND=">=net-libs/ortp-0.16.2
 	jack? ( >=media-libs/libsamplerate-0.0.13
 		media-sound/jack-audio-connection-kit )
 	portaudio? ( media-libs/portaudio )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	video? ( media-libs/libsdl[video,X]
 		media-video/ffmpeg
@@ -101,6 +102,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--disable-artsc \
 		$(use_enable alsa) \
+		$(use_enable pulseaudio) \
 		$(use_enable coreaudio macsnd) ${macaqsnd} \
 		$(use_enable debug) \
 		$(use_enable gsm) \
