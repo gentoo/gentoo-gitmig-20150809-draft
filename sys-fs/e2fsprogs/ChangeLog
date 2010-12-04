@@ -1,18 +1,18 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.226 2010/11/19 18:51:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.227 2010/12/04 22:29:24 vapier Exp $
 
-  19 Nov 2010; Justin Lecher <jlec@gentoo.org> e2fsprogs-1.41.12-r1.ebuild:
-  QA empty line
+  04 Dec 2010; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.41.12-r1.ebuild,
+  +files/e2fsprogs-1.41.12-getpagesize.patch:
+  Undo some useless changes from the prefix merge, and fix implicit
+  getpagesize() warnings.
 
 *e2fsprogs-1.41.12-r1 (19 Nov 2010)
 
-  19 Nov 2010; Justin Lecher <jlec@gentoo.org>
-  +files/e2fsprogs-1.41.4-darwin-no-mntent.patch,
-  +files/e2fsprogs-1.41.7-mint-blkid.patch, +e2fsprogs-1.41.12-r1.ebuild,
+  19 Nov 2010; Justin Lecher <jlec@gentoo.org> +e2fsprogs-1.41.12-r1.ebuild,
+  +files/e2fsprogs-1.41.7-mint-blkid.patch, +files/e2fsprogs-1.41-mint.patch,
   +files/e2fsprogs-1.41.12-darwin-makefile.patch,
-  +files/e2fsprogs-1.41.12-darwin-no-mntent.patch,
-  +files/e2fsprogs-1.41-mint.patch:
+  +files/e2fsprogs-1.41.12-darwin-no-mntent.patch:
   Import Prefix Changes
 
   09 Oct 2010; Raúl Porcel <armin76@gentoo.org> e2fsprogs-1.41.12.ebuild:
