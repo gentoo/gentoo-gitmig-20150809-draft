@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.0.ebuild,v 1.1 2010/11/18 21:21:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.0.ebuild,v 1.2 2010/12/05 17:55:49 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -34,11 +34,14 @@ RDEPEND=">=dev-libs/glib-2.25.15:2
 	>=gnome-extra/libgda-4.1.6:4
 	dev-util/ctags
 
+	x11-libs/libXft
+	x11-libs/libXrender
+
 	devhelp? (
 		>=dev-util/devhelp-0.22
 		>=net-libs/webkit-gtk-1 )
 	glade? ( >=dev-util/glade-3.6.7 )
-	graphviz? ( media-gfx/graphviz )
+	graphviz? ( >=media-gfx/graphviz-2.6 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.6 )
 	subversion? (
 		>=dev-vcs/subversion-1.5.0
@@ -79,6 +82,10 @@ pkg_setup() {
 		$(use_enable subversion plugin-subversion)
 		$(use_enable vala)"
 
+	if use vala; then
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.10)"
+	fi
+
 	# Conflics wiht -pg in a plugin, bug #266777
 	filter-flags -fomit-frame-pointer
 
@@ -90,7 +97,7 @@ src_prepare() {
 
 	# Needed to preserve introspection configure option, see bgo#633730
 	# eautoreconf needs introspection.m4
-	mv "${WORKDIR}"/introspection.m4 . || die
+	cp "${WORKDIR}"/introspection.m4 . || die
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	AT_M4DIR="." eautoreconf
 }
