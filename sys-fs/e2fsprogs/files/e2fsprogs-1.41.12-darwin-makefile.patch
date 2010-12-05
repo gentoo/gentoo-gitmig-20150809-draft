@@ -3,6 +3,8 @@ like BSD/ELF.
 This patch uses intentionally ELF_* vars to make it easier to diff
 against the ELF Makefile.
 
+http://sourceforge.net/tracker/index.php?func=detail&aid=2555389&group_id=2406&atid=302406
+
 diff --git a/lib/Makefile.darwin-lib b/lib/Makefile.darwin-lib
 index c94a5e7..6a11a66 100644
 --- a/lib/Makefile.darwin-lib
