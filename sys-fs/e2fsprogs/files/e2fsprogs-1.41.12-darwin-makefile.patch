@@ -1,3 +1,8 @@
+On Darwin, create dylibs with a versioning scheme like Linux/ELF, not
+like BSD/ELF.
+This patch uses intentionally ELF_* vars to make it easier to diff
+against the ELF Makefile.
+
 diff --git a/lib/Makefile.darwin-lib b/lib/Makefile.darwin-lib
 index c94a5e7..6a11a66 100644
 --- a/lib/Makefile.darwin-lib
