@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.1.7.ebuild,v 1.1 2010/12/04 19:11:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.1.7.ebuild,v 1.2 2010/12/05 17:24:29 eva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -48,6 +48,11 @@ src_configure() {
 		--disable-coding-style-checks \
 		--disable-Werror \
 		--disable-static
+}
+
+src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
+	emake check || die "make check failed"
 }
 
 src_install() {
