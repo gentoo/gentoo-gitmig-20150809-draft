@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.296 2010/11/29 18:23:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.297 2010/12/05 17:19:14 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mesa-7.9.ebuild:
+  Fix building with Python 3.
 
   29 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-7.9.ebuild:

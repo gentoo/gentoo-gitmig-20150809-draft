@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9.ebuild,v 1.2 2010/11/29 18:23:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9.ebuild,v 1.3 2010/12/05 17:19:14 arfrever Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ if [[ ${PV} = 9999* ]]; then
 	EXPERIMENTAL="true"
 fi
 
-inherit base autotools multilib flag-o-matic toolchain-funcs ${GIT_ECLASS}
+inherit base autotools multilib flag-o-matic python toolchain-funcs ${GIT_ECLASS}
 
 OPENGL_DIR="xorg-x11"
 
@@ -89,6 +89,7 @@ for card in ${RADEON_CARDS}; do
 done
 
 DEPEND="${RDEPEND}
+	=dev-lang/python-2*
 	dev-util/pkgconfig
 	x11-misc/makedepend
 	>=x11-proto/dri2proto-2.2
@@ -116,6 +117,9 @@ pkg_setup() {
 
 	# recommended by upstream
 	append-flags -ffast-math
+
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_unpack() {
