@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12248 2010/12/04 19:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12249 2010/12/05 14:26:14 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
+# Breaks ABI/API, mask till we figure out what all is affected
+# Needed for gnome-shell, which is masked (in the gnome overlay)
+# Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
+>=media-libs/clutter-1.4
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Dec 2010)
 #  on behalf of QA team
@@ -333,11 +339,6 @@ media-libs/amanith
 # Arun Raghavan <ford_prefect@gentoo.org> (26 Oct 2010)
 # Mask development versions of Rygel
 >=net-misc/rygel-0.9.1
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (26 Oct 2010)
-# Breaks ABI/API, mask till we figure out what all is affected
-# Needed for gnome-shell, which is masked (in the gnome overlay) anyway
-=media-libs/clutter-1.4*
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # Masked until reverse dependencies are sorted out (bug #342461)
