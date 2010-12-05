@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.1 2010/12/04 11:15:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.2 2010/12/05 18:03:22 eva Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # FIXME: autoconf is a hell of inconsistencies
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.16:2
 	>=dev-libs/libxml2-2
 	dev-libs/libxslt
 	dev-libs/libunique
@@ -28,7 +28,7 @@ RDEPEND="
 	berkdb?   ( sys-libs/db )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	gtk? (
-		>=x11-libs/gtk+-2.12
+		>=x11-libs/gtk+-2.12:2
 		canvas? ( x11-libs/goocanvas )
 		sourceview? ( x11-libs/gtksourceview:2.0 )
 		graphviz? ( media-gfx/graphviz )
@@ -117,5 +117,5 @@ src_prepare() {
 }
 
 src_test() {
-	emake check HOME=$(unset HOME; echo "~") || die "tests failed"
+	emake check XDG_DATA_HOME="${T}/.local" || die "tests failed"
 }
