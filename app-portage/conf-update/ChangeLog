@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.25 2010/10/22 22:56:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.26 2010/12/05 18:04:21 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> conf-update-1.0-r1.ebuild:
+  alpha stable wrt #338414
 
 *conf-update-1.0.1 (22 Oct 2010)
 
