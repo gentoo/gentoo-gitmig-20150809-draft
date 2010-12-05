@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.92 2010/12/04 02:08:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.93 2010/12/05 18:45:32 flameeyes Exp $
+
+*pcsc-lite-1.6.5-r1 (05 Dec 2010)
+
+  05 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/99-pcscd-hotplug.rules, -pcsc-lite-1.6.5.ebuild,
+  +pcsc-lite-1.6.5-r1.ebuild:
+  Fix udev rules as per bug #347728.
 
 *pcsc-lite-1.6.5 (04 Dec 2010)
 
