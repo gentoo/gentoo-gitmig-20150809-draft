@@ -1,0 +1,51 @@
+--- setup.py
++++ setup.py
+@@ -13,7 +13,6 @@
+ 
+ from distutils.core import setup
+ from distutils.command.build import build
+-from sphinx import setup_command
+ import os, os.path as osp, sys
+ 
+ 
+@@ -36,24 +35,6 @@
+             splist.append(".".join(dirpath.split(os.sep)))
+     return splist
+ 
+-# Sphinx build (documentation)
+-class MyBuild(build):
+-    def has_doc(self):
+-        setup_dir = os.path.dirname(os.path.abspath(__file__))
+-        return os.path.isdir(os.path.join(setup_dir, 'doc'))
+-    sub_commands = build.sub_commands + [('build_doc', has_doc)]
+-
+-class MyBuildDoc(setup_command.BuildDoc):
+-    def run(self):
+-        build = self.get_finalized_command('build')
+-        sys.path.insert(0, os.path.abspath(build.build_lib))
+-        dirname = self.distribution.get_command_obj('build').build_purelib
+-        self.builder_target_dir = osp.join(dirname, 'spyderlib', 'doc')
+-        setup_command.BuildDoc.run(self)
+-        sys.path.pop(0)
+-
+-cmdclass = {'build': MyBuild, 'build_doc': MyBuildDoc}
+-
+ 
+ NAME = 'spyder'
+ LIBNAME = 'spyderlib'
+@@ -80,7 +61,7 @@
+                     get_package_data(LIBNAME, ('.qm', '.svg', '.png', '.css')),
+                     'spyderplugins':
+                     get_package_data('spyderplugins', ('.qm', '.svg', '.png'))},
+-      requires=["pyflakes (>0.3.0)", "rope (>0.9.0)", "sphinx (>0.6.0)",
++      requires=["pyflakes (>0.3.0)", "rope (>0.9.0)",
+                 "PyQt4 (>4.3)"],
+       scripts=['spyder.pyw', 'spyder.py'] if os.name == 'nt' else ['spyder'],
+       classifiers=['License :: OSI Approved :: MIT License',
+@@ -94,5 +75,4 @@
+                    'Programming Language :: Python :: 2.7',
+                    'Development Status :: 5 - Production/Stable',
+                    'Topic :: Scientific/Engineering',
+-                   'Topic :: Software Development :: Widget Sets'],
+-      cmdclass=cmdclass)
++                   'Topic :: Software Development :: Widget Sets'])
