@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.17 2010/10/18 12:40:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.18 2010/12/05 15:31:52 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  enthoughtbase-3.0.6.ebuild:
+  Avoid test failure without sci-libs/scipy.
 
 *enthoughtbase-3.0.6 (18 Oct 2010)
 

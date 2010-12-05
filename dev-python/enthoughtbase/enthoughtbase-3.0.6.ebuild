@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.6.ebuild,v 1.1 2010/10/18 12:40:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.6.ebuild,v 1.2 2010/12/05 15:31:52 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -45,6 +45,11 @@ src_prepare() {
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e "/setupdocs>=1.0/d" \
 		-i setup.py || die "sed setup.py failed"
+
+	if ! has_version sci-libs/scipy; then
+		# enthought/util/tests/test_numeric.py imports deprecated enthought.util.numeric module, which depends on scipy.
+		rm -f enthought/util/tests/test_numeric.py
+	fi
 }
 
 src_compile() {
