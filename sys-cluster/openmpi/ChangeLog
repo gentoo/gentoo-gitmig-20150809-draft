@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.74 2010/10/24 17:28:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.75 2010/12/05 16:09:40 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> openmpi-1.4.2.ebuild:
+  ia64 stable wrt #337129
 
   24 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org> openmpi-1.4.2.ebuild,
   openmpi-1.4.3.ebuild:
