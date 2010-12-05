@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.10 2010/11/30 16:36:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.11 2010/12/05 16:36:27 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> neon-0.29.5.ebuild:
+  alpha/ia64/s390/sh stable wrt #345481
 
   30 Nov 2010; Michael Weber <xmw@gentoo.org> neon-0.29.5.ebuild:
   sparc stable (bug 345481)
