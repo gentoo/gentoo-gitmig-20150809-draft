@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.7.2.ebuild,v 1.1 2010/11/04 21:45:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.7.4.ebuild,v 1.1 2010/12/05 16:00:34 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Desktop manager for Xfce4"
-HOMEPAGE="http://www.xfce.org/projects/xfdesktop"
+DESCRIPTION="Xfce's desktop manager"
+HOMEPAGE="http://www.xfce.org/projects/xfdesktop/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -16,7 +16,7 @@ IUSE="debug libnotify thunar"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libSM
-	>=x11-libs/libwnck-2.12
+	>=x11-libs/libwnck-2.22
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
 	>=xfce-base/libxfce4util-4.6

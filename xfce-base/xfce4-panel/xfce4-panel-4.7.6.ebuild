@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.7.4.ebuild,v 1.1 2010/11/03 21:16:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.7.6.ebuild,v 1.1 2010/12/05 16:05:32 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Panel for Xfce4"
+DESCRIPTION="Xfce's panel"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-panel/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
 
@@ -16,7 +16,7 @@ IUSE="debug"
 
 RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/garcon-0.1.2
+	>=xfce-base/garcon-0.1.4
 	>=xfce-base/libxfce4ui-4.7.1
 	>=xfce-base/xfconf-4.7.2
 	>=xfce-base/exo-0.5.1
