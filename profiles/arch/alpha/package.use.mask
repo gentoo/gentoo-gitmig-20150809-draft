@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.48 2010/12/05 16:39:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.49 2010/12/05 17:32:07 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (5 Dec 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)
 net-analyzer/wireshark doc-pdf
+# legacy mask
+www-client/elinks javascript
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (07 Nov 2010)
 # x11-libs/qt-declarative is not keyworded.
