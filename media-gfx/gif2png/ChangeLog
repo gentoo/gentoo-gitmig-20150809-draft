@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gif2png
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.20 2010/12/04 17:30:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.21 2010/12/05 16:18:30 hwoarang Exp $
+
+  05 Dec 2010; Markos Chandras <hwoarang@gentoo.org> gif2png-2.5.1-r1.ebuild:
+  Stable on amd64 wrt bug #346501
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> gif2png-2.5.1-r1.ebuild:
   sparc stable wrt #346501
