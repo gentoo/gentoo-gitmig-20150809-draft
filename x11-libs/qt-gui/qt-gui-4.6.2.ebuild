@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.2.ebuild,v 1.10 2010/11/07 19:31:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.6.2.ebuild,v 1.11 2010/12/05 19:53:27 wired Exp $
 
 EAPI="2"
 inherit confutils eutils qt4-build
@@ -34,6 +34,7 @@ RDEPEND="media-libs/fontconfig
 	tiff? ( media-libs/tiff )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	!aqua? (
 		x11-proto/xextproto
 		x11-proto/inputproto
