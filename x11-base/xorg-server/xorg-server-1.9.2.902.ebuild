@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.901.ebuild,v 1.1 2010/11/16 14:19:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.902.ebuild,v 1.1 2010/12/05 11:32:35 scarabeus Exp $
 
 EAPI=3
 # They generate the configure.ac with wrong version of util-macros
@@ -102,9 +102,6 @@ EPATCH_SUFFIX="patch"
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 #	"${WORKDIR}/patches/"
-
-	# http://lists.x.org/archives/xorg-devel/2010-October/014150.html
-	"${FILESDIR}"/"${PN}"-1.9-xinerama-crash-fix.patch
 	)
 
 PATCHES=(
