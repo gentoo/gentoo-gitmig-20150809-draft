@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.45 2010/11/29 02:15:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.46 2010/12/05 18:16:40 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> zodb-3.10.1.ebuild:
+  Add ~alpha/~sparc wrt #341499
 
   29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   zodb-3.9.7.ebuild, zodb-3.10.1.ebuild:
