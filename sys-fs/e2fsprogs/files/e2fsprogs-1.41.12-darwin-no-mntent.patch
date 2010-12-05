@@ -1,3 +1,11 @@
+Dirk Tilger <dirk@miriup.de>:
+  For the mntent.patch: e2fsprogs is using a GNU libc specific
+  operation: setmntent and endmntent. Both operate on /etc/mtab, which
+  doesn't exist on MacOSX, thus they are simply not called on
+  Darwin.
+
+http://bugs.gentoo.org/show_bug.cgi?id=263841
+
 diff --git a/misc/ismounted.c b/misc/ismounted.c
 index 50b4140..84579a4 100644
 --- a/misc/ismounted.c
