@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.7.ebuild,v 1.10 2010/12/05 17:36:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.7.ebuild,v 1.11 2010/12/05 19:23:09 jer Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ DEPEND=">=dev-libs/expat-1.95.4
 	idn? ( net-dns/libidn )
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby )
-	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )"
+	!mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
