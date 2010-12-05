@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.53 2010/12/04 02:10:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.54 2010/12/05 18:48:02 flameeyes Exp $
+
+*ccid-1.4.1-r1 (05 Dec 2010)
+
+  05 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> -ccid-1.4.1.ebuild,
+  +ccid-1.4.1-r1.ebuild:
+  Set the PCSCD env variable rather than changing the group directly so that we
+  can hotplug pcscd.
 
 *ccid-1.4.1 (04 Dec 2010)
 

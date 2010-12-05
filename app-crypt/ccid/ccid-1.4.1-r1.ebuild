@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.1.ebuild,v 1.1 2010/12/04 02:10:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.1-r1.ebuild,v 1.1 2010/12/05 18:48:02 flameeyes Exp $
 
 EAPI="3"
 
@@ -21,11 +21,15 @@ DEPEND=">=sys-apps/pcsc-lite-1.6.5
 	usb? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	sed -i -e 's:GROUP="pcscd":ENV{PCSCD}="1":' \
+		src/92_pcscd_ccid.rules || die
+}
+
 src_configure() {
 	econf \
 		LEX=: \
 		--docdir="/usr/share/doc/${PF}" \
-		--enable-udev \
 		$(use_enable twinserial) \
 		$(use_enable usb libusb)
 }
