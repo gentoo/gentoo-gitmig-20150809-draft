@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.14 2010/10/23 15:08:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.15 2010/12/05 20:16:08 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysvn-1.7.4.ebuild:
+  Restrict Jython ABIs.
 
   23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -files/pysvn-1.7.1-skip_root_test.patch, pysvn-1.7.4.ebuild:
