@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.26 2010/12/01 18:43:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.27 2010/12/05 17:41:47 hd_brummy Exp $
+
+  05 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/0.10.2/01_gentoo.diff:
+  added missing 0.10.2/01_gentoo.diff
 
 *vdr-mplayer-0.10.2 (01 Dec 2010)
 
