@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.59 2010/12/03 21:09:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.60 2010/12/05 16:39:58 ssuominen Exp $
+
+*xfce4-settings-4.7.6 (05 Dec 2010)
+
+  05 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-settings-4.7.6.ebuild:
+  Version bump.
 
 *xfce4-settings-4.7.5 (03 Dec 2010)
 

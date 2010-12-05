@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.4.ebuild,v 1.1 2010/11/07 10:40:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.6.ebuild,v 1.1 2010/12/05 16:39:58 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Settings daemon for Xfce4"
-HOMEPAGE="http://www.xfce.org"
+DESCRIPTION="Xfce's setting manager"
+HOMEPAGE="http://www.xfce.org/projects/xfce4-settings/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
