@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/Data-ObjectDriver-0.07.ebuild,v 1.3 2010/11/30 21:30:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/Data-ObjectDriver-0.07.ebuild,v 1.4 2010/12/05 17:10:56 armin76 Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Simple, transparent data interface, with caching"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND="dev-perl/Class-Trigger
