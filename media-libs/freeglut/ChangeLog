@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.74 2010/11/20 16:25:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.75 2010/12/05 14:53:07 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> freeglut-2.6.0.ebuild:
+  ia64/sh/sparc stable wrt #325215
 
   20 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -freeglut-2.4.0-r2.ebuild:
