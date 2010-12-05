@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.4.ebuild,v 1.2 2010/11/16 16:00:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.5.ebuild,v 1.1 2010/12/05 16:43:28 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
