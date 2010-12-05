@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.1.3.ebuild,v 1.7 2010/06/08 00:12:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.1.3.ebuild,v 1.8 2010/12/05 20:44:59 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils flag-o-matic
 
@@ -48,12 +48,12 @@ src_install() {
 	distutils_src_install
 	dohtml -a html -r mx
 	insinto /usr/share/doc/${PF}
-	find "${S}" -iname "*.pdf" | xargs doins
+	find -iname "*.pdf" | xargs doins
 
 	installation_of_headers() {
-		dodir "$(python_get_includedir)/mx"
+		dodir "$(python_get_includedir)/mx" || return 1
 		find "${ED}$(python_get_sitedir)/mx" -type f -name "*.h" -print0 | while read -d $'\0' header; do
-			mv -f "${header}" "${ED}$(python_get_includedir)/mx"
+			mv -f "${header}" "${ED}$(python_get_includedir)/mx" || return 1
 		done
 	}
 	python_execute_function -q installation_of_headers
