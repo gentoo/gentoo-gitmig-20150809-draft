@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.12.ebuild,v 1.1 2010/12/04 01:07:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.12.ebuild,v 1.2 2010/12/05 17:54:26 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,15 +17,16 @@ IUSE="doc gnome"
 
 # Build fails with -gtk
 # FIXME: add lasem to tree
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=gnome-extra/libgsf-1.14.9[gnome?]
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
 	>=x11-libs/cairo-1.2[svg]
 	x11-libs/libXext
 	x11-libs/libXrender
-	>=x11-libs/gtk+-2.16
-	gnome? ( >=gnome-base/gconf-2 )"
+	>=x11-libs/gtk+-2.16:2
+	gnome? ( >=gnome-base/gconf-2 )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35
