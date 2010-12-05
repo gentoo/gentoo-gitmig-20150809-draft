@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.81 2010/11/09 15:48:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.82 2010/12/05 21:46:55 wired Exp $
+
+  05 Dec 2010; Alex Alexander <wired@gentoo.org> -qt-opengl-4.5.3-r1.ebuild,
+  -files/qt-4.5.3-glib-event-loop.patch:
+  removed 4.5.3
 
 *qt-opengl-4.7.1 (09 Nov 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.99 2010/11/09 15:51:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.100 2010/12/05 21:45:26 wired Exp $
+
+  05 Dec 2010; Alex Alexander <wired@gentoo.org> -qt-assistant-4.5.3.ebuild:
+  removed 4.5.3
 
 *qt-assistant-4.7.1 (09 Nov 2010)
 

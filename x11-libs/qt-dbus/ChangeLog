@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.80 2010/11/09 15:47:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.81 2010/12/05 21:46:00 wired Exp $
+
+  05 Dec 2010; Alex Alexander <wired@gentoo.org> -qt-dbus-4.5.3-r1.ebuild,
+  -files/qt-4.5.3-glib-event-loop.patch:
+  removed 4.5.3
 
 *qt-dbus-4.7.1 (09 Nov 2010)
 

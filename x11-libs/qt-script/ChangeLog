@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.84 2010/11/19 03:25:40 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.85 2010/12/05 21:47:46 wired Exp $
+
+  05 Dec 2010; Alex Alexander <wired@gentoo.org> -qt-script-4.5.3-r1.ebuild,
+  -files/qt-4.5.3-glib-event-loop.patch:
+  removed 4.5.3
 
 *qt-script-4.7.1-r1 (19 Nov 2010)
 
