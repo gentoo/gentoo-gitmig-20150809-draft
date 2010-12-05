@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.10 2010/10/10 11:54:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.11 2010/12/05 14:33:58 nirbheek Exp $
+
+*json-glib-0.12.0 (05 Dec 2010)
+
+  05 Dec 2010; <nirbheek@gentoo.org> +json-glib-0.12.0.ebuild, metadata.xml:
+  Bump to 0.12.0, needed by clutter-1.5.8
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> json-glib-0.7.6.ebuild,
   json-glib-0.8.2.ebuild, json-glib-0.10.2.ebuild:
