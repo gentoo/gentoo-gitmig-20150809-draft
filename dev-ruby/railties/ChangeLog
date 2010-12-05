@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/railties
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.1 2010/12/05 08:39:27 graaff Exp $
+
+*railties-3.0.3 (05 Dec 2010)
+
+  05 Dec 2010; Hans de Graaff <graaff@gentoo.org> +railties-3.0.3.ebuild,
+  +metadata.xml:
+  Initial import for Rails 3. Split off from dev-ruby/rails.
+
