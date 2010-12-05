@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r1.ebuild,v 1.1 2010/12/04 21:40:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r2.ebuild,v 1.1 2010/12/05 11:38:45 xarthisius Exp $
 
 EAPI="3"
 
@@ -46,6 +46,8 @@ pkg_setup() {
 src_prepare() {
 	# use system cfortran
 	rm -f fortran/cfortran.h || die
+	# we don't build udunits and libcf
+	sed -i -e '/udunits libcf/d' configure.ac || die
 	if ! use doc; then
 		sed -i -e "/\$(NC_TEST4)/ s/man4//" Makefile.am || die
 	fi
@@ -70,8 +72,6 @@ src_configure() {
 		$(use_enable cxx)
 		$(use_enable fortran separate-fortran)
 		$(use_enable hdf5 netcdf-4)
-		$(use_enable hdf5 ncgen4)
-		$(use_enable doc docs-install)
 		${myconf}
 	)
 	autotools-utils_src_configure
@@ -80,8 +80,8 @@ src_configure() {
 src_compile() {
 	# hack to allow parallel build
 	if use doc; then
-		emake pdf || die
-		emake -j1 -C man4 || die
+		autotools-utils_src_compile pdf
+		autotools-utils_src_compile -j1 -C man4
 	fi
 	autotools-utils_src_compile
 }

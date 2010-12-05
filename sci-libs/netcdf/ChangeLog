@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.76 2010/12/04 21:40:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.77 2010/12/05 11:38:45 xarthisius Exp $
+
+*netcdf-4.1.1-r2 (05 Dec 2010)
+
+  05 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> -netcdf-4.1.1-r1.ebuild,
+  +netcdf-4.1.1-r2.ebuild, files/netcdf-4.1.1-implicits.patch:
+  Properly use autotools-utils.eclass wrt #347780 by Juergen Rose
+  <rose@rz.uni-potsdam.de>. Skip configure phase for netcdf and libcf as we
+  don't build them. More implicits fixes. Drop old.
 
 *netcdf-4.1.1-r1 (04 Dec 2010)
 
