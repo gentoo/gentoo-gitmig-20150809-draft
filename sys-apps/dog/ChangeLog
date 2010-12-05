@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.37 2010/10/23 22:40:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.38 2010/12/05 18:10:58 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> dog-1.7-r4.ebuild:
+  alpha/sparc stable wrt #342147
 
   23 Oct 2010; Mark Loeser <halcy0n@gentoo.org> dog-1.7-r4.ebuild:
   Stable for ppc/ppc64; bug #342147
