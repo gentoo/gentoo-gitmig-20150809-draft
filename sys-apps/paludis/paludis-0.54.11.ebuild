@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.50.1.ebuild,v 1.1 2010/07/26 13:07:40 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.54.11.ebuild,v 1.1 2010/12/05 22:01:23 dagger Exp $
 
 inherit bash-completion eutils
 
@@ -8,19 +8,22 @@ DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.pioto.org/"
 SRC_URI="http://paludis.pioto.org/download/${P}.tar.bz2"
 
-IUSE="doc portage pink python-bindings ruby-bindings vim-syntax visibility xml zsh-completion"
+IUSE="doc pbins portage pink python-bindings ruby-bindings search-index vim-syntax visibility xml zsh-completion"
 LICENSE="GPL-2 vim-syntax? ( vim )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 COMMON_DEPEND="
 	>=app-admin/eselect-1.2_rc1
 	>=app-shells/bash-3.2
 	>=sys-devel/gcc-4.4
 	dev-libs/libpcre
+	sys-apps/file
+	pbins? ( >=app-arch/libarchive-2.8.4 )
 	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
-	xml? ( >=dev-libs/libxml2-2.6 )"
+	xml? ( >=dev-libs/libxml2-2.6 )
+	search-index? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${COMMON_DEPEND}
 	doc? (
@@ -37,7 +40,8 @@ RDEPEND="${COMMON_DEPEND}
 # Keep syntax as a PDEPEND. It avoids issues when Paludis is used as the
 # default virtual/portage provider.
 PDEPEND="
-	vim-syntax? ( >=app-editors/vim-core-7 )"
+	vim-syntax? ( >=app-editors/vim-core-7 )
+	app-admin/eselect-package-manager"
 
 PROVIDE="virtual/portage"
 
@@ -60,6 +64,13 @@ pkg_setup() {
 		die "Rebuild dev-libs/boost with USE python"
 	fi
 
+	if use pbins && \
+		built_with_use app-arch/libarchive xattr; then
+		eerror "With USE pbins you need libarchive build without the xattr"
+		eerror "use flag."
+		die "Rebuild app-arch/libarchive without USE xattr"
+	fi
+
 	create-paludis-user
 }
 
@@ -69,6 +80,7 @@ src_compile() {
 	local environments=`echo default $(usev portage ) | tr -s \  ,`
 	econf \
 		$(use_enable doc doxygen ) \
+		$(use_enable pbins ) \
 		$(use_enable pink ) \
 		$(use_enable ruby-bindings ruby ) \
 		$(useq ruby-bindings && useq doc && echo --enable-ruby-doc ) \
@@ -77,6 +89,7 @@ src_compile() {
 		$(use_enable vim-syntax vim ) \
 		$(use_enable visibility ) \
 		$(use_enable xml ) \
+		$(use_enable search-index ) \
 		--with-vim-install-dir=/usr/share/vim/vimfiles \
 		--with-repositories=${repositories} \
 		--with-clients=${clients} \
@@ -128,5 +141,18 @@ src_test() {
 			eerror "    $a"
 		done
 		die "Make check failed"
+	fi
+}
+
+pkg_postinst() {
+	pm_is_paludis=false
+	if [[ -f ${ROOT}/etc/env.d/50package-manager ]] ; then
+		pm_is_paludis=$( source ${ROOT}/etc/env.d/50package-manager ; [[ ${PACKAGE_MANAGER} == paludis ]] && echo true || echo false )
+	fi
+
+	if ! $pm_is_paludis ; then
+		elog "If you are using paludis or cave as your primary package manager,"
+		elog "you should consider running:"
+		elog "    eselect package-manager set paludis"
 	fi
 }
