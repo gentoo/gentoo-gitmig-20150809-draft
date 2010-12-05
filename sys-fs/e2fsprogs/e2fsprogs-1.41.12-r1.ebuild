@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.12-r1.ebuild,v 1.3 2010/12/04 22:29:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.12-r1.ebuild,v 1.4 2010/12/05 14:46:57 grobian Exp $
 
 EAPI="3"
 
@@ -41,7 +41,6 @@ src_prepare() {
 		-e 's:$(LN) -f $(DESTDIR).*/:$(LN_S) -f :' \
 		{e2fsck,misc}/Makefile.in || die
 	epatch "${FILESDIR}"/${P}-darwin-makefile.patch
-	epatch "${FILESDIR}"/${P}-darwin-no-mntent.patch
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${FILESDIR}"/${PN}-1.41-mint.patch
 		epatch "${FILESDIR}"/${PN}-1.41.7-mint-blkid.patch
@@ -76,13 +75,6 @@ src_configure() {
 		*-mint*)   libtype=                     ;;
 		*)         libtype=--enable-elf-shlibs  ;;
 	esac
-
-	# On MacOSX 10.4 using the assembly built-in bitoperation functions causes
-	# segmentation faults. Though this is likely fixable we can quickly make it
-	# at least work by using the C functions.
-	if [[ ${CHOST} == i?86-apple-darwin* ]]; then
-		append-flags -D_EXT2_USE_C_VERSIONS_
-	fi
 
 	ac_cv_path_LDCONFIG=: \
 	econf \

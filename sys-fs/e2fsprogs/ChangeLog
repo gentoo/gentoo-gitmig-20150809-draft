@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.228 2010/12/05 12:51:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.229 2010/12/05 14:46:57 grobian Exp $
+
+  05 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  e2fsprogs-1.41.12-r1.ebuild,
+  -files/e2fsprogs-1.41.12-darwin-no-mntent.patch:
+  Fix up ebuild and building on Darwin, drop unnecessary stuff
 
   05 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   files/e2fsprogs-1.41.12-darwin-makefile.patch,
