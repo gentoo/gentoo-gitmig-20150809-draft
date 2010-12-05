@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.231 2010/11/30 19:47:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.232 2010/12/05 14:50:19 grobian Exp $
+
+  05 Dec 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop unmasks of old e2fsprogs/util-linux versions, because only the latest
+  version of e2fsprogs was migrated to gx86, we have to go through the mess
+  now to get it compiling everywhere
 
   30 Nov 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for no longer existant portage version

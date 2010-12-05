@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.82 2010/11/30 19:47:51 grobian Exp $
+# $Id: package.mask,v 1.83 2010/12/05 14:50:19 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -66,25 +66,6 @@
 # Python 2.4 still, come up with a reason that convinces us and the
 # python team!
 =dev-lang/python-2.4*
-
-# Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
-# Very old packages that people should have upgraded away from
-# long ago.  Courtesy mask ... time to upgrade.
-# Added <sys-fs/e2fsprogs as well (halcy0n)
-# prefix: unmask, it's the only thing that compiles for us
--sys-libs/com_err
--sys-libs/ss
--<sys-libs/e2fsprogs-libs-1.41.8
--<sys-fs/e2fsprogs-1.41.9
-# Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
-# util-linux doesn't work on non-Linux and doesn't work in Prefix.  This
-# release of e2fsprogs switches from using internal libuuid and libblkid
-# to those provided by util-linux.  In Prefix (but probably for FreeBSD
-# also) we need to probably create virtuals for these, so we can make an
-# e2fsprogs-uuid ebuild or something to provide these libs with on Prefix.
->=sys-libs/e2fsprogs-libs-1.41.8
->=sys-fs/e2fsprogs-1.41.8
->=sys-apps/util-linux-2.16
 
 # Jeremy Olexa <darkside@gentoo.org> (21 Aug 2009)
 # python-3 will most certainly cause problems if it ever gets unleashed without
