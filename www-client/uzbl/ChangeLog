@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.34 2010/11/19 07:54:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.35 2010/12/05 22:26:37 wired Exp $
+
+*uzbl-2010.11.25 (05 Dec 2010)
+
+  05 Dec 2010; Alex Alexander <wired@gentoo.org> +uzbl-2010.11.25.ebuild,
+  uzbl-9999.ebuild:
+  version bump, added glib to deps
 
   19 Nov 2010; Alex Alexander <wired@gentoo.org> -uzbl-2010.02.02-r1.ebuild,
   -uzbl-2010.03.14.ebuild, -uzbl-2010.04.03.ebuild:
