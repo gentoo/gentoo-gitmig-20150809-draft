@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-session/ChangeLog,v 1.5 2010/09/25 18:44:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-session/ChangeLog,v 1.6 2010/12/05 19:03:52 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-session-3.9.3.ebuild:
+  Restrict Jython ABIs.
 
 *zope-session-3.9.3 (25 Sep 2010)
 

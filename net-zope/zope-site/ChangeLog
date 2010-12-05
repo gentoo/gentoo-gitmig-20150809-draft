@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-site
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-site/ChangeLog,v 1.8 2010/09/25 18:10:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-site/ChangeLog,v 1.9 2010/12/05 19:05:03 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-site-3.9.2.ebuild:
+  Restrict Jython ABIs.
 
 *zope-site-3.9.2 (25 Sep 2010)
 

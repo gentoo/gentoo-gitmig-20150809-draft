@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-debug/zope-app-debug-3.4.1.ebuild,v 1.5 2010/10/30 18:51:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-debug/zope-app-debug-3.4.1.ebuild,v 1.6 2010/12/05 18:49:28 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -24,7 +25,6 @@ RDEPEND="net-zope/zope-app-appsetup
 	net-zope/zope-publisher"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-server/ChangeLog,v 1.1 2010/11/08 13:46:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-server/ChangeLog,v 1.2 2010/12/05 19:03:11 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-server-3.8.1.ebuild:
+  Restrict Jython ABIs.
 
 *zope-server-3.8.1 (08 Nov 2010)
 

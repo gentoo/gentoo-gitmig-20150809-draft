@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-proxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-proxy/ChangeLog,v 1.6 2010/07/07 00:31:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-proxy/ChangeLog,v 1.7 2010/12/05 18:58:11 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-proxy-3.6.1.ebuild:
+  Restrict Jython ABIs.
 
 *zope-proxy-3.6.1 (07 Jul 2010)
 
