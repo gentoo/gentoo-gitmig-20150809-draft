@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.15 2010/11/13 19:29:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.16 2010/12/05 18:41:54 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> Class-C3-0.23.ebuild:
+  Add ~alpha wrt #345439
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> Class-C3-0.23.ebuild:
   ia64/sparc stable wrt #341865
