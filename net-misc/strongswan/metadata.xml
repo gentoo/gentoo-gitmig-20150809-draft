@@ -7,6 +7,10 @@
     <name>Patrick Lauer</name>
   </maintainer>
   <maintainer>
+    <email>gurligebis@gentoo.org</email>
+    <name>Bjarke Istrup Pedersen</name>
+  </maintainer>
+  <maintainer>
     <email>ua_bugz_gentoo@mortal-soul.de</email>
     <name>Matthias Dahl</name>
     <description>Proxy Maintainer, CC on all bugs</description>
@@ -26,6 +30,9 @@
     <flag name="dhcp">
       Enable server support for querying virtual IP addresses for clients
       from a DHCP server. (IKEv2 only)
+    </flag>
+    <flag name="eap">
+      Enable support for the different EAP modules that is supported.
     </flag>
     <flag name="farp">
       Enable faking of ARP responses for virtual IP addresses assigned to
