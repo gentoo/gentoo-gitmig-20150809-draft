@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.26 2010/11/30 21:24:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.27 2010/12/05 16:51:45 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> JSON-2.27.ebuild:
+  alpha/ia64/sparc stable wrt #346403
 
   30 Nov 2010; Markus Meier <maekke@gentoo.org> JSON-2.27.ebuild:
   x86 stable, bug #346403
