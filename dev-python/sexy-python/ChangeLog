@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.24 2010/10/18 13:50:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.25 2010/12/05 18:26:27 arfrever Exp $
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sexy-python-0.1.9-r1.ebuild:
+  Fix dependencies. Restrict Jython ABIs.
 
   18 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   sexy-python-0.1.9-r1.ebuild:

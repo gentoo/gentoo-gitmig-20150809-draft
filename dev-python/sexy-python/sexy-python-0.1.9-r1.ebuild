@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.10 2010/10/18 13:50:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.11 2010/12/05 18:26:27 arfrever Exp $
 
 EAPI="3"
-PYTHON_EXPORT_PHASE_FUNCTIONS="1"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit python
 
@@ -21,10 +23,9 @@ RDEPEND=">=x11-libs/libsexy-${PV}
 	>=dev-python/pygtk-2.6.2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
 	python_src_install
 	python_clean_installation_image
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
