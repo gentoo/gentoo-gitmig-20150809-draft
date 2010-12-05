@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpano13
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.24 2010/12/05 10:23:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.25 2010/12/05 16:29:41 hwoarang Exp $
+
+  05 Dec 2010; Markos Chandras <hwoarang@gentoo.org> libpano13-2.9.17.ebuild:
+  Stable on amd64 wrt bug #347633
 
   05 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libpano13-2.9.17.ebuild:
