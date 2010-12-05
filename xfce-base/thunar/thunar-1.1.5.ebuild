@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.4-r1.ebuild,v 1.1 2010/11/11 10:49:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.5.ebuild,v 1.1 2010/12/05 16:33:54 ssuominen Exp $
 
 EAPI=3
 inherit virtualx xfconf
 
 MY_P=${P/t/T}
 
-DESCRIPTION="File manager for Xfce4"
+DESCRIPTION="Xfce's file manager"
 HOMEPAGE="http://thunar.xfce.org/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/1.1/${MY_P}.tar.bz2"
 
@@ -42,8 +42,6 @@ DEPEND="${COMMON_DEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-trash_plug-in_API.patch )
-
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-dependency-tracking
