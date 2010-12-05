@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Taint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.17 2010/08/11 22:15:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.18 2010/12/05 17:16:00 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> Test-Taint-1.04.ebuild:
+  alpha stable
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> Test-Taint-1.04.ebuild:
   Marked ~ppc64 for bug #315793.
