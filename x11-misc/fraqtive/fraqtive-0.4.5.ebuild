@@ -1,26 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.4.ebuild,v 1.3 2009/10/06 18:04:59 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.5.ebuild,v 1.1 2010/12/05 12:02:09 xarthisius Exp $
 
-EAPI=1
+EAPI=3
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="Fraqtive is a KDE-based program for interactively drawing Mandelbrot and Julia fractals"
 HOMEPAGE="http://fraqtive.mimec.org/"
-SRC_URI="mirror://sourceforge/fraqtive/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="sse2"
 
-RDEPEND="x11-libs/qt-core:4
+DEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
+src_prepare() {
 	local conf="release"
 
 	if use sse2; then
@@ -29,19 +29,8 @@ src_unpack() {
 		conf="$conf no-sse2"
 	fi
 
-	unpack ${A}
-
 	echo "CONFIG += $conf" > "${S}"/config.pri
-	echo "PREFIX = /usr" >> "${S}"/config.pri
+	echo "PREFIX = ${EPREFIX}/usr" >> "${S}"/config.pri
 	# Don't strip wrt #252096
 	echo "QMAKE_STRIP =" >> "${S}"/config.pri
-}
-
-src_compile() {
-	eqmake4
-	emake || die "make failed"
-}
-
-src_install() {
-	make install INSTALL_ROOT="${D}" || die "install failed"
 }
