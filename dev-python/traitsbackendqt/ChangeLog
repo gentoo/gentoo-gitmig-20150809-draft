@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traitsbackendqt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.7 2010/10/18 13:16:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.8 2010/12/05 20:11:07 tomka Exp $
+
+  05 Dec 2010; Thomas Kahle <tomka@gentoo.org> traitsbackendqt-3.5.0.ebuild:
+  x86 stable per bug 347107
 
 *traitsbackendqt-3.5.0 (18 Oct 2010)
 
