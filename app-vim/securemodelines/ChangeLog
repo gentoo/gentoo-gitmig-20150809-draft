@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/securemodelines
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.14 2008/09/21 12:25:51 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.15 2010/12/05 20:37:04 mattst88 Exp $
+
+  05 Dec 2010; Matt Turner <mattst88@gentoo.org> securemodelines-20080424.ebuild:
+  Added ~mips keyword. Bug 178480.
 
 *securemodelines-20080424 (21 Sep 2008)
 
