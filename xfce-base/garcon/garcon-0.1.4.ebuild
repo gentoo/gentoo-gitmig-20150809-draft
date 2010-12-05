@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.1.3.ebuild,v 1.2 2010/11/16 15:54:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.1.4.ebuild,v 1.1 2010/12/05 15:43:31 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="a freedesktop.org compliant menu implementation based on GLib and GIO"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="Xfce's freedesktop.org specification compatible menu implementation library"
+HOMEPAGE="http://www.xfce.org/projects/libraries/"
 SRC_URI="mirror://xfce/src/libs/${PN}/0.1/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FDL-1.1"
