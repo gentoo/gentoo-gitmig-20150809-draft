@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4-r2.ebuild,v 1.4 2010/11/10 12:12:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4-r2.ebuild,v 1.5 2010/12/05 17:44:57 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc x86"
+KEYWORDS="alpha amd64 hppa ppc x86"
 IUSE=""
 
 src_prepare() {

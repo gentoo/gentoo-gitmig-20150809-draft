@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.40 2010/11/15 15:00:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.41 2010/12/05 17:44:57 armin76 Exp $
+
+  05 Dec 2010; Raúl Porcel <armin76@gentoo.org> acct-6.5.4-r2.ebuild:
+  alpha stable wrt #323105
 
   15 Nov 2010; Jeroen Roovers <jer@gentoo.org> files/acct.logrotate:
   Whitespace.
