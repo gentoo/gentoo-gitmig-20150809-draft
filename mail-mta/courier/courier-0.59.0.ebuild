@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.15 2010/06/17 20:24:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.16 2010/12/05 20:54:48 mattst88 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper \
 	fam web webmail"
 
