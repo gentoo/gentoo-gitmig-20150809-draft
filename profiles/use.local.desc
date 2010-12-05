@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6208 2010/12/05 14:53:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6209 2010/12/05 15:32:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3145,6 +3145,7 @@ net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/strongswan:cisco -  Enable support for the Cisco VPN client. 
 net-misc/strongswan:dhcp -  Enable server support for querying virtual IP addresses for clients from a DHCP server. (IKEv2 only) 
+net-misc/strongswan:eap -  Enable support for the different EAP modules that is supported. 
 net-misc/strongswan:farp -  Enable faking of ARP responses for virtual IP addresses assigned to clients. (IKEv2 only) 
 net-misc/strongswan:gcrypt -  Enable dev-libs/libgcrypt plugin which provides 3DES, AES, Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+). Also includes a software random number generator. 
 net-misc/strongswan:ikev1 -  Enable IKEv1 protocol (pluto daemon). 
