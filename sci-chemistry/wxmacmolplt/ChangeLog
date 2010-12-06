@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/wxmacmolplt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.8 2010/06/25 17:34:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.9 2010/12/06 16:45:00 alexxy Exp $
+
+*wxmacmolplt-7.4.2 (06 Dec 2010)
+
+  06 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> -wxmacmolplt-7.4-r1.ebuild,
+  +wxmacmolplt-7.4.2.ebuild, +files/wxmacmolplt-7.4.2-glew.patch,
+  -files/wxmacmolplt-7.4-flash.patch, -files/wxmacmolplt-7.4-glew.patch:
+  Version bump
 
   25 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   wxmacmolplt-7.4-r1.ebuild:

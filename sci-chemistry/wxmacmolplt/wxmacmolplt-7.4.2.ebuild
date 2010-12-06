@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.4-r1.ebuild,v 1.2 2010/06/25 17:34:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.4.2.ebuild,v 1.1 2010/12/06 16:45:00 alexxy Exp $
 
-EAPI="2"
+EAPI="3"
 WX_GTK_VER=2.8
 
 inherit base eutils autotools wxwidgets
@@ -26,14 +26,15 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glew.patch
-	epatch "${FILESDIR}"/${P}-flash.patch
 	sed -i -e "/^dist_doc_DATA/d" Makefile.am \
 		|| die "Failed to disable installation of LICENSE file"
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with flash ming)
+	econf \
+		--with-glew \
+		$(use_with flash ming)
 }
 
 src_install() {
