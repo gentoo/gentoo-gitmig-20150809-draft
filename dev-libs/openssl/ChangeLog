@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.381 2010/12/06 15:34:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.382 2010/12/06 20:01:06 armin76 Exp $
+
+  06 Dec 2010; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0c.ebuild:
+  alpha/ia64/m68k/sh/sparc stable wrt #347623
 
   06 Dec 2010; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0c.ebuild:
   s390 stable wrt #347623
