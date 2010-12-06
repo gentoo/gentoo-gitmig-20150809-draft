@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.2 2010/10/19 05:38:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.3 2010/12/06 20:51:39 robbat2 Exp $
+
+  06 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> -cvs-1.11.20.ebuild,
+  -cvs-1.11.21.ebuild, -cvs-1.11.21-r1.ebuild, -cvs-1.11.22.1.ebuild,
+  -cvs-1.11.22.1-r1.ebuild, -files/cvs-1.11.22.1-hash-nameclash.patch,
+  -cvs-1.12.12-r2.ebuild, -cvs-1.12.12-r3.ebuild, -cvs-1.12.12-r4.ebuild,
+  -cvs-1.12.12-r5.ebuild:
+  Bug #313799: clean up old 1.11.x versions which no longer compile. Also clean
+  up older 1.12.x versions.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> cvs-1.11.20.ebuild,
   cvs-1.12.12-r2.ebuild, cvs-1.12.12-r4.ebuild:
