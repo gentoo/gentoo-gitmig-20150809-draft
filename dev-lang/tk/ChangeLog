@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.141 2010/10/24 15:32:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.142 2010/12/06 17:16:55 jlec Exp $
+
+*tk-8.5.9 (06 Dec 2010)
+
+  06 Dec 2010; Justin Lecher <jlec@gentoo.org> -tk-8.4.15-r1.ebuild,
+  tk-8.4.18.ebuild, tk-8.4.18-r1.ebuild, tk-8.4.19-r1.ebuild, tk-8.5.7.ebuild,
+  -tk-8.5.8.ebuild, tk-8.5.8-r1.ebuild, +tk-8.5.9.ebuild:
+  Version Bump, #347561; Fix for libXft recognition, #347569
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> tk-8.5.8-r1.ebuild:
   Marking tk-8.5.8-r1 ppc for bug 332415

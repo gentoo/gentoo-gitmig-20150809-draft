@@ -1,22 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.8-r1.ebuild,v 1.10 2010/12/06 17:16:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.9.ebuild,v 1.1 2010/12/06 17:16:55 jlec Exp $
 
 EAPI="3"
 
 inherit autotools eutils multilib toolchain-funcs prefix
 
 MY_P="${PN}${PV/_beta/b}"
+
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://www.tcl.tk/"
 SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug threads truetype aqua xscreensaver"
 
-RDEPEND="!aqua? (
+RDEPEND="
+	!aqua? (
 		x11-libs/libX11
 		x11-libs/libXt
 		truetype? ( x11-libs/libXft )
@@ -82,7 +84,7 @@ src_install() {
 	[[ ${CHOST} != *-darwin* ]] && sed -i \
 		-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
 		-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
-		"${ED}"/usr/${mylibdir}/tkConfig.sh
+		"${ED}"/usr/${mylibdir}/tkConfig.sh || die
 
 	# install private headers
 	insinto /usr/${mylibdir}/tk${v1}/include/unix
