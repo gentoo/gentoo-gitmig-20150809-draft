@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.8-r1.ebuild,v 1.9 2010/10/24 15:30:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.8-r1.ebuild,v 1.10 2010/12/06 16:15:24 jlec Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ src_configure() {
 	cd "${S}"/unix
 	econf \
 		$(use_enable threads) \
-		$(use_enable debug symbols) || die
+		$(use_enable debug symbols)
 }
 
 src_compile() {
