@@ -1,0 +1,26 @@
+Index: lib-src/lib-widget-extra/libwidgetextra-uninstalled.pc.in
+===================================================================
+--- lib-src/lib-widget-extra/libwidgetextra-uninstalled.pc.in	(revision 10804)
++++ lib-src/lib-widget-extra/libwidgetextra-uninstalled.pc.in	(working copy)
+@@ -12,5 +12,6 @@
+ Requires: 
+ Version: 1
+ 
+-Libs: -L${libdir} -lwidgetextra @LIBS@
+-Cflags: -I${includedir} @CXXFLAGS@
++Libs: -L${libdir} -lwidgetextra
++Libs.private: @LIBS@ 
++Cflags: -I${includedir}
+Index: lib-src/lib-widget-extra/libwidgetextra.pc.in
+===================================================================
+--- lib-src/lib-widget-extra/libwidgetextra.pc.in	(revision 10804)
++++ lib-src/lib-widget-extra/libwidgetextra.pc.in	(working copy)
+@@ -6,5 +6,6 @@
+ Requires: 
+ Version: 1
+ 
+-Libs: -L${libdir} -lwidgetextra @LIBS@
+-Cflags: -I${includedir} @CXXFLAGS@
++Libs: -L${libdir} -lwidgetextra 
++Libs.private: @LIBS@ 
++Cflags: -I${includedir} 
