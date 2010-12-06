@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.12 2010/11/15 22:29:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.13 2010/12/06 22:44:21 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	!!dev-libs/boost:0
 	dev-libs/expat
 	dev-libs/libxml2
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	net-misc/curl
 	x11-libs/libX11
