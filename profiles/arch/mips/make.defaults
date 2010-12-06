@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.5 2010/12/06 22:35:18 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.6 2010/12/06 23:15:21 mattst88 Exp $
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
@@ -17,3 +17,6 @@ STAGE1_USE="nptl nptlonly"
 
 CHOST="mips-unknown-linux-gnu"
 
+# 2010/12/06 - Matt Turner <mattst88@gentoo.org>
+# Probably missing a bunch for various SGI systems.
+ALSA_CARDS="au1x00"
