@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/secpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.21 2010/11/26 22:35:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/ChangeLog,v 1.22 2010/12/06 15:39:52 armin76 Exp $
+
+  06 Dec 2010; Raúl Porcel <armin76@gentoo.org> secpanel-0.6.1.ebuild:
+  alpha stable wrt #342829
 
   26 Nov 2010; Michael Weber <xmw@gentoo.org> secpanel-0.6.1.ebuild:
   sparc stable (bug 342829)
