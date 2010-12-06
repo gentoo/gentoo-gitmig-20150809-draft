@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.49 2010/11/01 15:06:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.50 2010/12/06 20:41:58 scarabeus Exp $
+
+  06 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> twm-1.0.5.ebuild:
+  Fix missing xorg-static disabling.
 
 *twm-1.0.5 (01 Nov 2010)
 

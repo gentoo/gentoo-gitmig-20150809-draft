@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/twm-1.0.5.ebuild,v 1.1 2010/11/01 15:06:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/twm-1.0.5.ebuild,v 1.2 2010/12/06 20:41:58 scarabeus Exp $
 
 EAPI=3
 
+XORG_STATIC=no
 inherit xorg-2
 
 DESCRIPTION="X.Org twm application"
