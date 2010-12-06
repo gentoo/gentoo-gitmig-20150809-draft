@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.27 2010/11/21 06:15:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.28 2010/12/06 22:30:14 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -175,10 +175,6 @@ mono
 # Temporarily masking ieee1394 until it can be tested
 # Quick fix to my tree b0rkage
 ieee1394
-
-# Hardave Riar <hardave@gentoo.org>
-# No hardware support
-lm_sensors
 
 # Hardave Riar <hardave@gentoo.org>
 # Temporarily masking wifi until I can test it
