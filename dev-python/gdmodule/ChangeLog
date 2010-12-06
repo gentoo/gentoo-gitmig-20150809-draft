@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdmodule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.4 2010/12/06 15:53:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.5 2010/12/06 17:15:04 jlec Exp $
+
+  06 Dec 2010; Justin Lecher <jlec@gentoo.org> gdmodule-0.56.ebuild,
+  gdmodule-0.56-r2.ebuild:
+  Added DISTUTILS_SETUP_FILES=(Setup.py) to global scope, suggested by Afrever
+  on irc
 
 *gdmodule-0.56-r2 (06 Dec 2010)
 

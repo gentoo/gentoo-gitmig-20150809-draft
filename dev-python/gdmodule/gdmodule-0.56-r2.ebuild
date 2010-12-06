@@ -1,11 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.1 2010/12/06 15:53:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.2 2010/12/06 17:15:04 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SETUP_FILES=("Setup.py")
 
 inherit distutils eutils flag-o-matic
 
@@ -27,8 +29,6 @@ RDEPEND="
 	xpm? ( x11-libs/libXpm )"
 DEPEND="${RDEPEND}"
 
-RESTRICT_PYTHON_ABIS="3.*"
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-libs.patch
 
@@ -39,8 +39,6 @@ src_prepare() {
 	use png && append-cppflags -DHAVE_LIBPNG
 	use truetype && append-cppflags -DHAVE_LIBFREETYPE
 	use xpm && append-cppflags -DHAVE_LIBXPM
-
-	mv Setup.py setup.py
 
 	distutils_src_prepare
 }
