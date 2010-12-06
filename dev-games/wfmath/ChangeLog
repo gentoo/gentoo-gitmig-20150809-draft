@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.14 2010/04/13 11:40:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.15 2010/12/06 09:28:08 tupone Exp $
+
+  06 Dec 2010; Alfredo Tupone <tupone@gentoo.org> wfmath-0.3.10.ebuild:
+  Remove not strictly needed dependency on media-libs/atlas-c++
+  Bug #347776 by Mr. Anderson
 
   13 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> wfmath-0.3.10.ebuild:
   x86 stable wrt bug #313535

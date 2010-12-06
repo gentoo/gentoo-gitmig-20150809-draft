@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.10.ebuild,v 1.3 2010/04/13 11:40:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.10.ebuild,v 1.4 2010/12/06 09:28:08 tupone Exp $
 
 EAPI=2
 DESCRIPTION="Worldforge math library"
@@ -13,8 +13,7 @@ KEYWORDS="amd64 x86"
 IUSE="doc"
 
 RDEPEND=""
-DEPEND="doc? ( app-doc/doxygen )
-	media-libs/atlas-c++"
+DEPEND="doc? ( app-doc/doxygen )"
 
 src_compile() {
 	emake || die "emake failed"
