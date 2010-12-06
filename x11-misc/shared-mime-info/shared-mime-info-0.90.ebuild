@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.90.ebuild,v 1.1 2010/12/05 21:33:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.90.ebuild,v 1.2 2010/12/06 11:41:15 ssuominen Exp $
 
 EAPI=3
 inherit fdo-mime
@@ -25,6 +25,12 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--disable-update-mimedb
+}
+
+src_compile() {
+	# http://bugs.gentoo.org/show_bug.cgi?id=347870
+	# https://bugs.freedesktop.org/show_bug.cgi?id=32127
+	emake -j1 || die
 }
 
 src_install() {
