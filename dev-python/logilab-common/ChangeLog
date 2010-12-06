@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.79 2010/12/06 14:02:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.80 2010/12/06 14:37:30 arfrever Exp $
+
+*logilab-common-0.53.0 (06 Dec 2010)
+
+  06 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -logilab-common-0.52.0.ebuild, +logilab-common-0.53.0.ebuild,
+  +files/logilab-common-0.53.0-fix_indentation.patch:
+  Version bump.
 
   06 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   logilab-common-0.52.1.ebuild:
