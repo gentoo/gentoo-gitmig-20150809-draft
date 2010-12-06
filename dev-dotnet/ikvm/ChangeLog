@@ -1,6 +1,29 @@
 # ChangeLog for dev-dotnet/ikvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.24 2010/09/12 17:16:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.25 2010/12/06 14:09:34 pacho Exp $
+
+*ikvm-0.44.0.6 (06 Dec 2010)
+
+  06 Dec 2010; Pacho Ramos <pacho@gentoo.org> +ikvm-0.44.0.6.ebuild:
+  Version bump:
+  - Backported various build system improvements.
+  - Backported IKVM.Reflection ILGenerator exception table sorting bug fix
+  (when running on Mono).
+  - Backported Mono 2.8 mcs build workarounds.
+  - Backported support for boolean, byte, char and short non-final static field
+  constant attributes.
+  - Backported core assembly detection fix.
+  - Backported fix to make sure that ikvmc (and ikvmstub) can find assemblies
+  that are part of a multi assembly (shared class loader) group (if the 
+  assembly is in the same directory as the main assembly of the group).
+  - Backported fix for regression in stack trace printing of .NET (not
+  remapped) exceptions introduced in 0.44. The .NET stack trace should not be 
+  included in the message.
+  - Backported fix for ikvmc sometimes incorrectly handling
+  InternalsVisibleToAttributes in multi assembly builds.
+  - Backported fix for regression introduced with fault handlers. Exception
+  handlers inside fault handlers could be ignored.
+  - Backported fix for #3086040. Volatile stores require a memory barrier.
 
 *ikvm-0.44.0.5 (12 Sep 2010)
 
