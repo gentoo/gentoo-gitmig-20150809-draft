@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gdmodule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.3 2010/11/25 14:14:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.4 2010/12/06 15:53:25 jlec Exp $
+
+*gdmodule-0.56-r2 (06 Dec 2010)
+
+  06 Dec 2010; Justin Lecher <jlec@gentoo.org> -gdmodule-0.56-r1.ebuild,
+  +gdmodule-0.56-r2.ebuild, +files/gdmodule-0.56-fix-libs.patch:
+  Correct handling of image type support, thanks cschwan for providing the
+  patches, #347722
 
 *gdmodule-0.56-r1 (25 Nov 2010)
 
