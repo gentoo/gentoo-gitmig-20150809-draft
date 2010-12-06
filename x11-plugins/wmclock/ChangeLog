@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmclock
-# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.10 2010/09/06 07:24:38 s4t4n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.11 2010/12/06 21:29:29 voyageur Exp $
+
+*wmclock-1.0.13 (06 Dec 2010)
+
+  06 Dec 2010; Bernard Cafarelli <voyageur@gentoo.org> +wmclock-1.0.13.ebuild:
+  Version bump and new homepage, by Bruce Cran <bruce.cran@gmail.com>, bug
+  #347685
 
   06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmclock-1.0.12.2.ebuild:
   Honour Gentoo CFLAGS and LDFLAGS. Closes bug #336133.
