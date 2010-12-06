@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/goldendict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/goldendict/ChangeLog,v 1.2 2010/04/10 20:49:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/goldendict/ChangeLog,v 1.3 2010/12/06 19:09:38 wired Exp $
+
+  06 Dec 2010; Alex Alexander <wired@gentoo.org> -goldendict-0.9.0.ebuild:
+  old, depends on qt 4.5
 
 *goldendict-0.9.0_p20100410 (10 Apr 2010)
 
