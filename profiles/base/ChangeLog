@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.191 2010/12/02 18:20:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.192 2010/12/06 21:27:54 chithanh Exp $
+
+  06 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask x11-base/xorg-server doc until #323647 is resolved
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
   Mask jack USE flag for audacious-plugins so that we can drop from stable the
