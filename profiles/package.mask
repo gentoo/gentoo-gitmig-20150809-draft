@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12250 2010/12/05 23:50:32 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12251 2010/12/06 14:00:51 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (6 Dec 2010)
 # masked for testing #30078
-=media-tv/gentoo-vdr-scipts-0.4.8_rc1
+=media-tv/gentoo-vdr-scripts-0.4.8_rc1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
 # Breaks ABI/API, mask till we figure out what all is affected
