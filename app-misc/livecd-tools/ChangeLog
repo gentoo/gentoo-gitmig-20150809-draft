@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/livecd-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.110 2009/06/29 16:51:24 agaffney Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.111 2010/12/06 19:57:47 jer Exp $
+
+  06 Dec 2010; Jeroen Roovers <jer@gentoo.org> livecd-tools-1.0.42.ebuild,
+  +files/livecd-tools-1.0.42-ttyB0.patch:
+  Do not run getty on ttyB0 by default by gmsoft (bug #347917).
 
 *livecd-tools-1.0.42 (29 Jun 2009)
 
