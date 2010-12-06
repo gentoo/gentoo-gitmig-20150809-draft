@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.37 2010/10/24 15:52:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.38 2010/12/06 20:16:15 polynomial-c Exp $
+
+*geany-0.19.2 (06 Dec 2010)
+
+  06 Dec 2010; Lars Wendler <polynomial-c@gentoo.org> +geany-0.19.2.ebuild:
+  Version bump. Thanks to William V who reported this in bug #347916.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> geany-0.19.ebuild:
   stable ppc, bug 329841
