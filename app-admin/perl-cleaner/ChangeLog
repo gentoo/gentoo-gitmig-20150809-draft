@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.72 2010/11/13 15:54:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.73 2010/12/06 15:34:10 tove Exp $
+
+*perl-cleaner-2.8 (06 Dec 2010)
+
+  06 Dec 2010; Torsten Veller <tove@gentoo.org> +perl-cleaner-2.8.ebuild:
+  Use cave commandline client if paludis is chosen
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> perl-cleaner-2.7.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #340023
