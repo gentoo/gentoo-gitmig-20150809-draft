@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.0.ebuild,v 1.1 2010/12/03 08:37:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.0.2.ebuild,v 1.1 2010/12/06 12:11:32 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="ncurses"
 
-inherit python distutils
-MY_P=${P}"-2"
+inherit versionator python distutils
+MY_P=${PN}-$(replace_version_separator 3 -)
 
 DESCRIPTION="A ncurses-based status monitor for Tor relays"
 HOMEPAGE="http://www.atagar.com/arm/"
