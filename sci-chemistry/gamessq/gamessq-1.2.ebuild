@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamessq/gamessq-1.2.ebuild,v 1.1 2010/12/06 16:49:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamessq/gamessq-1.2.ebuild,v 1.2 2010/12/06 16:50:40 alexxy Exp $
 
 EAPI="3"
 
-inherit base eutils
+inherit base eutils wxwidgets
 
 DESCRIPTION="Simple job manager for GAMESS-US"
 HOMEPAGE="http://www.msg.chem.iastate.edu/GAMESS/GamessQ/"
