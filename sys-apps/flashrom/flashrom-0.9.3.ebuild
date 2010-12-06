@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.3.ebuild,v 1.1 2010/12/03 17:25:28 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.3.ebuild,v 1.2 2010/12/06 16:34:22 idl0r Exp $
 
 EAPI="3"
 
@@ -90,7 +90,8 @@ src_compile() {
 		fi
 	fi
 
-	emake CC="$(tc-getCC)" ${args} || die
+	# WARNERROR=no, bug 347879
+	emake CC="$(tc-getCC)" WARNERROR=no ${args} || die
 }
 
 src_install() {
