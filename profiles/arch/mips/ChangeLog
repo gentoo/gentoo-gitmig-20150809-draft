@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.31 2010/12/06 22:33:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.32 2010/12/06 22:35:18 mattst88 Exp $
+
+  06 Dec 2010; Matt Turner <mattst88@gentoo.org> make.defaults:
+  Add -fortran to default USE.
 
   06 Dec 2010; Matt Turner <mattst88@gentoo.org> make.defaults:
   Remove ccache from default FEATURES.
