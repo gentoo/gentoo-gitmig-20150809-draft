@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r2.ebuild,v 1.1 2010/12/05 11:38:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r3.ebuild,v 1.1 2010/12/06 12:47:00 xarthisius Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ DOCS=(README RELEASE_NOTES)
 PATCHES=(
 	"${FILESDIR}"/${P}-parallel-build.patch
 	"${FILESDIR}"/${P}-implicits.patch
+	"${FILESDIR}"/${P}-mpi-fix.patch
 )
 
 pkg_setup() {

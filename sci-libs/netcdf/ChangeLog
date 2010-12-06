@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.77 2010/12/05 11:38:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.78 2010/12/06 12:47:00 xarthisius Exp $
+
+*netcdf-4.1.1-r3 (06 Dec 2010)
+
+  06 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> -netcdf-4.1.1-r2.ebuild,
+  +netcdf-4.1.1-r3.ebuild, +files/netcdf-4.1.1-mpi-fix.patch:
+  Fix build with USE=dap and openmpi >= 1.4 wrt #347893 by Juergen Rose
+  <rose@rz.uni-potsdam.de>. Drop old.
 
 *netcdf-4.1.1-r2 (05 Dec 2010)
 
