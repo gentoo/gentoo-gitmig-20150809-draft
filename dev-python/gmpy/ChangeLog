@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.23 2010/11/10 17:53:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.24 2010/12/06 17:34:05 arfrever Exp $
+
+*gmpy-1.14 (06 Dec 2010)
+
+  06 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gmpy-1.11.ebuild, -files/gmpy-1.11-tests.patch, -gmpy-1.12.ebuild,
+  +gmpy-1.14.ebuild:
+  Version bump.
 
   10 Nov 2010; Fabian Groffen <grobian@gentoo.org> gmpy-1.13.ebuild:
   Marked ~x86-linux, ~ppc-macos, bug #341995
