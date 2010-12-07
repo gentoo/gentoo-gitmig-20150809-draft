@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.54.9.ebuild,v 1.1 2010/11/23 17:12:50 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.56.0.ebuild,v 1.1 2010/12/07 21:57:53 dagger Exp $
 
 inherit bash-completion eutils
 
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 COMMON_DEPEND="
-	>=app-admin/eselect-1.2_rc1
+	>=app-admin/eselect-1.2.13
 	>=app-shells/bash-3.2
 	>=sys-devel/gcc-4.4
 	dev-libs/libpcre
+	sys-apps/file
 	pbins? ( >=app-arch/libarchive-2.8.4 )
 	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
@@ -46,7 +47,7 @@ PROVIDE="virtual/portage"
 
 create-paludis-user() {
 	enewgroup "paludisbuild"
-	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild"
+	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild,tty"
 }
 
 pkg_setup() {
@@ -68,6 +69,15 @@ pkg_setup() {
 		eerror "With USE pbins you need libarchive build without the xattr"
 		eerror "use flag."
 		die "Rebuild app-arch/libarchive without USE xattr"
+	fi
+
+	if id paludisbuild >/dev/null 2>/dev/null ; then
+		if ! groups paludisbuild | grep --quiet '\<tty\>' ; then
+			eerror "The 'paludisbuild' user is now expected to be a member of the"
+			eerror "'tty' group. You should add the user to this group before"
+			eerror "upgrading Paludis."
+			die "Please add paludisbuild to tty group"
+		fi
 	fi
 
 	create-paludis-user
