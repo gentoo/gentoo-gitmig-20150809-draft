@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.44 2010/11/28 19:10:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt/ChangeLog,v 1.45 2010/12/07 05:03:14 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org>
+  perl-Math-BigInt-1.99.ebuild:
+  Added ~mips, bug 345605.
 
   28 Nov 2010; Raúl Porcel <armin76@gentoo.org> perl-Math-BigInt-1.99.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #345605
