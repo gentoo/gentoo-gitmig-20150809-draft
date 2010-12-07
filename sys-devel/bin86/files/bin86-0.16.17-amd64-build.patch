@@ -1,5 +1,7 @@
---- ld/x86_aout.h.orig	2003-01-28 17:17:14.000000000 -0500
-+++ ld/x86_aout.h	2005-05-07 22:40:05.000000000 -0400
+This should make it built on other archictectures as well
+
+--- ld/x86_aout.h
++++ ld/x86_aout.h
 @@ -13,7 +13,9 @@
  typedef long Long;
  #define __OUT_OK 1
