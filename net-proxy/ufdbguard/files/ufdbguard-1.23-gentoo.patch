@@ -1,0 +1,70 @@
+Index: ufdbGuard-1.23/src/ufdbUpdate.in
+===================================================================
+--- ufdbGuard-1.23.orig/src/ufdbUpdate.in
++++ ufdbGuard-1.23/src/ufdbUpdate.in
+@@ -27,6 +27,8 @@ WGET_COMMAND="@WGET@"
+ NOTIFY_UFDBGUARDD="yes"                 # send HUP signal to ufdbguardd
+ SYSLOG_FACILITY="local6"                # errors/warnings in system log have this facility name
+ 
++source /etc/conf.d/ufdb
++
+ # end of user settings.
+ # DO NOT EDIT ANYTHING BELOW THIS LINE.  ########################################
+ 
+@@ -268,45 +270,18 @@ else			# no ufdbguardd processes...
+    then
+       echo "No ufdbguardd processes found.  Starting the daemon..."
+    fi
+-   for dir in   /usr/pkg/etc/rc.d  \
+-                /usr/local/etc/rc.d  \
+-		/etc/rc.d/init.d  \
+-		/etc/init.d  \
+-		/sbin/init.d  \
+-		$BINDIR
+-   do
+-      if [ -f $dir/ufdb.sh -o -f $dir/ufdb ]
+-      then
+-	 # The most common reason why ufdbguardd does not start is because 
+-	 # the UNIX socket /tmp/ufdbguardd-03977 exists, so remove it!
+-	 rm -f /tmp/ufdbguardd-03977
+-
+-	 if [ -x $dir/ufdb.sh ]
+-	 then
+-	    $dir/ufdb.sh start
+-	 else
+-	    $dir/ufdb start
+-	 fi
+-	 exitcode=$?
+-	 if [ $exitcode -ne 0 ]
+-	 then
+-	    logger -p $SYSLOG_FACILITY.error -t ufdbUpdate \
+-		   "The ufdbguardd daemon did not start (exit code is $exitval)."
+-	    if [ $verbose = yes ]
+-	    then
+-	       echo "The ufdbguardd daemon did not start (exit code is $exitval)."
+-	    fi
+-	 fi
+-	 exit 0
+-      fi
+-   done
+-
+-   logger -p $SYSLOG_FACILITY.error -t ufdbUpdate \
+-	  "The ufdbguardd daemon could not be started (could not find the ufdb[.sh] start script)."
+-   if [ $verbose = yes ]
+-   then
+-      echo "The ufdbguardd daemon could not be started (could not find the ufdb[.sh] start script)."
++   /etc/init.d/ufdb start
++   exitcode=$?
++   if [ $exitcode -ne 0 ]
++   then
++       logger -p $SYSLOG_FACILITY.error -t ufdbUpdate \
++	   "The ufdbguardd daemon did not start (exit code is $exitval)."
++       if [ $verbose = yes ]
++       then
++	   echo "The ufdbguardd daemon did not start (exit code is $exitval)."
++       fi
+    fi
++   exit 0
+ fi
+  
+ # Check the latest version.

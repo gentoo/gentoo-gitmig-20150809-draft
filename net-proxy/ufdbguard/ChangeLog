@@ -1,6 +1,22 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.9 2010/05/07 03:37:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.10 2010/12/07 09:11:50 flameeyes Exp $
+
+*ufdbguard-1.23 (07 Dec 2010)
+
+  07 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> +ufdbguard-1.23.ebuild,
+  +files/ufdbguard-1.23-gentoo.patch,
+  +files/ufdbguard-1.23-parallel-make.patch, +files/ufdb.confd,
+  +files/ufdb.initd, +files/ufdbUpdate.cron, -files/ufdbhttpd.confd,
+  -files/ufdbhttpd.initd, metadata.xml:
+  Version bump. This new version renames the init script to ufdb (to fall in
+  line with the official documentation), relocates the blacklists and the
+  configuration file, allows setting user/password for download without editing
+  the script, allows to disable at build time the use of ufdbhttpd, installs a
+  cron.daily file to update the database and adds a reload target to the init
+  script (with a reconfig alias as that's what the official documentation
+  suggests to use). Also add a doc USE flag to download and install the
+  official reference manual for the version.
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org> ufdbguard-1.20.ebuild:
   Remove dev cruft from ebuild.

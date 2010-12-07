@@ -1,0 +1,17 @@
+# -*- sh -*-
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/files/ufdb.confd,v 1.1 2010/12/07 09:11:50 flameeyes Exp $
+
+# Tables to re-generate when starting or reloading ufdbguard
+UFDB_GT="alwaysallow alwaysdeny"
+
+# User under which to run ufdbguard; it should be the same as the
+# proxy server you're using, so by default it is squid.
+UFDB_USER="squid"
+
+# Options to pass to ufdbguardd; see /usr/libexec/ufdbguard/ufdbguardd
+# -h for a brief list.
+UFDB_OPTS=""
+
+# Options used by the modified ufdbUpdate script in Gentoo
+DOWNLOAD_USER=""
+DOWNLOAD_PASSWORD=""
