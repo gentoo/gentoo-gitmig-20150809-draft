@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-4.0.ebuild,v 1.1 2010/12/06 19:20:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-4.0.ebuild,v 1.2 2010/12/07 01:50:23 ulm Exp $
+
+EAPI=3
+NEED_EMACS=23
 
 inherit elisp
 
@@ -14,12 +17,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+DEPEND=">=app-emacs/mmm-mode-0.4.8-r2"
+RDEPEND="${DEPEND}"
+
 S="${WORKDIR}/${MY_PN}-${PV}"
 SITEFILE="50${PN}-gentoo.el"
 
+src_prepare() {
+	sed -i -e '/^OTHER_ELISP/s:contrib/mmm::' Makefile || die
+}
+
 src_compile() {
-	# 4.0 ships precompiled lisp files which need to be moved out of the
-	# way
+	# removed precompiled lisp files shipped with 4.0
 	emake clean
 	emake -j1 compile EMACS=emacs || die
 }
@@ -31,7 +40,7 @@ src_install() {
 	doinfo doc/*.info* || die
 	doman doc/proofgeneral.1 || die
 	dohtml doc/ProofGeneral/*.html doc/PG-adapting/*.html || die
-	dodoc AUTHORS BUGS CHANGES COMPATIBILITY FAQ FUTURE INSTALL README REGISTER
+	dodoc AUTHORS BUGS CHANGES COMPATIBILITY FAQ INSTALL README REGISTER
 
 	# clean up
 	rm -rf "${D}/usr/share/emacs/site-lisp/site-start.d"
