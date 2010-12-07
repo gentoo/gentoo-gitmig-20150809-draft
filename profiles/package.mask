@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12259 2010/12/07 06:55:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12260 2010/12/07 11:48:09 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (07 Dec 2010)
+# Obsolete and superseeded by dev-tcltk/tclxml-3*
+# bug 348024
+dev-tcltk/tclxml-expat
 
 # Gilles Dartiguelongue <eva@gentoo.org> (07 Dec 2010)
 # Part of GNOME 2.32 release set by breaks my machine as hell
