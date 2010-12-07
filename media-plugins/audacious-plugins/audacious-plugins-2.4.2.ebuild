@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.3.ebuild,v 1.2 2010/06/22 20:02:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4.2.ebuild,v 1.1 2010/12/07 23:26:08 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,13 +13,13 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="aac adplug alsa aqua bs2b cdda cue debug esd ffmpeg flac fluidsynth gnome icecast ipv6 jack
-lame lirc midi mp3 mtp nls oss pulseaudio projectm sdl sid sndfile sse2 vorbis wavpack"
+IUSE="aac adplug alsa aqua bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
+lame lirc midi mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
-	>=media-sound/audacious-2.3
+	>=media-sound/audacious-2.4.2
 	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	aac? ( >=media-libs/faad2-2.7 )
@@ -29,23 +29,19 @@ RDEPEND="app-arch/unzip
 	cdda? ( >=media-libs/libcddb-1.2.1
 		>=dev-libs/libcdio-0.79-r1 )
 	cue? ( media-libs/libcue )
-	esd? ( >=media-sound/esound-0.2.38-r1 )
 	ffmpeg? ( media-video/ffmpeg )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
 	fluidsynth? ( media-sound/fluidsynth )
-	icecast? ( media-libs/libshout )
 	jack? ( >=media-libs/bio2jack-0.4
 		media-sound/jack-audio-connection-kit )
 	lame? ( media-sound/lame )
 	lirc? ( app-misc/lirc )
-	mp3? ( media-libs/libmad )
+	mp3? ( >=media-sound/mpg123-1.12.1 )
 	mtp? ( media-libs/libmtp )
-	projectm? ( >=media-libs/libprojectm-1.2.0
-		>=media-libs/libsdl-1.2.5
-		x11-libs/gtkglext )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
-	sdl? (	>=media-libs/libsdl-1.2.5 )
+	scrobbler? ( net-misc/curl )
+	sdl? (  >=media-libs/libsdl-1.2.5 )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
@@ -71,6 +67,7 @@ src_compile() {
 		--enable-modplug \
 		--enable-neon \
 		--disable-projectm \
+		--disable-projectm-1.0 \
 		$(use_enable adplug) \
 		$(use_enable aac) \
 		$(use_enable alsa) \
@@ -81,13 +78,10 @@ src_compile() {
 		$(use_enable bs2b) \
 		$(use_enable cdda cdaudio) \
 		$(use_enable cue) \
-		$(use_enable debug) \
-		$(use_enable esd) \
 		$(use_enable ffmpeg ffaudio) \
 		$(use_enable flac flacng) \
 		$(use_enable fluidsynth amidiplug-flsyn) \
 		$(use_enable flac filewriter_flac) \
-		$(use_enable icecast) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable gnome gnomeshortcuts) \
@@ -98,8 +92,8 @@ src_compile() {
 		$(use_enable mtp mtp_up) \
 		$(use_enable nls) \
 		$(use_enable oss) \
-		$(use_enable projectm projectm-1.0) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable scrobbler) \
 		$(use_enable sdl paranormal) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
@@ -114,9 +108,4 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS
-}
-
-pkg_postinst() {
-	mp3_warning
-	einfo "Your bug reports for this beta version should go upstream: http://jira.atheme.org/"
 }
