@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/specto-0.3.1.ebuild,v 1.4 2010/11/06 00:35:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/specto/specto-0.3.1.ebuild,v 1.5 2010/12/07 22:24:50 xmw Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ IUSE="linguas_cs linguas_de linguas_es linguas_fr linguas_it
 
 RDEPEND="dev-python/gconf-python
 	dev-python/dbus-python
+	dev-python/libgnome-python
 	dev-python/notify-python
 	>=dev-python/pygtk-2.10"
 
