@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.8 2009/05/09 19:56:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.9 2010/12/07 11:51:06 jlec Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ IUSE="plugins ssl extras"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
-	|| ( >=dev-tcltk/tclxml-3.0 dev-tcltk/tclxml-expat )
+	>=dev-tcltk/tclxml-3.0
 	>=dev-tcltk/tcllib-1.3
 	>=dev-tcltk/bwidget-1.3
 	ssl? ( >=dev-tcltk/tls-1.4.1 )
