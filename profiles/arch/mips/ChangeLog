@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.33 2010/12/06 23:15:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.34 2010/12/07 02:29:04 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add 'mail-client/mutt tokyocabinet' package.use.mask
 
   06 Dec 2010; Matt Turner <mattst88@gentoo.org> make.defaults:
   Add ALSA_CARDS.
