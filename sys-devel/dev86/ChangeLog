@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.18 2010/11/15 06:19:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.19 2010/12/07 07:40:05 polynomial-c Exp $
+
+*dev86-0.16.18 (07 Dec 2010)
+
+  07 Dec 2010; Lars Wendler <polynomial-c@gentoo.org> +dev86-0.16.18.ebuild:
+  Version bump.
 
   15 Nov 2010; Lars Wendler <polynomial-c@gentoo.org>
   dev86-0.16.17-r6.ebuild:
