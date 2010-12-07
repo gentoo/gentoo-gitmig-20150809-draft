@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/fuse-zip-0.2.13.ebuild,v 1.1 2010/12/07 14:00:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/fuse-zip-0.2.13.ebuild,v 1.2 2010/12/07 18:39:30 hwoarang Exp $
 
 EAPI=2
 
@@ -26,6 +26,8 @@ src_prepare() {
 	sed -i -e 's/install -m 755 -s/install -m 755/' Makefile || die "sed failed"
 	# ix broken makefile
 	epatch "${FILESDIR}"/"${P}"-as-needed.patch
+	#enable parallel build
+	sed -i -e "s:make :\$\(MAKE\) :" Makefile || die "sed failed"
 }
 
 src_compile() {
