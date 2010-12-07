@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.156 2010/11/18 15:48:01 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.157 2010/12/07 10:34:32 eras Exp $
+
+  07 Dec 2010; Eray Aslan <eras@gentoo.org> files/amavisd.initd:
+  Init script revision for baselayout-2 for amavisd-new-2.7.0_pre #347895
 
   18 Nov 2010; Eray Aslan <eras@gentoo.org> -amavisd-new-2.7.0_pre8.ebuild:
   Remove old
