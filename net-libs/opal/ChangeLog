@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.69 2010/11/01 22:40:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.70 2010/12/07 07:16:54 pva Exp $
+
+*opal-3.6.8-r1 (07 Dec 2010)
+
+  07 Dec 2010; Peter Volkov <pva@gentoo.org> +opal-3.6.8-r1.ebuild,
+  +files/opal-3.6.8-build-fix.patch, +files/opal-3.6.8-ldflags.patch:
+  Respect ldflags, bug #331085 thank Olivier Huber for report and fix. Bug
+  build issue, #343041 thank Ming-Wei for report and Hamlet for draft fix.
 
   01 Nov 2010; Mark Loeser <halcy0n@gentoo.org> opal-3.6.8.ebuild:
   Add ~ppc64; bug #276355
