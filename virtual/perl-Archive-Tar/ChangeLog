@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Archive-Tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.34 2010/11/22 15:19:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.35 2010/12/07 02:08:07 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org>
+  perl-Archive-Tar-1.72.ebuild:
+  Added ~mips, for bug 262363.
 
 *perl-Archive-Tar-1.72 (22 Nov 2010)
 
