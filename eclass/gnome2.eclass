@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.87 2010/04/26 19:37:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.88 2010/12/07 06:18:55 eva Exp $
 
 #
 # gnome2.eclass
@@ -121,6 +121,7 @@ gnome2_src_install() {
 gnome2_pkg_preinst() {
 	gnome2_gconf_savelist
 	gnome2_icon_savelist
+	gnome2_schemas_savelist
 }
 
 gnome2_pkg_postinst() {
@@ -128,6 +129,7 @@ gnome2_pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
+	gnome2_schemas_update
 
 	if [[ "${SCROLLKEEPER_UPDATE}" = "1" ]]; then
 		gnome2_scrollkeeper_update
@@ -142,6 +144,7 @@ gnome2_pkg_postrm() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
+	gnome2_schemas_update --uninstall
 
 	if [[ "${SCROLLKEEPER_UPDATE}" = "1" ]]; then
 		gnome2_scrollkeeper_update

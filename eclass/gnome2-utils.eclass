@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.13 2008/10/22 21:04:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.14 2010/12/07 06:18:55 eva Exp $
 
 #
 # gnome2-utils.eclass
@@ -220,4 +220,28 @@ gnome2_scrollkeeper_update() {
 		einfo "Updating scrollkeeper database ..."
 		"${SCROLLKEEPER_UPDATE_BIN}" -q -p "${SCROLLKEEPER_DIR}"
 	fi
+}
+
+gnome2_schemas_savelist() {
+	pushd "${D}" &>/dev/null
+	export GNOME2_ECLASS_GLIB_SCHEMAS=$(find 'usr/share/glib-2.0/schemas' -name '*.gschema.xml' 2>/dev/null)
+	popd &>/dev/null
+}
+
+gnome2_schemas_update() {
+	local updater="$(type -P glib-compile-schemas 2>/dev/null)"
+
+	if [[ ! -x ${updater} ]]; then
+		debug-print "${updater} is not executable"
+		return
+	fi
+
+	if [[ -z ${GNOME2_ECLASS_GLIB_SCHEMAS} ]]; then
+		debug-print "no schemas to update"
+		return
+	fi
+
+	ebegin "Updating GSettings schemas"
+	${updater} --allow-any-name "$@" "${ROOT%/}/usr/share/glib-2.0/schemas" &>/dev/null
+	eend $?
 }
