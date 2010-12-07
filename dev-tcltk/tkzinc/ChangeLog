@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tkzinc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.6 2008/09/03 11:44:20 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.7 2010/12/07 18:36:10 jlec Exp $
+
+*tkzinc-3.3.6 (07 Dec 2010)
+
+  07 Dec 2010; Justin Lecher <jlec@gentoo.org> +files/3.3.4-ldflags.patch,
+  +files/3.3.6-ldflags.patch, tkzinc-3.3.4.ebuild, +tkzinc-3.3.6.ebuild:
+  Version Bump, Respecting LDFLAGS, #335960
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> tkzinc-3.3.4.ebuild:
   replace virtual/tetex with virtual/latex-base
