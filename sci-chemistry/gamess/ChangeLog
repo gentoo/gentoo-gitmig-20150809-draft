@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.43 2010/12/07 17:52:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.44 2010/12/07 23:53:35 alexxy Exp $
+
+  07 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> gamess-20101001.1.ebuild,
+  +files/gamess-qmmm-tinker-fix-idate.patch, metadata.xml:
+  Make neo optional also fix qmmm compilation
 
 *gamess-20101001.1 (07 Dec 2010)
 
