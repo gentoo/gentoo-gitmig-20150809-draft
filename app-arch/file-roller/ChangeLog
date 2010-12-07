@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.286 2010/11/28 22:55:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.287 2010/12/07 19:37:09 eva Exp $
+
+  07 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  file-roller-2.32.1.ebuild:
+  Re-drop hppa keyword, thanks to Mr_Bones for reminding.
 
 *file-roller-2.32.1 (28 Nov 2010)
 
