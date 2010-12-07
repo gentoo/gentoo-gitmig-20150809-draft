@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.4 2010/12/07 12:06:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.5 2010/12/07 17:18:14 jlec Exp $
 
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Pure Tcl implementation of an XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
@@ -39,6 +39,9 @@ src_unpack() {
 }
 
 src_compile() {
+	export LDFLAGS_OPTIMIZE="${LDFLAGS}"
+	tc-export CC
+
 	econf ${myconf} \
 		--with-tclinclude="${EPREFIX}"/usr/include \
 		--with-tcl="${EPREFIX}"/usr/$(get_libdir) \
