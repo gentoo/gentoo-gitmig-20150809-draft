@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.85 2010/10/10 21:07:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.86 2010/12/07 17:13:05 tomka Exp $
+
+  07 Dec 2010; Thomas Kahle <tomka@gentoo.org> xlockmore-5.31.ebuild:
+  x86 stable per bug 347845
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> xlockmore-5.28.ebuild,
   xlockmore-5.29.1.ebuild, xlockmore-5.31.ebuild:
