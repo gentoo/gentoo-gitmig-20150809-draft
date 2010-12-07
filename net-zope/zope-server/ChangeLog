@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-server/ChangeLog,v 1.2 2010/12/05 19:03:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-server/ChangeLog,v 1.3 2010/12/07 14:13:23 arfrever Exp $
+
+*zope-server-3.8.2 (07 Dec 2010)
+
+  07 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-server-3.8.1.ebuild, +zope-server-3.8.2.ebuild:
+  Version bump.
 
   05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   zope-server-3.8.1.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-structuredtext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-structuredtext/ChangeLog,v 1.5 2010/05/29 19:00:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-structuredtext/ChangeLog,v 1.6 2010/12/07 14:12:01 arfrever Exp $
+
+*zope-structuredtext-3.5.1 (07 Dec 2010)
+
+  07 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-structuredtext-3.5.0.ebuild, +zope-structuredtext-3.5.1.ebuild:
+  Version bump.
 
 *zope-structuredtext-3.5.0 (29 May 2010)
 
