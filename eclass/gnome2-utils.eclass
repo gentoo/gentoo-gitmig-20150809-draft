@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.17 2010/12/07 06:25:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.18 2010/12/07 06:26:37 eva Exp $
 
 #
 # gnome2-utils.eclass
@@ -11,7 +11,10 @@
 # Maintained by Gentoo's GNOME herd <gnome@gentoo.org>
 #
 
-
+case "${EAPI:-0}" in
+	0|1|2|3) ;;
+	*) die "EAPI=${EAPI} is not supported" ;;
+esac
 
 # Path to gconftool-2
 : ${GCONFTOOL_BIN:="/usr/bin/gconftool-2"}
@@ -37,7 +40,8 @@ DEPEND=">=sys-apps/sed-4"
 # Find the GConf schemas that are about to be installed and save their location
 # in the GNOME2_ECLASS_SCHEMAS environment variable
 gnome2_gconf_savelist() {
-	pushd "${D}" &> /dev/null
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	pushd "${ED}" &> /dev/null
 	export GNOME2_ECLASS_SCHEMAS=$(find 'etc/gconf/schemas/' -name '*.schemas' 2> /dev/null)
 	popd &> /dev/null
 }
@@ -46,7 +50,8 @@ gnome2_gconf_savelist() {
 # Applies any schema files installed by the current ebuild to Gconf's database
 # using gconftool-2
 gnome2_gconf_install() {
-	local updater="${ROOT}${GCONFTOOL_BIN}"
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	local updater="${EROOT}${GCONFTOOL_BIN}"
 
 	if [[ ! -x "${updater}" ]]; then
 		debug-print "${updater} is not executable"
@@ -60,15 +65,15 @@ gnome2_gconf_install() {
 
 	# We are ready to install the GCONF Scheme now
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${ROOT};")"
+	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${EROOT};")"
 
 	einfo "Installing GNOME 2 GConf schemas"
 
 	local F
 	for F in ${GNOME2_ECLASS_SCHEMAS}; do
-		if [[ -e "${ROOT}${F}" ]]; then
+		if [[ -e "${EROOT}${F}" ]]; then
 			debug-print "Installing schema: ${F}"
-			"${updater}" --makefile-install-rule "${ROOT}${F}" 1>/dev/null
+			"${updater}" --makefile-install-rule "${EROOT}${F}" 1>/dev/null
 		fi
 	done
 
@@ -85,7 +90,8 @@ gnome2_gconf_install() {
 # Removes schema files previously installed by the current ebuild from Gconf's
 # database.
 gnome2_gconf_uninstall() {
-	local updater="${ROOT}${GCONFTOOL_BIN}"
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	local updater="${EROOT}${GCONFTOOL_BIN}"
 
 	if [[ ! -x "${updater}" ]]; then
 		debug-print "${updater} is not executable"
@@ -98,15 +104,15 @@ gnome2_gconf_uninstall() {
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${ROOT};")"
+	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${EROOT};")"
 
 	einfo "Uninstalling GNOME 2 GConf schemas"
 
 	local F
 	for F in ${GNOME2_ECLASS_SCHEMAS}; do
-		if [[ -e "${ROOT}${F}" ]]; then
+		if [[ -e "${EROOT}${F}" ]]; then
 			debug-print "Uninstalling gconf schema: ${F}"
-			"${updater}" --makefile-uninstall-rule "${ROOT}${F}" 1>/dev/null
+			"${updater}" --makefile-uninstall-rule "${EROOT}${F}" 1>/dev/null
 		fi
 	done
 
@@ -124,7 +130,8 @@ gnome2_gconf_uninstall() {
 # in the GNOME2_ECLASS_ICONS environment variable
 # That function should be called from pkg_preinst
 gnome2_icon_savelist() {
-	pushd "${D}" &> /dev/null
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	pushd "${ED}" &> /dev/null
 	export GNOME2_ECLASS_ICONS=$(find 'usr/share/icons' -maxdepth 1 -mindepth 1 -type d 2> /dev/null)
 	popd &> /dev/null
 }
@@ -133,7 +140,8 @@ gnome2_icon_savelist() {
 # Updates Gtk+ icon cache files under /usr/share/icons if the current ebuild
 # have installed anything under that location.
 gnome2_icon_cache_update() {
-	local updater="${ROOT}${GTK_UPDATE_ICON_CACHE}"
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	local updater="${EROOT}${GTK_UPDATE_ICON_CACHE}"
 
 	if [[ ! -x "${updater}" ]] ; then
 		debug-print "${updater} is not executable"
@@ -155,14 +163,14 @@ gnome2_icon_cache_update() {
 		if [[ -f "${ROOT}${dir}/index.theme" ]] ; then
 			local rv=0
 
-			"${updater}" -qf "${ROOT}${dir}"
+			"${updater}" -qf "${EROOT}${dir}"
 			rv=$?
 
 			if [[ ! $rv -eq 0 ]] ; then
-				debug-print "Updating cache failed on ${ROOT}${dir}"
+				debug-print "Updating cache failed on ${EROOT}${dir}"
 
 				# Add to the list of failures
-				fails[$(( ${#fails[@]} + 1 ))]="${ROOT}${dir}"
+				fails[$(( ${#fails[@]} + 1 ))]="${EROOT}${dir}"
 
 				retval=2
 			fi
@@ -226,20 +234,23 @@ gnome2_omf_fix() {
 
 # Updates the global scrollkeeper database.
 gnome2_scrollkeeper_update() {
-	if [[ -x "${ROOT}${SCROLLKEEPER_UPDATE_BIN}" ]]; then
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	if [[ -x "${EROOT}${SCROLLKEEPER_UPDATE_BIN}" ]]; then
 		einfo "Updating scrollkeeper database ..."
-		"${ROOT}${SCROLLKEEPER_UPDATE_BIN}" -q -p "${ROOT}${SCROLLKEEPER_DIR}"
+		"${EROOT}${SCROLLKEEPER_UPDATE_BIN}" -q -p "${EROOT}${SCROLLKEEPER_DIR}"
 	fi
 }
 
 gnome2_schemas_savelist() {
-	pushd "${D}" &>/dev/null
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	pushd "${ED}" &>/dev/null
 	export GNOME2_ECLASS_GLIB_SCHEMAS=$(find 'usr/share/glib-2.0/schemas' -name '*.gschema.xml' 2>/dev/null)
 	popd &>/dev/null
 }
 
 gnome2_schemas_update() {
-	local updater="${ROOT}${GLIB_COMPILE_SCHEMAS}"
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	local updater="${EROOT}${GLIB_COMPILE_SCHEMAS}"
 
 	if [[ ! -x ${updater} ]]; then
 		debug-print "${updater} is not executable"
@@ -252,6 +263,6 @@ gnome2_schemas_update() {
 	fi
 
 	ebegin "Updating GSettings schemas"
-	${updater} --allow-any-name "$@" "${ROOT%/}/usr/share/glib-2.0/schemas" &>/dev/null
+	${updater} --allow-any-name "$@" "${EROOT%/}/usr/share/glib-2.0/schemas" &>/dev/null
 	eend $?
 }
