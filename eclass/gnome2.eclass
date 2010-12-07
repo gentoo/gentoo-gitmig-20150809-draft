@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.88 2010/12/07 06:18:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.89 2010/12/07 06:19:54 eva Exp $
 
 #
 # gnome2.eclass
@@ -87,7 +87,7 @@ gnome2_src_install() {
 	# if this is not present, scrollkeeper-update may segfault and
 	# create bogus directories in /var/lib/
 	local sk_tmp_dir="/var/lib/scrollkeeper"
-	dodir "${sk_tmp_dir}"
+	dodir "${sk_tmp_dir}" || die "dodir failed"
 
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
@@ -103,7 +103,9 @@ gnome2_src_install() {
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
 	# Manual document installation
-	[[ -n "${DOCS}" ]] && dodoc ${DOCS}
+	if [[ -n "${DOCS}" ]]; then
+		dodoc ${DOCS} || die "dodoc failed"
+	fi
 
 	# Do not keep /var/lib/scrollkeeper because:
 	# 1. The scrollkeeper database is regenerated at pkg_postinst()
