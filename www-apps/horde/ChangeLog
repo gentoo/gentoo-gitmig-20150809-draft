@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.116 2010/12/04 17:29:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.117 2010/12/07 20:46:25 jer Exp $
+
+  07 Dec 2010; Jeroen Roovers <jer@gentoo.org> horde-3.3.11.ebuild:
+  Stable for PPC (bug #346697).
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> horde-3.3.11.ebuild:
   alpha/sparc stable wrt #346697
