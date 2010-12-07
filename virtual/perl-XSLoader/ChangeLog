@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-XSLoader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.7 2010/11/28 15:59:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.8 2010/12/07 04:56:32 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Added ~mips, bug 345605.
 
   28 Nov 2010; Raúl Porcel <armin76@gentoo.org> perl-XSLoader-0.10.ebuild:
   Add ~alpha/~ia64/~sparc wrt #345607
