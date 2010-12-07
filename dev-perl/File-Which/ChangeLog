@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.17 2010/01/09 21:09:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.18 2010/12/07 05:01:16 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> File-Which-1.09.ebuild:
+  Added ~mips, bug 285343.
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-Which-1.09.ebuild:
   Transfer Prefix keywords

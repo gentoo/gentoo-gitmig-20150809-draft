@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.45 2010/08/23 08:03:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.46 2010/12/07 04:57:05 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> IPC-Run3-0.044.ebuild:
+  Added ~mips, bug 285343.
 
 *IPC-Run3-0.044 (23 Aug 2010)
 
