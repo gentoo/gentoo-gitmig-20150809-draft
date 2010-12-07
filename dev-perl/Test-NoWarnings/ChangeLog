@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-NoWarnings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.32 2010/10/20 07:21:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.33 2010/12/07 04:45:18 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org>
+  Test-NoWarnings-1.02.ebuild:
+  Added ~mips, bug 261707.
 
   20 Oct 2010; Torsten Veller <tove@gentoo.org>
   -Test-NoWarnings-0.083.ebuild, -Test-NoWarnings-0.084.ebuild:
