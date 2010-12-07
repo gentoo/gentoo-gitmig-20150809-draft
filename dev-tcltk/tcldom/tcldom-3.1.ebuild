@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.5 2010/12/07 17:01:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.6 2010/12/07 17:18:55 jlec Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -46,12 +46,12 @@ src_compile() {
 
 	if use xml ; then
 		cd "${S}/src-libxml2"
-		econf ${myconf}
+		econf ${myconf} --with-libxml2-lib=/usr/$(get_libdir)
 		emake || die
 	fi
 	if use expat ; then
 		cd "${S}/src"
-		econf ${myconf} --with-libxml2-lib=/usr/$(get_libdir)
+		econf ${myconf}
 		emake || die
 	fi
 }
