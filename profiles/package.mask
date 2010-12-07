@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12260 2010/12/07 11:48:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12261 2010/12/07 18:37:26 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,6 +46,7 @@ dev-tcltk/tclxml-expat
 # bug 313279 has been fixed.
 =dev-ruby/actionmailer-3.0.3
 =dev-ruby/actionpack-3.0.3
+=dev-ruby/activemodel-3.0.3
 =dev-ruby/activerecord-3.0.3
 =dev-ruby/activeresource-3.0.3
 =dev-ruby/activesupport-3.0.3
