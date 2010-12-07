@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.217 2010/11/09 19:51:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.218 2010/12/07 23:26:03 chainsaw Exp $
+
+*audacious-2.4.2 (07 Dec 2010)
+
+  07 Dec 2010; <chainsaw@gentoo.org> audacious-2.2.ebuild,
+  -audacious-2.3.ebuild, -audacious-2.4_rc3.ebuild, +audacious-2.4.2.ebuild:
+  Third release on the 2.4 branch. Locale-encoded strings are now converted to
+  UTF-8 properly.
 
   09 Nov 2010; Jeroen Roovers <jer@gentoo.org> audacious-2.4.0.ebuild:
   Stable for HPPA (bug #297894).
