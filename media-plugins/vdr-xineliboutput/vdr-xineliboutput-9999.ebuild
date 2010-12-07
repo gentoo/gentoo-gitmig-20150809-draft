@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.5 2010/10/25 18:31:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.6 2010/12/07 19:54:10 idl0r Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -118,6 +118,12 @@ src_configure() {
 src_install() {
 	if use vdr; then
 		vdr-plugin_src_install
+
+		# bug 346989
+		insinto /etc/vdr/plugins/xineliboutput/
+		doins examples/allowed_hosts.conf || die
+		fowners -R vdr:vdr /etc/vdr/
+
 		if use nls; then
 			emake DESTDIR="${D}" i18n || die
 		fi

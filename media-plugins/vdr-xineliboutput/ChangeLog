@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.58 2010/11/26 19:44:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.59 2010/12/07 19:54:10 idl0r Exp $
+
+  07 Dec 2010; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-9999.ebuild:
+  Install default allowed_hosts.conf, bug 346989.
 
   26 Nov 2010; Christian Ruppert <idl0r@gentoo.org>
   files/vdr-xineliboutput-9999-build-system.patch:
