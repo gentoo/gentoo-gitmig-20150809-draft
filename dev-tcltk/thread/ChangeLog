@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/thread
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.16 2009/08/14 00:45:12 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.17 2010/12/07 13:40:29 jlec Exp $
+
+*thread-2.6.6 (07 Dec 2010)
+
+  07 Dec 2010; Justin Lecher <jlec@gentoo.org> thread-2.6.2.ebuild,
+  +thread-2.6.6.ebuild:
+  Version Bump, which fixes the LDFLAGS repect, #335963
 
   14 Aug 2009; Christian Faulhammer <fauli@gentoo.org> thread-2.6.2.ebuild:
   port to EAPI 2
