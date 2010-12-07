@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.1 2010/12/04 19:16:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.2 2010/12/07 13:56:12 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -23,7 +23,6 @@ IUSE="eds nautilus networkmanager spell test webkit" # map
 RDEPEND=">=dev-libs/glib-2.25.9:2
 	>=x11-libs/gtk+-2.22:2
 	>=dev-libs/dbus-glib-0.51
-	>=gnome-extra/evolution-data-server-1.2
 	>=net-libs/telepathy-glib-0.11.15
 	>=media-libs/libcanberra-0.4[gtk]
 	>=x11-libs/libnotify-0.4.4
