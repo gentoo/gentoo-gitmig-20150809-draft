@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.139 2010/12/04 15:52:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.140 2010/12/07 18:05:47 jer Exp $
+
+  07 Dec 2010; Jeroen Roovers <jer@gentoo.org> fuse-2.8.5.ebuild:
+  Stable for PPC (bug #308073).
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> fuse-2.8.5.ebuild:
   alpha/ia64/sparc stable wrt #308073
