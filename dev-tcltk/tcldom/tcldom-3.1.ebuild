@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.4 2010/12/07 12:49:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.5 2010/12/07 17:01:46 jlec Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -40,6 +40,8 @@ src_compile() {
 
 	tc-export CC
 
+	export LDFLAGS_OPTIMIZE="${LDFLAGS}"
+
 	use threads && myconf="${myconf} --enable-threads"
 
 	if use xml ; then
@@ -49,8 +51,8 @@ src_compile() {
 	fi
 	if use expat ; then
 		cd "${S}/src"
-		LDFLAGS="${LDFLAGS}" econf ${myconf}
-		emake LDFLAGS_OPTIMIZE="${LDFLAGS}" || die
+		econf ${myconf} --with-libxml2-lib=/usr/$(get_libdir)
+		emake || die
 	fi
 }
 
@@ -60,11 +62,11 @@ src_install() {
 
 	if use xml ; then
 		cd "${S}/src-libxml2"
-		make DESTDIR="${D}" install || die
+		emake DESTDIR="${D}" install || die
 	fi
 	if use expat ; then
 		cd "${S}/src"
-		make DESTDIR="${D}" install || die
+		emake DESTDIR="${D}" install || die
 	fi
 
 	cd "${S}"
