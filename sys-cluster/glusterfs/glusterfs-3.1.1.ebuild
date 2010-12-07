@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.0-r1.ebuild,v 1.1 2010/11/21 18:56:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.1.ebuild,v 1.1 2010/12/07 18:34:22 alexxy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools elisp-common eutils multilib versionator
 
@@ -23,8 +23,8 @@ RDEPEND="${DEPEND}"
 SITEFILE="50${PN}-mode-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-parallel-build.patch" \
-		"${FILESDIR}/${PN}-2.0.8-docdir.patch" \
+	epatch "${FILESDIR}/${PN}-3.1.0-parallel-build.patch" \
+		"${FILESDIR}/${PN}-docdir.patch" \
 		"${FILESDIR}/glusterd-workdir.patch"
 	eautoreconf
 }
