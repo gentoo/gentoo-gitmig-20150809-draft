@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.32 2010/01/14 16:03:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.33 2010/12/07 04:41:15 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> TimeDate-1.20.ebuild:
+  Added ~mips, bug 243346.
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org> TimeDate-1.20.ebuild:
   Transfer Prefix keywords
