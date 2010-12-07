@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.6 2007/05/18 22:06:54 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.7 2010/12/07 12:06:39 jlec Exp $
 
 inherit eutils
 
@@ -18,15 +18,16 @@ DEPEND=">=dev-lang/tcl-8.2
 	xml? ( >=dev-libs/libxml2-2.6.9 )
 	expat? ( dev-libs/expat )
 	!dev-tcltk/tclxml-expat"
+RDEPEND="${DEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-3_configure.patch
-	epatch ${FILESDIR}/${PN}-3_include_path.patch
+	epatch "${FILESDIR}"/${PN}-3_configure.patch
+	epatch "${FILESDIR}"/${PN}-3_include_path.patch
 }
 
 src_compile() {
@@ -34,34 +35,34 @@ src_compile() {
 
 	use threads && myconf="${myconf} --enable-threads"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 
 	if use xml ; then
-		cd ${S}/libxml2
-		econf ${myconf} --with-Tclxml=.. || die
+		cd "${S}"/libxml2
+		econf ${myconf} --with-Tclxml=..
 		emake || die
 	fi
 	if use expat ; then
-		cd ${S}/expat
-		econf ${myconf} --with-Tclxml=.. || die
+		cd "${S}"/expat
+		econf ${myconf} --with-Tclxml=..
 		emake || die
 	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	if use xml ; then
-		cd ${S}/libxml2
-		make DESTDIR=${D} install || die
+		cd "${S}"/libxml2
+		emake DESTDIR="${D}" install || die
 	fi
 	if use expat ; then
-		cd ${S}/expat
-		make DESTDIR=${D} install || die
+		cd "${S}"/expat
+		emake DESTDIR="${D}" install || die
 	fi
 
-	cd ${S}
-	dodoc ANNOUNCE ChangeLog LICENSE README RELNOTES
-	dohtml doc/*.html
+	cd "${S}"
+	dodoc ANNOUNCE ChangeLog README RELNOTES || die
+	dohtml doc/*.html || die
 }

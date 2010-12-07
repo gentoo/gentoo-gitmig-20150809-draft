@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.3 2010/10/23 17:41:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.4 2010/12/07 12:06:39 jlec Exp $
 
 inherit autotools eutils
 
@@ -21,6 +21,8 @@ DEPEND=">=dev-lang/tcl-8.2
 		virtual/libiconv )
 	!dev-tcltk/tclxml-expat"
 #	test? ( dev-tcltk/tclparser )
+RDEPEND="${DEPEND}"
+
 RESTRICT="test"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -38,8 +40,8 @@ src_unpack() {
 
 src_compile() {
 	econf ${myconf} \
-      --with-tclinclude="${EPREFIX}"/usr/include \
-      --with-tcl="${EPREFIX}"/usr/$(get_libdir) \
+		--with-tclinclude="${EPREFIX}"/usr/include \
+		--with-tcl="${EPREFIX}"/usr/$(get_libdir) \
 		$(use_enable amd64 64bit) \
 		$(use_enable debug symbols) \
 		$(use_enable threads)
@@ -48,12 +50,12 @@ src_compile() {
 
 	if use xml ; then
 		cd "${S}"/libxml2
-		econf ${myconf} --with-Tclxml=.. || die
+		econf ${myconf} --with-Tclxml=..
 		emake || die
 	fi
 	if use expat ; then
 		cd "${S}"/expat
-		econf ${myconf} --with-Tclxml=.. || die
+		econf ${myconf} --with-Tclxml=..
 		emake || die
 	fi
 }
