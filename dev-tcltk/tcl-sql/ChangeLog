@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tcl-sql
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.4 2006/11/23 17:37:59 vivo Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.5 2010/12/07 18:58:12 jlec Exp $
+
+*tcl-sql-20000114-r1 (07 Dec 2010)
+
+  07 Dec 2010; Justin Lecher <jlec@gentoo.org> -tcl-sql-20000114.ebuild,
+  +tcl-sql-20000114-r1.ebuild, +files/ldflags.patch:
+  Resepct LDFLAGS and QA, #334977
 
   23 Nov 2006; Francesco Riosa <vivo@gentoo.org> tcl-sql-20000114.ebuild:
   dev-db/mysql => virtual/mysql
