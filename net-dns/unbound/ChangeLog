@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.18 2010/11/15 16:13:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.19 2010/12/07 15:08:22 matsuu Exp $
+
+*unbound-1.4.7-r1 (07 Dec 2010)
+
+  07 Dec 2010; MATSUU Takuto <matsuu@gentoo.org> +unbound-1.4.7-r1.ebuild:
+  Added net-dns/dnssec to RDEPEND, bug #347415.
 
   15 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> unbound-1.4.6.ebuild,
   unbound-1.4.7.ebuild:
