@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.8-r1.ebuild,v 1.10 2010/12/06 17:16:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.8-r1.ebuild,v 1.11 2010/12/07 09:11:06 jlec Exp $
 
 EAPI="3"
 
@@ -79,10 +79,13 @@ src_install() {
 		-e "s,^\(TK_BUILD_STUB_LIB_SPEC='-L\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
 		-e "s,^\(TK_BUILD_STUB_LIB_PATH='\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
 		"${ED}"/usr/${mylibdir}/tkConfig.sh || die
-	[[ ${CHOST} != *-darwin* ]] && sed -i \
-		-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
-		-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
-		"${ED}"/usr/${mylibdir}/tkConfig.sh
+
+	if [[ ${CHOST} != *-darwin* ]]; then
+		sed -i \
+				-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
+				-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
+				"${ED}"/usr/${mylibdir}/tkConfig.sh || die
+	fi
 
 	# install private headers
 	insinto /usr/${mylibdir}/tk${v1}/include/unix
