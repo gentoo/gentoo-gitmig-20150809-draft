@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.135 2010/12/07 17:10:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.136 2010/12/07 17:36:39 jer Exp $
+
+  07 Dec 2010; Jeroen Roovers <jer@gentoo.org> IO-Socket-SSL-1.35.ebuild:
+  Stable for HPPA (bug #348003).
 
   07 Dec 2010; Thomas Kahle <tomka@gentoo.org> IO-Socket-SSL-1.35.ebuild:
   x86 stable per bug 348003
