@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.37 2010/11/26 09:56:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.38 2010/12/07 17:16:48 tomka Exp $
+
+  07 Dec 2010; Thomas Kahle <tomka@gentoo.org> singular-3.1.2-r2.ebuild:
+  restricting tests, upstream does not care about them
 
 *singular-3.1.2-r2 (26 Nov 2010)
 
