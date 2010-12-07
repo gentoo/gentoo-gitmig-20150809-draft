@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.58 2010/07/20 16:59:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.59 2010/12/07 02:22:31 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> -dnetc-2.9001.478.ebuild:
+  This ebuild only supported mipsel (on Playstation2, from the looks). If we
+  care about this on mips well keyword something newer.
 
   20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   -dnetc-2.9011.498.ebuild, -dnetc-2.9013.498.ebuild,
