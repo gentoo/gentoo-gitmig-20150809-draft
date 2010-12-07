@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.2.2.ebuild,v 1.1 2010/11/27 10:48:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.2.2.ebuild,v 1.2 2010/12/07 07:55:27 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -49,6 +49,11 @@ SITEFILE="71bzr-gentoo.el"
 src_prepare() {
 	distutils_src_prepare
 
+	# Fix for changed behaviour of Python 2.7, integrated into Bazaar
+	# 2.3, might be a regression in Python, see
+	# https://bugs.launchpad.net/bzr/+bug/612096
+	# http://psf.upfronthosting.co.za/roundup/tracker/issue8194
+	epatch "${FILESDIR}"/${PN}-2.2.2-python-2.7.patch
 	# Don't regenerate .c files from .pyx when pyrex is found.
 	epatch "${FILESDIR}/${PN}-2.2.0-no-pyrex-citon.patch"
 	# Don't run lock permission tests when running as root

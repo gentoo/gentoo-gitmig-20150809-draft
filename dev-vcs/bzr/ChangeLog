@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.12 2010/11/27 10:53:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.13 2010/12/07 07:55:27 fauli Exp $
+
+  07 Dec 2010; Christian Faulhammer <fauli@gentoo.org> bzr-2.2.2.ebuild,
+  +files/bzr-2.2.2-python-2.7.patch:
+  Fix support for Python 2.7, taken from upstream, reported by Alessandro
+  Guido <alessandro.guido+bugzilla AT gmail DOT com> in bug 347555
 
   27 Nov 2010; Christian Faulhammer <fauli@gentoo.org> -bzr-2.0.4.ebuild,
   -bzr-2.2.0.ebuild:
