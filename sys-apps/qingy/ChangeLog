@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.62 2010/09/06 08:46:11 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.63 2010/12/07 13:47:02 s4t4n Exp $
+
+*qingy-1.0.0 (7 Dec 2010)
+
+  7 Dec 2010; Michele Noberasco <s4t4n@gentoo.org> +qingy-1.0.0.ebuild:
+  Version bump. Closes bug #345135.
 
   06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> qingy-*.ebuild:
   Small change to fix bug 336117.
