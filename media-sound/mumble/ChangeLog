@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.27 2010/02/10 21:48:20 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.28 2010/12/07 22:01:42 tgurr Exp $
+
+*mumble-1.2.3_rc1 (07 Dec 2010)
+
+  07 Dec 2010; Timo Gurr <tgurr@gentoo.org> +mumble-1.2.3_rc1.ebuild:
+  Version bump, fix bug #307643 thanks to Nikos Chantziaras.
 
 *mumble-1.2.2 (10 Feb 2010)
 
