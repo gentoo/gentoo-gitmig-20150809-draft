@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.1-r1.ebuild,v 1.9 2010/08/16 05:47:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2.4.ebuild,v 1.1 2010/12/07 07:29:48 robbat2 Exp $
 
-EAPI=2
+EAPI=3
 
 GENTOO_DEPEND_ON_PERL=no
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
@@ -19,7 +19,7 @@ if [ "$PV" != "9999" ]; then
 	SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 			mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
 			doc? ( mirror://kernel/software/scm/git/${PN}-htmldocs-${DOC_VER}.tar.bz2 )"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
 	EGIT_BRANCH="master"
@@ -114,9 +114,23 @@ exportmakeopts() {
 		myopts="${myopts} NO_CURL=YesPlease"
 	fi
 
+	# broken assumptions, because of broken build system ...
+	myopts="${myopts} NO_FINK=YesPlease NO_DARWIN_PORTS=YesPlease"
+	myopts="${myopts} INSTALL=install TAR=tar"
+	myopts="${myopts} SHELL_PATH=${EPREFIX}/bin/sh"
+	myopts="${myopts} SANE_TOOL_PATH="
+	myopts="${myopts} OLD_ICONV="
+	myopts="${myopts} NO_EXTERNAL_GREP="
+
+	# can't define this to null, since the entire makefile depends on it
+	sed -i -e '/\/usr\/local/s/BASIC_/#BASIC_/' Makefile
+
 	use iconv \
-		|| einfo "Forcing iconv for 1.7.1-r1 due to bugs #321895, #322205."
+		|| einfo "Forcing iconv for ${PVR} due to bugs #321895, #322205."
 	#	|| myopts="${myopts} NO_ICONV=YesPlease"
+	# because, above, we need to do this unconditionally (no "&& use iconv")
+	use !elibc_glibc && myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
@@ -126,6 +140,29 @@ exportmakeopts() {
 		&& myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
 	use subversion \
 		|| myopts="${myopts} NO_SVN_TESTS=YesPlease"
+# Disabled until ~m68k-mint can be keyworded again
+#	if [[ ${CHOST} == *-mint* ]] ; then
+#		myopts="${myopts} NO_MMAP=YesPlease"
+#		myopts="${myopts} NO_IPV6=YesPlease"
+#		myopts="${myopts} NO_STRLCPY=YesPlease"
+#		myopts="${myopts} NO_MEMMEM=YesPlease"
+#		myopts="${myopts} NO_MKDTEMP=YesPlease"
+#		myopts="${myopts} NO_MKSTEMPS=YesPlease"
+#	fi
+	if [[ ${CHOST} == *-interix* ]] ; then
+		myopts="${myopts} NO_IPV6=YesPlease"
+		myopts="${myopts} NO_MEMMEM=YesPlease"
+		myopts="${myopts} NO_MKDTEMP=YesPlease"
+		myopts="${myopts} NO_STRTOUMAX=YesPlease"
+		myopts="${myopts} NO_STRTOULL=YesPlease"
+		myopts="${myopts} NO_INET_NTOP=YesPlease"
+		myopts="${myopts} NO_INET_PTON=YesPlease"
+		myopts="${myopts} NO_NSEC=YesPlease"
+		myopts="${myopts} NO_MKSTEMPS=YesPlease"
+	fi
+	if [[ ${CHOST} == ia64-*-hpux* ]]; then
+		myopts="${myopts} NO_NSEC=YesPlease"
+	fi
 
 	has_version '>=app-text/asciidoc-8.0' \
 		&& myopts="${myopts} ASCIIDOC8=YesPlease"
@@ -165,17 +202,19 @@ src_prepare() {
 	#epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
 
 	# JS install fixup
-	epatch "${FILESDIR}"/git-1.7.1-always-install-js.patch
+	epatch "${FILESDIR}"/git-1.7.2-always-install-js.patch
 
 	# USE=-iconv causes segfaults, fixed post 1.7.1
 	# Gentoo bug #321895
-	epatch "${FILESDIR}"/git-1.7.1-noiconv-segfault-fix.patch
+	#epatch "${FILESDIR}"/git-1.7.1-noiconv-segfault-fix.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
 		-e 's:^\(LDFLAGS =\).*$:\1 $(OPTLDFLAGS):' \
 		-e 's:^\(CC = \).*$:\1$(OPTCC):' \
 		-e 's:^\(AR = \).*$:\1$(OPTAR):' \
+		-e "s:\(PYTHON_PATH = \)\(.*\)$:\1${EPREFIX}\2:" \
+		-e "s:\(PERL_PATH = \)\(.*\)$:\1${EPREFIX}\2:" \
 		Makefile || die "sed failed"
 
 	# Never install the private copy of Error.pm (bug #296310)
@@ -187,6 +226,9 @@ src_prepare() {
 	sed -i 's/DOCBOOK2X_TEXI=docbook2x-texi/DOCBOOK2X_TEXI=docbook2texi.pl/' \
 		Documentation/Makefile || die "sed failed"
 
+	# bug #318289
+	epatch "${FILESDIR}"/git-1.7.1-interix.patch
+	epatch "${FILESDIR}"/git-1.6.6.1-interix6.patch
 }
 
 git_emake() {
@@ -196,8 +238,9 @@ git_emake() {
 		OPTLDFLAGS="${LDFLAGS}" \
 		OPTCC="$(tc-getCC)" \
 		OPTAR="$(tc-getAR)" \
-		prefix=/usr \
-		htmldir=/usr/share/doc/${PF}/html \
+		prefix="${EPREFIX}"/usr \
+		htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		sysconfdir="${EPREFIX}"/etc \
 		"$@"
 }
 
@@ -261,7 +304,7 @@ src_install() {
 		#elisp-install ${PN}/compat contrib/emacs/vc-git.{el,elc} || die
 		# don't add automatically to the load-path, so the sitefile
 		# can do a conditional loading
-		touch "${D}${SITELISP}/${PN}/compat/.nosearch"
+		touch "${ED}${SITELISP}/${PN}/compat/.nosearch"
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE} || die
 	fi
 
@@ -285,35 +328,32 @@ src_install() {
 		workdir convert-objects blameview ; do
 		cp -rf \
 			"${S}"/contrib/${i} \
-			"${D}"/usr/share/${PN}/contrib \
+			"${ED}"/usr/share/${PN}/contrib \
 			|| die "Failed contrib ${i}"
 	done
 
 	if use perl && use cgi ; then
-		dodir /usr/share/${PN}/gitweb
-		insinto /usr/share/${PN}/gitweb
-		doins "${S}"/gitweb/gitweb.cgi
-		doins "${S}"/gitweb/gitweb.css
+		exeinto /usr/share/${PN}/gitweb
+		doexe "${S}"/gitweb/gitweb.cgi
+		insinto /usr/share/${PN}/gitweb/static
+		doins "${S}"/gitweb/static/gitweb.css
 		js=gitweb.js
-		[ -f "${S}"/gitweb/gitweb.min.js ] && js=gitweb.min.js
-		doins "${S}"/gitweb/${js}
-		doins "${S}"/gitweb/git-{favicon,logo}.png
-
-		# Make sure it can run
-		fperms 0755 /usr/share/${PN}/gitweb/gitweb.cgi
+		[ -f "${S}"/gitweb/static/gitweb.min.js ] && js=gitweb.min.js
+		doins "${S}"/gitweb/static/${js}
+		doins "${S}"/gitweb/static/git-{favicon,logo}.png
 
 		# INSTALL discusses configuration issues, not just installation
 		docinto /
 		newdoc  "${S}"/gitweb/INSTALL INSTALL.gitweb
 		newdoc  "${S}"/gitweb/README README.gitweb
 
-		find "${D}"/usr/lib64/perl5/ \
+		find "${ED}"/usr/lib64/perl5/ \
 			-name .packlist \
 			-exec rm \{\} \;
 	fi
 	if ! use subversion ; then
-		rm -f "${D}"/usr/libexec/git-core/git-svn \
-			"${D}"/usr/share/man/man1/git-svn.1*
+		rm -f "${ED}"/usr/libexec/git-core/git-svn \
+			"${ED}"/usr/share/man/man1/git-svn.1*
 	fi
 
 	if use xinetd ; then

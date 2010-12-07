@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.ebuild,v 1.2 2010/11/09 20:49:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.3.ebuild,v 1.1 2010/12/07 07:29:48 robbat2 Exp $
 
 EAPI=3
 
@@ -70,12 +70,11 @@ DEPEND="${CDEPEND}
 		sys-apps/texinfo
 	)"
 
-# Live ebuild builds HTML docs, additionally
+# Live ebuild builds man pages and HTML docs, additionally
 if [ "$PV" == "9999" ]; then
 	DEPEND="${DEPEND}
-		doc?    (
-			app-text/xmlto
-		)"
+		app-text/asciidoc
+		app-text/xmlto"
 fi
 
 SITEFILE=50${PN}-gentoo.el
@@ -149,17 +148,6 @@ exportmakeopts() {
 #		myopts="${myopts} NO_MKDTEMP=YesPlease"
 #		myopts="${myopts} NO_MKSTEMPS=YesPlease"
 #	fi
-	if [[ ${CHOST} == *-interix* ]] ; then
-		myopts="${myopts} NO_IPV6=YesPlease"
-		myopts="${myopts} NO_MEMMEM=YesPlease"
-		myopts="${myopts} NO_MKDTEMP=YesPlease"
-		myopts="${myopts} NO_STRTOUMAX=YesPlease"
-		myopts="${myopts} NO_STRTOULL=YesPlease"
-		myopts="${myopts} NO_INET_NTOP=YesPlease"
-		myopts="${myopts} NO_INET_PTON=YesPlease"
-		myopts="${myopts} NO_NSEC=YesPlease"
-		myopts="${myopts} NO_MKSTEMPS=YesPlease"
-	fi
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
 		myopts="${myopts} NO_NSEC=YesPlease"
 	fi
@@ -227,8 +215,7 @@ src_prepare() {
 		Documentation/Makefile || die "sed failed"
 
 	# bug #318289
-	epatch "${FILESDIR}"/git-1.7.1-interix.patch
-	epatch "${FILESDIR}"/git-1.6.6.1-interix6.patch
+	epatch "${FILESDIR}"/git-1.7.3.2-interix.patch
 }
 
 git_emake() {
@@ -283,7 +270,10 @@ src_install() {
 		install || \
 		die "make install failed"
 
-	doman man?/*.[157] Documentation/*.[157]
+	# Depending on the tarball and manual rebuild of the documentation, the
+	# manpages may exist in either OR both of these directories.
+	find man?/*.[157] >/dev/null 2>&1 && doman man?/*.[157]
+	find Documentation/*.[157] >/dev/null 2>&1 && doman Documentation/*.[157]
 
 	dodoc README Documentation/{SubmittingPatches,CodingGuidelines}
 	use doc && dodir /usr/share/doc/${PF}/html
@@ -316,16 +306,23 @@ src_install() {
 	dobin contrib/fast-import/git-p4
 	dodoc contrib/fast-import/git-p4.txt
 	newbin contrib/fast-import/import-tars.perl import-tars
+	newbin contrib/git-resurrect.sh git-resurrect
 
 	dodir /usr/share/${PN}/contrib
 	# The following are excluded:
-	# svnimport - use git-svn
-	# p4import - excluded because fast-import has a better one
+	# completion - installed above
+	# emacs - installed above
 	# examples - these are stuff that is not used in Git anymore actually
+	# gitview - installed above
+	# p4import - excluded because fast-import has a better one
 	# patches - stuff the Git guys made to go upstream to other places
-	for i in continuous fast-import hg-to-git \
-		hooks remotes2config.sh stats \
-		workdir convert-objects blameview ; do
+	# svnimport - use git-svn
+	# thunderbird-patch-inline - fixes thunderbird
+	for i in \
+		blameview buildsystems ciabot continuous convert-objects fast-import \
+		hg-to-git hooks remotes2config.sh remotes2config.sh rerere-train.sh \
+		stats svn-fe vim workdir \
+		; do
 		cp -rf \
 			"${S}"/contrib/${i} \
 			"${ED}"/usr/share/${PN}/contrib \
