@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.203 2010/10/17 19:25:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.204 2010/12/07 19:38:52 eva Exp $
+
+  07 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> evince-2.32.0.ebuild:
+  Re-drop hppa keyword, thanks to Mr_Bones for reminding.
 
 *evince-2.32.0 (17 Oct 2010)
 
