@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.44 2010/06/17 20:30:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.45 2010/12/07 09:47:22 phajdan.jr Exp $
+
+  07 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  flow-tools-0.68.5-r1.ebuild:
+  x86 stable wrt bug #347591
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> flow-tools-0.68-r5.ebuild,
   flow-tools-0.68-r7.ebuild, flow-tools-0.68-r8.ebuild,
