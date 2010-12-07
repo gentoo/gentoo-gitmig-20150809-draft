@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.24 2010/12/07 02:29:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.25 2010/12/07 03:20:31 mattst88 Exp $
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
@@ -87,3 +87,7 @@ x11-libs/gtksourceview glade
 # Matt Turner <mattst88@gmail.com> (06 Dec 2010)
 # dev-db/tokyocabinet not keyworded
 mail-client/mutt tokyocabinet
+
+# Matt Turner <mattst88@gmail.com> (06 Dec 2010)
+# dev-perl/GSSAPI not keyworded
+dev-perl/Authen-SASL kerberos
