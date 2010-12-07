@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.157 2010/11/10 21:49:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.158 2010/12/07 04:08:27 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> glibmm-2.24.2-r1.ebuild:
+  Added ~mips keyword.
 
   10 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> -glibmm-2.22.2.ebuild,
   -glibmm-2.24.2.ebuild:
