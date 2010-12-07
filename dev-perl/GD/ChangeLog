@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.95 2010/07/19 21:47:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.96 2010/12/07 08:31:02 tove Exp $
+
+*GD-2.45-r1 (07 Dec 2010)
+
+  07 Dec 2010; Torsten Veller <tove@gentoo.org> +GD-2.45-r1.ebuild:
+  Use virtual/jpeg (#347956)
 
   19 Jul 2010; Markus Meier <maekke@gentoo.org> GD-2.45.ebuild:
   add ~arm, bug #301084
