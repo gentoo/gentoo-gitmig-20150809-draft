@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.11 2009/08/29 18:17:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.12 2010/12/07 17:21:00 jlec Exp $
 
 inherit eutils
 
@@ -16,20 +16,21 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	x11-proto/scrnsaverproto
 	x11-proto/xextproto"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-Makefile.in.diff
-	epatch ${FILESDIR}/${PV}-configure.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-Makefile.in.diff
+	epatch "${FILESDIR}"/${PV}-configure.diff
 }
 
 src_compile() {
-	econf --with-tcl=/usr/$(get_libdir) --with-tk=/usr/$(get_libdir) || die
+	econf --with-tcl=/usr/$(get_libdir) --with-tk=/usr/$(get_libdir)
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS INSTALL README
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS INSTALL README || die
 }
