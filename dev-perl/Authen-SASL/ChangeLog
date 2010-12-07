@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.79 2010/12/07 03:24:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.80 2010/12/07 08:10:34 tove Exp $
+
+  07 Dec 2010; Torsten Veller <tove@gentoo.org> -Authen-SASL-2.10.ebuild,
+  -Authen-SASL-2.13.ebuild, -Authen-SASL-2.14.ebuild,
+  -Authen-SASL-2.14.01.ebuild:
+  Cleanup (#347998)
 
   07 Dec 2010; Matt Turner <mattst88@gentoo.org> Authen-SASL-2.15.ebuild:
   Added ~mips keyword, bug 189441.
