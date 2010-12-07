@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.11 2010/07/11 13:34:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.12 2010/12/07 18:39:01 arfrever Exp $
+
+*rst2pdf-0.16 (07 Dec 2010)
+
+  07 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +rst2pdf-0.16.ebuild:
+  Version bump.
 
   11 Jul 2010; Markus Meier <maekke@gentoo.org> rst2pdf-0.15.ebuild:
   x86 stable, bug #325381
