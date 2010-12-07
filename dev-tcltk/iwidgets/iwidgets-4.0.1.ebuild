@@ -1,9 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.18 2007/06/26 02:02:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.19 2010/12/07 19:57:50 jlec Exp $
 
 MY_P=${PN}${PV}
-S=${WORKDIR}/${MY_P}
 ITCL_MY_PN="itcl"
 ITCL_MY_PV="3.2.1"
 ITCL_MY_P="${ITCL_MY_PN}${ITCL_MY_PV}"
@@ -20,18 +19,20 @@ IUSE=""
 
 DEPEND=">=dev-tcltk/itcl-3.2.1
 	>=dev-tcltk/itk-3.3-r1"
+RDEPEND="${DEPEND}"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	local myconf
 	myconf="${myconf} --with-itcl=${WORKDIR}/${ITCL_MY_P}"
-	econf ${myconf} || die "configure failed"
-	# we don't need to compile anything
+	econf ${myconf}
 }
 
 src_install() {
 	einstall || die "einstall failed"
-	dodoc CHANGES ChangeLog README license.terms
+	dodoc CHANGES ChangeLog README || die
 	# Bug 115470
 	rm doc/panedwindow.n
-	doman doc/*.n
+	doman doc/*.n || die
 }
