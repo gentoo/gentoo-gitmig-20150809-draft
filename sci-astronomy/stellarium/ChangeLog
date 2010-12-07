@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.67 2010/11/08 17:06:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.68 2010/12/07 23:28:14 mr_bones_ Exp $
+
+*stellarium-0.10.6 (07 Dec 2010)
+
+  07 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.10.6.ebuild:
+  version bump (bug #348066)
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
   stellarium-0.10.4.ebuild, stellarium-0.10.5.ebuild:
