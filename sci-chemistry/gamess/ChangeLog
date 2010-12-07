@@ -1,6 +1,16 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.42 2010/08/12 16:10:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.43 2010/12/07 17:52:17 alexxy Exp $
+
+*gamess-20101001.1 (07 Dec 2010)
+
+  07 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> -gamess-20080411.1.ebuild,
+  -files/gamess-20080411.1.gentoo.patch, -gamess-20090112.1.ebuild,
+  -gamess-20090112.3.ebuild, -gamess-20090112.3-r1.ebuild,
+  -gamess-20100325.2.ebuild, -files/gamess-20100325.2.gentoo.patch,
+  +gamess-20101001.1.ebuild, +files/gamess-20101001.1.gentoo.patch:
+  Add new gamess release. Clean up old ones. TODO: Add cuda support and fix
+  broken mpi stuff
 
   12 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   gamess-20100325.2.ebuild:

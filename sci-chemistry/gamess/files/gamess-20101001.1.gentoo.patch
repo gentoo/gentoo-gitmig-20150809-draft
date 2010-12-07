@@ -1,0 +1,1718 @@
+diff -urN gamess.orig/comp gamess/comp
+--- gamess.orig/comp	2010-08-05 19:04:54.000000000 +0400
++++ gamess/comp	2010-12-07 20:29:13.000000000 +0300
+@@ -1390,7 +1390,7 @@
+ #   g77 does not support FORTRAN logical units above 99, or 128 bit math.
+ #
+    case g77:
+-   set OPT = '-O2'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == ormas1) set OPT='-O2 -fno-move-all-movables' # RH9, g77 3.3
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+    if (($MODULE == qeigen) || ($MODULE == int2c)) then
+@@ -1420,7 +1420,7 @@
+ #      -std=legacy  suppresses warnings about use of f77 constructs.
+ #
+    case gfortran:
+-   set OPT='-O2'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+    if ($MODULE == pcmcv2) set OPT='-O1'  # EFP+CPCM, ala Francois, v4.1.2
+    if (($MODULE == qeigen) || ($MODULE == int2c)) then
+@@ -1446,7 +1446,7 @@
+ #    optimizations in 32 bit mode, as a function of the ifort version.
+ #
+    case ifort:
+-   set OPT = '-O3'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == delocl) set OPT='-O0'  # from Cheol
+    if ($MODULE == zheev)  set OPT='-O0'
+    set echo
+@@ -1558,7 +1558,7 @@
+    case gfortran:
+ #           -finit-real=<zero|inf|-inf|nan>  could be interesting debug opt
+ #           -fno-automatic forces static storage of all local variables
+-      set OPT='-O2'
++      set gentoo-OPT = '-O2'
+       if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+       if (($MODULE == qeigen) || ($MODULE == int2c)) then
+          mv -f $MODULE.f $MODULE.junk
+@@ -1587,7 +1587,7 @@
+ #     -WB means warn but don't fail on out-of-bounds array references
+ #     -ftz flushes underflow results to zero
+ #
+-      set OPT = '-O2'
++      set gentoo-OPT = '-O2'
+       if ($MODULE == guess)  set OPT='-O0' # 10.0, exam39
+       if ($MODULE == locpol) set OPT='-O1' # 10.0, makefp/gmres
+       if ($MODULE == morokm) set OPT='-O0' # Jan Fredin
+diff -urN gamess.orig/compall gamess/compall
+--- gamess.orig/compall	2010-10-01 19:37:31.000000000 +0400
++++ gamess/compall	2010-12-07 20:21:55.000000000 +0300
+@@ -84,15 +84,14 @@
+    endif
+ endif
+ if ($TARGET == linux32)      set extraflags='-DLINUX32'
+-if ($TARGET == linux64)      then
++if ($TARGET == linux64) then
++	set chip=`uname -m`
+ #      Ubuntu uses the non-standard -m flag, its -p replies "unknown"
+-                         set chip=`uname -p`
+-   if ($chip == unknown) set chip=`uname -m`
+-   if ($chip == x86_64) set extraflags='-DLINUX64 -m64'
+-   if ($chip == ia64)   set extraflags='-DLINUX64'  # this always 64 bits
++   	if ($chip == x86_64) set extraflags='-DLINUX64 -m64'
++   	if ($chip == ia64)   set extraflags='-DLINUX64'  # this always 64 bits
+ endif
+ if ($TARGET == mac32)        set extraflags='-DLINUX32'
+-if ($TARGET == mac64)    set extraflags='-DLINUX64 -m64 -I/usr/include/malloc'
++if ($TARGET == mac64)        set extraflags='-DLINUX64 -m64 -I/usr/include/malloc'
+ if ($TARGET == necsx)        set extraflags='-DNECSX -size_t64'
+ if ($TARGET == sgi32)        set extraflags='-DSGI32 -n32'
+ if ($TARGET == sgi64)        set extraflags='-DSGI64 -64'
+diff -urN gamess.orig/ddi/compddi gamess/ddi/compddi
+--- gamess.orig/ddi/compddi	2010-06-24 02:35:20.000000000 +0400
++++ gamess/ddi/compddi	2010-12-07 20:21:55.000000000 +0300
+@@ -628,7 +628,7 @@
+ 
+      set FORTRAN=$GMS_FORTRAN   # might be g77, gfortran, ifort, pgf77, f2c
+ 
+-     set CC = 'gcc'
++     set gentoo-CC = 'gcc'
+      set CFLAGS = "-DLINUX -O3 -fstrict-aliasing -I./"
+      set CLIBS  = "-lpthread"
+ 
+@@ -681,7 +681,7 @@
+                              set ARCH='-m64'
+      if (`uname -p` == ia64) set ARCH=''
+ 
+-     set CC = 'gcc'
++     set gentoo-CC = 'gcc'
+      set CFLAGS = "-DLINUX $ARCH -O3 -fstrict-aliasing -I./"
+      set CLIBS  = "-lpthread"
+ 
+diff -urN gamess.orig/ddi/compddi.orig gamess/ddi/compddi.orig
+--- gamess.orig/ddi/compddi.orig	1970-01-01 03:00:00.000000000 +0300
++++ gamess/ddi/compddi.orig	2010-06-24 02:35:20.000000000 +0400
+@@ -0,0 +1,1313 @@
++#!/bin/csh
++#
++#  23 Jun 10 - script to compile the Distributed Data Interface (DDI)
++#
++#     This produces a library 'libddi.a' which GAMESS links against,
++#     and perhaps, a process kickoff program called 'ddikick.x' and
++#     perhaps a test program 'ddi_test.x'.
++#
++if (-e install.info) then
++   source install.info
++else if (-e ../install.info) then
++   source ../install.info
++else
++   echo "Please run 'config' first, to set up GAMESS compiling information"
++   exit 4
++endif
++#
++#  the configuration file read just above provides the next two variables,
++#  and several other GMS_XXX values that will be used further down.
++#
++set TARGET=$GMS_TARGET
++chdir $GMS_PATH/ddi
++#
++#  The following "numbers" make decisions based on 'config' values,
++#  such as the machine target, and communication layer.
++#  A human might want to review some of these selections, but if you
++#  don't understand something, leave it alone.
++#
++#  1. Choose DDI communication layer, the only legal values are
++#              sockets,mixed,mpi,shmem,lapi,armci
++#     Please note that the correct choice is very often "sockets"!
++#
++#     Use 'sockets' if a TCP/IP stack is available.
++#                   Choosing 'sockets' will produce a process kickoff
++#                   program 'ddikick.x', as well as the DDI library.
++#                   Every Unix has TCP/IP for its Ethernet, and "sockets"
++#                   is an highly rational choice for Ethernet clusters.
++#     Use 'mixed' or 'mpi' for MPI-based high performance networks.
++#           'mixed' uses almost entirely MPI-1 calls, but uses a few
++#                   TCP/IP sockets to avoid some of MPI's polling, often
++#                   resulting in better wall clock times than 100% MPI.
++#             'mpi' runs use 100% MPI-1 calls, but this often bogs down
++#                   in polling, and can be much slower than 'mixed'.
++#                         Read about MPI in ~/gamess/ddi/readme.ddi
++#                         before choosing either 'mixed' or 'mpi'.
++#     Use    'lapi' only on the IBM SP platform.
++#     Use   'armci' for the IBM Blue Gene/L platform.
++#     Use     'mpi' for the IBM Blue Gene/P platform.
++#     Use     'mpi' for the Cray XT series.
++#     Use     'mpi' for the SGI Altix or ICE, with its 'mpt' MPI library.
++#     Use   'shmem' for the Cray X1 or X2 vector systems.
++#     Use   'shmem' for the SGI Origin.
++#
++#     Clusters should use TCP/IP sockets on networks up to and including GE,
++#     but probably should use 'mpi' or 'mixed' on networks like Infiniband.
++#
++#  As of April 2010, 'config' usually sets GMS_DDI_COMM to 'sockets'.
++#        However, target 'linux64' may set GMS_DDI_COMM to 'mpi',
++#  along with collecting information about which flavor of mpi, where
++#  it is located, and so forth.  
++#  Thus IB clusters, presuming they do not select openMPI, should work.
++#                                
++set COMM = $GMS_DDI_COMM
++#
++#     high end machines are just hardwired as follows.  Don't change them.
++#
++if ($TARGET != ibm-bg) set GMS_BG_MODEL=" "
++if ($TARGET != ibm-bg) set GMS_ARMCI_PATH=" "
++#
++if  ($TARGET == cray-xt)                         set COMM=mpi
++if (($TARGET == ibm-bg) && ($GMS_BG_MODEL == L)) set COMM=armci
++if (($TARGET == ibm-bg) && ($GMS_BG_MODEL == P)) set COMM=mpi
++if  ($TARGET == ibm64-sp)                        set COMM=lapi
++if  ($TARGET == cray-x1)                         set COMM=shmem
++if  ($TARGET == sgi64)                           set COMM=shmem
++
++#  2. DDI node sizes
++#     a. Maximum number of processors (cores) in your SMP enclosures
++#     b. Maximum number of nodes (number of physical SMP enclosures)
++#     It is OK if these values are a little larger than your system,
++#     but a serious error if they are smaller!
++#
++set MAXCPUS  = 8
++set MAXNODES = 128
++#
++if ($TARGET == cray-xt) then
++   set MAXCPUS=8
++   set MAXNODES=1024 # bump one or both of these to match your XT
++endif
++
++if ($TARGET == ibm-bg) then
++   if ($GMS_BG_MODEL == L) then
++      set MAXCPUS=2
++      set MAXNODES=1024 # bump to match your BG/L
++   endif
++   if ($GMS_BG_MODEL == P) then
++      set MAXCPUS=4
++      set MAXNODES=4096 # bump to match your BG/P
++   endif
++endif
++
++#  3. Use System V-style shared-memory
++#        Please see the file readme.ddi for checking and changing
++#        System V shared memory/IPC limits for your particular OS.
++#        Turn System V memory off if:
++#        1) if you are unable to adjust system limits to higher values,
++#           which requires cooperation from the 'root' account.
++#        2) on some systems with micro-kernels, SysV may be taboo.
++#        3) if SysV is just missing, e.g. in Cygwin under Windows.
++#
++set SYSV = true
++if ($TARGET == ibm-bg)   set SYSV=false
++if ($COMM == armci)      set SYSV=false
++if ($TARGET == win32)    set SYSV=false
++if ($TARGET == win64)    set SYSV=false
++
++#  5.    If you are unable to compile the new DDI source code, in case
++#        your operating system is very old (e.g. > 10 years) you might
++#        choose to compile the original version of DDI by picking 'old'.
++#        The execution script 'rungms' will need to use the old syntax
++#        for ddikick.x, see 'readme.ddi' and inside that script.
++#
++set DDI_SOURCE=new
++
++#  6. If using MPI, select the path to the include file mpi.h
++#     This part is for Linux clusters, where there are many different
++#     MPI libraries, and they may be installed almost anywhere.
++#
++#     For example, Intel MPI version 3.2 installed at the default
++#     place would want to define something like
++#        set MPI_INCLUDE_PATH = '/opt/intel/impi/3.2/include64'
++#     Other scripting changes related to compiling and linking for
++#     an MPI library are the "fge hack" in 'comp', and setting up
++#     the message libraries in 'lked'.
++#     Execution of GAMESS over MPI is left up to the user's ability
++#     to modify 'rungms', based on the information about each MPI
++#     contained in 'readme.ddi'!
++#
++set MPI_INCLUDE_PATH = ''
++#
++#           big iron knows where its MPI is going to be found, below.
++if ($TARGET == ibm-bg)  goto skip_mpi_setup
++if ($TARGET == cray-xt) goto skip_mpi_setup
++#
++#   This is the end of the user selectable "numbered" options!
++#
++#
++# ------------------------------------------------------------------------- #
++# Troubleshooting -- If you should run into any errors while compiling,
++# check the following lists of common failures.
++#
++# 1) socklen_t is not defined.  Uncomment the following line.
++#    set SOCKLEN_T = "-Dsocklen_t=int"
++#
++# 2) turn on debugging output.  set DEBUG_LEVEL to the level of debugging.
++#    0 ==> Debugging (e.g. arg checking) compiled in, but no extra output.
++#          Note that 0 selects more debugging than the normal compilation.
++#    1 ==> Minimum debugging output.
++#    5 ==> Standard debugging output.
++#   10 ==> Significantly more output.
++#   15 ==> Even more ... probably best to avoid this one.
++#    One can also call DDI_DEBUG(level) to set the desired level
++#    around a troublesome piece of code.
++#    Uncomment the following line to enable more argument checking:
++#
++#    set DEBUG_LEVEL=0
++#
++# 3) If you want debugging output from only a particular CPU.
++#    set DEBUG_CPU=RANK
++#    set DEBUG_CPU=0
++#
++# 4) To make all point to point send/recv messages fully synchronous,
++#    add the flag "-DSOC_SYNC" somewhere below, if TCP/IP, of course.
++#
++# ------------------------------------------------------------------------- #
++
++# ------------------------------------------------------------------------- #
++# Here is an index of the options that can be defined to the C compiler
++#
++# -DDDI_SOC  -- use sockets; requires ddikick if mpi is not used.
++# -DDDI_MPI  -- use MPI; must be kicked off with MPI kickoff;
++#               assumes 1:1 mapping of compute processes and data servers
++# -DDDI_LAPI -- use LAPI for distributed data operations; kickoff using
++#               the poe command; NO data servers
++# -DUSE_SYSV -- make use of System V shared-memory
++#
++# -DMACHINE              -- defines the target architecture
++# -D_32_BIT              -- specifies a 32-bit machine (64-bit default)
++# -DINT_SIZE=(int,long)  -- defines the size of a FORTRAN integer
++# -D_UNDERSCORES=(0,1,2) -- number of underscores on a FORTRAN object
++# -DF77_UPPERCASE        -- use UPPERCASE names for FORTRAN objects
++#
++# ------------------------------------------------------------------------- #
++
++
++echo "       Building the Distributed Data Interface library"
++echo "           started at `date`"
++echo " "
++if ($DDI_SOURCE == new) then
++   echo "Compiling for machine type $TARGET,"
++   echo "using communication model $COMM,"
++   echo "System V shared memory option set $SYSV,"
++   echo "with maxima of $MAXCPUS processors/node and $MAXNODES nodes."
++else
++   echo "Note, using DDI version 1 source code, for machine $TARGET."
++endif
++echo " "
++echo "This compilation should produce the DDI library libddi.a"
++#
++if ($COMM == sockets) \
++echo "This compilation should also produce the kick-off program ddikick.x"
++#
++echo " "
++#
++if (($GMS_DDI_COMM == mpi) || ($GMS_DDI_COMM == mixed)) then
++   switch ($GMS_MPI_LIB)
++     case impi:
++        set MPI_INCLUDE_PATH = "$GMS_MPI_PATH/include64"
++        breaksw
++     case mpich2:
++     case mvapich2:
++     case myrinet:
++     case openmpi:
++     case mpt:
++        set MPI_INCLUDE_PATH = "$GMS_MPI_PATH/include"
++        breaksw
++#            MicroSoft MPI uses a compiler flag, set below, not a pathname
++     case msmpi:
++        if($GMS_FORTRAN == pgf77) set MPI_INCLUDE_PATH = " "
++        goto skip_mpi_setup
++        breaksw
++     default:
++        echo "unknown MPI software requested"
++        exit 4
++        breaksw
++   endsw
++#         Double check that a valid path to MPI was provided.
++#         Checking omitted in comp/lked as probably compddi will be run 1st.
++   if (-e $MPI_INCLUDE_PATH/mpi.h) then
++      echo "The MPI-1 software library to be used is $GMS_MPI_LIB,"
++      echo "with the include file 'mpi.h' at $MPI_INCLUDE_PATH"
++   else
++      echo "Something is wrong with your MPI definitions in 'config',"
++      echo "since there is no such file $MPI_INCLUDE_PATH/mpi.h"
++      exit 4
++   endif
++endif
++#
++skip_mpi_setup:
++
++echo " "
++
++# ------------- set options forced by the choices made above ------------- #
++
++# --------------------- #
++# Communication Options #
++# --------------------- #
++  if($COMM == sockets) then
++     set DDI_COMM = '-DDDI_SOC'
++  endif
++
++  if($COMM == mixed) then
++     set DDI_COMM = '-DDDI_MPI -DDDI_SOC'
++  endif
++
++  if($COMM == mpi) then
++     set DDI_COMM = '-DDDI_MPI'
++  endif
++
++  if($COMM == lapi) then
++     set DDI_COMM = '-DDDI_MPI -DDDI_LAPI'
++  endif
++
++  if($COMM == shmem) then
++     set DDI_COMM = ' '
++  endif
++
++  if($COMM == armci) then
++     set DDI_COMM = "-DDDI_MPI -DDDI_ARMCI"
++     set DDI_COMM = "$DDI_COMM -DDDI_ARMCI_IMPLICIT_NBPUT"
++     set DDI_COMM = "$DDI_COMM -DDDI_ARMCI_IMPLICIT_NBGET"
++     set DDI_COMM = "$DDI_COMM -DDDI_ARMCI_IMPLICIT_NBACC"
++     set DDI_COMM = "$DDI_COMM -DDDI_ARMCI_IMPLICIT_WAIT"
++  endif
++
++#        remember, the L is using ARMCI, with all the flags just above
++  if ($TARGET == ibm-bg) then
++     if ($GMS_BG_MODEL == L) set DDI_COMM = "-DDDI_BGL $DDI_COMM"
++     if ($GMS_BG_MODEL == P) set DDI_COMM = "-DDDI_BGP $DDI_COMM"
++  endif
++
++
++# ---------------------- #
++# System V Shared-Memory #
++# ---------------------- #
++  if($SYSV == true) set DDI_COMM = "$DDI_COMM -DUSE_SYSV"
++
++
++# --------------------- #
++# Troubleshooting Flags #
++# --------------------- #
++  set DDI_OPTS = "$DDI_COMM"
++  set DDI_OPTS = "$DDI_OPTS -DMAX_SMP_PROCS=$MAXCPUS -DMAX_NODES=$MAXNODES"
++
++# 1) socklen_t
++  if($?SOCKLEN_T == 0) set SOCKLEN_T = " "
++  set DDI_OPTS = "$DDI_OPTS $SOCKLEN_T"
++
++# 2) debugging options
++  if($?DEBUG_LEVEL == 0) then
++     set DEBUG_LEVEL = ""
++  else
++     set DEBUG_LEVEL = "-DDDI_DEBUG=$DEBUG_LEVEL"
++  endif
++  set DDI_OPTS = "$DDI_OPTS $DEBUG_LEVEL"
++
++# 3) debugging a particular cpu
++  if($?DEBUG_CPU == 0) then
++     set DEBUG_CPU = ""
++  else
++     set DEBUG_CPU = "-DDDI_DEBUG_CPU=$DEBUG_CPU"
++  endif
++  set DDI_OPTS = "$DDI_OPTS $DEBUG_CPU"
++
++
++# ------------- start of machine specific option selection -------------- #
++
++  unset CFLAGS
++
++# ------------ #
++# Compaq Tru64 #
++# ------------ #
++#    Notes:
++#    AXP systems may be labeled Digital, Compaq, or HP depending on age.
++#    Similarly the O/S has various names, including OSF/1, Digital Unix.
++#    This target is used for all such systems, and works for Linux too.
++#
++#    Old C compilers ("cc -V | more -5") such as 5.6 require that you 
++#    add -Dsocklen_t=int to CFLAGS below, while newer versions such
++#    as 5.9, 6.1, ... have the new data type socklen_t present.
++#
++  if($TARGET == axp64) then
++
++     set UNAME = `uname`
++                         set CC = 'cc'
++     if($UNAME == Linux) set CC = 'ccc'
++                         set NumUS=1
++     if($UNAME == Linux) set NumUS=2
++ 
++     set CFLAGS = "-DCOMPAQ -O4 -ansi_alias -std -I./"
++     set CLIBS  = "-lpthread"
++     set F77_OPTS = "-DINT_SIZE=long -D_UNDERSCORES=$NumUS"
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'f77'
++     if($UNAME == Linux) set FORTRAN = 'fort'
++     set FORT_FLAGS = '-i8 -v '
++     set FORT_LIBS  = ''
++
++  endif
++
++
++# ------- #
++# Cray X1 #
++# ------- #
++#     this machine based on an antiquated SHMEM interface,
++#     creating serious doubt that this is a working machine.
++  if($TARGET == cray-x1) then
++     set RANLIB_FLAGS = ' '
++     echo "Compiling: ddit3e.o for use on the Cray X1"
++     set echo
++     #---ftn -O2 -Ossp,aggress -xomp -dp -sdefault64 -c -V shmem/ddit3e.f
++     ../comp ddit3e
++     unset echo
++
++     if(-e ddit3e.o) then
++        ar cr libddi.a ddit3e.o
++        rm -f ddit3e.o
++        echo "Finished compiling: ddit3e.o"
++        goto finishOK
++     else
++        echo "Error compiling: ddit3e.o"
++        exit 4
++     endif
++
++     set FORTRAN    = 'ftn'
++     set FORT_FLAGS = '-O2 -V -xomp -dp -sdefault64 -Ossp'
++     set FORT_LIBS  = ''
++  endif
++
++
++# ------- #
++# Cray XT #
++# ------- #
++if ($TARGET == cray-xt) then
++   echo "---------------"
++   echo "Loaded modules:"
++   echo "---------------"
++   module list
++
++#         two choices not included in the configuration step
++#         These must match 'comp' and 'lked', and loaded software modules.
++#         valid choices: gnu (Ran's choice), pathscale, intel, cray, pgi
++   set GMS_XT_COMP = 'pgi'
++#            valid choices: i7, barcelona, shanghai, or blank
++   set GMS_XT_ARCH = ' '
++
++   set CC='cc'
++   set CFLAGS='-DLINUX64 -DCRAY_MPI -DUSE_MPI_BARRIER -I./'
++
++   switch ($GMS_XT_COMP)
++      case pgi:
++         set CFLAGS="$CFLAGS -O3 -mcmodel=medium -fastsse -Mfpmisalign"
++         breaksw
++      case pathscale:
++         set CFLAGS="$CFLAGS -O3 -m64 -fstrict-aliasing"
++         breaksw
++      case gnu:
++         set CFLAGS="$CFLAGS -O3 -m64 -fstrict-aliasing"
++         breaksw
++      case intel:
++      case cray:
++      default:
++         set CFLAGS="$CFLAGS -O3"
++         breaksw
++   endsw
++
++   switch ($GMS_XT_ARCH)
++      case barcelona:
++         set CFLAGS = "$CFLAGS -tp barcelona-64 -Mfpmisalign"
++         breaksw
++      case shanghai:
++         set CFLAGS = "$CFLAGS -tp shanghai-64 -Mfpmisalign"
++         breaksw
++      case i7:
++         set CFLAGS = "$CFLAGS -tp x64"
++         breaksw
++      default:
++         breaksw
++   endsw
++
++   set AR_FLAGS     = 'cr'
++   set RANLIB_FLAGS = ' '
++   set F77_OPTS = "-DINT_SIZE=long -D_UNDERSCORES=1"
++endif
++
++# ------------------- #
++# Fujitsu Prime Power #
++# ------------------- #
++  if($TARGET == fuji-pp32) then
++     set CC = 'fcc'
++     set CFLAGS='-DSUN32 -O -I./'
++     set CLIBS='-lpthread -lsocket -lnsl'
++     set F77_OPTS='-DINT_SIZE=int -D_UNDERSCORES=1'
++     set AR_FLAGS     = '-cr'
++     set RANLIB_FLAGS = '-c'
++
++     set FORTRAN    = 'f90'
++     set FORT_FLAGS = '-KV8PLUS -fs'
++     set FORT_LIBS  = '-SSL2'
++  endif
++
++  if($TARGET == fuji-pp64) then
++     set CC = 'fcc'
++     set CFLAGS='-KV9 -DSUN64 -O -I./'
++     set CLIBS='-KV9 -lsocket -lnsl -lpthread'
++     set F77_OPTS='-DINT_SIZE=long -D_UNDERSCORES=1'
++     set AR_FLAGS     = '-cr'
++     set RANLIB_FLAGS = '-c'
++
++     set FORTRAN    = 'f90'
++     set FORT_FLAGS = '-KV9 -fs -CcdII8'
++     set FORT_LIBS  = '-SSL2'
++  endif
++
++
++# ----- #
++# HP-UX #
++# ----- #
++  if($TARGET == hpux32) then
++     set CC       = 'cc'
++     set CFLAGS   = '-DHPUX32 +O3 +DD32 -D_32_BIT +O3 -I./'
++     set CLIBS    = '-lpthread'
++
++     set F77_OPTS = '-DINT_SIZE=int -D_UNDERSCORES=0'
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = '-c'
++
++     set FORTRAN    = 'f90'
++     set FORT_FLAGS = '+O2 +Ofastaccess +noppu'
++     set FORT_LIBS  = '-ldld +U77'
++  endif
++
++#    see the note in readme.ddi if you have trouble compiling with
++#    the socklen_t redefinition (this may occur on PA-RISC systems).
++  if($TARGET == hpux64) then
++     set CC     = 'cc'
++     set CFLAGS = '-DHPUX64 +O3 +DD64 -D_REENTRANT -Dsocklen_t=int -I./'
++     set CLIBS  = '-lpthread'
++
++     set F77_OPTS = '-DINT_SIZE=long -D_UNDERSCORES=0'
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'f90'
++     set FORT_FLAGS = '+DD64 +O2 +i8 +noppu'
++     set FORT_LIBS  = '-ldld +U77'
++  endif
++
++
++# ---------- #
++# IBM 32-bit #
++# ---------- #
++  if($TARGET == ibm32) then
++     set CC = 'xlc_r'
++     set CFLAGS = "-DIBM32 -D_32_BIT -O3"
++     set CFLAGS = "$CFLAGS -qalias=ansi -qthreaded -qarch=auto"
++     set CFLAGS = "$CFLAGS -qtune=auto  -qstrict -I./"
++     set CLIBS  = "-lpthread"
++
++     set F77_OPTS = "-DINT_SIZE=int -D_UNDERSCORES=0"
++
++     set AR_FLAGS     = '-r -s -X 32'
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'xlf'
++     set FORT_FLAGS = '-O2 -qarch=com -qflag=W:W -qhalt=W -qnosave'
++     set FORT_LIBS  = ''
++  endif
++
++
++# ---------- #
++# IBM 64-bit #
++# ---------- #
++  if($TARGET == ibm64 || $TARGET == ibm64-sp) then
++     if (`uname` == AIX) then
++                                  set CC = 'xlc_r'
++        if($TARGET   == ibm64-sp) set CC = 'mpcc_r'
++        set CFLAGS   = "-O3 -q64 -DIBM64"
++        set CFLAGS   = "$CFLAGS -qalias=ansi -qthreaded -qarch=auto"
++        set CFLAGS   = "$CFLAGS -qtune=auto  -qstrict -I./"
++        set AR_FLAGS = '-r -s -X 64'
++     else
++        set CC       = 'gcc'
++        set CFLAGS   = '-O2 -m64 -DIBM64 -I./'
++        set AR_FLAGS = 'cr'
++     endif
++
++     set CLIBS    = "-lpthread"
++     set F77_OPTS = "-DINT_SIZE=long -D_UNDERSCORES=0"
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'xlf'
++     if(`uname` == AIX) then
++       set FORT_FLAGS = '-q64 -qintsize=8'
++       set FORT_LIBS  = ' '
++     else
++       set FORT_FLAGS = '-q64 -qintsize=8'
++       set FORT_LIBS  = '-lxlf90_r'
++     endif
++     if($TARGET == ibm64-sp) then
++       set FORTRAN    = 'mpxlf_r'
++       set FORT_FLAGS = '-O2 -q64 -qintsize=8 -qarch=pwr3 -qtune=pwr3 -qspillsize=1500 -qflag=W:W -qhalt=W -qnosave'
++       set FORT_LIBS  = '-llapi_r'
++     endif
++  endif
++
++
++# ------------- #
++# IBM Blue Gene #
++# ------------- #
++#  IBM seems to put the compilers on the path, but not ar,
++#  so the full path to that is given to it.
++#
++#  Note: if ARMCI is installed, DDI can be run using ARMCI as a
++#  one-sided library, without data servers.  Installation of
++#  ARMCI must have been performed already, you may need to check
++#  the path name below for its include files.
++#
++#  This machine can run over MPI-1 with data servers (COMM=mpi),
++#  if your Blue Gene does not have AMRCI installed.
++#
++#  This is a limited memory machine, so request a smaller buffer
++#  for global sum than the default.
++#
++  if ($TARGET == ibm-bg) then
++     set CFLAGS = "-O3 -DIBMBG -D_32_BIT -DDDI_BUFFER_SIZE=1048576"
++     set CFLAGS = "$CFLAGS -qalias=ansi -qthreaded -qarch=auto"
++     set CFLAGS = "$CFLAGS -qstrict -I./"
++
++#            the old model uses ARMCI and the system's MPI
++     if ($GMS_BG_MODEL == L) then
++        set CC = 'blrts_xlc'
++        set CFLAGS = "$CFLAGS -I/bgl/BlueLight/ppcfloor/bglsys/include"
++        set CFLAGS = "$CFLAGS -I$GMS_ARMCI_PATH/src"
++        set AR="/bgl/BlueLight/ppcfloor/blrts-gnu/bin/powerpc-bgl-blrts-gnu-ar"
++     endif
++#            The new model uses MPI only
++     if ($GMS_BG_MODEL == P) then
++        set CC = 'bgxlc_r'
++        set CFLAGS = "$CFLAGS -I/bgsys/drivers/ppcfloor/comm/include"
++        set CFLAGS = "$CFLAGS -I/bgsys/drivers/ppcfloor/arch/include"
++        set AR="ar"
++     endif
++
++     set CLIBS  = ""
++
++     set F77_OPTS = "-DINT_SIZE=int -D_UNDERSCORES=0"
++
++     set AR_FLAGS     = '-cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'mpixlf_r'   #?
++     set FORT_FLAGS = '-O2 -qarch=440  -qflag=W:W -qhalt=W -qnosave '
++     set FORT_LIBS  = ''
++  endif
++
++
++# ---------------------------------------- #
++# Linux for 32 bit systems (Red Hat, etc.) #
++# ---------------------------------------- #
++#     see comments just above the Linux 64 bit clause just below.
++#
++  if($TARGET == linux32) then
++
++     set FORTRAN=$GMS_FORTRAN   # might be g77, gfortran, ifort, pgf77, f2c
++
++     set CC = 'gcc'
++     set CFLAGS = "-DLINUX -O3 -fstrict-aliasing -I./"
++     set CLIBS  = "-lpthread"
++
++     switch ($FORTRAN)
++        case g77:
++        case pgf77:
++        case f2c:
++           set NumUS=2
++           breaksw
++        case gfortran:
++           set CFLAGS = "$CFLAGS -Dgetarg_=_gfortran_getarg_i4"
++           set CFLAGS = "$CFLAGS -Diargc_=_gfortran_iargc"
++           set NumUS=1
++           breaksw
++        case ifort:
++           set NumUS=1
++           breaksw
++        default:
++           echo "Please spell your linux32 FORTRAN compiler correctly."
++           exit 4
++     endsw
++
++     set F77_OPTS = "-DINT_SIZE=int -D_UNDERSCORES=$NumUS"
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORT_FLAGS = '-O2'
++     set FORT_LIBS = ' '
++  endif
++
++# ---------------------------------------------- #
++# Linux for 64 bit PCs (both AMD and Intel chips #
++# ---------------------------------------------- #
++#       note that DDI is in C, so FORTRAN below is not used except for a
++#       test program.  The compiler name also lets this script choose the
++#       the number of trailing underscores needed, but more importantly,
++#       deals with gfortran's use of names prefixed by _gfortran_ in its
++#       library of FORTRAN callable routines.
++#
++#       Note that in all cases, we use the gcc compiler from GNU for
++#       the compilation of DDI, even if a non-GNU FORTRAN is used.
++#
++  if($TARGET == linux64) then
++
++     set FORTRAN=$GMS_FORTRAN   # might be gfortran, ifort, pgf77, pathf90
++#
++#        Itan2 does not allow -m32/-m64 flags, it's all 64 bit pointers.
++#
++                             set ARCH='-m64'
++     if (`uname -p` == ia64) set ARCH=''
++
++     set CC = 'gcc'
++     set CFLAGS = "-DLINUX $ARCH -O3 -fstrict-aliasing -I./"
++     set CLIBS  = "-lpthread"
++
++     switch ($FORTRAN)
++        case gfortran:
++           set CFLAGS = "$CFLAGS -Dgetarg_=_gfortran_getarg_i4"
++           set CFLAGS = "$CFLAGS -Diargc_=_gfortran_iargc"
++           set NumUS=1
++           set FORT_FLAGS = "-O2 $ARCH -fdefault-integer-8 -std=legacy"
++           breaksw
++        case pgf77:
++           set NumUS=1
++           set CFLAGS = "$CFLAGS -mcmodel=medium"
++           set FORT_FLAGS = "-O2 $ARCH -i8 -i8storage -mcmodel=medium"
++           breaksw
++        case ifort:
++           set NumUS=1
++           set FORT_FLAGS = "-O2 -i8"
++           breaksw
++        case pathf90:
++           set NumUS=2
++           set FORT_FLAGS = "-O2 $ARCH -i8"
++           breaksw
++        default:
++           echo "Please spell your linux64 FORTRAN compiler correctly."
++           exit 4
++     endsw
++
++     set F77_OPTS = "-DINT_SIZE=long -D_UNDERSCORES=$NumUS"
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORT_LIBS = ' '
++  endif
++
++
++# ----------------------- #
++# NEC SX vector processor #
++# ----------------------- #
++#    Caution!  This has not been tested, but rather it is an educated guess.
++  if($TARGET == necsx) then
++     set CC = 'c++'
++     set CFLAGS = "-DNECSX -O -I./ -size_t64"
++     set CLIBS  = "-lpthread"
++     
++     set F77_OPTS = '-DINT_SIZE=long -D_UNDERSCORES=1'
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++
++     set FORTRAN    = 'f90'
++     set FORT_FLAGS = '-ebw -size_t64 -Wf"-Nv"'
++     set FORT_LIBS  = ''
++  endif
++
++
++# -------- #
++# Mac OS X #
++# -------- #
++# OS X 10.1 will not work at all, 10.2 is primitive, 10.3 needs an edit below.
++# for 64 bit mode, we need at least OS X 10.4, but >= 10.5 is more better.
++#
++  if (($TARGET == mac32) || ($TARGET == mac64)) then
++
++     set FORTRAN=$GMS_FORTRAN       # will be g77 or gfortran
++
++     set CC = 'gcc'
++                           set CFLAGS = "-DMACOSX"
++     if ($TARGET == mac64) set CFLAGS = "-DLINUX -m64"
++     set CFLAGS = "$CFLAGS -O3 -fstrict-aliasing -I./"
++     set CLIBS  = "-lpthread"
++
++     #       uncomment next line for OS X 10.3
++     #---set CFLAGS = "$CFLAGS -Dsocklen_t=int"
++
++     switch ($FORTRAN)
++        case g77:
++           set NumUS=2
++           set FORT_FLAGS = '-O2'
++           set FORT_LIBS  = ''
++           breaksw
++        case gfortran:
++           set CFLAGS = "$CFLAGS -Dgetarg_=_gfortran_getarg_i4"
++           set CFLAGS = "$CFLAGS -Diargc_=_gfortran_iargc"
++           set NumUS=1
++           set FORT_FLAGS = '-O2 -m64 -fdefault-integer-8 -std=legacy'
++           if ($TARGET == mac32) set FORT_FLAGS = '-O2 -std=legacy'
++           set FORT_LIBS  = ''
++           breaksw
++        default:
++           echo Your OS X FORTRAN compiler was not correctly specified.
++           exit
++           breaksw
++     endsw
++
++                          set F77_OPTS = "-DINT_SIZE=int"
++     if($TARGET == mac64) set F77_OPTS = "-DINT_SIZE=long"
++     set F77_OPTS = "$F77_OPTS -D_UNDERSCORES=$NumUS"
++
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = '-c'
++
++  endif
++
++
++# ---------- #
++# SGI 32-bit #
++# ---------- #
++  if($TARGET == sgi32) then
++     set CC='cc'
++     set CFLAGS='-DSGI32 -n32 -i4 -O -I./'
++     set CLIBS='-lpthread'
++
++     set F77_OPTS='-DINT_SIZE=int -D_UNDERSCORES=1'
++     set AR_FLAGS='-cr'
++     set RANLIB_FLAGS=' '
++
++     set FORTRAN    = 'f77'
++     set FORT_FLAGS = '-O2 -automatic -G0 -n32 -i4 -woff 136,2290' #?
++     set FORT_LIBS  = ''
++
++  endif
++
++
++# ---------- #
++# SGI 64-bit #
++# ---------- #
++#    There is a bit of trouble with the Origin:
++#    The SHMEM option dies upon touching AO integral files
++#    The Sockets option usually can't start 16 or more processes
++#    The old version has to start data servers which are awkward on Origin
++  if($TARGET == sgi64) then
++     switch ($COMM)
++        case shmem:
++           echo "Compiling: ddio3k.o"
++           #---set echo
++           #---f77 -O2 -automatic -G0 -64 -i8 -woff 2290 -c shmem/ddio3k.f
++           #---unset echo
++           ../comp ddio3k
++
++           if(-e ddio3k.o) then
++              ar -cr libddi.a ddio3k.o
++              rm -f ddio3k.o
++              echo "Finished compiling: ddio3k.o"
++              goto finishOK
++           else
++              echo "Error compiling: ddio3k.o"
++              exit 4
++           endif
++           breaksw
++        case sockets:
++           set CC = 'cc -64 -mips4'
++           set CFLAGS = '-DSGI64 -O -I./'
++           set CLIBS='-lpthread'
++           set F77_OPTS='-DINT_SIZE=long -D_UNDERSCORES=1'
++           set AR_FLAGS     = '-cr'
++           set RANLIB_FLAGS = '-c'
++           breaksw
++        default:
++           echo SGI 64 bits requires COMM of sockets or shmem.
++           exit 3
++           breaksw
++     endsw
++
++     set FORTRAN    = 'f77'
++     set FORT_FLAGS = '-O2 -automatic -G0 -64 -i8 -woff 136,2290' #?
++     set FORT_LIBS  = ''
++
++  endif
++
++
++# ---------- #
++# Sun 32-bit #
++# ---------- #
++  if($TARGET == sun32) then
++
++     if(`uname -p` == sparc) set ARCH='-xarch=v8plus'
++     if(`uname -p` == i386)  set ARCH='-xarch=pentium_pro'
++
++     set CC = 'cc'
++     set CFLAGS = "$ARCH -DSUN32 -O -Dsocklen_t=int -D_32_BIT -I./"
++     set CLIBS  = "-lsocket -lnsl -lpthread"
++
++     set F77_OPTS = "-DINT_SIZE=int -D_UNDERSCORES=1"
++
++     set AR_FLAGS     = '-cr'
++     set RANLIB_FLAGS = '-c'
++
++     set FORTRAN    = $GMS_FORTRAN
++     if ($FORTRAN == f77) set FORT_FLAGS = "$ARCH -O2"
++     if ($FORTRAN == f90) set FORT_FLAGS = "$ARCH -O2 -xtypemap=integer:32"
++     set FORT_LIBS="-lsocket -lnsl -lpthread"
++
++  endif
++
++
++# ---------- #
++# Sun 64-bit #
++# ---------- #
++  if($TARGET == sun64) then
++#         define ARCH, compilers after v 8.3 should say the simple -m64
++     set xxx=$GMS_SUN_FORT_VERNO
++     set f90_major=$xxx:r
++     set f90_minor=$xxx:e
++                                                 set newf90=false
++     if (($f90_major == 8) && ($f90_minor >= 3)) set newf90=true
++     if  ($f90_major >= 9)                       set newf90=true
++
++     if ($newf90 == true) then
++        set ARCH=-m64
++     else
++        if (`uname -p` == sparc) set ARCH='-xarch=v9'
++        if (`uname -p` == i386)  set ARCH='-xarch=amd64'
++     endif
++#         so now ARCH is finally defined (used by both C and FORTRAN)
++
++     set CC = 'cc'
++     set CFLAGS = "$ARCH -DSUN64 -O -I./"
++     set CLIBS  = '-lsocket -lnsl -lpthread'
++
++     set F77_OPTS = "-DINT_SIZE=long -D_UNDERSCORES=1"
++
++     set AR_FLAGS     = '-cr'
++     set RANLIB_FLAGS = '-c'
++
++     set FORTRAN = 'f90'
++     set FORT_FLAGS="$ARCH -O2 -xtypemap=integer:64"
++     set FORT_LIBS="-lsocket -lnsl -lpthread"
++  endif
++
++# ----------------- #
++# Microsoft Windows #
++# ----------------- #
++# Currently with only PGI compiler support.
++
++  if($TARGET == win32) then
++
++     set FORTRAN=pgf77     # choose from pgf77
++
++     switch ($FORTRAN)
++        case pgf77:
++           set CC = 'pgcc'
++#
++#          For more detailed information as to which flags are being used
++#          by the compiler during the build - uncomment the line below.
++#
++           set CC = "$CC -v"
++#
++           set CFLAGS = '-DLINUX -DWINDOWS -DUSE_DDI_COLLECTIVE_ROUTINES -DOLDDDITIMER'
++           if ($GMS_WIN_OPT == baseline)    set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -O0"
++           if ($GMS_WIN_OPT == linux)       set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -O3"
++           if ($GMS_WIN_OPT == fast)        set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -fast"
++           if ($GMS_WIN_OPT == testing)     set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -fast $GMS_WIN_FLAGS"
++           set CFLAGS = "$CFLAGS $GMS_WIN_TP -I./include"
++           set NumUS=2
++           if ($COMM == mpi) then
++             echo "----------------------------------------------   ATTENTION   ----------------------------------------------"
++             echo "- We are using MPI and not TCP/IP sockets so please ignore the following compiler warning message:        -"
++             echo "- libddi.a(tcp_sockets.o) : warning LNK####: no public symbols found; archive member will be inaccessible -"
++             echo "-----------------------------------------------------------------------------------------------------------"
++           endif
++           breaksw
++        default:
++           echo "Please spell your win32 bit FORTRAN compiler name correctly."
++           exit 4
++     endsw
++     set CLIBS  = ' '
++     set F77_OPTS = "-DINT_SIZE=int -D_UNDERSCORES=$NumUS"
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++  endif
++
++  if($TARGET == win64) then
++
++     set FORTRAN=pgf77     # choose from pgf77
++
++     switch ($FORTRAN)
++        case pgf77:
++           set CC = 'pgcc'
++#
++#          For more detailed information as to which flags are being used
++#          by the compiler during the build - uncomment the line below.
++#
++           set CC = "$CC -v"
++#
++           set CFLAGS = '-DLINUX -DWINDOWS -DWINDOWS64 -DUSE_DDI_COLLECTIVE_ROUTINES -DOLDDDITIMER'
++#          set CFLAGS = '-DLINUX -DWINDOWS -DWINDOWS64 -DOLDDDITIMER'
++           if ($GMS_WIN_OPT == baseline)    set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -O0"
++           if ($GMS_WIN_OPT == linux)       set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -O2"
++           if ($GMS_WIN_OPT == fast)        set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -fast"
++           if ($GMS_WIN_OPT == testing)     set CFLAGS = "$CFLAGS -Bstatic -Minform=severe -fast $GMS_WIN_FLAGS"
++           set CFLAGS = "$CFLAGS $GMS_WIN_TP -I./include"
++           set NumUS=1
++           if ($COMM == mpi) then
++             echo "----------------------------------------------   ATTENTION   ----------------------------------------------"
++             echo "- We are using MPI and not TCP/IP sockets so please ignore the following compiler warning message:        -"
++             echo "- libddi.a(tcp_sockets.o) : warning LNK####: no public symbols found; archive member will be inaccessible -"
++             echo "-----------------------------------------------------------------------------------------------------------"
++           endif
++           breaksw
++        default:
++           echo "Please spell your win64 bit FORTRAN compiler name correctly."
++           exit 4
++     endsw
++     set CLIBS  = ' '
++     set F77_OPTS = "-DINT_SIZE=__int64 -D_UNDERSCORES=$NumUS $GMS_WIN_FLAGS"
++     set AR_FLAGS     = 'cr'
++     set RANLIB_FLAGS = ' '
++  endif
++
++#            this is how we trap for an unsupported machine.
++  if ($?CFLAGS) then
++  else
++    echo The compddi script does not select a correct TARGET machine type.
++    echo What you typed when editing this script was $TARGET
++    exit 4
++  endif
++
++# ------------- end of machine specific option selection -------------- #
++
++
++  echo Attempting to remove binary files from previous DDI build...
++                               rm -f src/*.o 
++  if (-e libddi.a)             rm -f libddi.a
++  if (-e kickoff/libddikick.a) rm -f kickoff/libddikick.a
++  if (-e ddikick.x)            rm -f ddikick.x 
++  if (-e ddi_test.x)           rm -f ddi_test.x
++  if (-e ddi_server.x)         rm -f ddi_server.x
++  echo " "
++  echo Beginning the DDI compilation at `date`
++  echo " "
++
++# --------------------------------------------------- #
++# append the MPI include path to the C compiler flags
++# --------------------------------------------------- #
++  if($COMM == mixed) set CFLAGS = "$CFLAGS -I$MPI_INCLUDE_PATH"
++  if($COMM == mpi)   then
++     switch ($GMS_MPI_LIB)
++        case msmpi:
++           set CFLAGS = "$CFLAGS -Mmpi=msmpi"
++           breaksw
++        case CrayXT:
++           breaksw
++        default:
++           set CFLAGS = "$CFLAGS -I$MPI_INCLUDE_PATH"
++           breaksw
++     endsw
++  endif
++
++
++  if($DDI_SOURCE == old) goto old
++
++
++# ---------------------- #
++# Compile common objects #
++# ---------------------- #
++#   In this context, common means the TCP/IP kickoff program
++#   will also be using this code, so save into its library too.
++#
++#   Here and elsewhere, Microsoft Windows requires -o to name object files
++#
++  chdir src
++  foreach OBJ ( soc_create      std_system     tcp_sockets   \
++                debug           parse_node_args              \
++              )
++    echo "Compiling common object: $OBJ.o"
++    set echo
++    $CC $CFLAGS $DDI_OPTS -o $OBJ.o -c $OBJ.c
++    unset echo
++    if(-e $OBJ.o) then
++       echo "Finished compiling: $OBJ.o"
++    else
++       echo "Error compiling: $OBJ.o"
++       goto bombout
++    endif
++    ar $AR_FLAGS ../libddi.a   $OBJ.o
++    if($COMM == sockets) ar $AR_FLAGS ../kickoff/libddikick.a  $OBJ.o
++    echo " "
++  end
++  chdir ..
++
++# ------------------- #
++# Compile DDI objects #
++# ------------------- #
++#   The bulk of the DDI library:
++  chdir src
++  set OBJ_LIST=(ddi            ddi_send        ddi_recv        \
++                ddi_get        ddi_put         ddi_acc         \
++                ddi_getacc     ddi_distrib     \
++                ddi_subpatch   ddi_index       ddi_recvany     \
++                ddi_create     ddi_destroy     ddi_server      \
++                ddi_finalize   ddi_memory      ddi_lapi        \
++                ddi_isend      ddi_irecv       ddi_wait        \
++                ddi_signals    ddi_id          ddi_timer       \
++                ddi_gdlb       ddi_dlb         ddi_dlb_proc    \
++                ddi_init       sysv_ipc       \
++                ddi_comm       ddi_comm_group  ddi_comm_send   \
++                ddi_comm_recv  ddi_comm_sync   ddi_comm_gsum   \
++                ddi_comm_bcast ddi_smp         ddi_comm_create \
++                ddi_comm_nproc ddi_comm_nnode \
++                ddi_runtime     \
++                ddi_util       mmath          \
++                ddi_arr        ddi_arr_acc     ddi_arr_add     \
++                ddi_arr_dot    ddi_arr_scalar  ddi_arr_select  )
++
++  # ARMCI objects
++  if ($COMM == armci) then
++    set OBJ_LIST=($OBJ_LIST     \
++                ddi_armci      ddi_armci_init  ddi_armci_acc  \
++                ddi_armci_get  ddi_armci_put   ddi_armci_getacc)
++  endif
++
++  # Blue Gene objects
++  if ($TARGET == ibm-bg) then
++    if ($GMS_BG_MODEL == L) set OBJ_LIST=($OBJ_LIST ddi_bgl)
++    if ($GMS_BG_MODEL == P) set OBJ_LIST=($OBJ_LIST ddi_bgp)
++  endif
++
++  # Microsoft Windows objects
++  if (($TARGET == win32) || ($TARGET == win64)) then
++    set OBJ_LIST=($OBJ_LIST windows)
++  endif
++
++  foreach OBJ ($OBJ_LIST) 
++    echo "Compiling DDI object: $OBJ.o"
++    set echo
++    $CC $CFLAGS $DDI_OPTS -o $OBJ.o -c $OBJ.c
++    unset echo
++    if(-e $OBJ.o) then
++       echo "Finished compiling: $OBJ.o"
++    else
++       echo "Error compiling: $OBJ.o"
++       goto bombout
++    endif
++    ar $AR_FLAGS ../libddi.a  $OBJ.o
++    echo " "
++  end 
++  chdir ..
++ 
++
++# ------------------------ #
++# Compile FORTRAN Wrappers #
++# ------------------------ #
++  chdir src
++  echo "Compiling FORTRAN wrappers for DDI"
++  set echo
++  $CC $CFLAGS $DDI_OPTS $F77_OPTS -o ddi_fortran.o -c ddi_fortran.c
++  unset echo
++  if(-e ddi_fortran.o) then
++     echo "Finished compiling: ddi_fortran.o"
++  else
++     echo "Error compiling: ddi_fortran.o"
++     goto bombout
++  endif
++  ar $AR_FLAGS ../libddi.a  ddi_fortran.o
++  echo " "
++  chdir ..
++
++
++# ------------------------ #
++# Compile DDI test program #
++# ------------------------ #
++#      the test program should work over other communication libraries,
++#      such as MPI-1, but for now we create it only for the very easy
++#      case of TCP/IP.
++#      We would need to add MPI library lists (not just an MPI include path)
++#      to this script, in order to correctly build the test program.
++#      That is postponed to some other time!
++  if($COMM == sockets) then
++     chdir test
++     echo "Creating DDI test program, ddi_test.x"
++     set echo
++     $FORTRAN $FORT_FLAGS -o ../ddi_test.x ddi_test.f \
++                    ../libddi.a $FORT_LIBS $CLIBS
++     unset echo
++     if (-e ddi_test.o) rm -f ddi_test.o
++     echo " "
++     chdir ..
++  endif
++
++
++# --------------------------- #
++# Compile data_server program #
++# --------------------------- #
++#    This program is not used by GAMESS, which acts as its own data server,
++#    but might be useful if one wants a light-weight data server.
++#    This program is in principle usable with MPI-1, but we have not yet
++#    done the scripting to add all the MPI library possibilities here.
++  if($COMM == sockets) then
++     chdir server
++     echo "Creating standalone DDI data server program, data_server.x"
++     set echo
++     $CC $CFLAGS $DDI_OPTS -I../src -o ../data_server.x data_server.c \
++                    ../libddi.a $CLIBS
++     unset echo
++     rm -f data_server.o
++     echo " "
++     chdir ..
++  endif
++
++
++# ------------------------------------------------------ #
++# Compile DDIKICK objects, and then link kickoff program #
++# ------------------------------------------------------ #
++#     The reason for not inserting a "mv ddikick.x .." command in
++#     this script is for situations when rebuilding the library is
++#     done later, when one might not want to erase the previous
++#     ddikick.x (i.e. if GAMESS jobs are running at the moment).
++#
++#     note that some of the routines called by ddikick.x
++#     have already been compiled above, and saved in
++#     the kickoff program's library file.
++  if($COMM == sockets) then
++     chdir kickoff
++     echo "TCP/IP communications uses a special kickoff program, ddikick.x"
++     echo " "
++     foreach OBJ ( ddikick        ddikick_error  accept_tasks   \
++                   finalize_tasks kickoff_local  kickoff_remote \
++                   kickoff_pbs \
++                 )
++       echo "Compiling ddikick object: $OBJ.o"
++       set echo
++       $CC $CFLAGS $DDI_OPTS -I../src -c $OBJ.c
++       unset echo
++       if(-e $OBJ.o) then
++          echo "Finished compiling: $OBJ.o"
++       else
++          echo "Error compiling: $OBJ.o"
++          goto bombout
++       endif
++       if ($OBJ != ddikick) ar $AR_FLAGS libddikick.a  $OBJ.o
++       echo " "
++     end
++     #
++     ranlib $RANLIB_FLAGS libddikick.a
++     #
++     echo "Linking DDI kickoff program, ddikick.x"
++     set echo
++     $CC $CFLAGS $DDI_OPTS -o ../ddikick.x ddikick.o libddikick.a $CLIBS
++     unset echo
++     echo " "
++     echo "Don't forget to move ddikick.x up one directory level,"
++     echo "by a   'mv ddikick.x ..'   command."
++     echo " "
++     rm -f *.o libddikick.a
++     chdir ..
++  endif
++
++
++# --------------------------- #
++# Compile OLD DDI source code #
++# --------------------------- #
++old:
++  if($DDI_SOURCE == old) then
++      chdir oldsrc
++      # ddisoc.c
++        echo "Compiling: ddisoc.o"
++        set echo
++        $CC $CFLAGS -c ddisoc.c
++        unset echo
++        if(-e ddisoc.o) then
++           echo "Finished compiling: ddisoc.o"
++        else
++           echo "Error compiling: ddisoc.c"
++           goto bombout
++        endif
++        ar $AR_FLAGS ../libddi.a  ddisoc.o
++        echo ""
++
++      # ddi.src
++        echo "Compiling: ddi.o"
++        $FORTRAN $FORT_FLAGS -c ddi.f
++        if(-e ddi.o) then
++           echo "Finished compiling: ddi.o"
++        else 
++           echo "Error compiling: ddi.o"
++           goto bombout
++        endif
++        ar $AR_FLAGS ../libddi.a ddi.o
++        rm -f ddi.o
++        echo ""
++
++      # ddikick.x
++        if(-e ../ddikick.x) rm -f ../ddikick.x
++        echo "Compiling: ddikick.x"
++        set echo
++        $CC $CFLAGS $DDI_OPTS -o ../ddikick.x ddikick.c $CLIBS
++        unset echo
++        echo ""
++      chdir ..
++  endif
++ 
++
++# ------------------------------------------------------------ #
++# End of compile script, run "ranlib" on the library and exit. #
++# ------------------------------------------------------------ #
++finishOK:
++
++#   SGI's IRIX has its ranlib built into its ar command (very rational)
++  if (($TARGET != sgi64) && ($TARGET != sgi32)) then
++     ranlib $RANLIB_FLAGS libddi.a
++  endif
++
++  echo "DDI compilation ended successfully."
++  rm -f src/*.o
++  date
++  time
++  exit
++
++#    if something bad happens, remove all binary files,
++#    to make sure the user realizes compddi crashed out.
++bombout:
++  echo " "
++  echo "DDI compilation did not finish correctly, please fix, and try again"
++  echo " "
++  chdir ..
++  if (-e libddi.a)             rm -f libddi.a
++  if (-e kickoff/libddikick.a) rm -f kickoff/libddikick.a
++  if (-e ddikick.x)            rm -f ddikick.x
++  if (-e ddi_test.x)           rm -f ddi_test.x
++  if (-e ddi_server.x)         rm -f ddi_server.x
++  rm -f src/*.o
++  rm -f kickoff/*.o
++  rm -f test/*.o
++  rm -f server/*.o
++  date
++  time
++  exit 8
+diff -urN gamess.orig/ddi/kickoff/ddikick.c gamess/ddi/kickoff/ddikick.c
+--- gamess.orig/ddi/kickoff/ddikick.c	2008-05-06 14:16:12.000000000 +0400
++++ gamess/ddi/kickoff/ddikick.c	2010-12-07 20:21:55.000000000 +0300
+@@ -105,7 +105,7 @@
+           remoteshell = argv[++i];
+        } else {
+           if((remoteshell = getenv("DDI_RSH")) == NULL) {
+-              remoteshell = (char *) strdup("rsh");
++              remoteshell = (char *) strdup("ssh");
+           }
+        }
+ 
+diff -urN gamess.orig/lked gamess/lked
+--- gamess.orig/lked	2010-10-01 19:37:05.000000000 +0400
++++ gamess/lked	2010-12-07 20:26:57.000000000 +0300
+@@ -53,7 +53,7 @@
+ #
+ #   3. optional Nuclear-Electronic Orbital method, using NEO code
+ #
+-set NEO=false
++set NEO=true
+ #
+ #   4. optional Nvidia/CUDA code, for closed shell SCF Fock construction 
+ #         see ~/gamess/libqc/aaa.readme.1st for more information
+@@ -356,17 +356,17 @@
+    switch ($GMS_FORTRAN)
+      case g77:
+         set LDR='g77'
+-        set LDOPTS=' '  # add '-Wl,-M' to see load map
++        set gentoo-LDOPTS=' '  # add '-Wl,-M' to see load map
+         set FORTLIBS=' '
+         breaksw
+      case gfortran:
+         set LDR='gfortran'
+-        set LDOPTS=' '
++        set gentoo-LDOPTS=' '
+         set FORTLIBS=' '
+         breaksw
+      case ifort:
+         set LDR='ifort'
+-        set LDOPTS=' '  # add '-Wl,-M' to see load map
++        set gentoo-LDOPTS=' '  # add '-Wl,-M' to see load map
+         set FORTLIBS='-Vaxlib'
+         breaksw
+      case pgf77:
+@@ -376,7 +376,7 @@
+         breaksw
+      case f2c:
+         set LDR='gcc'
+-        set LDOPTS=' '
++        set gentoo-LDOPTS=' '
+         set FORTLIBS='-lf2c -lm'
+         breaksw
+      default:
+@@ -427,12 +427,7 @@
+       #     Otherwise, attempt a link against shared object libs.
+       #     See the 64 bit Atlas below for a way to fix the linker's
+       #     not being able to locate -lf77blas, if that happens.
+-      if (-e $GMS_MATHLIB_PATH/libf77blas.a) then
+-         set MATHLIBS="$GMS_MATHLIB_PATH/libf77blas.a"
+-         set MATHLIBS="$MATHLIBS $GMS_MATHLIB_PATH/libatlas.a"
+-      else
+-         set MATHLIBS="-L$GMS_MATHLIB_PATH -lf77blas -latlas"
+-      endif
++      set MATHLIBS=`pkg-config --libs blas`
+       set BLAS=' '
+       breaksw
+ 
+@@ -466,12 +461,12 @@
+    switch ($GMS_FORTRAN)
+       case gfortran:
+          set LDR='gfortran'
+-         set LDOPTS=' '
++         set gentoo-LDOPTS=' '
+          set FORTLIBS=' '
+          breaksw
+       case ifort:
+          set LDR='ifort'
+-         set LDOPTS='-i8'  # -Wl,-M generates a load map
++         set gentoo-LDOPTS=' '  # -Wl,-M generates a load map
+ #            this auxiliary library seems to have disappeared in ifort 10
+          set FORTLIBS=' '
+          if($GMS_IFORT_VERNO < 10) set FORTLIBS='-Vaxlib'
+@@ -549,12 +544,7 @@
+       #          ln -s liblapack_atlas.so.3.0 liblapack.so
+       #          ln -s liblapack.so.3.0       liblapack.so
+       #     It is strange the RPM's don't do these soft links for us.
+-      if (-e $GMS_MATHLIB_PATH/libf77blas.a) then
+-         set MATHLIBS="$GMS_MATHLIB_PATH/libf77blas.a"
+-         set MATHLIBS="$MATHLIBS $GMS_MATHLIB_PATH/libatlas.a"
+-      else
+-         set MATHLIBS="-L$GMS_MATHLIB_PATH -lf77blas -latlas"
+-      endif
++      set MATHLIBS=`pkg-config --libs blas`
+       set BLAS=' '
+       breaksw
+ 
+diff -urN gamess.orig/runall gamess/runall
+--- gamess.orig/runall	2009-02-28 02:57:18.000000000 +0300
++++ gamess/runall	2010-12-07 20:21:55.000000000 +0300
+@@ -10,7 +10,6 @@
+ #
+ #  Only the following two lines need to be customized:
+ #
+-chdir /u1/mike/gamess
+ set VERNO=00
+ #
+ #  Loop over all Ntest jobs supplied with GAMESS
+@@ -27,7 +26,7 @@
+      gms -v $VERNO -q ti -l exam$NUM.log exam$NUM
+      sleep 5
+   else
+-     ./rungms exam$NUM $VERNO 1  >&  exam$NUM.log
++     rungms exam$NUM $VERNO 1  >&  exam$NUM.log
+   endif
+   @ i++
+ end
+diff -urN gamess.orig/rungms gamess/rungms
+--- gamess.orig/rungms	2010-08-17 17:46:59.000000000 +0400
++++ gamess/rungms	2010-12-07 20:36:43.000000000 +0300
+@@ -55,7 +55,7 @@
+ #       one for LoadLeveler "ll-gms" on the IBM SP line.
+ #
+ set TARGET=sockets
+-set SCR=/scr/$USER
++set SCR=`pwd`
+ #
+ set JOB=$1      # name of the input file xxx.inp, give only the xxx part
+ set VERNO=$2    # revision number of the executable created by 'lked' step
+@@ -122,17 +122,17 @@
+ #
+ set echo
+ #                        ASCII input files (see explanation above)
+-setenv ERICFMT ~mike/gamess/ericfmt.dat
+-setenv MCPPATH ~mike/gamess/mcpdata
++setenv ERICFMT /usr/share/gamess/ericfmt/ericfmt.dat
++setenv MCPPATH /usr/share/gamess/mcpdata
+ setenv  EXTBAS /dev/null
+ setenv  NUCBAS /dev/null
+ #
+-setenv  MAKEFP ~$USER/scr/$JOB.efp
+-setenv   GAMMA ~$USER/scr/$JOB.gamma
+-setenv TRAJECT ~$USER/scr/$JOB.trj
+-setenv RESTART ~$USER/scr/$JOB.rst
++setenv  MAKEFP $SCR/$JOB.efp
++setenv   GAMMA $SCR/$JOB.gamma
++setenv TRAJECT $SCR/$JOB.trj
++setenv RESTART $SCR/$JOB.rst
+ setenv   INPUT $SCR/$JOB.F05
+-setenv   PUNCH ~$USER/scr/$JOB.dat
++setenv   PUNCH $SCR/$JOB.dat
+ setenv  AOINTS $SCR/$JOB.F08
+ setenv  MOINTS $SCR/$JOB.F09
+ setenv DICTNRY $SCR/$JOB.F10
+@@ -321,7 +321,7 @@
+     if (null$4 == null) set ELGNAME=ELGFILE
+     set echo
+     setenv AOINTS   $SCR/$ELGNAME.F08
+-    setenv ELGDOS   ~$USER/scr/$JOB.ldos
++    setenv ELGDOS   $SCR/$JOB.ldos
+     setenv ELGDAT   $SCR/$ELGNAME.F71
+     setenv ELGPAR   $SCR/$ELGNAME.F72
+     setenv ELGCUT   $SCR/$ELGNAME.F74
+@@ -474,7 +474,7 @@
+    if ($os == AIX)     set GMSPATH=/u1/mike/gamess
+    if ($os == Darwin)  set GMSPATH=/Users/mike/desktop/gamess
+    if ($os == HP-UX)   set GMSPATH=/zr/mike/gamess
+-   if ($os == Linux)   set GMSPATH=/cu/mike/gamess
++   if ($os == Linux)   set GMSPATH=/usr/bin
+    if ($os == OSF1)    set GMSPATH=/in/mike/gamess
+    if ($os == SunOS)   set GMSPATH=/hf/mike/gamess
+ #       special compilation for Sun E450 uSPARC       (uname also= SunOS)
+@@ -521,80 +521,6 @@
+       set HOSTLIST=(`hostname`)
+    endif
+ #
+-#       2. This is an example of how to run on a 4-way SMP enclosure,
+-#          where all CPUs (aka COREs) are inside a -single- NODE.
+-#          The example is repeated for some nodes we use as 2-way's.
+-#     At other locations, you may wish to consider some of the examples
+-#     that follow below, after commenting out this ISU-specific part.
+-   if ($NCPUS > 1) then
+-      switch (`hostname`)
+-         case ti.msg.chem.iastate.edu:
+-         case cd.msg.chem.iastate.edu:
+-         case zn.msg.chem.iastate.edu:
+-         case ni.msg.chem.iastate.edu:
+-         case co.msg.chem.iastate.edu:
+-         case pb.msg.chem.iastate.edu:
+-         case bi.msg.chem.iastate.edu:
+-         case po.msg.chem.iastate.edu:
+-         case at.msg.chem.iastate.edu:
+-         case sc.msg.chem.iastate.edu:
+-            if ($NCPUS > 4) set NCPUS=4
+-            set NNODES=1
+-            set HOSTLIST=(`hostname`:cpus=$NCPUS)
+-            breaksw
+-         case se.msg.chem.iastate.edu:
+-         case sb.msg.chem.iastate.edu:
+-         case br.msg.chem.iastate.edu:
+-            if ($NCPUS > 2) set NCPUS=2
+-            set NNODES=1
+-            set HOSTLIST=(`hostname`:cpus=$NCPUS)
+-            breaksw
+-         default:
+-            echo I do not know how to run this node in parallel.
+-            exit 20
+-      endsw
+-   endif
+-#
+-#       3. How to run in a single computer, namely the local host.
+-#          This example also presumes SysV was deliberatly *not* chosen
+-#          when DDI was compiled, so that host names have to be repeated,
+-#          instead of using the simpler localhost:cpus=$NCPU form.
+-#
+-#--   set HOSTLIST=()
+-#--   @ n=1
+-#--   while ($n <= $NCPUS)
+-#--      set HOSTLIST=($HOSTLIST localhost)
+-#--      @ n++
+-#--   end
+-#--   set NNODES=$NCPUS
+-#
+-#       4. A phony example, of four dual processors (arbitrary names)
+-#          Since their names never change, we just can just specify them.
+-#          Note that we can use a short name like 'bb' if and only if 
+-#          system name resolution can map them onto the true host names.
+-   if (`hostname` == aa.msg.chem.iastate.edu) then
+-      set NCPUS=8
+-      set NNODES=4
+-      set HOSTLIST=(aa:cpus=2 bb:cpus=2 cc:cpus=2 dd:cpus=2)
+-   endif
+-#
+-#       5. An example of 16 uniprocessor boxes in a Beowulf-type cluster.
+-#          Because they are uniprocessors, we just set NNODES = NCPUS.
+-#          Their host names fall into the pattern fly1 to fly16,
+-#          which we can turn into a HOSTLIST with a small loop.
+-   if (`hostname` == fly1.fi.ameslab.gov) then
+-      set NNODES=$NCPUS
+-      set HOSTLIST=()
+-      set nmax=$NCPUS
+-      if ($nmax > 16) set nmax=16
+-      @ CPU=1
+-      while ($CPU <= $nmax)
+-         set HOSTLIST=($HOSTLIST fly$CPU)
+-         @ CPU++
+-      end
+-      unset $CPU
+-   endif
+-#
+ #       6. Scalable Computing Lab's clusters running PBS batch queues.
+ #          Here the task is to manipulate the dynamically assigned host
+ #          names into the HOSTLIST string for the kickoff program,
+@@ -604,8 +530,6 @@
+ #
+ #         The IBM cluster has two Gigabit adapters in each 4-way SMP,
+ #         while the AXP cluster is based on a Myrinet network.
+-      if (`uname` == AIX)   set NETEXT=".gig,.gig2"
+-      if (`uname` == Linux) set NETEXT=".myri"
+ #
+ #         repeated host names in the PBS host file indicate being assigned
+ #         CPUs in the same SMP enclosure, which we must count up correctly.
+@@ -636,12 +560,11 @@
+       @ NNODES = 1
+       @ NSMPCPU = 1
+       set spacer1=":cpus="
+-      set spacer2=":netext="
+       while($IPROC <= $nmax)
+          set MYPROC=`sed -n -e "$IPROC p" $PBS_NODEFILE`
+          set MYPROC=`echo $MYPROC | awk '{split($0,a,"."); print a[1]}'`
+          if($MYPROC != $MYNODE) then
+-            set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU$spacer2$NETEXT)
++            set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU)
+             set MYNODE=$MYPROC
+             @ NSMPCPU = 0
+             @ NNODES++
+@@ -649,13 +572,13 @@
+          @ IPROC++
+          @ NSMPCPU++
+       end
+-      set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU$spacer2$NETEXT)
++      set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU)
+    endif
+ #
+ #        we have now finished setting up a correct HOSTLIST.
+ #        uncomment the next two if you are doing script debugging.
+-#--echo "The generated host list is"
+-#--echo $HOSTLIST
++  echo "The generated host list is"
++  echo $HOSTLIST
+ #
+ 
+ #        One way to be sure that the master node of each subgroup
+diff -urN gamess.orig/tools/checktst/checktst gamess/tools/checktst/checktst
+--- gamess.orig/tools/checktst/checktst	2008-12-30 18:33:09.000000000 +0300
++++ gamess/tools/checktst/checktst	2010-12-07 20:21:55.000000000 +0300
+@@ -3,11 +3,6 @@
+ # Compare the results of GAMESS sample jobs to pre-stored correct values.
+ # This script can be executed from any directory with write permissions.
+ # Written by D. G. Fedorov, AIST, July 20, 2004.
+-#
+-# Only the path name in the very next line needs to be customized.
+-#
+-set GMSPATH=~/gamess
+-
+ # The Ntest outputs are assumed to be named exam01.log, exam02.log, ...
+ # but the user will be allowed to specify the directory containing them.
+ #

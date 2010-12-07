@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.4 2010/08/12 16:10:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.1 2010/12/07 17:52:17 alexxy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -36,7 +36,7 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${PN}"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="12 JAN 2009 (R3)"
+GAMESS_VERSION="1 OCT 2010 (R1)"
 FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
@@ -73,7 +73,6 @@ pkg_setup() {
 			einfo "QMMM_GAMESS_MAXCTYP"
 			einfo "QMMM_GAMESS_MAXHESS"
 			einfo "in your make.conf"
-			ebeep 5
 	fi
 
 	#note about mpi
@@ -263,7 +262,7 @@ src_install() {
 	if use qmmm-tinker ; then
 			dodoc tinker/simomm.doc || die "Failed installing docs"
 			insinto /usr/share/${PN}
-			doins -r tinker/params || die "Failed to install Tinker params"
+			doins -r tinker/params51 || die "Failed to install Tinker params"
 	fi
 
 	# install the tests the user should run, and
@@ -311,10 +310,4 @@ pkg_postinst() {
 	einfo "does multiprocessor runs and adjust rungms according to"
 	einfo "your target network architecture."
 	echo
-
-	if use qmmm-tinker; then
-		einfo "You may want to install sci-chemistry/tinker to use addition FF"
-		einfo "parameters for your qmmm calculations"
-		echo
-	fi
 }
