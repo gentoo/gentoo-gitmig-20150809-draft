@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.16 2010/12/07 06:23:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.17 2010/12/07 06:25:23 eva Exp $
 
 #
 # gnome2-utils.eclass
@@ -47,14 +47,14 @@ gnome2_gconf_savelist() {
 # using gconftool-2
 gnome2_gconf_install() {
 	local updater="${ROOT}${GCONFTOOL_BIN}"
-	local F
 
 	if [[ ! -x "${updater}" ]]; then
+		debug-print "${updater} is not executable"
 		return
 	fi
 
 	if [[ -z "${GNOME2_ECLASS_SCHEMAS}" ]]; then
-		einfo "No GNOME 2 GConf schemas found"
+		debug-print "No GNOME 2 GConf schemas found"
 		return
 	fi
 
@@ -64,9 +64,10 @@ gnome2_gconf_install() {
 
 	einfo "Installing GNOME 2 GConf schemas"
 
+	local F
 	for F in ${GNOME2_ECLASS_SCHEMAS}; do
 		if [[ -e "${ROOT}${F}" ]]; then
-			# echo "DEBUG::gconf install  ${F}"
+			debug-print "Installing schema: ${F}"
 			"${updater}" --makefile-install-rule "${ROOT}${F}" 1>/dev/null
 		fi
 	done
@@ -85,14 +86,14 @@ gnome2_gconf_install() {
 # database.
 gnome2_gconf_uninstall() {
 	local updater="${ROOT}${GCONFTOOL_BIN}"
-	local F
 
 	if [[ ! -x "${updater}" ]]; then
+		debug-print "${updater} is not executable"
 		return
 	fi
 
 	if [[ -z "${GNOME2_ECLASS_SCHEMAS}" ]]; then
-		einfo "No GNOME 2 GConf schemas found"
+		debug-print "No GNOME 2 GConf schemas found"
 		return
 	fi
 
@@ -101,9 +102,10 @@ gnome2_gconf_uninstall() {
 
 	einfo "Uninstalling GNOME 2 GConf schemas"
 
+	local F
 	for F in ${GNOME2_ECLASS_SCHEMAS}; do
 		if [[ -e "${ROOT}${F}" ]]; then
-			# echo "DEBUG::gconf uninstall  ${F}"
+			debug-print "Uninstalling gconf schema: ${F}"
 			"${updater}" --makefile-uninstall-rule "${ROOT}${F}" 1>/dev/null
 		fi
 	done
@@ -139,9 +141,9 @@ gnome2_icon_cache_update() {
 	fi
 
 	if [[ -z "${GNOME2_ECLASS_ICONS}" ]]; then
+		debug-print "No icon cache to update"
 		return
 	fi
-
 
 	ebegin "Updating icons cache"
 
@@ -245,7 +247,7 @@ gnome2_schemas_update() {
 	fi
 
 	if [[ -z ${GNOME2_ECLASS_GLIB_SCHEMAS} ]]; then
-		debug-print "no schemas to update"
+		debug-print "No GSettings schemas to update"
 		return
 	fi
 
