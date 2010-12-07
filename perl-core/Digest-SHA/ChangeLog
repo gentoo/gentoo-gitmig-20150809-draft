@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.17 2010/03/18 19:38:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.18 2010/12/07 04:27:26 mattst88 Exp $
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> Digest-SHA-5.48.ebuild:
+  Added ~mips, bug 300221.
 
   18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> Digest-SHA-5.48.ebuild:
   add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683
