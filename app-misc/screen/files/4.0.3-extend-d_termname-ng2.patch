@@ -1,5 +1,5 @@
 diff --git a/acls.c b/acls.c
-index 0f98df2..670c3aa 100644
+index 0f98df2..5f26d70 100644
 --- a/acls.c
 +++ b/acls.c
 @@ -178,7 +178,7 @@ struct acluser **up;
@@ -7,7 +7,7 @@ index 0f98df2..670c3aa 100644
    (*up)->u_Esc = DefaultEsc;
    (*up)->u_MetaEsc = DefaultMetaEsc;
 -  strncpy((*up)->u_name, name, 20);
-+  strncpy((*up)->u_name, name, 32);
++  strncpy((*up)->u_name, name, MAXSTR);
    (*up)->u_password = NULL;
    if (pass)
      (*up)->u_password = SaveStr(pass);
@@ -17,21 +17,38 @@ index 0f98df2..670c3aa 100644
      return -1;
 -  strncpy((*up)->u_password, pass ? pass : "", 20);
 -  (*up)->u_password[20] = '\0';
-+  strncpy((*up)->u_password, pass ? pass : "", 32);
-+  (*up)->u_password[32] = '\0';
++  strncpy((*up)->u_password, pass ? pass : "", MAXSTR);
++  (*up)->u_password[MAXSTR] = '\0';
    return 0;
  }
  #endif
 diff --git a/acls.h b/acls.h
-index c41b714..cdd24d4 100644
+index c41b714..7f20f55 100644
 --- a/acls.h
 +++ b/acls.h
-@@ -73,7 +73,7 @@ struct plop
+@@ -36,6 +36,16 @@
+ #define ACLBYTE(data, w)   ((data)[(w) >> 3])
+ #define ACLBIT(w)   (0x80 >> ((w) & 7))
+ 
++#include <limits.h>
++
++#ifndef NAME_MAX
++# ifndef MAXNAMELEN
++#  define NAME_MAX 255
++# else
++#  define NAME_MAX MAXNAMELEN
++# endif
++#endif
++
+ typedef unsigned char * AclBits;
+ 
+ /*
+@@ -73,7 +83,7 @@ struct plop
  typedef struct acluser
  {
    struct acluser *u_next;		/* continue the main user list */
 -  char u_name[20+1];		/* login name how he showed up */
-+  char u_name[32+1];		/* login name how he showed up */
++  char u_name[NAME_MAX+1];		/* login name how he showed up */
    char *u_password;		/* his password (may be NullStr). */
    int  u_checkpassword;		/* nonzero if this u_password is valid */
    int  u_detachwin;		/* the window where he last detached */
@@ -65,6 +82,44 @@ index ef99954..563fcd0 100644
    char	*d_tentry;		/* buffer for tgetstr */
    char	d_tcinited;		/* termcap inited flag */
    int	d_width, d_height;	/* width/height of the screen */
+diff --git a/screen.c b/screen.c
+index 70741df..6f45b60 100644
+--- a/screen.c
++++ b/screen.c
+@@ -106,6 +106,16 @@ FILE *dfp;
+ #endif
+ 
+ 
++#include <limits.h>
++
++#ifndef NAME_MAX
++# ifndef MAXNAMELEN
++#  define NAME_MAX 255
++# else
++#  define NAME_MAX MAXNAMELEN
++# endif
++#endif
++
+ extern char Term[], screenterm[], **environ, Termcap[];
+ int force_vt = 1;
+ int VBellWait, MsgWait, MsgMinWait, SilenceWait;
+@@ -877,13 +887,13 @@ char **av;
+ 
+   if (home == 0 || *home == '\0')
+     home = ppp->pw_dir;
+-  if (strlen(LoginName) > 20)
++  if (strlen(LoginName) > NAME_MAX)
+     Panic(0, "LoginName too long - sorry.");
+ #ifdef MULTIUSER
+-  if (multi && strlen(multi) > 20)
++  if (multi && strlen(multi) > NAME_MAX)
+     Panic(0, "Screen owner name too long - sorry.");
+ #endif
+-  if (strlen(home) > MAXPATHLEN - 25)
++  if (strlen(home) > MAXPATHLEN - NAME_MAX)
+     Panic(0, "$HOME too long - sorry.");
+ 
+   attach_tty = "";
 diff --git a/screen.h b/screen.h
 index 4f9f354..bcaaaf6 100644
 --- a/screen.h
