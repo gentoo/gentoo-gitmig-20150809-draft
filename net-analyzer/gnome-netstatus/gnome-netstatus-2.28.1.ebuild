@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.28.1.ebuild,v 1.8 2010/10/09 14:31:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.28.1.ebuild,v 1.9 2010/12/08 17:57:20 pacho Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.16
 	>=dev-libs/glib-2
-	>=gnome-base/gnome-panel-2
+	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/gconf-2"
 
 DEPEND="${RDEPEND}
