@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.568 2010/12/06 16:09:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.569 2010/12/08 18:14:26 jer Exp $
+
+*opera-11.00_pre1133 (08 Dec 2010)
+
+  08 Dec 2010; Jeroen Roovers <jer@gentoo.org> -opera-11.00_pre1104.ebuild,
+  -opera-11.00_pre1111.ebuild, +opera-11.00_pre1133.ebuild:
+  http://my.opera.com/desktopteam/blog/2010/12/08/address-extensions-installer
 
 *opera-11.00_pre1128 (06 Dec 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1104.ebuild,v 1.1 2010/11/21 14:59:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1133.ebuild,v 1.1 2010/12/08 18:14:26 jer Exp $
 
 EAPI="2"
 
@@ -16,11 +16,11 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="test"
 
-O_PWD="one_step_closer"
+O_PWD="cup"
 O_V="${PV/_pre/-}"
 O_P="${PN}-${O_V}"
 O_HTTP="http://snapshot.opera.com/"
-O_U="${O_HTTP}unix/${O_PWD}_${PV/_pre/_}/"
+O_U="${O_HTTP}unix/${O_PWD}_${O_V}/"
 
 SRC_URI="
 	amd64? ( ${O_U}${O_P}.x86_64.linux.tar.bz2 )
