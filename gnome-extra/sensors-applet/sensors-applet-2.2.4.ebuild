@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.4.ebuild,v 1.5 2009/11/22 13:30:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.4.ebuild,v 1.6 2010/12/08 17:54:46 pacho Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="hddtemp libnotify lm_sensors nvidia"
 RDEPEND="
 	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.8.0
-	>=gnome-base/gnome-panel-2
+	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8
 	>=x11-libs/cairo-1.0.4
