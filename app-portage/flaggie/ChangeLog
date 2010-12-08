@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.6 2010/11/23 22:00:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.7 2010/12/08 21:54:19 mgorny Exp $
+
+*flaggie-0.0.3 (08 Dec 2010)
+
+  08 Dec 2010; Michał Górny <mgorny@gentoo.org> -flaggie-0.0.2.3.ebuild,
+  +flaggie-0.0.3.ebuild:
+  Version bump. The new version introduces package.env file support and further
+  bugfixes.
 
 *flaggie-0.0.2.4 (23 Nov 2010)
 

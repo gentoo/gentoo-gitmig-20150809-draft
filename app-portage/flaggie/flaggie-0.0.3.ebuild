@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.2.3.ebuild,v 1.1 2010/11/17 15:03:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.3.ebuild,v 1.1 2010/12/08 21:54:19 mgorny Exp $
 
 EAPI=2
 PYTHON_DEPEND="*:2.6"
@@ -26,6 +26,8 @@ src_prepare() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	ewarn "Please notice that flaggie is a fairly young project, and can definitely"
 	ewarn "be buggy. It is suggested that you backup your package.* files before"
 	ewarn "using it for the first time to prevent potential data loss."
