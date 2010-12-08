@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.192 2010/12/06 21:27:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.193 2010/12/08 13:41:23 armin76 Exp $
+
+  08 Dec 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask omapfb
 
   06 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
