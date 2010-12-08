@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12.ebuild,v 1.1 2010/12/03 14:00:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12.ebuild,v 1.2 2010/12/08 23:19:41 polynomial-c Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa +hal headless pulseaudio +opengl python +qt4 sdk vboxwebsrv"
+IUSE="+additions alsa +hal headless pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -30,13 +30,15 @@ RDEPEND="!app-emulation/virtualbox-bin
 	>=dev-libs/libxslt-1.1.19
 	net-misc/curl
 	!headless? (
-		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 opengl?	( x11-libs/qt-opengl:4 ) )
+		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 opengl?
+			( x11-libs/qt-opengl:4 ) )
 		opengl? ( virtual/opengl media-libs/freeglut )
 		x11-libs/libXcursor
 		media-libs/libsdl[X,video]
 		x11-libs/libXt
 	)
-	headless? ( x11-libs/libX11 )"
+	headless? ( x11-libs/libX11 )
+	vnc? ( >=net-libs/libvncserver-0.9.7 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -117,20 +119,24 @@ src_prepare() {
 
 	# fix build with --as-needed (bug #249295)
 	epatch "${FILESDIR}/${PN}-asneeded.patch"
+
+	# add the --enable-vnc option to configure script (bug #348204)
+	epatch "${FILESDIR}/${PN}-vnc.patch"
 }
 
 src_configure() {
 	local myconf
-	use alsa       || myconf="${myconf} --disable-alsa"
-	use opengl     || myconf="${myconf} --disable-opengl"
-	use pulseaudio || myconf="${myconf} --disable-pulse"
-	use python     || myconf="${myconf} --disable-python"
-	use hal        || myconf="${myconf} --disable-dbus"
-	use vboxwebsrv && myconf="${myconf} --enable-webservice"
+	use alsa       || myconf+=" --disable-alsa"
+	use opengl     || myconf+=" --disable-opengl"
+	use pulseaudio || myconf+=" --disable-pulse"
+	use python     || myconf+=" --disable-python"
+	use hal        || myconf+=" --disable-dbus"
+	use vboxwebsrv && myconf+=" --enable-webservice"
+	use vnc        && myconf+=" --enable-vnc"
 	if ! use headless ; then
-		use qt4 || myconf="${myconf} --disable-qt4"
+		use qt4 || myconf+=" --disable-qt4"
 	else
-		myconf="${myconf} --build-headless --disable-opengl"
+		myconf+=" --build-headless --disable-opengl"
 	fi
 	# not an autoconf script
 	./configure \
