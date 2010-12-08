@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.1-r1.ebuild,v 1.5 2010/07/09 09:13:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.1-r1.ebuild,v 1.6 2010/12/08 16:34:51 pacho Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.10
 		dev-libs/dbus-glib )
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? (
-		>=gnome-base/gnome-panel-2.0.10
+		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 		>=gnome-base/libbonobo-2
 		>=gnome-base/orbit-2.8.3 )
 	gstreamer? (
