@@ -9,5 +9,4 @@ CXXFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="fbdev glint mach64 mga nv r128 radeon savage sis tdfx trident \
-	voodoo"
+VIDEO_CARDS="fbdev omapfb"
