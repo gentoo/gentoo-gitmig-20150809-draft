@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.7.ebuild,v 1.1 2010/12/07 14:00:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.7.ebuild,v 1.2 2010/12/08 15:45:03 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,6 +27,15 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/minimock )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# Disable test failing with dev-python/pyxml installed.
+	if has_version dev-python/pyxml; then
+		sed -e "s/test_linecol/_&/" -i src/tests/test_errorhandler.py
+	fi
+}
 
 src_install() {
 	distutils_src_install
