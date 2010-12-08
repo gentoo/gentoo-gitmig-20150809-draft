@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6212 2010/12/07 18:32:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6213 2010/12/08 00:12:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3386,6 +3386,7 @@ sci-chemistry/ccp4:balbes - Install sci-chemistry/balbes
 sci-chemistry/ccpn:extendnmr - Install needed packages for extendNMR support
 sci-chemistry/cns:aria -  Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
+sci-chemistry/gamess:neo - Enable NEO for nuclear basis support
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
 sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversions
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
