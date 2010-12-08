@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.2 2010/12/07 23:53:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.3 2010/12/08 18:19:09 alexxy Exp $
 
 EAPI="3"
 
@@ -125,6 +125,9 @@ src_prepare() {
 	if use neo; then
 		sed -e "s:NEO=false:NEO=true:" -i compall lked || \
 			die "Failed to enable NEO code"
+	else
+		sed -e "s:NEO=true:NEO=false:" -i compall lked || \
+			die "Failed to disable NEO code"
 	fi
 	# enable GAMESS-qmmm
 	if use qmmm-tinker; then
