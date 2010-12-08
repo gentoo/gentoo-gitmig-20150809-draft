@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.6.ebuild,v 1.4 2010/05/28 10:04:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.6.ebuild,v 1.5 2010/12/08 20:48:14 pacho Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="gtkhotkey"
 
 RDEPEND=">=x11-libs/gtk+-2.14
-	>=gnome-base/gnome-panel-2.0
+	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=dev-libs/glib-2.16
 	gtkhotkey? ( x11-libs/gtkhotkey )"
 
