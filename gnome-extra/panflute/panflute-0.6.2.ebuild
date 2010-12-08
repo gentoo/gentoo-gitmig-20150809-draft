@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.6.2.ebuild,v 1.1 2010/09/18 21:17:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.6.2.ebuild,v 1.2 2010/12/08 17:44:31 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
 inherit gnome2 python eutils versionator
 
@@ -39,7 +41,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 "
 
-DOCS="AUTHORS ChangeLog NEWS README THANKS"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README THANKS"
+	python_set_active_version 2
+}
 
 src_prepare() {
 	gnome2_src_prepare
@@ -47,14 +52,16 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	python_convert_shebangs -r 2 .
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/panflute
+	python_mod_optimize panflute
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/panflute
+	python_mod_cleanup panflute
 }
