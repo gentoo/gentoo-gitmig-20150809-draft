@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omapfb/xf86-video-omapfb-0.1.1_p3.ebuild,v 1.1 2010/12/08 13:29:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omapfb/xf86-video-omapfb-0.1.1_p3.ebuild,v 1.2 2010/12/08 13:37:17 armin76 Exp $
 
-# Must be before x-modular eclass is inherited
-SNAPSHOT="yes"
+EAPI="3"
 
-inherit x-modular
+XORG_EAUTORECONF="yes"
+
+inherit xorg-2
 
 MY_P="${P/_p*//}"
 
@@ -23,4 +24,3 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 S="${WORKDIR}/${MY_P}"
-
