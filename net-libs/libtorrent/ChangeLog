@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.153 2010/08/18 04:39:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.154 2010/12/08 02:50:00 vapier Exp $
+
+  08 Dec 2010; Mike Frysinger <vapier@gentoo.org> libtorrent-0.12.6.ebuild:
+  Fix building on systems that lack posix_fallocate().
 
   18 Aug 2010; Jeroen Roovers <jer@gentoo.org> libtorrent-0.12.6.ebuild:
   Stable for HPPA (bug #311143).
