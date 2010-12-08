@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.2.ebuild,v 1.8 2010/10/17 15:49:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.2.ebuild,v 1.9 2010/12/08 18:56:40 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.17.0
 	>=net-libs/gtk-vnc-0.3.10
 	>=gnome-base/gnome-keyring-1
 	x11-libs/libX11
-	applet? ( >=gnome-base/gnome-panel-2 )
+	applet? ( || ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 ) )
 	avahi? (
 		>=dev-libs/libxml2-2.6.31
 		>=net-dns/avahi-0.6.22[dbus,gtk] )
