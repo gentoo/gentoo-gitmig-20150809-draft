@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.105 2010/11/27 12:25:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.106 2010/12/08 13:44:14 armin76 Exp $
+
+  08 Dec 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Unmask omapfb
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Add portage python3 use-flag to p.use.mask
