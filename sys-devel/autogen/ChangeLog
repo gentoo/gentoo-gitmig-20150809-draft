@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.65 2010/09/15 09:59:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.66 2010/12/08 02:31:06 vapier Exp $
+
+*autogen-5.11.3 (08 Dec 2010)
+
+  08 Dec 2010; Mike Frysinger <vapier@gentoo.org> +autogen-5.11.3.ebuild:
+  Version bump #345841 by Jeroen Roovers. Includes fixes for broken shebang
+  #339777 by Dan Wallis. Fix guile USE depend #346633 by Nickolaj
+  Stjujsckij. Punt bundled m4 files from install #347095 by Juergen Rose.
 
   15 Sep 2010; Peter Volkov <pva@gentoo.org> autogen-5.11.1.ebuild:
   guile-1.8.5-r1 is stable so depend on >=dev-scheme/guile-1.8 and drop
