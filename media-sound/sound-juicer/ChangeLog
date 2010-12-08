@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.196 2010/10/17 19:47:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.197 2010/12/08 17:01:34 eva Exp $
+
+  08 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  sound-juicer-2.32.0.ebuild:
+  Drop python eclass usage, it was wrongly added due to gnome-doc-utils usage.
 
 *sound-juicer-2.32.0 (17 Oct 2010)
 

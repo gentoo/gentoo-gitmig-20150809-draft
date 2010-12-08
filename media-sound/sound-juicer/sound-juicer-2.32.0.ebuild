@@ -1,19 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.1 2010/10/17 19:47:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.2 2010/12/08 17:01:34 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
-PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 python
+inherit gnome2
 
 DESCRIPTION="CD ripper for GNOME 2"
 HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="test"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18
@@ -51,7 +50,6 @@ pkg_setup() {
 		--with-gtk=2.0
 		--disable-scrollkeeper GST_INSPECT=/bin/true"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	python_set_active_version 2
 }
 
 pkg_postinst() {
