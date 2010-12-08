@@ -1,12 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.6.2.ebuild,v 1.2 2010/12/08 17:44:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.6.2.ebuild,v 1.3 2010/12/08 22:44:57 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit gnome2 python eutils versionator
+inherit eutils gnome2 python versionator
 
 MY_MAJORV="$(get_version_component_range 1-2)"
 
@@ -23,7 +25,7 @@ IUSE="gnome libnotify mpd"
 RDEPEND="
 	>=dev-python/dbus-python-0.80
 	>=dev-libs/dbus-glib-0.71
-	dev-python/pygobject
+	dev-python/pygobject:2
 	gnome? (
 		>=x11-libs/pango-1.6
 		>=gnome-base/libgnomeui-2
@@ -31,7 +33,7 @@ RDEPEND="
 		>=dev-python/gconf-python-2.14
 		>=dev-python/gnome-keyring-python-2.14
 		>=dev-python/gnome-applets-python-2.14
-		>=dev-python/pygtk-2.16 )
+		>=dev-python/pygtk-2.16:2 )
 	libnotify? ( dev-python/notify-python )
 	mpd? ( >=dev-python/python-mpd-0.2.1 )
 	!gnome-extra/music-applet
@@ -43,7 +45,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README THANKS"
-	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -53,7 +55,25 @@ src_prepare() {
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
 
-	python_convert_shebangs -r 2 .
+	python_copy_sources
+}
+
+src_configure() {
+	python_execute_function -s gnome2_src_configure
+}
+
+src_compile() {
+	python_execute_function -s gnome2_src_compile
+}
+
+src_test() {
+	python_execute_function -s -d
+}
+
+src_install() {
+	python_execute_function -s gnome2_src_install
+	python_clean_installation_image
+	python_convert_shebangs -r 2 "${ED}"
 }
 
 pkg_postinst() {
