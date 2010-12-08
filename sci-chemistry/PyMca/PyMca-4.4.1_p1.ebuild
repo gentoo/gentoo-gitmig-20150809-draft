@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.4.1_p1.ebuild,v 1.1 2010/12/07 07:52:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.4.1_p1.ebuild,v 1.2 2010/12/08 08:27:35 jlec Exp $
 
 EAPI=3
 
@@ -19,16 +19,18 @@ SRC_URI="mirror://sourceforge/project/pymca/pymca/${PN}${PV/_p1}/pymca${MY_PV}-s
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="X matplotlib"
+IUSE="X hdf5 matplotlib"
 
 DEPEND="
 	dev-python/numpy
 	dev-python/sip
 	virtual/opengl
+	dev-python/pyopengl
 	X? (
 	     dev-python/PyQt4
 	     dev-python/pyqwt
 	   )
+	hdf5? ( dev-python/h5py )
 	matplotlib? ( dev-python/matplotlib )"
 RDEPEND="${DEPEND}"
 
