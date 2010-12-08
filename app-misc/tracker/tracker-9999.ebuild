@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.28 2010/11/14 17:43:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.29 2010/12/08 07:55:34 eva Exp $
 
-EAPI="2"
-G2CONF_DEBUG="no"
+EAPI="3"
+GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
 
 inherit autotools git gnome2 linux-info python
@@ -24,9 +24,7 @@ IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk hal iptc +jpe
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
-	>=dev-libs/dbus-glib-0.82-r1
-	>=sys-apps/dbus-1.3.1
-	>=dev-libs/glib-2.24:2
+	>=dev-libs/glib-2.26:2
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
@@ -54,7 +52,7 @@ RDEPEND="
 	)
 	gtk? (
 		>=dev-libs/libgee-0.3
-		>=x11-libs/gtk+-2.18 )
+		>=x11-libs/gtk+-2.18:2 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? (
@@ -68,7 +66,7 @@ RDEPEND="
 	pdf? (
 		>=x11-libs/cairo-1
 		>=app-text/poppler-0.12.3-r3[cairo,utils]
-		>=x11-libs/gtk+-2.12 )
+		>=x11-libs/gtk+-2.12:2 )
 	playlist? ( dev-libs/totem-pl-parser )
 	rss? ( net-libs/libgrss )
 	strigi? ( >=app-misc/strigi-0.7 )
@@ -83,9 +81,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
 	dev-util/gtk-doc-am
 	>=dev-util/gtk-doc-1.8
-	applet? ( >=dev-lang/vala-0.11.1:0.12 )
+	applet? ( >=dev-lang/vala-0.11.2:0.12 )
 	gtk? (
-		>=dev-lang/vala-0.11.1:0.12
+		>=dev-lang/vala-0.11.2:0.12
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		media-gfx/graphviz )
@@ -203,5 +201,5 @@ src_test() {
 src_install() {
 	gnome2_src_install
 	# Tracker and none of the plugins it provides needs la files
-	find "${D}" -name "*.la" -delete || die
+	find "${ED}" -name "*.la" -delete || die
 }

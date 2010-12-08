@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.6 2010/11/28 14:35:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.7 2010/12/08 07:55:34 eva Exp $
 
 EAPI="2"
-G2CONF_DEBUG="no"
+GCONF_DEBUG="no"
 
 inherit eutils gnome2 linux-info
 

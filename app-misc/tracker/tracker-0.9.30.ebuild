@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.27.ebuild,v 1.3 2010/11/14 16:17:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.30.ebuild,v 1.1 2010/12/08 07:55:34 eva Exp $
 
-EAPI="2"
-G2CONF_DEBUG="no"
+EAPI="3"
+GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
 
 inherit eutils gnome2 linux-info python
@@ -21,12 +21,11 @@ IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk hal iptc +jpe
 RESTRICT="test"
 
 # TODO: rest -> flickr, qt vs. gdk
+# vala is built with debug by default (see VALAFLAGS)
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
-	>=dev-libs/dbus-glib-0.82-r1
-	>=sys-apps/dbus-1.3.1
-	>=dev-libs/glib-2.20:2
+	>=dev-libs/glib-2.26:2
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
@@ -54,7 +53,7 @@ RDEPEND="
 	)
 	gtk? (
 		>=dev-libs/libgee-0.3
-		>=x11-libs/gtk+-2.18 )
+		>=x11-libs/gtk+-2.18:2 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? (
@@ -68,7 +67,7 @@ RDEPEND="
 	pdf? (
 		>=x11-libs/cairo-1
 		>=app-text/poppler-0.12.3-r3[cairo,utils]
-		>=x11-libs/gtk+-2.12 )
+		>=x11-libs/gtk+-2.12:2 )
 	playlist? ( dev-libs/totem-pl-parser )
 	rss? ( net-libs/libgrss )
 	strigi? ( >=app-misc/strigi-0.7 )
@@ -81,13 +80,17 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.14
 	>=dev-util/pkgconfig-0.20
-	applet? ( dev-lang/vala )
+	applet? ( >=dev-lang/vala-0.11.2:0.12 )
 	gtk? (
-		dev-lang/vala
+		>=dev-lang/vala-0.11.2:0.12
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		>=dev-util/gtk-doc-1.8
-		media-gfx/graphviz )"
+		media-gfx/graphviz )
+	test? (
+		>=dev-libs/dbus-glib-0.82-r1
+		>=sys-apps/dbus-1.3.1[X] )
+"
 
 function inotify_enabled() {
 	if linux_config_exists; then
@@ -127,6 +130,10 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-hal --disable-upower"
 	fi
 
+	if use applet || use gtk; then
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.12)"
+	fi
+
 	# unicode-support: libunistring, libicu or glib ?
 	G2CONF="${G2CONF}
 		--disable-functional-tests
@@ -160,7 +167,7 @@ pkg_setup() {
 		# FIXME: handle gdk vs qt for mp3 thumbnail extract
 		# $(use_enable gtk gdkpixbuf)
 		# FIXME: missing some files ?
-		#$(use_enable test functional-tests)
+		# $(use_enable test functional-tests)
 
 	DOCS="AUTHORS ChangeLog NEWS README"
 
@@ -205,5 +212,5 @@ src_test() {
 src_install() {
 	gnome2_src_install
 	# Tracker and none of the plugins it provides needs la files
-	find "${D}" -name "*.la" -delete || die
+	find "${ED}" -name "*.la" -delete || die
 }
