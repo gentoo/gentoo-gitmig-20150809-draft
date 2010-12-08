@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0.ebuild,v 1.2 2010/10/21 21:15:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0.ebuild,v 1.3 2010/12/08 17:09:47 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.13.0
 	>=x11-libs/libnotify-0.4.3
 	>=x11-libs/libwnck-2.10.0
 	>=x11-libs/cairo-1
-	>=gnome-base/gnome-panel-2
+	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/gconf-2.10
 	>=media-libs/libcanberra-0.10[gtk]
 	>=sys-power/upower-0.9.1

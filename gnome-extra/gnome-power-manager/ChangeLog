@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.141 2010/10/21 21:15:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.142 2010/12/08 17:09:47 pacho Exp $
+
+  08 Dec 2010; Pacho Ramos <pacho@gentoo.org>
+  gnome-power-manager-2.32.0.ebuild:
+  Needs gnome-panel with bonobo support.
 
   21 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-power-manager-2.22.1-r1.ebuild,

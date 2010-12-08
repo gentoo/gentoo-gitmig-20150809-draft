@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-swallow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.14 2009/07/27 19:22:20 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.15 2010/12/08 17:12:34 pacho Exp $
+
+  08 Dec 2010; Pacho Ramos <pacho@gentoo.org> gnome-swallow-1.2.ebuild:
+  Needs gnome-panel with bonobo support.
 
   28 Jul 2009; Romain Perier <mrpouet@gentoo.org> gnome-swallow-1.2.ebuild,
   +files/gnome-swallow-1.2-libgnomeui-flags.patch,
