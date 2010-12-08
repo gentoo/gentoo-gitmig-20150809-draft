@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>python</herd>
-	<longdescription lang="en">
-		workingenv sets up a sandbox which allows you to install Python packages into using distutils, setuptools or easy_install. Very handy for testing Python packages without installing them into site-packages.
-	</longdescription>
-</pkgmetadata>
-
