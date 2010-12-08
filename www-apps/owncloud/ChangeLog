@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/owncloud
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.1 2010/12/08 17:27:51 alexxy Exp $
+
+*owncloud-1.1 (08 Dec 2010)
+
+  08 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +owncloud-1.1.ebuild,
+  +metadata.xml:
+  Initial import per bug #347702
+
