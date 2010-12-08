@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.102 2010/12/08 20:52:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.103 2010/12/08 22:46:20 eva Exp $
+
+  08 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> alacarte-0.13.2.ebuild:
+  Handle multiple ABI python, bug #317003.
 
   08 Dec 2010; Pacho Ramos <pacho@gentoo.org> -alacarte-0.12.1.ebuild,
   alacarte-0.13.2.ebuild:
