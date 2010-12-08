@@ -1,3 +1,6 @@
+Reported upstream:
+https://sourceforge.net/tracker/?func=detail&atid=989750&aid=3131118&group_id=204472
+
 === modified file 'plugins/audio/G722/Makefile.in'
 --- plugins/audio/G722/Makefile.in	2010-12-07 05:39:18 +0000
 +++ plugins/audio/G722/Makefile.in	2010-12-07 05:49:21 +0000
