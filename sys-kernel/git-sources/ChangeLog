@@ -1,6 +1,28 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.993 2010/12/08 12:30:54 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.994 2010/12/08 12:44:52 mpagano Exp $
+
+  08 Dec 2010; Michael Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.37_rc3.ebuild, -git-sources-2.6.37_rc3-r1.ebuild,
+  -git-sources-2.6.37_rc3-r2.ebuild, -git-sources-2.6.37_rc3-r3.ebuild,
+  -git-sources-2.6.37_rc3-r4.ebuild, -git-sources-2.6.37_rc3-r5.ebuild,
+  -git-sources-2.6.37_rc3-r6.ebuild, -git-sources-2.6.37_rc3-r7.ebuild,
+  -git-sources-2.6.37_rc4.ebuild, -git-sources-2.6.37_rc4-r1.ebuild,
+  -git-sources-2.6.37_rc4-r2.ebuild, -git-sources-2.6.37_rc4-r3.ebuild,
+  -git-sources-2.6.37_rc4-r4.ebuild, -git-sources-2.6.37_rc4-r5.ebuild,
+  -git-sources-2.6.37_rc4-r6.ebuild:
+  Cleanup old versions
+
+  08 Dec 2010; Michael Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.37_rc3.ebuild, -git-sources-2.6.37_rc3-r1.ebuild,
+  -git-sources-2.6.37_rc3-r2.ebuild, -git-sources-2.6.37_rc3-r3.ebuild,
+  -git-sources-2.6.37_rc3-r4.ebuild, -git-sources-2.6.37_rc3-r5.ebuild,
+  -git-sources-2.6.37_rc3-r6.ebuild, -git-sources-2.6.37_rc3-r7.ebuild,
+  -git-sources-2.6.37_rc4.ebuild, -git-sources-2.6.37_rc4-r1.ebuild,
+  -git-sources-2.6.37_rc4-r2.ebuild, -git-sources-2.6.37_rc4-r3.ebuild,
+  -git-sources-2.6.37_rc4-r4.ebuild, -git-sources-2.6.37_rc4-r5.ebuild,
+  -git-sources-2.6.37_rc4-r6.ebuild:
+  Cleanup old versions
 
 *git-sources-2.6.37_rc5-r2 (08 Dec 2010)
 
