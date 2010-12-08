@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r1.ebuild,v 1.4 2010/10/23 17:12:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r1.ebuild,v 1.5 2010/12/08 20:44:10 pacho Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3
 	dev-libs/popt
 	gnome? (
-		gnome-base/gnome-panel
+		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 		>=gnome-base/libgnome-2.2
 		>=gnome-base/libgnomeui-2.2 )
 	password? ( dev-libs/openssl )
