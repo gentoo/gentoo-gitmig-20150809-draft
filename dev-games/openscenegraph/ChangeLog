@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.34 2010/10/15 13:56:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.35 2010/12/08 16:34:42 mr_bones_ Exp $
+
+  08 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  openscenegraph-2.8.3.ebuild:
+  fix osgapps typo (bug #348146)
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> openscenegraph-2.8.3.ebuild:
   stable ppc, bug 332329

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.10 2010/10/15 13:56:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.11 2010/12/08 16:34:42 mr_bones_ Exp $
 
 EAPI=2
 
@@ -98,7 +98,7 @@ src_configure() {
 		-DGENTOO_DOCDIR="/usr/share/doc/${PF}"
 		$(cmake-utils_use_with curl)
 		$(cmake-utils_use_build doc DOCUMENTATION)
-		$(cmake-utils_use_build examples OSG_APPLICATIONS)
+		$(cmake-utils_use_build osgapps OSG_APPLICATIONS)
 		$(cmake-utils_use_build examples OSG_EXAMPLES)
 		$(cmake-utils_use_with ffmpeg FFmpeg)
 		$(cmake-utils_use_with fltk)
