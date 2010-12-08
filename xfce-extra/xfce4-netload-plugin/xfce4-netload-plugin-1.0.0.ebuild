@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/xfce4-netload-plugin-1.0.0.ebuild,v 1.1 2010/12/08 14:43:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/xfce4-netload-plugin-1.0.0.ebuild,v 1.2 2010/12/08 14:46:44 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Netload plugin for Xfce4 panel"
+DESCRIPTION="Xfce's netload panel plug-in"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.0/${P}.tar.bz2"
 
