@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.91 2010/12/05 16:26:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.92 2010/12/08 20:26:54 maekke Exp $
+
+  08 Dec 2010; Markus Meier <maekke@gentoo.org> taglib-1.6.3.ebuild:
+  arm stable, bug #346471
 
   05 Dec 2010; Markos Chandras <hwoarang@gentoo.org> taglib-1.6.3.ebuild:
   Stable on amd64 wrt bug #346471
