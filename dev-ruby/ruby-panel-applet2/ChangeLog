@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-panel-applet2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet2/ChangeLog,v 1.18 2010/10/22 13:59:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet2/ChangeLog,v 1.19 2010/12/08 20:41:27 pacho Exp $
+
+  08 Dec 2010; Pacho Ramos <pacho@gentoo.org> ruby-panel-applet2-0.19.4.ebuild:
+  Needs gnome-panel with bonobo support (with Hans de Graaff permission, bug
+  #348164).
 
   22 Oct 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-panel-applet2-0.19.1.ebuild, -ruby-panel-applet2-0.19.3.ebuild:
