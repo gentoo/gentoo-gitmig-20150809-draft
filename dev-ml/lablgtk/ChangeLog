@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.87 2010/12/04 17:45:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.88 2010/12/09 15:42:04 aballier Exp $
+
+  09 Dec 2010; Alexis Ballier <aballier@gentoo.org> lablgtk-2.14.2.ebuild:
+  Fix dep on gnome-panel[bonobo], bug #348162 by Pacho Ramos <pacho@gentoo.org>
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> lablgtk-2.14.2.ebuild:
   alpha/ia64/sparc stable wrt #343751
