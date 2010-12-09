@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.10 2010/10/15 17:46:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.11 2010/12/09 18:17:14 rich0 Exp $
+
+*android-sdk-update-manager-8 (09 Dec 2010)
+
+  09 Dec 2010; Richard Freeman <rich0@gentoo.org>
+  +android-sdk-update-manager-8.ebuild,
+  +files/android-sdk-update-manager-8-swt.patch:
+  Update for latest sdk - thanks to Rajat and Matsuu for contributions.
 
   15 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   android-sdk-update-manager-6-r2.ebuild:
