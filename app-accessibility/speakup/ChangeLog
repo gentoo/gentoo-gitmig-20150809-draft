@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.50 2010/11/05 19:42:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.51 2010/12/09 00:49:13 williamh Exp $
+
+  09 Dec 2010; William Hubbs <williamh@gentoo.org> speakup-3.1.6.ebuild,
+  speakup-9999.ebuild:
+  Speakup is not functional without the modules, and this was causing the
+  minimal live cd not to speak. I just now discovered this because there
+  wasn't a way for me to look at the cd until now to find out what was
+  going on, but they have the modules use flag turned off in the specs.
+  I am removing the modules use flag because the modules are always needed
+  for speakup to work.
 
   05 Nov 2010; William Hubbs <williamh@gentoo.org> -speakup-3.1.4.ebuild,
   -speakup-3.1.5.ebuild:

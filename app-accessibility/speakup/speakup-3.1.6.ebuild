@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6.ebuild,v 1.3 2010/11/04 02:25:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6.ebuild,v 1.4 2010/12/09 00:49:13 williamh Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://linux-speakup.org/pub/speakup/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="modules"
+IUSE=""
 
 MODULE_NAMES="speakup(${PN}:\"${S}\"/src)
 	speakup_acntpc(${PN}:\"${S}\"/src)
@@ -35,18 +35,17 @@ BUILD_PARAMS="KERNELDIR=${KERNEL_DIR}"
 BUILD_TARGETS="clean all"
 
 src_prepare() {
-	use modules && cmd=die || cmd=ewarn
 	if kernel_is lt 2 6 26 || kernel_is gt 2 6 35; then
-		$cmd "Speakup ${PV} requires linux 2.6.26 through 2.6.35"
+		die "Speakup ${PV} requires linux 2.6.26 through 2.6.35"
 	fi
 }
 
 src_compile() {
-	use modules && linux-mod_src_compile
+	linux-mod_src_compile
 }
 
 src_install() {
-	use modules && linux-mod_src_install
+	linux-mod_src_install
 	dobin tools/speakupconf
 	dosbin tools/talkwith
 	dodoc Bugs.txt README To-Do doc/DefaultKeyAssignments doc/spkguide.txt
@@ -54,7 +53,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use modules && linux-mod_pkg_postinst
+	linux-mod_pkg_postinst
 
 	elog "You must set up the speech synthesizer driver to be loaded"
 	elog "automatically in order for your system to start speaking"
