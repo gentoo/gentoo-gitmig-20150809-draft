@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.94 2010/12/05 17:33:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.95 2010/12/09 21:20:38 nirbheek Exp $
+
+  09 Dec 2010; <nirbheek@gentoo.org> package.use.mask:
+  net-misc/connman is not keyworded, bug 348308
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask www-client/elinks javascript

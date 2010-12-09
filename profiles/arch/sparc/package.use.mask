@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.62 2010/12/05 16:42:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.63 2010/12/09 21:20:42 nirbheek Exp $
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
+# net-misc/connman is not keyworded, bug 348308
+mail-client/evolution connman
 
 # Raúl Porcel <armin76@gentoo.org> (5 Dec 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)
