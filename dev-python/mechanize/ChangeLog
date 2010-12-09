@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.34 2010/12/09 12:06:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.35 2010/12/09 12:55:38 phajdan.jr Exp $
+
+  09 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mechanize-0.2.4.ebuild:
+  x86 stable wrt bug #348078
 
   09 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mechanize-0.2.4.ebuild:
   Stable on amd64 wrt bug #348078
