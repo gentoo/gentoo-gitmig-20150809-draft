@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.111 2010/11/15 15:36:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.112 2010/12/09 10:24:06 phajdan.jr Exp $
+
+  09 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> trac-0.12.1.ebuild:
+  x86 stable wrt bug #348074
 
   15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   trac-0.11.7.ebuild, trac-0.12.ebuild, trac-0.12-r1.ebuild,
