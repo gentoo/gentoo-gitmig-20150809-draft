@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.56 2010/12/04 19:04:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.57 2010/12/09 21:51:40 nirbheek Exp $
+
+  09 Dec 2010; <nirbheek@gentoo.org> telepathy-glib-0.12.3.ebuild,
+  telepathy-glib-0.12.5.ebuild:
+  Drop hppa due to missing keywords on dev-libs/gobject-introspection, bug
+  348313
 
 *telepathy-glib-0.12.5 (04 Dec 2010)
 
