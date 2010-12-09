@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.49 2010/10/20 14:19:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.50 2010/12/09 10:01:47 radhermit Exp $
+
+*ampache-3.5.4 (09 Dec 2010)
+
+  09 Dec 2010; Tim Harder <radhermit@gentoo.org> +ampache-3.5.4.ebuild,
+  metadata.xml:
+  Version bump (bug #307263 by Adam Grissom). Add USE flags to install optional
+  dependencies for the default transcoding support (bug #249306 by Vytautas
+  Jakutis).
 
   20 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ampache-3.5.3-r1.ebuild:
