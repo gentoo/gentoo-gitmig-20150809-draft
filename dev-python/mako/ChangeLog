@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.29 2010/11/16 17:36:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.30 2010/12/09 19:14:17 xmw Exp $
+
+  09 Dec 2010; Michael Weber <xmw@gentoo.org> mako-0.3.5.ebuild,
+  mako-0.3.6.ebuild:
+  add ~sparc (bug 348215)
 
   16 Nov 2010; Thomas Kahle <tomka@gentoo.org> mako-0.3.5.ebuild:
   x86 stable per bug 345471
