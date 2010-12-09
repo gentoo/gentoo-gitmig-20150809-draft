@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.55 2010/10/24 20:52:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.56 2010/12/09 11:59:11 hwoarang Exp $
+
+  09 Dec 2010; Markos Chandras <hwoarang@gentoo.org> sqlalchemy-0.6.5.ebuild:
+  Stable on amd64 wrt bug #348075
 
 *sqlalchemy-0.6.5 (24 Oct 2010)
 
