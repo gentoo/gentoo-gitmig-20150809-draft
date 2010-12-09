@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.76 2010/11/29 12:10:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.77 2010/12/09 09:56:19 phajdan.jr Exp $
+
+  09 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> syslinux-4.03.ebuild:
+  x86 stable wrt bug #347061
 
   29 Nov 2010; Markos Chandras <hwoarang@gentoo.org> syslinux-4.03.ebuild:
   Stable on amd64 wrt bug #347061
