@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.569 2010/12/08 18:14:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.570 2010/12/09 17:28:13 jer Exp $
+
+  09 Dec 2010; Jeroen Roovers <jer@gentoo.org> opera-10.63.ebuild,
+  opera-11.00_pre1128.ebuild, opera-11.00_pre1133.ebuild:
+  Do not set OPERA_PERSONALDIR in the wrapper script as opera now defaults to
+  that, by the reporter of bug #348046.
 
 *opera-11.00_pre1133 (08 Dec 2010)
 

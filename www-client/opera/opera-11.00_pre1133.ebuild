@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1133.ebuild,v 1.1 2010/12/08 18:14:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1133.ebuild,v 1.2 2010/12/09 17:28:13 jer Exp $
 
 EAPI="2"
 
@@ -141,7 +141,6 @@ src_prepare() {
 	# Create /usr/bin/opera wrapper
 	echo '#!/bin/bash' > opera
 	echo 'export OPERA_DIR=/usr/share/opera' >> opera
-	echo 'export OPERA_PERSONALDIR="${HOME}/.opera"' >> opera
 	echo 'exec '"${OPREFIX}"'/opera/opera "$@"' >> opera
 
 	# Fix libdir in defaults/pluginpath.ini
