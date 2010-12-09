@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.93 2010/12/01 11:45:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.94 2010/12/09 01:32:33 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -195,8 +195,11 @@ toolchain-binutils_src_compile() {
 
 	cd "${MY_BUILDDIR}"
 	set --
-	# new versions allow gold and ld; screw older versions
-	if grep -q 'enable-gold=both/ld' "${S}"/configure ; then
+	# enable gold if available (installed as ld.gold)
+	if grep -q 'enable-gold=default' "${S}"/configure ; then
+		set -- "$@" --enable-gold
+	# old ways - remove when 2.21 is stable
+	elif grep -q 'enable-gold=both/ld' "${S}"/configure ; then
 		set -- "$@" --enable-gold=both/ld
 	elif grep -q 'enable-gold=both/bfd' "${S}"/configure ; then
 		set -- "$@" --enable-gold=both/bfd
