@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.233 2010/12/03 07:16:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.234 2010/12/09 08:42:51 fauli Exp $
+
+  09 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  chromium-8.0.552.215.ebuild:
+  stable x86, security bug 347625
 
 *chromium-8.0.552.215 (03 Dec 2010)
 
