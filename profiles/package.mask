@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12265 2010/12/08 20:02:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12266 2010/12/09 08:15:24 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Alexander <wired@gentoo.org> (09 Dec 2010)
+# Requires Qt 4.5 which is old and not available in our tree anymore.
+# Upstream dropped official support after that Qt version.
+# Newer versions are available by a community port, but 
+# there has been no interest for new ebuilds.
+# Masked for removal in 30 days.
+dev-java/qtjambi
 
 # Justin Lecher <jlec@gentoo.org> (07 Dec 2010)
 # Obsolete and superseeded by dev-tcltk/tclxml-3*

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4850 2010/12/08 20:02:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4851 2010/12/09 08:15:24 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2010; Alex Alexander <wired@gentoo.org> package.mask:
+  lastrite: dev-java/qtjambi. requires Qt 4.5.
 
   08 Dec 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for x11-libs/openmotif-compat, package has been removed.
