@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.5.ebuild,v 1.1 2010/11/08 01:01:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.5.ebuild,v 1.2 2010/12/09 09:00:50 fauli Exp $
 
 EAPI=2
 inherit multilib toolchain-funcs
@@ -15,7 +15,7 @@ elif [[ ${PV} == *pre* ]]; then
 else
 	MY_P="${PN}-v${PV}"
 	SRC_URI="http://webm.googlecode.com/files/${MY_P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 	S="${WORKDIR}/${MY_P}"
 fi
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.9 2010/11/08 01:01:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.10 2010/12/09 09:00:50 fauli Exp $
+
+  09 Dec 2010; Christian Faulhammer <fauli@gentoo.org> libvpx-0.9.5.ebuild:
+  stable x86, security bug 345559
 
 *libvpx-0.9.5 (08 Nov 2010)
 
