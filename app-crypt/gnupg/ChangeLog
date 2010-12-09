@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.395 2010/12/09 15:01:35 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.396 2010/12/09 18:52:19 c1pher Exp $
+
+  09 Dec 2010; Dane Smith <c1pher@gentoo.org> gnupg-1.4.11.ebuild:
+  Stable x86 wrt bug 348093.
 
   09 Dec 2010; Dane Smith <c1pher@gentoo.org> gnupg-1.4.11.ebuild:
   *Removed $(use_enable) static. No longer used upstream wrt bug 348200.
