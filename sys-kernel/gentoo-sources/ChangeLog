@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.789 2010/11/27 21:40:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.790 2010/12/09 01:28:00 mpagano Exp $
+
+*gentoo-sources-2.6.36-r4 (09 Dec 2010)
+
+  09 Dec 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.36-r4.ebuild:
+  3 security patches for the Econet root exploit described at:
+  http://http://lwn.net/Articles/419141/ Covers (CVE-2010-3850),
+  (CVE-2010-3849) and (CVE-2010-4258). Thanks to asn for patches and testing.
 
   27 Nov 2010; Michael Pagano <mpagano@gentoo.org>
   gentoo-sources-2.6.32-r20.ebuild, gentoo-sources-2.6.32-r21.ebuild,
