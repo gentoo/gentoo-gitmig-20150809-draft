@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.51 2010/12/09 00:49:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.52 2010/12/09 04:08:50 williamh Exp $
+
+  09 Dec 2010; William Hubbs <williamh@gentoo.org> speakup-3.1.6.ebuild,
+  speakup-9999.ebuild:
+  Add back support for USE=modules; this will be handled in the minimal
+  specs.
 
   09 Dec 2010; William Hubbs <williamh@gentoo.org> speakup-3.1.6.ebuild,
   speakup-9999.ebuild:
