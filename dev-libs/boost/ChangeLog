@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.201 2010/11/24 14:52:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.202 2010/12/09 21:06:05 djc Exp $
+
+  09 Dec 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer.
 
   24 Nov 2010; Jeroen Roovers <jer@gentoo.org> boost-1.42.0-r2.ebuild:
   Stable for HPPA (bug #344677).
