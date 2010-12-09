@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.97 2010/12/03 15:11:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.98 2010/12/09 19:35:18 xmw Exp $
+
+  09 Dec 2010; Michael Weber <xmw@gentoo.org> rb_libtorrent-0.15.1.ebuild,
+  rb_libtorrent-0.15.3.ebuild, rb_libtorrent-0.15.4.ebuild:
+  add ~sparc (bug 348217)
 
   03 Dec 2010; Bernard Cafarelli <voyageur@gentoo.org>
   rb_libtorrent-0.15.3.ebuild, rb_libtorrent-0.15.4.ebuild:
