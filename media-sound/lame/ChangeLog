@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.123 2010/10/04 15:21:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.124 2010/12/09 08:26:23 fauli Exp $
+
+  09 Dec 2010; Christian Faulhammer <fauli@gentoo.org> lame-3.98.4.ebuild:
+  stable x86, security bug 347625
 
   04 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   lame-3.98.2-r1.ebuild, lame-3.98.4.ebuild:
