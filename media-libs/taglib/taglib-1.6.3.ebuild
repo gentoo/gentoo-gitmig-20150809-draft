@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.3.ebuild,v 1.4 2010/12/08 20:26:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.3.ebuild,v 1.5 2010/12/09 22:51:32 tomka Exp $
 
 EAPI=3
 inherit cmake-utils
@@ -10,7 +10,7 @@ HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
 SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 
 LICENSE="LGPL-2 MPL-1.1"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 SLOT="0"
 IUSE="+asf debug examples +mp4 test"
 
