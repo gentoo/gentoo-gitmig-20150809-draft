@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.1 2010/12/09 17:41:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.2 2010/12/09 18:01:56 jer Exp $
 
 EAPI="2"
 
@@ -35,5 +35,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" BINDIR=/usr/bin install || die "make install failed"
+	emake DESTDIR="${D}" BINDIR=/usr/bin install || die "make install failed"
 }
