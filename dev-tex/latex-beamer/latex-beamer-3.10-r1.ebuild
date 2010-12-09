@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10-r1.ebuild,v 1.1 2010/12/09 16:32:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.10-r1.ebuild,v 1.2 2010/12/09 16:38:21 aballier Exp $
 
 EAPI=3
 
-inherit versionator base
+inherit versionator base latex-package
 
 MY_PV="$(get_version_component_range 1)-$(get_version_component_range 2)"
 DESCRIPTION="LaTeX class for creating presentations using a video projector."
