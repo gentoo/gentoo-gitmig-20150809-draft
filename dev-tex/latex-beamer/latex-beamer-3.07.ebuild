@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.28 2010/10/02 19:35:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.07.ebuild,v 1.29 2010/12/09 16:48:04 aballier Exp $
 
 inherit latex-package
 
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-f
 IUSE="doc examples lyx"
 
 DEPEND="lyx? ( app-office/lyx )
-	dev-texlive/texlive-latex"
+	dev-texlive/texlive-latex
+	!>=dev-texlive/texlive-latex-2010"
 RDEPEND=">=dev-tex/pgf-1.10"
 
 src_install() {
