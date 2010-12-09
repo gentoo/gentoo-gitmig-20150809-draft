@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.125 2010/12/09 11:55:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.126 2010/12/09 14:48:08 phajdan.jr Exp $
+
+  09 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pysqlite-2.6.0-r1.ebuild:
+  x86 stable wrt bug #348080
 
   09 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pysqlite-2.6.0-r1.ebuild:
   Stable on amd64 wrt bug #348080
