@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.60 2010/10/11 21:36:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.61 2010/12/09 16:32:11 aballier Exp $
+
+*latex-beamer-3.10-r1 (09 Dec 2010)
+
+  09 Dec 2010; Alexis Ballier <aballier@gentoo.org>
+  +latex-beamer-3.10-r1.ebuild,
+  +files/latex-beamer-3.10-polish-translator.patch:
+  Fix a bug in polish translations, bug #346577 by Hubert Kowalski
+  <johnnybit@poczta.onet.pl>
 
   11 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   latex-beamer-3.10.ebuild:
