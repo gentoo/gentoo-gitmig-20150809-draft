@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.62 2010/12/09 16:38:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.63 2010/12/09 16:41:19 aballier Exp $
+
+  09 Dec 2010; Alexis Ballier <aballier@gentoo.org> -latex-beamer-3.10.ebuild:
+  remove old
 
   09 Dec 2010; Alexis Ballier <aballier@gentoo.org>
   latex-beamer-3.10-r1.ebuild:
