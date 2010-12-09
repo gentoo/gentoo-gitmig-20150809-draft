@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.176 2010/12/09 08:19:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.177 2010/12/09 09:02:31 radhermit Exp $
+
+*gallery-2.3.1 (09 Dec 2010)
+
+  09 Dec 2010; Tim Harder <radhermit@gentoo.org> +gallery-2.3.1.ebuild:
+  Version bump (bug #299307 by Chan Min Wai). Allow
+  media-gfx/graphicsmagick[imagemagick] to satisfy the imagemagick dependency
+  (bug #314387 by Wojciech Porczyk) and allow mysql or mysqli USE flags for php
+  (bug #286636).
 
   09 Dec 2010; Tim Harder <radhermit@gentoo.org> gallery-2.3-r2.ebuild:
   Fix mysql and postgres USE flag dependencies (bug #326883 by Diego E.
