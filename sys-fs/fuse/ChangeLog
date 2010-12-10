@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.141 2010/12/10 19:37:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.142 2010/12/10 21:40:06 radhermit Exp $
+
+  10 Dec 2010; Tim Harder <radhermit@gentoo.org> -fuse-2.7.0.ebuild,
+  -fuse-2.7.3.ebuild, -fuse-2.7.4.ebuild, -fuse-2.7.4-r1.ebuild,
+  -fuse-2.8.1.ebuild, -files/fuse-fix-lazy-binding.patch:
+  Remove old versions with security issues (bug #308073).
 
   10 Dec 2010; Brent Baude <ranger@gentoo.org> fuse-2.8.5.ebuild:
   Marking fuse-2.8.5 ppc64 for bug 308073
