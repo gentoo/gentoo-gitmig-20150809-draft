@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.62 2010/05/26 16:31:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.63 2010/12/10 17:16:07 jer Exp $
+
+*ngrep-1.45-r3 (10 Dec 2010)
+
+  10 Dec 2010; Jeroen Roovers <jer@gentoo.org> +ngrep-1.45-r3.ebuild:
+  Correct libpcap include directory (bug #299040 by Hartmut Figge).
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org> ngrep-1.45-r2.ebuild,
   +files/ngrep-1.45-prefix.patch:
