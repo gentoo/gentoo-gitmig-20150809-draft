@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rtl8192su-firmware
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192su-firmware/ChangeLog,v 1.1 2010/12/10 22:41:24 vapier Exp $
+
+*rtl8192su-firmware-2.6.0001.0320.2009 (10 Dec 2010)
+
+  10 Dec 2010; Mike Frysinger <vapier@gentoo.org>
+  +rtl8192su-firmware-2.6.0001.0320.2009.ebuild, +metadata.xml:
+  Firmware for Realtek 8192 USB dongles.
+
