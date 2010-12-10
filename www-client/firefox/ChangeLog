@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.33 2010/12/10 04:33:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.34 2010/12/10 16:41:57 jer Exp $
+
+  10 Dec 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.13.ebuild:
+  Stable for PPC (bug #348316).
 
 *firefox-3.6.13 (10 Dec 2010)
 
