@@ -9,10 +9,11 @@ index 18f539c..142f7e6 100644
 -CC              := gcc
 -CFLAGS           = -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Werror -g -DVERSION='"$(VERSION)"' -DPACKAGE='"$(PACKAGE)"' -DLOCALEDIR='"$(nlsdir)"'
 -LDFLAGS         :=
+-LIBS            := 
 +CC              ?= gcc
 +CFLAGS          += -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -DVERSION='"$(VERSION)"' -DPACKAGE='"$(PACKAGE)"' -DLOCALEDIR='"$(nlsdir)"'
 +LDFLAGS         +=
- LIBS            := 
++LIBS            += 
  
 -ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 -  CFLAGS += -O0
