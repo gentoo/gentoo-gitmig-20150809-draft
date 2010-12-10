@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.16 2010/12/02 10:09:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.17 2010/12/10 17:08:38 phajdan.jr Exp $
+
+*v8-2.4.9.14 (10 Dec 2010)
+
+  10 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> +v8-2.4.9.14.ebuild,
+  -v8-2.5.2.ebuild, -v8-2.5.4.ebuild, -v8-2.5.6.ebuild:
+  Version bump. Remove old.
 
 *v8-2.5.9.1 (02 Dec 2010)
 

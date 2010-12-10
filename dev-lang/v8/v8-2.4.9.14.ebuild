@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.5.4.ebuild,v 1.2 2010/11/11 11:06:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.14.ebuild,v 1.1 2010/12/10 17:08:38 phajdan.jr Exp $
 
 EAPI="2"
 
