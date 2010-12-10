@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.380 2010/12/10 04:32:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.381 2010/12/10 16:38:56 jer Exp $
+
+  10 Dec 2010; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.2.13.ebuild:
+  Stable for PPC (bug #348316).
 
 *xulrunner-1.9.2.13 (10 Dec 2010)
 
