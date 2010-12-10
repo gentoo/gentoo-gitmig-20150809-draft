@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.27 2010/12/06 01:55:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.28 2010/12/10 17:06:47 mr_bones_ Exp $
+
+  10 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  mednafen-0.8.13.3.ebuild:
+  needs libsdl[joystick] (bug #348364)
 
 *mednafen-0.8.13.3 (06 Dec 2010)
 

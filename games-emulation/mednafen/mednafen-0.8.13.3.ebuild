@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3.ebuild,v 1.1 2010/12/06 01:55:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3.ebuild,v 1.2 2010/12/10 17:06:47 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
 HOMEPAGE="http://mednafen.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/mednafen-${PV/13/D}.tar.bz2"
+SRC_URI="mirror://sourceforge/mednafen/mednafen-${PV/13/D}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,7 @@ IUSE="alsa altivec cjk debug jack nls"
 RDEPEND="virtual/opengl
 	media-libs/libsndfile
 	dev-libs/libcdio
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-net
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
