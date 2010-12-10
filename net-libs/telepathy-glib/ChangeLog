@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.57 2010/12/09 21:51:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.58 2010/12/10 00:03:28 eva Exp $
+
+  10 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  telepathy-glib-0.12.5.ebuild:
+  Drop ~ppc and ~ppc64 keywords due to unkeyworded gobject-introspection, bug
+  #348313.
 
   09 Dec 2010; <nirbheek@gentoo.org> telepathy-glib-0.12.3.ebuild,
   telepathy-glib-0.12.5.ebuild:
