@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.76 2010/09/29 06:20:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.77 2010/12/10 17:07:48 c1pher Exp $
+
+*gpa-0.9.1_pre20100416-r1 (10 Dec 2010)
+
+  10 Dec 2010; Dane Smith <c1pher@gentoo.org>
+  +gpa-0.9.1_pre20100416-r1.ebuild,
+  +files/gpa-desktop-file-validate-new.patch:
+  Revision bump. New gpa-desktop-file-validate patch wrt bug 340747. Small
+  QA
+  fix.
 
   29 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   gpa-0.9.1_pre20100416.ebuild, +files/gpa-desktop-file-validate.patch:
