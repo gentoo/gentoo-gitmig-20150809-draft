@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.1.6.ebuild,v 1.6 2010/06/22 19:59:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.1.6.ebuild,v 1.7 2010/12/10 18:50:46 ssuominen Exp $
 
 inherit eutils multilib distutils python
 
@@ -14,7 +14,7 @@ SRC_URI="http://rpm5.org/files/rpm/rpm-5.1/${MY_P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="berkdb bzip2 doc lua magic neon nls pcre perl python selinux sqlite"
+IUSE="berkdb bzip2 doc lua magic webdav-neon nls pcre perl python selinux sqlite"
 
 #	dmalloc? ( dev-libs/dmalloc )
 #	efence? ( dev-util/efence )
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/beecrypt
 	berkdb? ( sys-libs/db )
 	bzip2? ( app-arch/bzip2 )
 	lua? ( dev-lang/lua )
-	neon? ( net-libs/neon )
+	webdav-neon? ( net-libs/neon )
 	pcre? ( dev-libs/libpcre )
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
@@ -67,7 +67,7 @@ src_compile() {
 		$(use_with doc apidocs) \
 		$(use_with magic file) \
 		$(use_with lua) \
-		$(use_with neon) \
+		$(use_with webdav-neon neon) \
 		$(use_with nls) \
 		$(use_with pcre) \
 		$(use_with perl) \
