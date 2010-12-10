@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.140 2010/12/07 18:05:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.141 2010/12/10 19:37:48 ranger Exp $
+
+  10 Dec 2010; Brent Baude <ranger@gentoo.org> fuse-2.8.5.ebuild:
+  Marking fuse-2.8.5 ppc64 for bug 308073
 
   07 Dec 2010; Jeroen Roovers <jer@gentoo.org> fuse-2.8.5.ebuild:
   Stable for PPC (bug #308073).
