@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.113 2010/11/29 11:39:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.114 2010/12/10 16:35:10 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils flag-o-matic multilib pax-utils portability python subversion \
-	toolchain-funcs versionator
+	toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -129,6 +129,7 @@ pkg_setup() {
 
 	# Make sure the build system will use the right python, bug #344367.
 	python_set_active_version 2
+	python_pkg_setup
 
 	# Prevent user problems like bug #299777.
 	if ! grep -q /dev/shm <<< $(get_mounts); then
@@ -151,6 +152,9 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
 
+	# Small fixes to make tests compile, to be upstreamed.
+	epatch "${FILESDIR}"/${PN}-tests-r0.patch
+
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/icu"
@@ -165,9 +169,6 @@ src_prepare() {
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
 	remove_bundled_lib "third_party/ocmock"
-	remove_bundled_lib "third_party/pyftpdlib"
-	remove_bundled_lib "third_party/simplejson"
-	remove_bundled_lib "third_party/tlslite"
 	remove_bundled_lib "third_party/yasm"
 	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
@@ -304,12 +305,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox base_unittests net_unittests \
+		BUILDTYPE=Release V=1 || die
+	pax-mark m out/Release/chrome
+	if use test; then
+		emake base_unittests net_unittests \
+			BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/{base_unittests,net_unittests}
+	fi
+}
+
+src_test() {
+	# Make test failures non-fatal for now. This needs more investigation.
+	maketype=out/Release/base_unittests virtualmake \
+		|| eerror "base_unittests failed"
+	maketype=out/Release/net_unittests virtualmake \
+		|| eerror "net_unittests failed"
 }
 
 src_install() {
 	exeinto "${CHROMIUM_HOME}"
-	pax-mark m out/Release/chrome
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"

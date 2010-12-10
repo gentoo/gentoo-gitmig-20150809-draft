@@ -1,6 +1,20 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.235 2010/12/09 16:14:13 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.236 2010/12/10 16:35:10 phajdan.jr Exp $
+
+*chromium-9.0.597.15 (10 Dec 2010)
+
+  10 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -files/chromium-gconf-optional-r0.patch,
+  -files/chromium-system-icu-r0.patch, +files/chromium-tests-r0.patch,
+  -files/chromium-make-3.82-compatibility-r0.patch,
+  -chromium-7.0.517.44.ebuild, -files/chromium-gnome-keyring-r0.patch,
+  -chromium-8.0.552.210.ebuild, -files/chromium-plugins-path-r0.patch,
+  -chromium-9.0.587.0-r1.ebuild, -files/chromium-system-sqlite-r0.patch,
+  +chromium-9.0.597.15.ebuild, -files/chromium-system-ssl-r0.patch,
+  chromium-9999.ebuild, -files/chromium-system-vpx-r0.patch:
+  Version bump for dev channel release. Added src_test (tests fail for now,
+  the failures are non-fatal). Removed old ebuilds and patches.
 
   09 Dec 2010; Richard Freeman <rich0@gentoo.org>
   chromium-8.0.552.215.ebuild:
