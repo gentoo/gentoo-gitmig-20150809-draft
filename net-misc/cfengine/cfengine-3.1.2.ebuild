@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.1.ebuild,v 1.1 2010/11/24 16:56:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.1 2010/12/10 17:50:25 idl0r Exp $
 
 EAPI="3"
-
-inherit eutils
 
 MY_PV="${PV//_beta/b}"
 MY_PV="${MY_PV/_p/p}"
@@ -38,11 +36,6 @@ RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	# https://cfengine.com/bugtracker/view.php?id=390
-	epatch "${FILESDIR}/${PN}-3.1.0-cf-key.patch"
-}
 
 src_configure() {
 	local myconf
