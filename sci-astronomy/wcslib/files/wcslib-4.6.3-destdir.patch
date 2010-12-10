@@ -1,0 +1,160 @@
+diff -Nur wcslib-4.6.3.orig/C/GNUmakefile wcslib-4.6.3/C/GNUmakefile
+--- wcslib-4.6.3.orig/C/GNUmakefile	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/C/GNUmakefile	2010-12-10 04:11:54.000000000 +0000
+@@ -177,30 +177,30 @@
+ $(PICLIB) : $(MODULES:%.o=$(PICLIB)(%.o)) ;
+ 
+ install : build
+-	-  if [ ! -d "$(LIBDIR)" ] ; then \
+-	     $(INSTALL) -d -m 2775 $(LIBDIR) ; \
++	-  if [ ! -d "$(DESTDIR)$(LIBDIR)" ] ; then \
++	     $(INSTALL) -d -m 2775 $(DESTDIR)$(LIBDIR) ; \
+ 	   fi
+-	   $(INSTALL) -m 644 $(LIBWCS) $(LIBDIR)
+-	   $(RANLIB) $(LIBDIR)/$(LIBWCS)
+-	-  if [ -h "$(LIBDIR)/libwcs.a" ] ; then \
+-	     $(RM) $(LIBDIR)/libwcs.a ; \
++	   $(INSTALL) -m 644 $(LIBWCS) $(DESTDIR)$(LIBDIR)
++	   $(RANLIB) $(DESTDIR)$(LIBDIR)/$(LIBWCS)
++	-  if [ -h "$(DESTDIR)$(LIBDIR)/libwcs.a" ] ; then \
++	     $(RM) $(DESTDIR)$(LIBDIR)/libwcs.a ; \
+ 	   fi
+-	-  $(LN_S) $(LIBWCS) $(LIBDIR)/libwcs.a
++	-  $(LN_S) $(LIBWCS) $(DESTDIR)$(LIBDIR)/libwcs.a
+ 	-  if [ "$(SHRLIB)" != "" ] ; then \
+-	     $(INSTALL) -m 644 $(SHRLIB) $(LIBDIR) ; \
++	     $(INSTALL) -m 644 $(SHRLIB) $(DESTDIR)$(LIBDIR) ; \
+ 	     if [ "$(SHRLN)" != "" ] ; then \
+-	       if [ -h "$(LIBDIR)/$(SHRLN)" ] ; then \
+-	         $(RM) $(LIBDIR)/$(SHRLN) ; \
++	       if [ -h "$(DESTDIR)$(LIBDIR)/$(SHRLN)" ] ; then \
++	         $(RM) $(DESTDIR)$(LIBDIR)/$(SHRLN) ; \
+ 	       fi ; \
+-	       $(LN_S) $(SHRLIB) $(LIBDIR)/$(SHRLN) ; \
++	       $(LN_S) $(SHRLIB) $(DESTDIR)$(LIBDIR)/$(SHRLN) ; \
+ 	     fi ; \
+ 	   fi
+-	-  if [ ! -d "$(INCDIR)" ] ; then \
+-	     $(INSTALL) -d -m 2775 $(INCDIR) ; \
++	-  if [ ! -d "$(DESTDIR)$(INCDIR)" ] ; then \
++	     $(INSTALL) -d -m 2775 $(DESTDIR)$(INCDIR) ; \
+ 	   fi
+-	   $(INSTALL) -m 444 *.h $(INCDIR)
+-	   $(RM) $(INCLINK)
+-	   $(LN_S) $(WCSLIBV) $(INCLINK)
++	   $(INSTALL) -m 444 *.h $(DESTDIR)$(INCDIR)
++	   $(RM) $(DESTDIR)$(INCLINK)
++	   $(LN_S) $(WCSLIBV) $(DESTDIR)$(INCLINK)
+ 
+ clean :
+ 	- $(RM) -r *.o *.i a.out core *.dSYM $(EXTRA_CLEAN)
+diff -Nur wcslib-4.6.3.orig/Fortran/GNUmakefile wcslib-4.6.3/Fortran/GNUmakefile
+--- wcslib-4.6.3.orig/Fortran/GNUmakefile	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/Fortran/GNUmakefile	2010-12-10 04:11:54.000000000 +0000
+@@ -180,7 +180,7 @@
+ 
+ install : build
+ 	$(MAKE) -C ../C install
+-	$(INSTALL) -m 444 *.inc $(INCDIR)
++	$(INSTALL) -m 444 *.inc $(DESTDIR)$(INCDIR)
+ 
+ clean :
+ 	-  $(RM) -r *.o *.i a.out core fort.* *.dSYM $(EXTRA_CLEAN)
+diff -Nur wcslib-4.6.3.orig/GNUmakefile wcslib-4.6.3/GNUmakefile
+--- wcslib-4.6.3.orig/GNUmakefile	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/GNUmakefile	2010-12-10 05:12:54.000000000 +0000
+@@ -65,14 +65,18 @@
+ 	 @ for DIR in $(INSTDIR) ; do \
+ 	     $(MAKE) -k -C $$DIR $@ ; \
+ 	   done
+-	   $(INSTALL) -m 444 wcsconfig.h wcsconfig_f77.h $(INCDIR)
+-	   $(INSTALL) -m 444 CHANGES $(INCDIR)/CHANGES
+-	   $(INSTALL) -m 444 COPYING $(INCDIR)/COPYING
+-	   $(INSTALL) -m 444 README  $(INCDIR)/README
+-	   if [ ! -d "$(LIBDIR)/pkgconfig" ] ; then \
+-	     $(INSTALL) -d -m 2775 $(LIBDIR)/pkgconfig ; \
++	   $(INSTALL) -m 444 wcsconfig.h wcsconfig_f77.h $(DESTDIR)$(INCDIR)
++	-  if [ ! -d "$(DESTDIR)$(DOCDIR)" ] ; then \
++	     $(INSTALL) -d -m 2775 $(DESTDIR)$(DOCDIR) ; \
+ 	   fi
+-	   $(INSTALL) -m 444 wcslib.pc $(LIBDIR)/pkgconfig/wcslib.pc
++
++	   $(INSTALL) -m 444 CHANGES $(DESTDIR)$(DOCDIR)/CHANGES
++	   $(INSTALL) -m 444 COPYING $(DESTDIR)$(DOCDIR)/COPYING
++	   $(INSTALL) -m 444 README  $(DESTDIR)$(DOCDIR)/README
++	   if [ ! -d "$(DESTDIR)$(LIBDIR)/pkgconfig" ] ; then \
++	     $(INSTALL) -d -m 2775 $(DESTDIR)$(LIBDIR)/pkgconfig ; \
++	   fi
++	   $(INSTALL) -m 444 wcslib.pc $(DESTDIR)$(LIBDIR)/pkgconfig/wcslib.pc
+ 
+ clean cleaner :
+ 	   for DIR in $(SUBDIRS) doxygen ; do \
+diff -Nur wcslib-4.6.3.orig/makedefs.in wcslib-4.6.3/makedefs.in
+--- wcslib-4.6.3.orig/makedefs.in	2010-12-10 03:40:57.000000000 +0000
++++ wcslib-4.6.3/makedefs.in	2010-12-10 05:03:22.000000000 +0000
+@@ -124,6 +124,7 @@
+   prefix   := @prefix@
+   exec_prefix := @exec_prefix@
+ 
++  DOCDIR   := @docdir@
+   LIBDIR   := @libdir@
+   BINDIR   := @bindir@
+   INCDIR   := @includedir@/$(WCSLIBV)
+@@ -198,6 +199,7 @@
+ 	-@ echo '  SHRLN       := $(SHRLN)'
+ 	-@ echo '  LN_S        := $(LN_S)'
+ 	-@ echo '  INSTALL     := $(INSTALL)'
++	-@ echo '  DOCDIR      := $(DOCDIR)'
+ 	-@ echo '  LIBDIR      := $(LIBDIR)'
+ 	-@ echo '  BINDIR      := $(BINDIR)'
+ 	-@ echo '  INCDIR      := $(INCDIR)'
+diff -Nur wcslib-4.6.3.orig/pgsbox/GNUmakefile wcslib-4.6.3/pgsbox/GNUmakefile
+--- wcslib-4.6.3.orig/pgsbox/GNUmakefile	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/pgsbox/GNUmakefile	2010-12-10 04:51:38.000000000 +0000
+@@ -123,20 +123,20 @@
+ 
+ install : build
+ 	   $(MAKE) -C ../Fortran install
+-	   $(INSTALL) -m 644 $(LIBPGSBOX) $(LIBDIR)
+-	   $(RANLIB) $(LIBDIR)/$(LIBPGSBOX)
+-	   $(RM) $(LIBDIR)/libpgsbox.a
+-	   $(LN_S) $(LIBDIR)/$(LIBPGSBOX) $(LIBDIR)/libpgsbox.a
++	   $(INSTALL) -m 644 $(LIBPGSBOX) $(DESTDIR)$(LIBDIR)
++	   $(RANLIB) $(DESTDIR)$(LIBDIR)/$(LIBPGSBOX)
++	   $(RM) $(DESTDIR)$(LIBDIR)/libpgsbox.a
++	   $(LN_S) $(LIBDIR)/$(LIBPGSBOX) $(DESTDIR)$(LIBDIR)/libpgsbox.a
+ 	-  if [ "$(SHRLIB)" != "" ] ; then \
+-	     $(INSTALL) -m 644 $(SHRLIB) $(LIBDIR) ; \
++	     $(INSTALL) -m 644 $(SHRLIB) $(DESTDIR)$(LIBDIR) ; \
+ 	     if [ "$(SHRLN)" != "" ] ; then \
+-	       if [ -h "$(LIBDIR)/$(SHRLN)" ] ; then \
+-	         $(RM) $(LIBDIR)/$(SHRLN) ; \
++	       if [ -h "$(DESTDIR)$(LIBDIR)/$(SHRLN)" ] ; then \
++	         $(RM) $(DESTDIR)$(LIBDIR)/$(SHRLN) ; \
+ 	       fi ; \
+-	       $(LN_S) $(SHRLIB) $(LIBDIR)/$(SHRLN) ; \
++	       $(LN_S) $(SHRLIB) $(DESTDIR)$(LIBDIR)/$(SHRLN) ; \
+ 	     fi ; \
+ 	   fi
+-	   $(INSTALL) -m 444 *.h $(INCDIR)
++	   $(INSTALL) -m 444 *.h $(DESTDIR)$(INCDIR)
+ 
+ clean :
+ 	-  $(RM) -r *.o *.i a.out core *.dSYM $(EXTRA_CLEAN)
+diff -Nur wcslib-4.6.3.orig/utils/GNUmakefile wcslib-4.6.3/utils/GNUmakefile
+--- wcslib-4.6.3.orig/utils/GNUmakefile	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/utils/GNUmakefile	2010-12-10 04:11:54.000000000 +0000
+@@ -102,10 +102,10 @@
+ 	   $(MAKE) -C ../C lib
+ 
+ install : build
+-	-  if [ ! -d "$(BINDIR)" ] ; then \
+-	     $(INSTALL) -d -m 2775 $(BINDIR) ; \
++	-  if [ ! -d "$(DESTDIR)$(BINDIR)" ] ; then \
++	     $(INSTALL) -d -m 2775 $(DESTDIR)$(BINDIR) ; \
+ 	   fi
+-	   $(INSTALL) -m 755 $(UTILS) $(BINDIR)
++	   $(INSTALL) -m 755 $(UTILS) $(DESTDIR)$(BINDIR)
+ 
+ GNUmakefile : ../makedefs ;
+ 

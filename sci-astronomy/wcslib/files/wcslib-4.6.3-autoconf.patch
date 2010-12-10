@@ -1,0 +1,46 @@
+diff -Nur wcslib-4.6.3.orig/configure.ac wcslib-4.6.3/configure.ac
+--- wcslib-4.6.3.orig/configure.ac	2010-12-10 03:40:58.000000000 +0000
++++ wcslib-4.6.3/configure.ac	2010-12-10 05:41:05.000000000 +0000
+@@ -15,7 +15,7 @@
+ AC_PREREQ([2.53])
+ AC_REVISION([$Revision: 1.1 $])
+ AC_SUBST([PACKAGE_VERSION])
+-AC_DEFINE_UNQUOTED([WCSLIB_VERSION], [$PACKAGE_VERSION])
++AC_DEFINE_UNQUOTED([WCSLIB_VERSION], [$PACKAGE_VERSION], [Define wcslib version])
+ 
+ AC_CONFIG_SRCDIR([C/wcs.h])
+ AC_CONFIG_AUX_DIR([config])
+@@ -147,11 +147,8 @@
+ #   F77=no configure            ...bash
+ AC_ARG_ENABLE([fortran], [AS_HELP_STRING([--disable-fortran],
+             [don't build the Fortran wrappers or PGSBOX])], [])
+-if test "x$enable_fortran" != x ; then
+-  F77="$enable_fortran"
+-fi
+ 
+-if test "x$F77" = xno ; then
++if test "x$enable_fortran" = xno ; then
+   F77=
+ 
+   SUBDIRS="C"
+@@ -208,7 +205,11 @@
+ 
+     SUBDIRS="C Fortran"
+     TSTDIRS="C Fortran"
+-    INSTDIR="pgsbox"
++    if test "x$PGPLOTINC" != x; then
++      INSTDIR="pgsbox"
++    else
++      INSTDIR="Fortran"
++    fi
+   fi
+ fi
+ 
+@@ -491,6 +492,6 @@
+ # Do it.
+ AC_MSG_NOTICE([Configuring files...])
+ AC_CONFIG_FILES([makedefs wcslib.pc])
+-AC_CONFIG_HEADERS([wcsconfig.h wcsconfig_f77.h wcsconfig_tests.h \
++AC_CONFIG_HEADERS([wcsconfig.h wcsconfig_f77.h wcsconfig_tests.h
+                    wcsconfig_utils.h])
+ AC_OUTPUT
