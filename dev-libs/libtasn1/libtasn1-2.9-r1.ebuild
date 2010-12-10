@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.9.ebuild,v 1.1 2010/12/07 08:13:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.9-r1.ebuild,v 1.1 2010/12/10 13:22:38 c1pher Exp $
 
 EAPI="3"
 
@@ -16,6 +16,11 @@ IUSE="doc"
 DEPEND=">=dev-lang/perl-5.6
 	sys-devel/bison"
 RDEPEND=""
+
+src_configure(){
+	econf \
+		--disable-valgrind-tests
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

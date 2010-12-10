@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.135 2010/12/07 08:13:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.136 2010/12/10 13:22:38 c1pher Exp $
+
+*libtasn1-2.9-r1 (10 Dec 2010)
+
+  10 Dec 2010; Dane Smith <c1pher@gentoo.org> -libtasn1-2.9.ebuild,
+  +libtasn1-2.9-r1.ebuild:
+  Revision bump. Removes automagic dependency on valgrind wrt bug 331951 by
+  disabiling it unconditionally.
 
 *libtasn1-2.9 (07 Dec 2010)
 
