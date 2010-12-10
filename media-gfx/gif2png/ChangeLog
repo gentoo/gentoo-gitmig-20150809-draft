@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gif2png
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.22 2010/12/08 16:48:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.23 2010/12/10 19:39:25 ranger Exp $
+
+  10 Dec 2010; Brent Baude <ranger@gentoo.org> gif2png-2.5.1-r1.ebuild:
+  Marking gif2png-2.5.1-r1 ppc64 for bug 346501
 
   08 Dec 2010; Jeroen Roovers <jer@gentoo.org> gif2png-2.5.1-r1.ebuild:
   Stable for PPC (bug #346501).
