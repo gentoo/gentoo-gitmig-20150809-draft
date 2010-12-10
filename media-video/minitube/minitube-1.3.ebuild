@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.1.ebuild,v 1.3 2010/08/09 14:34:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.3.ebuild,v 1.1 2010/12/10 16:28:53 hwoarang Exp $
 
 EAPI="2"
 LANGS="ar es pt_BR pt_PT uk"
@@ -15,10 +15,11 @@ SRC_URI="http://flavio.tordini.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug kde gstreamer"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
+	x11-libs/qt-dbus:4
 	gstreamer? (
 		kde? ( || ( media-sound/phonon[gstreamer]  x11-libs/qt-phonon:4 ) )
 		!kde? ( || ( x11-libs/qt-phonon media-sound/phonon[gstreamer] ) )
