@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.83 2010/12/04 16:00:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.84 2010/12/10 20:14:04 ranger Exp $
+
+  10 Dec 2010; Brent Baude <ranger@gentoo.org> perl-CGI-3.50.ebuild:
+  Marking perl-CGI-3.50 ppc64 for bug 345845
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> perl-CGI-3.50.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #345845
