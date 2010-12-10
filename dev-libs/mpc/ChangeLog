@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.24 2010/11/23 21:28:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.25 2010/12/10 18:45:12 grobian Exp $
+
+  10 Dec 2010; Fabian Groffen <grobian@gentoo.org> mpc-0.8.2.ebuild:
+  Run elibtoolize for FreeMiNT, bug #347317
 
   23 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> mpc-0.8.2.ebuild:
   keyword on ~amd64-linux
