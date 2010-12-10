@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.1-r2.ebuild,v 1.1 2010/12/05 18:45:59 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.7.1-r2.ebuild,v 1.2 2010/12/10 18:36:36 grobian Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -45,7 +45,13 @@ src_configure() {
 src_install() {
 	qt4-build_src_install
 	if use private-headers; then
-		insinto "${QTHEADERDIR#${EPREFIX}}"/QtDeclarative/private
+		if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+			insinto "${QTLIBDIR#${EPREFIX}}"/QtDeclarative.framework/Headers/private
+			# ran for the 2nd time, need it for the updated headers
+			fix_includes
+		else
+			insinto "${QTHEADERDIR#${EPREFIX}}"/QtDeclarative/private
+		fi
 		find "${S}"/src/declarative/ -type f -name "*_p.h" -exec doins {} \;
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.15 2010/12/05 18:45:59 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.16 2010/12/10 18:36:36 grobian Exp $
+
+  10 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  qt-declarative-4.7.1-r2.ebuild:
+  Fix installation of private headers for OSX Framework builds, bug #346371
 
 *qt-declarative-4.7.1-r2 (05 Dec 2010)
 
