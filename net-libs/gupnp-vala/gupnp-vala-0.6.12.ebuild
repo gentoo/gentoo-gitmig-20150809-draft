@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.6.12.ebuild,v 1.1 2010/10/01 10:42:29 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.6.12.ebuild,v 1.2 2010/12/10 07:40:40 ford_prefect Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/vala-0.9.5[vapigen]
+RDEPEND="dev-lang/vala:0.10[vapigen]
 	>=net-libs/gupnp-0.13.3
 	>=net-libs/gssdp-0.7.2
 	>=net-libs/gupnp-ui-0.1.1
@@ -21,6 +21,12 @@ RDEPEND=">=dev-lang/vala-0.9.5[vapigen]
 	>=media-libs/gupnp-dlna-0.3.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_configure() {
+	econf \
+		VALAC=$(type -p valac-0.10) \
+		VAPIGEN=$(type -p vapigen-0.10)
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
