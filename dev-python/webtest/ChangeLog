@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.20 2010/12/09 10:34:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.21 2010/12/10 21:47:26 hwoarang Exp $
+
+  10 Dec 2010; Markos Chandras <hwoarang@gentoo.org> webtest-1.2.3.ebuild:
+  Stable on amd64 wrt bug #348091
 
   09 Dec 2010; Michael Weber <xmw@gentoo.org> webtest-1.2.2.ebuild,
   webtest-1.2.3.ebuild:
