@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12268 2010/12/10 14:30:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12269 2010/12/10 19:49:43 alexxy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1007,7 +1007,7 @@ media-tv/vdrplugin-rebuild
 ~www-client/chromium-9.0.576.0
 ~www-client/chromium-9.0.587.0
 ~www-client/chromium-9.0.597.0
-~www-client/chromium-9.0.597.15
+~www-client/chromium-9.0.597.16
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
