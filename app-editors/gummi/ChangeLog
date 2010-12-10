@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.12 2010/12/08 20:21:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.13 2010/12/10 16:24:33 hwoarang Exp $
+
+*gummi-0.5.5 (10 Dec 2010)
+
+  10 Dec 2010; Markos Chandras <hwoarang@gentoo.org> +gummi-0.5.5.ebuild:
+  Version bump
 
 *gummi-0.5.4 (08 Dec 2010)
 
