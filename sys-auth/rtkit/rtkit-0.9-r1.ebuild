@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.9.ebuild,v 1.2 2010/11/30 22:00:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.9-r1.ebuild,v 1.1 2010/12/10 05:21:16 ford_prefect Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install"
 
-	./rtkit-daemon --introspection > org.freedesktop.RealtimeKit1.xml
+	./rtkit-daemon --introspect > org.freedesktop.RealtimeKit1.xml
 	insinto /usr/share/dbus-1/interfaces
 	doins org.freedesktop.RealtimeKit1.xml
 }
