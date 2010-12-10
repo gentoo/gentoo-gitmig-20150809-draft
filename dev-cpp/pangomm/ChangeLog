@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.26 2010/10/09 22:55:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.27 2010/12/10 19:39:37 pacho Exp $
+
+*pangomm-2.26.3 (10 Dec 2010)
+
+  10 Dec 2010; Pacho Ramos <pacho@gentoo.org> -pangomm-2.24.0.ebuild,
+  +pangomm-2.26.3.ebuild:
+  Version bump, remove old.
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> pangomm-2.26.2.ebuild:
   ppc64 stable wrt #324077
