@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.45 2010/12/07 14:08:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.46 2010/12/10 21:48:19 hwoarang Exp $
+
+  10 Dec 2010; Markos Chandras <hwoarang@gentoo.org> cdw-0.6.0.ebuild:
+  Stable on amd64 wrt bug #347949
 
   07 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cdw-0.6.0.ebuild:
   x86 stable wrt bug #347949
