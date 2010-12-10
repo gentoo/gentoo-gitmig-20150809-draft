@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.1.ebuild,v 1.5 2007/07/02 18:06:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.1.ebuild,v 1.6 2010/12/10 14:59:27 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Unofficial release of Camsource, grabs images from a v4l and v4l2 webcam devices."
 HOMEPAGE="http://koti.mbnet.fi/~turja/vino"
@@ -21,6 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-example.patch
+
+	eautoreconf
 	filter-ldflags -Wl,-z,now
 }
 
