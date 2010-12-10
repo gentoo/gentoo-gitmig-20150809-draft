@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/bareftp-0.3.4.ebuild,v 1.1 2010/07/03 18:28:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/bareftp-0.3.7.ebuild,v 1.1 2010/12/10 18:43:16 pacho Exp $
 
 EAPI=2
 
@@ -21,26 +21,11 @@ RDEPEND=">=dev-lang/mono-2.0
 	>=dev-dotnet/gnomevfs-sharp-2.20
 	>=dev-dotnet/gconf-sharp-2.20
 	gnome-keyring? ( >=dev-dotnet/gnome-keyring-sharp-1.0.0-r2 )"
-
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	G2CONF="--disable-caches
 		$(use_with gnome-keyring gnomekeyring)"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix tests, bug #279892
-	echo "src/bareFTP.Gui.Dialog/AskFileAction.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Gui.Dialog/gtk-gui/bareFTP.Gui.Dialog.ChmodDialog.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Gui.Dialog/gtk-gui/bareFTP.Gui.Dialog.ExceptionDialog.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Gui.FileManager/FileUtils.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Gui.Preferences/BookmarkWidget.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Gui/BookmarkUtils.cs" >> po/POTFILES.in
-	echo "src/bareFTP.Protocol.Sftp/sftp/SftpConnection.cs" >> po/POTFILES.in
-	echo "src/bareFTP/Main.cs" >> po/POTFILES.in
 }
 
 src_install() {

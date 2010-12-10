@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/bareftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/ChangeLog,v 1.4 2010/07/03 18:28:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/ChangeLog,v 1.5 2010/12/10 18:43:16 pacho Exp $
+
+*bareftp-0.3.7 (10 Dec 2010)
+
+  10 Dec 2010; Pacho Ramos <pacho@gentoo.org> -bareftp-0.3.4.ebuild,
+  +bareftp-0.3.7.ebuild:
+  Version bump with bugfixes, including a fix for tests and a security one (bug
+  #348340). Remove old.
 
 *bareftp-0.3.4 (03 Jul 2010)
 
