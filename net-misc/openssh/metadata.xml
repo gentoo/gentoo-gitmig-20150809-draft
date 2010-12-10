@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>base-system</herd>
-  <maintainer restrict="LPK">
+  <maintainer restrict="net-misc/openssh[ldap]">
     <email>robbat2@gentoo.org</email>
 	<description>LPK issues. Only assign if it's a direct LPK issue. Do not directly assign for anything else.</description>
   </maintainer>
