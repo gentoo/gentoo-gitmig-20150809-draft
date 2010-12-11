@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9.ebuild,v 1.4 2010/12/11 17:46:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.9-r1.ebuild,v 1.1 2010/12/11 17:46:46 chithanh Exp $
 
 EAPI=3
 
@@ -47,7 +47,7 @@ done
 IUSE="${IUSE_VIDEO_CARDS}
 	+classic debug +gallium gles llvm motif +nptl pic selinux kernel_FreeBSD"
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.21"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.23"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 RDEPEND="
@@ -75,7 +75,6 @@ RDEPEND="
 		)
 	)
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
-	video_cards_nouveau? ( <x11-libs/libdrm-2.4.23 )
 "
 for card in ${INTEL_CARDS}; do
 	RDEPEND="${RDEPEND}
@@ -135,6 +134,7 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+	epatch "${FILESDIR}/${P}-libdrm-2.4.23-nouveau-api.patch"
 	# FreeBSD 6.* doesn't have posix_memalign().
 	if [[ ${CHOST} == *-freebsd6.* ]]; then
 		sed -i \
