@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.831 2010/12/10 15:57:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.832 2010/12/11 18:13:53 spatz Exp $
+
+*vanilla-sources-2.6.37_rc5 (11 Dec 2010)
+
+  11 Dec 2010; Dror Levin <spatz@gentoo.org>
+  +vanilla-sources-2.6.37_rc5.ebuild:
+  Version bump.
 
 *vanilla-sources-2.6.36.2 (10 Dec 2010)
 *vanilla-sources-2.6.32.27 (10 Dec 2010)
