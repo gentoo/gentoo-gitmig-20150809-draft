@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.55 2010/12/11 10:34:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.56 2010/12/11 19:38:36 ranger Exp $
+
+  11 Dec 2010; Brent Baude <ranger@gentoo.org> thunderbird-3.1.7.ebuild:
+  Marking thunderbird-3.1.7 ppc64 for bug 348316
 
   11 Dec 2010; Markus Meier <maekke@gentoo.org> thunderbird-3.1.7.ebuild:
   x86 stable, bug #348316
