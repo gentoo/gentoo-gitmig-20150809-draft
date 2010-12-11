@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.78 2010/09/19 09:16:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.79 2010/12/11 06:18:21 dirtyepic Exp $
+
+*prelink-20101123 (11 Dec 2010)
+
+  11 Dec 2010; Ryan Hill <dirtyepic@gentoo.org> +prelink-20101123.ebuild:
+  Version bump. Adds support for copying over extended attributes such as
+  file-based capabilities.
 
   19 Sep 2010; Ryan Hill <dirtyepic@gentoo.org>
   -files/prelink-20040707-init.patch,
