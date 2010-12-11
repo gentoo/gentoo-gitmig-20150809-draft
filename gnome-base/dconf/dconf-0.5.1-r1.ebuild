@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.5.1-r1.ebuild,v 1.1 2010/11/06 15:53:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.5.1-r1.ebuild,v 1.2 2010/12/11 21:59:57 xmw Exp $
 
 EAPI=3
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
 IUSE="doc +introspection vala"
 
 RDEPEND=">=dev-libs/glib-2.25.16
