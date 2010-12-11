@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.6 2010/11/26 12:01:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.7 2010/12/11 08:12:21 graaff Exp $
+
+  11 Dec 2010; Hans de Graaff <graaff@gentoo.org> -bones-3.4.1.ebuild,
+  -bones-3.5.1.ebuild:
+  Remove old versions.
 
 *bones-3.5.2 (26 Nov 2010)
 
