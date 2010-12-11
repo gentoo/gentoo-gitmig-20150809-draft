@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.202 2010/10/22 06:56:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.203 2010/12/11 22:34:13 pacho Exp $
+
+  11 Dec 2010; Pacho Ramos <pacho@gentoo.org> libgnome-2.32.0.ebuild:
+  '--enable-sound' is no longer available, use '--enable-canberra' as it's the
+  new default and the preferred for the best user experience as can be seen in
+  libgnome Changelog (bug #348400 by David J Cozatt).
 
   22 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Drop local sound USE flag description, not used anymore.
