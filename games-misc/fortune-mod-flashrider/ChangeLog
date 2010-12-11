@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-flashrider
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/ChangeLog,v 1.1 2010/10/30 15:08:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/ChangeLog,v 1.2 2010/12/11 16:07:04 grobian Exp $
+
+  11 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-flashrider-0.80.ebuild:
+  Bump EAPI to 3, fix for Prefix
 
 *fortune-mod-flashrider-0.80 (30 Oct 2010)
 *fortune-mod-flashrider-0.25 (30 Oct 2010)

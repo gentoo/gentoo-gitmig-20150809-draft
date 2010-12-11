@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/fortune-mod-flashrider-0.80.ebuild,v 1.2 2010/11/28 01:59:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-flashrider/fortune-mod-flashrider-0.80.ebuild,v 1.3 2010/12/11 16:07:04 grobian Exp $
 
-EAPI=2
+EAPI=3
 
 MY_PN="${PN/-mod/s}"
 MY_P="${MY_PN}-${PV}"
@@ -26,6 +26,6 @@ src_prepare()
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	emake install PREFIX="${EPREFIX}"/usr DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog README
 }
