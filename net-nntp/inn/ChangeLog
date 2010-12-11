@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.30 2010/11/27 16:09:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.31 2010/12/11 18:03:48 jer Exp $
+
+  11 Dec 2010; Jeroen Roovers <jer@gentoo.org> inn-2.5.1.ebuild:
+  Stable for PPC (bug #300650).
 
 *inn-2.5.2 (27 Nov 2010)
 
