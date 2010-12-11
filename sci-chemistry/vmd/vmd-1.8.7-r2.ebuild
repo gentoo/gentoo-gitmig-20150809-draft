@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.3 2010/10/30 13:19:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.4 2010/12/11 11:26:27 jlec Exp $
 
 EAPI="3"
 
@@ -145,7 +145,7 @@ src_compile() {
 src_install() {
 	# install plugins
 	cd "${WORKDIR}"/plugins
-	PLUGINDIR=${ED}/usr/$(get_libdir)/${PN}/plugins make distrib || \
+	PLUGINDIR="${ED}/usr/$(get_libdir)/${PN}/plugins" make distrib || \
 		die "failed to install plugins"
 
 	# install vmd
@@ -159,7 +159,7 @@ src_install() {
 
 	# install docs
 	cd "${S}"
-	dodoc Announcement README doc/ig.pdf doc/ug.pdf
+	dodoc Announcement README doc/ig.pdf doc/ug.pdf || die
 
 	# remove some of the things we don't want and need in
 	# /usr/lib
