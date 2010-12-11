@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.39 2010/12/04 11:30:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.40 2010/12/11 10:43:47 maekke Exp $
+
+  11 Dec 2010; Markus Meier <maekke@gentoo.org> jinja-2.5.5.ebuild:
+  arm stable, bug #347109
 
   04 Dec 2010; Markos Chandras <hwoarang@gentoo.org> jinja-2.5.5.ebuild:
   Stable on amd64 wrt bug #347109
