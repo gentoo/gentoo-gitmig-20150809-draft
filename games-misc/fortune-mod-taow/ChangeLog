@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-taow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-taow/ChangeLog,v 1.2 2009/09/19 12:34:55 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-taow/ChangeLog,v 1.3 2010/12/11 16:24:44 grobian Exp $
+
+  11 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-taow-1.0.ebuild:
+  Added Prefix keywords
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> fortune-mod-taow-1.0.ebuild:
   amd64/x86 stable, bug #285397
