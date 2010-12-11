@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.142 2010/09/19 09:02:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.143 2010/12/11 06:41:09 dirtyepic Exp $
+
+*elfutils-0.150 (11 Dec 2010)
+
+  11 Dec 2010; Ryan Hill <dirtyepic@gentoo.org> +elfutils-0.150.ebuild,
+  +files/elfutils-0.150-bashifications.patch:
+  Version bump.
 
 *elfutils-0.149 (19 Sep 2010)
 
