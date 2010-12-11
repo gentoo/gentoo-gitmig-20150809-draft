@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.255 2010/11/27 02:05:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.256 2010/12/11 16:34:46 arfrever Exp $
+
+  11 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  java-config-2.1.10.ebuild, java-config-2.1.11.ebuild,
+  java-config-2.1.11-r1.ebuild, java-config-2.1.11-r2.ebuild:
+  Restrict Jython ABIs.
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> java-config-2.1.11.ebuild:
   Add ~sparc (bug 344659).
