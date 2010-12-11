@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.72-r1.ebuild,v 1.1 2010/12/09 12:04:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.72-r1.ebuild,v 1.2 2010/12/11 22:10:02 grobian Exp $
 
 EAPI="3"
 
@@ -61,8 +61,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.14-tail.patch
 	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
-	# for cross-compilation, but currently breaks normal compiles :/ #266591
-	#epatch "${FILESDIR}"/${P}-buildconfig-cross-compile.patch
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
 	use dsn && epatch "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
