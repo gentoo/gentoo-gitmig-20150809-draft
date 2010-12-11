@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.384 2010/12/11 10:45:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.385 2010/12/11 12:38:00 ranger Exp $
+
+  11 Dec 2010; Brent Baude <ranger@gentoo.org> xulrunner-1.9.2.13.ebuild:
+  Marking xulrunner-1.9.2.13 ppc64 for bug 348316
 
   11 Dec 2010; Markus Meier <maekke@gentoo.org> xulrunner-1.9.2.13.ebuild:
   arm stable, bug #348316
