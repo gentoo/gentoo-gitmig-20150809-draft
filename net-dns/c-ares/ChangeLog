@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.57 2010/06/15 12:12:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.58 2010/12/11 09:43:37 dragonheart Exp $
+
+*c-ares-1.7.4 (11 Dec 2010)
+
+  11 Dec 2010; Daniel Black <dragonheart@gentoo.org> c-ares-1.4.0.ebuild,
+  c-ares-1.5.3.ebuild, +c-ares-1.7.4.ebuild:
+  verion bump. fix QA on older versions (explict RDEPEND)
 
 *c-ares-1.7.3 (15 Jun 2010)
 
