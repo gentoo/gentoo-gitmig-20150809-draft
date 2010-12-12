@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.104 2010/11/27 11:33:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.105 2010/12/12 15:43:51 fauli Exp $
+
+  12 Dec 2010; Christian Faulhammer <fauli@gentoo.org> -auctex-11.85.ebuild:
+  clean up
 
   27 Nov 2010; Ulrich Mueller <ulm@gentoo.org> -auctex-11.85-r1.ebuild:
   Remove intermediate version.
