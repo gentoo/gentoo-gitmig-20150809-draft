@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-465.ebuild,v 1.2 2010/10/01 19:04:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-465.ebuild,v 1.3 2010/12/12 14:49:33 ssuominen Exp $
 
 EAPI=3
 inherit cmake-utils
@@ -10,8 +10,7 @@ inherit cmake-utils
 
 DESCRIPTION="Cue File library from Musepack"
 HOMEPAGE="http://www.musepack.net"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
