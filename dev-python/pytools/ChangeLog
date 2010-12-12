@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.4 2009/11/14 16:52:46 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.5 2010/12/12 19:28:45 spock Exp $
+
+*pytools-11 (12 Dec 2010)
+
+  12 Dec 2010; Michał Januszewski <spock@gentoo.org> +pytools-11.ebuild:
+  Version bump.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> pytools-9.ebuild,
   pytools-9999.ebuild:
