@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.287 2010/12/12 00:25:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.288 2010/12/12 06:02:39 flameeyes Exp $
+
+  12 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.3.ebuild,
+  -files/Linux-PAM-1.1.3-intralinking.patch:
+  Move the intralinking patch on the mirrors, I shouldn't have been able to
+  commit this in the first place.
 
   12 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.3.ebuild,
   +files/Linux-PAM-1.1.3-intralinking.patch:
