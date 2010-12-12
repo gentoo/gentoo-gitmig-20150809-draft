@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_alpha6.ebuild,v 1.1 2010/09/02 19:29:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_alpha7.ebuild,v 1.1 2010/12/12 16:50:40 chithanh Exp $
 
 EAPI=3
 
@@ -30,6 +30,7 @@ S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9-find-xulrunner.patch
+	epatch "${FILESDIR}"/${PN}-0.9-custom-flags.patch
 	eautoreconf
 }
 

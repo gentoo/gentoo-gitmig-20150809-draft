@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kiwix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.2 2010/09/02 19:29:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.3 2010/12/12 16:50:40 chithanh Exp $
+
+*kiwix-0.9_alpha7 (12 Dec 2010)
+
+  12 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -kiwix-0.9_alpha6.ebuild, +kiwix-0.9_alpha7.ebuild,
+  +files/kiwix-0.9-custom-flags.patch:
+  New prerelease. Allow custom LDFLAGS, bug #339869
 
 *kiwix-0.9_alpha6 (02 Sep 2010)
 
