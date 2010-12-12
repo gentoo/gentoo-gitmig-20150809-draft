@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.286 2010/11/20 18:22:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.287 2010/12/12 00:25:58 flameeyes Exp $
+
+  12 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.3.ebuild,
+  +files/Linux-PAM-1.1.3-intralinking.patch:
+  Hack pam ebuild so that it can properly build when using ROOT (as experienced
+  with ChromiumOS build systems).
 
   20 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/Linux-PAM-0.99.8.1-xtests.patch, -files/Linux-PAM-1.1.0-uclibc.patch,

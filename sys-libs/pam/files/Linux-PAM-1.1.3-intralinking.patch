@@ -1,0 +1,782 @@
+Index: examples/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/examples/Makefile.am,v
+retrieving revision 1.2
+diff -u -B -r1.2 Makefile.am
+--- examples/Makefile.am	2 Sep 2007 17:02:53 -0000	1.2
++++ examples/Makefile.am	11 Dec 2010 04:27:21 -0000
+@@ -8,7 +8,7 @@
+ 
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include \
+ 	-I$(top_srcdir)/libpam_misc/include
+-LDADD = -L$(top_builddir)/libpam -lpam \
+-	-L$(top_builddir)/libpam_misc -lpam_misc
++LDADD = $(top_builddir)/libpam/libpam.la \
++	$(top_builddir)/libpam_misc/libpam_misc.la
+ 
+ noinst_PROGRAMS = xsh vpass blank check_user
+Index: modules/pam_access/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_access/Makefile.am,v
+retrieving revision 1.11
+diff -u -B -r1.11 Makefile.am
+--- modules/pam_access/Makefile.am	28 Jun 2009 09:27:01 -0000	1.11
++++ modules/pam_access/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_access.la
+-pam_access_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBNSL@
++pam_access_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBNSL@
+ 
+ secureconf_DATA = access.conf
+ 
+Index: modules/pam_cracklib/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_cracklib/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_cracklib/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_cracklib/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -22,7 +22,7 @@
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+-pam_cracklib_la_LIBADD = -L$(top_builddir)/libpam -lpam \
++pam_cracklib_la_LIBADD = $(top_builddir)/libpam/libpam.la \
+ 	@LIBCRACK@ @LIBCRYPT@
+ if HAVE_LIBCRACK
+   securelib_LTLIBRARIES = pam_cracklib.la
+Index: modules/pam_debug/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_debug/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_debug/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_debug/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -20,7 +20,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_debug.la
+-pam_debug_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_debug_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ TESTS = tst-pam_debug
+ 
+Index: modules/pam_deny/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_deny/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_deny/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_deny/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -21,7 +21,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_deny.la
+-pam_deny_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_deny_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ 
+Index: modules/pam_echo/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_echo/Makefile.am,v
+retrieving revision 1.8
+diff -u -B -r1.8 Makefile.am
+--- modules/pam_echo/Makefile.am	28 Jun 2009 09:27:01 -0000	1.8
++++ modules/pam_echo/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -21,7 +21,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_echo.la
+-pam_echo_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_echo_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_env/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_env/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_env/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_env/Makefile.am	11 Dec 2010 04:27:23 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_env.la
+-pam_env_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_env_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ secureconf_DATA = pam_env.conf
+ sysconf_DATA = environment
+Index: modules/pam_exec/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_exec/Makefile.am,v
+retrieving revision 1.8
+diff -u -B -r1.8 Makefile.am
+--- modules/pam_exec/Makefile.am	28 Jun 2009 09:27:01 -0000	1.8
++++ modules/pam_exec/Makefile.am	11 Dec 2010 04:27:24 -0000
+@@ -21,7 +21,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_exec.la
+-pam_exec_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_exec_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ 
+Index: modules/pam_faildelay/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_faildelay/Makefile.am,v
+retrieving revision 1.3
+diff -u -B -r1.3 Makefile.am
+--- modules/pam_faildelay/Makefile.am	28 Jun 2009 09:27:01 -0000	1.3
++++ modules/pam_faildelay/Makefile.am	11 Dec 2010 04:27:24 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_faildelay.la
+-pam_faildelay_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_faildelay_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_filter/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_filter/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_filter/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_filter/Makefile.am	11 Dec 2010 04:27:24 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ include_HEADERS=pam_filter.h
+-pam_filter_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_filter_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ securelib_LTLIBRARIES = pam_filter.la
+ TESTS = tst-pam_filter
+Index: modules/pam_filter/upperLOWER/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_filter/upperLOWER/Makefile.am,v
+retrieving revision 1.6
+diff -u -B -r1.6 Makefile.am
+--- modules/pam_filter/upperLOWER/Makefile.am	2 Sep 2007 17:02:54 -0000	1.6
++++ modules/pam_filter/upperLOWER/Makefile.am	11 Dec 2010 04:27:24 -0000
+@@ -10,6 +10,6 @@
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include \
+ 	-I$(srcdir)/.. @PIE_CFLAGS@
+ AM_LDFLAGS = @PIE_LDFLAGS@
+-LDADD = -L$(top_builddir)/libpam -lpam
++LDADD = $(top_builddir)/libpam/libpam.la
+ 
+ securelibfilter_PROGRAMS = upperLOWER
+Index: modules/pam_ftp/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_ftp/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_ftp/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_ftp/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -20,7 +20,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_ftp.la
+-pam_ftp_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_ftp_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ TESTS = tst-pam_ftp
+ 
+Index: modules/pam_group/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_group/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_group/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_group/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -21,7 +21,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_group.la
+-pam_group_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_group_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ secureconf_DATA = group.conf
+ 
+Index: modules/pam_issue/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_issue/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_issue/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_issue/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_issue.la
+-pam_issue_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_issue_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_keyinit/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_keyinit/Makefile.am,v
+retrieving revision 1.4
+diff -u -B -r1.4 Makefile.am
+--- modules/pam_keyinit/Makefile.am	28 Jun 2009 09:27:01 -0000	1.4
++++ modules/pam_keyinit/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -31,4 +31,4 @@
+ if HAVE_KEY_MANAGEMENT
+   securelib_LTLIBRARIES = pam_keyinit.la
+ endif
+-pam_keyinit_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_keyinit_la_LIBADD = $(top_builddir)/libpam/libpam.la
+Index: modules/pam_lastlog/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_lastlog/Makefile.am,v
+retrieving revision 1.12
+diff -u -B -r1.12 Makefile.am
+--- modules/pam_lastlog/Makefile.am	28 Jun 2009 09:27:01 -0000	1.12
++++ modules/pam_lastlog/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_lastlog.la
+-pam_lastlog_la_LIBADD = -L$(top_builddir)/libpam -lpam -lutil
++pam_lastlog_la_LIBADD = $(top_builddir)/libpam/libpam.la -lutil
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_limits/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_limits/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_limits/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_limits/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -25,7 +25,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_limits.la
+-pam_limits_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_limits_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ secureconf_DATA = limits.conf
+ 
+Index: modules/pam_listfile/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_listfile/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_listfile/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_listfile/Makefile.am	11 Dec 2010 04:27:25 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_listfile.la
+-pam_listfile_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_listfile_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_localuser/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_localuser/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_localuser/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_localuser/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_localuser.la
+-pam_localuser_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_localuser_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_loginuid/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_loginuid/Makefile.am,v
+retrieving revision 1.4
+diff -u -B -r1.4 Makefile.am
+--- modules/pam_loginuid/Makefile.am	28 Jun 2009 09:27:01 -0000	1.4
++++ modules/pam_loginuid/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -21,7 +21,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_loginuid.la
+-pam_loginuid_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBAUDIT@
++pam_loginuid_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBAUDIT@
+ 
+ if ENABLE_REGENERATE_MAN
+ 
+Index: modules/pam_mail/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_mail/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_mail/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_mail/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_mail.la
+-pam_mail_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_mail_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_mkhomedir/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_mkhomedir/Makefile.am,v
+retrieving revision 1.12
+diff -u -B -r1.12 Makefile.am
+--- modules/pam_mkhomedir/Makefile.am	2 Aug 2010 13:59:02 -0000	1.12
++++ modules/pam_mkhomedir/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ 
+ securelib_LTLIBRARIES = pam_mkhomedir.la
+ pam_mkhomedir_la_SOURCES = pam_mkhomedir.c
+-pam_mkhomedir_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_mkhomedir_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ pam_mkhomedir_la_LDFLAGS = -no-undefined -avoid-version -module
+ if HAVE_VERSIONING
+   pam_mkhomedir_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+@@ -30,7 +30,7 @@
+ 
+ sbin_PROGRAMS = mkhomedir_helper
+ mkhomedir_helper_SOURCES = mkhomedir_helper.c
+-mkhomedir_helper_LDADD = -L$(top_builddir)/libpam -lpam
++mkhomedir_helper_LDADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_motd/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_motd/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_motd/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_motd/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_motd.la
+-pam_motd_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_motd_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_namespace/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_namespace/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_namespace/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_namespace/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -34,7 +34,7 @@
+ if HAVE_UNSHARE
+   securelib_LTLIBRARIES = pam_namespace.la
+   pam_namespace_la_SOURCES = pam_namespace.c md5.c argv_parse.c
+-  pam_namespace_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBSELINUX@
++  pam_namespace_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBSELINUX@
+ 
+   secureconf_DATA = namespace.conf
+   secureconf_SCRIPTS = namespace.init
+Index: modules/pam_nologin/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_nologin/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_nologin/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_nologin/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_nologin.la
+-pam_nologin_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_nologin_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_permit/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_permit/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_permit/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_permit/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_permit.la
+-pam_permit_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_permit_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_pwhistory/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_pwhistory/Makefile.am,v
+retrieving revision 1.2
+diff -u -B -r1.2 Makefile.am
+--- modules/pam_pwhistory/Makefile.am	28 Jun 2009 09:27:01 -0000	1.2
++++ modules/pam_pwhistory/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -25,7 +25,7 @@
+ noinst_HEADERS = opasswd.h
+ 
+ securelib_LTLIBRARIES = pam_pwhistory.la
+-pam_pwhistory_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBCRYPT@
++pam_pwhistory_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBCRYPT@
+ pam_pwhistory_la_SOURCES = pam_pwhistory.c opasswd.c
+ 
+ if ENABLE_REGENERATE_MAN
+Index: modules/pam_rhosts/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_rhosts/Makefile.am,v
+retrieving revision 1.10
+diff -u -B -r1.10 Makefile.am
+--- modules/pam_rhosts/Makefile.am	28 Jun 2009 09:27:01 -0000	1.10
++++ modules/pam_rhosts/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -23,7 +23,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_rhosts.la
+-pam_rhosts_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_rhosts_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_rootok/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_rootok/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_rootok/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_rootok/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -25,7 +25,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_rootok.la
+-pam_rootok_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBSELINUX@
++pam_rootok_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBSELINUX@
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_securetty/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_securetty/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_securetty/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_securetty/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_securetty.la
+-pam_securetty_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_securetty_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_selinux/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_selinux/Makefile.am,v
+retrieving revision 1.12
+diff -u -B -r1.12 Makefile.am
+--- modules/pam_selinux/Makefile.am	19 Oct 2010 16:36:35 -0000	1.12
++++ modules/pam_selinux/Makefile.am	11 Dec 2010 04:27:26 -0000
+@@ -22,10 +22,10 @@
+ 	-I$(top_srcdir)/libpam_misc/include
+ 
+ pam_selinux_check_LDFLAGS = $(AM_LDFLAGS) \
+-	-L$(top_builddir)/libpam -lpam \
+-	-L$(top_builddir)/libpam_misc -lpam_misc
++	$(top_builddir)/libpam/libpam.la \
++	$(top_builddir)/libpam_misc/libpam_misc.la
+ 
+-pam_selinux_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBSELINUX@ @LIBAUDIT@
++pam_selinux_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBSELINUX@ @LIBAUDIT@
+ pam_selinux_la_LDFLAGS = -no-undefined -avoid-version -module
+ if HAVE_VERSIONING
+   pam_selinux_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+Index: modules/pam_sepermit/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_sepermit/Makefile.am,v
+retrieving revision 1.3
+diff -u -B -r1.3 Makefile.am
+--- modules/pam_sepermit/Makefile.am	2 Nov 2009 16:09:07 -0000	1.3
++++ modules/pam_sepermit/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -24,7 +24,7 @@
+ 	-D SEPERMIT_CONF_FILE=\"$(SCONFIGDIR)/sepermit.conf\" \
+ 	-D SEPERMIT_LOCKDIR=\"$(sepermitlockdir)\"
+ 
+-pam_sepermit_la_LIBADD = -L$(top_builddir)/libpam -lpam @LIBSELINUX@
++pam_sepermit_la_LIBADD = $(top_builddir)/libpam/libpam.la @LIBSELINUX@
+ pam_sepermit_la_LDFLAGS = -no-undefined -avoid-version -module
+ if HAVE_VERSIONING
+   pam_sepermit_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+Index: modules/pam_shells/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_shells/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_shells/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_shells/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_shells.la
+-pam_shells_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_shells_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_stress/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_stress/Makefile.am,v
+retrieving revision 1.8
+diff -u -B -r1.8 Makefile.am
+--- modules/pam_stress/Makefile.am	28 Jun 2009 09:27:01 -0000	1.8
++++ modules/pam_stress/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -17,4 +17,4 @@
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+ securelib_LTLIBRARIES = pam_stress.la
+-pam_stress_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_stress_la_LIBADD = $(top_builddir)/libpam/libpam.la
+Index: modules/pam_succeed_if/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_succeed_if/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_succeed_if/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_succeed_if/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -23,7 +23,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_succeed_if.la
+-pam_succeed_if_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_succeed_if_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_tally/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_tally/Makefile.am,v
+retrieving revision 1.12
+diff -u -B -r1.12 Makefile.am
+--- modules/pam_tally/Makefile.am	28 Jun 2009 09:27:01 -0000	1.12
++++ modules/pam_tally/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -20,7 +20,7 @@
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ 
+ pam_tally_la_LDFLAGS = -no-undefined -avoid-version -module
+-pam_tally_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_tally_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ if HAVE_VERSIONING
+   pam_tally_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+Index: modules/pam_tally2/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_tally2/Makefile.am,v
+retrieving revision 1.3
+diff -u -B -r1.3 Makefile.am
+--- modules/pam_tally2/Makefile.am	28 Jun 2009 09:27:01 -0000	1.3
++++ modules/pam_tally2/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -21,12 +21,12 @@
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ 
+ pam_tally2_la_LDFLAGS = -no-undefined -avoid-version -module
+-pam_tally2_la_LIBADD = -L$(top_builddir)/libpam -lpam $(LIBAUDIT)
++pam_tally2_la_LIBADD = $(top_builddir)/libpam/libpam.la $(LIBAUDIT)
+ if HAVE_VERSIONING
+   pam_tally2_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+ 
+-pam_tally2_LDADD = -L$(top_builddir)/libpam -lpam $(LIBAUDIT)
++pam_tally2_LDADD = $(top_builddir)/libpam/libpam.la $(LIBAUDIT)
+ 
+ securelib_LTLIBRARIES = pam_tally2.la
+ sbin_PROGRAMS = pam_tally2
+Index: modules/pam_time/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_time/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_time/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_time/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -21,7 +21,7 @@
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+-pam_time_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_time_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ securelib_LTLIBRARIES = pam_time.la
+ secureconf_DATA = time.conf
+Index: modules/pam_timestamp/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_timestamp/Makefile.am,v
+retrieving revision 1.4
+diff -u -B -r1.4 Makefile.am
+--- modules/pam_timestamp/Makefile.am	28 Jun 2009 09:27:01 -0000	1.4
++++ modules/pam_timestamp/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -20,7 +20,7 @@
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ 
+ pam_timestamp_la_LDFLAGS = -no-undefined -avoid-version -module $(AM_LDFLAGS)
+-pam_timestamp_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_timestamp_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ if HAVE_VERSIONING
+   pam_timestamp_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+@@ -33,11 +33,11 @@
+ 
+ pam_timestamp_check_SOURCES = pam_timestamp_check.c
+ pam_timestamp_check_CFLAGS = $(AM_CFLAGS) @PIE_CFLAGS@
+-pam_timestamp_check_LDADD = -L$(top_builddir)/libpam -lpam
++pam_timestamp_check_LDADD = $(top_builddir)/libpam/libpam.la
+ pam_timestamp_check_LDFLAGS = @PIE_LDFLAGS@
+ 
+ hmacfile_SOURCES = hmacfile.c hmacsha1.c sha1.c
+-hmacfile_LDADD = -L$(top_builddir)/libpam -lpam
++hmacfile_LDADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_tty_audit/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_tty_audit/Makefile.am,v
+retrieving revision 1.5
+diff -u -B -r1.5 Makefile.am
+--- modules/pam_tty_audit/Makefile.am	9 Aug 2010 15:36:48 -0000	1.5
++++ modules/pam_tty_audit/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -22,7 +22,7 @@
+ endif
+ 
+ if HAVE_AUDIT_TTY_STATUS
+-  pam_tty_audit_la_LIBADD = -L$(top_builddir)/libpam -lpam
++  pam_tty_audit_la_LIBADD = $(top_builddir)/libpam/libpam.la
+   securelib_LTLIBRARIES = pam_tty_audit.la
+ endif
+ 
+Index: modules/pam_umask/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_umask/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_umask/Makefile.am	28 Jun 2009 09:27:01 -0000	1.9
++++ modules/pam_umask/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -23,7 +23,7 @@
+ endif
+ 
+ securelib_LTLIBRARIES = pam_umask.la
+-pam_umask_la_LIBADD = -L$(top_builddir)/libpam -lpam
++pam_umask_la_LIBADD = $(top_builddir)/libpam/libpam.la
+ 
+ if ENABLE_REGENERATE_MAN
+ noinst_DATA = README
+Index: modules/pam_unix/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_unix/Makefile.am,v
+retrieving revision 1.19
+diff -u -B -r1.19 Makefile.am
+--- modules/pam_unix/Makefile.am	28 Jun 2009 09:27:01 -0000	1.19
++++ modules/pam_unix/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -28,7 +28,7 @@
+ if HAVE_VERSIONING
+   pam_unix_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+-pam_unix_la_LIBADD = @LIBNSL@ -L$(top_builddir)/libpam -lpam \
++pam_unix_la_LIBADD = @LIBNSL@ $(top_builddir)/libpam/libpam.la \
+ 	@LIBCRYPT@ @LIBSELINUX@
+ 
+ securelib_LTLIBRARIES = pam_unix.la
+Index: modules/pam_userdb/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_userdb/Makefile.am,v
+retrieving revision 1.11
+diff -u -B -r1.11 Makefile.am
+--- modules/pam_userdb/Makefile.am	28 Jun 2009 09:27:01 -0000	1.11
++++ modules/pam_userdb/Makefile.am	11 Dec 2010 04:27:27 -0000
+@@ -19,7 +19,7 @@
+ 
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ AM_LDFLAGS = -no-undefined -avoid-version -module \
+-	-L$(top_builddir)/libpam -lpam @LIBDB@ @LIBCRYPT@
++	$(top_builddir)/libpam/libpam.la @LIBDB@ @LIBCRYPT@
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+Index: modules/pam_warn/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_warn/Makefile.am,v
+retrieving revision 1.8
+diff -u -B -r1.8 Makefile.am
+--- modules/pam_warn/Makefile.am	28 Jun 2009 09:27:01 -0000	1.8
++++ modules/pam_warn/Makefile.am	11 Dec 2010 04:27:28 -0000
+@@ -17,7 +17,7 @@
+ 
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ AM_LDFLAGS = -no-undefined -avoid-version -module \
+-	-L$(top_builddir)/libpam -lpam
++	$(top_builddir)/libpam/libpam.la
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+Index: modules/pam_wheel/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_wheel/Makefile.am,v
+retrieving revision 1.8
+diff -u -B -r1.8 Makefile.am
+--- modules/pam_wheel/Makefile.am	28 Jun 2009 09:27:01 -0000	1.8
++++ modules/pam_wheel/Makefile.am	11 Dec 2010 04:27:28 -0000
+@@ -17,7 +17,7 @@
+ 
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ AM_LDFLAGS = -no-undefined -avoid-version -module \
+-	-L$(top_builddir)/libpam -lpam
++	$(top_builddir)/libpam/libpam.la
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+Index: modules/pam_xauth/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/modules/pam_xauth/Makefile.am,v
+retrieving revision 1.9
+diff -u -B -r1.9 Makefile.am
+--- modules/pam_xauth/Makefile.am	29 Oct 2009 15:26:50 -0000	1.9
++++ modules/pam_xauth/Makefile.am	11 Dec 2010 04:27:28 -0000
+@@ -17,7 +17,7 @@
+ 
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include
+ AM_LDFLAGS = -no-undefined -avoid-version -module \
+-	-L$(top_builddir)/libpam -lpam @LIBSELINUX@
++	$(top_builddir)/libpam/libpam.la @LIBSELINUX@
+ if HAVE_VERSIONING
+   AM_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+Index: xtests/Makefile.am
+===================================================================
+RCS file: /cvsroot/pam/Linux-PAM/xtests/Makefile.am,v
+retrieving revision 1.23
+diff -u -B -r1.23 Makefile.am
+--- xtests/Makefile.am	20 Oct 2010 13:11:30 -0000	1.23
++++ xtests/Makefile.am	11 Dec 2010 04:27:28 -0000
+@@ -4,8 +4,8 @@
+ 
+ AM_CFLAGS = -DLIBPAM_COMPILE -I$(top_srcdir)/libpam/include \
+ 	-I$(top_srcdir)/libpamc/include -I$(top_srcdir)/libpam_misc/include
+-AM_LDFLAGS = -L$(top_builddir)/libpam -lpam \
+-	-L$(top_builddir)/libpam_misc -lpam_misc
++AM_LDFLAGS = $(top_builddir)/libpam/libpam.la \
++	$(top_builddir)/libpam_misc/libpam_misc.la
+ 
+ CLEANFILES = *~ $(XTESTS)
+ 
