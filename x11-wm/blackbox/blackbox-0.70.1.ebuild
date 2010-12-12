@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.12 2010/06/02 18:00:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.13 2010/12/12 20:41:03 xarthisius Exp $
 
 inherit autotools eutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-gcc-4.3.patch" \
 		"${FILESDIR}/${P}-asneeded.patch"
+	if has_version ">=x11-libs/libX11-1.4.0"; then
+		sed -i -e "s/_XUTIL_H_/_X11&/" lib/Util.hh || die #348556
+	fi
 	eautoreconf
 }
 
