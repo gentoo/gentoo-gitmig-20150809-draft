@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.203 2010/11/24 10:14:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.204 2010/12/12 12:12:35 fauli Exp $
+
+*erlang-14.2.1 (12 Dec 2010)
+
+  12 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  +erlang-14.2.1.ebuild:
+  version bump for bug 348365 by Boris Faure <billiob AT gmail DOT com>
 
   24 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   erlang-14.2-r1.ebuild:
