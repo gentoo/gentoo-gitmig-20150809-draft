@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.124 2010/10/14 09:44:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.125 2010/12/12 03:16:36 darkside Exp $
+
+*gentoo-syntax-20101212 (12 Dec 2010)
+
+  12 Dec 2010; Jeremy Olexa <darkside@gentoo.org>
+  +gentoo-syntax-20101212.ebuild:
+  Version bump to fix bugs: 322247, 319809, 322871, 329311, 346477, 281481,
+  and other fixes
 
   14 Oct 2010; Fabian Groffen <grobian@gentoo.org>
   gentoo-syntax-20100215.ebuild:
