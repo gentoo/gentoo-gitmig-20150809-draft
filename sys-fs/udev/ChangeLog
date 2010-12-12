@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.562 2010/10/30 13:53:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.563 2010/12/12 22:12:43 zzam Exp $
+
+*udev-164-r1 (12 Dec 2010)
+
+  12 Dec 2010; Matthias Schwarzott <zzam@gentoo.org> +udev-164-r1.ebuild:
+  Moved scripts from files to a tarball.
 
 *udev-164 (30 Oct 2010)
 
