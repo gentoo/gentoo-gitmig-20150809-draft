@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.7 2010/12/04 10:30:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.8 2010/12/12 06:36:02 ken69267 Exp $
+
+  12 Dec 2010; Kenneth Prugh <ken69267@gentoo.org>
+  commons-math-2.1-r1.ebuild:
+  amd64 stable; bug #346599
 
   04 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   commons-math-2.1-r1.ebuild:
