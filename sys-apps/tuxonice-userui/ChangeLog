@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.17 2010/03/29 22:23:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.18 2010/12/12 14:57:04 nelchael Exp $
+
+  12 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  tuxonice-userui-1.0.ebuild:
+  Require lcms static library, see bug #339769.
 
   29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Update my first name.

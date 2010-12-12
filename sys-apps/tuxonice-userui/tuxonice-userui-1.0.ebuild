@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.0.ebuild,v 1.4 2009/06/04 19:08:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.0.ebuild,v 1.5 2010/12/12 14:57:04 nelchael Exp $
 
 EAPI="2"
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 
 IUSE="fbsplash"
 DEPEND="fbsplash? ( >=media-gfx/splashutils-1.5.2.1
-	media-libs/libmng[lcms] )"
+	media-libs/libmng[lcms]
+	media-libs/lcms:0[static-libs] )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
