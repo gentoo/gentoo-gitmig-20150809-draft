@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.44 2010/07/27 15:46:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.45 2010/12/12 07:46:05 araujo Exp $
+
+*gnu-smalltalk-3.2.2 (12 Dec 2010)
+
+  12 Dec 2010; Luis F. Araujo <araujo@gentoo.org>
+  +gnu-smalltalk-3.2.2.ebuild:
+  Updating to version 3.2.2
 
   27 Jul 2010; Jeroen Roovers <jer@gentoo.org> -gnu-smalltalk-3.2.ebuild:
   Remove version that collides with sys-devel/autogen (bug #326917).
