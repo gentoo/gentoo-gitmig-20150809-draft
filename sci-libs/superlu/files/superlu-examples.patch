@@ -4,7 +4,7 @@
 -include ../make.inc
 +SUPERLULIB   = -lsuperlu
 +BLASLIB      = $(BLAS_LIBS)
-+FORTRAN	     = $(F77)
++FORTRAN      = $(FC)
 +LOADER       = $(LD)
 +LOADOPTS     = $(LDFLAGS)
 +CDEFS        = -DAdd_
