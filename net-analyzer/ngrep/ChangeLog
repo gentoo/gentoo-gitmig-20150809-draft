@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.63 2010/12/10 17:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.64 2010/12/12 09:37:32 tomka Exp $
+
+  12 Dec 2010; Thomas Kahle <tomka@gentoo.org> ngrep-1.45-r3.ebuild:
+  x86 stable per bug 299040
 
 *ngrep-1.45-r3 (10 Dec 2010)
 
