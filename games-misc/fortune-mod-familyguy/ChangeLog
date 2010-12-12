@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-familyguy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.7 2010/10/08 03:22:12 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.8 2010/12/12 17:30:45 grobian Exp $
+
+  12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-familyguy-0.2.ebuild:
+  Added Prefix keywords
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   fortune-mod-familyguy-0.2.ebuild:
