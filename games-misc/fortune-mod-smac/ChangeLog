@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-smac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.8 2010/10/08 03:57:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.9 2010/12/12 09:39:46 grobian Exp $
+
+  12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-smac-0.1.ebuild:
+  Added Prefix keywords
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> fortune-mod-smac-0.1.ebuild:
   Drop to ~mips
