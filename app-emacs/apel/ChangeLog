@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/apel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.39 2010/09/27 11:00:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.40 2010/12/12 15:48:09 fauli Exp $
+
+*apel-10.8 (12 Dec 2010)
+
+  12 Dec 2010; Christian Faulhammer <fauli@gentoo.org> +apel-10.8.ebuild:
+  version bump
 
   27 Sep 2010; Michael Weber <xmw@gentoo.org> apel-10.7-r1.ebuild:
   Added ~arm keyword
