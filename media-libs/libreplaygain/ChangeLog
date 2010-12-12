@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libreplaygain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.20 2010/10/01 19:03:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.21 2010/12/12 14:44:14 ssuominen Exp $
+
+  12 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libreplaygain-465.ebuild:
+  Ensure only users flags are used for optimization.
 
   01 Oct 2010; Fabian Groffen <grobian@gentoo.org> libreplaygain-465.ebuild:
   Marked ~x86-solaris
