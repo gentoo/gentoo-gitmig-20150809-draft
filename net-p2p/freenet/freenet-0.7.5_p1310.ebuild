@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1310.ebuild,v 1.1 2010/12/12 16:24:46 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1310.ebuild,v 1.2 2010/12/12 21:41:44 tommy Exp $
 
 EAPI="2"
 DATE=20101030
@@ -58,7 +58,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mv "${WORKDIR}"/freenet-fred-official-* "${S}"
+	mv "${WORKDIR}"/freenet-fred-staging-* "${S}"
 	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die

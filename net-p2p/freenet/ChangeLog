@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.105 2010/12/12 16:24:46 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.106 2010/12/12 21:41:44 tommy Exp $
+
+  12 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  freenet-0.7.5_p1310.ebuild:
+  Fix src_prepare phase
 
 *freenet-0.7.5_p1310 (12 Dec 2010)
 
