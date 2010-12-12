@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-discworld/fortune-mod-discworld-0.1.ebuild,v 1.5 2010/02/16 23:52:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-discworld/fortune-mod-discworld-0.1.ebuild,v 1.6 2010/12/12 17:48:51 grobian Exp $
 
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from Discworld novels"
@@ -9,7 +9,7 @@ SRC_URI="http://www.splitbrain.org/_media/projects/fortunes/${MY_P}.tgz"
 
 LICENSE="fairuse"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 RESTRICT="mirror"
 
