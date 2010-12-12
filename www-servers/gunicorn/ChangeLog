@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/gunicorn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.1 2010/12/12 20:37:18 rafaelmartins Exp $
+
+*gunicorn-0.11.2 (12 Dec 2010)
+
+  12 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +gunicorn-0.11.2.ebuild, +metadata.xml:
+  Initial commit. Thanks to Johan Bergström (bug #303649)
+
