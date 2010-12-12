@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.4.3.ebuild,v 1.1 2010/10/18 16:20:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.5.ebuild,v 1.1 2010/12/12 16:09:36 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="https://launchpad.net/lightspark/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-0.4.4/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -36,9 +36,7 @@ RDEPEND="dev-cpp/libxmlpp:2.6
 		x11-libs/gtkglext
 	)
 	x11-libs/libX11"
-# Require sys-devel/llvm-2.7 during build, bug #340437
 DEPEND="${RDEPEND}
-	=sys-devel/llvm-2.7*
 	dev-lang/nasm
 	dev-util/pkgconfig"
 
@@ -46,6 +44,7 @@ S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.4.4.3-cmakelists.patch
+	"${FILESDIR}"/${PN}-0.4.5-allow-disabling-pulseaudio.patch
 )
 
 src_configure() {
