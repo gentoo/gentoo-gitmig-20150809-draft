@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-chucknorris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/ChangeLog,v 1.6 2010/10/08 02:51:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/ChangeLog,v 1.7 2010/12/12 18:20:17 grobian Exp $
+
+  12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-chucknorris-0.1.ebuild:
+  Drop ~ia64-linux, add ~x86-interix, ~x86-solaris
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   fortune-mod-chucknorris-0.1.ebuild:
