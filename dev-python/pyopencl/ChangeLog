@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.4 2010/05/17 10:33:58 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.5 2010/12/12 19:33:31 spock Exp $
+
+*pyopencl-0.92 (12 Dec 2010)
+
+  12 Dec 2010; Michał Januszewski <spock@gentoo.org> pyopencl-0.91.4.ebuild,
+  pyopencl-0.91.5.ebuild, +pyopencl-0.92.ebuild, pyopencl-9999.ebuild:
+  Version bump. Change dep on nvidia-drivers to nvidia-cuda-toolkit which now
+  provides the OpenCL header files.
 
   17 May 2010; Michał Januszewski <spock@gentoo.org>
   pyopencl-0.91.4.ebuild, pyopencl-0.91.5.ebuild, pyopencl-9999.ebuild:
