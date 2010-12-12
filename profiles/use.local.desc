@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6218 2010/12/12 09:52:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6219 2010/12/12 23:32:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1739,10 +1739,8 @@ mail-mta/courier:webmail - Enable the webmail interface
 mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
 mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
-mail-mta/exim:domainkeys - Adds support for Yahoo!'s DomainKey sender verification system
 mail-mta/exim:dovecot-sasl - Adds support for Dovecot's authentication
 mail-mta/exim:dsn - Adds support for Delivery Status Notifications (DSN)
-mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:mbx - Adds support for UW's mbx format
