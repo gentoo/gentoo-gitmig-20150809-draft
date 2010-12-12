@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.2.ebuild,v 1.1 2010/12/01 22:00:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-3.2.ebuild,v 1.2 2010/12/12 14:51:29 spock Exp $
 
 EAPI=2
 
@@ -27,6 +27,14 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 RESTRICT="binchecks"
+
+pkg_setup() {
+	if use cuda || use opencl && [ "$(gcc-major-version)" == "4" -a $(gcc-minor-version) -ge 5 ]; then
+		eerror "This package requires <=sys-devel/gcc-4.4 to build sucessfully."
+		eerror "Please use gcc-config to switch to a compatible GCC version."
+		die "<=sys-devel/gcc-4.4 required"
+	fi
+}
 
 src_unpack() {
 	unpack_makeself
