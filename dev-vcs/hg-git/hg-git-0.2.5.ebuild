@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.2.5.ebuild,v 1.1 2010/11/06 23:24:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.2.5.ebuild,v 1.2 2010/12/12 14:16:09 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc-macos ~x86-solaris"
+KEYWORDS="~amd64 x86 ~ppc-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-vcs/mercurial-1.1
