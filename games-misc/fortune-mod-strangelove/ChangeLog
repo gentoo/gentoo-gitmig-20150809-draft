@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-strangelove
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.6 2010/10/08 03:59:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.7 2010/12/12 09:09:10 grobian Exp $
+
+  12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-strangelove-20041203.ebuild:
+  Added Prefix keywords
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   fortune-mod-strangelove-20041203.ebuild:
