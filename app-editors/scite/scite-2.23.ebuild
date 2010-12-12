@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.11.ebuild,v 1.1 2010/04/21 18:02:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.23.ebuild,v 1.1 2010/12/12 11:02:54 nelchael Exp $
 
 inherit toolchain-funcs eutils
 
 MY_PV=${PV//./}
 DESCRIPTION="A very powerful editor for programmers"
-HOMEPAGE="http://scintilla.sourceforge.net/SciTE.html"
+HOMEPAGE="http://www.scintilla.org/SciTE.html"
 SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
@@ -49,8 +49,8 @@ src_unpack() {
 		-e "s#-Os##" \
 		|| die "error patching makefile"
 	cd "${WORKDIR}"
-	epatch "${FILESDIR}/${PN}-1.79-install.patch"
-	epatch "${FILESDIR}/${PN}-1.79-no-lua.patch"
+	epatch "${FILESDIR}/${PN}-2.12-install.patch"
+	epatch "${FILESDIR}/${PN}-2.12-no-lua.patch"
 }
 
 src_compile() {
