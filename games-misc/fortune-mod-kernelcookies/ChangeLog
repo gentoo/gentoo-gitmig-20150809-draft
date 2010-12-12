@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-kernelcookies
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.11 2010/10/08 03:52:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/ChangeLog,v 1.12 2010/12/12 16:47:32 grobian Exp $
+
+  12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-kernelcookies-9.ebuild:
+  Added Prefix keywords
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   fortune-mod-kernelcookies-9.ebuild:
