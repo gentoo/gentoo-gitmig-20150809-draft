@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.237 2010/12/10 19:50:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.238 2010/12/12 17:18:47 phajdan.jr Exp $
+
+  12 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
+  Drop patch applied upstream, bug #348462 by Mike Gilbert
+  <floppymaster@gmail.com>.
 
 *chromium-9.0.597.16 (10 Dec 2010)
 

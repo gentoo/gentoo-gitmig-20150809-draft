@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.114 2010/12/10 16:35:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.115 2010/12/12 17:18:47 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -151,9 +151,6 @@ src_prepare() {
 
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
-
-	# Small fixes to make tests compile, to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-tests-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
