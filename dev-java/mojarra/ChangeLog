@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/mojarra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.6 2010/11/06 09:40:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.7 2010/12/12 13:50:46 nelchael Exp $
+
+*mojarra-1.2.15-r2 (12 Dec 2010)
+
+  12 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +mojarra-1.2.15-r2.ebuild:
+  Move some dependencies to DEPEND only, remove them from run-time dependency
+  list, see bug #344355.
 
 *mojarra-1.2.15-r1 (06 Nov 2010)
 
