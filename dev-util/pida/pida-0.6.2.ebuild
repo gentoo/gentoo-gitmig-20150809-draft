@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.1 2010/09/15 19:18:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.2 2010/12/13 16:58:50 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -23,7 +23,6 @@ RDEPEND="|| ( dev-lang/python:2.7 dev-python/argparse )
 	>=app-editors/gvim-6.3
 	>=dev-python/anyvc-0.3.2
 	>=dev-python/bpython-0.9.7
-	>=dev-python/py-1.3
 	>=dev-python/pygtk-2.8
 	>dev-python/pygtkhelpers-0.4.1
 	gnome? ( >=x11-libs/vte-0.11.11-r2[python] )"
