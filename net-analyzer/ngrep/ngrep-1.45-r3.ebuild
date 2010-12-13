@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.4 2010/12/13 05:53:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.5 2010/12/13 12:21:13 jer Exp $
 
 EAPI="3"
 
@@ -17,6 +17,7 @@ IUSE="ipv6 pcre"
 
 DEPEND="net-libs/libpcap
 	pcre? ( dev-libs/libpcre )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Remove bundled libpcre to avoid occasional linking with them
