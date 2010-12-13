@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxmathscrabble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.16 2010/12/08 08:55:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.17 2010/12/13 13:26:43 tupone Exp $
+
+  13 Dec 2010; Tupone Alfredo <tupone@gentoo.org> tuxmathscrabble-7.4.ebuild:
+  Remove fperms. Bug #348553 by Mr. Anderson
 
 *tuxmathscrabble-7.4 (08 Dec 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-7.4.ebuild,v 1.1 2010/12/08 08:55:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-7.4.ebuild,v 1.2 2010/12/13 13:26:43 tupone Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -55,5 +55,4 @@ src_install() {
 
 	dodoc CHANGES README
 	prepgamesdirs
-	fperms -R g+w "${GAMES_STATEDIR}"/${MY_PN}
 }
