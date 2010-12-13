@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.69 2010/02/13 16:44:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.70 2010/12/13 22:37:31 eva Exp $
+
+*pyxdg-0.19 (13 Dec 2010)
+
+  13 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> +pyxdg-0.19.ebuild:
+  Version bump, bug #339009.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> pyxdg-0.18.ebuild:
   alpha/arm/ia64/sparc stable wrt #301960
