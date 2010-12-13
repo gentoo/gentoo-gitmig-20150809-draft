@@ -1,0 +1,23 @@
+#!/sbin/runscript
+
+# Additional options that are passed to the daemon.
+DAEMON_OPTS="-c ${CONFIGFILE}"
+
+depend() {
+	need postgresql
+}
+
+start() {
+	ebegin "Starting openerp-server"
+	PYTHONDIR=$(python -c 'from distutils.sysconfig import get_config_var; print(get_config_var("LIBP"))')
+	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" --exec /usr/bin/python2.6 --startas /usr/bin/python \
+		--chuid "${USER}" --chdir "${PYTHONDIR}/site-packages/openerp-server/" --background -- "openerp-server.py" ${DAEMON_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping openerp-server"
+	start-stop-daemon --stop --quiet --pidfile "${PIDFILE}" --oknodo
+	rm -f "${PIDFILE}"
+	eend $?
+}
