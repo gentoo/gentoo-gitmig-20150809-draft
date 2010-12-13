@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/toppler-1.1.4.ebuild,v 1.1 2010/11/02 18:44:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/toppler-1.1.4.ebuild,v 1.2 2010/12/13 19:30:24 tomka Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/toppler/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
 RDEPEND="media-libs/libsdl[video]
