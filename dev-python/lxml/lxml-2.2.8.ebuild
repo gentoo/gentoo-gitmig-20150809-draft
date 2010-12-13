@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.8.ebuild,v 1.6 2010/10/23 17:55:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.8.ebuild,v 1.7 2010/12/13 14:51:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*::3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.[2-9]"
+RESTRICT_PYTHON_ABIS="3.[2-9] *-jython"
 
 inherit distutils eutils
 
