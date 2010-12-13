@@ -16,6 +16,7 @@
 	<flag name="lame">Support for MP3 streaming via Icecast2</flag>
 	<flag name="lastfmradio">Support listening to last.fm radio stations</flag>
 	<flag name="libmms">Support for Microsoft Media Server (MMS) streams via libmms</flag>
+    <flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
 	<flag name="network">Enables network streaming support</flag>
 	<flag name="pipe">Support writing audio to a pipe</flag>
 	<flag name="sid">Build with SID (Commodore 64 Audio) support</flag>
