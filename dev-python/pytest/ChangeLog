@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pytest
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.1 2010/12/13 13:30:30 arfrever Exp $
+
+*pytest-2.0.0 (13 Dec 2010)
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-2.0.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
