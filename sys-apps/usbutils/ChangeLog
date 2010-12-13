@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.108 2010/11/19 09:58:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.109 2010/12/13 09:42:05 xmw Exp $
+
+  13 Dec 2010; Michael Weber <xmw@gentoo.org> usbutils-0.90.ebuild:
+  sparc stable (bug 342525)
 
 *usbutils-0.91-r1 (19 Nov 2010)
 
