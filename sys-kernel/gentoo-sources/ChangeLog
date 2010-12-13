@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.793 2010/12/12 01:46:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.794 2010/12/13 15:11:37 fauli Exp $
+
+  13 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  gentoo-sources-2.6.32-r24.ebuild, gentoo-sources-2.6.36-r5.ebuild:
+  stable x86, bugs 348508 and 348509
 
 *gentoo-sources-2.6.32-r24 (12 Dec 2010)
 
