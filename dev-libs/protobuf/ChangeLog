@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.20 2010/06/12 07:03:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.21 2010/12/13 02:50:12 c1pher Exp $
+
+  13 Dec 2010; Dane Smith <c1pher@gentoo.org> protobuf-2.3.0-r1.ebuild:
+  Stable x86 wrt bug 348574.
 
 *protobuf-2.3.0-r1 (12 Jun 2010)
 
