@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.1-r1.ebuild,v 1.1 2010/11/04 00:33:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.1-r1.ebuild,v 1.2 2010/12/13 08:05:07 vapier Exp $
 
 inherit eutils multilib
 
@@ -29,6 +29,11 @@ pkg_preinst() {
 	# versions. In order to protect them from being unmerged after this
 	# upgrade, modify their timestamps.
 	touch "${ROOT}"/etc/conf.d/* 2>/dev/null
+
+	# This is written in src_install (so it's in CONTENTS), but punt all
+	# pending updates to avoid user having to do etc-update (and make the
+	# pkg_postinst logic simpler).
+	rm -f "${ROOT}"/etc/._cfg????_gentoo-release
 
 	# We need to install directories and maybe some dev nodes when building
 	# stages, but they cannot be in CONTENTS.
@@ -190,13 +195,10 @@ pkg_postinst() {
 		[ -e "${ROOT}etc/${x}" ] && chmod o-rwx "${ROOT}etc/${x}"
 	done
 
-	# This is also written in src_install (so it's in CONTENTS), but
-	# write it here so that the new version is immediately in the file
-	# (without waiting for the user to do etc-update)
-	rm -f "${ROOT}"/etc/._cfg????_gentoo-release
-	local release="${PV}"
-	[ "${PR}" != r0 ] && release="${release}-${PR}"
-	echo "Gentoo Base System release ${release}" > "${ROOT}"/etc/gentoo-release
+	# Take care of the etc-update for the user
+	if [ -e "${ROOT}"/etc/._cfg0000_gentoo-release ] ; then
+		mv "${ROOT}"/etc/._cfg0000_gentoo-release "${ROOT}"/etc/gentoo-release
+	fi
 
 	# whine about users that lack passwords #193541
 	if [[ -e ${ROOT}/etc/shadow ]] ; then

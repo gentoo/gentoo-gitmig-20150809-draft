@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.490 2010/12/05 17:39:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.491 2010/12/13 08:05:07 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  13 Dec 2010; Mike Frysinger <vapier@gentoo.org>
+  baselayout-2.0.1-r1.ebuild:
+  Redo how we handle forced gentoo-release update so we avoid md5/mtime
+  mismatches with CONTENTS.
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> baselayout-1.12.14-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #343925
