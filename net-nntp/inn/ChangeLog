@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.32 2010/12/12 10:28:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.33 2010/12/13 04:41:23 jer Exp $
+
+  13 Dec 2010; Jeroen Roovers <jer@gentoo.org> inn-2.5.1.ebuild,
+  inn-2.5.2.ebuild:
+  Add IUSE=perl.
 
   12 Dec 2010; Thomas Kahle <tomka@gentoo.org> inn-2.5.1.ebuild:
   x86 stable per bug 300650

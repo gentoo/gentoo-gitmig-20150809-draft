@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2.ebuild,v 1.1 2010/11/27 16:09:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2.ebuild,v 1.2 2010/12/13 04:41:23 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 SLOT="0"
 LICENSE="as-is BSD GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="berkdb innkeywords inntaggedhash ipv6 kerberos python sasl ssl"
+IUSE="berkdb innkeywords inntaggedhash ipv6 kerberos perl python sasl ssl"
 
 RDEPEND="
 	virtual/mta
