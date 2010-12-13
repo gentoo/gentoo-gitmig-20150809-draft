@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.12 2010/12/13 07:38:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.13 2010/12/13 07:43:00 graaff Exp $
+
+*rexical-1.0.5 (13 Dec 2010)
+
+  13 Dec 2010; Hans de Graaff <graaff@gentoo.org> +rexical-1.0.5.ebuild:
+  Version bump: Scanners with nested classes work better.
 
   13 Dec 2010; Hans de Graaff <graaff@gentoo.org> -rexical-1.0.4.ebuild:
   Remove old version.
