@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.5 2010/06/29 04:18:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.6 2010/12/13 14:52:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,13 +20,14 @@ KEYWORDS="amd64 ppc x86"
 IUSE="avahi ssl sqlite tls lirc"
 
 DEPEND=">=dev-libs/glib-2.4.0
-	>=dev-libs/libxml2-2.6.0[python]
-	sqlite? ( dev-python/dbus-python >=dev-python/pysqlite-2.3.0 )
-	avahi? ( net-dns/avahi[python] )"
+	avahi? ( net-dns/avahi[python] )
+	sqlite? ( dev-python/dbus-python >=dev-python/pysqlite-2.3.0 )"
 RDEPEND="${DEPEND}
 	dev-python/pynotifier
 	lirc? ( dev-python/pylirc )
 	tls? ( dev-python/tlslite )"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 PYTHON_MODNAME="kaa"
 

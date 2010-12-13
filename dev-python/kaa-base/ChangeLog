@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.22 2010/06/29 04:18:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.23 2010/12/13 14:52:44 arfrever Exp $
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kaa-base-0.6.0.ebuild:
+  Fix dependencies. Avoid breaking strict-aliasing rules.
 
   29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   kaa-base-0.6.0.ebuild:
