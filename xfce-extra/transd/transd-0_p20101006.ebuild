@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.2 2010/10/28 13:24:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.3 2010/12/13 18:46:52 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="x11-libs/libX11
@@ -23,8 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
-		$(xfconf_use_debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
 	DOCS="AUTHORS README TODO"
 }
 
