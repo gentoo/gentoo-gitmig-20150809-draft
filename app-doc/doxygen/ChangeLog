@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.184 2010/12/07 01:30:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.185 2010/12/13 14:34:04 tomka Exp $
+
+  13 Dec 2010; Thomas Kahle <tomka@gentoo.org> doxygen-1.7.2.ebuild:
+  x86 stable per bug 338632
 
   07 Dec 2010; Steve Arnold <nerdboy@gentoo.org>
   -files/doxygen-1.4.3-cp1251.patch, -files/doxygen-gcc4.patch,
