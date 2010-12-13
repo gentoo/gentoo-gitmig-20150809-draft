@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.145 2010/12/12 20:43:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.146 2010/12/13 04:49:21 jer Exp $
+
+  13 Dec 2010; Jeroen Roovers <jer@gentoo.org> sandbox-2.4.ebuild:
+  Stable for HPPA (bug #348549).
 
   12 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sandbox-2.4.ebuild:
   x86 stable wrt bug #348549
