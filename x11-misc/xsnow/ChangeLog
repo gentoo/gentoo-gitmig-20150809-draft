@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsnow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.20 2010/06/06 15:10:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.21 2010/12/13 09:13:33 xmw Exp $
+
+*xsnow-1.42-r1 (13 Dec 2010)
+
+  13 Dec 2010; Michael Weber <xmw@gentoo.org> +xsnow-1.42-r1.ebuild:
+  Fix app-text/rman dependency (bug 348568)
 
   06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> xsnow-1.42.ebuild:
   Respect CC, CFLAGS and LDFLAGS.
