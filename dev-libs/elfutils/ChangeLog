@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.143 2010/12/11 06:41:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.144 2010/12/13 12:21:05 jer Exp $
+
+  13 Dec 2010; Jeroen Roovers <jer@gentoo.org> elfutils-0.149.ebuild:
+  Stable for HPPA (bug #348407).
 
 *elfutils-0.150 (11 Dec 2010)
 
