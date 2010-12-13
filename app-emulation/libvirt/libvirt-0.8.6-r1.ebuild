@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r2.ebuild,v 1.1 2010/11/09 13:25:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.6-r1.ebuild,v 1.1 2010/12/13 12:04:45 flameeyes Exp $
 
-BACKPORTS=2
+BACKPORTS=1
 
 EAPI="2"
 
@@ -84,7 +84,7 @@ src_configure() {
 	myconf="${myconf} $(use_with avahi)"
 
 	## hypervisors on the local host
-	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify) --without-xen-proxy"
+	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
@@ -122,8 +122,9 @@ src_configure() {
 	myconf="${myconf} $(use_with sasl)"
 
 	# network biits
-	myconf="${myconf} $(use_with pcap libpcap)"
 	myconf="${myconf} $(use_with macvtap)"
+	# --with-pcap will cause problems, should be fixed after 0.8.7
+	use pcap || myconf="${myconf} --without-libpcap"
 
 	## other
 	myconf="${myconf} $(use_enable nls)"
