@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1_p2.ebuild,v 1.5 2010/09/23 12:11:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.2_p3-r2.ebuild,v 1.1 2010/12/13 22:08:53 idl0r Exp $
 
 EAPI="3"
 
@@ -18,16 +18,16 @@ GEOIP_P="bind-geoip-${GEOIP_PV}"
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
-	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
 	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}-readme.txt
 			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}.patch )"
+#	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom sdb-ldap xml geoip gssapi"
+	resolvconf urandom xml geoip gssapi" # sdb-ldap
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -39,6 +39,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )"
+#	sdb-ldap? ( net-nds/openldap )
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -74,7 +75,9 @@ src_prepare() {
 	if use dlz; then
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-		use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+		if use mysql && has_version ">=dev-db/mysql-5"; then
+			epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+		fi
 	fi
 
 	# should be installed by bind-tools
@@ -82,12 +85,13 @@ src_prepare() {
 
 	# sdb-ldap patch as per  bug #160567
 	# Upstream URL: http://bind9-ldap.bayour.com/
-	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+	# FIXME: bug 302735
+#	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_P}.patch "${S}" || die
-		sed -i -e 's/-RELEASEVER=3/-RELEASEVER=2/' \
-			-e 's/+RELEASEVER=3-geoip-1.3/+RELEASEVER=2-geoip-1.3/' \
+		sed -i -e 's/-RELEASEVER=2/-RELEASEVER=3/' \
+			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=3-geoip-1.3/' \
 			${GEOIP_P}.patch || die
 		epatch ${GEOIP_P}.patch
 	fi
@@ -162,11 +166,9 @@ src_configure() {
 }
 
 src_install() {
-	local init_deps=
-
 	emake DESTDIR="${D}" install || die
 
-	dodoc CHANGES FAQ README || die
+	dodoc CHANGES FAQ README
 
 	if use idn; then
 		dodoc contrib/idn/README.idnkit || die
@@ -200,7 +202,7 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r4 named.conf || die
+	newins "${FILESDIR}"/named.conf-r5 named.conf || die
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
@@ -210,18 +212,8 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r7 named || die
-	# bug 295260
-	use mysql && init_deps="${init_deps} mysql"
-	use ldap && init_deps="${init_deps} ldap"
-	use postgres && init_deps="${init_deps} postgresql pg_autovacuum"
-	if [[ -n $init_deps ]]; then
-		sed -i -e "s:after .*:after ${init_deps}:" "${D}/etc/init.d/named" || die
-	else
-		sed -i -e 's:after .*::' "${D}/etc/init.d/named" || die
-	fi
-
-	newconfd "${FILESDIR}"/named.confd-r3 named || die
+	newinitd "${FILESDIR}"/named.init-r9 named || die
+	newconfd "${FILESDIR}"/named.confd-r5 named || die
 
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
 
@@ -247,7 +239,7 @@ src_install() {
 
 pkg_postinst() {
 	if [ ! -f '/etc/bind/rndc.key' ]; then
-		if [ -c /dev/urandom ]; then
+		if use urandom; then
 			einfo "Using /dev/urandom for generating rndc.key"
 			/usr/sbin/rndc-confgen -r /dev/urandom -a
 			echo
@@ -260,12 +252,15 @@ pkg_postinst() {
 		chmod 0640 /etc/bind/rndc.key
 	fi
 
-	einfo "The default zone files are now installed as *.zone,"
-	einfo "be careful merging config files if you have modified"
-	einfo "/var/bind/pri/127.zone or /var/bind/pri/localhost.zone"
 	einfo
 	einfo "You can edit /etc/conf.d/named to customize named settings"
 	einfo
+	use mysql || use postgres || use ldap && {
+		elog "If your named depends on MySQL/PostgreSQL or LDAP,"
+		elog "uncomment the specified rc_named_* lines in your"
+		elog "/etc/conf.d/named config to ensure they'll start before bind"
+		einfo
+	}
 	einfo "If you'd like to run bind in a chroot AND this is a new"
 	einfo "install OR your bind doesn't already run in a chroot:"
 	einfo "1) Uncomment and set the CHROOT variable in /etc/conf.d/named."
@@ -273,8 +268,14 @@ pkg_postinst() {
 	einfo
 
 	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})
-	if [[ -n ${CHROOT} && -d ${CHROOT} ]]; then
-		ewarn "NOTE: As of net-dns/bind-9.4.3_p5-r1 the chroot part of the init-script got some major changes!"
+	if [[ -n ${CHROOT} ]]; then
+		elog "NOTE: As of net-dns/bind-9.4.3_p5-r1 the chroot part of the init-script got some major changes!"
+		elog "To enable the old behaviour (without using mount) uncomment the"
+		elog "CHROOT_NOMOUNT option in your /etc/conf.d/named config."
+		elog "If you decide to use the new/default method, ensure to make backup"
+		elog "first and merge your existing configs/zones to /etc/bind and"
+		elog "/var/bind because bind will now mount the needed directories into"
+		elog "the chroot dir."
 	fi
 
 	ewarn
@@ -292,7 +293,9 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})
+	CHROOT=$(source /etc/conf.d/named; echo ${CHROOT})
+	CHROOT_NOMOUNT=$(source /etc/conf.d/named; echo ${CHROOT_NOMOUNT})
+	CHROOT_GEOIP=$(source /etc/conf.d/named; echo ${CHROOT_GEOIP})
 
 	if [[ -z "${CHROOT}" ]]; then
 		eerror "This config script is designed to automate setting up"
@@ -302,6 +305,8 @@ pkg_config() {
 	fi
 	if [[ -d "${CHROOT}" ]]; then
 		ewarn "NOTE: As of net-dns/bind-9.4.3_p5-r1 the chroot part of the init-script got some major changes!"
+		ewarn "To enable the old behaviour (without using mount) uncomment the"
+		ewarn "CHROOT_NOMOUNT option in your /etc/conf.d/named config."
 		ewarn
 		ewarn "${CHROOT} already exists... some things might become overridden"
 		ewarn "press CTRL+C if you don't want to continue"
@@ -330,6 +335,15 @@ pkg_config() {
 	else
 		mknod ${CHROOT}/dev/random c 1 8
 		chmod 0666 ${CHROOT}/dev/random
+	fi
+
+	if [ "${CHROOT_NOMOUNT:-0}" -ne 0 ]; then
+		cp -a /etc/bind ${CHROOT}/etc/
+		cp -a /var/bind ${CHROOT}/var/
+	fi
+
+	if [ "${CHROOT_GEOIP:-0}" -eq 1 ]; then
+		mkdir -m 0755 -p ${CHROOT}/usr/share/GeoIP
 	fi
 
 	elog "You may need to add the following line to your syslog-ng.conf:"
