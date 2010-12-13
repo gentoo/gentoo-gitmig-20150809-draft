@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.2 2010/09/24 20:09:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.3 2010/12/13 16:27:38 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -30,7 +30,7 @@ RDEPEND="mathml? ( dev-libs/libxml2[python]
 	imaging? ( dev-python/imaging )
 	>=dev-python/pexpect-2.0"
 DEPEND="doc? ( dev-python/sphinx )
-	test? ( >=dev-python/py-0.9.0 )"
+	test? ( dev-python/pytest )"
 # 2.4 restricted due to usage of ctypes module.
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 

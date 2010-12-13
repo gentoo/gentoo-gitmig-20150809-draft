@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.22 2010/06/11 18:47:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.23 2010/12/13 16:29:48 arfrever Exp $
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  werkzeug-0.6.2.ebuild:
+  dev-python/py -> dev-python/pytest.
 
   11 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   werkzeug-0.6.2.ebuild:

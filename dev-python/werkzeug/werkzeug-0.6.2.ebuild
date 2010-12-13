@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.6.2.ebuild,v 1.4 2010/06/11 18:47:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.6.2.ebuild,v 1.5 2010/12/13 16:29:48 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
@@ -23,11 +24,11 @@ IUSE="test"
 RDEPEND=""
 DEPEND="dev-python/setuptools
 	app-arch/unzip
-	test? ( dev-python/py
+	test? (
 		dev-python/lxml
-		dev-python/nose
-		dev-python/simplejson )"
-RESTRICT_PYTHON_ABIS="3.*"
+		dev-python/pytest
+		dev-python/simplejson
+	)"
 
 S="${WORKDIR}/${MY_P}"
 
