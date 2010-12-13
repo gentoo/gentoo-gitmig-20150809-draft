@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.16 2010/11/10 17:56:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.17 2010/12/13 16:22:53 arfrever Exp $
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mpmath-0.15.ebuild:
+  Delete.
 
   10 Nov 2010; Fabian Groffen <grobian@gentoo.org> mpmath-0.16.ebuild:
   Marked ~x86-linux, ~ppc-macos, bug #341995
