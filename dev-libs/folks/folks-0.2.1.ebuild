@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.2.1.ebuild,v 1.1 2010/12/04 19:08:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.2.1.ebuild,v 1.2 2010/12/13 15:17:41 fauli Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://telepathy.freedesktop.org/wiki/Folks"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # docs require valadoc
