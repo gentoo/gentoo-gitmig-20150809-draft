@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/xfwm4-themes-4.6.0.ebuild,v 1.11 2009/12/01 18:05:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/xfwm4-themes-4.6.0.ebuild,v 1.12 2010/12/13 19:43:09 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
-DESCRIPTION="Xfce4 window manager themes"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="Xfce's window manager themes"
+HOMEPAGE="http://www.xfce.org/projects/xfwm4/"
+SRC_URI="mirror://xfce/src/art/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
