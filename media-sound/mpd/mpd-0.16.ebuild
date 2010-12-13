@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.2 2010/12/13 15:25:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.3 2010/12/13 15:34:32 hwoarang Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -68,7 +68,7 @@ src_prepare() {
 
 src_configure() {
 	local mpdconf="--disable-dependency-tracking --enable-tcp --enable-un
-		--disable-libOggFLACtest --disable-documentation --disable-ffado
+		--disable-documentation --disable-ffado
 		--docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then

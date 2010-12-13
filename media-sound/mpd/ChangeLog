@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.222 2010/12/13 15:25:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.223 2010/12/13 15:34:32 hwoarang Exp $
+
+  13 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mpd-0.16.ebuild:
+  Delete unrecognised option entirely
 
   13 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mpd-0.16.ebuild:
   Fix typo on configure option. Bug #348585
