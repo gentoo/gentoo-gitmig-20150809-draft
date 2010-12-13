@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.309 2010/12/13 20:21:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.310 2010/12/13 20:25:14 ranger Exp $
+
+  13 Dec 2010; Brent Baude <ranger@gentoo.org> coreutils-8.7.ebuild:
+  Marking coreutils-8.7 ppc64 for bug 348471
 
   13 Dec 2010; Brent Baude <ranger@gentoo.org> coreutils-8.7.ebuild:
   Marking coreutils-8.7 ppc for bug 348471
