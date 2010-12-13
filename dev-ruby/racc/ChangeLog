@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.51 2010/07/14 20:37:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.52 2010/12/13 13:42:15 graaff Exp $
+
+  13 Dec 2010; Hans de Graaff <graaff@gentoo.org> racc-1.4.6.ebuild:
+  Use generic shared object extension.
 
   14 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> racc-1.4.6.ebuild:
   Make sure that the . is in the library loading paths (for 1.9.2).
