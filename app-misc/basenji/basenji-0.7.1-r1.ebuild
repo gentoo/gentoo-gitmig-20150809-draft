@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1.ebuild,v 1.2 2010/12/13 15:55:53 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1-r1.ebuild,v 1.1 2010/12/13 15:55:53 elvanor Exp $
 
 EAPI="3"
+
+inherit multilib
 
 DESCRIPTION="Basenji is a volume indexing tool designed for easy and fast indexing of volume collections."
 HOMEPAGE="http://launchpad.net/basenji"
@@ -33,4 +35,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+	rm "${D}/usr/$(get_libdir)/pkgconfig/libextractor.pc"
 }
