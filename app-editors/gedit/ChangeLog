@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.318 2010/10/17 15:27:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.319 2010/12/13 03:33:25 leio Exp $
+
+  13 Dec 2010; Mart Raudsepp <leio@gentoo.org> gedit-2.30.4.ebuild:
+  Add ~mips keyword
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> gedit-2.30.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #324077
