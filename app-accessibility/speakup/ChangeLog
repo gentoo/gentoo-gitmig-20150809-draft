@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.52 2010/12/09 04:08:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.53 2010/12/13 20:51:00 williamh Exp $
+
+*speakup-3.1.6_p201011120508 (13 Dec 2010)
+
+  13 Dec 2010; William Hubbs <williamh@gentoo.org>
+  +speakup-3.1.6_p201011120508.ebuild:
+  This snapshot is required for kernel 2.6.36, so since it is stable on
+  x86, I am taking this straight to stable.
+  I am also comfortable doing this because I am part of upstream and have
+  been using it.
 
   09 Dec 2010; William Hubbs <williamh@gentoo.org> speakup-3.1.6.ebuild,
   speakup-9999.ebuild:
