@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.32 2010/10/19 05:17:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.33 2010/12/13 00:35:03 flameeyes Exp $
+
+*bsdiff-4.3-r2 (13 Dec 2010)
+
+  13 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> +bsdiff-4.3-r2.ebuild:
+  Revision bump to make sure that hte package is built with large file support
+  on 32-bit architectures (it wasn't before, even though it was intended to).
+  Make build verbose to avoid further mistakes slipping by as it happened
+  before. Add die clauses to install while at it, and bump to EAPI=2.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> bsdiff-4.3-r1.ebuild:
   Drop to ~mips
