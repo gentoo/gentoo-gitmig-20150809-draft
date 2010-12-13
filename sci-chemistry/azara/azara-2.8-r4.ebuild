@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r3.ebuild,v 1.1 2010/12/12 18:14:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r4.ebuild,v 1.1 2010/12/13 07:10:24 jlec Exp $
 
 EAPI="3"
 
@@ -79,7 +79,7 @@ src_install() {
 	dohtml -r html/* || die
 
 	installation() {
-		insinto "${EPREFIX}/$(python_get_sitedir)"
+		insinto $(python_get_sitedir)
 		doins lib/DataRows.so || die
 	}
 	use python && python_execute_function installation
