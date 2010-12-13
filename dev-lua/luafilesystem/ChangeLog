@@ -1,6 +1,12 @@
 # ChangeLog for dev-lua/luafilesystem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.1 2010/11/05 23:12:31 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.2 2010/12/13 14:21:44 matsuu Exp $
+
+*luafilesystem-1.5.0 (13 Dec 2010)
+
+  13 Dec 2010; MATSUU Takuto <matsuu@gentoo.org> +luafilesystem-1.5.0.ebuild:
+  Version bumped, bug #348131. The patch is submitted by Bernd Lommerzheim.
+  respect LDFLAGS, bug #336966.
 
   05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   +luafilesystem-1.4.1.ebuild, +luafilesystem-1.4.2.ebuild, +metadata.xml:
