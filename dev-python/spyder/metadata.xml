@@ -15,7 +15,6 @@
 <use>
   <flag name='ipython'>Add support for <pkg>dev-python/ipython</pkg></flag>
   <flag name='matplotlib'>Add support for <pkg>dev-python/matplotlib</pkg></flag>
-  <flag name='mayavi'>Add support for <pkg>sci-visualization/mayavi</pkg></flag>
   <flag name='numpy'>Add support for <pkg>dev-python/numpy</pkg></flag>
   <flag name='pyflakes'>Add support for <pkg>dev-python/pyflakes</pkg></flag>
   <flag name='pylint'>Add support for <pkg>dev-python/pylint</pkg></flag>
