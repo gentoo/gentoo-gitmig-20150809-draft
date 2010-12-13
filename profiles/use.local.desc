@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6219 2010/12/12 23:32:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6220 2010/12/13 03:13:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2108,6 +2108,7 @@ media-sound/mpd:id3 - Support for ID3 tags
 media-sound/mpd:lame - Support for MP3 streaming via Icecast2
 media-sound/mpd:lastfmradio - Support listening to last.fm radio stations
 media-sound/mpd:libmms - Support for Microsoft Media Server (MMS) streams via libmms
+media-sound/mpd:mpg123 - Enable support for mp3 decoding over media-sound/mpg123.
 media-sound/mpd:network - Enables network streaming support
 media-sound/mpd:pipe - Support writing audio to a pipe
 media-sound/mpd:sid - Build with SID (Commodore 64 Audio) support
