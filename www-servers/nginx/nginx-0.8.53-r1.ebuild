@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.46.ebuild,v 1.1 2010/07/20 20:46:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.53-r1.ebuild,v 1.1 2010/12/13 10:38:57 dev-zero Exp $
 
 EAPI="2"
 
@@ -23,27 +23,32 @@ HTTP_HEADERS_MORE_MODULE_SHA1="9508330"
 
 # http_passenger (http://www.modrails.com/, MIT license)
 # TODO: currently builds some stuff in src_configure
-PASSENGER_PV="2.2.15"
+PASSENGER_PV="3.0.1"
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
 HTTP_PUSH_MODULE_P="nginx_http_push_module-0.692"
 
+# http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
+HTTP_CACHE_PURGE_MODULE_P="ngx_cache_purge-1.2"
+
 inherit eutils ssl-cert toolchain-funcs perl-module ruby-ng flag-o-matic
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.net/
 	http://www.modrails.com/
-	http://pushmodule.slact.net/"
+	http://pushmodule.slact.net/
+	http://labs.frickle.com/nginx_ngx_cache_purge/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz
 	nginx_modules_http_headers_more? ( http://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
 	nginx_modules_http_passenger? ( mirror://rubyforge/passenger/passenger-${PASSENGER_PV}.tar.gz )
-	nginx_modules_http_push? ( http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz )"
+	nginx_modules_http_push? ( http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz )
+	nginx_modules_http_cache_purge? ( http://labs.frickle.com/files/${HTTP_CACHE_PURGE_MODULE_P}.tar.gz )"
 
 LICENSE="BSD BSD-2 GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite scgi ssi
@@ -51,7 +56,7 @@ split_clients upstream_ip_hash userid uwsgi"
 NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
 perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
-NGINX_MODULES_3RD="http_headers_more http_passenger http_push"
+NGINX_MODULES_3RD="http_cache_purge http_headers_more http_passenger http_push"
 
 IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl vim-syntax"
 
@@ -89,6 +94,7 @@ CDEPEND="
 		>=dev-ruby/rake-0.8.1
 		>=dev-ruby/fastthread-1.0.1
 		>=dev-ruby/rack-1.0.0
+		dev-libs/libev
 	)"
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}
@@ -142,7 +148,16 @@ src_prepare() {
 
 	if use nginx_modules_http_passenger; then
 		cd "${WORKDIR}"/passenger-${PASSENGER_PV}
-		epatch "${FILESDIR}"/passenger-CFLAGS.patch
+		epatch \
+			"${FILESDIR}/passenger-3.0.1-cflags.patch" \
+			"${FILESDIR}/passenger-3.0.1-missing-include.patch" \
+			"${FILESDIR}/passenger-3.0.1-missing-auto-feature.patch"
+
+		sed -i \
+			-e 's|/usr/lib/phusion-passenger/agents|/usr/libexec/passenger/agents|' \
+			-e 's|/usr/share/phusion-passenger/helper-scripts|/usr/libexec/passenger/bin|' \
+			-e "s|/usr/share/doc/phusion-passenger|/usr/share/doc/${PF}|" \
+			lib/phusion_passenger.rb ext/common/ResourceLocator.h || die "sed failed"
 	fi
 }
 
@@ -189,6 +204,11 @@ src_configure() {
 	if use nginx_modules_http_push; then
 		http_enabled=1
 		myconf="${myconf} --add-module=${WORKDIR}/${HTTP_PUSH_MODULE_P}"
+	fi
+
+	if use nginx_modules_http_cache_purge; then
+		http_enabled=1
+		myconf="${myconf} --add-module=${WORKDIR}/${HTTP_CACHE_PURGE_MODULE_P}"
 	fi
 
 	if use http || use http-cache; then
@@ -280,6 +300,11 @@ src_install() {
 		dodoc "${WORKDIR}"/${HTTP_PUSH_MODULE_P}/{changelog.txt,protocol.txt,README}
 	fi
 
+	if use nginx_modules_http_cache_purge; then
+		docinto ${HTTP_CACHE_PURGE_MODULE_P}
+		dodoc "${WORKDIR}"/${HTTP_CACHE_PURGE_MODULE_P}/{CHANGES,README}
+	fi
+
 	if use nginx_modules_http_passenger; then
 		# passengers Rakefile is so horribly broken that we have to do it
 		# manually
@@ -287,19 +312,22 @@ src_install() {
 
 		export RUBY="ruby18"
 
-		insinto $(${RUBY} -rrbconfig -e 'print Config::CONFIG["archdir"]')/phusion_passenger
+		insinto $(${RUBY} -rrbconfig -e 'print Config::CONFIG["archdir"]')
 		insopts -m 0755
-		doins ext/phusion_passenger/*.so
-		doruby -r lib/phusion_passenger
+		doins ext/ruby/*/passenger_native_support.so
+		doruby -r lib/phusion_passenger lib/phusion_passenger.rb
 
 		exeinto /usr/bin
 		doexe bin/passenger-memory-stats bin/passenger-status
 
 		exeinto /usr/libexec/passenger/bin
-		doexe bin/passenger-spawn-server
+		doexe helper-scripts/passenger-spawn-server
 
-		exeinto /usr/libexec/passenger/ext/nginx
-		doexe ext/nginx/HelperServer
+		exeinto /usr/libexec/passenger/agents
+		doexe agents/Passenger{LoggingAgent,Watchdog}
+
+		exeinto /usr/libexec/passenger/agents/nginx
+		doexe agents/nginx/PassengerHelperAgent
 	fi
 }
 

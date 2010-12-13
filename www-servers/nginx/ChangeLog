@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.270 2010/11/28 21:21:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.271 2010/12/13 10:38:57 dev-zero Exp $
+
+*nginx-0.8.53-r1 (13 Dec 2010)
+
+  13 Dec 2010; Tiziano Müller <dev-zero@gentoo.org> -nginx-0.8.46.ebuild,
+  -nginx-0.8.47.ebuild, -nginx-0.8.48.ebuild, -nginx-0.8.49.ebuild,
+  +nginx-0.8.53-r1.ebuild, +files/passenger-3.0.1-cflags.patch,
+  +files/passenger-3.0.1-missing-auto-feature.patch,
+  +files/passenger-3.0.1-missing-include.patch:
+  Revision bump to bump passenger to 3.0.1 (currently p.masked for testing).
+  Removed old versions.
 
 *nginx-0.8.53 (28 Nov 2010)
 
