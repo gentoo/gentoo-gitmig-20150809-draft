@@ -6,6 +6,10 @@
 	<email>angelos@gentoo.org</email>
 	<name>Christoph Mende</name>
   </maintainer>
+  <maintainer>
+  	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+  </maintainer>
   <use>
 	<flag name="cdio">Use libcdio for ISO9660 parsing support</flag>
 	<flag name="cue">Support CUE Sheet Parser Library</flag>
