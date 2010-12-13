@@ -1,0 +1,10 @@
+# ChangeLog for app-office/openerp-web
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-web/ChangeLog,v 1.1 2010/12/13 11:08:43 elvanor Exp $
+
+*openerp-web-5.0.6 (13 Dec 2010)
+
+  13 Dec 2010; <elvanor@gentoo.org> +openerp-web-5.0.6.ebuild,
+  +files/openerp-web, +files/openerp-web-confd, +metadata.xml:
+  Initial import. Bug #267886.
+
