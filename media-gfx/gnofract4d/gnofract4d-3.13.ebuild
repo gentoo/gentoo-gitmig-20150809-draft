@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.13.ebuild,v 1.2 2010/12/14 10:27:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.13.ebuild,v 1.3 2010/12/14 15:56:12 hwoarang Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
