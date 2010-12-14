@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.32 2010/12/14 02:37:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.33 2010/12/14 02:48:19 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -360,6 +360,10 @@ bluetooth
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have net-libs/libsmi keyworded
 smi
+
+# Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
+# We don't have dev-libs/ocaml
+ocaml
 
 # Mips USE flags
 -n32

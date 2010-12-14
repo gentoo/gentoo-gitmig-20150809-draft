@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.38 2010/12/14 02:37:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.39 2010/12/14 02:48:19 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> use.mask:
+  use.mask ocaml.
 
   14 Dec 2010; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask smi.
