@@ -1,19 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.7 2010/12/09 04:08:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.8 2010/12/14 00:01:55 williamh Exp $
 
 EAPI="2"
 
-EGIT_REPO_URI="http://linux-speakup.org/speakup.git"
-inherit git linux-mod
+inherit linux-mod
+
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="http://linux-speakup.org/speakup.git"
+	inherit git
+	KEYWORDS=""
+else
+	SRC_URI="ftp://linux-speakup.org/pub/speakup/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 DESCRIPTION="The speakup linux kernel based screen reader."
 HOMEPAGE="http://linux-speakup.org"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="modules"
 
 MODULE_NAMES="speakup(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
