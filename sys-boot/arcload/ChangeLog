@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/arcload
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.11 2009/03/02 02:21:30 kumba Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.12 2010/12/14 01:38:32 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> arcload-0.43-r1.ebuild,
+  arcload-0.50-r1.ebuild:
+  Make arcload PROVIDE virtual/bootloader, bug 322917
 
   02 Mar 2009; Joshua Kinard <kumba@gentoo.org>
   +files/arcload-0.50-makefile-targets.patch,
