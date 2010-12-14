@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.6.4.ebuild,v 1.1 2010/10/26 17:39:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.6.6.ebuild,v 1.1 2010/12/14 19:12:40 billie Exp $
 
 EAPI=2
+
+inherit autotools eutils
 
 MY_PL=00
 [[ ${PV/_p} != ${PV} ]] && MY_PL=${PV#*_p}
@@ -15,12 +17,12 @@ SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="acl external-filters external-filters-setuid readline xattr zlib"
-#IUSE="acl cdio external-filters external-filters-setuid readline xattr zlib"
+IUSE="acl debug external-filters external-filters-setuid readline xattr zlib"
+#IUSE="acl cdio debug external-filters external-filters-setuid readline xattr zlib"
 #Supports libcdio but needs version >=0.83 which is not yet released.
 
-RDEPEND=">=dev-libs/libburn-0.8.4
-	>=dev-libs/libisofs-0.6.36
+RDEPEND=">=dev-libs/libburn-0.8.8
+	>=dev-libs/libisofs-0.6.40
 	acl? ( virtual/acl )
 	readline? ( sys-libs/readline )
 	xattr? ( sys-apps/attr )
@@ -31,18 +33,24 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P%_p*}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	eautoreconf
+}
+
 src_configure() {
-	econf --disable-static \
-	--disable-ldconfig-at-install \
-	--disable-dvd-obs-64k \
+	econf --disable-dependency-tracking \
+	--disable-static \
+	$(use_enable readline libreadline) \
+	$(use_enable acl libacl) \
+	$(use_enable xattr) \
+	$(use_enable zlib) \
 	--disable-libjte \
 	--disable-libcdio \
-	$(use_enable acl libacl) \
 	$(use_enable external-filters) \
 	$(use_enable external-filters-setuid) \
-	$(use_enable readline libreadline) \
-	$(use_enable xattr) \
-	$(use_enable zlib)
+	 --disable-ldconfig-at-install \
+	$(use_enable debug)
 #	$(use_enable cdio libcdio) \
 }
 

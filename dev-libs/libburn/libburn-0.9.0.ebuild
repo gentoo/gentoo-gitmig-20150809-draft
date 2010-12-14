@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.8.8.ebuild,v 1.1 2010/10/22 16:46:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.9.0.ebuild,v 1.1 2010/12/14 19:06:19 billie Exp $
 
 EAPI=2
+
+inherit autotools eutils
 
 MY_PL=00
 [[ ${PV/_p} != ${PV} ]] && MY_PL=${PV#*_p}
@@ -15,8 +17,8 @@ SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="track-src-odirect"
-#IUSE="cdio track-src-odirect"
+IUSE="debug track-src-odirect"
+#IUSE="cdio debug track-src-odirect"
 #Supports libcdio but needs version >=0.83 which is not yet released.
 
 RDEPEND=""
@@ -25,12 +27,18 @@ DEPEND="dev-util/pkgconfig"
 
 S=${WORKDIR}/${P%_p*}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	eautoreconf
+}
+
 src_configure() {
-	econf --disable-static \
-	--enable-ldconfig-at-install \
-	--disable-dvd-obs-64k \
+	econf --disable-dependency-tracking \
+	--disable-static \
+	$(use_enable track-src-odirect) \
 	--disable-libcdio \
-	$(use_enable track-src-odirect)
+	--disable-ldconfig-at-install \
+	$(use_enable debug)
 #	$(use_enable cdio libcdio) \
 }
 

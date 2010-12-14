@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.38.ebuild,v 1.1 2010/10/23 21:33:15 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.40.ebuild,v 1.1 2010/12/14 19:09:19 billie Exp $
 
 EAPI=2
+
+inherit autotools eutils
 
 DESCRIPTION="libisofs is an open-source library for reading, mastering and writing optical discs."
 HOMEPAGE="http://libburnia-project.org/"
@@ -11,7 +13,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="acl xattr zlib"
+IUSE="acl debug verbose-debug xattr zlib"
 
 RDEPEND="acl? ( virtual/acl )
 	xattr? ( sys-apps/attr )
@@ -19,13 +21,21 @@ RDEPEND="acl? ( virtual/acl )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	eautoreconf
+}
+
 src_configure() {
-	econf --disable-static \
-	--disable-ldconfig-at-install \
-	--disable-libjte \
+	econf --disable-dependency-tracking \
+	--disable-static \
+	$(use_enable debug) \
+	$(use_enable verbose-debug) \
 	$(use_enable acl libacl) \
 	$(use_enable xattr) \
-	$(use_enable zlib)
+	$(use_enable zlib) \
+	--disable-libjte \
+	--disable-ldconfig-at-install
 }
 
 src_install() {

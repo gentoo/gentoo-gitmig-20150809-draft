@@ -1,0 +1,24 @@
+--- configure.ac	2010-12-10 11:42:43 +0000
++++ configure.ac	2010-12-13 17:11:59 +0000
+@@ -133,15 +133,15 @@
+               , enable_debug=yes)
+ if test x$enable_debug != xyes; then
+     if test x$GCC = xyes; then
+-        CFLAGS="$CFLAGS -O3"
+-        CFLAGS="$CFLAGS -fexpensive-optimizations"
++        CFLAGS="-O3 $CFLAGS"
++        CFLAGS="-fexpensive-optimizations $CFLAGS"
+     fi
+-    CFLAGS="$CFLAGS -DNDEBUG"
++    CFLAGS="-DNDEBUG $CFLAGS"
+ else
+     if test x$GCC = xyes; then
+-        CFLAGS="$CFLAGS -g -pedantic -Wall"
++        CFLAGS="-g -pedantic -Wall $CFLAGS"
+     fi
+-    CFLAGS="$CFLAGS -DDEBUG"
++    CFLAGS="-DDEBUG $CFLAGS"
+ fi
+ 
+ dnl Verbose debug to make libisofs issue more debug messages
+
