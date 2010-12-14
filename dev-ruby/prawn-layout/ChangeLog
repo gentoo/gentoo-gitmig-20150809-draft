@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/prawn-layout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.8 2010/09/24 14:57:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.9 2010/12/14 09:41:21 graaff Exp $
+
+*prawn-layout-0.8.4-r2 (14 Dec 2010)
+
+  14 Dec 2010; Hans de Graaff <graaff@gentoo.org>
+  +prawn-layout-0.8.4-r2.ebuild:
+  Actually install documentation with USE=doc.
 
 *prawn-layout-0.8.4-r1 (24 Sep 2010)
 
