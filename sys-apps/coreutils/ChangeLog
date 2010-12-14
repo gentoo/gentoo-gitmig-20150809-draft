@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.310 2010/12/13 20:25:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.311 2010/12/14 01:24:12 vapier Exp $
+
+  14 Dec 2010; Mike Frysinger <vapier@gentoo.org> coreutils-8.7.ebuild:
+  Avoid perl dep for compiled in dircolors default #348642.
 
   13 Dec 2010; Brent Baude <ranger@gentoo.org> coreutils-8.7.ebuild:
   Marking coreutils-8.7 ppc64 for bug 348471
