@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.269 2010/12/02 21:17:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.270 2010/12/14 22:32:50 dilfridge Exp $
+
+*kopete-4.4.5-r2 (14 Dec 2010)
+
+  14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kopete-4.4.5-r2.ebuild, +files/kopete-4.4.5-server.patch:
+  Added upstream patch to fix ICQ server name (bug 346119). Version bump
+  straight to stable.
 
 *kopete-4.5.4 (02 Dec 2010)
 

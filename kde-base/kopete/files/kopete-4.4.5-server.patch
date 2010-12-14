@@ -1,0 +1,121 @@
+Index: kopete/protocols/oscar/icq/icqaccount.cpp
+===================================================================
+--- kopete/protocols/oscar/icq/icqaccount.cpp	(Revision 1197798)
++++ kopete/protocols/oscar/icq/icqaccount.cpp	(Revision 1197799)
+@@ -136,7 +136,7 @@
+ 	// Create actions
+ 	mEditInfoAction = new KAction( KIcon("user-properties"), i18n( "Edit User Info..." ), this );
+ 	QObject::connect( mEditInfoAction, SIGNAL(triggered(bool)), this, SLOT(slotUserInfo()) );
+-	
++
+ 	mActionInvisible = new KToggleAction( i18n( "In&visible" ), this );
+ 	QObject::connect( mActionInvisible, SIGNAL(triggered(bool)), this, SLOT(slotToggleInvisible()) );
+ 
+@@ -188,7 +188,7 @@
+ 	*/
+ 
+ 	KActionMenu *xtrazStatusMenu = new KActionMenu( i18n( "Set Xtraz Status" ), actionMenu );
+-	
++
+ 	KAction* xtrazStatusSetAction = new KAction( i18n( "Set Status..." ), xtrazStatusMenu );
+ 	QObject::connect( xtrazStatusSetAction, SIGNAL(triggered(bool)), this, SLOT(setXtrazStatus()) );
+ 	xtrazStatusMenu->addAction( xtrazStatusSetAction );
+@@ -236,7 +236,7 @@
+ 		myself()->setOnlineStatus( protocol()->statusManager()->connectingStatus() );
+ 		QString icqNumber = accountId();
+ 		kDebug(14153) << "Logging in as " << icqNumber;
+-		QString server = configGroup()->readEntry( "Server", QString::fromLatin1( "login.oscar.aol.com" ) );
++		QString server = configGroup()->readEntry( "Server", QString::fromLatin1( "login.icq.com" ) );
+ 		uint port = configGroup()->readEntry( "Port", 5190 );
+ 
+ 		//set up the settings for the account
+Index: kopete/protocols/oscar/icq/ui/icqeditaccountwidget.cpp
+===================================================================
+--- kopete/protocols/oscar/icq/ui/icqeditaccountwidget.cpp	(Revision 1197798)
++++ kopete/protocols/oscar/icq/ui/icqeditaccountwidget.cpp	(Revision 1197799)
+@@ -65,7 +65,7 @@
+ 
+ 	mProtocol->fillComboFromTable( mAccountSettings->encodingCombo, mProtocol->encodings() );
+ 
+-	//Setup the edtAccountId 
++	//Setup the edtAccountId
+ 	QRegExp rx("[0-9]{9}");
+ 	QValidator* validator = new QRegExpValidator( rx, this );
+ 	mAccountSettings->edtAccountId->setValidator(validator);
+@@ -80,9 +80,9 @@
+ 		mAccountSettings->mPasswordWidget->load(&mAccount->password());
+ 		mAccountSettings->chkAutoLogin->setChecked(mAccount->excludeConnect());
+ 
+-		QString serverEntry = mAccount->configGroup()->readEntry("Server", "login.oscar.aol.com");
++		QString serverEntry = mAccount->configGroup()->readEntry("Server", "login.icq.com");
+ 		int portEntry = mAccount->configGroup()->readEntry("Port", 5190);
+-		if ( serverEntry != "login.oscar.aol.com" || ( portEntry != 5190) )
++		if ( serverEntry != "login.icq.com" || ( portEntry != 5190) )
+ 			mAccountSettings->optionOverrideServer->setChecked( true );
+ 
+ 		mAccountSettings->edtServerAddress->setText( serverEntry );
+@@ -174,7 +174,7 @@
+ 			default:
+ 				encodingId=4;
+ 		}
+-		
++
+ 		mProtocol->setComboFromTable( mAccountSettings->encodingCombo,
+ 		                              mProtocol->encodings(),
+ 		                              encodingId );
+@@ -203,13 +203,13 @@
+ {
+ 	if ( m_visibleEngine )
+ 		delete m_visibleEngine;
+-	
++
+ 	if ( m_invisibleEngine )
+ 		delete m_invisibleEngine;
+-	
++
+ 	if ( m_ignoreEngine )
+ 		delete m_ignoreEngine;
+-	
++
+ 	delete mAccountSettings;
+ }
+ 
+@@ -254,7 +254,7 @@
+ 	}
+ 	else
+ 	{
+-		mAccount->setServerAddress("login.oscar.aol.com");
++		mAccount->setServerAddress("login.icq.com");
+ 		mAccount->setServerPort(5190);
+ 	}
+ 
+@@ -279,17 +279,17 @@
+ 	{
+ 		if ( m_visibleEngine )
+ 			m_visibleEngine->storeChanges();
+-		
++
+ 		if ( m_invisibleEngine )
+ 			m_invisibleEngine->storeChanges();
+-		
++
+ 		if ( m_ignoreEngine )
+ 			m_ignoreEngine->storeChanges();
+ 
+ 		//Update Oscar settings
+ 		static_cast<ICQMyselfContact*>( mAccount->myself() )->fetchShortInfo();
+ 	}
+-	
++
+ 	return mAccount;
+ }
+ 
+@@ -299,7 +299,7 @@
+ 	bool bOk;
+ 	QString userId = mAccountSettings->edtAccountId->text();
+ 	qulonglong uid = userId.toULongLong( &bOk );
+-	
++
+ 	if( !bOk || uid == 0 || userId.isEmpty() )
+ 	{	KMessageBox::queuedMessageBox(this, KMessageBox::Sorry,
+ 	 	                              i18n("<qt>You must enter a valid ICQ No.</qt>"), i18n("ICQ"));
