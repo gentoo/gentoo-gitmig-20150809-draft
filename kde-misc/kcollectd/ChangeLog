@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kcollectd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.3 2010/10/25 19:54:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.4 2010/12/14 15:21:29 dilfridge Exp $
+
+  14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  kcollectd-0.9.ebuild:
+  Removed DTD magic as it is in the eclass now; fixed linguas hack and
+  thereby bug 344487
 
   25 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   kcollectd-0.9.ebuild:
