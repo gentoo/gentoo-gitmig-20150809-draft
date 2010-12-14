@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.25 2010/09/09 09:33:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.26 2010/12/14 18:54:56 jer Exp $
 
 *unclutter-8-r2 (09 Sep 2010)
 
@@ -35,10 +35,10 @@
   unclutter-8-r1.ebuild:
   ppc stable, bug #140654
 
-*unclutter-8-r1 (11 Jan 2006)
-
   11 Jan 2006; Patrick Kursawe <phosphan@gentoo.org> metadata.xml:
   Removed myself as maintainer.
+
+*unclutter-8-r1 (11 Jan 2006)
 
   11 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> +unclutter-8-r1.ebuild:
   Fixed for Modular-X, based on submitted fix at bug #117211.
