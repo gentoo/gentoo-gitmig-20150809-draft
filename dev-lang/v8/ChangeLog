@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.17 2010/12/10 17:08:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.18 2010/12/14 15:54:38 phajdan.jr Exp $
+
+*v8-9999 (14 Dec 2010)
+
+  14 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> +v8-9999.ebuild:
+  Add live ebuild, bug #266502 by Vladimir Dolzhenko
+  <vladimir.dolzhenko@gmail.com>. Used modified ebuild by Mike Gilbert
+  <floppymaster@gmail.com>.
 
 *v8-2.4.9.14 (10 Dec 2010)
 
