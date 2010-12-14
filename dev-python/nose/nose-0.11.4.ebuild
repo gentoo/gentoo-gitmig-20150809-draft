@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.4.ebuild,v 1.8 2010/10/08 07:03:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.4.ebuild,v 1.9 2010/12/14 19:53:15 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,6 +32,9 @@ src_prepare() {
 	# Disable tests and doc features that access the network
 	epatch "${FILESDIR}/${PN}-0.10.0-tests-nonetwork.patch"
 	epatch "${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch"
+
+	# Disable versioning of nosetests script to avoid collision with versioning performed by distutils_src_install().
+	sed -e "/'nosetests%s = nose:run_exit' % py_vers_tag,/d" -i setup.py || die "sed failed"
 }
 
 src_compile() {
