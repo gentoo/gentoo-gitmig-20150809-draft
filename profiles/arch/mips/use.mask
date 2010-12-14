@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.30 2010/12/14 02:17:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.31 2010/12/14 02:33:50 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -352,6 +352,10 @@ ladspa
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # Dropping app-arch/rpm keywords, mask rpm USE accordingly
 rpm
+
+# Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
+# We don't care much about bluetooth
+bluetooth
 
 # Mips USE flags
 -n32
