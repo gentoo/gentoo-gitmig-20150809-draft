@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13.ebuild,v 1.1 2010/12/14 10:33:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13.ebuild,v 1.2 2010/12/14 11:12:56 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -21,7 +21,7 @@ MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
 XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
 FIREFOX_PN="firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
-PATCH="${FIREFOX_PN}-3.6-patches-0.2"
+PATCH="${FIREFOX_PN}-3.6-patches-0.4"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -133,8 +133,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
-
-	epatch "${FILESDIR}/xulrunner-1.9.2-gtk+-2.21.patch"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
