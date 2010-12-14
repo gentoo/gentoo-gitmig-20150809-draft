@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.2 2010/10/18 19:38:54 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.3 2010/12/14 02:04:48 mattst88 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://rpm.org/releases/rpm-4.8.x/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="nls python doc sqlite caps lua acl"
 

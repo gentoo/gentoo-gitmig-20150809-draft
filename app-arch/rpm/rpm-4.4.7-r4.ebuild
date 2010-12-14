@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.6 2010/06/22 19:59:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.7 2010/12/14 02:04:48 mattst88 Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://rpm5.org/files/rpm/rpm-4.4/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls python perl doc sqlite"
 
 RDEPEND="=sys-libs/db-3.2*
