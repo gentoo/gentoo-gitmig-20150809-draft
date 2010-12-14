@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-7.0.517.44.ebuild,v 1.3 2010/12/01 18:35:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-8.0.552.224.ebuild,v 1.1 2010/12/14 14:50:21 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -19,7 +19,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
 	dev-libs/expat
 	dev-libs/glib
-	=dev-libs/icu-4.4*
+	=dev-libs/icu-4.6*
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12.3
@@ -29,6 +29,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/fontconfig
 	media-libs/freetype
 	=media-libs/libpng-1.4*
+	>=media-video/ffmpeg-0.6_p25423[threads]
 	>=net-print/cups-1.4.4
 	sys-apps/dbus
 	>=sys-libs/glibc-2.11.2
@@ -60,6 +61,10 @@ src_install() {
 	sed -e 's/chromium-chromium.desktop/chromium-bin-chromium-bin.desktop/g' \
 		-i "${D}/${CHROMIUM_HOME}/chromium-launcher.sh" || die
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-bin || die
+
+	dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
+	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium (bin)" ${PN} "Network;WebBrowser"
