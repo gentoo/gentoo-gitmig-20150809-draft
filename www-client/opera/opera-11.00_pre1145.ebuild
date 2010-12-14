@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1136.ebuild,v 1.1 2010/12/10 16:34:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00_pre1145.ebuild,v 1.1 2010/12/14 17:46:11 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="test"
 
-O_PWD="partytime"
+O_PWD="tabbed"
 O_V="${PV/_pre/-}"
 O_P="${PN}-${O_V}"
 O_HTTP="http://snapshot.opera.com/"
