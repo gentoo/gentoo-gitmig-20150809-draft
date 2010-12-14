@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/bkodama
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/bkodama/ChangeLog,v 1.1 2010/09/26 12:00:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/bkodama/ChangeLog,v 1.2 2010/12/14 22:55:40 dilfridge Exp $
+
+*bkodama-0.3.1 (14 Dec 2010)
+
+  14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +bkodama-0.3.1.ebuild:
+  Version bump
 
 *bkodama-0.2.1 (26 Sep 2010)
 
