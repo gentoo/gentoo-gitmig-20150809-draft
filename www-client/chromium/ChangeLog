@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.240 2010/12/14 09:37:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.241 2010/12/14 10:11:40 phajdan.jr Exp $
+
+*chromium-9.0.597.19 (14 Dec 2010)
+
+  14 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-9.0.597.0.ebuild, +chromium-9.0.597.19.ebuild:
+  Version bump for dev channel release. Remove old.
 
   14 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   chromium-8.0.552.224.ebuild:
