@@ -1,6 +1,17 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.58 2010/11/28 14:16:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.59 2010/12/14 10:33:28 polynomial-c Exp $
+
+*icecat-3.6.13 (14 Dec 2010)
+
+  14 Dec 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/xulrunner-1.9.2-noalsa-fixup.patch,
+  -files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  -icecat-3.6.9.ebuild, -icecat-3.6.9-r1.ebuild,
+  -files/801-enable-x86_64-tracemonkey.patch, -icecat-3.6.11.ebuild,
+  +icecat-3.6.13.ebuild, -files/fix_blocklist_support.patch:
+  Security bump (bug #348316). Removed old. No language packs availabe for
+  3.6.13 yet so we gonna use those from 3.6.12 meanwhile.
 
   28 Nov 2010; Brent Baude <ranger@gentoo.org> icecat-3.6.12.ebuild:
   Marking icecat-3.6.12 ppc64 for bug 342847
