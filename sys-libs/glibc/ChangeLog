@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.735 2010/11/18 11:11:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.736 2010/12/14 04:36:12 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> glibc-2.12.1-r3.ebuild:
+  Add ~mips
 
   18 Nov 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.12.1-r3.ebuild:
   Add ports tarball #345811 by Matt Turner.
