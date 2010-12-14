@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/flask-script-0.3.1.ebuild,v 1.1 2010/12/14 23:08:06 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/flask-script-0.3.1.ebuild,v 1.2 2010/12/14 23:25:13 rafaelmartins Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,7 +26,8 @@ RDEPEND="dev-python/flask
 	dev-python/argparse"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx )
+	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${MY_P}"
 
