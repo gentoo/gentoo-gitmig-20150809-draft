@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.33 2010/12/14 02:48:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.34 2010/12/14 02:51:24 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -364,6 +364,10 @@ smi
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have dev-libs/ocaml
 ocaml
+
+# Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
+# We don't have sys-devel/llvm
+llvm
 
 # Mips USE flags
 -n32
