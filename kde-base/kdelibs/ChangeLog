@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.709 2010/12/02 21:16:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.710 2010/12/14 21:59:46 dilfridge Exp $
+
+*kdelibs-4.4.5-r1 (14 Dec 2010)
+
+  14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdelibs-4.4.5-r1.ebuild, +files/kdelibs-4.4.5-qt471.patch:
+  Added compilation fix for qt-4.7.1 in new (non-stable) revision, 
+  bug 345185
 
 *kdelibs-4.5.4 (02 Dec 2010)
 
