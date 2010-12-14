@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.1 2010/09/27 10:12:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.2 2010/12/14 16:40:25 dilfridge Exp $
 
 EAPI="2"
 
@@ -41,6 +41,8 @@ src_prepare() {
 		1.8.*) ;;
 		*) sed -e "s/require 'ftools'//g" -i admin/* || die ;;
 	esac
+
+	epatch "${FILESDIR}/${P}-ruby-1.9-fix.patch" || die "Failed to apply patch to fix compilation with ruby-1.9"
 }
 
 src_configure() {
