@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.62 2010/11/05 20:53:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.63 2010/12/14 03:06:21 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> ortp-0.13.1-r1.ebuild:
+  Drop mips keywords, bug 266193
 
   05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ortp-0.13.1-r1.ebuild:
   Revert to ~ppc64; no stable consumers in the tree
