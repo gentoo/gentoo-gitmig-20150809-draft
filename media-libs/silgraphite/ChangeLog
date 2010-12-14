@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.16 2010/10/02 20:24:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.17 2010/12/14 04:03:28 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> silgraphite-2.3.1.ebuild:
+  Add ~mips, bug 300068
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> silgraphite-2.3.1.ebuild:
   Marked ~x64-macos, bug #333981
