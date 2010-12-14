@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/speaklater
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/speaklater/ChangeLog,v 1.1 2010/12/14 22:24:38 rafaelmartins Exp $
+
+*speaklater-1.2 (14 Dec 2010)
+
+  14 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +speaklater-1.2.ebuild, +metadata.xml:
+  Initial version.
+
