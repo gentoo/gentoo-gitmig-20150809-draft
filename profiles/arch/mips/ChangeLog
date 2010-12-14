@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.35 2010/12/07 03:20:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.36 2010/12/14 01:59:55 mattst88 Exp $
+
+  14 Dec 2010; Matt Turner <mattst88@gentoo.org> use.mask:
+  use.mask USE=rpm. Dropping app-arch/rpm keywords.
 
   07 Dec 2010; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Added 'dev-perl/Authen-SASL kerberos' to package.use.mask since we don't
