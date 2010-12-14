@@ -64,7 +64,7 @@ Index: mpd-0.16/doc/mpdconf.example
  #
  # And for Unix Socket
 -#bind_to_address		"~/.mpd/socket"
-+bind_to_address		"/var/lib/mpd/soicket"
++bind_to_address		"/var/lib/mpd/socket"
  #
  # This setting is the TCP port that is desired for the daemon to get assigned
  # to.
