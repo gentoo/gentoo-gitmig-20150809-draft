@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.224 2010/12/14 11:37:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.225 2010/12/14 18:34:05 angelos Exp $
+
+  14 Dec 2010; Christoph Mende <angelos@gentoo.org> mpd-0.16.ebuild:
+  Renamed avahi to zeroconf and changed avahi dependency to avahi[dbus] (bug
+  337165)
 
   14 Dec 2010; Markos Chandras <hwoarang@gentoo.org> files/mpd-0.16.conf.patch:
   Fix typo

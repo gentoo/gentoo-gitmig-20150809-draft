@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.3 2010/12/13 15:34:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.4 2010/12/14 18:34:05 angelos Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug +fifo +ffmpeg flac
+IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
 fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
 mikmod modplug mpg123 musepack +network ogg oss pipe pulseaudio sid sqlite unicode
-vorbis wavpack wildmidi zip"
+vorbis wavpack wildmidi zeroconf zip"
 
 RDEPEND="!sys-cluster/mpich2
 	>=dev-libs/glib-2.6:2
@@ -49,7 +49,7 @@ RDEPEND="!sys-cluster/mpich2
 	vorbis? ( media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
 	wildmidi? ( media-sound/wildmidi )
-	avahi? ( net-dns/avahi )
+	zeroconf? ( net-dns/avahi[dbus] )
 	zip? ( dev-libs/zziplib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -99,7 +99,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable ao) \
 		$(use_enable audiofile) \
-		$(use_with avahi zeroconf avahi) \
+		$(use_with zeroconf zeroconf avahi) \
 		$(use_enable bzip2) \
 		$(use_enable cdio iso9660) \
 		$(use_enable cue) \
