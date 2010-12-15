@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.6 2010/12/02 16:19:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.7 2010/12/15 18:38:42 aballier Exp $
+
+  15 Dec 2010; Alexis Ballier <aballier@gentoo.org>
+  kpathsea-6.0.0_p20100722.ebuild:
+  Set LC_ALL to C in src_configure, bug #347798 by Priit Laes (IRC: plaes)
+  <plaes@plaes.org>
 
   02 Dec 2010; Alexis Ballier <aballier@gentoo.org>
   kpathsea-6.0.0_p20100722.ebuild:
