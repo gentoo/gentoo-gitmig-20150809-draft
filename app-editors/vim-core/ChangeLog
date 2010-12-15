@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.348 2010/12/14 10:04:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.349 2010/12/15 22:15:16 maekke Exp $
+
+  15 Dec 2010; Markus Meier <maekke@gentoo.org> vim-core-7.3.50.ebuild:
+  arm stable, bug #348269
 
   14 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   vim-core-7.3.50.ebuild:
