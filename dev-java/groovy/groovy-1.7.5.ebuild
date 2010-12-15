@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.7.5.ebuild,v 1.1 2010/10/26 11:16:13 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.7.5.ebuild,v 1.2 2010/12/15 12:33:14 phajdan.jr Exp $
 
 # Groovy's build system is Ant based, but they use Maven for fetching the dependencies.
 # We just have to remove the fetch dependencies target, and then we can use Ant for this ebuild.
@@ -28,7 +28,7 @@ HOMEPAGE="http://groovy.codehaus.org/"
 SRC_URI="http://dist.groovy.codehaus.org/distributions/${PN}-src-${PV}.zip"
 LICENSE="codehaus-groovy"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 RESTRICT="test"
 
