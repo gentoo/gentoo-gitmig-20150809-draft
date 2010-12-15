@@ -1,12 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Technologies, Inc.
+# Copyright 1999-2010 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/files/ietd-init.d-2,v 1.1 2008/07/18 16:03:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/files/ietd-init.d-2,v 1.2 2010/12/15 11:50:05 fauli Exp $
 
 MEM_SIZE=1048576
 DAEMON=/usr/sbin/ietd
 CONFIG_FILE=/etc/ietd.conf
-PID_FILE=/var/run/iscsi_trgt.pid
+PID_FILE=/var/run/ietd.pid
 NAME="iSCSI Enterprise Target"
 
 ARGS=""

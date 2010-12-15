@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.36 2010/08/11 17:57:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.37 2010/12/15 11:50:04 fauli Exp $
+
+*iscsitarget-1.4.20.2 (15 Dec 2010)
+
+  15 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  +iscsitarget-1.4.20.2.ebuild,
+  +files/iscsitarget-1.4.20.2_kernel-2.6.36.patch, files/ietd-init.d-2:
+  version bump for bugs 340449 and 325181, with help of more people than I
+  can list here
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> iscsitarget-1.4.19.ebuild:
   Marked ppc stable for bug #314187.
