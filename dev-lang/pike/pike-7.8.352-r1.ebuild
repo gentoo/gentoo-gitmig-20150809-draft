@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.1 2010/12/15 04:23:57 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.2 2010/12/15 04:38:42 araujo Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ src_compile() {
 	# otherwise let configure work it out for itself
 	use hardened && myconf="${myconf} --without-machine-code"
 
-	make \
+	emake \
 		CONFIGUREARGS=" \
 			--prefix=/usr \
 			--libdir=/usr/$(get_libdir) \
