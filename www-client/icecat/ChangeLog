@@ -1,6 +1,14 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.63 2010/12/15 00:25:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.64 2010/12/15 17:07:01 polynomial-c Exp $
+
+*icecat-3.6.13-r1 (15 Dec 2010)
+
+  15 Dec 2010; Lars Wendler <polynomial-c@gentoo.org> -icecat-3.6.13.ebuild,
+  +icecat-3.6.13-r1.ebuild:
+  New privacy extension seems to be broken. Blocks other addons and the
+  language packs (bugs #348785 and #348799). Removed for now in 3.6.13-r1 and
+  comitted straight to stable.
 
   15 Dec 2010; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.13.ebuild:
   Use 3.6.13 language packs.

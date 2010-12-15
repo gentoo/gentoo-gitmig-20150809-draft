@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13.ebuild,v 1.5 2010/12/15 00:25:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13-r1.ebuild,v 1.1 2010/12/15 17:07:02 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -260,6 +260,10 @@ src_install() {
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
 		|| die "failed to symlink"
+
+	# Extension seems to be broken. Blocks other addons and the language
+	# packs. (bugs #348785 and #348799)
+	rm -f "${ED}"/${MOZILLA_FIVE_HOME}/extensions/privacy_ext.xpi || die
 }
 
 pkg_postinst() {
