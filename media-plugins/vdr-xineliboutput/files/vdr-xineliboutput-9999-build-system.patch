@@ -1,11 +1,11 @@
 Index: Makefile
 ===================================================================
 RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/Makefile,v
-retrieving revision 1.101
-diff -u -b -B -r1.101 Makefile
---- Makefile	25 Nov 2010 14:28:49 -0000	1.101
-+++ Makefile	26 Nov 2010 19:42:55 -0000
-@@ -312,7 +312,7 @@
+retrieving revision 1.105
+diff -u -b -B -r1.105 Makefile
+--- Makefile	15 Dec 2010 14:43:36 -0000	1.105
++++ Makefile	15 Dec 2010 17:05:50 -0000
+@@ -323,7 +323,7 @@
  install : XINELIBOUTPUT_INSTALL_MSG =
  
  .PHONY: all
@@ -14,34 +14,7 @@ diff -u -b -B -r1.101 Makefile
  
  frontends: config $(TARGETS_FE) $(TARGETS_XINE)
  	$(XINELIBOUTPUT_INSTALL_MSG)
-@@ -329,8 +329,6 @@
- 
- $(VDRPLUGIN): $(OBJS) $(OBJS_MPG)
- 	$(CXX) $(CXXFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS) $(OBJS_MPG) $(LIBS) $(LIBS_VDR) -o $@
--	@-rm -rf $(LIBDIR)/$@
--	@cp $@ $(LIBDIR)/$@
- 
- #
- # vdr-sxfe
-@@ -338,8 +336,6 @@
- 
- $(VDRPLUGIN_SXFE): $(OBJS_SXFE_SO)
- 	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_SXFE_SO) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) -o $@
--	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_SXFE)
--	@cp $@ $(LIBDIR)/$(VDRPLUGIN_SXFE)
- $(VDRSXFE): $(OBJS_SXFE)
- 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_SXFE) $(LIBS_X11) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
- 
-@@ -349,8 +345,6 @@
- 
- $(VDRPLUGIN_FBFE): $(OBJS_FBFE_SO)
- 	$(CC) $(CFLAGS) $(LDFLAGS_SO) $(LDFLAGS) $(OBJS_FBFE_SO) $(LIBS_XINE) $(LIBS_JPEG) -o $@
--	@-rm -rf $(LIBDIR)/$(VDRPLUGIN_FBFE)
--	@cp $@ $(LIBDIR)/$(VDRPLUGIN_FBFE)
- $(VDRFBFE): $(OBJS_FBFE)
- 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS_FBFE) $(LIBS_XINE) $(LIBS_JPEG) $(LIBS_PTHREAD) -o $@
- 
-@@ -371,7 +365,7 @@
+@@ -389,7 +389,7 @@
  # install
  #
  
@@ -50,44 +23,13 @@ diff -u -b -B -r1.101 Makefile
  ifeq ($(XINELIBOUTPUT_XINEPLUGIN), yes)
  	@mkdir -p $(DESTDIR)/$(XINEPLUGINDIR)/post
  	@echo Installing $(DESTDIR)/$(XINEPLUGINDIR)/$(XINEINPUTVDR)
-@@ -392,12 +386,30 @@
- 	@mkdir -p $(DESTDIR)/$(BINDIR)
- 	@-rm -rf $(DESTDIR)/$(BINDIR)/vdr-fbfe
- 	@$(INSTALL) -m 0755 vdr-fbfe $(DESTDIR)/$(BINDIR)/vdr-fbfe
-+ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
-+	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
-+	@mkdir -p $(DESTDIR)$(LIBDIR)
-+	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
-+	@$(INSTALL) -m 0755 $(VDRPLUGIN_FBFE) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_FBFE)
-+endif
- endif
- ifeq ($(XINELIBOUTPUT_X11), yes)
- 	@echo Installing $(DESTDIR)/$(BINDIR)/vdr-sxfe
- 	@mkdir -p $(DESTDIR)/$(BINDIR)
- 	@-rm -rf $(DESTDIR)/$(BINDIR)/vdr-sxfe
- 	@$(INSTALL) -m 0755 vdr-sxfe $(DESTDIR)/$(BINDIR)/vdr-sxfe
-+ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
-+	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
-+	@mkdir -p $(DESTDIR)$(LIBDIR)
-+	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
-+	@$(INSTALL) -m 0755 $(VDRPLUGIN_SXFE) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN_SXFE)
-+endif
-+endif
-+ifeq ($(XINELIBOUTPUT_VDRPLUGIN), yes)
-+	@echo Installing $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
-+	@mkdir -p $(DESTDIR)$(LIBDIR)
-+	@-rm -rf $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
-+	@$(INSTALL) -D -m 0755 $(VDRPLUGIN) $(DESTDIR)$(LIBDIR)/$(VDRPLUGIN)
- endif
- 
- dist: clean
 Index: configure
 ===================================================================
 RCS file: /cvsroot/xineliboutput/vdr-xineliboutput/configure,v
 retrieving revision 1.29
 diff -u -b -B -r1.29 configure
 --- configure	23 Nov 2010 13:21:06 -0000	1.29
-+++ configure	26 Nov 2010 19:42:55 -0000
++++ configure	15 Dec 2010 17:05:50 -0000
 @@ -231,7 +231,6 @@
    xshm
    xdpms
