@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352.ebuild,v 1.1 2010/12/14 12:45:45 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.1 2010/12/15 04:23:57 araujo Exp $
 
 EAPI="2"
 
@@ -101,6 +101,8 @@ src_install() {
 	# The sandbox really ought to allow deletion of files
 	# that belong to previous installs of the ebuild, or
 	# even better: hide them.
+	sed -i s/rm\(mod\+\"\.o\"\)\;/break\;/ "${S}"/bin/install.pike || die "Failed to modify install.pike (1)"
+	sed -i 's/\(Array.map *( *files_to_delete *- *files_to_not_delete,*rm*);\)/; \/\/ \1/' "${S}"/bin/install.pike || die "Failed to modify install.pike (2)"
 	if use doc ; then
 		emake INSTALLARGS="--traditional" buildroot="${D}" install || die "emake failed"
 		einfo "Installing 60MB of docs, this could take some time ..."
