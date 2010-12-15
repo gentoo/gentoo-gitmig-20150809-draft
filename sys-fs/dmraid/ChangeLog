@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.23 2010/08/17 19:47:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.24 2010/12/15 17:25:09 tommy Exp $
+
+*dmraid-1.0.0_rc16-r3 (15 Dec 2010)
+
+  15 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +dmraid-1.0.0_rc16-r3.ebuild,
+  +files/dmraid-1.0.0_rc16-static-build-fixes.patch:
+  proxy commit: Revision bump, fixes bug 347712
 
 *dmraid-1.0.0_rc16-r2 (17 Aug 2010)
 
