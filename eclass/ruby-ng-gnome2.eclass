@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.4 2010/12/15 12:36:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.5 2010/12/15 12:38:47 graaff Exp $
 #
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -53,7 +53,7 @@ each_ruby_compile() {
 # Install the files in the subbinding for each specific ruby target.
 each_ruby_install() {
 	# Create the directories, or the package will create them as files.
-	local archdir=ruby_rbconfig_value "sitearchdir"
+	local archdir=$(ruby_rbconfig_value "sitearchdir")
 	dodir ${archdir#${EPREFIX}} /usr/$(get_libdir)/pkgconfig
 
 	emake DESTDIR="${D}" install || die "make install failed"
