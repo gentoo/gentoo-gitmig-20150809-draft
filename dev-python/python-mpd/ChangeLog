@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.14 2010/12/14 21:52:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.15 2010/12/15 11:29:39 angelos Exp $
+
+  15 Dec 2010; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.1.ebuild,
+  python-mpd-0.3.0.ebuild:
+  Dropped python3 from PYTHON_DEPEND, fixed homepage, fixed license for 0.3.0
+  and dropped pkgconfig from DEPEND
 
 *python-mpd-0.3.0 (14 Dec 2010)
 
