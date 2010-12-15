@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/desktopcouch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/ChangeLog,v 1.4 2010/04/27 18:45:43 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/ChangeLog,v 1.5 2010/12/15 20:17:01 neurogeek Exp $
+
+*desktopcouch-0.6.9_beta (15 Dec 2010)
+
+  15 Dec 2010; Jesus Rivero <neurogeek@gentoo.org>
+  +desktopcouch-0.6.9_beta.ebuild,
+  +files/desktopcouch-0.6.9b-drop_ubuntuone_support.patch,
+  +files/desktopcouch-0.6.9b-setup_hardlinks.patch:
+  Version bump. Closes bug #333375
 
   27 Apr 2010; Jesus Rivero <neurogeek@gentoo.org>
   -desktopcouch-0.6.1-r1.ebuild:
