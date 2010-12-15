@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.119 2010/12/03 23:36:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.120 2010/12/15 22:20:48 eva Exp $
+
+  15 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> gthumb-2.12.1.ebuild:
+  Fix sed expression with USE=debug.
 
 *gthumb-2.12.1 (03 Dec 2010)
 

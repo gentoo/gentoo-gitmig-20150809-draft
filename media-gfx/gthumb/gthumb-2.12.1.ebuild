@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.1.ebuild,v 1.1 2010/12/03 23:36:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.1.ebuild,v 1.2 2010/12/15 22:20:48 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -66,7 +66,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# Remove unwanted CFLAGS added with USE=debug
-	sed 's/CFLAGS+=" -g -O0 -DDEBUG"//' -i configure.ac configure || die
+	sed 's/CFLAGS="$CFLAGS -g -O0 -DDEBUG"//' -i configure.ac configure || die
 }
 
 src_install() {
