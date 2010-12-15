@@ -1,6 +1,11 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.27 2010/07/06 15:16:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.28 2010/12/15 12:40:11 lu_zero Exp $
+
+*devede-3.16.9 (15 Dec 2010)
+
+  15 Dec 2010; Luca Barbato <lu_zero@gentoo.org> +devede-3.16.9.ebuild:
+  Version bump as requested by ago
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   devede-3.12c.ebuild, devede-3.13.1.ebuild, devede-3.14.0.ebuild,
