@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.62 2010/12/14 13:51:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.63 2010/12/15 00:25:05 polynomial-c Exp $
+
+  15 Dec 2010; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.13.ebuild:
+  Use 3.6.13 language packs.
 
   14 Dec 2010; Markos Chandras <hwoarang@gentoo.org> icecat-3.6.13.ebuild:
   Stable on amd64 wrt bug #348316

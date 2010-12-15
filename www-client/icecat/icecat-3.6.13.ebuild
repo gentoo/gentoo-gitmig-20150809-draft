@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13.ebuild,v 1.4 2010/12/14 13:51:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.13.ebuild,v 1.5 2010/12/15 00:25:05 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -33,8 +33,7 @@ IUSE="+alsa +ipc java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
-#LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${MY_PV}"
-LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/3.6.12"
+LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${MY_PV}"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
