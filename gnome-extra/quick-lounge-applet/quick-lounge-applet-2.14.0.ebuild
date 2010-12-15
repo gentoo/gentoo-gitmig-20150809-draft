@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.8 2010/12/08 17:47:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.14.0.ebuild,v 1.9 2010/12/15 22:38:20 eva Exp $
 
 EAPI="2"
 
@@ -19,11 +19,11 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=gnome-base/gconf-2.0
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/gnome-menus-2.12
-	sys-devel/gettext"
-
+"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig
+	sys-devel/gettext
 	>=dev-util/intltool-0.35.0
 	app-text/gnome-doc-utils"
 
