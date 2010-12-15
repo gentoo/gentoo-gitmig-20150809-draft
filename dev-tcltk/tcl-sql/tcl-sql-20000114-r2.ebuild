@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114-r1.ebuild,v 1.2 2010/12/07 18:59:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114-r2.ebuild,v 1.1 2010/12/15 20:06:31 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tcl-sql/${PN}-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="
@@ -31,7 +31,8 @@ src_prepare() {
 }
 
 src_install() {
-	dolib.so sql.so || die
+	exeinto /usr/$(get_libdir)/${P}
+	doexe sql.so || die
 	dodoc CHANGES.txt CODE_DESCRIPTION.txt docs/sample.full.txt docs/sample.simple.txt || die
 	dohtml README.html docs/api.html || die
 }

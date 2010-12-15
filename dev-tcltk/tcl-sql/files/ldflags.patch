@@ -22,7 +22,7 @@ index 81a80ea..7738920 100644
  
  sql.so:	$(OBJS)
 -	$(LD) $(OBJS) $(EXTRA_LINKS) $(LD_FLAGS) $(EXTRA_LD_FLAGS) -o sql.so
-+	$(CXX) $(LDFLAGS) $(OBJS) $(EXTRA_LINKS) $(LD_FLAGS) $(EXTRA_LD_FLAGS) -o sql.so
++	$(CXX) $(LDFLAGS) $(EXTRA_LINKS) $(OBJS) -o sql.so $(LD_FLAGS) $(EXTRA_LD_FLAGS) -ltcl
  
  clean:
  	@ rm -f *~ $(OBJ_DIR)/*.o sql.so
