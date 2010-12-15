@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.305 2010/12/13 22:08:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.306 2010/12/15 23:35:09 idl0r Exp $
+
+  15 Dec 2010; Christian Ruppert <idl0r@gentoo.org> files/named.init-r9:
+  Rework the fuser call.
 
 *bind-9.7.2_p3-r2 (13 Dec 2010)
 *bind-9.6.2_p3-r2 (13 Dec 2010)

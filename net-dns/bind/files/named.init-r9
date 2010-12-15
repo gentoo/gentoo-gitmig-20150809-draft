@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r9,v 1.1 2010/12/13 22:08:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r9,v 1.2 2010/12/15 23:35:09 idl0r Exp $
 
 opts="start stop reload restart checkconfig checkzones"
 
@@ -162,7 +162,7 @@ stop() {
 		ebegin "Umounting chroot dirs"
 
 		# just to be sure everything gets clean
-		while [ -n "$(fuser ${CHROOT} 2>/dev/null)" ]; do
+		while fuser -s ${CHROOT} 2>/dev/null; do
 			if [ "${reported}" -eq 0 ]; then
 				einfo "Waiting until all named processes are stopped"
 				reported=1
