@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.66 2010/12/13 16:04:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.67 2010/12/15 22:09:01 maekke Exp $
+
+  15 Dec 2010; Markus Meier <maekke@gentoo.org> pyopenssl-0.11.ebuild:
+  arm stable, bug #348084
 
   13 Dec 2010; Thomas Kahle <tomka@gentoo.org> pyopenssl-0.11.ebuild:
   x86 stable per bug 348084
