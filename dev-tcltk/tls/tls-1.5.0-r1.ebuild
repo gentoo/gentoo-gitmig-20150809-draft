@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0-r1.ebuild,v 1.8 2009/09/22 11:40:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0-r1.ebuild,v 1.9 2010/12/15 19:35:43 jlec Exp $
 
 inherit eutils
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="tk"
 
-RESTRICT="test"
-
-DEPEND=">=dev-lang/tcl-8.3.3
+DEPEND="
+	dev-lang/tcl
 	dev-libs/openssl
-	tk? ( >=dev-lang/tk-8.3.3 )"
+	tk? ( dev-lang/tk )"
+RDEPEND="${DEPEND}"
+
+RESTRICT="test"
 
 S="${WORKDIR}/${PN}${PV%.*}"
 
@@ -29,12 +31,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-ssl-dir=/usr || die
+	econf --with-ssl-dir=/usr
 	emake || die
 }
 
 src_install() {
 	einstall || die
-	dodoc ChangeLog README.txt
-	dohtml tls.htm
+	dodoc ChangeLog README.txt || die
+	dohtml tls.htm || die
 }
