@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.7 2009/02/09 14:42:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.8 2010/12/15 07:07:47 ali_bush Exp $
 
 inherit java-pkg-2
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND=""
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4
+	!dev-lang/scala"
 S=${WORKDIR}/scala-${PV}
 
 src_compile() {
