@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6222 2010/12/14 19:33:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6223 2010/12/15 17:33:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3812,6 +3812,11 @@ sys-fs/aufs2:nfs - Enable support for nfs export
 sys-fs/aufs2:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
+sys-fs/dmraid:dietlibc - Compile against dev-libs/dietlibc
+sys-fs/dmraid:intel_led - Enable Intel LED support
+sys-fs/dmraid:klibc - Compile against dev-libs/klibc
+sys-fs/dmraid:led - Enable LED support
+sys-fs/dmraid:mini - Create a minimal binary suitable for early boot environments
 sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
