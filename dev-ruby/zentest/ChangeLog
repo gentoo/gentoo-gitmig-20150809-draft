@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.80 2010/12/03 16:52:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.81 2010/12/15 07:07:25 graaff Exp $
+
+*zentest-4.4.2 (15 Dec 2010)
+
+  15 Dec 2010; Hans de Graaff <graaff@gentoo.org> +zentest-4.4.2.ebuild:
+  Version bump: various bug fixes and enhancements.
 
   03 Dec 2010; Fabian Groffen <grobian@gentoo.org> zentest-4.4.0.ebuild:
   Marked ~{ppc,x64,x86}-macos
