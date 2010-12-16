@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.7 2010/03/14 09:56:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.8 2010/12/16 15:17:34 jlec Exp $
 
-inherit fortran flag-o-matic
+inherit flag-o-matic
 
 # we need this to prevent itpp's specialized debug lib
 # (built with USE="debug" set) from being stripped
@@ -32,7 +32,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	fortran_src_unpack
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
