@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.2 2010/06/17 01:54:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.3 2010/12/16 15:47:27 jlec Exp $
 
-inherit eutils toolchain-funcs fortran check-reqs
+inherit eutils toolchain-funcs check-reqs
 
 PID=967
 PB=${PN}
@@ -48,16 +48,13 @@ pkg_setup() {
 	check_reqs
 
 	# Check and setup fortran
-	FORTRAN="gfortran ifc g77"
-	use int64 && FORTRAN="gfortran ifc"
 	if use fortran95; then
-		FORTRAN="gfortran ifc"
 		# blas95 and lapack95 don't compile with gfortran < 4.2
-		[[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && FORTRAN="ifc"
+		[[ $(tc-getFC) == g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && 
+		die "blas95 and lapack95 don't compile with gfortran < 4.2"
 	fi
-	fortran_pkg_setup
 	MKL_FC="gnu"
-	[[ ${FORTRANC} == if* ]] && MKL_FC="intel"
+	[[ $(tc-getFC) == if* ]] && MKL_FC="intel"
 
 	# build profiles according to what compiler is installed
 	MKL_CC="gnu"
@@ -145,11 +142,11 @@ src_compile() {
 	if use fortran95; then
 		einfo "Compiling fortan95 static lib wrappers"
 		local myconf="lib${MKL_ARCH}"
-		[[ ${FORTRANC} == gfortran ]] && \
+		[[ $(tc-getFC) == gfortran ]] && \
 			myconf="${myconf} FC=gfortran"
 		if use int64; then
 			myconf="${myconf} interface=ilp64"
-			[[ ${FORTRANC} == gfortran ]] && \
+			[[ $(tc-getFC) == gfortran ]] && \
 				myconf="${myconf} FOPTS=-fdefault-integer-8"
 		fi
 		for x in blas95 lapack95; do

@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.9 2008/04/21 15:55:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.10 2010/12/16 15:47:27 jlec Exp $
 
-inherit eutils versionator toolchain-funcs fortran
+inherit eutils versionator toolchain-funcs
 
 PID=779
 PB=${PN}
@@ -51,10 +51,6 @@ pkg_setup() {
 	# setting up compilers
 	MKL_CC=gnu
 	[[ $(tc-getCC) == icc ]] && MKL_CC=icc
-	FORTRAN="gfortran ifc g77"
-	use fortran95 && FORTRAN="gfortran ifc"
-	use int64 && FORTRAN="gfortran ifc"
-	fortran_pkg_setup
 }
 
 src_unpack() {
@@ -129,9 +125,9 @@ src_unpack() {
 	fi
 
 	# fix a bad makefile in the test
-	if [[ ${FORTRANC} == gfortran ]] || [[ ${FORTRANC} == if* ]]; then
+	if [[ $(tc-getFC) == gfortran ]] || [[ $(tc-getFC) == if* ]]; then
 		sed -i \
-			-e "s/g77/${FORTRANC}/" \
+			-e "s/g77/$(tc-getFC)/" \
 			-e 's/-DGNU_USE//' \
 			tests/fftf/makefile || die "sed fftf test failed"
 	fi
@@ -148,7 +144,7 @@ src_compile() {
 			for x in blas95 lapack95; do
 				cd "${S}"/interfaces/${x}
 				emake \
-					FC=${FORTRANC} \
+					FC=$(tc-getFC) \
 					MKL_SUBVERS=${p} \
 					lib${MKL_ARCH} \
 					|| die "emake $(basename ${x}) failed"
@@ -173,7 +169,7 @@ src_compile() {
 
 src_test() {
 	local usegnu
-	[[ ${FORTRANC} = g* ]] && usegnu=gnu
+	[[ $(tc-getFC) = g* ]] && usegnu=gnu
 	# restrict tests for blas and cblas for now.
 	# for t in blas cblas fft*; do
 	for t in blas lapack; do
@@ -182,7 +178,7 @@ src_test() {
 			einfo "Testing ${t} for ${p}"
 			emake -j1 \
 				F=${usegnu} \
-				FC=${FORTRANC} \
+				FC=$(tc-getFC) \
 				MKL_SUBVERS=${p} \
 				lib${MKL_ARCH} \
 				|| die "emake ${t} failed"
@@ -200,7 +196,7 @@ mkl_install_lib() {
 	local extlibs="-L${libdir} -lguide -lpthread"
 	[[ "${1}" == "serial" ]] && extlibs=""
 
-	[[ "${FORTRANC}" == "gfortran" ]] && \
+	[[ "$(tc-getFC)" == "gfortran" ]] && \
 		gfortranlibs="-L${libdir} -lmkl_gfortran"
 
 	cp -pPR "${S}"/${proflib} "${D}"${MKL_DIR}
@@ -290,7 +286,7 @@ pkg_postinst() {
 	elif use serial; then
 		ext=serial
 	fi
-	ESELECT_PROF="${PN}-${FORTRANC}-${ext}"
+	ESELECT_PROF="${PN}-$(tc-getFC)-${ext}"
 	# if blas profile is mkl, set lapack and cblas profiles as mkl
 	local blas_lib=$(eselect blas show | cut -d' ' -f2)
 	for p in blas cblas lapack; do
