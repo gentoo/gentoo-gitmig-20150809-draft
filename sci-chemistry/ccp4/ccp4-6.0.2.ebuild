@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.8 2010/12/16 12:55:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.9 2010/12/16 13:09:16 jlec Exp $
 
 inherit eutils gnuconfig toolchain-funcs
 
@@ -59,7 +59,7 @@ S="${WORKDIR}/${PN}-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	einfo "Applying upstream patches ..."
 	for patch in $(seq $PATCH_TOT); do
@@ -67,7 +67,7 @@ src_unpack() {
 		dir=$(eval echo \${${base}[0]})
 		p=$(eval echo \${${base}[1]})
 		pushd ${dir} >& /dev/null
-		ccp_patch ${DISTDIR}/${p}
+		ccp_patch "${DISTDIR}/${p}"
 		popd >& /dev/null
 	done
 	einfo "Done."
@@ -78,48 +78,48 @@ src_unpack() {
 	# --bindir and --libdir instead of straight copying after build
 
 	# it attempts to install some libraries during the build
-	#ccp_patch ${FILESDIR}/${P}-install-libs-at-install-time.patch
+	#ccp_patch "${FILESDIR}"/${P}-install-libs-at-install-time.patch
 	# hklview/ipdisp.exe/xdlmapman/ipmosflm can't find libxdl_view
 	# without this patch when --libdir is set
 	# Rotgen still needs more patching to find it
-	#ccp_patch ${FILESDIR}/add-xdl-libdir.patch
+	#ccp_patch "${FILESDIR}"/add-xdl-libdir.patch
 
 	# it tries to create libdir, bindir etc on live system in configure
-	ccp_patch ${FILESDIR}/${PV}-dont-make-dirs-in-configure.patch
+	ccp_patch "${FILESDIR}"/${PV}-dont-make-dirs-in-configure.patch
 
 	# We already have sci-chemistry/rasmol
-	ccp_patch ${FILESDIR}/dont-build-rasmol.patch
+	ccp_patch "${FILESDIR}"/dont-build-rasmol.patch
 
 	# We already have sci-chemistry/pdb-extract
 # Use configure option instead
-#	ccp_patch ${FILESDIR}/dont-build-pdb-extract.patch
+#	ccp_patch "${FILESDIR}"/dont-build-pdb-extract.patch
 
-	ccp_patch ${FILESDIR}/create-mosflm-bindir.patch
-	ccp_patch ${FILESDIR}/make-mosflm-libdir.patch
-	ccp_patch ${FILESDIR}/make-mosflm-index-libdir.patch
-	ccp_patch ${FILESDIR}/make-mosflm-cbf-libdir.patch
-	ccp_patch ${FILESDIR}/make-ipmosflm-dir.patch
+	ccp_patch "${FILESDIR}"/create-mosflm-bindir.patch
+	ccp_patch "${FILESDIR}"/make-mosflm-libdir.patch
+	ccp_patch "${FILESDIR}"/make-mosflm-index-libdir.patch
+	ccp_patch "${FILESDIR}"/make-mosflm-cbf-libdir.patch
+	ccp_patch "${FILESDIR}"/make-ipmosflm-dir.patch
 
 # Don't use these when we aren't building phaser
-#	ccp_patch ${FILESDIR}/make-phaser-bindir.patch
-#	ccp_patch ${FILESDIR}/no-phaser-ld-assume-kernel.patch
+#	ccp_patch "${FILESDIR}"/make-phaser-bindir.patch
+#	ccp_patch "${FILESDIR}"/no-phaser-ld-assume-kernel.patch
 #	# scons config.py tries to chmod python on live system
-#	ccp_patch ${FILESDIR}/dont-chmod-python-binary.patch
+#	ccp_patch "${FILESDIR}"/dont-chmod-python-binary.patch
 
 	# Don't use this when we aren't building clipper
 	# For some reason clipper check for $enableval even when --enable is passed
-	ccp_patch ${FILESDIR}/pass-clipper-enablevals.patch
-	ccp_patch ${FILESDIR}/clipper-find-mccp4-includes.patch
+	ccp_patch "${FILESDIR}"/pass-clipper-enablevals.patch
+	ccp_patch "${FILESDIR}"/clipper-find-mccp4-includes.patch
 
 	# Default to firefox browser, not 'netscape'
-	ccp_patch ${FILESDIR}/ccp4i-default-to-firefox.patch
+	ccp_patch "${FILESDIR}"/ccp4i-default-to-firefox.patch
 
 	# Also use -lpthread when linking blas and lapack
 	# We may need more fixing to use libcblas for the C files
-	ccp_patch ${FILESDIR}/check-blas-lapack-pthread.patch
+	ccp_patch "${FILESDIR}"/check-blas-lapack-pthread.patch
 
 	# gerror_ gets defined twice on ppc if you're using gfortran/g95
-	ccp_patch ${FILESDIR}/${PV}-ppc-double-define-gerror.patch
+	ccp_patch "${FILESDIR}"/${PV}-ppc-double-define-gerror.patch
 
 	einfo "Done." # done applying Gentoo patches
 	echo
@@ -150,21 +150,21 @@ src_compile() {
 	# Sets up env
 	ln -s \
 		ccp4.setup-bash \
-		${S}/include/ccp4.setup
+		"${S}"/include/ccp4.setup
 
 	# We agree to the license by emerging this, set in LICENSE
 	sed -i \
 		-e "s~^\(^agreed=\).*~\1yes~g" \
-		${S}/configure
+		"${S}"/configure
 
 	# Fix up variables -- need to reset CCP4_MASTER at install-time
 	sed -i \
 		-e "s~^\(setenv CCP4_MASTER.*\)/.*~\1${WORKDIR}~g" \
 		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1/usr/bin~g" \
-		${S}/include/ccp4.setup*
+		"${S}"/include/ccp4.setup*
 
 	# Set up variables for build
-	source ${S}/include/ccp4.setup
+	source "${S}"/include/ccp4.setup
 
 	export CC=$(tc-getCC)
 	export CXX=$(tc-getCXX)
@@ -190,7 +190,7 @@ src_compile() {
 
 src_install() {
 	# Set up variables for build
-	source ${S}/include/ccp4.setup
+	source "${S}"/include/ccp4.setup
 
 # Only needed when using --bindir and --libdir
 	# Needed to avoid errors. Originally tried to make lib and bin
@@ -210,23 +210,23 @@ src_install() {
 		-e "s~^\(.*setenv CLIBD_MON .*\)\$CCP4.*~\1\$CLIBD/monomers/~g" \
 		-e "s~^\(.*setenv MOLREPLIB .*\)\$CCP4.*~\1\$CLIBD/monomers/~g" \
 		-e "s~^\(.*setenv CCP4_BROWSER.*\).*~\1 firefox~g" \
-		${S}/include/ccp4.setup*
+		"${S}"/include/ccp4.setup*
 
 	# Get rid of S instances
 	# Also the main clipper library is built as libclipper-core, not libclipper
 	sed -i \
 		-e "s:${S}:$usr:g" \
 		-e "s:lclipper :lclipper-core :g" \
-		${S}/bin/clipper-config
+		"${S}"/bin/clipper-config
 #	sed -i \
 #		-e "s:${S}:usr:g" \
-#		${S}/$(get_libdir)/cctbx/cctbx_build/setpaths*
+#		"${S}"/$(get_libdir)/cctbx/cctbx_build/setpaths*
 
 	# Bins
-	dobin ${S}/bin/* || die
+	dobin "${S}"/bin/* || die
 
 	# Libs
-	for file in ${S}/lib/*; do
+	for file in "${S}"/lib/*; do
 		if [[ -d ${file} ]]; then
 			continue
 		elif [[ -x ${file} ]]; then
@@ -240,7 +240,7 @@ src_install() {
 	# Fix libdir in all *.la files
 	sed -i \
 		-e "s:^\(libdir=\).*:\1\'/usr/$(get_libdir)\':g" \
-		${D}/usr/$(get_libdir)/*.la
+		"${D}"/usr/$(get_libdir)/*.la
 
 	# Library symlinks
 	local LIBNAMES="libclipper-ccp4.so.0.0.0
@@ -320,39 +320,39 @@ src_install() {
 
 	# Environment files, setup scripts, etc.
 	insinto /usr/share/ccp4/include
-	doins ${S}/include/* || die
+	doins "${S}"/include/* || die
 
 	# CCP4Interface - GUI
 	insinto /usr/$(get_libdir)/ccp4
-	doins -r ${S}/ccp4i || die
+	doins -r "${S}"/ccp4i || die
 	exeinto /usr/$(get_libdir)/ccp4/ccp4i/bin
-	doexe ${S}/ccp4i/bin/* || die
+	doexe "${S}"/ccp4i/bin/* || die
 
 	# Data
 	insinto /usr/share/ccp4
-	doins -r ${S}/lib/data || die
+	doins -r "${S}"/lib/data || die
 
 	# Include files
 	insinto /usr/include
 	for i in ccp4 clipper mmdb ssm; do
-		doins -r ${S}/include/${i} || die
+		doins -r "${S}"/include/${i} || die
 	done
 
 	# Install docs and examples
 
-	doman ${S}/man/cat1/*
+	doman "${S}"/man/cat1/*
 
-	mv ${S}/manual/README ${S}/manual/README-manual
-	dodoc ${S}/manual/*
+	mv "${S}"/manual/README "${S}"/manual/README-manual
+	dodoc "${S}"/manual/*
 
-	dodoc ${S}/README ${S}/CHANGES
+	dodoc "${S}"/README "${S}"/CHANGES
 
-	dodoc ${S}/doc/*
-	rm ${D}/usr/share/doc/${PF}/GNUmakefile.gz
-	rm ${D}/usr/share/doc/${PF}/COPYING.gz
+	dodoc "${S}"/doc/*
+	rm "${D}"/usr/share/doc/${PF}/GNUmakefile.gz
+	rm "${D}"/usr/share/doc/${PF}/COPYING.gz
 
-	dohtml -r ${S}/html/*
-	dodoc ${S}/examples/README
+	dohtml -r "${S}"/html/*
+	dodoc "${S}"/examples/README
 
 	# Fix wrongly installed HTML pages from clipper
 	dohtml "${D}"/usr/html/*
@@ -360,19 +360,19 @@ src_install() {
 
 	for i in data rnase toxd; do
 		docinto examples/${i}
-		dodoc ${S}/examples/${i}/*
+		dodoc "${S}"/examples/${i}/*
 	done
 
 	docinto examples/tutorial
-	dohtml -r ${S}/examples/tutorial/html examples/tutorial/tut.css
+	dohtml -r "${S}"/examples/tutorial/html examples/tutorial/tut.css
 	for i in data results; do
 		docinto examples/tutorial/${i}
-		dodoc ${S}/examples/tutorial/${i}/*
+		dodoc "${S}"/examples/tutorial/${i}/*
 	done
 
 	for i in non-runnable runnable; do
 		docinto examples/unix/${i}
-		dodoc ${S}/examples/unix/${i}
+		dodoc "${S}"/examples/unix/${i}
 	done
 
 	# Needed for ccp4i docs to work
@@ -380,7 +380,7 @@ src_install() {
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html
 
 	# Fix overlaps with other packages
-	rm ${D}/usr/share/man/man1/rasmol.1*
+	rm "${D}"/usr/share/man/man1/rasmol.1*
 }
 
 pkg_postinst() {

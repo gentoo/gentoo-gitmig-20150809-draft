@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ccp4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.24 2010/12/16 12:55:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.25 2010/12/16 13:09:16 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> ccp4-6.0.1-r1.ebuild,
+  ccp4-6.0.2.ebuild, ccp4-6.0.2-r1.ebuild:
+  QA on quoting
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> ccp4-6.0.1-r1.ebuild,
   ccp4-6.0.2.ebuild, ccp4-6.0.2-r1.ebuild:
