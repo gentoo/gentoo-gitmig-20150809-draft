@@ -1,13 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.3 2010/11/16 17:16:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.4 2010/12/16 08:39:14 jlec Exp $
 
 EAPI="3"
 
-inherit eutils fortran toolchain-funcs
-
-# we need libg2c for gfortran # 136988
-FORTRAN="ifc"
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Combined assignment and dynamics algorithm for NMR applications"
 HOMEPAGE="http://www.las.jp/english/products/s08_cyana/index.html"
@@ -20,6 +17,10 @@ IUSE="examples"
 
 RESTRICT="fetch"
 
+# we need libg2c for gfortran # 136988
+DEPEND="dev-lang/ifc"
+RDEPEND="${DEPEND}"
+
 pkg_nofetch() {
 	elog "Please visit"
 	elog "http://www.las.jp/english/products/s08_cyana/licenses.html"
@@ -28,14 +29,15 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-typo.patch
-	epatch "${FILESDIR}"/${PV}-exec.patch
-	epatch "${FILESDIR}"/${PV}-expire.patch
+	epatch \
+		"${FILESDIR}"/${PV}-typo.patch \
+		"${FILESDIR}"/${PV}-exec.patch \
+		"${FILESDIR}"/${PV}-expire.patch
 
 	cat >> etc/config <<- EOF
 	VERSION=${PV}
 	SHELL=${EPREFIX}/bin/sh
-	FC=${FORTRANC}
+	FC=ifort
 	FFLAGS=${FFLAGS}
 	FFLAGS2=${FFLAGS}
 	CC=$(tc-getCC)
@@ -44,7 +46,7 @@ src_prepare() {
 	LIBS=-pthread -lpthread -liomp5
 	EOF
 
-	if [[ ${FORTRANC} == gfortran ]]; then
+	if [[ $(tc-getFC) == gfortran ]]; then
 		cat >> etc/config <<- EOF
 		DEFS=-Dgfortran
 		SYSTEM=gfortran
