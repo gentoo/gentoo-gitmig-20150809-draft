@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.9 2010/06/25 19:02:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.10 2010/12/16 15:59:56 jlec Exp $
 
 EAPI=2
-inherit eutils multilib flag-o-matic toolchain-funcs fortran
+inherit eutils multilib flag-o-matic toolchain-funcs
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -43,11 +43,6 @@ pkg_setup() {
 	elog "Don't forget the EXTRA_ECONF environment variable can let you"
 	elog "specify configure options if you find them necessary."
 	elog
-
-	if use fortran; then
-		FORTRAN="g77 gfortran ifc"
-		fortran_pkg_setup
-	fi
 }
 
 src_prepare() {
@@ -60,7 +55,6 @@ src_prepare() {
 
 	# https://svn.open-mpi.org/trac/ompi/ticket/2201
 	epatch "${FILESDIR}"/${P}-r22513.patch
-
 }
 
 src_configure() {
@@ -78,9 +72,9 @@ src_configure() {
 	fi
 
 	if use fortran; then
-		if [[ "${FORTRANC}" = "g77" ]]; then
+		if [[ "$(tc-getFC)" = "g77" ]]; then
 			myconf="${myconf} --disable-mpi-f90"
-		elif [[ "${FORTRANC}" = if* ]]; then
+		elif [[ "$(tc-getFC)" = if* ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
 			myconf="${myconf} --with-mpi-f90-size=medium"
 		fi
