@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.18 2010/10/19 05:27:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.19 2010/12/16 20:42:34 robbat2 Exp $
+
+WANT_AUTOMAKE=none # not using automake
 
 inherit eutils autotools
 
