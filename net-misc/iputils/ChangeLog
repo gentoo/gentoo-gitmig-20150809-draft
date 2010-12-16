@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.87 2010/09/14 01:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.88 2010/12/16 09:21:23 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  iputils-20100418-r1.ebuild:
+  x86 stable wrt bug #342277
 
 *iputils-20100418-r1 (14 Sep 2010)
 
