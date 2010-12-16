@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.12 2010/05/02 23:14:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.13 2010/12/16 15:52:03 jlec Exp $
 
 EAPI="3"
 
-inherit autotools eutils fortran flag-o-matic multilib portability
+inherit autotools eutils flag-o-matic multilib portability toolchain-funcs
 
 IUSE="crypt pbs fortran xmpi romio examples"
 
@@ -72,7 +72,6 @@ pkg_setup() {
 	elog "implementation, http://www.openmpi.org"
 	elog "  ---From the lam-mpi hompage.  Please consider upgrading."
 	einfo
-	# fortran_pkg_setup should -not- be run here.
 }
 
 src_configure() {
@@ -98,12 +97,6 @@ src_configure() {
 	# in the current tree.
 	rm -rf "${S}"/share/ssi/boot/{bproc,globus,slurm}
 
-	if use fortran; then
-		fortran_pkg_setup
-		# this is NOT in pkg_setup as it is NOT needed for RDEPEND right away it
-		# can be installed after merging from binary, and still have things fine
-	fi
-
 	# Disable totalview, see #245439 and #276194
 	econf \
 		--with-ltdl-include="${EPREFIX}"/usr/include \
@@ -115,7 +108,7 @@ src_configure() {
 		--with-threads=posix \
 		--disable-tv \
 		$(use_with romio) \
-		$(use_with fortran fc "${FORTRANC}") \
+		$(use_with fortran fc "$(tc-getFC)") \
 		${myconf}
 }
 

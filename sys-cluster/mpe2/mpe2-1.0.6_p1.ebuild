@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.5 2010/09/14 22:21:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.6 2010/12/16 15:54:28 jlec Exp $
 
 EAPI=2
-inherit fortran eutils java-utils-2
+inherit eutils java-utils-2 toolchain-funcs
 
 MY_P=${P/_/}
 DESCRIPTION="MPI development tools"
@@ -47,11 +47,6 @@ pkg_setup() {
 		die "Unknown MPI implementation"
 	fi
 
-	if use fortran ; then
-		FORTRAN="g77 gfortran ifort ifc"
-		fortran_pkg_setup
-	fi
-
 	export JFLAGS="${JFLAGS} $(java-pkg_javac-args)"
 
 	if [[ "${MPE_IMP}" == openmpi ]] && [ -z "${MPE2_FORCE_OPENMPI_TEST}" ]; then
@@ -76,7 +71,7 @@ src_configure() {
 
 	if use fortran; then
 		c="${c} --with-mpif77=/usr/bin/mpif77"
-		export F77=${FORTRANC}
+		export F77=$(tc-getFC)
 	else
 		c="${c} --disable-f77"
 	fi

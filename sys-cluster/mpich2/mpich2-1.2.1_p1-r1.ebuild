@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.9 2010/11/26 16:02:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.10 2010/12/16 15:54:28 jlec Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
 
-inherit eutils fortran python
+inherit eutils python toolchain-funcs
 
 MY_PV=${PV/_/}
 DESCRIPTION="MPICH2 - A portable MPI implementation"
@@ -34,11 +34,6 @@ S="${WORKDIR}"/${PN}-${MY_PV}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-
-	if use fortran ; then
-		FORTRAN="g77 gfortran ifort ifc"
-		fortran_pkg_setup
-	fi
 
 	if use mpi-threads && ! use threads; then
 		ewarn "mpi-threads requires threads, assuming that's what you want"
@@ -101,7 +96,7 @@ src_configure() {
 	fi
 
 	# enable f90 support for appropriate compilers
-	case "${FORTRANC}" in
+	case "$(tc-getFC)" in
 	    gfortran|if*)
 			c="${c} --enable-f77 --enable-f90";;
 	    g77)

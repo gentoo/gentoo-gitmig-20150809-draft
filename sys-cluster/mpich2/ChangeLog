@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.66 2010/11/29 16:14:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.67 2010/12/16 15:54:28 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> mpich2-1.2.1_p1-r1.ebuild:
+  Removal of fortran.eclass, #348851
 
   29 Nov 2010; Justin Bronder <jsbronder@gentoo.org> -mpich2-1.0.8.ebuild,
   metadata.xml:

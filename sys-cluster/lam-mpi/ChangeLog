@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.83 2010/05/02 23:14:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.84 2010/12/16 15:52:03 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> lam-mpi-7.1.4-r1.ebuild:
+  Removal of fortran.eclass, #348851
 
   02 May 2010; Jonathan Callen <abcd@gentoo.org> lam-mpi-7.1.4-r1.ebuild:
   Bump to EAPI-3, add prefix support & keywords
