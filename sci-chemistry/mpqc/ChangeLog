@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.21 2010/09/06 13:51:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.22 2010/12/16 15:19:28 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> mpqc-2.3.1-r1.ebuild,
+  mpqc-2.3.1-r2.ebuild:
+  Removal of fortran.eclass, #348851
 
   06 Sep 2010; Christian Faulhammer <fauli@gentoo.org> mpqc-2.3.1-r2.ebuild:
   stable x86, bug 325561

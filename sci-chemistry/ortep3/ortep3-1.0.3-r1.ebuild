@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.1 2010/06/24 16:13:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.2 2010/12/16 15:20:57 jlec Exp $
 
-inherit fortran
-
-FORTRAN="gfortran ifc"
+inherit toolchain-funcs
 
 DESCRIPTION="Thermal ellipsoid plot program for crystal structure illustrations"
 HOMEPAGE="http://www.ornl.gov/sci/ortep/"
@@ -20,14 +18,14 @@ RDEPEND="
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${S}
+	cp "${DISTDIR}"/${A} "${S}" || die
 }
 
 src_compile() {
-	COMMAND="${FORTRANC} ${FFLAGS:- -O2} ${LDFLAGS} -o ${PN} ortep.f -lpgplot -lX11"
+	COMMAND="$(tc-getFC) ${FFLAGS:- -O2} ${LDFLAGS} -o ${PN} ortep.f -lpgplot -lX11"
 	echo ${COMMAND}
 	${COMMAND} || die "Compilation failed"
 }
