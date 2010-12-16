@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r5.ebuild,v 1.2 2010/06/28 22:40:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.68-r5.ebuild,v 1.3 2010/12/16 19:17:52 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -67,7 +67,6 @@ DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/nwn
 
-GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
