@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.8 2010/10/27 17:19:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.9 2010/12/16 08:55:54 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
-FORTRAN="g77 gfortran ifc"
 
-inherit autotools eutils flag-o-matic fortran python versionator
+inherit autotools eutils flag-o-matic python toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-3)
 MY_P="${PN}-${MY_PV}"
@@ -21,7 +20,8 @@ LICENSE="BSD"
 IUSE="arpack doc mpi openmp python tools"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 
-DEPEND="dev-libs/maloc[mpi=]
+DEPEND="
+	dev-libs/maloc[mpi=]
 	virtual/blas
 	sys-libs/readline
 	arpack? ( sci-libs/arpack )
@@ -32,11 +32,11 @@ S="${WORKDIR}"/"${MY_P}-source"
 
 pkg_setup() {
 	use python && python_set_active_version 2
-	fortran_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-openmp.patch \
+	epatch \
+		"${FILESDIR}"/${P}-openmp.patch \
 		"${FILESDIR}"/${P}-install-fix.patch \
 		"${FILESDIR}"/${PN}-1.2.0-contrib.patch \
 		"${FILESDIR}"/${PN}-1.2.0-link.patch \
