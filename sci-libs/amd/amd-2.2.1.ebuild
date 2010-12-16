@@ -1,12 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.3 2010/12/02 11:14:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.4 2010/12/16 14:18:02 jlec Exp $
 
 EAPI="3"
 
-inherit autotools eutils fortran
-
-FORTRAN="gfortran ifc"
+inherit autotools eutils toolchain-funcs
 
 MY_PN=AMD
 

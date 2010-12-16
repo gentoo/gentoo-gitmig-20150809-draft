@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.2 2009/12/12 17:43:05 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.3 2010/12/16 14:33:46 jlec Exp $
 
-inherit eutils autotools flag-o-matic fortran multilib
+inherit eutils autotools flag-o-matic multilib toolchain-funcs
 
 MyPN="${PN/-reference/}"
 PATCH_V="3.2.1"
@@ -27,9 +27,7 @@ RDEPEND="virtual/blas
 S="${WORKDIR}/${MyPN}-${PV}"
 
 pkg_setup() {
-	FORTRAN="g77 gfortran ifc"
-	fortran_pkg_setup
-	if  [[ ${FORTRANC} == if* ]]; then
+	if  [[ $(tc-getFC) == if* ]]; then
 		ewarn "Using Intel Fortran at your own risk"
 		export LDFLAGS="$(raw-ldflags)"
 		export NOOPT_FFLAGS=-O
@@ -45,7 +43,7 @@ src_unpack() {
 	eautoreconf
 
 	# set up the testing routines
-	sed -e "s:g77:${FORTRANC}:" \
+	sed -e "s:g77:$(tc-getFC):" \
 		-e "s:-funroll-all-loops -O3:${FFLAGS} $(pkg-config --cflags blas):" \
 		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $(pkg-config --cflags blas):" \
 		-e "s:../../blas\$(PLAT).a:$(pkg-config --libs blas):" \

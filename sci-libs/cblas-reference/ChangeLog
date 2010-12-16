@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.33 2010/03/07 19:14:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.34 2010/12/16 14:27:10 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org>
+  cblas-reference-20030223-r4.ebuild, cblas-reference-20030223-r5.ebuild:
+  Removal of fortran.eclass, #348851
 
 *cblas-reference-20030223-r5 (07 Mar 2010)
 

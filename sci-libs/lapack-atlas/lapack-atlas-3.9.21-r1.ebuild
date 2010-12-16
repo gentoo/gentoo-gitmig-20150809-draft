@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.21-r1.ebuild,v 1.1 2010/02/06 17:09:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.21-r1.ebuild,v 1.2 2010/12/16 14:32:39 jlec Exp $
 
-inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
+inherit eutils flag-o-matic toolchain-funcs autotools versionator
 
 MY_PN="${PN/lapack-/}"
 PATCH_V="3.9.0"
@@ -32,8 +32,6 @@ DEPEND="${CDEPEND}
 	>=sys-devel/libtool-1.5"
 RDEPEND="${CDEPEND}
 	doc? ( app-doc/lapack-docs )"
-
-FORTRAN="g77 gfortran ifc"
 
 S="${WORKDIR}/ATLAS"
 S_LAPACK="${WORKDIR}/${L_PN}-lite-${L_PV}"
@@ -88,7 +86,7 @@ src_unpack() {
 		--libdir="${D}/${DESTTREE}"/$(get_libdir)/atlas \
 		--incdir="${D}/${DESTTREE}"/include \
 		-C ac "${c_compiler}" -F ac "${CFLAGS}" \
-		-C if ${FORTRANC} -F if "${FFLAGS:-'-O2'}" \
+		-C if $(tc-getFC) -F if "${FFLAGS:-'-O2'}" \
 		-Ss pmake "\$(MAKE) ${MAKEOPTS}" \
 		-Si cputhrchk 0 ${archselect} \
 		|| die "configure failed"
@@ -99,7 +97,7 @@ src_unpack() {
 	eautoreconf
 
 	# set up the testing routines
-	sed -e "s:g77:${FORTRANC}:" \
+	sed -e "s:g77:$(tc-getFC):" \
 		-e "s:-funroll-all-loops -O3:${FFLAGS} $(pkg-config --cflags blas cblas):" \
 		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $(pkg-config --cflags blas cblas):" \
 		-e "s:../../blas\$(PLAT).a:$(pkg-config --libs blas cblas):" \
@@ -133,9 +131,9 @@ src_compile() {
 
 	RPATH="${DESTTREE}"/$(get_libdir)/${L_PN}/${MY_PN}
 	local flibs
-	[[ ${FORTRANC} == gfortran ]] && flibs=-lgfortran
-	[[ ${FORTRANC} == g77 ]] && flibs=-lg2c
-	../libtool --mode=link --tag=F77 ${FORTRANC} ${LDFLAGS} \
+	[[ $(tc-getFC) == gfortran ]] && flibs=-lgfortran
+	[[ $(tc-getFC) == g77 ]] && flibs=-lg2c
+	../libtool --mode=link --tag=F77 $(tc-getFC) ${LDFLAGS} \
 		$(pkg-config --libs blas cblas) -latlas ${flibs} \
 		-o liblapack.la *.lo -rpath "${RPATH}" \
 		|| die "Failed to create liblapack.la"

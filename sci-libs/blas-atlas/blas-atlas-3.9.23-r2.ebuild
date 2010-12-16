@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r2.ebuild,v 1.2 2010/04/20 18:26:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r2.ebuild,v 1.3 2010/12/16 14:20:20 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs fortran multilib
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
@@ -36,8 +36,6 @@ pkg_setup() {
 		die "blas-atlas won't compile with icc"
 	fi
 
-	FORTRAN="g77 gfortran ifc"
-	fortran_pkg_setup
 	echo
 	ewarn "Please make sure to disable CPU throttling completely"
 	ewarn "during the compile of blas-atlas. Otherwise, all atlas"
@@ -109,7 +107,7 @@ src_configure() {
 		--libdir="${ED}/${DESTTREE}"/$(get_libdir)/atlas \
 		--incdir="${ED}/${DESTTREE}"/include \
 		-C ac "${c_compiler}" -F ac "${CFLAGS}" \
-		-C if ${FORTRANC} -F if "${FFLAGS:-'-O2'}" \
+		-C if $(tc-getFC) -F if "${FFLAGS:-'-O2'}" \
 		-Ss pmake "\$(MAKE) ${MAKEOPTS}" \
 		-Si cputhrchk 0 ${archselect} \
 		|| die "configure failed"
@@ -166,8 +164,8 @@ src_install () {
 	# pkgconfig files
 	local extlibs="-lm"
 	local threadlibs
-	[[ ${FORTRANC} == gfortran ]] && extlibs="${extlibs} -lgfortran"
-	[[ ${FORTRANC} == g77 ]] && extlibs="${extlibs} -lg2c"
+	[[ $(tc-getFC) == gfortran ]] && extlibs="${extlibs} -lgfortran"
+	[[ $(tc-getFC) == g77 ]] && extlibs="${extlibs} -lg2c"
 	cp "${FILESDIR}"/blas.pc.in blas.pc
 	cp "${FILESDIR}"/cblas.pc.in cblas.pc
 	sed -i \

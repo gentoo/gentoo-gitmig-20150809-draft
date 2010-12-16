@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.7 2009/08/18 14:22:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.8 2010/12/16 14:24:01 jlec Exp $
 
-inherit eutils fortran flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 MY_PN="GotoBLAS"
 MY_P="${MY_PN}-${PV}"
@@ -23,7 +23,6 @@ DEPEND="app-admin/eselect-blas
 	>=sys-devel/binutils-2.17"
 
 S="${WORKDIR}/${MY_PN}"
-FORTRAN="gfortran g77 ifc"
 
 ESELECT_PROF=goto
 
@@ -43,12 +42,12 @@ src_unpack() {
 	C_COMPILER=GNU
 
 	# Set up FORTRAN 77 compiler
-	case ${FORTRANC} in
+	case $(tc-getFC) in
 		g77) F_COMPILER=G77;;
 		gfortran) F_COMPILER=GFORTRAN;;
 		ifc|ifort) F_COMPILER=INTEL;;
 		*)
-			die "Invalid Fortran compiler: ${FORTRANC}; valid are ${FORTRAN}."
+			die "Invalid Fortran compiler: $(tc-getFC); valid are ${FORTRAN}."
 	esac
 
 	# Set up compilers

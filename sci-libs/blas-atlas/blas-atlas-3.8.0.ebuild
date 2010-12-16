@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.11 2008/08/28 09:48:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.12 2010/12/16 14:20:20 jlec Exp $
 
-inherit eutils toolchain-funcs fortran multilib
+inherit eutils toolchain-funcs multilib
 
 PATCH_V="3.7.39"
 
@@ -34,8 +34,6 @@ pkg_setup() {
 		die "blas-atlas won't compile with icc"
 	fi
 
-	FORTRAN="g77 gfortran ifc"
-	fortran_pkg_setup
 	echo
 	ewarn "Please make sure to disable CPU throttling completely"
 	ewarn "during the compile of blas-atlas. Otherwise, all atlas"
@@ -90,7 +88,7 @@ src_unpack() {
 		--libdir="${D}/${DESTTREE}"/$(get_libdir)/atlas \
 		--incdir="${D}/${DESTTREE}"/include \
 		-C ac "$(tc-getCC)" -F ac "${CFLAGS}" \
-		-C if ${FORTRANC} -F if "${FFLAGS:--O2}" \
+		-C if $(tc-getFC) -F if "${FFLAGS:--O2}" \
 		-Ss pmake "\$(MAKE) ${MAKEOPTS}" \
 		-Si cputhrchk 0 ${archselect} \
 		|| die "configure failed"
@@ -142,8 +140,8 @@ src_install () {
 	# pkgconfig files
 	local extlibs="-lm"
 	local threadlibs
-	[[ ${FORTRANC} == gfortran ]] && extlibs="${extlibs} -lgfortran"
-	[[ ${FORTRANC} == g77 ]] && extlibs="${extlibs} -lg2c"
+	[[ $(tc-getFC) == gfortran ]] && extlibs="${extlibs} -lgfortran"
+	[[ $(tc-getFC) == g77 ]] && extlibs="${extlibs} -lg2c"
 	cp "${FILESDIR}"/blas.pc.in blas.pc
 	cp "${FILESDIR}"/cblas.pc.in cblas.pc
 	sed -i \

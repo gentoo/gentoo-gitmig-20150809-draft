@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.81 2010/04/20 18:41:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.82 2010/12/16 14:32:39 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> lapack-atlas-3.8.0.ebuild,
+  lapack-atlas-3.8.2.ebuild, lapack-atlas-3.9.3.ebuild,
+  lapack-atlas-3.9.21.ebuild, lapack-atlas-3.9.21-r1.ebuild,
+  lapack-atlas-3.9.23.ebuild, lapack-atlas-3.9.23-r2.ebuild,
+  lapack-atlas-3.9.23-r3.ebuild:
+  Removal of fortran.eclass, #348851
 
 *lapack-atlas-3.9.23-r3 (20 Apr 2010)
 

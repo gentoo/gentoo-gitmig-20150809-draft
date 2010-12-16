@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-goto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.22 2009/08/18 14:22:19 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.23 2010/12/16 14:24:01 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> blas-goto-1.22-r1.ebuild,
+  blas-goto-1.26.ebuild:
+  Removal of fortran.eclass, #348851
 
   18 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
   blas-goto-1.22-r1.ebuild, -blas-goto-1.24.ebuild, blas-goto-1.26.ebuild:
