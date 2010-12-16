@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2003-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.10 2008/07/28 16:44:12 wolf31o2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ChangeLog,v 1.11 2010/12/16 19:19:51 mr_bones_ Exp $
+
+  16 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2003-data-2107.ebuild:
+  GAMES_LICENSE_CHECK is deprecated. The license checking is handled by the
+  package manager instead.
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.

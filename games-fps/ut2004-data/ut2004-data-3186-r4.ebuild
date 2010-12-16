@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r4.ebuild,v 1.2 2010/04/03 18:14:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r4.ebuild,v 1.3 2010/12/16 19:21:34 mr_bones_ Exp $
 
 inherit eutils portability games
 
@@ -20,8 +20,6 @@ PDEPEND="games-fps/ut2004"
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
-
-GAMES_LICENSE_CHECK="yes"
 
 check_dvd() {
 	# The following is a nasty mess to determine if we are installing from

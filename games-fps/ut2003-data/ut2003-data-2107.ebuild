@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.9 2008/02/16 00:15:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.10 2010/12/16 19:19:51 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -20,7 +20,6 @@ DEPEND="app-arch/unzip
 
 S=${WORKDIR}
 
-GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/ut2003
 Ddir=${D}/${dir}
 
