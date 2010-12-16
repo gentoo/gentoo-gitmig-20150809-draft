@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.575 2010/12/15 16:31:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.576 2010/12/16 15:22:36 jer Exp $
+
+  16 Dec 2010; Jeroen Roovers <jer@gentoo.org> -opera-11.00_pre1149.ebuild,
+  -opera-11.00_pre1152.ebuild, opera-11.00_pre1156.ebuild:
+  http://my.opera.com/desktopteam/blog/2010/12/16/opera-11-goes-final (switch
+  to mirrors).
 
 *opera-11.00_pre1156 (15 Dec 2010)
 
