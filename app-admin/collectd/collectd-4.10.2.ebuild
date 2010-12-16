@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.1-r2.ebuild,v 1.6 2010/10/12 17:59:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2.ebuild,v 1.1 2010/12/16 17:33:45 dilfridge Exp $
 
 EAPI="2"
 
-inherit base linux-info perl-app autotools
+inherit eutils base linux-info perl-app autotools
 
 DESCRIPTION="A small daemon which collects system performance statistics - with a near-infinite number of plugins"
 HOMEPAGE="http://collectd.org"
@@ -21,17 +21,17 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
 COLLECTD_IMPOSSIBLE_PLUGINS="curl_json netapp pinba ping xmms"
 
 # Plugins that still need some work
-COLLECTD_UNTESTED_PLUGINS="oracle ipmi ipvs netlink apple_sensors routeros tape zfs_arc nut modbus"
+COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc nut modbus"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
 	cpu cpufreq curl curl_xml dbi df disk dns email entropy exec filecount fscache gmond
-	hddtemp interface iptables irq java libvirt load madwifi mbmon memcachec
-	memcached memory multimeter mysql network nfs nginx ntpd olsrd
+	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon memcachec
+	memcached memory multimeter mysql netlink network nfs nginx ntpd olsrd
 	onewire openvpn perl postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
 	tokyotyrant uptime users vmem vserver wireless csv exec logfile network
-	notify_desktop notify_email perl python rrdcached rrdtool syslog unixsock write_http
+	notify_desktop notify_email oracle perl python rrdcached rrdtool syslog unixsock write_http
 	match_empty_counter match_hashed match_regex match_timediff match_value
 	target_notification target_replace target_scale target_set uuid"
 
@@ -55,17 +55,20 @@ COMMON_DEPEND="
 	collectd_plugins_dbi?			( dev-db/libdbi )
 	collectd_plugins_dns?			( net-libs/libpcap )
 	collectd_plugins_gmond?			( sys-cluster/ganglia )
+	collectd_plugins_ipmi?			( >=sys-libs/openipmi-2.0.16-r1 )
 	collectd_plugins_iptables?		( >=net-firewall/iptables-1.4.9.1-r2 )
 	collectd_plugins_java?			( virtual/jre dev-java/java-config-wrapper )
 	collectd_plugins_libvirt?		( app-emulation/libvirt dev-libs/libxml2 )
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
 	collectd_plugins_mysql?			( >=virtual/mysql-5.0 )
+	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 )
 	collectd_plugins_network?		( dev-libs/libgcrypt )
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )
 	collectd_plugins_onewire?		( sys-fs/owfs )
-	collectd_plugins_perl?			( dev-lang/perl[ithreads] sys-devel/libperl[ithreads] )
+	collectd_plugins_oracle?		( >=dev-db/oracle-instantclient-basic-11.2.0.1.0 )
+	collectd_plugins_perl?			( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
 	collectd_plugins_postgresql?		( >=dev-db/postgresql-base-8.2 )
 	collectd_plugins_python?		( =dev-lang/python-2* )
 	collectd_plugins_rrdcached?		( >=net-analyzer/rrdtool-1.4 )
@@ -94,7 +97,8 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	collectd_plugins_syslog?		( virtual/logger )"
 
-PATCHES=( "${FILESDIR}/${P}"-{libperl,libiptc,noowniptc}.patch )
+PATCHES=( "${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
+	"${FILESDIR}/${P}"-libocci.patch )
 
 # @FUNCTION: collectd_plugin_kernel_linux
 # @DESCRIPTION:
@@ -168,13 +172,14 @@ collectd_linux_kernel_checks() {
 pkg_setup() {
 	if use kernel_linux; then
 		if linux_config_exists; then
-			einfo
 			einfo "Checking your linux kernel configuration:"
 			collectd_linux_kernel_checks
 		else
 			elog "Cannot find a linux kernel configuration. Continuing anyway."
 		fi
 	fi
+
+	enewgroup collectd
 }
 
 src_prepare() {
@@ -273,6 +278,9 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 	newconfd "${FILESDIR}/${PN}.confd" ${PN} || die
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/logrotate" collectd || die
 }
 
 collectd_rdeps() {
@@ -288,4 +296,12 @@ pkg_postinst() {
 	collectd_rdeps memcached ">=net-misc/memcached-1.2.2-r2"
 	collectd_rdeps ntpd net-misc/ntp
 	collectd_rdeps openvpn ">=net-misc/openvpn-2.0.9"
+
+	if use collectd_plugins_email; then
+		ewarn "The email plug-in is deprecated. To submit statistics please use the unixsock plugin."
+	fi
+	if use contrib; then
+		elog "The scripts in /usr/share/doc/${PF}/collection3 for generating graphs need dev-perl/HTML-Parser,"
+		elog "dev-perl/config-general, dev-perl/regexp-common, and net-analyzer/rrdtool[perl] to be installed."
+	fi
 }

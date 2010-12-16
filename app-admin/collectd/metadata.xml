@@ -57,6 +57,7 @@
 		<flag name='collectd_plugins_notify_desktop'>Build the notify_desktop output plugin (uses libnotify to display notifications to the user)</flag>
 		<flag name='collectd_plugins_notify_email'>Build the notify_email output plugin (uses libESMTP to send notifications to a configured email address)</flag>
 		<flag name='collectd_plugins_ntpd'>Build the ntpd input plugin (queries an NTP server)</flag> 
+		<flag name='collectd_plugins_oracle'>Build the oracle input plugin (SQL-queries one or more Oracle database systems)</flag>
 		<flag name='collectd_plugins_olsrd'>Build the olsrd input plugin (reads information about the Optimized Link State Routing daemon)</flag>
 		<flag name='collectd_plugins_onewire'>Build the onewire input plugin (collects temperature information from sensors)</flag> 
 		<flag name='collectd_plugins_openvpn'>Build the openvpn input plugin (reads the status file printed by OpenVPN)</flag> 
