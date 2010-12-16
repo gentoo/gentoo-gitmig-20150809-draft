@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.432 2010/12/07 18:03:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.433 2010/12/16 18:09:21 grobian Exp $
+
+  16 Dec 2010; Fabian Groffen <grobian@gentoo.org> glib-2.26.1.ebuild:
+  Do not use ED with DESTDIR
 
   07 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/glib-2.6.3-testglib-ssp.patch, -glib-2.20.5-r1.ebuild,
