@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.7 2009/12/26 17:45:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.8 2010/12/16 15:26:57 jlec Exp $
 
 EAPI="2"
-inherit eutils toolchain-funcs autotools fortran
+inherit eutils toolchain-funcs autotools
 
 #     DAY         MONTH    YEAR
 MY_PV=${PV:4:2}_${PV:6:2}_${PV:0:4}
@@ -31,8 +31,6 @@ RDEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/${MY_P}"
 S_AUX="${WORKDIR}/${MY_P_AUX}"
 
-FORTRAN="gfortran"
-
 src_unpack() {
 	# unpacking and renaming because
 	# upstream does not use directories
@@ -43,7 +41,9 @@ src_unpack() {
 	mkdir ${MY_P}
 	cd "${S}"
 	unpack ${MY_P}.tar.gz
+}
 
+src_prepare() {
 	# autotoolization: need to fix a few files with
 	# hardcoded directories (will be fixed with autoconf)
 	mv DPCOPA.INC DPCOPA.INC.in
