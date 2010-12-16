@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.2 2010/12/16 14:20:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.3 2010/12/16 14:21:32 jlec Exp $
 
 EAPI="3"
 
@@ -225,8 +225,8 @@ src_install () {
 		-e "s:L/usr/:L${EPREFIX}/usr/:g" \
 		-e "s: /usr/lib: ${EPREFIX}/usr/lib:g" \
 		-i \
-			${ED}/usr/$(get_libdir)/*.la \
-			${ED}/usr/$(get_libdir)/blas/*/*.la \
+			"${ED}"/usr/$(get_libdir)/*.la \
+			"${ED}"/usr/$(get_libdir)/blas/*/*.la \
 		|| die
 
 	# some docs
