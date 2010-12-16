@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.10 2010/12/16 13:54:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.11 2010/12/16 13:55:41 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -30,8 +30,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
-
 	# fix Makefile to honor user's CFLAGS/FFLAGS
 	sed -e "s:gcc:$(tc-getCC):" \
 		-e "s:g77:$(tc-getFC):" \
