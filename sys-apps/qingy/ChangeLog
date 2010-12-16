@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.63 2010/12/07 13:47:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.64 2010/12/16 09:28:09 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> qingy-1.0.0.ebuild:
+  x86 stable wrt bug #348540
 
 *qingy-1.0.0 (7 Dec 2010)
 
