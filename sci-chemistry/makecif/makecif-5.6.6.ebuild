@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.1 2010/06/15 08:16:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.2 2010/12/16 13:31:14 jlec Exp $
 
 EAPI="3"
 
-FORTRANC="ifc gfortran"
 
-inherit eutils fortran
+inherit eutils
 
 DESCRIPTION="PDB --> CIF convertor"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/makecif.html"

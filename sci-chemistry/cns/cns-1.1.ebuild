@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.6 2010/02/06 21:49:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.7 2010/12/16 13:29:53 jlec Exp $
 
-inherit eutils fortran toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_PN="${PN}_solve"
 MY_P="${MY_PN}_${PV}"
@@ -12,16 +12,18 @@ HOMEPAGE="http://cns.csb.yale.edu/"
 SRC_URI="${MY_P}_basic_inputs.tar.gz
 	${MY_P}_data.tar.gz
 	test? ( ${MY_P}_test.tar.gz )"
-RESTRICT="fetch"
+
 LICENSE="cns"
 SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="test"
+
 RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
+
 S="${WORKDIR}/${MY_P}"
 
-FORTRAN="g77 gfortran"
+RESTRICT="fetch"
 
 pkg_nofetch() {
 	einfo "Fill out the form at http://cns.csb.yale.edu/cns_request/"
@@ -47,15 +49,15 @@ src_unpack() {
 
 src_compile() {
 	local GLOBALS
-	if [[ ${FORTRANC} = g77 ]]; then
+	if [[ $(tc-getFC) = g77 ]]; then
 		GLOBALS="-fno-globals"
 	fi
 
 	# make install really means build, since it's expected to be used in-place
 	emake \
 		CC="$(tc-getCC)" \
-		F77="${FORTRANC}" \
-		LD="${FORTRANC}" \
+		F77=$(tc-getFC) \
+		LD=$(tc-getFC) \
 		CCFLAGS="${CFLAGS} -DCNS_ARCH_TYPE_\$(CNS_ARCH_TYPE) \$(EXT_CCFLAGS)" \
 		F77OPT="${FFLAGS:- -O2} \$(CNS_MALIGN_I86)" \
 		F77STD="${GLOBALS}" \

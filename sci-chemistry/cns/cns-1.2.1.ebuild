@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.7 2010/11/17 13:14:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.8 2010/12/16 13:29:53 jlec Exp $
 
-inherit eutils fortran toolchain-funcs versionator flag-o-matic
+inherit eutils toolchain-funcs versionator flag-o-matic
 
 MY_PN="${PN}_solve"
 MY_PV="$(delete_version_separator 2)"
@@ -21,8 +21,6 @@ RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
-FORTRAN="g77 gfortran"
-
 pkg_nofetch() {
 	elog "Fill out the form at http://cns.csb.yale.edu/cns_request/"
 	elog "and place these files:"
@@ -31,7 +29,6 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	fortran_pkg_setup
 	tc-has-openmp
 }
 
@@ -64,21 +61,21 @@ src_unpack() {
 src_compile() {
 	local GLOBALS
 	local MALIGN=
-	if [[ ${FORTRANC} = g77 ]]; then
+	if [[ $(tc-getFC) = g77 ]]; then
 		GLOBALS="-fno-globals"
 		MALIGN='\$(CNS_MALIGN_I86)'
 	fi
 
 	# Set up the compiler to use
 	pushd instlib/machine/unsupported/g77-unix 2>/dev/null
-	ln -s Makefile.header Makefile.header.${FORTRANC} || die
+	ln -s Makefile.header Makefile.header.$(tc-getFC) || die
 	popd 2>/dev/null
 
 	# make install really means build, since it's expected to be used in-place
 	emake \
 		CC="$(tc-getCC)" \
-		F77="${FORTRANC}" \
-		LD="${FORTRANC}" \
+		F77=$(tc-getFC) \
+		LD=$(tc-getFC) \
 		CCFLAGS="${CFLAGS} -DCNS_ARCH_TYPE_\$(CNS_ARCH_TYPE) \$(EXT_CCFLAGS)" \
 		LDFLAGS="${LDFLAGS}" \
 		F77OPT="${FFLAGS:- -O2} ${MALIGN}" \
