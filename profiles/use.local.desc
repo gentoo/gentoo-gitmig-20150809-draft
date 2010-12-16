@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6223 2010/12/15 17:33:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6224 2010/12/16 17:52:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -88,6 +88,7 @@ app-admin/collectd:collectd_plugins_ntpd - Build the ntpd input plugin (queries 
 app-admin/collectd:collectd_plugins_olsrd - Build the olsrd input plugin (reads information about the Optimized Link State Routing daemon)
 app-admin/collectd:collectd_plugins_onewire - Build the onewire input plugin (collects temperature information from sensors)
 app-admin/collectd:collectd_plugins_openvpn - Build the openvpn input plugin (reads the status file printed by OpenVPN)
+app-admin/collectd:collectd_plugins_oracle - Build the oracle input plugin (SQL-queries one or more Oracle database systems)
 app-admin/collectd:collectd_plugins_perl - Build the perl language binding plugin (embeds a Perl interpreter into collectd for writing plugins)
 app-admin/collectd:collectd_plugins_postgresql - Build the postgresql input plugin (connects to and executes SQL statements on a PostgreSQL database)
 app-admin/collectd:collectd_plugins_powerdns - Build the powerdns input plugin (connects to a local PowerDNS instance)
