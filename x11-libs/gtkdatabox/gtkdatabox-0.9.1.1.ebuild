@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/gtkdatabox-0.9.1.1.ebuild,v 1.3 2009/09/18 16:46:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/gtkdatabox-0.9.1.1.ebuild,v 1.4 2010/12/16 18:42:07 pacho Exp $
 
 EAPI="2"
 
@@ -22,6 +22,15 @@ RDEPEND="x11-libs/gtk+:2
 
 DEPEND=${RDEPEND}
 
+src_prepare() {
+	# Remove -D.*DISABLE_DEPRECATED cflags
+	find . -iname 'Makefile.am' -exec \
+		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 1 failed"
+	# Do Makefile.in after Makefile.am to avoid automake maintainer-mode
+	find . -iname 'Makefile.in' -exec \
+		sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i {} + || die "sed 2 failed"
+}
+
 src_configure() {
 	econf \
 		--enable-libtool-lock \
@@ -40,6 +49,6 @@ src_install() {
 	if use examples; then
 		emake clean -C examples || die "Cleaning examples failed"
 		docinto examples
-		dodoc "${S}/examples/*" || die "Copy examples to doc failed."
+		dodoc "${S}"/examples/* || die "Copy examples to doc failed."
 	fi
 }
