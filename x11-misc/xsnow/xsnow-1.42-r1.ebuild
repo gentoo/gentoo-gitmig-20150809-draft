@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42-r1.ebuild,v 1.2 2010/12/13 16:08:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42-r1.ebuild,v 1.3 2010/12/16 01:25:03 rich0 Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dropmix.xs4all.nl/rick/Xsnow/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

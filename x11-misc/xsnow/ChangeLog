@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.22 2010/12/13 16:08:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.23 2010/12/16 01:25:03 rich0 Exp $
+
+  16 Dec 2010; Richard Freeman <rich0@gentoo.org> xsnow-1.42-r1.ebuild:
+  amd64 stable - 348568 - merry christmas!
 
   13 Dec 2010; Thomas Kahle <tomka@gentoo.org> xsnow-1.42-r1.ebuild:
   x86 stable per bug 348568
