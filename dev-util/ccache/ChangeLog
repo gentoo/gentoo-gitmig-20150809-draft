@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.70 2010/11/28 18:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.71 2010/12/16 12:19:44 flameeyes Exp $
+
+  16 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> ccache-2.4-r7.ebuild:
+  Make sure not to look for automake since the package does not use automake to
+  begin with.
 
 *ccache-3.1.3 (28 Nov 2010)
 
