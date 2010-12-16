@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.1 2010/10/24 15:48:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.2 2010/12/16 08:49:38 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://cs.anu.edu.au/~bdm/${PN}/${PN}${MY_PV}.tar.gz"
 
 LICENSE="nauty"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}${MY_PV}"

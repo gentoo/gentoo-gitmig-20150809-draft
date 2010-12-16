@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/nauty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/ChangeLog,v 1.1 2010/10/24 15:48:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/ChangeLog,v 1.2 2010/12/16 08:49:38 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nauty-2.4.2.ebuild:
+  x86 stable wrt bug #348636
 
 *nauty-2.4.2 (24 Oct 2010)
 
