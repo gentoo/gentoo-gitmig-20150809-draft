@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/acml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.40 2009/07/07 23:27:59 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.41 2010/12/16 14:09:09 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> acml-3.6.0-r1.ebuild,
+  acml-3.6.1-r1.ebuild, acml-4.0.1.ebuild, acml-4.1.0-r1.ebuild:
+  Removal of fortran.eclass, #348851
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> ChangeLog:
   Use elog for fetch error.

@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.9 2008/04/22 08:13:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.10 2010/12/16 14:09:09 jlec Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils toolchain-funcs
 
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
@@ -51,7 +51,6 @@ pkg_setup() {
 	FORTRAN=ifc
 	FORT=ifort
 	! use ifc && ! use openmp && FORTRAN=g77 && FORT=gnu
-	fortran_pkg_setup
 }
 
 src_unpack() {
@@ -69,7 +68,7 @@ src_test() {
 			cd "${S}"/${fort}/examples/${d}
 			emake \
 				ACMLDIR="${S}"/${fort} \
-				F77=${FORTRANC} \
+				F77=$(tc-getFC) \
 				CC="$(tc-getCC)" \
 				CPLUSPLUS="$(tc-getCXX)" \
 				|| die "emake test in ${fort}/examples/${d} failed"
@@ -89,7 +88,7 @@ src_install() {
 		cp -pPR "${S}/${fort}" "${D}"${instdir} || die "copy ${fort} failed"
 
 		# install profiles
-		ESELECT_PROF=acml-${FORTRANC}
+		ESELECT_PROF=acml-$(tc-getFC)
 		local acmldir=${instdir}/${fort}
 		local acmllibs="-lacml -lacml_mv"
 		local libname=${acmldir}/lib/libacml

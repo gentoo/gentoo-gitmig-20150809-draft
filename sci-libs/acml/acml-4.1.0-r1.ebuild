@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.4 2008/12/07 18:28:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.5 2010/12/16 14:09:09 jlec Exp $
 
 EAPI="1"
 
-inherit eutils toolchain-funcs fortran versionator
+inherit eutils toolchain-funcs versionator
 
 MY_P=${PN}-$(replace_all_version_separators -)
 
@@ -60,10 +60,9 @@ pkg_setup() {
 		use gfortran &&	FORTRAN="${FORTRAN} gfortran"
 		use ifc && FORTRAN="${FORTRAN} ifc"
 		use gfortran || use ifc || FORTRAN="gfortran"
-		fortran_pkg_setup
 		# work around incomplete fortran eclass
 		if  use gfortran &&
-			[[ ${FORTRANC} == gfortran ]] &&
+			[[ $(tc-getFC) == gfortran ]] &&
 			[[ $(gcc-version) != 4.2 ]]
 		then
 			eerror "You need gfortran-4.2 to test acml"
@@ -94,7 +93,7 @@ src_test() {
 			cd "${S}"/${fdir}/examples/${d}
 			emake \
 				ACMLDIR="${S}"/${fdir} \
-				F77=${FORTRANC} \
+				F77=$(tc-getFC) \
 				CC="$(tc-getCC)" \
 				CPLUSPLUS="$(tc-getCXX)" \
 				|| die "emake test in ${fdir}/examples/${d} failed"

@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.9 2008/04/22 08:13:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.10 2010/12/16 14:09:09 jlec Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils toolchain-funcs
 
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
@@ -40,8 +40,7 @@ pkg_setup() {
 	elog "For older 32-bit without SSE/SSE2, use other blas/lapack libraries,"
 	elog "or file a bug if you wish to have earlier ACML versions supported."
 	FORTRAN="gfortran"
-	fortran_pkg_setup
-	if [[ ${FORTRANC} == gfortran ]]; then
+	if [[ $(tc-getFC) == gfortran ]]; then
 		local gcc_version=$(gcc-major-version)$(gcc-minor-version)
 		if ! use openmp && (( ${gcc_version} != 41 )); then
 			eerror "You need gcc-4.1.x to test acml."
@@ -58,10 +57,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	(DISTDIR="${S}" unpack contents-acml-*.tgz)
-	case ${FORTRANC} in
+	case $(tc-getFC) in
 		gfortran) FORT=gfortran ;;
 		if*) FORT=ifort ;;
-		*) eerror "Unsupported fortran compiler: ${FORTRANC}"
+		*) eerror "Unsupported fortran compiler: $(tc-getFC)"
 			die ;;
 	esac
 	use openmp || rm -rf ${FORT}*_mp*
@@ -79,7 +78,7 @@ src_test() {
 			cd "${S}"/${fort}/examples/${d}
 			emake \
 				ACMLDIR="${S}"/${fort} \
-				F77=${FORTRANC} \
+				F77=$(tc-getFC) \
 				CC="$(tc-getCC)" \
 				CPLUSPLUS="$(tc-getCXX)" \
 				|| die "emake test in ${fort}/examples/${d} failed"
@@ -99,7 +98,7 @@ src_install() {
 		cp -pPR "${S}/${fort}" "${D}"${instdir} || die "copy ${fort} failed"
 
 		# install profiles
-		ESELECT_PROF=acml-${FORTRANC}
+		ESELECT_PROF=acml-$(tc-getFC)
 		local acmldir=${instdir}/${fort}
 		local acmllibs="-lacml -lacml_mv"
 		local libname=${acmldir}/lib/libacml
