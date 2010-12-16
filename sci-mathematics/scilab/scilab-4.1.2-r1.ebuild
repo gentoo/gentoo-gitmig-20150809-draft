@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.5 2010/11/08 17:51:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.6 2010/12/16 15:15:48 jlec Exp $
 
-inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
+inherit eutils toolchain-funcs multilib autotools java-pkg-opt-2
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
@@ -86,7 +86,7 @@ src_compile() {
 	# the tk interface is the default
 	myopts="${myopts} --with-tk"
 
-	if [[ ${FORTRANC} == gfortran ]]; then
+	if [[ $(tc-getFC) == gfortran ]]; then
 		myopts="${myopts} --with-gfortran"
 	fi
 
