@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/liboping
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.1 2010/12/16 23:31:14 dilfridge Exp $
+
+*liboping-1.5.1 (16 Dec 2010)
+
+  16 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +liboping-1.5.1.ebuild, +metadata.xml:
+  New library, fixing bug 347606. Thanks to Aurelien Minet for the initial
+  ebuild.
+
