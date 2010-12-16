@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12276 2010/12/16 15:27:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12277 2010/12/16 23:55:41 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -219,12 +219,6 @@ dev-util/libconf
 >=app-i18n/ibus-1.3.99
 >=app-i18n/ibus-pinyin-1.3.99
 
-# Pacho Ramos <pacho@gentoo.org> (06 Nov 2010)
-# No longer maintained neither developed by upstream since 
-# a lot of time. Nothing in the tree needs it (bug #344331)
-# Replaced by gnome-base/nautilus. Removal 2010-12-06.
-gnome-base/gnome-volume-manager
-
 # Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2010)
 # Over 20 open bugs, http://tinyurl.com/2wurbtz
 # Bugs assigned to a proxy maintainer without CVS access
@@ -265,12 +259,6 @@ net-analyzer/ncrack
 # Tomáš Chvátal <scarabeus@gentoo.org> (01 Nov 2010)
 # Useless since we don't have xfs. Remove in 30 days.
 x11-apps/xfsinfo
-
-# Pacho Ramos <pacho@gentoo.org> (30 Oct 2010)
-# Build failures (bug 244543) and not required by
-# anything in the tree.
-# Pending Removal: 2010-11-30
-=dev-cpp/gtkmm-2.2.12
 
 # Samuli Suominen <ssuominen@gentoo.org> (30 Oct 2010)
 # Uninstallable for over a year now, bug 276203
@@ -484,13 +472,6 @@ x11-plugins/gkrellmwho2
 # Masked until I add proper support for it in gnustep-base
 gnustep-base/libobjc2
 
-# Pacho Ramos <pacho@gentoo.org> (09 Oct 2010)
-# Removal of app-text/gnome-spell as it's no used by
-# anything in the tree and its functionality is in
-# gtkhtml through enchant (bug #339771)
-# Removal on 2010-11-09
-app-text/gnome-spell
-
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
 >=sys-libs/db-5.1
@@ -562,22 +543,6 @@ app-doc/heirloom-doctools
 # Removal on 2010-11-26
 net-p2p/ed2k-gtk-gui
 
-# Pacho Ramos <pacho@gentoo.org> (30 Sep 2010)
-# Unmaintained since a lot of time by upstream, it's
-# replaced by net-libs/telepathy-glib (bug #338681) and
-# masked with Tester's approval.
-#
-# Removal on 2010-10-30
-net-libs/libtelepathy
-
-# Pacho Ramos <pacho@gentoo.org> (29 Sep 2010)
-# Unmaintained since a lot of time by upstream also suffers
-# some bugs like bug #339096 and upstream discourages its
-# usage. Masked with Tester's approval.
-#
-# Removal on 2010-10-29
-net-voip/cohoba
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Sep 2010)
 #  on behalf of QA team
 #
@@ -620,13 +585,6 @@ x11-misc/transset
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2010)
 # Unmaintained. Masked so that Zope 2.12/2.13 is preferred.
 =net-zope/zope-3*
-
-# Pacho Ramos <pacho@gentoo.org> (13 Sep 2010)
-# Nothing in the tree requires this, unable to see
-# any major distribution still shipping this, unable to find any
-# upstream update since a lot of time, does not respect LDFLAGS
-# (bug 333957) and doesn't have an autotools based build system.
-x11-libs/gtkscintilla2
 
 # Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
 # masked live version

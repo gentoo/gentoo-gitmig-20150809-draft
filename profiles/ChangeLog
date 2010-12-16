@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4862 2010/12/16 15:27:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4863 2010/12/16 23:55:41 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Clean up after package removal.
 
   16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Unmask www-client/chromium beta channel release (and also dev-lang/v8 and
