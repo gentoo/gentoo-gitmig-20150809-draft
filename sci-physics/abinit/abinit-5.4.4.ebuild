@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-5.4.4.ebuild,v 1.1 2008/07/05 01:10:36 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-5.4.4.ebuild,v 1.2 2010/12/16 15:38:07 jlec Exp $
 
-inherit fortran toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Find total energy, charge density and electronic structure using density functional theory"
 HOMEPAGE="http://www.abinit.org/"
@@ -18,14 +18,12 @@ RDEPEND="virtual/blas
 DEPEND="${RDEPEND}"
 
 # F90 code, g77 won't work
-FORTRAN="gfortran ifc"
 
 pkg_setup() {
-	fortran_pkg_setup
 
 	# Doesn't compile with gcc-4.0, only >=4.1
 	local diemsg="Requires gcc-4.1 or newer"
-	if [[ "${FORTRANC}" = "gfortran" ]]; then
+	if [[ "$(tc-getFC)" = "gfortran" ]]; then
 		if [[ $(gcc-major-version) -eq 4 ]] \
 			&& [[ $(gcc-minor-version) -lt 1  ]]; then
 				die "${diemsg}"
@@ -69,7 +67,7 @@ src_compile() {
 		--with-c-optflags="${CFLAGS}" \
 		--with-fortran-optflags="${FFLAGS}" \
 		--with-fortran-ldflags='-lpthread' \
-		FC="${FORTRANC}" \
+		FC="$(tc-getFC)" \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getLD)" \
 		|| die "configure failed"
