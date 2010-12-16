@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r2.ebuild,v 1.1 2010/10/28 20:01:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r2.ebuild,v 1.2 2010/12/16 13:41:37 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit python fortran
+inherit python toolchain-funcs
 
 DESCRIPTION="A set of tools for manipulating and doing calculations on wwPDB macromolecule structure files"
 HOMEPAGE="http://code.google.com/p/pdb-tools"
@@ -22,8 +22,6 @@ IUSE=""
 RDEPEND="sci-chemistry/dssp"
 DEPEND=""
 
-FORTRANC="ifc gfortran"
-
 S="${WORKDIR}"/${PN}_${PV}
 
 src_prepare() {
@@ -35,9 +33,9 @@ src_compile() {
 	mkdir bin
 	cd satk
 	for i in *.f; do
-		einfo "${FORTRANC} ${FFLAGS} ${LDFLAGS} ${i} -o ${i/.f}"
-		${FORTRANC} ${FFLAGS} -c ${i} -o ${i/.f/.o} || die
-		${FORTRANC} ${LDFLAGS} -o ../bin/${i/.f} ${i/.f/.o} || die
+		einfo "$(tc-getFC) ${FFLAGS} ${LDFLAGS} ${i} -o ${i/.f}"
+		$(tc-getFC) ${FFLAGS} -c ${i} -o ${i/.f/.o} || die
+		$(tc-getFC) ${LDFLAGS} -o ../bin/${i/.f} ${i/.f/.o} || die
 		sed "s:${i/.f}.out:${i/.f}:g" -i ../pdb_satk.py || die
 	done
 }

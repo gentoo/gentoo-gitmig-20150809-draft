@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0093.ebuild,v 1.1 2010/11/17 07:49:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0093.ebuild,v 1.2 2010/12/16 13:56:18 jlec Exp $
 
 EAPI="2"
 
-inherit fortran base toolchain-funcs versionator
+inherit base toolchain-funcs versionator
 
 MY_PV="$(get_version_component_range 1-2)_source_v${PV}"
 

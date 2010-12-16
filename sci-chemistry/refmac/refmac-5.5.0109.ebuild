@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0109.ebuild,v 1.4 2010/06/16 14:27:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0109.ebuild,v 1.5 2010/12/16 13:56:18 jlec Exp $
 
 EAPI="2"
 
-inherit fortran base toolchain-funcs versionator
+inherit base toolchain-funcs versionator
 
 DESCRIPTION="Macromolecular crystallographic refinement program"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~garib/refmac/"

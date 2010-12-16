@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.29 2010/11/04 09:35:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.30 2010/12/16 13:45:43 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.5.0-r2.ebuild,
+  pdb2pqr-1.7.0.ebuild, pdb2pqr-1.7.0-r1.ebuild:
+  Removal of fortran.eclass, #348851
 
 *pdb2pqr-1.7.0-r1 (04 Nov 2010)
 

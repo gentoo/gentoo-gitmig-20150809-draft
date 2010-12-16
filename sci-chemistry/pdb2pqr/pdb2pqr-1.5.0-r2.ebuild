@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r2.ebuild,v 1.4 2010/10/15 18:56:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r2.ebuild,v 1.5 2010/12/16 13:45:43 jlec Exp $
 
 EAPI="3"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit eutils fortran multilib flag-o-matic distutils python versionator
+inherit distutils eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-2)
 MY_P="${PN}-${MY_PV}"
@@ -26,9 +27,6 @@ DEPEND="
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
-
-FORTRAN="g77 gfortran"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -53,7 +51,7 @@ src_configure() {
 	configuration() {
 		# Avoid automagic to numeric
 		NUMPY="${EPREFIX}/$(python_get_sitedir)" \
-			F77="${FORTRANC}" \
+			F77="$(tc-getFC)" \
 			econf \
 			$(use_with opal) || \
 			die "econf failed"

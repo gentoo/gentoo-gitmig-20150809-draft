@@ -1,14 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r1.ebuild,v 1.2 2010/06/15 14:49:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r1.ebuild,v 1.3 2010/12/16 13:57:04 jlec Exp $
 
 EAPI="2"
 
-inherit autotools fortran
+inherit autotools
 
-FORTRAN="gfortran ifc"
-
-DESCRIPTION="scale together multiple observations of reflections"
+DESCRIPTION="Scale together multiple observations of reflections"
 HOMEPAGE="http://www.ccp4.ac.uk/dist/html/scala.html"
 SRC_URI="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/${P}.tar.gz"
 

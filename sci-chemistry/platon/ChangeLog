@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.22 2010/11/25 19:10:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.23 2010/12/16 13:50:12 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> platon-20101125.ebuild:
+  Removal of fortran.eclass, #348851
 
 *platon-20101125 (25 Nov 2010)
 

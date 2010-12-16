@@ -1,12 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20101125.ebuild,v 1.1 2010/11/25 19:10:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20101125.ebuild,v 1.2 2010/12/16 13:50:12 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic fortran multilib toolchain-funcs
-
-FORTRAN="g77 gfortran"
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Versatile, SHELX-97 compatible, multipurpose crystallographic tool"
 HOMEPAGE="http://www.cryst.chem.uu.nl/platon/"
@@ -52,10 +50,10 @@ src_compile() {
 	COMMAND="$(tc-getCC) -c ${CFLAGS} xdrvr.c"
 	echo ${COMMAND}
 	${COMMAND} || die "Compilation of xdrvr.c failed"
-	COMMAND="${FORTRANC} -c ${FFLAGS:- -O2} -fno-second-underscore platon.f"
+	COMMAND="$(tc-getFC) -c ${FFLAGS:- -O2} -fno-second-underscore platon.f"
 	echo ${COMMAND}
 	${COMMAND} || die "Compilation of platon.f failed"
-	COMMAND="${FORTRANC} -o platon ${LDFLAGS} platon.o xdrvr.o -lX11 ${F2C}"
+	COMMAND="$(tc-getFC) -o platon ${LDFLAGS} platon.o xdrvr.o -lX11 ${F2C}"
 	echo ${COMMAND}
 	${COMMAND} || die "Linking failed"
 }

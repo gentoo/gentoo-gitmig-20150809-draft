@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.20 2010/11/08 17:21:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.21 2010/12/16 13:54:59 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> raster3d-2.7c.ebuild,
+  raster3d-2.9.2.ebuild:
+  Removal of fortran.eclass, #348851
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> raster3d-2.7c.ebuild,
   -raster3d-2.7d.ebuild, -files/raster3d-2.7d-gcc4-gentoo.patch,

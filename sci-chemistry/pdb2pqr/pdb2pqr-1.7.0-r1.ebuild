@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.1 2010/11/04 09:35:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.2 2010/12/16 13:45:43 jlec Exp $
 
 EAPI="3"
 
@@ -8,9 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit eutils fortran multilib flag-o-matic distutils python versionator toolchain-funcs
-
-FORTRAN="g77 gfortran"
+inherit distutils eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-2)
 MY_P="${PN}-${MY_PV}"
@@ -65,7 +63,7 @@ src_configure() {
 	configuration() {
 		# Avoid automagic to numeric
 		NUMPY="${EPREFIX}/$(python_get_sitedir)" \
-			F77="${FORTRANC}" \
+			F77="$(tc-getFC)" \
 			econf \
 			--enable-propka \
 			--with-max-atoms=${MAXATOMS:-10000} \

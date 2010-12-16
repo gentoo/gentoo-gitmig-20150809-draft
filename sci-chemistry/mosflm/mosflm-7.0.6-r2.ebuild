@@ -1,15 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.2 2010/11/08 17:17:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.3 2010/12/16 13:38:18 jlec Exp $
 
 EAPI="3"
 
-inherit fortran toolchain-funcs versionator eutils
+inherit eutils toolchain-funcs versionator
 
 MY_PV="$(delete_all_version_separators)"
 MY_P="${PN}${MY_PV}"
-
-FORTRAN="g77 gfortran ifc"
 
 DESCRIPTION="A program for integrating single crystal diffraction data from area detectors"
 HOMEPAGE="http://www.mrc-lmb.cam.ac.uk/harry/mosflm/"
@@ -49,8 +47,8 @@ src_compile() {
 	emake \
 		MOSHOME="${S}" \
 		DPS="${S}" \
-		FC=${FORTRANC} \
-		FLINK=${FORTRANC} \
+		FC=$(tc-getFC) \
+		FLINK=$(tc-getFC) \
 		CC=$(tc-getCC) \
 		AR_FLAGS=vru \
 		MOSLIBS='-lccp4f -lccp4c -lxdl_view -lcurses -lXt -lmmdb -lccif -lstdc++' \

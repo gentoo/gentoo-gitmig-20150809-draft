@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.9 2010/11/08 17:21:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.10 2010/12/16 13:54:59 jlec Exp $
 
-inherit toolchain-funcs fortran
+inherit toolchain-funcs
 
 NAME="Raster3D"
 
@@ -34,7 +34,7 @@ src_compile() {
 
 	# fix Makefile to honor user's CFLAGS/FFLAGS
 	sed -e "s:gcc:$(tc-getCC):" \
-		-e "s:g77:${FORTRANC}:" \
+		-e "s:g77:$(tc-getFC):" \
 		-e "s:-g -m486 -w:${CFLAGS}:" \
 		-e "s:-g -O -w -malign-double:${FFLAGS} -w:" \
 		-i Makefile || die "Failed to patch makefile"
