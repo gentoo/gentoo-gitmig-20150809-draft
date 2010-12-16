@@ -1,12 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.3 2010/07/29 23:22:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.4 2010/12/16 14:42:14 jlec Exp $
 
 EAPI="2"
 
-inherit autotools eutils fortran
-
-FORTRAN="g77 gfortran ifc"
+inherit autotools eutils
 
 PATCH="612"
 
