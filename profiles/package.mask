@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12275 2010/12/16 15:22:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12276 2010/12/16 15:27:13 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -121,10 +121,6 @@ games-simulation/secondlife-bin
 # Masked for removal on 20101229
 games-sports/race
 
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (28 Nov 2010)
-# New, experimental package.
-dev-util/chromium-tools
-
 # Alex Legler <a3li@gentoo.org> (28 Nov 2010)
 # Not maintained, multiple security issues.
 # Use the split horde ebuilds instaed.
@@ -171,11 +167,6 @@ dev-cpp/libgtksourceviewmm
 # Unsupportable.  masked for removal on 20101220
 # Use games-action/gltron instead
 games-action/armagetronad
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Nov 2010)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-2.5.x versions are used for chromium-9.x versions.
->=dev-lang/v8-2.5.0
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2010)
 # Last rites: dev-python/py-rrdtool #345701
@@ -1009,7 +1000,6 @@ media-tv/vdrplugin-rebuild
 # experimental features and accept a more unstable release.
 ~www-client/chromium-9.0.597.0
 ~www-client/chromium-9.0.597.16
-~www-client/chromium-9.0.597.19
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
