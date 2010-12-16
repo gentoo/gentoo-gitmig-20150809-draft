@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.3 2010/12/08 18:19:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.4 2010/12/16 15:31:51 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs fortran flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
@@ -22,8 +22,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="hardened mpi neo qmmm-tinker"
 
-RESTRICT="fetch"
-
 CDEPEND="app-shells/tcsh
 	hardened? ( sys-apps/paxctl )
 	mpi? ( virtual/mpi )
@@ -35,9 +33,10 @@ RDEPEND="${CDEPEND}
 
 S="${WORKDIR}/${PN}"
 
+RESTRICT="fetch"
+
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
 GAMESS_VERSION="1 OCT 2010 (R1)"
-FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
 	echo
@@ -54,10 +53,9 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	fortran_pkg_setup
 
 	# currently amd64 is only supported with gfortran
-	if [[ "${ARCH}" == "amd64" ]] && [[ "${FORTRANC}" != "gfortran" ]];
+	if [[ "${ARCH}" == "amd64" ]] && [[ "$(tc-getFC)" != "gfortran" ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
 
@@ -107,7 +105,7 @@ src_prepare() {
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	if use hardened && [[ "${FORTRANC}" = "g77" ]]; then
+	if use hardened && [[ "$(tc-getFC)" = "g77" ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
@@ -180,7 +178,7 @@ src_prepare() {
 	# insert proper FFLAGS into GAMESS' comp makefile
 	# in case we're using ifc let's strip all the gcc
 	# specific stuff
-	if [[ "${FORTRANC}" == "ifc" ]]; then
+	if [[ "$(tc-getFC)" == "ifort" ]]; then
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
 			-i comp || die "Failed setting up comp script"
 	elif ! use x86; then
@@ -214,12 +212,12 @@ src_prepare() {
 src_compile() {
 	# build actvte
 	cd "${S}"/tools
-	"${FORTRANC}" -o actvte.x actvte.f || \
+	"$(tc-getFC)" -o actvte.x actvte.f || \
 		die "Failed to compile actvte.x"
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "${FORTRANC}" == "ifc" ]] && use hardened; then
+	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS actvte.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -238,7 +236,7 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "${FORTRANC}" == "ifc" ]] && use hardened; then
+	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS ${PN}.00.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -302,7 +300,7 @@ pkg_postinst() {
 	einfo "validate the tests."
 	einfo "Please consult TEST.DOC and the other docs!"
 
-	if [[ "${FORTRANC}" == "ifc" ]]; then
+	if [[ "$(tc-getFC)" == "ifort" ]]; then
 		echo
 		ewarn "IMPORTANT NOTE: We STRONGLY recommend to stay away"
 		ewarn "from ifc-9.0 for now and use the ifc-8.1 series of"

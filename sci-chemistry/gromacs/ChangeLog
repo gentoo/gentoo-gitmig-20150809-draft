@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.62 2010/11/25 13:08:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.63 2010/12/16 15:35:46 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> gromacs-4.0.7-r4.ebuild,
+  gromacs-4.0.7-r5.ebuild, gromacs-4.5.3.ebuild:
+  Removal of fortran.eclass, #348851
 
 *gromacs-4.5.3 (25 Nov 2010)
 *gromacs-4.0.7-r5 (25 Nov 2010)

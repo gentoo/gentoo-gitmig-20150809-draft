@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.9 2010/11/25 13:08:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.10 2010/12/16 15:35:46 jlec Exp $
 
 EAPI="3"
 
 LIBTOOLIZE="true"
 TEST_PV="4.0.4"
 
-inherit autotools bash-completion eutils fortran multilib toolchain-funcs
+inherit autotools bash-completion eutils multilib toolchain-funcs
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
@@ -122,8 +122,7 @@ src_configure() {
 	if use fkernels; then
 		ewarn "Fortran kernels are usually not faster than C kernels and assembly"
 		ewarn "I hope, you know what are you doing..."
-		FORTRAN="g77 gfortran ifc"
-		myconf="${myconf} --enable-fortran" && fortran_pkg_setup
+		myconf="${myconf} --enable-fortran"
 	else
 		myconf="${myconf} --disable-fortran"
 	fi
@@ -193,10 +192,10 @@ src_configure() {
 		einfo "Configuring for ${x} precision"
 		cd "${S}-${x}"
 		local p=myconf${x}
-		ECONF_SOURCE="${S}" econf ${!p} --disable-mpi CC="$(tc-getCC)" F77="${FORTRANC}"
+		ECONF_SOURCE="${S}" econf ${!p} --disable-mpi CC="$(tc-getCC)" F77="$(tc-getFC)"
 		use mpi || continue
 		cd "${S}-${x}_mpi"
-		ECONF_SOURCE="${S}" econf ${!p} --enable-mpi CC="$(tc-getCC)" F77="${FORTRANC}"
+		ECONF_SOURCE="${S}" econf ${!p} --enable-mpi CC="$(tc-getCC)" F77="$(tc-getFC)"
 	done
 }
 
