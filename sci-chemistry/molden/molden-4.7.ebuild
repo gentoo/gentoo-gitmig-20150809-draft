@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.6 2010/09/16 17:26:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.7 2010/12/16 15:09:26 jlec Exp $
 
-inherit eutils toolchain-funcs flag-o-matic fortran
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -23,8 +23,6 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-FORTRAN="g77 gfortran"
-
 src_compile() {
 	# Use -mieee on alpha, according to the Makefile
 	use alpha && append-flags -mieee
@@ -34,7 +32,7 @@ src_compile() {
 	# assignment on the same line.
 	typeset -a args
 	args=( CC="$(tc-getCC) ${CFLAGS}" \
-		FC="${FORTRANC}" LDR="${FORTRANC}" FFLAGS="${FFLAGS}" )
+		FC="$(tc-getFC)" LDR="$(tc-getFC)" FFLAGS="${FFLAGS}" )
 
 	einfo "Building Molden..."
 	emake -j1 "${args[@]}" || die "molden emake failed"

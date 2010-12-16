@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7-r1.ebuild,v 1.3 2010/09/16 17:26:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7-r1.ebuild,v 1.4 2010/12/16 15:09:26 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic fortran toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
-FORTRAN="g77 gfortran"
 MY_P="${PN}${PV}"
 
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -31,9 +30,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-2.11.patch
-	epatch "${FILESDIR}"/${P}-ldflags.patch
-	epatch "${FILESDIR}"/${P}-implicit-dec.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.11.patch \
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-implicit-dec.patch
 	sed 's:makedepend:gccmakedep:g' -i surf/Makefile
 }
 
@@ -46,7 +45,7 @@ src_compile() {
 	# assignment on the same line.
 	typeset -a args
 	args=( CC="$(tc-getCC) ${CFLAGS}" \
-		FC="${FORTRANC}" LDR="${FORTRANC} ${LDFLAGS}" FFLAGS="${FFLAGS}" )
+		FC="$(tc-getFC)" LDR="$(tc-getFC) ${LDFLAGS}" FFLAGS="${FFLAGS}" )
 
 	einfo "Building Molden..."
 	emake -j1 "${args[@]}" || die "molden emake failed"
