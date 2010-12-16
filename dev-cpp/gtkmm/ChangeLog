@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.183 2010/11/20 23:58:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.184 2010/12/16 23:44:02 eva Exp $
+
+  16 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-2.2.12.ebuild,
+  -files/gtkmm-2.2.12-gcc41.patch:
+  Drop gtkmm:2, build failures (bug 244543) and not required by anything in the
+  tree.
 
   20 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gtkmm-2.22.0.ebuild:
   Pin some dependencies to their expected slot.
