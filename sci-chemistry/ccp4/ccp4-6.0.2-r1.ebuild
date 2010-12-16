@@ -1,10 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.7 2009/03/04 13:41:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.8 2010/12/16 12:55:16 jlec Exp $
 
-inherit fortran eutils gnuconfig toolchain-funcs
-
-FORTRAN="g77 gfortran ifc"
+inherit eutils gnuconfig toolchain-funcs
 
 SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 
@@ -45,19 +43,17 @@ for i in $(seq $PATCH_TOT); do
 	SRC_URI="${SRC_URI}
 		${SRC}/${PV}/patches/${!NAME}"
 done
+
 LICENSE="ccp4"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
+
 # app-office/sc overlaps sc binary and man page
 # We can't rename ours since the automated ccp4i interface expects it there,
 # as do many scripts. app-office/sc can't rename its because that's the name
 # of the package.
-RDEPEND="X? (
-				x11-libs/libX11
-				x11-libs/libXt
-				x11-libs/libXaw
-		)
+RDEPEND="
 		>=dev-lang/tcl-8.3
 		>=dev-lang/tk-8.3
 		>=dev-tcltk/blt-2.4
@@ -68,12 +64,17 @@ RDEPEND="X? (
 		sci-chemistry/rasmol
 		sci-libs/mccp4
 		app-shells/tcsh
-		!app-office/sc"
+		!app-office/sc
+		X? (
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-libs/libXaw
+		)"
 DEPEND="${RDEPEND}
 		X? (
-				x11-misc/imake
-				x11-proto/inputproto
-				x11-proto/xextproto
+			x11-misc/imake
+			x11-proto/inputproto
+			x11-proto/xextproto
 		)"
 
 S="${WORKDIR}/${PN}-${PV}"
@@ -159,7 +160,7 @@ src_compile() {
 	# irix irix64 sunos sunos64 aix hpux osf1 linux freebsd
 	# linux_compaq_compilers linux_intel_compilers generic Darwin
 	# ia64_linux_intel Darwin_ibm_compilers linux_ibm_compilers
-	if [[ "${FORTRANC}" = "ifc" ]]; then
+	if [[ "$(tc-getFC)" = "ifort" ]]; then
 		if use ia64; then
 			GENTOO_OSNAME="ia64_linux_intel"
 		else
@@ -195,7 +196,7 @@ src_compile() {
 	export COPTIM=${CFLAGS}
 	export CXXOPTIM=${CXXFLAGS}
 	# Default to -O2 if FFLAGS is unset
-	export FC=${FORTRANC}
+	export FC=$(tc-getFC)
 	export FOPTIM=${FFLAGS:- -O2}
 
 	# Can't use econf, configure rejects unknown options like --prefix
