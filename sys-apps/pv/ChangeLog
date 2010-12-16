@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.14 2010/12/14 21:44:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.15 2010/12/16 17:59:18 angelos Exp $
+
+  16 Dec 2010; Christoph Mende <angelos@gentoo.org> pv-1.2.0.ebuild:
+  Fixed SRC_URI
 
 *pv-1.2.0 (14 Dec 2010)
 
