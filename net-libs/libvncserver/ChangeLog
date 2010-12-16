@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.45 2010/08/02 18:57:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.46 2010/12/16 14:31:53 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libvncserver-0.9.7.ebuild:
+  Convert to virtual/jpeg, bug #347980 by Andrew Savchenko
+  <bircoph@gmail.com>.
 
   02 Aug 2010; Raúl Porcel <armin76@gentoo.org> libvncserver-0.9.7.ebuild:
   alpha/ia64/sh/sparc stable wrt #304493
