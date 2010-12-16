@@ -1,0 +1,46 @@
+From 50dee06311df4d795b1473935da3cbc661835b73 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Thu, 16 Dec 2010 07:44:41 +0100
+Subject: [PATCH] Fix generated code for Ruby 1.9 compatibility.
+
+In Ruby 1.9, the String class no longer works as a C-style array of (8-bit)
+characters, but supports multiple encoding. While it is obviously a task
+for the developer to ensure that the data array passed to the
+Ragel-generated code is in a compatible encoding, this also means that the
+simple dereference is not going to work:
+
+% ruby18 -e 'puts "foo"[0].class'
+Fixnum
+% ruby19 -e 'puts "foo"[0].class'
+String
+
+This is easily fixed by calling the #ord method on the dereferenced data,
+which will provide the ASCII ordinal (or UNICODE codepoint) for the single
+character.
+
+The produced code works correctly both on Ruby 1.8 and 1.9.2.
+---
+ ragel/rubycodegen.cpp |    7 +++++--
+ 1 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/ragel/rubycodegen.cpp b/ragel/rubycodegen.cpp
+index 5117823..f329587 100644
+--- a/ragel/rubycodegen.cpp
++++ b/ragel/rubycodegen.cpp
+@@ -307,8 +307,11 @@ string RubyCodeGen::GET_KEY()
+ 		ret << ")";
+ 	}
+ 	else {
+-		/* Expression for retrieving the key, use simple dereference. */
+-		ret << DATA() << "[" << P() << "]";
++		/* Expression for retrieving the key, use dereference
++		 * and read ordinal, for compatibility with Ruby
++		 * 1.9.
++		 */
++		ret << DATA() << "[" << P() << "].ord";
+ 	}
+ 	return ret.str();
+ }
+-- 
+1.7.3.3
+
