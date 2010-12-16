@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1.ebuild,v 1.2 2010/07/04 08:07:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1.ebuild,v 1.3 2010/12/16 14:40:23 jlec Exp $
 
 EAPI="2"
 
-inherit flag-o-matic fortran
+inherit flag-o-matic fortran toolchain-funcs
 
 DESCRIPTION="Fragment library for rosetta"
 HOMEPAGE="http://www.rosettacommons.org"
@@ -15,16 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RESTRICT="fetch"
-
+DEPEND=""
 RDEPEND="
 	sci-biology/ncbi-tools
 	sci-biology/ncbi-tools++
 	sci-biology/psipred"
 
-S="${WORKDIR}"/${PN/-/_}
+RESTRICT="fetch"
 
-FORTRAN="g77 gfortran ifc"
+S="${WORKDIR}"/${PN/-/_}
 
 pkg_nofetch() {
 	einfo "Go to ${HOMEPAGE} and get ${PN}.tgz and rename it to ${A}"
@@ -32,8 +31,9 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-nnmake.patch
-	epatch "${FILESDIR}"/${PV}-chemshift.patch
+	epatch \
+		"${FILESDIR}"/${PV}-nnmake.patch \
+		"${FILESDIR}"/${PV}-chemshift.patch
 }
 
 src_compile() {
