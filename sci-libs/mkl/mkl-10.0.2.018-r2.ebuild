@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.3 2010/12/16 15:47:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.4 2010/12/16 18:58:00 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs check-reqs
 
@@ -50,7 +50,7 @@ pkg_setup() {
 	# Check and setup fortran
 	if use fortran95; then
 		# blas95 and lapack95 don't compile with gfortran < 4.2
-		[[ $(tc-getFC) == g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && 
+		[[ $(tc-getFC) == g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] &&
 		die "blas95 and lapack95 don't compile with gfortran < 4.2"
 	fi
 	MKL_FC="gnu"
