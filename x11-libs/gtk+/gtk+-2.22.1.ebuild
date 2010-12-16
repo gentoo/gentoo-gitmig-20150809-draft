@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1.ebuild,v 1.1 2010/11/19 22:58:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1.ebuild,v 1.2 2010/12/16 20:31:07 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -164,7 +164,7 @@ src_install() {
 		sed -i -e "s:Libs\: :Libs\: -framework Carbon :" "${ED%/}"/usr/lib/pkgconfig/$i || die "sed failed"
 	done
 
-	python_convert_shebangs 2 "${D}"usr/bin/gtk-builder-convert
+	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
 }
 
 pkg_postinst() {
