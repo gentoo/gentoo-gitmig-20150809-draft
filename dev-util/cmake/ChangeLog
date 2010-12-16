@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.144 2010/09/11 15:13:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.145 2010/12/16 12:33:20 scarabeus Exp $
+
+*cmake-2.8.3 (16 Dec 2010)
+
+  16 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> +cmake-2.8.3.ebuild,
+  +files/cmake-2.8.3-FindLibArchive.patch,
+  +files/cmake-2.8.3-FindPythonInterp.patch,
+  +files/cmake-2.8.3-FindPythonLibs.patch,
+  +files/cmake-2.8.3-more-no_host_paths.patch:
+  Version bump. Per bug #344259. Thanks to Arseny Solokha for updated patches.
 
   11 Sep 2010; Raúl Porcel <armin76@gentoo.org> cmake-2.8.1-r2.ebuild:
   ia64/s390/sh/sparc stable wrt #325845
