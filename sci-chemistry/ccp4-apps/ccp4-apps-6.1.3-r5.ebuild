@@ -1,14 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r5.ebuild,v 1.2 2010/12/02 07:25:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r5.ebuild,v 1.3 2010/12/16 13:17:53 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit autotools eutils flag-o-matic fortran gnuconfig python toolchain-funcs
-
-FORTRAN="g77 gfortran ifc"
+inherit autotools eutils flag-o-matic gnuconfig python toolchain-funcs
 
 MY_P="${PN/-apps}-${PV}"
 
@@ -106,7 +104,6 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_set_active_version 2
-	fortran_pkg_setup
 }
 
 src_prepare() {
@@ -116,7 +113,7 @@ src_prepare() {
 		dir=$(eval echo \${${base}[0]})
 		p=$(eval echo \${${base}[1]})
 		pushd "${dir}" >& /dev/null
-		ccp_patch ${DISTDIR}/"${p}"
+		ccp_patch "${DISTDIR}/${p}"
 		popd >& /dev/null
 	done
 	einfo "Done."
@@ -209,7 +206,7 @@ src_configure() {
 	# irix irix64 sunos sunos64 aix hpux osf1 linux freebsd
 	# linux_compaq_compilers linux_intel_compilers generic Darwin
 	# ia64_linux_intel Darwin_ibm_compilers linux_ibm_compilers
-	if [[ "${FORTRANC}" = "ifc" ]]; then
+	if [[ "$(tc-getFC)" = "ifort" ]]; then
 		if use ia64; then
 			GENTOO_OSNAME="ia64_linux_intel"
 		else
@@ -249,7 +246,7 @@ src_configure() {
 	export COPTIM=${CFLAGS}
 	export CXXOPTIM=${CXXFLAGS}
 	# Default to -O2 if FFLAGS is unset
-	export FC=${FORTRANC}
+	export FC=$(tc-getFC)
 	export FOPTIM=${FFLAGS:- -O2}
 	export BINSORT_SCR="${T}"
 	export CCP4_MASTER="${WORKDIR}"
