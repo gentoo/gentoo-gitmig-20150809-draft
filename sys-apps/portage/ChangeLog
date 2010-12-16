@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.775 2010/12/13 07:18:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.776 2010/12/16 17:05:41 zmedico Exp $
+
+*portage-2.2.0_alpha9 (16 Dec 2010)
+
+  16 Dec 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha9.ebuild:
+  2.2.0_alpha9 version bump. This fixes bug #339670 (avoid ELOOP due to
+  circular symlink in $T) and bug #348389 (AttributeError triggered by
+  SLOT conflict). Bug #210077 tracks all bugs fixed since 2.1.x.
 
 *portage-2.2.0_alpha8 (13 Dec 2010)
 
