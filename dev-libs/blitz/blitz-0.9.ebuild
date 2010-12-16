@@ -1,21 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.11 2010/06/25 13:21:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.12 2010/12/16 15:01:18 jlec Exp $
 
-inherit eutils toolchain-funcs fortran
+inherit eutils toolchain-funcs
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
-DEPEND=""
-RDEPEND=""
-IUSE=""
 
+IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
-
-FORTAN="g77"
 
 src_unpack() {
 	unpack ${A}
@@ -31,12 +27,14 @@ src_compile() {
 	myconf="${myconf} --enable-maintainer-mode --disable-doxygen --disable-dot"
 	myconf="${myconf} --enable-shared"
 
-	export CC=$(tc-getCC) CXX=$(tc-getCXX)
-	econf ${myconf} || die "econf failed"
+	export CC=$(tc-getCC) CXX=$(tc-getCXX) FC=$(tc-getFC)
+	econf ${myconf}
 }
 
 src_test() {
-	make check-testsuite || die "selftest failed"
+	# exprctor fails if BZ_DEBUG flag is not set
+	# CXXFLAGS gets overwritten
+	emake AM_CXXFLAGS="-DBZ_DEBUG" check-testsuite || die "selftest failed"
 }
 
 src_install () {

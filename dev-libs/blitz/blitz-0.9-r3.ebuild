@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.3 2010/12/04 14:31:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.4 2010/12/16 15:01:18 jlec Exp $
 
 EAPI="3"
 
@@ -35,8 +35,7 @@ src_configure() {
 		--without-blas \
 		$(use_enable doc doxygen) \
 		$(use_enable doc html-docs) \
-		$(use_enable debug) \
-		|| die "econf failed"
+		$(use_enable debug)
 }
 
 src_compile() {
@@ -57,10 +56,10 @@ src_install () {
 		DESTDIR="${D}" \
 		docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		install || die "emake install failed"
-	dodoc ChangeLog ChangeLog.1 README README.binutils TODO AUTHORS NEWS
+	dodoc ChangeLog ChangeLog.1 README README.binutils TODO AUTHORS NEWS || die
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/*.cpp
+		doins examples/*.cpp || die
 	fi
 }

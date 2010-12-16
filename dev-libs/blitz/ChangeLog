@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.36 2010/12/04 14:31:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.37 2010/12/16 15:01:18 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> blitz-0.9.ebuild,
+  blitz-0.9-r3.ebuild:
+  Removal of fortran.eclass, #348851
 
   04 Dec 2010; Fabian Groffen <grobian@gentoo.org> blitz-0.9-r3.ebuild:
   Migrate to EAPI=3 for Prefix, marked ~ppc-macos and ~x86-macos, bug
