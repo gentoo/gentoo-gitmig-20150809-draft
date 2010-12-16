@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.7 2010/11/25 13:16:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20090914.ebuild,v 1.8 2010/12/16 15:09:45 phajdan.jr Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ src_configure() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" linux || die
-	emake -C doc man || die
+	emake VERSION="NEdit ${PV}" -j1 -C doc all || die
 }
 
 src_install() {

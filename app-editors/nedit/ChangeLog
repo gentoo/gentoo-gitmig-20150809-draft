@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.61 2010/11/25 13:16:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.62 2010/12/16 15:09:45 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nedit-5.5_p20090914.ebuild:
+  Fix installation of docs, bug #347405 by Steffen Schaumburg
+  <steffen@schaumburger.info>.
 
   25 Nov 2010; Justin Lecher <jlec@gentoo.org> nedit-5.5_p20090914.ebuild:
   Correct last commit
