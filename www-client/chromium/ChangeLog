@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.242 2010/12/14 11:47:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.243 2010/12/16 15:23:43 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-9.0.597.19.ebuild:
+  Drop ~arm keyword for beta channel version being unmasked (needs libvpx
+  and chromium-tools).
 
   14 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   chromium-8.0.552.224.ebuild:
