@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.26 2010/12/14 18:54:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.27 2010/12/16 09:31:01 phajdan.jr Exp $
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  unclutter-8-r2.ebuild:
+  x86 stable wrt bug #348733
 
 *unclutter-8-r2 (09 Sep 2010)
 
