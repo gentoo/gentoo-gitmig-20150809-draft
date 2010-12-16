@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.64 2010/11/10 21:20:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.65 2010/12/16 08:40:53 jlec Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -173,6 +173,7 @@ net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
 sci-chemistry/cara-bin
+sci-chemistry/cyana
 sci-chemistry/icm
 sci-chemistry/icm-browser
 sci-chemistry/mars
