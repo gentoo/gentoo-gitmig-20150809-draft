@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.25 2010/12/10 18:45:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.26 2010/12/16 21:03:14 darkside Exp $
+
+  16 Dec 2010; Jeremy Olexa <darkside@gentoo.org> mpc-0.8.2.ebuild:
+  add prefix keywords needed for gcc-4.5.1-r1
 
   10 Dec 2010; Fabian Groffen <grobian@gentoo.org> mpc-0.8.2.ebuild:
   Run elibtoolize for FreeMiNT, bug #347317
