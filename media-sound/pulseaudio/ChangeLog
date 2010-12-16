@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.201 2010/12/01 07:44:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.202 2010/12/16 19:59:17 radhermit Exp $
+
+  16 Dec 2010; Tim Harder <radhermit@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Fix libX11 dependency order (bug #348806 by Rodolphe Rocca).
 
   01 Dec 2010; Markus Meier <maekke@gentoo.org> pulseaudio-0.9.21.1.ebuild:
   arm stable, bug #299913
