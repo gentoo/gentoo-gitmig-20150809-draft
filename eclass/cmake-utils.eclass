@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.60 2010/10/13 16:40:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.61 2010/12/16 14:36:55 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -137,6 +137,11 @@ _use_me_now_inverted() {
 # Eclass respects PREFIX variable, though it's not recommended way to set
 # install/lib/bin prefixes.
 # Use -DCMAKE_INSTALL_PREFIX=... CMake variable instead.
+
+# @ECLASS-VARIABLE: CMAKE_BINARY
+# @DESCRIPTION:
+# Eclass can use different cmake binary than the one provided in by system.
+: ${CMAKE_BINARY:=cmake}
 
 # Determine using IN or OUT source build
 _check_build_dir() {
@@ -344,8 +349,8 @@ enable_cmake-utils_src_configure() {
 	mkdir -p "${CMAKE_BUILD_DIR}"
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: mycmakeargs is ${mycmakeargs_local[*]}"
-	echo cmake "${cmakeargs[@]}" "${CMAKE_USE_DIR}"
-	cmake "${cmakeargs[@]}" "${CMAKE_USE_DIR}" || die "cmake failed"
+	echo "${CMAKE_BINARY}" "${cmakeargs[@]}" "${CMAKE_USE_DIR}"
+	"${CMAKE_BINARY}" "${cmakeargs[@]}" "${CMAKE_USE_DIR}" || die "cmake failed"
 	popd > /dev/null
 }
 
