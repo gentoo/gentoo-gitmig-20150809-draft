@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.2 2010/12/16 13:45:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.3 2010/12/16 16:19:37 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -27,7 +27,6 @@ DEPEND="
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )"
 RDEPEND="${DEPEND}"
-
 
 S="${WORKDIR}/${MY_P}"
 
