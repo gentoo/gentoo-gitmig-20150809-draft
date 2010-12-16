@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.20.2.ebuild,v 1.1 2010/12/15 11:50:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.20.2.ebuild,v 1.2 2010/12/16 00:17:07 fauli Exp $
 
 inherit linux-mod eutils flag-o-matic
 
@@ -24,8 +24,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.4.15-isns-set-scn-flag.patch #180619
-#	epatch "${FILESDIR}"/${PN}-0.4.17-build.patch
-	epatch "${FILESDIR}"/${PN}-1.4.18+linux-2.6.32.patch
 	# NIPQUAD removed in 2.6.36, #340449
 	if kernel_is ge 2 6 36; then
 		epatch "${FILESDIR}"/iscsitarget-1.4.20.2_kernel-2.6.36.patch
