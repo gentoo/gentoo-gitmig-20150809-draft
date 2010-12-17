@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.11 2010/12/17 08:24:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.12 2010/12/17 13:41:58 jlec Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -137,7 +137,7 @@ src_unpack() {
 	fi
 
 	# fix a bad makefile in the test
-	if [[ $(tc-getFC) =~ gfortran ]] || [[ $(tc-getFC) =~ if* ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]] || [[ $(tc-getFC) =~ if.* ]]; then
 		sed -i \
 			-e "s/g77/$(tc-getFC)/" \
 			-e 's/-DGNU_USE//' \

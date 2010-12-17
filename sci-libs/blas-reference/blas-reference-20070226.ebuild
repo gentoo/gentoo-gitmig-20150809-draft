@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.20 2010/12/17 08:09:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.21 2010/12/17 13:35:46 jlec Exp $
 
 inherit eutils autotools multilib flag-o-matic toolchain-funcs
 
@@ -22,15 +22,8 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${LAPACKPN}-${LAPACKPV}"
 
-pkg_setup() {
-	if  [[ $(tc-getFC) =~ if* ]]; then
-		ewarn "Using Intel Fortran at your own risk"
-		LDFLAGS="$(raw-ldflags)"
-	fi
-	ESELECT_PROF=reference
-}
-
 src_unpack() {
+	ESELECT_PROF=reference
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotool.patch
@@ -39,8 +32,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--libdir=/usr/$(get_libdir)/blas/reference \
-		|| die "econf failed"
+		--libdir=/usr/$(get_libdir)/blas/reference
 	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 

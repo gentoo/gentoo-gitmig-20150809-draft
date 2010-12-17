@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.5 2010/12/17 08:24:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.6 2010/12/17 13:41:58 jlec Exp $
 
 inherit eutils toolchain-funcs check-reqs
 
@@ -39,6 +39,7 @@ get_fcomp() {
 			FCOMP=$(tc-getFC) ;;
 	esac
 }
+
 pkg_setup() {
 	# Check the license
 	if [[ -z ${MKL_LICENSE} ]]; then
@@ -60,11 +61,11 @@ pkg_setup() {
 	# Check and setup fortran
 	if use fortran95; then
 		# blas95 and lapack95 don't compile with gfortran < 4.2
-		[[ $(tc-getFC) =~ g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] &&
+		[[ $(tc-getFC) =~ g.* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] &&
 		die "blas95 and lapack95 don't compile with gfortran < 4.2"
 	fi
 	MKL_FC="gnu"
-	[[ $(tc-getFC) =~ if* ]] && MKL_FC="intel"
+	[[ $(tc-getFC) =~ if.* ]] && MKL_FC="intel"
 
 	# build profiles according to what compiler is installed
 	MKL_CC="gnu"

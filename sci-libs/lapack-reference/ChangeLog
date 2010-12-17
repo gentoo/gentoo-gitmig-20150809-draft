@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.53 2010/12/17 08:10:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.54 2010/12/17 13:39:18 jlec Exp $
+
+  17 Dec 2010; Justin Lecher <jlec@gentoo.org>
+  lapack-reference-3.1.1-r1.ebuild, lapack-reference-3.2.1.ebuild,
+  lapack-reference-3.2.1-r1.ebuild:
+  Fix for bug 348935
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild, lapack-reference-3.2.1.ebuild,

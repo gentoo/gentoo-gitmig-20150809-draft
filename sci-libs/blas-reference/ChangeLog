@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.49 2010/12/17 08:09:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.50 2010/12/17 13:35:46 jlec Exp $
+
+  17 Dec 2010; Justin Lecher <jlec@gentoo.org> blas-reference-20070226.ebuild,
+  blas-reference-20070226-r1.ebuild, blas-reference-20070226-r2.ebuild:
+  Fix for bug 348935
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> blas-reference-20070226.ebuild,
   blas-reference-20070226-r1.ebuild, blas-reference-20070226-r2.ebuild:
