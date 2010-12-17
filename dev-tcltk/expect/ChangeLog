@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.83 2010/12/17 22:35:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.84 2010/12/17 22:56:19 vapier Exp $
+
+  17 Dec 2010; Mike Frysinger <vapier@gentoo.org> expect-5.44.1.15.ebuild,
+  +files/expect-5.44.1.15-expectk.patch,
+  files/expect-5.44.1.15-headers.patch:
+  Fix expectk handling, and include a few more headers #279335 by OKUMURA N.
+  Shin-ya.
 
   17 Dec 2010; Mike Frysinger <vapier@gentoo.org> expect-5.44.1.15.ebuild:
   Force ignoring of -w in MAKEOPTS #338970 by Drake Wyrm.

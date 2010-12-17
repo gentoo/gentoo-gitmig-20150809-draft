@@ -74,3 +74,13 @@ https://sourceforge.net/tracker/?func=detail&aid=3071706&group_id=13179&atid=113
  void exp_tty_break(Tcl_Interp *interp, int fd);
  int exp_tty_raw_noecho(Tcl_Interp *interp, exp_tty *tty_old, int *was_raw, int *was_echo);
  int exp_israw(void);
+--- a/exp_main_tk.c
++++ b/exp_main_tk.c
+@@ -32,6 +32,7 @@
+ static char sccsid[] = "@(#) tkAppInit.c 1.19 95/12/23 17:09:24";
+ #endif /* not lint */
+ 
++#include <string.h>
+ #include <ctype.h>
+ 
+ #include "tk.h"

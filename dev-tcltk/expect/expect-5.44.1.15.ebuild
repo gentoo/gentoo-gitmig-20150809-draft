@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.15 2010/12/17 22:35:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.16 2010/12/17 22:56:19 vapier Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}_with-tk-no.patch
 	epatch "${FILESDIR}"/${P}-headers.patch #337943
+	epatch "${FILESDIR}"/${P}-expectk.patch
 	sed -i 's:ifdef HAVE_SYS_WAIT_H:ifndef NO_SYS_WAIT_H:' *.c
 
 	eautoconf
