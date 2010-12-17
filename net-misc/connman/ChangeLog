@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.27 2010/11/17 10:01:45 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.28 2010/12/17 14:46:07 dagger Exp $
+
+*connman-0.64 (17 Dec 2010)
+*connman-0.63-r2 (17 Dec 2010)
+
+  17 Dec 2010; Robert Piasek <dagger@gentoo.org> -connman-0.63-r1.ebuild,
+  +connman-0.63-r2.ebuild, +connman-0.64.ebuild:
+  Upgraded dependency - Thanks to Benedikt Sauer <filmor@gmail.com>
 
 *connman-0.63-r1 (17 Nov 2010)
 
