@@ -1,0 +1,10 @@
+# ChangeLog for virtual/commonlisp
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/commonlisp/ChangeLog,v 1.1 2010/12/17 20:13:14 ulm Exp $
+
+*commonlisp-0 (17 Dec 2010)
+
+  17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> +commonlisp-0.ebuild,
+  +metadata.xml:
+  Initial import.
+
