@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.4 2010/12/16 13:29:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.5 2010/12/17 07:54:48 jlec Exp $
 
 EAPI="3"
 
@@ -34,8 +34,20 @@ pkg_nofetch() {
 	elog "in ${DISTDIR}."
 }
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
-	tc-has-openmp
+	tc-has-openmp || die "Please ensure your compiler has openmp support"
+	get_fcomp
 }
 
 src_prepare() {
@@ -53,7 +65,7 @@ src_prepare() {
 	fi
 
 	# the code uses Intel-compiler-specific directives
-	if [[ $(tc-getFC) == gfortran ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]]; then
 		epatch "${FILESDIR}"/${PV}-allow-gcc-openmp.patch
 		use openmp && \
 			OMPLIB="-lgomp" && append-flags -fopenmp
@@ -93,14 +105,14 @@ src_prepare() {
 src_compile() {
 	local GLOBALS
 	local MALIGN
-	if [[ $(tc-getFC) = g77 ]]; then
+	if [[ $(tc-getFC) =~ g77 ]]; then
 		GLOBALS="-fno-globals"
 		MALIGN='\$(CNS_MALIGN_I86)'
 	fi
 
 	# Set up the compiler to use
 	pushd instlib/machine/unsupported/g77-unix 2>/dev/null
-	ln -s Makefile.header Makefile.header.$(tc-getFC) || die
+	ln -s Makefile.header Makefile.header.${FCOMP} || die
 	popd 2>/dev/null
 
 	# make install really means build, since it's expected to be used in-place
@@ -117,7 +129,6 @@ src_compile() {
 		compiler="${COMP}" \
 		install \
 		|| die "emake failed"
-
 }
 
 src_test() {

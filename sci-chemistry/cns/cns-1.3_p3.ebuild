@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p3.ebuild,v 1.2 2010/12/16 13:29:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p3.ebuild,v 1.3 2010/12/17 07:54:48 jlec Exp $
 
 EAPI="3"
 
@@ -34,8 +34,20 @@ pkg_nofetch() {
 	elog "in ${DISTDIR}."
 }
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
-	tc-has-openmp
+	tc-has-openmp || die "Please ensure your compiler has openmp support"
+	get_fcomp
 }
 
 src_prepare() {
@@ -54,7 +66,7 @@ src_prepare() {
 	fi
 
 	# the code uses Intel-compiler-specific directives
-	if [[ $(tc-getFC) == gfortran ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]]; then
 		use openmp && \
 			OMPLIB="-lgomp" && append-flags -fopenmp
 		COMP="gfortran"
@@ -103,7 +115,7 @@ src_compile() {
 
 	# Set up the compiler to use
 	pushd instlib/machine/unsupported/g77-unix 2>/dev/null
-	ln -s Makefile.header Makefile.header.$(tc-getFC) || die
+	ln -s Makefile.header Makefile.header.${FCOMP} || die
 	popd 2>/dev/null
 
 	# make install really means build, since it's expected to be used in-place

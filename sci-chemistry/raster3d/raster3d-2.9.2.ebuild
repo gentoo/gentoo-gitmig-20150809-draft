@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.2.ebuild,v 1.3 2010/12/16 13:54:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.2.ebuild,v 1.4 2010/12/17 07:57:02 jlec Exp $
 
 EAPI="3"
 
@@ -36,7 +36,7 @@ src_compile() {
 		-i Makefile.template || \
 		die "Failed to patch makefile.template"
 
-	if [[ $(tc-getFC) == gfortran ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]]; then
 		append-cflags -Dgfortran
 	fi
 
