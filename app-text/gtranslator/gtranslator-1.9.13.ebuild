@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.1 2010/12/09 00:30:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.2 2010/12/17 22:57:01 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS TODO"
+	DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS"
 	G2CONF="${G2CONF}
 		--disable-static
 		$(use_with gnome dictionary)

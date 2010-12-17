@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.37 2010/12/09 00:30:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.38 2010/12/17 22:57:01 eva Exp $
+
+  17 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gtranslator-1.9.13.ebuild:
+  TODO does not exist.
 
 *gtranslator-1.9.13 (09 Dec 2010)
 
