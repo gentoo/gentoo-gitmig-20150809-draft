@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.90 2010/12/17 12:17:05 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.91 2010/12/17 12:30:16 dagger Exp $
+
+  17 Dec 2010; Robert Piasek <dagger@gentoo.org>
+  files/networkmanager-0.8.2-1.patch:
+  Updated backport patch
 
 *networkmanager-0.8.2-r2 (17 Dec 2010)
 
