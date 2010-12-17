@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.27 2010/12/15 12:38:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.28 2010/12/17 13:02:37 tomka Exp $
+
+  17 Dec 2010; Thomas Kahle <tomka@gentoo.org> mercurial-1.7.ebuild:
+  x86 stable per bug 348499
 
   15 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mercurial-1.7.ebuild:
   Stable on amd64 wrt bug #348499
