@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.9.2.ebuild,v 1.2 2010/12/16 09:37:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/xye-0.9.2.ebuild,v 1.3 2010/12/17 21:32:21 rich0 Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xye/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]
