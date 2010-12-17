@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.48 2010/12/07 07:29:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.49 2010/12/17 18:13:38 robbat2 Exp $
+
+*git-1.7.3.4 (16 Dec 2010)
+*git-1.7.2.4-r1 (16 Dec 2010)
+*git-1.6.4.4-r1 (16 Dec 2010)
+
+  16 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.4.4-r1.ebuild,
+  +files/git-1.6.4.5-gitweb-cve-2010-3906.patch, +git-1.7.2.4-r1.ebuild,
+  +git-1.7.3.4.ebuild:
+  Version bump. Contains fix for CVE-2010-3906: gitweb XSS.
 
 *git-1.7.3.3 (07 Dec 2010)
 *git-1.7.2.4 (07 Dec 2010)
