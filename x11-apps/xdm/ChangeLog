@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.106 2010/02/21 16:48:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.107 2010/12/17 22:25:13 mgorny Exp $
+
+*xdm-1.1.10 (17 Dec 2010)
+
+  17 Dec 2010; Michał Górny <mgorny@gentoo.org> +xdm-1.1.10.ebuild:
+  Version bump with an ebuild cleanup. Migrate to the xorg-2 eclass, remove
+  patches which are (hopefully) no longer necessary.
 
   21 Feb 2010; Raúl Porcel <armin76@gentoo.org> xdm-1.1.9.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #302046
