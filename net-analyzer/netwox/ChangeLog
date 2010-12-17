@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.32 2010/10/30 16:54:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.33 2010/12/17 19:51:54 phajdan.jr Exp $
+
+  17 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> netwox-5.38.0.ebuild:
+  x86 stable wrt bug #348338
 
   30 Oct 2010; Raúl Porcel <armin76@gentoo.org> netwox-5.33.0.ebuild,
   netwox-5.36.0.ebuild, netwox-5.38.0.ebuild:
