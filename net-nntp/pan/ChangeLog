@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.77 2010/09/21 20:29:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.78 2010/12/17 16:37:48 jer Exp $
+
+*pan-0.133-r1 (17 Dec 2010)
+
+  17 Dec 2010; Jeroen Roovers <jer@gentoo.org> +pan-0.133-r1.ebuild:
+  Patch for dev-libs/gmime:2.4 (bug #311503).
 
   21 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> pan-9999.ebuild:
   Update live ebuild to gnome git repository, bug #290914. Make it use base
