@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.14 2010/09/20 07:27:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.15 2010/12/17 22:35:03 vapier Exp $
 
 EAPI="3"
 
@@ -77,7 +77,7 @@ src_test() {
 
 expect_make_var() {
 	touch pkgIndex.tcl-hand
-	printf 'all:;echo $('$1')\ninclude Makefile' | emake -s -f -
+	printf 'all:;echo $('$1')\ninclude Makefile' | emake --no-print-directory -s -f -
 	rm -f pkgIndex.tcl-hand
 }
 
