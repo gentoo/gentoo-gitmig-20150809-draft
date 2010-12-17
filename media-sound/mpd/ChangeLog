@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.227 2010/12/17 15:27:41 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.228 2010/12/17 17:53:29 c1pher Exp $
+
+  17 Dec 2010; Dane Smith <c1pher@gentoo.org> mpd-0.15.15.ebuild:
+  Fixed another smaller and much less obvious typo regarding the patch I
+  suggested.
 
   17 Dec 2010; Dane Smith <c1pher@gentoo.org> mpd-0.15.15.ebuild:
   Fixed the obvious typo in my patch wrt bug 348881. Missing "&&". Thanks

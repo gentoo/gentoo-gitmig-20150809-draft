@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.15.ebuild,v 1.3 2010/12/17 15:27:41 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.15.ebuild,v 1.4 2010/12/17 17:53:29 c1pher Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -89,10 +89,10 @@ src_configure() {
 		mpdconf+=" --disable-oggflac"
 	fi
 
-	if use lastfmradio && ! use curl; then
-		mpdconf+=" --disable-lastfm"
-	else
+	if use lastfmradio && use curl; then
 		mpdconf+=" --enable-lastfm"
+	else
+		mpdconf+=" --disable-lastfm"
 	fi
 
 	append-lfs-flags
