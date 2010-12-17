@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-metapost
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.35 2010/10/24 18:12:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.36 2010/12/17 20:54:34 grobian Exp $
+
+  17 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  texlive-metapost-2010.ebuild:
+  Marked ~ppc-macos
 
 *texlive-metapost-2010 (24 Oct 2010)
 

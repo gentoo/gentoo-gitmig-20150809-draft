@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-latexrecommended
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.40 2010/10/24 18:12:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.41 2010/12/17 20:52:06 grobian Exp $
+
+  17 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  texlive-latexrecommended-2010.ebuild:
+  Marked ~ppc-macos
 
 *texlive-latexrecommended-2010 (24 Oct 2010)
 
