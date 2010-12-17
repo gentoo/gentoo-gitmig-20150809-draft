@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-10.4.1.ebuild,v 1.1 2010/04/12 11:53:52 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-10.4.1.ebuild,v 1.2 2010/12/17 20:18:31 ulm Exp $
 
 EAPI=3
 inherit eutils multilib
@@ -22,8 +22,6 @@ RDEPEND="dev-libs/gmp
 DEPEND="${RDEPEND}
 		app-text/texi2html"
 PDEPEND="dev-lisp/gentoo-init"
-
-PROVIDE="virtual/commonlisp"
 
 S="${WORKDIR}"/${MY_P}
 

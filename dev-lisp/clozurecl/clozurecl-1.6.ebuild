@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.6.ebuild,v 1.1 2010/12/09 16:46:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.6.ebuild,v 1.2 2010/12/17 20:18:11 ulm Exp $
 
 EAPI=3
 inherit eutils
@@ -22,8 +22,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND="!dev-lisp/openmcl"
-
-PROVIDE="virtual/commonlisp"
 
 S="${WORKDIR}"/${MY_PN}
 

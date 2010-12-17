@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1-r1.ebuild,v 1.2 2007/02/03 17:56:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1-r1.ebuild,v 1.3 2010/12/17 20:18:50 ulm Exp $
 
 inherit eutils common-lisp-common-3
 
@@ -17,8 +17,6 @@ KEYWORDS="~ppc"
 IUSE=""
 
 DEPEND="dev-lisp/openmcl-build-tools"
-
-PROVIDE="virtual/commonlisp"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 

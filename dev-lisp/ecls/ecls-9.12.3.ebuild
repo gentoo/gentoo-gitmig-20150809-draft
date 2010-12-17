@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-9.12.3.ebuild,v 1.6 2010/05/22 15:21:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-9.12.3.ebuild,v 1.7 2010/12/17 20:18:31 ulm Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -21,8 +21,6 @@ RDEPEND="dev-libs/gmp
 		>=dev-libs/boehm-gc-7.1[threads?]"
 DEPEND="${RDEPEND}"
 PDEPEND="dev-lisp/gentoo-init"
-
-PROVIDE="virtual/commonlisp"
 
 S="${WORKDIR}"/${MY_P}
 

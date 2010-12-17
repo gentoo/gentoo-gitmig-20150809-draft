@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clozurecl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.3 2010/12/09 16:46:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.4 2010/12/17 20:18:11 ulm Exp $
+
+  17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> clozurecl-1.4.ebuild,
+  clozurecl-1.5.ebuild, clozurecl-1.6.ebuild:
+  Remove PROVIDE, commonlisp is now a new-style virtual.
 
 *clozurecl-1.6 (10 Dec 2010)
 

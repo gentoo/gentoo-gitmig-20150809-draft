@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.36 2010/05/22 15:21:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.37 2010/12/17 20:18:31 ulm Exp $
+
+  17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> ecls-9.12.3.ebuild,
+  ecls-10.2.1.ebuild, ecls-10.4.1.ebuild:
+  Remove PROVIDE, commonlisp is now a new-style virtual.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> ecls-9.12.3.ebuild:
   stable amd64, bug 303699

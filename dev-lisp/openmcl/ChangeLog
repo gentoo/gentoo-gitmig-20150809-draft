@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/openmcl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.5 2007/02/03 17:56:20 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.6 2010/12/17 20:18:50 ulm Exp $
+
+  17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> openmcl-0.14.2_p1.ebuild,
+  openmcl-0.14.2_p1-r1.ebuild:
+  Remove PROVIDE, commonlisp is now a new-style virtual.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
   openmcl-0.14.2_p1.ebuild, openmcl-0.14.2_p1-r1.ebuild:
