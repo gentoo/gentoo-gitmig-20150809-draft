@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.6.ebuild,v 1.7 2009/09/27 20:06:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.6.ebuild,v 1.8 2010/12/17 15:40:56 c1pher Exp $
 
 EAPI="2"
 
-DESCRIPTION="Libp11 is a library implementing a small layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
+DESCRIPTION="A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
 HOMEPAGE="http://www.opensc-project.org/libp11/"
 
 if [[ "${PV}" = "9999" ]]; then
