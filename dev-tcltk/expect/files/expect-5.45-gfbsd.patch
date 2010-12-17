@@ -1,0 +1,11 @@
+--- a/tclconfig/tcl.m4
++++ b/tclconfig/tcl.m4
+@@ -1579,7 +1579,7 @@
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
+ 	    SHLIB_SUFFIX=".so"
+-	    LDFLAGS="$LDFLAGS -export-dynamic"
++	    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
+ 	    AS_IF([test $doRpath = yes], [
+ 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'])
+ 	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
