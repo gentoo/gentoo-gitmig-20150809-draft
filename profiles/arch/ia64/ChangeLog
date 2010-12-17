@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.95 2010/12/09 21:20:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.96 2010/12/17 15:03:40 flameeyes Exp $
+
+  17 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
+  Mask caps USE flag for smartmontools until libcap-ng is keyworded.
 
   09 Dec 2010; <nirbheek@gentoo.org> package.use.mask:
   net-misc/connman is not keyworded, bug 348308

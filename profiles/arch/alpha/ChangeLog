@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.81 2010/12/14 02:53:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.82 2010/12/17 15:03:40 flameeyes Exp $
+
+  17 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
+  Mask caps USE flag for smartmontools until libcap-ng is keyworded.
 
   14 Dec 2010; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask llvm.
