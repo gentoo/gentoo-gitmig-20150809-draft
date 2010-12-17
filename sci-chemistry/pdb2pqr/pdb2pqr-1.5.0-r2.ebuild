@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r2.ebuild,v 1.5 2010/12/16 13:45:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r2.ebuild,v 1.6 2010/12/17 17:56:47 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit distutils eutils flag-o-matic multilib toolchain-funcs versionator
+inherit autotools distutils eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-2)
 MY_P="${PN}-${MY_PV}"
