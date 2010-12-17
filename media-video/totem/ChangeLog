@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.303 2010/11/19 19:04:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.304 2010/12/17 23:24:05 eva Exp $
+
+  17 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> totem-2.32.0.ebuild:
+  Drop arches due to missing coherence dependency.
 
 *totem-2.32.0 (19 Nov 2010)
 
