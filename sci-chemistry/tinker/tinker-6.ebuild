@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.ebuild,v 1.2 2010/12/16 13:59:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.ebuild,v 1.3 2010/12/17 08:07:54 jlec Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed 's:strip:true:g' -i ../make/Makefile
-	[[ $(tc-getFC) == "ifort" ]] || epatch "${FILESDIR}"/${PV}-openmp.patch
+	[[ $(tc-getFC) =~ "ifort" ]] || epatch "${FILESDIR}"/${PV}-openmp.patch
 }
 
 src_compile() {
@@ -45,7 +45,7 @@ src_compile() {
 	# use dummy routines in pmpb.f instead of apbs calls
 	rm pmpb.c || die
 
-	if [[ $(tc-getFC) == "gfortran" ]]; then
+	if [[ $(tc-getFC) =~ "gfortran" ]]; then
 		append-flags -fopenmp
 		_omplib="-lgomp"
 	else
