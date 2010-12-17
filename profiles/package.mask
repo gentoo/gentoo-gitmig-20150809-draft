@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12277 2010/12/16 23:55:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12278 2010/12/17 15:46:24 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (15 Dec 2010)
+# Build failures because of FORTIFY_SOURCE, see bug #348559
+=dev-lang/erlang-14.2.1
 
 # Christian Faulhammer <fauli@gentoo.org> (15 Dec 2010)
 # Mask for testing
