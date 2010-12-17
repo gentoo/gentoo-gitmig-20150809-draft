@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.205 2010/11/27 15:50:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.206 2010/12/17 20:58:15 ali_bush Exp $
+
+  17 Dec 2010; Alistair Bush <ali_bush@gentoo.org>
+  files/mono-9999-libdir.patch:
+  Fix -9999 patch.
 
 *mono-2.8.1-r1 (27 Nov 2010)
 

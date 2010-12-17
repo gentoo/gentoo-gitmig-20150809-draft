@@ -1,6 +1,6 @@
-diff -Naur mono-9999.bak/mono/mcs/tools/gacutil/driver.cs mono-9999/mono/mcs/tools/gacutil/driver.cs
---- mono-9999.bak/mono/mcs/tools/gacutil/driver.cs	2010-07-03 04:58:15.000000000 +1200
-+++ mono-9999/mono/mcs/tools/gacutil/driver.cs	2010-07-03 05:13:01.000000000 +1200
+diff -Naur mono-9999.bak/mcs/tools/gacutil/driver.cs mono-9999/mcs/tools/gacutil/driver.cs
+--- mono-9999.bak/mcs/tools/gacutil/driver.cs	2010-12-17 23:53:23.000000000 +1300
++++ mono-9999/mcs/tools/gacutil/driver.cs	2010-12-17 23:55:57.000000000 +1300
 @@ -808,7 +808,7 @@
  		private static string EnsureLib (string dir)
  		{
@@ -10,28 +10,28 @@ diff -Naur mono-9999.bak/mono/mcs/tools/gacutil/driver.cs mono-9999/mono/mcs/too
  				return dir;
  			return Path.Combine (dir, "lib");
  		}
-diff -Naur mono-9999.bak/mono/mono/metadata/assembly.c mono-9999/mono/mono/metadata/assembly.c
---- mono-9999.bak/mono/mono/metadata/assembly.c	2010-07-03 04:58:14.000000000 +1200
-+++ mono-9999/mono/mono/metadata/assembly.c	2010-07-03 05:11:47.000000000 +1200
-@@ -542,7 +542,7 @@
+diff -Naur mono-9999.bak/mono/metadata/assembly.c mono-9999/mono/metadata/assembly.c
+--- mono-9999.bak/mono/metadata/assembly.c	2010-12-17 23:53:22.000000000 +1300
++++ mono-9999/mono/metadata/assembly.c	2010-12-18 00:12:41.000000000 +1300
+@@ -566,7 +566,7 @@
  	}
  
  	config = g_build_filename (base, "etc", NULL);
 -	lib = g_build_filename (base, "lib", NULL);
 +	lib = g_build_filename (base, "@MONOLIBDIR@", NULL);
- 	mono = g_build_filename (lib, "mono/1.0", NULL);
+ 	mono = g_build_filename (lib, "mono/2.0", NULL);
  	if (stat (mono, &buf) == -1)
  		fallback ();
-@@ -595,7 +595,7 @@
+@@ -621,7 +621,7 @@
  
- 	bindir = g_path_get_dirname (name);
+ 	bindir = g_path_get_dirname (resolvedname);
  	installdir = g_path_get_dirname (bindir);
 -	root = g_build_path (G_DIR_SEPARATOR_S, installdir, "lib", NULL);
 +	root = g_build_path (G_DIR_SEPARATOR_S, installdir, "@MONOLIBDIR@", NULL);
  
  	config = g_build_filename (root, "..", "etc", NULL);
  #ifdef HOST_WIN32
-@@ -2066,7 +2066,7 @@
+@@ -2116,7 +2116,7 @@
  	if (extra_gac_paths) {
  		paths = extra_gac_paths;
  		while (!res && *paths) {
@@ -40,7 +40,7 @@ diff -Naur mono-9999.bak/mono/mono/metadata/assembly.c mono-9999/mono/mono/metad
  			res = probe_for_partial_name (gacpath, fullname, aname, status);
  			g_free (gacpath);
  			paths++;
-@@ -2117,7 +2117,7 @@
+@@ -2167,7 +2167,7 @@
  		if (*gp != G_DIR_SEPARATOR)
  			continue;
  		gp++;
@@ -49,7 +49,7 @@ diff -Naur mono-9999.bak/mono/mono/metadata/assembly.c mono-9999/mono/mono/metad
  			continue;
  		gp += 3;
  		if (*gp != G_DIR_SEPARATOR)
-@@ -2196,7 +2196,7 @@
+@@ -2246,7 +2246,7 @@
  		paths = extra_gac_paths;
  		while (!image && *paths) {
  			fullpath = g_build_path (G_DIR_SEPARATOR_S, *paths,
@@ -58,7 +58,7 @@ diff -Naur mono-9999.bak/mono/mono/metadata/assembly.c mono-9999/mono/mono/metad
  			image = mono_image_open (fullpath, NULL);
  			g_free (fullpath);
  			paths++;
-@@ -2488,7 +2488,7 @@
+@@ -2546,7 +2546,7 @@
  	if (extra_gac_paths) {
  		paths = extra_gac_paths;
  		while (!result && *paths) {
