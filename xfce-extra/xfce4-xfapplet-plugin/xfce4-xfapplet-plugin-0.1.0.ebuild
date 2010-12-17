@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet-plugin/xfce4-xfapplet-plugin-0.1.0.ebuild,v 1.4 2010/12/12 15:52:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet-plugin/xfce4-xfapplet-plugin-0.1.0.ebuild,v 1.5 2010/12/17 23:46:31 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Panel plugin to support GNOME applets"
-HOMEPAGE="http://www.xfce.org/"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-xfapplet-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.1/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -23,7 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
 }
