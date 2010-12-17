@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.6 2010/12/16 14:09:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.7 2010/12/17 08:08:00 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,9 +38,19 @@ pkg_nofetch() {
 	einfo "SRC=${A} $SRC_URI"
 }
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
-	FORTRAN="gfortran"
-	if [[ $(tc-getFC) == gfortran ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]]; then
 		local gcc_version=$(gcc-major-version)$(gcc-minor-version)
 		if ! use openmp && (( ${gcc_version} != 41 )); then
 			eerror "You need gcc-4.1.x to test acml."
@@ -52,12 +62,16 @@ pkg_setup() {
 			die "setup gcc failed"
 		fi
 	fi
+	if use openmp; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
+	get_fcomp
 }
 
 src_unpack() {
 	unpack ${A}
 	(DISTDIR="${S}" unpack contents-acml-*.tgz)
-	case $(tc-getFC) in
+	case ${FCOMP} in
 		gfortran) FORT=gfortran ;;
 		if*) FORT=ifort ;;
 		*) eerror "Unsupported fortran compiler: $(tc-getFC)"
@@ -98,7 +112,7 @@ src_install() {
 		cp -pPR "${S}"/${fort} "${D}"${instdir} || die "copy ${fort} failed"
 
 		# install profiles
-		ESELECT_PROF=acml-$(tc-getFC)
+		ESELECT_PROF=acml-${FCOMP}
 		local acmldir=${instdir}/${fort}
 		local acmllibs="-lacml -lacml_mv"
 		local libname=${acmldir}/lib/libacml

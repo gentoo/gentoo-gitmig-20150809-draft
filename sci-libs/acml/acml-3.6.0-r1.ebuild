@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.10 2010/12/16 14:09:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.11 2010/12/17 08:08:00 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,6 +42,17 @@ pkg_nofetch() {
 	einfo "SRC=${A} $SRC_URI"
 }
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
 	elog "From version 3.5.0 on, ACML no longer supports"
 	elog "hardware without SSE/SSE2 instructions. "
@@ -51,6 +62,10 @@ pkg_setup() {
 	FORTRAN=ifc
 	FORT=ifort
 	! use ifc && ! use openmp && FORTRAN=g77 && FORT=gnu
+	if use openmp; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
+	get_fcomp
 }
 
 src_unpack() {
@@ -88,7 +103,7 @@ src_install() {
 		cp -pPR "${S}/${fort}" "${D}"${instdir} || die "copy ${fort} failed"
 
 		# install profiles
-		ESELECT_PROF=acml-$(tc-getFC)
+		ESELECT_PROF=acml-${FCOMP}
 		local acmldir=${instdir}/${fort}
 		local acmllibs="-lacml -lacml_mv"
 		local libname=${acmldir}/lib/libacml

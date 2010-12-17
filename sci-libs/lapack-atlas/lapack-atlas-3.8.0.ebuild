@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.16 2010/12/16 14:32:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.8.0.ebuild,v 1.17 2010/12/17 08:10:35 jlec Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools versionator
 
@@ -121,8 +121,8 @@ src_compile() {
 
 	RPATH="${DESTTREE}"/$(get_libdir)/${L_PN}/${MY_PN}
 	local flibs
-	[[ $(tc-getFC) == gfortran ]] && flibs=-lgfortran
-	[[ $(tc-getFC) == g77 ]] && flibs=-lg2c
+	[[ $(tc-getFC) =~ gfortran ]] && flibs=-lgfortran
+	[[ $(tc-getFC) =~ g77 ]] && flibs=-lg2c
 	../libtool --mode=link --tag=F77 $(tc-getFC) \
 		$(pkg-config --libs blas cblas) -latlas ${flibs} \
 		-o liblapack.la *.lo -rpath "${RPATH}" \

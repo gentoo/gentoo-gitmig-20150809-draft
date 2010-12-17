@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r3.ebuild,v 1.2 2010/12/16 14:32:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r3.ebuild,v 1.3 2010/12/17 08:10:35 jlec Exp $
 
 EAPI="3"
 
@@ -143,8 +143,8 @@ src_compile() {
 	cp -sf "${BLD_DIR}"/gentoo/liblapack.a/.libs/*.o .libs/
 
 	local flibs
-	[[ $(tc-getFC) == gfortran ]] && flibs=-lgfortran
-	[[ $(tc-getFC) == g77 ]] && flibs=-lg2c
+	[[ $(tc-getFC) =~ gfortran ]] && flibs=-lgfortran
+	[[ $(tc-getFC) =~ g77 ]] && flibs=-lg2c
 	../libtool --mode=link --tag=F77 $(tc-getFC) ${LDFLAGS} \
 	"${BLAS_LIBS}" -latlas ${flibs} \
 	-o "${S_LAPACK}"/SRC/liblapack.la *.lo -rpath "${EPREFIX}/${RPATH}" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.5 2010/12/16 14:09:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.6 2010/12/17 08:08:00 jlec Exp $
 
 EAPI="1"
 
@@ -54,15 +54,22 @@ pkg_nofetch() {
 	einfo "SRC=${A} $SRC_URI"
 }
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
-	FORTRAN=""
 	if use test; then
-		use gfortran &&	FORTRAN="${FORTRAN} gfortran"
-		use ifc && FORTRAN="${FORTRAN} ifc"
-		use gfortran || use ifc || FORTRAN="gfortran"
 		# work around incomplete fortran eclass
-		if  use gfortran &&
-			[[ $(tc-getFC) == gfortran ]] &&
+		if use gfortran &&
+			[[ $(tc-getFC) =~ gfortran ]] &&
 			[[ $(gcc-version) != 4.2 ]]
 		then
 			eerror "You need gfortran-4.2 to test acml"
@@ -70,6 +77,10 @@ pkg_setup() {
 			die "gfortran check failed"
 		fi
 	fi
+	if use openmp; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
+	get_fcomp
 	# construct default profile dprof from default ddir
 	local ddir=gfortran
 	use ifc && ddir=ifort

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226-r2.ebuild,v 1.2 2010/12/16 14:25:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226-r2.ebuild,v 1.3 2010/12/17 08:09:19 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${LAPACKPN}-${LAPACKPV}"
 
 pkg_setup() {
-	if  [[ $(tc-getFC) == if* ]]; then
+	if  [[ $(tc-getFC) =~ if* ]]; then
 		ewarn "Using Intel Fortran at your own risk"
 		LDFLAGS="$(raw-ldflags)"
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.3 2010/12/16 14:21:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.4 2010/12/17 08:09:04 jlec Exp $
 
 EAPI="3"
 
@@ -164,8 +164,8 @@ src_install () {
 	# pkgconfig files
 	local extlibs="-lm"
 	local threadlibs
-	[[ $(tc-getFC) == gfortran ]] && extlibs="${extlibs} -lgfortran"
-	[[ $(tc-getFC) == g77 ]] && extlibs="${extlibs} -lg2c"
+	[[ $(tc-getFC) =~ gfortran ]] && extlibs="${extlibs} -lgfortran"
+	[[ $(tc-getFC) =~ g77 ]] && extlibs="${extlibs} -lg2c"
 	cp "${FILESDIR}"/blas.pc.in blas.pc
 	cp "${FILESDIR}"/cblas.pc.in cblas.pc
 	sed -i \
