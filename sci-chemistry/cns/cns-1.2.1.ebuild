@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.9 2010/12/17 07:54:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.10 2010/12/17 18:22:05 jlec Exp $
 
 inherit eutils toolchain-funcs versionator flag-o-matic
 
@@ -40,7 +40,9 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	tc-has-openmp || die "Please ensure your compiler has openmp support"
+	if [[ $(tc-getFC) =~ gfortran ]]; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
 	get_fcomp
 }
 
@@ -48,8 +50,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	use openmp && append-fflags -fopenmp
-	use openmp && append-ldflags -lgomp
+	use openmp && append-fflags -fopenmp && \
+		append-ldflags -fopenmp
 
 	# Someone already did the same in the openmp version, apparently
 	use openmp || epatch "${FILESDIR}"/1.2-allow-unknown-architectures.patch

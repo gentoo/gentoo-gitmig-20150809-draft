@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.5 2010/12/17 07:54:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.6 2010/12/17 18:22:05 jlec Exp $
 
 EAPI="3"
 
@@ -46,7 +46,9 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	tc-has-openmp || die "Please ensure your compiler has openmp support"
+	if [[ $(tc-getFC) =~ gfortran ]]; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
 	get_fcomp
 }
 
@@ -68,13 +70,13 @@ src_prepare() {
 	if [[ $(tc-getFC) =~ gfortran ]]; then
 		epatch "${FILESDIR}"/${PV}-allow-gcc-openmp.patch
 		use openmp && \
-			OMPLIB="-lgomp" && append-flags -fopenmp
+			append-flags -fopenmp && append-ldflags -fopenmp
 		COMP="gfortran"
 		use amd64 && \
 			append-fflags -fdefault-integer-8
-	else
+	elif [[ $(tc-getFC) == if* ]]; then
 		epatch "${FILESDIR}"/${PV}-ifort.patch
-		use openmp && OMPLIB="-liomp5" && \
+		use openmp && \
 			append-flags -openmp && append-ldflags -openmp
 		COMP="ifort"
 		use amd64 && append-fflags -i8

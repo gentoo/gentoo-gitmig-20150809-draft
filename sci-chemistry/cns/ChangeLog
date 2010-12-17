@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.32 2010/12/17 07:54:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.33 2010/12/17 18:22:05 jlec Exp $
+
+  17 Dec 2010; Justin Lecher <jlec@gentoo.org> files/1.2.1-gentoo.patch,
+  cns-1.2.1.ebuild, cns-1.2.1-r5.ebuild, cns-1.3_p3.ebuild,
+  files/1.3_p3-gentoo.patch:
+  Correct handling of OpenMp support
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> cns-1.1.ebuild,
   cns-1.2.1.ebuild, cns-1.2.1-r5.ebuild, cns-1.3_p3.ebuild:

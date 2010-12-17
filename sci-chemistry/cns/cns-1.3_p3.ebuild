@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p3.ebuild,v 1.3 2010/12/17 07:54:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p3.ebuild,v 1.4 2010/12/17 18:22:05 jlec Exp $
 
 EAPI="3"
 
@@ -46,7 +46,9 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	tc-has-openmp || die "Please ensure your compiler has openmp support"
+	if [[ $(tc-getFC) =~ gfortran ]]; then
+		tc-has-openmp || die "Please ensure your compiler has openmp support"
+	fi
 	get_fcomp
 }
 
@@ -68,12 +70,12 @@ src_prepare() {
 	# the code uses Intel-compiler-specific directives
 	if [[ $(tc-getFC) =~ gfortran ]]; then
 		use openmp && \
-			OMPLIB="-lgomp" && append-flags -fopenmp
+			append-flags -fopenmp && append-ldflags -fopenmp
 		COMP="gfortran"
 		use amd64 && \
 			append-fflags -fdefault-integer-8
-	else
-		use openmp && OMPLIB="-liomp5" && \
+	elif [[ $(tc-getFC) == if* ]]; then
+		use openmp && \
 			append-flags -openmp && append-ldflags -openmp
 		COMP="ifort"
 		use amd64 && append-fflags -i8
@@ -134,7 +136,6 @@ src_compile() {
 		compiler="${COMP}" \
 		install \
 		|| die "emake failed"
-
 }
 
 src_test() {
