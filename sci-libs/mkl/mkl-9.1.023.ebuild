@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.10 2010/12/16 15:47:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.11 2010/12/17 08:24:38 jlec Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -34,6 +34,17 @@ RDEPEND="${DEPEND}
 
 MKL_DIR=/opt/intel/${PN}/${MAJOR}.${MINOR}
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
+
 pkg_setup() {
 	# setting up license
 	[[ -z ${MKL_LICENSE} && -d /opt/intel/licenses ]] && \
@@ -51,6 +62,7 @@ pkg_setup() {
 	# setting up compilers
 	MKL_CC=gnu
 	[[ $(tc-getCC) == icc ]] && MKL_CC=icc
+	get_fcomp
 }
 
 src_unpack() {
@@ -125,7 +137,7 @@ src_unpack() {
 	fi
 
 	# fix a bad makefile in the test
-	if [[ $(tc-getFC) == gfortran ]] || [[ $(tc-getFC) == if* ]]; then
+	if [[ $(tc-getFC) =~ gfortran ]] || [[ $(tc-getFC) =~ if* ]]; then
 		sed -i \
 			-e "s/g77/$(tc-getFC)/" \
 			-e 's/-DGNU_USE//' \
@@ -196,7 +208,7 @@ mkl_install_lib() {
 	local extlibs="-L${libdir} -lguide -lpthread"
 	[[ "${1}" == "serial" ]] && extlibs=""
 
-	[[ "$(tc-getFC)" == "gfortran" ]] && \
+	[[ $(tc-getFC) =~ gfortran ]] && \
 		gfortranlibs="-L${libdir} -lmkl_gfortran"
 
 	cp -pPR "${S}"/${proflib} "${D}"${MKL_DIR}
@@ -286,7 +298,7 @@ pkg_postinst() {
 	elif use serial; then
 		ext=serial
 	fi
-	ESELECT_PROF="${PN}-$(tc-getFC)-${ext}"
+	ESELECT_PROF="${PN}-${FCOMP}-${ext}"
 	# if blas profile is mkl, set lapack and cblas profiles as mkl
 	local blas_lib=$(eselect blas show | cut -d' ' -f2)
 	for p in blas cblas lapack; do

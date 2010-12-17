@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.4 2010/12/16 18:58:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.5 2010/12/17 08:24:38 jlec Exp $
 
 inherit eutils toolchain-funcs check-reqs
 
@@ -29,6 +29,16 @@ RDEPEND="${DEPEND}
 MKL_DIR=/opt/intel/${PN}/${PV}
 INTEL_LIC_DIR=/opt/intel/licenses
 
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
 pkg_setup() {
 	# Check the license
 	if [[ -z ${MKL_LICENSE} ]]; then
@@ -50,11 +60,11 @@ pkg_setup() {
 	# Check and setup fortran
 	if use fortran95; then
 		# blas95 and lapack95 don't compile with gfortran < 4.2
-		[[ $(tc-getFC) == g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] &&
+		[[ $(tc-getFC) =~ g* ]] && [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] &&
 		die "blas95 and lapack95 don't compile with gfortran < 4.2"
 	fi
 	MKL_FC="gnu"
-	[[ $(tc-getFC) == if* ]] && MKL_FC="intel"
+	[[ $(tc-getFC) =~ if* ]] && MKL_FC="intel"
 
 	# build profiles according to what compiler is installed
 	MKL_CC="gnu"
@@ -69,6 +79,7 @@ pkg_setup() {
 	else
 		MKL_MPI=intelmpi
 	fi
+	get_fcomp
 }
 
 src_unpack() {
@@ -142,11 +153,11 @@ src_compile() {
 	if use fortran95; then
 		einfo "Compiling fortan95 static lib wrappers"
 		local myconf="lib${MKL_ARCH}"
-		[[ $(tc-getFC) == gfortran ]] && \
+		[[ $(tc-getFC) =~ gfortran ]] && \
 			myconf="${myconf} FC=gfortran"
 		if use int64; then
 			myconf="${myconf} interface=ilp64"
-			[[ $(tc-getFC) == gfortran ]] && \
+			[[ $(tc-getFC) =~ gfortran ]] && \
 				myconf="${myconf} FOPTS=-fdefault-integer-8"
 		fi
 		for x in blas95 lapack95; do
