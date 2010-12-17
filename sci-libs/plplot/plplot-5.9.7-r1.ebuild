@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.2 2010/12/01 16:19:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.3 2010/12/17 07:04:03 scarabeus Exp $
 
 EAPI="3"
 
@@ -146,7 +146,7 @@ src_configure() {
 	use truetype && mycmakeargs+=(
 		-DPL_FREETYPE_FONT_PATH:PATH="${EPREFIX}/usr/share/fonts/freefont-ttf" )
 
-	use python && use qt4 && mycmakeargs+=( $(cmake_utils_pld pyqt) )
+	use python && use qt4 && mycmakeargs+=( $(cmake-utils_pld pyqt) )
 	use doc && mycmakeargs+=( -DPREBUILT_DOC=ON )
 	cmake-utils_src_configure
 }
