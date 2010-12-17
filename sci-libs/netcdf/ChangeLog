@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.78 2010/12/06 12:47:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.79 2010/12/17 20:17:06 xarthisius Exp $
+
+*netcdf-4.1.1-r4 (17 Dec 2010)
+
+  17 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> +netcdf-4.1.1-r4.ebuild,
+  +files/netcdf-4.1.1-fortran.patch:
+  Default to gfortran if cannot figure out compiler wrt #348922 by Honza
+  Macháček <Hloupy.Honza@centrum.cz> Drop old.
 
 *netcdf-4.1.1-r3 (06 Dec 2010)
 
