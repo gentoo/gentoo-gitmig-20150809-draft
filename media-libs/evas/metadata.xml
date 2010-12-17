@@ -3,8 +3,9 @@
 <pkgmetadata>
 <herd>enlightenment</herd>
 <use>
- <flag name='eet'>Support dev-libs/eet</flag>
  <flag name='cache'>Enable experimental caching to speed up rendering</flag>
+ <flag name='eet'>Support dev-libs/eet</flag>
+ <flag name='gles'>Enable gles falvor of gl instead of standard</flag>
 </use>
 <longdescription>
 Evas is a hardware-accelerated canvas API for X-Windows that can draw 
