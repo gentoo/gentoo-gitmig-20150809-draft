@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.226 2010/12/17 11:59:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.227 2010/12/17 15:27:41 c1pher Exp $
+
+  17 Dec 2010; Dane Smith <c1pher@gentoo.org> mpd-0.15.15.ebuild:
+  Fixed the obvious typo in my patch wrt bug 348881. Missing "&&". Thanks
+  for
+  spotting it Tove.
 
   17 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mpd-0.15.15.ebuild:
   Patch from Dane Smith <c1pher@gentoo.org> to disable lastfm when curl is not
