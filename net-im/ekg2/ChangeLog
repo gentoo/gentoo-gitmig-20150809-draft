@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.35 2010/10/25 00:24:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.36 2010/12/17 20:08:36 mgorny Exp $
+
+  17 Dec 2010; Michał Górny <mgorny@gentoo.org> ekg2-9999.ebuild,
+  metadata.xml:
+  Sync the live ebuild with the mgorny repo. This means switching it into the
+  new git repo and switching it back to the original autotools build system.
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   ekg2-0.3_pre20101008.ebuild:
