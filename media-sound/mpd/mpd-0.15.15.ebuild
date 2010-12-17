@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.15.ebuild,v 1.1 2010/11/09 23:22:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.15.ebuild,v 1.2 2010/12/17 11:59:57 hwoarang Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -56,6 +56,8 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	use network || ewarn "Icecast and Shoutcast streaming needs networking."
 	use fluidsynth && ewarn "Using fluidsynth is discouraged by upstream."
+	use lastfmradio ! use curl && ewarn "Lastfm requires curl support. Disabling \
+	lastfm"
 
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
@@ -88,6 +90,12 @@ src_configure() {
 		mpdconf+=" --disable-oggflac"
 	fi
 
+	if use lastfmradio && ! use curl; then
+		mpdconf+=" --disable-lastfm"
+	else
+		mpdconf+=" --enable-lastfm"
+	fi
+
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
@@ -96,7 +104,7 @@ src_configure() {
 	econf \
 		$(use_enable ipv6) $(use_enable cue) \
 		$(use_enable sqlite) $(use_enable curl) \
-		$(use_enable lastfmradio lastfm) $(use_enable libmms mms) \
+		$(use_enable libmms mms) $(use_enable wildmidi) \
 		$(use_enable bzip2) $(use_enable zip) \
 		$(use_enable cdio iso9660) $(use_enable id3) \
 		$(use_enable audiofile) $(use_enable ffmpeg) \
@@ -110,8 +118,7 @@ src_configure() {
 		$(use_enable jack) $(use_enable oss) \
 		$(use_enable pulseaudio pulse) $(use_enable aac) \
 		$(use_enable debug) $(use_enable profile gprof) \
-		$(use_with avahi zeroconf avahi) $(use_enable wildmidi) \
-		${mpdconf}
+		$(use_with avahi zeroconf avahi) ${mpdconf}
 }
 
 src_install() {
