@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2.ebuild,v 1.1 2010/12/16 17:33:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r1.ebuild,v 1.1 2010/12/17 01:29:30 dilfridge Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
 # The plugin lists have to follow here since they extend IUSE
 
 # Plugins that to my knowledge cannot be supported (eg. dependencies not in gentoo)
-COLLECTD_IMPOSSIBLE_PLUGINS="curl_json netapp pinba ping xmms"
+COLLECTD_IMPOSSIBLE_PLUGINS="curl_json netapp pinba xmms"
 
 # Plugins that still need some work
 COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc nut modbus"
@@ -28,7 +28,7 @@ COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswit
 	cpu cpufreq curl curl_xml dbi df disk dns email entropy exec filecount fscache gmond
 	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon memcachec
 	memcached memory multimeter mysql netlink network nfs nginx ntpd olsrd
-	onewire openvpn perl postgresql powerdns processes protocols python
+	onewire openvpn perl ping postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
 	tokyotyrant uptime users vmem vserver wireless csv exec logfile network
 	notify_desktop notify_email oracle perl python rrdcached rrdtool syslog unixsock write_http
@@ -69,6 +69,7 @@ COMMON_DEPEND="
 	collectd_plugins_onewire?		( sys-fs/owfs )
 	collectd_plugins_oracle?		( >=dev-db/oracle-instantclient-basic-11.2.0.1.0 )
 	collectd_plugins_perl?			( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
+	collectd_plugins_ping?			( net-libs/liboping )
 	collectd_plugins_postgresql?		( >=dev-db/postgresql-base-8.2 )
 	collectd_plugins_python?		( =dev-lang/python-2* )
 	collectd_plugins_rrdcached?		( >=net-analyzer/rrdtool-1.4 )

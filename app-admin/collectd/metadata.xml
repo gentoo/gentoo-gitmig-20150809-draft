@@ -62,6 +62,7 @@
 		<flag name='collectd_plugins_onewire'>Build the onewire input plugin (collects temperature information from sensors)</flag> 
 		<flag name='collectd_plugins_openvpn'>Build the openvpn input plugin (reads the status file printed by OpenVPN)</flag> 
 		<flag name='collectd_plugins_perl'>Build the perl language binding plugin (embeds a Perl interpreter into collectd for writing plugins)</flag> 
+		<flag name='collectd_plugins_ping'>Build the ping input plugin (measures network latency)</flag> 
 		<flag name='collectd_plugins_postgresql'>Build the postgresql input plugin (connects to and executes SQL statements on a PostgreSQL database)</flag> 
 		<flag name='collectd_plugins_powerdns'>Build the powerdns input plugin (connects to a local PowerDNS instance)</flag> 
 		<flag name='collectd_plugins_processes'>Build the processes input plugin (statistics about processes)</flag> 
