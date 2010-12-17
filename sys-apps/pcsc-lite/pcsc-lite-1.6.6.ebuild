@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6.ebuild,v 1.1 2010/12/12 10:53:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6.ebuild,v 1.2 2010/12/17 11:39:42 flameeyes Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ RDEPEND="usb? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
+	!<app-crypt/ccid-1.4.1-r1
 	kernel_linux? ( sys-fs/udev )"
 
 pkg_setup() {
