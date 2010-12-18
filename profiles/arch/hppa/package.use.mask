@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.70 2010/12/05 19:15:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.71 2010/12/18 16:47:34 ssuominen Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -22,7 +22,7 @@ media-gfx/povray mkl
 
 # Jeroen Roovers <jer@gentoo.org> (10 Aug 2010)
 # Mask features that need GNOME (bug #331905)
-xfce-base/thunar udev
+xfce-base/thunar udev xfce_plugins_trash
 
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # Mask sys-cluster/heartbeat since it is untested (bug #326423)
