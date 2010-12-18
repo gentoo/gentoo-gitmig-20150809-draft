@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Unidecode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.1 2009/06/30 19:48:15 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.2 2010/12/18 09:53:46 tove Exp $
+
+  18 Dec 2010; Torsten Veller <tove@gentoo.org> Text-Unidecode-0.04.ebuild:
+  Stable on x86 and amd64 (#348916)
 
 *Text-Unidecode-0.04 (30 Jun 2009)
 
