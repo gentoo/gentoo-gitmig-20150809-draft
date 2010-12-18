@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.74 2010/12/09 22:21:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.75 2010/12/18 12:46:37 armin76 Exp $
+
+  18 Dec 2010; Raúl Porcel <armin76@gentoo.org> reportlab-2.5.ebuild:
+  alpha/ia64/sparc stable wrt #347111
 
   09 Dec 2010; Thomas Kahle <tomka@gentoo.org> reportlab-2.5.ebuild:
   x86 stable per bug 347111
