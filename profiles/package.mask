@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12283 2010/12/18 17:17:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12284 2010/12/18 17:24:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -249,14 +249,6 @@ app-pda/synce-software-manager
 app-pda/synce-sync-engine
 app-pda/synce-trayicon
 app-pda/libopensync-plugin-synce
-
-# Samuli Suominen <ssuominen@gentoo.org> (02 Nov 2010)
-# acerhk fails to build with Linux >= 2.6.30 wrt #277598
-# acer_acpi is included in Linux since >= 2.6.25 wrt #208577
-# and fails parallel make too
-# Removal in 30 days
-app-laptop/acerhk
-app-laptop/acer_acpi
 
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases
