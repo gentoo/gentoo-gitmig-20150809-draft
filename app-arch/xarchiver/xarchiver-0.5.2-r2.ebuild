@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.3 2010/07/01 18:57:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.4 2010/12/18 16:18:51 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -21,15 +21,20 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-stack-smash.patch
-		"${FILESDIR}"/${P}-add_xz_support.patch )
-	XFCONF="--disable-dependency-tracking
-		$(xfconf_use_debug)"
+	PATCHES=(
+		"${FILESDIR}"/${P}-stack-smash.patch
+		"${FILESDIR}"/${P}-add_xz_support.patch
+		)
+
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
 src_prepare() {
-	# Don't install the COPYING file.
 	sed -i -e '/COPYING/d' doc/Makefile.in || die
 	xfconf_src_prepare
 }
@@ -47,5 +52,4 @@ pkg_postinst() {
 	elog "lzop - app-arch/lzop"
 	elog "rar - app-arch/unrar app-arch/rar"
 	elog "zip - app-arch/unzip app-arch/zip"
-	elog "Make sure to install xfce-extra/thunar-archive-plugin."
 }
