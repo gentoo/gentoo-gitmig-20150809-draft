@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/rss2email-2.69-r1.ebuild,v 1.1 2010/11/28 17:50:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/rss2email-2.69-r1.ebuild,v 1.2 2010/12/18 03:25:14 sping Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ inherit eutils python
 DEBIAN_PV="2.65"
 
 DESCRIPTION="A python script that converts RSS/Atom newsfeeds to email"
-HOMEPAGE="http://rss2email.infogami.com/"
+HOMEPAGE="http://www.allthingsrss.com/rss2email"
 SRC_URI="http://www.allthingsrss.com/${PN}/${P}.tar.gz
 	mirror://debian/pool/main/r/${PN}/${PN}_${DEBIAN_PV}-1.diff.gz"
 

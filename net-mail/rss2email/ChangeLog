@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/rss2email
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.5 2010/11/28 17:50:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.6 2010/12/18 03:25:14 sping Exp $
+
+  18 Dec 2010; Sebastian Pipping <sping@gentoo.org> rss2email-2.65.ebuild,
+  rss2email-2.69.ebuild, rss2email-2.69-r1.ebuild:
+  Update homepage link as requested from upstream
 
 *rss2email-2.69-r1 (28 Nov 2010)
 
