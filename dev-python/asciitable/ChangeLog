@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/asciitable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.5 2010/12/05 01:48:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.6 2010/12/18 17:54:16 arfrever Exp $
+
+  18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  asciitable-0.4.0.ebuild:
+  Restrict Jython ABIs. Use DISTUTILS_SRC_TEST.
 
 *asciitable-0.4.0 (05 Dec 2010)
 
