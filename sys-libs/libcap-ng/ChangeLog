@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.22 2010/11/25 17:19:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.23 2010/12/18 17:50:47 armin76 Exp $
+
+  18 Dec 2010; Raúl Porcel <armin76@gentoo.org> libcap-ng-0.6.1.ebuild,
+  libcap-ng-0.6.2.ebuild, libcap-ng-0.6.4.ebuild, libcap-ng-0.6.5.ebuild:
+  Add ~alpha/~ia64 wrt #348951
 
 *libcap-ng-0.6.5 (25 Nov 2010)
 
