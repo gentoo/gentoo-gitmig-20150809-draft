@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5-r1.ebuild,v 1.4 2010/12/07 09:47:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5-r1.ebuild,v 1.5 2010/12/18 12:43:47 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="mysql postgres debug ssl"
 
 RDEPEND="sys-apps/tcp-wrappers
