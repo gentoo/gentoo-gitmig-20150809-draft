@@ -1,19 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-gvfs-mount/xfce4-gvfs-mount-0.0.4.ebuild,v 1.1 2009/08/24 10:03:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-gvfs-mount/xfce4-gvfs-mount-0.0.4.ebuild,v 1.2 2010/12/18 19:40:14 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 MY_REV=6d2684b
 
-DESCRIPTION="Nice little mounter working with gvfs"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="A panel plug-in to mount remote filesystems for the Xfce desktop environment"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-gvfs-mount"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.0/${P}-${MY_REV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/dbus-glib-0.76
@@ -30,7 +30,10 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}-${MY_REV}
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS NEWS README"
 }

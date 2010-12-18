@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.6.ebuild,v 1.2 2010/09/06 20:32:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.6.ebuild,v 1.3 2010/12/18 19:42:21 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit linux-info xfconf
 
 DESCRIPTION="A plugin to indicate the status of the IBM Hard Drive Active Protection System"
@@ -27,8 +27,11 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF="--disable-option-checking
-		$(xfconf_use_debug)"
+	XFCONF=(
+		--disable-option-checking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 	linux-info_pkg_setup
