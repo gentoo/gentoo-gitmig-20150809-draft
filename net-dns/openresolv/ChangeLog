@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.61 2010/09/30 21:30:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.62 2010/12/18 17:33:17 mgorny Exp $
+
+*openresolv-3.4.0 (18 Dec 2010)
+
+  18 Dec 2010; Michał Górny <mgorny@gentoo.org> +openresolv-3.4.0.ebuild:
+  Version bump (on darkside's approval). The package now procides a configure
+  script and pdnsd support. Besides that, multilib libdir is now respected.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> openresolv-3.3.4.ebuild:
   stable ppc64, bug 323887
