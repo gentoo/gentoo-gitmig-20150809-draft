@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.3.1.ebuild,v 1.10 2010/10/08 06:33:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.3.1.ebuild,v 1.11 2010/12/18 19:50:42 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -24,13 +24,11 @@ DEPEND="test? ( virtual/ttf-fonts
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
 DOCS="CHANGES"
 
 src_test() {
 	testing() {
-		# A future version of dev-python/nose will support Python 3.
-		[[ "${PYTHON_ABI}" == 3.* ]] && return
-
 		"$(PYTHON)" tests/run.py
 	}
 	python_execute_function testing
@@ -38,5 +36,8 @@ src_test() {
 
 src_install(){
 	distutils_src_install
-	use doc && dohtml -r docs/build/
+
+	if use doc; then
+		dohtml -r docs/build || die "Installation of documentation failed"
+	fi
 }
