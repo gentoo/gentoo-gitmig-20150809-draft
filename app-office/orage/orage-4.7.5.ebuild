@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.2 2010/04/19 15:40:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.3 2010/12/18 16:00:46 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 EAUTORECONF=yes
 inherit flag-o-matic xfconf
 
-DESCRIPTION="Calendar suite for Xfce4"
+DESCRIPTION="Xfce's calendar suite (with panel plug-in)"
 HOMEPAGE="http://www.xfce.org/projects/orage/"
 SRC_URI="mirror://xfce/src/apps/${PN}/4.7/${P}.tar.bz2"
 
@@ -26,17 +26,20 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
-# source of 4.7.5 unpacks into 4.7.5.16.
 S=${WORKDIR}/${P}.16
 
 pkg_setup() {
-	XFCONF="--disable-dependency-tracking
+	PATCHES=( "${FILESDIR}"/${P}-asneeded.patch )
+
+	XFCONF=(
+		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(use_enable libnotify)
 		$(use_with berkdb bdb4)
-		$(xfconf_use_debug)"
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	PATCHES=( "${FILESDIR}/${P}-asneeded.patch" )
 }
 
 src_configure() {
