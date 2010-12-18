@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.ebuild,v 1.1 2010/07/19 00:14:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.ebuild,v 1.2 2010/12/18 20:21:19 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,17 +34,4 @@ src_prepare() {
 		--action-message 'Applying patches for $(python_get_implementation) $(python_get_version)' \
 		--failure-message 'Applying patches for $(python_get_implementation) $(python_get_version) failed' \
 		-s conversion
-}
-
-src_test() {
-	testing() {
-		if [[ "${PYTHON_ABI}" == 2.* ]]; then
-			echo PYTHONPATH="$(ls -d build/lib.*)" nosetests
-			PYTHONPATH="$(ls -d build/lib.*)" nosetests || return 1
-		else
-			echo PYTHONPATH="$(ls -d build/lib.*)" "$(PYTHON)" tests/setproctitle_test.py
-			PYTHONPATH="$(ls -d build/lib.*)" "$(PYTHON)" tests/setproctitle_test.py || return 1
-		fi
-	}
-	python_execute_function -s testing
 }
