@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-9999.ebuild,v 1.4 2010/10/05 21:22:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-9999.ebuild,v 1.5 2010/12/18 10:17:27 ali_bush Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.go-mono.com"
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
 KEYWORDS=""
-IUSE="hardened xen moonlight minimal"
+IUSE="hardened xen minimal"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
@@ -89,20 +89,25 @@ src_configure() {
 	#Remove this at your own peril. Mono will barf in unexpected ways.
 	append-flags -fno-strict-aliasing
 
-	#NOTE: We need the static libs for now so mono-debugger works.
-	#See http://bugs.gentoo.org/show_bug.cgi?id=256264 for details
-
-	#--with-glib=system configure: error: --with-glib=system is no longer supported as of Mono 2.8
-	#--static_mono=yes (default anyway)
+	# NOTE: We need the static libs for now so mono-debugger works.
+	# See http://bugs.gentoo.org/show_bug.cgi?id=256264 for details
+	#
+	# --without-moonlight since www-plugins/moonlight is not the only one
+	# using mono: https://bugzilla.novell.com/show_bug.cgi?id=641005#c3
+	#
+	# --with-profile4 needs to be always enabled since it's used by default
+	# and, otherwise, problems like bug #340641 appear.
 
 	go-mono_src_configure \
+		--enable-static \
 		--disable-quiet-build \
-		$(use_with moonlight) \
+		--without-moonlight \
 		--with-libgdiplus=$(use minimal && printf "no" || printf "installed" ) \
 		$(use_with xen xen_opt) \
 		--without-ikvm-native \
 		--with-jit \
-		--disable-dtrace
+		--disable-dtrace \
+		--with-profile4
 }
 
 src_test() {
