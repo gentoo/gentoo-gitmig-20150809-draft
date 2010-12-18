@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.35-r15.ebuild,v 1.1 2010/12/15 21:13:27 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.35-r15.ebuild,v 1.2 2010/12/18 16:52:48 fauli Exp $
 
 EAPI="2"
 ETYPE="sources"
@@ -11,7 +11,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE="deblob"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 
