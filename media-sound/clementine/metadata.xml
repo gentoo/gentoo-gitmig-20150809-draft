@@ -11,6 +11,7 @@
     <name>Samuli Suominen</name>
   </maintainer> 
   <use>
+    <flag name="ayatana">Build in support for Ayatana notification using the libindicate-qt plugin.</flag>
     <flag name="iphone">Enable support for iPod Touch, iPhone, iPad</flag>
     <flag name='projectm'>Build with ProjectM visualization</flag>
     <flag name="wiimote">Enable support for Wii remote</flag>
