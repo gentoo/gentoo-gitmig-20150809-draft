@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.16.ebuild,v 1.1 2010/12/10 19:50:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.612.1.ebuild,v 1.1 2010/12/18 15:05:43 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -14,14 +14,14 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
 
 RDEPEND="app-arch/bzip2
 	system-sqlite? (
-		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
+		>=dev-db/sqlite-3.7.2[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( >=dev-lang/v8-2.5.9.1 )
+	system-v8? ( >=dev-lang/v8-3.0.0.1 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -107,8 +107,7 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
 
-	# Small fixes to make tests compile, to be upstreamed.
-	epatch "${FILESDIR}"/${PN}-tests-r0.patch
+	epatch "${FILESDIR}"/${PN}-system-icu-r2.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
