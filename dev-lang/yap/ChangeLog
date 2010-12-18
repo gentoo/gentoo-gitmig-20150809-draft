@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.50 2010/12/01 07:24:42 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.51 2010/12/18 19:41:16 keri Exp $
+
+  18 Dec 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
+  Do not duplicate docsdir
 
   01 Dec 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
   Fix ppc Prolog heap initialization; support profiling on ppc
