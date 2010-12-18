@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.4 2010/12/17 01:56:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.5 2010/12/18 17:00:24 fauli Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.py.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="dev-lang/python"
