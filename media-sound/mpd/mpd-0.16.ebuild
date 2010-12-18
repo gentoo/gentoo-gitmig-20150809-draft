@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.4 2010/12/14 18:34:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.5 2010/12/18 12:00:56 hwoarang Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	use network || ewarn "Icecast and Shoutcast streaming needs networking."
 	use fluidsynth && ewarn "Using fluidsynth is discouraged by upstream."
-
+	use lastfmradio && ! use curl && ewarn "Lastfm requires curl support. Disabling lastfm"
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
@@ -88,6 +88,11 @@ src_configure() {
 	else
 		mpdconf+=" --disable-oggflac"
 	fi
+	if use lastfmradio && use curl; then
+		mpdconf+=" --enable-lastfm"
+	else
+		mpdconf+=" --disable-lastfm"
+	fi
 
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
@@ -112,7 +117,6 @@ src_configure() {
 		$(use_enable jack) \
 		$(use_enable id3) \
 		$(use_enable ipv6) \
-		$(use_enable lastfmradio lastfm) \
 		$(use_enable libmms mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \

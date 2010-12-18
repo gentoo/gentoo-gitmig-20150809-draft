@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.228 2010/12/17 17:53:29 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.229 2010/12/18 12:00:56 hwoarang Exp $
+
+  18 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mpd-0.16.ebuild:
+  Apply Dane Smiths' patch as for 0.15.15 series
 
   17 Dec 2010; Dane Smith <c1pher@gentoo.org> mpd-0.15.15.ebuild:
   Fixed another smaller and much less obvious typo regarding the patch I
