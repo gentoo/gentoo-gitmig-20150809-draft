@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.6.1.ebuild,v 1.11 2009/10/08 17:37:08 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.6.1.ebuild,v 1.12 2010/12/18 20:01:57 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
-DESCRIPTION="Volume control application using gstreamer"
-HOMEPAGE="http://www.xfce.org/projects/xfce4-mixer"
+DESCRIPTION="A volume control application (and panel plug-in) for the Xfce desktop environment"
+HOMEPAGE="http://www.xfce.org/projects/xfce4-mixer/"
+SRC_URI="mirror://xfce/src/apps/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +29,10 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
 }
