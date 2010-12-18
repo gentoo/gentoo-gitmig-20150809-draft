@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.5 2009/10/11 23:44:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.6 2010/12/18 04:38:04 chutzpah Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Sends messages to an alphanumeric pager via TAP protocol."
 HOMEPAGE="http://www.qpage.org/"
@@ -26,6 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	econf || die "econf failed"
 
 	# There doesn't seem to be a clean way to disable tcp wrappers in
