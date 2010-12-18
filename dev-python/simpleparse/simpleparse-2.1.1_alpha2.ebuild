@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.1_alpha2.ebuild,v 1.3 2010/12/09 11:58:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.1_alpha2.ebuild,v 1.4 2010/12/18 12:40:59 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/simpleparse/${MY_P}.tar.gz"
 
 LICENSE="as-is eGenixPublic-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE="doc examples"
 
 DEPEND="dev-python/setuptools"
