@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/xfce4-dict-0.6.0.ebuild,v 1.7 2010/04/14 17:44:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/xfce4-dict-0.6.0.ebuild,v 1.8 2010/12/18 19:56:14 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="plugin and stand-alone application to query dict.org"
-HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-dict "
+HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-dict"
 SRC_URI="mirror://xfce/src/apps/${PN}/0.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -24,7 +24,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog README"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
 }
