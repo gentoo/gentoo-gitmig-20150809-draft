@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.107 2010/09/20 17:55:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.108 2010/12/18 09:10:53 ssuominen Exp $
+
+*libffi-3.0.9-r1 (18 Dec 2010)
+
+  18 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> +libffi-3.0.9-r1.ebuild,
+  +files/libffi-3.0.9-define-generic-symbols-carefully.patch:
+  Include upstream patch to define generic symbols carefully wrt #347636 by
+  Dennis Schridde.
 
   20 Sep 2010; Raúl Porcel <armin76@gentoo.org> libffi-3.0.9.ebuild,
   +files/libffi-3.0.9-arm-oabi.patch:
