@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/AutoLoader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/AutoLoader/ChangeLog,v 1.6 2010/11/22 15:13:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/AutoLoader/ChangeLog,v 1.7 2010/12/18 09:57:01 tove Exp $
+
+  18 Dec 2010; Torsten Veller <tove@gentoo.org> AutoLoader-5.71.ebuild:
+  Stable on x86 and amd64 (#348830)
 
 *AutoLoader-5.71 (22 Nov 2010)
 
