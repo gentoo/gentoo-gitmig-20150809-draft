@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.2.0.ebuild,v 1.3 2010/12/02 21:27:16 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.2.0.ebuild,v 1.4 2010/12/18 17:05:02 fauli Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs multilib
@@ -11,7 +11,7 @@ SRC_URI="http://dl.lm-sensors.org/lm-sensors/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86"
 IUSE="sensord"
 
 DEPEND="sys-apps/sed
