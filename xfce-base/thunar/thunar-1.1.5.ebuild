@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.5.ebuild,v 1.1 2010/12/05 16:33:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.5.ebuild,v 1.2 2010/12/18 16:47:03 ssuominen Exp $
 
 EAPI=3
 inherit virtualx xfconf
@@ -31,8 +31,9 @@ COMMON_DEPEND=">=xfce-base/exo-0.5.3
 		>=xfce-base/xfce4-panel-4.3.90 )
 	udev? ( >=sys-fs/udev-145[extras] )"
 RDEPEND="${COMMON_DEPEND}
-	>=x11-misc/shared-mime-info-0.80
-	>=dev-util/desktop-file-utils-0.17
+	x11-misc/shared-mime-info
+	dev-util/desktop-file-utils
+	xfce_plugins_trash? ( gnome-base/gvfs )
 	udev? ( >=gnome-base/gvfs-1.6.3[gdu,udev] )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
@@ -62,6 +63,12 @@ pkg_setup() {
 	fi
 
 	DOCS="AUTHORS ChangeLog FAQ HACKING NEWS README THANKS TODO"
+
+	if ! has_version gnome-base/gvfs; then
+		ewarn "Because gnome-base/gvfs is not installed, Trash will be"
+		ewarn "unfunctional:"
+		ewarn "# emerge -av gnome-base/gvfs"
+	fi
 }
 
 src_test() {
