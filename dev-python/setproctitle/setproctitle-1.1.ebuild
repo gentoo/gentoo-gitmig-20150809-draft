@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.ebuild,v 1.2 2010/12/18 20:21:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/setproctitle-1.1.ebuild,v 1.3 2010/12/18 20:26:23 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
