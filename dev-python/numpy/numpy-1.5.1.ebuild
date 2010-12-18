@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.1 2010/11/19 04:35:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.2 2010/12/18 22:05:37 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -117,9 +117,6 @@ src_compile() {
 
 src_test() {
 	testing() {
-		# Disable tests with Python 3 until dev-python/nose supports Python 3.
-		[[ "$(python_get_version --major)" == 3 ]] && return
-
 		"$(PYTHON)" setup.py ${NUMPY_FCONFIG} build -b "build-${PYTHON_ABI}" install \
 			--home="${S}/test-${PYTHON_ABI}" --no-compile || die "install test failed"
 		pushd "${S}/test-${PYTHON_ABI}/"lib* > /dev/null

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.123 2010/12/18 21:38:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.124 2010/12/18 22:05:37 arfrever Exp $
+
+  18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  numpy-1.5.1.ebuild:
+  Run tests with Python 3.
 
   18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -numpy-1.5.0-r2.ebuild, -files/numpy-1.5.0-python3.patch:
