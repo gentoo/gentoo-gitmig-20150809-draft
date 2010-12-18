@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.139 2010/10/05 13:15:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.140 2010/12/18 19:49:04 zzam Exp $
+
+  18 Dec 2010; Matthias Schwarzott <zzam@gentoo.org> vdr-1.6.0_p2-r5.ebuild:
+  Marked stable on x86.
 
 *vdr-1.6.0_p2-r5 (05 Oct 2010)
 
