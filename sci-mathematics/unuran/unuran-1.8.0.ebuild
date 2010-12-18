@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.0.ebuild,v 1.1 2010/12/17 22:36:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.0.ebuild,v 1.2 2010/12/18 21:46:06 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -25,7 +25,7 @@ src_prepare() {
 
 src_configure() {
 	local udefault=builtin
-	use rngstreams && udefault=rngstreams
+	use rngstreams && udefault=rngstream
 	econf \
 		--enable-shared \
 		--with-urng-default=${udefault} \
