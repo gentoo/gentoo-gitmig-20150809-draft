@@ -1,10 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.6 2010/08/23 22:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.7 2010/12/18 23:53:59 ssuominen Exp $
 
-xfce-base/xfdesktop thunar xfce_plugins_menu
-xfce-base/thunar xfce_plugins_trash
-xfce-extra/xfce4-power-manager xfce_plugins_brightness
+# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
+# Still using obsolete sys-auth/policykit, bugs 340331 and 340337.
+sys-apps/hal -policykit
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
+# Required by gnome-base/gvfs, sys-fs/udisks, xfce-base/thunar, x11-misc/pcmanfm, etc.
+sys-fs/udev extras
+sys-block/parted device-mapper
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
+# Required for desktop icons integration. Only desktop users should get this
+# dependency hell.
+xfce-base/xfdesktop thunar
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (26 Mar 2008)
 # While we may need LDAP client support, who needs the server on a desktop?
