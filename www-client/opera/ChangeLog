@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.577 2010/12/16 16:21:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.578 2010/12/18 12:08:02 hwoarang Exp $
+
+  18 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  opera-11.00_pre1156.ebuild:
+  Stable on amd64 wrt bug #348874
 
   16 Dec 2010; Thomas Kahle <tomka@gentoo.org> opera-11.00_pre1156.ebuild:
   x86 stable per bug 348874
