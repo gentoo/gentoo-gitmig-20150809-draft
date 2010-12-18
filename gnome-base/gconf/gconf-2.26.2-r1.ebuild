@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.26.2-r1.ebuild,v 1.10 2010/07/20 15:32:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.26.2-r1.ebuild,v 1.11 2010/12/18 23:13:40 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="debug doc ldap policykit"
+IUSE="debug doc ldap"
 
 RDEPEND=">=dev-libs/glib-2.14
 	>=x11-libs/gtk+-2.8.16
@@ -25,8 +25,7 @@ RDEPEND=">=dev-libs/glib-2.14
 	>=sys-apps/dbus-1
 	>=gnome-base/orbit-2.4
 	>=dev-libs/libxml2-2
-	ldap? ( net-nds/openldap )
-	policykit? ( >=sys-auth/policykit-0.7 )"
+	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
@@ -42,7 +41,7 @@ pkg_setup() {
 		--enable-gtk
 		--disable-static
 		$(use_with ldap openldap)
-		$(use_enable policykit defaults-service)"
+		--disable-defaults-service"
 	kill_gconf
 
 	# Need host's IDL compiler for cross or native build, bug #262747
