@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12282 2010/12/18 10:02:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12283 2010/12/18 17:17:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -185,12 +185,6 @@ games-action/armagetronad
 # Old python bindins that currently are included into net-analyzer/rrdtool
 # Removal on 16 Dec 2010
 dev-python/py-rrdtool
-
-# Samuli Suominen <ssuominen@gentoo.org> (14 Nov 2010)
-# No longer developed and replaced by sys-apps/mlocate
-# Bug 338380
-# Removal in 30 days
-sys-apps/slocate
 
 # Alex Alexander <wired@gentoo.org> (14 Nov 2010)
 # the qt-gui/qgtkstyle split keeps backfiring at me
