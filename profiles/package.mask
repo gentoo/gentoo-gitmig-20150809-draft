@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12284 2010/12/18 17:24:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12285 2010/12/18 17:38:51 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1079,7 +1079,7 @@ dev-lisp/gcl
 =app-office/gnucash-2.3*
 
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
-# Masked until out of beta
+# Masked until reverse dependencies are fixed (bug #333077)
 =dev-libs/libevent-2*
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
