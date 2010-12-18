@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.83 2010/11/14 13:42:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.84 2010/12/18 01:42:13 leio Exp $
+
+  18 Dec 2010; Mart Raudsepp <leio@gentoo.org> libarchive-2.8.4.ebuild:
+  Add ~mips keyword - required by new cmake-2.8.3
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> libarchive-2.7.1-r1.ebuild,
   libarchive-2.8.0.ebuild, libarchive-2.8.3.ebuild, libarchive-2.8.4.ebuild,
