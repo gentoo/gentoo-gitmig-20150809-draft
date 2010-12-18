@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.0.ebuild,v 1.1 2010/12/15 20:43:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.0.ebuild,v 1.2 2010/12/18 09:23:22 ssuominen Exp $
 
 inherit libtool eutils
 
@@ -23,7 +23,7 @@ RDEPEND="dv? ( media-libs/libdv )
 	)
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	lame? ( media-sound/lame )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616 )
