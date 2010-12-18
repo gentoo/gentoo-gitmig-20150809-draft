@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.28 2010/12/18 20:23:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.29 2010/12/18 20:39:42 arfrever Exp $
+
+  18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyxattr-0.5.0.ebuild:
+  Restrict Jython ABIs. Use DISTUTILS_SRC_TEST.
 
   18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pyxattr-0.4.0.ebuild:
