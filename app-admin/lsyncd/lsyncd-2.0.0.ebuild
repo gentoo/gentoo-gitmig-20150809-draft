@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-1.37.ebuild,v 1.1 2010/08/30 22:51:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-2.0.0.ebuild,v 1.1 2010/12/19 08:14:04 jlec Exp $
 
 EAPI=2
 
@@ -12,17 +12,13 @@ SRC_URI="http://lsyncd.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="xml"
 
-DEPEND="xml? ( dev-libs/libxml2 )"
+DEPEND="dev-lang/lua"
 RDEPEND="${DEPEND}
 	net-misc/rsync"
 
 src_configure() {
-	local my_config="--enable-xml-config=no"
-	if use xml ; then
-		my_config="--enable-xml-config=yes"
-	fi
-	econf ${my_config}
+	econf --with-runner="${EPREFIX}/usr/$(get_libdir)/${PN}"
 }
