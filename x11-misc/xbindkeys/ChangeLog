@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.54 2010/12/09 18:01:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.55 2010/12/19 13:37:31 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xbindkeys-1.8.4.ebuild:
+  ppc64 stable wrt #348251
 
   09 Dec 2010; Jeroen Roovers <jer@gentoo.org> xbindkeys-1.8.4.ebuild:
   Use emake in src_install, by ssuominen.
