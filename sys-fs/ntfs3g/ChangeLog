@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.108 2010/11/27 22:24:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.109 2010/12/19 01:08:07 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -files/10-ntfs3g.fdi.2009-r1, ntfs3g-2010.3.6.ebuild, ntfs3g-2010.8.8.ebuild,
+  ntfs3g-2010.10.2.ebuild:
+  Remove obsolete sys-apps/hal support. This package is shipping with working
+  udev rules.
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> ntfs3g-2010.8.8.ebuild,
   ntfs3g-2010.10.2.ebuild:
