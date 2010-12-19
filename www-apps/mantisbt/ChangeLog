@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.97 2010/10/08 19:47:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.98 2010/12/19 15:55:27 pva Exp $
+
+*mantisbt-1.2.4 (19 Dec 2010)
+
+  19 Dec 2010; Peter Volkov <pva@gentoo.org> -mantisbt-1.1.8.ebuild,
+  -mantisbt-1.2.2.ebuild, +mantisbt-1.2.4.ebuild:
+  Version bump, fixes security vulnerability reported in bug #348761, thank
+  David Hicks for report. Drop old, vulnerable versions.
 
   08 Oct 2010; Brent Baude <ranger@gentoo.org> mantisbt-1.2.3.ebuild:
   Marking mantisbt-1.2.3 ppc for bug 335850
