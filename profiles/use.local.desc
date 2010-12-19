@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6233 2010/12/19 00:33:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6234 2010/12/19 00:53:01 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -987,8 +987,6 @@ dev-libs/cyrus-sasl:srp - Enable SRP
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/e_dbus:bluetooth - Enable interfacing with net-wireless/bluez DBus API.
 dev-libs/e_dbus:connman - Enable interfacing with net-misc/connman DBus API.
-dev-libs/e_dbus:hal - Enable interfacing with sys-apps/hal DBus API.
-dev-libs/e_dbus:libnotify - Enable interfacing with x11-libs/libnotify DBus API.
 dev-libs/e_dbus:ofono - Enable interfacing with net-misc/ofono DBus API.
 dev-libs/e_dbus:test-binaries - Enable building of test binaries for enabled features
 dev-libs/e_dbus:ukit - Enable interfacing with sys-power/upower and sys-fs/udisks DBus API.
