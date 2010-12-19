@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.13 2010/12/19 18:16:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.14 2010/12/19 18:20:46 jlec Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -83,7 +83,7 @@ src_configure() {
 
 	! use vt && myconf+=(--enable-contrib-no-build=vt)
 
-	econf ${myconf} \
+	econf "${myconf[@]}" \
 		$(use_enable cxx mpi-cxx) \
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
