@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xstdcmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xstdcmap/ChangeLog,v 1.21 2010/09/27 09:42:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xstdcmap/ChangeLog,v 1.22 2010/12/19 12:34:34 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xstdcmap-1.0.2.ebuild:
+  ppc64 stable wrt #344827
 
 *xstdcmap-1.0.2 (27 Sep 2010)
 

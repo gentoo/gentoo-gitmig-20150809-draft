@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/xset-1.2.1.ebuild,v 1.1 2010/11/11 15:14:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/xset-1.2.1.ebuild,v 1.2 2010/12/19 12:30:04 ssuominen Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org xset application"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="

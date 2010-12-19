@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/xclipboard-1.1.1.ebuild,v 1.1 2010/11/09 18:42:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/xclipboard-1.1.1.ebuild,v 1.2 2010/12/19 12:14:43 ssuominen Exp $
 
 EAPI=3
 
 inherit xorg-2
 
 DESCRIPTION="interchange between cut buffer and selection"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 RDEPEND="x11-libs/libXaw
 	x11-libs/libxkbfile

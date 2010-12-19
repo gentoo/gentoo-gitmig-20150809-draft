@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xditview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xditview/ChangeLog,v 1.23 2010/08/07 08:42:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xditview/ChangeLog,v 1.24 2010/12/19 12:17:38 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xditview-1.0.2.ebuild:
+  ppc64 stable wrt #344827
 
 *xditview-1.0.2 (07 Aug 2010)
 

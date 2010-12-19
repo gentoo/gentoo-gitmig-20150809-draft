@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdbedizzy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdbedizzy/ChangeLog,v 1.21 2010/11/01 12:32:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdbedizzy/ChangeLog,v 1.22 2010/12/19 12:17:25 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xdbedizzy-1.1.0.ebuild:
+  ppc64 stable wrt #344827
 
 *xdbedizzy-1.1.0 (01 Nov 2010)
 

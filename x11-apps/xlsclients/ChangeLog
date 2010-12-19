@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsclients
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.46 2010/10/21 15:18:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.47 2010/12/19 12:26:51 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xlsclients-1.1.1.ebuild:
+  ppc64 stable wrt #344827
 
   21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xlsclients-1.0.2.ebuild:
