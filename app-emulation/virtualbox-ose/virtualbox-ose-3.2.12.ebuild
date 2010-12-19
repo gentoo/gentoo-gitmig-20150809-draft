@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12.ebuild,v 1.2 2010/12/08 23:19:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12.ebuild,v 1.3 2010/12/19 11:18:07 polynomial-c Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa +hal headless pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
+IUSE="+additions alsa headless pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -49,7 +49,6 @@ DEPEND="${RDEPEND}
 	sys-libs/libcap
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	hal? ( sys-apps/hal )
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-lang/python-2.3[threads] )
@@ -130,7 +129,6 @@ src_configure() {
 	use opengl     || myconf+=" --disable-opengl"
 	use pulseaudio || myconf+=" --disable-pulse"
 	use python     || myconf+=" --disable-python"
-	use hal        || myconf+=" --disable-dbus"
 	use vboxwebsrv && myconf+=" --enable-webservice"
 	use vnc        && myconf+=" --enable-vnc"
 	if ! use headless ; then
@@ -143,6 +141,7 @@ src_configure() {
 		--with-gcc="$(tc-getCC)" \
 		--with-g++="$(tc-getCXX)" \
 		--disable-kmods \
+		--disable-dbus \
 		${myconf} \
 		|| die "configure failed"
 }

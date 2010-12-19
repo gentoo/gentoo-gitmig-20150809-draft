@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.76 2010/12/08 23:19:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.77 2010/12/19 11:18:07 polynomial-c Exp $
+
+  19 Dec 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-3.1.8.ebuild, virtualbox-ose-3.2.10.ebuild,
+  virtualbox-ose-3.2.12.ebuild, virtualbox-ose-9999.ebuild:
+  Punted sys-apps/hal dependency as requested in bug #349048.
 
   08 Dec 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-ose-3.2.12.ebuild, +files/virtualbox-ose-vnc.patch:

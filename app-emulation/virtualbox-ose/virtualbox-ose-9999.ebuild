@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.11 2010/08/01 10:37:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.12 2010/12/19 11:18:07 polynomial-c Exp $
 
 EAPI=1
 
@@ -40,11 +40,9 @@ DEPEND="${RDEPEND}
 	>=media-libs/alsa-lib-1.0.13
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-lang/python-2.3 )"
-# sys-apps/hal is required at runtime (bug #197541)
 RDEPEND="${RDEPEND}
 	sys-apps/usermode-utilities
-	net-misc/bridge-utils
-	sys-apps/hal"
+	net-misc/bridge-utils"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"

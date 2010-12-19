@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.10.ebuild,v 1.1 2010/10/12 14:00:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.10.ebuild,v 1.2 2010/12/19 11:18:07 polynomial-c Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa +hal headless pulseaudio +opengl python +qt4 sdk vboxwebsrv"
+IUSE="+additions alsa headless pulseaudio +opengl python +qt4 sdk vboxwebsrv"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -47,7 +47,6 @@ DEPEND="${RDEPEND}
 	sys-libs/libcap
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	hal? ( sys-apps/hal )
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-lang/python-2.3[threads] )
@@ -125,7 +124,6 @@ src_configure() {
 	use opengl     || myconf="${myconf} --disable-opengl"
 	use pulseaudio || myconf="${myconf} --disable-pulse"
 	use python     || myconf="${myconf} --disable-python"
-	use hal        || myconf="${myconf} --disable-dbus"
 	use vboxwebsrv && myconf="${myconf} --enable-webservice"
 	if ! use headless ; then
 		use qt4 || myconf="${myconf} --disable-qt4"
@@ -137,6 +135,7 @@ src_configure() {
 		--with-gcc="$(tc-getCC)" \
 		--with-g++="$(tc-getCXX)" \
 		--disable-kmods \
+		--disable-dbus \
 		${myconf} \
 		|| die "configure failed"
 }
