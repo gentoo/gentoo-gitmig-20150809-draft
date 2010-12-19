@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.12 2010/11/03 22:01:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.13 2010/12/19 03:17:47 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,9 +21,9 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
-IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac hal jack kde ladspa
+IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac jack kde ladspa
 libsamplerate lyrics +mad mms modplug mplayer mpris musepack notifier oss
-projectm pulseaudio scrobbler sndfile tray udisks +vorbis wavpack"
+projectm pulseaudio scrobbler sndfile tray udev +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-qt3support:4
 	media-libs/taglib
@@ -34,7 +34,6 @@ RDEPEND="x11-libs/qt-qt3support:4
 	aac? ( media-libs/faad2 )
 	enca? ( app-i18n/enca )
 	flac? ( media-libs/flac )
-	hal? ( sys-apps/hal )
 	ladspa? ( media-libs/ladspa-cmt )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
@@ -50,7 +49,7 @@ RDEPEND="x11-libs/qt-qt3support:4
 	projectm? ( media-libs/libprojectm
 		x11-libs/qt-opengl:4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.9 )
-	udisks? ( sys-fs/udisks )
+	udev? ( sys-fs/udisks )
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
 	sndfile? ( media-libs/libsndfile )"
@@ -61,7 +60,7 @@ DOCS="AUTHORS ChangeLog README"
 CMAKE_IN_SOURCE_BUILD="1"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_use alsa)
 		$(cmake-utils_use_use aac)
 		$(cmake-utils_use_use bs2b)
@@ -71,7 +70,7 @@ src_configure() {
 		$(cmake-utils_use_use enca)
 		$(cmake-utils_use_use ffmpeg)
 		$(cmake-utils_use_use flac)
-		$(cmake-utils_use_use hal)
+		-DUSE_HAL=OFF
 		$(cmake-utils_use_use jack)
 		$(cmake-utils_use_use kde KDENOTIFY)
 		$(cmake-utils_use_use ladspa)
@@ -90,9 +89,10 @@ src_configure() {
 		$(cmake-utils_use_use sndfile)
 		$(cmake-utils_use_use tray STATICON)
 		$(cmake-utils_use_use libsamplerate SRC)
-		$(cmake-utils_use_use udisks)
+		$(cmake-utils_use_use udev udisks)
 		$(cmake-utils_use_use vorbis)
-		$(cmake-utils_use_use wavpack)"
+		$(cmake-utils_use_use wavpack)
+		)
 
 	cmake-utils_src_configure
 }

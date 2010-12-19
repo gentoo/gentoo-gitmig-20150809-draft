@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.3.ebuild,v 1.4 2010/12/04 20:51:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.3.ebuild,v 1.5 2010/12/19 03:17:47 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
-IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac hal jack kde ladspa
+IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac jack kde ladspa
 libsamplerate lyrics +mad mms modplug mplayer mpris musepack notifier oss projectm pulseaudio scrobbler sndfile tray +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-qt3support:4
@@ -33,7 +33,6 @@ RDEPEND="x11-libs/qt-qt3support:4
 	aac? ( media-libs/faad2 )
 	enca? ( app-i18n/enca )
 	flac? ( media-libs/flac )
-	hal? ( sys-apps/hal )
 	ladspa? ( media-libs/ladspa-cmt )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
@@ -59,7 +58,7 @@ DOCS="AUTHORS ChangeLog README"
 CMAKE_IN_SOURCE_BUILD="1"
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_use alsa)
 		$(cmake-utils_use_use aac)
 		$(cmake-utils_use_use bs2b)
@@ -69,7 +68,7 @@ src_configure() {
 		$(cmake-utils_use_use enca)
 		$(cmake-utils_use_use ffmpeg)
 		$(cmake-utils_use_use flac)
-		$(cmake-utils_use_use hal)
+		-DUSE_HAL=OFF
 		$(cmake-utils_use_use jack)
 		$(cmake-utils_use_use kde KDENOTIFY)
 		$(cmake-utils_use_use ladspa)
@@ -89,7 +88,8 @@ src_configure() {
 		$(cmake-utils_use_use tray STATICON)
 		$(cmake-utils_use_use libsamplerate SRC)
 		$(cmake-utils_use_use vorbis)
-		$(cmake-utils_use_use wavpack)"
+		$(cmake-utils_use_use wavpack)
+		)
 
 	cmake-utils_src_configure
 }

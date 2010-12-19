@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.58 2010/12/04 20:51:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.59 2010/12/19 03:17:47 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> qmmp-0.4.3.ebuild,
+  qmmp-9999.ebuild:
+  Remove USE="hal" (replaced by USE="udev") wrt #313389.
 
   04 Dec 2010; Markos Chandras <hwoarang@gentoo.org> -qmmp-0.4.2.ebuild,
   qmmp-0.4.3.ebuild:
