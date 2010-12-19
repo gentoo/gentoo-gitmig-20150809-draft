@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12293 2010/12/19 16:03:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12294 2010/12/19 22:07:51 alexxy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexey Shvetsov <alexxy@gentoo.org> (19 Dec 2010)
+# Mask drupal prereleases
+=www-apps/drupal-7.0_rc*
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Orphaned package, still using deprecated HAL
