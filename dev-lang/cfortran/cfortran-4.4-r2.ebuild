@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/cfortran-4.4-r2.ebuild,v 1.10 2010/07/17 18:58:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/cfortran-4.4-r2.ebuild,v 1.11 2010/12/19 18:01:45 bicatali Exp $
 
 inherit eutils
 
-DEB_PR="13"
+DEB_PR="14"
 
 DESCRIPTION="Header file allowing to call Fortran routines from C and C++"
 SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
