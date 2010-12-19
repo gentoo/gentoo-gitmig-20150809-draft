@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.69 2010/12/06 10:53:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.70 2010/12/19 13:54:59 sping Exp $
+
+*aria2-1.10.8 (19 Dec 2010)
+
+  19 Dec 2010; Sebastian Pipping <sping@gentoo.org> +aria2-1.10.8.ebuild:
+  Bump to 1.10.8, looks trivial
 
 *aria2-1.10.7 (06 Dec 2010)
 
