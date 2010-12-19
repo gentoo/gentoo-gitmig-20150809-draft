@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ecore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.1 2010/11/18 13:54:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.2 2010/12/19 02:43:34 tommy Exp $
+
+*ecore-1.0.0_beta3 (19 Dec 2010)
+
+  19 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +ecore-1.0.0_beta3.ebuild:
+  Version bump
 
 *ecore-1.0.0_beta2 (18 Nov 2010)
 
