@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.4 2010/12/19 18:52:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.5 2010/12/19 19:33:15 xarthisius Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	[[ $(tc-getCC)$ == *gcc* ]] && \
 		[[ $(tc-getCC)$ != *apple* ]] && \
 		[[ $(gcc-major-version)$(gcc-minor-version) -eq 44 ]] \
-		&& filter-flags -mfpmath=sse,387
+		&& filter-mfpmath sse
 	filter-flags -ffast-math
 }
 

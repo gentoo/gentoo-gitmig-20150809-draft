@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.78 2010/12/19 18:52:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.79 2010/12/19 19:33:15 xarthisius Exp $
+
+  19 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> gsl-1.14-r1.ebuild:
+  Use filter-mfpmath instead of filter-flags
 
   19 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> gsl-1.14-r1.ebuild:
   Filtered flag -mfpmath=sse,387 for gcc 4.4.x bug #349005
