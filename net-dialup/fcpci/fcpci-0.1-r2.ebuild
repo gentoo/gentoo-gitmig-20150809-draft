@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r2.ebuild,v 1.1 2010/12/19 12:40:55 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r2.ebuild,v 1.2 2010/12/19 12:42:16 sbriesen Exp $
 
 #EAPI=2  # currently not possible because of linux-mod
 
@@ -44,7 +44,7 @@ src_unpack() {
 		PAT="${PAT}67"
 	fi
 
-	rpm_unpack "${A}" || die "failed to unpack ${A} file"
+	rpm_unpack ${A} || die "failed to unpack ${A} file"
 	DISTDIR="${WORKDIR}" unpack ${PN}-suse[0-9][0-9]-${BIT}[0-9].[0-9]*-[0-9]*.tar.gz
 
 	cd "${S}"
@@ -67,4 +67,3 @@ src_install() {
 	dodoc CAPI*.txt
 	dohtml *.html
 }
-
