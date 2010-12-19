@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.8 2010/12/16 14:24:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.22-r1.ebuild,v 1.9 2010/12/19 08:58:44 jlec Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -43,8 +43,8 @@ src_unpack() {
 
 	# Set up FORTRAN 77 compiler
 	case $(tc-getFC) in
-		g77) F_COMPILER=G77;;
-		gfortran) F_COMPILER=GFORTRAN;;
+		*g77) F_COMPILER=G77;;
+		*gfortran) F_COMPILER=GFORTRAN;;
 		ifc|ifort) F_COMPILER=INTEL;;
 		*)
 			die "Invalid Fortran compiler: $(tc-getFC); valid are ${FORTRAN}."

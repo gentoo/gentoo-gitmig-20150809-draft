@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-goto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.23 2010/12/16 14:24:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/ChangeLog,v 1.24 2010/12/19 08:58:44 jlec Exp $
+
+  19 Dec 2010; Justin Lecher <jlec@gentoo.org> blas-goto-1.22-r1.ebuild,
+  blas-goto-1.26.ebuild:
+  Fix for fortran detection, #349055
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> blas-goto-1.22-r1.ebuild,
   blas-goto-1.26.ebuild:
