@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.768 2010/11/14 15:13:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.769 2010/12/19 10:54:52 scarabeus Exp $
+
+*mplayer-1.0_rc4_p20101219 (19 Dec 2010)
+
+  19 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -mplayer-1.0_rc4_p20100506.ebuild, -mplayer-1.0_rc4_p20100612.ebuild,
+  -mplayer-1.0_rc4_p20101107.ebuild, +mplayer-1.0_rc4_p20101219.ebuild,
+  mplayer-9999.ebuild:
+  Version bump (add new snapshot that should fix vorbis failiture). Drop old.
+  Sort keywords in live ebuild.
 
 *mplayer-1.0_rc4_p20101114 (14 Nov 2010)
 
