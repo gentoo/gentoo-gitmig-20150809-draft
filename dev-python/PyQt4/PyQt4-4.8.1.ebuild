@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1.ebuild,v 1.3 2010/11/07 14:17:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1.ebuild,v 1.4 2010/12/19 18:54:31 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit python qt4-r2 toolchain-funcs
 
