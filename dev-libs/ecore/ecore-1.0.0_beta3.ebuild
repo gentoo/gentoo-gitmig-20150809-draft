@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.0_beta3.ebuild,v 1.1 2010/12/19 02:43:33 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.0_beta3.ebuild,v 1.2 2010/12/19 13:16:50 tommy Exp $
 
 EAPI=2
 
 MY_P=${P/_beta/.beta}
 
-inherit enlightenment
+inherit virtualx enlightenment
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
@@ -44,10 +44,6 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	!X? ( xcb? ( x11-libs/xcb-util ) )"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
-
-#tests require a running X server as the same user, who does run the tests
-#since this should never be root or portage, they will alway fail
-RESTRICT="test"
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -198,4 +194,8 @@ src_configure() {
 	${X_FLAGS}
 	"
 	enlightenment_src_configure
+}
+
+src_test() {
+	Xemake check
 }
