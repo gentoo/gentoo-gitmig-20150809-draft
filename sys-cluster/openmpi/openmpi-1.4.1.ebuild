@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.11 2010/12/19 17:51:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.12 2010/12/19 18:12:39 jlec Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -58,17 +58,17 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="
+	local myconf=(
 		--sysconfdir=/etc/${PN}
 		--without-xgrid
 		--enable-pretty-print-stacktrace
 		--enable-orterun-prefix-by-default
-		--without-slurm"
+		--without-slurm)
 
 	if use mpi-threads; then
-		myconf="${myconf}
+		myconf+=(${myconf}
 			--enable-mpi-threads
-			--enable-progress-threads"
+			--enable-progress-threads)
 	fi
 
 	if use fortran; then
@@ -76,28 +76,27 @@ src_configure() {
 			myconf="${myconf} --disable-mpi-f90"
 		elif [[ $(tc-getFC) =~ if ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
-			myconf="${myconf} --with-mpi-f90-size=medium"
+			myconf+=(${myconf} --with-mpi-f90-size=medium)
 		fi
 	else
-		myconf="${myconf}
+		myconf+=(${myconf}
 			--disable-mpi-f90
-			--disable-mpi-f77"
+			--disable-mpi-f77)
 	fi
 
-	! use vt && myconf="${myconf} --enable-contrib-no-build=vt"
+	! use vt && myconf+=(${myconf} --enable-contrib-no-build=vt)
 
 	econf ${myconf} \
 		$(use_enable cxx mpi-cxx) \
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
 		$(use_with pbs tm) \
-		$(use_enable ipv6) \
-	|| die "econf failed"
+		$(use_enable ipv6)
 }
 
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc README AUTHORS NEWS VERSION
+	dodoc README AUTHORS NEWS VERSION || die
 }
 
 src_test() {
