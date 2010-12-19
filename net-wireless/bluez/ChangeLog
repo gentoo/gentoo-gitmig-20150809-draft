@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.63 2010/12/10 19:51:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.64 2010/12/19 20:20:21 pacho Exp $
+
+*bluez-4.82 (19 Dec 2010)
+
+  19 Dec 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.82.ebuild:
+  Version bump and install udev rules under proper path (bug #348708 by Ben
+  Sagal).
 
 *bluez-4.81 (10 Dec 2010)
 
