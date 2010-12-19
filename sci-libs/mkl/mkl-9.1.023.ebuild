@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.13 2010/12/19 18:23:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.14 2010/12/19 18:38:31 jlec Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -181,7 +181,7 @@ src_compile() {
 
 src_test() {
 	local usegnu
-	[[ $(tc-getFC) =~ g ]] && usegnu=gnu
+	[[ $(tc-getFC) =~ (gfortran|g77) ]] && usegnu=gnu
 	# restrict tests for blas and cblas for now.
 	# for t in blas cblas fft*; do
 	for t in blas lapack; do
