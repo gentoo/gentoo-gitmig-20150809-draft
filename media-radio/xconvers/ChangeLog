@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xconvers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.11 2008/10/05 21:14:40 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.12 2010/12/19 17:18:17 tomjbe Exp $
+
+  19 Dec 2010; Thomas Beierlein <tomjbe@gentoo.org> xconvers-0.8.3.ebuild:
+  keyworded amd64
 
   05 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> xconvers-0.8.2.ebuild,
   xconvers-0.8.3.ebuild:
