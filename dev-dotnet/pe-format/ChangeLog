@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.23 2010/11/27 23:49:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.24 2010/12/19 16:21:40 mgorny Exp $
+
+*pe-format-2.0.5 (19 Dec 2010)
+
+  19 Dec 2010; Michał Górny <mgorny@gentoo.org> -pe-format-2.0.3.ebuild,
+  +pe-format-2.0.5.ebuild:
+  Version bump. The new version features a general code cleanup and fixed
+  alternate installation path support (supposedly Prefix support?).
 
 *pe-format-2.0.4 (27 Nov 2010)
 
