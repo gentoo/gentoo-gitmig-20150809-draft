@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-browserresource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-browserresource/ChangeLog,v 1.6 2010/09/11 21:31:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-browserresource/ChangeLog,v 1.7 2010/12/19 16:57:04 arfrever Exp $
+
+*zope-browserresource-3.12.0 (19 Dec 2010)
+
+  19 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-browserresource-3.11.0.ebuild, +zope-browserresource-3.12.0.ebuild:
+  Version bump.
 
 *zope-browserresource-3.11.0 (11 Sep 2010)
 
