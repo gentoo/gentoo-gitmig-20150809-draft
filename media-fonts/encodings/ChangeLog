@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/encodings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.66 2010/11/17 15:27:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.67 2010/12/19 08:45:27 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> encodings-1.0.4.ebuild:
+  ppc64 stable wrt #344827
 
 *encodings-1.0.4 (17 Nov 2010)
 
