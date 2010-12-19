@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.3 2010/07/04 08:29:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.4 2010/12/19 19:35:47 pacho Exp $
 
 EAPI=2
 inherit eutils
@@ -18,8 +18,8 @@ RDEPEND="sci-libs/libticables2
 	sci-libs/libticalcs2
 	sci-libs/libtifiles2
 	sci-libs/libticonv
-	>=gnome-base/libglade-2.4.0
-	>=x11-libs/gtk+-2.6.0
+	>=gnome-base/libglade-2.4.0:2.0
+	>=x11-libs/gtk+-2.6.0:2
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	nls? ( virtual/libintl )
 	sdl? ( media-libs/libsdl )
@@ -32,6 +32,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-remove_depreciated_gtk_calls.patch
+
+	# Don't use GTK_DISABLE_DEPRECATED flags
+	sed 's:-DGTK_DISABLE_DEPRECATED::g' -i configure.ac configure || die
 }
 
 src_configure() {

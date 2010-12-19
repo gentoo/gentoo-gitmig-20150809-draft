@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/tiemu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.4 2010/07/04 08:29:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.5 2010/12/19 19:35:47 pacho Exp $
+
+  19 Dec 2010; Pacho Ramos <pacho@gentoo.org> tiemu-3.03.ebuild:
+  Remove -DGTK_DISABLE_DEPRECATED cflag, bug #339660 (by Diego Elio Pettenò
+  and committed with Sébastien Fabbro permission).
 
   04 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> tiemu-3.03.ebuild,
   +files/tiemu-3.03-remove_depreciated_gtk_calls.patch:
