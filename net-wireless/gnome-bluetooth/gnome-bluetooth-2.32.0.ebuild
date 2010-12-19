@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.3 2010/12/16 23:23:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.4 2010/12/19 11:51:36 pacho Exp $
 
 EAPI="3"
+GCONF_DEBUG="yes"
 
-inherit eutils gnome2 multilib
+inherit eutils gnome2 multilib autotools
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
@@ -23,7 +24,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.7:2
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	app-mobilephone/obexd
-	sys-fs/udev"
+	sys-fs/udev
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${COMMON_DEPEND}
 	!!net-wireless/bluez-gnome
 	app-text/gnome-doc-utils
@@ -35,7 +37,9 @@ DEPEND="${COMMON_DEPEND}
 	x11-libs/libX11
 	x11-libs/libXi
 	x11-proto/xproto
-	doc? ( >=dev-util/gtk-doc-1.9 )"
+	doc? ( >=dev-util/gtk-doc-1.9 )
+	gnome-base/gnome-common
+	dev-util/gtk-doc-am"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am
@@ -50,6 +54,16 @@ pkg_setup() {
 	DOCS="AUTHORS README NEWS ChangeLog"
 
 	enewgroup plugdev
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix build with gobject-introspection 0.9, bug #344227
+	epatch "${FILESDIR}/${P}-introspection-build.patch"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
 
 src_install() {
