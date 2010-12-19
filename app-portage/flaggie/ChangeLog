@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.7 2010/12/08 21:54:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.8 2010/12/19 19:20:11 mgorny Exp $
+
+  19 Dec 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Clarify the <bugs-to/> URL.
 
 *flaggie-0.0.3 (08 Dec 2010)
 
