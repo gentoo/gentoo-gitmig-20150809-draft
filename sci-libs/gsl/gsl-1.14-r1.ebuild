@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.3 2010/08/09 09:32:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.4 2010/12/19 18:52:12 bicatali Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools toolchain-funcs
 
 DESCRIPTION="The GNU Scientific Library"
 HOMEPAGE="http://www.gnu.org/software/gsl/"
@@ -30,10 +30,16 @@ pkg_setup() {
 		ewarn "Please install and/or eselect another cblas"
 		die "Circular gsl dependency"
 	fi
+
+	# bug 349005
+	[[ $(tc-getCC)$ == *gcc* ]] && \
+		[[ $(tc-getCC)$ != *apple* ]] && \
+		[[ $(gcc-major-version)$(gcc-minor-version) -eq 44 ]] \
+		&& filter-flags -mfpmath=sse,387
+	filter-flags -ffast-math
 }
 
 src_prepare() {
-	filter-flags -ffast-math
 	epatch "${FILESDIR}"/${P}-cblas.patch
 	eautoreconf
 
