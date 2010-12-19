@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.62 2010/10/07 20:34:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.63 2010/12/19 19:44:03 pacho Exp $
+
+*muine-0.8.11-r2 (19 Dec 2010)
+
+  19 Dec 2010; Pacho Ramos <pacho@gentoo.org> +muine-0.8.11-r2.ebuild:
+  Revision bump for dropping -DG.*DISABLE_DEPRECATED that was causing breakage
+  on people emerging muine against gtk+-2.22 (bug #346129 by Diego Elio
+  Pettenò), also drop la files and update homepage.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -muine-0.8.10-r1.ebuild,
   -files/muine-0.8.10-buttons.patch,
