@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r1.ebuild,v 1.1 2010/10/12 09:24:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r3.ebuild,v 1.1 2010/12/19 22:45:55 voyageur Exp $
 
 EAPI=3
 
@@ -32,6 +32,19 @@ src_prepare() {
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
+
+	# Upstream backport, r117774 and r117775
+	epatch "${FILESDIR}"/${P}-alignof.patch
+	# Upstream backport, r119348
+	epatch "${FILESDIR}"/${P}-gcc-4.4.4.patch
+
+	# Fix toolchain lookup for Darwin/Prefix.
+	epatch "${FILESDIR}"/${PN}-2.8-darwin-prefix.patch
+	sed -e "s|@GENTOO_PORTAGE_CHOST_ARCH@|${CHOST%%-darwin*}-darwin|g" \
+		-e "s|@GENTOO_PORTAGE_CHOST@|${CHOST}|g" \
+		-e "s|@GENTOO_PORTAGE_EPREFIX@|${EPREFIX}|g" \
+		-i tools/clang/lib/Driver/ToolChains.cpp \
+		|| die "fixing toolchain lookup"
 
 	# multilib-strict
 	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
@@ -93,8 +106,10 @@ src_configure() {
 	CONF_FLAGS="${CONF_FLAGS} --with-llvmgccdir=/dev/null"
 
 	if use system-cxx-headers; then
-		# Try to get current C++ headers path
-		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=$(gcc-config -X| cut -d: -f1 | sed '/-v4$/! s,$,/include/g++-v4,')"
+		# Try to get current gcc headers path
+		local CXX_PATH=$(gcc-config -X| cut -d: -f1 | sed 's,/include/g++-v4$,,')
+		CONF_FLAGS="${CONF_FLAGS} --with-c-include-dirs=/usr/include:${CXX_PATH}/include"
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=${CXX_PATH}/include/g++-v4"
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
 		if has_multilib_profile; then
 			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
@@ -147,9 +162,23 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in libCIndex.dylib ; do
+		for lib in libclang.dylib ; do
+			ebegin "fixing install_name of $lib"
 			install_name_tool -id "${EPREFIX}"/usr/lib/llvm/${lib} \
 				"${ED}"/usr/lib/llvm/${lib}
+			eend $?
+		done
+		for f in usr/bin/{c-index-test,clang} usr/lib/llvm/libclang.dylib ; do
+			ebegin "fixing references in ${f##*/}"
+			install_name_tool \
+				-change "@rpath/libclang.dylib" \
+					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
+				-change "${S}"/Release/lib/libLLVM-${PV}.dylib \
+					"${EPREFIX}"/usr/lib/llvm/libLLVM-${PV}.dylib \
+				-change "${S}"/Release/lib/libclang.dylib \
+					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
+				"${ED}"/$f
+			eend $?
 		done
 	fi
 }

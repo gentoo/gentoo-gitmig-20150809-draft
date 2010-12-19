@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.31 2010/10/24 17:42:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.32 2010/12/19 22:45:55 voyageur Exp $
+
+*clang-2.8-r3 (19 Dec 2010)
+
+  19 Dec 2010; Bernard Cafarelli <voyageur@gentoo.org> -clang-2.8-r1.ebuild,
+  -clang-2.8-r2.ebuild, +clang-2.8-r3.ebuild, +files/clang-2.8-alignof.patch,
+  +files/clang-2.8-gcc-4.4.4.patch:
+  Backport to rename alignof, fixes C++'0x compilers support. Also adds gcc
+  4.4.4 headers support by default, thanks to Bertjan Broeksema
+  <broeksema@kde.org> in bug #345683
 
   24 Oct 2010; Fabian Groffen <grobian@gentoo.org> clang-2.8-r2.ebuild,
   clang-9999.ebuild:
