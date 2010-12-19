@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.50 2010/12/19 00:46:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.51 2010/12/19 02:56:28 robbat2 Exp $
+
+*git-1.7.3.4-r1 (19 Dec 2010)
+
+  19 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.3.4-r1.ebuild:
+  Bug #339278: Do not install gitweb with USE=-cgi. Bug #320647: Python path
+  for G/FreeBSD. Bug #326625: Perl path with local::lib. Bug #333405: no color
+  for test output to make log parsing easier.
 
 *git-1.7.2.5 (19 Dec 2010)
 *git-1.6.4.5 (19 Dec 2010)
