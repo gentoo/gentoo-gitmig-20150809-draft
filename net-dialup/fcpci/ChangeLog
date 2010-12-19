@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fcpci
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.20 2010/12/19 12:37:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.21 2010/12/19 12:40:55 sbriesen Exp $
+
+*fcpci-0.1-r2 (19 Dec 2010)
+
+  19 Dec 2010; Stefan Briesenick <sbriesen@gentoo.org> +fcpci-0.1-r2.ebuild,
+  +files/fcpci-linux-2.6.34.diff:
+  added updated ebuild for kernels >= 2.6.34, thanks to Tilo Prütz. Solving
+  bug #348424.
 
   19 Dec 2010; Stefan Briesenick <sbriesen@gentoo.org> -fcpci-0.1.ebuild,
   -fcpci-0.1-r1.ebuild:
