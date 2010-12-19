@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.244 2010/12/18 15:05:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.245 2010/12/19 09:43:37 phajdan.jr Exp $
+
+  19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-tests-r0.patch:
+  Restore missing patch, bug #349042 by Andrew Savchenko
+  <bircoph@gmail.com>.
 
 *chromium-10.0.612.1 (18 Dec 2010)
 
