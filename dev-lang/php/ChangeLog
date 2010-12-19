@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.442 2010/12/19 19:38:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.443 2010/12/19 22:45:22 mabi Exp $
+
+  19 Dec 2010; Matti Bickel <mabi@gentoo.org>
+  +files/php-fpm-gentooified-5.3.4.patch, +files/php-fpm-r3.init,
+  -files/php-fpm-r1.init, files/eblits/src_install-v2.eblit:
+  somehow managed to miss the fpm part of the src_install update: new init/conf
+  files fix bugs #343649, #348507
 
   19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> php-5.2.16.ebuild,
   php-5.3.4.ebuild:
