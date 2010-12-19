@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.9 2010/12/16 15:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.10 2010/12/19 20:56:27 jlec Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -46,7 +46,7 @@ pkg_nofetch() {
 pkg_setup() {
 
 	# currently amd64 is only supported with gfortran
-	if [[ "${ARCH}" == "amd64" ]] && [[ "$(tc-getFC)" != "gfortran" ]];
+	if [[ "${ARCH}" == "amd64" ]] && [[ "$(tc-getFC)" != *gfortran* ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
 
@@ -79,7 +79,7 @@ src_unpack() {
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	if use hardened && [[ "$(tc-getFC)" = "g77" ]]; then
+	if use hardened && [[ "$(tc-getFC)" =~ g77 ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
