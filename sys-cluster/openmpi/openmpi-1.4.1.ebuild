@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.12 2010/12/19 18:12:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.1.ebuild,v 1.13 2010/12/19 18:16:44 jlec Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -30,19 +30,19 @@ DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if use mpi-threads; then
-		ewarn
+		echo
 		ewarn "WARNING: use of MPI_THREAD_MULTIPLE is still disabled by"
 		ewarn "default and officially unsupported by upstream."
 		ewarn "You may stop now and set USE=-mpi-threads"
-		ewarn
+		echo
 		epause 5
 	fi
 
-	elog
+	echo
 	elog "OpenMPI has an overwhelming count of configuration options."
 	elog "Don't forget the EXTRA_ECONF environment variable can let you"
 	elog "specify configure options if you find them necessary."
-	elog
+	echo
 }
 
 src_prepare() {
@@ -66,25 +66,22 @@ src_configure() {
 		--without-slurm)
 
 	if use mpi-threads; then
-		myconf+=(${myconf}
-			--enable-mpi-threads
+		myconf+=(--enable-mpi-threads
 			--enable-progress-threads)
 	fi
 
 	if use fortran; then
 		if [[ $(tc-getFC) =~ g77 ]]; then
-			myconf="${myconf} --disable-mpi-f90"
+			myconf+=(--disable-mpi-f90)
 		elif [[ $(tc-getFC) =~ if ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
-			myconf+=(${myconf} --with-mpi-f90-size=medium)
+			myconf+=(--with-mpi-f90-size=medium)
 		fi
 	else
-		myconf+=(${myconf}
-			--disable-mpi-f90
-			--disable-mpi-f77)
+		myconf+=(--disable-mpi-f90 --disable-mpi-f77)
 	fi
 
-	! use vt && myconf+=(${myconf} --enable-contrib-no-build=vt)
+	! use vt && myconf+=(--enable-contrib-no-build=vt)
 
 	econf ${myconf} \
 		$(use_enable cxx mpi-cxx) \

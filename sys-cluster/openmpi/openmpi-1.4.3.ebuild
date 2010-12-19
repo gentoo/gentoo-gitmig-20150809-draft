@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.5 2010/12/19 18:12:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.6 2010/12/19 18:16:44 jlec Exp $
 
 EAPI=3
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -61,25 +61,22 @@ src_configure() {
 		--without-slurm)
 
 	if use mpi-threads; then
-		myconf+=(${myconf}
-			--enable-mpi-threads
+		myconf+=(--enable-mpi-threads
 			--enable-progress-threads)
 	fi
 
 	if use fortran; then
 		if [[ $(tc-getFC) =~ g77 ]]; then
-			myconf+=(${myconf} --disable-mpi-f90)
+			myconf+=(--disable-mpi-f90)
 		elif [[ $(tc-getFC) =~ if ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
-			myconf+=(${myconf} --with-mpi-f90-size=medium)
+			myconf+=(--with-mpi-f90-size=medium)
 		fi
 	else
-		myconf+=(${myconf}
-			--disable-mpi-f90
-			--disable-mpi-f77)
+		myconf+=(--disable-mpi-f90 --disable-mpi-f77)
 	fi
 
-	! use vt && myconf+=(${myconf} --enable-contrib-no-build=vt)
+	! use vt && myconf+=(--enable-contrib-no-build=vt)
 
 	econf ${myconf} \
 		$(use_enable cxx mpi-cxx) \
