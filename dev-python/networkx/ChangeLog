@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.8 2010/11/10 18:17:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.9 2010/12/19 17:54:41 bicatali Exp $
+
+  19 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> networkx-1.2.ebuild:
+  Backport 1.3 prefix changes, thanks cshwan
 
   10 Nov 2010; Fabian Groffen <grobian@gentoo.org> networkx-1.3.ebuild:
   Marked ~x86-linux, ~ppc-macos, bug #342001
