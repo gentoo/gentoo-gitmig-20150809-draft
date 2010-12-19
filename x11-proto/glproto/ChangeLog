@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.76 2010/09/14 10:35:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.77 2010/12/19 12:38:18 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> glproto-1.4.12.ebuild:
+  ppc64 stable wrt #344827
 
   14 Sep 2010; Fabian Groffen <grobian@gentoo.org> glproto-1.4.12.ebuild:
   Make ebuild work for Prefix (ED was dropped)
