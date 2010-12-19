@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.4.ebuild,v 1.1 2010/12/19 14:24:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.4.ebuild,v 1.2 2010/12/19 19:38:58 phajdan.jr Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SUHOSIN_VERSION=""
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa x86"
 
 function php_get_uri ()
 {
@@ -246,7 +246,6 @@ RDEPEND="${DEPEND}
 	json? ( !dev-php${PHP_MV}/pecl-json )
 	phar? ( !dev-php${PHP_MV}/pecl-phar )
 	zip? ( !dev-php${PHP_MV}/pecl-zip )"
-
 
 [[ -n $SUHOSIN_VERSION ]] && DEPEND="${DEPEND} suhosin? ( $php[unicode] )"
 
