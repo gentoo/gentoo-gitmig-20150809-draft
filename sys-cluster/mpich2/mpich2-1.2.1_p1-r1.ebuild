@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.10 2010/12/16 15:54:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.11 2010/12/19 19:12:06 jlec Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -109,8 +109,7 @@ src_configure() {
 		--with-pm=mpd:hydra \
 		--disable-mpe \
 		$(use_enable romio) \
-		$(use_enable cxx) \
-		|| die
+		$(use_enable cxx)
 }
 
 src_compile() {
