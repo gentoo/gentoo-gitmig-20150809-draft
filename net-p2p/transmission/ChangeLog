@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.134 2010/11/16 15:25:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.135 2010/12/19 14:44:51 pva Exp $
+
+*transmission-2.13 (19 Dec 2010)
+
+  19 Dec 2010; Peter Volkov <pva@gentoo.org> -transmission-2.11-r1.ebuild,
+  -transmission-2.11-r3.ebuild, +transmission-2.13.ebuild,
+  -files/transmission-daemon.initd.4:
+  Version bump, drop old.
 
 *transmission-2.12 (16 Nov 2010)
 

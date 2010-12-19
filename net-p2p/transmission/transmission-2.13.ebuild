@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.11-r1.ebuild,v 1.1 2010/10/26 07:23:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.13.ebuild,v 1.1 2010/12/19 14:44:51 pva Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -84,7 +84,7 @@ src_install() {
 	dodoc AUTHORS NEWS qt/README.txt
 	rm -f "${D}"/usr/share/${PN}/web/LICENSE
 
-	newinitd "${FILESDIR}"/${PN}-daemon.initd.4 ${PN}-daemon || die
+	newinitd "${FILESDIR}"/${PN}-daemon.initd.5 ${PN}-daemon || die
 	newconfd "${FILESDIR}"/${PN}-daemon.confd.2 ${PN}-daemon || die
 
 	keepdir /var/{transmission/{config,downloads},log/transmission}
