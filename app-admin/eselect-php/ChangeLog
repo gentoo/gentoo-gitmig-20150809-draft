@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.13 2010/11/27 01:53:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.14 2010/12/19 19:37:07 phajdan.jr Exp $
+
+  19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eselect-php-0.6.1.ebuild:
+  x86 stable wrt security bug #340807
 
   27 Nov 2010; Michael Weber <xmw@gentoo.org> eselect-php-0.6.1.ebuild:
   Add ~sparc (bug 343597).
