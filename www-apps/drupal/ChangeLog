@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.66 2010/08/16 18:04:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.67 2010/12/19 22:09:02 alexxy Exp $
+
+*drupal-7.0_rc2 (19 Dec 2010)
+*drupal-6.20 (19 Dec 2010)
+
+  19 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> -drupal-6.19.ebuild,
+  +drupal-6.20.ebuild, +drupal-7.0_rc2.ebuild:
+  Version bump per bug #349000 #348476
 
 *drupal-6.19 (16 Aug 2010)
 *drupal-5.23 (16 Aug 2010)

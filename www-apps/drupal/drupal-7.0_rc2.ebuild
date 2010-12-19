@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.19.ebuild,v 1.1 2010/08/16 18:04:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.0_rc2.ebuild,v 1.1 2010/12/19 22:09:02 alexxy Exp $
 
 inherit webapp eutils depend.php
 
@@ -8,7 +8,7 @@ MY_PV=${PV:0:3}.0
 
 DESCRIPTION="PHP-based open-source platform and content management system"
 HOMEPAGE="http://drupal.org/"
-SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
+SRC_URI="http://drupal.org/files/projects/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
@@ -16,6 +16,8 @@ IUSE=""
 
 need_httpd_cgi
 need_php_httpd
+
+S="${WORKDIR}/${P/_/-}"
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -34,7 +36,7 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt UPGRADE.txt "
+	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt INSTALL.sqlite.txt UPGRADE.txt "
 	dodoc ${docs}
 	rm -f ${docs} INSTALL COPYRIGHT.txt
 
