@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.9 2010/11/02 17:47:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.10 2010/12/19 19:24:17 mgorny Exp $
+
+  19 Dec 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Update the <bugs-to/> URL.
 
 *smart-live-rebuild-0.6.5 (02 Nov 2010)
 

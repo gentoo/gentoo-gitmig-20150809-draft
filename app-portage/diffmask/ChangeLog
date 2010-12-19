@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.4 2010/10/29 12:42:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.5 2010/12/19 19:22:49 mgorny Exp $
+
+  19 Dec 2010; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Update the <bugs-to/> URL.
 
 *diffmask-0.3.3 (29 Oct 2010)
 

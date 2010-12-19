@@ -7,7 +7,7 @@
 		<name>Michał Górny</name>
 	</maintainer>
 	<longdescription>
-		An utility to maintain a package.unmask file consisting of entries
+		A utility to maintain a package.unmask file consisting of entries
 		copied from package.mask files. It can (try to) automatically find
 		entries unmasking specific packages, update existing package.unmask
 		entries (e.g. unmasking additional packages as they are appended to
@@ -18,6 +18,6 @@
 			<email>mgorny@gentoo.org</email>
 			<name>Michał Górny</name>
 		</maintainer>
-		<bugs-to>http://github.com/mgorny/diffmask/issues</bugs-to>
+		<bugs-to>http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&amp;component=Applications&amp;short_desc=app-portage/diffmask:%20</bugs-to>
 	</upstream>
 </pkgmetadata>
