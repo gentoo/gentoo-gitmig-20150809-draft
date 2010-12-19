@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/luit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/ChangeLog,v 1.65 2010/10/08 11:16:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/ChangeLog,v 1.66 2010/12/19 12:01:42 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> luit-1.1.0.ebuild:
+  ppc64 stable wrt #344827
 
 *luit-1.1.0 (08 Oct 2010)
 
