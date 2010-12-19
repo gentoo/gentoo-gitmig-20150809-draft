@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-publisher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/ChangeLog,v 1.12 2010/12/05 18:59:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-publisher/ChangeLog,v 1.13 2010/12/19 17:35:04 arfrever Exp $
+
+*zope-publisher-3.12.6 (19 Dec 2010)
+
+  19 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-publisher-3.12.4.ebuild, +zope-publisher-3.12.6.ebuild:
+  Version bump.
 
   05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   zope-publisher-3.12.4.ebuild:
