@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.448 2010/11/14 13:29:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.449 2010/12/19 00:08:35 ssuominen Exp $
 
 # Keep them sorted
 
@@ -143,7 +143,7 @@ gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for the guile Scheme interpreter
 gzip - Compress files with Lempel-Ziv coding (LZ77)
-hal - Enable Hardware Abstraction Layer (HAL) support
+hal - Enable Hardware Abstraction Layer (HAL) support (WARNING: Try to avoid this. Deprecated method of accessing hardware.)
 handbook - Enable handbooks generation for KDE4.
 hardened - activate default security enhancements for toolchain (gcc, glibc, binutils)
 hddtemp - Enable monitoring of hdd temperature (app-admin/hddtemp)
