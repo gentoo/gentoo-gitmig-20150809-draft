@@ -1,8 +1,0 @@
-EXTRA_DIST = \
-	gsysutils.h \
-	gdbusutils.h \
-	gmountspec.h \
-	gmountoperationdbus.h \
-	gmountsource.h \
-	gmounttracker.h \
-	gvfsdaemonprotocol.h

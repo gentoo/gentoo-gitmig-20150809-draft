@@ -1,8 +1,0 @@
---- autogen.sh.orig	2007-07-12 10:20:47.000000000 +0300
-+++ autogen.sh	2007-07-11 21:33:53.000000000 +0300
-@@ -46,4 +46,5 @@
-         exit 1
- }
-  
-+export REQUIRED_AUTOMAKE_VERSION=1.9
- USE_GNOME2_MACROS=1 . gnome-autogen.sh $@
