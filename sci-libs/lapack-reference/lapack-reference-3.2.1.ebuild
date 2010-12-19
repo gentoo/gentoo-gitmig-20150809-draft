@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.5 2010/12/17 13:39:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.6 2010/12/19 19:14:02 jlec Exp $
 
 inherit eutils autotools flag-o-matic multilib toolchain-funcs
 
@@ -27,7 +27,7 @@ RDEPEND="virtual/blas
 S="${WORKDIR}/${MyPN}-${PV}"
 
 pkg_setup() {
-	if  [[ $(tc-getFC) =~ if.* ]]; then
+	if  [[ $(tc-getFC) =~ if ]]; then
 		ewarn "Using Intel Fortran at your own risk"
 		export LDFLAGS="$(raw-ldflags)"
 		export NOOPT_FFLAGS=-O
@@ -55,8 +55,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir="/usr/$(get_libdir)/lapack/reference" \
-		--with-blas="$(pkg-config --libs blas)" \
-		|| die "econf failed"
+		--with-blas="$(pkg-config --libs blas)"
 	emake || die "emake failed"
 }
 
