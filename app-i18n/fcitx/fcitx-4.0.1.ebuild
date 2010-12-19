@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.0.1.ebuild,v 1.1 2010/12/18 09:10:07 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.0.1.ebuild,v 1.2 2010/12/19 02:48:24 qiaomuf Exp $
 
 EAPI="3"
+
+inherit eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -23,6 +25,11 @@ RDEPEND="!<=app-i18n/fcitx-configtool-0.1.4
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
+
+src_prepare() {
+	# fix a bug when compiling without pango
+	epatch "${FILESDIR}/${P}-fix-pango.patch"
+}
 
 src_configure() {
 	econf \
