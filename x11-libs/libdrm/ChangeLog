@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.136 2010/12/10 19:18:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.137 2010/12/19 13:04:07 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libdrm-2.4.22.ebuild:
+  ppc64 stable wrt #344827
 
 *libdrm-2.4.23 (10 Dec 2010)
 

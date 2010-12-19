@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXinerama
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.60 2010/10/28 10:53:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.61 2010/12/19 12:59:59 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libXinerama-1.1.1.ebuild:
+  ppc64 stable wrt #344827
 
 *libXinerama-1.1.1 (28 Oct 2010)
 
