@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/chmlib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.15 2009/10/12 19:20:04 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.16 2010/12/19 21:09:26 dirtyepic Exp $
+
+*chmlib-0.40-r1 (19 Dec 2010)
+
+  19 Dec 2010; Ryan Hill <dirtyepic@gentoo.org> -chmlib-0.39-r1.ebuild,
+  -files/chmlib-0.39-headers.patch, +chmlib-0.40-r1.ebuild:
+  Revision bump. Port to EAPI 3. Make examples optional, add static-libs USE
+  flag. Remove old.
 
   12 Oct 2009; Jeroen Roovers <jer@gentoo.org> chmlib-0.40.ebuild:
   Stable for HPPA (bug #286604).
