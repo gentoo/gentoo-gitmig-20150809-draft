@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lndir
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.14 2010/08/14 22:27:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.15 2010/12/19 12:45:42 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> lndir-1.0.2.ebuild:
+  ppc64 stable wrt #344827
 
 *lndir-1.0.2 (14 Aug 2010)
 

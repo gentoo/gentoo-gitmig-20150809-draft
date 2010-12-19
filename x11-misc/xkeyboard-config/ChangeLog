@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.103 2010/11/01 12:14:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.104 2010/12/19 12:44:12 ssuominen Exp $
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xkeyboard-config-2.0-r1.ebuild:
+  ppc64 stable wrt #344827
 
 *xkeyboard-config-2.0-r1 (01 Nov 2010)
 
