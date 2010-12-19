@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.47 2010/10/01 19:40:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.48 2010/12/19 20:12:55 pacho Exp $
+
+*f-spot-0.8.2 (19 Dec 2010)
+
+  19 Dec 2010; Pacho Ramos <pacho@gentoo.org> -f-spot-0.5.0.3-r1.ebuild,
+  -files/f-spot-0.5.0.3-icon-size-crash-fix.patch,
+  -files/f-spot-0.5.0.3-no-image-in-collection-crash-fix.patch,
+  -f-spot-0.6.0.0.ebuild, -files/f-spot-0.6.0.0-parallel-build.patch,
+  -files/f-spot-0.6.0.0-sandbox-violation.patch, -f-spot-0.6.1.1-r2.ebuild,
+  +files/f-spot-0.8.1-mono2.8.patch, +f-spot-0.8.2.ebuild:
+  Version bump including a patch for compiling against mono-2.8 (bug #345409
+  Damien Thébault), remove old.
 
 *f-spot-0.8.0 (01 Oct 2010)
 
