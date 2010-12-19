@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.159 2010/12/19 15:25:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.160 2010/12/19 16:01:59 pva Exp $
+
+*openvz-sources-2.6.32.10.1-r1 (19 Dec 2010)
+
+  19 Dec 2010; Peter Volkov <pva@gentoo.org>
+  +openvz-sources-2.6.32.10.1-r1.ebuild,
+  +files/openvz-sources-2.6.32.10.1-PPPoED-NULL-dereference.patch,
+  +files/openvz-sources-2.6.32.10.1-VE_IP_NAT-bit.patch,
+  +files/openvz-sources-2.6.32.10.1-build-fix.patch,
+  +files/openvz-sources-2.6.32.10.1-file-restore-init_task-credentials.patch
+  ,
+  +files/openvz-sources-2.6.32.10.1-file-restore-init_task-credentials-build
+  .patch, +files/openvz-sources-2.6.32.10.1-openreq-leak.patch,
+  +files/openvz-sources-2.6.32.10.1-ppp-CAP_VE_NET_ADMIN.patch,
+  +files/openvz-sources-2.6.32.10.1-ppp-reconnect.patch:
+  Added upstream patches.
 
 *openvz-sources-2.6.18.028.079.1 (19 Dec 2010)
 
