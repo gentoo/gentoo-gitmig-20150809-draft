@@ -1,11 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.29 2010/09/09 12:25:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.30 2010/12/19 13:55:13 ssuominen Exp $
 
-  09 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
-  xfce4-power-manager-1.0.1.ebuild:
-  Remove redudant xfce-utils block because latest xfce4-session will start
-  consolekit session on it's own.
+*xfce4-power-manager-1.0.2 (19 Dec 2010)
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.2.ebuild:
+  Version bump.
 
 *xfce4-power-manager-1.0.1 (31 Aug 2010)
 
@@ -35,8 +36,7 @@
   06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-power-manager-0.9.98.ebuild,
   +files/xfce4-power-manager-0.9.98-fix_polkit_switch.patch:
-  Fix --disable-polkit configure switch wrt #329157 by "Livid". Remove postinst message because
-  xfce-base/xfce-utils >= 4.6.2-r1 will start xfce4-session with ck-launch-session.
+  Fix --disable-polkit configure switch wrt #329157 by "Livid".
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   xfce4-power-manager-0.8.5.ebuild:
