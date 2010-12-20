@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.42 2010/12/20 01:23:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.43 2010/12/20 07:22:40 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  PEAR-Mail-1.2.0.ebuild:
+  x86 stable wrt security bug #294256
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> PEAR-Mail-1.2.0.ebuild:
   Stable on amd64 wrt bug #294256
