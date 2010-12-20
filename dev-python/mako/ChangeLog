@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.30 2010/12/09 19:14:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.31 2010/12/20 08:55:32 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mako-0.3.6.ebuild:
+  x86 stable wrt bug #349132
 
   09 Dec 2010; Michael Weber <xmw@gentoo.org> mako-0.3.5.ebuild,
   mako-0.3.6.ebuild:
