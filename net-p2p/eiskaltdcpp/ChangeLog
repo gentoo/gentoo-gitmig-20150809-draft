@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.17 2010/11/24 11:42:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.18 2010/12/20 13:55:41 pva Exp $
+
+  20 Dec 2010; Peter Volkov <pva@gentoo.org> -eiskaltdcpp-2.1.0.ebuild:
+  Drop broken.
 
 *eiskaltdcpp-2.1.1 (24 Nov 2010)
 
