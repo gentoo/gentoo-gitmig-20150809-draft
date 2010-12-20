@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.71 2010/12/20 12:50:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.72 2010/12/20 17:23:49 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-dv-0.10.23.ebuild:
+  Stable on amd64 wrt bug #346981
 
   20 Dec 2010; Thomas Kahle <tomka@gentoo.org> gst-plugins-dv-0.10.23.ebuild:
   x86 stable per bug 346981
