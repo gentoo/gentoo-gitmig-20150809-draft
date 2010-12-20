@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.245 2010/12/19 09:43:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.246 2010/12/20 19:06:38 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-10.0.612.1.ebuild, chromium-9999.ebuild:
+  Add more checks to prevent user problems like bug #299777 or bug #348235.
 
   19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-tests-r0.patch:
