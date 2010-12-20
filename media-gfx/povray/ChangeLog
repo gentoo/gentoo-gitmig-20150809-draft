@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.107 2010/11/14 14:40:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.108 2010/12/20 14:24:17 jlec Exp $
+
+*povray-3.7.0_beta40 (20 Dec 2010)
+
+  20 Dec 2010; Justin Lecher <jlec@gentoo.org> +povray-3.7.0_beta40.ebuild:
+  Version Bump
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> povray-3.6.1-r4.ebuild,
   povray-3.7.0_beta35.ebuild, povray-3.7.0_beta38.ebuild:
