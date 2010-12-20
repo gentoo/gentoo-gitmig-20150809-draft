@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.278 2010/12/07 10:42:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.279 2010/12/20 21:07:25 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> dovecot-1.2.16.ebuild:
+  Stable on amd64 wrt bug #348978
 
 *dovecot-2.0.8-r1 (07 Dec 2010)
 
