@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.5 2010/12/17 07:56:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.6 2010/12/20 08:19:56 jlec Exp $
 
 EAPI="3"
 
@@ -67,7 +67,7 @@ src_compile() {
 
 src_install() {
 	dobin cyana{job,table,filter,clean} || die
-	newbin src/${PN}/${PN}exe.${SYSTEM} ${PN} || die
+	newbin src/${PN}/${PN}exe.* ${PN} || die
 	insinto /usr/share/${PN}
 	doins -r lib macro help || die
 	use examples && doins -r demo

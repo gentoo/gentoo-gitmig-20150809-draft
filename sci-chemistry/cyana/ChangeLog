@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cyana
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/ChangeLog,v 1.5 2010/12/17 07:56:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/ChangeLog,v 1.6 2010/12/20 08:19:56 jlec Exp $
+
+  20 Dec 2010; Justin Lecher <jlec@gentoo.org> cyana-2.1.ebuild:
+  Fix installation problem due to wrong detection of binary nameing
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> cyana-2.1.ebuild:
   Fix for fortran.eclass removal
