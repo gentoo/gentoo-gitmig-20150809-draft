@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.55 2010/12/20 11:00:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.56 2010/12/20 11:56:01 klausman Exp $
+
+  20 Dec 2010; Tobias Klausmann <klausman@gentoo.org> git-1.7.3.4-r1.ebuild:
+  Stable on alpha, bug #349045
 
   20 Dec 2010; Tobias Klausmann <klausman@gentoo.org> git-1.7.2.5.ebuild:
   Stable on alpha, bug #349045
