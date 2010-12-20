@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.177 2010/11/20 12:18:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.178 2010/12/20 15:14:03 ranger Exp $
+
+  20 Dec 2010; Brent Baude <ranger@gentoo.org> cacti-0.8.7g.ebuild:
+  Marking cacti-0.8.7g ppc64 for bug 324031
 
   20 Nov 2010; Raúl Porcel <armin76@gentoo.org> cacti-0.8.7g.ebuild:
   alpha/sparc stable wrt #324031
