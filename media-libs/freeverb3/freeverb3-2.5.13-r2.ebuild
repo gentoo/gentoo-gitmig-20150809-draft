@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.13-r2.ebuild,v 1.1 2010/12/10 17:51:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.13-r2.ebuild,v 1.2 2010/12/20 14:30:29 tomka Exp $
 
 EAPI=2
 inherit eutils autotools versionator
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="audacious jack plugdouble sse sse2 sse3 sse4 3dnow forcefpu"
 
 RDEPEND=">=sci-libs/fftw-3.0.1
