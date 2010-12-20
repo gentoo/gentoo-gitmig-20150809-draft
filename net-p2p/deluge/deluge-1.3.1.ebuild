@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.1.ebuild,v 1.4 2010/12/19 13:25:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.1.ebuild,v 1.5 2010/12/20 12:29:53 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://download.deluge-torrent.org/source/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc x86"
+KEYWORDS="amd64 ~arm ~ppc ~sparc x86"
 IUSE="gtk libnotify webinterface"
 
 DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )
