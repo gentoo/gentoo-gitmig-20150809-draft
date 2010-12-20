@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.33 2010/11/27 20:30:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.34 2010/12/20 23:20:01 voyageur Exp $
+
+*pidgin-facebookchat-1.69-r1 (20 Dec 2010)
+
+  20 Dec 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  pidgin-facebookchat-1.68.ebuild, pidgin-facebookchat-1.69.ebuild,
+  +pidgin-facebookchat-1.69-r1.ebuild:
+  pidgin 2.7.8 now installs Facebook icons, bug #349224
 
 *pidgin-facebookchat-1.69 (27 Nov 2010)
 

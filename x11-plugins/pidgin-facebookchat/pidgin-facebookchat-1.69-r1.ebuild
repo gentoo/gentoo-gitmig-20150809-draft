@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.69.ebuild,v 1.2 2010/12/20 23:20:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.69-r1.ebuild,v 1.1 2010/12/20 23:20:01 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/json-glib-0.7.6
-	<net-im/pidgin-2.7.8"
+	>=net-im/pidgin-2.7.8"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
@@ -43,8 +43,4 @@ src_compile() {
 src_install() {
 	exeinto /usr/$(get_libdir)/purple-2
 	doexe libfacebook.so
-	for size in 16 22 48; do
-		insinto /usr/share/pixmaps/pidgin/protocols/${size}
-		newins facebook${size}.png facebook.png
-	done
 }
