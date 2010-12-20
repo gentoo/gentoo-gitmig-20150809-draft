@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.444 2010/12/20 00:46:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.445 2010/12/20 17:47:59 ranger Exp $
+
+  20 Dec 2010; Brent Baude <ranger@gentoo.org> php-5.2.14-r2.ebuild,
+  php-5.3.3-r3.ebuild:
+  Marking -5.3.3-r3 and -5.2.14-r2 ~ppc64 for bug 343597
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> php-5.2.16.ebuild,
   php-5.3.4.ebuild:
