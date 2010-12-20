@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.123 2010/12/19 20:55:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.124 2010/12/20 00:47:58 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> PEAR-PEAR-1.9.1-r3.ebuild:
+  Stable on amd64 wrt bug #340807
 
   19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   PEAR-PEAR-1.9.1-r3.ebuild:
