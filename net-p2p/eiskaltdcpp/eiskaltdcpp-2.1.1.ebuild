@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.1.1.ebuild,v 1.1 2010/11/24 11:42:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.1.1.ebuild,v 1.2 2010/12/20 18:52:25 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN/pp/}.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="dbus +emoticons examples -gnome -gtk -javascript libnotify lua +qt4 pcre sounds spell upnp"
 
 RDEPEND="
