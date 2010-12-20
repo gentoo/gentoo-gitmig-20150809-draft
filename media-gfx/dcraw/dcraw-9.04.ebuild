@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.04.ebuild,v 1.1 2010/09/28 13:05:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.04.ebuild,v 1.2 2010/12/20 18:06:41 pva Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="nls gimp jpeg lcms"
 
-COMMON_DEPEND="jpeg? ( >=media-libs/jpeg-8a )
+COMMON_DEPEND="jpeg? ( virtual/jpeg )
 	lcms? ( =media-libs/lcms-1* )
 	gimp? ( media-gfx/gimp )"
 DEPEND="${COMMON_DEPEND}
