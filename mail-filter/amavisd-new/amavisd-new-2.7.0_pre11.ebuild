@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre9.ebuild,v 1.1 2010/11/18 15:43:17 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre11.ebuild,v 1.1 2010/12/20 21:20:00 eras Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ inherit eutils
 MY_P="${P/_/-}"
 DESCRIPTION="High-performance interface between the MTA and content checkers."
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
-SRC_URI="http://www.ijs.si/software/amavisd/${MY_P}.tar.gz"
+SRC_URI="http://www.ijs.si/software/amavisd/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -108,7 +108,7 @@ src_install() {
 	keepdir "${AMAVIS_ROOT}/tmp"
 	keepdir "${AMAVIS_ROOT}/var"
 
-	dodoc AAAREADME.first INSTALL MANIFEST RELEASE_NOTES \
+	dodoc AAAREADME.first INSTALL MANIFEST RELEASE_NOTES TODO \
 		amavisd.conf-default amavisd-custom.conf
 
 	docinto README_FILES
