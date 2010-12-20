@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.76 2010/11/15 14:26:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.77 2010/12/20 09:29:26 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sphinx-1.0.5.ebuild:
+  x86 stable wrt bug #349138
 
 *sphinx-1.0.5 (15 Nov 2010)
 
