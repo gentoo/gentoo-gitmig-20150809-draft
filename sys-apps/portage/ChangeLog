@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.777 2010/12/20 00:49:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.778 2010/12/20 16:27:58 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  portage-2.1.9.25.ebuild:
+  x86 stable wrt bug #349098
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> portage-2.1.9.25.ebuild:
   Stable on amd64 wrt bug #349098
