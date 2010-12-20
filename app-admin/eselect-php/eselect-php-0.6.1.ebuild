@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.6.1.ebuild,v 1.6 2010/12/20 00:44:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.6.1.ebuild,v 1.7 2010/12/20 17:45:10 ranger Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="http://olemarkus.org/~olemarkus/gentoo/eselect-php-${PV}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~sparc x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=app-admin/eselect-1.2.4
