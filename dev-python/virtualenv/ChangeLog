@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.45 2010/12/20 17:00:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.46 2010/12/20 20:10:53 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  virtualenv-1.5.1.ebuild:
+  x86 stable wrt bug #349192
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> virtualenv-1.5.1.ebuild:
   Stable on amd64 wrt bug #349192
