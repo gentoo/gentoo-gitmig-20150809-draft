@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.1 2010/09/12 10:07:30 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.2 2010/12/20 12:12:01 klausman Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/apps/ham/morse/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE="ncurses suid qt4"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )
