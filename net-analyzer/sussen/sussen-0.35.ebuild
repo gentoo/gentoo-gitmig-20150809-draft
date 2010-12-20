@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.10 2010/01/09 16:50:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.11 2010/12/20 17:57:46 pva Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
 #inherit eutils gnome2 mono autotools
 
+EAPI="2"
 inherit gnome2 mono eutils
 
 DESCRIPTION="Sussen is a tool that checks for vulnerabilities and configuration issues on computer systems"
@@ -21,7 +22,7 @@ RDEPEND="dev-lang/mono
 			 >=dev-dotnet/gnome-sharp-2.4
 			 >=dev-dotnet/gconf-sharp-2.4
 			 >=dev-dotnet/glade-sharp-2.4
-			 gnome-base/gnome-panel )"
+			 || ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 ) )"
 
 DEPEND="${RDEPEND}
 	doc? ( virtual/monodoc )
@@ -38,24 +39,23 @@ pkg_setup() {
 # src_unpack, pkg_postinst, pkg_postrm are exported in gnome2.eclass. But since
 # we have gnome2 support depends on USE let's call gnome2.eclass internal
 # functions only when USE="gnome".
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	use gnome && gnome2_omf_fix
-}
 
-src_compile () {
 	# Put all asp pages in /usr/share/$PF dir instead of /usr/share/sussen
 	sed -i -e \
 	"s:wwwdir = \$(datadir)/doc/sussen/www/asp:wwwdir = \$(datadir)/doc/${PF}/www/asp:" \
 	www/asp/Makefile.in || die "sed failed."
+}
 
+src_configure () {
 	# $(use_enable web yes)
 	econf ${myconf} \
 		--enable-web=no \
-		$(use_enable gnome) || die "./configure failed."
+		$(use_enable gnome)
+}
 
+src_compile() {
 	emake -j1 || die "Compilation failed"
 }
 

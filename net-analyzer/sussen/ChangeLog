@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.58 2010/01/09 16:50:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.59 2010/12/20 17:57:46 pva Exp $
+
+  20 Dec 2010; Peter Volkov <pva@gentoo.org> sussen-0.35.ebuild,
+  sussen-0.90.ebuild:
+  Update gnome-panel dependency, bug #348188, thank Pacho Ramos for report.
 
   09 Jan 2010; Peter Volkov <pva@gentoo.org> sussen-0.35.ebuild,
   sussen-0.90.ebuild:
