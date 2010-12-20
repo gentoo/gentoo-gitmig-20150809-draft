@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.76 2010/12/20 09:37:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.77 2010/12/20 21:04:47 arfrever Exp $
+
+*buildbot-0.8.3 (20 Dec 2010)
+
+  20 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +buildbot-0.8.3.ebuild, +files/buildmaster.initd:
+  Version bump.
 
   20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   buildbot-0.8.2.ebuild:
