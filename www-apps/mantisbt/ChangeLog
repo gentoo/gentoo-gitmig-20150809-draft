@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.98 2010/12/19 15:55:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.99 2010/12/20 00:39:11 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mantisbt-1.2.4.ebuild:
+  Stable on amd64 wrt bug #348761
 
 *mantisbt-1.2.4 (19 Dec 2010)
 
