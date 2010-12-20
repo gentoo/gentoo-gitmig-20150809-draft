@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.3.ebuild,v 1.1 2010/12/20 20:16:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.3.ebuild,v 1.2 2010/12/20 21:05:36 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,8 @@ IUSE="test"
 
 RDEPEND="dev-python/setuptools
 	>=dev-python/twisted-2
-	!!<dev-util/buildbot-0.8.1"
+	!!<dev-util/buildbot-0.8.1
+	!<dev-util/buildbot-0.8.3"
 DEPEND="${RDEPEND}
 	test? ( dev-python/mock )"
 
@@ -35,6 +36,8 @@ pkg_setup() {
 
 src_install() {
 	distutils_src_install
+
+	doman docs/buildslave.1 || die "doman failed"
 
 	newconfd "${FILESDIR}/buildslave.confd" buildslave || die "newconfd failed"
 	newinitd "${FILESDIR}/buildslave.initd" buildslave || die "newinitd failed"
