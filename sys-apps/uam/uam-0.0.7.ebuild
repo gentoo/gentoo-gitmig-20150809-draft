@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.0.7.ebuild,v 1.2 2010/10/13 20:27:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.0.7.ebuild,v 1.3 2010/12/20 14:37:39 mgorny Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="Simple udev-based automounter for removable USB media"
-HOMEPAGE="http://github.com/mgorny/uam/"
-SRC_URI="http://github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://github.com/mgorny/uam/"
+SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
