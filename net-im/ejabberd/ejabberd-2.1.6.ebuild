@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.5-r2.ebuild,v 1.1 2010/10/15 17:34:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.6.ebuild,v 1.1 2010/12/20 13:52:23 pva Exp $
 
 EAPI=3
 
@@ -9,13 +9,12 @@ inherit eutils multilib pam ssl-cert
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
 SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz
-	mod_statsdx? ( mirror://gentoo/2.1.1-mod_statsdx.patch.bz2 )
-	mod_srl? ( https://alioth.debian.org/frs/download.php/3354/mod_shared_roster_ldap-0.5.3.tgz )"
+	mod_statsdx? ( mirror://gentoo/2.1.1-mod_statsdx.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
-EJABBERD_MODULES="mod_irc mod_muc mod_proxy65 mod_pubsub mod_srl mod_statsdx"
+EJABBERD_MODULES="mod_irc mod_muc mod_proxy65 mod_pubsub mod_statsdx"
 IUSE="captcha debug ldap odbc pam +web zlib ${EJABBERD_MODULES}"
 
 DEPEND=">=net-im/jabber-base-0.01
@@ -42,17 +41,10 @@ JABBER_LOG="${EPREFIX}/var/log/jabber"
 JABBER_DOC="${EPREFIX}/usr/share/doc/${PF}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-md2-optional.patch" #331299
 	if use mod_statsdx; then
 		ewarn "mod_statsdx is not a part of upstream tarball but is a third-party module"
 		ewarn "taken from here: http://www.ejabberd.im/mod_stats2file"
 		epatch "${WORKDIR}/2.1.1-mod_statsdx.patch"
-	fi
-
-	if use mod_srl; then
-		ewarn "mod_srl is not a part of upstream tarball but is a third-party module"
-		ewarn "taken from here: https://alioth.debian.org/projects/ejabberd-msrl/"
-		cp "${WORKDIR}"/src/mod_shared_roster_ldap{.{e,h}rl,_helpers.erl} "${S}" || die
 	fi
 
 	# don't install release notes (we'll do this manually)
@@ -121,6 +113,7 @@ src_install() {
 	# http://www.process-one.net/docs/ejabberd/guide_en.html
 	if use pam; then
 		pamd_mimic_system xmpp auth account || die "Cannot create pam.d file"
+		fowners root:jabber "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam" || die
 		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam" || die "Cannot adjust epam permissions"
 	fi
 
