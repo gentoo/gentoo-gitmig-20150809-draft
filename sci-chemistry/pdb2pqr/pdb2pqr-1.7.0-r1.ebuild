@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.3 2010/12/17 17:56:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.4 2010/12/20 08:44:08 jlec Exp $
 
 EAPI="3"
 
@@ -62,16 +62,22 @@ src_configure() {
 
 	configuration() {
 		# Avoid automagic to numeric
-		NUMPY="${EPREFIX}/$(python_get_sitedir)" \
-			F77="$(tc-getFC)" \
-			econf \
+		econf \
 			--enable-propka \
 			--with-max-atoms=${MAXATOMS:-10000} \
 			$(use_enable pdb2pka) \
-			$(use_with opal) || \
-			die "econf failed"
+			$(use_with opal) \
+			NUMPY="${EPREFIX}/$(python_get_sitedir)" \
+			F77="$(tc-getFC)"
 	}
 	python_execute_function -s configuration
+}
+
+src_compile() {
+	compilation() {
+		emake || die
+	}
+	python_execute_function -s compilation
 }
 
 src_test() {

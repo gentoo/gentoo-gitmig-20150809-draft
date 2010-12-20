@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.31 2010/12/17 17:56:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.32 2010/12/20 08:44:08 jlec Exp $
+
+  20 Dec 2010; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.5.0-r2.ebuild,
+  pdb2pqr-1.7.0.ebuild, pdb2pqr-1.7.0-r1.ebuild:
+  Add missing src_compile
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.5.0-r2.ebuild,
   pdb2pqr-1.7.0.ebuild, pdb2pqr-1.7.0-r1.ebuild:

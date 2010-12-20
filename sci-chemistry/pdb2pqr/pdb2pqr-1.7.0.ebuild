@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.4 2010/12/17 17:56:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.5 2010/12/20 08:44:08 jlec Exp $
 
 EAPI="3"
 
@@ -22,11 +22,11 @@ SLOT="0"
 IUSE="doc examples opal"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-DEPEND="
+RDEPEND="
 	dev-python/numpy
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -53,10 +53,16 @@ src_configure() {
 		NUMPY="${EPREFIX}/$(python_get_sitedir)" \
 			F77="$(tc-getFC)" \
 			econf \
-			$(use_with opal) || \
-			die "econf failed"
+			$(use_with opal)
 	}
 	python_execute_function -s configuration
+}
+
+src_compile() {
+	compilation() {
+		emake || die
+	}
+	python_execute_function -s compilation
 }
 
 src_test() {
