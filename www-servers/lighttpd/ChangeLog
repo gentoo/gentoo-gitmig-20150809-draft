@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.236 2010/12/05 17:14:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.237 2010/12/20 19:43:44 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  lighttpd-1.4.28.ebuild:
+  x86 stable wrt bug #349213
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.28.ebuild:
   Add ~alpha/~ia64/~sh/~sparc wrt #345611
