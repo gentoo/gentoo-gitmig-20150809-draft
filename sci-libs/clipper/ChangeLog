@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.10 2010/12/18 11:25:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.11 2010/12/20 12:28:26 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> clipper-20100511.ebuild:
+  Stable on amd64 wrt bug #348872
 
   18 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   clipper-20100511.ebuild:
