@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.453 2010/11/05 15:28:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.454 2010/12/20 20:35:07 vostorga Exp $
+
+  20 Dec 2010; Víctor Ostorga <vostorga@gentoo.org> files/3.4/samba.initd,
+  files/3.5/samba.initd:
+  init script creates /var/run/samba if needed , bug #346087
 
   05 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> -samba-3.4.8.ebuild,
   -samba-3.5.5.ebuild:
