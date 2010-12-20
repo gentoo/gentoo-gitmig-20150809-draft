@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-8.0.552.224.ebuild,v 1.1 2010/12/14 14:50:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-8.0.552.224.ebuild,v 1.2 2010/12/20 19:55:17 phajdan.jr Exp $
 
 EAPI="2"
-inherit eutils multilib
+inherit eutils multilib portability
 
 DESCRIPTION="Open-source version of Google Chrome web browser (binary version)"
 HOMEPAGE="http://code.google.com/chromium/"
@@ -51,6 +51,25 @@ RDEPEND="app-arch/bzip2
 
 pkg_setup() {
 	CHROMIUM_HOME="/opt/chromium.org"
+
+	# Prevent user problems like bug #299777.
+	if ! egrep -q '^shm.+/dev/shm' /etc/fstab; then
+		ewarn "You don't have /dev/shm entry in /etc/fstab."
+		ewarn "${PN} may fail to start in that configuration."
+		ewarn "Please add the following line to your /etc/fstab:"
+		ewarn "shm			/dev/shm	tmpfs		nodev,nosuid,noexec	0 0"
+	fi
+	if ! grep -q /dev/shm <<< $(get_mounts); then
+		ewarn "You don't have tmpfs mounted at /dev/shm."
+		ewarn "${PN} may fail to start in that configuration."
+		ewarn "Please uncomment the /dev/shm entry in /etc/fstab,"
+		ewarn "and run 'mount /dev/shm'."
+	fi
+	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
+		ewarn "/dev/shm does not have correct permissions."
+		ewarn "${PN} may fail to start in that configuration."
+		ewarn "Please run 'chmod 1777 /dev/shm'."
+	fi
 }
 
 src_install() {

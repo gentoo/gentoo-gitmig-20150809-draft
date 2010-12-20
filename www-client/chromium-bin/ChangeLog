@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.83 2010/12/14 14:50:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.84 2010/12/20 19:55:17 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-bin-8.0.552.224.ebuild:
+  Add more checks to prevent user problems like bug #299777.
 
 *chromium-bin-8.0.552.224 (14 Dec 2010)
 
