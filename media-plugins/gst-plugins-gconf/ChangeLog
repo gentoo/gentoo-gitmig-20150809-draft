@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.86 2010/12/16 11:13:43 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.87 2010/12/20 12:52:53 tomka Exp $
+
+  20 Dec 2010; Thomas Kahle <tomka@gentoo.org>
+  gst-plugins-gconf-0.10.23.ebuild:
+  x86 stable per bug 346981
 
   16 Dec 2010; Marijn Schouten <hkBst@gentoo.org>
   gst-plugins-gconf-0.10.23.ebuild:

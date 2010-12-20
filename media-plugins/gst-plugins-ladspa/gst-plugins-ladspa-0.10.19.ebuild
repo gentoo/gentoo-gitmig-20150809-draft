@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/gst-plugins-ladspa-0.10.19.ebuild,v 1.1 2010/08/03 00:47:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/gst-plugins-ladspa-0.10.19.ebuild,v 1.2 2010/12/20 12:42:29 tomka Exp $
 
 inherit gst-plugins-bad
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/ladspa-sdk-1.12-r2

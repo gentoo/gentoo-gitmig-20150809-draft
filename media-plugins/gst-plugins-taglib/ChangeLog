@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.66 2010/10/14 20:59:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.67 2010/12/20 13:02:03 tomka Exp $
+
+  20 Dec 2010; Thomas Kahle <tomka@gentoo.org>
+  gst-plugins-taglib-0.10.23.ebuild:
+  x86 stable per bug 346981
 
   14 Oct 2010; Markus Meier <maekke@gentoo.org>
   gst-plugins-taglib-0.10.21.ebuild:
