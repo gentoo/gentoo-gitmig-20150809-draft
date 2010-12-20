@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3.ebuild,v 1.2 2010/12/16 12:36:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3.ebuild,v 1.3 2010/12/20 13:40:01 scarabeus Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="emacs ncurses qt4 vim-syntax"
 
 DEPEND="
-	app-arch/libarchive
+	>=app-arch/libarchive-2.8.0
 	>=net-misc/curl-7.20.0-r1[ssl]
 	>=dev-libs/expat-2.0.1
 	sys-libs/zlib
