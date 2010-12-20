@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.52 2010/12/19 12:40:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.53 2010/12/20 07:49:24 robbat2 Exp $
+  
+  20 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> git-1.6.4.4.ebuild,
+  git-1.6.4.4-r1.ebuild, git-1.6.4.5.ebuild, git-1.7.2.2.ebuild,
+  git-1.7.2.3.ebuild, git-1.7.2.4.ebuild, git-1.7.2.4-r1.ebuild,
+  git-1.7.2.5.ebuild, git-1.7.3.2.ebuild:
+  Backport the doman cosmetic fix to ALL ebuilds since I got yet another bug
+  about it.
 
   19 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> git-1.6.4.5.ebuild,
   git-1.7.2.5.ebuild:
