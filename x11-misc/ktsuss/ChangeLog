@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.8 2010/12/20 17:26:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.9 2010/12/20 23:46:39 darkside Exp $
+
+  20 Dec 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  remove myself as maintainer
 
   20 Dec 2010; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   Adding myself as a maintainer
