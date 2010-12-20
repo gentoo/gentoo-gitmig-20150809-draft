@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.140 2010/12/16 18:22:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.141 2010/12/20 23:40:55 blueness Exp $
+
+  20 Dec 2010; Anthony G. Basile <blueness@gentoo.org>
+  gradm-2.2.1.201012121738.ebuild:
+  amd64, ppc64, x86 fast track stabilization for hardened-sources-2.6.32-r31
+  and hardened-sources-2.6.36-r6
 
   16 Dec 2010; Anthony G. Basile <blueness@gentoo.org>
   gradm-2.2.0.201011061849.ebuild:
