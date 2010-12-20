@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.66 2010/11/24 12:16:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.67 2010/12/20 17:45:22 pva Exp $
+
+*xfig-3.2.5b-r1 (20 Dec 2010)
+
+  20 Dec 2010; Peter Volkov <pva@gentoo.org> -xfig-3.2.5-r3.ebuild,
+  +xfig-3.2.5b-r1.ebuild, +files/xfig-3.2.5b-CVE-2010-4262.patch:
+  Add patch to address stack-based buffer overflow, bug #348344, thank Tim
+  Sammut for report. Drop old.
 
   24 Nov 2010; Peter Volkov <pva@gentoo.org> xfig-3.2.5-r3.ebuild,
   xfig-3.2.5b.ebuild:
