@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.3 2010/12/12 18:26:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.4 2010/12/20 12:25:36 hwoarang Exp $
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> normaliz-2.5-r1.ebuild:
+  Stable on amd64 wrt bug #348318
 
   12 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   normaliz-2.5-r1.ebuild:
