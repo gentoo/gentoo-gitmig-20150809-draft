@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.19 2010/11/28 17:40:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.20 2010/12/20 19:49:42 phajdan.jr Exp $
+
+  20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pycxx-6.2.1-r1.ebuild:
+  x86 stable wrt bug #349199
 
 *pycxx-6.2.1-r1 (28 Nov 2010)
 
