@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.1.9.10.ebuild,v 1.1 2010/10/28 10:41:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.2.2.3.ebuild,v 1.1 2010/12/20 13:31:10 hwoarang Exp $
 
 EAPI="2"
-
-inherit eutils
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -26,10 +24,6 @@ DEPEND=">=dev-db/tokyocabinet-1.4.42
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-implicit-declaration.patch
-}
 
 src_configure() {
 	econf \
