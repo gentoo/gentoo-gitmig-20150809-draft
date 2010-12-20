@@ -5,4 +5,8 @@
 <maintainer>
   <email>darkside@gentoo.org</email>
 </maintainer>
+<maintainer>
+  <email>tomka@gentoo.org</email>
+  <name>Thomas Kahle</name>
+</maintainer>
 </pkgmetadata>
