@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.5 2010/12/19 20:56:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.6 2010/12/20 19:37:00 jlec Exp $
 
 EAPI="3"
 
@@ -52,10 +52,21 @@ pkg_nofetch() {
 	echo
 }
 
-pkg_setup() {
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
 
+pkg_setup() {
+	get_fcomp
 	# currently amd64 is only supported with gfortran
-	if [[ "${ARCH}" == "amd64" ]] && [[ "$(tc-getFC)" != *gfortran* ]];
+	if [[ "${ARCH}" == "amd64" ]] && [[ ${FCOMP} != *gfortran* ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
 
@@ -105,7 +116,7 @@ src_prepare() {
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	if use hardened && [[ "$(tc-getFC)" =~ g77 ]]; then
+	if use hardened && [[ ${FCOMP} == g77 ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
@@ -178,7 +189,7 @@ src_prepare() {
 	# insert proper FFLAGS into GAMESS' comp makefile
 	# in case we're using ifc let's strip all the gcc
 	# specific stuff
-	if [[ "$(tc-getFC)" == "ifort" ]]; then
+	if [[ ${FCOMP} == "ifort" ]]; then
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
 			-i comp || die "Failed setting up comp script"
 	elif ! use x86; then
@@ -212,12 +223,12 @@ src_prepare() {
 src_compile() {
 	# build actvte
 	cd "${S}"/tools
-	"$(tc-getFC)" -o actvte.x actvte.f || \
+	${FCOMP} -o actvte.x actvte.f || \
 		die "Failed to compile actvte.x"
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
+	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS actvte.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -236,7 +247,7 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
+	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS ${PN}.00.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -300,7 +311,7 @@ pkg_postinst() {
 	einfo "validate the tests."
 	einfo "Please consult TEST.DOC and the other docs!"
 
-	if [[ "$(tc-getFC)" == "ifort" ]]; then
+	if [[ ${FCOMP} == "ifort" ]]; then
 		echo
 		ewarn "IMPORTANT NOTE: We STRONGLY recommend to stay away"
 		ewarn "from ifc-9.0 for now and use the ifc-8.1 series of"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.46 2010/12/16 15:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.47 2010/12/20 19:37:00 jlec Exp $
+
+  20 Dec 2010; Justin Lecher <jlec@gentoo.org> gamess-20090112.1-r1.ebuild,
+  gamess-20101001.1.ebuild:
+  Fix for fortran detection, thanks alexxy noting this
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> gamess-20090112.1-r1.ebuild,
   gamess-20101001.1.ebuild:

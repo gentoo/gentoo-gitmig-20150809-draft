@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.10 2010/12/19 20:56:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.11 2010/12/20 19:37:00 jlec Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -43,10 +43,21 @@ pkg_nofetch() {
 	echo
 }
 
-pkg_setup() {
+get_fcomp() {
+	case $(tc-getFC) in
+		*gfortran* )
+			FCOMP="gfortran" ;;
+		ifort )
+			FCOMP="ifc" ;;
+		* )
+			FCOMP=$(tc-getFC) ;;
+	esac
+}
 
+pkg_setup() {
+	get_fcomp
 	# currently amd64 is only supported with gfortran
-	if [[ "${ARCH}" == "amd64" ]] && [[ "$(tc-getFC)" != *gfortran* ]];
+	if [[ "${ARCH}" == "amd64" ]] && [[ ${FCOMP} != *gfortran* ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
 
@@ -79,7 +90,7 @@ src_unpack() {
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	if use hardened && [[ "$(tc-getFC)" =~ g77 ]]; then
+	if use hardened && [[ ${FCOMP} == g77 ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
@@ -115,29 +126,29 @@ src_unpack() {
 	# insert proper FFLAGS into GAMESS' comp makefile
 	# in case we're using ifc let's strip all the gcc
 	# specific stuff
-	if [[ "$(tc-getFC)" == "ifort" ]]; then
+	if [[ ${FCOMP} == "ifort" ]]; then
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-			-e "s/gentoo-g77/$(tc-getFC)/" \
+			-e "s/gentoo-g77/${FCOMP}/" \
 			-i comp || die "Failed setting up comp script"
 	elif ! use x86; then
 		sed -e "s/-malign-double //" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-			-e "s/gentoo-g77/$(tc-getFC)/" \
+			-e "s/gentoo-g77/${FCOMP}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-			-e "s/gentoo-g77/$(tc-getFC)/" \
+			-e "s/gentoo-g77/${FCOMP}/" \
 			-i comp || die "Failed setting up comp script"
 	fi
 
 	# fix up GAMESS' linker script;
-	sed -e "s/gentoo-g77/$(tc-getFC)/" \
+	sed -e "s/gentoo-g77/${FCOMP}/" \
 		-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 		-i lked || die "Failed setting up lked script"
 
 	# fix up GAMESS' ddi TCP/IP socket build
 	sed -e "s/gentoo-CC = 'gcc'/CC = '$(tc-getCC)'/" \
-		-e "s/gentoo-g77/$(tc-getFC)/" \
+		-e "s/gentoo-g77/${FCOMP}/" \
 		-i ddi/compddi || die "Failed setting up compddi script"
 
 	# fix up the checker scripts for gamess tests
@@ -154,7 +165,7 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
+	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS actvte.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -173,7 +184,7 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ "$(tc-getFC)" == "ifort" ]] && use hardened; then
+	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
 		/sbin/paxctl -PemRxS ${PN}.00.x 2> /dev/null || \
 			die "paxctl failed on actvte.x"
 	fi
@@ -233,7 +244,7 @@ pkg_postinst() {
 	einfo "validate the tests."
 	einfo "Please consult TEST.DOC and the other docs!"
 
-	if [[ "$(tc-getFC)" == "ifort" ]]; then
+	if [[ ${FCOMP} == "ifort" ]]; then
 		echo
 		ewarn "IMPORTANT NOTE: We STRONGLY recommend to stay away"
 		ewarn "from ifc-9.0 for now and use the ifc-8.1 series of"
