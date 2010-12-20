@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.5 2010/11/14 17:25:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.6 2010/12/20 15:55:10 tomjbe Exp $
 
 EAPI="2"
 
@@ -29,14 +29,14 @@ CDEPEND="gif? ( >=media-libs/gd-2.0.23 )
 	nls? ( virtual/libintl )
 	png? ( >=media-libs/gd-2.0.23[png] )
 	m4lib-png? ( >=media-libs/gd-2.0.23[png] )
-	test? (
-		|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )
-		sci-electronics/gerbv
-	)
 	tk? ( >=dev-lang/tk-8 )"
 #toporouter-output? ( x11-libs/cairo )
 
 DEPEND="${CDEPEND}
+	test? (
+		|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )
+		sci-electronics/gerbv
+	)
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
