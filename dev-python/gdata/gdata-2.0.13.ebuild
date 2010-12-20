@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.13.ebuild,v 1.1 2010/12/07 19:32:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.13.ebuild,v 1.2 2010/12/20 15:09:35 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,6 +26,14 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="atom gdata"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# http://code.google.com/p/gdata-python-client/issues/detail?id=474
+	# http://code.google.com/p/gdata-python-client/source/detail?r=0ead99676f39b214db3584ed418efb214f45c70d
+	sed -e "/http:\/\/docs\.google\.com\/feeds\/documents\/private\/full\//s/http/https/" -i tests/gdata_tests/docs_test.py || die "sed failed"
+}
 
 src_test() {
 	testing() {
