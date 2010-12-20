@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-wpactrl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.9 2009/11/30 06:38:24 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.10 2010/12/20 17:28:13 tomka Exp $
+
+  20 Dec 2010; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Adding myself as a maintainer
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   python-wpactrl-20081102.ebuild:
