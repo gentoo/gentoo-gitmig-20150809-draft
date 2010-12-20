@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/xdebug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.35 2010/11/09 13:22:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/ChangeLog,v 1.36 2010/12/20 17:43:21 ranger Exp $
+
+  20 Dec 2010; Brent Baude <ranger@gentoo.org> xdebug-2.1.0-r1.ebuild:
+  Marking xdebug-2.1.0-r1 ~ppc64 for bug 343597
 
   09 Nov 2010; Jeroen Roovers <jer@gentoo.org> xdebug-2.1.0-r1.ebuild:
   Marked ~hppa (bug #343597).
