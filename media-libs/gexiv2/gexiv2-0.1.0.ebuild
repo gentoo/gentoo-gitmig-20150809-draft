@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.1.0.ebuild,v 1.1 2010/08/22 07:16:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.1.0.ebuild,v 1.2 2010/12/21 15:20:10 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-gfx/exiv2-0.19
-		dev-libs/glib:2"
+	<media-gfx/exiv2-0.21
+	dev-libs/glib:2"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/lib${P}"
