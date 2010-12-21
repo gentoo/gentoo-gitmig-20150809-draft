@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.313 2010/11/25 18:08:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.314 2010/12/21 22:06:14 eva Exp $
+
+  21 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> evolution-2.30.3.ebuild,
+  evolution-2.32.1.ebuild:
+  Drop profile use flag, could not find a good use for it and upstream is
+  thinking about dropping it anyway, bug #348385.
 
   25 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> evolution-2.32.1.ebuild:
   Fix bad usage of MY_MAJORV.
