@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-2.0.ebuild,v 1.2 2010/12/12 17:39:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-2.0.ebuild,v 1.3 2010/12/21 02:23:26 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://littlesvr.ca/${PN}/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="flac mp3 vorbis wavpack"
 
 COMMON_DEPEND="x11-libs/gtk+:2
