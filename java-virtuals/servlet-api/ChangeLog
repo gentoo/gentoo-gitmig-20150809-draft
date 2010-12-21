@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.29 2010/08/31 14:54:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.30 2010/12/21 18:41:54 nelchael Exp $
+
+  21 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org> servlet-api-3.0.ebuild:
+  Add dev-java/tomcat-servlet-api as provider for Servlet API 3.0.
 
 *servlet-api-3.0 (31 Aug 2010)
 
