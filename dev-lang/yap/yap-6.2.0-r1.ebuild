@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.9 2010/12/18 19:41:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.2.0-r1.ebuild,v 1.10 2010/12/21 02:28:04 hwoarang Exp $
 
 inherit autotools eutils flag-o-matic java-pkg-opt-2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ncc.up.pt/~vsc/Yap/${P}.tar.gz
 
 LICENSE="Artistic LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug doc examples gmp java mpi mysql odbc readline static threads"
 
 RDEPEND="sys-libs/zlib

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.51 2010/12/18 19:41:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.52 2010/12/21 02:28:04 hwoarang Exp $
+
+  21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> yap-6.2.0-r1.ebuild:
+  Stable on amd64 wrt bug #349163
 
   18 Dec 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
   Do not duplicate docsdir
