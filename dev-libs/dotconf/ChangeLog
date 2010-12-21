@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.21 2010/09/28 06:46:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.22 2010/12/21 17:36:26 williamh Exp $
+
+  21 Dec 2010; William Hubbs <williamh@gentoo.org> dotconf-1.3.ebuild:
+  add warning about revdep-rebuild
 
 *dotconf-1.3 (28 Sep 2010)
 

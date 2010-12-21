@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.3.ebuild,v 1.1 2010/09/28 06:46:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.3.ebuild,v 1.2 2010/12/21 17:36:26 williamh Exp $
 
 EAPI="3"
 
@@ -23,4 +23,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+}
+
+pkg_postinst() {
+	ewarn 'This version requires that you run revdep-rebuild after'
+	ewarn 'the upgrade.'
 }
