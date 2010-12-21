@@ -1,6 +1,10 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.126 2010/12/21 17:29:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.127 2010/12/21 19:38:57 phajdan.jr Exp $
+
+  21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  aspell-0.60.6-r2.ebuild:
+  x86 stable wrt bug #349270
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> aspell-0.60.6-r2.ebuild:
   Stable on amd64 wrt bug #349270
