@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.5.ebuild,v 1.2 2010/12/12 21:21:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.5.1.ebuild,v 1.1 2010/12/21 14:53:47 chithanh Exp $
 
 EAPI=3
-inherit cmake-utils nsplugins multilib
+inherit cmake-utils nsplugins multilib versionator
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="https://launchpad.net/lightspark/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-$(get_version_component_range 1-3)/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -27,7 +27,7 @@ RDEPEND="dev-cpp/libxmlpp:2.6
 	)
 	net-misc/curl
 	>=sys-devel/gcc-4.4
-	>=sys-devel/llvm-2.7
+	>=sys-devel/llvm-2.8-r2
 	virtual/opengl
 	nsplugin? (
 		dev-libs/nspr
@@ -43,9 +43,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.4.3-cmakelists.patch
+	"${FILESDIR}"/${PN}-0.4.5.1-cmakelists.patch
 	"${FILESDIR}"/${PN}-0.4.5-allow-disabling-pulseaudio.patch
-	"${FILESDIR}"/${PN}-0.4.5-llvm-2.8-gcc-4.5.patch
 )
 
 src_configure() {
