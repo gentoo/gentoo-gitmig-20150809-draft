@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.1.ebuild,v 1.5 2010/05/20 10:38:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-4.5.ebuild,v 1.1 2010/12/21 10:02:00 pva Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="modules"
 
 RDEPEND=">=net-firewall/iptables-1.4.4"
@@ -39,7 +39,7 @@ pkg_setup() {
 
 	build_modules=0
 	if use modules; then
-		if linux_chkconfig_builtin "MODULES" ; then
+		if linux_config_src_exists && linux_chkconfig_builtin "MODULES" ; then
 			if linux_chkconfig_builtin "IP_NF_SET"; then #274577
 				einfo "Modular kernel detected but IP_NF_SET=y, will not build kernel modules"
 			else
@@ -73,7 +73,12 @@ src_prepare() {
 
 src_compile() {
 	einfo "Building userspace"
-	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" ${myconf} binaries || die "failed to build"
+	emake \
+		CC="$(tc-getCC)" \
+		COPT_FLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		${myconf} \
+		binaries || die "failed to build"
 
 	if [[ ${build_modules} -eq 1 ]]; then
 		einfo "Building kernel modules"
