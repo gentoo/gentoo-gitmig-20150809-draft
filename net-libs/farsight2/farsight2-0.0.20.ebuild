@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.20.ebuild,v 1.4 2010/11/21 00:52:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.20.ebuild,v 1.5 2010/12/21 22:43:26 eva Exp $
 
 EAPI="2"
-inherit autotools eutils
+PYTHON_DEPEND="2"
+
+inherit autotools eutils python
 
 DESCRIPTION="Farsight2 is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
@@ -19,10 +21,10 @@ RESTRICT=test
 
 COMMONDEPEND=">=media-libs/gstreamer-0.10.26
 	>=media-libs/gst-plugins-base-0.10.26
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.16:2
 	>=net-libs/libnice-0.0.9[gstreamer]
 	python? (
-		>=dev-python/pygobject-2.16
+		>=dev-python/pygobject-2.16:2
 		>=dev-python/gst-python-0.10.10 )
 	upnp? ( net-libs/gupnp-igd )"
 
@@ -35,6 +37,10 @@ DEPEND="${COMMONDEPEND}
 	test? ( media-plugins/gst-plugins-vorbis
 		media-plugins/gst-plugins-speex )
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make-382.patch
