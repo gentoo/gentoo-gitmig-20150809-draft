@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.1.ebuild,v 1.2 2010/12/15 22:20:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.1.ebuild,v 1.3 2010/12/21 14:55:04 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="http://gthumb.sourceforge.net"
@@ -67,6 +67,8 @@ src_prepare() {
 
 	# Remove unwanted CFLAGS added with USE=debug
 	sed 's/CFLAGS="$CFLAGS -g -O0 -DDEBUG"//' -i configure.ac configure || die
+
+	epatch "${FILESDIR}"/${P}-new-exiv2.patch
 }
 
 src_install() {
