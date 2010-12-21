@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.2.1.ebuild,v 1.1 2010/09/19 08:19:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.2.1.ebuild,v 1.2 2010/12/21 15:14:54 ssuominen Exp $
 
-EAPI="2"
-
-inherit versionator eutils gnome2
+EAPI=2
+inherit versionator eutils multilib toolchain-funcs
 
 MY_PV=$(get_version_component_range 1-2)
 
@@ -22,8 +21,20 @@ RDEPEND=">=media-gfx/exiv2-0.19
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/lib${P}"
+S=${WORKDIR}/lib${P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-new-exiv2.patch
+}
+
+src_configure() {
+	tc-export CXX
+	./configure --prefix=/usr || die
+}
 
 src_install() {
-	gnome2_src_install
+	emake DESTDIR="${D}" LIB="$(get_libdir)" install || die
+	dodoc AUTHORS NEWS README THANKS
+
+	find "${D}" -name '*.la' -exec rm -f '{}' +
 }
