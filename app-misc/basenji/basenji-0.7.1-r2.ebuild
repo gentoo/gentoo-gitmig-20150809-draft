@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1-r2.ebuild,v 1.1 2010/12/15 20:27:24 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1-r2.ebuild,v 1.2 2010/12/21 17:25:12 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/basenji/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-dotnet/gtk-sharp
