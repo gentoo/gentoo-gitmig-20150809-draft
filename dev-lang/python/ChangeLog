@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.508 2010/12/16 16:14:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.509 2010/12/21 11:10:09 maekke Exp $
+
+  21 Dec 2010; Markus Meier <maekke@gentoo.org> python-2.6.6-r1.ebuild:
+  arm stable, bug #342927
 
   16 Dec 2010; Jesus Rivero <neurogeek@gentoo.org> python-2.4.6.ebuild,
   python-2.5.4-r4.ebuild, python-2.7.ebuild, python-2.7.1.ebuild,
