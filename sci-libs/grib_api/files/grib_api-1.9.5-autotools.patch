@@ -1,6 +1,6 @@
 diff -Nur grib_api-1.9.5.orig/configure.ac grib_api-1.9.5/configure.ac
---- grib_api-1.9.5.orig/configure.ac	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/configure.ac	2010-11-24 22:55:33.000000000 +0000
+--- grib_api-1.9.5.orig/configure.ac	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/configure.ac	2010-12-21 05:22:00.000000000 +0000
 @@ -24,21 +24,9 @@
  AC_CONFIG_HEADER([src/config.h])
  AM_INIT_AUTOMAKE($PACKAGE_NAME,[${PACKAGE_VERSION}],[http://www.ecmwf.int])
@@ -26,7 +26,7 @@ diff -Nur grib_api-1.9.5.orig/configure.ac grib_api-1.9.5/configure.ac
  
  AC_DEFINE_UNQUOTED(GRIB_API_MAIN_VERSION,$GRIB_API_MAIN_VERSION,Grib Api version)
  AC_DEFINE_UNQUOTED(GRIB_API_MAJOR_VERSION,$GRIB_API_MAJOR_VERSION,Grib Api Major release)
-@@ -62,6 +50,7 @@
+@@ -62,19 +50,20 @@
  AC_PROG_LEX
  AC_PROG_F77(pgf90 pgf77 xlf gfortran f77 g77 f90 ifort) 
  AC_PROG_FC(pgf90 xlf90 gfortran f90 ifort) 
@@ -34,7 +34,163 @@ diff -Nur grib_api-1.9.5.orig/configure.ac grib_api-1.9.5/configure.ac
  
  dnl check availability of pthreads
  AC_ARG_ENABLE([pthread],
-@@ -445,7 +434,7 @@
+   [AC_HELP_STRING([--enable-pthread],
+-                  [enable POSIX thread ])],
+-    GRIB_PTHREADS=1 , GRIB_PTHREADS=0
+-)
++                  [enable POSIX thread ])])
+ 
+-if test $GRIB_PTHREADS -eq 1
++if test x"$enable_pthread" = x"yes"
+ then
++GRIB_PTHREADS=1
+ AC_GRIB_PTHREADS
+ AC_GRIB_LINUX_PTHREADS
+ else
++GRIB_PTHREADS=0
+ GRIB_LINUX_PTHREADS=0
+ fi
+ 
+@@ -97,9 +86,9 @@
+ AC_ARG_ENABLE([ieee-native],
+   [AC_HELP_STRING([--disable-ieee-native],
+                   [disable ieee native packing])],
+-     without_ieee=1,without_ieee=0)
++     with_ieee=$enableval,with_ieee=no)
+ 
+-if test $without_ieee -eq 1
++if test x"$with_ieee" = x"yes"
+ then
+ AC_DEFINE_UNQUOTED(IEEE_LE,0,1-> ieee little endian float/double 0->no ieee little endian float/double)
+ AC_DEFINE_UNQUOTED(IEEE_BE,0,1-> ieee big endian float/double 0->no ieee big endian float/double)
+@@ -120,36 +109,47 @@
+ AC_ARG_ENABLE([align-memory],
+   [AC_HELP_STRING([--enable-align-memory],
+                   [enable memory alignement])],
+-AC_DEFINE_UNQUOTED(GRIB_MEM_ALIGN,1,memory alignment required) ,
+-	 )
++with_mem_align=$enableval)
+ 
++if test x"$with_mem_align" = x"yes"
++then
++AC_DEFINE_UNQUOTED(GRIB_MEM_ALIGN,1,memory alignment required)
++fi
+ dnl use vectorised code     
+ AC_ARG_ENABLE([vector],
+   [AC_HELP_STRING([--enable-vector],
+                   [enable vectorised code ])],
+-	 vectorise=1,vectorise=0)
+-
++	 with_vectorise=$enableval, vectorise=0)
++if test x"$with_vectorise" = x"yes"
++then
++vectorise=1
++fi
+ AC_DEFINE_UNQUOTED(VECTOR,$vectorise,vectorised code) 
+ 
+ dnl enable memory management
+ AC_ARG_ENABLE([memory-management],
+   [AC_HELP_STRING([--enable-memory-management],
+                   [enable memory ])],
+-AC_DEFINE_UNQUOTED(MANAGE_MEM,1,memory management) ,
++with_manage_mem=$enableval,
+ AC_DEFINE_UNQUOTED(MANAGE_MEM,0,memory management) 
+ 	 )
++if test x"$with_manage_mem" = x"yes"
++then
++AC_DEFINE_UNQUOTED(MANAGE_MEM,1,memory management)
++fi
+ 
+ dnl enable development configuration
+ DEVEL_RULES='' 
+ AC_ARG_ENABLE([development],
+   [AC_HELP_STRING([--enable-development],
+-                  [enable development configuration ])],
+-    GRIB_DEVEL=1 , GRIB_DEVEL=0
+-)
+-if test $GRIB_DEVEL -eq 1
++                  [enable development configuration ])])
++
++if test x"$enable_development" = x"yes"
+ then
++   GRIB_DEVEL=1
+    DEVEL_RULES='extrules.am'
+ else
++   GRIB_DEVEL=0
+    DEVEL_RULES='dummy.am'
+ fi
+ AC_SUBST(DEVEL_RULES)
+@@ -186,14 +186,14 @@
+ AC_ARG_ENABLE([fortran],
+   [AC_HELP_STRING([--disable-fortran],
+                   [disable fortran interface])],
+-     without_fortran=1,without_fortran=0)
++     with_fortran=$enableval,with_fortran=yes)
+ 
+ if test "x$FC" = "x"
+ then
+-  without_fortran=1
++  with_fortran=no
+ fi
+ 
+-if test $without_fortran -ne 1
++if test x$"with_fortran" = x"yes"
+ then
+   FORTRAN_MOD=fortran
+   AC_SUBST(FORTRAN_MOD)
+@@ -246,8 +246,8 @@
+ AC_ARG_ENABLE([timer],
+   [AC_HELP_STRING([--enable-timer],
+                   [enable timer])],
+-     with_timer=1,with_timer=0)
+-if test ${with_timer} -eq 1
++     with_timer=$enable_val,with_timer=no)
++if test x"${with_timer}" = x"yes"
+ then
+   AC_DEFINE(GRIB_TIMER,1,1->Timer on 0->Timer off)
+ else
+@@ -259,8 +259,8 @@
+ AC_ARG_ENABLE([omp-packing],
+   [AC_HELP_STRING([--enable-omp-packing],
+                   [enable OpenMP multithreaded packing])],
+-     with_omp=1,with_omp=0)
+-if test ${with_omp} -eq 1
++     with_omp=$enableval,with_omp=no)
++if test x"${with_omp}" = x"yes"
+ then
+   AC_DEFINE(OMP_PACKING,1,1->OpenMP packing 0->single thread packing)
+ else
+@@ -296,7 +296,7 @@
+ AC_ARG_ENABLE([jpeg],
+   [AC_HELP_STRING([--disable-jpeg],
+                   [disable jpeg 2000 for grib 2 decoding/encoding])],
+-     without_jpeg=1,without_jpeg=0)
++     with_jpeg=$enableval,with_jpeg=yes)
+ 
+ AC_ARG_WITH([jasper],
+         [AC_HELP_STRING([--with-jasper=JASPER],
+@@ -326,7 +326,7 @@
+   LDFLAGS="$LDFLAGS -L${openjpeg_dir}/lib"
+ fi
+ 
+-if test $without_jpeg -ne 1
++if test x"$with_jpeg" = x"yes"
+ then
+     AC_DEFINE(HAVE_JPEG,1,JPEG enabled)
+     AC_CHECK_LIB(jasper,jas_stream_memopen,jasper_ok=1,jasper_ok=0)
+@@ -413,9 +413,9 @@
+ AC_ARG_ENABLE([install-system-perl],
+         [AC_HELP_STRING([--enable-install-system-perl],
+ 		                [perl modules will install in the standard perl installation ])],
+-        enable_perl_install='yes', enable_perl_install='no')
++        enable_perl_install=$enableval, enable_perl_install=no)
+ 
+-if test "$enable_perl_install" = 'yes'
++if test x"$enable_perl_install" = x"yes"
+ then
+     PERL_INSTALL_OPTIONS=""
+ fi
+@@ -445,7 +445,7 @@
  builddir=`pwd`
  
  dnl Options to pass when configuring Perl grib_api
@@ -44,8 +200,8 @@ diff -Nur grib_api-1.9.5.orig/configure.ac grib_api-1.9.5/configure.ac
  AC_ARG_WITH([perl-options],
    [AC_HELP_STRING([--with-perl-options=[OPTIONS]], [options to pass on command-line when
 diff -Nur grib_api-1.9.5.orig/definitions/installDefinitions.sh grib_api-1.9.5/definitions/installDefinitions.sh
---- grib_api-1.9.5.orig/definitions/installDefinitions.sh	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/definitions/installDefinitions.sh	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/definitions/installDefinitions.sh	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/definitions/installDefinitions.sh	2010-12-21 04:07:46.000000000 +0000
 @@ -44,7 +44,7 @@
  echo checking definition files compatibility...
  for file in `find . -name '*.def' -print`
@@ -56,8 +212,8 @@ diff -Nur grib_api-1.9.5.orig/definitions/installDefinitions.sh grib_api-1.9.5/d
  if [ $? != 0 ]
  then
 diff -Nur grib_api-1.9.5.orig/examples/C/Makefile.am grib_api-1.9.5/examples/C/Makefile.am
---- grib_api-1.9.5.orig/examples/C/Makefile.am	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/examples/C/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/examples/C/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/examples/C/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -30,7 +30,7 @@
  
  INCLUDES =  -I$(top_builddir)/src
@@ -68,8 +224,8 @@ diff -Nur grib_api-1.9.5.orig/examples/C/Makefile.am grib_api-1.9.5/examples/C/M
  
  EXTRA_DIST =$(TESTS) include.sh
 diff -Nur grib_api-1.9.5.orig/examples/F90/Makefile.am grib_api-1.9.5/examples/F90/Makefile.am
---- grib_api-1.9.5.orig/examples/F90/Makefile.am	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/examples/F90/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/examples/F90/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/examples/F90/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -37,7 +37,7 @@
  
  AM_FCFLAGS = $(F90_MODULE_FLAG)$(top_builddir)/fortran
@@ -80,8 +236,8 @@ diff -Nur grib_api-1.9.5.orig/examples/F90/Makefile.am grib_api-1.9.5/examples/F
  
  EXTRA_DIST =$(TESTS) include.sh
 diff -Nur grib_api-1.9.5.orig/examples/python/include.sh grib_api-1.9.5/examples/python/include.sh
---- grib_api-1.9.5.orig/examples/python/include.sh	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/examples/python/include.sh	2010-11-24 22:03:25.000000000 +0000
+--- grib_api-1.9.5.orig/examples/python/include.sh	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/examples/python/include.sh	2010-12-21 04:07:46.000000000 +0000
 @@ -14,6 +14,8 @@
  
  PYTHONPATH=$path/python:$PYTHONPATH
@@ -92,8 +248,8 @@ diff -Nur grib_api-1.9.5.orig/examples/python/include.sh grib_api-1.9.5/examples
  set -u
  
 diff -Nur grib_api-1.9.5.orig/examples/python/Makefile.am grib_api-1.9.5/examples/python/Makefile.am
---- grib_api-1.9.5.orig/examples/python/Makefile.am	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/examples/python/Makefile.am	2010-11-24 21:51:35.000000000 +0000
+--- grib_api-1.9.5.orig/examples/python/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/examples/python/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -10,7 +10,7 @@
  iterator_SOURCES = iterator.c
  count_messages_SOURCES = count_messages.c
@@ -104,8 +260,8 @@ diff -Nur grib_api-1.9.5.orig/examples/python/Makefile.am grib_api-1.9.5/example
  
  EXTRA_DIST = $(TESTS) include.sh clone.py count_messages.py get.py index.py iterator.py keys_iterator.py multi_write.py nearest.py print_data.py samples.py set.py set_missing.py
 diff -Nur grib_api-1.9.5.orig/fortran/Makefile.am grib_api-1.9.5/fortran/Makefile.am
---- grib_api-1.9.5.orig/fortran/Makefile.am	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/fortran/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/fortran/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/fortran/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -2,14 +2,14 @@
  
  AM_CFLAGS =  @WARN_PEDANTIC@
@@ -136,8 +292,8 @@ diff -Nur grib_api-1.9.5.orig/fortran/Makefile.am grib_api-1.9.5/fortran/Makefil
  #noinst_HEADERS = 
  
 diff -Nur grib_api-1.9.5.orig/ifs_samples/grib1/Makefile.am grib_api-1.9.5/ifs_samples/grib1/Makefile.am
---- grib_api-1.9.5.orig/ifs_samples/grib1/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/ifs_samples/grib1/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/ifs_samples/grib1/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/ifs_samples/grib1/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -1,5 +1,5 @@
  
 -ifs_samples_grib1dir = ifs_samples/grib1
@@ -146,8 +302,8 @@ diff -Nur grib_api-1.9.5.orig/ifs_samples/grib1/Makefile.am grib_api-1.9.5/ifs_s
  dist_ifs_samples_grib1_DATA = \
      gg_ml.tmpl \
 diff -Nur grib_api-1.9.5.orig/ifs_samples/grib1_mlgrib2/Makefile.am grib_api-1.9.5/ifs_samples/grib1_mlgrib2/Makefile.am
---- grib_api-1.9.5.orig/ifs_samples/grib1_mlgrib2/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/ifs_samples/grib1_mlgrib2/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/ifs_samples/grib1_mlgrib2/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/ifs_samples/grib1_mlgrib2/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -1,5 +1,5 @@
  
 -ifs_samples_grib1_mlgrib2dir = ifs_samples/grib1_mlgrib2
@@ -156,8 +312,8 @@ diff -Nur grib_api-1.9.5.orig/ifs_samples/grib1_mlgrib2/Makefile.am grib_api-1.9
  dist_ifs_samples_grib1_mlgrib2_DATA = \
      gg_ml.tmpl \
 diff -Nur grib_api-1.9.5.orig/perl/GRIB-API/Makefile.PL.in grib_api-1.9.5/perl/GRIB-API/Makefile.PL.in
---- grib_api-1.9.5.orig/perl/GRIB-API/Makefile.PL.in	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/perl/GRIB-API/Makefile.PL.in	2010-11-24 22:56:11.000000000 +0000
+--- grib_api-1.9.5.orig/perl/GRIB-API/Makefile.PL.in	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/perl/GRIB-API/Makefile.PL.in	2010-12-21 04:07:46.000000000 +0000
 @@ -19,5 +19,5 @@
      INC               => '-I@GRIB_API_INC@', # e.g., '-I. -I/usr/include/other'
  	# Un-comment this if you add C files to link with later:
@@ -166,8 +322,8 @@ diff -Nur grib_api-1.9.5.orig/perl/GRIB-API/Makefile.PL.in grib_api-1.9.5/perl/G
 +	depend           => { "API.o" => "../../src/libgrib_api.la" }
  );
 diff -Nur grib_api-1.9.5.orig/perl/Makefile.am grib_api-1.9.5/perl/Makefile.am
---- grib_api-1.9.5.orig/perl/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/perl/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/perl/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/perl/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -16,10 +16,10 @@
  $(PERLMAKEFILE): $(PERLMAKEMAKER)
  	cd $(API_DIR) && @PERL@ Makefile.PL @PERL_INSTALL_OPTIONS@ @PERL_MAKE_OPTIONS@ @PERL_LD_OPTIONS@ 
@@ -182,8 +338,8 @@ diff -Nur grib_api-1.9.5.orig/perl/Makefile.am grib_api-1.9.5/perl/Makefile.am
  
  install-exec-perl: $(PERLMAKEFILE)
 diff -Nur grib_api-1.9.5.orig/python/setup.py.in grib_api-1.9.5/python/setup.py.in
---- grib_api-1.9.5.orig/python/setup.py.in	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/python/setup.py.in	2010-11-24 23:02:54.000000000 +0000
+--- grib_api-1.9.5.orig/python/setup.py.in	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/python/setup.py.in	2010-12-21 04:07:46.000000000 +0000
 @@ -17,7 +17,8 @@
  build_dir = '@BUILD_DIR@'
  add_attribute(
@@ -195,8 +351,8 @@ diff -Nur grib_api-1.9.5.orig/python/setup.py.in grib_api-1.9.5/python/setup.py.
  
  with_jasper = '@LIB_JASPER@'
 diff -Nur grib_api-1.9.5.orig/src/extrules.am grib_api-1.9.5/src/extrules.am
---- grib_api-1.9.5.orig/src/extrules.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/src/extrules.am	2010-11-24 22:46:13.000000000 +0000
+--- grib_api-1.9.5.orig/src/extrules.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/src/extrules.am	2010-12-21 04:07:46.000000000 +0000
 @@ -9,7 +9,7 @@
  	cmp ../python/grib_errors.h grib_errors.h.new || (p4 edit ../python/grib_errors.h ; cp grib_errors.h.new ../python/grib_errors.h)
  
@@ -207,8 +363,8 @@ diff -Nur grib_api-1.9.5.orig/src/extrules.am grib_api-1.9.5/src/extrules.am
  
  templates:
 diff -Nur grib_api-1.9.5.orig/src/Makefile.am grib_api-1.9.5/src/Makefile.am
---- grib_api-1.9.5.orig/src/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/src/Makefile.am	2010-11-24 22:44:02.000000000 +0000
+--- grib_api-1.9.5.orig/src/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/src/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -7,10 +7,10 @@
  #  -DYYDEBUG
  
@@ -254,8 +410,8 @@ diff -Nur grib_api-1.9.5.orig/src/Makefile.am grib_api-1.9.5/src/Makefile.am
  
  noinst_HEADERS = grib_api_internal.h \
 diff -Nur grib_api-1.9.5.orig/tests/definitions.sh grib_api-1.9.5/tests/definitions.sh
---- grib_api-1.9.5.orig/tests/definitions.sh	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/tests/definitions.sh	2010-11-24 21:30:11.000000000 +0000
+--- grib_api-1.9.5.orig/tests/definitions.sh	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/tests/definitions.sh	2010-12-21 04:07:46.000000000 +0000
 @@ -15,6 +15,6 @@
  
  for file in `find $GRIB_DEFINITION_PATH -name '*.def' -print`
@@ -265,8 +421,8 @@ diff -Nur grib_api-1.9.5.orig/tests/definitions.sh grib_api-1.9.5/tests/definiti
  done
  
 diff -Nur grib_api-1.9.5.orig/tests/Makefile.am grib_api-1.9.5/tests/Makefile.am
---- grib_api-1.9.5.orig/tests/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/tests/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/tests/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/tests/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -31,7 +31,7 @@
  	 gribex_perf_SOURCES = gribex_perf.c
  	 gribex_perf_SOURCES = gauss_sub.c
@@ -277,8 +433,8 @@ diff -Nur grib_api-1.9.5.orig/tests/Makefile.am grib_api-1.9.5/tests/Makefile.am
       INCLUDES   = -I$(top_builddir)/src
  
 diff -Nur grib_api-1.9.5.orig/tigge/Makefile.am grib_api-1.9.5/tigge/Makefile.am
---- grib_api-1.9.5.orig/tigge/Makefile.am	2010-11-24 21:25:47.000000000 +0000
-+++ grib_api-1.9.5/tigge/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/tigge/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/tigge/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -12,5 +12,5 @@
  
  INCLUDES =  -I$(top_builddir)/src
@@ -287,8 +443,8 @@ diff -Nur grib_api-1.9.5.orig/tigge/Makefile.am grib_api-1.9.5/tigge/Makefile.am
 +LDADD = $(top_builddir)/src/libgrib_api.la
  DEPENDENCIES = $(LDADD)
 diff -Nur grib_api-1.9.5.orig/tools/Makefile.am grib_api-1.9.5/tools/Makefile.am
---- grib_api-1.9.5.orig/tools/Makefile.am	2010-11-24 21:25:48.000000000 +0000
-+++ grib_api-1.9.5/tools/Makefile.am	2010-11-24 21:26:16.000000000 +0000
+--- grib_api-1.9.5.orig/tools/Makefile.am	2010-12-21 04:07:32.000000000 +0000
++++ grib_api-1.9.5/tools/Makefile.am	2010-12-21 04:07:46.000000000 +0000
 @@ -3,9 +3,9 @@
  
  AM_YFLAGS = -d

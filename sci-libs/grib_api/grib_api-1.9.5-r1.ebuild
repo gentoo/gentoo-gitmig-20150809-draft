@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5.ebuild,v 1.1 2010/11/30 17:49:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.1 2010/12/21 05:29:33 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
