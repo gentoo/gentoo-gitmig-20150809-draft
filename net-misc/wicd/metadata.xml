@@ -6,6 +6,10 @@
   <email>tomka@gentoo.org</email>
   <name>Thomas Kahle</name>
 </maintainer>
+<maintainer>
+	<email>c1pher@gentoo.org</email>
+	<name>Dane Smith</name>
+</maintainer>
 <use>
 	<flag name='gtk'>Installs a gtk UI. This is enabled by default because it is
 		intended behavior. Requires <pkg>dev-python/pygtk</pkg></flag>

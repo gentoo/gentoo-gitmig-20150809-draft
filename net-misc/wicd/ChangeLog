@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.76 2010/12/21 08:03:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.77 2010/12/21 15:52:35 c1pher Exp $
+
+  21 Dec 2010; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
 *wicd-1.7.1_beta2-r1 (21 Dec 2010)
 *wicd-1.7.0-r1 (21 Dec 2010)
