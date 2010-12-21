@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.63 2010/12/21 17:28:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.64 2010/12/21 19:27:10 phajdan.jr Exp $
+
+  21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> httping-1.4.4.ebuild:
+  x86 stable wrt bug #349262
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> httping-1.4.4.ebuild:
   Stable on amd64 wrt bug #349262
