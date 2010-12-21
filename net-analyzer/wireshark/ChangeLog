@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.264 2010/12/05 17:40:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.265 2010/12/21 10:33:25 pva Exp $
+
+  21 Dec 2010; Peter Volkov <pva@gentoo.org> wireshark-1.4.2.ebuild:
+  Fixed build issue, bug #349231, thank Nathan Caldwell for report and Rafał
+  Mużyło for preliminary investigations.
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> wireshark-1.4.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #347259

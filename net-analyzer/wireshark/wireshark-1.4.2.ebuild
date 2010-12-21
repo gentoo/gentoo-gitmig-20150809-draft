@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.6 2010/12/05 17:40:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.2.ebuild,v 1.7 2010/12/21 10:33:25 pva Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2"
@@ -160,8 +160,8 @@ src_configure() {
 		$(use_with portaudio) \
 		$(use_with python) \
 		$(use_with caps libcap) \
-		$(use_enable caps setcap-install) \
-		$(use caps || use_enable pcap setuid-install) \
+		$(use pcap && use_enable caps setcap-install) \
+		$(use pcap && use_enable !caps setuid-install) \
 		--sysconfdir=/etc/wireshark \
 		--with-dumpcap-group=wireshark \
 		--disable-extra-gcc-checks \
