@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r1.ebuild,v 1.1 2010/12/17 01:29:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r2.ebuild,v 1.1 2010/12/21 21:14:24 dilfridge Exp $
 
 EAPI="2"
 
@@ -18,14 +18,14 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
 # The plugin lists have to follow here since they extend IUSE
 
 # Plugins that to my knowledge cannot be supported (eg. dependencies not in gentoo)
-COLLECTD_IMPOSSIBLE_PLUGINS="curl_json netapp pinba xmms"
+COLLECTD_IMPOSSIBLE_PLUGINS="netapp pinba xmms"
 
 # Plugins that still need some work
 COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc nut modbus"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
-	cpu cpufreq curl curl_xml dbi df disk dns email entropy exec filecount fscache gmond
+	cpu cpufreq curl curl_json curl_xml dbi df disk dns email entropy exec filecount fscache gmond
 	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon memcachec
 	memcached memory multimeter mysql netlink network nfs nginx ntpd olsrd
 	onewire openvpn perl ping postgresql powerdns processes protocols python
@@ -51,6 +51,7 @@ COMMON_DEPEND="
 	collectd_plugins_ascent?		( net-misc/curl dev-libs/libxml2 )
 	collectd_plugins_bind?			( dev-libs/libxml2 )
 	collectd_plugins_curl?			( net-misc/curl )
+	collectd_plugins_curl_json?		( net-misc/curl dev-libs/yajl )
 	collectd_plugins_curl_xml?		( net-misc/curl dev-libs/libxml2 )
 	collectd_plugins_dbi?			( dev-db/libdbi )
 	collectd_plugins_dns?			( net-libs/libpcap )

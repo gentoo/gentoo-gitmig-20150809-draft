@@ -18,6 +18,7 @@
 		<flag name='collectd_plugins_cpufreq'>Build the cpufreq input plugin (CPU frequency, for laptops with speedstep or similar)</flag>
 		<flag name='collectd_plugins_csv'>Build the csv output plugin (write to comma separated values (CSV) files)</flag>
 		<flag name='collectd_plugins_curl'>Build the curl input plugin (parse statistics from websites using regular expressions)</flag>
+		<flag name='collectd_plugins_curl_json'>Build the curl_json input plugin (get json data via curl and parse it)</flag>
 		<flag name='collectd_plugins_curl_xml'>Build the curl_xml input plugin (get xml data via curl and parse it)</flag>
 		<flag name='collectd_plugins_dbi'>Build the dbi input plugin (execute SQL statements on databases and interpret the reply)</flag>
 		<flag name='collectd_plugins_df'>Build the df input plugin (mountpoint usage)</flag>
