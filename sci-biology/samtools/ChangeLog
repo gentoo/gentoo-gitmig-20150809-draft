@@ -1,0 +1,16 @@
+# ChangeLog for sci-biology/samtools
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.1 2010/12/21 17:05:50 weaver Exp $
+
+*samtools-0.1.12 (21 Dec 2010)
+
+  21 Dec 2010; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.12.ebuild,
+  +metadata.xml:
+  Version bump, import from Science overlay
+
+  22 Jan 2010; root <root@onyx.(none)>
+  Version bump
+
+  26 Feb 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, ebuild written by me
+
