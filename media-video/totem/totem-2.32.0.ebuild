@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.2 2010/12/17 23:24:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.3 2010/12/21 22:17:28 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
-#PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2"
+PYTHON_USE_WITH="threads"
 
 inherit autotools eutils gnome2 multilib python
 
@@ -63,7 +64,6 @@ RDEPEND=">=dev-libs/glib-2.25.11:2
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	nsplugin? ( media-plugins/gst-plugins-soup )
 	python? (
-		dev-lang/python[threads]
 		>=dev-python/pygtk-2.12:2
 		dev-python/pyxdg
 		dev-python/gst-python
