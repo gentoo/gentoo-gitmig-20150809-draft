@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.1 2010/08/06 19:06:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.2 2010/12/21 14:37:08 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="python? 2"
-inherit python cmake-utils eutils
+inherit python base cmake-utils eutils
 
 DESCRIPTION="User friendly Geographic Information System"
 HOMEPAGE="http://www.qgis.org/"
@@ -38,12 +38,14 @@ RDEPEND=">=sci-libs/gdal-1.6.1[geos,postgres?,python?,sqlite?]
 			>=dev-db/postgresql-server-8.4
 		)
 	)
-	python? ( dev-python/PyQt4[sql,svg] )
+	python? ( dev-python/PyQt4[X,sql,svg] )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
+
+PATCHES=( "${FILESDIR}/${P}-sip.patch" )
 
 pkg_setup() {
 	python_set_active_version 2
