@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.778 2010/12/20 16:27:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.779 2010/12/21 18:55:43 zmedico Exp $
+
+*portage-2.2.0_alpha10 (21 Dec 2010)
+
+  21 Dec 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha10.ebuild:
+  2.2.0_alpha10 version bump. This fixes bug #349273 (backward compatibility
+  api fix for doebuild) and includes various other minor fixes that are also
+  included in portage-2.1.9.26. Bug #210077 tracks all bugs fixed since
+  portage-2.1.x.
+
+*portage-2.1.9.26 (21 Dec 2010)
+
+  21 Dec 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.26.ebuild:
+  2.1.9.26 version bump. This fixes bug #338509 (quickpkg creates broken
+  0 byte hardlinks), bug #339670 (avoid ELOOP due to circular symlink in
+  $T), bug #346847 (broken QA_PREBUILT to QA_EXECSTACK mapping), bug #348460
+  (fix regression in xterm title reset when PROMPT_COMMAND is unset), and
+  bug #348561 (etc-update option to save example config). Bug #349307 tracks
+  all bugs fixed since 2.1.9.25.
 
   20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   portage-2.1.9.25.ebuild:
