@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.186 2010/12/20 13:27:16 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.187 2010/12/21 19:17:54 nerdboy Exp $
+
+  21 Dec 2010; Steve Arnold <nerdboy@gentoo.org> doxygen-1.7.2.ebuild:
+  Updated anti-flag mangling per bug 348629 (artifact of EAPI update).  But
+  even with some extra massaging (and brute force sedding) doxywizard is
+  being stubborn with all that tmake/qmake on-the-fly writing of things...
 
   20 Dec 2010; Tobias Klausmann <klausman@gentoo.org> doxygen-1.7.2.ebuild:
   Stable on alpha, bug #338632
