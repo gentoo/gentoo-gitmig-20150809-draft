@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.63 2010/12/14 10:40:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.64 2010/12/21 02:19:05 hwoarang Exp $
+
+  21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> loop-aes-3.4b.ebuild:
+  Stable on amd64 wrt bug #347113
 
   14 Dec 2010; Christian Faulhammer <fauli@gentoo.org> loop-aes-3.4b.ebuild:
   stable x86, bug 347113
