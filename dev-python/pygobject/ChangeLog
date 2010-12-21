@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.104 2010/11/08 13:23:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.105 2010/12/21 21:48:56 eva Exp $
+
+  21 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  pygobject-2.26.0-r1.ebuild:
+  Make sure python interpreter used by pygobject-codegen is python2.
 
 *pygobject-2.26.0-r1 (08 Nov 2010)
 
