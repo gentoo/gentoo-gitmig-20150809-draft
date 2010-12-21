@@ -1,0 +1,219 @@
+diff -up gdl-0.9.orig/src/basic_fun.cpp gdl-0.9/src/basic_fun.cpp
+--- gdl-0.9.orig/src/basic_fun.cpp	2010-08-23 15:47:44.771403710 -0600
++++ gdl-0.9/src/basic_fun.cpp	2010-08-23 16:25:25.183341935 -0600
+@@ -6165,6 +6165,7 @@ BaseGDL* transpose( EnvT* e)
+ #endif
+   }
+ 
++#ifndef PYTHON_MODULE
+   // SA: relies on the contents of the lib::command_line_args vector
+   //     defined and filled with data (pointers) in gdl.cpp
+   BaseGDL* command_line_args_fun(EnvT* e)
+@@ -6189,6 +6190,7 @@ BaseGDL* transpose( EnvT* e)
+       return ret;
+     }
+   }
++#endif
+ 
+   // SA: relies in the uname() from libc (must be there if POSIX)
+   BaseGDL* get_login_info( EnvT* e)
+diff -up gdl-0.9.orig/src/datatypes.cpp gdl-0.9/src/datatypes.cpp
+--- gdl-0.9.orig/src/datatypes.cpp	2010-08-23 15:47:44.801403511 -0600
++++ gdl-0.9/src/datatypes.cpp	2010-08-23 15:47:45.211342292 -0600
+@@ -18,11 +18,7 @@
+ #include "includefirst.hpp"
+ 
+ #if defined(USE_PYTHON) || defined(PYTHON_MODULE)
+-#if defined(USE_NUMPY)
+-#include <numpy/libnumarray.h>
+-#else
+-#include <numarray/libnumarray.h>
+-#endif
++#include <numpy/arrayobject.h>
+ #endif
+ 
+ #include <iomanip>
+diff -up gdl-0.9.orig/src/gdlpython.cpp gdl-0.9/src/gdlpython.cpp
+--- gdl-0.9.orig/src/gdlpython.cpp	2010-08-23 15:47:44.937406250 -0600
++++ gdl-0.9/src/gdlpython.cpp	2010-08-23 15:47:45.214343155 -0600
+@@ -43,8 +43,6 @@ void PythonInit()
+   static char* arg0 = "./py/python.exe";
+   static char* argv[] = {arg0};
+   PySys_SetArgv(argc, argv);
+-
+-  import_libnumarray();
+ }
+ 
+ // don't use, as numarray cannot be restarted
+@@ -60,7 +58,7 @@ T* NewFromPyArrayObject( const dimension
+   T* res = new T( dim, BaseGDL::NOZERO);
+   SizeT nEl = res->N_Elements();
+   typename T::Ty* dPtr = 
+-    reinterpret_cast<typename T::Ty*>( NA_OFFSETDATA(array));
++    reinterpret_cast<typename T::Ty*>( PyArray_DATA(array));
+   for( SizeT i=0; i<nEl; ++i) (*res)[i] = dPtr[i];
+   Py_DECREF(array); // must be decremented
+   return res;
+@@ -68,8 +66,7 @@ T* NewFromPyArrayObject( const dimension
+ 
+ BaseGDL* FromPython( PyObject* pyObj)
+ {
+-  int isArray = NA_NumArrayCheck( pyObj);
+-  if( !isArray)
++  if( !PyArray_Check( pyObj))
+     {
+       if( PyString_Check( pyObj))
+ 	{
+@@ -97,11 +94,9 @@ BaseGDL* FromPython( PyObject* pyObj)
+       throw GDLException( "Cannot convert python scalar.") ;
+     }
+ 
+-  PyArrayObject* array = reinterpret_cast< PyArrayObject*>( pyObj); 
+-  NumarrayType item_type = static_cast< NumarrayType>( array->descr->type_num);
+-
+   // make array contiguous
+-  array = NA_InputArray( pyObj, item_type, C_ARRAY);
++  PyArrayObject* array = PyArray_GETCONTIGUOUS( reinterpret_cast< PyArrayObject *>( pyObj));
++
+   if( array == NULL)
+     throw GDLException( "Error getting python array.") ;
+   
+@@ -125,35 +120,26 @@ BaseGDL* FromPython( PyObject* pyObj)
+     }
+   dimension dim( dimArr, nDim);
+ 
+-  switch( item_type) 
++  switch( array->descr->type_num) 
+     {
+-      // case tAny:  //UNDEF***
+-    case tUInt8:   //BYTE
++    case NPY_UINT8:   //BYTE
+       return NewFromPyArrayObject< DByteGDL>( dim, array);
+-    case tInt16:   //INT
++    case NPY_INT16:   //INT
+       return NewFromPyArrayObject< DIntGDL>( dim, array);
+-    case tInt32:     //LONG	
++    case NPY_INT32:     //LONG	
+       return NewFromPyArrayObject< DLongGDL>( dim, array);
+-    case tFloat32:   //FLOAT	
++    case NPY_FLOAT32:   //FLOAT	
+       return NewFromPyArrayObject< DFloatGDL>( dim, array);
+-    case tFloat64:  //DOUBLE	
++    case NPY_FLOAT64:  //DOUBLE	
+       return NewFromPyArrayObject< DDoubleGDL>( dim, array);
+-    case tComplex32:  //COMPLEX	
++    case NPY_COMPLEX64:  //COMPLEX	
+       return NewFromPyArrayObject< DComplexGDL>( dim, array);
+-      // case tAny:  //STRING***	
+-      // case tAny:  //STRUCT***	
+-    case tComplex64: //COMPLEXDBL	
++    case NPY_COMPLEX128: //COMPLEXDBL	
+       return NewFromPyArrayObject< DComplexDblGDL>( dim, array);
+-      // case tAny:  //PTR***		
+-      // case tAny:  //OBJECT***
+-    case tUInt16:         //UINT*
++    case NPY_UINT16:         //UINT*
+       return NewFromPyArrayObject< DUIntGDL>( dim, array);
+-    case tUInt32:         //ULONG*
++    case NPY_UINT32:         //ULONG*
+       return NewFromPyArrayObject< DULongGDL>( dim, array);
+-//     case tLong64:          //LONG64*
+-//       return NewFromPyArrayObject< DLong64GDL>( dim, array);
+-//     case tULong64:         //ULONG64*
+-//       return NewFromPyArrayObject< DULong64GDL>( dim, array);
+     default:
+       Py_DECREF(array); // must be decremented
+       throw GDLException( "FromPython: Unknown array type.") ;
+diff -up gdl-0.9.orig/src/libinit.cpp gdl-0.9/src/libinit.cpp
+--- gdl-0.9.orig/src/libinit.cpp	2010-08-23 15:47:45.008404687 -0600
++++ gdl-0.9/src/libinit.cpp	2010-08-23 16:25:06.318403703 -0600
+@@ -761,8 +761,10 @@ void LibInit()
+   const string ll_arc_distanceKey[] = {"DEGREES", KLISTEND };
+   new DLibFun(lib::ll_arc_distance, string("LL_ARC_DISTANCE"), 3, ll_arc_distanceKey);
+ 
++#ifndef PYTHON_MODULE
+   const string command_line_argsKey[] = {"COUNT", KLISTEND };
+   new DLibFun(lib::command_line_args_fun, string("COMMAND_LINE_ARGS"), 0, command_line_argsKey);
++#endif
+ 
+   const string pmKey[] = {"FORMAT", "TITLE", KLISTEND };
+   new DLibPro(lib::pm, string("PM"), -1, pmKey);
+diff -up gdl-0.9.orig/src/pythongdl.cpp gdl-0.9/src/pythongdl.cpp
+--- gdl-0.9.orig/src/pythongdl.cpp	2010-08-23 15:47:45.105342921 -0600
++++ gdl-0.9/src/pythongdl.cpp	2010-08-23 15:47:45.215342738 -0600
+@@ -537,8 +537,6 @@ extern "C" {
+     Py_INCREF(gdlError);
+     PyModule_AddObject(m, "error", gdlError);
+ 
+-    import_libnumarray(); // obligatory with GDL
+-
+     // GDL event handling
+     oldInputHook = PyOS_InputHook;
+     PyOS_InputHook = GDLEventHandlerPy;
+diff -up gdl-0.9.orig/src/topython.cpp gdl-0.9/src/topython.cpp
+--- gdl-0.9.orig/src/topython.cpp	2010-02-02 11:13:51.000000000 -0700
++++ gdl-0.9/src/topython.cpp	2010-08-23 15:47:45.217342044 -0600
+@@ -58,23 +58,23 @@ using namespace std;
+ // 	char *         wptr;   /* working pointer for getitem/setitem MACROS */
+ // };       
+ 
+-const NumarrayType pyType[] = {
+-  tAny,     //UNDEF***
+-  tUInt8,   //BYTE
+-  tInt16,   //INT
+-  tInt32,   //LONG,	
+-  tFloat32, //FLOAT,	
+-  tFloat64, //DOUBLE,	
+-  tComplex32,  //COMPLEX,	
+-  tAny,        //STRING***	
+-  tAny,        //STRUCT***	
+-  tComplex64,  //COMPLEXDBL,	
+-  tAny,        //PTR***		
+-  tAny,        //OBJECT***
+-  tUInt16,     //UINT*
+-  tUInt32,     //ULONG*
+-  tInt64,      //LONG64*
+-  tUInt64      //ULONG64*
++const int pyType[] = {
++  NPY_NOTYPE,     //UNDEF***
++  NPY_UINT8,   //BYTE
++  NPY_INT16,   //INT
++  NPY_INT32,   //LONG,	
++  NPY_FLOAT32, //FLOAT,	
++  NPY_FLOAT64, //DOUBLE,	
++  NPY_COMPLEX64,  //COMPLEX,	
++  NPY_NOTYPE,        //STRING***	
++  NPY_NOTYPE,        //STRUCT***	
++  NPY_COMPLEX128,  //COMPLEXDBL,	
++  NPY_NOTYPE,        //PTR***		
++  NPY_NOTYPE,        //OBJECT***
++  NPY_UINT32,     //UINT*
++  NPY_UINT32,     //ULONG*
++  NPY_INT64,      //LONG64*
++  NPY_UINT64      //ULONG64*
+ };	
+ 
+ template < typename Sp>
+@@ -87,16 +87,17 @@ PyObject* Data_<Sp>::ToPython()
+       return ToPythonScalar();
+     }
+ 
+-  const NumarrayType item_type = pyType[ Sp::t];
+-  if( item_type == tAny)
++  const int item_type = pyType[ Sp::t];
++  if( item_type == NPY_NOTYPE)
+     throw GDLException("Cannot convert "+this->TypeStr()+" array to python.");
+ 
+   int n_dim = this->Rank();
+-  maybelong dimArr[ MAXRANK];
++  npy_intp dimArr[MAXRANK];
+   for( int i=0; i<n_dim; ++i) dimArr[i]=this->dim[i];
+ 
+-  return reinterpret_cast< PyObject*>
+-    (NA_vNewArray( DataAddr(), item_type, n_dim, dimArr));
++  return 
++//reinterpret_cast< PyObject*>
++    (PyArray_SimpleNewFromData( n_dim, dimArr, item_type, DataAddr()));
+ }
+ 
+ template < typename Sp>

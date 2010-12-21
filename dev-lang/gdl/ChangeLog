@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.21 2010/08/25 16:21:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.22 2010/12/21 19:52:08 bicatali Exp $
+
+*gdl-0.9 (21 Dec 2010)
+
+  21 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> -gdl-0.9_rc4.ebuild,
+  +gdl-0.9.ebuild, +files/gdl-0.9-configure.patch, +files/gdl-0.9-numpy.patch,
+  metadata.xml:
+  Version bump, replaced numarray by numpy support
 
   25 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> gdl-0.9_rc4.ebuild,
   +files/gdl-0.9_rc4-gcc4.5.patch:

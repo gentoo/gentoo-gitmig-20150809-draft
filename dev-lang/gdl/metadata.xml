@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>markusle@gentoo.org</email>
-		<name>Markus Dittrich</name>
-	</maintainer>
-	<herd>sci</herd>
+<maintainer>
+  <email>markusle@gentoo.org</email>
+  <name>Markus Dittrich</name>
+</maintainer>
+<herd>sci</herd>
 <longdescription lang="en">
-A free IDL (Interactive Data Language) compatible incremental compiler
-(ie. runs IDL programs). IDL is a registered trademark of ITT Visual 
-Information Solutions.
+  A free IDL (Interactive Data Language) compatible incremental compiler
+  (ie. runs IDL programs). IDL is a registered trademark of ITT Visual 
+  Information Solutions.
 </longdescription>
 <use>
-	<flag name='hdf'>Adds support for the Hierarchical Data Format</flag>
-	<flag name='udunits'>Support for manipulating units of physical quantities</flag>
+  <flag name='hdf'>Adds support for the Hierarchical Data Format</flag>
+  <flag name='grib'>Adds support for the meteorological GRIB format</flag>
+  <flag name='udunits'>Support for manipulating units of physical quantities</flag>
 </use>
 </pkgmetadata>
