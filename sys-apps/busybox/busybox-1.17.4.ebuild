@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.2 2010/11/27 00:45:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.3 2010/12/21 23:32:10 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -196,13 +196,13 @@ src_install() {
 
 	into /
 	newbin busybox_unstripped busybox || die
-	if use static || use pam ; then
+	if use static ; then
 		dosym busybox /bin/bb || die
 		dosym bb /bin/busybox.static || die
 	else
 		dobin bb || die
 	fi
-	if use mdev; then
+	if use mdev ; then
 		dodir /$(get_libdir)/mdev/
 		use make-symlinks || dosym /bin/bb /sbin/mdev
 		cp "${S}"/examples/mdev_fat.conf "${D}"/etc/mdev.conf
