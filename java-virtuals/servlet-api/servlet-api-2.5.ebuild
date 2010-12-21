@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.5.ebuild,v 1.11 2010/01/15 17:45:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/servlet-api-2.5.ebuild,v 1.12 2010/12/21 18:44:16 nelchael Exp $
 
 EAPI=1
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="|| (
 		dev-java/tomcat-servlet-api:${SLOT}
 		dev-java/resin-servlet-api:${SLOT}
+		dev-java/glassfish-servlet-api:${SLOT}
 	)"
 DEPEND=""
 
