@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.3 2010/12/19 13:37:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.4 2010/12/21 17:26:54 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.nongnu.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.nongnu.org/xbindkeys/xbindkeys.html"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 
 RDEPEND="x11-libs/libX11
