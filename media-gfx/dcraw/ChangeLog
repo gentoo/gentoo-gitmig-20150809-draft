@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.63 2010/12/21 07:22:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.64 2010/12/21 08:55:22 pva Exp $
+
+  21 Dec 2010; Peter Volkov <pva@gentoo.org> dcraw-9.04.ebuild:
+  amd64 stable, bug #349221, thank Agostino Sarubbo for testing.
 
   21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dcraw-9.04.ebuild:
   x86 stable wrt bug #349221
