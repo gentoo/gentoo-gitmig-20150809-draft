@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/arptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.18 2010/12/20 20:14:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.19 2010/12/21 08:52:51 pva Exp $
+
+  21 Dec 2010; Peter Volkov <pva@gentoo.org> -arptables-0.0.3.4.ebuild,
+  -arptables-0.0.3.4-r1.ebuild, arptables-0.0.3.4-r2.ebuild:
+  amd64 stable, bug #323573, thank Agostino Sarubbo for testing. Drop old.
 
   20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   arptables-0.0.3.4-r2.ebuild:
