@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.53 2010/12/21 05:35:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.54 2010/12/21 21:32:58 phajdan.jr Exp $
+
+  21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> yap-6.2.0-r1.ebuild:
+  x86 stable wrt bug #349163
 
   21 Dec 2010; <keri@gentoo.org> yap-6.2.0-r1.ebuild:
   Fix race-condition during parallel install. Reported in bug #349163
