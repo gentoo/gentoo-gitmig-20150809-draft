@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.1 2010/12/21 15:37:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.2 2010/12/21 15:55:47 jer Exp $
 
 EAPI="3"
 
-inherit eutils multilib versionator
+inherit eutils multilib pax-utils versionator
 
 DESCRIPTION="A standards-compliant graphical Web browser"
 HOMEPAGE="http://www.opera.com/"
@@ -193,6 +193,12 @@ src_install() {
 	# Stop revdep-rebuild from checking opera binaries
 	dodir /etc/revdep-rebuild
 	echo "SEARCH_DIRS_MASK=\"${OPREFIX}/${PN}\"" > "${D}"/etc/revdep-rebuild/90opera
+
+	# Set PaX markings for hardened/PaX (bug #344267)
+	pax-mark m \
+		"${D}/${OPREFIX}/opera/opera" \
+		"${D}/${OPREFIX}/opera/operaplugincleaner" \
+		"${D}/${OPREFIX}/opera/operapluginwrapper"
 }
 
 pkg_postinst() {
