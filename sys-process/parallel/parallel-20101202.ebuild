@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20101202.ebuild,v 1.1 2010/12/20 17:01:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20101202.ebuild,v 1.2 2010/12/21 11:10:15 fauli Exp $
 
 EAPI=3
 
@@ -14,7 +14,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
-DEPEND="${RDEPEND}"
+# Collision, reported upstream, see bug 349225
+DEPEND="${RDEPEND}
+	!sys-apps/moreutils"
 
 src_install() {
 	emake install DESTDIR="${D}" docdir=/usr/share/doc/${PF}/html \
