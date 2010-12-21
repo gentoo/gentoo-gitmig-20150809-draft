@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.56 2010/10/15 14:47:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.57 2010/12/21 17:14:13 hwoarang Exp $
+
+  21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> ncmpc-0.18.ebuild:
+  Stable on amd64 wrt bug #348746
 
   15 Oct 2010; Sven Wegener <swegener@gentoo.org> ncmpc-0.18.ebuild:
   Require new libmpdclient, the song screen needs it.
