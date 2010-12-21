@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.144 2010/12/16 07:22:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.145 2010/12/21 11:07:57 maekke Exp $
+
+  21 Dec 2010; Markus Meier <maekke@gentoo.org> m4-1.4.15.ebuild:
+  arm stable, bug #348550
 
   16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> m4-1.4.15.ebuild:
   x86 stable wrt bug #348550
