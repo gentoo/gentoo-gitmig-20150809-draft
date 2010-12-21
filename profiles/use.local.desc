@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6236 2010/12/21 20:13:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6237 2010/12/21 21:33:28 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -46,6 +46,7 @@ app-admin/collectd:collectd_plugins_cpu - Build the cpu input plugin (time spent
 app-admin/collectd:collectd_plugins_cpufreq - Build the cpufreq input plugin (CPU frequency, for laptops with speedstep or similar)
 app-admin/collectd:collectd_plugins_csv - Build the csv output plugin (write to comma separated values (CSV) files)
 app-admin/collectd:collectd_plugins_curl - Build the curl input plugin (parse statistics from websites using regular expressions)
+app-admin/collectd:collectd_plugins_curl_json - Build the curl_json input plugin (get json data via curl and parse it)
 app-admin/collectd:collectd_plugins_curl_xml - Build the curl_xml input plugin (get xml data via curl and parse it)
 app-admin/collectd:collectd_plugins_dbi - Build the dbi input plugin (execute SQL statements on databases and interpret the reply)
 app-admin/collectd:collectd_plugins_df - Build the df input plugin (mountpoint usage)
