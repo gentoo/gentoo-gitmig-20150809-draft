@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.7.ebuild,v 1.2 2010/11/10 12:55:14 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.9.ebuild,v 1.1 2010/12/21 07:48:16 grozin Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -46,9 +46,6 @@ src_prepare() {
 
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-ldflags.patch
-
-	# CursorShape was #define'd to 0 by X11/X.h
-	epatch "${FILESDIR}"/${PN}-qt.patch
 
 	eautoreconf
 }
