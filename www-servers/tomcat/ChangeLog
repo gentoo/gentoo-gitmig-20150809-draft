@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.233 2010/08/31 15:19:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.234 2010/12/21 09:13:39 ali_bush Exp $
+
+*tomcat-7.0.5 (21 Dec 2010)
+
+  21 Dec 2010; Alistair Bush <ali_bush@gentoo.org> +files/7/build-xml.patch,
+  +files/7/examples-cal.patch, +files/7/tomcat.init, +tomcat-7.0.5.ebuild,
+  +files/7/tomcat.conf:
+  Version Bump. Thanks to wltjr for all the work.
 
 *tomcat-6.0.29 (31 Aug 2010)
 
