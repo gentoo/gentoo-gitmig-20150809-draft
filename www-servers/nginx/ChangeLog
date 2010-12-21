@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.271 2010/12/13 10:38:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.272 2010/12/21 19:18:41 phajdan.jr Exp $
+
+  21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nginx-0.8.53.ebuild:
+  x86 stable wrt bug #349223
 
 *nginx-0.8.53-r1 (13 Dec 2010)
 
