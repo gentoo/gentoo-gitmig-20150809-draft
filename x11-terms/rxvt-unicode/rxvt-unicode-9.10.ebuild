@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.2 2010/12/22 19:09:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.3 2010/12/22 19:18:33 wired Exp $
 
 EAPI="3"
 
@@ -35,10 +35,12 @@ src_prepare() {
 		einfo
 	fi
 
-	if use wcwidth; then
-		ewarn "You enabled wcwidth."
-		ewarn "Please note that this is not supported by upstream."
+	if use wcwidth || use force-hints; then
+		ewarn
+		ewarn "You enabled wcwidth or force-hints or both."
+		ewarn "Please note that these are not supported by upstream."
 		ewarn "You are at your own if you run into problems."
+		ewarn
 	fi
 
 	local tdir=/usr/share/terminfo
