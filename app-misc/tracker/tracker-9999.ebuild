@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.30 2010/12/08 17:03:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.31 2010/12/22 22:52:27 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -193,9 +193,8 @@ src_prepare() {
 }
 
 src_test() {
-	export XDG_CONFIG_HOME="${T}"
 	unset DBUS_SESSION_BUS_ADDRESS
-	emake check || die "tests failed"
+	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}" || die "tests failed"
 }
 
 src_install() {

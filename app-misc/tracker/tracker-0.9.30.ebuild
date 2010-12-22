@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.30.ebuild,v 1.2 2010/12/08 17:03:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.30.ebuild,v 1.3 2010/12/22 22:52:27 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
 
-inherit eutils gnome2 linux-info python
+inherit eutils gnome2 linux-info python virtualx
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://www.tracker-project.org/"
@@ -187,13 +187,9 @@ src_prepare() {
 	python_convert_shebangs 2 "${S}"/examples/rss-reader/*.py
 
 	# FIXME: report broken/disabled tests
-	sed -e '/\/libtracker-common\/tracker-dbus\/request-client-lookup/,+1 s:^\(.*\)$:/*\1*/:' \
-		-i tests/libtracker-common/tracker-dbus-test.c || die
 	sed -e '/\/libtracker-miner\/tracker-password-provider\/setting/,+1 s:^\(.*\)$:/*\1*/:' \
 		-e '/\/libtracker-miner\/tracker-password-provider\/getting/,+1 s:^\(.*\)$:/*\1*/:' \
 		-i tests/libtracker-miner/tracker-password-provider-test.c || die
-	sed -e '/\/libtracker-db\/tracker-db-journal\/init-and-shutdown/,+1 s:^\(.*\)$:/*\1*/:' \
-		-i tests/libtracker-data/tracker-db-journal.c || die
 	# Needs to setup a fake system dbus
 	sed -e 's/tracker-test//' \
 		-i tests/libtracker-sparql/Makefile.{am,in} || die
@@ -204,9 +200,8 @@ src_prepare() {
 }
 
 src_test() {
-	export XDG_CONFIG_HOME="${T}"
 	unset DBUS_SESSION_BUS_ADDRESS
-	emake check || die "tests failed"
+	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}" || die "tests failed"
 }
 
 src_install() {
