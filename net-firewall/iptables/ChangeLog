@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.228 2010/12/21 13:35:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.229 2010/12/22 15:18:30 klausman Exp $
+
+  22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> iptables-1.4.10.ebuild:
+  Stable on alpha, bug #347179
 
   21 Dec 2010; Tobias Klausmann <klausman@gentoo.org> iptables-1.4.7.ebuild:
   Stable on alpha to help with bug 340777
