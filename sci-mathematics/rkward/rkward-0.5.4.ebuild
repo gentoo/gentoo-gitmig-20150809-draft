@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.3.ebuild,v 1.3 2010/07/01 14:34:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.4.ebuild,v 1.1 2010/12/22 05:33:58 bicatali Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rkward/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-lang/R-2.7.0"
