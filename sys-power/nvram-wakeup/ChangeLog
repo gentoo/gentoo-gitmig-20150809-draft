@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nvram-wakeup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.10 2010/12/20 16:08:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.11 2010/12/22 01:38:22 hwoarang Exp $
+
+  22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> nvram-wakeup-1.0.ebuild:
+  Stable on amd64 wrt bug #347933
 
   20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nvram-wakeup-1.0.ebuild:
