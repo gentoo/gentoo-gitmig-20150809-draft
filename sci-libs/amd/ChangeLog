@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.23 2010/12/16 14:18:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.24 2010/12/22 07:50:47 jlec Exp $
+
+  22 Dec 2010; Justin Lecher <jlec@gentoo.org> files/2.2.1-test.patch:
+  Remove bad test, #348272
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> amd-2.2.0.ebuild,
   amd-2.2.1.ebuild:
