@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.92 2010/09/25 20:18:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.93 2010/12/22 18:25:24 swegener Exp $
+
+  22 Dec 2010; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.9.ebuild,
+  x11vnc-0.9.10.ebuild, x11vnc-0.9.11.ebuild, x11vnc-0.9.12.ebuild:
+  Change media-libs/jpeg to virtual/jpeg.
 
   25 Sep 2010; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.9.ebuild,
   x11vnc-0.9.10.ebuild, x11vnc-0.9.11.ebuild, x11vnc-0.9.12.ebuild,

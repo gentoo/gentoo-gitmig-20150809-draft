@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.12 2010/09/25 20:18:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.13 2010/12/22 18:25:24 swegener Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="fbcon +jpeg +zlib threads ssl crypt v4l xinerama avahi system-libvncserver
 RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
 	!system-libvncserver? (
 		zlib? ( sys-libs/zlib )
-		jpeg? ( media-libs/jpeg:0 )
+		jpeg? ( virtual/jpeg:0 )
 	)
 	ssl? ( dev-libs/openssl )
 	avahi? ( >=net-dns/avahi-0.6.4 )
