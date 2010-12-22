@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.7 2010/12/18 23:53:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.8 2010/12/22 15:36:12 chithanh Exp $
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Dec 2010)
+# xorg-server-1.7 needs hal for input device autoconfiguration, bug #349331.
+=x11-base/xorg-server-1.7* hal
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Still using obsolete sys-auth/policykit, bugs 340331 and 340337.

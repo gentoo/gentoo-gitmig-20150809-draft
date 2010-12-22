@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4877 2010/12/20 13:17:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4878 2010/12/22 15:36:12 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  targets/desktop/package.use:
+  Enable hal for xorg-server-1.7 input device autoconfiguration in the
+  desktop profile, bug #349331
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask qbittorrent beta packages
