@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/toppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/ChangeLog,v 1.22 2010/12/13 19:30:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/ChangeLog,v 1.23 2010/12/22 01:40:25 hwoarang Exp $
+
+  22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> toppler-1.1.4.ebuild:
+  Stable on amd64 wrt bug #347950
 
   13 Dec 2010; Thomas Kahle <tomka@gentoo.org> toppler-1.1.4.ebuild:
   x86 stable per bug 347950
