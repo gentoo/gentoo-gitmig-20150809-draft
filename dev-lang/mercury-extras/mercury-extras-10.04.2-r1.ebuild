@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.2-r1.ebuild,v 1.4 2010/11/16 06:01:11 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-10.04.2-r1.ebuild,v 1.5 2010/12/22 11:50:27 hwoarang Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 IUSE="X examples glut iodbc ncurses odbc opengl ssl tcl tk xml"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.7 2010/11/25 05:54:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.8 2010/12/22 11:50:09 hwoarang Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 IUSE="debug emacs erlang examples java minimal readline test threads"
 
