@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.45 2010/12/05 20:41:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.46 2010/12/22 01:54:49 hwoarang Exp $
+
+  22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> hydra-5.8.ebuild:
+  Stable on amd64 wrt bug #347347
 
   05 Dec 2010; Jeroen Roovers <jer@gentoo.org> hydra-5.8.ebuild:
   Stable for PPC (bug #347347).
