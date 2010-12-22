@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.40 2010/11/24 15:06:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.41 2010/12/22 13:42:29 klausman Exp $
+
+  22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> libv4l-0.8.1.ebuild:
+  Stable on alpha, bug #344327
 
   24 Nov 2010; Jeroen Roovers <jer@gentoo.org> libv4l-0.8.1.ebuild:
   Stable for HPPA (bug #344327).
