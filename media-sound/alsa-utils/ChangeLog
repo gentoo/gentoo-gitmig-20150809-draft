@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.299 2010/11/08 21:05:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.300 2010/12/22 14:05:19 klausman Exp $
+
+  22 Dec 2010; Tobias Klausmann <klausman@gentoo.org>
+  alsa-utils-1.0.23-r1.ebuild:
+  Stable on alpha, bug #344571
 
   08 Nov 2010; Jeroen Roovers <jer@gentoo.org> alsa-utils-1.0.23-r1.ebuild:
   Stable for HPPA PPC (bug #344571).
