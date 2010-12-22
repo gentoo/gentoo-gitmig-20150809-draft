@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.3.ebuild,v 1.3 2010/12/12 10:43:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.3.ebuild,v 1.4 2010/12/22 01:23:53 hwoarang Exp $
 
 EAPI=3
 NEED_EMACS=22
@@ -13,7 +13,7 @@ SRC_URI="http://orgmode.org/org-${PV}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3 contrib? ( GPL-2 MIT )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="contrib"
 
 S="${WORKDIR}/org-${PV}"

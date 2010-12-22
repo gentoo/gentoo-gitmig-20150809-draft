@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.119 2010/12/12 10:43:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.120 2010/12/22 01:23:53 hwoarang Exp $
+
+  22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> org-mode-7.3.ebuild:
+  Stable on amd64 wrt bug #348197
 
   12 Dec 2010; Thomas Kahle <tomka@gentoo.org> org-mode-7.3.ebuild:
   x86 stable per bug 348197
