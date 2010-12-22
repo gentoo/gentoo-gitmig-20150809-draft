@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.23 2010/08/28 14:50:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.24 2010/12/22 10:02:05 hollow Exp $
 
 EAPI="2"
 
@@ -572,7 +572,7 @@ apache-2_pkg_postinst() {
 	echo
 	elog "Attention: cgi and cgid modules are now handled via APACHE2_MODULES flags"
 	elog "in /etc/make.conf. Make sure to enable those in order to compile them."
-	elog "In general, you should use 'cgid' with hreaded MPMs and 'cgi' otherwise."
+	elog "In general, you should use 'cgid' with threaded MPMs and 'cgi' otherwise."
 	echo
 
 }
