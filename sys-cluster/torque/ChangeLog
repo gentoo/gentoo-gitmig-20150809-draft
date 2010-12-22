@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.104 2010/12/04 15:46:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.105 2010/12/22 11:39:44 hwoarang Exp $
+
+  22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> torque-2.3.13.ebuild:
+  Stable on amd64 wrt bug #345463
 
   04 Dec 2010; Raúl Porcel <armin76@gentoo.org> torque-2.3.13.ebuild:
   alpha/ia64/sparc stable wrt #345463
