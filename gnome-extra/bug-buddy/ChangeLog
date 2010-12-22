@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/bug-buddy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.188 2010/12/17 08:38:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.189 2010/12/22 12:30:24 ford_prefect Exp $
+
+*bug-buddy-2.32.0-r2 (22 Dec 2010)
+
+  22 Dec 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  -bug-buddy-2.32.0-r1.ebuild, +bug-buddy-2.32.0-r2.ebuild:
+  Fix the gconf key type (it's a bool, not a string) for
+  /apps/gnome_settings_daemon/gtk-modules/gnomebreakpad (bug #349355)
 
   17 Dec 2010; Pacho Ramos <pacho@gentoo.org>
   +files/bug-buddy-2.32.0-gnomesession-debug.patch:

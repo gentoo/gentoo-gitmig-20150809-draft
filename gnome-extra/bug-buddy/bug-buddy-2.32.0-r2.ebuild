@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r1.ebuild,v 1.1 2010/12/16 19:36:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r2.ebuild,v 1.1 2010/12/22 12:30:24 ford_prefect Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -48,7 +48,7 @@ pkg_postinst() {
 	local gconftool="${EROOT}usr/bin/gconftool-2"
 	local GCONF_CONFIG_SOURCE="$("${gconftool}" --get-default-source | sed "s;:/;:${ROOT};")"
 
-	"${gconftool}" --direct --config-source "${GCONF_CONFIG_SOURCE}" --type=string \
+	"${gconftool}" --direct --config-source "${GCONF_CONFIG_SOURCE}" --type=bool \
 		--set /apps/gnome_settings_daemon/gtk-modules/gnomebreakpad false || die
 
 	gnome2_pkg_postinst
