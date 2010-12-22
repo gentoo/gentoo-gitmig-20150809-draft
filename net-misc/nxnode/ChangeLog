@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.58 2010/08/26 14:56:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.59 2010/12/22 09:50:03 voyageur Exp $
+
+  22 Dec 2010; Bernard Cafarelli <voyageur@gentoo.org> nxnode-3.4.0.14.ebuild:
+  Depend on nxclient with USE=cups
 
 *nxnode-3.4.0.14 (26 Aug 2010)
 
