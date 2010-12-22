@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.9.6.ebuild,v 1.1 2010/09/21 07:36:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.0.ebuild,v 1.1 2010/12/22 23:11:17 eva Exp $
 
 EAPI="3"
-
+GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit python gnome2
+inherit gnome2 python
 
 DESCRIPTION="Introspection infrastructure for gobject library bindings"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
@@ -16,21 +16,24 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc test"
 
-RDEPEND=">=dev-libs/glib-2.19.0
+RDEPEND=">=dev-libs/glib-2.24:2
 	virtual/libffi"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/gtk-doc-1.12 )
 	dev-util/pkgconfig
 	sys-devel/flex
+	doc? ( >=dev-util/gtk-doc-1.12 )
 	test? ( x11-libs/cairo )"
 
 pkg_setup() {
+	DOCS="AUTHORS CONTRIBUTORS ChangeLog NEWS README TODO"
+	G2CONF="${G2CONF}
+		--disable-static
+		$(use_enable test tests)"
+
 	python_set_active_version 2
 }
 
 src_prepare() {
-	G2CONF="${G2CONF} --disable-static"
-
 	# FIXME: Parallel compilation failure with USE=doc
 	use doc && MAKEOPTS="-j1"
 
@@ -38,8 +41,11 @@ src_prepare() {
 	ln -sf $(type -P true) py-compile
 }
 
-src_configure() {
-	econf $(use_enable test tests) || die "econf failed"
+src_install() {
+	gnome2_src_install
+	python_convert_shebangs 2 "${ED}"usr/bin/g-ir-scanner
+	python_convert_shebangs 2 "${ED}"usr/bin/g-ir-annotation-tool
+	find "${ED}" -name "*.la" -delete || die "la files removal failed"
 }
 
 pkg_postinst() {
