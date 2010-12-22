@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.41.ebuild,v 1.1 2010/01/11 04:11:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.45.ebuild,v 1.1 2010/12/22 05:57:59 bicatali Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.gnu.org/software/glpk/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 SLOT="0"
-IUSE="doc examples gmp odbc mysql"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc examples gmp odbc mysql static-libs"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 	gmp? ( dev-libs/gmp )
@@ -32,6 +32,7 @@ src_configure() {
 
 	econf \
 		--with-zlib \
+		$(use_enable static-libs static) \
 		$(use_with gmp) \
 		$(use_enable odbc) \
 		$(use_enable mysql) \
@@ -51,7 +52,7 @@ src_install() {
 	fi
 	if use doc; then
 		cd "${S}"/doc
-		doins *.pdf notes/gomory.djvu || die "failed to instal djvu and pdf"
+		doins *.pdf notes/*.pdf || die "failed to instal djvu and pdf"
 		dodoc *.txt || die "failed to install manual files"
 	fi
 }
