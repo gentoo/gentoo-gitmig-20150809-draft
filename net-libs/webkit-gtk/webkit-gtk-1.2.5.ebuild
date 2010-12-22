@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.5.ebuild,v 1.4 2010/11/25 07:25:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.5.ebuild,v 1.5 2010/12/22 22:56:54 eva Exp $
 
 EAPI="3"
 
@@ -26,10 +26,10 @@ RDEPEND="
 	virtual/jpeg
 	>=media-libs/libpng-1.4
 	x11-libs/cairo
-	>=x11-libs/gtk+-2.13[aqua=]
-	>=dev-libs/glib-2.21.3
+	>=x11-libs/gtk+-2.13:2[aqua=]
+	>=dev-libs/glib-2.21.3:2
 	>=dev-libs/icu-3.8.1-r1
-	>=net-libs/libsoup-2.29.90
+	>=net-libs/libsoup-2.29.90:2.4
 	>=dev-db/sqlite-3
 	>=app-text/enchant-0.22
 	>=x11-libs/pango-1.12
@@ -64,6 +64,9 @@ src_prepare() {
 	# Don't force -O2
 	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
 
+	# Don't build tests if not needed, part of bug #343249
+	epatch "${FILESDIR}/${PN}-1.2.5-tests-build.patch"
+
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=autotools eautoreconf
 }
@@ -90,19 +93,17 @@ src_configure() {
 	econf ${myconf}
 }
 
-src_test() {
-	unset DISPLAY
-	# Tests can fail without it, bug 323669
-	export XDG_DATA_HOME="${T}"
-	# Tests will fail without it, bug 294691, bug 310695
-	Xemake check || die "Test phase failed"
-}
-
 src_compile() {
 	# Fix sandbox error with USE="introspection"
 	# https://bugs.webkit.org/show_bug.cgi?id=35471
-	addpredict "$(unset HOME; echo ~)/.local"
-	emake || die "Compile failed"
+	emake XDG_DATA_HOME="${T}/.local" || die "Compile failed"
+}
+
+src_test() {
+	unset DISPLAY
+	# Tests need virtualx, bug #294691, bug #310695
+	# Set XDG_DATA_HOME for introspection tools, bug #323669
+	Xemake check XDG_DATA_HOME="${T}/.local" || die "Test phase failed"
 }
 
 src_install() {
