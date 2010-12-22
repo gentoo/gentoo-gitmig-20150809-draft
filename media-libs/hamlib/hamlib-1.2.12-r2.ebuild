@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.12-r2.ebuild,v 1.1 2010/12/22 12:41:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.12-r2.ebuild,v 1.2 2010/12/22 18:47:32 tomjbe Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2"
 
 inherit autotools-utils eutils multilib python
 
@@ -21,7 +21,6 @@ RESTRICT="test"
 RDEPEND="
 	=virtual/libusb-0*
 	dev-libs/libxml2
-	python? ( <dev-lang/python-3 )
 	tcl? ( dev-lang/tcl )"
 
 DEPEND=" ${RDEPEND}
@@ -83,9 +82,9 @@ src_install() {
 }
 
 pkg_postinst()  {
-	python_mod_optimize $(python_get_sitedir)
+	use python && python_mod_optimize $(python_get_sitedir)/Hamlib.py
 }
 
 pkg_postrm()  {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup $(python_get_sitedir)/Hamlib.py
 }
