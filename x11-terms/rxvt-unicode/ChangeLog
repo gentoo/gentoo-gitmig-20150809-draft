@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.173 2010/12/13 20:15:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.174 2010/12/22 19:09:51 wired Exp $
+
+  22 Dec 2010; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.10.ebuild,
+  +files/rxvt-unicode-9.10-force-hints.patch, metadata.xml:
+  added some USE flags, bugs #346613 and #346553, including pixbuf for
+  transparency support.
 
 *rxvt-unicode-9.10 (13 Dec 2010)
 
