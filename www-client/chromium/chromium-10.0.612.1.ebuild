@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.612.1.ebuild,v 1.2 2010/12/20 19:06:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.612.1.ebuild,v 1.3 2010/12/22 09:00:36 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -87,12 +87,6 @@ pkg_setup() {
 	python_pkg_setup
 
 	# Prevent user problems like bug #299777.
-	if ! egrep -q '^shm.+/dev/shm' /etc/fstab; then
-		ewarn "You don't have /dev/shm entry in /etc/fstab."
-		ewarn "${PN} may fail to start in that configuration."
-		ewarn "Please add the following line to your /etc/fstab:"
-		ewarn "shm			/dev/shm	tmpfs		nodev,nosuid,noexec	0 0"
-	fi
 	if ! grep -q /dev/shm <<< $(get_mounts); then
 		ewarn "You don't have tmpfs mounted at /dev/shm."
 		ewarn "${PN} may fail to start in that configuration."
