@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.71 2010/08/14 20:10:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.72 2010/12/22 16:40:07 pva Exp $
+
+*unzip-6.0-r2 (22 Dec 2010)
+
+  22 Dec 2010; Peter Volkov <pva@gentoo.org> +unzip-6.0-r2.ebuild,
+  +files/unzip-6.0-natspec.patch, metadata.xml:
+  Added patch to use libnatspec to fix interoperability with Windows, bug
+  #275244.
 
   14 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> unzip-6.0-r1.ebuild:
   Fix quoting
