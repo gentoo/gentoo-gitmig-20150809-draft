@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120.ebuild,v 1.1 2010/11/19 13:25:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120.ebuild,v 1.2 2010/12/22 08:08:34 pva Exp $
 
 EAPI="2"
 
@@ -37,8 +37,9 @@ IUSE="ancient fancy fontforge taamey"
 
 FONT_CONF=( "${FILESDIR}/65-culmus.conf" )
 
-DEPEND="!media-fonts/culmus-ancient"
-RDEPEND="${DEPEND}"
+RDEPEND="!media-fonts/culmus-ancient"
+DEPEND="${RDEPEND}
+	fontforge? ( media-gfx/fontforge )"
 
 S=${WORKDIR}
 # Put all fonts, generated or not here

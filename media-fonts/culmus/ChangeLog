@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.54 2010/11/19 13:25:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.55 2010/12/22 08:08:34 pva Exp $
+
+  22 Dec 2010; Peter Volkov <pva@gentoo.org> culmus-0.120.ebuild:
+  Added missed fontforge dependency, thank Agostino Sarubbo for report in bug
+  #349268.
 
 *culmus-0.120 (19 Nov 2010)
 
