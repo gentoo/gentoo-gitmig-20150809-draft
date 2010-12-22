@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6237 2010/12/21 21:33:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6238 2010/12/22 12:13:23 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4138,6 +4138,7 @@ x11-misc/google-gadgets:webkit - Enables browser element and script runtime base
 x11-misc/lightdm:consolekit - Enables support for authorization using consolekit
 x11-misc/lightdm:introspection - Use dev-libs/gobject-introspection for introspection
 x11-misc/lightdm:webkit - Build greeter based on net-libs/webkit-gtk
+x11-misc/pcmanfm:desktop-integration - Enable/disable the desktop integration from pcmanfm
 x11-misc/rednotebook:libyaml - enable libyaml support
 x11-misc/rednotebook:webkit - enable previews using webkit engine
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
