@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r5.ebuild,v 1.2 2010/12/18 19:49:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r5.ebuild,v 1.3 2010/12/22 11:02:23 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -38,7 +38,7 @@ SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	ftp://ftp.tvdr.de/vdr/Developer/${MY_P}-2.diff
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
