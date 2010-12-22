@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.0.ebuild,v 1.2 2010/11/08 18:44:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.1.ebuild,v 1.1 2010/12/22 17:25:49 bicatali Exp $
 
 EAPI=2
 inherit eutils flag-o-matic bash-completion versionator
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="doc java jpeg lapack minimal nls perl png readline threads tk X cairo"
+IUSE="doc java jpeg lapack minimal nls perl png readline static-libs threads tk X cairo"
 
 # common depends
 CDEPEND="dev-libs/libpcre
@@ -55,6 +55,8 @@ pkg_setup() {
 src_prepare() {
 	# fix ocasional failure with parallel install (bug #322965)
 	epatch "${FILESDIR}"/${PN}-2.11.1-parallel.patch
+	# respect ldflags on rscript
+	epatch "${FILESDIR}"/${PN}-2.12.1-ldflags.patch
 
 	# fix packages.html for doc (bug #205103)
 	# check in later versions if fixed
@@ -95,6 +97,8 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		rdocdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
+		$(use_enable static-libs static) \
+		$(use_enable static-libs R-static-lib) \
 		$(use_enable threads) \
 		$(use_with lapack) \
 		$(use_with tk tcltk) \
