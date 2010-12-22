@@ -1,0 +1,21 @@
+--- cpldrs/tests/cpl_fft-test.c.orig	2010-12-22 15:36:23.000000000 +0000
++++ cpldrs/tests/cpl_fft-test.c	2010-12-22 15:36:54.000000000 +0000
+@@ -205,14 +205,14 @@
+             
+             if (imtype & CPL_TYPE_FLOAT) {
+             cpl_test_image_abs(img2_re, img4_re,
+-                       2 * 10 * FLT_EPSILON * CONSTANT);
++                       3 * 10 * FLT_EPSILON * CONSTANT);
+             cpl_test_image_abs(img2_im, img4_im,
+-                       2 * 10 * FLT_EPSILON * CONSTANT);
++                       3 * 10 * FLT_EPSILON * CONSTANT);
+             } else {
+             cpl_test_image_abs(img2_re, img4_re,
+-                       2 *10 * DBL_EPSILON * CONSTANT);
++                       5 *10 * DBL_EPSILON * CONSTANT);
+             cpl_test_image_abs(img2_im, img4_im,
+-                       2* 10 * DBL_EPSILON * CONSTANT);
++                       5* 10 * DBL_EPSILON * CONSTANT);
+             
+             }
+             

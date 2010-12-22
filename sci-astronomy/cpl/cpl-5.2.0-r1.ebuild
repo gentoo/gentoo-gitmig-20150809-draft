@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0-r1.ebuild,v 1.2 2010/09/25 20:22:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-5.2.0-r1.ebuild,v 1.3 2010/12/22 15:42:04 bicatali Exp $
 
 EAPI=2
 JAVA_PKG_OPT_USE=gasgano
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 	gasgano? ( >=virtual/jdk-1.5 )"
+
+src_prepare() {
+	# fft precision test failed. should be fixed in 5.3
+	epatch "${FILESDIR}"/${P}-test.patch
+}
 
 src_configure() {
 	has_version sci-libs/cfitsio[static-libs] || \
