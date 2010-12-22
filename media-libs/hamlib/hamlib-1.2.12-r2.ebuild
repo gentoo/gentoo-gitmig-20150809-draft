@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.12-r2.ebuild,v 1.2 2010/12/22 18:47:32 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.12-r2.ebuild,v 1.3 2010/12/22 19:18:52 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -30,7 +30,10 @@ DEPEND=" ${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -86,5 +89,5 @@ pkg_postinst()  {
 }
 
 pkg_postrm()  {
-	python_mod_cleanup $(python_get_sitedir)/Hamlib.py
+	use python && python_mod_cleanup $(python_get_sitedir)/Hamlib.py
 }
