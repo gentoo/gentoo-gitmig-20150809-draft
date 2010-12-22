@@ -1,29 +1,27 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.118 2010/12/22 11:51:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.612.1-r1.ebuild,v 1.1 2010/12/22 11:51:41 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils flag-o-matic multilib pax-utils portability python subversion \
+inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-# subversion eclass fetches gclient, which will then fetch chromium itself
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
-EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
+SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
 
 RDEPEND="app-arch/bzip2
 	system-sqlite? (
-		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
+		>=dev-db/sqlite-3.7.2[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( dev-lang/v8 )
+	system-v8? ( >=dev-lang/v8-3.0.0.1 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -60,49 +58,6 @@ RDEPEND+="
 	virtual/ttf-fonts
 	gecko-mediaplayer? ( !www-plugins/gecko-mediaplayer[gnome] )"
 
-src_unpack() {
-	subversion_src_unpack
-	mv "${S}" "${WORKDIR}"/depot_tools
-
-	# Most subversion checks and configurations were already run
-	EGCLIENT="${WORKDIR}"/depot_tools/gclient
-	cd "${ESVN_STORE_DIR}" || die "gclient: can't chdir to ${ESVN_STORE_DIR}"
-
-	if [[ ! -d ${PN} ]]; then
-		mkdir -p "${PN}" || die "gclient: can't mkdir ${PN}."
-	fi
-
-	cd "${PN}" || die "gclient: can't chdir to ${PN}"
-
-	if [[ ! -f .gclient ]]; then
-		einfo "gclient config -->"
-		${EGCLIENT} config ${EGCLIENT_REPO_URI} || die "gclient: error creating config"
-	fi
-
-	einfo "gclient sync start -->"
-	einfo "     repository: ${EGCLIENT_REPO_URI}"
-	${EGCLIENT} sync --nohooks || die
-	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
-
-	mkdir -p "${S}"
-	# From export_tarball.py
-	CHROMIUM_EXCLUDES="--exclude=src/chrome/test/data
-	--exclude=src/chrome/tools/test/reference_build
-	--exclude=src/chrome_frame --exclude=src/gears/binaries
-	--exclude=src/net/data/cache_tests --exclude=src/o3d/documentation
-	--exclude=src/o3d/samples --exclude=src/third_party/lighttpd
-	--exclude=src/third_party/WebKit/LayoutTests
-	--exclude=src/webkit/data/layout_tests
-	--exclude=src/webkit/tools/test/reference_build"
-	rsync -rlpgo --exclude=".svn/" ${CHROMIUM_EXCLUDES} src/ "${S}" || die "gclient: can't export to ${S}."
-
-	# Display correct svn revision in about box, and log new version
-	CREV=$(subversion__svn_info "src" "Revision")
-	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die "setting revision failed"
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH}_p${CREV} "
-}
-
 egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
 	echo "${@}" >&2
@@ -116,9 +71,9 @@ get_installed_v8_version() {
 remove_bundled_lib() {
 	local out
 	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
-		|| ewarn "failed to remove bundled library $1"
+		|| die "failed to remove bundled library $1"
 	if [[ -z $out ]]; then
-		ewarn "no files matched when removing bundled library $1"
+		die "no files matched when removing bundled library $1"
 	fi
 }
 
@@ -161,6 +116,8 @@ src_prepare() {
 
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
+
+	epatch "${FILESDIR}"/${PN}-system-icu-r2.patch
 
 	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
 
