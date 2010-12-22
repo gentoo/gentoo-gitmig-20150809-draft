@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.83 2010/01/01 19:47:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.84 2010/12/22 16:50:38 pva Exp $
+
+*zip-3.0-r1 (22 Dec 2010)
+
+  22 Dec 2010; Peter Volkov <pva@gentoo.org> +zip-3.0-r1.ebuild,
+  +files/zip-3.0-natspec.patch:
+  Added patch to use libnatspec to fix interoperability with Windows, bug
+  #275244.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> zip-3.0.ebuild:
   Transfer Prefix keywords
