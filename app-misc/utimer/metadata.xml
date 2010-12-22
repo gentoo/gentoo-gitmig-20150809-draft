@@ -5,6 +5,12 @@
 <maintainer>
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
+<description>Proxy maintainer. CC him on bugs</description>
+</maintainer>
+<maintainer>
+<email>lavi.kfir@gmail.com</email>
+<name>Kfir Lavi</name>
+<description>Maintainer. Assign bugs to him</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
