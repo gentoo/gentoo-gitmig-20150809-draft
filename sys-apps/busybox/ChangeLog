@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.261 2010/12/22 11:37:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.262 2010/12/22 12:20:33 phajdan.jr Exp $
+
+  22 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  busybox-1.17.4.ebuild:
+  x86 stable wrt bug #349309
 
   22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> busybox-1.17.4.ebuild:
   Stable on amd64 wrt bug #349309
