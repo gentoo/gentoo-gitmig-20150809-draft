@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.24 2010/12/22 07:50:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.25 2010/12/22 18:18:12 bicatali Exp $
+
+  22 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> amd-2.2.0.ebuild,
+  files/amd-2.2.0-autotools.patch, amd-2.2.1.ebuild:
+  Re-enable a working test and disable the proper failing one in the autotools
+  patch. Added static-libs flag.
 
   22 Dec 2010; Justin Lecher <jlec@gentoo.org> files/2.2.1-test.patch:
   Remove bad test, #348272
