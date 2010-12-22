@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.2.ebuild,v 1.6 2010/02/23 18:44:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.2.ebuild,v 1.7 2010/12/22 12:11:46 hwoarang Exp $
 
 EAPI="2"
 inherit autotools eutils fdo-mime
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc x86"
-IUSE="hal"
+IUSE="desktop-integration hal"
 
 RDEPEND="virtual/fam
 	x11-libs/cairo
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable hal)
+	econf $(use_enable desktop-integration) $(use_enable hal)
 }
 
 src_install() {

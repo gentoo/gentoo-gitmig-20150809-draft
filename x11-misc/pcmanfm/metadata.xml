@@ -6,4 +6,7 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
+	<use>
+		<flag name="desktop-integration">Enable/disable the desktop integration from pcmanfm</flag>
+	</use>
 </pkgmetadata>
