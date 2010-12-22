@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.70 2010/12/22 18:20:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.71 2010/12/22 18:21:45 vapier Exp $
+
+*xbmc-10.0 (22 Dec 2010)
+
+  22 Dec 2010; Mike Frysinger <vapier@gentoo.org> +xbmc-10.0.ebuild:
+  Version bump.
 
   22 Dec 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Only delay for 3 seconds when dbus services are missing #348580 by James
