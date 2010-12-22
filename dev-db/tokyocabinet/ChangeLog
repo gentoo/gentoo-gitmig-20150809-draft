@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.29 2010/11/26 15:56:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.30 2010/12/22 15:09:37 klausman Exp $
+
+  22 Dec 2010; Tobias Klausmann <klausman@gentoo.org>
+  tokyocabinet-1.4.46.ebuild:
+  Stable on alpha, bug #346661
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> tokyocabinet-1.4.46.ebuild:
   Stable for HPPA (bug #346661).
