@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.65 2010/11/19 08:46:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.66 2010/12/22 18:20:27 vapier Exp $
 
 EAPI="2"
 
@@ -114,10 +114,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i \
-		-e '1i#include <stdlib.h>\n#include <string.h>\n' \
-		xbmc/lib/libid3tag/libid3tag/metadata.c || die
-
 	# some dirs ship generated autotools, some dont
 	local d
 	for d in . xbmc/cores/dvdplayer/Codecs/{libdts,libdvd/lib*/} lib/cpluff ; do
@@ -148,6 +144,11 @@ src_prepare() {
 
 	# Do not use termcap #262822
 	sed -i 's:-ltermcap::' xbmc/lib/libPython/Python/configure
+
+	# avoid long delays when powerkit isn't running #348580
+	sed -i \
+		-e '/dbus_connection_send_with_reply_and_block/s:-1:3000:' \
+		xbmc/linux/*.cpp || die
 
 	epatch_user #293109
 

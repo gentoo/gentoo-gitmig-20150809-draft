@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.69 2010/11/19 08:46:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.70 2010/12/22 18:20:27 vapier Exp $
+
+  22 Dec 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Only delay for 3 seconds when dbus services are missing #348580 by James
+  Bowlin.
 
   19 Nov 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Drop USE=aac like upstream has #345939 by BT.
