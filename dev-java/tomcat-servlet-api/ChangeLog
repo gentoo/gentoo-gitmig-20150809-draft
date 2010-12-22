@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.81 2010/12/21 08:52:51 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.82 2010/12/22 19:13:05 ali_bush Exp $
+
+  22 Dec 2010; Alistair Bush <ali_bush@gentoo.org>
+  tomcat-servlet-api-7.0.5.ebuild:
+  Fix url.
 
   21 Dec 2010; Alistair Bush <ali_bush@gentoo.org> +files/3.0-build.xml,
   +tomcat-servlet-api-7.0.5.ebuild:
