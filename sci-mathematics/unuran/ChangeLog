@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/unuran
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.2 2010/12/18 21:46:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.3 2010/12/22 05:20:29 bicatali Exp $
+
+  22 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  files/unuran-1.8.0-nogsl.patch:
+  Make sure it links with all gsl libraries when enabled
 
   18 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> unuran-1.8.0.ebuild:
   Fixed typo, thanks Helmut Jarausch bug #348995
