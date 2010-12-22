@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/autojump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.1 2010/10/26 22:15:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.2 2010/12/22 23:47:00 xmw Exp $
+
+*autojump-14 (22 Dec 2010)
+
+  22 Dec 2010; Michael Weber <xmw@gentoo.org> +autojump-14.ebuild:
+  Version bump, python3 now supported.
 
 *autojump-13 (26 Oct 2010)
 
