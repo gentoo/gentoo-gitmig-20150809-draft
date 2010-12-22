@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.2.0.ebuild,v 1.1 2010/12/22 12:43:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.2.0.ebuild,v 1.2 2010/12/22 12:45:12 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 QT_MINIMAL="4.6.0"
 KDE_LINGUAS="cs da de en_GB eo es et fr hu it ja lt nds nl pl pt_BR ru sk sr sv
@@ -19,3 +19,4 @@ SLOT="4"
 IUSE="debug +handbook"
 
 DEPEND="$(add_kdebase_dep libkdegames)"
+RDEPEND="${DEPEND}"
