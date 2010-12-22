@@ -1,0 +1,22 @@
+diff --git a/Makefile.am b/Makefile.am
+index aa8e2d6..e313890 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -22,7 +22,7 @@ SUBDIRS = po data
+ 
+ bin_SCRIPTS = xgsch2pcb
+ 
+-pkglib_PYTHON = lib/xgsch2pcb/pcbmanager.py \
++pkgpython_PYTHON = lib/xgsch2pcb/pcbmanager.py \
+  lib/xgsch2pcb/gsch2pcbproject.py \
+  lib/xgsch2pcb/gui.py \
+  lib/xgsch2pcb/new_project_gui.py \
+@@ -53,7 +53,7 @@ templatesdir = @templatesdir@
+ do_subst = sed -e 's,[@]prefix[@],$(prefix),g' \
+                -e 's,[@]PYTHON[@],$(PYTHON),g' \
+ 				       -e 's,[@]VERSION[@],$(VERSION),g' \
+-							 -e 's,[@]pkglibdir[@],$(pkglibdir),g' \
++							 -e 's,[@]pkglibdir[@],$(pkgpythondir),g' \
+ 							 -e 's,[@]templatesdir[@],$(templatesdir),g' \
+ 							 -e 's,[@]PACKAGE[@],$(PACKAGE),g'
+ 
