@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.48 2010/11/03 20:07:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.49 2010/12/22 13:06:59 klausman Exp $
+
+  22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> libproxy-0.4.6.ebuild:
+  Stable on alpha, bug #343069
 
   03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> libproxy-0.4.6.ebuild:
   Revert my commit
