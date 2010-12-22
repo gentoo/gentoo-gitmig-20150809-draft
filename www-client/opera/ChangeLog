@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.580 2010/12/21 15:55:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.581 2010/12/22 16:14:34 jer Exp $
+
+  22 Dec 2010; Jeroen Roovers <jer@gentoo.org> opera-11.00.1156.ebuild:
+  Update icon cache and desktop file database by Rick Harris (bug #334993).
 
   21 Dec 2010; Jeroen Roovers <jer@gentoo.org> opera-11.00.1156.ebuild:
   Set PaX markings by Paulo Matias (bug #344267).

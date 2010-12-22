@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.2 2010/12/21 15:55:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.3 2010/12/22 16:14:34 jer Exp $
 
 EAPI="3"
 
-inherit eutils multilib pax-utils versionator
+inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
 
 DESCRIPTION="A standards-compliant graphical Web browser"
 HOMEPAGE="http://www.opera.com/"
@@ -201,6 +201,10 @@ src_install() {
 		"${D}/${OPREFIX}/opera/operapluginwrapper"
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	elog "To change the UI language, choose [Tools] -> [Preferences], open the"
 	elog "[General] tab, click on [Details...] then [Choose...] and point the"
@@ -212,4 +216,14 @@ pkg_postinst() {
 		elog "To improve shared memory usage please set:"
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
 	fi
+
+	# Update desktop file database and gtk icon cache (bug #334993)
+	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	# Update desktop file database and gtk icon cache (bug #334993)
+	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 }
