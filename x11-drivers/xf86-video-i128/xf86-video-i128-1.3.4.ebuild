@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i128/xf86-video-i128-1.3.4.ebuild,v 1.1 2010/08/10 15:03:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i128/xf86-video-i128-1.3.4.ebuild,v 1.2 2010/12/23 12:45:03 ssuominen Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="Number 9 I128 video driver"
 
-KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-base/xorg-server-1.0.99"

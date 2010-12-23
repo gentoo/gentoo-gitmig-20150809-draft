@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-apm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-apm/ChangeLog,v 1.37 2010/07/24 07:56:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-apm/ChangeLog,v 1.38 2010/12/23 12:41:23 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-video-apm-1.2.3.ebuild:
+  amd64 stable wrt #344827
 
 *xf86-video-apm-1.2.3 (24 Jul 2010)
 
