@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.216 2010/12/08 20:30:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.217 2010/12/23 07:33:34 fauli Exp $
+
+*tor-0.2.1.28 (23 Dec 2010)
+
+  23 Dec 2010; Christian Faulhammer <fauli@gentoo.org> +tor-0.2.1.28.ebuild:
+  bump for security bug 349312
 
   08 Dec 2010; Markus Meier <maekke@gentoo.org> tor-0.2.1.27.ebuild:
   arm stable, bug #346759
