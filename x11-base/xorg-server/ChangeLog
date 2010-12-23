@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.551 2010/12/19 13:07:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.552 2010/12/23 11:45:17 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xorg-server-1.9.2.ebuild:
+  amd64 stable wrt #344827
 
   19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xorg-server-1.9.2.ebuild:
   ppc64 stable wrt #344827
