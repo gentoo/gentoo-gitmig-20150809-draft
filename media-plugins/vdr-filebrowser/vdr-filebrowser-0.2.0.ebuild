@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-filebrowser/vdr-filebrowser-0.2.0.ebuild,v 1.1 2009/08/10 10:26:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-filebrowser/vdr-filebrowser-0.2.0.ebuild,v 1.2 2010/12/23 00:17:27 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -16,7 +18,13 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.4.0"
 RDEPEND="${DEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-glibc-2.10.diff")
+src_prepare() {
+	if has_version ">=sys-libs/glibc-2.10.1"; then
+		epatch "${FILESDIR}/${P}-glibc-2.10.diff"
+	fi
+
+	vdr-plugin_src_prepare
+}
 
 src_install() {
 	vdr-plugin_src_install
