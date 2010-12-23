@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.8 2010/09/24 20:44:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.9 2010/12/23 13:07:19 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libva-0.31.1_p4.ebuild:
+  amd64 stable wrt #344827
 
   24 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
   libva-0.31.0_p13.ebuild:
