@@ -1,6 +1,12 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.124 2010/11/16 23:21:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.125 2010/12/23 00:08:17 dilfridge Exp $
+
+*krita-2.2.2-r1 (23 Dec 2010)
+
+  23 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +krita-2.2.2-r1.ebuild, +files/krita-2.2.2-exiv2.patch:
+  Added upstream build fix for exiv2-0.21 api breakage
 
   16 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   -krita-2.1.0.ebuild:
