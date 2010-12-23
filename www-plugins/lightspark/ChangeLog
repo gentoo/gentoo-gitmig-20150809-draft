@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.22 2010/12/21 14:53:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.23 2010/12/23 00:07:59 chithanh Exp $
+
+  23 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.5.1.ebuild:
+  Add missing boost dependency, bug #349397
 
 *lightspark-0.4.5.1 (21 Dec 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.5.1.ebuild,v 1.1 2010/12/21 14:53:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.5.1.ebuild,v 1.2 2010/12/23 00:07:59 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib versionator
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nsplugin pulseaudio"
 
 RDEPEND="dev-cpp/libxmlpp:2.6
+	>=dev-libs/boost-1.42
 	dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
 	media-video/ffmpeg
