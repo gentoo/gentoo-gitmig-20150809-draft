@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.9.ebuild,v 1.8 2010/12/22 19:36:59 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.9.ebuild,v 1.9 2010/12/23 17:41:50 vostorga Exp $
 
 EAPI="2"
 
@@ -110,6 +110,8 @@ src_prepare() {
 	sed -i \
 		-e 's|LDSHFLAGS="|LDSHFLAGS="\\${LDFLAGS} |g' \
 		configure || die "sed failed"
+
+	epatch "${CONFDIR}"/${P}-kerberos-dummy.patch
 }
 
 src_configure() {
