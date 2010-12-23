@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre6.ebuild,v 1.7 2010/06/16 12:27:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre14.ebuild,v 1.1 2010/12/23 16:28:15 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin flag-o-matic
 
@@ -8,31 +10,25 @@ MY_P=${P/_pre/-pre}
 
 DESCRIPTION="VDR plugin: automatically record radio-channels and split it into tracks according to RadioText-Info"
 HOMEPAGE="http://www.a-land.de/audiorecorder/"
-SRC_URI="http://www.a-land.de/audiorecorder/${MY_P}.tgz"
+SRC_URI="http://www.zulu-entertainment.de/files/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 S=${WORKDIR}/${MY_P#vdr-}
 
-DEPEND=">=media-video/vdr-1.3.31
+DEPEND=">=media-video/vdr-1.6.0
 		media-libs/taglib
 		>=media-video/ffmpeg-0.4.9
 		"
 
 RDEPEND="${DEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-vdr-1.5.0.diff"
-	"${FILESDIR}/${P}-avcodec52.patch" )
+src_prepare() {
+	vdr-plugin_src_prepare
 
-src_unpack() {
-	vdr-plugin_src_unpack
-
-	if has_version ">=media-video/ffmpeg-0.4.9_p20080326"; then
-		epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326-new_header.diff"
-	fi
 	# UINT64_C is needed by ffmpeg headers
 	append-flags -D__STDC_CONSTANT_MACROS
 }
