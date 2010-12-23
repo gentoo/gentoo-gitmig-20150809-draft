@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20100314_p2456.ebuild,v 1.1 2010/03/20 03:49:44 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20100314_p2456.ebuild,v 1.2 2010/12/23 08:46:59 jlec Exp $
 
 EAPI="3"
 WX_GTK_VER="2.8"
@@ -9,7 +9,8 @@ inherit cmake-utils wxwidgets fdo-mime gnome2-utils
 
 DESCRIPTION="Electronic Schematic and PCB design tools."
 HOMEPAGE="http://kicad.sourceforge.net"
-SRC_URI="http://dev.gentoo.org/~calchan/distfiles/${PN}-sources-${PV}.tar.xz
+SRC_URI="
+	http://dev.gentoo.org/~calchan/distfiles/${PN}-sources-${PV}.tar.xz
 	!minimal? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-library-${PV}.tar.xz )
 	doc? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-doc-${PV}.tar.xz )
 	examples? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-examples-${PV}.tar.xz )"
@@ -22,13 +23,12 @@ IUSE="dev-doc doc debug examples minimal python"
 CDEPEND="x11-libs/wxGTK:2.8[X,opengl]"
 DEPEND="${CDEPEND}
 	>=dev-util/cmake-2.6.0
-	>=dev-libs/boost-1.40
+	>=dev-libs/boost-1.40[python?]
 	app-arch/xz-utils
 	dev-doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}
 	sys-libs/zlib
-	sci-electronics/electronics-menu
-	python? ( dev-lang/python )"
+	sci-electronics/electronics-menu"
 
 S="${WORKDIR}/${PN}"
 

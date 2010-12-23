@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r2.ebuild,v 1.4 2010/07/10 09:44:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r2.ebuild,v 1.5 2010/12/23 08:46:59 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -11,7 +11,8 @@ MY_PV="$(get_major_version)-r$(get_after_major_version)"
 
 DESCRIPTION="Electronic Schematic and PCB design tools."
 HOMEPAGE="http://kicad.sourceforge.net"
-SRC_URI="http://dev.gentoo.org/~calchan/distfiles/${PN}-sources-${MY_PV}.tar.lzma
+SRC_URI="
+	http://dev.gentoo.org/~calchan/distfiles/${PN}-sources-${MY_PV}.tar.lzma
 	!minimal? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-library-${MY_PV}.tar.lzma )
 	doc? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-doc-${MY_PV}.tar.lzma )
 	examples? ( http://dev.gentoo.org/~calchan/distfiles/${PN}-examples-${MY_PV}.tar.lzma )"
@@ -22,12 +23,11 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc debug examples minimal python"
 
 CDEPEND="x11-libs/wxGTK:2.8[X,opengl]
-	sys-libs/zlib"
+	sys-libs/zlib
+	dev-libs/boost[python?]"
 DEPEND="${CDEPEND}
-	|| ( app-arch/xz-utils app-arch/lzma-utils )
-	dev-libs/boost"
-RDEPEND="${CDEPEND}
-	python? ( dev-lang/python )"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+RDEPEND="${CDEPEND}"
 
 S="${WORKDIR}/${PN}"
 
