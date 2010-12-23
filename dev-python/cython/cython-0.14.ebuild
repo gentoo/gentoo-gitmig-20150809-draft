@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.14.ebuild,v 1.1 2010/12/15 12:11:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.14.ebuild,v 1.2 2010/12/23 11:19:40 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="README.txt ToDo.txt USAGE.txt"
-PYTHON_MODNAME="Cython pyximport"
+PYTHON_MODNAME="Cython cython.py pyximport"
 
 src_test() {
 	testing() {
