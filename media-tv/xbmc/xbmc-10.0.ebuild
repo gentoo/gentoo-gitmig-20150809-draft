@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.1 2010/12/22 18:21:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.2 2010/12/23 22:22:58 vapier Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND="virtual/opengl
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
-	dev-libs/libpcre
+	dev-libs/libpcre[cxx]
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
 	media-libs/a52dec
