@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.77 2010/12/21 15:52:35 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.78 2010/12/23 20:44:07 tomka Exp $
+
+*wicd-1.7.1_beta2-r2 (23 Dec 2010)
+
+  23 Dec 2010; Thomas Kahle <tomka@gentoo.org> +wicd-1.7.1_beta2-r2.ebuild:
+  Fix deps (bug #342613 and bug #342615)
 
   21 Dec 2010; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Add myself as a maintainer.
