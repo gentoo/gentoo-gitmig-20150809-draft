@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.52 2010/12/19 13:02:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.53 2010/12/23 12:03:29 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libXvMC-1.0.6.ebuild:
+  amd64 stable wrt #344827
 
   19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libXvMC-1.0.6.ebuild:
   ppc64 stable wrt #344827
