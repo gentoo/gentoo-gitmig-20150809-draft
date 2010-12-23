@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.2 2010/12/23 11:14:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.3 2010/12/23 16:58:12 jlec Exp $
 
 EAPI="2"
 
@@ -72,6 +72,10 @@ pkg_setup() {
 
 	confutils_use_conflict gdal tiff
 	confutils_use_depend_all java threads
+}
+
+src_unpack() {
+	default
 }
 
 src_prepare() {
@@ -228,15 +232,15 @@ src_install() {
 	fi
 
 	if use ruby ; then
-			cd_script ruby ${step}
+		cd_script ruby ${step}
 			ruby_einstall
-			mapscript_install_examples ruby
+		mapscript_install_examples ruby
 	fi
 
 	if use perl ; then
-			cd_script perl ${step}
-			perl-module_src_install
-			mapscript_install_examples perl
+		cd_script perl ${step}
+		perl-module_src_install
+		mapscript_install_examples perl
 	fi
 
 	if use tcl ; then
@@ -248,9 +252,9 @@ src_install() {
 	fi
 
 	if use python ; then
-			cd_script python ${step}
-			distutils_src_install
-			mapscript_install_examples python
+		cd_script python ${step}
+		distutils_src_install
+		mapscript_install_examples python
 	fi
 
 	if use java ; then
@@ -268,8 +272,8 @@ src_install() {
 	fi
 
 	dobin shp2img legend shptree shptreevis shp2img legend shptreetst scalebar \
-			sortshp tile4ms msencrypt mapserver-config \
-			|| die "Unable to setup mapserver tools"
+		sortshp tile4ms msencrypt mapserver-config \
+		|| die "Unable to setup mapserver tools"
 
 	dodoc INSTALL README HISTORY.TXT || die "Unable to setup documentation"
 
