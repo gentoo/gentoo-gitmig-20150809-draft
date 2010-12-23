@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/mdcrack-1.2.ebuild,v 1.4 2009/02/10 16:15:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/mdcrack-1.2.ebuild,v 1.5 2010/12/23 12:40:05 c1pher Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -13,28 +15,43 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="ncurses"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc4.diff \
-		"${FILESDIR}"/${P}-asneeded.patch
-}
+		"${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-remove-interactive-test.diff
 
-src_compile() {
 	use ncurses || \
 		sed -i -e 's/^NCURSES/#NCURSES/g' \
 			-e 's/^LIBS/#LIBS/g' Makefile
-	sed -i -e "/^CFLAGS/d" Makefile
+	sed -i -e '/^CFLAGS/d' \
+		-e 's|make bin/mdcrack|$(MAKE) bin/mdcrack|g' \
+		-e 's|make core|$(MAKE) core|g' Makefile
+}
 
-	#endian
+src_compile() {
 	emake CC="$(tc-getCC)" little || die "emake failed"
 }
 
 src_test() {
+	local failure=false
+
 	make CC="$(tc-getCC)" fulltest || die "self test failed"
+
+	for i in {1..20}; do
+		if grep "Collision found" out$i ; then
+			elog "Test $i: Passed"
+		else
+			elog "Test $i: Failed"
+			failure=true
+		fi
+	done
+
+	if $failure; then
+		die "Some tests failed"
+	fi
 }
 
 src_install() {
 	dobin bin/mdcrack || die "dobin failed"
-	dodoc BENCHMARKS CREDITS FAQ README TODO VERSIONS WWW
+	dodoc BENCHMARKS CREDITS FAQ README TODO VERSIONS WWW || die
 }
