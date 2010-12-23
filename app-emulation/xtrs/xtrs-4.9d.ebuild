@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.6 2010/09/18 15:01:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.7 2010/12/23 10:50:25 ulm Exp $
+
+EAPI=3
 
 inherit flag-o-matic toolchain-funcs
 
@@ -18,6 +20,10 @@ DEPEND="sys-libs/ncurses
 	sys-libs/readline
 	>=x11-libs/libX11-1.0.0"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i -e 's/$(CC) -o/$(CC) $(LDFLAGS) -o/' Makefile || die
+}
 
 src_compile() {
 	use ppc && append-flags -Dbig_endian
