@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.59 2010/12/22 21:59:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.60 2010/12/23 23:49:52 tomka Exp $
+
+  23 Dec 2010; Thomas Kahle <tomka@gentoo.org> twisted-web-10.1.0.ebuild:
+  x86 stable per bug 333389
 
 *twisted-web-10.2.0 (22 Dec 2010)
 
