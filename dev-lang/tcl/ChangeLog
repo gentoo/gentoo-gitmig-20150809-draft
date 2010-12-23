@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.128 2010/12/06 16:15:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.129 2010/12/23 18:37:30 mattst88 Exp $
+
+  23 Dec 2010; Matt Turner <mattst88@gentoo.org> tcl-8.4.18.ebuild,
+  tcl-8.4.19.ebuild, tcl-8.5.7.ebuild, tcl-8.5.8-r1.ebuild,
+  tcl-8.5.8-r2.ebuild:
+  Dropped mips keywords for <tcl-8.5.9, bug 339571
 
 *tcl-8.5.9 (06 Dec 2010)
 
