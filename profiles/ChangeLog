@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4878 2010/12/22 15:36:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4879 2010/12/23 16:31:20 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  removed block for removal vdr-audiorecorder-0.1.0_pre6, bug #277577
 
   22 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   targets/desktop/package.use:
