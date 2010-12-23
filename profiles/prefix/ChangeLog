@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.234 2010/12/23 11:58:12 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.235 2010/12/23 15:15:34 haubi Exp $
+
+  23 Dec 2010; Michael Haubenwallner <haubi@gentoo.org> hpux/profile.bashrc:
+  must not use korn shell /bin/sh as CONFIG_SHELL on hpux too, but bash
+  instead
 
   23 Dec 2010; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
   >=gcc-4.3 still does not work on aix

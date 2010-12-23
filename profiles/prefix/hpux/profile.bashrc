@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/hpux/profile.bashrc,v 1.4 2009/07/22 16:29:51 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/hpux/profile.bashrc,v 1.5 2010/12/23 15:15:34 haubi Exp $
+
+# /bin/sh is korn shell, incompatible with bash used by makefiles later.
+# This is a problem with recent libtool detecting non-bashism 'print' fex.
+export CONFIG_SHELL=${BASH}
 
 # On hpux, binary files (executables, shared libraries) in use
 # cannot be replaced during merge.
