@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.55 2010/12/16 15:59:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.56 2010/12/23 20:30:01 tomka Exp $
+
+*offlineimap-6.3.1 (23 Dec 2010)
+
+  23 Dec 2010; Thomas Kahle <tomka@gentoo.org> +offlineimap-6.3.1.ebuild,
+  +files/offlineimap-6.3.1-darwin10.patch:
+  Bump to 6.3.1. Upstream was revived at a new location. Tarballs from github
+  don't work properly yet.
 
   16 Dec 2010; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   adding myself as a maintainer
