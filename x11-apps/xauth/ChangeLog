@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xauth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.63 2010/12/19 12:14:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.64 2010/12/23 11:01:26 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xauth-1.0.5.ebuild:
+  amd64 stable wrt #344827
 
   19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xauth-1.0.5.ebuild:
   ppc64 stable wrt #344827
