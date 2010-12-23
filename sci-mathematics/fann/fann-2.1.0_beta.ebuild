@@ -1,11 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.4 2010/06/04 15:32:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.5 2010/12/23 08:26:55 jlec Exp $
 
 EAPI=2
+
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit eutils python autotools
 
 MY_P=${P/_/}
+
 DESCRIPTION="Fast Artificial Neural Network Library"
 HOMEPAGE="http://leenissen.dk/fann/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
@@ -15,27 +21,30 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc python"
 
-RDEPEND="python? ( virtual/python )"
-DEPEND="${RDEPEND}
+RDEPEND=""
+DEPEND="
+	${RDEPEND}
 	python? ( dev-lang/swig )
 	app-arch/unzip"
 
 S="${WORKDIR}/${P/_beta/}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-python.patch
-	epatch "${FILESDIR}"/${P}-benchmark.patch
-	epatch "${FILESDIR}"/${P}-examples.patch
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch \
+		"${FILESDIR}"/${P}-python.patch \
+		"${FILESDIR}"/${P}-benchmark.patch \
+		"${FILESDIR}"/${P}-examples.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
+	use python && python_copy_sources python
 }
 
 src_compile() {
 	emake || die "emake failed"
-	if use python; then
-		cd "${S}"/python
+	compilation() {
 		emake PYTHON_VERSION="$(python_get_version)" || die "emake python failed"
-	fi
+	}
+	use python && python_execute_function -s --source-dir python compilation
 }
 
 src_test() {
@@ -44,15 +53,15 @@ src_test() {
 		|| die "emake examples failed"
 	LD_LIBRARY_PATH="../src/.libs" emake runtest || die "tests failed"
 	emake clean
-	if use python; then
-		cd "${S}"/python
+	testing() {
 		emake test || die "failed tests for python wrappers"
-	fi
+	}
+	 use python && python_execute_function -s --source-dir python testing
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
 
 	if use doc; then
 		dodoc doc/*.txt
@@ -62,12 +71,20 @@ src_install() {
 		doins -r benchmarks || die "failed to install benchmarks"
 	fi
 
-	if use python; then
-		cd "${S}"/python
+	installation() {
 		emake install ROOT="${D}" || die "failed to install python wrappers"
 		if use doc; then
 			insinto /usr/share/doc/${PF}/examples/python
 			doins -r examples || die "failed to install python examples"
 		fi
-	fi
+	}
+	use python && python_execute_function -s --source-dir python installation
+}
+
+pkg_postinst() {
+	python_mod_optimize py${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup py${PN}
 }

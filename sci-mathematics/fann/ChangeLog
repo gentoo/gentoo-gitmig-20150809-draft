@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/fann
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.14 2010/06/04 15:32:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.15 2010/12/23 08:26:55 jlec Exp $
+
+  23 Dec 2010; Justin Lecher <jlec@gentoo.org> -files/fann-1.2.0-r1.patch,
+  -files/fann-1.2.0-setup.py, fann-2.0.0.ebuild, fann-2.1.0_beta.ebuild:
+  Verify and potentially improve Python-related code, #316231; removed old
+  patches
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   fann-2.1.0_beta.ebuild:
