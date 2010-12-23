@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-filerepresentation/zope-filerepresentation-3.6.0.ebuild,v 1.5 2010/10/30 19:01:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-filerepresentation/zope-filerepresentation-3.6.0.ebuild,v 1.6 2010/12/23 12:56:37 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -19,12 +21,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="net-zope/zope-interface"
+RDEPEND="net-zope/zope-interface
+	net-zope/zope-schema"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="${PN/-//}"
 DOCS="CHANGES.txt README.txt"
+PYTHON_MODNAME="${PN/-//}"
