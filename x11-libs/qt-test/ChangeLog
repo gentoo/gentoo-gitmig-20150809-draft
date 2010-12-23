@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.80 2010/12/05 21:48:44 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.81 2010/12/23 07:57:13 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> qt-test-4.6.3.ebuild:
+  ppc64 stable wrt #341703
 
   05 Dec 2010; Alex Alexander <wired@gentoo.org> -qt-test-4.5.3-r1.ebuild,
   -files/qt-4.5.3-glib-event-loop.patch:

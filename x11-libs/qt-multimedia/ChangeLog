@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.34 2010/11/09 15:50:19 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.35 2010/12/23 07:55:41 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  qt-multimedia-4.6.3.ebuild:
+  ppc64 stable wrt #341703
 
 *qt-multimedia-4.7.1 (09 Nov 2010)
 

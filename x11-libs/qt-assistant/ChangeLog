@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.101 2010/12/07 16:05:35 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.102 2010/12/23 07:54:34 ssuominen Exp $
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  qt-assistant-4.6.3.ebuild:
+  ppc64 stable wrt #341703
 
   07 Dec 2010; Alex Alexander <wired@gentoo.org> qt-assistant-4.6.2-r2.ebuild,
   qt-assistant-4.6.3.ebuild, qt-assistant-4.7.0.ebuild,
