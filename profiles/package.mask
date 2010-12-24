@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12297 2010/12/23 16:31:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12298 2010/12/24 11:12:58 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (24 Dec 2010)
+# Also mask clutter-gtk-0.90
+# Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
+# Breaks ABI/API, mask till we figure out what all is affected
+# Needed for gnome-shell, which is masked (in the gnome overlay)
+# Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
+>=media-libs/clutter-1.4
+>=media-libs/clutter-gtk-0.90
 
 # Markos Chandras <hwoarang@gentoo.org> (20 Dec 2010)
 # Qbittorrent beta packages will remain masked
@@ -129,12 +138,6 @@ dev-lang/wml
 # masked for testing #300078 #263956
 =media-tv/gentoo-vdr-scripts-0.4.8_rc1
 =media-tv/gentoo-vdr-scripts-0.4.8_rc2
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
-# Breaks ABI/API, mask till we figure out what all is affected
-# Needed for gnome-shell, which is masked (in the gnome overlay)
-# Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
->=media-libs/clutter-1.4
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Dec 2010)
 #  on behalf of QA team
