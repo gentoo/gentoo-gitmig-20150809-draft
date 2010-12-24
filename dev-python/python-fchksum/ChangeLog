@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.37 2010/10/19 05:48:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.38 2010/12/24 23:21:08 arfrever Exp $
+
+  24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-fchksum-1.7.1.ebuild:
+  Use distutils.eclass. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> python-fchksum-1.7.1.ebuild:
   Drop to ~mips
