@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.58 2010/12/15 12:11:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.59 2010/12/24 23:33:06 arfrever Exp $
+
+*cython-0.14-r1 (24 Dec 2010)
+
+  24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cython-0.14.ebuild, +cython-0.14-r1.ebuild,
+  +files/cython-0.14-__new__.patch, +files/cython-0.14-python-3.patch:
+  Fix compatibility with Python 3. Fix handling of __new__().
 
 *cython-0.14 (15 Dec 2010)
 
