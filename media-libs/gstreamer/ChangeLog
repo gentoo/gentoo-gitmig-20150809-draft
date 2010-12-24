@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.275 2010/09/29 01:10:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.276 2010/12/24 09:04:05 ford_prefect Exp $
+
+*gstreamer-0.10.31 (24 Dec 2010)
+
+  24 Dec 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gstreamer-0.10.31.ebuild:
+  Bump to 0.10.31. Bunch of fixes, new APIs for date/time and faster, unchecked
+  bitreader/bytewriter.
 
   29 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gstreamer-0.10.30.ebuild:
