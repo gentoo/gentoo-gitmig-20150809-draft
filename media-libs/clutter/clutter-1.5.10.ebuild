@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.12.ebuild,v 1.2 2010/09/25 13:44:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.5.10.ebuild,v 1.1 2010/12/24 01:49:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -12,12 +12,15 @@ SLOT="1.0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="debug doc +gtk +introspection"
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/cairo-1.4
+# NOTE: glx flavour uses libdrm + >=mesa-7.3
+RDEPEND=">=dev-libs/glib-2.26
+	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.20[introspection?]
-	>=dev-libs/json-glib-0.8[introspection?]
+	>=dev-libs/json-glib-0.12[introspection?]
+	>=dev-libs/atk-1.7
 
 	virtual/opengl
+	x11-libs/libdrm
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXdamage
@@ -26,22 +29,33 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/libXfixes-3
 	>=x11-libs/libXcomposite-0.4
 
-	gtk? ( >=x11-libs/gtk+-2.0 )
+	gtk? ( || (
+		x11-libs/gdk-pixbuf
+		>=x11-libs/gtk+-2.0 ) )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
-	>=dev-util/gtk-doc-am-1.11
+	>=dev-util/gtk-doc-am-1.13
 	doc? (
-		>=dev-util/gtk-doc-1.11
+		>=dev-util/gtk-doc-1.13
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
+"
+DOCS="AUTHORS README NEWS ChangeLog*"
 
 src_configure() {
+	# We only need conformance tests, the rest are useless for us
+	sed -e 's/^\(SUBDIRS =\).*/\1/g' \
+		-i tests/Makefile.am || die "am tests sed failed"
+	sed -e 's/^\(SUBDIRS =\).*/\1/g' \
+		-i tests/Makefile.in || die "in tests sed failed"
+
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
 	# XXX: Profiling, coverage disabled for now
-	# FIXME: Uses internal json-glib
+	# XXX: What about eglx/eglnative/opengl-egl-xlib/osx/wayland/etc flavours?
+	#      Uses gudev-1.0 and libxkbcommon for eglnative/cex1000
 	local myconf="
 		--enable-debug=minimum
 		--enable-cogl-debug=minimum
@@ -50,11 +64,11 @@ src_configure() {
 		--enable-profile=no
 		--enable-maintainer-flags=no
 		--enable-xinput
-		--with-json=system
 		--with-flavour=glx
 		--with-imagebackend=gdk-pixbuf
 		$(use_enable introspection)
-		$(use_enable doc docs)"
+		$(use_enable doc docs)
+		$(use_enable doc cogl2-reference)"
 
 	if ! use gtk; then
 		myconf="${myconf} --with-imagebackend=internal"
