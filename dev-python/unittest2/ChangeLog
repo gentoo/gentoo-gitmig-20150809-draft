@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.13 2010/12/07 11:44:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.14 2010/12/24 09:13:18 grobian Exp $
+
+  24 Dec 2010; Fabian Groffen <grobian@gentoo.org> unittest2-0.5.1.ebuild:
+  Added Prefix keywords, bug #339072
 
   07 Dec 2010; Markos Chandras <hwoarang@gentoo.org> unittest2-0.5.1.ebuild:
   Stable on amd64 wrt bug #345487
