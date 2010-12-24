@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.81 2010/11/14 16:05:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.82 2010/12/24 16:46:11 pchrist Exp $
+
+*guile-1.8.8 (24 Dec 2010)
+
+  24 Dec 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +guile-1.8.8.ebuild:
+  Bumped guile to 1.8.8. This is a maintainance release of the 1.8.x series
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> guile-1.6.8.ebuild,
   guile-1.8.4.ebuild, guile-1.8.4-r1.ebuild, guile-1.8.5.ebuild,
