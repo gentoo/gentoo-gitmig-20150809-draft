@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Term-Shell
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.1 2010/12/24 14:01:21 pva Exp $
+
+*Term-Shell-0.02 (24 Dec 2010)
+
+  24 Dec 2010; Peter Volkov <pva@gentoo.org> +Term-Shell-0.02.ebuild,
+  +metadata.xml:
+  Initial import, bug #347641, thank Azamat H. Hackimov for report.
+
