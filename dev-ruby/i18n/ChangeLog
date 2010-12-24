@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.24 2010/12/04 16:41:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.25 2010/12/24 10:20:04 graaff Exp $
+
+*i18n-0.4.2 (24 Dec 2010)
+
+  24 Dec 2010; Hans de Graaff <graaff@gentoo.org> +i18n-0.4.2.ebuild:
+  Version bump. Fixes bug 349546, thanks to matsuu for providing patches.
 
   04 Dec 2010; Fabian Groffen <grobian@gentoo.org> i18n-0.5.0.ebuild:
   Added Prefix keywords
