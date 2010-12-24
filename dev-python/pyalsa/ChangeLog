@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.13 2010/11/08 21:14:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.14 2010/12/24 17:47:08 armin76 Exp $
+
+  24 Dec 2010; Raúl Porcel <armin76@gentoo.org> pyalsa-1.0.22.ebuild:
+  sparc stable wrt #344571
 
   08 Nov 2010; Jeroen Roovers <jer@gentoo.org> pyalsa-1.0.22.ebuild:
   Stable for PPC (bug #344571).
