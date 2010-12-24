@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.28 2010/12/17 13:02:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.29 2010/12/24 02:26:21 arfrever Exp $
+
+  24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mercurial-1.6.3.ebuild, mercurial-1.6.4.ebuild, mercurial-1.7.ebuild,
+  mercurial-1.7.1.ebuild, mercurial-1.7.2.ebuild, mercurial-9999.ebuild:
+  Restrict Jython ABIs.
 
   17 Dec 2010; Thomas Kahle <tomka@gentoo.org> mercurial-1.7.ebuild:
   x86 stable per bug 348499
