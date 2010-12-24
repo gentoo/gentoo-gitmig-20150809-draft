@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.8.ebuild,v 1.1 2010/12/20 18:03:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.8.ebuild,v 1.2 2010/12/24 12:58:02 pva Exp $
 
 EAPI=2
 
@@ -54,7 +54,8 @@ RDEPEND="
 	tk? ( dev-lang/tk )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	networkmanager? ( net-misc/networkmanager )
-	idn? ( net-dns/libidn )"
+	idn? ( net-dns/libidn )
+	!<x11-plugins/pidgin-facebookchat-1.69-r1"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
