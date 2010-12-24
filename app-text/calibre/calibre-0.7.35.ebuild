@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.55.ebuild,v 1.1 2010/05/30 09:52:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.35.ebuild,v 1.1 2010/12/24 05:19:50 zmedico Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND=2:2.6
 PYTHON_USE_WITH=sqlite
 
-inherit python distutils eutils fdo-mime bash-completion
+inherit python distutils eutils fdo-mime bash-completion multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
@@ -20,32 +20,32 @@ SLOT="0"
 
 IUSE=""
 
-SHARED_DEPEND=">=dev-python/cssutils-0.9.7_alpha2
-	>=dev-python/setuptools-0.6_rc5
-	>=dev-python/imaging-1.1.6
+SHARED_DEPEND="
+	>=app-text/podofo-0.8.2
+	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=dev-libs/chmlib-0.40
-	virtual/libusb:0
-	>=dev-python/PyQt4-4.5[X,svg,webkit]
-	>=dev-python/mechanize-0.1.11
-	|| ( >=media-gfx/imagemagick-6.3.5 media-gfx/graphicsmagick[imagemagick] )
-	>=x11-misc/xdg-utils-1.0.2
-	>=dev-python/dbus-python-0.82.2
-	>=dev-python/lxml-2.1.5
-	>=dev-python/python-dateutil-1.4.1
+	>=dev-libs/icu-4.4
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
-	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
-	>=sys-apps/help2man-1.36.4
-	app-text/podofo"
+	>=dev-python/cssutils-0.9.7_alpha3
+	>=dev-python/dbus-python-0.82.2
+	>=dev-python/imaging-1.1.6
+	>=dev-python/lxml-2.2.1
+	>=dev-python/mechanize-0.1.11
+	>=dev-python/python-dateutil-1.4.1
+	>=dev-python/PyQt4-4.7[X,svg,webkit]
+	|| ( >=media-gfx/imagemagick-6.5.9 media-gfx/graphicsmagick[imagemagick] )
+	>=media-libs/libwmf-0.2.8
+	virtual/libusb:0
+	>=x11-misc/xdg-utils-1.0.2"
 
 RDEPEND="$SHARED_DEPEND
 	>=dev-python/reportlab-2.1"
 
 DEPEND="$SHARED_DEPEND
-	dev-python/setuptools
+	>=dev-python/setuptools-0.6_rc5
 	>=gnome-base/librsvg-2.0.0
-	>=x11-misc/xdg-utils-1.0.2-r2
-	sys-apps/help2man"
+	>=x11-misc/xdg-utils-1.0.2-r2"
 
 S=$WORKDIR/$PN
 
@@ -59,7 +59,6 @@ src_prepare() {
 	sed -e "s:'xdg-desktop-menu', 'install':'xdg-desktop-menu', 'install', '--mode', 'user':" \
 		-e "s:xdg-icon-resource install:xdg-icon-resource install --mode user:" \
 		-e "s:xdg-mime install:xdg-mime install --mode user:" \
-		-e "s:old_udev = '/etc:old_udev = '${D}etc:" \
 		-i src/calibre/linux.py || die "sed'ing in the IMAGE path failed"
 
 	# Disable unnecessary privilege dropping for bug #287067.
@@ -87,11 +86,16 @@ src_install() {
 	# violation with kbuildsycoca as in bug #287067, comment #13.
 	export -n DISPLAY
 
-	# Bug #295672 - Aavoid sandbox violation in ~/.config by forcing
+	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
+	export HOME="$T/fake_homedir"
 	export XDG_CONFIG_HOME="$HOME/.config"
+	export XDG_DATA_HOME="$HOME/.local/share"
 	export CALIBRE_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/calibre"
 	mkdir -p "$XDG_CONFIG_HOME" "$CALIBRE_CONFIG_DIRECTORY"
+
+	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
+	export OVERRIDE_CFLAGS="$CFLAGS $LDFLAGS"
 
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install --bindir="${D}usr/bin" --sharedir="${D}usr/share"
@@ -105,10 +109,28 @@ src_install() {
 
 	# This code may fail if behavior of --root, --bindir or
 	# --sharedir changes in the future.
-	dodir /usr/lib
-	mv "${D}lib/calibre" "${D}usr/lib/" ||
-		die "failed to move lib dir"
+	local libdir=$(get_libdir)
+	dodir /usr/$libdir
+	mv "${D}lib/calibre" "${D}usr/$libdir/" ||
+		die "failed to move libdir"
 	find "${D}"lib -type d -empty -delete
+	grep -rlZ "/usr/lib/calibre" "${D}" | \
+		xargs -0 sed -e "s:/usr/lib/calibre:/usr/$libdir/calibre:g" -i ||
+		die "failed to fix harcoded libdir paths"
+
+	find "${D}"share/calibre/man -type f -print0 | \
+		while read -r -d $'\0' ; do
+			if [[ $REPLY = *.[0-9]calibre.bz2 ]] ; then
+				newname=${REPLY%calibre.bz2}.bz2
+				mv "$REPLY" "$newname"
+				doman "$newname" || die "doman failed"
+				rm -f "$newname" || die "rm failed"
+			fi
+		done
+	rmdir "${D}"share/calibre/man/* || \
+		die "could not remove redundant man subdir(s)"
+	rmdir "${D}"share/calibre/man || \
+		die "could not remove redundant man dir"
 
 	dodir /usr/bin
 	mv "${D}bin/"* "${D}usr/bin/" ||
