@@ -1,7 +1,0 @@
-name="cryptokit"
-version="VERSION"
-description="Cryptographic primitives"
-requires="unix num"
-archive(byte)="cryptokit.cma"
-archive(native)="cryptokit.cmxa"
-linkopts = ""

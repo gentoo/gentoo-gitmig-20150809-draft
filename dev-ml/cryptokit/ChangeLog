@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/cryptokit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.5 2010/10/09 00:06:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.6 2010/12/24 17:41:45 aballier Exp $
+
+  24 Dec 2010; Alexis Ballier <aballier@gentoo.org> -cryptokit-1.3.ebuild,
+  -files/META, -files/cryptokit-gentoo.patch:
+  remove old
 
 *cryptokit-1.4 (09 Oct 2010)
 
