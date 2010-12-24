@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.1.ebuild,v 1.4 2010/12/23 16:25:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.1.ebuild,v 1.5 2010/12/24 12:52:29 ssuominen Exp $
 
 EAPI="2"
 
-inherit autotools eutils multilib flag-o-matic
+inherit autotools eutils multilib flag-o-matic virtualx
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -133,7 +133,7 @@ src_compile() {
 
 src_test() {
 	cd "${TBD}"
-	DBUS_VERBOSE=1 make check || die "make check failed"
+	DBUS_VERBOSE=1 Xmake check || die "make check failed"
 }
 
 src_install() {
