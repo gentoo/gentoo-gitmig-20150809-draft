@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.6-r1.ebuild,v 1.1 2010/11/30 15:44:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.6-r1.ebuild,v 1.2 2010/12/24 23:24:27 olemarkus Exp $
 
 EAPI=2
 
@@ -22,11 +22,11 @@ IUSE="mmap"
 DEPEND="!dev-php5/eaccelerator !dev-php5/xcache"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	my_conf="--enable-apc"
 	enable_extension_enable "apc-mmap" "mmap" 0
 
-	php-ext-pecl-r2_src_compile
+	php-ext-source-r2_src_configure
 }
 
 src_install() {
