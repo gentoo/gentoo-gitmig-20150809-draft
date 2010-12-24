@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2-r1.ebuild,v 1.8 2010/10/17 15:45:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2-r1.ebuild,v 1.9 2010/12/24 13:34:16 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -42,7 +42,7 @@ COMMON_DEPEND="
 	clutter? (
 		>=dev-libs/gobject-introspection-0.6.3
 		>=media-libs/clutter-1.0.0:1.0
-		>=media-libs/clutter-gtk-0.10.2:1.0 )
+		>=media-libs/clutter-gtk-0.10.2:0.10 )
 	guile? ( >=dev-scheme/guile-1.6.5[deprecated,regex] )
 	opengl? (
 		dev-python/pygtkglext
@@ -54,7 +54,7 @@ RDEPEND="${COMMON_DEPEND}
 		dev-libs/seed
 		x11-libs/gtk+[introspection]
 		>=media-libs/clutter-1.0.0:1.0[introspection]
-		>=media-libs/clutter-gtk-0.10.2:1.0[introspection] )"
+		>=media-libs/clutter-gtk-0.10.2:0.10[introspection] )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/autoconf-2.53
 	>=dev-util/pkgconfig-0.15
