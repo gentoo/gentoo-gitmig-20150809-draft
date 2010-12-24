@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.12 2010/10/10 18:49:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.13 2010/12/24 20:39:33 vapier Exp $
 
 # emacs support disabled due to #99533 #335900
 
-inherit eutils toolchain-funcs flag-o-matic
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Console-based mouse driver"
-HOMEPAGE="http://linux.schottelius.org/gpm/"
-SRC_URI="http://linux.schottelius.org/gpm/archives/${P}.tar.lzma"
+HOMEPAGE="http://www.nico.schottelius.org/software/gpm/"
+SRC_URI="http://www.nico.schottelius.org/software/${PN}/archives/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,36 +21,32 @@ DEPEND="sys-libs/ncurses
 	app-arch/xz-utils"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.20.5-abi.patch
 	epatch "${FILESDIR}"/0001-daemon-use-sys-ioctl.h-for-ioctl.patch #222099
+	epatch "${FILESDIR}"/0001-fixup-make-warnings.patch #206291
+
+	# workaround broken release
+	find -name '*.o' -delete
+}
+
+src_configure() {
+	econf \
+		--sysconfdir=/etc/gpm \
+		emacs=/bin/false
 }
 
 src_compile() {
-	econf \
-		--libdir=/$(get_libdir) \
-		--sysconfdir=/etc/gpm \
-		emacs=/bin/false \
-		|| die "econf failed"
-
-	# workaround broken release
-	find -name '*.o' | xargs rm
+	# make sure nothing compiled is left
 	emake clean || die
-	emake -j1 -C doc || die
-
-	emake EMACS=: || die "emake failed"
+	emake EMACS=: || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" EMACS=: ELISP="" || die "make install failed"
+	emake install DESTDIR="${D}" EMACS=: ELISP="" || die
 
-	dosym libgpm.so.1.20.0 /$(get_libdir)/libgpm.so.1
-	dosym libgpm.so.1 /$(get_libdir)/libgpm.so
-	dodir /usr/$(get_libdir)
-	mv "${D}"/$(get_libdir)/libgpm.a "${D}"/usr/$(get_libdir)/ || die
-	gen_usr_ldscript libgpm.so
+	dosym libgpm.so.1 /usr/$(get_libdir)/libgpm.so
+	gen_usr_ldscript -a gpm
 
 	insinto /etc/gpm
 	doins conf/gpm-*.conf
