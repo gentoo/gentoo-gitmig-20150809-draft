@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.62 2010/12/24 13:10:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.63 2010/12/24 13:22:30 arfrever Exp $
+
+  24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild, dbus-python-0.83.1.ebuild,
+  dbus-python-0.83.2.ebuild:
+  Restrict Jython ABIs.
 
 *dbus-python-0.83.2 (24 Dec 2010)
 
