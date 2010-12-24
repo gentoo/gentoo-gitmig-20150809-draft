@@ -1,6 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/pychm-0.8.4.ebuild,v 1.6 2008/05/13 07:51:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/pychm-0.8.4.ebuild,v 1.7 2010/12/24 23:00:12 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -14,5 +19,6 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/chmlib"
+RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="chm"
