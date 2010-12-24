@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/shelldap
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/shelldap/ChangeLog,v 1.1 2010/12/24 14:03:09 pva Exp $
+
+*shelldap-0.2_p20100615 (24 Dec 2010)
+
+  24 Dec 2010; Peter Volkov <pva@gentoo.org> +shelldap-0.2_p20100615.ebuild,
+  +metadata.xml:
+  Initial import, bug #347643, thank Azamat H. Hackimov for report.
+
