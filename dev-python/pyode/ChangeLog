@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.13 2009/11/21 18:02:20 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.14 2010/12/25 13:40:29 nelchael Exp $
+
+*pyode-1.2.0_p20100322 (25 Dec 2010)
+
+  25 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -pyode-1.1.0_p20060728.ebuild, +pyode-1.2.0_p20100322.ebuild,
+  -files/setup.py:
+  Version bump (bug #347886), removed old.
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> pyode-1.2.0.ebuild:
   x86 stable, bug #288897
