@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.7.1.ebuild,v 1.1 2010/11/03 21:03:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.7.1.ebuild,v 1.2 2010/12/25 09:06:04 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Application finder"
-HOMEPAGE="http://www.xfce.org/projects/xfce4-appfinder"
+DESCRIPTION="Application finder and launcher for the Xfce desktop environment"
+HOMEPAGE="http://www.xfce.org/projects/xfce4-appfinder/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
