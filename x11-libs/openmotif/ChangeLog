@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.254 2010/12/02 13:37:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.255 2010/12/25 14:46:08 tomka Exp $
+
+  25 Dec 2010; Thomas Kahle <tomka@gentoo.org> openmotif-2.2.3-r11.ebuild:
+  x86 stable per bug 347595
 
 *openmotif-2.2.3-r11 (02 Dec 2010)
 
