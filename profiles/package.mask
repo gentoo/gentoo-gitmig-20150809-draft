@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12300 2010/12/25 17:54:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12301 2010/12/25 21:42:42 rafaelmartins Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -496,11 +496,6 @@ dev-util/autotoolset
 #
 # Removal on 2010-12-01
 net-nntp/nntpswitch
-
-# Rafael G. Martins <rafaelmartins@gentoo.org> (01 Oct 2010)
-# Upstream moved the source control from SVN to BZR.
-# The live ebuild will be masked until fix bug #339374
-=sci-electronics/kicad-99999999
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (01 Oct 2010)
 #  on behalf of QA team
