@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-scw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-scw/ChangeLog,v 1.3 2009/02/15 23:05:49 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-scw/ChangeLog,v 1.4 2010/12/25 17:25:55 arfrever Exp $
+
+  25 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-scw-0.4.7.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   15 Feb 2009; Patrick Lauer <patrick@gentoo.org> python-scw-0.4.7.ebuild:
   Adding ~amd64 keyword
