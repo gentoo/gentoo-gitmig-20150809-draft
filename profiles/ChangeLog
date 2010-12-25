@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4883 2010/12/25 01:30:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4884 2010/12/25 17:54:52 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Dec 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask lwt-2.2.0, breaks ocsigen
 
   25 Dec 2010; Sebastian Pipping <sping@gentoo.org> thirdpartymirrors:
   Remove cran thirdparty mirror (domain up for sale): http://cran.r-mirror.de
