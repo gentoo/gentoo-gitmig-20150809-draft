@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3-r1.ebuild,v 1.1 2010/12/25 17:05:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3-r1.ebuild,v 1.2 2010/12/25 19:21:04 scarabeus Exp $
 
 EAPI="3"
 
@@ -57,6 +57,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.3-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.3-ruby_libname.patch
 	"${FILESDIR}"/${PN}-2.8.3-buffer_overflow.patch
+	"${FILESDIR}"/${PN}-2.8.3-fix_assembler_test.patch
 )
 _src_bootstrap() {
 	  echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' > /dev/null
