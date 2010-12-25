@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.4.1.ebuild,v 1.9 2010/05/23 11:02:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-0.4.1.ebuild,v 1.10 2010/12/25 08:52:36 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
-DESCRIPTION="Thunar thumbnailers plugin"
-HOMEPAGE="http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers"
+DESCRIPTION="This package has been replaced. Use xfce-extra/tumbler instead soon as possible."
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -25,10 +25,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	XFCONF="$(use_enable latex tex)
+	XFCONF=(
+		$(use_enable latex tex)
 		$(use_enable raw)
 		$(use_enable grace)
 		$(use_enable ffmpeg)
-		--disable-update-mime-database"
-	DOCS="AUTHORS ChangeLog README"
+		--disable-update-mime-database
+		)
 }

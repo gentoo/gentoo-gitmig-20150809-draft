@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-4.7.0.ebuild,v 1.4 2010/11/03 19:52:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-thumbnailers/thunar-thumbnailers-4.7.0.ebuild,v 1.5 2010/12/25 08:52:36 ssuominen Exp $
 
 # Ensure sane upgrade path for users.
 
-EAPI=2
+EAPI=3
 
-DESCRIPTION="A D-Bus service for applications to request thumbnails"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="This package has been replaced. Use xfce-extra/tumbler instead soon as possible."
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
