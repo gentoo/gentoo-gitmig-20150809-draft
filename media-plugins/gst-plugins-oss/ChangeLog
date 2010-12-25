@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.168 2010/12/20 17:25:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.169 2010/12/25 14:19:20 maekke Exp $
+
+  25 Dec 2010; Markus Meier <maekke@gentoo.org> gst-plugins-oss-0.10.23.ebuild:
+  arm stable, bug #346981
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-oss-0.10.23.ebuild:
