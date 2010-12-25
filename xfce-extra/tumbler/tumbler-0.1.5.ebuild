@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.5.ebuild,v 1.2 2010/12/25 08:59:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.5.ebuild,v 1.3 2010/12/25 09:03:30 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
-DESCRIPTION="Thumbnailers for Thunar, filemanager of the Xfce desktop"
+DESCRIPTION="A thumbnail service for the filemanager of Xfce desktop environment"
 HOMEPAGE="http://www.xfce.org/projects/thunar/"
 SRC_URI="mirror://xfce/src/apps/${PN}/0.1/${P}.tar.bz2"
 
