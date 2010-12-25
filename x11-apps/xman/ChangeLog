@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.45 2010/12/23 11:40:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.46 2010/12/25 20:07:17 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> xman-1.1.1.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xman-1.1.1.ebuild:
   amd64 stable wrt #344827

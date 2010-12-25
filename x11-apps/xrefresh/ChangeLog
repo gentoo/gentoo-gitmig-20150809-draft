@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xrefresh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.39 2010/12/23 11:42:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.40 2010/12/25 20:09:44 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  xrefresh-1.0.4.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> xrefresh-1.0.4.ebuild:
   amd64 stable wrt #344827
