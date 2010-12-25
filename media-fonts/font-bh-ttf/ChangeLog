@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.46 2010/12/23 10:30:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.47 2010/12/25 19:39:30 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  font-bh-ttf-1.0.3.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> font-bh-ttf-1.0.3.ebuild:
   amd64 stable wrt #344827
