@@ -1,6 +1,5 @@
-diff -ur thunar-media-tags-plugin-0.1.2.orig/configure.in thunar-media-tags-plugin-0.1.2/configure.in
---- thunar-media-tags-plugin-0.1.2.orig/configure.in	2007-01-20 17:29:39.000000000 +0200
-+++ thunar-media-tags-plugin-0.1.2/configure.in	2010-01-15 06:33:45.000000000 +0200
+--- configure.in
++++ configure.in
 @@ -64,9 +64,8 @@
  dnl ***********************************
  dnl *** Check for required packages ***
@@ -13,11 +12,8 @@ diff -ur thunar-media-tags-plugin-0.1.2.orig/configure.in thunar-media-tags-plug
  XDT_CHECK_PACKAGE([TAGLIB], [taglib], [1.4])
  
  dnl ***********************************
-Only in thunar-media-tags-plugin-0.1.2: foo.diff
-Only in thunar-media-tags-plugin-0.1.2: foo.patch
-diff -ur thunar-media-tags-plugin-0.1.2.orig/thunar-plugin/audio-tags-page.c thunar-media-tags-plugin-0.1.2/thunar-plugin/audio-tags-page.c
---- thunar-media-tags-plugin-0.1.2.orig/thunar-plugin/audio-tags-page.c	2006-09-11 12:40:56.000000000 +0300
-+++ thunar-media-tags-plugin-0.1.2/thunar-plugin/audio-tags-page.c	2010-01-15 06:36:58.000000000 +0200
+--- thunar-plugin/audio-tags-page.c
++++ thunar-plugin/audio-tags-page.c
 @@ -32,7 +32,6 @@
  #include <taglib/tag_c.h>
  
@@ -61,10 +57,8 @@ diff -ur thunar-media-tags-plugin-0.1.2.orig/thunar-plugin/audio-tags-page.c thu
    return TRUE;
  }
  
-Only in thunar-media-tags-plugin-0.1.2/thunar-plugin: audio-tags-page.c.orig
-diff -ur thunar-media-tags-plugin-0.1.2.orig/thunar-plugin/Makefile.am thunar-media-tags-plugin-0.1.2/thunar-plugin/Makefile.am
---- thunar-media-tags-plugin-0.1.2.orig/thunar-plugin/Makefile.am	2006-06-08 16:04:45.000000000 +0300
-+++ thunar-media-tags-plugin-0.1.2/thunar-plugin/Makefile.am	2010-01-15 06:34:48.000000000 +0200
+--- thunar-plugin/Makefile.am
++++ thunar-plugin/Makefile.am
 @@ -8,7 +8,7 @@
  	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
  	$(PLATFORM_CPPFLAGS)

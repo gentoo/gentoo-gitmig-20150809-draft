@@ -1,6 +1,5 @@
-diff -ur thunar-media-tags-plugin-0.1.2.orig/configure.in thunar-media-tags-plugin-0.1.2/configure.in
---- thunar-media-tags-plugin-0.1.2.orig/configure.in	2007-01-20 17:29:39.000000000 +0200
-+++ thunar-media-tags-plugin-0.1.2/configure.in	2009-10-29 01:12:19.000000000 +0200
+--- configure.in
++++ configure.in
 @@ -64,7 +64,8 @@
  dnl ***********************************
  dnl *** Check for required packages ***
