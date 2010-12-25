@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcursor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.74 2010/12/23 11:56:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcursor/ChangeLog,v 1.75 2010/12/25 20:27:15 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  libXcursor-1.1.11.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libXcursor-1.1.11.ebuild:
   amd64 stable wrt #344827

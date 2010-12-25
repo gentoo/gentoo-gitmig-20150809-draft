@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXevie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.42 2010/12/23 11:56:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.43 2010/12/25 20:28:05 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  libXevie-1.0.3.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> libXevie-1.0.3.ebuild:
   amd64 stable wrt #344827
