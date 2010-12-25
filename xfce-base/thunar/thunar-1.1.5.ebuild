@@ -1,19 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.5.ebuild,v 1.2 2010/12/18 16:47:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.5.ebuild,v 1.3 2010/12/25 10:35:48 ssuominen Exp $
 
 EAPI=3
 inherit virtualx xfconf
 
 MY_P=${P/t/T}
 
-DESCRIPTION="Xfce's file manager"
-HOMEPAGE="http://thunar.xfce.org/"
+DESCRIPTION="A file manager for the Xfce desktop environment"
+HOMEPAGE="http://www.xfce.org/projects/thunar/ http://thunar.xfce.org/"
 SRC_URI="mirror://xfce/src/xfce/${PN}/1.1/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus debug exif libnotify pcre startup-notification test +xfce_plugins_trash udev"
 
 COMMON_DEPEND=">=xfce-base/exo-0.5.3
@@ -22,19 +22,19 @@ COMMON_DEPEND=">=xfce-base/exo-0.5.3
 	>=xfce-base/libxfce4util-4.6
 	>=xfce-base/libxfce4ui-4.7.1
 	>=dev-lang/perl-5.6
-	dbus? ( dev-libs/dbus-glib )
+	dbus? ( >=dev-libs/dbus-glib-0.88 )
 	exif? ( >=media-libs/libexif-0.6.19 )
 	libnotify? ( x11-libs/libnotify )
 	pcre? ( >=dev-libs/libpcre-6 )
 	startup-notification? ( x11-libs/startup-notification )
-	xfce_plugins_trash? ( dev-libs/dbus-glib
+	xfce_plugins_trash? ( >=dev-libs/dbus-glib-0.88
 		>=xfce-base/xfce4-panel-4.3.90 )
 	udev? ( >=sys-fs/udev-145[extras] )"
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	dev-util/desktop-file-utils
-	xfce_plugins_trash? ( gnome-base/gvfs )
-	udev? ( >=gnome-base/gvfs-1.6.3[gdu,udev] )"
+	>=gnome-base/gvfs-1.6.6
+	udev? ( >=gnome-base/gvfs-1.6.6[gdu,udev] )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -63,12 +63,6 @@ pkg_setup() {
 	fi
 
 	DOCS="AUTHORS ChangeLog FAQ HACKING NEWS README THANKS TODO"
-
-	if ! has_version gnome-base/gvfs; then
-		ewarn "Because gnome-base/gvfs is not installed, Trash will be"
-		ewarn "unfunctional:"
-		ewarn "# emerge -av gnome-base/gvfs"
-	fi
 }
 
 src_test() {
