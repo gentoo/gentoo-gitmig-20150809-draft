@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/python-iwscan-20080402.ebuild,v 1.8 2009/11/30 06:37:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/python-iwscan-20080402.ebuild,v 1.9 2010/12/25 17:00:56 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -15,3 +20,5 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
