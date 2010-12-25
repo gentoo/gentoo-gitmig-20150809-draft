@@ -1,38 +1,89 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.4 2010/12/23 08:46:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.5 2010/12/25 21:37:38 rafaelmartins Exp $
 
-EAPI="2"
+# rafaelmartins: Please try to keep the live ebuild synchronized with
+# the latest snapshot ebuild. e.g.:
+# cp kicad-YYYYMMDD_pXXXX.ebuild kicad-99999999.ebuild
+
+EAPI="3"
+
 WX_GTK_VER="2.8"
 
-inherit cmake-utils wxwidgets fdo-mime gnome2-utils subversion
+BZR_ECLASS=""
+if [[ "${PV}" = "99999999" ]]; then
+	BZR_ECLASS=" bzr"
+fi
+
+inherit cmake-utils wxwidgets fdo-mime gnome2-utils${BZR_ECLASS}
 
 DESCRIPTION="Electronic Schematic and PCB design tools."
 HOMEPAGE="http://kicad.sourceforge.net"
 
+SRC_URI=""
+if [[ "${PV}" != "99999999" ]]; then
+	SRC_URI="
+		http://dev.gentoo.org/~rafaelmartins/distfiles/${PN}-sources-${PV}.tar.xz
+		!minimal? ( http://dev.gentoo.org/~rafaelmartins/distfiles/${PN}-library-${PV}.tar.xz )
+		doc? ( http://dev.gentoo.org/~rafaelmartins/distfiles/${PN}-doc-${PV}.tar.xz )
+		examples? ( http://dev.gentoo.org/~rafaelmartins/distfiles/${PN}-examples-${PV}.tar.xz )"
+fi
+
 LICENSE="GPL-2"
 SLOT="0"
+
 KEYWORDS=""
-IUSE="dev-doc doc debug examples minimal python"
+if [[ "${PV}" != "99999999" ]]; then
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+fi
+
+IUSE="dev-doc debug doc examples minimal python"
 
 CDEPEND="x11-libs/wxGTK:2.8[X,opengl]"
 DEPEND="${CDEPEND}
 	>=dev-util/cmake-2.6.0
-	>=dev-libs/boost-1.39[python?]
+	>=dev-libs/boost-1.40[python?]
+	app-arch/xz-utils
 	dev-doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}
 	sys-libs/zlib
 	sci-electronics/electronics-menu"
 
-src_unpack() {
-	local svn_uri_base="https://kicad.svn.sourceforge.net/svnroot/kicad/trunk"
-	subversion_fetch "${svn_uri_base}/kicad"
-	use minimal || subversion_fetch "${svn_uri_base}/kicad-library" kicad-library
-	use doc && subversion_fetch "${svn_uri_base}/kicad-doc" kicad-doc
-}
+if [[ "${PV}" != "99999999" ]]; then
+	S="${WORKDIR}/${PN}"
+else
+	src_unpack() {
+		# FIXME: we need to send patches for bzr.eclass, to avoid the weird
+		# declarations of ${P} below.
+		EBZR_REPO_URI="lp:~kicad-testing-committers/kicad/testing" bzr_fetch
+		if ! use minimal; then
+			EBZR_REPO_URI="lp:~kicad-lib-committers/kicad/library" \
+				P="${P}/kicad-library" \
+				EBZR_CACHE_DIR="kicad-library" bzr_fetch
+		fi
+		if use doc; then
+			EBZR_REPO_URI="lp:~kicad-developers/kicad/doc" \
+				P="${P}/kicad-doc" \
+				EBZR_CACHE_DIR="kicad-doc" bzr_fetch
+		fi
+	}
+fi
 
 src_prepare() {
-	subversion_src_prepare
+
+	# prepare sources from BZR, snapshots are already prepared with this
+	if [[ "${PV}" = "99999999" ]]; then
+		sed -i \
+			-e '/add_subdirectory(template)/ a \
+				add_subdirectory(kicad-doc)\
+				add_subdirectory(kicad-library)' \
+			-e 's/create_svn_version_header()/#create_svn_version_header()/' \
+			-e 's/ -O2 / /' \
+			CMakeLists.txt || die 'sed failed'
+		sed -i \
+			-e 's/Scientific;Development/Engineering;Electronics/' \
+			resources/linux/mime/applications/*.desktop || die 'sed failed'
+	fi
 
 	# Use native boost
 	sed -i -e '/Boost/s/^#check_find_package/check_find_package/' \
@@ -47,18 +98,16 @@ src_prepare() {
 
 	# Handle optional minimal install
 	if use minimal ; then
-		sed -i -e '/add_subdirectory(template)/d' CMakeLists.txt || die "sed failed"
-	else
-		sed -i -e '/add_subdirectory(template)/a \
-add_subdirectory(kicad-library)' CMakeLists.txt || die "sed failed"
+		sed -i -e '/add_subdirectory(template)/d' \
+			-e '/add_subdirectory(kicad-library)/d' CMakeLists.txt || die "sed failed"
 	fi
 
 	# Add documentation and fix necessary code if requested
 	if use doc ; then
-		sed -i -e '/add_subdirectory(demos)/a \
-add_subdirectory(kicad-doc)' CMakeLists.txt || die "sed failed"
 		sed -i -e "s/subdirs.Add( wxT( \"kicad\" ) );/subdirs.Add( wxT( \"${PF}\" ) );/" \
 			-e '/subdirs.Add( _T( "help" ) );/d' common/edaappl.cpp || die "sed failed"
+	else
+		sed -i -e '/add_subdirectory(kicad-doc)/d' CMakeLists.txt || die "sed failed"
 	fi
 
 	# Install examples in the right place if requested
