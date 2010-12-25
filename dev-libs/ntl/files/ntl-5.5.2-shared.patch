@@ -153,10 +153,14 @@
  	rm -rf small
  @{LSHAR}	- $(LIBTOOL) --mode=clean rm -f libntl.la *.lo #LSHAR
  
-@@ -549,3 +597,6 @@
+@@ -549,3 +597,10 @@
  
  
  
-+shared: DIRNAME $(SHOBJ)
++sharedso: DIRNAME $(SHOBJ)
 +	 $(LINK_CXX) $(PICFLAG) -shared -Wl,-soname,lib`cat DIRNAME`.so -o lib`cat DIRNAME`.so $(SHOBJ) $(GMP_OPT_LIBDIR) $(GMP_OPT_LIB) $(GF2X_OPT_LIBDIR) $(GF2X_OPT_LIB)
 +	 ln -s lib`cat DIRNAME`.so libntl.so
++
++shareddylib: DIRNAME $(SHOBJ)
++	 $(LINK_CXX) $(PICFLAG) -dynamiclib -install_name $(LIBDIR)/lib`cat DIRNAME`.dylib -o lib`cat DIRNAME`.dylib $(SHOBJ) $(GMP_OPT_LIBDIR) $(GMP_OPT_LIB) $(GF2X_OPT_LIBDIR) $(GF2X_OPT_LIB)
++	 ln -s lib`cat DIRNAME`.dylib libntl.dylib

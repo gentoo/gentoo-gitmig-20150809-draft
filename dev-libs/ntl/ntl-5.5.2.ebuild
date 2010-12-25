@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ntl-5.5.2.ebuild,v 1.5 2010/02/09 16:02:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ntl-5.5.2.ebuild,v 1.6 2010/12/25 12:07:27 grobian Exp $
 
-EAPI=2
-inherit toolchain-funcs eutils
+EAPI=3
+inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="High-performance and portable Number Theory C++ library"
 HOMEPAGE="http://shoup.net/ntl/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.shoup.net/ntl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/gmp-4.3
@@ -27,7 +27,7 @@ src_prepare() {
 	cd ..
 	# enable compatibility with singular
 	epatch "$FILESDIR/${P}-singular.patch"
-	# implement a call back framework ( submitted upstream)
+	# implement a call back framework (submitted upstream)
 	epatch "$FILESDIR/${P}-sage-tools.patch"
 	# sanitize the makefile and allow the building of shared library
 	epatch "$FILESDIR/${P}-shared.patch"
@@ -35,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	perl DoConfig \
-		PREFIX=/usr \
+		PREFIX="${EPREFIX}"/usr \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
 		AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" \
@@ -49,12 +49,14 @@ src_compile() {
 	emake setup3 || die "emake setup failed"
 	sh Wizard on || die "Tuning wizard failed"
 	emake ntl.a  || die "emake static failed"
-	emake shared || die "emake shared failed"
+	local trg=so
+	[[ ${CHOST} == *-darwin* ]] && trg=dylib
+	emake shared${trg} || die "emake shared failed"
 }
 
 src_install() {
 	newlib.a ntl.a libntl.a || die "installation of static library failed"
-	dolib.so lib*.so || die "installation of shared library failed"
+	dolib.so lib*$(get_libname) || die "installation of shared library failed"
 
 	cd ..
 	insinto /usr/include
