@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.87 2010/12/24 13:35:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.88 2010/12/25 16:26:59 armin76 Exp $
+
+  25 Dec 2010; Raúl Porcel <armin76@gentoo.org> webkit-gtk-1.2.5.ebuild:
+  alpha/arm/ia64/sparc stable wrt #281819
 
   24 Dec 2010; Thomas Kahle <tomka@gentoo.org> webkit-gtk-1.2.5.ebuild:
   x86 stable per bug 281819
