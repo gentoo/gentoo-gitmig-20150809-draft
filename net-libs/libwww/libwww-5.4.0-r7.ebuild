@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r7.ebuild,v 1.16 2010/07/18 21:44:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r7.ebuild,v 1.17 2010/12/25 05:13:51 ssuominen Exp $
 
 inherit eutils multilib autotools
 
@@ -10,7 +10,7 @@ MY_P=w3c-${P}
 DESCRIPTION="A general-purpose client side WEB API"
 HOMEPAGE="http://www.w3.org/Library/"
 SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
-	http://dev.gentoo.org/~ssuominen/${P}-patches-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
 
 LICENSE="W3C"
 SLOT="0"
