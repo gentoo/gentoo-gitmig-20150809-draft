@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.18 2010/12/25 00:29:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10.908.ebuild,v 1.1 2010/12/25 00:29:24 sping Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV

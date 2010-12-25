@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10.906.ebuild,v 1.2 2009/12/17 04:01:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10.906.ebuild,v 1.3 2010/12/25 00:29:24 sping Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -33,7 +33,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 if [[ ${PV} == 9999* ]]
 then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	EGIT_REPO_URI="git://git.wolf31o2.org/projs/genkernel.git"
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/genkernel.git"
 	inherit git bash-completion eutils
 	S="${WORKDIR}"
 	SRC_URI="${COMMON_URI}"
