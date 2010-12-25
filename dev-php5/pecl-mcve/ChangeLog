@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-mcve
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.31 2010/11/09 13:28:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.32 2010/12/25 17:49:16 jer Exp $
+
+  25 Dec 2010; Jeroen Roovers <jer@gentoo.org> pecl-mcve-7.0.3-r1.ebuild:
+  Stable for HPPA (bug #349659).
 
   09 Nov 2010; Jeroen Roovers <jer@gentoo.org> pecl-mcve-7.0.3-r1.ebuild:
   Marked ~hppa (bug #344127).
