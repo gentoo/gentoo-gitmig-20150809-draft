@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.2.4-r2.ebuild,v 1.11 2010/09/24 14:09:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.2.4-r2.ebuild,v 1.12 2010/12/25 07:45:51 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
 inherit xfconf
 
-DESCRIPTION="Thunar archive plugin"
-HOMEPAGE="http://www.foo-projects.org/~benny/projects/thunar-archive-plugin"
+DESCRIPTION="Archive plug-in for Thunar, filemanager of the Xfce desktop environment"
+HOMEPAGE="http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin"
 SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/0.2/${P}.tar.bz2
 	mirror://gentoo/${PN}-0.2.4-thunarx-2.patch.bz2"
 
@@ -33,7 +33,10 @@ pkg_setup() {
 		PATCHES+=( "${WORKDIR}"/${PN}-0.2.4-thunarx-2.patch )
 	fi
 
-	XFCONF="--disable-dependency-tracking
-		$(xfconf_use_debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README THANKS"
 }
