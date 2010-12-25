@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.90 2010/12/22 12:59:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.91 2010/12/25 14:31:02 maekke Exp $
+
+  25 Dec 2010; Markus Meier <maekke@gentoo.org> iputils-20100418-r1.ebuild:
+  arm stable, bug #342277
 
   22 Dec 2010; Tobias Klausmann <klausman@gentoo.org>
   iputils-20100418-r1.ebuild:
