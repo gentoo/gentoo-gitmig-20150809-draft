@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/csparse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/ChangeLog,v 1.3 2009/11/21 07:15:59 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/ChangeLog,v 1.4 2010/12/25 18:50:31 bicatali Exp $
+
+  22 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> csparse-2.2.3.ebuild:
+  Added static-libs flag
 
 *csparse-2.2.3 (21 Nov 2009)
 

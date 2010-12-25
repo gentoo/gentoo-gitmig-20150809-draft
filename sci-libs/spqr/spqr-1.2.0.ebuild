@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.0.ebuild,v 1.1 2010/05/14 16:42:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.0.ebuild,v 1.2 2010/12/25 18:51:56 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -13,7 +13,7 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc metis tbb"
+IUSE="doc metis static-libs tbb"
 RDEPEND="sci-libs/cholmod[supernodal]
 	tbb? ( dev-cpp/tbb )
 	metis? ( >=sci-libs/cholmod-1.7.0-r1[metis] )"
@@ -32,6 +32,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable static-libs static) \
 		$(use_with metis) \
 		$(use_with tbb)
 }

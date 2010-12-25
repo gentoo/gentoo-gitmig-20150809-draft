@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ldl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.1 2008/02/05 18:39:06 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.2 2010/12/25 18:51:36 bicatali Exp $
+
+  25 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> ldl-2.0.1.ebuild:
+  Added static-libs flag
 
 *ldl-2.0.1 (05 Feb 2008)
 

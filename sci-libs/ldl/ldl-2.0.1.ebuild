@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.1.ebuild,v 1.1 2008/02/05 18:39:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.1.ebuild,v 1.2 2010/12/25 18:51:36 bicatali Exp $
 
+EAPI=2
 inherit autotools eutils
 
 MY_PN=LDL
@@ -12,16 +13,18 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc static-libs"
 DEPEND="sci-libs/ufconfig"
 
 S="${WORKDIR}/${MY_PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
