@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9.ebuild,v 1.4 2010/12/14 15:21:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9.ebuild,v 1.5 2010/12/25 23:29:51 dilfridge Exp $
 
 EAPI="2"
 
 KDE_LINGUAS="de"
-inherit kde4-base
+inherit fdo-mime kde4-base
 
 DESCRIPTION="Simple KDE-based live data viewer for collectd"
 HOMEPAGE="http://www.forwiss.uni-passau.de/~berberic/Linux/kcollectd.html"
@@ -30,4 +30,10 @@ src_prepare() {
 	USE+=" linguas_de"
 	kde4-base_src_prepare
 	USE=${olduse}
+}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
