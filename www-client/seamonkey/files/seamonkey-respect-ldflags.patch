@@ -1,0 +1,28 @@
+--- a/directory/c-sdk/build.mk	2010-12-11 08:46:14.137000000 -0600
++++ b/directory/c-sdk/build.mk	2010-12-11 08:46:17.443000000 -0600
+@@ -488,21 +488,21 @@
+ LINK_LIB2       = $(RM) $@; $(AR) $@ $(OBJS2); $(RANLIB) $@
+ ifneq ($(LD),$(CC))
+ ifdef SONAMEFLAG_PREFIX
+-LINK_DLL        = $(LD) $(DSO_LDOPTS) $(LDRPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) \
++LINK_DLL        = $(LD) $(DSO_LDOPTS) $(LDRPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) $(OS_LDFLAGS)\
+                         $(DLL_LDFLAGS) $(DLL_EXPORT_FLAGS) \
+                         -o $@ $(SONAMEFLAG_PREFIX)$(notdir $@) $(OBJS)
+ else # SONAMEFLAG_PREFIX
+-LINK_DLL        = $(LD) $(DSO_LDOPTS) $(LDRPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) \
++LINK_DLL        = $(LD) $(DSO_LDOPTS) $(LDRPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) $(OS_LDFLAGS)\
+                         $(DLL_LDFLAGS) $(DLL_EXPORT_FLAGS) \
+                         -o $@ $(OBJS)
+ endif # SONAMEFLAG_PREFIX
+ else  # $(CC) is used to link libs
+ ifdef SONAMEFLAG_PREFIX
+-LINK_DLL        = $(LD) $(DSO_LDOPTS) $(RPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) \
++LINK_DLL        = $(LD) $(DSO_LDOPTS) $(RPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) $(OS_LDFLAGS)\
+                         $(DLL_LDFLAGS) $(DLL_EXPORT_FLAGS) \
+                         -o $@ $(SONAMEFLAG_PREFIX)$(notdir $@) $(OBJS)
+ else # SONAMEFLAG_PREFIX
+-LINK_DLL        = $(LD) $(DSO_LDOPTS) $(RPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) \
++LINK_DLL        = $(LD) $(DSO_LDOPTS) $(RPATHFLAG_PREFIX)$(RPATHFLAG) $(ALDFLAGS) $(OS_LDFLAGS)\
+                         $(DLL_LDFLAGS) $(DLL_EXPORT_FLAGS) \
+                         -o $@ $(OBJS)
+ endif # SONAMEFLAG_PREFIX
