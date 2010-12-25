@@ -10,4 +10,7 @@
 		<email>pclairam@gmail.com</email>
 		<name>Pierre Clairambault</name>
 	</maintainer>
+  <use>
+	  <flag name="react">Enables support for <pkg>dev-ml/react</pkg>: Functional reactive programming (signals, events, etc.).</flag>
+  </use>
 </pkgmetadata>
