@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.233 2010/12/23 11:46:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.234 2010/12/25 20:14:41 fauli Exp $
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  ati-drivers-10.11.ebuild:
+  x86 stable, bug 344827
 
   23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> ati-drivers-10.11.ebuild:
   amd64 stable wrt #344827
