@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.3 2010/12/23 16:58:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.4 2010/12/25 14:30:31 jlec Exp $
 
 EAPI="2"
 
@@ -72,10 +72,6 @@ pkg_setup() {
 
 	confutils_use_conflict gdal tiff
 	confutils_use_depend_all java threads
-}
-
-src_unpack() {
-	default
 }
 
 src_prepare() {
