@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymad
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.23 2008/03/21 19:17:38 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.24 2010/12/25 16:41:26 arfrever Exp $
+
+  25 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pymad-0.6.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   21 Mar 2008; Ali Polatel <hawking@gentoo.org> pymad-0.5.4.ebuild,
   pymad-0.6.ebuild:
