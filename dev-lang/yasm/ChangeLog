@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.43 2010/11/03 12:02:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.44 2010/12/25 05:29:26 ssuominen Exp $
+
+*yasm-1.1.0-r1 (25 Dec 2010)
+
+  25 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> +yasm-1.1.0-r1.ebuild,
+  +files/yasm-1.1.0-cython-0.14.patch:
+  Fix for Cython 0.14 wrt #348587 by Arfrever Frehtes Taifersar Arahesis.
 
   03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> yasm-1.1.0.ebuild:
   x86 stable wrt bug #343143
