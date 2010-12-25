@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2.5.ebuild,v 1.6 2010/12/23 16:06:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2.5.ebuild,v 1.7 2010/12/25 18:49:32 robbat2 Exp $
 
 EAPI=3
 
@@ -441,8 +441,11 @@ src_test() {
 	cd "${S}"
 	# Now run the tests
 	einfo "Start test run"
-	git_emake \
-		test || die "tests failed"
+	git_emake test
+	rc=$?
+	# Display nice results
+	git_emake aggregate-results
+	[ $rc -eq 0 ] || die "tests failed. Please file a bug with ${S}/t/ attached."
 }
 
 showpkgdeps() {
