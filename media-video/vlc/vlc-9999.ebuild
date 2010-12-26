@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.100 2010/11/07 19:14:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.101 2010/12/26 13:57:23 aballier Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
-	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
+	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse stream
 	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
@@ -110,6 +110,7 @@ RDEPEND="
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
+		sid? ( media-libs/libsidplay:2 )
 		skins? (
 				x11-libs/qt-gui:4 x11-libs/qt-core:4
 				x11-libs/libXext x11-libs/libX11
@@ -209,6 +210,10 @@ src_configure() {
 	# It would fail if -fforce-addr is used due to too few registers...
 	use x86 && filter-flags -fforce-addr
 
+	# needs libresid-builder from libsidplay:2 which is in another directory...
+	# FIXME!
+	use sid && append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
+
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable a52) \
@@ -279,6 +284,7 @@ src_configure() {
 		$(use_enable sdl) \
 		$(use_enable sdl-image) \
 		$(use_enable shine) \
+		$(use_enable sid) \
 		$(use_enable shout) \
 		$(use_enable skins skins2) \
 		$(use_enable speex) \
