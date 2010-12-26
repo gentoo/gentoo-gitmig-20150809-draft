@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.7 2010/07/31 10:46:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.8 2010/12/26 00:16:54 ssuominen Exp $
 
 EAPI="2"
 inherit eutils fdo-mime
@@ -11,13 +11,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="debug hal udev"
+KEYWORDS="amd64 ~arm ~ppc x86"
+IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
-	hal? ( gnome-base/gnome-mount )
-	gnome-base/gvfs[hal?,udev?]
+	gnome-base/gvfs
 	>=lxde-base/menu-cache-0.3.2
 	x11-misc/shared-mime-info
 	>=x11-libs/libfm-0.1.11
