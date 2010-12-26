@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6242 2010/12/25 18:13:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6243 2010/12/26 14:13:25 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2464,6 +2464,7 @@ media-video/vlc:schroedinger - Enable Dirac video support (an advanced royalty-f
 media-video/vlc:sdl-image - Enables sdl image video decoder (depends on sdl)
 media-video/vlc:shine - Enables shine fixed point mp3 encoder.
 media-video/vlc:shout - Enables libshout output.
+media-video/vlc:sid - Adds support for playing C64 SID files through media-libs/libsidplay-2.
 media-video/vlc:skins - Enables support for the skins2 interface.
 media-video/vlc:stream - Enables sout module for audio/video data streaming/transcoding/etc..
 media-video/vlc:twolame - Enables twolame support (MPEG Audio Layer 2 encoder).
