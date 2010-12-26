@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.18 2010/12/12 14:57:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.19 2010/12/26 09:29:06 nelchael Exp $
+
+  26 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  tuxonice-userui-1.0.ebuild:
+  Depend either on new libpng with static-libs USE flag enabled or older which
+  always builds static library, see bug #349662.
 
   12 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   tuxonice-userui-1.0.ebuild:
