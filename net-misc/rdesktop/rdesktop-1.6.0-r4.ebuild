@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.6.0-r4.ebuild,v 1.1 2010/03/09 10:21:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.6.0-r4.ebuild,v 1.2 2010/12/26 18:30:11 flameeyes Exp $
 
 EAPI=2
 
@@ -44,6 +44,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-smartcard_configure.patch
 	# USB redirection support from virtualbox
 	use rdpusb && epatch "${WORKDIR}"/${P}-rdpusb.patch
+	# bug #349813
+	epatch "${FILESDIR}"/${P}+pcsc-lite-1.6.6.patch
 
 	eautoreconf
 }
