@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/asekey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.9 2010/07/16 16:36:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.10 2010/12/26 17:44:25 flameeyes Exp $
+
+  26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> -asekey-3.3.ebuild:
+  Wishfully remove 3.3 version.
 
   16 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Maintainer should not be the herd. Remove wrong entry from metadata. Thx
