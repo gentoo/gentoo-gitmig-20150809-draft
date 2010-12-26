@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/pcsc-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/ChangeLog,v 1.5 2010/12/06 17:11:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/ChangeLog,v 1.6 2010/12/26 16:05:55 flameeyes Exp $
+
+  26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-perl-1.4.10.ebuild, metadata.xml:
+  Remove old version since we're going to need pcsc-lite-1.6.6 stable soon.
+  Move the package to crypto herd fully.
 
 *pcsc-perl-1.4.11 (06 Dec 2010)
 
