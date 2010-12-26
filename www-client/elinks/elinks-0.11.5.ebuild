@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.5.ebuild,v 1.7 2010/12/05 19:23:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.5.ebuild,v 1.8 2010/12/26 05:42:03 mattst88 Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -28,7 +28,7 @@ DEPEND=">=dev-libs/expat-1.95.4
 	idn? ( net-dns/libidn )
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby )
-	!mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) )"
+	javascript? ( dev-lang/spidermonkey )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
