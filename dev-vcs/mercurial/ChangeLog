@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.31 2010/12/25 15:08:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.32 2010/12/26 13:45:10 maekke Exp $
+
+  26 Dec 2010; Markus Meier <maekke@gentoo.org> mercurial-1.7.ebuild:
+  arm stable, bug #348499
 
   25 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org> mercurial-9999.ebuild:
   Run one test at a time, running mutiple tests at once causes a lot of issues,
