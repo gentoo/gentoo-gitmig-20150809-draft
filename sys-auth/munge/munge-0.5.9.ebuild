@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.9.ebuild,v 1.4 2010/12/06 03:02:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.9.ebuild,v 1.5 2010/12/26 06:02:33 mattst88 Exp $
 
 EAPI=3
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://munge.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86"
 IUSE="gcrypt"
 
 DEPEND="app-arch/bzip2

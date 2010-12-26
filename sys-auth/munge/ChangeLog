@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/munge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.4 2010/12/06 03:02:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.5 2010/12/26 06:02:33 mattst88 Exp $
+
+  26 Dec 2010; Matt Turner <mattst88@gentoo.org> munge-0.5.9.ebuild:
+  Added ~mips, bug 345465
 
   06 Dec 2010; Jeroen Roovers <jer@gentoo.org> munge-0.5.9.ebuild:
   Marked ~ppc (bug #345465).
