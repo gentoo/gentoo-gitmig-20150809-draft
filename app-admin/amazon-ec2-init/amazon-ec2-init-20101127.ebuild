@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amazon-ec2-init/amazon-ec2-init-20101127.ebuild,v 1.1 2010/11/27 00:31:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amazon-ec2-init/amazon-ec2-init-20101127.ebuild,v 1.2 2010/12/26 14:29:40 flameeyes Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="net-misc/wget"
 DEPEND=""
 
 src_install() {
-	newinitd "${FILESDIR}/amazon-ec2.init" || die
+	newinitd "${FILESDIR}/amazon-ec2.init" amazon-ec2 || die
 }
 
 pkg_postinst() {
