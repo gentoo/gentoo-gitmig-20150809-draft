@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.83 2010/12/20 21:05:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.84 2010/12/26 07:15:29 grozin Exp $
+
+  26 Dec 2010; Andrey Grozin <grozin@gentoo.org> -asymptote-1.86.ebuild,
+  -files/asymptote-1.86-configure-ac.patch,
+  -files/asymptote-1.86-xdg-utils.patch, -asymptote-2.06.ebuild,
+  -files/asymptote-2.06-configure-ac.patch, -files/asymptote-2.06-info.patch,
+  -files/asymptote-2.06-xdg-utils.patch:
+  Cleaning old versions
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> asymptote-2.08.ebuild:
   Stable on amd64 wrt bug #342265
