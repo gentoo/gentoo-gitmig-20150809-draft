@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.149 2010/12/25 19:21:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.150 2010/12/26 22:39:38 scarabeus Exp $
+
+  26 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> -cmake-2.6.4-r3.ebuild,
+  -cmake-2.8.3.ebuild:
+  old
 
   25 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> cmake-2.8.3-r1.ebuild,
   +files/cmake-2.8.3-fix_assembler_test.patch:
