@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.21 2010/08/19 18:57:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.22 2010/12/26 17:28:16 mattst88 Exp $
+
+  26 Dec 2010; Matt Turner <mattst88@gentoo.org> ctypesgen-0_p72.ebuild:
+  Added ~mips, bug 263337
 
   19 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   The python herd will take this.
