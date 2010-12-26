@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.5.ebuild,v 1.4 2007/06/26 19:54:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.5.ebuild,v 1.5 2010/12/26 22:55:44 hd_brummy Exp $
 
 inherit eutils vdr-plugin
 
@@ -17,11 +17,10 @@ IUSE="truetype"
 DEPEND=">=media-video/vdr-1.2.6
 	>=app-misc/graphlcd-base-${PV}"
 
-PATCHES="
-	${FILESDIR}/${PV}/graphlcd-${PV}-span.diff
-	${FILESDIR}/${PV}/graphlcd-${PV}-radiotext-lcr-service.diff
-	${FILESDIR}/${PV}/${P}-missing-include.patch
-	${FILESDIR}/${PV}/graphlcd-${PV}_vdr-1.5.3.diff"
+PATCHES=("${FILESDIR}/${PV}/graphlcd-${PV}-span.diff"
+		"${FILESDIR}/${PV}/graphlcd-${PV}-radiotext-lcr-service.diff"
+		"${FILESDIR}/${PV}/${P}-missing-include.patch"
+		"${FILESDIR}/${PV}/graphlcd-${PV}_vdr-1.5.3.diff")
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
