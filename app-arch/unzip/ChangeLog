@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.72 2010/12/22 16:40:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.73 2010/12/26 05:46:08 mattst88 Exp $
+
+  26 Dec 2010; Matt Turner <mattst88@gentoo.org> unzip-6.0-r2.ebuild:
+  Added ~mips, bug 349393
 
 *unzip-6.0-r2 (22 Dec 2010)
 
