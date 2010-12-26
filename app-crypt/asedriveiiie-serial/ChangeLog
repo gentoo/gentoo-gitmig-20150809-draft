@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/asedriveiiie-serial
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/ChangeLog,v 1.8 2009/10/14 00:48:42 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/ChangeLog,v 1.9 2010/12/26 17:39:40 flameeyes Exp $
+
+  26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -asedriveiiie-serial-3.4.ebuild:
+  Wishfully remove 3.4 version.
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
   asedriveiiie-serial-3.4.ebuild:
