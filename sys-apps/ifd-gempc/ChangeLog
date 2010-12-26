@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/ifd-gempc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.15 2009/05/16 09:23:13 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.16 2010/12/26 18:35:31 flameeyes Exp $
+
+*ifd-gempc-1.0.6 (26 Dec 2010)
+
+  26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ifd-gempc-1.0.3.ebuild, -ifd-gempc-1.0.4.ebuild,
+  -files/ifd-gempc-1.0.4-respect_LDFLAGS.patch, -ifd-gempc-1.0.5.ebuild,
+  +ifd-gempc-1.0.6.ebuild:
+  Version bump, remove old and patches. It's likely not going to work anyway,
+  since pcsc-lite has changed on its own, but at least provide what upstream
+  provides.
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> ifd-gempc-1.0.3.ebuild,
   ifd-gempc-1.0.4.ebuild, ifd-gempc-1.0.5.ebuild:
