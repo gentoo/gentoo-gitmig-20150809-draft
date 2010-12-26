@@ -1,0 +1,33 @@
+--- Makefile	2010-11-19 14:34:32.000000000 +0100
++++ Makefile.new	2010-11-19 15:10:41.000000000 +0100
+@@ -89,7 +89,7 @@
+ 	@+$(call _MakeAppsBin,all-lib)
+ 
+ ifeq (${JavaBuild},n)
+-  all-java% clean-java :
++  all-java all-java-native all-java-jars clean-java :
+ 	@echo Build architecture ${Arch} was configured --without-java or ant utility was not found.
+ 	@echo Please repeat the configure step if you want to recompile the java modules.
+ 	false
+@@ -134,11 +134,11 @@
+ 	@case "$$(uname -s)" in \
+ 	 *linux*|*Linux*) \
+ 	   for d in linux32 linux64; do \
+-	     ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/$$d ${InstallArch}/lib/jreality/jni/$$d; \
++		true ; \
+ 	   done; \
+ 	   ;; \
+          Darwin*|darwin*) \
+-	   ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/macosx ${InstallArch}/lib/jreality/jni/macosx; \
++		true ; \
+ 	   ;; \
+ 	 esac
+ 	[ -d ${InstallBin} ] || $(call _CreateDir,${InstallBin})
+@@ -169,7 +169,6 @@
+ 	@+$(call _MakeAppsBin, install-src)
+ 	$(if ${.svn},${PERL} perl/polymake --script filter_rules -m ${InstallTop} ${Apps})
+ 	[ ! -d java_build ] || $(call _InstallSubdir,java_build,-X de)
+-	[ ! -d java_build ] || $(call _InstallSubdirRenamed,external/jreality/lib,java_build/jreality/lib)
+ 	$(call _InstallSubdir,povray)
+ 	$(call _InstallSubdir,scripts)
+ 	$(call _InstallSubdir,xml)
