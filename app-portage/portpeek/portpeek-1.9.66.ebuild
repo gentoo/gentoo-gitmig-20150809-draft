@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.66.ebuild,v 1.1 2010/12/15 17:22:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.66.ebuild,v 1.2 2010/12/26 01:13:54 mpagano Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=">app-portage/gentoolkit-0.3.0_rc10
 	>=sys-apps/portage-2.1.9.24
-	dev-lang/python:2.6"
+	|| ( dev-lang/python:2.6 dev-lang/python:2.7 )"
 
 pkg_setup() {
 	python_set_active_version 2
