@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha6-r1.ebuild,v 1.2 2010/09/29 15:54:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha6-r1.ebuild,v 1.3 2010/12/26 13:27:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 S="${WORKDIR}/${MY_P}"
 
 # Some scripts import objects from other scripts.
-DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
+PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
 src_install() {
 	distutils_src_install

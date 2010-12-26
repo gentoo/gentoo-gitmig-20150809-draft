@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spambayes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.19 2010/09/29 16:57:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.20 2010/12/26 13:27:12 arfrever Exp $
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  spambayes-1.1_alpha6-r1.ebuild:
+  DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS -> PYTHON_NONVERSIONED_EXECUTABLES.
 
   29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -spambayes-1.0.4-r1.ebuild,
