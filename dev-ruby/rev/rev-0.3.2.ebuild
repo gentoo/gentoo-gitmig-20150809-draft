@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rev/rev-0.3.2.ebuild,v 1.1 2010/10/24 09:30:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rev/rev-0.3.2.ebuild,v 1.2 2010/12/26 14:04:01 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -15,7 +15,7 @@ DESCRIPTION="Rev is an event library for Ruby, built on the libev event library.
 HOMEPAGE="http://mynyml.com/ruby/flexible-continuous-testing"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 

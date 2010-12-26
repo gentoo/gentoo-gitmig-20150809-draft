@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-0.1.3-r1.ebuild,v 1.1 2010/10/24 09:28:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-0.1.3-r1.ebuild,v 1.2 2010/12/26 14:03:25 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -16,7 +16,7 @@ DESCRIPTION="IO::Buffer is a fast byte queue which is primarily intended for non
 HOMEPAGE="http://mynyml.com/ruby/flexible-continuous-testing"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
