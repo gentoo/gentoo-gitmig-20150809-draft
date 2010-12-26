@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.224 2010/11/25 16:29:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.225 2010/12/26 17:29:08 jer Exp $
+
+  26 Dec 2010; Jeroen Roovers <jer@gentoo.org> uim-1.6.0.ebuild,
+  uim-1.6.0-r1.ebuild:
+  Marked ~hppa (bug #335075).
 
 *uim-1.6.0-r1 (25 Nov 2010)
 
