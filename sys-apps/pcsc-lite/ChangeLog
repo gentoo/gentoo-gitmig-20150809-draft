@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.95 2010/12/17 11:39:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.96 2010/12/26 16:15:33 flameeyes Exp $
+
+  26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-lite-1.5.5.ebuild, -pcsc-lite-1.6.4.ebuild:
+  Remove 1.6.4 since 1.6.6 is going stable instead. Remove 1.5.5 even if that
+  will make a few minor arch users unable to get a stable-only combination
+  between ccid and pcsc-lite (their stable tree was broken already and has been
+  for a long time, will be fixed once new pcsc-lite and ccid will go stable
+  _together_).
 
   17 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> pcsc-lite-1.6.6.ebuild:
   Block old ccid versions, forcing update to latest.
