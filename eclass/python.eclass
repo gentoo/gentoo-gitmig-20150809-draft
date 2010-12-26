@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.106 2010/12/24 15:01:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.107 2010/12/26 11:30:27 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1451,6 +1451,8 @@ for file in sorted(files_set):
 
 		cp -fr --preserve=all "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${ED}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
 	done
+
+	rm -fr "${intermediate_installation_images_directory}"
 
 	if [[ "${#wrapper_scripts[@]}" -ge 1 ]]; then
 		rm -f "${T}/python_wrapper_scripts"
