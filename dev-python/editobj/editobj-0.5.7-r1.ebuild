@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.3 2010/04/26 10:50:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.4 2010/12/26 17:09:45 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -22,7 +23,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
