@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.4.1_p1.ebuild,v 1.2 2010/12/08 08:27:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.4.1_p1.ebuild,v 1.3 2010/12/26 17:40:29 jlec Exp $
 
 EAPI=3
 
@@ -37,7 +37,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}${MY_PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${PV}-impl-dec.patch
 	export SPECFILE_USE_GNU_SOURCE=1
 	distutils_src_prepare
 }
