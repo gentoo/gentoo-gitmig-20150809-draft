@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.3 2010/06/28 08:46:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.4 2010/12/26 15:28:01 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils
 
 DESCRIPTION="Library to implement a well-behaved Unix daemon process."
 HOMEPAGE="http://pypi.python.org/pypi/python-daemon"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2.2"
 SLOT="0"
