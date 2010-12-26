@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imdbpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.7 2010/08/01 11:21:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.8 2010/12/26 14:46:37 arfrever Exp $
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/4.5.1-no-docs.patch, -imdbpy-4.5.1.ebuild:
+  Delete.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> imdbpy-4.6.ebuild:
   Stable on amd64 wrt bug #323745
