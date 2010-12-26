@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.3-r1.ebuild,v 1.8 2010/10/07 21:56:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.3-r1.ebuild,v 1.9 2010/12/26 01:05:29 ssuominen Exp $
 
 inherit autotools eutils gnome2
 
@@ -41,7 +41,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/gtk-doc-am-1.13
 	doc? ( >=dev-util/gtk-doc-1 )"
-PDEPEND="hal? ( >=gnome-base/gnome-mount-0.6 )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
@@ -73,6 +72,11 @@ pkg_setup() {
 	# so should always be behind the use_enable options
 	# foser <foser@gentoo.org 19 Apr 2004
 	use gnutls && use ssl && G2CONF="${G2CONF} --disable-openssl"
+
+	if ! has_version sys-apps/pmount; then
+		ewarn "You should install and setup sys-apps/pmount if you use programs"
+		ewarn "which rely on gnome-vfs for mounting."
+	fi
 }
 
 src_unpack() {
