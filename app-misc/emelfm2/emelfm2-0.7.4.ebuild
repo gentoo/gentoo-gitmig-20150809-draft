@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.1 2010/12/26 13:33:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.2 2010/12/26 13:43:01 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl fam gimp kernel_linux nls policykit spell udev"
 
-RDEPEND=">=x11-libs/gtk+-2.12:2
+RDEPEND=">=dev-libs/glib-2.22:2
+	>=x11-libs/gtk+-2.12:2
 	acl? ( sys-apps/acl )
 	gimp? ( media-gfx/gimp )
 	policykit? ( sys-auth/polkit )
