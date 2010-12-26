@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.5 2010/12/12 17:44:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.6 2010/12/26 13:55:54 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ IUSE="doc examples" #introspection
 RDEPEND=">=x11-libs/gtk+-2.17.1
 	>=gnome-base/gconf-2.8
 	>=dev-libs/dbus-glib-0.71
-	>=sys-auth/polkit-0.95"
+	>=sys-auth/polkit-0.95
+	<sys-auth/polkit-0.99"
 	# Not ready for tree
 	#introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 DEPEND="${RDEPEND}
