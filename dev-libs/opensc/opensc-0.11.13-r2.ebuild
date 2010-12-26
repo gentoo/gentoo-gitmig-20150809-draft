@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.13-r1.ebuild,v 1.1 2010/11/29 13:43:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.13-r2.ebuild,v 1.1 2010/12/26 17:28:31 flameeyes Exp $
 
 EAPI="2"
 
@@ -36,6 +36,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}+pcsc-lite-1.6.2.patch
+	epatch "${FILESDIR}"/${P}-overflows.patch
 
 	eautoreconf
 }
