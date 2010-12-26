@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.4.ebuild,v 1.1 2010/07/04 08:43:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.7.ebuild,v 1.1 2010/12/26 03:51:23 dirtyepic Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
