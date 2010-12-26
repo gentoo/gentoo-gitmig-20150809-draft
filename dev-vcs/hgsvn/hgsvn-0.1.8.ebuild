@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/hgsvn-0.1.8.ebuild,v 1.1 2010/06/29 23:11:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/hgsvn-0.1.8.ebuild,v 1.2 2010/12/26 15:53:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -12,7 +12,7 @@ inherit distutils
 
 DESCRIPTION="A set of scripts to work locally on Subversion checkouts using Mercurial"
 HOMEPAGE="http://pypi.python.org/pypi/hgsvn"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
