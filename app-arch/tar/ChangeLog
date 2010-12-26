@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.160 2010/11/24 16:18:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.161 2010/12/26 23:46:28 vapier Exp $
+
+*tar-1.25-r1 (26 Dec 2010)
+
+  26 Dec 2010; Mike Frysinger <vapier@gentoo.org> +tar-1.25-r1.ebuild,
+  +files/tar-1.25-incremental-fix.patch, +files/tar-1.25-verify-check.patch,
+  +files/tar-1.25-verify-fix.patch:
+  Add fixes from upstream for incremental #349164 by Robin Johnson and
+  verify #349155 by Navid Zamani.
 
   24 Nov 2010; Jeremy Olexa <darkside@gentoo.org> tar-1.25.ebuild,
   files/rmt:
