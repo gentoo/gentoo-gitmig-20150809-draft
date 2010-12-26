@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.19 2010/07/28 06:24:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.20 2010/12/26 04:38:12 leio Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -45,6 +45,14 @@ RDEPEND="=media-libs/gst-plugins-base-0.10*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-util/pkgconfig"
+
+# -ugly-0.10.16 uses orc optionally instead of liboil unconditionally.
+# While <0.10.16 configure always checks for liboil, it is linked to only by a52dec,
+# so we only builddep for all packages, and have a RDEPEND in old gst-plugins-a52dec
+if ! version_is_at_least "0.10.16"; then
+DEPEND="${DEPEND} >=dev-libs/liboil-0.3.8"
+fi
+
 RESTRICT=test
 fi
 
