@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tpg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.14 2009/09/04 15:35:45 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.15 2010/12/26 17:31:38 arfrever Exp $
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  tpg-3.1.2.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -tpg-3.1.1.ebuild:
   Remove old
