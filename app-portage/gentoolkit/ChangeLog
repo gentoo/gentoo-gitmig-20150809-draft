@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.202 2010/12/03 21:41:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.203 2010/12/26 13:33:03 arfrever Exp $
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gentoolkit-0.3.0_rc10-r1.ebuild, gentoolkit-0.3.0_rc11-r3.ebuild,
+  gentoolkit-9999.ebuild:
+  DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS -> PYTHON_NONVERSIONED_EXECUTABLES.
 
   03 Dec 2010; Jeremy Olexa <darkside@gentoo.org>
   gentoolkit-0.3.0_rc11-r3.ebuild:

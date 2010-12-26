@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc10-r1.ebuild,v 1.2 2010/04/27 10:15:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc10-r1.ebuild,v 1.3 2010/12/26 13:33:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
-DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
 RESTRICT_PYTHON_ABIS="2.[45]"
+PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
 inherit distutils python eutils
 

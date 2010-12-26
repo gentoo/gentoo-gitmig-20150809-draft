@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.10 2010/10/28 20:22:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.11 2010/12/26 13:33:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
-DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
 RESTRICT_PYTHON_ABIS="2.[45]"
+PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
 inherit distutils python subversion
 
