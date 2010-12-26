@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.3 2010/02/23 11:20:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.4 2010/12/26 15:15:07 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ inherit distutils
 
 DESCRIPTION="Python module for DNS (Domain Name Service)"
 HOMEPAGE="http://pydns.sourceforge.net/ http://pypi.python.org/pypi/pydns"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0"
