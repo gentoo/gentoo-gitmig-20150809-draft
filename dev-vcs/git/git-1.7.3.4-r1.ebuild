@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4-r1.ebuild,v 1.6 2010/12/25 22:42:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4-r1.ebuild,v 1.7 2010/12/26 22:40:40 robbat2 Exp $
 
 EAPI=3
 
@@ -195,6 +195,10 @@ src_prepare() {
 	# USE=-iconv causes segfaults, fixed post 1.7.1
 	# Gentoo bug #321895
 	#epatch "${FILESDIR}"/git-1.7.1-noiconv-segfault-fix.patch
+	
+	# Fix false positives with t3404 due to SHELL=/bin/false for the portage
+	# user.
+	epatch "${FILESDIR}"/git-1.7.3.4-avoid-shell-issues.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
@@ -434,14 +438,18 @@ src_test() {
 	for i in ${disabled} ; do
 		[[ -f "${i}" ]] && mv -f "${i}" "${i}.DISABLED" && einfo "Disabled $i"
 	done
-	cd "${S}"
+
 	# Now run the tests
+	cd "${S}"
 	einfo "Start test run"
 	git_emake test
 	rc=$?
+
 	# Display nice results
 	cd "${S}/t"
 	git_emake aggregate-results
+
+	# And exit
 	[ $rc -eq 0 ] || die "tests failed. Please file a bug."
 }
 

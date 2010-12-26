@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4.ebuild,v 1.1 2010/12/17 18:13:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4.ebuild,v 1.2 2010/12/26 22:40:40 robbat2 Exp $
 
 EAPI=3
 
@@ -195,6 +195,10 @@ src_prepare() {
 	# USE=-iconv causes segfaults, fixed post 1.7.1
 	# Gentoo bug #321895
 	#epatch "${FILESDIR}"/git-1.7.1-noiconv-segfault-fix.patch
+	
+	# Fix false positives with t3404 due to SHELL=/bin/false for the portage
+	# user.
+	epatch "${FILESDIR}"/git-1.7.3.4-avoid-shell-issues.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
