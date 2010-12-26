@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.64 2010/10/05 09:48:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.65 2010/12/26 23:02:23 vapier Exp $
+
+*rar-3.9.3-r1 (26 Dec 2010)
+
+  26 Dec 2010; Mike Frysinger <vapier@gentoo.org> +rar-3.9.3-r1.ebuild,
+  metadata.xml:
+  Add USE=static and USE=all_sfx (for installing all SFX files).
 
 *rar-3.9.3 (05 Oct 2010)
 

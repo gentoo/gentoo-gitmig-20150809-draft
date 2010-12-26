@@ -5,4 +5,10 @@
 <maintainer>
 <email>maintainer-needed@gentoo.org</email>
 </maintainer>
+<use>
+ <flag name='all_sfx'>
+	Install all SFX (Self-Extracting) files rather than just the native
+	format (allows creation of Windows EXEs on Linux ELF systems)
+ </flag>
+</use>
 </pkgmetadata>
