@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.5 2010/12/12 19:33:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.6 2010/12/26 15:23:38 arfrever Exp $
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyopencl-0.91.4.ebuild, -pyopencl-0.91.5.ebuild:
+  Delete.
 
 *pyopencl-0.92 (12 Dec 2010)
 
