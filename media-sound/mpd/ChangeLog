@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.231 2010/12/21 02:19:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.232 2010/12/26 13:41:25 maekke Exp $
+
+  26 Dec 2010; Markus Meier <maekke@gentoo.org> mpd-0.15.15.ebuild:
+  arm stable, bug #348798
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mpd-0.15.15.ebuild:
   Stable on amd64 wrt bug #348798
