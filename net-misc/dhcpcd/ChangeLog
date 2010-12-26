@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.293 2010/12/20 12:32:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.294 2010/12/26 16:59:13 armin76 Exp $
+
+  26 Dec 2010; Raúl Porcel <armin76@gentoo.org> dhcpcd-5.2.8.ebuild:
+  ia64/s390/sh/sparc stable wrt #312385
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> dhcpcd-5.2.8.ebuild:
   Stable on amd64 wrt bug #312385
