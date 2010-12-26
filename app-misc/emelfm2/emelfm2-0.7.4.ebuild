@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.3.ebuild,v 1.2 2010/09/08 09:48:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.1 2010/12/26 13:33:42 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -16,7 +16,6 @@ IUSE="acl fam gimp kernel_linux nls policykit spell udev"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
 	acl? ( sys-apps/acl )
-	!kernel_linux? ( fam? ( virtual/fam ) )
 	gimp? ( media-gfx/gimp )
 	policykit? ( sys-auth/polkit )
 	spell? ( app-text/gtkspell )
@@ -29,34 +28,33 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 pkg_setup() {
-	myconf="DOCS_VERSION=1 WITH_TRANSPARENCY=1 STRIP=0"
+	emel_use() {
+		use ${1} && echo "${2}=1" || echo "${2}=0"
+	}
 
-	use udev && myconf="${myconf} WITH_DEVKIT=1"
-	use gimp && myconf="${myconf} WITH_THUMBS=1"
-	use acl && myconf="${myconf} WITH_ACL=1"
-	use kernel_linux && myconf="${myconf} WITH_KERNELFAM=1 USE_INOTIFY=1"
-	use spell && myconf="${myconf} EDITOR_SPELLCHECK=1"
-	use nls || myconf="${myconf} I18N=0"
-	use policykit && myconf="${myconf} WITH_POLKIT=1"
-
-	if ! use kernel_linux && use fam; then
-		if has_version "app-admin/gamin"; then
-			myconf="${myconf} USE_GAMIN=1"
-		else
-			myconf="${myconf} USE_FAM=1"
-		fi
-	fi
+	myemelconf=(
+		DOCS_VERSION=1
+		$(emel_use nls I18N)
+		WITH_TRANSPARENCY=1
+		$(emel_use kernel_linux WITH_KERNELFAM)
+		$(emel_use spell EDITOR_SPELLCHECK)
+		$(emel_use udev WITH_DEVKIT)
+		$(emel_use gimp WITH_THUMBS)
+		$(emel_use acl WITH_ACL)
+		$(emel_use policykit WITH_POLKIT)
+		STRIP=0
+		)
 }
 
 src_compile() {
 	tc-export CC
 	emake LIB_DIR="/usr/$(get_libdir)" PREFIX="/usr" \
-		${myconf} || die
+		${myemelconf[@]} || die
 }
 
 src_install() {
 	emake LIB_DIR="${D}/usr/$(get_libdir)" PREFIX="${D}/usr" \
-		${myconf} install || die
+		${myemelconf[@]} install || die
 	newicon icons/${PN}_48.png ${PN}.png
 	prepalldocs
 }
