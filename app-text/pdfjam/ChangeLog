@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pdfjam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.27 2010/11/12 16:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.28 2010/12/26 01:36:50 aballier Exp $
+
+*pdfjam-2.08 (26 Dec 2010)
+
+  26 Dec 2010; Alexis Ballier <aballier@gentoo.org> +pdfjam-2.08.ebuild:
+  version bump
 
   12 Nov 2010; Jeroen Roovers <jer@gentoo.org> pdfjam-2.05.ebuild:
   Marked ~hppa (bug #342513).
