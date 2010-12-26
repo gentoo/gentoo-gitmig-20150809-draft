@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.2.ebuild,v 1.1 2010/09/30 23:36:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/traydevice/traydevice-1.5.2.ebuild,v 1.2 2010/12/26 12:32:38 ssuominen Exp $
 
 EAPI=3
 
@@ -37,7 +37,6 @@ src_compile() { :; }
 
 src_install() {
 	distutils_src_install \
-		--root="${D}" \
 		--prefix=/usr \
 		--install-data=/usr/share/${PN} \
 		--install-man=/usr/share/man
