@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.40 2010/12/14 02:51:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.41 2010/12/26 05:34:42 mattst88 Exp $
+
+  26 Dec 2010; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add 'www-client/elinks javascript' package.use.mask
 
   14 Dec 2010; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask llvm.

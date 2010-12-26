@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.51 2010/12/17 15:03:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.52 2010/12/26 05:36:11 mattst88 Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now
@@ -69,3 +69,7 @@ net-analyzer/nagios-plugins ups nagios-game
 # >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
 # unmask when TeX Live 2010 keywording is done (bug #342513)
 app-i18n/canna doc
+
+# Matt Turner <mattst88@gentoo.org> (26 Dec 2010)
+# www-client/seamonkey not keyworded
+www-client/elinks javascript
