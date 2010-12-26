@@ -1,53 +1,70 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.14.ebuild,v 1.2 2010/10/17 12:00:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.14.ebuild,v 1.3 2010/12/26 00:06:47 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit autotools eutils
+if [[ ${PV} == 9999 ]]; then
+	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
+	inherit autotools git
+	SRC_URI=""
+	EXTRA_DEPEND="dev-util/gtk-doc-am"
+else
+	SRC_URI="mirror://sourceforge/pcmanfm/${P}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~ppc ~x86"
+fi
 
-DESCRIPTION="Library for file management"
+inherit fdo-mime
+
+DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
-SRC_URI="mirror://sourceforge/pcmanfm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug demo gnome hal udev"
+IUSE="debug examples udev"
 
-RDEPEND="dev-libs/glib:2
-	x11-libs/gtk+:2
-	udev? ( sys-fs/udisks )
-	gnome? ( hal? ( gnome-base/gnome-mount ) )
-	gnome? ( gnome-base/gvfs[hal?,udev?] )
+COMMON_DEPEND=">=dev-libs/glib-2.18:2
+	>=x11-libs/gtk+-2.16:2
+	udev? ( dev-libs/dbus-glib )
 	>=lxde-base/menu-cache-0.3.2"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	udev? ( sys-fs/udisks )"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/gtk-doc
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	${EXTRA_DEPEND}"
 
 src_prepare() {
-	for file in app-chooser.ui ask-rename.ui file-prop.ui preferred-apps.ui \
-		progress.ui;do
-			echo "data/ui/${file}" >> po/POTFILES.in
-	done
-	echo "src/udisks/g-udisks-device.c" >> po/POTFILES.in
-	gtkdocize
-	eautoreconf
-	einfo "Running intltoolize ..."
-	intltoolize --force --copy --automake || die
-	strip-linguas -i "${S}/po"
+	if [[ ${PV} == 9999 ]]; then
+		gtkdocize --copy || die
+		intltoolize --force --copy --automake || die
+		eautoreconf
+	fi
 }
 
 src_configure() {
-	econf --sysconfdir=/etc \
+	econf \
+		--sysconfdir=/etc \
+		--disable-dependency-tracking \
+		--disable-static \
+		$(use_enable udev udisks) \
+		$(use_enable examples demo) \
 		$(use_enable debug) \
-		$(use_enable demo) \
-		$(use_enable udev udisks)
+		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS TODO || die
+	dodoc AUTHORS TODO
+
+	find "${D}" -name '*.la' -exec rm -f '{}' +
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_mime_database_update
 }
