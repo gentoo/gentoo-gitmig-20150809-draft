@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/reverend-0.4.ebuild,v 1.1 2009/11/30 02:22:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/reverend-0.4.ebuild,v 1.2 2010/12/26 15:40:29 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Reverend - Simple Bayesian classifier"
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodReverend http://pypi.python.org/pypi/Reverend"
-SRC_URI="mirror://sourceforge/reverend/${MY_P}.tar.gz http://pypi.python.org/packages/source/R/Reverend/Reverend-0.4.tar.gz"
+SRC_URI="mirror://sourceforge/reverend/${MY_P}.tar.gz mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

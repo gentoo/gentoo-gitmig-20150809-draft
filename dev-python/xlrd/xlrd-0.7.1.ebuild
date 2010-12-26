@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/xlrd-0.7.1.ebuild,v 1.2 2010/04/16 17:35:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/xlrd-0.7.1.ebuild,v 1.3 2010/12/26 15:52:18 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ inherit distutils
 
 DESCRIPTION="Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"
 HOMEPAGE="http://pypi.python.org/pypi/xlrd"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

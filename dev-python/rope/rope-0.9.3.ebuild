@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.3 2010/07/01 04:34:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.4 2010/12/26 15:42:37 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -11,7 +11,7 @@ inherit distutils eutils
 
 DESCRIPTION="Python refactoring library"
 HOMEPAGE="http://rope.sourceforge.net/ http://pypi.python.org/pypi/rope"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

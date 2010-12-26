@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.2.ebuild,v 1.1 2010/07/25 00:52:59 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.2.ebuild,v 1.2 2010/12/26 15:36:45 arfrever Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ inherit distutils
 
 DESCRIPTION="pyudev is a Python and PyQt4 binding for libudev"
 HOMEPAGE="http://packages.python.org/pyudev/"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
