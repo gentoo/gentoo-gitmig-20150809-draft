@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.1.3.ebuild,v 1.2 2010/12/12 15:40:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.1.3.ebuild,v 1.3 2010/12/26 16:35:39 flameeyes Exp $
 
 EAPI=2
 
@@ -28,6 +28,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-asneeded.patch"
 	epatch "${FILESDIR}/${P}-implicit.patch"
+	epatch "${FILESDIR}/${P}+db-5.0.patch"
 	eautoreconf
 }
 
