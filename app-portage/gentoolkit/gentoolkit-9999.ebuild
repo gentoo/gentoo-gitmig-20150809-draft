@@ -1,16 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.11 2010/12/26 13:33:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.12 2010/12/27 16:35:20 idl0r Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45]"
 PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
-inherit distutils python subversion
+EGIT_MASTER="gentoolkit"
+EGIT_BRANCH="gentoolkit"
 
-ESVN_REPO_URI="svn://anonsvn.gentoo.org/gentoolkit/trunk/gentoolkit"
-ESVN_PROJECT="gentoolkit"
+inherit distutils python git
+
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoolkit.git"
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -36,12 +38,11 @@ RDEPEND="${DEPEND}
 	sys-apps/grep"
 
 distutils_src_compile_pre_hook() {
-	echo VERSION="9999-r${ESVN_WC_REVISION}" "$(PYTHON)" setup.py set_version
-	VERSION="9999-r${ESVN_WC_REVISION}" "$(PYTHON)" setup.py set_version
+	echo VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
+	VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
 }
 
 src_compile() {
-	subversion_wc_info
 	distutils_src_compile
 }
 
