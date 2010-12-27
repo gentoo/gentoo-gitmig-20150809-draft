@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.92 2010/11/19 13:45:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.93 2010/12/27 21:03:35 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> scons-2.0.1.ebuild:
+  Marking scons-2.0.1 ppc64 for bug 339531
 
   19 Nov 2010; Markus Meier <maekke@gentoo.org> scons-2.0.1.ebuild:
   add ~arm, bug #343791
