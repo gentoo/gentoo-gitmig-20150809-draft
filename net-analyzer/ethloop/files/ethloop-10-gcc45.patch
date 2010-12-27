@@ -1,7 +1,7 @@
-Fix recv call (bug #336755), add some more includes
+Fix recv call (bug #336755), add some more includes.
 
 --- a/ethloop.c	2002-05-03 15:13:20.000000000 +0200
-+++ b/ethloop.c	2010-12-01 01:51:58.000000000 +0100
++++ b/ethloop.c	2010-12-27 18:21:24.000000000 +0100
 @@ -1,5 +1,7 @@
  /* vim: cin sw=4 ts=4
  */
@@ -18,12 +18,15 @@ Fix recv call (bug #336755), add some more includes
  
  int sock;
  
-@@ -133,7 +136,7 @@
+@@ -133,9 +136,9 @@
  int recv_raw(int tmo)
  {
  	struct pollfd pf = {sock,POLLIN,0};
 -	int r; unsigned short proto;
 +	ssize_t r; unsigned short proto;
  	if(poll(&pf,1,tmo) <= 0) return 0;
- 	r = recv(sock,&buf,1550,0);
+-	r = recv(sock,&buf,1550,0);
++	r = recv(sock,&buf,sizeof(buf),0);
  	if (r <= 0) {
+ 		printf("error recv (%d)\n",r);
+ 		return 0;
