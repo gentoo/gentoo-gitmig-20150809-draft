@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7.ebuild,v 1.8 2010/10/12 15:30:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7.ebuild,v 1.9 2010/12/27 15:11:59 ranger Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RESTRICT="test"
 
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc64 s390 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 s390 sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc server"
 
