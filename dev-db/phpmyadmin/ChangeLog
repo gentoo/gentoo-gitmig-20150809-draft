@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.411 2010/12/04 17:34:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.412 2010/12/27 14:47:46 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> phpmyadmin-3.3.8.1.ebuild:
+  Marking phpmyadmin-3.3.8.1 ppc64 for bug 347327
 
   04 Dec 2010; Jeroen Roovers <jer@gentoo.org> phpmyadmin-3.3.8.1.ebuild:
   Stable for HPPA PPC (bug #347327).
