@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.73 2010/12/23 16:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.74 2010/12/27 12:42:09 maekke Exp $
+
+  27 Dec 2010; Markus Meier <maekke@gentoo.org> dbus-glib-0.88.ebuild:
+  arm stable, bug #348766
 
   23 Dec 2010; Jeroen Roovers <jer@gentoo.org> dbus-glib-0.88.ebuild:
   Stable for HPPA (bug #348766).
