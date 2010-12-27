@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.125 2010/12/27 21:07:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.126 2010/12/27 21:59:46 arfrever Exp $
+
+  27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -docutils-0.6.ebuild:
+  Delete.
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> docutils-0.7.ebuild:
   Marking docutils-0.7 ppc64 for bug 333191
