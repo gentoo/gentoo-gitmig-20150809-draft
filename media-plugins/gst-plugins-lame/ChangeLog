@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.90 2010/08/05 20:11:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.91 2010/12/27 13:01:18 leio Exp $
+
+*gst-plugins-lame-0.10.16 (27 Dec 2010)
+
+  27 Dec 2010; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  -gst-plugins-lame-0.10.12.ebuild, +gst-plugins-lame-0.10.16.ebuild:
+  Version bump with a crash fix and latency query implementation
 
   05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   gst-plugins-lame-0.10.13.ebuild:
