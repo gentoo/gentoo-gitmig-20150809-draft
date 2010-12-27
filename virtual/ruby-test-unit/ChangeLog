@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.16 2010/12/03 17:56:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.17 2010/12/27 20:25:52 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  ruby-test-unit-0-r3.ebuild:
+  Marked ~x64-solaris
 
   03 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   ruby-test-unit-0-r3.ebuild:
