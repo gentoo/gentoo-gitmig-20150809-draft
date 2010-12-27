@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.307 2010/12/19 17:05:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.308 2010/12/27 14:42:55 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> bind-9.6.2_p3-r1.ebuild,
+  bind-9.7.2_p3-r1.ebuild:
+  marking -9.6.2_p3-r1 and -9.7.2_p3-r1 ppc64 for sec bug 347621
 
   19 Dec 2010; Raúl Porcel <armin76@gentoo.org> bind-9.6.2_p3-r1.ebuild,
   bind-9.7.2_p3-r1.ebuild:
