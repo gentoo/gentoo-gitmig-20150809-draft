@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.3 2010/10/15 21:21:25 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.4 2010/12/27 00:39:21 vostorga Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.1-sandbox.patch
 	epatch "${FILESDIR}"/${P}-symbol-alarm.patch
+	epatch "${FILESDIR}"/${P}-broken-apps.patch
 	eautoreconf
 }
 
@@ -45,4 +46,10 @@ src_install () {
 
 	# Get rid of the .la files.
 	find "${D}" -name '*.la' -delete
+}
+
+pkg_postinst() {
+	elog "If you have problems with broken icons shown in the main panel,"
+	elog "you will have to configure panel settings via its menu."
+	elog "This will not be an issue with first time installations."
 }
