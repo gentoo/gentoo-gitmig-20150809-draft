@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.194 2010/12/17 20:21:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.195 2010/12/27 12:31:16 leio Exp $
+
+  27 Dec 2010; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  Add gst-plugins-a52dec to the orc package.use.mask set
 
   17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/commonlisp.

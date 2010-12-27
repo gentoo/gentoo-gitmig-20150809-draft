@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.187 2010/12/06 21:27:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.188 2010/12/27 12:31:16 leio Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -249,5 +249,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 >=media-video/vlc-1.0.0 pda
 
 # Arun Raghavan <ford_prefect@gentoo.org> (19 Nov 2010)
+# Mart Raudsepp <leio@gentoo.org> (27 Dec 2010)
 # Orc isn't yet ready to be used on anything other than x86/amd64/arm
 >=media-libs/gst-plugins-base-0.10.30 orc
+>=media-plugins/gst-plugins-a52dec-0.10.16 orc
