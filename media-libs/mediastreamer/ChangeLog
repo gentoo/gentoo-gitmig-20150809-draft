@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.31 2010/12/04 14:50:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.32 2010/12/27 21:38:06 tomka Exp $
+
+  27 Dec 2010; Thomas Kahle <tomka@gentoo.org> mediastreamer-2.6.0.ebuild:
+  x86 stable per bug 349258
 
   04 Dec 2010; Peter Volkov <pva@gentoo.org> mediastreamer-2.6.0.ebuild:
   Fix automagick dependency on pulseaudio, bug #347163, thank Markus Oehme for
