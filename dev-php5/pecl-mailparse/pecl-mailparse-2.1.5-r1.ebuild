@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.5-r1.ebuild,v 1.1 2010/11/04 15:22:08 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.5-r1.ebuild,v 1.2 2010/12/27 20:53:38 darkside Exp $
 
 EAPI=3
 
@@ -18,5 +18,6 @@ LICENSE="PHP-2.02"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-lang/php[unicode]"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/php[unicode]"
+DEPEND="${RDEPEND}
+	dev-util/re2c"
