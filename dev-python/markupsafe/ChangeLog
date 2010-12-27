@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.18 2010/12/18 19:01:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.19 2010/12/27 21:03:06 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> markupsafe-0.11.ebuild:
+  Marking markupsafe-0.11 ppc64 for bug 341165
 
   18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -markupsafe-0.9.2.ebuild:
