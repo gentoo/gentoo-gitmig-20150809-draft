@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Config
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Config/ChangeLog,v 1.2 2007/12/05 23:43:50 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Config/ChangeLog,v 1.3 2010/12/27 13:50:49 olemarkus Exp $
+
+*PEAR-Config-1.10.12 (27 Dec 2010)
+
+  27 Dec 2010; <olemarkus@gentoo.org> +PEAR-Config-1.10.12.ebuild:
+  Version bump
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-Config-1.10.11.ebuild:
   LICENSE fix from project overlay
