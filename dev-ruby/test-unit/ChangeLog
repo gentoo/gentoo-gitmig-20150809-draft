@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.27 2010/12/03 17:46:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.28 2010/12/27 20:23:09 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> test-unit-2.1.2.ebuild:
+  Marked ~x64-solaris
 
   03 Dec 2010; Fabian Groffen <grobian@gentoo.org> test-unit-2.1.2.ebuild:
   Added Prefix keywords
