@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.41 2010/12/26 05:34:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.42 2010/12/27 01:24:09 mattst88 Exp $
+
+  27 Dec 2010; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add 'media-gfx/imagemagick raw' package.use.mask
 
   26 Dec 2010; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Add 'www-client/elinks javascript' package.use.mask

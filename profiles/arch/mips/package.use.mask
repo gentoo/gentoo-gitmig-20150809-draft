@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.28 2010/12/26 05:39:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.29 2010/12/27 01:24:09 mattst88 Exp $
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
@@ -95,3 +95,7 @@ dev-perl/Authen-SASL kerberos
 # Matt Turner <mattst88@gentoo.org> (26 Dec 2010)
 # dev-lang/spidermonkey not keyworded
 www-client/elinks javascript
+
+# Matt Turner <mattst88@gentoo.org> (26 Dec 2010)
+# media-gfx/ufraw not keyworded
+media-gfx/imagemagick raw
