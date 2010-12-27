@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11.ebuild,v 1.9 2010/11/11 11:48:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11.ebuild,v 1.10 2010/12/27 13:50:07 eva Exp $
 
 EAPI="2"
 
@@ -73,9 +73,9 @@ pkg_setup() {
 		--with-xdmcp=yes
 		--with-pam-prefix=/etc
 		SOUND_PROGRAM=/usr/bin/gdmplay
-		$(use_enable accessibility xevie)
 		$(use_enable ipv6)
 		$(use_enable remote secureremote)
+		$(use_with accessibility xevie)
 		$(use_with consolekit console-kit)
 		$(use_with dmx)
 		$(use_with selinux)
