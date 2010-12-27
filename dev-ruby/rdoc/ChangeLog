@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.39 2010/12/27 18:35:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.40 2010/12/27 18:38:05 graaff Exp $
+
+  27 Dec 2010; Hans de Graaff <graaff@gentoo.org> rdoc-2.5.11.ebuild:
+  Drop ruby19 support to create a stable candidate.
 
 *rdoc-3.0.1 (27 Dec 2010)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.11.ebuild,v 1.4 2010/12/04 15:09:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.11.ebuild,v 1.5 2010/12/27 18:38:05 graaff Exp $
 
 EAPI=3
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 
@@ -30,12 +30,6 @@ ruby_add_bdepend "
 		dev-ruby/minitest
 	)"
 
-# This ebuild replaces rdoc in ruby-1.9.2 and later
-RDEPEND="${RDEPEND}
-	ruby_targets_ruby19? (
-		>=dev-lang/ruby-1.9.2
-	)"
-
 all_ruby_prepare() {
 	# Other packages also have use for a nonexistent directory, bug 321059
 	sed -i -e 's#/nonexistent#/nonexistent_rdoc_tests#g' test/test_rdoc*.rb
@@ -46,11 +40,5 @@ all_ruby_install() {
 
 	for bin in rdoc ri; do
 		ruby_fakegem_binwrapper $bin /usr/bin/$bin-2
-
-		if use ruby_targets_ruby19; then
-			ruby_fakegem_binwrapper $bin /usr/bin/${bin}19
-			sed -i -e "1s/env ruby/ruby19/" \
-				"${ED}/usr/bin/${bin}19" || die
-		fi
 	done
 }
