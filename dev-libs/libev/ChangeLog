@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.29 2010/12/05 17:12:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.30 2010/12/27 12:59:17 maekke Exp $
+
+  27 Dec 2010; Markus Meier <maekke@gentoo.org> libev-3.90-r2.ebuild:
+  arm stable, bug #349213
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> libev-4.01.ebuild:
   Add ~alpha/~ia64/~sh/~sparc
