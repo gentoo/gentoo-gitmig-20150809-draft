@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mediastreamer-ilbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-ilbc/ChangeLog,v 1.8 2010/06/07 14:50:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-ilbc/ChangeLog,v 1.9 2010/12/27 21:39:27 tomka Exp $
+
+  27 Dec 2010; Thomas Kahle <tomka@gentoo.org> mediastreamer-ilbc-2.0.1.ebuild:
+  x86 stable per bug 349258
 
 *mediastreamer-ilbc-2.0.1 (07 Jun 2010)
 
