@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.902.ebuild,v 1.1 2010/12/05 11:32:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.902.ebuild,v 1.2 2010/12/27 05:05:25 dberkholz Exp $
 
 EAPI=3
 # They generate the configure.ac with wrong version of util-macros
@@ -90,10 +90,10 @@ DEPEND="${RDEPEND}
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.3
 		>=x11-libs/libdrm-2.4.20
-	)"
+	)
+	>=x11-apps/xinit-1.3"
 
 PDEPEND="
-	>=x11-apps/xinit-1.2.1-r1
 	xorg? ( >=x11-base/xorg-drivers-$(get_version_component_range 1-2) )"
 
 EPATCH_FORCE="yes"

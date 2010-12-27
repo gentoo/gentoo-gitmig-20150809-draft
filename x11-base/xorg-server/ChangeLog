@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.553 2010/12/25 20:13:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.554 2010/12/27 05:05:25 dberkholz Exp $
+
+  27 Dec 2010; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.9.2.ebuild, xorg-server-1.9.2.902.ebuild:
+  (#349798) Pull in xinit 1.3. Do it in RDEPEND instead of PDEPEND so that
+  files moving around between packages don't run into conflicts.
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   xorg-server-1.9.2.ebuild:
