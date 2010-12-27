@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.13 2010/12/04 08:42:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.14 2010/12/27 20:28:29 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> session-3.1.0.ebuild:
+  Added Prefix keywords
 
   04 Dec 2010; Hans de Graaff <graaff@gentoo.org> session-3.1.0.ebuild:
   Add ree18 target. Make repoman happy with RDEPEND.

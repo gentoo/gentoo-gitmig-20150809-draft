@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.46 2010/12/02 21:08:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.47 2010/12/27 20:52:52 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  text-format-1.0.0-r3.ebuild:
+  Added Prefix keywords
 
   02 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   text-format-1.0.0-r3.ebuild:

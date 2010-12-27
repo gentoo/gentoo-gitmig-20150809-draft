@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.14 2010/11/28 08:25:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.15 2010/12/27 20:31:20 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> webmock-1.6.1.ebuild:
+  Added Prefix keywords
 
 *webmock-1.6.1 (28 Nov 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.3 2010/09/29 21:55:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.4 2010/12/27 20:41:57 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> jeweler-1.4.0.ebuild:
+  Added Prefix keywords
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> jeweler-1.4.0.ebuild:
   Marking jeweler-1.4.0 ~ppc64 for bug 321283

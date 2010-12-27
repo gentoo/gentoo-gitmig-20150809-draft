@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.9 2010/09/29 21:55:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.10 2010/12/27 20:32:57 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> shoulda-2.10.3.ebuild:
+  Added Prefix keywords
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> shoulda-2.10.3.ebuild:
   Marking shoulda-2.10.3 ~ppc64 for bug 321283

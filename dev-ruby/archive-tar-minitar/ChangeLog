@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.23 2010/12/02 20:54:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.24 2010/12/27 20:49:38 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  archive-tar-minitar-0.5.2-r3.ebuild:
+  Added Prefix keywords
 
   02 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   archive-tar-minitar-0.5.2-r3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.7 2010/11/07 06:25:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.8 2010/12/27 20:43:34 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> patron-0.4.10.ebuild:
+  Added Prefix keywords
 
 *patron-0.4.10 (07 Nov 2010)
 
