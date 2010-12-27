@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.44 2010/12/16 07:06:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.45 2010/12/27 20:35:27 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> ragel-6.6-r1.ebuild:
+  Marked ~x64-solaris
 
   16 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/ragel-6.6-ruby-1.9.2.patch:
