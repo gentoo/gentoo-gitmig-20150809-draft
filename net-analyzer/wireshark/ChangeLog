@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.265 2010/12/21 10:33:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.266 2010/12/27 14:28:34 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> wireshark-1.2.13.ebuild:
+  Marking wireshark-1.2.13 ppc64 for bug 346191
 
   21 Dec 2010; Peter Volkov <pva@gentoo.org> wireshark-1.4.2.ebuild:
   Fixed build issue, bug #349231, thank Nathan Caldwell for report and Rafał
