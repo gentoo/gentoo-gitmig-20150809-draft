@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.92 2010/12/27 19:45:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.93 2010/12/27 21:20:38 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> iputils-20100418-r1.ebuild:
+  stable ppc64, bug 342277
 
   27 Dec 2010; Jeroen Roovers <jer@gentoo.org> iputils-20100418-r1.ebuild:
   Stable for HPPA (bug #342277).
