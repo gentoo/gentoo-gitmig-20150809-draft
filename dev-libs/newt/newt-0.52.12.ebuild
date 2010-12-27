@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.12.ebuild,v 1.1 2010/08/30 23:48:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.12.ebuild,v 1.2 2010/12/27 22:30:03 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils multilib python
 
@@ -17,13 +18,17 @@ IUSE="gpm tcl nls"
 
 RDEPEND="=sys-libs/slang-2*
 	>=dev-libs/popt-1.6
-	dev-lang/python
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
 	tcl? ( =dev-lang/tcl-8.5* )
 	"
 
 DEPEND="${RDEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	# bug 73850
@@ -45,7 +50,7 @@ src_configure() {
 	econf \
 		$(use_with gpm gpm-support) \
 		$(use_with tcl) \
-		$(use_enable nls) || die "econf failed"
+		$(use_enable nls)
 }
 
 src_compile() {
@@ -59,4 +64,12 @@ src_install () {
 		install || die "make install failed"
 	dodoc peanuts.py popcorn.py tutorial.sgml
 	doman whiptail.1
+}
+
+pkg_postinst() {
+	python_mod_optimize snack.py
+}
+
+pkg_postrm() {
+	python_mod_cleanup snack.py
 }

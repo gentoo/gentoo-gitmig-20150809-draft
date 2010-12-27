@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10-r1.ebuild,v 1.8 2010/06/02 20:29:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10-r1.ebuild,v 1.9 2010/12/27 22:30:03 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit python toolchain-funcs eutils rpm
 
@@ -15,13 +18,17 @@ IUSE="gpm tcl nls"
 
 RDEPEND="=sys-libs/slang-2*
 	>=dev-libs/popt-1.6
-	dev-lang/python
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
 	tcl? ( =dev-lang/tcl-8.5* )
 	"
 
 DEPEND="${RDEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
@@ -69,4 +76,12 @@ src_install () {
 		install || die "make install failed"
 	dodoc peanuts.py popcorn.py tutorial.sgml
 	doman whiptail.1
+}
+
+pkg_postinst() {
+	python_mod_optimize snack.py
+}
+
+pkg_postrm() {
+	python_mod_cleanup snack.py
 }
