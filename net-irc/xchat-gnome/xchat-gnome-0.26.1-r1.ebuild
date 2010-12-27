@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.5 2010/12/27 12:44:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.6 2010/12/27 14:33:18 arfrever Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -66,7 +66,7 @@ pkg_setup() {
 		$(use_enable sound canberra)
 		$(use_enable libnotify notification)"
 
-	python_set_active_version 2
+	use python && python_set_active_version 2
 }
 
 src_prepare() {
