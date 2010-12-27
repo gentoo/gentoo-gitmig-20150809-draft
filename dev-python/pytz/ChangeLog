@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.83 2010/12/07 18:18:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.84 2010/12/27 21:01:21 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> pytz-2010l.ebuild:
+  Marking pytz-2010l ppc64 for bug 341315
 
 *pytz-2010o (07 Dec 2010)
 
