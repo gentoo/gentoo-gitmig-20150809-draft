@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/em-http-request
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.4 2010/12/11 08:20:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.5 2010/12/27 20:17:25 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  em-http-request-0.2.14.ebuild:
+  Added Prefix keywords
 
   11 Dec 2010; Hans de Graaff <graaff@gentoo.org>
   -em-http-request-0.2.13.ebuild:

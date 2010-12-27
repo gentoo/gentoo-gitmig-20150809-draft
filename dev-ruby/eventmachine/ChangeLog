@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.14 2010/08/08 13:43:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.15 2010/12/27 20:13:48 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  eventmachine-0.12.10-r2.ebuild:
+  Added Prefix keywords
 
   08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   eventmachine-0.12.10-r2.ebuild,
