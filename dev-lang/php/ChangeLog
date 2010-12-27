@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.449 2010/12/27 22:33:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.450 2010/12/27 22:38:19 olemarkus Exp $
+
+  27 Dec 2010; <olemarkus@gentoo.org> -php-5.2.14-r2.ebuild,
+  -php-5.3.3-r3.ebuild:
+  Removed vulnerable versions from 5.2 and 5.3 slots
 
   27 Dec 2010; <olemarkus@gentoo.org> php-5.2.16.ebuild, php-5.3.4.ebuild:
   Readded some keywords that was dropped without reason
