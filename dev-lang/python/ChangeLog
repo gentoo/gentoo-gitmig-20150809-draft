@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.511 2010/12/27 15:35:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.512 2010/12/27 15:42:13 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> python-2.6.6-r1.ebuild:
+  Marking python-2.6.6-r1 ppc64 for bug 342927
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> python-3.1.2-r4.ebuild:
   Marking python-3.1.2-r4 ppc64 for bug 325593
