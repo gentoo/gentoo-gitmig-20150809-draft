@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.803 2010/12/26 17:30:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.804 2010/12/27 23:29:37 mpagano Exp $
+
+*gentoo-sources-2.6.36-r6 (27 Dec 2010)
+
+  27 Dec 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.36-r6.ebuild:
+  Add support for version 5 of the 6050 image for Intel Wireless Wifi Link
+  6250AGN Adapter
 
   26 Dec 2010; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.32-r24.ebuild, gentoo-sources-2.6.35-r15.ebuild:
