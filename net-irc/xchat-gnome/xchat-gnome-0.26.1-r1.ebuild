@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.4 2010/10/13 11:45:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r1.ebuild,v 1.5 2010/12/27 12:44:37 eva Exp $
 
 EAPI="2"
+GCONF_DEBUG="yes"
+PYTHON_DEPEND="python? 2"
 
-inherit gnome2 eutils toolchain-funcs
+inherit eutils gnome2 python toolchain-funcs
 
 DESCRIPTION="GNOME frontend for the popular X-Chat IRC client"
 HOMEPAGE="http://xchat-gnome.navi.cx/"
@@ -14,16 +16,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="dbus ipv6 libnotify mmx nls perl python sound spell ssl tcl"
 
-RDEPEND=">=dev-libs/glib-2.18.0
+RDEPEND=">=dev-libs/glib-2.18:2
 	>=gnome-base/libgnome-2.16.0
 	>=gnome-base/gconf-2.8.0
 	>=gnome-base/libgnomeui-2.16.0
 	>=gnome-base/libglade-2.3.2
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.14:2
 	spell? ( app-text/enchant )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
-	python? ( dev-lang/python )
 	tcl? ( dev-lang/tcl )
 	dbus? ( >=sys-apps/dbus-0.60 )
 	>=x11-libs/libsexy-0.1.11
@@ -64,6 +65,15 @@ pkg_setup() {
 		$(use_enable nls)
 		$(use_enable sound canberra)
 		$(use_enable libnotify notification)"
+
+	python_set_active_version 2
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix build with it documentation, bug #341173
+	epatch "${FILESDIR}/${PN}-0.26.1-fix-it-help.patch"
 }
 
 src_install() {
@@ -74,4 +84,7 @@ src_install() {
 	doins src/common/xchat-plugin.h || die "doins failed"
 
 	dodoc AUTHORS ChangeLog NEWS || die "dodoc failed"
+
+	# Not needed for plugins
+	find "${D}" -type f -name "*.la" -delete || die "la files removal failed"
 }
