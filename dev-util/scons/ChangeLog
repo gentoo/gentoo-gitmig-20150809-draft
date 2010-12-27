@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.93 2010/12/27 21:03:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.94 2010/12/27 21:49:29 arfrever Exp $
+
+  27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -scons-1.3.0_p20100501.ebuild:
+  Delete.
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> scons-2.0.1.ebuild:
   Marking scons-2.0.1 ppc64 for bug 339531
