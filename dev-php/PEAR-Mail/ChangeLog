@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Mail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.46 2010/12/25 17:24:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.47 2010/12/27 22:07:59 olemarkus Exp $
+
+  27 Dec 2010; <olemarkus@gentoo.org> PEAR-Mail-1.2.0.ebuild:
+  Fixed RDEPEND line
 
   25 Dec 2010; Jeroen Roovers <jer@gentoo.org> PEAR-Mail-1.2.0.ebuild:
   Stable for HPPA (bug #294256).
