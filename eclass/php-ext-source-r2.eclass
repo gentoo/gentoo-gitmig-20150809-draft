@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.5 2010/11/03 22:47:19 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.6 2010/12/27 22:19:51 darkside Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -69,11 +69,11 @@ for target in ${USE_PHP}; do
 	SELFDEPEND="${SELFDEPEND} =${CATEGORY}/${PF}[php_targets_${target}]"
 	slot=${target/php}
 	slot=${slot/-/.}
-	PHPDEPEND="${PHPDEPEND} 
+	PHPDEPEND="${PHPDEPEND}
 	php_targets_${target}? ( dev-lang/php:${slot} )"
 done
-	
-RDEPEND="${RDEPEND} 
+
+RDEPEND="${RDEPEND}
 	|| ( ${SELFDEPEND} )
 	${PHPDEPEND}"
 
@@ -85,7 +85,7 @@ RDEPEND="${RDEPEND}
 # @VARIABLE: PHP_EXT_SKIP_PHPIZE
 # @DESCRIPTION:
 # phpize will be run by default for all ebuilds that use
-# php-ext-source-r1_src_unpack
+# php-ext-source-r2_src_unpack
 # Set PHP_EXT_SKIP_PHPIZE="yes" in your ebuild if you do not want to run phpize.
 php-ext-source-r2_src_unpack() {
 	unpack ${A}
@@ -116,7 +116,7 @@ php-ext-source-r2_phpize() {
 		# files (bug 220519)
 		rm aclocal.m4
 		eautoreconf
-	fi	
+	fi
 }
 
 # @FUNCTION: php-ext-source-r2_src_configure
@@ -145,7 +145,7 @@ php-ext-source-r2_src_compile() {
 	addpredict /usr/share/snmp/mibs/.index
 	# shm extension createss a semaphore file #173574
 	addpredict /session_mm_cli0.sem
-	local slot	
+	local slot
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		emake || die "Unable to make code"
@@ -223,7 +223,7 @@ php-ext-source-r2_buildinilist() {
 # Builds ini files for every enabled slot and SAPI
 php-ext-source-r2_createinifiles() {
 	local slot
-	for slot in $(php_get_slots); do 
+	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		# Pull in the PHP settings
 
