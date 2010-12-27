@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.61 2010/12/09 21:51:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.62 2010/12/27 22:41:19 arfrever Exp $
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
 # dev-libs/gobject-introspection is not keyworded, bug 348313
@@ -13,11 +13,6 @@ mail-client/evolution connman
 # Dane Smith <c1pher@gentoo.org> (12 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
 net-libs/gnutls -valgrind
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (08 Nov 2010)
-# Tests masked until dev-python/mock is keyworded.
->=dev-util/buildbot-0.8.1 test
-dev-util/buildbot-slave test
 
 # Justin Lecher <jlec@gentoo.org> (01 Nov 2010)
 # Deps not Keyworded
