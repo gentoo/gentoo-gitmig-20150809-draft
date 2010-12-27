@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs-cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-cedet/ChangeLog,v 1.1 2010/05/14 14:26:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-cedet/ChangeLog,v 1.2 2010/12/27 10:24:43 ulm Exp $
+
+  27 Dec 2010; Ulrich Mueller <ulm@gentoo.org> emacs-cedet-0.ebuild:
+  Mark as stable.
 
 *emacs-cedet-0 (14 May 2010)
 
