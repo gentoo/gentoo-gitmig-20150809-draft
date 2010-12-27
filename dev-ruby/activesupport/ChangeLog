@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.129 2010/12/04 07:57:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.130 2010/12/27 20:00:38 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  activesupport-2.3.8.ebuild, activesupport-3.0.3.ebuild:
+  Marked ~x64-macos
 
 *activesupport-3.0.3 (03 Dec 2010)
 
