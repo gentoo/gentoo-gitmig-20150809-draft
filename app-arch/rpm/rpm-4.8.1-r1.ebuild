@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1.ebuild,v 1.3 2010/12/14 02:04:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1-r1.ebuild,v 1.1 2010/12/27 18:55:45 sochotnicky Exp $
 
 EAPI=2
 
@@ -70,6 +70,10 @@ src_install() {
 
 	mv "${D}"/bin/rpm "${D}"/usr/bin
 	rmdir "${D}"/bin
+	# fix symlinks to /bin/rpm (#349840)
+	for binary in rpmdb rpmquery rpmsign rpmverify;do
+		ln -sf rpm "${D}"/usr/bin/$binary
+	done
 
 	use nls || rm -rf "${D}"/usr/share/man/??
 
