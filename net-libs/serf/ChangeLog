@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.40 2010/12/27 21:32:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.41 2010/12/27 22:07:19 arfrever Exp $
+
+  27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -serf-0.3.1.ebuild:
+  Delete.
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> serf-0.7.0.ebuild:
   stable ppc64, bug 343757
