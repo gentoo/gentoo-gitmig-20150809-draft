@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-MDB2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.34 2010/09/11 14:26:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2/ChangeLog,v 1.35 2010/12/27 22:02:08 olemarkus Exp $
+
+  27 Dec 2010; <olemarkus@gentoo.org> PEAR-MDB2-2.5.0_beta3.ebuild:
+  Added dependency on dev-php/pear-1.9.1 and above
 
 *PEAR-MDB2-2.5.0_beta3 (11 Sep 2010)
 
