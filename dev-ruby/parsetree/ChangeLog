@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.33 2010/12/03 16:58:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.34 2010/12/27 21:11:22 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  parsetree-3.0.5-r2.ebuild:
+  Marked ~x64-solaris
 
   03 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   parsetree-3.0.5-r2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.31 2010/10/23 15:45:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.32 2010/12/27 21:09:48 grobian Exp $
+
+  27 Dec 2010; Fabian Groffen <grobian@gentoo.org> ruby-inline-3.8.6.ebuild:
+  Marked ~x64-solaris
 
   23 Oct 2010; Jeroen Roovers <jer@gentoo.org> ruby-inline-3.8.4-r2.ebuild,
   ruby-inline-3.8.6.ebuild:
