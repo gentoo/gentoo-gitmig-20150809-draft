@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.14 2010/12/01 15:41:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.15 2010/12/27 14:35:29 hd_brummy Exp $
+
+  27 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.ebuild,
+  xxv-1.6.1.ebuild:
+  added missing depend dev-perl/Template-GD; thx to negril @ irc gentoo-vdr
 
   01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.1.ebuild:
   fixed versions depend to xxv-skins; thx to negril@irc#gentoo-vdr
