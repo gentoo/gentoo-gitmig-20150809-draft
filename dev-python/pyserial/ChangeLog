@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.62 2010/11/13 17:49:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.63 2010/12/27 20:57:04 ranger Exp $
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> pyserial-2.5-r1.ebuild:
+  Marking pyserial-2.5-r1 ppc64 for bug 342445
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> pyserial-2.5-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #342445
