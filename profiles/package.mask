@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12307 2010/12/28 18:25:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12308 2010/12/28 18:30:25 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -483,14 +483,6 @@ gnustep-base/libobjc2
 # Masked for removal in 30 days or sooner
 kde-base/policykit-kde
 sys-auth/policykit-qt
-
-# Pacho Ramos <pacho@gentoo.org> (07 Oct 2010)
-# Unmaintained since 2006 by upstream, no required by
-# any package in the tree (bug #340039) and most
-# distributions have already dropped it.
-#
-# Removal on 2010-11-07
-dev-dotnet/ant-dotnet
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (04 Oct 2010)
 #  on behalf of QA team
