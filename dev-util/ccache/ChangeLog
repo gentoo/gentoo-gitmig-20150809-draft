@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.75 2010/12/26 17:23:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.76 2010/12/28 15:36:00 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> ccache-2.4-r9.ebuild:
+  stable ppc64, bug 320687
 
   26 Dec 2010; Raúl Porcel <armin76@gentoo.org> ccache-2.4-r9.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #320687
