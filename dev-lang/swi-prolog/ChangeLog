@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.252 2010/12/09 06:44:05 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.253 2010/12/28 23:03:42 keri Exp $
+
+  28 Dec 2010; <keri@gentoo.org> swi-prolog-5.10.2.ebuild:
+  Ensure thread fli structs are maintained on PPC
 
 *swi-prolog-5.11.10 (09 Dec 2010)
 
