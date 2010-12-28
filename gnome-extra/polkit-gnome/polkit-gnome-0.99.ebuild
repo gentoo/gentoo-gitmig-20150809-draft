@@ -1,53 +1,62 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.99.ebuild,v 1.1 2010/09/25 02:13:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.99.ebuild,v 1.2 2010/12/28 18:38:42 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
+inherit autotools eutils
 
-inherit autotools eutils gnome2
-
-DESCRIPTION="PolicyKit policies and configurations for the GNOME desktop"
-HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit"
+DESCRIPTION="A dbus session bus service that is used to bring up authentication dialogs"
+HOMEPAGE="http://hal.freedesktop.org/docs/PolicyKit/"
 SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.bz2"
 
-LICENSE="LGPL-2 GPL-2"
+LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples +introspection"
 
 RDEPEND=">=x11-libs/gtk+-2.17.1
-	>=gnome-base/gconf-2.8
 	>=sys-auth/polkit-0.97
-	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
+	!lxde-base/lxpolkit"
 DEPEND="${RDEPEND}
-	sys-devel/gettext
-	>=dev-util/pkgconfig-0.19
-	>=dev-util/intltool-0.35.0
-	>=app-text/scrollkeeper-0.3.14
-	gnome-base/gnome-common
 	dev-util/gtk-doc-am
+	>=dev-util/intltool-0.35.0
+	dev-util/pkgconfig
+	gnome-base/gnome-common
+	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.3 )"
-# gtk-doc-am is required for eautoreconf
-DOCS="AUTHORS HACKING NEWS TODO"
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		$(use_enable examples)
-		$(use_enable introspection)"
-
 	# polkit-gnome is useful also for LXDE, XFCE, and others
 	sed -i \
 		-e 's:OnlyShowIn=GNOME:NotShowIn=KDE:' \
 		src/polkit-gnome-authentication-agent-1.desktop.in.in || die
 
 	# Fix make check, bug 298345
-	epatch "${FILESDIR}/${PN}-0.95-fix-make-check.patch"
+	epatch "${FILESDIR}"/${PN}-0.95-fix-make-check.patch
 
 	if use doc; then
 		# Fix parallel build failure, bug 293247
-		epatch "${FILESDIR}/${PN}-0.95-parallel-build-failure.patch"
+		epatch "${FILESDIR}"/${PN}-0.95-parallel-build-failure.patch
 
-		gtkdocize || die "gtkdocize failed"
+		gtkdocize || die
 		eautoreconf
 	fi
+}
+
+src_configure() {
+	# Do we need USE static-libs ? By user request.
+	econf \
+		--disable-dependency-tracking \
+		--disable-static \
+		$(use_enable doc gtk-doc) \
+		$(use_enable examples) \
+		$(use_enable introspection)
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS HACKING NEWS
+
+	find "${D}" -name '*.la' -exec rm -f '{}' +
 }
