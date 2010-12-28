@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.17 2010/08/15 17:49:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.18 2010/12/28 08:25:46 grobian Exp $
+
+  28 Dec 2010; Fabian Groffen <grobian@gentoo.org> crack-0.1.8.ebuild:
+  Added Prefix keywords
 
   15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -crack-0.1.6.ebuild,
   -crack-0.1.7.ebuild, crack-0.1.8.ebuild:
