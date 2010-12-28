@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.782 2010/12/27 17:59:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.783 2010/12/28 17:00:17 maekke Exp $
+
+  28 Dec 2010; Markus Meier <maekke@gentoo.org> portage-2.1.9.25.ebuild:
+  arm stable, bug #349098
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> portage-2.1.9.25.ebuild:
   Marking portage-2.1.9.25 ppc64 for bug 349098
