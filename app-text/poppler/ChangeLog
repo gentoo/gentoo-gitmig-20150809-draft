@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.269 2010/12/27 21:53:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.270 2010/12/28 18:40:40 reavertm Exp $
+
+  28 Dec 2010; Maciej Mrozowski <reavertm@gentoo.org> poppler-0.16.0.ebuild:
+  Raise cairo dependencies to 1.10.0, bug 349917.
 
 *poppler-0.16.0 (27 Dec 2010)
 

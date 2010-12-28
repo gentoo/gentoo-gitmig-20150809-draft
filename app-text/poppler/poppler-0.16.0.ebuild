@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.0.ebuild,v 1.1 2010/12/27 21:53:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.0.ebuild,v 1.2 2010/12/28 18:40:40 reavertm Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	abiword? ( dev-libs/libxml2:2 )
 	cairo? (
 		dev-libs/glib:2
-		>=x11-libs/cairo-1.8.4
+		>=x11-libs/cairo-1.10.0
 		>=x11-libs/gtk+-2.20.1:2[introspection?]
 		introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	)
