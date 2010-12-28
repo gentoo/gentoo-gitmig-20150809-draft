@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.43 2010/06/07 17:40:33 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.44 2010/12/28 12:54:20 pchrist Exp $
+
+*libsigsegv-2.9 (28 Dec 2010)
+
+  28 Dec 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +libsigsegv-2.9.ebuild:
+  Bump to 2.9 by Jeroen Roovers, bug #344413
 
   07 Jun 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   -libsigsegv-2.4.ebuild, -libsigsegv-2.6.ebuild:
