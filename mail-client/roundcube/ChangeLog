@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.36 2010/11/28 17:17:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.37 2010/12/28 16:50:00 maekke Exp $
+
+  28 Dec 2010; Markus Meier <maekke@gentoo.org> roundcube-0.4.2.ebuild:
+  arm stable, bug #345931
 
   28 Nov 2010; Markus Meier <maekke@gentoo.org> roundcube-0.4.2.ebuild:
   x86 stable, bug #345931
