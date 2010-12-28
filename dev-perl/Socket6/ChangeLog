@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.35 2010/11/03 18:52:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.36 2010/12/28 01:32:32 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> Socket6-0.20.ebuild:
+  Marking Socket6-0.20 ppc64 for bug 342475
 
   03 Nov 2010; Peter Volkov <pva@gentoo.org> Socket6-0.20.ebuild:
   Stable on amd64 too.
