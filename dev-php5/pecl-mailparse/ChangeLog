@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-mailparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.22 2010/12/27 20:53:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.23 2010/12/28 19:26:33 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org>
+  pecl-mailparse-2.1.5-r1.ebuild:
+  Marking pecl-mailparse-2.1.5-r1 ~ppc64 for bug 349659
 
   27 Dec 2010; Jeremy Olexa <darkside@gentoo.org>
   pecl-mailparse-2.1.5.ebuild, pecl-mailparse-2.1.5-r1.ebuild:
