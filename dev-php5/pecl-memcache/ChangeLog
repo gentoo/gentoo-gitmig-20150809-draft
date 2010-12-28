@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-memcache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.40 2010/12/25 17:52:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.41 2010/12/28 19:23:28 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org>
+  pecl-memcache-3.0.5-r1.ebuild:
+  Marking pecl-memcache-3.0.5-r1 ppc64 for bug 349659
 
   25 Dec 2010; Jeroen Roovers <jer@gentoo.org> pecl-memcache-3.0.5-r1.ebuild:
   Stable for HPPA (bug #349659).
