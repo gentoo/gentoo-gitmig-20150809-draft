@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.5.0.ebuild,v 1.4 2010/11/08 21:29:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.7.0.ebuild,v 1.1 2010/12/28 17:07:56 dilfridge Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="ar bg ca cs da de eo et eu fi fr ga gl he hi hne hr hu is it ja km
-ko lt lv ms nb nds ne nl nn pa pl pt pt_BR ro ru se sk sl sv th tr uk vi zh_TW"
+KDE_LINGUAS="be ca ca@valencia de el en_GB eo es et eu fi fr he hi hne hu is it km
+ko lt lv nds nn pa pl pt pt_BR ro se sl sv th tr vi zh_CN zh_TW"
 KMNAME="extragear/graphics"
 
 CMAKE_MIN_VERSION=2.8
@@ -66,7 +66,7 @@ DEPEND="${CDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "${FILESDIR}/${PN}"-1.4.0-docs.patch "${FILESDIR}/${P}"-unbundle.patch )
+PATCHES=( "${FILESDIR}/${P}"-docs.patch )
 
 src_prepare() {
 	if use handbook; then
