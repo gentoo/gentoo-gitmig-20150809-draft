@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.36 2010/12/28 12:25:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.37 2010/12/28 12:27:07 graaff Exp $
+
+  28 Dec 2010; Hans de Graaff <graaff@gentoo.org> rack-1.1.0.ebuild,
+  rack-1.1.0-r1.ebuild, rack-1.2.1.ebuild:
+  Add ~x64-solaris keyword also to newer versions.
 
 *rack-1.1.0-r1 (28 Dec 2010)
 
