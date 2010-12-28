@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/jpeginfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.19 2010/03/02 01:44:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.20 2010/12/28 23:42:21 xmw Exp $
+
+  28 Dec 2010; Michael Weber <xmw@gentoo.org> jpeginfo-1.6.0.ebuild:
+  Change media-libs/jpeg to virtual/jpeg (thanks to Holger Hoffstätte
+  <holger.hoffstaette@googlemail.com> on bug 349598)
 
   02 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> jpeginfo-1.6.0.ebuild,
   +files/jpeginfo-1.6.0-parallel_install.patch:

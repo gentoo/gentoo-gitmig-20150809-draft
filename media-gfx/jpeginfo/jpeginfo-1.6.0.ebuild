@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.19 2010/03/02 01:44:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.20 2010/12/28 23:42:21 xmw Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=">=media-libs/jpeg-6b:0"
+DEPEND="virtual/jpeg"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel_install.patch
