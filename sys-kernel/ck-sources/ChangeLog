@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.190 2010/12/18 18:55:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.191 2010/12/28 16:37:43 nelchael Exp $
+
+*ck-sources-2.6.36-r5 (28 Dec 2010)
+
+  28 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.34-r1.ebuild, -ck-sources-2.6.34-r2.ebuild,
+  -ck-sources-2.6.34-r3.ebuild, -ck-sources-2.6.34-r4.ebuild,
+  -ck-sources-2.6.34-r5.ebuild, -ck-sources-2.6.35-r1.ebuild,
+  -ck-sources-2.6.35-r2.ebuild, -ck-sources-2.6.35-r3.ebuild,
+  -ck-sources-2.6.35-r4.ebuild, -ck-sources-2.6.35-r5.ebuild,
+  -ck-sources-2.6.35-r6.ebuild, -ck-sources-2.6.36.ebuild,
+  -ck-sources-2.6.36-r1.ebuild, -ck-sources-2.6.36-r2.ebuild,
+  +ck-sources-2.6.36-r5.ebuild:
+  Revision bump for new genpatches, remove old versions.
 
 *ck-sources-2.6.35-r9 (18 Dec 2010)
 
