@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.17 2010/10/23 15:49:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.18 2010/12/28 08:08:34 grobian Exp $
+
+  28 Dec 2010; Fabian Groffen <grobian@gentoo.org> ruby_parser-2.0.5.ebuild:
+  Added Prefix keywords
 
   23 Oct 2010; Jeroen Roovers <jer@gentoo.org> ruby_parser-2.0.4-r1.ebuild,
   ruby_parser-2.0.5.ebuild:
