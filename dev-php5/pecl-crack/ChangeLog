@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-crack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.21 2010/11/04 10:27:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-crack/ChangeLog,v 1.22 2010/12/28 19:24:40 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> pecl-crack-0.4-r1.ebuild:
+  Marking pecl-crack-0.4-r1 ~ppc64 for bug 349659
 
 *pecl-crack-0.4-r1 (04 Nov 2010)
 
