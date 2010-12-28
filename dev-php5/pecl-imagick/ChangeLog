@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-imagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.33 2010/11/21 17:46:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.34 2010/12/28 19:25:09 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> pecl-imagick-3.0.0-r1.ebuild:
+  Marking pecl-imagick-3.0.0-r1 ~ppc64 for bug 349659
 
   21 Nov 2010; Markus Meier <maekke@gentoo.org> pecl-imagick-3.0.0.ebuild:
   x86 stable, bug #343005
