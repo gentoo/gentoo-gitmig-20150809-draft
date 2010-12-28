@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/avfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.31 2010/12/22 15:15:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.32 2010/12/28 01:25:34 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> avfs-0.9.9.ebuild:
+  Marking avfs-0.9.9 ppc64 for bug 330541
 
   22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> avfs-0.9.9.ebuild:
   Stable on alpha, bug #347099
