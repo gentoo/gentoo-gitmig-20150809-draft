@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.47 2010/11/23 09:03:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/ChangeLog,v 1.48 2010/12/28 13:13:58 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org>
+  claws-mail-perl-0.9.18.ebuild:
+  Marking claws-mail-perl-0.9.18 ppc64 stable for bug 331395
 
   23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-perl-0.9.17.ebuild, claws-mail-perl-0.9.18.ebuild:
