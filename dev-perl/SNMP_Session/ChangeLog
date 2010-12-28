@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.25 2010/11/26 15:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.26 2010/12/28 01:34:03 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> SNMP_Session-1.13.ebuild:
+  Marking SNMP_Session-1.13 ppc64 for bug 342475
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> SNMP_Session-1.13.ebuild:
   Stable for HPPA (bug #342475).
