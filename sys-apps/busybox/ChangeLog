@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.263 2010/12/27 19:53:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.264 2010/12/28 16:44:11 maekke Exp $
+
+  28 Dec 2010; Markus Meier <maekke@gentoo.org> busybox-1.17.4.ebuild:
+  arm stable, bug #349309
 
   27 Dec 2010; Jeroen Roovers <jer@gentoo.org> busybox-1.17.4.ebuild:
   Stable for HPPA (bug #349309).
