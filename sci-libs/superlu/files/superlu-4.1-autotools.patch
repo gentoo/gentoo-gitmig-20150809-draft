@@ -452,7 +452,7 @@ diff -Nur SuperLU_4.1.orig/SRC/Makefile.am SuperLU_4.1/SRC/Makefile.am
 +	slu_cdefs.h \
 +	slu_ddefs.h \
 +	slu_sdefs.h \
-+	slu_zdefs.h
++	slu_zdefs.h \
 +	slu_Cnames.h \
 +	slu_dcomplex.h \
 +	slu_scomplex.h \
@@ -572,4 +572,4 @@ diff -Nur SuperLU_4.1.orig/superlu.pc.in SuperLU_4.1/superlu.pc.in
 +Libs: -L${libdir} -lsuperlu 
 +Libs.private: -lm @FLIBS@
 +Requires: blas
-+Cflags: -I${includedir}
++Cflags: -I${includedir}/superlu
