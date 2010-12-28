@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.3 2010/12/01 16:59:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.4 2010/12/28 03:20:41 nerdboy Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # needs someone to test on these: ~alpha ~hppa ~ia64 ~ppc ~ppc64 ~sparc etc ...
 
-IUSE="doc examples"
+IUSE="debug doc examples"
 
 RDEPEND=""
 
@@ -61,9 +63,7 @@ pkg_setup() {
 	esac
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	find . -type f | xargs chmod -x
 	chmod +x bufrtables/links.sh
 	if use debug ; then
@@ -73,6 +73,9 @@ src_unpack() {
 		sed -i -e "s:-O2:${CFLAGS}:g" \
 			config/config.$target$CNAME$R64$A64
 	fi
+
+	# updated for newer gcc
+	epatch "${FILESDIR}"/${P}-gcc-includes.patch
 }
 
 src_compile() {

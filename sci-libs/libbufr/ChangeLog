@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libbufr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.2 2010/12/01 16:59:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.3 2010/12/28 03:20:41 nerdboy Exp $
+
+  28 Dec 2010; Steve Arnold <nerdboy@gentoo.org> libbufr-000360.ebuild,
+  +files/libbufr-000360-gcc-includes.patch:
+  Updated with some QA fixes (bug #349458) including a minor gcc patch. 
+  Everything looks clean and green now...
 
   01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> libbufr-000360.ebuild:
   Remove use of fortran eclass
