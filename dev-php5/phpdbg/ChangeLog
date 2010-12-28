@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/phpdbg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/ChangeLog,v 1.14 2010/11/04 17:43:15 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/ChangeLog,v 1.15 2010/12/28 19:29:57 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> phpdbg-2.15.5-r1.ebuild:
+  Marking phpdbg-2.15.5-r1 ~ppc64 for bug 349659
 
   04 Nov 2010; Matti Bickel <mabi@gentoo.org> phpdbg-2.15.5-r1.ebuild:
   fix USE_PHP placement
