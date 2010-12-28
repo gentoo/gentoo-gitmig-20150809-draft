@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12304 2010/12/28 12:29:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12305 2010/12/28 13:54:08 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -150,17 +150,6 @@ dev-tcltk/tclxml-expat
 # Part of GNOME 2.32 release set by breaks my machine as hell
 # Needs more testing before unleashing
 >=gnome-base/libbonobo-2.32
-
-# Hans de Graaff <graaff@gentoo.org> (7 Dec 2010)
-# Mask until all issues with it are worked out and the bundler
-# bug 313279 has been fixed.
-=dev-ruby/actionmailer-3.0.3
-=dev-ruby/actionpack-3.0.3
-=dev-ruby/activemodel-3.0.3
-=dev-ruby/activerecord-3.0.3
-=dev-ruby/activeresource-3.0.3
-=dev-ruby/activesupport-3.0.3
-=dev-ruby/railties-3.0.3
 
 # Hans de Graaff <graaff@gentoo.org> (6 Dec 2010)
 # No longer builds with perl 5.12. Various open bugs and QA issues.
