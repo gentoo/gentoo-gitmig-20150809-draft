@@ -1,3 +1,5 @@
+https://sourceforge.net/tracker/?func=detail&aid=3031380&group_id=243486&atid=1122548
+
 --- a/vnc_unixsrc/vncviewer/sockets.c
 +++ b/vnc_unixsrc/vncviewer/sockets.c
 @@ -32,6 +32,7 @@
