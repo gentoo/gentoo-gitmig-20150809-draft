@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12303 2010/12/26 14:27:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12304 2010/12/28 12:29:04 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -161,7 +161,6 @@ dev-tcltk/tclxml-expat
 =dev-ruby/activeresource-3.0.3
 =dev-ruby/activesupport-3.0.3
 =dev-ruby/railties-3.0.3
-=dev-ruby/rack-1.2.1
 
 # Hans de Graaff <graaff@gentoo.org> (6 Dec 2010)
 # No longer builds with perl 5.12. Various open bugs and QA issues.
