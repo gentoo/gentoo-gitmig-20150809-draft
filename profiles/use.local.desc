@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6247 2010/12/27 22:13:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6248 2010/12/28 17:53:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -971,7 +971,6 @@ dev-lang/ruby-enterprise:tcmalloc -  Add support for TCMalloc provided by dev-ut
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/spidermonkey:threadsafe - Build a threadsafe version of spidermonkey
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
-dev-lang/vala:coverage - Enable coverage analysis
 dev-lang/vala:vapigen - Enable vala's library binding generator
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
 dev-libs/STLport:boost - Enable the usage of dev-libs/boost
