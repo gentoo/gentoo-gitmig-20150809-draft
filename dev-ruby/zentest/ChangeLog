@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.82 2010/12/27 21:06:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.83 2010/12/28 08:19:55 grobian Exp $
+
+  28 Dec 2010; Fabian Groffen <grobian@gentoo.org> zentest-4.4.2.ebuild:
+  Drop ~ia64-linux
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org> zentest-4.4.2.ebuild:
   Marked ~x64-solaris
