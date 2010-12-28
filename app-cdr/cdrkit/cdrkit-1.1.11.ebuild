@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.11.ebuild,v 1.1 2010/12/18 20:37:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.11.ebuild,v 1.2 2010/12/28 11:05:30 lxnay Exp $
 
 EAPI=3
 inherit cmake-utils
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug hfs unicode"
 
-RDEPEND="unicode? ( virtual/libiconv )
+RDEPEND="!app-cdr/cdrtools
+	unicode? ( virtual/libiconv )
 	kernel_linux? ( sys-libs/libcap )"
 DEPEND="${RDEPEND}
-	!app-cdr/cdrtools
 	hfs? ( sys-apps/file )"
 
 src_prepare() {
