@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.35 2010/10/22 13:25:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.36 2010/12/28 12:25:46 graaff Exp $
+
+*rack-1.1.0-r1 (28 Dec 2010)
+
+  28 Dec 2010; Hans de Graaff <graaff@gentoo.org> +rack-1.1.0-r1.ebuild,
+  rack-1.2.1.ebuild:
+  Put rack 1.2 in a separate slot, and make sure that only rack 1.2 installs
+  rackup so the older version can co-exist. Fixed bug 341941.
 
   22 Oct 2010; Hans de Graaff <graaff@gentoo.org> -rack-1.0.0.ebuild:
   Remove old version.
