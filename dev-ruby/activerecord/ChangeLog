@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.144 2010/12/04 20:18:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.145 2010/12/28 13:49:35 graaff Exp $
+
+  28 Dec 2010; Hans de Graaff <graaff@gentoo.org> activerecord-3.0.3.ebuild:
+  Install proper gemspec.
 
 *activerecord-3.0.3 (04 Dec 2010)
 

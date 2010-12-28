@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3.ebuild,v 1.1 2010/12/05 08:54:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3.ebuild,v 1.2 2010/12/28 13:48:19 graaff Exp $
 
 EAPI=2
 
@@ -12,6 +12,8 @@ USE_RUBY="ruby18 ree18"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
+
+RUBY_FAKEGEM_GEMSPEC="actionpack.gemspec"
 
 inherit ruby-fakegem
 

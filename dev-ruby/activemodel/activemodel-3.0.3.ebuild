@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.0.3.ebuild,v 1.3 2010/12/04 19:58:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.0.3.ebuild,v 1.4 2010/12/28 13:48:56 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -8,6 +8,8 @@ USE_RUBY="ruby18 ree18"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
+
+RUBY_FAKEGEM_GEMSPEC="activemodel.gemspec"
 
 inherit ruby-fakegem
 
