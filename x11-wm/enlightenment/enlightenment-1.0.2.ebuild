@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.2.ebuild,v 1.8 2010/09/28 16:47:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.2.ebuild,v 1.9 2010/12/28 01:47:10 ranger Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
@@ -11,7 +11,7 @@ if [[ ${PV} == *9999 ]] ; then
 	S=${WORKDIR}/e16/e
 else
 	SRC_URI="mirror://sourceforge/enlightenment/e16-${PV/_/-}.tar.gz"
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 	S=${WORKDIR}/e16-${PV/_pre?}
 fi
 inherit eutils
