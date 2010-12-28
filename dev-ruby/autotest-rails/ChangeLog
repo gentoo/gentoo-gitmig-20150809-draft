@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/autotest-rails
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.10 2010/06/12 20:36:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.11 2010/12/28 08:53:51 graaff Exp $
+
+  28 Dec 2010; Hans de Graaff <graaff@gentoo.org>
+  autotest-rails-4.1.0-r1.ebuild:
+  Keyword ~x86-macos.
 
 *autotest-rails-4.1.0-r1 (12 Jun 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.6-r1.ebuild,v 1.5 2010/09/05 16:59:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.6-r1.ebuild,v 1.6 2010/12/28 08:52:30 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://arika.org/ruby/termios"	# trailing / isn't needed
 SRC_URI="http://github.com/arika/ruby-termios/tarball/version_0_9_6 -> ${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86 ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}/arika-${PN}-94fd9ac"
