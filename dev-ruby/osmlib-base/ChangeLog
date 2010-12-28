@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/osmlib-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/osmlib-base/ChangeLog,v 1.10 2010/08/15 22:16:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/osmlib-base/ChangeLog,v 1.11 2010/12/28 08:06:26 graaff Exp $
+
+  06 Oct 2010; Hans de Graaff <graaff@gentoo.org>
+  osmlib-base-0.1.4-r1.ebuild, +files/test.osm:
+  Provide missing file for tests. Restrict tests due to additional failure,
+  bug 339903.
 
   15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   osmlib-base-0.1.4-r1.ebuild:
