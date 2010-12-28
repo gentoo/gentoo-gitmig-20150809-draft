@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.6.4-r2.ebuild,v 1.2 2010/09/12 14:32:13 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.6.4-r3.ebuild,v 1.1 2010/12/28 12:34:30 tommy Exp $
 
 EAPI=2
 
@@ -19,12 +19,8 @@ DEPEND="dev-libs/gmp
 	>=virtual/jdk-1.4"
 RDEPEND="dev-libs/gmp"
 
-pkg_setup() {
-	append-ldflags $(no-as-needed)
-}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-{asmfix,ldflags}.patch
 }
 
 src_compile() {

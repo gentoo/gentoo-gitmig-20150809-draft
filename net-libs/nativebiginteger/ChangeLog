@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/nativebiginteger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.5 2010/09/12 14:31:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.6 2010/12/28 12:34:30 tommy Exp $
+
+*nativebiginteger-0.6.4-r3 (28 Dec 2010)
+
+  28 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -nativebiginteger-0.6.4-r2.ebuild, +nativebiginteger-0.6.4-r3.ebuild,
+  +files/nativebiginteger-0.6.4-asmfix.patch,
+  files/nativebiginteger-0.6.4-ldflags.patch:
+  Revision bump, fix asm code for x86, fix linking order, fixes bug 349784
 
 *nativebiginteger-0.6.4-r2 (12 Sep 2010)
 
