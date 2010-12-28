@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.330 2010/12/16 01:29:42 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.331 2010/12/28 01:50:33 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> gvim-7.3.50.ebuild:
+  Marking gvim-7.3.50 ppc64 for bug 348269
 
   16 Dec 2010; Richard Freeman <rich0@gentoo.org> gvim-7.3.50.ebuild:
   amd64 stable - 348269
