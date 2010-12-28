@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.109 2010/12/18 18:47:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.110 2010/12/28 16:46:42 nelchael Exp $
+
+*tuxonice-sources-2.6.36-r4 (28 Dec 2010)
+
+  28 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -tuxonice-sources-2.6.32-r17.ebuild, -tuxonice-sources-2.6.32-r18.ebuild,
+  -tuxonice-sources-2.6.32-r19.ebuild, -tuxonice-sources-2.6.32-r20.ebuild,
+  -tuxonice-sources-2.6.32-r21.ebuild, -tuxonice-sources-2.6.32-r22.ebuild,
+  -tuxonice-sources-2.6.34-r7.ebuild, -tuxonice-sources-2.6.34-r8.ebuild,
+  -tuxonice-sources-2.6.35-r3.ebuild, -tuxonice-sources-2.6.35-r4.ebuild,
+  -tuxonice-sources-2.6.35-r5.ebuild, -tuxonice-sources-2.6.35-r6.ebuild,
+  -tuxonice-sources-2.6.35-r7.ebuild, -tuxonice-sources-2.6.35-r8.ebuild,
+  -tuxonice-sources-2.6.35-r9.ebuild, -tuxonice-sources-2.6.36.ebuild,
+  -tuxonice-sources-2.6.36-r1.ebuild, -tuxonice-sources-2.6.36-r2.ebuild,
+  +tuxonice-sources-2.6.36-r4.ebuild:
+  Revision bump for new genpatches, remove old versions.
 
 *tuxonice-sources-2.6.35-r10 (18 Dec 2010)
 
