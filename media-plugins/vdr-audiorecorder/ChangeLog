@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-audiorecorder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.12 2010/12/23 16:28:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.13 2010/12/28 18:44:25 hd_brummy Exp $
+
+*vdr-audiorecorder-0.1.0_pre14-r1 (28 Dec 2010)
+
+  28 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-audiorecorder-0.1.0_pre14-r1.ebuild,
+  +files/vdr-audiorecorder-0.1.0_pre14-shared-tinyxml.diff,
+  files/rc-addon.sh:
+  use shared tinyxml lib now, see bug #349507; some minor fixes in source
+  code
 
 *vdr-audiorecorder-0.1.0_pre14 (23 Dec 2010)
 
