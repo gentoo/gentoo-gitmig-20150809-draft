@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.149 2010/11/15 15:11:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.150 2010/12/28 01:44:39 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> inkscape-0.48.0.ebuild:
+  stable ppc64, bug 343371
 
   15 Nov 2010; Jeroen Roovers <jer@gentoo.org> inkscape-0.48.0.ebuild:
   Stable for PPC (bug #343371).
