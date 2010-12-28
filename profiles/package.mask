@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12305 2010/12/28 13:54:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12306 2010/12/28 14:09:49 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (28 Dec 2010)
+# Masked for removal in 30 days, abandoned by
+# upstream, bugs #238796, #241344, #316941
+# Use sys-cluster/gsh as an replacement
+sys-cluster/tentakel
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (26 Dec 2010)
 #  on behalf of QA team

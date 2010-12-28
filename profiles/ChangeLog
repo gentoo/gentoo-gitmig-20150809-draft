@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4891 2010/12/28 13:54:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4892 2010/12/28 14:09:49 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
+  Lastrite sys-cluster/tentakel
 
   28 Dec 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Unmask Rails 3 components.
