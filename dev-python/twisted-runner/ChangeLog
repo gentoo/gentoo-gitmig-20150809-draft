@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.41 2010/12/23 23:48:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.42 2010/12/28 01:22:13 ranger Exp $
+
+  28 Dec 2010; Brent Baude <ranger@gentoo.org> twisted-runner-10.2.0.ebuild:
+  Marking twisted-runner-10.2.0 ppc64 for bug 333211
 
   23 Dec 2010; Thomas Kahle <tomka@gentoo.org> twisted-runner-10.1.0.ebuild:
   x86 stable per bug 333389
