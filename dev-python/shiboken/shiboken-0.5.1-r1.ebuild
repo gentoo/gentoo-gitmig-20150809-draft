@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-0.5.1.ebuild,v 1.1 2010/11/25 01:18:06 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-0.5.1-r1.ebuild,v 1.1 2010/12/29 06:42:20 ayoy Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+PYTHON_DEPEND="2:2.5"
+
+inherit cmake-utils python
 
 DESCRIPTION="A tool for creating Python bindings for C++ libraries"
 HOMEPAGE="http://www.pyside.org/"
@@ -22,6 +24,10 @@ RDEPEND="${DEPEND}
 	!dev-python/boostpythongenerator"
 
 PATCHES=( "${FILESDIR}/${P}-fix-pkgconfig.patch" )
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_install() {
 	cmake-utils_src_install
