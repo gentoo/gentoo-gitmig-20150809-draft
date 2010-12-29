@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-cronyx-cyrillic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cronyx-cyrillic/ChangeLog,v 1.36 2010/12/25 19:41:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cronyx-cyrillic/ChangeLog,v 1.37 2010/12/29 21:35:34 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org>
+  font-cronyx-cyrillic-1.0.3.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   font-cronyx-cyrillic-1.0.3.ebuild:

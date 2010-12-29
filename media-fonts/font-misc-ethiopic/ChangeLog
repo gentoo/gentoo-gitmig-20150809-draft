@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-ethiopic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.47 2010/12/25 19:44:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/ChangeLog,v 1.48 2010/12/29 21:41:14 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org>
+  font-misc-ethiopic-1.0.3.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   font-misc-ethiopic-1.0.3.ebuild:
