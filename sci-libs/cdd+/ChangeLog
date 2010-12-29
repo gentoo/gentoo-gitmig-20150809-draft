@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cdd+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdd+/ChangeLog,v 1.1 2010/11/12 15:04:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdd+/ChangeLog,v 1.2 2010/12/29 18:12:01 hwoarang Exp $
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> cdd+-077a.ebuild:
+  Stable on amd64 wrt bug #349167
 
 *cdd+-077a (12 Nov 2010)
 
