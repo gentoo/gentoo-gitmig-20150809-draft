@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.2.ebuild,v 1.1 2010/11/25 01:21:24 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.2.ebuild,v 1.2 2010/12/29 10:31:44 ayoy Exp $
 
 EAPI="2"
+
+PYTHON_DEPEND="2:2.5"
 
 inherit cmake-utils python
 
@@ -21,6 +23,10 @@ DEPEND=">=dev-python/pyside-0.4.0
 RDEPEND="${DEPEND}"
 
 TEST_VERBOSE=1
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	sed -e 's#pyside-rcc4#PATH=$PATH:${WORKDIR}/${P}_build/pyrcc pyside-rcc#' \

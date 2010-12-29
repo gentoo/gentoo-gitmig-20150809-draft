@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.5 2010/11/25 01:21:24 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.6 2010/12/29 10:31:44 ayoy Exp $
+
+  29 Dec 2010; Dominik Kapusta <ayoy@gentoo.org> pyside-tools-0.2.2.ebuild:
+  Specifying correct dependency on Python (bug #345535).
 
 *pyside-tools-0.2.2 (25 Nov 2010)
 
