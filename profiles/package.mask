@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12309 2010/12/29 11:51:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12310 2010/12/29 11:53:54 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -272,17 +272,6 @@ dev-python/py-rrdtool
 # Will be removed on max{13 Dec 2010, TeX Live 2010 stabilized}.
 # Bugs: 303965, 323559 and 344585
 app-text/ptex
-
-# Torsten Veller <tove@gentoo.org> (11 Nov 2010)
-# Mask dev-util/libconf and its reverse dependencies
-# app-portage/flagedit, app-portage/profuse, app-admin/config_confd
-# for removal. Unmaintained with bugs
-# (#162753,#196552,#225071,#297650,#300104,#326099)
-# app-portage/flaggie can be used as an alternative.
-app-admin/config_confd
-app-portage/flagedit
-app-portage/profuse
-dev-util/libconf
 
 # Eray Aslan <eras@gentoo.org> (10 Nov 2010)
 # masking prerelease versions
