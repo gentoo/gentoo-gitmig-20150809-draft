@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.98 2010/12/29 14:24:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.99 2010/12/29 17:38:44 tomka Exp $
+
+  29 Dec 2010; Thomas Kahle <tomka@gentoo.org> pcsc-lite-1.6.6.ebuild:
+  x86 stable per bug 349561
 
   29 Dec 2010; Jeroen Roovers <jer@gentoo.org> pcsc-lite-1.6.6.ebuild:
   Stable for HPPA PPC (bug #349561).
