@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r1.ebuild,v 1.7 2010/12/27 20:40:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r1.ebuild,v 1.8 2010/12/29 18:15:51 graaff Exp $
 
 EAPI=2
 
@@ -31,3 +31,7 @@ ruby_add_bdepend "
 
 # JRuby-specific dependency
 USE_RUBY="jruby" ruby_add_bdepend "test? ( dev-ruby/jruby-openssl )"
+
+all_ruby_prepare() {
+	sed -i 's/json-pure/json/' "${WORKDIR}"/all/metadata || die "Unable to fix metadata."
+}
