@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.157 2010/12/25 20:25:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.158 2010/12/29 21:17:32 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> libX11-1.4.0.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> libX11-1.4.0.ebuild:
   x86 stable, bug 344827

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfontenc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.58 2010/12/25 20:35:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.59 2010/12/29 21:08:19 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> libfontenc-1.1.0.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   libfontenc-1.1.0.ebuild:
