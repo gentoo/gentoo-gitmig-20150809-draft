@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.02.1.ebuild,v 1.1 2010/11/24 15:12:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.02.1.ebuild,v 1.2 2010/12/29 13:59:56 tomka Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 
 src_compile() {
 	emake -j1 all || die "make failed"
