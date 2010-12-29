@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>ipv6@gentoo.org</email>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
 </maintainer>
 </pkgmetadata>
