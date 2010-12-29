@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.8 2010/12/22 11:50:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.2-r1.ebuild,v 1.9 2010/12/29 21:43:45 keri Exp $
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -133,6 +133,9 @@ src_test() {
 	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws \
 		|| die "sed WORKSPACE failed"
 
+	# Mercury tests must be run in C locale since Mercury output is
+	# compared to hard-coded warnings/errors
+	LC_ALL="C" \
 	PATH="${TWS}"/scripts:"${TWS}"/util:"${TWS}"/slice:"${PATH}" \
 	TERM="" \
 	WORKSPACE="${TWS}" \

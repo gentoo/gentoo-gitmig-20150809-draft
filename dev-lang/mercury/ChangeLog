@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.130 2010/12/22 11:50:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.131 2010/12/29 21:43:45 keri Exp $
+
+  29 Dec 2010; <keri@gentoo.org> mercury-10.04.2-r1.ebuild:
+  Run tests in C locale since output is compared against hard-coded
+  errors/warnings. Closes #350030
 
   22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> mercury-10.04.2-r1.ebuild:
   Stable on amd64 wrt bug #346451
