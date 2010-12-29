@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.61 2010/12/28 01:24:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.62 2010/12/29 22:33:28 arfrever Exp $
+
+  29 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  twisted-web-10.2.0.ebuild:
+  Avoid test failures with root permissions (bug #349964).
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> twisted-web-10.2.0.ebuild:
   Marking twisted-web-10.2.0 ppc64 for bug 333211

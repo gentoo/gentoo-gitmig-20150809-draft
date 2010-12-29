@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-10.2.0.ebuild,v 1.2 2010/12/28 01:24:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-10.2.0.ebuild,v 1.3 2010/12/29 22:33:28 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 MY_PACKAGE="Web"
 
-inherit eutils twisted versionator
+inherit twisted versionator
 
 DESCRIPTION="Twisted web server, programmable in Python"
 
@@ -23,5 +23,10 @@ PYTHON_MODNAME="twisted/plugins twisted/web"
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${PN}-0.5.0-root-skip.patch"
+
+	if [[ "${EUID}" -eq 0 ]]; then
+		# Disable tests failing with root permissions.
+		sed -e "s/test_forbiddenResource/_&/" -i twisted/web/test/test_static.py
+		sed -e "s/testDownloadPageError3/_&/" -i twisted/web/test/test_webclient.py
+	fi
 }
