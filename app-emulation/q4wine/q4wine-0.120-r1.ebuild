@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-0.120.ebuild,v 1.3 2010/11/01 20:51:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-0.120-r1.ebuild,v 1.1 2010/12/29 22:19:12 hwoarang Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PF}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +icoutils +wineappdb -dbus gnome kde"
 
 DEPEND="x11-libs/qt-gui:4
