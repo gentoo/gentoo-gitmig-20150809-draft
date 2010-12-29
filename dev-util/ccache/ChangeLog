@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.76 2010/12/28 15:36:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.77 2010/12/29 15:47:51 hwoarang Exp $
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> ccache-2.4-r9.ebuild:
+  Stable on amd64 wrt bug #320687
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> ccache-2.4-r9.ebuild:
   stable ppc64, bug 320687
