@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.14 2009/10/17 22:01:46 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.15 2010/12/29 19:25:46 ulm Exp $
+
+  29 Dec 2010; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add package to emacs herd too.
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> speechd-el-0.4.ebuild,
   speechd-el-1.0.ebuild, speechd-el-2.2.ebuild:
