@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.1 2010/12/29 11:18:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.2 2010/12/29 15:55:56 mr_bones_ Exp $
 
 EAPI="2"
 
