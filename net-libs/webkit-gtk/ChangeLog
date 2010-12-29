@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.89 2010/12/26 14:14:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.90 2010/12/29 22:41:40 nirbheek Exp $
+
+  29 Dec 2010; <nirbheek@gentoo.org> webkit-gtk-1.1.15.4.ebuild,
+  webkit-gtk-1.2.3.ebuild, webkit-gtk-1.2.5.ebuild:
+  Slot move from 0 to 2 for gtk+:2 versions, gtk+:3 versions will be added
+  for SLOT=3
 
   26 Dec 2010; Markos Chandras <hwoarang@gentoo.org> webkit-gtk-1.2.5.ebuild:
   Stable on amd64 wrt bug #281819
