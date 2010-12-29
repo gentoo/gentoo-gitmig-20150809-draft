@@ -23,3 +23,4 @@ slotmove dev-python/beautifulsoup 3.0 python-2
 slotmove dev-python/beautifulsoup 3.1 python-3
 slotmove =media-libs/clutter-gtk-0.10* 1.0 0.10
 move net-dns/shelldap net-nds/shelldap
+move app-dicts/goldendict app-text/goldendict
