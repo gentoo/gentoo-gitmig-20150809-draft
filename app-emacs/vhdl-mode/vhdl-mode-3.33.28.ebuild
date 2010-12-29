@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.28.ebuild,v 1.2 2010/12/25 19:33:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/vhdl-mode-3.33.28.ebuild,v 1.3 2010/12/29 19:00:26 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.iis.ee.ethz.ch/~zimmi/emacs/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 ELISP_PATCHES="${PN}-info-dir-gentoo.patch"
