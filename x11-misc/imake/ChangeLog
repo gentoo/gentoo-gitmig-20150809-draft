@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.42 2010/12/25 20:38:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.43 2010/12/29 21:12:20 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> imake-1.0.4.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> imake-1.0.4.ebuild:
   x86 stable, bug 344827
