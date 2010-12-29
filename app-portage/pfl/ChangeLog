@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.17 2010/11/21 13:23:46 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.18 2010/12/29 00:44:51 xmw Exp $
+
+  29 Dec 2010; Michael Weber <xmw@gentoo.org> pfl-2.1.ebuild:
+  arm/sparc stable (bug 349999)
 
 *pfl-2.1 (21 Nov 2010)
 
