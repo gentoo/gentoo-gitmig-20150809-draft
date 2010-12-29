@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.48 2010/07/27 12:39:34 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.49 2010/12/29 14:05:08 mgorny Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -159,6 +159,8 @@ git_submodules() {
 	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 		debug-print "git submodule init"
 		git submodule init
+		debug-print "git submodule sync"
+		git submodule sync
 		debug-print "git submodule update"
 		git submodule update
 	fi
