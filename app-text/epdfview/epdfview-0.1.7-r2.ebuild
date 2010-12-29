@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.7-r2.ebuild,v 1.2 2010/02/10 14:21:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.7-r2.ebuild,v 1.3 2010/12/29 08:53:17 ssuominen Exp $
 
 EAPI=2
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Lightweight PDF viewer using Poppler and GTK+ libraries."
 HOMEPAGE="http://trac.emma-soft.com/epdfview/"
@@ -36,7 +36,10 @@ src_prepare() {
 		-e 's:Icon=icon_epdfview-48:Icon=epdfview:' \
 		data/epdfview.desktop || die
 
-	epatch "${FILESDIR}"/${PN}-0.1.7-mouse-scrolling.patch
+	epatch "${FILESDIR}"/${PN}-0.1.7-mouse-scrolling.patch \
+		"${FILESDIR}"/${P}-poppler-changeset_r35{4,7}.patch
+
+	eautoreconf
 
 	gnome2_src_prepare
 }
