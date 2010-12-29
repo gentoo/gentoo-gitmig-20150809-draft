@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.4.246459.ebuild,v 1.1 2010/09/15 13:10:35 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.4.246459.ebuild,v 1.2 2010/12/29 20:26:56 vadimk Exp $
 
 EAPI="2"
 
@@ -42,6 +42,7 @@ RDEPEND="
 	x11-libs/libXi
 	x11-libs/libXinerama
 	x11-libs/libXrandr
+	x11-libs/libXtst
 	!!app-emulation/vmware-player
 	!!app-emulation/vmware-server
 	"
