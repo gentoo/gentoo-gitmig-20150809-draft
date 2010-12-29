@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.2.ebuild,v 1.2 2010/12/23 18:04:18 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.2.ebuild,v 1.3 2010/12/29 10:24:07 ayoy Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+PYTHON_DEPEND="2:2.5"
+
+inherit cmake-utils python
 
 MY_P="${PN}-qt4.7+${PV}"
 
@@ -38,6 +40,10 @@ DEPEND=">=dev-libs/boost-1.41.0[python]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-find-kde-phonon.patch"
