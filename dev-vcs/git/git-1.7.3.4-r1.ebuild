@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4-r1.ebuild,v 1.9 2010/12/28 17:35:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.4-r1.ebuild,v 1.10 2010/12/29 21:05:43 robbat2 Exp $
 
 EAPI=3
 
@@ -199,6 +199,9 @@ src_prepare() {
 	# Fix false positives with t3404 due to SHELL=/bin/false for the portage
 	# user.
 	epatch "${FILESDIR}"/git-1.7.3.4-avoid-shell-issues.patch
+
+	# bug #350075: t9001: fix missing prereq on some tests
+	epatch "${FILESDIR}"/git-1.7.3.4-fix-perl-test-prereq.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \

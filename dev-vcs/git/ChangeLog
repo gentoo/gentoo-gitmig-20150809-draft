@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.64 2010/12/27 14:52:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.65 2010/12/29 21:05:43 robbat2 Exp $
+
+  29 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> git-1.7.3.4-r1.ebuild,
+  +files/git-1.7.3.4-fix-perl-test-prereq.patch:
+  Bug #350075: t/t9001: fix missing prereq on some tests.
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> git-1.6.4.5.ebuild,
   git-1.7.2.5.ebuild, git-1.7.3.4-r1.ebuild:
