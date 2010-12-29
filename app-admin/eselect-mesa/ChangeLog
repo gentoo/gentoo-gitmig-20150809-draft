@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.5 2010/12/25 19:33:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.6 2010/12/29 21:01:28 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> eselect-mesa-0.0.8.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   eselect-mesa-0.0.8.ebuild:
