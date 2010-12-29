@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc4.ebuild,v 1.1 2010/11/05 14:31:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc4-r1.ebuild,v 1.1 2010/12/29 11:22:21 hwoarang Exp $
 
 EAPI=2
 
@@ -29,6 +29,11 @@ RDEPEND=">=dev-python/fpconst-0.7.2
 	dev-python/pyyaml
 	dev-python/simplejson
 	dev-python/soappy
+	|| (
+		net-analyzer/gnu-netcat
+		net-analyzer/netcat
+		net-analyzer/netcat6
+		sys-apps/busybox )
 	net-analyzer/scapy
 	gtk? ( media-gfx/graphviz
 		>dev-python/pygtk-2.0 )"
@@ -38,6 +43,7 @@ S=${WORKDIR}/${PN}
 src_prepare(){
 	rm -r extlib/{cluster,fpconst-0.7.2,nltk,nltk_contrib,pyPdf,scapy,simplejson,SOAPpy,yaml} || die
 	rm readme/{GPL,INSTALL} || die
+	rm plugins/attack/payloads/code/netcat || die #bug 349780
 }
 
 src_install() {
