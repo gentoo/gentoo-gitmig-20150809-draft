@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/culmus-latex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.14 2009/09/06 20:46:07 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.15 2010/12/29 09:10:33 pva Exp $
+
+  29 Dec 2010; Peter Volkov <pva@gentoo.org> culmus-latex-0.7.ebuild:
+  Update dependency for culmus font, bug #349472, thank David Abbott for tests.
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> culmus-latex-0.7.ebuild:
   Marking culmus-latex-0.7 ppc64 stable for bug 276990
