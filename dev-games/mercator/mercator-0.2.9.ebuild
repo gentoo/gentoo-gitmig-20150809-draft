@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.9.ebuild,v 1.1 2010/11/16 09:45:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.9.ebuild,v 1.2 2010/12/29 02:59:43 mr_bones_ Exp $
 
 EAPI=2
-inherit base eutils
+inherit base
 
 DESCRIPTION="WorldForge library primarily aimed at terrain."
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/mercator"
@@ -29,6 +29,5 @@ src_compile() {
 src_install() {
 	use doc && HTML_DOCS=( doc/html/* )
 	base_src_install
-	find "${D}" -type f -name '*.la' -exec rm {} + \
-		|| die "la removal failed"
+	find "${D}" -type f -name '*.la' -exec rm {} + || die
 }
