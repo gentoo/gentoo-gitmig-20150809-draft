@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.24 2010/10/06 18:28:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.25 2010/12/29 14:57:57 tomka Exp $
+
+  29 Dec 2010; Thomas Kahle <tomka@gentoo.org> hevea-1.10-r1.ebuild:
+  x86 stable per bug 349631
 
 *hevea-1.10-r1 (06 Oct 2010)
 
