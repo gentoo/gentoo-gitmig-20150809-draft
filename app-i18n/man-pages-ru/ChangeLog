@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.4 2010/10/14 16:59:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.5 2010/12/29 01:25:43 ranger Exp $
+
+  29 Dec 2010; Brent Baude <ranger@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  stable ppc64, bug 349381
 
 *man-pages-ru-3.27.2066.1435.20101003 (14 Oct 2010)
 
