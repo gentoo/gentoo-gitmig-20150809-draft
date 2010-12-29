@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/codegroup/codegroup-20080907.ebuild,v 1.1 2010/08/31 17:33:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/codegroup/codegroup-20080907-r1.ebuild,v 1.1 2010/12/29 02:34:44 xmw Exp $
 
 EAPI=2
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="encode / decode binary file as five letter codegroups"
 HOMEPAGE="http://www.fourmilab.ch/codegroup/"
@@ -19,12 +19,11 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 src_prepare() {
-	sed -i -e '/^CFLAGS = /d' Makefile || die
+	epatch "${FILESDIR}"/${P}-Makefile.patch
 }
 
 src_compile() {
-	tc-export CC
-	emake || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
