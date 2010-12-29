@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/bigreqsproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/bigreqsproto/ChangeLog,v 1.44 2010/12/25 20:39:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/bigreqsproto/ChangeLog,v 1.45 2010/12/29 21:03:33 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> bigreqsproto-1.1.1.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   bigreqsproto-1.1.1.ebuild:
