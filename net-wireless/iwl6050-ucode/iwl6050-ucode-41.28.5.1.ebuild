@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/iwl6050-ucode-41.28.5.1.ebuild,v 1.1 2010/12/28 00:32:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6050-ucode/iwl6050-ucode-41.28.5.1.ebuild,v 1.2 2010/12/29 02:10:36 mpagano Exp $
+
+inherit linux-info
 
 MY_PN="iwlwifi-6050-ucode"
 
@@ -14,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=""
 
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )
-	>=sys-kernel/gentoo-sources-2.6.36-r6"
+DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
@@ -27,6 +28,11 @@ src_install() {
 
 	dodoc README* || die "dodoc failed"
 
-	ewarn "Note: This microcode image requires patches included in gentoo-sources versions >=
-	2.6.36-r6."
+	if kernel_is lt 2 6 37; then
+	echo
+		ewarn "Your kernel version is ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+		ewarn "This microcode image requires a kernel >= 2.6.37 or a 2.6.36 "
+		ewarn "kernel using >= genpatches-2.6.36-8 which is included"
+		ewarn "in gentoo-sources >= 2.6.36-r6 or any kernel version >= 2.6.37."
+	fi
 }
