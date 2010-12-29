@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.443 2010/11/21 21:26:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.444 2010/12/29 07:31:43 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1328,9 +1328,12 @@ gcc_do_configure() {
 
 	# graphite support was added in 4.4, which depends upon external libraries
 	# for optimizations.  This option allows users to determine if they want
-	# these optimizations and libraries pulled in
+	# these optimizations and libraries pulled in.  We disable the version check
+	# so we can use >=ppl-0.11
 	tc_version_is_at_least "4.4" && \
-		confgcc="${confgcc} $(use_with graphite ppl) $(use_with graphite cloog)"
+		confgcc="${confgcc} $(use_with graphite ppl)
+			$(use_with graphite cloog)
+			--disable-ppl-version-check"
 
 	# lto support was added in 4.5, which depends upon elfutils.  This allows
 	# users to enable that option, and pull in the additional library
