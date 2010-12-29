@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.9 2010/12/15 20:47:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.10 2010/12/29 15:16:29 jlec Exp $
+
+  29 Dec 2010; Justin Lecher <jlec@gentoo.org> cctbx-2009.11.01.0123-r1.ebuild,
+  cctbx-2010.03.29.2334-r1.ebuild, cctbx-2010.03.29.2334-r2.ebuild,
+  cctbx-2010.03.29.2334-r3.ebuild:
+  Added missing dependency on clipper
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> cctbx-2009.11.01.0123-r1.ebuild,
+  cctbx-2010.03.29.2334-r1.ebuild, cctbx-2010.03.29.2334-r2.ebuild,
+  cctbx-2010.03.29.2334-r3.ebuild:
+  Added missing RDEPEND on sci-libs/clipper
 
 *cctbx-2010.03.29.2334-r3 (15 Dec 2010)
 
