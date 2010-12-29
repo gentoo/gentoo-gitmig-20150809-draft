@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.2.ebuild,v 1.2 2010/12/29 10:31:44 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.2.ebuild,v 1.3 2010/12/29 10:40:10 ayoy Exp $
 
 EAPI="2"
 
@@ -32,6 +32,8 @@ src_prepare() {
 	sed -e 's#pyside-rcc4#PATH=$PATH:${WORKDIR}/${P}_build/pyrcc pyside-rcc#' \
 		-i tests/rcc/run_test.sh \
 		|| die "sed failed"
+
+	python_convert_shebangs -r 2 pyside-uic.in
 }
 
 src_install() {
