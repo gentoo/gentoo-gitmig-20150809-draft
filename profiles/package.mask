@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12308 2010/12/28 18:30:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12309 2010/12/29 11:51:32 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -74,9 +74,12 @@ gnome-base/gnome-mount
 # http://git.xfce.org/panel-plugins/xfce4-stopwatch-plugin/
 # http://git.xfce.org/bindings/xfce4-vala/
 #
+# thunar-media-tags-plugin port to new thunar doesn't work yet, bad snapshot, bug 350032
+#
 # These need to be fixed by January, otherwise they'll get removed from tree when 4.8.0 goes stable.
 xfce-extra/xfce4-weather-plugin
 xfce-extra/xfce4-stopwatch-plugin
+xfce-extra/thunar-media-tags-plugin
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Dec 2010)
 # Also mask clutter-gtk-0.90
