@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.39 2010/12/29 16:45:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.40 2010/12/29 17:06:51 tampakrap Exp $
 
 inherit versionator
 
@@ -378,6 +378,12 @@ add_kdebase_dep() {
 		local FIXME_PV
 		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.4.6* || ${PV} = 4.4.7*  || ${PV} = 4.4.8* || ${PV} = 4.4.9* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs ]]; then
 			FIXME_PV=4.4.5
+		else
+			FIXME_PV=${PV}
+		fi
+		# FIXME remove hack when kdepim-4.6beta is gone
+		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.5.93* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs ]]; then
+			FIXME_PV=4.5.90
 		else
 			FIXME_PV=${PV}
 		fi
