@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.213 2010/09/15 13:10:35 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.214 2010/12/29 20:08:47 vadimk Exp $
+
+*vmware-workstation-6.5.5.328052 (29 Dec 2010)
+
+  29 Dec 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  +files/vmware-workstation-6.5.5.328052-installer.patch,
+  +files/6.5.5.328052/vmware-player.py.patch,
+  +files/6.5.5.328052/vmware-player-extras.py.patch,
+  +files/6.5.5.328052/vmware-vix.py.patch,
+  +files/6.5.5.328052/vmware-workstation.py.patch,
+  +vmware-workstation-6.5.5.328052.ebuild:
+  Version bump. Bugs 350073, 345377
 
 *vmware-workstation-6.5.4.246459 (15 Sep 2010)
 
