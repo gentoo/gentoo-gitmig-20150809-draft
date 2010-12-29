@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r6.ebuild,v 1.11 2010/11/14 16:22:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r6.ebuild,v 1.12 2010/12/29 13:09:01 ulm Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.gz
-	mirror://gentoo/${P}-patches-5.tar.bz2"
+	mirror://gentoo/${P}-patches-6.tar.bz2"
 
 LICENSE="GPL-3 FDL-1.2 BSD as-is MIT"
 SLOT="22"
@@ -143,6 +143,7 @@ src_configure() {
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--without-carbon \
+		--with-gameuser="${GAMES_USER_DED:-games}" \
 		${myconf} || die "econf emacs failed"
 }
 
@@ -232,7 +233,7 @@ pkg_postinst() {
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[ -e "${f}" ] || touch "${f}"
 	done
-	chown games:games "${ROOT}"/var/lib/games/emacs
+	chown "${GAMES_USER_DED:-games}" "${ROOT}"/var/lib/games/emacs
 
 	elisp-site-regen
 	eselect emacs update ifunset

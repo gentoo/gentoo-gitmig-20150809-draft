@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r2.ebuild,v 1.11 2010/11/14 16:22:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r2.ebuild,v 1.12 2010/12/29 13:09:01 ulm Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ if [ "${PV##*.}" = "9999" ]; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
-		mirror://gentoo/${P}-patches-1.tar.bz2"
+		mirror://gentoo/${P}-patches-2.tar.bz2"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on
@@ -193,6 +193,7 @@ src_configure() {
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--with-crt-dir=/usr/$(get_libdir) \
+		--with-gameuser="${GAMES_USER_DED:-games}" \
 		${myconf} || die "econf emacs failed"
 }
 
@@ -288,7 +289,7 @@ pkg_postinst() {
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[ -e "${f}" ] || touch "${f}"
 	done
-	chown games:games "${ROOT}"/var/lib/games/emacs
+	chown "${GAMES_USER_DED:-games}" "${ROOT}"/var/lib/games/emacs
 
 	elisp-site-regen
 	eselect emacs update ifunset
