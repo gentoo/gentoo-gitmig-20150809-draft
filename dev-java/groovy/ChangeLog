@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/groovy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.46 2010/12/15 12:33:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.47 2010/12/29 18:38:39 hwoarang Exp $
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> groovy-1.7.5.ebuild:
+  Stable on amd64 wrt bug #348255
 
   15 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> groovy-1.7.5.ebuild:
   x86 stable wrt bug #348255
