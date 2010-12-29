@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.7 2010/12/29 10:40:10 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.8 2010/12/29 10:43:54 ayoy Exp $
+
+*pyside-tools-0.2.2-r1 (29 Dec 2010)
+
+  29 Dec 2010; Dominik Kapusta <ayoy@gentoo.org> -pyside-tools-0.2.2.ebuild,
+  +pyside-tools-0.2.2-r1.ebuild:
+  Bumping, because pyside-uic changes due to previous commit.
 
   29 Dec 2010; Dominik Kapusta <ayoy@gentoo.org> pyside-tools-0.2.2.ebuild:
   Fix shebang in pyside-uic (bug #345535).
