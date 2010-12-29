@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1-r1.ebuild,v 1.3 2010/09/27 16:26:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1-r1.ebuild,v 1.4 2010/12/29 21:36:14 vostorga Exp $
 
 EAPI="2"
+PYTHON_DEPEND="python? 2"
 
 inherit autotools python
 
@@ -15,11 +16,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="python static-libs tools tdbtest"
 
 RDEPEND=""
-DEPEND="python? ( dev-lang/python )
-	!<net-fs/samba-libs-3.4
-	!<net-fs/samba-3.3
+DEPEND="!<net-fs/samba-3.3
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt"
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	eautoconf -Ilibreplace
@@ -34,10 +40,20 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=()
+
+	if use python; then
+		myconf+=(
+			PYTHON_CONFIG="${EPREFIX}/usr/bin/python-config-$(python_get_version)"
+			PYTHON="$(PYTHON -a)"
+		)
+	fi
+
 	econf \
 		--sysconfdir=/etc/samba \
 		--localstatedir=/var \
-		$(use_enable python)
+		$(use_enable python) \
+		"${myconf[@]}"
 }
 
 src_compile() {
