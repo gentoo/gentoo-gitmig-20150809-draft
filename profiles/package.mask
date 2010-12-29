@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12311 2010/12/29 12:02:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12312 2010/12/29 12:25:06 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -357,13 +357,6 @@ media-libs/amanith
 media-libs/capseo
 media-libs/libcaptury
 media-video/captury
-
-# Torsten Veller <tove@gentoo.org> (23 Oct 2010)
-# yamcha and tinysvm fail to built the Perl extension (#299983).
-# Removal on 2010-12-23 if not fixed
-app-text/yamcha
-sci-misc/tinysvm
-app-text/cabocha
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (22 Oct 2010)
 #  on behalf of QA team
