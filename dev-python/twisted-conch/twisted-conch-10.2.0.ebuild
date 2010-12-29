@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-10.2.0.ebuild,v 1.2 2010/12/28 01:18:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-10.2.0.ebuild,v 1.3 2010/12/29 22:53:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,3 +21,13 @@ DEPEND="=dev-python/twisted-$(get_version_component_range 1-2)*
 RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="twisted/conch twisted/plugins"
+
+src_prepare() {
+	distutils_src_prepare
+
+	if [[ "${EUID}" -eq 0 ]]; then
+		# Disable tests failing with root permissions.
+		sed -e "s/test_checkKeyAsRoot/_&/" -i twisted/conch/test/test_checkers.py
+		sed -e "s/test_getPrivateKeysAsRoot/_&/" -i twisted/conch/test/test_openssh_compat.py
+	fi
+}
