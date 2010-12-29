@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.135 2010/12/28 01:18:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.136 2010/12/29 23:31:26 arfrever Exp $
+
+  29 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  twisted-10.2.0.ebuild:
+  Avoid test failures with root permissions.
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> twisted-10.2.0.ebuild:
   Marking twisted-10.2.0 ppc64 for bug 333211

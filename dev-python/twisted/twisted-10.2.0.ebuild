@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.2.0.ebuild,v 1.2 2010/12/28 01:18:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.2.0.ebuild,v 1.3 2010/12/29 23:31:26 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,6 +37,14 @@ src_prepare(){
 
 	# Respect TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE variable.
 	epatch "${FILESDIR}/${PN}-9.0.0-respect_TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE.patch"
+
+	if [[ "${EUID}" -eq 0 ]]; then
+		# Disable tests failing with root permissions.
+		sed \
+			-e "s/test_newPluginsOnReadOnlyPath/_&/" \
+			-e "s/test_deployedMode/_&/" \
+			-i twisted/test/test_plugin.py
+	fi
 }
 
 src_test() {
