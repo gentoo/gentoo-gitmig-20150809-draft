@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.117 2010/12/29 14:26:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.118 2010/12/29 17:41:17 tomka Exp $
+
+  29 Dec 2010; Thomas Kahle <tomka@gentoo.org> rdesktop-1.6.0-r4.ebuild:
+  x86 stable per bug 349835
 
   29 Dec 2010; Jeroen Roovers <jer@gentoo.org> rdesktop-1.6.0-r4.ebuild:
   Stable for HPPA PPC (bug #349835).
