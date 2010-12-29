@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.24 2010/10/07 19:21:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.25 2010/12/29 18:37:28 arfrever Exp $
+
+*foolscap-0.6.0 (29 Dec 2010)
+
+  29 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +foolscap-0.6.0.ebuild:
+  Version bump. Disable test failing with openssl-1 (bug #330079).
 
   07 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> foolscap-0.5.1.ebuild:
   ppc64 stable wrt #337142
