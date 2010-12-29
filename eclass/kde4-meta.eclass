@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.44 2010/12/02 21:49:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.45 2010/12/29 16:38:50 tampakrap Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -245,8 +245,8 @@ kde4-meta_src_extract() {
 		extractlist+=" $(__list_needed_subdirectories)"
 
 		pushd "${WORKDIR}" > /dev/null
-		[[ -n ${KDE4_STRICTER} ]] && echo tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist} >&2
-		tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist} 2> /dev/null
+		[[ -n ${KDE4_STRICTER} ]] && echo tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist}
+		tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist} || ewarn "tar extract command failed at least partially - continuing anyway"
 
 		# Default $S is based on $P; rename the extracted directory to match $S if necessary
 		mv ${topdir} ${P} || die "Died while moving \"${topdir}\" to \"${P}\""
