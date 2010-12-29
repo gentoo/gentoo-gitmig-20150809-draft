@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.20 2010/11/07 22:19:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.21 2010/12/29 12:51:04 ulm Exp $
 
 EAPI=2
 
@@ -206,6 +206,7 @@ src_configure() {
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--with-crt-dir=/usr/$(get_libdir) \
+		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-info \
 		${myconf} || die "econf emacs failed"
 }
@@ -302,7 +303,7 @@ pkg_postinst() {
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[ -e "${f}" ] || touch "${f}"
 	done
-	chown games:games "${ROOT}"/var/lib/games/emacs
+	chown "${GAMES_USER_DED:-games}" "${ROOT}"/var/lib/games/emacs
 
 	elisp-site-regen
 	eselect emacs update ifunset
