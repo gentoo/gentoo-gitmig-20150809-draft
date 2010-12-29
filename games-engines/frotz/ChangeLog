@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/frotz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.17 2010/10/04 14:59:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.18 2010/12/29 03:02:39 mr_bones_ Exp $
+
+  29 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org> frotz-2.43.ebuild:
+  update HOMEPAGE (bug #349396)
 
   04 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> frotz-2.43.ebuild:
   fix up src_compile to pass the options to emake

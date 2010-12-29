@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.19 2010/10/04 14:59:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.20 2010/12/29 03:02:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="Curses based interpreter for Z-code based text games"
-HOMEPAGE="http://www.cs.csubak.edu/~dgriffi/proj/frotz/"
+HOMEPAGE="http://frotz.sourceforge.net/"
 SRC_URI="http://www.ifarchive.org/if-archive/infocom/interpreters/frotz/${P}.tar.gz"
 
 LICENSE="GPL-2"
