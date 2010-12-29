@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.92.ebuild,v 1.3 2010/12/29 21:06:49 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.92.ebuild,v 1.4 2010/12/29 21:11:30 tampakrap Exp $
 
 EAPI=2
 inherit bash-completion
@@ -12,7 +12,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="bash-completion debug doc static-libs"
+IUSE="bash-completion debug doc static-libs test"
 
 RDEPEND=">=sys-apps/dbus-1.4.1
 	>=dev-libs/glib-2.26
