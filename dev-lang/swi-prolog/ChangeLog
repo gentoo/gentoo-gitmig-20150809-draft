@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.253 2010/12/28 23:03:42 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.254 2010/12/29 07:14:05 keri Exp $
+
+  29 Dec 2010; <keri@gentoo.org> swi-prolog-5.10.2.ebuild,
+  swi-prolog-5.11.10.ebuild:
+  Disable altivec on ppc as it breaks copying thread IO streams
 
   28 Dec 2010; <keri@gentoo.org> swi-prolog-5.10.2.ebuild:
   Ensure thread fli structs are maintained on PPC
