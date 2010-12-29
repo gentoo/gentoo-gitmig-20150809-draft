@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.47 2010/12/20 19:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.48 2010/12/29 18:31:56 alexxy Exp $
+
+  29 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -gamess-20090112.1-r1.ebuild, -files/gamess-20090112.1.gentoo.patch,
+  gamess-20101001.1.ebuild:
+  Fix gamess build. Aslo remove old versions since upstream provides only
+  latest tarball
 
   20 Dec 2010; Justin Lecher <jlec@gentoo.org> gamess-20090112.1-r1.ebuild,
   gamess-20101001.1.ebuild:

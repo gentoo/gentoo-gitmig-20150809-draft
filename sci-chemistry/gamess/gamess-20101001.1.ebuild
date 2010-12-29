@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.6 2010/12/20 19:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1.ebuild,v 1.7 2010/12/29 18:31:56 alexxy Exp $
 
 EAPI="3"
 
@@ -212,7 +212,7 @@ src_prepare() {
 	#!/bin/csh
 	setenv GMS_PATH $WORKDIR/gamess
 	setenv GMS_TARGET $active_arch
-	setenv GMS_FORTRAN $FORTRANC
+	setenv GMS_FORTRAN $FCOMP
 	setenv GMS_MATHLIB atlas
 	setenv GMS_MATHLIB_PATH  /usr/$(get_libdir)/atlas
 	setenv GMS_DDI_COMM sockets
