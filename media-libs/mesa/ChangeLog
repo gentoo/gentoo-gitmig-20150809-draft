@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.302 2010/12/29 22:07:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.303 2010/12/29 23:21:35 chithanh Exp $
+
+  29 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  files/eselect-mesa.conf.7.9:
+  Fix copy&paste error
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> mesa-7.9.ebuild:
   arm stable, bug #344827
