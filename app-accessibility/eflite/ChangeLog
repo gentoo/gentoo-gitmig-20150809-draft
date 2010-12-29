@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/eflite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.32 2009/12/29 00:17:11 williamh Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.33 2010/12/29 19:06:24 williamh Exp $
+
+  29 Dec 2010; William Hubbs <williamh@gentoo.org>
+  -files/eflite-0.3.8-daemon.patch, -files/eflite-0.3.8-read_pipe.patch,
+  -files/eflite-0.3.8-shared_flite.patch:
+  remove old patches
 
   29 Dec 2009; William Hubbs <williamh@gentoo.org> -eflite-0.3.8-r2.ebuild:
   removed old version
