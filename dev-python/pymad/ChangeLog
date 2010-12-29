@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.24 2010/12/25 16:41:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.25 2010/12/29 19:13:22 hwoarang Exp $
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pymad-0.6.ebuild:
+  Stable on amd64 wrt bug #349694
 
   25 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pymad-0.6.ebuild:
