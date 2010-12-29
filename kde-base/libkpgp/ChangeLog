@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.142 2010/12/06 10:28:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.143 2010/12/29 16:56:08 tampakrap Exp $
+
+*libkpgp-4.4.9 (29 Dec 2010)
+
+  29 Dec 2010; Theo Chatzimichos <tampakrap@gentoo.org> +libkpgp-4.4.9.ebuild:
+  Version bump KDEPIM 4.4.9
 
 *libkpgp-4.4.8 (06 Dec 2010)
 

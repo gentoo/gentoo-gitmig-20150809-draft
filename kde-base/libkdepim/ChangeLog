@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.175 2010/12/06 10:28:21 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.176 2010/12/29 16:56:08 tampakrap Exp $
+
+*libkdepim-4.4.9 (29 Dec 2010)
+
+  29 Dec 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libkdepim-4.4.9.ebuild:
+  Version bump KDEPIM 4.4.9
 
 *libkdepim-4.4.8 (06 Dec 2010)
 
