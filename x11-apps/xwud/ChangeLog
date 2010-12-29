@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwud
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwud/ChangeLog,v 1.31 2010/12/25 20:12:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwud/ChangeLog,v 1.32 2010/12/29 21:52:29 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> xwud-1.0.3.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> xwud-1.0.3.ebuild:
   x86 stable, bug 344827
