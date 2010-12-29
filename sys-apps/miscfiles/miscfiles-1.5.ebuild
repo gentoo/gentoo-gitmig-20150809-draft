@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5.ebuild,v 1.2 2010/11/18 02:31:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5.ebuild,v 1.3 2010/12/29 17:40:14 ulm Exp $
 
 EAPI="3"
 
@@ -18,6 +18,7 @@ IUSE="minimal"
 
 # Collides with older versions/revisions
 RDEPEND="!<sys-freebsd/freebsd-share-7.2-r1"
+DEPEND="app-arch/xz-utils"
 
 src_prepare() {
 	mv "${WORKDIR}"/UnicodeData-${UNI_PV}.txt unicode || die
