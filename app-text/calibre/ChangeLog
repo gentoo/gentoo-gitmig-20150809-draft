@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.121 2010/12/24 19:25:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.122 2010/12/29 15:02:41 sping Exp $
+
+  29 Dec 2010; Sebastian Pipping <sping@gentoo.org> calibre-0.7.35.ebuild:
+  Specify slot on beautifulsoup, reported by Knuth Posern (quickhelp)
 
   24 Dec 2010; Zac Medico <zmedico@gentoo.org> -calibre-0.7.33.ebuild,
   -calibre-0.7.34.ebuild:
