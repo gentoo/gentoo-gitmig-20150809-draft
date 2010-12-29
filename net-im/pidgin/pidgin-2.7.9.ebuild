@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.7.ebuild,v 1.1 2010/11/25 05:16:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.9.ebuild,v 1.1 2010/12/29 07:21:29 pva Exp $
 
 EAPI=2
 
@@ -54,7 +54,8 @@ RDEPEND="
 	tk? ( dev-lang/tk )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	networkmanager? ( net-misc/networkmanager )
-	idn? ( net-dns/libidn )"
+	idn? ( net-dns/libidn )
+	!<x11-plugins/pidgin-facebookchat-1.69-r1"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
@@ -87,6 +88,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-plugins/pidgin-latex
 #   x11-plugins/pidgintex
 #   x11-plugins/pidgin-libnotify
+#	x11-plugins/pidgin-bot-sentry
 #   x11-plugins/pidgin-otr
 #   x11-plugins/pidgin-rhythmbox
 #   x11-plugins/purple-plugin_pack
@@ -95,7 +97,6 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 # Plugins in Sunrise:
 #	x11-plugins/pidgimpd
 #	x11-plugins/pidgin-birthday
-#	x11-plugins/pidgin-botsentry
 #	x11-plugins/pidgin-convreverse
 #	x11-plugins/pidgin-extended-blist-sort
 #	x11-plugins/pidgin-lastfm
