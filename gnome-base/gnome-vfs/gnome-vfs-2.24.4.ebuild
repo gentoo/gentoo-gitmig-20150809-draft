@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4.ebuild,v 1.2 2010/12/26 01:05:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4.ebuild,v 1.3 2010/12/29 03:22:01 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -69,11 +69,6 @@ pkg_setup() {
 	# so should always be behind the use_enable options
 	# foser <foser@gentoo.org 19 Apr 2004
 	use gnutls && use ssl && G2CONF="${G2CONF} --disable-openssl"
-
-	if ! has_version sys-apps/pmount; then
-		ewarn "You should install and setup sys-apps/pmount if you use programs"
-		ewarn "which rely on gnome-vfs for mounting."
-	fi
 }
 
 src_prepare() {
