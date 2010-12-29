@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/editres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.43 2010/12/25 19:50:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.44 2010/12/29 22:21:27 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> editres-1.0.5.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> editres-1.0.5.ebuild:
   x86 stable, bug 344827

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/oclock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.22 2010/12/25 19:53:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.23 2010/12/29 22:09:45 maekke Exp $
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org> oclock-1.0.2.ebuild:
+  arm stable, bug #344827
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org> oclock-1.0.2.ebuild:
   x86 stable, bug 344827
