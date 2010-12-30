@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.13 2010/12/30 12:10:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.14 2010/12/30 17:42:10 wired Exp $
+
+  30 Dec 2010; Alex Alexander <wired@gentoo.org> zathura-0.0.8.2.ebuild,
+  +files/zathura-poppler-0.16.patch:
+  added patch for poppler-0.16, bug #349941
 
   30 Dec 2010; Alex Alexander <wired@gentoo.org> zathura-0.0.7.ebuild,
   zathura-0.0.8.ebuild, zathura-0.0.8.1.ebuild, zathura-0.0.8.2.ebuild:
