@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.37 2010/12/28 16:50:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.38 2010/12/30 07:26:38 radhermit Exp $
+
+*roundcube-0.5_rc (30 Dec 2010)
+
+  30 Dec 2010; Tim Harder <radhermit@gentoo.org> -roundcube-0.5_beta.ebuild,
+  +roundcube-0.5_rc.ebuild:
+  Version bump (bug #349087 by Peter Volkov) and remove old. Add sqlite USE
+  flag as default for db support.
 
   28 Dec 2010; Markus Meier <maekke@gentoo.org> roundcube-0.4.2.ebuild:
   arm stable, bug #345931
