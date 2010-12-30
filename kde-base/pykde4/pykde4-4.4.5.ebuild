@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.5.ebuild,v 1.7 2010/08/09 17:34:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.5.ebuild,v 1.8 2010/12/30 00:58:57 arfrever Exp $
 
 EAPI="3"
 
@@ -43,6 +43,9 @@ src_prepare() {
 
 	# See bug 322351
 	use arm && epatch "${FILESDIR}/${PN}-4.4.4-arm-sip.patch"
+
+	has_version ">=dev-python/sip-4.11" && epatch "${FILESDIR}/${PN}-mapped-type-fix.patch"
+	has_version ">=dev-python/sip-4.12" && epatch "${FILESDIR}/${P}-sip-4.12.patch"
 }
 
 src_configure() {
