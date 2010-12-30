@@ -1,6 +1,16 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.4 2010/07/17 11:21:22 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.5 2010/12/30 22:41:28 ikelos Exp $
+
+  30 Dec 2010; Mike Auty <ikelos@gentoo.org> -gitg-0.0.1.ebuild,
+  -gitg-0.0.2.ebuild, -gitg-0.0.3.ebuild, -gitg-0.0.4.ebuild,
+  +gitg-0.0.8.ebuild:
+  Remove old never-stabilized versions of gitg.
+
+*gitg-0.0.8 (30 Dec 2010)
+
+  30 Dec 2010; Mike Auty <ikelos@gentoo.org> +gitg-0.0.8.ebuild:
+  Version bump gitg to 0.0.8.
 
   17 Jul 2010; Thomas Anderson <tanderson@gentoo.org> gitg-0.0.6.ebuild:
   stable amd64, bug 327337
