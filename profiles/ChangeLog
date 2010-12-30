@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4898 2010/12/29 19:17:51 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4899 2010/12/30 08:12:35 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Dec 2010; Eray Aslan <eras@gentoo.org> package.mask:
+  Drop app-crypt/mit-krb5-1.9_beta* entry. No longer in the tree.
 
   29 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> package.mask:
   Mask =app-text/poppler-0.16.0 until depending packages are fixed
