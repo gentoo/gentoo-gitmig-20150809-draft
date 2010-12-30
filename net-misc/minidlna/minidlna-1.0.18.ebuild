@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.18.ebuild,v 1.1 2010/12/29 16:59:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.18.ebuild,v 1.2 2010/12/30 00:50:12 mr_bones_ Exp $
 
 EAPI=2
 
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
 	emake PREFIX="${D}" install || die
-	
+
 	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 
