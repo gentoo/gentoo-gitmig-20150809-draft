@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.214 2010/12/29 16:37:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.215 2010/12/30 15:29:27 jer Exp $
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> pidgin-2.7.9.ebuild:
+  Stable for HPPA PPC SPARC (bug #349906).
 
   29 Dec 2010; Thomas Kahle <tomka@gentoo.org> pidgin-2.7.9.ebuild:
   x86 stable per bug 349906
