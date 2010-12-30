@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0.ebuild,v 1.1 2010/12/29 15:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.1 2010/12/30 17:11:29 vapier Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://cryptsetup.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="dynamic nls selinux"
+IUSE="+static nls selinux"
 
 S=${WORKDIR}/${MY_P}
 
@@ -33,12 +33,6 @@ pkg_setup() {
 	local WARNING_CRYPTO_CBC="CONFIG_CRYPTO_CBC:\tis not set (required for kernel 2.6.19)\n"
 	local WARNING_CRYPTO="CONFIG_CRYPTO:\tis not set (required for cryptsetup)\n"
 	check_extra_config
-
-	if use dynamic ; then
-		ewarn "If you need cryptsetup for an initrd or initramfs then you"
-		ewarn "should NOT use the dynamic USE flag"
-		epause 5
-	fi
 }
 
 src_prepare() {
@@ -49,15 +43,16 @@ src_configure() {
 	econf \
 		--sbindir=/sbin \
 		--enable-shared \
-		$(use_enable !dynamic static) \
 		--libdir=/usr/$(get_libdir) \
+		$(use_enable static static-cryptsetup) \
 		$(use_enable nls) \
 		$(use_enable selinux)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc TODO ChangeLog # README NEWS # last ones are empty
+	use static && { mv "${D}"/sbin/cryptsetup{.static,} || die ; }
+	dodoc TODO ChangeLog README NEWS
 
 	insinto /$(get_libdir)/rcscripts/addons
 	newins "${FILESDIR}"/1.1.3-dm-crypt-start.sh dm-crypt-start.sh || die
@@ -87,5 +82,4 @@ pkg_postinst() {
 	elog "a compatibility mode when using cryptsetup-1.1.x. This can be"
 	elog "done by specifying the cipher (-c), key size (-s) and hash (-h)."
 	elog "For more info, see http://code.google.com/p/cryptsetup/wiki/FrequentlyAskedQuestions#6._Issues_with_Specific_Versions_of_cryptsetup"
-
 }
