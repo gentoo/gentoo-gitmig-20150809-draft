@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.9 2010/06/11 19:22:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.10 2010/12/30 01:38:39 rafaelmartins Exp $
+
+  30 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  python-poppler-0.12.1.ebuild:
+  Restricting the version of the app-text/poppler dependency due to API changes
+  on version 0.16.0 (bug #349955).
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer, reassigning to python herd
