@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.26 2010/10/19 06:15:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.27 2010/12/30 18:18:46 jer Exp $
+
+*geekcode-1.7.3-r1 (30 Dec 2010)
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> +geekcode-1.7.3-r1.ebuild,
+  +files/geekcode-1.7.3-exit.patch:
+  Respect LDFLAGS (bug #342303), add missing include.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> geekcode-1.7.3.ebuild:
   Drop to ~mips
