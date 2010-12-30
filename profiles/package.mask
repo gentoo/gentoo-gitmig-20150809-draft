@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12315 2010/12/30 12:55:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12316 2010/12/30 18:37:40 betelgeuse Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Petteri Räty <betelgeuse@gentoo.org> (30 Dec 2010)
-# Fetch restricted binary package for which we have an open
-# source alternative: dev-java/glassfish-transaction-api
-# Will be moved to Java overlay after 30 days.
-dev-java/jta
 
 # Thomas Sachau <tommy@gentoo.org> (29 Dec 2010)
 # Masked because of ABI change, breaks
