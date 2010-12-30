@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.5 2010/12/30 18:42:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p6.ebuild,v 1.1 2010/12/30 18:42:58 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Not Quite C - C-like compiler for Lego Mindstorms"
 SRC_URI="http://bricxcc.sourceforge.net/nqc/release/${P/_p/.r}.tgz"
 HOMEPAGE="http://bricxcc.sourceforge.net/nqc/"
 
-S=${WORKDIR}/${P/_p/.r}
+S="${WORKDIR}/${P/_p/.r}"
 
 SLOT="0"
 LICENSE="MPL-1.0"
@@ -16,8 +18,16 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="usb"
 
 DEPEND="usb? ( dev-libs/legousbtower )"
+RDEPEND="${DEPEND}"
 
-src_compile()
+src_prepare() {
+	sed -i \
+		-e 's|$(CXX) -o |$(CXX) $(LDFLAGS) -o |g' \
+		-e 's|PREFIX?=/usr/local/|PREFIX?=/usr|' \
+		Makefile || die "sed Makefile"
+}
+
+src_configure()
 {
 	if use usb; then
 		epatch "${FILESDIR}"/${P}-usb.patch
@@ -25,8 +35,10 @@ src_compile()
 	if use amd64; then
 		epatch "${FILESDIR}"/${P}-amd64.patch
 	fi
-	sed -i -e 's/PREFIX?\=\/usr\/local/PREFIX?\=\/usr/' Makefile
-	emake || die
+}
+
+src_compile() {
+	emake CXX=$(tc-getCXX) LDFLAGS="${LDFLAGS}" || die "emake"
 }
 
 src_install() {
