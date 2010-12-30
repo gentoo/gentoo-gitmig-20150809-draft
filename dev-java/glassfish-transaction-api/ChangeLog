@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/glassfish-transaction-api
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-transaction-api/ChangeLog,v 1.7 2009/12/29 05:15:52 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-transaction-api/ChangeLog,v 1.8 2010/12/30 12:52:32 betelgeuse Exp $
+
+  30 Dec 2010; Petteri Räty <betelgeuse@gentoo.org>
+  glassfish-transaction-api-1.1.2.2.04.ebuild:
+  Bring over testing keywords from dev-java/jta so it can be masked for
+  removal.
 
   29 Dec 2009; Joseph Jezak <josejx@gentoo.org>
   glassfish-transaction-api-1.1.2.2.04.ebuild:
