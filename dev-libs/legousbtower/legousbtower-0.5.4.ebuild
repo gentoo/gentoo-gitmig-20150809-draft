@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.4 2010/12/30 18:39:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.5 2010/12/30 18:44:10 jer Exp $
 
 inherit linux-mod
 
@@ -12,8 +12,6 @@ SLOT="0"
 LICENSE="MPL-1.0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-
-DEPEND=""
 
 src_compile()
 {
@@ -30,7 +28,7 @@ src_install() {
 		insinto /usr/include/LegoUSB
 		doins include/legousbtower.h
 		insinto /etc/udev/rules.d
-		doins ${FILESDIR}/20-lego.rules
+		doins "${FILESDIR}"/20-lego.rules
 	fi
 	dodoc README
 }
