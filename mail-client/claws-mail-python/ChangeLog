@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.12 2010/12/06 13:05:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.13 2010/12/30 18:50:41 fauli Exp $
+
+  30 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-python-0.3.ebuild, claws-mail-python-0.4.ebuild,
+  claws-mail-python-0.5.ebuild, claws-mail-python-0.6.ebuild:
+  Add dev-python/pygtk dependency as found by hwoarang in bug 331395
 
 *claws-mail-python-0.6 (06 Dec 2010)
 
