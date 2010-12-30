@@ -1,6 +1,21 @@
 # ChangeLog for media-plugins/vdr-text2skin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.8 2010/03/14 14:18:32 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/ChangeLog,v 1.9 2010/12/30 18:57:40 hd_brummy Exp $
+
+*vdr-text2skin-1.3.1 (30 Dec 2010)
+
+  30 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/20070506/06_vdr-1.5.7.diff, -files/20070906/04_no_direct_blit.diff,
+  -vdr-text2skin-1.0.20070506.ebuild, -files/20070506/01_gcc-4.diff,
+  -files/20070506/02_uint64.diff, -files/20070506/03_gentoo.diff,
+  -files/20070506/04_no_direct_blit.diff,
+  -files/20070506/07_pkgconfig_magick.diff,
+  -files/20070906/07_pkgconfig_magick.diff,
+  -vdr-text2skin-1.0.20070906.ebuild, +vdr-text2skin-1.3.1.ebuild,
+  -files/20070506/05_vdr-1.5.4.diff, -files/20070506/series,
+  -files/20070906/06_vdr-1.5.7.diff, -files/20070906/03_gentoo.diff,
+  -files/20070906/08_cache.diff, metadata.xml:
+  version bump; cleanup
 
   14 Mar 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-text2skin-1.3.ebuild:

@@ -6,8 +6,8 @@
   <email>vdr@gentoo.org</email>
   <name>Gentoo VDR Project</name>
 </maintainer>
-<use>
+<!-- <use>
 	<flag name='direct_blit'>not buffer picture, faster, but only for modified
 		skins</flag>
-</use>
+</use> -->
 </pkgmetadata>
