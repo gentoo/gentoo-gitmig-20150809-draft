@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.3 2009/09/23 17:20:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/legousbtower/legousbtower-0.5.4.ebuild,v 1.4 2010/12/30 18:39:57 jer Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://legousb.sourceforge.net/"
 
 SLOT="0"
 LICENSE="MPL-1.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
