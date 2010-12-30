@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6248 2010/12/28 17:53:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6249 2010/12/30 14:33:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1012,6 +1012,8 @@ dev-libs/fcgi:html - Install HTML documentation
 dev-libs/ferrisloki:stlport - Include support for dev-libs/STLport
 dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with Proxy Server support via via the "http_proxy" environment variable and easy to customize.
 dev-libs/glib:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/jemalloc:profile - Enable allocation profiling
+dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/json-glib:coverage - Enable coverage analysis
 dev-libs/json-glib:introspection - Use dev-libs/gobject-introspection for introspection
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland
