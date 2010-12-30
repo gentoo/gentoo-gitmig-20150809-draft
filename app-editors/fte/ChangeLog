@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/fte
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.48 2008/11/17 19:56:48 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.49 2010/12/30 17:42:19 jer Exp $
+
+*fte-20051115-r2 (30 Dec 2010)
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> +fte-20051115-r2.ebuild:
+  Respect LDFLAGS (bug #337413), CFLAGS (bug #239928), CXX. Add x11-libs/libXpm
+  dependency (bug #216444 by Evil Compile Person). Split off configure and
+  prepare from unpack. Replace cat | grep with sed. Die on sed/dobin.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/fte-slang.patch:
