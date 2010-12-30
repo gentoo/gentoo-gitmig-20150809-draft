@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r4.ebuild,v 1.3 2010/01/15 01:06:53 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r4.ebuild,v 1.4 2010/12/30 18:05:05 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.adel.nursat.kz/apg/download/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="cracklib"
 
 DEPEND="cracklib? ( sys-libs/cracklib )"

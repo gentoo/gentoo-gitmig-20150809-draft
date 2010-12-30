@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.27 2010/12/30 18:03:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.28 2010/12/30 18:05:05 jer Exp $
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> apg-2.3.0b-r4.ebuild:
+  Stable for SPARC (bug #290799).
 
 *apg-2.3.0b-r5 (30 Dec 2010)
 
