@@ -1,6 +1,23 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.277 2010/12/30 17:18:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.278 2010/12/30 17:28:01 chainsaw Exp $
+
+  30 Dec 2010; Tony Vroon <chainsaw@gentoo.org>
+  -files/1.6.1/asterisk-1.6.1-uclibc.patch,
+  -files/1.6.2/asterisk-1.6.2.2-nv-faxdetect.patch,
+  -files/1.6.2/asterisk-1.6.2.8-inband-indications.patch,
+  -files/1.6.2/asterisk-1.6.2.8-pri-missing-keyword.patch,
+  -files/1.6.2/asterisk-1.6.2.9-gsm-pic.patch,
+  -files/1.6.2/asterisk-1.6.2.11-strip-noapi.patch,
+  -asterisk-1.6.2.13-r2.ebuild,
+  -files/1.6.2/asterisk-1.6.2.13-alarm-receiver-use-playtones.patch,
+  -files/1.6.2/asterisk-1.6.2.13-backport-bri-net-ptmp.patch,
+  -files/1.6.2/asterisk-1.6.2.13-confbridge-menu-invocation.patch,
+  -files/1.6.2/asterisk-1.6.2.13-dahdiras-without-root.patch,
+  -files/1.6.2/asterisk-1.6.2.13-iax2-peerstate.patch,
+  -files/1.6.2/asterisk-1.6.2.13-pbxstart-failed-spurious-bye.patch:
+  Remove last 1.6.2 branch ebuild that uses in-tree patching. Clean up
+  surrounding directories accordingly.
 
 *asterisk-1.8.1.1 (30 Dec 2010)
 
