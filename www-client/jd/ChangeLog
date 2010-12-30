@@ -1,6 +1,13 @@
 # ChangeLog for www-client/jd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.22 2010/04/30 23:46:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.23 2010/12/30 05:43:21 matsuu Exp $
+
+*jd-2.7.5_p101228 (30 Dec 2010)
+
+  30 Dec 2010; MATSUU Takuto <matsuu@gentoo.org> -jd-2.4.2_p090927.ebuild,
+  -jd-2.5.0_p091206.ebuild, -jd-2.5.5_p091228.ebuild, -jd-2.6.0_p100208.ebuild,
+  +jd-2.7.5_p101228.ebuild:
+  Version bumped. Removed old versions.
 
 *jd-2.6.5_p100425 (30 Apr 2010)
 
