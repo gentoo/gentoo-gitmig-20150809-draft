@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.281 2010/12/28 01:31:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.282 2010/12/30 19:08:04 jer Exp $
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> lftp-4.1.1.ebuild:
+  Stable for HPPA PPC (bug #349801).
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> lftp-4.1.1.ebuild:
   stable ppc64, bug 349801
