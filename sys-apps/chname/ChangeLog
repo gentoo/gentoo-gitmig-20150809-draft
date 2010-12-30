@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/chname
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/ChangeLog,v 1.4 2010/09/17 09:22:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/ChangeLog,v 1.5 2010/12/30 18:53:45 jer Exp $
+
+*chname-1.0-r1 (30 Dec 2010)
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> +chname-1.0-r1.ebuild:
+  Respect LDFLAGS (bug #337865), CC. Reword postinst message.
 
   17 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> chname-1.0.ebuild:
   Builds fine with no sources installed.
