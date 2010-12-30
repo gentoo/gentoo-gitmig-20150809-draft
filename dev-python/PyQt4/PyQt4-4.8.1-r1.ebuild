@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1.ebuild,v 1.5 2010/12/30 01:11:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.1-r1.ebuild,v 1.1 2010/12/30 01:11:19 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -22,7 +22,7 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/${PN}/${MY_P}.tar.gz
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="X assistant +dbus debug doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
+IUSE="X assistant +dbus debug declarative doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
 
 DEPEND=">=dev-python/sip-4.11.2
 	>=x11-libs/qt-core-${QT_VER}:4
@@ -34,6 +34,7 @@ DEPEND=">=dev-python/sip-4.11.2
 		>=dev-python/dbus-python-0.80
 		>=x11-libs/qt-dbus-${QT_VER}:4
 	)
+	declarative? ( >=x11-libs/qt-declarative-${QT_VER}:4 )
 	multimedia? ( >=x11-libs/qt-multimedia-${QT_VER}:4 )
 	opengl? ( >=x11-libs/qt-opengl-${QT_VER}:4 )
 	phonon? (
@@ -103,6 +104,7 @@ src_configure() {
 			# QtAssistant module is not available with Qt >=4.7.0.
 			$(pyqt4_use_enable assistant QtAssistant)
 			$(pyqt4_use_enable assistant QtHelp)
+			$(pyqt4_use_enable declarative QtDeclarative)
 			$(pyqt4_use_enable multimedia QtMultimedia)
 			$(pyqt4_use_enable opengl QtOpenGL)
 			$(pyqt4_use_enable phonon)
