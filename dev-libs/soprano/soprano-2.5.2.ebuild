@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.5.2.ebuild,v 1.2 2010/12/30 23:46:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.5.2.ebuild,v 1.3 2010/12/30 23:48:04 tampakrap Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="clucene +dbus debug doc elibc_FreeBSD java +raptor +redland test +virtuoso"
 
-#RESTRICT="test" #331761
+RESTRICT="test" #331761
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.5.0:4
