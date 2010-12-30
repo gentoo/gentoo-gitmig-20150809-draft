@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.5 2010/12/30 22:41:28 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.6 2010/12/30 23:59:59 ikelos Exp $
+
+  30 Dec 2010; Mike Auty <ikelos@gentoo.org> gitg-0.0.8.ebuild:
+  Fix a few dependency/ebuild issues as mentioned in bug 350189.
 
   30 Dec 2010; Mike Auty <ikelos@gentoo.org> -gitg-0.0.1.ebuild,
   -gitg-0.0.2.ebuild, -gitg-0.0.3.ebuild, -gitg-0.0.4.ebuild,

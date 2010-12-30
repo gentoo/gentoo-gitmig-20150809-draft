@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.8.ebuild,v 1.1 2010/12/30 22:41:28 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.8.ebuild,v 1.2 2010/12/30 23:59:59 ikelos Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit gnome2
 
@@ -21,15 +21,20 @@ RDEPEND=">=dev-libs/glib-2.26
 	dev-vcs/git"
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext
+	>=sys-devel/gettext-0.17
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.35"
+	>=dev-util/intltool-0.40"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	# Fix intltoolize broken file, see <https://bugzilla.gnome.org/show_bug.cgi?id=577133>
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i "${S}/po/Makefile.in.in" || die "sed failed"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name "*.la" -delete || die "Removal of .la files failed"
 }
 
 pkg_setup() {
