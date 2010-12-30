@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.8 2010/08/14 18:00:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.9 2010/12/30 23:46:39 tampakrap Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -245,7 +245,7 @@ eqmake4() {
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
 	"${EPREFIX}"/usr/bin/qmake \
-		-makefile -nocache \
+		-makefile \
 		-config ${CONFIG_ADD} \
 		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE="${EPREFIX}"/usr/bin/qmake \
