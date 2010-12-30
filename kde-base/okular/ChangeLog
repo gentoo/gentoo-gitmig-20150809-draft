@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.88 2010/12/02 21:16:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.89 2010/12/30 13:55:11 dilfridge Exp $
+
+*okular-4.4.5-r2 (30 Dec 2010)
+
+  30 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +okular-4.4.5-r2.ebuild, +files/okular-4.4.5-overflow.patch:
+  Add fix for Memory Corruption Vulnerability (CVE-2010-2575, bug 334469),
+  straight to stable
 
 *okular-4.5.4 (02 Dec 2010)
 
