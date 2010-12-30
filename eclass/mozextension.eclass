@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.4 2007/12/20 15:43:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.5 2010/12/30 03:06:04 anarchy Exp $
 #
 # mozextention.eclass: installing firefox extensions and language packs
 
@@ -48,7 +48,8 @@ xpi_install() {
 	x="${1}"
 	cd ${x}
 	# determine id for extension
-	emid=$(sed -n -e '/<\?em:id>\?/!d; s/.*\([\"{].*[}\"]\).*/\1/; s/\"//g; p; q' ${x}/install.rdf) || die "failed to determine extension id"
+	emid="$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${x}"/install.rdf)" \
+		|| die "failed to determine extension id"
 	insinto "${MOZILLA_FIVE_HOME}"/extensions/${emid}
 	doins -r "${x}"/* || die "failed to copy extension"
 }
