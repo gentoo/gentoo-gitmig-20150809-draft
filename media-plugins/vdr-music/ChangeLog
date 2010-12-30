@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-music
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.9 2009/11/06 17:33:17 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.10 2010/12/30 00:02:54 hd_brummy Exp $
+
+  30 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-music-0.2.0.ebuild, +files/vdr-music-0.2.0-ImageMagick-header.diff:
+  fixed includes newer ImageMagick; bug 274159
 
   06 Nov 2009; Vlastimil Babka <caster@gentoo.org> vdr-music-0.2.0.ebuild:
   Depend on virtual/jre instead of hardwired blackdown-jre
