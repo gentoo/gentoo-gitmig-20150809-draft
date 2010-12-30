@@ -25,3 +25,4 @@ slotmove =media-libs/clutter-gtk-0.10* 1.0 0.10
 move net-dns/shelldap net-nds/shelldap
 move app-dicts/goldendict app-text/goldendict
 slotmove net-libs/webkit-gtk 0 2
+slotmove net-p2p/kmldonkey 2 4
