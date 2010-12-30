@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rtgraph
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.8 2007/02/21 17:19:47 lucass Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.9 2010/12/30 22:07:22 arfrever Exp $
+
+  30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rtgraph-0.70.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS. Add "examples" USE flag.
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-rtgraph-0.70, Manifest:
