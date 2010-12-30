@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.710 2010/12/14 21:59:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.711 2010/12/30 17:35:23 dilfridge Exp $
+
+*kdelibs-4.4.5-r2 (30 Dec 2010)
+
+  30 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdelibs-4.4.5-r2.ebuild, +files/kdelibs-4.4.5-formpainter.patch:
+  Added upstream patch to kill the multitudes of QPainter::...: Painter not
+  active error messages. Should fix bug 341289, please test.
 
 *kdelibs-4.4.5-r1 (14 Dec 2010)
 
