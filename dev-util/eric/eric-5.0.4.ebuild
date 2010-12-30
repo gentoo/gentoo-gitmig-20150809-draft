@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.0.4.ebuild,v 1.1 2010/12/06 19:09:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.0.4.ebuild,v 1.2 2010/12/30 01:05:25 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="3"
@@ -41,6 +41,8 @@ unset L
 
 S="${WORKDIR}/${MY_P}"
 
+PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
+
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-5.0.2-remove_coverage.patch"
 
@@ -62,11 +64,12 @@ src_install() {
 		"$(PYTHON)" install.py \
 			-z \
 			-b "${EPREFIX}/usr/bin" \
-			-i "${D}" \
+			-i "${T}/images/${PYTHON_ABI}" \
 			-d "${EPREFIX}$(python_get_sitedir)" \
 			-c
 	}
 	python_execute_function installation
+	python_merge_intermediate_installation_images "${T}/images"
 
 	doicon eric/icons/default/${MY_PN}.png || die "doicon failed"
 }

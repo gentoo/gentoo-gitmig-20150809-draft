@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.10.ebuild,v 1.1 2010/12/06 18:43:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.10.ebuild,v 1.2 2010/12/30 01:05:25 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -43,6 +43,8 @@ unset L
 
 S="${WORKDIR}/${MY_P}"
 
+PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
+
 src_prepare() {
 	epatch "${FILESDIR}/eric-4.4-no-interactive.patch"
 	epatch "${FILESDIR}/remove_coverage.patch"
@@ -58,11 +60,12 @@ src_install() {
 		"$(PYTHON)" install.py \
 			-z \
 			-b "${EPREFIX}/usr/bin" \
-			-i "${D}" \
+			-i "${T}/images/${PYTHON_ABI}" \
 			-d "${EPREFIX}$(python_get_sitedir)" \
 			-c
 	}
 	python_execute_function installation
+	python_merge_intermediate_installation_images "${T}/images"
 
 	doicon eric/icons/default/eric.png || die "doicon failed"
 	make_desktop_entry "${MY_PN} --nosplash" ${MY_PN} eric "Development;IDE;Qt"
