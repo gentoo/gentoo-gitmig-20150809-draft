@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.61 2010/12/16 14:36:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.62 2010/12/30 14:23:01 tampakrap Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -309,6 +309,17 @@ enable_cmake-utils_src_configure() {
 			SET (CMAKE_SKIP_RPATH OFF CACHE BOOL "" FORCE)
 			SET (CMAKE_PLATFORM_REQUIRED_RUNTIME_PATH "${EPREFIX}/usr/${CHOST}/lib/gcc;${EPREFIX}/usr/${CHOST}/lib;${EPREFIX}/usr/$(get_libdir);${EPREFIX}/$(get_libdir)"
 			CACHE STRING "" FORCE)
+
+			ELSE ()
+
+			SET(CMAKE_PREFIX_PATH "${EPREFIX}${PREFIX:-/usr}" CACHE STRING ""FORCE)
+			SET(CMAKE_SKIP_BUILD_RPATH OFF CACHE BOOL "" FORCE)
+			SET(CMAKE_SKIP_RPATH OFF CACHE BOOL "" FORCE)
+			SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE CACHE BOOL "" FORCE) 
+			SET(CMAKE_INSTALL_RPATH ${EPREFIX}${PREFIX:-/usr}/lib;${EPREFIX}/usr/${CHOST}/lib/gcc;${EPREFIX}/usr/${CHOST}/lib;${EPREFIX}/usr/$(get_libdir);${EPREFIX}/$(get_libdir)"CACHE STRING "" FORCE)
+			SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE CACHE BOOL "" FORCE)
+			SET(CMAKE_INSTALL_NAME_DIR "${EPREFIX}${PREFIX:-/usr}/lib" CACHE STRING "" FORCE)
+
 			ENDIF (NOT APPLE)
 		_EOF_
 	fi
