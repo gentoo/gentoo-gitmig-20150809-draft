@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r2.ebuild,v 1.2 2010/12/30 03:09:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r2.ebuild,v 1.3 2010/12/30 16:35:09 tampakrap Exp $
 
 EAPI="3"
 
@@ -22,8 +22,6 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext"
 
 S=${WORKDIR}/${P}-kde${KDE_PV}
-
-PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}

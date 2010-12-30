@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.42 2010/12/30 03:09:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.43 2010/12/30 16:35:09 tampakrap Exp $
+
+  30 Dec 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  kmldonkey-2.0.2-r2.ebuild, -files/kmldonkey-2.0.2-gcc44.patch:
+  Remove the gcc4.4 patch, not needed for -r2
 
   30 Dec 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   kmldonkey-2.0.2-r2.ebuild:
