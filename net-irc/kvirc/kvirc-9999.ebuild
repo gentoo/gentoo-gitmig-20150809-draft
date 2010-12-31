@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.26 2010/06/25 13:57:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.27 2010/12/31 16:29:24 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -18,8 +18,7 @@ SLOT="4"
 KEYWORDS=""
 IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
 
-RDEPEND="
-	>=dev-libs/crypto++-5.6.0-r1
+RDEPEND=">=dev-libs/crypto++-5.6.0-r1
 	sys-libs/zlib
 	x11-libs/libX11
 	>=x11-libs/qt-core-4.5
@@ -58,14 +57,15 @@ pkg_setup() {
 
 	if use python; then
 		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
 src_prepare() {
 	subversion_wc_info
 	VERSIO_PRAESENS="${ESVN_WC_REVISION}"
-	elog "Setting revision number to ${VERSIO_PRAESENS}"
-	sed -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" -i src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
+	einfo "Setting of revision number to ${VERSIO_PRAESENS}"
+	sed -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" -i src/kvirc/ui/KviMainWindow.cpp || die "Setting of revision number failed"
 }
 
 src_configure() {
