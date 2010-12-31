@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.14.ebuild,v 1.1 2010/12/10 17:08:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.4.9.14.ebuild,v 1.2 2010/12/31 16:34:35 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -33,6 +33,9 @@ src_prepare() {
 
 	# Respect the user's CFLAGS, including the optimization level.
 	epatch "${FILESDIR}"/${PN}-no-O3-r0.patch
+
+	# Fix a compile error (bug #349794), to be upstreamed.
+	epatch "${FILESDIR}"/${PN}-gentoo-bug-349794-r0.patch
 
 	# Remove a test that is known to fail:
 	# http://groups.google.com/group/v8-users/browse_thread/thread/b8a3f42b5aa18d06

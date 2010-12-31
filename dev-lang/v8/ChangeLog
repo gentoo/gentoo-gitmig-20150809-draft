@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.19 2010/12/18 08:58:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.20 2010/12/31 16:34:35 phajdan.jr Exp $
+
+  31 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-2.4.9.13.ebuild,
+  v8-2.4.9.14.ebuild, v8-2.5.9.1.ebuild, v8-3.0.0.1.ebuild, v8-9999.ebuild,
+  +files/v8-gentoo-bug-349794-r0.patch:
+  Fix build, bug #349794 by flameeyes. Used patch by Mike Gilbert
+  <floppymaster@gmail.com>.
 
 *v8-3.0.0.1 (18 Dec 2010)
 
