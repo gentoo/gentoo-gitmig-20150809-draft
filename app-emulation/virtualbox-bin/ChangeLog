@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.94 2010/12/03 13:58:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.95 2010/12/31 11:42:15 polynomial-c Exp $
+
+*virtualbox-bin-3.2.12-r1 (31 Dec 2010)
+
+  31 Dec 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-bin-3.2.12.ebuild, +virtualbox-bin-3.2.12-r1.ebuild:
+  Make VBoxNetDHCP SUID root. Thanks to Florent Bondoux for reporting this in
+  bug #349769.
 
 *virtualbox-bin-3.2.12 (03 Dec 2010)
 

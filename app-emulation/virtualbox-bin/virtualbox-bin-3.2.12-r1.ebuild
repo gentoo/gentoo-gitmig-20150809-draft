@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.12.ebuild,v 1.1 2010/12/03 13:58:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.12-r1.ebuild,v 1.1 2010/12/31 11:42:15 polynomial-c Exp $
 
 EAPI=2
 
@@ -242,8 +242,9 @@ src_install() {
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
 	done
-	# VBoxNetAdpCtl binary needs to be suid root in any case..
+	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /opt/VirtualBox/VBoxNetAdpCtl
+	fperms 4750 /opt/VirtualBox/VBoxNetDHCP
 
 	if ! use headless ; then
 		# Hardened build: Mark selected binaries set-user-ID-on-execution
