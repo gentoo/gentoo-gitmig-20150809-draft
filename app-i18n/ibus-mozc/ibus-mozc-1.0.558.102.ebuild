@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-0.12.434.102.ebuild,v 1.1 2010/08/19 18:02:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.0.558.102.ebuild,v 1.1 2010/12/31 00:43:16 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit eutils multilib python toolchain-funcs
+inherit elisp-common eutils multilib python toolchain-funcs
 
 MY_P="${P/ibus-}"
 DESCRIPTION="The Mozc engine for IBus Framework"
@@ -14,12 +14,13 @@ SRC_URI="http://mozc.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+ibus scim qt4"
+IUSE="emacs +ibus scim qt4"
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/protobuf
 	net-misc/curl
 	sys-libs/zlib
+	emacs? ( virtual/emacs )
 	ibus? ( >=app-i18n/ibus-1.2 )
 	scim? ( app-i18n/scim )
 	qt4? ( x11-libs/qt-gui:4 )"
@@ -32,6 +33,8 @@ S="${WORKDIR}/${MY_P}"
 BUILDTYPE="${BUILDTYPE:-Release}"
 
 RESTRICT="test"
+
+SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
 	python_set_active_version 2
@@ -51,12 +54,17 @@ src_compile() {
 	export QTDIR="${EPREFIX}/usr"
 
 	local mytarget="server/server.gyp:mozc_server"
+	use emacs && mytarget="${mytarget} unix/emacs/emacs.gyp:mozc_emacs_helper"
 	use ibus && mytarget="${mytarget} unix/ibus/ibus.gyp:ibus_mozc"
 	use scim && mytarget="${mytarget} unix/scim/scim.gyp:scim_mozc unix/scim/scim.gyp:scim_mozc_setup"
 	use qt4 && mytarget="${mytarget} gui/gui.gyp:mozc_tool"
 
 	"$(PYTHON)" build_mozc.py build_tools -c "${BUILDTYPE}" || die
 	"$(PYTHON)" build_mozc.py build -c "${BUILDTYPE}" ${mytarget} || die
+
+	if use emacs ; then
+		elisp-compile unix/emacs/*.el || die
+	fi
 }
 
 src_test() {
@@ -64,6 +72,12 @@ src_test() {
 }
 
 src_install() {
+	if use emacs ; then
+		dobin "out_linux/${BUILDTYPE}/mozc_emacs_helper" || die
+		elisp-install ${PN} unix/emacs/*.{el,elc} || die
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${PN} || die
+	fi
+
 	if use ibus ; then
 		exeinto /usr/libexec || die
 		newexe "out_linux/${BUILDTYPE}/ibus_mozc" ibus-engine-mozc || die
