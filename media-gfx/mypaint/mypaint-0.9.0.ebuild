@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.1 2010/12/31 16:51:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.2 2010/12/31 17:16:50 hwoarang Exp $
 
 EAPI=2
 
-inherit eutils multilib scons-utils toolchain-funcs
+inherit eutils fdo-mime multilib scons-utils toolchain-funcs
 
 DESCRIPTION="fast and easy graphics application for digital painters"
 HOMEPAGE="http://mypaint.intilinux.com/"
@@ -39,5 +39,13 @@ src_compile() {
 
 src_install () {
 	escons prefix="${D}/usr" install || die "scons install failed"
-	doicon desktop/mypaint_48.png
+	doicon desktop/${PN}.ico
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
