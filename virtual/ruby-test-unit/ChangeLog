@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.17 2010/12/27 20:25:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.18 2010/12/31 11:36:12 graaff Exp $
+
+  31 Dec 2010; Hans de Graaff <graaff@gentoo.org>
+  ruby-test-unit-0-r2.ebuild, ruby-test-unit-0-r3.ebuild:
+  Add ppc keywords since all underlying packages have them.
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   ruby-test-unit-0-r3.ebuild:
