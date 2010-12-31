@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86vm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.58 2010/12/29 21:55:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.59 2010/12/31 20:12:10 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> libXxf86vm-1.1.1.ebuild:
+  Stable for HPPA (bug #344827).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> libXxf86vm-1.1.1.ebuild:
   arm stable, bug #344827
