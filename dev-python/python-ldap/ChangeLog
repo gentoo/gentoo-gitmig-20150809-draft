@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.92 2010/12/27 20:58:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.93 2010/12/31 23:44:23 arfrever Exp $
+
+  31 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-ldap-2.3.11.ebuild:
+  Delete.
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> python-ldap-2.3.12.ebuild:
   Marking python-ldap-2.3.12 ppc64 for bug 341337
