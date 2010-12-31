@@ -1,5 +1,9 @@
---- src/Makefile.orig	2008-10-11 21:58:25.000000000 +0200
-+++ src/Makefile	2008-10-11 21:58:35.000000000 +0200
+don't strip
+
+http://bugs.gentoo.org/240110
+
+--- src/Makefile
++++ src/Makefile
 @@ -33,7 +33,7 @@
  
  install-bin: $(MAINEXE)
