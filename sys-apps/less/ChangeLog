@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.118 2010/08/24 01:01:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.119 2010/12/31 20:53:11 vapier Exp $
+
+*less-438 (31 Dec 2010)
+
+  31 Dec 2010; Mike Frysinger <vapier@gentoo.org> +less-438.ebuild:
+  Version bump.
 
   24 Aug 2010; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Add support for txz archives by Marcin Baczyński #334027.
