@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.555 2010/12/29 22:34:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.556 2010/12/31 20:29:35 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> xorg-server-1.9.2.ebuild:
+  Stable for HPPA (bug #344827).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> xorg-server-1.9.2.ebuild:
   arm stable, bug #344827
