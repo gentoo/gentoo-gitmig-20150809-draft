@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.2.ebuild,v 1.1 2010/12/30 07:32:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.2.ebuild,v 1.2 2010/12/31 08:26:21 graaff Exp $
 
 EAPI=3
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -33,10 +33,10 @@ ruby_add_bdepend "
 # ruby 1.8.6 is no longer supported.
 RDEPEND="${RDEPEND}
 	ruby_targets_ruby19? (
-		>=dev-lang/ruby-1.9.2
+		>=dev-lang/ruby-1.9.2:1.9
 	)
 	ruby_targets_ruby18? (
-		>=dev-lang/ruby-1.8.7
+		>=dev-lang/ruby-1.8.7:1.8
 	)"
 
 all_ruby_prepare() {
