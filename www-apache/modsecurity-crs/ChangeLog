@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.5 2010/12/03 01:34:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.6 2010/12/31 13:03:26 flameeyes Exp $
+
+*modsecurity-crs-2.1.1 (31 Dec 2010)
+
+  31 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +modsecurity-crs-2.1.1.ebuild:
+  Version bump, this version introduces experimental rules as well.
 
   03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   modsecurity-crs-2.0.10.ebuild:
