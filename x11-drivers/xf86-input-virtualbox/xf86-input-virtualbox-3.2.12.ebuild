@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.12.ebuild,v 1.1 2010/12/03 14:01:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.12.ebuild,v 1.2 2010/12/31 12:19:40 polynomial-c Exp $
 
 EAPI=2
 
@@ -17,15 +17,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE="hal"
 
 RDEPEND="x11-base/xorg-server
-		hal? ( sys-apps/hal )"
+	x11-drivers/xf86-input-mouse
+	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
-		>=dev-util/kbuild-0.1.5-r1
-		>=dev-lang/yasm-0.6.2
-		sys-devel/dev86
-		sys-power/iasl
-		x11-proto/inputproto
-		x11-proto/randrproto
-		x11-proto/xproto"
+	>=dev-util/kbuild-0.1.5-r1
+	>=dev-lang/yasm-0.6.2
+	sys-devel/dev86
+	sys-power/iasl
+	x11-proto/inputproto
+	x11-proto/randrproto
+	x11-proto/xproto"
 
 S=${WORKDIR}/${MY_P/-OSE/_OSE}
 
