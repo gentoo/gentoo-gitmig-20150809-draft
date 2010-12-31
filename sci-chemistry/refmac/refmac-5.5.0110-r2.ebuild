@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r2.ebuild,v 1.2 2010/12/25 17:58:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r2.ebuild,v 1.3 2010/12/31 16:08:51 jlec Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="test"
 
 RDEPEND="
 	sci-chemistry/makecif
-	sci-libs/ccp4-libs
+	>=sci-libs/ccp4-libs-6.1.3-r5
 	sci-libs/mmdb
 	<sci-libs/monomer-db-1
 	virtual/blas

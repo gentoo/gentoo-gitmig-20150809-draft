@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.30 2010/12/25 17:58:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.31 2010/12/31 16:08:51 jlec Exp $
+
+  31 Dec 2010; Justin Lecher <jlec@gentoo.org> refmac-5.5.0110-r2.ebuild:
+  Depend correct ccp4-libs version to make test work
 
   25 Dec 2010; Justin Lecher <jlec@gentoo.org> refmac-5.5.0110-r2.ebuild:
   Removed installation of libcheck again, #349700
