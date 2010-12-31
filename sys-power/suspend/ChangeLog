@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.16 2010/10/04 22:53:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.17 2010/12/31 01:14:33 xmw Exp $
+
+  31 Dec 2010; Michael Weber <xmw@gentoo.org> suspend-0.9_pre0.ebuild:
+  Add use-dep on dev-libs/lzo[static-libs] (thanks to alexxy and Stefan Botz
+  <sbotz@gmx.net> on bug 348453)
 
   04 Oct 2010; Michael Weber <xmw@gentoo.org> suspend-0.9_pre0.ebuild,
   +files/suspend-0.9_pre0-errno.patch:
