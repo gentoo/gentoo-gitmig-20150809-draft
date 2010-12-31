@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/dirdiff
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.8 2007/02/09 03:06:13 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.9 2010/12/31 16:05:37 jer Exp $
+
+*dirdiff-2.1-r1 (31 Dec 2010)
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> +dirdiff-2.1-r1.ebuild,
+  +files/dirdiff-2.1-include.patch:
+  Respect LDFLAGS (bug #335171), CC. Build PIC. Set SONAME (bug #214536). Set
+  RDEPEND. Fix missing includes.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
