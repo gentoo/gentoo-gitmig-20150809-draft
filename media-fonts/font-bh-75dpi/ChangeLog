@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-75dpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-75dpi/ChangeLog,v 1.35 2010/12/29 21:29:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-75dpi/ChangeLog,v 1.36 2010/12/31 19:24:55 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> font-bh-75dpi-1.0.3.ebuild:
+  Stable for HPPA (bug #344827).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> font-bh-75dpi-1.0.3.ebuild:
   arm stable, bug #344827
