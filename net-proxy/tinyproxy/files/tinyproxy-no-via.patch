@@ -1,5 +1,5 @@
---- src/reqs.c	2009-09-28 23:27:46.000000000 -0400
-+++ ../reqs.c	2009-11-10 15:06:28.062785177 -0400
+--- src/reqs.c
++++ src/reqs.c
 @@ -1002,36 +1002,5 @@
  		 unsigned int major, unsigned int minor)
  {
