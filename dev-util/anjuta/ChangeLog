@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.125 2010/12/05 17:55:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.126 2010/12/31 18:58:21 pacho Exp $
+
+*anjuta-2.32.1.1 (31 Dec 2010)
+
+  31 Dec 2010; Pacho Ramos <pacho@gentoo.org> +anjuta-2.32.1.1.ebuild:
+  Version bump with bugfixes, running eautoreconf for not losing introspection
+  configure option looks to not be needed for this version, but keeping it
+  commented to remember the problem if it reappears in the future.
 
   05 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> anjuta-2.32.1.0.ebuild:
   Add libXft/libXRender. Make sure graphviz is recent enough. Make sure
