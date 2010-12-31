@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.7 2010/09/29 22:36:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.8 2010/12/31 13:47:01 graaff Exp $
+
+  31 Dec 2010; Hans de Graaff <graaff@gentoo.org> erubis-2.6.6.ebuild,
+  erubis-2.6.6-r1.ebuild:
+  Add ppc/ppc64 keywords also to newer versions.
 
   29 Sep 2010; Brent Baude <ranger@gentoo.org> erubis-2.6.5.ebuild:
   Marking erubis-2.6.5 ~ppc64 for bug 326353
