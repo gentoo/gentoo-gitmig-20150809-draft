@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.204 2010/11/14 23:02:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.205 2010/12/31 23:53:28 arfrever Exp $
+
+  31 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libxslt-1.1.26.ebuild:
+  Restrict Jython ABIs.
 
   14 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libxslt-1.1.26.ebuild:
