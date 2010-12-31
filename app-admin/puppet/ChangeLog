@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.72 2010/12/31 04:02:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.73 2010/12/31 07:49:41 tove Exp $
 
 *puppet-2.6.4 (31 Dec 2010)
 
@@ -22,10 +22,10 @@
   20 Sep 2010; Guy Martin <gmsoft@gentoo.org> puppet-0.25.5.ebuild:
   hppa stable wrt #325129
 
-  18 Sep 2010; Ra炭l Porcel <armin76@gentoo.org> puppet-0.25.5.ebuild:
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> puppet-0.25.5.ebuild:
   sparc stable wrt #325129
 
-  15 Aug 2010; Diego E. Petten嘆 <flameeyes@gentoo.org> puppet-2.6.0.ebuild,
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> puppet-2.6.0.ebuild,
   puppet-2.6.0-r1.ebuild:
   Update to the new ruby_add_rdepend syntax (classic-style) and use
   virtual/ruby-ssl rather than reimplementing it by hand.
@@ -71,7 +71,7 @@
   puppet-0.25.4-r1.ebuild:
   stable x86, bug 306195
 
-  04 Mar 2010; Ra炭l Porcel <armin76@gentoo.org> puppet-0.25.4-r1.ebuild:
+  04 Mar 2010; Raúl Porcel <armin76@gentoo.org> puppet-0.25.4-r1.ebuild:
   sparc stable wrt #306195
 
 *puppet-0.25.4-r1 (02 Mar 2010)
@@ -100,13 +100,13 @@
 
 *puppet-0.25.1-r1 (22 Nov 2009)
 
-  22 Nov 2009; Benedikt B旦hm <hollow@gentoo.org> +puppet-0.25.1-r1.ebuild,
+  22 Nov 2009; Benedikt Böhm <hollow@gentoo.org> +puppet-0.25.1-r1.ebuild,
   files/puppet-0.25.1-eix-0.18.patch:
   fix regression in the portage provider
 
 *puppet-0.25.1 (16 Nov 2009)
 
-  16 Nov 2009; Benedikt B旦hm <hollow@gentoo.org> puppet-0.24.8-r1.ebuild,
+  16 Nov 2009; Benedikt Böhm <hollow@gentoo.org> puppet-0.24.8-r1.ebuild,
   -puppet-0.25.0.ebuild, puppet-0.25.0-r1.ebuild, +puppet-0.25.1.ebuild,
   +files/puppet-0.25.1-eix-0.18.patch:
   version bump + backported portage provider for eix-0.18 compatibility (see
@@ -114,7 +114,7 @@
 
 *puppet-0.25.0-r1 (08 Oct 2009)
 
-  08 Oct 2009; Benedikt B旦hm <hollow@gentoo.org> +puppet-0.25.0-r1.ebuild,
+  08 Oct 2009; Benedikt Böhm <hollow@gentoo.org> +puppet-0.25.0-r1.ebuild,
   +files/puppet-0.25.0-cert-names.patch:
   add hotfix for 0.24.x CA compatibility. Upstream bug #2617
 
@@ -159,7 +159,7 @@
 
 *puppet-0.24.8-r1 (19 Apr 2009)
 
-  19 Apr 2009; Benedikt B旦hm <hollow@gentoo.org>
+  19 Apr 2009; Benedikt Böhm <hollow@gentoo.org>
   +files/puppet-0.24.8-rc-update-show.patch, puppet-0.24.8.ebuild,
   +puppet-0.24.8-r1.ebuild:
   identify services with ambiguous suffixes correctly
@@ -236,7 +236,7 @@
   Fixed rrdtool dependency, bug #238568. Fixed to work with
   >=app-portage/eix-0.14.0.
 
-  29 Sep 2008; Tiziano M端ller <dev-zero@gentoo.org> files/puppet.init,
+  29 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> files/puppet.init,
   files/puppetmaster.init:
   Removed bashism from init-scripts
 
@@ -282,7 +282,7 @@
   16 Jun 2008; nixnut <nixnut@gentoo.org> puppet-0.24.4.ebuild:
   Stable on ppc wrt bug 227375
 
-  16 Jun 2008; Tiziano M端ller <dev-zero@gentoo.org>
+  16 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/puppet-0.24.4-openrc_initd.patch, files/puppetmaster.init,
   puppet-0.24.4.ebuild:
   Added fix to make scripts work with baselayout-2/openrc (bug #218071)
