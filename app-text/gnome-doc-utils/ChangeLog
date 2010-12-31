@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.174 2010/11/08 15:27:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.175 2010/12/31 17:57:00 pacho Exp $
+
+*gnome-doc-utils-0.20.3 (31 Dec 2010)
+
+  31 Dec 2010; Pacho Ramos <pacho@gentoo.org> -gnome-doc-utils-0.18.1.ebuild,
+  +gnome-doc-utils-0.20.3.ebuild:
+  Version bump: Fixed nested command substitution in gnome-doc-utils.make
+  (Chris Coleman), updated translations. Update homepage and remove old.
 
   08 Nov 2010; Jeremy Olexa <darkside@gentoo.org>
   gnome-doc-utils-0.20.2.ebuild:
