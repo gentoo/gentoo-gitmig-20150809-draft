@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/videoproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.42 2010/12/29 20:56:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.43 2010/12/31 19:53:43 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> videoproto-2.3.1.ebuild:
+  Stable for HPPA (bug #344827).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> videoproto-2.3.1.ebuild:
   arm stable, bug #344827
