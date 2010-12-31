@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.84 2010/12/19 11:51:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.85 2010/12/31 19:20:55 pacho Exp $
+
+  31 Dec 2010; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-2.32.0.ebuild:
+  Fix eautoreconf when gobject-introspection is not installed (bug #349536 by
+  Albert W. Hopkins).
 
   19 Dec 2010; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-2.32.0.ebuild,
   +files/gnome-bluetooth-2.32.0-introspection-build.patch:
