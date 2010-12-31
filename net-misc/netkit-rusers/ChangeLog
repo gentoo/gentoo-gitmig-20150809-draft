@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netkit-rusers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.6 2009/09/23 19:40:07 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.7 2010/12/31 18:40:32 jer Exp $
+
+*netkit-rusers-0.17-r1 (31 Dec 2010)
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> +netkit-rusers-0.17-r1.ebuild,
+  +files/netkit-rusers-0.17-include.patch:
+  Respect LDFLAGS (bug #337620), CC. Fix some includes. Remove empty DEPEND.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> netkit-rusers-0.17.ebuild:
   Remove virtual/libc
