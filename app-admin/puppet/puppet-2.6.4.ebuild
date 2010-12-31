@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.1.ebuild,v 1.1 2010/09/23 06:15:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.4.ebuild,v 1.1 2010/12/31 04:02:12 matsuu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -64,7 +64,10 @@ all_ruby_install() {
 	# Initial configuration files
 	keepdir /etc/puppet/manifests || die
 	insinto /etc/puppet
-	doins conf/gentoo/puppet/* || die
+
+	# Bug #338439
+	#doins conf/gentoo/puppet/* || die
+	doins conf/redhat/*.conf || die
 	doins conf/auth.conf || die
 
 	# Location of log and data files
