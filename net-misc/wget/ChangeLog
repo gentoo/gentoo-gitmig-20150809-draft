@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.133 2010/12/28 16:54:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.134 2010/12/31 15:49:10 hwoarang Exp $
+
+  31 Dec 2010; Markos Chandras <hwoarang@gentoo.org> wget-1.12-r3.ebuild:
+  Stable on amd64 wrt bug #349114
 
   28 Dec 2010; Markus Meier <maekke@gentoo.org> wget-1.12-r3.ebuild:
   arm stable, bug #349114
