@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.3 2010/06/04 05:28:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.4 2010/12/31 00:59:37 vapier Exp $
 
 EAPI="2"
 
@@ -29,8 +29,8 @@ src_prepare() {
 	use minimal && epatch "${FILESDIR}/${P}-minimal.patch"
 	sed -i etc/${PN}.conf.in -e "s|nobody|${PN}|g" || die "sed failed"
 	sed \
-		"${FILESDIR}/${PN}.initd" \
 		-e "/CONFFILE/s:${PN}/::g" \
+		"${FILESDIR}/${PN}.initd" \
 		> "${WORKDIR}"/${PN}.initd \
 		|| die "sed failed"
 	eautoreconf
@@ -48,8 +48,7 @@ src_configure() {
 		$(use_enable transparent-proxy transparent) \
 		$(use_enable upstream-proxy upstream) \
 		$(use_enable xtinyproxy-header xtinyproxy) \
-		$(use_enable debug) \
-		|| die "econf failed"
+		$(use_enable debug)
 }
 
 src_install() {
@@ -70,6 +69,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "For filtering domains and URLs, enable filter option in the configuration file"
-	einfo "and add them to the filter file (one domain or URL per line)."
+	einfo "For filtering domains and URLs, enable filter option in the configuration"
+	einfo "file and add them to the filter file (one domain or URL per line)."
 }
