@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6.ebuild,v 1.5 2010/12/29 17:38:44 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6.ebuild,v 1.6 2010/12/31 17:40:21 maekke Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ia64 ~m68k ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="amd64 arm hppa ~ia64 ~m68k ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="usb kernel_linux"
 
 RDEPEND="usb? ( virtual/libusb:1 )"
