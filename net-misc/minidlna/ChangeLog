@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.1 2010/12/29 16:59:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.2 2010/12/31 01:04:36 xmw Exp $
+
+  31 Dec 2010; Michael Weber <xmw@gentoo.org> minidlna-1.0.18.ebuild:
+  Added ~x86 keyword (bug 350118)
 
 *minidlna-1.0.18 (29 Dec 2010)
 
