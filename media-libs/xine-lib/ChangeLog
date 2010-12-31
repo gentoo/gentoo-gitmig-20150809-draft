@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.635 2010/12/29 22:41:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.636 2010/12/31 19:15:26 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> xine-lib-1.1.19.ebuild:
+  Stable for HPPA (bug #349608).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> xine-lib-1.1.19.ebuild:
   arm stable, bug #349608
