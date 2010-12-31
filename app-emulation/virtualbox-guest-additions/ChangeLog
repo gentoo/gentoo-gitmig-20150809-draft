@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.55 2010/12/03 14:03:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.56 2010/12/31 11:11:03 polynomial-c Exp $
+
+  31 Dec 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-3.1.8-r2.ebuild,
+  virtualbox-guest-additions-3.2.10.ebuild,
+  virtualbox-guest-additions-3.2.12.ebuild:
+  Fixed elog message about vboxguest group. Thanks to Michael
+  <gentoo-at-scribeofthenile.com> for reporting this in bug #349934.
 
 *virtualbox-guest-additions-3.2.12 (03 Dec 2010)
 

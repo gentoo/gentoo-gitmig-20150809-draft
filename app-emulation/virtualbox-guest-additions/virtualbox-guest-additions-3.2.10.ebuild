@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.10.ebuild,v 1.1 2010/10/12 14:13:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.10.ebuild,v 1.2 2010/12/31 11:11:03 polynomial-c Exp $
 
 inherit eutils linux-mod
 
@@ -160,7 +160,7 @@ pkg_postinst() {
 			elog "X Window System input and video drivers"
 		fi
 		elog ""
-		elog "Please add users to the \"vboxusers\" group so they can"
+		elog "Please add users to the \"vboxguest\" group so they can"
 		elog "benefit from seamless mode, auto-resize and clipboard."
 		elog ""
 		elog "Please add:"
