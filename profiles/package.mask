@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12317 2010/12/30 22:50:53 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12318 2010/12/31 09:52:58 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -643,11 +643,6 @@ dev-libs/pcl
 #
 # Removal on 2010-10-24
 app-i18n/imhangul-status-applet
-
-# Alex Legler <a3li@gentoo.org> (18 Aug 2010)
-# Fails to install with the latest stable versions of OpenSSL and Tk.
-# The 1.8.6 packages will be removed in 60 days. Reference: Bug 332597.
-=dev-lang/ruby-1.8.6*
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # Mask until prime time

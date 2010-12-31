@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4899 2010/12/30 08:12:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4900 2010/12/31 09:52:58 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Dec 2010; Hans de Graaff <graaff@gentoo.org> package.mask,
+  profiles.desc:
+  Remove dev-lang/ruby-1.8.6 mask, package has been removed.
 
   30 Dec 2010; Eray Aslan <eras@gentoo.org> package.mask:
   Drop app-crypt/mit-krb5-1.9_beta* entry. No longer in the tree.
