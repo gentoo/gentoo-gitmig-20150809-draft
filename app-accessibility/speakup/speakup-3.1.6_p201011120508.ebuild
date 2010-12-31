@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.2 2010/12/20 18:19:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.3 2010/12/31 18:23:41 williamh Exp $
 
 EAPI="2"
 
@@ -22,6 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="modules"
 
+S="${WORKDIR}/${PN}-3.1.6"
 MODULE_NAMES="speakup(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
 	speakup_acntpc(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)
 	speakup_acntsa(${PN}:\"${S}\"/modules:\"${S}\"/drivers/staging/speakup)

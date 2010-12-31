@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.55 2010/12/20 18:19:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.56 2010/12/31 18:23:41 williamh Exp $
+
+  31 Dec 2010; William Hubbs <williamh@gentoo.org>
+  speakup-3.1.6_p201011120508.ebuild:
+  fix snapshot for 2.6.36
+  The S variable wasn't set correctly.
 
   20 Dec 2010; William Hubbs <williamh@gentoo.org>
   speakup-3.1.6_p201011120508.ebuild:
