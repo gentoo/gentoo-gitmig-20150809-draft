@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Charset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.1 2010/03/22 10:29:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.2 2010/12/31 14:33:57 fauli Exp $
+
+  31 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  MIME-Charset-1.008.ebuild:
+  stable x86, bug 349266
 
 *MIME-Charset-1.008 (22 Mar 2010)
 
