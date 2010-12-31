@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.02-r1.ebuild,v 1.3 2010/10/20 10:39:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.02-r1.ebuild,v 1.4 2010/12/31 15:03:33 graaff Exp $
 
 EAPI=2
 
@@ -47,8 +47,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 # TODO rubygems
 PDEPEND="xemacs? ( app-xemacs/ruby-modes )"
-
-PROVIDE="virtual/ruby"
 
 src_prepare() {
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \

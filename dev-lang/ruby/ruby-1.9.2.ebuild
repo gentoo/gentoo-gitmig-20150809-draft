@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2.ebuild,v 1.1 2010/08/24 18:08:09 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2.ebuild,v 1.2 2010/12/31 15:02:51 graaff Exp $
 
 EAPI=2
 
@@ -63,8 +63,6 @@ DEPEND="${RDEPEND}"
 PDEPEND="
 	rdoc? ( >=dev-ruby/rdoc-2.5.11[ruby_targets_ruby19] )
 	xemacs? ( app-xemacs/ruby-modes )"
-
-PROVIDE="virtual/ruby"
 
 src_prepare() {
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
