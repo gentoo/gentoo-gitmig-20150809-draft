@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.3.4.ebuild,v 1.6 2010/12/29 22:15:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.3.4.ebuild,v 1.7 2010/12/31 20:34:40 jer Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="primitive command line interface to RandR extension"
 
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=x11-libs/libXrandr-1.3

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.54 2010/12/29 22:10:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.55 2010/12/31 20:50:47 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> x11perf-1.5.2.ebuild:
+  Stable for HPPA (bug #344827).
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> x11perf-1.5.2.ebuild:
   arm stable, bug #344827
