@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.19 2010/12/26 13:37:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.20 2010/12/31 11:54:49 tomka Exp $
+
+  31 Dec 2010; Thomas Kahle <tomka@gentoo.org> libmpdclient-2.3.ebuild:
+  x86 stable per bug 348746
 
   26 Dec 2010; Markus Meier <maekke@gentoo.org> libmpdclient-2.3.ebuild:
   arm stable, bug #348746
