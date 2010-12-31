@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/baudline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.1 2010/10/05 02:56:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.2 2010/12/31 15:55:39 hwoarang Exp $
+
+  31 Dec 2010; Markos Chandras <hwoarang@gentoo.org> baudline-1.08.ebuild:
+  Stable on amd64 wrt bug #350005
 
 *baudline-1.08 (05 Oct 2010)
 
