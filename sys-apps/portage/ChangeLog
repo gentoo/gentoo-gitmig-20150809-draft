@@ -1,6 +1,31 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.783 2010/12/28 17:00:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.784 2010/12/31 09:58:12 zmedico Exp $
+
+*portage-2.2.0_alpha11 (31 Dec 2010)
+
+  31 Dec 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha11.ebuild:
+  2.2.0_alpha11 version bump. This includes all of the fixes in
+  portage-2.1.9.27. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.27 (31 Dec 2010)
+
+  31 Dec 2010; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.27.ebuild:
+  2.1.9.27 version bump. This fixes bug #289486 (prevent SIGQUIT
+  interference with sandbox), bug #338744 (endless broken pipe loop when
+  unpacking zip files), bug #348864 (bail out if Manifest is missing
+  distfiles digests), bug #349757 (handle EPERM when trying to unmerge a
+  directory that is a mount point), bug #350045 (doins -r fails for some
+  file names), and bug #53607 (anydbm cache module fails with multiple
+  processes). This release also includes support for EAPI 4, which has
+  been recently approved by the Gentoo Council. Refer to the PMS EAPI
+  Cheat Sheet, portage's html docs installed with USE=doc, or
+  `man 5 ebuild` for more info about EAPI 4. Bug #349307 tracks all bugs
+  fixed since 2.1.9.25.
+
+  31 Dec 2010; Zac Medico <zmedico@gentoo.org> -portage-2.2.0_alpha6.ebuild,
+  -portage-2.2.0_alpha7.ebuild, -portage-2.2.0_alpha8.ebuild:
+  Remove old versions.
 
   28 Dec 2010; Markus Meier <maekke@gentoo.org> portage-2.1.9.25.ebuild:
   arm stable, bug #349098
