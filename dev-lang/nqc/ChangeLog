@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.16 2010/12/30 18:42:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.17 2010/12/31 16:39:34 jer Exp $
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p6.ebuild:
+  Replace patches (that should have been applied unconditionally anyway and do
+  not apply to this version).
 
 *nqc-3.1_p6 (30 Dec 2010)
 

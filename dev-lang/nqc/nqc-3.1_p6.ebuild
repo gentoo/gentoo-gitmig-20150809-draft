@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p6.ebuild,v 1.1 2010/12/30 18:42:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p6.ebuild,v 1.2 2010/12/31 16:39:34 jer Exp $
 
 EAPI="2"
 
@@ -21,20 +21,14 @@ DEPEND="usb? ( dev-libs/legousbtower )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i \
+	sed -i Makefile \
 		-e 's|$(CXX) -o |$(CXX) $(LDFLAGS) -o |g' \
-		-e 's|PREFIX?=/usr/local/|PREFIX?=/usr|' \
-		Makefile || die "sed Makefile"
+		-e 's|/usr/local|/usr|' \
+		|| die "sed Makefile"
 }
 
-src_configure()
-{
-	if use usb; then
-		epatch "${FILESDIR}"/${P}-usb.patch
-	fi
-	if use amd64; then
-		epatch "${FILESDIR}"/${P}-amd64.patch
-	fi
+src_configure() {
+	use usb && sed -i Makefile -e 's|#.*USBOBJ =|USBOBJ =|g' || die "sed usb"
 }
 
 src_compile() {
