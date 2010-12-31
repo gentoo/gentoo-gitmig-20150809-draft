@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethloop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.7 2010/12/27 17:32:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.8 2010/12/31 19:13:58 phajdan.jr Exp $
+
+  31 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ethloop-10-r3.ebuild:
+  x86 stable wrt bug #336755
 
 *ethloop-10-r3 (27 Dec 2010)
 
