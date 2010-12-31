@@ -175,6 +175,10 @@ lesspipe() {
 		isoinfo -l ${iso_opts} -i "$1"
 		;;
 
+	### Encryption stuff ###
+	*.crl) openssl crl -hash -text -noout -in "$1" ;;
+	*.pem) openssl x509 -hash -text -noout -in "$1" ;;
+
 # May not be such a good idea :)
 #	### Device nodes ###
 #	/dev/[hs]d[a-z]*)
@@ -231,7 +235,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.41 2010/08/24 01:01:25 vapier Exp $
+		$Id: lesspipe.sh,v 1.42 2010/12/31 20:51:15 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
