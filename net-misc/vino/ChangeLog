@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.154 2010/11/08 22:59:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.155 2010/12/31 18:17:32 pacho Exp $
+
+*vino-2.32.1 (31 Dec 2010)
+
+  31 Dec 2010; Pacho Ramos <pacho@gentoo.org> +vino-2.32.1.ebuild:
+  Version bump: Be compatible with old (< 0.7.0) and new (>= 0.7.0) libnotify,
+  translation updates.
 
   08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -vino-2.26.2-r2.ebuild, vino-2.28.2.ebuild, vino-2.32.0.ebuild:
