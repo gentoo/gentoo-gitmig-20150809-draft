@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.254 2010/12/29 07:14:05 keri Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.255 2011/01/01 19:17:31 keri Exp $
+
+  01 Jan 2011; <keri@gentoo.org> swi-prolog-5.10.2.ebuild,
+  swi-prolog-5.11.10.ebuild:
+  Fix exception typo in gdiv-minint test script
 
   29 Dec 2010; <keri@gentoo.org> swi-prolog-5.10.2.ebuild,
   swi-prolog-5.11.10.ebuild:
