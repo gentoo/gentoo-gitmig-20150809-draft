@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.53 2010/10/28 20:55:42 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.54 2011/01/01 08:25:08 jlec Exp $
+
+  01 Jan 2011; Justin Lecher <jlec@gentoo.org> tmux-9999.ebuild:
+  Upstream now uses autotools, #350261
 
 *tmux-9999 (28 Oct 2010)
 
