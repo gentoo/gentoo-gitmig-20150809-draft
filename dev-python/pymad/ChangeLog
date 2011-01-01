@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.25 2010/12/29 19:13:22 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.26 2011/01/01 15:37:00 phajdan.jr Exp $
+
+  01 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pymad-0.6.ebuild:
+  x86 stable wrt bug #349694
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pymad-0.6.ebuild:
   Stable on amd64 wrt bug #349694
