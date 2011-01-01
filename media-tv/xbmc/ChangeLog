@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.73 2010/12/31 18:19:26 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.74 2011/01/01 21:31:21 vapier Exp $
+
+  01 Jan 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.0.ebuild,
+  +files/xbmc-10.0-python-2.7.patch:
+  Add support from upstream for python-2.7 #350098 by Tom Flair.
 
   31 Dec 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Patch by Samuli Suominen to drop hal support in favor of upstream
