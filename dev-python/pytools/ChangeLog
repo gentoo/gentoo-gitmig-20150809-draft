@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.6 2010/12/26 15:34:27 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.7 2011/01/01 21:08:52 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pytools-11.ebuild, pytools-9999.ebuild:
+  Fix deprecation warnings.
 
   26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pytools-9.ebuild:

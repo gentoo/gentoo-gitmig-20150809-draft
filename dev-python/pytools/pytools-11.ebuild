@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-11.ebuild,v 1.2 2010/12/26 15:36:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-11.ebuild,v 1.3 2011/01/01 21:08:52 arfrever Exp $
 
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
