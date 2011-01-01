@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.41 2010/12/26 00:29:38 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.42 2011/01/01 19:30:38 hwoarang Exp $
+
+  01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pcmanfm-0.9.7-r2.ebuild:
+  Stable on amd64 wrt bug #349724
 
   26 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> pcmanfm-0.9.7-r1.ebuild,
   pcmanfm-0.9.7-r2.ebuild, pcmanfm-0.9.8.ebuild, pcmanfm-9999.ebuild:
