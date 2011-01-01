@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/iat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/iat/ChangeLog,v 1.5 2009/10/08 19:06:01 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/iat/ChangeLog,v 1.6 2011/01/01 14:42:01 xmw Exp $
+
+  01 Jan 2011; Michael Weber <xmw@gentoo.org> iat-0.1.7-r1.ebuild:
+  add ~sparc keyword (bug 350200)
 
 *iat-0.1.7-r1 (08 Oct 2009)
 
