@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.3 2010/12/31 19:28:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.4 2011/01/01 21:35:26 hwoarang Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ RUBY_PATCHES=( "${FILESDIR}/ruby-gd-0.7.4-fix-interlace.patch" )
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86"
 IUSE="jpeg truetype X"
 
 DEPEND="
