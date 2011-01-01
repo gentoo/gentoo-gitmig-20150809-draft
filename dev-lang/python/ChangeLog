@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.513 2010/12/29 16:21:36 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.514 2011/01/01 18:24:05 jmbsvicetto Exp $
+
+  01 Jan 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  python-2.6.6-r1.ebuild:
+  Non-maintainer commit.
+  Reverting commit that broke stage generation for python-2.6.6-r1 as it wasn't
+  reverted before - bug 347867.
+  This commit was accepted by Arfrever.
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> python-2.6.6-r1.ebuild:
   Stable on amd64 wrt bug #342927

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.6-r1.ebuild,v 1.11 2010/12/29 16:21:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.6-r1.ebuild,v 1.12 2011/01/01 18:24:05 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -272,48 +272,24 @@ src_install() {
 	rmdir "${ED}$(python_get_libdir)/lib-old"
 }
 
-save_active_python_version() {
-	active_python_2=$(eselect python show --python2)
-	active_python_3=$(eselect python show --python3)
-	active_python_main=$(eselect python show)
-}
-
-restore_active_python_version() {
-	if [[ -n "${active_python_2}" &&
-			"${active_python_2}" != $(eselect python show --python2) ]] ; then
-		einfo "Restoring active Python 2.x interpreter: ${active_python_2}"
-		eselect python set --python2 "${active_python_2}"
-	fi
-	if [[ -n "${active_python_3}" &&
-			"${active_python_3}" != $(eselect python show --python3) ]] ; then
-		einfo "Restoring active Python 3.x interpreter: ${active_python_3}"
-		eselect python set --python3 "${active_python_3}"
-	fi
-
-	if [[ -n "${active_python_main}" &&
-			"${active_python_main}" != $(eselect python show) ]] ; then
-		einfo "Restoring main active Python interpreter: ${active_python_main}"
-		eselect python set "${active_python_main}"
-	fi
-}
-
-ensure_python_symlink() {
-	if [[ -z "$(eselect python show --python${PV%%.*})" ]]; then
-		eselect python update --python${PV%%.*}
-	fi
-}
-
 pkg_preinst() {
-	save_active_python_version
-
 	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version "${CATEGORY}/${PN}:2.6" && ! has_version "${CATEGORY}/${PN}:2.7"; then
 		python_updater_warning="1"
 	fi
 }
 
+eselect_python_update() {
+	local eselect_python_options
+	[[ "$(eselect python show)" == "python2."* ]] && eselect_python_options="--python2"
+
+	# Create python2 symlink.
+	eselect python update --python2 > /dev/null
+
+	eselect python update ${eselect_python_options}
+}
+
 pkg_postinst() {
-	restore_active_python_version
-	ensure_python_symlink
+	eselect_python_update
 
 	python_mod_optimize -f -x "/(site-packages|test|tests)/" $(python_get_libdir)
 
@@ -331,7 +307,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	ensure_python_symlink
+	eselect_python_update
 
 	python_mod_cleanup $(python_get_libdir)
 }
