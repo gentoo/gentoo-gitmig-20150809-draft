@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/nusmv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.10 2010/07/13 02:22:15 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.11 2011/01/01 17:49:54 phajdan.jr Exp $
+
+*nusmv-2.5.2 (01 Jan 2011)
+
+  01 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> +nusmv-2.5.2.ebuild:
+  Version bump.
 
   13 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/cudd-no-pentium4.patch, nusmv-2.5.0.ebuild:
