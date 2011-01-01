@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/conkyforecast-2.12.ebuild,v 1.1 2010/08/24 23:27:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/conkyforecast-2.12.ebuild,v 1.2 2011/01/01 21:00:42 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit distutils python
+inherit distutils
 
 DESCRIPTION="Conky weather forecast script with support for language files"
 HOMEPAGE="https://launchpad.net/~conkyhardcore"
@@ -21,7 +20,7 @@ RDEPEND="app-admin/conky"
 
 S=${WORKDIR}/src
 
-pkg_config() {
+pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 }
@@ -32,6 +31,8 @@ src_prepare() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	elog "You have to define a partner id and registration code for "
 	elog "the weather.com xoap. You need to copy the template from"
 	elog "/usr/share/conkyforecast/conkyForecast.config into you account"
