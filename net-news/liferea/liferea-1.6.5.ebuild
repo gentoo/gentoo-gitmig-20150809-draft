@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.2.ebuild,v 1.1 2010/01/23 23:41:16 vostorga Exp $
 
 EAPI="2"
+GCONF_DEBUG="no"
 
 inherit gnome2 autotools
 
