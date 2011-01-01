@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/help2man
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.50 2010/12/29 22:05:02 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.51 2011/01/01 11:27:13 phajdan.jr Exp $
+
+  01 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  help2man-1.38.2.ebuild:
+  x86 stable wrt bug #350091
 
 *help2man-1.38.4 (29 Dec 2010)
 
