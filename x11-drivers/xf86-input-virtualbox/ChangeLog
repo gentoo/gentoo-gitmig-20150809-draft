@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.49 2010/12/31 14:44:23 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.50 2011/01/01 11:25:13 polynomial-c Exp $
+
+  01 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-input-virtualbox-3.2.12.ebuild:
+  Added evdev driver as well.
 
   31 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   xf86-input-virtualbox-3.2.12.ebuild:
