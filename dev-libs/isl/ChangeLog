@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/isl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.1 2011/01/01 04:44:31 dirtyepic Exp $
+
+*isl-0.05 (01 Jan 2011)
+
+  01 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> +isl-0.05.ebuild,
+  +metadata.xml:
+  Initial import.
+
