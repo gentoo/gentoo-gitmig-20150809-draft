@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12318 2010/12/31 09:52:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12319 2011/01/01 21:15:23 rich0 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Richard Freeman <rich0@gentoo.org> (30 Dec 2010)
-# New version will not function correctly until game server
-# is updated.  Will unmask in a few days.
->=games-rpg/eternal-lands-1.9.1
->=games-rpg/eternal-lands-data-1.9.1
 
 # Thomas Sachau <tommy@gentoo.org> (29 Dec 2010)
 # Masked because of ABI change, breaks
