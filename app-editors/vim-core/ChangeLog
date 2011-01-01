@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.351 2010/12/28 01:46:40 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.352 2011/01/01 15:33:02 armin76 Exp $
+
+  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> vim-core-7.3.50.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #348269
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> vim-core-7.3.50.ebuild:
   Marking vim-core-7.3.50 ppc64 for bug 348269
