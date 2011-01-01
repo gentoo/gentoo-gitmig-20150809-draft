@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.4.0_beta1.ebuild,v 1.1 2010/11/27 15:21:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.4.0.ebuild,v 1.1 2011/01/01 23:24:11 maekke Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -9,7 +9,7 @@ inherit cmake-utils wxwidgets versionator
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
-SRC_URI="mirror://sourceforge/${PN}/${P/_beta/beta}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 SIFT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
