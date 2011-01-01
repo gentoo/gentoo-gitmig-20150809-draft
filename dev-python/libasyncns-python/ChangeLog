@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libasyncns-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.1 2009/03/27 17:00:13 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.2 2011/01/01 21:54:08 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libasyncns-python-0.7.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #344729). Avoid breaking strict-aliasing rules.
 
 *libasyncns-python-0.7.1 (27 Mar 2009)
 
