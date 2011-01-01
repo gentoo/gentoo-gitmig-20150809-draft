@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.15-r3.ebuild,v 1.1 2010/11/28 15:02:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.15-r3.ebuild,v 1.2 2011/01/01 08:44:48 jlec Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs flag-o-matic prefix
@@ -17,9 +17,10 @@ IUSE="nls"
 
 RDEPEND="!sys-freebsd/freebsd-bin"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
+	virtual/libintl
 	elibc_IRIX? ( dev-libs/gnulib )
 	x86-interix? ( dev-libs/gnulib )
-	virtual/libintl
 	elibc_mintlib? ( virtual/libiconv )"
 
 src_unpack() {
