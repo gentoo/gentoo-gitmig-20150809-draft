@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.481 2010/12/17 07:59:35 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.482 2011/01/01 17:58:24 pacho Exp $
+
+*gtk+-2.22.1-r1 (01 Jan 2011)
+
+  01 Jan 2011; Pacho Ramos <pacho@gentoo.org> +gtk+-2.22.1-r1.ebuild,
+  +files/gtk+-2.22.1-old-icons.patch, +files/gtk+-2.22.1-print-settings.patch:
+  Revision bump to create symlinks to old icons until apps are ported (bug
+  #339319), set new print operation settings before emitting
+  custom-widget-apply signal (upstream bug #637069 that will end up evince
+  remembering printer settings), stop trying to build unmaintained docs (bug
+  #349754).
 
   17 Dec 2010; Fabian Groffen <grobian@gentoo.org> gtk+-2.22.1.ebuild:
   Drop --libdir argument to econf, it seems no longer necessary
