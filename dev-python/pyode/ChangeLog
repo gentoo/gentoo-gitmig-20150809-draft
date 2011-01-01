@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.14 2010/12/25 13:40:29 nelchael Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.15 2011/01/01 20:11:47 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyode-1.2.0_p20100322.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS. Avoid breaking strict-aliasing
+  rules.
 
 *pyode-1.2.0_p20100322 (25 Dec 2010)
 
