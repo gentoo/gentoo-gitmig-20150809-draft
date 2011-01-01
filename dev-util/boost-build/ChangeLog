@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.60 2010/12/12 20:24:32 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.61 2011/01/01 23:57:40 tomka Exp $
+
+  01 Jan 2011; Thomas Kahle <tomka@gentoo.org> boost-build-1.42.0.ebuild:
+  x86 stable per bug 344677
 
   12 Dec 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   add myself on metadata
