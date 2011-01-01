@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.1.ebuild,v 1.1 2010/12/30 18:57:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.1.ebuild,v 1.2 2011/01/01 16:10:58 hd_brummy Exp $
 
 EAPI="2"
 
@@ -32,6 +32,8 @@ ETC_SKIN_DIR=/etc/vdr/plugins/${VDRPLUGIN}
 
 src_prepare() {
 	sed -i common.c -e 's#cPlugin::ConfigDirectory(PLUGIN_NAME_I18N)#"/usr/share/vdr/"PLUGIN_NAME_I18N#'
+
+	sed -i bitmap.c -e "s:8U:(size_t)8U:"
 
 	use truetype || sed -i Makefile -e 's/^HAVE_FREETYPE/#HAVE_FREETYPE/'
 
