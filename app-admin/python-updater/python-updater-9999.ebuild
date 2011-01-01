@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.2 2010/03/07 17:51:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.3 2011/01/01 00:16:47 arfrever Exp $
 
 inherit subversion
 
 DESCRIPTION="Script used to remerge python packages when changing Python version."
 HOMEPAGE="http://www.gentoo.org/proj/en/Python"
 SRC_URI=""
-ESVN_REPO_URI="http://overlays.gentoo.org/svn/proj/python/projects/${PN}/trunk"
+ESVN_REPO_URI="https://overlays.gentoo.org/svn/proj/python/projects/${PN}/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
