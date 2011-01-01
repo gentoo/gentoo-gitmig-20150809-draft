@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fpconst
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.32 2009/12/15 19:22:07 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.33 2011/01/01 21:43:18 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -fpconst-0.7.1.ebuild, -fpconst-0.7.2.ebuild:
+  Delete.
 
   15 Dec 2009; Brent Baude <ranger@gentoo.org> fpconst-0.7.3.ebuild:
   Marking fpconst-0.7.3 ppc64 for bug 290500
