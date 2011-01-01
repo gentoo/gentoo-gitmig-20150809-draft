@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythondialog
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.16 2006/08/21 18:17:26 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.17 2011/01/01 19:56:22 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
 
   21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   pythondialog-2.7.ebuild:
