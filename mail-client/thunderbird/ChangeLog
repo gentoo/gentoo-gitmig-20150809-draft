@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.58 2010/12/29 04:33:19 anarchy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.59 2011/01/01 19:51:39 armin76 Exp $
+
+  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> thunderbird-3.1.7.ebuild:
+  alpha/ia64/sparc stable wrt #348316
 
   29 Dec 2010; Jory A. Pratt <anarchy@gentoo.org> thunderbird-3.1.7-r1.ebuild:
   Ensure sqlite[threadsafe] to prevent failure in configure, bug #341663
