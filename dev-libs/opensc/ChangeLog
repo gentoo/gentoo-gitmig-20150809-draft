@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.108 2010/12/31 17:42:25 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.109 2011/01/01 15:41:12 armin76 Exp $
+
+  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> opensc-0.11.13-r2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #349567
 
   31 Dec 2010; Markus Meier <maekke@gentoo.org> opensc-0.11.13-r2.ebuild:
   arm stable, bug #349567
