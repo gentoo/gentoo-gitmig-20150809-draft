@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibpcap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.20 2010/12/30 21:37:15 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.21 2011/01/01 19:06:05 hwoarang Exp $
+
+  01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pylibpcap-0.6.2.ebuild:
+  Stable on amd64 wrt bug #350187
 
   30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pylibpcap-0.6.2.ebuild:
