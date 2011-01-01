@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.36 2010/11/22 21:36:41 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.37 2011/01/01 15:59:57 scarabeus Exp $
+
+  01 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> libssh-9999.ebuild:
+  Fix git URI. Upstream seems to have fun with moving the repo around.
 
 *libssh-9999 (22 Nov 2010)
 *libssh-0.4.6 (22 Nov 2010)

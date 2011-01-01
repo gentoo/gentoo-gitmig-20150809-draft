@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.1 2010/11/22 21:36:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.2 2011/01/01 15:59:57 scarabeus Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit eutils cmake-utils git
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
-EGIT_REPO_URI="git://git.libssh.org/projects/libssh/libssh.git"
+EGIT_REPO_URI="git://git.libssh.org/projects/libssh.git"
 
 LICENSE="LGPL-2.1"
 KEYWORDS=""
