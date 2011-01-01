@@ -1,10 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.8.2.ebuild,v 1.3 2007/10/03 04:45:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.8.2.ebuild,v 1.4 2011/01/01 19:40:45 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-MY_P=PythonCard-${PV}
+MY_P="PythonCard-${PV}"
 
 DESCRIPTION="Cross-platform GUI construction kit for python"
 HOMEPAGE="http://pythoncard.sourceforge.net/index.html"
@@ -18,10 +23,25 @@ IUSE=""
 DEPEND="=dev-python/wxpython-2.6*"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+PYTHON_MODNAME="PythonCard"
+
+src_compile() {
+	:
+}
 
 src_install() {
 	distutils_src_install
+
+	# install-pythoncard.py is only for Windows.
+	rm -f "${ED}usr/bin/install-pythoncard.py"
+
 	dohtml -r docs/html/*
 	dodoc docs/*.txt
+}
+
+pkg_postinst() {
+	python_mod_optimize -x "/(docs|samples|tools)/" PythonCard
 }
