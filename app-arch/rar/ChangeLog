@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.66 2010/12/31 14:46:01 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.67 2011/01/01 11:21:19 phajdan.jr Exp $
+
+  01 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rar-3.9.3.ebuild:
+  x86 stable wrt bug #349832
 
   31 Dec 2010; Markos Chandras <hwoarang@gentoo.org> rar-3.9.3.ebuild:
   Stable on amd64 wrt bug #349832
