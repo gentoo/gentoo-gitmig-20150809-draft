@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.3.ebuild,v 1.2 2010/08/24 13:13:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.3.ebuild,v 1.3 2011/01/01 21:36:30 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit distutils python versionator
+inherit distutils versionator
 
 DESCRIPTION="A collection of useful extensions for Django"
 HOMEPAGE="http://github.com/djblets"
