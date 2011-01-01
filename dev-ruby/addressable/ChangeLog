@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/addressable
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.11 2010/12/27 20:15:34 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.12 2011/01/01 10:28:05 graaff Exp $
+
+  01 Jan 2011; Hans de Graaff <graaff@gentoo.org> -addressable-2.2.1.ebuild:
+  Remove old version.
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org> addressable-2.2.2.ebuild:
   Added Prefix keywords
