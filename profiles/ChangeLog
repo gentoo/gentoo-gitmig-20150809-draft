@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4900 2010/12/31 09:52:58 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4901 2011/01/01 23:26:14 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jan 2011; Markus Meier <maekke@gentoo.org> package.mask:
+  remove media-gfx/2010.4.0 mask, as final version is in tree
 
   31 Dec 2010; Hans de Graaff <graaff@gentoo.org> package.mask,
   profiles.desc:

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12319 2011/01/01 21:15:23 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12320 2011/01/01 23:26:14 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -222,10 +222,6 @@ www-apps/horde-groupware
 # Time to move on to newer versions.
 # Masked for removal on 20101229
 <app-admin/syslog-ng-3
-
-# Markus Meier <maekke@gentoo.org> (27 Nov 2010)
-# hugin-2010.4 testing mask
->=media-gfx/hugin-2010.4.0_beta1
 
 # Sebastian Pipping <sping@gentoo.org> (27 Nov 2010)
 # Test suite gives one error, previous version did not.
