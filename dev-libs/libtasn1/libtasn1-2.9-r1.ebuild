@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.9-r1.ebuild,v 1.1 2010/12/10 13:22:38 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.9-r1.ebuild,v 1.2 2011/01/01 18:22:03 arfrever Exp $
 
 EAPI="3"
 
@@ -18,8 +18,9 @@ DEPEND=">=dev-lang/perl-5.6
 RDEPEND=""
 
 src_configure(){
-	econf \
-		--disable-valgrind-tests
+	local myconf
+	[[ "${VALGRIND_TESTS}" == "0" ]] && myconf+=" --disable-valgrind-tests"
+	econf ${myconf}
 }
 
 src_install() {
