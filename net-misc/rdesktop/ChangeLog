@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.118 2010/12/29 17:41:17 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.119 2011/01/01 15:44:26 armin76 Exp $
+
+  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> rdesktop-1.6.0-r4.ebuild:
+  alpha/ia64/sparc stable wrt #349561
 
   29 Dec 2010; Thomas Kahle <tomka@gentoo.org> rdesktop-1.6.0-r4.ebuild:
   x86 stable per bug 349835
