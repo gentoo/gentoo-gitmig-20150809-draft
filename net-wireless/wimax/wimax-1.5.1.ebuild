@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.1.ebuild,v 1.1 2010/11/08 17:56:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.1.ebuild,v 1.2 2011/01/02 14:37:39 alexxy Exp $
 
 EAPI="3"
 
@@ -47,7 +47,6 @@ src_install() {
 		-e "s:<GetDeviceTraces>3</GetDeviceTraces>:<GetDeviceTraces>0</GetDeviceTraces>:g" \
 		-e "s:<OutputTarget>console</OutputTarget>:<OutputTarget>daemon</OutputTarget>:g" \
 		-e "s:<IPRenew>1</IPRenew>:<IPRenew>0</IPRenew>:g" \
-		-e "s:<ModeOfOperationProduction>0</ModeOfOperationProduction>:<ModeOfOperationProduction>1</ModeOfOperationProduction>:g" \
 		-i "${D}/etc/wimax/config.xml" || die "Fixing config failed"
 	# Drop udev rusles for now
 	rm -rf  "${D}/etc/udev"

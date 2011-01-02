@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.5 2010/11/08 18:04:00 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.6 2011/01/02 14:37:39 alexxy Exp $
+
+  02 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.1.ebuild:
+  Fix bug #331289
 
   08 Nov 2010; Alexey Shvetsov <alexxy@gentoo.org> files/wimax:
   fix init.d per bug #338922
