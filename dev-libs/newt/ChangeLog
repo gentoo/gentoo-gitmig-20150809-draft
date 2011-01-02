@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.67 2011/01/01 19:55:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.68 2011/01/02 12:24:34 phajdan.jr Exp $
+
+  02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> newt-0.52.12.ebuild:
+  x86 stable wrt bug #349905
 
   01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> newt-0.52.12.ebuild:
   Stable on amd64 wrt bug #349905
