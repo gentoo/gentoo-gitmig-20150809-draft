@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/gitg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.6 2010/12/30 23:59:59 ikelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.7 2011/01/02 01:58:02 sping Exp $
+
+  02 Jan 2011; Sebastian Pipping <sping@gentoo.org> gitg-0.0.8.ebuild:
+  Remove gone configure option --disable-bundle, integrate test suite from
+  "make check"
 
   30 Dec 2010; Mike Auty <ikelos@gentoo.org> gitg-0.0.8.ebuild:
   Fix a few dependency/ebuild issues as mentioned in bug 350189.

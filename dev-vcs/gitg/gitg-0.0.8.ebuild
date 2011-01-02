@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.8.ebuild,v 1.2 2010/12/30 23:59:59 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.8.ebuild,v 1.3 2011/01/02 01:58:02 sping Exp $
 
 EAPI="3"
 
@@ -37,6 +37,6 @@ src_install() {
 	find "${ED}" -name "*.la" -delete || die "Removal of .la files failed"
 }
 
-pkg_setup() {
-	G2CONF="${G2CONF} --disable-bundle"
+src_test() {
+	emake check || die
 }
