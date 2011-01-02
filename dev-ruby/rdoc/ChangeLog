@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.44 2010/12/31 08:26:21 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.45 2011/01/02 18:26:44 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> rdoc-2.5.11.ebuild:
+  Keyworded on alpha, bug #332593
 
   31 Dec 2010; Hans de Graaff <graaff@gentoo.org> rdoc-3.2.ebuild:
   Be explicit about the slots to avoid wrong edge cases, reported by
