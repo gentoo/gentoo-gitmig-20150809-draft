@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.31 2010/12/29 14:57:47 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.32 2011/01/02 20:30:09 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> cloog-ppl-0.15.9.ebuild:
+  Stable on alpha, bug #347239
 
   29 Dec 2010; Brent Baude <ranger@gentoo.org> cloog-ppl-0.15.9.ebuild:
   stable ppc64, bug 347239
