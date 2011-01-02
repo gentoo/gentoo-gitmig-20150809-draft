@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.388 2011/01/01 19:56:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.389 2011/01/02 22:28:37 betelgeuse Exp $
+
+*xulrunner-1.9.2.13-r1 (02 Jan 2011)
+
+  02 Jan 2011; Petteri Räty <betelgeuse@gentoo.org>
+  +files/cups-1.4.4-fixup.patch, +xulrunner-1.9.2.13-r1.ebuild:
+  Revision to fix printing with latest version of cups. Fixes bug #325469.
+  Committed for Anarchy.
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.13.ebuild:
   alpha/ia64 stable wrt #348316
