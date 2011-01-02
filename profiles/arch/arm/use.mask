@@ -127,6 +127,7 @@ vpx
 iplayer
 plotutils
 lpsol
+upnp
 
 # Unmask ARM-only video-cards
 -video_cards_omapfb

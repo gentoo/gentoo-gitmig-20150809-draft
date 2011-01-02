@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.107 2010/12/08 13:45:30 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.108 2011/01/02 16:54:12 maekke Exp $
+
+  02 Jan 2011; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask upnp
 
   08 Dec 2010; Raúl Porcel <armin76@gentoo.org> make.defaults:
   Add omapfb
