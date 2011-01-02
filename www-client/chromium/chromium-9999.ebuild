@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.118 2010/12/22 11:51:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.119 2011/01/02 15:31:35 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -330,10 +330,20 @@ src_compile() {
 }
 
 src_test() {
+	# For more info see bug #350349.
+	local mylocale='en_US.utf8'
+	if ! locale -a | grep -q "$mylocale"; then
+		eerror "${PN} requires ${mylocale} locale for tests"
+		eerror "Please read the following guides for more information:"
+		eerror "  http://www.gentoo.org/doc/en/guide-localization.xml"
+		eerror "  http://www.gentoo.org/doc/en/utf-8.xml"
+		die "locale ${mylocale} is not supported"
+	fi
+
 	# Make test failures non-fatal for now. This needs more investigation.
-	maketype=out/Release/base_unittests virtualmake \
+	LC_ALL="${mylocale}" maketype=out/Release/base_unittests virtualmake \
 		|| eerror "base_unittests failed"
-	maketype=out/Release/net_unittests virtualmake \
+	LC_ALL="${mylocale}" maketype=out/Release/net_unittests virtualmake \
 		|| eerror "net_unittests failed"
 }
 

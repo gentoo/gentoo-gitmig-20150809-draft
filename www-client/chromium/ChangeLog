@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.248 2010/12/22 11:51:41 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.249 2011/01/02 15:31:35 phajdan.jr Exp $
+
+  02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-10.0.612.1-r1.ebuild, chromium-9999.ebuild:
+  Fix locale-sensitive test failures, bug #350349.
 
 *chromium-10.0.612.1-r1 (22 Dec 2010)
 
