@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.19 2011/01/01 21:27:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.20 2011/01/02 11:39:10 phajdan.jr Exp $
+
+  02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  htmlentities-4.2.2.ebuild:
+  x86 stable wrt bug #349890
 
   01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> htmlentities-4.2.2.ebuild:
   Stable on amd64 wrt bug #349890
