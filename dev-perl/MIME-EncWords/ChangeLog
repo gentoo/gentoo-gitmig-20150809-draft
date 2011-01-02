@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-EncWords
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.4 2010/12/31 14:59:35 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.5 2011/01/02 22:25:47 hwoarang Exp $
+
+  02 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  MIME-EncWords-1.012.ebuild:
+  Stable on amd64 wrt bug #349266
 
   31 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   MIME-EncWords-1.012.ebuild:
