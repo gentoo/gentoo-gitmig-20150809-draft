@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.3 2011/01/01 18:23:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.4 2011/01/02 21:32:23 mr_bones_ Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -35,7 +35,7 @@ PDEPEND="gnome-base/libgnome-keyring"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-# tests fail in several ways, they should be fixed in the next cycle (bug #340283), 
+# tests fail in several ways, they should be fixed in the next cycle (bug #340283),
 # revisit then.
 RESTRICT="test"
 
