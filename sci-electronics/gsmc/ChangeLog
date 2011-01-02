@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/gsmc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/ChangeLog,v 1.1 2011/01/02 15:59:14 tomjbe Exp $
+
+*gsmc-1.1 (02 Jan 2011)
+
+  02 Jan 2011; Thomas Beierlein <tomjbe@gentoo.org> +gsmc-1.1.ebuild,
+  +metadata.xml:
+  Initial import of gsmc (moved from sci overlay)
+
