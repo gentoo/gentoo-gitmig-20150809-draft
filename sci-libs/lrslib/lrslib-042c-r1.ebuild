@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/lrslib-042c-r1.ebuild,v 1.2 2010/12/29 18:12:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/lrslib-042c-r1.ebuild,v 1.3 2011/01/02 09:20:48 phajdan.jr Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://cgm.cs.mcgill.ca/~avis/C/lrslib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gmp"
 
 DEPEND="gmp? ( dev-libs/gmp )"
