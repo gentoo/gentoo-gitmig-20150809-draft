@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ajaxterm-0.10.ebuild,v 1.2 2007/01/11 14:01:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ajaxterm-0.10.ebuild,v 1.3 2011/01/02 14:50:31 xmw Exp $
 
 MY_P=Ajaxterm-${PV}
 DESCRIPTION="Ajaxterm is a web based terminal"
@@ -9,7 +9,7 @@ SRC_URI="http://antony.lesuisse.org/qweb/files/${MY_P}.tar.gz"
 
 LICENSE="public-domain LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.0"
