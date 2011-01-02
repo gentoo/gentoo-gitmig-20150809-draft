@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.184 2010/12/16 23:44:02 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.185 2011/01/02 18:50:24 pacho Exp $
+
+  02 Jan 2011; Pacho Ramos <pacho@gentoo.org> gtkmm-2.18.2.ebuild:
+  CHANGES doesn't exist (bug #350380 by Michael Weber).
 
   16 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-2.2.12.ebuild,
   -files/gtkmm-2.2.12-gcc41.patch:
