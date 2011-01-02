@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.89 2010/12/28 01:29:46 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.90 2011/01/02 20:42:16 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> xlockmore-5.31.ebuild:
+  Stable on alpha, bug #347845
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> xlockmore-5.31.ebuild:
   stable ppc64, bug 347845
