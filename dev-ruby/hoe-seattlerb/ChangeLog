@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.18 2011/01/02 10:19:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.19 2011/01/02 10:22:36 graaff Exp $
+
+  02 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  hoe-seattlerb-1.2.4.ebuild:
+  Add back ~alpha after fixing dev-ruby/hoe keywords.
 
 *hoe-seattlerb-1.2.4 (02 Jan 2011)
 
