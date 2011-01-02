@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.ebuild,v 1.1 2010/11/15 22:02:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.ebuild,v 1.2 2011/01/02 15:04:47 hwoarang Exp $
 
 EAPI="2"
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
 LICENSE="3ware"
 SLOT="0"
 # binary packages
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
 IUSE=""
 # stripping seems to break this sometimes
 RESTRICT="strip primaryuri"
