@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssvnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.17 2011/01/01 19:51:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.18 2011/01/02 12:39:04 phajdan.jr Exp $
+
+  02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ssvnc-1.0.27.ebuild:
+  x86 stable wrt bug #349974
 
   01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ssvnc-1.0.27.ebuild:
   Stable on amd64 wrt bug #349974
