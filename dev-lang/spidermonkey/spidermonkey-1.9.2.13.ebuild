@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.13.ebuild,v 1.2 2010/12/30 01:31:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.13.ebuild,v 1.3 2011/01/02 12:43:15 djc Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib python
@@ -32,8 +32,6 @@ pkg_setup(){
 }
 
 src_prepare() {
-	unpack ${A}
-
 	epatch "${FILESDIR}/${PN}-1.9.2.13-as-needed.patch"
 
 	epatch_user
