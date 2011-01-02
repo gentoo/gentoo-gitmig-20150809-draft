@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/pdftex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.28 2010/06/09 10:07:00 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.29 2011/01/02 16:16:50 aballier Exp $
+
+*pdftex-1.40.11 (02 Jan 2011)
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org> +pdftex-1.40.11.ebuild:
+  version bump, bug #347461
 
   09 Jun 2010; Alexis Ballier <aballier@gentoo.org> -pdftex-1.40.9.ebuild,
   -files/pdftex-1.40.9-getline.patch, -files/pdftex-1.40.9-poppler.patch,
