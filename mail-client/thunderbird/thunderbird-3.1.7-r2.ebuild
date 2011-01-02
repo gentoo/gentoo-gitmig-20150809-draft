@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.7-r1.ebuild,v 1.2 2010/12/29 04:33:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.7-r2.ebuild,v 1.1 2011/01/02 21:13:49 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -115,7 +115,7 @@ src_prepare() {
 	epatch "${WORKDIR}"
 
 	epatch "${FILESDIR}/bug-606109.patch"
-
+	epatch "${FILESDIR}/cups-1.4.4-fixup.patch"
 	# Respect users ldflags when building ldap support
 	epatch "${FILESDIR}/${PN}-respect-ldflags.patch"
 

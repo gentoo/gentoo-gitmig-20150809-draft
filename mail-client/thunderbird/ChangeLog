@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.59 2011/01/01 19:51:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.60 2011/01/02 21:13:49 anarchy Exp $
+
+*thunderbird-3.1.7-r2 (02 Jan 2011)
+
+  02 Jan 2011; Jory A. Pratt <anarchy@gentoo.org>
+  +files/cups-1.4.4-fixup.patch, -thunderbird-3.1.7-r1.ebuild,
+  +thunderbird-3.1.7-r2.ebuild:
+  Fix segfault when attempting to dlclose cups, bug 325469
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> thunderbird-3.1.7.ebuild:
   alpha/ia64/sparc stable wrt #348316
