@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-mcve
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.33 2010/12/28 19:27:01 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.34 2011/01/02 17:57:57 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org>
+  pecl-mcve-7.0.3-r1.ebuild:
+  Stable on alpha, bug #349659
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> pecl-mcve-7.0.3-r1.ebuild:
   Marking pecl-mcve-7.0.3-r1 ~ppc64 for bug 349659
