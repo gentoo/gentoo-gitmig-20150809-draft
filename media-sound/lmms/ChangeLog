@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lmms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.13 2010/08/15 11:25:05 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.14 2011/01/02 12:55:11 aballier Exp $
+
+*lmms-0.4.9 (02 Jan 2011)
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org> +lmms-0.4.9.ebuild:
+  version bump, by Piotr Mrożek (and Jeroen Roovers), bug #339861
 
 *lmms-0.4.7 (15 Aug 2010)
 
