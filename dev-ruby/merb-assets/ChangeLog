@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/merb-assets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-assets/ChangeLog,v 1.1 2010/07/03 12:21:03 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-assets/ChangeLog,v 1.2 2011/01/02 11:39:46 graaff Exp $
+
+*merb-assets-1.1.3 (02 Jan 2011)
+
+  02 Jan 2011; Hans de Graaff <graaff@gentoo.org> +merb-assets-1.1.3.ebuild:
+  Version bump. Support doc and test USE flags.
 
 *merb-assets-1.1.2 (03 Jul 2010)
 
