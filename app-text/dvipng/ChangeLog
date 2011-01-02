@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvipng
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.74 2010/10/02 12:41:08 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.75 2011/01/02 16:33:14 aballier Exp $
+
+*dvipng-1.14 (02 Jan 2011)
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org> +dvipng-1.14.ebuild:
+  version bump
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> dvipng-1.13.ebuild:
   Marked ~x64-macos, bug #333981
