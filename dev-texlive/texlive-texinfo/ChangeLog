@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-texinfo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.35 2010/12/17 20:53:33 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.36 2011/01/02 14:33:38 aballier Exp $
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org>
+  texlive-texinfo-2010.ebuild:
+  Add an rdepend over texlive-latex, some fonts are missing otherwise, by Hanno
+  Meyer-Thurow (geki) <h.mth@web.de>, bug #349850
 
   17 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   texlive-texinfo-2010.ebuild:
