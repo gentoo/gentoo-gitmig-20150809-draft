@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.32 2010/11/09 20:49:51 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.33 2011/01/02 19:57:25 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> libass-0.9.11.ebuild:
+  Stable on alpha, bug #343977
 
   09 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> libass-0.9.11.ebuild:
   Enable +enca by default to match media-video/mplayer default.
