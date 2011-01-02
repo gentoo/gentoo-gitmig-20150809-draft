@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httpclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.22 2010/12/27 20:45:22 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.23 2011/01/02 10:32:45 graaff Exp $
+
+*httpclient-2.1.6 (02 Jan 2011)
+
+  02 Jan 2011; Hans de Graaff <graaff@gentoo.org> +httpclient-2.1.6.ebuild:
+  Version bump.
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   httpclient-2.1.5.2-r2.ebuild:
