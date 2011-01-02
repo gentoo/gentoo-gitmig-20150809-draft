@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/stk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.5 2010/08/17 19:06:22 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.6 2011/01/02 14:23:05 aballier Exp $
+
+*stk-4.4.2 (02 Jan 2011)
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org> +stk-4.4.2.ebuild,
+  +files/stk-4.4.2/010_all_removeForcedFlags.patch,
+  +files/stk-4.4.2/020_all_noExamplesOrDemo.patch,
+  +files/stk-4.4.2/030_all_sharedlib.patch,
+  +files/stk-4.4.2/040_all_soname.patch, +files/stk-4.4.2/050_all_abiver.patch:
+  version bump, by Christopher Harvey <chris@basementcode.com>, bug #309037,
+  with some modifications and patches by me.
 
   17 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   files/stk-4.3.1-gcc44.patch:

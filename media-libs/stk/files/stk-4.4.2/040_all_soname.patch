@@ -1,0 +1,16 @@
+Index: stk-4.4.2/src/Makefile.in
+===================================================================
+--- stk-4.4.2.orig/src/Makefile.in
++++ stk-4.4.2/src/Makefile.in
+@@ -72,10 +72,9 @@ $(LIBRARY) : $(OBJECTS)
+ 
+ $(SHAREDLIB).$(RELEASE) : $(OBJECTS)
+ 	$(RM) -f $(@) $(SHAREDLIB).$(MAJOR) $(SHAREDLIB)
+-	$(CC) $(LDFLAGS) -fPIC -shared -o $(@) $(OBJECT_PATH)/*.o $(LIBS)
++	$(CC) $(LDFLAGS) -fPIC -shared -Wl,-soname,$(SHAREDLIB).$(MAJOR) -o $(@) $(OBJECT_PATH)/*.o $(LIBS)
+ 	$(LN) -s $(SHAREDLIB).$(RELEASE) $(SHAREDLIB).$(MAJOR)
+ 	$(LN) -s $(SHAREDLIB).$(RELEASE) $(SHAREDLIB)
+-#	$(CC) $(LDFLAGS) -fPIC -shared -Wl,-soname,$(SHAREDLIB).$(MAJOR) -o $(@) $(OBJECT_PATH)/*.o $(LIBS)
+ 
+ $(OBJECTS) : Stk.h
+ 
