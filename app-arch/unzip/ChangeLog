@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.74 2010/12/27 15:27:03 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.75 2011/01/02 17:01:09 maekke Exp $
+
+  02 Jan 2011; Markus Meier <maekke@gentoo.org> unzip-6.0-r2.ebuild:
+  add ~arm, bug #349393
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> unzip-6.0-r2.ebuild:
   Marking unzip-6.0-r2 ~ppc64 for bug 349393
