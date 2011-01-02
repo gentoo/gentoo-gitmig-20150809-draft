@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.74 2011/01/01 21:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.75 2011/01/02 18:05:29 vapier Exp $
+
+  02 Jan 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.0.ebuild,
+  xbmc-9999.ebuild:
+  Punt deprecated liba52/libdts usage #350360 by hal.
 
   01 Jan 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.0.ebuild,
   +files/xbmc-10.0-python-2.7.patch:

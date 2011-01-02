@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.3 2011/01/01 21:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.4 2011/01/02 18:05:29 vapier Exp $
 
 EAPI="2"
 
@@ -39,7 +39,6 @@ RDEPEND="virtual/opengl
 	dev-libs/libpcre[cxx]
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
-	media-libs/a52dec
 	media-libs/alsa-lib
 	media-libs/faad2
 	media-libs/flac
@@ -50,7 +49,6 @@ RDEPEND="virtual/opengl
 	media-libs/jbigkit
 	media-libs/jpeg:0
 	>=media-libs/libass-0.9.7
-	media-libs/libdca
 	css? ( media-libs/libdvdcss )
 	media-libs/libmad
 	media-libs/libmms
@@ -169,6 +167,8 @@ src_configure() {
 		--enable-external-libraries \
 		--enable-goom \
 		--enable-gl \
+		--disable-liba52 \
+		--disable-libdts \
 		$(use_enable avahi) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
