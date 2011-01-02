@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905-r1.ebuild,v 1.1 2011/01/02 18:16:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905-r1.ebuild,v 1.2 2011/01/02 18:18:45 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -45,7 +45,7 @@ src_prepare() {
 	# need to disable calling of xine-list when running without
 	# userpriv, otherwise we get sandbox violations (bug #233847)
 	if [[ ${EUID} == "0" ]]; then
-		sed -i 's:^XINE_LIST=.*$:XINE_LIST=:' "${S}/configure.ac"
+		sed -i -e 's:^XINE_LIST=.*$:XINE_LIST=:' configure.ac || die
 	fi
 
 	eautoreconf
