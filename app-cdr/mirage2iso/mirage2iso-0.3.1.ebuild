@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.1 2011/01/02 20:09:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.2 2011/01/02 21:31:39 mr_bones_ Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pinentry"
+IUSE="pinentry test"
 
 COMMON_DEPEND="dev-libs/libmirage
 	dev-libs/glib:2
