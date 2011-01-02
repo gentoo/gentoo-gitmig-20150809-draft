@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.645 2010/12/26 13:57:23 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.646 2011/01/02 14:40:08 aballier Exp $
+
+  02 Jan 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.1.5.ebuild,
+  vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  bump alsa requirements, bug #344999 by Yang Dehua <yangdh@cableplus.com.cn>
 
   26 Dec 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild,
   metadata.xml:
