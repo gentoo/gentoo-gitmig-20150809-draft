@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20101204.ebuild,v 1.1 2010/12/20 20:12:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20101204.ebuild,v 1.2 2011/01/02 07:43:09 hd_brummy Exp $
 
 EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Scan for DVB-C/DVB-T/DVB-C channels without prior knowledge of frequencies and modulations"
+DESCRIPTION="Scan for DVB-C/DVB-T/DVB-S channels without prior knowledge of frequencies and modulations"
 HOMEPAGE="http://wirbel.htpc-forum.de/w_scan/index2.html"
 SRC_URI="http://wirbel.htpc-forum.de/w_scan/${P}.tar.bz2"
 
