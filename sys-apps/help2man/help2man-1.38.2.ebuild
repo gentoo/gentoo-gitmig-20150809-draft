@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.38.2.ebuild,v 1.3 2011/01/01 18:43:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.38.2.ebuild,v 1.4 2011/01/02 15:17:10 xmw Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/help2man/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls elibc_glibc"
 
 RDEPEND="dev-lang/perl"
