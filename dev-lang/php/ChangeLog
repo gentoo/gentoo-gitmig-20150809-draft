@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.452 2011/01/02 17:42:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.453 2011/01/02 17:52:04 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> php-5.2.16.ebuild:
+  Stable on alpha, bug #340807
 
   02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> php-5.3.4.ebuild:
   Stable on alpha, bug #340807
