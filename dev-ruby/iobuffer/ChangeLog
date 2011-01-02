@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/iobuffer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.2 2010/12/26 14:03:25 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.3 2011/01/02 10:51:20 graaff Exp $
+
+*iobuffer-1.0.0 (02 Jan 2011)
+
+  02 Jan 2011; Hans de Graaff <graaff@gentoo.org> +iobuffer-1.0.0.ebuild:
+  Version bump.
 
   26 Dec 2010; Hans de Graaff <graaff@gentoo.org> iobuffer-0.1.3-r1.ebuild:
   Keyword ~x86-macos.
