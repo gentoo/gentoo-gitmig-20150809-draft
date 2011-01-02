@@ -1,5 +1,5 @@
---- ./nvclock0.8b4/src/backend/Makefile.in.orig	2007-12-27 17:05:38.000000000 +0100
-+++ ./nvclock0.8b4/src/backend/Makefile.in	2009-04-02 09:07:53.000000000 +0200
+--- a/src/backend/Makefile.in	2007-12-27 17:05:38.000000000 +0100
++++ b/src/backend/Makefile.in	2009-04-02 09:07:53.000000000 +0200
 @@ -1,11 +1,10 @@
 -CC=@CC@ -O0
  AR=ar
@@ -20,8 +20,8 @@
 -uninstall:
 \ No newline at end of file
 +uninstall:
---- ./nvclock0.8b4/src/gtk/Makefile.in.orig	2008-05-11 12:25:46.000000000 +0200
-+++ ./nvclock0.8b4/src/gtk/Makefile.in	2009-04-02 09:12:10.000000000 +0200
+--- a/src/gtk/Makefile.in	2008-05-11 12:25:46.000000000 +0200
++++ b/src/gtk/Makefile.in	2009-04-02 09:12:10.000000000 +0200
 @@ -1,7 +1,6 @@
 -CC=@CC@
  INSTALL=@INSTALL@
@@ -40,8 +40,8 @@
  
  clean:
  	rm -f nvclock_gtk *.core *.o *.exe
---- ./nvclock0.8b4/src/Makefile.in.orig	2009-01-03 18:02:54.000000000 +0100
-+++ ./nvclock0.8b4/src/Makefile.in	2009-04-02 09:12:24.000000000 +0200
+--- a/src/Makefile.in	2009-01-03 18:02:54.000000000 +0100
++++ b/src/Makefile.in	2009-04-02 09:12:24.000000000 +0200
 @@ -1,4 +1,3 @@
 -CC=@CC@
  INSTALL=@INSTALL@
@@ -71,8 +71,8 @@
  
  
  uninstall: uninstall-recursive uninstall-app
---- ./nvclock0.8b4/src/nvcontrol/Makefile.in.orig	2005-12-09 20:46:05.000000000 +0100
-+++ ./nvclock0.8b4/src/nvcontrol/Makefile.in	2009-04-02 09:07:53.000000000 +0200
+--- a/src/nvcontrol/Makefile.in	2005-12-09 20:46:05.000000000 +0100
++++ b/src/nvcontrol/Makefile.in	2009-04-02 09:07:53.000000000 +0200
 @@ -1,8 +1,7 @@
 -CC=@CC@
  AR=ar
@@ -90,8 +90,8 @@
 -uninstall:
 \ No newline at end of file
 +uninstall:
---- ./nvclock0.8b4/src/qt/Makefile.in.orig	2008-05-11 12:25:46.000000000 +0200
-+++ ./nvclock0.8b4/src/qt/Makefile.in	2009-04-02 09:11:51.000000000 +0200
+--- a/src/qt/Makefile.in	2008-05-11 12:25:46.000000000 +0200
++++ b/src/qt/Makefile.in	2009-04-02 09:11:51.000000000 +0200
 @@ -1,9 +1,8 @@
 -CXX=@CXX@
  INSTALL=@INSTALL@

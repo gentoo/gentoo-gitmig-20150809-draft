@@ -1,8 +1,8 @@
 Change linking order to make it possible to use -Wl,--as-needed in LDFLAGS
 
 diff -ru nvclock0.8b4.orig/src/Makefile.in nvclock0.8b4/src/Makefile.in
---- nvclock0.8b4.orig/src/Makefile.in	2009-01-03 12:02:54.000000000 -0500
-+++ nvclock0.8b4/src/Makefile.in	2009-04-02 20:04:12.678271229 -0400
+--- a/src/Makefile.in	2009-01-03 12:02:54.000000000 -0500
++++ b/src/Makefile.in	2009-04-02 20:04:12.678271229 -0400
 @@ -15,7 +15,7 @@
  ifeq ($(HAVE_NVCONTROL), yes)
      DEPS=$(libbackend) $(libnvcontrol)
