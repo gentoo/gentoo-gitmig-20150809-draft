@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfdesktop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.177 2010/12/05 16:00:34 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.178 2011/01/02 15:52:10 ssuominen Exp $
+
+*xfdesktop-4.7.5 (02 Jan 2011)
+
+  02 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +xfdesktop-4.7.5.ebuild:
+  Version bump.
 
 *xfdesktop-4.7.4 (05 Dec 2010)
 
