@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.770 2011/01/02 02:35:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.771 2011/01/02 19:57:12 klausman Exp $
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org>
+  mplayer-1.0_rc4_p20101114.ebuild:
+  Stable on alpha, bug #343977
 
   02 Jan 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   The internal copy of faad2 is gone, bug #350316
