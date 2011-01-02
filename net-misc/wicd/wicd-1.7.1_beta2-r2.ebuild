@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r2.ebuild,v 1.1 2010/12/23 20:44:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r2.ebuild,v 1.2 2011/01/02 10:59:01 tomka Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="ncurses? xml"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
@@ -28,7 +29,6 @@ DEPEND=""
 # net-misc/dhcp that I want net-misc/dhcpcd to be guarenteed to be considered
 # first if none are installed.
 RDEPEND="
-	dev-lang/python[xml]
 	dev-python/dbus-python
 	X? ( gtk? ( dev-python/pygtk
 		|| (
@@ -54,7 +54,6 @@ RDEPEND="
 	libnotify? ( dev-python/notify-python )
 	ncurses? (
 		>=dev-python/urwid-0.9.9.1
-		dev-lang/python[ncurses]
 	)
 	pm-utils? ( >=sys-power/pm-utils-1.1.1 )
 	"
