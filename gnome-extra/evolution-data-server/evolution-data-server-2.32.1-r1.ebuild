@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.1-r1.ebuild,v 1.1 2011/01/01 18:03:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.1-r1.ebuild,v 1.2 2011/01/03 14:15:47 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -68,6 +68,9 @@ src_prepare() {
 
 	# Adjust to gentoo's /etc/service
 	epatch "${FILESDIR}/${PN}-2.31-gentoo_etc_services.patch"
+
+	# Fix building without kerberos, bug #348260
+	epatch "${FILESDIR}/${PN}-2.32.1-no-kerberos.patch"
 
 	# Apply upstream patches committed to gnome-2.32 branch
 	epatch "${WORKDIR}"/${P}-patches/*.patch
