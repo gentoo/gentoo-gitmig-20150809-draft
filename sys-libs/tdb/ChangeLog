@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.24 2010/12/29 21:36:14 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.25 2011/01/03 19:45:20 vostorga Exp $
+
+*tdb-1.2.7 (03 Jan 2011)
+
+  03 Jan 2011; Víctor Ostorga <vostorga@gentoo.org> +tdb-1.2.7.ebuild:
+  Version bump to 1.2.7 bug #350464
 
   29 Dec 2010; Víctor Ostorga <vostorga@gentoo.org> tdb-1.2.1-r1.ebuild:
   Improving python related code, patch thanks to Arfrever Frehtes Taifersar
