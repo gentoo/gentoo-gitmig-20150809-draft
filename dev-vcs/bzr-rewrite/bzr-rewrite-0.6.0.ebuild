@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/bzr-rewrite-0.6.0.ebuild,v 1.3 2010/07/27 21:22:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/bzr-rewrite-0.6.0.ebuild,v 1.4 2011/01/03 11:19:15 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="Bazaar plugin that adds support for rebasing, similar to the functionality in git"
-HOMEPAGE="http://bazaar-vcs.org/Rebase"
+HOMEPAGE="https://launchpad.net/bzr-rewrite"
 SRC_URI="http://launchpad.net/bzr-rewrite/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
