@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpreaper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.24 2010/10/11 02:50:20 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpreaper/ChangeLog,v 1.25 2011/01/03 01:14:34 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> tmpreaper-1.6.13.ebuild:
+  add ~arm keyword
 
 *tmpreaper-1.6.13 (11 Oct 2010)
 
