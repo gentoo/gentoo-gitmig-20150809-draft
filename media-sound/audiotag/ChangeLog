@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiotag
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.26 2010/11/30 21:06:13 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.27 2011/01/03 01:52:35 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> audiotag-0.19.ebuild:
+  sparc stable (bug 346113)
 
   30 Nov 2010; Markus Meier <maekke@gentoo.org> audiotag-0.19.ebuild:
   amd64/x86 stable, bug #346113
