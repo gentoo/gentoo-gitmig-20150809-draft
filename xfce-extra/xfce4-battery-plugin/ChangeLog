@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-battery-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.1 2009/08/25 10:34:19 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.2 2011/01/03 15:04:39 ssuominen Exp $
+
+*xfce4-battery-plugin-1.0.0 (03 Jan 2011)
+
+  03 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-battery-plugin-1.0.0.ebuild:
+  Version bump.
 
 *xfce4-battery-plugin-0.5.1 (25 Aug 2009)
 
