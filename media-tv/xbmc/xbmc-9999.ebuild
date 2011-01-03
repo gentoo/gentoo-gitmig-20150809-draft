@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.69 2011/01/02 18:05:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.70 2011/01/03 03:15:21 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="alsa altivec avahi css debug joystick midi profile pulseaudio rtmp sse sse2 udev vaapi vdpau webserver xrandr"
+IUSE="alsa altivec avahi bluray css debug joystick midi profile pulseaudio rtmp sse sse2 udev vaapi vdpau webserver xrandr"
 
 COMMON_DEPEND="virtual/opengl
 	app-arch/bzip2
@@ -51,6 +51,7 @@ COMMON_DEPEND="virtual/opengl
 	media-libs/jbigkit
 	media-libs/jpeg:0
 	>=media-libs/libass-0.9.7
+	bluray? ( media-libs/libbluray )
 	css? ( media-libs/libdvdcss )
 	media-libs/libmad
 	media-libs/libmms
@@ -171,6 +172,7 @@ src_configure() {
 		--disable-liba52 \
 		--disable-libdts \
 		$(use_enable avahi) \
+		$(use_enable bluray libbluray) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
 		--disable-hal \

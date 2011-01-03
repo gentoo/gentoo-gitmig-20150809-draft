@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>xbox</herd>
 <use>
+ <flag name='bluray'>Enable playback of Blu-ray filesystems</flag>
  <flag name='midi'>Support MIDI files</flag>
  <flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
  <flag name='vaapi'>Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
