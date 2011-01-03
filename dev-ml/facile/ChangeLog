@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.17 2009/09/28 16:34:05 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.18 2011/01/03 21:12:19 dilfridge Exp $
+
+  03 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> facile-1.1.ebuild:
+  Removed RESTRICT=mirror since there is no reason for it
 
   28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> facile-1.1.ebuild:
   Shorten DESCRIPTION to under 100 characters in order to make repoman

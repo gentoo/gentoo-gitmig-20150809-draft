@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.17 2009/09/28 16:34:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.18 2011/01/03 21:12:19 dilfridge Exp $
 
 EAPI="2"
 
@@ -9,7 +9,6 @@ inherit eutils
 DESCRIPTION="A constraint programming library on integer and integer set finite domains written in OCaml."
 HOMEPAGE="http://www.recherche.enac.fr/log/facile/"
 SRC_URI="http://www.recherche.enac.fr/log/facile/distrib/${P}.tar.gz"
-RESTRICT="mirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
