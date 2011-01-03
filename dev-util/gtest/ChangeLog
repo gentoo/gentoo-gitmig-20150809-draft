@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.6 2010/12/01 19:01:14 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.7 2011/01/03 16:37:24 phajdan.jr Exp $
+
+  03 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtest-1.5.0.ebuild:
+  x86 stable wrt bug #350290
 
   01 Dec 2010; Fabian Groffen <grobian@gentoo.org> gtest-1.5.0.ebuild:
   Bump EAPI to 3, fix for Prefix, marked ~ppc-macos
