@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.41 2010/12/29 17:56:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.42 2011/01/03 20:36:17 dilfridge Exp $
 
 inherit versionator
 
@@ -376,10 +376,10 @@ add_kdebase_dep() {
 	if [[ ${KDEBASE} = kde-base ]]; then
 		# FIXME remove hack when >kdepim-4.4.5 is gone
 		local FIXME_PV
-		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.4.6* || ${PV} = 4.4.7*  || ${PV} = 4.4.8* || ${PV} = 4.4.9* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs ]]; then
+		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.4.6* || ${PV} = 4.4.7*  || ${PV} = 4.4.8* || ${PV} = 4.4.9* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs || ${1} = oxygen-icons ]]; then
 			FIXME_PV=4.4.5
 		# FIXME remove hack when kdepim-4.6beta is gone
-		elif [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.5.93* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs ]]; then
+		elif [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.5.93* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs || ${1} = oxygen-icons ]]; then
 			FIXME_PV=4.5.90
 		else
 			FIXME_PV=${PV}

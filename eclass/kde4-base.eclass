@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.81 2010/12/29 17:06:51 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.82 2011/01/03 20:36:17 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -378,6 +378,10 @@ kdedepend="
 	)
 "
 kderdepend=""
+
+if [[ ${PN} != oxygen-icons ]]; then
+	kderdepend+=" $(add_kdebase_dep oxygen-icons)"
+fi
 
 kdehandbookdepend="
 	app-text/docbook-xml-dtd:4.2
