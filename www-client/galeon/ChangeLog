@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.60 2010/10/15 21:32:37 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.61 2011/01/03 21:59:12 eva Exp $
+
+  03 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> galeon-2.0.7-r2.ebuild:
+  Pin gtk+ and gnome-desktop to slot 2.
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> galeon-2.0.7-r2.ebuild:
   stable ppc, bug 328811

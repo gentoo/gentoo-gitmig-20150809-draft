@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7-r2.ebuild,v 1.5 2010/10/15 21:32:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7-r2.ebuild,v 1.6 2011/01/03 21:59:12 eva Exp $
 
 EAPI="2"
 inherit autotools gnome2 eutils
@@ -15,11 +15,11 @@ IUSE=""
 KEYWORDS="amd64 ~ia64 ppc -sparc x86"
 SLOT="0"
 RDEPEND=">=net-libs/xulrunner-1.9.2
-	>=x11-libs/gtk+-2.12.0
+	>=x11-libs/gtk+-2.12.0:2
 	>=dev-libs/libxml2-2.6.6
 	>=gnome-base/libgnomeui-2.5.2
 	>=gnome-base/gnome-vfs-2
-	>=gnome-base/gnome-desktop-2.10.0
+	>=gnome-base/gnome-desktop-2.10.0:2
 	>=gnome-base/libglade-2.3.1"
 DEPEND="${RDEPEND}
 	app-text/rarian
