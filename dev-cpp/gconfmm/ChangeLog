@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.77 2010/10/09 22:58:01 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.78 2011/01/03 00:37:06 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> gconfmm-2.28.2.ebuild:
+  sparc stable (bug 291711)
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> gconfmm-2.28.2.ebuild:
   ppc64 stable wrt #324077
