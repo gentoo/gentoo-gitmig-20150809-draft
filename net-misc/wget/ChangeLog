@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.134 2010/12/31 15:49:10 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.135 2011/01/03 15:50:36 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> wget-1.12-r3.ebuild:
+  sparc stable (bug 349114)
 
   31 Dec 2010; Markos Chandras <hwoarang@gentoo.org> wget-1.12-r3.ebuild:
   Stable on amd64 wrt bug #349114
