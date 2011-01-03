@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.25 2011/01/01 18:48:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.26 2011/01/03 17:41:04 phajdan.jr Exp $
+
+  03 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  decorator-3.2.1.ebuild:
+  x86 stable wrt bug #350307
 
 *decorator-3.3.0 (01 Jan 2011)
 
