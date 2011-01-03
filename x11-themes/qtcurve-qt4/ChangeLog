@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.119 2010/12/05 22:49:10 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.120 2011/01/03 12:46:25 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
+  sparc stable (bug 339424)
 
 *qtcurve-qt4-1.8.1 (05 Dec 2010)
 
