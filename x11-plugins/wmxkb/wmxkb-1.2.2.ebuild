@@ -1,17 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.9 2010/09/09 10:33:35 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.10 2011/01/03 21:54:59 ssuominen Exp $
 
 EAPI=2
-IUSE=""
+inherit toolchain-funcs
 
 DESCRIPTION="Dockable keyboard layout switcher for Window Maker"
 HOMEPAGE="http://wmalms.tripod.com/#WMXKB"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
+IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
@@ -23,17 +24,19 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto"
 
 src_prepare() {
-	#Honour Gentoo LDFLAGS, see bug #336528.
-	sed -ie "s/\$(LD) -o/\$(LD) \$(LDFLAGS) -o/" Makefile.in
+	sed -i -e 's:$(LD) -o:$(CC) $(LDFLAGS) -o:' Makefile.in || die #336528
 }
 
-src_install () {
-	make DESTDIR="${D}" BINDIR="${D}/usr/bin" DOCDIR="${D}/usr/share/doc" DATADIR="${D}/usr/share" install
+src_compile() {
+	emake CC="$(tc-getCC)" || die
+}
 
-	#install binary by hand per bug #242188
-	dobin wmxkb
+src_install() {
+	dobin wmxkb || die #242188
 
-	dodoc README
-	cd "${WORKDIR}/${P}/doc"
-	dodoc manual_body.html manual_title.html manual.book
+	insinto /usr/share/pixmaps/wmxkb
+	doins pixmaps/*.xpm || die
+
+	dodoc CHANGES README || die #350496
+	dohtml doc/*.html || die
 }
