@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.1 2010/11/19 13:26:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.2 2011/01/03 21:55:11 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	>=dev-libs/dbus-glib-0.73
 	>=dev-libs/libunique-1
 	>=gnome-base/gconf-2
-	>=gnome-base/gnome-desktop-2.14
+	>=gnome-base/gnome-desktop-2.14:2
 	media-gfx/sane-backends
 	media-libs/lcms
 	media-libs/libcanberra[gtk]
