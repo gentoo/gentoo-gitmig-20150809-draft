@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.30 2011/01/02 09:54:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.31 2011/01/03 13:15:27 armin76 Exp $
+
+  03 Jan 2011; Raúl Porcel <armin76@gentoo.org> kgcc64-4.4.4.ebuild:
+  sparc stable
 
   02 Jan 2011; Thomas Kahle <tomka@gentoo.org> kgcc64-3.4.6.ebuild,
   kgcc64-4.1.2.ebuild, kgcc64-4.2.4.ebuild:
