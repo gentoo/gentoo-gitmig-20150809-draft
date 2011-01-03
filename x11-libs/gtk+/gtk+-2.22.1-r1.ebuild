@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1-r1.ebuild,v 1.1 2011/01/01 17:58:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1-r1.ebuild,v 1.2 2011/01/03 13:33:30 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -148,7 +148,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	set_gtk2_confdir
 	dodir ${GTK2_CONFDIR}
