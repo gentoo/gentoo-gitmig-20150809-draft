@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.95 2010/12/24 09:00:18 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.96 2011/01/03 21:30:59 fauli Exp $
+
+  03 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  nvidia-settings-260.19.29.ebuild:
+  stable x86, bug 349816
 
   24 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
   nvidia-settings-260.19.29.ebuild:
