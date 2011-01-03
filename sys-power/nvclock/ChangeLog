@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nvclock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.2 2011/01/02 19:17:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.3 2011/01/03 03:48:31 jer Exp $
+
+*nvclock-0.8_p20110102 (03 Jan 2011)
+
+  03 Jan 2011; Jeroen Roovers <jer@gentoo.org> +nvclock-0.8_p20110102.ebuild,
+  +files/nvclock-0.8_p20110102-make.patch:
+  Version bump (happens to fix bug #350328). Clean up ebuild. Merge all patches
+  into one and fix parallel make by adding two new targets.
 
   02 Jan 2011; Jeroen Roovers <jer@gentoo.org>
   files/nvclock-0.8_beta4-as-needed.patch, files/nvclock-0.8_beta4-flags.patch:
