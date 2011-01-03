@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.6-r1.ebuild,v 1.2 2010/11/06 23:05:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.8.ebuild,v 1.1 2011/01/03 05:14:33 idl0r Exp $
 
 EAPI=3
 
@@ -28,9 +28,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/gl-setup-tempfile.patch"
-	epatch "${FILESDIR}/gitolite-require.patch"
-
 	rm -rf Makefile doc/COPYING contrib/{autotoc,gitweb,vim}
 
 	echo "${PF}-gentoo" > conf/VERSION
@@ -41,8 +38,8 @@ src_install() {
 
 	./src/gl-system-install "${D}"/usr/bin \
 		"${D}"/usr/share/gitolite/conf "${D}"/usr/share/gitolite/hooks || die
-	dosed "s:${D}::g" usr/bin/gl-setup \
-		usr/share/gitolite/conf/example.gitolite.rc || die
+	sed -i -e "s:${D}::g" "${D}/usr/bin/gl-setup" \
+		"${D}/usr/share/gitolite/conf/example.gitolite.rc" || die
 
 	rm "${D}/usr/bin/gitolite.pm"
 	insinto "${VENDOR_LIB}"
