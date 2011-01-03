@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.2.0.ebuild,v 1.1 2011/01/03 13:37:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.2.0.ebuild,v 1.2 2011/01/03 18:24:50 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -24,8 +24,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd *-${PN}-*
-	S=`pwd`
+	mv *-${PN}-* "${S}"
 }
 
 src_prepare() {
