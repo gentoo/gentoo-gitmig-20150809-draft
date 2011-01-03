@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.2.ebuild,v 1.5 2010/05/29 17:42:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.4.2.ebuild,v 1.6 2011/01/03 10:01:03 ssuominen Exp $
 
 inherit eutils pam
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.pamusb.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE=""
 
 RDEPEND="
 	dev-libs/libxml2
