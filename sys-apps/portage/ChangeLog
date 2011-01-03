@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.785 2011/01/02 19:37:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.786 2011/01/03 01:03:26 zmedico Exp $
+
+*portage-2.2.0_alpha12 (03 Jan 2011)
+
+  03 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha12.ebuild:
+  2.2.0_alpha12 version bump. This includes all of the fixes in
+  portage-2.1.9.28. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.28 (03 Jan 2011)
+
+  03 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.28.ebuild:
+  2.1.9.28 version bump. This fixes bug #350285 (depclean newer slots
+  masked by keywords), bug #350379 (fix prefix in elog syslog messages),
+  and bug #350385 (newins broken in EAPI 4). This also includes
+  documentation for bug #322049 (use_with/enable empty third arg handling
+  in EAPI 4). Bug #349307 tracks all bugs fixed since 2.1.9.25.
 
   02 Jan 2011; Raúl Porcel <armin76@gentoo.org> portage-2.1.9.25.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #349098
