@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1.ebuild,v 1.3 2010/12/12 16:57:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1.ebuild,v 1.4 2011/01/03 11:41:21 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 IUSE="doc ipv6 elibc_FreeBSD"
 
 RDEPEND=">=dev-libs/glib-2.16:2
-	>=x11-libs/gtk+-2.14:2
+	>=x11-libs/gtk+-2.22.0:2
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gconf-2
 	>=sys-power/upower-0.9.0
