@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.8.ebuild,v 1.8 2010/12/28 15:38:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.8.ebuild,v 1.9 2011/01/03 18:49:18 williamh Exp $
 
 EAPI=1
 
@@ -22,6 +22,7 @@ SLOT="0"
 IUSE="+zeroconf elibc_glibc"
 
 DEPEND=""
+RDEPEND=""
 PROVIDE="virtual/dhcpc"
 
 src_unpack() {
