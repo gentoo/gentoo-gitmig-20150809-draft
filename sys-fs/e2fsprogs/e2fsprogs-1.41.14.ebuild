@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.14.ebuild,v 1.1 2010/12/29 08:15:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.14.ebuild,v 1.2 2011/01/03 21:18:58 grobian Exp $
 
 EAPI="3"
 
@@ -43,7 +43,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.12-darwin-makefile.patch
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${FILESDIR}"/${PN}-1.41-mint.patch
-		epatch "${FILESDIR}"/${PN}-1.41.7-mint-blkid.patch
+		epatch "${FILESDIR}"/${PN}-1.41.12-mint-blkid.patch
 	fi
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc

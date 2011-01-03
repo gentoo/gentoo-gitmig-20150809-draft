@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.230 2010/12/29 08:15:18 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.231 2011/01/03 21:18:58 grobian Exp $
+
+  03 Jan 2011; Fabian Groffen <grobian@gentoo.org>
+  e2fsprogs-1.41.12-r1.ebuild, +files/e2fsprogs-1.41.12-mint-blkid.patch,
+  e2fsprogs-1.41.14.ebuild:
+  Update mint blkid patch, bug #350342 by Alan Hourihane
 
 *e2fsprogs-1.41.14 (29 Dec 2010)
 
