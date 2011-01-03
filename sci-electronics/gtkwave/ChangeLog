@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.59 2010/12/12 12:08:12 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.60 2011/01/03 14:30:32 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> gtkwave-3.3.14.ebuild:
+  sparc stable (bug 347057)
 
   12 Dec 2010; Thomas Kahle <tomka@gentoo.org> gtkwave-3.3.14.ebuild:
   x86 stable per bug 347057
