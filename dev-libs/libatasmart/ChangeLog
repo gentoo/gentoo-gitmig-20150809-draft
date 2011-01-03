@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatasmart
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.16 2010/10/29 06:21:49 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.17 2011/01/03 23:45:37 eva Exp $
+
+  04 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libatasmart-0.17.ebuild,
+  +files/libatasmart-0.17-strpool-uninit.patch:
+  Add patch for fix build with uclibc, bug #236671.
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> libatasmart-0.17.ebuild:
   Stable for HPPA (bug #329621).
