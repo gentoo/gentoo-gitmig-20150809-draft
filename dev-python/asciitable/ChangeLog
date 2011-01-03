@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/asciitable
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.7 2010/12/18 17:55:01 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.8 2011/01/03 17:28:44 bicatali Exp $
+
+*asciitable-0.5.0 (03 Jan 2011)
+
+  03 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +asciitable-0.5.0.ebuild:
+  Version bump
 
   18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -asciitable-0.3.1.ebuild:
