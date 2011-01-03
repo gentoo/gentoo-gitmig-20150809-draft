@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.249 2011/01/02 15:31:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.250 2011/01/03 14:57:26 phajdan.jr Exp $
+
+  03 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gecko-mediaplayer-r1.patch, chromium-9999.ebuild,
+  +files/chromium-system-vpx-r2.patch:
+  Rebase patches, bugs #349228 and #349234. Used patches by Mike Gilbert
+  <floppymaster@gmail.com>, tested by Julien Sanchez
+  <julien.sanchez@gmail.com>.
 
   02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-10.0.612.1-r1.ebuild, chromium-9999.ebuild:

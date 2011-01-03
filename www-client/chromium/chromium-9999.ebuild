@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.119 2011/01/02 15:31:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.120 2011/01/03 14:57:26 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -157,10 +157,10 @@ pkg_setup() {
 
 src_prepare() {
 	# Enable optional support for gecko-mediaplayer.
-	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
+	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r1.patch
 
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
+	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
 	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
 
