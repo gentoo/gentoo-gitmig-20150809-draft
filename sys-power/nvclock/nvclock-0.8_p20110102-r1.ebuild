@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102.ebuild,v 1.1 2011/01/03 03:48:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.1 2011/01/03 23:49:36 jer Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --bindir=/usr/bin --disable-qt \
+	econf --bindir=/usr/bin --disable-qt --docdir=/usr/share/doc/${PF} \
 		$(use_enable gtk) $(use_enable gtk nvcontrol)
 }
 

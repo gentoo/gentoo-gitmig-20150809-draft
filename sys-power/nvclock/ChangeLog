@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nvclock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.3 2011/01/03 03:48:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.4 2011/01/03 23:49:36 jer Exp $
+
+*nvclock-0.8_p20110102-r1 (03 Jan 2011)
+
+  03 Jan 2011; Jeroen Roovers <jer@gentoo.org> -nvclock-0.8_p20110102.ebuild,
+  +nvclock-0.8_p20110102-r1.ebuild:
+  Set --docdir= or configure will not use the proper default, by Joost Ruis
+  (bug #350496).
 
 *nvclock-0.8_p20110102 (03 Jan 2011)
 
