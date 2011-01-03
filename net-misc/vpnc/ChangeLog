@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/vpnc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.90 2010/08/13 08:40:53 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.91 2011/01/03 15:24:06 fauli Exp $
+
+*vpnc-0.5.3_p451 (03 Jan 2011)
+
+  03 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  +vpnc-0.5.3_p451.ebuild:
+  New snapshot which incorporates upstream fixes for lost connections du to
+  rekeying errors (bug 350219 by Lori <ljakab AT ac DOT upc DOT edu>), an
+  updated external vpnc-script which has support for Solaris and IPv6 (bug
+  331445 by ByrneG <gentoo-bugzilla-byrne AT gzone DOT org>), patches taken
+  from upstream mailing list that fix some dead lock problems in the socket
+  handling routines (also bug 350219). Also reenable OpenSSL for
+  hybrid-auth, but check for binary distribution (bug 336012). Lots of
+  thanks to Martin Mokrejs <mmokejs AT fold DOT natur DOT cuni DOT cz> who
+  worked on all the bugs and provided a lot of feedback.
 
   13 Aug 2010; Christian Faulhammer <fauli@gentoo.org> vpnc-0.5.3.ebuild,
   vpnc-0.5.3_p449-r1.ebuild, files/vpnc-2.init, files/vpnc-3.init:
