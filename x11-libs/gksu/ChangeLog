@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.59 2010/07/20 01:41:33 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.60 2011/01/03 22:36:37 eva Exp $
+
+  03 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> gksu-2.0.2.ebuild:
+  Drop gnome-vfs dependency, bug #349520.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gksu-2.0.2.ebuild:
   Drop HPPA keywording (bug #324511).

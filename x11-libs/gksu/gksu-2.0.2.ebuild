@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.10 2010/07/20 01:41:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.11 2011/01/03 22:36:37 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -17,10 +17,9 @@ KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc gnome"
 
 RDEPEND=">=x11-libs/libgksu-2.0.8
-	>=x11-libs/gtk+-2.4.0
-	>=gnome-base/gconf-2.0
+	>=x11-libs/gtk+-2.4:2
+	>=gnome-base/gconf-2
 	gnome? (
-		>=gnome-base/gnome-vfs-2
 		>=gnome-base/nautilus-2
 		x11-terms/gnome-terminal )"
 DEPEND="${RDEPEND}
