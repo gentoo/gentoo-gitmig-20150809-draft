@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18.ebuild,v 1.1 2010/10/02 17:51:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18.ebuild,v 1.2 2011/01/03 11:51:15 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/p/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 IUSE=""
 
 PROVIDE="virtual/bootloader"
