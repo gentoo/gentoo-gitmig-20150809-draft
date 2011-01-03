@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.130 2010/11/27 00:51:07 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.131 2011/01/03 20:39:22 caster Exp $
+
+  03 Jan 2011; Vlastimil Babka <caster@gentoo.org> swt-3.3.1.1-r1.ebuild,
+  swt-3.4-r4.ebuild, swt-3.5.2.ebuild, swt-3.6.ebuild, swt-3.6.1.ebuild:
+  Add QA_SONAME to suppress warnings about missing SONAME, which JNI libraries
+  don't need. Fixes bug #253756.
 
   27 Nov 2010; Vlastimil Babka <caster@gentoo.org> swt-3.5.2.ebuild,
   swt-3.6.ebuild, swt-3.6.1.ebuild:

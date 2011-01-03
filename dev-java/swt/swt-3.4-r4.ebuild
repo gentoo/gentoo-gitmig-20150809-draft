@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.7 2009/11/11 23:19:44 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.8 2011/01/03 20:39:22 caster Exp $
 
 EAPI="1"
 
@@ -69,6 +69,9 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON}"
 
 S="${WORKDIR}"
+
+# JNI libraries don't need SONAME, bug #253756
+QA_SONAME="usr/$(get_libdir)/libswt-.*.so"
 
 src_unpack() {
 	local DISTFILE=${A}
