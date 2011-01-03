@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.4 2011/01/03 19:58:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.00.1156.ebuild,v 1.5 2011/01/03 20:06:25 jer Exp $
 
 EAPI="3"
 
@@ -98,7 +98,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	mv -v * "${S}"
+	mv -v * "${S}" || die
 }
 
 src_prepare() {

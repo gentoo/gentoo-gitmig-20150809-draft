@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.582 2011/01/03 19:58:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.583 2011/01/03 20:06:25 jer Exp $
+
+  03 Jan 2011; Jeroen Roovers <jer@gentoo.org> opera-11.00.1156.ebuild:
+  When mv fails, we should die().
 
   03 Jan 2011; Jeroen Roovers <jer@gentoo.org> opera-11.00.1156.ebuild:
   Use mv * ${S} instead of setting S inside an ebuild phase.
