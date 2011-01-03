@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12325 2011/01/03 12:07:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12326 2011/01/03 23:51:30 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -218,14 +218,6 @@ www-apps/horde-groupware
 # Sebastian Pipping <sping@gentoo.org> (25 Nov 2010)
 # Experimental bump, ~arch seems too risky right now
 >=net-mail/rss2email-2.69
-
-# Gilles Dartiguelongue <eva@gentoo.org> (23 Nov 2010)
-# Last rites: dev-cpp/libgtksourceviewmm
-# Removal: 2010-12-23
-# Bug: #298158
-# Old name of gtksourceviewmm, not used by anything in tree.
-# Masked with approval of remi.
-dev-cpp/libgtksourceviewmm
 
 # Mike Pagano <mpagano@gentoo.org> (20 Nov 2010)
 # Mask this version of gentoo-sources while we test
