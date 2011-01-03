@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.106 2010/12/13 20:20:09 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.107 2011/01/03 14:58:05 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> scite-2.22.ebuild:
+  sparc stable (bug 348492)
 
   13 Dec 2010; Thomas Kahle <tomka@gentoo.org> scite-2.22.ebuild:
   x86 stable per bug 348492
