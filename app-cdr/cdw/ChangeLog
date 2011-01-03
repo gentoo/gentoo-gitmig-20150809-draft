@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.46 2010/12/10 21:48:19 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.47 2011/01/03 01:10:56 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> cdw-0.6.0.ebuild:
+  sparc stable (bug 347949)
 
   10 Dec 2010; Markos Chandras <hwoarang@gentoo.org> cdw-0.6.0.ebuild:
   Stable on amd64 wrt bug #347949
