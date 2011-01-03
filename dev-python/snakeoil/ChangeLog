@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/snakeoil
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.35 2010/06/27 09:38:18 ferringb Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.36 2011/01/03 11:14:08 ferringb Exp $
+
+*snakeoil-0.3.7-r1 (03 Jan 2011)
+
+  03 Jan 2011; Brian Harring <ferringb@gentoo.org> -snakeoil-0.3.7.ebuild,
+  +snakeoil-0.3.7-r1.ebuild, +files/snakeoil-0.3.7-multiprocess.patch,
+  +files/snakeoil-issue-7567-term-invocation.patch:
+  Work around python upstream bugs; fixes gentoo bugs #350215 (test failure in
+  formatters) and build failure for py3k behaviour via bug #330511.
 
 *snakeoil-0.3.7 (27 Jun 2010)
 

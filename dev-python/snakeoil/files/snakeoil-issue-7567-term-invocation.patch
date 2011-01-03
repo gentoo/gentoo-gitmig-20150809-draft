@@ -1,0 +1,70 @@
+diff --git a/snakeoil/test/test_formatters.py b/snakeoil/test/test_formatters.py
+index f6e3038..cf523b2 100644
+--- a/snakeoil/test/test_formatters.py
++++ b/snakeoil/test/test_formatters.py
+@@ -8,6 +8,7 @@
+ # aside from that, tests need heavy expansion
+ 
+ import os
++import sys
+ import pty
+ import StringIO
+ import tempfile
+@@ -23,6 +24,13 @@ if compatibility.is_py3k:
+ else:
+     mk_tempfile = tempfile.TemporaryFile
+ 
++sys_ver = sys.version_info[:3]
++if (sys_ver >= (2,6,6) and sys_ver < (2,7)) or sys_ver >= (3,2,0):
++    def issue7567(functor):
++        functor.skip = "issue 7567 patch breaks multiple term invocations, disabled till it's sorted"
++        return functor
++else:
++    issue7567 = lambda x:x
+ 
+ class native_PlainTextFormatterTest(TestCase):
+ 
+@@ -178,6 +186,7 @@ class TerminfoFormatterTest(TestCase):
+         self.assertEqual(''.join(output), result,
+             msg="given(%r), expected(%r), got(%r)" % (inputs, output, result))
+ 
++    @issue7567
+     def test_terminfo(self):
+         esc = '\x1b['
+         stream = mk_tempfile()
+@@ -206,6 +215,9 @@ class TerminfoFormatterTest(TestCase):
+             formatters.TerminfoHatesOurTerminal,
+             formatters.TerminfoFormatter, stream, term='dumb')
+ 
++    if sys_ver >= (2,6,6) and sys_ver < (2,7):
++        test_terminfo_hates_term.skip = "issue doesn't exist for 2.6.6 till 2.7"
++
+ 
+ def _with_term(term, func, *args, **kwargs):
+     orig_term = os.environ.get('TERM')
+@@ -232,21 +244,25 @@ def _get_pty_pair(encoding='ascii'):
+ 
+ class GetFormatterTest(TestCase):
+ 
++    @issue7567
+     def test_dumb_terminal(self):
+         master, out = _get_pty_pair()
+         formatter = _with_term('dumb', formatters.get_formatter, master)
+         self.failUnless(isinstance(formatter, formatters.PlainTextFormatter))
+ 
++    @issue7567
+     def test_smart_terminal(self):
+         master, out = _get_pty_pair()
+         formatter = _with_term('xterm', formatters.get_formatter, master)
+         self.failUnless(isinstance(formatter, formatters.TerminfoFormatter))
+ 
++    @issue7567
+     def test_not_a_tty(self):
+         stream = mk_tempfile()
+         formatter = _with_term('xterm', formatters.get_formatter, stream)
+         self.failUnless(isinstance(formatter, formatters.PlainTextFormatter))
+ 
++    @issue7567
+     def test_no_fd(self):
+         stream = StringIO.StringIO()
+         formatter = _with_term('xterm', formatters.get_formatter, stream)
