@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/num-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.8 2010/06/24 13:00:56 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.9 2011/01/03 18:11:18 bicatali Exp $
+
+*num-utils-0.5-r1 (03 Jan 2011)
+
+  03 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> -num-utils-0.5.ebuild,
+  +num-utils-0.5-r1.ebuild:
+  Renamed all execs with prefix num, avoiding number of collisions with other
+  packages. Apply a few Debian patches.
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> num-utils-0.3.ebuild,
   num-utils-0.5.ebuild:
