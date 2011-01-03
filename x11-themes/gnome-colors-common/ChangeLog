@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-colors-common
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-colors-common/ChangeLog,v 1.1 2010/02/09 13:19:29 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-colors-common/ChangeLog,v 1.2 2011/01/03 21:23:19 pacho Exp $
+
+  03 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-colors-common-5.5.1.ebuild:
+  Fix LICENSE for tangoized icon per meeting decission at
+  http://www.gentoo.org/foundation/en/motions/index.xml#doc_chap2
 
 *gnome-colors-common-5.5.1 (09 Feb 2010)
 
