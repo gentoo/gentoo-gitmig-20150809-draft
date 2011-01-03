@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-panel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.319 2010/12/04 17:50:20 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.320 2011/01/03 22:52:42 eva Exp $
+
+  03 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.32.1.ebuild:
+  Add missing introspection USE-depend, bug #350096.
 
 *gnome-panel-2.32.1 (04 Dec 2010)
 

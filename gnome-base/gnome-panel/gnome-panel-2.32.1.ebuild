@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.1 2010/12/04 17:50:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.2 2011/01/03 22:52:42 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,12 +17,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-in
 IUSE="+bonobo doc eds +introspection networkmanager"
 
 RDEPEND=">=gnome-base/gnome-desktop-2.26:2
-	>=x11-libs/pango-1.15.4
+	>=x11-libs/pango-1.15.4[introspection?]
 	>=dev-libs/glib-2.25.12:2
-	>=x11-libs/gtk+-2.22:2
+	>=x11-libs/gtk+-2.22:2[introspection?]
 	>=dev-libs/libgweather-2.27.90
 	dev-libs/libxml2
-	>=gnome-base/gconf-2.6.1
+	>=gnome-base/gconf-2.6.1[introspection?]
 	>=media-libs/libcanberra-0.23[gtk]
 	>=gnome-base/gnome-menus-2.27.92
 	gnome-base/librsvg
