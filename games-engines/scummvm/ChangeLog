@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.98 2010/12/20 01:16:49 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.99 2011/01/03 11:53:16 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> scummvm-1.2.0-r1.ebuild:
+  sparc stable (bug 347119)
 
 *scummvm-1.2.1 (20 Dec 2010)
 
