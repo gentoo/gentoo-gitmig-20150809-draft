@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.97 2010/12/16 15:17:34 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.98 2011/01/03 01:28:11 bicatali Exp $
+
+  03 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.0.7-r1.ebuild,
+  +files/itpp-4.0.7-window_test_fail_fix.patch:
+  Fixed tests, bug #349450 thanks Adam Piątyszek
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> itpp-4.0.6.ebuild:
   Removal of fortran.eclass, #348851

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.7-r1.ebuild,v 1.1 2010/08/10 18:24:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.7-r1.ebuild,v 1.2 2011/01/03 01:28:11 bicatali Exp $
 
 EAPI=3
-inherit flag-o-matic
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="C++ library of mathematical, signal processing and communication classes and functions"
 LICENSE="GPL-2"
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fastica-fix-endless-loop.patch
+	epatch "${FILESDIR}"/${P}-window_test_fail_fix.patch
+	eautoreconf
 }
 
 src_configure() {
