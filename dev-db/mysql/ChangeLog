@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.563 2010/11/29 00:22:28 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.564 2011/01/03 20:23:13 fauli Exp $
+
+  03 Jan 2011; Christian Faulhammer <fauli@gentoo.org> mysql-5.0.91.ebuild:
+  stable x86, security bug 319489
 
 *mysql-5.1.53 (29 Nov 2010)
 *mysql-5.1.52-r1 (29 Nov 2010)
