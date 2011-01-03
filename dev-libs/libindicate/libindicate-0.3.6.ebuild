@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.3.6.ebuild,v 1.1 2010/03/31 17:43:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.3.6.ebuild,v 1.2 2011/01/03 16:28:41 dilfridge Exp $
 
 EAPI=2
 
@@ -25,6 +25,7 @@ RDEPEND="dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
+	dev-util/gtk-doc-am
 	dev-util/pkgconfig"
 
 src_prepare() {

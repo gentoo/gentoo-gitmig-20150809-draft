@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.8 2010/06/06 00:37:37 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.9 2011/01/03 16:28:41 dilfridge Exp $
+
+  03 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libindicate-0.3.6.ebuild:
+  Add RDEPEND on dev-util/gtk-doc-am; fixes bug 348061
 
   06 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -libindicate-0.2.3.ebuild, libindicate-0.2.3-r1.ebuild:
