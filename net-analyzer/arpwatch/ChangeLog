@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.58 2010/12/27 20:04:58 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.59 2011/01/03 15:08:06 xmw Exp $
+
+  03 Jan 2011; Michael Weber <xmw@gentoo.org> arpwatch-2.1.15-r6.ebuild:
+  sparc stable (bug 349260)
 
   27 Dec 2010; Jeroen Roovers <jer@gentoo.org> arpwatch-2.1.15-r6.ebuild:
   Stable for HPPA (bug #349260).
