@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20110103.ebuild,v 1.1 2011/01/03 08:07:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20110103.ebuild,v 1.2 2011/01/03 12:48:16 ulm Exp $
 
 EAPI=3
 
@@ -21,8 +21,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS} -lncurses" \
-		|| die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install()  {
