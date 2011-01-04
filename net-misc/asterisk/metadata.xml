@@ -18,7 +18,6 @@
     <flag name="dahdi">Support Digium compatible hardware (formerly known as Zaptel).</flag>
     <flag name="span">Enable support for the spandsp codec</flag>
     <flag name="samples">Install sample sound and configuration files (default: on)</flag>
-    <flag name="logrotate">Install a configuration snippet for the logrotate cronjob</flag>
     <flag name="srtp">Enable support for encrypted voice transmission (secure RTP)</flag>
     <flag name="gtalk">Enable support for Google Talk services</flag>
     <flag name="h323">Enable support for the H323 telephony protocol</flag>

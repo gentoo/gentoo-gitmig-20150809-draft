@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.278 2010/12/30 17:28:01 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.279 2011/01/04 17:31:53 chainsaw Exp $
+
+*asterisk-1.8.1.1-r1 (04 Jan 2011)
+
+  04 Jan 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.0.ebuild,
+  -asterisk-1.8.1.1.ebuild, +asterisk-1.8.1.1-r1.ebuild:
+  As pointed out by Ivan L. Isaev in bug #344533, MySQL was not fully enabled.
+  Together with Michael Lesniewski I have redone all conditional statements
+  through menuselect instead of through use_with. Pre-creating directories in
+  the installation image allows parallel install with MAKEOPTS above -j1,
+  closes bug #350339 by rad0xicated@gmail.com. Kill USE=logrotate which snuck
+  back in. Kill USE=keepsrc as I do not believe it is used. Petition me through
+  a bug report if you disagree and present a clear use case. Nuke older 1.8
+  branch ebuilds, they are useless now because of a gtalk protocol change.
 
   30 Dec 2010; Tony Vroon <chainsaw@gentoo.org>
   -files/1.6.1/asterisk-1.6.1-uclibc.patch,
