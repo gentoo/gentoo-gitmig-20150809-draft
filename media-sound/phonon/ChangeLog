@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/phonon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.64 2010/12/09 06:33:46 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.65 2011/01/04 00:46:27 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> phonon-4.4.2.ebuild:
+  sparc stable (bug 329847)
 
   09 Dec 2010; Markus Meier <maekke@gentoo.org> phonon-4.4.2.ebuild:
   arm stable, bug #329847
