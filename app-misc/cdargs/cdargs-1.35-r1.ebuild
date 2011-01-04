@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.3 2008/03/27 19:28:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.4 2011/01/04 16:55:42 jlec Exp $
 
 inherit elisp-common
 
@@ -15,11 +15,12 @@ IUSE="emacs"
 
 DEPEND="sys-libs/ncurses
 	emacs? ( virtual/emacs )"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake || die "emake failed"
 
 	if use emacs; then
@@ -29,7 +30,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc README THANKS TODO AUTHORS
+	dodoc README THANKS TODO AUTHORS || die
 
 	cd "${S}/contrib"
 	insinto /usr/share/cdargs

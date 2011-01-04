@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdargs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.17 2008/03/27 19:28:26 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.18 2011/01/04 16:55:42 jlec Exp $
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> cdargs-1.35-r1.ebuild:
+  Some Clean up
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> cdargs-1.35-r1.ebuild:
   Stable on ppc wrt bug 214932
