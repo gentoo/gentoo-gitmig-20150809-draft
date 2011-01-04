@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.1 2010/12/30 17:11:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.2 2011/01/04 20:14:46 vapier Exp $
 
 EAPI="2"
 
@@ -36,6 +36,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -i '/enable_static_cryptsetup=yes/d' configure #350463
 	elibtoolize
 }
 
