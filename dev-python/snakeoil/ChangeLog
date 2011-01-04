@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.36 2011/01/03 11:14:08 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.37 2011/01/04 20:48:26 ferringb Exp $
+
+  04 Jan 2011; Brian Harring <ferringb@gentoo.org> snakeoil-0.3.7-r1.ebuild,
+  files/snakeoil-issue-7567-term-invocation.patch:
+  Refresh patch w/ disabling of py2.7 for irrelevant terminfo test failures,
+  bug #350215.
 
 *snakeoil-0.3.7-r1 (03 Jan 2011)
 

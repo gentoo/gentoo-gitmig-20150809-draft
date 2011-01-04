@@ -15,7 +15,7 @@ index f6e3038..cf523b2 100644
      mk_tempfile = tempfile.TemporaryFile
  
 +sys_ver = sys.version_info[:3]
-+if (sys_ver >= (2,6,6) and sys_ver < (2,7)) or sys_ver >= (3,2,0):
++if (sys_ver >= (2,6,6) and sys_ver < (2,8)) or sys_ver >= (3,2,0):
 +    def issue7567(functor):
 +        functor.skip = "issue 7567 patch breaks multiple term invocations, disabled till it's sorted"
 +        return functor
@@ -36,7 +36,7 @@ index f6e3038..cf523b2 100644
              formatters.TerminfoHatesOurTerminal,
              formatters.TerminfoFormatter, stream, term='dumb')
  
-+    if sys_ver >= (2,6,6) and sys_ver < (2,7):
++    if sys_ver >= (2,6,6) and sys_ver < (2,8):
 +        test_terminfo_hates_term.skip = "issue doesn't exist for 2.6.6 till 2.7"
 +
  
