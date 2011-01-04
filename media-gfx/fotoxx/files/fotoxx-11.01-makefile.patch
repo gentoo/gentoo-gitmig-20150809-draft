@@ -1,9 +1,8 @@
-Index: fotoxx-10.11.2/Makefile
-===================================================================
---- fotoxx-10.11.2.orig/Makefile
-+++ fotoxx-10.11.2/Makefile
-@@ -5,30 +5,30 @@ VERSION = 10.11.2
- SOURCE = $(PROGRAM)-$(VERSION).cc
+Только в fotoxx-11.01.orig/: .pc
+diff -r -U2 fotoxx-11.01.orig//Makefile fotoxx-11.01//Makefile
+--- fotoxx-11.01.orig//Makefile	2011-01-01 19:10:53.000000000 +0600
++++ fotoxx-11.01//Makefile	2011-01-04 20:56:03.000000000 +0600
+@@ -6,14 +6,14 @@
  
  # defaults for parameters that may be pre-defined
 -CXXFLAGS ?= -O3 -g -Wall
@@ -23,21 +22,22 @@ Index: fotoxx-10.11.2/Makefile
 +DOCDIR = $(PREFIX)/share/doc/$(PF)
  MANDIR = $(PREFIX)/share/man/man1
  ICONDIR = $(DATADIR)/icons
- DESKTOP = $(DATADIR)/kornelix-$(PROGRAM).desktop
+@@ -21,15 +21,14 @@
  
  $(PROGRAM): $(PROGRAM).o zfuncs.o
- 	@ ./dependencies.sh
--	$(CXX) $(LFLAGS) -ltiff -o $(PROGRAM) $(PROGRAM).o zfuncs.o
+-	$(CXX) $(LFLAGS) -ltiff          \
+-	   -o $(PROGRAM) $(PROGRAM).o zfuncs.o
 +	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o -ltiff $(LIBS)
+ 	@ ./dependencies.sh
  
  $(PROGRAM).o: $(SOURCE)
--	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
-+	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE)            \
- 	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
+-	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)   \
++	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE) \
+ 	   -D "DATADIR=\"$(DATADIR)\""               \
+ 	   -D "DOCDIR=\"$(DOCDIR)\""
  
  zfuncs.o: zfuncs.cc
--	$(CXX) $(CFLAGS) zfuncs.cc	\
-+	$(CXX) $(CXXFLAGS) zfuncs.cc	\
- 	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\"" -D "BINDIR=\"$(BINDIR)\""
- 
- install: $(PROGRAM)
+-	$(CXX) $(CFLAGS) zfuncs.cc	         \
++	$(CXX) $(CXXFLAGS) zfuncs.cc        \
+ 	   -D "DATADIR=\"$(DATADIR)\""      \
+ 	   -D "DOCDIR=\"$(DOCDIR)\""        \
