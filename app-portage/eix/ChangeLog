@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.355 2011/01/03 00:13:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.356 2011/01/04 04:51:23 darkside Exp $
+
+*eix-0.22.6 (04 Jan 2011)
+
+  04 Jan 2011; Jeremy Olexa <darkside@gentoo.org> +eix-0.22.6.ebuild:
+  Version bump from upstream, minor fixes includes zsh-completion now
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> eix-0.22.5.ebuild:
   sparc stable (bug 347305)
