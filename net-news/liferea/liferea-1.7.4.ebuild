@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.7.4.ebuild,v 1.1 2010/04/19 03:20:11 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.7.4.ebuild,v 1.2 2011/01/04 17:35:35 vostorga Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit gnome2 pax-utils
 GCONF_DEBUG="no"
 
 MY_P="${P/_/-}"
@@ -45,4 +45,13 @@ pkg_setup() {
 		$(use_enable dbus)
 		$(use_enable networkmanager nm)
 		$(use_enable libnotify)"
+}
+
+src_install() {
+	gnome2_src_install
+	# bug #338213
+	# Uses webkit's JIT. Needs mmap('rwx') to generate code in runtime.
+	# MPROTECT policy violation. Will sit here until webkit will
+	# get optional JIT.
+	pax-mark m "${D}"/usr/bin/liferea
 }

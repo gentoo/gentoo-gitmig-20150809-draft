@@ -1,10 +1,14 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.196 2011/01/01 21:26:55 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.197 2011/01/04 17:35:35 vostorga Exp $
+
+  04 Jan 2011; Víctor Ostorga <vostorga@gentoo.org> liferea-1.7.4.ebuild:
+  Disabling MPROTECT PaX feature to avoid SIGSEGVs on startup, patch thanks
+  to Sergei Trofimovich <slyfox@gentoo.org> bug #338213
 
 *liferea-1.6.5 (01 Jan 2011)
 
-  01 Jan 2011; <vostorga@gentoo.org> -liferea-1.6.2.ebuild,
+  01 Jan 2011; Victor Ostorga <vostorga@gentoo.org> -liferea-1.6.2.ebuild,
   -liferea-1.6.3.ebuild, +liferea-1.6.5.ebuild, -liferea-1.7.1.ebuild,
   -liferea-1.7.2.ebuild, -liferea-1.7.3.ebuild:
   Cleaning up ebuilds. Version bump to 1.6.5 bug #345825
