@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6257 2011/01/04 17:53:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6258 2011/01/04 22:13:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2949,9 +2949,9 @@ net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/telepathy-glib:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/telepathy-glib:vala - Enable bindings for dev-lang/vala
-net-libs/webkit-gtk:coverage - enable code coverage support
+net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:introspection - Use dev-libs/gobject-introspection for introspection
-net-libs/webkit-gtk:websockets - enable full duplex single socket communication
+net-libs/webkit-gtk:jit - Enable JIT javascript compiler (disabling it will cause performance penalty)
 net-libs/wt:extjs - Build Wt Ext library with JavaScript-only widgets (http://extjs.com/)
 net-libs/wt:fcgi - Compile in FCGI connector
 net-libs/wt:graphicsmagick - Enable GraphicsMagick, for supporting painting to raster images (PNG, GIF, ...) (WRasterImage)
