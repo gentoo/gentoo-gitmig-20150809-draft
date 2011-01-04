@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/webkit-gtk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.90 2010/12/29 22:41:40 nirbheek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.91 2011/01/04 21:54:01 pacho Exp $
+
+*webkit-gtk-1.2.6 (04 Jan 2011)
+
+  04 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/webkit-gtk-1.1.15.2-unaligned.patch, -webkit-gtk-1.1.15.4.ebuild,
+  -files/webkit-gtk-1.1.15.4-darwin-quartz.patch,
+  -files/webkit-gtk-1.1.15.4-icu44.patch, +webkit-gtk-1.2.6.ebuild,
+  metadata.xml:
+  Version bump: Fixes crashes with newer libpng (>= 1.4), security fixes
+  CVE-2010-4198 CVE-2010-4197 CVE-2010-4204 CVE-2010-4206 CVE-2010-1791
+  CVE-2010-3812 CVE-2010-3813. Also makes JIT support optional as it causes
+  problems with hardened (bug #338213). Remove old.
 
   29 Dec 2010; <nirbheek@gentoo.org> webkit-gtk-1.1.15.4.ebuild,
   webkit-gtk-1.2.3.ebuild, webkit-gtk-1.2.5.ebuild:

@@ -3,9 +3,10 @@
 <pkgmetadata>
   <herd>gnome</herd>
   <use>
-	<flag name="coverage">enable code coverage support</flag>
+	<flag name="coverage">Enable code coverage support</flag>
 	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 	for introspection</flag>
-	<flag name="websockets">enable full duplex single socket communication</flag>
+	<flag name="jit">Enable JIT javascript compiler (disabling it will
+	cause performance penalty)</flag>
   </use>
 </pkgmetadata>
