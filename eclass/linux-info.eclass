@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.86 2010/08/05 21:57:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.87 2011/01/04 17:53:13 cardoe Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -229,7 +229,7 @@ linux_config_qa_check() {
 	local f="$1"
 	if [ -z "${_LINUX_CONFIG_EXISTS_DONE}" ]; then
 		ewarn "QA: You called $f before any linux_config_exists!"
-		ewarn "QA: The return value of $f will NOT gaurenteed later!"
+		ewarn "QA: The return value of $f will NOT guaranteed later!"
 	fi
 }
 
