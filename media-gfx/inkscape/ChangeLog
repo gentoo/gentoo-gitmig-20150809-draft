@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.151 2010/12/28 10:48:32 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.152 2011/01/04 09:15:25 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> inkscape-0.48.0.ebuild:
+  sparc stable (bug 343371)
 
   28 Dec 2010; Hanno Boeck <hanno@gentoo.org> inkscape-0.48.0.ebuild,
   +files/inkscape-0.48.0-poppler-0.16.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.0.ebuild,v 1.9 2010/12/28 10:48:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.0.ebuild,v 1.10 2011/01/04 09:15:25 xmw Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools gnome2
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.inkscape.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
 IUSE="dia gnome gs inkjar lcms nls spell wmf"
 
 RESTRICT="test"
