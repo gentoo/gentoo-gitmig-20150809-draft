@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.145 2010/12/29 16:17:29 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.146 2011/01/04 13:04:02 jlec Exp $
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> tk-8.5.8-r1.ebuild:
+  Backport correct detection of truetype support
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> tk-8.5.8-r1.ebuild:
   Stable on amd64 wrt bug #332415
