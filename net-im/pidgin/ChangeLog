@@ -1,6 +1,11 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.216 2011/01/01 15:48:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.217 2011/01/04 05:25:12 pva Exp $
+
+  04 Jan 2011; Peter Volkov <pva@gentoo.org> -pidgin-2.7.4.ebuild,
+  pidgin-2.7.9.ebuild:
+  dbus-python dependency for purple-url-handler, bug #350269, thank Jimmy C.
+  Chau for report. Drop old.
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> pidgin-2.7.9.ebuild:
   alpha/ia64 stable wrt #349906

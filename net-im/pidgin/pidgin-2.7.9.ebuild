@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.9.ebuild,v 1.5 2011/01/01 15:48:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.9.ebuild,v 1.6 2011/01/04 05:25:12 pva Exp $
 
 EAPI=2
 
@@ -22,6 +22,8 @@ IUSE+=" ncurses groupwise prediction python +xscreensaver zephyr zeroconf" # mon
 # finch uses libgnt that links with libpython - {R,}DEPEND. But still there is
 # no way to build dbus and avoid libgnt linkage with python. If you want this
 # send patch upstream.
+# purple-url-handler and purple-remote require dbus-python thus in reality we
+# rdepend on python if dbus enabled. But it is possible to separate this dep.
 RDEPEND="
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.18
@@ -43,7 +45,8 @@ RDEPEND="
 		media-plugins/gst-plugins-gconf )
 	zeroconf? ( net-dns/avahi )
 	dbus? ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.90 )
+		>=sys-apps/dbus-0.90 
+		dev-python/dbus-python )
 	perl? ( >=dev-lang/perl-5.8.2-r1[-build] )
 	gadu?  ( >=net-libs/libgadu-1.9.0[-ssl] )
 	gnutls? ( net-libs/gnutls )
