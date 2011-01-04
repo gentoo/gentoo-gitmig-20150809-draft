@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.188 2010/12/07 23:26:08 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.189 2011/01/04 00:31:20 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> audacious-plugins-2.2-r2.ebuild,
+  audacious-plugins-2.4.0.ebuild:
+  sparc stable, dropping keywords (bug 297894)
 
 *audacious-plugins-2.4.2 (07 Dec 2010)
 
