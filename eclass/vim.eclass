@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.191 2010/10/10 17:23:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.192 2011/01/04 13:55:57 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -40,6 +40,7 @@ LICENSE="vim"
 # Check for EAPI functions we need:
 case "${EAPI:-0}" in
 	0|1)
+		die "vim.eclass no longer supports EAPI 0 or 1"
 		;;
 	2|3)
 		HAS_SRC_PREPARE=1
@@ -138,7 +139,7 @@ else
 				)
 				!gtk? (
 					motif? (
-						>=x11-libs/openmotif-2.3
+						>=x11-libs/openmotif-2.3:0
 					)
 					!motif? (
 						nextaw? (
