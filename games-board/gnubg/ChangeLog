@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.55 2010/11/28 02:11:19 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.56 2011/01/04 08:20:30 phajdan.jr Exp $
+
+  04 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnubg-20101126.ebuild:
+  x86 stable wrt bug #350436
 
 *gnubg-20101126 (28 Nov 2010)
 
