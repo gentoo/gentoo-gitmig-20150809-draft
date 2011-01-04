@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdargs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.18 2011/01/04 16:55:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/ChangeLog,v 1.19 2011/01/04 21:55:29 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> cdargs-1.35-r1.ebuild:
+  Stable on amd64 wrt bug #350562
 
   04 Jan 2011; Justin Lecher <jlec@gentoo.org> cdargs-1.35-r1.ebuild:
   Some Clean up

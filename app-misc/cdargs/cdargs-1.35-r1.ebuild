@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.4 2011/01/04 16:55:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.5 2011/01/04 21:55:29 hwoarang Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.skamphausen.de/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="emacs"
 
 DEPEND="sys-libs/ncurses
