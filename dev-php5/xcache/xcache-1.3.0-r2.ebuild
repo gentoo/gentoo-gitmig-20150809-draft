@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.3.0-r2.ebuild,v 1.2 2011/01/03 16:06:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/xcache-1.3.0-r2.ebuild,v 1.3 2011/01/04 15:22:15 hwoarang Exp $
 
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
@@ -16,7 +16,7 @@ SRC_URI="http://xcache.lighttpd.net/pub/Releases/${PV}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # make test would just run php's test and as such need the full php source
