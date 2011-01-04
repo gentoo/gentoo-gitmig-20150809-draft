@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.41 2010/12/22 13:42:29 klausman Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.42 2011/01/04 00:52:12 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> libv4l-0.8.1.ebuild:
+  sparc stable (bug 344327)
 
   22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> libv4l-0.8.1.ebuild:
   Stable on alpha, bug #344327
