@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.297 2011/01/03 18:49:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.298 2011/01/04 23:13:45 williamh Exp $
+
+*dhcpcd-5.2.10-r1 (04 Jan 2011)
+
+  04 Jan 2011; William Hubbs <williamh@gentoo.org> +dhcpcd-5.2.10-r1.ebuild:
+  fix the libdir on non-multilib systems for bug #350511.
+  Thanks to Jory Pratt for the patch.
 
   03 Jan 2011; William Hubbs <williamh@gentoo.org> dhcpcd-4.0.15.ebuild,
   dhcpcd-5.2.6.ebuild, dhcpcd-5.2.7.ebuild, dhcpcd-5.2.8.ebuild,
