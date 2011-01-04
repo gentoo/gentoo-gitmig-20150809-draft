@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3-r2.ebuild,v 1.3 2010/04/06 10:45:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3-r2.ebuild,v 1.4 2011/01/04 20:18:44 george Exp $
 
 # Need to let configure know where to find stddef.h
 #EXTRA_CONFGCC="${WORKDIR}/usr/lib/include/"
@@ -30,6 +30,7 @@ KEYWORDS="~amd64 ~x86 ~sparc"
 # starting with 4.3.0 gnat needs these libs
 DEPEND=">=dev-libs/mpfr-2.3.1
 	>=dev-libs/gmp-4.2.2"
+RDEPEND="${DEPEND}"
 
 #QA_EXECSTACK="${BINPATH:1}/gnatls ${BINPATH:1}/gnatbind ${BINPATH:1}/gnatmake
 #	${LIBEXECPATH:1}/gnat1 ${LIBPATH:1}/adalib/libgnat-${SLOT}.so"
