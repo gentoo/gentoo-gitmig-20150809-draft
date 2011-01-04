@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/refmac
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.31 2010/12/31 16:08:51 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.32 2011/01/04 08:55:21 jlec Exp $
+
+*refmac-5.6.0097 (04 Jan 2011)
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org>
+  +files/5.6.0097-allow-dynamic-linking.patch, +refmac-5.6.0097.ebuild:
+  Version Bump
 
   31 Dec 2010; Justin Lecher <jlec@gentoo.org> refmac-5.5.0110-r2.ebuild:
   Depend correct ccp4-libs version to make test work
