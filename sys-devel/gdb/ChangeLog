@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.176 2011/01/03 16:21:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.177 2011/01/04 18:50:02 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gdb-7.2.ebuild:
+  Stable on amd64 wrt bug #350259
 
   03 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gdb-7.2.ebuild:
   x86 stable wrt bug #350259
