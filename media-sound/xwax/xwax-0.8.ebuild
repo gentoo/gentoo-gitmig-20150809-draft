@@ -1,15 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.8_beta1.ebuild,v 1.1 2010/12/02 03:31:05 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.8.ebuild,v 1.1 2011/01/04 03:08:17 nixphoeni Exp $
 
 EAPI=3
 inherit toolchain-funcs
 
-MY_PV="${PV/_/-}"
-
 DESCRIPTION="Digital vinyl emulation software"
 HOMEPAGE="http://www.xwax.co.uk/"
-SRC_URI="http://www.xwax.co.uk/testing/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://www.xwax.co.uk/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,8 +31,6 @@ RDEPEND="media-libs/libsdl
 	xwax_decoders_ogg? ( media-sound/vorbis-tools )
 	xwax_decoders_misc? ( media-video/ffmpeg )"
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 DOCS="README CHANGES"
 
@@ -72,15 +68,16 @@ src_install() {
 	if use xwax_decoders_mp3; then
 		# mpg123 is upstream's default
 		if has_version media-sound/mpg123; then
-			debug-print "found mpg123"
-			sed -i -e "s:mpg321:mpg123:g" "${D}/usr/bin/xwax-import" || \
-				die "problem converting xwax-import to use mpg123"
+			TO="mpg123"
+			FROM="mpg321"
 		# Otherwise, use mpg321
 		else
-			debug-print "found mpg321"
-			sed -i -e "s:mpg123:mpg321:g" "${D}//usr/bin/xwax-import" || \
-				die "problem converting xwax-import to use mpg321"
+			TO="mpg321"
+			FROM="mpg123"
 		fi
+		debug-print "found ${TO}"
+		sed -i -e "s:${FROM}:${TO}:g" "${D}/usr/bin/xwax-import" || \
+			die "problem converting xwax-import to use ${TO}"
 	fi
 
 	dodoc ${DOCS} || die "failed to install docs"
