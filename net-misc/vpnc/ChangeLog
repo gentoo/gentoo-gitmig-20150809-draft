@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.91 2011/01/03 15:24:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.92 2011/01/04 08:52:52 fauli Exp $
+
+  04 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  vpnc-0.5.3_p451.ebuild:
+  revert USE flag logic, so GnuTLS is used as default for hybrid auth and
+  OpenSSL only on request
 
 *vpnc-0.5.3_p451 (03 Jan 2011)
 

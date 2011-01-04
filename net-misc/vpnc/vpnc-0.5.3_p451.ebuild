@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p451.ebuild,v 1.1 2011/01/03 15:24:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p451.ebuild,v 1.2 2011/01/04 08:52:52 fauli Exp $
 
 EAPI=3
 
@@ -15,13 +15,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
-IUSE="resolvconf gnutls bindist"
+IUSE="resolvconf openssl bindist"
 
 DEPEND=">=dev-libs/libgcrypt-1.1.91
 	>=sys-apps/iproute2-2.6.19.20061214
-	gnutls? ( net-libs/gnutls )
 	bindist? ( net-libs/gnutls )
-	!gnutls? (
+	openssl? (
 		!bindist? ( dev-libs/openssl )
 	)"
 
@@ -29,7 +28,7 @@ RDEPEND="${DEPEND}
 	resolvconf? ( net-dns/openresolv )"
 
 src_prepare() {
-	if ! use gnutls && ! use bindist; then
+	if use openssl && ! use bindist; then
 		sed -i -e 's/#OPENSSL_GPL_VIOLATION=yes/OPENSSL_GPL_VIOLATION=yes/' "${S}"/Makefile \
 			|| die
 		ewarn "Building SSL support with OpenSSL instead of GnuTLS.  This means that"
