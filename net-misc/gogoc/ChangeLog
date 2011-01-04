@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.8 2010/10/20 10:08:02 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.9 2011/01/04 21:28:03 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> gogoc-1.2-r1.ebuild:
+  added ~sparc keyword (bug 340685)
 
   20 Oct 2010; Christian Faulhammer <fauli@gentoo.org> gogoc-1.2-r1.ebuild:
   add ~x86, bug 340685

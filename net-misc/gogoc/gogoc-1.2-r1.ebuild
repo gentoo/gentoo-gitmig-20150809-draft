@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.5 2010/10/20 10:08:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.6 2011/01/04 21:28:03 xmw Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SRC_URI="http://gogo6.com/downloads/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"
