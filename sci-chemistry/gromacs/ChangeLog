@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.63 2010/12/16 15:35:46 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.64 2011/01/04 04:52:32 darkside Exp $
+
+  04 Jan 2011; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  QA: Remove redundant local use flag description
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> gromacs-4.0.7-r4.ebuild,
   gromacs-4.0.7-r5.ebuild, gromacs-4.5.3.ebuild:
