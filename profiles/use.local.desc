@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6256 2011/01/04 09:13:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6257 2011/01/04 17:53:35 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3011,7 +3011,6 @@ net-misc/asterisk:gtalk - Enable support for Google Talk services
 net-misc/asterisk:h323 - Enable support for the H323 telephony protocol
 net-misc/asterisk:http - Enable embedded web server
 net-misc/asterisk:keepsrc - Install sources into /usr/src for custom patching
-net-misc/asterisk:logrotate - Install a configuration snippet for the logrotate cronjob
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
 net-misc/asterisk:misdn - Build with mISDN (chan_misdn) support for BRI ISDN cards
 net-misc/asterisk:newt - Include additional tools that require redhats windowing toolkit
