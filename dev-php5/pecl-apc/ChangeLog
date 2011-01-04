@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-apc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.70 2010/12/28 19:24:42 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.71 2011/01/04 08:12:12 fauli Exp $
+
+  04 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  pecl-apc-3.1.6-r1.ebuild:
+  stable x86, bug 349659
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> pecl-apc-3.1.6-r1.ebuild:
   Marking pecl-apc-3.1.6-r1 ~ppc64 for bug 349659
