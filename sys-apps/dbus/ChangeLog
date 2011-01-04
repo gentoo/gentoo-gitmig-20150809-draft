@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.273 2011/01/02 15:12:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.274 2011/01/04 17:52:55 armin76 Exp $
+
+  04 Jan 2011; Raúl Porcel <armin76@gentoo.org> dbus-1.4.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #348766
 
   02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> dbus-1.4.1.ebuild:
   Stable on alpha, bug #348766
