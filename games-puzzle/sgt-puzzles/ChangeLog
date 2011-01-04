@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/sgt-puzzles
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.9 2011/01/04 08:26:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.10 2011/01/04 22:53:18 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> sgt-puzzles-9023.ebuild:
+  Stable on amd64 wrt bug #350438
 
   04 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   sgt-puzzles-9023.ebuild:
