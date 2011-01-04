@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.190 2010/12/29 18:27:26 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.191 2011/01/04 09:00:07 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> doxygen-1.7.2.ebuild:
+  sparc stable (bug 338632)
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> doxygen-1.7.2.ebuild:
   Stable on amd64 wrt bug #338632
