@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.2.ebuild,v 1.5 2010/12/28 16:45:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.2.ebuild,v 1.6 2011/01/04 09:06:46 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/buildbot/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="test"
 
 RDEPEND="dev-python/setuptools
