@@ -1,0 +1,12 @@
+# ChangeLog for app-arch/zpaq
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.1 2011/01/04 23:19:48 mgorny Exp $
+
+*zpaq-2.04 (04 Jan 2011)
+
+  04 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  +files/0001-Add-autotools-files.patch, +zpaq-2.04.ebuild, +metadata.xml:
+  Importing zpaq archiver from Sunrise as per bug #278021. The ebuild was
+  updated to install latest libzpaq & zpaq. It also patches in an
+  autotools-based build system to avoid build difficulties.
+
