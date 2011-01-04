@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gdl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.22 2010/12/21 19:52:08 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.23 2011/01/04 05:04:15 bicatali Exp $
+
+*gdl-0.9-r1 (04 Jan 2011)
+
+  04 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> -gdl-0.9.ebuild,
+  +gdl-0.9-r1.ebuild, -files/gdl-0.9_rc4-antlr.patch,
+  -files/gdl-0.9_rc4-wxwidgets.patch:
+  Install both python with gdl as a library and regular gdl exec. Also now uses
+  bundled antlr to make it work on amd64.
 
 *gdl-0.9 (21 Dec 2010)
 
