@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.186 2011/01/03 00:05:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.187 2011/01/04 18:13:43 armin76 Exp $
+
+  04 Jan 2011; Raúl Porcel <armin76@gentoo.org> gtkmm-2.20.3.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #324077
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> gtkmm-2.20.3.ebuild:
   sparc stable (bug 291711)
