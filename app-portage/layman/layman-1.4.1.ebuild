@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.1.ebuild,v 1.3 2010/11/03 18:34:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.1.ebuild,v 1.4 2011/01/04 01:24:26 xmw Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="bazaar cvs darcs git mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python[xml]"

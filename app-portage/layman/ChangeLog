@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.120 2010/11/03 18:34:26 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.121 2011/01/04 01:24:26 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> layman-1.4.1.ebuild:
+  sparc stable (bug 343309)
 
   03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> layman-1.4.1.ebuild:
   x86 stable wrt bug #343309
