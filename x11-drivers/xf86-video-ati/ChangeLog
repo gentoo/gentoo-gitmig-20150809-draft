@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ati
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.130 2010/12/25 20:19:30 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.131 2011/01/04 14:01:55 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> xf86-video-ati-6.12.7.ebuild:
+  sparc stable (bug 336738)
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   xf86-video-ati-6.13.2.ebuild:
