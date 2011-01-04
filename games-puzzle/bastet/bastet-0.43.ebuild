@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.43.ebuild,v 1.2 2010/12/03 08:21:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.43.ebuild,v 1.3 2011/01/04 23:11:57 hwoarang Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://fph.altervista.org/prog/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
