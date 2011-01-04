@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.14 2010/12/20 11:51:27 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.15 2011/01/04 13:40:08 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> bzr-2.2.2-r1.ebuild:
+  sparc stable (bug 346985)
 
 *bzr-2.2.2-r1 (20 Dec 2010)
 
