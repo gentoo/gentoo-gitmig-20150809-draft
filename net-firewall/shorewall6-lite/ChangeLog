@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall6-lite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.11 2010/12/15 20:06:14 constanze Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.12 2011/01/04 14:38:59 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> shorewall6-lite-4.2.11.ebuild,
+  shorewall6-lite-4.4.2.ebuild, shorewall6-lite-4.4.10.ebuild,
+  shorewall6-lite-4.4.15.1.ebuild:
+  added ~sparc keyword (bug 256063)
 
 *shorewall6-lite-4.4.15.1 (13 Dec 2010)
 
