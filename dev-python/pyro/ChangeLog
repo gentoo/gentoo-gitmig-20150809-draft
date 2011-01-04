@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyro
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.28 2010/08/01 13:39:19 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.29 2011/01/04 21:32:26 arfrever Exp $
+
+*pyro-4.2 (04 Jan 2011)
+
+  04 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyro-4.2.ebuild:
+  Version bump. Disable tests requiring network connection (bug #341723).
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> pyro-4.1.ebuild:
   Stable on amd64 wrt bug #330605
