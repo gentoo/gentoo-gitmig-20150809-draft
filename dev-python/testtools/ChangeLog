@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.18 2010/12/18 11:17:20 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.19 2011/01/04 13:36:13 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> testtools-0.9.7.ebuild:
+  sparc stable (bug 346985)
 
   18 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   -testtools-0.9.5.ebuild, -testtools-0.9.6.ebuild:

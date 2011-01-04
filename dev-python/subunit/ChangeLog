@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.3 2010/07/18 06:50:55 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.4 2011/01/04 13:37:39 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> subunit-0.0.6.ebuild:
+  sparc stable (bug 346985)
 
 *subunit-0.0.6 (18 Jul 2010)
 
