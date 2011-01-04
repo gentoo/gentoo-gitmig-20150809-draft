@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/munge
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.5 2010/12/26 06:02:33 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.6 2011/01/04 00:37:20 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> munge-0.5.9.ebuild:
+  added ~sparc (bug 345465)
 
   26 Dec 2010; Matt Turner <mattst88@gentoo.org> munge-0.5.9.ebuild:
   Added ~mips, bug 345465
