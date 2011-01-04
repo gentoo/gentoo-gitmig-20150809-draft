@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/birthday-1.6.2.ebuild,v 1.5 2008/03/27 19:17:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/birthday-1.6.2.ebuild,v 1.6 2011/01/04 16:30:31 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -19,7 +19,7 @@ src_unpack() {
 
 	# Don't strip, install in correct share dir and respect CFLAGS
 	sed -i -e "s:install -s:install:g" -e "s:#SHARE:SHARE:g" -e "s:-O2:${CFLAGS}:g" \
-		Makefile
+		Makefile || die
 }
 
 src_compile() {

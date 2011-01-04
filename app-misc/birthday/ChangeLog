@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/birthday
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.18 2008/03/27 19:17:43 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.19 2011/01/04 16:30:31 jlec Exp $
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> birthday-1.6.2.ebuild:
+  Some Clean up
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> birthday-1.6.2.ebuild:
   Stable on ppc wrt bug 214921
