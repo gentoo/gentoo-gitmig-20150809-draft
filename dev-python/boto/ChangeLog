@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/boto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.29 2010/10/16 20:49:38 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.30 2011/01/04 22:00:43 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> boto-1.9b.ebuild,
+  boto-2.0_beta3.ebuild:
+  added ~sparc keyword (bug 279975)
 
 *boto-2.0_beta3 (16 Oct 2010)
 
