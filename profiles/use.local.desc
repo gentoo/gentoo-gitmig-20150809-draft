@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6254 2011/01/03 03:33:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6255 2011/01/04 05:13:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3408,7 +3408,6 @@ sci-chemistry/gromacs:double-precision - More precise calculations at the expens
 sci-chemistry/gromacs:ffamber - Enable ffamber ports for gromacs
 sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platforms that dont have assembly loops
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs
-sci-chemistry/gromacs:zsh-completion - Enable zsh completion support
 sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd 
 sci-chemistry/mopac7:gmxmopac7 - Add support library for gromacs
