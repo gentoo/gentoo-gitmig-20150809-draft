@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.29 2011/01/04 09:09:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.30 2011/01/04 23:09:49 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> widelands-0.15.ebuild:
+  Stable on amd64 wrt bug #350440
 
   04 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   widelands-0.15.ebuild:
