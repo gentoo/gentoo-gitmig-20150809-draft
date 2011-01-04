@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.317 2011/01/03 17:03:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.318 2011/01/04 19:19:38 vapier Exp $
+
+*coreutils-8.9 (04 Jan 2011)
+
+  04 Jan 2011; Mike Frysinger <vapier@gentoo.org> +coreutils-8.9.ebuild:
+  Version bump.
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> coreutils-8.7.ebuild:
   sparc stable (bug 348471)
