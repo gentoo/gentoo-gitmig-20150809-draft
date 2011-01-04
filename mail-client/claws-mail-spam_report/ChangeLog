@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-spam_report
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-spam_report/ChangeLog,v 1.28 2010/11/23 09:07:03 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-spam_report/ChangeLog,v 1.29 2011/01/04 21:53:23 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  claws-mail-spam_report-0.3.12.ebuild:
+  Stable on amd64 wrt bug #350513
 
   23 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-spam_report-0.3.11.ebuild,
