@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.1.0-r2.ebuild,v 1.7 2010/12/29 15:18:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.1.0-r2.ebuild,v 1.8 2011/01/04 19:58:01 c1pher Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
