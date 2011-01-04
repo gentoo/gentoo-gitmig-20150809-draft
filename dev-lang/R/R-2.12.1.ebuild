@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.1.ebuild,v 1.1 2010/12/22 17:25:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.1.ebuild,v 1.2 2011/01/04 20:51:10 bicatali Exp $
 
 EAPI=2
 inherit eutils flag-o-matic bash-completion versionator
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="doc java jpeg lapack minimal nls perl png readline static-libs threads tk X cairo"
+IUSE="doc java jpeg lapack minimal nls perl png profile readline static-libs threads tk X cairo"
 
 # common depends
 CDEPEND="dev-libs/libpcre
@@ -87,8 +87,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--enable-R-profiling \
-		--enable-memory-profiling \
 		--enable-R-shlib \
 		--with-system-zlib \
 		--with-system-bzlib \
@@ -97,6 +95,8 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		rdocdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
+		$(use_enable profile R-profiling) \
+		$(use_enable profile memory-profiling) \
 		$(use_enable static-libs static) \
 		$(use_enable static-libs R-static-lib) \
 		$(use_enable threads) \
