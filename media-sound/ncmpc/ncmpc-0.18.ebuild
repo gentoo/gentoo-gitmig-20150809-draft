@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.18.ebuild,v 1.4 2010/12/31 11:55:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.18.ebuild,v 1.5 2011/01/04 08:58:20 xmw Exp $
 
 EAPI=2
 inherit multilib
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.sourceforge.net/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 sparc x86"
 IUSE="artist-screen colors debug +help-screen key-screen lirc lyrics-screen mouse nls search-screen song-screen"
 
 RDEPEND=">=dev-libs/glib-2.12:2
