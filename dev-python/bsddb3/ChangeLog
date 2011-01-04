@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.62 2010/12/20 12:39:36 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.63 2011/01/04 00:48:11 xmw Exp $
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> bsddb3-5.1.1.ebuild:
+  sparc stable (bug 349134)
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> bsddb3-5.1.1.ebuild:
   Stable on amd64 wrt bug #349134
