@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.107 2011/01/04 14:11:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.108 2011/01/04 22:35:33 hwoarang Exp $
+
+  04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> groff-1.20.1-r3.ebuild:
+  Stable on amd64 wrt bug #350491
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> groff-1.20.1-r3.ebuild:
   sparc stable (bug 350491)
