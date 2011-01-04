@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r1.ebuild,v 1.1 2010/11/02 20:12:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r2.ebuild,v 1.1 2011/01/04 16:48:42 jer Exp $
 
 EAPI="2"
 
@@ -28,7 +28,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.6.9-GROFF_NO_SGR.patch \
 		"${FILESDIR}"/${PN}-0.6.9-lzma-xz.patch \
 		"${FILESDIR}"/${P}-version.patch \
-		"${FILESDIR}"/${P}-info-suffix.patch
+		"${FILESDIR}"/${P}-info-suffix.patch \
+		"${FILESDIR}"/${P}-dir-file.patch
 	./autogen.sh || die "autogen"
 }
 
