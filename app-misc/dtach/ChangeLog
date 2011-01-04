@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.16 2008/04/11 19:21:01 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.17 2011/01/04 17:55:39 jlec Exp $
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> dtach-0.8.ebuild:
+  Some Clean up
 
   11 Apr 2008; Sven Wegener <swegener@gentoo.org> -dtach-0.7.ebuild:
   Cleanup.

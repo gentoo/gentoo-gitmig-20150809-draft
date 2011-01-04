@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6.ebuild,v 1.23 2010/10/19 06:03:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6.ebuild,v 1.24 2011/01/04 17:49:44 jlec Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="sleeplike program that counts down the number of seconds specified"
+DESCRIPTION="Sleeplike program that counts down the number of seconds specified"
 HOMEPAGE="http://onegeek.org/~tom/software/delay/"
 SRC_URI="http://onegeek.org/~tom/software/delay/dl/${P}.tar.gz"
 
@@ -22,5 +22,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc ChangeLog README
+	dodoc ChangeLog README || die
 }

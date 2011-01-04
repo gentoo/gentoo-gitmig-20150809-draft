@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.15 2010/08/15 16:33:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.16 2011/01/04 17:55:28 jlec Exp $
 
 EAPI="3"
 
@@ -21,8 +21,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo.diff"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch \
+		"${FILESDIR}/${P}-gentoo.diff" \
+		"${FILESDIR}/${P}-gcc43.patch"
 	# fix regex.h issue on case-insensitive file-systems #332235
 	sed -i -e 's/Regex.h/DTRegex.h/' \
 		util/Lexer.h util/Makefile.{am,in} util/Regex.cc || die
@@ -36,7 +37,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog QuickStart README doc/scripts.sh \
 	doc/scripts.tcsh doc/todorc.example || die "dodoc failed"
 

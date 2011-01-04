@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/detox
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.25 2009/08/20 03:40:05 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.26 2011/01/04 17:53:51 jlec Exp $
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> detox-1.2.0.ebuild:
+  Some Clean up
 
   20 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   -files/1.1.1-install-permissions-fix.patch,

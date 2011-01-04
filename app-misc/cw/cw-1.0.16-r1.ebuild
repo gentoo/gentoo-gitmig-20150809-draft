@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16-r1.ebuild,v 1.1 2010/09/16 17:03:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16-r1.ebuild,v 1.2 2011/01/04 17:47:43 jlec Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ src_install() {
 
 	dobin bin/{cw,cwu,colorcfg} || die
 	# app-misc/color currently conflicts; hopefully 'colors' is safe
-	newbin bin/color colors
+	newbin bin/color colors || die
 }
 
 pkg_postinst() {
