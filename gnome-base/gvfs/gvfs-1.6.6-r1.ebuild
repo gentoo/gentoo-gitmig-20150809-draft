@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.6-r1.ebuild,v 1.1 2011/01/04 09:22:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.6-r1.ebuild,v 1.2 2011/01/04 23:50:16 mr_bones_ Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -73,7 +73,7 @@ pkg_setup() {
 		$(use_enable http)
 		$(use_enable gnome-keyring keyring)
 		$(use_enable samba)"
-	
+
 	if use hal && ! use udev; then
 		G2CONF="${G2CONF} --enable-hal"
 		ewarn "Enabling deprecated hal support. This will override udev support."
