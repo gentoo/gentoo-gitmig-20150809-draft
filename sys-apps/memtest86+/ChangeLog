@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.58 2010/06/24 01:02:15 spock Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.59 2011/01/04 12:33:41 jlec Exp $
+
+*memtest86+-4.10-r1 (04 Jan 2011)
+
+  04 Jan 2011; Justin Lecher <jlec@gentoo.org> +memtest86+-4.10-r1.ebuild:
+  Respect compiler and linker, remove uneeded QA_ restriction, remove redundant
+  phase
 
 *memtest86+-4.10 (24 Jun 2010)
 
