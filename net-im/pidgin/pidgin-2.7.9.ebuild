@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.9.ebuild,v 1.6 2011/01/04 05:25:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.9.ebuild,v 1.7 2011/01/04 23:50:35 mr_bones_ Exp $
 
 EAPI=2
 
@@ -45,7 +45,7 @@ RDEPEND="
 		media-plugins/gst-plugins-gconf )
 	zeroconf? ( net-dns/avahi )
 	dbus? ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.90 
+		>=sys-apps/dbus-0.90
 		dev-python/dbus-python )
 	perl? ( >=dev-lang/perl-5.8.2-r1[-build] )
 	gadu?  ( >=net-libs/libgadu-1.9.0[-ssl] )
