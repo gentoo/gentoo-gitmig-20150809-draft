@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.5 2011/01/04 21:55:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdargs/cdargs-1.35-r1.ebuild,v 1.6 2011/01/05 14:53:03 jlec Exp $
 
 inherit elisp-common
 
 DESCRIPTION="Bookmarks and browser for the shell builtin cd command"
-HOMEPAGE="http://www.skamphausen.de/software/cdargs"
+HOMEPAGE="http://www.skamphausen.de/cgi-bin/ska/CDargs"
 SRC_URI="http://www.skamphausen.de/software/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
