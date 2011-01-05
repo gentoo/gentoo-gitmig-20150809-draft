@@ -1,6 +1,9 @@
 # ChangeLog for app-text/crm114
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.41 2011/01/05 17:38:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.42 2011/01/05 19:27:59 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> crm114-20090807.ebuild:
+  Stable on amd64 wrt bug #350717
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> crm114-20070810.ebuild:
   Useless blank line on line: 7
