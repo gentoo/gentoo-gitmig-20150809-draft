@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.3 2011/01/05 14:07:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.4 2011/01/05 14:18:52 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils versionator
@@ -36,8 +36,6 @@ src_configure() {
 }
 
 src_test() {
-	xz -cd "${DISTDIR}"/${PN}-${TESTS_PV}-tests.tar.xz | \
-		tar -x --strip-components 1 || die
-
+	mv "${WORKDIR}"/${PN}-${TESTS_PV}/tests/* tests/ || die
 	autotools-utils_src_test
 }
