@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/supercat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.18 2011/01/05 16:32:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.19 2011/01/05 19:07:33 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> supercat-0.5.5-r1.ebuild:
+  Stable on amd64 wrt bug #350697
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> supercat-0.5.5.ebuild:
   Some Clean up
