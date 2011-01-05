@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unix2dos
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.28 2010/03/20 16:12:11 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.29 2011/01/05 09:11:03 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> unix2dos-2.2-r1.ebuild:
+  Some Clean up
 
   20 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   unix2dos-2.2-r1.ebuild:
