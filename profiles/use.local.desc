@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6261 2011/01/05 20:13:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6262 2011/01/05 21:52:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2118,6 +2118,7 @@ media-sound/mpd:curl - Support for web stream listening
 media-sound/mpd:fifo - Support writing audio to a FIFO
 media-sound/mpd:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-sound/mpd:id3 - Support for ID3 tags
+media-sound/mpd:inotify - Use the Linux kernel inotify subsystem to notice changes to mpd music library
 media-sound/mpd:lame - Support for MP3 streaming via Icecast2
 media-sound/mpd:lastfmradio - Support listening to last.fm radio stations
 media-sound/mpd:libmms - Support for Microsoft Media Server (MMS) streams via libmms
