@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pe-format
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.26 2010/12/20 14:23:23 mgorny Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.27 2011/01/05 14:37:28 mgorny Exp $
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> -pe-format-2.0.4.ebuild,
+  pe-format-2.0.5.ebuild:
+  EAPI bump, drop old version.
 
   20 Dec 2010; Michał Górny <mgorny@gentoo.org> pe-format-2.0.4.ebuild,
   pe-format-2.0.5.ebuild:
