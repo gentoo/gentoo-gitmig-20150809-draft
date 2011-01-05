@@ -1,0 +1,158 @@
+From d885244f70bff899b58f81eb4be76d7da3869706 Mon Sep 17 00:00:00 2001
+From: Tiziano Mueller <dev-zero@gentoo.org>
+Date: Fri, 24 Dec 2010 13:23:23 +0100
+Subject: [PATCH] Added initial connection url handling using the uriparser library for
+ proper URI parsing and handling. Can handle port, tls-port and password
+ for now.
+
+---
+ client/application.cpp |   61 ++++++++++++++++++++++++++++++++++++++++++++++++
+ client/application.h   |    1 +
+ configure.ac           |   19 +++++++++++++++
+ 3 files changed, 81 insertions(+), 0 deletions(-)
+
+diff --git a/client/application.cpp b/client/application.cpp
+index d865e84..a9e86d1 100644
+--- a/client/application.cpp
++++ b/client/application.cpp
+@@ -53,6 +53,8 @@
+ #include <smartcard_channel.h>
+ #endif
+ 
++#include <uriparser/Uri.h>
++
+ #define STICKY_KEY_PIXMAP ALT_IMAGE_RES_ID
+ #define STICKY_KEY_TIMEOUT 750
+ 
+@@ -2130,6 +2132,56 @@ bool Application::set_disabled_display_effects(CmdLineParser& parser, char *val,
+     return true;
+ }
+ 
++bool Application::parse_connection_uri(const char* uri, std::string& host, int& port, int& sport, std::string& password)
++{
++    UriParserStateA state;
++    UriUriA uri_object;
++
++    state.uri = &uri_object;
++
++    if (uriParseUriA(&state, uri) != URI_SUCCESS) {
++        uriFreeUriMembersA(&uri_object);
++        return false;
++    }
++
++    if ((uri_object.scheme.afterLast != uri_object.scheme.first + 5) ||
++            (strncmp(uri_object.scheme.first, "spice", 5) != 0)) {
++        uriFreeUriMembersA(&uri_object);
++        return false;
++    }
++
++    host.assign(uri_object.hostText.first, uri_object.hostText.afterLast);
++
++    UriQueryListA* queryList;
++    int itemCount;
++
++    if (uriDissectQueryMallocA(&queryList, &itemCount,
++                uri_object.query.first, uri_object.query.afterLast) != URI_SUCCESS) {
++        uriFreeUriMembersA(&uri_object);
++        return false;
++    }
++
++    for (UriQueryListA* i(queryList); i != NULL; i = i->next) {
++        if ((strcmp(i->key, "port") == 0) && (i->value != NULL)) {
++            port = str_to_port(i->value);
++            continue;
++        }
++        if ((strcmp(i->key, "tls-port") == 0) && (i->value != NULL)) {
++            sport = str_to_port(i->value);
++            continue;
++        }
++        if ((strcmp(i->key, "password") == 0) && (i->value != NULL)) {
++            password = i->value;
++            continue;
++        }
++        /* ignore all other parameters for now */
++    }
++
++    uriFreeQueryListA(queryList);
++    uriFreeUriMembersA(&uri_object);
++    return true;
++}
++
+ void Application::on_cmd_line_invalid_arg(const char* arg0, const char* what, const char* val)
+ {
+     Platform::term_printf("%s: invalid %s value %s\n", arg0, what, val);
+@@ -2185,6 +2237,7 @@ bool Application::process_cmd_line(int argc, char** argv)
+         SPICE_OPT_HOST = CmdLineParser::OPTION_FIRST_AVILABLE,
+         SPICE_OPT_PORT,
+         SPICE_OPT_SPORT,
++        SPICE_OPT_URI,
+         SPICE_OPT_PASSWORD,
+         SPICE_OPT_FULL_SCREEN,
+         SPICE_OPT_SECURE_CHANNELS,
+@@ -2225,6 +2278,7 @@ bool Application::process_cmd_line(int argc, char** argv)
+     parser.add(SPICE_OPT_HOST, "host", "spice server address", "host", true, 'h');
+     parser.add(SPICE_OPT_PORT, "port", "spice server port", "port", true, 'p');
+     parser.add(SPICE_OPT_SPORT, "secure-port", "spice server secure port", "port", true, 's');
++    parser.add(SPICE_OPT_URI, "uri", "spice uri", "uri", true);
+     parser.add(SPICE_OPT_SECURE_CHANNELS, "secure-channels",
+                "force secure connection on the specified channels", "channel",
+                true);
+@@ -2301,6 +2355,13 @@ bool Application::process_cmd_line(int argc, char** argv)
+             }
+             break;
+         }
++        case SPICE_OPT_URI: {
++            if (parse_connection_uri(val, host, port, sport, password) == false) {
++                on_cmd_line_invalid_arg(argv[0], "uri", val);
++                return false;
++            }
++            break;
++        }
+         case SPICE_OPT_FULL_SCREEN:
+             if (val) {
+                 if (strcmp(val, "auto-conf")) {
+diff --git a/client/application.h b/client/application.h
+index f9bbd53..f6ec524 100644
+--- a/client/application.h
++++ b/client/application.h
+@@ -289,6 +289,7 @@ private:
+     bool set_canvas_option(CmdLineParser& parser, char *val, const char* arg0);
+     bool set_disabled_display_effects(CmdLineParser& parser, char *val, const char* arg0,
+                                       DisplaySetting& disp_setting);
++    bool parse_connection_uri(const char* uri, std::string& host, int& port, int& sport, std::string& password);
+     void on_cmd_line_invalid_arg(const char* arg0, const char* what, const char* val);
+     bool process_cmd_line(int argc, char** argv);
+     void register_channels();
+diff --git a/configure.ac b/configure.ac
+index 511d94e..ef4d68e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -297,6 +297,25 @@ AC_SUBST(JPEG_LIBS)
+ AC_CHECK_LIB(z, deflate, Z_LIBS='-lz', AC_MSG_ERROR([zlib not found]))
+ AC_SUBST(Z_LIBS)
+ 
++URIPARSER_MISSING="Please install uriparser 0.7.5 or later.
++   On a Debian-based system enter 'sudo apt-get install liburiparser-dev'."
++AC_CHECK_LIB(uriparser, uriParseUriA,, AC_MSG_ERROR(${URIPARSER_MISSING}))
++AC_CHECK_HEADER(uriparser/Uri.h,, AC_MSG_ERROR(${URIPARSER_MISSING}))
++
++URIPARSER_TOO_OLD="uriparser 0.7.5 or later is required, your copy is too old."
++AC_COMPILE_IFELSE([
++#include <uriparser/Uri.h>
++#if (defined(URI_VER_MAJOR) && defined(URI_VER_MINOR) && defined(URI_VER_RELEASE) \
++&& ((URI_VER_MAJOR > 0) \
++|| ((URI_VER_MAJOR == 0) && (URI_VER_MINOR > 7)) \
++|| ((URI_VER_MAJOR == 0) && (URI_VER_MINOR == 7) && (URI_VER_RELEASE >= 5)) \
++))
++/* FINE */
++#else
++# error uriparser not recent enough
++#endif
++],,AC_MSG_ERROR(${URIPARSER_TOO_OLD}))
++
+ dnl ===========================================================================
+ dnl check compiler flags
+ 
+-- 
+1.7.3.4
+
