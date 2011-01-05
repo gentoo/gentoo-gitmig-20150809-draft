@@ -1,0 +1,44 @@
+From 2f190ea930d18d491bff127fdf9a58f1e8282aee Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
+Date: Tue, 4 Jan 2011 21:04:53 +0100
+Subject: [PATCH] Add autotools files.
+
+---
+ Makefile.am  |    7 +++++++
+ configure.ac |   10 ++++++++++
+ 2 files changed, 17 insertions(+), 0 deletions(-)
+ create mode 100644 Makefile.am
+ create mode 100644 configure.ac
+
+diff --git a/Makefile.am b/Makefile.am
+new file mode 100644
+index 0000000..533e717
+--- /dev/null
++++ b/Makefile.am
+@@ -0,0 +1,7 @@
++lib_LIBRARIES = libzpaq.a
++include_HEADERS = libzpaq.h
++
++libzpaq_a_SOURCES = libzpaq.cpp libzpaqo.cpp libzpaq.h
++AM_CPPFLAGS = -DNDEBUG
++
++EXTRA_DIST = libzpaq.txt
+diff --git a/configure.ac b/configure.ac
+new file mode 100644
+index 0000000..a272f11
+--- /dev/null
++++ b/configure.ac
+@@ -0,0 +1,10 @@
++AC_PREREQ([2.60])
++AC_INIT([zpaq], [2.04])
++AC_CONFIG_AUX_DIR([build-aux])
++AM_INIT_AUTOMAKE([1.6 foreign no-dependencies])
++
++AC_PROG_CXX
++AC_PROG_RANLIB
++
++AC_CONFIG_FILES([Makefile])
++AC_OUTPUT
+-- 
+1.7.3.4
+

@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/libzpaq
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.1 2011/01/05 16:08:10 mgorny Exp $
+
+*libzpaq-2.02 (05 Jan 2011)
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  +files/0001-Add-autotools-files.patch, +libzpaq-2.02.ebuild, +metadata.xml:
+  Add a stand-alone libzpaq ebuild.
+
