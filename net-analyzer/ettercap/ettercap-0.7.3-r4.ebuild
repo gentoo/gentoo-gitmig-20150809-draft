@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r4.ebuild,v 1.6 2010/12/18 12:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r4.ebuild,v 1.7 2011/01/05 13:57:24 hwoarang Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug gtk ncurses ssl"
 
 # libtool is needed because it provides libltdl (needed for plugins)
