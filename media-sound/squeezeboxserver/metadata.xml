@@ -19,6 +19,5 @@
   </longdescription>
   <use>
     <flag name='aac'>Enable playback support for AAC (.m4a) encoded files</flag>
-    <flag name='alac'>Enable support for alac</flag>
   </use>
 </pkgmetadata>

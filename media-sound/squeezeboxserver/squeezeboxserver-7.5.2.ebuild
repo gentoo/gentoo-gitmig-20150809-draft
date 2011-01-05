@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.0-r1.ebuild,v 1.2 2010/07/23 23:03:05 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.2.ebuild,v 1.1 2011/01/05 19:53:27 lavajoe Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 MAJOR_VER="${PV:0:3}"
 MINOR_VER="${PV:4:1}"
-BUILD_NUM="30464"
+BUILD_NUM="31632"
 SRC_DIR="SqueezeboxServer_v${MAJOR_VER}.${MINOR_VER}"
 MY_P="squeezeboxserver-${MAJOR_VER}.${MINOR_VER}-noCPAN"
 MY_P_BUILD_NUM="squeezeboxserver-${MAJOR_VER}.${MINOR_VER}-${BUILD_NUM}-noCPAN"
@@ -18,10 +18,10 @@ HOMEPAGE="http://www.mysqueezebox.com/download"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lame wavpack alac ogg flac aac"
+IUSE="lame wavpack ogg flac aac"
 
 # Note: EV present because of bug#287857.
-SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${MY_P}.tgz
+SRC_URI="http://downloads.slimdevices.com/${SRC_DIR}/${MY_P}.tgz
 	mirror://gentoo/SqueezeboxServer-EV-3.8.tar.gz"
 
 # Note: common-sense currently required due to bundled EV (Gentoo bug#287257)
@@ -38,7 +38,7 @@ RDEPEND="
 	virtual/logger
 	virtual/mysql
 	>=dev-lang/perl-5.8.8
-	~dev-perl/Audio-Scan-0.62
+	~dev-perl/Audio-Scan-0.82
 	>=dev-perl/GD-2.41
 	>=virtual/perl-IO-Compress-2.015
 	>=dev-perl/YAML-Syck-1.05
@@ -65,7 +65,6 @@ RDEPEND="
 	>=dev-perl/TimeDate-1.16
 	>=dev-perl/Math-VecStat-0.08
 	>=dev-perl/Net-DNS-0.63
-	>=dev-perl/Net-IP-1.25
 	>=dev-perl/Path-Class-0.16
 	>=dev-perl/SQL-Abstract-1.56
 	>=dev-perl/SQL-Abstract-Limit-0.12
@@ -111,8 +110,8 @@ RDEPEND="
 	>=dev-perl/Tie-LLHash-1.003
 	>=dev-perl/Tie-RegexpHash-0.15
 	>=dev-perl/Data-UUID-1.202
+	>=perl-core/Class-ISA-0.36
 	lame? ( media-sound/lame )
-	alac? ( media-sound/alac_decoder )
 	wavpack? ( media-sound/wavpack )
 	flac? (
 		media-libs/flac
@@ -127,6 +126,7 @@ S="${WORKDIR}/${MY_P_BUILD_NUM}"
 ETCDIR="/etc/squeezeboxserver"
 PREFS="${ETCDIR}/squeezeboxserver.prefs"
 PREFSDIR="${ETCDIR}/prefs"
+PREFS2="${PREFSDIR}/server.prefs"
 DOCDIR="/usr/share/doc/squeezeboxserver-${PV}"
 SHAREDIR="/usr/share/squeezeboxserver"
 LIBDIR="/usr/$(get_libdir)/squeezeboxserver"
@@ -156,14 +156,14 @@ src_prepare() {
 
 	# Copy in the module builder - can't run it from the files directory in case
 	# Portage is mounted 'noexec'.
-	cp "${FILESDIR}/build-modules.sh" "${S}"	|| die
+	cp "${FILESDIR}/build-modules-${PVR}.sh" "${S}/build-modules.sh"	|| die
 	chmod 555 "${S}/build-modules.sh"			|| die
 }
 
 # Building of EV present because of bug#287857.
 src_compile() {
 	einfo "Building bundled Perl modules (some warnings are normal here)..."
-	"./build-modules.sh" "${DISTDIR}" || die "Unable to build Perl modules"
+	"./build-modules.sh" "${DISTDIR}" "${S}/perl-modules" || die "Unable to build Perl modules"
 }
 
 src_install() {
@@ -200,8 +200,7 @@ src_install() {
 
 	# Install compiled Perl modules because of bug#287857.
 	dodir "${LIBDIR}/CPAN/arch"
-	cp -r CPAN-arch/* "${D}${LIBDIR}/CPAN/arch" || die "Unable to install compiled CPAN modules"
-	cp -r CPAN-pm/* "${D}${LIBDIR}/CPAN" || die "Unable to install compiled CPAN modules"
+	mv perl-modules/*/*/*/* "${D}${LIBDIR}/CPAN/arch" || die "Unable to install compiled CPAN modules"
 
 	# Strings and version identification
 	insinto "${SHAREDIR}"
@@ -464,9 +463,11 @@ pkg_config() {
 
 	# Remove the existing MySQL preferences from Squeezebox Server (if any).
 	sc_remove_db_prefs "${PREFS}"
+	sc_remove_db_prefs "${PREFS2}"
 
 	# Insert the external MySQL configuration into the preferences.
 	sc_update_prefs "${PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
+	sc_update_prefs "${PREFS2}" "${DBUSER}" "${DBUSER_PASSWD}"
 
 	# Phew - all done. Give some tips on what to do now.
 	einfo "Database configuration complete."

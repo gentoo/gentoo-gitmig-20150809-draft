@@ -1,6 +1,6 @@
---- Slim/Web/HTTP.pm.old	2010-04-08 22:01:10.000000000 +0100
-+++ Slim/Web/HTTP.pm	2010-04-08 22:26:25.000000000 +0100
-@@ -2199,9 +2199,10 @@
+--- Slim/Web/HTTP.pm.old	2010-07-06 08:30:49.243499965 +0100
++++ Slim/Web/HTTP.pm	2010-07-06 08:30:49.243499965 +0100
+@@ -2214,9 +2214,10 @@
  		# only kill the timer if we were called for the active streaming connection;
  		# otherwise we might kill the timer related to the next connection too.
  		Slim::Utils::Timers::killTimers($client, \&tryStreamingLater);

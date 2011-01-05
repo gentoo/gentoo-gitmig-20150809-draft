@@ -1,5 +1,5 @@
---- slimserver.pl.old	2010-04-12 12:56:18.000000000 +0100
-+++ slimserver.pl	2010-04-12 12:58:28.000000000 +0100
+--- slimserver.pl.old	2010-07-06 08:30:49.267542493 +0100
++++ slimserver.pl	2010-07-06 08:30:49.267542493 +0100
 @@ -397,8 +397,9 @@
  	
  	# Generate a UUID for this SC instance on first-run
