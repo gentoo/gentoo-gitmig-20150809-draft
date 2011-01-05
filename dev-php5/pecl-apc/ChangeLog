@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.73 2011/01/04 21:12:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.74 2011/01/05 19:44:16 olemarkus Exp $
+
+  05 Jan 2011; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-apc-3.0.19.ebuild, -pecl-apc-3.1.3_p1-r1.ebuild,
+  -pecl-apc-3.1.4-r1.ebuild, -pecl-apc-3.1.5-r1.ebuild,
+  -pecl-apc-3.1.5-r2.ebuild:
+  Removed old versions
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> pecl-apc-3.1.4.ebuild:
   sparc stable (bug 337194)
