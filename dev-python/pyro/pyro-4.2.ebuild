@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.2.ebuild,v 1.1 2011/01/04 21:32:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.2.ebuild,v 1.2 2011/01/05 13:36:29 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -31,7 +31,7 @@ src_prepare() {
 	distutils_src_prepare
 
 	# Fix tests with >=dev-python/coverage-3.4.
-	sed -e "s/omit_prefixes=/omit=/" -i tests/run_testsuite.py
+	sed -e 's/omit_prefixes=\["PyroTests"\]/omit=["PyroTests*"]/' -i tests/run_testsuite.py
 
 	# Disable tests requiring network connection.
 	sed \
