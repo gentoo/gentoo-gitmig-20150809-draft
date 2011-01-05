@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203-r1.ebuild,v 1.1 2011/01/04 04:40:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203-r1.ebuild,v 1.2 2011/01/05 03:05:49 darkside Exp $
 
 MY_PV="20080310"
 DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris"
 IUSE=""
 
 DEPEND=">=app-shells/zsh-4.3.5"

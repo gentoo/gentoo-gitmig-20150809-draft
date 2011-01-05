@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.44 2011/01/04 04:40:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.45 2011/01/05 03:05:49 darkside Exp $
+
+  05 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  zsh-completion-20091203-r1.ebuild:
+  mark ~ppc64, noarch package needed for latest eix
 
 *zsh-completion-20091203-r1 (04 Jan 2011)
 
