@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.47 2010/11/25 21:57:59 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.48 2011/01/05 20:28:52 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> qemu-kvm-0.13.0-r2.ebuild:
+  Stable on amd64 wrt bug #346681
 
   25 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   qemu-kvm-0.13.0-r2.ebuild:

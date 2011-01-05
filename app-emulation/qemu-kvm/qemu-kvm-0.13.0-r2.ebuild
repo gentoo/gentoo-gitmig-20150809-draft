@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.13.0-r2.ebuild,v 1.2 2010/11/25 21:57:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.13.0-r2.ebuild,v 1.3 2011/01/05 20:28:52 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+	KEYWORDS="amd64 ~ppc ~ppc64 x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
