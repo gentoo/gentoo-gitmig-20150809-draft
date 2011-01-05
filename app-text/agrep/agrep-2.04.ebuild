@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04.ebuild,v 1.20 2010/01/02 10:52:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04.ebuild,v 1.21 2011/01/05 17:09:10 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -14,19 +14,20 @@ KEYWORDS="amd64 mips ppc ppc64 sparc x86 ~ppc-macos ~sparc-solaris"
 IUSE=""
 
 DEPEND=""
-RDEPEND="!dev-libs/tre
+RDEPEND="
+	!dev-libs/tre
 	!app-misc/glimpse"
 
 src_compile() {
 	# Remove first occurace of CFLAGS so we grab the user CFLAGS
-	sed -i -e 's/^CFLAGS.*//' Makefile
+	sed -i -e 's/^CFLAGS.*//' Makefile || die
 	tc-export CC
 	emake || die
 }
 
 src_install() {
-	dobin agrep
-	doman agrep.1
+	dobin agrep || die
+	doman agrep.1 || die
 	dodoc README agrep.algorithms agrep.chronicle COPYRIGHT \
-		contribution.list
+		contribution.list || die
 }

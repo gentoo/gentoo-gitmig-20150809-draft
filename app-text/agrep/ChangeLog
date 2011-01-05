@@ -1,6 +1,10 @@
 # ChangeLog for app-text/agrep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.24 2010/08/13 20:02:07 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.25 2011/01/05 17:09:10 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> agrep-2.04.ebuild,
+  agrep-2.04-r1.ebuild:
+  Some Clean up
 
 *agrep-2.04-r1 (13 Aug 2010)
 
