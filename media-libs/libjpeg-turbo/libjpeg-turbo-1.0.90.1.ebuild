@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.90-r1.ebuild,v 1.1 2010/11/07 20:50:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.90.1.ebuild,v 1.1 2011/01/05 13:56:45 anarchy Exp $
 
 EAPI=2
-inherit libtool
+inherit autotools libtool
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accellerated jpeg library"
 HOMEPAGE="http://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="http://dev.gentoo.org/~anarchy/dist/${P}-1.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~anarchy/dist/${P}.tar.bz2"
 
 LICENSE="as-is LGPL-2.1 wxWinLL-3.1"
 SLOT="0"
@@ -18,9 +18,10 @@ RDEPEND="!media-libs/jpeg:0"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
-S="${WORKDIR}/${PN}-1.0.90"
+S="${WORKDIR}/${PN}"
 
 src_prepare() {
+	eautoreconf -fiv
 	elibtoolize
 }
 
