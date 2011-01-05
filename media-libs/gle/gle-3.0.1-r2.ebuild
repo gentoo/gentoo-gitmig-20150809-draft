@@ -1,41 +1,46 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.33 2011/01/05 07:14:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.34 2011/01/05 08:47:06 scarabeus Exp $
 
-inherit eutils
+EAPI=3
+
+inherit autotools multilib
 
 DESCRIPTION="GL extrusion library"
 HOMEPAGE="http://www.linas.org/gle"
-SRC_URI="http://www.linas.org/gle/pub/gle-3.0.1.tar.gz"
+SRC_URI="http://www.linas.org/gle/pub/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
-IUSE=""
+IUSE="doc static-libs"
 
 DEPEND="virtual/opengl
-	virtual/glu
-	media-libs/freeglut"
-RDEPEND="${DEPEND}"
+	media-libs/freeglut
+	app-admin/eselect-opengl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/configure-LANG.patch
-
+src_prepare() {
 	# Replace inclusion of malloc.h with stdlib.h as needed by Mac OS X and
-	# FreeBSD.
-	sed -i -e 's:malloc.h:stdlib.h:g' "${S}"/src/*
+	# FreeBSD. See bug #130340
+	sed -i -e 's:malloc.h:stdlib.h:g' src/*
+
+	# Don't build binary examples as they never get installed. See bug 141859
+	sed -i -e 's:examples::' Makefile.am
+
+	sed -i -e 's:SUFFIXES +=:SUFFIXES =:' man/Makefile.am public_html/Makefile.am
+	sed -i -e 's:CLEANFILES +=:CLEANFILES =:' man/Makefile.am
+
+	eautoreconf
 }
 
-src_compile() {
-	econf --with-x || die
-	emake || die
+src_configure() {
+	econf \
+		--with-x \
+		$(use_enable static-libs static) \
+		--x-libraries=/usr/$(get_libdir)/opengl/xorg-x11
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
-	dohtml -r public_html
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS README
 }
