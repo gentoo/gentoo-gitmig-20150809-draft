@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.357 2011/01/04 15:36:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.358 2011/01/05 03:06:22 darkside Exp $
+
+  05 Jan 2011; Jeremy Olexa <darkside@gentoo.org> eix-0.22.6.ebuild:
+  specify zsh-completion version needed for upgrade path, bug 350129
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> eix-0.22.5.ebuild:
   Stable on amd64 wrt bug #347305

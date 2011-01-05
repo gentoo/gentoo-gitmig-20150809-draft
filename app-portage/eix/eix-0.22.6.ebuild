@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.6.ebuild,v 1.1 2011/01/04 04:51:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.6.ebuild,v 1.2 2011/01/05 03:06:22 darkside Exp $
 
 EAPI=3
 
@@ -15,10 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="bzip2 debug doc hardened nls optimization strong-optimization sqlite tools zsh-completion"
 
-RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
+# Drop CDEPEND when appropriate zsh-completion is marked stable
+CDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )
 	bzip2? ( app-arch/bzip2 )"
-DEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
+	zsh-completion? ( >=app-shells/zsh-completion-20091203-r1 )"
+DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	doc? ( dev-python/docutils )
 	nls? ( sys-devel/gettext )"
