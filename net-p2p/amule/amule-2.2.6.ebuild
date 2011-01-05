@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.9 2010/05/18 12:48:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.10 2011/01/05 10:17:33 patrick Exp $
 
 EAPI="2"
 
@@ -18,8 +18,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="daemon debug geoip gtk nls remote stats unicode upnp"
 
+# crypto++-5.6.1 leads to segfaults #322713
 DEPEND="=x11-libs/wxGTK-2.8*
 	>=dev-libs/crypto++-5
+	<=dev-libs/crypto++-5.6.1
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26[jpeg] )
 	geoip? ( dev-libs/geoip )
