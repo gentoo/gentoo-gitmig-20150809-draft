@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flaggie
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.10 2010/12/20 14:30:45 mgorny Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.11 2011/01/05 14:02:48 mgorny Exp $
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> -flaggie-0.0.2.4.ebuild,
+  flaggie-0.0.3.ebuild:
+  EAPI bump, drop old version.
 
   20 Dec 2010; Michał Górny <mgorny@gentoo.org> flaggie-0.0.2.4.ebuild,
   flaggie-0.0.3.ebuild:
