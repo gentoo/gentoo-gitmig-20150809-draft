@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/cvs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.3 2010/12/06 20:51:39 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.4 2011/01/05 04:50:41 robbat2 Exp $
+
+*cvs-1.12.12-r9 (05 Jan 2011)
+
+  05 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +files/01-cvs-env.d,
+  +cvs-1.12.12-r9.ebuild, +files/cvs-1.12.12-rcs2log-coreutils.patch:
+  Bug #144114: Fix options for sort to use non-obsolete options. Bug #296823:
+  Install env.d file for CVS_RSH setting.
 
   06 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> -cvs-1.11.20.ebuild,
   -cvs-1.11.21.ebuild, -cvs-1.11.21-r1.ebuild, -cvs-1.11.22.1.ebuild,
