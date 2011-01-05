@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-0_p191.ebuild,v 1.1 2011/01/05 01:01:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-0_p191.ebuild,v 1.2 2011/01/05 01:07:44 xmw Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	app-misc/mime-types"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-177-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-0_p177-asneeded.patch
 }
 
 src_compile() {
