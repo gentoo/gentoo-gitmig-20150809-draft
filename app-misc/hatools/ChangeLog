@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/hatools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.9 2010/04/16 19:07:30 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.10 2011/01/05 15:36:58 jlec Exp $
+
+*hatools-2.14 (05 Jan 2011)
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> hatools-2.00.ebuild,
+  +hatools-2.14.ebuild:
+  Version Bump
 
   16 Apr 2010; Fabian Groffen <grobian@gentoo.org> hatools-2.00.ebuild:
   Marked ~sparc-solaris, ~x86-solaris, ~x86-linux, ~amd64-linux, ~ppc-macos,
