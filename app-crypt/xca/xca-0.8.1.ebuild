@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.8.1.ebuild,v 1.4 2010/06/26 13:11:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.8.1.ebuild,v 1.5 2011/01/05 15:09:23 c1pher Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="A graphical user interface to OpenSSL, RSA public keys, certificates, signing requests and revokation lists"
+DESCRIPTION="A GUI to OpenSSL, RSA public keys, certificates, signing requests and revokation lists"
 HOMEPAGE="http://www.hohnstaedt.de/xca.html"
 SRC_URI="mirror://sourceforge/xca/${P}.tar.gz"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
-RDEPEND=">=dev-libs/openssl-0.9.8
+RDEPEND=">=dev-libs/openssl-0.9.8[-bindist]
 	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
 	doc? ( app-text/linuxdoc-tools )"
