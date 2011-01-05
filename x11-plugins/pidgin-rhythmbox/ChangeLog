@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-rhythmbox
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.8 2009/12/24 08:10:57 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.9 2011/01/05 15:23:25 ssuominen Exp $
+
+  05 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  pidgin-rhythmbox-2.0.ebuild:
+  Remove ppc keywording wrt #330773.
 
   24 Dec 2009; Peter Volkov <pva@gentoo.org> pidgin-rhythmbox-2.0.ebuild:
   Updated HOMEPAGE and SRC_URI, bug #259617, thank Mr. Anderson for report.
