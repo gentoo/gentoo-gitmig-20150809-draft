@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.7 2011/01/05 01:01:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.8 2011/01/05 01:04:06 xmw Exp $
+
+  05 Jan 2011; Michael Weber <xmw@gentoo.org> s3fs-0_p177.ebuild:
+  SRC_URI reverted
 
 *s3fs-0_p191 (05 Jan 2011)
 *s3fs-0_p177-r1 (05 Jan 2011)
