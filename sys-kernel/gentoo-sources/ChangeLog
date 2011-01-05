@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.805 2010/12/27 23:42:45 mpagano Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.806 2011/01/05 14:51:52 mpagano Exp $
+
+*gentoo-sources-2.6.37 (05 Jan 2011)
+
+  05 Jan 2011; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-2.6.37.ebuild:
+  Linux version 2.6.37 including fbcondecor
 
   27 Dec 2010; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-2.6.34-r1.ebuild, -gentoo-sources-2.6.34-r6.ebuild,
