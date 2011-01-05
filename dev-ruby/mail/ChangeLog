@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.2 2011/01/02 11:27:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.3 2011/01/05 07:31:10 graaff Exp $
+
+  05 Jan 2011; Hans de Graaff <graaff@gentoo.org> mail-2.2.13.ebuild:
+  Add rspec dependency also for USE=doc because it is loaded unconditionally
+  in the Rakefile, fixes bug 350467.
 
 *mail-2.2.13 (02 Jan 2011)
 

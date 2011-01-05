@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.2.13.ebuild,v 1.1 2011/01/02 11:27:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.2.13.ebuild,v 1.2 2011/01/05 07:31:10 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -31,7 +31,8 @@ ruby_add_rdepend "
 	>=dev-ruby/mime-types-1.16
 	>=dev-ruby/treetop-1.4.8"
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
+ruby_add_bdepend "doc? ( dev-ruby/rspec:0 )
+	test? ( dev-ruby/rspec:0 )"
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undle/d' -e '6d' Rakefile || die "Unable to remove Bundler code."
