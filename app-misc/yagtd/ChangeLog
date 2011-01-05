@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/yagtd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.8 2010/10/07 19:53:13 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.9 2011/01/05 19:34:31 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> yagtd-0.3.4.ebuild:
+  Stable on amd64 wrt bug #330063
 
 *yagtd-0.3.4 (07 Oct 2010)
 
