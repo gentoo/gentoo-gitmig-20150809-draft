@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.5 2009/09/23 16:31:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.6 2011/01/05 17:30:44 jlec Exp $
 
 inherit eutils
-IUSE="nls static normalizemime mew mimencode test"
+
 
 MY_P="${P}-BlameTheSegfault.src"
 S=${WORKDIR}/${MY_P}
@@ -14,41 +14,44 @@ SRC_URI="http://crm114.sourceforge.net/tarballs/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+IUSE="nls static normalizemime mew mimencode test"
 
-TREVERS="0.7.5"
-
-DEPEND=">=sys-apps/sed-4
-	normalizemime? ( mail-filter/normalizemime )
+RDEPEND="
+	dev-libs/tre
+	sys-apps/sed
 	mew? ( app-emacs/mew )
 	mimencode? ( net-mail/metamail )
-	>=dev-libs/tre-${TREVERS}
+	normalizemime? ( mail-filter/normalizemime )"
+DEPEND="${RDEPEND}
 	test? ( sys-apps/miscfiles )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i "s#^CFLAGS.*#CFLAGS+=${CFLAGS}#" Makefile
-	sed -i "s#^LDFLAGS.*#LDFLAGS+=${LDFLAGS}#" Makefile
+	sed \
+		-e "s#^CFLAGS.*#CFLAGS+=${CFLAGS}#" \
+		-e "s#^LDFLAGS.*#LDFLAGS+=${LDFLAGS}#" \
+		-i Makefile || die
 	if use static ; then
-		sed -i "s#-ltre#-L${S}/tre-${TREVERS}/lib/.libs/ -ltre#g" Makefile
+		sed -i "s#-ltre#-L${S}/tre-${TREVERS}/lib/.libs/ -ltre#g" Makefile || die
 	else
-		sed -i "s#-static##g"  Makefile
+		sed -i "s#-static##g"  Makefile || die
 	fi
-	sed -i "s#ln -f -s crm114_tre crm114##" Makefile
+	sed -i "s#ln -f -s crm114_tre crm114##" Makefile || die
 
 	if use mimencode ; then
 		einfo "Using mimencode -- adjusting mailfilter.cf"
 		sed -i 's%#:mime_decoder: /mimencode -u/%:mime_decoder: /mimencode -u/%' \
-			mailfilter.cf
+			mailfilter.cf || die
 		sed -i 's%:mime_decoder: /mewdecode/%#:mime_decoder: /mewdecode/%' \
-			mailfilter.cf
+			mailfilter.cf || die
 	elif use normalizemime ; then
 		einfo "Using normalizemime -- adjusting mailfilter.cf"
-		sed -i 's%#:mime_decoder: /normalizemime/%:mime_decoder: /normalizemime/%' mailfilter.cf
+		sed -i 's%#:mime_decoder: /normalizemime/%:mime_decoder: /normalizemime/%' mailfilter.cf || die
 
 		sed -i 's%:mime_decoder: /mewdecode/%#:mime_decoder: /mewdecode/%' \
-			mailfilter.cf
+			mailfilter.cf || die
 	fi
 
 }
@@ -58,28 +61,26 @@ src_compile() {
 }
 
 src_install() {
-	dobin crm114 cssutil cssdiff cssmerge
-	dobin cssutil cssdiff cssmerge
-	dobin osbf-util
+	dobin crm114 cssutil cssdiff cssmerge || die
+	dobin cssutil cssdiff cssmerge || die
+	dobin osbf-util || die
 
-	dodoc COLOPHON.txt CRM114_Mailfilter_HOWTO.txt FAQ.txt INTRO.txt
-	dodoc QUICKREF.txt classify_details.txt inoc_passwd.txt
-	dodoc knownbugs.txt things_to_do.txt README
+	dodoc COLOPHON.txt CRM114_Mailfilter_HOWTO.txt FAQ.txt INTRO.txt || die
+	dodoc QUICKREF.txt classify_details.txt inoc_passwd.txt || die
+	dodoc knownbugs.txt things_to_do.txt README || die
 	docinto examples
-	dodoc *.example
+	dodoc *.example || die
 
 	insinto /usr/share/${PN}
-	doins *.crm
-	doins *.cf
-	doins *.mfp
+	doins *.crm || die
+	doins *.cf || die
+	doins *.mfp || die
 }
 
 src_test() {
-	make megatest
+	emake megatest || die
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "The spam-filter CRM files are installed in /usr/share/${PN}."
-	einfo ""
+	elog "The spam-filter CRM files are installed in /usr/share/${PN}."
 }

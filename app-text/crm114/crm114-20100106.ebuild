@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20090807.ebuild,v 1.2 2011/01/05 17:30:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20100106.ebuild,v 1.1 2011/01/05 17:30:44 jlec Exp $
 
 EAPI=2
 
-MY_P="${P}-BlameThorstenAndJenny.src"
+MY_P="${P}-BlameMichelson.src"
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	sed \
-		-e "s#^CFLAGS += -O3 -Wall##" \
+		-e "s#-O3 -Wall##" \
 		-e "s#^CC=.*#CC=$(tc-getCC)#" \
 		-i Makefile || die
 	# Upstream recommends static linking
