@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.4.ebuild,v 1.8 2010/07/07 15:58:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.4.ebuild,v 1.9 2011/01/05 19:13:54 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips sparc x86"
 IUSE="altivec custom-cflags -minimal mmx sse2"
 #IUSE="altivec custom-cflags -minimal mmx -mpi sse2"
 
