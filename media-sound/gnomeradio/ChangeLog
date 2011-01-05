@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomeradio
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.26 2010/07/29 17:49:52 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.27 2011/01/05 13:50:16 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gnomeradio-1.8-r1.ebuild:
+  Stable on amd64 wrt bug #350518
 
 *gnomeradio-1.8-r1 (29 Jul 2010)
 
