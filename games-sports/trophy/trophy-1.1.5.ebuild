@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/trophy-1.1.5.ebuild,v 1.4 2010/05/04 23:19:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/trophy-1.1.5.ebuild,v 1.5 2011/01/05 23:30:26 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -17,8 +17,6 @@ IUSE=""
 RDEPEND="dev-games/clanlib:0.8[opengl]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-PATCHES=( "${FILESDIR}"/${P}-display-segv.patch )
 
 src_prepare() {
 	epatch \
