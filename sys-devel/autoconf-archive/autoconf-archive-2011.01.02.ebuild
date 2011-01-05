@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2010.08.19.ebuild,v 1.2 2010/08/21 21:11:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2011.01.02.ebuild,v 1.1 2011/01/05 10:03:26 scarabeus Exp $
 
 EAPI="3"
 
