@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.34 2011/01/05 08:47:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.35 2011/01/05 08:48:20 scarabeus Exp $
 
 EAPI=3
 
@@ -18,6 +18,7 @@ IUSE="doc static-libs"
 DEPEND="virtual/opengl
 	media-libs/freeglut
 	app-admin/eselect-opengl"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Replace inclusion of malloc.h with stdlib.h as needed by Mac OS X and
