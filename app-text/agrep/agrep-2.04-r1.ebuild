@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04-r1.ebuild,v 1.2 2011/01/05 17:09:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/agrep-2.04-r1.ebuild,v 1.3 2011/01/05 19:18:24 hwoarang Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.cs.arizona.edu/agrep/${P}.tar.Z"
 
 LICENSE="AGREP"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos ~sparc-solaris"
 IUSE=""
 
 DEPEND=""

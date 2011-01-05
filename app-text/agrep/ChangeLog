@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.25 2011/01/05 17:09:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.26 2011/01/05 19:18:24 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> agrep-2.04-r1.ebuild:
+  Stable on amd64 wrt bug #350714
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> agrep-2.04.ebuild,
   agrep-2.04-r1.ebuild:
