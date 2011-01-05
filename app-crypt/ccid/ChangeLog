@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ccid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.58 2010/12/29 17:40:15 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.59 2011/01/05 19:55:46 flameeyes Exp $
+
+*ccid-1.4.1-r2 (05 Jan 2011)
+
+  05 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> +ccid-1.4.1-r2.ebuild:
+  Add a patch to reintroduce compatibility with a few readers such as the
+  O2Micro Oz776 and the blutronics bludrive II CCID that were threw off 1.4.x
+  series after the libusb 1.0 switch.
 
   29 Dec 2010; Thomas Kahle <tomka@gentoo.org> ccid-1.4.1-r1.ebuild:
   x86 stable per bug 349559
