@@ -1,6 +1,14 @@
 # ChangeLog for app-text/dos2unix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.53 2010/09/03 05:29:35 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.54 2011/01/05 09:14:05 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> -dos2unix-3.1-r2.ebuild,
+  -files/dos2unix-3.1-includes.patch, -files/dos2unix-3.1-manpage-update.patch,
+  -files/dos2unix-3.1-preserve-file-modes.patch,
+  -files/dos2unix-3.1-safeconv.patch, -files/dos2unix-3.1-segfault.patch,
+  -files/dos2unix-3.1-workaround-rename-EXDEV.patch, -files/dos2unix-3.1.patch,
+  -dos2unix-5.0.ebuild, dos2unix-5.1.ebuild, dos2unix-5.1.1.ebuild:
+  Some Clean up, removed old
 
 *dos2unix-5.1.1 (03 Sep 2010)
 

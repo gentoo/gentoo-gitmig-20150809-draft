@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.1.ebuild,v 1.7 2010/07/06 08:47:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.1.ebuild,v 1.8 2011/01/05 09:14:05 jlec Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ src_prepare() {
 		-e '/^CC/s|=|?=|' \
 		-e '/CFLAGS_OS \+=/d' \
 		-e '/LDFLAGS_EXTRA \+=/d' \
-		-i "${S}"/Makefile
+		-i "${S}"/Makefile || die
 	tc-export CC
 }
 
