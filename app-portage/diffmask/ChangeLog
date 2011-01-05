@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/diffmask
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.6 2010/12/20 14:28:08 mgorny Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.7 2011/01/05 13:59:50 mgorny Exp $
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3.ebuild:
+  EAPI bump.
 
   20 Dec 2010; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3.ebuild:
   Change the SRC_URIs to use cloud.github.com directly. This avoids issues with
