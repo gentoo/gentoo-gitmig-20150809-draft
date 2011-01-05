@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.42.ebuild,v 1.1 2011/01/05 09:17:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.42.ebuild,v 1.2 2011/01/05 15:10:58 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( >=dev-lang/v8-2.5.9.1 )
+	system-v8? ( >=dev-lang/v8-2.5.9.6 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
