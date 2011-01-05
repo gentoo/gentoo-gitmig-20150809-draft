@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-0_p20100426.ebuild,v 1.1 2011/01/04 23:20:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-0_p20100426.ebuild,v 1.2 2011/01/05 23:30:36 mgorny Exp $
 
-inherit toolchain-funcs
+EAPI=3
+inherit base toolchain-funcs
 
 DESCRIPTION="A set of additional compression profiles for app-arch/zpaq"
 HOMEPAGE="http://mattmahoney.net/dc/zpaq.html"
@@ -21,15 +22,27 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
+S=${WORKDIR}
+
+src_unpack() {
+	default
+	cp "${DISTDIR}"/fast.cfg . || die
+}
+
+src_configure() {
+	sed \
+		-e "s:^pcomp zpaq r:pcomp ${EPREFIX}/usr/bin/zpaq r${EPREFIX}/usr/share/zpaq/:" \
+		-e "s:^pcomp \([^/]\):pcomp ${EPREFIX}/usr/libexec/zpaq/\1:" \
+		-i *.cfg || die
+
+	local sources=( *.cpp )
+	# (the following assignment flattens the array)
+	progs=${sources[@]%.cpp}
+}
+
 src_compile() {
 	tc-export CXX
-	progs='bwtpre bwt_ jpeg_jo exe_jo'
 	emake ${progs} || die
-
-	sed \
-		-e 's:^pcomp zpaq r:pcomp /usr/bin/zpaq r/usr/share/zpaq/:' \
-		-e 's:^pcomp \([^/]\):pcomp /usr/libexec/zpaq/\1:' \
-		-i *.cfg || die
 }
 
 src_install() {
@@ -37,5 +50,5 @@ src_install() {
 	doexe ${progs} || die
 
 	insinto /usr/share/zpaq
-	doins *.cfg "${DISTDIR}"/fast.cfg || die
+	doins *.cfg || die
 }
