@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.90.1.ebuild,v 1.1 2011/01/05 13:56:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.90.1.ebuild,v 1.2 2011/01/05 14:44:52 ssuominen Exp $
 
 EAPI=2
 inherit autotools libtool
@@ -18,7 +18,7 @@ RDEPEND="!media-libs/jpeg:0"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_prepare() {
 	eautoreconf -fiv
