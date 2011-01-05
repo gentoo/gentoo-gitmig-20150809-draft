@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6258 2011/01/04 22:13:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6259 2011/01/05 13:33:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -403,6 +403,8 @@ app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console serve
 app-emulation/qemu-softmmu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
 app-emulation/qemu-softmmu:sdl - Enable the SDL-based console
 app-emulation/spice:gui - Build some GUI components (inside the guest window).
+app-emulation/spice:kde - Install a KDE protocol handler configuration for spice (only in combination with the uri USE flag)
+app-emulation/spice:uri - Add uri-handling support to spicec using dev-libs/uriparser.
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use media-sound/sdl-sound for audio output
 app-emulation/uae:ui - Build the user interface (could be gtk or ncurses based, depending on sdl, dga, svga and aalib USE flags)
