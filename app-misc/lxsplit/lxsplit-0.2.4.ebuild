@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/lxsplit-0.2.4.ebuild,v 1.1 2009/09/06 05:38:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/lxsplit-0.2.4.ebuild,v 1.2 2011/01/05 15:44:54 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -20,5 +20,5 @@ src_compile() {
 
 src_install() {
 	dobin lxsplit || die
-	dodoc ChangeLog README
+	dodoc ChangeLog README || die
 }
