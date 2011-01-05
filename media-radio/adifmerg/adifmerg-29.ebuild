@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-29.ebuild,v 1.1 2010/11/23 18:12:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-29.ebuild,v 1.2 2011/01/05 19:52:38 hwoarang Exp $
 
 MY_P=${P/-}
 
@@ -10,7 +10,7 @@ SRC_URI="http://jaakko.home.cern.ch/jaakko/Soft/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="dev-lang/perl"
