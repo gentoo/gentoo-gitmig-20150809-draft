@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.5 2010/12/18 12:00:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.6 2011/01/05 21:49:55 hwoarang Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
-mikmod modplug mpg123 musepack +network ogg oss pipe pulseaudio sid sqlite unicode
+fluidsynth profile +id3 inotify ipv6 jack lame lastfmradio libmms libsamplerate +mad
+mikmod modplug mpg123 musepack +network ogg oss pipe pulseaudio sid sqlite tcpd unicode
 vorbis wavpack wildmidi zeroconf zip"
 
 RDEPEND="!sys-cluster/mpich2
@@ -46,6 +46,7 @@ RDEPEND="!sys-cluster/mpich2
 	pulseaudio? ( media-sound/pulseaudio )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2:2 )
 	sqlite? ( dev-db/sqlite:3 )
+	tcpd? ( sys-apps/tcp-wrappers )
 	vorbis? ( media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
 	wildmidi? ( media-sound/wildmidi )
@@ -116,6 +117,7 @@ src_configure() {
 		$(use_enable fluidsynth) \
 		$(use_enable jack) \
 		$(use_enable id3) \
+		$(use_enable inotify) \
 		$(use_enable ipv6) \
 		$(use_enable libmms mms) \
 		$(use_enable libsamplerate lsr) \
@@ -130,6 +132,7 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable sid sidplay) \
 		$(use_enable sqlite) \
+		$(use_enable tcpd libwrap)
 		$(use_enable vorbis) \
 		$(use_enable wavpack) \
 		$(use_enable wildmidi) \

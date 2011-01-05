@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.234 2011/01/03 12:13:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.235 2011/01/05 21:49:55 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mpd-0.16.ebuild,
+  metadata.xml:
+  Add inotify and tcpd use flags. Thanks to Hopeless
+  <hopeless@hamiltonshells.ca>. Bug #350312
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> mpd-0.15.15.ebuild:
   sparc stable (bug 348798)
