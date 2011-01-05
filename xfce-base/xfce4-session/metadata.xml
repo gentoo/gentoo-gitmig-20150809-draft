@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
+    <flag name="consolekit">Enable support for sys-auth/consolekit</flag>
     <flag name="fortune">Install tips and tricks app (xfce4-tips), adds dependency on games-misc/fortune-mod</flag>
-    <flag name="gnome-keyring">Support for storing your password.</flag>
+    <flag name="gnome-keyring">Support for storing your password</flag>
   </use>
 </pkgmetadata>
