@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.1 2011/01/04 23:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.2 2011/01/05 16:10:07 mgorny Exp $
+
+*zpaq-2.04-r1 (05 Jan 2011)
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  files/0001-Add-autotools-files.patch, -zpaq-2.04.ebuild,
+  +zpaq-2.04-r1.ebuild:
+  Make zpaq ebuild depend on libzpaq.
 
 *zpaq-2.04 (04 Jan 2011)
 

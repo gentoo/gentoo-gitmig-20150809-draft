@@ -1,24 +1,23 @@
-From 518123ca0f682ec617c2bab16bdb953380b5352c Mon Sep 17 00:00:00 2001
+From e1d785c3f47252beab63242408a575fe64bc3e52 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Tue, 4 Jan 2011 21:04:53 +0100
 Subject: [PATCH] Add autotools files.
 
 ---
- Makefile.am  |   22 ++++++++++++++++++++++
- configure.ac |   28 ++++++++++++++++++++++++++++
+ Makefile.am  |   19 +++++++++++++++++++
+ configure.ac |   31 +++++++++++++++++++++++++++++++
  2 files changed, 50 insertions(+), 0 deletions(-)
  create mode 100644 Makefile.am
  create mode 100644 configure.ac
 
 diff --git a/Makefile.am b/Makefile.am
 new file mode 100644
-index 0000000..3c71e01
+index 0000000..1fc781a
 --- /dev/null
 +++ b/Makefile.am
-@@ -0,0 +1,22 @@
+@@ -0,0 +1,19 @@
 +bin_PROGRAMS = zpaq
-+lib_LIBRARIES = libzpaq.a libzpaqstub.a
-+include_HEADERS = libzpaq.h
++lib_LIBRARIES = libzpaqstub.a
 +
 +if HAVE_POD2MAN
 +man1_MANS = zpaq.1
@@ -27,23 +26,21 @@ index 0000000..3c71e01
 +	$(POD2MAN) $< > $@
 +endif
 +
-+libzpaq_a_SOURCES = libzpaq.cpp libzpaqo.cpp libzpaq.h
-+libzpaqstub_a_SOURCES = libzpaq.cpp zpaq.cpp libzpaq.h
++libzpaqstub_a_SOURCES = zpaq.cpp
 +
 +zpaq_SOURCES = zpaq.cpp libzpaq.h
-+zpaq_LDADD = libzpaq.a
-+zpaq_CPPFLAGS = $(AM_CPPFLAGS) -DOPT='"$(CXX) $(CXXFLAGS) zpaqopt.cpp $(LDFLAGS) @RUNTIME_LDFLAGS@ -o zpaqopt.exe -lzpaqstub"'
++zpaq_CPPFLAGS = $(AM_CPPFLAGS) -DOPT='"$(CXX) $(CXXFLAGS) zpaqopt.cpp $(LDFLAGS) @RUNTIME_LDFLAGS@ -o zpaqopt.exe $(LIBS) -lzpaqstub"'
 +
 +AM_CPPFLAGS = -DNDEBUG
 +
 +MOSTLYCLEANFILES = zpaq.1
-+EXTRA_DIST = zpaq.1.pod libzpaq.txt
++EXTRA_DIST = zpaq.1.pod
 diff --git a/configure.ac b/configure.ac
 new file mode 100644
-index 0000000..d3565e2
+index 0000000..ae211d7
 --- /dev/null
 +++ b/configure.ac
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,31 @@
 +AC_PREREQ([2.60])
 +AC_INIT([zpaq], [2.04])
 +AC_CONFIG_AUX_DIR([build-aux])
@@ -52,6 +49,9 @@ index 0000000..d3565e2
 +AC_LANG([C++])
 +AC_PROG_CXX
 +AC_PROG_RANLIB
++
++AC_CHECK_LIB([zpaq], [main],,
++	[AC_MSG_ERROR([Unable to find libzpaq, please install it before zpaq])])
 +
 +runtime_LDFLAGS='-Wl,--strip-all'
 +AC_MSG_CHECKING([whether the linker supports $runtime_LDFLAGS])
