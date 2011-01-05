@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/s3fs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.6 2010/09/18 01:47:45 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.7 2011/01/05 01:01:41 xmw Exp $
+
+*s3fs-0_p191 (05 Jan 2011)
+*s3fs-0_p177-r1 (05 Jan 2011)
+*s3fs-0_p177 (05 Jan 2011)
+
+  05 Jan 2011; Michael Weber <xmw@gentoo.org> +s3fs-0_p177.ebuild,
+  +s3fs-0_p177-r1.ebuild, +s3fs-0_p191.ebuild,
+  +files/s3fs-0_p177-asneeded.patch, -s3fs-177.ebuild, -s3fs-177-r1.ebuild,
+  -files/s3fs-177-asneeded.patch, -s3fs-191.ebuild:
+  Renumbering prereleases to support releas versions
 
 *s3fs-191 (18 Sep 2010)
 
