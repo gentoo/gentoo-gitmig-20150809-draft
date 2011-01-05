@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/prll
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.4 2010/05/18 07:02:14 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.5 2011/01/05 17:03:51 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> -files/0.4-ldflags.patch,
+  -files/0.4-prefix.patch, -prll-0.4.ebuild:
+  Some Clean up
 
 *prll-0.5 (18 May 2010)
 
