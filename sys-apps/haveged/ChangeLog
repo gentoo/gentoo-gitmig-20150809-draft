@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/haveged
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.1 2011/01/05 03:30:30 robbat2 Exp $
+
+*haveged-1.01 (05 Jan 2011)
+
+  05 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +haveged-1.01.ebuild,
+  +files/haveged-conf.d, +files/haveged-init.d, +metadata.xml:
+  Add another entropy daemon.
+
