@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.6.ebuild,v 1.3 2011/01/05 15:55:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.6.ebuild,v 1.4 2011/01/05 17:57:51 darkside Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ IUSE="bzip2 debug doc hardened nls optimization strong-optimization sqlite tools
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )
 	bzip2? ( app-arch/bzip2 )
-	zsh-completion? ( !<app-shells/zsh-completion-20091203-r1 )"
+	zsh-completion? ( !!<app-shells/zsh-completion-20091203-r1 )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	doc? ( dev-python/docutils )
