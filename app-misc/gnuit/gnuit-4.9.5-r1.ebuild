@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/gnuit-4.9.5-r1.ebuild,v 1.2 2010/03/17 16:44:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnuit/gnuit-4.9.5-r1.ebuild,v 1.3 2011/01/05 15:15:34 jlec Exp $
 
 EAPI="2"
 
@@ -12,10 +12,6 @@ LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
-
-# app-text/texi2html is only needed if any documentation patches are added
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 src_configure() {
 	# The transition option controls whether a "git" wrapper is installed, it is
