@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.15 2010/12/23 22:12:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.16 2011/01/05 23:17:26 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -22,8 +22,11 @@
 DEPEND="!=dev-lang/php-5.3.3-r2
 		!=dev-lang/php-5.2.14-r1
 		!=dev-lang/php-5.3.3-r3
+		!=dev-lang/php-5.3.5
+		!=dev-lang/php-5.3.4-r1
 		!=dev-lang/php-5.3.4
 		!=dev-lang/php-5.2.16
+		!=dev-lang/php-5.2.17
 		!=dev-lang/php-5.2.14-r2"
 
 inherit depend.php
