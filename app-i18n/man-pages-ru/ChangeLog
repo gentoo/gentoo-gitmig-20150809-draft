@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.7 2010/12/31 20:51:43 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.8 2011/01/05 14:04:33 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Stable on amd64 wrt bug #349381
 
   31 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   man-pages-ru-3.27.2066.1435.20101003.ebuild:
