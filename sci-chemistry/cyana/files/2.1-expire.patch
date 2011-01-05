@@ -7,7 +7,7 @@ index 8650129..f08eeef 100644
        if (iwbeg.lt.0) then
          iwbeg=igttim
 -        iexpir=(julday(12,31,2010)-julday(1,1,1970))*24*3600
-+        iexpir=(julday(12,31,2100)-julday(1,1,1970))*24*3600
++        iexpir=(julday(12,31,2011)-julday(1,1,1970))*24*3600
          if (iwbeg.gt.iexpir) call fatmsg ('License expired.')
          j=(iexpir-iwbeg)/(24*3600)
          if (j.lt.1000)
