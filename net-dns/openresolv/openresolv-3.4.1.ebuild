@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.4.0.ebuild,v 1.1 2010/12/18 17:33:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.4.1.ebuild,v 1.1 2011/01/05 23:00:00 darkside Exp $
 
 EAPI=2
 
@@ -23,13 +23,6 @@ src_configure() {
 	econf \
 		--prefix= \
 		--libexecdir=/$(get_libdir)
-}
-
-pkg_postinst() {
-	einfo "${PN}-3.0 has a new configuration file /etc/resolvconf.conf"
-	einfo "instead of mini files in different directories."
-	einfo "You should configure /etc/resolvconf.conf if you use a resolver"
-	einfo "other than libc."
 }
 
 pkg_config() {
