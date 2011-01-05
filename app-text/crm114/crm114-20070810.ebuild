@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.6 2011/01/05 17:30:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.7 2011/01/05 17:38:34 jlec Exp $
 
 inherit eutils
 
-
 MY_P="${P}-BlameTheSegfault.src"
-S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="A powerful text processing tool, mainly used for spam filtering"
 HOMEPAGE="http://crm114.sourceforge.net/"
 SRC_URI="http://crm114.sourceforge.net/tarballs/${MY_P}.tar.gz"
@@ -24,6 +23,8 @@ RDEPEND="
 	normalizemime? ( mail-filter/normalizemime )"
 DEPEND="${RDEPEND}
 	test? ( sys-apps/miscfiles )"
+
+S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
