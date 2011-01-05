@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.28 2009/08/01 02:45:41 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.29 2011/01/05 16:49:54 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> unfoo-1.0.6.ebuild:
+  Some Clean up
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -unfoo-1.0.5.ebuild:
   remove old

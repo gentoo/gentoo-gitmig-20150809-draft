@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-2.2.ebuild,v 1.6 2005/03/31 20:46:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-2.2.ebuild,v 1.7 2011/01/05 16:53:55 jlec Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 amd64 ppc ~sparc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	filter-lfs-flags
