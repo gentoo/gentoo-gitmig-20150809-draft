@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tpipe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/ChangeLog,v 1.4 2009/12/25 02:26:07 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/ChangeLog,v 1.5 2011/01/05 16:41:49 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> tpipe-1.6.ebuild:
+  Some Clean up, removed old
 
   25 Dec 2009; Jeremy Olexa <darkside@gentoo.org> tpipe-1.6.ebuild:
   QA: Fix do* functions, bug 297944
