@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/mono-debugger
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.43 2010/11/26 11:06:48 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.44 2011/01/05 20:31:55 pacho Exp $
+
+*mono-debugger-2.8.1-r1 (05 Jan 2011)
+
+  05 Jan 2011; Pacho Ramos <pacho@gentoo.org> -mono-debugger-2.8.1.ebuild,
+  +mono-debugger-2.8.1-r1.ebuild, files/mono-debugger-2.8-system-bfd.patch,
+  -mono-debugger-9999.ebuild:
+  Revision bump including and using fixed patch to use system libbfd (bug
+  #350738 by Rafał Mużyło). Remove old and drop 9999 since it's not really
+  being tested neither maintained downstream.
 
 *mono-debugger-2.8.1 (26 Nov 2010)
 

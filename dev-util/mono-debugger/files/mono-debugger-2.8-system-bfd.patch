@@ -2,7 +2,7 @@ diff --git a/configure.in b/configure.in
 index c643e64..402be56 100644
 --- a/configure.in
 +++ b/configure.in
-@@ -64,6 +64,18 @@ case "$host" in
+@@ -64,6 +64,19 @@ case "$host" in
  esac
  AC_MSG_RESULT(ok)
  
@@ -14,6 +14,7 @@ index c643e64..402be56 100644
 +		AC_CHECK_HEADERS([bfd.h], [], [AC_MSG_ERROR([Missing bfd.h header])])
 +		AC_CHECK_LIB([bfd], [bfd_init], [:], [AC_MSG_ERROR([Missing libbfd library])])
 +		AC_CHECK_LIB([opcodes], [init_disassemble_info], [:], [AC_MSG_ERROR([Missing libopcodes library])])
++		AC_CHECK_MEMBERS([asection.rawsize], [], [], [[#include <bfd.h>]])
 +	])
 +
 +AM_CONDITIONAL([SYSTEM_LIBBFD], [test "x$with_system_libbfd" = "xyes"])
@@ -52,9 +53,9 @@ index dad57ab..8e7ac68 100644
  	@SERVER_DEPENDENCIES_CFLAGS@ @server_cflags@
  
 +else
-+libmonodebuggerbfdglue_la_LIBADD = 
++libmonodebuggerbfdglue_la_LIBADD = -lopcodes -lbfd
 +
-+libmonodebuggerbfdglue_la_CPPFLAGS = -lopcodes -lbfd \
++libmonodebuggerbfdglue_la_CPPFLAGS = \
 +	@SERVER_DEPENDENCIES_CFLAGS@ @server_cflags@
 +
 +endif

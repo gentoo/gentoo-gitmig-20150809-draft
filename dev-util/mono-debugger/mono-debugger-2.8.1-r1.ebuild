@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.8.1.ebuild,v 1.1 2010/11/26 11:06:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.8.1-r1.ebuild,v 1.1 2011/01/05 20:31:55 pacho Exp $
 
 # bah, tests fail. Needs to be fixed ...
 RESTRICT="test"
 
-EAPI=2
-
-PATCHLEVEL=1
+EAPI="2"
 
 inherit go-mono mono autotools flag-o-matic eutils
 
@@ -29,6 +27,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	go-mono_src_prepare
+
+	# Allow compilation against system libbfd, bnc#662581
 	epatch "${FILESDIR}/${PN}-2.8-system-bfd.patch"
 	eautoreconf
 }
@@ -39,6 +39,7 @@ src_configure() {
 	append-ldflags -Wl,--no-undefined
 
 	go-mono_src_configure \
+		--with-system-libbfd \
 		--disable-static
 }
 
