@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.8.0.ebuild,v 1.4 2010/02/20 17:32:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.8.0.ebuild,v 1.5 2011/01/05 17:50:39 jlec Exp $
 
 EAPI=3
 
@@ -16,18 +16,19 @@ LICENSE="LGPL-2.1"
 IUSE=""
 
 # perl dep is for pod2man
-DEPEND="dev-lang/ruby
+DEPEND="
+	dev-lang/ruby
 	dev-lang/perl"
 RDEPEND="dev-lang/ruby"
 
 src_compile() {
-	emake
+	emake || die
 	# force the manpage to be rebuilt
 	rm ${PN}.1
-	make ${PN}.1
+	emake ${PN}.1 || die
 }
 
 src_install () {
-	emake DESTDIR="${ED}" install
+	emake DESTDIR="${ED}" install || die
 	dobashcompletion "${FILESDIR}"/1.8.0/glark-completion ${PN}
 }
