@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.23 2011/01/05 17:41:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/duconv-1.1.ebuild,v 1.24 2011/01/05 19:28:41 hwoarang Exp $
 
 inherit toolchain-funcs base
 
@@ -9,7 +9,7 @@ SRC_URI="http://people.freenet.de/tfaehr/${PN}.tgz"
 HOMEPAGE="http://people.freenet.de/tfaehr/linux.htm"
 
 LICENSE="as-is"
-KEYWORDS="~amd64 mips ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 mips ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 IUSE=""
 
