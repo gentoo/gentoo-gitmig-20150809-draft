@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.0.1.ebuild,v 1.1 2011/01/01 15:57:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.0.1.ebuild,v 1.2 2011/01/05 00:04:13 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://spinroot.com/spin/Src/${MY_P}.tar.gz"
 
 LICENSE="|| ( spin-commercial spin-educational )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="graphviz tk"
 
 DEPEND="sys-devel/bison"
