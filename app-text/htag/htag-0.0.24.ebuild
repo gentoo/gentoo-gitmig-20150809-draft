@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.24.ebuild,v 1.1 2010/01/03 12:25:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.24.ebuild,v 1.2 2011/01/05 18:30:13 jlec Exp $
 
 inherit perl-app
 
@@ -21,9 +21,9 @@ src_install() {
 
 	dodir /usr/share/doc/${PF}/
 	mv docs/sample-config "${D}"/usr/share/doc/${PF}/
-	dodoc docs/*
+	dodoc docs/* || die
 	docinto example-scripts
-	dodoc example-scripts/*
+	dodoc example-scripts/* || die
 	prepalldocs
 
 	insinto /usr/share/htag/plugins
