@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.18 2011/01/05 16:53:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.19 2011/01/05 19:10:19 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> vcp-2.2-r1.ebuild:
+  Stable on amd64 wrt bug #350706
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> vcp-2.2.ebuild,
   vcp-2.2-r1.ebuild:

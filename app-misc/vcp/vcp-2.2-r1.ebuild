@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-2.2-r1.ebuild,v 1.2 2011/01/05 16:53:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/vcp-2.2-r1.ebuild,v 1.3 2011/01/05 19:10:19 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://members.iinet.net.au/~lynx/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
