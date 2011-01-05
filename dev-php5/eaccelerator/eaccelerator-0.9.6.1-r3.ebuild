@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.1-r2.ebuild,v 1.1 2011/01/04 13:42:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.1-r3.ebuild,v 1.1 2011/01/05 20:31:45 olemarkus Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -52,13 +52,13 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	my_conf="--enable-eaccelerator=shared --with-eaccelerator-userid=`id -u ${HTTPD_USER}`"
 	use debug && my_conf="${my_conf} --with-eaccelerator-debug"
 	use disassembler && my_conf="${my_conf} --with-eaccelerator-disassembler"
 	! use inode && my_conf="${my_conf} --without-eaccelerator-use-inode"
 	use doccommentinclusion && my_conf="${my_conf} --with-eaccelerator-doc-comment-inclusion"
-	php-ext-source-r2_src_compile
+	php-ext-source-r2_src_configure
 }
 
 src_install() {

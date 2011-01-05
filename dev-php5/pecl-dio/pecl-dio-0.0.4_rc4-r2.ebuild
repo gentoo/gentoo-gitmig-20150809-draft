@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dio/pecl-dio-0.0.4_rc4-r1.ebuild,v 1.1 2010/11/04 10:53:27 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dio/pecl-dio-0.0.4_rc4-r2.ebuild,v 1.1 2011/01/05 20:30:25 olemarkus Exp $
 
 EAPI="3"
 
@@ -21,8 +21,8 @@ IUSE=""
 MY_PV=${PV/_rc/RC}
 S="${WORKDIR}/${PN/pecl-/}-${MY_PV}"
 
-src_compile() {
+src_configure() {
 	my_conf="--enable-dio --enable-shared"
 
-	php-ext-pecl-r2_src_compile
+	php-ext-source-r2_src_configure
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/pecl-enchant-1.1.0-r1.ebuild,v 1.1 2010/11/04 11:42:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/pecl-enchant-1.1.0-r2.ebuild,v 1.1 2011/01/05 20:35:32 olemarkus Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND=">=app-text/enchant-1.1.3"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	my_conf="--with-enchant=/usr"
-	php-ext-pecl-r2_src_compile
+	php-ext-source-r2_src_configure
 }
