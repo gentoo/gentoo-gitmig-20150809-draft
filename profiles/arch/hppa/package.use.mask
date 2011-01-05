@@ -1,8 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.72 2010/12/25 10:41:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.73 2011/01/05 23:44:28 ssuominen Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Samuli Suominen <ssuominen@gentoo.org> (6 Dec 2011)
+# Missing sys-power/upower keywording.
+xfce-base/xfce4-session udev
 
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2010)
 # Mask dev-lang/spidermonkey (bug #347827)

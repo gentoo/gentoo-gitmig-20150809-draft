@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.106 2010/12/25 10:41:30 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.107 2011/01/05 23:44:28 ssuominen Exp $
+
+  05 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="udev" for xfce-base/xfce4-session because sys-power/upower is
+  missing keywording.
 
   25 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask,
   use.mask:
