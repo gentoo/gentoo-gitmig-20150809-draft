@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v2.eblit,v 1.4 2010/12/21 09:09:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v2.eblit,v 1.5 2011/01/05 11:23:16 mabi Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${SLOT}"
@@ -35,6 +35,7 @@ eblit-php-src_configure() {
 	phpconfutils_extension_with    "gettext"      "nls"              1
 	phpconfutils_extension_with    "gmp"          "gmp"              1
 	phpconfutils_extension_disable "hash"         "hash"             0
+	phpconfutils_extension_with    "mhash"        "mhash"            0
 	phpconfutils_extension_without "iconv"        "iconv"            0
 	phpconfutils_extension_enable  "intl"         "intl"             1
 	phpconfutils_extension_disable "ipv6"         "ipv6"             0
@@ -113,8 +114,14 @@ eblit-php-src_configure() {
 		phpconfutils_extension_with "imap-ssl" "ssl"  0
 	fi
 
-	phpconfutils_extension_with "interbase"	"interbase"	0 "/opt"
-	phpconfutils_extension_with	"interbase"	"firebird"	0 "/usr"
+	# Interbase/firebird support
+	if use interbase ; then
+		phpconfutils_extension_with "interbase"	"interbase"	0 "/opt"
+	fi
+
+	if use firebird ; then
+		phpconfutils_extension_with	"interbase"	"firebird"	0 "/usr"
+	fi
 
 	# LDAP support
 	if use ldap ; then
