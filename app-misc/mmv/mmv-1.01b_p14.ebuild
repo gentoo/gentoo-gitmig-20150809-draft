@@ -1,16 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p14.ebuild,v 1.4 2008/02/20 23:06:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p14.ebuild,v 1.5 2011/01/05 16:19:01 jlec Exp $
 
 inherit eutils toolchain-funcs
-
-DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
-HOMEPAGE="http://packages.debian.org/unstable/utils/mmv"
 
 DEB_PATCH_VER=${PV#*_p}
 MY_VER=${PV%_p*}
 
-SRC_URI="mirror://debian/pool/main/m/mmv/${PN}_${MY_VER}.orig.tar.gz
+DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
+HOMEPAGE="http://packages.debian.org/unstable/utils/mmv"
+SRC_URI="
+	mirror://debian/pool/main/m/mmv/${PN}_${MY_VER}.orig.tar.gz
 	mirror://debian/pool/main/m/mmv/${PN}_${MY_VER}-${DEB_PATCH_VER}.diff.gz"
 
 LICENSE="freedist"
@@ -31,15 +31,15 @@ src_compile() {
 }
 
 src_install() {
-	dobin mmv
-	dosym /usr/bin/mmv /usr/bin/mcp
-	dosym /usr/bin/mmv /usr/bin/mln
-	dosym /usr/bin/mmv /usr/bin/mad
+	dobin mmv || die
+	dosym mmv /usr/bin/mcp || die
+	dosym mmv /usr/bin/mln || die
+	dosym mmv /usr/bin/mad || die
 
-	doman mmv.1
-	dosym mmv.1.gz /usr/share/man/man1/mcp.1.gz
-	dosym mmv.1.gz /usr/share/man/man1/mln.1.gz
-	dosym mmv.1.gz /usr/share/man/man1/mad.1.gz
+	doman mmv.1 || die
+	newman mmv.1 mcp.1 || die
+	newman mmv.1 mln.1 || die
+	newman mmv.1 mad.1 || die
 
-	dodoc ANNOUNCE debian/{changelog,control,copyright}
+	dodoc ANNOUNCE debian/{changelog,control} || die
 }
