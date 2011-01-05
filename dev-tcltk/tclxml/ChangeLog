@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.43 2011/01/04 00:43:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.44 2011/01/05 20:36:47 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tclxml-3.1-r2.ebuild:
+  Stable on amd64 wrt bug #348027
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> tclxml-3.2-r1.ebuild:
   sparc stable (bug 348022)

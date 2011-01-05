@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.6 2010/12/07 17:18:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/tcldom-3.1.ebuild,v 1.7 2011/01/05 20:37:24 hwoarang Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 IUSE="expat xml threads"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-tcltk/tcllib-1.2

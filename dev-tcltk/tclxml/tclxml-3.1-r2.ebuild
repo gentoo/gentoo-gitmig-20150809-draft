@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.5 2010/12/07 17:18:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.6 2011/01/05 20:36:47 hwoarang Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tclxml/${P}.tar.gz"
 IUSE="debug expat threads xml"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~ppc sparc x86"
 
 DEPEND=">=dev-lang/tcl-8.2
 	>=dev-tcltk/tcllib-1.2
