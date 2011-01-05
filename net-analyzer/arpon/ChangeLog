@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/arpon
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.1 2011/01/05 22:02:25 hwoarang Exp $
+
+*arpon-2.1 (05 Jan 2011)
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +arpon-2.1.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Thanks to Giuseppe Marco Randazzo
+  <gmrandazzo@gmail.com>. Bug #225125
+
