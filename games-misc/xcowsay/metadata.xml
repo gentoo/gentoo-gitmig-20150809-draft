@@ -6,6 +6,9 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
+<use>
+	<flag name="fortune">Installs the fortune-mod xcow binary</flag>
+</use>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>
