@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.11-r1.ebuild,v 1.1 2010/12/25 22:48:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.11-r2.ebuild,v 1.1 2011/01/05 15:24:08 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
-PATCH="${PN}-2.0.7-patches-01"
+PATCH="${PN}-2.0.11-patches-01"
 EMVER="1.0.1"
 
 LANGS="be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
@@ -145,12 +145,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patch"
-
-	epatch "${FILESDIR}"/bug-606109.patch
-	epatch "${FILESDIR}"/${PN}-2.0-gtk+-2.21.patch
-
-	# Respect ldflags when building ldap support.
-	epatch "${FILESDIR}/${PN}-respect-ldflags.patch"
 
 	if use crypt && use mailclient ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
