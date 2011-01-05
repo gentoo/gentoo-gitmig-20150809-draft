@@ -1,6 +1,9 @@
 # ChangeLog for net-im/qwit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.5 2010/10/12 19:30:46 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.6 2011/01/05 14:00:20 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> qwit-1.1_pre2.ebuild:
+  Stable on amd64 wrt bug #350587
 
   12 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   -qwit-1.1_beta-r1.ebuild, -qwit-1.1_pre.ebuild:
