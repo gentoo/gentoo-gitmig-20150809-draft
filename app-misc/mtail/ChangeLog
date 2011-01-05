@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mtail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/ChangeLog,v 1.22 2010/10/19 06:20:38 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/ChangeLog,v 1.23 2011/01/05 16:23:41 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> mtail-1.1.1-r1.ebuild,
+  mtail-1.1.1-r2.ebuild:
+  Some Clean up
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> mtail-1.1.1-r1.ebuild:
   Drop to ~mips

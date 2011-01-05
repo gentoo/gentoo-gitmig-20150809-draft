@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r2.ebuild,v 1.6 2010/10/24 15:52:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.6-r2.ebuild,v 1.7 2011/01/05 16:30:11 jlec Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs
 MY_P="${P/-/_}"
 DEB_PL="7"
 
-DESCRIPTION="A program for splitting terminals into two shells"
+DESCRIPTION="Splitting terminals into two shells"
 HOMEPAGE="http://www.devolution.com/~slouken/projects/splitvt"
 SRC_URI="
 	http://www.devolution.com/~slouken/projects/${PN}/${P}.tar.gz

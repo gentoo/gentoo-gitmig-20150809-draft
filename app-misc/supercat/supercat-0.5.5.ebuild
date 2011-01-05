@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/supercat-0.5.5.ebuild,v 1.6 2009/05/19 21:05:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/supercat-0.5.5.ebuild,v 1.7 2011/01/05 16:32:16 jlec Exp $
 
 DESCRIPTION="A text file colorizer using powerful regular expressions"
 HOMEPAGE="http://supercat.nosredna.net"
@@ -11,10 +11,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc64 sparc x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed!"
 
-	dodoc ChangeLog
+	dodoc ChangeLog || die
 }

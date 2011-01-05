@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ondir
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.19 2010/06/15 11:33:11 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.20 2011/01/05 16:23:33 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> ondir-0.2.2.ebuild,
+  ondir-0.2.2-r1.ebuild:
+  Some Clean up
 
 *ondir-0.2.2-r1 (15 Jun 2010)
 

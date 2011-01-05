@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r2.ebuild,v 1.4 2010/05/24 19:01:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r2.ebuild,v 1.5 2011/01/05 16:23:41 jlec Exp $
 
 EAPI="3"
 
 inherit eutils python
 
-DESCRIPTION="tail workalike, that performs output colourising"
+DESCRIPTION="Tail workalike, that performs output colourising"
 HOMEPAGE="http://matt.immute.net/src/mtail/"
 SRC_URI="http://matt.immute.net/src/mtail/mtail-${PV}.tgz
 	http://matt.immute.net/src/mtail/mtailrc-syslog.sample"

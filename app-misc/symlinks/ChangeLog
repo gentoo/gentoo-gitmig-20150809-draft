@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/symlinks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.25 2010/10/20 02:14:30 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.26 2011/01/05 16:36:10 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> symlinks-1.2-r2.ebuild,
+  symlinks-1.4.ebuild:
+  Some Clean up
 
 *symlinks-1.4 (20 Oct 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.9 2010/01/04 10:09:16 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.10 2011/01/05 16:26:31 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> pip-1.2.ebuild:
+  Some Clean up
 
   04 Jan 2010; <hwoarang@gentoo.org> pip-1.2.ebuild:
   Keyworded for amd64 wrt bug #299336

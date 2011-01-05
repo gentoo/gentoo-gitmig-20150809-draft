@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/splitvt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.31 2010/10/24 15:52:55 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.32 2011/01/05 16:30:11 jlec Exp $
+
+  05 Jan 2011; Justin Lecher <jlec@gentoo.org> -splitvt-1.6.6-r1.ebuild,
+  splitvt-1.6.6-r2.ebuild:
+  Some Clean up
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> splitvt-1.6.6-r2.ebuild:
   stable ppc, bug 342143
