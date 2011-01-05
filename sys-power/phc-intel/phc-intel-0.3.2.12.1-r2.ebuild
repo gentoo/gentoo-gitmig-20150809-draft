@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r2.ebuild,v 1.1 2010/11/07 18:18:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r2.ebuild,v 1.2 2011/01/05 19:19:13 xmw Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	local my_k="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-	if kernel_is eq 2 6 35 || kernel_is eq 2 6 36 ; then
+	if kernel_is eq 2 6 35 || kernel_is eq 2 6 36 || kernel_is eq 2 6 37 ; then
 		cp "${KERNEL_DIR}"/arch/x86/kernel/cpu/cpufreq/mperf.h . || die
 		mkdir inc/${my_k} || die
 		cp "${FILESDIR}"/${P}-${my_k}.patch \
