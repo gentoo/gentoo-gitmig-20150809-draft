@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.0.ebuild,v 1.2 2010/12/26 17:29:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.0-r2.ebuild,v 1.1 2011/01/05 11:17:11 matsuu Exp $
 
 EAPI="3"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -11,7 +11,6 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+anthy canna curl eb emacs ffi gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt4 skk sqlite ssl test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
@@ -95,11 +94,16 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-gentoo.patch" \
-		"${FILESDIR}/${PN}-1.5.4-zhTW.patch"
+		"${FILESDIR}/${PN}-1.5.4-zhTW.patch" \
+		"${FILESDIR}/${P}-sandbox-violation.patch" \
+		"${FILESDIR}/${P}-gettext.patch" \
+		"${FILESDIR}/${P}-xcompose.patch" \
+		"${FILESDIR}/${P}-linker.patch"
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
-	eautoconf
+	#./autogen.sh
+	AT_NO_RECURSIVE=1 eautoreconf
 }
 
 src_configure() {

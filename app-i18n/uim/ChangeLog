@@ -1,6 +1,17 @@
 # ChangeLog for app-i18n/uim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.225 2010/12/26 17:29:08 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.226 2011/01/05 11:17:11 matsuu Exp $
+
+*uim-1.6.0-r2 (05 Jan 2011)
+
+  05 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -uim-1.5.6-r1.ebuild,
+  -uim-1.5.6-r4.ebuild, -files/uim-1.5.6-toplevel-delete-event.patch,
+  -uim-1.6.0.ebuild, +uim-1.6.0-r2.ebuild, +files/uim-1.6.0-gettext.patch,
+  +files/uim-1.6.0-linker.patch, +files/uim-1.6.0-xcompose.patch,
+  -files/uim-disable-notify.diff:
+  Fixed Qt4 issue, bug #349859. Fixed gtk issue, bug #350207. These patches are
+  submitted by Muneyuki Noguchi. Respect CXX and LDFLAGS, bug #349689. Removed
+  old versions.
 
   26 Dec 2010; Jeroen Roovers <jer@gentoo.org> uim-1.6.0.ebuild,
   uim-1.6.0-r1.ebuild:

@@ -1,0 +1,16 @@
+Index: qt4/qtgettext.h
+===================================================================
+--- qt4/qtgettext.h	(revision 6847)
++++ qt4/qtgettext.h	(revision 6848)
+@@ -61,6 +61,11 @@
+ #else /* ENABLE_NLS */
+ 
+ #define mygettext(String) QString::fromLocal8Bit(String)
++/* undef original _(String) macro to use QString */
++#ifdef _
++#undef _
++#endif
++#define _(String) mygettext(String)
+ #define UIC_(String, dummy) (String)
+ #endif /* ENABLE_NLS */
+ 
