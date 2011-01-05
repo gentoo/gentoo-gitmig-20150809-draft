@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.40 2011/01/05 16:58:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.41 2011/01/05 19:13:21 hwoarang Exp $
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> when-1.1.22.ebuild:
+  Stable on amd64 wrt bug #350709
 
 *when-1.1.23 (05 Jan 2011)
 
