@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.03.ebuild,v 1.8 2009/02/25 12:17:34 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.03.ebuild,v 1.9 2011/01/06 02:09:50 vapier Exp $
 
-inherit flag-o-matic eutils
+EAPI="2"
+inherit eutils
 
-DESCRIPTION="UCL: The UCL Compression Library"
+DESCRIPTION="the UCL Compression Library"
 HOMEPAGE="http://www.oberhumer.com/opensource/ucl/"
 SRC_URI="http://www.oberhumer.com/opensource/ucl/download/${P}.tar.gz"
 
@@ -13,13 +14,15 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-src_compile() {
-	epunt_cxx #76771
+src_prepare() {
+	epunt_cxx
+}
+
+src_configure() {
 	econf --enable-shared || die
-	emake || die
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS NEWS README THANKS TODO
 }
