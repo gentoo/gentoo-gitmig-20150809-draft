@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/diffstat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.101 2010/07/21 13:18:02 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.102 2011/01/06 17:09:00 jlec Exp $
+
+*diffstat-1.54 (06 Jan 2011)
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> +diffstat-1.54.ebuild,
+  metadata.xml:
+  Version Bump, Some Clean up
 
 *diffstat-1.53 (21 Jul 2010)
 
