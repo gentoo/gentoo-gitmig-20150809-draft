@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.19.ebuild,v 1.2 2010/12/16 15:23:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.44.ebuild,v 1.1 2011/01/06 09:27:56 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
-	toolchain-funcs versionator virtualx
+	toolchain-funcs versionator
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -21,7 +21,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( >=dev-lang/v8-2.5.9.1 )
+	system-v8? ( >=dev-lang/v8-2.5.9.6 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -260,22 +260,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox base_unittests net_unittests \
-		BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
-	if use test; then
-		emake base_unittests net_unittests \
-			BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base_unittests,net_unittests}
-	fi
-}
-
-src_test() {
-	# Make test failures non-fatal for now. This needs more investigation.
-	maketype=out/Release/base_unittests virtualmake \
-		|| eerror "base_unittests failed"
-	maketype=out/Release/net_unittests virtualmake \
-		|| eerror "net_unittests failed"
 }
 
 src_install() {
