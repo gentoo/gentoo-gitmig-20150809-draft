@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.07.ebuild,v 1.1 2011/01/06 03:15:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.07.ebuild,v 1.2 2011/01/06 03:25:23 vapier Exp $
 
 EAPI="2"
 
@@ -19,9 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="lzma zlib"
 
-DEPEND=">=dev-libs/ucl-1.02
-	dev-lang/perl
-	!app-arch/upx"
+RDEPEND=">=dev-libs/ucl-1.02
+	!app-arch/upx
+	!app-arch/upx-bin"
+DEPEND="${RDEPEND}
+	dev-lang/perl"
 
 S="${WORKDIR}/${MY_P}"
 
