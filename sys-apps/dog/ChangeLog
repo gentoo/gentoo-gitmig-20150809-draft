@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.38 2010/12/05 18:10:58 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.39 2011/01/06 21:30:46 jlec Exp $
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> -dog-1.7-r3.ebuild,
+  dog-1.7-r4.ebuild:
+  Some Clean up
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> dog-1.7-r4.ebuild:
   alpha/sparc stable wrt #342147
