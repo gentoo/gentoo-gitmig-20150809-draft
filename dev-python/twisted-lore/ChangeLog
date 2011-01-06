@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.46 2011/01/06 20:26:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.47 2011/01/06 21:33:20 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> twisted-lore-10.2.0.ebuild:
+  Marking twisted-lore-10.2.0 ppc stable for bug 350894
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org> twisted-lore-10.2.0.ebuild:
   alpha/ia64/sparc stable wrt #333211
