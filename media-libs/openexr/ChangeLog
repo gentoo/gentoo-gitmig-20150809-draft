@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.84 2010/12/08 16:51:26 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.85 2011/01/06 17:28:23 xarthisius Exp $
+
+  06 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> openexr-1.7.0.ebuild:
+  Stable for ppc64 wrt bug 277202
 
   08 Dec 2010; Jeroen Roovers <jer@gentoo.org> openexr-1.7.0.ebuild:
   Stable for PPC (bug #277202).
