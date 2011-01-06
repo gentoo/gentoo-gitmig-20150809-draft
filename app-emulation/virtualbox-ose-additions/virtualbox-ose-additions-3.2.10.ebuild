@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.2.10.ebuild,v 1.2 2010/10/20 21:37:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.2.10.ebuild,v 1.3 2011/01/06 22:20:05 polynomial-c Exp $
 
 EAPI=2
 
@@ -20,7 +20,8 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND="!app-emulation/virtualbox-bin
-	!=app-emulation/virtualbox-ose-9999"
+	!=app-emulation/virtualbox-ose-9999
+	!app-emulation/virtualbox-additions"
 
 src_unpack() {
 	return 0
