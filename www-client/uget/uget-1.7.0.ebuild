@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.6.0.ebuild,v 1.1 2010/08/17 01:04:15 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.7.0.ebuild,v 1.1 2011/01/06 21:31:42 wired Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/"${PN}"-1.5.9.2-as-needed.patch
+	epatch "${FILESDIR}"/"${PN}"-1.7.0-as-needed.patch
 	eautoreconf
 }
 
