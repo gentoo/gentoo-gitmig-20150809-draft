@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/bar
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.23 2009/06/01 09:51:06 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.24 2011/01/06 21:28:57 jlec Exp $
+
+*bar-1.11.0 (06 Jan 2011)
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> bar-1.10.9.ebuild,
+  +bar-1.11.0.ebuild:
+  Version Bump
 
   01 Jun 2009; Peter Volkov <pva@gentoo.org> -bar-1.10.3.ebuild:
   Remove old.
