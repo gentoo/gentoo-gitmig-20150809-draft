@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.7.ebuild,v 1.1 2010/12/01 14:46:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.7.ebuild,v 1.2 2011/01/06 15:28:35 dilfridge Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 inherit kde4-base
 
 DESCRIPTION="KDE image scanning application"
-HOMEPAGE="http://www.kde.org/"
+HOMEPAGE="http://www.kde.org/applications/graphics/skanlite/"
 SRC_URI="mirror://sourceforge/sanewidget/Skanlite/${P}.tar.bz2"
 
 LICENSE="GPL-2"
