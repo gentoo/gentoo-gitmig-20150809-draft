@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rpl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.21 2010/06/07 08:59:34 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.22 2011/01/06 16:21:26 jlec Exp $
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> rpl-1.4.0.ebuild,
+  rpl-1.5.5.ebuild:
+  Some Clean up
 
 *rpl-1.5.5 (07 Jun 2010)
 

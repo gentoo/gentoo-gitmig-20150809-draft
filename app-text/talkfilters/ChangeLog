@@ -1,6 +1,9 @@
 # ChangeLog for app-text/talkfilters
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.33 2010/01/02 12:21:34 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.34 2011/01/06 16:24:20 jlec Exp $
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> talkfilters-2.3.8.ebuild:
+  Some Clean up
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   talkfilters-2.3.8.ebuild:
