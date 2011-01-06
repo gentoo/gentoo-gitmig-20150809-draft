@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.17 2009/10/12 16:41:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.18 2011/01/06 16:47:34 jlec Exp $
 
 inherit eutils
 
@@ -18,17 +18,18 @@ DEPEND="dev-lang/perl"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo-one.patch \
+	epatch \
+		"${FILESDIR}"/${P}-gentoo-one.patch \
 		"${FILESDIR}"/${P}-gentoo-two.patch
 }
 
 src_compile() { :; }
 
 src_install() {
-	dobin colorgcc
+	dobin colorgcc || die
 	dodir /etc/colorgcc /usr/lib/colorgcc/bin
 	insinto /etc/colorgcc
-	doins colorgccrc
+	doins colorgccrc || die
 	einfo "Scanning for compiler front-ends"
 	into /usr/lib/colorgcc/bin
 	for a in gcc cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++ ; do
@@ -37,7 +38,7 @@ src_install() {
 		fi
 	done
 
-	dodoc CREDITS ChangeLog
+	dodoc CREDITS ChangeLog || die
 }
 
 pkg_postinst() {
