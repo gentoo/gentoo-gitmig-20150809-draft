@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.9.ebuild,v 1.1 2010/11/14 20:06:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.9.ebuild,v 1.2 2011/01/06 20:03:29 mgorny Exp $
 
-EAPI=2
+EAPI=3
+inherit autotools-utils
 
 DESCRIPTION="Reimplementation of Bourne shell based on pdksh"
 HOMEPAGE="http://packages.debian.org/posh"
@@ -14,9 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 src_configure() {
-	econf --exec-prefix=/
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
+	myeconfargs=(
+		--exec-prefix=/
+	)
+	autotools-utils_src_configure
 }
