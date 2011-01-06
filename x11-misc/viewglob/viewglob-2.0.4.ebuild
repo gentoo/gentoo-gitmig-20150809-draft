@@ -1,32 +1,32 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.3 2010/07/21 15:18:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.4 2011/01/06 21:34:48 jlec Exp $
 
 inherit eutils
 
-DESCRIPTION="Graphical display of directories and globs referenced at the shell
-prompt."
+DESCRIPTION="Graphical display of directories and globs referenced at the shell prompt"
 HOMEPAGE="http://viewglob.sourceforge.net/"
 SRC_URI="mirror://sourceforge/viewglob/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.2.0
-	>=x11-libs/gtk+-2.4.0
+RDEPEND="
+	dev-libs/glib
+	x11-libs/gtk+
 	|| ( app-shells/bash app-shells/zsh )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog HACKING NEWS README TODO || die
 }
 
 pkg_postinst() {
-	einfo " "
+	echo
 	einfo "/usr/bin/viewglob is a wrapper for vgd and vgseer (client and"
 	einfo "daemon, respectively). Generally speaking, this is what you want to"
 	einfo "execute from your shell."
@@ -44,5 +44,5 @@ pkg_postinst() {
 	ewarn "There are some known bugs in viewglob with screen. Exercise some"
 	ewarn "caution and take results with a pinch of salt if you try the two"
 	ewarn "together."
-	ewarn " "
+	echo
 }
