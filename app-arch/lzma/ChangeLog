@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lzma
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.15 2010/01/01 19:33:33 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.16 2011/01/06 02:57:10 vapier Exp $
+
+*lzma-9.20 (06 Jan 2011)
+
+  06 Jan 2011; Mike Frysinger <vapier@gentoo.org> +lzma-9.20.ebuild:
+  Version bump.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> lzma-4.65.ebuild:
   Transfer Prefix keywords
