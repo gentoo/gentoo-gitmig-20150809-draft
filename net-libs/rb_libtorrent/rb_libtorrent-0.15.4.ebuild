@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.6 2010/12/09 19:35:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.7 2011/01/06 11:53:29 hwoarang Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -19,9 +19,8 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
-DEPEND="|| ( >=dev-libs/boost-1.35
-		( ~dev-libs/boost-1.34.1 dev-cpp/asio ) )
-	python? ( >=dev-libs/boost-1.35.0-r5[python]
+DEPEND=">=dev-libs/boost-1.36
+	python? ( >=dev-libs/boost-1.36[python]
 		|| ( dev-lang/python:2.6[threads]
 		dev-lang/python:2.7[threads] ) )
 	>=sys-devel/libtool-2.2

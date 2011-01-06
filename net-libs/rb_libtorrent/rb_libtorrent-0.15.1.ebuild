@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.1.ebuild,v 1.5 2010/12/09 19:35:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.1.ebuild,v 1.6 2011/01/06 11:53:29 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11.1"
@@ -20,9 +20,8 @@ KEYWORDS="amd64 ~arm ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug doc examples python"
 RESTRICT="test"
 
-DEPEND="|| ( >=dev-libs/boost-1.35
-		( ~dev-libs/boost-1.34.1 dev-cpp/asio ) )
-	python? ( >=dev-libs/boost-1.35.0-r5[python] dev-lang/python:2.6[threads] )
+DEPEND=">=dev-libs/boost-1.36
+	python? ( >=dev-libs/boost-1.36[python] dev-lang/python:2.6[threads] )
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )"  #292998
