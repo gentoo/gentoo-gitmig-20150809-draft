@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.34 2010/12/12 19:04:05 spock Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.35 2011/01/06 22:13:37 spock Exp $
+
+  06 Jan 2011; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.2.ebuild:
+  Block old NVIDIA drivers to prevent collision in /usr/include/CL (bug
+  #348920).
 
   12 Dec 2010; Michał Januszewski <spock@gentoo.org>
   -nvidia-cuda-toolkit-3.0_beta1.ebuild:
