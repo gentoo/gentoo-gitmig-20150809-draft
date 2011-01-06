@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.14.1.ebuild,v 1.1 2010/11/28 09:56:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.14.1.ebuild,v 1.2 2011/01/06 07:32:41 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ IUSE="opengl"
 
 RDEPEND="media-libs/libsdl[opengl?,video]
 	dev-lang/lua
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-net
