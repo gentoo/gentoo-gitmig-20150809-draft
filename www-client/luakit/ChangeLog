@@ -1,6 +1,11 @@
 # ChangeLog for www-client/luakit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.13 2010/11/06 11:05:18 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.14 2011/01/06 20:43:41 wired Exp $
+
+*luakit-2010.12.25 (06 Jan 2011)
+
+  06 Jan 2011; Alex Alexander <wired@gentoo.org> +luakit-2010.12.25.ebuild:
+  version bump
 
   06 Nov 2010; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   dev-libs -> dev-lua for luafilesystem
