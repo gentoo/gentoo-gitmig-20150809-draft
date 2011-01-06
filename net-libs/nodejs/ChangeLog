@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/nodejs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.1 2010/12/12 20:50:27 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.2 2011/01/06 10:13:58 phajdan.jr Exp $
+
+*nodejs-0.3.1-r1 (06 Jan 2011)
+
+  06 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +nodejs-0.3.1-r1.ebuild:
+  Really build with system V8, bug #348609 reported by redneb
+  <redneb@gmx.com>.
 
 *nodejs-0.3.1 (12 Dec 2010)
 *nodejs-0.2.5 (12 Dec 2010)
