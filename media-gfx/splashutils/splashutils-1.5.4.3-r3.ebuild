@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.9 2010/11/28 20:29:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.10 2011/01/06 22:03:21 spock Exp $
 
 EAPI="2"
 
@@ -36,7 +36,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 RDEPEND="gpm? ( sys-libs/gpm )
 	truetype? ( >=media-libs/freetype-2 )
-	png? ( >=media-libs/libpng-1.2.7 )
+	png? ( || ( >=media-libs/libpng-1.4.4[static-libs]
+			<media-libs/libpng-1.4.4:0 ) )
 	mng? (
 		media-libs/lcms:0[static-libs]
 		media-libs/libmng
