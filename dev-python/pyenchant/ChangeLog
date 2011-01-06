@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.36 2010/12/27 20:57:03 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.37 2011/01/06 21:51:03 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> pyenchant-1.6.3.ebuild:
+  Marking pyenchant-1.6.3 ppc for bug 341623
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> pyenchant-1.6.3.ebuild:
   Marking pyenchant-1.6.3 ppc64 for bug 341623
