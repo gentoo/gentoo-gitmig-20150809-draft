@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/texlive-xetex-2010-r1.ebuild,v 1.1 2010/10/30 18:22:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/texlive-xetex-2010-r1.ebuild,v 1.2 2011/01/06 14:20:34 aballier Exp $
 
 EAPI="3"
 
@@ -17,9 +17,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2010
 !=app-text/texlive-core-2007*
-dev-texlive/texlive-latexextra
+>=dev-texlive/texlive-latexextra-2010
 >=dev-texlive/texlive-latex3-2010
 >=app-text/texlive-core-2010[xetex]
+>=dev-texlive/texlive-genericrecommended-2010
+>=dev-texlive/texlive-mathextra-2010
 "
 RDEPEND="${DEPEND} "
 FONT_CONF=( "${FILESDIR}"/09-texlive.conf )
