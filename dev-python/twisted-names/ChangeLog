@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-names
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.51 2010/12/28 01:20:48 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.52 2011/01/06 18:29:07 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org> twisted-names-10.2.0.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #333211
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> twisted-names-10.2.0.ebuild:
   Marking twisted-names-10.2.0 ppc64 for bug 333211
