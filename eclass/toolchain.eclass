@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.444 2010/12/29 07:31:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.445 2011/01/06 23:22:37 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -167,7 +167,7 @@ else
 				IUSE+=" graphite"
 				[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 			fi
-			tc_version_is_at_least "4.5" && IUSE+=" lto"
+			[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
 		fi
 	fi
 
@@ -1326,20 +1326,29 @@ gcc_do_configure() {
 	# users to control this feature in the event they need the support.
 	tc_version_is_at_least "4.3" && confgcc="${confgcc} $(use_enable fixed-point)"
 
-	# graphite support was added in 4.4, which depends upon external libraries
-	# for optimizations.  This option allows users to determine if they want
-	# these optimizations and libraries pulled in.  We disable the version check
-	# so we can use >=ppl-0.11
-	tc_version_is_at_least "4.4" && \
-		confgcc="${confgcc} $(use_with graphite ppl)
-			$(use_with graphite cloog)
-			--disable-ppl-version-check"
+	# Graphite support was added in 4.4, which depends on external libraries
+	# for optimizations.  Up to 4.6 we use cloog-ppl (cloog fork with Parma PPL
+	# backend).  Later versions will use upstream cloog with the ISL backend.  We
+	# disable the PPL version check so we can use >=ppl-0.11.
+	if tc_version_is_at_least "4.4"; then
+		confgcc="${confgcc} $(use_with graphite ppl)"
+		confgcc="${confgcc} $(use_with graphite cloog)"
+		if use graphite; then
+			confgcc="${confgcc} --disable-ppl-version-check"
+			# this will be removed when cloog-ppl-0.15.10 goes stable
+			if has_version '>=dev-libs/cloog-ppl-0.15.10'; then
+				confgcc="${confgcc} --with-cloog-include=/usr/include/cloog-ppl"
+			else
+				confgcc="${confgcc} --with-cloog-include=/usr/include/cloog"
+			fi
+		fi
+	fi
 
-	# lto support was added in 4.5, which depends upon elfutils.  This allows
-	# users to enable that option, and pull in the additional library
-	tc_version_is_at_least "4.5" && \
-		confgcc="${confgcc} $(use_enable lto)"
-
+	# LTO support was added in 4.5, which depends upon elfutils.  This allows
+	# users to enable that option, and pull in the additional library.  In 4.6,
+	# the dependency is no longer required.
+	[[ ${GCC_BRANCH_VER} == 4.5 ]] && confgcc="${confgcc} $(use_enable lto)"
+	[[ ${GCC_BRANCH_VER} > 4.5 ]] && confgcc="${confgcc} --enable-lto"
 
 	[[ $(tc-is-softfloat) == "yes" ]] && confgcc="${confgcc} --with-float=soft"
 	[[ $(tc-is-hardfloat) == "yes" ]] && confgcc="${confgcc} --with-float=hard"
