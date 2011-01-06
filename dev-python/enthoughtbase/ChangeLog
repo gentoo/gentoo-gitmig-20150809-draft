@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enthoughtbase
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.19 2010/12/05 20:23:09 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.20 2011/01/06 21:06:24 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> enthoughtbase-3.0.6.ebuild:
+  Marking enthoughtbase-3.0.6 ~ppc for bug 341627
 
   05 Dec 2010; Thomas Kahle <tomka@gentoo.org> enthoughtbase-3.0.6.ebuild:
   x86 stable per bug 347107
