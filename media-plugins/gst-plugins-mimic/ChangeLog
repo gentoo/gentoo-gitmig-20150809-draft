@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mimic
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.22 2010/12/20 17:21:29 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.23 2011/01/06 16:53:17 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  alpha/ia64/sparc stable wrt #346981
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-mimic-0.10.19.ebuild:
