@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.11 2011/01/05 14:02:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.12 2011/01/06 15:51:12 c1pher Exp $
+
+  06 Jan 2011; Dane Smith <c1pher@gentoo.org> flaggie-0.0.3.ebuild:
+  Tested on arm. Marking ~arm.
 
   05 Jan 2011; Michał Górny <mgorny@gentoo.org> -flaggie-0.0.2.4.ebuild,
   flaggie-0.0.3.ebuild:
