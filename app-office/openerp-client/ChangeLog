@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openerp-client
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/ChangeLog,v 1.4 2010/06/01 08:55:29 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/ChangeLog,v 1.5 2011/01/06 08:17:02 elvanor Exp $
+
+*openerp-client-5.0.15 (06 Jan 2011)
+
+  06 Jan 2011; <elvanor@gentoo.org> +openerp-client-5.0.15.ebuild,
+  +files/openerp-client.desktop:
+  Bump to 5.0.15, improvement (bug #348773).
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openerp-client-5.0.6.ebuild:
