@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.119 2010/12/31 20:53:11 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.120 2011/01/06 01:04:46 vapier Exp $
+
+*less-440 (06 Jan 2011)
+
+  06 Jan 2011; Mike Frysinger <vapier@gentoo.org> +less-440.ebuild:
+  Version bump.
 
 *less-438 (31 Dec 2010)
 
