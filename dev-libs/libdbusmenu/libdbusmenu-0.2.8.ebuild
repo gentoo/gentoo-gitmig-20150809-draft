@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.3 2010/09/16 12:04:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.2.8.ebuild,v 1.4 2011/01/06 15:36:34 dilfridge Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ RDEPEND="dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	test? ( dev-libs/json-glib )
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 src_prepare() {
