@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-2.02.ebuild,v 1.1 2011/01/05 16:08:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-2.02a.ebuild,v 1.1 2011/01/06 16:41:08 mgorny Exp $
 
 EAPI=3
 
@@ -20,8 +20,6 @@ DEPEND="app-arch/unzip"
 RDEPEND="!=app-arch/zpaq-2.04"
 
 S=${WORKDIR}
-
-DOCS=( libzpaq.txt )
 
 src_prepare() {
 	EPATCH_OPTS+=-p1 epatch "${FILESDIR}"/0001-Add-autotools-files.patch

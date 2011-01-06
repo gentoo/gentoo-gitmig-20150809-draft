@@ -1,34 +1,42 @@
-From 2f190ea930d18d491bff127fdf9a58f1e8282aee Mon Sep 17 00:00:00 2001
+From 63be9c605605464b667b880df9e5f5c9e64989a7 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
-Date: Tue, 4 Jan 2011 21:04:53 +0100
+Date: Thu, 6 Jan 2011 17:30:56 +0100
 Subject: [PATCH] Add autotools files.
 
 ---
- Makefile.am  |    7 +++++++
- configure.ac |   10 ++++++++++
- 2 files changed, 17 insertions(+), 0 deletions(-)
+ Makefile.am  |   15 +++++++++++++++
+ configure.ac |   16 ++++++++++++++++
+ 2 files changed, 31 insertions(+), 0 deletions(-)
  create mode 100644 Makefile.am
  create mode 100644 configure.ac
 
 diff --git a/Makefile.am b/Makefile.am
 new file mode 100644
-index 0000000..533e717
+index 0000000..3fee852
 --- /dev/null
 +++ b/Makefile.am
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,15 @@
 +lib_LIBRARIES = libzpaq.a
 +include_HEADERS = libzpaq.h
++
++if HAVE_POD2MAN
++man3_MANS = libzpaq.3
++
++libzpaq.3: libzpaq.3.pod
++	$(POD2MAN) $< > $@
++endif
 +
 +libzpaq_a_SOURCES = libzpaq.cpp libzpaqo.cpp libzpaq.h
 +AM_CPPFLAGS = -DNDEBUG
 +
-+EXTRA_DIST = libzpaq.txt
++MOSTLYCLEANFILES = libzpaq.3
++EXTRA_DIST = libzpaq.3.pod
 diff --git a/configure.ac b/configure.ac
 new file mode 100644
-index 0000000..a272f11
+index 0000000..6fda526
 --- /dev/null
 +++ b/configure.ac
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,16 @@
 +AC_PREREQ([2.60])
 +AC_INIT([zpaq], [2.04])
 +AC_CONFIG_AUX_DIR([build-aux])
@@ -37,8 +45,14 @@ index 0000000..a272f11
 +AC_PROG_CXX
 +AC_PROG_RANLIB
 +
++AC_CHECK_PROG([POD2MAN], [pod2man], [pod2man])
++AM_CONDITIONAL([HAVE_POD2MAN], [test x"$POD2MAN" != x""])
++AS_IF([test "x$POD2MAN" = x], [
++   AC_MSG_WARN([Unable to find pod2man, manpage will not be generated])
++])
++
 +AC_CONFIG_FILES([Makefile])
 +AC_OUTPUT
 -- 
-1.7.3.4
+1.7.4.rc1
 
