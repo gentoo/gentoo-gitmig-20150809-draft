@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.2a.ebuild,v 1.1 2010/12/06 19:51:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.2a.ebuild,v 1.2 2011/01/06 04:21:46 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -18,7 +18,7 @@ IUSE="dedicated mysql"
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-net
 	media-libs/libpng
-	media-libs/jpeg:0
+	virtual/jpeg:0
 	dev-libs/expat
 	!dedicated? (
 		virtual/opengl
