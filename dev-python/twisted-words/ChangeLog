@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.54 2010/12/28 01:23:47 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.55 2011/01/06 20:24:31 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org> twisted-words-10.2.0.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #333211
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> twisted-words-10.2.0.ebuild:
   Marking twisted-words-10.2.0 ppc64 for bug 333211
