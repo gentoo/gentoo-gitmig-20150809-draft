@@ -4,13 +4,13 @@
 DAEMON_OPTS="-c ${CONFIGFILE}"
 
 depend() {
-	need openerp-server
+	after openerp-server
 }
 
 start() {
 	ebegin "Starting openerp-web"
 	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" --exec /usr/bin/openerp-web \
-		--chuid "${USER}" --make-pidfile --background -- ${DAEMON_OPTS}
+		--make-pidfile --background -- ${DAEMON_OPTS}
 	eend $?
 }
 
