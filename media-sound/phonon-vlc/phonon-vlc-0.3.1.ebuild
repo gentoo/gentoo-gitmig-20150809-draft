@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-0.3.1.ebuild,v 1.2 2010/12/04 15:24:56 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-0.3.1.ebuild,v 1.3 2011/01/06 00:32:07 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE=""
 RDEPEND="
 	media-libs/libv4l
 	>=media-sound/phonon-4.4.0
-	>=media-video/vlc-1.1.1
+	>=media-video/vlc-1.1.1[dbus]
 	>=x11-libs/qt-test-4.4.0:4
 	>=x11-libs/qt-dbus-4.4.0:4
 	>=x11-libs/qt-gui-4.4.0:4
