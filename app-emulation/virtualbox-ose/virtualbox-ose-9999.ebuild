@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.12 2010/12/19 11:18:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.13 2011/01/06 22:04:44 polynomial-c Exp $
 
 EAPI=1
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE="alsa headless pulseaudio python +qt4 sdk"
 
-RDEPEND="!app-emulation/virtualbox-bin
+RDEPEND="!app-emulation/virtualbox
+	!app-emulation/virtualbox-bin
 	!app-emulation/virtualbox-ose-additions
 	!app-emulation/virtualbox-modules
 	dev-libs/libIDL

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12-r1.ebuild,v 1.2 2010/12/31 14:43:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.12-r1.ebuild,v 1.3 2011/01/06 22:04:44 polynomial-c Exp $
 
 EAPI=2
 
@@ -24,7 +24,8 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="+additions alsa headless pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
 
-RDEPEND="!app-emulation/virtualbox-bin
+RDEPEND="!app-emulation/virtualbox
+	!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19

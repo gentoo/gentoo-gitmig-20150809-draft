@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-ose
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.79 2010/12/31 14:43:53 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.80 2011/01/06 22:04:44 polynomial-c Exp $
+
+  06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-3.1.8.ebuild, virtualbox-ose-3.2.10.ebuild,
+  virtualbox-ose-3.2.12-r1.ebuild, virtualbox-ose-9999.ebuild:
+  Preparation for new app-emulation/virtualbox ebuild.
 
   31 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   virtualbox-ose-3.2.12-r1.ebuild:
