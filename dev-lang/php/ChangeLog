@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.455 2011/01/05 12:35:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.456 2011/01/06 23:35:43 mabi Exp $
+
+*php-5.3.5 (06 Jan 2011)
+*php-5.2.17 (06 Jan 2011)
+
+  06 Jan 2011; Matti Bickel <mabi@gentoo.org>
+  files/eblits/pkg_postinst-v2.eblit, -php-5.2.16-r1.ebuild,
+  +php-5.2.17.ebuild, -php-5.3.4-r1.ebuild, +php-5.3.5.ebuild:
+  security version bump, remove old
 
   05 Jan 2011; Matti Bickel <mabi@gentoo.org> php-5.2.16-r1.ebuild,
   php-5.3.4-r1.ebuild:

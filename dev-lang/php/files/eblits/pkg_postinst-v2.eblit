@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.9 2011/01/05 11:23:16 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.10 2011/01/06 23:35:43 mabi Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -47,7 +47,7 @@ eblit-php-pkg_postinst() {
 	ls "${ROOT}"/etc/php/*-php5 &>/dev/null
 	if [[ $? -eq 0 ]]; then
 		ewarn "Make sure to migrate your config files, starting with php-5.3.4 and php-5.2.16 config"
-		ewarn "files are now kept at ${ROOT}/etc/php/\$SAPI-php${SLOT}"
+		ewarn "files are now kept at ${ROOT}etc/php/{apache2,cli,cgi,fpm}-php5.x"
 	fi
 	ewarn
 	ewarn "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
