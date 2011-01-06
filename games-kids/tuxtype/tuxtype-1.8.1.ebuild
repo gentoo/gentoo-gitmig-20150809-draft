@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.2 2010/12/02 08:05:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.3 2011/01/06 07:30:08 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-pango
 	media-libs/sdl-mixer
 	media-libs/sdl-image
