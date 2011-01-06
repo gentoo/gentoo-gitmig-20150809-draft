@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.4.ebuild,v 1.2 2010/10/18 20:04:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.5.3.ebuild,v 1.1 2011/01/06 21:56:34 scarabeus Exp $
 
 EAPI=3
 KMNAME="extragear/network"
@@ -9,6 +9,7 @@ if [[ ${PV} != 9999* ]]; then
 	# upstream likes to skip that _ in beta releases
 	KTORRENT_VERSION=$(($(get_major_version)+3)).$(get_after_major_version)
 	MY_PV="${PV/_/}"
+	MY_PV=$(replace_version_separator 3 '-' ${MY_PV}) # ZOMGHACK REMOVE ME NEXT TIME
 	MY_P="${PN}-${MY_PV}"
 
 	KDE_LINGUAS="ar ast be bg ca ca@valencia cs da de el en_GB eo es et eu
