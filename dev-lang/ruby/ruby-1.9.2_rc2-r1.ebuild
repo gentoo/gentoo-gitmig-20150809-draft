@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_rc2-r1.ebuild,v 1.2 2010/12/31 15:02:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_rc2-r1.ebuild,v 1.3 2011/01/06 10:10:38 ssuominen Exp $
 
 EAPI=2
 
@@ -47,7 +47,7 @@ RDEPEND="
 	ncurses? ( sys-libs/ncurses )
 	readline?  ( sys-libs/readline )
 	yaml? ( dev-libs/libyaml )
-	dev-libs/libffi
+	virtual/libffi
 	sys-libs/zlib
 	>=app-admin/eselect-ruby-20100402
 	!=dev-lang/ruby-cvs-${SLOT}*
