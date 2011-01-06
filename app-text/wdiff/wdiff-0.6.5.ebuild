@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.6.5.ebuild,v 1.1 2010/12/05 20:18:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.6.5.ebuild,v 1.2 2011/01/06 16:34:20 jlec Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="
 	sys-apps/diffutils
 	sys-apps/less"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

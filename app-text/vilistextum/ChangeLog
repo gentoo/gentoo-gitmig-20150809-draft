@@ -1,6 +1,10 @@
 # ChangeLog for app-text/vilistextum
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.26 2010/03/18 18:47:42 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.27 2011/01/06 16:31:26 jlec Exp $
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> vilistextum-2.6.7.ebuild,
+  vilistextum-2.6.7-r1.ebuild, vilistextum-2.6.9.ebuild:
+  Some Clean up
 
   18 Mar 2010; Fabian Groffen <grobian@gentoo.org> vilistextum-2.6.9.ebuild,
   +files/vilistextum-2.6.9-prefix.patch:

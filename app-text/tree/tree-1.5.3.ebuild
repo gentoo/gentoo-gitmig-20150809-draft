@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.3.ebuild,v 1.8 2010/03/15 19:58:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.3.ebuild,v 1.9 2011/01/06 16:37:51 jlec Exp $
 
 EAPI=2
+
 inherit toolchain-funcs flag-o-matic bash-completion
 
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
@@ -32,7 +33,7 @@ src_compile() {
 
 src_install() {
 	dobin tree || die "dobin failed"
-	doman man/tree.1
-	dodoc CHANGES README*
+	doman man/tree.1 || die
+	dodoc CHANGES README* || die
 	dobashcompletion "${FILESDIR}"/${PN}.bashcomp
 }
