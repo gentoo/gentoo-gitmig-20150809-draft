@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.46 2010/12/06 19:30:37 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.47 2011/01/06 21:47:05 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> astng-0.20.3.ebuild:
+  Marking astng-0.20.3 ppc for bug 341607
 
 *astng-0.21.0 (06 Dec 2010)
 
