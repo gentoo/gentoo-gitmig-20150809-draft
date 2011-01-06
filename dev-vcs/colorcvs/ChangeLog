@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/colorcvs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.5 2010/06/19 00:46:10 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.6 2011/01/06 21:23:09 jlec Exp $
+
+  06 Jan 2011; Justin Lecher <jlec@gentoo.org> colorcvs-1.4-r1.ebuild:
+  Some Clean up
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> colorcvs-1.4-r1.ebuild:
   Moving dev-util/cvs* to dev-vcs/cvs*

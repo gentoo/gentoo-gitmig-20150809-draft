@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/colorcvs-1.4-r1.ebuild,v 1.3 2010/06/19 00:46:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/colorcvs-1.4-r1.ebuild,v 1.4 2011/01/06 21:23:09 jlec Exp $
 
 EAPI=3
 inherit eutils prefix
@@ -15,7 +15,8 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-maco
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-lang/perl
+RDEPEND="
+	dev-lang/perl
 	dev-vcs/cvs"
 
 src_prepare() {
@@ -34,9 +35,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	echo
 	einfo "An alias to colorcvs was installed for the cvs command."
 	einfo "In order to immediately activate it do:"
 	einfo "\tsource /etc/profile"
-	einfo
+	echo
 }
