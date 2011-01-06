@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.165 2011/01/02 03:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.166 2011/01/06 02:52:03 vapier Exp $
+
+  06 Jan 2011; Mike Frysinger <vapier@gentoo.org> man-1.6g.ebuild:
+  Update blocker to allow newer versions of app-arch/lzma #218459.
 
 *man-1.6g (02 Jan 2011)
 
