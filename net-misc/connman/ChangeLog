@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.28 2010/12/17 14:46:07 dagger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.29 2011/01/06 15:27:42 dagger Exp $
+
+*connman-0.65 (06 Jan 2011)
+*connman-0.64-r1 (06 Jan 2011)
+
+  06 Jan 2011; Robert Piasek <dagger@gentoo.org> -connman-0.61-r2.ebuild,
+  -connman-0.62.ebuild, +connman-0.64-r1.ebuild, +connman-0.65.ebuild:
+  Added version 0.65 (bug #350758). Removed unused USE flag (bug #349006)
 
 *connman-0.64 (17 Dec 2010)
 *connman-0.63-r2 (17 Dec 2010)
