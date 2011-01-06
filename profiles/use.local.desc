@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6265 2011/01/06 04:53:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6266 2011/01/06 23:13:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -413,6 +413,11 @@ app-emulation/vice:memmap - Enable extra monitor features
 app-emulation/vice:xrandr - Enable support for the X xrandr extension
 app-emulation/virt-manager:policykit -  Enables sys-auth/polkit authentication support, required when using app-emulation/libvirt with PolicyKit authentication 
 app-emulation/virt-manager:sasl -  Depend on the proper libraries needed to connect to SASL-enabled libvirtd instances (e.g. Kerberos-protected instances). 
+app-emulation/virtualbox:additions - Install Guest System Tools ISO
+app-emulation/virtualbox:extensions - Install extension module packages
+app-emulation/virtualbox:headless - Build without any graphic frontend
+app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/virtualbox-bin:chm - Install kchmviewer binary to enable online help (in MS CHM format)
 app-emulation/virtualbox-bin:headless - Install without any graphic frontend
