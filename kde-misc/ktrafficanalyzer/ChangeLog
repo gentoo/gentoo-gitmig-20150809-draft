@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/ktrafficanalyzer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ChangeLog,v 1.4 2010/06/03 17:11:35 spatz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ChangeLog,v 1.5 2011/01/06 15:52:16 dilfridge Exp $
+
+*ktrafficanalyzer-0.5.4.1 (06 Jan 2011)
+
+  06 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ktrafficanalyzer-0.5.4.1.ebuild:
+  Version bump
 
   03 Jun 2010; Dror Levin <spatz@gentoo.org> ktrafficanalyzer-0.5.3.ebuild,
   +files/ktrafficanalyzer-0.5.3-gcc45.patch:
