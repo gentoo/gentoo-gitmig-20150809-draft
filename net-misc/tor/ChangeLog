@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.222 2011/01/06 14:01:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.223 2011/01/06 15:44:54 blueness Exp $
+
+  06 Jan 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Removed fauli and added chiiph as maintainer
 
   06 Jan 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added myself as maintainer
