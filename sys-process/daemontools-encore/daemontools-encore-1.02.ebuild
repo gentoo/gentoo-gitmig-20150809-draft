@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/daemontools-encore-1.02.ebuild,v 1.1 2011/01/05 12:32:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/daemontools-encore-1.02.ebuild,v 1.2 2011/01/06 04:01:11 mr_bones_ Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="static"
+IUSE="selinux static"
 
 DEPEND=""
 RDEPEND="selinux? ( sec-policy/selinux-daemontools )
