@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.3.ebuild,v 1.2 2011/01/05 23:43:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.7.3.ebuild,v 1.3 2011/01/06 00:01:10 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="consolekit debug gnome gnome-keyring policykit udev +xfce_plugins_logout"
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.73
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.88
 	x11-apps/iceauth
 	x11-libs/libSM
 	>=x11-libs/libwnck-2.22
