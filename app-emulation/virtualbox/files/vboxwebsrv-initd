@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/files/vboxwebsrv-initd,v 1.1 2011/01/06 22:47:34 polynomial-c Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	#checkconfig || return $?
+
+	ebegin "Starting VirtualBox WebService"
+	start-stop-daemon --start --quiet --pidfile /var/run/vboxwebsrv.pid \
+		--background --make-pidfile --exec /usr/bin/vboxwebsrv \
+		-- -H ${VBOXWEBSRV_HOST} -p ${VBOXWEBSRV_PORT} -t ${VBOXWEBSRV_TIMEOUT} -i ${VBOXWEBSRV_INTERVAL}
+	eend $?
+}
+
+stop() {
+        ebegin "Stopping VirtualBox WebService"
+        start-stop-daemon --stop --quiet --pidfile /var/run/vboxwebsrv.pid
+        eend $?
+}
