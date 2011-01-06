@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.10.ebuild,v 1.3 2010/11/15 13:27:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.10.ebuild,v 1.4 2011/01/06 23:03:18 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://files.randombit.net/botan/${MY_P}.tbz"
 
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86 ~ppc-macos"
+KEYWORDS="amd64 ~ia64 ppc ~sparc x86 ~ppc-macos"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzip2 gmp ssl threads zlib"

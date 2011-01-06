@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.63 2010/11/15 13:27:09 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.64 2011/01/06 23:03:18 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> botan-1.8.10.ebuild:
+  Marking botan-1.8.10 ppc for bug 345473
 
   15 Nov 2010; Markos Chandras <hwoarang@gentoo.org> botan-1.8.10.ebuild:
   Stable on amd64 wrt bug #345473
