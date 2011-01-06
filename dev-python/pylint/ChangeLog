@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.78 2010/12/06 20:03:58 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.79 2011/01/06 21:47:55 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> pylint-0.21.3.ebuild:
+  Marking pylint-0.21.3 ppc for bug 341607
 
 *pylint-0.22.0 (06 Dec 2010)
 
