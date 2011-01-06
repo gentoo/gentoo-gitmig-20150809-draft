@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0_rc5.ebuild,v 1.1 2011/01/05 15:06:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0_rc5.ebuild,v 1.2 2011/01/06 20:15:41 mgorny Exp $
 
-EAPI=2
-
+EAPI=3
 inherit autotools-utils versionator
 
 DESCRIPTION="Text-based, multi-protocol instant messenger"
