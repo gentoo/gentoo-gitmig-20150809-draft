@@ -80,6 +80,7 @@ rtmp
 vpx
 frei0r
 lpsol
+libev
 
 # Stuff that doesn't compile on ia64
 chicken

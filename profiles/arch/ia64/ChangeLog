@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.96 2010/12/17 15:03:40 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.97 2011/01/06 12:45:54 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask libev
 
   17 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
   Mask caps USE flag for smartmontools until libcap-ng is keyworded.
