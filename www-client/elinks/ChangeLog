@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.131 2010/12/26 05:42:03 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.132 2011/01/06 21:01:04 spock Exp $
+
+  06 Jan 2011; Michał Januszewski <spock@gentoo.org> elinks-0.11.5.ebuild,
+  elinks-0.11.6.ebuild, elinks-0.11.7.ebuild, elinks-0.12_pre5.ebuild,
+  elinks-0.12_pre5-r1.ebuild:
+  Add a dependency on dev-ruby/rubygems (bug #325327).
 
   26 Dec 2010; Matt Turner <mattst88@gentoo.org> elinks-0.11.5.ebuild,
   elinks-0.11.6.ebuild, elinks-0.11.7.ebuild, elinks-0.12_pre5.ebuild,
