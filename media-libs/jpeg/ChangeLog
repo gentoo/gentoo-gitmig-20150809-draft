@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.117 2010/08/29 18:14:18 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.118 2011/01/06 00:03:56 ssuominen Exp $
+
+  06 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> jpeg-8b.ebuild:
+  Remove unused libjpeg.la because jpeg is only linking to libc.
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org> jpeg-8b.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #325825
