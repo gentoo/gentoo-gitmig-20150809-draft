@@ -1,0 +1,12 @@
+diff -ru olsrd-0.6.1~/Makefile olsrd-0.6.1/Makefile
+--- olsrd-0.6.1~/Makefile	2011-01-06 23:29:17.000000000 +0100
++++ olsrd-0.6.1/Makefile	2011-01-06 23:32:36.000000000 +0100
+@@ -71,8 +71,6 @@
+ switch:		
+ 	$(MAKECMD) -C $(SWITCHDIR)
+ 
+-# generate it always
+-.PHONY: src/builddata.c
+ src/builddata.c:
+ 	@$(RM) "$@"
+ 	@echo "#include \"defs.h\"" >> "$@" 
