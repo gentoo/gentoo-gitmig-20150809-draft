@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.11 2011/01/03 22:36:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.12 2011/01/06 15:28:15 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit gnome2 fixheadtails eutils autotools
+inherit gnome2 fixheadtails
 
 DESCRIPTION="A gtk+ frontend for libgksu"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
+		--disable-static
 		$(use_enable gnome nautilus-extension)"
 }
 
@@ -36,9 +37,6 @@ src_prepare() {
 
 	ht_fix_file "${S}/gksu-migrate-conf.sh"
 
-	# Fix nautilus plugin linking
-	epatch "${FILESDIR}"/${PN}-2.0.0-gnome-2.22.patch
-
 	if use gnome ; then
 		sed 's/x-terminal-emulator/gnome-terminal/' \
 			-i gksu.desktop || die "sed 1 failed"
@@ -46,13 +44,14 @@ src_prepare() {
 		sed 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' \
 			-i Makefile.am Makefile.in || die "sed 2 failed"
 	fi
-
-	eautoreconf
 }
 
 src_install() {
 	gnome2_src_install
 	chmod +x "${D}/usr/share/gksu/gksu-migrate-conf.sh"
+	if use gnome; then
+		find "${D}" -name "*.la" -delete || die "la file removal failed"
+	fi
 }
 
 pkg_postinst() {
