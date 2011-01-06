@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.46 2011/01/06 23:36:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.47 2011/01/06 23:58:58 polynomial-c Exp $
+
+  06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.0.0.ebuild:
+  Even more runtime-dependencies.
 
   06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.0.0.ebuild:
   Added some more runtime-dependencies.

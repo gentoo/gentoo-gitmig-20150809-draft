@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0.ebuild,v 1.2 2011/01/06 23:36:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0.ebuild,v 1.3 2011/01/06 23:58:58 polynomial-c Exp $
 
 EAPI=2
 
@@ -34,14 +34,20 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libxml2
 	sys-libs/zlib
 	!headless? (
-		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4
-			opengl? ( x11-libs/qt-opengl:4 ) )
+		qt4? (
+			x11-libs/qt-gui:4
+			x11-libs/qt-core:4
+			opengl? ( x11-libs/qt-opengl:4 )
+			x11-libs/libXinerama
+		)
 		opengl? ( virtual/opengl media-libs/freeglut )
+		x11-libs/libX11
 		x11-libs/libXcursor
-		media-libs/libsdl[X,video]
+		x11-libs/libXext
+		x11-libs/libXmu
 		x11-libs/libXt
+		media-libs/libsdl[X,video]
 	)
-	headless? ( x11-libs/libX11 )
 	vnc? ( >=net-libs/libvncserver-0.9.7 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
