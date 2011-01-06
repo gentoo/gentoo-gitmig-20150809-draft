@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.46 2010/12/05 18:16:40 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.47 2011/01/06 19:25:14 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> zodb-3.10.1.ebuild:
+  Marking zodb-3.10.1 ~ppc for bug 341499
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> zodb-3.10.1.ebuild:
   Add ~alpha/~sparc wrt #341499
