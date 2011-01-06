@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.37 2010/12/22 14:48:41 klausman Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.38 2011/01/06 13:13:52 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org> rawdog-2.13.ebuild:
+  ia64/s390/sparc stable wrt #345485
 
   22 Dec 2010; Tobias Klausmann <klausman@gentoo.org> rawdog-2.13.ebuild:
   Stable on alpha, bug #345485
