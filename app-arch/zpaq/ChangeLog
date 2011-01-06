@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.2 2011/01/05 16:10:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.3 2011/01/06 16:20:19 mgorny Exp $
+
+*zpaq-2.05 (06 Jan 2011)
+
+  06 Jan 2011; Michał Górny <mgorny@gentoo.org> -zpaq-2.04-r1.ebuild,
+  +zpaq-2.05.ebuild:
+  Version bump. The new version fixes a crash when unpacking an unnamed file
+  without renaming.
 
 *zpaq-2.04-r1 (05 Jan 2011)
 
