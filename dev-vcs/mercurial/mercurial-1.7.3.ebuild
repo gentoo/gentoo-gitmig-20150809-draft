@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.7.3.ebuild,v 1.1 2011/01/02 18:31:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.7.3.ebuild,v 1.2 2011/01/06 19:15:07 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit bash-completion elisp-common eutils distutils
 
@@ -107,7 +107,7 @@ src_test() {
 	testing() {
 		local testdir="${T}/tests-${PYTHON_ABI}"
 		rm -rf "${testdir}"
-		"$(PYTHON)" run-tests.py -j4 --tmpdir="${testdir}"
+		"$(PYTHON)" run-tests.py --tmpdir="${testdir}"
 	}
 	python_execute_function testing
 }
