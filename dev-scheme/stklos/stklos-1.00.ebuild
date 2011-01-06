@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-1.00.ebuild,v 1.1 2010/10/06 03:15:06 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-1.00.ebuild,v 1.2 2011/01/06 10:11:27 ssuominen Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ IUSE="threads"
 # Other deps are set according to that file
 DEPEND=">=dev-libs/boehm-gc-7.1[threads?]
 		dev-libs/gmp
-		dev-libs/libffi
+		virtual/libffi
 		dev-libs/libpcre
 "
 RDEPEND="${DEPEND}"
