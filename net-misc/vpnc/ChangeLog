@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.92 2011/01/04 08:52:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.93 2011/01/06 12:03:33 fauli Exp $
+
+  06 Jan 2011; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  add Loránd Jakab as maintainer
 
   04 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   vpnc-0.5.3_p451.ebuild:
