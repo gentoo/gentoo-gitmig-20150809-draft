@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.612.1.ebuild,v 1.3 2010/12/22 09:00:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.628.0.ebuild,v 1.1 2011/01/06 16:12:21 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
+V8_DEPEND="3.0.4.1"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -21,7 +22,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.7.2[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( >=dev-lang/v8-3.0.0.1 )
+	system-v8? ( >=dev-lang/v8-${V8_DEPEND} )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -34,6 +35,7 @@ RDEPEND="app-arch/bzip2
 	virtual/jpeg
 	media-libs/libpng
 	media-libs/libvpx
+	media-libs/speex
 	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
@@ -61,10 +63,6 @@ egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
 	echo "${@}" >&2
 	"${@}"
-}
-
-get_installed_v8_version() {
-	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
 }
 
 remove_bundled_lib() {
@@ -111,12 +109,12 @@ pkg_setup() {
 
 src_prepare() {
 	# Enable optional support for gecko-mediaplayer.
-	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r0.patch
+	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r1.patch
 
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}"/${PN}-system-vpx-r1.patch
+	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
-	epatch "${FILESDIR}"/${PN}-system-icu-r2.patch
+	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
@@ -131,19 +129,22 @@ src_prepare() {
 	remove_bundled_lib "third_party/libxslt"
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
+	remove_bundled_lib "third_party/speex"
 	remove_bundled_lib "third_party/ocmock"
 	remove_bundled_lib "third_party/yasm"
 	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 
+	# Provide our own gyp file that links with the system speex.
+	# TODO: move this upstream.
+	cp "${FILESDIR}"/speex.gyp third_party/speex || die
+
+	# Check for the maintainer to ensure that the dependencies
+	# are up-to-date.
 	local v8_bundled="$(v8-extract-version v8/src/version.cc)"
-	if use system-v8; then
-		local v8_installed="$(get_installed_v8_version)"
-		einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
-		version_is_at_least "${v8_bundled}" "${v8_installed}" || die
-	else
-		einfo "Bundled V8 version: ${v8_bundled}"
+	if [ "${V8_DEPEND}" != "${v8_bundled}" ]; then
+		die "update v8 dependency to ${v8_bundled}"
 	fi
 
 	if use system-sqlite; then
@@ -268,8 +269,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox base_unittests net_unittests \
-		BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
 		emake base_unittests net_unittests \
@@ -279,10 +279,20 @@ src_compile() {
 }
 
 src_test() {
+	# For more info see bug #350349.
+	local mylocale='en_US.utf8'
+	if ! locale -a | grep -q "$mylocale"; then
+		eerror "${PN} requires ${mylocale} locale for tests"
+		eerror "Please read the following guides for more information:"
+		eerror "  http://www.gentoo.org/doc/en/guide-localization.xml"
+		eerror "  http://www.gentoo.org/doc/en/utf-8.xml"
+		die "locale ${mylocale} is not supported"
+	fi
+
 	# Make test failures non-fatal for now. This needs more investigation.
-	maketype=out/Release/base_unittests virtualmake \
+	LC_ALL="${mylocale}" maketype=out/Release/base_unittests virtualmake \
 		|| eerror "base_unittests failed"
-	maketype=out/Release/net_unittests virtualmake \
+	LC_ALL="${mylocale}" maketype=out/Release/net_unittests virtualmake \
 		|| eerror "net_unittests failed"
 }
 

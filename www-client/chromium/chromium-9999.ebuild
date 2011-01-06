@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.120 2011/01/03 14:57:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.121 2011/01/06 16:12:21 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -109,10 +109,6 @@ egyp() {
 	"${@}"
 }
 
-get_installed_v8_version() {
-	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
-}
-
 remove_bundled_lib() {
 	local out
 	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
@@ -187,15 +183,6 @@ src_prepare() {
 	# Provide our own gyp file that links with the system speex.
 	# TODO: move this upstream.
 	cp "${FILESDIR}"/speex.gyp third_party/speex || die
-
-	local v8_bundled="$(v8-extract-version v8/src/version.cc)"
-	if use system-v8; then
-		local v8_installed="$(get_installed_v8_version)"
-		einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
-		version_is_at_least "${v8_bundled}" "${v8_installed}" || die
-	else
-		einfo "Bundled V8 version: ${v8_bundled}"
-	fi
 
 	if use system-sqlite; then
 		remove_bundled_lib "third_party/sqlite/src"
@@ -319,8 +306,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox base_unittests net_unittests \
-		BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
 		emake base_unittests net_unittests \
