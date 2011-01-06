@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.25.ebuild,v 1.1 2010/11/18 21:33:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.25.ebuild,v 1.2 2011/01/06 20:52:04 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND=2
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=media-libs/skstream-0.3.6
 	>=dev-games/wfmath-0.3.9
-	=dev-games/mercator-0.2*
+	>=dev-games/mercator-0.2.9:0
 	dev-libs/libgcrypt
 	dev-libs/libsigc++:2
 	sys-libs/ncurses
