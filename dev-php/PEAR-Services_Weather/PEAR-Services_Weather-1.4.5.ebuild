@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/PEAR-Services_Weather-1.4.5.ebuild,v 1.4 2010/11/05 04:37:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/PEAR-Services_Weather-1.4.5.ebuild,v 1.5 2011/01/06 20:14:08 xarthisius Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="This class acts as an interface to various online weather-services"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="minimal"
 DEPEND="|| ( <dev-lang/php-5.3[ctype,pcre] >=dev-lang/php-5.3[ctype] )"
 RDEPEND=">=dev-php/PEAR-HTTP_Request-1.2.4-r1
