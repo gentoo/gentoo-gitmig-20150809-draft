@@ -1,13 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.21 2010/12/27 22:41:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.22 2011/01/06 19:51:56 arfrever Exp $
 
 # This file requires >=portage-2.1.1
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (27 Dec 2010)
-# Tests masked until dev-python/mock is keyworded.
->=dev-util/buildbot-0.8.1 test
-dev-util/buildbot-slave test
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is keyworded on ppc
