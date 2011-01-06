@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-1.6.ebuild,v 1.6 2011/01/06 21:15:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-2.2.ebuild,v 1.1 2011/01/06 21:15:32 jlec Exp $
 
 PYTHON_DEPEND="2"
 
@@ -10,9 +10,9 @@ DESCRIPTION="A utility for submitting version updates to freshmeat.net, using fr
 HOMEPAGE="http://www.catb.org/~esr/freshmeat-submit/"
 SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 pkg_setup() {
