@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r5.ebuild,v 1.6 2010/02/13 16:29:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r5.ebuild,v 1.7 2011/01/06 11:03:49 ssuominen Exp $
 
 inherit libtool eutils autotools
 
@@ -17,7 +17,6 @@ IUSE=""
 DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
 	!app-admin/gamin"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/fam"
 
 src_unpack() {
 	unpack ${A}

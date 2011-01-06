@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.1 2010/10/21 17:40:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r6.ebuild,v 1.2 2011/01/06 11:03:49 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,6 @@ IUSE="static-libs"
 DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
 	!app-admin/gamin"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/fam"
 
 src_prepare() {
 	epatch "${WORKDIR}/${P/-/_}-${DEBIAN_PATCH}.diff"
