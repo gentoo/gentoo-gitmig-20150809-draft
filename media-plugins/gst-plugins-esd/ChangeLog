@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-esd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.162 2010/12/25 14:14:01 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.163 2011/01/06 17:02:37 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-esd-0.10.23.ebuild:
+  alpha/ia64/sh/sparc stable wrt #346981
 
   25 Dec 2010; Markus Meier <maekke@gentoo.org> gst-plugins-esd-0.10.23.ebuild:
   arm stable, bug #346981
