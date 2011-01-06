@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.45 2010/12/30 18:52:49 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.46 2011/01/06 19:45:55 xarthisius Exp $
+
+  06 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  PEAR-Net_SMTP-1.4.1.ebuild:
+  stable for ppc64 wrt #349318
 
   30 Dec 2010; Raúl Porcel <armin76@gentoo.org> PEAR-Net_SMTP-1.4.1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable
