@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/zpaq-extras
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.2 2011/01/05 23:30:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.3 2011/01/06 16:10:21 mgorny Exp $
+
+*zpaq-extras-0_p20110106 (06 Jan 2011)
+
+  06 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  -zpaq-extras-0_p20100426.ebuild, +zpaq-extras-0_p20110106.ebuild:
+  Bump to install standard ZPAQ configurations as well as they are not
+  installed stand-alone anymore in >=app-arch/zpaq-2.03 (and the built-in
+  variants don't accept arguments).
 
   05 Jan 2011; Michał Górny <mgorny@gentoo.org>
   zpaq-extras-0_p20100426.ebuild:

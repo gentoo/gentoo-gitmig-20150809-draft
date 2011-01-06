@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-0_p20100426.ebuild,v 1.2 2011/01/05 23:30:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-0_p20110106.ebuild,v 1.1 2011/01/06 16:10:21 mgorny Exp $
 
 EAPI=3
 inherit base toolchain-funcs
@@ -12,7 +12,10 @@ SRC_URI="http://mattmahoney.net/dc/bwt_j3.zip
 	http://mattmahoney.net/dc/bmp_j4.zip
 	http://mattmahoney.net/dc/exe_j1.zip
 	http://mattmahoney.net/dc/jpg_test2.zip
-	http://mattmahoney.net/dc/fast.cfg"
+	http://mattmahoney.net/dc/min.zip
+	http://mattmahoney.net/dc/fast.cfg -> zpaq-fast.cfg
+	http://mattmahoney.net/dc/mid.cfg -> zpaq-mid.cfg
+	http://mattmahoney.net/dc/max.cfg -> zpaq-max.cfg"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -20,13 +23,19 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND=""
+RDEPEND="!<app-arch/zpaq-2.03"
 
 S=${WORKDIR}
 
 src_unpack() {
+	local x
+	for x in ${A}; do
+		if [[ ${x} == *.cfg ]]; then
+			cp "${DISTDIR}"/${x} ${x#zpaq-} || die
+		fi
+	done
+
 	default
-	cp "${DISTDIR}"/fast.cfg . || die
 }
 
 src_configure() {
