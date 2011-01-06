@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tsmuxer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.3 2010/10/16 21:32:36 sbriesen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.4 2011/01/06 03:35:17 vapier Exp $
+
+  06 Jan 2011; Mike Frysinger <vapier@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
+  Update upx-bin DEPEND after package move.
 
   16 Oct 2010; Stefan Briesenick <sbriesen@gentoo.org>
   tsmuxer-1.10.6-r1.ebuild:
