@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.240 2011/01/03 17:11:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.241 2011/01/06 12:48:56 armin76 Exp $
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.28.ebuild:
+  alpha/ia64/sh stable wrt #349213
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> lighttpd-1.4.28.ebuild:
   sparc stable (bug 349213), libev use mask'd
