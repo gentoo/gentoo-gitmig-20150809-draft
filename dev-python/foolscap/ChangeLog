@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.25 2010/12/29 18:37:28 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.26 2011/01/06 21:39:49 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> foolscap-0.6.0.ebuild:
+  Marking foolscap-0.6.0 ppc for bug 350889
 
 *foolscap-0.6.0 (29 Dec 2010)
 
