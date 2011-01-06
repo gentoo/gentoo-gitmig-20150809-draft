@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.82 2010/12/13 12:04:45 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.83 2011/01/06 14:34:36 flameeyes Exp $
+
+*libvirt-0.8.7 (06 Jan 2011)
+
+  06 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> +libvirt-0.8.7.ebuild:
+  Version bump; add a workaround for tests failing with sandbox enabled.
 
 *libvirt-0.8.6-r1 (13 Dec 2010)
 
