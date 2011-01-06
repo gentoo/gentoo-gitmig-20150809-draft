@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/virtualbox-extpack-oracle
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/ChangeLog,v 1.1 2011/01/06 22:40:41 polynomial-c Exp $
+
+*virtualbox-extpack-oracle-4.0.0 (06 Jan 2011)
+
+  06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.0.0.ebuild, +metadata.xml:
+  Initial version.
+
