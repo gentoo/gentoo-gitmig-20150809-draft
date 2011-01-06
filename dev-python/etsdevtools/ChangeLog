@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/etsdevtools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/ChangeLog,v 1.8 2010/12/05 20:22:03 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/ChangeLog,v 1.9 2011/01/06 21:06:00 ranger Exp $
+
+  06 Jan 2011; Brent Baude <ranger@gentoo.org> etsdevtools-3.1.0.ebuild:
+  Marking etsdevtools-3.1.0 ~ppc for bug 341627
 
   05 Dec 2010; Thomas Kahle <tomka@gentoo.org> etsdevtools-3.1.0.ebuild:
   x86 stable per bug 347107
