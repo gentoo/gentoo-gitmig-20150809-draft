@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyPdf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.8 2010/12/06 09:17:25 djc Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.9 2011/01/07 17:00:43 hwoarang Exp $
+
+  07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pyPdf-1.13.ebuild:
+  Stable on amd64 wrt bug #350864
 
 *pyPdf-1.13 (06 Dec 2010)
 
