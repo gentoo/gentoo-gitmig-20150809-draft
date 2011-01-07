@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.9.12.ebuild,v 1.1 2011/01/07 14:06:05 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.9.12.ebuild,v 1.2 2011/01/07 17:16:31 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,7 +23,7 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	dev-ruby/extlib
 	dev-ruby/highline
 	>=dev-ruby/json-1.4.4
-	<=dev-ruby/json-1.4.6
+	<dev-ruby/json-1.4.7
 	>=dev-ruby/mixlib-authentication-1.1.0
 	>=dev-ruby/mixlib-cli-1.1.0
 	>=dev-ruby/mixlib-config-1.1.2
