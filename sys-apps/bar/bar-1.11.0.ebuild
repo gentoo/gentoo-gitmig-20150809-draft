@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.11.0.ebuild,v 1.2 2011/01/07 07:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.11.0.ebuild,v 1.3 2011/01/07 20:13:27 jlec Exp $
 
 inherit autotools
 
@@ -34,7 +34,7 @@ src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 	if use doc; then
 		mkdir -p ../www/doxygen/${PV}
-		emake update-web || die "make doc failed" ;
+		emake update-www || die "make doc failed" ;
 	fi
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/bar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.25 2011/01/07 07:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.26 2011/01/07 20:13:27 jlec Exp $
+
+  07 Jan 2011; Justin Lecher <jlec@gentoo.org> bar-1.11.0.ebuild:
+  Corrected dec Make target, 350965
 
   07 Jan 2011; Justin Lecher <jlec@gentoo.org> bar-1.11.0.ebuild:
   Removed installation of ChangeLog, #350931
