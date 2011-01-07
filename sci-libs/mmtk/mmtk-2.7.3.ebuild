@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.3.ebuild,v 1.1 2011/01/07 11:36:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.3.ebuild,v 1.2 2011/01/07 11:36:59 jlec Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
-
 
 src_prepare() {
 	export MMTK_USE_CYTHON="1"
