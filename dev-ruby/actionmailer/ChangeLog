@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionmailer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.149 2010/12/28 13:47:41 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.150 2011/01/07 09:30:36 graaff Exp $
+
+  07 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  actionmailer-2.3.10.ebuild:
+  Move forward ppc and ppc64 keywords that got missed on a version bump.
 
   28 Dec 2010; Hans de Graaff <graaff@gentoo.org> actionmailer-3.0.3.ebuild:
   Install proper gemspec.
