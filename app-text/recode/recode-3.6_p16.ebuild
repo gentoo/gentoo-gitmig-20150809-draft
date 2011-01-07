@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p16.ebuild,v 1.8 2010/05/21 15:31:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p16.ebuild,v 1.9 2011/01/07 13:35:30 jlec Exp $
 
 inherit autotools eutils libtool toolchain-funcs
 
@@ -29,9 +29,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${MY_P}-gettextfix.diff" #239372
-	epatch "${FILESDIR}"/${MY_P}-as-if.patch #283029
-	epatch "${WORKDIR}"/${PN}_${MY_PV}-${DEB_PATCH}.diff
+	epatch \
+		"${FILESDIR}/${MY_P}-gettextfix.diff" \
+		"${FILESDIR}"/${MY_P}-as-if.patch \
+		"${WORKDIR}"/${PN}_${MY_PV}-${DEB_PATCH}.diff
 	sed -i '1i#include <stdlib.h>' src/argmatch.c || die
 
 	# Needed under FreeBSD, too
@@ -55,6 +56,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BACKLOG ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS BACKLOG ChangeLog NEWS README THANKS TODO || die
 	rm -f "${D}"/usr/lib/charset.alias
 }
