@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0.ebuild,v 1.4 2011/01/07 11:16:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0.ebuild,v 1.5 2011/01/07 18:42:22 polynomial-c Exp $
 
 EAPI=2
 
@@ -132,15 +132,17 @@ src_prepare() {
 	sed -e "s/MY_LIBDIR/$(get_libdir)/" \
 		"${FILESDIR}"/${PN}-4-localconfig > LocalConfig.kmk || die
 
-	# unset useless/problematic mesa checks in configure
+	# unset useless/problematic checks in configure
 	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch"
-	# unset useless makeself checks in configure
 	epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
-	# unset useless mkisofs checks in configure
 	epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
-	# fix build with --as-needed (bug #249295)
+	# fix build with --as-needed (bug #249295 and bug #350907)
 	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
+
+	# Respect LDFLAGS
+	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 
 	# add the --enable-vnc option to configure script (bug #348204)
 	epatch "${FILESDIR}/${PN}-4-vnc.patch"
