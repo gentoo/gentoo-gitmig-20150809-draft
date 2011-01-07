@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.1 2011/01/07 15:11:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.2 2011/01/07 18:16:30 polynomial-c Exp $
 
 EAPI=2
 
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-lang/python-2.3[threads] )
 	vboxwebsrv? ( >=net-libs/gsoap-2.7.13 )"
-PDEPEND="additions? ( ~app-emulation/virtualbox-ose-additions-${PV} )"
+PDEPEND="additions? ( ~app-emulation/virtualbox-additions-${PV} )"
 
 QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox-ose/VBoxSDL.so
