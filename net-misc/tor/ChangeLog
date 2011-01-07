@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.223 2011/01/06 15:44:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.224 2011/01/07 23:41:06 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> tor-0.2.1.28.ebuild:
+  Marking tor-0.2.1.28 ppc for bug 349312
 
   06 Jan 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Removed fauli and added chiiph as maintainer
