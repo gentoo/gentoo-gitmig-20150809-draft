@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.5 2010/12/31 19:20:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.6 2011/01/07 20:52:23 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -51,7 +51,8 @@ pkg_setup() {
 		$(use_enable nautilus nautilus-sendto)
 		--disable-moblin
 		--disable-desktop-update
-		--disable-icon-update"
+		--disable-icon-update
+		--disable-schemas-compile"
 	DOCS="AUTHORS README NEWS ChangeLog"
 
 	enewgroup plugdev
