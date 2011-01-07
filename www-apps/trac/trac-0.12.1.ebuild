@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12.1.ebuild,v 1.4 2010/12/29 18:36:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12.1.ebuild,v 1.5 2011/01/07 16:26:43 ranger Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 
 IUSE="cgi fastcgi i18n mysql postgres +sqlite subversion"
 
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 
 # doing so because tools, python packages... overlap
 SLOT="0"
