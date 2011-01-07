@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gcj-jdk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.1 2010/11/14 01:04:19 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.2 2011/01/07 15:38:01 caster Exp $
+
+*gcj-jdk-4.5.2 (07 Jan 2011)
+
+  07 Jan 2011; Vlastimil Babka <caster@gentoo.org> +gcj-jdk-4.5.2.ebuild:
+  Version bump.
 
 *gcj-jdk-4.5.1 (14 Nov 2010)
 *gcj-jdk-4.4.5 (14 Nov 2010)
