@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/turbotail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.13 2008/12/15 21:24:05 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.14 2011/01/07 18:13:42 jer Exp $
+
+  07 Jan 2011; Jeroen Roovers <jer@gentoo.org> turbotail-0.3.ebuild:
+  Use the virtual. Set RDEPEND.
 
   15 Dec 2008; Jeroen Roovers <jer@gentoo.org>
   -files/turbotail-0.2-munmap.patch, -turbotail-0.2.ebuild,
