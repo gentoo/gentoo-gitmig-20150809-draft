@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r1.ebuild,v 1.2 2011/01/07 07:49:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r1.ebuild,v 1.3 2011/01/07 21:51:31 robbat2 Exp $
 
 EAPI=3
 
@@ -142,6 +142,8 @@ exportmakeopts() {
 		|| myopts="${myopts} NO_SVN_TESTS=YesPlease"
 	use threads \
 		&& myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
+	use cvs \
+		|| myopts="${myopts} NO_CVS=YesPlease"
 # Disabled until ~m68k-mint can be keyworded again
 #	if [[ ${CHOST} == *-mint* ]] ; then
 #		myopts="${myopts} NO_MMAP=YesPlease"
@@ -207,6 +209,9 @@ src_prepare() {
 	# bug #350075: t9001: fix missing prereq on some tests
 	# Merged upstream
 	#epatch "${FILESDIR}"/git-1.7.3.4-fix-perl-test-prereq.patch
+
+	# bug #350330 - automagic CVS when we don't want it is bad.
+	epatch "${FILESDIR}"/git-1.7.3.5-optional-cvs.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
