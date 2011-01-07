@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.74 2011/01/05 19:31:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.75 2011/01/07 23:32:22 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> multitail-5.2.6.ebuild:
+  Marking multitail-5.2.6 ppc for bug 350735
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> multitail-5.2.6.ebuild:
   Stable on amd64 wrt bug #350735
