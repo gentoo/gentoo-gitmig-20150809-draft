@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.0.ebuild,v 1.1 2011/01/06 22:52:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.0.ebuild,v 1.2 2011/01/07 18:54:54 polynomial-c Exp $
 
 EAPI=2
 
@@ -32,15 +32,19 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}_OSE"
 
 src_prepare() {
-		if kernel_is -ge 2 6 33 ; then
-			# evil patch for new kernels - header moved
-			grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:' || die "Failed replacing"
-		fi
-		# Remove shipped binaries (kBuild,yasm), see bug #232775
-		rm -rf kBuild/bin tools
+	if kernel_is -ge 2 6 33 ; then
+		# evil patch for new kernels - header moved
+		grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:' || die "Failed replacing"
+	fi
+	# Remove shipped binaries (kBuild,yasm), see bug #232775
+	rm -rf kBuild/bin tools
 
-		# Disable things unused or splitted into separate ebuilds
-		cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+	# Disable things unused or splitted into separate ebuilds
+	cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+
+	#Respect LDFLAGS
+	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 }
 
 src_configure() {
@@ -94,7 +98,9 @@ pkg_postinst() {
 		elog ""
 		elog "in the Core Pointer's InputDevice section (Section \"InputDevice\")"
 		elog ""
-		elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection."
+		elog "Up to version 1.8, X.Org Server can do mouse auto-detection."
 		elog "This ebuild provides a working default which has been installed into:"
 		elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
+		elog "This is no longer necessary for X.Org Server 1.9 or higher. Use"
+		elog "the server's udev autodetection with such versions."
 }

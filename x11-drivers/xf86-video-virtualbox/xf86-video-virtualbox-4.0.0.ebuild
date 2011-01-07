@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.0.ebuild,v 1.1 2011/01/06 22:55:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.0.ebuild,v 1.2 2011/01/07 18:50:20 polynomial-c Exp $
 
 EAPI=2
 
@@ -76,6 +76,10 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch"
 		epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
 		epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
+
+		# Respect LDFLAGS
+		sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+			-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 }
 
 src_configure() {
