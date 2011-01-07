@@ -1,6 +1,11 @@
 # ChangeLog for app-text/rnv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.10 2010/04/09 08:09:18 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.11 2011/01/07 18:55:01 fauli Exp $
+
+*rnv-1.7.10 (07 Jan 2011)
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> +rnv-1.7.10.ebuild:
+  version bump
 
   09 Apr 2010; Markos Chandras <hwoarang@gentoo.org> rnv-1.7.8-r2.ebuild:
   Stable on amd64 wrt bug #313851
