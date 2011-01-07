@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.20.412.ebuild,v 1.1 2011/01/06 04:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.20.412-r1.ebuild,v 1.1 2011/01/07 17:03:11 vapier Exp $
 
 EAPI="2"
 
@@ -22,24 +22,24 @@ S=${WORKDIR}/pms-linux-${PV}
 
 src_prepare() {
 	rm linux/tsMuxeR* || die
-	cat <<-EOF > pms
+	cat <<-EOF > ${PN}
 	#!/bin/sh
-	echo "Setting up ~/.ps3mediaserver based on /usr/share/pms/"
-	if [ ! -e ~/.ps3mediaserver ] ; then
-		mkdir -p ~/.ps3mediaserver
-		cp -pPR /usr/share/pms/* ~/.ps3mediaserver/
+	echo "Setting up ~/.${PN} based on /usr/share/${PN}/"
+	if [ ! -e ~/.${PN} ] ; then
+		mkdir -p ~/.${PN}
+		cp -pPR /usr/share/${PN}/* ~/.${PN}/
 	fi
-	cd ~/.ps3mediaserver
+	cd ~/.${PN}
 	PMS_HOME=\$PWD
 	EOF
-	cat PMS.sh >> pms
+	cat PMS.sh >> ${PN}
 }
 
 src_install() {
-	dobin pms || die
-	insinto /usr/share/pms
+	dobin ${PN} || die
+	insinto /usr/share/${PN}
 	doins -r pms.jar *.conf linux plugins renderers || die
-	use tsmuxer && { dosym /opt/bin/tsMuxeR /usr/share/pms/linux/ || die ; }
+	use tsmuxer && { dosym /opt/bin/tsMuxeR /usr/share/${PN}/linux/ || die ; }
 	dodoc CHANGELOG FAQ README
 }
 

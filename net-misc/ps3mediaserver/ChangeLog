@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ps3mediaserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ChangeLog,v 1.1 2011/01/06 04:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ChangeLog,v 1.2 2011/01/07 17:03:11 vapier Exp $
+
+*ps3mediaserver-1.20.412-r1 (07 Jan 2011)
+
+  07 Jan 2011; Mike Frysinger <vapier@gentoo.org>
+  -ps3mediaserver-1.20.412.ebuild, +ps3mediaserver-1.20.412-r1.ebuild:
+  Rename pms to $PN to avoid collisions #350796.
 
 *ps3mediaserver-1.20.412 (06 Jan 2011)
 
