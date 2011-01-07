@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ondir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.21 2011/01/05 19:06:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.22 2011/01/07 23:28:05 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> ondir-0.2.2-r1.ebuild:
+  Marking ondir-0.2.2-r1 ppc for bug 350694
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ondir-0.2.2-r1.ebuild:
   Stable on amd64 wrt bug #350694
