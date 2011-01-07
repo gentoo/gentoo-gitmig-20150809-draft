@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6267 2011/01/07 01:32:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6268 2011/01/07 15:32:26 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -424,10 +424,6 @@ app-emulation/virtualbox-bin:headless - Install without any graphic frontend
 app-emulation/virtualbox-bin:rdesktop-vrdp - Install the rdesktop client integration
 app-emulation/virtualbox-bin:sdk - Enable building of SDK
 app-emulation/virtualbox-bin:vboxwebsrv - Install the VirtualBox webservice
-app-emulation/virtualbox-ose:additions - Install Guest System Tools ISO
-app-emulation/virtualbox-ose:headless - Build without any graphic frontend
-app-emulation/virtualbox-ose:sdk - Enable building of SDK
-app-emulation/virtualbox-ose:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/vov:gprof - build with profiling support
 app-emulation/wine:capi - Enable ISDN support via CAPI
 app-emulation/wine:custom-cflags - Bypass strip-flags; use are your own peril
