@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/breakpts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.13 2010/11/14 17:17:30 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/ChangeLog,v 1.14 2011/01/07 22:40:53 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> breakpts-4.0.ebuild:
+  stable ppc, bug 345083
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> breakpts-4.0.ebuild:
   alpha/ia64/sparc stable
