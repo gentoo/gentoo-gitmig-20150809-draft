@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.19 2010/10/03 19:07:02 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.20 2011/01/07 09:35:50 xmw Exp $
+
+  07 Jan 2011; Michael Weber <xmw@gentoo.org> epsilon-0.6.0.ebuild:
+  added ~sparc keyword (bug 311825)
 
   03 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   epsilon-0.6.0.ebuild:

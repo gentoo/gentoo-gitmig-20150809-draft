@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.25 2010/07/06 15:43:05 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.26 2011/01/07 09:33:16 xmw Exp $
+
+  07 Jan 2011; Michael Weber <xmw@gentoo.org> configobj-4.7.2.ebuild:
+  added ~sparc keyword (bug 311825)
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   configobj-4.7.2.ebuild:

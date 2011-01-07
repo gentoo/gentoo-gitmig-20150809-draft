@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.31 2010/10/10 19:45:35 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.32 2011/01/07 09:36:10 xmw Exp $
+
+  07 Jan 2011; Michael Weber <xmw@gentoo.org> axiom-0.6.0.ebuild:
+  added ~sparc keyword (bug 311825)
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   axiom-0.6.0.ebuild:
