@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.184 2010/12/13 16:01:53 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.185 2011/01/07 11:01:13 graaff Exp $
+
+  07 Jan 2011; Hans de Graaff <graaff@gentoo.org> rmagick-2.13.1.ebuild:
+  Keyword ~x86-macos.
 
   13 Dec 2010; Hans de Graaff <graaff@gentoo.org> rmagick-2.13.1.ebuild:
   Use generic shared object extension.
