@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.78 2010/12/27 21:07:58 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.79 2011/01/07 14:37:13 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> mysql-python-1.2.3.ebuild:
+  Marking mysql-python-1.2.3 ppc for bug =345493
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> mysql-python-1.2.3.ebuild:
   Marking mysql-python-1.2.3 ppc64 for bug 345493
