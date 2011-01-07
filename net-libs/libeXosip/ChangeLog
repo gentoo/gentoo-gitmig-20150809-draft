@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libeXosip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.18 2010/12/04 14:18:36 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.19 2011/01/07 08:56:39 pva Exp $
+
+*libeXosip-3.5.0 (07 Jan 2011)
+
+  07 Jan 2011; Peter Volkov <pva@gentoo.org> +libeXosip-3.5.0.ebuild:
+  Version bump.
 
   04 Dec 2010; Peter Volkov <pva@gentoo.org> -libeXosip-3.0.3.3.ebuild,
   -libeXosip-3.1.0.ebuild, -libeXosip-3.2.0.ebuild:
