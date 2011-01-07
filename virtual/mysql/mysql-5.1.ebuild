@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.21 2011/01/07 01:16:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.22 2011/01/07 23:57:45 robbat2 Exp $
 
 EAPI="2"
 
@@ -18,5 +18,4 @@ DEPEND=""
 RDEPEND="|| (
 	=dev-db/mysql-${PV}*[embedded=,static=]
 	=dev-db/mariadb-${PV}*[embedded=,static=]
-	=dev-db/mysql-community-${PV}*[embedded=,static=]
 )"
