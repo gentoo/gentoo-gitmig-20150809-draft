@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.71 2011/01/07 02:01:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.72 2011/01/07 07:49:33 grobian Exp $
+
+  07 Jan 2011; Fabian Groffen <grobian@gentoo.org> git-1.7.3.5-r1.ebuild,
+  git-1.7.4_rc1-r1.ebuild, git-9999.ebuild:
+  Fix gitweb removal for Prefix
 
 *git-1.7.4_rc1-r1 (07 Jan 2011)
 

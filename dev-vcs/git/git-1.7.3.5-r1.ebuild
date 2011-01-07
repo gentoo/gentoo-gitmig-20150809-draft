@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.5-r1.ebuild,v 1.1 2011/01/06 20:40:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.3.5-r1.ebuild,v 1.2 2011/01/07 07:49:33 grobian Exp $
 
 EAPI=3
 
@@ -365,7 +365,7 @@ src_install() {
 			-name .packlist \
 			-exec rm \{\} \;
 	else
-		rm -rf "${D}"/usr/share/gitweb
+		rm -rf "${ED}"/usr/share/gitweb
 	fi
 
 	if ! use subversion ; then
