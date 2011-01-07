@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.8.ebuild,v 1.1 2011/01/07 05:50:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.8.ebuild,v 1.2 2011/01/07 15:43:55 jer Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~m68k ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE="bzip2 dselect nls test unicode zlib"
 
 LANGS="sv de es ja fr hu pl ru"
@@ -29,7 +29,11 @@ RDEPEND=">=dev-lang/perl-5.6.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( app-text/po4a )
-	test? ( dev-perl/Test-Pod dev-perl/IO-String )"
+	test? (
+		dev-perl/DateTime-Format-DateParse
+		dev-perl/IO-String
+		dev-perl/Test-Pod
+	)"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.15.5.6-bootstrap.patch
