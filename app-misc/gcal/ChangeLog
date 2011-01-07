@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.33 2011/01/05 18:43:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.34 2011/01/07 23:26:03 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> gcal-3.6.ebuild:
+  Marking gcal-3.6 ppc for bug 350683
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gcal-3.6.ebuild:
   Stable on amd64 wrt bug #350683
