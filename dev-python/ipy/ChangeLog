@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.24 2010/12/07 21:06:55 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.25 2011/01/07 18:10:02 hwoarang Exp $
+
+  07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ipy-0.72.ebuild:
+  Stable on amd64 wrt bug #350873
 
 *ipy-0.72 (07 Dec 2010)
 
