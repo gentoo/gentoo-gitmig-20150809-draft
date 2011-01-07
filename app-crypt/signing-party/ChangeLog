@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.33 2011/01/07 14:48:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.34 2011/01/07 16:49:03 arfrever Exp $
+
+  07 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -signing-party-1.1.3.ebuild, -signing-party-1.1.3-r3.ebuild:
+  Delete.
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org>
   signing-party-1.1.3-r4.ebuild:
