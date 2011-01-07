@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/perl-support
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.28 2010/11/14 10:54:04 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.29 2011/01/07 22:26:53 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> perl-support-4.8.ebuild:
+  stable ppc, bug 345061
 
   14 Nov 2010; Markus Meier <maekke@gentoo.org> perl-support-4.8.ebuild:
   x86 stable, bug #345061
