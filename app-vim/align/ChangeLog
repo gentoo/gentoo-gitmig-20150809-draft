@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.52 2010/11/14 16:57:02 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.53 2011/01/07 22:07:15 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> align-41.ebuild:
+  stable ppc, bug 345035
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> align-41.ebuild:
   alpha/ia64/sparc stable
