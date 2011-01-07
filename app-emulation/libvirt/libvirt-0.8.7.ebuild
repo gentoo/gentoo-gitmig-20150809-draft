@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.1 2011/01/06 14:34:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.2 2011/01/07 15:20:27 polynomial-c Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -52,7 +52,7 @@ RDEPEND="sys-libs/readline
 	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 app-emulation/qemu-kvm-spice ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
-	virtualbox? ( || ( >=app-emulation/virtualbox-ose-2.2.0 >=app-emulation/virtualbox-bin-2.2.0 ) )
+	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
 	json? ( dev-libs/yajl )"

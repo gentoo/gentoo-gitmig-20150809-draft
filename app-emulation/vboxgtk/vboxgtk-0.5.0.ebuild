@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.5.0.ebuild,v 1.1 2009/10/12 18:43:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.5.0.ebuild,v 1.2 2011/01/07 15:20:50 polynomial-c Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="linguas_es"
 
 DEPEND=""
 RDEPEND="
-	|| ( >=app-emulation/virtualbox-ose-2.2.2[-headless,sdk]
+	|| ( app-emulation/virtualbox[-headless,sdk]
 		>=app-emulation/virtualbox-bin-2.2.2 )
 	>=dev-python/pygtk-2.14.0"
 
