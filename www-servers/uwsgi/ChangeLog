@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/uwsgi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.1 2010/05/03 19:24:28 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.2 2011/01/07 14:22:20 dev-zero Exp $
+
+*uwsgi-0.9.6.6 (07 Jan 2011)
+
+  07 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> +files/42_mod_uwsgi.conf,
+  +uwsgi-0.9.6.6.ebuild, +files/uwsgi-0.9.6.6-gentoo-gcc.patch:
+  Version bump (bug #346941).
 
 *uwsgi-0.9.5 (03 May 2010)
 

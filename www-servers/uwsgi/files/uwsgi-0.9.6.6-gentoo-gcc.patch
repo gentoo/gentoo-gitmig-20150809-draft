@@ -1,0 +1,13 @@
+diff --git a/uwsgiconfig.py b/uwsgiconfig.py
+index c06882c..2efc46c 100644
+--- a/uwsgiconfig.py
++++ b/uwsgiconfig.py
+@@ -84,7 +84,7 @@ def spcall2(cmd):
+ 	else:
+ 		return None
+ 
+-gcc_version = str(spcall2("%s -v" % GCC)).split('\n')[-1].split()[2]
++gcc_version = str(spcall2("%s -v" % GCC)).split('\n')[-1].split()[4]
+ 
+ gcc_major = int(gcc_version.split('.')[0])
+ gcc_minor = int(gcc_version.split('.')[1])
