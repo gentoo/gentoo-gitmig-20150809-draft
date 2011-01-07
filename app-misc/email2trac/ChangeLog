@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/email2trac
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/ChangeLog,v 1.4 2010/08/22 07:36:04 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/ChangeLog,v 1.5 2011/01/07 20:38:05 arfrever Exp $
+
+  07 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -email2trac-1.4.0.ebuild:
+  Delete.
 
 *email2trac-1.6.0 (22 Aug 2010)
 
