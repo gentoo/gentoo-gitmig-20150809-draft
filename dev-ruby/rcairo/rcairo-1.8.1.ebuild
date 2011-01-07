@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.1.ebuild,v 1.6 2010/10/20 21:45:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.1.ebuild,v 1.7 2011/01/07 15:03:59 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -40,7 +40,7 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
-	ruby_fakegem_genspec
+	ruby_fakegem_install_gemspec
 
 	emake install DESTDIR="${D}"
 }

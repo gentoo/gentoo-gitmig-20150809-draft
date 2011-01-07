@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.4 2011/01/01 21:35:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.8.0.ebuild,v 1.5 2011/01/07 15:05:58 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -46,7 +46,7 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
-	ruby_fakegem_genspec
+	ruby_fakegem_install_gemspec
 	emake DESTDIR="${D}" install || die
 }
 
