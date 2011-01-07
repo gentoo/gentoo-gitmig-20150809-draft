@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.87 2011/01/07 09:40:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.88 2011/01/07 10:06:14 graaff Exp $
+
+*mysql-ruby-2.8.2 (07 Jan 2011)
+
+  07 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-ruby-2.8.1-r2.ebuild, +mysql-ruby-2.8.2.ebuild,
+  +files/mysql-ruby-2.8.2-test.patch:
+  Version bump with fix for large ids. Apply fix from jer for bug 348788 by
+  using proper mysqlconfig. Fix bug 350805 by requesting a mysql version
+  with dynamic libraries.
 
   07 Jan 2011; Hans de Graaff <graaff@gentoo.org> -mysql-ruby-2.8.1.ebuild:
   Remove old version.
