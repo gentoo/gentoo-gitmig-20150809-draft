@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.23.ebuild,v 1.7 2011/01/05 19:30:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.23.ebuild,v 1.8 2011/01/07 23:31:18 ranger Exp $
 
 inherit perl-app
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.earth.li/projectpurple/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="amd64 ~mips ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl"

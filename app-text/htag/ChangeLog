@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.16 2011/01/05 19:30:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.17 2011/01/07 23:31:18 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> htag-0.0.23.ebuild:
+  Marking htag-0.0.23 ppc for bug 350734
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> htag-0.0.23.ebuild:
   Stable on amd64 wrt bug #350734
