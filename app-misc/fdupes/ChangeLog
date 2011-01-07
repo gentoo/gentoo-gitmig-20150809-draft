@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.36 2011/01/05 18:42:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.37 2011/01/07 23:25:44 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> fdupes-1.50_pre2.ebuild:
+  Marking fdupes-1.50_pre2 ppc for bug 350570
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> fdupes-1.40-r3.ebuild,
   fdupes-1.40-r4.ebuild, fdupes-1.50_pre2.ebuild:
