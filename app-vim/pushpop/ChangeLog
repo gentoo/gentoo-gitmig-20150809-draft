@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pushpop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.14 2010/11/14 17:16:27 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pushpop/ChangeLog,v 1.15 2011/01/07 22:38:54 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> pushpop-4.0.ebuild:
+  stable ppc, bug 345081
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> pushpop-4.0.ebuild:
   alpha/ia64/sparc stable
