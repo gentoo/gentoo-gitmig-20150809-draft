@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
@@ -29,7 +29,7 @@ start() {
 	fix_owners
 	${CHEF_SERVER_BINARY} -d -P ${CHEF_SERVER_PIDFILE} -C ${CONFIGFILE} \
 		-u ${CHEF_USER} -G ${CHEF_GROUP} --name chef-server \
-		-c ${CLUSTER_NODES} -L ${CHEF_SERVER_LOGFILE} > /dev/null
+		-c ${CLUSTER_NODES} -L ${CHEF_SERVER_LOGFILE} ${CHEF_SERVER_OPTS} > /dev/null
 	eend $?
 }
 
