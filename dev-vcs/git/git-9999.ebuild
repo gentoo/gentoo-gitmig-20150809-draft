@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.11 2011/01/07 21:51:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.12 2011/01/07 23:06:38 robbat2 Exp $
 
 EAPI=3
 
 GENTOO_DEPEND_ON_PERL=no
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion
+
+# bug #329479: git-remote-testgit is not multiple-version aware
+PYTHON_DEPEND="python? 2"
+
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion python
 [ "$PV" == "9999" ] && inherit git
 
 MY_PV="${PV/_rc/.rc}"
@@ -37,7 +41,6 @@ CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
 	perl?   ( dev-lang/perl[-build] )
-	python? ( dev-lang/python )
 	tk?     ( dev-lang/tk )
 	curl?   (
 		net-misc/curl
@@ -94,6 +97,10 @@ pkg_setup() {
 		ewarn "Per Gentoo bugs #223747, #238586, when subversion is built"
 		ewarn "with USE=dso, there may be weird crashes in git-svn. You"
 		ewarn "have been warned."
+	fi
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
@@ -239,8 +246,9 @@ src_prepare() {
 git_emake() {
 	# bug #326625: PERL_PATH, PERL_MM_OPT
 	# bug #320647: PYTHON_PATH
+	# bug #329479: EPYTHON
 	PYTHON_PATH=""
-	use python && PYTHON_PATH="${EPREFIX}/usr/bin/python"
+	use python && PYTHON_PATH="${EPREFIX}/usr/bin/${EPYTHON}"
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
 		OPTCFLAGS="${CFLAGS}" \
@@ -326,6 +334,7 @@ src_install() {
 
 	if use python && use gtk ; then
 		dobin "${S}"/contrib/gitview/gitview
+		python_convert_shebangs "${D}"/usr/bin/gitview
 		dodoc "${S}"/contrib/gitview/gitview.txt
 	fi
 

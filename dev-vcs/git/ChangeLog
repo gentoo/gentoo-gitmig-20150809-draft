@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.76 2011/01/07 23:03:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.77 2011/01/07 23:06:38 robbat2 Exp $
+
+  07 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> git-9999.ebuild:
+  Also import python improvements to 9999 ebuild.
 
 *git-1.7.4_rc1-r2 (07 Jan 2011)
 *git-1.7.3.5-r2 (07 Jan 2011)
