@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qof
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.30 2010/11/01 14:19:04 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.31 2011/01/07 08:47:48 fauli Exp $
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Drop maintainership
 
   01 Nov 2010; Christian Faulhammer <fauli@gentoo.org> qof-0.7.5-r1.ebuild,
   qof-0.8.1.ebuild:
