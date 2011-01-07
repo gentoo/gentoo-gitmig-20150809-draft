@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.8.2.ebuild,v 1.1 2011/01/07 10:06:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.8.2.ebuild,v 1.2 2011/01/07 14:57:36 graaff Exp $
 
 EAPI="3"
 USE_RUBY="ruby18 ree18 ruby19"
@@ -40,7 +40,7 @@ each_ruby_compile() {
 
 each_ruby_install() {
 	emake DESTDIR="${D}" install || die
-	ruby_fakegem_genspec
+	ruby_fakegem_install_gemspec
 }
 
 all_fakegem_install() {
