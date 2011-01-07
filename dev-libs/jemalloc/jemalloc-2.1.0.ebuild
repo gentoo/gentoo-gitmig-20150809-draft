@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.0.1.ebuild,v 1.1 2010/12/30 14:11:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.1.0.ebuild,v 1.1 2011/01/07 02:14:45 anarchy Exp $
 
 EAPI="2"
 
