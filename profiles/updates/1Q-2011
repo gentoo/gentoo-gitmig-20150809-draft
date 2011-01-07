@@ -1,1 +1,3 @@
 move app-arch/upx app-arch/upx-bin
+move app-emulation/virtualbox-ose-additions app-emulation/virtualbox-additions
+move app-emulation/virtualbox-ose app-emulation/virtualbox
