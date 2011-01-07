@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-DateParse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-DateParse/ChangeLog,v 1.7 2011/01/07 17:51:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-DateParse/ChangeLog,v 1.8 2011/01/07 20:02:24 xarthisius Exp $
+
+  07 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  DateTime-Format-DateParse-0.05.ebuild:
+  ppc/ppc64 stable wrt #350877
 
   07 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   DateTime-Format-DateParse-0.05.ebuild:
