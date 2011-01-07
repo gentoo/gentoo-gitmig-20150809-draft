@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.8.0.ebuild,v 1.2 2010/11/04 23:15:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.8.0.ebuild,v 1.3 2011/01/07 22:02:59 dilfridge Exp $
 
 EAPI=2
 
@@ -19,6 +19,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.8
 	>=dev-cpp/gtkmm-2.4
+	dev-libs/boost
 	>=media-video/mjpegtools-1.8.0
 	media-libs/libdvdread
 	media-video/dvdauthor

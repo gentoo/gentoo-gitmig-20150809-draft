@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.6 2011/01/03 10:50:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.7 2011/01/07 22:02:59 dilfridge Exp $
+
+  07 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  bombono-dvd-0.8.0.ebuild, bombono-dvd-1.0.0.ebuild:
+  Added missing dependency on dev-libs/boost, bug 350506
 
 *bombono-dvd-1.0.0 (03 Jan 2011)
 
