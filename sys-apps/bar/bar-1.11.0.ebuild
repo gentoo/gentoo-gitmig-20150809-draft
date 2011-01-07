@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.11.0.ebuild,v 1.1 2011/01/06 21:28:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/bar-1.11.0.ebuild,v 1.2 2011/01/07 07:48:13 jlec Exp $
 
 inherit autotools
 
@@ -39,9 +39,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS TODO TROUBLESHOOTING debian/changelog || die "dodoc failed"
-	newdoc ChangeLog ChangeLog.old || die
 	if use doc ; then
 		dohtml -r ../www/doxygen/${PV}/html/*
 	fi
