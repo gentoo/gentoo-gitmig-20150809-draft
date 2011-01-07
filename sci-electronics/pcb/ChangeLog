@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.61 2010/12/21 01:43:20 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.62 2011/01/07 22:58:49 fauli Exp $
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> pcb-20100929.ebuild:
+  stable x86, bug 349096
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pcb-20100929.ebuild:
   Stable on amd64 wrt bug #349096
