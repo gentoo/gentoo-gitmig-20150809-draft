@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.109 2011/01/05 14:38:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.110 2011/01/07 21:56:55 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> groff-1.20.1-r3.ebuild:
+  stable ppc, bug 350491
 
   05 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> groff-1.21.ebuild:
   Fixed to work with linguas_ja USE flag, bug #350534. The patch is submitted
