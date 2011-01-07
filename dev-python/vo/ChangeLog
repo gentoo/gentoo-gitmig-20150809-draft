@@ -1,9 +1,6 @@
 # ChangeLog for dev-python/vo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.3 2011/01/07 18:23:58 jlec Exp $
-
-  07 Jan 2011; Justin Lecher <jlec@gentoo.org> vo-0.6.ebuild:
-  Missing dep for tests added
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.4 2011/01/07 18:31:44 jlec Exp $
 
   10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   vo-0.6.ebuild:
