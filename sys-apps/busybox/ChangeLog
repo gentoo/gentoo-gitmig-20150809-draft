@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.264 2010/12/28 16:44:11 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.265 2011/01/07 17:30:34 vapier Exp $
+
+  07 Jan 2011; Mike Frysinger <vapier@gentoo.org> busybox-1.18.1.ebuild,
+  +files/busybox-1.18.1-bzip2.patch, +files/busybox-1.18.1-cpio.patch,
+  +files/busybox-1.18.1-hush.patch, +files/busybox-1.18.1-mkswap.patch,
+  +files/busybox-1.18.1-warning.patch:
+  Add upstream hotfixes #350604 by Chris Richards.
 
   28 Dec 2010; Markus Meier <maekke@gentoo.org> busybox-1.17.4.ebuild:
   arm stable, bug #349309

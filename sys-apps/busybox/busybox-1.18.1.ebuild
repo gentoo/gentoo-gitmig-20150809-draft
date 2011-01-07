@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.1.ebuild,v 1.1 2010/12/21 23:32:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.1.ebuild,v 1.2 2011/01/07 17:30:34 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -85,7 +85,7 @@ src_prepare() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.18.0-bb.patch
-	#epatch "${FILESDIR}"/busybox-${PV}-*.patch
+	epatch "${FILESDIR}"/busybox-${PV}-*.patch
 
 	# flag cleanup
 	sed -i -r \
