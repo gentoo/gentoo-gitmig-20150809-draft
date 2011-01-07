@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.1 2010/09/29 20:58:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.2 2011/01/07 10:11:57 graaff Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc python ruby"
 
-RDEPEND="ruby? ( virtual/ruby )"
+RDEPEND="ruby? ( dev-lang/ruby:1.8 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	ruby?  ( dev-lang/swig )
