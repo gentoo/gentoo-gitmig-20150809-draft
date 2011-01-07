@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.458 2011/01/07 20:02:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.459 2011/01/07 20:06:08 fauli Exp $
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> php-5.3.5.ebuild:
+  stable x86, security bug 350908
 
   07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> php-5.2.17.ebuild:
   stable x86, security bug 350908
