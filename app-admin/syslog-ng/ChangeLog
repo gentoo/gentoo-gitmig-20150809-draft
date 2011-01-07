@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.265 2011/01/04 14:48:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.266 2011/01/07 23:53:04 fauli Exp $
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  syslog-ng-3.1.3.ebuild:
+  stable x86, bug 350410
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> syslog-ng-3.0.9.ebuild,
   syslog-ng-3.1.3.ebuild:
