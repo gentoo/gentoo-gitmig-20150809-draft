@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.225 2010/12/25 00:29:24 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.226 2011/01/07 03:22:42 sping Exp $
+
+*genkernel-99999 (07 Jan 2011)
+
+  07 Jan 2011; Sebastian Pipping <sping@gentoo.org>
+  genkernel-3.4.10.908.ebuild, genkernel-9999.ebuild, +genkernel-99999.ebuild:
+  Remove traces of svn, add 99999er ebuild to enable people to test our
+  experimental branch
 
 *genkernel-3.4.10.908 (25 Dec 2010)
 
