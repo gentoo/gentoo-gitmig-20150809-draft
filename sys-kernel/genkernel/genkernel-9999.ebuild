@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.19 2011/01/07 03:22:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.20 2011/01/07 16:20:57 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -61,6 +61,10 @@ IUSE="ibm selinux"
 DEPEND="sys-fs/e2fsprogs
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND} app-arch/cpio"
+
+if [[ ${PV} == 9999* ]]; then
+	DEPEND="${DEPEND} app-text/asciidoc"
+fi
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
