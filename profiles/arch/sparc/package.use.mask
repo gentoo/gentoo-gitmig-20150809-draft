@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.64 2011/01/03 16:50:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.65 2011/01/07 20:00:09 xmw Exp $
 
 # Michael Weber <xmw@gentoo.org> (03 Jan 2011)
 # dev-libs/libev is not keyworded
@@ -17,10 +17,6 @@ net-analyzer/wireshark doc-pdf
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (07 Nov 2010)
 # x11-libs/qt-declarative is not keyworded.
 dev-python/PyQt4 declarative
-
-# Raúl Porcel <armin76@gentoo.org> (25 Sep 2010)
-# not tested
-media-sound/rhythmbox upnp
 
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch
