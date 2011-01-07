@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.38 2011/01/06 13:13:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.39 2011/01/07 00:32:29 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> rawdog-2.13.ebuild:
+  Marking rawdog-2.13 ppc for bug 345485
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org> rawdog-2.13.ebuild:
   ia64/s390/sparc stable wrt #345485
