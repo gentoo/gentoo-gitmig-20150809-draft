@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.8 2011/01/06 21:56:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.9 2011/01/07 12:42:34 scarabeus Exp $
+
+  07 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libktorrent-1.0.5.3.ebuild:
+  Fix src_uri calculation per bug #350927. Thanks to Lars (Poly-C) for the
+  patch.
 
 *libktorrent-1.0.5.3 (06 Jan 2011)
 
