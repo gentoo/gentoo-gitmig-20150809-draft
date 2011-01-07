@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.43 2011/01/06 16:41:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.44 2011/01/07 18:13:41 jlec Exp $
+
+  07 Jan 2011; Justin Lecher <jlec@gentoo.org> tre-0.8.0.ebuild:
+  Make sure correct locale is present during test, 350839
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> tre-0.7.5.ebuild,
   tre-0.8.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.4 2011/01/06 16:41:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.5 2011/01/07 18:13:41 jlec Exp $
 
 EAPI=2
 
@@ -27,6 +27,17 @@ src_configure() {
 		--enable-system-abi \
 		$(use_enable nls) \
 		$(use_enable static-libs static)
+}
+
+src_test() {
+	if $(locale -a | grep -iq en_US.iso88591); then
+	emake -j1 \
+		check || die
+	else
+		ewarn "If you like to run the test,"
+		ewarn "please make sure en_US.ISO-8859-1 is installed."
+		die "en_US.ISO-8859-1 locale is missing"
+	fi
 }
 
 src_install() {
