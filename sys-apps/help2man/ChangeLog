@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.53 2011/01/02 15:17:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.54 2011/01/07 21:55:17 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> help2man-1.38.2.ebuild:
+  stable ppc, bug 350091
 
   02 Jan 2011; Michael Weber <xmw@gentoo.org> help2man-1.38.2.ebuild:
   arm/sparc stable (bug 350091)
