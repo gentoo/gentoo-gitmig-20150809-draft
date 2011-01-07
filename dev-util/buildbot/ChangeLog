@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.81 2011/01/04 09:04:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.82 2011/01/07 17:22:04 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> buildbot-0.8.2.ebuild:
+  Marking buildbot-0.8.2 ppc for bug 349143
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> buildbot-0.8.2.ebuild:
   sparc stable (bug 349143)
