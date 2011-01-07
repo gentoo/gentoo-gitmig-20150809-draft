@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.27 2010/10/20 22:21:39 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.28 2011/01/07 21:04:46 pacho Exp $
+
+  07 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-2.32.0.ebuild:
+  gnome-base/nautilus is always required since it's not only used for nautilus
+  extension (bug #350919 by Delan Azabani).
 
   20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-disk-utility-2.28.1.ebuild, gnome-disk-utility-2.32.0.ebuild:
