@@ -1,6 +1,9 @@
 # ChangeLog for media-video/coherence
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.4 2010/08/12 09:09:52 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.5 2011/01/07 09:37:06 xmw Exp $
+
+  07 Jan 2011; Michael Weber <xmw@gentoo.org> coherence-0.6.6.1.ebuild:
+  added ~sparc keyword (bug 311825)
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org> coherence-0.6.6.1.ebuild:
   amd64/x86 stable, bug #330773
