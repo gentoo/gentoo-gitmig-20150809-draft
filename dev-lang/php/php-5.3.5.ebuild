@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.5.ebuild,v 1.1 2011/01/06 23:35:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.5.ebuild,v 1.2 2011/01/07 17:37:11 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SUHOSIN_VERSION="5.3.4-0.9.10"
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc64 ~x86"
 
 function php_get_uri ()
 {

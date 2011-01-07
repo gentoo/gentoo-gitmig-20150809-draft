@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.456 2011/01/06 23:35:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.457 2011/01/07 17:37:11 hwoarang Exp $
+
+  07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> php-5.2.17.ebuild,
+  php-5.3.5.ebuild:
+  Stable on amd64 wrt bug #350908
 
 *php-5.3.5 (06 Jan 2011)
 *php-5.2.17 (06 Jan 2011)
