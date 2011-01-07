@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.5.1.ebuild,v 1.10 2011/01/07 00:43:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.5.1.ebuild,v 1.11 2011/01/07 17:47:51 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -31,6 +31,9 @@ src_prepare() {
 		else
 			cp -pr "${S}" "${S}-${PYTHON_ABI}" || return 1
 		fi
+
+		# Disable versioning of unit2 script to avoid collision with versioning performed by distutils_src_install().
+		sed -e "/'%s = unittest2:main_' % SCRIPT2,/d" -i "${S}-${PYTHON_ABI}/setup.py" || return 1
 	}
 	python_execute_function -q preparation
 }
