@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.27 2011/01/05 19:08:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.28 2011/01/07 23:27:56 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> symlinks-1.4.ebuild:
+  Marking symlinks-1.4 ppc for bug 350698
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> symlinks-1.4.ebuild:
   Stable on amd64 wrt bug #350698
