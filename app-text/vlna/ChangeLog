@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vlna
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.33 2011/01/04 22:39:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.34 2011/01/07 22:51:51 fauli Exp $
+
+  07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> vlna-1.5.ebuild:
+  stable x86, bug 349799
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> vlna-1.5.ebuild:
   Stable on amd64 wrt bug #349799
