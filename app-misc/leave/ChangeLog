@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/leave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.14 2011/01/05 19:04:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.15 2011/01/07 23:26:29 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> leave-20100918.ebuild:
+  Marking leave-20100918 ppc for bug 350687
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> leave-20100918.ebuild:
   Stable on amd64 wrt bug #350687
