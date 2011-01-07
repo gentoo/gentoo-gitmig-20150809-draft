@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12336 2011/01/07 14:21:30 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12337 2011/01/07 14:29:24 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -236,10 +236,6 @@ www-apps/horde-groupware
 # Test suite gives one error, previous version did not.
 # Upcoming bump seems too risky for ~arch right now.
 ~app-text/xmlstarlet-1.0.3
-
-# Sebastian Pipping <sping@gentoo.org> (25 Nov 2010)
-# Experimental bump, ~arch seems too risky right now
->=net-mail/rss2email-2.69
 
 # Mike Pagano <mpagano@gentoo.org> (20 Nov 2010)
 # Mask this version of gentoo-sources while we test
