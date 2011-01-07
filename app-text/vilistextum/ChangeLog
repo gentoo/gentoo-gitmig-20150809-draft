@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.27 2011/01/06 16:31:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.28 2011/01/07 18:05:11 jlec Exp $
+
+  07 Jan 2011; Justin Lecher <jlec@gentoo.org> vilistextum-2.6.9.ebuild:
+  Make sure correct locale is present during test, 350833
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> vilistextum-2.6.7.ebuild,
   vilistextum-2.6.7-r1.ebuild, vilistextum-2.6.9.ebuild:

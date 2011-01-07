@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.4 2011/01/06 16:31:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.5 2011/01/07 18:05:11 jlec Exp $
 
 EAPI="2"
 
@@ -34,6 +34,17 @@ src_configure() {
 	econf \
 		$(use_enable unicode multibyte) \
 		$(use_with unicode unicode-locale en_US.UTF-8)
+}
+
+src_test() {
+	if $(locale -a | grep -iq en_US.utf8); then
+	emake -j1 \
+		check || die
+	else
+		ewarn "If you like to run the test,"
+		ewarn "please make sure en_US.UTF-8 is installed."
+		die "en_US.UTF-8 locale is missing"
+	fi
 }
 
 src_install() {
