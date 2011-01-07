@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418-r1.ebuild,v 1.8 2011/01/06 17:08:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418-r1.ebuild,v 1.9 2011/01/07 20:57:52 ranger Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.skbuff.net/iputils/iputils-s${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-linux ~x86-linux"
 IUSE="doc idn ipv6 SECURITY_HAZARD ssl static"
 
 # sysfsutils is needed for libsysfs which is used by arping only
