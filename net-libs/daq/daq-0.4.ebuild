@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.4.ebuild,v 1.1 2010/12/03 18:40:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.4.ebuild,v 1.2 2011/01/07 17:35:22 patrick Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ src_configure() {
 
 src_install() {
 
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 
 	dodoc ChangeLog README
 

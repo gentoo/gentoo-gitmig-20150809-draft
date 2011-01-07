@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.4 2010/12/03 18:40:04 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.5 2011/01/07 17:35:22 patrick Exp $
+
+  07 Jan 2011; Patrick Lauer <patrick@gentoo.org> daq-0.4.ebuild:
+  Fix parallel make issue for 0.4 too #345915
 
 *daq-0.4 (03 Dec 2010)
 
