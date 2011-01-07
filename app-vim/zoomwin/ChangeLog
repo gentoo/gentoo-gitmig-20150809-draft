@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/zoomwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.34 2011/01/07 22:29:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zoomwin/ChangeLog,v 1.35 2011/01/07 23:01:47 radhermit Exp $
+
+  07 Jan 2011; Tim Harder <radhermit@gentoo.org> -zoomwin-21.ebuild,
+  -zoomwin-22.ebuild:
+  Remove old
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> zoomwin-23.ebuild:
   stable ppc, bug 345067

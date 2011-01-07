@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimoutliner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.21 2011/01/07 22:45:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.22 2011/01/07 23:06:14 radhermit Exp $
+
+  07 Jan 2011; Tim Harder <radhermit@gentoo.org> -vimoutliner-0.3.3a-r1.ebuild:
+  Remove old
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> vimoutliner-0.3.4-r2.ebuild:
   stable ppc, bug 345091

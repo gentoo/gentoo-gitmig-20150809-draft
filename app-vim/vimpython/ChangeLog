@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.25 2011/01/07 22:49:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpython/ChangeLog,v 1.26 2011/01/07 23:03:37 radhermit Exp $
+
+  07 Jan 2011; Tim Harder <radhermit@gentoo.org> -vimpython-1.11.ebuild:
+  Remove old
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> vimpython-1.13.ebuild:
   stable ppc, bug 345361
