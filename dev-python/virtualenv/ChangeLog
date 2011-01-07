@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.48 2011/01/07 17:25:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.49 2011/01/07 17:53:49 arfrever Exp $
+
+  07 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -virtualenv-1.4.9.ebuild:
+  Delete.
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> virtualenv-1.5.1.ebuild:
   Marking virtualenv-1.5.1 ppc for bug 349192
