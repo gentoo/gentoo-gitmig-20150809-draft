@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.8.ebuild,v 1.3 2011/01/07 17:54:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.8.8.ebuild,v 1.4 2011/01/07 23:47:24 fauli Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~m68k ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~m68k ~s390 ~sh x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE="bzip2 dselect nls test unicode zlib"
 
 LANGS="sv de es ja fr hu pl ru"
