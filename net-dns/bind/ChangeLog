@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.309 2010/12/29 10:45:55 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.310 2011/01/07 23:37:37 robbat2 Exp $
+
+*bind-9.7.2_p3-r3 (07 Jan 2011)
+
+  07 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +bind-9.7.2_p3-r3.ebuild:
+  Upstream respun the geoip patch, no functional changes
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> bind-9.6.2_p3-r1.ebuild:
   Stable on amd64 wrt bug #347621
