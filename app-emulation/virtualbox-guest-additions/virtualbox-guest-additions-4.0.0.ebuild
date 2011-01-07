@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.0.ebuild,v 1.1 2011/01/06 22:57:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.0.ebuild,v 1.2 2011/01/07 19:15:16 polynomial-c Exp $
+
+EAPI=2
 
 inherit eutils linux-mod
 
@@ -51,30 +53,38 @@ pkg_setup() {
 }
 
 src_unpack() {
-		unpack ${A}
+	unpack ${A}
 
-		# Create and unpack a tarball with the sources of the Linux guest
-		# kernel modules, to include all the needed files
-		"${S}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
-		unpack ./vbox-kmod.tar.gz
+	# Create and unpack a tarball with the sources of the Linux guest
+	# kernel modules, to include all the needed files
+	"${S}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
+	unpack ./vbox-kmod.tar.gz
 
-		# PaX fixes (see bug #298988)
-		epatch "${FILESDIR}"/vboxguest-log-use-c99.patch
+	# Remove shipped binaries (kBuild,yasm), see bug #232775
+	cd "${S}"
+	rm -rf kBuild/bin tools
+}
 
-		# Remove shipped binaries (kBuild,yasm), see bug #232775
-		cd "${S}"
-		rm -rf kBuild/bin tools
+src_prepare() {
+	# PaX fixes (see bug #298988)
+	pushd "${WORKDIR}" &>/dev/null || die
+	epatch "${FILESDIR}"/vboxguest-log-use-c99.patch
+	popd &>/dev/null || die
 
-		# Disable things unused or splitted into separate ebuilds
-		cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+	# Disable things unused or splitted into separate ebuilds
+	cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
 
-		# stupid new header references...
-		for vboxheader in {product,revision}-generated.h ; do
-			for mdir in vbox{guest,sf} ; do
-				ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
-					"${WORKDIR}/${mdir}/${vboxheader}"
-			done
+	# stupid new header references...
+	for vboxheader in {product,revision}-generated.h ; do
+		for mdir in vbox{guest,sf} ; do
+			ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
+				"${WORKDIR}/${mdir}/${vboxheader}"
 		done
+	done
+
+	# Respect LDFLAGS
+	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 }
 
 src_compile() {
