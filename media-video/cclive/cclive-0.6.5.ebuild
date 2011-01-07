@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.6.5.ebuild,v 1.1 2010/08/26 20:35:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.6.5.ebuild,v 1.2 2011/01/07 19:51:34 aballier Exp $
 
 EAPI=2
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="test offensive"
 
-RDEPEND=">=media-libs/quvi-0.2.0"
+RDEPEND=">=media-libs/quvi-0.2.0
+	>=dev-libs/libpcre-7.8[cxx]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
