@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.7 2011/01/04 09:06:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.8 2011/01/07 17:23:38 ranger Exp $
+
+  07 Jan 2011; Brent Baude <ranger@gentoo.org> buildbot-slave-0.8.2.ebuild:
+  Marking buildbot-slave-0.8.2 ppc for bug 349143
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> buildbot-slave-0.8.2.ebuild:
   sparc stable (bug 349143)
