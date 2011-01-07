@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.20 2010/11/13 12:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/mysql-5.1.ebuild,v 1.21 2011/01/07 01:16:05 jmbsvicetto Exp $
+
+EAPI="2"
 
 DESCRIPTION="Virtual for MySQL client or database"
 HOMEPAGE=""
@@ -9,12 +11,12 @@ SRC_URI=""
 LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x64-macos ~x86-macos ~x86-solaris"
-IUSE=""
+IUSE="embedded static"
 
 DEPEND=""
 # TODO: add mysql-cluster here
 RDEPEND="|| (
-	=dev-db/mysql-${PV}*
-	=dev-db/mysql-community-${PV}*
-	=dev-db/mariadb-${PV}*
+	=dev-db/mysql-${PV}*[embedded=,static=]
+	=dev-db/mariadb-${PV}*[embedded=,static=]
+	=dev-db/mysql-community-${PV}*[embedded=,static=]
 )"

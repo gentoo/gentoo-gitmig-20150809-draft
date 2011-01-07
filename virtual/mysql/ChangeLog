@@ -1,6 +1,11 @@
 # ChangeLog for virtual/mysql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.25 2010/11/13 12:17:01 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.26 2011/01/07 01:16:05 jmbsvicetto Exp $
+
+  07 Jan 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mysql-5.1.ebuild, mysql-5.5.ebuild, metadata.xml:
+  Added embedded and static use flags to the virtual/mysql packages - fixes bug
+  350876.
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> mysql-5.1.ebuild:
   ia64/s390/sh/sparc stable wrt #321791
