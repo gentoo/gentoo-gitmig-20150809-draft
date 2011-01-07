@@ -1,15 +1,20 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.2.ebuild,v 1.2 2010/12/01 03:32:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.2.ebuild,v 1.3 2011/01/07 22:53:33 flameeyes Exp $
 
 EAPI="2"
+
+# backports are maintained as tags on Diego's repository on gitorious:
+# http://gitorious.org/~flameeyes/opencryptoki/flameeyess-opencryptoki
+BACKPORTS=1
 
 inherit autotools eutils multilib
 
 DESCRIPTION="PKCS#11 provider for IBM cryptographic hardware"
 HOMEPAGE="http://sourceforge.net/projects/opencryptoki"
 SRC_URI="mirror://sourceforge/opencryptoki/${P}.tar.bz2
-		 mirror://gentoo/opencryptoki-tpm_stdll-sw_fallback-June012006.patch.bz2"
+	${BACKPORTS:+
+		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}"
 
 LICENSE="CPL-0.5"
 SLOT="0"
@@ -26,14 +31,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Enable fallback operation mode for imported keys.
-	# Patch written by Kent Yoder.
-	epatch "${WORKDIR}/opencryptoki-tpm_stdll-sw_fallback-June012006.patch"
-	epatch "${FILESDIR}/opencryptoki-2.2.4.1-tpm_util.c.patch"
-	epatch "${FILESDIR}/opencryptoki-2.2.8-steal_shmem.patch"
-	epatch "${FILESDIR}/opencryptoki-2.2.8-remove_openlog.patch"
-	epatch "${FILESDIR}/opencryptoki-2.2.8-remove_recursive_chmod.patch"
-	epatch "${FILESDIR}/opencryptoki-2.3.2-build.patch"
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_MULTI_MSG="Applying backports patches #${BACKPORTS} ..." \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
+
 	eautoreconf
 }
 
