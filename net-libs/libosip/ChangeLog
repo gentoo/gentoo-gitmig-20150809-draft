@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libosip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.44 2010/12/19 15:14:44 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.45 2011/01/07 08:54:42 pva Exp $
+
+*libosip-3.5.0 (07 Jan 2011)
+
+  07 Jan 2011; Peter Volkov <pva@gentoo.org> +libosip-3.5.0.ebuild:
+  Version bump, thank Jeroen Roovers for report in bug #350555
 
   19 Dec 2010; Peter Volkov <pva@gentoo.org> +libosip-2.2.2.ebuild:
   Restore libosip-2.2.2.ebuild as it's used by net-misc/partysip, thank
