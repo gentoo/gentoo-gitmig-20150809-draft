@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.5.0.ebuild,v 1.1 2011/01/07 08:56:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.5.0.ebuild,v 1.2 2011/01/07 09:07:06 pva Exp $
 
 EAPI="2"
 
-inherit eutils autotools
+inherit eutils
 
 MY_PV=${PV%.?}-${PV##*.}
 MY_PV=${PV}
@@ -20,6 +20,7 @@ IUSE="+srv ssl"
 
 DEPEND=">=net-libs/libosip-3.2.0
 	ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
