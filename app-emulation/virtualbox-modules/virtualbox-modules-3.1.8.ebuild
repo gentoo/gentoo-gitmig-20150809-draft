@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.1.8.ebuild,v 1.4 2010/08/01 12:26:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.1.8.ebuild,v 1.5 2011/01/07 15:12:39 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="!=app-emulation/virtualbox-ose-9999"
+RDEPEND="!=app-emulation/virtualbox-9999"
 
 S=${WORKDIR}
 
