@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.121 2011/01/04 09:09:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.122 2011/01/08 00:51:37 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> org-mode-7.3.ebuild:
+  Marking org-mode-7.3 ppc for bug 348197
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> org-mode-7.3.ebuild:
   sparc stable (bug 348197)
