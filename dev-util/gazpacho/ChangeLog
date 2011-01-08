@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gazpacho
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.10 2008/01/31 14:33:44 ikelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.11 2011/01/08 20:23:29 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gazpacho-0.6.2.ebuild, -gazpacho-0.6.2-r1.ebuild,
+  -files/gazpacho-0.6.2-amd64-fixes.patch,
+  -files/gazpacho-0.6.2-setup-fixes.patch, -gazpacho-0.7.0.ebuild,
+  -files/gazpacho-0.7.0-default-action-group.patch, -gazpacho-0.7.1.ebuild:
+  Delete.
 
   31 Jan 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Re-sign digestless manifest.
