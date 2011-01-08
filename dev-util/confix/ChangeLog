@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/confix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.17 2010/12/26 14:49:22 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.18 2011/01/08 20:39:38 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/2.1.0/CALL_RESCAN_HACK.patch, -files/2.1.0/exeext.patch,
+  -files/2.1.0/ext-ac-archive.patch, -files/2.1.0/fast-install.patch,
+  -confix-2.1.0.ebuild, -files/2.1.0/local-libs-first.patch,
+  -confix-2.1.0-r4.ebuild, -files/2.1.0/private-headers.patch,
+  -confix-2.3.0-r3.ebuild:
+  Delete.
 
 *confix-2.3.5-r1 (26 Dec 2010)
 
