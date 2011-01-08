@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ess
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.72 2010/12/20 12:26:29 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.73 2011/01/08 00:52:08 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> ess-5.12.ebuild:
+  Marking ess-5.12 ppc for bug 348198
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> ess-5.12.ebuild:
   Stable on amd64 wrt bug #348198
