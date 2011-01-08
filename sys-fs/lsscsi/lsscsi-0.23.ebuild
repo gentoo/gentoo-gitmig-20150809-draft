@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.23.ebuild,v 1.2 2011/01/08 18:25:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.23.ebuild,v 1.3 2011/01/08 19:14:46 flameeyes Exp $
 
 EAPI="2"
+
+WANT_AUTOMAKE=1.10
 
 inherit autotools toolchain-funcs
 

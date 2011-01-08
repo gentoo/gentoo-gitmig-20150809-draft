@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.24.ebuild,v 1.1 2011/01/08 02:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.24.ebuild,v 1.2 2011/01/08 19:14:46 flameeyes Exp $
 
 EAPI="2"
 
-inherit autotools toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="SCSI sysfs query tool"
 HOMEPAGE="http://sg.danny.cz/scsi/lsscsi.html"
@@ -16,10 +16,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-fs/sysfsutils-1.2.0"
-
-src_prepare() {
-	eautomake || die "automake failed"
-}
 
 src_install() {
 	emake install DESTDIR="${D}" || die
