@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.46 2011/01/08 02:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.47 2011/01/08 18:25:30 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> lsscsi-0.23.ebuild:
+  Marking lsscsi-0.23 ppc for bug 351077
 
 *lsscsi-0.24 (08 Jan 2011)
 
