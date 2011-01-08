@@ -1,29 +1,31 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.4.2.ebuild,v 1.3 2010/05/18 13:03:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.4.2.ebuild,v 1.4 2011/01/08 17:28:00 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
 
-inherit gnome2-utils fdo-mime distutils
+inherit distutils fdo-mime gnome2-utils
 
 DESCRIPTION="PDF-Shuffler is GUI app that can merge or split pdfs and rotate, crop and rearrange their pages."
 HOMEPAGE="http://sourceforge.net/projects/pdfshuffler/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="amd64 x86"
-
 IUSE=""
 
-DEPEND="dev-python/python-poppler
-	dev-python/pyPdf"
+DEPEND="dev-python/pyPdf
+	dev-python/python-poppler"
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/${P}"
 
 DOCS="ChangeLog README TODO AUTHORS"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 pkg_preinst() {
 	gnome2_icon_savelist
