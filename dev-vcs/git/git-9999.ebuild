@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.12 2011/01/07 23:06:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.13 2011/01/08 01:23:25 robbat2 Exp $
 
 EAPI=3
 
@@ -334,7 +334,7 @@ src_install() {
 
 	if use python && use gtk ; then
 		dobin "${S}"/contrib/gitview/gitview
-		python_convert_shebangs "${D}"/usr/bin/gitview
+		python_convert_shebangs ${PYTHON_ABI} "${D}"/usr/bin/gitview
 		dodoc "${S}"/contrib/gitview/gitview.txt
 	fi
 
