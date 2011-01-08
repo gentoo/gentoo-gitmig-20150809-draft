@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.205 2011/01/06 14:11:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.206 2011/01/08 01:32:44 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> boost-1.42.0-r2.ebuild:
+  Marking boost-1.42.0-r2 ppc for bug 344677
 
 *boost-1.45.0 (06 Jan 2011)
 
