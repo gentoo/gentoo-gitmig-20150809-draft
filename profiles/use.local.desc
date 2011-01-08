@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6270 2011/01/08 17:32:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6271 2011/01/08 17:52:13 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4052,6 +4052,7 @@ www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
 www-servers/resin:admin - Enable Resin admin webapp
 www-servers/tomcat:admin - Enable Tomcat admin webapp
+x11-apps/ardesia:cwiid -  cwiid support: collection of Linux tools written in C for interfacing to the Nintendo Wiimote. 
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
 x11-apps/xinit:minimal -  Control dependencies on legacy apps (xterm, twm, ...). Safe to enable if you use a modern desktop environment. 
 x11-apps/xsm:rsh - This allows the use of rsh (remote shell) and rcp (remote copy).
