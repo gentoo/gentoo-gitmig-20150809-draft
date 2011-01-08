@@ -1,7 +1,13 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 
-# For backwards compatability with baselayout < 1.13.0
-: ${SVCNAME:=${myservice}} #174256
+# For backwards compatability with baselayout < 1.13.0 #174256
+if [[ -z ${SVCNAME} ]] ; then
+	case ${myservice} in
+		""|checkfs|localmount) SVCNAME=dmcrypt ;;
+		*) SVCNAME=${myservice} ;;
+	esac
+fi
+
 dm_crypt_execute_checkfs() {
 	dm_crypt_execute_dmcrypt
 }
