@@ -1,6 +1,11 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.52 2011/01/07 21:31:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.53 2011/01/08 13:47:05 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -opensp-1.5.1.ebuild, -files/opensp-1.5.1-gcc41.patch,
+  -opensp-1.5.2-r1.ebuild:
+  Delete.
 
   07 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> opensp-1.5.2-r2.ebuild:
   ppc64 stable wrt #329791
