@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.9_beta.ebuild,v 1.1 2010/12/15 20:17:01 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.9_beta.ebuild,v 1.2 2011/01/08 16:35:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -31,6 +31,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

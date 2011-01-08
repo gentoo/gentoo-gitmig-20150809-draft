@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.4.ebuild,v 1.2 2010/04/29 00:49:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.4.ebuild,v 1.3 2011/01/08 16:35:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils eutils multilib
@@ -27,6 +27,7 @@ RESTRICT="test"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

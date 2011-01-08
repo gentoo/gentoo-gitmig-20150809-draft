@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/desktopcouch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/ChangeLog,v 1.5 2010/12/15 20:17:01 neurogeek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/ChangeLog,v 1.6 2011/01/08 16:35:16 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  desktopcouch-0.6.4.ebuild, desktopcouch-0.6.9_beta.ebuild:
+  Fix deprecation warnings.
 
 *desktopcouch-0.6.9_beta (15 Dec 2010)
 
