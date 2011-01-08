@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.5b.ebuild,v 1.3 2011/01/02 15:04:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.5b.ebuild,v 1.4 2011/01/08 13:59:40 arfrever Exp $
 
 EAPI="3"
 
-inherit linux-mod
+inherit eutils linux-mod
 
 MY_P="${PN/aes/AES}-v${PV}"
 
@@ -47,6 +47,9 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e 's/make/$(MAKE)/g' -i Makefile || die "sed failed"
+
+	# http://loop-aes.sourceforge.net/updates/loop-AES-v3.5b-20101231.diff.bz2
+	epatch "${FILESDIR}/loop-AES-v3.5b-20101231.diff"
 }
 
 src_install() {
