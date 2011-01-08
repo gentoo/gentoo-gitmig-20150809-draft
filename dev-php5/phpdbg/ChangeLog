@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/phpdbg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/ChangeLog,v 1.15 2010/12/28 19:29:57 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/ChangeLog,v 1.16 2011/01/08 18:31:35 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> phpdbg-2.15.5-r1.ebuild:
+  Marking phpdbg-2.15.5-r1 ~ppc for bug 349659
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> phpdbg-2.15.5-r1.ebuild:
   Marking phpdbg-2.15.5-r1 ~ppc64 for bug 349659
