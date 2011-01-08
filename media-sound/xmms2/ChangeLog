@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.6 2010/10/16 18:32:03 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.7 2011/01/08 20:50:35 slyfox Exp $
+
+  08 Jan 2011; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r2.ebuild:
+  Removed unused app-admin/gamin depend. Redundancy found by Jeroen Roovers.
 
   16 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r2.ebuild:
   Added missing pkgconfig depend. Reported by dE <de.techno@gmail.com> (bug

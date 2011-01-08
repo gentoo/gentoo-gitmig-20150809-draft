@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.4 2010/10/16 18:32:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.5 2011/01/08 20:50:35 slyfox Exp $
 
 EAPI=3
 
@@ -61,7 +61,6 @@ RDEPEND="server? (
 
 	>=dev-libs/glib-2.12.9
 	cxx? ( >=dev-libs/boost-1.32 )
-	mlib-update? ( app-admin/gamin )
 	perl? ( >=dev-lang/perl-5.8.8 )
 	python? ( =dev-lang/python-2* )
 	ruby? ( >=dev-lang/ruby-1.8.5 ) "
