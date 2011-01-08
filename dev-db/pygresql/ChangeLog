@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.48 2010/12/14 02:21:28 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.49 2011/01/08 16:08:43 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygresql-3.5.ebuild, pygresql-3.6.2.ebuild, pygresql-3.6.2-r1.ebuild,
+  pygresql-3.8.1.ebuild, pygresql-4.0.ebuild:
+  Fix deprecation warnings.
 
   14 Dec 2010; Matt Turner <mattst88@gentoo.org> pygresql-3.5.ebuild,
   pygresql-3.6.2.ebuild, pygresql-3.6.2-r1.ebuild:

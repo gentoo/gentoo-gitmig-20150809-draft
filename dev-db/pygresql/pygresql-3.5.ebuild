@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.5.ebuild,v 1.13 2010/12/14 02:21:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.5.ebuild,v 1.14 2011/01/08 16:08:43 arfrever Exp $
+
+EAPI="3"
 
 inherit eutils distutils
 
@@ -21,7 +23,6 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
