@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.240 2010/11/09 13:48:09 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.241 2011/01/08 20:49:08 vapier Exp $
+
+  08 Jan 2011; Mike Frysinger <vapier@gentoo.org>
+  timezone-data-2010o.ebuild:
+  Stabilize for everyone.
 
 *timezone-data-2010o (09 Nov 2010)
 
