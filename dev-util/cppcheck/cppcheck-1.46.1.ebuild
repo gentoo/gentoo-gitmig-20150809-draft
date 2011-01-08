@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.46.1.ebuild,v 1.1 2011/01/01 15:12:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.46.1.ebuild,v 1.2 2011/01/08 20:18:03 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="htmlreport? 2"
 
-inherit distutils eutils python toolchain-funcs qt4-r2
+inherit distutils eutils qt4-r2 toolchain-funcs
 
 DESCRIPTION="static analyzer of C/C++ code"
 HOMEPAGE="http://apps.sourceforge.net/trac/cppcheck/"
@@ -20,6 +19,7 @@ IUSE="htmlreport qt4"
 DEPEND="htmlreport? ( dev-python/pygments )
 		qt4? ( x11-libs/qt-gui:4
 			x11-libs/qt-assistant:4 )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if use htmlreport ; then
@@ -72,4 +72,12 @@ src_install() {
 		distutils_src_install
 		popd
 	fi
+}
+
+pkg_postinst() {
+	use htmlreport && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use htmlreport && distutils_pkg_postrm
 }
