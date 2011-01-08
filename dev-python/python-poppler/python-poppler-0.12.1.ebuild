@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.8 2010/12/30 01:38:39 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.9 2011/01/08 17:22:24 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit libtool python

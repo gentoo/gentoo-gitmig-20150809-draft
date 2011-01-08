@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-poppler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.10 2010/12/30 01:38:39 rafaelmartins Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.11 2011/01/08 17:22:24 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-poppler-0.12.1.ebuild:
+  Restrict Jython ABIs.
 
   30 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   python-poppler-0.12.1.ebuild:
