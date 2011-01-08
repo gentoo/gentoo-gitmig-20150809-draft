@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.56 2010/12/09 11:59:11 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.57 2011/01/08 22:29:44 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlalchemy-0.6.3.ebuild, sqlalchemy-0.6.4.ebuild, sqlalchemy-0.6.5.ebuild:
+  Restrict Jython ABIs.
 
   09 Dec 2010; Markos Chandras <hwoarang@gentoo.org> sqlalchemy-0.6.5.ebuild:
   Stable on amd64 wrt bug #348075
