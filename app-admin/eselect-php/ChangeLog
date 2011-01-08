@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.22 2011/01/07 19:58:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.23 2011/01/08 01:07:22 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> eselect-php-0.6.2.ebuild:
+  marking eselect-php-0.6.2 ppc stable for sec bug 350908
 
   07 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   eselect-php-0.6.2.ebuild:
