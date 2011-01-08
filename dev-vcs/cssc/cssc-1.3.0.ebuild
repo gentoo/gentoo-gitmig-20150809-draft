@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0.ebuild,v 1.1 2010/11/07 19:22:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0.ebuild,v 1.2 2011/01/08 18:26:10 jer Exp $
 
 EAPI="2"
 
@@ -19,7 +19,9 @@ src_prepare() {
 		-e 's|\([[:space:]]\)test-large |\1|g' || die "sed failed"
 }
 
-src_configure() { econf --enable-binary; }
+src_configure() {
+	econf --enable-binary --without-valgrind
+}
 
 src_compile() {
 	emake all || die "emake failed"
