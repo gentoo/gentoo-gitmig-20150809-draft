@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libgxim
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgxim/ChangeLog,v 1.1 2011/01/08 06:11:58 matsuu Exp $
+
+*libgxim-0.3.3 (08 Jan 2011)
+
+  08 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +libgxim-0.3.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
