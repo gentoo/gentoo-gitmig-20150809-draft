@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.1 2010/09/08 16:52:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.2 2011/01/08 18:14:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit python eutils distutils
+inherit distutils eutils
 
 DESCRIPTION="A GUI for Portage written in Python"
 HOMEPAGE="http://necoro.eu/portato"
