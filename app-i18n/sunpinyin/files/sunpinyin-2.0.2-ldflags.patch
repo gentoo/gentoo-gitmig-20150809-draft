@@ -1,0 +1,55 @@
+diff -urN sunpinyin/SConstruct sunpinyin-patched/SConstruct
+--- sunpinyin/SConstruct	2010-08-15 13:32:48.000000000 +0800
++++ sunpinyin-patched/SConstruct	2011-01-08 13:54:44.588000007 +0800
+@@ -193,6 +193,10 @@
+ conf = Configure(env, custom_tests={'CheckPKGConfig' : CheckPKGConfig,
+                                     'CheckPKG' : CheckPKG})
+ 
++if 'LDFLAGS' in os.environ:
++    import SCons
++    conf.env.Append(LINKFLAGS = SCons.Util.CLVar(os.environ['LDFLAGS']))
++
+ config_h_content = ''
+ 
+ def AddConfigItem(macro_name, res):
+diff -urN sunpinyin/wrapper/gtk_standalone/SConstruct sunpinyin-patched/wrapper/gtk_standalone/SConstruct
+--- sunpinyin/wrapper/gtk_standalone/SConstruct	2010-08-15 13:32:49.000000000 +0800
++++ sunpinyin-patched/wrapper/gtk_standalone/SConstruct	2011-01-08 13:55:27.696000007 +0800
+@@ -1,6 +1,10 @@
+ import os
+ 
+ env=Environment(ENV=os.environ, CFLAGS='-g', CXXFLAGS='-g')
++if 'LDFLAGS' in os.environ:
++    import SCons
++    env.Append(LINKFLAGS = SCons.Util.CLVar(os.environ['LDFLAGS']))
++
+ env.ParseConfig('pkg-config gtk+-2.0 sunpinyin-2.0 sqlite3 --cflags --libs')
+ 
+ env.Program('sunpinyin', source=['imi_gtkwin.cpp', 'sunpinyin.cpp'])
+diff -urN sunpinyin/wrapper/ibus/SConstruct sunpinyin-patched/wrapper/ibus/SConstruct
+--- sunpinyin/wrapper/ibus/SConstruct	2010-08-15 13:32:49.000000000 +0800
++++ sunpinyin-patched/wrapper/ibus/SConstruct	2011-01-08 13:55:02.292000012 +0800
+@@ -71,6 +71,9 @@
+ 
+ conf = Configure(env, custom_tests={'CheckPKGConfig' : CheckPKGConfig,
+                                     'CheckPKG' : CheckPKG })
++if 'LDFLAGS' in os.environ:
++    import SCons
++    conf.env.Append(LINKFLAGS = SCons.Util.CLVar(os.environ['LDFLAGS']))
+ 
+ def DoConfigure():
+     if GetOption('clean'):
+diff -urN sunpinyin/wrapper/xim/SConstruct sunpinyin-patched/wrapper/xim/SConstruct
+--- sunpinyin/wrapper/xim/SConstruct	2010-08-15 13:32:49.000000000 +0800
++++ sunpinyin-patched/wrapper/xim/SConstruct	2011-01-08 13:55:12.036000010 +0800
+@@ -81,6 +81,10 @@
+ 
+ conf = Configure(env, custom_tests={'CheckPKGConfig' : CheckPKGConfig,
+                                     'CheckPKG' : CheckPKG })
++if 'LDFLAGS' in os.environ:
++    import SCons
++    conf.env.Append(LINKFLAGS = SCons.Util.CLVar(os.environ['LDFLAGS']))
++
+ def DoConfigure():
+     if GetOption('clean'):
+         return
