@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/List-MoreUtils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.20 2010/12/03 01:18:37 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.21 2011/01/08 17:57:32 armin76 Exp $
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org> List-MoreUtils-0.22.ebuild,
+  List-MoreUtils-0.26.ebuild:
+  arm/s390/sh stable
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> List-MoreUtils-0.21.ebuild,
   List-MoreUtils-0.22.ebuild, List-MoreUtils-0.24.ebuild,
