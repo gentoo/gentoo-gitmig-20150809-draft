@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.30.1.ebuild,v 1.4 2009/10/24 11:03:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.30.1.ebuild,v 1.5 2011/01/08 20:05:55 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit distutils
 

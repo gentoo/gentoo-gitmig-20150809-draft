@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.46 2010/12/29 20:58:00 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.47 2011/01/08 20:05:55 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  wammu-0.30.1.ebuild:
+  Fix deprecation warning.
 
   29 Dec 2010; Christian Faulhammer <fauli@gentoo.org> -wammu-0.32.1.ebuild:
   clean up
