@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.736 2010/12/14 04:36:12 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.737 2011/01/08 23:30:16 vapier Exp $
+
+*glibc-2.11.3 (08 Jan 2011)
+
+  08 Jan 2011; Mike Frysinger <vapier@gentoo.org> +glibc-2.11.3.ebuild:
+  Version bump.
 
   14 Dec 2010; Matt Turner <mattst88@gentoo.org> glibc-2.12.1-r3.ebuild:
   Add ~mips
