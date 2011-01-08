@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.3 2010/11/28 19:19:35 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.4 2011/01/08 17:21:09 armin76 Exp $
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org> Class-Load-0.06.ebuild:
+  Add ~arm/~s390/~sh
 
   28 Nov 2010; Raúl Porcel <armin76@gentoo.org> Class-Load-0.06.ebuild:
   Add ~alpha/~ia64/~sparc wrt #345605
