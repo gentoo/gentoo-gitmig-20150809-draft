@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.1 2011/01/08 10:22:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.2 2011/01/08 15:38:11 polynomial-c Exp $
 
 EAPI=2
 
@@ -270,10 +270,11 @@ src_install() {
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox
 
 			dosym /usr/$(get_libdir)/${PN}/VBox /usr/bin/VirtualBox
+
+			newmenu "${FILESDIR}"/${PN}-ose.desktop-2 ${PN}.desktop
 		fi
 
 		newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
-		newmenu "${FILESDIR}"/${PN}-ose.desktop-2 ${PN}.desktop
 	else
 		doins VBoxHeadless || die
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless

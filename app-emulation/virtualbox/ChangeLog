@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.53 2011/01/08 12:40:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.54 2011/01/08 15:38:11 polynomial-c Exp $
+
+  08 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.0.0-r1.ebuild:
+  Moved installation of .desktop file into qt4 USE condition. Thanks to jlec
+  for the hint.
 
   08 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
   -virtualbox-3.2.12-r3.ebuild, virtualbox-3.2.12-r4.ebuild,
