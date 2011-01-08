@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.445 2011/01/06 23:22:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.446 2011/01/08 07:44:13 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -872,11 +872,11 @@ gcc-compiler_pkg_postinst() {
 
 	if ! is_crosscompile ; then
 		# hack to prevent collisions between SLOT
-		[[ ! -d ${ROOT}/lib/rcscripts/awk ]] \
-			&& mkdir -p "${ROOT}"/lib/rcscripts/awk
+		[[ ! -d ${ROOT}/$(get_libdir)/rcscripts/awk ]] \
+			&& mkdir -p "${ROOT}"/$(get_libdir)/rcscripts/awk
 		[[ ! -d ${ROOT}/sbin ]] \
 			&& mkdir -p "${ROOT}"/sbin
-		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/lib/rcscripts/awk/ || die "installing fixlafiles.awk"
+		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/$(get_libdir)/rcscripts/awk/ || die "installing fixlafiles.awk"
 		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
 
 		[[ ! -d ${ROOT}/usr/bin ]] \
@@ -894,7 +894,7 @@ gcc-compiler_pkg_postinst() {
 gcc-compiler_pkg_prerm() {
 	# Don't let these files be uninstalled #87647
 	touch -c "${ROOT}"/sbin/fix_libtool_files.sh \
-		"${ROOT}"/lib/rcscripts/awk/fixlafiles.awk
+		"${ROOT}"/$(get_libdir)/rcscripts/awk/fixlafiles.awk
 }
 
 gcc-compiler_pkg_postrm() {
