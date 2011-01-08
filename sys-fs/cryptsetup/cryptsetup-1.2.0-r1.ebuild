@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.2 2011/01/04 20:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.3 2011/01/08 00:52:21 vapier Exp $
 
 EAPI="2"
 
@@ -37,6 +37,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i '/enable_static_cryptsetup=yes/d' configure #350463
+	sed -i '/^LOOPDEV=/s:=.*:=`losetup -f` || exit 0:' tests/{compat,mode}-test
 	elibtoolize
 }
 
@@ -48,6 +49,14 @@ src_configure() {
 		$(use_enable static static-cryptsetup) \
 		$(use_enable nls) \
 		$(use_enable selinux)
+}
+
+src_test() {
+	if [[ ! -e /dev/mapper/control ]] ; then
+		ewarn "No /dev/mapper/control found -- skipping tests"
+		return 0
+	fi
+	default
 }
 
 src_install() {
