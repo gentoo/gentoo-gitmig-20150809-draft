@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Attribute-Handlers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.12 2010/12/03 01:09:06 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.13 2011/01/08 13:07:29 armin76 Exp $
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  Attribute-Handlers-0.88.ebuild:
+  arm/s390/sh stable
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> Attribute-Handlers-0.88.ebuild:
   add ~arm (bug 302981)
