@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/imsettings
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/ChangeLog,v 1.1 2011/01/08 06:15:28 matsuu Exp $
+
+*imsettings-1.0.0 (08 Jan 2011)
+
+  08 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +imsettings-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
