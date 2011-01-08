@@ -3,4 +3,8 @@
 <pkgmetadata>
   <herd>net-p2p</herd>
   <herd>qt</herd>
+  <maintainer>
+  	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+  </maintainer>
 </pkgmetadata>
