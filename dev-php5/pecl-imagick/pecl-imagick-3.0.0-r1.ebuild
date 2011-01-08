@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/pecl-imagick-3.0.0-r1.ebuild,v 1.3 2011/01/04 15:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/pecl-imagick-3.0.0-r1.ebuild,v 1.4 2011/01/08 18:26:46 ranger Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ DOCS="TODO"
 
 inherit php-ext-pecl-r2
 
-KEYWORDS="amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 DESCRIPTION="PHP wrapper for the ImageMagick library."
 LICENSE="PHP-3.01"
