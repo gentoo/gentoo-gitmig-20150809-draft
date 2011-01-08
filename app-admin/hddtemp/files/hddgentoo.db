@@ -50,6 +50,10 @@
 "FUJITSU MHV2120AH"							194	C "FUJITSU MHV2120AH"
 "WDC WD1000BB-00CAA1"						0 C "Western Digital Caviar WD1000BB"
 "WDC WD2001FASS-00W2B0"						194 C "Western Digital Caviar Black WD2001FASS"
-
-
+"WDC WD5000AADS-00S9B0"						194 C "Western Digital Caviar GP 500GB 32MB"
+"WDC WD5000AVDS-63U7B0"						194 C "Western Digital Caviar AV GP 500GB 32MB"
+"WDC WD5000AVJB-63YUA0"						194 C "Western Digital Caviar AV 500GB 8MB"
+"WDC WD20EVDS-63T3B0"						194 C "Western Digital Caviar AV GP 2TB 32MB"
+"WDC WD20EURS-63S48Y0"						194 C "Western Digital Caviar AV GP 2TB 64MB"
+"WDC WD3202ABYS-02B7A0"						194 C "Western Digital Caviar WD3202ABYS"
 
