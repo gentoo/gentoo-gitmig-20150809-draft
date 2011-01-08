@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.28.0.ebuild,v 1.1 2010/10/09 19:29:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.28.0.ebuild,v 1.2 2011/01/08 20:03:43 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 
-inherit eutils cmake-utils distutils
+inherit eutils cmake-utils python
 
 DESCRIPTION="A tool to handle your cellular phone"
 HOMEPAGE="http://www.wammu.eu/"
@@ -37,7 +37,10 @@ MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl 
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -89,4 +92,12 @@ src_test() {
 
 src_install() {
 	cmake-utils_src_install
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize gammu
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup gammu
 }
