@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.18 2010/05/25 21:11:05 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.19 2011/01/08 02:01:16 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> pslib-0.4.1-r2.ebuild:
+  Marking pslib-0.4.1-r2 ppc for bug 349659
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> pslib-0.4.1-r2.ebuild:
   stable amd64, bug 320049
