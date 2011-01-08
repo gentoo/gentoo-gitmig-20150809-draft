@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.1.0-r1.ebuild,v 1.10 2011/01/04 15:22:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.1.0-r1.ebuild,v 1.11 2011/01/08 18:33:42 ranger Exp $
 
 PHP_EXT_NAME="xdebug"
 PHP_EXT_INI="yes"
@@ -9,7 +9,7 @@ PHP_EXT_ZENDEXT="yes"
 EAPI="2"
 inherit php-ext-source-r2
 
-KEYWORDS="alpha amd64 hppa ~ppc64 x86"
+KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 x86"
 
 MY_PV="${PV/_/}"
 MY_PV="${MY_PV/rc/RC}"
