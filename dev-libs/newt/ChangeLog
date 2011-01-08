@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.69 2011/01/07 19:30:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.70 2011/01/08 21:28:40 maekke Exp $
+
+  08 Jan 2011; Markus Meier <maekke@gentoo.org> newt-0.52.12.ebuild:
+  arm stable, bug #349905
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> newt-0.52.12.ebuild:
   Marking newt-0.52.12 ppc for bug 349905
