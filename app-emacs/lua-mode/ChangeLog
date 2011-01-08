@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lua-mode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.41 2010/11/13 18:39:51 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.42 2011/01/08 00:50:32 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> lua-mode-20100617-r1.ebuild:
+  Marking lua-mode-20100617-r1 ppc for bug 342579
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
   lua-mode-20100617-r1.ebuild:
