@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.50_pre2.ebuild,v 1.4 2011/01/07 23:25:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.50_pre2.ebuild,v 1.5 2011/01/08 21:48:00 maekke Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://netdial.caribe.net/~adrian2/programs/${PN}/beta/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
