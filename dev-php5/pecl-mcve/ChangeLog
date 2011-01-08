@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-mcve
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.37 2011/01/06 21:41:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.38 2011/01/08 18:27:43 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> pecl-mcve-7.0.3-r1.ebuild:
+  Marking pecl-mcve-7.0.3-r1 ~ppc for bug 349659
 
   06 Jan 2011; Markus Meier <maekke@gentoo.org> pecl-mcve-7.0.3-r1.ebuild:
   add ~arm, bug #349659
