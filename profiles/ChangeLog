@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4914 2011/01/07 14:29:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4915 2011/01/08 00:15:44 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Block virtual/mysql-5.2 that is used in the overlay.
 
   07 Jan 2011; Sebastian Pipping <sping@gentoo.org> package.mask:
   Unmask rss2email >=2.69, transition from 2.65 to 2.69 got basic testing now
