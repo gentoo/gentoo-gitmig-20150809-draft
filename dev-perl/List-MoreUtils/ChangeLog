@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.21 2011/01/08 17:57:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.22 2011/01/08 18:52:31 jer Exp $
+
+  08 Jan 2011; Jeroen Roovers <jer@gentoo.org> List-MoreUtils-0.22.ebuild,
+  List-MoreUtils-0.24.ebuild, List-MoreUtils-0.26.ebuild:
+  Stable for HPPA (bug #350877).
 
   08 Jan 2011; Raúl Porcel <armin76@gentoo.org> List-MoreUtils-0.22.ebuild,
   List-MoreUtils-0.26.ebuild:
