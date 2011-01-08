@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/buffer-1.19-r2.ebuild,v 1.4 2010/12/02 23:58:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/buffer/buffer-1.19-r2.ebuild,v 1.5 2011/01/08 11:31:36 xmw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~sparc x86"
+KEYWORDS="amd64 arm ppc sparc x86"
 IUSE=""
 
 DEPEND=""
