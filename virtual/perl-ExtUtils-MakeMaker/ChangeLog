@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.26 2010/12/03 01:30:22 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.27 2011/01/08 17:24:03 armin76 Exp $
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  perl-ExtUtils-MakeMaker-6.56.ebuild:
+  Add ~s390/~sh
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org>
   perl-ExtUtils-MakeMaker-6.56.ebuild:
