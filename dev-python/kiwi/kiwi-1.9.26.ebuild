@@ -1,25 +1,25 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.26.ebuild,v 1.3 2010/05/26 14:25:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.26.ebuild,v 1.4 2011/01/08 20:30:29 arfrever Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 
 inherit distutils versionator
 
 DESCRIPTION="Kiwi is a pure Python framework and set of enhanced PyGTK widgets"
 HOMEPAGE="http://www.async.com.br/projects/kiwi/"
 SRC_URI="http://download.gnome.org/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 DEPEND="dev-python/pygtk"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	distutils_src_prepare

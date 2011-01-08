@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kiwi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.13 2009/10/10 17:26:06 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.14 2011/01/08 20:30:29 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kiwi-1.9.26.ebuild:
+  Restrict CPython-{2.4,2.5} and Jython ABIs.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> kiwi-1.9.26.ebuild:
   Merge from Prefix
