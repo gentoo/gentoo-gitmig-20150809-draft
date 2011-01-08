@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nkf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.45 2010/01/23 09:02:26 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.46 2011/01/08 19:35:49 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nkf-2.0.7.ebuild, nkf-2.0.7-r1.ebuild, nkf-2.1.0.ebuild:
+  Fix deprecation warnings.
 
 *nkf-2.1.0 (23 Jan 2010)
 

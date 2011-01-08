@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.7.ebuild,v 1.8 2007/08/25 13:46:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.7.ebuild,v 1.9 2011/01/08 19:35:49 arfrever Exp $
+
+EAPI="3"
 
 inherit toolchain-funcs eutils perl-app distutils
 
@@ -17,11 +19,7 @@ IUSE="perl python linguas_ja"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-
-	cd "${S}"
-
+src_prepare() {
 	sed -i -e '/-o nkf/s:$(CFLAGS):$(CFLAGS) $(LDFLAGS):' Makefile || die
 
 	if use python; then
@@ -58,4 +56,12 @@ src_install() {
 		cd "${S}/NKF.python"
 		distutils_src_install
 	fi
+}
+
+pkg_postinst() {
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
