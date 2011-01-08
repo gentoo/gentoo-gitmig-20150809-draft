@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/yagtd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.9 2011/01/05 19:34:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.10 2011/01/08 19:38:26 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -yagtd-0.3.0.ebuild, -yagtd-0.3.2.ebuild,
+  -files/yagtd-0.3.2-fix-install-setup.py.diff:
+  Delete.
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> yagtd-0.3.4.ebuild:
   Stable on amd64 wrt bug #330063
