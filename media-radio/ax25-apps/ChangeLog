@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/ax25-apps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.15 2010/01/31 12:57:47 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.16 2011/01/08 17:01:47 tomjbe Exp $
+
+  08 Jan 2011; Thomas Beierlein <tomjbe@gentoo.org> ax25-apps-0.0.6-r1.ebuild,
+  ax25-apps-0.0.8_rc2.ebuild:
+  Drop blocking dep on dev-tinyos/listen as it is no longer in the tree.
 
 *ax25-apps-0.0.8_rc2 (31 Jan 2010)
 

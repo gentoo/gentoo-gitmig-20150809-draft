@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.1 2010/01/31 12:57:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.2 2011/01/08 17:01:47 tomjbe Exp $
 
 EAPI=2
 inherit versionator
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libax25
-	!media-sound/listen
-	!dev-tinyos/listen"
+	!media-sound/listen"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
