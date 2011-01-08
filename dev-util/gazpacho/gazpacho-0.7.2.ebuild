@@ -1,6 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.1 2007/08/05 21:52:10 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.7.2.ebuild,v 1.2 2011/01/08 20:33:01 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 
 inherit distutils gnome.org eutils
 
@@ -13,17 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64 -ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3
-	>=dev-python/pygtk-2.6
+DEPEND=">=dev-python/pygtk-2.6
 	>=gnome-base/libglade-2.4.2
 	>=dev-python/kiwi-1.9.11"
 
 DOCS="AUTHORS NEWS"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.7.0-setup-fixes.patch"
 
 	# In an attempt to make the above patch reusable across gazpacho
