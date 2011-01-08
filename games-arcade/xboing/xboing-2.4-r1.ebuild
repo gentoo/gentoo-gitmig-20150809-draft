@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.12 2010/10/16 19:17:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.13 2011/01/08 20:58:52 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -47,6 +47,7 @@ src_compile() {
 src_install() {
 	make \
 		PREFIX=${D} \
+		LOCAL_LDFLAGS="${LDFLAGS}" \
 		XBOING_DIR=${GAMES_DATADIR}/${PN} \
 		install \
 		|| die

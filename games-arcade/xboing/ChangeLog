@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xboing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.13 2010/10/16 19:17:06 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.14 2011/01/08 20:58:52 tupone Exp $
+
+  08 Jan 2011; Tupone Alfredo <tupone@gentoo.org> xboing-2.4-r1.ebuild:
+  Again respect LDFLAGS. Bug #351038 by flameeyes@gentoo.org
 
   16 Oct 2010; Tupone Alfredo <tupone@gentoo.org> xboing-2.4-r1.ebuild:
   Respect LDFLAGS. Bug #334643 by flameeyes@gentoo.org
