@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/suhosin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.64 2011/01/08 18:32:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/ChangeLog,v 1.65 2011/01/08 21:26:13 maekke Exp $
+
+  08 Jan 2011; Markus Meier <maekke@gentoo.org> suhosin-0.9.32.1-r2.ebuild:
+  arm stable, bug #349659
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> suhosin-0.9.32.1-r2.ebuild:
   Marking suhosin-0.9.32.1-r2 ~ppc for bug 349659

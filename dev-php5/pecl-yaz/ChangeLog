@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-yaz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.42 2011/01/08 18:30:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/ChangeLog,v 1.43 2011/01/08 21:23:50 maekke Exp $
+
+  08 Jan 2011; Markus Meier <maekke@gentoo.org> pecl-yaz-1.0.14-r1.ebuild:
+  arm stable, bug #349659
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> pecl-yaz-1.0.14-r1.ebuild:
   Marking pecl-yaz-1.0.14-r1 ~ppc for bug 349659

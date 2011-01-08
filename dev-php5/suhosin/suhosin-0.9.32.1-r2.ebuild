@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1-r2.ebuild,v 1.8 2011/01/08 18:32:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/suhosin/suhosin-0.9.32.1-r2.ebuild,v 1.9 2011/01/08 21:26:13 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-source-r2
 
-KEYWORDS="alpha amd64 ~arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 arm hppa ~ppc ~ppc64 x86"
 
 DESCRIPTION="Suhosin is an advanced protection system for PHP installations."
 HOMEPAGE="http://www.suhosin.org/"
