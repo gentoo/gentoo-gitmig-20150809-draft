@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/ming
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.74 2010/07/02 00:51:30 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.75 2011/01/08 06:59:18 robbat2 Exp $
+
+*ming-0.4.3-r1 (08 Jan 2011)
+
+  08 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +ming-0.4.3-r1.ebuild:
+  Bug #348363: need to bump inherit line for newer PHP eclasses. Revbump so
+  that both old PHP users and new PHP users can have this package. Zero other
+  changes, and the new PHP that is implied by the new eclass is already stable,
+  so this is going straight to stable.
 
   02 Jul 2010; Jeroen Roovers <jer@gentoo.org> ming-0.4.3.ebuild:
   Stable for HPPA (bug #320945).
