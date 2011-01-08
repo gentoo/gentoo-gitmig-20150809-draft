@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.29 2011/01/06 02:09:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.30 2011/01/08 00:03:57 hwoarang Exp $
+
+  08 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ucl-1.03.ebuild:
+  Stable on amd64 wrt bug #350761
 
   06 Jan 2011; Mike Frysinger <vapier@gentoo.org> ucl-1.03.ebuild:
   Clean up; convert to EAPI=2 and emake.
