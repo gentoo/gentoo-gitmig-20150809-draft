@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.45 2011/01/02 18:26:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.46 2011/01/08 10:09:31 graaff Exp $
+
+*rdoc-3.4 (08 Jan 2011)
+
+  08 Jan 2011; Hans de Graaff <graaff@gentoo.org> +rdoc-3.4.ebuild:
+  Version bump.
 
   02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> rdoc-2.5.11.ebuild:
   Keyworded on alpha, bug #332593
