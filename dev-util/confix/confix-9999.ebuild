@@ -1,10 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.5 2010/10/29 12:05:41 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.6 2011/01/08 20:50:31 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils subversion
+inherit distutils eutils subversion
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"
@@ -16,15 +19,13 @@ SLOT="2"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/python"
-RDEPEND="${DEPEND}
-	sys-devel/automake
-	sys-devel/libtool
+DEPEND=""
+RDEPEND="dev-util/confix-wrapper
 	sys-devel/autoconf-archive
-	dev-util/confix-wrapper
-"
+	sys-devel/automake
+	sys-devel/libtool"
 
-PYTHON_MODNAME="libconfix tests"
+PYTHON_MODNAME="libconfix"
 
 src_prepare() {
 	# find jni-include dirs on hpux.

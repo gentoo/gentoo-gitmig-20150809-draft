@@ -1,8 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.3.5-r1.ebuild,v 1.1 2010/12/26 14:49:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.3.5-r1.ebuild,v 1.2 2011/01/08 20:50:31 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -15,16 +18,15 @@ SLOT="2"
 KEYWORDS="~amd64 ~x86 ~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-interix ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND="dev-lang/python"
-RDEPEND="${DEPEND}
-	sys-devel/automake
-	sys-devel/libtool
+DEPEND=""
+RDEPEND="dev-util/confix-wrapper
 	sys-devel/autoconf-archive
-	dev-util/confix-wrapper
-"
+	sys-devel/automake
+	sys-devel/libtool"
 
 S="${WORKDIR}/Confix-${PV}"
-PYTHON_MODNAME="libconfix tests"
+
+PYTHON_MODNAME="libconfix"
 
 src_prepare() {
 	# find jni-include dirs on hpux.
