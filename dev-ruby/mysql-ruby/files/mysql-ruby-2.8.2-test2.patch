@@ -3,7 +3,7 @@
 @@ -1,12 +1,17 @@
 -#!/usr/local/bin/ruby
 +#!/usr/bin/env ruby
- # $Id: mysql-ruby-2.8.2-test.patch,v 1.2 2011/01/08 08:07:51 graaff Exp $
+ # $Id: test.rb 250 2010-02-11 10:42:54Z tommy $
  
  require "test/unit"
 -require "./mysql.o"

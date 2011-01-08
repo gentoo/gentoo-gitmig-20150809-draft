@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.90 2011/01/08 08:07:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.91 2011/01/08 08:39:47 graaff Exp $
+
+  08 Jan 2011; Hans de Graaff <graaff@gentoo.org> mysql-ruby-2.8.2.ebuild,
+  -files/mysql-ruby-2.8.2-test.patch, +files/mysql-ruby-2.8.2-test2.patch:
+  Add patch as new file to ensure keyword substitution is off.
 
   08 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   files/mysql-ruby-2.8.2-test.patch:
