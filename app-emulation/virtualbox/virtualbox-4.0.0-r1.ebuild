@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0.ebuild,v 1.5 2011/01/07 18:42:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.1 2011/01/08 10:22:12 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs java-pkg-2
+inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs java-pkg-opt-2
 
 if [[ ${PV} == "9999" ]] ; then
 	# XXX: should finish merging the -9999 ebuild into this one ...
