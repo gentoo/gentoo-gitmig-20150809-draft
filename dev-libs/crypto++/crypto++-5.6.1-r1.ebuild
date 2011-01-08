@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r1.ebuild,v 1.1 2011/01/08 04:11:10 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r1.ebuild,v 1.2 2011/01/08 13:23:44 arfrever Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cryptopp/cryptopp${PV//.}.zip"
 
 LICENSE="cryptopp"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -29,8 +29,6 @@ src_compile() {
 	# Higher optimizations cause problems.
 	replace-flags -O? -O1
 	filter-flags -fomit-frame-pointer
-	#Remove no longer needed amd64 flags.
-	#use amd64 && append-flags -DCRYPTOPP_DISABLE_ASM
 
 	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
 		LIBDIR="$(get_libdir)" || die "emake failed"
