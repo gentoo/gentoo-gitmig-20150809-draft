@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/scikits_optimization-0.1.ebuild,v 1.1 2011/01/08 19:23:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/scikits_optimization-0.1.ebuild,v 1.2 2011/01/08 19:34:28 bicatali Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="Python module for numerical optimization"
 HOMEPAGE="http://projects.scipy.org/scipy/scikits"
-SRC_URI="http://pypi.python.org/packages/source/s/scikits.optimization/${MY_P}.zip"
+SRC_URI="mirror://pypi/${PN:0:1}/scikits.optimization/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"

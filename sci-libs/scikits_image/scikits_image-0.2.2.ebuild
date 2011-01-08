@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.2.2.ebuild,v 1.1 2011/01/08 19:22:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.2.2.ebuild,v 1.2 2011/01/08 19:32:17 bicatali Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="Image processing routines for SciPy"
 HOMEPAGE="http://stefanv.github.com/scikits.image"
-SRC_URI="http://pypi.python.org/packages/source/s/scikits.image/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/scikits.image/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
