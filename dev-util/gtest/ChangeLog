@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.8 2011/01/04 14:50:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.9 2011/01/08 21:36:11 maekke Exp $
+
+  08 Jan 2011; Markus Meier <maekke@gentoo.org> gtest-1.5.0.ebuild:
+  arm stable, bug #350290
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gtest-1.5.0.ebuild:
   Stable on amd64 wrt bug #350290
