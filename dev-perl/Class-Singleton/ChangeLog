@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Singleton
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.23 2010/12/03 01:24:11 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.24 2011/01/08 17:14:49 armin76 Exp $
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org> Class-Singleton-1.4.ebuild:
+  arm/s390/sh stable
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> Class-Singleton-1.03.ebuild,
   Class-Singleton-1.4.ebuild:
