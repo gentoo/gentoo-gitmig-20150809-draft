@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.65 2011/01/08 04:04:54 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.66 2011/01/08 04:11:10 c1pher Exp $
+
+*crypto++-5.6.1-r1 (08 Jan 2011)
+
+  08 Jan 2011; Dane Smith <c1pher@gentoo.org> +crypto++-5.6.1-r1.ebuild:
+  Remove no longer needed -DCRYPTOPP_DISABLE_ASM on amd64.
+  *Fix crypto++ issues on amd64 wrt amule as noted in bug 322713.
+  *Fix issues with tests on amd64 as noted in bug 343373.
+  There is an upstream patch to fix these issues with DCRYPTOPP_DISABLE_ASM
+  at
+  http://sourceforge.net/apps/trac/cryptopp/ticket/6 but as we no longer
+  use it,I didn't include it.
 
   08 Jan 2011; Dane Smith <c1pher@gentoo.org> crypto++-5.6.1.ebuild:
   Revert my earlier changes. This should probably be revbumped. Sorry for
