@@ -1,24 +1,34 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.9 2010/06/11 21:38:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.10 2011/01/08 17:15:13 arfrever Exp $
 
-inherit distutils multilib
+EAPI="3"
+PYTHON_DEPEND="2"
 
-IUSE=""
+inherit python
 
 DESCRIPTION="A checker for English grammar, for people who are not native English."
 HOMEPAGE="http://queequeg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-DEPEND=">=dev-lang/python-2.3
-	app-dicts/wordnet"
+DEPEND="app-dicts/wordnet"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	python_convert_shebangs -r ${PYTHON_ABI} .
+}
 
 src_compile() {
-
 	local dictdir=/usr/dict
 
 	if has_version ">=app-dicts/wordnet-2.0"; then
@@ -26,16 +36,14 @@ src_compile() {
 	fi
 
 	emake dict WORDNETDICT=${dictdir} || die
-
 }
 
 src_install() {
-
 	local prefix=$(python_get_sitedir)/${PN}
 
 	insinto ${prefix}
 	doins *.py
-	[ -f "dict.txt" ] && doins dict.txt || doins dict.cdb
+	[[ -f "dict.txt" ]] && doins dict.txt || doins dict.cdb
 
 	exeinto ${prefix}
 	doexe qq
@@ -43,5 +51,12 @@ src_install() {
 
 	dodoc README TODO
 	dohtml htdocs/*
+}
 
+pkg_postinst() {
+	python_mod_optimize queequeg
+}
+
+pkg_postrm() {
+	python_mod_cleanup queequeg
 }
