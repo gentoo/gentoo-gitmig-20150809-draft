@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1.ebuild,v 1.5 2010/12/27 21:41:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1.ebuild,v 1.6 2011/01/08 03:53:12 c1pher Exp $
 
 EAPI="3"
 
@@ -29,7 +29,8 @@ src_compile() {
 	# Higher optimizations cause problems.
 	replace-flags -O? -O1
 	filter-flags -fomit-frame-pointer
-	use amd64 && append-flags -DCRYPTOPP_DISABLE_ASM
+	#Remove no longer needed DISABLE_ASM
+	#use amd64 && append-flags -DCRYPTOPP_DISABLE_ASM
 
 	emake -f GNUmakefile CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
 		LIBDIR="$(get_libdir)" || die "emake failed"
