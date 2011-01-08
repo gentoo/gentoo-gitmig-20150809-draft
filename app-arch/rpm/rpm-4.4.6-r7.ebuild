@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r7.ebuild,v 1.4 2010/06/22 19:59:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r7.ebuild,v 1.5 2011/01/08 19:21:44 arfrever Exp $
 
-inherit eutils autotools distutils perl-module flag-o-matic
+EAPI="3"
+
+inherit eutils autotools perl-module flag-o-matic python
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm5.org/"
@@ -30,9 +32,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-with-sqlite.patch
 	epatch "${FILESDIR}"/${P}-stupidness.patch
 	epatch "${FILESDIR}"/${P}-autotools.patch
@@ -57,7 +57,7 @@ src_unpack() {
 	# TODO Get rid of internal copies of lua, db and db3
 }
 
-src_compile() {
+src_configure() {
 	# Until strict aliasing is porperly fixed...
 	filter-flags -fstrict-aliasing
 	append-flags -fno-strict-aliasing
@@ -69,9 +69,11 @@ src_compile() {
 		$(use_with doc apidocs) \
 		$(use_with perl) \
 		$(use_with sqlite) \
-		$(use_enable nls) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable nls)
+}
+
+src_compile() {
+	default
 }
 
 src_install() {
@@ -104,5 +106,9 @@ pkg_postinst() {
 		"${ROOT}"/usr/bin/rpm --initdb --root="${ROOT}"
 	fi
 
-	distutils_pkg_postinst
+	use python && python_mod_optimize rpm
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup rpm
 }

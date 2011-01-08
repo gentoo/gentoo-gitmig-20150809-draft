@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.121 2011/01/08 19:06:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.122 2011/01/08 19:21:44 arfrever Exp $
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rpm-4.4.6-r7.ebuild, rpm-4.4.7-r6.ebuild, rpm-4.8.1-r1.ebuild,
+  rpm-5.1.6.ebuild:
+  Fix deprecation warnings.
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -rpm-4.4.7-r4.ebuild, -rpm-4.4.7-r5.ebuild:

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1-r1.ebuild,v 1.1 2010/12/27 18:55:45 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1-r1.ebuild,v 1.2 2011/01/08 19:21:44 arfrever Exp $
 
-EAPI=2
+EAPI="3"
 
-inherit eutils autotools flag-o-matic perl-module distutils
+inherit eutils autotools flag-o-matic perl-module python
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org"
@@ -48,7 +48,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default
 }
 
 src_configure() {
@@ -95,5 +95,9 @@ pkg_postinst() {
 		"${ROOT}"/usr/bin/rpm --initdb --root="${ROOT}"
 	fi
 
-	distutils_pkg_postinst
+	use python && python_mod_optimize rpm
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup rpm
 }

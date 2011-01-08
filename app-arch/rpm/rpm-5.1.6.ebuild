@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.1.6.ebuild,v 1.8 2010/12/14 02:04:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.1.6.ebuild,v 1.9 2011/01/08 19:21:44 arfrever Exp $
 
-inherit eutils multilib distutils python
+EAPI="3"
+
+inherit eutils multilib python
 
 MY_P=${P/_alpha/a}
 MY_P=${P/_beta/b}
@@ -46,16 +48,14 @@ pkg_setup () {
 	ewarn "    rpm --initdb"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -rf file xar #db
 	sed -i \
 		-e '/^pkgconfigdir/s:=.*:=$(libdir)/pkgconfig:' \
 		scripts/Makefile.in || die
 }
 
-src_compile() {
+src_configure() {
 #		$(use_with dmalloc) \
 #		$(use_with efence) \
 #		$(use_with keyutils) \
@@ -76,9 +76,7 @@ src_compile() {
 		$(use_with sqlite) \
 		$(use berkdb || use sqlite || echo --with-db) \
 		--with-path-lib="/usr/$(get_libdir)/rpm" \
-		--with-python-lib-dir="$(python_get_libdir)" \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--with-python-lib-dir="$(python_get_libdir)"
 }
 
 src_install() {
@@ -106,5 +104,9 @@ pkg_postinst() {
 	fi
 	chown rpm:rpm "${ROOT}"/var/lib/rpm/*
 
-	distutils_pkg_postinst
+	use python && python_mod_optimize rpm
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup rpm
 }
