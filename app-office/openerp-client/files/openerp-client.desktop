@@ -2,8 +2,9 @@
 Comment=OpenERP Client
 Exec=/usr/bin/openerp-client
 GenericName=OpenERP Client
+Categories=Office;
 Icon=/usr/share/pixmaps/openerp-client/openerp-icon.png
-Name=OpenERP-Client
+Name=OpenERP Client
 NoDisplay=false
 StartupNotify=true
 Terminal=0
