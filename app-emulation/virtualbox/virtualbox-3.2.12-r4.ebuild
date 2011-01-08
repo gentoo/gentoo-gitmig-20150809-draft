@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.2 2011/01/07 18:16:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.3 2011/01/08 12:40:22 polynomial-c Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+additions alsa headless pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
