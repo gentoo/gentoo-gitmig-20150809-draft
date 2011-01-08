@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.304 2010/12/31 20:20:14 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.305 2011/01/08 13:15:48 chithanh Exp $
+
+*mesa-7.9.1 (08 Jan 2011)
+
+  08 Jan 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-7.9-r1.ebuild, +mesa-7.9.1.ebuild,
+  -files/mesa-7.9-libdrm-2.4.23-nouveau-api.patch:
+  Version bump, bug #351904
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> mesa-7.9.ebuild:
   Stable for HPPA (bug #344827).
