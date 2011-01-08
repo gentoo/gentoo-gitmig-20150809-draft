@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.3 2010/02/10 10:22:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.4 2011/01/08 13:44:01 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (08 Jan 2011)
+# Darwin has libuuid from util-linux
+x11-libs/libSM -uuid
 
 # Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
 # linux only
