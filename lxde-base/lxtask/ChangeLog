@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.14 2011/01/04 08:56:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.15 2011/01/08 12:41:28 maekke Exp $
+
+  08 Jan 2011; Markus Meier <maekke@gentoo.org> lxtask-0.1.3.ebuild:
+  arm stable, bug #349762
 
   04 Jan 2011; Christian Faulhammer <fauli@gentoo.org> lxtask-0.1.3.ebuild:
   stable x86, bug 349762

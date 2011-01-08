@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.6 2011/01/04 09:01:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.6.ebuild,v 1.7 2011/01/08 12:39:08 maekke Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -10,7 +10,7 @@ HOMEPAGE="http://lxde.org/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="+alsa"
 RESTRICT="test"  # bug 249598
