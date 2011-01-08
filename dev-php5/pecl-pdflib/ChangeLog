@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdflib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.14 2010/12/28 19:26:59 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdflib/ChangeLog,v 1.15 2011/01/08 18:28:37 ranger Exp $
+
+  08 Jan 2011; Brent Baude <ranger@gentoo.org> pecl-pdflib-2.1.8-r1.ebuild:
+  Marking pecl-pdflib-2.1.8-r1 ~ppc for bug 349659
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> pecl-pdflib-2.1.8-r1.ebuild:
   Marking pecl-pdflib-2.1.8-r1 ~ppc64 for bug 349659
