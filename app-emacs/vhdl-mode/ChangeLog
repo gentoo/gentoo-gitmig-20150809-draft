@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/vhdl-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.28 2011/01/08 00:53:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.29 2011/01/08 10:34:39 fauli Exp $
+
+  08 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  -vhdl-mode-3.33.27.ebuild:
+  clean up
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> vhdl-mode-3.33.28.ebuild:
   Marking vhdl-mode-3.33.28 ppc for bug 349687
