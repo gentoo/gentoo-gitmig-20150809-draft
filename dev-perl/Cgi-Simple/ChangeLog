@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.56 2011/01/01 15:35:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.57 2011/01/09 14:04:15 ranger Exp $
+
+  09 Jan 2011; Brent Baude <ranger@gentoo.org> Cgi-Simple-1.113.ebuild:
+  Marking Cgi-Simple-1.113 ppc for bug 348342
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> Cgi-Simple-1.113.ebuild:
   alpha/ia64/sparc stable wrt #348342
