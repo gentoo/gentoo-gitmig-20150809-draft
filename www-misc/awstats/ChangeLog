@@ -1,6 +1,15 @@
 # ChangeLog for www-misc/awstats
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.10 2010/10/15 13:09:17 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.11 2011/01/09 18:09:22 flameeyes Exp $
+
+*awstats-7.0_p20101205 (09 Jan 2011)
+
+  09 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> -awstats-6.9-r1.ebuild,
+  -awstats-7.0.ebuild, -awstats-7.0_p20100929.ebuild,
+  +awstats-7.0_p20101205.ebuild:
+  Version bump since upstream changed the tarball; now use stored versioned
+  tarballs as upstream seem to re-release it even when no actual changes are in
+  the code.
 
 *awstats-7.0_p20100929 (15 Oct 2010)
 

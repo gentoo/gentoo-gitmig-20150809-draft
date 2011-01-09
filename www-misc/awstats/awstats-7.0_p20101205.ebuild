@@ -1,18 +1,28 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-6.9-r1.ebuild,v 1.2 2009/05/26 17:08:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205.ebuild,v 1.1 2011/01/09 18:09:22 flameeyes Exp $
+
+EAPI=2
 
 inherit eutils webapp versionator depend.apache
 
+MY_P=${PN}-${PV%_p*}
+
 DESCRIPTION="AWStats is short for Advanced Web Statistics."
 HOMEPAGE="http://awstats.sourceforge.net/"
-SRC_URI="http://awstats.sourceforge.net/files/${P}.tar.gz"
+
+SRC_URI="http://dev.gentoo.org/~flameeyes/awstats/${P}.tar.gz"
+
+# The following SRC_URI is useful only when fetching for the first time
+# after bump; upstream does not bump the version when they change it, so
+# we rename it to include the date and upload to our mirrors instead.
+#SRC_URI="http://awstats.sourceforge.net/files/${MY_P}.tar.gz -> ${P}.tar.gz"
+
+S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ppc ~sparc x86 ~x86-fbsd"
-IUSE="geoip"
-
-RESTRICT="mirror"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+IUSE="geoip ipv6"
 
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
@@ -21,7 +31,8 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/libpng-1.2
 	virtual/perl-Time-Local
 	dev-perl/URI
-	geoip? ( dev-perl/Geo-IP )"
+	geoip? ( dev-perl/Geo-IP )
+	ipv6? ( dev-perl/Net-IP dev-perl/Net-DNS )"
 
 want_apache
 
@@ -30,10 +41,7 @@ pkg_setup() {
 	webapp_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-6.3-gentoo.diff
 
 	# change default installation directory
@@ -63,16 +71,22 @@ src_unpack() {
 		-e "s|^\(DirIcons=\).*$|\1\"/awstats/icon\"|" \
 		-e "s|^\(DirCgi=\).*$|\1\"/cgi-bin\"|" \
 		-i "${S}"/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
+
+	# enable ipv6 plugin
+	if use ipv6; then
+		sed -e "s|^#\(LoadPlugin=\"ipv6\"\)$|\1|" \
+		-i "${S}"/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
+	fi
 }
 
 src_install() {
 	webapp_src_preinst
 
-	dohtml -r docs/*.html docs/*.xml docs/*.css docs/*.js docs/images
-	dodoc README.TXT docs/COPYING.TXT docs/LICENSE.TXT
+	dohtml -r docs/*.html docs/*.xml docs/*.css docs/images || die
+	dodoc README.TXT docs/COPYING.TXT docs/LICENSE.TXT || die
 	newdoc wwwroot/cgi-bin/plugins/example/example.pm example_plugin.pm
 	docinto xslt
-	dodoc tools/xslt/*
+	dodoc tools/xslt/* || die
 
 	webapp_postinst_txt en "${FILESDIR}"/postinst-en-r1.txt
 
@@ -80,55 +94,55 @@ src_install() {
 
 	# Copy the app's main files
 	exeinto "${MY_CGIBINDIR}"
-	doexe "${S}"/wwwroot/cgi-bin/*.pl
+	doexe "${S}"/wwwroot/cgi-bin/*.pl || die
 
 	exeinto "${MY_HTDOCSDIR}"/classes
-	doexe "${S}"/wwwroot/classes/*.jar
+	doexe "${S}"/wwwroot/classes/*.jar || die
 
 	# install language files, libraries and plugins
 	dodir "${MY_CGIBINDIR}"
 	for dir in lang lib plugins; do
 		insinto "${MY_CGIBINDIR}"
-		doins -r "${S}"/wwwroot/cgi-bin/${dir}
+		doins -r "${S}"/wwwroot/cgi-bin/${dir} || die
 	done
 
 	# install the app's www files
 	dodir "${MY_HTDOCSDIR}"
 	for dir in icon css js; do
 		insinto "${MY_HTDOCSDIR}"
-		doins -r "${S}"/wwwroot/${dir}
+		doins -r "${S}"/wwwroot/${dir} || die
 	done
 
 	dodir /usr/share/awstats
-	dosym "${MY_HTDOCSDIR}" /usr/share/awstats/htdocs
+	dosym "${MY_HTDOCSDIR}" /usr/share/awstats/htdocs || die
 
 	for dir in lang lib plugins; do
-		dosym "${MY_CGIBINDIR}"/"${dir}" /usr/share/awstats/"${dir}"
+		dosym "${MY_CGIBINDIR}"/"${dir}" /usr/share/awstats/"${dir}" || die
 	done
 
 	# copy configuration file
 	insinto /etc/awstats
-	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf
+	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf || die
 
 	# create the data directory for awstats
-	dodir "${MY_HOSTROOTDIR}"/datadir
+	dodir "${MY_HOSTROOTDIR}"/datadir || die
 
 	# install command line tools
 	cd "${S}"/tools
 	dobin awstats_buildstaticpages.pl awstats_exportlib.pl \
 		awstats_updateall.pl logresolvemerge.pl \
-		maillogconvert.pl awstats_configure.pl
-	newbin urlaliasbuilder.pl awstats_urlaliasbuilder.pl
-	dosym "${MY_CGIBINDIR}"/awstats.pl /usr/bin/awstats.pl
+		maillogconvert.pl awstats_configure.pl || die
+	newbin urlaliasbuilder.pl awstats_urlaliasbuilder.pl || die
+	dosym "${MY_CGIBINDIR}"/awstats.pl /usr/bin/awstats.pl || die
 
 	webapp_src_install
 
 	# fix perms
 	for dir in lang lib plugins; do
-		fperms 0755 "${MY_CGIBINDIR}"/"${dir}"
+		fperms 0755 "${MY_CGIBINDIR}"/"${dir}" || die
 	done
 	for dir in icon css js; do
-		fperms 0755 "${MY_HTDOCSDIR}"/"${dir}"
+		fperms 0755 "${MY_HTDOCSDIR}"/"${dir}" || die
 	done
 }
 
@@ -142,11 +156,11 @@ pkg_postinst() {
 	ewarn "/etc/awstats/awstats.<yourdomain>.conf and edit it."
 
 	if use geoip ; then
-		einfo
-		einfo "Add the following line to /etc/awstats/awstats.<yourdomain>.conf"
-		einfo "to enable GeoIP plugin:"
-		einfo "LoadPlugin=\"geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat\" "
-		einfo
+		elog
+		elog "Add the following line to /etc/awstats/awstats.<yourdomain>.conf"
+		elog "to enable GeoIP plugin:"
+		elog "LoadPlugin=\"geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat\" "
+		elog
 	fi
 
 	webapp_pkg_postinst
