@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/superiotool
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/ChangeLog,v 1.1 2011/01/09 17:13:48 idl0r Exp $
+
+*superiotool-9999 (09 Jan 2011)
+
+  09 Jan 2011; Christian Ruppert <idl0r@gentoo.org> +superiotool-9999.ebuild,
+  +metadata.xml:
+  Initial commit, bug 196979.
+
