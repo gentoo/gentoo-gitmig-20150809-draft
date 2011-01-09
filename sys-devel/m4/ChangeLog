@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.148 2011/01/04 13:57:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.149 2011/01/09 17:37:52 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> m4-1.4.15.ebuild:
+  alpha/ia64/m68k/s390/sh stable wrt #348550
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> m4-1.4.15.ebuild:
   sparc stable (bug 348550)
