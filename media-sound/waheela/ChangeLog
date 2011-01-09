@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/waheela
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waheela/ChangeLog,v 1.1 2011/01/09 10:37:48 dilfridge Exp $
+
+*waheela-0.3 (09 Jan 2011)
+
+  09 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +waheela-0.3.ebuild, +metadata.xml:
+  New application, fixes bug 283762. Thanks to Daniel Pinto dos Santos for
+  the original ebuild.
+
