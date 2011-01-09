@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13.ebuild,v 1.1 2010/12/01 21:58:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13-r1.ebuild,v 1.1 2011/01/09 17:20:56 flameeyes Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ PDEPEND="www-apache/modsecurity-crs"
 S="${WORKDIR}/${MY_P}"
 
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
-APACHE2_MOD_CONF="2.5.10/99_mod_security"
+APACHE2_MOD_CONF="2.5.13/79_mod_security"
 APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
@@ -83,4 +83,17 @@ src_install() {
 	keepdir /var/cache/mod_security || die
 	fowners apache:apache /var/cache/mod_security || die
 	fperms 0770 /var/cache/mod_security || die
+}
+
+pkg_postinst() {
+	if [[ -f "${ROOT}"/etc/apache/modules.d/99_mod_security.conf ]]; then
+		ewarn "You still have the configuration file 99_mod_security.conf."
+		ewarn "Please make sure to remove that and keep only 79_mod_security.conf."
+		ewarn ""
+	fi
+	elog "The base configuration file has been renamed 79_mod_security.conf"
+	elog "so that you can put your own configuration as 80_mod_security_local.conf or"
+	elog "equivalent."
+	elog ""
+	elog "That would be the correct place for site-global security rules."
 }
