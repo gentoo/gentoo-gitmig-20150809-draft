@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.10 2011/01/08 12:10:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.11 2011/01/09 17:48:38 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> rtkit-0.9-r1.ebuild:
+  Add ~alpha/~ia64/~sh wrt #308971
 
   08 Jan 2011; Michael Weber <xmw@gentoo.org> rtkit-0.9-r1.ebuild:
   added ~sparc keyword (bug 308971)
