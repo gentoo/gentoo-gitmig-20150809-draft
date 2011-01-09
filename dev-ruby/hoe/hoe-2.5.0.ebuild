@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.5.0.ebuild,v 1.12 2010/09/29 21:38:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.5.0.ebuild,v 1.13 2011/01/09 16:14:18 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -33,4 +33,11 @@ ruby_add_rdepend ">=dev-ruby/rake-0.8.7"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}-tests.patch
+}
+
+all_ruby_prepare() {
+	# Remove normal metadata so that our stub gemspec is generated.
+	# This avoids problems with the gemspec requiring rubyforge and
+	# gemcutter while we don't.
+	rm ../metadata || die
 }

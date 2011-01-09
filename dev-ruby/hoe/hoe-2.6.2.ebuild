@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.2.ebuild,v 1.2 2011/01/02 10:21:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.2.ebuild,v 1.3 2011/01/09 16:14:18 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 
@@ -32,3 +32,10 @@ RUBY_PATCHES=( "${PN}-2.6.1-test-file-ordering.patch" )
 ruby_add_bdepend "test? ( dev-ruby/minitest >=dev-ruby/rubyforge-2.0.4 )"
 
 ruby_add_rdepend ">=dev-ruby/rake-0.8.7"
+
+all_ruby_prepare() {
+	# Remove normal metadata so that our stub gemspec is generated.
+	# This avoids problems with the gemspec requiring rubyforge and
+	# gemcutter while we don't.
+	rm ../metadata || die
+}
