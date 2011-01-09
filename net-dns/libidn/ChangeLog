@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.128 2010/10/11 20:32:03 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.129 2011/01/09 16:51:34 jer Exp $
+
+  09 Jan 2011; Jeroen Roovers <jer@gentoo.org> libidn-1.19.ebuild:
+  Do not run valgrind tests (bug #335301).
 
   11 Oct 2010; Jeroen Roovers <jer@gentoo.org> libidn-1.19.ebuild:
   Make dev-java/gjdoc DEPEND depend on USE=doc by Michel Ganguin (bug
