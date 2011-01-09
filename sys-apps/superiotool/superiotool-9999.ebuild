@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/superiotool-9999.ebuild,v 1.2 2011/01/09 17:36:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/superiotool-9999.ebuild,v 1.3 2011/01/09 22:19:08 idl0r Exp $
 
 EAPI=3
 
@@ -36,7 +36,8 @@ src_compile() {
 		config_pci="no"
 	fi
 
-	emake CC=$(tc-getCC) CONFIG_PCI=${config_pci} || die
+	emake CC=$(tc-getCC) CONFIG_PCI=${config_pci} \
+		SVNDEF="-D'SUPERIOTOOL_VERSION=\"${ESVN_WC_REVISION}\"'" || die
 }
 
 src_install() {
