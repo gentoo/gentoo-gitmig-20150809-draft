@@ -7,6 +7,7 @@
 	<name>Thomas Anderson</name>
 </maintainer>
 <use>
+	<flag name="cgroup">Enable cgroup support</flag>
 	<flag name="openvz">Enable openvz support</flag>
 	<flag name="vserver">Enable vserver support</flag>
 </use>
