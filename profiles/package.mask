@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12341 2011/01/09 20:36:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12342 2011/01/09 22:28:04 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -399,10 +399,6 @@ xfce-extra/thunar-vcs-plugin
 # Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
 >=media-libs/clutter-1.4
 >=media-libs/clutter-gtk-0.90
-
-# Markos Chandras <hwoarang@gentoo.org> (20 Dec 2010)
-# Qbittorrent RC packages will remain masked
-=net-p2p/qbittorrent-2.6.0_rc*
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Orphaned package, still using deprecated HAL
