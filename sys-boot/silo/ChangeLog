@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/silo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.44 2010/03/21 19:21:21 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.45 2011/01/09 03:25:11 vapier Exp $
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> silo-1.4.14.ebuild,
+  silo-1.4.14_p20100228.ebuild:
+  Use new mount-boot_pkg_postinst helper.
 
 *silo-1.4.14_p20100228 (21 Mar 2010)
 

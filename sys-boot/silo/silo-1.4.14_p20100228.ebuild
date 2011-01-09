@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.2 2010/03/21 19:23:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.3 2011/01/09 03:25:12 vapier Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -66,6 +66,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	mount-boot_pkg_postinst
 	ewarn "NOTE: If this is an upgrade to an existing SILO install,"
 	ewarn "      you will need to re-run silo as the /boot/second.b"
 	ewarn "      file has changed, else the system will fail to load"

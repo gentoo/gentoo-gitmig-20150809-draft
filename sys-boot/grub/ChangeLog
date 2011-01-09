@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.147 2010/11/30 06:50:34 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.148 2011/01/09 03:22:47 vapier Exp $
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> grub-0.97-r8.ebuild,
+  grub-0.97-r9.ebuild, grub-0.97-r10.ebuild, grub-1.98.ebuild,
+  grub-9999.ebuild:
+  Use new mount-boot_pkg_postinst helper.
 
   30 Nov 2010; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r10.ebuild:
   Document how to create the grub-static distfiles.
