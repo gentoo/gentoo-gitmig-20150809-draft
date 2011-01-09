@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.129 2010/12/28 16:48:14 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.130 2011/01/09 16:15:44 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> aspell-0.60.6-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #349270
 
   28 Dec 2010; Markus Meier <maekke@gentoo.org> aspell-0.60.6-r2.ebuild:
   arm stable, bug #349270
