@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.10-r1.ebuild,v 1.1 2011/01/04 12:33:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.10-r1.ebuild,v 1.2 2011/01/09 03:23:16 vapier Exp $
 
 EAPI="3"
 
@@ -47,6 +47,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	mount-boot_pkg_postinst
 	echo
 	einfo "memtest has been installed in /boot/memtest86plus/"
 	einfo "You may wish to update your bootloader configs"

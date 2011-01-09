@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.59 2011/01/04 12:33:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.60 2011/01/09 03:23:16 vapier Exp $
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> memtest86+-4.00.ebuild,
+  memtest86+-4.10.ebuild, memtest86+-4.10-r1.ebuild:
+  Use new mount-boot_pkg_postinst helper.
 
 *memtest86+-4.10-r1 (04 Jan 2011)
 
