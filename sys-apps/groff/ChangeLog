@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.111 2011/01/08 00:14:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.112 2011/01/09 18:19:31 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> groff-1.20.1-r3.ebuild:
+  alpha/arm/ia64/m68k/s390/sh stable wrt #350491
 
   08 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   groff-1.20.1-r3.ebuild:
