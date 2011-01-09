@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.135 2010/11/27 17:53:56 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.136 2011/01/09 14:04:18 ranger Exp $
+
+  09 Jan 2011; Brent Baude <ranger@gentoo.org> vsftpd-2.3.2-r1.ebuild:
+  stable ppc, bug 342991
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> vsftpd-2.3.2-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #342991
