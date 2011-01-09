@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.204 2011/01/04 12:15:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.205 2011/01/09 17:50:40 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Add ~ia64/~sh/~sparc wrt #308971
 
   04 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> pulseaudio-0.9.22.ebuild:
   Remove deprecated hal support wrt #349050.
