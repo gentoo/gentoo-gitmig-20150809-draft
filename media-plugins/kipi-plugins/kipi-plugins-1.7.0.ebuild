@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.7.0.ebuild,v 1.1 2010/12/29 18:18:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.7.0.ebuild,v 1.2 2011/01/09 13:43:39 dilfridge Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	cdr? 		( app-cdr/k3b )
 	expoblending? 	( media-gfx/hugin )
-	imagemagick? 	( media-gfx/imagemagick )
+	imagemagick? 	( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
 	mjpeg? 		( media-video/mjpegtools )
 "
 
