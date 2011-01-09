@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-activeldap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.25 2010/12/11 07:49:14 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.26 2011/01/09 08:22:40 graaff Exp $
+
+  09 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  ruby-activeldap-1.2.2.ebuild:
+  Loosen ruby-gettext dependency a bit to include patched version.
 
   11 Dec 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-activeldap-1.2.1-r1.ebuild, -ruby-activeldap-1.2.1-r2.ebuild:
