@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.352 2010/11/22 00:31:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.353 2011/01/09 02:16:53 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -359,6 +359,13 @@ epatch() {
 		if [[ -n ${abs_paths} ]] ; then
 			count=1
 			printf "NOTE: skipping -p0 due to absolute paths in patch:\n%s\n" "${abs_paths}" >> "${STDERR_TARGET}"
+		fi
+		# Similar reason, but with relative paths.
+		local rel_paths=$(egrep -n '^[-+]{3} [^	]*[.][.]/' "${PATCH_TARGET}")
+		if [[ -n ${rel_paths} ]] ; then
+			eqawarn "QA Notice: Your patch uses relative paths '../'."
+			eqawarn " In the future this will cause a failure."
+			eqawarn "${rel_paths}"
 		fi
 
 		# Dynamically detect the correct -p# ... i'm lazy, so shoot me :/
