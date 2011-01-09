@@ -1,6 +1,11 @@
 # ChangeLog for virtual/gsasl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.4 2010/10/16 12:11:23 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.5 2011/01/09 17:33:32 jer Exp $
+
+*gsasl-1.6.0 (09 Jan 2011)
+
+  09 Jan 2011; Jeroen Roovers <jer@gentoo.org> +gsasl-1.6.0.ebuild:
+  Version bump (bug #311319).
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> gsasl-1.4.1.ebuild:
   stable ppc, bug 339980
