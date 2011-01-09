@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.1 2011/01/08 06:59:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.2 2011/01/09 00:09:13 robbat2 Exp $
 
 EAPI="3"
 
 PHP_EXT_NAME=ming
+PHP_EXT_OPTIONAL_USE=php
 PYTHON_DEPEND="python? 2"
 
 inherit eutils autotools flag-o-matic multilib php-ext-source-r2 perl-module python
@@ -48,7 +49,7 @@ src_prepare() {
 
 	if use php; then
 		cd "${S}/php_ext"
-		php-ext-source-r1_phpize
+		php-ext-source-r2_phpize
 		cd "${S}"
 	fi
 
@@ -70,7 +71,7 @@ src_compile() {
 		myconf="--disable-rpath
 			--disable-static
 			--with-ming"
-		php-ext-source-r1_src_compile
+		php-ext-source-r2_src_compile
 	fi
 }
 
@@ -88,7 +89,7 @@ src_install() {
 
 	if use php; then
 		cd "${S}"/php_ext
-		php-ext-source-r1_src_install
+		php-ext-source-r2_src_install
 	fi
 }
 
