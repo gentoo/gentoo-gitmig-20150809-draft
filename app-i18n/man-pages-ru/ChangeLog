@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.8 2011/01/05 14:04:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.9 2011/01/09 17:51:21 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #349381
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   man-pages-ru-3.27.2066.1435.20101003.ebuild:
