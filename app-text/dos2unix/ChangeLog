@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.55 2011/01/05 16:10:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.56 2011/01/09 18:08:08 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> dos2unix-5.1.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #350646
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> dos2unix-5.1.1.ebuild:
   Stable on amd64 wrt bug #350646
