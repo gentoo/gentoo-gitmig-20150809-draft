@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.2 2011/01/07 02:14:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.3 2011/01/09 21:25:29 anarchy Exp $
+
+*jemalloc-2.1.0-r1 (09 Jan 2011)
+
+  09 Jan 2011; Jory A. Pratt <anarchy@gentoo.org> -jemalloc-2.1.0.ebuild,
+  +jemalloc-2.1.0-r1.ebuild:
+  Fix file collision with google-perftools bug #351233
 
 *jemalloc-2.1.0 (07 Jan 2011)
 
