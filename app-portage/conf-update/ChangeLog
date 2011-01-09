@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/conf-update
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.26 2010/12/05 18:04:21 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.27 2011/01/09 14:27:51 ranger Exp $
+
+  09 Jan 2011; Brent Baude <ranger@gentoo.org> conf-update-1.0-r1.ebuild:
+  Marking conf-update-1.0-r1 ppc for bug 338414
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> conf-update-1.0-r1.ebuild:
   alpha stable wrt #338414
