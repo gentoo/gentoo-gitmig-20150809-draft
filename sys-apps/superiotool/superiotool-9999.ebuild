@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/superiotool-9999.ebuild,v 1.1 2011/01/09 17:13:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/superiotool/superiotool-9999.ebuild,v 1.2 2011/01/09 17:36:19 idl0r Exp $
 
 EAPI=3
 
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS=""
 IUSE="pci"
 
-DEPEND="sys-libs/zlib
-	pci? ( sys-apps/pciutils )"
+DEPEND="pci? ( sys-apps/pciutils )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e 's:-Werror ::' -e 's:-O2 ::' Makefile || die
+	sed -i -e 's:-Werror ::' \
+		-e 's:-O2 ::' \
+		-e 's:\s\+\?-lz\s\+\?::' \
+		Makefile || die
 }
 
 src_compile() {
