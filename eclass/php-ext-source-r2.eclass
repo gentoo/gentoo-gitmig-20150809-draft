@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.6 2010/12/27 22:19:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.7 2011/01/09 00:05:10 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -62,6 +62,12 @@ esac
 # Lists the PHP slots compatibile the extension is compatibile with
 [[ -z "${USE_PHP}" ]] && USE_PHP="php5-2 php5-3"
 
+# @ECLASS-VARIABLE: PHP_EXT_OPTIONAL_USE
+# @DESCRIPTION:
+# If set, this is the USE flag that the PHP dependencies are behind
+# Most commonly set as PHP_EXT_OPTIONAL_USE=php to get the dependencies behind
+# USE=php.
+
 #Make sure at least one target is installed. Abuses USE dependencies.
 for target in ${USE_PHP}; do
 	IUSE="${IUSE} php_targets_${target}"
@@ -74,8 +80,10 @@ for target in ${USE_PHP}; do
 done
 
 RDEPEND="${RDEPEND}
+	${PHP_EXT_OPTIONAL_USE}${PHP_EXT_OPTIONAL_USE:+? ( }
 	|| ( ${SELFDEPEND} )
-	${PHPDEPEND}"
+	${PHPDEPEND}
+	${PHP_EXT_OPTIONAL_USE:+ )}"
 
 
 # @FUNCTION: php-ext-source-r2_src_unpack
