@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.7-r1.ebuild,v 1.1 2011/01/09 09:27:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.7-r2.ebuild,v 1.1 2011/01/09 18:18:21 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -54,6 +54,7 @@ src_install() {
 	newins "${FILESDIR}"/rsyncd.xinetd rsyncd
 
 	# Install the useful contrib scripts
+	cd "${S}"/support
 	exeinto /usr/share/rsync/
 	doexe atomic-rsync cvs2includes deny-rsync file-attr-restore files-to-excludes git-set-file-times logfilter lsh mnt-excl munge-symlinks rrsync rsyncstats
 }
