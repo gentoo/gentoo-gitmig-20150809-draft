@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.2 2010/08/25 17:46:08 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.3 2011/01/09 03:27:27 vapier Exp $
 
 EAPI=2
 
@@ -159,6 +159,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	mount-boot_pkg_postinst
+
 	elog 'To generate the initramfs:'
 	elog '    # mount /boot (if necessary)'
 	elog '    # dracut "" <kernel-version>'

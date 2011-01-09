@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.7 2010/08/25 17:46:08 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.8 2011/01/09 03:27:27 vapier Exp $
+
+  09 Jan 2011; Mike Frysinger <vapier@gentoo.org> dracut-007.ebuild:
+  Use new mount-boot_pkg_postinst helper.
 
   25 Aug 2010; Lance Albertson <ramereth@gentoo.org> dracut-006-r1.ebuild,
   dracut-007.ebuild:
