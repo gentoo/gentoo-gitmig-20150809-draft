@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.1.0.ebuild,v 1.4 2009/02/26 14:52:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.1.0.ebuild,v 1.5 2011/01/09 18:50:21 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A collection of portable C++ classes."
 HOMEPAGE="http://www.coyotegulch.com/products/libcoyotl/"
@@ -20,6 +20,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-gcc-4.3.patch"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -35,5 +37,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-	dohtml docs/html/*
+	if use doc ; then
+		dohtml docs/html/* || die
+	fi
 }
