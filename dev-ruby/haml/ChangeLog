@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.59 2011/01/02 10:05:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.60 2011/01/09 15:47:46 graaff Exp $
+
+*haml-3.0.25-r1 (09 Jan 2011)
+
+  09 Jan 2011; Hans de Graaff <graaff@gentoo.org> +haml-3.0.25-r1.ebuild:
+  Add dependency on dev-ruby/fssm. This was mandatory but not noticed due to
+  it being vendored. Fixes bug 350846. Dropped keywords for ppc,ppc64,x86:
+  bug 351212.
 
 *haml-3.0.25 (02 Jan 2011)
 
