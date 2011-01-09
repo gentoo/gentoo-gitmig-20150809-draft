@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.233 2011/01/03 01:48:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.234 2011/01/09 17:09:50 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> iptables-1.4.10.ebuild:
+  ia64/m68k/s390/sh/x86 stable wrt #347179
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> iptables-1.4.10.ebuild:
   sparc stable (bug 347179)
