@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.34 2011/01/06 23:37:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.35 2011/01/09 14:39:08 grobian Exp $
+
+  09 Jan 2011; Fabian Groffen <grobian@gentoo.org> cloog-ppl-0.15.10.ebuild:
+  Fix for Prefix, marked ~amd64-linux
 
 *cloog-ppl-0.15.10 (06 Jan 2011)
 
