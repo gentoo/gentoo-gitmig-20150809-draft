@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.121 2011/01/06 16:12:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.122 2011/01/09 15:52:29 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -309,9 +309,8 @@ src_compile() {
 	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake base_unittests net_unittests \
-			BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base_unittests,net_unittests}
+		emake base_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/base_unittests
 	fi
 }
 
@@ -326,11 +325,9 @@ src_test() {
 		die "locale ${mylocale} is not supported"
 	fi
 
-	# Make test failures non-fatal for now. This needs more investigation.
+	# For more info see bug #350347.
 	LC_ALL="${mylocale}" maketype=out/Release/base_unittests virtualmake \
-		|| eerror "base_unittests failed"
-	LC_ALL="${mylocale}" maketype=out/Release/net_unittests virtualmake \
-		|| eerror "net_unittests failed"
+		'--gtest_filter=-ICUStringConversionsTest.*' || die
 }
 
 src_install() {
