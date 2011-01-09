@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.66 2011/01/03 11:59:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.67 2011/01/09 17:30:08 armin76 Exp $
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> dcraw-9.04.ebuild:
+  alpha/ia64 stable wrt #349221
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> dcraw-9.04.ebuild:
   sparc stable (bug 349221)
