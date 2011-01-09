@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.148 2011/01/07 23:14:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.149 2011/01/09 14:01:22 ranger Exp $
+
+  09 Jan 2011; Brent Baude <ranger@gentoo.org> mediawiki-1.16.1.ebuild:
+  Marking mediawiki-1.16.1 ppc for bug 350917
 
   07 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   mediawiki-1.16.1.ebuild:
