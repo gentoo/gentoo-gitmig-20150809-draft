@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgsasl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.51 2010/10/31 17:21:24 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.52 2011/01/09 17:32:07 jer Exp $
+
+*libgsasl-1.6.0 (09 Jan 2011)
+
+  09 Jan 2011; Jeroen Roovers <jer@gentoo.org> +libgsasl-1.6.0.ebuild:
+  Version bump (bug #311319).
 
   31 Oct 2010; Raúl Porcel <armin76@gentoo.org> libgsasl-1.4.1.ebuild:
   alpha/ia64/sparc stable wrt #339505
