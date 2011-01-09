@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.35 2011/01/09 17:17:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.36 2011/01/09 17:32:48 jer Exp $
+
+*gsasl-1.6.0 (09 Jan 2011)
+
+  09 Jan 2011; Jeroen Roovers <jer@gentoo.org> +gsasl-1.6.0.ebuild:
+  Version bump (bug #311319).
 
   09 Jan 2011; Jeroen Roovers <jer@gentoo.org> gsasl-1.4.1.ebuild:
   Do not run tests under valgrind (bug #346131).
