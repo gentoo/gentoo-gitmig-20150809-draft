@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.132 2010/12/27 21:31:02 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.133 2011/01/09 14:31:44 ranger Exp $
+
+  09 Jan 2011; Brent Baude <ranger@gentoo.org> icu-4.6.ebuild:
+  Marking icu-4.6 ppc for bug 350861
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> icu-4.4.2.ebuild:
   stable ppc64, bug 343759
