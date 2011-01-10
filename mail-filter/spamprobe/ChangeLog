@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamprobe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.26 2010/03/08 17:34:40 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.27 2011/01/10 20:17:37 flameeyes Exp $
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> -spamprobe-1.4b.ebuild,
+  -files/spamprobe-1.4b-gcc41.patch, spamprobe-1.4d.ebuild,
+  +files/spamprobe-1.4d+db-5.0.patch:
+  Remove old version and fix build with berkdb 5.0 (bug #319941).
 
   08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> spamprobe-1.4d.ebuild,
   +files/spamprobe-1.4d-libpng14.patch:
