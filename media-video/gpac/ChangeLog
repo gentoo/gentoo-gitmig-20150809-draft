@@ -1,6 +1,13 @@
 # ChangeLog for media-video/gpac
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.82 2010/11/01 17:17:34 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.83 2011/01/10 16:22:08 anarchy Exp $
+
+*gpac-0.4.5-r4 (10 Jan 2011)
+
+  10 Jan 2011; Jory A. Pratt <anarchy@gentoo.org> -gpac-0.4.5-r2.ebuild,
+  -gpac-0.4.5-r3.ebuild, +gpac-0.4.5-r4.ebuild,
+  +files/gpac-0.4.5-spidermonkey-update.patch:
+  Fix spidermonkey linkage, bug #350151 per ssuominen
 
 *gpac-0.4.5-r3 (01 Nov 2010)
 

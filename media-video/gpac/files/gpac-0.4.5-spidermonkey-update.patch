@@ -1,0 +1,25 @@
+--- a/configure	2011-01-01 14:37:30.188000001 -0600
++++ b/configure	2011-01-01 14:40:30.409000001 -0600
+@@ -491,6 +491,13 @@
+ has_js="system"
+ js_lib="-lmozjs"
+ else
++#gentoo spidermonkey (mozjs)
++js_flags="-DXP_UNIX -I/usr/include/js"
++js_inc="/usr/include/js"
++if $cc -o $TMPO $TMPC $js_flags -lmozjs 2> /dev/null  ; then
++has_js="system"
++js_lib="-lmozjs"
++else
+ #try local
+ js_inc="$local_inc/js"
+ js_flags="-DXP_UNIX -I$local_inc/js"
+@@ -499,6 +506,7 @@
+ fi
+ fi
+ fi
++fi
+ fi
+ 
+ 
+

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r2.ebuild,v 1.3 2010/09/16 17:19:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.1 2011/01/10 16:22:08 anarchy Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="a52 aac alsa debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad ogg opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
+IUSE="a52 aac alsa debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
 
 S=${WORKDIR}/${PN}
 
@@ -29,7 +29,7 @@ RDEPEND="
 	javascript? ( >=dev-lang/spidermonkey-1.5 )
 	mad? ( >=media-libs/libmad-0.15.1b )
 	opengl? ( virtual/opengl media-libs/freeglut )
-	ogg? ( >=media-libs/libogg-1.1 )
+	>=media-libs/libogg-1.1
 	png? ( >=media-libs/libpng-1.2.5 )
 	vorbis? ( >=media-libs/libvorbis-1.1 )
 	theora? ( media-libs/libtheora )
@@ -63,9 +63,17 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
+	epatch "${FILESDIR}/${P}-spidermonkey-update.patch"
+
 	sed -ie '/ldconfig / d' "${S}/Makefile"
 
 	cd "${S}"
+
+	# remove last of internal ogg
+	sed -i \
+		-e 's:<gpac/internal/ogg.h>:<ogg/ogg.h>:' \
+		src/media_tools/{av_parsers,gpac_ogg,media_import,media_export}.c || die
+	rm -f include/gpac/internal/ogg.h || die
 
 	chmod +x configure
 	# make sure configure looks for wx-2.6
@@ -92,16 +100,12 @@ src_unpack() {
 }
 
 src_compile() {
-	if use ogg; then
-		myconf="${myconf} --use-ogg=system"
-		if use vorbis; then
-			myconf="${myconf} --use-vorbis=system"
-		fi
-		if use theora; then
-			myconf="${myconf} --use-theora=system"
-		fi
-	else
-		myconf="${myconf} --use-ogg=no"
+	myconf="${myconf} --use-ogg=system"
+	if use vorbis; then
+		myconf="${myconf} --use-vorbis=system"
+	fi
+	if use theora; then
+		myconf="${myconf} --use-theora=system"
 	fi
 
 	tc-export CC CXX
