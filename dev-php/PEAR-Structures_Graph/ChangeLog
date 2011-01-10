@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Structures_Graph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.11 2011/01/06 20:08:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.12 2011/01/10 18:16:41 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  PEAR-Structures_Graph-1.0.3.ebuild:
+  ppc stable wrt #294256, #349318, #350908
 
   06 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   PEAR-Structures_Graph-1.0.3.ebuild:

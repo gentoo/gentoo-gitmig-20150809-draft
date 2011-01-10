@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.45 2011/01/06 20:06:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.46 2011/01/10 18:13:56 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  PEAR-XML_Util-1.2.1-r2.ebuild:
+  ppc stable wrt #294256, #349318, #350908
 
   06 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   PEAR-XML_Util-1.2.1-r2.ebuild:
