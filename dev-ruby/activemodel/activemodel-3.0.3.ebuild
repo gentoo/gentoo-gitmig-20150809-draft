@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.0.3.ebuild,v 1.4 2010/12/28 13:48:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.0.3.ebuild,v 1.5 2011/01/10 19:03:14 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -40,4 +40,7 @@ all_ruby_prepare() {
 	# Set test environment to our hand.
 	rm "${S}/../Gemfile" || die "Unable to remove Gemfile"
 	sed -i -e '/load_paths/d' test/cases/helper.rb || die "Unable to remove load paths"
+
+	# Relax builder requirement to also support 3.0.0
+	sed -i -e 's/~> 2.1.2/>= 2.1.2/' activemodel.gemspec || die
 }
