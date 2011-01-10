@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.26 2011/01/07 23:25:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.27 2011/01/10 19:17:46 jlec Exp $
+
+*cw-1.0.16-r2 (10 Jan 2011)
+
+  10 Jan 2011; Justin Lecher <jlec@gentoo.org> +files/1.0.16-collision.patch,
+  cw-1.0.15.ebuild, cw-1.0.16-r1.ebuild, +cw-1.0.16-r2.ebuild,
+  +files/1.0.16-path.patch:
+  Fix collision with media-radio/unixcw, #351293; make cw work
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> cw-1.0.16-r1.ebuild:
   Marking cw-1.0.16-r1 ppc for bug 350564

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.9 2010/01/01 18:29:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.10 2011/01/10 19:17:46 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
-RDEPEND=""
+RDEPEND="!media-radio/unixcw"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
-	econf || die "econf failed"
+	econf
 	emake local || die "emake failed"
 }
 

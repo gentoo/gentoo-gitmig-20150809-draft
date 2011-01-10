@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16-r1.ebuild,v 1.5 2011/01/10 19:17:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.16-r2.ebuild,v 1.1 2011/01/10 19:17:46 jlec Exp $
 
 EAPI="3"
 
@@ -12,16 +12,14 @@ SRC_URI="mirror://sourceforge/cwrapper/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
-RDEPEND="!media-radio/unixcw"
-
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
-	sed -i 's|\(CWLIB=\)/usr/local/lib/cw|\1/usr/libexec/cw|' bin/colorcfg || \
-		die "sed failed"
+	epatch \
+		"${FILESDIR}"/${PV}-ldflags.patch \
+		"${FILESDIR}"/${PV}-path.patch \
+		"${FILESDIR}"/${PV}-collision.patch
 	tc-export CC
 }
 
@@ -36,17 +34,20 @@ src_install() {
 	exeinto /usr/libexec/cw
 	doexe def/* || die
 
-	doman man/* || die
+	doman man/cwu* || die
+	newman man/cw.* color-wrapper || die
 	dodoc CHANGES CONTRIB INSTALL README PLATFORM doc/README* || die
 
-	dobin bin/{cw,cwu,colorcfg} || die
+	dobin bin/{cwu,colorcfg} || die
 	# app-misc/color currently conflicts; hopefully 'colors' is safe
 	newbin bin/color colors || die
+	# media-radio/unixcw currently conflicts;
+	newbin bin/cw color-wrapper || die
 }
 
 pkg_postinst() {
 	ebegin "Updating definition files"
-	cwu /usr/libexec/cw /usr/bin/cw >/dev/null
+	cwu /usr/libexec/cw /usr/bin/color-wrapper # >/dev/null
 	eend $?
 
 	elog "To enable color-wrapper, as your user, run:"
