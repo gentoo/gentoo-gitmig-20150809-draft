@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r2.ebuild,v 1.4 2010/12/07 17:16:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.2-r2.ebuild,v 1.5 2011/01/10 20:34:49 tomka Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1" # Upstream ticket 240 -> wontfix
@@ -26,7 +26,7 @@ SRC_URI="${SRC_COM}${MY_DIR}/${MY_PN}-${MY_PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~x86-macos"
 IUSE="boost doc emacs examples +readline test"
 
 RDEPEND="dev-libs/gmp
@@ -69,11 +69,6 @@ src_prepare () {
 		-e "/CXXFLAGS/ s/--no-exceptions//g" \
 		-e "s/SLDFLAGS=-shared/SLDFLAGS=\"$(raw-ldflags) -shared\"/" \
 		"${S}"/Singular/configure.in || die
-
-	SOSUFFIX=$(get_version_component_range 1-3)
-	sed -i \
-		-e "s:SO_SUFFIX = so:SO_SUFFIX = so.${SOSUFFIX}:" \
-		"${S}"/Singular/Makefile.in || die
 
 	cd "${S}"/Singular || die "failed to cd into Singular/"
 	eautoconf
@@ -124,6 +119,12 @@ src_install () {
 	dobin ${MY_PN}* gen_test change_cost solve_IP toric_ideal LLL \
 		|| die "failed to install binaries"
 	insinto /usr/$(get_libdir)/${PN}
+	# fix install_name on macos, the build system is buggy enough not to add extra for OS X.
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		for d in *.so ; do
+			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${PN}/${d}" "${d}"
+		done
+	fi
 	doins *.so || die "failed to install libraries"
 
 	dosym ${MY_PN}-${MY_DIR} /usr/bin/${MY_PN} \

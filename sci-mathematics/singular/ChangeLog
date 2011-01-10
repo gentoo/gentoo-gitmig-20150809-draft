@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/singular
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.38 2010/12/07 17:16:48 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.39 2011/01/10 20:34:49 tomka Exp $
+
+  10 Jan 2011; Thomas Kahle <tomka@gentoo.org> singular-3.1.2-r2.ebuild:
+  macos prefix support added, contributed by François Bissey
 
   07 Dec 2010; Thomas Kahle <tomka@gentoo.org> singular-3.1.2-r2.ebuild:
   restricting tests, upstream does not care about them
