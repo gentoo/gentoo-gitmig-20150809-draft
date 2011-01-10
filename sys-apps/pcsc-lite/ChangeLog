@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.101 2011/01/01 15:46:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.102 2011/01/10 11:09:39 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  pcsc-lite-1.6.6.ebuild:
+  ppc64 stable wrt #349561
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> pcsc-lite-1.6.6.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #349561
