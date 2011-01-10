@@ -1,6 +1,17 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.11 2011/01/09 18:09:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.12 2011/01/10 01:12:33 flameeyes Exp $
+
+*awstats-7.0_p20101205-r1 (10 Jan 2011)
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +awstats-7.0_p20101205-r1.ebuild,
+  +files/awstats-7.0_p20101205-nofollow.patch:
+  Simplify ebuild by dropping apache.depend and webapp eclasses; this version
+  no longer users webapp-config for setup, instead it relies on stable paths
+  for configuration (suggested method), as it doesn't slot and it requires
+  global paths to save data. Also, patch in rel=nofollow attribute on external
+  links to avoid boosting spammers' pagerank.
 
 *awstats-7.0_p20101205 (09 Jan 2011)
 
