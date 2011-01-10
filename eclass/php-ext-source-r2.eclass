@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.7 2011/01/09 00:05:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.8 2011/01/10 11:25:21 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -68,6 +68,13 @@ esac
 # Most commonly set as PHP_EXT_OPTIONAL_USE=php to get the dependencies behind
 # USE=php.
 
+# @ECLASS-VARIABLE: PHP_EXT_S
+# @DESCRIPTION:
+# The relative location of the temporary build directory for the PHP extension within
+# the source package. This is useful for packages that bundle the PHP extension.
+# Defaults to ${S}
+[[ -z "${PHP_EXT_S}" ]] && PHP_EXT_S="${S}"
+
 #Make sure at least one target is installed. Abuses USE dependencies.
 for target in ${USE_PHP}; do
 	IUSE="${IUSE} php_targets_${target}"
@@ -97,14 +104,14 @@ RDEPEND="${RDEPEND}
 # Set PHP_EXT_SKIP_PHPIZE="yes" in your ebuild if you do not want to run phpize.
 php-ext-source-r2_src_unpack() {
 	unpack ${A}
-	local slot orig_s="$S"
+	local slot orig_s="${PHP_EXT_S}"
 	for slot in $(php_get_slots); do
 		cp -r "${orig_s}" "${WORKDIR}/${slot}"
 	done
 }
 
 php-ext-source-r2_src_prepare() {
-	local slot orig_s="$S"
+	local slot orig_s="${PHP_EXT_S}"
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		php-ext-source-r2_phpize
@@ -141,6 +148,7 @@ php-ext-source-r2_src_configure() {
 		# Set the correct config options
 		# We cannot use econf here, phpize/php-config deals with setting
 		# --prefix etc to whatever the php slot was configured to use
+		echo ./configure --with-php-config=${PHPCONFIG} ${my_conf}
 		./configure --with-php-config=${PHPCONFIG} ${my_conf}  || die "Unable to configure code to compile"
 	done
 }
@@ -207,8 +215,8 @@ php_init_slot_env() {
 	EXT_DIR="$(${PHPCONFIG} --extension-dir 2>/dev/null)"
 	PHP_CURRENTSLOT=${1:3}
 
-	S="${WORKDIR}/${1}"
-	cd "${S}"
+	PHP_EXT_S="${WORKDIR}/${1}"
+	cd "${PHP_EXT_S}"
 }
 
 php-ext-source-r2_buildinilist() {
