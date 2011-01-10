@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.122 2011/01/09 15:52:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.123 2011/01/10 09:44:20 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -109,15 +109,6 @@ egyp() {
 	"${@}"
 }
 
-remove_bundled_lib() {
-	local out
-	out="$(find $1 -type f \! -iname '*.gyp' -print -delete)" \
-		|| ewarn "failed to remove bundled library $1"
-	if [[ -z $out ]]; then
-		ewarn "no files matched when removing bundled library $1"
-	fi
-}
-
 pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
 
@@ -160,33 +151,44 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
 
-	remove_bundled_lib "third_party/bzip2"
-	remove_bundled_lib "third_party/codesighs"
-	remove_bundled_lib "third_party/icu"
-	remove_bundled_lib "third_party/jemalloc"
-	remove_bundled_lib "third_party/lcov"
-	remove_bundled_lib "third_party/libevent"
-	remove_bundled_lib "third_party/libjpeg"
-	remove_bundled_lib "third_party/libpng"
-	remove_bundled_lib "third_party/libvpx"
-	remove_bundled_lib "third_party/libxml"
-	remove_bundled_lib "third_party/libxslt"
-	remove_bundled_lib "third_party/lzma_sdk"
-	remove_bundled_lib "third_party/molokocacao"
-	remove_bundled_lib "third_party/speex"
-	remove_bundled_lib "third_party/ocmock"
-	remove_bundled_lib "third_party/yasm"
-	# TODO: also remove third_party/ffmpeg (needs to be compile-tested).
-	# TODO: also remove third_party/zlib. For now the compilation fails if we
-	# remove it (minizip-related).
+	# Remove most bundled libraries. Some are still needed.
+	find third_party -type f \! -iname '*.gyp*' \
+		\! -path 'third_party/WebKit/*' \
+		\! -path 'third_party/angle/*' \
+		\! -path 'third_party/cacheinvalidation/*' \
+		\! -path 'third_party/cld/*' \
+		\! -path 'third_party/expat/*' \
+		\! -path 'third_party/ffmpeg/*' \
+		\! -path 'third_party/gpsd/*' \
+		\! -path 'third_party/harfbuzz/*' \
+		\! -path 'third_party/hunspell/*' \
+		\! -path 'third_party/iccjpeg/*' \
+		\! -path 'third_party/libjingle/*' \
+		\! -path 'third_party/libsrtp/*' \
+		\! -path 'third_party/libwebp/*' \
+		\! -path 'third_party/mesa/*' \
+		\! -path 'third_party/modp_b64/*' \
+		\! -path 'third_party/npapi/*' \
+		\! -path 'third_party/openmax/*' \
+		\! -path 'third_party/ots/*' \
+		\! -path 'third_party/protobuf/*' \
+		\! -path 'third_party/skia/*' \
+		\! -path 'third_party/sqlite/*' \
+		\! -path 'third_party/tcmalloc/*' \
+		\! -path 'third_party/undoview/*' \
+		\! -path 'third_party/xdg-utils/*' \
+		\! -path 'third_party/zlib/contrib/minizip/*' \
+		-delete || die
 
 	# Provide our own gyp file that links with the system speex.
 	# TODO: move this upstream.
 	cp "${FILESDIR}"/speex.gyp third_party/speex || die
 
 	if use system-sqlite; then
-		remove_bundled_lib "third_party/sqlite/src"
-		remove_bundled_lib "third_party/sqlite/preprocessed"
+		# Remove bundled sqlite, preserving the shim header.
+		find third_party/sqlite -type f \! -iname '*.gyp*' \
+			\! -path 'third_party/sqlite/sqlite3.h' \
+			-delete || die
 	fi
 
 	if use system-v8; then
@@ -194,7 +196,8 @@ src_prepare() {
 		# TODO: move this upstream.
 		cp "${FILESDIR}"/v8.gyp v8/tools/gyp || die
 
-		remove_bundled_lib "v8"
+		# Remove bundled v8.
+		find v8 -type f \! -iname '*.gyp*' -delete || die
 
 		# The implementation files include v8 headers with full path,
 		# like #include "v8/include/v8.h". Make sure the system headers

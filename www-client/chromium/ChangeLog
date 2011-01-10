@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.256 2011/01/09 15:52:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.257 2011/01/10 09:44:20 phajdan.jr Exp $
+
+*chromium-10.0.628.0-r1 (10 Jan 2011)
+
+  10 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-10.0.612.1-r1.ebuild, +chromium-10.0.628.0-r1.ebuild,
+  chromium-9999.ebuild:
+  Change way how bundled libraries are removed (whitelisting instead of
+  blacklisting).
 
   09 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-10.0.628.0.ebuild, chromium-9999.ebuild:
