@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/cucumber-rails-0.3.2-r1.ebuild,v 1.1 2010/09/26 07:20:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/cucumber-rails-0.3.2-r1.ebuild,v 1.2 2011/01/10 18:29:35 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -19,7 +19,7 @@ DESCRIPTION="Executable feature scenarios for Rails"
 HOMEPAGE="http://github.com/aslakhellesoy/cucumber/wikis"
 LICENSE="Ruby"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
