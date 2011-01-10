@@ -1,6 +1,10 @@
 # ChangeLog for games-action/towbowl-tactics
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/ChangeLog,v 1.7 2008/03/06 03:42:02 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/ChangeLog,v 1.8 2011/01/10 17:43:55 mr_bones_ Exp $
+
+  10 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  towbowl-tactics-0.5.ebuild, +files/towbowl-tactics-0.5-gentoo.patch:
+  EAPI=2; honor LDFLAGS (bug #351309); tidy
 
   06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   towbowl-tactics-0.5.ebuild:

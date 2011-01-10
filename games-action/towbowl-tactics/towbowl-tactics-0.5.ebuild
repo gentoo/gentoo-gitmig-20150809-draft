@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.10 2008/05/15 12:34:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.11 2011/01/10 17:43:55 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Tow Bowl Tactics is a game based on Games Workshop's Blood Bowl"
@@ -15,45 +16,37 @@ IUSE=""
 
 RDEPEND="dev-libs/libxml2
 	media-libs/smpeg
+	media-libs/libsdl[audio,video]
 	media-libs/sdl-net
-	media-libs/sdl-image
+	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/tbt/src"
+S=${WORKDIR}/tbt/src
 
-src_unpack() {
-	local f
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
+	cd  ..
+	edos2unix $(find src -type f) config.xml
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i \
-		-e "s/<language>0/<language>1/g" ../config.xml \
-			|| die "sed config.xml failed"
+	    -e "/^TBTHOME/ s:/.*:${GAMES_DATADIR}/tbt:" \
+		src/Makefile || die
 	sed -i \
-		-e "/^CFLAGS/ s:-O2 -g -fno-strength-reduce -Wall -W:${CFLAGS}:" \
-	    -e "/^TBTHOME/ s:/.*:${GAMES_DATADIR}/tbt:" Makefile \
-			|| die "sed Makefile failed"
-	sed -i \
-		-e "/tbt.ico/ s:\"\./:TBTHOME \"/:" Main.cpp \
-			|| die "sed Main.cpp failed"
+		-e "/tbt.ico/ s:\"\./:TBTHOME \"/:" \
+		src/Main.cpp || die
 	sed -i \
 		-e "s:TBTHOME \"/config.xml:\"${GAMES_SYSCONFDIR}/tbt/config.xml:g" \
-			global.h || die "sed global,h failed"
-
-	for f in $(find "${S}" -type f)
-	do
-		edos2unix ${f}
-	done
+		src/global.h || die
 }
 
 src_install() {
-	dogamesbin tbt || die "dogamesbin failed"
+	dogamesbin tbt || die
 	dodir "${GAMES_DATADIR}/tbt"
-	cp -r ../data ../tbt.ico "${D}${GAMES_DATADIR}/tbt" || die "cp failed"
+	cp -r ../data ../tbt.ico "${D}${GAMES_DATADIR}/tbt" || die
 	insinto "${GAMES_SYSCONFDIR}/tbt"
-	doins ../config.xml || die "doins failed"
+	doins ../config.xml || die
+	newicon ../data/images/panel/turn.png ${PN}.png || die
+	make_desktop_entry tbt "Tow Bowl Tactics" || die
 	prepgamesdirs
 }
