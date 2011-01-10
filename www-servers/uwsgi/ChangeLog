@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.2 2011/01/07 14:22:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.3 2011/01/10 10:54:39 dev-zero Exp $
+
+  10 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> files/42_mod_uwsgi.conf,
+  uwsgi-0.9.6.6.ebuild:
+  mod_Ruwsgi and mod_uwsgi are mutually exclusive.
 
 *uwsgi-0.9.6.6 (07 Jan 2011)
 
