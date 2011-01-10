@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.16.ebuild,v 1.1 2009/12/31 09:29:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.16.ebuild,v 1.2 2011/01/10 13:53:59 flameeyes Exp $
 
 EAPI=1
 
@@ -105,6 +105,8 @@ src_unpack() {
 
 	# Fix prestripped binaries
 	epatch "${FILESDIR}/${PN}-strip.patch"
+
+	epatch "${FILESDIR}/${P}+db-5.0.patch"
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	use tcpd && epatch "${FILESDIR}/${PN}-${LIBWRAP_PATCH_VER}-libwrap.patch"
