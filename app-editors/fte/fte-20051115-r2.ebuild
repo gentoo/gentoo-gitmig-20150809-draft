@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r2.ebuild,v 1.1 2010/12/30 17:42:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r2.ebuild,v 1.2 2011/01/10 16:18:31 jer Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ set_targets() {
 	use slang && TARGETS="${TARGETS} sfte"
 	use X && TARGETS="${TARGETS} xfte"
 
-	TARGETS="{$TARGETS} vfte"
+	TARGETS="${TARGETS} vfte"
 }
 
 src_prepare() {
