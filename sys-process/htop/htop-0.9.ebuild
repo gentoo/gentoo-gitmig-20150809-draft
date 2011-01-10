@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.2 2011/01/10 17:15:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.3 2011/01/10 19:24:24 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib
@@ -12,9 +12,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="cgroup debug openvz unicode vserver"
+IUSE="debug elibc_FreeBSD kernel_linux openvz unicode vserver"
 
-DEPEND="sys-libs/ncurses[unicode?]"
+RDEPEND="sys-libs/ncurses[unicode?]"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if use elibc_FreeBSD && ! [[ -f ${ROOT}/proc/stat && -f ${ROOT}/proc/meminfo ]]; then
@@ -38,14 +39,15 @@ src_prepare() {
 }
 
 src_configure() {
-	useq debug && append-flags -DDEBUG
+	use debug && append-flags -DDEBUG
 
 	econf \
 		$(use_enable openvz) \
-		$(use_enable cgroup) \
+		$(use_enable kernel_linux cgroup) \
 		$(use_enable vserver) \
 		$(use_enable unicode) \
-		--enable-taskstats
+		--enable-taskstats \
+		--without-valgrind
 }
 
 src_install() {
