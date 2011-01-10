@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/drizzle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.19 2010/10/25 00:24:09 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.20 2011/01/10 01:22:32 flameeyes Exp $
+
+*drizzle-7.2010.12.06 (10 Jan 2011)
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -drizzle-6.2010.08.1742.ebuild, -drizzle-7.2010.10.01.ebuild,
+  -drizzle-7.2010.10.01-r1.ebuild, +drizzle-7.2010.12.06.ebuild,
+  -files/drizzle-2010.08.1742-pcre.patch, files/drizzle.init.d:
+  Version bump by Pavel; also cleanup init script (by Pavel and me), and drop
+  old versions and patches.
 
   25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   drizzle-7.2010.10.01-r1.ebuild:

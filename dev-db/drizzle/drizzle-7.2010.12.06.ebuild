@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.10.01-r1.ebuild,v 1.3 2010/10/25 00:24:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2010.12.06.ebuild,v 1.1 2011/01/10 01:22:32 flameeyes Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Database optimized for Cloud and Net applications"
 HOMEPAGE="http://drizzle.org"
-SRC_URI="http://launchpad.net/drizzle/elliott/2010-10-11/+download/${MY_P}.tar.gz"
+SRC_URI="http://launchpad.net/drizzle/elliott/$(get_version_component_range 2-2)-$(get_version_component_range 3-3)-20/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +21,6 @@ IUSE="debug tcmalloc doc memcache curl pam gearman +md5 ldap haildb"
 # upstream bug #499911
 #RESTRICT="memcache? ( test ) !curl? ( test )"
 
-# for libdrizzle version, check m4/pandora*, PANDORA_LIBDRIZZLE_RECENT
 RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		sys-libs/readline
 		sys-apps/util-linux
@@ -39,6 +38,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		!dev-db/libdrizzle"
 
 DEPEND="${RDEPEND}
+		sys-devel/gettext
 		dev-util/intltool
 		dev-util/gperf
 		sys-devel/flex
@@ -51,7 +51,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2009.12.1240-nolint.patch"
-	epatch "${FILESDIR}/${PN}-2010.08.1742-pcre.patch"
 
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
