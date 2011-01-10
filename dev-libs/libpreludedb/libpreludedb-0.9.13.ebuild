@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.13.ebuild,v 1.8 2010/06/17 21:33:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.13.ebuild,v 1.9 2011/01/10 20:51:47 tomka Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc ~x86"
 IUSE="doc mysql postgres perl python sqlite3 swig"
 
 DEPEND=">=dev-libs/libprelude-0.9.10

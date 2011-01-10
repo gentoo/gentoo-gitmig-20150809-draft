@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpreludedb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.47 2010/06/17 21:33:54 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.48 2011/01/10 20:51:47 tomka Exp $
+
+  10 Jan 2011; Thomas Kahle <tomka@gentoo.org> libpreludedb-0.9.2.ebuild,
+  libpreludedb-0.9.13.ebuild:
+  x86 dropped stable per bug 318839
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libpreludedb-0.9.2.ebuild,
   libpreludedb-0.9.13.ebuild, libpreludedb-0.9.15.1.ebuild,
