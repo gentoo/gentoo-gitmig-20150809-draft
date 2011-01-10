@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.54 2011/01/07 23:33:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.55 2011/01/10 10:33:05 hwoarang Exp $
+
+  10 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wdiff-0.6.5.ebuild:
+  Stable on amd64 wrt bug #350835
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> wdiff-0.6.5.ebuild:
   Marking wdiff-0.6.5 ppc for bug 350835
