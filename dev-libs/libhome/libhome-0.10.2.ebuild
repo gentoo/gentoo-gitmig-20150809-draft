@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2.ebuild,v 1.2 2010/06/17 21:32:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2.ebuild,v 1.3 2011/01/10 19:50:30 flameeyes Exp $
 
 inherit autotools db-use eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="berkdb ldap mysql pam postgres"
 
-DEPEND="berkdb? ( =sys-libs/db-4* )
+DEPEND="berkdb? ( >=sys-libs/db-4 )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
@@ -24,11 +24,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm -f aclocal.m4
-	epatch "${FILESDIR}"/${PN}-0.10.1-Makefile.patch
+
+	epatch "${FILESDIR}"/${PN}-0.10.2-Makefile.patch
 	epatch "${FILESDIR}"/${PN}-0.10.2-ldap_deprecated.patch
 
 	# bug 225579
 	sed -i -e 's:\<VERSION\>:__PKG_VERSION:' configure.in
+
+	sed -i -e '/AC_SEARCH_LIBS.*db4/s: db-4.* db4:'$(db_libname)':' \
+		configure.in
 
 	eautoreconf
 }
@@ -45,5 +49,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }

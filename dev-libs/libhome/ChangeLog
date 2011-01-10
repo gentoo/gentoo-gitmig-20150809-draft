@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libhome
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.11 2010/06/17 21:32:16 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.12 2011/01/10 19:50:30 flameeyes Exp $
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> libhome-0.10.2.ebuild,
+  +files/libhome-0.10.2-Makefile.patch:
+  Allow libhome to build against berkdb 5.0 as well as any 4.x version, by
+  letting db-use provide the library name instead. Closes bug #340669.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libhome-0.10.1.ebuild,
   libhome-0.10.2.ebuild:
