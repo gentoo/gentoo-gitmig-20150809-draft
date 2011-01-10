@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.32 2011/01/04 08:55:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.33 2011/01/10 21:17:34 jlec Exp $
+
+  10 Jan 2011; Justin Lecher <jlec@gentoo.org> -refmac-5.5.0109.ebuild,
+  -refmac-5.5.0110.ebuild, -refmac-5.5.0110-r1.ebuild,
+  refmac-5.5.0110-r2.ebuild, -refmac-5.6.0093.ebuild, -refmac-5.6.0094.ebuild,
+  -refmac-5.6.0096.ebuild, refmac-5.6.0097.ebuild:
+  Moved the installation of profile files from sci-chemistry/ccp4-apps to
+  sci-libs/ccp4-libs, #349700
 
 *refmac-5.6.0097 (04 Jan 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0097.ebuild,v 1.1 2011/01/04 08:55:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0097.ebuild,v 1.2 2011/01/10 21:17:34 jlec Exp $
 
 EAPI="2"
 
@@ -9,8 +9,9 @@ inherit base toolchain-funcs versionator
 MY_PV="$(get_version_component_range 1-2)_source_v${PV}"
 
 DESCRIPTION="Macromolecular crystallographic refinement program"
-HOMEPAGE="http://www.ysbl.york.ac.uk/~garib/refmac/"
-SRC_URI="${HOMEPAGE}data/refmac_experimental/${PN}${MY_PV}.tar.gz
+HOMEPAGE="http://www.ysbl.york.ac.uk/~garib/refmac"
+SRC_URI="
+	${HOMEPAGE}/data/refmac_experimental/${PN}${MY_PV}.tar.gz
 	test? ( http://dev.gentooexperimental.org/~jlec/distfiles/test-framework.tar.gz )"
 
 SLOT="0"
@@ -19,7 +20,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	sci-libs/ccp4-libs
+	>=sci-libs/ccp4-libs-6.1.3-r7
 	sci-libs/mmdb
 	>sci-libs/monomer-db-1
 	virtual/blas
