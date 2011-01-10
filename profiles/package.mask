@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12343 2011/01/10 15:31:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12344 2011/01/10 16:38:12 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (10 Jan 2011)
+#  on behalf of QA team
+#
+# Fails to build with berkdb 5 (bug #319689) and uses bundled
+# copy on -gdbm if berkdb cannot be used; ignores LDFLAGS
+# (bug #337651), not updated since 2007, requires domain
+# knowledge to maintain.
+#
+# Removal on 2011-03-11
+app-i18n/skktools
 
 # Jeroen Roovers <jer@gentoo.org> (08 Jan 2011)
 # Snapshots of opera are not supported
