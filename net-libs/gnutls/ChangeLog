@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.286 2010/12/28 01:16:59 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.287 2011/01/10 19:32:19 ssuominen Exp $
+
+  10 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> gnutls-2.10.4.ebuild,
+  gnutls-2.11.6.ebuild:
+  Prevent valgrind detection (we definately don't want to run valgrind from
+  Portage because it's too unreliable).
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> gnutls-2.10.2.ebuild:
   stable ppc64, bug 343755

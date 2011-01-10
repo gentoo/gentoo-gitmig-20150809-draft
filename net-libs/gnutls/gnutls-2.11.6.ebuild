@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.11.6.ebuild,v 1.1 2010/12/27 17:51:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.11.6.ebuild,v 1.2 2011/01/10 19:32:19 ssuominen Exp $
 
 EAPI="3"
 
@@ -75,7 +75,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
-	[[ "${VALGRIND_TESTS}" == "0" ]] && myconf+=" --disable-valgrind-tests"
 
 	econf --htmldir=/usr/share/doc/${P}/html \
 		$(use_enable cxx) \
@@ -84,6 +83,7 @@ src_configure() {
 		$(use_with !nettle libgcrypt) \
 		$(use_enable nls) \
 		$(use_with zlib) \
+		--disable-valgrind-tests \
 		${myconf}
 }
 
