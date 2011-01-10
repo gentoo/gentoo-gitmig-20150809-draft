@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r5.ebuild,v 1.4 2010/12/31 17:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r7.ebuild,v 1.1 2011/01/10 21:06:27 jlec Exp $
 
 EAPI="3"
 
@@ -67,10 +67,9 @@ TKDEPS="
 
 SCILIBS="
 	~sci-libs/ccp4-libs-${PV}
-	>=sci-libs/ccp4-libs-${PV}-r2
-	!>=sci-libs/ccp4-libs-${PV}-r5
+	>=sci-libs/ccp4-libs-${PVR}
 	sci-libs/clipper
-	=sci-libs/fftw-2*
+	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	virtual/blas
 	virtual/lapack"
@@ -91,7 +90,7 @@ RDEPEND="
 	dev-libs/libjwc_f
 	dev-libs/boehm-gc
 	!app-office/sc
-	!<sci-chemistry/ccp4-6.1.2
+	!<sci-chemistry/ccp4-6.1.3
 	X? ( ${X11DEPS} )"
 DEPEND="${RDEPEND}
 	X? (
@@ -236,7 +235,6 @@ src_configure() {
 		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
-		-e "s~^\(export CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
 		"${S}"/include/ccp4.setup*
 
 	# Set up variables for build
@@ -257,7 +255,7 @@ src_configure() {
 	./configure \
 		$(use_enable X x) \
 		--with-shared-libs \
-		--with-fftw="${EPREFIX}"/usr \
+		--with-fftw="${EPREFIX}/usr" \
 		--with-warnings \
 		--disable-pdb_extract \
 		--disable-cctbx \
@@ -276,11 +274,10 @@ src_configure() {
 		--prefix="${S}" \
 		--bindir="${ED}"/usr/libexec/ccp4/bin \
 		--with-ccp4="${S}" \
-		--with-clipper="${EPREFIX}"/usr \
-		--with-fftw="${EPREFIX}"/usr \
-		--with-mmdb="${EPREFIX}"/usr \
-		CXX=$(tc-getCXX) \
-		|| die
+		--with-clipper="${EPREFIX}/usr" \
+		--with-fftw="${EPREFIX}/usr" \
+		--with-mmdb="${EPREFIX}/usr" \
+		CXX=$(tc-getCXX)
 	popd 2>/dev/null
 }
 
@@ -303,8 +300,6 @@ src_install() {
 	# Set up variables for build
 	source "${S}"/include/ccp4.setup-sh
 
-#	make install || die "install failed"
-
 	# if we don't make this, a ton of programs fail to install
 	mkdir "${S}"/bin || die
 
@@ -315,40 +310,6 @@ src_install() {
 	popd 2>/dev/null
 
 	einstall || die "install failed"
-
-	# Fix env
-#		-e "s~^\(.*setenv PYTHONPATH .*\)\${CCP4}.*~\1\${CCP4}/share/ccp4/python~g" \
-#		-e "s~^\(.*export PYTHONPATH.*\)\${CCP4}.*~\1\${CCP4}/share/ccp4/python~g" \
-	sed -i \
-		-e "s~^\(setenv CCP4_MASTER.*\)${WORKDIR}~\1${EPREFIX}/usr~g" \
-		-e "s~^\(setenv CCP4.*\$CCP4_MASTER\).*~\1~g" \
-		-e "s~^\(setenv CCP4I_TOP\).*~\1 \$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
-		-e "s~^\(setenv DBCCP4I_TOP\).*~\1 \$CCP4/share/ccp4/dbccp4i~g" \
-		-e "s~^\(.*setenv CINCL.*\$CCP4\).*~\1/share/ccp4/include~g" \
-		-e "s~^\(.*setenv CLIBD .*\$CCP4\).*~\1/share/ccp4/data~g" \
-		-e "s~^\(.*setenv CLIBD_MON .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
-		-e "s~^\(.*setenv MOLREPLIB .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
-		-e "s~^\(.*setenv CLIB .*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
-		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
-		-e "s~^\(export CCP4_MASTER.*\)${WORKDIR}~\1${EPREFIX}/usr~g" \
-		-e "s~^\(export CCP4.*\$CCP4_MASTER\).*~\1~g" \
-		-e "s~^\(export CCP4I_TOP\).*~\1=\$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
-		-e "s~^\(export DBCCP4I_TOP\).*~\1=\$CCP4/share/ccp4/dbccp4i~g" \
-		-e "s~^\(.*export CINCL.*\$CCP4\).*~\1/share/ccp4/include~g" \
-		-e "s~^\(.*export CLIBD.*\$CCP4\).*~\1/share/ccp4/data~g" \
-		-e "s~^\(.*export CLIBD_MON.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
-		-e "s~^\(.*export MOLREPLIB.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
-		-e "s~^\(.*export CLIB=.*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
-		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
-		-e "/IMOSFLM_VERSION/d" \
-		"${S}"/include/ccp4.setup* || die
-
-#		-e "s~\$CCP4/share/XIAROOT/setup.sh~\$CCP4/share/ccp4/XIAROOT/setup.sh~g" \
-
-	# Don't check for updates on every sourcing of /etc/profile
-	sed -i \
-		-e "s:\(eval python.*\):#\1:g"
-		"${S}"/include/ccp4.setup* || die
 
 	# Collision with sci-chemistry/mrbump
 	rm -f "${S}"/bin/{mrbump,pydbviewer} || die
@@ -369,21 +330,7 @@ src_install() {
 		fi
 	done
 
-	sed \
-		-e 's:test "LD_LIBRARY_PATH":test "$LD_LIBRARY_PATH":g' \
-		-i "${S}"/include/ccp4.setup-sh || die
-
-	# Setup scripts
-	insinto /etc/profile.d
-#	newins "${S}"/include/ccp4.setup-bash ccp4.setup.bash || die
-	newins "${S}"/include/ccp4.setup-csh 40ccp4.setup.csh || die
-#	newins "${S}"/include/ccp4.setup-zsh ccp4.setup.zsh || die
-	newins "${S}"/include/ccp4.setup-sh 40ccp4.setup.sh || die
 	rm -f "${S}"/include/ccp4.setup*
-
-	# Environment files, setup scripts, etc.
-	insinto /usr/share/ccp4/include
-	doins "${S}"/include/* || die
 
 	# smartie -- log parsing
 	insinto /usr/share/ccp4
@@ -435,11 +382,6 @@ src_install() {
 
 	exeinto /usr/libexec/ccp4/bin/
 	doexe "${T}"/baubles || die
-}
-
-pkg_postinst() {
-	einfo "The Web browser defaults to firefox. Change CCP4_BROWSER"
-	einfo "in ${EPREFIX}/etc/profile.d/ccp4.setup* to modify this."
 }
 
 # Epatch wrapper for bulk patching
