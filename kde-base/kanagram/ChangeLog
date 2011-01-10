@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kanagram
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.140 2010/12/02 21:14:48 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.141 2011/01/10 11:53:21 tampakrap Exp $
+
+*kanagram-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kanagram-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *kanagram-4.5.4 (02 Dec 2010)
 

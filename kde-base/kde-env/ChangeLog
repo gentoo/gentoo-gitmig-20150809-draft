@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-env
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.93 2010/12/27 21:15:04 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.94 2011/01/10 11:53:24 tampakrap Exp $
+
+*kde-env-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kde-env-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *kde-env-4.5.4-r1 (27 Dec 2010)
 *kde-env-4.5.3-r1 (27 Dec 2010)

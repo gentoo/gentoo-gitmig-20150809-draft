@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kget
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.178 2010/12/02 21:16:42 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.179 2011/01/10 11:53:32 tampakrap Exp $
+
+*kget-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kget-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *kget-4.5.4 (02 Dec 2010)
 

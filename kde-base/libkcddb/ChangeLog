@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkcddb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.164 2010/12/02 21:18:22 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.165 2011/01/10 11:53:44 tampakrap Exp $
+
+*libkcddb-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +libkcddb-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *libkcddb-4.5.4 (02 Dec 2010)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.711 2010/12/30 17:35:23 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.712 2011/01/10 11:53:28 tampakrap Exp $
+
+*kdelibs-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kdelibs-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *kdelibs-4.4.5-r2 (30 Dec 2010)
 

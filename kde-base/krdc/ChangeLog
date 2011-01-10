@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krdc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.177 2010/12/02 21:15:24 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.178 2011/01/10 11:53:38 tampakrap Exp $
+
+*krdc-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +krdc-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *krdc-4.5.4 (02 Dec 2010)
 

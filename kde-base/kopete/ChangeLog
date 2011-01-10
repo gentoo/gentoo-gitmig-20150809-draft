@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.270 2010/12/14 22:32:50 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.271 2011/01/10 11:53:38 tampakrap Exp $
+
+*kopete-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kopete-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *kopete-4.4.5-r2 (14 Dec 2010)
 

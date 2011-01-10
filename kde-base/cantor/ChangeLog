@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/cantor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.22 2010/12/14 17:28:03 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.23 2011/01/10 11:53:19 tampakrap Exp $
+
+*cantor-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +cantor-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
   14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   cantor-4.5.4.ebuild:

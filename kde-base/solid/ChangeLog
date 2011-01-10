@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/solid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.90 2010/12/02 21:14:27 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.91 2011/01/10 11:53:49 tampakrap Exp $
+
+*solid-4.5.5 (10 Jan 2011)
+
+  10 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +solid-4.5.5.ebuild:
+  Version bump KDE SC 4.5.5
 
 *solid-4.5.4 (02 Dec 2010)
 
