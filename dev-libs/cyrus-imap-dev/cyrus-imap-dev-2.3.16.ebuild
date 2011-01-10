@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.16.ebuild,v 1.1 2009/12/31 09:30:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.16.ebuild,v 1.2 2011/01/10 18:25:34 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -24,9 +24,6 @@ RDEPEND=">=sys-libs/db-3.2
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 DEPEND="${RDEPEND}
-	sys-devel/libtool
-	>=sys-devel/autoconf-2.58
-	sys-devel/automake
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/cyrus-imapd-${MY_PV}"
@@ -38,6 +35,8 @@ src_unpack() {
 	if use tcpd ; then
 		epatch "${FILESDIR}/cyrus-imapd-libwrap.patch" || die "patch failed"
 	fi
+
+	epatch "${FILESDIR}"/cyrus-imapd-2.3.16+db-5.0.patch
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
