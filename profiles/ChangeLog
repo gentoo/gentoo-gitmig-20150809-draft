@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4922 2011/01/10 16:38:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4923 2011/01/10 16:47:55 anarchy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jan 2011; Jory A. Pratt <anarchy@gentoo.org> package.mask:
+  Remove wireless-tools mask on 30_pre* releases.
 
   10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking app-i18n/skktools for QA removal.
