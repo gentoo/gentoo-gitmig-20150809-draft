@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.637 2011/01/09 16:44:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.638 2011/01/10 15:41:56 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xine-lib-1.1.19.ebuild:
+  ppc stable wrt #349608
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> xine-lib-1.1.19.ebuild:
   alpha/ia64/sparc stable wrt #349608
