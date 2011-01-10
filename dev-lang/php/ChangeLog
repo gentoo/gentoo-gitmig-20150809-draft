@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.464 2011/01/09 14:12:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.465 2011/01/10 09:42:38 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius.kk@gmail.com> php-5.2.17.ebuild,
+  php-5.3.5.ebuild:
+  ppc64 stable wrt #350908
 
   09 Jan 2011; Brent Baude <ranger@gentoo.org> php-5.3.5.ebuild:
   Marking php-5.3.5 ppc for bug 350908
