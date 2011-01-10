@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/rsyslog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.33 2010/10/29 13:44:46 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.34 2011/01/10 11:16:13 ultrabug Exp $
+
+*rsyslog-5.6.2 (10 Jan 2011)
+
+  10 Jan 2011; Ultrabug <ultrabug@gentoo.org> -rsyslog-5.4.0.ebuild,
+  +rsyslog-5.6.2.ebuild, metadata.xml:
+  Version bump. Fixes bug #343085. Maintainer bump. Thanks to Opportunist and
+  Nebojsa Trpkovic for their help.
 
   29 Oct 2010; Markus Meier <maekke@gentoo.org> rsyslog-5.4.0.ebuild:
   readd ~arm, bug #341965

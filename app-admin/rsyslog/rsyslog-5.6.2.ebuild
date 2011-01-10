@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.4.0.ebuild,v 1.2 2010/10/29 13:44:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.6.2.ebuild,v 1.1 2011/01/10 11:16:13 ultrabug Exp $
 
 EAPI=3
 
@@ -43,13 +43,19 @@ src_configure() {
 		--disable-gui \
 		--disable-rfc3195 \
 		--enable-largefile \
+		--enable-unlimited-select \
 		--enable-imdiag \
 		--enable-imfile \
 		--enable-imtemplate \
+		--enable-imptcp \
 		--enable-mail \
 		--enable-omprog \
 		--enable-omstdout \
 		--enable-omtemplate \
+		--enable-omdbalerting \
+		--enable-omuxsock \
+		--enable-pmlastmsg \
+		--enable-pmrfc3164sd \
 		$(use_enable extras omudpspoof) \
 		$(use_enable zlib) \
 		$(use_enable mysql) \
