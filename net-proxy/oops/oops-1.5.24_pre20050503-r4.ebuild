@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.4 2010/07/11 11:41:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.5 2011/01/10 10:48:34 flameeyes Exp $
 
 EAPI="2"
 
@@ -38,6 +38,7 @@ src_prepare() {
 	epatch "${FILESDIR}/implicit-decl.patch"
 	epatch "${FILESDIR}/libpcreposix.patch"
 	epatch "${FILESDIR}/rotate-logs.patch"
+	epatch "${FILESDIR}/${P}+db-5.0.patch"
 	sed -i -e 's:y\.tab\.h:y.tab.c:' src/Makefile.in
 	eautoreconf
 }
