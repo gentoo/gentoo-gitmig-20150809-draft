@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.258 2011/01/05 07:34:01 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.259 2011/01/10 13:35:14 phajdan.jr Exp $
+
+  10 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  swi-prolog-5.10.2.ebuild:
+  x86 stable wrt bug #350116
 
 *swi-prolog-5.11.11 (05 Jan 2011)
 
