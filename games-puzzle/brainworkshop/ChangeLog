@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/brainworkshop
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainworkshop/ChangeLog,v 1.1 2011/01/10 20:33:00 mr_bones_ Exp $
+
+*brainworkshop-4.8.1 (10 Jan 2011)
+
+  10 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +brainworkshop-4.8.1.ebuild, +files/brainworkshop-4.8.1-fix-paths.patch,
+  +metadata.xml:
+  initial commit - ebuild submissions by Cyp via bug #248393
+
