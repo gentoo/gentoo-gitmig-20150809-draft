@@ -1,6 +1,14 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.13 2011/01/10 09:56:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.14 2011/01/10 10:32:17 flameeyes Exp $
+
+*awstats-7.0_p20101205-r2 (10 Jan 2011)
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -awstats-7.0_p20101205-r1.ebuild, +awstats-7.0_p20101205-r2.ebuild:
+  Polish rough edges left by the transition away from webapp-config, now
+  install all the tools in the path (and all prefixed with awstats_), and make
+  the cgi-bin executable. Also don't install extraneous data in /usr/share.
 
   10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   awstats-7.0_p20101205-r1.ebuild:
