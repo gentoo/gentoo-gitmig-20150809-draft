@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.77 2010/12/19 18:12:39 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.78 2011/01/10 18:46:35 ranger Exp $
+
+  10 Jan 2011; Brent Baude <ranger@gentoo.org> openmpi-1.4.2.ebuild:
+  stable ppc, bug 337129
 
   19 Dec 2010; Justin Lecher <jlec@gentoo.org> openmpi-1.4.1.ebuild,
   openmpi-1.4.2.ebuild, openmpi-1.4.3.ebuild:
