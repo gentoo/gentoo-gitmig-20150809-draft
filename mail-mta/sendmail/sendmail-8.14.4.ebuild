@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.6 2010/02/01 19:54:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.7 2011/01/10 13:47:12 flameeyes Exp $
 
 EAPI="2"
 
@@ -49,6 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/sendmail-build-system.patch
 	epatch "${FILESDIR}"/sendmail-delivered_hdr.patch
 	epatch "${FILESDIR}"/libmilter-sharedlib.patch
+	epatch "${FILESDIR}"/${P}+db-5.0.patch
 
 	local confCC="$(tc-getCC)"
 	local confCCOPTS="${CFLAGS}"
