@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.6-r1.ebuild,v 1.2 2010/10/06 07:40:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.7-r1.ebuild,v 1.1 2011/01/10 09:28:38 ultrabug Exp $
 
 EAPI="2"
 
@@ -14,11 +14,11 @@ SRC_URI="http://hg.linux-ha.org/glue/archive/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="doc static-libs"
+IUSE="doc libnet static-libs"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/glib:2
-	net-libs/libnet:1.1
+	libnet? ( <net-libs/libnet-1.1.5 )
 	net-misc/curl
 	net-misc/iputils
 	|| ( net-misc/netkit-telnetd net-misc/telnet-bsd )
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xsl-stylesheets
 		)"
 
-S="${WORKDIR}/Reusable-Cluster-Components-${MY_P}"
+S="${WORKDIR}/Reusable-Cluster-Components-glue--${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/1.0.5-docs.patch"
@@ -52,11 +52,11 @@ src_configure() {
 
 	use doc && myopts=" --enable-doc"
 	econf \
+		$(use_enable libnet) \
 		$(use_enable static-libs static) \
 		--disable-fatal-warnings \
 		--disable-dependency-tracking \
 		--docdir=/usr/share/doc/${PF} \
-		--enable-libnet \
 		--localstatedir=/var \
 		--with-ocf-root=/usr/$(get_libdir)/ocf \
 		${myopts} \
