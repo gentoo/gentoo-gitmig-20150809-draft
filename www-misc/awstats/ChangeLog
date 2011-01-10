@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.14 2011/01/10 10:32:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.15 2011/01/10 17:58:09 flameeyes Exp $
+
+*awstats-7.0_p20101205-r3 (10 Jan 2011)
+
+  10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -awstats-7.0_p20101205-r2.ebuild, +awstats-7.0_p20101205-r3.ebuild:
+  Yet another last-minute fix (to paths).
 
 *awstats-7.0_p20101205-r2 (10 Jan 2011)
 
