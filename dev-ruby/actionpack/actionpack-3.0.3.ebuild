@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3.ebuild,v 1.2 2010/12/28 13:48:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3.ebuild,v 1.3 2011/01/10 19:10:38 graaff Exp $
 
 EAPI=2
 
@@ -50,4 +50,7 @@ all_ruby_prepare() {
 	# Set test environment to our hand.
 	rm "${S}/../Gemfile" || die "Unable to remove Gemfile"
 	sed -i -e '/\/load_paths/d' test/abstract_unit.rb || die "Unable to remove load paths"
+
+	# Relax builder requirement to also support 3.0.0
+	sed -i -e 's/~> 2.1.2/>= 2.1.2/' actionpack.gemspec || die
 }
