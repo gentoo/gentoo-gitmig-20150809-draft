@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p6.ebuild,v 1.2 2010/12/31 16:39:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p6.ebuild,v 1.3 2011/01/10 15:59:24 jer Exp $
 
 EAPI="2"
 
@@ -28,7 +28,9 @@ src_prepare() {
 }
 
 src_configure() {
-	use usb && sed -i Makefile -e 's|#.*USBOBJ =|USBOBJ =|g' || die "sed usb"
+	if use usb; then
+		sed -i Makefile -e 's|#.*USBOBJ =|USBOBJ =|g' || die "sed usb"
+	fi
 }
 
 src_compile() {

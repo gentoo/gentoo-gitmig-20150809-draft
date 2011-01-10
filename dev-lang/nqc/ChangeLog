@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.17 2010/12/31 16:39:34 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.18 2011/01/10 15:59:24 jer Exp $
+
+  10 Jan 2011; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p6.ebuild:
+  Fix a && b || die error (bug #351028).
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p6.ebuild:
   Replace patches (that should have been applied unconditionally anyway and do
