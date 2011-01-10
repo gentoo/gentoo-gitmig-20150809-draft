@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.10.5.ebuild,v 1.1 2010/12/01 20:26:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.10.5.ebuild,v 1.2 2011/01/10 10:37:33 hwoarang Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -15,7 +15,7 @@ SRC_URI="http://daimonin.svn.sourceforge.net/viewvc/daimonin/main/client/?view=t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="music debug"
 
 RDEPEND="media-libs/libsdl[audio,video]
