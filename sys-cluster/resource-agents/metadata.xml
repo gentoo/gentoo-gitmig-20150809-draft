@@ -9,4 +9,7 @@
 		failure. Previously, they were a part of the then-monolithic Heartbeat 
 		project, and had no collective name.
 	</longdescription>
+	<use>
+		<flag name="libnet">Force use of <pkg>net-libs/libnet</pkg></flag>
+	</use>
 </pkgmetadata>

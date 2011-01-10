@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3.ebuild,v 1.4 2010/08/28 09:16:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3-r1.ebuild,v 1.1 2011/01/10 09:22:14 ultrabug Exp $
 
 EAPI="2"
 
@@ -14,11 +14,12 @@ SRC_URI="http://hg.linux-ha.org/agents/archive/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="doc"
+IUSE="doc libnet"
 
 DEPEND="sys-apps/iproute2
 	sys-cluster/cluster-glue
-	!<sys-cluster/heartbeat-3.0"
+	!<sys-cluster/heartbeat-3.0
+	libnet? ( <net-libs/libnet-1.1.5 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Cluster-Resource-Agents-${MY_P}"
@@ -42,7 +43,7 @@ src_configure() {
 		--libdir=/usr/$(get_libdir) \
 		--with-ocf-root=/usr/$(get_libdir)/ocf \
 		$(use_enable doc) \
-		--enable-libnet
+		$(use_enable libnet)
 }
 
 src_install() {

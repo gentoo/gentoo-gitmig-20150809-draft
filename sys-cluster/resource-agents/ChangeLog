@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/resource-agents
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.4 2010/08/28 09:16:01 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.5 2011/01/10 09:22:14 ultrabug Exp $
+
+*resource-agents-1.0.3-r1 (10 Jan 2011)
+
+  10 Jan 2011; Ultrabug <ultrabug@gentoo.org> -resource-agents-1.0.3.ebuild,
+  +resource-agents-1.0.3-r1.ebuild, metadata.xml:
+  Add libnet USE flag. Fixes bug #348783. Thanks to Denis Kaganovich for
+  reporting.
 
   28 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   resource-agents-1.0.3.ebuild:
