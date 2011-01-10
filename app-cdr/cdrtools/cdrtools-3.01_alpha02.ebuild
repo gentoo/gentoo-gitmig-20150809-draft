@@ -1,25 +1,24 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha75.ebuild,v 1.8 2010/05/18 19:16:13 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha02.ebuild,v 1.1 2011/01/10 20:23:46 billie Exp $
 
 EAPI=2
 
 inherit multilib eutils toolchain-funcs flag-o-matic
 
+MY_P="${P/_alpha/a}"
+
 DESCRIPTION="A set of tools for CD/DVD reading and recording, including cdrecord"
 HOMEPAGE="http://cdrecord.berlios.de/private/cdrecord.html"
-if [[ ${PV%_alpha*} == ${PV} ]] ; then
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2"
-else
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
-fi
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/$([[ -z ${PV/*_alpha*} ]] && echo 'alpha/')/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl unicode"
 
-DEPEND="acl? ( sys-apps/acl )
+DEPEND="acl? ( virtual/acl )
+	>=sys-devel/gettext-0.18.1.1
 	!app-cdr/dvdrtools
 	!app-cdr/cdrkit"
 RDEPEND="${DEPEND}"
@@ -44,6 +43,7 @@ src_prepare() {
 		$(find ./ -type f -exec grep -l '^INSDIR.\+lib\(/siconv\)\?$' '{}' '+') \
 		|| die "sed multilib"
 
+	# Do not install static libraries.
 	sed -i -e 's:include\t\t.*rules.lib::' \
 		$(find ./ -type f -exec grep -l '^include.\+rules\.lib' '{}' '+') \
 		|| die "sed rules"
@@ -60,9 +60,9 @@ src_prepare() {
 	sed -i -e "s|^#CONFFLAGS +=\t-cc=\$(XCC_COM)$|CONFFLAGS +=\t-cc=${tcCC}|g" \
 		rules.cnf || die "sed rules.cnf"
 
-	# Create additional symlinks needed for some archs.
+	# Create additional symlinks needed for some archs (armv4l already created)
 	local t
-	for t in ppc64 s390x ; do
+	for t in armv4tl armv5l armv5tel armv6l armv7l ppc64 s390x; do
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
@@ -74,11 +74,11 @@ src_prepare() {
 	sed -i \
 		-e "s:/opt/schily:/usr:g" \
 		-e "s:/usr/src/linux/include::g" \
-		-e "/RUNPATH/ c\RUNPATH= " \
 		-e "s:bin:root:g" \
 		Defaults.${os} || die "sed Schily make setup"
 }
 
+# skip obsolete configure script
 src_configure() { : ; }
 
 src_compile() {
@@ -92,26 +92,24 @@ src_compile() {
 		fi
 	fi
 
-	local acl="-lacl"
-	if ! use acl
-	then
+	if ! use acl; then
 		CFLAGS="${CFLAGS} -DNO_ACL"
-		acl=""
 	fi
 
-	# If not built with -j1, "sometimes" cdda2wav will not be built. Bug?
+	# LIB_ACL_TEST removed to support x86-fbsd
+	# If not built with -j1, "sometimes" cdda2wav will not be built.
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
-		LDOPTX="${LDFLAGS}" LIB_ACL_TEST="${acl}" \
-		INS_BASE="${D}/usr/" INS_RBASE="${D}" MANDIR="share/man" \
-		LINKMODE="dynamic"  GMAKE_NOWARN="true" || die "emake"
+		LDOPTX="${LDFLAGS}" \
+		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
+		RUNPATH="" GMAKE_NOWARN="true" || die "emake"
 }
 
 src_install() {
-	# If not built with -j1, "sometimes" manpages are not installed. Bug?
+	# If not built with -j1, "sometimes" manpages are not installed.
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
-		LDOPTX="${LDFLAGS}" LIB_ACL_TEST="${acl}" \
-		INS_BASE="${D}/usr/" INS_RBASE="${D}" MANDIR="share/man" \
-		LINKMODE="dynamic" GMAKE_NOWARN="true" install || die "emake install"
+		LDOPTX="${LDFLAGS}" \
+		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
+		RUNPATH="" GMAKE_NOWARN="true" install || die "emake install"
 
 	# These symlinks are for compat with cdrkit.
 	dosym schily /usr/include/scsilib || die "dosym scsilib"
@@ -128,4 +126,7 @@ src_install() {
 	cd "${S}"/mkisofs
 	docinto mkisofs
 	dodoc ChangeLog* TODO || die "dodoc mkisofs"
+
+	# Remove man pages related to the build system
+	rm -rvf "${D}"/usr/share/man/man5
 }
