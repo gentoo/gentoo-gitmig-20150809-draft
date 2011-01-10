@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.111 2010/12/27 12:32:45 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.112 2011/01/10 13:46:18 pacho Exp $
+
+  10 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Mask nls USE flag for wine until gettext is included in emul set (bug
+  #351224).
 
   27 Dec 2010; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   Add gst-plugins-a52dec to the orc package.use.mask unmask set
