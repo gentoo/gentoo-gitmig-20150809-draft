@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.8 2010/01/19 03:28:08 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.9 2011/01/10 11:44:19 zmedico Exp $
+
+  10 Jan 2011; Zac Medico <zmedico@gentoo.org> use.mask:
+  Bug #351274 - Mask prefix USE flag.
 
   19 Jan 2010; <solar@gentoo.org> make.defaults, virtuals:
   -- - quote the variables in the profile cuz PMS and reality differ. pythons
