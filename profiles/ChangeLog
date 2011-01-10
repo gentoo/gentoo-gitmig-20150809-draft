@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4925 2011/01/10 21:01:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4926 2011/01/10 21:29:34 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Masking net-misc/ps3mediaserver for amd64 no-multilib profiles
 
   10 Jan 2011; Fabian Groffen <grobian@gentoo.org> use.desc:
   Update description for aqua USE-flag

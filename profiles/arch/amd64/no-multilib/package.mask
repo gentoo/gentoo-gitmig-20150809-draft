@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.91 2010/12/16 08:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.92 2011/01/10 21:29:34 hwoarang Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -169,6 +169,7 @@ net-dialup/slmodem
 net-im/skype
 net-im/skysentials
 net-misc/icaclient
+net-misc/ps3mediaserver
 net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
