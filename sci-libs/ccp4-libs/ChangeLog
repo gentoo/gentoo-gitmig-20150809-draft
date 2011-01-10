@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.20 2011/01/02 00:01:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.21 2011/01/10 21:16:01 jlec Exp $
+
+*ccp4-libs-6.1.3-r7 (10 Jan 2011)
+
+  10 Jan 2011; Justin Lecher <jlec@gentoo.org> -ccp4-libs-6.1.3-r4.ebuild,
+  +ccp4-libs-6.1.3-r7.ebuild:
+  Moved the installation of profile files from sci-chemistry/ccp4-apps to
+  sci-libs/ccp4-libs, #349700
 
   02 Jan 2011; Thomas Kahle <tomka@gentoo.org> ccp4-libs-6.1.3-r5.ebuild:
   x86 stable per bug 350233

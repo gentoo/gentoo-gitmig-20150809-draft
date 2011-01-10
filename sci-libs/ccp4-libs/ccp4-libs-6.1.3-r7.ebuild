@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r4.ebuild,v 1.6 2010/12/31 17:07:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.1 2011/01/10 21:16:01 jlec Exp $
 
 EAPI="3"
 
@@ -41,15 +41,16 @@ done
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
 	virtual/jpeg
 	app-shells/tcsh
 	!<sci-chemistry/ccp4-6.1.3
+	!<sci-chemistry/ccp4-apps-${PVR}
 	sci-libs/cbflib
-	=sci-libs/fftw-2*
+	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	sci-libs/monomer-db
 	virtual/lapack
@@ -149,12 +150,15 @@ src_configure() {
 
 	# Fix up variables -- need to reset CCP4_MASTER at install-time
 	sed -i \
-		-e "s~^\(setenv CCP4_MASTER.*\)/.*~\1"${WORKDIR}"~g" \
+		-e "s~^\(setenv CCP4_MASTER.*\)/.*~\1${WORKDIR}~g" \
+		-e "s~^\(export CCP4_MASTER.*\)/.*~\1${WORKDIR}~g" \
+		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
+		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
 		"${S}"/include/ccp4.setup*
 
 	# Set up variables for build
-	source "${S}"/include/ccp4.setup
+	source "${S}"/include/ccp4.setup-sh
 
 	export CC=$(tc-getCC)
 	export CXX=$(tc-getCXX)
@@ -163,7 +167,6 @@ src_configure() {
 	# Default to -O2 if FFLAGS is unset
 	export FC=$(tc-getFC)
 	export FOPTIM=${FFLAGS:- -O2}
-#	export CCP4_SCR="${T}"
 
 	# Fix linking
 #	$(tc-getCC) ${userldflags} -shared -Wl,-soname,libmmdb.so -o libmmdb.so \${MMDBOBJS} $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lm -lstdc++ && \
@@ -175,13 +178,13 @@ src_configure() {
 	./configure \
 		--onlylibs \
 		--with-shared-libs \
-		--with-fftw="${EPREFIX}"/usr \
+		--with-fftw="${EPREFIX}/usr" \
 		--with-warnings \
 		--disable-cctbx \
 		--disable-clipper \
 		--tmpdir="${TMPDIR}" \
-		--bindir="${EPREFIX}"/usr/libexec/ccp4/bin/ \
-		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--bindir="${EPREFIX}/usr/libexec/ccp4/bin/" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		${GENTOO_OSNAME} || die "econf failed"
 }
 
@@ -192,13 +195,72 @@ src_compile() {
 
 src_install() {
 	# Set up variables for build
-	source "${S}"/include/ccp4.setup
+	source "${S}"/include/ccp4.setup-sh
 
 	emake -j1 \
 		DESTDIR="${D}" \
-		includedir="${EPREFIX}"/usr/include \
-		library_includedir="${EPREFIX}"/usr/include \
+		includedir="${EPREFIX}/usr/include" \
+		library_includedir="${EPREFIX}/usr/include" \
 		install || die
+
+	sed \
+		-e "330,1000d" \
+		-i "${S}"/include/ccp4.setup-sh || die
+
+	sed \
+		-e "378,1000d" \
+		-i "${S}"/include/ccp4.setup-csh || die
+
+	sed \
+		-e "s:-${PV/-r*/}::g" \
+		-e "s:^\(.*export CCP4_MASTER=\).*:\1${EPREFIX}/usr:g" \
+		-e "s:^\(.*setenv CCP4_MASTER\).*:\1 ${EPREFIX}/usr:g" \
+		-e "s:^\(.*export CCP4_SCR=\).*:\1${EPREFIX}/tmp:g" \
+		-e "s:^\(.*setenv CCP4_SCR \).*:\1${EPREFIX}/tmp:g" \
+		-e "s:^\(.*export BINSORT_SCR=\).*:\1${EPREFIX}/tmp:g" \
+		-e "s:^\(.*setenv BINSORT_SCR \).*:\1${EPREFIX}/tmp:g" \
+		-e "s:^\(.*export CCP4I_TOP=\).*:\1${EPREFIX}/usr/$(get_libdir)/ccp4/ccp4i:g" \
+		-e "s:^\(.*setenv CCP4I_TOP \).*:\1${EPREFIX}/usr/$(get_libdir)/ccp4/ccp4i:g" \
+		-e "s:^\(.*export CCP4I_TCLTK=\).*:\1${EPREFIX}/usr/bin:g" \
+		-e "s:^\(.*setenv CCP4I_TCLTK \).*:\1${EPREFIX}/usr/bin:g" \
+		-e "s:^\(.*export CCP4I_HELP=\).*:\1${EPREFIX}/usr/$(get_libdir)/ccp4/ccp4i/help:g" \
+		-e "s:^\(.*setenv CCP4I_HELP \).*:\1${EPREFIX}/usr/$(get_libdir)/ccp4/ccp4i/help:g" \
+		-e "s:^\(.*export CBIN=\).*:\1${EPREFIX}/usr/libexec/ccp4/bin:g" \
+		-e "s:^\(.*setenv CBIN \).*:\1${EPREFIX}/usr/libexec/ccp4/bin:g" \
+		-e "s:^\(.*export CCP4_BIN=\).*:\1${EPREFIX}/usr/libexec/ccp4/bin:g" \
+		-e "s:^\(.*setenv CCP4_BIN \).*:\1${EPREFIX}/usr/libexec/ccp4/bin:g" \
+		-e "s:^\(.*export CLIBD_MON=\).*:\1${EPREFIX}/usr/share/ccp4/data/monomers/:g" \
+		-e "s:^\(.*setenv CLIBD_MON \).*:\1${EPREFIX}/usr/share/ccp4/data/monomers/:g" \
+		-e "s:^\(.*export CLIBD=\).*:\1${EPREFIX}/usr/share/ccp4/data:g" \
+		-e "s:^\(.*setenv CLIBD \).*:\1${EPREFIX}/usr/share/ccp4/data:g" \
+		-e "s:^\(.*export CLIBS=\).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*setenv CLIBS \).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*export CLIB=\).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*setenv CLIB \).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*export CCP4_LIB=\).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*setenv CCP4_LIB \).*:\1${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:^\(.*export CCP4_BROWSER=\).*:\1firefox:g" \
+		-e "s:^\(.*setenv CCP4_BROWSER \).*:\1firefox:g" \
+		-e "s:^\(.*export MANPATH=\).*:\1\${MANPATH}:g" \
+		-e "s:^\(.*setenv MANPATH \).*:\1\${MANPATH}:g" \
+		-e "s:^\(.*export DBCCP4I_TOP=\).*:\1${EPREFIX}/usr/share/ccp4/dbccp4i:g" \
+		-e "s:^\(.*setenv DBCCP4I_TOP \).*:\1${EPREFIX}/usr/share/ccp4/dbccp4i:g" \
+		-e "s:^\(.*export MOLREPLIB=\).*:\1${EPREFIX}/usr/share/ccp4/data/monomers/:g" \
+		-e "s:^\(.*setenv MOLREPLIB \).*:\1${EPREFIX}/usr/share/ccp4/data/monomers/:g" \
+		-e "s:^\(.*export CDOC=\).*:\1${EPREFIX}/usr/share/doc:g" \
+		-e "s:^\(.*setenv CDOC \).*:\1${EPREFIX}/usr/share/doc:g" \
+		-e "s:^\(.*export CEXAM=\).*:\1${EPREFIX}/usr/share/doc/examples:g" \
+		-e "s:^\(.*setenv CEXAM \).*:\1${EPREFIX}/usr/share/doc/examples:g" \
+		-e "s:^\(.*export CINCL=\).*:\1${EPREFIX}/usr/share/ccp4/include:g" \
+		-e "s:^\(.*setenv CINCL \).*:\1${EPREFIX}/usr/share/ccp4/include:g" \
+		-e "/CCP4_HELPDIR/d" \
+		-i "${S}"/include/ccp4.setup* || die
+
+
+	# Don't check for updates on every sourcing of /etc/profile
+	sed -i \
+		-e "s:\(eval python.*\):#\1:g" \
+		"${S}"/include/ccp4.setup* || die
 
 	# Libs
 	for file in "${S}"/lib/*; do
@@ -212,6 +274,16 @@ src_install() {
 		fi
 	done
 
+	sed \
+		-e 's:test "LD_LIBRARY_PATH":test "$LD_LIBRARY_PATH":g' \
+		-i "${S}"/include/ccp4.setup-sh || die
+
+	# Setup scripts
+	insinto /etc/profile.d
+	newins "${S}"/include/ccp4.setup-csh 40ccp4.setup.csh || die
+	newins "${S}"/include/ccp4.setup-sh 40ccp4.setup.sh || die
+	rm -f "${S}"/include/ccp4.setup*
+
 	# Fix libdir in all *.la files
 	sed -i \
 		-e "s:^\(libdir=\).*:\1\'${EPREFIX}/usr/$(get_libdir)\':g" \
@@ -220,8 +292,19 @@ src_install() {
 	# Data
 	insinto /usr/share/ccp4/data/
 	doins -r "${S}"/lib/data/{*.PARM,*.prt,*.lib,*.dic,*.idl,*.cif,*.resource,*.york,*.hist,fraglib,reference_structures} || die
+
+	# Environment files, setup scripts, etc.
+	rm -rf "${S}"/include/{ccp4.setup*,COPYING,cpp_c_headers} || die
+	insinto /usr/share/ccp4/
+	doins -r "${S}"/include || die
+
 	dodoc "${S}"/lib/data/*.doc || die
 	newdoc "${S}"/lib/data/README DATA-README || die
+}
+
+pkg_postinst() {
+	einfo "The Web browser defaults to firefox. Change CCP4_BROWSER"
+	einfo "in ${EPREFIX}/etc/profile.d/ccp4.setup* to modify this."
 }
 
 # Epatch wrapper for bulk patching
