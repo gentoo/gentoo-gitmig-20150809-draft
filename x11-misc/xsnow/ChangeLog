@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnow
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.24 2010/12/28 23:31:12 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.25 2011/01/10 19:14:31 ranger Exp $
+
+  10 Jan 2011; Brent Baude <ranger@gentoo.org> xsnow-1.42-r1.ebuild:
+  stable ppc, bug 348568
 
   28 Dec 2010; Michael Weber <xmw@gentoo.org> xsnow-1.42-r1.ebuild:
   sparc stable (bug 348568)
