@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.45.0.ebuild,v 1.1 2011/01/06 14:11:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.45.0.ebuild,v 1.2 2011/01/10 13:28:34 hwoarang Exp $
 
 EAPI="2"
 
@@ -59,7 +59,7 @@ pkg_setup() {
 	fi
 
 	if use test ; then
-		CHECKREQS_DISK_BUILD="1024"
+		CHECKREQS_DISK_BUILD="5120"
 		check_reqs
 
 		ewarn "The tests may take several hours on a recent machine"
