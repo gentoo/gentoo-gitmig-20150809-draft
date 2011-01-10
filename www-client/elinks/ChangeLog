@@ -1,6 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.134 2011/01/06 21:41:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.135 2011/01/10 21:14:38 spock Exp $
+
+  10 Jan 2011; Michał Januszewski <spock@gentoo.org>
+  +files/elinks-0.10.1-utf_8_io-default.patch:
+  Restore mistakenly deleted patch (bug #351269).
 
   06 Jan 2011; Michał Januszewski <spock@gentoo.org> elinks-0.11.7.ebuild,
   elinks-0.12_pre5.ebuild, elinks-0.12_pre5-r1.ebuild:
