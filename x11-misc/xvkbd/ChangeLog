@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.23 2011/01/10 19:11:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.24 2011/01/10 19:24:03 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -xvkbd-2.6.ebuild,
+  -xvkbd-2.8.ebuild:
+  Drop old.
 
   10 Jan 2011; Brent Baude <ranger@gentoo.org> xvkbd-3.2.ebuild:
   stable ppc, bug 342831
