@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6273 2011/01/09 17:33:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6274 2011/01/10 09:33:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3725,6 +3725,7 @@ sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
+sys-cluster/cluster-glue:libnet - Force use of net-libs/libnet
 sys-cluster/corosync:infiniband - Enable Infiniband RDMA transport support
 sys-cluster/drbd:heartbeat - Enable Heartbeat integration
 sys-cluster/drbd:pacemaker - Enable Pacemaker integration
@@ -3757,6 +3758,7 @@ sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libsmtp
 sys-cluster/pvfs2:apidocs - Build API documentation directly from the code using doxygen
 sys-cluster/pvfs2:server - Enable compilation of server code
+sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
 sys-cluster/torque:cpusets - Enable pbs_mom to utilize linux cpusets if available.
 sys-cluster/torque:drmaa - Enable the Distributed Resource Management Application API.
 sys-cluster/torque:server - Enable compilation of pbs_server and pbs_sched.
