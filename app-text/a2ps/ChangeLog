@@ -1,6 +1,11 @@
 # ChangeLog for app-text/a2ps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.97 2010/12/02 01:15:47 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.98 2011/01/10 20:39:43 ulm Exp $
+
+*a2ps-4.14-r2 (10 Jan 2011)
+
+  10 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +a2ps-4.14-r2.ebuild:
+  Fix regression wrt Emacs support, bug 350451.
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> a2ps-4.13c-r6.ebuild:
   Drop WANT_AUTOMAKE=latest.

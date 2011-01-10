@@ -1,6 +1,3 @@
-
-;;; a2ps site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'a2ps-mode "a2ps" nil t)
 (autoload 'a2ps-buffer "a2ps-print" nil t)
