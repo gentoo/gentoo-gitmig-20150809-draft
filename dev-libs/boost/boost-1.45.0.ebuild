@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.45.0.ebuild,v 1.2 2011/01/10 13:28:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.45.0.ebuild,v 1.3 2011/01/10 17:40:58 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="debug doc +eselect icu mpi python static-libs test tools"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
-	mpi? ( || ( >=sys-cluster/openmpi-1.2.9[cxx] <sys-cluster/openmpi-1.2.9[-nocxx] sys-cluster/mpich2[cxx,threads] sys-cluster/lam-mpi ) )
+	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
 	sys-libs/zlib
 	python? ( virtual/python )
 	!!<=dev-libs/boost-1.35.0-r2
@@ -86,8 +86,11 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/remove-toolset-${PV}.patch"
 
-	 # bug 291660
-	#epatch "${FILESDIR}/boost-${PV}-parameter-needs-python.patch"
+	# This enables building the boost.random library with /dev/urandom support
+	if [[ -e /dev/urandom ]] ; then
+		mkdir -p libs/random/build
+		cp "${FILESDIR}/random-Jamfile-${PV}" libs/random/build/Jamfile.v2
+	fi
 }
 
 src_configure() {
@@ -259,7 +262,7 @@ src_install () {
 		dohtml \
 			-A pdf,txt,cpp,hpp \
 			*.{htm,html,png,css} \
-			-r doc more people wiki || die
+			-r doc || die
 		dohtml \
 			-A pdf,txt \
 			-r tools || die
