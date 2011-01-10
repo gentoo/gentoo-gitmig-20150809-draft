@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.217 2011/01/04 05:25:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.218 2011/01/10 13:25:53 xarthisius Exp $
+
+  10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> pidgin-2.7.9.ebuild:
+  ppc64 stable wrt #349906
 
   04 Jan 2011; Peter Volkov <pva@gentoo.org> -pidgin-2.7.4.ebuild,
   pidgin-2.7.9.ebuild:
