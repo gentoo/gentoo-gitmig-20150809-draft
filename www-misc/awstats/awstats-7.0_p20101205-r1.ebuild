@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205-r1.ebuild,v 1.1 2011/01/10 01:12:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205-r1.ebuild,v 1.2 2011/01/10 09:56:57 flameeyes Exp $
 
 EAPI=2
 
@@ -57,7 +57,7 @@ src_prepare() {
 	fi
 
 	if use geoip; then
-		sed -e '/LoadPlugin="geoip/aLoadPlugin="geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat"' \
+		sed -e '/LoadPlugin="geoip /aLoadPlugin="geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat"' \
 		-i "${S}"/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
 	fi
 
