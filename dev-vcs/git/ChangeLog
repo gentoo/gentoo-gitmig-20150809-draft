@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.80 2011/01/08 10:53:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.81 2011/01/10 18:44:21 arfrever Exp $
+
+  10 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  git-1.7.3.5-r2.ebuild, git-1.7.4_rc1-r2.ebuild, git-9999.ebuild:
+  Call python_mod_optimize() and python_mod_cleanup() (bug #329479).
 
   08 Jan 2011; Fabian Groffen <grobian@gentoo.org> git-1.7.3.5-r2.ebuild,
   git-1.7.4_rc1-r2.ebuild, git-9999.ebuild:

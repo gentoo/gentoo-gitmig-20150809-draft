@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r2.ebuild,v 1.4 2011/01/08 14:11:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r2.ebuild,v 1.5 2011/01/10 18:44:21 arfrever Exp $
 
 EAPI=3
 
@@ -493,6 +493,7 @@ showpkgdeps() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	use python && python_mod_optimize git_remote_helpers
 	if use subversion && has_version dev-vcs/subversion && ! built_with_use --missing false dev-vcs/subversion perl ; then
 		ewarn "You must build dev-vcs/subversion with USE=perl"
 		ewarn "to get the full functionality of git-svn!"
@@ -507,4 +508,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	use python && python_mod_cleanup git_remote_helpers
 }
