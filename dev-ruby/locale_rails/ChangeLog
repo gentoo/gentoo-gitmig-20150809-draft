@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/locale_rails
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.18 2010/08/18 11:36:31 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.19 2011/01/10 18:12:34 graaff Exp $
+
+  10 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  locale_rails-2.0.5_p20100710.ebuild:
+  Keyword ~x86-macos.
 
 *locale_rails-2.0.5_p20100710 (18 Aug 2010)
 

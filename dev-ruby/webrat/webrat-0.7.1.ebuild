@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.1.ebuild,v 1.2 2010/10/09 07:40:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.7.1.ebuild,v 1.3 2011/01/10 18:31:05 graaff Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DESCRIPTION="Ruby acceptance testing for web applications"
 HOMEPAGE="http://github.com/brynary/webrat/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 

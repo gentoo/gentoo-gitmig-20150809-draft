@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gettext_rails
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_rails/ChangeLog,v 1.10 2010/08/31 05:57:01 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_rails/ChangeLog,v 1.11 2011/01/10 18:20:10 graaff Exp $
+
+  10 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  gettext_rails-2.1.0-r1.ebuild:
+  Keyword ~x86-macos.
 
 *gettext_rails-2.1.0-r1 (31 Aug 2010)
 

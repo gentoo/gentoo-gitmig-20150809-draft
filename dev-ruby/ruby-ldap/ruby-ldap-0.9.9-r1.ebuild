@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.9-r1.ebuild,v 1.3 2010/09/20 19:57:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.9-r1.ebuild,v 1.4 2011/01/10 18:26:48 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://code.google.com/p/ruby-activeldap/"
 SRC_URI="http://ruby-activeldap.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
 IUSE="ssl"
 DEPEND=">=net-nds/openldap-2
 	ssl? ( dev-libs/openssl )"

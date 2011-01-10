@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.4.ebuild,v 1.1 2010/12/28 08:20:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.4.ebuild,v 1.2 2011/01/10 18:25:40 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://oauth.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-macos"
 IUSE=""
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit

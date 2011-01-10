@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-activeldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.26 2011/01/09 08:22:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.27 2011/01/10 17:55:12 graaff Exp $
+
+  10 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  ruby-activeldap-1.2.2.ebuild:
+  Keyword ~x86-macos.
 
   09 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   ruby-activeldap-1.2.2.ebuild:

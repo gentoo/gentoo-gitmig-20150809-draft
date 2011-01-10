@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.38 2011/01/09 16:43:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.39 2011/01/10 18:18:12 graaff Exp $
+
+  10 Jan 2011; Hans de Graaff <graaff@gentoo.org> rack-1.1.0-r1.ebuild,
+  rack-1.2.1.ebuild:
+  Keyword ~x86-macos.
 
   09 Jan 2011; Hans de Graaff <graaff@gentoo.org> rack-1.2.1.ebuild:
   Put the blocker directly in RDEPEND instead of having to deal with the

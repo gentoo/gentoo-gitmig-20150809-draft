@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/shorturl-0.8.8.ebuild,v 1.1 2010/03/14 15:05:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/shorturl-0.8.8.ebuild,v 1.2 2011/01/10 18:13:50 graaff Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://shorturl.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-macos"
 IUSE=""
 
 all_ruby_prepare() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/locale_rails-2.0.5_p20100710.ebuild,v 1.1 2010/08/18 11:36:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/locale_rails-2.0.5_p20100710.ebuild,v 1.2 2011/01/10 18:12:34 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.yotabanana.com/hiki/ruby-gettext-rails.html"
 LICENSE="Ruby"
 SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${TREE_HASH} -> ${PN}-git-${PV}.tgz"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
