@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/fish-fillets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.47 2010/05/25 18:44:27 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.48 2011/01/10 22:02:54 mr_bones_ Exp $
+
+*fish-fillets-1.0.0 (10 Jan 2011)
+
+  10 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +fish-fillets-1.0.0.ebuild:
+  version bump
 
   25 May 2010; Joseph Jezak <josejx@gentoo.org> fish-fillets-0.9.3.ebuild:
   Marked ppc stable for bug #315481.
