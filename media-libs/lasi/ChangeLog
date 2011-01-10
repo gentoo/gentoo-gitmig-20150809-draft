@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.20 2010/12/05 18:47:30 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.21 2011/01/10 20:56:28 ranger Exp $
+
+  10 Jan 2011; Brent Baude <ranger@gentoo.org> lasi-1.1.0-r2.ebuild:
+  stable ppc, bug 343521
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> lasi-1.1.0-r2.ebuild:
   alpha/sparc stable wrt #343521
