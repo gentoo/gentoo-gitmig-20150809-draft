@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.7 2011/01/11 22:11:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.8 2011/01/11 22:13:36 scarabeus Exp $
 
 EAPI=3
 
@@ -16,7 +16,6 @@ else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 fi
-
 
 DESCRIPTION="A Qt IMAP e-mail client"
 HOMEPAGE="http://trojita.flaska.net/"
