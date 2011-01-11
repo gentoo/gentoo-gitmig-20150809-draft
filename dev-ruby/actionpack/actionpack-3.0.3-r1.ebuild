@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3-r1.ebuild,v 1.1 2011/01/10 19:11:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.3-r1.ebuild,v 1.2 2011/01/11 07:14:05 graaff Exp $
 
 EAPI=2
 
@@ -43,7 +43,6 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/activerecord:${SLOT}
 		dev-ruby/actionmailer:${SLOT}
-		!dev-ruby/test-unit:2
 	)"
 
 all_ruby_prepare() {
