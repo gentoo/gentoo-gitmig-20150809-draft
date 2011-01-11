@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp-vala
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.4 2010/12/10 07:40:40 ford_prefect Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.5 2011/01/11 05:50:06 ford_prefect Exp $
+
+  11 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  gupnp-vala-0.6.12.ebuild:
+  Restrict gupnp-dlna dependency to <0.5 (since it breaks API).
 
   10 Dec 2010; Arun Raghavan <ford_prefect@gentoo.org>
   gupnp-vala-0.6.12.ebuild:
