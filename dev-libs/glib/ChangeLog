@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.433 2010/12/16 18:09:21 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.434 2011/01/11 16:23:49 pacho Exp $
+
+  11 Jan 2011; Pacho Ramos <pacho@gentoo.org> glib-2.26.1.ebuild:
+  Inform users about possible breakage when updating glib and not dbus-glib,
+  bug #297483.
 
   16 Dec 2010; Fabian Groffen <grobian@gentoo.org> glib-2.26.1.ebuild:
   Do not use ED with DESTDIR
