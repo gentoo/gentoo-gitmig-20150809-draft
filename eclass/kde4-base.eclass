@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.82 2011/01/03 20:36:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.83 2011/01/11 13:15:46 xarthisius Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -373,7 +373,7 @@ kdedepend="
 	dev-util/automoc
 	dev-util/pkgconfig
 	!aqua? (
-		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1.0 )
+		>=x11-libs/libXtst-1.1.0
 		x11-proto/xf86vidmodeproto
 	)
 "
