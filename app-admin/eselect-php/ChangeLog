@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.25 2011/01/10 09:41:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.26 2011/01/11 19:19:01 jer Exp $
+
+  11 Jan 2011; Jeroen Roovers <jer@gentoo.org> eselect-php-0.6.2.ebuild:
+  Stable for HPPA (bug #350908).
 
   10 Jan 2011; Kacper Kowalik <xarthisius.kk@gmail.com>
   eselect-php-0.6.2.ebuild:
