@@ -1,0 +1,11 @@
+# ChangeLog for app-text/paps
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/paps/ChangeLog,v 1.1 2011/01/11 18:31:13 xmw Exp $
+
+*paps-0.6.8 (11 Jan 2011)
+
+  11 Jan 2011; Michael Weber <xmw@gentoo.org> +paps-0.6.8.ebuild,
+  +metadata.xml:
+  Initial import, fixed bug 134367. Thanks to Ed Catmur <ed@catmur.co.uk> and
+  Petr Pisar <petr.pisar@atlas.cz> for their ebuild.
+
