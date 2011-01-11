@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.8 2010/11/06 15:34:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.9 2011/01/11 18:58:37 scarabeus Exp $
 
 EAPI=3
 
@@ -87,6 +87,7 @@ src_configure() {
 
 	if use X; then
 		myopts+="
+			--enable-tee=yes
 			$(use_enable drm)
 		"
 

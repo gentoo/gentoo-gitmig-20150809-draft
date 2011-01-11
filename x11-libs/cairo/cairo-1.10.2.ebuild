@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.0-r3.ebuild,v 1.3 2010/11/06 15:34:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2.ebuild,v 1.1 2011/01/11 18:58:37 scarabeus Exp $
 
 EAPI=3
 
@@ -62,8 +62,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	epatch "${FILESDIR}"/${P}-buggy_gradients.patch #336696
-	epatch "${FILESDIR}"/${P}-install-sh.patch #336329
 
 	# Slightly messed build system YAY
 	if [[ ${PV} == *9999* ]]; then
@@ -87,11 +85,9 @@ src_configure() {
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
-	# bug #342319
-	[[ ${CHOST} == powerpc*-*-darwin* ]] && filter-flags -mcpu=*
-
 	if use X; then
 		myopts+="
+			--enable-tee=yes
 			$(use_enable drm)
 		"
 
