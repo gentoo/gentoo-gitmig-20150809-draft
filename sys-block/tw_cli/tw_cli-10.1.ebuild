@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.1.ebuild,v 1.1 2010/06/18 06:47:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.1.ebuild,v 1.2 2011/01/11 12:31:12 jlec Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
@@ -12,7 +12,7 @@ IUSE=""
 # stripping seems to break this sometimes
 RESTRICT="strip fetch"
 # binary packages
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=""
 
 # Upstream has _FUN_ naming these
