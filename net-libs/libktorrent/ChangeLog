@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.10 2011/01/07 23:43:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.11 2011/01/11 08:41:57 phajdan.jr Exp $
+
+  11 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libktorrent-1.0.5.3.ebuild:
+  x86 stable wrt bug #350970
 
   07 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   libktorrent-1.0.5.3.ebuild:
