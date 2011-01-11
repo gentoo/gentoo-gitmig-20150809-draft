@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12346 2011/01/10 17:52:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12347 2011/01/11 10:15:08 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -121,27 +121,6 @@ gnome-base/gnome-mount
 # Alexis Ballier <aballier@gentoo.org> (25 Dec 2010)
 # Breaks www-servers/ocsigen, unmask when fixed
 >=dev-ml/lwt-2.2.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2010)
-#
-# xfce4-weather-plugin, runtime crash, should be ported to libxfce4ui etc.
-# http://bugs.gentoo.org/show_bug.cgi?id=344985
-# http://git.xfce.org/panel-plugins/xfce4-weather-plugin/
-#
-# xfce4-stopwatch-plugin, doesn't compile and should be upgraded to git version of xfce4-vala etc.
-# http://bugs.gentoo.org/show_bug.cgi?id=339302
-# http://bugs.gentoo.org/show_bug.cgi?id=344653
-# http://git.xfce.org/panel-plugins/xfce4-stopwatch-plugin/
-# http://git.xfce.org/bindings/xfce4-vala/
-#
-# thunar-media-tags-plugin port to new thunar doesn't work yet, bad patch, bug 350032
-# thunar-vcs-plugin, same as thunar-media-tags-plugin, doesn't work with new thunar, bug 350358
-#
-# These need to be fixed by end of January, otherwise they'll get removed from tree when 4.8.0 goes stable.
-xfce-extra/xfce4-weather-plugin
-xfce-extra/xfce4-stopwatch-plugin
-xfce-extra/thunar-media-tags-plugin
-xfce-extra/thunar-vcs-plugin
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Dec 2010)
 # Also mask clutter-gtk-0.90
