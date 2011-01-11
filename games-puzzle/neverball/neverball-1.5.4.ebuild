@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.3 2009/11/08 07:48:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.4 2011/01/11 07:31:15 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,10 +15,10 @@ KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 RESTRICT="test"
 
-RDEPEND="media-libs/libsdl[joystick]
+RDEPEND="media-libs/libsdl[audio,joystick,opengl,video]
 	media-libs/sdl-ttf
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libvorbis
 	virtual/opengl
 	dev-games/physfs
@@ -56,23 +56,23 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ${PN}-mapc neverball neverputt || die "dogamesbin failed"
+	dogamesbin ${PN}-mapc neverball neverputt || die
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data/* || die "doins failed"
+	doins -r data/* || die
 	rm -f "${D}${GAMES_DATADIR}/${PN}"/ttf/DejaVuSans-Bold.ttf
-	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf "${GAMES_DATADIR}/${PN}"/ttf/
+	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf "${GAMES_DATADIR}/${PN}"/ttf/ || die
 	if use nls ; then
 		insinto /usr/share
-		doins -r locale || die "doins failed"
+		doins -r locale || die
 	fi
-	dodoc CHANGES README
+	dodoc CHANGES README || die
 
-	newicon dist/neverball_512.png neverball.png
-	newicon dist/neverputt_512.png neverputt.png
-	doman dist/*.6
-	newman dist/mapc.1 neverball-mapc.6
-	make_desktop_entry neverball Neverball
-	make_desktop_entry neverputt Neverputt neverputt
+	newicon dist/neverball_512.png neverball.png || die
+	newicon dist/neverputt_512.png neverputt.png || die
+	doman dist/*.6 || die
+	newman dist/mapc.1 neverball-mapc.6 || die
+	make_desktop_entry neverball Neverball || die
+	make_desktop_entry neverputt Neverputt neverputt || die
 
 	prepgamesdirs
 }

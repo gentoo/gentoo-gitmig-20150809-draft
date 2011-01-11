@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/neverball
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.40 2009/11/08 07:48:29 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.41 2011/01/11 07:31:15 mr_bones_ Exp $
+
+  11 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  neverball-1.5.4.ebuild:
+  Add more use deps (bug #351347)
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> neverball-1.5.4.ebuild:
   Marked ppc stable for bug #290054.
