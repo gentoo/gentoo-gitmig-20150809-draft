@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.132 2011/01/08 00:11:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.133 2011/01/11 22:00:30 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> swt-3.6.1.ebuild:
+  x86 stable, bug #349740
 
   08 Jan 2011; Markos Chandras <hwoarang@gentoo.org> swt-3.6.1.ebuild:
   Stable on amd64 wrt bug #349740
