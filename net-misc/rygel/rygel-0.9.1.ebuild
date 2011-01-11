@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.9.1.ebuild,v 1.2 2010/10/26 16:50:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.9.1.ebuild,v 1.3 2011/01/11 05:47:10 ford_prefect Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,6 +21,7 @@ RDEPEND="
 	>=dev-libs/glib-2.26
 	>=dev-libs/libgee-0.5.2
 	>=media-libs/gupnp-dlna-0.3
+	<media-libs/gupnp-dlna-0.5
 	>=media-libs/gstreamer-0.10.23
 	>=media-libs/gst-plugins-base-0.10.28
 	>=net-libs/gupnp-0.13.4
