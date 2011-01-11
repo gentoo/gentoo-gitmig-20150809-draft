@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-doc-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.176 2010/12/31 23:50:12 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.177 2011/01/11 20:31:12 pacho Exp $
+
+*gnome-doc-utils-0.20.4 (11 Jan 2011)
+
+  11 Jan 2011; Pacho Ramos <pacho@gentoo.org> +gnome-doc-utils-0.20.4.ebuild:
+  Version bump: Use /bin/bash in gnome-doc-tool, add xml:lang attribute to
+  translated Mallard pages, handle title and desc elements in Mallard tables,
+  updated translations.
 
   31 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gnome-doc-utils-0.20.2.ebuild, gnome-doc-utils-0.20.3.ebuild:
