@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ZendFramework
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.70 2010/12/28 21:59:43 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.71 2011/01/11 21:58:27 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> ZendFramework-1.10.7.ebuild:
+  x86 stable, bug #346447
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> ZendFramework-1.10.7.ebuild:
   stable ppc64, bug 346447
