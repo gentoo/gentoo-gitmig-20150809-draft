@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20100510.ebuild,v 1.1 2010/05/21 13:53:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20110111.ebuild,v 1.1 2011/01/11 10:45:03 jlec Exp $
 
 EAPI="2"
 
@@ -24,14 +24,9 @@ DEPEND=""
 
 QA_EXECSTACK="*"
 
-pkg_setup() {
-	if use x86; then
-		MY_P="XDS-IA32_Linux_x86"
-	elif use amd64; then
-		MY_P="XDS-INTEL64_Linux_x86_64"
-	fi
-
-	S="${WORKDIR}"/${MY_P}
+src_unpack() {
+	unpack ${A}
+	mv XDS* "${S}"
 }
 
 src_install() {
@@ -58,5 +53,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "This package will expire on December 31, 2010"
+	elog "This package will expire on December 31, 2011"
 }
