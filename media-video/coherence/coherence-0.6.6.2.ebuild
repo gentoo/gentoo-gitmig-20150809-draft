@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.1.ebuild,v 1.6 2011/01/11 20:25:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.2.ebuild,v 1.1 2011/01/11 20:25:04 xmw Exp $
 
 EAPI=2
 PYTHON_DEPEND="*"
@@ -18,7 +18,7 @@ SRC_URI="http://coherence.beebits.net/download/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # deps are not exact and need some work
