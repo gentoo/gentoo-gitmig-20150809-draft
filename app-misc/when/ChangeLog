@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.42 2011/01/07 23:29:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.43 2011/01/11 22:16:33 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> when-1.1.22.ebuild:
+  x86 stable, bug #350709
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> when-1.1.22.ebuild:
   Marking when-1.1.22 ppc for bug 350709
