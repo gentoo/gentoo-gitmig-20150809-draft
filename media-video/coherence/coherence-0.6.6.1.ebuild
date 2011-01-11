@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.1.ebuild,v 1.6 2011/01/11 20:25:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.1.ebuild,v 1.7 2011/01/11 21:42:23 arfrever Exp $
 
 EAPI=2
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"

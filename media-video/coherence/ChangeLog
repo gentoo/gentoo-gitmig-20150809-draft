@@ -1,6 +1,10 @@
 # ChangeLog for media-video/coherence
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.6 2011/01/11 20:25:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.7 2011/01/11 21:42:23 arfrever Exp $
+
+  11 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  coherence-0.6.6.1.ebuild, coherence-0.6.6.2.ebuild:
+  Fix dependencies.
 
 *coherence-0.6.6.2 (11 Jan 2011)
 
