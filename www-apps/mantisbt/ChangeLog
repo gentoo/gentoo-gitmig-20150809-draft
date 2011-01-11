@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.100 2010/12/20 07:16:14 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.101 2011/01/11 17:35:04 xarthisius Exp $
+
+  11 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> mantisbt-1.2.4.ebuild:
+  ppc stable wrt #348761
 
   20 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mantisbt-1.2.4.ebuild:
