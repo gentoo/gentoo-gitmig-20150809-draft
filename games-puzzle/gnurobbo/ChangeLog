@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.21 2011/01/04 15:27:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.22 2011/01/11 22:10:05 ranger Exp $
+
+  11 Jan 2011; Brent Baude <ranger@gentoo.org> gnurobbo-0.66.ebuild:
+  Marking gnurobbo-0.66 ppc for bug 350416
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gnurobbo-0.66.ebuild:
   Stable on amd64 wrt bug #350416
