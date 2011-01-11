@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnstop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.30 2010/09/25 12:18:52 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.31 2011/01/11 22:44:53 rajiv Exp $
+
+*dnstop-20101227 (11 Jan 2011)
+
+  11 Jan 2011; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  +dnstop-20101227.ebuild:
+  version bump, bug #351301.
 
   25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   dnstop-20090128.ebuild, +files/dnstop-20090128-make-382.patch:
