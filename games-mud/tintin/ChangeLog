@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.105 2010/12/31 07:17:24 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.106 2011/01/11 22:08:53 ranger Exp $
+
+  11 Jan 2011; Brent Baude <ranger@gentoo.org> tintin-2.00.4.ebuild:
+  Marking tintin-2.00.4 ppc for bug 347067
 
 *tintin-2.00.5 (31 Dec 2010)
 
