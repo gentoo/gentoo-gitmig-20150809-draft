@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.7-r1.ebuild,v 1.1 2011/01/10 09:28:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.7-r2.ebuild,v 1.1 2011/01/11 12:36:01 ultrabug Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ S="${WORKDIR}/Reusable-Cluster-Components-glue--${MY_P}"
 PATCHES=(
 	"${FILESDIR}/1.0.5-docs.patch"
 	"${FILESDIR}/1.0.5-respect_cflags.patch"
+	"${FILESDIR}/1.0.7-fix_configure.patch"
 )
 
 pkg_setup() {
