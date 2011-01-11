@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.25 2011/01/07 20:10:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.26 2011/01/11 15:30:54 phajdan.jr Exp $
+
+  11 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmpy-1.14.ebuild:
+  x86 stable wrt bug #350862
 
   07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gmpy-1.14.ebuild:
   Stable on amd64 wrt bug #350862
