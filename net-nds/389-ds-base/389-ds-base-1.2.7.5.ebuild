@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.7.5.ebuild,v 1.1 2011/01/11 22:07:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.7.5.ebuild,v 1.2 2011/01/11 22:10:11 lxnay Exp $
 
 EAPI=2
 
@@ -115,6 +115,7 @@ src_install () {
 
 	# for build free-ipa require winsync-plugin
 	doins ldap/servers/plugins/replication/winsync-plugin.h
+	doins ldap/servers/plugins/replication/repl-session-plugin.h
 
 	# make sure perl scripts have a proper shebang
 	cd "${D}"/usr/share/dirsrv/script-templates/
