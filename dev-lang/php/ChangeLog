@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.465 2011/01/10 09:42:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.466 2011/01/11 19:20:11 jer Exp $
+
+  11 Jan 2011; Jeroen Roovers <jer@gentoo.org> php-5.2.17.ebuild,
+  php-5.3.5.ebuild:
+  Stable for HPPA (bug #350908).
 
   10 Jan 2011; Kacper Kowalik <xarthisius.kk@gmail.com> php-5.2.17.ebuild,
   php-5.3.5.ebuild:
