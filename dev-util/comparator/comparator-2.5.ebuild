@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.6 2009/09/29 20:35:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.7 2011/01/11 21:38:50 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils toolchain-funcs
 
@@ -14,26 +19,34 @@ KEYWORDS="~amd64 ~mips ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="app-text/xmlto
-	=app-text/docbook-xml-dtd-4.1.2*
-	sys-apps/sed"
+DEPEND="=app-text/docbook-xml-dtd-4.1.2*
+	app-text/xmlto"
 
-src_unpack() {
-	unpack ${A}
-	# we will do this ourselves
-	sed -e '/python setup.py install/d' \
-		-i "${S}"/Makefile || die "sed failed"
+PYTHON_MODNAME="comparator.py"
+
+src_prepare() {
+	sed \
+		-e '/install -m 755 -o 0 -g 0 filterator/d' \
+		-e '/python setup.py install/d' \
+		-i Makefile || die "sed failed"
 }
 
 src_compile() {
 	distutils_src_compile
-	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
-		CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 	emake comparator.html scf-standard.html || die "emake html failed"
 }
 
 src_install() {
 	distutils_src_install
 	emake ROOT="${D}" install || die "emake install failed"
-	dohtml *.html
+
+	install_filterator() {
+		newbin filterator filterator-${PYTHON_ABI} || return 1
+		python_convert_shebangs ${PYTHON_ABI} "${ED}usr/bin/filterator-${PYTHON_ABI}"
+	}
+	python_execute_function -q install_filterator
+	python_generate_wrapper_scripts "${ED}usr/bin/filterator"
+
+	dohtml *.html || die "dohtml failed"
 }
