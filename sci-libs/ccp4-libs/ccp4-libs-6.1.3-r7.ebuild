@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.1 2011/01/10 21:16:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.2 2011/01/11 09:06:08 jlec Exp $
 
 EAPI="3"
 
@@ -99,6 +99,9 @@ src_prepare() {
 	sed \
 		-e '/SHARE_INST/s:$(libdir):$(DESTDIR)/$(libdir):g' \
 		-i configure || die
+
+	# Fix upstreams code
+	ccp_patch "${FILESDIR}"/${PV}-impl-dec.patch
 
 	einfo "Done." # done applying Gentoo patches
 	echo
