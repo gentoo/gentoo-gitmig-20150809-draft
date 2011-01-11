@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.3 2011/01/11 09:06:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.4 2011/01/11 13:44:50 jlec Exp $
 
 EAPI="3"
 
@@ -111,6 +111,7 @@ src_prepare() {
 		-e 's:-Wl,-rpath,$CLIB::g' \
 		-e 's: -rpath $CLIB::g' \
 		-e 's: -I${srcdir}/include/cpp_c_headers::g' \
+		-e 's:sleep 1:sleep .2:g' \
 		-i configure || die
 
 	gnuconfig_update
