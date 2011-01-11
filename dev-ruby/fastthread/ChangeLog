@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastthread
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.42 2010/05/22 15:14:41 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.43 2011/01/11 22:03:26 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> fastthread-1.0.7-r1.ebuild:
+  x86 stable, bug #349877
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   fastthread-1.0.7-r1.ebuild:
