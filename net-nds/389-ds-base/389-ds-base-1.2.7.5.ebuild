@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.5-r1.ebuild,v 1.3 2010/10/15 17:08:26 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.7.5.ebuild,v 1.1 2011/01/11 22:07:53 lxnay Exp $
 
 EAPI=2
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="autobind auto-dn-suffix debug doc +pam-passthru +dna +ldapi +bitwise +presence kerberos selinux"
 
-ALL_DEPEND="dev-libs/nss[utils]
+ALL_DEPEND="!>=sys-libs/db-5.0
+	dev-libs/nss[utils]
 	dev-libs/nspr
 	dev-libs/svrcore
 	dev-libs/mozldap
@@ -66,9 +67,6 @@ src_prepare() {
 	# enable nsslapd-allow-unauthenticated-binds by default
 	sed -i '/^nsslapd-allow-unauthenticated-binds/ s/off/on/' "${S}"/ldap/ldif/template-dse.ldif.in || \
 		die "cannot tweak default setting: nsslapd-allow-unauthenticated-binds"
-
-	# Fix buggy .ldiff, see RedHat #617629
-	epatch "${FILESDIR}/0001-Bug-617629-Missing-aliases-in-new-schema-files.patch"
 
 }
 
@@ -143,10 +141,11 @@ src_install () {
 	echo "LDPATH=/usr/$(get_libdir)/dirsrv" > "${D}"/etc/env.d/08dirsrv
 
 	# create the directory where our log file and database
-	diropts -m 0750 -o dirsrv -g dirsrv
+	diropts -m 0755
+	dodir /var/lib/dirsrv
 	keepdir /var/lib/dirsrv
 	dodir /var/lock/dirsrv
-
+	keepdir /var/lock/dirsrv
 	# snmp agent, required directory
 	keepdir /var/agentx
 	dodir /var/agentx
@@ -190,4 +189,10 @@ pkg_postinst() {
 	elog
 	elog "    rc-update add 389-ds default"
 	elog
+
+	elog "If you are upgrading from previous 1.2.6 release candidates"
+	elog "please see:"
+	elog "http://directory.fedoraproject.org/wiki/Subtree_Rename#warning:_upgrade_from_389_v1.2.6_.28a.3F.2C_rc1_.7E_rc6.29_to_v1.2.6_rc6_or_newer"
+	elog
+
 }
