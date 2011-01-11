@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnee
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.12 2010/10/18 23:06:48 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.13 2011/01/11 20:23:17 pacho Exp $
+
+  11 Jan 2011; Pacho Ramos <pacho@gentoo.org> xnee-3.06.ebuild,
+  xnee-3.07.ebuild:
+  Needs gnome-panel with bonobo support (bug #348185).
 
 *xnee-3.07 (18 Oct 2010)
 

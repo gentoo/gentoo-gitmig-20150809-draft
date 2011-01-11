@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.06.ebuild,v 1.3 2010/09/25 13:31:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.06.ebuild,v 1.4 2011/01/11 20:23:17 pacho Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	gnome? ( x11-libs/gtk+:2
 		>=gnome-base/libgnomeui-2
 		>=gnome-base/gconf-2
-		>=gnome-base/gnome-panel-2 )"
+		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 ) )"
 DEPEND="${RDEPEND}
 	x11-proto/inputproto
 	dev-util/pkgconfig
