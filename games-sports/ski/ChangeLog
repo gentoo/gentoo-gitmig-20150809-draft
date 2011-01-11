@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/ski
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.13 2011/01/04 15:28:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.14 2011/01/11 22:11:09 ranger Exp $
+
+  11 Jan 2011; Brent Baude <ranger@gentoo.org> ski-6.7.ebuild:
+  Marking ski-6.7 ppc for bug 350433
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ski-6.7.ebuild:
   Stable on amd64 wrt bug #350433
