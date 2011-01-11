@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.446 2011/01/08 07:44:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.447 2011/01/11 18:53:32 grobian Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1413,8 +1413,6 @@ gcc_do_configure() {
 		case ${CHOST} in
 			mingw*|*-mingw*|*-cygwin)
 				confgcc="${confgcc} --enable-threads=win32" ;;
-			*-mint*)
-				confgcc="${confgcc} --disable-threads" ;;
 			*)
 				confgcc="${confgcc} --enable-threads=posix" ;;
 		esac
