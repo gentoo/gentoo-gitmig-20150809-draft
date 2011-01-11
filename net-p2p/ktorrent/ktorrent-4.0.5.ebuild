@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.5.ebuild,v 1.4 2011/01/07 23:44:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.5.ebuild,v 1.5 2011/01/11 08:43:24 phajdan.jr Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ DESCRIPTION="A BitTorrent program for KDE."
 HOMEPAGE="http://ktorrent.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="4"
 IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer
 +magnetgenerator +mediaplayer plasma rss +scanfolder +search +shutdown +stats
