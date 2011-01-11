@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107.ebuild,v 1.1 2011/01/07 14:44:44 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.1 2011/01/11 07:17:51 lxnay Exp $
 
 EAPI="3"
 
@@ -23,16 +23,16 @@ HOMEPAGE="http://abstrakraft.org/cwiid"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="python bluetooth"
+IUSE="python"
 
 DEPEND="sys-apps/gawk
 	sys-apps/sed
 	sys-devel/bison
 	>=sys-devel/flex-2.5.35"
 
-RDEPEND="bluetooth? ( net-wireless/bluez )
-	python? ( >=dev-lang/python-2.4 )
-	x11-libs/gtk+:2"
+RDEPEND="net-wireless/bluez
+	x11-libs/gtk+:2
+	python? ( >=dev-lang/python-2.4 )"
 
 pkg_setup() {
 	CONFIG_CHECK="BT_L2CAP INPUT_UINPUT"
@@ -63,4 +63,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog NEWS README
+	insinto /etc/udev/rules.d
+	doins "${FILESDIR}/60-${PN}.rules"
 }
