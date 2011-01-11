@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6275 2011/01/10 19:32:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6276 2011/01/11 10:32:20 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -4253,7 +4253,6 @@ xfce-base/xfce4-settings:keyboard - Enable Keyboard layout selection with x11-li
 xfce-base/xfce4-settings:sound - Enable sound event support with media-libs/libcanberra
 xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
 xfce-extra/thunar-thumbnailers:grace - Enable support for sci-visualization/grace thumbnails
-xfce-extra/thunar-vcs-plugin:git - Enable dev-vcs/git support
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-notifyd:libsexy - Enable support for clickable URLs by using x11-libs/libsexy
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
