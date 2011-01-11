@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.37 2010/12/13 11:16:50 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.38 2011/01/11 22:05:15 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> mongrel-1.1.5-r2.ebuild:
+  x86 stable, bug #349877
 
   13 Dec 2010; Hans de Graaff <graaff@gentoo.org> mongrel-1.1.5-r2.ebuild:
   Fix compilation on macos.
