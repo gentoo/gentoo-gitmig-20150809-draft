@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tpipe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/ChangeLog,v 1.7 2011/01/07 23:28:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tpipe/ChangeLog,v 1.8 2011/01/11 22:13:43 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> tpipe-1.6.ebuild:
+  x86 stable, bug #350705
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> tpipe-1.6.ebuild:
   Marking tpipe-1.6 ppc for bug 350705
