@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/389-admin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.5 2010/11/12 06:36:48 lxnay Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.6 2011/01/11 22:30:13 lxnay Exp $
+
+*389-admin-1.1.13 (11 Jan 2011)
+
+  11 Jan 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +files/1.1.14_backports/0000-selinux-crash-fix.patch,
+  +389-admin-1.1.13.ebuild,
+  +files/1.1.14_backports/0001-ssl-segfault-fix.patch:
+  version bump
 
 *389-admin-1.1.11_rc1-r1 (12 Nov 2010)
 

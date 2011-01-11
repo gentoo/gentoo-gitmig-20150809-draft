@@ -1,0 +1,29 @@
+From 6d86721d58f9dd150c970f61911c8a8bc2c8c050 Mon Sep 17 00:00:00 2001
+From: Nathan Kinder <nkinder@redhat.com>
+Date: Tue, 4 Jan 2011 15:03:29 -0800
+Subject: [PATCH] Bug 638511 - dirsrv-admin crashes at startup with SELinux enabled
+
+On RHEL5, starting the dirsrv-admin service with SELinux enabled
+will cause httpd child processes to repeatedly crash.  The context
+used by the dirsrv-admin start scripts needs some additional
+process capabilities to fix this problem.
+---
+ selinux/dirsrv-admin.te |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/selinux/dirsrv-admin.te b/selinux/dirsrv-admin.te
+index 51c2dc6..4c842d9 100644
+--- a/selinux/dirsrv-admin.te
++++ b/selinux/dirsrv-admin.te
+@@ -78,7 +78,7 @@ ifdef(`targeted_policy',`
+ 
+ # Needed for stop and restart scripts
+ dirsrv_read_var_run(dirsrvadmin_t)
+-allow dirsrvadmin_t httpd_t:process signal;
++allow dirsrvadmin_t httpd_t:process { signal siginh rlimitinh noatsecure };
+ allow dirsrvadmin_t httpd_var_run_t:file read_file_perms;
+ 
+ ########################################
+-- 
+1.5.5.6
+
