@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyPdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.10 2011/01/11 15:36:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.11 2011/01/11 18:13:58 arfrever Exp $
+
+  11 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyPdf-1.12.ebuild:
+  Delete.
 
   11 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyPdf-1.13.ebuild:
   x86 stable wrt bug #350864
