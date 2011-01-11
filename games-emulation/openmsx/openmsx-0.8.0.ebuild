@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.8.0.ebuild,v 1.3 2010/11/08 11:23:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.8.0.ebuild,v 1.4 2011/01/11 22:28:21 ranger Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/tcl

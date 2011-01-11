@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.35 2010/11/08 11:23:39 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.36 2011/01/11 22:28:21 ranger Exp $
+
+  11 Jan 2011; Brent Baude <ranger@gentoo.org> openmsx-0.8.0.ebuild:
+  Marking openmsx-0.8.0 ppc for bug 344021
 
   08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> openmsx-0.8.0.ebuild:
   x86 stable wrt bug #344021
