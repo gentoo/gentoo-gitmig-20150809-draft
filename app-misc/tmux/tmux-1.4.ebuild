@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.4.ebuild,v 1.1 2011/01/07 14:06:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.4.ebuild,v 1.2 2011/01/11 21:24:52 wired Exp $
 
 EAPI=3
 
@@ -24,19 +24,21 @@ RDEPEND="${DEPEND}
 			app-editors/gvim ) )"
 
 pkg_setup() {
-	echo
-	ewarn "Commands 'up-pane', 'down-pane' and 'select-prompt' were removed in version 1.3."
-	ewarn "You may want to update your configuration file accordingly to avoid errors on"
-	ewarn "tmux startup."
-	ewarn
-	ewarn "For the full 1.3 Changelog, together with details on what replaced the above"
-	ewarn "commands, visit http://tmux.cvs.sourceforge.net/viewvc/tmux/tmux/CHANGES."
-	ewarn
-	ewarn "WARNING: after updating to tmux 1.3 you will _not_ be able to connect to any"
-	ewarn "running 1.2 tmux server instances. You'll have to use an existing client to"
-	ewarn "end your old sessions or kill the old server instances. Otherwise you'll have"
-	ewarn "to temporarily downgrade to tmux 1.2 to access them."
-	echo
+	if has_version "<app-misc/tmux-1.3"; then
+		echo
+		ewarn "Commands 'up-pane', 'down-pane' and 'select-prompt' were removed in version 1.3."
+		ewarn "You may want to update your configuration file accordingly to avoid errors on"
+		ewarn "tmux startup."
+		ewarn
+		ewarn "For the full Changelog, together with details on what replaced the above"
+		ewarn "commands, visit http://tmux.cvs.sourceforge.net/viewvc/tmux/tmux/CHANGES."
+		ewarn
+		ewarn "WARNING: after updating to ${P} you will _not_ be able to connect to any"
+		ewarn "running 1.2 tmux server instances. You'll have to use an existing client to"
+		ewarn "end your old sessions or kill the old server instances. Otherwise you'll have"
+		ewarn "to temporarily downgrade to tmux 1.2 to access them."
+		echo
+	fi
 }
 
 src_configure() {
