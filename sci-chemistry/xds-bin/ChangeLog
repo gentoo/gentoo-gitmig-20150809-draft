@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xds-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.5 2011/01/11 10:45:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.6 2011/01/11 10:48:37 jlec Exp $
+
+  11 Jan 2011; Justin Lecher <jlec@gentoo.org> xds-bin-20110111.ebuild:
+  Included docs again
 
 *xds-bin-20110111 (11 Jan 2011)
 
