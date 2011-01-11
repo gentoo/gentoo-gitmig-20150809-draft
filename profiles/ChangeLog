@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4927 2011/01/11 11:43:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4928 2011/01/11 13:32:27 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> thirdpartymirrors:
+  Update Xfce mirrors wrt upstream http://www.xfce.org/download/
 
   11 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking net-mail/cyrus-imspd for QA removal.
