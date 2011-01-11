@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pastebin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.9 2011/01/07 23:32:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.10 2011/01/11 22:28:52 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> pastebin-0.6.2.ebuild:
+  x86 stable, bug #350736
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> pastebin-0.6.2.ebuild:
   Marking pastebin-0.6.2 ppc for bug 350736
