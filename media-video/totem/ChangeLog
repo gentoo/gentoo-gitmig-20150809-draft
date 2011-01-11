@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.307 2011/01/08 23:53:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.308 2011/01/11 14:01:39 pacho Exp $
+
+  11 Jan 2011; Pacho Ramos <pacho@gentoo.org> totem-2.32.0.ebuild:
+  Use fixed gnome-doc-utils.make, bug #348403 (by David J Cozatt and patch by
+  Chris Coleman).
 
   08 Jan 2011; Michael Weber <xmw@gentoo.org> totem-2.32.0.ebuild:
   added ~sparc keyword (bug 348984)

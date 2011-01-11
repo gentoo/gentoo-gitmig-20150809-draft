@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.5 2011/01/08 23:53:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.6 2011/01/11 14:01:39 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -82,7 +82,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	app-text/scrollkeeper
-	app-text/gnome-doc-utils
+	>=app-text/gnome-doc-utils-0.20.3
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.20
 	app-text/docbook-xml-dtd:4.5
@@ -135,6 +135,9 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# Use fixed gnome-doc-utils.make, bug #348403 (can be dropped in next bump)
+	cp -f /usr/share/gnome-doc-utils/gnome-doc-utils.make . || die
 
 	# Fix broken smclient option passing
 	epatch "${FILESDIR}/${PN}-2.32.0-smclient-target-detection.patch"
