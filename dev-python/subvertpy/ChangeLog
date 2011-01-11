@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.26 2011/01/11 21:59:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.27 2011/01/11 22:06:51 arfrever Exp $
+
+  11 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -subvertpy-0.7.3.1.ebuild, -subvertpy-0.7.4.ebuild:
+  Delete.
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> subvertpy-0.7.5.ebuild:
   x86 stable, bug #348077
