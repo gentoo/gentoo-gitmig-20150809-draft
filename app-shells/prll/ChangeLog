@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/prll
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.6 2011/01/05 19:17:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.7 2011/01/11 22:21:26 maekke Exp $
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> prll-0.5.ebuild:
+  x86 stable, bug #350712
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> prll-0.5.ebuild:
   Stable on amd64 wrt bug #350712
