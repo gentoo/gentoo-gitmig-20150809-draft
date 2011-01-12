@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeakup
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.18 2009/11/01 18:50:30 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.19 2011/01/12 23:56:02 williamh Exp $
+
+  12 Jan 2011; William Hubbs <williamh@gentoo.org> espeakup-0.71.ebuild,
+  espeakup-9999.ebuild:
+  Fix RDEPEND since speakup is part of linux-2.6.37 or later.
+  We want to favor the speakup built into the kernel for
+  virtual/linux-sources >= 2.6.37 and still work with older kernels.
 
   09 Oct 2009; William Hubbs <williamh@gentoo.org> espeakup-0.71.ebuild,
   espeakup-9999.ebuild:

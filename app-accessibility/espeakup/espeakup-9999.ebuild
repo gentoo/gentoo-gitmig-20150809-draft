@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.5 2009/11/01 18:50:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.6 2011/01/12 23:56:02 williamh Exp $
 
 EGIT_REPO_URI="git://github.com/williamh/espeakup.git"
 inherit git
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="app-accessibility/espeak"
 RDEPEND="${DEPEND}
-	app-accessibility/speakup"
+	|| ( >=virtual/linux-sources-2.6.37 app-accessibility/speakup )"
 
 src_compile() {
 	emake || die "Compile failed."
