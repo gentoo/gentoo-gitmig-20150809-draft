@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.7 2010/06/11 21:26:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.8 2011/01/12 15:18:30 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
 
 inherit distutils
 
@@ -18,10 +21,14 @@ RDEPEND=">=dev-python/pygtk-2.8.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+PYTHON_MODNAME="gpixpod.py gpixpod_cli.py ipodhal.py mh.py utils.py"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	# Fixing gpixpod.py for searching gpixpod.glade in the same directory
 	sed -i -e "s:gpixpod\.glade:/usr/share/gpixpod/gpixpod\.glade:g" gpixpod.py || die
 
