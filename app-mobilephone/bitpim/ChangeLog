@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/bitpim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.31 2010/06/08 16:23:41 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.32 2011/01/12 14:47:41 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bitpim-1.0.6-r1.ebuild:
+  Use Python 2 (bug #311661).
 
   08 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bitpim-1.0.6-r1.ebuild:

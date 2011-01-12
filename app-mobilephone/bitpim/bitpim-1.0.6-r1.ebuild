@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.4 2010/06/08 16:23:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.5 2011/01/12 14:47:41 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 
-inherit eutils distutils fdo-mime multilib
+inherit distutils eutils fdo-mime multilib
 
 DESCRIPTION="Program to view and manipulate data on LG VX4400/VX6000 and many Sanyo Sprint mobile phones"
 HOMEPAGE="http://www.bitpim.org/"
@@ -17,19 +18,25 @@ KEYWORDS="~amd64 ~x86"
 #KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="crypt evo usb"
 
-COMMON_DEPEND="=dev-python/wxpython-2.8*
-	dev-python/python-dsv
+COMMON_DEPEND="dev-python/apsw
 	dev-python/pyserial
-	dev-python/apsw
-	crypt? ( >=dev-python/paramiko-1.7.1
-		dev-python/pycrypto )
+	dev-python/python-dsv
+	dev-python/wxpython:2.8
+	crypt? (
+		>=dev-python/paramiko-1.7.1
+		dev-python/pycrypto
+	)
 	usb? ( dev-libs/libusb:0 )"
 DEPEND="${COMMON_DEPEND}
 	usb? ( dev-lang/swig )"
 RDEPEND="${COMMON_DEPEND}
-	media-video/ffmpeg
 	media-libs/netpbm
-	>=dev-lang/python-2.5"
+	media-video/ffmpeg"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
