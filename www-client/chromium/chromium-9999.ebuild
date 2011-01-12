@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.123 2011/01/10 09:44:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.124 2011/01/12 12:58:56 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -149,8 +149,6 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
-	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
-
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
@@ -173,16 +171,13 @@ src_prepare() {
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/skia/*' \
+		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/xdg-utils/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
-
-	# Provide our own gyp file that links with the system speex.
-	# TODO: move this upstream.
-	cp "${FILESDIR}"/speex.gyp third_party/speex || die
 
 	if use system-sqlite; then
 		# Remove bundled sqlite, preserving the shim header.
@@ -230,6 +225,7 @@ src_configure() {
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_libxml=1
+		-Duse_system_speex=1
 		-Duse_system_vpx=1
 		-Duse_system_zlib=1"
 
