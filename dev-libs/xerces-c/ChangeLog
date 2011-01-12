@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.90 2011/01/11 21:56:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.91 2011/01/12 14:00:18 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> xerces-c-3.1.0.ebuild:
+  Stable on amd64 wrt bug #308009
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> xerces-c-3.1.0.ebuild:
   x86 stable, bug #308009
