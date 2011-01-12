@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.61 2010/12/13 18:30:22 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.62 2011/01/12 21:56:34 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pth-2.0.7-r2.ebuild:
+  Copy stable keywords from 2.0.7-r1. Changes introduced in 2.0.7-r2 don't
+  affect installed files and there shouldn't have been revision bump.
 
 *pth-2.0.7-r2 (13 Dec 2010)
 
