@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.48 2011/01/11 22:02:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.49 2011/01/12 18:07:52 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wammu-0.35.ebuild:
+  Stable on amd64 wrt bug #350079
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> wammu-0.35.ebuild:
   x86 stable, bug #350079
