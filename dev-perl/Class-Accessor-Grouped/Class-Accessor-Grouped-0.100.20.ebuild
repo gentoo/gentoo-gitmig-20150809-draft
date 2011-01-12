@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/Class-Accessor-Grouped-0.10000.ebuild,v 1.1 2010/11/28 09:01:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/Class-Accessor-Grouped-0.100.20.ebuild,v 1.1 2011/01/12 21:37:02 tove Exp $
 
 EAPI=3
 
-MODULE_AUTHOR=RIBASUSHI
+MODULE_AUTHOR=RKITOVER
+MODULE_VERSION=0.10002
 inherit perl-module
 
 DESCRIPTION="Lets you build groups of accessors"
@@ -14,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="dev-perl/Class-Inspector
-	dev-perl/Class-XSAccessor
+	>=dev-perl/Class-XSAccessor-1.110
 	>=dev-perl/Sub-Name-0.05
 	dev-perl/MRO-Compat"
 DEPEND="${RDEPEND}
