@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6277 2011/01/12 15:32:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6278 2011/01/12 20:32:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -597,7 +597,6 @@ app-office/grisbi:print - Enable printing support
 app-office/imposter:iksemel - Enable external dev-libs/iksemel parsing support
 app-office/karbon:pstoedit - Build support for PDF and PS import.
 app-office/karbon:wpg - Build wordperfect image support.
-app-office/kchart:reports - Enable the reports koffice module in kchart, also used by kplato and kexi
 app-office/kexi:reports - Enable the reports koffice module in kchart, also used by kplato and kexi
 app-office/kexi:xbase - Build support for xbase db types.
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
