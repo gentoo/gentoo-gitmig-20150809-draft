@@ -1,15 +1,23 @@
 # /lib/rcscripts/addons/dm-crypt-stop.sh
 
-# Fix for baselayout-1.12.10 (bug 174256)
+# For backwards compatibility with baselayout < 1.13.0 #174256
 : ${SVCNAME:=${myservice}}
+
+# See notes in dm-crypt-start.sh
+execute_hook="dm_crypt_execute_dmcrypt"
+conf_file="dmcrypt"
+case ${SVCNAME} in
+	dmcrypt.*)  conf_file="${SVCNAME}" ;;
+esac
+conf_file="/etc/conf.d/${conf_file}"
 
 # Try to remove any dm-crypt mappings
 csetup=/sbin/cryptsetup
-if [ -f /etc/conf.d/${SVCNAME} ] && [ -x "$csetup" ]
+if [ -f ${conf_file} ] && [ -x "$csetup" ]
 then
 	einfo "Removing dm-crypt mappings"
 
-	/bin/egrep "^(target|swap)" /etc/conf.d/${SVCNAME} | \
+	/bin/egrep "^(target|swap)" ${conf_file} | \
 	while read targetline
 	do
 		target=
@@ -18,16 +26,16 @@ then
 		eval ${targetline}
 
 		[ -n "${swap}" ] && target=${swap}
-		[ -z "${target}" ] && ewarn "Invalid line in /etc/conf.d/${SVCNAME}: ${targetline}"
+		[ -z "${target}" ] && ewarn "Invalid line in ${conf_file}: ${targetline}"
 
 		ebegin "Removing dm-crypt mapping for: ${target}"
 		${csetup} remove ${target}
 		eend $? "Failed to remove dm-crypt mapping for: ${target}"
 	done
 
-	if [[ -n $(/bin/egrep -e "^(source=)./dev/loop*" /etc/conf.d/${SVCNAME}) ]] ; then
+	if [[ -n $(/bin/egrep -e "^(source=)./dev/loop*" ${conf_file}) ]] ; then
 		einfo "Taking down any dm-crypt loop devices"
-		/bin/egrep -e "^(source)" /etc/conf.d/${SVCNAME} | while read sourceline
+		/bin/egrep -e "^(source)" ${conf_file} | while read sourceline
 		do
 			source=
 			eval ${sourceline}

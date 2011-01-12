@@ -1,20 +1,19 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 
-# For backwards compatability with baselayout < 1.13.0 #174256
-if [[ -z ${SVCNAME} ]] ; then
-	case ${myservice} in
-		""|checkfs|localmount) SVCNAME=dmcrypt ;;
-		*) SVCNAME=${myservice} ;;
-	esac
-fi
+# For backwards compatibility with baselayout < 1.13.0 #174256
+: ${SVCNAME:=${myservice}}
 
-dm_crypt_execute_checkfs() {
-	dm_crypt_execute_dmcrypt
-}
-
-dm_crypt_execute_volumes() {
-	dm_crypt_execute_dmcrypt
-}
+# We might be hooked into init.d scripts (ala baselayout-1), or we might
+# be a standalone dmcrypt script.  We support multiple dmcrypt instances,
+# but they must start with "dmcrypt." to be detected that way.  It keeps
+# our lives much simpler with this multiplexed arrangement.
+execute_hook="dm_crypt_execute_dmcrypt"
+conf_file="dmcrypt"
+case ${SVCNAME} in
+	localmount) execute_hook="dm_crypt_execute_localmount" ;;
+	dmcrypt.*)  conf_file="${SVCNAME}" ;;
+esac
+conf_file="/etc/conf.d/${conf_file}"
 
 # Setup mappings for an individual target/swap
 # Note: This relies on variables localized in the main body below.
@@ -260,7 +259,7 @@ do
 	esac
 done
 
-if [[ -f /etc/conf.d/${SVCNAME} ]] && [[ -x /sbin/cryptsetup ]] ; then
+if [[ -f ${conf_file} ]] && [[ -x /sbin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"
 
 	while read -u 3 targetline ; do
@@ -271,7 +270,7 @@ if [[ -f /etc/conf.d/${SVCNAME} ]] && [[ -x /sbin/cryptsetup ]] ; then
 		case ${targetline} in
 			target=*|swap=*)
 				# If we have a target queued up, then execute it
-				dm_crypt_execute_${SVCNAME%.*}
+				${execute_hook}
 
 				# Prepare for the next target/swap by resetting variables
 				unset gpg_options key loop_file target options pre_mount post_mount source swap remdev
@@ -290,16 +289,16 @@ if [[ -f /etc/conf.d/${SVCNAME} ]] && [[ -x /sbin/cryptsetup ]] ; then
 				;;
 
 			*)
-				ewarn "Skipping invalid line in /etc/conf.d/${SVCNAME}: ${targetline}"
+				ewarn "Skipping invalid line in ${conf_file}: ${targetline}"
 				;;
 		esac
 
-		# Queue this setting for the next call to dm_crypt_execute_${SVCNAME%.*}
+		# Queue this setting for the next call to dm_crypt_execute_xxx
 		eval "${targetline}"
-	done 3< /etc/conf.d/${SVCNAME}
+	done 3< ${conf_file}
 
 	# If we have a target queued up, then execute it
-	dm_crypt_execute_${SVCNAME%.*}
+	${execute_hook}
 
 	ewend ${cryptfs_status} "Failed to setup dm-crypt devices"
 fi
