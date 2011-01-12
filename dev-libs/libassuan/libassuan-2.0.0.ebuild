@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-2.0.0.ebuild,v 1.9 2010/08/30 13:58:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/libassuan-2.0.0.ebuild,v 1.10 2011/01/12 16:07:18 flameeyes Exp $
 
 EAPI="2"
 
 DESCRIPTION="IPC library used by GnuPG and GPGME"
-HOMEPAGE="http://www.gnupg.org/related_software/libassuan.en.html"
+HOMEPAGE="http://www.gnupg.org/related_software/libassuan/index.en.html"
 SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 LGPL-2.1"
