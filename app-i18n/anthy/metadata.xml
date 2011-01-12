@@ -13,4 +13,7 @@
   <pkg>app-i18n/uim</pkg> (XIM, GTK+ immodule) and <pkg>virtual/emacs</pkg>
   (to enable Anthy support for emacs, build this package with emacs USE flag).
 </longdescription>
+<use>
+  <flag name='canna-2ch'>Enable support for <pkg>app-dicts/canna-2ch</pkg></flag>
+</use>
 </pkgmetadata>

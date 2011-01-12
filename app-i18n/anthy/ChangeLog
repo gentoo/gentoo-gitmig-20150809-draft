@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/anthy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.131 2010/11/25 12:30:06 hattya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.132 2011/01/12 15:14:50 matsuu Exp $
+
+*anthy-9100h-r1 (12 Jan 2011)
+
+  12 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +anthy-9100h-r1.ebuild,
+  +files/anthy-9100h-anthy_context_t.patch, metadata.xml:
+  Fixed header to work with app-i18n/im-ja. Added static-libs USE flag and
+  canna-2ch local USE flag.
 
   25 Nov 2010; Akinori Hattori <hattya@gentoo.org>
   -files/anthy-7500b-asneeded.patch, -files/anthy-mkdic-gcc34.patch,
