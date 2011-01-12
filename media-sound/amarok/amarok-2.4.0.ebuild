@@ -1,17 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1.90.ebuild,v 1.3 2010/09/19 13:03:20 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.1 2011/01/12 20:18:36 tampakrap Exp $
 
 EAPI="2"
 
 # Translations are only in the tarballs, not the git repo
 if [[ ${PV} != *9999* ]]; then
-	KDE_LINGUAS="af bg ca ca@valencia cs da de el en_GB es et fr it ja lt lv nb nds pa pl
-	pt pt_BR ru sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr uk zh_CN zh_TW"
+	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl
+	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
 	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 else
-	EGIT_REPO_URI="git://git.kde.org/${PN}/${PN}.git"
+	EGIT_REPO_URI="git://anongit.kde.org/${PN}"
 	GIT_ECLASS="git"
+	KEYWORDS=""
 fi
 
 KDE_REQUIRED="never"
@@ -21,9 +23,8 @@ DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
-IUSE="cdda daap debug embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
+IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
 
 # Tests require gmock - http://code.google.com/p/gmock/
 # It's not in the tree yet
@@ -36,9 +37,9 @@ COMMONDEPEND="
 	player? (
 		app-crypt/qca:2
 		>=app-misc/strigi-0.5.7[dbus,qt4]
-		|| ( >=dev-db/mysql-5.0.76 =virtual/mysql-5.1 )
 		>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
 		sys-libs/zlib
+		>=virtual/mysql-5.1
 		x11-libs/qt-script
 		>=x11-libs/qtscriptgenerator-0.1.0
 		cdda? (
@@ -46,7 +47,12 @@ COMMONDEPEND="
 			>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 			>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
 		)
-		embedded? ( <dev-db/mysql-5.1[embedded,-minimal] )
+		embedded? (
+			|| (
+				>=dev-db/mysql-5.1.50-r3[embedded]
+				>=dev-db/mariadb-5.1.50[embedded]
+			)
+		)
 		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 		lastfm? ( >=media-libs/liblastfm-0.3.0 )
 		mp3tunes? (
@@ -57,7 +63,7 @@ COMMONDEPEND="
 			net-misc/curl
 			x11-libs/qt-core[glib]
 		)
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-1.0.0 )
 		opengl? ( virtual/opengl )
 	)
 	utils? (
