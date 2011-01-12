@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.250 2011/01/12 22:24:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.251 2011/01/12 22:54:25 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> sudo-1.7.4_p5.ebuild:
+  Stable on amd64 wrt bug #351490
 
 *sudo-1.7.4_p5 (12 Jan 2011)
 
