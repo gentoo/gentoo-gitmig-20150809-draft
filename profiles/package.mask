@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12348 2011/01/11 11:43:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12349 2011/01/12 05:32:49 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (12 Jan 2011)
+# Also mask pyclutter-1.3
+# Nirbheek Chauhan <nirbheek@gentoo.org> (24 Dec 2010)
+# Also mask clutter-gtk-0.90
+# Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
+# Breaks ABI/API, mask till we figure out what all is affected
+# Needed for gnome-shell, which is masked (in the gnome overlay)
+# Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
+>=media-libs/clutter-1.4
+>=media-libs/clutter-gtk-0.90
+>=dev-python/pyclutter-1.3
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Jan 2011)
 #  on behalf of QA team
@@ -130,15 +142,6 @@ gnome-base/gnome-mount
 # Alexis Ballier <aballier@gentoo.org> (25 Dec 2010)
 # Breaks www-servers/ocsigen, unmask when fixed
 >=dev-ml/lwt-2.2.0
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (24 Dec 2010)
-# Also mask clutter-gtk-0.90
-# Nirbheek Chauhan <nirbheek@gentoo.org> (5 Dec 2010)
-# Breaks ABI/API, mask till we figure out what all is affected
-# Needed for gnome-shell, which is masked (in the gnome overlay)
-# Also, clutter-1.5 needs glib-2.26 from the GNOME 2.32 mask
->=media-libs/clutter-1.4
->=media-libs/clutter-gtk-0.90
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Orphaned package, still using deprecated HAL
