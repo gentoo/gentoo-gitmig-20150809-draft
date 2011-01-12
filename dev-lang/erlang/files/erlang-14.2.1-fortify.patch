@@ -1,0 +1,19 @@
+
+Erlang 14B01 (aka 14.2.1 in Gentoo) fails with 64bit arches and FORTIFY_SOURCE=2 or greater, consisting of a buffer overflow warning.
+
+Upstream report: http://www.erlang.org/cgi-bin/ezmlm-cgi?2:mss:2135:bdnooaggpdnbokaboakj
+Taken from PLD Linux: http://cvs.pld-linux.org/cgi-bin/cvsweb/packages/erlang/erlang-fortify.patch
+
+http://bugs.gentoo.org/show_bug.cgi?id=348559
+
+--- otp_src_R14B01/erts/emulator/drivers/common/efile_drv.c
++++ otp_src_R14B01/erts/emulator/drivers/common/efile_drv.c
+@@ -174,7 +174,7 @@
+ 
+ #else
+ #  define FILENAME_BYTELEN(Str) strlen(Str)
+-#  define FILENAME_COPY(To,From) strcpy(To,From) 
++#  define FILENAME_COPY(To,From) memcpy(To,From,strlen(From)+1)
+ #  define FILENAME_CHARSIZE 1
+ #endif
+ 
