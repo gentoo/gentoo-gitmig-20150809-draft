@@ -1,6 +1,9 @@
 # ChangeLog for games-util/deutex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.7 2010/10/27 12:15:40 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.8 2011/01/12 22:49:31 mr_bones_ Exp $
+
+  12 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> deutex-4.4.0.ebuild:
+  no need to inherit games. use toolchain-funcs instead
 
   27 Oct 2010; Tupone Alfredo <tupone@gentoo.org> deutex-4.4.0.ebuild,
   +files/deutex-4.4.0-ovflfix.patch:

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/deutex-4.4.0.ebuild,v 1.7 2010/10/27 12:15:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/deutex-4.4.0.ebuild,v 1.8 2011/01/12 22:49:31 mr_bones_ Exp $
 
 EAPI=2
-inherit games
+inherit base toolchain-funcs
 
 DESCRIPTION="A wad composer for Doom, Heretic, Hexen and Strife"
 HOMEPAGE="http://www.teaser.fr/~amajorel/deutex/"
@@ -19,6 +19,11 @@ DEPEND=""
 
 PATCHES=( "${FILESDIR}"/${P}-makefile.patch "${FILESDIR}"/${P}-64bit.patch
 	"${FILESDIR}"/${P}-ovflfix.patch )
+
+src_compile() {
+	tc-export CC
+	base_src_make
+}
 
 src_install() {
 	dobin deusf deutex || die
