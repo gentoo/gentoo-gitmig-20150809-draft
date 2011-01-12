@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-servlet-api
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.4 2008/12/08 03:35:37 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.5 2011/01/12 17:00:38 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  glassfish-servlet-api-2_beta44.ebuild:
+  Stable on amd64 wrt bug #351433
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   glassfish-servlet-api-2_beta44.ebuild:

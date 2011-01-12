@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/glassfish-servlet-api-2_beta44.ebuild,v 1.2 2008/12/08 03:35:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/glassfish-servlet-api-2_beta44.ebuild,v 1.3 2011/01/12 17:00:38 hwoarang Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://glassfish.dev.java.net/javaee5/webtier/webtierhome.html"
 SRC_URI="http://download.java.net/javaee5/trunk/promoted/source/glassfish-v${MY_PV}-src.zip"
 LICENSE="CDDL"
 SLOT="2.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip"
