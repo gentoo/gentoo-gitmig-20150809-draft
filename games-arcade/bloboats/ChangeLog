@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/bloboats
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bloboats/ChangeLog,v 1.4 2010/12/08 16:20:33 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bloboats/ChangeLog,v 1.5 2011/01/12 14:01:30 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> bloboats-1.0.2.ebuild:
+  Stable on amd64 wrt bug #351334
 
   08 Dec 2010; Markos Chandras <hwoarang@gentoo.org> bloboats-1.0.2.ebuild:
   Keyworded for amd64 wrt bug #345823
