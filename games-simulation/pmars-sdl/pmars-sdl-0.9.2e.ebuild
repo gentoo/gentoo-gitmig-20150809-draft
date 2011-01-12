@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.13 2010/10/18 19:16:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.14 2011/01/12 17:46:58 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs games
@@ -34,9 +34,6 @@ src_compile() {
 	elif use X ; then
 		CFLAGS="${CFLAGS} -DXWINGRAPHX"
 		LIB="-L/usr/X11R6/lib -lX11"
-	elif use svga ; then
-		CFLAGS="${CFLAGS} -DGRAPHX"
-		LIB="-lvgagl -lvga"
 	else
 		CFLAGS="${CFLAGS} -DCURSESGRAPHX"
 		LIB="-lcurses"
