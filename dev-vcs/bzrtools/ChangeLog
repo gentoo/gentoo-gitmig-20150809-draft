@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.9 2011/01/04 13:42:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.10 2011/01/12 18:47:20 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> bzrtools-2.2.0.ebuild:
+  Stable on amd64 wrt bug #346985
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> bzrtools-2.2.0.ebuild:
   sparc stable (bug 346985)

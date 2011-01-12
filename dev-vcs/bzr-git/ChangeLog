@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-git
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.1 2010/10/10 14:30:09 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.2 2011/01/12 18:52:27 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> bzr-git-0.5.2.ebuild:
+  Stable on amd64 wrt bug #346985
 
 *bzr-git-0.5.2 (10 Oct 2010)
 
