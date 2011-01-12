@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-wizards
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.159 2010/12/29 16:56:07 tampakrap Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.160 2011/01/12 16:22:05 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  kdepim-wizards-4.4.8.ebuild:
+  Stable on amd64 wrt bug #351345
 
 *kdepim-wizards-4.4.9 (29 Dec 2010)
 

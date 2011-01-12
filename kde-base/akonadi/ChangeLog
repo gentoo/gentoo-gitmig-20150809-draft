@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.78 2010/12/29 16:56:06 tampakrap Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.79 2011/01/12 16:14:47 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> akonadi-4.4.8.ebuild:
+  Stable on amd64 wrt bug #351345
 
 *akonadi-4.4.9 (29 Dec 2010)
 
