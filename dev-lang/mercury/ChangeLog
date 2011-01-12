@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.132 2011/01/07 22:53:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.133 2011/01/12 07:39:14 keri Exp $
+
+*mercury-11.01_beta1 (12 Jan 2011)
+
+  12 Jan 2011; <keri@gentoo.org> +mercury-11.01_beta1.ebuild:
+  Version bump
 
   07 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   mercury-10.04.2-r1.ebuild:
