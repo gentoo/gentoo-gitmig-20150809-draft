@@ -32,15 +32,14 @@
  AC_HEADER_STDC
 
 --- gsmc-1.1.orig/Makefile.am	2011-01-12 18:14:55.633360421 -0200
-+++ gsmc-1.1/Makefile.am	2011-01-12 18:52:46.741154884 -0200
-@@ -2,8 +2,9 @@
++++ gsmc-1.1/Makefile.am	2011-01-12 20:37:21.034615478 -0200
+@@ -2,8 +2,8 @@
       
  bin_PROGRAMS=gsmc
  gsmc_SOURCES= autotune.c calc.c dataconv.c draw.c main.c print.c widget.c autotune.h calc.h dataconv.h draw.h main.h print.h widget.h
 -INCLUDES=@PACKAGE_CFLAGS@
 -LIBS=@PACKAGE_LIBS@
 +gsmc_CFLAGS = $(AM_CFLAGS) $(GTK_CFLAGS)
-+gsmc_LDFLAGS = $(AM_LDFLAGS) $(GTK_LDFLAGS)
 +gsmc_LDADD = $(AM_LDADD) $(GTK_LIBS)
  
  EXTRA_DIST=gsmc.1.in gtkrc TODO
