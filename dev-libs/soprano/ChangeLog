@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/soprano
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.63 2010/11/26 16:25:36 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.64 2011/01/12 20:36:31 tampakrap Exp $
+
+  12 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  files/soprano-2.4.4-make-broken-redland-fatal.cmake, soprano-2.5.2.ebuild:
+  Remove sesame2(java) backend support
 
   26 Nov 2010; Jeroen Roovers <jer@gentoo.org> soprano-2.4.4.ebuild:
   Stable for HPPA (bug #331761).
