@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pynotifier
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.16 2010/01/18 15:51:51 rbu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.17 2011/01/12 20:54:52 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pynotifier-0.7.0.ebuild:
+  Delete.
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance
