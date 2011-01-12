@@ -1,6 +1,11 @@
 # ChangeLog for app-text/chm2pdf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.6 2010/05/04 17:11:30 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.7 2011/01/12 20:19:19 hwoarang Exp $
+
+*chm2pdf-0.9.1-r1 (12 Jan 2011)
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +chm2pdf-0.9.1-r1.ebuild:
+  Make it depend on dev-libs/chmlib[examples]. Bug #351321
 
   04 May 2010; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1.ebuild:
   Inherit python eclass wrt bug #318403
