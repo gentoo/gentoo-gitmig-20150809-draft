@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.126 2011/01/12 17:35:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.127 2011/01/12 19:07:35 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  numpy-1.5.1.ebuild, +files/numpy-1.5.1-python-3.2.patch:
+  Add incomplete fix for compatibility with Python 3.2 (bug #351057).
 
   12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   numpy-1.5.1.ebuild:

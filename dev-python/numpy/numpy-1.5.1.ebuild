@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.5 2011/01/12 17:55:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.6 2011/01/12 19:07:35 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -67,8 +67,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1.0-f2py.patch
-	epatch "${FILESDIR}"/${PN}-1.3.0-fenv-freebsd.patch # bug 279487
+	epatch "${FILESDIR}/${PN}-1.1.0-f2py.patch"
+	epatch "${FILESDIR}/${PN}-1.3.0-fenv-freebsd.patch" # Bug #279487
+	epatch "${FILESDIR}/${PN}-1.4.0-interix.patch"
+	epatch "${FILESDIR}/${P}-python-3.2.patch"
 
 	# Gentoo patch for ATLAS library names
 	sed -i \
@@ -109,7 +111,6 @@ src_prepare() {
 	else
 		export {ATLAS,PTATLAS,BLAS,LAPACK,MKL}=None
 	fi
-	epatch "${FILESDIR}"/${PN}-1.4.0-interix.patch
 
 	# Disable tests failing on ppc/ppc64.
 	# http://projects.scipy.org/numpy/ticket/1664
