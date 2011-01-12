@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.148 2010/08/08 20:22:10 fordfrog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.149 2011/01/12 22:37:59 fordfrog Exp $
+
+  12 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.9.1.ebuild:
+  just few minor fixes, also switched to EAPI=3
 
   08 Aug 2010; Miroslav Šulc <fordfrog@gentoo.org> -files/6.9/netbeans.png,
   netbeans-6.9.1.ebuild:

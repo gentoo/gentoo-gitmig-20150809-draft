@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.2 2010/08/08 20:22:10 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.3 2011/01/12 22:37:59 fordfrog Exp $
 
-EAPI="2"
+EAPI="3"
 WANT_SPLIT_ANT="true"
 inherit eutils java-pkg-2 java-ant-2
 
@@ -451,6 +451,12 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
+# Custom unpack function to prevent warning about not being able to unpack netbeans-6.9.png
+src_unpack () {
+	unpack ${P}.tar.bz2
+	unpack ${P}-l10n.tar.bz2
+}
+
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
@@ -848,11 +854,11 @@ src_install() {
 		dodir /usr/share/icons/hicolor/32x32/apps
 		dosym ${DESTINATION}/nb/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 		dodir /usr/share/icons/hicolor/128x128/apps
-		cp "${S}"/${PN}-${SLOT}.png "${D}"/usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
+		cp "${DISTDIR}"/${PN}-${SLOT}.png "${D}"/usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
 		dosym /usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png /usr/share/pixmaps/netbeans-${SLOT}.png
 	fi
 
-	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT} Development
+	make_desktop_entry netbeans-${SLOT} "Netbeans ${PV}" netbeans-${SLOT} Development
 }
 
 pkg_postinst() {
@@ -1020,7 +1026,7 @@ symlink_extjars() {
 	# osgi.cmpn-4.2.jar - not packaged
 	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.4.jar
 
-	if use netbeans_module_cnd ; then
+	if use netbeans_modules_cnd ; then
 		targetdir="cnd/modules/ext"
 		# antlr-3.1.3.jar - upstream contains more classes
 		# antlr-runtime-3.1.3.jar - subset of antlr classes
