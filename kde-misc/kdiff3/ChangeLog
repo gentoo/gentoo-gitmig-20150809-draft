@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kdiff3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.43 2010/07/29 23:08:35 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.44 2011/01/12 22:46:57 tampakrap Exp $
+
+*kdiff3-0.9.95-r1 (12 Jan 2011)
+
+  12 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kdiff3-0.9.95.ebuild,
+  +kdiff3-0.9.95-r1.ebuild:
+  Revbump: EAPI3, add Qt-only support, handle handbook/translations better,
+  merge with live ebuild, slotmove to 4
 
   29 Jul 2010; Jeremy Olexa <darkside@gentoo.org> kdiff3-0.9.95.ebuild:
   Add ~amd64-linux, bug 330427
