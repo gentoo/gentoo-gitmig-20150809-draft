@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.33 2010/12/13 00:35:03 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.34 2011/01/12 19:27:19 flameeyes Exp $
+
+  12 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> bsdiff-4.3-r2.ebuild:
+  Fix whitespace.
 
 *bsdiff-4.3-r2 (13 Dec 2010)
 
