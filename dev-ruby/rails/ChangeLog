@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.182 2011/01/07 09:32:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.183 2011/01/12 16:33:18 graaff Exp $
+
+  12 Jan 2011; Hans de Graaff <graaff@gentoo.org> rails-3.0.3.ebuild:
+  Update dependency on eselect-rails to a version that understands Rails
+  3.x. Thanks to Elias Probst in bug 351434.
 
   07 Jan 2011; Hans de Graaff <graaff@gentoo.org> rails-2.3.10.ebuild:
   Move forward ppc and ppc64 keywords that got missed on a version bump.
