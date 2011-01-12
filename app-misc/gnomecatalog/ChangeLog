@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gnomecatalog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.2 2009/03/22 14:27:47 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.3 2011/01/12 15:06:02 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnomecatalog-0.3.4.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #311519).
 
 *gnomecatalog-0.3.4.2 (22 Mar 2009)
 
