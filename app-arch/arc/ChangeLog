@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.38 2011/01/12 13:49:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.39 2011/01/12 14:31:30 jer Exp $
+
+  12 Jan 2011; Jeroen Roovers <jer@gentoo.org> arc-5.21p.ebuild:
+  Stable for HPPA (bug #288058).
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> arc-5.21p.ebuild:
   Stable on amd64 wrt bug #288058
