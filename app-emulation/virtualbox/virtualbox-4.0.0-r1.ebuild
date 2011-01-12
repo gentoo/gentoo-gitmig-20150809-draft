@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.2 2011/01/08 15:38:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.3 2011/01/12 19:53:58 polynomial-c Exp $
 
 EAPI=2
 
@@ -56,6 +56,7 @@ DEPEND="${RDEPEND}
 	sys-devel/dev86
 	sys-power/iasl
 	media-libs/libpng
+	sys-libs/pam
 	sys-libs/libcap
 	doc? (
 		dev-texlive/texlive-basic
