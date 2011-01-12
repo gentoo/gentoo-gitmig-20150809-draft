@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gob
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.72 2010/05/31 21:21:10 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.73 2011/01/12 23:21:23 eva Exp $
+
+*gob-2.0.18 (12 Jan 2011)
+
+  12 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> +gob-2.0.18.ebuild:
+  Version bump. Macro now exits when gob is not found and other minor updates.
 
   31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -gob-2.0.16.ebuild:
   Clean up old revisions.
