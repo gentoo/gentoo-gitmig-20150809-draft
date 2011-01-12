@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-dsv
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.4 2007/12/04 08:34:03 hawking Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.5 2011/01/12 14:57:19 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-dsv-1.4.0-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #345543).
 
 *python-dsv-1.4.0-r1 (04 Dec 2007)
 
