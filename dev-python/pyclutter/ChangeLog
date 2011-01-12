@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyclutter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter/ChangeLog,v 1.2 2010/06/26 02:34:44 nirbheek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter/ChangeLog,v 1.3 2011/01/12 05:46:23 nirbheek Exp $
+
+*pyclutter-1.3.2 (12 Jan 2011)
+
+  12 Jan 2011; <nirbheek@gentoo.org> +pyclutter-1.3.2.ebuild:
+  Bump to 1.3.2, masked since it needs clutter-1.4
 
 *pyclutter-1.0.2 (26 Jun 2010)
 
