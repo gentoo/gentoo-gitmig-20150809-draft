@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.138 2011/01/06 21:32:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.139 2011/01/12 14:14:23 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> twisted-10.2.0.ebuild:
+  Stable on amd64 wrt bug #350894
 
   06 Jan 2011; Brent Baude <ranger@gentoo.org> twisted-10.2.0.ebuild:
   Marking twisted-10.2.0 ppc stable for bug 350894
