@@ -1,21 +1,29 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4.ebuild,v 1.7 2010/11/16 22:03:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4.ebuild,v 1.8 2011/01/12 15:31:46 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="ncurses"
 
 inherit distutils eutils
 
 DESCRIPTION="Curses based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://gechi-overlay.sourceforge.net/?page=elogv"
 SRC_URI="mirror://sourceforge/gechi-overlay/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-lang/python[ncurses]"
+RDEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install
@@ -23,6 +31,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	elog
 	elog "In order to use this software, you need to activate"
 	elog "Portage's elog features.  Required is"
