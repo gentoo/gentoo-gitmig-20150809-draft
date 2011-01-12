@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.69 2011/01/08 22:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.70 2011/01/12 19:16:55 vapier Exp $
 
 EAPI="2"
 
@@ -73,7 +73,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
-	pulseaudio? ( media-sound/pulseaudio ${AUTOTOOLS_DEPEND} )
+	pulseaudio? ( media-sound/pulseaudio )
 	gsm? ( media-sound/gsm )
 	jpeg? ( virtual/jpeg )
 	ldap? ( net-nds/openldap )
@@ -89,6 +89,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	win32? ( ${MLIB_DEPS} )
 	xcomposite? ( x11-libs/libXcomposite ) "
 DEPEND="${RDEPEND}
+	pulseaudio? ( ${AUTOTOOLS_DEPEND} )
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto
