@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.235 2011/01/05 21:49:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.236 2011/01/12 22:15:35 hwoarang Exp $
+
+*mpd-0.16.1 (12 Jan 2011)
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +mpd-0.16.1.ebuild:
+  Version bump. Check for inotify in-kernel support
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mpd-0.16.ebuild,
   metadata.xml:
