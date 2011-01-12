@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/liboauth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.4 2010/09/10 12:31:22 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.5 2011/01/12 23:21:44 flameeyes Exp $
+
+*liboauth-0.9.1 (12 Jan 2011)
+
+  12 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> +liboauth-0.9.1.ebuild,
+  +files/liboauth-0.9.1-ldflags.patch:
+  Version bump; add patch to respect ldflags properly.
 
 *liboauth-0.9.0 (10 Sep 2010)
 
