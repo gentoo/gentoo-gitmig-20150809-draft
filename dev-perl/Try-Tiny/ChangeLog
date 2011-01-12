@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.13 2011/01/08 18:46:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.14 2011/01/12 15:55:56 tove Exp $
+
+*Try-Tiny-0.90 (12 Jan 2011)
+
+  12 Jan 2011; Torsten Veller <tove@gentoo.org> +Try-Tiny-0.90.ebuild:
+  Version bump
 
   08 Jan 2011; Jeroen Roovers <jer@gentoo.org> Try-Tiny-0.07.ebuild:
   Marked ~hppa (bug #350877).
