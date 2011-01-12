@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.3 2011/01/11 15:38:28 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.4 2011/01/12 23:16:06 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -14,6 +14,7 @@ VERSION_FUSE='2.7.4'
 VERSION_ISCSI='2.0-871'
 VERSION_LVM='2.02.28'
 VERSION_UNIONFS_FUSE='0.22'
+VERSION_GPG='1.4.11'
 
 MY_HOME="http://wolf31o2.org"
 RH_HOME="ftp://sources.redhat.com/pub"
@@ -30,7 +31,8 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		http://www.open-iscsi.org/bits/open-iscsi-${VERSION_ISCSI}.tar.gz
 		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz
 		mirror://sourceforge/fuse/fuse-${VERSION_FUSE}.tar.gz
-		http://podgorny.cz/unionfs-fuse/releases/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2"
+		http://podgorny.cz/unionfs-fuse/releases/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2
+		mirror://gnupg/gnupg/gnupg-${VERSION_GPG}.tar.bz2"
 
 if [[ ${PV} == 9999* ]]
 then
@@ -86,6 +88,7 @@ src_install() {
 		-e "s:VERSION_ISCSI:$VERSION_ISCSI:" \
 		-e "s:VERSION_LVM:$VERSION_LVM:" \
 		-e "s:VERSION_UNIONFS_FUSE:$VERSION_UNIONFS_FUSE:" \
+		-e "s:VERSION_GPG:$VERSION_GPG:" \
 		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
 		|| die "Could not adjust versions"
 	insinto /etc
@@ -114,6 +117,7 @@ src_install() {
 		"${DISTDIR}"/busybox-${VERSION_BUSYBOX}.tar.bz2 \
 		"${DISTDIR}"/fuse-${VERSION_FUSE}.tar.gz \
 		"${DISTDIR}"/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2 \
+		"${DISTDIR}"/gnupg-${VERSION_GPG}.tar.bz2 \
 		"${DISTDIR}"/open-iscsi-${VERSION_ISCSI}.tar.gz \
 		"${D}"/var/cache/genkernel/src || die "Copying distfiles..."
 
