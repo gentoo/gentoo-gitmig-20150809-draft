@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.6 2010/05/15 12:15:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.7 2011/01/12 20:47:56 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 JAVA_PKG_IUSE="source"
 PYTHON_DEPEND="python? 2"
@@ -27,14 +27,21 @@ RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
 PYTHON_MODNAME="google/protobuf"
 DISTUTILS_SRC_TEST="setup.py"
 
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
 
-	use python && {
+	if use python; then
 		python_convert_shebangs -r 2 .
 		distutils_src_prepare
-	}
+	fi
 }
 
 src_compile() {
@@ -59,6 +66,16 @@ src_compile() {
 
 	if use emacs; then
 		elisp-compile "${S}/editors/protobuf-mode.el" || die "elisp-compile failed!"
+	fi
+}
+
+src_test() {
+	emake check
+
+	if use python; then
+		 pushd python
+		 distutils_src_test
+		 popd
 	fi
 }
 
@@ -91,20 +108,6 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins -r examples/* || die "doins examples failed"
 	fi
-}
-
-src_test() {
-	emake check
-
-	if use python; then
-		 pushd python
-		 distutils_src_test
-		 popd
-	fi
-}
-
-pkg_setup() {
-	use python && python_set_active_version 2
 }
 
 pkg_postinst() {

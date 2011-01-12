@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.22 2010/12/15 12:42:26 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.23 2011/01/12 20:47:56 arfrever Exp $
+
+  12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  protobuf-2.3.0.ebuild, protobuf-2.3.0-r1.ebuild:
+  Fix deprecation warnings.
 
   15 Dec 2010; Markos Chandras <hwoarang@gentoo.org> protobuf-2.3.0-r1.ebuild:
   Stable on amd64 wrt bug #348574
