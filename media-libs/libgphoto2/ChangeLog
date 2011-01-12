@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgphoto2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.182 2010/11/21 22:29:53 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.183 2011/01/12 22:14:05 eva Exp $
+
+  12 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libgphoto2-2.4.10.ebuild:
+  Change selective cameras build logic. Builds all when CAMERAS is set to *,
+  nothing if empty and only the ones specified otherwise in order to not
+  violate package manager handling, bug #346491.
 
 *libgphoto2-2.4.10 (21 Nov 2010)
 
