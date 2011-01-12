@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.17 2011/01/10 18:02:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.18 2011/01/12 16:59:04 hwoarang Exp $
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ruby-openid-2.1.8.ebuild:
+  Stable on amd64 wrt bug #351323
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org> ruby-openid-2.1.8.ebuild:
   Keyword ~x86-macos.
