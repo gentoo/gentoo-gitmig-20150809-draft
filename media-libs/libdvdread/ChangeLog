@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdread
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.72 2010/11/05 18:06:20 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.73 2011/01/12 20:49:44 grobian Exp $
+
+  12 Jan 2011; Fabian Groffen <grobian@gentoo.org>
+  libdvdread-4.1.3_p1168.ebuild, libdvdread-4.1.3_p1217.ebuild:
+  Marked ~x86-solaris
 
   05 Nov 2010; Mark Loeser <halcy0n@gentoo.org>
   libdvdread-4.1.3_p1168.ebuild:
