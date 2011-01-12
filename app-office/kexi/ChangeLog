@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.101 2010/11/04 13:42:56 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.102 2011/01/12 20:02:43 dilfridge Exp $
+
+  12 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> kexi-2.2.2.ebuild:
+  Drop dependency on kchart, that ebuild is only a dummy anyway
 
   04 Nov 2010; Markos Chandras <hwoarang@gentoo.org> kexi-2.2.2.ebuild:
   Stable on amd64 wrt bug #340070

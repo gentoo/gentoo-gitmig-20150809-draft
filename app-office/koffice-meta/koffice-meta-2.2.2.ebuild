@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.2.2.ebuild,v 1.3 2010/11/04 13:45:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.2.2.ebuild,v 1.4 2011/01/12 20:08:41 dilfridge Exp $
 
 EAPI=2
 
@@ -14,10 +14,9 @@ IUSE="nls reports"
 
 RDEPEND="
 	>=app-office/karbon-${PV}:${SLOT}
-	>=app-office/kchart-${PV}:${SLOT}[reports?]
 	>=app-office/kexi-${PV}:${SLOT}
 	>=app-office/koffice-data-${PV}:${SLOT}
-	>=app-office/koffice-libs-${PV}:${SLOT}
+	>=app-office/koffice-libs-${PV}:${SLOT}[reports?]
 	>=app-office/kpresenter-${PV}:${SLOT}
 	>=app-office/krita-${PV}:${SLOT}
 	>=app-office/kspread-${PV}:${SLOT}

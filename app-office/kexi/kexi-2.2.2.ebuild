@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.3 2010/11/04 13:42:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.4 2011/01/12 20:02:43 dilfridge Exp $
 
 EAPI="2"
 
@@ -19,7 +19,6 @@ DEPEND="
 	mysql? ( virtual/mysql )
 	postgres? ( =dev-libs/libpqxx-2.6* )
 	reports? (
-		~app-office/kchart-${PV}:${SLOT}[reports]
 		~app-office/koffice-libs-${PV}:${SLOT}[reports]
 	)
 	xbase? ( dev-db/xbase )

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-meta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.107 2010/11/16 23:14:35 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/ChangeLog,v 1.108 2011/01/12 20:08:41 dilfridge Exp $
+
+  12 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  koffice-meta-2.2.2.ebuild:
+  Drop dependency on kchart, that ebuild is only a dummy anyway
 
   16 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   -koffice-meta-2.1.0.ebuild:
