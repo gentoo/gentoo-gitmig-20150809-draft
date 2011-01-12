@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.5.8.ebuild,v 1.1 2010/12/05 14:37:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.5.12.ebuild,v 1.1 2011/01/12 05:45:55 nirbheek Exp $
 
 EAPI="2"
 
@@ -10,9 +10,10 @@ DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="debug doc +gtk +introspection"
+IUSE="debug doc +introspection"
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
+# We always use the gdk-pixbuf backend now since it's been split out
 RDEPEND=">=dev-libs/glib-2.26
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.20[introspection?]
@@ -29,9 +30,9 @@ RDEPEND=">=dev-libs/glib-2.26
 	>=x11-libs/libXfixes-3
 	>=x11-libs/libXcomposite-0.4
 
-	gtk? ( || (
-		x11-libs/gdk-pixbuf
-		>=x11-libs/gtk+-2.0 ) )
+	|| ( x11-libs/gdk-pixbuf
+		 >=x11-libs/gtk+-2.0 )
+
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 DEPEND="${RDEPEND}
@@ -55,6 +56,7 @@ src_configure() {
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
 	# XXX: Profiling, coverage disabled for now
 	# XXX: What about eglx/eglnative/opengl-egl-xlib/osx/wayland/etc flavours?
+	#      Uses gudev-1.0 and libxkbcommon for eglnative/cex1000
 	local myconf="
 		--enable-debug=minimum
 		--enable-cogl-debug=minimum
@@ -66,14 +68,7 @@ src_configure() {
 		--with-flavour=glx
 		--with-imagebackend=gdk-pixbuf
 		$(use_enable introspection)
-		$(use_enable doc docs)
-		$(use_enable doc cogl2-reference)"
-
-	if ! use gtk; then
-		myconf="${myconf} --with-imagebackend=internal"
-		# Internal image backend is experimental
-		ewarn "You have selected the experimental internal image backend"
-	fi
+		$(use_enable doc docs)"
 
 	if use debug; then
 		myconf="${myconf}
