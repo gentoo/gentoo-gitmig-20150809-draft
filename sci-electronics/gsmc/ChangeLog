@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gsmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/ChangeLog,v 1.1 2011/01/02 15:59:14 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/ChangeLog,v 1.2 2011/01/12 22:21:26 rafaelmartins Exp $
+
+*gsmc-1.1-r1 (12 Jan 2011)
+
+  12 Jan 2011; Rafael G. Martins <rafaelmartins@gentoo.org> -gsmc-1.1.ebuild,
+  +gsmc-1.1-r1.ebuild, +files/gsmc-1.1-autotools.patch:
+  Revision bump. Fixed bug #351471, thanks to flameeyes.
 
 *gsmc-1.1 (02 Jan 2011)
 

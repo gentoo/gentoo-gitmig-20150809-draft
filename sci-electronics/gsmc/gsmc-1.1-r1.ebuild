@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/gsmc-1.1.ebuild,v 1.1 2011/01/02 15:59:14 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/gsmc-1.1-r1.ebuild,v 1.1 2011/01/12 22:21:26 rafaelmartins Exp $
 
 EAPI="2"
+
+inherit autotools eutils
 
 DESCRIPTION="A GTK program for doing Smith Chart calculations"
 HOMEPAGE="http://www.qsl.net/ik5nax/"
@@ -13,9 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/glib
+CDEPEND="dev-libs/glib
 	x11-libs/gtk+:2"
-RDEPEND="${DEPEND}"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-autotools.patch"
+	eautoreconf
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die
