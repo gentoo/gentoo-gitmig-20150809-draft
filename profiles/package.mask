@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12351 2011/01/12 18:37:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12352 2011/01/12 20:20:54 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (12 Jan 2011)
+# Starting with KOffice version 2.2.0, the functionality of app-office/kchart
+# is provided by the app-office/koffice-libs ebuild. If you still have 
+# >=app-office/kchart-2.2.0 installed, please just unmerge it (it is only a dummy).
+>=app-office/kchart-2.2.0
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (12 Jan 2011)
 # Amarok 2.4.0 not released yet
