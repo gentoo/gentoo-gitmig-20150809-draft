@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5_rc.ebuild,v 1.1 2010/12/30 07:26:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.ebuild,v 1.1 2011/01/12 23:40:37 radhermit Exp $
 
 EAPI="2"
 
@@ -31,6 +31,8 @@ need_php_httpd
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	webapp_pkg_setup
+
 	use mysql && require_php_with_any_use mysql mysqli
 
 	# add some warnings about optional functionality
@@ -39,8 +41,6 @@ pkg_setup() {
 		ewarn "Recompile PHP with either gd or gd-external in USE if you want this feature."
 		ewarn
 	fi
-
-	webapp_pkg_setup
 }
 
 src_prepare() {
