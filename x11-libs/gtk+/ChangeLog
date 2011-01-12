@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.483 2011/01/03 13:33:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.484 2011/01/12 16:24:39 eva Exp $
+
+  12 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> gtk+-2.22.1-r1.ebuild:
+  Always apply multilib patch, will avoid falling into bug #288549 again, and
+  handle file move in postinst as well. Add some needed die statements.
+  Mutualize build directory removal code. Insert gtkrc at the proper location,
+  bug #288549. Also generate gtk.immodules file, there is no reason the
+  directory would not exist. Another attemp at making testsuite run
+  successfully for everyone, bug #285687. Pin gdk-pixbuf dependency to slot 2.
+  Add gdk-pixbuf split handling in postinst.
 
   03 Jan 2011; Fabian Groffen <grobian@gentoo.org> gtk+-2.22.1-r1.ebuild:
   Don't use ED with DESTDIR
