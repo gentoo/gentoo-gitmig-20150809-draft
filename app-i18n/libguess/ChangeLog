@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.1 2010/08/13 22:18:51 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.2 2011/01/12 15:14:17 xarthisius Exp $
+
+  12 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> libguess-1.0.ebuild:
+  keyword ~ppc,~ppc64 wrt #348192
 
 *libguess-1.0 (13 Aug 2010)
 
