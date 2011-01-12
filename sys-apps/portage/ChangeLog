@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.788 2011/01/07 01:05:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.789 2011/01/12 16:03:22 zmedico Exp $
+
+*portage-2.2.0_alpha15 (12 Jan 2011)
+
+  12 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha15.ebuild:
+  2.2.0_alpha15 version bump. This includes all of the fixes in
+  portage-2.1.9.31. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.31 (12 Jan 2011)
+
+  12 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.31.ebuild:
+  2.1.9.31 version bump. This fixes bug #211529 (econf looks in configure
+  --help output for disable-dependency-tracking in EAPI 4). Bug #349307
+  tracks all bugs fixed since 2.1.9.25.
+
+  12 Jan 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.29.ebuild,
+  -portage-2.1.9.30.ebuild, -portage-2.2.0_alpha13.ebuild,
+  -portage-2.2.0_alpha14.ebuild:
+  Remove old versions.
 
 *portage-2.2.0_alpha14 (07 Jan 2011)
 
