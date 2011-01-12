@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.6 2010/09/24 13:32:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.7 2011/01/12 08:19:21 jlec Exp $
 
 EAPI="3"
 
@@ -60,6 +60,7 @@ RDEPEND="
 	net-dns/libidn"
 DEPEND="${RDEPEND}
 	dev-lang/swig
+	sys-devel/bc
 	test? ( dev-scheme/greg )"
 
 S="${WORKDIR}/${MY_P}"
