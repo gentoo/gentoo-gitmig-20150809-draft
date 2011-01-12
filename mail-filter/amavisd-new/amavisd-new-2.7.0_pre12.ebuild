@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre12.ebuild,v 1.1 2010/12/30 07:02:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre12.ebuild,v 1.2 2011/01/12 12:31:22 eras Exp $
 
 EAPI=3
 
@@ -49,6 +49,7 @@ RDEPEND="${DEPEND}
 	sys-apps/file
 	>=sys-libs/db-4.4.20
 	dev-perl/BerkeleyDB
+	dev-perl/Convert-BinHex
 	>=dev-perl/Mail-DKIM-0.31
 	virtual/mta
 	ldap? ( >=dev-perl/perl-ldap-0.33 )
