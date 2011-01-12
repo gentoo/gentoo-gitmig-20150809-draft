@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.6.6.ebuild,v 1.2 2011/01/10 10:54:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.6.6.ebuild,v 1.3 2011/01/12 07:23:56 dev-zero Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -57,8 +57,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_pkg_postinst
-
 	if use apache2 ; then
 		elog "Two Apache modules have been installed: mod_uwsgi and mod_Ruwsgi."
 		elog "You can enable them with -DUWSGI or -DRUWSGI in /etc/conf.d/apache2."

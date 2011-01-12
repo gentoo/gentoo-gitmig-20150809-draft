@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.3 2011/01/10 10:54:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.4 2011/01/12 07:23:56 dev-zero Exp $
+
+  12 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> uwsgi-0.9.6.6.ebuild,
+  files/uwsgi-0.9.6.6-gentoo-gcc.patch:
+  Updated patch to use 'gcc -dumpversion' instead of 'gcc -v'.
 
   10 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> files/42_mod_uwsgi.conf,
   uwsgi-0.9.6.6.ebuild:
