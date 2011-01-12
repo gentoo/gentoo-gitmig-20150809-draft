@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r2.ebuild,v 1.5 2011/01/10 18:44:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r2.ebuild,v 1.6 2011/01/12 10:11:27 haubi Exp $
 
 EAPI=3
 
@@ -162,6 +162,9 @@ exportmakeopts() {
 #	fi
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
 		myopts="${myopts} NO_NSEC=YesPlease"
+	fi
+	if [[ ${CHOST} == *-*-aix* ]]; then
+		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
 	fi
 
 	has_version '>=app-text/asciidoc-8.0' \
