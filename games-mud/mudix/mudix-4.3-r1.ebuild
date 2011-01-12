@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/mudix-4.3-r1.ebuild,v 1.5 2009/02/08 16:56:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/mudix-4.3-r1.ebuild,v 1.6 2011/01/12 22:55:17 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,15 +16,14 @@ IUSE=""
 
 DEPEND=""
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-as-needed.patch
-}
+PATCHES=( "${FILESDIR}"/${P}-as-needed.patch )
 
 src_compile() {
-	emake -C src O_FLAGS="${CFLAGS}" || die "emake failed"
+	emake -C src O_FLAGS="${CFLAGS}" || die
 }
 
 src_install () {
-	dogamesbin mudix || die "dogamesbin failed"
+	dogamesbin mudix || die
 	dodoc README sample.usr
+	prepgamesdirs
 }
