@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/ksshaskpass
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksshaskpass/ChangeLog,v 1.1 2011/01/12 23:34:51 tampakrap Exp $
+
+*ksshaskpass-0.5.3 (12 Jan 2011)
+
+  12 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +ksshaskpass-0.5.3.ebuild, +metadata.xml:
+  Initial commit, ebuild by Leo, Jean-Baptiste Rouault and Vadim Fint, bug
+  159684
+
