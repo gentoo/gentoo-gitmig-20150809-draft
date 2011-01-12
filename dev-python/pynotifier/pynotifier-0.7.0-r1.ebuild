@@ -1,9 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r1.ebuild,v 1.4 2009/10/10 10:05:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r1.ebuild,v 1.5 2011/01/12 20:57:08 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -20,8 +22,6 @@ DEPEND=""
 RDEPEND="dev-python/twisted
 	gtk? ( dev-python/pygobject )
 	qt4? ( dev-python/PyQt4[X] )"
-
-RESTRICT_PYTHON_ABIS="3*"
 
 PYTHON_MODNAME="notifier"
 
