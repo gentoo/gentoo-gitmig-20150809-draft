@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.1 2010/09/26 22:14:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.2 2011/01/13 20:10:52 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -22,9 +22,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.4.16
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
-	gnome? (
-		>=gnome-base/libbonobo-2
-		>=gnome-base/gnome-vfs-2.2 )
+	gnome? ( >=gnome-base/libbonobo-2 )
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? (
 		>=dev-python/pygobject-2.10
