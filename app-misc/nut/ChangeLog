@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.12 2011/01/13 13:41:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.13 2011/01/13 14:35:12 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> nut-14.1.ebuild:
+  ppc stable wrt #351547
 
   13 Jan 2011; Markos Chandras <hwoarang@gentoo.org> nut-14.1.ebuild:
   Stable on amd64 wrt bug #351547
