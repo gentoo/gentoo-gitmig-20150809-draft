@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.01-r1.ebuild,v 1.6 2010/04/06 15:17:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.01-r1.ebuild,v 1.7 2011/01/13 13:50:45 c1pher Exp $
 
 EAPI="3"
 
@@ -26,8 +26,13 @@ src_prepare() {
 	#Fixing pre-stripped files
 	sed -i -e "/STRIP/d" mosmlyac/Makefile || die "sed Makefile failed"
 	sed -i -e "/STRIP/d" runtime/Makefile || die "sed Makefile failed"
-
-	sed -i -e "s|^CPP=/lib/cpp|CPP=${EPREFIX}/usr/bin/cpp|" Makefile.inc
+	sed -i -e 's/make/$(MAKE)/g' Makefile runtime/Makefile mosmlyac/Makefile \
+		mosmllib/Makefile  compiler/Makefile toolssrc/Makefile lex/Makefile \
+		launch/Makefile doc/Makefile config/Makefile || die "Sed failed"
+	sed -i -e 's/$(LD)/$(LD) $(LDFLAGS)/g' runtime/Makefile || die "Sed failed"
+	sed -i -e "s|^CPP=/lib/cpp|CPP=${EPREFIX}/usr/bin/cpp|" Makefile.inc \
+		|| die "Sed failed"
+	sed -i -e 's/$(CC) $(CFLAGS)/$(CC) $(LDFLAGS)/' mosmlyac/Makefile || die "Sed failed"
 }
 
 src_configure() { :; }
@@ -38,15 +43,15 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 MOSMLHOME="${ED}"/opt/mosml install || die
-	rm "${ED}"opt/mosml/lib/camlrunm # This is a bad symlink
+	emake MOSMLHOME="${ED}"/opt/mosml install || die
+	rm "${ED}"opt/mosml/lib/camlrunm || die # This is a bad symlink
 	echo "#!${EPREFIX}/opt/mosml/bin/camlrunm" > "${ED}"opt/mosml/lib/header
 
-	dodoc  ../README
-	dosym  /opt/mosml/bin/mosml     /usr/bin/mosml
-	dosym  /opt/mosml/bin/mosmlc    /usr/bin/mosmlc
-	dosym  /opt/mosml/bin/mosmllex  /usr/bin/mosmllex
-	dosym  /opt/mosml/bin/mosmlyac  /usr/bin/mosmlyac
-	dosym  /opt/mosml/bin/camlrunm  /usr/bin/camlrunm
-	dosym  /opt/mosml/bin/camlrunm  /opt/mosml/lib/camlrunm
+	dodoc  ../README || die
+	dosym  /opt/mosml/bin/mosml     /usr/bin/mosml || die
+	dosym  /opt/mosml/bin/mosmlc    /usr/bin/mosmlc || die
+	dosym  /opt/mosml/bin/mosmllex  /usr/bin/mosmllex || die
+	dosym  /opt/mosml/bin/mosmlyac  /usr/bin/mosmlyac || die
+	dosym  /opt/mosml/bin/camlrunm  /usr/bin/camlrunm || die
+	dosym  /opt/mosml/bin/camlrunm  /opt/mosml/lib/camlrunm || die
 }

@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/mosml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.13 2010/04/06 09:13:55 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.14 2011/01/13 13:50:45 c1pher Exp $
+
+  13 Jan 2011; Dane Smith <c1pher@gentoo.org> mosml-2.01-r1.ebuild:
+  QA: Fix LDFLAGS respect wrt bug 351040.
+  *Fix lack of jobserver respect.
+  *Remove what I believe to be an unnecessary -j1 on emake install. I was
+  unable
+  to replecate a parallel-make issue, and was unable to find a bug
+  specifying
+  there ever was one.
+  *Ebuild cleanup.
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> mosml-2.01-r1.ebuild:
   Bump to EAPI=3, add prefix keywords
