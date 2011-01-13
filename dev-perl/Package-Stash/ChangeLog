@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.10 2011/01/13 20:11:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.11 2011/01/13 20:56:18 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Package-Stash-0.13.ebuild:
+  Marking Package-Stash-0.13 ~ppc for bug 343479
 
 *Package-Stash-0.230 (13 Jan 2011)
 
