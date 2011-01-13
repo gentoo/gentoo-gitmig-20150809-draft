@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-modules
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.62 2010/11/21 15:58:59 vadimk Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.63 2011/01/13 21:01:38 vadimk Exp $
+
+*vmware-modules-1.0.0.25-r3 (13 Jan 2011)
+
+  13 Jan 2011; Vadim Kuznetsov <vadimk@gentoo.org> +files/1.0.0.25-sema.patch,
+  +vmware-modules-1.0.0.25-r3.ebuild:
+  Bug 345145 and 349649 and 351592
+  Thanks to Mateusz Dziadko, Dane Smith and bugs et al.
 
 *vmware-modules-1.0.0.24-r2 (21 Nov 2010)
 
