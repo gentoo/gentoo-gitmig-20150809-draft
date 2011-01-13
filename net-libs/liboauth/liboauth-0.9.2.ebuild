@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.1.ebuild,v 1.1 2011/01/12 23:21:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.2.ebuild,v 1.1 2011/01/13 22:50:03 flameeyes Exp $
 
 EAPI=2
-
-inherit eutils autotools
 
 DESCRIPTION="C library implementing the OAuth secure authentication protocol"
 HOMEPAGE="http://liboauth.sourceforge.net/"
@@ -42,11 +40,6 @@ DEPEND="${CDEPEND}
 		media-fonts/freefont-ttf
 	)
 	dev-util/pkgconfig"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-ldflags.patch"
-	eautoreconf
-}
 
 src_configure() {
 	local myconf=
