@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.2 2011/01/12 15:14:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.3 2011/01/13 15:25:38 jer Exp $
+
+  13 Jan 2011; Jeroen Roovers <jer@gentoo.org> libguess-1.0.ebuild:
+  Marked ~hppa (bug #348192).
 
   12 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> libguess-1.0.ebuild:
   keyword ~ppc,~ppc64 wrt #348192
