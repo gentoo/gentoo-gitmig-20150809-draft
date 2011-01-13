@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Ident
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.24 2010/11/13 19:46:33 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.25 2011/01/13 17:01:05 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Net-Ident-1.23.ebuild:
+  Marking Net-Ident-1.23 ppc stable for bug 341865
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> Net-Ident-1.23.ebuild:
   ia64/sparc stable wrt #341865
