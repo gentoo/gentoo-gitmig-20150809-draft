@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/viewnior
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.6 2010/10/10 18:14:24 ricmm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.7 2011/01/13 18:53:15 ricmm Exp $
+
+*viewnior-1.1 (13 Jan 2011)
+
+  13 Jan 2011; Ricardo Mendoza <ricmm@gentoo.org> +viewnior-1.1.ebuild:
+  Version bump. New features, Gnome 3.0 ready.
 
   10 Oct 2010; Ricardo Mendoza <ricmm@gentoo.org> metadata.xml:
   Taking over package.
