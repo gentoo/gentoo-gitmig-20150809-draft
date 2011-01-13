@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.112 2011/01/09 18:19:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.113 2011/01/13 17:16:22 jer Exp $
+
+  13 Jan 2011; Jeroen Roovers <jer@gentoo.org> groff-1.20.1-r3.ebuild:
+  Stable for HPPA (bug #350491).
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> groff-1.20.1-r3.ebuild:
   alpha/arm/ia64/m68k/s390/sh stable wrt #350491
