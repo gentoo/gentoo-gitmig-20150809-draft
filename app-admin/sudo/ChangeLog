@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.251 2011/01/12 22:54:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.252 2011/01/13 08:02:38 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> sudo-1.7.4_p5.ebuild:
+  ppc/ppc64 stable wrt #351490
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> sudo-1.7.4_p5.ebuild:
   Stable on amd64 wrt bug #351490
