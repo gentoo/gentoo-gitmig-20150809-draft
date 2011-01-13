@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/goffice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.81 2010/12/05 17:54:26 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.82 2011/01/13 19:59:45 pacho Exp $
+
+  13 Jan 2011; Pacho Ramos <pacho@gentoo.org> -goffice-0.8.11.ebuild,
+  goffice-0.8.12.ebuild:
+  libgsf with gnome support is no longer needed as reported in bug #351530 by
+  Xake and reviewed in configure.in.
 
   05 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> goffice-0.8.12.ebuild:
   Pin glib/gtk+ dependencies to SLOT 2.
