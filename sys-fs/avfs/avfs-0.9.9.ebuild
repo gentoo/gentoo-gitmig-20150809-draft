@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.8 2010/12/28 01:25:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.9 2011/01/13 20:47:51 ranger Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/avf/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 x86"
 IUSE="static-libs +lzma"
 
 DEPEND=">=sys-fs/fuse-2.4
