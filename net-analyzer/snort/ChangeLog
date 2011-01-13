@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.169 2010/12/03 18:30:41 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.170 2011/01/13 13:43:37 patrick Exp $
+
+*snort-2.9.0.3 (13 Jan 2011)
+
+  13 Jan 2011; Patrick Lauer <patrick@gentoo.org> snort-2.8.5.1.ebuild,
+  +snort-2.9.0.3.ebuild:
+  Bump for #351459, dropping x86 stable keyword as libprelude dropped it.
 
 *snort-2.9.0.2 (03 Dec 2010)
 
