@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gtk-vnc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.54 2010/11/20 23:09:02 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.55 2011/01/13 22:08:01 cardoe Exp $
+
+*gtk-vnc-0.4.2-r1 (13 Jan 2011)
+
+  13 Jan 2011; Doug Goldstein <cardoe@gentoo.org>
+  -gtk-vnc-0.4.2_pre20100917.ebuild, +gtk-vnc-0.4.2-r1.ebuild,
+  +files/gtk-vnc-0.4.2-memory-leak-fix.patch:
+  Revision bump to fix issue where memory wasn't being unreferenced so that the
+  glib loop was actually slowing down significantly.
 
   20 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gtk-vnc-0.4.2.ebuild:
   Add missing Text-CSV dependency, bug #345857. Thanks to Diego for reporting.
