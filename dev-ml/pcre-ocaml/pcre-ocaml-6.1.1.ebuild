@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-6.1.1.ebuild,v 1.3 2011/01/02 15:06:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-6.1.1.ebuild,v 1.4 2011/01/13 22:28:00 ranger Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 DEPEND="${RDEPEND}"
 SLOT="0"
 IUSE="examples +ocamlopt"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-6.0.1-linkopts.patch"
