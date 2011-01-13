@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.66 2010/11/27 20:32:09 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.67 2011/01/13 20:58:18 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Moose-1.19.ebuild:
+  Marking Moose-1.19 ~ppc for bug 343479
 
 *Moose-1.21 (27 Nov 2010)
 
