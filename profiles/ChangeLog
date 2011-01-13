@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4932 2011/01/12 20:20:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4933 2011/01/13 14:52:00 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> desc/xfce_plugins.desc:
+  Update xfce_plugins.desc for app-office/orage.
 
   12 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Starting with KOffice version 2.2.0, the functionality of
