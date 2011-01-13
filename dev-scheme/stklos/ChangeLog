@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/stklos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.10 2011/01/13 15:52:39 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/ChangeLog,v 1.11 2011/01/13 16:02:00 hkbst Exp $
+
+  13 Jan 2011; Marijn Schouten <hkBst@gentoo.org> -stklos-0.98.ebuild,
+  -stklos-1.00.ebuild, -files/multilib.patch, -files/stklos-ldflags.patch:
+  cleanup old versions
 
 *stklos-1.01 (13 Jan 2011)
 
