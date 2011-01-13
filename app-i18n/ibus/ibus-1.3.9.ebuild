@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9.ebuild,v 1.1 2010/11/25 16:48:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9.ebuild,v 1.2 2011/01/13 14:51:08 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -32,10 +32,10 @@ RDEPEND=">=dev-libs/glib-2.18
 		dev-python/notify-python
 		>=dev-python/dbus-python-0.83
 	)
-	nls? ( virtual/libintl )
-	vala? ( dev-lang/vala )"
+	nls? ( virtual/libintl )"
 #	X? ( x11-libs/libX11 )
 #	gtk? ( x11-libs/gtk+:2 x11-libs/gtk+:3 )
+#	vala? ( dev-lang/vala )
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-perl/XML-Parser
