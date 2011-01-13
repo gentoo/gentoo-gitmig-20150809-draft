@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/frescobaldi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.4 2011/01/03 20:28:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.5 2011/01/13 03:14:43 tampakrap Exp $
+
+*frescobaldi-1.2.0 (13 Jan 2011)
+
+  13 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -frescobaldi-1.0.2.ebuild, -frescobaldi-1.0.3.ebuild,
+  +frescobaldi-1.2.0.ebuild:
+  Version bump, EAPI3, add missing pyqt4 dep
 
 *frescobaldi-1.0.3 (03 Jan 2011)
 
