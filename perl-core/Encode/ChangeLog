@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.12 2011/01/02 22:26:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.13 2011/01/13 10:32:23 tove Exp $
+
+*Encode-2.420 (13 Jan 2011)
+
+  13 Jan 2011; Torsten Veller <tove@gentoo.org> +Encode-2.420.ebuild:
+  Version bump
 
   02 Jan 2011; Markos Chandras <hwoarang@gentoo.org> Encode-2.40-r1.ebuild:
   Stable on amd64 wrt bug #349266
