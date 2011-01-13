@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.01_beta1.ebuild,v 1.1 2011/01/12 07:39:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.01_beta1.ebuild,v 1.2 2011/01/13 05:49:59 keri Exp $
 
 EAPI=2
 
@@ -37,6 +37,7 @@ TESTDIR="${WORKDIR}"/${PN}-tests-${MY_PV/_/-}
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
+	cd "${WORKDIR}"
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
 	epatch "${WORKDIR}"/${PV}
