@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-0.9.98.ebuild,v 1.1 2010/12/08 16:55:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-0.9.98-r1.ebuild,v 1.1 2011/01/13 06:59:29 tampakrap Exp $
 
 EAPI=3
 
@@ -19,8 +19,20 @@ HOMEPAGE="http://choqok.gnufolks.org/"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="debug +handbook"
+IUSE="debug +handbook indicate"
 
 DEPEND="dev-libs/qjson
-		>=dev-libs/qoauth-1.0.1"
+		>=dev-libs/qoauth-1.0.1
+		indicate? ( dev-libs/libindicate-qt )
+"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-libindicate.patch" )
+
+src_prepare(){
+	mycmakeargs=(
+		$(cmake-utils_use indicate QTINDICATE_ENABLE)
+	)
+
+	kde4-base_src_prepare
+}
