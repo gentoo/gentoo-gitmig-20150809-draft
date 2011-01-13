@@ -10,4 +10,7 @@
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
+<use>
+  <flag name='twitgin'>Enable graphical plugin for Gtk+ interface of Pidgin.</flag>
+</use>
 </pkgmetadata>
