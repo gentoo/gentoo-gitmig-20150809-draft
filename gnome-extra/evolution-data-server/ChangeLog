@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.283 2011/01/03 14:15:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.284 2011/01/13 15:13:10 eva Exp $
+
+  13 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  evolution-data-server-2.32.1-r1.ebuild,
+  +files/evolution-data-server-2.32.1-libgdata07.patch:
+  Backport upstream work to fix build with >=libgdata-0.7.
 
   03 Jan 2011; Pacho Ramos <pacho@gentoo.org>
   evolution-data-server-2.32.1-r1.ebuild,
