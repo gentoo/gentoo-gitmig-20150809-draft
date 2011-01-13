@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.31 2011/01/07 08:47:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.32 2011/01/13 19:43:00 pacho Exp $
+
+  13 Jan 2011; Pacho Ramos <pacho@gentoo.org> qof-0.7.5-r1.ebuild,
+  qof-0.8.1.ebuild:
+  qof requires glib as reported in bug #351277 by j.habenicht and confirmed
+  looking at qof.spec in Fedora. Also fix DEPEND (bug #351278).
 
   07 Jan 2011; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   Drop maintainership

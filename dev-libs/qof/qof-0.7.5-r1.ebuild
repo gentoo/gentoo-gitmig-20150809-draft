@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5-r1.ebuild,v 1.6 2010/11/01 14:19:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5-r1.ebuild,v 1.7 2011/01/13 19:43:00 pacho Exp $
 
 EAPI=1
 
@@ -18,8 +18,9 @@ KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE="doc nls sqlite"
 
 RDEPEND="dev-libs/libxml2
+	dev-libs/glib:2
 	sqlite? ( dev-db/sqlite:0 )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	!dev-libs/qof:2
 	doc? ( app-doc/doxygen )"
