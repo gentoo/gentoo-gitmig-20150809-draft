@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.6 2010/10/31 09:14:19 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.7 2011/01/13 20:54:06 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org>
+  Package-DeprecationManager-0.10.ebuild:
+  Marking Package-DeprecationManager-0.10 ~ppc for bug 343479
 
 *Package-DeprecationManager-0.10 (31 Oct 2010)
 
