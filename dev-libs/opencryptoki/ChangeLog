@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/opencryptoki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.10 2011/01/07 22:53:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.11 2011/01/13 23:39:07 flameeyes Exp $
+
+*opencryptoki-2.3.3 (13 Jan 2011)
+
+  13 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +opencryptoki-2.3.3.ebuild:
+  Version bump; some of the patches have been merged in but we still have two
+  to apply until next version.
 
   07 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/opencryptoki-2.2.4.1-tpm_util.c.patch,
