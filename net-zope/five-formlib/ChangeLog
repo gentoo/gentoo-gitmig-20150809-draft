@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/five-formlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.5 2010/11/28 22:11:19 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.6 2011/01/13 22:29:22 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  five-formlib-1.0.3.ebuild:
+  Marked ~ppc wrt #297734
 
   28 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   five-formlib-1.0.3.ebuild:
