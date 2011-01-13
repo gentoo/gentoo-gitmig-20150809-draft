@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Text-Netstring
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Netstring/ChangeLog,v 1.1 2011/01/13 20:53:13 robbat2 Exp $
+
+*Text-Netstring-0.07 (13 Jan 2011)
+
+  13 Jan 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +Text-Netstring-0.07.ebuild, +metadata.xml:
+  Initial commit.
+
