@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/libnatspec-0.2.6.ebuild,v 1.5 2011/01/09 14:50:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/libnatspec-0.2.6.ebuild,v 1.6 2011/01/13 15:01:54 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/natspec/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 IUSE="doc python"
 
 RDEPEND="python? ( >=dev-lang/python-2.3 )
