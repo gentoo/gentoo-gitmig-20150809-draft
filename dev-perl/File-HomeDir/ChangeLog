@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.69 2010/12/03 02:20:09 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.70 2011/01/13 16:58:06 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> File-HomeDir-0.93.ebuild:
+  Marking File-HomeDir-0.93 ppc stable for bug 341865
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> File-HomeDir-0.93.ebuild:
   add ~arm (bug 302981)
