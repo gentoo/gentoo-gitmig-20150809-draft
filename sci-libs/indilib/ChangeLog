@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/indilib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.14 2010/08/20 09:21:12 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.15 2011/01/13 13:19:20 scarabeus Exp $
+
+*indilib-0.7.2 (13 Jan 2011)
+
+  13 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.7.2-fix_linking_pthread.patch, +files/0.7.2-fix_pkgconfig.patch,
+  +indilib-0.7.2.ebuild:
+  Version bump. Per bug #351398.
 
 *indilib-0.6.2 (20 Aug 2010)
 
