@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.2 2011/01/13 17:01:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.3 2011/01/13 22:31:58 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -30,7 +30,6 @@ DESCRIPTION="Python modules for starting virtualized guest installations"
 HOMEPAGE="http://virt-manager.et.redhat.com/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=">=app-emulation/libvirt-0.7.0[python]
 	dev-python/urlgrabber"
