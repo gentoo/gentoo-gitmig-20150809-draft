@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.31 2010/11/26 11:23:56 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.32 2011/01/13 20:07:17 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> nant-0.86_beta1-r1.ebuild:
+  stable ppc, bug 344333
 
 *nant-0.90 (26 Nov 2010)
 
