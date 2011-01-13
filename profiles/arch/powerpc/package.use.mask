@@ -1,6 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.62 2010/12/27 22:41:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.63 2011/01/13 22:04:50 ranger Exp $
+
+# Brent Baude <ranger@gentoo.org> (13 Jan 2011)
+# no oracle stuff for powerpc
+net-im/ekg2 oracle
+
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
 # dev-libs/gobject-introspection is not keyworded, bug 348313
