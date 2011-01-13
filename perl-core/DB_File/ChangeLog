@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/DB_File
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.39 2010/01/17 12:56:51 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.40 2011/01/13 10:41:44 tove Exp $
+
+*DB_File-1.821 (13 Jan 2011)
+
+  13 Jan 2011; Torsten Veller <tove@gentoo.org> +DB_File-1.821.ebuild:
+  Version bump
 
   17 Jan 2010; Torsten Veller <tove@gentoo.org> -DB_File-1.815.ebuild,
   -DB_File-1.819.ebuild:
