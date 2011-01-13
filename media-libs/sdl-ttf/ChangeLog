@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-ttf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.49 2010/07/31 10:38:50 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.50 2011/01/13 16:27:49 mr_bones_ Exp $
+
+*sdl-ttf-2.0.10 (13 Jan 2011)
+
+  13 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +sdl-ttf-2.0.10.ebuild:
+  version bump
 
   31 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> sdl-ttf-2.0.9.ebuild:
   QA: Use correct enable call instead of with one.
