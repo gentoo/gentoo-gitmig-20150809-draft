@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mummer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.11 2009/10/29 02:21:12 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.12 2011/01/13 09:14:52 jlec Exp $
+
+*mummer-3.22-r1 (13 Jan 2011)
+
+  13 Jan 2011; Justin Lecher <jlec@gentoo.org> +files/3.22-ldflags.patch,
+  +files/3.22-prll.patch, -mummer-3.22.ebuild, +mummer-3.22-r1.ebuild:
+  Respecting *FLAGS, #335447; added real 64bit support, #351502
 
   28 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> mummer-3.22.ebuild:
   Set EAPI

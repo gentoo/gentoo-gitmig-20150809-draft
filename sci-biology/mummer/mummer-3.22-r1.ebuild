@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.22.ebuild,v 1.2 2009/10/29 02:21:12 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.22-r1.ebuild,v 1.1 2011/01/13 09:14:52 jlec Exp $
 
-EAPI="2"
+EAPI="3"
+
+inherit eutils flag-o-matic
 
 DESCRIPTION="A rapid whole genome aligner"
 HOMEPAGE="http://mummer.sourceforge.net/"
@@ -18,11 +20,18 @@ RDEPEND="app-shells/tcsh"
 
 S="${WORKDIR}/MUMmer${PV}"
 
-src_unpack() {
-	unpack ${A}
-	# Warning: package uses CPPFLAGS on c as well as cpp, despite the name
-	sed -i -e 's/CPPFLAGS =/CPPFLAGS = ${CFLAGS} /' \
-		-e 's/LDFLAGS  =$//' "${S}/Makefile" || die
+src_prepare() {
+	use amd64 && append-flags -DSIXTYFOURBITS
+
+	epatch \
+		"${FILESDIR}"/${PV}-prll.patch \
+		"${FILESDIR}"/${PV}-ldflags.patch
+
+	sed \
+		-e '/^CFLAGS/d' \
+		-e '/^CXXFLAGS/d' \
+		-e '/^LDFLAGS/d' \
+		-i Makefile || die
 }
 
 src_compile() {
@@ -47,7 +56,9 @@ src_install() {
 	insinto /usr/share/${PN}/lib
 	doins scripts/Foundation.pm || die
 
-	dodoc ACKNOWLEDGEMENTS ChangeLog README
+	dodoc ACKNOWLEDGEMENTS ChangeLog README || die
 	insinto /usr/share/doc/${PF}
-	use doc && doins -r docs
+	if use doc; then
+		doins -r docs || die
+	fi
 }
