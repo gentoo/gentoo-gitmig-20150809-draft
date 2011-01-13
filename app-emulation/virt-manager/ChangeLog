@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.36 2010/09/03 22:03:40 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.37 2011/01/13 16:16:35 cardoe Exp $
+
+*virt-manager-9999 (13 Jan 2011)
+
+  13 Jan 2011; Doug Goldstein <cardoe@gentoo.org> +virt-manager-9999.ebuild:
+  Add ebuild for live hg checkouts
 
   03 Sep 2010; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.5.ebuild:
   Fix app-emulation/virtinst depend
