@@ -1,0 +1,13 @@
+# ChangeLog for dev-vcs/mercurial-server
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/ChangeLog,v 1.1 2011/01/13 20:22:42 rafaelmartins Exp $
+
+*mercurial-server-9999 (13 Jan 2011)
+*mercurial-server-1.1 (13 Jan 2011)
+
+  13 Jan 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +mercurial-server-1.1.ebuild,
+  +files/mercurial-server-1.1_documentation.patch,
+  +mercurial-server-9999.ebuild, +metadata.xml:
+  Initial commit.
+
