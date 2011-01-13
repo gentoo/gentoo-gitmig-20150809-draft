@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0_rc5.ebuild,v 1.2 2011/01/06 20:15:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0_rc5.ebuild,v 1.3 2011/01/13 22:04:33 ranger Exp $
 
 EAPI=3
 inherit autotools-utils versionator
@@ -11,7 +11,7 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="expat gadu gif gnutls gpg gpm gsm gtk idn inotify jpeg ncurses nls
 	oracle perl python readline spell sqlite sqlite3 ssl threads unicode
 	xosd zlib"
