@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/patchage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.10 2010/10/09 13:31:13 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.11 2011/01/13 09:00:12 aballier Exp $
+
+*patchage-0.5.0 (13 Jan 2011)
+
+  13 Jan 2011; Alexis Ballier <aballier@gentoo.org> +patchage-0.5.0.ebuild:
+  version bump
 
 *patchage-0.4.5 (09 Oct 2010)
 
