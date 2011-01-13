@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.5 2011/01/08 18:47:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.6 2011/01/13 20:51:55 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Test-Fatal-0.003.ebuild:
+  Marking Test-Fatal-0.003 ~ppc for bug 343479
 
   08 Jan 2011; Jeroen Roovers <jer@gentoo.org> Test-Fatal-0.003.ebuild:
   Marked ~hppa (bug #350877).
