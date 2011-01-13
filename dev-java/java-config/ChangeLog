@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.258 2011/01/13 15:24:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.259 2011/01/13 20:36:48 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> java-config-2.1.11-r3.ebuild:
+  stable ppc, bug 351486
 
   13 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   java-config-2.1.11-r3.ebuild:
