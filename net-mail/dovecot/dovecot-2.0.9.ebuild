@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.8-r1.ebuild,v 1.1 2010/12/07 10:42:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.9.ebuild,v 1.1 2011/01/13 19:30:53 eras Exp $
 
 EAPI="3"
 
@@ -137,7 +137,6 @@ src_install () {
 	newinitd "${FILESDIR}"/dovecot.init-r2 dovecot
 
 	rm -rf "${ED}"/usr/share/doc/dovecot
-	rm -rf "${ED}"/usr/share/aclocal
 
 	dodoc AUTHORS NEWS README TODO || die "basic dodoc failed"
 	dodoc doc/*.{txt,cnf,xml,sh} || die "dodoc doc failed"
