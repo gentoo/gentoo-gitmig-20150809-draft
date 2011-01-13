@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.266 2011/01/11 18:58:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.267 2011/01/13 19:07:12 spatz Exp $
+
+*cairo-1.10.2-r1 (13 Jan 2011)
+
+  13 Jan 2011; Dror Levin <spatz@gentoo.org>
+  +files/cairo-1.10.0-buggy_gradients.patch, -cairo-1.10.2.ebuild,
+  +cairo-1.10.2-r1.ebuild:
+  Restore buggy_gradients.patch accidently removed by scarabeus.
 
 *cairo-1.10.2 (11 Jan 2011)
 
