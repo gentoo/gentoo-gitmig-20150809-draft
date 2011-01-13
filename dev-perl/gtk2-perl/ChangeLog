@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-perl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.117 2010/11/13 20:15:36 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.118 2011/01/13 17:06:57 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> gtk2-perl-1.222.ebuild:
+  Marking gtk2-perl-1.222 ppc stable for bug 341865
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> gtk2-perl-1.222.ebuild:
   alpha/ia64/sparc stable wrt #341865
