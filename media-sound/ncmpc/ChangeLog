@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.58 2010/12/31 11:55:34 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.59 2011/01/13 15:06:27 jer Exp $
+
+  13 Jan 2011; Jeroen Roovers <jer@gentoo.org> ncmpc-0.18.ebuild:
+  Stable for HPPA (bug #348746).
 
   31 Dec 2010; Thomas Kahle <tomka@gentoo.org> ncmpc-0.18.ebuild:
   x86 stable per bug 348746
