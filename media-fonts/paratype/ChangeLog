@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/paratype
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/paratype/ChangeLog,v 1.1 2011/01/13 23:53:20 dirtyepic Exp $
+
+*paratype-1 (13 Jan 2011)
+
+  13 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> +paratype-1.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by Azamat H. Hackimov in bug #298732.
+
