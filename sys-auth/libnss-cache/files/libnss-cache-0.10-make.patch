@@ -1,0 +1,27 @@
+diff -Nuar libnss-cache-0.10.orig/Makefile libnss-cache-0.10/Makefile
+--- libnss-cache-0.10.orig/Makefile	2011-01-10 19:56:01.000000000 +0000
++++ libnss-cache-0.10/Makefile	2011-01-13 06:18:03.630052109 +0000
+@@ -1,16 +1,17 @@
+-CC=gcc
++CC?=gcc
+ #CFLAGS=-Wall -Wstrict-prototypes -Werror -fPIC -DDEBUG -g -O0
+-CFLAGS=-Wall -Wstrict-prototypes -Werror -fPIC
++CFLAGS := $(CFLAGS) -Wall -Wstrict-prototypes -fPIC
++LDFLAGS+=
+ LIBRARY=libnss_cache.so.2.0
+ LINKS=libnss_cache.so.2 libnss_cache.so
+-DESTDIR=/
++DESTDIR?=
+ PREFIX=$(DESTDIR)/usr
+ BUILD=.libs
+ BUILD64=.libs64
+ BUILD32=.libs32
+-LIBDIR=$(PREFIX)/lib
+-LIBDIR64=$(PREFIX)/lib64
+-LIBDIR32=$(PREFIX)/lib32
++LIBDIR?=$(PREFIX)/lib
++LIBDIR64?=$(PREFIX)/lib64
++LIBDIR32?=$(PREFIX)/lib32
+ SONAME=libnss_cache.so.2
+ LD_SONAME=-Wl,-soname,$(SONAME)
+ TESTBIN=.testbin
