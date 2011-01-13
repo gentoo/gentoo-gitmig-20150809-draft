@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.34 2011/01/13 16:48:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.35 2011/01/13 16:58:08 ulm Exp $
+
+  13 Jan 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-common-gentoo-1.2.ebuild:
+  Remove old.
 
   12 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   emacs-common-gentoo-1.2-r1.ebuild:
