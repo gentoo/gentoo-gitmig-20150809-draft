@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Scope-Guard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scope-Guard/ChangeLog,v 1.8 2010/06/27 16:33:04 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scope-Guard/ChangeLog,v 1.9 2011/01/13 17:02:56 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Scope-Guard-0.20.ebuild:
+  Marking Scope-Guard-0.20 ppc stable for bug 341865
 
   27 Jun 2010; <nixnut@gentoo.org> Scope-Guard-0.03.ebuild:
   ppc stable #323529
