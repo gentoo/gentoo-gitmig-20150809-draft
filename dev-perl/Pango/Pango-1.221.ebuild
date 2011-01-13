@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.221.ebuild,v 1.10 2010/11/13 20:14:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.221.ebuild,v 1.11 2011/01/13 17:07:27 ranger Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Layout and render international text"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-perl/glib-perl-1.220
