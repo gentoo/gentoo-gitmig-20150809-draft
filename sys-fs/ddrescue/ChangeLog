@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ddrescue
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.26 2010/11/03 18:51:48 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.27 2011/01/13 18:06:20 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> ddrescue-1.12.ebuild:
+  stable ppc, bug 343749
 
   03 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ddrescue-1.12.ebuild:
   x86 stable wrt bug #343749
