@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-ssl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.23 2010/11/27 11:26:44 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.24 2011/01/13 21:57:45 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  ppc/ppc64 stable wrt #333915
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #333915
