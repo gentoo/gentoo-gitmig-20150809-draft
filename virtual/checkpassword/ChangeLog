@@ -1,6 +1,10 @@
 # ChangeLog for virtual/checkpassword
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.8 2010/11/27 11:33:52 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/checkpassword/ChangeLog,v 1.9 2011/01/13 22:00:39 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  checkpassword-0.ebuild:
+  ppc/ppc64 stable wrt #333915
 
   27 Nov 2010; Raúl Porcel <armin76@gentoo.org> checkpassword-0.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #333915
