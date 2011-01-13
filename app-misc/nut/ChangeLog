@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.13 2011/01/13 14:35:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.14 2011/01/13 17:52:43 jlec Exp $
+
+*nut-16.5 (13 Jan 2011)
+
+  13 Jan 2011; Justin Lecher <jlec@gentoo.org> nut-10.15.ebuild,
+  -nut-12.2.ebuild, -nut-12.7.ebuild, nut-14.1.ebuild, +nut-16.5.ebuild,
+  +files/nut-16.5-build-fixes.patch:
+  Version Bump
 
   13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> nut-14.1.ebuild:
   ppc stable wrt #351547

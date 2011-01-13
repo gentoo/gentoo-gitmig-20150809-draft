@@ -1,0 +1,23 @@
+diff --git a/Makefile b/Makefile
+index 1b8b705..dc2a08b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,16 +3,14 @@ FOODDIR := \"/usr/local/lib/nut\"
+ EXECUTABLE := nut
+ LIBS := -lm
+ 
+-CFLAGS := -Wall -O3 -fno-inline -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -ansi -pedantic 
+-
+-CXXFLAGS := $(CFLAGS)
++CFLAGS += -Wall -fno-inline -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -ansi -pedantic 
+ 
+ SOURCE := $(wildcard *.c) $(wildcard *.cc)
+ OBJS := $(patsubst %.c,%.o,$(patsubst %.cc,%.o,$(SOURCE)))
+ CPPFLAGS += 
+ 
+ nut:	$(OBJS)
+-	$(CC) -s -o $(EXECUTABLE) $(OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) -o $(EXECUTABLE) $(OBJS) $(LIBS)
+ 
+ 
+ deps:
