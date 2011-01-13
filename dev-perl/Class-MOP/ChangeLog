@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-MOP
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.52 2010/11/07 09:31:32 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.53 2011/01/13 20:57:30 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Class-MOP-1.11.ebuild:
+  Marking Class-MOP-1.11 ~ppc for bug 343479
 
 *Class-MOP-1.11 (07 Nov 2010)
 
