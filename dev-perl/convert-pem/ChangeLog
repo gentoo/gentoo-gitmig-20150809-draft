@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/convert-pem
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.35 2010/01/09 19:00:34 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.36 2011/01/13 12:34:03 tove Exp $
+
+*convert-pem-0.80 (13 Jan 2011)
+
+  13 Jan 2011; Torsten Veller <tove@gentoo.org> convert-pem-0.07.ebuild,
+  +convert-pem-0.80.ebuild:
+  Version bump
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> convert-pem-0.07.ebuild:
   Transfer Prefix keywords

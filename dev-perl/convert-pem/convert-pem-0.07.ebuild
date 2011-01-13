@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.07.ebuild,v 1.18 2010/01/09 19:00:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.07.ebuild,v 1.19 2011/01/13 12:34:03 tove Exp $
 
 inherit perl-module
 
-MY_P=Convert-PEM-${PV}
+MY_PN=Convert-PEM
+MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Read/write encrypted ASN.1 PEM files"
 HOMEPAGE="http://search.cpan.org/~btrott/"
