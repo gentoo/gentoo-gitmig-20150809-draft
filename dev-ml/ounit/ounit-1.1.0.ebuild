@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.1.0.ebuild,v 1.3 2011/01/02 00:46:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.1.0.ebuild,v 1.4 2011/01/13 22:16:36 ranger Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ounit.forge.ocamlcore.org/"
 SRC_URI="https://forge.ocamlcore.org/frs/download.php/495/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
 RDEPEND="${DEPEND}"
 IUSE="debug doc +ocamlopt"
