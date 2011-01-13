@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.118 2010/11/13 19:58:07 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.119 2011/01/13 17:06:24 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> glib-perl-1.223.ebuild:
+  Marking glib-perl-1.223 ppc stable for bug 341865
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org> glib-perl-1.223.ebuild:
   alpha/ia64/sh/sparc stable wrt #341865
