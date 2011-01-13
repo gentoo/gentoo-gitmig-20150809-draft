@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/xxv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.15 2010/12/27 14:35:29 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.16 2011/01/13 17:57:12 idl0r Exp $
+
+  13 Jan 2011; Christian Ruppert <idl0r@gentoo.org> xxv-1.6.1.ebuild:
+  Rephrase some sentences. HOMEPAGE fixed.
 
   27 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.ebuild,
   xxv-1.6.1.ebuild:

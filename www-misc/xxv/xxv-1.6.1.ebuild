@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.3 2010/12/27 14:35:29 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.4 2011/01/13 17:57:12 idl0r Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
 DESCRIPTION="WWW Admin for the VDR (Video Disk Recorder)"
-HOMEPAGE="http://xxv.berlios.de/content/view/47/42/"
+HOMEPAGE="http://xxv.berlios.de"
 SRC_URI="mirror://berlios/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
@@ -64,12 +64,12 @@ db_update_check() {
 
 	if [ "${DB_VERS_OLD}" -lt "${DB_VERS}" ]; then
 		echo
-		elog "An update of XXV Database is needed !!!"
+		elog "An update of the XXV Database is necessary !!!"
 		echo
 		elog "\tcd ${SHAREDIR}/contrib"
 		echo
-		elog "\tIt is really importend to edit the create-database.sql"
-		elog "\tfor UTF-8 Support changes in Mysql DB !!!"
+		elog "\tIt is really important to edit the create-database.sql file first"
+		elog "\tdue to UTF-8 Support changes in the MySQL DB !!!"
 		echo
 		elog "\tafter this run ./update-xxv -h for more info"
 		echo
@@ -81,15 +81,17 @@ db_update_check() {
 		elog "do this by:"
 		elog "cd ${SHAREDIR}/contrib"
 		eerror "read the README"
-		elog "For UTF-8 support it is really importend to"
-		elog "edit create-database.sql and run"
+		elog "For UTF-8 support it is really important to"
+		elog "edit create-database.sql file first and run"
 		elog "emerge --config ${PN}"
+		elog "afterwards"
 		echo
 		elog "Set your own language in"
 		elog "${SHAREDIR}/locale"
 		echo
-		elog "For First Time Login in Browser use:"
-		elog "Pass:Login = xxv:xxv"
+		elog "The default user/password is:"
+		elog "User/Password: xxv:xxv"
+		elog "You should change it immediately!"
 		echo
 		eerror "edit /etc/xxv/xxvd.cfg !"
 	fi
@@ -99,8 +101,8 @@ pkg_setup() {
 
 	if ! has_version "www-misc/${PN}"; then
 		echo
-		einfo	"After you install xxv at first time you should read"
-		einfo	"http://www.vdr-wiki.de/wiki/index.php/Xxv  German only available"
+		einfo	"After you install xxv the very first time you should consider to read"
+		einfo	"http://www.vdr-wiki.de/wiki/index.php/Xxv (German only)"
 		echo
 	fi
 
