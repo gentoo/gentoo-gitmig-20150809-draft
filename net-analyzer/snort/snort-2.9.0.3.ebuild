@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.3.ebuild,v 1.1 2011/01/13 13:43:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.3.ebuild,v 1.2 2011/01/13 17:22:20 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -141,7 +141,7 @@ src_install() {
 		etc/unicode.map \
 		|| die "Failed to add files in /etc/snort"
 
-	# We use snort.conf.distrib because the config file is complicated 
+	# We use snort.conf.distrib because the config file is complicated
 	# and the one shipped with snort can change drastically between versions.
 	# Users should migrate setting by hand and not with etc-update.
 	newins etc/snort.conf snort.conf.distrib \
