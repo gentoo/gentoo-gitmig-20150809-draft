@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.54 2010/12/21 21:32:58 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.55 2011/01/13 18:20:36 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> yap-6.2.0-r1.ebuild:
+  stable ppc, bug 349163
 
   21 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> yap-6.2.0-r1.ebuild:
   x86 stable wrt bug #349163
