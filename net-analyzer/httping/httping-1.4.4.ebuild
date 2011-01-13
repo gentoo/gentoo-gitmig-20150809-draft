@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.4.4.ebuild,v 1.3 2010/12/21 19:27:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.4.4.ebuild,v 1.4 2011/01/13 15:29:09 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vanheusden.com/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="debug ssl"
 
 RDEPEND=">=sys-libs/ncurses-5
