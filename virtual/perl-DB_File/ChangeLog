@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-DB_File
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.39 2010/09/07 20:19:58 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.40 2011/01/13 10:42:02 tove Exp $
+
+*perl-DB_File-1.821 (13 Jan 2011)
+
+  13 Jan 2011; Torsten Veller <tove@gentoo.org> +perl-DB_File-1.821.ebuild:
+  Version bump
 
   07 Sep 2010; Torsten Veller <tove@gentoo.org> perl-DB_File-1.820.ebuild:
   Add perl-5.12.2 as provider
