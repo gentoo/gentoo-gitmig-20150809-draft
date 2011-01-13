@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.3-r1.ebuild,v 1.1 2011/01/10 07:04:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.3-r1.ebuild,v 1.2 2011/01/13 17:50:24 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -39,4 +39,7 @@ ruby_add_bdepend "
 	test? (
 		>=dev-ruby/mocha-0.9.5
 		virtual/ruby-test-unit
+	)
+	doc? (
+		>=dev-ruby/redcloth-4.1.1
 	)"
