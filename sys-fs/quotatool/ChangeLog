@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/quotatool
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quotatool/ChangeLog,v 1.8 2007/06/04 18:04:01 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quotatool/ChangeLog,v 1.9 2011/01/13 13:51:25 flameeyes Exp $
+
+*quotatool-1.4.11 (13 Jan 2011)
+
+  13 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -quotatool-1.4.7.ebuild, -quotatool-1.4.8.ebuild, -quotatool-1.4.9.ebuild,
+  +quotatool-1.4.11.ebuild, +files/quotatool-1.4.11-ldflags.patch:
+  Version bump; remove obsolete non-stable versions; add patch to fix ldflags
+  handling (bug #335955); fix symlinked autotools.
 
 *quotatool-1.4.9 (04 Jun 2007)
 
