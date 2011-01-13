@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.155 2011/01/08 18:48:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.156 2011/01/13 16:55:36 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org>
+  DateTime-TimeZone-1.22.ebuild:
+  Marking DateTime-TimeZone-1.22 ppc stable for bug 341865
 
   08 Jan 2011; Jeroen Roovers <jer@gentoo.org> DateTime-TimeZone-1.22.ebuild,
   DateTime-TimeZone-1.23.ebuild, DateTime-TimeZone-1.26.ebuild:
