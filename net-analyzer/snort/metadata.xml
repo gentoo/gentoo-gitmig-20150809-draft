@@ -4,73 +4,73 @@
 	<herd>netmon</herd>
 	<maintainer>
 		<email>patrick@gentoo.org</email>
-  		<name>Patrick Lauer</name>
+		<name>Patrick Lauer</name>
 	</maintainer>
 	<maintainer>
-  		<email>jason.r.wallace@gmail.com</email>
-  		<name>Jason Wallace</name>
+		<email>jason.r.wallace@gmail.com</email>
+		<name>Jason Wallace</name>
 	</maintainer>
 	<longdescription>
 		The de facto standard for intrusion detection and prevention
 	</longdescription>
-    <use>
-        <flag name='aruba'>
-            Adds support for monitoring wireless traffic using a Aruba Mobility
+	<use>
+		<flag name='aruba'>
+			Adds support for monitoring wireless traffic using a Aruba Mobility
 			Controler.
-        </flag>
-        <flag name='decoder-preprocessor-rules'>
-            Added support to provide action control (alert, drop, pass, etc)
+		</flag>
+		<flag name='decoder-preprocessor-rules'>
+			Added support to provide action control (alert, drop, pass, etc)
 			over preprocessor and decoder generated events.
-        </flag>
-        <flag name='dynamicplugin'>
-            Enable ability to dynamically load preprocessors, detection engine,
-            and rules library. This is required if you want to use shared 
+		</flag>
+		<flag name='dynamicplugin'>
+			Enable ability to dynamically load preprocessors, detection engine,
+			and rules library. This is required if you want to use shared 
 			object (SO) snort rules.
-        </flag>
-        <flag name='flexresp'>
-            (DEPRECIATED) Original method for enabling connection tearing for 
+		</flag>
+		<flag name='flexresp'>
+			(DEPRECIATED) Original method for enabling connection tearing for 
 			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
-        </flag>
-        <flag name='flexresp2'>
-            (DEPRECIATED) Replaced flexresp for enabling connection tearing for
+		</flag>
+		<flag name='flexresp2'>
+			(DEPRECIATED) Replaced flexresp for enabling connection tearing for
 			inline deployments. Replaced with flexresp3 in Snort-2.9.0.
-        </flag>
-        <flag name='gre'>
+		</flag>
+		<flag name='gre'>
 			Enable support for inspecting and processing Generic Routing 
 			Encapsulation (GRE) packet headders. Only needed if you are
 			monitoring GRE tunnels.
-        </flag>
-        <flag name='inline'>
+		</flag>
+		<flag name='inline'>
 			(DEPRECIATED) Enables support for deploying snort inline. Uses
-            <pkg>net-firewall/iptables</pkg>, via libipq, rather than
-            <pkg>net-libs/libpcap</pkg>. Replaced by DAQ in Snort-2.9.0
-        </flag>
-        <flag name='inline-init-failopen'>
+			<pkg>net-firewall/iptables</pkg>, via libipq, rather than
+			<pkg>net-libs/libpcap</pkg>. Replaced by DAQ in Snort-2.9.0
+		</flag>
+		<flag name='inline-init-failopen'>
 			Enables support to allow traffic to pass (fail-open) through
 			inline deployments while snort is starting and not ready to begin
 			inspecting traffic. If this option is not enabled, network
 			traffic will not pass (fail-closed) until snort has fully started
 			and is ready to perform packet inspection.
-        </flag>
-        <flag name='linux-smp-stats'>
+		</flag>
+		<flag name='linux-smp-stats'>
 			Enable accurate statistics reporting through /proc on systems with
 			multipule processors.
-        </flag>
-        <flag name='mpls'>
+		</flag>
+		<flag name='mpls'>
 			Enables support for processing and inspecting Multiprotocol Label 
 			Switching MPLS network network traffic. Only needed if you are
 			monitoring an MPLS network.
-        </flag>
-        <flag name='perfprofiling'>
-            Enables support for preprocessor and rule performance profiling 
+		</flag>
+		<flag name='perfprofiling'>
+			Enables support for preprocessor and rule performance profiling 
 			using the perfmonitor preprocessor.
-        </flag>
-        <flag name='ppm'>
-            Enables support for setting per rule or per packet latency limits.
+		</flag>
+		<flag name='ppm'>
+			Enables support for setting per rule or per packet latency limits.
 			Helps protect against introducing network latency with inline 
 			deployments.
 		</flag>
-        <flag name='react'>
+		<flag name='react'>
 			Enables support for the react rule keyword. Supports interception,
 			termination, and redirection of HTTP connections.
 		</flag>
