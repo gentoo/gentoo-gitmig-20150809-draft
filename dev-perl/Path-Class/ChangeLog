@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.24 2011/01/12 17:44:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.25 2011/01/13 17:02:02 ranger Exp $
+
+  13 Jan 2011; Brent Baude <ranger@gentoo.org> Path-Class-0.21.ebuild:
+  Marking Path-Class-0.21 ppc stable for bug 341865
 
 *Path-Class-0.230 (12 Jan 2011)
 
