@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.92 2010/11/13 21:13:41 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.93 2011/01/13 01:48:11 tampakrap Exp $
+
+  13 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> tellico-2.3.ebuild:
+  EAPI3
 
   13 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org> tellico-2.2.ebuild,
   tellico-2.3.ebuild:
