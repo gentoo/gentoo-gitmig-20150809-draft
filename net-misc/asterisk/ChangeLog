@@ -1,13 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.280 2011/01/13 21:37:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.281 2011/01/13 21:38:04 chainsaw Exp $
 
 *asterisk-1.8.1.1-r2 (13 Jan 2011)
 
   13 Jan 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.1.1-r2.ebuild:
   Scavenge fix from upstream bug #18185 to avoid blind transfer failures. If
   you are also a Cisco 7960 "SIP" phone victim, this is for you. New attempt at
-  a serialisation fix for mkdir/install race that cause a build failure on some
+  a serialisation fix for mkdir/install race that causes a build failure on some
   systems.
 
 *asterisk-1.8.1.1-r1 (04 Jan 2011)
