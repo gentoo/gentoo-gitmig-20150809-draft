@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.1 2011/01/13 17:00:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.2 2011/01/13 17:01:44 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -25,7 +25,6 @@ else
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
-
 
 DESCRIPTION="Python modules for starting virtualized guest installations"
 HOMEPAGE="http://virt-manager.et.redhat.com/"
