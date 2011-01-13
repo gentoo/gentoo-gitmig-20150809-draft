@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.33 2010/12/29 16:19:29 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.34 2011/01/13 20:11:28 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> tls-1.6-r2.ebuild:
+  ppc stable, mark ~ppc64 wrt #332415
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> tls-1.6-r2.ebuild:
   Stable on amd64 wrt bug #332415
