@@ -1,0 +1,20 @@
+http://bugs.gentoo.org/349512
+
+--- driver/xscreensaver.c
++++ driver/xscreensaver.c
+@@ -1382,6 +1382,7 @@
+   struct passwd *spasswd;
+   int i;
+ 
++#if 0
+ #ifdef ENABLE_NLS
+   if (!setlocale (LC_ALL, ""))
+     fprintf (stderr, "locale not supported by C library\n");
+@@ -1389,6 +1390,7 @@
+   bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+   textdomain (GETTEXT_PACKAGE);
+ #endif /* ENABLE_NLS */
++#endif
+ 
+   memset(si, 0, sizeof(*si));
+   global_si_kludge = si;	/* I hate C so much... */
