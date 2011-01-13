@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1.ebuild,v 1.2 2011/01/13 20:07:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1.ebuild,v 1.3 2011/01/13 21:56:39 mr_bones_ Exp $
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -39,7 +39,7 @@ pkg_postinst() {
 	einfo "Please note if you are using multiple internal 'slots' in the old"
 	einfo "conf.d fille, that you should use multiple init files now."
 
-	# new scripts present	
+	# new scripts present
 	if [ $new_conf_present -eq 0 -a $new_init_present -eq 0 -a
 		 $old_conf_present -eq 1 -a $old_init_present -eq 1 ]; then
 		:
