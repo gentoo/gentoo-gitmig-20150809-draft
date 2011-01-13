@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.130 2010/12/29 16:16:32 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.131 2011/01/13 20:02:06 xarthisius Exp $
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> tcl-8.5.8-r1.ebuild:
+  ppc64 stable wrt #332415
 
   29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> tcl-8.5.8-r1.ebuild:
   Stable on amd64 wrt bug #332415
