@@ -1,0 +1,44 @@
+ 2011-01-08 (Valerio)
+  * Fixed crash when taking any action in the Contact Added User dialog.
+    Also removed an unnecessary signal-bouncing slot.
+--- a/src/network/msnnotificationconnection.cpp
++++ b/src/network/msnnotificationconnection.cpp
+@@ -1029,16 +1029,12 @@
+     hash.insert( QString::number(ack), "INBOX" );
+ 
+     // Ask for compose URL
+-    ack = sendCommand("URL", "COMPOSE");
++    ack = sendCommand("URL", "COMPOSE some.invalid@kmess.email" );
+     hash.insert( QString::number(ack), "COMPOSE" );
+ 
+     // Ask the personal profile URL
+-    ack = sendCommand("URL", "PROFILE");
++    ack = sendCommand("URL", "PROFILE 0x" + QString::number( CurrentAccount::instance()->getLanguageCode().toInt(), 8 ) );
+     hash.insert( QString::number(ack), "PROFILE" );
+-
+-    // Ask the URL for change account info
+-    ack = sendCommand("URL", "PERSON");
+-    hash.insert( QString::number(ack), "PERSON" );
+   }
+ 
+   // Notify observers that the server is connected
+--- a/src/utils/kmessshared.cpp
++++ b/src/utils/kmessshared.cpp
+@@ -139,13 +139,11 @@
+     return QString();
+   }
+ 
++  // this will have our (urlencoded) dodgy email address we used to satisfy URL COMPOSE
++  // at the initial login. replace it where we actually want it to go.
+   QString command( folder );
+-
+-  // Check if the user wants to send an email
+-  if( ! mailto.isEmpty() )
+-  {
+-    command += "?mailto=1&to=" + mailto;
+-  }
++  
++  command = command.replace( "some.invalid%40kmess.email", mailto );
+ 
+   // Use the method into passport to compute the token
+   QString token( PassportLoginService::createHotmailToken( currentAccount->getToken( "Passport" ),
