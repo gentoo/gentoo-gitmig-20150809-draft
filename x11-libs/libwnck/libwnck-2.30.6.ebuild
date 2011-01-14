@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.30.6.ebuild,v 1.1 2010/12/04 00:18:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.30.6.ebuild,v 1.2 2011/01/14 10:44:50 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,8 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 
 IUSE="doc +introspection startup-notification"
 
-RDEPEND=">=x11-libs/gtk+-2.19.7[introspection?]
-	>=dev-libs/glib-2.16.0
+RDEPEND=">=x11-libs/gtk+-2.19.7:2[introspection?]
+	>=dev-libs/glib-2.16:2
 	x11-libs/libX11
 	x11-libs/libXres
 	x11-libs/libXext
