@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.118 2011/01/13 16:55:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.119 2011/01/14 11:55:52 tove Exp $
+
+*DBD-mysql-4.18 (14 Jan 2011)
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -DBD-mysql-4.00.5.ebuild,
+  -DBD-mysql-4.01.2.ebuild, -DBD-mysql-4.01.3.ebuild, -DBD-mysql-4.01.4.ebuild,
+  -DBD-mysql-4.01.6.ebuild, -DBD-mysql-4.01.8.ebuild, +DBD-mysql-4.18.ebuild:
+  Convert ebuild version. Cleanup
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> DBD-mysql-4.01.7.ebuild:
   Marking DBD-mysql-4.01.7 ppc stable for bug 341865
