@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1.ebuild,v 1.3 2011/01/13 21:56:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r1.ebuild,v 1.1 2011/01/14 03:34:52 robbat2 Exp $
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -28,22 +28,24 @@ src_install() {
 pkg_postinst() {
 	grep -sq mysql_slot "${ROOT}"/etc/conf.d/mysql
 	old_conf_present=$?
-	grep -sq mysql_slot "${ROOT}"/etc/init.d/mysql
+	grep -sq get_slot_config "${ROOT}"/etc/init.d/mysql
 	old_init_present=$?
 
 	egrep -sq 'MY_CNF|MY_ARGS|(STARTUP|STOP)_TIMEOUT' "${ROOT}"/etc/conf.d/mysql
 	new_conf_present=$?
-	grep -sq 'MY_CNF|MY_ARGS|(STARTUP|STOP)_TIMEOUT' "${ROOT}"/etc/init.d/mysql
+	egrep -sq 'MY_ARGS|STOP_TIMEOUT' "${ROOT}"/etc/init.d/mysql
 	new_init_present=$?
 
 	einfo "Please note if you are using multiple internal 'slots' in the old"
 	einfo "conf.d fille, that you should use multiple init files now."
+	echo old $old_conf_present $old_init_present
+	echo new $new_conf_present $new_init_present
 
 	# new scripts present
-	if [ $new_conf_present -eq 0 -a $new_init_present -eq 0 -a
+	if [ $new_conf_present -eq 0 -a $new_init_present -eq 0 -a \
 		 $old_conf_present -eq 1 -a $old_init_present -eq 1 ]; then
 		:
-	elif [ $old_conf_present -eq 0 -a $old_init_present -eq 0 -a
+	elif [ $old_conf_present -eq 0 -a $old_init_present -eq 0 -a \
 		 $new_conf_present -eq 1 -a $new_init_present -eq 1 ]; then
 		ewarn "Old /etc/init.d/mysql and /etc/conf.d/mysql still present!"
 		ewarn "Update both of those files to the new versions!"
