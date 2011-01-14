@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.66 2011/01/10 21:29:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.67 2011/01/14 22:12:35 polynomial-c Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -15,8 +15,9 @@ app-emulation/crossover-office-pro-bin
 app-emulation/playonlinux
 app-emulation/point2play
 app-emulation/q4wine
+app-emulation/virtualbox
+app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
-app-emulation/virtualbox-ose
 app-emulation/vmware-dsp
 app-emulation/vmware-player
 app-emulation/vmware-server
