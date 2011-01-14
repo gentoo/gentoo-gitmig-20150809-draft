@@ -1,16 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3.ebuild,v 1.1 2011/01/13 23:39:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r1.ebuild,v 1.1 2011/01/14 00:19:45 flameeyes Exp $
 
 EAPI="2"
 
 # backports are maintained as tags on Diego's repository on gitorious:
 # http://gitorious.org/~flameeyes/opencryptoki/flameeyess-opencryptoki
-BACKPORTS=1
+BACKPORTS=2
 
 inherit autotools eutils multilib
 
-DESCRIPTION="PKCS#11 provider for IBM cryptographic hardware"
+DESCRIPTION="PKCS#11 provider cryptographic hardware"
 HOMEPAGE="http://sourceforge.net/projects/opencryptoki"
 SRC_URI="mirror://sourceforge/opencryptoki/${P}.tar.bz2
 	${BACKPORTS:+
@@ -25,6 +25,11 @@ RDEPEND="tpm? ( app-crypt/trousers )
 DEPEND="${RDEPEND}"
 
 IUSE="+tpm debug"
+
+# tests right now basically don't exist; the only available thing would
+# test against an installed copy and would kill a running pcscd, all
+# things that we're not interested to.
+RESTRICT=test
 
 pkg_setup() {
 	enewgroup pkcs11
