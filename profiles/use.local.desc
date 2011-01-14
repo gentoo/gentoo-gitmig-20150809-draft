@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6280 2011/01/13 08:51:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6281 2011/01/14 01:12:36 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3246,6 +3246,15 @@ net-p2p/gift:ares - pull in Ares plugin
 net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
+net-p2p/gnunet:c-ares - enable asynchronous dns support through c-ares library
+net-p2p/gnunet:dialog - enable ncurses dialog setup wizard
+net-p2p/gnunet:esmtp - enable SMTP support
+net-p2p/gnunet:gtk - enable gtk setup wizard
+net-p2p/gnunet:microhttpd - enable embedded http server support
+net-p2p/gnunet:mysql - enable mysql database backend
+net-p2p/gnunet:qt - enable qt setup wizard
+net-p2p/gnunet:setup - enable setup wizard
+net-p2p/gnunet:sqlite - enable sqlite database backend
 net-p2p/ktorrent:bwscheduler - Schedule upload and download limits over a period of a week
 net-p2p/ktorrent:downloadorder - Specify the download order of a multi-file torrent
 net-p2p/ktorrent:infowidget - Displays general information about a torrent in several tabs
