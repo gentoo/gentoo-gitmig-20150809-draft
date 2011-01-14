@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/BSD-Resource-1.29.04.ebuild,v 1.4 2010/11/13 19:27:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/BSD-Resource-1.290.400.ebuild,v 1.1 2011/01/14 10:29:13 tove Exp $
 
 EAPI=2
 
-inherit versionator
 MODULE_AUTHOR=JHI
-MY_P=${PN}-$(delete_version_separator 2)
+MODULE_VERSION=1.2904
 inherit perl-module
 
 DESCRIPTION="Perl module for BSD process resource limit and priority functions"
@@ -16,5 +15,3 @@ KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
-
-S=${WORKDIR}/${MY_P}
