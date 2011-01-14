@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.628.0-r1.ebuild,v 1.1 2011/01/10 09:44:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.634.0-r1.ebuild,v 1.1 2011/01/14 21:36:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.0.4.1"
+V8_DEPEND="3.0.6.1"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -105,7 +105,8 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
-	epatch "${FILESDIR}"/${PN}-system-speex-r0.patch
+	# Make sure we don't use bundled xdg-utils.
+	epatch "${FILESDIR}"/${PN}-system-xdg-utils-r0.patch
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -129,16 +130,12 @@ src_prepare() {
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/skia/*' \
+		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/undoview/*' \
-		\! -path 'third_party/xdg-utils/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
-
-	# Provide our own gyp file that links with the system speex.
-	# TODO: move this upstream.
-	cp "${FILESDIR}"/speex.gyp third_party/speex || die
 
 	# Check for the maintainer to ensure that the dependencies
 	# are up-to-date.
@@ -193,7 +190,9 @@ src_configure() {
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_libxml=1
+		-Duse_system_speex=1
 		-Duse_system_vpx=1
+		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
 	if use system-sqlite; then
@@ -301,7 +300,6 @@ src_install() {
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
-	doexe out/Release/xdg-settings || die
 	doexe "${FILESDIR}"/chromium-launcher.sh || die
 
 	insinto "${CHROMIUM_HOME}"
@@ -322,7 +320,7 @@ src_install() {
 	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
 	# Install icon and desktop entry.
-	newicon out/Release/product_logo_48.png ${PN}-browser.png || die
+	newicon chrome/app/theme/chromium/product_logo_48.png ${PN}-browser.png || die
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
 	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser" \
 		"MimeType=text/html;text/xml;application/xhtml+xml;"

@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.260 2011/01/13 13:05:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.261 2011/01/14 21:36:22 phajdan.jr Exp $
+
+*chromium-10.0.634.0-r1 (14 Jan 2011)
+
+  14 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-xdg-utils-r0.patch, -chromium-10.0.628.0-r1.ebuild,
+  +chromium-10.0.634.0-r1.ebuild, chromium-9999.ebuild:
+  Make sure we don't use bundled xdg-utils. Remove old.
 
   13 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   chromium-8.0.552.237.ebuild:
