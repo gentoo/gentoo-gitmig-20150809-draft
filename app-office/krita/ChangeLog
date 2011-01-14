@@ -1,6 +1,12 @@
 # ChangeLog for app-office/krita
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.125 2010/12/23 00:08:17 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.126 2011/01/14 20:38:14 dilfridge Exp $
+
+*krita-2.3.0 (14 Jan 2011)
+
+  14 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +krita-2.3.0.ebuild:
+  Version bump
 
 *krita-2.2.2-r1 (23 Dec 2010)
 
