@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-Wav
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.43 2010/06/27 18:59:29 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.44 2011/01/14 18:43:17 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Audio-Wav-0.06.ebuild:
+  Cleanup
 
   27 Jun 2010; <nixnut@gentoo.org> Audio-Wav-0.11.ebuild:
   ppc stable #323529

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Capture-Tiny
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.6 2010/11/05 13:07:50 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.7 2011/01/14 18:37:17 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Capture-Tiny-0.06.ebuild,
+  -Capture-Tiny-0.07.ebuild:
+  Cleanup
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   Capture-Tiny-0.08.ebuild:
