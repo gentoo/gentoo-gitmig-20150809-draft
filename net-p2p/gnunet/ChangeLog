@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gnunet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.68 2010/06/20 13:56:46 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.69 2011/01/14 00:52:11 sochotnicky Exp $
+
+*gnunet-0.8.1-r1 (14 Jan 2011)
+
+  14 Jan 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +gnunet-0.8.1-r1.ebuild, metadata.xml:
+  Add several new use flags. Don't die when neither
+  mysql nor sqlite are selected, instead fallback to
+  sqlite.
 
   20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   +files/0.8.1-asneeded.patch, gnunet-0.8.1.ebuild,
