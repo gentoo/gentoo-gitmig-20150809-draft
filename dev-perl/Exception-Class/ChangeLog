@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.59 2011/01/13 16:57:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.60 2011/01/14 17:49:12 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Exception-Class-1.23.ebuild,
+  -Exception-Class-1.29.ebuild, -Exception-Class-1.30.ebuild:
+  Cleanup
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> Exception-Class-1.32.ebuild:
   Marking Exception-Class-1.32 ppc stable for bug 341865

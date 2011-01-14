@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-MimeInfo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.58 2010/10/23 08:24:10 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.59 2011/01/14 17:46:09 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -File-MimeInfo-0.14.ebuild,
+  -File-MimeInfo-0.15.ebuild:
+  Cleanup
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   File-MimeInfo-0.15-r1.ebuild:
