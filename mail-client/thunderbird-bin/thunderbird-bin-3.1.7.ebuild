@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.7.ebuild,v 1.3 2010/12/11 10:35:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.7.ebuild,v 1.4 2011/01/14 17:19:49 hwoarang Exp $
 
 EAPI="2"
 
@@ -55,6 +55,7 @@ RDEPEND="x11-libs/libXrender
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-soundlibs
 	)"
 
 S="${WORKDIR}/thunderbird"
