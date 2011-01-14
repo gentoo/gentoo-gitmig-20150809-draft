@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.81.ebuild,v 1.1 2010/10/21 21:54:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.81.ebuild,v 1.2 2011/01/14 22:55:47 dilfridge Exp $
 
-EAPI="2"
+EAPI=3
 
+VIRTUALX_REQUIRED=tests
 inherit kde4-base
 
 DESCRIPTION="A DropDrawers clone. Multiple information organizer"
@@ -16,8 +17,7 @@ SLOT="4"
 IUSE="debug crypt"
 
 DEPEND="
-	>=kde-base/kdelibs-${KDE_MINIMAL}
-	>=kde-base/kdepimlibs-${KDE_MINIMAL}
+	$(add_kdebase_dep kdepimlibs)
 	media-libs/qimageblitz
 	crypt? ( >=app-crypt/gpgme-1.0 )
 "

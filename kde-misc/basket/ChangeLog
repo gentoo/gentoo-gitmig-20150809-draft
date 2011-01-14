@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/basket
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.7 2010/10/21 21:54:00 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.8 2011/01/14 22:55:47 dilfridge Exp $
+
+  14 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> basket-1.81.ebuild:
+  Fix tests; bump EAPI; general cleanup
 
 *basket-1.81 (21 Oct 2010)
 
