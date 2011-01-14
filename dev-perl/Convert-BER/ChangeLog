@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Convert-BER
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.19 2009/11/10 10:00:03 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.20 2011/01/14 14:03:22 tove Exp $
+
+*Convert-BER-1.320 (14 Jan 2011)
+*Convert-BER-1.310.100 (14 Jan 2011)
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> +Convert-BER-1.310.100.ebuild,
+  +Convert-BER-1.320.ebuild, -Convert-BER-1.3101.ebuild,
+  -Convert-BER-1.3200.ebuild:
+  Convert ebuild version. Maintenance. Looks liks a downgrade
 
 *Convert-BER-1.3200 (10 Nov 2009)
 
