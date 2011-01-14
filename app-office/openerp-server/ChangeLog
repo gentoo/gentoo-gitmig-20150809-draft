@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openerp-server
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.1 2010/12/13 11:02:20 elvanor Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.2 2011/01/14 10:32:36 elvanor Exp $
+
+*openerp-server-5.0.15 (14 Jan 2011)
+
+  14 Jan 2011; <elvanor@gentoo.org> +openerp-server-5.0.15.ebuild,
+  files/openerp-server, +files/openerp-server.cfg,
+  +files/openerp-server.logrotate:
+  Bump to 5.0.15, some improvements / suggestions from #348712.
 
 *openerp-server-5.0.6 (13 Dec 2010)
 

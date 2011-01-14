@@ -4,7 +4,7 @@
 DAEMON_OPTS="-c ${CONFIGFILE}"
 
 depend() {
-	need postgresql
+	after postgresql
 }
 
 start() {
@@ -17,7 +17,7 @@ start() {
 
 stop() {
 	ebegin "Stopping openerp-server"
-	start-stop-daemon --stop --quiet --pidfile "${PIDFILE}" --oknodo
+	start-stop-daemon --stop --quiet --pidfile "${PIDFILE}" --oknodo --signal 9
 	rm -f "${PIDFILE}"
 	eend $?
 }
