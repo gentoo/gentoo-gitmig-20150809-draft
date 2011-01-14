@@ -1,11 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/XML-AutoWriter-0.40.ebuild,v 1.5 2010/10/24 15:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-AutoWriter/XML-AutoWriter-0.400.ebuild,v 1.1 2011/01/14 13:54:40 tove Exp $
 
-MY_PV="0.4"
-MY_P="${PN}-${MY_PV}"
-MODULE_AUTHOR="PERIGRIN"
-
+MODULE_AUTHOR=PERIGRIN
+MODULE_VERSION=0.4
 inherit perl-module
 
 DESCRIPTION="DOCTYPE based XML output"
@@ -18,5 +16,3 @@ DEPEND="dev-perl/XML-Parser
 	dev-lang/perl"
 
 SRC_TEST="do"
-
-S="${WORKDIR}/${MY_P}"
