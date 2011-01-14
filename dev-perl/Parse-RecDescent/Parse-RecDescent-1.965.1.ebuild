@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.965.001.ebuild,v 1.6 2010/11/05 14:11:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/Parse-RecDescent-1.965.1.ebuild,v 1.1 2011/01/14 13:45:04 tove Exp $
 
-EAPI=2
+EAPI=3
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2 )
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=DCONWAY
+MODULE_VERSION=1.965001
 inherit perl-module
 
 DESCRIPTION="Parse::RecDescent - generate recursive-descent parsers"
