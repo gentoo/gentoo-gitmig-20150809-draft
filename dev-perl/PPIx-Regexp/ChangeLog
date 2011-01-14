@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PPIx-Regexp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.13 2011/01/12 16:44:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.14 2011/01/14 16:47:35 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -PPIx-Regexp-0.010.ebuild,
+  -PPIx-Regexp-0.011.ebuild, -PPIx-Regexp-0.012.ebuild,
+  -PPIx-Regexp-0.013.ebuild, -PPIx-Regexp-0.014.ebuild,
+  -PPIx-Regexp-0.015.ebuild:
+  Cleanup
 
 *PPIx-Regexp-0.16 (12 Jan 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.70 2011/01/13 17:02:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.71 2011/01/14 16:42:22 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Pod-Coverage-0.19.ebuild,
+  -Pod-Coverage-0.20.ebuild:
+  Cleanup
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> Pod-Coverage-0.21.ebuild:
   Marking Pod-Coverage-0.21 ppc stable for bug 341865

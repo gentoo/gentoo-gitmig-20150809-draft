@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.37 2010/10/15 11:46:19 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.38 2011/01/14 17:17:38 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -IO-Tty-1.09.ebuild:
+  Cleanup
 
 *IO-Tty-1.10 (15 Oct 2010)
 
