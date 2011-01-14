@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.75 2010/11/01 02:02:40 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.76 2011/01/14 06:38:28 radhermit Exp $
+
+*mpc-0.20 (14 Jan 2011)
+
+  14 Jan 2011; Tim Harder <radhermit@gentoo.org> +mpc-0.20.ebuild:
+  Version bump. Update required libmpdclient version.
 
   01 Nov 2010; Michael Weber <xmw@gentoo.org> mpc-0.19.ebuild:
   arm stable
