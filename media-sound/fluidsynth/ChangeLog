@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.65 2011/01/04 00:40:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.66 2011/01/14 21:28:12 ranger Exp $
+
+  14 Jan 2011; Brent Baude <ranger@gentoo.org> fluidsynth-1.1.1.ebuild:
+  stable ppc, bug 343589
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> fluidsynth-1.1.1.ebuild:
   sparc stable (bug 343589)
