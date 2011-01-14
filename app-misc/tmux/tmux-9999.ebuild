@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.2 2011/01/01 08:25:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.3 2011/01/14 09:07:58 wired Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ KEYWORDS=""
 IUSE="debug vim-syntax"
 
 DEPEND="
-	<dev-libs/libevent-2
+	|| ( >=dev-libs/libevent-2.0.10 <dev-libs/libevent-2 )
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	vim-syntax? ( || (
