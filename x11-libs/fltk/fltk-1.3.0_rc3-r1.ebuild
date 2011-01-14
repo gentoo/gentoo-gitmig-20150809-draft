@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3.ebuild,v 1.1 2011/01/14 09:09:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.1 2011/01/14 20:09:35 jlec Exp $
 
 EAPI=3
 
@@ -47,6 +47,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-share.patch \
 		"${FILESDIR}"/${P}-conf-tests.patch
+	sed \
+		-e 's:@HLINKS@::g' -i FL/Makefile.in || die
 	sed -i \
 		-e '/C\(XX\)\?FLAGS=/s:@C\(XX\)\?FLAGS@::' \
 		-e '/^LDFLAGS=/d' \
