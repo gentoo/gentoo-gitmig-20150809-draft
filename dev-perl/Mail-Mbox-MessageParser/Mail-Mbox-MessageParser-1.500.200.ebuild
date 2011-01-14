@@ -1,13 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Mbox-MessageParser/Mail-Mbox-MessageParser-1.50.02.ebuild,v 1.1 2009/08/31 08:27:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Mbox-MessageParser/Mail-Mbox-MessageParser-1.500.200.ebuild,v 1.1 2011/01/14 13:13:28 tove Exp $
 
 EAPI=2
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2)
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=DCOPPIT
+MODULE_VERSION=1.5002
 inherit perl-module
 
 DESCRIPTION="Manipulation of electronic mail addresses"
@@ -23,3 +21,4 @@ DEPEND="dev-perl/Text-Diff
 RDEPEND="${DEPEND}"
 
 SRC_TEST=do
+PATCHES=( "${FILESDIR}"/${PV}-warning.patch )
