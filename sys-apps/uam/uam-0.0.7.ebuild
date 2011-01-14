@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.0.7.ebuild,v 1.3 2010/12/20 14:37:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.0.7.ebuild,v 1.4 2011/01/14 13:41:59 mgorny Exp $
 
 inherit eutils multilib
 
@@ -45,11 +45,7 @@ pkg_postinst() {
 	elog "or [sys-apps/pmount]."
 	elog
 	elog "If you'd like to receive libnotify-based notifications, you need"
-	elog "to install the [x11-misc/sw-notify-send] tool from the Sunrise"
-	elog "overlay [1] (or bug #318961 [2])."
-	elog
-	elog "[1] http://overlays.gentoo.org/proj/sunrise"
-	elog "[2] http://bugs.gentoo.org/show_bug.cgi?id=318961"
+	elog "to install the [x11-misc/sw-notify-send] tool."
 
 	if [[ -e "${ROOT}"/dev/.udev ]]; then
 		ebegin "Calling udev to reload its rules"
