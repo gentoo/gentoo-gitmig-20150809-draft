@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Error
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.66 2010/11/05 14:03:18 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.67 2011/01/14 10:16:36 tove Exp $
+
+*Error-0.170.160 (14 Jan 2011)
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Error-0.17.008.ebuild,
+  -Error-0.17.012.ebuild, -Error-0.17.015.ebuild, -Error-0.17.016.ebuild,
+  +Error-0.170.160.ebuild:
+  Convert ebuild version. Cleanup
 
   05 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> Error-0.17.016.ebuild:
   ppc64 stable wrt #341865
