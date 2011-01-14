@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.397 2011/01/12 20:18:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.398 2011/01/14 02:39:43 jmbsvicetto Exp $
+
+  14 Jan 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.4.0.ebuild:
+  [media-sound/amarok-2.4.0] Fix SRC_URI. Fixes bug 351618 - thanks to
+  ScytheMan (scytheman666 AT gmail DOT com).
 
 *amarok-2.4.0 (12 Jan 2011)
 
