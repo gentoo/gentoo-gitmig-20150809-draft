@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.2 2010/10/16 01:13:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.3 2011/01/14 03:07:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -31,23 +31,28 @@ RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="Bcfg2"
 
+distutils_src_install_post_hook() {
+	if ! use server; then
+		rm -f "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/sbin/bcfg2-"*
+	fi
+}
+
 src_install() {
-	distutils_src_install --record=PY_SERVER_LIBS --install-scripts "${EPREFIX}"/usr/sbin
+	distutils_src_install --record=PY_SERVER_LIBS --install-scripts "${EPREFIX}/usr/sbin"
 
 	# Remove files only necessary for a server installation
 	if ! use server; then
-		rm -rf "${ED}"usr/sbin/bcfg2-*
-		rm -rf "${ED}"usr/share/bcfg2
-		rm -rf "${ED}"usr/share/man/man8
+		rm -rf "${ED}usr/share/bcfg2"
+		rm -rf "${ED}usr/share/man/man8"
 	fi
 
 	# Install a server init.d script
 	if use server; then
-		newinitd "${FILESDIR}"/bcfg2-server.rc bcfg2-server
+		newinitd "${FILESDIR}/bcfg2-server.rc" bcfg2-server
 	fi
 
 	insinto /etc
-	doins examples/bcfg2.conf
+	doins examples/bcfg2.conf || die "doins failed"
 }
 
 pkg_postinst () {
