@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.669002.ebuild,v 1.8 2011/01/13 17:07:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.669.2.ebuild,v 1.1 2011/01/14 14:59:27 tove Exp $
 
 EAPI=2
 
 MY_PN=Text-Autoformat
-MY_P=${MY_PN}-${PV}
 MODULE_AUTHOR=DCONWAY
+MODULE_VERSION=1.669002
 inherit perl-module
 
 DESCRIPTION="Automatic text wrapping and reformatting"
@@ -20,5 +20,4 @@ RDEPEND=">=dev-perl/text-reform-1.11
 DEPEND="${RDEPEND}
 	virtual/perl-Module-Build"
 
-S=${WORKDIR}/${MY_P}
 SRC_TEST=do
