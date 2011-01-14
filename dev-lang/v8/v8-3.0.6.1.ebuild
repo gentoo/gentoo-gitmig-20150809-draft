@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.0.6.1.ebuild,v 1.1 2011/01/12 12:58:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.0.6.1.ebuild,v 1.2 2011/01/14 12:44:43 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -18,7 +18,9 @@ IUSE="readline"
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}"
 
-EXTRA_ESCONS="library=shared soname=on importenv=\"LINKFLAGS\""
+# To make tests work, we compile with sample=shell.
+# For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
+EXTRA_ESCONS="library=shared soname=on sample=shell importenv=\"LINKFLAGS\""
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
@@ -84,5 +86,5 @@ src_install() {
 }
 
 src_test() {
-	tools/test.py --no-build -p dots --shell d8 || die
+	tools/test.py --no-build -p dots || die
 }
