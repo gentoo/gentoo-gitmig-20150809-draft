@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/sw-notify-send
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sw-notify-send/ChangeLog,v 1.1 2011/01/14 13:36:28 mgorny Exp $
+
+*sw-notify-send-0.1.1 (14 Jan 2011)
+
+  14 Jan 2011; Michał Górny <mgorny@gentoo.org> +sw-notify-send-0.1.1.ebuild,
+  +metadata.xml:
+  A new ebuild for sw-notify-send, a system-wide notify-send wrapper. Moved
+  from Sunrise per bug #318961.
+
