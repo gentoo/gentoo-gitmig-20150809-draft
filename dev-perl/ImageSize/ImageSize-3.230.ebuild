@@ -1,14 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.2.3.0.ebuild,v 1.1 2010/09/01 06:56:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.230.ebuild,v 1.1 2011/01/14 09:29:00 tove Exp $
 
 EAPI=3
 
-inherit versionator
 MY_PN=Image-Size
-MY_P=${MY_PN}-$(get_major_version).$(delete_all_version_separators $(get_after_major_version))
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=RJRAY
+MODULE_VERSION=3.230
 inherit perl-module
 
 DESCRIPTION="The Perl Image-Size Module"

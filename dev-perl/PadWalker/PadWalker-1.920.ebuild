@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/PadWalker-1.9.2.ebuild,v 1.1 2010/07/16 06:38:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/PadWalker-1.920.ebuild,v 1.1 2011/01/14 09:36:03 tove Exp $
 
 EAPI=2
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2 )
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=ROBIN
+MODULE_VERSION=1.92
 inherit perl-module
 
 DESCRIPTION="play with other peoples' lexical variables"
