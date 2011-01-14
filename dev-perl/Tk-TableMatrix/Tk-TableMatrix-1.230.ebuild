@@ -1,13 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.2.3.ebuild,v 1.8 2009/08/16 09:11:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.230.ebuild,v 1.1 2011/01/14 09:50:30 tove Exp $
 
 EAPI=2
 
-inherit versionator eutils
 MODULE_AUTHOR=CERNEY
-MY_P=${PN}-$(delete_version_separator 2)
-S=${WORKDIR}/${MY_P}
+MODULE_VERSION=1.23
 inherit perl-module
 
 DESCRIPTION="Perl module for Tk-TableMatrix"
