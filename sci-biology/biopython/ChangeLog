@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.55 2011/01/13 15:21:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.56 2011/01/14 19:12:38 ranger Exp $
+
+  14 Jan 2011; Brent Baude <ranger@gentoo.org> biopython-1.56.ebuild:
+  stable ppc, bug 351498
 
   13 Jan 2011; Markos Chandras <hwoarang@gentoo.org> biopython-1.56.ebuild:
   Stable on amd64 wrt bug #351498

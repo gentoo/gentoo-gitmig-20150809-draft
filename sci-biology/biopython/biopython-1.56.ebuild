@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.56.ebuild,v 1.2 2011/01/13 15:21:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.56.ebuild,v 1.3 2011/01/14 19:12:38 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.biopython.org/DIST/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~sparc ~x86"
 IUSE="mysql postgres"
 
 RDEPEND="dev-python/numpy
