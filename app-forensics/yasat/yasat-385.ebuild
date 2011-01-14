@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/yasat-286.ebuild,v 1.1 2010/06/08 09:19:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/yasat-385.ebuild,v 1.1 2011/01/14 16:13:48 hwoarang Exp $
 
 DESCRIPTION="Security and system auditing tool"
 HOMEPAGE="http://yasat.sourceforge.net"
