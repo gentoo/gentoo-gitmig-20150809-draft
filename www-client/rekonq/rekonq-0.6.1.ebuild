@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.1.ebuild,v 1.1 2010/11/07 18:44:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.1.ebuild,v 1.2 2011/01/14 22:46:57 dilfridge Exp $
 
 EAPI=3
 
 WEBKIT_REQUIRED=always
+VIRTUALX_REQUIRED=tests
 QT_MINIMAL="4.7"
 KDE_MINIMAL="4.5"
 
@@ -39,4 +40,5 @@ RDEPEND="${DEPEND}"
 
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}/${P}-cve-2010-2536.patch" )
+PATCHES=( "${FILESDIR}/${P}-cve-2010-2536.patch"
+	"${FILESDIR}/${P}-tests.patch" )
