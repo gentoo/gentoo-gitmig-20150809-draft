@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.1 2011/01/14 20:09:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.2 2011/01/14 20:23:57 arfrever Exp $
 
 EAPI=3
 
@@ -33,8 +33,10 @@ RDEPEND="x11-libs/libXext
 	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	doc? ( app-doc/doxygen )
-	pdf? ( app-doc/doxygen dev-texlive/texlive-latex )
+	doc? (
+		app-doc/doxygen
+		pdf? ( dev-texlive/texlive-latex )
+	)
 	xinerama? ( x11-proto/xineramaproto )"
 
 INCDIR=${EPREFIX}/usr/include/fltk-${SLOT}
