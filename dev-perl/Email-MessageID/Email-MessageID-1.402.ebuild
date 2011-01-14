@@ -1,12 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/Email-MessageID-1.40.2.ebuild,v 1.6 2011/01/13 16:56:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/Email-MessageID-1.402.ebuild,v 1.1 2011/01/14 12:01:32 tove Exp $
 
 EAPI=3
 
-inherit versionator
-MY_P="${PN}-$(delete_version_separator 2)"
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=RJBS
 inherit perl-module
 
