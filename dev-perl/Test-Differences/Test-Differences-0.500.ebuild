@@ -1,12 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/Test-Differences-0.50.0.ebuild,v 1.4 2010/05/08 18:07:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/Test-Differences-0.500.ebuild,v 1.1 2011/01/14 13:39:04 tove Exp $
 
-EAPI=2
+EAPI=3
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2)
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=OVID
 inherit perl-module
 
