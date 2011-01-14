@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3d.ebuild,v 1.1 2011/01/13 15:20:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3d.ebuild,v 1.2 2011/01/14 09:02:10 xarthisius Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE="acl authfile ban +caps case clamav +ctrls deflate doc exec hardened ifsession ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
