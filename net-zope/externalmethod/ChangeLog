@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/externalmethod
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externalmethod/ChangeLog,v 1.1 2010/09/17 21:54:12 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externalmethod/ChangeLog,v 1.2 2011/01/14 10:06:31 xarthisius Exp $
+
+  14 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  externalmethod-2.13.0.ebuild:
+  marked ~ppc wrt #351612
 
 *externalmethod-2.13.0 (17 Sep 2010)
 
