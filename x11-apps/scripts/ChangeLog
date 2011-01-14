@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/scripts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.16 2010/11/17 23:39:08 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.17 2011/01/14 21:35:03 ranger Exp $
+
+  14 Jan 2011; Brent Baude <ranger@gentoo.org> scripts-1.0.1.ebuild:
+  stable ppc, bug 342337
 
   17 Nov 2010; Markos Chandras <hwoarang@gentoo.org> scripts-1.0.1.ebuild:
   Stable on amd64 wrt bug #342337
