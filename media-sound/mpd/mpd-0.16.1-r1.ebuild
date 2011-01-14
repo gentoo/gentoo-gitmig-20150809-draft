@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.ebuild,v 1.6 2011/01/05 21:49:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.1-r1.ebuild,v 1.1 2011/01/14 09:36:17 hwoarang Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic linux-info multilib
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -60,11 +60,17 @@ pkg_setup() {
 	use fluidsynth && ewarn "Using fluidsynth is discouraged by upstream."
 	use lastfmradio && ! use curl && ewarn "Lastfm requires curl support. Disabling lastfm"
 	enewuser mpd "" "" "/var/lib/mpd" audio
+	if use inotify; then
+		CONFIG_CHECK="~INOTIFY_USER"
+		ERROR_INOTIFY_USER="${P} requires inotify in-kernel support."
+		linux-info_pkg_setup
+	fi
+
 }
 
 src_prepare() {
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
-	epatch "${FILESDIR}"/${P}.conf.patch
+	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
 }
 
 src_configure() {
@@ -132,7 +138,7 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable sid sidplay) \
 		$(use_enable sqlite) \
-		$(use_enable tcpd libwrap)
+		$(use_enable tcpd libwrap) \
 		$(use_enable vorbis) \
 		$(use_enable wavpack) \
 		$(use_enable wildmidi) \
