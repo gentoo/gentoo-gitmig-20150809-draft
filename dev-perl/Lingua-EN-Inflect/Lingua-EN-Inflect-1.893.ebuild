@@ -1,13 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/Lingua-EN-Inflect-1.89.3.ebuild,v 1.1 2010/11/07 09:41:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/Lingua-EN-Inflect-1.893.ebuild,v 1.1 2011/01/14 12:20:26 tove Exp $
 
-EAPI=2
+EAPI=3
 
-inherit versionator
 MODULE_AUTHOR="DCONWAY"
-MY_P="${PN}-$(delete_version_separator 2)"
-S="${WORKDIR}/${MY_P}"
 inherit perl-module
 
 DESCRIPTION="Perl module for Lingua::EN::Inflect"
