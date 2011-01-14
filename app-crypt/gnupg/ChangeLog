@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.402 2011/01/06 17:18:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.403 2011/01/14 23:44:35 arfrever Exp $
+
+*gnupg-2.0.17 (14 Jan 2011)
+
+  14 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gnupg-1.4.10.ebuild, -gnupg-1.4.10-r1.ebuild,
+  -files/gnupg-2.0.12-adns.patch, -gnupg-2.0.16.ebuild, +gnupg-2.0.17.ebuild:
+  Version bump.
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org> gnupg-1.4.11.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #348093
