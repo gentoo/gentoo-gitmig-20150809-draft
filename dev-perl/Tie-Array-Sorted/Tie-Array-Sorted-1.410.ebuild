@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/Tie-Array-Sorted-1.4.1.ebuild,v 1.5 2010/02/06 13:09:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/Tie-Array-Sorted-1.410.ebuild,v 1.1 2011/01/14 09:44:43 tove Exp $
 
 EAPI=2
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2)
-S=${WORKDIR}/${MY_P}
 MODULE_AUTHOR=TMTM
+MODULE_VERSION=1.41
 inherit perl-module
 
 DESCRIPTION="An array which is kept sorted"
