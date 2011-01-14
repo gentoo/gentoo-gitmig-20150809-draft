@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/potrace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.27 2010/01/07 22:33:26 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.28 2011/01/14 00:11:58 dirtyepic Exp $
+
+*potrace-1.9 (14 Jan 2011)
+
+  14 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> +potrace-1.9.ebuild:
+  Version bump, bug #350000.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> potrace-1.8.ebuild:
   Transfer Prefix keywords
