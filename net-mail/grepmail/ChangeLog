@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/grepmail
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.31 2008/03/07 19:08:28 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.32 2011/01/14 13:21:02 tove Exp $
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +files/5.30.33-fix_nonexistent_mailbox_test.patch, grepmail-5.30.33.ebuild:
+  Fix fix_nonexistent_mailbox_test (#296657)
 
   07 Mar 2008; Raúl Porcel <armin76@gentoo.org> grepmail-5.30.33.ebuild:
   sparc stable wrt #212470

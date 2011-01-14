@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33.ebuild,v 1.4 2008/03/07 19:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33.ebuild,v 1.5 2011/01/14 13:21:02 tove Exp $
 
 inherit versionator perl-app
 
@@ -23,3 +23,4 @@ DEPEND="dev-perl/Inline
 	>=dev-perl/Mail-Mbox-MessageParser-1.40.01"
 
 SRC_TEST="do"
+PATCHES=( "${FILESDIR}"/5.30.33-fix_nonexistent_mailbox_test.patch )
