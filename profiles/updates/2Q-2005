@@ -34,7 +34,6 @@ move net-misc/dante net-proxy/dante
 move net-misc/3proxy net-proxy/3proxy
 move net-misc/nylon net-proxy/nylon
 move net-misc/tsocks net-proxy/tsocks
-move dev-perl/Text-CSV dev-perl/Text-CSV_XS
 move net-misc/kcmpureftpd net-ftp/kcmpureftpd
 move net-misc/linksys-tftp net-ftp/linksys-tftp
 move net-misc/netkit-tftp net-ftp/netkit-tftp
