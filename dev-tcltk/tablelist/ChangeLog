@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tablelist
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.2 2010/10/23 12:10:56 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.3 2011/01/15 13:56:24 jlec Exp $
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org> -tablelist-4.12.ebuild,
+  tablelist-5.2.ebuild:
+  Removed old
 
 *tablelist-5.2 (23 Oct 2010)
 

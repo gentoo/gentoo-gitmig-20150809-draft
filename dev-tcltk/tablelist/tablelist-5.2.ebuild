@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.2.ebuild,v 1.1 2010/10/23 12:10:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.2.ebuild,v 1.2 2011/01/15 13:56:24 jlec Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/tcl-8.4"
+RDEPEND="dev-lang/tcl"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
