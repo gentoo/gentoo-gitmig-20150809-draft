@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8-r2.ebuild,v 1.7 2011/01/15 19:26:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.8-r2.ebuild,v 1.8 2011/01/15 19:43:59 arfrever Exp $
 
-inherit eutils autotools
+EAPI="3"
+
+inherit autotools eutils
 
 DESCRIPTION="libmcrypt is a library that provides uniform interface to access several encryption algorithms."
 HOMEPAGE="http://mcrypt.sourceforge.net/"
@@ -14,10 +16,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd 
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-rotate-mask.patch
 	eautoreconf # need new libtool for interix (elibtoolize would suffice for freebsd)
 }
