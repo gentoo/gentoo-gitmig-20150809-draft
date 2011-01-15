@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.83 2011/01/09 18:14:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.84 2011/01/15 00:37:30 arfrever Exp $
+
+*buildbot-0.8.3_p1 (15 Jan 2011)
+
+  15 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/buildbot-0.7.5-root-skip-tests.patch, -buildbot-0.7.11_p3.ebuild,
+  -buildbot-0.7.12.ebuild, -buildbot-0.8.0.ebuild, +buildbot-0.8.3_p1.ebuild:
+  Version bump.
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> buildbot-0.8.2.ebuild:
   alpha/ia64/s390/sh stable wrt #349143
