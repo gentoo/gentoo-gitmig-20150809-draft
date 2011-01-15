@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.2.ebuild,v 1.3 2011/01/15 12:47:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.2.ebuild,v 1.4 2011/01/15 15:17:32 jlec Exp $
 
 EAPI="3"
 
@@ -27,6 +27,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}.patch" \
+		"${FILESDIR}/${P}-soname.patch" \
 		"${FILESDIR}/${P}-expat.patch" \
 		"${FILESDIR}/${P}-tnc.patch"
 	eautoreconf

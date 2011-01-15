@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tdom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.6 2011/01/15 12:47:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.7 2011/01/15 15:17:32 jlec Exp $
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org> tdom-0.8.2.ebuild,
+  +files/tdom-0.8.2-soname.patch:
+  Having a soname now
 
   15 Jan 2011; Justin Lecher <jlec@gentoo.org> tdom-0.8.2.ebuild:
   Assigned RDEPEND explicitely, EAPI=3 some QA on ebuild style
