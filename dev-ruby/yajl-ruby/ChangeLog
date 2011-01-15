@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/yajl-ruby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.5 2010/10/09 07:39:11 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.6 2011/01/15 10:53:13 graaff Exp $
+
+*yajl-ruby-0.7.9 (15 Jan 2011)
+
+  15 Jan 2011; Hans de Graaff <graaff@gentoo.org> +yajl-ruby-0.7.9.ebuild:
+  Version bump.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> -yajl-ruby-0.7.7.ebuild:
   Remove old version.
