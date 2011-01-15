@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.42 2010/09/10 18:32:33 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.43 2011/01/15 18:22:40 scarabeus Exp $
+
+*xf86vidmodeproto-2.3.1 (15 Jan 2011)
+
+  15 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86vidmodeproto-2.3.1.ebuild:
+  Version bump
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86vidmodeproto-2.2.2.ebuild:

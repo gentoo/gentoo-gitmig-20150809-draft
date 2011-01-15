@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xineramaproto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.43 2010/09/10 18:33:34 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.44 2011/01/15 18:20:09 scarabeus Exp $
+
+*xineramaproto-1.2.1 (15 Jan 2011)
+
+  15 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xineramaproto-1.2.1.ebuild:
+  Version bump
 
   10 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xineramaproto-1.1.2.ebuild:
