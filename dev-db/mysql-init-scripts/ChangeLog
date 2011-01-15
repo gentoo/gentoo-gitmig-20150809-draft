@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-init-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.6 2011/01/14 03:34:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.7 2011/01/15 17:54:31 robbat2 Exp $
+
+*mysql-init-scripts-2.0_pre1-r2 (15 Jan 2011)
+
+  15 Jan 2011; Robin H. Johnson <robbat2@gentoo.org>
+  -mysql-init-scripts-2.0_pre1-r1.ebuild,
+  +mysql-init-scripts-2.0_pre1-r2.ebuild, files/mysql-5.1.53-conf.d:
+  Bug #351611: Avoid false-postive failure return value preventing the init
+  script from starting.
 
 *mysql-init-scripts-2.0_pre1-r1 (14 Jan 2011)
 
