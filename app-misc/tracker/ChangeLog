@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.90 2011/01/13 00:17:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.91 2011/01/15 07:07:18 ford_prefect Exp $
+
+  15 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> tracker-0.9.30.ebuild,
+  tracker-0.9.33.ebuild:
+  Restrict gupnp-dlna dependency to <0.5 (since it breaks API)
 
 *tracker-0.9.33 (13 Jan 2011)
 
