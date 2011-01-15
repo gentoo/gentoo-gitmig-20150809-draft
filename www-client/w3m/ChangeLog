@@ -1,6 +1,18 @@
 # ChangeLog for www-client/w3m
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.60 2010/09/27 11:05:23 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.61 2011/01/15 16:57:07 matsuu Exp $
+
+  15 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -w3m-0.5.2.ebuild,
+  -w3m-0.5.2-r1.ebuild, -w3m-0.5.2-r2.ebuild, -w3m-0.5.2-r3.ebuild,
+  +w3m-0.5.3.ebuild:
+  Version bumped, bug #336497. Removed old versions.
+
+*w3m-0.5.3 (15 Jan 2011)
+
+  15 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -w3m-0.5.2.ebuild,
+  -w3m-0.5.2-r1.ebuild, -w3m-0.5.2-r2.ebuild, -w3m-0.5.2-r3.ebuild,
+  +w3m-0.5.3.ebuild:
+  Version bumped. Removed old versions.
 
   26 Sep 2010; Michael Weber <xmw@gentoo.org> w3m-0.5.2-r4.ebuild:
   Added ~arm keyword

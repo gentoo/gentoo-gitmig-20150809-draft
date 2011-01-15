@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.2-r3.ebuild,v 1.1 2009/12/13 23:25:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3.ebuild,v 1.1 2011/01/15 16:57:07 matsuu Exp $
 
+EAPI="3"
 inherit eutils
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz"
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X fbcon gpm gtk imlib lynxkeymap migemo nls nntp ssl unicode xface linguas_ja"
 
 # We cannot build w3m with gtk+2 w/o X because gtk+2 ebuild doesn't
@@ -25,19 +26,14 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/w3m"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-ambwidth.patch"
-	# http://www.sic.med.tohoku.ac.jp/~satodai/w3m-dev/200708.month/4286.html
-	epatch "${FILESDIR}/${P}-form.patch"
-	epatch "${FILESDIR}/${P}-gc72.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.5.2-gc72.patch"
 }
 
-src_compile() {
-
+src_configure() {
 	local myconf migemo_command imagelibval imageval
 
 	if use gtk ; then
@@ -52,7 +48,7 @@ src_compile() {
 	fi
 
 	if use migemo ; then
-		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
+		migemo_command="migemo -t egrep ${EPREFIX}/usr/share/migemo/migemo-dict"
 	else
 		migemo_command="no"
 	fi
@@ -80,10 +76,10 @@ src_compile() {
 	fi
 
 	econf \
-		--with-editor=/usr/bin/vi \
-		--with-mailer=/bin/mail \
-		--with-browser=/usr/bin/firefox \
-		--with-termlib=curses \
+		--with-editor="${EPREFIX}/usr/bin/vi" \
+		--with-mailer="${EPREFIX}/bin/mail" \
+		--with-browser="${EPREFIX}/usr/bin/xdg-open" \
+		--with-termlib=ncurses \
 		--enable-image=${imageval:-no} \
 		--with-imagelib="${imagelibval:-no}" \
 		--with-migemo="${migemo_command}" \
@@ -96,9 +92,6 @@ src_compile() {
 		$(use_with ssl) \
 		$(use_enable xface) \
 		${myconf} || die
-
-	# parallel make borks, bug #215394.
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
@@ -107,15 +100,15 @@ src_install() {
 
 	# http://www.sic.med.tohoku.ac.jp/~satodai/w3m-dev/200307.month/3944.html
 	insinto /etc/${PN}
-	newins "${FILESDIR}/${PN}.mailcap" mailcap
+	newins "${FILESDIR}/${PN}.mailcap" mailcap || die
 
 	insinto /usr/share/${PN}/Bonus
-	doins Bonus/*
-	dodoc README NEWS TODO ChangeLog
-	docinto doc-en ; dodoc doc/*
+	doins Bonus/* || die
+	dodoc README NEWS TODO ChangeLog || die
+	docinto doc-en ; dodoc doc/* || die
 	if use linguas_ja ; then
-		docinto doc-jp ; dodoc doc-jp/*
+		docinto doc-jp ; dodoc doc-jp/* || die
 	else
-		rm -rf "${D}"/usr/share/man/ja
+		rm -rf "${ED}"/usr/share/man/ja || die
 	fi
 }
