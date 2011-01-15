@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.1 2010/11/10 21:30:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.2 2011/01/15 19:59:21 nirbheek Exp $
 
 EAPI="2"
 
@@ -87,7 +87,7 @@ RDEPEND="
 
 	>=gnome-base/gnome-desktop-2.30.2:2
 	>=gnome-base/gnome-session-2.30.2
-	>=dev-libs/libgweather-2.30.3
+	>=dev-libs/libgweather-2.30.3:2
 	>=gnome-base/gnome-applets-2.30.0
 	>=gnome-base/gnome-panel-2.30.2
 	>=gnome-base/gnome-menus-2.30.4
