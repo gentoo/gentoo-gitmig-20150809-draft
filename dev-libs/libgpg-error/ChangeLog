@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.72 2011/01/12 17:34:09 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.73 2011/01/15 22:51:37 arfrever Exp $
+
+  15 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libgpg-error-1.10.ebuild:
+  Add "static-libs" USE flag (bug #351810).
 
 *libgpg-error-1.10 (12 Jan 2011)
 
