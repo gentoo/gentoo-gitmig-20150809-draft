@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12352 2011/01/12 20:20:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12353 2011/01/15 01:42:25 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (15 Jan 2011)
+#  on behalf of QA team
+#
+# Fails to build without automake-1.7 (not in deps), as per
+# bug #233049, open 2008-07. Last bumped in 2005, and not
+# even touched since.
+#
+# Removal on 2011-03-16
+net-print/gqueue
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (12 Jan 2011)
 # Starting with KOffice version 2.2.0, the functionality of app-office/kchart
