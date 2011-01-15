@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/opencryptoki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.12 2011/01/14 00:19:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.13 2011/01/15 00:15:16 flameeyes Exp $
+
+*opencryptoki-2.3.3-r2 (15 Jan 2011)
+
+  15 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -opencryptoki-2.3.3-r1.ebuild, +opencryptoki-2.3.3-r2.ebuild:
+  Revision bump: avoid /var/lib/lib directory prefix (thanks to frank Swiderski
+  for reportign); disable CCA token so that the whole package is under CPL-0.5
+  (and also it seems to be limited to s390 hardware).
 
 *opencryptoki-2.3.3-r1 (14 Jan 2011)
 
