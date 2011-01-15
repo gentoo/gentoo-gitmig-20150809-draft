@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.4 2011/01/12 23:16:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.5 2011/01/15 23:59:50 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -12,7 +12,7 @@ VERSION_DMRAID='1.0.0.rc14'
 VERSION_E2FSPROGS='1.41.14'
 VERSION_FUSE='2.7.4'
 VERSION_ISCSI='2.0-871'
-VERSION_LVM='2.02.28'
+VERSION_LVM='2.02.74'
 VERSION_UNIONFS_FUSE='0.22'
 VERSION_GPG='1.4.11'
 
