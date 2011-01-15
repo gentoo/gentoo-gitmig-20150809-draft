@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctcs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.9 2010/11/10 17:33:27 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctcs/ChangeLog,v 1.10 2011/01/15 03:39:42 vapier Exp $
+
+  15 Jan 2011; Mike Frysinger <vapier@gentoo.org> ctcs-1.4.1.ebuild:
+  Mark ppc stable #344757.
 
   10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ctcs-1.4.1.ebuild:
   x86 stable wrt bug #344757
