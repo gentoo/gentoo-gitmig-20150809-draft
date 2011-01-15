@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.64 2011/01/14 19:09:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.65 2011/01/15 12:12:55 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> dnspython-1.9.2.ebuild:
+  arm stable, bug #351026
 
   14 Jan 2011; Brent Baude <ranger@gentoo.org> dnspython-1.9.2.ebuild:
   stable ppc, bug 351026
