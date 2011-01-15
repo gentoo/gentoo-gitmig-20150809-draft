@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.53 2010/12/22 01:43:14 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.54 2011/01/15 18:30:48 patrick Exp $
+
+*monit-5.2.3 (15 Jan 2011)
+
+  15 Jan 2011; Patrick Lauer <patrick@gentoo.org> +monit-5.2.3.ebuild:
+  Bump for #351737
 
   22 Dec 2010; Markos Chandras <hwoarang@gentoo.org> monit-5.1.1.ebuild:
   Stable on amd64 wrt bug #346655
