@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.27 2011/01/07 18:20:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.28 2011/01/15 15:42:38 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> foolscap-0.6.0.ebuild:
+  x86 stable, bug #350889
 
   07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> foolscap-0.6.0.ebuild:
   Stable on amd64 wrt bug #350889
