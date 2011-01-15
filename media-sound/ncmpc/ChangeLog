@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.60 2011/01/13 16:25:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.61 2011/01/15 20:10:15 xarthisius Exp $
+
+  15 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> ncmpc-0.18.ebuild:
+  ppc64 stable wrt #348746
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> ncmpc-0.18.ebuild:
   Marking ncmpc-0.18 ppc for bug 348746
