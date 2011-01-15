@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r2.ebuild,v 1.3 2010/12/29 15:16:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r2.ebuild,v 1.4 2011/01/15 14:44:16 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit eutils python toolchain-funcs
+inherit eutils prefix python toolchain-funcs
 
 MY_PV="${PV//./_}"
 
@@ -46,11 +46,14 @@ src_prepare() {
 	local opts
 	local optsld
 
-	epatch "${FILESDIR}"/${PV}-tst_server.py.patch
-	epatch "${FILESDIR}"/${PV}-boost.patch
-	epatch "${FILESDIR}"/${PV}-clipper.patch
-	epatch "${FILESDIR}"/${PV}-flags.patch
-	epatch "${FILESDIR}"/${PV}-soname.patch
+	epatch \
+		"${FILESDIR}"/${PV}-tst_server.py.patch \
+		"${FILESDIR}"/${PV}-boost.patch \
+		"${FILESDIR}"/${PV}-clipper.patch \
+		"${FILESDIR}"/${PV}-flags.patch \
+		"${FILESDIR}"/${PV}-soname.patch
+
+	eprefixify "${MY_S}"/scitbx/libtbx_refresh.py
 
 	rm -rf "${MY_S}/scons" "${MY_S}/boost" "${MY_S}/PyCifRW"
 	find "${MY_S}/clipper" -name "*.h" -delete

@@ -472,7 +472,7 @@ index 10d4ee0..c8374b2 100644
    warn_if_unexpected_md5_hexdigest(
 -    path=self.env.under_dist(
 -      module_name="boost", path="boost/random/mersenne_twister.hpp"),
-+    path="/usr/include/boost/random/mersenne_twister.hpp",
++    path="@GENTOO_PORTAGE_EPREFIX@/usr/include/boost/random/mersenne_twister.hpp",
      expected_md5_hexdigests=[
        "a2533c79a21f0f773f2e0d29a37371b0", # CVS revision 1.21
        "378432b5b280c9c0c894f7c80f0dad92", # CVS revision 1.20

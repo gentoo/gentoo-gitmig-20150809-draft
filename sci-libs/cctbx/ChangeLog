@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cctbx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.10 2010/12/29 15:16:29 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.11 2011/01/15 14:44:16 jlec Exp $
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org>
+  files/2010.03.29.2334-boost.patch, cctbx-2010.03.29.2334-r2.ebuild,
+  cctbx-2010.03.29.2334-r3.ebuild:
+  Prefix boost detection fix
 
   29 Dec 2010; Justin Lecher <jlec@gentoo.org> cctbx-2009.11.01.0123-r1.ebuild,
   cctbx-2010.03.29.2334-r1.ebuild, cctbx-2010.03.29.2334-r2.ebuild,
