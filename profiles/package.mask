@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12353 2011/01/15 01:42:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12354 2011/01/15 16:25:13 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,10 +46,6 @@ net-print/gqueue
 # is provided by the app-office/koffice-libs ebuild. If you still have 
 # >=app-office/kchart-2.2.0 installed, please just unmerge it (it is only a dummy).
 >=app-office/kchart-2.2.0
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (12 Jan 2011)
-# Amarok 2.4.0 not released yet
-=media-sound/amarok-2.4.0
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (12 Jan 2011)
 # Also mask pyclutter-1.3
