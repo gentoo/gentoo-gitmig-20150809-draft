@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/slimevolley
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.8 2011/01/05 14:07:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.9 2011/01/15 14:38:38 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> slimevolley-2.4.2.ebuild:
+  x86 stable, bug #350447
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> slimevolley-2.4.2.ebuild:
   Stable on amd64 wrt bug #350447
