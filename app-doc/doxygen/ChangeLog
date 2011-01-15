@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.192 2011/01/13 16:29:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.193 2011/01/15 12:30:59 armin76 Exp $
+
+  15 Jan 2011; Raúl Porcel <armin76@gentoo.org> doxygen-1.7.2.ebuild:
+  ia64/s390/sh stable wrt #338632
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> doxygen-1.7.2.ebuild:
   Marking doxygen-1.7.2 ppc for bug 338632
