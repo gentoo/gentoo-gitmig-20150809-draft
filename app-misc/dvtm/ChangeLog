@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvtm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.5 2011/01/06 15:09:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.6 2011/01/15 14:26:25 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> dvtm-0.6.ebuild:
+  x86 stable, bug #350756
 
   06 Jan 2011; Markos Chandras <hwoarang@gentoo.org> dvtm-0.6.ebuild:
   Stable on amd64 wrt bug #350756
