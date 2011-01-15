@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.72.ebuild,v 1.3 2011/01/15 15:34:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.72.ebuild,v 1.4 2011/01/15 18:18:13 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ MY_PN="IPy"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Class and tools for handling of IPv4 and IPv6 addresses and networks"
-HOMEPAGE="http://software.inl.fr/trac/trac.cgi/wiki/IPy http://pypi.python.org/pypi/IPy"
+HOMEPAGE="https://github.com/haypo/python-ipy/wiki http://pypi.python.org/pypi/IPy"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
