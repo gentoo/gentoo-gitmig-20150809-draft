@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.74 2011/01/14 22:25:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.75 2011/01/15 15:50:01 ranger Exp $
+
+  15 Jan 2011; Brent Baude <ranger@gentoo.org> youtube-dl-2010.08.04.ebuild:
+  stable ppc, bug 332019
 
   14 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   youtube-dl-2010.12.09.ebuild:
