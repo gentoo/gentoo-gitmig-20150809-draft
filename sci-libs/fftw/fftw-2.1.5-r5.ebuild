@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.17 2010/04/09 18:41:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.18 2011/01/15 13:32:50 jlec Exp $
 
 inherit eutils flag-o-matic autotools toolchain-funcs
 
@@ -26,16 +26,11 @@ pkg_setup() {
 	if use x86; then
 		is-flag "-fomit-frame-pointer" || append-flags "-fomit-frame-pointer"
 	fi
-	if use openmp &&
-		[[ $(tc-getCC)$ == *gcc* ]] &&
-		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-		! has_version sys-devel/gcc[openmp] )
-	then
+	if use openmp && [[ $(tc-getCC) == *gcc* ]] && ! $(tc-has-openmp); then
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
 		ewarn "If you want to build fftw with OpenMP, abort now,"
 		ewarn "and switch CC to an OpenMP capable compiler"
 		ewarn "Otherwise the configure script will select POSIX threads."
-		epause 5
 	fi
 	use openmp && [[ $(tc-getCC)$ == icc* ]] && append-ldflags $(no-as-needed)
 }
