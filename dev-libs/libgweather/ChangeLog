@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.70 2010/11/14 23:05:07 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.71 2011/01/15 19:53:39 nirbheek Exp $
+
+  15 Jan 2011; <nirbheek@gentoo.org> libgweather-2.30.2.ebuild,
+  libgweather-2.30.3.ebuild:
+  libgweather slotmove 0 -> 2, new gtk+:3 version coming up
 
   14 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   libgweather-2.30.3.ebuild:
