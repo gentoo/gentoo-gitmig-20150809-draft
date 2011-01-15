@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r2.ebuild,v 1.1 2011/01/15 00:15:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r2.ebuild,v 1.2 2011/01/15 00:37:10 flameeyes Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ EAPI="2"
 # http://gitorious.org/~flameeyes/opencryptoki/flameeyess-opencryptoki
 BACKPORTS=2
 
-inherit autotools eutils multilib
+inherit autotools eutils multilib flag-o-matic
 
 DESCRIPTION="PKCS#11 provider cryptographic hardware"
 HOMEPAGE="http://sourceforge.net/projects/opencryptoki"
@@ -58,11 +58,16 @@ src_configure() {
 	# requirements, but until somebody asks for those, I'd rather not
 	# enable them.
 
+	# We don't use --enable-debug because that tinkers with the CFLAGS
+	# and we don't want that. Instead we append -DDEBUG which enables
+	# debug information.
+	use debug && append-flags -DDEBUG
+
 	econf \
 		--localstatedir=/var \
 		--enable-fast-install \
 		--disable-dependency-tracking \
-		$(use_enable debug) \
+		--disable-debug \
 		--enable-daemon \
 		--enable-library \
 		--disable-icatok \
