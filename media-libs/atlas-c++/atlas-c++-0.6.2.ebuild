@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.2.ebuild,v 1.3 2010/11/14 22:59:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.2.ebuild,v 1.4 2011/01/15 16:54:19 tupone Exp $
 EAPI=2
 
 MY_PN="Atlas-C++"
@@ -30,6 +30,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	use doc && dohtml -r doc/html/*
-	use doc && doman doc/man/*
+	use doc && doman doc/man/man3/[^i]*
 	dodoc AUTHORS ChangeLog HACKING NEWS README ROADMAP THANKS TODO
 }
