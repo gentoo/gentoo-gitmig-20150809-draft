@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.24.ebuild,v 1.2 2010/11/28 01:01:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.24.ebuild,v 1.3 2011/01/15 15:04:50 maekke Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/glbsp/${PN}_src_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="fltk"
 
 DEPEND="fltk? ( x11-libs/fltk:1.1 )"
