@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gonzui
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.14 2010/12/02 01:21:49 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.15 2011/01/15 01:55:39 matsuu Exp $
+
+*gonzui-1.2-r2 (15 Jan 2011)
+
+  15 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +gonzui-1.2-r2.ebuild,
+  +files/gonzui-1.2-r2-gentoo.patch, +files/gonzui.initd:
+  Fixed initd, bug #188241. Fixed parallel make issue, bug #297463. Convert to
+  ruby-ng.
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> gonzui-1.2-r1.ebuild:
   Drop WANT_AUTOMAKE=latest.
