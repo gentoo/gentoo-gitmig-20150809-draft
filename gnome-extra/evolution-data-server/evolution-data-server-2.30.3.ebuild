@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.4 2010/11/15 17:54:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.5 2011/01/15 19:55:02 nirbheek Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.16.1
 		>=dev-libs/nss-3.9 )
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
-	weather? ( >=dev-libs/libgweather-2.25.4 )"
+	weather? ( >=dev-libs/libgweather-2.25.4:2 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
