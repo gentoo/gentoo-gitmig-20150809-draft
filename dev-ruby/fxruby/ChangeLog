@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.86 2010/10/10 13:52:33 klausman Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.87 2011/01/15 12:12:45 graaff Exp $
+
+  15 Jan 2011; Hans de Graaff <graaff@gentoo.org> -fxruby-1.6.19.ebuild:
+  Remove old version.
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> fxruby-1.6.20.ebuild:
   Keyworded on alpha, bug #325465
