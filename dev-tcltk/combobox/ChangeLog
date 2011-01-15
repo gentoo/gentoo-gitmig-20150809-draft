@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/combobox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/combobox/ChangeLog,v 1.1 2010/02/06 23:16:45 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/combobox/ChangeLog,v 1.2 2011/01/15 14:22:20 jlec Exp $
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org> combobox-2.3.ebuild:
+  Keyworded for ~-linux, tested by me
 
 *combobox-2.3 (06 Feb 2010)
 

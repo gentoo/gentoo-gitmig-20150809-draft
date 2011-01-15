@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/anigif
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.1 2010/02/06 23:13:11 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.2 2011/01/15 14:24:43 jlec Exp $
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org> anigif-1.3.ebuild:
+  Keyworded for ~-linux, tested by me
 
 *anigif-1.3 (06 Feb 2010)
 
