@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.23.ebuild,v 1.1 2010/12/21 07:20:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.23.ebuild,v 1.2 2011/01/15 11:43:27 jlec Exp $
+
+EAPI="3"
 
 MY_PN="refmac_dictionary"
 
@@ -24,10 +26,6 @@ RESTRICT="binchecks strip"
 S="${WORKDIR}"/monomers
 
 src_install() {
-	insinto /usr/share/ccp4/data/monomers/
-	for i in {a..z} {0..9} *list *.cif *.txt; do
-		doins -r ${i} || die
-	done
-	dodoc *.txt *.ps || die
-	dohtml *.html || die
+	dodir /usr/share/ccp4/data/monomers/
+	mv *.lib "${ED}"/usr/share/ccp4/data/monomers/ || die
 }
