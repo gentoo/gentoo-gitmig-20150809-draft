@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.1 2011/01/15 21:34:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.2 2011/01/15 21:46:04 jlec Exp $
 
 EAPI="3"
 
@@ -67,7 +67,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local dir
 	local myconf="
 		--enable-shared
 		--enable-type-prefix
@@ -88,7 +87,6 @@ src_configure() {
 			--disable-threads
 			--without-openmp"
 	fi
-
 	cd "${S}-single"
 	econf ${myconf} \
 		--enable-float \
