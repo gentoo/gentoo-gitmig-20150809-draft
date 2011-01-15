@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/lrzsz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.27 2010/10/29 04:19:12 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.28 2011/01/15 20:01:36 xarthisius Exp $
+
+  15 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  lrzsz-0.12.20-r3.ebuild:
+  ppc64 stable wrt #338616
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> lrzsz-0.12.20-r3.ebuild:
   Stable for HPPA (bug #338616).
