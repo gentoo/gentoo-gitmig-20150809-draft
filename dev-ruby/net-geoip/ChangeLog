@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-geoip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.17 2011/01/09 16:55:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.18 2011/01/15 15:56:07 ranger Exp $
+
+  15 Jan 2011; Brent Baude <ranger@gentoo.org> net-geoip-0.07.ebuild:
+  stable ppc, bug 349891
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> net-geoip-0.07.ebuild:
   ia64 stable wrt #349891

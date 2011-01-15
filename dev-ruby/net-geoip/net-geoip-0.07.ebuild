@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.07.ebuild,v 1.5 2011/01/09 16:55:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.07.ebuild,v 1.6 2011/01/15 15:56:07 ranger Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -15,7 +15,7 @@ SRC_URI="http://geolite.maxmind.com/download/geoip/api/ruby/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ia64 ppc ppc64 x86"
 
 DEPEND="${DEPEND} >=dev-libs/geoip-1.2.1"
 RDEPEND="${RDEPEND} >=dev-libs/geoip-1.2.1"
