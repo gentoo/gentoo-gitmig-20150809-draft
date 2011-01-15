@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.3.ebuild,v 1.1 2010/12/15 14:47:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.3.ebuild,v 1.2 2011/01/15 18:00:12 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="doc vim emacs"
 
 RDEPEND="vim? ( || ( app-editors/vim app-editors/gvim ) )
