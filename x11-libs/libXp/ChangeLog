@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.30 2010/01/15 21:50:00 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.31 2011/01/15 17:37:38 scarabeus Exp $
+
+*libXp-1.0.1 (15 Jan 2011)
+
+  15 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libXp-1.0.1.ebuild:
+  Version bump
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libXp-1.0.0.ebuild:
   Transfer Prefix keywords
