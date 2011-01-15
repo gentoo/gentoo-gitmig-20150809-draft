@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.4.5-r1.ebuild,v 1.3 2010/11/09 01:59:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.4.5-r1.ebuild,v 1.4 2011/01/15 19:42:09 arfrever Exp $
 
 EAPI="3"
 
@@ -21,3 +21,5 @@ DEPEND="
 	virtual/jpeg
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=("${FILESDIR}/${P}-exiv2-0.21.patch")

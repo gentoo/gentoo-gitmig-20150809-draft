@@ -1,0 +1,249 @@
+--- libs/libkexiv2/libkexiv2/kexiv2exif.cpp
++++ libs/libkexiv2/libkexiv2/kexiv2exif.cpp
+@@ -287,7 +287,11 @@
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++        return QString::fromLocal8Bit( ek.tagLabel().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagTitle(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
+@@ -303,7 +307,11 @@
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++        return QString::fromLocal8Bit( ek.tagDesc().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagDesc(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
+@@ -874,12 +882,45 @@
+     try
+     {
+         QList<const Exiv2::TagInfo*> tags;
++        TagsMap                      tagsMap;
++
++#if (EXIV2_TEST_VERSION(0,21,0))
++        const Exiv2::GroupInfo* gi = Exiv2::ExifTags::groupList();
++        while (gi->tagList_ != 0)
++        {
++            if (QString(gi->ifdName_) != QString("Makernote"))
++            {
++                Exiv2::TagListFct tl     = gi->tagList_;
++                const Exiv2::TagInfo* ti = tl();
++
++                while (ti->tag_ != 0xFFFF)
++                {
++                    tags << ti;
++                    ++ti;
++                }
++            }
++            ++gi;
++        }
++
++        for (QList<const Exiv2::TagInfo*>::iterator it = tags.begin(); it != tags.end(); ++it)
++        {
++            do
++            {
++                const Exiv2::TagInfo* ti = *it;
++                QString key              = QLatin1String(Exiv2::ExifKey(*ti).key().c_str());
++                QStringList values;
++                values << ti->name_ << ti->title_ << ti->desc_;
++                tagsMap.insert(key, values);
++                ++(*it);
++            }
++            while((*it)->tag_ != 0xffff);
++        }
++#else
+         tags << Exiv2::ExifTags::ifdTagList()
+              << Exiv2::ExifTags::exifTagList()
+              << Exiv2::ExifTags::iopTagList()
+              << Exiv2::ExifTags::gpsTagList();
+ 
+-        TagsMap tagsMap;
+         for (QList<const Exiv2::TagInfo*>::iterator it = tags.begin(); it != tags.end(); ++it)
+         {
+             do
+@@ -892,6 +933,7 @@
+             }
+             while((*it)->tag_ != 0xffff);
+         }
++#endif
+         return tagsMap;
+     }
+     catch( Exiv2::Error &e )
+@@ -904,10 +946,48 @@
+ 
+ KExiv2::TagsMap KExiv2::getMakernoteTagsList() const
+ {
+-#if (EXIV2_TEST_VERSION(0,18,1))
+     try
+     {
+         QList<const Exiv2::TagInfo*> tags;
++        TagsMap                      tagsMap;
++
++#if (EXIV2_TEST_VERSION(0,21,0))
++
++        const Exiv2::GroupInfo* gi = Exiv2::ExifTags::groupList();
++
++        while (gi->tagList_ != 0)
++        {
++            if (QString(gi->ifdName_) == QString("Makernote"))
++            {
++                Exiv2::TagListFct tl     = gi->tagList_;
++                const Exiv2::TagInfo* ti = tl();
++
++                while (ti->tag_ != 0xFFFF)
++                {
++                    tags << ti;
++                    ++ti;
++                }
++            }
++            ++gi;
++        }
++
++        for (QList<const Exiv2::TagInfo*>::iterator it = tags.begin(); it != tags.end(); ++it)
++        {
++            do
++            {
++                const Exiv2::TagInfo* ti = *it;
++                QString key              = QLatin1String(Exiv2::ExifKey(*ti).key().c_str());
++                QStringList values;
++                values << ti->name_ << ti->title_ << ti->desc_;
++                tagsMap.insert(key, values);
++                ++(*it);
++            }
++            while((*it)->tag_ != 0xffff);
++        }
++
++#else
++
++#if (EXIV2_TEST_VERSION(0,18,1))
+         tags
+              // Canon Makernotes.
+              << Exiv2::CanonMakerNote::tagList()
+@@ -956,7 +1036,8 @@
+              // Fuji Makernotes.
+              << Exiv2::FujiMakerNote::tagList();
+ 
+-        TagsMap tagsMap;
++#endif // (EXIV2_TEST_VERSION(0,18,1))
++
+         for (QList<const Exiv2::TagInfo*>::iterator it = tags.begin(); it != tags.end(); ++it)
+         {
+             do
+@@ -969,13 +1050,15 @@
+             }
+             while((*it)->tag_ != 0xffff);
+         }
++
++#endif // (EXIV2_TEST_VERSION(0,21,0))
++
+         return tagsMap;
+     }
+     catch( Exiv2::Error &e )
+     {
+         d->printExiv2ExceptionError("Cannot get Makernote Tags list using Exiv2 ", e);
+     }
+-#endif
+ 
+     return TagsMap();
+ }
+--- libs/libkexiv2/libkexiv2/kexiv2_p.h
++++ libs/libkexiv2/libkexiv2/kexiv2_p.h
+@@ -26,7 +26,7 @@
+ 
+ #include "kexiv2.h"
+ 
+- // C++ includes.
++ // C++ includes
+ 
+ #include <cstdlib>
+ #include <cstdio>
+@@ -37,7 +37,7 @@
+ #include <iomanip>
+ #include <string>
+ 
+-// Qt includes.
++// Qt includes
+ 
+ #include <QBuffer>
+ #include <QFile>
+@@ -49,7 +49,7 @@
+ #include <QDataStream>
+ #include <QSharedData>
+ 
+-// KDE includes.
++// KDE includes
+ 
+ #include <ktemporaryfile.h>
+ #include <kencodingdetector.h>
+@@ -57,7 +57,10 @@
+ #include <kdeversion.h>
+ #include <kdebug.h>
+ 
+-// Exiv2 includes.
++// Exiv2 includes -------------------------------------------------------
++
++// NOTE: All Exiv2 header must be stay there to not expose external source code to Exiv2 API
++//       and reduce Exiv2 dependency to client code.
+ 
+ // The pragmas are required to be able to catch exceptions thrown by libexiv2:
+ // See http://gcc.gnu.org/wiki/Visibility, the section about c++ exceptions.
+@@ -74,19 +77,7 @@
+ #include <exiv2/properties.hpp>
+ #include <exiv2/types.hpp>
+ #include <exiv2/exif.hpp>
+-#include <exiv2/canonmn.hpp>
+-#include <exiv2/sigmamn.hpp>
+-#include <exiv2/sonymn.hpp>
+-#include <exiv2/minoltamn.hpp>
+-#include <exiv2/nikonmn.hpp>
+-#include <exiv2/olympusmn.hpp>
+-#include <exiv2/panasonicmn.hpp>
+-#include <exiv2/pentaxmn.hpp>
+-#include <exiv2/fujimn.hpp>
+-//#include <exiv2/preview.hpp>
+-#ifdef __GNUC__
+-#pragma GCC visibility pop
+-#endif
++#include <exiv2/xmpsidecar.hpp>
+ 
+ // Check if Exiv2 support XMP
+ 
+@@ -107,6 +98,28 @@
+ #    define EXIV2_TEST_VERSION(major,minor,patch) (false)
+ #endif
+ 
++#if (EXIV2_TEST_VERSION(0,21,0))
++
++// With exiv2 > 0.20.0, all makernote header files have been removed to increase binary compatibility.
++// See Exiv2 bugzilla entry http://dev.exiv2.org/issues/719
++// and wiki topic           http://dev.exiv2.org/boards/3/topics/583
++#else
++#include <exiv2/canonmn.hpp>
++#include <exiv2/sigmamn.hpp>
++#include <exiv2/sonymn.hpp>
++#include <exiv2/minoltamn.hpp>
++#include <exiv2/nikonmn.hpp>
++#include <exiv2/olympusmn.hpp>
++#include <exiv2/panasonicmn.hpp>
++#include <exiv2/pentaxmn.hpp>
++#include <exiv2/fujimn.hpp>
++#endif
++
++#ifdef __GNUC__
++#pragma GCC visibility pop
++#endif
++
++// End of Exiv2 headers ------------------------------------------------------
+ #ifndef _XMP_SUPPORT_
+ 
+ // Dummy redifinition of XmpData class to compile fine 
