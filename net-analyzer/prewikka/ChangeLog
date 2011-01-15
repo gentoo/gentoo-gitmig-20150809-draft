@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prewikka
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.40 2010/04/14 03:48:14 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.41 2011/01/15 21:55:36 tomka Exp $
+
+  15 Jan 2011; Thomas Kahle <tomka@gentoo.org> prewikka-0.9.14-r2.ebuild:
+  Dropping to ~x86 as per bug 318839
 
   14 Apr 2010; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Remove myself from metadata
