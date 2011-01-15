@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.34 2011/01/05 14:11:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.35 2011/01/15 14:28:55 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> clucene-0.9.21b-r1.ebuild:
+  x86 stable, bug #350610
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> clucene-0.9.21b-r1.ebuild:
   Stable on amd64 wrt bug #350610
