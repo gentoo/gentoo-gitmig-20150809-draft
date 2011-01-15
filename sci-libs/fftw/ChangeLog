@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.108 2011/01/15 17:19:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.109 2011/01/15 21:34:27 jlec Exp $
+
+*fftw-2.1.5-r8 (15 Jan 2011)
+
+  15 Jan 2011; Justin Lecher <jlec@gentoo.org> -fftw-2.1.5-r7.ebuild,
+  +fftw-2.1.5-r8.ebuild:
+  Revert changes in src_configure, #351786
 
   15 Jan 2011; Markos Chandras <hwoarang@gentoo.org> fftw-2.1.5-r7.ebuild:
   Stable on amd64 wrt bug #351745
