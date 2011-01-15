@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.30 2011/01/12 15:08:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.31 2011/01/15 15:54:40 maekke Exp $
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> mednafen-0.8.13.3.ebuild:
+  x86 stable, bug #351332
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mednafen-0.8.13.3.ebuild:
   Stable on amd64 wrt bug #351332
