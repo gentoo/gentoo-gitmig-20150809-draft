@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12354 2011/01/15 16:25:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12355 2011/01/15 21:16:32 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (15 Jan 2011)
+# Replaced by new client net-misc/logmein-hamachi.
+# Please migrate your private networks as appropriate.
+# The old client will be removed in 30 days.
+net-misc/hamachi
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (15 Jan 2011)
 #  on behalf of QA team
