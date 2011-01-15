@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/krunner-kopete-contacts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krunner-kopete-contacts/ChangeLog,v 1.1 2009/11/09 13:58:27 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krunner-kopete-contacts/ChangeLog,v 1.2 2011/01/15 15:31:36 tampakrap Exp $
+
+*krunner-kopete-contacts-0.4 (15 Jan 2011)
+
+  15 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -krunner-kopete-contacts-0.3.ebuild, +krunner-kopete-contacts-0.4.ebuild:
+  Version bump, remove old
 
 *krunner-kopete-contacts-0.3 (09 Nov 2009)
 
