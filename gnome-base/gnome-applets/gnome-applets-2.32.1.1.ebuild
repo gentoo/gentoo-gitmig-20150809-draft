@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.2 2010/12/04 18:16:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.3 2011/01/15 19:57:04 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -31,7 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/libxml2-2.5.0
 	>=x11-themes/gnome-icon-theme-2.15.91
-	>=dev-libs/libgweather-2.22.1
+	>=dev-libs/libgweather-2.22.1:2
 	x11-libs/libX11
 
 	battstat? ( $HALDEPEND )

@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.8 2010/10/17 15:20:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.9 2011/01/15 19:57:04 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2 python
 
@@ -8,7 +10,7 @@ DESCRIPTION="Applets for the GNOME Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
-SLOT="2"
+SLOT="0"
 KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
 
@@ -28,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.13
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/libxml2-2.5.0
 	>=x11-themes/gnome-icon-theme-2.15.91
-	>=dev-libs/libgweather-2.22.1
+	>=dev-libs/libgweather-2.22.1:2
 	>=virtual/python-2.4
 	x11-libs/libX11
 
