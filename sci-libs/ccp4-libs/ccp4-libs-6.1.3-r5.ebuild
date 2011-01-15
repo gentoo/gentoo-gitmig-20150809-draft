@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r5.ebuild,v 1.2 2011/01/02 00:01:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r5.ebuild,v 1.3 2011/01/15 11:57:01 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ PATCH_TOT="0"
 #PATCH2=( .
 #configure-r1.372.2.18-r1.372.2.19.diff )
 
-DESCRIPTION="Protein X-ray crystallography toolkit"
+DESCRIPTION="Protein X-ray crystallography toolkit - Libraries"
 HOMEPAGE="http://www.ccp4.ac.uk/"
 SRC_URI="${SRC}/${PV}/${MY_P}-core-src.tar.gz"
 # patch tarball from upstream
@@ -50,7 +50,7 @@ RDEPEND="
 	!<sci-chemistry/ccp4-6.1.3
 	!<sci-chemistry/ccp4-apps-6.1.3-r6
 	sci-libs/cbflib
-	=sci-libs/fftw-2*
+	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	sci-libs/monomer-db
 	virtual/lapack
@@ -164,7 +164,6 @@ src_configure() {
 	# Default to -O2 if FFLAGS is unset
 	export FC=$(tc-getFC)
 	export FOPTIM=${FFLAGS:- -O2}
-#	export CCP4_SCR="${T}"
 
 	# Fix linking
 #	$(tc-getCC) ${userldflags} -shared -Wl,-soname,libmmdb.so -o libmmdb.so \${MMDBOBJS} $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lm -lstdc++ && \

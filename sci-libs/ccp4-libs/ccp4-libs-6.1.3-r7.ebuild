@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.6 2011/01/12 16:54:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.7 2011/01/15 11:57:01 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ PATCH_TOT="0"
 #PATCH2=( .
 #configure-r1.372.2.18-r1.372.2.19.diff )
 
-DESCRIPTION="Protein X-ray crystallography toolkit"
+DESCRIPTION="Protein X-ray crystallography toolkit - Libraries"
 HOMEPAGE="http://www.ccp4.ac.uk/"
 SRC_URI="${SRC}/${PV}/${MY_P}-core-src.tar.gz"
 # patch tarball from upstream
