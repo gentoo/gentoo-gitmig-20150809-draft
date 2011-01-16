@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.99 2010/10/03 17:41:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.100 2011/01/16 10:25:57 robbat2 Exp $
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org> vpopmail-5.4.16.ebuild,
   vpopmail-5.4.30-r1.ebuild, vpopmail-5.4.30-r2.ebuild:
@@ -311,7 +311,7 @@
   vpopmail-5.2.1-r9.ebuild:
   fix bug 44029, make sure gcc3.3 patch is applied
 
-  15 Feb 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  15 Feb 2004; Robin Johnson <robbat2@gentoo.org>
   vpopmail-5.4.0_rc1.ebuild:
   fix fowner/fowners.
 
