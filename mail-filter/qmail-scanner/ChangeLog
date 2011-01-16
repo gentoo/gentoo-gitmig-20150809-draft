@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.55 2009/10/14 07:17:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.56 2011/01/16 10:37:22 robbat2 Exp $
 
 *qmail-scanner-2.08 (14 Oct 2009)
 
@@ -208,7 +208,7 @@
   03 Oct 2004; Jason Wever <weeve@gentoo.org> qmail-scanner-1.23-r3.ebuild:
   Stable on sparc.
 
-  09 Sep 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  09 Sep 2004; Robin Johnson <robbat2@gentoo.org>
   qmail-scanner-1.23-r3.ebuild:
   Stabilize -r3 as perl without suidperl is now stable on x86.
 
