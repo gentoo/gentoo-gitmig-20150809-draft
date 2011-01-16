@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.12 2010/12/26 15:50:00 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.13 2011/01/16 17:11:59 arfrever Exp $
+
+  16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  vertex-0.3.0.ebuild:
+  Restrict Jython ABIs.
 
   26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   vertex-0.3.0.ebuild:

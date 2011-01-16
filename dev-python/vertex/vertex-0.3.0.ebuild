@@ -1,11 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.4 2010/12/26 15:50:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.5 2011/01/16 17:11:59 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+DISTUTILS_SRC_TEST="trial"
+DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
 # build-${PYTHON_ABI} directories as packages.
@@ -38,11 +40,4 @@ DOCS="NAME.txt README.txt"
 src_compile() {
 	# Skip distutils_src_compile to avoid installation of $(python_get_sitedir)/build directory.
 	:
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="." trial vertex
-	}
-	python_execute_function testing
 }
