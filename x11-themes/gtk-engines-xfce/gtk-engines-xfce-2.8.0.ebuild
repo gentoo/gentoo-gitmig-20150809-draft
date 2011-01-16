@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.7.0.ebuild,v 1.1 2011/01/02 15:02:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.8.0.ebuild,v 1.1 2011/01/16 16:39:24 ssuominen Exp $
 
 EAPI=3
 MY_PN=gtk-xfce-engine
@@ -8,7 +8,7 @@ inherit xfconf
 
 DESCRIPTION="Xfce's GTK+ engine and themes"
 HOMEPAGE="http://www.xfce.org/projects/"
-SRC_URI="mirror://xfce/src/xfce/${MY_PN}/2.7/${MY_PN}-${PV}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${MY_PN}/2.8/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
