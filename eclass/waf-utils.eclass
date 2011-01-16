@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.2 2011/01/13 18:43:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.3 2011/01/16 08:36:35 scarabeus Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 # waf-based packages much easier.
 # Its main features are support of common portage default settings.
 
-inherit base eutils multilib python
+inherit base eutils multilib
 
 case ${EAPI:-0} in
 	4|3|2) EXPORT_FUNCTIONS pkg_setup src_configure src_compile src_install ;;
@@ -29,8 +29,6 @@ esac
 waf-utils_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	python_set_active_version 2
-
 	# @ECLASS-VARIABLE: WAF_BINARY
 	# @DESCRIPTION:
 	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
@@ -42,6 +40,10 @@ waf-utils_pkg_setup() {
 # General function for configuring with waf.
 waf-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	# sometimes people forget to run pkg_setup from this eclass
+	# instead of having the variable empty lets try to get it once more
+	: ${WAF_BINARY:="${S}/waf"}
 
 	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=/usr --libdir=/usr/$(get_libdir) $@ configure"
 
