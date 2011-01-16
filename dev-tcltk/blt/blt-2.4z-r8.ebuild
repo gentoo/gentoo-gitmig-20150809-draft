@@ -1,16 +1,17 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.1 2010/04/08 10:18:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.2 2011/01/16 19:30:10 jlec Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 MY_V_SUFFIX="-8.5.2"
-HOMEPAGE="http://blt.sourceforge.net/
-http://jos.decoster.googlepages.com/bltfortk8.5.2"
+HOMEPAGE="
+	http://blt.sourceforge.net/
+	http://jos.decoster.googlepages.com/bltfortk8.5.2"
 SRC_URI="http://jos.decoster.googlepages.com/${PN}${PV}${MY_V_SUFFIX}.tar.gz"
-DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry managers, and misc commands."
+DESCRIPTION="Extension to Tk, adding new widgets, geometry managers, and misc commands"
 
 IUSE="jpeg X"
 SLOT="0"
@@ -18,7 +19,7 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
-	>=dev-lang/tk-8.0
+	dev-lang/tk
 	jpeg? ( media-libs/jpeg:0 )
 	X? ( x11-libs/libX11 )"
 RDEPEND="${DEPEND}"
@@ -50,20 +51,19 @@ src_configure() {
 	append-flags -fPIC
 
 	econf \
-		--x-includes="${EPREFIX}"/usr/include \
-		--x-libraries="${EPREFIX}"/usr/$(get_libdir) \
-		--with-blt="${EPREFIX}"/usr/$(get_libdir) \
-		--with-tcl="${EPREFIX}"/usr/$(get_libdir) \
-		--with-tk="${EPREFIX}"/usr/$(get_libdir) \
-		--with-tclincls="${EPREFIX}"/usr/include \
-		--with-tkincls="${EPREFIX}"/usr/include \
-		--with-tcllibs="${EPREFIX}"/usr/$(get_libdir) \
-		--with-tklibs="${EPREFIX}"/usr/$(get_libdir) \
+		--x-includes="${EPREFIX}/usr/include" \
+		--x-libraries="${EPREFIX}/usr/$(get_libdir)" \
+		--with-blt="${EPREFIX}/usr/$(get_libdir)" \
+		--with-tcl="${EPREFIX}/usr/$(get_libdir)" \
+		--with-tk="${EPREFIX}/usr/$(get_libdir)" \
+		--with-tclincls="${EPREFIX}/usr/include" \
+		--with-tkincls="${EPREFIX}/usr/include" \
+		--with-tcllibs="${EPREFIX}/usr/$(get_libdir)" \
+		--with-tklibs="${EPREFIX}/usr/$(get_libdir)" \
 		--with-cc="$(tc-getCC)" \
 		--with-cflags="${CFLAGS}" \
 		$(use_enable jpeg) \
-		$(use_with X x) \
-		|| die "./configure failed"
+		$(use_with X x)
 
 }
 

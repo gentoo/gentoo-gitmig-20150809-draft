@@ -1,21 +1,23 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.7 2009/09/22 11:55:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.8 2011/01/16 19:30:10 jlec Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 MY_V_SUFFIX="-8.5.2"
-HOMEPAGE="http://blt.sourceforge.net/
-http://jos.decoster.googlepages.com/bltfortk8.5.2"
+HOMEPAGE="
+	http://blt.sourceforge.net/
+	http://jos.decoster.googlepages.com/bltfortk8.5.2"
 SRC_URI="http://jos.decoster.googlepages.com/${PN}${PV}${MY_V_SUFFIX}.tar.gz"
-DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry managers, and misc commands."
+DESCRIPTION="Extension to Tk, adding new widgets, geometry managers, and misc commands"
 
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
-DEPEND=">=dev-lang/tk-8.0
+DEPEND="
+	dev-lang/tk
 	x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
@@ -44,7 +46,7 @@ src_compile() {
 	# bug 167934
 	append-flags -fPIC
 
-	econf --with-blt=/usr/$(get_libdir) || die "./configure failed"
+	econf --with-blt=/usr/$(get_libdir)
 	# parallel borks
 	emake -j1 || die "emake failed"
 }
