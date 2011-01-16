@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/fasta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.2 2010/06/15 12:50:43 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.3 2011/01/16 11:02:47 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> fasta-35.4.10.ebuild:
+  marked ~ppc wrt #303931
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild:
   keyworded for ~amd64-linux ~x86-linux
