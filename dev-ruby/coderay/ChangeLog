@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.26 2010/12/04 16:10:42 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.27 2011/01/16 08:19:18 graaff Exp $
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org> -coderay-0.9.5.ebuild:
+  Remove old version.
 
   04 Dec 2010; Fabian Groffen <grobian@gentoo.org> coderay-0.9.6.ebuild:
   Added Prefix keywords
