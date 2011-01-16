@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.7.4.ebuild,v 1.1 2011/01/02 15:26:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.0.ebuild,v 1.1 2011/01/16 17:07:42 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
 DESCRIPTION="Xfce's utilities"
 HOMEPAGE="http://www.xfce.org/projects/xfce-utils/"
-SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,10 +16,10 @@ IUSE="dbus debug +lock"
 
 COMMON_DEPEND="x11-libs/libX11
 	>=x11-libs/gtk+-2.10:2
-	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/libxfce4ui-4.7
-	>=xfce-base/xfconf-4.6
-	dbus? ( >=dev-libs/dbus-glib-0.70 )"
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/xfconf-4.8
+	dbus? ( >=dev-libs/dbus-glib-0.88 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xrdb
 	x11-misc/xdg-user-dirs
@@ -50,9 +50,6 @@ src_install() {
 	xfconf_src_install
 
 	rm -f "${ED}"/usr/share/applications/xfhelp4.desktop
-
-	insinto /usr/share/xfce4
-	doins "${FILESDIR}"/Gentoo || die
 
 	echo startxfce4 > "${T}"/Xfce4
 	exeinto /etc/X11/Sessions
