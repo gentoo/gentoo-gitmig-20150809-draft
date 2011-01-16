@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/sitecopy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.54 2010/06/22 20:06:49 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.55 2011/01/16 20:51:19 hwoarang Exp $
+
+*sitecopy-0.16.6_p3 (16 Jan 2011)
+
+  16 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  +sitecopy-0.16.6_p3.ebuild, metadata.xml:
+  Version bump. Bug #351637. Thanks to Roger Zauner <rogerx.oss@gmail.com>
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sitecopy-0.16.3_p17.ebuild:
