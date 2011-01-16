@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.237.ebuild,v 1.3 2011/01/15 17:06:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-8.0.552.237.ebuild,v 1.4 2011/01/16 09:49:50 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -39,7 +39,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
-	sys-devel/flex"
+	sys-devel/flex
+	>=sys-devel/make-3.81-r2"
 RDEPEND+="
 	|| (
 		x11-themes/gnome-icon-theme

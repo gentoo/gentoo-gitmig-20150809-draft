@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.262 2011/01/15 17:06:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.263 2011/01/16 09:49:50 phajdan.jr Exp $
+
+  16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-8.0.552.224.ebuild, chromium-8.0.552.237.ebuild,
+  -chromium-9.0.597.44.ebuild, chromium-9.0.597.45.ebuild,
+  -chromium-10.0.634.0.ebuild, chromium-10.0.634.0-r1.ebuild,
+  chromium-9999.ebuild:
+  Fix sys-devel/make dependency, bug #351092 by Bob Raitz
+  <pappy_mcfae@yahoo.com>. Remove old.
 
   15 Jan 2011; Markus Meier <maekke@gentoo.org> chromium-8.0.552.237.ebuild:
   x86 stable, bug #351525

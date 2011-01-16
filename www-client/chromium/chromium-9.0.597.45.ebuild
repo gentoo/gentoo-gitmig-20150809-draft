@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.45.ebuild,v 1.1 2011/01/07 08:28:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.45.ebuild,v 1.2 2011/01/16 09:49:50 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -45,7 +45,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/chromium-tools-0.1.4
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
-	sys-devel/flex"
+	sys-devel/flex
+	>=sys-devel/make-3.81-r2"
 RDEPEND+="
 	|| (
 		x11-themes/gnome-icon-theme
