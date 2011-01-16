@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.8 2011/01/16 10:55:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.9 2011/01/16 17:51:16 jlec Exp $
 
 EAPI="3"
 
@@ -309,7 +309,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "The Web browser defaults to firefox. Change CCP4_BROWSER"
-	einfo "in ${EPREFIX}/etc/profile.d/ccp4.setup* to modify this."
+	einfo "in ${EPREFIX}/etc/profile.d/40ccp4.setup* to modify this."
 }
 
 # Epatch wrapper for bulk patching
