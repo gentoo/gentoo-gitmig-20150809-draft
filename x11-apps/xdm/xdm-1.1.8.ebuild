@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.8.ebuild,v 1.11 2009/06/22 07:13:25 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.8.ebuild,v 1.12 2011/01/16 22:38:18 mgorny Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -22,7 +22,8 @@ RDEPEND="x11-apps/xrdb
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-apps/sessreg
-	x11-apps/xconsole"
+	x11-apps/xconsole
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	x11-proto/xproto"

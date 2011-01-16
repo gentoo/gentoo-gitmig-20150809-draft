@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10.ebuild,v 1.1 2010/12/17 22:25:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10.ebuild,v 1.2 2011/01/16 22:38:18 mgorny Exp $
 
 EAPI=3
 
@@ -22,7 +22,8 @@ RDEPEND="x11-apps/xrdb
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-apps/sessreg
-	x11-apps/xconsole"
+	x11-apps/xconsole
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	x11-proto/xproto"
@@ -40,7 +41,9 @@ src_install() {
 	xorg-2_src_install
 	exeinto /usr/$(get_libdir)/X11/xdm
 	doexe "${FILESDIR}"/Xsession || die
-	newpamd "${FILESDIR}"/xdm.pamd xdm || die
+	if use pam; then
+		newpamd "${FILESDIR}"/xdm.pamd xdm || die
+	fi
 	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
 	keepdir /var/lib/xdm
 }
