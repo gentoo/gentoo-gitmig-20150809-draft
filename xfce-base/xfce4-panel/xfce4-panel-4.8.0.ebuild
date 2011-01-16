@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.7.7.ebuild,v 1.1 2011/01/02 14:33:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.8.0.ebuild,v 1.1 2011/01/16 17:01:58 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
 DESCRIPTION="Xfce's panel"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-panel/"
-SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -15,15 +15,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 IUSE="debug"
 
 RDEPEND="x11-libs/libX11
-	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/garcon-0.1.4
-	>=xfce-base/libxfce4ui-4.7.1
-	>=xfce-base/xfconf-4.7.2
-	>=xfce-base/exo-0.5.1
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/garcon-0.1.5
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/xfconf-4.8
+	>=xfce-base/exo-0.6
 	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/glib-2.18:2
-	>=dev-libs/dbus-glib-0.73
-	x11-libs/cairo
+	>=dev-libs/dbus-glib-0.88
+	>=x11-libs/cairo-1
 	>=x11-libs/libwnck-2.22"
 DEPEND="${RDEPEND}
 	dev-lang/perl
