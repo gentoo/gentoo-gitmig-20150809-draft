@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.2.0.ebuild,v 1.1 2011/01/16 02:07:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.2.0.ebuild,v 1.2 2011/01/16 15:17:08 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -34,14 +34,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-array.patch
-	# The 3.2.0 tarball as of writing is dirty and has object files
-	# in it that foul the build process.  Find is quicker than configuring
-	# twice.
-	find "${S}" -name '*.o' -exec rm -f '{}' +
-	eautoreconf || die
-}
+PATCHES=( "${FILESDIR}"/${P}-array.patch )
 
 src_configure() {
 	local myconf
