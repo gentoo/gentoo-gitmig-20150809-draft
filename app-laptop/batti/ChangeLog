@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.11 2011/01/15 19:14:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.12 2011/01/16 11:57:53 hwoarang Exp $
+
+*batti-0.3.8-r1 (16 Jan 2011)
+
+  16 Jan 2011; Markos Chandras <hwoarang@gentoo.org> -batti-0.3.8.ebuild,
+  +batti-0.3.8-r1.ebuild:
+  Add dependency to external icons themes (though few might be missing ).
+  Thanks to Arthur Spitzer
 
 *batti-0.3.8 (15 Jan 2011)
 
