@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/qtads
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.10 2010/12/31 21:15:15 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.11 2011/01/16 03:23:09 mr_bones_ Exp $
+
+*qtads-2.0.2 (16 Jan 2011)
+
+  16 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> +qtads-2.0.2.ebuild:
+  version bump (bug #351669)
 
 *qtads-2.0.1 (31 Dec 2010)
 
