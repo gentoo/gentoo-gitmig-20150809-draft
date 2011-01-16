@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-xgi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-xgi/ChangeLog,v 1.9 2010/12/25 20:23:58 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-xgi/ChangeLog,v 1.10 2011/01/16 11:37:11 scarabeus Exp $
+
+  16 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-video-xgi-1.5.1.ebuild:
+  old
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   xf86-video-xgi-1.6.0.ebuild:
