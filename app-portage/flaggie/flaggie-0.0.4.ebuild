@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.4.ebuild,v 1.2 2011/01/08 10:22:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-0.0.4.ebuild,v 1.3 2011/01/16 14:25:18 mgorny Exp $
 
 EAPI=3
 PYTHON_DEPEND="*:2.6"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND=">=sys-apps/portage-2.1.8.3"
+RDEPEND=">=sys-apps/portage-2.1.8.3
+	bash-completion? ( app-shells/gentoo-bashcomp )"
 
 src_prepare() {
 	base_src_prepare
