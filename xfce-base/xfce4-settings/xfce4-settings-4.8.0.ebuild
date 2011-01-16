@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.7.7.ebuild,v 1.1 2011/01/02 15:36:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.0.ebuild,v 1.1 2011/01/16 17:13:09 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
 DESCRIPTION="Xfce's configuration system"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-settings/"
-SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,17 +15,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 IUSE="debug +keyboard libnotify sound"
 
 RDEPEND=">=dev-libs/glib-2.16:2
-	>=dev-libs/dbus-glib-0.34
+	>=dev-libs/dbus-glib-0.88
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.14:2
 	>=x11-libs/libX11-1
 	>=x11-libs/libXcursor-1.1
 	>=x11-libs/libXi-1.3
 	>=x11-libs/libXrandr-1.2
-	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/libxfce4ui-4.7.4
-	>=xfce-base/xfconf-4.6
-	>=xfce-base/exo-0.5
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/xfconf-4.8
+	>=xfce-base/exo-0.6
 	libnotify? ( >=x11-libs/libnotify-0.1.3 )
 	keyboard? ( >=x11-libs/libxklavier-0.3 )
 	sound? ( >=media-libs/libcanberra-0.25[sound] )

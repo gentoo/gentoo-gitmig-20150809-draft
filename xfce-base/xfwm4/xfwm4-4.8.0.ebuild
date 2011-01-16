@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.7.4.ebuild,v 1.1 2011/01/02 15:30:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.8.0.ebuild,v 1.1 2011/01/16 17:18:09 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
 DESCRIPTION="Xfce's window manager"
 HOMEPAGE="http://www.xfce.org/projects/xfwm4/"
-SRC_URI="mirror://xfce/src/xfce/${PN}/4.7/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,9 +25,9 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	x11-libs/libXpm
 	x11-libs/pango
 	>=x11-libs/libwnck-2.22
-	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/libxfce4ui-4.7.5
-	>=xfce-base/xfconf-4.6
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/xfconf-4.8
 	startup-notification? ( x11-libs/startup-notification )
 	xcomposite? ( x11-libs/libXcomposite
 		x11-libs/libXdamage
