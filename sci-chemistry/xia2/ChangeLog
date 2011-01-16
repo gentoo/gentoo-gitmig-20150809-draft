@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xia2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.4 2010/07/27 18:57:43 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.5 2011/01/16 12:22:44 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> xia2-0.3.1.7.ebuild:
+  marked ~ppc wrt #303931
 
 *xia2-0.3.1.7 (27 Jul 2010)
 

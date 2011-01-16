@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.9 2010/12/16 13:39:50 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.10 2011/01/16 12:15:28 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> oasis-4.0-r2.ebuild:
+  marked ~ppc wrt #303931
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> oasis-4.0-r2.ebuild:
   Removal of fortran.eclass, #348851
