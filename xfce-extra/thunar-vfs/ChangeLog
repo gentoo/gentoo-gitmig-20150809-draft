@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/thunar-vfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/ChangeLog,v 1.7 2010/11/07 10:33:07 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/ChangeLog,v 1.8 2011/01/16 17:41:07 ssuominen Exp $
+
+*thunar-vfs-1.2.0 (16 Jan 2011)
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +thunar-vfs-1.2.0.ebuild:
+  Version bump.
 
 *thunar-vfs-1.1.1 (07 Nov 2010)
 
