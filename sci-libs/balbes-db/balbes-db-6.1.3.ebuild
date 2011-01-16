@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.4 2011/01/16 10:37:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.5 2011/01/16 10:56:46 xarthisius Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="${SRC}/${PV}/${MY_P}-${PN/-/}-${VERSION}.tar.gz"
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="

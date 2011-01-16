@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.12 2011/01/15 15:17:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.13 2011/01/16 10:57:46 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  cctbx-2010.03.29.2334-r3.ebuild:
+  marked ~ppc wrt #303931
 
   15 Jan 2011; Justin Lecher <jlec@gentoo.org>
   -cctbx-2009.11.01.0123-r1.ebuild, -cctbx-2010.03.29.2334-r2.ebuild:
