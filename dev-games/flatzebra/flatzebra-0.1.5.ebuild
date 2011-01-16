@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.5.ebuild,v 1.4 2010/08/13 12:34:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.5.ebuild,v 1.5 2011/01/16 03:35:49 mr_bones_ Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://perso.b2b2c.ca/sarrazip/dev/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="media-libs/libsdl[video]
 	media-libs/sdl-image
@@ -26,7 +26,17 @@ src_prepare() {
 		|| die "sed failed"
 }
 
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable static-libs static)
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README THANKS TODO
+	if ! use static-libs ; then
+		find "${D}" -type f -name '*.la' -exec rm {} + \
+			|| die "la removal failed"
+	fi
 }
