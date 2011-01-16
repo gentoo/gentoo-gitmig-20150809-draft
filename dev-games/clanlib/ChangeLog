@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.46 2010/09/17 10:55:17 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.47 2011/01/16 04:22:12 mr_bones_ Exp $
+
+  16 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> clanlib-0.8.1.ebuild:
+  add static-libs support
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> clanlib-0.8.1.ebuild:
   Remove virtual/glu where already virtual/opengl is stated.

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.6 2010/09/17 10:55:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.7 2011/01/16 04:22:12 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -12,7 +12,7 @@ SRC_URI="http://clanlib.org/download/releases-${PV:0:3}/ClanLib-${PV}.tgz"
 LICENSE="ZLIB"
 SLOT="0.8"
 KEYWORDS="amd64 x86" #not big endian safe #82779
-IUSE="opengl sdl vorbis doc mikmod ipv6"
+IUSE="doc ipv6 mikmod opengl sdl static-libs vorbis"
 
 # opengl keyword does not drop the GL/GLU requirement.
 # Autoconf files need to be fixed
@@ -57,7 +57,8 @@ src_configure() {
 		$(use_enable sdl clanSDL) \
 		$(use_enable vorbis clanVorbis) \
 		$(use_enable mikmod clanMikMod) \
-		$(use_enable ipv6 getaddr)
+		$(use_enable ipv6 getaddr) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
@@ -67,6 +68,10 @@ src_install() {
 		mv "${D}"/usr/share/doc/clanlib/* "${D}"/usr/share/doc/${PF}/html/ || die
 		rm -rf "${D}"/usr/share/doc/clanlib
 		cp -r Examples Resources "${D}"/usr/share/doc/${PF}/ || die
+	fi
+	if ! use static-libs ; then
+		find "${D}" -type f -name '*.la' -exec rm {} + \
+			|| die "la removal failed"
 	fi
 	dodoc CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux
 }
