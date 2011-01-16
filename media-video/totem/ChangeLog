@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.308 2011/01/11 14:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.309 2011/01/16 15:17:21 armin76 Exp $
+
+  16 Jan 2011; Raúl Porcel <armin76@gentoo.org> totem-2.32.0.ebuild:
+  Add ~ia64 wrt #348984
 
   11 Jan 2011; Pacho Ramos <pacho@gentoo.org> totem-2.32.0.ebuild:
   Use fixed gnome-doc-utils.make, bug #348403 (by David J Cozatt and patch by
