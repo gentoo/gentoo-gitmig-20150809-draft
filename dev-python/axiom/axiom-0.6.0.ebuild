@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.7 2011/01/16 16:49:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.8 2011/01/16 17:25:08 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -49,10 +49,7 @@ src_compile() {
 }
 
 src_test() {
-	testing() {
-		PYTHONPATH="." trial axiom
-	}
-	python_execute_function testing
+	python_execute_trial -P . axiom
 }
 
 src_install() {
