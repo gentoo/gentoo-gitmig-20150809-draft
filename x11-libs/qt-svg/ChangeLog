@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.82 2011/01/15 14:50:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.83 2011/01/16 15:57:33 spatz Exp $
+
+  16 Jan 2011; Dror Levin <spatz@gentoo.org> qt-svg-4.7.1-r1.ebuild:
+  Make accessibility USE flag on by default to be consistent with other Qt
+  modules, bug 351829.
 
 *qt-svg-4.7.1-r1 (15 Jan 2011)
 
