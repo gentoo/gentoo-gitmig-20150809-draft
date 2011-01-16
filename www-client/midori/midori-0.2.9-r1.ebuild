@@ -1,20 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.24 2011/01/16 18:32:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9-r1.ebuild,v 1.1 2011/01/16 18:32:50 ssuominen Exp $
 
 EAPI=2
-inherit eutils multilib python xfconf git
+inherit eutils multilib python xfconf
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-EGIT_REPO_URI="git://git.xfce.org/apps/midori"
-EGIT_PROJECT="midori"
-SRC_URI=""
+SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="doc gnome +html idn libnotify nls +unique vala"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+IUSE="doc gnome +html idn libnotify nls +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	>=net-libs/libsoup-2.25.2
@@ -24,8 +22,7 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 	>=x11-libs/gtk+-2.10:2
 	gnome? ( net-libs/libsoup-gnome )
 	idn? ( net-dns/libidn )
-	unique? ( dev-libs/libunique )
-	vala? ( dev-lang/vala:0 )"
+	unique? ( dev-libs/libunique )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	dev-util/intltool
@@ -36,6 +33,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	# moving docs to version-specific directory
+	sed -i -e "s:/${PN}/user/midori.html:/user/midori.html:g" midori/midori-browser.c || die
 }
 
 src_configure() {
@@ -53,7 +55,7 @@ src_configure() {
 		$(use_enable libnotify) \
 		$(use_enable nls) \
 		$(use_enable unique) \
-		$(use_enable vala) \
+		--disable-vala \
 		configure || die
 }
 

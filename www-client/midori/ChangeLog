@@ -1,6 +1,12 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.45 2010/12/18 18:02:17 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.46 2011/01/16 18:32:50 ssuominen Exp $
+
+*midori-0.2.9-r1 (16 Jan 2011)
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +midori-0.2.9-r1.ebuild,
+  midori-9999.ebuild:
+  Don't disable PaX anymore wrt #351407 by Faustus.
 
   18 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> midori-0.2.9.ebuild:
   Remove USE="vala" because it's not ready to be stabilized yet. Stabilize for
