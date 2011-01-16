@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/thunar-volman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.59 2010/12/05 16:56:39 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.60 2011/01/16 18:15:16 ssuominen Exp $
+
+*thunar-volman-0.6.0 (16 Jan 2011)
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-volman-0.6.0.ebuild:
+  Version bump.
 
 *thunar-volman-0.5.3 (05 Dec 2010)
 
