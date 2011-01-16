@@ -1,0 +1,11 @@
+# Gentoo configuration file for lessfs
+
+# CONFIG: Full path to your configuration file
+CONFIG="/etc/lessfs.cfg"
+
+# MOUNTPOINT: Destination mountpoint
+MOUNTPOINT="/fuse"
+
+# MKLESSFS: Binary to create lessfs filesystems
+# You really don't want to change that
+MKLESSFS="/usr/bin/mklessfs"
