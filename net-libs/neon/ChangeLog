@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/neon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.14 2010/12/27 22:05:08 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.15 2011/01/16 18:30:57 arfrever Exp $
+
+  16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  neon-0.29.5.ebuild:
+  Fix dependencies (bug #351826).
 
   27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -neon-0.29.3.ebuild, -neon-0.29.4.ebuild, -files/neon-0.29-sni-fix.patch:
