@@ -1,0 +1,10 @@
+# ChangeLog for sci-physics/reduze
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/reduze/ChangeLog,v 1.1 2011/01/16 12:32:02 grozin Exp $
+
+*reduze-1.2 (16 Jan 2011)
+
+  16 Jan 2011; Andrey Grozin <grozin@gentoo.org> +reduze-1.2.ebuild,
+  +metadata.xml:
+  Initial import
+
