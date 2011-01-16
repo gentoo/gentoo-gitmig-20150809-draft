@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0-r1.ebuild,v 1.1 2009/06/13 09:57:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0-r1.ebuild,v 1.2 2011/01/16 22:35:03 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin eutils
 
@@ -15,11 +17,11 @@ IUSE=""
 
 S=${WORKDIR}/${P}
 
-DEPEND=">=media-video/vdr-1.3.7"
+DEPEND=">=media-video/vdr-1.6.0"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	vdr-plugin_src_unpack unpack
+src_prepare() {
+	vdr-plugin_src_prepare
 
 	epatch "${FILESDIR}/${P}-uint64.diff"
 	epatch "${FILESDIR}/${P}-gcc4.3.patch"
@@ -28,9 +30,6 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-bigpatch-headers.diff"
 	fi
 
-	if has_version ">=media-video/vdr-1.6.0"; then
 		epatch "${FILESDIR}/${P}-vdr-1.6.0.diff"
-	fi
-
-	vdr-plugin_src_unpack all_but_unpack
+		epatch "${FILESDIR}/${P}-buffer-overflow.diff"
 }
