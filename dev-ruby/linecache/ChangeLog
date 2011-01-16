@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/linecache
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.10 2010/10/25 02:00:56 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.11 2011/01/16 09:00:52 graaff Exp $
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org> -linecache-0.43.ebuild,
+  -linecache-0.43-r1.ebuild:
+  Remove old versions.
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> linecache-0.43-r2.ebuild:
   Marked ~hppa (bug #337956).
