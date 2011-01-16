@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.1 2011/01/09 15:42:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.2 2011/01/16 08:31:39 graaff Exp $
+
+*fssm-0.2.4 (16 Jan 2011)
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org> +fssm-0.2.4.ebuild:
+  Version bump.
 
 *fssm-0.2.3 (09 Jan 2011)
 
