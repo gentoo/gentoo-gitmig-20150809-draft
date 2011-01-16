@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/barnyard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.25 2010/12/03 00:38:12 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.26 2011/01/16 00:08:16 mr_bones_ Exp $
+
+  16 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  barnyard-0.2.0-r1.ebuild:
+  drop to ~x86 since snort was also dropped to ~x86
 
   03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -barnyard-0.2.0-r2.ebuild, barnyard-0.2.0-r3.ebuild:

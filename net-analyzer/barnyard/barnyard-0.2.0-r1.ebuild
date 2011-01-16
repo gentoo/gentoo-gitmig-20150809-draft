@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.8 2010/06/17 21:37:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.9 2011/01/16 00:08:16 mr_bones_ Exp $
 
 DESCRIPTION="Fast output system for Snort"
 SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.snort.org/dl/barnyard/"
 
 SLOT="0"
 LICENSE="QPL"
-KEYWORDS="x86 -sparc"
+KEYWORDS="~x86 -sparc"
 IUSE="mysql postgres sguil"
 
 DEPEND="net-libs/libpcap
