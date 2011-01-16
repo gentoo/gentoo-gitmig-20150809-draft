@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.1 2011/01/14 23:44:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.2 2011/01/16 18:54:01 arfrever Exp $
 
 EAPI="3"
 
@@ -113,10 +113,11 @@ src_install() {
 	echo ".so man1/gpg2.1" > "${ED}usr/share/man/man1/gpg.1"
 	echo ".so man1/gpgv2.1" > "${ED}usr/share/man/man1/gpgv.1"
 
+	dodir /etc/env.d
 	echo "CONFIG_PROTECT=/usr/share/gnupg/qualified.txt" >>"${ED}etc/env.d/30gnupg"
 
 	if use doc; then
-		dohtml doc/gnupg.html/* doc/*jpg doc/*png || die "dohtml failed"
+		dohtml doc/gnupg.html/* doc/*.png || die "dohtml failed"
 	fi
 }
 
