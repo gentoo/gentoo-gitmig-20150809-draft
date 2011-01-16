@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.4 2011/01/13 14:54:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.5 2011/01/16 09:25:31 phajdan.jr Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
 LICENSE="BSD"
 SLOT="0"
 IUSE="doc umfpack"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
 	>=dev-python/numpy-1.4.1

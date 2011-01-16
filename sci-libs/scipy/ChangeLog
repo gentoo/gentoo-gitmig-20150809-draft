@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.60 2011/01/13 14:54:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.61 2011/01/16 09:25:31 phajdan.jr Exp $
+
+  16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> scipy-0.8.0.ebuild:
+  x86 stable wrt bug #351488
 
   13 Jan 2011; Markos Chandras <hwoarang@gentoo.org> scipy-0.8.0.ebuild:
   Stable on amd64 wrt bug #351488
