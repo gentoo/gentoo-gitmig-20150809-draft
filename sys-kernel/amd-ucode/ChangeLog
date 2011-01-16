@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/amd-ucode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/amd-ucode/ChangeLog,v 1.1 2011/01/16 23:48:36 flameeyes Exp $
+
+*amd-ucode-2011.01.11 (16 Jan 2011)
+
+  16 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +amd-ucode-2011.01.11.ebuild, +metadata.xml:
+  Add an ebuild to install AMD's CPUs microcode which can be loaded directly by
+  the kernel.
+
