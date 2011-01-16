@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/mesa-progs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.84 2010/09/17 11:25:15 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.85 2011/01/16 14:58:25 mgorny Exp $
+
+*mesa-progs-8.0.1 (16 Jan 2011)
+
+  16 Jan 2011; Michał Górny <mgorny@gentoo.org> +mesa-progs-8.0.1.ebuild:
+  Version bump, based off the x11 overlay ebuild.
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   mesa-progs-7.7.ebuild:
