@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.143 2011/01/07 19:24:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.144 2011/01/16 10:06:11 phajdan.jr Exp $
+
+  16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> PyQt4-4.8.1.ebuild:
+  x86 stable wrt bug #349607
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> PyQt4-4.8.1.ebuild:
   Marking PyQt4-4.8.1 ppc stable for bug 349607
