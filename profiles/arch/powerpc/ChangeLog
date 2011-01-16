@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.103 2011/01/16 11:24:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.104 2011/01/16 11:37:23 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.force,
+  package.use.mask:
+  Use package.use.force to set sci-chemistry/oasis[minimal] wrt #303931,
+  correct package.use.mask
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Add sci-chemistry/oasis[-minimal] wrt #303931

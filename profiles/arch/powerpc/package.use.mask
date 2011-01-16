@@ -1,14 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.65 2011/01/16 11:24:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.66 2011/01/16 11:37:23 xarthisius Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 303931
 # dev-lang/icc is not available for ppc
-# sci-chemistry/arp-warp-bin is not available for ppc
-# sci-chemistry/solve-resolve-bin is not available for ppc
 sci-biology/fasta icc
-sci-chemistry/oasis -minimal
 
 # Brent Baude <ranger@gentoo.org> (13 Jan 2011)
 # no oracle stuff for powerpc
