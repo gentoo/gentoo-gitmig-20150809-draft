@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/ctorrent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.50 2010/09/19 17:55:11 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.51 2011/01/16 01:15:49 vapier Exp $
+
+*ctorrent-3.3.2-r2 (16 Jan 2011)
+
+  16 Jan 2011; Mike Frysinger <vapier@gentoo.org> +ctorrent-3.3.2-r2.ebuild,
+  +files/ctorrent-3.3.2-negative-ints.patch:
+  Update to EAPI 2 and fix parsing of torrents with negative ints.
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> ctorrent-3.3.2-r1.ebuild:
   arm/s390/sh stable wrt #266953
