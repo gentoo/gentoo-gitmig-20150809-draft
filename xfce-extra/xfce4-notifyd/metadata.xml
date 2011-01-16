@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
-  <use>
-    <flag name="libsexy">Enable support for clickable URLs by using <pkg>x11-libs/libsexy</pkg></flag>
-  </use>
 </pkgmetadata>
