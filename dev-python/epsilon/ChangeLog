@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.21 2011/01/16 14:50:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.22 2011/01/16 16:52:32 arfrever Exp $
+
+  16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  epsilon-0.6.0.ebuild:
+  Restrict Jython ABIs.
 
   16 Jan 2011; Raúl Porcel <armin76@gentoo.org> epsilon-0.6.0.ebuild:
   sparc stable

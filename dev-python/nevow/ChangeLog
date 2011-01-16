@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.44 2010/10/10 19:50:56 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.45 2011/01/16 16:54:17 arfrever Exp $
+
+  16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nevow-0.10.0.ebuild:
+  Restrict Jython ABIs.
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   nevow-0.10.0.ebuild:
