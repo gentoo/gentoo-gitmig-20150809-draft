@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.83 2010/10/31 19:17:41 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.84 2011/01/16 15:48:46 grozin Exp $
+
+*maxima-5.23.1 (16 Jan 2011)
+
+  16 Jan 2011; Andrey Grozin <grozin@gentoo.org> +maxima-5.23.1.ebuild,
+  +files/maxima-5.23.1-emacs-version.patch, +files/maxima-5.23.1-wish.patch,
+  +files/maxima-5.23.1.patch:
+  Version bump
 
   31 Oct 2010; Fabian Groffen <grobian@gentoo.org> maxima-5.20.1-r2.ebuild:
   Backport Prefix changes to 5.20.1-r2, keyworded appropriately, bug #341987
