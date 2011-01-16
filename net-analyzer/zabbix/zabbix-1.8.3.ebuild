@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.3.ebuild,v 1.4 2010/09/12 16:09:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.3.ebuild,v 1.5 2011/01/16 11:30:10 patrick Exp $
 
 EAPI="2"
 
@@ -41,6 +41,10 @@ DEPEND="${COMMON_DEPEND}
 	jabber? ( dev-util/pkgconfig )"
 
 useq frontend && need_php_httpd
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+}
 
 pkg_setup() {
 	if useq server || useq proxy ; then
