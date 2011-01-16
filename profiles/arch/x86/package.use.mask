@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.42 2011/01/15 22:04:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.43 2011/01/16 16:46:12 tomka Exp $
 
 # This file requires >=portage-2.1.1
 
 # Thomas Kahle <tomka@gentoo.org> (15 Jan 2011)
 # we dropped stable prelude but don't want to drop stable nufw
-=net-firewall/nufw-2.2.21 -prelude
+=net-firewall/nufw-2.2.21 prelude
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is keyworded on x86
