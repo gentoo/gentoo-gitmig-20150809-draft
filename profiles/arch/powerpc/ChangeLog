@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.101 2011/01/06 16:50:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.102 2011/01/16 11:02:12 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask sci-biology/fasta[icc] since there is no icc for PPC
 
   06 Jan 2011; Joseph Jezak <josejx@gentoo.org> package.mask:
   Unmasked KDE again, the deps have been marked.
