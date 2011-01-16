@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-meta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.15 2010/11/09 18:51:36 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.16 2011/01/16 18:19:07 ssuominen Exp $
+
+*xfce4-meta-4.8 (16 Jan 2011)
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +xfce4-meta-4.8.ebuild:
+  Version bump.
 
 *xfce4-meta-4.8_pre (09 Nov 2010)
 
