@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/anigif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.3 2011/01/16 09:53:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.4 2011/01/16 10:46:11 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> anigif-1.3.ebuild:
+  marked ~ppc wrt #303931
 
   16 Jan 2011; Markos Chandras <hwoarang@gentoo.org> anigif-1.3.ebuild:
   Stable on amd64 wrt bug #351749
