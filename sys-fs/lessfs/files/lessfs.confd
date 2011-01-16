@@ -8,4 +8,4 @@ MOUNTPOINT="/fuse"
 
 # MKLESSFS: Binary to create lessfs filesystems
 # You really don't want to change that
-MKLESSFS="/usr/bin/mklessfs"
+MKLESSFS="/usr/sbin/mklessfs"
