@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.61 2011/01/16 09:25:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.62 2011/01/16 15:31:31 arfrever Exp $
+
+  16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/scipy-0.7.0_beta1-implicit.patch, -files/scipy-0.7.1-weave.patch,
+  -scipy-0.7.2-r1.ebuild, -files/scipy-0.7.2-optimize.patch,
+  -files/scipy-0.7.2-python2.7.patch:
+  Delete.
 
   16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> scipy-0.8.0.ebuild:
   x86 stable wrt bug #351488
