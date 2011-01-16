@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.68 2010/11/06 22:59:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.69 2011/01/16 10:39:05 robbat2 Exp $
 
   06 Nov 2010; Mark Loeser <halcy0n@gentoo.org> yaz-3.0.50.ebuild:
   Stable for ppc64; bug #328707
@@ -208,7 +208,7 @@
 
 *yaz-2.0.19 (16 Apr 2004)
 
-  16 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  16 Apr 2004; Robin Johnson <robbat2@gentoo.org>
   yaz-2.0.19.ebuild, yaz-2.0.8.ebuild, files/yaz-2.0.19-notcpd-fix.diff:
   fix for bug #46382, and a new version
 
