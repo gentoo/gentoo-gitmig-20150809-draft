@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.25 2010/10/29 07:01:08 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.26 2011/01/16 18:18:13 grobian Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -23,7 +23,7 @@ vim-plugin_src_install() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED="${D}"
 	local f
 
-	if use !prefix || [[ ${EUID} -eq 0 ]] ; then
+	if use !prefix && [[ ${EUID} -eq 0 ]] ; then
 		ebegin "Fixing file permissions"
 		# Make sure perms are good
 		chmod -R a+rX "${S}" || die "chmod failed"
