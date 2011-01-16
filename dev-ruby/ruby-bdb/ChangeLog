@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.38 2010/09/28 23:56:08 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.39 2011/01/16 08:55:43 graaff Exp $
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org> -ruby-bdb-0.6.5.ebuild:
+  Remove old version.
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-bdb-0.6.5-r1.ebuild:
   Marking ruby-bdb-0.6.5-r1 ppc for bug 330331

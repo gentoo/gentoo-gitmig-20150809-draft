@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tclink
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tclink/ChangeLog,v 1.2 2010/07/11 19:55:16 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tclink/ChangeLog,v 1.3 2011/01/16 08:47:00 graaff Exp $
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org> -tclink-3.4.4.ebuild:
+  Remove old version.
 
 *tclink-3.4.4-r1 (11 Jul 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-inifile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.3 2010/07/04 18:57:09 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.4 2011/01/16 08:52:33 graaff Exp $
+
+  16 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  -ruby-inifile-2.0.0.ebuild:
+  Remove old version.
 
 *ruby-inifile-2.0.0-r1 (04 Jul 2010)
 
