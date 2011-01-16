@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.26 2011/01/07 09:33:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.27 2011/01/16 14:47:04 armin76 Exp $
+
+  16 Jan 2011; Raúl Porcel <armin76@gentoo.org> configobj-4.7.2.ebuild:
+  sparc stable and add ~ia64
 
   07 Jan 2011; Michael Weber <xmw@gentoo.org> configobj-4.7.2.ebuild:
   added ~sparc keyword (bug 311825)

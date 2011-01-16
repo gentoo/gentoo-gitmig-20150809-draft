@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/louie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.7 2011/01/07 09:31:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.8 2011/01/16 14:43:55 armin76 Exp $
+
+  16 Jan 2011; Raúl Porcel <armin76@gentoo.org> louie-1.1.ebuild:
+  sparc stable and add ~ia64
 
   07 Jan 2011; Michael Weber <xmw@gentoo.org> louie-1.1.ebuild:
   added ~sparc keyword (bug 311825)
