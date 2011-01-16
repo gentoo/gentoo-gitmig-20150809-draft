@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.4.1.ebuild,v 1.3 2011/01/14 22:43:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.4.1.ebuild,v 1.4 2011/01/16 14:30:23 grobian Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.${PN}.com/${PN}/${P/.1/}-src.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x86-solaris"
 IUSE="pch"
 
 DEPEND="sys-libs/ncurses"
