@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.4.1.ebuild,v 1.1 2011/01/16 11:24:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.4.1.ebuild,v 1.2 2011/01/16 21:17:49 mr_bones_ Exp $
 
 EAPI=2
 
@@ -34,4 +34,3 @@ each_ruby_test() {
 	# There are also features but they require aruba which we don't have
 	# yet.
 }
-
