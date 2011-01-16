@@ -1,6 +1,6 @@
 # ChangeLog for www-apache/mod_auth_mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.10 2010/03/24 20:35:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/ChangeLog,v 1.11 2011/01/16 10:35:28 robbat2 Exp $
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
   mod_auth_mysql-3.0.0-r2.ebuild:
@@ -146,7 +146,7 @@
 
 *mod_auth_mysql-20030510-r1 (08 Sep 2003)
 
-  08 Sep 2003; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  08 Sep 2003; Robin Johnson <robbat2@gentoo.org>
   mod_auth_mysql-20030510-r1.ebuild:
   complete bug #11254
 
