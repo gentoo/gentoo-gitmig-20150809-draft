@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.2 2011/01/16 18:54:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.3 2011/01/16 19:54:18 arfrever Exp $
 
 EAPI="3"
 
@@ -34,7 +34,12 @@ COMMON_DEPEND_BINS="|| ( app-crypt/pinentry app-crypt/pinentry-qt )"
 # Existence of executables is checked during configuration.
 DEPEND="${COMMON_DEPEND_LIBS}
 	${COMMON_DEPEND_BINS}
-	static? ( >=dev-libs/libassuan-2[static-libs] )
+	static? (
+		>=dev-libs/libassuan-2[static-libs]
+		>=dev-libs/libgcrypt-1.4[static-libs]
+		>=dev-libs/libgpg-error-1.7[static-libs]
+		>=dev-libs/libksba-1.0.7[static-libs]
+	)
 	nls? ( sys-devel/gettext )
 	doc? ( sys-apps/texinfo )"
 
