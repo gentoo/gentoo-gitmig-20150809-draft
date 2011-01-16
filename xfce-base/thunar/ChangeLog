@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.109 2011/01/02 15:44:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.110 2011/01/16 17:23:34 ssuominen Exp $
+
+*thunar-1.2.0 (16 Jan 2011)
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +thunar-1.2.0.ebuild:
+  Version bump.
 
 *thunar-1.1.6 (02 Jan 2011)
 
