@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/shelx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.18 2010/12/16 13:58:31 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.19 2011/01/16 12:38:11 xarthisius Exp $
+
+  16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  shelx-20060317-r1.ebuild:
+  ppc stable wrt #325943
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> shelx-20060317-r1.ebuild:
   Removal of fortran.eclass, #348851
