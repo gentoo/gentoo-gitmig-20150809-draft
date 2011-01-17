@@ -1,12 +1,12 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.211 2011/01/17 01:39:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.212 2011/01/17 01:40:00 reavertm Exp $
 
 *kdevelop-4.1.2 (17 Jan 2011)
 
   17 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
   -kdevelop-4.1.0.ebuild, -kdevelop-4.1.1.ebuild, +kdevelop-4.1.2.ebuild:
-  Version bump, remove all
+  Version bump, remove old
 
 *kdevelop-4.1.1 (28 Nov 2010)
 
@@ -797,7 +797,7 @@
   18 Jun 2003; Caleb Tennis <caleb@gentoo.org>
   Added a line in postinstall about using x11-ssh-askpass if SSH based CVS is desired.
 
-  28 May 2003; Caleb Tennis <caleb@gentoo.org> 
+  28 May 2003; Caleb Tennis <caleb@gentoo.org>
   Removed old ebuild (alpha2, alpha3, alpha4)
 
   21 May 2003; Jason Wever <weeve@gentoo.org> kdevelop-3.0_alpha4-r1.ebuild:
@@ -850,7 +850,7 @@
   added patch to compile with kde-3.0.5a. fixes #12913
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *kdevelop-3.0_alpha2 (30 Nov 2002)
 
   30 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdevelop-3.0_alpha2.ebuild:
@@ -903,7 +903,7 @@
 
   24 May 2002; Dan Armak <danarmak@gentoo.org> Changelog:
   Bugfix release distributed with kde 3.0.1.
-  
+
   24 Apr; Dan Armak <danarmak@gentoo.org> changelog:
   replaced glimpse dependency with htdig again, since glimpse's license
   is limited to educational purposes.
