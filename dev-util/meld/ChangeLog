@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/meld
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.116 2010/12/31 18:29:35 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.117 2011/01/17 14:06:33 pacho Exp $
+
+  17 Jan 2011; Pacho Ramos <pacho@gentoo.org> meld-1.5.0.ebuild:
+  Drop libgnome-python and libgnome dependencies as reported by Xake in bug
+  #351605 and confirmed by Gilles and me.
 
 *meld-1.5.0 (31 Dec 2010)
 
