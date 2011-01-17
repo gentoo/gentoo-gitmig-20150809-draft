@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop-php-docs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.13 2010/11/28 04:20:35 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.14 2011/01/17 01:37:45 reavertm Exp $
+
+*kdevelop-php-docs-1.1.2 (17 Jan 2011)
+
+  17 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -kdevelop-php-docs-1.1.0.ebuild, -kdevelop-php-docs-1.1.1.ebuild,
+  +kdevelop-php-docs-1.1.2.ebuild:
+  Version bump, remove old
 
 *kdevelop-php-docs-1.1.1 (28 Nov 2010)
 
