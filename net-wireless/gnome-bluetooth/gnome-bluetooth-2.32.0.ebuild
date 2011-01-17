@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.6 2011/01/07 20:52:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.7 2011/01/17 18:01:20 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc +introspection nautilus"
 
-COMMON_DEPEND=">=dev-libs/glib-2.25.7:2
+COMMON_DEPEND=">=dev-libs/glib-2.26.1-r1:2
 	>=x11-libs/gtk+-2.19.1:2
 	>=x11-libs/libnotify-0.4.3
 	>=dev-libs/dbus-glib-0.74
@@ -63,6 +63,9 @@ src_prepare() {
 
 	# Fix build with gobject-introspection 0.9, bug #344227
 	epatch "${FILESDIR}/${P}-introspection-build.patch"
+
+	# Fix nautilus-sendto automagic support, upstream bug #639130
+	epatch "${FILESDIR}/${P}-nsd-automagic.patch"
 
 	cp "${WORKDIR}"/introspection.m4 . || die
 	intltoolize --force --copy --automake || die "intltoolize failed"

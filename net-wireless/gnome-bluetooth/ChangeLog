@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.86 2011/01/07 20:52:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.87 2011/01/17 18:01:20 pacho Exp $
+
+  17 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-2.32.0.ebuild:
+  Fix nautilus-sendto automagic support, upstream bug #639130; RDEPEND on a
+  fixed glib version to prevent installation problems like bug #350020.
 
   07 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-2.32.0.ebuild:
   Pass --disable-schemas-compile since we already compile them at postinst
