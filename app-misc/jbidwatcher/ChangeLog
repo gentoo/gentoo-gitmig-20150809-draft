@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jbidwatcher
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.34 2009/02/14 23:22:25 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.35 2011/01/17 00:14:36 fordfrog Exp $
+
+  17 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/jbidwatcher-0.9.8-javadoc.patch,
+  -files/jbidwatcher-1.0-build_xml.patch:
+  Removed unused files, bug #343183, thanks to jalan <jalanpalmer@gmail.com>
 
   14 Feb 2009; Petteri Räty <betelgeuse@gentoo.org>
   -jbidwatcher-1.0.1.ebuild, -jbidwatcher-1.0.2.ebuild:
