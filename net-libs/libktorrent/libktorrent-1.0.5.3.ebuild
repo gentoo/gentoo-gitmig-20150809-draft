@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.5.3.ebuild,v 1.4 2011/01/11 08:41:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.0.5.3.ebuild,v 1.5 2011/01/17 01:07:43 ranger Exp $
 
 EAPI=3
 KMNAME="extragear/network"
@@ -25,7 +25,7 @@ DESCRIPTION="A BitTorrent library based on KDE Platform"
 HOMEPAGE="http://ktorrent.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 SLOT="4"
 IUSE="debug doc"
 
