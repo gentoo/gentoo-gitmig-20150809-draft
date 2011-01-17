@@ -1,6 +1,22 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.9 2011/01/03 16:28:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.10 2011/01/17 09:34:19 tampakrap Exp $
+
+*libindicate-0.4.4 (17 Jan 2011)
+
+  17 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -libindicate-0.3.6.ebuild,
+  -files/libindicate-0.3.6-no-gobject-introspection.patch,
+  -files/libindicate-0.3.6-optional-gtk-support.patch,
+  +libindicate-0.4.4.ebuild, +files/libindicate-0.4.4-fix-aclocal.patch,
+  +files/libindicate-0.4.4-fix-introspection.patch,
+  +files/libindicate-0.4.4-fix-out-of-source-build.patch,
+  +files/libindicate-0.4.4-fix-python-version.patch,
+  +files/libindicate-0.4.4-optional-doc.patch,
+  +files/libindicate-0.4.4-optional-examples.patch,
+  +files/libindicate-0.4.4-optional-gtk.patch,
+  +files/libindicate-0.4.4-optional-mono-example.patch:
+  Version bump, remove old, ebuild and patches by Dennis Schridde, bug 332375
 
   03 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libindicate-0.3.6.ebuild:
