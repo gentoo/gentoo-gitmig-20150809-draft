@@ -1,7 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/reduze/reduze-1.2.ebuild,v 1.1 2011/01/16 12:32:02 grozin Exp $
-EAPI="4"
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/reduze/reduze-1.2.ebuild,v 1.2 2011/01/17 15:03:22 grozin Exp $
+EAPI="3"
 DESCRIPTION="A program for reducing Feynman integrals"
 HOMEPAGE="http://krone.physik.unizh.ch/~cedric/reduze/"
 IUSE=""
@@ -14,4 +14,9 @@ DEPEND="${RDEPEND}"
 
 src_test() {
 	emake check || die "emake check failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README
 }
