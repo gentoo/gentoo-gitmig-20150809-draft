@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-rotor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/ChangeLog,v 1.9 2010/12/01 14:54:17 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/ChangeLog,v 1.10 2011/01/17 22:02:23 hd_brummy Exp $
+
+  17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-rotor-0.1.4.ebuild, -vdr-rotor-0.1.4-r1.ebuild,
+  -files/vdr-rotor-0.1.4_vdr-1.5.10.diff, vdr-rotor-0.1.5.ebuild:
+  cleanup, minor ebuild fixes, stable x86 amd64
 
   01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-rotor-0.1.4.ebuild, vdr-rotor-0.1.5.ebuild,
