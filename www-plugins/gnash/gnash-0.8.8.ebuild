@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.13 2010/12/06 22:44:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.14 2011/01/17 16:00:06 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -156,6 +156,9 @@ src_prepare() {
 
 	# Use external dejagnu for tests, bug #321017
 	epatch "${FILESDIR}"/${PN}-0.8.8-external-dejagnu.patch
+
+	# Fix insecure creation of temporary files, bug #351724
+	epatch "${FILESDIR}"/${PN}-0.8.8-secure-tempfile-creation.patch
 
 	# Fix building on ppc64, bug #342535
 	use ppc64 && append-flags -mminimal-toc

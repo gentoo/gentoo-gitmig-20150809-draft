@@ -1,0 +1,38 @@
+From 6d86dd8cb9d567d8a6cedac301850c7349fe0ced Mon Sep 17 00:00:00 2001
+From: Gabriele Giacone <1o5g4r8o@gmail.com>
+Date: Mon, 03 Jan 2011 16:55:51 +0000
+Subject: Create configure temporary files in a secure way
+
+---
+diff --git a/configure.ac b/configure.ac
+index 08d217b..85e19da 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -3021,9 +3021,14 @@ cygnal/testsuite/cygnal.all/Makefile
+ ########################## Final report begins... ############################
+ ###
+ 
+-cerr=/tmp/gnash-configure-errors.$$
+-cwarn=/tmp/gnash-configure-warnings.$$
+-crec=/tmp/gnash-configure-recommended.$$
++dnl Create temporary directory in a secure way
++tmp=`mktemp -d ${TMPDIR=/tmp}/gnash-configure-XXXXXX`
++if test \! -n "$tmp" || test \! -d "$tmp"; then
++  tmp=`(umask 077 && mkdir -d ${TMPDIR=/tmp}/gnash-configure-${RANDOM}-$$) 2>/dev/null`
++fi
++cerr=${tmp}/errors
++cwarn=${tmp}/warnings
++crec=${tmp}/recommended
+ echo ""
+ 
+ #trap 'rm cerr' 0 # trap isn't a good idea, might override other traps
+@@ -4051,6 +4056,7 @@ else
+   rm $cerr
+ fi
+ 
++rmdir $tmp
+ 
+ if test x"$fork" = x"no"; then
+   AC_MSG_ERROR([Currently only forking the standalone player works!])
+--
+cgit v0.8.3.2

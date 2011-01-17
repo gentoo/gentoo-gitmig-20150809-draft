@@ -1,6 +1,17 @@
 # ChangeLog for www-plugins/gnash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.52 2010/12/06 22:44:21 chithanh Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.53 2011/01/17 16:00:06 chithanh Exp $
+
+  17 Jan 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/gnash-0.8.5-moc-qt4.patch, -files/gnash-0.8.x-libpng14.patch,
+  -gnash-0.8.5.ebuild, -files/gnash-0.8.5-xpcom-idldir.patch,
+  -files/gnash-0.8.5-xpidl-sdkdir.patch, -gnash-0.8.6.ebuild,
+  -files/gnash-0.8.6-libcore-as3-headers.patch,
+  -files/gnash-0.8.6-libssh-0.4.patch, -gnash-0.8.7.ebuild,
+  -files/gnash-0.8.7-klash.patch, -files/gnash-0.8.7-xpcom-idldir.patch,
+  gnash-0.8.8.ebuild, +files/gnash-0.8.8-secure-tempfile-creation.patch:
+  Fix insecure creation of temporary files, bug #351724. Drop vulnerable
+  versions.
 
   06 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.5.ebuild, gnash-0.8.6.ebuild, gnash-0.8.7.ebuild,
