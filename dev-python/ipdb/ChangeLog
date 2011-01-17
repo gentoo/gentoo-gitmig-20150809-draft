@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.4 2010/11/08 17:28:26 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.5 2011/01/17 17:19:49 arfrever Exp $
+
+*ipdb-0.3 (17 Jan 2011)
+
+  17 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ipdb-0.2.ebuild, +ipdb-0.3.ebuild:
+  Version bump.
 
 *ipdb-0.2 (08 Nov 2010)
 
