@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.160 2011/01/11 08:43:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.161 2011/01/17 01:08:40 ranger Exp $
+
+  17 Jan 2011; Brent Baude <ranger@gentoo.org> ktorrent-4.0.5.ebuild:
+  Marking ktorrent-4.0.5 ppc for bug 350970
 
   11 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ktorrent-4.0.5.ebuild:
