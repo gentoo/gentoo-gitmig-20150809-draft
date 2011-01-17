@@ -1,6 +1,13 @@
 # ChangeLog for app-text/apvlv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.8 2010/12/04 10:35:49 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.9 2011/01/17 23:47:21 radhermit Exp $
+
+*apvlv-0.1.0 (17 Jan 2011)
+
+  17 Jan 2011; Tim Harder <radhermit@gentoo.org> -apvlv-0.0.9.4.ebuild,
+  +apvlv-0.1.0.ebuild, +files/apvlv-0.1.0-poppler-0.16.patch:
+  Version bump and remove old. Apply temporary patch for bug #349979 by Till
+  Matthiesen and use cmake build system.
 
   04 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> apvlv-0.0.9.8.ebuild:
   x86 stable wrt bug #347115
