@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/redmine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.14 2010/12/25 02:53:46 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.15 2011/01/17 15:01:28 matsuu Exp $
+
+*redmine-1.1.0 (17 Jan 2011)
+
+  17 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +redmine-1.1.0.ebuild:
+  Version bumped, bug #351892.
 
 *redmine-1.0.5 (25 Dec 2010)
 
