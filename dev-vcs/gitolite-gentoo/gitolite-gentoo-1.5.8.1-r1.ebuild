@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.8.1.ebuild,v 1.1 2011/01/16 16:01:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.8.1-r1.ebuild,v 1.1 2011/01/17 10:49:31 idl0r Exp $
 
 EAPI=3
 
@@ -28,6 +28,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-missing-bracket.patch"
+
 	rm -rf Makefile doc/COPYING contrib/{autotoc,gitweb,vim}
 
 	echo "${PF}-gentoo" > conf/VERSION

@@ -1,0 +1,24 @@
+From 4a04df5f1d06d78f04a52b04291548d3e70de870 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Mon, 17 Jan 2011 11:31:25 +0100
+Subject: [PATCH] Add missing curly bracket
+
+---
+ src/gitolite.pm |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/gitolite.pm b/src/gitolite.pm
+index 336c292..550cf1c 100644
+--- a/src/gitolite.pm
++++ b/src/gitolite.pm
+@@ -1253,6 +1253,7 @@ sub export_key_metadata {
+         }
+     }
+     close(PUBKEY);
++}
+ 
+ sub get_repo_umask {
+ 	my $repo = shift;
+-- 
+1.7.3.4
+
