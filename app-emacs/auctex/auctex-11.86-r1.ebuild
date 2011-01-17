@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.1 2011/01/17 08:13:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.2 2011/01/17 08:25:49 ulm Exp $
 
 EAPI=3
 
@@ -26,12 +26,12 @@ TEXMF="/usr/share/texmf-site"
 
 src_prepare() {
 	elisp_src_prepare
+
+	# Remove broken Info file (will be recreated by the build system)
+	rm doc/auctex.info*
 }
 
 src_configure() {
-	# Remove broken Info file (will be recreated by the build system)
-	rm doc/auctex.info*
-
 	EMACS_NAME=emacs EMACS_FLAVOUR=emacs econf --disable-build-dir-test \
 		--with-auto-dir="${EPREFIX}/var/lib/auctex" \
 		--with-lispdir="${EPREFIX}${SITELISP}/${PN}" \
@@ -39,7 +39,7 @@ src_configure() {
 		--with-packagedatadir="${EPREFIX}${SITEETC}/${PN}" \
 		--with-texmf-dir="${EPREFIX}${TEXMF}" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		$(use_enable preview-latex preview) || die "econf failed"
+		$(use_enable preview-latex preview)
 }
 
 src_compile() {
