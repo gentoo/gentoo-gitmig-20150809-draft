@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.3 2011/01/15 19:57:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.4 2011/01/17 14:15:22 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -37,13 +37,13 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	battstat? ( $HALDEPEND )
 	gnome?	(
 		gnome-base/gnome-settings-daemon
+		gnome-base/libgnome
 
 		>=gnome-extra/gucharmap-2.23
 		>=gnome-base/libgtop-2.11.92
 
 		>=dev-python/pygobject-2.6
 		>=dev-python/pygtk-2.6
-		>=dev-python/libgnome-python-2.10
 		>=dev-python/gconf-python-2.10
 		>=dev-python/gnome-applets-python-2.10 )
 	gstreamer?	(

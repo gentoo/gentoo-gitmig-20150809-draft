@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.331 2011/01/15 19:57:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.332 2011/01/17 14:15:22 pacho Exp $
+
+  17 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-applets-2.32.1.1.ebuild:
+  libgnome-python is no longer needed as reported by Xake in bug #351601 and
+  confirmed by Gilles, but gnome-base/libgnome is still needed by invest applet
+  or, otherwise, it's no longer offered for adding to panel.
 
   15 Jan 2011; <nirbheek@gentoo.org> gnome-applets-2.30.0-r1.ebuild,
   gnome-applets-2.32.1.1.ebuild:
