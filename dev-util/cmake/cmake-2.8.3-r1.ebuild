@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3-r1.ebuild,v 1.2 2010/12/25 19:21:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3-r1.ebuild,v 1.3 2011/01/17 19:28:36 scarabeus Exp $
 
 EAPI="3"
 
@@ -41,7 +41,6 @@ VIMFILE="${PN}.vim"
 S="${WORKDIR}/${MY_P}"
 
 CMAKE_BINARY="${S}/Bootstrap.cmk/cmake"
-CMAKE_IN_SOURCE_BUILD=1
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.3-darwin-bundle.patch
@@ -119,7 +118,9 @@ src_compile() {
 }
 
 src_test() {
-	emake test || die "Tests failed"
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
+	"${CMAKE_BUILD_DIR}"/bin/ctest || die "Tests failed"
+	popd > /dev/null
 }
 
 src_install() {
