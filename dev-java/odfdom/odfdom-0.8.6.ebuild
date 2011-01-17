@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.ebuild,v 1.1 2010/05/30 02:53:55 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.6.ebuild,v 1.1 2011/01/17 02:12:47 fordfrog Exp $
 
-EAPI=3
+EAPI="3"
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -23,12 +23,16 @@ RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.5
 	${CDEPEND}
-	test? ( dev-java/ant-junit4:0 dev-java/junit:4 )"
+	test? (
+		dev-java/ant-junit4:0
+		dev-java/hamcrest-core:0
+		dev-java/junit:4
+	)"
 
 S="${WORKDIR}/${P}-sources"
 
 src_prepare() {
-	cp "${FILESDIR}/build.xml" build.xml || die
+	cp "${FILESDIR}/build-${PV}.xml" build.xml || die
 
 	mkdir lib || die
 	java-pkg_jar-from --into lib xerces-2 xercesImpl.jar xercesImpl-2.9.1.jar
@@ -41,12 +45,9 @@ EANT_JAVADOC_TARGET="javadoc"
 EANT_EXTRA_ARGS="-Dmaven.test.skip=true"
 
 src_test() {
-	#remove this test as it fails as we don't
-	#bundle deps inside odtdom.jar
-	find . -iname 'VersionTest.java' -delete
-
 	java-pkg_jar-from --into lib junit-4 junit.jar junit-4.5.jar
-	ANT_TASKS="ant-junit4" eant test
+	java-pkg_jar-from --into lib hamcrest-core
+	ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {

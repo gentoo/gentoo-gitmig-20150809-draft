@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/odfdom
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/ChangeLog,v 1.1 2010/05/30 02:53:55 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/ChangeLog,v 1.2 2011/01/17 02:12:47 fordfrog Exp $
+
+*odfdom-0.8.6 (17 Jan 2011)
+
+  17 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> -odfdom-0.8.ebuild,
+  +odfdom-0.8.6.ebuild, +files/build-0.8.6.xml, -files/build.xml:
+  Version bump and fixed all issues including bug #343137
 
 *odfdom-0.8 (30 May 2010)
 
