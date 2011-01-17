@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/vdr-channel-logos
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.4 2006/11/16 10:29:29 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.5 2011/01/17 20:35:04 hd_brummy Exp $
+
+*vdr-channel-logos-0.2-r1 (17 Jan 2011)
+
+  17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-channel-logos-0.2-r1.ebuild:
+  fix to support your utf-8 locale settings
 
   16 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-channel-logos-0.2.ebuild:
