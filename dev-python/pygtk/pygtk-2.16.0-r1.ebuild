@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.12 2010/07/12 16:58:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.13 2011/01/17 18:17:50 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
