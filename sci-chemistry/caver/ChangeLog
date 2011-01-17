@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/caver
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.16 2010/06/15 12:36:32 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.17 2011/01/17 19:08:12 jlec Exp $
+
+*caver-2.1.1 (17 Jan 2011)
+
+  17 Jan 2011; Justin Lecher <jlec@gentoo.org> +caver-2.1.1.ebuild:
+  Version Bump
 
   15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   caver-0.99.4.ebuild:
