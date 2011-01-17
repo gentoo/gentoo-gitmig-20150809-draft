@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.87 2011/01/17 18:01:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.88 2011/01/17 18:02:37 pacho Exp $
+
+  17 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-bluetooth-2.32.0-nsd-automagic.patch:
+  Add forgotten patch.
 
   17 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-2.32.0.ebuild:
   Fix nautilus-sendto automagic support, upstream bug #639130; RDEPEND on a
