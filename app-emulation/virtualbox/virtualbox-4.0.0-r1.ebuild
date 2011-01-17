@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.3 2011/01/12 19:53:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.4 2011/01/17 21:02:57 polynomial-c Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	!app-emulation/virtualbox-ose
@@ -47,8 +47,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		x11-libs/libXmu
 		x11-libs/libXt
 		media-libs/libsdl[X,video]
-	)
-	vnc? ( >=net-libs/libvncserver-0.9.7 )"
+	)"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -145,9 +144,6 @@ src_prepare() {
 	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
 		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 
-	# add the --enable-vnc option to configure script (bug #348204)
-	epatch "${FILESDIR}/${PN}-4-vnc.patch"
-
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4-restore_old_machines_dir.patch"
 
@@ -167,7 +163,6 @@ src_configure() {
 	use java       || myconf+=" --disable-java"
 	use vboxwebsrv && myconf+=" --enable-webservice"
 	use doc        || myconf+=" --disable-docs"
-	use vnc        && myconf+=" --enable-vnc"
 	if ! use headless ; then
 		use qt4 || myconf+=" --disable-qt4"
 	else
