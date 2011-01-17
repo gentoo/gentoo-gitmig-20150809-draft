@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.226 2011/01/10 17:47:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.227 2011/01/17 13:46:16 chiiph Exp $
+
+*tor-0.2.2.21_alpha (17 Jan 2011)
+*tor-0.2.1.29 (17 Jan 2011)
+
+  17 Jan 2011; Tomas Touceda <chiiph@gentoo.org> +tor-0.2.1.29.ebuild,
+  -tor-0.2.2.20_alpha.ebuild, +tor-0.2.2.21_alpha.ebuild:
+  Versiom bump. Clean old alpha.
 
 *tor-0.2.2.20_alpha (10 Jan 2011)
 
