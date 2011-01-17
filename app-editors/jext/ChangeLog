@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jext
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.20 2009/07/23 13:02:15 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.21 2011/01/17 02:26:17 fordfrog Exp $
+
+  17 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> -files/jext-gentoo.sh:
+  Removed unused file, bug #340571 (thanks to jalan <jalanpalmer@gmail.com>)
 
   23 Jul 2009; Alistair Bush <ali_bush@gentoo.org> -jext-3.2_pre3-r1.ebuild:
   Cleanup old version.
