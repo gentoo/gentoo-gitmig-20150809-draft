@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.10 2011/01/16 21:49:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r7.ebuild,v 1.11 2011/01/17 08:01:36 jlec Exp $
 
 EAPI="3"
 
@@ -260,6 +260,7 @@ src_install() {
 		-e "s:^\(.*export CINCL=\).*:\1${EPREFIX}/usr/share/ccp4/include:g" \
 		-e "s:^\(.*setenv CINCL \).*:\1${EPREFIX}/usr/share/ccp4/include:g" \
 		-e "/CCP4_HELPDIR/d" \
+		-e "/IMOSFLM_VERSION/d" \
 		-i "${S}"/include/ccp4.setup* || die
 
 	# Don't check for updates on every sourcing of /etc/profile
