@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevplatform
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.46 2010/11/28 04:16:28 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.47 2011/01/17 01:36:26 reavertm Exp $
+
+*kdevplatform-1.1.2 (17 Jan 2011)
+
+  17 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -kdevplatform-1.1.0.ebuild, -kdevplatform-1.1.1.ebuild,
+  +kdevplatform-1.1.2.ebuild:
+  Version bump, remove old
 
 *kdevplatform-1.1.1 (28 Nov 2010)
 
