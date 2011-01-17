@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.5 2011/01/15 23:59:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.6 2011/01/17 16:03:24 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -9,6 +9,7 @@
 VERSION_BUSYBOX='1.18.1'
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
+VERSION_MDADM='3.1.4'
 VERSION_E2FSPROGS='1.41.14'
 VERSION_FUSE='2.7.4'
 VERSION_ISCSI='2.0-871'
@@ -23,6 +24,7 @@ BB_HOME="http://www.busybox.net/downloads"
 
 COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		${DM_HOME}/old/dmraid-${VERSION_DMRAID}.tar.bz2
+		mirror://kernel/linux/utils/raid/mdadm/mdadm-${VERSION_MDADM}.tar.bz2
 		${RH_HOME}/lvm2/LVM2.${VERSION_LVM}.tgz
 		${RH_HOME}/lvm2/old/LVM2.${VERSION_LVM}.tgz
 		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
@@ -82,6 +84,7 @@ src_install() {
 	sed \
 		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
 		-e "s:VERSION_DMAP:$VERSION_DMAP:" \
+		-e "s:VERSION_MDADM:$VERSION_MDADM:" \
 		-e "s:VERSION_DMRAID:$VERSION_DMRAID:" \
 		-e "s:VERSION_E2FSPROGS:$VERSION_E2FSPROGS:" \
 		-e "s:VERSION_FUSE:$VERSION_FUSE:" \
@@ -110,6 +113,7 @@ src_install() {
 	elog "Copying files to /var/cache/genkernel/src..."
 	mkdir -p "${D}"/var/cache/genkernel/src
 	cp -f \
+		"${DISTDIR}"/mdadm-${VERSION_MDADM}.tar.bz2 \
 		"${DISTDIR}"/dmraid-${VERSION_DMRAID}.tar.bz2 \
 		"${DISTDIR}"/LVM2.${VERSION_LVM}.tgz \
 		"${DISTDIR}"/device-mapper.${VERSION_DMAP}.tgz \
