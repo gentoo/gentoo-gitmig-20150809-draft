@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/nestedsums
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nestedsums/ChangeLog,v 1.1 2011/01/16 12:27:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nestedsums/ChangeLog,v 1.2 2011/01/17 14:57:48 grozin Exp $
+
+  17 Jan 2011; Andrey Grozin <grozin@gentoo.org> nestedsums-1.4.12.ebuild:
+  Downgrade to EAPI 3
 
 *nestedsums-1.4.12 (16 Jan 2011)
 
