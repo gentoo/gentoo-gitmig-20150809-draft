@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Module-Load-Conditional
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load-Conditional/ChangeLog,v 1.12 2011/01/13 08:27:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load-Conditional/ChangeLog,v 1.13 2011/01/17 07:50:39 tove Exp $
+
+  17 Jan 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Module-Load-Conditional-0.34.ebuild,
+  -perl-Module-Load-Conditional-0.36.ebuild,
+  -perl-Module-Load-Conditional-0.38.ebuild:
+  Cleanup
 
 *perl-Module-Load-Conditional-0.400 (13 Jan 2011)
 
