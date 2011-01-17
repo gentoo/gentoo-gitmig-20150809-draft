@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.1.0.ebuild,v 1.1 2010/10/26 19:52:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.1.2.ebuild,v 1.1 2011/01/17 01:39:06 reavertm Exp $
 
 EAPI="2"
 
 # Bug 328269
 RESTRICT="test"
 
-KDE_LINGUAS="ca ca@valencia da de en_GB es et fi gl it nds nl pt pt_BR ru sl sv th uk zh_CN zh_TW"
+KDE_LINGUAS="ca ca@valencia da de en_GB es et fi gl it nds nl pt pt_BR sl sv th uk zh_CN zh_TW"
 
 KMNAME="kdevelop"
 inherit kde4-base
