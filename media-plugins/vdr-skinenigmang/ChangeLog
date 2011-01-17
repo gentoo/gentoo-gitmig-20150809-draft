@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-skinenigmang
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.9 2010/04/08 14:57:50 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.10 2011/01/17 18:05:13 hd_brummy Exp $
+
+  17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-skinenigmang-0.0.6.ebuild, -vdr-skinenigmang-0.1.0.ebuild,
+  -vdr-skinenigmang-0.1.0-r1.ebuild, vdr-skinenigmang-0.1.1.ebuild,
+  -files/imagemagick-6.4.x.diff:
+  cleanup, stable x86
 
 *vdr-skinenigmang-0.1.1 (08 Apr 2010)
 *vdr-skinenigmang-0.1.0-r1 (08 Apr 2010)
