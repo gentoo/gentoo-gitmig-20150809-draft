@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.1 2011/01/12 23:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.2 2011/01/17 19:51:48 vapier Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="dynamic nls selinux"
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=sys-fs/lvm2-2.02.64
+RDEPEND=">=sys-fs/lvm2-2.02.64
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libgpg-error-1.0-r1
 	>=dev-libs/popt-1.7
@@ -26,6 +26,11 @@ DEPEND=">=sys-fs/lvm2-2.02.64
 	|| ( >=sys-libs/e2fsprogs-libs-1.41 <sys-fs/e2fsprogs-1.41 )
 	selinux? ( sys-libs/libselinux )
 	!sys-fs/cryptsetup-luks"
+DEPEND="${RDEPEND}
+	!dynamic? (
+		|| ( >=dev-libs/libgpg-error-1.10[static-libs] <dev-libs/libgpg-error-1.10 )
+		dev-libs/libgcrypt[static-libs]
+	)"
 
 pkg_setup() {
 	local CONFIG_CHECK="~DM_CRYPT ~CRYPTO ~CRYPTO_CBC"
