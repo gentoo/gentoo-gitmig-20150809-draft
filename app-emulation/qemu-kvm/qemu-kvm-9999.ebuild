@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.13 2010/11/02 16:29:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.14 2011/01/17 18:56:42 anarchy Exp $
 
 EAPI="2"
 
@@ -63,7 +63,7 @@ RDEPEND="
 	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
 	fdt? ( sys-apps/dtc )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
