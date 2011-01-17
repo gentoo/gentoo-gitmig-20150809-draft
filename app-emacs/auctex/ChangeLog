@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/auctex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.105 2010/12/12 15:43:51 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.106 2011/01/17 08:13:52 ulm Exp $
+
+*auctex-11.86-r1 (17 Jan 2011)
+
+  17 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +auctex-11.86-r1.ebuild,
+  +files/auctex-11.86-ghostscript9.patch:
+  Fix preview PNG generation with ghostscript-gpl-9.00, bug 351774.
 
   12 Dec 2010; Christian Faulhammer <fauli@gentoo.org> -auctex-11.85.ebuild:
   clean up
