@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110113.ebuild,v 1.1 2011/01/13 20:16:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110113.ebuild,v 1.2 2011/01/17 12:46:51 jlec Exp $
 
 EAPI="3"
 
@@ -96,7 +96,7 @@ src_prepare() {
 		-e "s:^\(X11_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 		-e "s:^\(TCL_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 		-e "s:^\(TK_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
-		-e "s:^\(PYTHON_INCLUDE_FLAGS =\).*:\1 -I$(python_get_includedir):g" \
+		-e "s:^\(PYTHON_INCLUDE_FLAGS =\).*:\1 -I${EPREFIX}/$(python_get_includedir):g" \
 		-e "s:^\(PYTHON_LIB =\).*:\1 $(python_get_library -l):g" \
 		c/environment_default.txt > c/environment.txt
 }
