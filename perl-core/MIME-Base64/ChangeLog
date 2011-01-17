@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/MIME-Base64
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.30 2010/11/27 18:25:23 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.31 2011/01/17 07:59:36 tove Exp $
+
+  17 Jan 2011; Torsten Veller <tove@gentoo.org> -MIME-Base64-3.09.ebuild,
+  -MIME-Base64-3.10.ebuild:
+  Cleanup
 
 *MIME-Base64-3.13 (27 Nov 2010)
 
