@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.3.ebuild,v 1.1 2011/01/17 13:16:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.3.ebuild,v 1.2 2011/01/17 14:12:37 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+PYTHON_DEPEND="2:2.5"
 
 inherit eutils gnome2 python
 
@@ -16,12 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbus doc distribution gnome gstreamer nls pulseaudio test xml"
 
-RDEPEND=">=dev-libs/glib-2.10
+RDEPEND=">=dev-libs/glib-2.10:2
 	>=gnome-base/gconf-2
-	>=x11-libs/gtk+-2.8
-	>=dev-cpp/gtkmm-2.10
-	>=dev-cpp/glibmm-2.10
-	>=dev-libs/libsigc++-2
+	>=x11-libs/gtk+-2.8:2
+	>=dev-cpp/gtkmm-2.10:2.4
+	>=dev-cpp/glibmm-2.10:2
+	>=dev-libs/libsigc++-2:2
 	dbus? (
 		>=sys-apps/dbus-1.2
 		dev-libs/dbus-glib )
