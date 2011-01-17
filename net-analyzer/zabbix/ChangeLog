@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.40 2011/01/16 12:27:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.41 2011/01/17 15:55:08 patrick Exp $
+
+  17 Jan 2011; Patrick Lauer <patrick@gentoo.org> zabbix-1.8.3.ebuild,
+  zabbix-1.8.4.ebuild:
+  Fixing use-depends for frontend useflag, #351917
 
 *zabbix-1.8.4 (16 Jan 2011)
 
