@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/freefont-ttf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/ChangeLog,v 1.16 2009/09/07 01:35:51 dirtyepic Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont-ttf/ChangeLog,v 1.17 2011/01/17 20:55:20 spatz Exp $
+
+*freefont-ttf-20100919 (17 Jan 2011)
+
+  17 Jan 2011; Dror Levin <spatz@gentoo.org> +freefont-ttf-20100919.ebuild:
+  Version bump, bug 338079.
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
   -freefont-ttf-20080323.ebuild, -freefont-ttf-20080912.ebuild:
