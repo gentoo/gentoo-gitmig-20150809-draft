@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.98 2011/01/16 11:13:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.99 2011/01/17 19:31:13 tampakrap Exp $
+
+  17 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> pykde4-4.5.5.ebuild:
+  Fix compatibility with >=dev-python/PyQt4-4.7.5 (bug #349453) for pykde4
+  4.5.5 as well
 
   16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pykde4-4.4.5-r1.ebuild:

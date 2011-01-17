@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.5.5.ebuild,v 1.1 2011/01/10 11:53:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.5.5.ebuild,v 1.2 2011/01/17 19:31:13 tampakrap Exp $
 
 EAPI="3"
 
@@ -26,7 +26,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-4.5.5-typedefs-fix.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-typedefs-fix.patch"
+	"${FILESDIR}/${PN}-4.4.5-PyQt4-4.7.5.patch"
+)
 
 pkg_setup() {
 	python_pkg_setup
