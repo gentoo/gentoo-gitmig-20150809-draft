@@ -4,7 +4,7 @@
  AC_SUBST(AVAHI_LIBS)
  
  AC_ARG_ENABLE(oggvorbis,[  --enable-oggvorbis      Enable Ogg/Vorbis support],
-+			[ case "${enabledval}" in
++			[ case "${enableval}" in
 +			  yes)
                             use_oggvorbis=true;
  #                           LDFLAGS="${LDFLAGS} -logg -lvorbis";
