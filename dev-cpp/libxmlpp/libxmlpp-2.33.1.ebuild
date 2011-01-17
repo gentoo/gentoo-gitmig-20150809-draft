@@ -1,9 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.26.1.ebuild,v 1.2 2010/05/24 23:45:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.33.1.ebuild,v 1.1 2011/01/17 16:54:39 pacho Exp $
 
 EAPI="3"
-inherit gnome2 eutils
+GCONF_DEBUG="no"
+
+inherit gnome2
 
 MY_PN="${PN/pp/++}"
 MY_P="${MY_PN}-${PV}"
