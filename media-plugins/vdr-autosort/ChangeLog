@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-autosort
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/ChangeLog,v 1.3 2007/01/05 16:23:55 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/ChangeLog,v 1.4 2011/01/17 21:22:52 hd_brummy Exp $
+
+  17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-autosort-0.0.10.ebuild:
+  keyworded ~amd64
 
   05 Jan 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-autosort-0.0.10.ebuild:

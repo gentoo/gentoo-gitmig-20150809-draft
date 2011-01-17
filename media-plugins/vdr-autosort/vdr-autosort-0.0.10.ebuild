@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.0.10.ebuild,v 1.4 2007/07/10 23:09:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.0.10.ebuild,v 1.5 2011/01/17 21:22:52 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin eutils
 
@@ -10,10 +12,11 @@ SRC_URI="http://www.copypointburscheid.de/linux/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.32"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	vdr-plugin_src_install
