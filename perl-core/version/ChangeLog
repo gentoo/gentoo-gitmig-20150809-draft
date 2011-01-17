@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.31 2011/01/13 07:55:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.32 2011/01/17 07:25:23 tove Exp $
+
+  17 Jan 2011; Torsten Veller <tove@gentoo.org> -files/0.79-assert.patch,
+  -version-0.77.02.ebuild, -version-0.79-r1.ebuild, -version-0.80.ebuild,
+  -version-0.83.ebuild, -version-0.85.ebuild, -version-0.86.ebuild:
+  Cleanup
 
 *version-0.880 (13 Jan 2011)
 
