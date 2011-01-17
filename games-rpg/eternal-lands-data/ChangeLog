@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/eternal-lands-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.23 2010/12/30 22:54:38 rich0 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.24 2011/01/17 19:58:33 rich0 Exp $
+
+*eternal-lands-data-1.9.1_p20110117 (17 Jan 2011)
+
+  17 Jan 2011; Richard Freeman <rich0@gentoo.org>
+  +eternal-lands-data-1.9.1_p20110117.ebuild:
+  Update to sound files.
 
 *eternal-lands-data-1.9.1 (30 Dec 2010)
 
