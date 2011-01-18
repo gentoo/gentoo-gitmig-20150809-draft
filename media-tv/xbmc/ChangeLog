@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.76 2011/01/03 03:15:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.77 2011/01/18 05:17:37 vapier Exp $
+
+  18 Jan 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Convert to git #346381 by Mathieu Rochette.
 
   03 Jan 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:

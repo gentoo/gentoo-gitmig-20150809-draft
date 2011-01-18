@@ -1,18 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.70 2011/01/03 03:15:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.71 2011/01/18 05:17:37 vapier Exp $
 
 EAPI="2"
 
 inherit eutils python
 
-# Use XBMC_ESVN_REPO_URI to track a different branch
-ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-http://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk}
-ESVN_PROJECT=${ESVN_REPO_URI##*/svnroot/}
-ESVN_PROJECT=${ESVN_PROJECT%/*}
+EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
 if [[ ${PV} == "9999" ]] ; then
-	inherit subversion autotools
-	KEYWORDS=""
+	inherit git autotools
 else
 	inherit autotools
 	MY_P=${P/_/-}
@@ -100,7 +96,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		subversion_src_unpack
+		git_src_unpack
 		cd "${S}"
 		rm -f configure
 	else
@@ -135,7 +131,7 @@ src_prepare() {
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
-	export SVN_REV=${ESVN_WC_REVISION:-exported}
+	export HAVE_GIT=no GIT_REV=${EGIT_VERSION:-exported}
 
 	# Avoid lsb-release dependency
 	sed -i \
