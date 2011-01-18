@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libjwc_f
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.5 2011/01/16 10:50:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.6 2011/01/18 16:09:41 hwoarang Exp $
+
+  18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libjwc_f-1.1-r1.ebuild:
+  Stable on amd64 wrt bug #351768
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libjwc_f-1.1-r1.ebuild:
