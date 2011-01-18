@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.9.ebuild,v 1.1 2010/10/21 09:59:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.9.ebuild,v 1.2 2011/01/18 14:17:36 xarthisius Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ pkg_setup() {
 src_configure() {
 	use ibmvio && myconf="${myconf} IBMVIO=1"
 	use infiniband && myconf="${myconf} ISCSI_RDMA=1"
-	use fcp && 	myconf="${myconf} FCP=1"
+	use fcp && myconf="${myconf} FCP=1"
 	use fcoe && myconf="${myconf} FCOE=1"
 
 	sed -e 's:\($(CC)\):\1 $(LDFLAGS):' -i usr/Makefile || die "sed failed"
