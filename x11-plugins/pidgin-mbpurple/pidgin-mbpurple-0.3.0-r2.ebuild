@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0-r1.ebuild,v 1.1 2011/01/13 08:46:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0-r2.ebuild,v 1.1 2011/01/18 09:58:12 fauli Exp $
 
 EAPI=2
 
@@ -27,7 +27,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# upstream Issue 226 (Respect LDFLAGS)
 	sed -i "/^LDFLAGS/d" global.mak || die
+
+	# upstream Issue 225 (Warnings during compilation using make -j2)
+	sed -i "s/make /\$(MAKE) /g" Makefile || die
+
+	# upstream Issue 224 (configurable twitgin)
 	if ! use twitgin; then
 		sed -i 's/twitgin//g' Makefile || die
 	fi
