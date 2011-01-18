@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.263 2010/12/05 17:43:33 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.264 2011/01/18 15:58:18 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  metacity-2.30.3.ebuild:
+  x86 stable, bug 348987
 
   05 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -metacity-2.26.0-r1.ebuild, -files/metacity-2.26.0-panel-behavior.patch,
