@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gtkhtml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.226 2010/11/28 14:43:21 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.227 2011/01/18 16:15:48 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  gtkhtml-3.30.3.ebuild:
+  x86 stable, bug 348987
 
 *gtkhtml-3.32.1 (28 Nov 2010)
 
