@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tdom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.8 2011/01/16 10:47:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.9 2011/01/18 14:47:35 hwoarang Exp $
+
+  18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tdom-0.8.2.ebuild:
+  Stable on amd64 wrt bug #351766
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> tdom-0.8.2.ebuild:
   marked ~ppc wrt #303931
