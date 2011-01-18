@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.4 2010/12/16 22:42:37 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.5 2011/01/18 14:14:25 xarthisius Exp $
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -hwloc-1.0.2.ebuild:
+  Drop old.
 
 *hwloc-1.0.3 (16 Dec 2010)
 
