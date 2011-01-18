@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.10.ebuild,v 1.3 2010/10/19 10:28:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.2.ebuild,v 1.1 2011/01/18 19:35:20 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils linux-mod multilib versionator
 
-MY_P=VirtualBox-${PV}-OSE
+MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
@@ -41,7 +41,7 @@ BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxvideo(misc:${WORKDIR}/vboxvideo_drm:${WORKDIR}/vboxvideo_drm)"
 
-S=${WORKDIR}/${MY_P/-OSE/_OSE}
+S="${WORKDIR}/${MY_P}_OSE"
 
 QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"
 
@@ -52,7 +52,7 @@ pkg_setup() {
 
 src_prepare() {
 		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
-		cp -a "${WORKDIR}/${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
+		cp -a "${S}"/src/VBox/Additions/linux/drm \
 		"${WORKDIR}/vboxvideo_drm" || die "cannot copy vboxvideo_drm directory"
 		cp "${FILESDIR}/${PN}-3-vboxvideo_drm.makefile" \
 		"${WORKDIR}/vboxvideo_drm/Makefile" || die "cannot copy vboxvideo_drm Makefile"
@@ -72,8 +72,10 @@ src_prepare() {
 		# Ugly hack to build the opengl part of the video driver
 		epatch "${FILESDIR}/${PN}-2.2.0-enable-opengl.patch"
 
-		# unset useless/problematic mesa checks in configure
+		# unset useless/problematic checks in configure
 		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch"
+		epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
+		epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
 }
 
 src_configure() {
