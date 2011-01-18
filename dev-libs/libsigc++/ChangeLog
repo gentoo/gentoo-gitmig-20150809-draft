@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigc++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.151 2010/09/13 11:40:08 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.152 2011/01/18 14:00:35 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  libsigc++-2.2.7.ebuild:
+  x86 stable, bug 348987
 
   13 Sep 2010; Pacho Ramos <pacho@gentoo.org> libsigc++-1.0.4-r3.ebuild:
   Respect LDFLAGS, bug #336827 (reported by Flameeyes). Thanks to Dane Smith
