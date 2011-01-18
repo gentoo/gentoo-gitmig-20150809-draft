@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.30.2-r1.ebuild,v 1.1 2010/11/10 21:40:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.30.2-r1.ebuild,v 1.2 2011/01/18 14:11:51 fauli Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ IUSE="+automount"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 #  Note to developers:
 #  This is a wrapper for the 'light' Gnome2 desktop,

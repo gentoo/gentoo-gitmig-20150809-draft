@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-light
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.131 2010/11/10 21:40:35 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.132 2011/01/18 14:11:51 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  gnome-light-2.30.2-r1.ebuild:
+  x86 stable, bug 348987
 
 *gnome-light-2.30.2-r1 (10 Nov 2010)
 
