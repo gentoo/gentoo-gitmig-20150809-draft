@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.92 2011/01/18 09:57:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.93 2011/01/18 17:45:02 jer Exp $
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org> CGI-3.510.ebuild:
+  Stable for HPPA (bug #351699).
 
   18 Jan 2011; Christian Faulhammer <fauli@gentoo.org> CGI-3.510.ebuild:
   stable x86, security bug 351699
