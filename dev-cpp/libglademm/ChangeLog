@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.79 2010/09/12 07:09:05 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.80 2011/01/18 13:40:40 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  libglademm-2.6.7.ebuild:
+  x86 stable, bug 348987
 
   12 Sep 2010; Torsten Veller <tove@gentoo.org> libglademm-2.6.7.ebuild:
   Add missing die: || "..." -> || die "..."
