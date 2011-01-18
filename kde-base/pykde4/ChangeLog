@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.101 2011/01/17 22:46:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.102 2011/01/18 21:06:00 ranger Exp $
+
+  18 Jan 2011; Brent Baude <ranger@gentoo.org> pykde4-4.4.5-r1.ebuild:
+  Marking pykde4-4.4.5-r1 ppc for bug 351784
 
   17 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pykde4-4.4.5-r1.ebuild:
   Stable on amd64 wrt bug #351784
