@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.110 2011/01/16 22:51:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.111 2011/01/18 21:05:04 jer Exp $
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org> fftw-2.1.5-r8.ebuild:
+  Stable for HPPA (bug #351745).
 
   16 Jan 2011; Thomas Kahle <tomka@gentoo.org> fftw-2.1.5-r8.ebuild:
   x86 stable per bug 351745
