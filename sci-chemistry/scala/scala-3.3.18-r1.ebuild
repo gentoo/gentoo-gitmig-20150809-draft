@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r1.ebuild,v 1.5 2011/01/16 12:19:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r1.ebuild,v 1.6 2011/01/18 17:01:49 tomka Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/${P}.tar.gz"
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
