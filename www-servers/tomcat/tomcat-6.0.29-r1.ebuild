@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.28.ebuild,v 1.2 2010/07/25 17:31:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.29-r1.ebuild,v 1.1 2011/01/18 18:02:20 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -132,6 +132,7 @@ src_install() {
 	cd "${S}"/webapps || die
 	ebegin "Installing webapps to /usr/share/${TOMCAT_NAME}"
 
+	dodir /usr/share/${TOMCAT_NAME}/webapps
 	cp -pR ROOT "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
 	cp -pR host-manager "${D}"/usr/share/${TOMCAT_NAME}/webapps || die
 	cp -pR manager "${D}"/usr/share/${TOMCAT_NAME}/webapps || die

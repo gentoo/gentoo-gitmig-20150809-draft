@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/tomcat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.234 2010/12/21 09:13:39 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.235 2011/01/18 18:02:20 fordfrog Exp $
+
+*tomcat-7.0.5-r1 (18 Jan 2011)
+*tomcat-6.0.29-r1 (18 Jan 2011)
+*tomcat-6.0.28-r1 (18 Jan 2011)
+*tomcat-6.0.26-r2 (18 Jan 2011)
+
+  18 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-6.0.26-r1.ebuild,
+  +tomcat-6.0.26-r2.ebuild, -tomcat-6.0.28.ebuild, +tomcat-6.0.28-r1.ebuild,
+  -tomcat-6.0.29.ebuild, +tomcat-6.0.29-r1.ebuild, -tomcat-7.0.5.ebuild,
+  +tomcat-7.0.5-r1.ebuild:
+  Fixed bug #350645 in all versions except 5.5.27 where it does not seem to
+  occur, thanks to gentoo@ddrs.ath.cx pointing it out and for the fix
 
 *tomcat-7.0.5 (21 Dec 2010)
 
