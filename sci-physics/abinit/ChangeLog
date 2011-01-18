@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/abinit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.13 2010/12/16 15:38:07 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.14 2011/01/18 16:38:15 xarthisius Exp $
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -abinit-5.3.4.ebuild,
+  -abinit-5.4.4.ebuild, -abinit-5.4.4-r1.ebuild,
+  -files/abinit-5.4.4-test.patch, -files/5.2.3-fix-64bit-detection.patch,
+  -files/5.3.4-change-default-directories.patch:
+  Drop old
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> abinit-5.3.4.ebuild,
   abinit-5.4.4.ebuild, abinit-5.4.4-r1.ebuild:
