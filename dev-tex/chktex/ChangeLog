@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.35 2010/01/03 11:26:01 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.36 2011/01/18 19:19:04 grobian Exp $
+
+  18 Jan 2011; Fabian Groffen <grobian@gentoo.org> chktex-1.6.4.ebuild:
+  Marked ~ppc-macos, bug #351946
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> chktex-1.6.4.ebuild:
   Transfer Prefix keywords
