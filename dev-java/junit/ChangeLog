@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.59 2011/01/18 13:37:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.60 2011/01/18 14:06:58 fordfrog Exp $
+
+*junit-4.8.2-r1 (18 Jan 2011)
+
+  18 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> -junit-4.8.2.ebuild,
+  +junit-4.8.2-r1.ebuild, +files/gentoo-manifest.mf:
+  Applied patch from bug #287757 (thanks to Daniel Solano Gómez
+  <gentoo@sattvik.com>) and did some adjustments of the ebuild
 
 *junit-4.8.2 (18 Jan 2011)
 
