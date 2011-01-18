@@ -1,6 +1,17 @@
 # ChangeLog for app-text/evince
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.204 2010/12/07 19:38:52 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.205 2011/01/18 09:04:51 pacho Exp $
+
+*evince-2.32.0-r1 (18 Jan 2011)
+
+  18 Jan 2011; Pacho Ramos <pacho@gentoo.org> -evince-2.26.2.ebuild,
+  -files/evince-2.27.4-smclient-configure.patch, -evince-2.28.2.ebuild,
+  +evince-2.32.0-r1.ebuild, +files/evince-2.32.0-dvi-CVEs.patch,
+  +files/evince-2.32.0-libdocument-segfault.patch,
+  +files/evince-2.32.0-pk-fonts.patch:
+  Revision bump including upstream patches for fixing security bugs in dvi
+  backend, libdocument segfaults and problem with pk fonts after applying
+  security patch. Remove old.
 
   07 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> evince-2.32.0.ebuild:
   Re-drop hppa keyword, thanks to Mr_Bones for reminding.
