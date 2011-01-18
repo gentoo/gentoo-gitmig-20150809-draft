@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.194 2011/01/18 06:10:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.195 2011/01/18 14:07:38 xarthisius Exp $
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.7.2.ebuild:
+  ppc64 stable wrt #338632
 
   18 Jan 2011; Steve Arnold <nerdboy@gentoo.org> doxygen-1.7.2.ebuild:
   Updated with suggested workaround for ppc64 stable-ing (see comment #17 
