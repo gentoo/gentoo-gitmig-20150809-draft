@@ -1,0 +1,24 @@
+Bugs-Gentoo: https://bugs.gentoo.org/show_bug.cgi?id=352056
+--- a/Src/subst.c
++++ b/Src/subst.c
+@@ -2814,12 +2814,14 @@
+ 			zerr("invalid length: %s", check_offset);
+ 			return NULL;
+ 		    }
+-		    length = mathevali(check_offset);
+-		    if (errflag)
+-			return NULL;
+-		    if (length < (zlong)0) {
+-			zerr("invalid length: %s", check_offset);
+-			return NULL;
++                    if (check_offset) {
++			length = mathevali(check_offset);
++			if (errflag)
++			    return NULL;
++			if (length < (zlong)0) {
++			    zerr("invalid length: %s", check_offset);
++			    return NULL;
++			}
+ 		    }
+ 		}
+ 		if (horrible_offset_hack) {
