@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.257 2010/11/23 22:35:48 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.258 2011/01/18 15:00:35 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  epiphany-2.30.6.ebuild:
+  x86 stable, bug 348987
 
   23 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/epiphany-2.22.3-CVE-2008-5985.patch,
