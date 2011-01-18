@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.20.ebuild,v 1.1 2010/08/27 15:27:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.20.ebuild,v 1.2 2011/01/18 14:04:20 xarthisius Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.keepalived.org/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~s390 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="dev-libs/popt
