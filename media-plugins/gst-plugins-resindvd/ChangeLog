@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.20 2010/12/20 17:22:56 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.21 2011/01/18 21:27:50 jer Exp $
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-resindvd-0.10.19.ebuild:
+  Stable for HPPA (bug #346981).
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-resindvd-0.10.19.ebuild:

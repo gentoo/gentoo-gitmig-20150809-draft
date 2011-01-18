@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.52 2011/01/06 17:11:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.53 2011/01/18 21:28:36 jer Exp $
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-soup-0.10.23.ebuild:
+  Stable for HPPA (bug #346981).
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-soup-0.10.23.ebuild:
