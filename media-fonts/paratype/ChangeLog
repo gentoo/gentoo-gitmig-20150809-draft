@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/paratype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/paratype/ChangeLog,v 1.1 2011/01/13 23:53:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/paratype/ChangeLog,v 1.2 2011/01/18 22:40:40 spatz Exp $
+
+  18 Jan 2011; Dror Levin <spatz@gentoo.org> paratype-1.ebuild:
+  Change HOMEPAGE to english one, rename SRC_URI files to contain version.
 
 *paratype-1 (13 Jan 2011)
 
