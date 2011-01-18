@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.88 2011/01/18 09:59:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.89 2011/01/18 17:44:50 jer Exp $
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org> perl-CGI-3.510.ebuild:
+  Stable for HPPA (bug #351699).
 
   18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   perl-CGI-3.510.ebuild:
