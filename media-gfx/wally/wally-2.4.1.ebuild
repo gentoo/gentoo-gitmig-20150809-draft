@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.1 2010/10/26 18:51:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.2 2011/01/18 13:54:50 hwoarang Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -17,7 +17,7 @@ IUSE="debug"
 
 DEPEND="media-libs/libexif
 	x11-libs/qt-svg:4
-	kde? (	>=kde-base/kdelibs-4.2.0 )"
+	kde? (	>=kde-base/kdelibs-4.5.5 )"
 RDEPEND="${DEPEND}"
 
 PATCHES=(
