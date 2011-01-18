@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.6 2010/12/07 19:54:10 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.7 2011/01/18 18:09:00 idl0r Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -66,7 +66,7 @@ pkg_setup() {
 	vdr-plugin_pkg_setup
 
 	if use xine; then
-		XINE_PLUGIN_DIR=$(xine-config --plugindir)
+		XINE_PLUGIN_DIR=$(pkg-config --variable=plugindir libxine)
 		[ -z "${XINE_PLUGIN_DIR}" ] && die "Could not find xine plugin dir"
 	fi
 }

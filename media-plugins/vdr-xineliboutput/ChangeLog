@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.60 2010/12/15 17:09:04 idl0r Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.61 2011/01/18 18:09:00 idl0r Exp $
+
+  18 Jan 2011; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-9999.ebuild:
+  Replace deprecated xine-config command by pkg-config.
 
   15 Dec 2010; Christian Ruppert <idl0r@gentoo.org>
   files/vdr-xineliboutput-9999-build-system.patch:
