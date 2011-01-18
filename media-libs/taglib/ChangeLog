@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.95 2011/01/17 01:06:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.96 2011/01/18 21:43:30 ranger Exp $
+
+  18 Jan 2011; Brent Baude <ranger@gentoo.org> taglib-1.6.3.ebuild:
+  Marking taglib-1.6.3 ppc64 for bug 346471
 
   17 Jan 2011; Brent Baude <ranger@gentoo.org> taglib-1.6.3.ebuild:
   stable ppc, bug 346471
