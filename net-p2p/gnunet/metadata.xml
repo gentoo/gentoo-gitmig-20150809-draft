@@ -4,13 +4,13 @@
   <herd>net-p2p</herd>
   <longdescription>GNUnet is a framework for secure peer-to-peer networking that does not use any centralized or otherwise trusted services</longdescription>
   <use>
-    <flag name="c-ares">enable asynchronous dns support through c-ares library</flag>
-    <flag name="esmtp">enable SMTP support</flag>
+    <flag name="ares">enable asynchronous dns support through <pkg>net-dns/c-ares</pkg> library</flag>
+    <flag name="smtp">enable SMTP support using <pkg>net-libs/libesmtp</pkg></flag>
     <flag name="microhttpd">enable embedded http server support</flag>
     <flag name="setup">enable setup wizard</flag>
-    <flag name="dialog">enable ncurses dialog setup wizard</flag>
+    <flag name="ncurses">enable ncurses setup wizard using <pkg>dev-util/dialog</pkg></flag>
     <flag name="gtk">enable gtk setup wizard</flag>
-    <flag name="qt">enable qt setup wizard</flag>
+    <flag name="qt4">enable qt4 setup wizard</flag>
     <flag name="sqlite">enable sqlite database backend</flag>
     <flag name="mysql">enable mysql database backend</flag>
   </use>

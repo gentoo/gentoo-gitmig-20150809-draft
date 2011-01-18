@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r1.ebuild,v 1.1 2011/01/14 00:52:11 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r2.ebuild,v 1.1 2011/01/18 23:58:04 sochotnicky Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.gz"
 #tests don't work
 RESTRICT="test"
 
-IUSE="nls +sqlite mysql c-ares adns +setup dialog gtk qt esmtp microhttpd"
+IUSE="nls +sqlite mysql ares adns +setup ncurses gtk qt4 smtp microhttpd"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,14 +28,14 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	mysql? ( >=virtual/mysql-4.0 )
 	!sqlite? ( !mysql? ( >=dev-db/sqlite-3.0.8 ) )
 	setup? ( >=dev-scheme/guile-1.8.0
-	  dialog? ( dev-util/dialog )
+	  ncurses? ( dev-util/dialog )
 	  gtk? ( >=x11-libs/gtk+-2.6.10
 			 gnome-base/libglade )
-	  qt? ( x11-libs/qt-gui )
+	  qt4? ( x11-libs/qt-gui )
 	)
 	adns? ( net-libs/adns )
-	c-ares? ( net-dns/c-ares )
-	esmtp? ( net-libs/libesmtp )
+	ares? ( net-dns/c-ares )
+	smtp? ( net-libs/libesmtp )
 	!ppc? ( !ppc64? ( !sparc? ( microhttpd? ( net-libs/libmicrohttpd ) ) ) )
 	nls? ( sys-devel/gettext )"
 
@@ -47,9 +47,9 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	if ! use setup && ( use dialog || use gtk || use qt ); then
+	if ! use setup && ( use ncurses || use gtk || use qt4 ); then
 		ewarn
-		ewarn "You chose NOT to install setup utility. Ignoring setup frontends (dialog, gtk, qt)."
+		ewarn "You chose NOT to install setup utility. Ignoring setup frontends (ncurses, gtk, qt4)."
 		ewarn
 	fi
 
@@ -74,6 +74,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PV}-asneeded.patch
 	epatch "${FILESDIR}"/${PV}-parallel-build.patch
+	epatch "${FILESDIR}"/${PV}-Fix-buffer-overflow.patch
 	eautoreconf
 }
 
@@ -90,17 +91,17 @@ src_configure() {
 		fi
 	fi
 
-	# doesn't work for --with-qt so use_with is unusable
-	use qt || myconf="${myconf} --without-qt"
+	# doesn't work for --with-qt4 so use_with is unusable
+	use qt4 || myconf="${myconf} --without-qt"
+	use mysql || myconf="${myconf} --without-mysql"
 
 	econf \
 		$(use_enable nls) \
-		$(use_with mysql) \
 		$(use_with gtk x) \
-		$(use_with dialog) \
+		$(use_with ncurses dialog) \
 		$(use_with adns) \
-		$(use_with c-ares) \
-		$(use_with esmtp) \
+		$(use_with ares c-ares) \
+		$(use_with smtp esmtp) \
 		$(use_with microhttpd) \
 		$(use_with setup guile) \
 		${myconf} || die "econf failed"
