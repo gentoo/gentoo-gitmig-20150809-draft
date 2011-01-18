@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.447 2011/01/11 18:53:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.448 2011/01/18 01:42:19 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -57,7 +57,7 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 
-tc_version_is_at_least() { version_is_at_least "$1" "${2:-${GCC_PV}}" ; }
+tc_version_is_at_least() { version_is_at_least "$1" "${2:-${GCC_RELEASE_VER}}" ; }
 
 
 GCC_PV=${TOOLCHAIN_GCC_PV:-${PV}}
