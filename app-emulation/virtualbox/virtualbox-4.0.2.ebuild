@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.5 2011/01/18 19:31:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.2.ebuild,v 1.1 2011/01/18 19:31:13 polynomial-c Exp $
 
 EAPI=2
 
@@ -144,7 +144,7 @@ src_prepare() {
 		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
-	epatch "${FILESDIR}/${PN}-4.0.0-restore_old_machines_dir.patch"
+	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
 
 	# add correct java path
 	if use java ; then
@@ -289,6 +289,9 @@ src_install() {
 	if ! use headless && use qt4 ; then
 		doins -r nls
 	fi
+
+	# VRDPAuth only works with this (bug #351949)
+	dosym VBoxAuth.so  /usr/$(get_libdir)/${PN}/VRDPAuth.so
 
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/usr/$(get_libdir)/${PN}" > "${T}/90virtualbox"

@@ -1,22 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.10-r1.ebuild,v 1.3 2011/01/07 15:13:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.2.ebuild,v 1.1 2011/01/18 19:30:28 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-66896
-SDK_PV=${PV}-66523
+MY_PV=${PV}-69518
+SDK_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
+EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )"
+	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )
+	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${MY_PV}.vbox-extpack -> ${EXTP_PN}-${MY_PV}.tar.gz"
 
-LICENSE="PUEL"
+LICENSE="GPL-2 PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
@@ -158,6 +160,11 @@ src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
 	unpack ./VirtualBox.tar.bz2
 
+	mkdir "${S}"/${EXTP_PN} || die
+	pushd "${S}"/${EXTP_PN} &>/dev/null || die
+	unpack ${EXTP_PN}-${MY_PV}.tar.gz
+	popd &>/dev/null || die
+
 	if use sdk; then
 		unpack VirtualBoxSDK-${SDK_PV}.zip
 	fi
@@ -172,6 +179,13 @@ src_install() {
 		newicon VBox.png ${PN}.png
 		newmenu "${FILESDIR}"/${PN}.desktop-2 ${PN}.desktop
 	fi
+
+	pushd "${S}"/${EXTP_PN} &>/dev/null || die
+	insinto /opt/VirtualBox/ExtensionPacks/${EXTP_PN}
+	doins -r linux.${ARCH}
+	doins ExtPack* PXE-Intel.rom
+	popd &>/dev/null || die
+	rm -rf "${S}"/${EXTP_PN}
 
 	insinto /opt/VirtualBox
 	dodir /opt/bin
@@ -199,6 +213,7 @@ src_install() {
 		doins rdesktop-vrdp || die
 		doins -r rdesktop-vrdp-keymaps || die
 		fperms 0750 /opt/VirtualBox/rdesktop-vrdp
+		dosym /opt/VirtualBox/rdesktop-vrdp /opt/bin/rdesktop-vrdp
 	fi
 
 	if ! use headless && use chm; then
@@ -237,13 +252,14 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxXPCOM.so /opt/VirtualBox/components/VBoxXPCOM.so
 
 	local each
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,TestOGL}; do
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,TestOGL,ExtPackHelperApp}; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
 	done
-	# VBoxNetAdpCtl binary needs to be suid root in any case..
+	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /opt/VirtualBox/VBoxNetAdpCtl
+	fperms 4750 /opt/VirtualBox/VBoxNetDHCP
 
 	if ! use headless ; then
 		# Hardened build: Mark selected binaries set-user-ID-on-execution
@@ -260,10 +276,6 @@ src_install() {
 		fowners root:vboxusers /opt/VirtualBox/VBoxHeadless
 		fperms 4510 /opt/VirtualBox/VBoxHeadless
 		pax-mark -m "${D}"/opt/VirtualBox/VBoxHeadless
-	fi
-
-	if use rdesktop-vrdp; then
-		dosym /opt/VirtualBox/rdesktop-vrdp /opt/bin/rdesktop-vrdp
 	fi
 
 	exeinto /opt/VirtualBox
