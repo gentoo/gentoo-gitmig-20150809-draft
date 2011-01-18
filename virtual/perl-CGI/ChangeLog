@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.87 2011/01/15 17:55:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.88 2011/01/18 09:59:49 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  perl-CGI-3.510.ebuild:
+  stable x86, security bug 351699
 
   15 Jan 2011; Markos Chandras <hwoarang@gentoo.org> perl-CGI-3.510.ebuild:
   Stable on amd64 wrt bug #351699
