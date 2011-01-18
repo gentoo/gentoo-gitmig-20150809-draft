@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/fasta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.4 2011/01/18 14:43:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.5 2011/01/18 16:48:17 jlec Exp $
+
+  18 Jan 2011; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild:
+  Warn for incompatible CFLAGS with USE=icc, #351758
 
   18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> fasta-35.4.10.ebuild:
   Stable on amd64 wrt bug #351758

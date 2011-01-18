@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.5 2011/01/18 14:43:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.6 2011/01/18 16:48:17 jlec Exp $
 
 EAPI="2"
 
@@ -19,6 +19,16 @@ DEPEND="
 	icc? ( dev-lang/icc )
 	test? ( app-shells/tcsh )"
 RDEPEND=""
+
+pkg_setup() {
+	if use icc; then
+		elog "Please make your CFLAGS are supported by icc"
+		elog "Either make sure they are set in /etc/make.conf"
+		elog "or run"
+		elog "env CFLAGS="..." emerge fasta"
+		epause 5
+	fi
+}
 
 src_prepare() {
 	CC_ALT=
