@@ -1,11 +1,12 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.26 2011/01/18 13:24:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.27 2011/01/18 13:27:58 ulm Exp $
 
 *pms-4_p20110118 (18 Jan 2011)
 
-  18 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +pms-4_p20110118.ebuild:
-  Version bump, following re-approval of EAPI 4.
+  18 Jan 2011; Ulrich Mueller <ulm@gentoo.org> -pms-4.ebuild,
+  pms-4_p20110118.ebuild:
+  Version bump, following re-approval of EAPI 4. Remove old.
 
 *pms-4 (30 Dec 2010)
 
