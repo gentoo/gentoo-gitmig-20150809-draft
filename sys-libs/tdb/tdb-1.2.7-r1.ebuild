@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.7.ebuild,v 1.3 2011/01/18 16:00:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.7-r1.ebuild,v 1.3 2011/01/18 21:16:58 vostorga Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
 
-inherit autotools python
+inherit autotools python eutils flag-o-matic
 
 DESCRIPTION="Samba tdb"
 HOMEPAGE="http://tdb.samba.org/"
-SRC_URI="http://samba.org/ftp/tdb/${P}.tar.gz"
+SRC_URI="http://samba.org/ftp/tdb/${P}.tar.gz
+		mirror://gentoo/${P}-patches.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -38,6 +39,10 @@ src_prepare() {
 	sed -i \
 		-e 's|$(XSLTPROC) -o|$(XSLTPROC) --nonet -o|' \
 		tdb.mk || die "sed failed"
+
+	#Fixing missing public symbols
+	epatch "${WORKDIR}"/${P}-public-in-c-file.patch
+	append-flags '-D_PUBLIC_='
 }
 
 src_configure() {
