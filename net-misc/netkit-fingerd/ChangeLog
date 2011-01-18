@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-fingerd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.19 2010/10/18 07:24:17 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/ChangeLog,v 1.20 2011/01/18 20:10:56 vapier Exp $
+
+  18 Jan 2011; Mike Frysinger <vapier@gentoo.org>
+  netkit-fingerd-0.17-r3.ebuild:
+  Punt IUSE=xinetd since we don't check it #351853 by Dean Matzkov. Update
+  to EAPI=2 in the process.
 
   18 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   netkit-fingerd-0.17-r3.ebuild:
