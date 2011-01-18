@@ -3,16 +3,12 @@
 <pkgmetadata>
 	<herd>media-tv</herd>
 	<maintainer>
-		<email>vdr@gentoo.org</email>
-		<name>Gentoo VDR Project</name>
-	</maintainer>
-	<maintainer>
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
 	</maintainer>
     <longdescription>
 		Video Disk Recorder Xinelib PlugIn ( VDR )
-	</longdescription>		
+	</longdescription>
 	<use>
 		<flag name="libextractor">Use <pkg>media-libs/libextract</pkg> to gather
 			files' metadata in media-player</flag>
