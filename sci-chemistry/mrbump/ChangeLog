@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mrbump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.4 2011/01/16 12:18:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.5 2011/01/18 17:21:15 jlec Exp $
+
+  18 Jan 2011; Justin Lecher <jlec@gentoo.org> mrbump-0.4.4.ebuild:
+  Rearranged build layout
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> mrbump-0.4.4.ebuild:
   marked ~ppc wrt #303931
