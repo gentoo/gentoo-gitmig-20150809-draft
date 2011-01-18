@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.1 2010/11/20 07:33:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.2 2011/01/18 16:45:55 xarthisius Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="doc examples gev cm static-libs"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-   doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/${MYP}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/hepmc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.19 2010/11/20 07:33:16 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.20 2011/01/18 16:45:55 xarthisius Exp $
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -hepmc-2.06.01.ebuild,
+  hepmc-2.06.03.ebuild:
+  Drop old. Whitespace.
 
 *hepmc-2.06.03 (20 Nov 2010)
 
