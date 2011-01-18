@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/daemontools-encore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.1 2011/01/05 12:32:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.2 2011/01/18 19:31:39 bangert Exp $
+
+*daemontools-encore-1.04 (18 Jan 2011)
+
+  18 Jan 2011; Thilo Bangert <bangert@gentoo.org>
+  +daemontools-encore-1.04.ebuild:
+  version bump (#351901)
 
 *daemontools-encore-1.02 (05 Jan 2011)
 
