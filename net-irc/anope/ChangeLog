@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/anope
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.17 2010/10/10 18:07:36 gurligebis Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.18 2011/01/18 21:34:37 gurligebis Exp $
+
+  18 Jan 2011; <gurligebis@gentoo.org> files/ldflags-fix.patch:
+  Fixing patch to work with portage-multilib, fixing bug #351414
 
 *anope-1.8.5 (10 Oct 2010)
 

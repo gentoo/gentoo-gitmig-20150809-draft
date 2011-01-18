@@ -6,7 +6,7 @@ diff -aurp a/src/core/Makefile b/src/core/Makefile
  
  .o.s:
 -	$(CC) ${SHARED} ../mod_version.o $< -o $*.so ${PROFILE}
-+	$(CC) ${LDFLAGS} ${SHARED} ../mod_version.o $< -o $*.so ${PROFILE}
++	$(CC) $(CFLAGS) $(LDFLAGS) ${SHARED} ../mod_version.o $< -o $*.so ${PROFILE}
  	@$(TOUCH) $*.s
  
  subs:
@@ -18,7 +18,7 @@ diff -aurp a/src/modules/Makefile b/src/modules/Makefile
  
  .o.s:
 -	$(CC) ${SHARED} ../mod_version.o $< -o $*.so  ${PROFILE}
-+	$(CC) ${LDFLAGS} ${SHARED} ../mod_version.o $< -o $*.so  ${PROFILE}
++	$(CC) $(CFLAGS) $(LDFLAGS) ${SHARED} ../mod_version.o $< -o $*.so  ${PROFILE}
  	@$(TOUCH) $*.s
  
  subs:
@@ -30,7 +30,7 @@ diff -aurp a/src/protocol/Makefile b/src/protocol/Makefile
  
  .o.s:
 -	$(CC) ${SHARED} ../mod_version.o  $< -o $*.so ${PROFILE}
-+	$(CC) ${LDFLAGS} ${SHARED} ../mod_version.o  $< -o $*.so ${PROFILE}
++	$(CC) $(CFLAGS) $(LDFLAGS) ${SHARED} ../mod_version.o  $< -o $*.so ${PROFILE}
  	@$(TOUCH) $*.s
  
  subs:
