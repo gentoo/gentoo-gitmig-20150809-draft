@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.5.0.ebuild,v 1.1 2010/12/05 15:27:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.5.0-r1.ebuild,v 1.1 2011/01/18 21:31:18 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -90,6 +90,10 @@ pkg_setup() {
 		enewgroup ${UGID}
 		enewuser ${UGID} -1 -1 -1 ${UGID}
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/strongswan-4.5.0-dhcp_segfault.patch"
 }
 
 src_configure() {
