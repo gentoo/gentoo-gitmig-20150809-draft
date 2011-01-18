@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.22 2010/10/08 00:18:34 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.23 2011/01/18 18:56:39 grobian Exp $
+
+  18 Jan 2011; Fabian Groffen <grobian@gentoo.org>
+  aspell-de-0.60_pre20030222.ebuild:
+  Marked ~ppc-macos, bug #351946
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-de-0.50.2.ebuild:
   Drop to ~mips
