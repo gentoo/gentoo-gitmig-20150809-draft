@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/keepalived
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.65 2010/09/11 14:21:31 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.66 2011/01/18 12:47:24 scarabeus Exp $
+
+*keepalived-1.2.2 (18 Jan 2011)
+
+  18 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -keepalived-1.1.19.ebuild,
+  -files/keepalived-1.1.19-do-not-need-kernel-sources.patch,
+  -files/keepalived-1.1.19-gcc44-fixup.patch, +keepalived-1.2.2.ebuild:
+  Version bump. Drop older.
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop useles maintainer line
