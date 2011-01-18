@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12360 2011/01/18 15:12:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12361 2011/01/18 17:37:30 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -219,10 +219,6 @@ virtual/rubygems
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-3.0 versions are used for chromium-10.x versions.
 >=dev-lang/v8-3.0
-
-# Christian Faulhammer <fauli@gentoo.org> (15 Dec 2010)
-# Build failures because of FORTIFY_SOURCE, see bug #348559
-=dev-lang/erlang-14.2.1
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Dec 2010)
 # Discontinued by upstream and won't be part of Xfce 4.8

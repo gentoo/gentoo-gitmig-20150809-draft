@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4942 2011/01/18 15:12:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4943 2011/01/18 17:37:30 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  Unmask dev-lang/erlang 14.2.1, all issues resolved
 
   18 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-avolctl masked for removel on 18 Feb 2011
