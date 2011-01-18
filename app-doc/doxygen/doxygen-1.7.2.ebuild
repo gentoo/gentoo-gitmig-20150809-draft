@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.2.ebuild,v 1.10 2011/01/15 12:30:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.2.ebuild,v 1.11 2011/01/18 06:10:02 nerdboy Exp $
 
 EAPI=3
 
@@ -81,6 +81,7 @@ src_configure() {
 
 	local my_conf=""
 	use debug && my_conf="--debug"
+	use ppc64 && my_conf="${my_conf} --english-only" #263641
 
 	export CC="${QMAKE_CC}"
 	export CXX="${QMAKE_CXX}"
