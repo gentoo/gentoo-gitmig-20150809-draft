@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33-r2.ebuild,v 1.1 2010/08/29 21:21:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33-r2.ebuild,v 1.2 2011/01/18 14:54:30 fauli Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-patches-${PV}-r1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="samba"
 
 # FIXME: samba support is automatic
