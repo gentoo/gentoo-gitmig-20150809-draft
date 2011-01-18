@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.8 2010/07/08 12:38:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.9 2011/01/18 12:55:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -30,7 +30,17 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
-PYTHON_MODNAME="qctlib"
+pkg_setup() {
+	python_pkg_setup
+
+	PYTHON_MODNAME="qctlib"
+	if use bazaar; then
+		PYTHON_MODNAME+=" bzrlib/plugins/qctBzrPlugin.py"
+	fi
+	if use mercurial; then
+		PYTHON_MODNAME+=" hgext/qct.py"
+	fi
+}
 
 src_prepare() {
 	distutils_src_prepare
@@ -57,13 +67,19 @@ src_install() {
 	dohtml doc/qct.1.html || die
 
 	if use bazaar; then
-		insinto "$(python_get_sitedir)/bzrlib/plugins" || die
-		doins plugins/qctBzrPlugin.py || die
+		install_bazaar_plugins() {
+			insinto "$(python_get_sitedir)/bzrlib/plugins" || return 1
+			doins plugins/qctBzrPlugin.py || return 1
+		}
+		python_execute_function -q install_bazaar_plugins
 	fi
 
 	if use mercurial; then
-		insinto "$(python_get_sitedir)/hgext" || die
-		doins hgext/qct.py || die
+		install_mercurial_extension() {
+			insinto "$(python_get_sitedir)/hgext" || return 1
+			doins hgext/qct.py || return 1
+		}
+		python_execute_function -q install_mercurial_extension
 		insinto /etc/mercurial/hgrc.d || die
 		doins "${FILESDIR}/qct.rc" || die
 	fi
