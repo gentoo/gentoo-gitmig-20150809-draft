@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-science
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.33 2010/10/24 18:11:54 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.34 2011/01/18 20:05:23 grobian Exp $
+
+  18 Jan 2011; Fabian Groffen <grobian@gentoo.org> texlive-science-2010.ebuild:
+  Marked ~ppc-macos, bug #351946
 
 *texlive-science-2010 (24 Oct 2010)
 
