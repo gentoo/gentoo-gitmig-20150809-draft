@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.2 2011/01/14 20:23:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.3 2011/01/18 20:38:29 jlec Exp $
 
 EAPI=3
 
@@ -143,7 +143,7 @@ pkg_postinst() {
 	echo
 	ewarn "PLEASE PLEASE take note of this"
 	ewarn "Please make *sure* to run revdep-rebuild now"
-	ewarn "You must recompile everithing that depend on fltk"
+	ewarn "You must recompile everything that depend on fltk!"
 	echo
 }
 
