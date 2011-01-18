@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/currvita
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.26 2010/10/25 01:04:23 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.27 2011/01/18 19:25:43 grobian Exp $
+
+  18 Jan 2011; Fabian Groffen <grobian@gentoo.org> currvita-0.9i-r1.ebuild:
+  Marked ~ppc-macos, bug #351946
 
   25 Oct 2010; Alexis Ballier <aballier@gentoo.org> -currvita-0.9i.ebuild:
   remove old
