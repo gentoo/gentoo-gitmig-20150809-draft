@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.10.ebuild,v 1.2 2010/12/31 11:11:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.2.ebuild,v 1.1 2011/01/18 19:37:52 polynomial-c Exp $
+
+EAPI=2
 
 inherit eutils linux-mod
 
-MY_P=VirtualBox-${PV}-OSE
+MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox kernel modules and user-space tools for Linux guests"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
@@ -41,7 +43,7 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxguest(misc:${WORKDIR}/vboxguest:${WORKDIR}/vboxguest)
 			vboxsf(misc:${WORKDIR}/vboxsf:${WORKDIR}/vboxsf)"
 
-S=${WORKDIR}/${MY_P/-OSE/_OSE}
+S="${WORKDIR}/${MY_P}_OSE"
 
 pkg_setup() {
 		linux-mod_pkg_setup
@@ -51,30 +53,34 @@ pkg_setup() {
 }
 
 src_unpack() {
-		unpack ${A}
+	unpack ${A}
 
-		# Create and unpack a tarball with the sources of the Linux guest
-		# kernel modules, to include all the needed files
-		"${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
-		unpack ./vbox-kmod.tar.gz
+	# Create and unpack a tarball with the sources of the Linux guest
+	# kernel modules, to include all the needed files
+	"${S}"/src/VBox/Additions/linux/export_modules "${WORKDIR}/vbox-kmod.tar.gz"
+	unpack ./vbox-kmod.tar.gz
 
-		# PaX fixes (see bug #298988)
-		epatch "${FILESDIR}"/vboxguest-log-use-c99.patch
+	# Remove shipped binaries (kBuild,yasm), see bug #232775
+	cd "${S}"
+	rm -rf kBuild/bin tools
+}
 
-		# Remove shipped binaries (kBuild,yasm), see bug #232775
-		cd "${S}"
-		rm -rf kBuild/bin tools
+src_prepare() {
+	# PaX fixes (see bug #298988)
+	pushd "${WORKDIR}" &>/dev/null || die
+	epatch "${FILESDIR}"/vboxguest-log-use-c99.patch
+	popd &>/dev/null || die
 
-		# Disable things unused or splitted into separate ebuilds
-		cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+	# Disable things unused or splitted into separate ebuilds
+	cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
 
-		# stupid new header references...
-		for vboxheader in {product,revision}-generated.h ; do
-			for mdir in vbox{guest,sf} ; do
-				ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
-					"${WORKDIR}/${mdir}/${vboxheader}"
-			done
+	# stupid new header references...
+	for vboxheader in {product,revision}-generated.h ; do
+		for mdir in vbox{guest,sf} ; do
+			ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
+				"${WORKDIR}/${mdir}/${vboxheader}"
 		done
+	done
 }
 
 src_compile() {
