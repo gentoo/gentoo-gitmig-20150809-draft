@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.196 2011/01/06 18:47:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.197 2011/01/18 14:16:04 xarthisius Exp $
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Unmask x11-base/xorg-server doc since #323647 is resolved
 
   06 Jan 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove stale virtual/j2ee, no ebuild provides it.
