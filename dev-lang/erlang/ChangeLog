@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.206 2011/01/12 09:42:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.207 2011/01/18 15:44:20 fauli Exp $
+
+  18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  files/erlang-14.2.1-fortify.patch:
+  Update fix for FORTIFY_SOURCE failure on 64bit as taken from upstream
 
   12 Jan 2011; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   Dropping maintainership and handing over to djc
