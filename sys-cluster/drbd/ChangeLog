@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/drbd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.104 2010/08/25 17:00:58 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.105 2011/01/18 18:55:33 xarthisius Exp $
+
+*drbd-8.3.8.1-r1 (18 Jan 2011)
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> +drbd-8.3.8.1-r1.ebuild,
+  +files/drbd-8.3.8.1-implicits.patch:
+  Install /etc/drbd.conf wrt #351638 by Marcin Mirosław <bug@mejor.pl>, fix
+  implicits
 
   25 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -drbd-0.7.24-r1.ebuild, -drbd-0.7.25.ebuild, -files/drbd-0.7.rc,
