@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.15 2010/03/28 21:19:48 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.16 2011/01/18 15:09:27 fordfrog Exp $
+
+  18 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  Fixed einfo about renaming app commands, bug #335061
 
   28 Mar 2010; Vlastimil Babka <caster@gentoo.org> -pdfbox-0.7.3-r1.ebuild,
   pdfbox-0.7.3-r2.ebuild:

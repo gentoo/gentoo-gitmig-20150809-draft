@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.6 2010/03/28 21:19:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.7 2011/01/18 15:09:27 fordfrog Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -56,7 +56,7 @@ EANT_BUILD_TARGET="package"
 
 my_launcher() {
 	java-pkg_dolauncher ${1} --main org.pdfbox.${2}
-	echo "${1} -> ${2}" >> "${T}"/launcher.list
+	echo "${2} -> ${1}" >> "${T}"/launcher.list
 }
 
 src_install() {
