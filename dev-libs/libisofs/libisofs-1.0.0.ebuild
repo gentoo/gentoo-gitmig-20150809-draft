@@ -1,10 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.40.ebuild,v 1.1 2010/12/14 19:09:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-1.0.0.ebuild,v 1.1 2011/01/18 20:02:30 billie Exp $
 
 EAPI=2
-
-inherit autotools eutils
 
 DESCRIPTION="libisofs is an open-source library for reading, mastering and writing optical discs."
 HOMEPAGE="http://libburnia-project.org/"
@@ -20,11 +18,6 @@ RDEPEND="acl? ( virtual/acl )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-cflags.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf --disable-dependency-tracking \

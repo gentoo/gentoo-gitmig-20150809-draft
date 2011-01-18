@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libburn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.87 2010/12/14 19:06:19 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.88 2011/01/18 19:59:34 billie Exp $
+
+*libburn-1.0.0 (18 Jan 2011)
+
+  18 Jan 2011; Daniel Pielmeier <billie@gentoo.org> -libburn-0.9.0.ebuild,
+  -files/libburn-0.9.0-cflags.patch, +libburn-1.0.0.ebuild:
+  Version bump. Remove old.
 
 *libburn-0.9.0 (14 Dec 2010)
 

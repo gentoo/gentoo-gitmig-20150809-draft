@@ -1,10 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.6.6.ebuild,v 1.1 2010/12/14 19:12:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.0.0.ebuild,v 1.1 2011/01/18 20:04:55 billie Exp $
 
 EAPI=2
-
-inherit autotools eutils
 
 MY_PL=00
 [[ ${PV/_p} != ${PV} ]] && MY_PL=${PV#*_p}
@@ -32,11 +30,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P%_p*}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-cflags.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf --disable-dependency-tracking \
