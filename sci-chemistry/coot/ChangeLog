@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.30 2011/01/12 08:19:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.31 2011/01/18 18:34:15 jlec Exp $
+
+  18 Jan 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.1.ebuild:
+  Fix for tests, #333845
 
   12 Jan 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.1.ebuild:
   Added missing DEPEND on bc
