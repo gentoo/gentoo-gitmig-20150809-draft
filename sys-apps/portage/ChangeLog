@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.791 2011/01/18 02:03:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.792 2011/01/19 20:51:53 zmedico Exp $
+
+*portage-2.2.0_alpha18 (19 Jan 2011)
+
+  19 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha18.ebuild:
+  2.2.0_alpha18 version bump. This includes all of the fixes in
+  portage-2.1.9.34. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.34 (19 Jan 2011)
+
+  19 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.34.ebuild:
+  2.1.9.34 version bump. This fixes bug #315603 (restrict default
+  archive-dir permissions), bug #349070 (document/initialize FFLAGS and
+  FCFLAGS), bug #351505 ($A undefined for pkg_nofetch), and bug #351828
+  (regression in || dep handling when installed package is masked).
+  Bug #349307 tracks all bugs fixed since 2.1.9.25.
+
+  19 Jan 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.24.ebuild,
+  -portage-2.1.9.31.ebuild, -portage-2.2.0_alpha15.ebuild:
+  Remove old versions.
 
 *portage-2.2.0_alpha17 (18 Jan 2011)
 
