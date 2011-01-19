@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/parrot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.39 2011/01/16 13:15:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.40 2011/01/19 12:59:31 patrick Exp $
+
+*parrot-3.0.0 (19 Jan 2011)
+
+  19 Jan 2011; Patrick Lauer <patrick@gentoo.org> +parrot-3.0.0.ebuild:
+  Bump to 3.0, still pcre troubles
 
 *parrot-2.11.0 (16 Jan 2011)
 
