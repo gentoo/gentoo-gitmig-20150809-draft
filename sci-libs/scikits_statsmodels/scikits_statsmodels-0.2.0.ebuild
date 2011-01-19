@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.2.0.ebuild,v 1.2 2011/01/08 19:36:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.2.0.ebuild,v 1.3 2011/01/19 16:59:10 bicatali Exp $
 
 EAPI="2"
 
@@ -25,7 +25,8 @@ RDEPEND="sci-libs/scipy
 	sci-libs/scikits"
 DEPEND="dev-python/numpy
 	dev-python/setuptools
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx )
+	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -48,7 +49,14 @@ src_compile() {
 
 src_test() {
 	testing() {
-		PYTHONPATH="$(dir -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+		"$(PYTHON)" setup.py \
+			build -b "build-${PYTHON_ABI}" \
+			install --home="${S}/test-${PYTHON_ABI}"
+		pushd "${S}/test-${PYTHON_ABI}/lib" > /dev/null
+		PYTHONPATH=. "$(PYTHON)" -c "import scikits.statsmodels; scikits.statsmodels.test()" 2>&1 | tee test.log
+		grep -Eq '^(ERROR|FAIL):' test.log && return 1
+		popd > /dev/null
+		rm -fr test-${PYTHON_ABI}
 	}
 	python_execute_function testing
 }
