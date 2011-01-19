@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.9 2011/01/14 21:44:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.10 2011/01/19 22:06:06 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=dev-libs/libical-0.43
 	berkdb? ( >=sys-libs/db-4 )
 	libnotify? ( x11-libs/libnotify )
-	dbus? ( dev-libs/dbus-glib )"
+	dbus? ( >=dev-libs/dbus-glib-0.88 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"

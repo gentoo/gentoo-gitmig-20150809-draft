@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.0.ebuild,v 1.1 2011/01/13 14:52:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.0.ebuild,v 1.2 2011/01/19 22:06:06 ssuominen Exp $
 
 EAPI=3
 inherit flag-o-matic xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/libical-0.43
 	dev-libs/popt
 	>=x11-libs/gtk+-2.10:2
 	berkdb? ( >=sys-libs/db-4 )
-	dbus? ( >=dev-libs/dbus-glib-0.34 )
+	dbus? ( >=dev-libs/dbus-glib-0.88 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	xfce_plugins_clock? ( >=xfce-base/xfce4-panel-4.6 )"
 DEPEND="${RDEPEND}
