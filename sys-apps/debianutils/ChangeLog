@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.150 2010/11/15 19:50:15 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.151 2011/01/19 15:20:03 jer Exp $
+
+*debianutils-3.4.3 (19 Jan 2011)
+
+  19 Jan 2011; Jeroen Roovers <jer@gentoo.org> +debianutils-3.4.3.ebuild:
+  Version bump.
 
   15 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   files/debianutils-3.4.2-no-bs-namespace.patch:
