@@ -1,6 +1,6 @@
-# ChangeLog for x11-terms/pssh
+# ChangeLog for net-misc/pssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.1 2011/01/19 04:46:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.2 2011/01/19 08:00:13 xarthisius Exp $
 
   12 Jun 2010; Justin Bronder <jsbronder@gentoo.org> -pssh-1.4.3.ebuild:
   Remove older versions
