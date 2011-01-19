@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/google-gadgets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.34 2010/11/08 04:29:18 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.35 2011/01/19 12:09:51 voyageur Exp $
+
+  19 Jan 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -google-gadgets-0.10.5.ebuild, -google-gadgets-0.11.1-r1.ebuild,
+  -files/google-gadgets-0.11.1-xulrunner-1.9.2.patch,
+  google-gadgets-0.11.2.ebuild:
+  Do not allow xulrunner 2.0, thanks Logarithmenlord@googlemail.com in bug
+  #351659. Drop old versions
 
   07 Nov 2010; Jeroen Roovers <jer@gentoo.org> google-gadgets-0.10.5.ebuild,
   google-gadgets-0.11.1-r1.ebuild, google-gadgets-0.11.2.ebuild:
