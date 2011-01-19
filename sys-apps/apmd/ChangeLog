@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.42 2011/01/13 22:35:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.43 2011/01/19 05:55:04 xarthisius Exp $
+
+  19 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> apmd-3.2.2_p14.ebuild:
+  ppc64 stable wrt #338993
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> apmd-3.2.2_p14.ebuild:
   stable ppc, bug 338993
