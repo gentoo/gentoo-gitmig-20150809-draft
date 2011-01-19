@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.1 2010/11/14 13:27:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.2 2011/01/19 21:55:21 zmedico Exp $
 
 EAPI=2
 inherit cmake-utils multilib
@@ -39,6 +39,14 @@ src_prepare() {
 	# - Expression: static_cast<int>(rgb.GetGreen() * 255.0) == 0x0A
 	sed -e 's:CPPUNIT_TEST( testHexNames );://CPPUNIT_TEST( testHexNames );:' \
 		-i test/unit/ColorTest.h || die
+
+	# Bug #352125: test failure, depending on installed fonts
+	# ##Failure Location unknown## : Error
+	# Test name: FontTest::testFonts
+	# uncaught exception of type PoDoFo::PdfError
+	# - ePdfError_UnsupportedFontFormat
+	sed -e 's:CPPUNIT_TEST( testFonts );://CPPUNIT_TEST( testFonts );:' \
+		-i test/unit/FontTest.h || die
 }
 
 src_configure() {

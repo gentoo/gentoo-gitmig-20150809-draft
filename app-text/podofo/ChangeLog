@@ -1,6 +1,10 @@
 # ChangeLog for app-text/podofo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.18 2010/11/14 13:27:08 zmedico Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.19 2011/01/19 21:55:21 zmedico Exp $
+
+  19 Jan 2011; Zac Medico <zmedico@gentoo.org> podofo-0.8.4.ebuild:
+  Bug #352125 - Disable FontTest::testFonts since it fails depending on
+  installed fonts.
 
 *podofo-0.8.4 (14 Nov 2010)
 
