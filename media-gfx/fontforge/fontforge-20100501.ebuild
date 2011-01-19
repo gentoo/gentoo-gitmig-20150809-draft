@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20100501.ebuild,v 1.8 2010/11/30 23:41:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20100501.ebuild,v 1.9 2011/01/19 19:45:50 spatz Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -31,7 +31,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-f
 IUSE="cjk cairo doc gif debug jpeg nls pasteafter png +python tiff tilepath truetype truetype-debugger pango type3 svg unicode +X"
 
 RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
-	jpeg? ( >=media-libs/jpeg-6b-r2 )
+	jpeg? ( virtual/jpeg )
 	png? ( >=media-libs/libpng-1.2.4 )
 	python? ( dev-lang/python )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
