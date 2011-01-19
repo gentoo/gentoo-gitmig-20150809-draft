@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.4 2010/02/08 21:11:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.5 2011/01/19 07:57:43 xarthisius Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="doc ipv6 kerberos"
 RDEPEND="
 	x11-libs/gtk+:2
 	kerberos? ( virtual/krb5 )
-	!x11-terms/pssh
+	!net-misc/pssh
 "
 DEPEND="${RDEPEND} dev-lang/perl"
 

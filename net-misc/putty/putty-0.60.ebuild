@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.9 2009/08/18 15:22:47 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.10 2011/01/19 07:57:43 xarthisius Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="doc gtk ipv6"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )
-	!x11-terms/pssh"
+	!net-misc/pssh"
 DEPEND="${RDEPEND} dev-lang/perl"
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/putty
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.48 2010/02/08 21:11:26 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.49 2011/01/19 07:57:43 xarthisius Exp $
+
+  19 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> putty-0.60.ebuild,
+  putty-0.60_p20100131.ebuild:
+  x11-misc/pssh moved to net-misc/
 
   08 Feb 2010; Jeroen Roovers <jer@gentoo.org> putty-0.60_p20100131.ebuild:
   Depend on virtual/krb5, not just mit-krb5 thanks to Martin Mokrejš (bug
