@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxdl_view
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxdl_view/ChangeLog,v 1.4 2011/01/16 10:51:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxdl_view/ChangeLog,v 1.5 2011/01/19 13:25:59 jlec Exp $
+
+  19 Jan 2011; Justin Lecher <jlec@gentoo.org> files/4.2-as-needed.patch,
+  files/4.2-impl-dec.patch:
+  Parallel compilation fix, 352119
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libxdl_view-4.2-r1.ebuild:
