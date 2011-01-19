@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>c1pher@gentoo.org</email>
+		<name>Dane Smith</name>
+	</maintainer>
+	<maintainer>
+		<email>ago@autistici.org</email>
+		<name>Agostino Sarubbo</name>
+		<description>Proxy-Maintainer. CC on bugs</description>
+	</maintainer>
+</pkgmetadata>
+
