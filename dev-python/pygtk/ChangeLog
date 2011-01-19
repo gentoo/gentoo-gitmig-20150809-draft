@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.243 2011/01/17 18:17:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.244 2011/01/19 14:36:14 pacho Exp $
+
+*pygtk-2.22.0 (19 Jan 2011)
+
+  19 Jan 2011; Pacho Ramos <pacho@gentoo.org> -pygtk-2.16.0-r1.ebuild,
+  -files/pygtk-2.16.0-gdkcolor-fix.patch, +pygtk-2.22.0.ebuild:
+  Version bump with lots of bugfixes and gtk+-2.22 compatible, skip broken test
+  (upstream bug #636589) and test wanting to write outside sandbox (bug
+  #245103). Remove old.
 
   17 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pygtk-2.16.0-r1.ebuild, pygtk-2.17.0.ebuild:

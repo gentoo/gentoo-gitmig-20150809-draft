@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.13 2011/01/17 18:17:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0.ebuild,v 1.1 2011/01/19 14:36:14 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
@@ -15,16 +15,16 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples"
 
-RDEPEND=">=dev-libs/glib-2.8.0
-	>=x11-libs/pango-1.16.0
-	>=dev-libs/atk-1.12.0
-	>=x11-libs/gtk+-2.13.6
-	>=gnome-base/libglade-2.5.0
+RDEPEND=">=dev-libs/glib-2.8
+	>=x11-libs/pango-1.16
+	>=dev-libs/atk-1.12
+	>=x11-libs/gtk+-2.18:2
+	>=gnome-base/libglade-2.5
 	>=dev-python/pycairo-1.0.2
-	>=dev-python/pygobject-2.16.1
+	>=dev-python/pygobject-2.21.3
 	dev-python/numpy"
 
 DEPEND="${RDEPEND}
@@ -37,8 +37,13 @@ src_prepare() {
 	# Fix declaration of codegen in .pc
 	epatch "${FILESDIR}/${PN}-2.13.0-fix-codegen-location.patch"
 
-	# Fix a crash in gdk.color_from_hsv
-	epatch "${FILESDIR}/${P}-gdkcolor-fix.patch"
+	# Broken test, upstream bug #636589
+	sed -i -e '/test_enum.py/d' tests/Makefile.am || die
+	rm -f tests/test_enum.py || die
+
+	# Wants to write outside sandbox, bug #245103
+	sed -i -e '/test_filechooserdialog.py/d' tests/Makefile.am || die
+	rm -f tests/test_filechooserdialog.py || die
 
 	# Disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
@@ -67,12 +72,12 @@ src_test() {
 src_install() {
 	python_src_install
 	python_clean_installation_image
-	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
+	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO || die
 
 	if use examples; then
 		rm examples/Makefile*
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die
 	fi
 }
 
