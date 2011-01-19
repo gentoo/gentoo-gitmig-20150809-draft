@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.31 2011/01/19 14:39:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.32 2011/01/19 19:43:27 arfrever Exp $
+
+  19 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -foolscap-0.4.2.ebuild, -foolscap-0.5.1.ebuild:
+  Delete.
 
   19 Jan 2011; Raúl Porcel <armin76@gentoo.org> foolscap-0.6.0.ebuild:
   s390 stable
