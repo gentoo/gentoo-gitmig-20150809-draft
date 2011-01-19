@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.30 2010/06/17 20:27:47 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.31 2011/01/19 20:41:45 spatz Exp $
+
+  19 Jan 2011; Dror Levin <spatz@gentoo.org> motion-3.2.11.1.ebuild:
+  Change dep to virtual/jpeg, bug 347977.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> motion-3.2.11.1.ebuild:
   Migrating away from deprecated postgres virtuals
