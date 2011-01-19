@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.189 2011/01/18 14:16:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.190 2011/01/19 09:20:27 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -69,7 +69,7 @@ dev-lang/ruby-enterprise fastthreading
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask clutter till introspection is unmasked
-gnome-extra/gnome-games clutter
+=gnome-extra/gnome-games-2.3* clutter
 
 # Kacper Kowalik <xarthisius@gentoo.org> (26 Jun 2010)
 # Mask infiniband until we've libibverbs and librdmacm with pc file

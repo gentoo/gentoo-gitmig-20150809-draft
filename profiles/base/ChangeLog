@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.197 2011/01/18 14:16:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.198 2011/01/19 09:20:27 nirbheek Exp $
+
+  19 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Restrict gnome-extra/gnome-games clutter use-flag masking to =2.3*
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Unmask x11-base/xorg-server doc since #323647 is resolved
