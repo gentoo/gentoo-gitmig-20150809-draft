@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.258 2011/01/18 15:00:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.259 2011/01/19 21:27:45 hwoarang Exp $
+
+  19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> epiphany-2.30.6.ebuild:
+  Stable on amd64 wrt bug #348987
 
   18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   epiphany-2.30.6.ebuild:
