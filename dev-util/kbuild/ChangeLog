@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kbuild
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.16 2010/06/22 18:40:19 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.17 2011/01/19 15:02:00 polynomial-c Exp $
+
+*kbuild-0.1.5_p2-r1 (19 Jan 2011)
+
+  19 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +kbuild-0.1.5_p2-r1.ebuild, +files/kbuild-0.1.5_p2-qa.patch:
+  Added patch to respect LDLFAGS. Thanks to Kacper Kowalik who provided a fix
+  in bug #332225.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   kbuild-0.1.5-r1.ebuild:
