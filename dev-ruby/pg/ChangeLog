@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.21 2011/01/02 15:42:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.22 2011/01/19 20:29:40 graaff Exp $
+
+*pg-0.10.1 (19 Jan 2011)
+
+  19 Jan 2011; Hans de Graaff <graaff@gentoo.org> +pg-0.10.1.ebuild:
+  Version bump.
 
 *pg-0.10.0 (02 Jan 2011)
 
