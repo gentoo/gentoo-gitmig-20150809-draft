@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.276 2010/08/16 19:43:13 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.277 2011/01/19 00:52:17 lack Exp $
+
+  19 Jan 2011; Jim Ramsay <lack@gentoo.org> fluxbox-9999.ebuild, metadata.xml:
+  Add USE flag for fribidi support to live ebuild
 
   16 Aug 2010; Jonathan Callen <abcd@gentoo.org> fluxbox-1.0.0.ebuild,
   +files/fluxbox-1.0.0-interix.patch,

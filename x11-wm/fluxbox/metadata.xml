@@ -20,5 +20,7 @@
 		<flag name='toolbar'>Enables the fluxbox toolbar</flag>
 		<flag name='newmousefocus'>Patches the focus model to the upcoming 1.1.2
 			model, which adds a new 'StrictMouseFocus' mode</flag>
+		<flag name='bidi'>Enable bidirectional language support with
+			<pkg>dev-libs/fribidi</pkg></flag>
 	</use>
 </pkgmetadata>
