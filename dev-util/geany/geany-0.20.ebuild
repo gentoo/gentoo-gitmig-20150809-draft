@@ -1,9 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.18.ebuild,v 1.4 2009/11/21 19:27:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.20.ebuild,v 1.1 2011/01/19 17:52:55 polynomial-c Exp $
 
 EAPI=2
-inherit gnome2-utils
+inherit eutils gnome2-utils
+
+LANGS="ast be bg ca cs de el en_GB es fi fr gl hu it ja kk ko lb nl pl pt pt_BR ro ru sl sv tr uk vi zh_CN ZH_TW"
+NOSHORTLANGS="en_GB zh_CN zh_TW"
 
 DESCRIPTION="GTK+ based fast and lightweight IDE"
 HOMEPAGE="http://geany.uvena.de"
@@ -11,7 +14,7 @@ SRC_URI="http://files.uvena.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
@@ -21,6 +24,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
+
+pkg_setup() {
+	strip-linguas ${LANGS}
+}
 
 src_prepare() {
 	# Syntax highlighting for Portage
