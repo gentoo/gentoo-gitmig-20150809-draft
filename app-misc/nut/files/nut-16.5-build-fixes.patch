@@ -21,3 +21,30 @@ index 1b8b705..dc2a08b 100644
  
  
  deps:
+diff --git a/fltk/Makefile b/fltk/Makefile
+index 6e5f9d7..29cf098 100644
+--- a/fltk/Makefile
++++ b/fltk/Makefile
+@@ -1,18 +1,17 @@
+ NUTDIR := \".nutdb\"
+ FOODDIR := \"/usr/local/lib/nut\"
+ EXECUTABLE := Nut
+-LIBS := `fltk-config --ldstaticflags`
++LIBS := `fltk-config --ldflags`
+ 
+-CFLAGS := `fltk-config --optim --cflags` -O3 -fno-inline -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -ansi -pedantic
+-
+-CXXFLAGS := $(CFLAGS)
++CXXFLAGS += `fltk-config --optim --cxxflags` -fno-inline -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -ansi -pedantic
++CFLAGS += `fltk-config --optim --cflags` -fno-inline -DNUTDIR=$(NUTDIR) -DFOODDIR=$(FOODDIR) -ansi -pedantic
+ 
+ SOURCE := $(wildcard *.c) $(wildcard *.cc)
+ OBJS := $(patsubst %.c,%.o,$(patsubst %.cc,%.o,$(SOURCE)))
+ CPPFLAGS := 
+ 
+ nut:	$(OBJS)
+-	$(CXX) -s -o $(EXECUTABLE) $(OBJS) $(LIBS)
++	$(CXX) $(LDFLAGS) -o $(EXECUTABLE) $(OBJS) $(LIBS)
+ 
+ 
+ deps:

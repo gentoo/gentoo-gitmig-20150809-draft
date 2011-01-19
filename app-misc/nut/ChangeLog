@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.14 2011/01/13 17:52:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.15 2011/01/19 12:48:54 jlec Exp $
+
+  14 Jan 2011; Justin Lecher <jlec@gentoo.org> nut-16.5.ebuild,
+  files/nut-16.5-build-fixes.patch, +files/nut-16.5-int.patch:
+  X support included
 
 *nut-16.5 (13 Jan 2011)
 
