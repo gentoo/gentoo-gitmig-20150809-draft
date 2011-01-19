@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.40.ebuild,v 1.4 2011/01/19 17:25:39 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.40.ebuild,v 1.5 2011/01/19 19:46:07 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -138,7 +138,7 @@ pkg_setup() {
 	#
 	einfo "Running some pre-flight checks..."
 	echo
-	
+
 	enewgroup asterisk
 	enewuser asterisk -1 -1 /var/lib/asterisk "asterisk,dialout"
 }
