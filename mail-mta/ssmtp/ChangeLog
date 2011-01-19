@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.105 2011/01/18 12:32:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.106 2011/01/19 13:49:42 flameeyes Exp $
+
+*ssmtp-2.64 (19 Jan 2011)
+
+  19 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ssmtp-2.61-bug127592.patch, +ssmtp-2.64.ebuild:
+  Version bump; move patches to tarball; simplify ebuild. The md5sum (misnamed)
+  and maxsysuid USE flags are gone (enabled by default); package builds with
+  parallel make; automake is not used (faster src_prepare); add optional
+  support for GnuTLS for those not wanting to use OpenSSL.
 
   18 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> -ssmtp-2.62-r6.ebuild,
   -ssmtp-2.62-r7.ebuild, -files/CVE-2008-3962.patch, -files/mailer.conf:
