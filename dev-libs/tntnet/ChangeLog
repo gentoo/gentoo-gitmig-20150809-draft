@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.12 2009/05/30 20:21:07 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.13 2011/01/19 15:50:49 hd_brummy Exp $
+
+  19 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> tntnet-1.6.3.ebuild:
+  eapi=2, stable x86 amd64
 
   30 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tntnet-1.6.3.ebuild, +files/tntnet-1.6.3-gnutls-2.8.patch:

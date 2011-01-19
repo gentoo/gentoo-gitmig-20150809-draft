@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.5 2009/05/30 20:21:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.6 2011/01/19 15:50:49 hd_brummy Exp $
+
+EAPI="2"
 
 inherit autotools eutils
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.tntnet.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="ssl gnutls examples"
 
 RDEPEND="dev-libs/cxxtools
@@ -23,17 +25,14 @@ DEPEND="${RDEPEND}
 	app-arch/zip
 	ssl? ( gnutls? ( dev-util/pkgconfig ) )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-gnutls-2.8.patch"
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 	if use ssl; then
 		if use gnutls; then
