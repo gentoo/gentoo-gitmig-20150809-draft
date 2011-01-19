@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12364 2011/01/19 18:40:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12365 2011/01/19 23:16:05 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (19 Jan 2011)
-# masked on bug #331417
-# will break media-plugins/vdr-live-0.2.0
-=dev-libs/cxxtools-2.0
-=dev-libs/tntnet-2.0
 
 # Dane Smith <c1pher@gentoo.org> (19 Jan 2011)
 # On behalf of the QA team
