@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.289 2010/11/03 05:42:11 polynomial-c Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.290 2011/01/19 17:27:12 polynomial-c Exp $
+
+*xchat-2.8.8-r1 (19 Jan 2011)
+
+  19 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> -xchat-2.8.8.ebuild,
+  +xchat-2.8.8-r1.ebuild:
+  Removed xft USE flag as its effect in xchat was different to the global
+  meaning of xft USE flag. Thanks to Nick Bowler for reporting this in bug
+  #284218.
 
   03 Nov 2010; Lars Wendler <polynomial-c@gentoo.org>
   -xchat-2.8.6-r1.ebuild, -xchat-2.8.6-r3.ebuild,
