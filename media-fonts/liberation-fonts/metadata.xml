@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>fonts</herd>
-<maintainer>
-<email>je_fro@gentoo.org</email>
-<name>Jeff Gardner</name>
-</maintainer>
-<use>
-	<flag name='fontforge'>Use <pkg>media-gfx/fontforge</pkg> to build fonts from source</flag>
-</use>
-<longdescription lang="en">
-</longdescription>
+	<herd>fonts</herd>
+	<use>
+		<flag name='fontforge'>Use <pkg>media-gfx/fontforge</pkg> to build fonts from source</flag>
+	</use>
+	<longdescription lang="en">
+	</longdescription>
 </pkgmetadata>
-
