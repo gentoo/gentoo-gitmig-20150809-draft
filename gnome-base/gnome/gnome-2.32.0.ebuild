@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.0.ebuild,v 1.3 2011/01/19 14:55:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.0.ebuild,v 1.4 2011/01/19 16:25:09 pacho Exp $
 
 EAPI="2"
 
@@ -136,7 +136,7 @@ RDEPEND="
 	>=app-admin/pessulus-2.30.3
 	ldap? (
 		>=app-admin/sabayon-2.30.1
-		>=net-voip/ekiga-3.2.7 )
+		>=net-voip/ekiga-2.0.12 )
 
 	>=gnome-extra/gnome-screensaver-2.30.2
 	>=x11-misc/alacarte-0.13.2
