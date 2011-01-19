@@ -1,20 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.ebuild,v 1.5 2010/01/03 20:13:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.ebuild,v 1.6 2011/01/19 16:46:20 hd_brummy Exp $
 
-inherit vdr-plugin versionator
+EAPI="2"
 
-MY_PV=$(get_version_component_range 4)
-MY_P="${PN}-${MY_PV}"
+inherit vdr-plugin
 
 DESCRIPTION="VDR Plugin: Web Access To Settings"
 HOMEPAGE="http://live.vdr-developer.org"
 SRC_URI="http://live.vdr-developer.org/downloads/${P}.tar.gz"
-#SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-video/vdr
@@ -22,17 +20,14 @@ DEPEND="media-video/vdr
 	>=dev-libs/cxxtools-1.4.3"
 RDEPEND="${DEPEND}"
 
-# depends that are not rdepend
 DEPEND="${DEPEND}
-	>=dev-libs/boost-1.33.0"
+	|| ( >=sys-devel/gcc-4.1 >=dev-libs/boost-1.33.0 )"
 
 S="${WORKDIR}/${VDRPLUGIN}-${PV}"
 
-src_unpack() {
-	vdr-plugin_src_unpack
-	cd "${S}"
+src_prepare() {
+	vdr-plugin_src_prepare
 
-	# make it work with /bin/sh as indicated in the file header
 	sed -e "18s/==/=/" -i  buildutil/version-util
 }
 
