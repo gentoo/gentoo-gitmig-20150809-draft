@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.4.37.ebuild,v 1.1 2010/12/01 17:54:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.4.39.1.ebuild,v 1.1 2011/01/19 13:55:24 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils flag-o-matic linux-info multilib
@@ -9,12 +9,16 @@ MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz"
+SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
+	 mirror://gentoo/gentoo-ast14-patchset-0.1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="alsa +caps dahdi debug doc freetds imap jabber keepsrc misdn newt +samples odbc oss postgres radius snmp speex ssl sqlite static vanilla vorbis"
+
+EPATCH_SUFFIX="patch"
+PATCHES=( "${WORKDIR}/ast14-patchset" )
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
@@ -47,14 +51,6 @@ PDEPEND="net-misc/asterisk-core-sounds
 	net-misc/asterisk-moh-opsound"
 
 S="${WORKDIR}/${MY_P}"
-
-PATCHES=(
-	"${FILESDIR}/1.4.0/${PN}-1.4.0-var_rundir.patch"
-	"${FILESDIR}/1.4.0/${PN}-1.4.33-gsm-pic.patch"
-	"${FILESDIR}/1.4.0/${PN}-1.4.0-uclibc.patch"
-	"${FILESDIR}/1.4.0/${PN}-1.4.33-inband-indications.patch"
-	"${FILESDIR}/1.4.0/${P}-imap-libs.patch"
-)
 
 pkg_setup() {
 	CONFIG_CHECK="~!NF_CONNTRACK_SIP"
