@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.168 2010/12/28 17:07:56 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.169 2011/01/19 12:59:18 scarabeus Exp $
+
+  19 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> digikam-1.6.0.ebuild,
+  digikam-1.7.0.ebuild:
+  Drop useless CMAKE_MIN_VERSION definition.
 
 *digikam-1.7.0 (28 Dec 2010)
 
