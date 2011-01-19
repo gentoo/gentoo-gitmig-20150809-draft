@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.26 2010/06/27 13:58:11 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.27 2011/01/19 21:22:55 spatz Exp $
+
+  19 Jan 2011; Dror Levin <spatz@gentoo.org> mpeg-tools-1.5b-r3.ebuild,
+  mpeg-tools-1.5b-r4.ebuild:
+  Change dep to virtual/jpeg.
 
   27 Jun 2010; <nixnut@gentoo.org> mpeg-tools-1.5b-r3.ebuild:
   ~ppc added

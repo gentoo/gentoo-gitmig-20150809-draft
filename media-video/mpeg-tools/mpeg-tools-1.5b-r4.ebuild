@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r4.ebuild,v 1.2 2010/03/11 13:55:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r4.ebuild,v 1.3 2011/01/19 21:22:55 spatz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
-	>=media-libs/jpeg-7"
+	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_PN}
