@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.2.1.ebuild,v 1.1 2011/01/19 12:52:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.2.1.ebuild,v 1.2 2011/01/19 17:25:39 c1pher Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -81,6 +81,9 @@ pkg_setup() {
 	have reported that this module dropped critical SIP packets in their deployments. You
 	may want to disable it if you see such problems."
 	check_extra_config
+
+	enewgroup asterisk
+	enewuser asterisk -1 -1 /var/lib/asterisk "asterisk,dialout"
 }
 
 src_prepare() {
@@ -379,11 +382,6 @@ src_install() {
 	#
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/1.6.2/asterisk.logrotate3" asterisk
-}
-
-pkg_preinst() {
-	enewgroup asterisk
-	enewuser asterisk -1 -1 /var/lib/asterisk "asterisk,dialout"
 }
 
 pkg_postinst() {

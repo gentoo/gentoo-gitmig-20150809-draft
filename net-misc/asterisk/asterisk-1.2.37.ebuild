@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.37.ebuild,v 1.7 2010/08/20 23:12:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.37.ebuild,v 1.8 2011/01/19 17:25:39 c1pher Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -139,6 +139,8 @@ pkg_setup() {
 	einfo "Running some pre-flight checks..."
 	echo
 
+	enewgroup asterisk
+	enewuser asterisk -1 -1 /var/lib/asterisk "asterisk,dialout"
 }
 
 src_prepare() {
@@ -311,11 +313,6 @@ src_install() {
 	# make sure the broken speex support does not keep Asterisk from starting up
 	# bug #206463 if you care about this. solution needs to work with --as-needed
 	rm -f "${D}"usr/$(get_libdir)/asterisk/modules/codec_speex.so || die "Unable to remove fatally flawed codec_speex.so"
-}
-
-pkg_preinst() {
-	enewgroup asterisk
-	enewuser asterisk -1 -1 /var/lib/asterisk "asterisk,dialout"
 }
 
 pkg_postinst() {

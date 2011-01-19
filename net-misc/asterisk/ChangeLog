@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.285 2011/01/19 13:55:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.286 2011/01/19 17:25:39 c1pher Exp $
+
+  19 Jan 2011; Dane Smith <c1pher@gentoo.org> asterisk-1.2.37.ebuild,
+  asterisk-1.2.40.ebuild, asterisk-1.4.39.1.ebuild,
+  asterisk-1.6.2.16.1.ebuild, asterisk-1.8.2.1.ebuild:
+  Move enew{user,group} to the appropriate place wtr bug 352139. Thanks
+  Agostino
+  for reporting.
 
 *asterisk-1.4.39.1 (19 Jan 2011)
 
