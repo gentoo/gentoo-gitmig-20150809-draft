@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.290 2011/01/19 17:27:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.291 2011/01/19 17:41:59 polynomial-c Exp $
+
+  19 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
+  metadata.xml:
+  Partially reverted my previous commit and simply renamed the xft USE flag to
+  fastscroll to better reflect its meaning.
 
 *xchat-2.8.8-r1 (19 Jan 2011)
 
