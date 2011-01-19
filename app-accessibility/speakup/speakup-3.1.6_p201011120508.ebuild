@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.4 2011/01/13 00:07:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.1.6_p201011120508.ebuild,v 1.5 2011/01/19 01:32:08 williamh Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ BUILD_TARGETS="clean all"
 
 src_prepare() {
 	use modules && cmd=die || cmd=ewarn
-	if kernel_is ne 2 6 36; then
+	if ! kernel_is 2 6 36; then
 		$cmd "This version of speakup requires kernel version 2.6.36"
 	fi
 }

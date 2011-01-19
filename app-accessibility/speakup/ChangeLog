@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.57 2011/01/13 00:07:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.58 2011/01/19 01:32:08 williamh Exp $
+
+  19 Jan 2011; William Hubbs <williamh@gentoo.org>
+  speakup-3.1.6_p201011120508.ebuild:
+  fix kernel_is call to work correctly
 
   13 Jan 2011; William Hubbs <williamh@gentoo.org>
   speakup-3.1.6_p201011120508.ebuild:
