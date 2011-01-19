@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bootchart
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.14 2010/04/27 13:10:55 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.15 2011/01/19 01:06:34 fordfrog Exp $
+
+  19 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> bootchart-0.9-r2.ebuild,
+  bootchart-0.9-r3.ebuild, bootchart-0.9-r4.ebuild:
+  Improved elog messages, bug #348847
 
 *bootchart-0.9-r4 (27 Apr 2010)
 

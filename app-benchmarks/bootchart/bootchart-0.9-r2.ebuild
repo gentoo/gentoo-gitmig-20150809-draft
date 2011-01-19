@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r2.ebuild,v 1.6 2010/04/27 13:10:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r2.ebuild,v 1.7 2011/01/19 01:06:34 fordfrog Exp $
 
 inherit multilib eutils java-pkg-opt-2 java-ant-2
 
@@ -109,13 +109,19 @@ pkg_postinst() {
 	if use java; then
 		elog "The chart will be saved as /var/log/bootchart.png"
 	else
-		elog "Post the file /var/log/bootchart.tgz here:"
-		elog "   http://www.bootchart.org/download.html"
-		elog "to render the chart"
+		elog "If you want to auto render chart of boot process, you"
+		elog "have to enable 'java' USE flag on bootchart. For details"
+		elog "see bootchart configuration file."
 	fi
 
 	elog
 	elog "For best results: "
+
+	if ! use acct ; then
+		elog "  Enable 'acct' USE flag on bootchart to enable "
+		elog "    process accounting support in bootchart"
+	fi
+
 	elog "  Enable BSD process accounting v3 in the kernel"
 	elog "    This will produce more accurate process trees"
 	elog "  Set AUTO_RENDER_FORMAT to svg in /etc/bootchartd.conf"
