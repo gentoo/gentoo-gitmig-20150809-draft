@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta69.ebuild,v 1.1 2011/01/19 21:54:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta69.ebuild,v 1.2 2011/01/19 22:07:20 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils games
@@ -29,11 +29,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}/${PN}
 
 src_configure() {
-	local mycmakeargs="
-		-Dbindir=${GAMES_BINDIR}
-		-Ddatadir=${GAMES_DATADIR}/${PN}
-		-Dlibdir=$(games_get_libdir)/${PN}
-		$(cmake-utils_use openal BUILDOPENAL)"
+	mycmakeargs=(
+		-Dbindir="${GAMES_BINDIR}"
+		-Ddatadir="${GAMES_DATADIR}"/${PN}
+		-Dlibdir="$(games_get_libdir)"/${PN}
+		$(cmake-utils_use openal BUILDOPENAL) )
 
 	cmake-utils_src_configure
 }
