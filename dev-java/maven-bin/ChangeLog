@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.66 2011/01/19 01:58:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.67 2011/01/19 02:00:25 fordfrog Exp $
+
+  19 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> maven-bin-1.1-r1.ebuild:
+  Marked version 1.1 back stable as it was just reslotted from slot 1.0 to slot
+  1.1
 
 *maven-bin-1.1-r1 (19 Jan 2011)
 
