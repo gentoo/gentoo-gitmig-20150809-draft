@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.283 2011/01/19 12:52:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.284 2011/01/19 13:19:44 chainsaw Exp $
+
+*asterisk-1.6.2.16.1 (19 Jan 2011)
+
+  19 Jan 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.14.ebuild,
+  +asterisk-1.6.2.16.1.ebuild:
+  Trim down 1.6.2 branch by culling vulnerable ebuild for security bug #352059.
+  Adding 1.6.2.16.1 which fixes a stack buffer overflow in SIP URI encoding.
+  Patchset unchanged.
 
 *asterisk-1.8.2.1 (19 Jan 2011)
 
