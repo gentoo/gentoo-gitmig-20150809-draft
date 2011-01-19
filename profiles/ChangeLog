@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4943 2011/01/18 17:37:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4944 2011/01/19 16:51:50 c1pher Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2011; Dane Smith <c1pher@gentoo.org> package.mask:
+  Mask net-analyzer/ipcad, net-dns/ez-ipupdate, app-cdr/pxlinux,
+  app-cdr/cdrdetect, app-emulation/basiliskII-jit for removal.
 
   18 Jan 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Unmask dev-lang/erlang 14.2.1, all issues resolved
