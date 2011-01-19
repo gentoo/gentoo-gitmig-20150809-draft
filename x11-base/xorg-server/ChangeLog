@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.557 2011/01/09 08:10:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.558 2011/01/19 21:38:48 remi Exp $
+
+  19 Jan 2011; Rémi Cardona <remi@gentoo.org> xorg-server-1.9.3.901.ebuild:
+  Remove useless eautoreconf (bug #351830)
 
 *xorg-server-1.9.3.901 (09 Jan 2011)
 
