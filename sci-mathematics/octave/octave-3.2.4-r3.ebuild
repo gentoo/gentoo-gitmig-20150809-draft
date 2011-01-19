@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.2 2010/11/01 17:19:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.3 2011/01/19 17:19:25 bicatali Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -60,6 +60,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.4-interp2.patch
 	epatch "${FILESDIR}"/${PN}-3.2.4-no-helvetica.patch
 	epatch "${FILESDIR}"/${PN}-3.2.4-normal-marker-size.patch
+	has_version ">=x11-libs/fltk-1.3_rc1" && \
+		epatch "${FILESDIR}"/${PN}-3.2.4-fltk-1.3.patch
 	eautoreconf
 }
 
