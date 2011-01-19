@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.244 2011/01/19 14:36:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.245 2011/01/19 20:12:48 eva Exp $
+
+  19 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> pygtk-2.17.0.ebuild,
+  pygtk-2.22.0.ebuild, +files/pygtk-2.22.0-disable-broken-tests.patch:
+  Be less brutal with tests suppression.
 
 *pygtk-2.22.0 (19 Jan 2011)
 

@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0.ebuild,v 1.1 2011/01/19 14:36:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0.ebuild,v 1.2 2011/01/19 20:12:48 eva Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.6"
+GCONF_DEBUG="no"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
@@ -18,13 +19,13 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples"
 
-RDEPEND=">=dev-libs/glib-2.8
+RDEPEND=">=dev-libs/glib-2.8:2
 	>=x11-libs/pango-1.16
 	>=dev-libs/atk-1.12
-	>=x11-libs/gtk+-2.18:2
+	>=x11-libs/gtk+-2.22:2
 	>=gnome-base/libglade-2.5
 	>=dev-python/pycairo-1.0.2
-	>=dev-python/pygobject-2.21.3
+	>=dev-python/pygobject-2.21.3:2
 	dev-python/numpy"
 
 DEPEND="${RDEPEND}
@@ -38,12 +39,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.13.0-fix-codegen-location.patch"
 
 	# Broken test, upstream bug #636589
-	sed -i -e '/test_enum.py/d' tests/Makefile.am || die
-	rm -f tests/test_enum.py || die
-
-	# Wants to write outside sandbox, bug #245103
-	sed -i -e '/test_filechooserdialog.py/d' tests/Makefile.am || die
-	rm -f tests/test_filechooserdialog.py || die
+	epatch "${FILESDIR}/${PN}-2.22.0-disable-broken-tests.patch"
 
 	# Disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
@@ -64,6 +60,7 @@ src_test() {
 
 	testing() {
 		cd tests
+		export XDG_CONFIG_HOME="${T}/$(PYTHON --ABI)"
 		Xemake check-local
 	}
 	python_execute_function -s testing

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.17.0.ebuild,v 1.10 2011/01/17 18:17:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.17.0.ebuild,v 1.11 2011/01/19 20:12:48 eva Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
@@ -56,6 +56,7 @@ src_test() {
 
 	testing() {
 		cd tests
+		export XDG_CONFIG_HOME="${T}/$(PYTHON --ABI)"
 		Xemake check-local
 	}
 	python_execute_function -s testing
