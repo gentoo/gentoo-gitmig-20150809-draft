@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.19 2010/11/19 17:42:29 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.20 2011/01/19 14:23:10 jlec Exp $
+
+  19 Jan 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4.20100510.ebuild:
+  Tests require X
 
 *tkimg-1.4 (19 Nov 2010)
 
