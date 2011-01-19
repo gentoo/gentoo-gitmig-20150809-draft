@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/linuxtv-dvb-firmware
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.29 2010/01/24 22:07:56 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.30 2011/01/19 21:48:51 hd_brummy Exp $
+
+  19 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> Manifest:
+  fixed dvb-ttpci-01.fw-fc2624 digest
 
   24 Jan 2010; Daniel Pielmeier <billie@gentoo.org> Manifest:
   Re-create Manifest.
