@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.18 2011/01/18 16:00:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.19 2011/01/19 19:52:41 jlec Exp $
+
+  19 Jan 2011; Justin Lecher <jlec@gentoo.org> +rasmol-2.7.2.1.1-r1.ebuild:
+  Reverted removal of rasmol-2.7.2.1.1-r1.ebuild
 
   18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> rasmol-2.7.5-r1.ebuild:
   Stable on amd64 wrt bug #351984
