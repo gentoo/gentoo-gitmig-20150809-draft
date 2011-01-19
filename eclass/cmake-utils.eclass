@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.63 2011/01/13 19:17:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.64 2011/01/19 12:44:55 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -30,8 +30,8 @@ WANT_CMAKE="${WANT_CMAKE:-always}"
 
 # @ECLASS-VARIABLE: CMAKE_MIN_VERSION
 # @DESCRIPTION:
-# Specify the minimum required CMake version.  Default is 2.6.2-r1
-CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.6.2-r1}"
+# Specify the minimum required CMake version.  Default is 2.8.1
+CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.8.1}"
 
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
@@ -268,7 +268,7 @@ _modify-cmakelists() {
 enable_cmake-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	_check_build_dir init
+	_check_build_dir
 
 	# check if CMakeLists.txt exist and if no then die
 	if [[ ! -e ${CMAKE_USE_DIR}/CMakeLists.txt ]] ; then
