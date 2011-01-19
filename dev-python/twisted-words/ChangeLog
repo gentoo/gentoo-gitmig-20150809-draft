@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.57 2011/01/12 14:16:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.58 2011/01/19 20:48:07 arfrever Exp $
+
+*twisted-words-10.2.0-r1 (19 Jan 2011)
+
+  19 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -twisted-words-10.2.0.ebuild, +twisted-words-10.2.0-r1.ebuild,
+  +files/twisted-words-10.2.0-twisted.words.protocols.jabber.jstrports.parse.patch:
+  Fix regression in twisted.words.protocols.jabber.jstrports.parse() (bug #351468).
+  Straight to stable on architectures, on which 10.2.0 was stable.
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   twisted-words-10.2.0.ebuild:
