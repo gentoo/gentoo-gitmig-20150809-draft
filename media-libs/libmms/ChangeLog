@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.43 2010/09/10 12:35:28 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.44 2011/01/19 19:04:00 radhermit Exp $
+
+*libmms-0.6.2 (19 Jan 2011)
+
+  19 Jan 2011; Tim Harder <radhermit@gentoo.org> +libmms-0.6.2.ebuild:
+  Version bump.
 
   10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> libmms-0.6.ebuild:
   USE="static-libs" and punt .la files.
