@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.104 2011/01/18 15:43:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.105 2011/01/19 21:30:00 hwoarang Exp $
+
+  19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> alacarte-0.13.2.ebuild:
+  Stable on amd64 wrt bug #348987
 
   18 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   alacarte-0.13.2.ebuild:
