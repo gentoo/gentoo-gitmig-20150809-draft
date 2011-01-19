@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.21 2010/12/29 12:51:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.22 2011/01/19 21:15:34 ulm Exp $
 
 EAPI=2
 
@@ -123,7 +123,7 @@ src_prepare() {
 			|| die "unable to sed configure.in"
 	fi
 
-	eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_configure() {

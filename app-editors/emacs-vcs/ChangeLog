@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.40 2011/01/19 18:04:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.41 2011/01/19 21:15:34 ulm Exp $
+
+  19 Jan 2011; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-24.0.9999.ebuild:
+  Call eautoreconf with AT_M4DIR=m4 in order to fix a failure in configure.
 
 *emacs-vcs-24.0.50_pre20110116 (19 Jan 2011)
 
