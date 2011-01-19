@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cxxtools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.7 2009/08/07 16:28:43 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.8 2011/01/19 14:22:52 hd_brummy Exp $
+
+  19 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  cxxtools-1.4.8.ebuild:
+  stable x86 amd64
 
   07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> cxxtools-1.4.8.ebuild,
   +files/cxxtools-1.4.8-gcc44.patch:
