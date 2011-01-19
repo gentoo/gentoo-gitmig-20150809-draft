@@ -1,0 +1,11 @@
+# ChangeLog for app-text/u2ps
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/u2ps/ChangeLog,v 1.1 2011/01/19 00:01:30 hwoarang Exp $
+
+*u2ps-0.8.1 (18 Jan 2011)
+
+  18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +u2ps-0.8.1.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Thanks to Jure Varlec <jure.varlec@gmail.com>.
+  Bug #335117
+
