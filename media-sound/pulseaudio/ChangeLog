@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.205 2011/01/09 17:50:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.206 2011/01/19 05:44:02 ford_prefect Exp $
+
+*pulseaudio-9999 (19 Jan 2011)
+
+  19 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> +pulseaudio-9999.ebuild,
+  metadata.xml:
+  Add a (masked) live ebuild.
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.22.ebuild:
   Add ~ia64/~sh/~sparc wrt #308971
