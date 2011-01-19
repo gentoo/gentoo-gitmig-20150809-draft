@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.4 2011/01/16 12:17:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.5 2011/01/19 10:32:49 jlec Exp $
 
 EAPI="3"
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	rm src/dps/peak_search/dps_peaksearch
 # See DEPEND
 #	sed -e "s:../cbf/lib/libcbf.a:${EPREFIX}/usr/$(get_libdir)/libcbf.a:g" \
 	sed -e "s:../jpg/libjpeg.a:-ljpeg:g" \
@@ -39,7 +38,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}/${PV}"-Makefile.patch \
-		"${FILESDIR}/${PV}"-parallel.patch
+		"${FILESDIR}/${PV}"-parallel.patch \
+		"${FILESDIR}/${PV}"-impl-dec.patch
 	rm test.f || die
 }
 

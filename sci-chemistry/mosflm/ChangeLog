@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.7 2011/01/16 12:17:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.8 2011/01/19 10:32:49 jlec Exp $
+
+  19 Jan 2011; Justin Lecher <jlec@gentoo.org> +files/7.0.6-impl-dec.patch,
+  mosflm-7.0.6-r2.ebuild:
+  Fix for implicit declarations
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mosflm-7.0.6-r2.ebuild:
