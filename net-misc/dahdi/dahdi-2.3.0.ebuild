@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.3.0.ebuild,v 1.1 2010/05/24 18:47:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.3.0.ebuild,v 1.2 2011/01/19 16:54:16 chainsaw Exp $
 
 EAPI=3
 
@@ -24,6 +24,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="test"
 
 DEPEND=""
 RDEPEND=""

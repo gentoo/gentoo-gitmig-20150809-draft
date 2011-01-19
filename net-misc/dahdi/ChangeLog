@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dahdi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.11 2010/12/03 14:25:45 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.12 2011/01/19 16:54:16 chainsaw Exp $
+
+  19 Jan 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.1.0.4.ebuild,
+  dahdi-2.2.0.2.ebuild, dahdi-2.2.1.1.ebuild, dahdi-2.3.0.ebuild,
+  dahdi-2.3.0.1.ebuild, dahdi-2.4.0.ebuild, dahdi-2.4.0-r1.ebuild:
+  The test-suite for this package is not appropriate for end-users to run (for
+  one it takes ages!) and it is not built by default. Add RESTRICT=test to keep
+  portage from trying to run it at all. Closes bug #352135 by Agostino "ago"
+  Sarubbo.
 
 *dahdi-2.4.0-r1 (03 Dec 2010)
 
