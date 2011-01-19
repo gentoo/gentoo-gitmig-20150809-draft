@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshproxy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.13 2010/02/07 20:04:04 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.14 2011/01/19 07:58:50 xarthisius Exp $
+
+  19 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  sshproxy-0.6.0_beta2-r1.ebuild:
+  x11-misc/pssh moved to net-misc/
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> -sshproxy-0.6.0_beta2.ebuild:
   Dropped old. It used epatch but failed to inherit eutils.

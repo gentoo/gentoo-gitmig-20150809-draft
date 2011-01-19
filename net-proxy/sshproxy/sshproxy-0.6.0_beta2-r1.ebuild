@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.2 2009/07/24 15:09:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.3 2011/01/19 07:58:50 xarthisius Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# avoid conflicts with net-misc/putty and x11-terms/pssh
+	# avoid conflicts with net-misc/putty and net-misc/pssh
 	# by renaming pscp and pssh scripts (#248193 and #278794)
 	epatch "${FILESDIR}"/${P}-rename-wrappers.patch
 	sed -i -e 's/pscp/spscp/g;s/pssh/spssh/g' doc/* && \
@@ -40,7 +40,7 @@ src_prepare() {
 		mv bin/pscp bin/spscp && \
 		mv doc/pscp.1 doc/spscp.1 && \
 		mv doc/pssh.1 doc/spssh.1 || die "failed to rename pscp or pssh files"
-	ewarn "For avoiding conflicts with net-misc/putty and x11-terms/pssh,"
+	ewarn "For avoiding conflicts with net-misc/putty and net-misc/pssh,"
 	ewarn "pscp and pssh scripts have been renamed as spscp respectively spssh."
 }
 
