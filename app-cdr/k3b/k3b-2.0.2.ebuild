@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2.ebuild,v 1.1 2011/01/16 20:33:26 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2.ebuild,v 1.2 2011/01/19 12:56:29 scarabeus Exp $
 
 EAPI=3
 
-CMAKE_MIN_VERSION=2.8.0
 MULTIMEDIA_REQUIRED=always
 WEBKIT_REQUIRED=always
 KMNAME="extragear/multimedia"
