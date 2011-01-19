@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r2.ebuild,v 1.1 2011/01/18 23:58:04 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r2.ebuild,v 1.2 2011/01/19 19:33:51 sochotnicky Exp $
 
 EAPI=2
 
@@ -18,17 +18,16 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=dev-libs/libgcrypt-1.2.0
+RDEPEND=">=dev-libs/libgcrypt-1.2.0
 	>=media-libs/libextractor-0.5.18a
 	>=dev-libs/gmp-4.0.0
 	net-misc/curl
 	sys-libs/zlib
-	sys-apps/sed
 	sqlite? ( >=dev-db/sqlite-3.0.8 )
 	mysql? ( >=virtual/mysql-4.0 )
 	!sqlite? ( !mysql? ( >=dev-db/sqlite-3.0.8 ) )
 	setup? ( >=dev-scheme/guile-1.8.0
-	  ncurses? ( dev-util/dialog )
+	  ncurses? ( >=dev-util/dialog-1.1.20080819-r1[-minimal] )
 	  gtk? ( >=x11-libs/gtk+-2.6.10
 			 gnome-base/libglade )
 	  qt4? ( x11-libs/qt-gui )
@@ -39,7 +38,9 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	!ppc? ( !ppc64? ( !sparc? ( microhttpd? ( net-libs/libmicrohttpd ) ) ) )
 	nls? ( sys-devel/gettext )"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+		sys-apps/sed
+		dev-util/pkgconfig"
 
 pkg_preinst() {
 	enewgroup gnunetd
