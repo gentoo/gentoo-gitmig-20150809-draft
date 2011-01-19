@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.5 2011/01/05 13:56:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.6 2011/01/19 20:58:08 spatz Exp $
+
+  19 Jan 2011; Dror Levin <spatz@gentoo.org> -libjpeg-turbo-1.0.1.ebuild,
+  libjpeg-turbo-1.0.90.1.ebuild:
+  Keyword ~amd64 and ~x86, drop old.
 
 *libjpeg-turbo-1.0.90.1 (05 Jan 2011)
 
