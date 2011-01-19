@@ -1,13 +1,23 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.286 2011/01/19 17:25:39 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.287 2011/01/19 23:03:41 chainsaw Exp $
+
+*asterisk-1.4.39.1-r1 (19 Jan 2011)
+
+  19 Jan 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.4.39.1.ebuild,
+  +asterisk-1.4.39.1-r1.ebuild:
+  Remove dodoc call for PDFs in tex, these do not longer exist as pointed out
+  by Agostino "ago" Sarubbo in bug #352136. Remove USE="keepsrc" as it is
+  defective. The 1.6.2 & 1.8 branch ebuilds no longer have it either. Closes
+  bug #352137 by Agostino "ago" Sarubbo. Remove misdn dependency as the
+  dependencies refuse to build for several arch testers. Revision bump, kill
+  off old ebuild.
 
   19 Jan 2011; Dane Smith <c1pher@gentoo.org> asterisk-1.2.37.ebuild,
   asterisk-1.2.40.ebuild, asterisk-1.4.39.1.ebuild,
   asterisk-1.6.2.16.1.ebuild, asterisk-1.8.2.1.ebuild:
   Move enew{user,group} to the appropriate place wtr bug 352139. Thanks
-  Agostino
-  for reporting.
+  Agostino for reporting.
 
 *asterisk-1.4.39.1 (19 Jan 2011)
 

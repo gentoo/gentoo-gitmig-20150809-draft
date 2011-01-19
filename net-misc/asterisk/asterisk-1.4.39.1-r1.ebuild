@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.4.39.1.ebuild,v 1.2 2011/01/19 17:25:39 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.4.39.1-r1.ebuild,v 1.1 2011/01/19 23:03:41 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils flag-o-matic linux-info multilib
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="alsa +caps dahdi debug doc freetds imap jabber keepsrc misdn newt +samples odbc oss postgres radius snmp speex ssl sqlite static vanilla vorbis"
+IUSE="alsa +caps dahdi debug doc freetds imap jabber newt +samples odbc oss postgres radius snmp speex ssl sqlite static vanilla vorbis"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/ast14-patchset" )
@@ -30,7 +30,6 @@ RDEPEND="sys-libs/ncurses
 	freetds? ( dev-db/freetds )
 	imap? ( >=net-libs/c-client-2007[ssl=] )
 	jabber? ( dev-libs/iksemel )
-	misdn? ( net-dialup/misdnuser )
 	newt? ( dev-libs/newt )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( dev-db/postgresql-base )
@@ -135,9 +134,6 @@ src_configure() {
 		$(use_with freetds tds) \
 		$(use_with imap imap system) \
 		$(use_with jabber iksemel) \
-		$(use_with misdn isdnnet) \
-		$(use_with misdn suppserv) \
-		$(use_with misdn) \
 		$(use_with newt) \
 		$(use_with odbc) \
 		$(use_with oss) \
@@ -200,23 +196,6 @@ src_install() {
 	newinitd "${FILESDIR}"/1.4.0/asterisk.initd asterisk
 	newconfd "${FILESDIR}"/1.4.0/asterisk.confd asterisk
 
-	# some people like to keep the sources around for custom patching
-	# copy the whole source tree to /usr/src/asterisk-${PVF} and run make clean there
-	if use keepsrc
-	then
-		dodir /usr/src
-
-		ebegin "Copying sources into /usr/src"
-		cp -dPR "${S}" "${D}"/usr/src/${PF} || die "Unable to copy sources"
-		eend $?
-
-		ebegin "Cleaning source tree"
-		emake -C "${D}"/usr/src/${PF} clean &>/dev/null || die "Unable to clean sources"
-		eend $?
-
-		einfo "Clean sources are available in "${ROOT}"usr/src/${PF}"
-	fi
-
 	# install the upgrade documentation
 	#
 	dodoc README UPGRADE* BUGS CREDITS
@@ -229,7 +208,6 @@ src_install() {
 		dodoc doc/*.pdf
 		dodoc doc/PEERING
 		dodoc doc/CODING-GUIDELINES
-		dodoc doc/tex/*.pdf
 	fi
 
 	# install snmp mib files
