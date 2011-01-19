@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.2 2011/01/19 17:41:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.3 2011/01/19 21:23:30 polynomial-c Exp $
 
 EAPI=2
 
@@ -15,10 +15,10 @@ HOMEPAGE="http://www.xchat.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="dbus fastscroll ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatnogtk xchatdccserver"
+IUSE="dbus fastscroll +gtk ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatdccserver"
 
 RDEPEND=">=dev-libs/glib-2.6.0
-	!xchatnogtk? ( >=x11-libs/gtk+-2.10.0 )
+	gtk? ( >=x11-libs/gtk+-2.10.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.8.0 )
 	python? ( >=dev-lang/python-2.2 )
@@ -75,7 +75,7 @@ src_configure() {
 		$(use_enable spell spell gtkspell) \
 		$(use_enable ssl openssl) \
 		$(use_enable tcl) \
-		$(use_enable !xchatnogtk gtkfe) \
+		$(use_enable gtk gtkfe) \
 		$(use_enable fastscroll xft)
 }
 

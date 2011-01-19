@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.291 2011/01/19 17:41:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.292 2011/01/19 21:23:30 polynomial-c Exp $
+
+  19 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild:
+  Renamed xchatnogtk USE flag to gtk. Thanks to Pablo Barros for bringing my
+  attention to this ancient USE flag in bug #352164.
 
   19 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
   metadata.xml:
