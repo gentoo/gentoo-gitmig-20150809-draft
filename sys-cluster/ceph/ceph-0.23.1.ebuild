@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.23.1.ebuild,v 1.1 2010/12/07 18:25:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.23.1.ebuild,v 1.2 2011/01/19 17:34:13 ultrabug Exp $
 
 EAPI="3"
 
@@ -36,6 +36,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--without-hadoop \
+		--without-tcmalloc \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_with debug) \
 		$(use_with fuse) \
