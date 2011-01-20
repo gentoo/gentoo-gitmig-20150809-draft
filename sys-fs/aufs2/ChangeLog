@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.30 2011/01/20 18:25:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.31 2011/01/20 18:27:56 jlec Exp $
 
 *aufs2-0_p20110120 (20 Jan 2011)
 
@@ -11,7 +11,7 @@
   files/aufs2-base-34.patch, files/aufs2-standalone-34.patch,
   +files/aufs2-base-37.patch, +files/aufs2-standalone-37.patch, metadata.xml:
   Version Bump, Addud support for fuse and hfs, always build readdir() into
-  libaufs
+  libaufs, fix H(I)NOTIFY bug, #348664
 
   01 Dec 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   files/aufs2-base-35.patch, files/aufs2-standalone-35.patch:
