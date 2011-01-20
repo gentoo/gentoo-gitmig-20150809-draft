@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-mailwatch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.30 2010/11/01 14:19:46 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.31 2011/01/20 04:40:17 flameeyes Exp $
+
+  20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -gkrellm-mailwatch-2.4.3.ebuild:
+  Remove obsolete version (masked).
 
   01 Nov 2010; Jim Ramsay <lack@gentoo.org>
   gkrellm-mailwatch-2.4.3-r1.ebuild,
