@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.40 2011/01/19 17:37:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.41 2011/01/20 14:11:17 fauli Exp $
+
+  20 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  ocaml-mode-3.11.2.ebuild:
+  stable x86, bug 272454
 
 *ocaml-mode-3.12.0 (19 Jan 2011)
 *ocaml-mode-3.11.2 (19 Jan 2011)
