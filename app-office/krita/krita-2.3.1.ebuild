@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.3.0.ebuild,v 1.1 2011/01/14 20:38:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.3.1.ebuild,v 1.1 2011/01/20 00:09:09 dilfridge Exp $
 
 EAPI=3
 
@@ -19,8 +19,10 @@ DEPEND="
 	>=dev-cpp/eigen-2.0.3:2
 	>=media-libs/qimageblitz-0.0.4
 	>=media-gfx/exiv2-0.16
+	sci-libs/fftw:3.0
+	sys-devel/gcc[openmp]
 	gmm? ( sci-mathematics/gmm )
-	kdcraw? ( >=kde-base/libkdcraw-${KDE_MINIMAL} )
+	kdcraw? ( $(add_kdebase_dep libkdcraw) )
 	opengl? ( media-libs/glew )
 	pdf? ( >=app-text/poppler-0.12.3-r3[qt4] )
 "
@@ -37,6 +39,7 @@ src_configure() {
 	mycmakeargs=(
 		-DWITH_Eigen2=ON
 		-DWITH_Exiv2=ON
+		-DWITH_FFTW3=ON
 		-DWITH_JPEG=ON
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with gmm)

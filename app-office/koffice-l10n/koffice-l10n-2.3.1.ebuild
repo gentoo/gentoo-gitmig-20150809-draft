@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.3.0.ebuild,v 1.1 2011/01/14 20:38:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.3.1.ebuild,v 1.1 2011/01/20 00:09:10 dilfridge Exp $
 
 EAPI=3
 
@@ -16,8 +16,8 @@ RDEPEND=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-MY_LANGS="ca ca@valencia da de el en_GB es et fr gl hu it ja kk nb nds nl pt pt_BR
-	ru sv tr uk zh_CN zh_TW"
+MY_LANGS="ca ca@valencia da de el en_GB es et fr gl hu it ja kk nb nds nl pl pt pt_BR
+	ru sv tr uk wa zh_CN zh_TW"
 URI_BASE="mirror://kde/stable/koffice-${PV}/${PN}/"
 SRC_URI=""
 SLOT="2"
