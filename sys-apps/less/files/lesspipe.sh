@@ -188,19 +188,13 @@ lesspipe() {
 
 	### Everything else ###
 	*)
-		# Sanity check
-		[[ ${recur} == 2 ]] && exit 0
+		case $(( recur++ )) in
+			# Maybe we didn't match due to case issues ...
+			0) lesspipe "$1" "$(echo $1 | LC_ALL=C tr '[:upper:]' '[:lower:]')" ;;
 
-		# Maybe we didn't match due to case issues ...
-		if [[ ${recur} == 0 ]] ; then
-			recur=1
-			lesspipe "$1" "$(echo $1 | LC_ALL=C tr '[:upper:]' '[:lower:]')"
-
-		# Maybe we didn't match because the file is named weird ...
-		else
-			recur=2
-			lesspipe_file "$1"
-		fi
+			# Maybe we didn't match because the file is named weird ...
+			1) lesspipe_file "$1" ;;
+		esac
 
 		# So no matches from above ... finally fall back to an external
 		# coloring package.  No matching here so we don't have to worry
@@ -235,7 +229,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.44 2011/01/18 20:26:13 vapier Exp $
+		$Id: lesspipe.sh,v 1.45 2011/01/20 03:26:14 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
