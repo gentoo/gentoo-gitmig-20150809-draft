@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.3.ebuild,v 1.3 2010/12/12 11:36:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.3.ebuild,v 1.4 2011/01/20 17:23:47 xarthisius Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -13,7 +13,7 @@ inherit autotools pax-utils java-pkg-2 java-vm-2 versionator
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DESCRIPTION="A harness to build the OpenJDK using Free Software build tools and dependencies"
 ICEDTEA_VER="$(get_version_component_range 2-4)"

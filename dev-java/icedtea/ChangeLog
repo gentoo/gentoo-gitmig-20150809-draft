@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.17 2010/12/12 11:36:16 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.18 2011/01/20 17:23:47 xarthisius Exp $
+
+  20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  icedtea-6.1.9.3.ebuild:
+  Mark ~ppc/~ppc64 wrt #308513. Thanks to Kris Hepler <khepler@gmail.com>
+  for testing.
 
   12 Dec 2010; Vlastimil Babka <caster@gentoo.org> +files/6.1.9.3-sparc.patch,
   icedtea-6.1.9.3.ebuild:
