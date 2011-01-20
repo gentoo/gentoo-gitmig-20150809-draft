@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.234 2011/01/20 15:18:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.235 2011/01/20 18:03:21 sping Exp $
+
+  20 Jan 2011; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.11.1.ebuild,
+  genkernel-9999.ebuild, genkernel-99999.ebuild:
+  Call "make" for live ebuilds only (bug #352250). Then asciidoc is not a build
+  time dependency as the man page is shipped with genkernel. Therefore I
+  reverted zmedico's previous commit.
 
   20 Jan 2011; Zac Medico <zmedico@gentoo.org> genkernel-3.4.11.1.ebuild:
   3.4.11.1 calls a2x now, so app-text/asciidoc dep needs to be unconditional.

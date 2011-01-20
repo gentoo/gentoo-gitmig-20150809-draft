@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.11.1.ebuild,v 1.2 2011/01/20 15:18:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.11.1.ebuild,v 1.3 2011/01/20 18:03:21 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -64,7 +64,9 @@ DEPEND="sys-fs/e2fsprogs
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND} app-arch/cpio"
 
-DEPEND="${DEPEND} app-text/asciidoc"
+if [[ ${PV} == 9999* ]]; then
+	DEPEND="${DEPEND} app-text/asciidoc"
+fi
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
@@ -73,6 +75,10 @@ src_unpack() {
 		unpack ${P}.tar.bz2
 	fi
 	use selinux && sed -i 's/###//g' "${S}"/gen_compile.sh
+}
+
+src_compile() {
+	[[ ${PV} == 9999* ]] && emake || die
 }
 
 src_install() {
