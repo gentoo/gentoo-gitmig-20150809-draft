@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/oxygen-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.3 2011/01/13 18:51:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.4 2011/01/20 01:20:38 reavertm Exp $
+
+*oxygen-gtk-1.0.1-r1 (20 Jan 2011)
+
+  20 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -oxygen-gtk-1.0.0.ebuild, -oxygen-gtk-1.0.1.ebuild,
+  +oxygen-gtk-1.0.1-r1.ebuild:
+  Remove old, add CONFIG_PROTECT to fix bug 351614, install some misc files,
+  sort dependencies, add debug and doc USE flags.
 
 *oxygen-gtk-1.0.1 (13 Jan 2011)
 
