@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.12 2011/01/18 20:44:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.13 2011/01/20 12:08:02 hwoarang Exp $
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> molrep-11.0.02.ebuild:
+  Stable on amd64 wrt bug #352056
 
   18 Jan 2011; Justin Lecher <jlec@gentoo.org> -molrep-10.2.38.ebuild,
   -molrep-11.0.00_p3.ebuild:
