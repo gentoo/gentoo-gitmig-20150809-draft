@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.13.6-r1.ebuild,v 1.5 2010/10/15 19:15:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.13.6-r1.ebuild,v 1.6 2011/01/20 18:25:16 xarthisius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND=""
