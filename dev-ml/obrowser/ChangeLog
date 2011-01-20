@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/obrowser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.1 2010/11/07 19:22:39 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.2 2011/01/20 23:39:13 aballier Exp $
+
+  20 Jan 2011; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.ebuild,
+  +files/obrowser-1.1-ocaml312.patch:
+  Fix pervasives conflict with ocaml 3.12
 
 *obrowser-1.1 (07 Nov 2010)
 
