@@ -6,3 +6,4 @@ slotmove dev-libs/libgweather 0 2
 slotmove =dev-java/maven-bin-1.1 1.0 1.1
 move x11-terms/pssh net-misc/pssh
 move x11-terms/clusterssh net-misc/clusterssh
+move kde-misc/kcm_tablet kde-misc/wacomtablet

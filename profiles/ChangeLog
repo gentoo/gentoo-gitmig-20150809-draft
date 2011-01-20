@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4948 2011/01/20 09:12:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4949 2011/01/20 20:34:48 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/1Q-2011:
+  package move: rename kcm_tablet to wacomtablet to reflect upstream name
+  change
 
   20 Jan 2011; Peter Volkov <pva@gentoo.org> package.mask:
   Unmask net-analyzer/ipcad as it is fixed, #335592.
