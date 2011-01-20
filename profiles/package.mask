@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12365 2011/01/19 23:16:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12366 2011/01/20 04:46:56 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -394,74 +394,6 @@ media-libs/amanith
 # Masked until reverse dependencies are sorted out (bug #342461)
 =dev-libs/libnl-2*
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2010)
-#  on behalf of QA team
-#
-# Ebuilds are in very sorry state; they all try to workaround
-# distcc/ccache which an ebuild should never do; they
-# are ready to call autogen.sh and not use the autotools
-# eclass; USE=debug tinkers with flags; don't call econf and
-# don't use elog. See bugs #213197; #255872 and #293931 at
-# least. Maintainer is unresponsive, the ebuilds should all
-# be rewritten at the very least.
-#
-# Removal on 2010-12-22
-media-libs/capseo
-media-libs/libcaptury
-media-video/captury
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (22 Oct 2010)
-#  on behalf of QA team
-#
-# Obsolete even by upstream standard, since version 0.1.2
-# is out since 2007 (and has a version bump request in bug
-# #223299 since May 2008); uses “obsolete” tail/head
-# syntax (bug #159606, the warning has since been removed
-# from coreutils); more importantly autotools are rebuilt by
-# a maintainer-mode-triggered check, but no dependency over
-# autotools, with or without the correct version is present
-# (bug #318487; automake 1.8 is nowadays not that common to
-# find installed).
-# Use sys-fs/ddrescue as replacement
-#
-# Removal on 2010-12-21
-sys-fs/dd-rhelp
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (22 Oct 2010)
-#  on behalf of QA team
-#
-# Fails to work properly, upstream doesn't seem to care. As
-# maintainer I'm going to remove this, and eventually package
-# something for mod_security to query it.
-#
-# Removal on 2010-11-21
-www-apache/mod_httpbl
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (18 Oct 2010)
-#  on behalf of QA team
-#
-# Another package that originally failed to work with Perl
-# 5.12 (bug #330087) and that shown itself as not working
-# right. Additionally, it currently bundles an enormous
-# amount of Perl modules (bug #335396).
-#
-# Removal on 2010-12-17
-net-analyzer/sara
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (18 Oct 2010)
-#  on behalf of QA team
-#
-# TCT has been retired upstream for a while, the site
-# pointing to sleuthkit as its successor. Within Gentoo
-# there hasn't been a committed maintainer since 2004 and the
-# latest bumps have been done blindly. Bug #336254 was opened
-# for a build failure with Perl 5.12, and reports a number
-# of other issues making the package useless. Furthermore,
-# it fails to respect LDFLAGS.
-#
-# Removal on 2010-12-17
-app-forensics/tct
-
 # Markos Chandras <hwoarang@gentoo.org> (17 Oct 2010)
 # Masking experimental releases
 =x11-libs/libfm-0.1.14
@@ -472,31 +404,6 @@ app-forensics/tct
 # see bug 341237
 >=dev-libs/rasqal-0.9.20
 >=dev-libs/redland-1.0.12
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (15 Oct 2010)
-#  on behalf of QA team
-#
-# gkrellm needs more maintainers, but these packages
-# in particular are gong to cause trouble, as they have
-# either obsolete gtk+ API calls (bug #340959, #340137,
-# #339910, #339908, #339907, #339905), or have been failing
-# for a while because of their dependencies (bug #338307)
-#
-# Further broken packages may be added in the future as
-# they are discovered, removal date will be the same for
-# all of them.
-#
-# Removal on 2010-12-14
-x11-plugins/gkrellm-timers
-x11-plugins/gkrellm-reminder
-x11-plugins/gkrellmitime
-x11-plugins/gkrellm-gkfreq
-x11-plugins/gkrellm-gamma
-x11-plugins/gkrellmbups
-x11-plugins/gkrellmms
-x11-plugins/gkrellmwho2
-<x11-plugins/gkrellm-bgchanger-0.1.10
-<x11-plugins/gkrellm-mailwatch-2.4.3-r1
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Oct 2010)
 # New Objective-C Runtime for GNUstep
@@ -517,75 +424,9 @@ gnustep-base/libobjc2
 kde-base/policykit-kde
 sys-auth/policykit-qt
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (04 Oct 2010)
-#  on behalf of QA team
-#
-# Ironically, it is misusing autotools (bug #255831). It was
-# added in 2004 and never version bumped since; autotools
-# have since evolved a fair amount, while this is based
-# still on automake 1.6. Avoid keeping it around.
-#
-# Removal on 2010-12-03
-dev-util/autotoolset
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (02 Oct 2010)
-#  on behalf of QA team
-#
-# Violate sandbox at least since July 2009 (bug #279090)
-# thus cannot install; ignores flags (bug #241090).
-#
-# Removal on 2010-12-01
-net-nntp/nntpswitch
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (01 Oct 2010)
-#  on behalf of QA team
-#
-# Upstream seems to be dead, and keeping importing it from
-# OpenSolaris unlikely; too many man pages installed by our
-# packages are not compatible with it.
-#
-# Removal on 2010-11-30
-app-doc/heirloom-doctools
-
 # Luca Barbato <lu_zero@gentoo.org> (01 Oct 2010)
 # beta version, has known issues
 =x11-drivers/ati-drivers-8.780*
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Sep 2010)
-#  on behalf of QA team
-#
-# Requires edonkey/overnet that are also masked; minor QA
-# annoyances (bug #295835; #333829) and doesn't properly
-# set depends.
-#
-# Removal on 2010-11-26
-net-p2p/ed2k-gtk-gui
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Sep 2010)
-#  on behalf of QA team
-#
-# Last bump in 2004; minor QA annoyances (bug #241028 and
-# #241310); website seems dead; LICENSE seems fishy (as-is,
-# but it's actually binary package); package is binary so
-# we have no way to assure safety for it at all.
-#
-# Removal on 2010-11-26
-net-p2p/edonkey
-net-p2p/overnet
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Sep 2010)
-#  on behalf of QA team
-#
-# Unmaintained; creates subdirectory in /usr/bin rather than
-# /usr/(lib|libexec) (bug #248160 open since November 2008),
-# contains binary x86 applications (but KEYWORDS are not
-# set -* — and for a while it was keyworded ~ppc without
-# good reason to be so); last ebuild bump (and release) in
-# 2004; last fix (without revbump) in 2007. Binaries make
-# the reported LICENSE (GPL-2) sound fishy.
-#
-# Removal on 2010-11-26
-app-benchmarks/xfbsuite
 
 # Rémi Cardona <remi@gentoo.org> (21 Sep 2010)
 # Dead upstream, ebuild does more work than its Makefiles,
@@ -617,75 +458,9 @@ x11-misc/lightdm
 =media-libs/libdvdread-4.1.3_p1217
 =media-video/dvdbackup-0.4.1
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (31 Aug 2010)
-#  on behalf of QA team
-#
-# Last update in 2004; does not respect LDFLAGS; hacky
-# ebuild; missing toolset to use it; basically abandoned
-# upstream.
-#
-# Removal on 2010-10-30
-sys-auth/pam_pwdfile
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2010)
-#  on behalf of QA team
-#
-# Initial import in 2005 and never bumped; no users in tree;
-# since revision 1.2 it has been installing the conf.d file
-# over the init.d (so it never really worked).
-#
-# Removal on 2010-10-29
-net-misc/omnievents
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2010)
-#  on behalf of QA team
-#
-# Package was added in 2004 and never bumped; the installed
-# "init script" is not compatible with Gentoo's init system.
-#
-# Removal on 2010-10-29
-net-mail/ixbiff
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2010)
-#  on behalf of QA team
-#
-# Last version bump in 2003; GNU coreutils has stat(1)
-# already; BusyBox has its own applet; *BSD have their own
-# stat command.
-#
-# Removal on 2010-10-29
-sys-apps/stat
-
 # Doug Goldstein <cardoe@gentoo.org> (28 Aug 2010)
 # Need to investigate build errors on some kernels
 =app-emulation/kvm-kmod-2.6.35
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (28 Aug 2010)
-#  on behalf of QA team
-#
-# Broken ebuild (dosed rather than sed during unpack); bug
-# #175327; maintainer needed; last revision bump in 2005,
-# last version bump in 2003; no user in tree.
-#
-# Removal on 2010-10-27
-sys-devel/omni
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Aug 2010)
-#  on behalf of QA team
-#
-# Bumped this year after seven years, but no users in the
-# tree, and the license status seems to be uncertain.
-#
-# Removal on 2010-10-26
-dev-libs/pcl
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (25 Aug 2010)
-#  on behalf of QA team
-#
-# Fails to build since July 2009 (bug #277554).
-#
-# Removal on 2010-10-24
-app-i18n/imhangul-status-applet
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # reasons for masking:
