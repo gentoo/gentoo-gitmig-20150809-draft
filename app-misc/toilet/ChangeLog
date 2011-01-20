@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/toilet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.18 2010/10/10 15:52:02 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.19 2011/01/20 18:20:31 xarthisius Exp $
+
+  20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> toilet-0.2.ebuild:
+  Mark ~ppc64
 
   10 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> toilet-0.2.ebuild:
   amd64 stable wrt #339723
