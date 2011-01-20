@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/outerspace-0.5.67-r1.ebuild,v 1.1 2010/12/20 03:41:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/outerspace-0.5.67-r1.ebuild,v 1.2 2011/01/20 13:33:13 hwoarang Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/ospace/Client/${PV}/Outer%20Space-${PV}.tar.gz -> 
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygame-1.7"
