@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.5 2011/01/18 05:19:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.6 2011/01/20 14:33:40 hwoarang Exp $
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pytest-2.0.0.ebuild:
+  Stable on amd64 wrt bug #351493
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> pytest-2.0.0.ebuild:
   ppc64 stable wrt #351493

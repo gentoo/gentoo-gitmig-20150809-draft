@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.71 2011/01/17 19:30:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.72 2011/01/20 14:33:16 hwoarang Exp $
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> py-1.4.0.ebuild:
+  Stable on amd64 wrt bug #351493
 
   17 Jan 2011; <xarth@gentoo.org> py-1.4.0.ebuild:
   ppc/ppc64 stable wrt #351493
