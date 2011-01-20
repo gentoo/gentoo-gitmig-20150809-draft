@@ -1,6 +1,11 @@
 # ChangeLog for app-text/odt2txt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.2 2010/11/28 14:33:02 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.3 2011/01/20 10:12:10 hwoarang Exp $
+
+*odt2txt-0.4-r1 (20 Jan 2011)
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +odt2txt-0.4-r1.ebuild:
+  Respect CC,CFLAGS. Bug #351794
 
   28 Nov 2010; Raúl Porcel <armin76@gentoo.org> odt2txt-0.4.ebuild:
   Add ~alpha/~ia64/~sparc wrt #296794
