@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.48 2011/01/20 04:14:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.49 2011/01/20 04:16:21 mattst88 Exp $
+
+  20 Jan 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
   20 Jan 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.6.ebuild:
   pam_mount-2.6 requires libhx-3.6, not 3.4; bug 347039.
