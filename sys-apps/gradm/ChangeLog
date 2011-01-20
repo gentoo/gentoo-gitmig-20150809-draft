@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.143 2011/01/02 22:50:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.144 2011/01/20 02:33:53 blueness Exp $
+
+  20 Jan 2011; Anthony G. Basile <blueness@gentoo.org>
+  -files/2.1.7.200511041858-non-lazy-bindings.patch,
+  -gradm-2.1.13.200902232204-r1.ebuild,
+  -files/gradm-2.1.13.200902232204-fix-segfault-in-newlearn.patch:
+  Deprecated
 
 *gradm-2.2.1.201012301333 (02 Jan 2011)
 
