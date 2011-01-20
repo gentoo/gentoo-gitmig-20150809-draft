@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.29 2011/01/20 04:08:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.30 2011/01/20 04:10:44 mattst88 Exp $
+
+  20 Jan 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
 *libhx-3.8 (20 Jan 2011)
 
