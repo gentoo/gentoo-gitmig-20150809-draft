@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1160.ebuild,v 1.1 2011/01/08 16:43:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1175.ebuild,v 1.1 2011/01/20 12:40:27 jer Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="test"
@@ -22,11 +22,12 @@ O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
 O_U="http://snapshot.opera.com/"
 O_P="${PN}-${O_V}-${O_B}"
-O_D="minor_${O_V}-${O_B}"
+O_D="tannen_${O_V}-${O_B}"
 
 SRC_URI="
 	amd64? ( ${O_U}unix/${O_D}/${O_P}.x86_64.linux.tar.xz )
 	x86? ( ${O_U}unix/${O_D}/${O_P}.i386.linux.tar.xz )
+	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
 
 OPREFIX="/usr/$(get_libdir)"
