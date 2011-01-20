@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64.ebuild,v 1.1 2011/01/19 13:49:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64.ebuild,v 1.2 2011/01/20 01:07:27 flameeyes Exp $
 
 EAPI="3"
 
-PATCHES=1
+PATCHES=2
 
 WANT_AUTOMAKE=none
 
