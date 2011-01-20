@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.36 2011/01/20 15:54:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.37 2011/01/20 19:59:19 aballier Exp $
+
+*pcre-ocaml-6.2.2 (20 Jan 2011)
+
+  20 Jan 2011; Alexis Ballier <aballier@gentoo.org> +pcre-ocaml-6.2.2.ebuild:
+  version bump
 
   20 Jan 2011; Alexis Ballier <aballier@gentoo.org> -pcre-ocaml-6.0.1.ebuild,
   -pcre-ocaml-6.1.0.ebuild:
