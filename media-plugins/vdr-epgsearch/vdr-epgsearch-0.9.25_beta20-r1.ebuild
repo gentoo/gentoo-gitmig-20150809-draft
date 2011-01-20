@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.25_beta20.ebuild,v 1.1 2011/01/18 16:29:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.25_beta20-r1.ebuild,v 1.1 2011/01/20 15:20:20 hd_brummy Exp $
 
 EAPI="2"
 
@@ -30,10 +30,20 @@ DEPEND=">=media-video/vdr-1.3.45
 	tre? ( dev-libs/tre )"
 RDEPEND="${DEPEND}"
 
+check_menu_flags() {
+	if use pcre && use tre; then
+		echo
+		eerror "Please use only one of this USE-Flags"
+		eerror "\tpcre tre"
+		die "multiple use-flag manipulation"
+	fi
+}
+
 src_prepare() {
+	check_menu_flags
+
 	vdr-plugin_src_prepare
 
-	cd "${S}"
 	fix_vdr_libsi_include conflictcheck.c
 
 	# disable automagic deps
@@ -41,12 +51,12 @@ src_prepare() {
 
 	if use pcre; then
 		einfo "Using pcre for regexp searches"
-		sed -i Makefile -e 's/^#HAVE_PCREPOSIX/HAVE_PCREPOSIX/'
+		sed -i Makefile -e 's:^#REGEXLIB = pcre:REGEXLIB = pcre:'
 	fi
 
 	if use tre; then
 		einfo "Using tre for unlimited fuzzy searches"
-		sed -i Makefile -e 's/^#HAVE_LIBTRE/HAVE_LIBTRE/'
+		sed -i Makefile -e 's:^#REGEXLIB = pcre:REGEXLIB = tre:'
 	fi
 
 	# install conf-file disabled

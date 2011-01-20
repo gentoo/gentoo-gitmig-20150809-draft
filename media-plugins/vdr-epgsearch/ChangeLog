@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.48 2011/01/18 16:29:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.49 2011/01/20 15:20:20 hd_brummy Exp $
+
+*vdr-epgsearch-0.9.25_beta20-r1 (20 Jan 2011)
+
+  20 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-epgsearch-0.9.25_beta20.ebuild,
+  +vdr-epgsearch-0.9.25_beta20-r1.ebuild:
+  fixed use-flag manipulation for Makefile
 
 *vdr-epgsearch-0.9.25_beta20 (18 Jan 2011)
 
