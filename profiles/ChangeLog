@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4949 2011/01/20 20:34:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4950 2011/01/20 22:56:43 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> license_groups:
+  Add intel-ucode to BINARY_REDISTRIBUTABLE licenses.
 
   20 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/1Q-2011:
   package move: rename kcm_tablet to wacomtablet to reflect upstream name
