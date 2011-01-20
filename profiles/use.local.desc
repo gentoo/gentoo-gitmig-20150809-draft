@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6289 2011/01/19 17:53:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6290 2011/01/20 04:53:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -251,7 +251,6 @@ app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/doxygen:tcl - adds experimental support for parsing/documenting Tcl source code
-app-doc/heirloom-doctools:cxx -  Build the mpm utility; this is disabled by default because it's rarely used and the only C++ tool in the suite. 
 app-doc/linuxfromscratch:htmlsingle - Also install all-in-one-page HTML version
 app-doc/pms:html - Generate PMS as .html as well
 app-doc/tldp-howto:html - Install the docs in multipage HTML format (default)
@@ -4188,7 +4187,6 @@ x11-plugins/compiz-plugins-extra:gconf -  Install GConf schemas for the plugins,
 x11-plugins/compiz-plugins-main:gconf -  Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz. 
 x11-plugins/enigmail:custom-optimization - Enable user CFLAGS
 x11-plugins/enigmail:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-x11-plugins/gkrellmbups:nut - Enable monitoring Network-UPS via sys-power/nut
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talklfilters
 x11-plugins/screenlets:svg - Highly Recommended: Enable SVG graphics via dev-python/librsvg-python
