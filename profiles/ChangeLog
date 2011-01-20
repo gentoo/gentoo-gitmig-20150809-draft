@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4947 2011/01/20 04:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4948 2011/01/20 09:12:44 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jan 2011; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmask net-analyzer/ipcad as it is fixed, #335592.
 
   20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove deleted packages from mask.

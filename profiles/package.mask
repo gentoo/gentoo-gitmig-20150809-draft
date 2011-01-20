@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12366 2011/01/20 04:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12367 2011/01/20 09:12:44 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,12 +38,10 @@
 # >=sys-kernel/linux-headers-2.6.35 and block its 
 # stabilization. Bugs untouched in over 3 months.
 # Masking for removal on 21 Mar 2011.
-# net-analyzer/ipcad (bug 335592)
 # net-dns/ez-ipupdate (bug 337324)
 # app-cdr/pxlinux (bug 337430)
 # app-cdr/cdrdetect (bug 337628)
 # app-emulation/basiliskII-jit (bug 339586)
-net-analyzer/ipcad
 net-dns/ez-ipupdate
 app-cdr/pxlinux
 app-cdr/cdrdetect
