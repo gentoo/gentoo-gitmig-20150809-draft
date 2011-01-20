@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.8.ebuild,v 1.3 2011/01/15 14:34:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.8.ebuild,v 1.4 2011/01/20 11:40:07 fauli Exp $
 
 EAPI="2"
 
@@ -41,7 +41,7 @@ RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
-PLUGIN_NAMES="acpi-notifier archive att-remover attachwarner bsfilter cachesaver fancy fetchinfo gtkhtml mailmbox newmail notification perl python rssyl spam_report tnef_parse vcalendar"
+PLUGIN_NAMES="acpi-notifier address_keeper archive att-remover attachwarner cachesaver clamd fancy fetchinfo gtkhtml mailmbox newmail notification perl python rssyl spam_report tnef_parse vcalendar"
 
 src_configure() {
 	local myconf
