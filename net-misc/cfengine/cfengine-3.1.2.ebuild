@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.1 2010/12/10 17:50:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.2 2011/01/20 20:30:29 idl0r Exp $
 
 EAPI="3"
 
@@ -17,13 +17,14 @@ LICENSE="GPL-3"
 SLOT="3"
 KEYWORDS="~amd64 ~arm ~s390 ~sparc ~x86"
 
-IUSE="examples gd graphviz html ldap libvirt mysql pcre postgres qdbm selinux tests tokyocabinet vim-syntax"
+# libvirt disabled for now because it blocks stabilization etc.
+IUSE="examples gd graphviz html ldap mysql pcre postgres qdbm selinux tests tokyocabinet vim-syntax"
 
+# libvirt? ( app-emulation/libvirt )
 DEPEND=">=sys-libs/db-4
 	gd? ( media-libs/gd )
 	graphviz? ( media-gfx/graphviz )
 	ldap? ( net-nds/openldap )
-	libvirt? ( app-emulation/libvirt )
 	mysql? ( virtual/mysql )
 	pcre? ( dev-libs/libpcre )
 	postgres? ( dev-db/postgresql-base )
@@ -51,6 +52,7 @@ src_configure() {
 	fi
 
 	# Enforce /var/cfengine for historical compatibility
+	# $(use_with libvirt) \
 	econf \
 		--docdir=/usr/share/doc/"${PF}" \
 		--with-workdir=/var/cfengine \
@@ -58,7 +60,6 @@ src_configure() {
 		$(use_with gd) \
 		$(use_with graphviz) \
 		$(use_with ldap) \
-		$(use_with libvirt) \
 		$(use_with pcre) \
 		$(use_with qdbm) \
 		$(use_enable selinux) \
