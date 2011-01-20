@@ -1,0 +1,23 @@
+From: Stephane Glondu <steph@glondu.net>
+Date: Mon, 6 Dec 2010 11:39:34 +0100
+Subject: [PATCH] Fix regression in pretty-printing of labelled arguments
+
+Patch provided by Daniel de Rauglaudre, applied in upstream CVS.
+---
+ etc/pr_o.ml |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/etc/pr_o.ml b/etc/pr_o.ml
+index ad8d6b9..747e64e 100644
+--- a/etc/pr_o.ml
++++ b/etc/pr_o.ml
+@@ -2080,7 +2080,7 @@ value poly_type pc =
+ value label_ipatt expr pc (p, oe) =
+   match Pcaml.unvala oe with
+   [ Some e -> pprintf pc "~%p:%p" patt p expr e
+-  | None -> patt pc p ]
++  | None -> pprintf pc "~%p" patt p ]
+ ;
+ 
+ EXTEND_PRINTER
+-- 
