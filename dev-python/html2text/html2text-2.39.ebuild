@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-2.39.ebuild,v 1.1 2010/11/25 00:33:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-2.39.ebuild,v 1.2 2011/01/20 22:09:18 arfrever Exp $
 
-EAPI="2"
-
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit python
 
@@ -32,4 +31,12 @@ src_install() {
 		newins "${DISTDIR}"/${P}.py ${PN}.py || die
 	}
 	python_execute_function my_install
+}
+
+pkg_postinst() {
+	python_mod_optimize ${PN}.py
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${PN}.py
 }
