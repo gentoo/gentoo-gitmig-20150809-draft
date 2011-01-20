@@ -1,0 +1,10 @@
+# ChangeLog for x11-apps/whyteboard
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/whyteboard/ChangeLog,v 1.1 2011/01/20 18:07:22 lxnay Exp $
+
+*whyteboard-0.41.1 (20 Jan 2011)
+
+  20 Jan 2011; Fabio Erculiani <lxnay@gentoo.org> +whyteboard-0.41.1.ebuild,
+  +files/whyteboard.desktop, +files/whyteboard.png, +metadata.xml:
+  new ebuild, close bug #348305
+
