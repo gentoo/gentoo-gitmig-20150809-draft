@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/fieldslib/fieldslib-0.1.1.ebuild,v 1.1 2011/01/20 19:53:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/fieldslib/fieldslib-0.1.1.ebuild,v 1.2 2011/01/20 19:54:03 aballier Exp $
 
 EAPI="2"
 inherit findlib multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug +ocamlopt"
 
-DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt]
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	dev-ml/type-conv"
 RDEPEND="${DEPEND}"
 
