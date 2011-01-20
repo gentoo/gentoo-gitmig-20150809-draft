@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dawn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.11 2011/01/18 19:59:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.12 2011/01/20 13:41:55 hwoarang Exp $
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> dawn-3.90b.ebuild:
+  Stable on amd64 wrt bug #352057
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> dawn-3.90b.ebuild:
   ppc stable wrt #352057
