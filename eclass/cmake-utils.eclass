@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.64 2011/01/19 12:44:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.65 2011/01/20 00:48:51 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -415,7 +415,7 @@ enable_cmake-utils_src_test() {
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	local ctestargs
 	[[ -n ${TEST_VERBOSE} ]] && ctestargs="--extra-verbose --output-on-failure"
-	ctest ${ctestargs} || die "Tests failed."
+	ctest ${ctestargs} "$@" || die "Tests failed."
 	popd > /dev/null
 }
 
