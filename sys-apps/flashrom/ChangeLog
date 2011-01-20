@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/flashrom
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.9 2010/12/06 16:34:22 idl0r Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.10 2011/01/20 12:09:19 hwoarang Exp $
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> flashrom-0.9.3.ebuild:
+  Stable on amd64 wrt bug #351943
 
   06 Dec 2010; Christian Ruppert <idl0r@gentoo.org> flashrom-0.9.3.ebuild:
   Disable -Werror, bug 347879.
