@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.19 2011/01/20 23:49:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.20 2011/01/20 23:50:49 abcd Exp $
 
 #
 # gnome2-utils.eclass
@@ -160,7 +160,7 @@ gnome2_icon_cache_update() {
 
 	for dir in ${GNOME2_ECLASS_ICONS}
 	do
-		if [[ -f "${ROOT}${dir}/index.theme" ]] ; then
+		if [[ -f "${EROOT}${dir}/index.theme" ]] ; then
 			local rv=0
 
 			"${updater}" -qf "${EROOT}${dir}"
