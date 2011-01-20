@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zcatalog/zcatalog-2.13.3.ebuild,v 1.1 2011/01/20 13:42:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zcatalog/zcatalog-2.13.3.ebuild,v 1.2 2011/01/20 13:54:08 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,6 @@ RDEPEND="dev-python/restrictedpython
 	net-zope/missing
 	net-zope/persistence
 	net-zope/record
-	net-zope/zctextindex
 	net-zope/zexceptions
 	net-zope/zodb
 	>=net-zope/zope-2.12
@@ -41,6 +40,7 @@ RDEPEND="dev-python/restrictedpython
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-python/setuptools"
+PDEPEND="net-zope/zctextindex"
 
 S="${WORKDIR}/${MY_P}"
 
