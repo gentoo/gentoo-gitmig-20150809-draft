@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.4 2011/01/19 21:19:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.5 2011/01/20 22:33:50 pacho Exp $
 
 GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.5"
@@ -54,6 +54,7 @@ pkg_setup() {
 		--disable-updater
 		$(use_enable python)
 		$(use_enable spell)"
+	use python && python_set_active_version 2
 }
 
 src_unpack() {

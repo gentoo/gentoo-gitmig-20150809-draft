@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.321 2011/01/19 21:19:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.322 2011/01/20 22:33:50 pacho Exp $
+
+  20 Jan 2011; Pacho Ramos <pacho@gentoo.org> gedit-2.30.4.ebuild:
+  Needs python2 for compiling ok.
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gedit-2.30.4.ebuild:
   Stable on amd64 wrt bug #348987
