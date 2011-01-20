@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ipcad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.30 2009/09/26 08:55:28 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.31 2011/01/20 09:10:59 pva Exp $
+
+  20 Jan 2011; Peter Volkov <pva@gentoo.org> ipcad-3.7.ebuild,
+  +files/ipcad-3.7-linux-2.6.35.patch:
+  Fix build issue with >=linux-headers-2.6.35, bug #335592, thank Diego Elio
+  Pettenò for report. Updated EAPI.
 
   26 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> ipcad-3.7.ebuild,
   -files/ipcad-3.7-20060828-cvs.patch:
