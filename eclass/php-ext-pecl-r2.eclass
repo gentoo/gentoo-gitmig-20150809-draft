@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.2 2010/10/06 19:58:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.3 2011/01/20 12:13:30 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -43,6 +43,8 @@ PECL_PKG_V="${PECL_PKG}-${MY_PV}"
 
 [[ -z "${PHP_EXT_NAME}" ]] && PHP_EXT_NAME="${PECL_PKG}"
 
+S="${WORKDIR}/${PECL_PKG_V}"
+
 inherit php-ext-source-r2
 
 EXPORT_FUNCTIONS src_compile src_install src_test
@@ -56,7 +58,6 @@ fi
 SRC_URI="http://pecl.php.net/get/${FILENAME}"
 HOMEPAGE="http://pecl.php.net/${PECL_PKG}"
 
-S="${WORKDIR}/${PECL_PKG_V}"
 
 # @FUNCTION: php-ext-pecl-r1_src_compile
 # @DESCRIPTION:
