@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.9 2011/01/14 13:41:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.10 2011/01/20 21:19:26 mgorny Exp $
+
+*uam-0.1 (20 Jan 2011)
+
+  20 Jan 2011; Michał Górny <mgorny@gentoo.org> -uam-0.0.7.ebuild,
+  -uam-0.0.7.1.ebuild, +uam-0.1.ebuild:
+  Version bump. The new version finally fixes a long outstanding issue with uam
+  attempting to mount filesystem before rootfs is mounted R/W (bug #352104).
 
   14 Jan 2011; Michał Górny <mgorny@gentoo.org> uam-0.0.7.ebuild,
   uam-0.0.7.1.ebuild:
