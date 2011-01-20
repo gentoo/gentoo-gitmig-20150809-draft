@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.26 2011/01/20 14:17:34 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.27 2011/01/20 14:40:30 arfrever Exp $
+
+  20 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cryptlib-3.4.0.ebuild:
+  Restrict Jython ABIs. DISTUTILS_SETUP_FILES should be an array.
 
 *cryptlib-3.4.0 (20 Jan 2011)
 

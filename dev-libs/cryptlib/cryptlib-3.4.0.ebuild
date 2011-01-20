@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.1 2011/01/20 14:17:34 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.2 2011/01/20 14:40:30 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils flag-o-matic multilib toolchain-funcs
 
@@ -30,8 +31,7 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-DISTUTILS_SETUP_FILES="bindings/setup.py"
-RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SETUP_FILES=("bindings/setup.py")
 
 src_unpack() {
 	# we need the -a option, so we can not use 'unpack'
