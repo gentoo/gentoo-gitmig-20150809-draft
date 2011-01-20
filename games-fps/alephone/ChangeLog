@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.37 2010/08/19 03:35:39 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.38 2011/01/20 23:34:46 tupone Exp $
+
+  20 Jan 2011; Tupone Alfredo <tupone@gentoo.org> alephone-20100424.ebuild,
+  +files/alephone-20100424-boost_145.patch:
+  Fix build with boost-1.45. Bug #352123 by flameeyes@gentoo.org
 
   19 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   alephone-20100424.ebuild:

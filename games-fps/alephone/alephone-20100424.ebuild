@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.3 2010/08/19 03:35:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.4 2011/01/20 23:34:46 tupone Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 MY_P=AlephOne-${PV}
 DESCRIPTION="An enhanced version of the game engine from the classic Mac game, Marathon"
@@ -51,6 +51,8 @@ src_prepare() {
 		configure.ac \
 		|| die "sed failed"
 	rm -rf Source_Files/Expat
+
+	epatch "${FILESDIR}"/${P}-boost_145.patch
 
 	eautoreconf
 }
