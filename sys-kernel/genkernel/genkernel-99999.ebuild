@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.7 2011/01/20 18:03:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.8 2011/01/20 20:21:05 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
@@ -80,7 +80,9 @@ src_unpack() {
 }
 
 src_compile() {
-	[[ ${PV} == 9999* ]] && emake || die
+	if [[ ${PV} == 9999* ]]; then
+		emake || die
+	fi
 }
 
 src_install() {
