@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.29 2010/10/20 11:10:02 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.30 2011/01/20 18:48:40 xarthisius Exp $
+
+  20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gtk+extra-2.1.2.ebuild:
+  ppc/ppc64 stable wrt #341169
 
   20 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtk+extra-2.1.2.ebuild:
