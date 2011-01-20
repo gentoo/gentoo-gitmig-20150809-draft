@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/hedgewars
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.26 2010/11/15 19:56:46 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.27 2011/01/20 19:01:26 mr_bones_ Exp $
+
+*hedgewars-0.9.15 (20 Jan 2011)
+
+  20 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +hedgewars-0.9.15.ebuild, +files/hedgewars-0.9.15-fixes.patch,
+  +files/hedgewars-0.9.15-lua.patch:
+  version bump - bug #350244 with upstream patches rolled by bugs@m8y.org
 
 *hedgewars-0.9.14.1 (15 Nov 2010)
 
