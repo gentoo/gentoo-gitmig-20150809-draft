@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/amd-ucode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/amd-ucode/ChangeLog,v 1.2 2011/01/17 16:34:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/amd-ucode/ChangeLog,v 1.3 2011/01/20 18:16:28 flameeyes Exp $
+
+  20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  amd-ucode-2011.01.11.ebuild:
+  Improve postinst message showing information on how to use the microcode for
+  built-in kernels.
 
   17 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Add amd64 as co-maintainer for the package.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/amd-ucode/amd-ucode-2011.01.11.ebuild,v 1.1 2011/01/16 23:48:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/amd-ucode/amd-ucode-2011.01.11.ebuild,v 1.2 2011/01/20 18:16:28 flameeyes Exp $
 
 inherit versionator linux-info
 
@@ -35,20 +35,40 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The microcode will be updated next time the microcode kernel code"
-	elog "will be executed; you can issue the following command to force a"
-	elog "reload, if you built the support as modules:"
-	elog ""
-	elog "    modprobe -r microcode && modprobe microcode"
-	elog ""
-	elog "If you didn't build the microcode support as a module, you should"
-	elog "rebuild your kernel with the new microcode embedded."
+	local show_modules_info=yes
+	local show_builtin_info=yes
 
-	if linux_config_exists && ! linux_chkconfig_module MICROCODE; then
-		ewarn ""
-		ewarn "You're suggested to build CPU microcode update support as module"
-		ewarn "as there is currently no automatic way to load in the updated"
-		ewarn "microcode when it is built-in in the kernel."
-		ewarn ""
+	if linux_config_exists; then
+		if linux_chkconfig_builtin MICROCODE; then
+			show_modules_info=no
+		elif linux_chkconfig_module MICROCODE; then
+			show_builtin_info=no
+		fi
+	fi
+
+	elog "You have installed the microcode for AMD CPUs. The kernel will load"
+	elog "it the next time the microcode driver will be executed."
+	elog ""
+
+	if test $show_modules_info = yes; then
+		elog "If you built the microcode driver as a module, you can issue the"
+		elog "following command to force a reload:"
+		elog ""
+		elog "    modprobe -r microcode && modprobe microcode"
+		elog ""
+	fi
+
+	if test $show_builtin_info = yes; then
+		elog "If you built the microcode driver in the kernel, it won't load"
+		elog "the file as is. To update the microcode you'll have to set the"
+		elog "following configuration in the kernel:"
+		elog ""
+		elog "    CONFIG_EXTRA_FIRMWARE=amd-ucode/microcode_amd.bin"
+		elog "    CONFIG_EXTRA_FIRMWARE_DIR=/lib/firmware"
+		elog ""
+		elog "Please note that this will build the firmware within the kernel"
+		elog "image, so you'll have to rebuild the kernel after an upgrade"
+		elog "of the ${CATEGORY}/${PN} package."
+		elog ""
 	fi
 }
