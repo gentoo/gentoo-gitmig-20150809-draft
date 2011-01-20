@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.35 2011/01/19 21:54:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.36 2011/01/20 20:27:15 mr_bones_ Exp $
+
+  20 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  doomsday-1.9.0_beta68.ebuild, doomsday-1.9.0_beta69.ebuild:
+  doomsday doesn't work on amd64 (bug #352271)
 
 *doomsday-1.9.0_beta69 (19 Jan 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta68.ebuild,v 1.3 2010/05/31 09:47:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta68.ebuild,v 1.4 2011/01/20 20:27:15 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/deng/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="-amd64 ~ppc x86"
 IUSE="openal"
 
 RDEPEND="virtual/opengl
