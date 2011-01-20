@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4.ebuild,v 1.1 2010/08/12 16:40:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4.ebuild,v 1.2 2011/01/20 12:16:39 hwoarang Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.hepforge.org/archive/lhapdf/${MY_PF}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cxx doc examples octave python test"
 
 RDEPEND="octave? ( sci-mathematics/octave )"
