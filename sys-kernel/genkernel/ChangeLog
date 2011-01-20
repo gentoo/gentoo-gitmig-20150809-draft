@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.233 2011/01/20 14:32:55 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.234 2011/01/20 15:18:41 zmedico Exp $
+
+  20 Jan 2011; Zac Medico <zmedico@gentoo.org> genkernel-3.4.11.1.ebuild:
+  3.4.11.1 calls a2x now, so app-text/asciidoc dep needs to be unconditional.
 
 *genkernel-3.4.11.1 (20 Jan 2011)
 
