@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.18 2010/12/07 06:26:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.19 2011/01/20 23:49:37 abcd Exp $
 
 #
 # gnome2-utils.eclass
@@ -65,7 +65,7 @@ gnome2_gconf_install() {
 
 	# We are ready to install the GCONF Scheme now
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${EROOT};")"
+	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${ROOT};")"
 
 	einfo "Installing GNOME 2 GConf schemas"
 
@@ -104,7 +104,7 @@ gnome2_gconf_uninstall() {
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${EROOT};")"
+	export GCONF_CONFIG_SOURCE="$("${updater}" --get-default-source | sed "s;:/;:${ROOT};")"
 
 	einfo "Uninstalling GNOME 2 GConf schemas"
 
