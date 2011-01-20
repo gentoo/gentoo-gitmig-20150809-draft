@@ -1,7 +1,0 @@
-#!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/files/sara,v 1.1 2004/12/09 20:31:06 squinky86 Exp $
-
-cd /opt/sara
-./sara
