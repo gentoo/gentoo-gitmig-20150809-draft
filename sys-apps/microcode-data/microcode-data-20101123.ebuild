@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20101123.ebuild,v 1.1 2010/12/17 09:10:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20101123.ebuild,v 1.2 2011/01/20 22:51:32 flameeyes Exp $
 
 NUM="19611"
 DESCRIPTION="Intel IA32 microcode update data"
 HOMEPAGE="http://urbanmyth.org/microcode/"
 SRC_URI="http://downloadmirror.intel.com/${NUM}/eng/microcode-${PV}.tgz"
 
-LICENSE="as-is"
+LICENSE="intel-ucode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

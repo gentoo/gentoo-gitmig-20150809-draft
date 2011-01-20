@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/microcode-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.10 2010/12/17 09:10:02 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.11 2011/01/20 22:51:32 flameeyes Exp $
+
+  20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -microcode-data-20090330.ebuild, microcode-data-20100209.ebuild,
+  -microcode-data-20100826.ebuild, -microcode-data-20100914.ebuild,
+  microcode-data-20101123.ebuild:
+  Remove old versions; correct wrong LICENSE value, the microcode is not
+  provided as-is but with a non-free license.
 
 *microcode-data-20101123 (17 Dec 2010)
 
