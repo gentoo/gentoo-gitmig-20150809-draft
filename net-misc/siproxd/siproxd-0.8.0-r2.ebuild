@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.0-r1.ebuild,v 1.4 2011/01/20 16:39:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.0-r2.ebuild,v 1.1 2011/01/20 16:39:28 chithanh Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples doc static"
 # TODO: debug can be used but dmalloc is breaking the build
 # upstream has been contacted, see bug 2649238 in their bugtracker
@@ -20,7 +20,7 @@ IUSE="examples doc static"
 RDEPEND=">=net-libs/libosip-3.0.0"
 #	debug? ( dev-libs/dmalloc[threads] )"
 DEPEND="${RDEPEND}
-	<sys-devel/libtool-2.4:2
+	>=sys-devel/libtool-2.4
 	doc? ( app-text/docbook-sgml-utils
 		app-text/docbook-sgml-dtd:4.2 )"
 # docbook-sgml-utils is for building doc
@@ -37,7 +37,7 @@ src_prepare() {
 		|| die "patching doc/siproxd.conf.example failed"
 	# do not fail when building with external libltdl
 	sed -i 's/libltdl //' Makefile.in Makefile.am || die "patching Makefile failed"
-	epatch "${FILESDIR}/${PN}-libtool-2.2.patch"
+	epatch "${FILESDIR}/${PN}-libtool-2.4.patch"
 	# do not crash when building with external libltdl, bug 308495
 	sed -i 's|"../libltdl/ltdl.h"|<ltdl.h>|' src/plugins.h || die "patching plugins.h failed"
 }
@@ -81,7 +81,7 @@ src_install() {
 		# upstream has been contacted, see bug 2649333 in their bugtracker
 		dohtml -r doc/html/ || die "dohtml failed"
 		# pdf is not build all the time
-		if built_with_use app-text/docbook-sgml-utils jadetex; then
+		if has_version app-text/docbook-sgml-utils[jadetex]; then
 			dodoc doc/pdf/*.pdf || die "dodoc failed"
 		fi
 	fi
