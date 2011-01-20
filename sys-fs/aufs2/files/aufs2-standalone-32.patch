@@ -1,5 +1,37 @@
-aufs2 standalone patch for linux-2.6.32
+aufs2.1 standalone patch for linux-2.6.32
 
+diff --git a/fs/file_table.c b/fs/file_table.c
+index 8eb4404..9e6d946 100644
+--- a/fs/file_table.c
++++ b/fs/file_table.c
+@@ -32,6 +32,7 @@ struct files_stat_struct files_stat = {
+ 
+ /* public. Not pretty! */
+ __cacheline_aligned_in_smp DEFINE_SPINLOCK(files_lock);
++EXPORT_SYMBOL(files_lock);
+ 
+ /* SLAB cache for file structures */
+ static struct kmem_cache *filp_cachep __read_mostly;
+@@ -374,6 +375,7 @@ void file_kill(struct file *file)
+ 		file_list_unlock();
+ 	}
+ }
++EXPORT_SYMBOL(file_kill);
+ 
+ int fs_may_remount_ro(struct super_block *sb)
+ {
+diff --git a/fs/inode.c b/fs/inode.c
+index 4d8e3be..d6fa35c 100644
+--- a/fs/inode.c
++++ b/fs/inode.c
+@@ -86,6 +86,7 @@ static struct hlist_head *inode_hashtable __read_mostly;
+  * the i_state of an inode while it is in use..
+  */
+ DEFINE_SPINLOCK(inode_lock);
++EXPORT_SYMBOL(inode_lock);
+ 
+ /*
+  * iprune_sem provides exclusion between the kswapd or try_to_free_pages
 diff --git a/fs/namei.c b/fs/namei.c
 index 7d28f56..0f6117c 100644
 --- a/fs/namei.c
@@ -141,6 +173,18 @@ index 77184f0..8479d95 100644
  
  /**
   * splice_direct_to_actor - splices data directly between two non-pipes
+diff --git a/lib/debug_locks.c b/lib/debug_locks.c
+index bc3b117..9f981cf 100644
+--- a/lib/debug_locks.c
++++ b/lib/debug_locks.c
+@@ -23,6 +23,7 @@
+  * shut up after that.
+  */
+ int debug_locks = 1;
++EXPORT_SYMBOL(debug_locks);
+ 
+ /*
+  * The locking-testsuite uses <debug_locks_silent> to get a
 diff --git a/security/commoncap.c b/security/commoncap.c
 index fe30751..813108d 100644
 --- a/security/commoncap.c
