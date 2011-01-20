@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1323.ebuild,v 1.1 2011/01/11 18:28:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1334.ebuild,v 1.1 2011/01/20 14:53:54 tommy Exp $
 
 EAPI="2"
 DATE=20110106
