@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.6.ebuild,v 1.1 2010/11/28 01:56:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.6.ebuild,v 1.2 2011/01/20 04:14:01 mattst88 Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt"
 DEPEND=">=sys-libs/pam-0.99
 	dev-libs/openssl
-	>=sys-libs/libhx-3.4
+	>=sys-libs/libhx-3.6
 	dev-libs/libxml2
 	>=sys-fs/cryptsetup-1.1.0
 	dev-util/pkgconfig
