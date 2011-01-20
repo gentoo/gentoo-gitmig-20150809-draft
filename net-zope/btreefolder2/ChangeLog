@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/btreefolder2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/ChangeLog,v 1.13 2011/01/14 10:10:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/ChangeLog,v 1.14 2011/01/20 13:51:06 arfrever Exp $
+
+  20 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  btreefolder2-2.13.1.ebuild:
+  Update dependencies.
 
   14 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   btreefolder2-2.13.1.ebuild:

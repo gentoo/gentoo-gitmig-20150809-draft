@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zctextindex/zctextindex-2.13.1.ebuild,v 1.2 2011/01/14 10:08:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zctextindex/zctextindex-2.13.1.ebuild,v 1.3 2011/01/20 13:55:06 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -25,6 +25,7 @@ RDEPEND="net-zope/accesscontrol
 	net-zope/acquisition
 	net-zope/persistence
 	net-zope/transaction
+	net-zope/zcatalog
 	net-zope/zexceptions
 	net-zope/zodb
 	>=net-zope/zope-2.12

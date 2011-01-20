@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/issuetrackerproduct-0.11.0.ebuild,v 1.1 2010/12/26 20:23:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/issuetrackerproduct-0.11.0.ebuild,v 1.2 2011/01/20 13:58:08 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -27,6 +27,7 @@ DEPEND="dev-python/simplejson
 	net-zope/acquisition
 	net-zope/datetime
 	net-zope/persistence
+	net-zope/zcatalog
 	net-zope/zexceptions
 	net-zope/zlog
 	net-zope/zodb

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/btreefolder2-2.13.1.ebuild,v 1.2 2011/01/14 10:10:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/btreefolder2-2.13.1.ebuild,v 1.3 2011/01/20 13:51:06 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -24,6 +24,7 @@ IUSE=""
 RDEPEND="net-zope/accesscontrol
 	net-zope/acquisition
 	net-zope/persistence
+	net-zope/zcatalog
 	net-zope/zodb
 	>=net-zope/zope-2.12
 	net-zope/zope-container
