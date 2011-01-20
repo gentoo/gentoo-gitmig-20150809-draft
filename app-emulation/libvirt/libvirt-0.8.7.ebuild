@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.2 2011/01/07 15:20:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.3 2011/01/20 20:42:27 cardoe Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -234,6 +234,7 @@ pkg_postinst() {
 	elog "	net-dns/dnsmasq"
 	elog "	>=net-firewall/iptables-1.4.9"
 	elog "	net-firewall/ebtables"
+	elog "  sys-apps/iproute2"
 	elog
 	if has_version net-dns/dnsmasq; then
 		ewarn "If you have a DNS server setup on your machine, you will have"
