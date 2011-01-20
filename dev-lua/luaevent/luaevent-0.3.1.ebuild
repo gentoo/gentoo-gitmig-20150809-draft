@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.1 2011/01/20 21:13:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.2 2011/01/20 21:52:58 blueness Exp $
 
 EAPI=2
 
-#inherit toolchain-funcs
-inherit multilib toolchain-funcs flag-o-matic eutils
+inherit toolchain-funcs
 
 DESCRIPTION="libevent bindings for Lua"
 HOMEPAGE="http://luaforge.net/projects/luaevent"
