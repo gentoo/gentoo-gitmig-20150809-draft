@@ -1,3 +1,6 @@
+http://code.google.com/p/irqbalance/issues/detail?id=8
+http://code.google.com/p/irqbalance/issues/detail?id=13
+
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -25,7 +25,9 @@
