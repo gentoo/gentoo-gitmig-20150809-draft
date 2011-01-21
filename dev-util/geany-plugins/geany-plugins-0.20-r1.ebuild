@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20.ebuild,v 1.1 2011/01/21 11:19:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20-r1.ebuild,v 1.1 2011/01/21 19:15:44 polynomial-c Exp $
 
 EAPI="2"
 
@@ -43,6 +43,7 @@ src_prepare() {
 src_configure() {
 	# GeanyGenDoc requires ctpl which isn't yet in portage
 	local myeconfargs=(
+		--docdir=/usr/share/doc/${PF}
 		--disable-geanygendoc
 		$(use_enable enchant spellcheck)
 		$(use_enable gtkspell)
