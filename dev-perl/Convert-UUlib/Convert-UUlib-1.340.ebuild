@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/Convert-UUlib-1.340.ebuild,v 1.3 2011/01/21 09:53:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/Convert-UUlib-1.340.ebuild,v 1.4 2011/01/21 13:46:42 fauli Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DESCRIPTION="A Perl interface to the uulib library"
 
 LICENSE="Artistic GPL-2" # needs both
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 SRC_TEST="do"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.52 2011/01/21 09:53:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.53 2011/01/21 13:46:42 fauli Exp $
+
+  21 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  Convert-UUlib-1.340.ebuild:
+  stable x86, security bug 352317
 
   21 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   Convert-UUlib-1.340.ebuild:
