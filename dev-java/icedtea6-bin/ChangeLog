@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea6-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.42 2010/11/27 12:57:33 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.43 2011/01/21 23:32:52 caster Exp $
+
+*icedtea6-bin-1.9.4 (21 Jan 2011)
+
+  21 Jan 2011; Vlastimil Babka <caster@gentoo.org> icedtea6-bin-1.9.1.ebuild,
+  icedtea6-bin-1.9.2.ebuild, +icedtea6-bin-1.9.4.ebuild:
+  Version bump, security bug #352035 (JNLP security manager bypass -
+  (CVE-2010-4351). Also convert deps to virtual/jpeg, bug #347953.
 
 *icedtea6-bin-1.9.2 (27 Nov 2010)
 

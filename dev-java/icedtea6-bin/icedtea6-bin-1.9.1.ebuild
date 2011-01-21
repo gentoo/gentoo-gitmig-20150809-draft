@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.9.1.ebuild,v 1.4 2010/11/07 22:08:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.9.1.ebuild,v 1.5 2011/01/21 23:32:52 caster Exp $
 
 EAPI="1"
 
@@ -35,7 +35,7 @@ S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
 RDEPEND=">=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
 	>=media-libs/giflib-4.1.6-r1
-	|| ( >=media-libs/jpeg-8 >=media-libs/libjpeg-turbo-1.0.90 )
+	virtual/jpeg
 	>=media-libs/libpng-1.4:0
 	>=sys-libs/zlib-1.2.3-r1
 	alsa? ( >=media-libs/alsa-lib-1.0.20 )
