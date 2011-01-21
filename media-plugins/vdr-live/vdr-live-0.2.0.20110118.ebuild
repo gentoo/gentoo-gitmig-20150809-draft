@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118.ebuild,v 1.1 2011/01/19 23:12:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118.ebuild,v 1.2 2011/01/21 00:04:54 idl0r Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
 DEPEND="media-video/vdr
-	>=dev-libs/tntnet-1.6.0.6[ssl=]
+	>=dev-libs/tntnet-1.6.0.6[ssl=,sdk]
 	>=dev-libs/cxxtools-1.4.3"
 
 RDEPEND="${DEPEND}"
