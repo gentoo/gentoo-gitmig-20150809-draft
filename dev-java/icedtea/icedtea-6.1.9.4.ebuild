@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.1.ebuild,v 1.3 2010/11/26 22:07:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.4.ebuild,v 1.1 2011/01/21 00:20:39 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,11 +9,11 @@
 
 EAPI="2"
 
-inherit pax-utils java-pkg-2 java-vm-2 versionator
+inherit autotools pax-utils java-pkg-2 java-vm-2 versionator
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DESCRIPTION="A harness to build the OpenJDK using Free Software build tools and dependencies"
 ICEDTEA_VER="$(get_version_component_range 2-4)"
@@ -24,13 +24,13 @@ OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.gz"
 JAXP_TARBALL="jdk6-jaxp-b20.zip"
 JAXWS_TARBALL="jdk6-jaxws-b20.zip"
 JAF_TARBALL="jdk6-jaf-b20.zip"
-HOTSPOT_TARBALL="0803c0f69b51.tar.gz"
+HOTSPOT_TARBALL="13edc857b967.tar.gz"
 CACAO_TARBALL="e321b101a9ee.tar.bz2"
 SRC_URI="http://icedtea.classpath.org/download/source/${ICEDTEA_PKG}.tar.gz
 		 http://download.java.net/openjdk/jdk6/promoted/b${OPENJDK_BUILD}/${OPENJDK_TARBALL}
-		 https://jax-ws.dev.java.net/files/documents/4202/150724/${JAXWS_TARBALL}
-		 https://jax-ws.dev.java.net/files/documents/4202/150725/${JAF_TARBALL}
-		 https://jaxp.dev.java.net/files/documents/913/150648/${JAXP_TARBALL}
+		 http://icedtea.classpath.org/download/drops/${JAXWS_TARBALL}
+		 http://icedtea.classpath.org/download/drops/${JAF_TARBALL}
+		 http://icedtea.classpath.org/download/drops/${JAXP_TARBALL}
 		 http://hg.openjdk.java.net/hsx/hsx19/master/archive/${HOTSPOT_TARBALL}
 		 cacao? ( http://mips.complang.tuwien.ac.at/hg/cacao/archive/${CACAO_TARBALL} )"
 HOMEPAGE="http://icedtea.classpath.org"
@@ -38,7 +38,7 @@ S=${WORKDIR}/${ICEDTEA_PKG}
 
 # Missing options:
 # shark - needs adding
-IUSE="cacao debug doc examples +hs19 javascript nio2 nsplugin +nss pulseaudio systemtap +xrender zero"
+IUSE="cacao debug doc examples +hs19 javascript nio2 +nsplugin +nss pulseaudio systemtap +webstart +xrender zero"
 
 # JTReg doesn't pass at present
 RESTRICT="test"
@@ -122,6 +122,11 @@ pkg_setup() {
 #	  fi
 #	fi
 
+	if use nsplugin && ! use webstart ; then
+		eerror "WebStart is required if building the plugin."
+		die 'Re-try with USE="webstart"'
+	fi
+
 	# quite a hack since java-config does not provide a way for a package
 	# to limit supported VM's for building and their preferred order
 	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
@@ -162,6 +167,11 @@ src_unpack() {
 
 unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-sparc.patch"
+	eautoreconf
 }
 
 src_configure() {
@@ -226,6 +236,7 @@ src_configure() {
 		$(use_enable systemtap) \
 		$(use_enable nio2) \
 		$(use_enable nss) \
+		$(use_enable webstart) \
 		|| die "configure failed"
 }
 
