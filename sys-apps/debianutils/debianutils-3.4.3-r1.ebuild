@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-3.4.3.ebuild,v 1.1 2011/01/19 15:20:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-3.4.3-r1.ebuild,v 1.1 2011/01/21 16:02:55 jer Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,4 +41,5 @@ src_install() {
 	use kernel_linux && doman installkernel.8
 	cd debian
 	dodoc changelog control
+	keepdir /etc/kernel/postinst.d
 }
