@@ -1,6 +1,24 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.255 2011/01/18 18:00:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.256 2011/01/21 20:38:01 voyageur Exp $
+
+*proftpd-1.3.4_rc1 (21 Jan 2011)
+
+  21 Jan 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  +proftpd-1.3.4_rc1.ebuild, metadata.xml:
+  Finally add Bernd Lommerzheim <bernd@lommerzheim.com> as maintainer, with
+  myself as proxy maintainer
+  Version bump, including:
+  * Bump mod_vroot to 0.9.2.
+  * Move mod_deflate from an external module to a contrib module.
+  * Add support for the new mod_copy, mod_ifversion and mod_qos modules.
+  * Add support for the mod_diskuse module. Fixes Gentoo Bug #349289.
+  * Add support for the mod_sql_sqlite module. Fixes Gentoo Bug #351558.
+  * Add support for automatically finding the MySQL and PostgreSQL headers and
+  libraries
+  * Remove blocking check for a running ProFTPD pre 1.3.3. Workaround for
+  Gentoo Bug #334097.
+  * Some stylistic changes.
 
   18 Jan 2011; Jeroen Roovers <jer@gentoo.org> proftpd-1.3.3d.ebuild:
   Stable for HPPA (bug #348998).
