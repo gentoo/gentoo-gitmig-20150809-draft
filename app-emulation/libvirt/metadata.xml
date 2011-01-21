@@ -70,5 +70,11 @@
     <flag name='json'>
       Support QEmu 0.13 JSON-based interface, using <pkg>dev-libs/yajl</pkg>.
     </flag>
+	<flag name='virt-network'>
+		To help people out, this flag includes the dependencies for NATed
+		network mode. Effectively any network setup that relies on libvirt
+		to setup and configure network interfaces on your host. This does not
+		include bridged or routed networks.
+	</flag>
   </use>
 </pkgmetadata>

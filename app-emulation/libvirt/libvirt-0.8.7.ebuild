@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.3 2011/01/20 20:42:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.4 2011/01/21 16:27:15 cardoe Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -22,9 +22,9 @@ SRC_URI="http://libvirt.org/sources/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi caps debug iscsi +libvirtd lvm +lxc macvtap +network nfs nls \
-	numa openvz parted pcap phyp policykit python qemu sasl selinux
-	uml virtualbox xen udev +json"
+IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap +network nfs \
+	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
+	uml virtualbox virt-network xen"
 # IUSE=one : bug #293416 & bug #299011
 
 RDEPEND="sys-libs/readline
@@ -39,6 +39,7 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
+	json? ( dev-libs/yajl )
 	libvirtd? ( net-misc/bridge-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	macvtap? ( >=dev-libs/libnl-1.1 )
@@ -55,7 +56,10 @@ RDEPEND="sys-libs/readline
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
-	json? ( dev-libs/yajl )"
+	virt-network? ( net-dns/dnsmasq
+		>=net-firewall/iptables-1.4.9
+		net-firewall/ebtables
+		sys-apps/iproute2 )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -228,13 +232,8 @@ pkg_postinst() {
 	elog
 	elog "For the basic networking support (bridged and routed networks)"
 	elog "you don't need any extra software. For more complex network modes"
-	elog "including but not limited to NATed network, you'll need the"
-	elog "following packages":
-	elog
-	elog "	net-dns/dnsmasq"
-	elog "	>=net-firewall/iptables-1.4.9"
-	elog "	net-firewall/ebtables"
-	elog "  sys-apps/iproute2"
+	elog "including but not limited to NATed network, you can enable the"
+	elog "'virt-network' USE flag."
 	elog
 	if has_version net-dns/dnsmasq; then
 		ewarn "If you have a DNS server setup on your machine, you will have"
