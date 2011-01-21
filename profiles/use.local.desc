@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6296 2011/01/21 15:13:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6297 2011/01/21 16:33:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -345,6 +345,7 @@ app-emulation/libvirt:pcap -  Support auto learning IP addreses for routing
 app-emulation/libvirt:phyp -  Support management of virtualisation through the PHYP hypervisor protocol. 
 app-emulation/libvirt:qemu -  Support management of QEmu virtualisation (one of app-emulation/qemu, app-emulation/qemu-kvm or app-emulation/qemu-spice) 
 app-emulation/libvirt:uml -  Support management of User Mode Linux virtualisation 
+app-emulation/libvirt:virt-network -  To help people out, this flag includes the dependencies for NATed network mode. Effectively any network setup that relies on libvirt to setup and configure network interfaces on your host. This does not include bridged or routed networks. 
 app-emulation/libvirt:virtualbox -  Support management of VirtualBox virtualisation (one of app-emulation/virtualbox or app-emulation/virtualbox-ose) 
 app-emulation/libvirt:xen -  Support management of Xen virtualisation (app-emulation/xen) 
 app-emulation/lxc:vanilla -  Avoid adding Gentoo Linux-specific modifications, which include the custom init script. This is present as a flag to avoid forcing dependencies over users that might not want have them around as they use LXC in contexts where the init script is not useful. 
