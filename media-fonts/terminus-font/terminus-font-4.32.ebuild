@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.32.ebuild,v 1.1 2011/01/20 23:47:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.32.ebuild,v 1.2 2011/01/21 09:10:32 jlec Exp $
 
 EAPI=3
 
@@ -68,13 +68,13 @@ src_compile() {
 
 src_install() {
 	if use psf; then
-		emake DESTDIR="${D}" install-psf install-uni install-acm install-ref || die
+		emake -j1 DESTDIR="${D}" install-psf install-uni install-acm install-ref || die
 	fi
 	if use raw-font-data; then
-		emake DESTDIR="${D}" install.raw || die
+		emake -j1 DESTDIR="${D}" install.raw || die
 	fi
 	if use pcf; then
-		emake DESTDIR="${D}" install-pcf || die
+		emake -j1 DESTDIR="${D}" install-pcf || die
 	fi
 
 	font_src_install

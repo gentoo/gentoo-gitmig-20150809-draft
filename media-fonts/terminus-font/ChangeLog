@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.80 2011/01/20 23:47:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.81 2011/01/21 09:10:32 jlec Exp $
+
+  21 Jan 2011; Justin Lecher <jlec@gentoo.org> terminus-font-4.30.ebuild,
+  terminus-font-4.32.ebuild:
+  Fix parallel installation problem, #352321
 
 *terminus-font-4.32 (20 Jan 2011)
 
