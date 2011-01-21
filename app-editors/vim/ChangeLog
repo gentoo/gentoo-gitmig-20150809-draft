@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.367 2011/01/07 22:03:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.368 2011/01/21 16:18:34 lack Exp $
+
+*vim-7.3.102 (21 Jan 2011)
+
+  21 Jan 2011; Jim Ramsay <lack@gentoo.org> +vim-7.3.102.ebuild:
+  Version bump: 7.3.102
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> vim-7.3.50.ebuild:
   Marking vim-7.3.50 ppc for bug 348269
