@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6298 2011/01/21 17:14:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6299 2011/01/21 18:13:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3089,6 +3089,15 @@ net-misc/dnetstats:gnome - Use gksu to gain root access
 net-misc/dnetstats:kde - Use kdesu to gain root access
 net-misc/dropbear:bsdpty - Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
+net-misc/freerdp:X - Install also GUI client
+net-misc/freerdp:alsa - Enable sound support (using alsa)
+net-misc/freerdp:cups - Enable printing support (using cups)
+net-misc/freerdp:debug - Enable all debugging options
+net-misc/freerdp:gnutls - Use GnuTLS as crypto backend
+net-misc/freerdp:largefile - Support for large files
+net-misc/freerdp:nss - Use NSS as crypto backend
+net-misc/freerdp:polarssl - Use PolarSSL as crypto backend
+net-misc/freerdp:ssl - Use OpenSSL as crypto backend
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/htbinit:esfq - Add support for Enhanced Stochastic Fairness queueing discipline.
 net-misc/hylafax:html - Adds HTML documentation
