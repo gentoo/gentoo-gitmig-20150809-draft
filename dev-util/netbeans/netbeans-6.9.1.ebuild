@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.3 2011/01/12 22:37:59 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.4 2011/01/21 19:33:14 fordfrog Exp $
 
 EAPI="3"
 WANT_SPLIT_ANT="true"
@@ -460,7 +460,8 @@ src_unpack () {
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
-		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
+		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch \
+		"${FILESDIR}"/${SLOT}/cnd.model.services-build.xml.patch
 
 	if use keychain ; then
 		epatch "${FILESDIR}"/${SLOT}/netbeans-keychain.patch
