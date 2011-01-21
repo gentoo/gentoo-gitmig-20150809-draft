@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ipsvd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.7 2009/11/20 09:09:25 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.8 2011/01/21 00:03:04 bangert Exp $
+
+*ipsvd-1.0.0-r1 (21 Jan 2011)
+
+  21 Jan 2011; Thilo Bangert <bangert@gentoo.org> +ipsvd-1.0.0-r1.ebuild,
+  +files/ipsvd-1.0.0-fix-parallel-make.diff:
+  fix parallel make issue (#337092)
 
   20 Nov 2009; Thilo Bangert <bangert@gentoo.org> -ipsvd-0.13.0.ebuild:
   remove old version
