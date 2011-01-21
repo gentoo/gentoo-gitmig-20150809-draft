@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8.ebuild,v 1.3 2010/10/24 15:43:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8.ebuild,v 1.4 2011/01/21 16:30:07 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="examples"
 
 RDEPEND=">=media-libs/taglib-1.4
