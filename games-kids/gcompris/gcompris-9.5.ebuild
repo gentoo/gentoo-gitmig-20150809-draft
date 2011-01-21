@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.5.ebuild,v 1.1 2011/01/06 23:54:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.5.ebuild,v 1.2 2011/01/21 06:01:27 mr_bones_ Exp $
 
 EAPI=2
 
@@ -23,6 +23,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-good
 	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-alsa
 	media-plugins/gst-plugins-vorbis
 	media-libs/sdl-mixer
 	media-libs/libsdl
