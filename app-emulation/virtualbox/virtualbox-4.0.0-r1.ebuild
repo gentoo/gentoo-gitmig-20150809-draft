@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.5 2011/01/18 19:31:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.6 2011/01/21 16:52:47 polynomial-c Exp $
 
 EAPI=2
 
@@ -190,6 +190,7 @@ src_compile() {
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
 		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
 		TOOL_YASM_AS=yasm KBUILD_PATH="${S}/kBuild" \
+		VBOX_GCC_OPT="${CXXFLAGS}" \
 		all || die "kmk failed"
 }
 
