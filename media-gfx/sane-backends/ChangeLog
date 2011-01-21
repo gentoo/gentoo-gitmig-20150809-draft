@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.175 2010/11/16 21:00:45 phosphan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.176 2011/01/21 20:52:27 phosphan Exp $
+
+  21 Jan 2011; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.18-r6.ebuild, sane-backends-1.0.19-r2.ebuild,
+  sane-backends-1.0.20-r3.ebuild, sane-backends-1.0.21.ebuild,
+  sane-backends-1.0.21-r1.ebuild:
+  Changing udev rules installation directory to $(get_libdir)/udev/rules.d, see bug #
+  348706.
 
   16 Nov 2010; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.17.ebuild, sane-backends-1.0.18-r6.ebuild,
