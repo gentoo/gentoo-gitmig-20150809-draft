@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6299 2011/01/21 18:13:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6300 2011/01/21 20:53:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2682,11 +2682,15 @@ net-ftp/ftpcube:sftp - Enable sftp connection support
 net-ftp/proftpd:authfile - Enable support for the auth-file module
 net-ftp/proftpd:ban - Enable support for the mod_ban module
 net-ftp/proftpd:case - Enable support for the mod_case module
+net-ftp/proftpd:copy - Enable support for the mod_copy module
 net-ftp/proftpd:ctrls - Enable support for the mod_ctrls and mod_ctrls_admin modules
 net-ftp/proftpd:deflate - Enable support for the mod_deflate module
+net-ftp/proftpd:diskuse - Enable support for the mod_diskuse module
 net-ftp/proftpd:exec - Enable support for the mod_exec module. WARNING: this could be a security risk
 net-ftp/proftpd:ident - Enable support for the mod_ident module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
+net-ftp/proftpd:ifversion - Enable support for the mod_ifversion module
+net-ftp/proftpd:qos - Enable support for the mod_qos module
 net-ftp/proftpd:ratio - Enable support for the mod_ratio module
 net-ftp/proftpd:readme - Enable support for the mod_readme module
 net-ftp/proftpd:rewrite - Enable support for the rewrite module
