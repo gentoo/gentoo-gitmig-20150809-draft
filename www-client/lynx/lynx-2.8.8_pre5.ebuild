@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.1 2010/09/11 22:01:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.2 2011/01/21 07:03:13 wormo Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ SRC_URI="http://lynx.isc.org/current/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="bzip2 cjk gnutls ipv6 nls ssl unicode"
+IUSE="bzip2 cjk gnutls idn ipv6 nls ssl unicode"
 
 RDEPEND="sys-libs/ncurses[unicode?]
 	sys-libs/zlib
@@ -42,7 +42,8 @@ RDEPEND="sys-libs/ncurses[unicode?]
 		!gnutls? ( >=dev-libs/openssl-0.9.8 )
 		gnutls? ( >=net-libs/gnutls-2.6.4 )
 	)
-	bzip2? ( app-arch/bzip2 )"
+	bzip2? ( app-arch/bzip2 )
+	idn? ( net-dns/libidn )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -103,6 +104,7 @@ src_configure() {
 		--enable-included-msgs \
 		--with-zlib \
 		$(use_enable nls) \
+		$(use_enable idn idna) \
 		$(use_enable ipv6) \
 		$(use_enable cjk) \
 		$(use_enable unicode japanese-utf8) \

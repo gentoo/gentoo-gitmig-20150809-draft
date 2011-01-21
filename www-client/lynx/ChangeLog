@@ -1,6 +1,13 @@
 # ChangeLog for www-client/lynx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.104 2010/10/17 04:41:00 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.105 2011/01/21 07:03:13 wormo Exp $
+
+  21 Jan 2011; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  -lynx-2.8.6-r2.ebuild, -lynx-2.8.6-r4.ebuild, lynx-2.8.8_pre5.ebuild:
+  Add idn useflag to prevent automatic detection of libidn,
+  thanks to Stelian Ionescu who reported this and submitted fix (bug
+  #350078)
+  Able to remove stale ebuilds now that mips took off their stable keyword
 
   17 Oct 2010; Mart Raudsepp <leio@gentoo.org> lynx-2.8.6-r2.ebuild:
   Drop to ~mips
