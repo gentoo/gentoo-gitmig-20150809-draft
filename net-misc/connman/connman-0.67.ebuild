@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.63-r2.ebuild,v 1.1 2010/12/17 14:46:07 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.67.ebuild,v 1.1 2011/01/21 15:10:00 dagger Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofono openvpn policykit threads tools +wifi wimax"
+IUSE="bluetooth +caps debug dnsproxy doc examples +ethernet google ofono openvpn policykit threads tools +wifi wimax"
 # gps meego ospm openconnect
 
 RDEPEND=">=dev-libs/glib-2.16
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=sys-kernel/linux-headers-2.6.30
 	bluetooth? ( net-wireless/bluez )
 	caps? ( sys-libs/libcap-ng )
-	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
 	policykit? ( sys-auth/polkit )
 	openvpn? ( net-misc/openvpn )
@@ -50,7 +49,6 @@ src_configure() {
 		$(use_enable wifi wifi builtin) \
 		$(use_enable bluetooth bluetooth builtin) \
 		$(use_enable ofono ofono builtin) \
-		$(use_enable dhclient dhclient builtin) \
 		$(use_enable dnsproxy dnsproxy builtin) \
 		$(use_enable google google builtin) \
 		$(use_enable openvpn openvpn builtin) \
