@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.14 2011/01/17 18:56:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.15 2011/01/21 13:49:43 dev-zero Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
-png pulseaudio qemu-ifup sasl sdl ssl static vde xen"
+png pulseaudio qemu-ifup rbd sasl sdl ssl spice static vde vhost-net xen"
 
 # Updated targets to use the only supported upstream target - x86_64-softmmu
 COMMON_TARGETS=""
@@ -68,8 +68,10 @@ RDEPEND="
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
+	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
+	spice? ( app-emulation/spice )
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xen? ( app-emulation/xen )
@@ -77,7 +79,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	>=sys-kernel/linux-headers-2.6.29
+	>=sys-kernel/linux-headers-2.6.35
 	ssl? ( dev-util/pkgconfig )
 "
 
@@ -108,6 +110,9 @@ pkg_setup() {
 			kvm_kern_warn
 		elif ! linux_chkconfig_present KVM; then
 			kvm_kern_warn
+		fi
+		if use vhost-net && ! linux_chkconfig_present VHOST_NET ; then
+			ewarn "You have to enable CONFIG_VHOST_NET in the kernel to get vhost-net support."
 		fi
 	fi
 
@@ -172,10 +177,13 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
+	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
 	conf_opts="${conf_opts} $(use_enable sdl)"
 	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
+	conf_opts="${conf_opts} $(use_enable spice)"
 	conf_opts="${conf_opts} $(use_enable vde)"
+	conf_opts="${conf_opts} $(use_enable vhost-net)"
 	conf_opts="${conf_opts} $(use_enable xen)"
 #	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"

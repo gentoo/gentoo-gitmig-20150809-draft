@@ -14,10 +14,13 @@
     <flag name='png'>Enable PNG compression for the VNC console server</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
     <flag name='qemu-ifup'>Provides the qemu-ifup script for use with QEMU's
-      built in bridging</flag>
-    <flag name='sdl'>Enable the SDL-based console</flag>
+		built in bridging</flag>
+	<flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
+	<flag name='sdl'>Enable the SDL-based console</flag>
+	<flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
     <flag name='ssl'>Enable TLS support for the VNC console server</flag>
-    <flag name='vde'>Enable VDE-based networking</flag>
+	<flag name='vde'>Enable VDE-based networking</flag>
+	<flag name='vhost-net'>Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet</flag>
     <flag name='xen'>Enables support for Xen backends</flag>
 </use>
 </pkgmetadata>
