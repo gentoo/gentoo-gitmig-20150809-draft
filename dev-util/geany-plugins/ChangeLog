@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/geany-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.1 2010/07/08 07:39:30 polynomial-c Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.2 2011/01/21 11:19:29 polynomial-c Exp $
+
+*geany-plugins-0.20 (21 Jan 2011)
+
+  21 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +geany-plugins-0.20.ebuild,
+  +files/geany-plugins-0.20-geanyprj-outsrc-tests.patch, metadata.xml:
+  Version bump by Nathan (bug #352172).
 
 *geany-plugins-0.19 (08 Jul 2010)
 
