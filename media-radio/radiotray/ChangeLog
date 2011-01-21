@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.8 2011/01/08 11:52:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.9 2011/01/21 08:53:08 hwoarang Exp $
+
+*radiotray-0.6.3 (21 Jan 2011)
+
+  21 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +radiotray-0.6.3.ebuild:
+  Version bump
 
   08 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   radiotray-0.6.1.ebuild:
