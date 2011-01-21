@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.1 2011/01/21 15:58:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.2 2011/01/21 16:04:41 ssuominen Exp $
 
 EAPI=3
-inherit eutils linux-info
+inherit linux-info
 
 DESCRIPTION="D-Bus abstraction for enumerating power devices and querying history and statistics"
 HOMEPAGE="http://upower.freedesktop.org/"
