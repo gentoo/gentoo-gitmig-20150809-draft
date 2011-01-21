@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12370 2011/01/20 23:56:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12371 2011/01/21 01:52:51 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (20 Jan 2011)
+# Replaced by dev-lua/luaevent
+# Masked for removal in 30 days on 20 Feb 2011
+# bug #333097
+dev-lua/luaevent-prosody
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
 # testing mask for upcoming exult release
