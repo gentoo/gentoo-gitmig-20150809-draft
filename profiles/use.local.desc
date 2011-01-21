@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6294 2011/01/21 11:33:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6295 2011/01/21 14:13:30 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -382,9 +382,12 @@ app-emulation/qemu-kvm:ncurses - Enable the ncurses-based console
 app-emulation/qemu-kvm:png - Enable PNG compression for the VNC console server
 app-emulation/qemu-kvm:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu-kvm:qemu-ifup - Provides the qemu-ifup script for use with QEMU's built in bridging
+app-emulation/qemu-kvm:rbd - Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD
 app-emulation/qemu-kvm:sdl - Enable the SDL-based console
+app-emulation/qemu-kvm:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu-kvm:ssl - Enable TLS support for the VNC console server
 app-emulation/qemu-kvm:vde - Enable VDE-based networking
+app-emulation/qemu-kvm:vhost-net - Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet
 app-emulation/qemu-kvm:xen - Enables support for Xen backends
 app-emulation/qemu-kvm-spice:aio - Enables support for Linux's Async IO
 app-emulation/qemu-kvm-spice:alsa - Enable alsa output for sound emulation
