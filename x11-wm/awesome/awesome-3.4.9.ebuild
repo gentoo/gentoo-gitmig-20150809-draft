@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9.ebuild,v 1.1 2011/01/20 16:00:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9.ebuild,v 1.2 2011/01/21 20:21:35 wired Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus doc elibc_FreeBSD"
 
-RDEPEND=">=dev-lang/lua-5.1[deprecated]
+RDEPEND=">=dev-lang/lua-5.1
 	dev-libs/libev
 	>=dev-libs/libxdg-basedir-1
 	media-libs/imlib2[png]
@@ -43,8 +43,6 @@ DEPEND="${RDEPEND}
 	)"
 
 RDEPEND="${RDEPEND}
-	app-shells/bash
-	app-shells/bash-completion
 	|| (
 		x11-misc/gxmessage
 		x11-apps/xmessage
