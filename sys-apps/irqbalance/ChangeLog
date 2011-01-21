@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/irqbalance
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.26 2010/12/03 19:52:57 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.27 2011/01/21 15:25:09 vapier Exp $
+
+  21 Jan 2011; Mike Frysinger <vapier@gentoo.org> irqbalance-0.56.ebuild:
+  Depend on glib by SLOT rather than version #352209 by Jan Psota.
 
 *irqbalance-0.56 (03 Dec 2010)
 
