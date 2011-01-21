@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/udev-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/ChangeLog,v 1.8 2011/01/11 21:59:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/udev-syntax/ChangeLog,v 1.9 2011/01/21 15:34:39 jer Exp $
+
+  21 Jan 2011; Jeroen Roovers <jer@gentoo.org> udev-syntax-20051016-r1.ebuild:
+  Stable for HPPA (bug #347579).
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> udev-syntax-20051016-r1.ebuild:
   amd64/x86 stable, bug #347579
