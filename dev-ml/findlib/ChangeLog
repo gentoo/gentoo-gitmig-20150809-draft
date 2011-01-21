@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.70 2011/01/13 22:22:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.71 2011/01/21 14:39:12 jer Exp $
+
+  21 Jan 2011; Jeroen Roovers <jer@gentoo.org> findlib-1.2.6.ebuild:
+  Stable for HPPA (bug #349633).
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> findlib-1.2.6.ebuild:
   stable ppc, bug 349633
