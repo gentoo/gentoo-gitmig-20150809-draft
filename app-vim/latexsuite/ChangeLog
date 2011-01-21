@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/latexsuite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.41 2010/11/13 18:37:59 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.42 2011/01/21 17:14:00 xarthisius Exp $
+
+  21 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  latexsuite-1.8.23.20100129.ebuild:
+  ppc/ppc64 stable wrt #342883
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
   latexsuite-1.8.23.20100129.ebuild:
