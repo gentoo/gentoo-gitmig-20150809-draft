@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.390 2010/12/09 16:11:56 rich0 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.391 2011/01/21 15:04:55 lu_zero Exp $
+
+  21 Jan 2011; Luca Barbato <lu_zero@gentoo.org> ffmpeg-9999.ebuild:
+  Update repository url, switch to git
 
   09 Dec 2010; Richard Freeman <rich0@gentoo.org> ffmpeg-0.6_p25767.ebuild:
   amd64 stable - 347625
