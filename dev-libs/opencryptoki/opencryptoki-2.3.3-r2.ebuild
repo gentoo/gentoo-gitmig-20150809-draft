@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r2.ebuild,v 1.4 2011/01/20 01:43:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r2.ebuild,v 1.5 2011/01/21 03:26:42 flameeyes Exp $
 
 EAPI="2"
 
@@ -83,6 +83,9 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
+
+	# doesn't use libltdl; only dlopen()-based interfaces
+	find "${D}" -name '*.la' -delete
 
 	# We replace their ld.so and init files (mostly designed for RedHat
 	# as far as I can tell) with our own replacements.
