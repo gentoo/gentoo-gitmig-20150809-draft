@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.177 2011/01/12 16:29:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.178 2011/01/22 22:26:32 dilfridge Exp $
+
+  22 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkdepim-4.4.8.ebuild, libkdepim-4.4.9.ebuild:
+  Fix tests by adding virtualx support, bug 351788
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libkdepim-4.4.8.ebuild:
   Stable on amd64 wrt bug #351345
