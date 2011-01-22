@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Archive-Tar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.37 2011/01/13 12:08:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.38 2011/01/22 10:07:56 tove Exp $
+
+  22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-Archive-Tar-1.54.ebuild:
+  Add perl-5.12.3 as provider
 
 *perl-Archive-Tar-1.760 (13 Jan 2011)
 
