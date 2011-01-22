@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.32.ebuild,v 1.2 2011/01/21 09:10:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.32.ebuild,v 1.3 2011/01/22 01:32:11 dirtyepic Exp $
 
 EAPI=3
 
@@ -48,6 +48,8 @@ src_prepare() {
 	use ru-g     && epatch "${S}"/alt/ge1.diff
 	use quote    && epatch "${S}"/alt/gq2.diff
 	use width    && epatch "${S}"/alt/cm2.diff
+
+	epatch "${FILESDIR}"/${P}-parallel-install.patch
 }
 
 src_configure() {
@@ -68,13 +70,13 @@ src_compile() {
 
 src_install() {
 	if use psf; then
-		emake -j1 DESTDIR="${D}" install-psf install-uni install-acm install-ref || die
+		emake DESTDIR="${D}" install-psf install-uni install-acm install-ref || die
 	fi
 	if use raw-font-data; then
-		emake -j1 DESTDIR="${D}" install.raw || die
+		emake DESTDIR="${D}" install.raw || die
 	fi
 	if use pcf; then
-		emake -j1 DESTDIR="${D}" install-pcf || die
+		emake DESTDIR="${D}" install-pcf || die
 	fi
 
 	font_src_install
