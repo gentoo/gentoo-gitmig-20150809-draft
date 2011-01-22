@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.8 2011/01/20 18:05:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.9 2011/01/22 14:26:45 hwoarang Exp $
 
 EAPI=2
 
@@ -8,7 +8,8 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 	inherit autotools git
 	SRC_URI=""
-	EXTRA_DEPEND="dev-util/gtk-doc-am"
+	EXTRA_DEPEND="dev-util/gtk-doc
+		dev-util/gtk-doc-am"
 else
 	SRC_URI="mirror://sourceforge/pcmanfm/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86"
@@ -32,7 +33,6 @@ RDEPEND="${COMMON_DEPEND}
 	udev? ( sys-fs/udisks )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/gtk-doc
 	dev-util/pkgconfig
 	sys-devel/gettext
 	${EXTRA_DEPEND}"
