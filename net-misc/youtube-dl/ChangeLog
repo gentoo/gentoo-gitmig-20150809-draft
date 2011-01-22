@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.79 2011/01/22 17:02:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.80 2011/01/22 20:34:54 xarthisius Exp $
+
+  22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  youtube-dl-2010.12.09.ebuild:
+  ppc64 stable wrt #351586
 
   22 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   youtube-dl-2010.12.09.ebuild:
