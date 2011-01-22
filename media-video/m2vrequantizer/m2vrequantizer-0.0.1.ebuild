@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-0.0.1.ebuild,v 1.3 2007/11/27 11:55:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/m2vrequantizer/m2vrequantizer-0.0.1.ebuild,v 1.4 2011/01/22 23:55:50 hd_brummy Exp $
+
+EAPI="2"
 
 REQUANT="M2VRequantizer"
 REQUANT_VN="20030925"
@@ -16,6 +18,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=""
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${JAU_FILE}
 
@@ -28,7 +31,7 @@ src_compile() {
 
 	cd "${WORKDIR}/${REQUANT}-${REQUANT_VN}/src"
 	gcc -c ${CFLAGS} main.c -o requant.o
-	gcc ${CFLAGS} requant.o -o requant -lm
+	gcc ${CFLAGS} ${LDFLAGS} requant.o -o requant -lm
 }
 
 src_install() {
