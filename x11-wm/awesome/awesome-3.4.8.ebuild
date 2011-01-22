@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.6 2010/11/05 23:42:06 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.8.ebuild,v 1.7 2011/01/22 03:49:15 matsuu Exp $
 
 EAPI="3"
 inherit cmake-utils eutils
@@ -27,12 +27,13 @@ RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dbus? ( >=sys-apps/dbus-1 )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )"
 
+# graphicsmagick's 'convert -channel' has no Alpha support, bug #352282
 DEPEND="${RDEPEND}
 	>=app-text/asciidoc-8.4.5
 	app-text/xmlto
 	dev-util/gperf
 	dev-util/pkgconfig
-	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
+	media-gfx/imagemagick[png]
 	>=x11-proto/xcb-proto-1.5
 	>=x11-proto/xproto-7.0.15
 	doc? (
