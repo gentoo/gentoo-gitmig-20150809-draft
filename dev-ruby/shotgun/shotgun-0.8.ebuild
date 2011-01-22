@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/shotgun-0.8.ebuild,v 1.1 2010/07/19 10:00:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/shotgun-0.8.ebuild,v 1.2 2011/01/22 16:38:07 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -22,7 +22,7 @@ IUSE=""
 
 # Warning: the code does not use gem versioning to make sure to load
 # only the right rack version so we might need to patch it to work :/
-ruby_add_rdepend '=dev-ruby/rack-1.0*'
+ruby_add_rdepend 'dev-ruby/rack'
 ruby_add_bdepend test dev-ruby/bacon
 
 all_ruby_install() {
