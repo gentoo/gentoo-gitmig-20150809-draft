@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.792 2011/01/19 20:51:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.793 2011/01/22 06:52:31 zmedico Exp $
+
+*portage-2.2.0_alpha19 (22 Jan 2011)
+
+  22 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha19.ebuild:
+  2.2.0_alpha19 version bump. This includes all of the fixes in
+  portage-2.1.9.35. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.35 (22 Jan 2011)
+
+  22 Jan 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.35.ebuild:
+  2.1.9.35 version bump. This fixes bug #287648 (logging via pty with
+  python3). Bug #349307 tracks all bugs fixed since 2.1.9.25.
 
 *portage-2.2.0_alpha18 (19 Jan 2011)
 
