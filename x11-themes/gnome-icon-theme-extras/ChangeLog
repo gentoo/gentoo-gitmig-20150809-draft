@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gnome-icon-theme-extras
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.1 2011/01/22 08:40:45 nirbheek Exp $
+
+*gnome-icon-theme-extras-2.30.1 (22 Jan 2011)
+
+  22 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-icon-theme-extras-2.30.1.ebuild, +metadata.xml:
+  Add new package with icon theme extras
+
