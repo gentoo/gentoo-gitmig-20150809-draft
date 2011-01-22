@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nautilus-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.5 2011/01/12 18:40:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.6 2011/01/22 16:29:17 phajdan.jr Exp $
+
+  22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nautilus-python-0.6.1.ebuild:
+  x86 stable wrt bug #346985
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   nautilus-python-0.6.1.ebuild:
