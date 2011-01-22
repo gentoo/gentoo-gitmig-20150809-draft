@@ -1,5 +1,5 @@
---- Makefile.orig	2010-06-18 19:17:48.000000000 +0200
-+++ Makefile	2010-07-20 02:00:18.000000000 +0200
+--- a/Makefile	2010-06-18 19:17:48.000000000 +0200
++++ b/Makefile	2010-07-20 02:00:18.000000000 +0200
 @@ -26,19 +26,19 @@
  # everything needed to run, just short of installation
  #

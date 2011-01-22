@@ -1,6 +1,5 @@
-diff -u lilo-22.8.ORIG/lilo.c lilo-22.8/lilo.c
---- lilo-22.8.ORIG/lilo.c	2007-03-20 10:13:06.000000000 +0000
-+++ lilo-22.8/lilo.c	2007-03-20 10:13:33.000000000 +0000
+--- a/lilo.c
++++ b/lilo.c
 @@ -548,7 +548,8 @@
      fprintf(errstd,"%7s%s -T help \t\t\tlist additional options\n", "", name);
      fprintf(errstd,"%7s%s -X\t\t\t\tinternal compile-time options\n", "", name);

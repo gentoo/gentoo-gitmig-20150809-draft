@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.60 2010/11/05 05:48:55 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.61 2011/01/22 17:38:20 jer Exp $
+
+  22 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  files/lilo-22.8-correct-usage-info.patch, files/lilo-22.8-makefile.patch,
+  files/lilo-22.8-novga.patch, files/lilo-23.0-make.patch:
+  Clean up patches.
 
 *lilo-23.1 (05 Nov 2010)
 

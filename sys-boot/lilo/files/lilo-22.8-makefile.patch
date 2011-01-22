@@ -1,9 +1,5 @@
-Common subdirectories: lilo-22.8.ORIG/diagnose and lilo-22.8/diagnose
-Common subdirectories: lilo-22.8.ORIG/doc and lilo-22.8/doc
-Common subdirectories: lilo-22.8.ORIG/dos and lilo-22.8/dos
-diff -u lilo-22.8.ORIG/Makefile lilo-22.8/Makefile
---- lilo-22.8.ORIG/Makefile	2007-03-20 10:15:59.000000000 +0000
-+++ lilo-22.8/Makefile	2007-03-20 10:22:19.000000000 +0000
+--- a/Makefile
++++ b/Makefile
 @@ -69,18 +69,7 @@
     -DMDPRAID -DDEVMAPPER
     
@@ -44,6 +40,3 @@ diff -u lilo-22.8.ORIG/Makefile lilo-22.8/Makefile
  	cp keytab-lilo.pl $$ROOT$(USRSBIN_DIR)
  	cp manPages/lilo.8 $$ROOT$(MAN_DIR)/man8
  	cp manPages/mkrescue.8 $$ROOT$(MAN_DIR)/man8
-Only in lilo-22.8: Makefile.orig
-Common subdirectories: lilo-22.8.ORIG/manPages and lilo-22.8/manPages
-Common subdirectories: lilo-22.8.ORIG/sample and lilo-22.8/sample
