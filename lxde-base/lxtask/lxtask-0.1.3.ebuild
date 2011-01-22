@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/lxtask-0.1.3.ebuild,v 1.5 2011/01/08 12:41:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/lxtask-0.1.3.ebuild,v 1.6 2011/01/22 14:15:21 xarthisius Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 arm ~ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 SLOT="0"
 IUSE=""
 
