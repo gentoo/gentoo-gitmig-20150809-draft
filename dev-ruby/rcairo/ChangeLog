@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.47 2011/01/07 15:03:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.48 2011/01/22 08:07:31 graaff Exp $
+
+*rcairo-1.10.0 (22 Jan 2011)
+
+  22 Jan 2011; Hans de Graaff <graaff@gentoo.org> +rcairo-1.10.0.ebuild:
+  Version bump, fixing bug 339604. Exclude one failing test from test suite.
 
   07 Jan 2011; Hans de Graaff <graaff@gentoo.org> rcairo-1.8.1.ebuild:
   Use proper call to install gemspec now that the eclass changed interface.
