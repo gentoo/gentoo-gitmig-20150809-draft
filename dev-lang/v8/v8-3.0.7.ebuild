@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.0.7.ebuild,v 1.1 2011/01/21 07:46:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.0.7.ebuild,v 1.2 2011/01/22 10:05:32 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -86,5 +86,8 @@ src_install() {
 }
 
 src_test() {
-	tools/test.py --no-build -p dots || die
+	# Make sure we use the libv8.so from our build directory,
+	# and not the /usr/lib one (it may be missing if we are
+	# installing for the first time or upgrading), see bug #352374.
+	LD_LIBRARY_PATH="${S}" tools/test.py --no-build -p dots || die
 }
