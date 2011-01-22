@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.5 2010/12/09 15:42:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.6 2011/01/22 23:03:51 xarthisius Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd ~x86-linux"
 
 src_configure() {
 	econf $(use_enable debug) \
