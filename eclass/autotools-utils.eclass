@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.6 2011/01/20 00:12:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.7 2011/01/22 20:28:53 reavertm Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -109,7 +109,7 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # Optional econf arguments as Bash array. Should be defined before calling src_configure.
 # @CODE
 # src_configure() {
-# 	myeconfargs=(
+# 	local myeconfargs=(
 # 		--disable-readline
 # 		--with-confdir="/etc/nasty foo confdir/"
 # 		$(use_enable debug cnddebug)
