@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.183 2011/01/12 16:33:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.184 2011/01/22 14:34:22 graaff Exp $
+
+  22 Jan 2011; Hans de Graaff <graaff@gentoo.org> -rails-2.3.5-r2.ebuild,
+  -rails-2.3.5-r3.ebuild, -rails-2.3.8.ebuild:
+  Remove old versions.
 
   12 Jan 2011; Hans de Graaff <graaff@gentoo.org> rails-3.0.3.ebuild:
   Update dependency on eselect-rails to a version that understands Rails
