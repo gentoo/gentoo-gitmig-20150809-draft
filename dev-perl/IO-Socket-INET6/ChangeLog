@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.31 2011/01/15 08:27:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.32 2011/01/22 11:55:03 tove Exp $
+
+*IO-Socket-INET6-2.670 (22 Jan 2011)
+
+  22 Jan 2011; Torsten Veller <tove@gentoo.org> +IO-Socket-INET6-2.670.ebuild:
+  Version bump
 
 *IO-Socket-INET6-2.660 (15 Jan 2011)
 
