@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12378 2011/01/22 13:17:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12379 2011/01/22 13:35:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2010)
+# Printing is broken because of xfprint requirement.
+# Package is using deprecated libxfcegui4 instead of libxfce4ui. 
+# No development in about year at upstream git.
+#
+# Use app-editors/leafpad instead.
+#
+# Masked for removal in 30 days.
+app-editors/mousepad
 
 # Torsten Veller <tove@gentoo.org> (22 Jan 2010)
 # Mask perl-5.12.3
