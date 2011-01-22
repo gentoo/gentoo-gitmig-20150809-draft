@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.16 2011/01/12 18:54:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.17 2011/01/22 16:24:58 phajdan.jr Exp $
+
+  22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qbzr-0.19.3.ebuild:
+  x86 stable wrt bug #346985
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> qbzr-0.19.3.ebuild:
   Stable on amd64 wrt bug #346985

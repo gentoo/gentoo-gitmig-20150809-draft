@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/bzr-svn-1.0.4.ebuild,v 1.3 2011/01/12 18:48:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/bzr-svn-1.0.4.ebuild,v 1.4 2011/01/22 16:26:26 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -18,7 +18,7 @@ SRC_URI="http://samba.org/~jelmer/bzr/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 # As long as https://bugs.launchpad.net/bzr-svn/+bug/526485 is unfixed
 RESTRICT=test
