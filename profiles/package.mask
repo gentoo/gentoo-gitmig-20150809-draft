@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12377 2011/01/22 09:39:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12378 2011/01/22 13:17:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -229,22 +229,6 @@ dev-util/devel-chroots
 # Removal in 30 days. Bug 349012.
 gnome-base/gnome-mount
 
-# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Orphaned package, still using deprecated HAL
-# Removal in 30 days, bug 344313
-app-misc/hal-cups-utils
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Graphical interface for sys-apps/hal.   Removal in 30 days.
-gnome-extra/gnome-device-manager
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Replaced by rox-base/rox-media, bug 313431, Comment #2
-# Still using obsolete sys-apps/hal and gnome-base/gnome-mount,
-# bug 349012, Comment #1.
-# Removal in 30 days.
-rox-base/devtray
-
 # Sergei Trofimovich <slyfox@gentoo.org> (18 Dec 2010)
 # Uses custom buildsystem. As a result has a lot of QA
 # issues (like bug #282909). Known to be broken on ghc-6.10+.
@@ -263,13 +247,6 @@ virtual/rubygems
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-3.0 versions are used for chromium-10.x versions.
 >=dev-lang/v8-3.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Dec 2010)
-# Discontinued by upstream and won't be part of Xfce 4.8
-# Moved to git archive tree:
-# http://git.xfce.org/archive/xfprint/
-# Removal in 30 days
-net-print/xfprint
 
 # Tiziano Müller <dev-zero@gentoo.org> (13 Dec 2010)
 # Mask for testing the passenger-3.0.1 module
@@ -373,10 +350,6 @@ dev-scheme/sisc
 # mask beta release
 =net-analyzer/tcpreplay-3.4.5*
 
-# Samuli Suominen <ssuominen@gentoo.org> (29 Oct 2010)
-# freqtweak, bug 336160, uses obsolete wxgtk
-media-sound/freqtweak
-
 # Gilles Dartiguelongue <eva@gentoo.org> (28 Oct 2010)
 # testing mask for development series
 >=app-misc/tracker-0.9
@@ -395,12 +368,6 @@ media-sound/freqtweak
 # 2.0.9999 instead if you want a kmess
 # that actually builds
 =net-im/kmess-9999
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Oct 2010)
-# Orphaned library and bindings. Bugs 149150, 193595 and 239569
-# Masked for removal in 30 days
-dev-python/PyAmanith
-media-libs/amanith
 
 # Arun Raghavan <ford_prefect@gentoo.org> (26 Oct 2010)
 # Mask development versions of Rygel
@@ -429,16 +396,6 @@ gnustep-base/libobjc2
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
 >=sys-libs/db-5.1
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 Oct 2010)
-# Packages using obsolete policykit:
-#
-# kde-base/policykit-kde replaced by sys-auth/polkit-kde
-# sys-auth/policykit-qt replaced by sys-auth/polkit-qt
-#
-# Masked for removal in 30 days or sooner
-kde-base/policykit-kde
-sys-auth/policykit-qt
 
 # Luca Barbato <lu_zero@gentoo.org> (01 Oct 2010)
 # beta version, has known issues
