@@ -1,5 +1,5 @@
---- configure.in.orig	2003-03-11 00:53:20.000000000 +0100
-+++ configure.in	2010-03-12 14:15:24.000000000 +0100
+--- a/configure.in	2003-03-11 00:53:20.000000000 +0100
++++ b/configure.in	2010-03-12 14:15:24.000000000 +0100
 @@ -629,6 +629,41 @@
      fi
  fi
@@ -42,8 +42,8 @@
  dnl Find system shared object paths.
  AC_FIND_SYSTEM_SHOBJ(libc)
  if test "$install_runidn" = yes ; then
---- lib/Makefile.in.orig	2003-03-12 17:14:41.000000000 +0100
-+++ lib/Makefile.in	2010-03-12 15:54:35.000000000 +0100
+--- a/lib/Makefile.in	2003-03-12 17:14:41.000000000 +0100
++++ b/lib/Makefile.in	2010-03-12 15:54:35.000000000 +0100
 @@ -241,7 +241,7 @@
  
  install-common:
