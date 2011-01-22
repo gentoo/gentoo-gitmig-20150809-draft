@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.230 2011/01/12 16:25:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.231 2011/01/22 22:18:04 dilfridge Exp $
+
+  22 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> kmail-4.4.8.ebuild,
+  kmail-4.4.9.ebuild:
+  Fixed tests by adding VIRTUALX support, bug 351789
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> kmail-4.4.8.ebuild:
   Stable on amd64 wrt bug #351345
