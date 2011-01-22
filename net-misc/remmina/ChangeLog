@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/remmina
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.2 2010/05/27 15:18:05 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.3 2011/01/22 16:05:36 hwoarang Exp $
+
+*remmina-0.9.3 (22 Jan 2011)
+
+  22 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +remmina-0.9.3.ebuild:
+  Version bump. Bug #329377. Thanks to Rion <rion4ik@gmail.com> for the ebuild
 
   27 May 2010; Tristan Heaven <nyhm@gentoo.org> remmina-0.7.5.ebuild,
   metadata.xml:

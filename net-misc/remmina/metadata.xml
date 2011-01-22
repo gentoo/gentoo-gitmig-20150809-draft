@@ -6,6 +6,10 @@
 		<email>nyhm@gentoo.org</email>
 		<name>Tristan Heaven</name>
 	</maintainer>
+	<maintainer>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+	</maintainer>
 	<use>
 		<flag name="ssh">Enable support for SSH/SFTP using <pkg>net-libs/libssh</pkg></flag>
 		<flag name="unique">Enable single instance support using <pkg>dev-libs/libunique</pkg></flag>
