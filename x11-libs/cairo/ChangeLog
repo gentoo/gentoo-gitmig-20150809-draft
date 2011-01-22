@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.267 2011/01/13 19:07:12 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.268 2011/01/22 21:34:39 grobian Exp $
+
+  22 Jan 2011; Fabian Groffen <grobian@gentoo.org> cairo-1.10.2-r1.ebuild:
+  Fix for Solaris, cairo-trace doesn't build
 
 *cairo-1.10.2-r1 (13 Jan 2011)
 
