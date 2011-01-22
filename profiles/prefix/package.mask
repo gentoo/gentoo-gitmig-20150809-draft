@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.83 2010/12/05 14:50:19 grobian Exp $
+# $Id: package.mask,v 1.84 2011/01/22 19:58:37 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -101,11 +101,6 @@ net-fs/curlftpfs
 net-wireless/iw
 dev-libs/libnl
 net-wireless/aircrack-ng
-
-# Fabian Groffen <grobian@gentoo.org> (25 Mar 2009)
-# Fails loading fonts (e.g. loadallfonts) with
-# Error: /rangecheck in /findfont, 8.63 works fine
->=app-text/ghostscript-gpl-8.64
 
 # Fabian Groffen <grobian@gentoo.org> (22 Jan 2009)
 # b0rkened on Darwin, Solaris and IRIX, bug #256022, bug #255742
