@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.9 2010/10/10 21:54:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.10 2011/01/22 02:28:43 bicatali Exp $
 
 EAPI=2
 

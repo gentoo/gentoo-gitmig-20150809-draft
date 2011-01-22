@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.1 2010/11/07 21:06:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.2 2011/01/22 02:28:43 bicatali Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils versionator toolchain-funcs
 
@@ -95,15 +95,15 @@ src_prepare() {
 }
 
 src_configure() {
-	export GEANT4_DIR="/usr/share/${PN}${PV1}"
+	export GEANT4_DIR="${EPREFIX}/usr/share/${PN}${PV1}"
 	# where to put compiled libraries;
 	# we set env var G4LIB in src_install()
 	# to avoid confusing make
-	export GEANT4_LIBDIR=/usr/$(get_libdir)/${PN}${PV1}
+	export GEANT4_LIBDIR="${EPREFIX}/usr/$(get_libdir)/${PN}${PV1}"
 	export G4INSTALL="${S}"
 	export G4WORKDIR="${S}"
-	export G4INCLUDE="${D}/usr/include/${PN}"
-	export CLHEP_BASE_DIR=/usr
+	export G4INCLUDE="${ED}/usr/include/${PN}"
+	export CLHEP_BASE_DIR="${EPREFIX}/usr"
 
 	# parse USE; just set flags of drivers to build, G4*_USE_* vars are set
 	# later automatically for G4*_BUILD_*_DRIVER
@@ -114,11 +114,14 @@ src_configure() {
 	use athena              && export G4UI_BUILD_XAW_SESSION=y
 	if use qt4; then
 		export G4UI_BUILD_QT_SESSION=y
-		export QTLIBS="-L/usr/$(get_libdir)/qt4 -lQtCore -lQtGui"
-		export QTFLAGS="-I/usr/include/qt4 -I/usr/include/qt4/Qt"
-		use opengl && \
+		export G4UI_USE_QT=1
+		export QTLIBS="-L${EPREFIX}/usr/$(get_libdir)/qt4 -lQtCore -lQtGui"
+		export QTFLAGS="-I${EPREFIX}/usr/include/qt4 -I${EPREFIX}/usr/include/qt4/Qt"
+		if use opengl; then
 			export GLQTLIBS="${QTLIBS} -lQtOpenGL"
-		#export QTFLAGS="${QTFLAGS} -I/usr/include/qt4/QtOpenGL"
+			export G4VIS_USE_OPENGLQT=1
+			export G4VIS_BUILD_OPENGLQT_DRIVER=y
+		fi
 	fi
 	use dawn                && export G4VIS_BUILD_DAWN_DRIVER=y
 	use raytracerx          && export G4VIS_BUILD_RAYTRACERX_DRIVER=y
@@ -167,8 +170,7 @@ g4_create_env_script() {
 	# from make during the compile
 	export G4INSTALL=${GEANT4_DIR}
 	export G4LIB=${GEANT4_LIBDIR}
-	export G4INCLUDE=${G4INCLUDE/${D}/}
-	export G4WORKDIR=\${HOME}/${PN}${PV1}
+	export G4INCLUDE=${G4INCLUDE/${ED}/}
 
 	local g4env=99${PN}${PV1}
 	cat <<-EOF > ${g4env}
@@ -188,11 +190,12 @@ g4_create_env_script() {
 			G4ABLADATA G4NEUTRONHPCROSSSECTIONS G4REALSURFACEDATA
 	fi
 
-	# read env variables defined upto now
+	# read env variables defined up to now
 	printenv | grep ^G4 | uniq >> ${g4env}
 	# define env vars for capabilities we can build into user projects
 	printenv | uniq | \
 		sed -n -e '/^G4/s:BUILD\(.*\)_DRIVER:USE\1:gp' >> ${g4env}
+	sed -i -e '/G4WORKDIR/d' ${g4env}
 	doenvd ${g4env} || die "Installing environment scripts failed "
 }
 
@@ -246,9 +249,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Geant4 projects are by default build in \$HOME/geant4."
-	elog "If you want to change, set \$G4WORKDIR to another directory."
-
-	elog "To use Aida you have to explicitly set G4ANALYSIS_USE=y for"
+	elog "Users need to define the G4WORKDIR (\$HOME/geant4 is normally used)."
+	elog "To use AIDA you have to explicitly set G4ANALYSIS_USE=y in"
 	elog "your environment."
 }
