@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.105 2011/01/16 12:28:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.106 2011/01/22 06:58:37 zmedico Exp $
+
+  22 Jan 2011; Zac Medico <zmedico@gentoo.org> ppc64/package.use.mask:
+  Unmask USE=python3 for sys-apps/portage since python-3.x has a stable ppc64
+  keyword now.
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Add sci-chemistry/ccp4[arpwarp] wrt #303931
