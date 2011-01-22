@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.1 2009/06/14 09:37:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.2 2011/01/22 23:20:58 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://vdrfiles/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.37"
@@ -18,8 +20,8 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/admin-${PV}
 
-src_unpack() {
-	vdr-plugin_src_unpack
+src_prepare() {
+	vdr-plugin_src_prepare
 
 	sed -i "s:/etc/vdr/plugins/admin:/usr/share/vdr/admin/bin:" gentoo/admin.conf
 	sed -i "s:/etc/conf.d/vdr.admin.cfg:/usr/lib/vdr/rcscript/plugin-admin.sh:" gentoo/{runvdr,*.sh}
