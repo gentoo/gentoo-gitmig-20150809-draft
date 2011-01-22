@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/nvclock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.4 2011/01/03 23:49:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.5 2011/01/22 18:00:17 jer Exp $
+
+  22 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  files/nvclock-0.8_beta4-as-needed.patch,
+  files/nvclock-0.8_beta4-headers.patch:
+  Clean up patches.
 
 *nvclock-0.8_p20110102-r1 (03 Jan 2011)
 

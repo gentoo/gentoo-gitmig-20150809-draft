@@ -1,9 +1,3 @@
-bios.c: In function ‘dump_bios’:
-bios.c:909: warning: implicit declaration of function ‘load_bios_pramin’
-bios.c:911: warning: implicit declaration of function ‘load_bios_prom’
-
-diff --git a/src/backend/bios.c b/src/backend/bios.c
-index 3266b57..20fadc8 100644
 --- a/src/backend/bios.c
 +++ b/src/backend/bios.c
 @@ -891,6 +891,8 @@ int main(int argc, char **argv)
@@ -16,11 +10,6 @@ index 3266b57..20fadc8 100644
  {
  	int i;
 
-libc_wrapper.c: In function ‘xf86usleep’:
-libc_wrapper.c:53: warning: implicit declaration of function ‘usleep’
-
-diff --git a/src/backend/libc_wrapper.c b/src/backend/libc_wrapper.c
-index 4787205..9e490cd 100644
 --- a/src/backend/libc_wrapper.c
 +++ b/src/backend/libc_wrapper.c
 @@ -25,6 +25,7 @@
@@ -32,11 +21,6 @@ index 4787205..9e490cd 100644
  #include "xfree.h"
  
 
-nv40.c: In function ‘nv43_get_gpu_temp’:
-nv40.c:393: warning: implicit declaration of function ‘usleep’
-
-diff --git a/src/backend/nv40.c b/src/backend/nv40.c
-index 73472fa..63c9609 100644
 --- a/src/backend/nv40.c
 +++ b/src/backend/nv40.c
 @@ -68,6 +68,7 @@
@@ -48,11 +32,6 @@ index 73472fa..63c9609 100644
  
  /*
 
-banner.c: In function ‘banner_set_text’:
-banner.c:115: warning: format not a string literal and no format arguments
-
-diff --git a/src/gtk/banner.c b/src/gtk/banner.c
-index df2eb55..69851ae 100644
 --- a/src/gtk/banner.c
 +++ b/src/gtk/banner.c
 @@ -112,7 +112,7 @@ void banner_set_text(Banner *banner, char *text, int type)
@@ -65,12 +44,6 @@ index df2eb55..69851ae 100644
  	/* Refresh the banner */
  	banner_expose(GTK_WIDGET(banner), NULL, banner);
 
-main.c: In function ‘gui_init’:
-main.c:235: warning: implicit declaration of function ‘XOpenDisplay’
-main.c:235: warning: cast to pointer from integer of different size
-
-diff --git a/src/gtk/main.c b/src/gtk/main.c
-index b3bbacb..df7e5b1 100644
 --- a/src/gtk/main.c
 +++ b/src/gtk/main.c
 @@ -25,6 +25,7 @@
@@ -82,11 +55,6 @@ index b3bbacb..df7e5b1 100644
  #include "banner.h"
  #include "interface.h"
 
-smartdimmer.c: In function ‘main’:
-smartdimmer.c:107: warning: implicit declaration of function ‘isdigit’
-
-diff --git a/src/smartdimmer.c b/src/smartdimmer.c
-index 295cd49..769c1bc 100644
 --- a/src/smartdimmer.c
 +++ b/src/smartdimmer.c
 @@ -38,6 +38,7 @@
