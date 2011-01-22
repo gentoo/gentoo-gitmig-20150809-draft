@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ganeti-instance-image-0.4.ebuild,v 1.1 2010/06/07 22:30:37 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ganeti-instance-image-0.4.ebuild,v 1.2 2011/01/22 20:09:49 ramereth Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://code.osuosl.org/projects/ganeti-image"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
