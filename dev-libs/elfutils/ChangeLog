@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.149 2011/01/14 02:38:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.150 2011/01/22 11:25:37 armin76 Exp $
+
+  22 Jan 2011; Raúl Porcel <armin76@gentoo.org> elfutils-0.149.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #348407
 
 *elfutils-0.151 (14 Jan 2011)
 
