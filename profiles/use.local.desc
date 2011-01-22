@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6300 2011/01/21 20:53:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6301 2011/01/22 02:34:34 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3602,6 +3602,7 @@ sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering
 sci-physics/geant:gdml - Enable geometry markup language for xml
 sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:global - Produce a huge global library instead of small ones
+sci-physics/geant:granular - Produce many small libraries instead of global ones
 sci-physics/geant:openinventor - Add support for media-libs/openinventor SGI toolkit
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
