@@ -1,8 +1,6 @@
   Needs a little more thought, or some method which would allow for an upstream
 push without affecting the non-Gentoo users.
 
-diff --git i/surfraw-bash-completion.IN w/surfraw-bash-completion.IN
-index d5d1374..41a232e 100644
 --- i/surfraw-bash-completion.IN
 +++ w/surfraw-bash-completion.IN
 @@ -4,6 +4,22 @@
