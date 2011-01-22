@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.112 2011/01/11 22:03:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.113 2011/01/22 18:11:57 xarthisius Exp $
+
+  22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> DirectFB-1.4.5.ebuild:
+  ppc64 stable wrt #343103
 
   11 Jan 2011; Brent Baude <ranger@gentoo.org> DirectFB-1.4.5.ebuild:
   Marking DirectFB-1.4.5 ppc for bug 343103
