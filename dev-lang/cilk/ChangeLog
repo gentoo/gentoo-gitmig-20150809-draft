@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cilk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cilk/ChangeLog,v 1.1 2008/10/27 14:41:53 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cilk/ChangeLog,v 1.2 2011/01/22 03:35:44 bicatali Exp $
+
+  22 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> cilk-5.4.6.ebuild:
+  Fixed for glibc-2.12. Added static-libs flag, moved to EAPI=2
 
 *cilk-5.4.6 (27 Oct 2008)
 
