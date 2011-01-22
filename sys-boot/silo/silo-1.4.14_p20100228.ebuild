@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.3 2011/01/09 03:25:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.4 2011/01/22 12:25:20 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/davem/silo.git;a=summary"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~sparc"
+KEYWORDS="-* sparc"
 IUSE="hardened"
 
 PROVIDE="virtual/bootloader"
@@ -31,11 +31,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-
-#	epatch ${MY_P}-${DEB_PL}.diff
-
 	cd "${S}"
-#	epatch "${WORKDIR}"/${MY_P/_/-}/debian/patches/*.patch
 
 	#Set the correct version
 	sed -i -e "s/1.4.14/1.4.14_git2010228_p1/g" Rules.make
@@ -43,6 +39,8 @@ src_unpack() {
 	# Fix build failure
 	sed -i -e "s/-fno-strict-aliasing/-fno-strict-aliasing -U_FORTIFY_SOURCE/g" Rules.make
 
+	# Fix bug #350677
+	epatch "${FILESDIR}"/silo-e2fsprogs-1.4.14.patch
 }
 
 src_compile() {

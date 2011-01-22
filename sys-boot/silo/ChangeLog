@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/silo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.45 2011/01/09 03:25:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.46 2011/01/22 12:25:20 armin76 Exp $
+
+  22 Jan 2011; Raúl Porcel <armin76@gentoo.org> -silo-1.4.14.ebuild,
+  silo-1.4.14_p20100228.ebuild, +files/silo-e2fsprogs-1.4.14.patch,
+  -files/silo-1.4.x-noglibc_time.patch, -files/gcc-4.3-compile.patch,
+  -files/qa-no-strip.patch, -files/sanitized-linuxheaders.patch:
+  sparc stable, remove old and add patch to fix build with >=e2fsprogs-1.4.14
+  from upstream, bug #350677
 
   09 Jan 2011; Mike Frysinger <vapier@gentoo.org> silo-1.4.14.ebuild,
   silo-1.4.14_p20100228.ebuild:
