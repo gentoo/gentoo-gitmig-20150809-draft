@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.287 2011/01/19 23:03:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.288 2011/01/22 02:36:25 chainsaw Exp $
+
+*asterisk-1.8.2.2 (22 Jan 2011)
+
+  22 Jan 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.2.1.ebuild,
+  +asterisk-1.8.2.2.ebuild:
+  Upstream reports that a merging accident kept the fix out of the 1.8.2.1
+  tarball. 1.8.2.2 does include the security fix. Removed insecure ebuild.
 
 *asterisk-1.4.39.1-r1 (19 Jan 2011)
 
