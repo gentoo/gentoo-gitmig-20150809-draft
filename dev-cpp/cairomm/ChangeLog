@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.43 2011/01/04 18:11:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.44 2011/01/22 07:31:58 nirbheek Exp $
+
+*cairomm-1.9.8 (22 Jan 2011)
+
+  22 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +cairomm-1.9.8.ebuild:
+  Bump to 1.9.8, uses cairo-1.10 API
 
   04 Jan 2011; Raúl Porcel <armin76@gentoo.org> cairomm-1.8.2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #324077
