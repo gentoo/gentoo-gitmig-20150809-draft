@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.63 2010/11/23 20:21:49 cedk Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.64 2011/01/22 14:39:05 phajdan.jr Exp $
+
+  22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dmenu-4.2.1.ebuild:
+  x86 stable wrt bug #349630
 
 *dmenu-4.2.1 (23 Nov 2010)
 
