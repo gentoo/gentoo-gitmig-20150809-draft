@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.200 2011/01/22 15:35:49 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.201 2011/01/22 17:56:44 lxnay Exp $
+
+*xinit-1.3.0-r2 (22 Jan 2011)
+
+  22 Jan 2011; Fabio Erculiani <lxnay@gentoo.org> +xinit-1.3.0-r2.ebuild:
+  revision bump, this is the first version supporting lxdm, reset KEYWORDS
+  to ~arch
 
   22 Jan 2011; Fabio Erculiani <lxnay@gentoo.org> files/startDM.sh:
   add lxdm support (changes required in order to load lxdm with
