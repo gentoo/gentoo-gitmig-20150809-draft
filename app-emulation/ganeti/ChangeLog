@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.37 2010/12/22 23:38:28 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.38 2011/01/22 02:07:43 ramereth Exp $
+
+*ganeti-2.4.0_beta1 (22 Jan 2011)
+
+  22 Jan 2011; Lance Albertson <ramereth@gentoo.org>
+  +ganeti-2.4.0_beta1.ebuild, +files/ganeti-kvm-poweroff.confd,
+  +files/ganeti-kvm-poweroff.initd:
+  Version bump. Add upstream KVM poweroff init script (gentoofied)
 
 *ganeti-2.3.1 (22 Dec 2010)
 
