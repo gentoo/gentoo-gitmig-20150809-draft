@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.60 2010/12/02 21:53:01 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.61 2011/01/22 17:18:49 fauli Exp $
+
+  22 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  fail2ban-0.8.4-r2.ebuild:
+  stable x86, bug 351803
 
 *fail2ban-0.8.4-r2 (02 Dec 2010)
 
