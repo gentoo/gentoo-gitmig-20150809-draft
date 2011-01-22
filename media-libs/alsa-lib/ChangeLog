@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.314 2010/12/24 17:34:26 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.315 2011/01/22 22:45:40 xarthisius Exp $
+
+  22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  alsa-lib-1.0.23.ebuild:
+  ppc64 stable wrt #344571
 
   24 Dec 2010; Raúl Porcel <armin76@gentoo.org> alsa-lib-1.0.23.ebuild:
   ia64/sh/sparc stable wrt #344571
