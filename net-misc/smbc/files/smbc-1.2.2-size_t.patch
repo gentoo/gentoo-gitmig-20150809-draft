@@ -1,7 +1,7 @@
 Patch to enable running on amd64 (borrowed from http://bugs.debian.org/366580)
 
---- smbc-1.2.2.orig/src/convert.c
-+++ smbc-1.2.2/src/convert.c
+--- a/src/convert.c
++++ b/src/convert.c
 @@ -98,8 +98,9 @@
  
    char *inbuf  = (char*) src;
