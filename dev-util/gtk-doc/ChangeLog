@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.142 2011/01/17 12:43:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.143 2011/01/23 15:19:50 maekke Exp $
+
+  23 Jan 2011; Markus Meier <maekke@gentoo.org> gtk-doc-1.15-r2.ebuild:
+  arm stable
 
 *gtk-doc-1.16 (17 Jan 2011)
 
