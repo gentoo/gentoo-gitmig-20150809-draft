@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chmsee/chmsee-1.1.0.ebuild,v 1.1 2010/05/01 04:39:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chmsee/chmsee-1.3.0.ebuild,v 1.1 2011/01/23 07:04:47 dirtyepic Exp $
 
 EAPI="3"
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.8:2
+RDEPEND=">=dev-libs/glib-2.24:2
 	dev-libs/libxml2
-	>=x11-libs/gtk+-2.16:2
+	>=x11-libs/gtk+-2.20:2
 	dev-libs/chmlib
 	dev-libs/libgcrypt
 	>=net-libs/xulrunner-1.9.2"
