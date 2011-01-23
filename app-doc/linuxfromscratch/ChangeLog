@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linuxfromscratch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.12 2010/10/26 17:37:43 dirtyepic Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.13 2011/01/23 06:56:24 dirtyepic Exp $
+
+  23 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> linuxfromscratch-6.7.ebuild:
+  Stable for all.
 
 *linuxfromscratch-6.7 (26 Oct 2010)
 
