@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.74 2011/01/06 23:53:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.75 2011/01/23 01:20:19 williamh Exp $
 
 EAPI="1"
 
@@ -337,18 +337,12 @@ migrate_from_baselayout_1() {
 		fi
 	fi
 
-	# Handle the conf.d/local.{start,stop} -> conf.d/local transition
+	# Handle the conf.d/local.{start,stop} -> local.d transition
 	if path_exists -o "${ROOT}"/etc/conf.d/local.{start,stop} ; then
-		elog "Converting your /etc/conf.d/local.{start,stop} files to /etc/conf.d/local"
-		(
-		sed -n '0,/local_start/p' "${D}"/etc/conf.d/local
-		sed 's:^:\t:' "${ROOT}"/etc/conf.d/local.start 2>/dev/null
-		sed -n '/local_start/,/local_stop/{s:^local_start.*::;p}' "${D}"/etc/conf.d/local
-		sed 's:^:\t:' "${ROOT}"/etc/conf.d/local.stop 2>/dev/null
-		sed -n '/local_stop/,${s:^local_stop.*::;p}' "${D}"/etc/conf.d/local
-		) > "${T}"/conf.d.local
-		mv "${T}"/conf.d.local "${D}"/etc/conf.d/local
-		touch "${D}"/etc/conf.d/local.{start,stop}
+		elog "Moving your /etc/conf.d/local.{start,stop} files to /etc/local.d"
+		mv "${ROOT}"/etc/conf.d/local.start "${ROOT}"/local.d/baselayout1.start
+		mv "${ROOT}"/etc/conf.d/local.stop "${ROOT}"/local.d/baselayout1.stop
+		chmod +x "${ROOT}"/local.d/*{start,stop}
 	fi
 }
 
