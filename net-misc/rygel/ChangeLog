@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.5 2011/01/11 05:47:10 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.6 2011/01/23 23:07:19 eva Exp $
+
+*rygel-0.9.6 (23 Jan 2011)
+
+  23 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> +rygel-0.9.6.ebuild:
+  Version bump. Port to gtk+:3.
 
   11 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> rygel-0.8.2.ebuild,
   rygel-0.8.3.ebuild, rygel-0.9.1.ebuild:
