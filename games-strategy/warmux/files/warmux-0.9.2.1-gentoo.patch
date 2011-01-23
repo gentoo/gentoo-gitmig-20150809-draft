@@ -1,0 +1,35 @@
+--- configure.ac	2010-01-26 15:01:12.000000000 -0500
++++ configure.ac	2010-02-17 14:41:46.953505745 -0500
+@@ -48,8 +48,6 @@
+ dnl === Options for users                                                   =
+ dnl =========================================================================
+ 
+-AX_CFLAGS_WARN_ALL([CXXFLAGS])
+-
+ AC_ARG_ENABLE([servers],
+               [AS_HELP_STRING([--enable-servers],
+                               [Enable building the index and game servers @<:@default=no@:>@])],
+@@ -375,12 +373,6 @@
+ CXXFLAGS="$CXXFLAGS $LIBXML_CFLAGS $LIBPNG_CFLAGS"
+ LIBS="$LIBS $LIBXML_LIBS $LIBPNG_LIBS"
+ 
+-dnl === Add Werror flag for gcc/g++ if debug mode is enabled ==============
+-if test "x${debug}" = "xyes"; then
+-   CFLAGS="$CFLAGS -Werror"
+-   CXXFLAGS="$CXXFLAGS -Werror"
+-fi
+-
+ dnl ========================================================================
+ dnl == Check for header files                                              =
+ dnl ========================================================================
+--- data/Makefile.am	2010-01-10 09:23:32.000000000 -0500
++++ data/Makefile.am	2010-02-17 14:42:10.353509871 -0500
+@@ -1,8 +1,2 @@
+-xdg_appsdir = $(prefix)/share/applications
+-xdg_apps_DATA = wormux.desktop
+-pixmapsdir = $(prefix)/share/pixmaps
+-pixmaps_DATA = wormux_128x128.png
+-
+ nobase_dist_pkgdata_DATA = @DATA_FILES@
+ pkgdatadir = @DATADIR@
+-EXTRA_DIST = $(pixmaps_DATA)
