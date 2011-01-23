@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.8.1-r1.ebuild,v 1.1 2011/01/17 10:49:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.8.1-r1.ebuild,v 1.2 2011/01/23 00:03:56 idl0r Exp $
 
 EAPI=3
 
@@ -57,4 +57,12 @@ src_install() {
 	keepdir /var/lib/gitolite
 	fowners git:git /var/lib/gitolite
 	fperms 750 /var/lib/gitolite
+}
+
+pkg_postinst() {
+	# bug 352291
+	ewarn
+	elog "Please make sure that your 'git' user has the correct homedir (/var/lib/gitolite)."
+	elog "Especially if you're migrating from gitosis."
+	ewarn
 }
