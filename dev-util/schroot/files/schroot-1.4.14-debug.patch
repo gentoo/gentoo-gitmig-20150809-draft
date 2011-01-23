@@ -1,0 +1,28 @@
+From 741833bdcba4b9aa7e389d389f42e4fa504d7cc7 Mon Sep 17 00:00:00 2001
+From: Jonathan Callen <abcd@gentoo.org>
+Date: Wed, 5 Jan 2011 01:26:26 -0500
+Subject: [PATCH] schroot-base: fix build with --enable-debug
+
+Rename last instance of the variable sbuild::debug_level to
+sbuild::debug_log_level.  This appears to have been missed in commit
+04c19bb6c28295a387e60066c48db7f443e5b925.
+---
+ bin/schroot-base/schroot-base-main.cc |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/bin/schroot-base/schroot-base-main.cc b/bin/schroot-base/schroot-base-main.cc
+index ac86018..d6cd0b0 100644
+--- a/bin/schroot-base/schroot-base-main.cc
++++ b/bin/schroot-base/schroot-base-main.cc
+@@ -106,7 +106,7 @@ main::run (int   argc,
+       this->program_options->parse(argc, argv);
+ 
+ #ifdef SBUILD_DEBUG
+-      sbuild::debug_level = sbuild::DEBUG_CRITICAL;
++      sbuild::debug_log_level = sbuild::DEBUG_CRITICAL;
+ #endif
+ 
+       if (this->use_syslog)
+-- 
+1.7.3.3
+

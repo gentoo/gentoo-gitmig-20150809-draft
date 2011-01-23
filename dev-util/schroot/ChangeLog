@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.22 2011/01/06 23:41:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.23 2011/01/23 20:18:17 abcd Exp $
+
+  23 Jan 2011; Jonathan Callen <abcd@gentoo.org> schroot-1.4.14.ebuild,
+  +files/schroot-1.4.14-debug.patch, schroot-1.4.17.ebuild:
+  Add patch to fix build with USE=debug. Debian bug 609067, Gentoo bug 344615
 
 *schroot-1.4.17 (06 Jan 2011)
 

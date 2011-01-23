@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.17.ebuild,v 1.1 2011/01/06 23:41:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.17.ebuild,v 1.2 2011/01/23 20:18:17 abcd Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="1.11"
@@ -43,6 +43,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.4.7-tests.patch"
+	"${FILESDIR}/${PN}-1.4.14-debug.patch"
 )
 
 src_prepare() {
