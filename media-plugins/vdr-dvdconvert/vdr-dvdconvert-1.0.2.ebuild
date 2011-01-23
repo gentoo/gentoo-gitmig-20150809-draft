@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.2 2007/01/15 18:46:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.3 2011/01/23 20:08:10 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin eutils
 
@@ -17,7 +19,7 @@ IUSE="projectx"
 RDEPEND="media-video/vdr
 	>=media-video/dvdauthor-0.6.10
 	>=media-video/vobcopy-1.0.0
-	>=media-video/m2vrequantizer-20060306
+	>=media-video/m2vrequantizer-0.0.2_pre20060306
 	media-video/transcode
 	media-video/tcmplex-panteltje
 	media-libs/a52dec
@@ -25,7 +27,8 @@ RDEPEND="media-video/vdr
 	media-sound/toolame
 	projectx? ( media-video/projectx )"
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff ${FILESDIR}/${P}-vobcopy-perm.diff"
+PATCHES=( "${FILESDIR}/${P}-gentoo.diff"
+		"${FILESDIR}/${P}-vobcopy-perm.diff" )
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
@@ -43,22 +46,22 @@ src_install() {
 	vdr-plugin_src_install
 
 	insinto /usr/share/vdr/dvdconvert
-	doins ${S}/scripts/dvdconvert.{conf,conf.save}
+	doins "${S}"/scripts/dvdconvert.{conf,conf.save}
 
 	use projectx && insinto /usr/share/vdr/dvdconvert/pX
-	use projectx && doins ${WORKDIR}/px-files/*
+	use projectx && doins "${WORKDIR}/px-files/*"
 
 	exeinto /usr/share/vdr/dvdconvert/bin
-	doexe ${S}/scripts/*.sh
+	doexe "${S}/scripts/*.sh"
 
 	insinto /etc/vdr/commands
-	doins ${FILESDIR}/commands.dvdconvert.conf
+	doins "${FILESDIR}/commands.dvdconvert.conf"
 
 	insinto /etc/vdr/plugins/dvdconvert
-	newins   ${FILESDIR}/dvd2dvdr-${PV}.conf dvdconvert
+	newins "${FILESDIR}/dvd2dvdr-${PV}.conf" dvdconvert
 
 	insinto	/etc/logrotate.d
-	newins	${FILESDIR}/dvdlogrotate dvdconvert
+	newins	"${FILESDIR}"/dvdlogrotate dvdconvert
 
 	diropts -ovdr -gvdr
 	keepdir	/var/log/dvdconvert
