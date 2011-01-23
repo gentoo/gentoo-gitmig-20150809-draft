@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3-r2.ebuild,v 1.2 2010/10/25 02:01:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3-r2.ebuild,v 1.3 2011/01/23 21:50:11 xarthisius Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -13,7 +13,7 @@ DESCRIPTION="Fast Ruby debugger"
 HOMEPAGE="http://rubyforge.org/projects/ruby-debug/"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 SLOT="0"
 
