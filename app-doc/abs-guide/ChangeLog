@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.81 2010/03/17 23:51:24 dirtyepic Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.82 2011/01/23 06:53:14 dirtyepic Exp $
+
+  23 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> abs-guide-6.2.ebuild:
+  Stabilize for all.
 
 *abs-guide-6.2 (17 Mar 2010)
 
