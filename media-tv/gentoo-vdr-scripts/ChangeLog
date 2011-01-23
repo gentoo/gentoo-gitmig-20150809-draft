@@ -1,6 +1,16 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.109 2010/12/22 10:22:46 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.110 2011/01/23 23:10:33 hd_brummy Exp $
+
+  23 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -gentoo-vdr-scripts-0.4.0.ebuild, -gentoo-vdr-scripts-0.4.1.ebuild,
+  -gentoo-vdr-scripts-0.4.2.ebuild, -gentoo-vdr-scripts-0.4.3.ebuild,
+  -gentoo-vdr-scripts-0.4.3-r1.ebuild,
+  -files/gentoo-vdr-scripts-0.4.3-fix-wakeup-reboot.diff,
+  -gentoo-vdr-scripts-0.4.4.ebuild, -gentoo-vdr-scripts-0.4.5_rc1.ebuild,
+  -gentoo-vdr-scripts-0.4.5_rc2.ebuild, -gentoo-vdr-scripts-0.4.5.ebuild,
+  -gentoo-vdr-scripts-0.4.6.ebuild, -gentoo-vdr-scripts-0.4.6-r1.ebuild:
+  cleanup old versions
 
   22 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   gentoo-vdr-scripts-0.4.7.ebuild:
