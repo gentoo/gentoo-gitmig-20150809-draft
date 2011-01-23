@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.153 2010/12/08 21:28:15 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.154 2011/01/23 20:14:43 swegener Exp $
+
+  23 Jan 2011; Sven Wegener <swegener@gentoo.org> files/screenrc:
+  Change suggested key binding for emacs users, bug #352063.
 
   08 Dec 2010; Justin Lecher <jlec@gentoo.org>
   files/4.0.3-extend-d_termname-ng2.patch:
