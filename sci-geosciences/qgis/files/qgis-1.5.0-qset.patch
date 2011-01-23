@@ -1,0 +1,44 @@
+diff -ur qgis-1.5.0/python/CMakeLists.txt qgis-1.5.0-patched/python/CMakeLists.txt
+--- qgis-1.5.0/python/CMakeLists.txt	2011-01-23 14:24:20.655999989 +0200
++++ qgis-1.5.0-patched/python/CMakeLists.txt	2011-01-23 14:29:03.930999748 +0200
+@@ -43,6 +43,10 @@
+   SET(SIP_DISABLE_FEATURES ${SIP_DISABLE_FEATURES} QSETINT_CONVERSION)
+ ENDIF(NOT PYQT4_VERSION_NUM LESS 263941)
+ 
++IF(NOT PYQT4_VERSION_NUM LESS 264194)   # 0x040802
++  SET(SIP_DISABLE_FEATURES ${SIP_DISABLE_FEATURES} QSETTYPE_CONVERSION)
++ENDIF(NOT PYQT4_VERSION_NUM LESS 264194)
++
+ # core module
+ FILE(GLOB sip_files_core core/*.sip)
+ set(SIP_EXTRA_FILES_DEPEND ${sip_files_core})
+diff -ur qgis-1.5.0/python/core/conversions.sip qgis-1.5.0-patched/python/core/conversions.sip
+--- qgis-1.5.0/python/core/conversions.sip	2011-01-23 14:24:20.656999987 +0200
++++ qgis-1.5.0-patched/python/core/conversions.sip	2011-01-23 14:30:08.901999769 +0200
+@@ -15,6 +15,7 @@
+ */
+ 
+ %Feature QSETINT_CONVERSION
++%Feature QSETTYPE_CONVERSION
+ 
+ %ModuleHeaderCode
+ // From Python 2.5, some functions use Py_ssize_t instead of int
+@@ -321,7 +322,7 @@
+ };
+ %End
+ 
+-
++%If (QSETTYPE_CONVERSION)
+ template <TYPE>
+ %MappedType QSet<TYPE>
+ {
+@@ -395,8 +396,7 @@
+ %End
+ 
+ };
+-
+-
++%End
+ 
+ template<TYPE>
+ %MappedType QMap<int, QMap<int, TYPE> >
