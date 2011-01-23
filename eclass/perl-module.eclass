@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.127 2011/01/12 15:44:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.128 2011/01/23 22:12:13 robbat2 Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 
@@ -54,11 +54,14 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 LICENSE="${LICENSE:-|| ( Artistic GPL-1 GPL-2 GPL-3 )}"
 
+# TODO: Document variables: MODULE_VERSION, MODULE_A, MODULE_A_EXT,
+# MODULE_AUTHOR, MODULE_SECTION, GENTOO_DEPEND_ON_PERL, PREFER_BUILDPL
 if [[ -n ${MY_PN} || -n ${MY_PV} || -n ${MODULE_VERSION} ]] ; then
 	: ${MY_P:=${MY_PN:-${PN}}-${MY_PV:-${MODULE_VERSION:-${PV}}}}
 	S=${MY_S:-${WORKDIR}/${MY_P}}
 fi
-[[ -z "${SRC_URI}" && -z "${MODULE_A}" ]] && MODULE_A="${MY_P:-${P}}.tar.gz"
+[[ -z "${SRC_URI}" && -z "${MODULE_A}" ]] && \
+	MODULE_A="${MY_P:-${P}}.${MODULE_A_EXT:-tar.gz}"
 [[ -z "${SRC_URI}" && -n "${MODULE_AUTHOR}" ]] && \
 	SRC_URI="mirror://cpan/authors/id/${MODULE_AUTHOR:0:1}/${MODULE_AUTHOR:0:2}/${MODULE_AUTHOR}/${MODULE_SECTION:+${MODULE_SECTION}/}${MODULE_A}"
 [[ -z "${HOMEPAGE}" ]] && \
