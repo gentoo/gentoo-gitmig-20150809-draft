@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.6.ebuild,v 1.8 2011/01/23 09:00:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.5.0.ebuild,v 1.1 2011/01/23 09:00:22 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES TODO README"
@@ -16,7 +16,7 @@ HOMEPAGE="http://json.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 SRC_URI="mirror://rubygems/${P}.gem"
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 
@@ -38,6 +38,7 @@ all_ruby_prepare() {
 }
 
 each_ruby_compile() {
+	# Since 1.5.0 a Java extension is provided but it does not compile.
 	if [[ $(basename ${RUBY}) != "jruby" ]]; then
 		${RUBY} -S rake compile_ext || die "extension compile failed"
 	fi
