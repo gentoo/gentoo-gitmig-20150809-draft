@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-en
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.27 2010/09/27 22:19:44 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.28 2011/01/23 10:25:23 grobian Exp $
+
+  23 Jan 2011; Fabian Groffen <grobian@gentoo.org> myspell-en-20081002.ebuild:
+  Marked ~ppc-macos and ~x86-solaris
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-en-20081002.ebuild:
   Add ~mips
