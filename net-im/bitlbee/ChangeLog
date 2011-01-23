@@ -1,6 +1,11 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.135 2011/01/10 18:42:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.136 2011/01/23 14:55:15 armin76 Exp $
+
+  23 Jan 2011; Raúl Porcel <armin76@gentoo.org> bitlbee-1.2.3.ebuild,
+  bitlbee-1.2.3-r1.ebuild, bitlbee-1.2.8.ebuild, bitlbee-3.0.ebuild,
+  bitlbee-3.0.1.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   10 Jan 2011; Brent Baude <ranger@gentoo.org> bitlbee-3.0.1.ebuild:
   stable ppc, bug 347537

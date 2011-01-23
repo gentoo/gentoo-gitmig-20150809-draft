@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.ebuild,v 1.2 2010/10/29 00:18:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.ebuild,v 1.3 2011/01/23 14:55:15 armin76 Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs confutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="debug gnutls ipv6 +jabber libevent msn nss +oscar otr +plugins purple ssl test twitter +yahoo xinetd" # ldap - Bug 195758
 
 COMMON_DEPEND="purple? ( net-im/pidgin )
