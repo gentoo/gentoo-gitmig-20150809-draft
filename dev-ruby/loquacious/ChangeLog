@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loquacious
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.7 2010/10/09 08:51:05 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.8 2011/01/23 08:48:50 graaff Exp $
+
+  23 Jan 2011; Hans de Graaff <graaff@gentoo.org> loquacious-1.7.0.ebuild:
+  Add ree18.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> loquacious-1.7.0.ebuild:
   Depend on rspec-1.
