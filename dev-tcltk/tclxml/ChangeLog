@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.44 2011/01/05 20:36:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.45 2011/01/23 15:04:50 armin76 Exp $
+
+  23 Jan 2011; Raúl Porcel <armin76@gentoo.org> tclxml-3.2-r1.ebuild:
+  alpha stable wrt #348022
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tclxml-3.1-r2.ebuild:
   Stable on amd64 wrt bug #348027
