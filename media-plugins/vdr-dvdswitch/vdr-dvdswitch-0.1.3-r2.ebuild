@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/vdr-dvdswitch-0.1.3-r2.ebuild,v 1.4 2008/05/26 09:51:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdswitch/vdr-dvdswitch-0.1.3-r2.ebuild,v 1.5 2011/01/23 23:29:57 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -14,9 +14,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.21"
-RDEPEND="media-plugins/vdr-dvd
-		|| ( >=media-tv/gentoo-vdr-scripts-0.4.1
-			>=media-tv/vdr-dvd-scripts-0.0.3 )"
+RDEPEND="media-plugins/vdr-dvd"
 
 DEFAULT_IMAGE_DIR="/var/vdr/video/dvd-images"
 
