@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javahelp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.16 2010/01/15 17:32:51 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.17 2011/01/23 14:22:08 fordfrog Exp $
+
+*javahelp-2.0.05_p63 (23 Jan 2011)
+
+  23 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +javahelp-2.0.05_p63.ebuild:
+  Version bump, switched to EAPI3, switched to virtual servlet-api
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   javahelp-2.0.02_p46.ebuild:
