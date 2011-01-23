@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.62 2011/01/16 15:31:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.63 2011/01/23 11:50:58 xarthisius Exp $
+
+  23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> scipy-0.8.0.ebuild:
+  Append -fPIC to FFLAGS properly. Fixes bug #352487. Thanks hirakendu
+  <hirakendu@gmail.com> for the report.
 
   16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -files/scipy-0.7.0_beta1-implicit.patch, -files/scipy-0.7.1-weave.patch,
