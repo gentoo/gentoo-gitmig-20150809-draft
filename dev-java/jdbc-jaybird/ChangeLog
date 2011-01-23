@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-jaybird
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.33 2010/06/30 20:51:00 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.34 2011/01/23 21:19:20 xarthisius Exp $
+
+  23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  jdbc-jaybird-2.1.6.ebuild:
+  Marked ~ppc wrt #310417
 
   30 Jun 2010; Vlastimil Babka <caster@gentoo.org>
   jdbc-jaybird-2.1.5-r1.ebuild, jdbc-jaybird-2.1.5-r2.ebuild:
