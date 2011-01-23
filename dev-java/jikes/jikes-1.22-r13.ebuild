@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r13.ebuild,v 1.11 2009/02/13 18:51:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r13.ebuild,v 1.12 2011/01/23 14:33:14 armin76 Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jikes.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 DEPEND=""
 RDEPEND=">=dev-java/java-config-2.0.0"
