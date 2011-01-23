@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12382 2011/01/22 18:23:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12383 2011/01/23 05:05:02 reavertm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Maciej Mrozowski <reavertm@gentoo.org> (23 Jan 2011)
+# New split phonon bump, most keywords dropped
+~media-sound/phonon-gstreamer-4.4.4
+~media-sound/phonon-vlc-0.3.2
+~media-sound/phonon-xine-4.4.4
+
 # Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2011)
 # Replaced by xfce-extra/tumbler
 # Removal in 30 days
@@ -48,7 +54,7 @@ x11-themes/gion-icon-theme
 
 # Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2011)
 # Printing is broken because of xfprint requirement.
-# Package is using deprecated libxfcegui4 instead of libxfce4ui. 
+# Package is using deprecated libxfcegui4 instead of libxfce4ui.
 # No development in about year at upstream git.
 #
 # Use app-editors/leafpad instead.
