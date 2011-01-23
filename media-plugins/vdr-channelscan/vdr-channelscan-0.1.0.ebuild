@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.5 2009/01/06 20:22:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.6 2011/01/23 00:07:44 hd_brummy Exp $
+
+EAPI="2"
 
 inherit vdr-plugin
 
@@ -10,7 +12,7 @@ SRC_URI="http://kikko77.altervista.org/sections/Download/[10]_channelscan/${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.18"
@@ -23,8 +25,8 @@ PATCHES=("${FILESDIR}/${P}-shared-data.diff"
 		"${FILESDIR}/${P}-vdr-1.5.10.diff"
 		"${FILESDIR}/${P}_gcc-4.3.x.diff")
 
-src_unpack() {
-	vdr-plugin_src_unpack
+src_prepare() {
+	vdr-plugin_src_prepare
 	fix_vdr_libsi_include filter.c
 
 	has_version ">=media-video/vdr-1.7.0" && \
