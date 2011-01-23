@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.14 2011/01/16 11:01:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.15 2011/01/23 12:45:41 tomka Exp $
+
+  23 Jan 2011; Thomas Kahle <tomka@gentoo.org> cctbx-2010.03.29.2334-r3.ebuild:
+  x86 stable per bug 351765
 
   16 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   cctbx-2010.03.29.2334-r3.ebuild:
