@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.3.ebuild,v 1.1 2011/01/23 05:33:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.3.ebuild,v 1.2 2011/01/23 05:37:40 mr_bones_ Exp $
 
 EAPI=2
-inherit multilib flag-o-matic eutils qt4 games
+inherit multilib flag-o-matic eutils qt4-r2 games
 
 MY_P="PokerTH-${PV//_/-}-src"
 DESCRIPTION="Texas Hold'em poker game"
