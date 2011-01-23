@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.4 2011/01/21 19:33:14 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.5 2011/01/23 00:13:35 fordfrog Exp $
 
 EAPI="3"
 WANT_SPLIT_ANT="true"
@@ -472,7 +472,7 @@ src_prepare () {
 	fi
 
 	# Support for custom patches
-	if [ -n "{NETBEANS_PATCHES_DIR}" -a -d "${NETBEANS_PATCHES_DIR}" ] ; then
+	if [ -n "${NETBEANS_PATCHES_DIR}" -a -d "${NETBEANS_PATCHES_DIR}" ] ; then
 		local files=`find "${NETBEANS_PATCHES_DIR}" -type f`
 
 		if [ -n "${files}" ] ; then
