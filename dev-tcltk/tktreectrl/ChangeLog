@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktreectrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.4 2011/01/17 22:36:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.5 2011/01/23 12:52:06 tomka Exp $
+
+  23 Jan 2011; Thomas Kahle <tomka@gentoo.org> tktreectrl-2.2.9.ebuild:
+  x86 stable per bug 351767
 
   17 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tktreectrl-2.2.9.ebuild:
   Stable on amd64 wrt bug #351767
