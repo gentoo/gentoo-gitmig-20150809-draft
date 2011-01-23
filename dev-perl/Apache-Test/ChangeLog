@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.69 2011/01/18 16:48:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.70 2011/01/23 15:32:24 tove Exp $
+
+*Apache-Test-1.350 (23 Jan 2011)
+
+  23 Jan 2011; Torsten Veller <tove@gentoo.org> +Apache-Test-1.350.ebuild:
+  Version bump
 
 *Apache-Test-1.340 (18 Jan 2011)
 
