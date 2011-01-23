@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.2 2011/01/22 21:34:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.3 2011/01/23 11:02:44 grobian Exp $
 
 EAPI=3
 
@@ -83,6 +83,9 @@ src_configure() {
 
 	# tracing fails to compile, because Solaris' libelf doesn't do large files
 	[[ ${CHOST} == *-solaris* ]] && myopts+=" --disable-trace"
+
+	# 128-bits long arithemetic functions are missing
+	[[ ${CHOST} == powerpc*-*-darwin* ]] && filter-flags -mcpu=*
 
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
