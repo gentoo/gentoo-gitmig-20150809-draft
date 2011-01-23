@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.28 2011/01/22 15:17:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.29 2011/01/23 08:40:38 graaff Exp $
+
+  23 Jan 2011; Hans de Graaff <graaff@gentoo.org> i18n-0.4.2.ebuild:
+  Remove broken blocker on test-unit:2 since this no longer appears to be a
+  problem.
 
   22 Jan 2011; Hans de Graaff <graaff@gentoo.org> -i18n-0.3.3.ebuild,
   -i18n-0.4.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.4.2.ebuild,v 1.3 2011/01/10 18:24:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.4.2.ebuild,v 1.4 2011/01/23 08:40:38 graaff Exp $
 
 EAPI=2
 
@@ -39,17 +39,12 @@ USE_RUBY="${USE_RUBY/jruby/}" \
 			)"
 
 # mocha is optionally used by the testsuite, try to increase coverage
-# of testing by depending on it; when mocha is used, though,
-# test-unit:2 cannot be merged at the same time (mocha problem?)
+# of testing by depending on it.
 #
 # One further test dependency would be ruby-cldr
 # (http://rubygems.org/gems/ruby-cldr) but we don't have it in tree
 # yet.
-ruby_add_bdepend "
-	test? (
-		dev-ruby/mocha
-		!!dev-ruby/test-unit:2
-	)"
+ruby_add_bdepend "test? ( dev-ruby/mocha )"
 
 all_ruby_prepare() {
 	sed -i '/bundler/d' test/test_setup/bundle.rb || die "Unable to remove Bundler support"
