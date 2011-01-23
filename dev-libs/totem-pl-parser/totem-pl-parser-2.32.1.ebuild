@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.1.ebuild,v 1.1 2010/10/22 21:42:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.1.ebuild,v 1.2 2011/01/23 18:19:35 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -32,7 +32,16 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS"
 }
 
+src_prepare() {
+	gnome2_src_prepare
+
+	# Disable tests requiring network access, bug #346127
+	sed -e 's:\(g_test_add_func.*/parser/resolution.*\):/*\1*/:' \
+		-e 's:\(g_test_add_func.*/parser/parsing/itms_link.*\):/*\1*/:' \
+		-i plparse/tests/parser.c || die "sed failed"
+}
+
 src_test() {
 	# This is required as told by upstream in bgo#629542
-	dbus-launch emake check || die "make check failed"
+	dbus-launch emake check || die "emake check failed"
 }

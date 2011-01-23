@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.30.4.ebuild,v 1.4 2011/01/19 21:31:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.30.4.ebuild,v 1.5 2011/01/23 18:19:35 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -30,6 +30,15 @@ DOCS="AUTHORS ChangeLog NEWS"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-static $(use_enable introspection)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Disable tests requiring network access, bug #346127
+	sed -e 's:\(g_test_add_func.*/parser/resolution.*\):/*\1*/:' \
+		-e 's:\(g_test_add_func.*/parser/parsing/itms_link.*\):/*\1*/:' \
+		-i plparse/tests/parser.c || die "sed failed"
 }
 
 src_test() {
