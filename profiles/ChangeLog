@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4966 2011/01/23 18:48:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4967 2011/01/23 23:04:02 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add net-misc/rygel mask for pre-gnome 3 releases.
 
   23 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org> package.mask:
   Unmask split phonon
