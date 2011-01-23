@@ -1,11 +1,12 @@
---- ez-ipupdate.c.orig
-+++ ez-ipupdate.c
+diff -Naur ez-ipupdate-3.0.11b8.orig/ez-ipupdate.c ez-ipupdate-3.0.11b8/ez-ipupdate.c
+--- ez-ipupdate-3.0.11b8.orig/ez-ipupdate.c	2011-01-23 19:35:10.885111914 +0100
++++ ez-ipupdate-3.0.11b8/ez-ipupdate.c	2011-01-23 19:35:10.979110667 +0100
 @@ -172,6 +172,17 @@
  #  ifdef HAVE_SYS_SOCKIO_H
  #    include <sys/sockio.h>
  #  endif
 +#  ifdef __linux__
-+/*#    include <linux/if.h> */
++/*#  include <linux/if.h> */
 +#    include <linux/netlink.h>
 +#    include <linux/rtnetlink.h>
 +/* Under Linux, we reopen socket in get_if_addr() every time */
