@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.31 2011/01/08 04:19:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.32 2011/01/23 20:03:54 vapier Exp $
+
+  23 Jan 2011; Mike Frysinger <vapier@gentoo.org> ppl-0.11.ebuild:
+  Inherit eutils for epause #352519 by Diego Elio Pettenò.
 
   08 Jan 2011; Jeremy Olexa <darkside@gentoo.org> ppl-0.11.ebuild:
   add ~amd64-linux, bug 346861
