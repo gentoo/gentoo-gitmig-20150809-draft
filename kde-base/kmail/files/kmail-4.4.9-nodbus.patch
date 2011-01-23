@@ -1,0 +1,11 @@
+diff -ruN kmail-4.4.9.orig/messagecore/tests/CMakeLists.txt kmail-4.4.9/messagecore/tests/CMakeLists.txt
+--- kmail-4.4.9.orig/messagecore/tests/CMakeLists.txt	2010-12-22 18:52:15.000000000 +0100
++++ kmail-4.4.9/messagecore/tests/CMakeLists.txt	2011-01-23 23:22:36.000000000 +0100
+@@ -13,6 +13,6 @@
+ # Attachment tests.
+ add_messagecore_test( attachmentcompressjobtest.cpp )
+ add_messagecore_test( attachmentfrommimecontentjobtest.cpp )
+-add_messagecore_test( attachmentfromurljobtest.cpp )
++# add_messagecore_test( attachmentfromurljobtest.cpp )
+ add_messagecore_test( attachmentparttest.cpp )
+ add_messagecore_test( attachmentpropertiesdialogtest.cpp )
