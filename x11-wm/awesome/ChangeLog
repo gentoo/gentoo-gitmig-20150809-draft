@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.114 2011/01/22 03:49:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.115 2011/01/23 13:39:29 tomka Exp $
+
+  23 Jan 2011; Thomas Kahle <tomka@gentoo.org> awesome-3.4.8.ebuild:
+  x86 stable per bug 352249
 
   22 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> awesome-3.4.8.ebuild,
   awesome-3.4.9.ebuild:
