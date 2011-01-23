@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.73 2011/01/10 11:53:47 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.74 2011/01/23 19:21:34 reavertm Exp $
+
+  23 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  phonon-kde-4.5.5.ebuild:
+  Drop IUSE defaults on xine (vlc is default from now on)
 
 *phonon-kde-4.5.5 (10 Jan 2011)
 
