@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/libmix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.13 2010/08/09 15:50:28 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.14 2011/01/23 10:32:25 xarthisius Exp $
+
+*libmix-2.05-r5 (23 Jan 2011)
+
+  23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -libmix-2.05-r4.ebuild,
+  +libmix-2.05-r5.ebuild, -files/libmix-2.05-autotools.patch,
+  +files/libmix-2.05-gentoo.patch, +files/libmix-2.05-libnet.patch:
+  Make static libs optional and don't build them with -fPIC. Drop no-net2 flag
+  as currently net-libs/libnet:1.0 doesn't produce shared libs. Prepared for
+  addition of USE=net2, initial fix for compilation with libnet-1.0. Thanks to
+  Angelos for help. Clean ebuild. Drop old.
 
   09 Aug 2010; Markos Chandras <hwoarang@gentoo.org> libmix-2.05-r4.ebuild:
   Add --libdir paramteter on econf. Fixes bug #331515
