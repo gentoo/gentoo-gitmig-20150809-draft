@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6305 2011/01/23 05:33:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6306 2011/01/23 21:53:28 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3066,9 +3066,7 @@ net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 cod
 net-misc/asterisk-moh-opsound:ulaw - Install the sounds files for the ulaw codec.
 net-misc/asterisk-moh-opsound:wav - Install the sounds files for the wav codec.
 net-misc/cfengine:html - Install HTML documentation
-net-misc/cfengine:libvirt - Enable support for virtual machine management through app-emulation/libvirt
 net-misc/cfengine:mysql - Use dev-db/mysql as database backend, default would be Berkeley DB (sys-libs/db)
-net-misc/cfengine:pcre - Use PCRE rather than GNU Regex from libc
 net-misc/cfengine:postgres - Use dev-db/postgresql-server as database backend, default would be Berkeley DB (sys-libs/db)
 net-misc/cfengine:qdbm - Use dev-db/qdbm as database backend, default would be Berkeley DB (sys-libs/db)
 net-misc/cfengine:tests - Install test files
