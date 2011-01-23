@@ -1,0 +1,24 @@
+diff -urN gamess.orig/qmnuc/neo/neogrd.src gamess/qmnuc/neo/neogrd.src
+--- gamess.orig/qmnuc/neo/neogrd.src	2010-06-16 22:46:15.000000000 +0400
++++ gamess/qmnuc/neo/neogrd.src	2011-01-23 15:35:56.000000000 +0300
+@@ -1435,20 +1435,10 @@
+ C
+       DO 790 IC = 1,MAXIC
+          IF(ICHARM.EQ.0) THEN
+-            IF(IC.LE.NAT) THEN
+                ZNUC = -ZAN(IC)
+-C              ZNUC =  ZAN(IC)
+                CX = C(1,IC)
+                CY = C(2,IC)
+                CZ = C(3,IC)
+-            ELSE
+-               IAZ=IATSP(IC-NAT)
+-               ZNUC = -COSZAN(IC-NAT)
+-C              ZNUC =  COSZAN(IC-NAT)
+-               CX = CORZAN(1,IC-NAT)
+-               CY = CORZAN(2,IC-NAT)
+-               CZ = CORZAN(3,IC-NAT)
+-            END IF
+          ELSE
+             ZNUC = -QCHM(ICHARM)
+             CX = XCHM(ICHARM)
