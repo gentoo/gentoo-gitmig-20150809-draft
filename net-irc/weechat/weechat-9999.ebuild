@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.3 2011/01/23 17:27:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.4 2011/01/23 17:34:17 scarabeus Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ else
 	KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 fi
 
-NETWORKS="jabber +irc"
+NETWORKS="+irc"
 PLUGINS="+alias +charset +fifo +logger +relay +rmodifier +scripts +spell +xfer"
 INTERFACES="+ncurses gtk"
 SCRIPT_LANGS="lua +perl +python ruby tcl"
@@ -31,7 +31,6 @@ IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} +crypt doc nls +ssl"
 RDEPEND="
 	charset? ( virtual/libiconv )
 	gtk? ( x11-libs/gtk+:2 )
-	jabber? ( dev-libs/iksemel )
 	lua? ( dev-lang/lua[deprecated] )
 	ncurses? ( sys-libs/ncurses )
 	perl? ( dev-lang/perl )
