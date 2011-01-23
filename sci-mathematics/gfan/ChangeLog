@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gfan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.3 2011/01/02 09:19:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.4 2011/01/23 22:03:35 tomka Exp $
+
+*gfan-0.5 (23 Jan 2011)
+
+  23 Jan 2011; Thomas Kahle <tomka@gentoo.org> +gfan-0.5.ebuild:
+  bump to 0.5
 
   02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gfan-0.4-r1.ebuild:
   x86 stable wrt bug #349167
