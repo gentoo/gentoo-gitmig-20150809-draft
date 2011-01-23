@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.190 2010/12/14 00:27:52 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.191 2011/01/23 20:20:36 swegener Exp $
+
+  23 Jan 2011; Sven Wegener <swegener@gentoo.org> -avahi-0.6.24-r2.ebuild,
+  -files/avahi-0.6.24-CVE-2009-0758.patch, -avahi-0.6.25.ebuild:
+  Cleanup.
 
   14 Dec 2010; Sven Wegener <swegener@gentoo.org> avahi-0.6.27.ebuild,
   avahi-0.6.27-r1.ebuild, avahi-0.6.28.ebuild:
