@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cqrlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.7 2010/07/16 11:29:46 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.8 2011/01/23 15:11:04 xarthisius Exp $
+
+  23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> cqrlib-1.0.5.ebuild:
+  Mark ~ppc wrt #303393
 
   16 Jul 2010; Justin Lecher <jlec@gentoo.org> -cqrlib-1.0.3-r1.ebuild:
   Removed old
