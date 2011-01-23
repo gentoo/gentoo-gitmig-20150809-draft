@@ -12,10 +12,11 @@
 	</maintainer>
 	<use>
 		<flag name="html">Install HTML documentation</flag>
+		<!--
 		<flag name="libvirt">Enable support for virtual machine management through <pkg>app-emulation/libvirt</pkg></flag>
+		-->
 		<flag name="mysql">Use <pkg>dev-db/mysql</pkg> as database backend,
 			default would be Berkeley DB (<pkg>sys-libs/db</pkg>)</flag>
-		<flag name="pcre">Use PCRE rather than GNU Regex from libc</flag>
 		<flag name="postgres">Use <pkg>dev-db/postgresql-server</pkg> as
 			database backend, default would be Berkeley DB (<pkg>sys-libs/db</pkg>)</flag>
 		<flag name="qdbm">Use <pkg>dev-db/qdbm</pkg> as database backend,
