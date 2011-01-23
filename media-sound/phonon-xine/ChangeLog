@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/phonon-xine
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-xine/ChangeLog,v 1.1 2011/01/23 05:17:16 reavertm Exp $
+
+*phonon-xine-9999 (23 Jan 2011)
+*phonon-xine-4.4.4 (23 Jan 2011)
+
+  23 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +phonon-xine-4.4.4.ebuild, +phonon-xine-9999.ebuild, +metadata.xml:
+  Add new package (phonon split), live ebuild from kde overlay
+
