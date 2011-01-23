@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/gedit-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.10 2010/11/01 12:30:24 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.11 2011/01/23 23:17:48 eva Exp $
+
+  23 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gedit-plugins-2.30.0.ebuild:
+  Pin dependencies to appropriate slots and make use of python eclass for
+  proper mutliple python slots support.
+
+  23 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gedit-plugins-2.30.0.ebuild:
+  Pin dependencies to appropriate slots and make use of python eclass for
+  proper mutliple python slots support.
 
   01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   gedit-plugins-2.30.0.ebuild:
