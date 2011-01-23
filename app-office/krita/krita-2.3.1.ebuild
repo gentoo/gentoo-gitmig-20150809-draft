@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.3.1.ebuild,v 1.1 2011/01/20 00:09:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.3.1.ebuild,v 1.2 2011/01/23 18:07:19 dilfridge Exp $
 
 EAPI=3
 
@@ -34,6 +34,8 @@ KMEXTRACTONLY="
 "
 
 KMLOADLIBS="koffice-libs"
+
+PATCHES=( "${FILESDIR}/${P}"-linkx11.patch )
 
 src_configure() {
 	mycmakeargs=(
