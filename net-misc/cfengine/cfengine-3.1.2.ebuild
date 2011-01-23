@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.4 2011/01/21 10:15:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.5 2011/01/23 15:35:35 idl0r Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SLOT="3"
 KEYWORDS="amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 
 # libvirt disabled for now because it blocks stabilization etc.
-IUSE="examples gd graphviz html ldap mysql pcre postgres qdbm selinux tests tokyocabinet vim-syntax"
+IUSE="examples gd graphviz html ldap mysql postgres qdbm selinux tests tokyocabinet vim-syntax"
 
 # libvirt? ( app-emulation/libvirt )
 DEPEND=">=sys-libs/db-4
@@ -26,13 +26,13 @@ DEPEND=">=sys-libs/db-4
 	graphviz? ( media-gfx/graphviz )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
-	pcre? ( dev-libs/libpcre )
 	postgres? ( dev-db/postgresql-base )
 	selinux? ( sys-libs/libselinux )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	qdbm? ( dev-db/qdbm )
 	!tokyocabinet? ( !qdbm? ( >=sys-libs/db-4 ) )
-	>=dev-libs/openssl-0.9.7"
+	>=dev-libs/openssl-0.9.7
+	dev-libs/libpcre"
 RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 
@@ -56,11 +56,11 @@ src_configure() {
 	econf \
 		--docdir=/usr/share/doc/"${PF}" \
 		--with-workdir=/var/cfengine \
+		--with-pcre \
 		${myconf} \
 		$(use_with gd) \
 		$(use_with graphviz) \
 		$(use_with ldap) \
-		$(use_with pcre) \
 		$(use_with qdbm) \
 		$(use_enable selinux) \
 		$(use_with tokyocabinet)
