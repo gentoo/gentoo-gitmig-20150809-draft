@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/notification-daemon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.71 2010/07/20 15:49:48 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.72 2011/01/24 23:22:25 eva Exp $
+
+*notification-daemon-0.5.0 (24 Jan 2011)
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +notification-daemon-0.5.0.ebuild:
+  Version bump. Drop libglade, replace gstreamer by libcanberra, lots of fixes
+  and translation updates. Support notification spec v1.1.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   notification-daemon-0.4.0-r1.ebuild:
