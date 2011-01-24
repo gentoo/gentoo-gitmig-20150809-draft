@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/clutter-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.10 2011/01/15 19:11:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.11 2011/01/24 16:26:55 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  clutter-gtk-0.10.8.ebuild:
+  Pin gtk+ dependency to slot 2.
 
   15 Jan 2011; <nirbheek@gentoo.org> clutter-gtk-0.91.6.ebuild,
   clutter-gtk-0.91.8.ebuild:
