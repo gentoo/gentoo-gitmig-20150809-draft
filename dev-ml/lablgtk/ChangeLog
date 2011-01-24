@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.89 2011/01/22 23:03:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.90 2011/01/24 09:14:18 aballier Exp $
+
+  24 Jan 2011; Alexis Ballier <aballier@gentoo.org> -lablgtk-2.12.0.ebuild,
+  -files/lablgtk-2.12.0-libgnomeui.patch, -lablgtk-2.14.1.ebuild,
+  -files/lablgtk-2.14.1-ocaml312.patch:
+  remove old
 
   22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> lablgtk-2.14.2.ebuild:
   ppc stable wrt #343751
