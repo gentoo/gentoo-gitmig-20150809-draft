@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.1 2010/08/30 20:40:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.2 2011/01/24 16:33:42 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="crypt gnome gtkhtml +gtkspell kerberos ldap libnotify networkmanager rubrica sqlite ssl webkit xface"
 
 # TODO: esmtp can be optional
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.18
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.18:2
 	dev-libs/gmime:2.4
 	dev-libs/libunique
 	>=net-libs/libesmtp-1.0.3
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/glib-2.16
 		>=gnome-base/libgnomeui-2.0
 		>=gnome-base/gconf-2.0
 		>=gnome-base/gnome-keyring-2.20
-		>=x11-libs/gtksourceview-2.10 )
+		>=x11-libs/gtksourceview-2.10:2.0 )
 	gtkhtml? ( >=gnome-extra/gtkhtml-3.14 )
 	sqlite? ( >=dev-db/sqlite-2.8 )
 	libnotify? ( x11-libs/libnotify )

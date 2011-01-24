@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.103 2010/08/30 20:40:11 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.104 2011/01/24 16:33:42 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> balsa-2.4.8.ebuild:
+  Pin dependencies to appropriate slots.
 
 *balsa-2.4.8 (30 Aug 2010)
 
