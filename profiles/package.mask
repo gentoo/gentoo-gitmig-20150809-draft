@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12389 2011/01/23 23:41:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12390 2011/01/24 16:38:08 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,7 +100,7 @@ dev-lua/luaevent-prosody
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2011)
 # wxgtk:2.6 is going away so mask these for removal on 20110219
 games-misc/jugglemaster
-games-util/taxidraw
+=games-util/taxidraw-0.3.2
 
 # Dane Smith <c1pher@gentoo.org> (19 Jan 2011)
 # On behalf of the QA team
