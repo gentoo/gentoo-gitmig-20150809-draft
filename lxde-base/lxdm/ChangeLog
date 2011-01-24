@@ -1,0 +1,11 @@
+# ChangeLog for lxde-base/lxdm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.1 2011/01/24 19:08:19 lxnay Exp $
+
+*lxdm-0.3.0 (24 Jan 2011)
+
+  24 Jan 2011; Fabio Erculiani <lxnay@gentoo.org> +lxdm-0.3.0.ebuild,
+  +files/lxdm-0.3.0-consolekit-disable.patch,
+  +files/lxdm-0.3.0-pam_console-disable.patch, +metadata.xml:
+  new ebuild, close bug #346833
+
