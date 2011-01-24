@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.21 2011/01/22 14:14:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.22 2011/01/24 12:49:42 hwoarang Exp $
+
+*lxsession-0.4.5 (24 Jan 2011)
+
+  24 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +lxsession-0.4.5.ebuild:
+  Version bunmp thanks to Thomas <TAXI@a-city.de>. Bug #350162
 
   22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   lxsession-0.4.4.ebuild:
