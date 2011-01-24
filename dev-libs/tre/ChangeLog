@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.47 2011/01/15 14:32:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.48 2011/01/24 04:01:11 jer Exp $
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org> tre-0.8.0.ebuild:
+  Stable for HPPA (bug #350839).
 
   15 Jan 2011; Markus Meier <maekke@gentoo.org> tre-0.8.0.ebuild:
   x86 stable, bug #350839
