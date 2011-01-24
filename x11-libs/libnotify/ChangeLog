@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libnotify
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.56 2010/12/03 22:57:11 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.57 2011/01/24 23:48:36 eva Exp $
+
+*libnotify-0.7.1 (24 Jan 2011)
+*libnotify-0.5.2 (24 Jan 2011)
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libnotify-0.4.5.ebuild,
+  +libnotify-0.5.2.ebuild, +libnotify-0.7.1.ebuild,
+  +files/libnotify-0.7.1-gtk3-tests.patch, metadata.xml:
+  Version bump. 0.5 for last of gtk+:2 only release and 0.7 for testing API
+  breakages, bug #340501. Add knotify to PDEPEND, bug #323593.
 
   03 Dec 2010; Alex Alexander <wired@gentoo.org> libnotify-0.4.5.ebuild:
   added x11-wm/awesome to PDEPEND, bug #342259
