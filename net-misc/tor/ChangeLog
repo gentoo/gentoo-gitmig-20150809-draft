@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.232 2011/01/24 21:12:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.233 2011/01/24 21:54:25 blueness Exp $
+
+  24 Jan 2011; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.1.28.ebuild:
+  Removed vulnerable version, see bug #351920
 
   24 Jan 2011; Raúl Porcel <armin76@gentoo.org> tor-0.2.1.29.ebuild:
   sparc stable
