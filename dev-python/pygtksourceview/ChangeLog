@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtksourceview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.45 2010/12/13 03:22:16 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.46 2011/01/24 14:33:09 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  pygtksourceview-2.10.1.ebuild:
+  EAPI bump due to dependency slot pinning. Move DOCS to pkg_setup.
 
   13 Dec 2010; Mart Raudsepp <leio@gentoo.org> -pygtksourceview-2.6.0.ebuild,
   -pygtksourceview-2.8.0.ebuild, pygtksourceview-2.10.1.ebuild:
