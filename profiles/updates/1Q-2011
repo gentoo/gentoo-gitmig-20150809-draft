@@ -8,3 +8,4 @@ move x11-terms/pssh net-misc/pssh
 move x11-terms/clusterssh net-misc/clusterssh
 move kde-misc/kcm_tablet kde-misc/wacomtablet
 move games-strategy/wormux games-strategy/warmux
+move app-vim/latexsuite app-vim/vim-latex

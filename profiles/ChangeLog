@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4969 2011/01/23 23:41:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4970 2011/01/24 06:45:25 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2011; Tim Harder <radhermit@gentoo.org> updates/1Q-2011:
+  Move app-vim/latexsuite to app-vim/vim-latex (bug #289890).
 
   23 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-tv/vdr-dvd-scripts masked for removal due 24 Feb 2011, not needed by
