@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.1.0.ebuild,v 1.1 2011/01/17 15:01:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.1.0.ebuild,v 1.2 2011/01/24 13:41:30 matsuu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -15,11 +15,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="cvs darcs fastcgi git imagemagick mercurial mysql openid passenger postgres sqlite3 subversion"
 
-ruby_add_rdepend "~dev-ruby/rails-2.3.5:2.3
-	>=dev-ruby/coderay-0.7.6.227
+ruby_add_rdepend ">=dev-ruby/coderay-0.7.6.227
 	>=dev-ruby/rubygems-1.3.5
 	>=dev-ruby/ruby-net-ldap-0.0.4
 	~dev-ruby/i18n-0.4.2"
+#ruby_add_rdepend ~dev-ruby/rails-2.3.5:2.3
 #ruby_add_rdepend "dev-ruby/activerecord:2.3[mysql?,postgres?,sqlite3?]"
 ruby_add_rdepend fastcgi dev-ruby/ruby-fcgi
 ruby_add_rdepend imagemagick dev-ruby/rmagick
@@ -93,7 +93,7 @@ pkg_postinst() {
 	if [ -e "${ROOT}${REDMINE_DIR}/config/initializers/session_store.rb" ] ; then
 		elog "Execute the following command to upgrade environment:"
 		elog
-		elog "# emerge --config =${CATEGORY}/${PF}"
+		elog "# emerge --config \"=${CATEGORY}/${PF}\""
 		elog
 		elog "For upgrade instructions take a look at:"
 		elog "http://www.redmine.org/wiki/redmine/RedmineUpgrade"
@@ -103,7 +103,7 @@ pkg_postinst() {
 		elog "# cd ${REDMINE_DIR}"
 		elog "# cp config/database.yml.example config/database.yml"
 		elog "# \${EDITOR} config/database.yml"
-		elog "# emerge --config =${CATEGORY}/${PF}"
+		elog "# emerge --config \"=${CATEGORY}/${PF}\""
 		elog
 		elog "Installation notes are at official site"
 		elog "http://www.redmine.org/wiki/redmine/RedmineInstall"
