@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-262.ebuild,v 1.7 2010/11/05 20:35:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-262.ebuild,v 1.8 2011/01/24 00:29:36 nerdboy Exp $
 
 EAPI=2
 inherit multilib
