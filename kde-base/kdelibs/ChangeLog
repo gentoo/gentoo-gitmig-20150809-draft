@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.713 2011/01/24 12:27:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.714 2011/01/24 19:04:16 reavertm Exp $
+
+  24 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org> kdelibs-4.4.5.ebuild,
+  kdelibs-4.4.5-r1.ebuild, kdelibs-4.4.5-r2.ebuild, kdelibs-4.5.5.ebuild:
+  Drop xcb USE dep on phonon. Related to bug 352611.
 
   24 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   kdelibs-4.4.5-r2.ebuild:
