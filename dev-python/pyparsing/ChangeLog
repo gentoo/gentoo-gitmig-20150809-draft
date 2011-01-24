@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.65 2010/12/27 21:41:35 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.66 2011/01/24 04:12:30 jer Exp $
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org> pyparsing-1.5.5.ebuild:
+  Marked ~hppa (bug #352300).
 
   27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pyparsing-1.5.2.ebuild, -pyparsing-1.5.3.ebuild,
