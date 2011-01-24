@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.647 2011/01/13 21:52:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.648 2011/01/24 11:38:05 aballier Exp $
+
+*vlc-1.1.6 (24 Jan 2011)
+
+  24 Jan 2011; Alexis Ballier <aballier@gentoo.org> +vlc-1.1.6.ebuild:
+  version bump
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> vlc-1.1.5.ebuild:
   keyworded ~arch for ppc, bug 345329
