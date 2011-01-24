@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.14 2011/01/13 17:07:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.15 2011/01/24 04:06:33 jer Exp $
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org> Pango-1.221.ebuild:
+  Stable for HPPA (bug #351661).
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> Pango-1.221.ebuild:
   Marking Pango-1.221 ppc stable for bug 341865
