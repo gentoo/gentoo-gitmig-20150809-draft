@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.20 2010/10/14 16:37:13 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.21 2011/01/24 13:59:20 dberkholz Exp $
+
+  24 Jan 2011; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  This is another dep of sci-chemistry/coot, assign to sci-chemistry like
+  the others.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> guile-www-2.27.ebuild:
   stable ppc, bug 326013
