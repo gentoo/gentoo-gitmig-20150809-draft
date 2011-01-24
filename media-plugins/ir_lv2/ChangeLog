@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/ir_lv2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/ir_lv2/ChangeLog,v 1.1 2011/01/24 11:55:39 aballier Exp $
+
+*ir_lv2-1.1 (24 Jan 2011)
+
+  24 Jan 2011; Alexis Ballier <aballier@gentoo.org> +ir_lv2-1.1.ebuild,
+  +files/ir_lv2-1.1-makefile.patch, +metadata.xml:
+  initial import, ebuild by me
+
