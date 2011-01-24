@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0_p20110122.ebuild,v 1.1 2011/01/22 21:33:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0_p20110122.ebuild,v 1.2 2011/01/24 17:56:58 ssuominen Exp $
 
 EAPI=3
 inherit autotools
 
-DESCRIPTION="A simple PolicyKit auhentication agent"
+DESCRIPTION="A simple PolicyKit authentication agent"
 HOMEPAGE="http://blog.lxde.org/?p=674"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
