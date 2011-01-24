@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/maradns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.35 2010/08/11 22:37:14 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.36 2011/01/24 13:22:58 matsuu Exp $
+
+*maradns-2.0.01 (24 Jan 2011)
+*maradns-1.4.05 (24 Jan 2011)
+
+  24 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -maradns-1.2.12.10.ebuild,
+  -maradns-1.3.07.09-r1.ebuild, +maradns-1.4.05.ebuild, +maradns-2.0.01.ebuild:
+  Version bumped, bug #352569. Removed old versions.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> maradns-1.4.03.ebuild:
   Marked ppc stable for bug #329947.
