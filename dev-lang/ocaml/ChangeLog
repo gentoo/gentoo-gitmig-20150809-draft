@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.187 2011/01/22 22:58:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.188 2011/01/24 09:22:53 aballier Exp $
+
+  24 Jan 2011; Alexis Ballier <aballier@gentoo.org>
+  -files/ocaml-3.10.0-automagic.patch,
+  -files/ocaml-3.10.0-call-ld-with-proper-ldflags.patch,
+  -files/ocaml-3.10.0-configure.patch,
+  -files/ocaml-3.10.0-exec-stack-fixes.patch, -ocaml-3.10.2.ebuild,
+  -files/ocaml-3.10.2-tk85.patch:
+  remove old
 
   22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> ocaml-3.11.2.ebuild:
   ppc/ppc64 stable wrt #343751
