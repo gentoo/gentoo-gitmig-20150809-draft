@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0_rc4.ebuild,v 1.1 2011/01/23 14:42:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0_rc4.ebuild,v 1.2 2011/01/24 20:04:27 suka Exp $
 
 EAPI="3"
 
@@ -49,7 +49,10 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="x11-libs/libXaw
+RDEPEND="!app-office/libreoffice
+	!app-office/openoffice
+	!app-office/openoffice-bin
+	x11-libs/libXaw
 	sys-libs/glibc
 	>=dev-lang/perl-5.0
 	app-arch/zip
@@ -159,12 +162,12 @@ src_install () {
 
 	# Component symlinks
 	# Disabled, trouble with parallel installing openoffice
-#	for app in base calc draw impress math writer; do
-#		dosym loffice /usr/bin/lo${app}
-#	done
+	for app in base calc draw impress math writer; do
+		dosym loffice /usr/bin/lo${app}
+	done
 
 	dosym ${INSTDIR}/program/spadmin /usr/bin/loffice-printeradmin
-#	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
+	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	rm -f "${ED}${INSTDIR}/basis-link" || die
 	dosym ${INSTDIR}/basis3.3 ${INSTDIR}/basis-link

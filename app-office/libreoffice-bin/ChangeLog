@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.1 2011/01/23 14:42:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.2 2011/01/24 20:04:27 suka Exp $
+
+  24 Jan 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.0_rc4.ebuild:
+  Don't care about parallel installability (which causes all sorts of problems
+  anyway) and get starter symlinks 
+  back
 
 *libreoffice-bin-3.3.0_rc4 (23 Jan 2011)
 
