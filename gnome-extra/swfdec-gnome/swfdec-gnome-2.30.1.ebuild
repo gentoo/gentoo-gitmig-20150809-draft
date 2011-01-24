@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/swfdec-gnome-2.30.1.ebuild,v 1.3 2011/01/19 21:25:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/swfdec-gnome-2.30.1.ebuild,v 1.4 2011/01/24 13:14:24 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.14
+RDEPEND=">=x11-libs/gtk+-2.14:2
 	>=gnome-base/gconf-2
 	>=media-libs/swfdec-0.8[gtk]"
 DEPEND="${RDEPEND}
