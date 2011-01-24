@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.20 2010/11/23 21:44:56 grobian Exp $
-# $Id: package.mask,v 1.20 2010/11/23 21:44:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.21 2011/01/24 17:59:09 grobian Exp $
+# $Id: package.mask,v 1.21 2011/01/24 17:59:09 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
 # Requires thread-local storage (__thread), Darwin has pthread_getspecific
 # http://lists.apple.com/archives/xcode-users/2006/Jun/msg00551.html
-~media-gfx/povray-3.7.0
+=media-gfx/povray-3.7.0*
 
 # Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
 # state of mesa is probably not too good on OSX, opengl-apple is
