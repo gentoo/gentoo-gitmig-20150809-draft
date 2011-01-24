@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.84 2011/01/22 19:58:37 grobian Exp $
+# $Id: package.mask,v 1.85 2011/01/24 17:52:38 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+
+# Fabian Groffen <grobian@gentoo.org> (24 Jan 2011)
+# This release breaks in multiple ways (posix_memalign, O_DIRECT), wait
+# for upstream to sanitise their code (or someone else to do it, since
+# many people are affected: uClibc, BSD, ...)
+=sys-fs/e2fsprogs-1.41.14
 
 # Alex Alexander <wired@gentoo.org> (06 Nov 2010)
 # Masked Qt-4.7 as requested by prefix team, bug #338289

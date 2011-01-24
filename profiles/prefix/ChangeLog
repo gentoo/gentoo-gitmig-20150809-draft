@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.238 2011/01/22 19:58:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.239 2011/01/24 17:52:38 grobian Exp $
+
+  24 Jan 2011; Fabian Groffen <grobian@gentoo.org> linux/package.mask,
+  package.mask:
+  Mask sys-fs/e2fsprogs-1.41.14, it's broken in multiple ways
 
   22 Jan 2011; Fabian Groffen <grobian@gentoo.org> linux/package.mask,
   package.mask:
