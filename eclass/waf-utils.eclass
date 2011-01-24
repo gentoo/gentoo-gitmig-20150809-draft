@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.3 2011/01/16 08:36:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.4 2011/01/24 14:04:39 scarabeus Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -19,21 +19,9 @@
 inherit base eutils multilib
 
 case ${EAPI:-0} in
-	4|3|2) EXPORT_FUNCTIONS pkg_setup src_configure src_compile src_install ;;
+	4|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
-
-# @FUNCTION: waf-utils_src_configure
-# @DESCRIPTION:
-# General function for configuring with waf.
-waf-utils_pkg_setup() {
-	debug-print-function ${FUNCNAME} "$@"
-
-	# @ECLASS-VARIABLE: WAF_BINARY
-	# @DESCRIPTION:
-	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
-	: ${WAF_BINARY:="${S}/waf"}
-}
 
 # @FUNCTION: waf-utils_src_configure
 # @DESCRIPTION:
@@ -41,8 +29,9 @@ waf-utils_pkg_setup() {
 waf-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	# sometimes people forget to run pkg_setup from this eclass
-	# instead of having the variable empty lets try to get it once more
+	# @ECLASS-VARIABLE: WAF_BINARY
+	# @DESCRIPTION:
+	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
 	: ${WAF_BINARY:="${S}/waf"}
 
 	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=/usr --libdir=/usr/$(get_libdir) $@ configure"
@@ -71,7 +60,6 @@ waf-utils_src_compile() {
 waf-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	has ${EAPI:-0} 2 && ! use prefix && ED="${D}"
 	echo "\"${WAF_BINARY}\" --destdir=\"${ED}\" install"
 	"${WAF_BINARY}" --destdir="${ED}" install  || die "Make install failed"
 
