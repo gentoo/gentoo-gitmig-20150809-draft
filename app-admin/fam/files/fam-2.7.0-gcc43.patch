@@ -1,6 +1,5 @@
-diff -Naur fam-2.7.0-orig/include/BTree.h fam-2.7.0/include/BTree.h
---- fam-2.7.0-orig/include/BTree.h	2003-01-19 22:22:30.000000000 -0600
-+++ fam-2.7.0/include/BTree.h	2008-12-04 17:51:22.000000000 -0600
+--- a/include/BTree.h
++++ b/include/BTree.h
 @@ -24,6 +24,7 @@
  #define BTree_included
  
@@ -9,9 +8,8 @@ diff -Naur fam-2.7.0-orig/include/BTree.h fam-2.7.0/include/BTree.h
  
  //  This is an in-core B-Tree implementation.
  //
-diff -Naur fam-2.7.0-orig/lib/Client.c++ fam-2.7.0/lib/Client.c++
---- fam-2.7.0-orig/lib/Client.c++	2003-01-18 08:18:12.000000000 -0600
-+++ fam-2.7.0/lib/Client.c++	2008-12-04 17:51:19.000000000 -0600
+--- a/lib/Client.c++
++++ b/lib/Client.c++
 @@ -34,7 +34,7 @@
  #include <syslog.h>
  #include <errno.h>
@@ -21,9 +19,8 @@ diff -Naur fam-2.7.0-orig/lib/Client.c++ fam-2.7.0/lib/Client.c++
  
  #include "fam.h"
  #include "Client.h"
-diff -Naur fam-2.7.0-orig/src/DNotify.c++ fam-2.7.0/src/DNotify.c++
---- fam-2.7.0-orig/src/DNotify.c++	2008-12-04 17:50:48.000000000 -0600
-+++ fam-2.7.0/src/DNotify.c++	2008-12-04 17:51:19.000000000 -0600
+--- a/src/DNotify.c++
++++ b/src/DNotify.c++
 @@ -31,6 +31,7 @@
  #include <sys/types.h>
  #include <sys/stat.h>
@@ -32,9 +29,8 @@ diff -Naur fam-2.7.0-orig/src/DNotify.c++ fam-2.7.0/src/DNotify.c++
  
  #include "DNotify.h"
  
-diff -Naur fam-2.7.0-orig/src/IMon.c++ fam-2.7.0/src/IMon.c++
---- fam-2.7.0-orig/src/IMon.c++	2003-01-18 08:18:12.000000000 -0600
-+++ fam-2.7.0/src/IMon.c++	2008-12-04 17:51:19.000000000 -0600
+--- a/src/IMon.c++
++++ b/src/IMon.c++
 @@ -40,7 +40,7 @@
  #include "Interest.h"
  #include "Log.h"
@@ -44,9 +40,8 @@ diff -Naur fam-2.7.0-orig/src/IMon.c++ fam-2.7.0/src/IMon.c++
  
  int		   IMon::imonfd = -2;
  IMon::EventHandler IMon::ehandler = NULL;
-diff -Naur fam-2.7.0-orig/src/Interest.h fam-2.7.0/src/Interest.h
---- fam-2.7.0-orig/src/Interest.h	2008-12-04 17:50:48.000000000 -0600
-+++ fam-2.7.0/src/Interest.h	2008-12-04 17:51:22.000000000 -0600
+--- a/src/Interest.h
++++ b/src/Interest.h
 @@ -29,6 +29,7 @@
  #include <netinet/in.h>  //  for in_addr
  

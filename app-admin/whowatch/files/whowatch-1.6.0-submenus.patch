@@ -1,6 +1,5 @@
-diff -ur whowatch-1.6.0.org/src/menu.c whowatch-1.6.0/src/menu.c
---- whowatch-1.6.0.org/src/menu.c	2010-01-09 18:19:35.000000000 +0100
-+++ whowatch-1.6.0/src/menu.c	2010-01-09 18:23:47.000000000 +0100
+--- a/src/menu.c
++++ b/src/menu.c
 @@ -37,7 +37,7 @@
  static unsigned short item_cursor;
  

@@ -1,6 +1,5 @@
-diff -dpruN fam-2.7.0.orig/src/DNotify.h fam-2.7.0/src/DNotify.h
---- fam-2.7.0.orig/src/DNotify.h	2005-11-16 08:49:13.000000000 +0100
-+++ fam-2.7.0/src/DNotify.h	2005-11-16 08:54:04.972188928 +0100
+--- a/src/DNotify.h
++++ b/src/DNotify.h
 @@ -59,8 +59,8 @@ private:
      static int pipe_write_fd;
      static int pipe_read_fd;

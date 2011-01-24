@@ -1,5 +1,5 @@
---- fam-2.7.0-orig/src/NFSFileSystem.c++	2009-06-03 19:20:51.000000000 +0300
-+++ fam-2.7.0/src/NFSFileSystem.c++	2009-06-03 19:21:57.000000000 +0300
+--- a/src/NFSFileSystem.c++
++++ b/src/NFSFileSystem.c++
 @@ -97,7 +97,7 @@
  
      attr_cache_timeout = ACREGMAX;

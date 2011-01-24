@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/whowatch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.34 2010/01/09 17:42:12 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.35 2011/01/24 04:40:35 jer Exp $
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  files/whowatch-1.6.0-cflags.patch, files/whowatch-1.6.0-submenus.patch:
+  Clean up patches.
 
 *whowatch-1.6.0-r1 (09 Jan 2010)
 
