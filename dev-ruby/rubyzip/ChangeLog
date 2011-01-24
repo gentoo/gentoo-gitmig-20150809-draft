@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubyzip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.16 2010/09/28 19:58:25 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.17 2011/01/24 18:29:51 graaff Exp $
+
+*rubyzip-0.9.4-r1 (24 Jan 2011)
+
+  24 Jan 2011; Hans de Graaff <graaff@gentoo.org> +rubyzip-0.9.4-r1.ebuild:
+  Add ree18 support.
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> rubyzip-0.9.4.ebuild:
   Marking rubyzip-0.9.4 ~ppc for bug 319241
