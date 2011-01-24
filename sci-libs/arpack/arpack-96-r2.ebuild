@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.20 2010/12/01 18:15:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.21 2011/01/24 21:04:56 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools toolchain-funcs
@@ -9,16 +9,17 @@ DESCRIPTION="Arnoldi package library to solve large scale eigenvalue problems."
 HOMEPAGE="http://www.caam.rice.edu/software/ARPACK/"
 SRC_URI="http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
 	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${PV}.tar.gz
-	mirror://gentoo/${P}-patches.tar.bz2
+	http://dev.gentoo.org/~bicatali/${P}-patches.tar.bz2
 	doc? ( http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
 		http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE="mpi doc examples"
+IUSE="doc examples mpi static-libs"
 
 RDEPEND="virtual/blas
+	virtual/lapack
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -31,20 +32,20 @@ src_unpack() {
 }
 
 src_prepare() {
+	cd "${WORKDIR}"
 	epatch "${WORKDIR}"/${PN}-arscnd.patch
 	epatch "${WORKDIR}"/${PN}-autotools.patch
-
-	BLAS_LIBS="$(pkg-config --libs blas)"
+	cd "${S}"
 	# fix examples library paths
 	sed -i \
 		-e '/^include/d' \
-		-e "s:\$(ALIBS):-larpack ${BLAS_LIBS}:g" \
+		-e "s:\$(ALIBS):-larpack $(pkg-config --libs blas lapack):g" \
 		-e 's:$(FFLAGS):$(FFLAGS) $(LDFLAGS):g' \
 		EXAMPLES/*/makefile || die "sed failed"
 
 	sed -i \
 		-e '/^include/d' \
-		-e "s:\$(PLIBS):-larpack -lparpack ${BLAS_LIBS}:g" \
+		-e "s:\$(PLIBS):-larpack -lparpack $(pkg-config --libs blas lapack):g" \
 		-e 's:_$(PLAT)::g' \
 		-e 's:$(PFC):mpif77:g' \
 		-e 's:$(PFFLAGS):$(FFLAGS) $(LDFLAGS) $(EXTOBJS):g' \
@@ -54,7 +55,9 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-blas="${BLAS_LIBS}" \
+		--with-blas="$(pkg-config --libs blas)" \
+		--with-lapack="$(pkg-config --libs lapack)" \
+		$(use_enable static-libs static) \
 		$(use_enable mpi)
 }
 
@@ -77,7 +80,7 @@ src_test() {
 		emake \
 			FC=mpif77 \
 			EXTOBJS="dpttr{f,s}.o" \
-			LDFLAGS="-L${S}/.libs -L${S}/PARPACK/.libs" \
+			LDFLAGS="${LDFLAGS} -L${S}/.libs -L${S}/PARPACK/.libs" \
 			pdndrv || die "emake pdndrv failed"
 		for p in 1 3; do
 			prog=pdndrv${p}
