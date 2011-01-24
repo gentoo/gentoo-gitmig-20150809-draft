@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.0-r2.ebuild,v 1.1 2011/01/20 16:39:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.8.0-r2.ebuild,v 1.2 2011/01/24 15:55:03 flameeyes Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A proxy/masquerading daemon for the SIP protocol"
 HOMEPAGE="http://siproxd.sourceforge.net/"
@@ -36,10 +36,12 @@ src_prepare() {
 	sed -i -e "s:nobody:siproxd:" doc/siproxd.conf.example \
 		|| die "patching doc/siproxd.conf.example failed"
 	# do not fail when building with external libltdl
-	sed -i 's/libltdl //' Makefile.in Makefile.am || die "patching Makefile failed"
+	sed -i 's/libltdl //' Makefile.am || die "patching Makefile failed"
 	epatch "${FILESDIR}/${PN}-libtool-2.4.patch"
 	# do not crash when building with external libltdl, bug 308495
 	sed -i 's|"../libltdl/ltdl.h"|<ltdl.h>|' src/plugins.h || die "patching plugins.h failed"
+
+	eautoreconf
 }
 
 src_configure() {

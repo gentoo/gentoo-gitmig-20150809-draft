@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/siproxd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.21 2011/01/20 16:39:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.22 2011/01/24 15:55:03 flameeyes Exp $
+
+  24 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  siproxd-0.8.0-r2.ebuild:
+  Avoid mantainer-mode automake calls by properly re-building autotools.
 
 *siproxd-0.8.0-r2 (20 Jan 2011)
 
