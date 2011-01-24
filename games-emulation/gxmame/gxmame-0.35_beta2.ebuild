@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.10 2010/12/01 10:06:53 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_beta2.ebuild,v 1.11 2011/01/24 22:29:44 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P="${PN}-${PV/_beta/beta}"
@@ -16,8 +16,8 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="nls joystick"
 
 RDEPEND="dev-libs/expat
-	>=x11-libs/gtk+-2.4
-	>=dev-libs/glib-2.4
+	>=x11-libs/gtk+-2.4:2
+	>=dev-libs/glib-2.4:2
 	x11-themes/gnome-icon-theme
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -56,12 +56,11 @@ src_configure() {
 		--disable-dependency-tracking \
 		--with-xmame-dir="${GAMES_DATADIR}"/xmame \
 		$(use_enable nls) \
-		$(use_enable joystick) \
-		|| die
+		$(use_enable joystick)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
