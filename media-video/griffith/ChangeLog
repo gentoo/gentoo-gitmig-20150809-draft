@@ -1,6 +1,10 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.52 2011/01/18 00:34:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.53 2011/01/24 13:13:20 fauli Exp $
+
+  24 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  griffith-0.12.1.ebuild:
+  stable x86, bug 351792
 
   17 Jan 2011; Markos Chandras <hwoarang@gentoo.org> griffith-0.12.1.ebuild:
   Stable on amd64 wrt bug #351792
