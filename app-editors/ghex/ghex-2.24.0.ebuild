@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.24.0.ebuild,v 1.10 2010/07/20 14:59:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.24.0.ebuild,v 1.11 2011/01/24 13:12:44 eva Exp $
 
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -14,7 +15,7 @@ SLOT="2"
 KEYWORDS="amd64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.13.0
+RDEPEND=">=x11-libs/gtk+-2.13:2
 	dev-libs/popt
 	>=dev-libs/atk-1
 	>=gnome-base/gconf-2
@@ -26,6 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
-G2CONF="${G2CONF} --disable-static"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README"
+	G2CONF="${G2CONF} --disable-static"
+}
