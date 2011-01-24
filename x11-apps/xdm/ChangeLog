@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.108 2011/01/16 22:38:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.109 2011/01/24 15:46:58 ssuominen Exp $
+
+*xdm-1.1.10-r1 (24 Jan 2011)
+
+  24 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +xdm-1.1.10-r1.ebuild:
+  Use pam.eclass to generate system-local-login based pam.d file instead of
+  using custom pam.d file. This is required to get pam_loginuid and
+  pam_ck_connector from pambase wrt #352526.
 
   16 Jan 2011; Michał Górny <mgorny@gentoo.org> xdm-1.1.8.ebuild,
   xdm-1.1.9.ebuild, xdm-1.1.10.ebuild:
