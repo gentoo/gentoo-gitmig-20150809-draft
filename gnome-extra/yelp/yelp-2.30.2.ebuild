@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2.ebuild,v 1.3 2011/01/19 21:26:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2.ebuild,v 1.4 2011/01/24 16:17:15 eva Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ IUSE="beagle lzma"
 
 RDEPEND=">=gnome-base/gconf-2
 	>=app-text/gnome-doc-utils-0.19.1
-	>=x11-libs/gtk+-2.18
-	>=dev-libs/glib-2.16
+	>=x11-libs/gtk+-2.18:2
+	>=dev-libs/glib-2.16:2
 	>=dev-libs/libxml2-2.6.5
 	>=dev-libs/libxslt-1.1.4
 	>=x11-libs/startup-notification-0.8
@@ -41,9 +41,8 @@ DEPEND="${RDEPEND}
 # If eautoreconf:
 #	gnome-base/gnome-common
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--with-gecko=libxul-embedding
 		$(use_enable lzma)"
