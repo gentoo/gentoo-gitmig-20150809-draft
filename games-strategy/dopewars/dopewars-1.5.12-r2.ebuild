@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.5 2010/03/04 00:55:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.6 2011/01/24 22:22:40 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE="nls ncurses gtk gnome sdl"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
 	gtk? ( x11-libs/gtk+:2 )
-	dev-libs/glib
+	dev-libs/glib:2
 	nls? ( virtual/libintl )
 	sdl? (
 		media-libs/libsdl
