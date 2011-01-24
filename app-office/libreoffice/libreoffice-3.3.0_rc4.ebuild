@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0_rc4.ebuild,v 1.1 2011/01/24 19:57:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0_rc4.ebuild,v 1.2 2011/01/24 20:56:06 suka Exp $
 
 EAPI="3"
 
@@ -118,7 +118,7 @@ for X in ${SPELL_DIRS} ; do
 	SPELL_DIRS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
 done
 
-HOMEPAGE="http://go-oo.org"
+HOMEPAGE="http://www.documentfoundation.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
