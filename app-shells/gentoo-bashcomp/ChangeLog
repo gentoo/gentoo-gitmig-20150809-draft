@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.44 2010/12/17 04:18:07 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.45 2011/01/24 16:10:15 darkside Exp $
+
+  24 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  -gentoo-bashcomp-20100613.ebuild, gentoo-bashcomp-20101217.ebuild:
+  Stabilize for all, noarch package (only text files). Remove old version.
 
 *gentoo-bashcomp-20101217 (17 Dec 2010)
 
