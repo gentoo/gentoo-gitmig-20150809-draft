@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0_rc4.ebuild,v 1.2 2011/01/24 20:56:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0_rc4.ebuild,v 1.3 2011/01/24 21:23:08 suka Exp $
 
 EAPI="3"
 
@@ -280,6 +280,7 @@ src_prepare() {
 	epatch "${FILESDIR}/fix-ooo-collision.diff"
 	epatch "${FILESDIR}/scrap-pixmap-links.diff"
 	epatch "${FILESDIR}/enable-startup-notification.diff"
+	cp -f "${FILESDIR}/sdext-presenter.diff" "${S}/patches/hotfixes" || die
 
 	#Use flag checks
 	if use java ; then
@@ -316,14 +317,12 @@ src_prepare() {
 	echo $(use_enable debug strip-solver) >> ${CONFFILE}
 
 	# Extension stuff
-	echo "--without-extension-integration" >> ${CONFFILE}
-	echo "--disable-pdfimport" >> ${CONFFILE}
-
-	# breaks the build
-	echo "--disable-minimizer" >> ${CONFFILE}
-	echo "--disable-presenter-console" >> ${CONFFILE}
-	echo "--disable-presenter-extra-ui" >> ${CONFFILE}
-	echo "--disable-presenter-screen" >> ${CONFFILE}
+	echo "--with-extension-integration" >> ${CONFFILE}
+	echo "--enable-pdfimport" >> ${CONFFILE}
+	echo "--enable-minimizer" >> ${CONFFILE}
+	echo "--enable-presenter-console" >> ${CONFFILE}
+	echo "--enable-presenter-extra-ui" >> ${CONFFILE}
+	echo "--enable-presenter-screen" >> ${CONFFILE}
 
 	# Misc stuff
 	echo "--disable-graphite" >> ${CONFFILE}
@@ -395,7 +394,7 @@ src_configure() {
 		$(use_with templates sun-templates) \
 		--disable-access \
 		--disable-post-install-scripts \
-		--disable-extensions \
+		--enable-extensions \
 		--without-system-libwpd \
 		--without-system-libwpg \
 		--mandir=/usr/share/man \
@@ -443,17 +442,6 @@ pkg_postinst() {
 
 	# Add available & useful jars to LibreOffice classpath
 	use java && /usr/$(get_libdir)/${PN}/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
-
-#	extensions disabled for now...
-#	elog " Some aditional functionality can be installed via Extension Manager: "
-#	elog " *) PDF Import "
-#	elog " *) Presentation Console "
-#	elog " *) Presentation Minimizer "
-#	elog
-#	elog " Please use the packages provided in "
-#	elog " /usr/$(get_libdir)/${PN}/share/extension/install/ "
-#	elog " instead of those from the SUN extension site. "
-#	elog
 
 	kde4-base_pkg_postinst
 

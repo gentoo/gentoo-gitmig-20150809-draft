@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.2 2011/01/24 20:56:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.3 2011/01/24 21:23:08 suka Exp $
+
+  24 Jan 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-3.3.0_rc4.ebuild, +files/sdext-presenter.diff:
+  Fix extensions stuff, patch from bug #339057
 
   24 Jan 2011; Andreas Proschofsky <suka@gentoo.org>
   libreoffice-3.3.0_rc4.ebuild:
