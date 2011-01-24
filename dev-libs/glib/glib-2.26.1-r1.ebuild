@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.1-r1.ebuild,v 1.1 2011/01/17 17:58:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.1-r1.ebuild,v 1.2 2011/01/24 13:55:17 pacho Exp $
 
 EAPI="3"
 
@@ -44,6 +44,12 @@ src_prepare() {
 
 	# gsettings.m4: Fix rules to work when there are no schemas, bug #350020
 	epatch "${FILESDIR}/${PN}-2.26.1-gsettings-rules.patch"
+
+	# Fix compilation on several arches, bug #351387
+	epatch "${FILESDIR}/${PN}-2.26.1-gatomic-header.patch"
+
+	# Remove a test that seems to fail depending on time of day
+	epatch "${FILESDIR}/${PN}-2.26.1-gdatetime-test.patch"
 
 	# Deprecation check in tests/testglib.c, upstream bug #635093
 	epatch "${FILESDIR}/${P}-deprecation-tests.patch"
@@ -144,6 +150,7 @@ src_test() {
 	export XDG_CONFIG_DIRS=/etc/xdg
 	export XDG_DATA_DIRS=/usr/local/share:/usr/share
 	export XDG_DATA_HOME="${T}"
+	unset GSETTINGS_BACKEND # bug 352451
 
 	# Hardened: gdb needs this, bug #338891
 	if host-is-pax ; then
