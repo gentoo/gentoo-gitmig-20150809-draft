@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.1.ebuild,v 1.5 2010/09/11 18:17:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.1.ebuild,v 1.6 2011/01/24 16:22:47 eva Exp $
 
 EAPI="2"
 
@@ -14,17 +14,16 @@ IUSE="doc"
 SLOT="2.0"
 LICENSE="LGPL-2.1"
 
-RDEPEND=">=dev-cpp/gtkmm-2.12
-	>=x11-libs/gtksourceview-2.10.0
+RDEPEND=">=dev-cpp/gtkmm-2.12:2.4
+	>=x11-libs/gtksourceview-2.10.0:2.0
 	!>=dev-cpp/libgtksourceviewmm-1"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
-DOCS="AUTHORS ChangeLog* NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog* NEWS README"
 	G2CONF="${G2CONF} $(use_enable doc documentation)"
 }
 
