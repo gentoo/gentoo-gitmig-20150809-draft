@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.2.ebuild,v 1.7 2011/01/21 08:00:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.2.ebuild,v 1.8 2011/01/24 13:12:11 fauli Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/downloads/tDOM/${PN}/${MY_P}.tgz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="threads"
 
 DEPEND="
