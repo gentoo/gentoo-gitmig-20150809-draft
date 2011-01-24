@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.5 2011/01/20 22:33:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.6 2011/01/24 14:43:22 eva Exp $
 
+EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.5"
 
@@ -18,17 +19,17 @@ IUSE="doc python spell"
 RDEPEND=">=gnome-base/gconf-2
 	>=x11-libs/libSM-1.0
 	>=dev-libs/libxml2-2.5.0
-	>=dev-libs/glib-2.23.1
-	>=x11-libs/gtk+-2.19.0
-	>=x11-libs/gtksourceview-2.9.7
+	>=dev-libs/glib-2.23.1:2
+	>=x11-libs/gtk+-2.19.0:2
+	>=x11-libs/gtksourceview-2.9.7:2.0
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35
 	)
 	python? (
-		>=dev-python/pygobject-2.15.4
-		>=dev-python/pygtk-2.12
-		>=dev-python/pygtksourceview-2.9.2
+		>=dev-python/pygobject-2.15.4:2
+		>=dev-python/pygtk-2.12:2
+		>=dev-python/pygtksourceview-2.9.2:2
 	)"
 
 DEPEND="${RDEPEND}
@@ -41,14 +42,13 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 # gnome-common and gtk-doc-am needed to eautoreconf
 
-DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
-
 if [[ "${ARCH}" == "PPC" ]] ; then
 	# HACK HACK HACK: someone fix this garbage
 	MAKEOPTS="${MAKEOPTS} -j1"
 fi
 
 pkg_setup() {
+	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--disable-updater
@@ -57,8 +57,8 @@ pkg_setup() {
 	use python && python_set_active_version 2
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# Do not fail if remote mounting is not supported.
 	epatch "${FILESDIR}/${PN}-2.30.2-tests-skip.patch"
