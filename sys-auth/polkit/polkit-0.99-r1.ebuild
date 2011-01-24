@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99-r1.ebuild,v 1.3 2011/01/24 14:55:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99-r1.ebuild,v 1.4 2011/01/24 16:00:27 ssuominen Exp $
 
 EAPI=2
 inherit eutils pam
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND=">=sys-auth/consolekit-0.4[policykit]
 	gtk? ( || ( >=gnome-extra/polkit-gnome-0.96-r1 lxde-base/lxpolkit ) )
-	kde? ( sys-auth/polkit-kde )"
+	kde? ( || ( sys-auth/polkit-kde-agent sys-auth/polkit-kde ) )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.96-getcwd.patch
