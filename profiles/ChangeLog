@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4970 2011/01/24 06:45:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4971 2011/01/24 19:41:43 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2011; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  Add mask for upcoming libreoffice package
 
   24 Jan 2011; Tim Harder <radhermit@gentoo.org> updates/1Q-2011:
   Move app-vim/latexsuite to app-vim/vim-latex (bug #289890).
