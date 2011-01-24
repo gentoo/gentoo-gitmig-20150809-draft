@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.1 2010/12/31 18:58:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.2 2011/01/24 15:51:47 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -48,7 +48,7 @@ RDEPEND=">=dev-libs/glib-2.25.15:2
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	sourceview? ( >=x11-libs/gtksourceview-2.9.7 )
+	sourceview? ( >=x11-libs/gtksourceview-2.9.7:2.0 )
 	vala? ( >=dev-lang/vala-0.9.5:0.10 )"
 DEPEND="${RDEPEND}
 	!!dev-libs/gnome-build
