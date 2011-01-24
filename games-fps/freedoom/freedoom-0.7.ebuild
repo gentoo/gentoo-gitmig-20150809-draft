@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.7.ebuild,v 1.1 2011/01/23 23:14:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.7.ebuild,v 1.2 2011/01/24 00:52:28 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,9 +13,8 @@ SRC_URI="mirror://nongnu/freedoom/freedoom-iwad/shareware/freedoom-demo-${PV}.zi
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="doomsday"
+IUSE=""
 
-RDEPEND="doomsday? ( games-fps/doomsday )"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
@@ -24,23 +23,14 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/doom-data/${PN}
 	doins */*.wad || die "doins wad"
 	dodoc freedoom-iwad-${PV}/{CREDITS,ChangeLog,NEWS,README}
-	if use doomsday; then
-		# Make wrapper for doomsday
-		games_make_wrapper doomsday-freedoom "jdoom -file \
-			${GAMES_DATADIR}/doom-data/freedoom/*.wad"
-		make_desktop_entry doomsday-freedoom "Doomsday - Freedoom"
-	fi
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	if use doomsday; then
-		elog "To use the doomsday engine, run doomsday-freedoom"
-	else
-		elog "A Doom engine is required to play the wad"
-		elog "Enable the doomsday use flag if you want to use the doomsday engine"
-	fi
+	elog "A Doom engine is required to play the wad"
+	elog "but games-fps/doomsday doesn't count since it doesn't"
+	elog "have the necessary features."
 	echo
 	ewarn "To play freedoom with Doom engines which do not support"
 	ewarn "subdirectories, create symlinks by running the following:"
