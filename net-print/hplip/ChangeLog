@@ -1,6 +1,15 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.177 2011/01/21 13:44:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.178 2011/01/24 20:51:55 billie Exp $
+
+*hplip-3.11.1 (24 Jan 2011)
+
+  24 Jan 2011; Daniel Pielmeier <billie@gentoo.org> -hplip-3.9.12-r1.ebuild,
+  -hplip-3.10.6.ebuild, -hplip-3.10.9.ebuild, +hplip-3.11.1.ebuild,
+  +files/hplip-3.11.1-desktop.patch, +files/hplip-3.11.1-htmldir.patch,
+  +files/hplip-3.11.1-udev-attrs.patch:
+  Version bump. Fixes bug #352449. Thanks to Ben Sagal for reporting. Remove
+  potential vulnerable versions.
 
   21 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   hplip-3.10.9-r1.ebuild:

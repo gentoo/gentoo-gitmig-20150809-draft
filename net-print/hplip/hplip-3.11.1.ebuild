@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.9.ebuild,v 1.6 2011/01/10 20:43:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.1.ebuild,v 1.1 2011/01/24 20:51:55 billie Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
 IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl X"
@@ -100,9 +100,14 @@ pkg_setup() {
 src_prepare() {
 	python_convert_shebangs -q -r 2 .
 
+	# Test for Gentoo bug #345725
+	#sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
+	#	$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
+	#	|| die "sed udev rules"
+
 	# Do not install desktop files if there is no gui
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
-	epatch "${FILESDIR}"/${PN}-3.9.10-desktop.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch
 
 	# Browser detection through xdg-open
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
@@ -114,7 +119,7 @@ src_prepare() {
 
 	# Htmldocs are not installed under docdir/html so enable htmldir configure switch
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
-	epatch "${FILESDIR}"/${PN}-3.9.10-htmldir.patch
+	epatch "${FILESDIR}"/${P}-htmldir.patch
 
 	# Increase systray check timeout for slower machines
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/335662
@@ -122,7 +127,12 @@ src_prepare() {
 
 	# SYSFS deprecated but kept upstream for compatibility reasons
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
-	epatch "${FILESDIR}"/${PN}-3.10.5-udev-attrs.patch
+	epatch "${FILESDIR}"/${P}-udev-attrs.patch
+
+	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
+	# http://secunia.com/advisories/42956/
+	# https://bugzilla.redhat.com/show_bug.cgi?id=662740
+	epatch "${FILESDIR}"/${PN}-3.10.9-cve-2010-4267.patch
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \

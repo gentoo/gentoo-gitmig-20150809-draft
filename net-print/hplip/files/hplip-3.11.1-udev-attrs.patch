@@ -1,0 +1,208 @@
+diff -Naur hplip-3.11.1-old/data/rules/55-hpmud.rules hplip-3.11.1/data/rules/55-hpmud.rules
+--- hplip-3.11.1-old/data/rules/55-hpmud.rules	2011-01-24 21:01:48.803135668 +0100
++++ hplip-3.11.1/data/rules/55-hpmud.rules	2011-01-24 21:03:47.279802334 +0100
+@@ -21,128 +21,128 @@
+ LABEL="hplip_pid_test"
+ 
+ # Check for AiO products (0x03f0xx11).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??11", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??11", OWNER="root", GROUP="lp", MODE="660"
+ 
+ # Check for Photosmart products without wildcard since cameras and scanners also used (0x03f0xx02). 
+ # The xx02 pid has been retired so this explicit list should not change.
+ # photosmart_d2300_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c302", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c302", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_100
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3802", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3802", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_1115
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3402", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3402", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_1215
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3202", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3202", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_1218
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3302", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3302", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_130
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3902", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3902", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_1315
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3602", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3602", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_140_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1002", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1002", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_230
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3502", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3502", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_240_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1102", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1102", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_320_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1202", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1202", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_330_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1602", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1602", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_370_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1302", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1302", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_380_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1702", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1702", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_420_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1502", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1502", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_470_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1802", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1802", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7150
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3a02", OWNER="root", GROUP="lp", MODE="660"
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3b02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3a02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3b02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7200_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="b002", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="b002", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7345
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2002", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2002", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7350 
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3c02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3c02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7400_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="b802", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="b802", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7550
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="3e02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="3e02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7600_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="b202", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="b202", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7700_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="b402", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="b402", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7800_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c002", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c002", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_7900_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="b602", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="b602", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_8000_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c102", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c102", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_8100_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="ba02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="ba02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_8200_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c202", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c202", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_8400_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="bb02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="bb02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_8700_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="bc02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="bc02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a310_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1d02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1d02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a320_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1e02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1e02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a430_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1902", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1902", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a440_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1f02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1f02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a510_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1a02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1a02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a520_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2602", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2602", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a530_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2b02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2b02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a610_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1b02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1b02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a620_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2702", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2702", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a630_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2c02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2c02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a710_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="1c02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="1c02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_a820_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="2902", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="2902", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_d5060_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c802", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c802", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_d5100_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c402", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c402", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_d6100_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c502", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c502", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_d7100_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c602", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c602", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_d7300_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="c702", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="c702", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_pro_b8300_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="be02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="be02", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_b8800_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="d002", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="d002", OWNER="root", GROUP="lp", MODE="660"
+ # photosmart_pro_b9100_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="bd02", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="bd02", OWNER="root", GROUP="lp", MODE="660"
+ # Photosmart_B8500_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="d102", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="d102", OWNER="root", GROUP="lp", MODE="660"
+ # Photosmart_A640_series
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="7902", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="7902", OWNER="root", GROUP="lp", MODE="660"
+ 
+ # Check for Business Inkjet products (0x03f0xx12).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??12", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??12", OWNER="root", GROUP="lp", MODE="660"
+ # Check for Deskjet products (0x03f0xx04).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??04", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??04", OWNER="root", GROUP="lp", MODE="660"
+ # Check for LaserJet products (0x03f0xx17).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??17", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??17", OWNER="root", GROUP="lp", MODE="660"
+ # Check for LaserJet products (0x03f0xx2a).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??2a", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??2a", OWNER="root", GROUP="lp", MODE="660"
+ # Check for DesignJet product (0x03f0xx14).
+-SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??14", OWNER="root", GROUP="lp", MODE="660"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??14", OWNER="root", GROUP="lp", MODE="660"
+ 
+ # Removed the following rule because FHS states that /etc should be reserved for static files only. This
+ # functionality should be done in a deb/rpm post install script.  2/11/2009, D Suffield
+diff -Naur hplip-3.11.1-old/data/rules/56-hpmud_support.rules hplip-3.11.1/data/rules/56-hpmud_support.rules
+--- hplip-3.11.1-old/data/rules/56-hpmud_support.rules	2011-01-24 21:01:48.803135668 +0100
++++ hplip-3.11.1/data/rules/56-hpmud_support.rules	2011-01-24 21:02:52.919802334 +0100
+@@ -8,8 +8,10 @@
+ 
+ # Check for LaserJet products (0x03f0xx17).
+ SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??17", ENV{hp_model}="$sysfs{product}", ENV{hp_test}="yes"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??17", RUN+="/bin/sh -c 'hp_model=%E{ID_MODEL} /usr/bin/hp-mkuri -c &'"
+ # Check for LaserJet products (0x03f0xx2a).
+ SYSFS{idVendor}=="03f0", SYSFS{idProduct}=="??2a", ENV{hp_model}="$sysfs{product}", ENV{hp_test}="yes"
++ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??2a", RUN+="/bin/sh -c 'hp_model=%E{ID_MODEL} /usr/bin/hp-mkuri -c &'"
+ ENV{hp_test}=="yes", RUN+="bin/sh -c '/usr/bin/hp-mkuri -c &'"
+ 
+-LABEL="hpmud_rules_end"
+\ Kein Zeilenumbruch am Dateiende.
++LABEL="hpmud_rules_end"
