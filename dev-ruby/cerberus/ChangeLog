@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/cerberus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.13 2010/11/06 09:57:31 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.14 2011/01/24 18:38:31 graaff Exp $
+
+*cerberus-0.7.8-r1 (24 Jan 2011)
+
+  24 Jan 2011; Hans de Graaff <graaff@gentoo.org> +cerberus-0.7.8-r1.ebuild,
+  +files/cerberus-0.7.8-rails3.patch:
+  Fix tests when Rails 3 components are installed.
 
   06 Nov 2010; Hans de Graaff <graaff@gentoo.org> cerberus-0.7.8.ebuild:
   Add missing indirect dependency on dev-ruby/json, fixing bug 319241.
