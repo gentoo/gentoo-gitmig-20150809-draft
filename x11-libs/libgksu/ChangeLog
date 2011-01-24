@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.77 2010/10/14 18:52:07 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.78 2011/01/24 16:31:15 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libgksu-2.0.12-r1.ebuild:
+  Bump to EAPI 3 for dependency slot pinning.
 
   14 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -libgksu-2.0.9.ebuild,
   -libgksu-2.0.12.ebuild:
