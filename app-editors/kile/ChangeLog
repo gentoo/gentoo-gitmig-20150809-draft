@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.138 2010/10/07 21:22:43 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.139 2011/01/24 22:13:57 scarabeus Exp $
+
+*kile-2.1_beta5 (24 Jan 2011)
+
+  24 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> +kile-2.1_beta5.ebuild:
+  Version bump
 
   07 Oct 2010; Maciej Mrozowski <reavertm@gentoo.org> kile-2.1_beta4.ebuild:
   Use KDE_HANDBOOK to get khelpcenter dependencies.
