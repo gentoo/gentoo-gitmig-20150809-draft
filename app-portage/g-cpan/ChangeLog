@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-cpan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.61 2010/10/23 09:00:05 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.62 2011/01/24 05:10:54 robbat2 Exp $
+
+*g-cpan-0.16.3 (24 Jan 2011)
+
+  24 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +g-cpan-0.16.3.ebuild:
+  New release. Fixes bugs #313049 (distfile ext detection), #349329 (existence
+  of overlay directories), #344631, #339889 (underscores in package names),
+  #338116 (configure_requires dependencies).
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> g-cpan-0.16.2.ebuild:
   ppc64 stable wrt #337981
