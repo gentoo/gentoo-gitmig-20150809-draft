@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99-r1.ebuild,v 1.2 2011/01/21 17:15:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.99-r1.ebuild,v 1.3 2011/01/24 14:55:49 ssuominen Exp $
 
 EAPI=2
 inherit eutils pam
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc examples gtk +introspection nls pam"
+IUSE="debug doc examples gtk +introspection kde nls pam"
 
 RDEPEND=">=dev-libs/glib-2.25.12
 	dev-libs/expat
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.36
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND=">=sys-auth/consolekit-0.4[policykit]
-	gtk? ( || ( >=gnome-extra/polkit-gnome-0.96-r1 >=lxde-base/lxpolkit-0_p20101225 ) )"
+	gtk? ( || ( >=gnome-extra/polkit-gnome-0.96-r1 lxde-base/lxpolkit ) )
+	kde? ( sys-auth/polkit-kde )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.96-getcwd.patch
