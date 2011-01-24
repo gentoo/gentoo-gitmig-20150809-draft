@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/ExtUtils-CBuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.32 2011/01/24 07:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.33 2011/01/24 08:46:45 tove Exp $
+
+*ExtUtils-CBuilder-0.280.202 (24 Jan 2011)
+
+  24 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +ExtUtils-CBuilder-0.280.202.ebuild:
+  Version bump
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org>
   ExtUtils-CBuilder-0.280.201.ebuild:
