@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.44 2010/11/27 00:53:08 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.45 2011/01/24 19:51:54 xarthisius Exp $
+
+  24 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  vuze-4.3.1.4-r2.ebuild:
+  ppc/ppc64 stable wrt #316565
 
   27 Nov 2010; Vlastimil Babka <caster@gentoo.org> vuze-4.5.1.0.ebuild:
   Don't depend on xulrunner support in swt, as vuze can work without it,
