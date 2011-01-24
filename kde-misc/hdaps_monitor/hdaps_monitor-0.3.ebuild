@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/hdaps_monitor-0.3.ebuild,v 1.1 2009/11/18 15:48:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/hdaps_monitor-0.3.ebuild,v 1.2 2011/01/24 00:00:51 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 DESCRIPTION="KDE-based monitor for the IBM HDAPS system"
@@ -14,4 +14,6 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND=">=kde-base/plasma-workspace-${KDE_MINIMAL}"
+DEPEND="$(add_kdebase_dep plasma-workspace)"
+RDEPEND="${DEPEND}
+	app-laptop/hdapsd"
