@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33-r2.ebuild,v 1.3 2011/01/19 21:27:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.33-r2.ebuild,v 1.4 2011/01/24 13:00:37 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="samba"
 
 # FIXME: samba support is automatic
-COMMON=">=x11-libs/gtk+-2.3.1
-	>=dev-libs/glib-2.3.1
+COMMON=">=x11-libs/gtk+-2.3.1:2
+	>=dev-libs/glib-2.3.1:2
 	>=gnome-base/libgnome-2.14
 	>=gnome-base/libgnomeui-2.14
 	>=gnome-base/libglade-2
@@ -35,9 +35,8 @@ DEPEND="${COMMON}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35"
 
-DOCS="ChangeLog NEWS README"
-
 pkg_setup() {
+	DOCS="ChangeLog NEWS README"
 	G2CONF="${G2CONF} --disable-static $(use_enable samba)"
 }
 

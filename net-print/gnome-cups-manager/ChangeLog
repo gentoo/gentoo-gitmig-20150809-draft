@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.98 2011/01/19 21:27:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.99 2011/01/24 13:00:37 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-cups-manager-0.33-r2.ebuild:
+  Pin glib/gtk to slot 2. Move DOCS to pkg_setup.
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   gnome-cups-manager-0.33-r2.ebuild:
