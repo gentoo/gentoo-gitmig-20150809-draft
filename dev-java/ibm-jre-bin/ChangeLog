@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ibm-jre-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.156 2010/11/01 21:28:45 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.157 2011/01/24 16:39:13 caster Exp $
+
+*ibm-jre-bin-1.6.0.9 (24 Jan 2011)
+*ibm-jre-bin-1.5.0.12_p3 (24 Jan 2011)
+
+  24 Jan 2011; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jre-bin-1.5.0.12_p3.ebuild, +ibm-jre-bin-1.6.0.9.ebuild:
+  Version bump, security bug #352603.
 
   01 Nov 2010; Vlastimil Babka <caster@gentoo.org>
   -ibm-jre-bin-1.5.0.11.ebuild, -ibm-jre-bin-1.5.0.11_p1.ebuild,

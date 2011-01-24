@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.8_p1.ebuild,v 1.4 2010/10/05 20:28:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.9.ebuild,v 1.1 2011/01/24 16:36:50 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -94,7 +94,7 @@ SRC_URI="
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 	)"
 LICENSE="IBM-J1.6"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
@@ -272,4 +272,8 @@ src_install() {
 	fi
 
 	java-vm_revdep-mask
+
+	# bug #321695
+	dodir /etc/sandbox.d
+	echo 'SANDBOX_PREDICT="/proc/self/coredump_filter"' > "${D}/etc/sandbox.d/20${VMHANDLE}"
 }
