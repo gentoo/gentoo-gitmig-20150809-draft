@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icu4j
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.51 2010/12/11 18:02:01 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.52 2011/01/24 20:45:54 xarthisius Exp $
+
+  24 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> icu4j-4.4.2.ebuild:
+  ppc/ppc64 stable wrt #352630
 
 *icu4j-4.4.2 (11 Dec 2010)
 
