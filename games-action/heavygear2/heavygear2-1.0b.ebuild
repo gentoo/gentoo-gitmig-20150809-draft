@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.21 2009/11/05 06:01:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.22 2011/01/24 21:52:12 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Heavy Gear II - 3D first-person Mechanized Assault"
@@ -16,13 +17,12 @@ RESTRICT="strip"
 PROPERTIES="interactive"
 
 DEPEND="games-util/loki_patch"
-RDEPEND="=media-libs/freetype-1*
-	=dev-libs/glib-1*
+RDEPEND="media-libs/freetype:1
+	dev-libs/glib:1
 	virtual/opengl"
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
