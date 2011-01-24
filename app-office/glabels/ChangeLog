@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.54 2010/10/12 13:06:56 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.55 2011/01/24 17:00:28 eva Exp $
+
+  24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> -glabels-2.2.7.ebuild:
+  Clean up old revision.
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> glabels-2.3.0.ebuild:
   Add ~sparc wrt #338861
