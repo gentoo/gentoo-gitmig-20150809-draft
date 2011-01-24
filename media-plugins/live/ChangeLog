@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.130 2011/01/11 14:08:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.131 2011/01/24 10:32:59 aballier Exp $
+
+*live-2011.01.24 (24 Jan 2011)
+
+  24 Jan 2011; Alexis Ballier <aballier@gentoo.org> +live-2011.01.24.ebuild:
+  version bump
 
   11 Jan 2011; Alexis Ballier <aballier@gentoo.org> -live-2008.09.02.ebuild,
   -live-2009.09.28.ebuild, -live-2009.11.12.ebuild, -live-2010.04.09.ebuild:
