@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.2.ebuild,v 1.1 2010/11/10 13:05:32 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.2.ebuild,v 1.2 2011/01/24 16:01:56 hwoarang Exp $
 
 EAPI="2"
 
@@ -24,7 +24,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.2
 	>=x11-libs/gtk+-2.18
 	>=gnome-base/gconf-2.20
-	>=gnome-extra/polkit-gnome-0.92
 	>=x11-libs/libnotify-0.4.3
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-2.20
@@ -35,7 +34,8 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=net-wireless/wpa_supplicant-0.5.7
 	|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel x11-misc/trayer )
 	net-misc/mobile-broadband-provider-info
-	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )"
+	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )
+	|| ( sys-auth/polkit[gtk] sys-auth/polkit[kde] )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

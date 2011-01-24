@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nm-applet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.53 2010/11/10 13:05:32 dagger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.54 2011/01/24 16:01:56 hwoarang Exp $
+
+  24 Jan 2011; Markos Chandras <hwoarang@gentoo.org> nm-applet-0.8.2.ebuild:
+  QA commit: Allow any polkit agent to satisfy the polkit-agent dependency. Bug
+  #352504
 
 *nm-applet-0.8.2 (10 Nov 2010)
 
