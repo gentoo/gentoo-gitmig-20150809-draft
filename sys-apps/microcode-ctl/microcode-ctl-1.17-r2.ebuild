@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17-r2.ebuild,v 1.2 2009/06/10 20:23:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17-r2.ebuild,v 1.3 2011/01/24 14:16:01 darkside Exp $
 
-inherit toolchain-funcs
+inherit linux-info toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="Intel processor microcode update utility"
@@ -35,8 +35,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Your kernel must include microcode update support."
-	echo
-	einfo "Microcode updates will be lost at every reboot."
-	einfo "You can use the init.d script to update at boot time."
+	# Just a friendly warning
+	if ! linux_config_exists || ! linux_chkconfig_present MICROCODE; then
+		echo
+		ewarn "Your kernel must include microcode update support."
+		ewarn "  Processor type and features --->"
+		ewarn "  <*> /dev/cpu/microcode - microcode support"
+		echo
+	fi
+	elog "Microcode updates will be lost at every reboot."
+	elog "You can use the init.d script to update at boot time."
 }
