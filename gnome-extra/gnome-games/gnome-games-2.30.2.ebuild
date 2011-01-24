@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2.ebuild,v 1.3 2011/01/18 16:16:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2.ebuild,v 1.4 2011/01/24 16:50:50 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -26,16 +26,16 @@ RDEPEND="
 	>=dev-games/libggz-0.0.14
 	>=dev-games/ggz-client-libs-0.0.14
 	>=dev-libs/dbus-glib-0.75
-	>=dev-libs/glib-2.6.3
+	>=dev-libs/glib-2.6.3:2
 	>=dev-libs/libxml2-2.4.0
 	>=dev-python/gconf-python-2.17.3
-	>=dev-python/pygobject-2
-	>=dev-python/pygtk-2.14
+	>=dev-python/pygobject-2:2
+	>=dev-python/pygtk-2.14:2
 	>=dev-python/pycairo-1
 	>=gnome-base/gconf-2
 	>=gnome-base/librsvg-2.14
 	>=x11-libs/cairo-1
-	>=x11-libs/gtk+-2.16
+	>=x11-libs/gtk+-2.16:2
 	x11-libs/libSM
 
 	sound? ( media-libs/libcanberra[gtk] )
