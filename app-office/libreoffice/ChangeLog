@@ -1,0 +1,20 @@
+# ChangeLog for app-office/libreoffice
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.1 2011/01/24 19:57:42 suka Exp $
+
+*libreoffice-3.3.0_rc4 (24 Jan 2011)
+
+  24 Jan 2011; Andreas Proschofsky <suka@gentoo.org>
+  +libreoffice-3.3.0_rc4.ebuild, +files/gentoo-3.3.0_rc4.diff,
+  +files/enable-startup-notification.diff, +files/env_log.diff,
+  +files/fix-ooo-collision.diff, +files/gentoo-pythonpath.diff,
+  +files/scrap-pixmap-links.diff, +metadata.xml:
+  Initial ebuild for LibreOffice, masked for now as it needs some testing.
+  Also:
+
+  * Extensions are not built atm, otherwise this breaks the build
+  * ebuild needs some cleanups
+
+  Thanks especially to Hanno Meyer-Thurow (geki) which did a lot of the ground
+  work in his overlay! 
+
