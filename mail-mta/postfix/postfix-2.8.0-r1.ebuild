@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.0.ebuild,v 1.1 2011/01/21 18:32:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.0-r1.ebuild,v 1.1 2011/01/24 07:20:42 radhermit Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cdb dovecot-sasl hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux ssl vda"
+IUSE="cdb dovecot-sasl hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 PROVIDE="virtual/mta virtual/mda"
 
@@ -33,6 +33,7 @@ DEPEND=">=sys-libs/db-3.2
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )
+	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 RDEPEND="${DEPEND}
@@ -88,6 +89,11 @@ src_configure() {
 	if use postgres ; then
 		mycc="${mycc} -DHAS_PGSQL -I$(pg_config --includedir)"
 		mylibs="${mylibs} -lpq -L$(pg_config --libdir)"
+	fi
+
+	if use sqlite ; then
+		mycc="${mycc} -DHAS_SQLITE"
+		mylibs="${mylibs} -lsqlite3"
 	fi
 
 	if use ssl ; then
