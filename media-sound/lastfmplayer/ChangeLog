@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.57 2011/01/23 18:26:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.58 2011/01/24 14:29:53 hwoarang Exp $
+
+*lastfmplayer-1.5.4.27091-r1 (24 Jan 2011)
+
+  24 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  +lastfmplayer-1.5.4.27091-r1.ebuild,
+  +files/lastfmplayer-extensions-path.patch:
+  Add new 'dbus' use flag to support dbus extension. See
+  http://www.last.fm/forum/21716/_/397336 for more info. This plugin supports
+  both dbus and mpris interfaces
 
 *lastfmplayer-1.5.4.27091 (23 Jan 2011)
 
