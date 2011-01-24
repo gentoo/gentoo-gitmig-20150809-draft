@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.63 2011/01/24 07:41:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.64 2011/01/24 23:36:12 robbat2 Exp $
+
+*g-cpan-0.16.4 (24 Jan 2011)
+
+  24 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +g-cpan-0.16.4.ebuild:
+  Bump. Bug #352561: Allow --cpan_reload without other arguments. Bug #350070:
+  failure to reset a file pointer caused creation of new packages where they
+  existed already.
 
   24 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> -g-cpan-0.13.01.ebuild,
   -g-cpan-0.14.1_rc1.ebuild, -g-cpan-0.15.0.ebuild, -g-cpan-0.16.0.ebuild,
