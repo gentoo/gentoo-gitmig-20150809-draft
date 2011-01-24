@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.9 2011/01/09 17:51:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.10 2011/01/24 04:25:26 jer Exp $
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Stable for HPPA PPC (bug #349381).
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   man-pages-ru-3.27.2066.1435.20101003.ebuild:

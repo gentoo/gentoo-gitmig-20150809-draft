@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/man-pages-ru-3.27.2066.1435.20101003.ebuild,v 1.6 2011/01/09 17:51:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/man-pages-ru-3.27.2066.1435.20101003.ebuild,v 1.7 2011/01/24 04:25:26 jer Exp $
 
 EAPI="2"
 inherit versionator
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${MY_PV}.tar.bz2"
 
 LICENSE="FDL-1.3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""
