@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.20.ebuild,v 1.4 2010/10/27 22:14:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.22.ebuild,v 1.1 2011/01/25 19:23:54 spatz Exp $
 
 EAPI=3
 inherit libtool
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
 IUSE="gmp pcre static-libs test xml"
 
-RDEPEND=">=media-libs/raptor-1.9.0
+RDEPEND="media-libs/raptor:2
 	pcre? ( dev-libs/libpcre )
 	xml? ( dev-libs/libxml2 )
 	!gmp? ( dev-libs/mpfr )
@@ -38,8 +38,6 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
-		--enable-raptor2 \
-		--with-raptor=system \
 		$(use_enable pcre) \
 		$(use_enable xml xml2) \
 		--with-regex-library=${regex} \
