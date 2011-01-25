@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.77 2010/10/27 22:16:45 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.78 2011/01/25 19:27:02 spatz Exp $
+
+  25 Jan 2011; Dror Levin <spatz@gentoo.org> redland-1.0.12.ebuild:
+  Update raptor dep.
 
   27 Oct 2010; Markus Meier <maekke@gentoo.org> redland-1.0.12.ebuild:
   add ~arm, bug #341149
