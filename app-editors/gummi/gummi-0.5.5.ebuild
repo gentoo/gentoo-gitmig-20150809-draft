@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5.ebuild,v 1.2 2011/01/20 12:10:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5.ebuild,v 1.3 2011/01/25 12:49:20 fauli Exp $
 
 EAPI=2
 inherit base eutils
@@ -11,7 +11,7 @@ SRC_URI="http://dev.midnightcoding.org/redmine/attachments/download/111/${P}.tar
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 LANGS="ca da de fr el es it nl pl pt_BR ro ru zh_TW"
