@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.3 2011/01/25 12:35:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.4 2011/01/25 22:22:07 suka Exp $
 
 EAPI="3"
 
@@ -152,7 +152,7 @@ COMMON_DEPEND="!app-office/libreoffice-bin
 	>=media-libs/fontconfig-2.3.0
 	cups? ( net-print/cups )
 	  dev-libs/redland[ssl]
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	app-arch/zip
 	app-arch/unzip
@@ -414,18 +414,18 @@ src_install() {
 	make DESTDIR="${D}" install || die "Installation failed!"
 
 	# Fix the permissions for security reasons
-	chown -RP root:0 "${D}"
+	chown -RP root:0 "${ED}"
 
 	# record java libraries
 	if use java; then
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/${PN}/${BASIS}/program/classes/*.jar
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/${PN}/ure/share/java/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/${PN}/${BASIS}/program/classes/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/${PN}/ure/share/java/*.jar
 	fi
 
 	# Upstream places the bash-completion module in /etc. Gentoo places them in
 	# /usr/share/bash-completion. bug 226061
-	dobashcompletion "${D}"/etc/bash_completion.d/libreoffice.sh libreoffice
-	rm -rf "${D}"/etc/bash_completion.d/ || die "rm failed"
+	dobashcompletion "${ED}"/etc/bash_completion.d/libreoffice.sh libreoffice
+	rm -rf "${ED}"/etc/bash_completion.d/ || die "rm failed"
 
 }
 
