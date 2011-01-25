@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-9999.ebuild,v 1.2 2009/06/09 21:16:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.8.2.ebuild,v 1.1 2011/01/25 18:00:33 pacho Exp $
 
 EAPI=2
 
@@ -8,13 +8,13 @@ EAPI=2
 
 inherit apache-module multilib eutils go-mono mono
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="Apache module for Mono."
-HOMEPAGE="http://www.go-mono.com/"
+HOMEPAGE="http://www.mono-project.com/Mod_mono"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="aspnet2 debug"
+IUSE="debug"
 
 DEPEND="=dev-dotnet/xsp-${GO_MONO_REL_PV}*"
 RDEPEND="${DEPEND}"
@@ -27,11 +27,9 @@ DOCFILES="AUTHORS ChangeLog COPYING INSTALL NEWS README"
 need_apache2
 
 src_prepare() {
-	sed -i -e 's:PKG_PATH:CONFIG_PATH_SAVE:' configure.in || die
 	sed -e "s:@LIBDIR@:$(get_libdir):" "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
 		> "${WORKDIR}/${APACHE2_MOD_CONF##*/}.conf" || die
 	go-mono_src_prepare
-	use aspnet2 && epatch "${FILESDIR}/mono_auto_application_aspnet2.patch"
 }
 
 src_configure() {
@@ -61,7 +59,4 @@ pkg_postinst() {
 	elog "To enable mod_mono, add \"-D MONO\" to your Apache's"
 	elog "conf.d configuration file. Additionally, to view sample"
 	elog "ASP.NET applications, add \"-D MONO_DEMO\" too."
-	elog ""
-	elog "If you want mod_mono to handle AutoHosting requests using"
-	elog "ASP.NET 2.0 engine, enable the aspnet2 USE flag."
 }
