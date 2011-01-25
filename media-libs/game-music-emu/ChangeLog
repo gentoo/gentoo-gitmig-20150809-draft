@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/game-music-emu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.4 2011/01/13 21:51:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.5 2011/01/25 21:46:22 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  game-music-emu-0.5.5.ebuild:
+  Stable on amd64 wrt bug #352621
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> game-music-emu-0.5.5.ebuild:
   Marking game-music-emu-0.5.5 ~ppc for bug 345329
