@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.18 2010/12/22 12:45:12 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.19 2011/01/25 14:01:52 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> knights-2.2.0.ebuild:
+  Stable on amd64 wrt bug #352546
 
   22 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> knights-2.2.0.ebuild:
   Fix QA repoman warning.
