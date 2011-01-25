@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/fio
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.19 2010/10/10 20:06:51 gurligebis Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.20 2011/01/25 04:32:35 robbat2 Exp $
+
+*fio-1.50_rc4 (25 Jan 2011)
+
+  25 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +fio-1.50_rc4.ebuild:
+  Version bump.
 
   10 Oct 2010; <gurligebis@gentoo.org> fio-1.34.ebuild:
   Fixing LDFLAGS problem wrt. bug #335546
