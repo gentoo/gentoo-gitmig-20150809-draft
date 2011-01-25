@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>dotnet</herd>
-	<use>
-		<flag name='bootstrap'>Bootstrap nant by using pre-built ndoc binaries.</flag>
-	</use>
 </pkgmetadata>

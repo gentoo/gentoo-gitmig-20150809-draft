@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.32 2011/01/13 20:07:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.33 2011/01/25 21:07:54 pacho Exp $
+
+  25 Jan 2011; Pacho Ramos <pacho@gentoo.org> -nant-0.86_beta1.ebuild,
+  -files/nant-0.86_beta1-build.patch, -files/nant-0.86_beta1-dropnunit1.patch,
+  -files/nant-0.86_beta1-nunit-2.4.8.patch,
+  -files/nant-0.86_beta1-refmono-nunit.patch, metadata.xml:
+  Remove old.
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> nant-0.86_beta1-r1.ebuild:
   stable ppc, bug 344333
