@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.288 2011/01/18 16:07:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.289 2011/01/25 02:56:09 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  files/lftp-4.0.2.91-lafile.patch:
+  Clean up patch.
 
 *lftp-4.1.3 (18 Jan 2011)
 
