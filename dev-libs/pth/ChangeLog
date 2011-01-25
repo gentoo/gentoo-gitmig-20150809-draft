@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.62 2011/01/12 21:56:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.63 2011/01/25 19:11:15 arfrever Exp $
+
+  25 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pth-2.0.7.ebuild, -pth-2.0.7-r1.ebuild:
+  Delete.
 
   12 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pth-2.0.7-r2.ebuild:
