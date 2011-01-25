@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmwireless
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.18 2010/03/12 00:44:51 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.19 2011/01/25 16:14:19 lack Exp $
+
+*gkrellmwireless-2.0.3-r1 (25 Jan 2011)
+
+  25 Jan 2011; Jim Ramsay <lack@gentoo.org> +gkrellmwireless-2.0.3-r1.ebuild:
+  Applied user patch to fix LDFLAGS and CFLAGS issue (Bug #334453)
 
   12 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   gkrellmwireless-2.0.3.ebuild:
