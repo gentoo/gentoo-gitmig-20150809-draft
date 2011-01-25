@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.75 2011/01/19 21:21:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.76 2011/01/25 18:27:12 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> gob-2.0.17.ebuild:
+  Stable for HPPA (bug #348987).
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gob-2.0.17.ebuild:
   Stable on amd64 wrt bug #348987
