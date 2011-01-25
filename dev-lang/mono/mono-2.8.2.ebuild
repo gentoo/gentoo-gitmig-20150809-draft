@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-9999.ebuild,v 1.5 2010/12/18 10:17:27 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.2.ebuild,v 1.1 2011/01/25 17:47:14 pacho Exp $
 
-EAPI=2
+EAPI="2"
 
 inherit linux-info mono eutils flag-o-matic multilib go-mono pax-utils
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.go-mono.com"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS=""
-IUSE="hardened xen minimal"
+KEYWORDS="~amd64 ~ppc ~x86"
+
+IUSE="hardened minimal xen"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
-	>=dev-libs/glib-2.4:2
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
@@ -33,19 +33,13 @@ MAKEOPTS="${MAKEOPTS} -j1"
 RESTRICT="test"
 
 PATCHES=(
-	"${WORKDIR}/${P}-libdir.patch"
-	"${FILESDIR}/mono-2.2-ppc-threading.patch"
-	"${FILESDIR}/mono-2.2-uselibdir.patch"
+	"${WORKDIR}/${PN}-2.8-libdir.patch"
+	"${FILESDIR}/${PN}-2.2-ppc-threading.patch"
+	"${FILESDIR}/${PN}-2.2-uselibdir.patch"
+	"${FILESDIR}/${PN}-2.8.1-radegast-crash.patch"
 )
 
 pkg_setup() {
-	if ! has_version dev-lang/mono
-	then
-		eerror "To compile the GIT version of mono, you must first have a working install of"
-		eerror "dev-lang/mono. Preferably one that is not too old relative to the branch you're"
-		eerror "trying to build."
-		die "A working install of dev-lang/mono is required for building the GIT version."
-	fi
 	if use kernel_linux
 	then
 		get_version
@@ -69,8 +63,8 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
-		< "${FILESDIR}"/${P}-libdir.patch \
-		> "${WORKDIR}"/${P}-libdir.patch ||
+		< "${FILESDIR}"/${PN}-2.8-libdir.patch \
+		> "${WORKDIR}"/${PN}-2.8-libdir.patch ||
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 
@@ -204,7 +198,6 @@ pkg_postinst() {
 	elog ""
 	elog "dev-db/sqlite:3"
 	elog "	Mono.Data.Sqlite"
-	elog "	Mono.Data.SqliteClient"
 	elog "Also read:"
 	elog "http://www.mono-project.com/SQLite"
 	elog ""
