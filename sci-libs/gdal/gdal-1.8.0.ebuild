@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2-r2.ebuild,v 1.1 2010/11/30 03:04:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0.ebuild,v 1.1 2011/01/25 18:34:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -83,7 +83,7 @@ src_prepare() {
 		-e "s:setup.py install:setup.py install --root=\$(DESTDIR):" \
 		swig/python/GNUmakefile || die
 
-	epatch "${FILESDIR}"/${PV}-ruby_cflags.patch
+	epatch "${FILESDIR}"/1.7.2-ruby_cflags.patch
 
 	# -soname is only accepted by GNU ld/ELF
 	[[ ${CHOST} == *-darwin* ]] \
