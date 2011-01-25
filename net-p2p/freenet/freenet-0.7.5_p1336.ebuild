@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1329.ebuild,v 1.1 2011/01/16 15:14:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1336.ebuild,v 1.1 2011/01/25 13:17:59 tommy Exp $
 
 EAPI="2"
 DATE=20110106
@@ -10,7 +10,7 @@ inherit eutils java-pkg-2 java-ant-2 multilib
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
-SRC_URI="mirror://gentoo/${P}.zip
+SRC_URI="http://github.com/${PN}/fred-official/zipball/build0${PV#*p} -> ${P}.zip
 	mirror://gentoo/seednodes-${DATE}.fref"
 
 LICENSE="as-is GPL-2"
