@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.ebuild,v 1.2 2011/01/25 14:57:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.ebuild,v 1.3 2011/01/25 16:30:30 arfrever Exp $
 
 EAPI="3"
 
@@ -11,6 +11,7 @@ inherit distutils eutils
 DESCRIPTION="A sweet, carbonated git gui known for its sugary flavour and caffeine-inspired features."
 HOMEPAGE="http://cola.tuxfamily.org/"
 SRC_URI="http://cola.tuxfamily.org/releases/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -29,6 +30,11 @@ DEPEND="${RDEPEND}
 
 # tests currently broken due to unfinished translation framework
 RESTRICT="test"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	# don't install docs into wrong location
