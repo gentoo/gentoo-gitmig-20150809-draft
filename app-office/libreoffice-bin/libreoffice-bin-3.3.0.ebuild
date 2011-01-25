@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0_rc4.ebuild,v 1.2 2011/01/24 20:04:27 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.1 2011/01/25 13:39:30 suka Exp $
 
 EAPI="3"
 
@@ -9,11 +9,11 @@ inherit eutils fdo-mime gnome2-utils rpm multilib
 IUSE="gnome java kde"
 
 MY_PV="${PV/_/-}"
-MY_PV2="${PV/_/}"
+MY_PV2="${PV}rc4"
 BVER="3.3.0-6"
 UREVER="1.7.0-6"
 BASIS="libobasis3.3"
-FILEPATH="http://download.documentfoundation.org/libreoffice/testing/${MY_PV}/rpm/"
+FILEPATH="http://download.documentfoundation.org/libreoffice/stable/${PV}/rpm/"
 
 if [ "${ARCH}" = "amd64" ] ; then
 	LOARCH="x86_64"
@@ -27,19 +27,19 @@ S="${WORKDIR}/en-US/RPMS"
 UP="LibO_${MY_PV2}_Linux_${LOARCH2}_install-rpm_en-US/RPMS"
 DESCRIPTION="LibreOffice productivity suite."
 
-SRC_URI="amd64? ( ${FILEPATH}/x86_64/LibO_${MY_PV2}_Linux_x86-64_install-rpm_en-US.tar.gz
-		${FILEPATH}/x86_64/LibO_${MY_PV2}_Linux_x86-64_helppack-rpm_en-US.tar.gz )
-	x86? ( ${FILEPATH}/x86/LibO_${MY_PV2}_Linux_x86_install-rpm_en-US.tar.gz
-		${FILEPATH}/x86/LibO_${MY_PV2}_Linux_x86_helppack-rpm_en-US.tar.gz )"
+SRC_URI="amd64? ( ${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_install-rpm_en-US.tar.gz
+		${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_en-US.tar.gz )
+	x86? ( ${FILEPATH}/x86/LibO_${PV}_Linux_x86_install-rpm_en-US.tar.gz
+		${FILEPATH}/x86/LibO_${PV}_Linux_x86_helppack-rpm_en-US.tar.gz )"
 
 LANGS="af ar as ast be_BY bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el en en_GB en_ZA eo es et eu fa fi fr ga gd gl gu he hi hr hu id is it ja ka kk km kn ko kok ks ku ky lo lt lv mai mk ml mn mni mr ms my nb ne nl nn nr ns oc om or pa_IN pap pl ps pt pt_BR ro ru rw sa_IN sat sd sh si sk sl sq sr ss st sv sw_TZ ta te tg th ti tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
 
 for X in ${LANGS} ; do
 	[[ ${X} != "en" ]] && SRC_URI="${SRC_URI} linguas_${X}? (
-		amd64? ( "${FILEPATH}"/x86_64/LibO_${MY_PV2}_Linux_x86-64_langpack-rpm_${X/_/-}.tar.gz
-			"${FILEPATH}"/x86_64/LibO_${MY_PV2}_Linux_x86-64_helppack-rpm_${X/_/-}.tar.gz )
-		x86? ( "${FILEPATH}"/x86/LibO_${MY_PV2}_Linux_x86_langpack-rpm_${X/_/-}.tar.gz
-			"${FILEPATH}"/x86/LibO_${MY_PV2}_Linux_x86_helppack-rpm_${X/_/-}.tar.gz ) )"
+		amd64? ( "${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_langpack-rpm_${X/_/-}.tar.gz
+			"${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_${X/_/-}.tar.gz )
+		x86? ( "${FILEPATH}"/x86/LibO_${PV}_Linux_x86_langpack-rpm_${X/_/-}.tar.gz
+			"${FILEPATH}"/x86/LibO_${PV}_Linux_x86_helppack-rpm_${X/_/-}.tar.gz ) )"
 	IUSE="${IUSE} linguas_${X}"
 done
 
@@ -149,7 +149,6 @@ src_install () {
 			use java || { rm javafilter.desktop; continue; }
 		fi
 		mv ${desk}.desktop libreoffice-${desk}.desktop
-		sed -i -e s/Exec=libreoffice/Exec=loffice/g libreoffice-${desk}.desktop || die
 		domenu libreoffice-${desk}.desktop
 	done
 	insinto /usr/share
@@ -157,16 +156,16 @@ src_install () {
 	doins -r "${WORKDIR}"/usr/share/mime
 
 	# Install wrapper script
-	newbin "${FILESDIR}/wrapper.in" loffice
-	sed -i -e s/LIBDIR/$(get_libdir)/g "${ED}/usr/bin/loffice" || die
+	newbin "${FILESDIR}/wrapper.in" libreoffice
+	sed -i -e s/LIBDIR/$(get_libdir)/g "${ED}/usr/bin/libreoffice" || die
 
 	# Component symlinks
 	# Disabled, trouble with parallel installing openoffice
 	for app in base calc draw impress math writer; do
-		dosym loffice /usr/bin/lo${app}
+		dosym ${INSTDIR}/program/s${app} /usr/bin/lo${app}
 	done
 
-	dosym ${INSTDIR}/program/spadmin /usr/bin/loffice-printeradmin
+	dosym ${INSTDIR}/program/spadmin /usr/bin/libreoffice-printeradmin
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	rm -f "${ED}${INSTDIR}/basis-link" || die
