@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.7.ebuild,v 1.2 2011/01/25 19:02:16 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic multilib
 
@@ -23,6 +23,8 @@ src_prepare() {
 
 	sed -i Make.config -e "s:usr\/local:usr:" -e "s:FLAGS *=:FLAGS ?=:"
 	epatch "${FILESDIR}/${PN}-0.1.5-nostrip.patch"
+
+	sed -i glcdskin/Makefile -e "s:-shared:\$(LDFLAGS) -shared:"
 }
 
 src_install() {

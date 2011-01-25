@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/graphlcd-base
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.24 2010/12/03 14:31:31 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.25 2011/01/25 19:02:16 hd_brummy Exp $
+
+  25 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -graphlcd-base-0.1.5.ebuild, graphlcd-base-0.1.7.ebuild:
+  fixed missing LDFLAGS, #352714, cleanup
 
 *graphlcd-base-0.1.7 (03 Dec 2010)
 
