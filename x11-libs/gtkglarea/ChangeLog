@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.40 2011/01/19 21:28:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.41 2011/01/25 18:27:47 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> gtkglarea-2.0.1.ebuild:
+  Stable for HPPA (bug #348987).
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gtkglarea-2.0.1.ebuild:
   Stable on amd64 wrt bug #348987
