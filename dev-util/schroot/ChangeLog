@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.24 2011/01/24 12:20:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.25 2011/01/25 15:15:57 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> schroot-1.4.14.ebuild:
+  Stable on amd64 wrt bug #344615
 
   24 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   schroot-1.4.14.ebuild:
