@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.2.ebuild,v 1.4 2010/11/20 08:50:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.2.ebuild,v 1.5 2011/01/25 14:53:05 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/aide/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="acl audit curl mhash nls postgres prelink selinux static xattr zlib"
 
 DEPEND="acl? ( virtual/acl )
