@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.106 2011/01/22 06:58:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.107 2011/01/25 14:45:44 josejx Exp $
+
+  25 Jan 2011; Joseph Jezak <josejx@gentoo.org> package.use.mask:
+  Mask jit on qt-webkit.
 
   22 Jan 2011; Zac Medico <zmedico@gentoo.org> ppc64/package.use.mask:
   Unmask USE=python3 for sys-apps/portage since python-3.x has a stable ppc64
