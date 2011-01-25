@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0.ebuild,v 1.1 2011/01/24 19:08:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0-r1.ebuild,v 1.1 2011/01/25 09:41:28 lxnay Exp $
 
 EAPI="2"
 
@@ -16,13 +16,15 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="+consolekit nls"
 
-RDEPEND="sys-libs/pam
+COMMON_DEPEND="sys-libs/pam
 	x11-libs/gtk+:2
 	consolekit? ( sys-auth/consolekit )
 	nls? ( sys-devel/gettext )"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
+	gnome-base/librsvg"
 
 src_configure() {
 	econf --with-x $(use_enable nls) || die "econf failed"
