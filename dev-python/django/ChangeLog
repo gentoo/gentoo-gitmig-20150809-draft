@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.57 2010/12/23 14:46:35 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.58 2011/01/25 21:56:04 arfrever Exp $
+
+*django-1.2.4-r1 (25 Jan 2011)
+
+  25 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +django-1.2.4-r1.ebuild, +files/django-1.2.4-python-2.7.patch,
+  +files/django-1.2.4-ticket-14576.patch:
+  Fix regression in FormWizard (Django ticket #14576). Fix tests with Python 2.7
+  (Django ticket #14947).
 
 *django-1.2.4 (23 Dec 2010)
 

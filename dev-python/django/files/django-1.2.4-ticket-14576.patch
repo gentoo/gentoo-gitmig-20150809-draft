@@ -1,0 +1,64 @@
+http://code.djangoproject.com/ticket/14576
+http://code.djangoproject.com/changeset/15044
+
+--- django/contrib/formtools/tests.py
++++ django/contrib/formtools/tests.py
+@@ -116,7 +116,7 @@
+         hash1 = utils.security_hash(None, f1)
+         hash2 = utils.security_hash(None, f2)
+         self.assertEqual(hash1, hash2)
+-        
++
+     def test_empty_permitted(self):
+         """
+         Regression test for #10643: the security hash should allow forms with
+@@ -214,3 +214,26 @@
+         wizard(DummyRequest(POST=data))
+         self.assertTrue(reached[0])
+ 
++    def test_14576(self):
++        """
++        Regression test for ticket #14576.
++
++        The form of the last step is not passed to the done method.
++        """
++        reached = [False]
++        that = self
++
++        class Wizard(WizardClass):
++            def done(self, request, form_list):
++                reached[0] = True
++                that.assertTrue(len(form_list) == 2)
++
++        wizard = Wizard([WizardPageOneForm,
++                         WizardPageTwoForm])
++
++        data = {"0-field": "test",
++                "1-field": "test2",
++                "hash_0": "2fdbefd4c0cad51509478fbacddf8b13",
++                "wizard_step": "1"}
++        wizard(DummyRequest(POST=data))
++        self.assertTrue(reached[0])
+--- django/contrib/formtools/wizard.py
++++ django/contrib/formtools/wizard.py
+@@ -94,9 +94,9 @@
+             # Since the hashes only take into account values, and not other
+             # other validation the form might do, we must re-do validation
+             # now for security reasons.
+-            current_form_list = [self.get_form(i, request.POST) for i in range(current_step)]
++            previous_form_list = [self.get_form(i, request.POST) for i in range(current_step)]
+ 
+-            for i, f in enumerate(current_form_list):
++            for i, f in enumerate(previous_form_list):
+                 if request.POST.get("hash_%d" % i, '') != self.security_hash(request, f):
+                     return self.render_hash_failure(request, i)
+ 
+@@ -111,7 +111,7 @@
+ 
+ 
+             if next_step == self.num_steps():
+-                return self.done(request, current_form_list)
++                return self.done(request, previous_form_list + [form])
+             else:
+                 form = self.get_form(next_step)
+                 self.step = current_step = next_step
