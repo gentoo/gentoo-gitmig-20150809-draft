@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.127 2011/01/23 00:23:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.128 2011/01/25 19:37:07 zmedico Exp $
+
+  25 Jan 2011; Zac Medico <zmedico@gentoo.org> calibre-0.7.42.ebuild:
+  Bug #352625 - Some LANGUAGE values can trigger a ValueError.
 
 *calibre-0.7.42 (23 Jan 2011)
 
