@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Math-Random-ISAAC-XS
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-ISAAC-XS/ChangeLog,v 1.1 2011/01/25 09:58:25 tove Exp $
+
+*Math-Random-ISAAC-XS-1.1 (25 Jan 2011)
+
+  25 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +Math-Random-ISAAC-XS-1.1.ebuild, +metadata.xml:
+  Initial commit for Math-Random-Secure
+
