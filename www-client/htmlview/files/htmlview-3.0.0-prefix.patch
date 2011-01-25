@@ -1,11 +1,5 @@
 --- htmlview.orig	2007-10-01 20:46:02 +0200
 +++ htmlview	2007-10-01 20:45:51 +0200
-@@ -1,4 +1,4 @@
--#!/bin/bash
-+#!@GENTOO_PORTAGE_EPREFIX@/bin/bash
- #
- # Invoke HTML viewer
- # Usage:
 @@ -31,8 +31,8 @@
  
  error_dialog() {
