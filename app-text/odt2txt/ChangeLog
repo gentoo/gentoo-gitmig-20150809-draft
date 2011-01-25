@@ -1,6 +1,10 @@
 # ChangeLog for app-text/odt2txt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.4 2011/01/23 13:55:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.5 2011/01/25 12:23:42 fauli Exp $
+
+  25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  odt2txt-0.4-r1.ebuild:
+  stable x86, bug 351794
 
   23 Jan 2011; Markos Chandras <hwoarang@gentoo.org> odt2txt-0.4-r1.ebuild:
   Stable on amd64 wrt bug #351794
