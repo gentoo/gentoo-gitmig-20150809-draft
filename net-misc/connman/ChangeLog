@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.32 2011/01/23 19:28:48 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.33 2011/01/25 13:47:16 dev-zero Exp $
+
+  25 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> connman-0.67-r1.ebuild:
+  Moved linux-headers dep to DEPEND, added missing gnutls dependency.
 
   23 Jan 2011; Robert Piasek <dagger@gentoo.org>
   +files/connman-0.67-fix-policy-name.patch:

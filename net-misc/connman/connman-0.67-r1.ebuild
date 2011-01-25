@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.67-r1.ebuild,v 1.1 2011/01/21 17:03:10 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.67-r1.ebuild,v 1.2 2011/01/25 13:47:16 dev-zero Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.2.24
 	>=dev-libs/libnl-1.1
 	>=net-firewall/iptables-1.4.8
-	>=sys-kernel/linux-headers-2.6.30
+	net-libs/gnutls
 	bluetooth? ( net-wireless/bluez )
 	caps? ( sys-libs/libcap-ng )
 	ntpd? ( net-misc/ntp )
@@ -31,6 +31,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	wimax? ( net-wireless/wimax )"
 
 DEPEND="${RDEPEND}
+	>=sys-kernel/linux-headers-2.6.30
 	doc? ( dev-util/gtk-doc )"
 
 src_prepare() {
