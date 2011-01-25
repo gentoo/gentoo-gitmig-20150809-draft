@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.22 2011/01/19 21:15:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.23 2011/01/25 23:24:53 ulm Exp $
 
 EAPI=2
 
@@ -103,11 +103,6 @@ src_prepare() {
 	#else
 	#	EPATCH_SUFFIX=patch epatch
 	fi
-
-	sed -i \
-		-e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
-		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
-		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
 
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
