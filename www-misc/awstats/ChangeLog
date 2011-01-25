@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.17 2011/01/25 12:25:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.18 2011/01/25 15:58:51 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> awstats-7.0_p20101205-r3.ebuild:
+  Stable for HPPA (bug #352600).
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   awstats-7.0_p20101205-r3.ebuild:
