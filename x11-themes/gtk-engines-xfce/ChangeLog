@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.112 2011/01/17 14:58:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.113 2011/01/25 20:32:12 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> gtk-engines-xfce-2.8.0.ebuild:
+  Stable for HPPA (bug #349053).
 
   17 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gtk-engines-xfce-2.8.0.ebuild:
