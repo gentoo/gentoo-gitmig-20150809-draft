@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.2.ebuild,v 1.1 2011/01/25 02:03:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.2.ebuild,v 1.2 2011/01/25 02:22:45 jer Exp $
 
 EAPI="2"
 
@@ -49,6 +49,10 @@ src_configure() {
 		$(use_enable upstream-proxy upstream) \
 		$(use_enable xtinyproxy-header xtinyproxy) \
 		$(use_enable debug)
+}
+
+src_test() {
+	emake test || die
 }
 
 src_install() {
