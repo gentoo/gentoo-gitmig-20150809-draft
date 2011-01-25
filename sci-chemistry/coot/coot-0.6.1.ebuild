@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.9 2011/01/20 12:13:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.10 2011/01/25 12:52:57 fauli Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 SCIDEPS="

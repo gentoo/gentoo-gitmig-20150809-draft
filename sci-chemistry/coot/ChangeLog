@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.32 2011/01/20 12:13:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.33 2011/01/25 12:52:57 fauli Exp $
+
+  25 Jan 2011; Christian Faulhammer <fauli@gentoo.org> coot-0.6.1.ebuild:
+  stable x86, bug 352043
 
   20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> coot-0.6.1.ebuild:
   Stable on amd64 wrt bug #352043
