@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0.ebuild,v 1.1 2011/01/25 18:34:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0.ebuild,v 1.2 2011/01/25 18:37:03 scarabeus Exp $
 
 EAPI="2"
 
 WANT_AUTOCONF="2.5"
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? *:2.6"
 
 inherit autotools eutils perl-module python ruby-ng toolchain-funcs
 
@@ -61,11 +61,6 @@ DEPEND="${RDEPEND}
 
 AT_M4DIR="${S}/m4"
 MAKEOPTS+=" -j1"
-
-pkg_setup() {
-	# only py2 is supported
-	python_set_active_version 2
-}
 
 src_unpack() {
 	# prevent ruby-ng.eclass from messing with the src path
