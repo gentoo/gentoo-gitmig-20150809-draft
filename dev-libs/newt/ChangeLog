@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.71 2011/01/09 18:18:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.72 2011/01/25 16:47:04 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> newt-0.52.12.ebuild:
+  Stable for HPPA (bug #349905).
 
   09 Jan 2011; Raúl Porcel <armin76@gentoo.org> newt-0.52.12.ebuild:
   alpha/ia64/sparc stable wrt #349905
