@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/tidy-ext
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.1 2011/01/25 06:50:49 graaff Exp $
+
+*tidy-ext-0.1.10 (25 Jan 2011)
+
+  25 Jan 2011; Hans de Graaff <graaff@gentoo.org> +tidy-ext-0.1.10.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for forthcoming dev-ruby/bluecloth
+  versions.
+
