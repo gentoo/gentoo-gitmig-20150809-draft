@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4974 2011/01/25 14:44:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4975 2011/01/25 21:52:54 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking dev-util/plan9port for QA removal.
 
   25 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite sys-auth/policykit.
