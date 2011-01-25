@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0_rc4.ebuild,v 1.3 2011/01/24 21:23:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.1 2011/01/25 10:59:58 suka Exp $
 
 EAPI="3"
 
@@ -49,7 +49,6 @@ for mod in ${MODULES}; do
 done
 
 # addons
-ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/09357cc74975b01714e00c5899ea1881-pixman-0.12.0.tar.gz"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/128cfc86ed5953e57fe0f5ae98b62c2e-libtextcat-2.2.tar.gz"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz"
@@ -88,7 +87,6 @@ ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/e0707ff896045731ff99e99
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/f3e2febd267c8e4b13df00dac211dd6d-flute.zip"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/f7925ba8491fe570e5164d2c72791358-libfonts.zip"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/fb7ba5c2182be4e73748859967455455-README_stax-api-1.0-2-sources.txt"
-ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/fca8706f2c4619e2fa3f8f42f8fc1e9d-rasqal-0.9.16.tar.gz"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/37282537d0ed1a087b1c8f050dc812d9-dejavu-fonts-ttf-2.32.zip"
 ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz"
@@ -96,7 +94,6 @@ ADDONS_SRC+=" http://hg.services.openoffice.org/binaries/cf8a6967f7de535ae257fa4
 ADDONS_SRC+=" http://download.go-oo.org/src/47e1edaa44269bc537ae8cabebb0f638-JLanguageTool-1.0.0.tar.bz2"
 ADDONS_SRC+=" http://download.go-oo.org/src/90401bca927835b6fbae4a707ed187c8-nlpsolver-0.9.tar.bz2"
 ADDONS_SRC+=" http://download.go-oo.org/src/0f63ee487fda8f21fafa767b3c447ac9-ixion-0.2.0.tar.gz"
-ADDONS_SRC+=" http://download.go-oo.org/src/71474203939fafbe271e1263e61d083e-nss-3.12.8-with-nspr-4.8.6.tar.gz"
 ADDONS_SRC+=" http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll"
 ADDONS_SRC+=" http://download.go-oo.org/src/86e390f015e505dd71a66f0123c62f09-libwpd-0.9.0.tar.bz2"
 ADDONS_SRC+=" http://download.go-oo.org/src/5ba6a61a2f66dfd5fee8cdd4cd262a37-libwpg-0.2.0.tar.bz2"
