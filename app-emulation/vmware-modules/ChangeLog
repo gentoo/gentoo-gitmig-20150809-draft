@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.64 2011/01/15 15:49:07 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.65 2011/01/25 09:28:50 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  vmware-modules-1.0.0.25-r3.ebuild:
+  Stable on amd64 wrt bug #352421
 
 *vmware-modules-1.0.0.24-r3 (15 Jan 2011)
 

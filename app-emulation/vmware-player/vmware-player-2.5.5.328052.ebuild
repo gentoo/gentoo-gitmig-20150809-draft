@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.5.328052.ebuild,v 1.1 2010/12/29 20:11:42 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.5.328052.ebuild,v 1.2 2011/01/25 09:28:35 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 RESTRICT="strip binchecks"
 
