@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.17 2009/03/07 14:11:06 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.ebuild,v 1.18 2011/01/25 02:50:58 jer Exp $
 
 EAPI="2"
+
 inherit eutils toolchain-funcs versionator
 
 DESCRIPTION="Very fast anagram generator with dictionary lookup"
@@ -20,24 +21,19 @@ RDEPEND="sys-apps/miscfiles[-minimal]"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
+src_prepare() {
 	# Patching to -r3:
 	MY_PL="$(replace_version_separator 2 -)"
 	epatch "${FILESDIR}"/${PN}_${MY_PL}.diff
 
-	ebegin "Patching an to use toolchain and custom CFLAGS"
 	sed -e "s:gcc:$(tc-getCC):" \
 		-e "s:-O2.*:${CFLAGS}:" \
-		-i Makefile lib/Makefile
-	eend ${?}
+		-i Makefile lib/Makefile || die "sed Makefile lib/Makefile"
 
 	# sys-apps/miscfiles doesn't have /usr/dict/words:
 	sed \
 		-e 's:/usr/dict/words:/usr/share/dict/words:' \
-		-i README || die
+		-i README || die "sed README"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.27 2010/06/27 20:34:25 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.28 2011/01/25 02:50:58 jer Exp $
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild,
+  files/an-0.95-make.patch, files/an_0.95-3.diff:
+  Clean up patches. Fix phases, remove ebegin/eend, make sed die().
 
 *an-0.95.3.2 (27 Jun 2010)
 
