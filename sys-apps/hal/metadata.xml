@@ -12,9 +12,6 @@
 		runlevel (rc-update add acpid default) along with HAL. This will also
 		enable HAL to read Toshiba and IBM acpi events which do not get sent
 		via /proc/acpi/event</flag>
-	<flag name='consolekit'>Enables HAL to interact with consolekit for
-		determining whether a given process is running on behalf of the person
-		setting at the console.</flag>
 	<flag name='crypt'>Allows HAL to mount volumes that are encrypted using
 		LUKS. <pkg>sys-fs/cryptsetup-luks</pkg> which has recently been renamed
 		to <pkg>sys-fs/cryptsetup</pkg> allows you to create such encrypted
