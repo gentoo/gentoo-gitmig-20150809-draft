@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpi-dotnet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.6 2010/06/18 20:19:06 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.7 2011/01/25 23:34:07 mabi Exp $
+
+  25 Jan 2011; Matti Bickel <mabi@gentoo.org> mpi-dotnet-1.0.0.ebuild:
+  allow building with mono-2.8 (bug #346133)
 
   18 Jun 2010; <mabi@gentoo.org> files/Unsafe.pl.patch:
   make it work with recent openmpi
