@@ -1,15 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.9 2010/12/26 02:00:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.10 2011/01/25 14:41:49 ssuominen Exp $
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Dec 2010)
 # xorg-server-1.7 needs hal for input device autoconfiguration, bug #349331.
 =x11-base/xorg-server-1.7* hal
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Try to avoid sys-auth/policykit wrt #340331. Remove this entry when
-# sys-apps/hal-0.5.14-r4 is stable.
-sys-apps/hal -policykit
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Required by sys-fs/udisks for xfce4-power-manager, gnome-disk-utility (gvfs),
