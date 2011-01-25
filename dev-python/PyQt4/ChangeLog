@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.144 2011/01/16 10:06:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.145 2011/01/25 17:24:41 arfrever Exp $
+
+*PyQt4-4.8.3 (25 Jan 2011)
+
+  25 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +PyQt4-4.8.3.ebuild, +files/PyQt4-4.8.3-configure-multilib.patch:
+  Version bump.
 
   16 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> PyQt4-4.8.1.ebuild:
   x86 stable wrt bug #349607
