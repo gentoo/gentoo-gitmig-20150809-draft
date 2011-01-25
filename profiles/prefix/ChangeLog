@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.240 2011/01/24 17:59:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.241 2011/01/25 19:44:40 grobian Exp $
+
+  25 Jan 2011; Fabian Groffen <grobian@gentoo.org> linux/package.mask:
+  Fix mistake, really unmask e2fsprogs-1.4.14 on Linux
 
   24 Jan 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Widen mask for media-gfx/povray, to also include the beta versions
