@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.50.ebuild,v 1.2 2011/01/24 13:14:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.50.ebuild,v 1.3 2011/01/25 14:06:13 hwoarang Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/libwnck

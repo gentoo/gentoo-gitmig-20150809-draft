@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/talika
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/ChangeLog,v 1.4 2011/01/24 13:14:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/ChangeLog,v 1.5 2011/01/25 14:06:13 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> -talika-0.49.ebuild,
+  talika-0.50.ebuild:
+  Stable on amd64 wrt bug #351793. Remove old
 
   24 Jan 2011; Christian Faulhammer <fauli@gentoo.org> talika-0.50.ebuild:
   stable x86, bug 351793
