@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/monocalendar-0.7.2.ebuild,v 1.2 2007/07/27 07:07:02 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/monocalendar-0.7.2.ebuild,v 1.3 2011/01/25 21:24:54 pacho Exp $
 
 inherit mono eutils
 
@@ -12,13 +12,14 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
+IUSE=""
 
 DEPEND=">=dev-lang/mono-1.2.1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	cd ${S}/bin/Release/
+	cd "${S}"/bin/Release/
 
 	emake || die "emake failed"
 }

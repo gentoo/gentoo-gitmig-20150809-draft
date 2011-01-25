@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/monocalendar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/ChangeLog,v 1.3 2007/11/22 16:46:13 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/ChangeLog,v 1.4 2011/01/25 21:24:54 pacho Exp $
+
+  25 Jan 2011; Pacho Ramos <pacho@gentoo.org> monocalendar-0.7.2.ebuild:
+  Add ~amd64 as it works fine for me.
 
   22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
   Add DOCTYPE to metadata for validation
