@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.9.0.ebuild,v 1.5 2010/10/27 22:12:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.0.ebuild,v 1.1 2011/01/25 19:24:54 spatz Exp $
 
 EAPI=3
 inherit eutils libtool
