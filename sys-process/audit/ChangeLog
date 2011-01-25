@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.61 2011/01/25 03:35:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.62 2011/01/25 03:52:32 robbat2 Exp $
+
+  25 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> audit-1.7.3.ebuild,
+  audit-1.7.4.ebuild, audit-1.7.9.ebuild, audit-1.7.17.ebuild:
+  Backport build fix for bug #352198 to other versions.
 
 *audit-2.0.5 (25 Jan 2011)
 

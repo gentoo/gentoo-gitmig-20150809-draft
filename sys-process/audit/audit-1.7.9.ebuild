@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.9.ebuild,v 1.3 2010/10/15 21:09:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.9.ebuild,v 1.4 2011/01/25 03:52:32 robbat2 Exp $
 
 inherit autotools multilib toolchain-funcs python
 
@@ -57,6 +57,10 @@ src_unpack() {
 
 	# Regenerate autotooling
 	eautoreconf
+
+	# Bug 352198: Avoid parallel build fail
+	cd "${S}"/src/mt
+	[[ ! -s private.h ]] && ln -s ../../lib/private.h .
 }
 
 src_compile() {
