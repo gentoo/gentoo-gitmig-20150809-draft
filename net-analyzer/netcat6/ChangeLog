@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat6
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.25 2011/01/24 04:09:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.26 2011/01/25 14:13:59 hwoarang Exp $
+
+  25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> netcat6-1.0-r2.ebuild:
+  Stable on amd64 wrt bug #300610
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> netcat6-1.0-r2.ebuild:
   Stable for HPPA (bug #300610).
