@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.2-r1.ebuild,v 1.1 2010/09/05 17:43:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.2-r1.ebuild,v 1.2 2011/01/25 23:10:29 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
@@ -17,7 +17,9 @@ IUSE="ffmpeg imagemagick"
 
 DEPEND="media-libs/libmpeg2
 	ffmpeg? ( >=media-video/ffmpeg-0.4.8 )
-	imagemagick? ( >=media-gfx/imagemagick-6.2.4.2-r1 )"
+	imagemagick? ( >=media-gfx/imagemagick-6.2.4.2-r1 )
+	!media-plugins/vdr-markad"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 
