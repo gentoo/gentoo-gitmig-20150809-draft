@@ -1,24 +1,20 @@
-From 5a67c7a5ad341fa84091287eb6452458c7ee24b0 Mon Sep 17 00:00:00 2001
+From d252fad6aa69aefa17b592111c2db23864f63907 Mon Sep 17 00:00:00 2001
 From: Mu Qiao <qiaomuf@gentoo.org>
-Date: Wed, 5 Jan 2011 13:30:08 +0800
-Subject: [PATCH] Support shared and link-local method for ipv4
- Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
- fix flush_to_file, return TRUE when nothing changed
- ssid do not lose quotes anymore
- do not delete old connection when ssid is not changed
+Date: Tue, 25 Jan 2011 10:31:53 +0000
+Subject: [PATCH] shared-connection
 
 Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
 ---
- system-settings/plugins/ifnet/connection_parser.c  |   92 ++++++++++++++------
+ system-settings/plugins/ifnet/connection_parser.c  |   90 ++++++++++++++------
  system-settings/plugins/ifnet/net_parser.c         |   55 +++++++-----
  system-settings/plugins/ifnet/net_parser.h         |    4 +-
- system-settings/plugins/ifnet/net_utils.c          |    4 +
+ system-settings/plugins/ifnet/net_utils.c          |    6 +-
  .../plugins/ifnet/nm-ifnet-connection.c            |    8 +-
  system-settings/plugins/ifnet/wpa_parser.c         |   21 +++--
- 6 files changed, 123 insertions(+), 61 deletions(-)
+ 6 files changed, 122 insertions(+), 62 deletions(-)
 
 diff --git a/system-settings/plugins/ifnet/connection_parser.c b/system-settings/plugins/ifnet/connection_parser.c
-index f9fae51..539f33c 100644
+index f9fae51..9b5ddc1 100644
 --- a/system-settings/plugins/ifnet/connection_parser.c
 +++ b/system-settings/plugins/ifnet/connection_parser.c
 @@ -557,7 +557,7 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
@@ -30,7 +26,7 @@ index f9fae51..539f33c 100644
  	gboolean is_static_block = is_static_ip4 (conn_name);
  	ip_block *iblock = NULL;
  
-@@ -569,12 +569,42 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
+@@ -569,13 +569,41 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
  		      && strstr (value, "nogateway") ? TRUE : FALSE, NULL);
  
  	if (!is_static_block) {
@@ -40,6 +36,7 @@ index f9fae51..539f33c 100644
 -			      NM_SETTING_IP4_CONFIG_NEVER_DEFAULT, FALSE, NULL);
 -		PLUGIN_PRINT (IFNET_PLUGIN_NAME, "Using DHCP for %s",
 -			      conn_name);
+-	} else {
 +		method = ifnet_get_data (conn_name, "config");
 +		if (!method){
 +			g_set_error (error, ifnet_plugin_error_quark (), 0,
@@ -59,16 +56,14 @@ index f9fae51..539f33c 100644
 +						  NM_SETTING_IP4_CONFIG_NEVER_DEFAULT, FALSE, NULL);
 +			nm_connection_add_setting (connection, NM_SETTING (ip4_setting));
 +			return;
-+		}
-+		else if (!strcmp (method, "shared")){
++		} else if (!strcmp (method, "shared")){
 +			g_object_set (ip4_setting,
 +						  NM_SETTING_IP4_CONFIG_METHOD,
 +						  NM_SETTING_IP4_CONFIG_METHOD_SHARED,
 +						  NM_SETTING_IP4_CONFIG_NEVER_DEFAULT, FALSE, NULL);
 +			nm_connection_add_setting (connection, NM_SETTING (ip4_setting));
 +			return;
-+		}
-+		else {
++		} else {
 +			g_set_error (error, ifnet_plugin_error_quark (), 0,
 +						 "Unknown config for %s", conn_name);
 +			g_object_unref (ip4_setting);
@@ -76,10 +71,11 @@ index f9fae51..539f33c 100644
 +		}
 +		PLUGIN_PRINT (IFNET_PLUGIN_NAME, "Using %s method for %s",
 +					  method, conn_name);
- 	} else {
++	}else {
  		iblock = convert_ip4_config_block (conn_name);
  		if (!iblock) {
-@@ -625,7 +655,7 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
+ 			g_set_error (error, ifnet_plugin_error_quark (), 0,
+@@ -625,7 +653,7 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
  	}
  
  	/* add dhcp hostname and client id */
@@ -88,7 +84,7 @@ index f9fae51..539f33c 100644
  		gchar *dhcp_hostname, *client_id;
  
  		get_dhcp_hostname_and_client_id (&dhcp_hostname, &client_id);
-@@ -712,7 +742,6 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
+@@ -712,7 +740,6 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
  		iblock = iblock->next;
  		destroy_ip_block (current_iblock);
  	}
@@ -96,7 +92,7 @@ index f9fae51..539f33c 100644
  	/* Finally add setting to connection */
  	nm_connection_add_setting (connection, NM_SETTING (ip4_setting));
  }
-@@ -1243,10 +1272,10 @@ parse_wpa_psk (gchar * psk, GError ** error)
+@@ -1243,10 +1270,10 @@ parse_wpa_psk (gchar * psk, GError ** error)
  	 * the passphrase contains spaces.
  	 */
  
@@ -110,7 +106,7 @@ index f9fae51..539f33c 100644
  		/* Verify the hex PSK; 64 digits */
  		if (!is_hex (p)) {
  			g_set_error (error, ifnet_plugin_error_quark (),
-@@ -1254,7 +1283,7 @@ parse_wpa_psk (gchar * psk, GError ** error)
+@@ -1254,7 +1281,7 @@ parse_wpa_psk (gchar * psk, GError ** error)
  				     "Invalid WPA_PSK (contains non-hexadecimal characters)");
  			goto out;
  		}
@@ -119,7 +115,7 @@ index f9fae51..539f33c 100644
  	} else {
  		strip_string (p, '"');
  
-@@ -1276,6 +1305,7 @@ parse_wpa_psk (gchar * psk, GError ** error)
+@@ -1276,6 +1303,7 @@ parse_wpa_psk (gchar * psk, GError ** error)
  	}
  
        out:
@@ -127,7 +123,7 @@ index f9fae51..539f33c 100644
  	return hashed;
  }
  
-@@ -2085,7 +2115,8 @@ write_wireless_security_setting (NMConnection * connection,
+@@ -2085,7 +2113,8 @@ write_wireless_security_setting (NMConnection * connection,
  	} else if (!strcmp (key_mgmt, "wpa-eap")) {
  		wpa_set_data (conn_name, "key_mgmt", "WPA-EAP");
  		wpa = TRUE;
@@ -137,7 +133,7 @@ index f9fae51..539f33c 100644
  
  	if (auth_alg) {
  		if (!strcmp (auth_alg, "shared"))
-@@ -2180,8 +2211,11 @@ write_wireless_security_setting (NMConnection * connection,
+@@ -2180,8 +2209,11 @@ write_wireless_security_setting (NMConnection * connection,
  			g_string_append (quoted, psk);
  			g_string_append_c (quoted, '"');
  		}
@@ -151,7 +147,7 @@ index f9fae51..539f33c 100644
  		if (quoted)
  			g_string_free (quoted, TRUE);
  	} else
-@@ -2190,15 +2224,19 @@ write_wireless_security_setting (NMConnection * connection,
+@@ -2190,15 +2222,19 @@ write_wireless_security_setting (NMConnection * connection,
  	return TRUE;
  }
  
@@ -175,22 +171,20 @@ index f9fae51..539f33c 100644
  	wpa_add_security (ssid);
  }
  
-@@ -2443,8 +2481,12 @@ write_ip4_setting (NMConnection * connection, gchar * conn_name,
+@@ -2443,7 +2479,11 @@ write_ip4_setting (NMConnection * connection, gchar * conn_name,
  		}
  		ifnet_set_data (conn_name, "config", ips->str);
  		g_string_free (ips, TRUE);
 -	} else
--		ifnet_set_data (conn_name, "config", "dhcp");
 +	} else if (!strcmp (value, NM_SETTING_IP4_CONFIG_METHOD_SHARED))
 +		ifnet_set_data (conn_name, "config", "shared");
 +	else if (!strcmp (value, NM_SETTING_IP4_CONFIG_METHOD_LINK_LOCAL))
 +		ifnet_set_data (conn_name, "config", "autoip");
 +	else
-+        ifnet_set_data (conn_name, "config", "dhcp");
+ 		ifnet_set_data (conn_name, "config", "dhcp");
  
  	/* DNS Servers */
- 	ifnet_set_data (conn_name, "dns_servers", NULL);
-@@ -2858,7 +2900,7 @@ get_wired_name ()
+@@ -2858,7 +2898,7 @@ get_wired_name ()
  	for (; i < 256; i++) {
  		gchar *conn_name = g_strdup_printf ("eth%d", i);
  
@@ -199,7 +193,7 @@ index f9fae51..539f33c 100644
  			return conn_name;
  		} else
  			g_free (conn_name);
-@@ -2875,7 +2917,7 @@ get_ppp_name ()
+@@ -2875,7 +2915,7 @@ get_ppp_name ()
  	for (; i < 256; i++) {
  		gchar *conn_name = g_strdup_printf ("ppp%d", i);
  
@@ -208,7 +202,7 @@ index f9fae51..539f33c 100644
  			return conn_name;
  		} else
  			g_free (conn_name);
-@@ -2982,7 +3024,7 @@ ifnet_add_new_connection (NMConnection * connection,
+@@ -2982,7 +3022,7 @@ ifnet_add_new_connection (NMConnection * connection,
  		goto out;
  	}
  
@@ -354,7 +348,7 @@ index 73a44c8..b71a01f 100644
  gboolean ifnet_delete_network (gchar * conn_name);
  #endif
 diff --git a/system-settings/plugins/ifnet/net_utils.c b/system-settings/plugins/ifnet/net_utils.c
-index 2dc253c..7e52f10 100644
+index 2dc253c..83b4325 100644
 --- a/system-settings/plugins/ifnet/net_utils.c
 +++ b/system-settings/plugins/ifnet/net_utils.c
 @@ -278,6 +278,10 @@ is_static_ip4 (gchar * conn_name)
@@ -368,6 +362,16 @@ index 2dc253c..7e52f10 100644
  	dhcp6 = strstr (data, "dhcp6");
  	if (dhcp6) {
  		gchar *dhcp4;
+@@ -942,8 +946,8 @@ get_dhcp_hostname_and_client_id (char **hostname, char **client_id)
+ 		else if ((tmp = strstr (line, "send host-name")) != NULL) {
+ 			tmp += strlen ("send host-name");
+ 			g_strstrip (tmp);
+-			strip_string (tmp, '"');
+ 			strip_string (tmp, ';');
++			strip_string (tmp, '"');
+ 			if (tmp[0] != '\0')
+ 				*hostname = g_strdup (tmp);
+ 			else
 diff --git a/system-settings/plugins/ifnet/nm-ifnet-connection.c b/system-settings/plugins/ifnet/nm-ifnet-connection.c
 index e47495c..ebe2581 100644
 --- a/system-settings/plugins/ifnet/nm-ifnet-connection.c

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.93 2011/01/24 07:31:48 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.94 2011/01/25 02:46:46 qiaomuf Exp $
+
+*networkmanager-0.8.2-r4 (25 Jan 2011)
+
+  25 Jan 2011; Mu Qiao <qiaomuf@gentoo.org> -networkmanager-0.8.2-r3.ebuild,
+  +networkmanager-0.8.2-r4.ebuild,
+  files/networkmanager-0.8.2-shared-connection.patch:
+  Fix parsing dhclient.conf wrt bug #352638
 
 *networkmanager-0.8.2-r3 (24 Jan 2011)
 
