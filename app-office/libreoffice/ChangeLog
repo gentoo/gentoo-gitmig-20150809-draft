@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.5 2011/01/25 11:13:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.6 2011/01/25 12:35:53 suka Exp $
+
+  25 Jan 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.0.ebuild:
+  Ooops, another little fix for bash-completion
 
   25 Jan 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.0.ebuild:
   Fix bash_completion installation, bug #352656

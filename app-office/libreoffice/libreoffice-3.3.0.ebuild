@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.2 2011/01/25 11:13:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.3 2011/01/25 12:35:53 suka Exp $
 
 EAPI="3"
 
@@ -433,7 +433,7 @@ pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	BASHCOMPLETION_NAME=ooffice && bash-completion_pkg_postinst
+	BASHCOMPLETION_NAME=libreoffice && bash-completion_pkg_postinst
 
 	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/${PN}/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/${PN}/program/soffice.bin
 
