@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.9.ebuild,v 1.3 2011/01/23 23:08:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.9.ebuild,v 1.4 2011/01/25 22:23:43 dilfridge Exp $
 
 EAPI="3"
 
 KMNAME="kdepim"
-VIRTUALX_REQUIRED=tests
 inherit kde4-meta
 
 DESCRIPTION="Common library for KDE PIM apps"
