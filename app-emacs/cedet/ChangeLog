@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.62 2010/10/17 07:14:09 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.63 2011/01/25 18:02:00 ulm Exp $
+
+  25 Jan 2011; Ulrich Mueller <ulm@gentoo.org> cedet-1.0.ebuild:
+  Supply subdirectories of S in load-path, bug 349790.
 
   16 Oct 2010; Ulrich Mueller <ulm@gentoo.org> files/50cedet-gentoo.el:
   Test if image-load-path exists in site-init file, fixes bug 341377.

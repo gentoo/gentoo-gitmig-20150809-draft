@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0.ebuild,v 1.5 2010/10/14 16:54:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0.ebuild,v 1.6 2011/01/25 18:02:00 ulm Exp $
 
 NEED_EMACS=22
 
@@ -23,6 +23,8 @@ RDEPEND="!app-emacs/semantic
 
 S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"
+EMACSFLAGS="${EMACSFLAGS} -L ${S}/eieio -L ${S}/semantic -L ${S}/srecode \
+	-L ${S}/ede -L ${S}/speedbar -L ${S}/cogre"
 
 src_compile() {
 	emake -j1 \
