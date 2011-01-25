@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.160 2011/01/25 12:30:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.161 2011/01/25 12:37:47 fauli Exp $
+
+  25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  ibm-jre-bin-1.5.0.12_p3.ebuild:
+  stable x86, security bug 352603
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   ibm-jre-bin-1.6.0.9.ebuild:
