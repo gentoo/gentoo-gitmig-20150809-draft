@@ -13,13 +13,8 @@ corresponding command line option or X resource.
 See also: http://bugs.gentoo.org/show_bug.cgi?id=237271
 2008-09-10 Martin von Gagern
 
-Index: src/init.C
-===================================================================
-RCS file: /schmorpforge/rxvt-unicode/src/init.C,v
-retrieving revision 1.253
-diff -u -r1.253 init.C
---- src/init.C	15 Jul 2008 16:41:22 -0000	1.253
-+++ src/init.C	10 Sep 2008 08:07:09 -0000
+--- a/src/init.C	15 Jul 2008 16:41:22 -0000	1.253
++++ b/src/init.C	10 Sep 2008 08:07:09 -0000
 @@ -1078,15 +1078,7 @@
  #if ENABLE_FRILLS
    if (option (Opt_borderLess))

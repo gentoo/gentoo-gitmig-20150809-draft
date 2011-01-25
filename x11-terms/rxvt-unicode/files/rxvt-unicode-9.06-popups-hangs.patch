@@ -1,10 +1,5 @@
-Index: src/rxvtperl.xs
-===================================================================
-RCS file: /schmorpforge/rxvt-unicode/src/rxvtperl.xs,v
-retrieving revision 1.127
-diff -u -r1.127 rxvtperl.xs
---- src/rxvtperl.xs	30 May 2009 08:51:23 -0000	1.127
-+++ src/rxvtperl.xs	30 Jul 2009 22:19:33 -0000
+--- a/src/rxvtperl.xs	30 May 2009 08:51:23 -0000	1.127
++++ b/src/rxvtperl.xs	30 Jul 2009 22:19:33 -0000
 @@ -929,7 +929,9 @@
  rxvt_term::grab (Time eventtime, int sync = 0)
  	CODE:

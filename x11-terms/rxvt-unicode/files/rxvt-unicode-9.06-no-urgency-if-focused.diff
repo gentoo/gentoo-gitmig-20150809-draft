@@ -1,6 +1,5 @@
-diff -NrU5 rxvt-unicode-9.06.original/src/screen.C rxvt-unicode-9.06/src/screen.C
---- rxvt-unicode-9.06.original/src/screen.C	2009-10-25 18:16:16.000000000 -0600
-+++ rxvt-unicode-9.06/src/screen.C	2009-10-25 18:17:53.000000000 -0600
+--- a/src/screen.C
++++ b/src/screen.C
 @@ -1927,11 +1927,11 @@
  #  endif
      XMapWindow (dpy, parent[0]);

@@ -2,8 +2,9 @@ patch that forces hints on rxvt-unicode's geometry.
 
 for more info, read this Gentoo bug:
 http://bugs.gentoo.org/show_bug.cgi?id=346553
---- src/main.C
-+++ src/main.C
+
+--- a/src/main.C
++++ b/src/main.C
 @@ -644,6 +644,8 @@
  
    ncol = width / fwidth;
