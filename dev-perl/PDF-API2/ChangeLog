@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PDF-API2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.17 2009/09/07 08:40:25 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.18 2011/01/25 12:19:20 tove Exp $
+
+*PDF-API2-2.16 (25 Jan 2011)
+
+  25 Jan 2011; Torsten Veller <tove@gentoo.org> +PDF-API2-2.16.ebuild:
+  Version bump. Use system dejavu fonts
 
   07 Sep 2009; Torsten Veller <tove@gentoo.org> -PDF-API2-0.65.ebuild:
   Cleanup
