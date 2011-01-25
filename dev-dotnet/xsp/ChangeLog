@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/xsp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.88 2010/11/26 11:00:04 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.89 2011/01/25 17:54:56 pacho Exp $
+
+*xsp-2.8.2 (25 Jan 2011)
+
+  25 Jan 2011; Pacho Ramos <pacho@gentoo.org> -xsp-2.8.1.ebuild,
+  +xsp-2.8.2.ebuild, -xsp-9999.ebuild:
+  Version bump, remove old testing and 9999 version since it's not really
+  maintained downstream.
 
 *xsp-2.8.1 (26 Nov 2010)
 
