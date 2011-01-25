@@ -1,5 +1,5 @@
---- src/reqs.c
-+++ src/reqs.c
+--- a/src/reqs.c
++++ b/src/reqs.c
 @@ -1002,36 +1002,5 @@
  		 unsigned int major, unsigned int minor)
  {
