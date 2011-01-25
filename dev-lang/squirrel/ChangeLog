@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squirrel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.3 2011/01/18 14:45:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.4 2011/01/25 12:17:31 fauli Exp $
+
+  25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  squirrel-2.2.4-r1.ebuild:
+  stable x86, bug 351797
 
   18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> squirrel-2.2.4-r1.ebuild:
   Stable on amd64 wrt bug #351797
