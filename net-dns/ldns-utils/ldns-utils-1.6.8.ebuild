@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.5.ebuild,v 1.1 2010/06/16 23:52:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.8.ebuild,v 1.1 2011/01/25 13:37:37 matsuu Exp $
 
 EAPI="2"
 
@@ -12,9 +12,9 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/ldns/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples ssl"
+IUSE="examples gost ssl"
 
-DEPEND=">=net-libs/ldns-${PV}[ssl?]
+DEPEND=">=net-libs/ldns-${PV}[gost?,ssl?]
 	examples? ( net-libs/libpcap )"
 RDEPEND="${DEPEND}"
 
@@ -27,6 +27,7 @@ src_configure() {
 	if use examples; then
 		cd "${S}"/examples
 		econf \
+			$(use_enable gost) \
 			$(use_enable ssl sha2) \
 			$(use_with ssl) || die
 	fi
@@ -42,11 +43,11 @@ src_compile() {
 src_install() {
 	cd "${S}"/drill
 	emake DESTDIR="${D}" install || die "emake install for drill failed"
-	dodoc ChangeLog.22-nov-2005 README REGRESSIONS
+	dodoc ChangeLog.22-nov-2005 README REGRESSIONS || die
 
 	if use examples; then
 		cd "${S}"/examples
 		emake DESTDIR="${D}" install || die "emake install for examples failed"
-		newdoc README README.examples
+		newdoc README README.examples || die
 	fi
 }
