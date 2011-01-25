@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4972 2011/01/24 23:29:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4973 2011/01/25 00:02:45 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  removed mask for gentoo-vdr-scripts-0.4.8_rc*
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add x11-libs/libnotify mask for early breakage detection.

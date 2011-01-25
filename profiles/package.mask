@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12393 2011/01/24 23:29:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12394 2011/01/25 00:02:45 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -324,11 +324,6 @@ dev-tcltk/tclxml-expat
 # Not maintained upstream since 2006.
 # Masked for removal on 2011-02-06
 dev-lang/wml
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (6 Dec 2010)
-# masked for testing #300078 #263956
-=media-tv/gentoo-vdr-scripts-0.4.8_rc1
-=media-tv/gentoo-vdr-scripts-0.4.8_rc2
 
 # Michal Januszewski <spock@gentoo.org> <1 Dec 2010)
 # Beta NVIDIA drivers.  This is the first 260.x release that works on GF330M,
