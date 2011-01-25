@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.330 2011/01/20 14:31:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.331 2011/01/25 07:32:19 phajdan.jr Exp $
+
+  25 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hal-0.5.14-r4.ebuild:
+  x86 stable wrt bug #352179
 
   20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> hal-0.5.14-r4.ebuild:
   Stable on amd64 wrt bug #352179
