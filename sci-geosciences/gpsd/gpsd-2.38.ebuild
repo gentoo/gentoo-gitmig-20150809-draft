@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.7 2010/11/21 12:42:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.8 2011/01/25 20:14:45 jer Exp $
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 IUSE="dbus garmin minimal ntp ocean python tntc usb X"
 
