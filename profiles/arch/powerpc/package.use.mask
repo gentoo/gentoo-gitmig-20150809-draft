@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.68 2011/01/25 14:45:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.69 2011/01/26 16:15:18 xarthisius Exp $
 
 # Joseph Jezak <JoseJX@gentoo.org> (25 Jan 2011)
 # x11-libs/qt-webkit doesn't have a working JIT yet on PowerPC
@@ -16,10 +16,6 @@ sci-chemistry/ccp4 arpwarp
 # Brent Baude <ranger@gentoo.org> (13 Jan 2011)
 # no oracle stuff for powerpc
 net-im/ekg2 oracle
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
-# dev-libs/gobject-introspection is not keyworded, bug 348313
->=net-libs/telepathy-glib-0.12 vala
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
 # net-misc/connman is not keyworded, bug 348308
