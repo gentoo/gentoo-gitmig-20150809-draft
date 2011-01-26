@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.170 2010/10/26 16:03:26 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.171 2011/01/26 02:03:00 mr_bones_ Exp $
+
+*libsdl-1.2.14-r5 (26 Jan 2011)
+
+  26 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +libsdl-1.2.14-r5.ebuild, +files/libsdl-1.2.14-joystick.patch:
+  add patch to handle joystick info correctly - patch from Gabriel Marcano
+  via bug #332761
 
 *libsdl-1.2.14-r4 (26 Oct 2010)
 
