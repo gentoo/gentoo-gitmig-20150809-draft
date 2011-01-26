@@ -1,10 +1,13 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.108 2011/01/26 16:15:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.109 2011/01/26 20:28:56 alexxy Exp $
 
   26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Unmask >=net-libs/telepathy-glib-0.12[vala] since
   dev-libs/gobject-introspection is keyworded
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> ppc64/package.use.mask:
+  Mask marble with gps
 
   25 Jan 2011; Joseph Jezak <josejx@gentoo.org> package.use.mask:
   Mask jit on qt-webkit.
