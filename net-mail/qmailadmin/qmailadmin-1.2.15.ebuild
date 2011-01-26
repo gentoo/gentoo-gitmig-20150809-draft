@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.15.ebuild,v 1.5 2011/01/26 13:52:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.15.ebuild,v 1.6 2011/01/26 19:51:51 fauli Exp $
 
 inherit qmail eutils webapp autotools
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="amd64 ~arm ~hppa ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ppc ~s390 ~sh ~sparc x86"
 IUSE="maildrop"
 
 DEPEND="virtual/qmail
