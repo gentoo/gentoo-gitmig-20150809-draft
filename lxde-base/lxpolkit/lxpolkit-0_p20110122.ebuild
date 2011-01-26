@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0_p20110122.ebuild,v 1.2 2011/01/24 17:56:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0_p20110122.ebuild,v 1.3 2011/01/26 12:53:16 hwoarang Exp $
 
 EAPI=3
 inherit autotools
@@ -32,6 +32,10 @@ src_prepare() {
 	sed -i -e '/ShowIn/d' data/lxpolkit.desktop.in.in || die
 	echo 'NotShowIn=KDE;' >> data/lxpolkit.desktop.in.in
 
+	# Fix tests. Bug #352716
+	for i in lxpolkit.desktop.in lxpolkit.ui; do
+		echo "data/${i}" >> po/POTFILES.in
+	done
 	intltoolize --force --copy --automake
 	eautoreconf
 }
