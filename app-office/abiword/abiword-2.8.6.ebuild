@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.12 2010/11/08 22:47:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.13 2011/01/26 21:21:14 pacho Exp $
 
 EAPI="3"
 
@@ -61,8 +61,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	plugins? (
-		collab? ( dev-cpp/asio ) )"
+	collab? ( dev-cpp/asio )"
 
 pkg_setup() {
 	# do not enable gnome-vfs

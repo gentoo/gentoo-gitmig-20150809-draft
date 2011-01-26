@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.230 2010/11/08 22:47:31 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.231 2011/01/26 21:21:14 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6.ebuild:
+  Fix asio DEPEND (bug #343469 by Pablo Cholaky).
 
   08 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> abiword-2.8.6.ebuild:
   Allow use of alternate jpeg implementation.
