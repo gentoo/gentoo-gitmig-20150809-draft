@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.3 2011/01/17 15:09:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.4 2011/01/26 17:06:14 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=xfce-base/exo-0.6
 	>=xfce-base/xfconf-4.8
 	libnotify? ( x11-libs/libnotify )"
 RDEPEND="${COMMON_DEPEND}
-	>=xfce-base/thunar-1.1.1[udev]"
+	>=xfce-base/thunar-1.2[udev]"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
