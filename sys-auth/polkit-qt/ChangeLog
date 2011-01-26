@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.13 2011/01/26 19:47:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.14 2011/01/26 19:49:28 alexxy Exp $
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> polkit-qt-0.99.0.ebuild:
+  readd accidently dropped keywords
 
 *polkit-qt-0.99.0 (26 Jan 2011)
 
