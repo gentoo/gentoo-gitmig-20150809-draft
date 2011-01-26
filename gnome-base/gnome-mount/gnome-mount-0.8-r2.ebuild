@@ -1,6 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.2 2011/01/26 20:05:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.3 2011/01/26 20:07:20 ssuominen Exp $
+
+# This package is used by FreeBSD long as gnome-base/gvfs has USE hal. Linux has
+# gnome-base/gvfs with USE gdu and udev.
 
 EAPI=1
 inherit autotools eutils gnome2
