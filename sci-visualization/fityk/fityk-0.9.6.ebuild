@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.3.ebuild,v 1.1 2010/07/20 16:01:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.6.ebuild,v 1.1 2011/01/26 17:44:59 bicatali Exp $
 
 EAPI="3"
 
@@ -12,15 +12,15 @@ SUPPORT_PYTHON_ABIS="1"
 inherit python wxwidgets
 
 DESCRIPTION="General-purpose nonlinear curve fitting and data analysis"
-HOMEPAGE="http://www.unipress.waw.pl/fityk/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://fityk.nieto.pl/"
+SRC_URI="http://cloud.github.com/downloads/wojdyr/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples gnuplot lua readline python wxwidgets"
+IUSE="doc examples gnuplot lua readline python static-libs wxwidgets"
 
-CDEPEND=">=sci-libs/xylib-0.6
+CDEPEND=">=sci-libs/xylib-0.8
 	lua? ( dev-lang/lua )
 	readline? ( sys-libs/readline )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
@@ -52,6 +52,7 @@ src_configure() {
 		--disable-xyconvert \
 		$(use_enable lua) \
 		$(use_enable python) \
+		$(use_enable static-libs static) \
 		$(use_enable wxwidgets GUI) \
 		$(use_with doc) \
 		$(use_with examples samples) \
@@ -89,7 +90,7 @@ src_install() {
 		python_execute_function -s --source-dir swig installation
 		python_clean_installation_image
 	fi
-	dodoc NEWS README TODO || die
+	dodoc NEWS README TODO
 }
 
 pkg_postinst() {
