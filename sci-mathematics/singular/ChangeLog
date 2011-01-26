@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.41 2011/01/20 13:07:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.42 2011/01/26 10:41:23 fauli Exp $
+
+  26 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  singular-3.1.2-r2.ebuild:
+  stable x86, bug 352177
 
   20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> singular-3.1.2-r2.ebuild:
   Stable on amd64 wrt bug #352177
