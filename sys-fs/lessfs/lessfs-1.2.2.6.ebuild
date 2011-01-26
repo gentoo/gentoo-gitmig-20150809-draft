@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.2.2.6.ebuild,v 1.1 2010/12/23 22:02:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.2.2.6.ebuild,v 1.2 2011/01/26 19:28:42 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.sourceforge.net/project/${PN}/${PN}/${P/_beta*/-beta}/
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="lzo crypt debug"
 
 DEPEND=">=dev-db/tokyocabinet-1.4.42
