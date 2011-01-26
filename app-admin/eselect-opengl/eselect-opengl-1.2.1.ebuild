@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.0.ebuild,v 1.1 2011/01/25 19:12:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.2.1.ebuild,v 1.1 2011/01/26 19:27:41 scarabeus Exp $
 
 EAPI=3
 
@@ -29,11 +29,14 @@ DEPEND="app-arch/xz-utils"
 RDEPEND=">=app-admin/eselect-1.2.4"
 
 pkg_postinst() {
-	eselect opengl set xorg-x11 --use-old
+	local impl="$(eselect opengl show)"
+	if [[ -n "${impl}"  && "${impl}" != '(none)' ]] ; then
+		eselect opengl set "${impl}"
+	fi
 }
 
 src_install() {
-	insinto /usr/share/eselect/modules
+	insinto "/usr/share/eselect/modules"
 	doins opengl.eselect || die
 	doman opengl.eselect.5 || die
 
