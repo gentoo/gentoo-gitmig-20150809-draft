@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r2.ebuild,v 1.1 2010/12/19 19:44:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r2.ebuild,v 1.2 2011/01/26 10:17:00 pacho Exp $
 
 EAPI=2
 
@@ -66,6 +66,8 @@ src_prepare() {
 
 	# Update icons, upstream bug #623480
 	sed "s:stock_timer:list-add:g" -i src/AddWindow.cs src/StockIcons.cs || die
+	sed "s:stock_music-library:folder-music:g" -i data/glade/PlaylistWindow.glade \
+		src/Actions.cs src/StockIcons.cs || die
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \

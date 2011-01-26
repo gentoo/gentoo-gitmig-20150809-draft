@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.63 2010/12/19 19:44:03 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.64 2011/01/26 10:17:00 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> muine-0.8.11-r2.ebuild:
+  stock_music-library icon is no longer provided, update it then.
 
 *muine-0.8.11-r2 (19 Dec 2010)
 
