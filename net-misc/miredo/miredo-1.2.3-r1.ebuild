@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.3-r1.ebuild,v 1.1 2010/08/31 11:21:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.3-r1.ebuild,v 1.2 2011/01/26 11:18:58 bangert Exp $
 
 EAPI=3
 
@@ -19,6 +19,9 @@ DEPEND="dev-libs/judy
 	caps? ( sys-libs/libcap )"
 RDEPEND="${DEPEND}
 	sys-apps/iproute2"
+
+#tries to connect to external networks (#339180)
+RESTRICT="test"
 
 src_configure() {
 	econf --enable-miredo-user \
