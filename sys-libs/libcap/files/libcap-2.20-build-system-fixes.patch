@@ -1,4 +1,4 @@
-From bb4491059b315433a421e8fd37286f1a0077fd1e Mon Sep 17 00:00:00 2001
+From 5540f3c2a3bd70ebc8140b74ac5a0aecdbc53234 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Sun, 16 Nov 2008 09:10:31 -0500
 Subject: [PATCH] build system fixes
@@ -16,9 +16,9 @@ Signed-off-by: Mike Frysinger <vapier@gentoo.org>
 ---
  Make.Rules       |   25 +++++++++++++------------
  libcap/Makefile  |   11 ++++++-----
- pam_cap/Makefile |    6 +++---
+ pam_cap/Makefile |    8 +++++---
  progs/Makefile   |    2 +-
- 4 files changed, 23 insertions(+), 21 deletions(-)
+ 4 files changed, 25 insertions(+), 21 deletions(-)
 
 diff --git a/Make.Rules b/Make.Rules
 index 011aa14..6e432a6 100644
@@ -115,10 +115,19 @@ index 4762c60..cf99523 100644
  install: all
  	mkdir -p -m 0755 $(INCDIR)/sys
 diff --git a/pam_cap/Makefile b/pam_cap/Makefile
-index 9ca5bef..be49338 100644
+index 9ca5bef..bdae933 100644
 --- a/pam_cap/Makefile
 +++ b/pam_cap/Makefile
-@@ -17,13 +17,13 @@ install: all
+@@ -9,6 +9,8 @@ include ../Make.Rules
+ # written (and you know why it fails), email me and explain why. Thanks!
+ LDLIBS += -L../libcap -lcap
+ 
++CFLAGS += -fPIC
++
+ all: pam_cap.so
+ 	$(MAKE) testcompile
+ 
+@@ -17,13 +19,13 @@ install: all
  	install -m 0755 pam_cap.so $(LIBDIR)/security
  
  pam_cap.so: pam_cap.o
