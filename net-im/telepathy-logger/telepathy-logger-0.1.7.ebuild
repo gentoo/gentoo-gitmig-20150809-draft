@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.1.7.ebuild,v 1.3 2010/12/13 15:18:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.1.7.ebuild,v 1.4 2011/01/26 17:59:08 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
-inherit base python
+inherit base python virtualx
 
 DESCRIPTION="Telepathy Logger is a session daemon that should be activated whenever telepathy is being used."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Logger"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-libs/glib-2.25.11:2
@@ -52,7 +52,7 @@ src_configure() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	emake check || die "make check failed"
+	Xemake check || die "make check failed"
 }
 
 src_install() {
