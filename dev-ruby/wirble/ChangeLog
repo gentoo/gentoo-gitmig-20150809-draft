@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/wirble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.16 2011/01/25 10:32:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.17 2011/01/26 10:45:59 fauli Exp $
+
+  26 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  wirble-0.1.3-r1.ebuild:
+  stable x86, bug 352393
 
   25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wirble-0.1.3-r1.ebuild:
   Stable on amd64 wrt bug #352393
