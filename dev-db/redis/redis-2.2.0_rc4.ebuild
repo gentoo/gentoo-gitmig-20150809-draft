@@ -1,9 +1,8 @@
-# Copyright 2010-2011 W-Mark Kubacki, Mao Pu
+# Copyright 1999-2011 W-Mark Kubacki, Mao Pu
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.0_rc4.ebuild,v 1.1 2011/01/26 02:25:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.0_rc4.ebuild,v 1.2 2011/01/26 02:26:29 robbat2 Exp $
 
 EAPI="2"
-WANT_AUTOCONF="latest"
 
 inherit autotools eutils flag-o-matic
 
@@ -35,7 +34,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
 	# now we will rewrite present Makefiles
 	local makefiles=""
 	for MKF in $(find -name 'Makefile' | cut -b 3-); do
@@ -64,7 +62,6 @@ src_configure() {
 	econf ${myconf} || die "econf"
 }
 
-
 src_install() {
 	# configuration file rewrites
 	insinto /etc/
@@ -81,7 +78,7 @@ src_install() {
 	newconfd "${FILESDIR}/redis.confd" redis
 	newinitd "${FILESDIR}/redis.initd" redis
 
-	dodoc 00-RELEASENOTES BUGS Changelog CONTRIBUTING COPYING README TODO
+	dodoc 00-RELEASENOTES BUGS Changelog CONTRIBUTING README TODO
 	dodoc design-documents/*
 	docinto html
 	dodoc doc/*
