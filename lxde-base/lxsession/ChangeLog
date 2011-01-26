@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.22 2011/01/24 12:49:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.23 2011/01/26 20:13:12 hwoarang Exp $
+
+  26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.5.ebuild:
+  Add missing dbus,nls useflags. Use udev flag for upower
 
 *lxsession-0.4.5 (24 Jan 2011)
 
