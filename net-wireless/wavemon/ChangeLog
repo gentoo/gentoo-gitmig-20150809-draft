@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.29 2011/01/26 10:17:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.30 2011/01/26 10:20:38 bangert Exp $
+
+  26 Jan 2011; Thilo Bangert <bangert@gentoo.org> -wavemon-0.3.3.ebuild,
+  -wavemon-0.4.0b-r1.ebuild:
+  cleanup old versions
 
 *wavemon-0.7.1 (26 Jan 2011)
 
