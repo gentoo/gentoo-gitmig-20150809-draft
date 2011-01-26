@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.15.ebuild,v 1.2 2011/01/26 01:43:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/qmailadmin-1.2.15.ebuild,v 1.3 2011/01/26 01:49:29 robbat2 Exp $
 
-inherit qmail eutils webapp
+inherit qmail eutils webapp autotools
 
 # the RESTRICT is because the vpopmail lib directory is locked down
 # and non-root can't access them.
@@ -31,6 +31,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.2.9-maildir.patch
+	epatch "${FILESDIR}"/${PN}-1.2.12-quota-overflow.patch
+	eautoreconf
 }
 
 src_compile() {
