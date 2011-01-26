@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.23 2011/01/26 20:13:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.24 2011/01/26 20:40:20 ssuominen Exp $
+
+  26 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> lxsession-0.4.5.ebuild:
+  Missing dev-util/intltool and x11-proto/xproto dependencies. Fix USE="udev"
+  handling (sys-apps/dbus is only used for it per configure).
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.5.ebuild:
   Add missing dbus,nls useflags. Use udev flag for upower
