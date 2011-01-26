@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.5 2011/01/24 04:14:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.6 2011/01/26 19:35:56 grobian Exp $
+
+  26 Jan 2011; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
+  Marked ~ppc-macos for bug #352300
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> dot2texi-3.0.ebuild:
   Marked ~hppa (bug #352300).
