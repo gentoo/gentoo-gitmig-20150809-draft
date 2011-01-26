@@ -1,0 +1,11 @@
+# ChangeLog for app-office/abiword-docs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.1 2011/01/26 13:53:31 pacho Exp $
+
+*abiword-docs-2.8.6 (26 Jan 2011)
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> +abiword-docs-2.8.6.ebuild,
+  +metadata.xml:
+  Add abiword-docs package that was splitted from abiword sometime ago by
+  upstream. This also fixes that old bug #149765 (by Benno Schulenberg).
+
