@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.31 2011/01/26 01:06:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.32 2011/01/26 16:51:43 matsuu Exp $
+
+*libev-4.03 (26 Jan 2011)
+
+  26 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +libev-4.03.ebuild:
+  Version bumped. Added static-libs USE flag.
 
   26 Jan 2011; Jeroen Roovers <jer@gentoo.org> libev-3.90-r2.ebuild:
   Stable for HPPA (bug #349213).
