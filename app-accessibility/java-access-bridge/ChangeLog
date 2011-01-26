@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/java-access-bridge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.44 2009/03/28 20:12:20 serkan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.45 2011/01/26 12:06:51 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> java-access-bridge-1.26.0.ebuild:
+  x11-apps/xprop is needed as noticed by Flameeyes in bug #318149.
 
 *java-access-bridge-1.26.0 (28 Mar 2009)
 
