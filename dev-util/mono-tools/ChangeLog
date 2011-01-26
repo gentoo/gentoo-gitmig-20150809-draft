@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mono-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.75 2010/10/10 05:04:47 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.76 2011/01/26 09:47:38 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> mono-tools-2.8.ebuild,
+  -mono-tools-9999.ebuild:
+  Stop getting ACLOCAL_FLAGS command not found problem like bug #298813. Drop
+  9999 version as we are not really maintaining it.
 
 *mono-tools-2.8 (10 Oct 2010)
 

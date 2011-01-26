@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.8.ebuild,v 1.1 2010/10/10 05:04:47 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.8.ebuild,v 1.2 2011/01/26 09:47:38 pacho Exp $
 
 EAPI=2
 
@@ -40,6 +40,10 @@ pkg_setup() {
 
 src_prepare() {
 	go-mono_src_prepare
+
+	# Stop getting ACLOCAL_FLAGS command not found problem like bug #298813
+	sed -i -e '/ACLOCAL_FLAGS/d' Makefile.am
+
 	eautoreconf
 }
 
