@@ -1,6 +1,10 @@
 # ChangeLog for www-client/arora
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.40 2010/10/13 12:00:01 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.41 2011/01/26 16:20:15 darkside Exp $
+
+  26 Jan 2011; Jeremy Olexa <darkside@gentoo.org> arora-0.11.0.ebuild:
+  Port changes from Gentoo Prefix, use EPREFIX, add KEYWORDS, convert to
+  EAPI3.
 
 *arora-0.11.0 (13 Oct 2010)
 
