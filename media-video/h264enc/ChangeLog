@@ -1,6 +1,12 @@
 # ChangeLog for media-video/h264enc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/ChangeLog,v 1.5 2010/03/06 19:20:42 spatz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/ChangeLog,v 1.6 2011/01/26 21:11:53 spatz Exp $
+
+*h264enc-9.3.2 (26 Jan 2011)
+
+  26 Jan 2011; Dror Levin <spatz@gentoo.org> -h264enc-9.1.4.ebuild,
+  +h264enc-9.3.2.ebuild:
+  Version bump, bug 310419. Drop old.
 
 *h264enc-9.1.6 (06 Mar 2010)
 
