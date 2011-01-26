@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.258 2011/01/19 12:56:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.259 2011/01/26 20:27:36 spatz Exp $
+
+*k3b-2.0.2-r1 (26 Jan 2011)
+
+  26 Jan 2011; Dror Levin <spatz@gentoo.org> -k3b-2.0.2.ebuild,
+  +k3b-2.0.2-r1.ebuild:
+  Add hal USE flag, bug 351883.
 
   19 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> -k3b-2.0.0.ebuild,
   k3b-2.0.1-r1.ebuild, k3b-2.0.2.ebuild:
