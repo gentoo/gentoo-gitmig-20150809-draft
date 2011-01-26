@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.65 2011/01/20 00:48:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.66 2011/01/26 20:51:42 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -46,7 +46,7 @@ inherit toolchain-funcs multilib flag-o-matic base
 
 CMAKE_EXPF="src_compile src_test src_install"
 case ${EAPI:-0} in
-	3|2) CMAKE_EXPF+=" src_configure" ;;
+	4|3|2) CMAKE_EXPF+=" src_configure" ;;
 	1|0) ;;
 	*) die "Unknown EAPI, Bug eclass maintainers." ;;
 esac
