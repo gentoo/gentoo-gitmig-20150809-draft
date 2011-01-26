@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.95 2011/01/10 11:53:50 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.96 2011/01/26 20:29:18 alexxy Exp $
+
+*systemsettings-4.6.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +systemsettings-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
 
 *systemsettings-4.5.5 (10 Jan 2011)
 

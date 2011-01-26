@@ -1,0 +1,7 @@
+# ChangeLog for kde-base/kaccessible
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.1 2011/01/26 20:28:26 alexxy Exp $
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> kaccessible-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
+

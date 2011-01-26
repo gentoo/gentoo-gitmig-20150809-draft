@@ -1,0 +1,7 @@
+# ChangeLog for kde-base/klickety
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.97 2011/01/26 20:29:01 alexxy Exp $
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> klickety-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
+

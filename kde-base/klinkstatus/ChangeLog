@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.164 2011/01/10 11:53:35 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.165 2011/01/26 20:29:10 alexxy Exp $
+
+*klinkstatus-4.6.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> +klinkstatus-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
 
 *klinkstatus-4.5.5 (10 Jan 2011)
 

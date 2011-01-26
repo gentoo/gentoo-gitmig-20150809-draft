@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.159 2011/01/10 11:53:22 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.160 2011/01/26 20:28:44 alexxy Exp $
+
+*kbruch-4.6.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> +kbruch-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
 
 *kbruch-4.5.5 (10 Jan 2011)
 

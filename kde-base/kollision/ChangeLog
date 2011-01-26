@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.59 2011/01/10 11:53:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.60 2011/01/26 20:29:05 alexxy Exp $
+
+*kollision-4.6.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> +kollision-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
 
 *kollision-4.5.5 (10 Jan 2011)
 

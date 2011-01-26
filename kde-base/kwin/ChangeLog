@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.214 2011/01/14 21:51:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.215 2011/01/26 20:28:47 alexxy Exp $
+
+*kwin-4.6.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> +kwin-4.6.0.ebuild:
+  Version bump KDE SC 4.6.0
 
   14 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> kwin-4.4.5.ebuild:
   Add runtime dependency on x11-apps/scripts (bug 337008)
