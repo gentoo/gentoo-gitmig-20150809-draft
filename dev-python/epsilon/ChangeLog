@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.22 2011/01/16 16:52:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.23 2011/01/26 22:46:55 xarthisius Exp $
+
+  26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> epsilon-0.6.0.ebuild:
+  add ~ppc wrt #311825
 
   16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   epsilon-0.6.0.ebuild:
