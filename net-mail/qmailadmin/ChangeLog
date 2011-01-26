@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmailadmin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.21 2008/04/06 19:37:46 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.22 2011/01/26 01:31:19 robbat2 Exp $
+
+*qmailadmin-1.2.15 (26 Jan 2011)
+
+  26 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +qmailadmin-1.2.15.ebuild:
+  Bug #285207: version bump.
 
   06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> qmailadmin-1.2.12.ebuild:
   use qmail.eclass
