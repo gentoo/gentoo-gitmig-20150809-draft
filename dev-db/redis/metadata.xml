@@ -8,4 +8,10 @@
 <maintainer>
   <email>lu_zero@gentoo.org</email>
 </maintainer>
+  <use>
+    <flag name="tcmalloc">
+      Use the <pkg>dev-util/google-perftools</pkg> libraries to
+      replace the malloc() implementation with a possibly faster one.
+    </flag>
+  </use>
 </pkgmetadata>

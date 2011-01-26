@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.6.ebuild,v 1.1 2010/05/17 21:32:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.6.ebuild,v 1.2 2011/01/26 02:25:32 robbat2 Exp $
 
 EAPI=2
 
@@ -41,6 +41,7 @@ src_prepare() {
 		-e 's: $(DEBUG)::g' \
 		-e 's:ARCH:GCC_ARCH_FLAG:g' \
 		-e 's:PROF:GCC_PROF_FLAG:g' \
+		-e '/^CCOPT=/s:$: $(LDFLAGS):g' \
 		Makefile.in \
 	|| die "sed failed!"
 
