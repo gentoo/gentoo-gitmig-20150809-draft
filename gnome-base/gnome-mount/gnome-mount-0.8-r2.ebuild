@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.1 2010/07/21 17:34:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.2 2011/01/26 20:05:01 ssuominen Exp $
 
+EAPI=1
 inherit autotools eutils gnome2
 
 DESCRIPTION="Wrapper for (un)mounting and ejecting disks"
@@ -10,11 +11,11 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~x86-fbsd"
 IUSE="libnotify nautilus kernel_FreeBSD"
 
-RDEPEND=">=dev-libs/glib-2.15.0
-	>=x11-libs/gtk+-2.8
+RDEPEND=">=dev-libs/glib-2.15:2
+	>=x11-libs/gtk+-2.8:2
 	>=sys-apps/hal-0.5.8.1
 	|| ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 )
 	>=gnome-base/gconf-2
@@ -22,13 +23,13 @@ RDEPEND=">=dev-libs/glib-2.15.0
 	nautilus? (
 		>=gnome-base/libglade-2
 		>=gnome-base/nautilus-2.21.2 )
-	>=dev-libs/dbus-glib-0.71"
+	>=dev-libs/dbus-glib-0.88"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.5"
 
-DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-static
