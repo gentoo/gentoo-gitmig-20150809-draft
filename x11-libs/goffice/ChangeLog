@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.82 2011/01/13 19:59:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.83 2011/01/26 14:18:26 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> goffice-0.4.3.ebuild:
+  Drop DEPRECATED flags (bug #292804).
 
   13 Jan 2011; Pacho Ramos <pacho@gentoo.org> -goffice-0.8.11.ebuild,
   goffice-0.8.12.ebuild:

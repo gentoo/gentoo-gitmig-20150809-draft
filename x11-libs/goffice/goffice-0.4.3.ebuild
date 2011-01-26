@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.4.3.ebuild,v 1.12 2010/07/20 15:47:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.4.3.ebuild,v 1.13 2011/01/26 14:18:26 pacho Exp $
 
 EAPI=2
 
@@ -15,11 +15,11 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x64-sola
 IUSE="doc gnome"
 #cairo support broken and -gtk broken
 
-RDEPEND=">=dev-libs/glib-2.8.0
+RDEPEND=">=dev-libs/glib-2.8.0:2
 	>=gnome-extra/libgsf-1.13.3[gnome?]
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	>=gnome-base/libglade-2.3.6
 	>=gnome-base/libgnomeprint-2.8.2
 	>=media-libs/libart_lgpl-2.3.11
@@ -55,4 +55,7 @@ src_prepare() {
 	echo "goffice/gtk/go-palette.c" >> po/POTFILES.in
 	echo "plugins/plot_boxes/gog-histogram.c" >> po/POTFILES.in
 	echo "plugins/reg_linear/gog-power-reg.c" >> po/POTFILES.in
+
+	# Drop DEPRECATED flags
+	sed 's:-D[A-Z_]*DISABLE_DEPRECATED::g' -i configure.in configure || die
 }
