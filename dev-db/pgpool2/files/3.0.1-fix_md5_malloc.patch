@@ -1,0 +1,12 @@
+diff -burN pgpool-II-3.0.1/pool_auth.c pgpool-II-3.0.1.new/pool_auth.c
+--- pgpool-II-3.0.1/pool_auth.c	2010-09-28 10:00:48.000000000 +0200
++++ pgpool-II-3.0.1.new/pool_auth.c	2011-01-24 14:12:00.646197002 +0100
+@@ -987,7 +987,7 @@
+ 
+ 		backend->auth_kind = 5;
+ 		backend->pwd_size = ntohl(size) - 4;
+-		memcpy(backend->password, password, backend->pwd_size);
++		memcpy(backend->password, password, sizeof(password));
+ 		memcpy(backend->salt, salt, sizeof(salt));
+ 	}
+ 	return kind;

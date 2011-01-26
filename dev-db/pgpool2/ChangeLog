@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/pgpool2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.1 2011/01/26 16:49:09 scarabeus Exp $
+
+*pgpool2-3.0.1 (26 Jan 2011)
+
+  26 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/3.0.1-fix_md5_malloc.patch, +files/pgpool2-tmpdir.patch,
+  +pgpool2-3.0.1.ebuild, +files/pgpool2.initd, +metadata.xml:
+  Initial commit. Fixes bug #196300. Ebuild made thanks to ccss.cz.
+
