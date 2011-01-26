@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.17 2011/01/18 18:50:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.18 2011/01/26 15:12:30 hd_brummy Exp $
+
+  26 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-dvd-0.3.7_pre20090106.ebuild,
+  +files/vdr-dvd-0.3.7_pre20090106-compile_warnings.diff:
+  compile warnings fixed; eapi=3
 
 *vdr-dvd-0.3.7_pre20090106 (18 Jan 2011)
 
