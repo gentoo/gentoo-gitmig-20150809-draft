@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/imdbpy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.8 2010/12/26 14:46:37 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.9 2011/01/26 19:57:56 arfrever Exp $
+
+*imdbpy-4.7 (26 Jan 2011)
+
+  26 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +imdbpy-4.7.ebuild:
+  Version bump.
 
   26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -files/4.5.1-no-docs.patch, -imdbpy-4.5.1.ebuild:
