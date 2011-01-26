@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.7 2011/01/26 07:19:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.10.2.ebuild,v 1.1 2011/01/26 07:19:28 radhermit Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.openembedded.org/bitbake.git"
 	inherit git
 	SRC_URI=""
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~ppc ~x86"
 else
 	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~ppc ~x86"

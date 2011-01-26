@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/bitbake
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.25 2010/08/15 02:12:52 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.26 2011/01/26 07:19:28 radhermit Exp $
+
+*bitbake-1.10.2 (26 Jan 2011)
+
+  26 Jan 2011; Tim Harder <radhermit@gentoo.org> +bitbake-1.10.2.ebuild,
+  bitbake-9999.ebuild:
+  Version bump to the latest release. Update live ebuild to use git (bug
+  #348196). Improve python-related support (bug #312143) and add doc USE flag.
 
   15 Aug 2010; Mike Frysinger <vapier@gentoo.org> bitbake-1.8.18-r1.ebuild:
   Stabilize for all #325261 by Evgeniy Dushistov.
