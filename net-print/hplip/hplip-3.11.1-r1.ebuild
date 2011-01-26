@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.1.ebuild,v 1.1 2011/01/24 20:51:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.1-r1.ebuild,v 1.1 2011/01/26 20:45:24 billie Exp $
 
 EAPI=2
 
@@ -100,10 +100,10 @@ pkg_setup() {
 src_prepare() {
 	python_convert_shebangs -q -r 2 .
 
-	# Test for Gentoo bug #345725
-	#sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
-	#	$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
-	#	|| die "sed udev rules"
+	# Fix for Gentoo bug #345725
+	sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
+		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
+		|| die "sed udev rules"
 
 	# Do not install desktop files if there is no gui
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
