@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.51 2011/01/12 16:16:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.52 2011/01/26 08:47:18 hwoarang Exp $
+
+  26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> kabcclient-4.4.9.ebuild:
+  Stable on amd64 wrt bug #351345
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> kabcclient-4.4.8.ebuild:
   Stable on amd64 wrt bug #351345
