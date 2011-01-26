@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.39 2011/01/13 22:36:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.40 2011/01/26 10:44:34 bangert Exp $
+
+  26 Jan 2011; Thilo Bangert <bangert@gentoo.org> powertop-9999.ebuild:
+  fix git url (#350783)
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> powertop-1.13.ebuild:
   stable ppc, bug 342047
