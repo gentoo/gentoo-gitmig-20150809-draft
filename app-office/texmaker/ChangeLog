@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texmaker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.73 2010/10/30 21:51:46 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.74 2011/01/26 11:18:28 aballier Exp $
+
+*texmaker-2.20 (26 Jan 2011)
+
+  26 Jan 2011; Alexis Ballier <aballier@gentoo.org> +texmaker-2.20.ebuild,
+  +files/texmaker-2.20-hunspell.patch:
+  version bump, bug #352792
 
   30 Oct 2010; Alexis Ballier <aballier@gentoo.org> -texmaker-1.80.ebuild,
   -files/texmaker-1.80-hunspell.patch, -texmaker-1.91.ebuild,
