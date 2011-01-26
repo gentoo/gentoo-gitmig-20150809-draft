@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20101125.ebuild,v 1.2 2010/12/16 13:50:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.1 2011/01/26 10:19:47 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Versatile, SHELX-97 compatible, multipurpose crystallographic tool"
 HOMEPAGE="http://www.cryst.chem.uu.nl/platon/"
-SRC_URI="${P}.tar.gz"
+SRC_URI="http://www.cryst.chem.uu.nl/xraysoft/unix/${PN}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
@@ -20,14 +20,11 @@ IUSE="examples"
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
-RESTRICT="fetch"
+RESTRICT="mirror"
 
 S="${WORKDIR}/${PN}"
 
 pkg_nofetch() {
-	elog "Download ${A/-${PV}} from ftp://xraysoft.chem.uu.nl/pub/unix/,"
-	elog "rename it to ${A} and place it"
-	elog "in ${DISTDIR}."
 	elog "If there is a digest mismatch, please file a bug"
 	elog "at https://bugs.gentoo.org/ -- a version bump"
 	elog "is probably required."

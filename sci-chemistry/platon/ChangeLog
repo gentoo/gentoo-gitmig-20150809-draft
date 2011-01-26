@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/platon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.23 2010/12/16 13:50:12 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.24 2011/01/26 10:19:47 jlec Exp $
+
+*platon-20110126 (26 Jan 2011)
+
+  26 Jan 2011; Justin Lecher <jlec@gentoo.org>
+  +files/20110126-buffer-overflow.patch, -files/20101125-buffer-overflow.patch,
+  -platon-20101125.ebuild, +platon-20110126.ebuild:
+  Version Bump, #352440; fetch sources, RESTRICT=mirror
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> platon-20101125.ebuild:
   Removal of fortran.eclass, #348851
