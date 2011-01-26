@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.129 2010/09/09 16:50:19 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.130 2011/01/26 14:47:50 pacho Exp $
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> dia-0.97.1.ebuild:
+  Let it compile when python3 is main interpreter. Bump to eapi3.
 
   09 Sep 2010; Pacho Ramos <pacho@gentoo.org> dia-0.97.1.ebuild:
   Don't use -DGTK_DISABLE_DEPRECATED (bug #333439) and RDEPEND on gtk+:2.

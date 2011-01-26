@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.10 2010/09/09 16:50:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.11 2011/01/26 14:47:50 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
+PYTHON_DEPEND="python? 2"
 
 inherit eutils gnome2 libtool autotools versionator python
 
@@ -18,7 +20,6 @@ SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${MY_P}.tar.bz2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 # the doc USE flag doesn't seem to do anything without docbook2html
-# FIXME: configure mixes debug and devel meaning (see -DGTK_DISABLE...)
 IUSE="cairo doc gnome png python zlib"
 
 RDEPEND=">=x11-libs/gtk+-2.6.0:2
@@ -36,9 +37,7 @@ RDEPEND=">=x11-libs/gtk+-2.6.0:2
 		>=gnome-base/libgnome-2.0
 		>=gnome-base/libgnomeui-2.0 )
 	cairo? ( >=x11-libs/cairo-1 )
-	python? (
-		>=dev-lang/python-1.5.2
-		>=dev-python/pygtk-1.99 )
+	python? ( >=dev-python/pygtk-1.99 )
 	doc? (
 		~app-text/docbook-xml-dtd-4.5
 		 app-text/docbook-xsl-stylesheets )"
@@ -48,9 +47,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-libs/libxslt )"
 
-DOCS="AUTHORS ChangeLog KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
 	G2CONF="${G2CONF}
 		$(use_with cairo)
 		$(use_with python)
@@ -61,6 +59,7 @@ pkg_setup() {
 		--without-hardbooks
 		--disable-static
 		--docdir=/usr/share/doc/${PF}"
+	use python && python_set_active_version 2
 }
 
 src_prepare() {
@@ -83,13 +82,15 @@ src_prepare() {
 	# Don't use -DGTK_DISABLE_DEPRECATED, bug #333439
 	sed -i -e 's:-DGTK_DISABLE_DEPRECATED::g' configure.in || die "sed 3 failed"
 
+	use python && python_convert_shebangs -r 2 .
+
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name "*.la" -delete || die "failed to remove *.la"
+	find "${ED}" -name "*.la" -delete || die "failed to remove *.la"
 }
 
 pkg_postinst() {
@@ -102,5 +103,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/share/dia
+	use python && python_mod_cleanup /usr/share/dia
 }
