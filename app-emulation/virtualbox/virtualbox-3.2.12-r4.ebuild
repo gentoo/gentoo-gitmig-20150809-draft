@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.3 2011/01/08 12:40:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-3.2.12-r4.ebuild,v 1.4 2011/01/26 22:01:24 polynomial-c Exp $
 
 EAPI=2
 
@@ -140,7 +140,7 @@ src_configure() {
 	fi
 
 	# bug #339914
-	gcc-spec-pie && append-flags "-nopie"
+	#gcc-spec-pie && append-flags "-nopie"
 
 	# not an autoconf script
 	./configure \

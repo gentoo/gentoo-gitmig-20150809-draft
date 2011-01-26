@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.58 2011/01/21 16:52:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.59 2011/01/26 22:01:24 polynomial-c Exp $
+
+  26 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-3.2.12-r4.ebuild:
+  Removed hardened "fix" for now. Thanks to Martin Walch who reported this in
+  bug #352262
 
   21 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-4.0.0-r1.ebuild, virtualbox-4.0.2.ebuild:
