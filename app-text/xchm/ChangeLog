@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.14 2011/01/24 18:22:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.15 2011/01/26 15:02:38 phajdan.jr Exp $
+
+  26 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xchm-1.18.ebuild:
+  x86 stable wrt bug #352477
 
   24 Jan 2011; Markos Chandras <hwoarang@gentoo.org> xchm-1.18.ebuild:
   Stable on amd64 wrt bug #352477
