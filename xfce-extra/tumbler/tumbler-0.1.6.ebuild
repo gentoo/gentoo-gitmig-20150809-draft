@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.6.ebuild,v 1.5 2011/01/26 17:01:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.6.ebuild,v 1.6 2011/01/26 17:04:01 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug ffmpeg jpeg pdf"
 
-RDEPEND=">=dev-libs/glib-2.16:2
+COMMON_DEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.88
 	>=sys-apps/dbus-1.4.1
 	>=media-libs/libpng-1.4
@@ -24,7 +24,9 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	jpeg? ( virtual/jpeg )
 	pdf? ( >=app-text/poppler-0.12.4[cairo] )
 	!<xfce-extra/thunar-thumbnailers-4.7.0"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	>=xfce-base/thunar-1.2"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
