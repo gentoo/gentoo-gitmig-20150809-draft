@@ -1,6 +1,6 @@
-# Copyright 1999-2011 W-Mark Kubacki, Mao Pu
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.0_rc4.ebuild,v 1.2 2011/01/26 02:26:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.0_rc4.ebuild,v 1.3 2011/01/26 02:43:30 robbat2 Exp $
 
 EAPI="2"
 
@@ -9,23 +9,29 @@ inherit autotools eutils flag-o-matic
 DESCRIPTION="A persistent caching system, key-value and data structures database."
 HOMEPAGE="http://code.google.com/p/redis/"
 SRC_URI="http://redis.googlecode.com/files/${PN}-${PV/_/-}.tar.gz"
-RESTRICT="primaryuri"
 
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~x86-macos"
-IUSE="tcmalloc"
+IUSE="tcmalloc test"
 SLOT="0"
 
 RDEPEND=""
 DEPEND=">=sys-devel/autoconf-2.63
 	tcmalloc? ( dev-util/google-perftools )
+	test? ( dev-lang/tcl )
 	${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV/_/-}"
 
+REDIS_PIDDIR=/var/run/redis/
+REDIS_PIDFILE=${REDIS_PIDDIR}/redis.pid
+REDIS_DATAPATH=/var/lib/redis
+REDIS_LOGPATH=/var/log/redis
+REDIS_LOGFILE=${REDIS_LOGPATH}/redis.log
+
 pkg_setup() {
 	enewgroup redis 75 || die "problem adding 'redis' group"
-	enewuser redis 75 -1 /var/lib/redis redis || die "problem adding 'redis' user"
+	enewuser redis 75 -1 ${REDIS_DATAPATH} redis || die "problem adding 'redis' user"
 	# set tcmalloc-variable for the build as specified in
 	# https://github.com/antirez/redis/blob/2.2/README. If build system gets
 	# better integrated into autotools, replace with append-flags and
@@ -54,24 +60,22 @@ src_prepare() {
 	eautoconf
 }
 
-src_configure() {
-	if ! ( use x86 || use amd64 ); then
-		replace-flags "-Os" "-O2"
-		filter-flags -fomit-frame-pointer "-march=*" "-mtune=*" "-mcpu=*"
-	fi
-	econf ${myconf} || die "econf"
-}
-
 src_install() {
 	# configuration file rewrites
 	insinto /etc/
-	doins redis.conf || ewarn "mysteriously the configuration file is missing"
-	dosed "s:daemonize no:daemonize yes:g" /etc/redis.conf
-	dosed "s:# bind:bind:g" /etc/redis.conf
-	dosed "s:dbfilename :dbfilename /var/lib/redis/:g" /etc/redis.conf
-	dosed "s:dir ./:dir /var/lib/redis/:g" /etc/redis.conf
-	dosed "s:loglevel debug:loglevel notice:g" /etc/redis.conf
-	dosed "s:logfile stdout:logfile /var/log/redis/redis.log:g" /etc/redis.conf
+	sed -r \
+		-e "/^pidfile\>/s,/var.*,${REDIS_PIDFILE}," \
+		-e '/^daemonize\>/s,no,yes,' \
+		-e '/^# bind/s,^# ,,' \
+		-e '/^# maxmemory\>/s,^# ,,' \
+		-e '/^maxmemory\>/s,<bytes>,67108864,' \
+		-e "/^dbfilename\>/s,dump.rdb,${REDIS_DATAPATH}/dump.rdb," \
+		-e "/^dir\>/s, .*, ${REDIS_DATAPATH}/," \
+		-e '/^loglevel\>/s:debug:notice:' \
+		-e "/^logfile\>/s:stdout:${REDIS_LOGFILE}:" \
+		<redis.conf \
+		>redis.conf.gentoo
+	newins redis.conf.gentoo redis.conf
 	use prefix || fowners redis:redis /etc/redis.conf
 	fperms 0644 /etc/redis.conf
 
@@ -80,6 +84,7 @@ src_install() {
 
 	dodoc 00-RELEASENOTES BUGS Changelog CONTRIBUTING README TODO
 	dodoc design-documents/*
+	newdoc client-libraries/README README.client-libraries
 	docinto html
 	dodoc doc/*
 
@@ -94,8 +99,7 @@ src_install() {
 	else
 	        diropts -m0750 -o redis -g redis
 	fi
-	dodir /var/lib/redis
-	dodir /var/log/redis
+	keepdir ${REDIS_DATAPATH} ${REDIS_LOGPATH} ${REDIS_PIDDIR}
 }
 
 pkg_postinst() {
