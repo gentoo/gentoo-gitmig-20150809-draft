@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.230 2011/01/25 21:40:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.231 2011/01/26 14:19:46 phajdan.jr Exp $
+
+  26 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> postfix-2.7.2.ebuild:
+  x86 stable wrt bug #352654
 
   25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> postfix-2.7.2.ebuild:
   Stable on amd64 wrt bug #352654
