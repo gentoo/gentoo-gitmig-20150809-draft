@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6315 2011/01/26 02:34:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6316 2011/01/26 20:34:33 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1563,6 +1563,7 @@ kde-base/ark:archive - Enable support for a variety of archive formats through l
 kde-base/cantor:R - Enable R backend support
 kde-base/cantor:ps - Enable rendering EPS files
 kde-base/dolphin:thumbnail -  Enables video thumbnails generation for kde-base/dolphin file manager. 
+kde-base/dolphin-plugins:git - Enable support for the git VCS
 kde-base/granatier:gluon - Adds support for media-libs/gluon (recommended) instead of x11-libs/qt-multimedia
 kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
@@ -1579,6 +1580,8 @@ kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdebindings-perl:akonadi - Compile bindings for Akonadi.
 kde-base/kdebindings-perl:attica - Compile bindings for dev-libs/libattica.
+kde-base/kdebindings-perl:declarative - Compile bindings for x11-libs/qt-declarative.
+kde-base/kdebindings-perl:kate - Compile bindings for KDE Advanced Text Editor.
 kde-base/kdebindings-perl:multimedia - Compile bindings for x11-libs/qt-multimedia.
 kde-base/kdebindings-perl:okular - Compile bindings for kde-base/okular.
 kde-base/kdebindings-perl:phonon - Compile bindings for Phonon.
@@ -1589,6 +1592,7 @@ kde-base/kdebindings-perl:qthelp - Compile bindings for QtHelp from x11-libs/qt-
 kde-base/kdebindings-perl:qwt - Compile bindings for x11-libs/qwt.
 kde-base/kdebindings-perl:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-ruby:akonadi - Compile bindings for Akonadi.
+kde-base/kdebindings-ruby:kate - Compile bindings for KDE Advanced Text Editor.
 kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
 kde-base/kdebindings-ruby:phonon - Compile bindings for Phonon.
 kde-base/kdebindings-ruby:plasma - Compile bindings for KDE's Plasma.
@@ -1637,6 +1641,7 @@ kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as g
 kde-base/kopete:yahoo - Enable yahoo protocol support.
 kde-base/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-base/krdc:rdp - Enable runtime dependency for net-misc/rdesktop
+kde-base/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:indi - Enable support for Astronomical control library using libindi
 kde-base/kttsd:epos - Build a plugin for app-accessibility/epos
@@ -1644,6 +1649,7 @@ kde-base/kttsd:festival - Build a plugin for app-accessibility/festival
 kde-base/kttsd:flite - Build a plugin for app-accessibility/flite
 kde-base/kttsd:freetts - Build a plugin for app-accessibility/freetts
 kde-base/kttsd:mbrola - Build a plugin for app-accessibility/mbrola
+kde-base/libplasmaclock:holidays - Include support for holidays in plasma calendar
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:ebook - Add E-Book support
@@ -1655,6 +1661,8 @@ kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system throug
 kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/smoke:akonadi - Compile bindings for Akonadi.
 kde-base/smoke:attica - Compile bindings for dev-libs/libattica.
+kde-base/smoke:declarative - Compile bindings for x11-libs/qt-declarative.
+kde-base/smoke:kate - Compile bindings for KDE Advanced Text Editor.
 kde-base/smoke:multimedia - Compile bindings for x11-libs/qt-multimedia.
 kde-base/smoke:okular - Compile bindings for kde-base/okular.
 kde-base/smoke:phonon - Compile bindings for Phonon.
