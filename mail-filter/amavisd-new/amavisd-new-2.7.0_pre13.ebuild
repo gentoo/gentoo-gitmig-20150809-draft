@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre12.ebuild,v 1.2 2011/01/12 12:31:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre13.ebuild,v 1.1 2011/01/26 13:43:00 eras Exp $
 
 EAPI=3
 
@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}
 	app-arch/ncompress
 	app-arch/pax
 	app-arch/unarj
+	app-arch/xz-utils
 	|| ( app-arch/unrar app-arch/rar )
 	app-arch/zoo
 	>=dev-perl/Archive-Zip-1.14
