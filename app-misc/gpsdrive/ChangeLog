@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.41 2010/10/30 01:12:00 nerdboy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.42 2011/01/26 10:54:22 bangert Exp $
+
+  26 Jan 2011; Thilo Bangert <bangert@gentoo.org>
+  -files/gpsdrive-drawmarkers-remove.patch:
+  remove unused file (#342673)
 
 *gpsdrive-2.11-r1 (30 Oct 2010)
 
