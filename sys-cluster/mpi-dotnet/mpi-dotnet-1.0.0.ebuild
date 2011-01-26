@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/mpi-dotnet-1.0.0.ebuild,v 1.6 2011/01/25 23:34:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/mpi-dotnet-1.0.0.ebuild,v 1.7 2011/01/26 23:40:59 mr_bones_ Exp $
 
 WANT_AUTOTOOLS="2.5"
 inherit autotools mono
@@ -39,7 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}/Unsafe.pl.patch"
 
 	has_version '>=dev-lang/mono-2.8' && sed -ie 's:ilasm2:ilasm:' configure.ac
-	
+
 	# MPI/Makefile seems broken, fix it
 	eautoreconf
 }
