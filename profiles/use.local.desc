@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6314 2011/01/25 23:53:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6315 2011/01/26 02:34:32 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -792,6 +792,7 @@ dev-db/postgresql-base:pg-intdatetime - Enable --enable-integer-datetimes config
 dev-db/postgresql-base:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage. 
 dev-db/postgresql-server:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage. 
 dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)
+dev-db/redis:tcmalloc -  Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one. 
 dev-db/sqlite:extensions - Enable support for dynamic loading of extensions
 dev-db/sqlite:fts3 - Full text search using the fts3 module
 dev-db/sqlite:secure-delete - Overwrite deleted information with zeros in addition to marking the space as available for reuse. This causes a performance penalty.
