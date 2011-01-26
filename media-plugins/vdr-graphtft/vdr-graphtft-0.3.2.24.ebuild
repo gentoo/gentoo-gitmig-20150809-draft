@@ -1,13 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.6 2010/09/26 16:36:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.7 2011/01/26 16:39:28 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
+
+RESTRICT="test"
 
 inherit eutils vdr-plugin flag-o-matic
-
-#MY_P="${PN}-${PV/_rc/-rc}"
-#S="${WORKDIR}/graphtft-${PV/_rc/-rc}"
 
 S="${WORKDIR}/graphtft-24"
 
@@ -42,30 +41,6 @@ PATCHES=("${FILESDIR}/${P}_gentoo.diff"
 		"${FILESDIR}/${P}_gcc-4.4.x.diff"
 		"${FILESDIR}/${P}_ffmpeg-0.5.diff")
 
-extpatch_v_check() {
-
-	EXTPATCH_V="`cat /var/db/pkg/media-video/vdr-*/vdr-*.ebuild | grep EXT_V | head -n 1 | cut -c8-9`"
-
-	if [ "${EXTPATCH_V}" -lt "65" ]; then
-		echo
-		eerror "You need an update of vdr with a newer EXTENSIONSPATCH version!"
-		eerror "minimal version of Extensionspatch = 65!"
-		eerror "graphtft will not work fullfilled"
-		echo
-		einfo "use VDR"
-		einfo ">=media-video/vdr-1.6.0_p2-r2"
-		einfo "or"
-		einfo ">=media-video/vdr-1.7.0-r1 from vdr-devel Overlay"
-		echo
-	fi
-}
-
-pkg_setup() {
-	vdr-plugin_pkg_setup
-
-	extpatch_v_check
-}
-
 src_prepare() {
 
 	sed -i Makefile -e "s:  WITH_X_COMM = 1:#WITH_X_COMM = 1:"
@@ -80,6 +55,7 @@ src_prepare() {
 	sed -i "${S}"/imlibrenderer/fbrenderer/fbrenderer.c \
 		-i "${S}"/imlibrenderer/dvbrenderer/mpeg2encoder.c \
 		-e "s:libavutil/avcodec.h:libavcodec/avcodec.h:"
+
 	# UINT64_C is needed by ffmpeg headers
 	append-flags -D__STDC_CONSTANT_MACROS
 }
