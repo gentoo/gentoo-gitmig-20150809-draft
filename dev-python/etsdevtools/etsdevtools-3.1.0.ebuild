@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.1.0.ebuild,v 1.4 2011/01/07 15:59:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.1.0.ebuild,v 1.5 2011/01/26 20:59:49 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 
 inherit distutils
 
@@ -24,12 +24,8 @@ LICENSE="BSD"
 DEPEND="dev-python/docutils
 	>=dev-python/nose-0.10.3
 	dev-python/numpy
-	dev-python/pyro
-	dev-python/reportlab
 	dev-python/setuptools
-	dev-python/testoob
 	>=dev-python/traitsgui-3.5.0
-	x11-libs/libXtst
 	wxwidgets? ( dev-python/wxpython:2.8 )"
 RDEPEND="${DEPEND}"
 
