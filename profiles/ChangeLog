@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4981 2011/01/26 10:58:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4982 2011/01/26 19:39:53 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Mask KDE SC 4.6.0 and its deps
 
   26 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask gnome-extra/quick-lounge-applet due its gnome-panel-2.32 problems.
