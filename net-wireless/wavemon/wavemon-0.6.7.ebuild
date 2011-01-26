@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.6.7.ebuild,v 1.2 2009/10/17 18:50:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.6.7.ebuild,v 1.3 2011/01/26 19:14:01 bangert Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-as-needed.diff"
+	epatch "${FILESDIR}/${P}-dont-override-CFLAGS.patch"
 	eautoreconf
 }
 
