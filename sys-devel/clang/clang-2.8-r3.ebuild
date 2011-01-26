@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r3.ebuild,v 1.1 2010/12/19 22:45:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.8-r3.ebuild,v 1.2 2011/01/26 17:48:41 grobian Exp $
 
 EAPI=3
 
@@ -54,7 +54,7 @@ src_prepare() {
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
 		|| die "scan-view sed failed"
-	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#/usr/share/${PN}#" \
+	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#${EPREFIX}/usr/share/${PN}#" \
 		-i tools/clang/tools/scan-build/scan-build \
 		|| die "scan-build sed failed"
 	# Specify python version
