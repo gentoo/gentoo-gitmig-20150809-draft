@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12397 2011/01/25 21:52:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12398 2011/01/26 09:32:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (26 Jan 2011)
+# Doesn't work with mono-2.8, upstream tarballs for 2.99.x
+# are incomplete, if you want to help on bumping, please 
+# refer to bug #340375
+www-plugins/moonlight
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (25 Jan 2011)
 #  on behalf of QA team
