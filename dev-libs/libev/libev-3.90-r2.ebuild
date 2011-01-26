@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-3.90-r2.ebuild,v 1.3 2010/12/27 12:59:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-3.90-r2.ebuild,v 1.4 2011/01/26 01:06:50 jer Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://dist.schmorp.de/libev/${MY_P}.tar.gz
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 arm hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="elibc_glibc"
 
 # Bug #283558
