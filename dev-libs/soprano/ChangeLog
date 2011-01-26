@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.64 2011/01/12 20:36:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.65 2011/01/26 19:42:39 alexxy Exp $
+
+*soprano-2.5.63_pre20101127 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +soprano-2.5.63_pre20101127.ebuild:
+  Version bump for kde sc 4.6.0
 
   12 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   files/soprano-2.4.4-make-broken-redland-fatal.cmake, soprano-2.5.2.ebuild:
