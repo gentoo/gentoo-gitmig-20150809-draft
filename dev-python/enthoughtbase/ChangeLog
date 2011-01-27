@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.22 2011/01/27 10:00:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.23 2011/01/27 15:01:07 arfrever Exp $
+
+  27 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -enthoughtbase-3.0.5.ebuild:
+  Delete.
 
   27 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   enthoughtbase-3.0.6.ebuild:
