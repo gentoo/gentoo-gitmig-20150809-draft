@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyparted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.57 2010/10/29 18:46:37 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.58 2011/01/27 12:21:23 jer Exp $
+
+*pyparted-3.5 (27 Jan 2011)
+
+  27 Jan 2011; Jeroen Roovers <jer@gentoo.org> +pyparted-3.5.ebuild:
+  Version bump.
 
   29 Oct 2010; Mark Loeser <halcy0n@gentoo.org> pyparted-3.4.ebuild:
   Mark ~ppc64; bug #300106
