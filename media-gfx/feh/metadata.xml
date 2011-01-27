@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
+<maintainer>
+	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+</maintainer>
 <longdescription>
 feh is an image viewer at heart, though it does other cool stuff.
 </longdescription>
