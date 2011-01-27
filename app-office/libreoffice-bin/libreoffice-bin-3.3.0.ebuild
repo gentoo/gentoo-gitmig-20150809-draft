@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.1 2011/01/25 13:39:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.2 2011/01/27 10:25:00 suka Exp $
 
 EAPI="3"
 
@@ -117,6 +117,9 @@ src_unpack() {
 
 	# Lang files
 	# TODO: Install dictionaries
+
+	strip-linguas ${LANGS}
+
 	for l in ${LINGUAS}; do
 		m="${l/_/-}"
 		if [[ ${m} != "en" ]] ; then
