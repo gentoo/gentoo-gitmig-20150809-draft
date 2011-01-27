@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.13 2010/11/06 18:46:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.14 2011/01/27 16:38:40 arfrever Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )
 "
 
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 
 src_compile() {
 	append-cflags -DVERSION=\\\"${PV}\\\"

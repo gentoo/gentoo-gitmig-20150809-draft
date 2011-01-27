@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.27 2011/01/27 01:20:14 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.28 2011/01/27 16:38:40 arfrever Exp $
+
+  27 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycups-1.9.46.ebuild, pycups-1.9.49.ebuild, pycups-1.9.51.ebuild,
+  pycups-1.9.52.ebuild, pycups-1.9.53.ebuild:
+  Restrict Jython ABIs.
 
 *pycups-1.9.53 (27 Jan 2011)
 
