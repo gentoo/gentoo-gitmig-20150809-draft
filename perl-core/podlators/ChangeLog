@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/podlators
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.4 2010/02/19 13:30:28 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.5 2011/01/27 02:49:00 robbat2 Exp $
+
+*podlators-2.4.0 (27 Jan 2011)
+
+  27 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +podlators-2.4.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *podlators-2.3.1 (19 Feb 2010)
 
