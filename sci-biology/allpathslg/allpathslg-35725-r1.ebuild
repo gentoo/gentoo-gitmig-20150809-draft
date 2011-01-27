@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-35725.ebuild,v 1.1 2011/01/25 16:51:48 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-35725-r1.ebuild,v 1.1 2011/01/27 16:23:34 weaver Exp $
 
 EAPI="2"
 
@@ -13,10 +13,11 @@ SRC_URI="ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 DEPEND="dev-libs/boost
-	>=sys-devel/gcc-4.3.3"
+	>=sys-devel/gcc-4.3.3
+	sci-biology/vaal"
 RDEPEND=""
 
 src_prepare() {
@@ -25,4 +26,8 @@ src_prepare() {
 
 src_install() {
 	einstall || die
+	# Provided by sci-biology/vaal
+	for i in QueryLookupTable ScaffoldAccuracy MakeLookupTable Fastb ShortQueryLookup; do
+		rm "${D}/usr/bin/$i" || die
+	done
 }
