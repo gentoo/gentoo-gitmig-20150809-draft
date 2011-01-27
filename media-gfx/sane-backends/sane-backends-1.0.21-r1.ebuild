@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.5 2011/01/25 14:40:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.6 2011/01/27 12:45:40 fauli Exp $
 
 EAPI="1"
 
@@ -134,7 +134,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/3258/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/${P}/${P}-i18n.patch"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 # the blank is intended - an empty string would result in building ALL backends.
 BACKENDS=" "
