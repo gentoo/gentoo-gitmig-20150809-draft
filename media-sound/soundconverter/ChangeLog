@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/soundconverter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.17 2010/11/21 18:05:01 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.18 2011/01/27 22:16:55 hanno Exp $
+
+*soundconverter-1.5.4 (27 Jan 2011)
+
+  27 Jan 2011; Hanno Boeck <hanno@gentoo.org> +soundconverter-1.5.4.ebuild:
+  Version bump, set python active version, split gnome-python deps.
 
 *soundconverter-1.5.3 (21 Nov 2010)
 
