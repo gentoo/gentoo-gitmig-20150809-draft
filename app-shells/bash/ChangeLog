@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.271 2011/01/25 18:56:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.272 2011/01/27 22:08:15 ranger Exp $
+
+  27 Jan 2011; Brent Baude <ranger@gentoo.org> bash-4.1_p9.ebuild:
+  stable ppc, bug 352383
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> bash-4.1_p9.ebuild:
   Stable for HPPA (bug #352383).
