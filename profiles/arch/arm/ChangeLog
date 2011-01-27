@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.109 2011/01/14 09:50:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.110 2011/01/27 18:05:56 pacho Exp $
+
+  27 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Mask more gst-plugins-meta USE flags.
 
   14 Jan 2011; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Mask app-misc/nut with USE=X as x11-libs/fltk is not keyworded

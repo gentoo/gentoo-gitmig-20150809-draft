@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.39 2011/01/14 09:50:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.40 2011/01/27 18:05:56 pacho Exp $
 
 # Justin Lecher <jlec@gentoo.org> (14 Jen 2011)
 # x11-libs/fltk is not keyworded for arm
@@ -56,7 +56,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta lame taglib
+media-plugins/gst-plugins-meta aac dv lame taglib wavpack
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm

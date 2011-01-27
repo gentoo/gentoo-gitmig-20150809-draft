@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.42 2010/12/17 15:03:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.43 2011/01/27 18:07:46 pacho Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now
@@ -61,5 +61,4 @@ dev-lisp/clisp hyperspec pari svm
 media-video/mplayer ladspa
 
 # missing keywords
-media-plugins/gst-plugins-meta lame taglib
-
+media-plugins/gst-plugins-meta dv lame taglib wavpack
