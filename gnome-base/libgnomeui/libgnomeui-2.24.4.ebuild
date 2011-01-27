@@ -1,18 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.4.ebuild,v 1.3 2011/01/19 21:24:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.4.ebuild,v 1.4 2011/01/27 11:57:29 pacho Exp $
 
+EAPI="3"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="User Interface routines for Gnome"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://library.gnome.org/devel/libgnomeui/stable/"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="doc"
+IUSE="doc test"
 
 # gtk+-2.14 dep instead of 2.12 ensures system doesn't loose VFS capabilities in GtkFilechooser
 RDEPEND=">=dev-libs/libxml2-2.4.20
@@ -36,3 +37,11 @@ DEPEND="${RDEPEND}
 PDEPEND="x11-themes/gnome-icon-theme"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	gnome2_src_prepare
+
+	if ! use test; then
+		sed 's/ test-gnome//' -i Makefile.am Makefile.in || die "sed failed"
+	fi
+}
