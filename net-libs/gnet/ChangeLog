@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.69 2010/11/16 20:54:50 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.70 2011/01/27 07:21:44 fauli Exp $
+
+  27 Jan 2011; Christian Faulhammer <fauli@gentoo.org> gnet-2.0.8-r1.ebuild:
+  stable x86, bug 348987
 
   16 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gnet-2.0.8.ebuild,
   gnet-2.0.8-r1.ebuild, +files/gnet-2.0.8-check-usage-update.patch,
