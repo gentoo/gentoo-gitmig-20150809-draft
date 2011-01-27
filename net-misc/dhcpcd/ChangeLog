@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.298 2011/01/04 23:13:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.299 2011/01/27 20:31:31 williamh Exp $
+
+*dhcpcd-5.2.10-r2 (27 Jan 2011)
+
+  27 Jan 2011; William Hubbs <williamh@gentoo.org> +files/dhcpcd.initd-1,
+  +dhcpcd-5.2.10-r2.ebuild:
+  Fix init script so it is compatible with baselayout-1 and also make sure
+  that we require at least openrc-0.6.1 so that our test for compatibility
+  will work. This fixes #346805.
 
 *dhcpcd-5.2.10-r1 (04 Jan 2011)
 
