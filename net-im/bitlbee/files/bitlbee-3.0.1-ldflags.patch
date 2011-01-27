@@ -1,0 +1,11 @@
+--- Makefile	2011-01-18 01:16:42.346666267 +0000
++++ Makefile	2011-01-18 01:17:35.246666305 +0000
+@@ -120,7 +120,7 @@ $(subdirs):
+ 
+ $(OTR_PI): %.so: $(SRCDIR)%.c
+ 	@echo '*' Building plugin $@
+-	@$(CC) $(CFLAGS) $(OTRFLAGS) -fPIC -shared $< -o $@
++	@$(CC) $(CFLAGS) $(OTRFLAGS) -fPIC -shared $(LDFLAGS) $< -o $@
+ 
+ $(objects): %.o: $(SRCDIR)%.c
+ 	@echo '*' Compiling $<
