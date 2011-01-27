@@ -1,14 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.3 2011/01/19 21:19:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.4 2011/01/27 19:24:01 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2:2.4"
 
 inherit gnome2 eutils python multilib
 
 DESCRIPTION="Tool to maintain user profiles in a GNOME desktop"
-HOMEPAGE="http://www.gnome.org/projects/sabayon/"
+HOMEPAGE="http://live.gnome.org/Sabayon/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,8 +19,7 @@ IUSE=""
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
 # to be got from the RPM .spec file...
 # But the .spec file got removed :/
-COMMON_DEPEND=">=dev-lang/python-2.4
-	>=x11-libs/gtk+-2.6.0
+COMMON_DEPEND=">=x11-libs/gtk+-2.6.0
 	>=dev-python/pygtk-2.16
 	>=dev-python/pygobject-2.15
 	app-admin/pessulus
@@ -39,9 +39,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	>=app-text/gnome-doc-utils-0.17.3"
 
-DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-static
 		--with-distro=gentoo
@@ -53,6 +52,7 @@ pkg_setup() {
 	enewgroup ${PN}-admin
 	enewuser ${PN}-admin -1 -1 "/var/lib/sabayon" "${PN}-admin"
 	# Should we delete the user/group on unmerge?
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -65,6 +65,8 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
@@ -74,7 +76,7 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/sabayon
+	python_mod_optimize sabayon
 
 	# unfortunately /etc/gconf is CONFIG_PROTECT_MASK'd
 	elog "To apply Sabayon defaults and mandatory settings to all users, put"
@@ -87,5 +89,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/sabayon
+	python_mod_cleanup sabayon
 }
