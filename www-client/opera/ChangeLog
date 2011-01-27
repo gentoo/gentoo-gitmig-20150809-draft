@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.593 2011/01/27 12:24:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.594 2011/01/27 12:47:36 fauli Exp $
+
+  27 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  opera-11.01.1190.ebuild:
+  stable x86, security bug 352750
 
   27 Jan 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Update long description.
