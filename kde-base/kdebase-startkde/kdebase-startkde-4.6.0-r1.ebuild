@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.0.ebuild,v 1.1 2011/01/26 20:28:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.0-r1.ebuild,v 1.1 2011/01/27 00:02:31 scarabeus Exp $
 
 EAPI="3"
 
@@ -45,7 +45,10 @@ KMEXTRACTONLY="
 	startkde.cmake
 "
 
-PATCHES=("${FILESDIR}/gentoo-startkde4-2.patch")
+PATCHES=(
+	"${FILESDIR}/${PV}-startkde.patch"
+	"${FILESDIR}/gentoo-startkde4-2.patch"
+)
 
 src_prepare() {
 	kde4-meta_src_prepare
