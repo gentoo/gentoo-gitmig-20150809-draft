@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.276 2011/01/03 11:41:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.277 2011/01/27 07:18:44 leio Exp $
+
+  27 Jan 2011; Mart Raudsepp <leio@gentoo.org> gnome-session-2.30.2.ebuild:
+  Require older upower versions for 2.30, that still provide
+  devkit-power-gobject compatibility library which it requires
 
   03 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-session-2.32.1.ebuild:
   gtk+-2.22 is required because of lack of symbol gdk_visual_get_depth in older
