@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.ebuild,v 1.1 2010/11/19 17:42:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.ebuild,v 1.2 2011/01/27 10:52:59 hwoarang Exp $
 
 EAPI="3"
 VIRTUALX_USE=test
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${MYP}.tar.bz2"
 IUSE="doc test"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-lang/tk
 	>=dev-tcltk/tcllib-1.11

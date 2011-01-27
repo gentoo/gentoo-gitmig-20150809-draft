@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.20 2011/01/19 14:23:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.21 2011/01/27 10:52:59 hwoarang Exp $
+
+  27 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tkimg-1.4.ebuild:
+  Stable on amd64 wrt bug #352051
 
   19 Jan 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4.20100510.ebuild:
   Tests require X
