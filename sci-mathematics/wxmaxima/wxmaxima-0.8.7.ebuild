@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.4.ebuild,v 1.1 2009/12/18 05:05:26 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.7.ebuild,v 1.1 2011/01/27 00:08:43 bicatali Exp $
 
 WX_GTK_VER="2.8"
 EAPI="2"
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	# consistent package names
-	sed -e "s:${datadir}/wxMaxima:${datadir}/${PN}:g" \
+	sed -e "s:\${datadir}/wxMaxima:\${datadir}/${PN}:g" \
 		-i Makefile.in data/Makefile.in || die "sed failed"
 
 	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
