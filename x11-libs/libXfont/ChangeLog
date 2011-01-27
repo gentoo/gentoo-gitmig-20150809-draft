@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.142 2010/12/31 20:04:55 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.143 2011/01/27 16:52:22 darkside Exp $
+
+  27 Jan 2011; Jeremy Olexa <darkside@gentoo.org> libXfont-1.4.3.ebuild:
+  Push Gentoo Prefix changes from x11 overlay, as approved
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> libXfont-1.4.3.ebuild:
   Stable for HPPA (bug #344827).

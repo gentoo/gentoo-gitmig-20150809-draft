@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.160 2011/01/15 17:41:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.161 2011/01/27 16:50:29 darkside Exp $
+
+  27 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  +files/libX11-1.1.4-aix-pthread.patch, +files/libX11-1.1.5-solaris.patch,
+  +files/libX11-1.1.5-winnt-private.patch, libX11-1.4.1.ebuild:
+  Push Gentoo Prefix changes from x11 overlay, as approved
 
 *libX11-1.4.1 (15 Jan 2011)
 

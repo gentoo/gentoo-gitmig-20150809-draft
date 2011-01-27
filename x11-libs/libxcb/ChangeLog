@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.76 2010/12/31 20:13:45 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.77 2011/01/27 16:59:39 darkside Exp $
+
+  27 Jan 2011; Jeremy Olexa <darkside@gentoo.org> libxcb-1.7.ebuild:
+  Push Gentoo Prefix changes from x11 overlay, as approved
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> libxcb-1.7.ebuild:
   Stable for HPPA (bug #344827).
