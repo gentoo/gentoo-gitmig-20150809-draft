@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.199 2011/01/19 21:23:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.200 2011/01/27 11:40:18 pacho Exp $
+
+*libbonoboui-2.24.4-r1 (27 Jan 2011)
+
+  27 Jan 2011; Pacho Ramos <pacho@gentoo.org> +libbonoboui-2.24.4-r1.ebuild:
+  Revision bump to stop building and installing samples and tests (bug
+  #226225).
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libbonoboui-2.24.4.ebuild:
   Stable on amd64 wrt bug #348987
