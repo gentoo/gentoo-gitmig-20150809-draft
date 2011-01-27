@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Daemon-Generic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.10 2011/01/27 16:19:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.11 2011/01/27 19:12:51 xarthisius Exp $
+
+  27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Daemon-Generic-0.71.ebuild:
+  ppc64 stable wrt #346403
 
   27 Jan 2011; Brent Baude <ranger@gentoo.org> Daemon-Generic-0.71.ebuild:
   Marking Daemon-Generic-0.71 ppc stable for bug 346403
