@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118.ebuild,v 1.2 2011/01/21 00:04:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118-r1.ebuild,v 1.1 2011/01/27 17:58:10 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin ssl-cert
 
 DESCRIPTION="VDR Plugin: Web Access To Settings"
 HOMEPAGE="http://live.vdr-developer.org"
 #SRC_URI="http://live.vdr-developer.org/downloads/${P}.tar.gz"
-SRC_URI="http://vdr.websitec.de/download/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+		http://vdr.websitec.de/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,12 +18,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
 DEPEND="media-video/vdr
-	>=dev-libs/tntnet-1.6.0.6[ssl=,sdk]
-	>=dev-libs/cxxtools-1.4.3"
+	>=dev-libs/tntnet-2.0[ssl=,sdk]
+	>=dev-libs/cxxtools-2.0"
 
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${VDRPLUGIN}"
+
+VDR_CONFD_FILE="${FILESDIR}/confd-0.2"
+VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.2.sh"
 
 make_live_cert() {
 	# ssl-cert eclass create invalide cert, create my own
