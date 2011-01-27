@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8.ebuild,v 1.1 2011/01/25 23:12:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8.ebuild,v 1.2 2011/01/27 02:09:38 hd_brummy Exp $
 
 EAPI="3"
 
@@ -18,6 +18,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6
+		media-video/ffmpeg[mp3,x264]
 		!media-video/noad"
 RDEPEND="${DEPEND}"
 
@@ -29,7 +30,7 @@ src_prepare() {
 
 	cd "${S2}"
 	sed -i Makefile \
-		-e "s:\$(CXXFLAGS) \$(OBJS):\$(CXXFLAGS) \$(LDFLAGS) -shared \$(OBJS):"
+		-e "s:\$(CXXFLAGS) \$(OBJS):\$(CXXFLAGS) \$(LDFLAGS) \$(OBJS):"
 }
 
 src_compile() {
