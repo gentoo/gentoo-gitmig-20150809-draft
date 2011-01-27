@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.192 2011/01/26 19:49:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.193 2011/01/27 16:22:54 ranger Exp $
+
+  27 Jan 2011; Brent Baude <ranger@gentoo.org> bugzilla-3.2.10.ebuild:
+  Marking bugzilla-3.2.10 ppc for bug 352781
 
   26 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   bugzilla-3.6.4.ebuild:
