@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/traitsbackendqt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.10 2011/01/07 16:00:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.11 2011/01/27 10:01:41 hwoarang Exp $
+
+  27 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  traitsbackendqt-3.5.0.ebuild:
+  Stable on amd64 wrt bug #347107
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> traitsbackendqt-3.5.0.ebuild:
   Marking traitsbackendqt-3.5.0 ppc stable for bug 347107
