@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1190.ebuild,v 1.1 2011/01/26 16:33:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1190.ebuild,v 1.2 2011/01/27 12:13:04 jer Exp $
 
 EAPI="3"
 
@@ -20,13 +20,13 @@ RESTRICT="test"
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_U="http://snapshot.opera.com/"
+O_U="mirror://opera/"
+O_D="${O_V//.}"
 O_P="${PN}-${O_V}-${O_B}"
-O_D="rc2_${O_V}-${O_B}"
 
 SRC_URI="
-	amd64? ( ${O_U}unix/${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}unix/${O_D}/${O_P}.i386.linux.tar.xz )
+	amd64? ( ${O_U}linux/${O_D}/${O_P}.x86_64.linux.tar.xz )
+	x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
 	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
 
