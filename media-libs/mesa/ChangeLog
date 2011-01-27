@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.307 2011/01/12 00:14:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.308 2011/01/27 16:44:03 darkside Exp $
+
+  27 Jan 2011; Jeremy Olexa <darkside@gentoo.org> mesa-7.10.ebuild:
+  Push Gentoo Prefix changes from x11 overlay, as approved
 
 *mesa-7.10 (12 Jan 2011)
 
