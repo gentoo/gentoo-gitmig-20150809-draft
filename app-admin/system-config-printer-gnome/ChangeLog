@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.18 2011/01/27 12:39:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.19 2011/01/27 13:24:51 xarthisius Exp $
+
+  27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  system-config-printer-gnome-1.2.6.ebuild:
+  add ~ppc64 wrt #336920
 
   27 Jan 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Months ago me and Dang agreed on co-maintaining this with Maciej and Gilles
