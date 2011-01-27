@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.0.ebuild,v 1.1 2010/11/10 01:40:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.0.ebuild,v 1.2 2011/01/27 04:51:32 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -31,15 +31,19 @@ src_prepare() {
 		docs/Makefile.am || die
 
 	# Yet more local labels, this time for ppc32 & ppc64
-	epatch "${FILESDIR}/valgrind-3.6.0-local-labels.patch"
+	epatch "${FILESDIR}"/${PN}-3.6.0-local-labels.patch
 
 	# Don't build in empty assembly files for other platforms or we'll get a QA
 	# warning about executable stacks.
-	epatch "${FILESDIR}/valgrind-3.6.0-non-exec-stack.patch"
+	epatch "${FILESDIR}"/${PN}-3.6.0-non-exec-stack.patch
 
 	# Fix up some suppressions that were not general enough for glibc versions
 	# with more than just a major and minor number.
-	epatch "${FILESDIR}/valgrind-3.4.1-glibc-2.10.1.patch"
+	epatch "${FILESDIR}"/${PN}-3.4.1-glibc-2.10.1.patch
+
+	# Fix for recent glibc
+	epatch "${FILESDIR}"/${PN}-3.6.0-glibc-2.13.patch
+	epatch "${FILESDIR}"/${PN}-3.6.0-strcasecmp.patch
 
 	# Regenerate autotools files
 	eautoreconf
