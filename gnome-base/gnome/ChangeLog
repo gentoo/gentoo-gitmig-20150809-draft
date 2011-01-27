@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.404 2011/01/19 21:22:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.405 2011/01/27 08:34:14 xarthisius Exp $
+
+  27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> gnome-2.32.0.ebuild:
+  added ~ppc wrt #348984
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gnome-2.30.2-r1.ebuild:
   Stable on amd64 wrt bug #348987
