@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.2 2011/01/27 10:25:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.3 2011/01/27 14:59:13 suka Exp $
 
 EAPI="3"
 
 inherit eutils fdo-mime gnome2-utils rpm multilib
 
-IUSE="gnome java kde"
+IUSE="gnome java kde offlinehelp"
 
 MY_PV="${PV/_/-}"
 MY_PV2="${PV}rc4"
@@ -28,18 +28,18 @@ UP="LibO_${MY_PV2}_Linux_${LOARCH2}_install-rpm_en-US/RPMS"
 DESCRIPTION="LibreOffice productivity suite."
 
 SRC_URI="amd64? ( ${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_install-rpm_en-US.tar.gz
-		${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_en-US.tar.gz )
+		offlinehelp? ( ${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_en-US.tar.gz ) )
 	x86? ( ${FILEPATH}/x86/LibO_${PV}_Linux_x86_install-rpm_en-US.tar.gz
-		${FILEPATH}/x86/LibO_${PV}_Linux_x86_helppack-rpm_en-US.tar.gz )"
+		offlinehelp? ( ${FILEPATH}/x86/LibO_${PV}_Linux_x86_helppack-rpm_en-US.tar.gz ) )"
 
 LANGS="af ar as ast be_BY bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el en en_GB en_ZA eo es et eu fa fi fr ga gd gl gu he hi hr hu id is it ja ka kk km kn ko kok ks ku ky lo lt lv mai mk ml mn mni mr ms my nb ne nl nn nr ns oc om or pa_IN pap pl ps pt pt_BR ro ru rw sa_IN sat sd sh si sk sl sq sr ss st sv sw_TZ ta te tg th ti tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
 
 for X in ${LANGS} ; do
 	[[ ${X} != "en" ]] && SRC_URI="${SRC_URI} linguas_${X}? (
 		amd64? ( "${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_langpack-rpm_${X/_/-}.tar.gz
-			"${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_${X/_/-}.tar.gz )
+			offlinehelp? ( "${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_${X/_/-}.tar.gz ) )
 		x86? ( "${FILEPATH}"/x86/LibO_${PV}_Linux_x86_langpack-rpm_${X/_/-}.tar.gz
-			"${FILEPATH}"/x86/LibO_${PV}_Linux_x86_helppack-rpm_${X/_/-}.tar.gz ) )"
+			offlinehelp? ( "${FILEPATH}"/x86/LibO_${PV}_Linux_x86_helppack-rpm_${X/_/-}.tar.gz ) ) )"
 	IUSE="${IUSE} linguas_${X}"
 done
 
@@ -110,7 +110,7 @@ src_unpack() {
 	# English support installed by default
 	rpm_unpack "./${UP}/${BASIS}-en-US-${BVER}.${LOARCH}.rpm"
 	rpm_unpack "./${UP}/libreoffice3-en-US-${BVER}.${LOARCH}.rpm"
-	rpm_unpack "./LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_en-US/RPMS//${BASIS}-en-US-help-${BVER}.${LOARCH}.rpm"
+	use offlinehelp && rpm_unpack "./LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_en-US/RPMS//${BASIS}-en-US-help-${BVER}.${LOARCH}.rpm"
 	for s in base binfilter calc math res writer ; do
 		rpm_unpack "./${UP}/${BASIS}-en-US-${s}-${BVER}.${LOARCH}.rpm"
 	done
@@ -130,8 +130,10 @@ src_unpack() {
 				rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${n}-${BVER}.${LOARCH}.rpm"
 			done
 			# Help files
-			LANGDIR2="LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_${m}/RPMS/"
-			rpm_unpack "./${LANGDIR2}/${BASIS}-${m}-help-${BVER}.${LOARCH}.rpm"
+			if use offlinehelp; then
+				LANGDIR2="LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_${m}/RPMS/"
+				rpm_unpack "./${LANGDIR2}/${BASIS}-${m}-help-${BVER}.${LOARCH}.rpm"
+			fi
 		fi
 	done
 }
