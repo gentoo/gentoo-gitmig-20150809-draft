@@ -1,16 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.0.ebuild,v 1.1 2011/01/02 17:31:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.0.1.ebuild,v 1.1 2011/01/27 12:18:17 scarabeus Exp $
 
-EAPI="3"
+EAPI=3
 
+KDE_LINGUAS="ca cs da de en_GB eo es et eu fr hu it ja ko lt mai ms nb nds nl pa
+pl pt pt_BR ru sk sl sv th tr uk zh_TW"
 inherit kde4-base
-
-MY_P=${PN}-v${PV}
 
 DESCRIPTION="Bluetooth stack for KDE"
 HOMEPAGE="http://gitorious.org/bluedevil"
-SRC_URI="http://media.ereslibre.es/2010/11/${MY_P}.tar.bz2"
+SRC_URI="http://www.afiestas.org/files/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
@@ -26,5 +26,3 @@ RDEPEND="${DEPEND}
 	app-mobilephone/obexd
 	app-mobilephone/obex-data-server
 "
-
-S=${WORKDIR}/${MY_P}
