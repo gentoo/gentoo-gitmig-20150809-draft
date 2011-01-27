@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.0.ebuild,v 1.1 2011/01/17 17:07:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.0.ebuild,v 1.2 2011/01/27 20:43:39 hd_brummy Exp $
 
 EAPI="2"
 
@@ -41,6 +41,10 @@ src_prepare() {
 				-e '/^all:/s/'${flag}'//'
 		fi
 	done
+
+	sed -i server/Makefile \
+		-i client/Makefile \
+		-e "s:\$(CXXFLAGS) -shared:\$(CXXFLAGS) \$(LDFLAGS) -shared:"
 
 	fix_vdr_libsi_include server/livestreamer.c
 }
