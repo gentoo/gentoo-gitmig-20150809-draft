@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON-RPC
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.6 2010/12/05 16:53:09 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-RPC/ChangeLog,v 1.7 2011/01/27 16:18:16 ranger Exp $
+
+  27 Jan 2011; Brent Baude <ranger@gentoo.org> JSON-RPC-0.96.ebuild:
+  Marking JSON-RPC-0.96 ppc stable for bug 346403
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> JSON-RPC-0.96.ebuild:
   alpha/ia64/sparc stable wrt #346403
