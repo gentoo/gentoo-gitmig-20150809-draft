@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.208 2010/10/17 14:51:43 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.209 2011/01/27 11:00:56 pacho Exp $
+
+  27 Jan 2011; Pacho Ramos <pacho@gentoo.org> atk-1.32.0.ebuild:
+  Put sys-devel/gettext dependency behind 'nls' USE flag as it's only needed
+  for translations as confirmed by me. Thanks a lot to Leio for noticing in bug
+  #222083.
 
   17 Oct 2010; Raúl Porcel <armin76@gentoo.org> atk-1.30.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #324077
