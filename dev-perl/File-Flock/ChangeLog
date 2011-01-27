@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Flock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.7 2010/12/05 16:54:32 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.8 2011/01/27 16:18:46 ranger Exp $
+
+  27 Jan 2011; Brent Baude <ranger@gentoo.org> File-Flock-2008.01.ebuild:
+  Marking File-Flock-2008.01 ppc stable for bug 346403
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> File-Flock-2008.01.ebuild:
   alpha/ia64/sparc stable wrt #346403
