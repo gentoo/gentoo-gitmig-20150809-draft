@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/msmtp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.90 2010/09/28 14:41:12 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.91 2011/01/27 23:08:42 radhermit Exp $
+
+*msmtp-1.4.23 (27 Jan 2011)
+
+  27 Jan 2011; Tim Harder <radhermit@gentoo.org> +msmtp-1.4.23.ebuild:
+  Version bump (bug #352953). Remove mailwrapper support, add vim-syntax USE
+  flag, install gnome-keyring script (bug #341113), and install find_alias
+  script (bug #349869). Bump to EAPI 3, remove unused eutils eclass, and use
+  CDEPEND for common dependencies.
 
   28 Sep 2010; Brent Baude <ranger@gentoo.org> msmtp-1.4.21.ebuild:
   Marking msmtp-1.4.21 ppc for bug 330445
