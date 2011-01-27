@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.14 2011/01/14 09:25:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.15 2011/01/27 02:36:15 robbat2 Exp $
+
+*IO-AIO-3.710 (27 Jan 2011)
+
+  27 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +IO-AIO-3.710.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *IO-AIO-3.650 (14 Jan 2011)
 
