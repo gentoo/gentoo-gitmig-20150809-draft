@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.60 2011/01/26 16:16:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.61 2011/01/27 14:20:06 tove Exp $
 
   26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   telepathy-glib-0.12.5.ebuild:
@@ -71,7 +71,7 @@
   telepathy-glib-0.10.1.ebuild:
   arm stable, bug #314899
 
-  07 Aug 2010; RaÃºl Porcel <armin76@gentoo.org>
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   telepathy-glib-0.10.1.ebuild:
   ia64/sparc stable wrt #321591
 
@@ -91,7 +91,7 @@
 
 *telepathy-glib-0.10.1 (26 Mar 2010)
 
-  26 Mar 2010; Olivier CrÃªte <tester@gentoo.org>
+  26 Mar 2010; Olivier Crête <tester@gentoo.org>
   +telepathy-glib-0.10.1.ebuild:
   Version bump
 
@@ -113,35 +113,35 @@
 
 *telepathy-glib-0.8.0 (24 Sep 2009)
 
-  24 Sep 2009; Olivier CrÃªte <tester@gentoo.org>
+  24 Sep 2009; Olivier Crête <tester@gentoo.org>
   -telepathy-glib-0.7.34.ebuild, -telepathy-glib-0.7.37.ebuild,
   +telepathy-glib-0.8.0.ebuild:
   Version bump
 
 *telepathy-glib-0.7.37 (14 Sep 2009)
 
-  14 Sep 2009; Olivier CrÃªte <tester@gentoo.org>
+  14 Sep 2009; Olivier Crête <tester@gentoo.org>
   -telepathy-glib-0.7.36.ebuild, +telepathy-glib-0.7.37.ebuild:
   Version bump (again)
 
 *telepathy-glib-0.7.36 (14 Sep 2009)
 
-  14 Sep 2009; Olivier CrÃªte <tester@gentoo.org>
+  14 Sep 2009; Olivier Crête <tester@gentoo.org>
   -telepathy-glib-0.7.33.ebuild, +telepathy-glib-0.7.36.ebuild:
   Version bump
 
 *telepathy-glib-0.7.34 (21 Aug 2009)
 
-  21 Aug 2009; Olivier CrÃªte <tester@gentoo.org>
+  21 Aug 2009; Olivier Crête <tester@gentoo.org>
   -telepathy-glib-0.7.25.ebuild, -telepathy-glib-0.7.29.ebuild,
   -telepathy-glib-0.7.31.ebuild, +telepathy-glib-0.7.34.ebuild:
   Version bump
 
-  06 Aug 2009; Olivier CrÃªte <tester@gentoo.org>
+  06 Aug 2009; Olivier Crête <tester@gentoo.org>
   telepathy-glib-0.7.33.ebuild:
   Really fix build
 
-  06 Aug 2009; Olivier CrÃªte <tester@gentoo.org>
+  06 Aug 2009; Olivier Crête <tester@gentoo.org>
   telepathy-glib-0.7.33.ebuild:
   Re-enable elibtoolize to make it build
 
@@ -167,7 +167,7 @@
 
 *telepathy-glib-0.7.29 (09 Apr 2009)
 
-  09 Apr 2009; Olivier CrÃªte <tester@gentoo.org>
+  09 Apr 2009; Olivier Crête <tester@gentoo.org>
   +telepathy-glib-0.7.29.ebuild:
   Version bump
 
@@ -180,11 +180,11 @@
 
 *telepathy-glib-0.7.25 (04 Feb 2009)
 
-  04 Feb 2009; Olivier CrÃªte <tester@gentoo.org>
+  04 Feb 2009; Olivier Crête <tester@gentoo.org>
   +telepathy-glib-0.7.25.ebuild:
   Version bump
 
-  07 Jan 2009; RaÃºl Porcel <armin76@gentoo.org>
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   telepathy-glib-0.7.20.ebuild:
   Add ~alpha/~ia64 wrt #245949
 
@@ -270,53 +270,53 @@
 
 *telepathy-glib-0.7.0 (04 Dec 2007)
 
-  04 Dec 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  04 Dec 2007; Piotr Jaroszyński <peper@gentoo.org>
   +telepathy-glib-0.7.0.ebuild:
   Add 0.7.0.
 
 *telepathy-glib-0.6.1 (22 Nov 2007)
 
-  22 Nov 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  22 Nov 2007; Piotr Jaroszyński <peper@gentoo.org>
   +telepathy-glib-0.6.1.ebuild:
   Add 0.6.1.
 
 *telepathy-glib-0.6.0 (28 Sep 2007)
 
-  28 Sep 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  28 Sep 2007; Piotr Jaroszyński <peper@gentoo.org>
   +telepathy-glib-0.6.0.ebuild:
   Add 0.6.0.
 
 *telepathy-glib-0.5.14 (01 Sep 2007)
 
-  01 Sep 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  01 Sep 2007; Piotr Jaroszyński <peper@gentoo.org>
   -telepathy-glib-0.5.10.ebuild, -telepathy-glib-0.5.11.ebuild,
   +telepathy-glib-0.5.14.ebuild:
   Add 0.5.14, remove old versions.
 
-  30 Jun 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  30 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
   telepathy-glib-0.5.10.ebuild, telepathy-glib-0.5.11.ebuild,
   telepathy-glib-0.5.13.ebuild:
   Clean up dbus deps wrt bug #183696.
 
 *telepathy-glib-0.5.13 (01 Jun 2007)
 
-  01 Jun 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  01 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
   +telepathy-glib-0.5.13.ebuild:
   Version bump.
 
 *telepathy-glib-0.5.11 (30 Apr 2007)
 
-  30 Apr 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  30 Apr 2007; Piotr Jaroszyński <peper@gentoo.org>
   +telepathy-glib-0.5.11.ebuild:
   Version bump.
 
-  22 Apr 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  22 Apr 2007; Piotr Jaroszyński <peper@gentoo.org>
   telepathy-glib-0.5.10.ebuild:
   Fix block dep.
 
 *telepathy-glib-0.5.10 (20 Apr 2007)
 
-  20 Apr 2007; Piotr JaroszyÅski <peper@gentoo.org> +metadata.xml,
+  20 Apr 2007; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
   +telepathy-glib-0.5.10.ebuild:
   New package.
 
