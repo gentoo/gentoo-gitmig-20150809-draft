@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.2-r1.ebuild,v 1.1 2011/01/26 23:31:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.2-r1.ebuild,v 1.2 2011/01/27 18:52:29 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -129,7 +129,7 @@ src_install() {
 	# version is only used to build mcs.
 	rm -r "${D}"/usr/share/jay "${D}"/usr/bin/jay "${D}"/usr/share/man/man1/jay.1*
 
-	# Remove files not respecting LDFLAGS and that we are not supposed to provide, see Fedora 
+	# Remove files not respecting LDFLAGS and that we are not supposed to provide, see Fedora
 	# mono.spec and http://www.mail-archive.com/mono-devel-list@lists.ximian.com/msg24870.html
 	# for reference.
 	rm -f "${D}"/usr/$(get_libdir)/mono/4.0/mscorlib.dll.so
