@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.5.9.6-r1.ebuild,v 1.1 2011/01/06 10:11:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.0.9.ebuild,v 1.1 2011/01/27 10:43:45 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -18,7 +18,9 @@ IUSE="readline"
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}"
 
-EXTRA_ESCONS="library=shared soname=on importenv=\"LINKFLAGS\""
+# To make tests work, we compile with sample=shell.
+# For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
+EXTRA_ESCONS="library=shared soname=on sample=shell importenv=\"LINKFLAGS\""
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
@@ -36,10 +38,6 @@ src_prepare() {
 
 	# Fix a compile error (bug #349794), to be upstreamed.
 	epatch "${FILESDIR}"/${PN}-gentoo-bug-349794-r0.patch
-
-	# Backport an upstream bugfix for symbol visibility,
-	# see bug #348609.
-	epatch "${FILESDIR}"/${PN}-upstream-bug-1016-r0.patch
 
 	# Remove a test that is known to fail:
 	# http://groups.google.com/group/v8-users/browse_thread/thread/b8a3f42b5aa18d06
@@ -88,5 +86,8 @@ src_install() {
 }
 
 src_test() {
-	tools/test.py --no-build -p dots --shell d8 || die
+	# Make sure we use the libv8.so from our build directory,
+	# and not the /usr/lib one (it may be missing if we are
+	# installing for the first time or upgrading), see bug #352374.
+	LD_LIBRARY_PATH="${S}" tools/test.py --no-build -p dots || die
 }
