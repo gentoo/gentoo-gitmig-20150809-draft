@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Taint
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.18 2010/12/05 17:16:00 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.19 2011/01/27 18:59:06 xarthisius Exp $
+
+  27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Test-Taint-1.04.ebuild:
+  ppc64 stable wrt #352781
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> Test-Taint-1.04.ebuild:
   alpha stable
