@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.3 2011/01/17 18:09:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.4 2011/01/27 19:05:25 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.5"
 RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
+PYTHON_USE_WITH="threads" # Needed until upstream bug 640748 is fixed
 
 inherit alternatives autotools gnome2 python virtualx
 
