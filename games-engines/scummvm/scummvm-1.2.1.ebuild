@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.2.1.ebuild,v 1.2 2011/01/20 12:51:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.2.1.ebuild,v 1.3 2011/01/27 10:01:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -58,6 +58,7 @@ src_configure() {
 	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
 	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
 	./configure \
+		--host=$CHOST \
 		--enable-verbose-build \
 		--prefix=/usr \
 		--bindir="${GAMES_BINDIR}" \

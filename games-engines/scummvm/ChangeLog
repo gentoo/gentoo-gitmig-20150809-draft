@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.100 2011/01/20 12:51:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.101 2011/01/27 10:01:36 mr_bones_ Exp $
+
+  27 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> scummvm-1.2.1.ebuild:
+  pass --host to configure to work around bug #352351
 
   20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> scummvm-1.2.1.ebuild:
   Stable on amd64 wrt bug #352155
