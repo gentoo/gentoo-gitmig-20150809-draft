@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-memcache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.45 2011/01/08 18:28:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-memcache/ChangeLog,v 1.46 2011/01/27 19:10:45 olemarkus Exp $
+
+*pecl-memcache-2.2.6-r1 (27 Jan 2011)
+
+  27 Jan 2011; <olemarkus@gentoo.org> +pecl-memcache-2.2.6-r1.ebuild:
+  Added a version that supports minor version slotting (bug 352978)
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org>
   pecl-memcache-3.0.5-r1.ebuild:
