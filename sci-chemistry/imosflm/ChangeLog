@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/imosflm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/ChangeLog,v 1.3 2011/01/18 16:36:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/ChangeLog,v 1.4 2011/01/27 10:53:31 hwoarang Exp $
+
+  27 Jan 2011; Markos Chandras <hwoarang@gentoo.org> imosflm-1.0.4.ebuild:
+  Stable on amd64 wrt bug #352051
 
   18 Jan 2011; Justin Lecher <jlec@gentoo.org> +files/1.0.4-impl-dec.patch,
   imosflm-1.0.4.ebuild:
