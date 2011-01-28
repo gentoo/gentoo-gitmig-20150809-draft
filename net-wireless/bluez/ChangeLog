@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.68 2011/01/23 09:14:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.69 2011/01/28 10:30:30 pacho Exp $
+
+*bluez-4.87 (28 Jan 2011)
+
+  28 Jan 2011; Pacho Ramos <pacho@gentoo.org> -bluez-4.75.ebuild,
+  -bluez-4.77.ebuild, -bluez-4.81.ebuild, +bluez-4.87.ebuild:
+  Version bump fixing lots of bugs and trying to behave better with oui.txt
+  (thanks to Thomas Kahle and Zac Medico for their help with this). Remove old.
 
   23 Jan 2011; Thomas Kahle <tomka@gentoo.org> bluez-4.80.ebuild:
   x86 stable per bug 349473

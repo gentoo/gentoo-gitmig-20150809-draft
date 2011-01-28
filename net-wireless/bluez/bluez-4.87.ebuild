@@ -1,15 +1,20 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.77.ebuild,v 1.1 2010/10/31 11:23:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.87.ebuild,v 1.1 2011/01/28 10:30:30 pacho Exp $
 
 EAPI="3"
 
 inherit multilib eutils
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
-HOMEPAGE="http://bluez.sourceforge.net/"
+HOMEPAGE="http://www.bluez.org/"
+
+# Because of oui.txt changing from time to time without noticement, we need to supply it
+# ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly. 
+# See bugs #345263 and #349473 for reference.
+OUIDATE="20110128" # Needed because of bug #345263
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
-	http://standards.ieee.org/regauth/oui/oui.txt"
+	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
@@ -54,7 +59,8 @@ src_prepare() {
 	fi
 
 	if use cups; then
-		epatch "${FILESDIR}/4.60/cups-location.patch"
+		sed -i -e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
+			Makefile.tools Makefile.in || die
 	fi
 }
 
@@ -90,7 +96,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README || die
 
@@ -122,7 +128,7 @@ src_install() {
 		serial/serial.conf \
 		|| die
 
-	insinto /etc/udev/rules.d/
+	insinto /$(get_libdir)/udev/rules.d/
 	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules || die
 	exeinto /$(get_libdir)/udev/
 	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh || die
@@ -132,7 +138,9 @@ src_install() {
 
 	# Install oui.txt as requested in bug #283791 and approved by upstream
 	insinto /var/lib/misc
-	doins "${DISTDIR}/oui.txt" || die
+	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt || die
+
+	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
 }
 
 pkg_postinst() {
