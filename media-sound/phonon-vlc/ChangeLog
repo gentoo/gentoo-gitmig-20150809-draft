@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/phonon-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/ChangeLog,v 1.5 2011/01/23 05:18:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/ChangeLog,v 1.6 2011/01/28 19:46:48 scarabeus Exp $
+
+  28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -phonon-vlc-0.3.1.ebuild:
+  old
 
 *phonon-vlc-9999 (23 Jan 2011)
 *phonon-vlc-0.3.2 (23 Jan 2011)
