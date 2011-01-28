@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.2.2.ebuild,v 1.5 2011/01/12 20:18:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.2.2.ebuild,v 1.6 2011/01/28 09:39:27 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KMNAME="koffice"
 KMMODULE="libs"
@@ -77,5 +77,5 @@ src_install() {
 	kde4-meta_src_install
 
 	# this is already installed by koffice-data
-	rm -f "${D}/usr/include/config-opengl.h"
+	rm -f "${ED}/usr/include/config-opengl.h"
 }
