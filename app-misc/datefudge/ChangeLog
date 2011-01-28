@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/datefudge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.10 2011/01/25 21:44:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.11 2011/01/28 16:08:42 phajdan.jr Exp $
+
+  28 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  datefudge-1.14.ebuild:
+  x86 stable wrt bug #352744
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> datefudge-1.14.ebuild:
   Stable for HPPA (bug #352744).
