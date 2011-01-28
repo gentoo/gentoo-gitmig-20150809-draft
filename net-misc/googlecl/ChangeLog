@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/googlecl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/ChangeLog,v 1.7 2010/12/05 23:09:45 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/ChangeLog,v 1.8 2011/01/28 17:14:10 wired Exp $
+
+*googlecl-0.9.12 (28 Jan 2011)
+
+  28 Jan 2011; Alex Alexander <wired@gentoo.org> +googlecl-0.9.12.ebuild:
+  version bump, bug #352661
 
   05 Dec 2010; Alex Alexander <wired@gentoo.org> -googlecl-0.9.7-r1.ebuild,
   -googlecl-0.9.8.ebuild, -googlecl-0.9.9.ebuild, -googlecl-0.9.10.ebuild,
