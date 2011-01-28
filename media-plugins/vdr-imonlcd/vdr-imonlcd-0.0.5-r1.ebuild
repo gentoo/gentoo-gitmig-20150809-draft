@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/vdr-imonlcd-0.0.5.ebuild,v 1.1 2011/01/28 22:39:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/vdr-imonlcd-0.0.5-r1.ebuild,v 1.1 2011/01/28 23:11:46 idl0r Exp $
 
 EAPI=3
 
