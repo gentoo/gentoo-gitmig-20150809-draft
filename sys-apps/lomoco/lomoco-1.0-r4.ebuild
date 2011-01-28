@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r4.ebuild,v 1.1 2011/01/27 21:47:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r4.ebuild,v 1.2 2011/01/28 15:34:30 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lomoco.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 ~x86"
 IUSE=""
 
 DEPEND="=virtual/libusb-0*"

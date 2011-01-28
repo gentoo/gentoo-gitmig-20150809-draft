@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lomoco
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.10 2011/01/27 21:47:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.11 2011/01/28 15:34:30 hwoarang Exp $
+
+  28 Jan 2011; Markos Chandras <hwoarang@gentoo.org> lomoco-1.0-r4.ebuild:
+  Stable on amd64 wrt bug #352993
 
 *lomoco-1.0-r4 (27 Jan 2011)
 
