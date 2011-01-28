@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.456 2010/12/23 17:41:50 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.457 2011/01/28 15:23:12 vostorga Exp $
+
+  28 Jan 2011; Víctor Ostorga <vostorga@gentoo.org> samba-3.4.9.ebuild,
+  samba-3.5.6.ebuild:
+  Adding blocker on net-fs/cifs-utils, bug 308655
 
   23 Dec 2010; Víctor Ostorga <vostorga@gentoo.org> samba-3.4.9.ebuild,
   +files/3.4/samba-3.4.9-kerberos-dummy.patch, samba-3.5.6.ebuild,
