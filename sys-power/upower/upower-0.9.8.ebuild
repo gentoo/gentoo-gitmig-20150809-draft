@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.2 2011/01/21 16:04:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.3 2011/01/28 16:27:11 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
@@ -37,7 +37,7 @@ DEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 pkg_setup() {
-	if use kernel_linux; then
+	if use kernel_linux && kernel_is lt 2 6 37; then
 		if use amd64 || use x86; then
 			CONFIG_CHECK="~ACPI_SYSFS_POWER"
 			linux-info_pkg_setup
