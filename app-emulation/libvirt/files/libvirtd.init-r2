@@ -87,8 +87,8 @@ stop() {
     fi
 
 	NET_COUNT="$(libvirtd_net_count)"
-	if [ "${LIBVIRTD_NET_SHUTDOWN}" != "no" \
-		&& "${NET_COUNT}" != "0" ]; then
+	if [ "${LIBVIRTD_NET_SHUTDOWN}" != "no" ] \
+		&& [ "${NET_COUNT}" != "0" ]; then
 
 		einfo " Shutting down network(s):"
 			for NET_NAME in $(libvirtd_net_list); do
