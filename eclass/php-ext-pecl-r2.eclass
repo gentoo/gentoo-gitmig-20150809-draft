@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.3 2011/01/20 12:13:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.4 2011/01/28 13:33:53 mabi Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -92,12 +92,11 @@ php-ext-pecl-r2_src_install() {
 # @FUNCTION: php-ext-pecl-r2_src_test
 # @DESCRIPTION:
 # Takes care of running any tests delivered with the PECL package.
-# Testing is somewhat standardized across pecl extensions through phpize's
-# run-tests.php - unfortunatly there are some quirks we need to work around
+# Standard phpize generates a run-tests.php file that is executed in make test
+# We only need to force it to non-interactive mode
 php-ext-pecl-r2_src_test() {
-		
 	for slot in `php_get_slots`; do
+		php_init_slot_env ${slot}
 		NO_INTERACTION="yes" emake test || die "emake test failed for slot ${slot}"
 	done
-
 }
