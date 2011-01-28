@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.4.9.ebuild,v 1.2 2011/01/26 08:48:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.4.9.ebuild,v 1.3 2011/01/28 19:26:52 tomka Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE PIM groupware plugin collection"
 IUSE="debug"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
 	$(add_kdebase_dep kdepimlibs)

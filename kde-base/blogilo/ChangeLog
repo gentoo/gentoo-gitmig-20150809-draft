@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.26 2011/01/28 05:17:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.27 2011/01/28 19:17:58 tomka Exp $
+
+  28 Jan 2011; Thomas Kahle <tomka@gentoo.org> blogilo-4.4.9.ebuild:
+  x86 stable per bug 351345
 
 *blogilo-4.4.10 (28 Jan 2011)
 

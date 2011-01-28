@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.27 2011/01/28 05:17:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.28 2011/01/28 19:31:03 tomka Exp $
+
+  28 Jan 2011; Thomas Kahle <tomka@gentoo.org> kdepim-runtime-4.4.9.ebuild:
+  x86 stable per bug 351345
 
 *kdepim-runtime-4.4.10 (28 Jan 2011)
 
