@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.87.ebuild,v 1.1 2011/01/28 10:30:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.87.ebuild,v 1.2 2011/01/28 17:06:25 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
 
 # Because of oui.txt changing from time to time without noticement, we need to supply it
-# ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly. 
+# ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
 OUIDATE="20110128" # Needed because of bug #345263
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
