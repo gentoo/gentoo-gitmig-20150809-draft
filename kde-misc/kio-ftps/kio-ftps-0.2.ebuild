@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/kio-ftps-0.2.ebuild,v 1.1 2009/05/30 09:45:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/kio-ftps-0.2.ebuild,v 1.2 2011/01/28 15:39:20 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit kde4-base
 
@@ -17,8 +17,8 @@ IUSE=""
 
 # This is just for some app we can use kio-ftps with
 RDEPEND="|| (
-	>=kde-base/konqueror-${KDE_MINIMAL}
-	>=kde-base/dolphin-${KDE_MINIMAL}
+	$(add_kdebase_dep konqueror)
+	$(add_kdebase_dep dolphin)
 )"
 
 S="${WORKDIR}/${PN}"
