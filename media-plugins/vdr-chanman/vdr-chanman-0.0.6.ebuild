@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/vdr-chanman-0.0.6.ebuild,v 1.2 2008/01/28 16:18:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/vdr-chanman-0.0.6.ebuild,v 1.3 2011/01/28 18:05:11 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 
@@ -14,3 +16,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.6"
+RDEPEND="${DEPEND}"

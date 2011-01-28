@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-chanman
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.1 2008/01/27 18:53:31 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.2 2011/01/28 18:05:11 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-chanman-0.0.6.ebuild:
+  eapi=3
 
 *vdr-chanman-0.0.6 (27 Jan 2008)
 

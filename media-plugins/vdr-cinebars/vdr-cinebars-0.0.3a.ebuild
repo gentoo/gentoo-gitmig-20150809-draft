@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cinebars/vdr-cinebars-0.0.3a.ebuild,v 1.2 2007/01/04 11:45:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cinebars/vdr-cinebars-0.0.3a.ebuild,v 1.3 2011/01/28 18:08:52 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 
@@ -15,3 +17,4 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND=">=media-video/vdr-1.3.32"
+RDEPEND="${DEPEND}"
