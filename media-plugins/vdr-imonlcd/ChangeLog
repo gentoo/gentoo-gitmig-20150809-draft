@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-imonlcd
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/ChangeLog,v 1.1 2011/01/28 22:39:35 idl0r Exp $
+
+*vdr-imonlcd-0.0.5 (28 Jan 2011)
+
+  28 Jan 2011; Christian Ruppert <idl0r@gentoo.org> +files/99-imonlcd.rules,
+  +vdr-imonlcd-0.0.5.ebuild, +files/confd, +files/rc-addon.sh, +metadata.xml:
+  Initial commit for vdr-imonlcd-0.0.5.
+
