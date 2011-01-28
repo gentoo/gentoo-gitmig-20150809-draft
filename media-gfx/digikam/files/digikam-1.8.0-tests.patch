@@ -1,0 +1,15 @@
+diff -ruN digikam-1.8.0.orig/tests/CMakeLists.txt digikam-1.8.0/tests/CMakeLists.txt
+--- digikam-1.8.0.orig/tests/CMakeLists.txt	2011-01-23 20:24:49.000000000 +0100
++++ digikam-1.8.0/tests/CMakeLists.txt	2011-01-28 19:56:04.000000000 +0100
+@@ -176,9 +176,9 @@
+ 
+ SET(qtpgftest_SRCS qtpgftest.cpp ${libpgf_SRCS} ${pgfutils_SRCS})
+ KDE4_ADD_EXECUTABLE(qtpgftest NOGUI ${qtpgftest_SRCS})
+-TARGET_LINK_LIBRARIES(qtpgftest ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
++TARGET_LINK_LIBRARIES(qtpgftest ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${PGF_LIBRARIES})
+ 
+ SET(pgfscaled_SRCS pgfscaled.cpp ${libpgf_SRCS} ${pgfutils_SRCS})
+ KDE4_ADD_EXECUTABLE(pgfscaled NOGUI ${pgfscaled_SRCS})
+-TARGET_LINK_LIBRARIES(pgfscaled ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
++TARGET_LINK_LIBRARIES(pgfscaled ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${PGF_LIBRARIES})
+ 

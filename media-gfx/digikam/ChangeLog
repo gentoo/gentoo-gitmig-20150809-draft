@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.170 2011/01/28 18:41:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.171 2011/01/28 19:15:45 dilfridge Exp $
+
+  28 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-1.2.0-r4.ebuild, digikam-1.8.0.ebuild,
+  +files/digikam-1.8.0-tests.patch:
+  Bump EAPI in 1.2.0-r4, fix building of the tests in 1.8.0
 
 *digikam-1.8.0 (28 Jan 2011)
 
