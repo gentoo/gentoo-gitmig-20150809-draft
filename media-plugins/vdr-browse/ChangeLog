@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-browse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-browse/ChangeLog,v 1.4 2008/02/25 10:38:00 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-browse/ChangeLog,v 1.5 2011/01/28 17:42:18 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-browse-0.2.0.ebuild:
+  eapi=3, keyword ~amd64
 
 *vdr-browse-0.2.0 (25 Feb 2008)
 
