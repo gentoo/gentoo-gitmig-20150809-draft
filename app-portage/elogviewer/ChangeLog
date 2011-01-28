@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/elogviewer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.39 2010/12/07 22:05:02 fuzzyray Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.40 2011/01/28 17:19:04 fuzzyray Exp $
+
+*elogviewer-0.6.2-r1 (28 Jan 2011)
+
+  28 Jan 2011; Paul Varner <fuzzyray@gentoo.org> +elogviewer-0.6.2-r1.ebuild,
+  +files/elogviewer-0.6.2-missing_newline.patch:
+  Version bump to 0.6.2-r1 to apply patch from Mathias Laurin to fix missing
+  newline and remove extraneous print statement. This fixes Bug 349071.
 
 *elogviewer-0.6.2 (07 Dec 2010)
 
