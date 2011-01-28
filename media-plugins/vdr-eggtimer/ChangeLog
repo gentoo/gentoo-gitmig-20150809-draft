@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-eggtimer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/ChangeLog,v 1.6 2009/05/07 20:40:15 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/ChangeLog,v 1.7 2011/01/28 19:18:11 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-eggtimer-0.9.5.ebuild:
+  eapi=3; stable amd64
 
   07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-eggtimer-0.9.5.ebuild:
