@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.9 2010/12/22 22:52:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.10 2011/01/28 12:08:28 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2 linux-info virtualx
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
-HOMEPAGE="http://www.tracker-project.org/"
+HOMEPAGE="http://projects.gnome.org/tracker/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -170,6 +170,9 @@ src_prepare() {
 
 	# Build with upower instead of devicekit-power
 	epatch "${FILESDIR}/${PN}-0.8.17-use-upower.patch"
+
+	# Fix build against poppler-0.16
+	epatch "${FILESDIR}/${PN}-0.8.17-poppler-0.16.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
