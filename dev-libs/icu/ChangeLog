@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.138 2011/01/15 14:41:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.139 2011/01/28 16:36:14 arfrever Exp $
+
+  28 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  icu-4.6.ebuild, +files/icu-4.6-pkgdata.patch:
+  Fix building with large CFLAGS (bug #326021).
 
   15 Jan 2011; Markus Meier <maekke@gentoo.org> icu-4.6.ebuild:
   x86 stable, bug #350861
