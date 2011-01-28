@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.4 2011/01/12 20:02:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.5 2011/01/28 09:48:04 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KMNAME="koffice"
 inherit kde4-meta
@@ -50,5 +50,5 @@ src_install() {
 	kde4-meta_src_install
 
 	# this is already installed by koffice-data
-	rm -f "${D}/usr/include/config-opengl.h"
+	rm -f "${ED}/usr/include/config-opengl.h"
 }

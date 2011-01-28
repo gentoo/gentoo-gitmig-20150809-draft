@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.2.2-r1.ebuild,v 1.1 2010/12/23 00:08:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.2.2-r1.ebuild,v 1.2 2011/01/28 09:59:44 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KMNAME="koffice"
 KMMODULE="${PN}"
@@ -53,5 +53,5 @@ src_install() {
 	kde4-meta_src_install
 
 	# this is already installed by koffice-data
-	rm -f "${D}/usr/include/config-opengl.h"
+	rm -f "${ED}/usr/include/config-opengl.h"
 }

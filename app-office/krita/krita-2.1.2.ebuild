@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.6 2010/10/20 20:34:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.7 2011/01/28 09:59:44 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KMNAME="koffice"
 KMMODULE="${PN}"
