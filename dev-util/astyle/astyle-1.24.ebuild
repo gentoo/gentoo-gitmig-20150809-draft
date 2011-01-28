@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.24.ebuild,v 1.1 2010/09/24 15:13:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.24.ebuild,v 1.2 2011/01/28 19:17:50 grobian Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/astyle/astyle_${PV}_linux.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 IUSE="debug java"
 
@@ -39,7 +39,7 @@ src_configure() {
 
 	econf \
 		--disable-dependency-tracking \
-		--htmldir=/usr/share/doc/${PF}/html/ \
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html/ \
 		$(use_enable debug) \
 		${myopts}
 }
