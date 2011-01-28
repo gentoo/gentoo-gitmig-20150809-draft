@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.161 2011/01/26 08:51:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.162 2011/01/28 05:17:40 tampakrap Exp $
+
+*knotes-4.4.10 (28 Jan 2011)
+
+  28 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +knotes-4.4.10.ebuild:
+  Version bump KDEPIM 4.4.10
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> knotes-4.4.9.ebuild:
   Stable on amd64 wrt bug #351345

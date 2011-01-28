@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkleo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.65 2011/01/26 08:53:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.66 2011/01/28 05:17:41 tampakrap Exp $
+
+*libkleo-4.4.10 (28 Jan 2011)
+
+  28 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +libkleo-4.4.10.ebuild:
+  Version bump KDEPIM 4.4.10
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libkleo-4.4.9.ebuild:
   Stable on amd64 wrt bug #351345

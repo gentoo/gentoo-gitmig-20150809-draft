@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.150 2011/01/26 08:51:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.151 2011/01/28 05:17:40 tampakrap Exp $
+
+*konsolekalendar-4.4.10 (28 Jan 2011)
+
+  28 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +konsolekalendar-4.4.10.ebuild:
+  Version bump KDEPIM 4.4.10
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   konsolekalendar-4.4.9.ebuild:
