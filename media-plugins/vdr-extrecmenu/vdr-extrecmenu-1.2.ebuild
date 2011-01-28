@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.ebuild,v 1.1 2010/09/22 14:07:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.ebuild,v 1.2 2011/01/28 23:55:46 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://projects.vdr-developer.org/attachments/download/334/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0"
