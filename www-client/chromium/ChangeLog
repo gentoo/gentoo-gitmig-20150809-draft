@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.268 2011/01/27 10:46:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.269 2011/01/28 09:52:27 phajdan.jr Exp $
+
+  28 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
+  Remove system-sqlite USE flag, it's broken upstream. Bug #352892 by fkhp
+  <fkhp101@tom.com>.
 
 *chromium-10.0.648.6 (27 Jan 2011)
 
