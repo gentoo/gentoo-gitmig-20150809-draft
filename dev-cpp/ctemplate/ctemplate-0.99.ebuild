@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.95.ebuild,v 1.4 2010/10/20 13:54:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.99.ebuild,v 1.1 2011/01/28 11:10:11 radhermit Exp $
 
 EAPI="3"
 
@@ -9,16 +9,24 @@ inherit elisp-common
 DESCRIPTION="A simple but powerful template language for C++"
 HOMEPAGE="http://code.google.com/p/google-ctemplate/"
 SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc emacs vim-syntax"
+IUSE="doc emacs vim-syntax static-libs"
 
 DEPEND=""
 RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 	emacs? ( virtual/emacs )"
 
 SITEFILE="70ctemplate-gentoo.el"
+
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		--enable-shared \
+		$(use_enable static-libs static)
+}
 
 src_compile() {
 	emake || die "emake failed"
@@ -29,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Installs just every piece
 	rm -rf "${ED}/usr/share/doc"
