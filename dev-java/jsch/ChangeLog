@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jsch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.77 2010/07/16 20:34:50 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.78 2011/01/28 01:29:27 fordfrog Exp $
+
+*jsch-0.1.44 (28 Jan 2011)
+
+  28 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> +jsch-0.1.44.ebuild:
+  Version bump
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> jsch-0.1.41.ebuild:
   Marked ~x64-macos
