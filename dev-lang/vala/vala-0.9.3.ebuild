@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.9.3.ebuild,v 1.2 2010/12/20 22:37:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.9.3.ebuild,v 1.3 2011/01/28 11:55:47 pacho Exp $
 
-EAPI=1
+EAPI=3
 GCONF_DEBUG=no
 
 inherit gnome2
@@ -27,4 +27,10 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable vapigen)"
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+}
+
+src_install() {
+	gnome2_src_install
+	# dconf ships it for itself, this is already fixed on newer vala
+	rm -f "${ED}"/usr/share/vala/vapi/dconf.vapi
 }
