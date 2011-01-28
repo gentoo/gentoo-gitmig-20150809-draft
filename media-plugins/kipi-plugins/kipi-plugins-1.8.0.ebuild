@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.6.0.ebuild,v 1.1 2010/11/25 21:08:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.8.0.ebuild,v 1.1 2011/01/28 19:42:39 dilfridge Exp $
 
-EAPI="2"
+EAPI=3
 
 OPENGL_REQUIRED="optional"
-KDE_LINGUAS="ar ast be ca ca@valencia cs da de el en_GB eo es et eu fi fr ga gl hi hne hr is it ja km
-lt lv mai ms nb nds nl nn pa pl pt pt_BR ro ru se sv tr uk zh_CN zh_TW"
+KDE_LINGUAS="ar ast be bg ca ca@valencia cs da de el en_GB eo es et eu fi fr ga gl he hi hne hr hu is it ja km ko
+lt lv mai ms nb nds nl nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zh_CN zh_TW"
 KMNAME="extragear/graphics"
 KDE_MINIMAL="4.5"
 inherit flag-o-matic kde4-base
@@ -26,32 +26,33 @@ DEPEND="
 	>=dev-libs/expat-2.0.1
 	>=dev-libs/libxml2-2.7
 	>=dev-libs/libxslt-1.1
-	>=kde-base/libkdcraw-${KDE_MINIMAL}
-	>=kde-base/libkexiv2-${KDE_MINIMAL}
-	>=kde-base/libkipi-${KDE_MINIMAL}
+	dev-libs/qjson
+	$(add_kdebase_dep libkdcraw)
+	$(add_kdebase_dep libkexiv2)
+	$(add_kdebase_dep libkipi)
 	virtual/jpeg
-	>=media-libs/libpng-1.2
-	>=media-libs/tiff-3.6
-	calendar? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
-	crypt? ( app-crypt/qca:2 )
-	ipod? (
-		>=media-libs/libgpod-0.7
-		x11-libs/gtk+:2
-	)
-	redeyes? ( media-libs/opencv )
-	scanner? (
-		>=kde-base/libksane-${KDE_MINIMAL}
-		media-gfx/sane-backends
-	)
+	media-libs/libpng
+	media-libs/tiff
+	calendar?	( $(add_kdebase_dep kdepimlibs) )
+	crypt?		( app-crypt/qca:2 )
+	ipod?		(
+			  media-libs/libgpod
+			  x11-libs/gtk+:2
+			)
+	redeyes?	( media-libs/opencv )
+	scanner? 	(
+			  $(add_kdebase_dep libksane)
+			  media-gfx/sane-backends
+			)
 "
 RDEPEND="${DEPEND}
-	cdr? ( app-cdr/k3b )
-	expoblending? ( media-gfx/hugin )
-	imagemagick? ( media-gfx/imagemagick )
-	mjpeg? ( media-video/mjpegtools )
+	cdr? 		( app-cdr/k3b )
+	expoblending? 	( media-gfx/hugin )
+	imagemagick? 	( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
+	mjpeg? 		( media-video/mjpegtools )
 "
 
-PATCHES=( "${FILESDIR}/${PN}-1.3.0-expoblending.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.7.0-expoblending.patch" )
 
 src_prepare() {
 	if use handbook; then
