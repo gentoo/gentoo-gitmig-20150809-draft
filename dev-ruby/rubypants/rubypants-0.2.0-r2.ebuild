@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r1.ebuild,v 1.4 2011/01/28 10:01:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r2.ebuild,v 1.1 2011/01/28 10:01:57 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 jruby"
+USE_RUBY="ruby18 ruby19 jruby ree18"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST="test"
