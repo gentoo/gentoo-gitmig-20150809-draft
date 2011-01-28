@@ -1,0 +1,10 @@
+# ChangeLog for perl-core/CPAN-Meta-YAML
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.1 2011/01/28 09:12:08 tove Exp $
+
+*CPAN-Meta-YAML-0.3 (28 Jan 2011)
+
+  28 Jan 2011; Torsten Veller <tove@gentoo.org> +CPAN-Meta-YAML-0.3.ebuild,
+  +metadata.xml:
+  Initial version
+
