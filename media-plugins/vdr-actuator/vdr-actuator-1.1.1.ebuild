@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.1.1.ebuild,v 1.3 2011/01/02 10:04:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.1.1.ebuild,v 1.4 2011/01/28 17:20:21 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin
 

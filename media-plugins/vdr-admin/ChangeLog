@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-admin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.10 2011/01/22 23:20:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.11 2011/01/28 17:21:00 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-admin-0.8.0.ebuild:
+  eapi=3
 
   22 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-admin-0.4.0.ebuild, vdr-admin-0.8.0.ebuild:

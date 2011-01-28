@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/vdr-bitstreamout-0.89c.ebuild,v 1.1 2008/05/15 16:52:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/vdr-bitstreamout-0.89c.ebuild,v 1.2 2011/01/28 17:30:32 hd_brummy Exp $
+
+EAPI="3"
 
 IUSE=""
 
@@ -18,8 +20,6 @@ DEPEND=">=media-video/vdr-1.2.6
 	>=media-sound/alsa-utils-0.9.8
 	>=media-libs/libmad-0.14.2b-r2
 	"
-
-NO_GETTEXT_HACK=1
 
 src_install() {
 	vdr-plugin_src_install

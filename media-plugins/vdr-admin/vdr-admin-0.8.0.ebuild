@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.2 2011/01/22 23:20:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.3 2011/01/28 17:21:00 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin
 

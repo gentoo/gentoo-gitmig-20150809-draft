@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bgprocess/vdr-bgprocess-0.1.0.ebuild,v 1.1 2008/08/14 19:45:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bgprocess/vdr-bgprocess-0.1.0.ebuild,v 1.2 2011/01/28 17:28:43 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 

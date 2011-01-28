@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avolctl/vdr-avolctl-0.3a.ebuild,v 1.2 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avolctl/vdr-avolctl-0.3a.ebuild,v 1.3 2011/01/28 17:26:46 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 
