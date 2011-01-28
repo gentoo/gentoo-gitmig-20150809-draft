@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.6.0.ebuild,v 1.2 2011/01/19 12:59:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.8.0.ebuild,v 1.1 2011/01/28 18:41:26 dilfridge Exp $
 
-EAPI="2"
+EAPI=3
 
-KDE_LINGUAS="be ca ca@valencia de el en_GB eo es et eu fi fr he hi hne hu is it km
-ko lt lv nds nn pa pl pt pt_BR ro se sl sv th tr vi zh_CN zh_TW"
+KDE_LINGUAS="ar be bg ca ca@valencia cs da de el en_GB eo es et eu fa fi fr ga gl he hi hne hr hu is it ja km
+ko lt lv ms nb nds ne nl nn pa pl pt pt_BR ro ru se sk sl sv th tr uk vi zh_CN zh_TW"
 KMNAME="extragear/graphics"
 
 # needed for sufficiently new libkdcraw
@@ -64,7 +64,7 @@ DEPEND="${CDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "${FILESDIR}/${P}"-docs.patch )
+PATCHES=( "${FILESDIR}/${PN}"-1.7.0-docs.patch )
 
 src_prepare() {
 	if use handbook; then
