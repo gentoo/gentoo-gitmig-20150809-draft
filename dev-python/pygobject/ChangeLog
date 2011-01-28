@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.107 2011/01/27 19:05:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.108 2011/01/28 19:39:18 pacho Exp $
+
+  28 Jan 2011; Pacho Ramos <pacho@gentoo.org> pygobject-2.26.0-r1.ebuild,
+  +files/pygobject-2.26.0-disabled-threads.patch:
+  Fix building without threads and dependency on python (thanks a lot to
+  Arfrever Frehtes Taifersar Arahesis for his help).
 
   27 Jan 2011; Pacho Ramos <pacho@gentoo.org> pygobject-2.26.0-r1.ebuild:
   dev-python/pygobject always needs python with threads support as reported by
