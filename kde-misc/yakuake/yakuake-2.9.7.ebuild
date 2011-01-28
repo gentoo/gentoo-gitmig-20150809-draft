@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.7.ebuild,v 1.1 2010/07/19 08:27:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.7.ebuild,v 1.2 2011/01/28 08:09:43 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_LINGUAS="ca cs da de el en_GB es et fr ga gl hr it ja ko nb nds nl nn pl pt
 pt_BR ro ru sk sv th tr uk wa zh_CN"
@@ -13,10 +13,10 @@ HOMEPAGE="http://yakuake.kde.org/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="4"
 IUSE=""
 
-DEPEND=">=kde-base/konsole-${KDE_MINIMAL}
+DEPEND="$(add_kdebase_dep konsole)
 	sys-devel/gettext"
 RDEPEND="${DEPEND}"
